@@ -37,6 +37,7 @@ function inline(tokens, base = {}) {
       case 'br': runs.push(new TextRun({ ...base, break: 1 })); break;
       case 'del': runs.push(...inline(t.tokens, { ...base, strike: true })); break;
       case 'html': break;
+      case 'image': runs.push(imageRun(t.href)); break;
       case 'text':
       case 'escape':
         if (t.tokens) runs.push(...inline(t.tokens, base));
@@ -46,6 +47,14 @@ function inline(tokens, base = {}) {
     }
   }
   return runs;
+}
+
+// Markdown images resolve relative to the master file; fit to text width.
+function imageRun(href) {
+  const buf = fs.readFileSync(path.resolve(path.dirname(src), href));
+  const w = buf.readUInt32BE(16), h = buf.readUInt32BE(20);
+  const width = 600;
+  return new ImageRun({ type: 'png', data: buf, transformation: { width, height: Math.round(h * width / w) } });
 }
 
 function decode(s) {
@@ -107,7 +116,11 @@ function block(t) {
       if (t.depth === 1) firstH1 = false;
       return [new Paragraph({ heading: level, pageBreakBefore: pageBreak, children: inline(t.tokens) })];
     }
-    case 'paragraph': return [new Paragraph({ spacing: { after: 120 }, children: inline(t.tokens) })];
+    case 'paragraph': {
+      const onlyImage = t.tokens.every(x => x.type === 'image' || (x.type === 'text' && !x.text.trim()));
+      return [new Paragraph({ spacing: { before: onlyImage ? 120 : 0, after: onlyImage ? 200 : 120 },
+        alignment: onlyImage ? AlignmentType.CENTER : undefined, children: inline(t.tokens) })];
+    }
     case 'list': return list(t);
     case 'table': return table(t);
     case 'blockquote':
@@ -146,7 +159,9 @@ const tokens = marked.lexer(md);
 const body = tokens.flatMap(block);
 
 const title = [
-  new Paragraph({ spacing: { before: 3000, after: 200 }, alignment: AlignmentType.CENTER,
+  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 400, after: 600 },
+    children: [imageRun(path.relative(path.dirname(src), path.resolve(__dirname, '../assets/store/banner-1920x1080.png')))] }),
+  new Paragraph({ spacing: { before: 200, after: 200 }, alignment: AlignmentType.CENTER,
     children: [new TextRun({ text: 'On-Chain Operator Program', bold: true, size: 56, color: ACCENT })] }),
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 600 },
     children: [new TextRun({ text: 'Master File — Offer, Curriculum, Setup, Funnel & Course Content', size: 28, color: '404040' })] }),

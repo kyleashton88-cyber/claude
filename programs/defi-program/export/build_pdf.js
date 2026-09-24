@@ -21,6 +21,10 @@ renderer.code = (tok) => {
   }
   return baseCode(tok);
 };
+renderer.image = ({ href, text }) => {
+  const file = path.resolve(path.dirname(src), href);
+  return `<img class="figure" alt="${text}" src="data:image/png;base64,${fs.readFileSync(file).toString('base64')}">`;
+};
 let body = marked.parse(md, { renderer, gfm: true });
 body = body.replace(/<li><input checked="" disabled="" type="checkbox">/g, '<li class="task">☑')
   .replace(/<li><input disabled="" type="checkbox">/g, '<li class="task">☐');
@@ -46,15 +50,17 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><style>
   ul, ol { padding-left: 22px; } li { margin: 2px 0; }
   li.task { list-style: none; margin-left: -16px; }
   .qa { break-inside: avoid; margin: 6px 0 10px; } .qa p { margin: 2px 0; } .q { font-weight: bold; }
+  img.figure { display: block; width: 100%; margin: 10px 0 14px; border-radius: 6px; break-inside: avoid; }
   .fig { text-align: center; } .fig img { width: 240px; }
   hr { display: none; }
   a { color: #0563C1; text-decoration: none; }
-  .cover { height: 250mm; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+  .cover { height: 245mm; display: flex; flex-direction: column; justify-content: center; text-align: center; }
   .cover .t { font-size: 30pt; font-weight: bold; color: #1F4E79; }
   .cover .s { font-size: 14pt; color: #404040; margin: 12px 0 40px; }
   .cover .d { color: #707070; }
 </style></head><body>
-<div class="cover"><div class="t">On-Chain Operator Program</div>
+<div class="cover"><img src="data:image/png;base64,${fs.readFileSync(path.resolve(__dirname, '../assets/store/banner-1920x1080.png')).toString('base64')}" style="width:100%;border-radius:10px;margin-bottom:48px">
+<div class="t">On-Chain Operator Program</div>
 <div class="s">Master File — Offer, Curriculum, Setup, Funnel &amp; Course Content</div>
 <div class="d">Draft · ${date}</div>
 <div class="d"><em>Educational content only. Not financial advice. No results are guaranteed.</em></div></div>

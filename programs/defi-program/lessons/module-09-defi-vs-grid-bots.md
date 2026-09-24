@@ -1,5 +1,7 @@
 # Module 9 — DeFi vs Grid Bots
 
+![Module 9 — DeFi vs Grid Bots](../assets/modules/module-09.png)
+
 *Outcome: choose the right tool for the market, and run both as one system.*
 *New content linking the On-Chain Operator Program to Grid Bot Builder. Educational only. Not financial advice. All figures illustrative.*
 
@@ -28,6 +30,9 @@ Both strategies do the same basic thing inside a price range:
 | Automation | Built into the tool | Manual, or a third-party manager (extra contract risk) |
 
 ### Worked example — same range, same inventory behaviour
+
+![Grid bot vs concentrated LP](../assets/diagrams/grid-vs-lp.png)
+
 Range **$2,700–$3,300**, ETH at **$3,000**.
 
 **Price falls to $2,700:**

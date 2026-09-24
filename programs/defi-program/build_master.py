@@ -39,7 +39,7 @@ def lesson_files():
         if num == 9:
             parts.append(read("03-defi-strategy-mastery.md"))
         parts.append(module_02_with_sample() if num == 2 else f.read_text().strip())
-    return parts
+    return [p.replace("](../assets/", "](assets/") for p in parts]
 
 
 def main():
@@ -50,17 +50,18 @@ def main():
         f"`python3 programs/defi-program/build_master.py`.*\n\n"
         "## Contents\n"
         "1. Build status\n2. Offer, decisions & curriculum\n3. Whop setup\n"
-        "4. Funnel changes\n5. Course content (finished lessons)\n"
-        "6. Skills archive\n7. Build prompt (hand this to Claude Code)",
+        "4. Whop store listing\n5. Funnel changes\n6. Course content (finished lessons)\n"
+        "7. Skills archive\n8. Build prompt (hand this to Claude Code)",
         "# 1. Build status\n\n" + read("README.md").split("\n", 1)[1],
         numbered("01-offer-and-curriculum.md", 2, "Offer, decisions & curriculum"),
         numbered("05-whop-setup.md", 3, "Whop setup"),
-        numbered("04-funnel-changes.md", 4, "Funnel changes (draft, not applied)"),
-        "# 5. Course content\n\nFinished lessons in curriculum order. "
+        numbered("06-whop-store-listing.md", 4, "Whop store listing"),
+        numbered("04-funnel-changes.md", 5, "Funnel changes (draft, not applied)"),
+        "# 6. Course content\n\nFinished lessons in curriculum order. "
         "Lesson 8.3 (strategy mastery) appears before Module 9.",
         *lesson_files(),
-        "# 6. Skills archive\n\n" + (ROOT / "README.md").read_text().split("\n", 1)[1].strip(),
-        read("BUILD-PROMPT.md").replace("# Build Prompt", "# 7. Build Prompt", 1),
+        "# 7. Skills archive\n\n" + (ROOT / "README.md").read_text().split("\n", 1)[1].strip(),
+        read("BUILD-PROMPT.md").replace("# Build Prompt", "# 8. Build Prompt", 1),
     ]
     OUT.write_text("\n\n---\n\n".join(sections) + "\n")
     print(f"Wrote {OUT.relative_to(ROOT)} ({OUT.stat().st_size // 1024} KB)")

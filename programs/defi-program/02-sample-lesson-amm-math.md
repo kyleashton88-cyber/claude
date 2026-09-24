@@ -19,16 +19,12 @@ k must stay constant (ignoring fees) after every trade.
 - The more of the pool you move, the further the price moves against you. That gap is **price impact**.
 - **Arbitrageurs** then trade the pool back in line with other markets, and that changes what LPs hold. You'll see why that matters in Lesson 2.4.
 
-```mermaid
-flowchart LR
-    R["Reserves: x tokenA, y tokenB<br/>x × y = k"] --> T["Trader swaps Δx into pool"]
-    T --> N["New x' = x + Δx"]
-    N --> S["Solve y' = k / x'"]
-    S --> O["Trader receives Δy = y − y'"]
-    O --> P["Larger Δx vs reserves = more price impact"]
-```
+![How a constant-product swap is priced](assets/diagrams/amm-swap-flow.png)
 
 ## Worked example
+
+![The x·y=k curve](assets/charts/amm-curve.png)
+
 Pool: **100 ETH** and **300,000 USDC**, so k = 30,000,000. Spot price = 3,000 USDC/ETH.
 
 You swap in **10 ETH** (fees ignored):

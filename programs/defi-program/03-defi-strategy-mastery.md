@@ -20,6 +20,8 @@ Calculator for every formula here:
 
 There are only five sources of return in DeFi. Every strategy is a mix of them.
 
+![Where DeFi returns come from](assets/diagrams/profit-sources.png)
+
 | # | Source | You are paid for… | Example | Lasts? |
 |---|---|---|---|---|
 | 1 | **Service fees** | providing liquidity traders need | swap fees to LPs | As long as volume lasts |
@@ -74,6 +76,8 @@ first, then the strategy.**
 
 ## Part 3 — The strategy playbook
 
+![The strategy library: 16 strategies in 5 levels](assets/diagrams/strategy-levels.png)
+
 Each strategy card has the same sections:
 **Profit engine · Key maths · Execute · Monitor · Exit/kill rules · How it loses · Size cap**.
 Size caps are suggested maximums as a share of the DeFi portfolio. Tighten
@@ -113,6 +117,9 @@ them to fit your own risk budget.
 - **Size cap:** "hold-anyway" capital only.
 
 #### 3. Borrowing against collateral (liquidity without selling)
+
+![The liquidation cascade](assets/diagrams/liquidation-cascade.png)
+
 - **Profit engine:** none by itself. It's a tool. The gain comes from what
   the borrowed funds do, or from not triggering a sale.
 - **Key maths:**
@@ -131,6 +138,9 @@ them to fit your own risk budget.
 ### LEVEL 2 — LIQUIDITY
 
 #### 4. 50/50 AMM liquidity (full range)
+
+![Impermanent loss vs holding](assets/charts/impermanent-loss.png)
+
 - **Profit engine:** swap fees (source 1), sometimes plus incentives.
 - **Key maths — impermanent loss (IL) vs just holding**, where `r` = price ratio change:
   `IL = 2√r ÷ (1 + r) − 1`
@@ -205,6 +215,9 @@ them to fit your own risk budget.
 ### LEVEL 4 — ADVANCED (only after Levels 1–3 are routine)
 
 #### 10. Leveraged lending loop
+
+![Leveraged loop: net APY vs borrow rate](assets/charts/loop-spread.png)
+
 - **Profit engine:** amplifies a *positive spread* between collateral yield and borrow cost.
 - **Key maths:**
   - Leverage after n loops at LTV L: `(1 − L^(n+1)) ÷ (1 − L)`, max `1 ÷ (1 − L)` (L = 0.7 → 3.33×)

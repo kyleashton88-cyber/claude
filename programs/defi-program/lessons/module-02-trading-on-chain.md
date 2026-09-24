@@ -1,5 +1,7 @@
 # Module 2 — Trading On-Chain
 
+![Module 2 — Trading On-Chain](../assets/modules/module-02.png)
+
 *Outcome: execute a swap or LP position deliberately, understanding price impact, fees, impermanent loss and MEV.*
 *Source: ATLAS "DeFi & On-Chain" ch. 6–9, 35. Educational content only. Not financial advice. Figures illustrative.*
 
@@ -99,6 +101,9 @@ if price returns. Withdraw after the move and it's permanent.
 **Full LP P&L = LP value + fees + incentives − gas**, compared to **hold value**.
 
 ### Worked example
+
+![Impermanent loss vs holding](../assets/charts/impermanent-loss.png)
+
 Deposit **1 ETH + 3,000 USDC** at ETH = $3,000 (total $6,000). ETH rises to **$4,000**.
 - Pool rebalances you to √(3,000 ÷ 4,000) = **0.866 ETH** and √(3,000 × 4,000) = **3,464 USDC**
 - LP value = 0.866 × 4,000 + 3,464 = **$6,928**

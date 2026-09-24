@@ -11,6 +11,8 @@ Rebuild: `python3 programs/defi-program/build_master.py`, then `cd programs/defi
 | `03-defi-strategy-mastery.md` | Lesson 8.3 (strategy library) | Written |
 | `04-funnel-changes.md` | 4 Funnel wiring | Draft, not applied to Zapier |
 | `05-whop-setup.md` | 3 Whop setup | Decisions locked; waiting on Whop reconnect + product ID |
+| `06-whop-store-listing.md` | Store product listing: copy + image upload map | Ready to paste (3 placeholders) |
+| `assets/` | 28 images: store icon/banner/gallery, 9 module banners, diagrams, charts | Rendered by `export/build_images.js` |
 | `lessons/module-01-foundations-safety.md` | Module 1 (6 lessons) | Written |
 | `lessons/module-02-trading-on-chain.md` | Module 2 (2.1, 2.3–2.5; 2.2 is the sample) | Written |
 | `lessons/module-09-defi-vs-grid-bots.md` | Module 9 (3 lessons) | Written |

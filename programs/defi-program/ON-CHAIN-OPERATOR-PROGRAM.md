@@ -6,10 +6,11 @@
 1. Build status
 2. Offer, decisions & curriculum
 3. Whop setup
-4. Funnel changes
-5. Course content (finished lessons)
-6. Skills archive
-7. Build prompt (hand this to Claude Code)
+4. Whop store listing
+5. Funnel changes
+6. Course content (finished lessons)
+7. Skills archive
+8. Build prompt (hand this to Claude Code)
 
 ---
 
@@ -27,6 +28,8 @@ Rebuild: `python3 programs/defi-program/build_master.py`, then `cd programs/defi
 | `03-defi-strategy-mastery.md` | Lesson 8.3 (strategy library) | Written |
 | `04-funnel-changes.md` | 4 Funnel wiring | Draft, not applied to Zapier |
 | `05-whop-setup.md` | 3 Whop setup | Decisions locked; waiting on Whop reconnect + product ID |
+| `06-whop-store-listing.md` | Store product listing: copy + image upload map | Ready to paste (3 placeholders) |
+| `assets/` | 28 images: store icon/banner/gallery, 9 module banners, diagrams, charts | Rendered by `export/build_images.js` |
 | `lessons/module-01-foundations-safety.md` | Module 1 (6 lessons) | Written |
 | `lessons/module-02-trading-on-chain.md` | Module 2 (2.1, 2.3–2.5; 2.2 is the sample) | Written |
 | `lessons/module-09-defi-vs-grid-bots.md` | Module 9 (3 lessons) | Written |
@@ -38,6 +41,8 @@ Phase 3: blocked until Whop is reconnected in Zapier and the product is created 
 ---
 
 # 2. Offer, decisions & curriculum
+
+![On-Chain Operator Program](assets/store/banner-1920x1080.png)
 
 Status: **draft, nothing created on Whop yet.** Items marked **DECIDE** need
 your call before phase 3 (Whop setup).
@@ -86,6 +91,7 @@ risk loop, understand exactly where yield comes from, and never sign a
 transaction you can't unwind.*
 
 ### Working name — DECIDE
+*Superseded: see "Decisions so far" at the top. Kept for the record.*
 | Option | Why |
 |---|---|
 | **DeFi Operator Blueprint** (recommended) | Matches "Grid Bot Building Blueprint" on Whop; "operator" = process, not hype |
@@ -93,6 +99,7 @@ transaction you can't unwind.*
 | On-Chain Operator Program | Neutral, broader |
 
 ### Who it's for — DECIDE
+*Superseded: see "Decisions so far" at the top. Kept for the record.*
 | Audience | Fit | How they arrive |
 |---|---|---|
 | **GBB customers** (recommended primary) | Already trust you, already think in systems/risk | Cross-sell email ~14 days after GBB onboarding |
@@ -103,6 +110,7 @@ Recommendation: launch to GBB customers + Elite Intel members first (warm,
 lower CAC, real feedback), open to cold traffic once conversion is proven.
 
 ### Format — DECIDE
+*Superseded: see "Decisions so far" at the top. Kept for the record.*
 - **Core (recommended):** self-paced Whop course (9 modules below) + worksheets
   (the two Notion trackers as templates) + quizzes + capstone.
 - **Optional higher tier:** Core + live monthly DeFi Q&A / portfolio review.
@@ -111,6 +119,7 @@ lower CAC, real feedback), open to cold traffic once conversion is proven.
   free for DeFi.)
 
 ### Pricing — DECIDE (proposal only)
+*Superseded: see "Decisions so far" at the top. Kept for the record.*
 Mirror GBB's one-time + 3-pay pattern, priced **below** GBB so it works as
 a cross-sell rather than competing with it:
 
@@ -129,16 +138,13 @@ course, suggest **14 days, if under 30% of lessons completed**.
 > current? It affects where DeFi sits in the ladder.
 
 ### Ladder after launch
-```
-Elite Intel Community ($67/mo) ──► Grid Bot Builder ($997) ──► Grid Bot Elite ($2,497)
-            │                               │
-            └──────────► On-Chain Operator Program ($15,000) ◄──┘
-                         Module 9 cross-sells back into GBB
-```
+![Product ladder](assets/diagrams/product-ladder.png)
 
 ---
 
 ## Phase 2 — Curriculum
+
+![Curriculum: 9 modules, 45 lessons](assets/store/gallery-01-curriculum.png)
 
 **Change from the skill's default:** I split "Research" (12 chapters) into
 two modules, so it's **9 modules** instead of 8 and every module is 3–8
@@ -220,6 +226,8 @@ Outcome: complete a full due-diligence file on a real protocol.
 | 6.4 | The on-chain research workflow | 41 |
 
 Assets: **DeFi Protocol Due Diligence Tracker** (Notion) + `defi-due-diligence` 6-step loop.
+
+![The 6-step research loop](assets/diagrams/research-loop.png)
 
 ### Module 7 — On-Chain Analytics *(8 lessons)*
 Outcome: read on-chain data without over-interpreting it.
@@ -303,7 +311,8 @@ the Starter tier / GBB price conflict.
 
 ## Step 1 — You, in the Whop dashboard
 1. Create a product named **On-Chain Operator Program**. Keep it **hidden /
-   unlisted** until launch.
+   unlisted** until launch. Upload the icon, banner and gallery images and
+   paste the copy from `06-whop-store-listing.md`.
 2. Add a course experience and create the 9 module sections (titles in
    `01-offer-and-curriculum.md`).
 3. Add terms of sale: refund policy (once decided) and "Educational content
@@ -325,30 +334,138 @@ Written and ready to paste in: Modules 1, 2 and 9, plus lesson 8.3
 (`lessons/`, `02-…`, `03-…`). Modules 3–8 are still being written.
 
 ## Step 4 — High-ticket sales path
-```
-Ad / email / GBB cross-sell
-        │
-        ▼
-Application form (Typeform) ── capital, experience, goals, "why now"
-        │   scored by gbb-new-lead (interest = defi)
-        ▼
-Qualified? ──no──► defi-nurture sequence + Elite Intel Community trial
-        │yes
-        ▼
-Call: vip-defi-consult Calendly
-        │
-        ▼
-Checkout session link (created per buyer, with utm metadata)
-        │
-        ▼
-Onboarding (gbb-customer-onboarding, DeFi branch)
-```
+![High-ticket sales path](assets/diagrams/sales-funnel.png)
+
 Suggested qualification (adjust as you like): lead score ≥ 6 (capital 20k+ /
 major exchange / some experience) **and** completed application.
 
 ---
 
-# 4. Funnel changes (draft, not applied)
+# 4. Whop store listing
+
+![On-Chain Operator Program](assets/store/banner-1920x1080.png)
+
+Everything needed to add the program to your Whop store as a new product:
+copy, images and upload order. **Nothing is published.** You create the
+product in the Whop dashboard (Zapier can't create products), paste this in,
+and keep it hidden until launch.
+
+> Check Whop's current image size limits in the dashboard when you upload.
+> These files are produced at standard sizes (1024×1024 square, 1920×1080
+> 16:9) and can be re-exported at any size with `npm run images`.
+
+---
+
+## 1. Images: upload map
+
+| Whop slot | File | Size |
+|---|---|---|
+| Product icon / logo | `assets/store/icon-1024.png` | 1024×1024 |
+| Cover / hero banner | `assets/store/banner-1920x1080.png` | 1920×1080 |
+| Gallery 1 | `assets/store/gallery-01-curriculum.png` | 1920×1080 |
+| Gallery 2 | `assets/store/gallery-02-research-loop.png` | 1920×1080 |
+| Gallery 3 | `assets/store/gallery-03-strategy-levels.png` | 1920×1080 |
+| Gallery 4 | `assets/store/gallery-04-grid-vs-lp.png` | 1920×1080 |
+| Gallery 5 | `assets/store/gallery-05-whats-included.png` | 1920×1080 |
+| Course module headers | `assets/modules/module-01.png` … `module-09.png` | 1600×500 @2x |
+| In-lesson diagrams & charts | `assets/diagrams/*.png`, `assets/charts/*.png` | 1800 wide @2x |
+
+![Icon](assets/store/icon-1024.png)
+
+![Curriculum](assets/store/gallery-01-curriculum.png)
+![Research loop](assets/store/gallery-02-research-loop.png)
+![Strategy levels](assets/store/gallery-03-strategy-levels.png)
+![Grid vs LP](assets/store/gallery-04-grid-vs-lp.png)
+![What's included](assets/store/gallery-05-whats-included.png)
+
+---
+
+## 2. Listing copy
+
+**Product name:** On-Chain Operator Program
+
+**Tagline (short):** The risk-first DeFi operating system.
+
+**Short description (≈150 characters):**
+Research any protocol, know where yield really comes from, and never sign a
+position you can't unwind. 9 modules · 45 lessons · capstone.
+
+**Headline:** Research. Size. Exit. On-chain.
+
+**Full description:**
+
+> Most people enter DeFi through a number: an APY. Operators start with a
+> different question: *what am I being paid to risk, and how do I get out?*
+>
+> The On-Chain Operator Program is a structured, application-only program
+> that teaches you to run DeFi positions the way a professional runs a
+> desk: with a research process, position limits, written exit rules and a
+> weekly review.
+>
+> You'll learn to set up wallets that survive mistakes, read any protocol
+> from contract to cash flow, model liquidity, lending and yield strategies
+> before capital moves, and combine on-chain positions with automated grid
+> bots without doubling your risk.
+
+**What you'll learn**
+- A 6-step research loop for any protocol: mechanism, cash flow, dependencies, solvency, evidence, exit
+- Where DeFi returns actually come from, and how each one fails
+- Liquidity providing, impermanent loss and true LP P&L, measured against holding
+- Lending, health factors and liquidations, with a written defence plan
+- 16 strategy playbooks across 5 levels, each with its maths, kill rules and failure modes
+- How a concentrated LP compares to a grid bot, and how to run both as one system
+- Wallet security, approvals, and the scams that drain wallets
+
+**What's included**
+
+| | Course | Live |
+|---|---|---|
+| 9 modules, 45 lessons | ✓ | ✓ |
+| Checklists and quizzes in every lesson | ✓ | ✓ |
+| Due-diligence and pre-launch worksheets | ✓ | ✓ |
+| Strategy calculator | ✓ | ✓ |
+| Capstone project | ✓ | ✓ |
+| Live group sessions | | ✓ |
+| Capstone and portfolio reviews | | ✓ |
+| Protocol research Q&A | | ✓ |
+| **Price** | **$15,000 one-time** | **`<LIVE_PRICE>`** |
+
+**Who it's for**
+- Traders and Grid Bot Builder customers ready to operate on-chain with a process
+- Investors holding crypto who want to put it to work without taking risks they don't understand
+
+**Who it's not for**
+- Anyone looking for guaranteed returns or signals to copy
+- Anyone unwilling to self-custody or follow a checklist
+
+**How to join:** Apply → short call → enrolment link. (Application link:
+`<DEFI_APPLICATION_URL>`)
+
+**FAQ**
+- *Do I need DeFi experience?* No. Module 1 starts from wallets and transactions. You do need to be comfortable with crypto exchanges.
+- *Do you manage my funds or need my keys?* Never. You keep custody. We will never ask for a seed phrase, private key or API key.
+- *Will I make money?* The program teaches a process for researching, sizing and exiting positions. It doesn't promise or project returns, and every strategy is taught alongside how it loses money.
+- *How does this relate to Grid Bot Builder?* Module 9 shows how on-chain liquidity and exchange grid bots do similar jobs, and how to run both in one portfolio.
+- *Refunds?* `<REFUND_POLICY>`
+
+**Footer disclaimer (put on the listing and at checkout):**
+Educational content only. Not financial advice. Digital assets are volatile
+and you can lose some or all of your capital. No results are guaranteed.
+
+---
+
+## 3. Store setup checklist
+- [ ] Product created in the Whop dashboard as **hidden**, named "On-Chain Operator Program"
+- [ ] Icon, banner and 5 gallery images uploaded in the order above
+- [ ] Copy pasted; `<LIVE_PRICE>`, `<REFUND_POLICY>`, `<DEFI_APPLICATION_URL>` filled
+- [ ] Course experience added; module headers uploaded; lessons pasted with their diagrams
+- [ ] Plans created via Zapier (course $15,000 one-time; live tier once priced), approved first
+- [ ] Checkout tested end to end on a hidden plan
+- [ ] Listing reviewed for any income or return claims before going public
+
+---
+
+# 5. Funnel changes (draft, not applied)
 
 Proposed changes to the four live Zapier skills so they handle the DeFi
 program alongside Grid Bot Builder. **Nothing has been changed in Zapier.**
@@ -454,13 +571,15 @@ before sending, no profit promises.
 
 ---
 
-# 5. Course content
+# 6. Course content
 
 Finished lessons in curriculum order. Lesson 8.3 (strategy mastery) appears before Module 9.
 
 ---
 
 # Module 1 — Foundations & Safety
+
+![Module 1 — Foundations & Safety](assets/modules/module-01.png)
 
 *Outcome: set up and use a wallet safely, and know what can go irreversibly wrong before any capital moves.*
 *Source: ATLAS "DeFi & On-Chain" ch. 1–5, 36. Educational content only. Not financial advice.*
@@ -581,6 +700,9 @@ Set up a wallet structure where one mistake can't lose everything.
 **Compartmentalise:** separate wallets by job, so a compromise only reaches one of them.
 
 ### Worked example — the 3-wallet setup
+
+![The 3-wallet setup](assets/diagrams/three-wallets.png)
+
 | Wallet | Holds | Signs | Device |
 |---|---|---|---|
 | **Vault** | Long-term holdings | Almost never. No DeFi approvals | Hardware (or multisig) |
@@ -729,6 +851,8 @@ full address.**
 
 # Module 2 — Trading On-Chain
 
+![Module 2 — Trading On-Chain](assets/modules/module-02.png)
+
 *Outcome: execute a swap or LP position deliberately, understanding price impact, fees, impermanent loss and MEV.*
 *Source: ATLAS "DeFi & On-Chain" ch. 6–9, 35. Educational content only. Not financial advice. Figures illustrative.*
 
@@ -795,16 +919,12 @@ k must stay constant (ignoring fees) after every trade.
 - The more of the pool you move, the further the price moves against you. That gap is **price impact**.
 - **Arbitrageurs** then trade the pool back in line with other markets, and that changes what LPs hold. You'll see why that matters in Lesson 2.4.
 
-```mermaid
-flowchart LR
-    R["Reserves: x tokenA, y tokenB<br/>x × y = k"] --> T["Trader swaps Δx into pool"]
-    T --> N["New x' = x + Δx"]
-    N --> S["Solve y' = k / x'"]
-    S --> O["Trader receives Δy = y − y'"]
-    O --> P["Larger Δx vs reserves = more price impact"]
-```
+![How a constant-product swap is priced](assets/diagrams/amm-swap-flow.png)
 
 ### Worked example
+
+![The x·y=k curve](assets/charts/amm-curve.png)
+
 Pool: **100 ETH** and **300,000 USDC**, so k = 30,000,000. Spot price = 3,000 USDC/ETH.
 
 You swap in **10 ETH** (fees ignored):
@@ -889,6 +1009,9 @@ if price returns. Withdraw after the move and it's permanent.
 **Full LP P&L = LP value + fees + incentives − gas**, compared to **hold value**.
 
 ### Worked example
+
+![Impermanent loss vs holding](assets/charts/impermanent-loss.png)
+
 Deposit **1 ETH + 3,000 USDC** at ETH = $3,000 (total $6,000). ETH rises to **$4,000**.
 - Pool rebalances you to √(3,000 ÷ 4,000) = **0.866 ETH** and √(3,000 × 4,000) = **3,464 USDC**
 - LP value = 0.866 × 4,000 + 3,464 = **$6,928**
@@ -988,6 +1111,8 @@ Calculator for every formula here:
 
 There are only five sources of return in DeFi. Every strategy is a mix of them.
 
+![Where DeFi returns come from](assets/diagrams/profit-sources.png)
+
 | # | Source | You are paid for… | Example | Lasts? |
 |---|---|---|---|---|
 | 1 | **Service fees** | providing liquidity traders need | swap fees to LPs | As long as volume lasts |
@@ -1042,6 +1167,8 @@ first, then the strategy.**
 
 ## Part 3 — The strategy playbook
 
+![The strategy library: 16 strategies in 5 levels](assets/diagrams/strategy-levels.png)
+
 Each strategy card has the same sections:
 **Profit engine · Key maths · Execute · Monitor · Exit/kill rules · How it loses · Size cap**.
 Size caps are suggested maximums as a share of the DeFi portfolio. Tighten
@@ -1081,6 +1208,9 @@ them to fit your own risk budget.
 - **Size cap:** "hold-anyway" capital only.
 
 #### 3. Borrowing against collateral (liquidity without selling)
+
+![The liquidation cascade](assets/diagrams/liquidation-cascade.png)
+
 - **Profit engine:** none by itself. It's a tool. The gain comes from what
   the borrowed funds do, or from not triggering a sale.
 - **Key maths:**
@@ -1099,6 +1229,9 @@ them to fit your own risk budget.
 ### LEVEL 2 — LIQUIDITY
 
 #### 4. 50/50 AMM liquidity (full range)
+
+![Impermanent loss vs holding](assets/charts/impermanent-loss.png)
+
 - **Profit engine:** swap fees (source 1), sometimes plus incentives.
 - **Key maths — impermanent loss (IL) vs just holding**, where `r` = price ratio change:
   `IL = 2√r ÷ (1 + r) − 1`
@@ -1173,6 +1306,9 @@ them to fit your own risk budget.
 ### LEVEL 4 — ADVANCED (only after Levels 1–3 are routine)
 
 #### 10. Leveraged lending loop
+
+![Leveraged loop: net APY vs borrow rate](assets/charts/loop-spread.png)
+
 - **Profit engine:** amplifies a *positive spread* between collateral yield and borrow cost.
 - **Key maths:**
   - Leverage after n loops at LTV L: `(1 − L^(n+1)) ÷ (1 − L)`, max `1 ÷ (1 − L)` (L = 0.7 → 3.33×)
@@ -1305,6 +1441,8 @@ don't enter the position.*
 
 # Module 9 — DeFi vs Grid Bots
 
+![Module 9 — DeFi vs Grid Bots](assets/modules/module-09.png)
+
 *Outcome: choose the right tool for the market, and run both as one system.*
 *New content linking the On-Chain Operator Program to Grid Bot Builder. Educational only. Not financial advice. All figures illustrative.*
 
@@ -1333,6 +1471,9 @@ Both strategies do the same basic thing inside a price range:
 | Automation | Built into the tool | Manual, or a third-party manager (extra contract risk) |
 
 ### Worked example — same range, same inventory behaviour
+
+![Grid bot vs concentrated LP](assets/diagrams/grid-vs-lp.png)
+
 Range **$2,700–$3,300**, ETH at **$3,000**.
 
 **Price falls to $2,700:**
@@ -1454,7 +1595,7 @@ Rules for this system:
 
 ---
 
-# 6. Skills archive
+# 7. Skills archive
 
 Claude skills for building and running the Grid Bot Builder business and the
 new DeFi program on Whop. Everything lives in `.claude/skills/`, so Claude Code
@@ -1505,46 +1646,58 @@ To finish building it, paste [`programs/defi-program/BUILD-PROMPT.md`](programs/
 
 ---
 
-# 7. Build Prompt: On-Chain Operator Program
+# 8. Build Prompt: On-Chain Operator Program
 
 **Run it in:** Claude Code (claude.ai/code, the desktop app or the CLI) with
-the GitHub repo `kyleashton88-cyber/claude` open. Connect **Notion** and
-**Zapier**, and make sure **Whop is connected inside Zapier**. Claude Code
-loads the skills in `.claude/skills/` automatically. Other AIs won't, and
-they can't reach your Notion or Zapier, so use Claude Code.
+the GitHub repo `kyleashton88-cyber/claude` open on branch
+`claude/grid-bot-builder-skills-bmrez2`. Connect **Notion** and **Zapier**,
+and make sure **Whop is connected inside Zapier**. Claude Code loads the
+skills in `.claude/skills/` automatically. Other AIs won't, and they can't
+reach your Notion or Zapier, so use Claude Code.
 
 Paste everything below the line as your first message.
 
 ---
 
 You're building out my **On-Chain Operator Program**, a high-ticket DeFi
-education product sold on Whop alongside my Grid Bot Builder business. Work
-in this repo on branch `claude/grid-bot-builder-skills-bmrez2`. Commit and
-push after each finished piece.
+education product that goes into my Whop store as a new product alongside
+Grid Bot Builder. Work in this repo on branch
+`claude/grid-bot-builder-skills-bmrez2`. Commit and push after each finished piece.
 
 ## Read first
 1. `README.md` (skills archive) and `programs/defi-program/README.md` (build status)
-2. `programs/defi-program/ON-CHAIN-OPERATOR-PROGRAM.md` (master file: decisions, curriculum, setup, funnel, finished lessons)
-3. Skills: `whop-defi-program` (master workflow), `defi-strategies`, `defi-due-diligence`, `grid-bot-design`, `gbb-*`
-4. Notion: "ATLAS — The Universal Trading Library" → "DeFi & On-Chain (Complete Module)". This is the source for every lesson.
+2. `programs/defi-program/ON-CHAIN-OPERATOR-PROGRAM.md`: master file with decisions, curriculum, setup, funnel and finished lessons
+3. `programs/defi-program/06-whop-store-listing.md`: store listing copy and image upload map
+4. Skills: `whop-defi-program` (master workflow), `defi-strategies`, `defi-due-diligence`, `grid-bot-design`, `gbb-*`, `frontend-design`, `dataviz`
+5. Notion: "ATLAS — The Universal Trading Library" → "DeFi & On-Chain (Complete Module)". This is the source for every lesson.
 
 ## Locked decisions (don't change them)
 - Name: On-Chain Operator Program. Course tier $15,000 one-time. Live tier priced higher.
 - Launch to everyone. Cold traffic goes application → call (vip-defi-consult Calendly) → checkout.
 - 9 modules, 45 lessons. Every lesson follows: Objective → Explanation → Worked example → Checklist → 3-question quiz.
 
+## Imagery standard (every deliverable must meet it)
+All images come from one generator, `programs/defi-program/export/build_images.js`,
+so the brand stays consistent. Extend that file and don't hand-place one-off images.
+- **Brand:** Inter typeface (bundled via `@fontsource`). Navy `#0B1F33`→`#12355B` gradient with a faint node-network motif for dark/store images. `#FCFCFB` surface for light document images. Teal `#2ee6a6` accent on dark only.
+- **Charts:** follow the `dataviz` skill. Blue `#2a78d6` is the primary series, orange `#eb6834` the secondary (validated pair). One y-axis. Recessive grid. Direct labels on the empty side of the line, never overlapping. Every number must be computed, not typed.
+- **Resolution:** document images at 2× (1800 px wide), store images at exact upload size (1024×1024, 1920×1080).
+- **Every module** gets its banner (`assets/modules/module-0N.png`, already rendered for 1–9) at the top of its lesson file. **Every lesson** gets at least one diagram or chart where a picture explains the mechanism better than text (a flow, a curve, a comparison). Add new ones to the `ASSETS` list.
+- **Review:** after rendering, open every new or changed image and check it by eye. Fix any label collision, overflow, clipped text or empty-looking layout before committing.
+- Every image carries the footer "Educational content only · Not financial advice · No results are guaranteed" (the shells already do this).
+
 ## Work to do, in order
-1. **Write the remaining 30 lessons**: Modules 3, 4, 5, 6, 7 and lessons 8.1, 8.2, 8.4, one file per module in `programs/defi-program/lessons/`, matching the style of `module-01-…` and `module-02-…`. Check every number in the worked examples with `.claude/skills/defi-strategies/scripts/defi_calc.py` or Python. Add a practical at the end of each module.
-2. **Capstone brief and grading rubric** (due-diligence file + position plan with sizing, monitoring triggers and exact unwind).
-3. **Live tier**: design what it includes (session cadence, capstone reviews, portfolio reviews, Q&A), then propose a price and wait for my approval.
+1. **Write the remaining 30 lessons**: Modules 3, 4, 5, 6, 7 and lessons 8.1, 8.2, 8.4, one file per module in `programs/defi-program/lessons/`, matching the style of `module-01-…` and `module-02-…`, with module banner + lesson imagery per the standard above. Check every number with `.claude/skills/defi-strategies/scripts/defi_calc.py` or Python. Add a practical at the end of each module. Suggested new visuals: health-factor gauge (M3), APY decomposition bar (M4), bridge/oracle dependency map (M5), due-diligence scorecard (M6), exchange-flow and holder-metric examples (M7), portfolio risk buckets (M8).
+2. **Capstone brief and grading rubric** (due-diligence file + position plan with sizing, monitoring triggers and exact unwind), with a one-page visual overview.
+3. **Live tier**: design what it includes (session cadence, capstone reviews, portfolio reviews, Q&A), then propose a price and wait for my approval. Update the "What's included" gallery image once it's priced.
 4. **Application form** (questions + scoring that plugs into `gbb-new-lead` with interest = defi) and a **sales call script**.
-5. **Sales page copy**: use the `frontend-design` skill if you build it as a page.
-6. **Whop setup** per `05-whop-setup.md`: I create the product in the dashboard and give you the `prod_` ID. You create plans and checkout links through Zapier, but only after showing me the exact values.
+5. **Sales page**: build it with the `frontend-design` skill using the store images, the copy in `06-whop-store-listing.md`, and the brand above.
+6. **Add the product to my Whop store** per `05-whop-setup.md` and `06-whop-store-listing.md`. I create the hidden product in the dashboard and upload the images in the listed order, then give you the `prod_` ID. You create plans and checkout links through Zapier, but only after showing me the exact values.
 7. **Funnel**: apply `04-funnel-changes.md` to my Zapier skills (`update_zapier_skill`) after I approve, and mirror the changes into `.claude/skills/gbb-*`.
-8. Regenerate the master file with `python3 programs/defi-program/build_master.py`, then the Word and PDF copies with `cd programs/defi-program/export && npm install && npm run build`, and push.
+8. **Rebuild everything and push**: `python3 programs/defi-program/build_master.py`, then `cd programs/defi-program/export && npm install && npm run build` (renders all images, then the Word and PDF copies). Open the PDF and spot-check pages that have images.
 
 ## Rules
-- Educational only. No promised, projected or guaranteed returns anywhere: lessons, emails, sales page or call script. Always show how a strategy loses money next to how it earns.
+- Educational only. No promised, projected or guaranteed returns anywhere: lessons, images, emails, sales page, store listing or call script. Always show how a strategy loses money next to how it earns.
 - Never ask for seed phrases, private keys or exchange API keys.
 - No Discord, Skool or Slack. Use only the Calendly links named in the skills.
 - Ask me before anything outward-facing: creating or changing anything on Whop, sending emails, editing Zapier skills, changing prices.
@@ -1552,7 +1705,8 @@ push after each finished piece.
 - Still open, ask me: live-tier price, refund policy, Grid Bot Builder customer pricing, whether the "Grid Bot Starter" tier exists.
 
 ## Done when
-All 45 lessons and the capstone are written and number-checked. Live tier,
-application, call script and sales page are approved. Whop plans and
-checkout links are live (hidden until I say launch). Funnel skills are
-updated in Zapier and the repo. The master file is regenerated and pushed.
+- All 45 lessons and the capstone are written, number-checked and illustrated to the imagery standard.
+- Live tier, application, call script and sales page are approved.
+- The product is in my Whop store (hidden until I say launch) with icon, banner and gallery images, and its plans and checkout links exist.
+- Funnel skills are updated in Zapier and the repo.
+- The master file, Word and PDF are rebuilt and pushed.

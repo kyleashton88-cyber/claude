@@ -1,5 +1,7 @@
 # Module 1 — Foundations & Safety
 
+![Module 1 — Foundations & Safety](../assets/modules/module-01.png)
+
 *Outcome: set up and use a wallet safely, and know what can go irreversibly wrong before any capital moves.*
 *Source: ATLAS "DeFi & On-Chain" ch. 1–5, 36. Educational content only. Not financial advice.*
 
@@ -119,6 +121,9 @@ Set up a wallet structure where one mistake can't lose everything.
 **Compartmentalise:** separate wallets by job, so a compromise only reaches one of them.
 
 ### Worked example — the 3-wallet setup
+
+![The 3-wallet setup](../assets/diagrams/three-wallets.png)
+
 | Wallet | Holds | Signs | Device |
 |---|---|---|---|
 | **Vault** | Long-term holdings | Almost never. No DeFi approvals | Hardware (or multisig) |

@@ -23,7 +23,8 @@ the Starter tier / GBB price conflict.
 
 ## Step 1 — You, in the Whop dashboard
 1. Create a product named **On-Chain Operator Program**. Keep it **hidden /
-   unlisted** until launch.
+   unlisted** until launch. Upload the icon, banner and gallery images and
+   paste the copy from `06-whop-store-listing.md`.
 2. Add a course experience and create the 9 module sections (titles in
    `01-offer-and-curriculum.md`).
 3. Add terms of sale: refund policy (once decided) and "Educational content
@@ -45,23 +46,7 @@ Written and ready to paste in: Modules 1, 2 and 9, plus lesson 8.3
 (`lessons/`, `02-…`, `03-…`). Modules 3–8 are still being written.
 
 ## Step 4 — High-ticket sales path
-```
-Ad / email / GBB cross-sell
-        │
-        ▼
-Application form (Typeform) ── capital, experience, goals, "why now"
-        │   scored by gbb-new-lead (interest = defi)
-        ▼
-Qualified? ──no──► defi-nurture sequence + Elite Intel Community trial
-        │yes
-        ▼
-Call: vip-defi-consult Calendly
-        │
-        ▼
-Checkout session link (created per buyer, with utm metadata)
-        │
-        ▼
-Onboarding (gbb-customer-onboarding, DeFi branch)
-```
+![High-ticket sales path](assets/diagrams/sales-funnel.png)
+
 Suggested qualification (adjust as you like): lead score ≥ 6 (capital 20k+ /
 major exchange / some experience) **and** completed application.

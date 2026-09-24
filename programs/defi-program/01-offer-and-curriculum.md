@@ -1,5 +1,7 @@
 # DeFi Program — Offer & Curriculum (DRAFT for approval)
 
+![On-Chain Operator Program](assets/store/banner-1920x1080.png)
+
 Status: **draft, nothing created on Whop yet.** Items marked **DECIDE** need
 your call before phase 3 (Whop setup).
 
@@ -47,6 +49,7 @@ risk loop, understand exactly where yield comes from, and never sign a
 transaction you can't unwind.*
 
 ### Working name — DECIDE
+*Superseded: see "Decisions so far" at the top. Kept for the record.*
 | Option | Why |
 |---|---|
 | **DeFi Operator Blueprint** (recommended) | Matches "Grid Bot Building Blueprint" on Whop; "operator" = process, not hype |
@@ -54,6 +57,7 @@ transaction you can't unwind.*
 | On-Chain Operator Program | Neutral, broader |
 
 ### Who it's for — DECIDE
+*Superseded: see "Decisions so far" at the top. Kept for the record.*
 | Audience | Fit | How they arrive |
 |---|---|---|
 | **GBB customers** (recommended primary) | Already trust you, already think in systems/risk | Cross-sell email ~14 days after GBB onboarding |
@@ -64,6 +68,7 @@ Recommendation: launch to GBB customers + Elite Intel members first (warm,
 lower CAC, real feedback), open to cold traffic once conversion is proven.
 
 ### Format — DECIDE
+*Superseded: see "Decisions so far" at the top. Kept for the record.*
 - **Core (recommended):** self-paced Whop course (9 modules below) + worksheets
   (the two Notion trackers as templates) + quizzes + capstone.
 - **Optional higher tier:** Core + live monthly DeFi Q&A / portfolio review.
@@ -72,6 +77,7 @@ lower CAC, real feedback), open to cold traffic once conversion is proven.
   free for DeFi.)
 
 ### Pricing — DECIDE (proposal only)
+*Superseded: see "Decisions so far" at the top. Kept for the record.*
 Mirror GBB's one-time + 3-pay pattern, priced **below** GBB so it works as
 a cross-sell rather than competing with it:
 
@@ -90,16 +96,13 @@ course, suggest **14 days, if under 30% of lessons completed**.
 > current? It affects where DeFi sits in the ladder.
 
 ### Ladder after launch
-```
-Elite Intel Community ($67/mo) ──► Grid Bot Builder ($997) ──► Grid Bot Elite ($2,497)
-            │                               │
-            └──────────► On-Chain Operator Program ($15,000) ◄──┘
-                         Module 9 cross-sells back into GBB
-```
+![Product ladder](assets/diagrams/product-ladder.png)
 
 ---
 
 ## Phase 2 — Curriculum
+
+![Curriculum: 9 modules, 45 lessons](assets/store/gallery-01-curriculum.png)
 
 **Change from the skill's default:** I split "Research" (12 chapters) into
 two modules, so it's **9 modules** instead of 8 and every module is 3–8
@@ -181,6 +184,8 @@ Outcome: complete a full due-diligence file on a real protocol.
 | 6.4 | The on-chain research workflow | 41 |
 
 Assets: **DeFi Protocol Due Diligence Tracker** (Notion) + `defi-due-diligence` 6-step loop.
+
+![The 6-step research loop](assets/diagrams/research-loop.png)
 
 ### Module 7 — On-Chain Analytics *(8 lessons)*
 Outcome: read on-chain data without over-interpreting it.
