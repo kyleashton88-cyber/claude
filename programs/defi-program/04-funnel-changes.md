@@ -5,8 +5,7 @@ program alongside Grid Bot Builder. **Nothing has been changed in Zapier.**
 Once you approve, the edits go into Zapier (`update_zapier_skill`) and are
 mirrored into `.claude/skills/gbb-*`.
 
-Placeholders until you decide: `<DEFI_NAME>` (proposed "DeFi Operator
-Blueprint"), `<DEFI_PRICE>`, `<DEFI_3PAY>`, `<DEFI_GBB_PRICE>`,
+Product name: **On-Chain Operator Program** (decided). Placeholders still open: `<DEFI_PRICE>`, `<DEFI_3PAY>`, `<DEFI_GBB_PRICE>`,
 `<DEFI_CHECKOUT_URL>`, `<DEFI_PLAN_IDS>`, `<DEFI_ACCESS_URL>` (the program's Whop hub link), `<DEFI_CALL_LINK>` (vipbookings, or your `vip-defi-consult` Calendly link, your call).
 
 ---
@@ -14,7 +13,7 @@ Blueprint"), `<DEFI_PRICE>`, `<DEFI_3PAY>`, `<DEFI_GBB_PRICE>`,
 ## 1. gbb new lead → handles DeFi interest
 
 **Add fixed values**
-- DeFi product: `<DEFI_NAME>`, `<DEFI_PRICE>` one-time or `<DEFI_3PAY>`; checkout `<DEFI_CHECKOUT_URL>`.
+- DeFi product: `On-Chain Operator Program`, `<DEFI_PRICE>` one-time or `<DEFI_3PAY>`; checkout `<DEFI_CHECKOUT_URL>`.
 - Mailchimp tags: `defi-lead`, `defi-nurture`.
 - HubSpot deal name: `DEFI - <First Last>`.
 
@@ -33,7 +32,7 @@ Scoring stays the same. Capital and experience predict fit for both products.
 
 *DeFi — warm/hot*
 > Hi {first},
-> Thanks for your interest in <DEFI_NAME>. It's a step-by-step program for operating in DeFi safely: how to research a protocol, where yield actually comes from, and how to plan the exit before you enter.
+> Thanks for your interest in On-Chain Operator Program. It's a step-by-step program for operating in DeFi safely: how to research a protocol, where yield actually comes from, and how to plan the exit before you enter.
 > 9 modules, worksheets and a capstone, all self-paced.
 > Join here: <DEFI_CHECKOUT_URL>
 > If you'd like to talk it through first, book a call: <DEFI_CALL_LINK>
@@ -51,7 +50,7 @@ Scoring stays the same. Capital and experience predict fit for both products.
 
 ## 2. gbb customer onboarding → DeFi branch + cross-sell
 
-**When product = `<DEFI_NAME>`:**
+**When product = `On-Chain Operator Program`:**
 1. HubSpot: lifecycle `customer`; deal `DEFI - …` → closedwon, amount = actual plan price.
 2. Mailchimp: remove `defi-lead`, add `defi-customer`.
 3. Gmail onboarding (draft below).
@@ -60,7 +59,7 @@ Scoring stays the same. Capital and experience predict fit for both products.
 6. If *not* a GBB customer: tag `gbb-crosssell-candidate` (no email yet; see the sequence below).
 
 *DeFi onboarding email*
-> Welcome to <DEFI_NAME>, {first}.
+> Welcome to On-Chain Operator Program, {first}.
 > Your access is live: <DEFI_ACCESS_URL> (log in with this email).
 > Start with Module 1 — Foundations & Safety. Do the practical (3-wallet setup) before anything else.
 > Two rules for the whole program:
@@ -76,7 +75,7 @@ Scoring stays the same. Capital and experience predict fit for both products.
 *GBB → DeFi cross-sell (day 14)*
 > Hi {first},
 > By now your grid bots should be running. Here's where most of our builders go next: putting idle stablecoins and reserves to work on-chain, without taking on risks they don't understand.
-> <DEFI_NAME> covers this, including a module on how a DeFi liquidity position is basically an on-chain grid bot, and when each one wins.
+> On-Chain Operator Program covers this, including a module on how a DeFi liquidity position is basically an on-chain grid bot, and when each one wins.
 > Grid Bot Builder customer price: <DEFI_GBB_PRICE> → <DEFI_CHECKOUT_URL>
 > Stewart
 
@@ -84,7 +83,7 @@ Scoring stays the same. Capital and experience predict fit for both products.
 
 ## 3. gbb ad performance → report DeFi
 
-- Add `<DEFI_NAME>` to "products" with its plan IDs.
+- Add `On-Chain Operator Program` to "products" with its plan IDs.
 - Per campaign: DeFi sales (# and $), CAC-to-DeFi.
 - New cross-sell metric: **GBB → DeFi attach rate** = GBB buyers who later buy DeFi ÷ GBB buyers ≥ 14 days old.
 - Budget rule unchanged (it uses total net Whop revenue).

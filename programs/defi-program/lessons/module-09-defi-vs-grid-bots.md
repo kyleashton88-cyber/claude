@@ -1,7 +1,7 @@
 # Module 9 — DeFi vs Grid Bots
 
 *Outcome: choose the right tool for the market, and run both as one system.*
-*New content linking the DeFi Operator Blueprint to Grid Bot Builder. Educational only. Not financial advice. All figures illustrative.*
+*New content linking the On-Chain Operator Program to Grid Bot Builder. Educational only. Not financial advice. All figures illustrative.*
 
 ---
 

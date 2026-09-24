@@ -1,6 +1,6 @@
 # DeFi Strategy Mastery — How Strategies Make (and Lose) Money
 
-*DeFi Operator Blueprint · Strategy module · Built on ATLAS "DeFi & On-Chain" ch. 7–18, 38–42 and the 16-framework Strategy Library.*
+*On-Chain Operator Program · Strategy module · Built on ATLAS "DeFi & On-Chain" ch. 7–18, 38–42 and the 16-framework Strategy Library.*
 
 > **Read this first.** This is educational material, not financial advice.
 > No DeFi strategy guarantees profit. Every return in DeFi is payment for

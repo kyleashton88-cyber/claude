@@ -3,6 +3,29 @@
 Status: **draft, nothing created on Whop yet.** Items marked **DECIDE** need
 your call before phase 3 (Whop setup).
 
+## Decisions so far (2026-09-24)
+| Item | Decision |
+|---|---|
+| Name | **On-Chain Operator Program** |
+| Format | **Two tiers:** self-paced course + a higher tier with live sessions |
+| Audience | **Everyone at once:** GBB customers, Elite Intel members and cold ad traffic from launch |
+| Price | **$15,000** (which tier(s) and payment plans: to confirm) |
+| Refund policy | Open |
+| Starter tier / GBB pricing conflict | Open |
+| 9-module structure | Assumed OK unless you say otherwise |
+
+**What $15,000 changes (recommendations, your call):**
+- It becomes the top of the ladder (above Grid Bot Elite at $2,497), so it
+  needs a **high-ticket sales path**: cold traffic → application → call →
+  checkout, not straight-to-checkout ads. `gbb-new-lead` scoring (capital
+  20k+ = 4) becomes the qualifier.
+- Buyers at this price expect access to you: the live tier (calls, reviews,
+  capstone feedback) carries most of the value. The course alone is hard to
+  justify at $15k.
+- High-ticket crypto education attracts consumer-protection scrutiny. Keep
+  every page and call script free of income/return claims, and put terms,
+  refund policy and "educational, not financial advice" at checkout.
+
 Built from: Notion → ATLAS → *DeFi & On-Chain (Complete Module)* (42 chapters,
 16 strategy frameworks, 20 on-chain metrics) and the existing Grid Bot Builder
 offer stack.
