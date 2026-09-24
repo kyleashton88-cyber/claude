@@ -1,5 +1,8 @@
 # DeFi Program: build files
 
+**Everything in one file:** `ON-CHAIN-OPERATOR-PROGRAM.md` (rebuild with `python3 programs/defi-program/build_master.py`).
+**To finish the build with AI:** paste `BUILD-PROMPT.md` into Claude Code.
+
 | File | Phase | Status |
 |---|---|---|
 | `01-offer-and-curriculum.md` | 1–2 Offer + curriculum | Draft, waiting on your decisions |

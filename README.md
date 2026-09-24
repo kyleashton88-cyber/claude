@@ -10,6 +10,10 @@ Ask Claude: *"Use whop-defi-program to plan the DeFi program."* That skill
 walks through offer → curriculum → Whop setup → funnel → guardrails → launch,
 and calls the others as needed.
 
+## On-Chain Operator Program
+Everything for the DeFi program is in one file: [`programs/defi-program/ON-CHAIN-OPERATOR-PROGRAM.md`](programs/defi-program/ON-CHAIN-OPERATOR-PROGRAM.md).
+To finish building it, paste [`programs/defi-program/BUILD-PROMPT.md`](programs/defi-program/BUILD-PROMPT.md) into Claude Code.
+
 ## Skills
 
 ### Your business skills (custom)
