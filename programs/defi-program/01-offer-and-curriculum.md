@@ -155,7 +155,7 @@ Assets: 20-metric directory as a downloadable reference card.
 Outcome: a written portfolio plan with risk buckets, limits and an emergency plan.
 | 8.1 | DeFi portfolio construction | 38 |
 | 8.2 | The DeFi risk framework | 39 |
-| 8.3 | Strategy library (16 frameworks, Core → Advanced) | 40 |
+| 8.3 | Strategy library (16 frameworks, Core → Advanced), full content in `03-defi-strategy-mastery.md` | 40 |
 | 8.4 | The operating playbook: deploy, monitor, respond, review | 42 |
 
 ### Module 9 — DeFi vs Grid Bots *(3 lessons, new content)*

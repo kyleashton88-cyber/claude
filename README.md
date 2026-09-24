@@ -16,6 +16,7 @@ and calls the others as needed.
 | Skill | What it does | Source |
 |---|---|---|
 | `whop-defi-program` | Master playbook: turn the 42-chapter DeFi module into a Whop product and wire it into the GBB funnel | New, built from Notion + Zapier |
+| `defi-strategies` | 16 DeFi strategies: where each return comes from, the maths, execution, kill rules, plus the `defi_calc.py` calculator | Notion strategy library, expanded |
 | `defi-due-diligence` | 6-step protocol risk loop, before-signing checklist, logs to Notion tracker | Notion: DeFi & On-Chain module |
 | `grid-bot-design` | Regime/range/spacing/fees/risk method + `grid_calc.py` calculator, logs to Notion checklist | Notion: Grid Bot Builder module |
 | `gbb-new-lead` | Score, tag and email new leads | Zapier (archive copy) |
