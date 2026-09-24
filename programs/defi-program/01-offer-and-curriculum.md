@@ -15,7 +15,7 @@ your call before phase 3 (Whop setup).
 | Price | **Course $15,000 one-time** · live tier priced higher (TBD) |
 | Refund policy | Open |
 | Starter tier / GBB pricing conflict | Open |
-| Structure | **15 modules, 92 lessons + a Mastery Starter per module, 6 stages: zero to operator** (expanded 2026-09-24) |
+| Structure | **15 modules, 107 lessons (incl. 15 expert) + a Mastery Starter per module, 6 stages: zero to operator** (expanded 2026-09-24) |
 
 **What $15,000 changes (recommendations, your call):**
 - It becomes the top of the ladder (above Grid Bot Elite at $2,497), so it
@@ -105,8 +105,8 @@ course, suggest **14 days, if under 30% of lessons completed**.
 ![Path to mastery](assets/diagrams/path-to-mastery.png)
 
 **Expanded 2026-09-24:** the program now takes someone who knows nothing all
-the way to operating as their own bank. That's **15 modules and 92 lessons in
-6 stages**, and **every module opens with a Mastery Starter** (lesson N.0): a
+the way to operating as their own bank. That's **15 modules and 107 lessons in
+6 stages**, with expert lessons (marked *expert*) in every stage from Foundations up, and **every module opens with a Mastery Starter** (lesson N.0): a
 plain-English primer, the words you need, a first safe step and a
 beginner → practitioner → master ladder, so anyone can enter any module from zero. Modules 1–9 keep their numbers. Module 0 and Modules 10–14 are new.
 All 42 ATLAS chapters are still used exactly once; the new modules are
@@ -122,7 +122,7 @@ sample lesson is in `02-sample-lesson-amm-math.md`.
 | **1 · Foundations** | 1–2 | Protect a wallet, read a transaction, swap and LP deliberately |
 | **2 · Practitioner** | 3–5 | Borrow, earn yield and map infrastructure risk |
 | **3 · Analyst** | 6–7 | Research any protocol and read on-chain data |
-| **4 · Strategist** | 8–11 | Run the 25-strategy library, engineer fixed and hedged yield, stress-test a portfolio |
+| **4 · Strategist** | 8–11 | Run the 30-strategy library, engineer fixed and hedged yield, stress-test a portfolio |
 | **5 · Operator** | 12–14 | Run your own on-chain bank: balance sheet, credit line, income engine, automation |
 
 ---
@@ -150,7 +150,7 @@ Outcome: go from never having owned crypto to a secured exchange account, a back
 
 ## Stage 1 · Foundations
 
-### Module 1 — Foundations & Safety *(8 lessons + Mastery Starter)*
+### Module 1 — Foundations & Safety *(9 lessons + Mastery Starter)*
 Outcome: set up and use a wallet safely; know what can go irreversibly wrong.
 | # | Lesson | ATLAS ch. |
 |---|---|---|
@@ -163,10 +163,11 @@ Outcome: set up and use a wallet safely; know what can go irreversibly wrong.
 | 1.6 | Scam defence: phishing, drainers, address poisoning | 36 |
 | 1.7 | Reading signatures and simulating transactions | new |
 | 1.8 | Privacy and physical security | new |
+| 1.9 | Smart accounts and account abstraction *(expert)* | new |
 
 Assets: before-signing checklist (ch. 42) introduced here and reused in every module.
 
-### Module 2 — Trading On-Chain *(6 lessons + Mastery Starter)*
+### Module 2 — Trading On-Chain *(8 lessons + Mastery Starter)*
 Outcome: execute a swap deliberately, understanding price impact and MEV.
 
 | # | Lesson | ATLAS ch. |
@@ -178,6 +179,8 @@ Outcome: execute a swap deliberately, understanding price impact and MEV.
 | 2.4 | Impermanent loss & true LP P&L | 9 |
 | 2.5 | MEV and how to protect your trades | 35 |
 | 2.6 | Advanced execution: limit, TWAP and intent-based orders | new |
+| 2.7 | Advanced AMM design and LVR *(expert)* | new |
+| 2.8 | The MEV supply chain *(expert)* | new |
 
 Assets: AMM flow diagram, 100 ETH / 300k USDC worked example, LP-vs-hold benchmark.
 
@@ -185,7 +188,7 @@ Assets: AMM flow diagram, 100 ETH / 300k USDC worked example, LP-vs-hold benchma
 
 ## Stage 2 · Practitioner
 
-### Module 3 — Lending & Leverage *(5 lessons + Mastery Starter)*
+### Module 3 — Lending & Leverage *(7 lessons + Mastery Starter)*
 Outcome: borrow against collateral with a buffer and a written defence plan.
 
 | # | Lesson | ATLAS ch. |
@@ -196,6 +199,8 @@ Outcome: borrow against collateral with a buffer and a written defence plan.
 | 3.3 | Liquidations and cascades | 12 |
 | 3.4 | Borrowing strategies & looping | 13 |
 | 3.5 | Perpetual futures and margin on-chain | new |
+| 3.6 | Lending design deep dive: e-mode, caps, auctions, soft liquidation, bad debt *(expert)* | new |
+| 3.7 | CDP stablecoins: minting your own dollars *(expert)* | new |
 
 Assets: liquidation feedback-loop diagram, Aave health-factor primary source.
 
@@ -214,7 +219,7 @@ Outcome: split any APY into organic vs subsidised, and name the risk being paid 
 | 4.7 | Stablecoin savings rates and yield-bearing stablecoins | new |
 | 4.8 | Tokenized treasuries and real-world assets (RWAs) | new |
 
-### Module 5 — Infrastructure Risk *(7 lessons + Mastery Starter)*
+### Module 5 — Infrastructure Risk *(8 lessons + Mastery Starter)*
 Outcome: map every bridge, oracle, L2 and contract a position depends on.
 
 | # | Lesson | ATLAS ch. |
@@ -227,12 +232,13 @@ Outcome: map every bridge, oracle, L2 and contract a position depends on.
 | 5.5 | Smart-contract risk & what audits don't prove | 23 |
 | 5.6 | Beyond Ethereum: Solana, Bitcoin and other ecosystems | new |
 | 5.7 | Operating across chains: gas, routes and chain abstraction | new |
+| 5.8 | Reading smart-contract code: enough to verify claims *(expert)* | new |
 
 ---
 
 ## Stage 3 · Analyst
 
-### Module 6 — Protocol Research *(5 lessons + Mastery Starter)*
+### Module 6 — Protocol Research *(7 lessons + Mastery Starter)*
 Outcome: complete a full due-diligence file on a real protocol.
 
 | # | Lesson | ATLAS ch. |
@@ -243,12 +249,14 @@ Outcome: complete a full due-diligence file on a real protocol.
 | 6.3 | Governance & DAOs | 26 |
 | 6.4 | The on-chain research workflow | 41 |
 | 6.5 | Case studies: how DeFi failures happened | new |
+| 6.6 | Vote-escrow tokenomics, bribes and governance markets *(expert)* | new |
+| 6.7 | Valuing DeFi protocols: fees, revenue, earnings, multiples *(expert)* | new |
 
 Assets: **DeFi Protocol Due Diligence Tracker** (Notion) + `defi-due-diligence` 6-step loop.
 
 ![The 6-step research loop](assets/diagrams/research-loop.png)
 
-### Module 7 — On-Chain Analytics *(8 lessons + Mastery Starter)*
+### Module 7 — On-Chain Analytics *(9 lessons + Mastery Starter)*
 Outcome: read on-chain data without over-interpreting it.
 
 | # | Lesson | ATLAS ch. |
@@ -262,6 +270,7 @@ Outcome: read on-chain data without over-interpreting it.
 | 7.6 | Network activity | 32 |
 | 7.7 | DEX & liquidity analytics | 33 |
 | 7.8 | Derivatives on-chain (perps, funding, OI) | 34 |
+| 7.9 | Querying chain data yourself (SQL, indexers) *(expert)* | new |
 
 Assets: 20-metric directory as a downloadable reference card.
 
@@ -269,7 +278,7 @@ Assets: 20-metric directory as a downloadable reference card.
 
 ## Stage 4 · Strategist
 
-### Module 8 — The DeFi Operating System *(6 lessons + Mastery Starter)*
+### Module 8 — The DeFi Operating System *(7 lessons + Mastery Starter)*
 Outcome: a written portfolio plan with risk buckets, limits and an emergency plan.
 
 | # | Lesson | ATLAS ch. |
@@ -277,10 +286,11 @@ Outcome: a written portfolio plan with risk buckets, limits and an emergency pla
 | 8.0 | **Mastery Starter:** plain-English primer, key words, first safe step, mastery ladder | new |
 | 8.1 | DeFi portfolio construction | 38 |
 | 8.2 | The DeFi risk framework | 39 |
-| 8.3 | Strategy library (25 strategies in 6 levels, Core → Professional), full content in `03-defi-strategy-mastery.md` | 40 |
+| 8.3 | Strategy library (30 strategies in 7 levels, Core → Expert), full content in `03-defi-strategy-mastery.md` | 40 |
 | 8.4 | The operating playbook: deploy, monitor, respond, review | 42 |
 | 8.5 | Measuring performance honestly | new |
 | 8.6 | Psychology and discipline | new |
+| 8.7 | Quantitative risk: volatility, VaR, drawdown, correlation, sizing *(expert)* | new |
 
 ### Module 9 — DeFi vs Grid Bots *(3 lessons + Mastery Starter, new content)*
 Outcome: choose the right tool for the market — and the natural bridge into GBB.
@@ -294,7 +304,7 @@ Outcome: choose the right tool for the market — and the natural bridge into GB
 
 Cross-sell: GBB checkout link for non-customers; Elite Intel invite for everyone.
 
-### Module 10 — Advanced Yield Engineering *(6 lessons + Mastery Starter, new)*
+### Module 10 — Advanced Yield Engineering *(9 lessons + Mastery Starter, new)*
 Outcome: build fixed, hedged and structured yield, and know exactly what each one is short.
 
 | # | Lesson | Source |
@@ -306,6 +316,9 @@ Outcome: build fixed, hedged and structured yield, and know exactly what each on
 | 10.4 | Options income: covered calls, cash-secured puts, options vaults | new |
 | 10.5 | Active concentrated-liquidity management | new |
 | 10.6 | Restaking and points: pricing speculative yield | new |
+| 10.7 | Being the house: perp-exchange liquidity vaults *(expert)* | new |
+| 10.8 | DeFi rates: term structure, fixed vs floating *(expert)* | new |
+| 10.9 | Peg and redemption arbitrage *(expert)* | new |
 
 ### Module 11 — Hedging & Risk Engineering *(5 lessons + Mastery Starter, new)*
 Outcome: hedge the risks you don't want, stress-test the portfolio, and have an incident plan ready.
@@ -325,7 +338,7 @@ Outcome: hedge the risks you don't want, stress-test the portfolio, and have an 
 
 ![Operate as your own bank](assets/diagrams/own-bank.png)
 
-### Module 12 — Operate as Your Own Bank *(7 lessons + Mastery Starter, new)*
+### Module 12 — Operate as Your Own Bank *(8 lessons + Mastery Starter, new)*
 Outcome: run your crypto like a bank runs its book: a balance sheet, custody policy, a credit line, a liquidity ladder and records.
 
 | # | Lesson | Source |
@@ -338,6 +351,7 @@ Outcome: run your crypto like a bank runs its book: a balance sheet, custody pol
 | 12.5 | Being the lender: supplying, curating and pricing credit risk | new |
 | 12.6 | Books, records and succession: if you're gone, can your family recover it? | new |
 | 12.7 | Tax, regulation and compliance awareness | new |
+| 12.8 | Institutional-grade custody: MPC, custodians, policy engines *(expert)* | new |
 
 ### Module 13 — The Income Engine *(5 lessons + Mastery Starter, new)*
 Outcome: design an income portfolio, measure expected income after expected losses, and set a payout you can sustain.
@@ -351,7 +365,7 @@ Outcome: design an income portfolio, measure expected income after expected loss
 | 13.4 | The payout policy: how much you can take out | new |
 | 13.5 | Scaling, compounding and the annual review | new |
 
-### Module 14 — Automation & Mastery *(5 lessons + Mastery Starter, new)*
+### Module 14 — Automation & Mastery *(6 lessons + Mastery Starter, new)*
 Outcome: monitor and automate safely, run multisig operations, and complete the operator capstone.
 
 | # | Lesson | Source |
@@ -362,6 +376,7 @@ Outcome: monitor and automate safely, run multisig operations, and complete the 
 | 14.3 | Operating procedures: multisig signing, change control, reviews | new |
 | 14.4 | Operator capstone and certification | new |
 | 14.5 | Building your own tools: reading contracts, data and simple scripts | new |
+| 14.6 | Searchers, keepers and arbitrage bots *(expert)* | new |
 
 ---
 
@@ -372,7 +387,7 @@ Outcome: monitor and automate safely, run multisig operations, and complete the 
   payout policy, stress test and incident plan. Reviewed on the Live tier.
 
 ### Totals
-15 modules · 92 lessons (42 ATLAS + 50 new) + 15 Mastery Starters · 278 quiz questions · 25 strategy playbooks · 2 capstones · strategy calculator with 17 commands. Full topic coverage: `09-mastery-map.md`.
+15 modules · 107 lessons (42 ATLAS + 65 new, 15 of them expert) + 15 Mastery Starters · 323 quiz questions · 30 strategy playbooks in 7 levels · 2 capstones · strategy calculator with 20 commands. Full topic coverage: `09-mastery-map.md`.
 
 ---
 

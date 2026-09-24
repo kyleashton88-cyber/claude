@@ -46,8 +46,10 @@ Every module follows the same path, so a complete beginner can start anywhere:
 | Scam defence: phishing, drainers, address poisoning | 1.6, 0.8 | B |
 | Reading signatures, simulation, blind signing, account delegation | 1.7 | P |
 | Privacy and physical security | 1.8 | P |
+| Smart accounts, account abstraction, passkeys, social recovery | 1.9 | M |
 | Bank-grade custody architecture, limits, allowlists, timelocks | 12.2 | M |
 | Multisig signing procedures and change control | 14.3 | M |
+| Institutional custody: MPC, qualified custodians, policy engines | 12.8 | M |
 | Incident response and fresh-wallet procedure | 11.5 | M |
 
 ### 3. Trading and execution
@@ -58,12 +60,14 @@ Every module follows the same path, so a complete beginner can start anywhere:
 | AMM mathematics (x·y=k), price impact | 2.2 | P |
 | MEV and trade protection | 2.5 | P |
 | Limit, TWAP and intent-based orders | 2.6 | P–M |
+| MEV supply chain: searchers, builders, relays, private order flow, rebates | 2.8 | M |
 
 ### 4. Liquidity providing
 | Topic | Where | Level |
 |---|---|---|
 | Providing liquidity and fee APR | 2.3 | B–P |
 | Impermanent loss and true LP P&L | 2.4 | P |
+| AMM designs (StableSwap, weighted, hooks) and LVR | 2.7 | M |
 | Concentrated liquidity and range management | Strategy #5, 10.5 | M |
 | LP vs grid bot | 9.1–9.3 | P–M |
 
@@ -74,6 +78,8 @@ Every module follows the same path, so a complete beginner can start anywhere:
 | LTV, liquidation threshold, health factor | 3.2 | P |
 | Liquidations and cascades | 3.3 | P |
 | Borrowing strategies and looping | 3.4 | P–M |
+| Lending internals: e-mode, isolation, caps, auctions, soft liquidation, bad debt | 3.6 | M |
+| CDP stablecoins: minting against collateral, PSMs | 3.7, strategy #26 | M |
 | Credit lines and credit policy | 12.3 | M |
 | Being the lender: curated vaults, credit risk | 12.5 | M |
 
@@ -86,6 +92,7 @@ Every module follows the same path, so a complete beginner can start anywhere:
 | Delta-neutral funding carry | 10.3 | M |
 | Options: covered calls, cash-secured puts, vaults | 10.4 | M |
 | Hedging with perps and options | 11.1 | M |
+| Perp liquidity vaults (being the house) | 10.7, strategy #28 | M |
 
 ### 7. Yield
 | Topic | Where | Level |
@@ -97,6 +104,9 @@ Every module follows the same path, so a complete beginner can start anywhere:
 | Vaults and optimisers | 4.5 | P |
 | Airdrops as expected-value bets | 4.6 | P |
 | Fixed-rate yield (PT/YT) | 10.1 | M |
+| Vote-escrow, gauges and bribe income | 6.6, strategy #27 | M |
+| Rates: term structure, fixed vs floating | 10.8, strategy #30 | M |
+| Peg and redemption arbitrage | 10.9, strategy #29 | M |
 
 ### 8. Stablecoins, cash and real-world assets
 | Topic | Where | Level |
@@ -115,6 +125,7 @@ Every module follows the same path, so a complete beginner can start anywhere:
 | Oracles and manipulation | 5.3 | P |
 | Smart contracts, proxies, admin keys, timelocks | 5.4 | P |
 | Contract risk and reading audits | 5.5 | P–M |
+| Reading contract code to verify claims | 5.8 | M |
 | Solana, Bitcoin in DeFi, other ecosystems | 5.6 | P |
 | Cross-chain gas, routes, chain abstraction | 5.7 | P–M |
 
@@ -125,19 +136,22 @@ Every module follows the same path, so a complete beginner can start anywhere:
 | Tokenomics, FDV, unlocks, value capture | 6.2 | P |
 | Governance and DAOs | 6.3 | P |
 | Research workflow and theses | 6.4 | P–M |
-| Failure case studies and patterns | 6.5 | P–M |
+| Failure case studies and patterns (7 cases, incl. Black Thursday 2020) | 6.5 | P–M |
+| Protocol valuation: fees, revenue, earnings, multiples | 6.7 | M |
 | On-chain data, explorers, flows, whales | 7.1–7.4 | P |
 | Holder/supply metrics, network activity, DEX analytics | 7.5–7.7 | P–M |
+| Querying chain data yourself (SQL, indexers) | 7.9 | M |
 
 ### 11. Strategy, portfolio and performance
 | Topic | Where | Level |
 |---|---|---|
 | Portfolio buckets and caps | 8.1 | P |
 | Risk register | 8.2 | P |
-| 25-strategy library (6 levels) | 8.3 | P–M |
+| 30-strategy library (7 levels) | 8.3 | P–M |
 | Operating playbook: deploy, monitor, respond, review | 8.4 | P |
 | Performance measurement: TWR, benchmarks, attribution | 8.5 | M |
 | Psychology and discipline | 8.6 | P–M |
+| Quantitative risk: volatility, VaR, drawdown, correlation, sizing | 8.7 | M |
 | Stress testing | 11.4 | M |
 | Protection: cover, liquidation automation | 11.2, 11.3 | M |
 
@@ -164,6 +178,7 @@ Every module follows the same path, so a complete beginner can start anywhere:
 | Monitoring and alerts | 14.1 | P–M |
 | Automation with scoped permissions | 14.2 | M |
 | Building read-only tools, APIs, RPC | 14.5 | M |
+| Searchers, keepers and arbitrage bots | 14.6 | M |
 | Operator capstone and certification | 14.4 | M |
 
 ---
@@ -175,8 +190,8 @@ lesson), **Practitioner** lessons with safe hands-on practice, and **Master**
 lessons that design, size and hedge. The totals:
 
 - **15 Mastery Starters** (one per module)
-- **92 lessons** across 14 domains
-- **278 quiz questions**, **25 strategy playbooks**, **17 worksheets**, **17 calculators**
+- **107 lessons** across 14 domains, including **15 expert lessons** on DeFi's machinery (AMM design and LVR, MEV supply chain, lending internals, CDPs, smart accounts, contract reading, ve/bribe markets, valuation, SQL analytics, quantitative risk, perp vaults, rates, arbitrage, institutional custody, searchers)
+- **323 quiz questions**, **30 strategy playbooks in 7 levels**, **17 worksheets**, **20 calculators**
 - **2 capstones** and **3 certification levels**
 
 ---
@@ -189,8 +204,8 @@ regenerated by `build_master.py`. Each can be reviewed or handed to an AI on its
 | Section file | Stage | Modules | Lessons (+ starters) |
 |---|---|---|---|
 | `sections/section-0-zero.md` | 0 · Zero | 0 | 8 (+1) |
-| `sections/section-1-foundations.md` | 1 · Foundations | 1–2 | 14 (+2) |
-| `sections/section-2-practitioner.md` | 2 · Practitioner | 3–5 | 20 (+3) |
-| `sections/section-3-analyst.md` | 3 · Analyst | 6–7 | 13 (+2) |
-| `sections/section-4-strategist.md` | 4 · Strategist | 8–11 | 20 (+4) |
-| `sections/section-5-operator.md` | 5 · Operator | 12–14 | 17 (+3) |
+| `sections/section-1-foundations.md` | 1 · Foundations | 1–2 | 17 (+2) |
+| `sections/section-2-practitioner.md` | 2 · Practitioner | 3–5 | 23 (+3) |
+| `sections/section-3-analyst.md` | 3 · Analyst | 6–7 | 16 (+2) |
+| `sections/section-4-strategist.md` | 4 · Strategist | 8–11 | 24 (+4) |
+| `sections/section-5-operator.md` | 5 · Operator | 12–14 | 19 (+3) |

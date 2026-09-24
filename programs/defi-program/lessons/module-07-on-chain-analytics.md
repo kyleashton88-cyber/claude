@@ -259,6 +259,43 @@ Lesson 10.3, a funding-carry opportunity with a squeeze risk.
 
 ---
 
+## Lesson 7.9 — Querying chain data yourself *(expert)*
+
+### Objective
+Answer your own research questions with on-chain queries, instead of relying on someone else's dashboard.
+
+### Explanation
+- **Query platforms** (e.g. Dune, Flipside, Allium) index blockchain data into SQL tables: raw transactions and logs, **decoded** tables per protocol, and curated "spellbook" tables (e.g. all DEX trades).
+- **Indexers / subgraphs** (e.g. The Graph) serve protocol-specific data via APIs.
+- **Skills:** SELECT, WHERE, GROUP BY, date truncation, and joining a token price table to convert amounts to USD.
+- **Discipline:** check your numbers against the protocol's own dashboard; know table definitions (what counts as "volume"); watch out for wash trading and double counting.
+
+### Worked example (SQL; table and column names vary by platform)
+```sql
+-- Daily DEX volume on one chain over the last 30 days
+SELECT date_trunc('day', block_time) AS day,
+       SUM(amount_usd)              AS volume_usd
+FROM dex.trades
+WHERE blockchain = 'arbitrum'
+  AND block_time > now() - interval '30' day
+GROUP BY 1
+ORDER BY 1;
+```
+Then cross-check one day against another data source. If they differ a lot, find out
+why (different pools, wash-trade filters, price sources) before using either number.
+
+### Checklist
+- [ ] I can run and adapt a basic query
+- [ ] I cross-check results against a second source
+- [ ] I note table definitions and filters in my research
+
+### Quiz
+<details><summary>1. What is a decoded table?</summary>Contract events and calls translated into readable columns for a specific protocol.</details>
+<details><summary>2. Why cross-check query results?</summary>Definitions, filters and price sources differ; errors are common.</details>
+<details><summary>3. What SQL clause groups results by day?</summary>GROUP BY on a date-truncated timestamp.</details>
+
+---
+
 ### Module 7 practical: analyst capstone part 2
 Add an on-chain section to your Module 6 file: holder concentration, flows,
 activity (fees/revenue), liquidity depth and derivatives positioning for the

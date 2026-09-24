@@ -250,6 +250,40 @@ Send $50 first by the chosen route, keep ~$5 of ETH on Base for gas, then send t
 
 ---
 
+## Lesson 5.8 — Reading smart-contract code: enough to verify claims *(expert)*
+
+### Objective
+Read verified contract code well enough to check the claims a protocol makes about itself.
+
+### Explanation
+You don't need to be a developer to spot the things that matter. In verified Solidity code on an explorer, look for:
+- **Access control:** `onlyOwner`, `onlyRole(...)`, `onlyGovernance`. Who can call what? Search for functions guarded by them.
+- **Dangerous powers:** `mint`, `pause`, `upgradeTo`, `setOracle`, `setFee`, `withdraw`/`sweep`/`rescue` functions that move user funds.
+- **Upgradeability:** proxy patterns (`delegatecall`, `implementation`, `upgradeTo`), and who the admin is (5.4).
+- **External calls and state order:** calling another contract before updating balances is the classic reentrancy pattern (5.5).
+- **Parameters with no limits:** a fee that can be set to 100%, or an oracle address that can be swapped instantly.
+- **Events:** what's logged tells you what you can monitor.
+
+### Worked example
+A token claims "fixed supply". In its code you find:
+```
+function mint(address to, uint256 amount) external onlyOwner { _mint(to, amount); }
+```
+The owner can mint unlimited tokens: the claim is false unless ownership is renounced
+or held by a timelocked governance contract. Check the `owner()` value on the Read tab.
+
+### Checklist
+- [ ] Searched the code for owner/role-guarded functions
+- [ ] Listed every function that can mint, pause, upgrade, change fees/oracles or move funds
+- [ ] Checked who holds those roles (Read tab) and behind what timelock
+
+### Quiz
+<details><summary>1. What does `onlyOwner` on a mint function mean?</summary>The owner can mint new tokens whenever they like.</details>
+<details><summary>2. Why check parameter limits?</summary>An unlimited setter (fee, oracle) can be changed to harm users instantly.</details>
+<details><summary>3. What code pattern suggests reentrancy risk?</summary>An external call made before the contract updates its own state.</details>
+
+---
+
 ### Module 5 practical
 Pick one position you hold or plan. Draw its dependency map: chain, bridge,
 oracle, contracts, admin/timelock, audits. Mark each link Low/Medium/High risk.

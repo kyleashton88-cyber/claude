@@ -64,27 +64,27 @@ const icon = (name, size = 24, color = 'currentColor', sw = 1.8) =>
 
 const MODULES = [
   { n: 0, t: 'Crypto From Zero', o: 'From never owning crypto to a secured wallet, a first transfer and a first DeFi step.', i: 'compass', l: 8 },
-  { n: 1, t: 'Foundations & Safety', o: 'Set up and use a wallet safely. Know what can go irreversibly wrong.', i: 'shield', l: 8 },
-  { n: 2, t: 'Trading On-Chain', o: 'Swap and provide liquidity deliberately: price impact, IL, MEV.', i: 'swap', l: 6 },
-  { n: 3, t: 'Lending & Leverage', o: 'Borrow against collateral with a buffer and a written defence plan.', i: 'bank', l: 5 },
+  { n: 1, t: 'Foundations & Safety', o: 'Set up and use a wallet safely. Know what can go irreversibly wrong.', i: 'shield', l: 9 },
+  { n: 2, t: 'Trading On-Chain', o: 'Swap and provide liquidity deliberately: price impact, IL, MEV.', i: 'swap', l: 8 },
+  { n: 3, t: 'Lending & Leverage', o: 'Borrow against collateral with a buffer and a written defence plan.', i: 'bank', l: 7 },
   { n: 4, t: 'Yield', o: 'Split any APY into organic vs subsidised, and name the risk being paid for.', i: 'sprout', l: 8 },
-  { n: 5, t: 'Infrastructure Risk', o: 'Map every bridge, oracle, L2 and contract a position depends on.', i: 'layers', l: 7 },
-  { n: 6, t: 'Protocol Research', o: 'Complete a full due-diligence file on a real protocol.', i: 'search', l: 5 },
-  { n: 7, t: 'On-Chain Analytics', o: 'Read on-chain data without over-interpreting it.', i: 'chart', l: 8 },
-  { n: 8, t: 'The DeFi Operating System', o: 'Portfolio plan with risk buckets, limits and an emergency plan.', i: 'cog', l: 6 },
+  { n: 5, t: 'Infrastructure Risk', o: 'Map every bridge, oracle, L2 and contract a position depends on.', i: 'layers', l: 8 },
+  { n: 6, t: 'Protocol Research', o: 'Complete a full due-diligence file on a real protocol.', i: 'search', l: 7 },
+  { n: 7, t: 'On-Chain Analytics', o: 'Read on-chain data without over-interpreting it.', i: 'chart', l: 9 },
+  { n: 8, t: 'The DeFi Operating System', o: 'Portfolio plan with risk buckets, limits and an emergency plan.', i: 'cog', l: 7 },
   { n: 9, t: 'DeFi vs Grid Bots', o: 'Choose the right tool for the market, and run both as one system.', i: 'grid', l: 3 },
-  { n: 10, t: 'Advanced Yield Engineering', o: 'Fixed, hedged and structured yield, and exactly what each is short.', i: 'target', l: 6 },
+  { n: 10, t: 'Advanced Yield Engineering', o: 'Fixed, hedged and structured yield, and exactly what each is short.', i: 'target', l: 9 },
   { n: 11, t: 'Hedging & Risk Engineering', o: 'Hedge unwanted risk, stress-test the book, run an incident plan.', i: 'umbrella', l: 5 },
-  { n: 12, t: 'Operate as Your Own Bank', o: 'Balance sheet, custody, credit line, liquidity ladder, records.', i: 'vault', l: 7 },
+  { n: 12, t: 'Operate as Your Own Bank', o: 'Balance sheet, custody, credit line, liquidity ladder, records.', i: 'vault', l: 8 },
   { n: 13, t: 'The Income Engine', o: 'Risk-adjusted income and a payout policy you can sustain.', i: 'coins', l: 5 },
-  { n: 14, t: 'Automation & Mastery', o: 'Monitor, automate safely, and complete the operator capstone.', i: 'bot', l: 5 },
+  { n: 14, t: 'Automation & Mastery', o: 'Monitor, automate safely, and complete the operator capstone.', i: 'bot', l: 6 },
 ];
 const STAGES = [
   ['0', 'Zero', [0], 'Open an account, buy, set up a wallet, first transfer'],
   ['1', 'Foundations', [1, 2], 'Protect a wallet, swap and LP deliberately'],
   ['2', 'Practitioner', [3, 4, 5], 'Borrow, earn yield, map infrastructure risk'],
   ['3', 'Analyst', [6, 7], 'Research any protocol, read on-chain data'],
-  ['4', 'Strategist', [8, 9, 10, 11], '25 strategies, fixed & hedged yield, stress tests'],
+  ['4', 'Strategist', [8, 9, 10, 11], '30 strategies, fixed & hedged yield, stress tests'],
   ['5', 'Operator', [12, 13, 14], 'Run your own on-chain bank and income engine'],
 ];
 
@@ -174,7 +174,7 @@ function storeIcon() { return brandAsset('icon'); }
 
 function storeBanner() {
   const w = 1920, h = 1080;
-  const stats = [['15', 'modules'], ['92', 'lessons'], ['25', 'strategy playbooks'], ['2', 'capstones']];
+  const stats = [['15', 'modules'], ['107', 'lessons'], ['30', 'strategy playbooks'], ['2', 'capstones']];
   return page(w, h, 'dark', `${network(w, h, 3, 60)}
   <div style="position:absolute;right:110px;top:200px">${logoMark(600)}</div>
   <div style="position:absolute;left:120px;top:100px">${wordmark(30)}</div>
@@ -224,7 +224,7 @@ function galleryCurriculum() {
     <div style="display:flex;align-items:center;gap:14px"><div style="flex:none;width:50px;height:50px;border-radius:14px;background:rgba(46,230,166,.14);display:flex;align-items:center;justify-content:center;color:${C.aquaDark}">${icon(m.i, 28)}</div>
     <div style="font-size:15px;color:rgba(255,255,255,.6);font-weight:700;letter-spacing:.06em">MODULE ${m.n} · ${m.l} LESSONS</div></div>
     <div style="font-size:25px;font-weight:700;margin-top:14px;line-height:1.2">${m.t}</div></div>`).join('');
-  return galleryShell('Curriculum', '15 modules · 92 lessons · 2 capstones',
+  return galleryShell('Curriculum', '15 modules · 107 lessons · 2 capstones',
     `<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:20px">${cards}</div>`, 5);
 }
 
@@ -261,7 +261,7 @@ function ownBankHtml(dark) {
 function galleryOwnBank() { return galleryShell('Stage 5 · Operator', 'Operate as your own bank', ownBankHtml(true), 29); }
 
 function galleryLoop() { return galleryShell('Method', 'The 6-step research loop', loopSvg(true), 9); }
-function galleryLevels() { return galleryShell('Strategy library', '25 strategies, 6 levels, risk first', levelsHtml(true), 13); }
+function galleryLevels() { return galleryShell('Strategy library', '30 strategies, 7 levels, risk first', levelsHtml(true), 13); }
 function galleryGridLp() { return galleryShell('Module 9', 'A DeFi LP is an on-chain grid bot', gridLpSvg(true), 17); }
 
 function galleryIncluded() {
@@ -271,7 +271,7 @@ function galleryIncluded() {
     ${items.map(([ic, t]) => `<div style="display:flex;gap:20px;align-items:center;margin:26px 0;font-size:32px;color:rgba(255,255,255,.92)"><span style="color:${C.aquaDark}">${icon(ic, 36)}</span>${t}</div>`).join('')}
   </div>`;
   return galleryShell('What\'s included', 'Two ways to join', `<div style="display:flex;gap:36px;height:100%">
-    ${col('Course', 'Self-paced', [['book', '15 modules, 92 lessons, zero to operator'], ['target', '25 strategy playbooks'], ['search', 'Due-diligence & bank-policy worksheets'], ['chart', 'Strategy, income & bank calculators'], ['lock', 'Analyst + operator capstones']], false)}
+    ${col('Course', 'Self-paced', [['book', '15 modules, 107 lessons, zero to operator'], ['target', '30 strategy playbooks'], ['search', 'Due-diligence & bank-policy worksheets'], ['chart', 'Strategy, income & bank calculators'], ['lock', 'Analyst + operator capstones']], false)}
     ${col('Live', 'Course + coaching', [['check', 'Everything in Course'], ['video', 'Live group sessions'], ['users', 'Capstone & portfolio reviews'], ['vault', 'Own-bank policy review'], ['coins', 'Income-engine & payout review']], true)}
   </div>`, 19);
 }
@@ -326,10 +326,11 @@ function levelsHtml(dark) {
   const L = [['1', 'Core', 'Stable lending · Staking & LSTs · Collateral borrowing'], ['2', 'Liquidity', '50/50 LP · Concentrated LP · Stable-stable LP'],
     ['3', 'Yield', 'Vaults · Incentive farming · Airdrops & points'], ['4', 'Advanced', 'Leveraged loops · LST loops · Funding carry · LP hedge'],
     ['5', 'Treasury & research', 'Cash management · Accumulation & growth screens'],
-    ['6', 'Professional', 'PT/YT fixed rate · Basis · Options · Credit lines · Lending vaults · Hedged restaking']];
+    ['6', 'Professional', 'PT/YT fixed rate · Basis · Options · Credit lines · Lending vaults · Hedged restaking'],
+    ['7', 'Expert', 'CDP minting · Bribe markets · Perp vaults · Peg arbitrage · Rates positioning']];
   const fg = dark ? '#fff' : C.ink, sub = dark ? 'rgba(255,255,255,.75)' : C.text2;
   return `<div style="display:flex;flex-direction:column;gap:10px;height:100%;justify-content:center">
-    ${L.map(([n, t, s], i) => `<div style="display:flex;align-items:center;gap:30px;margin-left:${i * 56}px;padding:11px 30px;border-radius:18px;
+    ${L.map(([n, t, s], i) => `<div style="display:flex;align-items:center;gap:30px;margin-left:${i * 48}px;padding:8px 30px;border-radius:18px;
       background:${dark ? `rgba(46,230,166,${0.05 + i * 0.03})` : '#fff'};border:1px solid ${dark ? 'rgba(46,230,166,.35)' : C.line}">
       <div style="font-size:46px;font-weight:800;width:60px;color:${dark ? C.aquaDark : C.blue}">${n}</div>
       <div style="font-size:32px;font-weight:700;width:360px;color:${fg}">${t}</div>
@@ -619,6 +620,32 @@ function diagramSeedBackup() {
     </div>`);
 }
 
+function chartLVR() {
+  const W = 1672, H = 600, m = { l: 100, r: 40, t: 20, b: 70 };
+  const xs = v => m.l + (v - 20) / 100 * (W - m.l - m.r), ys = v => m.t + (20 - v) / 20 * (H - m.t - m.b);
+  const lvr = s => s * s / 800; // percent/yr for vol in percent
+  let d = '';
+  for (let s = 20; s <= 120; s += 1) d += `${s === 20 ? 'M' : 'L'}${xs(s).toFixed(1)},${ys(lvr(s)).toFixed(1)}`;
+  return lightShell(1800, 820, 'Loss-versus-rebalancing: what arbitrage costs LPs', 'Full-range x·y=k pool: LVR ≈ σ²/8 of pool value per year. Fees must beat this line.',
+    `<svg width="100%" height="100%" viewBox="0 0 ${W} ${H}">
+    ${axisFrame(W, H, m, [20, 40, 60, 80, 100, 120], [0, 5, 10, 15, 20], xs, ys, 'Annualised volatility of the pair (%)', 'Cost to LPs (% of pool / yr)', v => `${v}%`, v => `${v}%`)}
+    <path d="M${xs(20)},${ys(12)} H${xs(120)}" stroke="${C.orange}" stroke-width="2.5" stroke-dasharray="10 8"/>
+    <path d="${d}" fill="none" stroke="${C.blue}" stroke-width="3"/>
+    ${dot(xs(80), ys(lvr(80)))}${label(xs(80) - 16, ys(lvr(80)) - 16, '80% vol → 8% LVR', 'end')}
+    ${dot(xs(110), ys(lvr(110)))}${label(xs(110) - 16, ys(lvr(110)) - 18, '110% vol → 15.1% LVR', 'end')}
+    ${label(xs(22), ys(12) - 14, 'Example fee APR 12% (dashed)', 'start', 600)}
+    ${label(xs(24), ys(6.5), 'Below the dashed line: fees beat LVR', 'start', 600)}
+    </svg>`);
+}
+
+function diagramMEV() {
+  return lightShell(1800, 700, 'The MEV supply chain', 'Where your transaction goes, and who can profit from its ordering',
+    flowBoxes([['You / wallet', 'Public mempool or private RPC', 'wallet'], ['Searchers', 'Arbitrage, liquidations, backruns, sandwiches', 'search'],
+      ['Builders', 'Assemble the most valuable block', 'layers'], ['Relays', 'Pass blocks to validators', 'swap'], ['Proposer', 'Validator picks the highest-paying block', 'shield']],
+      false, { w: 296, h: 250, gap: 48 }) +
+    `<div style="position:absolute;left:0;right:0;bottom:-10px;text-align:center;font-size:22px;color:${C.text2}">Protect yourself: private/protected RPCs, intent systems, tight slippage, and MEV rebates where offered.</div>`);
+}
+
 // ---------- registry ----------
 const ASSETS = [
   ['brand/logo-icon-1024.png', 1024, 1024, () => brandAsset('icon')],
@@ -647,7 +674,7 @@ const ASSETS = [
   ['diagrams/custody-architecture.png', 1800, 820, diagramCustody],
   ['diagrams/liquidity-ladder.png', 1800, 760, diagramLadder2],
   ['diagrams/research-loop.png', 1800, 640, () => lightShell(1800, 640, 'The 6-step research loop', 'Run every protocol through it before any capital moves', loopSvg(false))],
-  ['diagrams/strategy-levels.png', 1800, 900, () => lightShell(1800, 900, 'The strategy library', '25 strategies in 6 levels', levelsHtml(false))],
+  ['diagrams/strategy-levels.png', 1800, 900, () => lightShell(1800, 900, 'The strategy library', '30 strategies in 7 levels', levelsHtml(false))],
   ['diagrams/grid-vs-lp.png', 1800, 860, () => lightShell(1800, 860, 'Grid bot vs concentrated LP', 'Same range, almost the same inventory path', gridLpSvg(false))],
   ['diagrams/liquidation-cascade.png', 1800, 900, diagramLiquidation],
   ['diagrams/three-wallets.png', 1800, 720, diagramWallets],
@@ -660,6 +687,8 @@ const ASSETS = [
   ['charts/loop-spread.png', 1800, 820, chartLoop],
   ['charts/pt-convergence.png', 1800, 820, chartPT],
   ['charts/income-waterfall.png', 1800, 820, chartIncome],
+  ['charts/lvr.png', 1800, 820, chartLVR],
+  ['diagrams/mev-supply-chain.png', 1800, 700, diagramMEV],
 ];
 
 module.exports = { C, FONT, BASE_CSS, network, icon, logoMark, wordmark, lockupStacked, DISCLAIMER };

@@ -75,7 +75,7 @@ the rings, stretch the mark or put the light version on a dark background.
 
 **Short description (≈150 characters):**
 DeFi from first principles to professional strategies. Build a risk-adjusted
-income engine and run your capital like a bank. 15 modules · 92 lessons.
+income engine and run your capital like a bank. 15 modules · 107 lessons.
 
 **Headline:** From zero to your own on-chain bank.
 
@@ -89,7 +89,7 @@ income engine and run your capital like a bank. 15 modules · 92 lessons.
 > policy, a credit line, a liquidity ladder, and an income engine with a
 > payout you can sustain.
 >
-> Six stages, 15 modules and 92 lessons, each module opening with a beginner Mastery Starter: wallets and safety, trading and
+> Six stages, 15 modules and 107 lessons, each module opening with a beginner Mastery Starter: wallets and safety, trading and
 > liquidity, lending and yield, protocol research and on-chain analytics, 25
 > strategy playbooks up to fixed-rate, basis, options and hedged yield, and
 > finally operating your own on-chain bank. Every strategy is taught with its
@@ -99,16 +99,17 @@ income engine and run your capital like a bank. 15 modules · 92 lessons.
 - Stage 0: from knowing nothing to set up. Secure accounts, open an exchange, buy your first crypto without overpaying, set up and back up a wallet, make your first transfer on the right network, and practise DeFi on a free test network (with the Day-1 Setup Kit)
 - Stage 1: protect a wallet, read any transaction, swap and provide liquidity deliberately
 - Stage 2–3: lending, health factors and liquidations; yield, staking and restaking; a 6-step research loop for any protocol; on-chain analytics
-- Stage 4: 25 strategy playbooks in 6 levels, including fixed-rate yield (PT/YT), cash-and-carry basis, delta-neutral funding carry, covered calls and cash-secured puts, hedging and stress testing
+- Stage 4: 30 strategy playbooks in 7 levels, including fixed-rate yield (PT/YT), cash-and-carry basis, delta-neutral funding carry, covered calls and cash-secured puts, hedging and stress testing
+- Expert lessons in every stage on how DeFi's machinery really works: AMM design and loss-versus-rebalancing, the MEV supply chain, lending internals, minting stablecoins against collateral, smart accounts, reading contract code, vote-escrow and bribe markets, protocol valuation, querying chain data with SQL, quantitative risk, perp-exchange vaults, interest-rate curves, arbitrage, institutional custody and searcher bots
 - Stage 5: operate as your own bank. Balance sheet, multisig custody, a credit line against your assets, a liquidity ladder, lending-desk decisions, books and succession, and an income engine that pays out less than it expects to earn
 
 **What's included**
 
 | | Course | Live |
 |---|---|---|
-| 15 modules, 92 lessons, zero to operator |
+| 15 modules, 107 lessons, zero to operator |
 | A Mastery Starter in every module: start any topic from zero | ✓ | ✓ |
-| 25 strategy playbooks with maths and kill rules | ✓ | ✓ |
+| 30 strategy playbooks with maths and kill rules | ✓ | ✓ |
 | Printable Day-1 Setup Kit for complete beginners | ✓ | ✓ |
 | Welcome video + 15 module intro videos | ✓ | ✓ |
 | Checklists and quizzes in every lesson | ✓ | ✓ |

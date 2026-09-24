@@ -113,7 +113,7 @@ mitigation or an exit; anything ≥ 20 shouldn't be held.
 
 ## Lesson 8.3 — Strategy library
 
-The full strategy library (25 strategies in 6 levels, each with its profit
+The full strategy library (30 strategies in 7 levels, each with its profit
 engine, maths, execution, kill rules and failure modes) is **Lesson 8.3:
 DeFi Strategy Mastery** (`03-defi-strategy-mastery.md`).
 
@@ -218,6 +218,37 @@ and at review decides the idea doesn't meet the thesis standard at all.
 
 ---
 
+## Lesson 8.7 — Quantitative risk: volatility, VaR, drawdown, correlation and sizing *(expert)*
+
+### Objective
+Put numbers on portfolio risk and size positions from them.
+
+### Explanation
+- **Volatility (σ):** annualised standard deviation of returns. **Daily σ ≈ annual σ ÷ √365** (crypto trades every day).
+- **Value at risk (VaR):** a loss level you'd expect to exceed only rarely (e.g. 1 day in 20 at 95%). Parametric 1-day VaR ≈ 1.65 × daily σ × position. **It assumes normal returns; crypto has fat tails**, so real losses exceed VaR more often. Use it as a floor, plus stress tests (11.4).
+- **Max drawdown:** the largest peak-to-trough fall. Ask: could I live through it, and would my policies survive it?
+- **Correlation:** in crashes, correlations between crypto assets rise towards 1. Diversifying within crypto helps less when you need it most.
+- **Sizing:** **volatility targeting** (size so each position contributes similar risk); the **Kelly criterion** gives a theoretical maximum bet size from edge and odds, but estimates are noisy, so professionals use a small fraction of it or skip it.
+
+### Worked example
+$100,000 of ETH at 70% annual volatility:
+`defi_calc.py var --position 100000 --vol 70` → daily σ ≈ **3.66%**, 1-day 95% VaR ≈ **$6,046**.
+Real single-day falls have been far larger (in March 2020, ETH fell by roughly 40% in a day).
+So: VaR for day-to-day sizing, stress tests for survival.
+
+### Checklist
+- [ ] Volatility and VaR computed for my largest positions
+- [ ] Portfolio survives the worst historical drawdown of what it holds
+- [ ] Correlation assumed to rise in stress
+- [ ] Sizing rule written (e.g. volatility targeting)
+
+### Quiz
+<details><summary>1. Annual volatility 50%. Daily σ?</summary>About 2.6% (50 ÷ √365).</details>
+<details><summary>2. Why is VaR a floor, not a ceiling?</summary>It assumes normal returns; crypto's fat tails make big losses more common.</details>
+<details><summary>3. What happens to correlations in a crash?</summary>They tend to rise towards 1.</details>
+
+---
+
 ### Module 8 practical
 Write your portfolio plan: buckets and caps (8.1), risk register (8.2), your
 chosen strategies from 8.3 with kill rules, and your operating calendar (8.4).
@@ -226,7 +257,7 @@ chosen strategies from 8.3 with kill rules, and your operating calendar (8.4).
 
 # DeFi Strategy Mastery — How Strategies Make (and Lose) Money
 
-*On-Chain Operator Program · Strategy module · Built on ATLAS "DeFi & On-Chain" ch. 7–18, 38–42 and the 16-framework Strategy Library, expanded to 25 strategies.*
+*On-Chain Operator Program · Strategy module · Built on ATLAS "DeFi & On-Chain" ch. 7–18, 38–42 and the 16-framework Strategy Library, expanded to 30 strategies.*
 
 > **Read this first.** This is educational material, not financial advice.
 > No DeFi strategy guarantees profit. Every return in DeFi is payment for
@@ -302,7 +333,7 @@ first, then the strategy.**
 
 ## Part 3 — The strategy playbook
 
-![The strategy library: 25 strategies in 6 levels](../assets/diagrams/strategy-levels.png)
+![The strategy library: 30 strategies in 7 levels](../assets/diagrams/strategy-levels.png)
 
 Each strategy card has the same sections:
 **Profit engine · Key maths · Execute · Monitor · Exit/kill rules · How it loses · Size cap**.
@@ -591,6 +622,37 @@ Engineering), Module 11 (Hedging) and Module 12 (Own Bank).
 - **How it loses:** the collateral price falls (the LTV rises even if the
   interest is covered), the borrow rate spikes above the yield, the LST depegs.
 
+### LEVEL 7 — EXPERT (market structure)
+
+Strategies that come from understanding how DeFi's machinery works: minting,
+governance markets, being the counterparty, arbitrage and rates. Full lessons in
+Modules 3, 6 and 10 (3.7, 6.6, 10.7, 10.8, 10.9).
+
+#### 26. Minting against collateral (CDP stablecoins)
+- **Profit engine:** none by itself. It's how you create liquidity from your assets (Module 12's credit line), paying a stability fee.
+- **Key maths:** 10 ETH at $3,000, 150% minimum ratio: max mint $20,000. Mint $10,000 → ratio 300%, liquidation at $1,500, fee $600/yr at 6%. `defi_calc.py cdp --qty 10 --price 3000 --mint 10000 --fee 6`
+- **How it loses:** collateral falls through the ratio (liquidation penalty), stability fee rises, the minted stablecoin depegs.
+
+#### 27. Vote-escrow and bribe income
+- **Profit engine:** voting incentives (bribes) and fee shares paid to locked governance tokens (source 5, sometimes 1).
+- **Key maths:** $10,000 locked earning 15% in bribes = $1,500/yr, *valued at the price you can sell the bribe tokens*; subtract the locked token's price risk over the whole lock.
+- **How it loses:** the locked token falls while you can't sell; bribe markets dry up; liquid-locker discounts.
+
+#### 28. Being the house: perp liquidity vaults
+- **Profit engine:** trading fees, funding and traders' losses on a perp exchange.
+- **Key maths:** split history into fees vs trader P&L; the trader-P&L part can swing from +7% to −20% in a trend.
+- **How it loses:** profitable traders, one-sided open interest, oracle problems, withdrawal cooldowns.
+
+#### 29. Peg and redemption arbitrage (patient version)
+- **Profit engine:** buying an asset below its redemption value and redeeming (source 4: providing liquidity to forced sellers).
+- **Key maths:** 2% LST discount with a 20-day redemption queue ≈ 36.5% annualised simple, *once*, if redemption works.
+- **How it loses:** the discount was pricing a real problem; the queue lengthens; redemption is restricted.
+
+#### 30. Rates positioning: fixed vs floating
+- **Profit engine:** choosing when to lock fixed rates (PTs, fixed borrowing) or stay floating, based on the yield curve (source 2/3).
+- **Key maths:** 3-month 7% vs 12-month 9%: lock 12 months at 9% if you need the money in a year and expect rates to fall.
+- **How it loses:** rates move the other way (opportunity cost); PT liquidity if you exit early; the underlying's risk remains.
+
 ---
 
 ## Part 4 — Execution system (what turns strategies into results)
@@ -642,6 +704,7 @@ weekly: fees/interest earned, IL, costs, net vs benchmark.
 | 5. Carry & hedging | #12 funding carry, #13 LP hedge | You understand perp margin, funding and venue risk |
 | 6. Operator | #14 treasury + #15–16 research | Your portfolio has caps, a journal, and a review you actually run |
 | 7. Professional | #17–21 fixed, basis and options yield · #22–25 credit and hedged yield | You can state what every position is short, and your stress test survives a −50% day |
+| 8. Expert | #26 CDP minting · #27 ve/bribe income · #28 perp vaults · #29 peg arbitrage · #30 rates positioning | You understand the machinery (AMM design, MEV, lending internals, rates) well enough to explain why each opportunity exists |
 
 ---
 
@@ -1162,6 +1225,102 @@ Slashing, depeg of the restaking token, and the chance that points never become 
 <details><summary>1. Why value points at zero?</summary>They're not guaranteed to become anything, so a decision that needs them is a speculation.</details>
 <details><summary>2. What does a perp hedge on the underlying miss?</summary>The restaking token depegging from the underlying.</details>
 <details><summary>3. Name three layers of the restaking risk stack.</summary>Any three: staking/validators, the liquid restaking token, the restaking protocol, each service secured, slashing conditions.</details>
+
+---
+
+## Lesson 10.7 — Being the house: perp-exchange liquidity vaults *(expert)*
+
+### Objective
+Understand what you're really taking on when you provide liquidity to a perpetuals exchange.
+
+### Explanation
+Many on-chain perp exchanges let you deposit into a **liquidity vault** that acts as the
+**counterparty** to traders (the "house"). The vault earns trading fees, borrowing/funding fees
+and part of liquidations, and **loses when traders win**.
+- **Returns:** fees + traders' losses − traders' profits.
+- **Risks:** a run of profitable traders (or a few very large ones), open interest concentrated on one side, oracle manipulation or latency, the market-making strategy of the vault (some vaults actively trade), and exchange contract risk.
+- **Check:** the vault's historical P&L split (fees vs trader P&L), its open-interest caps, how it prices assets (oracle), and withdrawal rules (cooldowns, fees).
+
+### Worked example
+A vault shows 25% APR: 18% from fees, 7% from traders' net losses over the last 6 months.
+In a strong one-directional trend, traders who are long win, so the vault's "trader P&L"
+component can swing to −20% or worse, wiping out the fees. Size it as an **active trading
+exposure**, not as fixed income, and check whether withdrawals are delayed in stress.
+
+### What this position is short
+Trader skill and trending markets; oracle quality; the exchange's own risk controls.
+
+### Checklist
+- [ ] Vault returns split into fees vs trader P&L, with history
+- [ ] Open-interest caps and oracle design reviewed
+- [ ] Withdrawal cooldowns and stress behaviour known
+
+### Quiz
+<details><summary>1. When does a perp liquidity vault lose money?</summary>When traders are net profitable, e.g. in strong trends.</details>
+<details><summary>2. Why isn't it fixed income?</summary>Part of the return is traders' losses, which can reverse sharply.</details>
+<details><summary>3. Name two things to check before depositing.</summary>Any two: fee vs trader-P&L history, OI caps, oracle design, withdrawal rules, contract risk.</details>
+
+---
+
+## Lesson 10.8 — DeFi rates: term structure, fixed vs floating *(expert)*
+
+### Objective
+Read DeFi's interest-rate curve and position for fixed or floating rates deliberately.
+
+### Explanation
+- **Floating rates:** lending and borrowing APYs that change with utilisation (Module 3).
+- **Fixed rates:** PTs (10.1), fixed-rate lending markets and fixed-rate borrowing (#22).
+- **Term structure:** PT implied yields across maturities form a **yield curve** (e.g. 3-month vs 12-month). Upward sloping: the market expects rates to stay high or rise. Inverted: it expects them to fall.
+- **Positioning:** buying PT = receiving a fixed rate (you win if floating rates fall). Buying YT = receiving the floating rate (you win if floating rates rise). Fixed-rate borrowing = paying a fixed rate (you win if floating borrow rates rise).
+- **Basis between venues:** the same asset's rates can differ across protocols and chains; the gap reflects risk, liquidity and friction as much as opportunity.
+
+![PT price converges to 1.00 at maturity](../assets/charts/pt-convergence.png)
+
+### Worked example
+Stablecoin PT implied yields: 3-month **7%**, 12-month **9%**. You need the money in
+12 months and think rates will fall: buy the 12-month PT and lock 9%. If you think rates
+will rise instead, stay floating (supply to lending) or buy YT with a small, capped amount.
+
+### Checklist
+- [ ] I can state whether each position is fixed or floating
+- [ ] I compare implied rates across maturities before locking
+- [ ] Maturities match my liquidity ladder (12.4)
+
+### Quiz
+<details><summary>1. You buy a PT. Are you receiving fixed or floating?</summary>Fixed.</details>
+<details><summary>2. An inverted curve suggests?</summary>The market expects rates to fall.</details>
+<details><summary>3. You think borrow rates will spike. How do you protect a loan?</summary>Switch to fixed-rate borrowing.</details>
+
+---
+
+## Lesson 10.9 — Peg and redemption arbitrage *(expert)*
+
+### Objective
+Understand the arbitrages that keep stablecoins and LSTs near their value, and when a retail operator can take part.
+
+### Explanation
+- **Stablecoin peg arbitrage:** if a stablecoin trades at 0.995 on a DEX and a **PSM** or issuer redeems it at 1.00 (minus a fee), buy-and-redeem closes the gap. It's competitive, needs fast execution, and is often limited to whoever can redeem.
+- **LST discount arbitrage:** if an LST trades below its redemption value, buy it and **queue a redemption**. Your return is the discount over the waiting time, with the risk that the discount reflects a real problem (slashing, a bug) or that the queue lengthens.
+- **Who wins:** professional searchers take most instant arbitrage (14.6). What's left to patient operators is the **slow** kind: buying discounts and waiting, sized small.
+
+### Worked example
+An LST trades at a **2% discount**; the redemption queue is about 20 days.
+Return ≈ 2% over 20 days ≈ **36.5% annualised (simple)**, but only this once, only if
+redemption works as expected, and only if the discount wasn't pricing a real problem.
+Research why the discount exists first (Module 6); cap it in the speculative bucket.
+
+### What this position is short
+The reason the discount exists: an actual problem with the asset, or redemption delays.
+
+### Checklist
+- [ ] Redemption path and eligibility confirmed
+- [ ] Reason for the discount researched
+- [ ] Queue length and worst case written
+
+### Quiz
+<details><summary>1. What closes a stablecoin's discount?</summary>Arbitrageurs buying below peg and redeeming at 1.00 (e.g. via a PSM or issuer).</details>
+<details><summary>2. 1% discount, 10-day redemption. Simple annualised return?</summary>About 36.5%.</details>
+<details><summary>3. Why might a discount be a warning, not an opportunity?</summary>It may reflect a real problem (slashing, exploit, insolvency).</details>
 
 ---
 

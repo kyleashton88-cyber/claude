@@ -167,9 +167,10 @@ collateral, or an incident. Monitor: weekly utilisation, governance feed."*
 ### Objective
 Learn the patterns behind major failures so you recognise them early.
 
-### Explanation — six failures, six patterns
+### Explanation — seven failures, seven patterns
 | Case | What broke | Pattern | Warning signs |
 |---|---|---|---|
+| **Black Thursday, March 2020** (Maker) | ETH crashed; congested network and failing keeper bots let some collateral auctions clear at 0 DAI bids (~$8M lost) | Liquidation mechanism failure under stress | Auctions relying on keepers during congestion; no minimum bid |
 | **TerraUSD (UST), May 2022** | Algorithmic stablecoin lost its peg and collapsed | Reflexive design: confidence was the collateral | Yield (~20%) far above any real cash flow; peg defended by a sister token |
 | **Ronin bridge, March 2022** (~$600M) | Attackers got 5 of 9 validator keys | Weak bridge trust model | Small signer set; keys concentrated |
 | **Mango Markets, Oct 2022** (~$110M) | Collateral price pumped on thin markets, then borrowed against | Oracle manipulation | Thin-market collateral valued at spot |
@@ -186,12 +187,70 @@ matching cash flow. Rating: High. Verdict: don't hold.
 
 ### Checklist
 - [ ] For every position, I've asked which failure pattern it resembles
-- [ ] My register (8.2) includes these six patterns
+- [ ] My register (8.2) includes these seven patterns
 
 ### Quiz
 <details><summary>1. What pattern did Mango Markets show?</summary>Oracle manipulation of thin-market collateral.</details>
 <details><summary>2. What did FTX show DeFi users?</summary>Custodial counterparty risk: "not your keys, not your coins".</details>
 <details><summary>3. UST's main warning sign?</summary>High yield with no matching real cash flow, backed by a reflexive sister token.</details>
+
+---
+
+## Lesson 6.6 — Vote-escrow tokenomics, bribes and governance markets *(expert)*
+
+### Objective
+Understand vote-escrow ("ve") systems and bribe markets, a major source of DeFi yield and power.
+
+### Explanation
+- **Vote-escrow:** you lock a governance token for a period (often up to 4 years) and get **ve-tokens** with voting power that decays as the unlock approaches. Longer lock = more power.
+- **Gauges:** ve-holders vote on which pools receive the protocol's token **emissions**. Emissions attract liquidity, so votes are valuable.
+- **Bribes / voting incentives:** protocols that want liquidity pay ve-holders to vote for their pool. Voters earn this as yield (plus a share of fees in some designs).
+- **Liquid lockers / meta-governance:** protocols that lock on your behalf and give you a tradable token. It's liquid, but it can trade at a discount, and it adds a layer of risk.
+- **Risks:** long locks (you can't sell), the token's price over the lock, emissions diluting holders, and governance capture.
+
+### Worked example
+$10,000 of a ve-token earning ~15% APR in bribes ≈ **$1,500/yr**, paid in various tokens.
+But the underlying is locked for 4 years: if the token falls 60%, the position is worth
+$4,000 plus the bribes collected. A liquid-locker version lets you exit, but it traded at a
+20% discount during the last sell-off. Price the lock, not just the APR.
+
+### Checklist
+- [ ] Lock length and decay understood
+- [ ] Bribe income valued at a realistic sale price
+- [ ] Liquid-locker discount history checked before using one
+
+### Quiz
+<details><summary>1. What do ve-holders vote on?</summary>Which pools receive emissions (gauge weights) and other governance decisions.</details>
+<details><summary>2. Why do protocols pay bribes?</summary>Votes direct emissions to their pools, attracting liquidity.</details>
+<details><summary>3. Main cost of a 4-year lock?</summary>You can't sell during the lock, whatever the token's price does.</details>
+
+---
+
+## Lesson 6.7 — Valuing DeFi protocols: fees, revenue, earnings and multiples *(expert)*
+
+### Objective
+Compare protocols on their economics, not their narratives.
+
+### Explanation
+- **Fees:** everything users pay. **Revenue:** the part that goes to the protocol or token holders (the rest goes to LPs/lenders). **Earnings:** revenue minus token incentives paid out.
+- **Multiples:** price-to-fees (P/F), price-to-sales (P/S, on revenue), price-to-earnings (P/E). Use **FDV** as well as market cap, since unlocks will arrive (6.2).
+- **Quality checks:** is revenue growing without rising incentives? Is it concentrated in one pool or chain? Does it survive a bear market? Does the token actually receive it (value capture)?
+- Multiples compare protocols; they don't set a "right" price.
+
+### Worked example
+FDV **$2B**, annual revenue **$100M**, token incentives **$60M** → earnings **$40M**.
+P/S (FDV) = **20×**; P/E (FDV) = **50×**. A rival with the same revenue but no incentives
+has earnings of $100M: at the same FDV its P/E is 20×. Same revenue, very different economics.
+
+### Checklist
+- [ ] Fees, revenue and earnings separated, with sources
+- [ ] Multiples on FDV and market cap
+- [ ] Revenue quality and value capture assessed
+
+### Quiz
+<details><summary>1. Revenue vs earnings?</summary>Earnings are revenue minus token incentives (and other costs).</details>
+<details><summary>2. Why use FDV in multiples?</summary>Future unlocks will add supply; FDV shows the fully diluted price.</details>
+<details><summary>3. FDV $600M, earnings $20M. P/E?</summary>30×.</details>
 
 ---
 

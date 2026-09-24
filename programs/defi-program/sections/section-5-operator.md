@@ -322,6 +322,38 @@ statements. **They** tell you what's taxable where you live.
 
 ---
 
+## Lesson 12.8 — Institutional-grade custody: MPC, custodians and policy engines *(expert)*
+
+### Objective
+Know the custody options institutions use, and when they make sense for a large personal or family book.
+
+### Explanation
+- **Multisig** (12.2): several keys, rules enforced **on-chain**, transparent and verifiable.
+- **MPC (multi-party computation):** one key is split into shares held by different devices or parties; signatures are created together without ever assembling the key. The rules are enforced **off-chain** by the provider's software. It works on any chain, but you depend on the vendor and can't verify the policy on-chain.
+- **Qualified custodians:** regulated firms that hold assets for clients. Strong legal protections in some jurisdictions; you give up self-custody and on-chain flexibility.
+- **Policy engines:** approval workflows (who can approve what, above which amount), allowlists, time windows and velocity limits, available in both institutional MPC platforms and smart-account setups.
+- **Hybrid:** many large holders use a custodian or MPC for long-term reserves and multisig/smart accounts for active DeFi.
+
+![Custody architecture](../assets/diagrams/custody-architecture.png)
+
+### Worked example
+A $5M family book: cold reserves ($3M) with a qualified custodian (legal title,
+insurance terms read); active DeFi ($1.5M) in a 2-of-3 multisig with a policy of
+two approvers above $50,000 and an allowlist; hot float ($20,000) in a limited smart
+account. The succession plan (12.6) covers all three.
+
+### Checklist
+- [ ] Custody option chosen per tier, with reasons
+- [ ] Vendor/custodian terms, insurance and recovery read
+- [ ] Policy engine rules written: approvers, thresholds, allowlists
+
+### Quiz
+<details><summary>1. MPC vs multisig: where are the rules enforced?</summary>MPC: off-chain by the provider's software. Multisig: on-chain by the contract.</details>
+<details><summary>2. What do you give up with a qualified custodian?</summary>Self-custody and on-chain flexibility.</details>
+<details><summary>3. What is a policy engine?</summary>Rules for approvals, thresholds, allowlists and limits on transactions.</details>
+
+---
+
 ### Module 12 practical: your bank's founding documents
 1. Balance sheet with equity, LTV and runway (`defi_calc.py bank`).
 2. Custody policy: tiers, multisig setup, limits, allowlists, recovery test log.
@@ -767,6 +799,35 @@ breaks: you miss an alert, so keep your other alerts (14.1) as a backup.
 <details><summary>1. Why prefer read-only tools?</summary>They can't move funds, so a bug or breach costs little.</details>
 <details><summary>2. Where should a private key go in a script?</summary>Nowhere. Use scoped permissions (14.2) if a tool must act.</details>
 <details><summary>3. What's an RPC endpoint?</summary>A node connection that lets software read (and submit to) the blockchain.</details>
+
+---
+
+## Lesson 14.6 — Searchers, keepers and arbitrage bots: how they work *(expert)*
+
+### Objective
+Understand the professional bot economy that shapes DeFi prices, and why competing in it is hard.
+
+### Explanation
+- **Searchers** run bots that find and capture opportunities: **DEX arbitrage** (price gaps between pools/venues), **liquidations** (repay debt, take the bonus), **backruns** (trading right after a large swap), and, harmfully, sandwiches.
+- **Keepers** perform maintenance jobs for protocols (liquidations, auction bids, rebalancing) for a fee.
+- **The economics:** bots bid for inclusion by paying builders/validators (2.8). Competition drives profits towards zero; the winners have the lowest latency, best infrastructure, private order flow and capital.
+- **Why it matters to you:** these bots are why pool prices track the market (and cause LVR, 2.7), why liquidations happen within seconds (3.3), and why tight slippage and protected routing matter (2.5).
+- **For a learner:** build read-only monitors (14.5) and understand the mechanics. Running competitive bots is a professional engineering business with real losses from failed transactions and bugs.
+
+### Worked example
+A liquidation worth a $300 bonus (3.3) appears. Dozens of bots see it in the same block;
+the winner pays most of the $300 to the block builder to be included first. The
+"profit" left after fees and gas might be a few dollars, and losing bots may still pay gas.
+That's why liquidations are near-instant, and why your buffer (not a liquidator's delay) is your protection.
+
+### Checklist
+- [ ] I can name the main searcher strategies and their effect on me
+- [ ] My protections (slippage, private routing, HF buffers) assume bots act within seconds
+
+### Quiz
+<details><summary>1. Where does most of a competitive searcher's profit go?</summary>To builders/validators, through bids for inclusion.</details>
+<details><summary>2. What do keepers do?</summary>Paid maintenance for protocols: liquidations, auctions, rebalancing.</details>
+<details><summary>3. Why do liquidations happen so fast?</summary>Competing bots race to capture the bonus.</details>
 
 ---
 

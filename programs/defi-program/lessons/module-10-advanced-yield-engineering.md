@@ -304,6 +304,102 @@ Slashing, depeg of the restaking token, and the chance that points never become 
 
 ---
 
+## Lesson 10.7 — Being the house: perp-exchange liquidity vaults *(expert)*
+
+### Objective
+Understand what you're really taking on when you provide liquidity to a perpetuals exchange.
+
+### Explanation
+Many on-chain perp exchanges let you deposit into a **liquidity vault** that acts as the
+**counterparty** to traders (the "house"). The vault earns trading fees, borrowing/funding fees
+and part of liquidations, and **loses when traders win**.
+- **Returns:** fees + traders' losses − traders' profits.
+- **Risks:** a run of profitable traders (or a few very large ones), open interest concentrated on one side, oracle manipulation or latency, the market-making strategy of the vault (some vaults actively trade), and exchange contract risk.
+- **Check:** the vault's historical P&L split (fees vs trader P&L), its open-interest caps, how it prices assets (oracle), and withdrawal rules (cooldowns, fees).
+
+### Worked example
+A vault shows 25% APR: 18% from fees, 7% from traders' net losses over the last 6 months.
+In a strong one-directional trend, traders who are long win, so the vault's "trader P&L"
+component can swing to −20% or worse, wiping out the fees. Size it as an **active trading
+exposure**, not as fixed income, and check whether withdrawals are delayed in stress.
+
+### What this position is short
+Trader skill and trending markets; oracle quality; the exchange's own risk controls.
+
+### Checklist
+- [ ] Vault returns split into fees vs trader P&L, with history
+- [ ] Open-interest caps and oracle design reviewed
+- [ ] Withdrawal cooldowns and stress behaviour known
+
+### Quiz
+<details><summary>1. When does a perp liquidity vault lose money?</summary>When traders are net profitable, e.g. in strong trends.</details>
+<details><summary>2. Why isn't it fixed income?</summary>Part of the return is traders' losses, which can reverse sharply.</details>
+<details><summary>3. Name two things to check before depositing.</summary>Any two: fee vs trader-P&L history, OI caps, oracle design, withdrawal rules, contract risk.</details>
+
+---
+
+## Lesson 10.8 — DeFi rates: term structure, fixed vs floating *(expert)*
+
+### Objective
+Read DeFi's interest-rate curve and position for fixed or floating rates deliberately.
+
+### Explanation
+- **Floating rates:** lending and borrowing APYs that change with utilisation (Module 3).
+- **Fixed rates:** PTs (10.1), fixed-rate lending markets and fixed-rate borrowing (#22).
+- **Term structure:** PT implied yields across maturities form a **yield curve** (e.g. 3-month vs 12-month). Upward sloping: the market expects rates to stay high or rise. Inverted: it expects them to fall.
+- **Positioning:** buying PT = receiving a fixed rate (you win if floating rates fall). Buying YT = receiving the floating rate (you win if floating rates rise). Fixed-rate borrowing = paying a fixed rate (you win if floating borrow rates rise).
+- **Basis between venues:** the same asset's rates can differ across protocols and chains; the gap reflects risk, liquidity and friction as much as opportunity.
+
+![PT price converges to 1.00 at maturity](../assets/charts/pt-convergence.png)
+
+### Worked example
+Stablecoin PT implied yields: 3-month **7%**, 12-month **9%**. You need the money in
+12 months and think rates will fall: buy the 12-month PT and lock 9%. If you think rates
+will rise instead, stay floating (supply to lending) or buy YT with a small, capped amount.
+
+### Checklist
+- [ ] I can state whether each position is fixed or floating
+- [ ] I compare implied rates across maturities before locking
+- [ ] Maturities match my liquidity ladder (12.4)
+
+### Quiz
+<details><summary>1. You buy a PT. Are you receiving fixed or floating?</summary>Fixed.</details>
+<details><summary>2. An inverted curve suggests?</summary>The market expects rates to fall.</details>
+<details><summary>3. You think borrow rates will spike. How do you protect a loan?</summary>Switch to fixed-rate borrowing.</details>
+
+---
+
+## Lesson 10.9 — Peg and redemption arbitrage *(expert)*
+
+### Objective
+Understand the arbitrages that keep stablecoins and LSTs near their value, and when a retail operator can take part.
+
+### Explanation
+- **Stablecoin peg arbitrage:** if a stablecoin trades at 0.995 on a DEX and a **PSM** or issuer redeems it at 1.00 (minus a fee), buy-and-redeem closes the gap. It's competitive, needs fast execution, and is often limited to whoever can redeem.
+- **LST discount arbitrage:** if an LST trades below its redemption value, buy it and **queue a redemption**. Your return is the discount over the waiting time, with the risk that the discount reflects a real problem (slashing, a bug) or that the queue lengthens.
+- **Who wins:** professional searchers take most instant arbitrage (14.6). What's left to patient operators is the **slow** kind: buying discounts and waiting, sized small.
+
+### Worked example
+An LST trades at a **2% discount**; the redemption queue is about 20 days.
+Return ≈ 2% over 20 days ≈ **36.5% annualised (simple)**, but only this once, only if
+redemption works as expected, and only if the discount wasn't pricing a real problem.
+Research why the discount exists first (Module 6); cap it in the speculative bucket.
+
+### What this position is short
+The reason the discount exists: an actual problem with the asset, or redemption delays.
+
+### Checklist
+- [ ] Redemption path and eligibility confirmed
+- [ ] Reason for the discount researched
+- [ ] Queue length and worst case written
+
+### Quiz
+<details><summary>1. What closes a stablecoin's discount?</summary>Arbitrageurs buying below peg and redeeming at 1.00 (e.g. via a PSM or issuer).</details>
+<details><summary>2. 1% discount, 10-day redemption. Simple annualised return?</summary>About 36.5%.</details>
+<details><summary>3. Why might a discount be a warning, not an opportunity?</summary>It may reflect a real problem (slashing, exploit, insolvency).</details>
+
+---
+
 ### Module 10 practical
 1. Price three live PTs with `defi_calc.py pt` and choose the one whose maturity fits your liquidity ladder.
 2. Paper-trade a basis position: record entry basis, margin, and the rally it would survive.

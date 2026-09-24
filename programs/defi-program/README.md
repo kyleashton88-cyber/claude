@@ -6,13 +6,13 @@ Rebuild: `python3 programs/defi-program/build_master.py`, then `cd programs/defi
 
 | File | Phase | Status |
 |---|---|---|
-| `01-offer-and-curriculum.md` | 1–2 Offer + curriculum | Decisions locked; curriculum expanded to 6 stages · 15 modules · 92 lessons |
+| `01-offer-and-curriculum.md` | 1–2 Offer + curriculum | Decisions locked; curriculum expanded to 6 stages · 15 modules · 107 lessons |
 | `02-sample-lesson-amm-math.md` | Lesson 2.2 | Written |
 | `03-defi-strategy-mastery.md` | Lesson 8.3 (strategy library) | Written |
 | `04-funnel-changes.md` | 4 Funnel wiring | Draft, not applied to Zapier |
 | `05-whop-setup.md` | 3 Whop setup | Decisions locked; waiting on Whop reconnect + product ID |
 | `06-whop-store-listing.md` | Store product listing: copy + image upload map | Ready to paste (3 placeholders) |
-| `assets/` | 53 images: logo system (8), store icon + banner + 7 gallery (9), 15 module banners, 16 diagrams, 5 charts | Rendered by `export/build_images.js` |
+| `assets/` | 55 images: logo system (8), store icon + banner + 7 gallery (9), 15 module banners, 17 diagrams, 6 charts | Rendered by `export/build_images.js` |
 | `Day-1-Setup-Kit.pdf` | Printable beginner setup checklist (generated from Module 0) | Built by `npm run build` |
 | `07-program-operations.md` | Capstones & rubrics, certification, application form & scoring, call script, member emails, live tier, community, terms, support, launch plan | Draft (legal review + your decisions) |
 | `09-mastery-map.md` | Complete topic map: every DeFi mastery topic, where it's taught, at what level; section plan | Ready |
@@ -31,5 +31,5 @@ Rebuild: `python3 programs/defi-program/build_master.py`, then `cd programs/defi
 | `lessons/module-14-automation-mastery.md` | Module 14 (4) | Written |
 
 
-**All 92 lessons and 15 Mastery Starters are written** (Modules 0–14, plus lesson 8.3 in `03-defi-strategy-mastery.md`). Full topic coverage: `09-mastery-map.md`. Stage-by-stage section files: `sections/`.
+**All 107 lessons (15 expert) and 15 Mastery Starters are written** (Modules 0–14, plus lesson 8.3 in `03-defi-strategy-mastery.md`). Full topic coverage: `09-mastery-map.md`. Stage-by-stage section files: `sections/`.
 Phase 3: blocked until Whop is reconnected in Zapier and the product is created in the Whop dashboard (see `05-whop-setup.md`).

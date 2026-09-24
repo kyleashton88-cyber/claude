@@ -1,6 +1,6 @@
 # DeFi Strategy Mastery — How Strategies Make (and Lose) Money
 
-*On-Chain Operator Program · Strategy module · Built on ATLAS "DeFi & On-Chain" ch. 7–18, 38–42 and the 16-framework Strategy Library, expanded to 25 strategies.*
+*On-Chain Operator Program · Strategy module · Built on ATLAS "DeFi & On-Chain" ch. 7–18, 38–42 and the 16-framework Strategy Library, expanded to 30 strategies.*
 
 > **Read this first.** This is educational material, not financial advice.
 > No DeFi strategy guarantees profit. Every return in DeFi is payment for
@@ -76,7 +76,7 @@ first, then the strategy.**
 
 ## Part 3 — The strategy playbook
 
-![The strategy library: 25 strategies in 6 levels](assets/diagrams/strategy-levels.png)
+![The strategy library: 30 strategies in 7 levels](assets/diagrams/strategy-levels.png)
 
 Each strategy card has the same sections:
 **Profit engine · Key maths · Execute · Monitor · Exit/kill rules · How it loses · Size cap**.
@@ -365,6 +365,37 @@ Engineering), Module 11 (Hedging) and Module 12 (Own Bank).
 - **How it loses:** the collateral price falls (the LTV rises even if the
   interest is covered), the borrow rate spikes above the yield, the LST depegs.
 
+### LEVEL 7 — EXPERT (market structure)
+
+Strategies that come from understanding how DeFi's machinery works: minting,
+governance markets, being the counterparty, arbitrage and rates. Full lessons in
+Modules 3, 6 and 10 (3.7, 6.6, 10.7, 10.8, 10.9).
+
+#### 26. Minting against collateral (CDP stablecoins)
+- **Profit engine:** none by itself. It's how you create liquidity from your assets (Module 12's credit line), paying a stability fee.
+- **Key maths:** 10 ETH at $3,000, 150% minimum ratio: max mint $20,000. Mint $10,000 → ratio 300%, liquidation at $1,500, fee $600/yr at 6%. `defi_calc.py cdp --qty 10 --price 3000 --mint 10000 --fee 6`
+- **How it loses:** collateral falls through the ratio (liquidation penalty), stability fee rises, the minted stablecoin depegs.
+
+#### 27. Vote-escrow and bribe income
+- **Profit engine:** voting incentives (bribes) and fee shares paid to locked governance tokens (source 5, sometimes 1).
+- **Key maths:** $10,000 locked earning 15% in bribes = $1,500/yr, *valued at the price you can sell the bribe tokens*; subtract the locked token's price risk over the whole lock.
+- **How it loses:** the locked token falls while you can't sell; bribe markets dry up; liquid-locker discounts.
+
+#### 28. Being the house: perp liquidity vaults
+- **Profit engine:** trading fees, funding and traders' losses on a perp exchange.
+- **Key maths:** split history into fees vs trader P&L; the trader-P&L part can swing from +7% to −20% in a trend.
+- **How it loses:** profitable traders, one-sided open interest, oracle problems, withdrawal cooldowns.
+
+#### 29. Peg and redemption arbitrage (patient version)
+- **Profit engine:** buying an asset below its redemption value and redeeming (source 4: providing liquidity to forced sellers).
+- **Key maths:** 2% LST discount with a 20-day redemption queue ≈ 36.5% annualised simple, *once*, if redemption works.
+- **How it loses:** the discount was pricing a real problem; the queue lengthens; redemption is restricted.
+
+#### 30. Rates positioning: fixed vs floating
+- **Profit engine:** choosing when to lock fixed rates (PTs, fixed borrowing) or stay floating, based on the yield curve (source 2/3).
+- **Key maths:** 3-month 7% vs 12-month 9%: lock 12 months at 9% if you need the money in a year and expect rates to fall.
+- **How it loses:** rates move the other way (opportunity cost); PT liquidity if you exit early; the underlying's risk remains.
+
 ---
 
 ## Part 4 — Execution system (what turns strategies into results)
@@ -416,6 +447,7 @@ weekly: fees/interest earned, IL, costs, net vs benchmark.
 | 5. Carry & hedging | #12 funding carry, #13 LP hedge | You understand perp margin, funding and venue risk |
 | 6. Operator | #14 treasury + #15–16 research | Your portfolio has caps, a journal, and a review you actually run |
 | 7. Professional | #17–21 fixed, basis and options yield · #22–25 credit and hedged yield | You can state what every position is short, and your stress test survives a −50% day |
+| 8. Expert | #26 CDP minting · #27 ve/bribe income · #28 perp vaults · #29 peg arbitrage · #30 rates positioning | You understand the machinery (AMM design, MEV, lending internals, rates) well enough to explain why each opportunity exists |
 
 ---
 

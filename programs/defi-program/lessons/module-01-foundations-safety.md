@@ -358,6 +358,40 @@ Better: no screenshots, a vault address that has never been shared, and a
 
 ---
 
+## Lesson 1.9 — Smart accounts and account abstraction *(expert)*
+
+### Objective
+Understand how smart accounts change wallet security, and use their features without adding new risks.
+
+### Explanation
+- A normal wallet (an **EOA**, externally owned account) is controlled by one private key. A **smart account** is a contract wallet whose rules you choose.
+- **ERC-4337 (account abstraction):** smart accounts without changing Ethereum itself. Transactions become "user operations" handled by **bundlers**; **paymasters** can pay gas for you (e.g. in USDC).
+- **Features:** multisig and **social recovery** (trusted "guardians" can restore access), **spending limits**, **session keys** (Lesson 14.2), **batching** (approve + swap in one step), **passkeys** (log in with your device's biometrics instead of a seed phrase).
+- **EIP-7702 (2025):** lets an ordinary wallet temporarily or permanently delegate to smart-account code: powerful, and a phishing target (Lesson 1.7).
+- **New risks:** the account's contract code, module/plugin permissions, guardian collusion, and differences between chains (the same address may not exist on every chain).
+
+![The 3-wallet setup](../assets/diagrams/three-wallets.png)
+
+### Worked example
+Your operating wallet becomes a smart account with: a passkey on your phone plus a
+hardware key (2-of-2 for large moves); a $2,000/day limit for small moves with just the
+passkey; 3 guardians (2-of-3) who can recover access after a 48-hour delay you can cancel.
+Lose your phone: recover via guardians. Phone stolen: the thief is capped at $2,000/day
+and you have 48 hours to cancel a recovery you didn't start.
+
+### Checklist
+- [ ] I know which of my wallets are EOAs and which are smart accounts
+- [ ] Guardians chosen so no two could plausibly collude; recovery has a cancel delay
+- [ ] Module/plugin permissions reviewed like approvals
+- [ ] Smart account deployed (or deployable) on every chain I send to
+
+### Quiz
+<details><summary>1. What does a paymaster do?</summary>Pays gas on your behalf, e.g. letting you pay fees in USDC.</details>
+<details><summary>2. What is social recovery?</summary>Trusted guardians can restore access to your account, usually after a delay.</details>
+<details><summary>3. Why check the smart account exists on the destination chain?</summary>Smart-account addresses may not be deployed on every chain; funds sent there may be hard to access.</details>
+
+---
+
 ### Module 1 practical
 1. Set up the 3-wallet structure (vault / operator / burner).
 2. Send a small test transaction and trace it on an explorer: status, fee, nonce.

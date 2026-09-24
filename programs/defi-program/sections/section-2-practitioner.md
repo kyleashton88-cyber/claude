@@ -214,6 +214,70 @@ Leverage doesn't just magnify gains: it shrinks how wrong you're allowed to be.
 
 ---
 
+## Lesson 3.6 — Lending design deep dive: e-mode, caps, auctions, soft liquidation, bad debt *(expert)*
+
+### Objective
+Read a lending protocol's risk parameters like a risk manager.
+
+### Explanation
+- **Efficiency mode (e-mode):** higher LTVs for **correlated** assets (e.g. an LST against ETH, or stablecoin against stablecoin). Great for correlated loops; dangerous if the correlation breaks (a depeg).
+- **Isolation mode / isolated markets:** newer or riskier collateral can only back limited borrowing, so its failure can't infect the whole pool.
+- **Supply and borrow caps:** limits on how much of an asset can be deposited or borrowed, protecting against manipulation and illiquid collateral.
+- **Liquidation mechanisms:** a **fixed bonus** (liquidators get e.g. 5% extra) vs **Dutch auctions** (the price falls until someone buys, a better price discovery in calm markets but vulnerable if keepers fail) vs **soft liquidation** (collateral is converted gradually across price bands as the price falls, and can convert back if the price recovers; losses come from the conversions rather than one penalty).
+- **Bad debt:** when collateral is worth less than the debt it backs. Who pays: a reserve or insurance fund, a staking "safety module", or **lenders pro rata** (socialised).
+- **Risk curators / risk managers** set these parameters; governance approves them.
+
+![The liquidation cascade](../assets/diagrams/liquidation-cascade.png)
+
+### Worked example
+An LST loop in e-mode at 90% LTV looks safe because LST and ETH move together.
+If the LST trades at a 6% discount on the oracle during a panic, the "correlated"
+position can be liquidated even though ETH's price didn't move. Check what
+oracle prices the LST (market price vs exchange rate) before trusting e-mode.
+
+### Checklist
+- [ ] For each market: LTV, liquidation threshold, bonus/mechanism, caps, oracle
+- [ ] I know who absorbs bad debt in each protocol I lend to
+- [ ] E-mode positions have a depeg scenario in my stress test
+
+### Quiz
+<details><summary>1. What is e-mode for?</summary>Higher LTVs on correlated assets.</details>
+<details><summary>2. How does soft liquidation differ from a fixed-bonus liquidation?</summary>Collateral is converted gradually across price bands (and can convert back) instead of being seized in one go with a penalty.</details>
+<details><summary>3. Who can end up paying for bad debt?</summary>Protocol reserves, a safety module, or lenders pro rata.</details>
+
+---
+
+## Lesson 3.7 — CDP stablecoins: minting your own dollars *(expert)*
+
+### Objective
+Mint stablecoins against your own collateral (as your own bank would), and manage the position safely.
+
+### Explanation
+- A **CDP** (collateralised debt position) lets you lock collateral and **mint** a stablecoin against it. You owe the stablecoin back, plus a **stability fee** (interest).
+- **Minimum collateral ratio** (e.g. 150%): below it, the position is liquidated.
+- The stablecoin holds its peg through over-collateralisation, liquidations, interest rates and often a **peg stability module (PSM)** that swaps it 1:1 (minus a small fee) with other stablecoins.
+- Compared with borrowing from a lending pool: you create new money rather than borrow someone's deposit; rates are set by governance, not utilisation.
+- **Uses:** liquidity without selling (Module 12.3), funding a liquidity ladder, or a yield-covered credit line (strategy #25).
+
+### Worked example
+10 ETH at $3,000 ($30,000) with a 150% minimum ratio: you could mint up to $20,000.
+Mint **$10,000** instead:
+`defi_calc.py cdp --qty 10 --price 3000 --mint 10000 --fee 6`
+→ ratio **300%**, liquidation at **$1,500 (−50%)**, stability fee **$600/yr**.
+Operators treat the maximum as a cliff, not a target.
+
+### Checklist
+- [ ] Collateral ratio target (e.g. ≥ 250%) and action levels written
+- [ ] Stability fee vs alternatives (lending-pool borrow rates) compared
+- [ ] Peg mechanism (PSM, rates) understood, and my exit if the stablecoin depegs
+
+### Quiz
+<details><summary>1. What do you owe on a CDP?</summary>The minted stablecoin plus the accrued stability fee.</details>
+<details><summary>2. Collateral $40,000, 150% minimum ratio. Maximum mint?</summary>About $26,667.</details>
+<details><summary>3. What does a PSM do?</summary>Swaps the stablecoin 1:1 (minus a fee) with other stablecoins, supporting the peg.</details>
+
+---
+
 ### Module 3 practical
 1. Pick a real lending market: record utilisation, supply and borrow APY, and the kink.
 2. Model a borrow with `defi_calc.py health`; write your defence ladder.
@@ -755,6 +819,40 @@ Send $50 first by the chosen route, keep ~$5 of ETH on Base for gas, then send t
 <details><summary>1. What is gas stranding?</summary>Having tokens on a chain with no gas token to move them.</details>
 <details><summary>2. Risk of chain abstraction?</summary>Each hidden layer (smart accounts, paymasters, solvers) is an extra dependency.</details>
 <details><summary>3. First step on any new route?</summary>Send a small test amount.</details>
+
+---
+
+## Lesson 5.8 — Reading smart-contract code: enough to verify claims *(expert)*
+
+### Objective
+Read verified contract code well enough to check the claims a protocol makes about itself.
+
+### Explanation
+You don't need to be a developer to spot the things that matter. In verified Solidity code on an explorer, look for:
+- **Access control:** `onlyOwner`, `onlyRole(...)`, `onlyGovernance`. Who can call what? Search for functions guarded by them.
+- **Dangerous powers:** `mint`, `pause`, `upgradeTo`, `setOracle`, `setFee`, `withdraw`/`sweep`/`rescue` functions that move user funds.
+- **Upgradeability:** proxy patterns (`delegatecall`, `implementation`, `upgradeTo`), and who the admin is (5.4).
+- **External calls and state order:** calling another contract before updating balances is the classic reentrancy pattern (5.5).
+- **Parameters with no limits:** a fee that can be set to 100%, or an oracle address that can be swapped instantly.
+- **Events:** what's logged tells you what you can monitor.
+
+### Worked example
+A token claims "fixed supply". In its code you find:
+```
+function mint(address to, uint256 amount) external onlyOwner { _mint(to, amount); }
+```
+The owner can mint unlimited tokens: the claim is false unless ownership is renounced
+or held by a timelocked governance contract. Check the `owner()` value on the Read tab.
+
+### Checklist
+- [ ] Searched the code for owner/role-guarded functions
+- [ ] Listed every function that can mint, pause, upgrade, change fees/oracles or move funds
+- [ ] Checked who holds those roles (Read tab) and behind what timelock
+
+### Quiz
+<details><summary>1. What does `onlyOwner` on a mint function mean?</summary>The owner can mint new tokens whenever they like.</details>
+<details><summary>2. Why check parameter limits?</summary>An unlimited setter (fee, oracle) can be changed to harm users instantly.</details>
+<details><summary>3. What code pattern suggests reentrancy risk?</summary>An external call made before the contract updates its own state.</details>
 
 ---
 

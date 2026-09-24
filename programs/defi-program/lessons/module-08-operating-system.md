@@ -107,7 +107,7 @@ mitigation or an exit; anything ≥ 20 shouldn't be held.
 
 ## Lesson 8.3 — Strategy library
 
-The full strategy library (25 strategies in 6 levels, each with its profit
+The full strategy library (30 strategies in 7 levels, each with its profit
 engine, maths, execution, kill rules and failure modes) is **Lesson 8.3:
 DeFi Strategy Mastery** (`03-defi-strategy-mastery.md`).
 
@@ -209,6 +209,37 @@ and at review decides the idea doesn't meet the thesis standard at all.
 <details><summary>1. What's the sunk-cost question?</summary>Would I enter this position today, knowing what I know now?</details>
 <details><summary>2. Why rely on structure rather than willpower?</summary>Decisions under stress are unreliable; pre-written rules decide for you.</details>
 <details><summary>3. Rule against revenge trading?</summary>For example, no new leverage within 7 days of a loss event.</details>
+
+---
+
+## Lesson 8.7 — Quantitative risk: volatility, VaR, drawdown, correlation and sizing *(expert)*
+
+### Objective
+Put numbers on portfolio risk and size positions from them.
+
+### Explanation
+- **Volatility (σ):** annualised standard deviation of returns. **Daily σ ≈ annual σ ÷ √365** (crypto trades every day).
+- **Value at risk (VaR):** a loss level you'd expect to exceed only rarely (e.g. 1 day in 20 at 95%). Parametric 1-day VaR ≈ 1.65 × daily σ × position. **It assumes normal returns; crypto has fat tails**, so real losses exceed VaR more often. Use it as a floor, plus stress tests (11.4).
+- **Max drawdown:** the largest peak-to-trough fall. Ask: could I live through it, and would my policies survive it?
+- **Correlation:** in crashes, correlations between crypto assets rise towards 1. Diversifying within crypto helps less when you need it most.
+- **Sizing:** **volatility targeting** (size so each position contributes similar risk); the **Kelly criterion** gives a theoretical maximum bet size from edge and odds, but estimates are noisy, so professionals use a small fraction of it or skip it.
+
+### Worked example
+$100,000 of ETH at 70% annual volatility:
+`defi_calc.py var --position 100000 --vol 70` → daily σ ≈ **3.66%**, 1-day 95% VaR ≈ **$6,046**.
+Real single-day falls have been far larger (in March 2020, ETH fell by roughly 40% in a day).
+So: VaR for day-to-day sizing, stress tests for survival.
+
+### Checklist
+- [ ] Volatility and VaR computed for my largest positions
+- [ ] Portfolio survives the worst historical drawdown of what it holds
+- [ ] Correlation assumed to rise in stress
+- [ ] Sizing rule written (e.g. volatility targeting)
+
+### Quiz
+<details><summary>1. Annual volatility 50%. Daily σ?</summary>About 2.6% (50 ÷ √365).</details>
+<details><summary>2. Why is VaR a floor, not a ceiling?</summary>It assumes normal returns; crypto's fat tails make big losses more common.</details>
+<details><summary>3. What happens to correlations in a crash?</summary>They tend to rise towards 1.</details>
 
 ---
 

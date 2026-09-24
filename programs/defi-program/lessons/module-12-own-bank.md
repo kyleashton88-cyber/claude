@@ -316,6 +316,38 @@ statements. **They** tell you what's taxable where you live.
 
 ---
 
+## Lesson 12.8 — Institutional-grade custody: MPC, custodians and policy engines *(expert)*
+
+### Objective
+Know the custody options institutions use, and when they make sense for a large personal or family book.
+
+### Explanation
+- **Multisig** (12.2): several keys, rules enforced **on-chain**, transparent and verifiable.
+- **MPC (multi-party computation):** one key is split into shares held by different devices or parties; signatures are created together without ever assembling the key. The rules are enforced **off-chain** by the provider's software. It works on any chain, but you depend on the vendor and can't verify the policy on-chain.
+- **Qualified custodians:** regulated firms that hold assets for clients. Strong legal protections in some jurisdictions; you give up self-custody and on-chain flexibility.
+- **Policy engines:** approval workflows (who can approve what, above which amount), allowlists, time windows and velocity limits, available in both institutional MPC platforms and smart-account setups.
+- **Hybrid:** many large holders use a custodian or MPC for long-term reserves and multisig/smart accounts for active DeFi.
+
+![Custody architecture](../assets/diagrams/custody-architecture.png)
+
+### Worked example
+A $5M family book: cold reserves ($3M) with a qualified custodian (legal title,
+insurance terms read); active DeFi ($1.5M) in a 2-of-3 multisig with a policy of
+two approvers above $50,000 and an allowlist; hot float ($20,000) in a limited smart
+account. The succession plan (12.6) covers all three.
+
+### Checklist
+- [ ] Custody option chosen per tier, with reasons
+- [ ] Vendor/custodian terms, insurance and recovery read
+- [ ] Policy engine rules written: approvers, thresholds, allowlists
+
+### Quiz
+<details><summary>1. MPC vs multisig: where are the rules enforced?</summary>MPC: off-chain by the provider's software. Multisig: on-chain by the contract.</details>
+<details><summary>2. What do you give up with a qualified custodian?</summary>Self-custody and on-chain flexibility.</details>
+<details><summary>3. What is a policy engine?</summary>Rules for approvals, thresholds, allowlists and limits on transactions.</details>
+
+---
+
 ### Module 12 practical: your bank's founding documents
 1. Balance sheet with equity, LTV and runway (`defi_calc.py bank`).
 2. Custody policy: tiers, multisig setup, limits, allowlists, recovery test log.

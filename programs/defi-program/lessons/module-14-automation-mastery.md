@@ -210,5 +210,34 @@ breaks: you miss an alert, so keep your other alerts (14.1) as a backup.
 
 ---
 
+## Lesson 14.6 — Searchers, keepers and arbitrage bots: how they work *(expert)*
+
+### Objective
+Understand the professional bot economy that shapes DeFi prices, and why competing in it is hard.
+
+### Explanation
+- **Searchers** run bots that find and capture opportunities: **DEX arbitrage** (price gaps between pools/venues), **liquidations** (repay debt, take the bonus), **backruns** (trading right after a large swap), and, harmfully, sandwiches.
+- **Keepers** perform maintenance jobs for protocols (liquidations, auction bids, rebalancing) for a fee.
+- **The economics:** bots bid for inclusion by paying builders/validators (2.8). Competition drives profits towards zero; the winners have the lowest latency, best infrastructure, private order flow and capital.
+- **Why it matters to you:** these bots are why pool prices track the market (and cause LVR, 2.7), why liquidations happen within seconds (3.3), and why tight slippage and protected routing matter (2.5).
+- **For a learner:** build read-only monitors (14.5) and understand the mechanics. Running competitive bots is a professional engineering business with real losses from failed transactions and bugs.
+
+### Worked example
+A liquidation worth a $300 bonus (3.3) appears. Dozens of bots see it in the same block;
+the winner pays most of the $300 to the block builder to be included first. The
+"profit" left after fees and gas might be a few dollars, and losing bots may still pay gas.
+That's why liquidations are near-instant, and why your buffer (not a liquidator's delay) is your protection.
+
+### Checklist
+- [ ] I can name the main searcher strategies and their effect on me
+- [ ] My protections (slippage, private routing, HF buffers) assume bots act within seconds
+
+### Quiz
+<details><summary>1. Where does most of a competitive searcher's profit go?</summary>To builders/validators, through bids for inclusion.</details>
+<details><summary>2. What do keepers do?</summary>Paid maintenance for protocols: liquidations, auctions, rebalancing.</details>
+<details><summary>3. Why do liquidations happen so fast?</summary>Competing bots race to capture the bonus.</details>
+
+---
+
 ### Module 14 practical
 Build your alert sheet, scope one automation, write your signing procedure, then complete the operator capstone.

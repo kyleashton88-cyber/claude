@@ -32,9 +32,9 @@ to complete mastery: a safe setup, 25 professional strategies, a risk-adjusted
 income engine, and operating as their own on-chain bank. It sits in my Whop
 store alongside Grid Bot Builder ($997) and Elite Intel Community ($67/mo).
 
-Everything is built: 6 stages, 15 modules, **92 lessons plus a Mastery
-Starter (N.0) opening every module**, 25 strategy playbooks, 2 capstones, 17
-worksheets, 17 calculators, a store listing, an operations kit, 18 videos
+Everything is built: 6 stages, 15 modules, **107 lessons (15 of them expert-level) plus a Mastery
+Starter (N.0) opening every module**, 30 strategy playbooks, 2 capstones, 17
+worksheets, 20 calculators, a store listing, an operations kit, 18 videos
 and a brand system. The attached core files describe it; the lessons come in
 **six section files, one per stage, which I'll attach one at a time** when you
 ask for them. Read the core files fully before doing anything.
@@ -43,7 +43,7 @@ ask for them. Read the core files fully before doing anything.
 - Name: **On-Chain Operator Program**. Tagline: **From zero to your own on-chain bank.**
 - Course tier **$15,000 one-time**. Live tier priced higher (not yet set).
 - Launch to everyone; cold traffic goes **application → call → checkout**.
-- 6 stages · 15 modules (0–14) · 92 lessons + 15 Mastery Starters · 25 strategy playbooks · 2 capstones.
+- 6 stages · 15 modules (0–14) · 107 lessons + 15 Mastery Starters · 30 strategy playbooks · 2 capstones.
 - **Every module opens with a Mastery Starter (N.0):** 60-second version, words you'll need, before you start, first safe step, beginner → practitioner → master ladder, and "you've mastered this module when…". Keep this structure in every module.
 - Every lesson: Objective → Explanation → Worked example → Checklist → 3-question quiz, with at least one image.
 

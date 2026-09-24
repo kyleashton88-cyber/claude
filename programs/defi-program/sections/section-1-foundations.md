@@ -364,6 +364,40 @@ Better: no screenshots, a vault address that has never been shared, and a
 
 ---
 
+## Lesson 1.9 — Smart accounts and account abstraction *(expert)*
+
+### Objective
+Understand how smart accounts change wallet security, and use their features without adding new risks.
+
+### Explanation
+- A normal wallet (an **EOA**, externally owned account) is controlled by one private key. A **smart account** is a contract wallet whose rules you choose.
+- **ERC-4337 (account abstraction):** smart accounts without changing Ethereum itself. Transactions become "user operations" handled by **bundlers**; **paymasters** can pay gas for you (e.g. in USDC).
+- **Features:** multisig and **social recovery** (trusted "guardians" can restore access), **spending limits**, **session keys** (Lesson 14.2), **batching** (approve + swap in one step), **passkeys** (log in with your device's biometrics instead of a seed phrase).
+- **EIP-7702 (2025):** lets an ordinary wallet temporarily or permanently delegate to smart-account code: powerful, and a phishing target (Lesson 1.7).
+- **New risks:** the account's contract code, module/plugin permissions, guardian collusion, and differences between chains (the same address may not exist on every chain).
+
+![The 3-wallet setup](../assets/diagrams/three-wallets.png)
+
+### Worked example
+Your operating wallet becomes a smart account with: a passkey on your phone plus a
+hardware key (2-of-2 for large moves); a $2,000/day limit for small moves with just the
+passkey; 3 guardians (2-of-3) who can recover access after a 48-hour delay you can cancel.
+Lose your phone: recover via guardians. Phone stolen: the thief is capped at $2,000/day
+and you have 48 hours to cancel a recovery you didn't start.
+
+### Checklist
+- [ ] I know which of my wallets are EOAs and which are smart accounts
+- [ ] Guardians chosen so no two could plausibly collude; recovery has a cancel delay
+- [ ] Module/plugin permissions reviewed like approvals
+- [ ] Smart account deployed (or deployable) on every chain I send to
+
+### Quiz
+<details><summary>1. What does a paymaster do?</summary>Pays gas on your behalf, e.g. letting you pay fees in USDC.</details>
+<details><summary>2. What is social recovery?</summary>Trusted guardians can restore access to your account, usually after a delay.</details>
+<details><summary>3. Why check the smart account exists on the destination chain?</summary>Smart-account addresses may not be deployed on every chain; funds sent there may be hard to access.</details>
+
+---
+
 ### Module 1 practical
 1. Set up the 3-wallet structure (vault / operator / burner).
 2. Send a small test transaction and trace it on an explorer: status, fee, nonce.
@@ -665,6 +699,74 @@ beat both by sourcing liquidity from several venues at once. Compare the quotes.
 <details><summary>1. Why split a large trade into a TWAP?</summary>Smaller slices cause less price impact each.</details>
 <details><summary>2. What's the risk of a limit order?</summary>It may never fill.</details>
 <details><summary>3. Who fills an intent-based order?</summary>Competing solvers or market makers.</details>
+
+---
+
+## Lesson 2.7 — Advanced AMM design and LVR *(expert)*
+
+### Objective
+Know the major AMM designs and measure an LP's real cost with loss-versus-rebalancing (LVR).
+
+### Explanation
+- **Constant product (x·y=k):** works for any pair; spreads liquidity across all prices.
+- **StableSwap:** for assets that should trade near 1:1 (stablecoins, LST/ETH). Blends constant-sum (flat, low slippage near the peg) with constant-product (safety away from it), tuned by an **amplification** parameter.
+- **Weighted pools:** more than two tokens or uneven weights (e.g. 80/20), with invariant ∏ xᵢ^wᵢ = k. An 80/20 pool has less impermanent loss on the 80% token.
+- **Concentrated liquidity:** positions in price ranges ("ticks"); the pool tracks √price internally.
+- **Hooks and dynamic fees:** newer designs (e.g. Uniswap v4, 2025) let pools run custom code at swap time: dynamic fees, limit orders, oracles. Each hook is extra contract risk.
+- **LVR (loss-versus-rebalancing):** pool prices only update when arbitrageurs trade against LPs after prices move elsewhere. LVR measures what LPs lose to that arbitrage, versus a portfolio that rebalances at market prices. For a full-range constant-product pool, **LVR ≈ σ²/8 of pool value per year** (σ = annual volatility). **Fees must beat LVR**, not just impermanent loss.
+
+![Loss-versus-rebalancing vs volatility](../assets/charts/lvr.png)
+
+### Worked example
+An ETH/USDC full-range pool with ETH volatility **80%/yr**:
+`defi_calc.py lvr --vol 80 --fee-apr 12` → LVR ≈ **8.0%/yr**. With 12% fee APR, LPs keep
+≈ **+4%/yr** before gas. If volatility rises to 110%, LVR ≈ 15%/yr, and the same fees now lose money.
+Higher-volatility pairs need much higher fee tiers.
+
+### Checklist
+- [ ] I choose pool type by pair: StableSwap for pegged pairs, weighted/CL otherwise
+- [ ] I compare fee APR with LVR, not just IL
+- [ ] Hook contracts reviewed like any other contract
+
+### Quiz
+<details><summary>1. Why do stable pairs use StableSwap curves?</summary>They give very low slippage near the peg, where these pairs trade.</details>
+<details><summary>2. What does LVR measure?</summary>What LPs lose to arbitrageurs because pool prices lag the market.</details>
+<details><summary>3. Volatility 60%/yr: approximate LVR for a full-range pool?</summary>0.6²/8 = 4.5% of pool value per year.</details>
+
+---
+
+## Lesson 2.8 — The MEV supply chain *(expert)*
+
+### Objective
+Understand who sees, orders and profits from your transactions, and how to get some of that value back.
+
+### Explanation
+The path of an Ethereum transaction today:
+1. **You / your wallet** send it, either to the **public mempool** or to a **private RPC** (e.g. an MEV-protection endpoint).
+2. **Searchers** scan for opportunities (arbitrage, liquidations, backruns, sandwiches) and submit **bundles**.
+3. **Builders** assemble the most profitable blocks from transactions and bundles.
+4. **Relays** pass blocks to **proposers** (validators), who pick the highest-paying block (**proposer-builder separation**, via MEV-Boost).
+- **Order-flow auctions / MEV rebates:** some private RPCs and wallets let searchers bid to backrun your transaction and **refund you part** of the value.
+- **Intent systems** (Lesson 2.6) move competition to solvers, often with built-in protection.
+- L2s usually have a **single sequencer** ordering transactions, which changes MEV dynamics (e.g. first-come-first-served or priority-fee ordering).
+
+![The MEV supply chain](../assets/diagrams/mev-supply-chain.png)
+
+### Worked example
+A $100,000 swap sent publicly with 1% slippage could leak up to ~$1,000 to a sandwich.
+Sent through a protected RPC with rebates: no sandwich, and if the trade creates a
+backrun opportunity (e.g. arbitrage between pools), you may receive a share of it back.
+Same trade, very different outcome, decided by where you send it.
+
+### Checklist
+- [ ] Large trades go through a protected RPC, an intent system or an aggregator with MEV protection
+- [ ] I know whether my wallet's RPC offers rebates
+- [ ] I understand my L2's sequencer ordering rules
+
+### Quiz
+<details><summary>1. What do builders do?</summary>Assemble blocks from transactions and searcher bundles to maximise value.</details>
+<details><summary>2. What is an MEV rebate?</summary>A refund of part of the value searchers extract from backrunning your transaction.</details>
+<details><summary>3. Who orders transactions on most L2s today?</summary>A sequencer, often a single operator.</details>
 
 ---
 

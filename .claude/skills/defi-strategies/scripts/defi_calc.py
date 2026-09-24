@@ -3,7 +3,8 @@
 efficiency, health factor / liquidation price, leverage loops, funding carry,
 lending supply rate, APR->APY, airdrop EV, principal-token fixed yield,
 cash-and-carry basis, covered calls, risk-adjusted yield, income portfolios,
-a personal balance sheet, perp liquidation prices and time-weighted returns.
+a personal balance sheet, perp liquidation prices, time-weighted returns,
+CDP minting, loss-versus-rebalancing (LVR) and value at risk.
 
 Educational modelling only. Rates are inputs you supply from live sources;
 outputs are not forecasts.
@@ -185,6 +186,31 @@ def cmd_twr(a):
         print(f"Simple gain on total capital in: {simple:.2f}% (deposits distort this; TWR measures skill)")
 
 
+def cmd_cdp(a):
+    coll = a.qty * a.price
+    max_mint = coll / (a.min_ratio / 100)
+    ratio = coll / a.mint * 100
+    liq = a.mint * a.min_ratio / 100 / a.qty
+    print(f"Collateral {coll:,.0f}; min ratio {a.min_ratio:g}% -> max mint {max_mint:,.0f}")
+    print(f"Minting {a.mint:,.0f}: collateral ratio {ratio:.0f}%, liquidation price {liq:,.2f} "
+          f"({(liq / a.price - 1) * 100:+.1f}%), stability fee {a.mint * a.fee / 100:,.0f}/yr")
+
+
+def cmd_lvr(a):
+    rate = (a.vol / 100) ** 2 / 8
+    print(f"Volatility {a.vol:g}%/yr -> LVR ~ {rate * 100:.2f}% of pool value per year (full-range x*y=k)")
+    if a.fee_apr is not None:
+        print(f"Fee APR {a.fee_apr:g}% -> fees minus LVR ~ {a.fee_apr - rate * 100:+.2f}%/yr")
+
+
+def cmd_var(a):
+    daily = a.vol / 100 / math.sqrt(365)
+    var = a.z * daily * a.position
+    print(f"Annual vol {a.vol:g}% -> daily vol {daily * 100:.2f}%")
+    print(f"1-day VaR at z={a.z:g}: ~{var:,.0f} on {a.position:,.0f} ({a.z * daily * 100:.2f}%). "
+          f"Assumes normal returns: crypto tails are fatter, so treat as a floor.")
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -296,6 +322,25 @@ def main():
     s.add_argument("--end", type=float)
     s.add_argument("--net-deposits", type=float)
     s.set_defaults(fn=cmd_twr)
+
+    s = sub.add_parser("cdp", help="mint stablecoins against collateral (CDP)")
+    s.add_argument("--qty", type=float, required=True)
+    s.add_argument("--price", type=float, required=True)
+    s.add_argument("--mint", type=float, required=True)
+    s.add_argument("--min-ratio", type=float, default=150, help="minimum collateral ratio, percent")
+    s.add_argument("--fee", type=float, default=0, help="stability fee, percent per year")
+    s.set_defaults(fn=cmd_cdp)
+
+    s = sub.add_parser("lvr", help="loss-versus-rebalancing for a full-range LP")
+    s.add_argument("--vol", type=float, required=True, help="annualised volatility, percent")
+    s.add_argument("--fee-apr", type=float)
+    s.set_defaults(fn=cmd_lvr)
+
+    s = sub.add_parser("var", help="parametric 1-day value at risk")
+    s.add_argument("--position", type=float, required=True)
+    s.add_argument("--vol", type=float, required=True, help="annualised volatility, percent")
+    s.add_argument("--z", type=float, default=1.65, help="1.65 ~ 95%, 2.33 ~ 99%")
+    s.set_defaults(fn=cmd_var)
 
     a = p.parse_args()
     a.fn(a)
