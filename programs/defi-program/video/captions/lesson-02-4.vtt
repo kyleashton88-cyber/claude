@@ -1,0 +1,154 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.175
+Lesson 2.4.
+
+00:00:02.175 --> 00:00:05.320
+Impermanent loss & true LP P&L.
+
+00:00:05.320 --> 00:00:07.874
+By the end of this lesson, you'll be
+
+00:00:07.874 --> 00:00:10.910
+able to calculate an LP position's full P&L
+
+00:00:10.910 --> 00:00:13.395
+and judge it against simply holding.
+
+00:00:14.695 --> 00:00:15.985
+Here's the plan.
+
+00:00:15.985 --> 00:00:17.670
+First, the key ideas.
+
+00:00:17.670 --> 00:00:20.385
+Then, a worked example, step by step.
+
+00:00:20.385 --> 00:00:21.910
+Then, your checklist.
+
+00:00:21.910 --> 00:00:24.072
+And finally, a three-question quiz.
+
+00:00:25.372 --> 00:00:29.759
+Impermanent loss (IL) is how much the LP
+
+00:00:29.759 --> 00:00:35.536
+position lags simply holding the same starting tokens
+
+00:00:35.536 --> 00:00:40.244
+when their relative price changes: IL = 2√r
+
+00:00:40.244 --> 00:00:42.277
+÷ (1 + r) − 1 (r =
+
+00:00:42.277 --> 00:00:45.252
+new price ÷ entry price).
+
+00:00:45.252 --> 00:00:48.212
+It's "impermanent" only if price returns.
+
+00:00:48.212 --> 00:00:50.697
+Withdraw after the move and it's permanent.
+
+00:00:50.697 --> 00:00:53.810
+Full LP P&L = LP value + fees
+
+00:00:53.810 --> 00:00:58.272
++ incentives − gas, compared to hold value.
+
+00:00:59.572 --> 00:01:03.568
+Deposit 1 ETH + 3,000 USDC
+
+00:01:03.568 --> 00:01:08.457
+at ETH = $3,000 (total $6,000).
+
+00:01:08.457 --> 00:01:11.302
+ETH rises to $4,000.
+
+00:01:11.302 --> 00:01:14.610
+A master judges the LP on
+
+00:01:14.610 --> 00:01:18.217
+the +$58, not the +$1,058.
+
+00:01:18.217 --> 00:01:24.122
+Calculator: the calculator Starting $6,000: +$1,058 (mostly
+
+00:01:24.122 --> 00:01:27.867
+from ETH going up, not from LPing).
+
+00:01:27.867 --> 00:01:32.122
+Holding: +$58, the actual value added by LPing.
+
+00:01:33.422 --> 00:01:37.022
+Let's look at the chart: Impermanent loss vs holding.
+
+00:01:37.022 --> 00:01:38.582
+Take a moment with it.
+
+00:01:38.582 --> 00:01:40.992
+It's everything we've just said, in one picture.
+
+00:01:42.292 --> 00:01:43.752
+Here's your checklist.
+
+00:01:43.752 --> 00:01:45.287
+Do it now, for real.
+
+00:01:45.287 --> 00:01:48.212
+First, P&L tracked against hold, weekly.
+
+00:01:48.212 --> 00:01:53.347
+Next, IL, fees, incentives and gas recorded separately.
+
+00:01:53.347 --> 00:01:55.395
+And finally, Exit if fees
+
+00:01:55.395 --> 00:01:57.758
+consistently fail to cover IL.
+
+00:01:59.058 --> 00:02:00.268
+Question 1.
+
+00:02:00.268 --> 00:02:01.833
+ETH doubles.
+
+00:02:01.833 --> 00:02:04.343
+IL on a 50/50 pool?
+
+00:02:08.763 --> 00:02:12.623
+The answer: About −5.7% vs holding.
+
+00:02:13.923 --> 00:02:15.168
+Question 2.
+
+00:02:15.168 --> 00:02:18.443
+Your LP is up 20% since deposit.
+
+00:02:18.443 --> 00:02:19.528
+Did LPing work?
+
+00:02:23.948 --> 00:02:27.138
+The answer: Unknown until you compare with holding.
+
+00:02:27.138 --> 00:02:29.103
+The 20% could be all price.
+
+00:02:30.403 --> 00:02:31.673
+Question 3.
+
+00:02:31.673 --> 00:02:34.062
+When does IL become permanent?
+
+00:02:38.482 --> 00:02:40.593
+The answer: When you withdraw while the
+
+00:02:40.593 --> 00:02:42.492
+price ratio is different from entry.
+
+00:02:43.793 --> 00:02:46.308
+Do the checklist now, before you move on.
+
+00:02:46.308 --> 00:02:51.072
+Next up, Lesson 2.5: MEV and protecting your trades.

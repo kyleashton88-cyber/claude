@@ -1,0 +1,274 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.195
+Lesson 2.2.
+
+00:00:02.195 --> 00:00:05.775
+AMM Mathematics (x · y = k).
+
+00:00:05.775 --> 00:00:07.907
+By the end of this lesson, you'll be
+
+00:00:07.907 --> 00:00:09.866
+able to by the end of this lesson
+
+00:00:09.866 --> 00:00:12.401
+you can calculate what a swap will actually
+
+00:00:12.401 --> 00:00:15.166
+pay out in a constant-product pool, and explain
+
+00:00:15.166 --> 00:00:17.183
+why bigger trades get worse prices.
+
+00:00:18.483 --> 00:00:19.773
+Here's the plan.
+
+00:00:19.773 --> 00:00:21.458
+First, the key ideas.
+
+00:00:21.458 --> 00:00:24.173
+Then, a worked example, step by step.
+
+00:00:24.173 --> 00:00:25.698
+Then, your checklist.
+
+00:00:25.698 --> 00:00:27.860
+And finally, a three-question quiz.
+
+00:00:29.161 --> 00:00:32.936
+A constant-product AMM holds two tokens in a pool.
+
+00:00:32.936 --> 00:00:34.651
+It doesn't use an order book.
+
+00:00:34.651 --> 00:00:37.705
+It keeps one rule: reserves of token A ×
+
+00:00:37.705 --> 00:00:40.386
+reserves of token B = k, and k must
+
+00:00:40.386 --> 00:00:44.261
+stay constant (ignoring fees) after every trade.
+
+00:00:44.261 --> 00:00:47.386
+First, Pool price is the ratio of reserves.
+
+00:00:47.386 --> 00:00:51.678
+100 ETH and 300,000 USDC means 1 ETH
+
+00:00:51.678 --> 00:00:55.969
+≈ 3,000 USDC. Next, when you add ETH
+
+00:00:55.969 --> 00:01:00.725
+to the pool, the pool must remove enough
+
+00:01:00.725 --> 00:01:03.461
+USDC to keep x·y = k.
+
+00:01:03.461 --> 00:01:05.419
+Then, the more of the pool you move,
+
+00:01:05.419 --> 00:01:07.836
+the further the price moves against you.
+
+00:01:07.836 --> 00:01:09.711
+That gap is price impact.
+
+00:01:09.711 --> 00:01:12.858
+And finally, Arbitrageurs then trade the pool
+
+00:01:12.858 --> 00:01:15.389
+back in line with other markets, and
+
+00:01:15.389 --> 00:01:17.536
+that changes what LPs hold.
+
+00:01:17.536 --> 00:01:20.151
+You'll see why that matters in Lesson 2.4.
+
+00:01:21.451 --> 00:01:23.225
+Let's look at the diagram: How
+
+00:01:23.225 --> 00:01:25.471
+a constant-product swap is priced.
+
+00:01:25.471 --> 00:01:27.031
+Take a moment with it.
+
+00:01:27.031 --> 00:01:29.441
+It's everything we've just said, in one picture.
+
+00:01:30.741 --> 00:01:33.256
+Let's work an example,
+
+00:01:33.256 --> 00:01:36.039
+step by step. Pool: 100
+
+00:01:36.039 --> 00:01:39.586
+ETH and 300,000 U.S.D.C., so
+
+00:01:39.586 --> 00:01:43.711
+k equals 30,000,000. Spot price equals
+
+00:01:43.711 --> 00:01:48.357
+3,000 U.S.D.C./ETH. You swap in 10 ETH
+
+00:01:48.357 --> 00:01:52.408
+(fees ignored): Now try 1 ETH: x'
+
+00:01:52.408 --> 00:01:55.862
+= 101 to y' about 297,030 to
+
+00:01:55.862 --> 00:02:01.166
+you receive about 2,970 U.S.D.C., which is
+
+00:02:01.166 --> 00:02:05.541
+about 1% worse. Ten times the size
+
+00:02:05.541 --> 00:02:10.846
+cost about nine times more in price impact.
+
+00:02:10.846 --> 00:02:14.586
+Size relative to pool depth is
+
+00:02:14.586 --> 00:02:18.574
+what matters, not the size of
+
+00:02:18.574 --> 00:02:22.331
+the trade in dollars. x' =
+
+00:02:22.331 --> 00:02:26.648
+100 + 10 equals 110. y' = 30,000,000
+
+00:02:26.648 --> 00:02:32.666
+divided by 110 about 272,727. You receive 300,000
+
+00:02:32.666 --> 00:02:38.248
+minus 272,727 about 27,273 U.S.D.C.. Effective price about
+
+00:02:38.248 --> 00:02:43.358
+27,273 divided by 10 equals 2,727 U.S.D.C./ETH, which
+
+00:02:43.358 --> 00:02:46.196
+is about 9.1% worse than spot.
+
+00:02:47.495 --> 00:02:51.305
+Let's look at the chart: The x·y=k curve.
+
+00:02:51.305 --> 00:02:52.865
+Take a moment with it.
+
+00:02:52.865 --> 00:02:55.275
+It's everything we've just said, in one picture.
+
+00:02:56.575 --> 00:02:59.507
+First, check the price impact the interface shows;
+
+00:02:59.507 --> 00:03:01.590
+if it isn't shown, work it out.
+
+00:03:01.590 --> 00:03:04.115
+Next, Compare with an aggregator quote.
+
+00:03:04.115 --> 00:03:07.745
+Then, set slippage tolerance on purpose (too tight:
+
+00:03:07.745 --> 00:03:10.328
+the swap fails; too loose: you get a
+
+00:03:10.328 --> 00:03:13.420
+bad fill or a sandwich attack, see 2.5).
+
+00:03:13.420 --> 00:03:16.700
+Also, Split large trades or use deeper pools.
+
+00:03:16.700 --> 00:03:19.538
+And finally, Run the before-signing checklist
+
+00:03:19.538 --> 00:03:22.130
+(chain, contract, token, amount, spender).
+
+00:03:23.430 --> 00:03:24.640
+Question 1.
+
+00:03:24.640 --> 00:03:28.561
+A pool holds 50 ETH / 150,000 USDC.
+
+00:03:28.561 --> 00:03:31.720
+What is k and the spot price?
+
+00:03:36.140 --> 00:03:43.830
+The answer: k = 7,500,000; spot = 3,000 USDC/ETH.
+
+00:03:45.130 --> 00:03:46.375
+Question 2.
+
+00:03:46.375 --> 00:03:48.427
+Why does a 10 ETH swap get
+
+00:03:48.427 --> 00:03:50.784
+a worse average price than a 1
+
+00:03:50.784 --> 00:03:52.760
+ETH swap in the same pool?
+
+00:03:57.180 --> 00:03:59.415
+The answer: Each unit you add moves
+
+00:03:59.415 --> 00:04:02.022
+the reserve ratio further, so later units
+
+00:04:02.022 --> 00:04:04.495
+in the same trade are priced worse.
+
+00:04:04.495 --> 00:04:07.951
+Price impact grows with trade size relative to reserves.
+
+00:04:09.251 --> 00:04:10.521
+Question 3.
+
+00:04:10.521 --> 00:04:13.367
+Who moves the pool price back in line after
+
+00:04:13.367 --> 00:04:16.213
+your trade, and why does that matter to LPs?
+
+00:04:20.633 --> 00:04:22.858
+The answer: Arbitrageurs do.
+
+00:04:22.858 --> 00:04:26.198
+Their trades rebalance what the LP holds, which
+
+00:04:26.198 --> 00:04:29.678
+is where impermanent loss comes from (Lesson 2.4).
+
+00:04:30.979 --> 00:04:32.224
+Let's recap.
+
+00:04:32.224 --> 00:04:34.949
+Pool price is the ratio of reserves.
+
+00:04:34.949 --> 00:04:38.607
+When you add ETH to the pool, the pool
+
+00:04:38.607 --> 00:04:42.659
+must remove enough USDC to keep x·y = k.
+
+00:04:42.659 --> 00:04:44.248
+The more of the pool you move,
+
+00:04:44.248 --> 00:04:46.599
+the further the price moves against you.
+
+00:04:46.599 --> 00:04:50.072
+Arbitrageurs then trade the pool back in line with
+
+00:04:50.072 --> 00:04:53.204
+other markets, and that changes what LPs hold.
+
+00:04:54.504 --> 00:04:57.019
+Do the checklist now, before you move on.
+
+00:04:57.019 --> 00:05:00.194
+Next up, Lesson 2.3: Providing liquidity.
