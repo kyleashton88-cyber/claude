@@ -8,8 +8,9 @@ your call before phase 3 (Whop setup).
 |---|---|
 | Name | **On-Chain Operator Program** |
 | Format | **Two tiers:** self-paced course + a higher tier with live sessions |
+| Sales path | **Application → call → checkout** |
 | Audience | **Everyone at once:** GBB customers, Elite Intel members and cold ad traffic from launch |
-| Price | **$15,000** (which tier(s) and payment plans: to confirm) |
+| Price | **Course $15,000 one-time** · live tier priced higher (TBD) |
 | Refund policy | Open |
 | Starter tier / GBB pricing conflict | Open |
 | 9-module structure | Assumed OK unless you say otherwise |
@@ -92,7 +93,7 @@ course, suggest **14 days, if under 30% of lessons completed**.
 ```
 Elite Intel Community ($67/mo) ──► Grid Bot Builder ($997) ──► Grid Bot Elite ($2,497)
             │                               │
-            └──────────► DeFi Operator Blueprint (proposed $497) ◄──┘
+            └──────────► On-Chain Operator Program ($15,000) ◄──┘
                          Module 9 cross-sells back into GBB
 ```
 

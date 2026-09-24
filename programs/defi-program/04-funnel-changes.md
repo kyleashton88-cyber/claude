@@ -5,15 +5,15 @@ program alongside Grid Bot Builder. **Nothing has been changed in Zapier.**
 Once you approve, the edits go into Zapier (`update_zapier_skill`) and are
 mirrored into `.claude/skills/gbb-*`.
 
-Product name: **On-Chain Operator Program** (decided). Placeholders still open: `<DEFI_PRICE>`, `<DEFI_3PAY>`, `<DEFI_GBB_PRICE>`,
-`<DEFI_CHECKOUT_URL>`, `<DEFI_PLAN_IDS>`, `<DEFI_ACCESS_URL>` (the program's Whop hub link), `<DEFI_CALL_LINK>` (vipbookings, or your `vip-defi-consult` Calendly link, your call).
+Product name: **On-Chain Operator Program**, course $15,000 one-time, sold through application → call → checkout (see `05-whop-setup.md`). This changes the emails below: hot/warm DeFi leads get the **application + call** link, not a direct checkout link. Placeholders still open: `<DEFI_LIVE_PRICE>`, `<DEFI_GBB_PRICE>`,
+`<DEFI_CHECKOUT_URL>`, `<DEFI_PLAN_IDS>`, `<DEFI_ACCESS_URL>` (the program's Whop hub link), `<DEFI_APPLICATION_URL>` (Typeform application), `<DEFI_CALL_LINK>` (your `vip-defi-consult` Calendly link; verify the URL).
 
 ---
 
 ## 1. gbb new lead → handles DeFi interest
 
 **Add fixed values**
-- DeFi product: `On-Chain Operator Program`, `<DEFI_PRICE>` one-time or `<DEFI_3PAY>`; checkout `<DEFI_CHECKOUT_URL>`.
+- DeFi product: `On-Chain Operator Program`, `$15,000` one-time; checkout `<DEFI_CHECKOUT_URL>`.
 - Mailchimp tags: `defi-lead`, `defi-nurture`.
 - HubSpot deal name: `DEFI - <First Last>`.
 
@@ -23,7 +23,7 @@ Product name: **On-Chain Operator Program** (decided). Placeholders still open: 
 | interest | Deal(s) created | Tags | Email |
 |---|---|---|---|
 | grid | `GBB - …` (unchanged) | `gbb-lead` (+ hot/nurture) | unchanged |
-| defi | `DEFI - …`, amount `<DEFI_PRICE>` | `defi-lead` (+ `defi-nurture` if cold) | DeFi email by tier (below) |
+| defi | `DEFI - …`, amount `$15,000` | `defi-lead` (+ `defi-nurture` if cold) | DeFi email by tier (below) |
 | both | GBB deal only; DeFi mentioned as next step | `gbb-lead`, `defi-lead` | GBB email + one line on DeFi |
 
 Scoring stays the same. Capital and experience predict fit for both products.
@@ -34,8 +34,8 @@ Scoring stays the same. Capital and experience predict fit for both products.
 > Hi {first},
 > Thanks for your interest in On-Chain Operator Program. It's a step-by-step program for operating in DeFi safely: how to research a protocol, where yield actually comes from, and how to plan the exit before you enter.
 > 9 modules, worksheets and a capstone, all self-paced.
-> Join here: <DEFI_CHECKOUT_URL>
-> If you'd like to talk it through first, book a call: <DEFI_CALL_LINK>
+> It's application-only. Apply here: <DEFI_APPLICATION_URL>
+> Qualified applicants book a call to see if it's the right fit: <DEFI_CALL_LINK>
 > Stewart
 > *Educational content, not financial advice.*
 
@@ -76,7 +76,7 @@ Scoring stays the same. Capital and experience predict fit for both products.
 > Hi {first},
 > By now your grid bots should be running. Here's where most of our builders go next: putting idle stablecoins and reserves to work on-chain, without taking on risks they don't understand.
 > On-Chain Operator Program covers this, including a module on how a DeFi liquidity position is basically an on-chain grid bot, and when each one wins.
-> Grid Bot Builder customer price: <DEFI_GBB_PRICE> → <DEFI_CHECKOUT_URL>
+> It's application-only: <DEFI_APPLICATION_URL>
 > Stewart
 
 ---
