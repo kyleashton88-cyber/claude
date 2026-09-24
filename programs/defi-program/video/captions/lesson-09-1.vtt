@@ -1,0 +1,244 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.215
+Lesson 9.1.
+
+00:00:02.215 --> 00:00:04.320
+Same idea, different machine.
+
+00:00:04.320 --> 00:00:06.285
+By the end of this lesson, you'll
+
+00:00:06.285 --> 00:00:08.480
+be able to explain why a concentrated
+
+00:00:08.480 --> 00:00:10.676
+liquidity position and a grid bot are
+
+00:00:10.676 --> 00:00:13.565
+economically close cousins, and where they differ.
+
+00:00:14.865 --> 00:00:16.155
+Here's the plan.
+
+00:00:16.155 --> 00:00:17.840
+First, the key ideas.
+
+00:00:17.840 --> 00:00:20.555
+Then, a worked example, step by step.
+
+00:00:20.555 --> 00:00:22.080
+Then, your checklist.
+
+00:00:22.080 --> 00:00:24.242
+And finally, a three-question quiz.
+
+00:00:25.542 --> 00:00:28.870
+Both strategies do the same basic thing inside a
+
+00:00:28.870 --> 00:00:32.063
+price range: sell as price rises, buy as price
+
+00:00:32.063 --> 00:00:35.827
+falls, and profit from price moving back and forth.
+
+00:00:35.827 --> 00:00:39.542
+How it trades, Discrete orders at set levels, Continuous.
+
+00:00:39.542 --> 00:00:42.382
+Every trade in range moves your inventory.
+
+00:00:42.382 --> 00:00:44.986
+What it earns, Spread between grid levels,
+
+00:00:44.986 --> 00:00:47.469
+minus exchange fees, Share of the pool's
+
+00:00:47.469 --> 00:00:49.767
+swap fee on every trade in range.
+
+00:00:49.767 --> 00:00:51.651
+Who pays whom, You pay trading
+
+00:00:51.651 --> 00:00:53.592
+fees, Traders pay you fees.
+
+00:00:53.592 --> 00:00:56.975
+At the range low, Holds mostly/all the base
+
+00:00:56.975 --> 00:01:00.042
+asset, Holds 100% of the base asset.
+
+00:01:00.042 --> 00:01:04.230
+At the range high, Holds mostly/all quote
+
+00:01:04.230 --> 00:01:08.817
+(USDT/USDC), Holds 100% of the quote asset.
+
+00:01:08.817 --> 00:01:11.785
+Outside the range, Stops trading, holding one
+
+00:01:11.785 --> 00:01:14.237
+side, Stops earning, holding one side.
+
+00:01:15.537 --> 00:01:19.409
+Custody, Exchange holds funds (you keep API control), You
+
+00:01:19.409 --> 00:01:22.847
+hold keys, and the contract holds the position.
+
+00:01:22.847 --> 00:01:26.260
+Main extra risk, Exchange / counterparty,
+
+00:01:26.260 --> 00:01:29.242
+Smart contract, oracle, MEV, gas.
+
+00:01:29.242 --> 00:01:32.165
+Automation, Built into the tool, Manual, or
+
+00:01:32.165 --> 00:01:35.087
+a third-party manager (extra contract risk).
+
+00:01:36.387 --> 00:01:38.902
+Let's work an example, step by step.
+
+00:01:38.902 --> 00:01:46.052
+Range $2,700 to $3,300, ETH at $3,000.
+
+00:01:46.052 --> 00:01:52.601
+Price falls to $2,700: geometric average the square
+
+00:01:52.601 --> 00:01:58.064
+root of (2,700 times 3,000) about $2,846.
+
+00:01:58.064 --> 00:02:03.609
+Price rises to $3,300: Almost the same inventory path.
+
+00:02:03.609 --> 00:02:06.396
+The real difference is how money is made
+
+00:02:06.396 --> 00:02:09.387
+on the way: grid profit per completed level
+
+00:02:09.387 --> 00:02:12.581
+(after paying fees), versus L.P. fee income on
+
+00:02:12.581 --> 00:02:16.484
+all trading volume in range (after impermanent loss).
+
+00:02:16.484 --> 00:02:21.726
+Grid (20 arithmetic levels, $30 apart):
+
+00:02:21.726 --> 00:02:24.609
+buys at 2,970, 2,940 …
+
+00:02:25.309 --> 00:02:31.039
+2,700 to average buy about $2,835.
+
+00:02:31.039 --> 00:02:35.663
+Concentrated L.P.: converts U.S.D.C. to ETH continuously
+
+00:02:35.663 --> 00:02:37.829
+on the way down at the.
+
+00:02:37.829 --> 00:02:39.864
+Grid: sells at 3,030 …
+
+00:02:40.564 --> 00:02:45.919
+3,300 to average about $3,165.
+
+00:02:45.919 --> 00:02:50.550
+L.P.: sells ETH at the square root
+
+00:02:50.550 --> 00:02:55.314
+of (3,000 times 3,300) about $3,146.
+
+00:02:56.614 --> 00:02:58.700
+Let's look at the diagram:
+
+00:02:58.700 --> 00:03:01.164
+Grid bot vs concentrated LP.
+
+00:03:01.164 --> 00:03:02.724
+Take a moment with it.
+
+00:03:02.724 --> 00:03:05.134
+It's everything we've just said, in one picture.
+
+00:03:06.434 --> 00:03:07.894
+Here's your checklist.
+
+00:03:07.894 --> 00:03:09.429
+Do it now, for real.
+
+00:03:09.429 --> 00:03:12.334
+First, I can explain why both end up
+
+00:03:12.334 --> 00:03:15.304
+100% in one asset at a range edge.
+
+00:03:15.304 --> 00:03:17.018
+Next, I know which one pays
+
+00:03:17.018 --> 00:03:19.154
+fees and which one earns them.
+
+00:03:19.154 --> 00:03:21.385
+And finally, I treat a range break
+
+00:03:21.385 --> 00:03:23.489
+as an invalidation event in both.
+
+00:03:24.789 --> 00:03:25.999
+Question 1.
+
+00:03:25.999 --> 00:03:27.894
+Price breaks below the range.
+
+00:03:27.894 --> 00:03:29.306
+What do the grid bot
+
+00:03:29.306 --> 00:03:30.719
+and the LP both hold?
+
+00:03:35.139 --> 00:03:37.225
+The answer: All, or nearly all, the
+
+00:03:37.225 --> 00:03:39.554
+base asset, bought on the way down.
+
+00:03:39.554 --> 00:03:42.709
+Both stop earning until price returns or you act.
+
+00:03:44.009 --> 00:03:45.254
+Question 2.
+
+00:03:45.254 --> 00:03:46.899
+Who pays trading fees in each?
+
+00:03:51.319 --> 00:03:54.441
+The answer: The grid bot pays exchange fees.
+
+00:03:54.441 --> 00:03:56.756
+The LP earns fees from traders.
+
+00:03:58.057 --> 00:03:59.327
+Question 3.
+
+00:03:59.327 --> 00:04:01.331
+Name one risk the LP has that
+
+00:04:01.331 --> 00:04:03.802
+the grid bot doesn't, and vice versa.
+
+00:04:08.102 --> 00:04:13.242
+The answer: LP: smart-contract/MEV/gas risk.
+
+00:04:13.242 --> 00:04:16.087
+Grid bot: exchange/counterparty risk.
+
+00:04:17.387 --> 00:04:19.902
+Do the checklist now, before you move on.
+
+00:04:19.902 --> 00:04:22.887
+Next up, Lesson 9.2: When each one wins.

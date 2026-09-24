@@ -1,0 +1,220 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.275
+Lesson 9.3.
+
+00:00:02.275 --> 00:00:04.150
+Building a combined system.
+
+00:00:04.150 --> 00:00:06.230
+By the end of this lesson, you'll
+
+00:00:06.230 --> 00:00:08.372
+be able to design a portfolio that
+
+00:00:08.372 --> 00:00:10.941
+uses exchange grid bots and DeFi together
+
+00:00:10.941 --> 00:00:13.205
+without doubling up on the same risk.
+
+00:00:14.505 --> 00:00:15.795
+Here's the plan.
+
+00:00:15.795 --> 00:00:17.480
+First, the key ideas.
+
+00:00:17.480 --> 00:00:20.195
+Then, a worked example, step by step.
+
+00:00:20.195 --> 00:00:21.720
+Then, your checklist.
+
+00:00:21.720 --> 00:00:23.882
+And finally, a three-question quiz.
+
+00:00:25.182 --> 00:00:26.597
+Each tool is good at a
+
+00:00:26.597 --> 00:00:29.172
+different job: The trap: correlation.
+
+00:00:29.172 --> 00:00:32.883
+An ETH grid bot + an ETH/USDC
+
+00:00:32.883 --> 00:00:36.223
+LP + an LST loop are three
+
+00:00:36.223 --> 00:00:40.357
+bets on ETH staying in a range.
+
+00:00:40.357 --> 00:00:43.542
+If ETH breaks down, they all lose together.
+
+00:00:43.542 --> 00:00:46.456
+Add up your exposure by underlying asset and
+
+00:00:46.456 --> 00:00:49.152
+by range, not by number of positions.
+
+00:00:49.152 --> 00:00:51.795
+First, Grid bots → capture oscillation
+
+00:00:51.795 --> 00:00:55.077
+in range-bound major pairs, fully automated.
+
+00:00:55.077 --> 00:00:57.797
+Next, DeFi lending / stable LP →
+
+00:00:57.797 --> 00:01:01.229
+earn on idle stablecoins and reserves.
+
+00:01:01.229 --> 00:01:03.716
+Then, Staking / LSTs → earn
+
+00:01:03.716 --> 00:01:06.504
+on assets you'd hold anyway.
+
+00:01:06.504 --> 00:01:09.658
+And finally, Concentrated LP → earn fees
+
+00:01:09.658 --> 00:01:13.734
+on-chain in ranges, for larger, self-custodied sizes.
+
+00:01:15.034 --> 00:01:19.059
+Percentages are an example structure, not a recommendation.
+
+00:01:19.059 --> 00:01:21.109
+Set your own from your risk budget.
+
+00:01:21.109 --> 00:01:24.737
+Rules for this system: Reserve, 15%, Stablecoin
+
+00:01:24.737 --> 00:01:28.440
+lending (split across 2 protocols), Liquidity to
+
+00:01:28.440 --> 00:01:32.444
+defend positions and redeploy after range breaks.
+
+00:01:32.444 --> 00:01:35.655
+Core yield, 25%, Stable-stable LP /
+
+00:01:35.655 --> 00:01:39.165
+stable lending, Base return on cash.
+
+00:01:39.165 --> 00:01:42.652
+Hold-anyway assets, 25%, Staking /
+
+00:01:42.652 --> 00:01:46.240
+LSTs, Earn on long-term holdings.
+
+00:01:46.240 --> 00:01:50.133
+Range income, 30%, Grid bots on liquid majors
+
+00:01:50.133 --> 00:01:54.750
+(+ optional wide on-chain LP), Capture oscillation.
+
+00:01:54.750 --> 00:02:01.209
+Speculative, ≤5%, Burner-wallet farms, airdrops, new protocols, Capped experiments.
+
+00:02:02.509 --> 00:02:03.969
+Here's your checklist.
+
+00:02:03.969 --> 00:02:05.504
+Do it now, for real.
+
+00:02:05.504 --> 00:02:08.464
+First, Exposure added up by underlying
+
+00:02:08.464 --> 00:02:11.269
+asset, not by bot/position count.
+
+00:02:11.269 --> 00:02:14.444
+Next, Reserve sized and kept out of positions.
+
+00:02:14.444 --> 00:02:16.679
+Then, Profit sweep schedule set.
+
+00:02:16.679 --> 00:02:20.370
+And finally, one journal covering bots and DeFi positions.
+
+00:02:21.670 --> 00:02:22.880
+Question 1.
+
+00:02:22.880 --> 00:02:27.223
+ETH grid bot + ETH/USDC
+
+00:02:27.223 --> 00:02:30.780
+LP + ETH LST loop.
+
+00:02:30.780 --> 00:02:32.365
+How many independent bets?
+
+00:02:36.785 --> 00:02:39.172
+The answer: Essentially one: ETH
+
+00:02:39.172 --> 00:02:41.425
+staying in range or rising.
+
+00:02:41.425 --> 00:02:42.445
+They're correlated.
+
+00:02:43.745 --> 00:02:44.990
+Question 2.
+
+00:02:44.990 --> 00:02:46.265
+What is the reserve for?
+
+00:02:50.685 --> 00:02:53.204
+The answer: Defending debt positions and
+
+00:02:53.204 --> 00:02:56.645
+redeploying after invalidations, without forced selling.
+
+00:02:57.945 --> 00:02:59.215
+Question 3.
+
+00:02:59.215 --> 00:03:01.120
+Why sweep profits out of positions?
+
+00:03:05.540 --> 00:03:07.428
+The answer: Profits left in a
+
+00:03:07.428 --> 00:03:09.930
+position stay exposed to its risks.
+
+00:03:09.930 --> 00:03:11.300
+Sweeping locks them in.
+
+00:03:12.600 --> 00:03:13.845
+Let's recap.
+
+00:03:13.845 --> 00:03:16.180
+Grid bots → capture oscillation in
+
+00:03:16.180 --> 00:03:19.215
+range-bound major pairs, fully automated.
+
+00:03:19.215 --> 00:03:21.491
+DeFi lending / stable LP →
+
+00:03:21.491 --> 00:03:24.995
+earn on idle stablecoins and reserves.
+
+00:03:24.995 --> 00:03:26.922
+Staking / LSTs → earn
+
+00:03:26.922 --> 00:03:29.675
+on assets you'd hold anyway.
+
+00:03:29.675 --> 00:03:32.626
+Concentrated LP → earn fees on-chain
+
+00:03:32.626 --> 00:03:36.135
+in ranges, for larger, self-custodied sizes.
+
+00:03:37.435 --> 00:03:39.950
+Do the checklist now, before you move on.
+
+00:03:39.950 --> 00:03:43.125
+Next up, Lesson 10.0: Mastery Starter.
