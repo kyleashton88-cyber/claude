@@ -1,0 +1,14 @@
+{
+  "id": "course-hub-tour",
+  "chapter": "Do it",
+  "label": "On screen: the Course Hub",
+  "showUrl": "course-hub / index.html",
+  "url": "file:../course-hub/index.html",
+  "viewport": [1600, 900],
+  "steps": [
+    { "shot": "01", "caption": "Pick your stage and module on the left", "highlight": "#tree" },
+    { "click": "#q", "type": ["#q", "health factor"], "wait": 500 },
+    { "shot": "02", "caption": "Search any topic across all 107 lessons", "highlight": "#q" }
+  ],
+  "vo": "Here's the Course Hub. Pick your stage and module from the menu on the left. Then search any topic across all one hundred and seven lessons, for example, health factor."
+}
