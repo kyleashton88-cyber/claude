@@ -26,6 +26,7 @@
 **Everything in one file:** `ON-CHAIN-OPERATOR-PROGRAM.md`, also as `On-Chain-Operator-Program.docx` (Word) and `On-Chain-Operator-Program.pdf`.
 Rebuild: `python3 programs/defi-program/build_master.py`, then `cd programs/defi-program/export && npm install && npm run build`.
 **Course Hub:** open `course-hub/index.html` in a browser: the whole course with navigation, search, progress, checklists, quizzes, calculators and videos (built by `node export/build_hub.js`).
+**Easiest upload to Whop AI:** download `WHOP-AI-UPLOAD.zip` (built by `python3 export/build_whop_bundle.py`) and follow `00-START-HERE.txt` inside it.
 **To finish the build with AI:** paste `BUILD-PROMPT.md` into Whop's AI (Grok 4.6) and attach the files it lists.
 
 | File | Phase | Status |
@@ -67,6 +68,13 @@ Course videos: every lesson and Mastery Starter has a ready-to-render script (`v
 - **Motion:** captions highlight word by word with the voice; bullets, steps, pillars and comparisons reveal and highlight on the sentence that mentions them; living node-network background, progress bar, chapter tag, chart callouts and zooms, counting stats, logo draw-on. Scene types: title, statement, strike, image, bullets, pillars, compare, steps, stats, quiz, logo, cta.
 - **Per video:** MP4 (1080p, H.264/AAC), thumbnail, WebVTT captions, chapter list.
 - **Documents:** the PDF has a full-bleed cover, module banner pages, lesson header bands and styled callouts (Objective, Worked example, Checklist, Quiz and every Mastery Starter section).
+
+## Course video tooling
+
+- **New scene types** in `export/build_video.js`: `flow` (animated mechanism diagrams: nodes light up as they're named, arrows draw on, a token travels along the path) and `cutaway` (real screenshots in a browser frame with a highlight box, push-in zoom and step captions). Field reference: `.claude/skills/lesson-script-writing/references/scene-reference.md`.
+- **Screen demos:** `node export/capture_demo.js demos/<id>.json` captures shots and writes a ready `cutaway` scene (see `demos/README.md`).
+- **Script linter:** `python3 export/lint_video_script.py --all --summary` checks structure, teaching quality (visual variety, worked examples, quizzes, hook, recap) and compliance before rendering.
+- **Skills:** start with `course-video-director` in `.claude/skills/`.
 
 ---
 
@@ -1348,7 +1356,7 @@ File: `video/welcome.mp4` · 1920×1080 · 1:18 · Use: First thing a new member
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
-| 1 | 0:00–0:08 | Logo draws on + "Welcome, operator." | Welcome to the On-Chain Operator Program. I'm glad you're here. In the next two minutes, I'll show you exactly how to get the most from it. |
+| 1 | 0:00–0:08 | Logo draws on + "Welcome, operator." | Welcome to the On-Chain Operator Program. I'm glad you're here. In the next minute, I'll show you exactly how to get the most from it. |
 | 2 | 0:08–0:24 | Six stages, in order: `assets/diagrams/path-to-mastery.png` | The program runs in six stages, and each one builds on the last. So do them in order. Stage 0 gets you set up safely. Stage 5 has you running your own on-chain bank. Everything in between is the path from one to the other. |
 | 3 | 0:24–0:41 | How to work every lesson: Watch · Do · Check | Every lesson works the same way. Watch the video. It walks through the idea and the numbers on screen. Then do the checklist, for real, with a small test amount. Then check yourself with three quiz questions before you move on. The checklist is where the learning sticks. |
 | 4 | 0:41–0:51 | Start with the / Mastery Starter. — Every module opens with one. Ten minutes from zero to ready. | New to a topic? Every module opens with a Mastery Starter. It takes about ten minutes, and gets you from zero to ready for that module. |
@@ -6775,6 +6783,21 @@ To finish and launch it, paste [`programs/defi-program/BUILD-PROMPT.md`](program
 | `gbb-ad-performance` | Weekly CAC / ROAS / budget report | Zapier (archive copy) |
 | `gbb-pipeline-check` | Funnel stages, rates, stale leads | Zapier (archive copy) |
 
+### Course video production
+
+Start with `course-video-director`: it runs the others in order and holds the definition of done.
+
+| Skill | What it does |
+|---|---|
+| `course-video-director` | End-to-end lesson video: teach plan, storyboard, flows, screen demos, script, practice, QA, render |
+| `instructional-design` | Objectives, misconceptions and the understand, see it, do it, check, teach it back arc |
+| `visual-storyboard` | What's on screen every 8 to 20 seconds, and when to cut away to a flow, image, screen or worked number |
+| `animated-flows` | `flow` scenes: mechanisms that animate as they're narrated, plus a library of DeFi and grid bot flows |
+| `screen-demo-cutaways` | `capture_demo.js`: real app screenshots with highlight and blur boxes, turned into `cutaway` scenes |
+| `lesson-script-writing` | Gold-format script JSON, narration written for the ear, full scene reference |
+| `practice-and-assessment` | Quizzes that test understanding, worked examples that fade into "your turn", implementation tasks |
+| `video-qa-review` | `lint_video_script.py`, test renders, frame checks, facts, numbers and compliance |
+
 ### Building blocks (from [anthropics/skills](https://github.com/anthropics/skills), Apache 2.0)
 | Skill | Use it for |
 |---|---|
@@ -6807,6 +6830,7 @@ To finish and launch it, paste [`programs/defi-program/BUILD-PROMPT.md`](program
    - `10-video-production-plan.md` (every course video, with length and script file)
    - `06-whop-store-listing.md`, `07-program-operations.md` (includes the refund policy), `08-worksheets.md`
    - `assets/brand/brand-guide.png`, `assets/store/banner-1920x1080.png` (so the AI can see the brand)
+   - `website/index.html` (the finished sales website with the VSL embedded)
    - `video/SCRIPTS.md` (VSL and intro scripts) and the **gold-standard lesson script** `video-scripts/gold/lesson-03-2.json`
      (plus `video/lesson-03-2.mp4` if the AI can watch video: it shows the finished standard)
 3. Paste everything below the line as your first message.
@@ -6927,8 +6951,20 @@ Do this in the same six passes, right after each section's review.
 ### 3. Build the course in Whop
 Create (or give me exact values and steps for) the product, both plans (Course $15,000 one-time; Live on application), the refund policy text at checkout, the course with 15 chapters (Start here + Modules 0–14), every lesson page (lesson text, images, its video), the Day-1 Setup Kit PDF, capstone pages, and the drip rule (each stage unlocks when the previous stage's quizzes are passed). Upload the logo, banner and 7 gallery images in the order in `06-whop-store-listing.md`, and the main VSL as the listing video.
 
-### 4. Sales page
-A complete, responsive HTML page in the brand: hero with logo and the main VSL (`video/vsl-main.mp4`), the path (6 stages), curriculum, expert lessons, own-bank section, strategy library, what's included (Course vs Live), who it's for/not for, FAQ (including the refund policy), application CTA, disclaimer footer. One file, Google Fonts (Inter) only.
+### 4. Website on Whop, with the main VSL embedded
+The finished sales website is attached as `11-website-index.html.txt` (source: `website/index.html`, with its media in
+`website/media/`). Build it on Whop as the program's website / product page:
+- **Hero:** headline "From zero to your own on-chain bank.", then the **main VSL embedded as the hero video**
+  (`website/media/vsl-main.mp4`, a web-optimised 12 MB copy of `video/vsl-main.mp4`; poster `website/media/vsl-poster.jpg`;
+  captions `website/media/vsl-main.vtt`), click to play with sound, then the Apply button. Also set `video/vsl-main.mp4` as
+  the product's listing video.
+- **Sections, in this order:** stats strip (6 stages · 15 modules · 107 lessons + 15 starters · 30 playbooks · 20
+  calculators) → why people get hurt → the six stages → the 15 modules → strategy library (with the Lesson 3.2 worked
+  example) → research loop → operate as your own bank → a process, not predictions → Course vs Live table with prices →
+  who it's for / not for → how to join (3 steps + the 14-day conditional refund) → FAQ → disclaimer footer.
+- Keep the copy, brand colours, fonts and compliance wording exactly as in the attached page. Every Apply button goes to
+  the application form (`<DEFI_APPLICATION_URL>`). If Whop can host the HTML page directly, use it as-is; otherwise
+  rebuild it section by section in Whop's page builder and tell me what you couldn't reproduce.
 
 ### 5. Application form
 Build-ready spec from operations kit §4 (questions, field types, required flags, scoring, and the acknowledgement that includes the refund policy).

@@ -3,6 +3,7 @@
 **Everything in one file:** `ON-CHAIN-OPERATOR-PROGRAM.md`, also as `On-Chain-Operator-Program.docx` (Word) and `On-Chain-Operator-Program.pdf`.
 Rebuild: `python3 programs/defi-program/build_master.py`, then `cd programs/defi-program/export && npm install && npm run build`.
 **Course Hub:** open `course-hub/index.html` in a browser: the whole course with navigation, search, progress, checklists, quizzes, calculators and videos (built by `node export/build_hub.js`).
+**Sales website:** `website/index.html` (+ `media/`): the finished sales page with the main VSL embedded (built by `node export/build_website.js`; see `website/DEPLOY.md`).
 **Easiest upload to Whop AI:** download `WHOP-AI-UPLOAD.zip` (built by `python3 export/build_whop_bundle.py`) and follow `00-START-HERE.txt` inside it.
 **To finish the build with AI:** paste `BUILD-PROMPT.md` into Whop's AI (Grok 4.6) and attach the files it lists.
 

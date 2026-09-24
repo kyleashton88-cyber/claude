@@ -9,6 +9,7 @@
    - `10-video-production-plan.md` (every course video, with length and script file)
    - `06-whop-store-listing.md`, `07-program-operations.md` (includes the refund policy), `08-worksheets.md`
    - `assets/brand/brand-guide.png`, `assets/store/banner-1920x1080.png` (so the AI can see the brand)
+   - `website/index.html` (the finished sales website with the VSL embedded)
    - `video/SCRIPTS.md` (VSL and intro scripts) and the **gold-standard lesson script** `video-scripts/gold/lesson-03-2.json`
      (plus `video/lesson-03-2.mp4` if the AI can watch video: it shows the finished standard)
 3. Paste everything below the line as your first message.
@@ -129,8 +130,20 @@ Do this in the same six passes, right after each section's review.
 ### 3. Build the course in Whop
 Create (or give me exact values and steps for) the product, both plans (Course $15,000 one-time; Live on application), the refund policy text at checkout, the course with 15 chapters (Start here + Modules 0–14), every lesson page (lesson text, images, its video), the Day-1 Setup Kit PDF, capstone pages, and the drip rule (each stage unlocks when the previous stage's quizzes are passed). Upload the logo, banner and 7 gallery images in the order in `06-whop-store-listing.md`, and the main VSL as the listing video.
 
-### 4. Sales page
-A complete, responsive HTML page in the brand: hero with logo and the main VSL (`video/vsl-main.mp4`), the path (6 stages), curriculum, expert lessons, own-bank section, strategy library, what's included (Course vs Live), who it's for/not for, FAQ (including the refund policy), application CTA, disclaimer footer. One file, Google Fonts (Inter) only.
+### 4. Website on Whop, with the main VSL embedded
+The finished sales website is attached as `11-website-index.html.txt` (source: `website/index.html`, with its media in
+`website/media/`). Build it on Whop as the program's website / product page:
+- **Hero:** headline "From zero to your own on-chain bank.", then the **main VSL embedded as the hero video**
+  (`website/media/vsl-main.mp4`, a web-optimised 12 MB copy of `video/vsl-main.mp4`; poster `website/media/vsl-poster.jpg`;
+  captions `website/media/vsl-main.vtt`), click to play with sound, then the Apply button. Also set `video/vsl-main.mp4` as
+  the product's listing video.
+- **Sections, in this order:** stats strip (6 stages · 15 modules · 107 lessons + 15 starters · 30 playbooks · 20
+  calculators) → why people get hurt → the six stages → the 15 modules → strategy library (with the Lesson 3.2 worked
+  example) → research loop → operate as your own bank → a process, not predictions → Course vs Live table with prices →
+  who it's for / not for → how to join (3 steps + the 14-day conditional refund) → FAQ → disclaimer footer.
+- Keep the copy, brand colours, fonts and compliance wording exactly as in the attached page. Every Apply button goes to
+  the application form (`<DEFI_APPLICATION_URL>`). If Whop can host the HTML page directly, use it as-is; otherwise
+  rebuild it section by section in Whop's page builder and tell me what you couldn't reproduce.
 
 ### 5. Application form
 Build-ready spec from operations kit §4 (questions, field types, required flags, scoring, and the acknowledgement that includes the refund policy).

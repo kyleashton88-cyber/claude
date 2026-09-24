@@ -28,6 +28,7 @@ FIRST = [
     ("08-GOLD-STANDARD-lesson-3-2-script.txt", "video-scripts/gold/lesson-03-2.json"),
     ("09-brand-guide.png", "assets/brand/brand-guide.png"),
     ("10-store-banner.png", "assets/store/banner-1920x1080.png"),
+    ("11-website-index.html.txt", "website/index.html"),
 ]
 
 START = f"""ON-CHAIN OPERATOR PROGRAM: WHOP AI UPLOAD KIT
@@ -35,7 +36,7 @@ START = f"""ON-CHAIN OPERATOR PROGRAM: WHOP AI UPLOAD KIT
 
 STEP 1. Open Whop's AI.
 
-STEP 2. Attach every file in the folder "1-ATTACH-FIRST" (10 files).
+STEP 2. Attach every file in the folder "1-ATTACH-FIRST" (11 files).
 
 STEP 3. Open "2-PASTE-THIS-AS-YOUR-FIRST-MESSAGE.txt", copy ALL of it, and send it
         as your first message with those attachments.
@@ -47,7 +48,7 @@ STEP 4. The AI works in six passes, one stage at a time. When it asks for a sect
                          section-N-video-scripts.txt  (the lesson video scripts)
 
         If the AI limits attachments, send fewer at a time: the order still matters
-        (01 -> 10), and the prompt tells it which file is which.
+        (01 -> 11), and the prompt tells it which file is which.
 
 STEP 5. Save everything the AI gives back (new lesson files, rewritten video scripts,
         sales page, application form, marketing pack) and send it to Claude to put
@@ -59,6 +60,8 @@ UPLOAD DIRECTLY TO YOUR WHOP COURSE (not to the AI)
     welcome.mp4 (Start here), module-00-intro.mp4 ... module-14-intro.mp4 (top of each
     module), lesson-00-1.mp4, lesson-02-7.mp4, lesson-03-2.mp4 (their lesson pages).
     Thumbnails: video/thumbs/   Captions: video/captions/ (.vtt)
+- Website: the "website" folder in the repo (index.html + media/) is the finished sales page with the
+    main VSL embedded. Whop AI builds it on Whop (item 4 of the prompt), or host the folder as-is.
 - Store images: assets/store/ (icon, banner, 7 gallery images, in the order in 04-whop-store-listing)
 - PDFs: Day-1-Setup-Kit.pdf (Start here), On-Chain-Operator-Program.pdf (optional download)
 

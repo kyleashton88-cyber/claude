@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="DeFi from first principles to professional strategies. Build a risk-adjusted income engine and run your capital like your own on-chain bank. Application-only.">
+<meta property="og:title" content="On-Chain Operator Program"><meta property="og:description" content="From zero to your own on-chain bank."><meta property="og:image" content="media/vsl-poster.jpg">
+<link rel="icon" href="media/favicon.png">
+<title>On-Chain Operator Program</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root { --ink:#0B1F33; --navy:#12355B; --deep:#071321; --surface:#0e2238; --line:rgba(160,196,235,.16); --text:#eaf1f8; --muted:#a4b6c9; --teal:#2ee6a6; --blue:#3987e5; --orange:#eb6834;
+  --display: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; --mono: "JetBrains Mono", ui-monospace, Menlo, monospace; color-scheme: dark; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+body { margin: 0; background: var(--deep); color: var(--text); font-family: var(--display); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--teal); }
+.wrap { max-width: 1160px; margin: 0 auto; padding-inline: 20px; }
+h1, h2, h3 { text-wrap: balance; letter-spacing: -.02em; margin: 0; }
+h2 { font-size: clamp(30px, 4.2vw, 46px); line-height: 1.1; font-weight: 800; }
+.eyebrow { font-size: 12.5px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--teal); }
+.lede { color: var(--muted); font-size: 19px; max-width: 62ch; margin: 14px 0 0; }
+section { padding-block: 88px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 999px; font-weight: 800; font-size: 16px; text-decoration: none; color: var(--ink); background: linear-gradient(90deg, var(--teal), var(--blue)); box-shadow: 0 10px 30px rgba(46,230,166,.22); transition: transform .15s, box-shadow .15s; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(46,230,166,.32); }
+.btn:focus-visible, a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); box-shadow: none; }
+/* header */
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: rgba(7,19,33,.82); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.brand { display: flex; align-items: center; gap: 12px; color: var(--text); text-decoration: none; }
+.brand b { font-weight: 800; letter-spacing: .07em; font-size: 15px; } .brand b span { color: var(--teal); }
+.brand small { display: block; font-size: 10px; letter-spacing: .4em; color: var(--muted); margin-top: 2px; }
+header.top nav { display: flex; gap: 22px; align-items: center; font-size: 14.5px; }
+header.top nav a.l { color: var(--muted); text-decoration: none; } header.top nav a.l:hover { color: var(--text); }
+header.top .btn { padding: 10px 18px; font-size: 14px; }
+/* hero */
+.hero { position: relative; overflow: hidden; padding-block: 64px 80px; background: radial-gradient(110% 80% at 85% -10%, #1d4a78 0%, var(--navy) 38%, var(--deep) 78%); }
+.hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .55; pointer-events: none; }
+.hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: 34px; justify-items: center; text-align: center; }
+.hero h1 { font-size: clamp(38px, 6.4vw, 76px); line-height: 1.02; font-weight: 800; letter-spacing: -.035em; max-width: 16ch; }
+.hero h1 em { font-style: normal; color: var(--teal); }
+.hero .sub { color: var(--muted); font-size: clamp(17px, 2vw, 21px); max-width: 60ch; margin: 0; }
+.player { position: relative; width: 100%; max-width: 980px; border-radius: 22px; overflow: hidden; background: #000; border: 1px solid rgba(160,196,235,.22); box-shadow: 0 40px 100px rgba(0,0,0,.55), 0 0 0 8px rgba(46,230,166,.05); aspect-ratio: 16 / 9; }
+.player video { display: block; width: 100%; height: 100%; background: #000; }
+.player .play { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 12px; padding-bottom: 7%; border: 0; cursor: pointer; color: #fff; font: inherit;
+  background: linear-gradient(180deg, rgba(7,19,33,0) 40%, rgba(7,19,33,.78) 100%); }
+.player .play .ring { width: 92px; height: 92px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--teal), var(--blue)); box-shadow: 0 0 0 10px rgba(46,230,166,.18), 0 20px 50px rgba(0,0,0,.5); animation: pulse 2.4s ease-in-out infinite; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 18px rgba(46,230,166,.08), 0 20px 50px rgba(0,0,0,.5); } }
+.player .play .lab { font-weight: 700; font-size: 15px; letter-spacing: .04em; text-shadow: 0 2px 10px rgba(0,0,0,.6); }
+.hero .ctas { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.hero .fine { font-size: 13px; color: var(--muted); }
+/* ledger strip */
+.ledger { border-block: 1px solid var(--line); background: var(--ink); }
+.ledger .wrap { display: grid; grid-template-columns: repeat(5, 1fr); }
+.ledger div.c { padding: 22px 12px; text-align: center; border-left: 1px solid var(--line); }
+.ledger div.c:first-child { border-left: 0; }
+.ledger b { display: block; font-family: var(--mono); font-size: clamp(26px, 3.4vw, 38px); font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; }
+.ledger span { font-size: 13px; color: var(--muted); letter-spacing: .04em; }
+/* problem */
+.problem .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
+.problem .p { padding: 22px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); }
+.problem .p .x { font-family: var(--mono); color: var(--orange); font-weight: 700; font-size: 13px; letter-spacing: .08em; }
+.problem .p h3 { font-size: 19px; margin: 8px 0 6px; } .problem .p p { margin: 0; color: var(--muted); font-size: 15px; }
+.quote { margin-top: 44px; font-size: clamp(22px, 3vw, 32px); font-weight: 800; line-height: 1.25; max-width: 30ch; }
+.quote span { color: var(--teal); }
+/* path */
+.path { background: linear-gradient(180deg, var(--deep), var(--ink)); }
+.stages { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 44px; align-items: end; }
+.stage { border-radius: 16px 16px 6px 6px; padding: 18px 16px; background: linear-gradient(180deg, rgba(46,230,166,.13), rgba(57,135,229,.06)); border: 1px solid var(--line); }
+.stage .k { font-family: var(--mono); font-size: 12px; color: var(--teal); } .stage h3 { font-size: 20px; margin: 4px 0 8px; } .stage p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.45; }
+.stage .mods { margin-top: 10px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+/* modules */
+.mods-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 40px; }
+.mod { display: grid; grid-template-columns: auto 1fr; gap: 14px; padding: 18px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); }
+.mod .n { font-family: var(--mono); font-weight: 700; font-size: 22px; color: var(--teal); min-width: 34px; }
+.mod h3 { font-size: 17px; margin: 0 0 4px; display: flex; gap: 8px; align-items: center; } .mod h3 svg { color: var(--blue); flex: none; }
+.mod p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.45; } .mod .lc { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-top: 6px; }
+/* feature rows */
+.feature { display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: center; }
+.feature.flip { grid-template-columns: 1.15fr 1fr; } .feature.flip .copy { order: 2; }
+.feature img { width: 100%; border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 30px 70px rgba(0,0,0,.4); display: block; }
+.feature ul { padding-left: 0; list-style: none; margin: 22px 0 0; display: grid; gap: 10px; }
+.feature li { display: flex; gap: 12px; color: var(--muted); } .feature li svg { flex: none; color: var(--teal); margin-top: 3px; } .feature li b { color: var(--text); }
+.ticket { margin-top: 26px; font-family: var(--mono); font-size: 14px; line-height: 1.8; padding: 18px 20px; border-radius: 14px; background: #06101c; border: 1px solid var(--line); color: #cfe0f2; overflow-x: auto; }
+.ticket .g { color: var(--teal); } .ticket .o { color: var(--orange); } .ticket .m { color: var(--muted); }
+/* compare & included */
+.twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 40px; }
+.col { padding: 26px; border-radius: 18px; border: 1px solid var(--line); background: var(--surface); }
+.col.bad { border-top: 5px solid var(--orange); } .col.good { border-top: 5px solid var(--teal); }
+.col h3 { font-size: 13px; letter-spacing: .18em; text-transform: uppercase; } .col.bad h3 { color: var(--orange); } .col.good h3 { color: var(--teal); }
+.col ul { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 12px; } .col li { display: flex; gap: 12px; }
+.col.bad li::before { content: '✕'; color: var(--orange); font-weight: 800; } .col.good li::before { content: '✓'; color: var(--teal); font-weight: 800; }
+.table-wrap { overflow-x: auto; margin-top: 40px; border-radius: 18px; border: 1px solid var(--line); }
+table { width: 100%; border-collapse: collapse; min-width: 560px; background: var(--surface); }
+th, td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--line); font-size: 15.5px; }
+th { background: var(--ink); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+td.y { color: var(--teal); font-weight: 800; text-align: center; } th.c { text-align: center; } td.n { text-align: center; color: rgba(164,182,201,.35); }
+tr.price td { font-weight: 800; font-size: 17px; background: var(--ink); border-bottom: 0; } tr.price td.c { text-align: center; }
+/* who */
+.who .col li::before { content: none; } .who .col li { display: block; color: var(--muted); } .who .col li b { color: var(--text); }
+/* join */
+.join { background: radial-gradient(90% 90% at 10% 0%, #173e66 0%, var(--ink) 60%); border-block: 1px solid var(--line); }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; counter-reset: s; }
+.step { padding: 24px; border-radius: 18px; border: 1px solid var(--line); background: rgba(7,19,33,.55); }
+.step .k { font-family: var(--mono); color: var(--teal); font-size: 13px; } .step h3 { font-size: 21px; margin: 6px 0; } .step p { margin: 0; color: var(--muted); font-size: 15px; }
+.join .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 36px; }
+.guarantee { display: flex; gap: 14px; align-items: flex-start; max-width: 60ch; color: var(--muted); font-size: 15px; } .guarantee svg { flex: none; color: var(--teal); }
+/* faq */
+details { border-bottom: 1px solid var(--line); padding-block: 18px; } details:first-of-type { border-top: 1px solid var(--line); }
+summary { cursor: pointer; list-style: none; font-weight: 700; font-size: 18px; display: flex; justify-content: space-between; gap: 16px; }
+summary::-webkit-details-marker { display: none; } summary::after { content: '+'; color: var(--teal); font-size: 24px; line-height: 1; transition: transform .2s; } details[open] summary::after { transform: rotate(45deg); }
+details p { color: var(--muted); margin: 10px 0 0; max-width: 72ch; }
+footer { padding-block: 44px 110px; color: var(--muted); font-size: 13.5px; border-top: 1px solid var(--line); }
+footer .wrap { display: grid; gap: 14px; }
+.mobile-cta { display: none; }
+@media (max-width: 980px) {
+  .problem .grid { grid-template-columns: 1fr 1fr; } .stages { grid-template-columns: repeat(3, 1fr); } .mods-grid { grid-template-columns: 1fr 1fr; }
+  .feature, .feature.flip { grid-template-columns: 1fr; gap: 30px; } .feature.flip .copy { order: 0; } header.top nav a.l { display: none; }
+}
+@media (max-width: 640px) {
+  section { padding-block: 64px; } .ledger .wrap { grid-template-columns: repeat(2, 1fr); } .ledger div.c { border-left: 0; border-top: 1px solid var(--line); } .ledger div.c:first-child { grid-column: 1 / -1; border-top: 0; }
+  .problem .grid, .mods-grid, .twocol, .steps { grid-template-columns: 1fr; } .stages { grid-template-columns: 1fr 1fr; }
+  .player { border-radius: 14px; } .player .play .ring { width: 72px; height: 72px; }
+  .mobile-cta { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); background: rgba(7,19,33,.94); backdrop-filter: blur(10px); border-top: 1px solid var(--line); }
+  .mobile-cta .btn { flex: 1; justify-content: center; }
+}</style></head><body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#top" aria-label="On-Chain Operator Program"><svg width="38" height="38" viewBox="0 0 200 200">
+    <defs>
+      <linearGradient id="lg0g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2ee6a6"/><stop offset="1" stop-color="#3987e5"/></linearGradient>
+      <clipPath id="lg0c"><rect x="86" y="58" width="28" height="30"/></clipPath>
+      <filter id="lg0f" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6"/></filter>
+    </defs>
+    <path d="M176.21,144.00L100.00,188.00L23.79,144.00L23.79,56.00L100.00,12.00L176.21,56.00Z" fill="none" stroke="url(#lg0g)" stroke-width="10" opacity=".45" filter="url(#lg0f)"/>
+    <path d="M176.21,144.00L100.00,188.00L23.79,144.00L23.79,56.00L100.00,12.00L176.21,56.00Z" fill="rgba(255,255,255,.03)" stroke="url(#lg0g)" stroke-width="7" stroke-linejoin="round"/>
+    
+    <circle cx="78" cy="100" r="33" fill="none" stroke="#ffffff" stroke-width="13"/>
+    <circle cx="122" cy="100" r="33" fill="none" stroke="url(#lg0g)" stroke-width="13"/>
+    <circle cx="78" cy="100" r="33" fill="none" stroke="#ffffff" stroke-width="13" clip-path="url(#lg0c)"/>
+  </svg><span><b>ON-CHAIN <span>OPERATOR</span></b><small>PROGRAM</small></span></a>
+  <nav><a class="l" href="#path">The path</a><a class="l" href="#curriculum">Curriculum</a><a class="l" href="#included">What’s included</a><a class="l" href="#faq">FAQ</a>
+    <a class="btn" href="#apply">Apply to join</a></nav></div></header>
+
+<main id="top">
+<div class="hero"><canvas id="net" aria-hidden="true"></canvas><div class="wrap">
+  <div class="eyebrow">DeFi education · from zero to operator</div>
+  <h1>From zero to your own <em>on-chain bank</em>.</h1>
+  <p class="sub">Learn DeFi from first principles to professional strategies, then run your capital the way a bank runs its book. Watch the 3-minute overview.</p>
+  <div class="player" id="player">
+    <video id="vsl" preload="metadata" playsinline poster="media/vsl-poster.jpg" aria-label="On-Chain Operator Program overview video">
+      <source src="media/vsl-main.mp4" type="video/mp4"><track kind="captions" srclang="en" label="English" src="media/vsl-main.vtt"></video>
+    <button class="play" id="play" aria-label="Play the overview video with sound"><span class="ring"><svg width="34" height="34" viewBox="0 0 24 24" fill="#0B1F33"><path d="M8 5.5v13l10.5-6.5z"/></svg></span><span class="lab">Watch the overview · 3:36</span></button>
+  </div>
+  <div class="ctas"><a class="btn" href="#apply">Apply to join →</a><a class="btn ghost" href="#curriculum">See the curriculum</a></div>
+  <div class="fine">Application-only · Educational content only · Not financial advice</div>
+</div></div>
+
+<div class="ledger"><div class="wrap">
+  <div class="c"><b>6</b><span>stages</span></div><div class="c"><b>15</b><span>modules</span></div><div class="c"><b>107</b><span>lessons + 15 starters</span></div>
+  <div class="c"><b>30</b><span>strategy playbooks</span></div><div class="c"><b>20</b><span>calculators</span></div>
+</div></div>
+
+<section class="problem"><div class="wrap">
+  <div class="eyebrow">Why people get hurt</div>
+  <h2>Most people enter DeFi through a number.</h2>
+  <p class="lede">A 12% APY. Operators start with a different question: what am I being paid to risk, and how do I get out?</p>
+  <div class="grid">
+    <div class="p"><div class="x">ERR · SETUP</div><h3>Mistakes that can’t be undone</h3><p>The wrong network, a leaked seed phrase, one bad approval. On-chain there’s no chargeback.</p></div>
+    <div class="p"><div class="x">ERR · YIELD</div><h3>Yields nobody can explain</h3><p>Until the subsidy stops. If you can’t name what pays the yield, you’re the one paying.</p></div>
+    <div class="p"><div class="x">ERR · LEVERAGE</div><h3>Borrowing with no buffer</h3><p>One sharp move and collateral is sold automatically, at a penalty. No margin call first.</p></div>
+    <div class="p"><div class="x">ERR · EXIT</div><h3>No plan for the way out</h3><p>If you can’t explain the unwind, you don’t understand the position yet.</p></div>
+  </div>
+  <p class="quote">On-chain, there’s no help desk. <span>The only protection is the process you follow before you act.</span></p>
+</div></section>
+
+<section class="path" id="path"><div class="wrap">
+  <div class="eyebrow">The path</div>
+  <h2>Six stages, done in order.</h2>
+  <p class="lede">Each stage unlocks when you pass the one before, so beginners reach leverage only after safety. Every module opens with a 10-minute Mastery Starter that takes you from zero to ready.</p>
+  <div class="stages"><div class="stage" style="min-height:190px"><div class="k">STAGE 0</div><h3>Zero</h3><p>Open an account, buy safely, set up a wallet, first transfer, practise on a test network.</p><div class="mods">Modules 0</div></div><div class="stage" style="min-height:224px"><div class="k">STAGE 1</div><h3>Foundations</h3><p>Protect a wallet, read any transaction, swap and provide liquidity deliberately.</p><div class="mods">Modules 1–2</div></div><div class="stage" style="min-height:258px"><div class="k">STAGE 2</div><h3>Practitioner</h3><p>Borrow with a buffer, split any yield into what pays it, map infrastructure risk.</p><div class="mods">Modules 3–5</div></div><div class="stage" style="min-height:292px"><div class="k">STAGE 3</div><h3>Analyst</h3><p>Research any protocol with a 6-step loop and read on-chain data without fooling yourself.</p><div class="mods">Modules 6–7</div></div><div class="stage" style="min-height:326px"><div class="k">STAGE 4</div><h3>Strategist</h3><p>30 strategy playbooks, fixed and hedged yield, stress tests and an incident plan.</p><div class="mods">Modules 8–11</div></div><div class="stage" style="min-height:360px"><div class="k">STAGE 5</div><h3>Operator</h3><p>Run your own on-chain bank: balance sheet, custody, credit line, liquidity ladder, income engine.</p><div class="mods">Modules 12–14</div></div></div>
+</div></section>
+
+<section id="curriculum"><div class="wrap">
+  <div class="eyebrow">Curriculum</div>
+  <h2>15 modules, 107 lessons.</h2>
+  <p class="lede">Every lesson has an objective, a plain-English explanation, a worked example with the numbers shown, a checklist you do for real, and a quiz. Every lesson has its own narrated video.</p>
+  <div class="mods-grid"><div class="mod"><div class="n">00</div><div><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>Crypto From Zero</h3><p>Go from never having owned crypto to a secured exchange account, a backed-up wallet, a first transfer you made yourself, and a first practice DeFi transaction.</p><div class="lc">8 lessons + starter</div></div></div><div class="mod"><div class="n">01</div><div><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Foundations &amp; Safety</h3><p>Set up and use a wallet safely, and know what can go irreversibly wrong before any capital moves.</p><div class="lc">9 lessons + starter</div></div></div><div class="mod"><div class="n">02</div><div><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13l-3-3"/><path d="M20 16H7l3 3"/></svg>Trading On-Chain</h3><p>Execute a swap or LP position deliberately, understanding price impact, fees, impermanent loss and MEV.</p><div class="lc">8 lessons + starter</div></div></div><div class="mod"><div class="n">03</div><div><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6"/><path d="M5 10v8M10 10v8M14 10v8M19 10v8M3 20h18"/></svg>Lending &amp; Leverage</h3><p>Borrow against collateral with a buffer and a written defence plan.</p><div class="lc">7 lessons + starter</div></div></div><div class="mod"><div class="n">04</div><div><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-9"/><path d="M12 12c0-4 3-7 8-7 0 5-3 7-8 7z"/><path d="M12 14c0-3-2.5-5.5-7-5.5 0 4 2.5 5.5 7 5.5z"/></svg>Yield</h3><p>Split any APY into organic vs subsidised, and name the risk being paid for.</p><div class="lc">8 lessons + starter</div></div></div><div class="mod"><div class="n">05</div><div><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg>Infrastructure Risk</h3><p>Map every bridge, oracle, L2 and contract a position depends on.</p><div class="lc">8 lessons + starter</div></div></div><div class="mod"><div class="n">06</div><div><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></svg>Protocol Research</h3><p>Complete a full due-diligence file on a real protocol.</p><div class="lc">7 lessons + starter</div></div></div><div class="mod"><div class="n">07</div><div><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4"/><path d="M4 20h16"/><path d="M7 15l4-4 3 3 5-6"/></svg>On-Chain Analytics</h3><p>Read on-chain data without over-interpreting it.</p><div class="lc">9 lessons + starter</div></div></div><div class="mod"><div class="n">08</div><div><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>The DeFi Operating System</h3><p>A written portfolio plan with risk buckets, limits and an emergency plan.</p><div class="lc">7 lessons + starter</div></div></div><div class="mod"><div class="n">09</div><div><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>DeFi vs Grid Bots</h3><p>Choose the right tool for the market, and run both as one system.</p><div class="lc">3 lessons + starter</div></div></div><div class="mod"><div class="n">10</div><div><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>Advanced Yield Engineering</h3><p>Build fixed, hedged and structured yield, and know exactly what each position is short.</p><div class="lc">9 lessons + starter</div></div></div><div class="mod"><div class="n">11</div><div><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0118 0z"/><path d="M12 12v7a2 2 0 01-4 0"/></svg>Hedging &amp; Risk Engineering</h3><p>Hedge the risks you don't want, stress-test the portfolio, and have an incident plan ready.</p><div class="lc">5 lessons + starter</div></div></div><div class="mod"><div class="n">12</div><div><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="12" cy="12" r="4"/><path d="M12 8v1.5M12 14.5V16M8 12h1.5M14.5 12H16M6 20v1.5M18 20v1.5"/></svg>Operate as Your Own Bank</h3><p>Run your crypto the way a bank runs its book: a balance sheet, a custody policy, a credit line, a liquidity ladder, a lending desk and records someone else could follow.</p><div class="lc">8 lessons + starter</div></div></div><div class="mod"><div class="n">13</div><div><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="9" cy="7" rx="6" ry="2.5"/><path d="M3 7v4c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V7"/><path d="M9 16.5c-3.3 0-6-1.1-6-2.5"/><path d="M3 11v5c0 1.4 2.7 2.5 6 2.5 1 0 2-.1 2.8-.3"/><circle cx="17" cy="16" r="4.5"/></svg>The Income Engine</h3><p>Design an income portfolio, measure expected income after expected losses, and set a payout you can sustain.</p><div class="lc">5 lessons + starter</div></div></div><div class="mod"><div class="n">14</div><div><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 4v4"/><circle cx="12" cy="3.5" r="1"/><circle cx="9" cy="13.5" r="1.3"/><circle cx="15" cy="13.5" r="1.3"/><path d="M9.5 17h5"/></svg>Automation &amp; Mastery</h3><p>Monitor and automate safely, run multisig operations, and complete the operator capstone.</p><div class="lc">6 lessons + starter</div></div></div></div>
+</div></section>
+
+<section style="background:var(--ink)"><div class="wrap feature">
+  <div class="copy"><div class="eyebrow">Stage 4 · Strategist</div><h2>30 strategies. Each one shows how it loses money.</h2>
+    <p class="lede">From simple lending to fixed-rate yield, basis trades, options and hedged positions, in seven levels. Every playbook comes with its maths, its kill rules and its failure modes.</p>
+    <div class="ticket" aria-label="Example worked calculation"><span class="m"># Lesson 3.2 · worked example</span><br>collateral = 10 ETH × $3,000 = <span class="g">$30,000</span><br>debt = $12,000 · LTV 40% · LT 0.80<br>health factor = 30,000 × 0.80 ÷ 12,000 = <span class="g">2.00</span><br>liquidation price = 12,000 ÷ (10 × 0.80) = <span class="o">$1,500 (−50%)</span></div></div>
+  <img src="media/gallery-04-strategy-levels.jpg" alt="The strategy library: 30 strategies in 7 levels" width="1600" height="900">
+</div></section>
+
+<section><div class="wrap feature flip">
+  <div class="copy"><div class="eyebrow">Stage 3 · Analyst</div><h2>Research any protocol before any capital moves.</h2>
+    <p class="lede">A six-step research loop and on-chain analytics, taught without over-interpreting the data. You finish with a real due-diligence file.</p>
+    <ul><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg><span><b>Mechanism and cash flow</b>: fees separated from emissions, with sources</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg><span><b>Dependency map</b>: oracles, bridges, admin keys, stablecoins</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg><span><b>A verdict</b>: size, conditions and the exit</span></li></ul></div>
+  <img src="media/gallery-05-research-loop.jpg" alt="The 6-step research loop" width="1600" height="900">
+</div></section>
+
+<section style="background:var(--ink)"><div class="wrap feature">
+  <div class="copy"><div class="eyebrow">Stage 5 · Operator</div><h2>Operate as your own bank.</h2>
+    <p class="lede">The disciplines a bank uses, applied to your own capital. It’s a method, not a licence or a financial service.</p>
+    <ul><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg><span><b>Balance sheet</b> and records you can hand to an accountant</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg><span><b>Multisig custody</b> with limits and a tested recovery</span></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg><span><b>A credit line</b> against your own assets, with a written policy</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg><span><b>A liquidity ladder</b>, so you’re never a forced seller</span></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg><span><b>An income engine</b> that pays out less than it expects to earn after expected losses, never from principal</span></li></ul></div>
+  <img src="media/gallery-03-own-bank.jpg" alt="Operate as your own bank: balance sheet, custody, credit, liquidity" width="1600" height="900">
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">The difference</div><h2>A process, not predictions.</h2>
+  <div class="twocol">
+    <div class="col bad"><h3>Typical crypto course</h3><ul><li>Signals and hot tips</li><li>Chases the highest APY</li><li>Risk in the small print</li><li>Projected returns</li></ul></div>
+    <div class="col good"><h3>On-Chain Operator Program</h3><ul><li>A process you can repeat on any protocol</li><li>Asks what the yield is paying you for</li><li>Risk first, with written kill rules</li><li>Honest measurement: income after expected losses</li></ul></div>
+  </div>
+</div></section>
+
+<section id="included" style="background:var(--ink)"><div class="wrap">
+  <div class="eyebrow">What’s included</div><h2>Course and Live.</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Included</th><th class="c">Course</th><th class="c">Live</th></tr></thead>
+    <tbody>
+      <tr><td>15 modules, 107 lessons, zero to operator</td><td class="y">✓</td><td class="y">✓</td></tr><tr><td>A Mastery Starter at the top of every module</td><td class="y">✓</td><td class="y">✓</td></tr><tr><td>A narrated video for every lesson, plus 15 module intros</td><td class="y">✓</td><td class="y">✓</td></tr><tr><td>30 strategy playbooks with maths and kill rules</td><td class="y">✓</td><td class="y">✓</td></tr><tr><td>Printable Day-1 Setup Kit</td><td class="y">✓</td><td class="y">✓</td></tr><tr><td>20 calculators and 17 worksheet templates</td><td class="y">✓</td><td class="y">✓</td></tr><tr><td>Interactive Course Hub with progress tracking</td><td class="y">✓</td><td class="y">✓</td></tr><tr><td>Analyst and operator capstones, with certification</td><td class="y">✓</td><td class="y">✓</td></tr><tr><td>Live group sessions</td><td class="n">—</td><td class="y">✓</td></tr><tr><td>Capstone and portfolio-policy reviews</td><td class="n">—</td><td class="y">✓</td></tr>
+      <tr class="price"><td>Price</td><td class="c">$15,000 one-time</td><td class="c">On application</td></tr>
+    </tbody></table></div>
+  <p class="lede">Lifetime access to the course. Live tier pricing is set on your call.</p>
+</div></section>
+
+<section class="who"><div class="wrap">
+  <div class="eyebrow">Fit</div><h2>Who it’s for.</h2>
+  <div class="twocol">
+    <div class="col good"><h3>For you if</h3><ul><li><b>You’re a complete beginner</b> who wants to learn DeFi properly, with a process</li><li><b>You trade or use Grid Bot Builder</b> and are ready to operate on-chain</li><li><b>You hold meaningful crypto</b> and want income and liquidity from it without risks you don’t understand</li></ul></div>
+    <div class="col bad"><h3>Not for you if</h3><ul><li><b>You want guaranteed returns</b> or signals to copy</li><li><b>You won’t self-custody</b> or follow a written policy</li></ul></div>
+  </div>
+</div></section>
+
+<section class="join" id="apply"><div class="wrap">
+  <div class="eyebrow">How to join</div><h2>Application-only, in three steps.</h2>
+  <div class="steps">
+    <div class="step"><div class="k">STEP 1</div><h3>Apply</h3><p>A short form: your experience, your goal and the capital you plan to operate.</p></div>
+    <div class="step"><div class="k">STEP 2</div><h3>A 30-minute fit call</h3><p>We’ll tell you honestly if it isn’t a fit, and point you to a better starting place.</p></div>
+    <div class="step"><div class="k">STEP 3</div><h3>Enrol</h3><p>If it is a fit, you get your enrolment link and start with Module 0 and the Day-1 Setup Kit.</p></div>
+  </div>
+  <div class="cta-row"><span class="btn" aria-disabled="true" style="opacity:.6;cursor:default">Applications open at launch</span>
+    <div class="guarantee"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg><span><b style="color:var(--text)">14-day conditional refund.</b> A full refund within 14 days if you’ve completed no more than 10% of the lessons and haven’t submitted a capstone or used a live session or review.</span></div></div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <div class="eyebrow">FAQ</div><h2>Questions.</h2>
+  <div style="margin-top:34px"><details><summary>I’ve never owned crypto. Is this for me?</summary><p>Yes. Module 0 assumes zero knowledge and walks you through every setup step in order: securing your email, opening and locking down an exchange account, your first purchase, setting up and backing up a wallet, your first transfer, and a first practice DeFi transaction on a free test network. It ends with a printable Day-1 Setup Kit.</p></details><details><summary>Do you manage my funds or need my keys?</summary><p>Never. You keep custody. We will never ask for a seed phrase, private key or API key, and anyone who does is a scammer.</p></details><details><summary>Will I make money or earn an income?</summary><p>The program teaches you to build and run an income portfolio and to measure it honestly: expected income after expected losses, with a payout below that. It doesn’t promise or project returns, and every strategy is taught alongside how it loses money.</p></details><details><summary>What does “operate as your own bank” mean?</summary><p>Running your crypto with the disciplines a bank uses: a balance sheet, custody controls, a credit policy, liquidity management and records. It’s a method, not a licence or a financial service.</p></details><details><summary>How long does it take?</summary><p>It’s self-paced with lifetime access. Stages unlock as you pass the previous stage’s quizzes, so beginners reach leverage only after safety.</p></details><details><summary>How does this relate to Grid Bot Builder?</summary><p>Module 9 shows how on-chain liquidity and exchange grid bots do similar jobs, and how to run both in one portfolio.</p></details><details><summary>What’s the refund policy?</summary><p>A 14-day conditional refund: a full refund within 14 days of purchase if you’ve completed no more than 10% of the lessons, haven’t submitted a capstone and haven’t used a live session or review. Duplicate purchases and access problems we can’t fix are always refunded. No refunds based on investment results. The full policy is shown at checkout.</p></details></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <a class="brand" href="#top"><svg width="32" height="32" viewBox="0 0 200 200">
+    <defs>
+      <linearGradient id="lg1g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2ee6a6"/><stop offset="1" stop-color="#3987e5"/></linearGradient>
+      <clipPath id="lg1c"><rect x="86" y="58" width="28" height="30"/></clipPath>
+      <filter id="lg1f" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6"/></filter>
+    </defs>
+    <path d="M176.21,144.00L100.00,188.00L23.79,144.00L23.79,56.00L100.00,12.00L176.21,56.00Z" fill="none" stroke="url(#lg1g)" stroke-width="10" opacity=".45" filter="url(#lg1f)"/>
+    <path d="M176.21,144.00L100.00,188.00L23.79,144.00L23.79,56.00L100.00,12.00L176.21,56.00Z" fill="rgba(255,255,255,.03)" stroke="url(#lg1g)" stroke-width="7" stroke-linejoin="round"/>
+    
+    <circle cx="78" cy="100" r="33" fill="none" stroke="#ffffff" stroke-width="13"/>
+    <circle cx="122" cy="100" r="33" fill="none" stroke="url(#lg1g)" stroke-width="13"/>
+    <circle cx="78" cy="100" r="33" fill="none" stroke="#ffffff" stroke-width="13" clip-path="url(#lg1c)"/>
+  </svg><span><b>ON-CHAIN <span>OPERATOR</span></b><small>PROGRAM</small></span></a>
+  <p style="margin:0;max-width:90ch">Educational content only. Not financial, investment, tax or legal advice, and nothing here is a recommendation to buy, sell or hold any asset. Digital assets are volatile and you can lose some or all of your capital. No results or income are promised or guaranteed. “Operate as your own bank” describes a personal method, not a licence or financial service. We will never ask for your seed phrase, private keys or account access.</p>
+</div></footer>
+<div class="mobile-cta"><a class="btn" href="#apply">Apply to join →</a></div>
+
+<script>
+(function () {
+  var v = document.getElementById('vsl'), b = document.getElementById('play');
+  b.addEventListener('click', function () { v.controls = true; b.hidden = true; var p = v.play(); if (p && p.catch) p.catch(function () { b.hidden = false; }); });
+  v.addEventListener('ended', function () { v.controls = false; b.hidden = false; b.querySelector('.lab').textContent = 'Watch again'; });
+  // living node network behind the hero, echoing the videos
+  var cv = document.getElementById('net'); if (!cv || !cv.getContext) return;
+  var ctx = cv.getContext('2d'), W, H, P = [], seed = 7, still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function rnd() { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; }
+  function size() { var r = cv.getBoundingClientRect(), d = Math.min(2, window.devicePixelRatio || 1); W = r.width; H = r.height; cv.width = W * d; cv.height = H * d; ctx.setTransform(d, 0, 0, d, 0, 0); }
+  for (var i = 0; i < 44; i++) P.push({ x: rnd(), y: rnd(), ax: 20 + rnd() * 50, ay: 20 + rnd() * 50, wx: .05 + rnd() * .12, wy: .05 + rnd() * .12, px: rnd() * 6.3, py: rnd() * 6.3, t: rnd() < .15 });
+  function draw(ms) {
+    var g = still ? 0 : ms / 1000; ctx.clearRect(0, 0, W, H);
+    var pts = P.map(function (p) { return [p.x * W + p.ax * Math.sin(g * p.wx + p.px), p.y * H + p.ay * Math.cos(g * p.wy + p.py)]; }), R = Math.max(160, W * .14);
+    for (var i = 0; i < pts.length; i++) for (var j = i + 1; j < pts.length; j++) { var dx = pts[i][0] - pts[j][0], dy = pts[i][1] - pts[j][1], d = Math.sqrt(dx * dx + dy * dy);
+      if (d < R) { ctx.strokeStyle = 'rgba(127,178,255,' + (1 - d / R) * .22 + ')'; ctx.beginPath(); ctx.moveTo(pts[i][0], pts[i][1]); ctx.lineTo(pts[j][0], pts[j][1]); ctx.stroke(); } }
+    pts.forEach(function (q, i) { ctx.fillStyle = P[i].t ? 'rgba(46,230,166,.7)' : 'rgba(127,178,255,.5)'; ctx.beginPath(); ctx.arc(q[0], q[1], P[i].t ? 3 : 2, 0, 6.3); ctx.fill(); });
+    if (!still) requestAnimationFrame(draw);
+  }
+  size(); addEventListener('resize', size); requestAnimationFrame(draw);
+})();
+</script></body></html>
