@@ -1,6 +1,7 @@
 # DeFi Program: build files
 
-**Everything in one file:** `ON-CHAIN-OPERATOR-PROGRAM.md` (rebuild with `python3 programs/defi-program/build_master.py`).
+**Everything in one file:** `ON-CHAIN-OPERATOR-PROGRAM.md`, also as `On-Chain-Operator-Program.docx` (Word) and `On-Chain-Operator-Program.pdf`.
+Rebuild: `python3 programs/defi-program/build_master.py`, then `cd programs/defi-program/export && npm install && npm run build`.
 **To finish the build with AI:** paste `BUILD-PROMPT.md` into Claude Code.
 
 | File | Phase | Status |

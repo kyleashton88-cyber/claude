@@ -34,7 +34,7 @@ push after each finished piece.
 5. **Sales page copy**: use the `frontend-design` skill if you build it as a page.
 6. **Whop setup** per `05-whop-setup.md`: I create the product in the dashboard and give you the `prod_` ID. You create plans and checkout links through Zapier, but only after showing me the exact values.
 7. **Funnel**: apply `04-funnel-changes.md` to my Zapier skills (`update_zapier_skill`) after I approve, and mirror the changes into `.claude/skills/gbb-*`.
-8. Regenerate the master file with `python3 programs/defi-program/build_master.py` and push.
+8. Regenerate the master file with `python3 programs/defi-program/build_master.py`, then the Word and PDF copies with `cd programs/defi-program/export && npm install && npm run build`, and push.
 
 ## Rules
 - Educational only. No promised, projected or guaranteed returns anywhere: lessons, emails, sales page or call script. Always show how a strategy loses money next to how it earns.

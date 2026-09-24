@@ -16,7 +16,8 @@
 # 1. Build status
 
 
-**Everything in one file:** `ON-CHAIN-OPERATOR-PROGRAM.md` (rebuild with `python3 programs/defi-program/build_master.py`).
+**Everything in one file:** `ON-CHAIN-OPERATOR-PROGRAM.md`, also as `On-Chain-Operator-Program.docx` (Word) and `On-Chain-Operator-Program.pdf`.
+Rebuild: `python3 programs/defi-program/build_master.py`, then `cd programs/defi-program/export && npm install && npm run build`.
 **To finish the build with AI:** paste `BUILD-PROMPT.md` into Claude Code.
 
 | File | Phase | Status |
@@ -157,27 +158,39 @@ Outcome: set up and use a wallet safely; know what can go irreversibly wrong.
 | 1.4 | Tokens, approvals & allowances | 4 |
 | 1.5 | Stablecoins and how they break | 5 |
 | 1.6 | Scam defence: phishing, drainers, address poisoning | 36 |
+
 Assets: before-signing checklist (ch. 42) introduced here and reused in every module.
 
 ### Module 2 — Trading On-Chain *(5 lessons)*
 Outcome: execute a swap deliberately, understanding price impact and MEV.
+
+| # | Lesson | ATLAS ch. |
+|---|---|---|
 | 2.1 | DEXs, aggregators & routing | 6 |
 | 2.2 | AMM mathematics (x·y=k) — *sample lesson* | 7 |
 | 2.3 | Providing liquidity | 8 |
 | 2.4 | Impermanent loss & true LP P&L | 9 |
 | 2.5 | MEV and how to protect your trades | 35 |
+
 Assets: AMM flow diagram, 100 ETH / 300k USDC worked example, LP-vs-hold benchmark.
 
 ### Module 3 — Lending & Leverage *(4 lessons)*
 Outcome: borrow against collateral with a buffer and a written defence plan.
+
+| # | Lesson | ATLAS ch. |
+|---|---|---|
 | 3.1 | How lending markets work (utilisation, rate curves) | 10 |
 | 3.2 | LTV, liquidation threshold & health factor | 11 |
 | 3.3 | Liquidations and cascades | 12 |
 | 3.4 | Borrowing strategies & looping | 13 |
+
 Assets: liquidation feedback-loop diagram, Aave health-factor primary source.
 
 ### Module 4 — Yield *(6 lessons)*
 Outcome: split any APY into organic vs subsidised, and name the risk being paid for.
+
+| # | Lesson | ATLAS ch. |
+|---|---|---|
 | 4.1 | Yield farming: base yield vs emissions | 14 |
 | 4.2 | Native staking | 15 |
 | 4.3 | Liquid staking (LSTs) | 16 |
@@ -187,6 +200,9 @@ Outcome: split any APY into organic vs subsidised, and name the risk being paid 
 
 ### Module 5 — Infrastructure Risk *(5 lessons)*
 Outcome: map every bridge, oracle, L2 and contract a position depends on.
+
+| # | Lesson | ATLAS ch. |
+|---|---|---|
 | 5.1 | Bridges and trust assumptions | 19 |
 | 5.2 | Layer 2s, sequencers & withdrawal paths | 20 |
 | 5.3 | Oracles, TWAPs & manipulation | 21 |
@@ -195,14 +211,21 @@ Outcome: map every bridge, oracle, L2 and contract a position depends on.
 
 ### Module 6 — Protocol Research *(4 lessons)*
 Outcome: complete a full due-diligence file on a real protocol.
+
+| # | Lesson | ATLAS ch. |
+|---|---|---|
 | 6.1 | Protocol due diligence | 24 |
 | 6.2 | Tokenomics: supply, unlocks, FDV, value capture | 25 |
 | 6.3 | Governance & DAOs | 26 |
 | 6.4 | The on-chain research workflow | 41 |
+
 Assets: **DeFi Protocol Due Diligence Tracker** (Notion) + `defi-due-diligence` 6-step loop.
 
 ### Module 7 — On-Chain Analytics *(8 lessons)*
 Outcome: read on-chain data without over-interpreting it.
+
+| # | Lesson | ATLAS ch. |
+|---|---|---|
 | 7.1 | On-chain data foundations (address ≠ person) | 27 |
 | 7.2 | Block explorer mastery | 28 |
 | 7.3 | Exchange flows | 29 |
@@ -211,10 +234,14 @@ Outcome: read on-chain data without over-interpreting it.
 | 7.6 | Network activity | 32 |
 | 7.7 | DEX & liquidity analytics | 33 |
 | 7.8 | Derivatives on-chain (perps, funding, OI) | 34 |
+
 Assets: 20-metric directory as a downloadable reference card.
 
 ### Module 8 — The DeFi Operating System *(4 lessons)*
 Outcome: a written portfolio plan with risk buckets, limits and an emergency plan.
+
+| # | Lesson | ATLAS ch. |
+|---|---|---|
 | 8.1 | DeFi portfolio construction | 38 |
 | 8.2 | The DeFi risk framework | 39 |
 | 8.3 | Strategy library (16 frameworks, Core → Advanced), full content in `03-defi-strategy-mastery.md` | 40 |
@@ -222,9 +249,13 @@ Outcome: a written portfolio plan with risk buckets, limits and an emergency pla
 
 ### Module 9 — DeFi vs Grid Bots *(3 lessons, new content)*
 Outcome: choose the right tool for the market — and the natural bridge into GBB.
+
+| # | Lesson | ATLAS ch. |
+|---|---|---|
 | 9.1 | LP position vs grid bot: same idea (sell high/buy low inside a range), different risks | new |
 | 9.2 | When a CEX grid beats on-chain LP, and when it doesn't (fees, custody, IL vs inventory risk, regime) | new |
 | 9.3 | Building a combined system: grid bots for range markets, DeFi for yield/collateral | new |
+
 Cross-sell: GBB checkout link for non-customers; Elite Intel invite for everyone.
 
 ### Capstone
@@ -1436,7 +1467,7 @@ walks through offer → curriculum → Whop setup → funnel → guardrails → 
 and calls the others as needed.
 
 ## On-Chain Operator Program
-Everything for the DeFi program is in one file: [`programs/defi-program/ON-CHAIN-OPERATOR-PROGRAM.md`](programs/defi-program/ON-CHAIN-OPERATOR-PROGRAM.md).
+Everything for the DeFi program is in one file: [`ON-CHAIN-OPERATOR-PROGRAM.md`](programs/defi-program/ON-CHAIN-OPERATOR-PROGRAM.md), also as [Word](programs/defi-program/On-Chain-Operator-Program.docx) and [PDF](programs/defi-program/On-Chain-Operator-Program.pdf).
 To finish building it, paste [`programs/defi-program/BUILD-PROMPT.md`](programs/defi-program/BUILD-PROMPT.md) into Claude Code.
 
 ## Skills
@@ -1510,7 +1541,7 @@ push after each finished piece.
 5. **Sales page copy**: use the `frontend-design` skill if you build it as a page.
 6. **Whop setup** per `05-whop-setup.md`: I create the product in the dashboard and give you the `prod_` ID. You create plans and checkout links through Zapier, but only after showing me the exact values.
 7. **Funnel**: apply `04-funnel-changes.md` to my Zapier skills (`update_zapier_skill`) after I approve, and mirror the changes into `.claude/skills/gbb-*`.
-8. Regenerate the master file with `python3 programs/defi-program/build_master.py` and push.
+8. Regenerate the master file with `python3 programs/defi-program/build_master.py`, then the Word and PDF copies with `cd programs/defi-program/export && npm install && npm run build`, and push.
 
 ## Rules
 - Educational only. No promised, projected or guaranteed returns anywhere: lessons, emails, sales page or call script. Always show how a strategy loses money next to how it earns.

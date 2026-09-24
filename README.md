@@ -11,7 +11,7 @@ walks through offer → curriculum → Whop setup → funnel → guardrails → 
 and calls the others as needed.
 
 ## On-Chain Operator Program
-Everything for the DeFi program is in one file: [`programs/defi-program/ON-CHAIN-OPERATOR-PROGRAM.md`](programs/defi-program/ON-CHAIN-OPERATOR-PROGRAM.md).
+Everything for the DeFi program is in one file: [`ON-CHAIN-OPERATOR-PROGRAM.md`](programs/defi-program/ON-CHAIN-OPERATOR-PROGRAM.md), also as [Word](programs/defi-program/On-Chain-Operator-Program.docx) and [PDF](programs/defi-program/On-Chain-Operator-Program.pdf).
 To finish building it, paste [`programs/defi-program/BUILD-PROMPT.md`](programs/defi-program/BUILD-PROMPT.md) into Claude Code.
 
 ## Skills
