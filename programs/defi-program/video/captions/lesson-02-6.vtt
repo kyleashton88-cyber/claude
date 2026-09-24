@@ -1,0 +1,175 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.235
+Lesson 2.6.
+
+00:00:02.235 --> 00:00:06.477
+Advanced execution: limit, TWAP and intent-based orders.
+
+00:00:06.477 --> 00:00:08.501
+By the end of this lesson, you'll be
+
+00:00:08.501 --> 00:00:10.580
+able to use order types that give you
+
+00:00:10.580 --> 00:00:13.152
+better prices and protection than a plain swap.
+
+00:00:14.452 --> 00:00:15.742
+Here's the plan.
+
+00:00:15.742 --> 00:00:17.427
+First, the key ideas.
+
+00:00:17.427 --> 00:00:20.142
+Then, a worked example, step by step.
+
+00:00:20.142 --> 00:00:21.667
+Then, your checklist.
+
+00:00:21.667 --> 00:00:23.829
+And finally, a three-question quiz.
+
+00:00:25.129 --> 00:00:28.850
+First, On-chain limit orders: you sign an order
+
+00:00:28.850 --> 00:00:32.338
+off-chain ("sell 1 ETH at 3,300 or better");
+
+00:00:32.338 --> 00:00:35.584
+it fills only if the price is reached.
+
+00:00:35.584 --> 00:00:37.659
+Usually gasless until filled.
+
+00:00:37.659 --> 00:00:40.971
+Next, TWAP orders: split a large trade into
+
+00:00:40.971 --> 00:00:44.734
+equal slices over time to reduce price impact.
+
+00:00:44.734 --> 00:00:48.748
+Then, Intent-based / RFQ trading: you state what
+
+00:00:48.748 --> 00:00:52.025
+you want ("100,000 USDC → ETH, at least
+
+00:00:52.025 --> 00:00:56.039
+X"); competing solvers or market makers fill it,
+
+00:00:56.039 --> 00:01:00.927
+often with MEV protection and no failed-transaction gas.
+
+00:01:00.927 --> 00:01:04.550
+And finally, Trade-offs: limit orders may never fill;
+
+00:01:04.550 --> 00:01:07.166
+TWAP takes time and the price can move
+
+00:01:07.166 --> 00:01:10.587
+away; intents rely on the protocol's solver design.
+
+00:01:11.887 --> 00:01:14.402
+Let's work an example, step by step.
+
+00:01:14.402 --> 00:01:19.352
+Buying $50,000 of ETH in a pool where a
+
+00:01:19.352 --> 00:01:26.087
+single $50,000 trade has ~1.5% price impact (~$750).
+
+00:01:26.087 --> 00:01:28.564
+A TWAP of 10 × $5,000 over an hour
+
+00:01:28.564 --> 00:01:31.537
+has far less impact per slice, as long as
+
+00:01:31.537 --> 00:01:35.517
+the price doesn't trend against you during the hour.
+
+00:01:35.517 --> 00:01:37.945
+An intent-based order may beat both by
+
+00:01:37.945 --> 00:01:41.172
+sourcing liquidity from several venues at once.
+
+00:01:41.172 --> 00:01:42.222
+Compare the quotes.
+
+00:01:43.522 --> 00:01:44.982
+Here's your checklist.
+
+00:01:44.982 --> 00:01:46.517
+Do it now, for real.
+
+00:01:46.517 --> 00:01:48.865
+First, I compare a plain swap, a TWAP
+
+00:01:48.865 --> 00:01:51.452
+and an intent quote for large trades.
+
+00:01:51.452 --> 00:01:54.712
+Next, Limit orders have an expiry I've chosen.
+
+00:01:54.712 --> 00:01:56.598
+And finally, I know which
+
+00:01:56.598 --> 00:01:59.137
+order types include MEV protection.
+
+00:02:00.437 --> 00:02:01.647
+Question 1.
+
+00:02:01.647 --> 00:02:03.812
+Why split a large trade into a TWAP?
+
+00:02:08.232 --> 00:02:11.816
+The answer: Smaller slices cause less price impact each.
+
+00:02:13.116 --> 00:02:14.361
+Question 2.
+
+00:02:14.361 --> 00:02:16.056
+What's the risk of a limit order?
+
+00:02:20.476 --> 00:02:22.201
+The answer: It may never fill.
+
+00:02:23.501 --> 00:02:24.771
+Question 3.
+
+00:02:24.771 --> 00:02:26.556
+Who fills an intent-based order?
+
+00:02:30.976 --> 00:02:33.916
+The answer: Competing solvers or market makers.
+
+00:02:35.216 --> 00:02:36.461
+Let's recap.
+
+00:02:36.461 --> 00:02:40.667
+On-chain limit orders: you sign an order off-chain
+
+00:02:40.667 --> 00:02:43.771
+("sell 1 ETH at 3,300 or better").
+
+00:02:43.771 --> 00:02:47.023
+TWAP orders: split a large trade into equal
+
+00:02:47.023 --> 00:02:50.279
+slices over time to reduce price impact.
+
+00:02:50.279 --> 00:02:54.539
+Intent-based / RFQ trading: you state what you
+
+00:02:54.539 --> 00:02:58.464
+want ("100,000 USDC → ETH, at least X").
+
+00:02:58.464 --> 00:03:00.839
+Trade-offs: limit orders may never fill.
+
+00:03:02.139 --> 00:03:04.654
+Do the checklist now, before you move on.
+
+00:03:04.654 --> 00:03:09.789
+Next up, Lesson 2.7: Advanced AMM design and LVR.

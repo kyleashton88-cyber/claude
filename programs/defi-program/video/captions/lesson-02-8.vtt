@@ -1,0 +1,211 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.165
+Lesson 2.8.
+
+00:00:02.165 --> 00:00:04.360
+The MEV supply chain.
+
+00:00:04.360 --> 00:00:06.261
+By the end of this lesson, you'll
+
+00:00:06.261 --> 00:00:08.442
+be able to understand who sees, orders
+
+00:00:08.442 --> 00:00:10.902
+and profits from your transactions, and how
+
+00:00:10.902 --> 00:00:12.635
+to get some of that value back.
+
+00:00:13.935 --> 00:00:15.225
+Here's the plan.
+
+00:00:15.225 --> 00:00:16.910
+First, the key ideas.
+
+00:00:16.910 --> 00:00:19.625
+Then, a worked example, step by step.
+
+00:00:19.625 --> 00:00:21.150
+Then, your checklist.
+
+00:00:21.150 --> 00:00:23.312
+And finally, a three-question quiz.
+
+00:00:24.612 --> 00:00:28.043
+The path of an Ethereum transaction today:
+
+00:00:28.043 --> 00:00:30.755
+First, you / your wallet send it,
+
+00:00:30.755 --> 00:00:33.548
+either to the public mempool or to
+
+00:00:33.548 --> 00:00:37.677
+a private RPC (e.g. an MEV-protection endpoint).
+
+00:00:37.677 --> 00:00:40.908
+Next, Searchers scan for opportunities (arbitrage,
+
+00:00:40.908 --> 00:00:44.692
+liquidations, backruns, sandwiches) and submit bundles.
+
+00:00:44.692 --> 00:00:47.222
+Then, Builders assemble the most profitable
+
+00:00:47.222 --> 00:00:49.649
+blocks from transactions and bundles.
+
+00:00:49.649 --> 00:00:53.697
+Also, Relays pass blocks to proposers (validators), who
+
+00:00:53.697 --> 00:00:59.419
+pick the highest-paying block (proposer-builder separation, via MEV-Boost).
+
+00:00:59.419 --> 00:01:02.270
+On top of that, Order-flow auctions /
+
+00:01:02.270 --> 00:01:05.497
+MEV rebates: some private RPCs and wallets
+
+00:01:05.497 --> 00:01:08.948
+let searchers bid to backrun your transaction
+
+00:01:08.948 --> 00:01:11.424
+and refund you part of the value.
+
+00:01:12.724 --> 00:01:16.284
+And Intent systems (Lesson 2.6) move competition
+
+00:01:16.284 --> 00:01:19.709
+to solvers, often with built-in protection.
+
+00:01:19.709 --> 00:01:22.737
+And finally, L2s usually have a single
+
+00:01:22.737 --> 00:01:27.396
+sequencer ordering transactions, which changes MEV dynamics
+
+00:01:27.396 --> 00:01:31.744
+(e.g. first-come-first-served or priority-fee ordering).
+
+00:01:33.044 --> 00:01:36.749
+Let's look at the diagram: The MEV supply chain.
+
+00:01:36.749 --> 00:01:38.309
+Take a moment with it.
+
+00:01:38.309 --> 00:01:40.719
+It's everything we've just said, in one picture.
+
+00:01:42.019 --> 00:01:44.534
+Let's work an example, step by step.
+
+00:01:44.534 --> 00:01:48.825
+A $100,000 swap sent publicly with 1% slippage
+
+00:01:48.825 --> 00:01:52.685
+could leak up to ~$1,000 to a sandwich.
+
+00:01:52.685 --> 00:01:55.983
+Sent through a protected RPC with rebates: no
+
+00:01:55.983 --> 00:01:59.210
+sandwich, and if the trade creates a backrun
+
+00:01:59.210 --> 00:02:03.513
+opportunity (e.g. arbitrage between pools), you may receive
+
+00:02:03.513 --> 00:02:05.175
+a share of it back.
+
+00:02:05.175 --> 00:02:07.832
+Same trade, very different outcome, decided
+
+00:02:07.832 --> 00:02:09.100
+by where you send it.
+
+00:02:10.400 --> 00:02:11.860
+Here's your checklist.
+
+00:02:11.860 --> 00:02:13.395
+Do it now, for real.
+
+00:02:13.395 --> 00:02:17.432
+First, Large trades go through a protected RPC, an
+
+00:02:17.432 --> 00:02:21.770
+intent system or an aggregator with MEV protection.
+
+00:02:21.770 --> 00:02:25.655
+Next, I know whether my wallet's RPC offers rebates.
+
+00:02:25.655 --> 00:02:29.703
+And finally, I understand my L2's sequencer ordering rules.
+
+00:02:31.003 --> 00:02:32.213
+Question 1.
+
+00:02:32.213 --> 00:02:33.438
+What do builders do?
+
+00:02:37.858 --> 00:02:40.845
+The answer: Assemble blocks from transactions
+
+00:02:40.845 --> 00:02:43.378
+and searcher bundles to maximise value.
+
+00:02:44.678 --> 00:02:45.923
+Question 2.
+
+00:02:45.923 --> 00:02:47.918
+What is an MEV rebate?
+
+00:02:52.338 --> 00:02:54.500
+The answer: A refund of part of the
+
+00:02:54.500 --> 00:02:57.983
+value searchers extract from backrunning your transaction.
+
+00:02:59.283 --> 00:03:00.553
+Question 3.
+
+00:03:00.553 --> 00:03:03.508
+Who orders transactions on most L2s today?
+
+00:03:07.928 --> 00:03:11.173
+The answer: A sequencer, often a single operator.
+
+00:03:12.473 --> 00:03:13.718
+Let's recap.
+
+00:03:13.718 --> 00:03:16.473
+You / your wallet send it, either
+
+00:03:16.473 --> 00:03:18.903
+to the public mempool or to a
+
+00:03:18.903 --> 00:03:22.930
+private RPC (e.g. an MEV-protection endpoint).
+
+00:03:22.930 --> 00:03:26.559
+Searchers scan for opportunities (arbitrage, liquidations,
+
+00:03:26.559 --> 00:03:29.381
+backruns, sandwiches) and submit bundles.
+
+00:03:29.381 --> 00:03:31.491
+Builders assemble the most profitable
+
+00:03:31.491 --> 00:03:33.846
+blocks from transactions and bundles.
+
+00:03:33.846 --> 00:03:36.811
+Relays pass blocks to proposers (validators).
+
+00:03:38.111 --> 00:03:40.626
+Do the checklist now, before you move on.
+
+00:03:40.626 --> 00:03:43.791
+Next up, Lesson 3.0: Mastery Starter.

@@ -1,0 +1,193 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.225
+Lesson 3.1.
+
+00:00:02.225 --> 00:00:04.040
+How lending markets work.
+
+00:00:04.040 --> 00:00:06.414
+By the end of this lesson, you'll be able
+
+00:00:06.414 --> 00:00:09.239
+to explain where lending yields come from and why
+
+00:00:09.239 --> 00:00:12.065
+rates jump when a market is nearly fully borrowed.
+
+00:00:13.365 --> 00:00:14.655
+Here's the plan.
+
+00:00:14.655 --> 00:00:16.340
+First, the key ideas.
+
+00:00:16.340 --> 00:00:19.055
+Then, a worked example, step by step.
+
+00:00:19.055 --> 00:00:20.580
+Then, your checklist.
+
+00:00:20.580 --> 00:00:22.742
+And finally, a three-question quiz.
+
+00:00:24.042 --> 00:00:26.232
+A DeFi money market is a pool:
+
+00:00:26.232 --> 00:00:29.978
+lenders supply assets, borrowers borrow them against
+
+00:00:29.978 --> 00:00:32.892
+collateral, and a smart contract sets
+
+00:00:32.892 --> 00:00:37.089
+the rates. up to an optimal utilisation (e.g. 80%),
+
+00:00:37.089 --> 00:00:41.021
+then steeply above it, to pull in lenders and
+
+00:00:41.021 --> 00:00:43.156
+push out borrowers. factor
+
+00:00:43.156 --> 00:00:44.941
+is the protocol's
+
+00:00:44.941 --> 00:00:49.096
+cut. deposit plus interest. First, Utilisation = borrowed ÷
+
+00:00:49.096 --> 00:00:50.591
+supplied. It drives
+
+00:00:50.591 --> 00:00:54.661
+the rates. Next, Interest-rate curve: most markets use a
+
+00:00:54.661 --> 00:00:56.306
+"kinked" curve. Rates
+
+00:00:56.306 --> 00:00:59.871
+rise gently. Then, Supply APY ≈ borrow APY
+
+00:00:59.871 --> 00:01:03.571
+× utilisation × (1 − reserve factor). The
+
+00:01:03.571 --> 00:01:04.731
+reserve. And
+
+00:01:04.731 --> 00:01:07.384
+finally, Receipt tokens: when you supply,
+
+00:01:07.384 --> 00:01:09.531
+you get a token representing your.
+
+00:01:10.832 --> 00:01:14.047
+Near 100% utilisation, rates spike and lenders
+
+00:01:14.047 --> 00:01:16.577
+may not be able to withdraw, because
+
+00:01:16.577 --> 00:01:18.382
+the money is lent out.
+
+00:01:18.382 --> 00:01:20.417
+A sudden high supply APY is
+
+00:01:20.417 --> 00:01:22.752
+often a warning, not a gift.
+
+00:01:22.752 --> 00:01:26.547
+50%, 2.5%, 1.1%.
+
+00:01:26.547 --> 00:01:30.422
+70%, 3.5%, 2.2%.
+
+00:01:30.422 --> 00:01:34.557
+80%, 4.0%, 2.9%.
+
+00:01:34.557 --> 00:01:39.682
+90%, 34.0%, 27.5%.
+
+00:01:39.682 --> 00:01:44.677
+95%, 49.0%, 41.9%.
+
+00:01:45.977 --> 00:01:47.437
+Here's your checklist.
+
+00:01:47.437 --> 00:01:48.972
+Do it now, for real.
+
+00:01:48.972 --> 00:01:51.997
+First, I check utilisation before supplying.
+
+00:01:51.997 --> 00:01:55.372
+Next, I know the market's optimal-utilisation kink.
+
+00:01:55.372 --> 00:01:57.198
+And finally, I treat a sudden
+
+00:01:57.198 --> 00:01:59.267
+rate spike as a liquidity warning.
+
+00:02:00.567 --> 00:02:01.777
+Question 1.
+
+00:02:01.777 --> 00:02:03.712
+What sets the rates in a money market?
+
+00:02:08.132 --> 00:02:12.612
+The answer: Mainly utilisation, through the protocol's interest-rate curve.
+
+00:02:13.912 --> 00:02:15.157
+Question 2.
+
+00:02:15.157 --> 00:02:16.412
+Why does the curve kink?
+
+00:02:20.832 --> 00:02:24.256
+The answer: To make borrowing expensive and supplying
+
+00:02:24.256 --> 00:02:28.442
+attractive when liquidity runs low, restoring withdrawal capacity.
+
+00:02:29.742 --> 00:02:31.012
+Question 3.
+
+00:02:31.012 --> 00:02:33.607
+Utilisation is 99%.
+
+00:02:33.607 --> 00:02:34.762
+Risk for lenders?
+
+00:02:39.182 --> 00:02:42.027
+The answer: Withdrawals may be blocked until
+
+00:02:42.027 --> 00:02:44.430
+borrowers repay or new supply arrives.
+
+00:02:45.730 --> 00:02:46.975
+Let's recap.
+
+00:02:46.975 --> 00:02:50.800
+Utilisation = borrowed ÷ supplied.
+
+00:02:50.800 --> 00:02:54.330
+Interest-rate curve: most markets use a "kinked" curve.
+
+00:02:54.330 --> 00:02:57.186
+Supply APY ≈ borrow APY ×
+
+00:02:57.186 --> 00:03:01.330
+utilisation × (1 − reserve factor).
+
+00:03:01.330 --> 00:03:03.547
+Receipt tokens: when you supply, you
+
+00:03:03.547 --> 00:03:05.345
+get a token representing your.
+
+00:03:06.645 --> 00:03:09.160
+Do the checklist now, before you move on.
+
+00:03:09.160 --> 00:03:11.429
+Next up, Lesson 3.2: LTV,
+
+00:03:11.429 --> 00:03:14.745
+liquidation threshold & health factor.
