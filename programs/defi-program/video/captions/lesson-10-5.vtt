@@ -1,0 +1,151 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.315
+Lesson 10.5.
+
+00:00:02.315 --> 00:00:04.910
+Active concentrated-liquidity management.
+
+00:00:04.910 --> 00:00:07.249
+By the end of this lesson, you'll be able
+
+00:00:07.249 --> 00:00:09.755
+to choose a range width and a rebalance rule
+
+00:00:09.755 --> 00:00:11.815
+that fee income can actually pay for.
+
+00:00:13.115 --> 00:00:14.405
+Here's the plan.
+
+00:00:14.405 --> 00:00:16.090
+First, the key ideas.
+
+00:00:16.090 --> 00:00:18.805
+Then, a worked example, step by step.
+
+00:00:18.805 --> 00:00:20.330
+Then, your checklist.
+
+00:00:20.330 --> 00:00:22.492
+And finally, a three-question quiz.
+
+00:00:23.792 --> 00:00:28.877
+Narrower ranges earn more fees per
+
+00:00:28.877 --> 00:00:35.502
+dollar while in range and go out of
+
+00:00:35.502 --> 00:00:42.524
+range sooner. the calculator Every rebalance costs
+
+00:00:42.524 --> 00:00:46.542
+gas and swap fees and locks
+
+00:00:46.542 --> 00:00:50.474
+in the impermanent loss so
+
+00:00:50.474 --> 00:00:54.997
+far. Professionals set a rule
+
+00:00:54.997 --> 00:01:00.176
+before entering: $2,400–$3,600 (±20%): ~10.4×. $2,700–$3,300
+
+00:01:00.176 --> 00:01:03.911
+(±10%): ~20.4×. $2,850–$3,150 (±5%): ~40.5×.
+
+00:01:05.211 --> 00:01:07.726
+Let's work an example, step by step.
+
+00:01:07.726 --> 00:01:11.726
+ETH typically moves ±7% a week.
+
+00:01:11.726 --> 00:01:13.747
+A ±5% range would be
+
+00:01:13.747 --> 00:01:16.356
+out of range most weeks.
+
+00:01:16.356 --> 00:01:20.904
+The rule points to ±10–12%: ~20× efficiency,
+
+00:01:20.904 --> 00:01:23.531
+and time in range to earn.
+
+00:01:24.831 --> 00:01:27.430
+Trending markets and volatility above what
+
+00:01:27.430 --> 00:01:28.881
+the range was sized for.
+
+00:01:30.181 --> 00:01:31.641
+Here's your checklist.
+
+00:01:31.641 --> 00:01:33.176
+Do it now, for real.
+
+00:01:33.176 --> 00:01:37.241
+First, Width ≥ 1.5× typical weekly move.
+
+00:01:37.241 --> 00:01:40.506
+Next, Rebalance trigger and invalidation written.
+
+00:01:40.506 --> 00:01:42.886
+Then, Rebalance cost budget set.
+
+00:01:42.886 --> 00:01:46.931
+And finally, P&L tracked against holding (Lesson 2.4).
+
+00:01:48.231 --> 00:01:49.441
+Question 1.
+
+00:01:49.441 --> 00:01:53.174
+Why does a ±5% range earn ~2×
+
+00:01:53.174 --> 00:01:57.156
+the fees of ±10% while in range?
+
+00:02:01.576 --> 00:02:04.245
+The answer: The same capital is concentrated
+
+00:02:04.245 --> 00:02:06.084
+in half the price range, so it
+
+00:02:06.084 --> 00:02:08.516
+provides about twice the liquidity there.
+
+00:02:09.816 --> 00:02:11.061
+Question 2.
+
+00:02:11.061 --> 00:02:12.546
+What does a rebalance lock in?
+
+00:02:16.966 --> 00:02:19.910
+The answer: The impermanent loss accrued so
+
+00:02:19.910 --> 00:02:21.851
+far, plus gas and swap costs.
+
+00:02:23.151 --> 00:02:24.421
+Question 3.
+
+00:02:24.421 --> 00:02:27.216
+Price breaks structure and exits the range.
+
+00:02:27.216 --> 00:02:28.041
+Re-centre?
+
+00:02:32.461 --> 00:02:35.251
+The answer: No. That's an invalidation.
+
+00:02:35.251 --> 00:02:36.291
+Exit per plan.
+
+00:02:37.591 --> 00:02:40.106
+Do the checklist now, before you move on.
+
+00:02:40.106 --> 00:02:42.522
+Next up, Lesson 10.6: Restaking
+
+00:02:42.522 --> 00:02:45.391
+and points: pricing speculative yield.

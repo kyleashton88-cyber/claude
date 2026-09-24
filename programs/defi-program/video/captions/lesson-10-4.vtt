@@ -1,0 +1,214 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.235
+Lesson 10.4.
+
+00:00:02.235 --> 00:00:06.795
+Options income: covered calls, cash-secured puts, options vaults.
+
+00:00:06.795 --> 00:00:09.273
+By the end of this lesson, you'll be able
+
+00:00:09.273 --> 00:00:12.045
+to earn option premium on assets you'd hold or
+
+00:00:12.045 --> 00:00:14.700
+buy anyway, knowing exactly what you give up.
+
+00:00:16.000 --> 00:00:17.290
+Here's the plan.
+
+00:00:17.290 --> 00:00:18.975
+First, the key ideas.
+
+00:00:18.975 --> 00:00:21.690
+Then, a worked example, step by step.
+
+00:00:21.690 --> 00:00:23.215
+Then, your checklist.
+
+00:00:23.215 --> 00:00:25.377
+And finally, a three-question quiz.
+
+00:00:26.677 --> 00:00:28.422
+from you at a higher
+
+00:00:28.422 --> 00:00:30.165
+strike. You keep the premium,
+
+00:00:30.165 --> 00:00:31.917
+and your upside is capped
+
+00:00:31.917 --> 00:00:33.882
+at the strike. you the
+
+00:00:33.882 --> 00:00:35.327
+asset at a lower
+
+00:00:35.327 --> 00:00:38.467
+strike. You keep the premium. If price falls below
+
+00:00:38.467 --> 00:00:40.077
+the strike, you buy
+
+00:00:40.077 --> 00:00:41.702
+at the strike. called
+
+00:00:41.702 --> 00:00:43.867
+away → repeat. don't choose the strikes.
+
+00:00:43.867 --> 00:00:46.227
+First, Covered call: you hold the asset
+
+00:00:46.227 --> 00:00:48.225
+and sell someone the right to buy it.
+
+00:00:48.225 --> 00:00:51.312
+Next, Cash-secured put: you hold stablecoins and sell
+
+00:00:51.312 --> 00:00:53.905
+someone the right to sell. Then, the wheel:
+
+00:00:53.905 --> 00:00:56.622
+sell puts until assigned → hold the asset
+
+00:00:56.622 --> 00:00:57.808
+→ sell calls until. And
+
+00:00:57.808 --> 00:00:59.937
+finally, Options vaults automate this
+
+00:00:59.937 --> 00:01:01.722
+on-chain. They add contract risk and you.
+
+00:01:03.022 --> 00:01:05.537
+Let's work an example,
+
+00:01:05.537 --> 00:01:07.202
+step by
+
+00:01:07.202 --> 00:01:09.807
+step. ETH at 3,000. about
+
+00:01:09.807 --> 00:01:13.212
+20.9% annualised if repeated at
+
+00:01:13.212 --> 00:01:16.117
+that premium, which it won't
+
+00:01:16.117 --> 00:01:19.062
+be exactly. Max gain for
+
+00:01:19.062 --> 00:01:23.247
+the week 10.4%. Break-even 2,988. the calculator
+
+00:01:23.247 --> 00:01:27.787
+to 0.44% on the cash for the week.
+
+00:01:27.787 --> 00:01:31.892
+If assigned, effective entry $2,688. Covered
+
+00:01:31.892 --> 00:01:34.837
+call: sell a 7-day 3,300 call
+
+00:01:34.837 --> 00:01:39.499
+for 0.4% ($12). Cash-secured put: sell a 7-day
+
+00:01:39.499 --> 00:01:43.367
+2,700 put for $12 with $2,700 reserved.
+
+00:01:44.667 --> 00:01:47.301
+Covered call: upside above the strike, plus
+
+00:01:47.301 --> 00:01:49.457
+the full downside of the asset.
+
+00:01:49.457 --> 00:01:51.962
+Cash-secured put: a crash through the strike.
+
+00:01:53.262 --> 00:01:54.722
+Here's your checklist.
+
+00:01:54.722 --> 00:01:56.257
+Do it now, for real.
+
+00:01:56.257 --> 00:01:58.716
+First, only on assets I'd hold (calls)
+
+00:01:58.716 --> 00:02:00.782
+or buy at the strike (puts).
+
+00:02:00.782 --> 00:02:04.247
+Next, Strike chosen from levels, not from the premium.
+
+00:02:04.247 --> 00:02:08.782
+Then, Annualised premium treated as "if repeated", never promised.
+
+00:02:08.782 --> 00:02:11.867
+And finally, Vault due diligence done if automating.
+
+00:02:13.167 --> 00:02:14.377
+Question 1.
+
+00:02:14.377 --> 00:02:15.336
+What do you give up
+
+00:02:15.336 --> 00:02:16.582
+by selling a covered call?
+
+00:02:21.002 --> 00:02:23.887
+The answer: Gains above the strike for that period.
+
+00:02:25.187 --> 00:02:26.432
+Question 2.
+
+00:02:26.432 --> 00:02:30.342
+Put strike 2,700, premium $15.
+
+00:02:30.342 --> 00:02:31.912
+Effective entry if assigned?
+
+00:02:36.332 --> 00:02:39.447
+The answer: $2,685.
+
+00:02:40.747 --> 00:02:42.017
+Question 3.
+
+00:02:42.017 --> 00:02:43.932
+Does premium protect you in a crash?
+
+00:02:48.352 --> 00:02:51.317
+The answer: Only by the size of the premium.
+
+00:02:51.317 --> 00:02:53.102
+The asset's downside remains.
+
+00:02:54.402 --> 00:02:55.647
+Let's recap.
+
+00:02:55.647 --> 00:02:57.650
+Covered call: you hold the asset and
+
+00:02:57.650 --> 00:02:59.737
+sell someone the right to buy it.
+
+00:02:59.737 --> 00:03:02.212
+Cash-secured put: you hold stablecoins and
+
+00:03:02.212 --> 00:03:04.297
+sell someone the right to sell.
+
+00:03:04.297 --> 00:03:06.738
+The wheel: sell puts until assigned →
+
+00:03:06.738 --> 00:03:09.222
+hold the asset → sell calls until.
+
+00:03:09.222 --> 00:03:11.282
+Options vaults automate this on-chain.
+
+00:03:12.582 --> 00:03:15.097
+Do the checklist now, before you move on.
+
+00:03:15.097 --> 00:03:20.022
+Next up, Lesson 10.5: Active concentrated-liquidity management.

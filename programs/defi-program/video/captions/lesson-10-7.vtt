@@ -1,0 +1,187 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.295
+Lesson 10.7.
+
+00:00:02.295 --> 00:00:05.310
+Being the house: perp-exchange liquidity vaults.
+
+00:00:05.310 --> 00:00:07.302
+By the end of this lesson, you'll be
+
+00:00:07.302 --> 00:00:09.886
+able to understand what you're really taking on
+
+00:00:09.886 --> 00:00:12.685
+when you provide liquidity to a perpetuals exchange.
+
+00:00:13.985 --> 00:00:15.275
+Here's the plan.
+
+00:00:15.275 --> 00:00:16.960
+First, the key ideas.
+
+00:00:16.960 --> 00:00:19.675
+Then, a worked example, step by step.
+
+00:00:19.675 --> 00:00:21.200
+Then, your checklist.
+
+00:00:21.200 --> 00:00:23.362
+And finally, a three-question quiz.
+
+00:00:24.662 --> 00:00:27.594
+Many on-chain perp exchanges let you deposit
+
+00:00:27.594 --> 00:00:29.940
+into a liquidity vault that acts as
+
+00:00:29.940 --> 00:00:32.977
+the counterparty to traders (the "house").
+
+00:00:32.977 --> 00:00:36.757
+The vault earns trading fees, borrowing/funding fees and
+
+00:00:36.757 --> 00:00:40.307
+part of liquidations, and loses when traders win.
+
+00:00:40.307 --> 00:00:44.968
+First, Returns: fees + traders' losses − traders' profits.
+
+00:00:44.968 --> 00:00:48.083
+Next, Risks: a run of profitable traders (or
+
+00:00:48.083 --> 00:00:51.613
+a few very large ones), open interest concentrated
+
+00:00:51.613 --> 00:00:55.005
+on one side, oracle manipulation or latency, the
+
+00:00:55.005 --> 00:00:59.020
+market-making strategy of the vault (some vaults actively
+
+00:00:59.020 --> 00:01:01.743
+trade), and exchange contract risk.
+
+00:01:01.743 --> 00:01:05.996
+And finally, Check: the vault's historical P&L split (fees
+
+00:01:05.996 --> 00:01:09.888
+vs trader P&L), its open-interest caps, how it prices
+
+00:01:09.888 --> 00:01:13.924
+assets (oracle), and withdrawal rules (cooldowns, fees).
+
+00:01:15.225 --> 00:01:17.740
+Let's work an example, step by step.
+
+00:01:17.740 --> 00:01:21.713
+A vault shows 25% APR: 18% from fees, 7%
+
+00:01:21.713 --> 00:01:26.665
+from traders' net losses over the last 6 months.
+
+00:01:26.665 --> 00:01:30.581
+In a strong one-directional trend, traders who are long
+
+00:01:30.581 --> 00:01:34.288
+win, so the vault's "trader P&L" component can swing
+
+00:01:34.288 --> 00:01:37.245
+to −20% or worse, wiping out the fees.
+
+00:01:37.245 --> 00:01:39.572
+Size it as an active trading exposure,
+
+00:01:39.572 --> 00:01:41.900
+not as fixed income, and check whether
+
+00:01:41.900 --> 00:01:43.929
+withdrawals are delayed in stress.
+
+00:01:45.228 --> 00:01:47.926
+Trader skill and trending markets; oracle
+
+00:01:47.926 --> 00:01:50.625
+quality; the exchange's own risk controls.
+
+00:01:51.926 --> 00:01:53.386
+Here's your checklist.
+
+00:01:53.386 --> 00:01:54.921
+Do it now, for real.
+
+00:01:54.921 --> 00:01:57.531
+First, Vault returns split into fees
+
+00:01:57.531 --> 00:01:59.806
+vs trader P&L, with history.
+
+00:01:59.806 --> 00:02:03.261
+Next, Open-interest caps and oracle design reviewed.
+
+00:02:03.261 --> 00:02:06.641
+And finally, Withdrawal cooldowns and stress behaviour known.
+
+00:02:07.941 --> 00:02:09.151
+Question 1.
+
+00:02:09.151 --> 00:02:11.236
+When does a perp liquidity vault lose money?
+
+00:02:15.656 --> 00:02:17.863
+The answer: When traders are net
+
+00:02:17.863 --> 00:02:20.136
+profitable, e.g. in strong trends.
+
+00:02:21.436 --> 00:02:22.681
+Question 2.
+
+00:02:22.681 --> 00:02:24.186
+Why isn't it fixed income?
+
+00:02:28.606 --> 00:02:30.628
+The answer: Part of the return is
+
+00:02:30.628 --> 00:02:33.186
+traders' losses, which can reverse sharply.
+
+00:02:34.486 --> 00:02:35.756
+Question 3.
+
+00:02:35.756 --> 00:02:38.166
+Name two things to check before depositing.
+
+00:02:42.466 --> 00:02:46.278
+The answer: Any two: fee vs trader-P&L history,
+
+00:02:46.278 --> 00:02:50.726
+OI caps, oracle design, withdrawal rules, contract risk.
+
+00:02:52.026 --> 00:02:53.271
+Let's recap.
+
+00:02:53.271 --> 00:02:57.534
+Returns: fees + traders' losses − traders' profits.
+
+00:02:57.534 --> 00:02:59.846
+Risks: a run of profitable traders
+
+00:02:59.846 --> 00:03:01.929
+(or a few very large ones).
+
+00:03:01.929 --> 00:03:05.422
+Check: the vault's historical P&L split (fees
+
+00:03:05.422 --> 00:03:08.384
+vs trader P&L), its open-interest caps.
+
+00:03:09.684 --> 00:03:12.199
+Do the checklist now, before you move on.
+
+00:03:12.199 --> 00:03:14.857
+Next up, Lesson 10.8: DeFi rates:
+
+00:03:14.857 --> 00:03:17.514
+term structure, fixed vs floating.

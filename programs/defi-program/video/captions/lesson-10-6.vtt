@@ -1,0 +1,190 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.315
+Lesson 10.6.
+
+00:00:02.315 --> 00:00:05.800
+Restaking and points: pricing speculative yield.
+
+00:00:05.800 --> 00:00:08.008
+By the end of this lesson, you'll be
+
+00:00:08.008 --> 00:00:11.230
+able to value restaking and points programmes without
+
+00:00:11.230 --> 00:00:13.855
+letting unknown rewards drive position size.
+
+00:00:15.155 --> 00:00:16.445
+Here's the plan.
+
+00:00:16.445 --> 00:00:18.130
+First, the key ideas.
+
+00:00:18.130 --> 00:00:20.845
+Then, a worked example, step by step.
+
+00:00:20.845 --> 00:00:22.370
+Then, your checklist.
+
+00:00:22.370 --> 00:00:24.532
+And finally, a three-question quiz.
+
+00:00:25.832 --> 00:00:30.155
+Restaking reuses staked assets to secure more services, paying
+
+00:00:30.155 --> 00:00:33.998
+extra rewards and often points: an off-chain score that
+
+00:00:33.998 --> 00:00:36.357
+may or may not become a token.
+
+00:00:36.357 --> 00:00:39.340
+The risk stack grows at each layer: staking
+
+00:00:39.340 --> 00:00:42.594
+→ liquid restaking token → restaking protocol →
+
+00:00:42.594 --> 00:00:46.012
+each service it secures → slashing conditions.
+
+00:00:46.012 --> 00:00:49.477
+Professional rules: First, Plan with points at zero.
+
+00:00:49.477 --> 00:00:52.012
+Base the decision on yield you can measure.
+
+00:00:52.012 --> 00:00:55.387
+Next, Treat points as an airdrop bet:
+
+00:00:55.387 --> 00:00:58.441
+EV = P(payout) × value − costs.
+
+00:00:58.441 --> 00:01:01.567
+Then, Hedge price if you only want the yield:
+
+00:01:01.567 --> 00:01:05.643
+short the underlying perp (strategy #24), knowing the hedge
+
+00:01:05.643 --> 00:01:09.001
+doesn't cover a depeg of the restaking token.
+
+00:01:09.001 --> 00:01:12.424
+And finally, Cap it: speculative bucket
+
+00:01:12.424 --> 00:01:15.076
+only (≤ 5–10% of DeFi capital).
+
+00:01:16.376 --> 00:01:18.891
+Let's work an example, step by step.
+
+00:01:18.891 --> 00:01:22.842
+$20,000 in a liquid restaking token:
+
+00:01:22.842 --> 00:01:26.666
+base staking yield ~3% ($600/yr).
+
+00:01:26.666 --> 00:01:30.494
+Points: you estimate a 30% chance of a
+
+00:01:30.494 --> 00:01:34.911
+payout worth $1,500, costing $200 in gas and
+
+00:01:34.911 --> 00:01:38.646
+bridging: the calculator → EV $250.
+
+00:01:38.646 --> 00:01:42.074
+Worth doing only if the position still makes sense
+
+00:01:42.074 --> 00:01:45.031
+at $600/yr and the risk stack is acceptable.
+
+00:01:46.331 --> 00:01:48.991
+Slashing, depeg of the restaking token, and
+
+00:01:48.991 --> 00:01:51.711
+the chance that points never become anything.
+
+00:01:53.011 --> 00:01:54.471
+Here's your checklist.
+
+00:01:54.471 --> 00:01:56.006
+Do it now, for real.
+
+00:01:56.006 --> 00:01:59.461
+First, Decision still works with points valued at zero.
+
+00:01:59.461 --> 00:02:02.456
+Next, Full risk stack written, layer by layer.
+
+00:02:02.456 --> 00:02:05.351
+Then, Sized inside the speculative bucket.
+
+00:02:05.351 --> 00:02:08.096
+And finally, Hedge (if any) and its gap understood.
+
+00:02:09.396 --> 00:02:10.606
+Question 1.
+
+00:02:10.606 --> 00:02:12.151
+Why value points at zero?
+
+00:02:16.571 --> 00:02:19.977
+The answer: They're not guaranteed to become anything, so
+
+00:02:19.977 --> 00:02:22.561
+a decision that needs them is a speculation.
+
+00:02:23.861 --> 00:02:25.106
+Question 2.
+
+00:02:25.106 --> 00:02:27.241
+What does a perp hedge on the underlying miss?
+
+00:02:31.661 --> 00:02:35.221
+The answer: The restaking token depegging from the underlying.
+
+00:02:36.521 --> 00:02:37.791
+Question 3.
+
+00:02:37.791 --> 00:02:40.296
+Name three layers of the restaking risk stack.
+
+00:02:44.596 --> 00:02:49.442
+The answer: Any three: staking/validators, the liquid restaking token,
+
+00:02:49.442 --> 00:02:53.946
+the restaking protocol, each service secured, slashing conditions.
+
+00:02:55.247 --> 00:02:56.492
+Let's recap.
+
+00:02:56.492 --> 00:02:58.541
+Plan with points at zero: Base the
+
+00:02:58.541 --> 00:03:00.832
+decision on yield you can measure.
+
+00:03:00.832 --> 00:03:04.018
+Treat points as an airdrop bet: EV
+
+00:03:04.018 --> 00:03:06.866
+= P(payout) × value − costs.
+
+00:03:06.866 --> 00:03:09.331
+Hedge price if you only want the yield.
+
+00:03:09.331 --> 00:03:12.139
+Cap it: speculative bucket only
+
+00:03:12.139 --> 00:03:14.421
+(≤ 5–10% of DeFi capital).
+
+00:03:15.720 --> 00:03:18.235
+Do the checklist now, before you move on.
+
+00:03:18.235 --> 00:03:20.230
+Next up, Lesson 10.7: Being
+
+00:03:20.230 --> 00:03:23.222
+the house: perp-exchange liquidity vaults.
