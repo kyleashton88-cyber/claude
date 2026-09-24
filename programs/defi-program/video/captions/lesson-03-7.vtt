@@ -1,0 +1,181 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.295
+Lesson 3.7.
+
+00:00:02.295 --> 00:00:06.020
+CDP stablecoins: minting your own dollars.
+
+00:00:06.020 --> 00:00:08.396
+By the end of this lesson, you'll be able
+
+00:00:08.396 --> 00:00:11.620
+to mint stablecoins against your own collateral (as your
+
+00:00:11.620 --> 00:00:14.335
+own bank would), and manage the position safely.
+
+00:00:15.635 --> 00:00:16.925
+Here's the plan.
+
+00:00:16.925 --> 00:00:18.610
+First, the key ideas.
+
+00:00:18.610 --> 00:00:21.325
+Then, a worked example, step by step.
+
+00:00:21.325 --> 00:00:22.850
+Then, your checklist.
+
+00:00:22.850 --> 00:00:25.012
+And finally, a three-question quiz.
+
+00:00:26.312 --> 00:00:29.962
+First, A CDP (collateralised debt position) lets you
+
+00:00:29.962 --> 00:00:33.637
+lock collateral and mint a stablecoin against it.
+
+00:00:33.637 --> 00:00:35.253
+You owe the stablecoin back,
+
+00:00:35.253 --> 00:00:37.337
+plus a stability fee (interest).
+
+00:00:37.337 --> 00:00:41.275
+Next, Minimum collateral ratio (e.g. 150%):
+
+00:00:41.275 --> 00:00:44.887
+below it, the position is liquidated.
+
+00:00:44.887 --> 00:00:49.733
+Then, the stablecoin holds its peg through over-collateralisation,
+
+00:00:49.733 --> 00:00:53.710
+liquidations, interest rates and often a peg stability
+
+00:00:53.710 --> 00:00:56.603
+module (PSM) that swaps it 1:1 (minus a
+
+00:00:56.603 --> 00:00:59.362
+small fee) with other stablecoins.
+
+00:00:59.362 --> 00:01:02.662
+Also, Compared with borrowing from a lending pool:
+
+00:01:02.662 --> 00:01:05.898
+you create new money rather than borrow someone's
+
+00:01:05.898 --> 00:01:09.692
+deposit; rates are set by governance, not utilisation.
+
+00:01:09.692 --> 00:01:13.778
+And finally, Uses: liquidity without selling (Module
+
+00:01:13.778 --> 00:01:16.861
+12.3), funding a liquidity ladder, or a
+
+00:01:16.861 --> 00:01:20.022
+yield-covered credit line (strategy #25).
+
+00:01:21.322 --> 00:01:23.837
+Let's work an example, step by step.
+
+00:01:23.837 --> 00:01:28.167
+10 ETH at $3,000 ($30,000) with a 150%
+
+00:01:28.167 --> 00:01:33.352
+minimum ratio: you could mint up to $20,000.
+
+00:01:33.352 --> 00:01:39.717
+Mint $10,000 instead: the calculator → ratio 300%,
+
+00:01:39.717 --> 00:01:46.507
+liquidation at $1,500 (−50%), stability fee $600/yr.
+
+00:01:46.507 --> 00:01:48.341
+Operators treat the maximum as
+
+00:01:48.341 --> 00:01:49.642
+a cliff, not a target.
+
+00:01:50.942 --> 00:01:52.402
+Here's your checklist.
+
+00:01:52.402 --> 00:01:53.937
+Do it now, for real.
+
+00:01:53.937 --> 00:01:57.477
+First, Collateral ratio target (e.g. ≥
+
+00:01:57.477 --> 00:02:00.682
+250%) and action levels written.
+
+00:02:00.682 --> 00:02:05.887
+Next, Stability fee vs alternatives (lending-pool borrow rates) compared.
+
+00:02:05.887 --> 00:02:09.851
+And finally, Peg mechanism (PSM, rates) understood,
+
+00:02:09.851 --> 00:02:12.672
+and my exit if the stablecoin depegs.
+
+00:02:13.972 --> 00:02:15.182
+Question 1.
+
+00:02:15.182 --> 00:02:17.137
+What do you owe on a CDP?
+
+00:02:21.557 --> 00:02:23.607
+The answer: The minted stablecoin
+
+00:02:23.607 --> 00:02:25.477
+plus the accrued stability fee.
+
+00:02:26.777 --> 00:02:28.022
+Question 2.
+
+00:02:28.022 --> 00:02:32.812
+Collateral $40,000, 150% minimum ratio.
+
+00:02:32.812 --> 00:02:33.857
+Maximum mint?
+
+00:02:38.277 --> 00:02:42.397
+The answer: About $26,667.
+
+00:02:43.697 --> 00:02:44.967
+Question 3.
+
+00:02:44.967 --> 00:02:46.752
+What does a PSM do?
+
+00:02:51.172 --> 00:02:54.196
+The answer: Swaps the stablecoin 1:1 (minus a
+
+00:02:54.196 --> 00:02:57.352
+fee) with other stablecoins, supporting the peg.
+
+00:02:58.652 --> 00:02:59.897
+Let's recap.
+
+00:02:59.897 --> 00:03:03.486
+A CDP (collateralised debt position) lets you lock
+
+00:03:03.486 --> 00:03:06.882
+collateral and mint a stablecoin against it.
+
+00:03:06.882 --> 00:03:11.062
+Minimum collateral ratio (e.g. 150%).
+
+00:03:11.062 --> 00:03:15.942
+The stablecoin holds its peg through over-collateralisation, liquidations.
+
+00:03:15.942 --> 00:03:18.032
+Compared with borrowing from a lending pool.
+
+00:03:19.332 --> 00:03:21.847
+Do the checklist now, before you move on.
+
+00:03:21.847 --> 00:03:24.992
+Next up, Lesson 4.0: Mastery Starter.
