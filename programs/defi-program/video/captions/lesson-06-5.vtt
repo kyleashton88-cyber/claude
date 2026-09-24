@@ -1,0 +1,181 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.375
+Lesson 6.5.
+
+00:00:02.375 --> 00:00:05.205
+Case studies: how DeFi failures happened.
+
+00:00:05.205 --> 00:00:07.056
+By the end of this lesson, you'll
+
+00:00:07.056 --> 00:00:09.070
+be able to learn the patterns behind
+
+00:00:09.070 --> 00:00:11.410
+major failures so you recognise them early.
+
+00:00:12.710 --> 00:00:14.000
+Here's the plan.
+
+00:00:14.000 --> 00:00:15.685
+First, the key ideas.
+
+00:00:15.685 --> 00:00:18.400
+Then, a worked example, step by step.
+
+00:00:18.400 --> 00:00:19.925
+Then, your checklist.
+
+00:00:19.925 --> 00:00:22.087
+And finally, a three-question quiz.
+
+00:00:23.387 --> 00:00:26.462
+Figures are approximate, from public reporting.
+
+00:00:26.462 --> 00:00:31.123
+Black Thursday, March 2020 (Maker), ETH crashed; congested
+
+00:00:31.123 --> 00:00:35.231
+network and failing keeper bots let some collateral
+
+00:00:35.231 --> 00:00:38.548
+auctions clear at 0 DAI bids (~$8M lost),
+
+00:00:38.548 --> 00:00:43.604
+Liquidation mechanism failure under stress, Auctions relying on
+
+00:00:43.604 --> 00:00:47.222
+keepers during congestion; no minimum bid.
+
+00:00:47.222 --> 00:00:51.965
+TerraUSD (UST), May 2022, Algorithmic stablecoin lost its
+
+00:00:51.965 --> 00:00:56.544
+peg and collapsed, Reflexive design: confidence was the
+
+00:00:56.544 --> 00:01:00.551
+collateral, Yield (~20%) far above any real cash
+
+00:01:00.551 --> 00:01:03.877
+flow; peg defended by a sister token.
+
+00:01:03.877 --> 00:01:08.283
+Ronin bridge, March 2022 (~$600M), Attackers got
+
+00:01:08.283 --> 00:01:11.431
+5 of 9 validator keys, Weak bridge
+
+00:01:11.431 --> 00:01:16.137
+trust model, Small signer set; keys concentrated.
+
+00:01:16.137 --> 00:01:20.454
+Mango Markets, Oct 2022 (~$110M), Collateral price
+
+00:01:20.454 --> 00:01:24.433
+pumped on thin markets, then borrowed against,
+
+00:01:24.433 --> 00:01:29.727
+Oracle manipulation, Thin-market collateral valued at spot.
+
+00:01:29.727 --> 00:01:34.418
+FTX, Nov 2022, Exchange used customer funds, Custodial
+
+00:01:34.418 --> 00:01:40.007
+(CeFi) counterparty failure, Opaque reserves; "not your keys".
+
+00:01:40.007 --> 00:01:45.867
+Euler Finance, March 2023 (~$197M, later largely returned), Logic
+
+00:01:45.867 --> 00:01:50.395
+flaw in a lending function, Contract bug missed by
+
+00:01:50.395 --> 00:01:55.367
+audits, Complex new function added after earlier audits.
+
+00:01:56.667 --> 00:02:00.676
+Curve pools, July 2023, Reentrancy guard broken
+
+00:02:00.676 --> 00:02:04.317
+by a compiler bug, Toolchain risk, Rare.
+
+00:02:04.317 --> 00:02:06.757
+Shows audited code can fail from below.
+
+00:02:08.057 --> 00:02:10.572
+Let's work an example, step by step.
+
+00:02:10.572 --> 00:02:13.871
+Using the table: a new stablecoin offers 18%
+
+00:02:13.871 --> 00:02:18.277
+"sustainable" yield, backed by its own governance token.
+
+00:02:18.277 --> 00:02:21.408
+That's the UST pattern: reflexive collateral and
+
+00:02:21.408 --> 00:02:23.817
+yield with no matching cash flow.
+
+00:02:23.817 --> 00:02:25.292
+Rating: High.
+
+00:02:25.292 --> 00:02:26.557
+Verdict: don't hold.
+
+00:02:27.857 --> 00:02:29.317
+Here's your checklist.
+
+00:02:29.317 --> 00:02:30.852
+Do it now, for real.
+
+00:02:30.852 --> 00:02:33.033
+First, for every position, I've asked
+
+00:02:33.033 --> 00:02:35.341
+which failure pattern it resembles.
+
+00:02:35.341 --> 00:02:39.936
+And finally, My register (8.2) includes these seven patterns.
+
+00:02:41.236 --> 00:02:42.446
+Question 1.
+
+00:02:42.446 --> 00:02:44.471
+What pattern did Mango Markets show?
+
+00:02:48.891 --> 00:02:52.546
+The answer: Oracle manipulation of thin-market collateral.
+
+00:02:53.846 --> 00:02:55.091
+Question 2.
+
+00:02:55.091 --> 00:02:57.096
+What did FTX show DeFi users?
+
+00:03:01.516 --> 00:03:04.443
+The answer: Custodial counterparty risk: "not
+
+00:03:04.443 --> 00:03:06.161
+your keys, not your coins".
+
+00:03:07.461 --> 00:03:08.731
+Question 3.
+
+00:03:08.731 --> 00:03:10.406
+UST's main warning sign?
+
+00:03:14.826 --> 00:03:17.763
+The answer: High yield with no matching real
+
+00:03:17.763 --> 00:03:20.766
+cash flow, backed by a reflexive sister token.
+
+00:03:22.066 --> 00:03:24.581
+Do the checklist now, before you move on.
+
+00:03:24.581 --> 00:03:27.126
+Next up, Lesson 6.6: Vote-escrow
+
+00:03:27.126 --> 00:03:30.366
+tokenomics, bribes and governance markets.
