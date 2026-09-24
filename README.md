@@ -29,6 +29,21 @@ To finish and launch it, paste [`programs/defi-program/BUILD-PROMPT.md`](program
 | `gbb-ad-performance` | Weekly CAC / ROAS / budget report | Zapier (archive copy) |
 | `gbb-pipeline-check` | Funnel stages, rates, stale leads | Zapier (archive copy) |
 
+### Course video production
+
+Start with `course-video-director`: it runs the others in order and holds the definition of done.
+
+| Skill | What it does |
+|---|---|
+| `course-video-director` | End-to-end lesson video: teach plan, storyboard, flows, screen demos, script, practice, QA, render |
+| `instructional-design` | Objectives, misconceptions and the understand, see it, do it, check, teach it back arc |
+| `visual-storyboard` | What's on screen every 8 to 20 seconds, and when to cut away to a flow, image, screen or worked number |
+| `animated-flows` | `flow` scenes: mechanisms that animate as they're narrated, plus a library of DeFi and grid bot flows |
+| `screen-demo-cutaways` | `capture_demo.js`: real app screenshots with highlight and blur boxes, turned into `cutaway` scenes |
+| `lesson-script-writing` | Gold-format script JSON, narration written for the ear, full scene reference |
+| `practice-and-assessment` | Quizzes that test understanding, worked examples that fade into "your turn", implementation tasks |
+| `video-qa-review` | `lint_video_script.py`, test renders, frame checks, facts, numbers and compliance |
+
 ### Building blocks (from [anthropics/skills](https://github.com/anthropics/skills), Apache 2.0)
 | Skill | Use it for |
 |---|---|
