@@ -1,0 +1,175 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.295
+Lesson 5.3.
+
+00:00:02.295 --> 00:00:04.675
+Oracles, TWAPs & manipulation.
+
+00:00:04.675 --> 00:00:06.705
+By the end of this lesson, you'll be
+
+00:00:06.705 --> 00:00:09.064
+able to know which price feed secures each
+
+00:00:09.064 --> 00:00:10.710
+position, and how it can fail.
+
+00:00:12.010 --> 00:00:13.300
+Here's the plan.
+
+00:00:13.300 --> 00:00:14.985
+First, the key ideas.
+
+00:00:14.985 --> 00:00:17.700
+Then, a worked example, step by step.
+
+00:00:17.700 --> 00:00:19.225
+Then, your checklist.
+
+00:00:19.225 --> 00:00:21.387
+And finally, a three-question quiz.
+
+00:00:22.687 --> 00:00:24.664
+Smart contracts can't see market
+
+00:00:24.664 --> 00:00:26.762
+prices; oracles bring them in.
+
+00:00:26.762 --> 00:00:29.799
+Lending markets liquidate based on the oracle price,
+
+00:00:29.799 --> 00:00:31.932
+not the price you see on screen.
+
+00:00:31.932 --> 00:00:35.385
+First, Push oracles: a network updates prices on a
+
+00:00:35.385 --> 00:00:39.477
+schedule or when price moves past a deviation threshold.
+
+00:00:39.477 --> 00:00:42.170
+Next, Pull oracles: prices are fetched and
+
+00:00:42.170 --> 00:00:44.912
+verified when a transaction needs them.
+
+00:00:44.912 --> 00:00:48.184
+Then, TWAP (time-weighted average price) smooths
+
+00:00:48.184 --> 00:00:50.754
+manipulation, but lags fast moves.
+
+00:00:50.754 --> 00:00:54.087
+And finally, Failures: stale prices in outages,
+
+00:00:54.087 --> 00:00:57.559
+manipulation of thin markets, misconfigured feeds.
+
+00:00:58.859 --> 00:01:01.374
+Let's work an example, step by step.
+
+00:01:01.374 --> 00:01:04.329
+Your collateral is priced by a 30-minute TWAP.
+
+00:01:04.329 --> 00:01:07.099
+The market drops 10% in 5 minutes.
+
+00:01:07.099 --> 00:01:12.204
+Your screen shows −10%; the oracle shows maybe −2%.
+
+00:01:12.204 --> 00:01:15.175
+You feel liquidated and aren't yet, but you also
+
+00:01:15.175 --> 00:01:17.719
+can't rely on the lag: it catches up.
+
+00:01:17.719 --> 00:01:20.988
+Conversely, a thinly traded collateral token can be
+
+00:01:20.988 --> 00:01:23.879
+pushed up and borrowed against by an attacker.
+
+00:01:25.179 --> 00:01:26.639
+Here's your checklist.
+
+00:01:26.639 --> 00:01:28.174
+Do it now, for real.
+
+00:01:28.174 --> 00:01:31.889
+First, Oracle type and source known for each collateral.
+
+00:01:31.889 --> 00:01:35.043
+Next, Thin-market collateral avoided or capped.
+
+00:01:35.043 --> 00:01:37.958
+And finally, Buffers sized for oracle catch-up.
+
+00:01:39.258 --> 00:01:40.468
+Question 1.
+
+00:01:40.468 --> 00:01:42.753
+Which price triggers a DeFi liquidation?
+
+00:01:47.173 --> 00:01:50.398
+The answer: The oracle price used by the protocol.
+
+00:01:51.698 --> 00:01:52.943
+Question 2.
+
+00:01:52.943 --> 00:01:54.648
+What's the trade-off of a TWAP?
+
+00:01:59.068 --> 00:02:01.142
+The answer: Harder to manipulate,
+
+00:02:01.142 --> 00:02:02.545
+but it lags fast moves.
+
+00:02:03.845 --> 00:02:05.115
+Question 3.
+
+00:02:05.115 --> 00:02:08.000
+Why is thin-market collateral dangerous for lenders?
+
+00:02:12.420 --> 00:02:14.711
+The answer: Its price can be manipulated
+
+00:02:14.711 --> 00:02:16.835
+to borrow more than it's really worth.
+
+00:02:18.135 --> 00:02:19.380
+Let's recap.
+
+00:02:19.380 --> 00:02:22.910
+Push oracles: a network updates prices on a schedule
+
+00:02:22.910 --> 00:02:26.340
+or when price moves past a deviation threshold.
+
+00:02:26.340 --> 00:02:28.558
+Pull oracles: prices are fetched and
+
+00:02:28.558 --> 00:02:31.195
+verified when a transaction needs them.
+
+00:02:31.195 --> 00:02:34.149
+TWAP (time-weighted average price) smooths
+
+00:02:34.149 --> 00:02:36.785
+manipulation, but lags fast moves.
+
+00:02:36.785 --> 00:02:40.139
+Failures: stale prices in outages, manipulation
+
+00:02:40.139 --> 00:02:42.725
+of thin markets, misconfigured feeds.
+
+00:02:44.025 --> 00:02:46.540
+Do the checklist now, before you move on.
+
+00:02:46.540 --> 00:02:48.839
+Next up, Lesson 5.4: Smart
+
+00:02:48.839 --> 00:02:52.075
+contracts: state, proxies, admin keys.
