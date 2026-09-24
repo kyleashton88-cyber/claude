@@ -42,10 +42,10 @@ the Starter tier / GBB price conflict.
 Nothing gets created until you've seen the exact values and said yes.
 
 ## Step 3 — Upload content
-Written and ready to paste in (40 of 79 lessons): Modules 0, 1, 2, 9, 10,
-12 and 13, plus lesson 8.3 (`lessons/`, `02-…`, `03-…`). Module 0 includes
-the Day-1 Setup Kit. Still to write: Modules 3–7, lessons 8.1/8.2/8.4,
-Modules 11 and 14.
+All 79 lessons are written and ready to paste in (`lessons/`, `02-…`,
+`03-…`), with module banners, diagrams, the Day-1 Setup Kit PDF, the welcome
+video and 15 module intro videos (`video/`). Course layout and drip plan:
+`07-program-operations.md` section 1.
 
 ## Step 4 — High-ticket sales path
 ![High-ticket sales path](assets/diagrams/sales-funnel.png)

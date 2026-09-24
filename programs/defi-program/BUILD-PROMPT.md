@@ -1,85 +1,75 @@
-# Build Prompt: On-Chain Operator Program
+# Build Prompt: On-Chain Operator Program (for Grok 4.6 · medium)
 
-**Run it in:** Claude Code (claude.ai/code, the desktop app or the CLI) with
-the GitHub repo `kyleashton88-cyber/claude` open on branch
-`claude/grid-bot-builder-skills-bmrez2`. Connect **Notion** and **Zapier**,
-and make sure **Whop is connected inside Zapier**. Claude Code loads the
-skills in `.claude/skills/` automatically. Other AIs won't, and they can't
-reach your Notion or Zapier, so use Claude Code.
+## How to run it
+1. Open a new Grok conversation (Grok 4.6, medium reasoning).
+2. **Attach these files** from the GitHub repo `kyleashton88-cyber/claude`,
+   branch `claude/grid-bot-builder-skills-bmrez2`, folder `programs/defi-program/`:
+   - `ON-CHAIN-OPERATOR-PROGRAM.md` (the master file: everything in one document), or the PDF if Grok can't take large markdown
+   - `07-program-operations.md` and `06-whop-store-listing.md` (also inside the master, but easier to edit on their own)
+   - `assets/brand/brand-guide.png`, `assets/store/banner-1920x1080.png` (so Grok can see the brand)
+   - `video/SCRIPTS.md` (VSL and video scripts)
+3. Paste everything below the line as your first message.
+4. When Grok returns edited files, put them back in the repo folder and rebuild:
+   `python3 programs/defi-program/build_master.py && cd programs/defi-program/export && npm install && npm run build`
+   (or ask Claude Code to do it).
 
-Paste everything below the line as your first message.
+Grok doesn't load the Claude skills in `.claude/skills/` and may not reach your
+Notion, Zapier or Whop. Anything that needs those accounts comes back to you
+as exact values and step-by-step clicks.
 
 ---
 
-You're building out my **On-Chain Operator Program**, a high-ticket DeFi
-program that takes someone who knows nothing to complete mastery: every
-professional strategy, a risk-adjusted income engine, and operating as their
-own on-chain bank. It goes into my Whop store as a new product alongside
-Grid Bot Builder. Work in this repo on branch
-`claude/grid-bot-builder-skills-bmrez2`. Commit and push after each finished piece.
+You're finishing and launching my **On-Chain Operator Program**: a high-ticket
+DeFi education program on Whop that takes someone who knows nothing about crypto
+to complete mastery: a safe setup, 25 professional strategies, a risk-adjusted
+income engine, and operating as their own on-chain bank. It sits in my Whop
+store alongside Grid Bot Builder ($997) and Elite Intel Community ($67/mo).
 
-## Read first
-1. `README.md` (skills archive) and `programs/defi-program/README.md` (build status)
-2. `programs/defi-program/ON-CHAIN-OPERATOR-PROGRAM.md`: master file with decisions, curriculum, setup, funnel and finished lessons
-3. `programs/defi-program/06-whop-store-listing.md`: logo system, store listing copy and image upload map
-4. Skills: `whop-defi-program` (master workflow), `defi-strategies`, `defi-due-diligence`, `grid-bot-design`, `gbb-*`, `frontend-design`, `dataviz`
-5. Notion: "ATLAS — The Universal Trading Library" → "DeFi & On-Chain (Complete Module)". This is the source for every lesson.
+The attached master file contains everything built so far: decisions,
+curriculum (6 stages, 15 modules, **all 79 lessons written**), Whop setup,
+store listing, operations kit, 17 worksheets, funnel changes, video scripts
+and the brand system. Read it fully before doing anything.
 
 ## Locked decisions (don't change them)
-- Name: On-Chain Operator Program. Course tier $15,000 one-time. Live tier priced higher.
-- Launch to everyone. Cold traffic goes application → call (vip-defi-consult Calendly) → checkout.
-- **6 stages, 15 modules, 79 lessons**, Module 0 (Crypto From Zero) to Module 14 (Automation & Mastery). Structure in `01-offer-and-curriculum.md`. Every lesson follows: Objective → Explanation → Worked example → Checklist → 3-question quiz.
-- **Depth standard:** match `lessons/module-10-…`, `module-12-…` and `module-13-…`. Advanced lessons state "what this position is short", show computed numbers, and give professional rules (sizing, exits, caps).
+- Name: **On-Chain Operator Program**. Tagline: **From zero to your own on-chain bank.**
+- Course tier **$15,000 one-time**. Live tier priced higher (not yet set).
+- Launch to everyone; cold traffic goes **application → call → checkout**.
+- 6 stages · 15 modules (0–14) · 79 lessons · 25 strategy playbooks · 2 capstones.
+- Every lesson: Objective → Explanation → Worked example → Checklist → 3-question quiz, with at least one image.
 
-## Logo & brand (lead with it)
-The logo is two interlocked chain rings inside a hexagonal block with corner
-nodes (`logoMark()` in `export/build_images.js`). It leads every surface.
-- Use the rendered files in `assets/brand/`: stacked icon, marks (dark and light transparent), horizontal lockups, favicon, brand guide.
-- Every store image, module banner and document cover carries the logo. Document diagrams carry the small mark in the footer.
-- Never recolour the rings, stretch the mark, or put the light version on dark.
+## Brand (lead with the logo)
+- Logo: two interlocked chain rings inside a hexagonal block with corner nodes. Colours: ink `#0B1F33`, navy `#12355B`, brand `#1F4E79`, teal `#2ee6a6` (on dark only), blue `#2a78d6`, orange `#eb6834`. Type: Inter; formulas in JetBrains Mono.
+- Dark navy gradient with a faint node-network motif for marketing; `#FCFCFB` light surface for documents.
+- Never recolour or stretch the logo. Every marketing asset carries the logo and the footer: "Educational content only · Not financial advice · No results are guaranteed".
 
-## Beginner standard (Module 0 is the model)
-The program must work for someone who has never owned crypto. `lessons/module-00-crypto-from-zero.md` sets the bar:
-- Define every term the first time it's used; keep the glossary in 0.8 current.
-- Give real, ordered, do-it-now steps, with a small test amount before any real one.
-- Name well-known products only as examples, and always say to check availability and regulation where the learner lives.
-- Keep the **Day-1 Setup Kit** complete: if a later module needs something set up (a hardware wallet, a multisig, alerts), add a matching setup checklist to that module.
-
-## Imagery standard (every deliverable must meet it)
-All images come from one generator, `programs/defi-program/export/build_images.js`,
-so the brand stays consistent. Extend that file and don't hand-place one-off images.
-- **Brand:** Inter typeface (bundled via `@fontsource`). Navy `#0B1F33`→`#12355B` gradient with a faint node-network motif for dark/store images. `#FCFCFB` surface for light document images. Teal `#2ee6a6` accent on dark only.
-- **Charts:** follow the `dataviz` skill. Blue `#2a78d6` is the primary series, orange `#eb6834` the secondary (validated pair). One y-axis. Recessive grid. Direct labels on the empty side of the line, never overlapping. Every number must be computed, not typed.
-- **Resolution:** document images at 2× (1800 px wide), store images at exact upload size (1024×1024, 1920×1080).
-- **Every module** gets its banner (`assets/modules/module-NN.png`, already rendered for 0–14) at the top of its lesson file. **Every lesson** gets at least one diagram or chart where a picture explains the mechanism better than text (a flow, a curve, a comparison). Add new ones to the `ASSETS` list.
-- **Review:** after rendering, open every new or changed image and check it by eye. Fix any label collision, overflow, clipped text or empty-looking layout before committing.
-- Every image carries the footer "Educational content only · Not financial advice · No results are guaranteed" (the shells already do this).
+## Non-negotiable rules
+1. **No promised, projected or guaranteed returns or income** anywhere: lessons, ads, emails, sales page, call script, videos. Show how every strategy loses money next to how it earns. No fake scarcity or countdowns.
+2. "Operate as your own bank" is a **method**, never presented as a licence or financial service.
+3. Never ask for or accept seed phrases, private keys, exchange API keys or account access.
+4. Beginner standard: define every term on first use; give do-it-now steps with a small test amount first; name products only as examples and tell learners to check availability and regulation where they live.
+5. Every number must be computed, not typed. Show the calculation. If you can run code, check it; otherwise show the arithmetic.
+6. Tax and legal points always say to consult a professional. Terms and disclaimers need a lawyer's review before launch: say so.
+7. No Discord, Skool or Slack. Use only the Calendly links named in the master file.
+8. The repo is public: never put internal IDs, plan IDs, list IDs or private emails in files. Use `<PLACEHOLDERS>`.
+9. Ask me before anything outward-facing: publishing, emailing, changing prices or changing any live system.
 
 ## Work to do, in order
-1. **Write the remaining 39 lessons** (40 of 79 are done: Modules 0, 1, 2, 9, 10, 12, 13 and lesson 8.3), one file per module in `programs/defi-program/lessons/` (`module-NN-name.md`):
-   - **Modules 3–7** (27) from the Notion ATLAS chapters listed in the curriculum.
-   - **Lessons 8.1, 8.2, 8.4** (3) into `module-08-…` (8.3 is `03-defi-strategy-mastery.md`).
-   - **Module 11** Hedging & Risk Engineering (5) and **Module 14** Automation & Mastery (4): original content at the depth of Modules 10/12/13.
-   Check every number with `.claude/skills/defi-strategies/scripts/defi_calc.py` (15 calculators, including `pt`, `basis`, `covered-call`, `expected`, `income`, `bank`) or Python. Add a practical at the end of each module. Suggested new visuals: health-factor gauge (M3), APY decomposition bar (M4), bridge/oracle dependency map (M5), due-diligence scorecard (M6), exchange-flow and holder-metric examples (M7), portfolio risk buckets (M8), hedge payoff chart and stress-test table (M11), monitoring/alert flow (M14).
-2. **Capstones**: the analyst capstone (due-diligence file, after Module 7) and the operator capstone (a complete personal bank: balance sheet, custody, credit, ladder, income portfolio, payout policy, stress test, incident plan). Write briefs and grading rubrics, each with a one-page visual overview.
-3. **Live tier**: design what it includes (session cadence, capstone reviews, portfolio reviews, Q&A), then propose a price and wait for my approval. Update the "What's included" gallery image once it's priced.
-4. **Application form** (questions + scoring that plugs into `gbb-new-lead` with interest = defi) and a **sales call script**.
-5. **Sales page**: build it with the `frontend-design` skill using the store images, the copy in `06-whop-store-listing.md`, and the brand above.
-6. **Add the product to my Whop store** per `05-whop-setup.md` and `06-whop-store-listing.md`. I create the hidden product in the dashboard and upload the images in the listed order, then give you the `prod_` ID. You create plans and checkout links through Zapier, but only after showing me the exact values.
-7. **Funnel**: apply `04-funnel-changes.md` to my Zapier skills (`update_zapier_skill`) after I approve, and mirror the changes into `.claude/skills/gbb-*`.
-8. **Rebuild everything and push**: `python3 programs/defi-program/build_master.py`, then `cd programs/defi-program/export && npm install && npm run build` (renders all images, then the Word and PDF copies). Open the PDF and spot-check pages that have images.
+1. **Ask me the open decisions first** (one message, multiple choice where possible): live-tier price and exact inclusions · refund policy (options in the operations kit §9) · Grid Bot Builder customer pricing (if any) · whether a "Grid Bot Starter" tier exists · access duration (lifetime or 12 months).
+2. **Quality pass on all 79 lessons.** Check facts are current (products, networks, mechanisms), recompute every worked example, make sure every term is defined, and that each lesson follows the template. Return a change list, then the corrected lesson files in full.
+3. **Sales page:** a complete, responsive HTML page in the brand: hero with logo and the main VSL embed (`video/vsl-main.mp4`), the path (6 stages), curriculum, own-bank section, strategy library, what's included (Course vs Live), who it's for/not for, FAQ, application CTA, disclaimer footer. Single file, no external dependencies except Google Fonts (Inter).
+4. **Application form:** build-ready spec (every question, field type, required flag, scoring) from operations kit §4, in Typeform- or Whop-form-ready format.
+5. **Whop store setup:** exact values and click-by-click steps for me to create the hidden product, upload the logo/banner/7 gallery images in order (`06-whop-store-listing.md`), paste the copy, set up the course (15 chapters, lesson pages, videos, drip rules from §1), and create the plans once priced.
+6. **Funnel:** rewrite my four Zapier skills (`gbb new lead`, `gbb customer onboarding`, `gbb ad performance`, `gbb pipeline check`) as full text, applying `04-funnel-changes.md` with the application-first path, for me to paste into Zapier.
+7. **Marketing pack (compliant):** 20 ad hooks, 5 ad scripts (15–30s) matching the VSL's style, a 5-email launch sequence, and 10 organic post ideas, all with no return claims.
+8. **Video:** using `video/SCRIPTS.md`, write alternate VSL cuts (a 60s version and a 15s version) and shot-by-shot notes so the same renderer or a video tool can produce them. If you have video/voice generation available, produce them in the brand and say which tool you used.
+9. **Final checklist** of everything left for me to do, in order.
 
-## Rules
-- Educational only. No promised, projected or guaranteed returns or income anywhere: lessons, images, emails, sales page, store listing or call script. Always show how a strategy loses money next to how it earns. "Own bank" is a method, never presented as a licence or financial service. Tax and legal points always say to consult a professional.
-- Never ask for seed phrases, private keys or exchange API keys.
-- No Discord, Skool or Slack. Use only the Calendly links named in the skills.
-- Ask me before anything outward-facing: creating or changing anything on Whop, sending emails, editing Zapier skills, changing prices.
-- This repo is public. Never commit internal IDs (Mailchimp list, Whop business or plan IDs, private emails). Use `<PLACEHOLDERS>`.
-- Still open, ask me: live-tier price, refund policy, Grid Bot Builder customer pricing, whether the "Grid Bot Starter" tier exists.
+## Output format
+- Deliver each item as complete files (markdown or HTML) with the file name as a heading, ready to drop into `programs/defi-program/`.
+- Keep my existing file names; new files get the next number (`09-sales-page.html`, `10-application-form.md`, `11-marketing-pack.md`, …).
+- After each item, list what changed and anything you couldn't verify.
 
 ## Done when
-- All 79 lessons and both capstones are written, number-checked and illustrated to the imagery standard, with the logo leading every surface.
-- Live tier, application, call script and sales page are approved.
-- The product is in my Whop store (hidden until I say launch) with icon, banner and gallery images, and its plans and checkout links exist.
-- Funnel skills are updated in Zapier and the repo.
-- The master file, Word and PDF are rebuilt and pushed.
+Decisions answered · lessons quality-checked · sales page, application form,
+Whop setup steps, funnel skill text, marketing pack and extra video cuts
+delivered · final checklist written.

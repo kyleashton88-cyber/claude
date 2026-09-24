@@ -342,7 +342,7 @@ Outcome: monitor and automate safely, run multisig operations, and complete the 
   payout policy, stress test and incident plan. Reviewed on the Live tier.
 
 ### Totals
-15 modules · 79 lessons (42 ATLAS + 37 new) · 237 quiz questions · 25 strategy playbooks · 2 capstones · strategy calculator with 15 commands.
+15 modules · 79 lessons (42 ATLAS + 37 new) · 239 quiz questions · 25 strategy playbooks · 2 capstones · strategy calculator with 15 commands.
 
 ---
 

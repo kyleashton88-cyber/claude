@@ -50,6 +50,8 @@ the rings, stretch the mark or put the light version on a dark background.
 | Gallery 5 | `assets/store/gallery-05-research-loop.png` | 1920×1080 |
 | Gallery 6 | `assets/store/gallery-06-grid-vs-lp.png` | 1920×1080 |
 | Gallery 7 | `assets/store/gallery-07-whats-included.png` | 1920×1080 |
+| **Listing video (VSL)** | `video/vsl-main.mp4` (≈90s, 1920×1080, captioned) | 16:9 |
+| Ads / Reels / Shorts | `video/vsl-short-vertical.mp4` (≈25s, 1080×1920) | 9:16 |
 | Course module headers | `assets/modules/module-00.png` … `module-14.png` | 1600×500 @2x |
 | In-lesson diagrams & charts | `assets/diagrams/*.png`, `assets/charts/*.png` | 1800 wide @2x |
 
@@ -107,6 +109,7 @@ income engine and run your capital like a bank. 15 modules · 79 lessons.
 | 15 modules, 79 lessons, zero to operator | ✓ | ✓ |
 | 25 strategy playbooks with maths and kill rules | ✓ | ✓ |
 | Printable Day-1 Setup Kit for complete beginners | ✓ | ✓ |
+| Welcome video + 15 module intro videos | ✓ | ✓ |
 | Checklists and quizzes in every lesson | ✓ | ✓ |
 | Due-diligence, pre-launch and bank-policy worksheets | ✓ | ✓ |
 | Strategy, income and balance-sheet calculators | ✓ | ✓ |

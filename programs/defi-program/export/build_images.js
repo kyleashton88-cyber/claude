@@ -662,7 +662,9 @@ const ASSETS = [
   ['charts/income-waterfall.png', 1800, 820, chartIncome],
 ];
 
-(async () => {
+module.exports = { C, FONT, BASE_CSS, network, icon, logoMark, wordmark, lockupStacked, DISCLAIMER };
+
+if (require.main === module) (async () => {
   fs.mkdirSync(RENDER, { recursive: true });
   const only = process.argv[2];
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
