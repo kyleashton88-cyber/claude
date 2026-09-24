@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 5.1",
  "use": "Lesson 5.1 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Bridges and trust assumptions",
+  "subtitle": "Lesson 5.1"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-05.png",
-   "eyebrow": "Lesson 5.1",
-   "vo": "Lesson five point one. Bridges and trust assumptions.",
-   "cap": "Lesson 5.1. Bridges and trust assumptions."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 5 · Infrastructure Risk",
+   "num": "5.1",
+   "title": "Bridges and trust assumptions",
    "sub": "Choose bridge routes by their trust model, and size bridge exposure accordingly.",
-   "vo": "Choose bridge routes by their trust model, and size bridge exposure accordingly.",
-   "cap": "Choose bridge routes by their trust model, and size bridge exposure accordingly."
+   "vo": "Lesson five point one. Bridges and trust assumptions. By the end of this lesson, you'll be able to choose bridge routes by their trust model, and size bridge exposure accordingly.",
+   "cap": "Lesson 5.1. Bridges and trust assumptions. By the end of this lesson, you'll be able to choose bridge routes by their trust model, and size bridge exposure accordingly."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Canonical bridges",
@@ -34,68 +48,82 @@
     "Liquidity networks",
     "Trust model"
    ],
-   "vo": "Bridges move value between chains: Bridges hold large pools of value, which makes them prime targets. Canonical bridges: the chain's official route (for example a rollup's native bridge). Usually the strongest security, sometimes slower. Lock-and-mint: assets locked on chain A, a wrapped copy minted on chain B. The wrapped copy is only as good as the lock. Liquidity networks: market makers pay you out on the other side. Fast; you rely on their contracts and liquidity. Trust model: who can approve a transfer: a multisig of a few keys, a validator set, a light client, or fraud/validity proofs? Fewer, weaker signers = more risk.",
-   "cap": "Canonical bridges: the chain's official route (e.g. a rollup's native bridge). Usually the strongest security, sometimes slower. Lock-and-mint: assets locked on chain A, a wrapped copy minted on chain B. The wrapped copy is only as good as the lock. Liquidity networks: market makers pay you out on the other side. Fast; you rely on their contracts and liquidity. Trust model: who can approve a transfer: a multisig of a few keys, a validator set, a light client, or fraud/validity proofs? Fewer, weaker signers = more risk."
+   "vo": "Bridges move value between chains: Bridges hold large pools of value, which makes them prime targets. First, Canonical bridges: the chain's official route (for example a rollup's native bridge). Usually the strongest security, sometimes slower. Next, Lock-and-mint: assets locked on chain A, a wrapped copy minted on chain B. The wrapped copy is only as good as the lock. Then, Liquidity networks: market makers pay you out on the other side. Fast; you rely on their contracts and liquidity. And finally, Trust model: who can approve a transfer: a multisig of a few keys, a validator set, a light client, or fraud/validity proofs? Fewer, weaker signers equals more risk.",
+   "cap": "Bridges move value between chains: Bridges hold large pools of value, which makes them prime targets. First, Canonical bridges: the chain's official route (e.g. a rollup's native bridge). Usually the strongest security, sometimes slower. Next, Lock-and-mint: assets locked on chain A, a wrapped copy minted on chain B. The wrapped copy is only as good as the lock. Then, Liquidity networks: market makers pay you out on the other side. Fast; you rely on their contracts and liquidity. And finally, Trust model: who can approve a transfer: a multisig of a few keys, a validator set, a light client, or fraud/validity proofs? Fewer, weaker signers = more risk."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Moving $50,000 to a Layer 2",
+    "Never leave large balances as a wrapped asset from a weak bridge."
    ],
-   "sub": "Moving $50,000 to a Layer 2: use the canonical route for the bulk (even if slower), a reputable fast bridge for a small, time-sensitive amount, and send a test first. Never leave large balances as a wrapped asset from a weak bridge.",
-   "vo": "Moving $50,000 to a Layer 2: use the canonical route for the bulk (even if slower), a reputable fast bridge for a small, time-sensitive amount, and send a test first. Never leave large balances as a wrapped asset from a weak bridge.",
-   "cap": "Moving $50,000 to a Layer 2: use the canonical route for the bulk (even if slower), a reputable fast bridge for a small, time-sensitive amount, and send a test first. Never leave large balances as a wrapped asset from a weak bridge."
+   "vo": "Let's work an example, step by step. Moving $50,000 to a Layer 2: use the canonical route for the bulk (even if slower), a reputable fast bridge for a small, time-sensitive amount, and send a test first. Never leave large balances as a wrapped asset from a weak bridge.",
+   "cap": "Let's work an example, step by step. Moving $50,000 to a Layer 2: use the canonical route for the bulk (even if slower), a reputable fast bridge for a small, time-sensitive amount, and send a test first. Never leave large balances as a wrapped asset from a weak bridge."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Trust model of every bridge I use written down",
     "Canonical route preferred for size",
     "Wrapped-asset exposure capped"
    ],
-   "vo": "Your checklist. Trust model of every bridge I use written down Canonical route preferred for size Wrapped-asset exposure capped",
-   "cap": "Trust model of every bridge I use written down Canonical route preferred for size Wrapped-asset exposure capped"
+   "vo": "Here's your checklist. Do it now, for real. First, Trust model of every bridge I use written down. Next, Canonical route preferred for size. And finally, Wrapped-asset exposure capped.",
+   "cap": "Here's your checklist. Do it now, for real. First, Trust model of every bridge I use written down. Next, Canonical route preferred for size. And finally, Wrapped-asset exposure capped."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What backs a lock-and-mint wrapped token?"
-   ],
-   "sub": "Answer: The locked assets on the source chain, and the bridge's security.",
-   "subAt": 0.62,
-   "vo": "What backs a lock-and-mint wrapped token? ... Pause and think. ... The answer: The locked assets on the source chain, and the bridge's security.",
-   "cap": "What backs a lock-and-mint wrapped token? Pause and think. The answer: The locked assets on the source chain, and the bridge's security."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "What backs a lock-and-mint wrapped token?",
+   "a": "The locked assets on the source chain, and the bridge's security.",
+   "vo": "Question one. What backs a lock-and-mint wrapped token? [[pause 4]] The answer: The locked assets on the source chain, and the bridge's security.",
+   "cap": "Question 1. What backs a lock-and-mint wrapped token? The answer: The locked assets on the source chain, and the bridge's security."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why are bridges frequent hack targets?"
-   ],
-   "sub": "Answer: They concentrate large amounts of value behind complex, cross-chain logic.",
-   "subAt": 0.62,
-   "vo": "Why are bridges frequent hack targets? ... Pause and think. ... The answer: They concentrate large amounts of value behind complex, cross-chain logic.",
-   "cap": "Why are bridges frequent hack targets? Pause and think. The answer: They concentrate large amounts of value behind complex, cross-chain logic."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Why are bridges frequent hack targets?",
+   "a": "They concentrate large amounts of value behind complex, cross-chain logic.",
+   "vo": "Question two. Why are bridges frequent hack targets? [[pause 4]] The answer: They concentrate large amounts of value behind complex, cross-chain logic.",
+   "cap": "Question 2. Why are bridges frequent hack targets? The answer: They concentrate large amounts of value behind complex, cross-chain logic."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Fast bridge or canonical for $50k?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Fast bridge or canonical for $50k?",
+   "a": "Canonical for the bulk; fast only for small, urgent amounts.",
+   "vo": "Question three. Fast bridge or canonical for $50k? [[pause 4]] The answer: Canonical for the bulk; fast only for small, urgent amounts.",
+   "cap": "Question 3. Fast bridge or canonical for $50k? The answer: Canonical for the bulk; fast only for small, urgent amounts."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Canonical bridges: the chain's official route (e.g. a rollup's native bridge)",
+    "Lock-and-mint: assets locked on chain A, a wrapped copy minted on chain B",
+    "Liquidity networks: market makers pay you out on the other side",
+    "Trust model: who can approve a transfer"
    ],
-   "sub": "Answer: Canonical for the bulk; fast only for small, urgent amounts.",
-   "subAt": 0.62,
-   "vo": "Fast bridge or canonical for $50k? ... Pause and think. ... The answer: Canonical for the bulk; fast only for small, urgent amounts.",
-   "cap": "Fast bridge or canonical for $50k? Pause and think. The answer: Canonical for the bulk; fast only for small, urgent amounts."
+   "vo": "Let's recap. Canonical bridges: the chain's official route (for example a rollup's native bridge). Lock-and-mint: assets locked on chain A, a wrapped copy minted on chain B. Liquidity networks: market makers pay you out on the other side. Trust model: who can approve a transfer.",
+   "cap": "Let's recap. Canonical bridges: the chain's official route (e.g. a rollup's native bridge). Lock-and-mint: assets locked on chain A, a wrapped copy minted on chain B. Liquidity networks: market makers pay you out on the other side. Trust model: who can approve a transfer."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 5.2",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson five point two: Layer 2s, sequencers and withdrawal paths.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 5.2: Layer 2s, sequencers & withdrawal paths."
   }
  ]
 }

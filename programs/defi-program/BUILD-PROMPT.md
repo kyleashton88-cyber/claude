@@ -9,16 +9,18 @@
    - `10-video-production-plan.md` (every course video, with length and script file)
    - `06-whop-store-listing.md`, `07-program-operations.md` (includes the refund policy), `08-worksheets.md`
    - `assets/brand/brand-guide.png`, `assets/store/banner-1920x1080.png` (so the AI can see the brand)
-   - `video/SCRIPTS.md` (VSL and intro scripts) and one example lesson script: `video-scripts/lessons/lesson-00-1.json`
+   - `video/SCRIPTS.md` (VSL and intro scripts) and the **gold-standard lesson script** `video-scripts/gold/lesson-03-2.json`
+     (plus `video/lesson-03-2.mp4` if the AI can watch video: it shows the finished standard)
 3. Paste everything below the line as your first message.
 4. **The lessons come in six section files** in `sections/`, one per stage. Attach one
    section per pass when the AI asks: `section-0-zero.md` → `section-1-foundations.md` →
    `section-2-practitioner.md` → `section-3-analyst.md` → `section-4-strategist.md` →
    `section-5-operator.md`. The matching lesson video scripts are in
    `video-scripts/lessons/` (attach the ones for that section).
+   Optional: `course-hub/index.html`, the interactive version of the whole course.
 5. Put what the AI returns back into the repo: lesson files in `lessons/`, video scripts in
    `video-scripts/lessons/`, new files next to the others. Then rebuild and render:
-   `python3 programs/defi-program/build_master.py && cd programs/defi-program/export && npm install && npm run build && node build_video.js lessons`
+   `python3 programs/defi-program/build_master.py && cd programs/defi-program/export && npm install && npm run build && node build_hub.js && node build_video.js lessons`
 
 ---
 
@@ -30,7 +32,9 @@ bank. It sits in my Whop store alongside Grid Bot Builder ($997) and Elite Intel
 Everything is built: 6 stages, 15 modules, **107 lessons (15 of them expert-level) plus a
 Mastery Starter (N.0) opening every module**, 30 strategy playbooks in 7 levels, 2 capstones,
 17 worksheets, 20 calculators, a store listing, an operations kit with the refund policy,
-55 images, 18 finished videos (VSLs, welcome, module intros) and **121 lesson video scripts**.
+56 images, 18 finished videos (a 3.5-minute VSL, a vertical cut, welcome, 15 module intros), three finished
+lesson videos, **121 lesson video scripts** (one of them, Lesson 3.2, hand-written as the gold standard) and an
+interactive Course Hub.
 The lessons come in six section files, which I'll attach one at a time when you ask. Read the
 core files fully before doing anything.
 
@@ -72,26 +76,54 @@ Ask me for one section at a time. For each section:
 Do this in the same six passes, right after each section's review.
 - **One video per lesson and per Mastery Starter** (121 videos: all lessons except 8.3), plus the **strategy library (8.3) as a 7-video series**, one per level.
 - **Length:** each video at most **25 minutes**. Targets: Mastery Starters 5–10 min; lessons 8–20 min; expert lessons and the 8.3 level videos up to 25 min. If a lesson needs more, split it into Part 1 and Part 2, each ≤ 25 min.
-- **Teach, don't read:** the baseline scripts in `video-scripts/lessons/` read the lesson text (3–5 min each). Rewrite each into a full teaching script: explain the idea in plain words, walk through the worked example step by step with the numbers on screen, show every diagram and say what to look at, add a real-world scenario, read the checklist, and do the quiz as question → pause → answer. Use the lesson file as the source of truth; don't add claims that aren't in it.
-- **Structure (every video):** title card (module banner + lesson number/title) → objective → teaching segments (one idea per scene) → diagrams/charts → worked example → common mistakes → checklist → quiz → outro ("Do the checklist before moving on"). Add chapter timestamps.
-- **Visuals:** use the existing images in `assets/` (module banners, diagrams, charts). Where a new visual would teach better, describe it precisely (title, what it shows, data) and name the file `assets/diagrams/<name>.png` or `assets/charts/<name>.png` so it can be added to the renderer.
-- **Captions and brand:** burned-in captions, logo, footer disclaimer, the brand colours above.
-- **Thumbnail:** for each video, a thumbnail title (≤ 5 words) and subtitle in the brand style.
-- **Format:** deliver each video as a JSON file in exactly this schema (the renderer turns it into an MP4 with narration and captions), named `video-scripts/lessons/lesson-NN-M.json`:
+- **The quality bar is Lesson 3.2** (`video-scripts/gold/lesson-03-2.json`). Study it before writing anything. It
+  opens with a stake ("A lending protocol never calls you"), promises three concrete skills, teaches one idea per
+  scene, works the numbers step by step and then pushes them to breaking point (borrowing to the maximum), reads the
+  chart aloud with callouts on the exact points, names the mistakes that hurt people, and ends with the checklist,
+  a timed quiz, a recap and the next lesson. Every lesson video must reach that standard.
+- **Baseline scripts:** the 120 scripts in `video-scripts/lessons/` are generated in the right structure (hook → plan →
+  key ideas with transitions → diagrams → worked steps → checklist → timed quiz → recap → next lesson) but are short
+  (about 3–7 minutes) and follow the lesson text closely. Rewrite each to the 3.2 standard and to the target length:
+  explain in plain words, add the "why it matters" stake, walk every number, push the example to where it breaks,
+  add a real-world scenario, show every diagram and say exactly what to look at. Use the lesson file as the source of
+  truth; don't add claims that aren't in it. Save rewritten scripts to `video-scripts/gold/` (the generator never
+  overwrites that folder and skips any lesson that has a gold script).
+- **Structure (every video):** title → why it matters → what you'll be able to do → teaching segments (one idea per
+  scene) → diagrams and charts → worked example → where it breaks → common mistakes → checklist → quiz → recap →
+  next lesson. Set `chapter` on the first scene of each segment: chapters, the on-screen chapter tag, the WebVTT
+  captions and the thumbnail are produced automatically.
+- **Visuals:** use the existing images in `assets/` (module banners, diagrams, charts). Point at what matters with
+  `callouts` (x/y as fractions of the image) and `zoom`. Where a new visual would teach better, describe it precisely
+  (title, what it shows, data) and name the file `assets/diagrams/<name>.png` or `assets/charts/<name>.png`.
+- **Voice standard (write for the ear):** short sentences, one thought each, because the narrator is synthesised
+  sentence by sentence with a natural pause after each. Spell things the way they're said in `vo` ("A.P.Y.",
+  "twelve thousand dollars", "one point five") and keep the written form in `cap` ("APY", "$12,000", "1.5"), with the
+  **same number of sentences in both** so captions stay in sync. Use `[[pause 4]]` for thinking time in quizzes.
+  Contractions, direct address ("you"), no filler, no hype.
+- **Motion standard:** on-screen items reveal and highlight when the narration says them, so each bullet, step, pillar
+  or comparison item must be mentioned in its own sentence, in order, using its key words. Keep on-screen text short
+  (≤ 8 words a bullet); the voice carries the detail.
+- **Format:** deliver each video as a JSON file in exactly this schema, named `video-scripts/gold/lesson-NN-M.json`:
 ```json
-{"id": "lesson-03-2", "title": "Lesson 3.2: LTV, liquidation threshold & health factor", "size": [1920, 1080],
- "group": "lessons", "maxMinutes": 25, "use": "Lesson 3.2 page in the Whop course.",
- "chapters": [["0:00", "Objective"], ["1:10", "Health factor explained"]],
- "thumbnail": {"title": "Never get liquidated", "subtitle": "Lesson 3.2"},
+{"id": "lesson-03-3", "title": "Lesson 3.3: Liquidations and cascades", "size": [1920, 1080], "group": "lessons",
+ "tag": "Lesson 3.3", "maxMinutes": 25, "use": "Lesson 3.3 page in the Whop course.",
+ "thumbnail": {"title": "Survive a liquidation cascade", "subtitle": "Lesson 3.3"},
  "scenes": [
-  {"type": "image", "src": "assets/modules/module-03.png", "eyebrow": "Lesson 3.2", "vo": "Spoken narration…", "cap": "Written caption…"},
-  {"type": "statement", "lines": ["Objective"], "sub": "On-screen text", "vo": "…", "cap": "…"},
-  {"type": "bullets", "title": "Key ideas", "items": ["Short point", "Short point"], "vo": "…", "cap": "…"},
-  {"type": "statement", "lines": ["Quiz", "Question?"], "sub": "Answer: …", "subAt": 0.62, "vo": "Question? … Pause and think. … The answer: …", "cap": "…"},
-  {"type": "cta", "button": "Do the checklist", "sub": "Educational content only · Not financial advice", "vo": "…", "cap": "…"}
+  {"type": "title", "chapter": "Intro", "eyebrow": "Module 3 · Lending & Leverage", "num": "3.3", "title": "Liquidations and cascades", "sub": "One-line objective", "vo": "…", "cap": "…"},
+  {"type": "statement", "chapter": "Why it matters", "kicker": "The problem", "lines": ["Big line", "accent line"], "sub": "Supporting sentence", "vo": "…"},
+  {"type": "pillars", "title": "By the end you'll be able to", "items": [{"icon": "chart", "title": "Measure", "text": "…"}], "vo": "…"},
+  {"type": "bullets", "chapter": "Key ideas", "title": "Key ideas", "items": ["Short point", "Short point"], "numbered": true, "vo": "…", "cap": "…"},
+  {"type": "compare", "title": "A vs B", "left": {"label": "A", "tone": "neutral", "items": ["…"]}, "right": {"label": "B", "tone": "bad", "items": ["…"]}, "vo": "…"},
+  {"type": "steps", "chapter": "Worked example", "title": "Worked example", "steps": ["Collateral = 10 × $3,000 = $30,000", "…"], "result": "Headline result", "vo": "…", "cap": "…"},
+  {"type": "image", "src": "assets/charts/health-factor.png", "eyebrow": "The picture", "wide": true, "callouts": [{"x": 0.575, "y": 0.43, "text": "Today", "at": 1}], "vo": "…"},
+  {"type": "quiz", "chapter": "Quiz", "n": 1, "of": 3, "q": "Question?", "a": "Answer.", "vo": "Question one. … [[pause 4]] The answer: …", "cap": "Question 1. … The answer: …"},
+  {"type": "cta", "button": "Next: Lesson 3.4", "sub": "Do the checklist first · Educational content only · Not financial advice", "vo": "…"}
  ]}
 ```
-  Scene types: `image`, `statement`, `bullets`, `stats`, `strike`, `logo`, `cta`. `vo` is what the narrator says (spell out abbreviations and numbers the way they should be spoken, e.g. "A.P.Y.", "health factor"); `cap` is the on-screen caption in normal written form. About 150 spoken words per minute, so a 15-minute video is about 2,200 words of `vo`.
+  Scene types: `title`, `statement`, `strike`, `image`, `bullets`, `pillars`, `compare`, `steps`, `stats`, `quiz`,
+  `logo`, `cta`. Icons for `pillars`: shield, swap, bank, sprout, layers, search, chart, cog, grid, lock, wallet, flame,
+  exit, users, video, book, check, compass, target, umbrella, vault, coins, bot. About 150 spoken words per minute,
+  so a 15-minute video is about 2,200 words of `vo`.
 - **If you can generate video directly** (voice and visuals) in Whop, also produce the finished videos in this brand and structure, each ≤ 25 minutes, and tell me which tool you used.
 
 ### 3. Build the course in Whop

@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 8.6",
  "use": "Lesson 8.6 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Psychology and discipline",
+  "subtitle": "Lesson 8.6"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-08.png",
-   "eyebrow": "Lesson 8.6",
-   "vo": "Lesson eight point six. Psychology and discipline.",
-   "cap": "Lesson 8.6. Psychology and discipline."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 8 · The DeFi Operating System",
+   "num": "8.6",
+   "title": "Psychology and discipline",
    "sub": "Recognise the behaviours that turn good strategies into losses, and build rules that stop them.",
-   "vo": "Recognise the behaviours that turn good strategies into losses, and build rules that stop them.",
-   "cap": "Recognise the behaviours that turn good strategies into losses, and build rules that stop them."
+   "vo": "Lesson eight point six. Psychology and discipline. By the end of this lesson, you'll be able to recognise the behaviours that turn good strategies into losses, and build rules that stop them.",
+   "cap": "Lesson 8.6. Psychology and discipline. By the end of this lesson, you'll be able to recognise the behaviours that turn good strategies into losses, and build rules that stop them."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "FOMO",
@@ -37,77 +51,70 @@
     "Anchoring"
    ],
    "compact": true,
-   "vo": "FOMO, Jumping into a farm because everyone's posting about it, 24-hour change-control wait (14.3). Loss aversion, Holding a broken position hoping to \"get back to even\", Kill rules written at entry, then followed. Sunk cost, \"I've spent so much gas, I can't exit now\", Judge only the future: would you enter today?. Overconfidence, Raising size after a winning streak, Caps are percentages; size changes only at review. Revenge trading, Adding leverage to win back a loss, No new leverage within 7 days of a loss event. Anchoring, Refusing to sell below a past price, Decisions based on current data and the thesis.",
-   "cap": "FOMO, Jumping into a farm because everyone's posting about it, 24-hour change-control wait (14.3) Loss aversion, Holding a broken position hoping to \"get back to even\", Kill rules written at entry, then followed Sunk cost, \"I've spent so much gas, I can't exit now\", Judge only the future: would you enter today? Overconfidence, Raising size after a winning streak, Caps are percentages; size changes only at review Revenge trading, Adding leverage to win back a loss, No new leverage within 7 days of a loss event Anchoring, Refusing to sell below a past price, Decisions based on current data and the thesis"
+   "vo": "The operator's defence is structure: written theses, kill rules, caps, a journal, cooling-off periods and scheduled reviews. Willpower in the moment is unreliable. FOMO, Jumping into a farm because everyone's posting about it, 24-hour change-control wait (14.3). Loss aversion, Holding a broken position hoping to \"get back to even\", Kill rules written at entry, then followed. Sunk cost, \"I've spent so much gas, I can't exit now\", Judge only the future: would you enter today?. Overconfidence, Raising size after a winning streak, Caps are percentages; size changes only at review. Revenge trading, Adding leverage to win back a loss, No new leverage within 7 days of a loss event. Anchoring, Refusing to sell below a past price, Decisions based on current data and the thesis.",
+   "cap": "The operator's defence is structure: written theses, kill rules, caps, a journal, cooling-off periods and scheduled reviews. Willpower in the moment is unreliable. FOMO, Jumping into a farm because everyone's posting about it, 24-hour change-control wait (14.3). Loss aversion, Holding a broken position hoping to \"get back to even\", Kill rules written at entry, then followed. Sunk cost, \"I've spent so much gas, I can't exit now\", Judge only the future: would you enter today?. Overconfidence, Raising size after a winning streak, Caps are percentages; size changes only at review. Revenge trading, Adding leverage to win back a loss, No new leverage within 7 days of a loss event. Anchoring, Refusing to sell below a past price, Decisions based on current data and the thesis."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Key ideas"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "After a 20% loss on a farm, Jordan wants to put 3× leverage on the next idea…",
+    "The rulebook says",
+    "Jordan journals the urge, waits, and at review decides the idea doesn't meet…"
    ],
-   "sub": "The operator's defence is structure: written theses, kill rules, caps, a journal, cooling-off periods and scheduled reviews. Willpower in the moment is unreliable.",
-   "vo": "The operator's defence is structure: written theses, kill rules, caps, a journal, cooling-off periods and scheduled reviews. Willpower in the moment is unreliable.",
-   "cap": "The operator's defence is structure: written theses, kill rules, caps, a journal, cooling-off periods and scheduled reviews. Willpower in the moment is unreliable."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Worked example"
-   ],
-   "sub": "After a 20% loss on a farm, Jordan wants to put 3× leverage on the next idea \"to make it back\". The rulebook says: no new leverage within 7 days of a loss event, and size only changes at the monthly review. Jordan journals the urge, waits, and at review decide",
-   "vo": "After a 20% loss on a farm, Jordan wants to put 3 times leverage on the next idea \"to make it back\". The rulebook says: no new leverage within 7 days of a loss event, and size only changes at the monthly review. Jordan journals the urge, waits, and at review decides the idea doesn't meet the thesis standard at all.",
-   "cap": "After a 20% loss on a farm, Jordan wants to put 3× leverage on the next idea \"to make it back\". The rulebook says: no new leverage within 7 days of a loss event, and size only changes at the monthly review. Jordan journals the urge, waits, and at review decides the idea doesn't meet the thesis standard at all."
+   "vo": "Let's work an example, step by step. After a 20% loss on a farm, Jordan wants to put 3 times leverage on the next idea \"to make it back\". The rulebook says: no new leverage within 7 days of a loss event, and size only changes at the monthly review. Jordan journals the urge, waits, and at review decides the idea doesn't meet the thesis standard at all.",
+   "cap": "Let's work an example, step by step. After a 20% loss on a farm, Jordan wants to put 3× leverage on the next idea \"to make it back\". The rulebook says: no new leverage within 7 days of a loss event, and size only changes at the monthly review. Jordan journals the urge, waits, and at review decides the idea doesn't meet the thesis standard at all."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Personal rulebook written (cooling-off, loss rules, sizing rules)",
     "Emotions noted in the journal next to decisions",
     "Monthly review includes \"which rule did I break?\""
    ],
-   "vo": "Your checklist. Personal rulebook written (cooling-off, loss rules, sizing rules) Emotions noted in the journal next to decisions Monthly review includes \"which rule did I break?\"",
-   "cap": "Personal rulebook written (cooling-off, loss rules, sizing rules) Emotions noted in the journal next to decisions Monthly review includes \"which rule did I break?\""
+   "vo": "Here's your checklist. Do it now, for real. First, Personal rulebook written (cooling-off, loss rules, sizing rules). Next, Emotions noted in the journal next to decisions. And finally, Monthly review includes \"which rule did I break?\".",
+   "cap": "Here's your checklist. Do it now, for real. First, Personal rulebook written (cooling-off, loss rules, sizing rules). Next, Emotions noted in the journal next to decisions. And finally, Monthly review includes \"which rule did I break?\"."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What's the sunk-cost question?"
-   ],
-   "sub": "Answer: Would I enter this position today, knowing what I know now?",
-   "subAt": 0.62,
-   "vo": "What's the sunk-cost question? ... Pause and think. ... The answer: Would I enter this position today, knowing what I know now?",
-   "cap": "What's the sunk-cost question? Pause and think. The answer: Would I enter this position today, knowing what I know now?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "What's the sunk-cost question?",
+   "a": "Would I enter this position today, knowing what I know now?",
+   "vo": "Question one. What's the sunk-cost question? [[pause 4]] The answer: Would I enter this position today, knowing what I know now?",
+   "cap": "Question 1. What's the sunk-cost question? The answer: Would I enter this position today, knowing what I know now?"
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why rely on structure rather than willpower?"
-   ],
-   "sub": "Answer: Decisions under stress are unreliable; pre-written rules decide for you.",
-   "subAt": 0.62,
-   "vo": "Why rely on structure rather than willpower? ... Pause and think. ... The answer: Decisions under stress are unreliable; pre-written rules decide for you.",
-   "cap": "Why rely on structure rather than willpower? Pause and think. The answer: Decisions under stress are unreliable; pre-written rules decide for you."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Why rely on structure rather than willpower?",
+   "a": "Decisions under stress are unreliable; pre-written rules decide for you.",
+   "vo": "Question two. Why rely on structure rather than willpower? [[pause 4]] The answer: Decisions under stress are unreliable; pre-written rules decide for you.",
+   "cap": "Question 2. Why rely on structure rather than willpower? The answer: Decisions under stress are unreliable; pre-written rules decide for you."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Rule against revenge trading?"
-   ],
-   "sub": "Answer: For example, no new leverage within 7 days of a loss event.",
-   "subAt": 0.62,
-   "vo": "Rule against revenge trading? ... Pause and think. ... The answer: For example, no new leverage within 7 days of a loss event.",
-   "cap": "Rule against revenge trading? Pause and think. The answer: For example, no new leverage within 7 days of a loss event."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Rule against revenge trading?",
+   "a": "For example, no new leverage within 7 days of a loss event.",
+   "vo": "Question three. Rule against revenge trading? [[pause 4]] The answer: For example, no new leverage within 7 days of a loss event.",
+   "cap": "Question 3. Rule against revenge trading? The answer: For example, no new leverage within 7 days of a loss event."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 8.7",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson eight point seven: Quantitative risk: volatility, value at risk, drawdown, correlation and sizing.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 8.7: Quantitative risk: volatility, VaR, drawdown, correlation and sizing."
   }
  ]
 }

@@ -88,7 +88,7 @@ def main():
         "5. Whop store listing (logo, images, copy)\n"
         "6. Operations kit (capstones, application, call script, emails, live tier, terms)\n"
         "7. Worksheets & templates\n8. Funnel changes\n9. Video scripts (VSLs, welcome, module intros) & course video plan\n"
-        "10. Course content (92 lessons + 15 Mastery Starters)\n11. Skills archive\n12. Build prompt (hand this to Grok or Claude Code)",
+        "10. Course content (107 lessons + 15 Mastery Starters)\n11. Skills archive\n12. Build prompt (hand this to Whop AI / Grok 4.6)",
         "# 1. Build status\n\n" + read("README.md").split("\n", 1)[1],
         numbered("01-offer-and-curriculum.md", 2, "Offer, decisions & curriculum"),
         numbered("05-whop-setup.md", 3, "Whop setup"),
@@ -99,8 +99,8 @@ def main():
         numbered("04-funnel-changes.md", 8, "Funnel changes (draft, not applied)"),
         *([numbered("video/SCRIPTS.md", 9, "Video scripts")] if (HERE / "video/SCRIPTS.md").exists() else []),
         *([numbered("10-video-production-plan.md", "9b", "Course video production plan")] if (HERE / "10-video-production-plan.md").exists() else []),
-        "# 10. Course content\n\nFinished lessons in curriculum order. "
-        "Lesson 8.3 (strategy mastery) appears before Module 9.",
+        "# 10. Course content\n\nAll 107 lessons and 15 Mastery Starters in curriculum order. "
+        "Lesson 8.3 (strategy mastery) follows Module 8.",
         *lesson_files(),
         "# 11. Skills archive\n\n" + (ROOT / "README.md").read_text().split("\n", 1)[1].strip(),
         read("BUILD-PROMPT.md").replace("# Build Prompt", "# 12. Build Prompt", 1),

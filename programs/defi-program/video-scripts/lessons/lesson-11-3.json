@@ -6,93 +6,109 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 11.3",
  "use": "Lesson 11.3 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Liquidation protection",
+  "subtitle": "Lesson 11.3"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-11.png",
-   "eyebrow": "Lesson 11.3",
-   "vo": "Lesson eleven point three. Liquidation protection: buffers, alerts and automated deleveraging.",
-   "cap": "Lesson 11.3. Liquidation protection: buffers, alerts and automated deleveraging."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 11 · Hedging & Risk Engineering",
+   "num": "11.3",
+   "title": "Liquidation protection: buffers, alerts and automated deleveraging",
    "sub": "Make liquidation practically impossible with buffers, alerts and pre-computed repayment.",
-   "vo": "Make liquidation practically impossible with buffers, alerts and pre-computed repayment.",
-   "cap": "Make liquidation practically impossible with buffers, alerts and pre-computed repayment."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Key ideas"
-   ],
-   "sub": "Three layers: buffer (HF ≥ 2–2.5 at entry) → alerts (HF 2.0 and 1.7, Module 14.1) → action (repay, add collateral, or automated deleveraging tools that repay debt when HF crosses a trigger; these add their own contract and permission risk). Pre-compute the rep",
-   "vo": "Three layers: buffer (health factor at least 2–2.5 at entry) to alerts (health factor 2.0 and 1.7, Module 14.1) to action (repay, add collateral, or automated deleveraging tools that repay debt when health factor crosses a trigger; these add their own contract and permission risk). Pre-compute the repayment needed to restore your target health factor: debt to keep = collateral value times LT divided by target health factor.",
-   "cap": "Three layers: buffer (HF ≥ 2–2.5 at entry) → alerts (HF 2.0 and 1.7, Module 14.1) → action (repay, add collateral, or automated deleveraging tools that repay debt when HF crosses a trigger; these add their own contract and permission risk). Pre-compute the repayment needed to restore your target HF: debt to keep = collateral value × LT ÷ target HF."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Worked example"
-   ],
-   "sub": "10 ETH falls to $2,400 → collateral $24,000, LT 0.8, debt $12,000 → HF 1.6. To restore HF 2.5: debt must be 24,000 × 0.8 ÷ 2.5 = $7,680 → repay $4,320 from the reserve.",
-   "vo": "10 ETH falls to $2,400 to collateral $24,000, LT 0.8, debt $12,000 to health factor 1.6. To restore health factor 2.5: debt must be 24,000 times 0.8 divided by 2.5 = $7,680 to repay $4,320 from the reserve.",
-   "cap": "10 ETH falls to $2,400 → collateral $24,000, LT 0.8, debt $12,000 → HF 1.6. To restore HF 2.5: debt must be 24,000 × 0.8 ÷ 2.5 = $7,680 → repay $4,320 from the reserve."
+   "vo": "Lesson eleven point three. Liquidation protection: buffers, alerts and automated deleveraging. By the end of this lesson, you'll be able to make liquidation practically impossible with buffers, alerts and pre-computed repayment.",
+   "cap": "Lesson 11.3. Liquidation protection: buffers, alerts and automated deleveraging. By the end of this lesson, you'll be able to make liquidation practically impossible with buffers, alerts and pre-computed repayment."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "statement",
+   "chapter": "Key ideas",
+   "kicker": "Key ideas",
+   "lines": [
+    "Three layers"
+   ],
+   "sub": "Three layers: buffer (HF ≥ 2–2.5 at entry) → alerts (HF 2.0 and 1.7, Module 14.1) → action (repay, add collateral, or automated deleveraging tools that repay debt when HF crosses a trigger; these add their own contract and permission risk).",
+   "vo": "Three layers: buffer (health factor at least 2 to 2.5 at entry) to alerts (health factor 2.0 and 1.7, Module 14.1) to action (repay, add collateral, or automated deleveraging tools that repay debt when health factor crosses a trigger; these add their own contract and permission risk). Pre-compute the repayment needed to restore your target health factor: debt to keep equals collateral value times LT divided by target health factor.",
+   "cap": "Three layers: buffer (HF ≥ 2–2.5 at entry) → alerts (HF 2.0 and 1.7, Module 14.1) → action (repay, add collateral, or automated deleveraging tools that repay debt when HF crosses a trigger; these add their own contract and permission risk). Pre-compute the repayment needed to restore your target HF: debt to keep = collateral value × LT ÷ target HF."
+  },
+  {
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "10 ETH falls to $2,400 → collateral $24,000, LT 0.8, debt $12,000 → HF 1.6.",
+    "To restore HF 2.5"
+   ],
+   "vo": "Let's work an example, step by step. 10 ETH falls to $2,400 to collateral $24,000, LT 0.8, debt $12,000 to health factor 1.6. To restore health factor 2.5: debt must be 24,000 times 0.8 divided by 2.5 = $7,680 to repay $4,320 from the reserve.",
+   "cap": "Let's work an example, step by step. 10 ETH falls to $2,400 → collateral $24,000, LT 0.8, debt $12,000 → HF 1.6. To restore HF 2.5: debt must be 24,000 × 0.8 ÷ 2.5 = $7,680 → repay $4,320 from the reserve."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Alerts at HF 2.0 and 1.7",
     "Repayment to restore target HF pre-computed",
     "Reserve covers that repayment"
    ],
-   "vo": "Your checklist. Alerts at health factor 2.0 and 1.7 Repayment to restore target health factor pre-computed Reserve covers that repayment",
-   "cap": "Alerts at HF 2.0 and 1.7 Repayment to restore target HF pre-computed Reserve covers that repayment"
+   "vo": "Here's your checklist. Do it now, for real. First, Alerts at health factor 2.0 and 1.7. Next, Repayment to restore target health factor pre-computed. And finally, Reserve covers that repayment.",
+   "cap": "Here's your checklist. Do it now, for real. First, Alerts at HF 2.0 and 1.7. Next, Repayment to restore target HF pre-computed. And finally, Reserve covers that repayment."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Collateral $40,000, LT 0.8, target HF 2. Max debt?"
-   ],
-   "sub": "Answer: $16,000.",
-   "subAt": 0.62,
-   "vo": "Collateral $40,000, LT 0.8, target health factor 2. Max debt? ... Pause and think. ... The answer: $16,000.",
-   "cap": "Collateral $40,000, LT 0.8, target HF 2. Max debt? Pause and think. The answer: $16,000."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Collateral $40,000, LT 0.8, target HF 2. Max debt?",
+   "a": "$16,000.",
+   "vo": "Question one. Collateral $40,000, LT 0.8, target health factor 2. Max debt? [[pause 4]] The answer: $16,000.",
+   "cap": "Question 1. Collateral $40,000, LT 0.8, target HF 2. Max debt? The answer: $16,000."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What do automated deleveraging tools add?"
-   ],
-   "sub": "Answer: Their own contract and permission risk.",
-   "subAt": 0.62,
-   "vo": "What do automated deleveraging tools add? ... Pause and think. ... The answer: Their own contract and permission risk.",
-   "cap": "What do automated deleveraging tools add? Pause and think. The answer: Their own contract and permission risk."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What do automated deleveraging tools add?",
+   "a": "Their own contract and permission risk.",
+   "vo": "Question two. What do automated deleveraging tools add? [[pause 4]] The answer: Their own contract and permission risk.",
+   "cap": "Question 2. What do automated deleveraging tools add? The answer: Their own contract and permission risk."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why pre-compute the repayment?"
-   ],
-   "sub": "Answer: So you act immediately, not while calculating under stress.",
-   "subAt": 0.62,
-   "vo": "Why pre-compute the repayment? ... Pause and think. ... The answer: So you act immediately, not while calculating under stress.",
-   "cap": "Why pre-compute the repayment? Pause and think. The answer: So you act immediately, not while calculating under stress."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Why pre-compute the repayment?",
+   "a": "So you act immediately, not while calculating under stress.",
+   "vo": "Question three. Why pre-compute the repayment? [[pause 4]] The answer: So you act immediately, not while calculating under stress.",
+   "cap": "Question 3. Why pre-compute the repayment? The answer: So you act immediately, not while calculating under stress."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 11.4",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson eleven point four: Stress-testing a portfolio.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 11.4: Stress-testing a portfolio."
   }
  ]
 }

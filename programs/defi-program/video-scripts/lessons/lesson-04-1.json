@@ -6,95 +6,125 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 4.1",
  "use": "Lesson 4.1 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Yield farming",
+  "subtitle": "Lesson 4.1"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-04.png",
-   "eyebrow": "Lesson 4.1",
-   "vo": "Lesson four point one. Yield farming: base yield versus emissions.",
-   "cap": "Lesson 4.1. Yield farming: base yield vs emissions."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 4 · Yield",
+   "num": "4.1",
+   "title": "Yield farming: base yield vs emissions",
    "sub": "Split a farm's APY into what's earned from real activity and what's paid in newly minted tokens.",
-   "vo": "Split a farm's A.P.Y. into what's earned from real activity and what's paid in newly minted tokens.",
-   "cap": "Split a farm's APY into what's earned from real activity and what's paid in newly minted tokens."
+   "vo": "Lesson four point one. Yield farming: base yield versus emissions. By the end of this lesson, you'll be able to split a farm's A.P.Y. into what's earned from real activity and what's paid in newly minted tokens.",
+   "cap": "Lesson 4.1. Yield farming: base yield vs emissions. By the end of this lesson, you'll be able to split a farm's APY into what's earned from real activity and what's paid in newly minted tokens."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Base yield",
     "Emissions / incentives",
     "Mercenary liquidity"
    ],
-   "vo": "Base yield: trading fees or borrower interest. Paid by real users. Emissions / incentives: new tokens the protocol prints to attract deposits. The reward token often falls while emissions continue. Mercenary liquidity: capital that leaves when incentives end, often taking the base yield with it.",
-   "cap": "Base yield: trading fees or borrower interest. Paid by real users. Emissions / incentives: new tokens the protocol prints to attract deposits. The reward token often falls while emissions continue. Mercenary liquidity: capital that leaves when incentives end, often taking the base yield with it."
+   "vo": "First, Base yield: trading fees or borrower interest. Paid by real users. Next, Emissions or incentives: new tokens the protocol prints to attract deposits. The reward token often falls while emissions continue. And finally, Mercenary liquidity: capital that leaves when incentives end, often taking the base yield with it.",
+   "cap": "First, Base yield: trading fees or borrower interest. Paid by real users. Next, Emissions / incentives: new tokens the protocol prints to attract deposits. The reward token often falls while emissions continue. And finally, Mercenary liquidity: capital that leaves when incentives end, often taking the base yield with it."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "A farm shows 60% APY",
+    "If the reward token falls 50% on average while you harvest, the emissions…",
+    "Remove emissions entirely and you're left with 5%.",
+    "Would you take the risk for 5%?",
+    "That's the real question."
    ],
-   "sub": "A farm shows 60% APY: 5% fees + 55% in reward tokens. If the reward token falls 50% on average while you harvest, the emissions are worth ~27.5%, so the real return is ~32.5%, before impermanent loss and gas. Remove emissions entirely and you're left with 5%. ",
-   "vo": "A farm shows 60% A.P.Y.: 5% fees + 55% in reward tokens. If the reward token falls 50% on average while you harvest, the emissions are worth about 27.5%, so the real return is about 32.5%, before impermanent loss and gas. Remove emissions entirely and you're left with 5%. Would you take the risk for 5%? That's the real question.",
-   "cap": "A farm shows 60% APY: 5% fees + 55% in reward tokens. If the reward token falls 50% on average while you harvest, the emissions are worth ~27.5%, so the real return is ~32.5%, before impermanent loss and gas. Remove emissions entirely and you're left with 5%. Would you take the risk for 5%? That's the real question."
+   "vo": "Let's work an example, step by step. A farm shows 60% A.P.Y.: 5% fees + 55% in reward tokens. If the reward token falls 50% on average while you harvest, the emissions are worth about 27.5%, so the real return is about 32.5%, before impermanent loss and gas. Remove emissions entirely and you're left with 5%. Would you take the risk for 5%? That's the real question.",
+   "cap": "Let's work an example, step by step. A farm shows 60% APY: 5% fees + 55% in reward tokens. If the reward token falls 50% on average while you harvest, the emissions are worth ~27.5%, so the real return is ~32.5%, before impermanent loss and gas. Remove emissions entirely and you're left with 5%. Would you take the risk for 5%? That's the real question."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "APY split into base vs incentives",
     "Reward token valued at a realistic, falling price",
     "Harvest-and-sell schedule set"
    ],
-   "vo": "Your checklist. A.P.Y. split into base versus incentives Reward token valued at a realistic, falling price Harvest-and-sell schedule set",
-   "cap": "APY split into base vs incentives Reward token valued at a realistic, falling price Harvest-and-sell schedule set"
+   "vo": "Here's your checklist. Do it now, for real. First, A.P.Y. split into base versus incentives. Next, Reward token valued at a realistic, falling price. And finally, Harvest-and-sell schedule set.",
+   "cap": "Here's your checklist. Do it now, for real. First, APY split into base vs incentives. Next, Reward token valued at a realistic, falling price. And finally, Harvest-and-sell schedule set."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What's the test for a farm?"
-   ],
-   "sub": "Answer: Does the base yield alone justify the risk?",
-   "subAt": 0.62,
-   "vo": "What's the test for a farm? ... Pause and think. ... The answer: Does the base yield alone justify the risk?",
-   "cap": "What's the test for a farm? Pause and think. The answer: Does the base yield alone justify the risk?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "What's the test for a farm?",
+   "a": "Does the base yield alone justify the risk?",
+   "vo": "Question one. What's the test for a farm? [[pause 4]] The answer: Does the base yield alone justify the risk?",
+   "cap": "Question 1. What's the test for a farm? The answer: Does the base yield alone justify the risk?"
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why do emissions APYs fall?"
-   ],
-   "sub": "Answer: More capital shares the rewards, and the reward token's price often declines.",
-   "subAt": 0.62,
-   "vo": "Why do emissions APYs fall? ... Pause and think. ... The answer: More capital shares the rewards, and the reward token's price often declines.",
-   "cap": "Why do emissions APYs fall? Pause and think. The answer: More capital shares the rewards, and the reward token's price often declines."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Why do emissions APYs fall?",
+   "a": "More capital shares the rewards, and the reward token's price often declines.",
+   "vo": "Question two. Why do emissions APYs fall? [[pause 4]] The answer: More capital shares the rewards, and the reward token's price often declines.",
+   "cap": "Question 2. Why do emissions APYs fall? The answer: More capital shares the rewards, and the reward token's price often declines."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What is mercenary liquidity?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What is mercenary liquidity?",
+   "a": "Capital that moves on as soon as incentives end.",
+   "vo": "Question three. What is mercenary liquidity? [[pause 4]] The answer: Capital that moves on as soon as incentives end.",
+   "cap": "Question 3. What is mercenary liquidity? The answer: Capital that moves on as soon as incentives end."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Base yield: trading fees or borrower interest",
+    "Emissions / incentives: new tokens the protocol prints to attract deposits",
+    "Mercenary liquidity: capital that leaves when incentives end, often taking the base yield with it"
    ],
-   "sub": "Answer: Capital that moves on as soon as incentives end.",
-   "subAt": 0.62,
-   "vo": "What is mercenary liquidity? ... Pause and think. ... The answer: Capital that moves on as soon as incentives end.",
-   "cap": "What is mercenary liquidity? Pause and think. The answer: Capital that moves on as soon as incentives end."
+   "vo": "Let's recap. Base yield: trading fees or borrower interest. Emissions or incentives: new tokens the protocol prints to attract deposits. Mercenary liquidity: capital that leaves when incentives end, often taking the base yield with it.",
+   "cap": "Let's recap. Base yield: trading fees or borrower interest. Emissions / incentives: new tokens the protocol prints to attract deposits. Mercenary liquidity: capital that leaves when incentives end, often taking the base yield with it."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 4.2",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson four point two: Native staking.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 4.2: Native staking."
   }
  ]
 }

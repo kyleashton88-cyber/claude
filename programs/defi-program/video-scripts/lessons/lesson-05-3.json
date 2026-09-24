@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 5.3",
  "use": "Lesson 5.3 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Oracles, TWAPs & manipulation",
+  "subtitle": "Lesson 5.3"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-05.png",
-   "eyebrow": "Lesson 5.3",
-   "vo": "Lesson five point three. Oracles, TWAPs and manipulation.",
-   "cap": "Lesson 5.3. Oracles, TWAPs & manipulation."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 5 · Infrastructure Risk",
+   "num": "5.3",
+   "title": "Oracles, TWAPs & manipulation",
    "sub": "Know which price feed secures each position, and how it can fail.",
-   "vo": "Know which price feed secures each position, and how it can fail.",
-   "cap": "Know which price feed secures each position, and how it can fail."
+   "vo": "Lesson five point three. Oracles, TWAPs and manipulation. By the end of this lesson, you'll be able to know which price feed secures each position, and how it can fail.",
+   "cap": "Lesson 5.3. Oracles, TWAPs & manipulation. By the end of this lesson, you'll be able to know which price feed secures each position, and how it can fail."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Push oracles",
@@ -34,68 +48,85 @@
     "TWAP (time-weighted average price) smooths manipulation, but lags fast moves.",
     "Failures"
    ],
-   "vo": "Smart contracts can't see market prices; oracles bring them in. Lending markets liquidate based on the oracle price, not the price you see on screen. Push oracles: a network updates prices on a schedule or when price moves past a deviation threshold. Pull oracles: prices are fetched and verified when a transaction needs them. T-wap (time-weighted average price) smooths manipulation, but lags fast moves. Failures: stale prices in outages, manipulation of thin markets, misconfigured feeds.",
-   "cap": "Push oracles: a network updates prices on a schedule or when price moves past a deviation threshold. Pull oracles: prices are fetched and verified when a transaction needs them. TWAP (time-weighted average price) smooths manipulation, but lags fast moves. Failures: stale prices in outages, manipulation of thin markets, misconfigured feeds."
+   "vo": "Smart contracts can't see market prices; oracles bring them in. Lending markets liquidate based on the oracle price, not the price you see on screen. First, Push oracles: a network updates prices on a schedule or when price moves past a deviation threshold. Next, Pull oracles: prices are fetched and verified when a transaction needs them. Then, T-wap (time-weighted average price) smooths manipulation, but lags fast moves. And finally, Failures: stale prices in outages, manipulation of thin markets, misconfigured feeds.",
+   "cap": "Smart contracts can't see market prices; oracles bring them in. Lending markets liquidate based on the oracle price, not the price you see on screen. First, Push oracles: a network updates prices on a schedule or when price moves past a deviation threshold. Next, Pull oracles: prices are fetched and verified when a transaction needs them. Then, TWAP (time-weighted average price) smooths manipulation, but lags fast moves. And finally, Failures: stale prices in outages, manipulation of thin markets, misconfigured feeds."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Your collateral is priced by a 30-minute TWAP.",
+    "The market drops 10% in 5 minutes.",
+    "Your screen shows −10%; the oracle shows maybe −2%.",
+    "You feel liquidated and aren't yet, but you also can't rely on the lag",
+    "Conversely, a thinly traded collateral token can be pushed up and borrowed…"
    ],
-   "sub": "Your collateral is priced by a 30-minute TWAP. The market drops 10% in 5 minutes. Your screen shows −10%; the oracle shows maybe −2%. You feel liquidated and aren't yet, but you also can't rely on the lag: it catches up. Conversely, a thinly traded collateral ",
-   "vo": "Your collateral is priced by a 30-minute T-wap. The market drops 10% in 5 minutes. Your screen shows minus 10%; the oracle shows maybe minus 2%. You feel liquidated and aren't yet, but you also can't rely on the lag: it catches up. Conversely, a thinly traded collateral token can be pushed up and borrowed against by an attacker.",
-   "cap": "Your collateral is priced by a 30-minute TWAP. The market drops 10% in 5 minutes. Your screen shows −10%; the oracle shows maybe −2%. You feel liquidated and aren't yet, but you also can't rely on the lag: it catches up. Conversely, a thinly traded collateral token can be pushed up and borrowed against by an attacker."
+   "vo": "Let's work an example, step by step. Your collateral is priced by a 30-minute T-wap. The market drops 10% in 5 minutes. Your screen shows minus 10%; the oracle shows maybe minus 2%. You feel liquidated and aren't yet, but you also can't rely on the lag: it catches up. Conversely, a thinly traded collateral token can be pushed up and borrowed against by an attacker.",
+   "cap": "Let's work an example, step by step. Your collateral is priced by a 30-minute TWAP. The market drops 10% in 5 minutes. Your screen shows −10%; the oracle shows maybe −2%. You feel liquidated and aren't yet, but you also can't rely on the lag: it catches up. Conversely, a thinly traded collateral token can be pushed up and borrowed against by an attacker."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Oracle type and source known for each collateral",
     "Thin-market collateral avoided or capped",
     "Buffers sized for oracle catch-up"
    ],
-   "vo": "Your checklist. Oracle type and source known for each collateral Thin-market collateral avoided or capped Buffers sized for oracle catch-up",
-   "cap": "Oracle type and source known for each collateral Thin-market collateral avoided or capped Buffers sized for oracle catch-up"
+   "vo": "Here's your checklist. Do it now, for real. First, Oracle type and source known for each collateral. Next, Thin-market collateral avoided or capped. And finally, Buffers sized for oracle catch-up.",
+   "cap": "Here's your checklist. Do it now, for real. First, Oracle type and source known for each collateral. Next, Thin-market collateral avoided or capped. And finally, Buffers sized for oracle catch-up."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Which price triggers a DeFi liquidation?"
-   ],
-   "sub": "Answer: The oracle price used by the protocol.",
-   "subAt": 0.62,
-   "vo": "Which price triggers a DeFi liquidation? ... Pause and think. ... The answer: The oracle price used by the protocol.",
-   "cap": "Which price triggers a DeFi liquidation? Pause and think. The answer: The oracle price used by the protocol."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Which price triggers a DeFi liquidation?",
+   "a": "The oracle price used by the protocol.",
+   "vo": "Question one. Which price triggers a DeFi liquidation? [[pause 4]] The answer: The oracle price used by the protocol.",
+   "cap": "Question 1. Which price triggers a DeFi liquidation? The answer: The oracle price used by the protocol."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What's the trade-off of a TWAP?"
-   ],
-   "sub": "Answer: Harder to manipulate, but it lags fast moves.",
-   "subAt": 0.62,
-   "vo": "What's the trade-off of a T-wap? ... Pause and think. ... The answer: Harder to manipulate, but it lags fast moves.",
-   "cap": "What's the trade-off of a TWAP? Pause and think. The answer: Harder to manipulate, but it lags fast moves."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What's the trade-off of a TWAP?",
+   "a": "Harder to manipulate, but it lags fast moves.",
+   "vo": "Question two. What's the trade-off of a T-wap? [[pause 4]] The answer: Harder to manipulate, but it lags fast moves.",
+   "cap": "Question 2. What's the trade-off of a TWAP? The answer: Harder to manipulate, but it lags fast moves."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why is thin-market collateral dangerous for lenders?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Why is thin-market collateral dangerous for lenders?",
+   "a": "Its price can be manipulated to borrow more than it's really worth.",
+   "vo": "Question three. Why is thin-market collateral dangerous for lenders? [[pause 4]] The answer: Its price can be manipulated to borrow more than it's really worth.",
+   "cap": "Question 3. Why is thin-market collateral dangerous for lenders? The answer: Its price can be manipulated to borrow more than it's really worth."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Push oracles: a network updates prices on a schedule or when price moves past a deviation threshold",
+    "Pull oracles: prices are fetched and verified when a transaction needs them",
+    "TWAP (time-weighted average price) smooths manipulation, but lags fast moves",
+    "Failures: stale prices in outages, manipulation of thin markets, misconfigured feeds"
    ],
-   "sub": "Answer: Its price can be manipulated to borrow more than it's really worth.",
-   "subAt": 0.62,
-   "vo": "Why is thin-market collateral dangerous for lenders? ... Pause and think. ... The answer: Its price can be manipulated to borrow more than it's really worth.",
-   "cap": "Why is thin-market collateral dangerous for lenders? Pause and think. The answer: Its price can be manipulated to borrow more than it's really worth."
+   "vo": "Let's recap. Push oracles: a network updates prices on a schedule or when price moves past a deviation threshold. Pull oracles: prices are fetched and verified when a transaction needs them. T-wap (time-weighted average price) smooths manipulation, but lags fast moves. Failures: stale prices in outages, manipulation of thin markets, misconfigured feeds.",
+   "cap": "Let's recap. Push oracles: a network updates prices on a schedule or when price moves past a deviation threshold. Pull oracles: prices are fetched and verified when a transaction needs them. TWAP (time-weighted average price) smooths manipulation, but lags fast moves. Failures: stale prices in outages, manipulation of thin markets, misconfigured feeds."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 5.4",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson five point four: Smart contracts: state, proxies, admin keys.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 5.4: Smart contracts: state, proxies, admin keys."
   }
  ]
 }

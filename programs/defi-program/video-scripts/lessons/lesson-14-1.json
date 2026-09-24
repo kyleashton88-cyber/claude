@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 14.1",
  "use": "Lesson 14.1 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Monitoring",
+  "subtitle": "Lesson 14.1"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-14.png",
-   "eyebrow": "Lesson 14.1",
-   "vo": "Lesson fourteen point one. Monitoring: dashboards, alerts and on-chain watchers.",
-   "cap": "Lesson 14.1. Monitoring: dashboards, alerts and on-chain watchers."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 14 · Automation & Mastery",
+   "num": "14.1",
+   "title": "Monitoring: dashboards, alerts and on-chain watchers",
    "sub": "Set up monitoring so you hear about problems before they cost money.",
-   "vo": "Set up monitoring so you hear about problems before they cost money.",
-   "cap": "Set up monitoring so you hear about problems before they cost money."
+   "vo": "Lesson fourteen point one. Monitoring: dashboards, alerts and on-chain watchers. By the end of this lesson, you'll be able to set up monitoring so you hear about problems before they cost money.",
+   "cap": "Lesson 14.1. Monitoring: dashboards, alerts and on-chain watchers. By the end of this lesson, you'll be able to set up monitoring so you hear about problems before they cost money."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Positions",
@@ -34,12 +48,13 @@
     "Wallets",
     "Market"
    ],
-   "vo": "Watch four things: Tools: portfolio dashboards, protocol-native alerts, wallet-activity watchers, block-explorer address alerts, and official status/X accounts. Alerts should reach your phone. Positions: health factors, L.P. ranges, pegs, utilisation of markets you lend to. Protocols: governance proposals, queued upgrades (timelocks), incidents. Wallets: any outgoing transaction or new approval from your vault/operating wallets. Market: funding, large depegs, liquidations.",
-   "cap": "Positions: health factors, LP ranges, pegs, utilisation of markets you lend to. Protocols: governance proposals, queued upgrades (timelocks), incidents. Wallets: any outgoing transaction or new approval from your vault/operating wallets. Market: funding, large depegs, liquidations."
+   "vo": "Watch four things: Tools: portfolio dashboards, protocol-native alerts, wallet-activity watchers, block-explorer address alerts, and official status/X accounts. Alerts should reach your phone. First, Positions: health factors, L.P. ranges, pegs, utilisation of markets you lend to. Next, Protocols: governance proposals, queued upgrades (timelocks), incidents. Then, Wallets: any outgoing transaction or new approval from your vault/operating wallets. And finally, Market: funding, large depegs, liquidations.",
+   "cap": "Watch four things: Tools: portfolio dashboards, protocol-native alerts, wallet-activity watchers, block-explorer address alerts, and official status/X accounts. Alerts should reach your phone. First, Positions: health factors, LP ranges, pegs, utilisation of markets you lend to. Next, Protocols: governance proposals, queued upgrades (timelocks), incidents. Then, Wallets: any outgoing transaction or new approval from your vault/operating wallets. And finally, Market: funding, large depegs, liquidations."
   },
   {
    "type": "bullets",
-   "title": "Worked example — alert sheet",
+   "chapter": "Worked example",
+   "title": "Worked example",
    "items": [
     "HF, credit line",
     "Stablecoin peg",
@@ -48,58 +63,70 @@
     "Queued upgrade"
    ],
    "compact": true,
-   "vo": "health factor, credit line, < 2.0 / < 1.7, Repay per 11.3. Stablecoin peg, < 0.99 for 2h, Peg rule. Market utilisation, > 95% for 24h, Withdraw per kill rule. Vault wallet outflow, Any, Verify immediately (11.5). Queued upgrade, Any, on protocols > 10% of book, Review within timelock.",
-   "cap": "HF, credit line, 95% for 24h, Withdraw per kill rule Vault wallet outflow, Any, Verify immediately (11.5) Queued upgrade, Any, on protocols > 10% of book, Review within timelock"
+   "vo": "health factor, credit line, < 2.0 or < 1.7, Repay per 11.3. Stablecoin peg, < 0.99 for 2h, Peg rule. Market utilisation, > 95% for 24h, Withdraw per kill rule. Vault wallet outflow, Any, Verify immediately (11.5). Queued upgrade, Any, on protocols > 10% of book, Review within timelock.",
+   "cap": "HF, credit line, < 2.0 / < 1.7, Repay per 11.3. Stablecoin peg, < 0.99 for 2h, Peg rule. Market utilisation, > 95% for 24h, Withdraw per kill rule. Vault wallet outflow, Any, Verify immediately (11.5). Queued upgrade, Any, on protocols > 10% of book, Review within timelock."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Alerts for all four categories, delivered to phone",
     "Every alert maps to a written action"
    ],
-   "vo": "Your checklist. Alerts for all four categories, delivered to phone Every alert maps to a written action",
-   "cap": "Alerts for all four categories, delivered to phone Every alert maps to a written action"
+   "vo": "Here's your checklist. Do it now, for real. First, Alerts for all four categories, delivered to phone. And finally, every alert maps to a written action.",
+   "cap": "Here's your checklist. Do it now, for real. First, Alerts for all four categories, delivered to phone. And finally, every alert maps to a written action."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why alert on any vault-wallet outflow?"
-   ],
-   "sub": "Answer: The vault should almost never move; any movement could be a compromise.",
-   "subAt": 0.62,
-   "vo": "Why alert on any vault-wallet outflow? ... Pause and think. ... The answer: The vault should almost never move; any movement could be a compromise.",
-   "cap": "Why alert on any vault-wallet outflow? Pause and think. The answer: The vault should almost never move; any movement could be a compromise."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why alert on any vault-wallet outflow?",
+   "a": "The vault should almost never move; any movement could be a compromise.",
+   "vo": "Question one. Why alert on any vault-wallet outflow? [[pause 4]] The answer: The vault should almost never move; any movement could be a compromise.",
+   "cap": "Question 1. Why alert on any vault-wallet outflow? The answer: The vault should almost never move; any movement could be a compromise."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why watch queued upgrades?"
-   ],
-   "sub": "Answer: The timelock is your window to exit before the change takes effect.",
-   "subAt": 0.62,
-   "vo": "Why watch queued upgrades? ... Pause and think. ... The answer: The timelock is your window to exit before the change takes effect.",
-   "cap": "Why watch queued upgrades? Pause and think. The answer: The timelock is your window to exit before the change takes effect."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Why watch queued upgrades?",
+   "a": "The timelock is your window to exit before the change takes effect.",
+   "vo": "Question two. Why watch queued upgrades? [[pause 4]] The answer: The timelock is your window to exit before the change takes effect.",
+   "cap": "Question 2. Why watch queued upgrades? The answer: The timelock is your window to exit before the change takes effect."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "An alert with no action attached is…?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "An alert with no action attached is…?",
+   "a": "Noise. Every alert needs a written response.",
+   "vo": "Question three. An alert with no action attached is…? [[pause 4]] The answer: Noise. Every alert needs a written response.",
+   "cap": "Question 3. An alert with no action attached is…? The answer: Noise. Every alert needs a written response."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Positions: health factors, LP ranges, pegs, utilisation of markets you lend to",
+    "Protocols: governance proposals, queued upgrades (timelocks), incidents",
+    "Wallets: any outgoing transaction or new approval from your vault/operating wallets",
+    "Market: funding, large depegs, liquidations"
    ],
-   "sub": "Answer: Noise. Every alert needs a written response.",
-   "subAt": 0.62,
-   "vo": "An alert with no action attached is…? ... Pause and think. ... The answer: Noise. Every alert needs a written response.",
-   "cap": "An alert with no action attached is…? Pause and think. The answer: Noise. Every alert needs a written response."
+   "vo": "Let's recap. Positions: health factors, L.P. ranges, pegs, utilisation of markets you lend to. Protocols: governance proposals, queued upgrades (timelocks), incidents. Wallets: any outgoing transaction or new approval from your vault/operating wallets. Market: funding, large depegs, liquidations.",
+   "cap": "Let's recap. Positions: health factors, LP ranges, pegs, utilisation of markets you lend to. Protocols: governance proposals, queued upgrades (timelocks), incidents. Wallets: any outgoing transaction or new approval from your vault/operating wallets. Market: funding, large depegs, liquidations."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 14.2",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson fourteen point two: Automation: keepers, bots and agents without handing over the keys.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 14.2: Automation: keepers, bots and agents without handing over the keys."
   }
  ]
 }

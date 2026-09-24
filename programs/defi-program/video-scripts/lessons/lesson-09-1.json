@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 9.1",
  "use": "Lesson 9.1 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Same idea, different machine",
+  "subtitle": "Lesson 9.1"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-09.png",
-   "eyebrow": "Lesson 9.1",
-   "vo": "Lesson nine point one. Same idea, different machine.",
-   "cap": "Lesson 9.1. Same idea, different machine."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 9 · DeFi vs Grid Bots",
+   "num": "9.1",
+   "title": "Same idea, different machine",
    "sub": "Explain why a concentrated liquidity position and a grid bot are economically close cousins, and where they differ.",
-   "vo": "Explain why a concentrated liquidity position and a grid bot are economically close cousins, and where they differ.",
-   "cap": "Explain why a concentrated liquidity position and a grid bot are economically close cousins, and where they differ."
+   "vo": "Lesson nine point one. Same idea, different machine. By the end of this lesson, you'll be able to explain why a concentrated liquidity position and a grid bot are economically close cousins, and where they differ.",
+   "cap": "Lesson 9.1. Same idea, different machine. By the end of this lesson, you'll be able to explain why a concentrated liquidity position and a grid bot are economically close cousins, and where they differ."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "How it trades",
@@ -37,11 +51,12 @@
     "Outside the range"
    ],
    "compact": true,
-   "vo": "How it trades, Discrete orders at set levels, Continuous. Every trade in range moves your inventory. What it earns, Spread between grid levels, minus exchange fees, Share of the pool's swap fee on every trade in range. Who pays whom, You pay trading fees, Traders pay you fees. At the range low, Holds mostly/all the base asset, Holds 100% of the base asset. At the range high, Holds mostly/all quote (U.S.D.T./U.S.D.C.), Holds 100% of the quote asset. Outside the range, Stops trading, holding one side, Stops earning, holding one side. Custody, Exchange holds funds (you keep API control), You hold keys, and the contract holds the position. Main extra risk, Exchange / counterparty, Smart contract, oracle, M.E.V., gas. Automation, Built into the tool, Manual, or a third-party manager (extra contract risk).",
-   "cap": "How it trades, Discrete orders at set levels, Continuous. Every trade in range moves your inventory What it earns, Spread between grid levels, minus exchange fees, Share of the pool's swap fee on every trade in range Who pays whom, You pay trading fees, Traders pay you fees At the range low, Holds mostly/all the base asset, Holds 100% of the base asset At the range high, Holds mostly/all quote (USDT/USDC), Holds 100% of the quote asset Outside the range, Stops trading, holding one side, Stops earning, holding one side"
+   "vo": "Both strategies do the same basic thing inside a price range: sell as price rises, buy as price falls, and profit from price moving back and forth. How it trades, Discrete orders at set levels, Continuous. Every trade in range moves your inventory. What it earns, Spread between grid levels, minus exchange fees, Share of the pool's swap fee on every trade in range. Who pays whom, You pay trading fees, Traders pay you fees. At the range low, Holds mostly/all the base asset, Holds 100% of the base asset. At the range high, Holds mostly/all quote (U.S.D.T./U.S.D.C.), Holds 100% of the quote asset. Outside the range, Stops trading, holding one side, Stops earning, holding one side.",
+   "cap": "Both strategies do the same basic thing inside a price range: sell as price rises, buy as price falls, and profit from price moving back and forth. How it trades, Discrete orders at set levels, Continuous. Every trade in range moves your inventory. What it earns, Spread between grid levels, minus exchange fees, Share of the pool's swap fee on every trade in range. Who pays whom, You pay trading fees, Traders pay you fees. At the range low, Holds mostly/all the base asset, Holds 100% of the base asset. At the range high, Holds mostly/all quote (USDT/USDC), Holds 100% of the quote asset. Outside the range, Stops trading, holding one side, Stops earning, holding one side."
   },
   {
    "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Custody",
@@ -49,87 +64,79 @@
     "Automation"
    ],
    "compact": true,
-   "vo": "Continuing.",
-   "cap": "Custody, Exchange holds funds (you keep API control), You hold keys, and the contract holds the position Main extra risk, Exchange / counterparty, Smart contract, oracle, MEV, gas Automation, Built into the tool, Manual, or a third-party manager (extra contract risk)"
+   "vo": "Custody, Exchange holds funds (you keep API control), You hold keys, and the contract holds the position. Main extra risk, Exchange or counterparty, Smart contract, oracle, M.E.V., gas. Automation, Built into the tool, Manual, or a third-party manager (extra contract risk).",
+   "cap": "Custody, Exchange holds funds (you keep API control), You hold keys, and the contract holds the position. Main extra risk, Exchange / counterparty, Smart contract, oracle, MEV, gas. Automation, Built into the tool, Manual, or a third-party manager (extra contract risk)."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Key ideas"
-   ],
-   "sub": "Both strategies do the same basic thing inside a price range: sell as price rises, buy as price falls, and profit from price moving back and forth.",
-   "vo": "Both strategies do the same basic thing inside a price range: sell as price rises, buy as price falls, and profit from price moving back and forth.",
-   "cap": "Both strategies do the same basic thing inside a price range: sell as price rises, buy as price falls, and profit from price moving back and forth."
-  },
-  {
-   "type": "image",
-   "src": "assets/diagrams/grid-vs-lp.png",
-   "eyebrow": "Grid bot vs concentrated LP",
-   "vo": "Here's the picture: Grid bot versus concentrated L.P..",
-   "cap": "Grid bot vs concentrated LP."
-  },
-  {
-   "type": "bullets",
-   "title": "Worked example — same range, same inventory behaviour",
-   "items": [
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example: Range $2,700–$3,300, ETH at $3,000",
+   "steps": [
     "Grid (20 arithmetic levels, $30 apart)",
     "Concentrated LP",
     "Grid",
     "LP"
    ],
-   "vo": "Range $2,700–$3,300, ETH at $3,000. Price falls to $2,700: geometric average the square root of (2,700 times 3,000) about $2,846. Price rises to $3,300: Almost the same inventory path. The real difference is how money is made on the way: grid profit per completed level (after paying fees), versus L.P. fee income on all trading volume in range (after impermanent loss). Grid (20 arithmetic levels, $30 apart): buys at 2,970, 2,940 … 2,700 to average buy about $2,835. Concentrated L.P.: converts U.S.D.C. to ETH continuously on the way down at the Grid: sells at 3,030 … 3,300 to average about $3,165. L.P.: sells ETH at the square root of (3,000 times 3,300) about $3,146.",
-   "cap": "Grid (20 arithmetic levels, $30 apart): buys at 2,970, 2,940 … 2,700 → average buy ≈ $2,835. Concentrated LP: converts USDC to ETH continuously on the way down at the Grid: sells at 3,030 … 3,300 → average ≈ $3,165. LP: sells ETH at √(3,000 × 3,300) ≈ $3,146."
+   "vo": "Let's work an example, step by step. Range $2,700 to $3,300, ETH at $3,000. Price falls to $2,700: geometric average the square root of (2,700 times 3,000) about $2,846. Price rises to $3,300: Almost the same inventory path. The real difference is how money is made on the way: grid profit per completed level (after paying fees), versus L.P. fee income on all trading volume in range (after impermanent loss). Grid (20 arithmetic levels, $30 apart): buys at 2,970, 2,940 … 2,700 to average buy about $2,835. Concentrated L.P.: converts U.S.D.C. to ETH continuously on the way down at the. Grid: sells at 3,030 … 3,300 to average about $3,165. L.P.: sells ETH at the square root of (3,000 times 3,300) about $3,146."
+  },
+  {
+   "type": "image",
+   "chapter": "Worked example",
+   "src": "assets/diagrams/grid-vs-lp.png",
+   "eyebrow": "Grid bot vs concentrated LP",
+   "wide": true,
+   "vo": "Let's look at the diagram: Grid bot versus concentrated L.P.. Take a moment with it. It's everything we've just said, in one picture.",
+   "cap": "Let's look at the diagram: Grid bot vs concentrated LP. Take a moment with it. It's everything we've just said, in one picture."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "I can explain why both end up 100% in one asset at a range edge",
     "I know which one pays fees and which one earns them",
     "I treat a range break as an invalidation event in both"
    ],
-   "vo": "Your checklist. I can explain why both end up 100% in one asset at a range edge I know which one pays fees and which one earns them I treat a range break as an invalidation event in both",
-   "cap": "I can explain why both end up 100% in one asset at a range edge I know which one pays fees and which one earns them I treat a range break as an invalidation event in both"
+   "vo": "Here's your checklist. Do it now, for real. First, I can explain why both end up 100% in one asset at a range edge. Next, I know which one pays fees and which one earns them. And finally, I treat a range break as an invalidation event in both.",
+   "cap": "Here's your checklist. Do it now, for real. First, I can explain why both end up 100% in one asset at a range edge. Next, I know which one pays fees and which one earns them. And finally, I treat a range break as an invalidation event in both."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Price breaks below the range. What do the grid bot and the LP both hold?"
-   ],
-   "sub": "Answer: All, or nearly all, the base asset, bought on the way down. Both stop earning until price returns or you act.",
-   "subAt": 0.62,
-   "vo": "Price breaks below the range. What do the grid bot and the L.P. both hold? ... Pause and think. ... The answer: All, or nearly all, the base asset, bought on the way down. Both stop earning until price returns or you act.",
-   "cap": "Price breaks below the range. What do the grid bot and the LP both hold? Pause and think. The answer: All, or nearly all, the base asset, bought on the way down. Both stop earning until price returns or you act."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Price breaks below the range. What do the grid bot and the LP both hold?",
+   "a": "All, or nearly all, the base asset, bought on the way down. Both stop earning until price returns or you act.",
+   "vo": "Question one. Price breaks below the range. What do the grid bot and the L.P. both hold? [[pause 4]] The answer: All, or nearly all, the base asset, bought on the way down. Both stop earning until price returns or you act.",
+   "cap": "Question 1. Price breaks below the range. What do the grid bot and the LP both hold? The answer: All, or nearly all, the base asset, bought on the way down. Both stop earning until price returns or you act."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Who pays trading fees in each?"
-   ],
-   "sub": "Answer: The grid bot pays exchange fees. The LP earns fees from traders.",
-   "subAt": 0.62,
-   "vo": "Who pays trading fees in each? ... Pause and think. ... The answer: The grid bot pays exchange fees. The L.P. earns fees from traders.",
-   "cap": "Who pays trading fees in each? Pause and think. The answer: The grid bot pays exchange fees. The LP earns fees from traders."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Who pays trading fees in each?",
+   "a": "The grid bot pays exchange fees. The LP earns fees from traders.",
+   "vo": "Question two. Who pays trading fees in each? [[pause 4]] The answer: The grid bot pays exchange fees. The L.P. earns fees from traders.",
+   "cap": "Question 2. Who pays trading fees in each? The answer: The grid bot pays exchange fees. The LP earns fees from traders."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Name one risk the LP has that the grid bot doesn't, and vice versa."
-   ],
-   "sub": "Answer: LP: smart-contract/MEV/gas risk. Grid bot: exchange/counterparty risk.",
-   "subAt": 0.62,
-   "vo": "Name one risk the L.P. has that the grid bot doesn't, and vice versa. ... Pause and think. ... The answer: L.P.: smart-contract/M.E.V./gas risk. Grid bot: exchange/counterparty risk.",
-   "cap": "Name one risk the LP has that the grid bot doesn't, and vice versa. Pause and think. The answer: LP: smart-contract/MEV/gas risk. Grid bot: exchange/counterparty risk."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Name one risk the LP has that the grid bot doesn't, and vice versa.",
+   "a": "LP: smart-contract/MEV/gas risk. Grid bot: exchange/counterparty risk.",
+   "vo": "Question three. Name one risk the L.P. has that the grid bot doesn't, and vice versa. [[pause 4]] The answer: L.P.: smart-contract/M.E.V./gas risk. Grid bot: exchange/counterparty risk.",
+   "cap": "Question 3. Name one risk the LP has that the grid bot doesn't, and vice versa. The answer: LP: smart-contract/MEV/gas risk. Grid bot: exchange/counterparty risk."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 9.2",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson nine point two: When each one wins.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 9.2: When each one wins."
   }
  ]
 }

@@ -6,27 +6,38 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 12.0",
  "use": "Lesson 12.0 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Mastery Starter",
+  "subtitle": "Module 12 · Start here"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-12.png",
-   "eyebrow": "Lesson 12.0",
-   "vo": "Lesson twelve point zero. Mastery Starter.",
-   "cap": "Lesson 12.0. Mastery Starter."
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 12 · Operate as Your Own Bank",
+   "num": "12.0",
+   "title": "Mastery Starter",
+   "sub": "A bank keeps assets safe, lends, borrows and always has cash for what it owes. With DeFi you can run those four jobs yourself, with written policies, because there's nobody to call when something goes",
+   "vo": "Mastery Starter twelve point zero. New to Operate as Your Own Bank? Start here. In about ten minutes, you'll go from zero to ready for this module.",
+   "cap": "Mastery Starter 12.0. New to Operate as Your Own Bank? Start here. In about ten minutes, you'll go from zero to ready for this module."
   },
   {
    "type": "statement",
+   "chapter": "The 60-second version",
+   "kicker": "The 60-second version",
    "lines": [
-    "The 60-second version"
+    "A bank keeps assets safe, lends, borrows and always has cash for what it owes"
    ],
-   "sub": "A bank keeps assets safe, lends, borrows and always has cash for what it owes. With DeFi you can run those four jobs yourself, with written policies, because there's nobody to call when something goes wrong.",
+   "sub": "With DeFi you can run those four jobs yourself, with written policies, because there's nobody to call when something goes wrong.",
    "vo": "A bank keeps assets safe, lends, borrows and always has cash for what it owes. With DeFi you can run those four jobs yourself, with written policies, because there's nobody to call when something goes wrong.",
    "cap": "A bank keeps assets safe, lends, borrows and always has cash for what it owes. With DeFi you can run those four jobs yourself, with written policies, because there's nobody to call when something goes wrong."
   },
   {
    "type": "bullets",
+   "chapter": "Words you'll need",
    "title": "Words you'll need",
    "items": [
     "Balance sheet",
@@ -36,29 +47,33 @@
     "Succession"
    ],
    "compact": true,
-   "vo": "Balance sheet, assets, liabilities and equity. Liquidity ladder, reserves tiered by how fast you can access them. Credit line, borrowing against assets under a policy. Runway, months your reserve can cover. Succession, how others recover your assets if you can't.",
-   "cap": "Balance sheet, assets, liabilities and equity Liquidity ladder, reserves tiered by how fast you can access them Credit line, borrowing against assets under a policy Runway, months your reserve can cover Succession, how others recover your assets if you can't"
+   "vo": "Balance sheet: assets, liabilities and equity. Liquidity ladder: reserves tiered by how fast you can access them. Credit line: borrowing against assets under a policy. Runway: months your reserve can cover. Succession: how others recover your assets if you can't.",
+   "cap": "Balance sheet: assets, liabilities and equity. Liquidity ladder: reserves tiered by how fast you can access them. Credit line: borrowing against assets under a policy. Runway: months your reserve can cover. Succession: how others recover your assets if you can't."
   },
   {
    "type": "bullets",
+   "chapter": "Before you start",
    "title": "Before you start",
    "items": [
     "Modules 0–11"
    ],
-   "vo": "Modules 0–11",
-   "cap": "Modules 0–11"
+   "vo": "Modules 0 to 11.",
+   "cap": "Modules 0–11."
   },
   {
    "type": "statement",
+   "chapter": "Your first safe step",
+   "kicker": "Your first safe step",
    "lines": [
-    "Your first safe step"
+    "Fill in the balance sheet worksheet (W6) with rough numbers"
    ],
-   "sub": "Fill in the balance sheet worksheet (W6) with rough numbers: equity, LTV and runway.",
+   "sub": "equity, LTV and runway.",
    "vo": "Fill in the balance sheet worksheet (W6) with rough numbers: equity, L.T.V. and runway.",
    "cap": "Fill in the balance sheet worksheet (W6) with rough numbers: equity, LTV and runway."
   },
   {
    "type": "bullets",
+   "chapter": "The mastery ladder",
    "title": "The mastery ladder",
    "items": [
     "Beginner",
@@ -66,24 +81,27 @@
     "Master"
    ],
    "compact": true,
-   "vo": "Beginner, Has a balance sheet and a basic custody split. Practitioner, Runs written custody, credit, ladder and lending policies. Master, Operates a complete bank with books, tax-ready records, succession and quarterly reviews.",
-   "cap": "Beginner, Has a balance sheet and a basic custody split Practitioner, Runs written custody, credit, ladder and lending policies Master, Operates a complete bank with books, tax-ready records, succession and quarterly reviews"
+   "vo": "Beginner: Has a balance sheet and a basic custody split. Practitioner: Runs written custody, credit, ladder and lending policies. Master: Operates a complete bank with books, tax-ready records, succession and quarterly reviews.",
+   "cap": "Beginner: Has a balance sheet and a basic custody split. Practitioner: Runs written custody, credit, ladder and lending policies. Master: Operates a complete bank with books, tax-ready records, succession and quarterly reviews."
   },
   {
    "type": "statement",
+   "chapter": "You've mastered it when…",
+   "kicker": "You've mastered it when…",
    "lines": [
-    "You've mastered it when…"
+    "You've mastered this module when a stranger could run your bank from your written policies"
    ],
-   "sub": "…a stranger could run your bank from your written policies, with no keys in any document. ---",
-   "vo": "…a stranger could run your bank from your written policies, with no keys in any document. ---",
-   "cap": "…a stranger could run your bank from your written policies, with no keys in any document. ---"
+   "sub": ", with no keys in any document.",
+   "vo": "You've mastered this module when a stranger could run your bank from your written policies, with no keys in any document.",
+   "cap": "You've mastered this module when a stranger could run your bank from your written policies, with no keys in any document."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 12.1",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson twelve point one: Your balance sheet.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 12.1: Your balance sheet."
   }
  ]
 }

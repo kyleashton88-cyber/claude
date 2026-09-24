@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 2.6",
  "use": "Lesson 2.6 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Advanced execution",
+  "subtitle": "Lesson 2.6"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-02.png",
-   "eyebrow": "Lesson 2.6",
-   "vo": "Lesson two point six. Advanced execution: limit, T-wap and intent-based orders.",
-   "cap": "Lesson 2.6. Advanced execution: limit, TWAP and intent-based orders."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 2 · Trading On-Chain",
+   "num": "2.6",
+   "title": "Advanced execution: limit, TWAP and intent-based orders",
    "sub": "Use order types that give you better prices and protection than a plain swap.",
-   "vo": "Use order types that give you better prices and protection than a plain swap.",
-   "cap": "Use order types that give you better prices and protection than a plain swap."
+   "vo": "Lesson two point six. Advanced execution: limit, T-wap and intent-based orders. By the end of this lesson, you'll be able to use order types that give you better prices and protection than a plain swap.",
+   "cap": "Lesson 2.6. Advanced execution: limit, TWAP and intent-based orders. By the end of this lesson, you'll be able to use order types that give you better prices and protection than a plain swap."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "On-chain limit orders",
@@ -34,68 +48,84 @@
     "Intent-based / RFQ trading",
     "Trade-offs"
    ],
-   "vo": "On-chain limit orders: you sign an order off-chain (\"sell 1 ETH at 3,300 or better\"); it fills only if the price is reached. Usually gasless until filled. T-wap orders: split a large trade into equal slices over time to reduce price impact. Intent-based / RFQ trading: you state what you want (\"100,000 U.S.D.C. to ETH, at least X\"); competing solvers or market makers fill it, often with M.E.V. protection and no failed-transaction gas. Trade-offs: limit orders may never fill; T-wap takes time and the price can move away; intents rely on the protocol's solver design.",
-   "cap": "On-chain limit orders: you sign an order off-chain (\"sell 1 ETH at 3,300 or better\"); it fills only if the price is reached. Usually gasless until filled. TWAP orders: split a large trade into equal slices over time to reduce price impact. Intent-based / RFQ trading: you state what you want (\"100,000 USDC → ETH, at least X\"); competing solvers or market makers fill it, often with MEV protection and no failed-transaction gas. Trade-offs: limit orders may never fill; TWAP takes time and the price can move away; intents rely on the protocol's solver design."
+   "vo": "First, On-chain limit orders: you sign an order off-chain (\"sell 1 ETH at 3,300 or better\"); it fills only if the price is reached. Usually gasless until filled. Next, T-wap orders: split a large trade into equal slices over time to reduce price impact. Then, Intent-based or RFQ trading: you state what you want (\"100,000 U.S.D.C. to ETH, at least X\"); competing solvers or market makers fill it, often with M.E.V. protection and no failed-transaction gas. And finally, Trade-offs: limit orders may never fill; T-wap takes time and the price can move away; intents rely on the protocol's solver design.",
+   "cap": "First, On-chain limit orders: you sign an order off-chain (\"sell 1 ETH at 3,300 or better\"); it fills only if the price is reached. Usually gasless until filled. Next, TWAP orders: split a large trade into equal slices over time to reduce price impact. Then, Intent-based / RFQ trading: you state what you want (\"100,000 USDC → ETH, at least X\"); competing solvers or market makers fill it, often with MEV protection and no failed-transaction gas. And finally, Trade-offs: limit orders may never fill; TWAP takes time and the price can move away; intents rely on the protocol's solver design."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Buying $50,000 of ETH in a pool where a single $50,000 trade has ~1.5% price…",
+    "A TWAP of 10 × $5,000 over an hour has far less impact per slice, as long as…",
+    "An intent-based order may beat both by sourcing liquidity from several…",
+    "Compare the quotes."
    ],
-   "sub": "Buying $50,000 of ETH in a pool where a single $50,000 trade has ~1.5% price impact (~$750). A TWAP of 10 × $5,000 over an hour has far less impact per slice, as long as the price doesn't trend against you during the hour. An intent-based order may beat both b",
-   "vo": "Buying $50,000 of ETH in a pool where a single $50,000 trade has about 1.5% price impact (about $750). A T-wap of 10 times $5,000 over an hour has far less impact per slice, as long as the price doesn't trend against you during the hour. An intent-based order may beat both by sourcing liquidity from several venues at once. Compare the quotes.",
-   "cap": "Buying $50,000 of ETH in a pool where a single $50,000 trade has ~1.5% price impact (~$750). A TWAP of 10 × $5,000 over an hour has far less impact per slice, as long as the price doesn't trend against you during the hour. An intent-based order may beat both by sourcing liquidity from several venues at once. Compare the quotes."
+   "vo": "Let's work an example, step by step. Buying $50,000 of ETH in a pool where a single $50,000 trade has about 1.5% price impact (about $750). A T-wap of 10 times $5,000 over an hour has far less impact per slice, as long as the price doesn't trend against you during the hour. An intent-based order may beat both by sourcing liquidity from several venues at once. Compare the quotes.",
+   "cap": "Let's work an example, step by step. Buying $50,000 of ETH in a pool where a single $50,000 trade has ~1.5% price impact (~$750). A TWAP of 10 × $5,000 over an hour has far less impact per slice, as long as the price doesn't trend against you during the hour. An intent-based order may beat both by sourcing liquidity from several venues at once. Compare the quotes."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "I compare a plain swap, a TWAP and an intent quote for large trades",
     "Limit orders have an expiry I've chosen",
     "I know which order types include MEV protection"
    ],
-   "vo": "Your checklist. I compare a plain swap, a T-wap and an intent quote for large trades Limit orders have an expiry I've chosen I know which order types include M.E.V. protection",
-   "cap": "I compare a plain swap, a TWAP and an intent quote for large trades Limit orders have an expiry I've chosen I know which order types include MEV protection"
+   "vo": "Here's your checklist. Do it now, for real. First, I compare a plain swap, a T-wap and an intent quote for large trades. Next, Limit orders have an expiry I've chosen. And finally, I know which order types include M.E.V. protection.",
+   "cap": "Here's your checklist. Do it now, for real. First, I compare a plain swap, a TWAP and an intent quote for large trades. Next, Limit orders have an expiry I've chosen. And finally, I know which order types include MEV protection."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why split a large trade into a TWAP?"
-   ],
-   "sub": "Answer: Smaller slices cause less price impact each.",
-   "subAt": 0.62,
-   "vo": "Why split a large trade into a T-wap? ... Pause and think. ... The answer: Smaller slices cause less price impact each.",
-   "cap": "Why split a large trade into a TWAP? Pause and think. The answer: Smaller slices cause less price impact each."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why split a large trade into a TWAP?",
+   "a": "Smaller slices cause less price impact each.",
+   "vo": "Question one. Why split a large trade into a T-wap? [[pause 4]] The answer: Smaller slices cause less price impact each.",
+   "cap": "Question 1. Why split a large trade into a TWAP? The answer: Smaller slices cause less price impact each."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What's the risk of a limit order?"
-   ],
-   "sub": "Answer: It may never fill.",
-   "subAt": 0.62,
-   "vo": "What's the risk of a limit order? ... Pause and think. ... The answer: It may never fill.",
-   "cap": "What's the risk of a limit order? Pause and think. The answer: It may never fill."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What's the risk of a limit order?",
+   "a": "It may never fill.",
+   "vo": "Question two. What's the risk of a limit order? [[pause 4]] The answer: It may never fill.",
+   "cap": "Question 2. What's the risk of a limit order? The answer: It may never fill."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Who fills an intent-based order?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Who fills an intent-based order?",
+   "a": "Competing solvers or market makers.",
+   "vo": "Question three. Who fills an intent-based order? [[pause 4]] The answer: Competing solvers or market makers.",
+   "cap": "Question 3. Who fills an intent-based order? The answer: Competing solvers or market makers."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "On-chain limit orders: you sign an order off-chain (\"sell 1 ETH at 3,300 or better\")",
+    "TWAP orders: split a large trade into equal slices over time to reduce price impact",
+    "Intent-based / RFQ trading: you state what you want (\"100,000 USDC → ETH, at least X\")",
+    "Trade-offs: limit orders may never fill"
    ],
-   "sub": "Answer: Competing solvers or market makers.",
-   "subAt": 0.62,
-   "vo": "Who fills an intent-based order? ... Pause and think. ... The answer: Competing solvers or market makers.",
-   "cap": "Who fills an intent-based order? Pause and think. The answer: Competing solvers or market makers."
+   "vo": "Let's recap. On-chain limit orders: you sign an order off-chain (\"sell 1 ETH at 3,300 or better\"). T-wap orders: split a large trade into equal slices over time to reduce price impact. Intent-based or RFQ trading: you state what you want (\"100,000 U.S.D.C. to ETH, at least X\"). Trade-offs: limit orders may never fill.",
+   "cap": "Let's recap. On-chain limit orders: you sign an order off-chain (\"sell 1 ETH at 3,300 or better\"). TWAP orders: split a large trade into equal slices over time to reduce price impact. Intent-based / RFQ trading: you state what you want (\"100,000 USDC → ETH, at least X\"). Trade-offs: limit orders may never fill."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 2.7",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson two point seven: Advanced AMM design and L.V.R..",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 2.7: Advanced AMM design and LVR."
   }
  ]
 }

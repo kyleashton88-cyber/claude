@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 5.8",
  "use": "Lesson 5.8 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Reading smart-contract code",
+  "subtitle": "Lesson 5.8"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-05.png",
-   "eyebrow": "Lesson 5.8",
-   "vo": "Lesson five point eight. Reading smart-contract code: enough to verify claims.",
-   "cap": "Lesson 5.8. Reading smart-contract code: enough to verify claims."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 5 · Infrastructure Risk",
+   "num": "5.8",
+   "title": "Reading smart-contract code: enough to verify claims",
    "sub": "Read verified contract code well enough to check the claims a protocol makes about itself.",
-   "vo": "Read verified contract code well enough to check the claims a protocol makes about itself.",
-   "cap": "Read verified contract code well enough to check the claims a protocol makes about itself."
+   "vo": "Lesson five point eight. Reading smart-contract code: enough to verify claims. By the end of this lesson, you'll be able to read verified contract code well enough to check the claims a protocol makes about itself.",
+   "cap": "Lesson 5.8. Reading smart-contract code: enough to verify claims. By the end of this lesson, you'll be able to read verified contract code well enough to check the claims a protocol makes about itself."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Access control",
@@ -35,77 +49,93 @@
     "External calls and state order",
     "Parameters with no limits"
    ],
-   "vo": "You don't need to be a developer to spot the things that matter. In verified Solidity code on an explorer, look for: Access control: onlyOwner, onlyRole(...), onlyGovernance. Who can call what? Search for functions guarded by them. Dangerous powers: mint, pause, upgradeTo, setOracle, setFee, withdraw/sweep/rescue functions that move user funds. Upgradeability: proxy patterns (delegatecall, implementation, upgradeTo), and who the admin is (5.4). External calls and state order: calling another contract before updating balances is the classic reentrancy pattern (5.5). Parameters with no limits: a fee that can be set to 100%, or an oracle address that can be swapped instantly.",
-   "cap": "Access control: onlyOwner, onlyRole(...), onlyGovernance. Who can call what? Search for functions guarded by them. Dangerous powers: mint, pause, upgradeTo, setOracle, setFee, withdraw/sweep/rescue functions that move user funds. Upgradeability: proxy patterns (delegatecall, implementation, upgradeTo), and who the admin is (5.4). External calls and state order: calling another contract before updating balances is the classic reentrancy pattern (5.5). Parameters with no limits: a fee that can be set to 100%, or an oracle address that can be swapped instantly."
+   "vo": "You don't need to be a developer to spot the things that matter. In verified Solidity code on an explorer, look for: First, Access control: onlyOwner, onlyRole(...), onlyGovernance. Who can call what? Search for functions guarded by them. Next, Dangerous powers: mint, pause, upgradeTo, setOracle, setFee, withdraw/sweep/rescue functions that move user funds. Then, Upgradeability: proxy patterns (delegatecall, implementation, upgradeTo), and who the admin is (5.4). Also, External calls and state order: calling another contract before updating balances is the classic reentrancy pattern (5.5). On top of that, Parameters with no limits: a fee that can be set to 100%, or an oracle address that can be swapped instantly.",
+   "cap": "You don't need to be a developer to spot the things that matter. In verified Solidity code on an explorer, look for: First, Access control: onlyOwner, onlyRole(...), onlyGovernance. Who can call what? Search for functions guarded by them. Next, Dangerous powers: mint, pause, upgradeTo, setOracle, setFee, withdraw/sweep/rescue functions that move user funds. Then, Upgradeability: proxy patterns (delegatecall, implementation, upgradeTo), and who the admin is (5.4). Also, External calls and state order: calling another contract before updating balances is the classic reentrancy pattern (5.5). On top of that, Parameters with no limits: a fee that can be set to 100%, or an oracle address that can be swapped instantly."
   },
   {
    "type": "bullets",
-   "title": "Key ideas",
+   "chapter": "Key ideas",
+   "title": "Key ideas (cont.)",
    "items": [
     "Events"
    ],
-   "vo": "Events: what's logged tells you what you can monitor.",
-   "cap": "Events: what's logged tells you what you can monitor."
+   "vo": "And finally, Events: what's logged tells you what you can monitor.",
+   "cap": "And finally, Events: what's logged tells you what you can monitor."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "A token claims \"fixed supply\".",
+    "In its code you find",
+    "Check the owner() value on the Read tab."
    ],
-   "sub": "A token claims \"fixed supply\". In its code you find: The owner can mint unlimited tokens: the claim is false unless ownership is renounced or held by a timelocked governance contract. Check the owner() value on the Read tab.",
-   "vo": "A token claims \"fixed supply\". In its code you find: The owner can mint unlimited tokens: the claim is false unless ownership is renounced or held by a timelocked governance contract. Check the owner() value on the Read tab.",
-   "cap": "A token claims \"fixed supply\". In its code you find: The owner can mint unlimited tokens: the claim is false unless ownership is renounced or held by a timelocked governance contract. Check the owner() value on the Read tab."
+   "vo": "Let's work an example, step by step. A token claims \"fixed supply\". In its code you find: The owner can mint unlimited tokens: the claim is false unless ownership is renounced or held by a timelocked governance contract. Check the owner() value on the Read tab.",
+   "cap": "Let's work an example, step by step. A token claims \"fixed supply\". In its code you find: The owner can mint unlimited tokens: the claim is false unless ownership is renounced or held by a timelocked governance contract. Check the owner() value on the Read tab."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Searched the code for owner/role-guarded functions",
     "Listed every function that can mint, pause, upgrade, change fees/oracles or move funds",
     "Checked who holds those roles (Read tab) and behind what timelock"
    ],
-   "vo": "Your checklist. Searched the code for owner/role-guarded functions Listed every function that can mint, pause, upgrade, change fees/oracles or move funds Checked who holds those roles (Read tab) and behind what timelock",
-   "cap": "Searched the code for owner/role-guarded functions Listed every function that can mint, pause, upgrade, change fees/oracles or move funds Checked who holds those roles (Read tab) and behind what timelock"
+   "vo": "Here's your checklist. Do it now, for real. First, Searched the code for owner/role-guarded functions. Next, Listed every function that can mint, pause, upgrade, change fees/oracles or move funds. And finally, Checked who holds those roles (Read tab) and behind what timelock.",
+   "cap": "Here's your checklist. Do it now, for real. First, Searched the code for owner/role-guarded functions. Next, Listed every function that can mint, pause, upgrade, change fees/oracles or move funds. And finally, Checked who holds those roles (Read tab) and behind what timelock."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What does onlyOwner on a mint function mean?"
-   ],
-   "sub": "Answer: The owner can mint new tokens whenever they like.",
-   "subAt": 0.62,
-   "vo": "What does onlyOwner on a mint function mean? ... Pause and think. ... The answer: The owner can mint new tokens whenever they like.",
-   "cap": "What does onlyOwner on a mint function mean? Pause and think. The answer: The owner can mint new tokens whenever they like."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "What does onlyOwner on a mint function mean?",
+   "a": "The owner can mint new tokens whenever they like.",
+   "vo": "Question one. What does onlyOwner on a mint function mean? [[pause 4]] The answer: The owner can mint new tokens whenever they like.",
+   "cap": "Question 1. What does onlyOwner on a mint function mean? The answer: The owner can mint new tokens whenever they like."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why check parameter limits?"
-   ],
-   "sub": "Answer: An unlimited setter (fee, oracle) can be changed to harm users instantly.",
-   "subAt": 0.62,
-   "vo": "Why check parameter limits? ... Pause and think. ... The answer: An unlimited setter (fee, oracle) can be changed to harm users instantly.",
-   "cap": "Why check parameter limits? Pause and think. The answer: An unlimited setter (fee, oracle) can be changed to harm users instantly."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Why check parameter limits?",
+   "a": "An unlimited setter (fee, oracle) can be changed to harm users instantly.",
+   "vo": "Question two. Why check parameter limits? [[pause 4]] The answer: An unlimited setter (fee, oracle) can be changed to harm users instantly.",
+   "cap": "Question 2. Why check parameter limits? The answer: An unlimited setter (fee, oracle) can be changed to harm users instantly."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What code pattern suggests reentrancy risk?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What code pattern suggests reentrancy risk?",
+   "a": "An external call made before the contract updates its own state.",
+   "vo": "Question three. What code pattern suggests reentrancy risk? [[pause 4]] The answer: An external call made before the contract updates its own state.",
+   "cap": "Question 3. What code pattern suggests reentrancy risk? The answer: An external call made before the contract updates its own state."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Access control: onlyOwner, onlyRole(...), onlyGovernance",
+    "Dangerous powers: mint, pause, upgradeTo, setOracle, setFee",
+    "Upgradeability: proxy patterns (delegatecall, implementation, upgradeTo), and who the admin is (5.4)",
+    "External calls and state order: calling another contract before updating balances is the classic reentrancy pattern (5.5)"
    ],
-   "sub": "Answer: An external call made before the contract updates its own state.",
-   "subAt": 0.62,
-   "vo": "What code pattern suggests reentrancy risk? ... Pause and think. ... The answer: An external call made before the contract updates its own state.",
-   "cap": "What code pattern suggests reentrancy risk? Pause and think. The answer: An external call made before the contract updates its own state."
+   "vo": "Let's recap. Access control: onlyOwner, onlyRole(...), onlyGovernance. Dangerous powers: mint, pause, upgradeTo, setOracle, setFee. Upgradeability: proxy patterns (delegatecall, implementation, upgradeTo), and who the admin is (5.4). External calls and state order: calling another contract before updating balances is the classic reentrancy pattern (5.5).",
+   "cap": "Let's recap. Access control: onlyOwner, onlyRole(...), onlyGovernance. Dangerous powers: mint, pause, upgradeTo, setOracle, setFee. Upgradeability: proxy patterns (delegatecall, implementation, upgradeTo), and who the admin is (5.4). External calls and state order: calling another contract before updating balances is the classic reentrancy pattern (5.5)."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 6.0",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson six point zero: Mastery Starter.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 6.0: Mastery Starter."
   }
  ]
 }

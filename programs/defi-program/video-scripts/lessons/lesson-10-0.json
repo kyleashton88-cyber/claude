@@ -6,27 +6,38 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 10.0",
  "use": "Lesson 10.0 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Mastery Starter",
+  "subtitle": "Module 10 · Start here"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-10.png",
-   "eyebrow": "Lesson 10.0",
-   "vo": "Lesson ten point zero. Mastery Starter.",
-   "cap": "Lesson 10.0. Mastery Starter."
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 10 · Advanced Yield Engineering",
+   "num": "10.0",
+   "title": "Mastery Starter",
+   "sub": "Professionals don't just take the yield on offer: they engineer it. Fixed rates, hedged carry, option income and managed ranges each swap one risk for another. This module teaches you to build them an",
+   "vo": "Mastery Starter ten point zero. New to Advanced Yield Engineering? Start here. In about ten minutes, you'll go from zero to ready for this module.",
+   "cap": "Mastery Starter 10.0. New to Advanced Yield Engineering? Start here. In about ten minutes, you'll go from zero to ready for this module."
   },
   {
    "type": "statement",
+   "chapter": "The 60-second version",
+   "kicker": "The 60-second version",
    "lines": [
-    "The 60-second version"
+    "Professionals don't just take the yield on offer"
    ],
-   "sub": "Professionals don't just take the yield on offer: they engineer it. Fixed rates, hedged carry, option income and managed ranges each swap one risk for another. This module teaches you to build them and say exactly what each one is short.",
+   "sub": "they engineer it. Fixed rates, hedged carry, option income and managed ranges each swap one risk for another. This module teaches you to build them and say exactly what each one is short.",
    "vo": "Professionals don't just take the yield on offer: they engineer it. Fixed rates, hedged carry, option income and managed ranges each swap one risk for another. This module teaches you to build them and say exactly what each one is short.",
    "cap": "Professionals don't just take the yield on offer: they engineer it. Fixed rates, hedged carry, option income and managed ranges each swap one risk for another. This module teaches you to build them and say exactly what each one is short."
   },
   {
    "type": "bullets",
+   "chapter": "Words you'll need",
    "title": "Words you'll need",
    "items": [
     "PT / YT",
@@ -36,29 +47,32 @@
     "Delta-neutral"
    ],
    "compact": true,
-   "vo": "P.T. / Y.T., principal and yield tokens splitting a yield-bearing asset. Basis, a future's premium over spot. Funding, payments between perp longs and shorts. Covered call, selling upside for a premium. Delta-neutral, price moves roughly cancel out.",
-   "cap": "PT / YT, principal and yield tokens splitting a yield-bearing asset Basis, a future's premium over spot Funding, payments between perp longs and shorts Covered call, selling upside for a premium Delta-neutral, price moves roughly cancel out"
+   "vo": "P.T. or Y.T.: principal and yield tokens splitting a yield-bearing asset. Basis: a future's premium over spot. Funding: payments between perp longs and shorts. Covered call: selling upside for a premium. Delta-neutral: price moves roughly cancel out.",
+   "cap": "PT / YT: principal and yield tokens splitting a yield-bearing asset. Basis: a future's premium over spot. Funding: payments between perp longs and shorts. Covered call: selling upside for a premium. Delta-neutral: price moves roughly cancel out."
   },
   {
    "type": "bullets",
+   "chapter": "Before you start",
    "title": "Before you start",
    "items": [
     "Modules 0–9, including perps (3.5) and LP maths (Module 2)"
    ],
-   "vo": "Modules 0–9, including perps (3.5) and L.P. maths (Module 2)",
-   "cap": "Modules 0–9, including perps (3.5) and LP maths (Module 2)"
+   "vo": "Modules 0 to 9, including perps (3.5) and L.P. maths (Module 2).",
+   "cap": "Modules 0–9, including perps (3.5) and LP maths (Module 2)."
   },
   {
    "type": "statement",
+   "chapter": "Your first safe step",
+   "kicker": "Your first safe step",
    "lines": [
-    "Your first safe step"
+    "Price one live PT with the calculator."
    ],
-   "sub": "Price one live PT with the calculator",
    "vo": "Price one live P.T. with the calculator",
    "cap": "Price one live PT with the calculator"
   },
   {
    "type": "bullets",
+   "chapter": "The mastery ladder",
    "title": "The mastery ladder",
    "items": [
     "Beginner",
@@ -66,24 +80,26 @@
     "Master"
    ],
    "compact": true,
-   "vo": "Beginner, Understands each structure and its payoff. Practitioner, Sizes and runs one structured position with written exits. Master, Combines fixed, carry, options and L.P. yield inside caps, naming every short exposure.",
-   "cap": "Beginner, Understands each structure and its payoff Practitioner, Sizes and runs one structured position with written exits Master, Combines fixed, carry, options and LP yield inside caps, naming every short exposure"
+   "vo": "Beginner: Understands each structure and its payoff. Practitioner: Sizes and runs one structured position with written exits. Master: Combines fixed, carry, options and L.P. yield inside caps, naming every short exposure.",
+   "cap": "Beginner: Understands each structure and its payoff. Practitioner: Sizes and runs one structured position with written exits. Master: Combines fixed, carry, options and LP yield inside caps, naming every short exposure."
   },
   {
    "type": "statement",
+   "chapter": "You've mastered it when…",
+   "kicker": "You've mastered it when…",
    "lines": [
-    "You've mastered it when…"
+    "You've mastered this module when you can complete \"this position is short ___\" for every structured position you hold."
    ],
-   "sub": "…you can complete \"this position is short ___\" for every structured position you hold. ---",
-   "vo": "…you can complete \"this position is short ___\" for every structured position you hold. ---",
-   "cap": "…you can complete \"this position is short ___\" for every structured position you hold. ---"
+   "vo": "You've mastered this module when you can complete \"this position is short ___\" for every structured position you hold.",
+   "cap": "You've mastered this module when you can complete \"this position is short ___\" for every structured position you hold."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 10.1",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson ten point one: Fixed-rate yield: principal and yield tokens (P.T./Y.T.).",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 10.1: Fixed-rate yield: principal and yield tokens (PT/YT)."
   }
  ]
 }

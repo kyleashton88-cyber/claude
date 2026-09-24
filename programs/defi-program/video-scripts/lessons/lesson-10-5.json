@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 10.5",
  "use": "Lesson 10.5 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Active concentrated-liquidity management",
+  "subtitle": "Lesson 10.5"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-10.png",
-   "eyebrow": "Lesson 10.5",
-   "vo": "Lesson ten point five. Active concentrated-liquidity management.",
-   "cap": "Lesson 10.5. Active concentrated-liquidity management."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 10 · Advanced Yield Engineering",
+   "num": "10.5",
+   "title": "Active concentrated-liquidity management",
    "sub": "Choose a range width and a rebalance rule that fee income can actually pay for.",
-   "vo": "Choose a range width and a rebalance rule that fee income can actually pay for.",
-   "cap": "Choose a range width and a rebalance rule that fee income can actually pay for."
+   "vo": "Lesson ten point five. Active concentrated-liquidity management. By the end of this lesson, you'll be able to choose a range width and a rebalance rule that fee income can actually pay for.",
+   "cap": "Lesson 10.5. Active concentrated-liquidity management. By the end of this lesson, you'll be able to choose a range width and a rebalance rule that fee income can actually pay for."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "$2,400–$3,600 (±20%)",
@@ -34,31 +48,27 @@
     "$2,850–$3,150 (±5%)"
    ],
    "compact": true,
-   "vo": "$2,400–$3,600 (±20%), about 10.4 times. $2,700–$3,300 (±10%), about 20.4 times. $2,850–$3,150 (±5%), about 40.5 times.",
-   "cap": "$2,400–$3,600 (±20%), ~10.4× $2,700–$3,300 (±10%), ~20.4× $2,850–$3,150 (±5%), ~40.5×"
+   "vo": "Narrower ranges earn more fees per dollar while in range and go out of range sooner. the calculator Every rebalance costs gas and swap fees and locks in the impermanent loss so far. Professionals set a rule before entering: $2,400 to $3,600 (±20%): about 10.4 times. $2,700 to $3,300 (±10%): about 20.4 times. $2,850 to $3,150 (±5%): about 40.5 times.",
+   "cap": "Narrower ranges earn more fees per dollar while in range and go out of range sooner. the calculator Every rebalance costs gas and swap fees and locks in the impermanent loss so far. Professionals set a rule before entering: $2,400–$3,600 (±20%): ~10.4×. $2,700–$3,300 (±10%): ~20.4×. $2,850–$3,150 (±5%): ~40.5×."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Key ideas"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "ETH typically moves ±7% a week.",
+    "A ±5% range would be out of range most weeks.",
+    "The rule points to ±10–12%"
    ],
-   "sub": "Narrower ranges earn more fees per dollar while in range and go out of range sooner. the calculator Every rebalance costs gas and swap fees and locks in the impermanent loss so far. Professionals set a rule before entering: Width from volatility: at least ~1.5",
-   "vo": "Narrower ranges earn more fees per dollar while in range and go out of range sooner. the calculator Every rebalance costs gas and swap fees and locks in the impermanent loss so far. Professionals set a rule before entering: Width from volatility: at least about 1.5 times the typical weekly move. Rebalance trigger: out of range for 24h+, and the range thesis still holds. Invalidation: a structural break (as with a grid bot) means exit, not re-centre. Budget: rebalancing costs capped at a share of expected fees (for example at most 25%).",
-   "cap": "Narrower ranges earn more fees per dollar while in range and go out of range sooner. the calculator Every rebalance costs gas and swap fees and locks in the impermanent loss so far. Professionals set a rule before entering: Width from volatility: at least ~1.5× the typical weekly move. Rebalance trigger: out of range for 24h+, and the range thesis still holds. Invalidation: a structural break (as with a grid bot) means exit, not re-centre. Budget: rebalancing costs capped at a share of expected fees (e.g. ≤ 25%)."
+   "vo": "Let's work an example, step by step. ETH typically moves ±7% a week. A ±5% range would be out of range most weeks. The rule points to ±10 to 12%: about 20 times efficiency, and time in range to earn.",
+   "cap": "Let's work an example, step by step. ETH typically moves ±7% a week. A ±5% range would be out of range most weeks. The rule points to ±10–12%: ~20× efficiency, and time in range to earn."
   },
   {
    "type": "statement",
+   "chapter": "What this position is short",
+   "kicker": "What this position is short",
    "lines": [
-    "Worked example"
-   ],
-   "sub": "ETH typically moves ±7% a week. A ±5% range would be out of range most weeks. The rule points to ±10–12%: ~20× efficiency, and time in range to earn.",
-   "vo": "ETH typically moves ±7% a week. A ±5% range would be out of range most weeks. The rule points to ±10–12%: about 20 times efficiency, and time in range to earn.",
-   "cap": "ETH typically moves ±7% a week. A ±5% range would be out of range most weeks. The rule points to ±10–12%: ~20× efficiency, and time in range to earn."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "What this position is short"
+    "Trending markets and volatility above what the range was…"
    ],
    "sub": "Trending markets and volatility above what the range was sized for.",
    "vo": "Trending markets and volatility above what the range was sized for.",
@@ -66,6 +76,7 @@
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Width ≥ 1.5× typical weekly move",
@@ -73,48 +84,46 @@
     "Rebalance cost budget set",
     "P&L tracked against holding (Lesson 2.4)"
    ],
-   "vo": "Your checklist. Width at least 1.5 times typical weekly move Rebalance trigger and invalidation written Rebalance cost budget set P and L tracked against holding (Lesson 2.4)",
-   "cap": "Width ≥ 1.5× typical weekly move Rebalance trigger and invalidation written Rebalance cost budget set P&L tracked against holding (Lesson 2.4)"
+   "vo": "Here's your checklist. Do it now, for real. First, Width at least 1.5 times typical weekly move. Next, Rebalance trigger and invalidation written. Then, Rebalance cost budget set. And finally, P and L tracked against holding (Lesson 2.4).",
+   "cap": "Here's your checklist. Do it now, for real. First, Width ≥ 1.5× typical weekly move. Next, Rebalance trigger and invalidation written. Then, Rebalance cost budget set. And finally, P&L tracked against holding (Lesson 2.4)."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why does a ±5% range earn ~2× the fees of ±10% while in range?"
-   ],
-   "sub": "Answer: The same capital is concentrated in half the price range, so it provides about twice the liquidity there.",
-   "subAt": 0.62,
-   "vo": "Why does a ±5% range earn about 2 times the fees of ±10% while in range? ... Pause and think. ... The answer: The same capital is concentrated in half the price range, so it provides about twice the liquidity there.",
-   "cap": "Why does a ±5% range earn ~2× the fees of ±10% while in range? Pause and think. The answer: The same capital is concentrated in half the price range, so it provides about twice the liquidity there."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why does a ±5% range earn ~2× the fees of ±10% while in range?",
+   "a": "The same capital is concentrated in half the price range, so it provides about twice the liquidity there.",
+   "vo": "Question one. Why does a ±5% range earn about 2 times the fees of ±10% while in range? [[pause 4]] The answer: The same capital is concentrated in half the price range, so it provides about twice the liquidity there.",
+   "cap": "Question 1. Why does a ±5% range earn ~2× the fees of ±10% while in range? The answer: The same capital is concentrated in half the price range, so it provides about twice the liquidity there."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What does a rebalance lock in?"
-   ],
-   "sub": "Answer: The impermanent loss accrued so far, plus gas and swap costs.",
-   "subAt": 0.62,
-   "vo": "What does a rebalance lock in? ... Pause and think. ... The answer: The impermanent loss accrued so far, plus gas and swap costs.",
-   "cap": "What does a rebalance lock in? Pause and think. The answer: The impermanent loss accrued so far, plus gas and swap costs."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What does a rebalance lock in?",
+   "a": "The impermanent loss accrued so far, plus gas and swap costs.",
+   "vo": "Question two. What does a rebalance lock in? [[pause 4]] The answer: The impermanent loss accrued so far, plus gas and swap costs.",
+   "cap": "Question 2. What does a rebalance lock in? The answer: The impermanent loss accrued so far, plus gas and swap costs."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Price breaks structure and exits the range. Re-centre?"
-   ],
-   "sub": "Answer: No. That's an invalidation. Exit per plan.",
-   "subAt": 0.62,
-   "vo": "Price breaks structure and exits the range. Re-centre? ... Pause and think. ... The answer: No. That's an invalidation. Exit per plan.",
-   "cap": "Price breaks structure and exits the range. Re-centre? Pause and think. The answer: No. That's an invalidation. Exit per plan."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Price breaks structure and exits the range. Re-centre?",
+   "a": "No. That's an invalidation. Exit per plan.",
+   "vo": "Question three. Price breaks structure and exits the range. Re-centre? [[pause 4]] The answer: No. That's an invalidation. Exit per plan.",
+   "cap": "Question 3. Price breaks structure and exits the range. Re-centre? The answer: No. That's an invalidation. Exit per plan."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 10.6",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson ten point six: Restaking and points: pricing speculative yield.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 10.6: Restaking and points: pricing speculative yield."
   }
  ]
 }

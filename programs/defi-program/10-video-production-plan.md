@@ -4,32 +4,37 @@
 
 ## The rule
 **Every lesson and every Mastery Starter gets its own narrated video, each at most 25 minutes.**
-Typical length is 3–12 minutes; nothing may exceed 25 minutes (split into Part 1 / Part 2 if it would).
+Baseline scripts run about 3–7 minutes; rewritten gold scripts target 5–25 minutes. Nothing may exceed 25 minutes (split into Part 1 / Part 2 if it would).
 
 ## What exists
 | Video type | Count | Where | Status |
 |---|---|---|---|
-| VSL (main + vertical) | 2 | `video/vsl-*.mp4` | Rendered |
+| VSL (main ≈3.5 min + 40s vertical) | 2 | `video/vsl-*.mp4` | Rendered |
 | Welcome | 1 | `video/welcome.mp4` | Rendered |
 | Module intros | 15 | `video/module-NN-intro.mp4` | Rendered |
-| **Lesson videos (incl. Mastery Starters)** | **121** | `video-scripts/lessons/*.json` → `video/lesson-*.mp4` | Scripts ready; 2 rendered as samples |
+| **Lesson videos (incl. Mastery Starters)** | **121** | `video-scripts/lessons/*.json` + `video-scripts/gold/*.json` → `video/lesson-*.mp4` | Scripts ready (Lesson 3.2 gold standard); 3 rendered |
 | Strategy library series (8.3) | 7 (one per level) | to be scripted (see prompt) | To do |
 
-Estimated total runtime of lesson videos from the baseline scripts: **4.0 hours**.
+Estimated total runtime of lesson videos from the baseline scripts: **5.6 hours**.
+
+## The quality bar
+`video-scripts/gold/lesson-03-2.json` (Lesson 3.2) is hand-written to the finished standard and rendered as
+`video/lesson-03-2.mp4`. Every lesson video is rewritten to that standard (see `BUILD-PROMPT.md`, item 2) and
+saved in `video-scripts/gold/`; the generator skips any lesson with a gold script.
 
 ## Video structure (every lesson)
-1. Title card: module banner + "Lesson N.M" + title
-2. Objective (or, for Mastery Starters, the 60-second version)
-3. Key ideas: one scene per group of points, narrated in full
-4. Every diagram and chart from the lesson, shown full-screen and explained
-5. Worked example, step by step, with the numbers on screen
+1. Title card: lesson number, title, objective (chapter "Intro")
+2. The plan: key ideas → worked example → checklist → quiz
+3. Key ideas: one scene per group of points, each point narrated with a transition and highlighted as it's spoken
+4. Every diagram and chart from the lesson, full-screen with a wipe reveal
+5. Worked example as numbered steps, each revealed as it's spoken
 6. Checklist read aloud
-7. Quiz: question → pause → answer
-8. Outro: "Do the checklist before moving on"
+7. Quiz: question → 4-second thinking timer → answer
+8. Recap, then "Next up: Lesson N.M"
 
-Brand: the same dark navy system, logo, captions burned in (most people watch muted),
-disclaimer footer. Narration: Kokoro TTS (`af_heart`) by default; swap for a human or other AI voice
-by replacing the audio track or changing `VOICE`.
+Voice: Kokoro TTS (`af_heart`), sentence by sentence with measured pauses, mastered to −16 LUFS. Motion: captions
+highlight word by word, living network background, progress bar and chapter tag. Each render also writes a
+thumbnail (`video/thumbs/`), WebVTT captions (`video/captions/`) and a chapter list (`video/chapters/`).
 
 ## How to render
 ```
@@ -43,124 +48,124 @@ node build_video.js lessons              # all lessons (several hours of renderi
 ## Every lesson video
 | Lesson | Title | Scenes | Est. length | Script | Rendered |
 |---|---|---|---|---|---|
-| 0.0 | Mastery Starter | 8 | 1.5 min | `video-scripts/lessons/lesson-00-0.json` |  |
-| 0.1 | Money, ledgers and why blockchains exist | 10 | 2.9 min | `video-scripts/lessons/lesson-00-1.json` | ✓ |
-| 0.2 | Opening and securing an exchange account | 11 | 3.0 min | `video-scripts/lessons/lesson-00-2.json` |  |
-| 0.3 | Buying your first crypto without overpaying | 11 | 2.1 min | `video-scripts/lessons/lesson-00-3.json` |  |
-| 0.4 | Exchange account vs your own wallet: who holds the keys? | 9 | 2.4 min | `video-scripts/lessons/lesson-00-4.json` |  |
-| 0.5 | Setting up your wallet and backing it up | 11 | 2.9 min | `video-scripts/lessons/lesson-00-5.json` |  |
-| 0.6 | Networks, gas and your first transfer | 11 | 3.1 min | `video-scripts/lessons/lesson-00-6.json` |  |
-| 0.7 | Your first DeFi steps (practice mode first) | 11 | 2.8 min | `video-scripts/lessons/lesson-00-7.json` |  |
-| 0.8 | Your security baseline, and the language of DeFi | 19 | 4.9 min | `video-scripts/lessons/lesson-00-8.json` |  |
-| 1.0 | Mastery Starter | 8 | 1.4 min | `video-scripts/lessons/lesson-01-0.json` |  |
-| 1.1 | What DeFi is, and the risk-first mindset | 10 | 2.8 min | `video-scripts/lessons/lesson-01-1.json` |  |
-| 1.2 | How a transaction actually happens | 9 | 2.4 min | `video-scripts/lessons/lesson-01-2.json` |  |
-| 1.3 | Wallets, keys, hardware & multisig | 11 | 2.4 min | `video-scripts/lessons/lesson-01-3.json` |  |
-| 1.4 | Tokens, approvals & allowances | 10 | 2.4 min | `video-scripts/lessons/lesson-01-4.json` |  |
-| 1.5 | Stablecoins and how they break | 10 | 2.6 min | `video-scripts/lessons/lesson-01-5.json` |  |
-| 1.6 | Scam defence | 9 | 2.4 min | `video-scripts/lessons/lesson-01-6.json` |  |
-| 1.7 | Reading signatures and simulating transactions | 9 | 2.6 min | `video-scripts/lessons/lesson-01-7.json` |  |
-| 1.8 | Privacy and physical security | 9 | 2.4 min | `video-scripts/lessons/lesson-01-8.json` |  |
-| 1.9 | Smart accounts and account abstraction | 10 | 2.7 min | `video-scripts/lessons/lesson-01-9.json` |  |
-| 2.0 | Mastery Starter | 8 | 1.4 min | `video-scripts/lessons/lesson-02-0.json` |  |
-| 2.1 | DEXs, aggregators & routing | 11 | 2.2 min | `video-scripts/lessons/lesson-02-1.json` |  |
-| 2.2 | AMM Mathematics (x · y = k) | 4 | 0.3 min | `video-scripts/lessons/lesson-02-2.json` |  |
-| 2.3 | Providing liquidity | 9 | 2.3 min | `video-scripts/lessons/lesson-02-3.json` |  |
-| 2.4 | Impermanent loss & true LP P&L | 11 | 2.4 min | `video-scripts/lessons/lesson-02-4.json` |  |
-| 2.5 | MEV and protecting your trades | 10 | 2.1 min | `video-scripts/lessons/lesson-02-5.json` |  |
-| 2.6 | Advanced execution: limit, TWAP and intent-based orders | 9 | 2.1 min | `video-scripts/lessons/lesson-02-6.json` |  |
-| 2.7 | Advanced AMM design and LVR | 11 | 2.7 min | `video-scripts/lessons/lesson-02-7.json` | ✓ |
-| 2.8 | The MEV supply chain | 11 | 2.4 min | `video-scripts/lessons/lesson-02-8.json` |  |
-| 3.0 | Mastery Starter | 8 | 1.3 min | `video-scripts/lessons/lesson-03-0.json` |  |
-| 3.1 | How lending markets work | 10 | 2.0 min | `video-scripts/lessons/lesson-03-1.json` |  |
-| 3.2 | LTV, liquidation threshold & health factor | 10 | 1.7 min | `video-scripts/lessons/lesson-03-2.json` |  |
-| 3.3 | Liquidations and cascades | 9 | 1.9 min | `video-scripts/lessons/lesson-03-3.json` |  |
-| 3.4 | Borrowing strategies & looping | 10 | 1.9 min | `video-scripts/lessons/lesson-03-4.json` |  |
-| 3.5 | Perpetual futures and margin on-chain | 9 | 2.0 min | `video-scripts/lessons/lesson-03-5.json` |  |
-| 3.6 | Lending design deep dive: e-mode, caps, auctions, soft liquidation, bad debt | 11 | 2.8 min | `video-scripts/lessons/lesson-03-6.json` |  |
-| 3.7 | CDP stablecoins: minting your own dollars | 9 | 2.1 min | `video-scripts/lessons/lesson-03-7.json` |  |
-| 4.0 | Mastery Starter | 8 | 1.2 min | `video-scripts/lessons/lesson-04-0.json` |  |
-| 4.1 | Yield farming: base yield vs emissions | 9 | 1.7 min | `video-scripts/lessons/lesson-04-1.json` |  |
-| 4.2 | Native staking | 9 | 1.4 min | `video-scripts/lessons/lesson-04-2.json` |  |
-| 4.3 | Liquid staking (LSTs) | 9 | 1.8 min | `video-scripts/lessons/lesson-04-3.json` |  |
-| 4.4 | Restaking & shared security | 9 | 1.5 min | `video-scripts/lessons/lesson-04-4.json` |  |
-| 4.5 | Vaults & yield optimisers | 9 | 1.6 min | `video-scripts/lessons/lesson-04-5.json` |  |
-| 4.6 | Airdrops & points: opportunity cost | 9 | 1.4 min | `video-scripts/lessons/lesson-04-6.json` |  |
-| 4.7 | Stablecoin savings rates and yield-bearing stablecoins | 9 | 2.2 min | `video-scripts/lessons/lesson-04-7.json` |  |
-| 4.8 | Tokenized treasuries and real-world assets (RWAs) | 9 | 2.1 min | `video-scripts/lessons/lesson-04-8.json` |  |
-| 5.0 | Mastery Starter | 8 | 1.2 min | `video-scripts/lessons/lesson-05-0.json` |  |
-| 5.1 | Bridges and trust assumptions | 9 | 1.9 min | `video-scripts/lessons/lesson-05-1.json` |  |
-| 5.2 | Layer 2s, sequencers & withdrawal paths | 9 | 1.9 min | `video-scripts/lessons/lesson-05-2.json` |  |
-| 5.3 | Oracles, TWAPs & manipulation | 9 | 1.9 min | `video-scripts/lessons/lesson-05-3.json` |  |
-| 5.4 | Smart contracts: state, proxies, admin keys | 9 | 2.0 min | `video-scripts/lessons/lesson-05-4.json` |  |
-| 5.5 | Smart-contract risk & what audits don't prove | 9 | 1.8 min | `video-scripts/lessons/lesson-05-5.json` |  |
-| 5.6 | Beyond Ethereum: Solana, Bitcoin and other ecosystems | 9 | 2.3 min | `video-scripts/lessons/lesson-05-6.json` |  |
-| 5.7 | Operating across chains: gas, routes and chain abstraction | 9 | 2.1 min | `video-scripts/lessons/lesson-05-7.json` |  |
-| 5.8 | Reading smart-contract code: enough to verify claims | 10 | 2.1 min | `video-scripts/lessons/lesson-05-8.json` |  |
-| 6.0 | Mastery Starter | 8 | 1.2 min | `video-scripts/lessons/lesson-06-0.json` |  |
-| 6.1 | Protocol due diligence | 10 | 1.7 min | `video-scripts/lessons/lesson-06-1.json` |  |
-| 6.2 | Tokenomics: supply, unlocks, FDV, value capture | 9 | 1.5 min | `video-scripts/lessons/lesson-06-2.json` |  |
-| 6.3 | Governance & DAOs | 9 | 1.4 min | `video-scripts/lessons/lesson-06-3.json` |  |
-| 6.4 | The on-chain research workflow | 9 | 1.4 min | `video-scripts/lessons/lesson-06-4.json` |  |
-| 6.5 | Case studies: how DeFi failures happened | 11 | 2.4 min | `video-scripts/lessons/lesson-06-5.json` |  |
-| 6.6 | Vote-escrow tokenomics, bribes and governance markets | 9 | 2.3 min | `video-scripts/lessons/lesson-06-6.json` |  |
-| 6.7 | Valuing DeFi protocols: fees, revenue, earnings and multiples | 9 | 1.8 min | `video-scripts/lessons/lesson-06-7.json` |  |
-| 7.0 | Mastery Starter | 8 | 1.1 min | `video-scripts/lessons/lesson-07-0.json` |  |
-| 7.1 | On-chain data foundations | 9 | 1.3 min | `video-scripts/lessons/lesson-07-1.json` |  |
-| 7.2 | Block explorer mastery | 9 | 1.4 min | `video-scripts/lessons/lesson-07-2.json` |  |
-| 7.3 | Exchange flows | 9 | 1.3 min | `video-scripts/lessons/lesson-07-3.json` |  |
-| 7.4 | Whale & entity analysis | 9 | 1.2 min | `video-scripts/lessons/lesson-07-4.json` |  |
-| 7.5 | Holder & supply metrics | 9 | 1.5 min | `video-scripts/lessons/lesson-07-5.json` |  |
-| 7.6 | Network activity | 9 | 1.2 min | `video-scripts/lessons/lesson-07-6.json` |  |
-| 7.7 | DEX & liquidity analytics | 9 | 1.4 min | `video-scripts/lessons/lesson-07-7.json` |  |
-| 7.8 | Derivatives on-chain | 9 | 1.4 min | `video-scripts/lessons/lesson-07-8.json` |  |
-| 7.9 | Querying chain data yourself | 9 | 1.7 min | `video-scripts/lessons/lesson-07-9.json` |  |
-| 8.0 | Mastery Starter | 8 | 1.2 min | `video-scripts/lessons/lesson-08-0.json` |  |
-| 8.1 | DeFi portfolio construction | 10 | 1.7 min | `video-scripts/lessons/lesson-08-1.json` |  |
-| 8.2 | The DeFi risk framework | 9 | 1.6 min | `video-scripts/lessons/lesson-08-2.json` |  |
-| 8.4 | The operating playbook: deploy, monitor, respond, review | 9 | 1.6 min | `video-scripts/lessons/lesson-08-4.json` |  |
-| 8.5 | Measuring performance honestly | 9 | 1.8 min | `video-scripts/lessons/lesson-08-5.json` |  |
-| 8.6 | Psychology and discipline | 10 | 2.3 min | `video-scripts/lessons/lesson-08-6.json` |  |
-| 8.7 | Quantitative risk: volatility, VaR, drawdown, correlation and sizing | 9 | 2.5 min | `video-scripts/lessons/lesson-08-7.json` |  |
-| 9.0 | Mastery Starter | 8 | 1.3 min | `video-scripts/lessons/lesson-09-0.json` |  |
-| 9.1 | Same idea, different machine | 12 | 3.2 min | `video-scripts/lessons/lesson-09-1.json` |  |
-| 9.2 | When each one wins | 11 | 2.4 min | `video-scripts/lessons/lesson-09-2.json` |  |
-| 9.3 | Building a combined system | 10 | 3.0 min | `video-scripts/lessons/lesson-09-3.json` |  |
-| 10.0 | Mastery Starter | 8 | 1.2 min | `video-scripts/lessons/lesson-10-0.json` |  |
-| 10.1 | Fixed-rate yield: principal and yield tokens (PT/YT) | 11 | 2.8 min | `video-scripts/lessons/lesson-10-1.json` |  |
-| 10.2 | Cash-and-carry basis trades | 10 | 2.3 min | `video-scripts/lessons/lesson-10-2.json` |  |
-| 10.3 | Delta-neutral funding carry, done properly | 11 | 2.1 min | `video-scripts/lessons/lesson-10-3.json` |  |
-| 10.4 | Options income: covered calls, cash-secured puts, options vaults | 10 | 2.3 min | `video-scripts/lessons/lesson-10-4.json` |  |
-| 10.5 | Active concentrated-liquidity management | 11 | 2.2 min | `video-scripts/lessons/lesson-10-5.json` |  |
-| 10.6 | Restaking and points: pricing speculative yield | 10 | 2.3 min | `video-scripts/lessons/lesson-10-6.json` |  |
-| 10.7 | Being the house: perp-exchange liquidity vaults | 10 | 2.4 min | `video-scripts/lessons/lesson-10-7.json` |  |
-| 10.8 | DeFi rates: term structure, fixed vs floating | 10 | 2.2 min | `video-scripts/lessons/lesson-10-8.json` |  |
-| 10.9 | Peg and redemption arbitrage | 10 | 2.3 min | `video-scripts/lessons/lesson-10-9.json` |  |
-| 11.0 | Mastery Starter | 8 | 1.2 min | `video-scripts/lessons/lesson-11-0.json` |  |
-| 11.1 | Hedging price exposure with perps and options | 9 | 2.0 min | `video-scripts/lessons/lesson-11-1.json` |  |
-| 11.2 | Depeg, protocol and smart-contract cover | 9 | 1.5 min | `video-scripts/lessons/lesson-11-2.json` |  |
-| 11.3 | Liquidation protection: buffers, alerts and automated deleveraging | 9 | 1.6 min | `video-scripts/lessons/lesson-11-3.json` |  |
-| 11.4 | Stress-testing a portfolio | 10 | 2.2 min | `video-scripts/lessons/lesson-11-4.json` |  |
-| 11.5 | Incident response: the first 60 minutes | 9 | 2.3 min | `video-scripts/lessons/lesson-11-5.json` |  |
-| 12.0 | Mastery Starter | 8 | 1.2 min | `video-scripts/lessons/lesson-12-0.json` |  |
-| 12.1 | Your balance sheet | 9 | 1.9 min | `video-scripts/lessons/lesson-12-1.json` |  |
-| 12.2 | Custody architecture: vault, multisig and spending policies | 11 | 2.2 min | `video-scripts/lessons/lesson-12-2.json` |  |
-| 12.3 | The credit line: borrowing like a bank client | 10 | 2.6 min | `video-scripts/lessons/lesson-12-3.json` |  |
-| 12.4 | Treasury and the liquidity ladder | 11 | 2.1 min | `video-scripts/lessons/lesson-12-4.json` |  |
-| 12.5 | Being the lender: supplying, curating and pricing credit risk | 9 | 2.4 min | `video-scripts/lessons/lesson-12-5.json` |  |
-| 12.6 | Books, records and succession | 10 | 2.4 min | `video-scripts/lessons/lesson-12-6.json` |  |
-| 12.7 | Tax, regulation and compliance awareness | 9 | 2.6 min | `video-scripts/lessons/lesson-12-7.json` |  |
-| 12.8 | Institutional-grade custody: MPC, custodians and policy engines | 10 | 2.2 min | `video-scripts/lessons/lesson-12-8.json` |  |
-| 13.0 | Mastery Starter | 8 | 1.1 min | `video-scripts/lessons/lesson-13-0.json` |  |
-| 13.1 | Income sources ranked by durability | 10 | 1.7 min | `video-scripts/lessons/lesson-13-1.json` |  |
-| 13.2 | Risk-adjusted yield: subtracting expected losses | 10 | 1.6 min | `video-scripts/lessons/lesson-13-2.json` |  |
-| 13.3 | Building the income portfolio | 11 | 1.9 min | `video-scripts/lessons/lesson-13-3.json` |  |
-| 13.4 | The payout policy: how much you can take out | 9 | 1.8 min | `video-scripts/lessons/lesson-13-4.json` |  |
-| 13.5 | Scaling, compounding and the annual review | 9 | 1.9 min | `video-scripts/lessons/lesson-13-5.json` |  |
-| 14.0 | Mastery Starter | 8 | 1.0 min | `video-scripts/lessons/lesson-14-0.json` |  |
-| 14.1 | Monitoring: dashboards, alerts and on-chain watchers | 9 | 1.7 min | `video-scripts/lessons/lesson-14-1.json` |  |
-| 14.2 | Automation: keepers, bots and agents without handing over the keys | 9 | 1.9 min | `video-scripts/lessons/lesson-14-2.json` |  |
-| 14.3 | Operating procedures: multisig signing, change control, reviews | 9 | 1.7 min | `video-scripts/lessons/lesson-14-3.json` |  |
-| 14.4 | Operator capstone and certification | 10 | 1.7 min | `video-scripts/lessons/lesson-14-4.json` |  |
-| 14.5 | Building your own tools: reading contracts, data and simple scripts | 9 | 2.1 min | `video-scripts/lessons/lesson-14-5.json` |  |
-| 14.6 | Searchers, keepers and arbitrage bots: how they work | 9 | 2.3 min | `video-scripts/lessons/lesson-14-6.json` |  |
+| 0.0 | Mastery Starter | 8 | 1.8 min | `video-scripts/lessons/lesson-00-0.json` |  |
+| 0.1 | Money, ledgers and why blockchains exist | 11 | 3.9 min | `video-scripts/lessons/lesson-00-1.json` | ✓ |
+| 0.2 | Opening and securing an exchange account | 12 | 4.1 min | `video-scripts/lessons/lesson-00-2.json` |  |
+| 0.3 | Buying your first crypto without overpaying | 11 | 3.0 min | `video-scripts/lessons/lesson-00-3.json` |  |
+| 0.4 | Exchange account vs your own wallet: who holds the keys? | 8 | 1.9 min | `video-scripts/lessons/lesson-00-4.json` |  |
+| 0.5 | Setting up your wallet and backing it up | 12 | 4.1 min | `video-scripts/lessons/lesson-00-5.json` |  |
+| 0.6 | Networks, gas and your first transfer | 12 | 4.3 min | `video-scripts/lessons/lesson-00-6.json` |  |
+| 0.7 | Your first DeFi steps (practice mode first) | 12 | 3.8 min | `video-scripts/lessons/lesson-00-7.json` |  |
+| 0.8 | Your security baseline, and the language of DeFi | 19 | 5.7 min | `video-scripts/lessons/lesson-00-8.json` |  |
+| 1.0 | Mastery Starter | 8 | 1.6 min | `video-scripts/lessons/lesson-01-0.json` |  |
+| 1.1 | What DeFi is, and the risk-first mindset | 11 | 3.8 min | `video-scripts/lessons/lesson-01-1.json` |  |
+| 1.2 | How a transaction actually happens | 10 | 3.2 min | `video-scripts/lessons/lesson-01-2.json` |  |
+| 1.3 | Wallets, keys, hardware & multisig | 11 | 3.3 min | `video-scripts/lessons/lesson-01-3.json` |  |
+| 1.4 | Tokens, approvals & allowances | 11 | 3.3 min | `video-scripts/lessons/lesson-01-4.json` |  |
+| 1.5 | Stablecoins and how they break | 9 | 2.9 min | `video-scripts/lessons/lesson-01-5.json` |  |
+| 1.6 | Scam defence | 9 | 3.0 min | `video-scripts/lessons/lesson-01-6.json` |  |
+| 1.7 | Reading signatures and simulating transactions | 10 | 3.5 min | `video-scripts/lessons/lesson-01-7.json` |  |
+| 1.8 | Privacy and physical security | 10 | 3.4 min | `video-scripts/lessons/lesson-01-8.json` |  |
+| 1.9 | Smart accounts and account abstraction | 11 | 3.7 min | `video-scripts/lessons/lesson-01-9.json` |  |
+| 2.0 | Mastery Starter | 8 | 1.6 min | `video-scripts/lessons/lesson-02-0.json` |  |
+| 2.1 | DEXs, aggregators & routing | 11 | 3.1 min | `video-scripts/lessons/lesson-02-1.json` |  |
+| 2.2 | AMM Mathematics (x · y = k) | 12 | 4.6 min | `video-scripts/lessons/lesson-02-2.json` |  |
+| 2.3 | Providing liquidity | 9 | 2.9 min | `video-scripts/lessons/lesson-02-3.json` |  |
+| 2.4 | Impermanent loss & true LP P&L | 10 | 2.6 min | `video-scripts/lessons/lesson-02-4.json` |  |
+| 2.5 | MEV and protecting your trades | 10 | 3.0 min | `video-scripts/lessons/lesson-02-5.json` |  |
+| 2.6 | Advanced execution: limit, TWAP and intent-based orders | 10 | 3.0 min | `video-scripts/lessons/lesson-02-6.json` |  |
+| 2.7 | Advanced AMM design and LVR | 12 | 3.8 min | `video-scripts/lessons/lesson-02-7.json` | ✓ |
+| 2.8 | The MEV supply chain | 12 | 3.4 min | `video-scripts/lessons/lesson-02-8.json` |  |
+| 3.0 | Mastery Starter | 8 | 1.5 min | `video-scripts/lessons/lesson-03-0.json` |  |
+| 3.1 | How lending markets work | 10 | 2.8 min | `video-scripts/lessons/lesson-03-1.json` |  |
+| 3.2 | LTV, liquidation threshold & health factor **(gold standard)** | 18 | 7.1 min | `video-scripts/gold/lesson-03-2.json` | ✓ |
+| 3.3 | Liquidations and cascades | 9 | 2.5 min | `video-scripts/lessons/lesson-03-3.json` |  |
+| 3.4 | Borrowing strategies & looping | 11 | 3.0 min | `video-scripts/lessons/lesson-03-4.json` |  |
+| 3.5 | Perpetual futures and margin on-chain | 10 | 3.0 min | `video-scripts/lessons/lesson-03-5.json` |  |
+| 3.6 | Lending design deep dive: e-mode, caps, auctions, soft liquidation, bad debt | 12 | 4.2 min | `video-scripts/lessons/lesson-03-6.json` |  |
+| 3.7 | CDP stablecoins: minting your own dollars | 10 | 2.9 min | `video-scripts/lessons/lesson-03-7.json` |  |
+| 4.0 | Mastery Starter | 8 | 1.4 min | `video-scripts/lessons/lesson-04-0.json` |  |
+| 4.1 | Yield farming: base yield vs emissions | 10 | 2.5 min | `video-scripts/lessons/lesson-04-1.json` |  |
+| 4.2 | Native staking | 9 | 2.0 min | `video-scripts/lessons/lesson-04-2.json` |  |
+| 4.3 | Liquid staking (LSTs) | 9 | 2.3 min | `video-scripts/lessons/lesson-04-3.json` |  |
+| 4.4 | Restaking & shared security | 9 | 2.0 min | `video-scripts/lessons/lesson-04-4.json` |  |
+| 4.5 | Vaults & yield optimisers | 9 | 2.1 min | `video-scripts/lessons/lesson-04-5.json` |  |
+| 4.6 | Airdrops & points: opportunity cost | 9 | 1.9 min | `video-scripts/lessons/lesson-04-6.json` |  |
+| 4.7 | Stablecoin savings rates and yield-bearing stablecoins | 10 | 3.2 min | `video-scripts/lessons/lesson-04-7.json` |  |
+| 4.8 | Tokenized treasuries and real-world assets (RWAs) | 10 | 3.0 min | `video-scripts/lessons/lesson-04-8.json` |  |
+| 5.0 | Mastery Starter | 8 | 1.5 min | `video-scripts/lessons/lesson-05-0.json` |  |
+| 5.1 | Bridges and trust assumptions | 10 | 2.8 min | `video-scripts/lessons/lesson-05-1.json` |  |
+| 5.2 | Layer 2s, sequencers & withdrawal paths | 10 | 2.8 min | `video-scripts/lessons/lesson-05-2.json` |  |
+| 5.3 | Oracles, TWAPs & manipulation | 10 | 2.8 min | `video-scripts/lessons/lesson-05-3.json` |  |
+| 5.4 | Smart contracts: state, proxies, admin keys | 10 | 2.8 min | `video-scripts/lessons/lesson-05-4.json` |  |
+| 5.5 | Smart-contract risk & what audits don't prove | 10 | 2.9 min | `video-scripts/lessons/lesson-05-5.json` |  |
+| 5.6 | Beyond Ethereum: Solana, Bitcoin and other ecosystems | 10 | 3.2 min | `video-scripts/lessons/lesson-05-6.json` |  |
+| 5.7 | Operating across chains: gas, routes and chain abstraction | 10 | 3.1 min | `video-scripts/lessons/lesson-05-7.json` |  |
+| 5.8 | Reading smart-contract code: enough to verify claims | 11 | 3.0 min | `video-scripts/lessons/lesson-05-8.json` |  |
+| 6.0 | Mastery Starter | 8 | 1.4 min | `video-scripts/lessons/lesson-06-0.json` |  |
+| 6.1 | Protocol due diligence | 11 | 2.5 min | `video-scripts/lessons/lesson-06-1.json` |  |
+| 6.2 | Tokenomics: supply, unlocks, FDV, value capture | 10 | 2.3 min | `video-scripts/lessons/lesson-06-2.json` |  |
+| 6.3 | Governance & DAOs | 10 | 2.3 min | `video-scripts/lessons/lesson-06-3.json` |  |
+| 6.4 | The on-chain research workflow | 9 | 2.0 min | `video-scripts/lessons/lesson-06-4.json` |  |
+| 6.5 | Case studies: how DeFi failures happened | 10 | 3.0 min | `video-scripts/lessons/lesson-06-5.json` |  |
+| 6.6 | Vote-escrow tokenomics, bribes and governance markets | 10 | 3.3 min | `video-scripts/lessons/lesson-06-6.json` |  |
+| 6.7 | Valuing DeFi protocols: fees, revenue, earnings and multiples | 10 | 2.8 min | `video-scripts/lessons/lesson-06-7.json` |  |
+| 7.0 | Mastery Starter | 8 | 1.3 min | `video-scripts/lessons/lesson-07-0.json` |  |
+| 7.1 | On-chain data foundations | 10 | 2.2 min | `video-scripts/lessons/lesson-07-1.json` |  |
+| 7.2 | Block explorer mastery | 9 | 2.0 min | `video-scripts/lessons/lesson-07-2.json` |  |
+| 7.3 | Exchange flows | 9 | 1.8 min | `video-scripts/lessons/lesson-07-3.json` |  |
+| 7.4 | Whale & entity analysis | 9 | 1.8 min | `video-scripts/lessons/lesson-07-4.json` |  |
+| 7.5 | Holder & supply metrics | 10 | 2.3 min | `video-scripts/lessons/lesson-07-5.json` |  |
+| 7.6 | Network activity | 9 | 1.8 min | `video-scripts/lessons/lesson-07-6.json` |  |
+| 7.7 | DEX & liquidity analytics | 10 | 2.2 min | `video-scripts/lessons/lesson-07-7.json` |  |
+| 7.8 | Derivatives on-chain | 10 | 2.1 min | `video-scripts/lessons/lesson-07-8.json` |  |
+| 7.9 | Querying chain data yourself | 10 | 2.6 min | `video-scripts/lessons/lesson-07-9.json` |  |
+| 8.0 | Mastery Starter | 8 | 1.4 min | `video-scripts/lessons/lesson-08-0.json` |  |
+| 8.1 | DeFi portfolio construction | 10 | 2.5 min | `video-scripts/lessons/lesson-08-1.json` |  |
+| 8.2 | The DeFi risk framework | 9 | 2.1 min | `video-scripts/lessons/lesson-08-2.json` |  |
+| 8.4 | The operating playbook: deploy, monitor, respond, review | 10 | 2.4 min | `video-scripts/lessons/lesson-08-4.json` |  |
+| 8.5 | Measuring performance honestly | 10 | 2.7 min | `video-scripts/lessons/lesson-08-5.json` |  |
+| 8.6 | Psychology and discipline | 9 | 2.8 min | `video-scripts/lessons/lesson-08-6.json` |  |
+| 8.7 | Quantitative risk: volatility, VaR, drawdown, correlation and sizing | 10 | 3.4 min | `video-scripts/lessons/lesson-08-7.json` |  |
+| 9.0 | Mastery Starter | 8 | 1.6 min | `video-scripts/lessons/lesson-09-0.json` |  |
+| 9.1 | Same idea, different machine | 11 | 3.9 min | `video-scripts/lessons/lesson-09-1.json` |  |
+| 9.2 | When each one wins | 10 | 3.0 min | `video-scripts/lessons/lesson-09-2.json` |  |
+| 9.3 | Building a combined system | 10 | 3.3 min | `video-scripts/lessons/lesson-09-3.json` |  |
+| 10.0 | Mastery Starter | 8 | 1.5 min | `video-scripts/lessons/lesson-10-0.json` |  |
+| 10.1 | Fixed-rate yield: principal and yield tokens (PT/YT) | 12 | 3.7 min | `video-scripts/lessons/lesson-10-1.json` |  |
+| 10.2 | Cash-and-carry basis trades | 10 | 2.9 min | `video-scripts/lessons/lesson-10-2.json` |  |
+| 10.3 | Delta-neutral funding carry, done properly | 11 | 2.9 min | `video-scripts/lessons/lesson-10-3.json` |  |
+| 10.4 | Options income: covered calls, cash-secured puts, options vaults | 11 | 3.2 min | `video-scripts/lessons/lesson-10-4.json` |  |
+| 10.5 | Active concentrated-liquidity management | 10 | 2.4 min | `video-scripts/lessons/lesson-10-5.json` |  |
+| 10.6 | Restaking and points: pricing speculative yield | 11 | 3.3 min | `video-scripts/lessons/lesson-10-6.json` |  |
+| 10.7 | Being the house: perp-exchange liquidity vaults | 11 | 3.2 min | `video-scripts/lessons/lesson-10-7.json` |  |
+| 10.8 | DeFi rates: term structure, fixed vs floating | 11 | 3.2 min | `video-scripts/lessons/lesson-10-8.json` |  |
+| 10.9 | Peg and redemption arbitrage | 11 | 3.3 min | `video-scripts/lessons/lesson-10-9.json` |  |
+| 11.0 | Mastery Starter | 8 | 1.4 min | `video-scripts/lessons/lesson-11-0.json` |  |
+| 11.1 | Hedging price exposure with perps and options | 10 | 2.9 min | `video-scripts/lessons/lesson-11-1.json` |  |
+| 11.2 | Depeg, protocol and smart-contract cover | 9 | 2.1 min | `video-scripts/lessons/lesson-11-2.json` |  |
+| 11.3 | Liquidation protection: buffers, alerts and automated deleveraging | 9 | 2.1 min | `video-scripts/lessons/lesson-11-3.json` |  |
+| 11.4 | Stress-testing a portfolio | 9 | 2.7 min | `video-scripts/lessons/lesson-11-4.json` |  |
+| 11.5 | Incident response: the first 60 minutes | 9 | 2.8 min | `video-scripts/lessons/lesson-11-5.json` |  |
+| 12.0 | Mastery Starter | 8 | 1.4 min | `video-scripts/lessons/lesson-12-0.json` |  |
+| 12.1 | Your balance sheet | 10 | 2.7 min | `video-scripts/lessons/lesson-12-1.json` |  |
+| 12.2 | Custody architecture: vault, multisig and spending policies | 10 | 2.6 min | `video-scripts/lessons/lesson-12-2.json` |  |
+| 12.3 | The credit line: borrowing like a bank client | 11 | 3.6 min | `video-scripts/lessons/lesson-12-3.json` |  |
+| 12.4 | Treasury and the liquidity ladder | 10 | 2.8 min | `video-scripts/lessons/lesson-12-4.json` |  |
+| 12.5 | Being the lender: supplying, curating and pricing credit risk | 10 | 3.2 min | `video-scripts/lessons/lesson-12-5.json` |  |
+| 12.6 | Books, records and succession | 11 | 3.3 min | `video-scripts/lessons/lesson-12-6.json` |  |
+| 12.7 | Tax, regulation and compliance awareness | 10 | 3.5 min | `video-scripts/lessons/lesson-12-7.json` |  |
+| 12.8 | Institutional-grade custody: MPC, custodians and policy engines | 11 | 3.3 min | `video-scripts/lessons/lesson-12-8.json` |  |
+| 13.0 | Mastery Starter | 8 | 1.4 min | `video-scripts/lessons/lesson-13-0.json` |  |
+| 13.1 | Income sources ranked by durability | 9 | 2.2 min | `video-scripts/lessons/lesson-13-1.json` |  |
+| 13.2 | Risk-adjusted yield: subtracting expected losses | 9 | 2.1 min | `video-scripts/lessons/lesson-13-2.json` |  |
+| 13.3 | Building the income portfolio | 10 | 2.5 min | `video-scripts/lessons/lesson-13-3.json` |  |
+| 13.4 | The payout policy: how much you can take out | 10 | 2.7 min | `video-scripts/lessons/lesson-13-4.json` |  |
+| 13.5 | Scaling, compounding and the annual review | 10 | 2.8 min | `video-scripts/lessons/lesson-13-5.json` |  |
+| 14.0 | Mastery Starter | 8 | 1.3 min | `video-scripts/lessons/lesson-14-0.json` |  |
+| 14.1 | Monitoring: dashboards, alerts and on-chain watchers | 10 | 2.5 min | `video-scripts/lessons/lesson-14-1.json` |  |
+| 14.2 | Automation: keepers, bots and agents without handing over the keys | 10 | 2.7 min | `video-scripts/lessons/lesson-14-2.json` |  |
+| 14.3 | Operating procedures: multisig signing, change control, reviews | 10 | 2.7 min | `video-scripts/lessons/lesson-14-3.json` |  |
+| 14.4 | Operator capstone and certification | 10 | 2.4 min | `video-scripts/lessons/lesson-14-4.json` |  |
+| 14.5 | Building your own tools: reading contracts, data and simple scripts | 10 | 3.1 min | `video-scripts/lessons/lesson-14-5.json` |  |
+| 14.6 | Searchers, keepers and arbitrage bots: how they work | 10 | 3.2 min | `video-scripts/lessons/lesson-14-6.json` |  |

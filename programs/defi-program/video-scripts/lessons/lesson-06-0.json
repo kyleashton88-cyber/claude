@@ -6,27 +6,38 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 6.0",
  "use": "Lesson 6.0 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Mastery Starter",
+  "subtitle": "Module 6 · Start here"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-06.png",
-   "eyebrow": "Lesson 6.0",
-   "vo": "Lesson six point zero. Mastery Starter.",
-   "cap": "Lesson 6.0. Mastery Starter."
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 6 · Protocol Research",
+   "num": "6.0",
+   "title": "Mastery Starter",
+   "sub": "Before trusting a protocol with money, a professional researches it the same way every time: what it does, where its money comes from, what it depends on, whether it's solvent, what the evidence says,",
+   "vo": "Mastery Starter six point zero. New to Protocol Research? Start here. In about ten minutes, you'll go from zero to ready for this module.",
+   "cap": "Mastery Starter 6.0. New to Protocol Research? Start here. In about ten minutes, you'll go from zero to ready for this module."
   },
   {
    "type": "statement",
+   "chapter": "The 60-second version",
+   "kicker": "The 60-second version",
    "lines": [
-    "The 60-second version"
+    "Before trusting a protocol with money, a professional researches it the same way every time"
    ],
-   "sub": "Before trusting a protocol with money, a professional researches it the same way every time: what it does, where its money comes from, what it depends on, whether it's solvent, what the evidence says, and how to get out.",
+   "sub": "what it does, where its money comes from, what it depends on, whether it's solvent, what the evidence says, and how to get out.",
    "vo": "Before trusting a protocol with money, a professional researches it the same way every time: what it does, where its money comes from, what it depends on, whether it's solvent, what the evidence says, and how to get out.",
    "cap": "Before trusting a protocol with money, a professional researches it the same way every time: what it does, where its money comes from, what it depends on, whether it's solvent, what the evidence says, and how to get out."
   },
   {
    "type": "bullets",
+   "chapter": "Words you'll need",
    "title": "Words you'll need",
    "items": [
     "Due diligence",
@@ -36,29 +47,33 @@
     "Thesis"
    ],
    "compact": true,
-   "vo": "Due diligence, structured research before investing. T.V.L., total value deposited in a protocol. F.D.V., token price times maximum supply. Governance, how holders vote on changes. Thesis, what must be true for the position to work.",
-   "cap": "Due diligence, structured research before investing TVL, total value deposited in a protocol FDV, token price × maximum supply Governance, how holders vote on changes Thesis, what must be true for the position to work"
+   "vo": "Due diligence: structured research before investing. T.V.L.: total value deposited in a protocol. F.D.V.: token price times maximum supply. Governance: how holders vote on changes. Thesis: what must be true for the position to work.",
+   "cap": "Due diligence: structured research before investing. TVL: total value deposited in a protocol. FDV: token price × maximum supply. Governance: how holders vote on changes. Thesis: what must be true for the position to work."
   },
   {
    "type": "bullets",
+   "chapter": "Before you start",
    "title": "Before you start",
    "items": [
     "Modules 0–5"
    ],
-   "vo": "Modules 0–5",
-   "cap": "Modules 0–5"
+   "vo": "Modules 0 to 5.",
+   "cap": "Modules 0–5."
   },
   {
    "type": "statement",
+   "chapter": "Your first safe step",
+   "kicker": "Your first safe step",
    "lines": [
-    "Your first safe step"
+    "Pick a protocol you've heard of and write one sentence for each of the six research steps"
    ],
-   "sub": "Pick a protocol you've heard of and write one sentence for each of the six research steps, even if it's \"don't know yet\".",
+   "sub": ", even if it's \"don't know yet\".",
    "vo": "Pick a protocol you've heard of and write one sentence for each of the six research steps, even if it's \"don't know yet\".",
    "cap": "Pick a protocol you've heard of and write one sentence for each of the six research steps, even if it's \"don't know yet\"."
   },
   {
    "type": "bullets",
+   "chapter": "The mastery ladder",
    "title": "The mastery ladder",
    "items": [
     "Beginner",
@@ -66,24 +81,27 @@
     "Master"
    ],
    "compact": true,
-   "vo": "Beginner, Completes the six-step loop with sources. Practitioner, Reads tokenomics and governance and writes a thesis with invalidation. Master, Spots failure patterns early and writes verdicts others can act on.",
-   "cap": "Beginner, Completes the six-step loop with sources Practitioner, Reads tokenomics and governance and writes a thesis with invalidation Master, Spots failure patterns early and writes verdicts others can act on"
+   "vo": "Beginner: Completes the six-step loop with sources. Practitioner: Reads tokenomics and governance and writes a thesis with invalidation. Master: Spots failure patterns early and writes verdicts others can act on.",
+   "cap": "Beginner: Completes the six-step loop with sources. Practitioner: Reads tokenomics and governance and writes a thesis with invalidation. Master: Spots failure patterns early and writes verdicts others can act on."
   },
   {
    "type": "statement",
+   "chapter": "You've mastered it when…",
+   "kicker": "You've mastered it when…",
    "lines": [
-    "You've mastered it when…"
+    "You've mastered this module when your due-diligence file ends in a verdict with size"
    ],
-   "sub": "…your due-diligence file ends in a verdict with size, conditions and an exit. ---",
-   "vo": "…your due-diligence file ends in a verdict with size, conditions and an exit. ---",
-   "cap": "…your due-diligence file ends in a verdict with size, conditions and an exit. ---"
+   "sub": ", conditions and an exit.",
+   "vo": "You've mastered this module when your due-diligence file ends in a verdict with size, conditions and an exit.",
+   "cap": "You've mastered this module when your due-diligence file ends in a verdict with size, conditions and an exit."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 6.1",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson six point one: Protocol due diligence.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 6.1: Protocol due diligence."
   }
  ]
 }

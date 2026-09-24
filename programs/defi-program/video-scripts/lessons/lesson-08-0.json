@@ -6,27 +6,38 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 8.0",
  "use": "Lesson 8.0 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Mastery Starter",
+  "subtitle": "Module 8 · Start here"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-08.png",
-   "eyebrow": "Lesson 8.0",
-   "vo": "Lesson eight point zero. Mastery Starter.",
-   "cap": "Lesson 8.0. Mastery Starter."
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 8 · The DeFi Operating System",
+   "num": "8.0",
+   "title": "Mastery Starter",
+   "sub": "Individual positions don't make a portfolio. This module turns strategies into a system: buckets and caps, a risk register, a strategy library, a routine, honest performance measurement, and rules for",
+   "vo": "Mastery Starter eight point zero. New to The DeFi Operating System? Start here. In about ten minutes, you'll go from zero to ready for this module.",
+   "cap": "Mastery Starter 8.0. New to The DeFi Operating System? Start here. In about ten minutes, you'll go from zero to ready for this module."
   },
   {
    "type": "statement",
+   "chapter": "The 60-second version",
+   "kicker": "The 60-second version",
    "lines": [
-    "The 60-second version"
+    "Individual positions don't make a portfolio"
    ],
-   "sub": "Individual positions don't make a portfolio. This module turns strategies into a system: buckets and caps, a risk register, a strategy library, a routine, honest performance measurement, and rules for your own behaviour.",
+   "sub": "This module turns strategies into a system: buckets and caps, a risk register, a strategy library, a routine, honest performance measurement, and rules for your own behaviour.",
    "vo": "Individual positions don't make a portfolio. This module turns strategies into a system: buckets and caps, a risk register, a strategy library, a routine, honest performance measurement, and rules for your own behaviour.",
    "cap": "Individual positions don't make a portfolio. This module turns strategies into a system: buckets and caps, a risk register, a strategy library, a routine, honest performance measurement, and rules for your own behaviour."
   },
   {
    "type": "bullets",
+   "chapter": "Words you'll need",
    "title": "Words you'll need",
    "items": [
     "Bucket",
@@ -36,29 +47,33 @@
     "TWR"
    ],
    "compact": true,
-   "vo": "Bucket, a portion of capital with a job and a cap. Risk register, a scored list of risks and responses. Kill rule, a pre-written exit trigger. Benchmark, the simple alternative you must beat. time-weighted return, return that ignores deposit timing.",
-   "cap": "Bucket, a portion of capital with a job and a cap Risk register, a scored list of risks and responses Kill rule, a pre-written exit trigger Benchmark, the simple alternative you must beat TWR, return that ignores deposit timing"
+   "vo": "Bucket: a portion of capital with a job and a cap. Risk register: a scored list of risks and responses. Kill rule: a pre-written exit trigger. Benchmark: the simple alternative you must beat. time-weighted return: return that ignores deposit timing.",
+   "cap": "Bucket: a portion of capital with a job and a cap. Risk register: a scored list of risks and responses. Kill rule: a pre-written exit trigger. Benchmark: the simple alternative you must beat. TWR: return that ignores deposit timing."
   },
   {
    "type": "bullets",
+   "chapter": "Before you start",
    "title": "Before you start",
    "items": [
     "Modules 0–7"
    ],
-   "vo": "Modules 0–7",
-   "cap": "Modules 0–7"
+   "vo": "Modules 0 to 7.",
+   "cap": "Modules 0–7."
   },
   {
    "type": "statement",
+   "chapter": "Your first safe step",
+   "kicker": "Your first safe step",
    "lines": [
-    "Your first safe step"
+    "Write your current holdings into four buckets (reserve, core, productive"
    ],
-   "sub": "Write your current holdings into four buckets (reserve, core, productive, speculative) with a percentage for each.",
+   "sub": ", speculative) with a percentage for each.",
    "vo": "Write your current holdings into four buckets (reserve, core, productive, speculative) with a percentage for each.",
    "cap": "Write your current holdings into four buckets (reserve, core, productive, speculative) with a percentage for each."
   },
   {
    "type": "bullets",
+   "chapter": "The mastery ladder",
    "title": "The mastery ladder",
    "items": [
     "Beginner",
@@ -66,24 +81,27 @@
     "Master"
    ],
    "compact": true,
-   "vo": "Beginner, Has buckets, caps and a journal. Practitioner, Keeps a scored risk register, uses the strategy library, measures time-weighted return versus a benchmark. Master, Runs a disciplined routine with written rules for behaviour, reviewed monthly.",
-   "cap": "Beginner, Has buckets, caps and a journal Practitioner, Keeps a scored risk register, uses the strategy library, measures TWR vs a benchmark Master, Runs a disciplined routine with written rules for behaviour, reviewed monthly"
+   "vo": "Beginner: Has buckets, caps and a journal. Practitioner: Keeps a scored risk register, uses the strategy library, measures time-weighted return versus a benchmark. Master: Runs a disciplined routine with written rules for behaviour, reviewed monthly.",
+   "cap": "Beginner: Has buckets, caps and a journal. Practitioner: Keeps a scored risk register, uses the strategy library, measures TWR vs a benchmark. Master: Runs a disciplined routine with written rules for behaviour, reviewed monthly."
   },
   {
    "type": "statement",
+   "chapter": "You've mastered it when…",
+   "kicker": "You've mastered it when…",
    "lines": [
-    "You've mastered it when…"
+    "You've mastered this module when you have a written portfolio plan and a quarter of honest"
    ],
-   "sub": "…you have a written portfolio plan and a quarter of honest, benchmarked results. ---",
-   "vo": "…you have a written portfolio plan and a quarter of honest, benchmarked results. ---",
-   "cap": "…you have a written portfolio plan and a quarter of honest, benchmarked results. ---"
+   "sub": ", benchmarked results.",
+   "vo": "You've mastered this module when you have a written portfolio plan and a quarter of honest, benchmarked results.",
+   "cap": "You've mastered this module when you have a written portfolio plan and a quarter of honest, benchmarked results."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 8.1",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson eight point one: DeFi portfolio construction.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 8.1: DeFi portfolio construction."
   }
  ]
 }

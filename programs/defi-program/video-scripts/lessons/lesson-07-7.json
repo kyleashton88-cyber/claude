@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 7.7",
  "use": "Lesson 7.7 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "DEX & liquidity analytics",
+  "subtitle": "Lesson 7.7"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-07.png",
-   "eyebrow": "Lesson 7.7",
-   "vo": "Lesson seven point seven. decks and liquidity analytics.",
-   "cap": "Lesson 7.7. DEX & liquidity analytics."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 7 · On-Chain Analytics",
+   "num": "7.7",
+   "title": "DEX & liquidity analytics",
    "sub": "Measure whether a pool can actually absorb your trade and pay you as an LP.",
-   "vo": "Measure whether a pool can actually absorb your trade and pay you as an L.P..",
-   "cap": "Measure whether a pool can actually absorb your trade and pay you as an LP."
+   "vo": "Lesson seven point seven. decks and liquidity analytics. By the end of this lesson, you'll be able to measure whether a pool can actually absorb your trade and pay you as an L.P..",
+   "cap": "Lesson 7.7. DEX & liquidity analytics. By the end of this lesson, you'll be able to measure whether a pool can actually absorb your trade and pay you as an LP."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "TVL can double count and moves with token prices.",
@@ -34,67 +48,82 @@
     "Volume/TVL",
     "Liquidity migration"
    ],
-   "vo": "T.V.L. can double count and moves with token prices. Depth: the price impact for a given trade size. The number that matters for execution. Volume/T.V.L.: rough capital turnover; higher means more fees per dollar (Lesson 2.3). Liquidity migration: incentives move liquidity quickly between pools and chains.",
-   "cap": "TVL can double count and moves with token prices. Depth: the price impact for a given trade size. The number that matters for execution. Volume/TVL: rough capital turnover; higher means more fees per dollar (Lesson 2.3). Liquidity migration: incentives move liquidity quickly between pools and chains."
+   "vo": "First, T.V.L. can double count and moves with token prices. Next, Depth: the price impact for a given trade size. The number that matters for execution. Then, Volume/T.V.L.: rough capital turnover; higher means more fees per dollar (Lesson 2.3). And finally, Liquidity migration: incentives move liquidity quickly between pools and chains.",
+   "cap": "First, TVL can double count and moves with token prices. Next, Depth: the price impact for a given trade size. The number that matters for execution. Then, Volume/TVL: rough capital turnover; higher means more fees per dollar (Lesson 2.3). And finally, Liquidity migration: incentives move liquidity quickly between pools and chains."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Pool A",
+    "Pool B",
+    "B pays LPs far more per dollar, but a $1M trade will move B's price much…"
    ],
-   "sub": "Pool A: $50M TVL, $5M daily volume (0.1 turnover). Pool B: $10M TVL, $8M volume (0.8 turnover). B pays LPs far more per dollar, but a $1M trade will move B's price much more than A's.",
-   "vo": "Pool A: $50M T.V.L., $5M daily volume (0.1 turnover). Pool B: $10M T.V.L., $8M volume (0.8 turnover). B pays L.P.s far more per dollar, but a $1M trade will move B's price much more than A's.",
-   "cap": "Pool A: $50M TVL, $5M daily volume (0.1 turnover). Pool B: $10M TVL, $8M volume (0.8 turnover). B pays LPs far more per dollar, but a $1M trade will move B's price much more than A's."
+   "vo": "Let's work an example, step by step. Pool A: $50M T.V.L., $5M daily volume (0.1 turnover). Pool B: $10M T.V.L., $8M volume (0.8 turnover). B pays L.P.s far more per dollar, but a $1M trade will move B's price much more than A's.",
+   "cap": "Let's work an example, step by step. Pool A: $50M TVL, $5M daily volume (0.1 turnover). Pool B: $10M TVL, $8M volume (0.8 turnover). B pays LPs far more per dollar, but a $1M trade will move B's price much more than A's."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Depth checked at my trade size",
     "Volume/TVL used for LP fee estimates"
    ],
-   "vo": "Your checklist. Depth checked at my trade size Volume/T.V.L. used for L.P. fee estimates",
-   "cap": "Depth checked at my trade size Volume/TVL used for LP fee estimates"
+   "vo": "Here's your checklist. Do it now, for real. First, Depth checked at my trade size. And finally, Volume/T.V.L. used for L.P. fee estimates.",
+   "cap": "Here's your checklist. Do it now, for real. First, Depth checked at my trade size. And finally, Volume/TVL used for LP fee estimates."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why is depth more useful than TVL for traders?"
-   ],
-   "sub": "Answer: It measures price impact at a given size.",
-   "subAt": 0.62,
-   "vo": "Why is depth more useful than T.V.L. for traders? ... Pause and think. ... The answer: It measures price impact at a given size.",
-   "cap": "Why is depth more useful than TVL for traders? Pause and think. The answer: It measures price impact at a given size."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why is depth more useful than TVL for traders?",
+   "a": "It measures price impact at a given size.",
+   "vo": "Question one. Why is depth more useful than T.V.L. for traders? [[pause 4]] The answer: It measures price impact at a given size.",
+   "cap": "Question 1. Why is depth more useful than TVL for traders? The answer: It measures price impact at a given size."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "High volume/TVL means?"
-   ],
-   "sub": "Answer: More fees per dollar of liquidity.",
-   "subAt": 0.62,
-   "vo": "High volume/T.V.L. means? ... Pause and think. ... The answer: More fees per dollar of liquidity.",
-   "cap": "High volume/TVL means? Pause and think. The answer: More fees per dollar of liquidity."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "High volume/TVL means?",
+   "a": "More fees per dollar of liquidity.",
+   "vo": "Question two. High volume/T.V.L. means? [[pause 4]] The answer: More fees per dollar of liquidity.",
+   "cap": "Question 2. High volume/TVL means? The answer: More fees per dollar of liquidity."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What causes liquidity migration?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What causes liquidity migration?",
+   "a": "Incentives moving between pools and chains.",
+   "vo": "Question three. What causes liquidity migration? [[pause 4]] The answer: Incentives moving between pools and chains.",
+   "cap": "Question 3. What causes liquidity migration? The answer: Incentives moving between pools and chains."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "TVL can double count and moves with token prices",
+    "Depth: the price impact for a given trade size",
+    "Volume/TVL: rough capital turnover",
+    "Liquidity migration: incentives move liquidity quickly between pools and chains"
    ],
-   "sub": "Answer: Incentives moving between pools and chains.",
-   "subAt": 0.62,
-   "vo": "What causes liquidity migration? ... Pause and think. ... The answer: Incentives moving between pools and chains.",
-   "cap": "What causes liquidity migration? Pause and think. The answer: Incentives moving between pools and chains."
+   "vo": "Let's recap. T.V.L. can double count and moves with token prices. Depth: the price impact for a given trade size. Volume/T.V.L.: rough capital turnover. Liquidity migration: incentives move liquidity quickly between pools and chains.",
+   "cap": "Let's recap. TVL can double count and moves with token prices. Depth: the price impact for a given trade size. Volume/TVL: rough capital turnover. Liquidity migration: incentives move liquidity quickly between pools and chains."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 7.8",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson seven point eight: Derivatives on-chain.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 7.8: Derivatives on-chain."
   }
  ]
 }

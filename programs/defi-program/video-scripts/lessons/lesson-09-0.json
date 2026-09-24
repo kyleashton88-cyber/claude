@@ -6,27 +6,38 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 9.0",
  "use": "Lesson 9.0 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Mastery Starter",
+  "subtitle": "Module 9 · Start here"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-09.png",
-   "eyebrow": "Lesson 9.0",
-   "vo": "Lesson nine point zero. Mastery Starter.",
-   "cap": "Lesson 9.0. Mastery Starter."
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 9 · DeFi vs Grid Bots",
+   "num": "9.0",
+   "title": "Mastery Starter",
+   "sub": "A grid bot on an exchange and a liquidity position on a DEX both buy as price falls and sell as it rises inside a range. This module shows when each is the better tool, and how to run both without dou",
+   "vo": "Mastery Starter nine point zero. New to DeFi versus Grid Bots? Start here. In about ten minutes, you'll go from zero to ready for this module.",
+   "cap": "Mastery Starter 9.0. New to DeFi vs Grid Bots? Start here. In about ten minutes, you'll go from zero to ready for this module."
   },
   {
    "type": "statement",
+   "chapter": "The 60-second version",
+   "kicker": "The 60-second version",
    "lines": [
-    "The 60-second version"
+    "A grid bot on an exchange and a liquidity position on a DEX both buy as price falls and sell as it rises inside a range"
    ],
-   "sub": "A grid bot on an exchange and a liquidity position on a DEX both buy as price falls and sell as it rises inside a range. This module shows when each is the better tool, and how to run both without doubling your risk.",
+   "sub": "This module shows when each is the better tool, and how to run both without doubling your risk.",
    "vo": "A grid bot on an exchange and a liquidity position on a decks both buy as price falls and sell as it rises inside a range. This module shows when each is the better tool, and how to run both without doubling your risk.",
    "cap": "A grid bot on an exchange and a liquidity position on a DEX both buy as price falls and sell as it rises inside a range. This module shows when each is the better tool, and how to run both without doubling your risk."
   },
   {
    "type": "bullets",
+   "chapter": "Words you'll need",
    "title": "Words you'll need",
    "items": [
     "Grid bot",
@@ -36,29 +47,33 @@
     "Invalidation"
    ],
    "compact": true,
-   "vo": "Grid bot, automated buy/sell orders at set price levels. Range, the price band a strategy works in. Concentrated liquidity, L.P. capital placed in a chosen range. Correlation, positions that move together. Invalidation, the event that ends a range thesis.",
-   "cap": "Grid bot, automated buy/sell orders at set price levels Range, the price band a strategy works in Concentrated liquidity, LP capital placed in a chosen range Correlation, positions that move together Invalidation, the event that ends a range thesis"
+   "vo": "Grid bot: automated buy/sell orders at set price levels. Range: the price band a strategy works in. Concentrated liquidity: L.P. capital placed in a chosen range. Correlation: positions that move together. Invalidation: the event that ends a range thesis.",
+   "cap": "Grid bot: automated buy/sell orders at set price levels. Range: the price band a strategy works in. Concentrated liquidity: LP capital placed in a chosen range. Correlation: positions that move together. Invalidation: the event that ends a range thesis."
   },
   {
    "type": "bullets",
+   "chapter": "Before you start",
    "title": "Before you start",
    "items": [
     "Modules 0–8 (Grid Bot Builder helpful but not required)"
    ],
-   "vo": "Modules 0–8 (Grid Bot Builder helpful but not required)",
-   "cap": "Modules 0–8 (Grid Bot Builder helpful but not required)"
+   "vo": "Modules 0 to 8 (Grid Bot Builder helpful but not required).",
+   "cap": "Modules 0–8 (Grid Bot Builder helpful but not required)."
   },
   {
    "type": "statement",
+   "chapter": "Your first safe step",
+   "kicker": "Your first safe step",
    "lines": [
-    "Your first safe step"
+    "Take one asset and write the range you'd use for a grid bot and for an LP"
    ],
-   "sub": "Take one asset and write the range you'd use for a grid bot and for an LP. Would they be the same?",
-   "vo": "Take one asset and write the range you'd use for a grid bot and for an L.P.. Would they be the same?",
+   "sub": "Would they be the same?",
+   "vo": "Take one asset and write the range you'd use for a grid bot and for an L.P. Would they be the same?",
    "cap": "Take one asset and write the range you'd use for a grid bot and for an LP. Would they be the same?"
   },
   {
    "type": "bullets",
+   "chapter": "The mastery ladder",
    "title": "The mastery ladder",
    "items": [
     "Beginner",
@@ -66,24 +81,27 @@
     "Master"
    ],
    "compact": true,
-   "vo": "Beginner, Explains the grid–L.P. similarity. Practitioner, Chooses the right tool by size, custody and pair. Master, Runs grid bots and DeFi as one system with exposure counted by asset and range.",
-   "cap": "Beginner, Explains the grid–LP similarity Practitioner, Chooses the right tool by size, custody and pair Master, Runs grid bots and DeFi as one system with exposure counted by asset and range"
+   "vo": "Beginner: Explains the grid to L.P. similarity. Practitioner: Chooses the right tool by size, custody and pair. Master: Runs grid bots and DeFi as one system with exposure counted by asset and range.",
+   "cap": "Beginner: Explains the grid–LP similarity. Practitioner: Chooses the right tool by size, custody and pair. Master: Runs grid bots and DeFi as one system with exposure counted by asset and range."
   },
   {
    "type": "statement",
+   "chapter": "You've mastered it when…",
+   "kicker": "You've mastered it when…",
    "lines": [
-    "You've mastered it when…"
+    "You've mastered this module when your exposure is counted by underlying asset and range"
    ],
-   "sub": "…your exposure is counted by underlying asset and range, not by number of positions. ---",
-   "vo": "…your exposure is counted by underlying asset and range, not by number of positions. ---",
-   "cap": "…your exposure is counted by underlying asset and range, not by number of positions. ---"
+   "sub": ", not by number of positions.",
+   "vo": "You've mastered this module when your exposure is counted by underlying asset and range, not by number of positions.",
+   "cap": "You've mastered this module when your exposure is counted by underlying asset and range, not by number of positions."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 9.1",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson nine point one: Same idea, different machine.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 9.1: Same idea, different machine."
   }
  ]
 }

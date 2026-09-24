@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 7.9",
  "use": "Lesson 7.9 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Querying chain data yourself",
+  "subtitle": "Lesson 7.9"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-07.png",
-   "eyebrow": "Lesson 7.9",
-   "vo": "Lesson seven point nine. Querying chain data yourself.",
-   "cap": "Lesson 7.9. Querying chain data yourself."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 7 · On-Chain Analytics",
+   "num": "7.9",
+   "title": "Querying chain data yourself",
    "sub": "Answer your own research questions with on-chain queries, instead of relying on someone else's dashboard.",
-   "vo": "Answer your own research questions with on-chain queries, instead of relying on someone else's dashboard.",
-   "cap": "Answer your own research questions with on-chain queries, instead of relying on someone else's dashboard."
+   "vo": "Lesson seven point nine. Querying chain data yourself. By the end of this lesson, you'll be able to answer your own research questions with on-chain queries, instead of relying on someone else's dashboard.",
+   "cap": "Lesson 7.9. Querying chain data yourself. By the end of this lesson, you'll be able to answer your own research questions with on-chain queries, instead of relying on someone else's dashboard."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Query platforms (e.g. Dune, Flipside, Allium) index blockchain data into SQL tables",
@@ -34,68 +48,82 @@
     "Skills",
     "Discipline"
    ],
-   "vo": "Query platforms (for example Dune, Flipside, Allium) index blockchain data into SQL tables: raw transactions and logs, decoded tables per protocol, and curated \"spellbook\" tables (for example all decks trades). Indexers / subgraphs (for example The Graph) serve protocol-specific data via APIs. Skills: SELECT, WHERE, GROUP BY, date truncation, and joining a token price table to convert amounts to USD. Discipline: check your numbers against the protocol's own dashboard; know table definitions (what counts as \"volume\"); watch out for wash trading and double counting.",
-   "cap": "Query platforms (e.g. Dune, Flipside, Allium) index blockchain data into SQL tables: raw transactions and logs, decoded tables per protocol, and curated \"spellbook\" tables (e.g. all DEX trades). Indexers / subgraphs (e.g. The Graph) serve protocol-specific data via APIs. Skills: SELECT, WHERE, GROUP BY, date truncation, and joining a token price table to convert amounts to USD. Discipline: check your numbers against the protocol's own dashboard; know table definitions (what counts as \"volume\"); watch out for wash trading and double counting."
+   "vo": "First, Query platforms (for example Dune, Flipside, Allium) index blockchain data into SQL tables: raw transactions and logs, decoded tables per protocol, and curated \"spellbook\" tables (for example all decks trades). Next, Indexers or subgraphs (for example The Graph) serve protocol-specific data via APIs. Then, Skills: SELECT, WHERE, GROUP BY, date truncation, and joining a token price table to convert amounts to USD. And finally, Discipline: check your numbers against the protocol's own dashboard; know table definitions (what counts as \"volume\"); watch out for wash trading and double counting.",
+   "cap": "First, Query platforms (e.g. Dune, Flipside, Allium) index blockchain data into SQL tables: raw transactions and logs, decoded tables per protocol, and curated \"spellbook\" tables (e.g. all DEX trades). Next, Indexers / subgraphs (e.g. The Graph) serve protocol-specific data via APIs. Then, Skills: SELECT, WHERE, GROUP BY, date truncation, and joining a token price table to convert amounts to USD. And finally, Discipline: check your numbers against the protocol's own dashboard; know table definitions (what counts as \"volume\"); watch out for wash trading and double counting."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example (SQL; table and column names vary by platform"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Then cross-check one day against another data source.",
+    "If they differ a lot, find out why (different pools, wash-trade filters,…"
    ],
-   "sub": "Then cross-check one day against another data source. If they differ a lot, find out why (different pools, wash-trade filters, price sources) before using either number.",
-   "vo": "Then cross-check one day against another data source. If they differ a lot, find out why (different pools, wash-trade filters, price sources) before using either number.",
-   "cap": "Then cross-check one day against another data source. If they differ a lot, find out why (different pools, wash-trade filters, price sources) before using either number."
+   "vo": "Let's work an example, step by step. Then cross-check one day against another data source. If they differ a lot, find out why (different pools, wash-trade filters, price sources) before using either number.",
+   "cap": "Let's work an example, step by step. Then cross-check one day against another data source. If they differ a lot, find out why (different pools, wash-trade filters, price sources) before using either number."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "I can run and adapt a basic query",
     "I cross-check results against a second source",
     "I note table definitions and filters in my research"
    ],
-   "vo": "Your checklist. I can run and adapt a basic query I cross-check results against a second source I note table definitions and filters in my research",
-   "cap": "I can run and adapt a basic query I cross-check results against a second source I note table definitions and filters in my research"
+   "vo": "Here's your checklist. Do it now, for real. First, I can run and adapt a basic query. Next, I cross-check results against a second source. And finally, I note table definitions and filters in my research.",
+   "cap": "Here's your checklist. Do it now, for real. First, I can run and adapt a basic query. Next, I cross-check results against a second source. And finally, I note table definitions and filters in my research."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What is a decoded table?"
-   ],
-   "sub": "Answer: Contract events and calls translated into readable columns for a specific protocol.",
-   "subAt": 0.62,
-   "vo": "What is a decoded table? ... Pause and think. ... The answer: Contract events and calls translated into readable columns for a specific protocol.",
-   "cap": "What is a decoded table? Pause and think. The answer: Contract events and calls translated into readable columns for a specific protocol."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "What is a decoded table?",
+   "a": "Contract events and calls translated into readable columns for a specific protocol.",
+   "vo": "Question one. What is a decoded table? [[pause 4]] The answer: Contract events and calls translated into readable columns for a specific protocol.",
+   "cap": "Question 1. What is a decoded table? The answer: Contract events and calls translated into readable columns for a specific protocol."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why cross-check query results?"
-   ],
-   "sub": "Answer: Definitions, filters and price sources differ; errors are common.",
-   "subAt": 0.62,
-   "vo": "Why cross-check query results? ... Pause and think. ... The answer: Definitions, filters and price sources differ; errors are common.",
-   "cap": "Why cross-check query results? Pause and think. The answer: Definitions, filters and price sources differ; errors are common."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Why cross-check query results?",
+   "a": "Definitions, filters and price sources differ; errors are common.",
+   "vo": "Question two. Why cross-check query results? [[pause 4]] The answer: Definitions, filters and price sources differ; errors are common.",
+   "cap": "Question 2. Why cross-check query results? The answer: Definitions, filters and price sources differ; errors are common."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What SQL clause groups results by day?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What SQL clause groups results by day?",
+   "a": "GROUP BY on a date-truncated timestamp.",
+   "vo": "Question three. What SQL clause groups results by day? [[pause 4]] The answer: GROUP BY on a date-truncated timestamp.",
+   "cap": "Question 3. What SQL clause groups results by day? The answer: GROUP BY on a date-truncated timestamp."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Query platforms (e.g. Dune, Flipside, Allium) index blockchain data into SQL tables",
+    "Indexers / subgraphs (e.g. The Graph) serve protocol-specific data via APIs",
+    "Skills: SELECT, WHERE, GROUP BY, date truncation",
+    "Discipline: check your numbers against the protocol's own dashboard"
    ],
-   "sub": "Answer: GROUP BY on a date-truncated timestamp.",
-   "subAt": 0.62,
-   "vo": "What SQL clause groups results by day? ... Pause and think. ... The answer: GROUP BY on a date-truncated timestamp.",
-   "cap": "What SQL clause groups results by day? Pause and think. The answer: GROUP BY on a date-truncated timestamp."
+   "vo": "Let's recap. Query platforms (for example Dune, Flipside, Allium) index blockchain data into SQL tables. Indexers or subgraphs (for example The Graph) serve protocol-specific data via APIs. Skills: SELECT, WHERE, GROUP BY, date truncation. Discipline: check your numbers against the protocol's own dashboard.",
+   "cap": "Let's recap. Query platforms (e.g. Dune, Flipside, Allium) index blockchain data into SQL tables. Indexers / subgraphs (e.g. The Graph) serve protocol-specific data via APIs. Skills: SELECT, WHERE, GROUP BY, date truncation. Discipline: check your numbers against the protocol's own dashboard."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 8.0",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson eight point zero: Mastery Starter.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 8.0: Mastery Starter."
   }
  ]
 }

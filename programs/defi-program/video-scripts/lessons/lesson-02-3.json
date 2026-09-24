@@ -6,46 +6,62 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 2.3",
  "use": "Lesson 2.3 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Providing liquidity",
+  "subtitle": "Lesson 2.3"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-02.png",
-   "eyebrow": "Lesson 2.3",
-   "vo": "Lesson two point three. Providing liquidity.",
-   "cap": "Lesson 2.3. Providing liquidity."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 2 · Trading On-Chain",
+   "num": "2.3",
+   "title": "Providing liquidity",
    "sub": "Estimate an LP position's fee income from real pool data.",
-   "vo": "Estimate an L.P. position's fee income from real pool data.",
-   "cap": "Estimate an LP position's fee income from real pool data."
+   "vo": "Lesson two point three. Providing liquidity. By the end of this lesson, you'll be able to estimate an L.P. position's fee income from real pool data.",
+   "cap": "Lesson 2.3. Providing liquidity. By the end of this lesson, you'll be able to estimate an LP position's fee income from real pool data."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
   },
   {
    "type": "statement",
+   "chapter": "Key ideas",
+   "kicker": "Key ideas",
    "lines": [
-    "Key ideas"
+    "When you LP you deposit both tokens and receive a share of…"
    ],
-   "sub": "When you LP you deposit both tokens and receive a share of the pool (a token, or an NFT for concentrated positions). You earn your share of swap fees. In return, your token mix changes as traders move the price: you become the counterparty to every trade. Fee ",
-   "vo": "When you L.P. you deposit both tokens and receive a share of the pool (a token, or an NFT for concentrated positions). You earn your share of swap fees. In return, your token mix changes as traders move the price: you become the counterparty to every trade. Fee A.P.R. estimate: fee A.P.R. about (daily volume times fee tier times your pool share times 365) divided by your deposit For a full-range pool your share = deposit divided by pool T.V.L., so this simplifies to daily volume times fee tier times 365 divided by T.V.L.. Use a 30-day average volume, not today's. Volume spikes on volatile days, which are also the days you take the most impermanent loss.",
+   "sub": "When you LP you deposit both tokens and receive a share of the pool (a token, or an NFT for concentrated positions). You earn your share of swap fees. In return, your token mix changes as traders move the price: you become the counterparty ",
+   "vo": "When you L.P. you deposit both tokens and receive a share of the pool (a token, or an NFT for concentrated positions). You earn your share of swap fees. In return, your token mix changes as traders move the price: you become the counterparty to every trade. Fee A.P.R. estimate: fee A.P.R. about (daily volume times fee tier times your pool share times 365) divided by your deposit For a full-range pool your share equals deposit divided by pool T.V.L., so this simplifies to daily volume times fee tier times 365 divided by T.V.L. Use a 30-day average volume, not today's. Volume spikes on volatile days, which are also the days you take the most impermanent loss.",
    "cap": "When you LP you deposit both tokens and receive a share of the pool (a token, or an NFT for concentrated positions). You earn your share of swap fees. In return, your token mix changes as traders move the price: you become the counterparty to every trade. Fee APR estimate: fee APR ≈ (daily volume × fee tier × your pool share × 365) ÷ your deposit For a full-range pool your share = deposit ÷ pool TVL, so this simplifies to daily volume × fee tier × 365 ÷ TVL. Use a 30-day average volume, not today's. Volume spikes on volatile days, which are also the days you take the most impermanent loss."
   },
   {
-   "type": "bullets",
-   "title": "Worked example",
-   "items": [
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example: Pool TVL $10M, 30-day average daily volume $2M,…",
+   "steps": [
     "Daily pool fees = 2,000,000 × 0.003 = $6,000",
-    "Your $10,000 = 0.1% share → $6/day → ~21.9% fee APR (before impermanent loss and gas)"
+    "Your $10,000 = 0.1% share → $6/day → ~21.9% fee APR (before impermanent loss…"
    ],
-   "vo": "Pool T.V.L. $10M, 30-day average daily volume $2M, fee tier 0.3%: If volume halves, your fee A.P.R. halves. If a lot more T.V.L. joins the pool, your share shrinks. Daily pool fees = 2,000,000 times 0.003 = $6,000 Your $10,000 = 0.1% share to $6 a day to about 21.9% fee A.P.R. (before impermanent loss and gas)",
-   "cap": "Daily pool fees = 2,000,000 × 0.003 = $6,000 Your $10,000 = 0.1% share → $6/day → ~21.9% fee APR (before impermanent loss and gas)"
+   "vo": "Let's work an example, step by step. Pool T.V.L. $10M, 30-day average daily volume $2M, fee tier 0.3%: If volume halves, your fee A.P.R. halves. If a lot more T.V.L. joins the pool, your share shrinks. Daily pool fees equals 2,000,000 times 0.003 = $6,000. Your $10,000 equals 0.1% share to $6 a day to about 21.9% fee A.P.R. (before impermanent loss and gas)."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Fee APR calculated from 30-day volume",
@@ -53,48 +69,46 @@
     "Entry prices recorded for the \"vs hold\" benchmark",
     "Exit rule written (volume drops, trend starts, fees stop covering IL)"
    ],
-   "vo": "Your checklist. Fee A.P.R. calculated from 30-day volume I'm OK holding 100% of either token Entry prices recorded for the \"versus hold\" benchmark Exit rule written (volume drops, trend starts, fees stop covering impermanent loss)",
-   "cap": "Fee APR calculated from 30-day volume I'm OK holding 100% of either token Entry prices recorded for the \"vs hold\" benchmark Exit rule written (volume drops, trend starts, fees stop covering IL)"
+   "vo": "Here's your checklist. Do it now, for real. First, Fee A.P.R. calculated from 30-day volume. Next, I'm OK holding 100% of either token. Then, Entry prices recorded for the \"versus hold\" benchmark. And finally, Exit rule written (volume drops, trend starts, fees stop covering impermanent loss).",
+   "cap": "Here's your checklist. Do it now, for real. First, Fee APR calculated from 30-day volume. Next, I'm OK holding 100% of either token. Then, Entry prices recorded for the \"vs hold\" benchmark. And finally, Exit rule written (volume drops, trend starts, fees stop covering IL)."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Pool TVL $5M, daily volume $1M, 0.05% fee. Full-range fee APR?"
-   ],
-   "sub": "Answer: 1,000,000 × 0.0005 × 365 ÷ 5,000,000 = 3.65%.",
-   "subAt": 0.62,
-   "vo": "Pool T.V.L. $5M, daily volume $1M, 0.05% fee. Full-range fee A.P.R.? ... Pause and think. ... The answer: 1,000,000 times 0.0005 times 365 divided by 5,000,000 = 3.65%.",
-   "cap": "Pool TVL $5M, daily volume $1M, 0.05% fee. Full-range fee APR? Pause and think. The answer: 1,000,000 × 0.0005 × 365 ÷ 5,000,000 = 3.65%."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Pool TVL $5M, daily volume $1M, 0.05% fee. Full-range fee APR?",
+   "a": "1,000,000 × 0.0005 × 365 ÷ 5,000,000 = 3.65%.",
+   "vo": "Question one. Pool T.V.L. $5M, daily volume $1M, 0.05% fee. Full-range fee A.P.R.? [[pause 4]] The answer: 1,000,000 times 0.0005 times 365 divided by 5,000,000 equals 3.65%.",
+   "cap": "Question 1. Pool TVL $5M, daily volume $1M, 0.05% fee. Full-range fee APR? The answer: 1,000,000 × 0.0005 × 365 ÷ 5,000,000 = 3.65%."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why use 30-day volume?"
-   ],
-   "sub": "Answer: Single-day spikes overstate fee income, and they happen on the days you take the most impermanent loss.",
-   "subAt": 0.62,
-   "vo": "Why use 30-day volume? ... Pause and think. ... The answer: Single-day spikes overstate fee income, and they happen on the days you take the most impermanent loss.",
-   "cap": "Why use 30-day volume? Pause and think. The answer: Single-day spikes overstate fee income, and they happen on the days you take the most impermanent loss."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Why use 30-day volume?",
+   "a": "Single-day spikes overstate fee income, and they happen on the days you take the most impermanent loss.",
+   "vo": "Question two. Why use 30-day volume? [[pause 4]] The answer: Single-day spikes overstate fee income, and they happen on the days you take the most impermanent loss.",
+   "cap": "Question 2. Why use 30-day volume? The answer: Single-day spikes overstate fee income, and they happen on the days you take the most impermanent loss."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What happens to your share if TVL doubles?"
-   ],
-   "sub": "Answer: It halves, and so do your fees, at the same volume.",
-   "subAt": 0.62,
-   "vo": "What happens to your share if T.V.L. doubles? ... Pause and think. ... The answer: It halves, and so do your fees, at the same volume.",
-   "cap": "What happens to your share if TVL doubles? Pause and think. The answer: It halves, and so do your fees, at the same volume."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What happens to your share if TVL doubles?",
+   "a": "It halves, and so do your fees, at the same volume.",
+   "vo": "Question three. What happens to your share if T.V.L. doubles? [[pause 4]] The answer: It halves, and so do your fees, at the same volume.",
+   "cap": "Question 3. What happens to your share if TVL doubles? The answer: It halves, and so do your fees, at the same volume."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 2.4",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson two point four: Impermanent loss and true L.P. P and L.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 2.4: Impermanent loss & true LP P&L."
   }
  ]
 }

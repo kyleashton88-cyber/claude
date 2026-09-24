@@ -6,92 +6,109 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 7.6",
  "use": "Lesson 7.6 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Network activity",
+  "subtitle": "Lesson 7.6"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-07.png",
-   "eyebrow": "Lesson 7.6",
-   "vo": "Lesson seven point six. Network activity.",
-   "cap": "Lesson 7.6. Network activity."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 7 · On-Chain Analytics",
+   "num": "7.6",
+   "title": "Network activity",
    "sub": "Judge a chain's real usage beyond transaction counts.",
-   "vo": "Judge a chain's real usage beyond transaction counts.",
-   "cap": "Judge a chain's real usage beyond transaction counts."
+   "vo": "Lesson seven point six. Network activity. By the end of this lesson, you'll be able to judge a chain's real usage beyond transaction counts.",
+   "cap": "Lesson 7.6. Network activity. By the end of this lesson, you'll be able to judge a chain's real usage beyond transaction counts."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
   },
   {
    "type": "statement",
+   "chapter": "Key ideas",
+   "kicker": "Key ideas",
    "lines": [
-    "Key ideas"
+    "Transaction counts depend on architecture and bots"
    ],
    "sub": "Transaction counts depend on architecture and bots. Better: fees paid (real demand for blockspace), stablecoin activity, DEX volume, app revenue, and retention of users over time.",
    "vo": "Transaction counts depend on architecture and bots. Better: fees paid (real demand for blockspace), stablecoin activity, decks volume, app revenue, and retention of users over time.",
    "cap": "Transaction counts depend on architecture and bots. Better: fees paid (real demand for blockspace), stablecoin activity, DEX volume, app revenue, and retention of users over time."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Chain A",
+    "Chain B",
+    "B's users pay 100× more for blockspace, a stronger sign of valuable activity."
    ],
-   "sub": "Chain A: 5M transactions/day, $20k fees. Chain B: 500k transactions/day, $2M fees. B's users pay 100× more for blockspace, a stronger sign of valuable activity.",
-   "vo": "Chain A: 5M transactions a day, $20k fees. Chain B: 500k transactions a day, $2M fees. B's users pay 100 times more for blockspace, a stronger sign of valuable activity.",
-   "cap": "Chain A: 5M transactions/day, $20k fees. Chain B: 500k transactions/day, $2M fees. B's users pay 100× more for blockspace, a stronger sign of valuable activity."
+   "vo": "Let's work an example, step by step. Chain A: 5M transactions a day, $20k fees. Chain B: 500k transactions a day, $2M fees. B's users pay 100 times more for blockspace, a stronger sign of valuable activity.",
+   "cap": "Let's work an example, step by step. Chain A: 5M transactions/day, $20k fees. Chain B: 500k transactions/day, $2M fees. B's users pay 100× more for blockspace, a stronger sign of valuable activity."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Fees and app revenue compared, not just transaction counts",
     "Bot activity considered"
    ],
-   "vo": "Your checklist. Fees and app revenue compared, not just transaction counts Bot activity considered",
-   "cap": "Fees and app revenue compared, not just transaction counts Bot activity considered"
+   "vo": "Here's your checklist. Do it now, for real. First, Fees and app revenue compared, not just transaction counts. And finally, Bot activity considered.",
+   "cap": "Here's your checklist. Do it now, for real. First, Fees and app revenue compared, not just transaction counts. And finally, Bot activity considered."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why are fees a better usage signal than transaction counts?"
-   ],
-   "sub": "Answer: Paying fees shows real demand; counts are easy to inflate.",
-   "subAt": 0.62,
-   "vo": "Why are fees a better usage signal than transaction counts? ... Pause and think. ... The answer: Paying fees shows real demand; counts are easy to inflate.",
-   "cap": "Why are fees a better usage signal than transaction counts? Pause and think. The answer: Paying fees shows real demand; counts are easy to inflate."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why are fees a better usage signal than transaction counts?",
+   "a": "Paying fees shows real demand; counts are easy to inflate.",
+   "vo": "Question one. Why are fees a better usage signal than transaction counts? [[pause 4]] The answer: Paying fees shows real demand; counts are easy to inflate.",
+   "cap": "Question 1. Why are fees a better usage signal than transaction counts? The answer: Paying fees shows real demand; counts are easy to inflate."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What distorts transaction counts?"
-   ],
-   "sub": "Answer: Bots, batching and chain design.",
-   "subAt": 0.62,
-   "vo": "What distorts transaction counts? ... Pause and think. ... The answer: Bots, batching and chain design.",
-   "cap": "What distorts transaction counts? Pause and think. The answer: Bots, batching and chain design."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What distorts transaction counts?",
+   "a": "Bots, batching and chain design.",
+   "vo": "Question two. What distorts transaction counts? [[pause 4]] The answer: Bots, batching and chain design.",
+   "cap": "Question 2. What distorts transaction counts? The answer: Bots, batching and chain design."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Name one strong activity metric."
-   ],
-   "sub": "Answer: Fees, app revenue, stablecoin activity or user retention.",
-   "subAt": 0.62,
-   "vo": "Name one strong activity metric. ... Pause and think. ... The answer: Fees, app revenue, stablecoin activity or user retention.",
-   "cap": "Name one strong activity metric. Pause and think. The answer: Fees, app revenue, stablecoin activity or user retention."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Name one strong activity metric.",
+   "a": "Fees, app revenue, stablecoin activity or user retention.",
+   "vo": "Question three. Name one strong activity metric. [[pause 4]] The answer: Fees, app revenue, stablecoin activity or user retention.",
+   "cap": "Question 3. Name one strong activity metric. The answer: Fees, app revenue, stablecoin activity or user retention."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 7.7",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson seven point seven: decks and liquidity analytics.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 7.7: DEX & liquidity analytics."
   }
  ]
 }

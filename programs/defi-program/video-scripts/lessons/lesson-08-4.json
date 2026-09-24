@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 8.4",
  "use": "Lesson 8.4 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "The operating playbook",
+  "subtitle": "Lesson 8.4"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-08.png",
-   "eyebrow": "Lesson 8.4",
-   "vo": "Lesson eight point four. The operating playbook: deploy, monitor, respond, review.",
-   "cap": "Lesson 8.4. The operating playbook: deploy, monitor, respond, review."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 8 · The DeFi Operating System",
+   "num": "8.4",
+   "title": "The operating playbook: deploy, monitor, respond, review",
    "sub": "Run every position through the same four-phase routine.",
-   "vo": "Run every position through the same four-phase routine.",
-   "cap": "Run every position through the same four-phase routine."
+   "vo": "Lesson eight point four. The operating playbook: deploy, monitor, respond, review. By the end of this lesson, you'll be able to run every position through the same four-phase routine.",
+   "cap": "Lesson 8.4. The operating playbook: deploy, monitor, respond, review. By the end of this lesson, you'll be able to run every position through the same four-phase routine."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Deploy",
@@ -34,12 +48,13 @@
     "Respond",
     "Review"
    ],
-   "vo": "Deploy: due diligence done , before-signing checklist , test amount , journal row (protocol, chain, contracts, amount, entry, thesis, kill rules, approvals). Monitor: daily health factor/pegs/ranges/incidents; weekly P and L versus benchmark, harvest, revoke; monthly register review. Respond: pre-written actions for each trigger (see Module 11.5 for incidents). Review: net return after all costs versus benchmark; simplify anything you can't explain in one sentence.",
-   "cap": "Deploy: due diligence done · before-signing checklist · test amount · journal row (protocol, chain, contracts, amount, entry, thesis, kill rules, approvals). Monitor: daily HF/pegs/ranges/incidents; weekly P&L vs benchmark, harvest, revoke; monthly register review. Respond: pre-written actions for each trigger (see Module 11.5 for incidents). Review: net return after all costs vs benchmark; simplify anything you can't explain in one sentence."
+   "vo": "First, Deploy: due diligence done times before-signing checklist times test amount times journal row (protocol, chain, contracts, amount, entry, thesis, kill rules, approvals). Next, Monitor: daily health factor/pegs/ranges/incidents; weekly P and L versus benchmark, harvest, revoke; monthly register review. Then, Respond: pre-written actions for each trigger (see Module 11.5 for incidents). And finally, Review: net return after all costs versus benchmark; simplify anything you can't explain in one sentence.",
+   "cap": "First, Deploy: due diligence done · before-signing checklist · test amount · journal row (protocol, chain, contracts, amount, entry, thesis, kill rules, approvals). Next, Monitor: daily HF/pegs/ranges/incidents; weekly P&L vs benchmark, harvest, revoke; monthly register review. Then, Respond: pre-written actions for each trigger (see Module 11.5 for incidents). And finally, Review: net return after all costs vs benchmark; simplify anything you can't explain in one sentence."
   },
   {
    "type": "bullets",
-   "title": "Worked example — a journal row",
+   "chapter": "Worked example",
+   "title": "Worked example",
    "items": [
     "Position",
     "Amount / date",
@@ -49,59 +64,71 @@
     "Weekly"
    ],
    "compact": true,
-   "vo": "Position, U.S.D.C. supply, Protocol Y, Arbitrum. Amount / date, $10,000 , 2026-09-01. Thesis, about 5% from real borrow demand. Kill rules, Utilisation > 95% for 48h; oracle or collateral change; any incident. Approvals, U.S.D.C. to Protocol Y pool, limited to $10,000. Weekly, Interest earned, utilisation, governance notes.",
-   "cap": "Position, USDC supply, Protocol Y, Arbitrum Amount / date, $10,000 · 2026-09-01 Thesis, ~5% from real borrow demand Kill rules, Utilisation > 95% for 48h; oracle or collateral change; any incident Approvals, USDC → Protocol Y pool, limited to $10,000 Weekly, Interest earned, utilisation, governance notes"
+   "vo": "Position: U.S.D.C. supply, Protocol Y, Arbitrum. Amount or date: $10,000 times 2026-09-01. Thesis: about 5% from real borrow demand. Kill rules: Utilisation > 95% for 48h; oracle or collateral change; any incident. Approvals: U.S.D.C. to Protocol Y pool, limited to $10,000. Weekly: Interest earned, utilisation, governance notes.",
+   "cap": "Position: USDC supply, Protocol Y, Arbitrum. Amount / date: $10,000 · 2026-09-01. Thesis: ~5% from real borrow demand. Kill rules: Utilisation > 95% for 48h; oracle or collateral change; any incident. Approvals: USDC → Protocol Y pool, limited to $10,000. Weekly: Interest earned, utilisation, governance notes."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Journal row for every position",
     "Daily / weekly / monthly routine in the calendar",
     "Response actions written per trigger"
    ],
-   "vo": "Your checklist. Journal row for every position Daily / weekly / monthly routine in the calendar Response actions written per trigger",
-   "cap": "Journal row for every position Daily / weekly / monthly routine in the calendar Response actions written per trigger"
+   "vo": "Here's your checklist. Do it now, for real. First, Journal row for every position. Next, Daily or weekly or monthly routine in the calendar. And finally, Response actions written per trigger.",
+   "cap": "Here's your checklist. Do it now, for real. First, Journal row for every position. Next, Daily / weekly / monthly routine in the calendar. And finally, Response actions written per trigger."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "The four phases?"
-   ],
-   "sub": "Answer: Deploy, monitor, respond, review.",
-   "subAt": 0.62,
-   "vo": "The four phases? ... Pause and think. ... The answer: Deploy, monitor, respond, review.",
-   "cap": "The four phases? Pause and think. The answer: Deploy, monitor, respond, review."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "The four phases?",
+   "a": "Deploy, monitor, respond, review.",
+   "vo": "Question one. The four phases? [[pause 4]] The answer: Deploy, monitor, respond, review.",
+   "cap": "Question 1. The four phases? The answer: Deploy, monitor, respond, review."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What goes in a journal row?"
-   ],
-   "sub": "Answer: Position, amount, date, thesis, kill rules, approvals and ongoing results.",
-   "subAt": 0.62,
-   "vo": "What goes in a journal row? ... Pause and think. ... The answer: Position, amount, date, thesis, kill rules, approvals and ongoing results.",
-   "cap": "What goes in a journal row? Pause and think. The answer: Position, amount, date, thesis, kill rules, approvals and ongoing results."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What goes in a journal row?",
+   "a": "Position, amount, date, thesis, kill rules, approvals and ongoing results.",
+   "vo": "Question two. What goes in a journal row? [[pause 4]] The answer: Position, amount, date, thesis, kill rules, approvals and ongoing results.",
+   "cap": "Question 2. What goes in a journal row? The answer: Position, amount, date, thesis, kill rules, approvals and ongoing results."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What to do with a strategy you can't explain simply?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What to do with a strategy you can't explain simply?",
+   "a": "Simplify it or exit.",
+   "vo": "Question three. What to do with a strategy you can't explain simply? [[pause 4]] The answer: Simplify it or exit.",
+   "cap": "Question 3. What to do with a strategy you can't explain simply? The answer: Simplify it or exit."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Deploy: due diligence done · before-signing checklist · test amount · journal row (protocol, chain",
+    "Monitor: daily HF/pegs/ranges/incidents",
+    "Respond: pre-written actions for each trigger (see Module 11.5 for incidents)",
+    "Review: net return after all costs vs benchmark"
    ],
-   "sub": "Answer: Simplify it or exit.",
-   "subAt": 0.62,
-   "vo": "What to do with a strategy you can't explain simply? ... Pause and think. ... The answer: Simplify it or exit.",
-   "cap": "What to do with a strategy you can't explain simply? Pause and think. The answer: Simplify it or exit."
+   "vo": "Let's recap. Deploy: due diligence done times before-signing checklist times test amount times journal row (protocol, chain. Monitor: daily health factor/pegs/ranges/incidents. Respond: pre-written actions for each trigger (see Module 11.5 for incidents). Review: net return after all costs versus benchmark.",
+   "cap": "Let's recap. Deploy: due diligence done · before-signing checklist · test amount · journal row (protocol, chain. Monitor: daily HF/pegs/ranges/incidents. Respond: pre-written actions for each trigger (see Module 11.5 for incidents). Review: net return after all costs vs benchmark."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 8.5",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson eight point five: Measuring performance honestly.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 8.5: Measuring performance honestly."
   }
  ]
 }

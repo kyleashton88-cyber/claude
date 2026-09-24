@@ -6,34 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 3.6",
  "use": "Lesson 3.6 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Lending design deep dive",
+  "subtitle": "Lesson 3.6"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-03.png",
-   "eyebrow": "Lesson 3.6",
-   "vo": "Lesson three point six. Lending design deep dive: e-mode, caps, auctions, soft liquidation, bad debt.",
-   "cap": "Lesson 3.6. Lending design deep dive: e-mode, caps, auctions, soft liquidation, bad debt."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 3 · Lending & Leverage",
+   "num": "3.6",
+   "title": "Lending design deep dive: e-mode, caps, auctions, soft liquidation, bad debt",
    "sub": "Read a lending protocol's risk parameters like a risk manager.",
-   "vo": "Read a lending protocol's risk parameters like a risk manager.",
-   "cap": "Read a lending protocol's risk parameters like a risk manager."
-  },
-  {
-   "type": "image",
-   "src": "assets/diagrams/liquidation-cascade.png",
-   "eyebrow": "The liquidation cascade",
-   "vo": "Here's the picture: The liquidation cascade.",
-   "cap": "The liquidation cascade."
+   "vo": "Lesson three point six. Lending design deep dive: e-mode, caps, auctions, soft liquidation, bad debt. By the end of this lesson, you'll be able to read a lending protocol's risk parameters like a risk manager.",
+   "cap": "Lesson 3.6. Lending design deep dive: e-mode, caps, auctions, soft liquidation, bad debt. By the end of this lesson, you'll be able to read a lending protocol's risk parameters like a risk manager."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Efficiency mode (e-mode)",
@@ -42,77 +49,102 @@
     "Liquidation mechanisms",
     "Bad debt"
    ],
-   "vo": "Efficiency mode (e-mode): higher LTVs for correlated assets (for example an liquid staking token against ETH, or stablecoin against stablecoin). Great for correlated loops; dangerous if the correlation breaks (a depeg). Isolation mode / isolated markets: newer or riskier collateral can only back limited borrowing, so its failure can't infect the whole pool. Supply and borrow caps: limits on how much of an asset can be deposited or borrowed, protecting against manipulation and illiquid collateral. Liquidation mechanisms: a fixed bonus (liquidators get for example 5% extra) versus Dutch auctions (the price falls until someone buys, a better price discovery in calm markets but vulnerable if keepers fail) versus soft liquidation (collateral is converted gradually across price bands as the price falls, and can convert back if the price recovers; losses come from the conversions rather than one penalty). Bad debt: when collateral is worth less than the debt it backs. Who pays: a reserve or insurance fund, a staking \"safety module\", or lenders pro rata (socialised).",
-   "cap": "Efficiency mode (e-mode): higher LTVs for correlated assets (e.g. an LST against ETH, or stablecoin against stablecoin). Great for correlated loops; dangerous if the correlation breaks (a depeg). Isolation mode / isolated markets: newer or riskier collateral can only back limited borrowing, so its failure can't infect the whole pool. Supply and borrow caps: limits on how much of an asset can be deposited or borrowed, protecting against manipulation and illiquid collateral. Liquidation mechanisms: a fixed bonus (liquidators get e.g. 5% extra) vs Dutch auctions (the price falls until someone buys, a better price discovery in calm markets but vulnerable if keepers fail) vs soft liquidation (collateral is converted gradually across price bands as the price falls, and can convert back if the price recovers; losses come from the conversions rather than one penalty). Bad debt: when collateral is worth less than the debt it backs. Who pays: a reserve or insurance fund, a staking \"safety module\", or lenders pro rata (socialised)."
+   "vo": "First, Efficiency mode (e-mode): higher LTVs for correlated assets (for example an liquid staking token against ETH, or stablecoin against stablecoin). Great for correlated loops; dangerous if the correlation breaks (a depeg). Next, Isolation mode or isolated markets: newer or riskier collateral can only back limited borrowing, so its failure can't infect the whole pool. Then, Supply and borrow caps: limits on how much of an asset can be deposited or borrowed, protecting against manipulation and illiquid collateral. Also, Liquidation mechanisms: a fixed bonus (liquidators get for example 5% extra) versus Dutch auctions (the price falls until someone buys, a better price discovery in calm markets but vulnerable if keepers fail) versus soft liquidation (collateral is converted gradually across price bands as the price falls, and can convert back if the price recovers; losses come from the conversions rather than one penalty). On top of that, Bad debt: when collateral is worth less than the debt it backs. Who pays: a reserve or insurance fund, a staking \"safety module\", or lenders pro rata (socialised).",
+   "cap": "First, Efficiency mode (e-mode): higher LTVs for correlated assets (e.g. an LST against ETH, or stablecoin against stablecoin). Great for correlated loops; dangerous if the correlation breaks (a depeg). Next, Isolation mode / isolated markets: newer or riskier collateral can only back limited borrowing, so its failure can't infect the whole pool. Then, Supply and borrow caps: limits on how much of an asset can be deposited or borrowed, protecting against manipulation and illiquid collateral. Also, Liquidation mechanisms: a fixed bonus (liquidators get e.g. 5% extra) vs Dutch auctions (the price falls until someone buys, a better price discovery in calm markets but vulnerable if keepers fail) vs soft liquidation (collateral is converted gradually across price bands as the price falls, and can convert back if the price recovers; losses come from the conversions rather than one penalty). On top of that, Bad debt: when collateral is worth less than the debt it backs. Who pays: a reserve or insurance fund, a staking \"safety module\", or lenders pro rata (socialised)."
   },
   {
    "type": "bullets",
-   "title": "Key ideas",
+   "chapter": "Key ideas",
+   "title": "Key ideas (cont.)",
    "items": [
     "Risk curators / risk managers set these parameters; governance approves them."
    ],
-   "vo": "Risk curators / risk managers set these parameters; governance approves them.",
-   "cap": "Risk curators / risk managers set these parameters; governance approves them."
+   "vo": "And finally, Risk curators or risk managers set these parameters; governance approves them.",
+   "cap": "And finally, Risk curators / risk managers set these parameters; governance approves them."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "image",
+   "chapter": "Key ideas",
+   "src": "assets/diagrams/liquidation-cascade.png",
+   "eyebrow": "The liquidation cascade",
+   "wide": true,
+   "vo": "Let's look at the diagram: The liquidation cascade. Take a moment with it. It's everything we've just said, in one picture.",
+   "cap": "Let's look at the diagram: The liquidation cascade. Take a moment with it. It's everything we've just said, in one picture."
+  },
+  {
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "An LST loop in e-mode at 90% LTV looks safe because LST and ETH move together.",
+    "If the LST trades at a 6% discount on the oracle during a panic, the…",
+    "Check what oracle prices the LST (market price vs exchange rate) before…"
    ],
-   "sub": "An LST loop in e-mode at 90% LTV looks safe because LST and ETH move together. If the LST trades at a 6% discount on the oracle during a panic, the \"correlated\" position can be liquidated even though ETH's price didn't move. Check what oracle prices the LST (m",
-   "vo": "An liquid staking token loop in e-mode at 90% L.T.V. looks safe because liquid staking token and ETH move together. If the liquid staking token trades at a 6% discount on the oracle during a panic, the \"correlated\" position can be liquidated even though ETH's price didn't move. Check what oracle prices the liquid staking token (market price versus exchange rate) before trusting e-mode.",
-   "cap": "An LST loop in e-mode at 90% LTV looks safe because LST and ETH move together. If the LST trades at a 6% discount on the oracle during a panic, the \"correlated\" position can be liquidated even though ETH's price didn't move. Check what oracle prices the LST (market price vs exchange rate) before trusting e-mode."
+   "vo": "Let's work an example, step by step. An liquid staking token loop in e-mode at 90% L.T.V. looks safe because liquid staking token and ETH move together. If the liquid staking token trades at a 6% discount on the oracle during a panic, the \"correlated\" position can be liquidated even though ETH's price didn't move. Check what oracle prices the liquid staking token (market price versus exchange rate) before trusting e-mode.",
+   "cap": "Let's work an example, step by step. An LST loop in e-mode at 90% LTV looks safe because LST and ETH move together. If the LST trades at a 6% discount on the oracle during a panic, the \"correlated\" position can be liquidated even though ETH's price didn't move. Check what oracle prices the LST (market price vs exchange rate) before trusting e-mode."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "For each market",
     "I know who absorbs bad debt in each protocol I lend to",
     "E-mode positions have a depeg scenario in my stress test"
    ],
-   "vo": "Your checklist. For each market: L.T.V., liquidation threshold, bonus/mechanism, caps, oracle I know who absorbs bad debt in each protocol I lend to E-mode positions have a depeg scenario in my stress test",
-   "cap": "For each market: LTV, liquidation threshold, bonus/mechanism, caps, oracle I know who absorbs bad debt in each protocol I lend to E-mode positions have a depeg scenario in my stress test"
+   "vo": "Here's your checklist. Do it now, for real. First, for each market: L.T.V., liquidation threshold, bonus/mechanism, caps, oracle. Next, I know who absorbs bad debt in each protocol I lend to. And finally, E-mode positions have a depeg scenario in my stress test.",
+   "cap": "Here's your checklist. Do it now, for real. First, for each market: LTV, liquidation threshold, bonus/mechanism, caps, oracle. Next, I know who absorbs bad debt in each protocol I lend to. And finally, E-mode positions have a depeg scenario in my stress test."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What is e-mode for?"
-   ],
-   "sub": "Answer: Higher LTVs on correlated assets.",
-   "subAt": 0.62,
-   "vo": "What is e-mode for? ... Pause and think. ... The answer: Higher LTVs on correlated assets.",
-   "cap": "What is e-mode for? Pause and think. The answer: Higher LTVs on correlated assets."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "What is e-mode for?",
+   "a": "Higher LTVs on correlated assets.",
+   "vo": "Question one. What is e-mode for? [[pause 4]] The answer: Higher LTVs on correlated assets.",
+   "cap": "Question 1. What is e-mode for? The answer: Higher LTVs on correlated assets."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "How does soft liquidation differ from a fixed-bonus liquidation?"
-   ],
-   "sub": "Answer: Collateral is converted gradually across price bands (and can convert back) instead of being seized in one go with a penalty.",
-   "subAt": 0.62,
-   "vo": "How does soft liquidation differ from a fixed-bonus liquidation? ... Pause and think. ... The answer: Collateral is converted gradually across price bands (and can convert back) instead of being seized in one go with a penalty.",
-   "cap": "How does soft liquidation differ from a fixed-bonus liquidation? Pause and think. The answer: Collateral is converted gradually across price bands (and can convert back) instead of being seized in one go with a penalty."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "How does soft liquidation differ from a fixed-bonus liquidation?",
+   "a": "Collateral is converted gradually across price bands (and can convert back) instead of being seized in one go with a penalty.",
+   "vo": "Question two. How does soft liquidation differ from a fixed-bonus liquidation? [[pause 4]] The answer: Collateral is converted gradually across price bands (and can convert back) instead of being seized in one go with a penalty.",
+   "cap": "Question 2. How does soft liquidation differ from a fixed-bonus liquidation? The answer: Collateral is converted gradually across price bands (and can convert back) instead of being seized in one go with a penalty."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Who can end up paying for bad debt?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Who can end up paying for bad debt?",
+   "a": "Protocol reserves, a safety module, or lenders pro rata.",
+   "vo": "Question three. Who can end up paying for bad debt? [[pause 4]] The answer: Protocol reserves, a safety module, or lenders pro rata.",
+   "cap": "Question 3. Who can end up paying for bad debt? The answer: Protocol reserves, a safety module, or lenders pro rata."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Efficiency mode (e-mode): higher LTVs for correlated assets (e.g. an LST against ETH",
+    "Isolation mode / isolated markets",
+    "Supply and borrow caps: limits on how much of an asset can be deposited or borrowed",
+    "Liquidation mechanisms: a fixed bonus (liquidators get e.g. 5% extra) vs Dutch auctions (the price falls until someone buys, a better price discovery in calm markets but vulnerable if keepers fail) vs soft liquidation (collateral is converted gradually across price bands as the price falls, and can convert back if the price recovers"
    ],
-   "sub": "Answer: Protocol reserves, a safety module, or lenders pro rata.",
-   "subAt": 0.62,
-   "vo": "Who can end up paying for bad debt? ... Pause and think. ... The answer: Protocol reserves, a safety module, or lenders pro rata.",
-   "cap": "Who can end up paying for bad debt? Pause and think. The answer: Protocol reserves, a safety module, or lenders pro rata."
+   "vo": "Let's recap. Efficiency mode (e-mode): higher LTVs for correlated assets (for example an liquid staking token against ETH. Isolation mode or isolated markets. Supply and borrow caps: limits on how much of an asset can be deposited or borrowed. Liquidation mechanisms: a fixed bonus (liquidators get for example 5% extra) versus Dutch auctions (the price falls until someone buys, a better price discovery in calm markets but vulnerable if keepers fail) versus soft liquidation (collateral is converted gradually across price bands as the price falls, and can convert back if the price recovers.",
+   "cap": "Let's recap. Efficiency mode (e-mode): higher LTVs for correlated assets (e.g. an LST against ETH. Isolation mode / isolated markets. Supply and borrow caps: limits on how much of an asset can be deposited or borrowed. Liquidation mechanisms: a fixed bonus (liquidators get e.g. 5% extra) vs Dutch auctions (the price falls until someone buys, a better price discovery in calm markets but vulnerable if keepers fail) vs soft liquidation (collateral is converted gradually across price bands as the price falls, and can convert back if the price recovers."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 3.7",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson three point seven: C.D.P. stablecoins: minting your own dollars.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 3.7: CDP stablecoins: minting your own dollars."
   }
  ]
 }

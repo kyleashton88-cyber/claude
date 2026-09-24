@@ -6,37 +6,53 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 11.4",
  "use": "Lesson 11.4 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Stress-testing a portfolio",
+  "subtitle": "Lesson 11.4"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-11.png",
-   "eyebrow": "Lesson 11.4",
-   "vo": "Lesson eleven point four. Stress-testing a portfolio.",
-   "cap": "Lesson 11.4. Stress-testing a portfolio."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 11 · Hedging & Risk Engineering",
+   "num": "11.4",
+   "title": "Stress-testing a portfolio",
    "sub": "Run standard shock scenarios on your book and fix what fails before markets test it.",
-   "vo": "Run standard shock scenarios on your book and fix what fails before markets test it.",
-   "cap": "Run standard shock scenarios on your book and fix what fails before markets test it."
+   "vo": "Lesson eleven point four. Stress-testing a portfolio. By the end of this lesson, you'll be able to run standard shock scenarios on your book and fix what fails before markets test it.",
+   "cap": "Lesson 11.4. Stress-testing a portfolio. By the end of this lesson, you'll be able to run standard shock scenarios on your book and fix what fails before markets test it."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
   },
   {
    "type": "statement",
+   "chapter": "Key ideas",
+   "kicker": "Key ideas",
    "lines": [
-    "Key ideas"
+    "Scenarios every operator runs"
    ],
-   "sub": "Scenarios every operator runs: crypto −50% in a day · a stablecoin depegs 10% · borrow rates spike to 20% · your largest protocol is hacked · your main L2 halts for 48h. For each: loss, liquidations, liquidity, and whether the payout policy survives.",
-   "vo": "Scenarios every operator runs: crypto minus 50% in a day , a stablecoin depegs 10% , borrow rates spike to 20% , your largest protocol is hacked , your main layer two halts for 48h. For each: loss, liquidations, liquidity, and whether the payout policy survives.",
+   "sub": "Scenarios every operator runs: crypto −50% in a day · a stablecoin depegs 10% · borrow rates spike to 20% · your largest protocol is hacked · your main L2 halts for 48h. For each: loss, liquidations, liquidity, and whether the payout policy",
+   "vo": "Scenarios every operator runs: crypto minus 50% in a day times a stablecoin depegs 10% , borrow rates spike to 20% , your largest protocol is hacked times your main layer two halts for 48h. For each: loss, liquidations, liquidity, and whether the payout policy survives.",
    "cap": "Scenarios every operator runs: crypto −50% in a day · a stablecoin depegs 10% · borrow rates spike to 20% · your largest protocol is hacked · your main L2 halts for 48h. For each: loss, liquidations, liquidity, and whether the payout policy survives."
   },
   {
    "type": "bullets",
-   "title": "Worked example — $200,000 book",
+   "chapter": "Worked example",
+   "title": "Worked example",
    "items": [
     "ETH −50%",
     "One stablecoin −10%",
@@ -45,68 +61,58 @@
     "L2 halted 48h"
    ],
    "compact": true,
-   "vo": "ETH minus 50%, Spot minus $30k; collateral minus $30k (health factor 4.0 to 2.0, no liquidation); L.P. $20k to $14.1k (minus $5.9k) to minus $65.9k (minus 32.9%), Survives, but the payout must fall. One stablecoin minus 10%, minus $2.5k on $25k, Yes. Borrow rate 20%, Interest on $12k rises from about $600 to $2,400 a year, Yes: covered by reserve. One lending protocol hacked (total loss), minus $25k (minus 12.5%), Survives; cap was 12.5%. layer two halted 48h, Positions frozen; the reserve on another chain covers needs, Yes, if the reserve isn't on the same layer two.",
-   "cap": "ETH −50%, Spot −$30k; collateral −$30k (HF 4.0 → 2.0, no liquidation); LP $20k → $14.1k (−$5.9k) → −$65.9k (−32.9%), Survives, but the payout must fall One stablecoin −10%, −$2.5k on $25k, Yes Borrow rate 20%, Interest on $12k rises from ~$600 to $2,400/yr, Yes: covered by reserve One lending protocol hacked (total loss), −$25k (−12.5%), Survives; cap was 12.5% L2 halted 48h, Positions frozen; the reserve on another chain covers needs, Yes, if the reserve isn't on the same L2"
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Worked example — $200,000 book"
-   ],
-   "sub": "Holdings: ETH spot $60k · LST collateral $60k with $12k debt · stable lending $50k ($25k each in two protocols) · ETH/USDC LP $20k · PT stable $10k.",
-   "vo": "Holdings: ETH spot $60k , liquid staking token collateral $60k with $12k debt , stable lending $50k ($25k each in two protocols) , ETH/U.S.D.C. L.P. $20k , P.T. stable $10k.",
-   "cap": "Holdings: ETH spot $60k · LST collateral $60k with $12k debt · stable lending $50k ($25k each in two protocols) · ETH/USDC LP $20k · PT stable $10k."
+   "vo": "Holdings: ETH spot $60k times liquid staking token collateral $60k with $12k debt times stable lending $50k ($25k each in two protocols) , ETH/U.S.D.C. L.P. $20k times P.T. stable $10k. ETH minus 50%, Spot minus $30k; collateral minus $30k (health factor 4.0 to 2.0, no liquidation); L.P. $20k to $14.1k (minus $5.9k) to minus $65.9k (minus 32.9%), Survives, but the payout must fall. One stablecoin minus 10%, minus $2.5k on $25k, Yes. Borrow rate 20%, Interest on $12k rises from about $600 to $2,400 a year, Yes: covered by reserve. One lending protocol hacked (total loss), minus $25k (minus 12.5%), Survives; cap was 12.5%. layer two halted 48h, Positions frozen; the reserve on another chain covers needs, Yes, if the reserve isn't on the same layer two.",
+   "cap": "Holdings: ETH spot $60k · LST collateral $60k with $12k debt · stable lending $50k ($25k each in two protocols) · ETH/USDC LP $20k · PT stable $10k. ETH −50%, Spot −$30k; collateral −$30k (HF 4.0 → 2.0, no liquidation); LP $20k → $14.1k (−$5.9k) → −$65.9k (−32.9%), Survives, but the payout must fall. One stablecoin −10%, −$2.5k on $25k, Yes. Borrow rate 20%, Interest on $12k rises from ~$600 to $2,400/yr, Yes: covered by reserve. One lending protocol hacked (total loss), −$25k (−12.5%), Survives; cap was 12.5%. L2 halted 48h, Positions frozen; the reserve on another chain covers needs, Yes, if the reserve isn't on the same L2."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Five scenarios run on the current book",
     "Every \"fail\" has a fix (smaller cap, bigger buffer, move the reserve)",
     "Re-run quarterly and after big changes"
    ],
-   "vo": "Your checklist. Five scenarios run on the current book Every \"fail\" has a fix (smaller cap, bigger buffer, move the reserve) Re-run quarterly and after big changes",
-   "cap": "Five scenarios run on the current book Every \"fail\" has a fix (smaller cap, bigger buffer, move the reserve) Re-run quarterly and after big changes"
+   "vo": "Here's your checklist. Do it now, for real. First, Five scenarios run on the current book. Next, every \"fail\" has a fix (smaller cap, bigger buffer, move the reserve). And finally, Re-run quarterly and after big changes.",
+   "cap": "Here's your checklist. Do it now, for real. First, Five scenarios run on the current book. Next, every \"fail\" has a fix (smaller cap, bigger buffer, move the reserve). And finally, Re-run quarterly and after big changes."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why did the collateral position survive −50%?"
-   ],
-   "sub": "Answer: It started at HF 4.0; halving the price took it to 2.0.",
-   "subAt": 0.62,
-   "vo": "Why did the collateral position survive minus 50%? ... Pause and think. ... The answer: It started at health factor 4.0; halving the price took it to 2.0.",
-   "cap": "Why did the collateral position survive −50%? Pause and think. The answer: It started at HF 4.0; halving the price took it to 2.0."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why did the collateral position survive −50%?",
+   "a": "It started at HF 4.0; halving the price took it to 2.0.",
+   "vo": "Question one. Why did the collateral position survive minus 50%? [[pause 4]] The answer: It started at health factor 4.0; halving the price took it to 2.0.",
+   "cap": "Question 1. Why did the collateral position survive −50%? The answer: It started at HF 4.0; halving the price took it to 2.0."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What does the L2-halt scenario test?"
-   ],
-   "sub": "Answer: Whether your liquidity depends on a single chain.",
-   "subAt": 0.62,
-   "vo": "What does the layer two-halt scenario test? ... Pause and think. ... The answer: Whether your liquidity depends on a single chain.",
-   "cap": "What does the L2-halt scenario test? Pause and think. The answer: Whether your liquidity depends on a single chain."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What does the L2-halt scenario test?",
+   "a": "Whether your liquidity depends on a single chain.",
+   "vo": "Question two. What does the layer two-halt scenario test? [[pause 4]] The answer: Whether your liquidity depends on a single chain.",
+   "cap": "Question 2. What does the L2-halt scenario test? The answer: Whether your liquidity depends on a single chain."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What's the output of a stress test?"
-   ],
-   "sub": "Answer: Fixes: smaller caps, bigger buffers, better-placed reserves.",
-   "subAt": 0.62,
-   "vo": "What's the output of a stress test? ... Pause and think. ... The answer: Fixes: smaller caps, bigger buffers, better-placed reserves.",
-   "cap": "What's the output of a stress test? Pause and think. The answer: Fixes: smaller caps, bigger buffers, better-placed reserves."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What's the output of a stress test?",
+   "a": "Fixes: smaller caps, bigger buffers, better-placed reserves.",
+   "vo": "Question three. What's the output of a stress test? [[pause 4]] The answer: Fixes: smaller caps, bigger buffers, better-placed reserves.",
+   "cap": "Question 3. What's the output of a stress test? The answer: Fixes: smaller caps, bigger buffers, better-placed reserves."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 11.5",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson eleven point five: Incident response: the first 60 minutes.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 11.5: Incident response: the first 60 minutes."
   }
  ]
 }

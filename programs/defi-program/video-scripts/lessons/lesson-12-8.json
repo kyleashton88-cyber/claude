@@ -6,34 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 12.8",
  "use": "Lesson 12.8 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Institutional-grade custody",
+  "subtitle": "Lesson 12.8"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-12.png",
-   "eyebrow": "Lesson 12.8",
-   "vo": "Lesson twelve point eight. Institutional-grade custody: M.P.C., custodians and policy engines.",
-   "cap": "Lesson 12.8. Institutional-grade custody: MPC, custodians and policy engines."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 12 · Operate as Your Own Bank",
+   "num": "12.8",
+   "title": "Institutional-grade custody: MPC, custodians and policy engines",
    "sub": "Know the custody options institutions use, and when they make sense for a large personal or family book.",
-   "vo": "Know the custody options institutions use, and when they make sense for a large personal or family book.",
-   "cap": "Know the custody options institutions use, and when they make sense for a large personal or family book."
-  },
-  {
-   "type": "image",
-   "src": "assets/diagrams/custody-architecture.png",
-   "eyebrow": "Custody architecture",
-   "vo": "Here's the picture: Custody architecture.",
-   "cap": "Custody architecture."
+   "vo": "Lesson twelve point eight. Institutional-grade custody: M.P.C., custodians and policy engines. By the end of this lesson, you'll be able to know the custody options institutions use, and when they make sense for a large personal or family book.",
+   "cap": "Lesson 12.8. Institutional-grade custody: MPC, custodians and policy engines. By the end of this lesson, you'll be able to know the custody options institutions use, and when they make sense for a large personal or family book."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Multisig (12.2)",
@@ -42,68 +49,91 @@
     "Policy engines",
     "Hybrid"
    ],
-   "vo": "Multisig (12.2): several keys, rules enforced on-chain, transparent and verifiable. M.P.C. (multi-party computation): one key is split into shares held by different devices or parties; signatures are created together without ever assembling the key. The rules are enforced off-chain by the provider's software. It works on any chain, but you depend on the vendor and can't verify the policy on-chain. Qualified custodians: regulated firms that hold assets for clients. Strong legal protections in some jurisdictions; you give up self-custody and on-chain flexibility. Policy engines: approval workflows (who can approve what, above which amount), allowlists, time windows and velocity limits, available in both institutional M.P.C. platforms and smart-account setups. Hybrid: many large holders use a custodian or M.P.C. for long-term reserves and multisig/smart accounts for active DeFi.",
-   "cap": "Multisig (12.2): several keys, rules enforced on-chain, transparent and verifiable. MPC (multi-party computation): one key is split into shares held by different devices or parties; signatures are created together without ever assembling the key. The rules are enforced off-chain by the provider's software. It works on any chain, but you depend on the vendor and can't verify the policy on-chain. Qualified custodians: regulated firms that hold assets for clients. Strong legal protections in some jurisdictions; you give up self-custody and on-chain flexibility. Policy engines: approval workflows (who can approve what, above which amount), allowlists, time windows and velocity limits, available in both institutional MPC platforms and smart-account setups. Hybrid: many large holders use a custodian or MPC for long-term reserves and multisig/smart accounts for active DeFi."
+   "vo": "First, Multisig (12.2): several keys, rules enforced on-chain, transparent and verifiable. Next, M.P.C. (multi-party computation): one key is split into shares held by different devices or parties; signatures are created together without ever assembling the key. The rules are enforced off-chain by the provider's software. It works on any chain, but you depend on the vendor and can't verify the policy on-chain. Then, Qualified custodians: regulated firms that hold assets for clients. Strong legal protections in some jurisdictions; you give up self-custody and on-chain flexibility. Also, Policy engines: approval workflows (who can approve what, above which amount), allowlists, time windows and velocity limits, available in both institutional M.P.C. platforms and smart-account setups. And finally, Hybrid: many large holders use a custodian or M.P.C. for long-term reserves and multisig/smart accounts for active DeFi.",
+   "cap": "First, Multisig (12.2): several keys, rules enforced on-chain, transparent and verifiable. Next, MPC (multi-party computation): one key is split into shares held by different devices or parties; signatures are created together without ever assembling the key. The rules are enforced off-chain by the provider's software. It works on any chain, but you depend on the vendor and can't verify the policy on-chain. Then, Qualified custodians: regulated firms that hold assets for clients. Strong legal protections in some jurisdictions; you give up self-custody and on-chain flexibility. Also, Policy engines: approval workflows (who can approve what, above which amount), allowlists, time windows and velocity limits, available in both institutional MPC platforms and smart-account setups. And finally, Hybrid: many large holders use a custodian or MPC for long-term reserves and multisig/smart accounts for active DeFi."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "image",
+   "chapter": "Key ideas",
+   "src": "assets/diagrams/custody-architecture.png",
+   "eyebrow": "Custody architecture",
+   "wide": true,
+   "vo": "Let's look at the diagram: Custody architecture. Take a moment with it. It's everything we've just said, in one picture.",
+   "cap": "Let's look at the diagram: Custody architecture. Take a moment with it. It's everything we've just said, in one picture."
+  },
+  {
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "A $5M family book",
+    "The succession plan (12.6) covers all three."
    ],
-   "sub": "A $5M family book: cold reserves ($3M) with a qualified custodian (legal title, insurance terms read); active DeFi ($1.5M) in a 2-of-3 multisig with a policy of two approvers above $50,000 and an allowlist; hot float ($20,000) in a limited smart account. The s",
-   "vo": "A $5M family book: cold reserves ($3M) with a qualified custodian (legal title, insurance terms read); active DeFi ($1.5M) in a 2-of-3 multisig with a policy of two approvers above $50,000 and an allowlist; hot float ($20,000) in a limited smart account. The succession plan (12.6) covers all three.",
-   "cap": "A $5M family book: cold reserves ($3M) with a qualified custodian (legal title, insurance terms read); active DeFi ($1.5M) in a 2-of-3 multisig with a policy of two approvers above $50,000 and an allowlist; hot float ($20,000) in a limited smart account. The succession plan (12.6) covers all three."
+   "vo": "Let's work an example, step by step. A $5M family book: cold reserves ($3M) with a qualified custodian (legal title, insurance terms read); active DeFi ($1.5M) in a 2-of-3 multisig with a policy of two approvers above $50,000 and an allowlist; hot float ($20,000) in a limited smart account. The succession plan (12.6) covers all three.",
+   "cap": "Let's work an example, step by step. A $5M family book: cold reserves ($3M) with a qualified custodian (legal title, insurance terms read); active DeFi ($1.5M) in a 2-of-3 multisig with a policy of two approvers above $50,000 and an allowlist; hot float ($20,000) in a limited smart account. The succession plan (12.6) covers all three."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Custody option chosen per tier, with reasons",
     "Vendor/custodian terms, insurance and recovery read",
     "Policy engine rules written"
    ],
-   "vo": "Your checklist. Custody option chosen per tier, with reasons Vendor/custodian terms, insurance and recovery read Policy engine rules written: approvers, thresholds, allowlists",
-   "cap": "Custody option chosen per tier, with reasons Vendor/custodian terms, insurance and recovery read Policy engine rules written: approvers, thresholds, allowlists"
+   "vo": "Here's your checklist. Do it now, for real. First, Custody option chosen per tier, with reasons. Next, Vendor/custodian terms, insurance and recovery read. And finally, Policy engine rules written: approvers, thresholds, allowlists.",
+   "cap": "Here's your checklist. Do it now, for real. First, Custody option chosen per tier, with reasons. Next, Vendor/custodian terms, insurance and recovery read. And finally, Policy engine rules written: approvers, thresholds, allowlists."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "MPC vs multisig: where are the rules enforced?"
-   ],
-   "sub": "Answer: MPC: off-chain by the provider's software. Multisig: on-chain by the contract.",
-   "subAt": 0.62,
-   "vo": "M.P.C. versus multisig: where are the rules enforced? ... Pause and think. ... The answer: M.P.C.: off-chain by the provider's software. Multisig: on-chain by the contract.",
-   "cap": "MPC vs multisig: where are the rules enforced? Pause and think. The answer: MPC: off-chain by the provider's software. Multisig: on-chain by the contract."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "MPC vs multisig: where are the rules enforced?",
+   "a": "MPC: off-chain by the provider's software. Multisig: on-chain by the contract.",
+   "vo": "Question one. M.P.C. versus multisig: where are the rules enforced? [[pause 4]] The answer: M.P.C.: off-chain by the provider's software. Multisig: on-chain by the contract.",
+   "cap": "Question 1. MPC vs multisig: where are the rules enforced? The answer: MPC: off-chain by the provider's software. Multisig: on-chain by the contract."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What do you give up with a qualified custodian?"
-   ],
-   "sub": "Answer: Self-custody and on-chain flexibility.",
-   "subAt": 0.62,
-   "vo": "What do you give up with a qualified custodian? ... Pause and think. ... The answer: Self-custody and on-chain flexibility.",
-   "cap": "What do you give up with a qualified custodian? Pause and think. The answer: Self-custody and on-chain flexibility."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What do you give up with a qualified custodian?",
+   "a": "Self-custody and on-chain flexibility.",
+   "vo": "Question two. What do you give up with a qualified custodian? [[pause 4]] The answer: Self-custody and on-chain flexibility.",
+   "cap": "Question 2. What do you give up with a qualified custodian? The answer: Self-custody and on-chain flexibility."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What is a policy engine?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What is a policy engine?",
+   "a": "Rules for approvals, thresholds, allowlists and limits on transactions.",
+   "vo": "Question three. What is a policy engine? [[pause 4]] The answer: Rules for approvals, thresholds, allowlists and limits on transactions.",
+   "cap": "Question 3. What is a policy engine? The answer: Rules for approvals, thresholds, allowlists and limits on transactions."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Multisig (12.2): several keys, rules enforced on-chain, transparent and verifiable",
+    "MPC (multi-party computation): one key is split into shares held by different devices or parties",
+    "Qualified custodians: regulated firms that hold assets for clients",
+    "Policy engines: approval workflows (who can approve what, above which amount), allowlists"
    ],
-   "sub": "Answer: Rules for approvals, thresholds, allowlists and limits on transactions.",
-   "subAt": 0.62,
-   "vo": "What is a policy engine? ... Pause and think. ... The answer: Rules for approvals, thresholds, allowlists and limits on transactions.",
-   "cap": "What is a policy engine? Pause and think. The answer: Rules for approvals, thresholds, allowlists and limits on transactions."
+   "vo": "Let's recap. Multisig (12.2): several keys, rules enforced on-chain, transparent and verifiable. M.P.C. (multi-party computation): one key is split into shares held by different devices or parties. Qualified custodians: regulated firms that hold assets for clients. Policy engines: approval workflows (who can approve what, above which amount), allowlists.",
+   "cap": "Let's recap. Multisig (12.2): several keys, rules enforced on-chain, transparent and verifiable. MPC (multi-party computation): one key is split into shares held by different devices or parties. Qualified custodians: regulated firms that hold assets for clients. Policy engines: approval workflows (who can approve what, above which amount), allowlists."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 13.0",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson thirteen point zero: Mastery Starter.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 13.0: Mastery Starter."
   }
  ]
 }

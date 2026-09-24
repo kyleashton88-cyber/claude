@@ -103,6 +103,8 @@ Calculate your LTV, health factor and liquidation price before you borrow.
 - `defi_calc.py health --qty 10 --price 3000 --lt 0.8 --debt 12000`
 - Max debt for HF 2.0 = $12,000; for HF 1.5 = $16,000.
 
+![Health factor as the price of ETH moves](../assets/charts/health-factor.png)
+
 ### Checklist
 - [ ] HF and liquidation price calculated before borrowing
 - [ ] HF ≥ 2 for volatile collateral

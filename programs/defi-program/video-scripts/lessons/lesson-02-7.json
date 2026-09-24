@@ -6,34 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 2.7",
  "use": "Lesson 2.7 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Advanced AMM design and LVR",
+  "subtitle": "Lesson 2.7"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-02.png",
-   "eyebrow": "Lesson 2.7",
-   "vo": "Lesson two point seven. Advanced AMM design and L.V.R..",
-   "cap": "Lesson 2.7. Advanced AMM design and LVR."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 2 · Trading On-Chain",
+   "num": "2.7",
+   "title": "Advanced AMM design and LVR",
    "sub": "Know the major AMM designs and measure an LP's real cost with loss-versus-rebalancing (LVR).",
-   "vo": "Know the major AMM designs and measure an L.P.'s real cost with loss-versus-rebalancing (L.V.R.).",
-   "cap": "Know the major AMM designs and measure an LP's real cost with loss-versus-rebalancing (LVR)."
-  },
-  {
-   "type": "image",
-   "src": "assets/charts/lvr.png",
-   "eyebrow": "Loss-versus-rebalancing vs volatility",
-   "vo": "Here's the picture: Loss-versus-rebalancing versus volatility.",
-   "cap": "Loss-versus-rebalancing vs volatility."
+   "vo": "Lesson two point seven. Advanced AMM design and L.V.R.. By the end of this lesson, you'll be able to know the major AMM designs and measure an L.P.'s real cost with loss-versus-rebalancing (L.V.R.).",
+   "cap": "Lesson 2.7. Advanced AMM design and LVR. By the end of this lesson, you'll be able to know the major AMM designs and measure an LP's real cost with loss-versus-rebalancing (LVR)."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Constant product (x·y=k)",
@@ -42,77 +49,103 @@
     "Concentrated liquidity",
     "Hooks and dynamic fees"
    ],
-   "vo": "Constant product (x,y=k): works for any pair; spreads liquidity across all prices. StableSwap: for assets that should trade near 1:1 (stablecoins, liquid staking token/ETH). Blends constant-sum (flat, low slippage near the peg) with constant-product (safety away from it), tuned by an amplification parameter. Weighted pools: more than two tokens or uneven weights (for example 80/20), with invariant ∏ xᵢ^wᵢ = k. An 80/20 pool has less impermanent loss on the 80% token. Concentrated liquidity: positions in price ranges (\"ticks\"); the pool tracks the square root of price internally. Hooks and dynamic fees: newer designs (for example Uniswap v4, 2025) let pools run custom code at swap time: dynamic fees, limit orders, oracles. Each hook is extra contract risk.",
-   "cap": "Constant product (x·y=k): works for any pair; spreads liquidity across all prices. StableSwap: for assets that should trade near 1:1 (stablecoins, LST/ETH). Blends constant-sum (flat, low slippage near the peg) with constant-product (safety away from it), tuned by an amplification parameter. Weighted pools: more than two tokens or uneven weights (e.g. 80/20), with invariant ∏ xᵢ^wᵢ = k. An 80/20 pool has less impermanent loss on the 80% token. Concentrated liquidity: positions in price ranges (\"ticks\"); the pool tracks √price internally. Hooks and dynamic fees: newer designs (e.g. Uniswap v4, 2025) let pools run custom code at swap time: dynamic fees, limit orders, oracles. Each hook is extra contract risk."
+   "vo": "First, Constant product (x times y equals k): works for any pair; spreads liquidity across all prices. Next, StableSwap: for assets that should trade near 1:1 (stablecoins, liquid staking token/ETH). Blends constant-sum (flat, low slippage near the peg) with constant-product (safety away from it), tuned by an amplification parameter. Then, Weighted pools: more than two tokens or uneven weights (for example 80 to 20), with invariant ∏ xᵢ^wᵢ equals k. An 80 to 20 pool has less impermanent loss on the 80% token. Also, Concentrated liquidity: positions in price ranges (\"ticks\"); the pool tracks the square root of price internally. On top of that, Hooks and dynamic fees: newer designs (for example Uniswap v4, 2025) let pools run custom code at swap time: dynamic fees, limit orders, oracles. Each hook is extra contract risk.",
+   "cap": "First, Constant product (x·y=k): works for any pair; spreads liquidity across all prices. Next, StableSwap: for assets that should trade near 1:1 (stablecoins, LST/ETH). Blends constant-sum (flat, low slippage near the peg) with constant-product (safety away from it), tuned by an amplification parameter. Then, Weighted pools: more than two tokens or uneven weights (e.g. 80/20), with invariant ∏ xᵢ^wᵢ = k. An 80/20 pool has less impermanent loss on the 80% token. Also, Concentrated liquidity: positions in price ranges (\"ticks\"); the pool tracks √price internally. On top of that, Hooks and dynamic fees: newer designs (e.g. Uniswap v4, 2025) let pools run custom code at swap time: dynamic fees, limit orders, oracles. Each hook is extra contract risk."
   },
   {
    "type": "bullets",
-   "title": "Key ideas",
+   "chapter": "Key ideas",
+   "title": "Key ideas (cont.)",
    "items": [
     "LVR (loss-versus-rebalancing)"
    ],
-   "vo": "L.V.R. (loss-versus-rebalancing): pool prices only update when arbitrageurs trade against L.P.s after prices move elsewhere. L.V.R. measures what L.P.s lose to that arbitrage, versus a portfolio that rebalances at market prices. For a full-range constant-product pool, L.V.R. about sigma squared/8 of pool value per year (sigma = annual volatility). Fees must beat L.V.R., not just impermanent loss.",
-   "cap": "LVR (loss-versus-rebalancing): pool prices only update when arbitrageurs trade against LPs after prices move elsewhere. LVR measures what LPs lose to that arbitrage, versus a portfolio that rebalances at market prices. For a full-range constant-product pool, LVR ≈ σ²/8 of pool value per year (σ = annual volatility). Fees must beat LVR, not just impermanent loss."
+   "vo": "And finally, L.V.R. (loss-versus-rebalancing): pool prices only update when arbitrageurs trade against L.P.s after prices move elsewhere. L.V.R. measures what L.P.s lose to that arbitrage, versus a portfolio that rebalances at market prices. For a full-range constant-product pool, L.V.R. about sigma squared/8 of pool value per year (sigma equals annual volatility). Fees must beat L.V.R., not just impermanent loss.",
+   "cap": "And finally, LVR (loss-versus-rebalancing): pool prices only update when arbitrageurs trade against LPs after prices move elsewhere. LVR measures what LPs lose to that arbitrage, versus a portfolio that rebalances at market prices. For a full-range constant-product pool, LVR ≈ σ²/8 of pool value per year (σ = annual volatility). Fees must beat LVR, not just impermanent loss."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "image",
+   "chapter": "Key ideas",
+   "src": "assets/charts/lvr.png",
+   "eyebrow": "Loss-versus-rebalancing vs volatility",
+   "wide": true,
+   "vo": "Let's look at the chart: Loss-versus-rebalancing versus volatility. Take a moment with it. It's everything we've just said, in one picture.",
+   "cap": "Let's look at the chart: Loss-versus-rebalancing vs volatility. Take a moment with it. It's everything we've just said, in one picture."
+  },
+  {
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "An ETH/USDC full-range pool with ETH volatility 80%/yr",
+    "With 12% fee APR, LPs keep ≈ +4%/yr before gas.",
+    "If volatility rises to 110%, LVR ≈ 15%/yr, and the same fees now lose money.",
+    "Higher-volatility pairs need much higher fee tiers."
    ],
-   "sub": "An ETH/USDC full-range pool with ETH volatility 80%/yr: the calculator → LVR ≈ 8.0%/yr. With 12% fee APR, LPs keep ≈ +4%/yr before gas. If volatility rises to 110%, LVR ≈ 15%/yr, and the same fees now lose money. Higher-volatility pairs need much higher fee ti",
-   "vo": "An ETH/U.S.D.C. full-range pool with ETH volatility 80% a year: the calculator to L.V.R. about 8.0% a year. With 12% fee A.P.R., L.P.s keep about +4% a year before gas. If volatility rises to 110%, L.V.R. about 15% a year, and the same fees now lose money. Higher-volatility pairs need much higher fee tiers.",
-   "cap": "An ETH/USDC full-range pool with ETH volatility 80%/yr: the calculator → LVR ≈ 8.0%/yr. With 12% fee APR, LPs keep ≈ +4%/yr before gas. If volatility rises to 110%, LVR ≈ 15%/yr, and the same fees now lose money. Higher-volatility pairs need much higher fee tiers."
+   "vo": "Let's work an example, step by step. An ETH/U.S.D.C. full-range pool with ETH volatility 80% a year: the calculator gives L.V.R. about 8.0% a year. With 12% fee A.P.R., L.P.s keep about +4% a year before gas. If volatility rises to 110%, L.V.R. about 15% a year, and the same fees now lose money. Higher-volatility pairs need much higher fee tiers.",
+   "cap": "Let's work an example, step by step. An ETH/USDC full-range pool with ETH volatility 80%/yr: the calculator gives LVR ≈ 8.0%/yr. With 12% fee APR, LPs keep ≈ +4%/yr before gas. If volatility rises to 110%, LVR ≈ 15%/yr, and the same fees now lose money. Higher-volatility pairs need much higher fee tiers."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "I choose pool type by pair",
     "I compare fee APR with LVR, not just IL",
     "Hook contracts reviewed like any other contract"
    ],
-   "vo": "Your checklist. I choose pool type by pair: StableSwap for pegged pairs, weighted/CL otherwise I compare fee A.P.R. with L.V.R., not just impermanent loss Hook contracts reviewed like any other contract",
-   "cap": "I choose pool type by pair: StableSwap for pegged pairs, weighted/CL otherwise I compare fee APR with LVR, not just IL Hook contracts reviewed like any other contract"
+   "vo": "Here's your checklist. Do it now, for real. First, I choose pool type by pair: StableSwap for pegged pairs, weighted/CL otherwise. Next, I compare fee A.P.R. with L.V.R., not just impermanent loss. And finally, Hook contracts reviewed like any other contract.",
+   "cap": "Here's your checklist. Do it now, for real. First, I choose pool type by pair: StableSwap for pegged pairs, weighted/CL otherwise. Next, I compare fee APR with LVR, not just IL. And finally, Hook contracts reviewed like any other contract."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why do stable pairs use StableSwap curves?"
-   ],
-   "sub": "Answer: They give very low slippage near the peg, where these pairs trade.",
-   "subAt": 0.62,
-   "vo": "Why do stable pairs use StableSwap curves? ... Pause and think. ... The answer: They give very low slippage near the peg, where these pairs trade.",
-   "cap": "Why do stable pairs use StableSwap curves? Pause and think. The answer: They give very low slippage near the peg, where these pairs trade."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why do stable pairs use StableSwap curves?",
+   "a": "They give very low slippage near the peg, where these pairs trade.",
+   "vo": "Question one. Why do stable pairs use StableSwap curves? [[pause 4]] The answer: They give very low slippage near the peg, where these pairs trade.",
+   "cap": "Question 1. Why do stable pairs use StableSwap curves? The answer: They give very low slippage near the peg, where these pairs trade."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What does LVR measure?"
-   ],
-   "sub": "Answer: What LPs lose to arbitrageurs because pool prices lag the market.",
-   "subAt": 0.62,
-   "vo": "What does L.V.R. measure? ... Pause and think. ... The answer: What L.P.s lose to arbitrageurs because pool prices lag the market.",
-   "cap": "What does LVR measure? Pause and think. The answer: What LPs lose to arbitrageurs because pool prices lag the market."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What does LVR measure?",
+   "a": "What LPs lose to arbitrageurs because pool prices lag the market.",
+   "vo": "Question two. What does L.V.R. measure? [[pause 4]] The answer: What L.P.s lose to arbitrageurs because pool prices lag the market.",
+   "cap": "Question 2. What does LVR measure? The answer: What LPs lose to arbitrageurs because pool prices lag the market."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Volatility 60%/yr: approximate LVR for a full-range pool?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Volatility 60%/yr: approximate LVR for a full-range pool?",
+   "a": "0.6²/8 = 4.5% of pool value per year.",
+   "vo": "Question three. Volatility 60% a year: approximate L.V.R. for a full-range pool? [[pause 4]] The answer: 0.6 squared/8 equals 4.5% of pool value per year.",
+   "cap": "Question 3. Volatility 60%/yr: approximate LVR for a full-range pool? The answer: 0.6²/8 = 4.5% of pool value per year."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Constant product (x·y=k): works for any pair",
+    "StableSwap: for assets that should trade near 1:1 (stablecoins, LST/ETH)",
+    "Weighted pools: more than two tokens or uneven weights (e.g. 80/20), with invariant ∏ xᵢ^wᵢ = k",
+    "Concentrated liquidity: positions in price ranges (\"ticks\")"
    ],
-   "sub": "Answer: 0.6²/8 = 4.5% of pool value per year.",
-   "subAt": 0.62,
-   "vo": "Volatility 60% a year: approximate L.V.R. for a full-range pool? ... Pause and think. ... The answer: 0.6 squared/8 = 4.5% of pool value per year.",
-   "cap": "Volatility 60%/yr: approximate LVR for a full-range pool? Pause and think. The answer: 0.6²/8 = 4.5% of pool value per year."
+   "vo": "Let's recap. Constant product (x times y equals k): works for any pair. StableSwap: for assets that should trade near 1:1 (stablecoins, liquid staking token/ETH). Weighted pools: more than two tokens or uneven weights (for example 80 to 20), with invariant ∏ xᵢ^wᵢ equals k. Concentrated liquidity: positions in price ranges (\"ticks\").",
+   "cap": "Let's recap. Constant product (x·y=k): works for any pair. StableSwap: for assets that should trade near 1:1 (stablecoins, LST/ETH). Weighted pools: more than two tokens or uneven weights (e.g. 80/20), with invariant ∏ xᵢ^wᵢ = k. Concentrated liquidity: positions in price ranges (\"ticks\")."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 2.8",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson two point eight: The M.E.V. supply chain.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 2.8: The MEV supply chain."
   }
  ]
 }

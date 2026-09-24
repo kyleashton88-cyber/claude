@@ -6,93 +6,110 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 4.2",
  "use": "Lesson 4.2 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Native staking",
+  "subtitle": "Lesson 4.2"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-04.png",
-   "eyebrow": "Lesson 4.2",
-   "vo": "Lesson four point two. Native staking.",
-   "cap": "Lesson 4.2. Native staking."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 4 · Yield",
+   "num": "4.2",
+   "title": "Native staking",
    "sub": "Understand what staking pays for, and its lock-up and validator risks.",
-   "vo": "Understand what staking pays for, and its lock-up and validator risks.",
-   "cap": "Understand what staking pays for, and its lock-up and validator risks."
+   "vo": "Lesson four point two. Native staking. By the end of this lesson, you'll be able to understand what staking pays for, and its lock-up and validator risks.",
+   "cap": "Lesson 4.2. Native staking. By the end of this lesson, you'll be able to understand what staking pays for, and its lock-up and validator risks."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
   },
   {
    "type": "statement",
+   "chapter": "Key ideas",
+   "kicker": "Key ideas",
    "lines": [
-    "Key ideas"
+    "Proof-of-stake networks pay stakers to secure the chain"
    ],
-   "sub": "Proof-of-stake networks pay stakers to secure the chain. You either run a validator or delegate to one. Rewards come from issuance and fees. Risks: slashing (penalties for validator misbehaviour on some networks), unbonding periods (waiting time to withdraw) a",
+   "sub": "Proof-of-stake networks pay stakers to secure the chain. You either run a validator or delegate to one. Rewards come from issuance and fees. Risks: slashing (penalties for validator misbehaviour on some networks), unbonding periods (waiting",
    "vo": "Proof-of-stake networks pay stakers to secure the chain. You either run a validator or delegate to one. Rewards come from issuance and fees. Risks: slashing (penalties for validator misbehaviour on some networks), unbonding periods (waiting time to withdraw) and validator downtime.",
    "cap": "Proof-of-stake networks pay stakers to secure the chain. You either run a validator or delegate to one. Rewards come from issuance and fees. Risks: slashing (penalties for validator misbehaviour on some networks), unbonding periods (waiting time to withdraw) and validator downtime."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Staking yields a few percent a year in the staked asset (e.g. ~3%,…",
+    "Your dollar return is still dominated by the asset's price",
+    "Stake what you'd hold anyway."
    ],
-   "sub": "Staking yields a few percent a year in the staked asset (e.g. ~3%, illustrative). Your dollar return is still dominated by the asset's price: +3% staking on an asset that falls 30% is still a large loss. Stake what you'd hold anyway.",
-   "vo": "Staking yields a few percent a year in the staked asset (for example about 3%, illustrative). Your dollar return is still dominated by the asset's price: +3% staking on an asset that falls 30% is still a large loss. Stake what you'd hold anyway.",
-   "cap": "Staking yields a few percent a year in the staked asset (e.g. ~3%, illustrative). Your dollar return is still dominated by the asset's price: +3% staking on an asset that falls 30% is still a large loss. Stake what you'd hold anyway."
+   "vo": "Let's work an example, step by step. Staking yields a few percent a year in the staked asset (for example about 3%, illustrative). Your dollar return is still dominated by the asset's price: +3% staking on an asset that falls 30% is still a large loss. Stake what you'd hold anyway.",
+   "cap": "Let's work an example, step by step. Staking yields a few percent a year in the staked asset (e.g. ~3%, illustrative). Your dollar return is still dominated by the asset's price: +3% staking on an asset that falls 30% is still a large loss. Stake what you'd hold anyway."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Validator/provider chosen on uptime, fee, concentration and record",
     "Unbonding period known",
     "Only \"hold-anyway\" capital staked"
    ],
-   "vo": "Your checklist. Validator/provider chosen on uptime, fee, concentration and record Unbonding period known Only \"hold-anyway\" capital staked",
-   "cap": "Validator/provider chosen on uptime, fee, concentration and record Unbonding period known Only \"hold-anyway\" capital staked"
+   "vo": "Here's your checklist. Do it now, for real. First, Validator/provider chosen on uptime, fee, concentration and record. Next, Unbonding period known. And finally, only \"hold-anyway\" capital staked.",
+   "cap": "Here's your checklist. Do it now, for real. First, Validator/provider chosen on uptime, fee, concentration and record. Next, Unbonding period known. And finally, only \"hold-anyway\" capital staked."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What do staking rewards pay for?"
-   ],
-   "sub": "Answer: Securing the network.",
-   "subAt": 0.62,
-   "vo": "What do staking rewards pay for? ... Pause and think. ... The answer: Securing the network.",
-   "cap": "What do staking rewards pay for? Pause and think. The answer: Securing the network."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "What do staking rewards pay for?",
+   "a": "Securing the network.",
+   "vo": "Question one. What do staking rewards pay for? [[pause 4]] The answer: Securing the network.",
+   "cap": "Question 1. What do staking rewards pay for? The answer: Securing the network."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What is unbonding?"
-   ],
-   "sub": "Answer: A waiting period before unstaked assets become transferable.",
-   "subAt": 0.62,
-   "vo": "What is unbonding? ... Pause and think. ... The answer: A waiting period before unstaked assets become transferable.",
-   "cap": "What is unbonding? Pause and think. The answer: A waiting period before unstaked assets become transferable."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What is unbonding?",
+   "a": "A waiting period before unstaked assets become transferable.",
+   "vo": "Question two. What is unbonding? [[pause 4]] The answer: A waiting period before unstaked assets become transferable.",
+   "cap": "Question 2. What is unbonding? The answer: A waiting period before unstaked assets become transferable."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Does staking protect against price falls?"
-   ],
-   "sub": "Answer: No. It adds a small yield; price moves dominate.",
-   "subAt": 0.62,
-   "vo": "Does staking protect against price falls? ... Pause and think. ... The answer: No. It adds a small yield; price moves dominate.",
-   "cap": "Does staking protect against price falls? Pause and think. The answer: No. It adds a small yield; price moves dominate."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Does staking protect against price falls?",
+   "a": "No. It adds a small yield; price moves dominate.",
+   "vo": "Question three. Does staking protect against price falls? [[pause 4]] The answer: No. It adds a small yield; price moves dominate.",
+   "cap": "Question 3. Does staking protect against price falls? The answer: No. It adds a small yield; price moves dominate."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 4.3",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson four point three: Liquid staking (liquid staking token).",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 4.3: Liquid staking (LSTs)."
   }
  ]
 }

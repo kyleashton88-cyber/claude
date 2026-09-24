@@ -6,27 +6,40 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 14.4",
  "use": "Lesson 14.4 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Operator capstone and certification",
+  "subtitle": "Lesson 14.4"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-14.png",
-   "eyebrow": "Lesson 14.4",
-   "vo": "Lesson fourteen point four. Operator capstone and certification.",
-   "cap": "Lesson 14.4. Operator capstone and certification."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 14 · Automation & Mastery",
+   "num": "14.4",
+   "title": "Operator capstone and certification",
    "sub": "Assemble your complete on-chain bank and have it assessed.",
-   "vo": "Assemble your complete on-chain bank and have it assessed.",
-   "cap": "Assemble your complete on-chain bank and have it assessed."
+   "vo": "Lesson fourteen point four. Operator capstone and certification. By the end of this lesson, you'll be able to assemble your complete on-chain bank and have it assessed.",
+   "cap": "Lesson 14.4. Operator capstone and certification. By the end of this lesson, you'll be able to assemble your complete on-chain bank and have it assessed."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Explanation — the operator capstone",
    "title": "Explanation — the operator capstone",
    "items": [
     "Balance sheet with equity, LTV and runway (12.1)",
@@ -35,12 +48,13 @@
     "Liquidity ladder T0–T3 (12.4)",
     "Lending policy with risk assumptions (12.5)"
    ],
-   "vo": "Submit one document (template in 07-program-operations.md) containing: Certification levels (assessed against the rubric in 07-program-operations.md): Balance sheet with equity, L.T.V. and runway (12.1) Custody policy and recovery-test log (12.2) Credit policy with action levels (12.3) Liquidity ladder T0–T3 (12.4) Lending policy with risk assumptions (12.5)",
-   "cap": "Balance sheet with equity, LTV and runway (12.1) Custody policy and recovery-test log (12.2) Credit policy with action levels (12.3) Liquidity ladder T0–T3 (12.4) Lending policy with risk assumptions (12.5)"
+   "vo": "Submit one document (template in 07-program-operations.md) containing: Certification levels (assessed against the rubric in 07-program-operations.md): First, Balance sheet with equity, L.T.V. and runway (12.1). Next, Custody policy and recovery-test log (12.2). Then, Credit policy with action levels (12.3). Also, Liquidity ladder T0 to T3 (12.4). On top of that, Lending policy with risk assumptions (12.5).",
+   "cap": "Submit one document (template in 07-program-operations.md) containing: Certification levels (assessed against the rubric in 07-program-operations.md): First, Balance sheet with equity, LTV and runway (12.1). Next, Custody policy and recovery-test log (12.2). Then, Credit policy with action levels (12.3). Also, Liquidity ladder T0–T3 (12.4). On top of that, Lending policy with risk assumptions (12.5)."
   },
   {
    "type": "bullets",
-   "title": "Explanation — the operator capstone",
+   "chapter": "Explanation — the operator capstone",
+   "title": "Explanation — the operator capstone (cont.)",
    "items": [
     "Books template and letter of instruction location (12.6; never the seed)",
     "Income portfolio with risk-adjusted expected income (13.3)",
@@ -48,70 +62,70 @@
     "Stress test, five scenarios, with fixes (11.4)",
     "Incident playbook (11.5), alert sheet (14.1) and automation permissions (14.2)"
    ],
-   "vo": "Books template and letter of instruction location (12.6; never the seed) Income portfolio with risk-adjusted expected income (13.3) Payout policy (13.4) Stress test, five scenarios, with fixes (11.4) Incident playbook (11.5), alert sheet (14.1) and automation permissions (14.2)",
-   "cap": "Books template and letter of instruction location (12.6; never the seed) Income portfolio with risk-adjusted expected income (13.3) Payout policy (13.4) Stress test, five scenarios, with fixes (11.4) Incident playbook (11.5), alert sheet (14.1) and automation permissions (14.2)"
+   "vo": "And Books template and letter of instruction location (12.6; never the seed). Plus, Income portfolio with risk-adjusted expected income (13.3). One more: Payout policy (13.4). One more: Stress test, five scenarios, with fixes (11.4). One more: Incident playbook (11.5), alert sheet (14.1) and automation permissions (14.2).",
+   "cap": "And Books template and letter of instruction location (12.6; never the seed). Plus, Income portfolio with risk-adjusted expected income (13.3). One more: Payout policy (13.4). One more: Stress test, five scenarios, with fixes (11.4). One more: Incident playbook (11.5), alert sheet (14.1) and automation permissions (14.2)."
   },
   {
    "type": "bullets",
-   "title": "Explanation — the operator capstone",
+   "chapter": "Explanation — the operator capstone",
+   "title": "Explanation — the operator capstone (cont.)",
    "items": [
     "Analyst",
     "Operator",
     "Operator with distinction"
    ],
-   "vo": "Analyst: passed the analyst capstone (Modules 6–7) Operator: passed the operator capstone Operator with distinction: operator capstone scored at least 90%, plus one quarter of books kept to standard",
-   "cap": "Analyst: passed the analyst capstone (Modules 6–7) Operator: passed the operator capstone Operator with distinction: operator capstone scored ≥ 90%, plus one quarter of books kept to standard"
+   "vo": "One more: Analyst: passed the analyst capstone (Modules 6 to 7). One more: Operator: passed the operator capstone. And finally, Operator with distinction: operator capstone scored at least 90%, plus one quarter of books kept to standard.",
+   "cap": "One more: Analyst: passed the analyst capstone (Modules 6–7). One more: Operator: passed the operator capstone. And finally, Operator with distinction: operator capstone scored ≥ 90%, plus one quarter of books kept to standard."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "All ten sections complete",
     "Calculators used for every number",
     "Submitted (Live tier"
    ],
-   "vo": "Your checklist. All ten sections complete Calculators used for every number Submitted (Live tier: booked for review)",
-   "cap": "All ten sections complete Calculators used for every number Submitted (Live tier: booked for review)"
+   "vo": "Here's your checklist. Do it now, for real. First, all ten sections complete. Next, Calculators used for every number. And finally, Submitted (Live tier: booked for review).",
+   "cap": "Here's your checklist. Do it now, for real. First, all ten sections complete. Next, Calculators used for every number. And finally, Submitted (Live tier: booked for review)."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What must never appear in the capstone?"
-   ],
-   "sub": "Answer: Seed phrases, private keys or anything that grants access.",
-   "subAt": 0.62,
-   "vo": "What must never appear in the capstone? ... Pause and think. ... The answer: Seed phrases, private keys or anything that grants access.",
-   "cap": "What must never appear in the capstone? Pause and think. The answer: Seed phrases, private keys or anything that grants access."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "What must never appear in the capstone?",
+   "a": "Seed phrases, private keys or anything that grants access.",
+   "vo": "Question one. What must never appear in the capstone? [[pause 4]] The answer: Seed phrases, private keys or anything that grants access.",
+   "cap": "Question 1. What must never appear in the capstone? The answer: Seed phrases, private keys or anything that grants access."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Which lesson's output shows income is sustainable?"
-   ],
-   "sub": "Answer: 13.4: the payout policy, based on risk-adjusted expected income.",
-   "subAt": 0.62,
-   "vo": "Which lesson's output shows income is sustainable? ... Pause and think. ... The answer: 13.4: the payout policy, based on risk-adjusted expected income.",
-   "cap": "Which lesson's output shows income is sustainable? Pause and think. The answer: 13.4: the payout policy, based on risk-adjusted expected income."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Which lesson's output shows income is sustainable?",
+   "a": "13.4: the payout policy, based on risk-adjusted expected income.",
+   "vo": "Question two. Which lesson's output shows income is sustainable? [[pause 4]] The answer: 13.4: the payout policy, based on risk-adjusted expected income.",
+   "cap": "Question 2. Which lesson's output shows income is sustainable? The answer: 13.4: the payout policy, based on risk-adjusted expected income."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What's needed for \"with distinction\"?"
-   ],
-   "sub": "Answer: ≥ 90% on the operator capstone plus a quarter of books kept to standard.",
-   "subAt": 0.62,
-   "vo": "What's needed for \"with distinction\"? ... Pause and think. ... The answer: at least 90% on the operator capstone plus a quarter of books kept to standard.",
-   "cap": "What's needed for \"with distinction\"? Pause and think. The answer: ≥ 90% on the operator capstone plus a quarter of books kept to standard."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What's needed for \"with distinction\"?",
+   "a": "≥ 90% on the operator capstone plus a quarter of books kept to standard.",
+   "vo": "Question three. What's needed for \"with distinction\"? [[pause 4]] The answer: at least 90% on the operator capstone plus a quarter of books kept to standard.",
+   "cap": "Question 3. What's needed for \"with distinction\"? The answer: ≥ 90% on the operator capstone plus a quarter of books kept to standard."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 14.5",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson fourteen point five: Building your own tools: reading contracts, data and simple scripts.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 14.5: Building your own tools: reading contracts, data and simple scripts."
   }
  ]
 }

@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 14.3",
  "use": "Lesson 14.3 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Operating procedures",
+  "subtitle": "Lesson 14.3"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-14.png",
-   "eyebrow": "Lesson 14.3",
-   "vo": "Lesson fourteen point three. Operating procedures: multisig signing, change control, reviews.",
-   "cap": "Lesson 14.3. Operating procedures: multisig signing, change control, reviews."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 14 · Automation & Mastery",
+   "num": "14.3",
+   "title": "Operating procedures: multisig signing, change control, reviews",
    "sub": "Run your bank with procedures that prevent single-point mistakes.",
-   "vo": "Run your bank with procedures that prevent single-point mistakes.",
-   "cap": "Run your bank with procedures that prevent single-point mistakes."
+   "vo": "Lesson fourteen point three. Operating procedures: multisig signing, change control, reviews. By the end of this lesson, you'll be able to run your bank with procedures that prevent single-point mistakes.",
+   "cap": "Lesson 14.3. Operating procedures: multisig signing, change control, reviews. By the end of this lesson, you'll be able to run your bank with procedures that prevent single-point mistakes."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Multisig signing procedure",
@@ -34,68 +48,83 @@
     "Separation",
     "Review calendar"
    ],
-   "vo": "transaction (destination, amount, calldata) on their own device screen, not a shared screenshot. written up (thesis, risk register row, size) and waits 24h before execution. Multisig signing procedure: every signer independently verifies the Change control: new protocol, new chain, new strategy, or a cap change is Separation: the person proposing a vault transaction isn't the only one approving it. Review calendar: weekly books , monthly register , quarterly stress test and recovery drill , annual review (Module 13.5).",
-   "cap": "Multisig signing procedure: every signer independently verifies the Change control: new protocol, new chain, new strategy, or a cap change is Separation: the person proposing a vault transaction isn't the only one approving it. Review calendar: weekly books · monthly register · quarterly stress test and recovery drill · annual review (Module 13.5)."
+   "vo": "transaction (destination, amount, calldata) on their own device screen, not a shared screenshot. written up (thesis, risk register row, size) and waits 24h before execution. First, Multisig signing procedure: every signer independently verifies the. Next, Change control: new protocol, new chain, new strategy, or a cap change is. Then, Separation: the person proposing a vault transaction isn't the only one approving it. And finally, Review calendar: weekly books times monthly register times quarterly stress test and recovery drill times annual review (Module 13.5).",
+   "cap": "transaction (destination, amount, calldata) on their own device screen, not a shared screenshot. written up (thesis, risk register row, size) and waits 24h before execution. First, Multisig signing procedure: every signer independently verifies the. Next, Change control: new protocol, new chain, new strategy, or a cap change is. Then, Separation: the person proposing a vault transaction isn't the only one approving it. And finally, Review calendar: weekly books · monthly register · quarterly stress test and recovery drill · annual review (Module 13.5)."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "A 2-of-3 vault moves $40,000 to the operating wallet.",
+    "Signer 1 proposes; Signer 2 checks the destination against the allowlist and…",
+    "Logged in the books with both names."
    ],
-   "sub": "A 2-of-3 vault moves $40,000 to the operating wallet. Signer 1 proposes; Signer 2 checks the destination against the allowlist and the amount against the ladder refill schedule on their hardware wallet screen, then signs. Logged in the books with both names.",
-   "vo": "A 2-of-3 vault moves $40,000 to the operating wallet. Signer 1 proposes; Signer 2 checks the destination against the allowlist and the amount against the ladder refill schedule on their hardware wallet screen, then signs. Logged in the books with both names.",
-   "cap": "A 2-of-3 vault moves $40,000 to the operating wallet. Signer 1 proposes; Signer 2 checks the destination against the allowlist and the amount against the ladder refill schedule on their hardware wallet screen, then signs. Logged in the books with both names."
+   "vo": "Let's work an example, step by step. A 2-of-3 vault moves $40,000 to the operating wallet. Signer 1 proposes; Signer 2 checks the destination against the allowlist and the amount against the ladder refill schedule on their hardware wallet screen, then signs. Logged in the books with both names.",
+   "cap": "Let's work an example, step by step. A 2-of-3 vault moves $40,000 to the operating wallet. Signer 1 proposes; Signer 2 checks the destination against the allowlist and the amount against the ladder refill schedule on their hardware wallet screen, then signs. Logged in the books with both names."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Signing procedure written for every signer",
     "Change-control template and 24h rule",
     "Review calendar set"
    ],
-   "vo": "Your checklist. Signing procedure written for every signer Change-control template and 24h rule Review calendar set",
-   "cap": "Signing procedure written for every signer Change-control template and 24h rule Review calendar set"
+   "vo": "Here's your checklist. Do it now, for real. First, Signing procedure written for every signer. Next, Change-control template and 24h rule. And finally, Review calendar set.",
+   "cap": "Here's your checklist. Do it now, for real. First, Signing procedure written for every signer. Next, Change-control template and 24h rule. And finally, Review calendar set."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why verify on your own device screen?"
-   ],
-   "sub": "Answer: Screens and screenshots can be faked; the hardware display shows what you're actually signing.",
-   "subAt": 0.62,
-   "vo": "Why verify on your own device screen? ... Pause and think. ... The answer: Screens and screenshots can be faked; the hardware display shows what you're actually signing.",
-   "cap": "Why verify on your own device screen? Pause and think. The answer: Screens and screenshots can be faked; the hardware display shows what you're actually signing."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why verify on your own device screen?",
+   "a": "Screens and screenshots can be faked; the hardware display shows what you're actually signing.",
+   "vo": "Question one. Why verify on your own device screen? [[pause 4]] The answer: Screens and screenshots can be faked; the hardware display shows what you're actually signing.",
+   "cap": "Question 1. Why verify on your own device screen? The answer: Screens and screenshots can be faked; the hardware display shows what you're actually signing."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What is change control for?"
-   ],
-   "sub": "Answer: Forcing new risks through thesis, register and a cooling-off period.",
-   "subAt": 0.62,
-   "vo": "What is change control for? ... Pause and think. ... The answer: Forcing new risks through thesis, register and a cooling-off period.",
-   "cap": "What is change control for? Pause and think. The answer: Forcing new risks through thesis, register and a cooling-off period."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What is change control for?",
+   "a": "Forcing new risks through thesis, register and a cooling-off period.",
+   "vo": "Question two. What is change control for? [[pause 4]] The answer: Forcing new risks through thesis, register and a cooling-off period.",
+   "cap": "Question 2. What is change control for? The answer: Forcing new risks through thesis, register and a cooling-off period."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "How often is the stress test re-run?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "How often is the stress test re-run?",
+   "a": "Quarterly, and after big changes.",
+   "vo": "Question three. How often is the stress test re-run? [[pause 4]] The answer: Quarterly, and after big changes.",
+   "cap": "Question 3. How often is the stress test re-run? The answer: Quarterly, and after big changes."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Multisig signing procedure: every signer independently verifies the",
+    "Change control: new protocol, new chain, new strategy, or a cap change is",
+    "Separation: the person proposing a vault transaction isn't the only one approving it",
+    "Review calendar: weekly books · monthly register · quarterly stress test and recovery drill · annual review (Module 13.5)"
    ],
-   "sub": "Answer: Quarterly, and after big changes.",
-   "subAt": 0.62,
-   "vo": "How often is the stress test re-run? ... Pause and think. ... The answer: Quarterly, and after big changes.",
-   "cap": "How often is the stress test re-run? Pause and think. The answer: Quarterly, and after big changes."
+   "vo": "Let's recap. Multisig signing procedure: every signer independently verifies the. Change control: new protocol, new chain, new strategy, or a cap change is. Separation: the person proposing a vault transaction isn't the only one approving it. Review calendar: weekly books times monthly register times quarterly stress test and recovery drill times annual review (Module 13.5).",
+   "cap": "Let's recap. Multisig signing procedure: every signer independently verifies the. Change control: new protocol, new chain, new strategy, or a cap change is. Separation: the person proposing a vault transaction isn't the only one approving it. Review calendar: weekly books · monthly register · quarterly stress test and recovery drill · annual review (Module 13.5)."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 14.4",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson fourteen point four: Operator capstone and certification.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 14.4: Operator capstone and certification."
   }
  ]
 }

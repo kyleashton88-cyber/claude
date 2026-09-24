@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 12.5",
  "use": "Lesson 12.5 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Being the lender",
+  "subtitle": "Lesson 12.5"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-12.png",
-   "eyebrow": "Lesson 12.5",
-   "vo": "Lesson twelve point five. Being the lender: supplying, curating and pricing credit risk.",
-   "cap": "Lesson 12.5. Being the lender: supplying, curating and pricing credit risk."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 12 · Operate as Your Own Bank",
+   "num": "12.5",
+   "title": "Being the lender: supplying, curating and pricing credit risk",
    "sub": "Act as the lending side of the bank: choose markets, price the risk, and know when to pull liquidity.",
-   "vo": "Act as the lending side of the bank: choose markets, price the risk, and know when to pull liquidity.",
-   "cap": "Act as the lending side of the bank: choose markets, price the risk, and know when to pull liquidity."
+   "vo": "Lesson twelve point five. Being the lender: supplying, curating and pricing credit risk. By the end of this lesson, you'll be able to act as the lending side of the bank: choose markets, price the risk, and know when to pull liquidity.",
+   "cap": "Lesson 12.5. Being the lender: supplying, curating and pricing credit risk. By the end of this lesson, you'll be able to act as the lending side of the bank: choose markets, price the risk, and know when to pull liquidity."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Collateral quality and liquidation LTV",
@@ -35,20 +49,24 @@
     "Curator",
     "Risk-adjusted return, not headline"
    ],
-   "vo": "When you supply to a money market, you're the bank's depositor, and effectively its credit desk. Your return: supply A.P.Y. about borrow A.P.Y. times utilisation times (1 minus reserve factor). Modern designs split lending into isolated markets (one collateral, one loan asset, one oracle, one liquidation L.T.V.). Curated vaults spread deposits across several of these; the curator decides the allocation. What a lender must check: Collateral quality and liquidation L.T.V.: the higher the L.T.V., the thinner the buffer before bad debt Oracle: what prices the collateral, and can it be manipulated? (Module 5.3) Utilisation: near 100% means you may not be able to withdraw Curator: track record, how allocations are changed, timelocks Risk-adjusted return, not headline",
-   "cap": "Collateral quality and liquidation LTV: the higher the LTV, the thinner the buffer before bad debt Oracle: what prices the collateral, and can it be manipulated? (Module 5.3) Utilisation: near 100% means you may not be able to withdraw Curator: track record, how allocations are changed, timelocks Risk-adjusted return, not headline"
+   "vo": "When you supply to a money market, you're the bank's depositor, and effectively its credit desk. Your return: supply A.P.Y. about borrow A.P.Y. times utilisation times (1 minus reserve factor). Modern designs split lending into isolated markets (one collateral, one loan asset, one oracle, one liquidation L.T.V.). Curated vaults spread deposits across several of these; the curator decides the allocation. What a lender must check: First, Collateral quality and liquidation L.T.V.: the higher the L.T.V., the thinner the buffer before bad debt. Next, Oracle: what prices the collateral, and can it be manipulated? (Module 5.3). Then, Utilisation: near 100% means you may not be able to withdraw. Also, Curator: track record, how allocations are changed, timelocks. And finally, Risk-adjusted return, not headline.",
+   "cap": "When you supply to a money market, you're the bank's depositor, and effectively its credit desk. Your return: supply APY ≈ borrow APY × utilisation × (1 − reserve factor). Modern designs split lending into isolated markets (one collateral, one loan asset, one oracle, one liquidation LTV). Curated vaults spread deposits across several of these; the curator decides the allocation. What a lender must check: First, Collateral quality and liquidation LTV: the higher the LTV, the thinner the buffer before bad debt. Next, Oracle: what prices the collateral, and can it be manipulated? (Module 5.3). Then, Utilisation: near 100% means you may not be able to withdraw. Also, Curator: track record, how allocations are changed, timelocks. And finally, Risk-adjusted return, not headline."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Vault A",
+    "Vault B",
+    "Split between them, and cap A lower because its tail is fatter and less known."
    ],
-   "sub": "Vault A: 7% headline, exposure to newer collateral; you assume a 2%/yr chance of a loss event losing half the deposit → 6.0% risk-adjusted. Vault B: 4.5% headline, blue-chip collateral; 0.5%/yr, total loss assumed → 4.0%. the calculator A pays more after the h",
-   "vo": "Vault A: 7% headline, exposure to newer collateral; you assume a 2% a year chance of a loss event losing half the deposit to 6.0% risk-adjusted. Vault B: 4.5% headline, blue-chip collateral; 0.5% a year, total loss assumed to 4.0%. the calculator A pays more after the haircut, if your loss estimates are honest. Split between them, and cap A lower because its tail is fatter and less known.",
-   "cap": "Vault A: 7% headline, exposure to newer collateral; you assume a 2%/yr chance of a loss event losing half the deposit → 6.0% risk-adjusted. Vault B: 4.5% headline, blue-chip collateral; 0.5%/yr, total loss assumed → 4.0%. the calculator A pays more after the haircut, if your loss estimates are honest. Split between them, and cap A lower because its tail is fatter and less known."
+   "vo": "Let's work an example, step by step. Vault A: 7% headline, exposure to newer collateral; you assume a 2% a year chance of a loss event losing half the deposit to 6.0% risk-adjusted. Vault B: 4.5% headline, blue-chip collateral; 0.5% a year, total loss assumed to 4.0%. the calculator A pays more after the haircut, if your loss estimates are honest. Split between them, and cap A lower because its tail is fatter and less known.",
+   "cap": "Let's work an example, step by step. Vault A: 7% headline, exposure to newer collateral; you assume a 2%/yr chance of a loss event losing half the deposit → 6.0% risk-adjusted. Vault B: 4.5% headline, blue-chip collateral; 0.5%/yr, total loss assumed → 4.0%. the calculator A pays more after the haircut, if your loss estimates are honest. Split between them, and cap A lower because its tail is fatter and less known."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Every market's collateral, oracle and LTV listed",
@@ -56,48 +74,59 @@
     "Utilisation alert (e.g. > 90%)",
     "Per-vault and per-curator caps"
    ],
-   "vo": "Your checklist. Every market's collateral, oracle and L.T.V. listed Loss probability and loss-given-default written down (your assumptions) Utilisation alert (for example > 90%) Per-vault and per-curator caps",
-   "cap": "Every market's collateral, oracle and LTV listed Loss probability and loss-given-default written down (your assumptions) Utilisation alert (e.g. > 90%) Per-vault and per-curator caps"
+   "vo": "Here's your checklist. Do it now, for real. First, every market's collateral, oracle and L.T.V. listed. Next, Loss probability and loss-given-default written down (your assumptions). Then, Utilisation alert (for example > 90%). And finally, Per-vault and per-curator caps.",
+   "cap": "Here's your checklist. Do it now, for real. First, every market's collateral, oracle and LTV listed. Next, Loss probability and loss-given-default written down (your assumptions). Then, Utilisation alert (e.g. > 90%). And finally, Per-vault and per-curator caps."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Borrow APY 10%, utilisation 70%, reserve factor 10%. Supply APY?"
-   ],
-   "sub": "Answer: 6.3%.",
-   "subAt": 0.62,
-   "vo": "Borrow A.P.Y. 10%, utilisation 70%, reserve factor 10%. Supply A.P.Y.? ... Pause and think. ... The answer: 6.3%.",
-   "cap": "Borrow APY 10%, utilisation 70%, reserve factor 10%. Supply APY? Pause and think. The answer: 6.3%."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Borrow APY 10%, utilisation 70%, reserve factor 10%. Supply APY?",
+   "a": "6.3%.",
+   "vo": "Question one. Borrow A.P.Y. 10%, utilisation 70%, reserve factor 10%. Supply A.P.Y.? [[pause 4]] The answer: 6.3%.",
+   "cap": "Question 1. Borrow APY 10%, utilisation 70%, reserve factor 10%. Supply APY? The answer: 6.3%."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why is utilisation at 100% a lender's problem?"
-   ],
-   "sub": "Answer: All liquidity is lent out, so withdrawals wait until borrowers repay or new deposits arrive.",
-   "subAt": 0.62,
-   "vo": "Why is utilisation at 100% a lender's problem? ... Pause and think. ... The answer: All liquidity is lent out, so withdrawals wait until borrowers repay or new deposits arrive.",
-   "cap": "Why is utilisation at 100% a lender's problem? Pause and think. The answer: All liquidity is lent out, so withdrawals wait until borrowers repay or new deposits arrive."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Why is utilisation at 100% a lender's problem?",
+   "a": "All liquidity is lent out, so withdrawals wait until borrowers repay or new deposits arrive.",
+   "vo": "Question two. Why is utilisation at 100% a lender's problem? [[pause 4]] The answer: All liquidity is lent out, so withdrawals wait until borrowers repay or new deposits arrive.",
+   "cap": "Question 2. Why is utilisation at 100% a lender's problem? The answer: All liquidity is lent out, so withdrawals wait until borrowers repay or new deposits arrive."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What's a curated vault's extra risk?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What's a curated vault's extra risk?",
+   "a": "The curator's allocation decisions and permissions, on top of each market's risk.",
+   "vo": "Question three. What's a curated vault's extra risk? [[pause 4]] The answer: The curator's allocation decisions and permissions, on top of each market's risk.",
+   "cap": "Question 3. What's a curated vault's extra risk? The answer: The curator's allocation decisions and permissions, on top of each market's risk."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Collateral quality and liquidation LTV",
+    "Oracle: what prices the collateral, and can it be manipulated? (Module 5.3)",
+    "Utilisation: near 100% means you may not be able to withdraw",
+    "Curator: track record, how allocations are changed, timelocks"
    ],
-   "sub": "Answer: The curator's allocation decisions and permissions, on top of each market's risk.",
-   "subAt": 0.62,
-   "vo": "What's a curated vault's extra risk? ... Pause and think. ... The answer: The curator's allocation decisions and permissions, on top of each market's risk.",
-   "cap": "What's a curated vault's extra risk? Pause and think. The answer: The curator's allocation decisions and permissions, on top of each market's risk."
+   "vo": "Let's recap. Collateral quality and liquidation L.T.V.. Oracle: what prices the collateral, and can it be manipulated? (Module 5.3). Utilisation: near 100% means you may not be able to withdraw. Curator: track record, how allocations are changed, timelocks.",
+   "cap": "Let's recap. Collateral quality and liquidation LTV. Oracle: what prices the collateral, and can it be manipulated? (Module 5.3). Utilisation: near 100% means you may not be able to withdraw. Curator: track record, how allocations are changed, timelocks."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 12.6",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson twelve point six: Books, records and succession.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 12.6: Books, records and succession."
   }
  ]
 }

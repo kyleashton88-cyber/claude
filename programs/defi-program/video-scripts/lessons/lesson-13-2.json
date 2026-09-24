@@ -6,103 +6,109 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 13.2",
  "use": "Lesson 13.2 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Risk-adjusted yield",
+  "subtitle": "Lesson 13.2"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-13.png",
-   "eyebrow": "Lesson 13.2",
-   "vo": "Lesson thirteen point two. Risk-adjusted yield: subtracting expected losses.",
-   "cap": "Lesson 13.2. Risk-adjusted yield: subtracting expected losses."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 13 · The Income Engine",
+   "num": "13.2",
+   "title": "Risk-adjusted yield: subtracting expected losses",
    "sub": "Convert every headline yield into an expected yield after the losses it statistically carries.",
-   "vo": "Convert every headline yield into an expected yield after the losses it statistically carries.",
-   "cap": "Convert every headline yield into an expected yield after the losses it statistically carries."
+   "vo": "Lesson thirteen point two. Risk-adjusted yield: subtracting expected losses. By the end of this lesson, you'll be able to convert every headline yield into an expected yield after the losses it statistically carries.",
+   "cap": "Lesson 13.2. Risk-adjusted yield: subtracting expected losses. By the end of this lesson, you'll be able to convert every headline yield into an expected yield after the losses it statistically carries."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
   },
   {
    "type": "statement",
+   "chapter": "Key ideas",
+   "kicker": "Key ideas",
    "lines": [
-    "Key ideas"
+    "risk-adjusted yield = headline − (annual loss probability…"
    ],
-   "sub": "risk-adjusted yield = headline − (annual loss probability × loss given default) − costs You don't know the true loss probability, so write down an assumption and be conservative. Newer protocols, more dependencies and higher leverage deserve higher numbers. Th",
-   "vo": "risk-adjusted yield = headline minus (annual loss probability times loss given default) minus costs You don't know the true loss probability, so write down an assumption and be conservative. Newer protocols, more dependencies and higher leverage deserve higher numbers. The point isn't precision; it's making you compare positions on the same footing.",
+   "sub": "risk-adjusted yield = headline − (annual loss probability × loss given default) − costs You don't know the true loss probability, so write down an assumption and be conservative. Newer protocols, more dependencies and higher leverage deserv",
+   "vo": "risk-adjusted yield equals headline minus (annual loss probability times loss given default) minus costs You don't know the true loss probability, so write down an assumption and be conservative. Newer protocols, more dependencies and higher leverage deserve higher numbers. The point isn't precision; it's making you compare positions on the same footing.",
    "cap": "risk-adjusted yield = headline − (annual loss probability × loss given default) − costs You don't know the true loss probability, so write down an assumption and be conservative. Newer protocols, more dependencies and higher leverage deserve higher numbers. The point isn't precision; it's making you compare positions on the same footing."
   },
   {
    "type": "bullets",
+   "chapter": "Worked example",
    "title": "Worked example",
    "items": [
     "New protocol vault",
     "Blue-chip lending"
    ],
    "compact": true,
-   "vo": "New protocol vault, 9.0%, 3% a year, 100%, 6.0%. Blue-chip lending, 4.5%, 0.5% a year, 100%, 4.0%.",
-   "cap": "New protocol vault, 9.0%, 3%/yr, 100%, 6.0% Blue-chip lending, 4.5%, 0.5%/yr, 100%, 4.0%"
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Worked example"
-   ],
-   "sub": "the calculator The 9% vault still wins on expectation, but by 2 points, not 4.5. Its bad outcome is also far worse, so size it smaller (Lesson 13.3).",
-   "vo": "the calculator The 9% vault still wins on expectation, but by 2 points, not 4.5. Its bad outcome is also far worse, so size it smaller (Lesson 13.3).",
-   "cap": "the calculator The 9% vault still wins on expectation, but by 2 points, not 4.5. Its bad outcome is also far worse, so size it smaller (Lesson 13.3)."
+   "vo": "the calculator The 9% vault still wins on expectation, but by 2 points, not 4.5. Its bad outcome is also far worse, so size it smaller (Lesson 13.3). New protocol vault, 9.0%, 3% a year, 100%, 6.0%. Blue-chip lending, 4.5%, 0.5% a year, 100%, 4.0%.",
+   "cap": "the calculator The 9% vault still wins on expectation, but by 2 points, not 4.5. Its bad outcome is also far worse, so size it smaller (Lesson 13.3). New protocol vault, 9.0%, 3%/yr, 100%, 6.0%. Blue-chip lending, 4.5%, 0.5%/yr, 100%, 4.0%."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Loss probability and LGD written for every position",
     "Decisions made on risk-adjusted, not headline"
    ],
-   "vo": "Your checklist. Loss probability and LGD written for every position Decisions made on risk-adjusted, not headline",
-   "cap": "Loss probability and LGD written for every position Decisions made on risk-adjusted, not headline"
+   "vo": "Here's your checklist. Do it now, for real. First, Loss probability and LGD written for every position. And finally, Decisions made on risk-adjusted, not headline.",
+   "cap": "Here's your checklist. Do it now, for real. First, Loss probability and LGD written for every position. And finally, Decisions made on risk-adjusted, not headline."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "12% headline, 5%/yr loss probability, 60% LGD. Risk-adjusted?"
-   ],
-   "sub": "Answer: 12 − 3 = 9%.",
-   "subAt": 0.62,
-   "vo": "12% headline, 5% a year loss probability, 60% LGD. Risk-adjusted? ... Pause and think. ... The answer: 12 minus 3 = 9%.",
-   "cap": "12% headline, 5%/yr loss probability, 60% LGD. Risk-adjusted? Pause and think. The answer: 12 − 3 = 9%."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "12% headline, 5%/yr loss probability, 60% LGD. Risk-adjusted?",
+   "a": "12 − 3 = 9%.",
+   "vo": "Question one. 12% headline, 5% a year loss probability, 60% LGD. Risk-adjusted? [[pause 4]] The answer: 12 minus 3 equals 9%.",
+   "cap": "Question 1. 12% headline, 5%/yr loss probability, 60% LGD. Risk-adjusted? The answer: 12 − 3 = 9%."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why assume conservatively?"
-   ],
-   "sub": "Answer: Losses cluster in stress, when many positions fail together; optimistic assumptions overstate income.",
-   "subAt": 0.62,
-   "vo": "Why assume conservatively? ... Pause and think. ... The answer: Losses cluster in stress, when many positions fail together; optimistic assumptions overstate income.",
-   "cap": "Why assume conservatively? Pause and think. The answer: Losses cluster in stress, when many positions fail together; optimistic assumptions overstate income."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Why assume conservatively?",
+   "a": "Losses cluster in stress, when many positions fail together; optimistic assumptions overstate income.",
+   "vo": "Question two. Why assume conservatively? [[pause 4]] The answer: Losses cluster in stress, when many positions fail together; optimistic assumptions overstate income.",
+   "cap": "Question 2. Why assume conservatively? The answer: Losses cluster in stress, when many positions fail together; optimistic assumptions overstate income."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Two positions, same risk-adjusted yield. Which gets more capital?"
-   ],
-   "sub": "Answer: The one with the smaller and better-understood worst case.",
-   "subAt": 0.62,
-   "vo": "Two positions, same risk-adjusted yield. Which gets more capital? ... Pause and think. ... The answer: The one with the smaller and better-understood worst case.",
-   "cap": "Two positions, same risk-adjusted yield. Which gets more capital? Pause and think. The answer: The one with the smaller and better-understood worst case."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Two positions, same risk-adjusted yield. Which gets more capital?",
+   "a": "The one with the smaller and better-understood worst case.",
+   "vo": "Question three. Two positions, same risk-adjusted yield. Which gets more capital? [[pause 4]] The answer: The one with the smaller and better-understood worst case.",
+   "cap": "Question 3. Two positions, same risk-adjusted yield. Which gets more capital? The answer: The one with the smaller and better-understood worst case."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 13.3",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson thirteen point three: Building the income portfolio.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 13.3: Building the income portfolio."
   }
  ]
 }

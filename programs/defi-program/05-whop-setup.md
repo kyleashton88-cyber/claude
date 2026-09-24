@@ -12,24 +12,20 @@
 
 Refund policy: 14-day conditional refund (`07-program-operations.md` §9). Live tier: price on application.
 
-## Step 1 — You, in the Whop dashboard
-1. Create a product named **On-Chain Operator Program**. Upload the icon, banner and gallery images and
-   paste the copy from `06-whop-store-listing.md`.
-2. Add a course experience and create the 9 module sections (titles in
+## Step 1 — Create the product
+1. Create a product named **On-Chain Operator Program**. Upload the logo icon, banner and 7 gallery
+   images and paste the copy from `06-whop-store-listing.md`; add the main VSL as the listing video.
+2. Add a course experience with 16 chapters: **Start here** + **Modules 0–14** (titles in
    `01-offer-and-curriculum.md`).
 3. Add terms of sale: the 14-day conditional refund policy and "Educational content
    only. Not financial advice. No results are guaranteed."
-4. Send me the product ID (starts with `prod_`).
 
-## Step 2 — Me, via Zapier (after you confirm)
-| Action | Zapier tool | Values |
+## Step 2 — Plans and checkout
+| Plan | Price | Notes |
 |---|---|---|
-| Course plan | `whop_create_plan` | product = your `prod_` ID, one-time, $15,000, hidden until launch |
-| Live-tier plan | `whop_create_plan` | once the price is set |
-| Checkout links per campaign | `whop_create_checkout_session` | metadata `utm_campaign`, `utm_adset`, `utm_creative` so ad reports attribute sales |
-| Applications | `whop_create_lead` | one lead per application, product-specific |
-
-Nothing gets created until you've seen the exact values and said yes.
+| Course | $15,000 one-time | Lifetime access |
+| Live | On application | Created per buyer after the sales call |
+Checkout links carry `utm_campaign`, `utm_adset`, `utm_creative` metadata so ad reports can attribute sales.
 
 ## Step 3 — Upload content
 All 107 lessons and 15 Mastery Starters are written and ready to paste in (`lessons/`, `02-…`,

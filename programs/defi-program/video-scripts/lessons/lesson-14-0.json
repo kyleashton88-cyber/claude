@@ -6,27 +6,38 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 14.0",
  "use": "Lesson 14.0 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Mastery Starter",
+  "subtitle": "Module 14 · Start here"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-14.png",
-   "eyebrow": "Lesson 14.0",
-   "vo": "Lesson fourteen point zero. Mastery Starter.",
-   "cap": "Lesson 14.0. Mastery Starter."
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 14 · Automation & Mastery",
+   "num": "14.0",
+   "title": "Mastery Starter",
+   "sub": "At mastery, you watch everything automatically and act through rules and limited permissions, never by handing over keys. Then you prove it with the operator capstone.",
+   "vo": "Mastery Starter fourteen point zero. New to Automation and Mastery? Start here. In about ten minutes, you'll go from zero to ready for this module.",
+   "cap": "Mastery Starter 14.0. New to Automation & Mastery? Start here. In about ten minutes, you'll go from zero to ready for this module."
   },
   {
    "type": "statement",
+   "chapter": "The 60-second version",
+   "kicker": "The 60-second version",
    "lines": [
-    "The 60-second version"
+    "At mastery, you watch everything automatically and act through rules and limited permissions"
    ],
-   "sub": "At mastery, you watch everything automatically and act through rules and limited permissions, never by handing over keys. Then you prove it with the operator capstone.",
+   "sub": ", never by handing over keys. Then you prove it with the operator capstone.",
    "vo": "At mastery, you watch everything automatically and act through rules and limited permissions, never by handing over keys. Then you prove it with the operator capstone.",
    "cap": "At mastery, you watch everything automatically and act through rules and limited permissions, never by handing over keys. Then you prove it with the operator capstone."
   },
   {
    "type": "bullets",
+   "chapter": "Words you'll need",
    "title": "Words you'll need",
    "items": [
     "Alert",
@@ -36,29 +47,32 @@
     "RPC"
    ],
    "compact": true,
-   "vo": "Alert, an automatic notification tied to an action. Keeper, an automated service that executes conditions. Session key, a limited, revocable permission. Change control, a written, delayed process for new risks. R.P.C., a connection that lets software read the chain.",
-   "cap": "Alert, an automatic notification tied to an action Keeper, an automated service that executes conditions Session key, a limited, revocable permission Change control, a written, delayed process for new risks RPC, a connection that lets software read the chain"
+   "vo": "Alert: an automatic notification tied to an action. Keeper: an automated service that executes conditions. Session key: a limited, revocable permission. Change control: a written, delayed process for new risks. R.P.C.: a connection that lets software read the chain.",
+   "cap": "Alert: an automatic notification tied to an action. Keeper: an automated service that executes conditions. Session key: a limited, revocable permission. Change control: a written, delayed process for new risks. RPC: a connection that lets software read the chain."
   },
   {
    "type": "bullets",
+   "chapter": "Before you start",
    "title": "Before you start",
    "items": [
     "Modules 0–13"
    ],
-   "vo": "Modules 0–13",
-   "cap": "Modules 0–13"
+   "vo": "Modules 0 to 13.",
+   "cap": "Modules 0–13."
   },
   {
    "type": "statement",
+   "chapter": "Your first safe step",
+   "kicker": "Your first safe step",
    "lines": [
-    "Your first safe step"
+    "Set one alert today: a health factor, a peg or any outflow from your vault wallet."
    ],
-   "sub": "Set one alert today: a health factor, a peg or any outflow from your vault wallet.",
    "vo": "Set one alert today: a health factor, a peg or any outflow from your vault wallet.",
    "cap": "Set one alert today: a health factor, a peg or any outflow from your vault wallet."
   },
   {
    "type": "bullets",
+   "chapter": "The mastery ladder",
    "title": "The mastery ladder",
    "items": [
     "Beginner",
@@ -66,24 +80,26 @@
     "Master"
    ],
    "compact": true,
-   "vo": "Beginner, Has alerts mapped to actions. Practitioner, Automates one task with scoped permissions and writes signing procedures. Master, Builds read-only tools and passes the operator capstone.",
-   "cap": "Beginner, Has alerts mapped to actions Practitioner, Automates one task with scoped permissions and writes signing procedures Master, Builds read-only tools and passes the operator capstone"
+   "vo": "Beginner: Has alerts mapped to actions. Practitioner: Automates one task with scoped permissions and writes signing procedures. Master: Builds read-only tools and passes the operator capstone.",
+   "cap": "Beginner: Has alerts mapped to actions. Practitioner: Automates one task with scoped permissions and writes signing procedures. Master: Builds read-only tools and passes the operator capstone."
   },
   {
    "type": "statement",
+   "chapter": "You've mastered it when…",
+   "kicker": "You've mastered it when…",
    "lines": [
-    "You've mastered it when…"
+    "You've mastered this module when you've passed the operator capstone."
    ],
-   "sub": "…you've passed the operator capstone. ---",
-   "vo": "…you've passed the operator capstone. ---",
-   "cap": "…you've passed the operator capstone. ---"
+   "vo": "You've mastered this module when you've passed the operator capstone.",
+   "cap": "You've mastered this module when you've passed the operator capstone."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 14.1",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson fourteen point one: Monitoring: dashboards, alerts and on-chain watchers.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 14.1: Monitoring: dashboards, alerts and on-chain watchers."
   }
  ]
 }

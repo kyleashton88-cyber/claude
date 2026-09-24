@@ -6,49 +6,68 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 10.7",
  "use": "Lesson 10.7 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Being the house",
+  "subtitle": "Lesson 10.7"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-10.png",
-   "eyebrow": "Lesson 10.7",
-   "vo": "Lesson ten point seven. Being the house: perp-exchange liquidity vaults.",
-   "cap": "Lesson 10.7. Being the house: perp-exchange liquidity vaults."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 10 · Advanced Yield Engineering",
+   "num": "10.7",
+   "title": "Being the house: perp-exchange liquidity vaults",
    "sub": "Understand what you're really taking on when you provide liquidity to a perpetuals exchange.",
-   "vo": "Understand what you're really taking on when you provide liquidity to a perpetuals exchange.",
-   "cap": "Understand what you're really taking on when you provide liquidity to a perpetuals exchange."
+   "vo": "Lesson ten point seven. Being the house: perp-exchange liquidity vaults. By the end of this lesson, you'll be able to understand what you're really taking on when you provide liquidity to a perpetuals exchange.",
+   "cap": "Lesson 10.7. Being the house: perp-exchange liquidity vaults. By the end of this lesson, you'll be able to understand what you're really taking on when you provide liquidity to a perpetuals exchange."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Returns",
     "Risks",
     "Check"
    ],
-   "vo": "Many on-chain perp exchanges let you deposit into a liquidity vault that acts as the counterparty to traders (the \"house\"). The vault earns trading fees, borrowing/funding fees and part of liquidations, and loses when traders win. Returns: fees + traders' losses minus traders' profits. Risks: a run of profitable traders (or a few very large ones), open interest concentrated on one side, oracle manipulation or latency, the market-making strategy of the vault (some vaults actively trade), and exchange contract risk. Check: the vault's historical P and L split (fees versus trader P and L), its open-interest caps, how it prices assets (oracle), and withdrawal rules (cooldowns, fees).",
-   "cap": "Returns: fees + traders' losses − traders' profits. Risks: a run of profitable traders (or a few very large ones), open interest concentrated on one side, oracle manipulation or latency, the market-making strategy of the vault (some vaults actively trade), and exchange contract risk. Check: the vault's historical P&L split (fees vs trader P&L), its open-interest caps, how it prices assets (oracle), and withdrawal rules (cooldowns, fees)."
+   "vo": "Many on-chain perp exchanges let you deposit into a liquidity vault that acts as the counterparty to traders (the \"house\"). The vault earns trading fees, borrowing/funding fees and part of liquidations, and loses when traders win. First, Returns: fees + traders' losses minus traders' profits. Next, Risks: a run of profitable traders (or a few very large ones), open interest concentrated on one side, oracle manipulation or latency, the market-making strategy of the vault (some vaults actively trade), and exchange contract risk. And finally, Check: the vault's historical P and L split (fees versus trader P and L), its open-interest caps, how it prices assets (oracle), and withdrawal rules (cooldowns, fees).",
+   "cap": "Many on-chain perp exchanges let you deposit into a liquidity vault that acts as the counterparty to traders (the \"house\"). The vault earns trading fees, borrowing/funding fees and part of liquidations, and loses when traders win. First, Returns: fees + traders' losses − traders' profits. Next, Risks: a run of profitable traders (or a few very large ones), open interest concentrated on one side, oracle manipulation or latency, the market-making strategy of the vault (some vaults actively trade), and exchange contract risk. And finally, Check: the vault's historical P&L split (fees vs trader P&L), its open-interest caps, how it prices assets (oracle), and withdrawal rules (cooldowns, fees)."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "A vault shows 25% APR",
+    "In a strong one-directional trend, traders who are long win, so the vault's…",
+    "Size it as an active trading exposure, not as fixed income, and check…"
    ],
-   "sub": "A vault shows 25% APR: 18% from fees, 7% from traders' net losses over the last 6 months. In a strong one-directional trend, traders who are long win, so the vault's \"trader P&L\" component can swing to −20% or worse, wiping out the fees. Size it as an active t",
-   "vo": "A vault shows 25% A.P.R.: 18% from fees, 7% from traders' net losses over the last 6 months. In a strong one-directional trend, traders who are long win, so the vault's \"trader P and L\" component can swing to minus 20% or worse, wiping out the fees. Size it as an active trading exposure, not as fixed income, and check whether withdrawals are delayed in stress.",
-   "cap": "A vault shows 25% APR: 18% from fees, 7% from traders' net losses over the last 6 months. In a strong one-directional trend, traders who are long win, so the vault's \"trader P&L\" component can swing to −20% or worse, wiping out the fees. Size it as an active trading exposure, not as fixed income, and check whether withdrawals are delayed in stress."
+   "vo": "Let's work an example, step by step. A vault shows 25% A.P.R.: 18% from fees, 7% from traders' net losses over the last 6 months. In a strong one-directional trend, traders who are long win, so the vault's \"trader P and L\" component can swing to minus 20% or worse, wiping out the fees. Size it as an active trading exposure, not as fixed income, and check whether withdrawals are delayed in stress.",
+   "cap": "Let's work an example, step by step. A vault shows 25% APR: 18% from fees, 7% from traders' net losses over the last 6 months. In a strong one-directional trend, traders who are long win, so the vault's \"trader P&L\" component can swing to −20% or worse, wiping out the fees. Size it as an active trading exposure, not as fixed income, and check whether withdrawals are delayed in stress."
   },
   {
    "type": "statement",
+   "chapter": "What this position is short",
+   "kicker": "What this position is short",
    "lines": [
-    "What this position is short"
+    "Trader skill and trending markets; oracle quality; the…"
    ],
    "sub": "Trader skill and trending markets; oracle quality; the exchange's own risk controls.",
    "vo": "Trader skill and trending markets; oracle quality; the exchange's own risk controls.",
@@ -56,54 +75,65 @@
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Vault returns split into fees vs trader P&L, with history",
     "Open-interest caps and oracle design reviewed",
     "Withdrawal cooldowns and stress behaviour known"
    ],
-   "vo": "Your checklist. Vault returns split into fees versus trader P and L, with history Open-interest caps and oracle design reviewed Withdrawal cooldowns and stress behaviour known",
-   "cap": "Vault returns split into fees vs trader P&L, with history Open-interest caps and oracle design reviewed Withdrawal cooldowns and stress behaviour known"
+   "vo": "Here's your checklist. Do it now, for real. First, Vault returns split into fees versus trader P and L, with history. Next, Open-interest caps and oracle design reviewed. And finally, Withdrawal cooldowns and stress behaviour known.",
+   "cap": "Here's your checklist. Do it now, for real. First, Vault returns split into fees vs trader P&L, with history. Next, Open-interest caps and oracle design reviewed. And finally, Withdrawal cooldowns and stress behaviour known."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "When does a perp liquidity vault lose money?"
-   ],
-   "sub": "Answer: When traders are net profitable, e.g. in strong trends.",
-   "subAt": 0.62,
-   "vo": "When does a perp liquidity vault lose money? ... Pause and think. ... The answer: When traders are net profitable, for example in strong trends.",
-   "cap": "When does a perp liquidity vault lose money? Pause and think. The answer: When traders are net profitable, e.g. in strong trends."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "When does a perp liquidity vault lose money?",
+   "a": "When traders are net profitable, e.g. in strong trends.",
+   "vo": "Question one. When does a perp liquidity vault lose money? [[pause 4]] The answer: When traders are net profitable, for example in strong trends.",
+   "cap": "Question 1. When does a perp liquidity vault lose money? The answer: When traders are net profitable, e.g. in strong trends."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why isn't it fixed income?"
-   ],
-   "sub": "Answer: Part of the return is traders' losses, which can reverse sharply.",
-   "subAt": 0.62,
-   "vo": "Why isn't it fixed income? ... Pause and think. ... The answer: Part of the return is traders' losses, which can reverse sharply.",
-   "cap": "Why isn't it fixed income? Pause and think. The answer: Part of the return is traders' losses, which can reverse sharply."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Why isn't it fixed income?",
+   "a": "Part of the return is traders' losses, which can reverse sharply.",
+   "vo": "Question two. Why isn't it fixed income? [[pause 4]] The answer: Part of the return is traders' losses, which can reverse sharply.",
+   "cap": "Question 2. Why isn't it fixed income? The answer: Part of the return is traders' losses, which can reverse sharply."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Name two things to check before depositing."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Name two things to check before depositing.",
+   "a": "Any two: fee vs trader-P&L history, OI caps, oracle design, withdrawal rules, contract risk.",
+   "vo": "Question three. Name two things to check before depositing. [[pause 4]] The answer: Any two: fee versus trader-P and L history, open interest caps, oracle design, withdrawal rules, contract risk.",
+   "cap": "Question 3. Name two things to check before depositing. The answer: Any two: fee vs trader-P&L history, OI caps, oracle design, withdrawal rules, contract risk."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Returns: fees + traders' losses − traders' profits",
+    "Risks: a run of profitable traders (or a few very large ones)",
+    "Check: the vault's historical P&L split (fees vs trader P&L), its open-interest caps"
    ],
-   "sub": "Answer: Any two: fee vs trader-P&L history, OI caps, oracle design, withdrawal rules, contract risk.",
-   "subAt": 0.62,
-   "vo": "Name two things to check before depositing. ... Pause and think. ... The answer: Any two: fee versus trader-P and L history, open interest caps, oracle design, withdrawal rules, contract risk.",
-   "cap": "Name two things to check before depositing. Pause and think. The answer: Any two: fee vs trader-P&L history, OI caps, oracle design, withdrawal rules, contract risk."
+   "vo": "Let's recap. Returns: fees + traders' losses minus traders' profits. Risks: a run of profitable traders (or a few very large ones). Check: the vault's historical P and L split (fees versus trader P and L), its open-interest caps.",
+   "cap": "Let's recap. Returns: fees + traders' losses − traders' profits. Risks: a run of profitable traders (or a few very large ones). Check: the vault's historical P&L split (fees vs trader P&L), its open-interest caps."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 10.8",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson ten point eight: DeFi rates: term structure, fixed versus floating.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 10.8: DeFi rates: term structure, fixed vs floating."
   }
  ]
 }

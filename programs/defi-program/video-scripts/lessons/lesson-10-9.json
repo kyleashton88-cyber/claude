@@ -6,49 +6,68 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 10.9",
  "use": "Lesson 10.9 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Peg and redemption arbitrage",
+  "subtitle": "Lesson 10.9"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-10.png",
-   "eyebrow": "Lesson 10.9",
-   "vo": "Lesson ten point nine. Peg and redemption arbitrage.",
-   "cap": "Lesson 10.9. Peg and redemption arbitrage."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 10 · Advanced Yield Engineering",
+   "num": "10.9",
+   "title": "Peg and redemption arbitrage",
    "sub": "Understand the arbitrages that keep stablecoins and LSTs near their value, and when a retail operator can take part.",
-   "vo": "Understand the arbitrages that keep stablecoins and liquid staking token near their value, and when a retail operator can take part.",
-   "cap": "Understand the arbitrages that keep stablecoins and LSTs near their value, and when a retail operator can take part."
+   "vo": "Lesson ten point nine. Peg and redemption arbitrage. By the end of this lesson, you'll be able to understand the arbitrages that keep stablecoins and liquid staking token near their value, and when a retail operator can take part.",
+   "cap": "Lesson 10.9. Peg and redemption arbitrage. By the end of this lesson, you'll be able to understand the arbitrages that keep stablecoins and LSTs near their value, and when a retail operator can take part."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Stablecoin peg arbitrage",
     "LST discount arbitrage",
     "Who wins"
    ],
-   "vo": "Stablecoin peg arbitrage: if a stablecoin trades at 0.995 on a decks and a P.S.M. or issuer redeems it at 1.00 (minus a fee), buy-and-redeem closes the gap. It's competitive, needs fast execution, and is often limited to whoever can redeem. liquid staking token discount arbitrage: if an liquid staking token trades below its redemption value, buy it and queue a redemption. Your return is the discount over the waiting time, with the risk that the discount reflects a real problem (slashing, a bug) or that the queue lengthens. Who wins: professional searchers take most instant arbitrage (14.6). What's left to patient operators is the slow kind: buying discounts and waiting, sized small.",
-   "cap": "Stablecoin peg arbitrage: if a stablecoin trades at 0.995 on a DEX and a PSM or issuer redeems it at 1.00 (minus a fee), buy-and-redeem closes the gap. It's competitive, needs fast execution, and is often limited to whoever can redeem. LST discount arbitrage: if an LST trades below its redemption value, buy it and queue a redemption. Your return is the discount over the waiting time, with the risk that the discount reflects a real problem (slashing, a bug) or that the queue lengthens. Who wins: professional searchers take most instant arbitrage (14.6). What's left to patient operators is the slow kind: buying discounts and waiting, sized small."
+   "vo": "First, Stablecoin peg arbitrage: if a stablecoin trades at 0.995 on a decks and a P.S.M. or issuer redeems it at 1.00 (minus a fee), buy-and-redeem closes the gap. It's competitive, needs fast execution, and is often limited to whoever can redeem. Next, liquid staking token discount arbitrage: if an liquid staking token trades below its redemption value, buy it and queue a redemption. Your return is the discount over the waiting time, with the risk that the discount reflects a real problem (slashing, a bug) or that the queue lengthens. And finally, who wins: professional searchers take most instant arbitrage (14.6). What's left to patient operators is the slow kind: buying discounts and waiting, sized small.",
+   "cap": "First, Stablecoin peg arbitrage: if a stablecoin trades at 0.995 on a DEX and a PSM or issuer redeems it at 1.00 (minus a fee), buy-and-redeem closes the gap. It's competitive, needs fast execution, and is often limited to whoever can redeem. Next, LST discount arbitrage: if an LST trades below its redemption value, buy it and queue a redemption. Your return is the discount over the waiting time, with the risk that the discount reflects a real problem (slashing, a bug) or that the queue lengthens. And finally, who wins: professional searchers take most instant arbitrage (14.6). What's left to patient operators is the slow kind: buying discounts and waiting, sized small."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "An LST trades at a 2% discount; the redemption queue is about 20 days.",
+    "Return ≈ 2% over 20 days ≈ 36.5% annualised (simple), but only this once,…",
+    "Research why the discount exists first (Module 6); cap it in the speculative…"
    ],
-   "sub": "An LST trades at a 2% discount; the redemption queue is about 20 days. Return ≈ 2% over 20 days ≈ 36.5% annualised (simple), but only this once, only if redemption works as expected, and only if the discount wasn't pricing a real problem. Research why the disc",
-   "vo": "An liquid staking token trades at a 2% discount; the redemption queue is about 20 days. Return about 2% over 20 days about 36.5% annualised (simple), but only this once, only if redemption works as expected, and only if the discount wasn't pricing a real problem. Research why the discount exists first (Module 6); cap it in the speculative bucket.",
-   "cap": "An LST trades at a 2% discount; the redemption queue is about 20 days. Return ≈ 2% over 20 days ≈ 36.5% annualised (simple), but only this once, only if redemption works as expected, and only if the discount wasn't pricing a real problem. Research why the discount exists first (Module 6); cap it in the speculative bucket."
+   "vo": "Let's work an example, step by step. An liquid staking token trades at a 2% discount; the redemption queue is about 20 days. Return about 2% over 20 days about 36.5% annualised (simple), but only this once, only if redemption works as expected, and only if the discount wasn't pricing a real problem. Research why the discount exists first (Module 6); cap it in the speculative bucket.",
+   "cap": "Let's work an example, step by step. An LST trades at a 2% discount; the redemption queue is about 20 days. Return ≈ 2% over 20 days ≈ 36.5% annualised (simple), but only this once, only if redemption works as expected, and only if the discount wasn't pricing a real problem. Research why the discount exists first (Module 6); cap it in the speculative bucket."
   },
   {
    "type": "statement",
+   "chapter": "What this position is short",
+   "kicker": "What this position is short",
    "lines": [
-    "What this position is short"
+    "The reason the discount exists"
    ],
    "sub": "The reason the discount exists: an actual problem with the asset, or redemption delays.",
    "vo": "The reason the discount exists: an actual problem with the asset, or redemption delays.",
@@ -56,54 +75,65 @@
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Redemption path and eligibility confirmed",
     "Reason for the discount researched",
     "Queue length and worst case written"
    ],
-   "vo": "Your checklist. Redemption path and eligibility confirmed Reason for the discount researched Queue length and worst case written",
-   "cap": "Redemption path and eligibility confirmed Reason for the discount researched Queue length and worst case written"
+   "vo": "Here's your checklist. Do it now, for real. First, Redemption path and eligibility confirmed. Next, Reason for the discount researched. And finally, Queue length and worst case written.",
+   "cap": "Here's your checklist. Do it now, for real. First, Redemption path and eligibility confirmed. Next, Reason for the discount researched. And finally, Queue length and worst case written."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What closes a stablecoin's discount?"
-   ],
-   "sub": "Answer: Arbitrageurs buying below peg and redeeming at 1.00 (e.g. via a PSM or issuer).",
-   "subAt": 0.62,
-   "vo": "What closes a stablecoin's discount? ... Pause and think. ... The answer: Arbitrageurs buying below peg and redeeming at 1.00 (for example via a P.S.M. or issuer).",
-   "cap": "What closes a stablecoin's discount? Pause and think. The answer: Arbitrageurs buying below peg and redeeming at 1.00 (e.g. via a PSM or issuer)."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "What closes a stablecoin's discount?",
+   "a": "Arbitrageurs buying below peg and redeeming at 1.00 (e.g. via a PSM or issuer).",
+   "vo": "Question one. What closes a stablecoin's discount? [[pause 4]] The answer: Arbitrageurs buying below peg and redeeming at 1.00 (for example via a P.S.M. or issuer).",
+   "cap": "Question 1. What closes a stablecoin's discount? The answer: Arbitrageurs buying below peg and redeeming at 1.00 (e.g. via a PSM or issuer)."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "1% discount, 10-day redemption. Simple annualised return?"
-   ],
-   "sub": "Answer: About 36.5%.",
-   "subAt": 0.62,
-   "vo": "1% discount, 10-day redemption. Simple annualised return? ... Pause and think. ... The answer: About 36.5%.",
-   "cap": "1% discount, 10-day redemption. Simple annualised return? Pause and think. The answer: About 36.5%."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "1% discount, 10-day redemption. Simple annualised return?",
+   "a": "About 36.5%.",
+   "vo": "Question two. 1% discount, 10-day redemption. Simple annualised return? [[pause 4]] The answer: About 36.5%.",
+   "cap": "Question 2. 1% discount, 10-day redemption. Simple annualised return? The answer: About 36.5%."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why might a discount be a warning, not an opportunity?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Why might a discount be a warning, not an opportunity?",
+   "a": "It may reflect a real problem (slashing, exploit, insolvency).",
+   "vo": "Question three. Why might a discount be a warning, not an opportunity? [[pause 4]] The answer: It may reflect a real problem (slashing, exploit, insolvency).",
+   "cap": "Question 3. Why might a discount be a warning, not an opportunity? The answer: It may reflect a real problem (slashing, exploit, insolvency)."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Stablecoin peg arbitrage: if a stablecoin trades at 0.995 on a DEX and a PSM or issuer redeems it at 1.00 (minus a fee), buy-and-redeem closes the gap",
+    "LST discount arbitrage: if an LST trades below its redemption value, buy it and queue a redemption",
+    "Who wins: professional searchers take most instant arbitrage (14.6)"
    ],
-   "sub": "Answer: It may reflect a real problem (slashing, exploit, insolvency).",
-   "subAt": 0.62,
-   "vo": "Why might a discount be a warning, not an opportunity? ... Pause and think. ... The answer: It may reflect a real problem (slashing, exploit, insolvency).",
-   "cap": "Why might a discount be a warning, not an opportunity? Pause and think. The answer: It may reflect a real problem (slashing, exploit, insolvency)."
+   "vo": "Let's recap. Stablecoin peg arbitrage: if a stablecoin trades at 0.995 on a decks and a P.S.M. or issuer redeems it at 1.00 (minus a fee), buy-and-redeem closes the gap. liquid staking token discount arbitrage: if an liquid staking token trades below its redemption value, buy it and queue a redemption. Who wins: professional searchers take most instant arbitrage (14.6).",
+   "cap": "Let's recap. Stablecoin peg arbitrage: if a stablecoin trades at 0.995 on a DEX and a PSM or issuer redeems it at 1.00 (minus a fee), buy-and-redeem closes the gap. LST discount arbitrage: if an LST trades below its redemption value, buy it and queue a redemption. Who wins: professional searchers take most instant arbitrage (14.6)."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 11.0",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson eleven point zero: Mastery Starter.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 11.0: Mastery Starter."
   }
  ]
 }

@@ -6,93 +6,111 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 4.4",
  "use": "Lesson 4.4 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Restaking & shared security",
+  "subtitle": "Lesson 4.4"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-04.png",
-   "eyebrow": "Lesson 4.4",
-   "vo": "Lesson four point four. Restaking and shared security.",
-   "cap": "Lesson 4.4. Restaking & shared security."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 4 · Yield",
+   "num": "4.4",
+   "title": "Restaking & shared security",
    "sub": "Map the extra risk layers restaking adds before accepting its extra yield.",
-   "vo": "Map the extra risk layers restaking adds before accepting its extra yield.",
-   "cap": "Map the extra risk layers restaking adds before accepting its extra yield."
+   "vo": "Lesson four point four. Restaking and shared security. By the end of this lesson, you'll be able to map the extra risk layers restaking adds before accepting its extra yield.",
+   "cap": "Lesson 4.4. Restaking & shared security. By the end of this lesson, you'll be able to map the extra risk layers restaking adds before accepting its extra yield."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
   },
   {
    "type": "statement",
+   "chapter": "Key ideas",
+   "kicker": "Key ideas",
    "lines": [
-    "Key ideas"
+    "Restaking reuses staked assets to secure additional…"
    ],
-   "sub": "Restaking reuses staked assets to secure additional services, for extra rewards and often points. Each service adds its own slashing conditions, and operators (who run the services) add operational risk. One collateral base securing many services creates corre",
+   "sub": "Restaking reuses staked assets to secure additional services, for extra rewards and often points. Each service adds its own slashing conditions, and operators (who run the services) add operational risk. One collateral base securing many se",
    "vo": "Restaking reuses staked assets to secure additional services, for extra rewards and often points. Each service adds its own slashing conditions, and operators (who run the services) add operational risk. One collateral base securing many services creates correlated failure. Full strategy treatment: Lesson 10.6.",
    "cap": "Restaking reuses staked assets to secure additional services, for extra rewards and often points. Each service adds its own slashing conditions, and operators (who run the services) add operational risk. One collateral base securing many services creates correlated failure. Full strategy treatment: Lesson 10.6."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Stack for one position",
+    "That's 6 layers, each able to fail.",
+    "The extra yield must pay for all of them.",
+    "Plan with points valued at zero."
    ],
-   "sub": "Stack for one position: ETH → staked → LST → liquid restaking token → restaking protocol → 4 services. That's 6 layers, each able to fail. The extra yield must pay for all of them. Plan with points valued at zero.",
-   "vo": "Stack for one position: ETH to staked to liquid staking token to liquid restaking token to restaking protocol to 4 services. That's 6 layers, each able to fail. The extra yield must pay for all of them. Plan with points valued at zero.",
-   "cap": "Stack for one position: ETH → staked → LST → liquid restaking token → restaking protocol → 4 services. That's 6 layers, each able to fail. The extra yield must pay for all of them. Plan with points valued at zero."
+   "vo": "Let's work an example, step by step. Stack for one position: ETH to staked to liquid staking token to liquid restaking token to restaking protocol to 4 services. That's 6 layers, each able to fail. The extra yield must pay for all of them. Plan with points valued at zero.",
+   "cap": "Let's work an example, step by step. Stack for one position: ETH → staked → LST → liquid restaking token → restaking protocol → 4 services. That's 6 layers, each able to fail. The extra yield must pay for all of them. Plan with points valued at zero."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Every layer of the stack written down",
     "Slashing conditions of each service read",
     "Sized in the speculative bucket"
    ],
-   "vo": "Your checklist. Every layer of the stack written down Slashing conditions of each service read Sized in the speculative bucket",
-   "cap": "Every layer of the stack written down Slashing conditions of each service read Sized in the speculative bucket"
+   "vo": "Here's your checklist. Do it now, for real. First, every layer of the stack written down. Next, Slashing conditions of each service read. And finally, Sized in the speculative bucket.",
+   "cap": "Here's your checklist. Do it now, for real. First, every layer of the stack written down. Next, Slashing conditions of each service read. And finally, Sized in the speculative bucket."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What does restaking add?"
-   ],
-   "sub": "Answer: Extra rewards in exchange for extra slashing and operator risk.",
-   "subAt": 0.62,
-   "vo": "What does restaking add? ... Pause and think. ... The answer: Extra rewards in exchange for extra slashing and operator risk.",
-   "cap": "What does restaking add? Pause and think. The answer: Extra rewards in exchange for extra slashing and operator risk."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "What does restaking add?",
+   "a": "Extra rewards in exchange for extra slashing and operator risk.",
+   "vo": "Question one. What does restaking add? [[pause 4]] The answer: Extra rewards in exchange for extra slashing and operator risk.",
+   "cap": "Question 1. What does restaking add? The answer: Extra rewards in exchange for extra slashing and operator risk."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why is correlated failure a concern?"
-   ],
-   "sub": "Answer: One collateral base secures many services; a failure can hit them all.",
-   "subAt": 0.62,
-   "vo": "Why is correlated failure a concern? ... Pause and think. ... The answer: One collateral base secures many services; a failure can hit them all.",
-   "cap": "Why is correlated failure a concern? Pause and think. The answer: One collateral base secures many services; a failure can hit them all."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Why is correlated failure a concern?",
+   "a": "One collateral base secures many services; a failure can hit them all.",
+   "vo": "Question two. Why is correlated failure a concern? [[pause 4]] The answer: One collateral base secures many services; a failure can hit them all.",
+   "cap": "Question 2. Why is correlated failure a concern? The answer: One collateral base secures many services; a failure can hit them all."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "How should points be valued when planning?"
-   ],
-   "sub": "Answer: At zero.",
-   "subAt": 0.62,
-   "vo": "How should points be valued when planning? ... Pause and think. ... The answer: At zero.",
-   "cap": "How should points be valued when planning? Pause and think. The answer: At zero."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "How should points be valued when planning?",
+   "a": "At zero.",
+   "vo": "Question three. How should points be valued when planning? [[pause 4]] The answer: At zero.",
+   "cap": "Question 3. How should points be valued when planning? The answer: At zero."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 4.5",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson four point five: Vaults and yield optimisers.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 4.5: Vaults & yield optimisers."
   }
  ]
 }

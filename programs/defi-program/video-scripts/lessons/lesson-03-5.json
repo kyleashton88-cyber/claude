@@ -6,48 +6,66 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 3.5",
  "use": "Lesson 3.5 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Perpetual futures and margin on-chain",
+  "subtitle": "Lesson 3.5"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-03.png",
-   "eyebrow": "Lesson 3.5",
-   "vo": "Lesson three point five. Perpetual futures and margin on-chain.",
-   "cap": "Lesson 3.5. Perpetual futures and margin on-chain."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 3 · Lending & Leverage",
+   "num": "3.5",
+   "title": "Perpetual futures and margin on-chain",
    "sub": "Understand perp positions well enough to use them for hedging (Module 11) and carry (10.3), and to see why high leverage fails.",
-   "vo": "Understand perp positions well enough to use them for hedging (Module 11) and carry (10.3), and to see why high leverage fails.",
-   "cap": "Understand perp positions well enough to use them for hedging (Module 11) and carry (10.3), and to see why high leverage fails."
+   "vo": "Lesson three point five. Perpetual futures and margin on-chain. By the end of this lesson, you'll be able to understand perp positions well enough to use them for hedging (Module 11) and carry (10.3), and to see why high leverage fails.",
+   "cap": "Lesson 3.5. Perpetual futures and margin on-chain. By the end of this lesson, you'll be able to understand perp positions well enough to use them for hedging (Module 11) and carry (10.3), and to see why high leverage fails."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
-    "A perpetual future (perp) tracks an asset's price with no expiry. You post margin and…",
+    "A perpetual future (perp) tracks an asset's price with no expiry",
     "Isolated margin",
-    "Mark price (used for liquidation) vs index price (spot reference). Funding is paid…",
-    "Liquidation happens when your margin falls to the maintenance margin. Roughly, a long is…"
+    "Mark price (used for liquidation) vs index price (spot reference)",
+    "Liquidation happens when your margin falls to the maintenance margin"
    ],
-   "vo": "A perpetual future (perp) tracks an asset's price with no expiry. You post margin and choose leverage. Isolated margin: only the margin in that position is at risk. Cross margin: your whole account backs every position (one bad trade can drain the rest). Mark price (used for liquidation) versus index price (spot reference). Funding is paid between longs and shorts, usually every hour or 8 hours. Liquidation happens when your margin falls to the maintenance margin. Roughly, a long is liquidated after a fall of 1 divided by leverage minus maintenance margin.",
-   "cap": "A perpetual future (perp) tracks an asset's price with no expiry. You post margin and choose leverage. Isolated margin: only the margin in that position is at risk. Cross margin: your whole account backs every position (one bad trade can drain the rest). Mark price (used for liquidation) vs index price (spot reference). Funding is paid between longs and shorts, usually every hour or 8 hours. Liquidation happens when your margin falls to the maintenance margin. Roughly, a long is liquidated after a fall of 1 ÷ leverage − maintenance margin."
+   "vo": "First, A perpetual future (perp) tracks an asset's price with no expiry. You post margin and choose leverage. Next, Isolated margin: only the margin in that position is at risk. Cross margin: your whole account backs every position (one bad trade can drain the rest). Then, Mark price (used for liquidation) versus index price (spot reference). Funding is paid between longs and shorts, usually every hour or 8 hours. And finally, Liquidation happens when your margin falls to the maintenance margin. Roughly, a long is liquidated after a fall of 1 divided by leverage minus maintenance margin.",
+   "cap": "First, A perpetual future (perp) tracks an asset's price with no expiry. You post margin and choose leverage. Next, Isolated margin: only the margin in that position is at risk. Cross margin: your whole account backs every position (one bad trade can drain the rest). Then, Mark price (used for liquidation) vs index price (spot reference). Funding is paid between longs and shorts, usually every hour or 8 hours. And finally, Liquidation happens when your margin falls to the maintenance margin. Roughly, a long is liquidated after a fall of 1 ÷ leverage − maintenance margin."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Long ETH from $3,000 at 5×, 0.5% maintenance margin",
+    "The same short at 20× is liquidated at ≈ $3,135 (+4.5%), a move ETH can make…",
+    "Leverage doesn't just magnify gains"
    ],
-   "sub": "Long ETH from $3,000 at 5×, 0.5% maintenance margin: the calculator → liquidation ≈ $2,415 (−19.5%). The same short at 20× is liquidated at ≈ $3,135 (+4.5%), a move ETH can make in an hour. Leverage doesn't just magnify gains: it shrinks how wrong you're allow",
-   "vo": "Long ETH from $3,000 at 5 times , 0.5% maintenance margin: the calculator to liquidation about $2,415 (minus 19.5%). The same short at 20 times is liquidated at about $3,135 (+4.5%), a move ETH can make in an hour. Leverage doesn't just magnify gains: it shrinks how wrong you're allowed to be.",
-   "cap": "Long ETH from $3,000 at 5×, 0.5% maintenance margin: the calculator → liquidation ≈ $2,415 (−19.5%). The same short at 20× is liquidated at ≈ $3,135 (+4.5%), a move ETH can make in an hour. Leverage doesn't just magnify gains: it shrinks how wrong you're allowed to be."
+   "vo": "Let's work an example, step by step. Long ETH from $3,000 at 5 times , 0.5% maintenance margin: the calculator gives liquidation about $2,415 (minus 19.5%). The same short at 20 times is liquidated at about $3,135 (+4.5%), a move ETH can make in an hour. Leverage doesn't just magnify gains: it shrinks how wrong you're allowed to be.",
+   "cap": "Let's work an example, step by step. Long ETH from $3,000 at 5×, 0.5% maintenance margin: the calculator gives liquidation ≈ $2,415 (−19.5%). The same short at 20× is liquidated at ≈ $3,135 (+4.5%), a move ETH can make in an hour. Leverage doesn't just magnify gains: it shrinks how wrong you're allowed to be."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Isolated margin by default",
@@ -55,48 +73,59 @@
     "Leverage ≤ 2–3× for anything but a hedge I fully understand",
     "Funding cost checked for how long I'll hold"
    ],
-   "vo": "Your checklist. Isolated margin by default Liquidation price computed before opening Leverage at most 2–3 times for anything but a hedge I fully understand Funding cost checked for how long I'll hold",
-   "cap": "Isolated margin by default Liquidation price computed before opening Leverage ≤ 2–3× for anything but a hedge I fully understand Funding cost checked for how long I'll hold"
+   "vo": "Here's your checklist. Do it now, for real. First, Isolated margin by default. Next, Liquidation price computed before opening. Then, Leverage at most 2 to 3 times for anything but a hedge I fully understand. And finally, Funding cost checked for how long I'll hold.",
+   "cap": "Here's your checklist. Do it now, for real. First, Isolated margin by default. Next, Liquidation price computed before opening. Then, Leverage ≤ 2–3× for anything but a hedge I fully understand. And finally, Funding cost checked for how long I'll hold."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Isolated vs cross margin?"
-   ],
-   "sub": "Answer: Isolated risks only that position's margin; cross puts the whole account behind every position.",
-   "subAt": 0.62,
-   "vo": "Isolated versus cross margin? ... Pause and think. ... The answer: Isolated risks only that position's margin; cross puts the whole account behind every position.",
-   "cap": "Isolated vs cross margin? Pause and think. The answer: Isolated risks only that position's margin; cross puts the whole account behind every position."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Isolated vs cross margin?",
+   "a": "Isolated risks only that position's margin; cross puts the whole account behind every position.",
+   "vo": "Question one. Isolated versus cross margin? [[pause 4]] The answer: Isolated risks only that position's margin; cross puts the whole account behind every position.",
+   "cap": "Question 1. Isolated vs cross margin? The answer: Isolated risks only that position's margin; cross puts the whole account behind every position."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Roughly how far can a 10× long fall before liquidation (0.5% maintenance)?"
-   ],
-   "sub": "Answer: About 9.5%.",
-   "subAt": 0.62,
-   "vo": "Roughly how far can a 10 times long fall before liquidation (0.5% maintenance)? ... Pause and think. ... The answer: About 9.5%.",
-   "cap": "Roughly how far can a 10× long fall before liquidation (0.5% maintenance)? Pause and think. The answer: About 9.5%."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Roughly how far can a 10× long fall before liquidation (0.5% maintenance)?",
+   "a": "About 9.5%.",
+   "vo": "Question two. Roughly how far can a 10 times long fall before liquidation (0.5% maintenance)? [[pause 4]] The answer: About 9.5%.",
+   "cap": "Question 2. Roughly how far can a 10× long fall before liquidation (0.5% maintenance)? The answer: About 9.5%."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Which price triggers liquidation?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Which price triggers liquidation?",
+   "a": "The mark price.",
+   "vo": "Question three. Which price triggers liquidation? [[pause 4]] The answer: The mark price.",
+   "cap": "Question 3. Which price triggers liquidation? The answer: The mark price."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "A perpetual future (perp) tracks an asset's price with no expiry",
+    "Isolated margin: only the margin in that position is at risk",
+    "Mark price (used for liquidation) vs index price (spot reference)",
+    "Liquidation happens when your margin falls to the maintenance margin"
    ],
-   "sub": "Answer: The mark price.",
-   "subAt": 0.62,
-   "vo": "Which price triggers liquidation? ... Pause and think. ... The answer: The mark price.",
-   "cap": "Which price triggers liquidation? Pause and think. The answer: The mark price."
+   "vo": "Let's recap. A perpetual future (perp) tracks an asset's price with no expiry. Isolated margin: only the margin in that position is at risk. Mark price (used for liquidation) versus index price (spot reference). Liquidation happens when your margin falls to the maintenance margin.",
+   "cap": "Let's recap. A perpetual future (perp) tracks an asset's price with no expiry. Isolated margin: only the margin in that position is at risk. Mark price (used for liquidation) vs index price (spot reference). Liquidation happens when your margin falls to the maintenance margin."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 3.6",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson three point six: Lending design deep dive: e-mode, caps, auctions, soft liquidation, bad debt.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 3.6: Lending design deep dive: e-mode, caps, auctions, soft liquidation, bad debt."
   }
  ]
 }

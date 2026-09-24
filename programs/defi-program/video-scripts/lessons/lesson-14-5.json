@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 14.5",
  "use": "Lesson 14.5 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Building your own tools",
+  "subtitle": "Lesson 14.5"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-14.png",
-   "eyebrow": "Lesson 14.5",
-   "vo": "Lesson fourteen point five. Building your own tools: reading contracts, data and simple scripts.",
-   "cap": "Lesson 14.5. Building your own tools: reading contracts, data and simple scripts."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 14 · Automation & Mastery",
+   "num": "14.5",
+   "title": "Building your own tools: reading contracts, data and simple scripts",
    "sub": "Read on-chain data directly and build simple read-only tools, so you're not dependent on any one dashboard.",
-   "vo": "Read on-chain data directly and build simple read-only tools, so you're not dependent on any one dashboard.",
-   "cap": "Read on-chain data directly and build simple read-only tools, so you're not dependent on any one dashboard."
+   "vo": "Lesson fourteen point five. Building your own tools: reading contracts, data and simple scripts. By the end of this lesson, you'll be able to read on-chain data directly and build simple read-only tools, so you're not dependent on any one dashboard.",
+   "cap": "Lesson 14.5. Building your own tools: reading contracts, data and simple scripts. By the end of this lesson, you'll be able to read on-chain data directly and build simple read-only tools, so you're not dependent on any one dashboard."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Reading without code",
@@ -35,68 +49,82 @@
     "Scripts that only read (never hold keys) can check health factors, pegs and utilisation,…",
     "Rule"
    ],
-   "vo": "Reading without code: block explorers' Read tabs show a contract's public state (for example a lending market's parameters, your position). Public data APIs (for example protocol analytics sites, explorers) return T.V.L., fees, yields and prices as JSON. R.P.C.: a node endpoint that lets a script read chain state directly (balances, contract calls). Use a reputable provider; reading is free or cheap. Scripts that only read (never hold keys) can check health factors, pegs and utilisation, and send you alerts. Rule: tools that read are low-risk; tools that sign follow Lesson 14.2 (scoped, capped, revocable permissions). Never put a seed phrase or private key in a script, a file or an environment variable on a shared machine.",
-   "cap": "Reading without code: block explorers' Read tabs show a contract's public state (e.g. a lending market's parameters, your position). Public data APIs (e.g. protocol analytics sites, explorers) return TVL, fees, yields and prices as JSON. RPC: a node endpoint that lets a script read chain state directly (balances, contract calls). Use a reputable provider; reading is free or cheap. Scripts that only read (never hold keys) can check health factors, pegs and utilisation, and send you alerts. Rule: tools that read are low-risk; tools that sign follow Lesson 14.2 (scoped, capped, revocable permissions). Never put a seed phrase or private key in a script, a file or an environment variable on a shared machine."
+   "vo": "First, Reading without code: block explorers' Read tabs show a contract's public state (for example a lending market's parameters, your position). Next, Public data APIs (for example protocol analytics sites, explorers) return T.V.L., fees, yields and prices as JSON. Then, R.P.C.: a node endpoint that lets a script read chain state directly (balances, contract calls). Use a reputable provider; reading is free or cheap. Also, Scripts that only read (never hold keys) can check health factors, pegs and utilisation, and send you alerts. And finally, Rule: tools that read are low-risk; tools that sign follow Lesson 14.2 (scoped, capped, revocable permissions). Never put a seed phrase or private key in a script, a file or an environment variable on a shared machine.",
+   "cap": "First, Reading without code: block explorers' Read tabs show a contract's public state (e.g. a lending market's parameters, your position). Next, Public data APIs (e.g. protocol analytics sites, explorers) return TVL, fees, yields and prices as JSON. Then, RPC: a node endpoint that lets a script read chain state directly (balances, contract calls). Use a reputable provider; reading is free or cheap. Also, Scripts that only read (never hold keys) can check health factors, pegs and utilisation, and send you alerts. And finally, Rule: tools that read are low-risk; tools that sign follow Lesson 14.2 (scoped, capped, revocable permissions). Never put a seed phrase or private key in a script, a file or an environment variable on a shared machine."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example (read-only, pseudo-code)"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Uses only public reads, holds no keys, and can't move funds.",
+    "Worst case if it breaks"
    ],
-   "sub": "Uses only public reads, holds no keys, and can't move funds. Worst case if it breaks: you miss an alert, so keep your other alerts (14.1) as a backup.",
-   "vo": "Uses only public reads, holds no keys, and can't move funds. Worst case if it breaks: you miss an alert, so keep your other alerts (14.1) as a backup.",
-   "cap": "Uses only public reads, holds no keys, and can't move funds. Worst case if it breaks: you miss an alert, so keep your other alerts (14.1) as a backup."
+   "vo": "Let's work an example, step by step. Uses only public reads, holds no keys, and can't move funds. Worst case if it breaks: you miss an alert, so keep your other alerts (14.1) as a backup.",
+   "cap": "Let's work an example, step by step. Uses only public reads, holds no keys, and can't move funds. Worst case if it breaks: you miss an alert, so keep your other alerts (14.1) as a backup."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "I can read a contract's state on an explorer",
     "My monitoring scripts are read-only and hold no keys",
     "Backup alerts exist if my script fails"
    ],
-   "vo": "Your checklist. I can read a contract's state on an explorer My monitoring scripts are read-only and hold no keys Backup alerts exist if my script fails",
-   "cap": "I can read a contract's state on an explorer My monitoring scripts are read-only and hold no keys Backup alerts exist if my script fails"
+   "vo": "Here's your checklist. Do it now, for real. First, I can read a contract's state on an explorer. Next, My monitoring scripts are read-only and hold no keys. And finally, Backup alerts exist if my script fails.",
+   "cap": "Here's your checklist. Do it now, for real. First, I can read a contract's state on an explorer. Next, My monitoring scripts are read-only and hold no keys. And finally, Backup alerts exist if my script fails."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why prefer read-only tools?"
-   ],
-   "sub": "Answer: They can't move funds, so a bug or breach costs little.",
-   "subAt": 0.62,
-   "vo": "Why prefer read-only tools? ... Pause and think. ... The answer: They can't move funds, so a bug or breach costs little.",
-   "cap": "Why prefer read-only tools? Pause and think. The answer: They can't move funds, so a bug or breach costs little."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why prefer read-only tools?",
+   "a": "They can't move funds, so a bug or breach costs little.",
+   "vo": "Question one. Why prefer read-only tools? [[pause 4]] The answer: They can't move funds, so a bug or breach costs little.",
+   "cap": "Question 1. Why prefer read-only tools? The answer: They can't move funds, so a bug or breach costs little."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Where should a private key go in a script?"
-   ],
-   "sub": "Answer: Nowhere. Use scoped permissions (14.2) if a tool must act.",
-   "subAt": 0.62,
-   "vo": "Where should a private key go in a script? ... Pause and think. ... The answer: Nowhere. Use scoped permissions (14.2) if a tool must act.",
-   "cap": "Where should a private key go in a script? Pause and think. The answer: Nowhere. Use scoped permissions (14.2) if a tool must act."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Where should a private key go in a script?",
+   "a": "Nowhere. Use scoped permissions (14.2) if a tool must act.",
+   "vo": "Question two. Where should a private key go in a script? [[pause 4]] The answer: Nowhere. Use scoped permissions (14.2) if a tool must act.",
+   "cap": "Question 2. Where should a private key go in a script? The answer: Nowhere. Use scoped permissions (14.2) if a tool must act."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What's an RPC endpoint?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What's an RPC endpoint?",
+   "a": "A node connection that lets software read (and submit to) the blockchain.",
+   "vo": "Question three. What's an R.P.C. endpoint? [[pause 4]] The answer: A node connection that lets software read (and submit to) the blockchain.",
+   "cap": "Question 3. What's an RPC endpoint? The answer: A node connection that lets software read (and submit to) the blockchain."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Reading without code: block explorers' Read tabs show a contract's public state (e.g. a lending market's parameters, your position)",
+    "Public data APIs (e.g. protocol analytics sites, explorers) return TVL, fees",
+    "RPC: a node endpoint that lets a script read chain state directly (balances, contract calls)",
+    "Scripts that only read (never hold keys) can check health factors, pegs and utilisation"
    ],
-   "sub": "Answer: A node connection that lets software read (and submit to) the blockchain.",
-   "subAt": 0.62,
-   "vo": "What's an R.P.C. endpoint? ... Pause and think. ... The answer: A node connection that lets software read (and submit to) the blockchain.",
-   "cap": "What's an RPC endpoint? Pause and think. The answer: A node connection that lets software read (and submit to) the blockchain."
+   "vo": "Let's recap. Reading without code: block explorers' Read tabs show a contract's public state (for example a lending market's parameters, your position). Public data APIs (for example protocol analytics sites, explorers) return T.V.L., fees. R.P.C.: a node endpoint that lets a script read chain state directly (balances, contract calls). Scripts that only read (never hold keys) can check health factors, pegs and utilisation.",
+   "cap": "Let's recap. Reading without code: block explorers' Read tabs show a contract's public state (e.g. a lending market's parameters, your position). Public data APIs (e.g. protocol analytics sites, explorers) return TVL, fees. RPC: a node endpoint that lets a script read chain state directly (balances, contract calls). Scripts that only read (never hold keys) can check health factors, pegs and utilisation."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 14.6",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson fourteen point six: Searchers, keepers and arbitrage bots: how they work.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 14.6: Searchers, keepers and arbitrage bots: how they work."
   }
  ]
 }

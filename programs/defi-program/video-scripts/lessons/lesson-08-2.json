@@ -6,37 +6,53 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 8.2",
  "use": "Lesson 8.2 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "The DeFi risk framework",
+  "subtitle": "Lesson 8.2"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-08.png",
-   "eyebrow": "Lesson 8.2",
-   "vo": "Lesson eight point two. The DeFi risk framework.",
-   "cap": "Lesson 8.2. The DeFi risk framework."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 8 · The DeFi Operating System",
+   "num": "8.2",
+   "title": "The DeFi risk framework",
    "sub": "Keep a risk register that scores every position's risks and names the response.",
-   "vo": "Keep a risk register that scores every position's risks and names the response.",
-   "cap": "Keep a risk register that scores every position's risks and names the response."
+   "vo": "Lesson eight point two. The DeFi risk framework. By the end of this lesson, you'll be able to keep a risk register that scores every position's risks and names the response.",
+   "cap": "Lesson 8.2. The DeFi risk framework. By the end of this lesson, you'll be able to keep a risk register that scores every position's risks and names the response."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
   },
   {
    "type": "statement",
+   "chapter": "Key ideas",
+   "kicker": "Key ideas",
    "lines": [
-    "Key ideas"
+    "The eight risk surfaces"
    ],
-   "sub": "The eight risk surfaces: smart-contract · economic · oracle · liquidity · governance · bridge/chain · counterparty · user-operation. Score each for likelihood (1–5) × impact (1–5). Anything ≥ 15 needs a mitigation or an exit; anything ≥ 20 shouldn't be held.",
-   "vo": "The eight risk surfaces: smart-contract , economic , oracle , liquidity , governance , bridge/chain , counterparty , user-operation. Score each for likelihood (1–5) times impact (1–5). Anything at least 15 needs a mitigation or an exit; anything at least 20 shouldn't be held.",
+   "sub": "The eight risk surfaces: smart-contract · economic · oracle · liquidity · governance · bridge/chain · counterparty · user-operation. Score each for likelihood (1–5) × impact (1–5). Anything ≥ 15 needs a mitigation or an exit; anything ≥ 20 ",
+   "vo": "The eight risk surfaces: smart-contract times economic times oracle times liquidity times governance times bridge/chain times counterparty times user-operation. Score each for likelihood (1 to 5) times impact (1 to 5). Anything at least 15 needs a mitigation or an exit; anything at least 20 shouldn't be held.",
    "cap": "The eight risk surfaces: smart-contract · economic · oracle · liquidity · governance · bridge/chain · counterparty · user-operation. Score each for likelihood (1–5) × impact (1–5). Anything ≥ 15 needs a mitigation or an exit; anything ≥ 20 shouldn't be held."
   },
   {
    "type": "bullets",
-   "title": "Worked example — one register row",
+   "chapter": "Worked example",
+   "title": "Worked example",
    "items": [
     "USDC lending, Protocol Y",
     "LST loop",
@@ -45,58 +61,57 @@
    ],
    "compact": true,
    "vo": "U.S.D.C. lending, Protocol Y, Oracle on one collateral is thin, 3, 4, 12, Cap 10%, alert on governance changes. liquid staking token loop, Rate spike above break-even, 3, 3, 9, Alert at 4.5% borrow; unwind rule. Bridged stablecoin on new layer two, Bridge exploit, 2, 5, 10, Canonical bridge; cap 5%. New farm, Contract bug (unaudited upgrade), 4, 5, 20, Don't hold.",
-   "cap": "USDC lending, Protocol Y, Oracle on one collateral is thin, 3, 4, 12, Cap 10%, alert on governance changes LST loop, Rate spike above break-even, 3, 3, 9, Alert at 4.5% borrow; unwind rule Bridged stablecoin on new L2, Bridge exploit, 2, 5, 10, Canonical bridge; cap 5% New farm, Contract bug (unaudited upgrade), 4, 5, 20, Don't hold"
+   "cap": "USDC lending, Protocol Y, Oracle on one collateral is thin, 3, 4, 12, Cap 10%, alert on governance changes. LST loop, Rate spike above break-even, 3, 3, 9, Alert at 4.5% borrow; unwind rule. Bridged stablecoin on new L2, Bridge exploit, 2, 5, 10, Canonical bridge; cap 5%. New farm, Contract bug (unaudited upgrade), 4, 5, 20, Don't hold."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Register covers every position and all eight surfaces",
     "Scores ≥ 15 have a mitigation or exit",
     "Reviewed monthly and after incidents"
    ],
-   "vo": "Your checklist. Register covers every position and all eight surfaces Scores at least 15 have a mitigation or exit Reviewed monthly and after incidents",
-   "cap": "Register covers every position and all eight surfaces Scores ≥ 15 have a mitigation or exit Reviewed monthly and after incidents"
+   "vo": "Here's your checklist. Do it now, for real. First, Register covers every position and all eight surfaces. Next, Scores at least 15 have a mitigation or exit. And finally, Reviewed monthly and after incidents.",
+   "cap": "Here's your checklist. Do it now, for real. First, Register covers every position and all eight surfaces. Next, Scores ≥ 15 have a mitigation or exit. And finally, Reviewed monthly and after incidents."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "How is a risk scored?"
-   ],
-   "sub": "Answer: Likelihood × impact, each 1–5.",
-   "subAt": 0.62,
-   "vo": "How is a risk scored? ... Pause and think. ... The answer: Likelihood times impact, each 1–5.",
-   "cap": "How is a risk scored? Pause and think. The answer: Likelihood × impact, each 1–5."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "How is a risk scored?",
+   "a": "Likelihood × impact, each 1–5.",
+   "vo": "Question one. How is a risk scored? [[pause 4]] The answer: Likelihood times impact, each 1 to 5.",
+   "cap": "Question 1. How is a risk scored? The answer: Likelihood × impact, each 1–5."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What's a user-operation risk?"
-   ],
-   "sub": "Answer: Your own mistakes: wrong network, bad signature, lost keys.",
-   "subAt": 0.62,
-   "vo": "What's a user-operation risk? ... Pause and think. ... The answer: Your own mistakes: wrong network, bad signature, lost keys.",
-   "cap": "What's a user-operation risk? Pause and think. The answer: Your own mistakes: wrong network, bad signature, lost keys."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What's a user-operation risk?",
+   "a": "Your own mistakes: wrong network, bad signature, lost keys.",
+   "vo": "Question two. What's a user-operation risk? [[pause 4]] The answer: Your own mistakes: wrong network, bad signature, lost keys.",
+   "cap": "Question 2. What's a user-operation risk? The answer: Your own mistakes: wrong network, bad signature, lost keys."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Score 20. Action?"
-   ],
-   "sub": "Answer: Don't hold it.",
-   "subAt": 0.62,
-   "vo": "Score 20. Action? ... Pause and think. ... The answer: Don't hold it.",
-   "cap": "Score 20. Action? Pause and think. The answer: Don't hold it."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Score 20. Action?",
+   "a": "Don't hold it.",
+   "vo": "Question three. Score 20. Action? [[pause 4]] The answer: Don't hold it.",
+   "cap": "Question 3. Score 20. Action? The answer: Don't hold it."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 8.3",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson eight point three: The strategy library.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 8.3: The strategy library."
   }
  ]
 }

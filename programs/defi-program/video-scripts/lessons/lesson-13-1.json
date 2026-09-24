@@ -6,27 +6,40 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 13.1",
  "use": "Lesson 13.1 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Income sources ranked by durability",
+  "subtitle": "Lesson 13.1"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-13.png",
-   "eyebrow": "Lesson 13.1",
-   "vo": "Lesson thirteen point one. Income sources ranked by durability.",
-   "cap": "Lesson 13.1. Income sources ranked by durability."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 13 · The Income Engine",
+   "num": "13.1",
+   "title": "Income sources ranked by durability",
    "sub": "Rank income sources by how long and how reliably they're likely to pay, not by their headline rate.",
-   "vo": "Rank income sources by how long and how reliably they're likely to pay, not by their headline rate.",
-   "cap": "Rank income sources by how long and how reliably they're likely to pay, not by their headline rate."
+   "vo": "Lesson thirteen point one. Income sources ranked by durability. By the end of this lesson, you'll be able to rank income sources by how long and how reliably they're likely to pay, not by their headline rate.",
+   "cap": "Lesson 13.1. Income sources ranked by durability. By the end of this lesson, you'll be able to rank income sources by how long and how reliably they're likely to pay, not by their headline rate."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Blue-chip stablecoin lending",
@@ -37,78 +50,69 @@
     "Funding / basis carry"
    ],
    "compact": true,
-   "vo": "Blue-chip stablecoin lending, Borrower demand, High, Medium: moves with demand. Staking / liquid staking token, Network security rewards, High, Low–medium. Fixed-rate PTs to maturity, Locked at purchase, Fixed for the term, None until maturity. Curated lending vaults, Borrower demand in isolated markets, Medium, Medium. L.P. fees (major pairs), Trading volume, Medium, High. Funding / basis carry, Market positioning, Low–medium, High: can turn negative. Options premium, Volatility, Medium, High. Incentives / points, Protocol budgets, Low, Very high.",
-   "cap": "Blue-chip stablecoin lending, Borrower demand, High, Medium: moves with demand Staking / LSTs, Network security rewards, High, Low–medium Fixed-rate PTs to maturity, Locked at purchase, Fixed for the term, None until maturity Curated lending vaults, Borrower demand in isolated markets, Medium, Medium LP fees (major pairs), Trading volume, Medium, High Funding / basis carry, Market positioning, Low–medium, High: can turn negative"
+   "vo": "A durable income engine is built mostly from the top of this table. The bottom rows are boosters you size small and expect to switch off. Blue-chip stablecoin lending, Borrower demand, High, Medium: moves with demand. Staking or liquid staking token, Network security rewards, High, Low to medium. Fixed-rate PTs to maturity, Locked at purchase, Fixed for the term, None until maturity. Curated lending vaults, Borrower demand in isolated markets, Medium, Medium. L.P. fees (major pairs), Trading volume, Medium, High. Funding or basis carry, Market positioning, Low to medium, High: can turn negative.",
+   "cap": "A durable income engine is built mostly from the top of this table. The bottom rows are boosters you size small and expect to switch off. Blue-chip stablecoin lending, Borrower demand, High, Medium: moves with demand. Staking / LSTs, Network security rewards, High, Low–medium. Fixed-rate PTs to maturity, Locked at purchase, Fixed for the term, None until maturity. Curated lending vaults, Borrower demand in isolated markets, Medium, Medium. LP fees (major pairs), Trading volume, Medium, High. Funding / basis carry, Market positioning, Low–medium, High: can turn negative."
   },
   {
    "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Options premium",
     "Incentives / points"
    ],
    "compact": true,
-   "vo": "Continuing.",
-   "cap": "Options premium, Volatility, Medium, High Incentives / points, Protocol budgets, Low, Very high"
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Key ideas"
-   ],
-   "sub": "A durable income engine is built mostly from the top of this table. The bottom rows are boosters you size small and expect to switch off.",
-   "vo": "A durable income engine is built mostly from the top of this table. The bottom rows are boosters you size small and expect to switch off.",
-   "cap": "A durable income engine is built mostly from the top of this table. The bottom rows are boosters you size small and expect to switch off."
+   "vo": "Options premium, Volatility, Medium, High. Incentives or points, Protocol budgets, Low, Very high.",
+   "cap": "Options premium, Volatility, Medium, High. Incentives / points, Protocol budgets, Low, Very high."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Every income position tagged with its source and durability",
     "Core income from high-durability sources"
    ],
-   "vo": "Your checklist. Every income position tagged with its source and durability Core income from high-durability sources",
-   "cap": "Every income position tagged with its source and durability Core income from high-durability sources"
+   "vo": "Here's your checklist. Do it now, for real. First, every income position tagged with its source and durability. And finally, Core income from high-durability sources.",
+   "cap": "Here's your checklist. Do it now, for real. First, every income position tagged with its source and durability. And finally, Core income from high-durability sources."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why is funding carry low durability?"
-   ],
-   "sub": "Answer: It depends on market positioning and can turn negative for long periods.",
-   "subAt": 0.62,
-   "vo": "Why is funding carry low durability? ... Pause and think. ... The answer: It depends on market positioning and can turn negative for long periods.",
-   "cap": "Why is funding carry low durability? Pause and think. The answer: It depends on market positioning and can turn negative for long periods."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why is funding carry low durability?",
+   "a": "It depends on market positioning and can turn negative for long periods.",
+   "vo": "Question one. Why is funding carry low durability? [[pause 4]] The answer: It depends on market positioning and can turn negative for long periods.",
+   "cap": "Question 1. Why is funding carry low durability? The answer: It depends on market positioning and can turn negative for long periods."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Which source gives a known rate for a set term?"
-   ],
-   "sub": "Answer: Fixed-rate PTs held to maturity.",
-   "subAt": 0.62,
-   "vo": "Which source gives a known rate for a set term? ... Pause and think. ... The answer: Fixed-rate PTs held to maturity.",
-   "cap": "Which source gives a known rate for a set term? Pause and think. The answer: Fixed-rate PTs held to maturity."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Which source gives a known rate for a set term?",
+   "a": "Fixed-rate PTs held to maturity.",
+   "vo": "Question two. Which source gives a known rate for a set term? [[pause 4]] The answer: Fixed-rate PTs held to maturity.",
+   "cap": "Question 2. Which source gives a known rate for a set term? The answer: Fixed-rate PTs held to maturity."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "How should incentive income be treated?"
-   ],
-   "sub": "Answer: As a temporary booster, sold on a schedule and not relied on.",
-   "subAt": 0.62,
-   "vo": "How should incentive income be treated? ... Pause and think. ... The answer: As a temporary booster, sold on a schedule and not relied on.",
-   "cap": "How should incentive income be treated? Pause and think. The answer: As a temporary booster, sold on a schedule and not relied on."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "How should incentive income be treated?",
+   "a": "As a temporary booster, sold on a schedule and not relied on.",
+   "vo": "Question three. How should incentive income be treated? [[pause 4]] The answer: As a temporary booster, sold on a schedule and not relied on.",
+   "cap": "Question 3. How should incentive income be treated? The answer: As a temporary booster, sold on a schedule and not relied on."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 13.2",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson thirteen point two: Risk-adjusted yield: subtracting expected losses.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 13.2: Risk-adjusted yield: subtracting expected losses."
   }
  ]
 }

@@ -6,27 +6,38 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 13.0",
  "use": "Lesson 13.0 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Mastery Starter",
+  "subtitle": "Module 13 · Start here"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-13.png",
-   "eyebrow": "Lesson 13.0",
-   "vo": "Lesson thirteen point zero. Mastery Starter.",
-   "cap": "Lesson 13.0. Mastery Starter."
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 13 · The Income Engine",
+   "num": "13.0",
+   "title": "Mastery Starter",
+   "sub": "Income from DeFi should be planned like a pension, not chased like a jackpot: build it from durable sources, subtract the losses you should expect, and pay yourself less than that.",
+   "vo": "Mastery Starter thirteen point zero. New to The Income Engine? Start here. In about ten minutes, you'll go from zero to ready for this module.",
+   "cap": "Mastery Starter 13.0. New to The Income Engine? Start here. In about ten minutes, you'll go from zero to ready for this module."
   },
   {
    "type": "statement",
+   "chapter": "The 60-second version",
+   "kicker": "The 60-second version",
    "lines": [
-    "The 60-second version"
+    "Income from DeFi should be planned like a pension, not chased like a jackpot"
    ],
-   "sub": "Income from DeFi should be planned like a pension, not chased like a jackpot: build it from durable sources, subtract the losses you should expect, and pay yourself less than that.",
+   "sub": "build it from durable sources, subtract the losses you should expect, and pay yourself less than that.",
    "vo": "Income from DeFi should be planned like a pension, not chased like a jackpot: build it from durable sources, subtract the losses you should expect, and pay yourself less than that.",
    "cap": "Income from DeFi should be planned like a pension, not chased like a jackpot: build it from durable sources, subtract the losses you should expect, and pay yourself less than that."
   },
   {
    "type": "bullets",
+   "chapter": "Words you'll need",
    "title": "Words you'll need",
    "items": [
     "Durability",
@@ -36,29 +47,32 @@
     "Principal"
    ],
    "compact": true,
-   "vo": "Durability, how long and reliably a source tends to pay. Risk-adjusted yield, yield minus expected losses. LGD, how much you lose if a loss event happens. Payout ratio, share of expected income you take out. Principal, the capital itself, never spent as income.",
-   "cap": "Durability, how long and reliably a source tends to pay Risk-adjusted yield, yield minus expected losses LGD, how much you lose if a loss event happens Payout ratio, share of expected income you take out Principal, the capital itself, never spent as income"
+   "vo": "Durability: how long and reliably a source tends to pay. Risk-adjusted yield: yield minus expected losses. LGD: how much you lose if a loss event happens. Payout ratio: share of expected income you take out. Principal: the capital itself, never spent as income.",
+   "cap": "Durability: how long and reliably a source tends to pay. Risk-adjusted yield: yield minus expected losses. LGD: how much you lose if a loss event happens. Payout ratio: share of expected income you take out. Principal: the capital itself, never spent as income."
   },
   {
    "type": "bullets",
+   "chapter": "Before you start",
    "title": "Before you start",
    "items": [
     "Modules 0–12"
    ],
-   "vo": "Modules 0–12",
-   "cap": "Modules 0–12"
+   "vo": "Modules 0 to 12.",
+   "cap": "Modules 0–12."
   },
   {
    "type": "statement",
+   "chapter": "Your first safe step",
+   "kicker": "Your first safe step",
    "lines": [
-    "Your first safe step"
+    "Take one position and compute its risk-adjusted yield with the calculator."
    ],
-   "sub": "Take one position and compute its risk-adjusted yield with the calculator",
    "vo": "Take one position and compute its risk-adjusted yield with the calculator",
    "cap": "Take one position and compute its risk-adjusted yield with the calculator"
   },
   {
    "type": "bullets",
+   "chapter": "The mastery ladder",
    "title": "The mastery ladder",
    "items": [
     "Beginner",
@@ -66,24 +80,26 @@
     "Master"
    ],
    "compact": true,
-   "vo": "Beginner, Ranks income sources by durability. Practitioner, Builds an income portfolio with risk-adjusted expected income. Master, Runs a payout policy that survives bad years, with annual reviews and scaling rules.",
-   "cap": "Beginner, Ranks income sources by durability Practitioner, Builds an income portfolio with risk-adjusted expected income Master, Runs a payout policy that survives bad years, with annual reviews and scaling rules"
+   "vo": "Beginner: Ranks income sources by durability. Practitioner: Builds an income portfolio with risk-adjusted expected income. Master: Runs a payout policy that survives bad years, with annual reviews and scaling rules.",
+   "cap": "Beginner: Ranks income sources by durability. Practitioner: Builds an income portfolio with risk-adjusted expected income. Master: Runs a payout policy that survives bad years, with annual reviews and scaling rules."
   },
   {
    "type": "statement",
+   "chapter": "You've mastered it when…",
+   "kicker": "You've mastered it when…",
    "lines": [
-    "You've mastered it when…"
+    "You've mastered this module when your payout is set below risk-adjusted expected income and never draws on principal."
    ],
-   "sub": "…your payout is set below risk-adjusted expected income and never draws on principal. ---",
-   "vo": "…your payout is set below risk-adjusted expected income and never draws on principal. ---",
-   "cap": "…your payout is set below risk-adjusted expected income and never draws on principal. ---"
+   "vo": "You've mastered this module when your payout is set below risk-adjusted expected income and never draws on principal.",
+   "cap": "You've mastered this module when your payout is set below risk-adjusted expected income and never draws on principal."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 13.1",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson thirteen point one: Income sources ranked by durability.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 13.1: Income sources ranked by durability."
   }
  ]
 }

@@ -6,66 +6,85 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 0.5",
  "use": "Lesson 0.5 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Setting up your wallet and…",
+  "subtitle": "Lesson 0.5"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-00.png",
-   "eyebrow": "Lesson 0.5",
-   "vo": "Lesson zero point five. Setting up your wallet and backing it up.",
-   "cap": "Lesson 0.5. Setting up your wallet and backing it up."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 0 · Crypto From Zero",
+   "num": "0.5",
+   "title": "Setting up your wallet and backing it up",
    "sub": "Install a wallet safely, back up the seed phrase correctly, and prove the backup works.",
-   "vo": "Install a wallet safely, back up the seed phrase correctly, and prove the backup works.",
-   "cap": "Install a wallet safely, back up the seed phrase correctly, and prove the backup works."
-  },
-  {
-   "type": "image",
-   "src": "assets/diagrams/seed-backup.png",
-   "eyebrow": "Seed phrase: do and don't",
-   "vo": "Here's the picture: Seed phrase: do and don't.",
-   "cap": "Seed phrase: do and don't."
+   "vo": "Lesson zero point five. Setting up your wallet and backing it up. By the end of this lesson, you'll be able to install a wallet safely, back up the seed phrase correctly, and prove the backup works.",
+   "cap": "Lesson 0.5. Setting up your wallet and backing it up. By the end of this lesson, you'll be able to install a wallet safely, back up the seed phrase correctly, and prove the backup works."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Software wallet (browser extension or phone app, e.g. MetaMask, Rabby)",
     "Hardware wallet (a small device, e.g. Ledger, Trezor)",
     "Get the wallet from the official website (type the address yourself or use the link from…",
-    "Create a new wallet. Never use a seed phrase someone else gave you or that came…",
+    "Create a new wallet",
     "Write the seed phrase on paper (or stamp it into metal), in order, spelled exactly."
    ],
-   "vo": "Two kinds of wallet: Safe install: Prove the backup works (do this now, with nothing in the wallet): remove the wallet (or use a second device), choose \"restore/import\", enter your written seed phrase, and check the same address appears. Software wallet (browser extension or phone app, for example MetaMask, Rabby): free, convenient; keys live on your computer/phone. Hardware wallet (a small device, for example Ledger, Trezor): keys stay on the device; every transaction must be approved on its screen. Recommended once you hold more than you'd be upset to lose. Buy only from the manufacturer's official website, never second-hand. Get the wallet from the official website (type the address yourself or use the link from the official site). Fake wallet apps and sponsored search ads are a common scam. Create a new wallet. Never use a seed phrase someone else gave you or that came pre-printed in a box. Write the seed phrase on paper (or stamp it into metal), in order, spelled exactly.",
-   "cap": "Software wallet (browser extension or phone app, e.g. MetaMask, Rabby): free, convenient; keys live on your computer/phone. Hardware wallet (a small device, e.g. Ledger, Trezor): keys stay on the device; every transaction must be approved on its screen. Recommended once you hold more than you'd be upset to lose. Buy only from the manufacturer's official website, never second-hand. Get the wallet from the official website (type the address yourself or use the link from the official site). Fake wallet apps and sponsored search ads are a common scam. Create a new wallet. Never use a seed phrase someone else gave you or that came pre-printed in a box. Write the seed phrase on paper (or stamp it into metal), in order, spelled exactly."
+   "vo": "Two kinds of wallet: Safe install: Prove the backup works (do this now, with nothing in the wallet): remove the wallet (or use a second device), choose \"restore/import\", enter your written seed phrase, and check the same address appears. First, Software wallet (browser extension or phone app, for example MetaMask, Rabby): free, convenient; keys live on your computer/phone. Next, Hardware wallet (a small device, for example Ledger, Trezor): keys stay on the device; every transaction must be approved on its screen. Recommended once you hold more than you'd be upset to lose. Buy only from the manufacturer's official website, never second-hand. Then, Get the wallet from the official website (type the address yourself or use the link from the official site). Fake wallet apps and sponsored search ads are a common scam. Also, Create a new wallet. Never use a seed phrase someone else gave you or that came pre-printed in a box. On top of that, Write the seed phrase on paper (or stamp it into metal), in order, spelled exactly.",
+   "cap": "Two kinds of wallet: Safe install: Prove the backup works (do this now, with nothing in the wallet): remove the wallet (or use a second device), choose \"restore/import\", enter your written seed phrase, and check the same address appears. First, Software wallet (browser extension or phone app, e.g. MetaMask, Rabby): free, convenient; keys live on your computer/phone. Next, Hardware wallet (a small device, e.g. Ledger, Trezor): keys stay on the device; every transaction must be approved on its screen. Recommended once you hold more than you'd be upset to lose. Buy only from the manufacturer's official website, never second-hand. Then, Get the wallet from the official website (type the address yourself or use the link from the official site). Fake wallet apps and sponsored search ads are a common scam. Also, Create a new wallet. Never use a seed phrase someone else gave you or that came pre-printed in a box. On top of that, Write the seed phrase on paper (or stamp it into metal), in order, spelled exactly."
   },
   {
    "type": "bullets",
-   "title": "Key ideas",
+   "chapter": "Key ideas",
+   "title": "Key ideas (cont.)",
    "items": [
-    "Store it somewhere private and safe from fire and water. For larger amounts, keep a…",
+    "Store it somewhere private and safe from fire and water",
     "Never store it in photos, email, notes apps, cloud drives or password managers."
    ],
-   "vo": "Store it somewhere private and safe from fire and water. For larger amounts, keep a second copy in a separate location. Never store it in photos, email, notes apps, cloud drives or password managers.",
-   "cap": "Store it somewhere private and safe from fire and water. For larger amounts, keep a second copy in a separate location. Never store it in photos, email, notes apps, cloud drives or password managers."
+   "vo": "And Store it somewhere private and safe from fire and water. For larger amounts, keep a second copy in a separate location. And finally, never store it in photos, email, notes apps, cloud drives or password managers.",
+   "cap": "And Store it somewhere private and safe from fire and water. For larger amounts, keep a second copy in a separate location. And finally, never store it in photos, email, notes apps, cloud drives or password managers."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "image",
+   "chapter": "Key ideas",
+   "src": "assets/diagrams/seed-backup.png",
+   "eyebrow": "Seed phrase: do and don't",
+   "wide": true,
+   "vo": "Let's look at the diagram: Seed phrase: do and don't. Take a moment with it. It's everything we've just said, in one picture.",
+   "cap": "Let's look at the diagram: Seed phrase: do and don't. Take a moment with it. It's everything we've just said, in one picture."
+  },
+  {
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Sam installs Rabby from its official site, writes 12 words on the card in…"
    ],
-   "sub": "Sam installs Rabby from its official site, writes 12 words on the card in his hardware wallet box (the card is blank, as it should be), restores on his laptop, sees the same address 0x4b…e1, and only then sends money to it.",
-   "vo": "Sam installs Rabby from its official site, writes 12 words on the card in his hardware wallet box (the card is blank, as it should be), restores on his laptop, sees the same address 0x4b…e1, and only then sends money to it.",
-   "cap": "Sam installs Rabby from its official site, writes 12 words on the card in his hardware wallet box (the card is blank, as it should be), restores on his laptop, sees the same address 0x4b…e1, and only then sends money to it."
+   "vo": "Let's work an example, step by step. Sam installs Rabby from its official site, writes 12 words on the card in his hardware wallet box (the card is blank, as it should be), restores on his laptop, sees the same address 0x4b…e1, and only then sends money to it.",
+   "cap": "Let's work an example, step by step. Sam installs Rabby from its official site, writes 12 words on the card in his hardware wallet box (the card is blank, as it should be), restores on his laptop, sees the same address 0x4b…e1, and only then sends money to it."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Wallet installed from the official website",
@@ -73,48 +92,59 @@
     "Restore test done",
     "Hardware wallet planned for larger amounts (bought from the maker directly)"
    ],
-   "vo": "Your checklist. Wallet installed from the official website New seed phrase written on paper (or metal), never digital Restore test done: same address appears Hardware wallet planned for larger amounts (bought from the maker directly)",
-   "cap": "Wallet installed from the official website New seed phrase written on paper (or metal), never digital Restore test done: same address appears Hardware wallet planned for larger amounts (bought from the maker directly)"
+   "vo": "Here's your checklist. Do it now, for real. First, Wallet installed from the official website. Next, New seed phrase written on paper (or metal), never digital. Then, Restore test done: same address appears. And finally, Hardware wallet planned for larger amounts (bought from the maker directly).",
+   "cap": "Here's your checklist. Do it now, for real. First, Wallet installed from the official website. Next, New seed phrase written on paper (or metal), never digital. Then, Restore test done: same address appears. And finally, Hardware wallet planned for larger amounts (bought from the maker directly)."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "A wallet box contains a card with 24 words already printed. What do you do?"
-   ],
-   "sub": "Answer: Don't use it. It's a scam. Genuine devices generate your seed phrase themselves.",
-   "subAt": 0.62,
-   "vo": "A wallet box contains a card with 24 words already printed. What do you do? ... Pause and think. ... The answer: Don't use it. It's a scam. Genuine devices generate your seed phrase themselves.",
-   "cap": "A wallet box contains a card with 24 words already printed. What do you do? Pause and think. The answer: Don't use it. It's a scam. Genuine devices generate your seed phrase themselves."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "A wallet box contains a card with 24 words already printed. What do you do?",
+   "a": "Don't use it. It's a scam. Genuine devices generate your seed phrase themselves.",
+   "vo": "Question one. A wallet box contains a card with 24 words already printed. What do you do? [[pause 4]] The answer: Don't use it. It's a scam. Genuine devices generate your seed phrase themselves.",
+   "cap": "Question 1. A wallet box contains a card with 24 words already printed. What do you do? The answer: Don't use it. It's a scam. Genuine devices generate your seed phrase themselves."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why test the restore before depositing?"
-   ],
-   "sub": "Answer: To prove your written backup is correct while nothing is at risk.",
-   "subAt": 0.62,
-   "vo": "Why test the restore before depositing? ... Pause and think. ... The answer: To prove your written backup is correct while nothing is at risk.",
-   "cap": "Why test the restore before depositing? Pause and think. The answer: To prove your written backup is correct while nothing is at risk."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Why test the restore before depositing?",
+   "a": "To prove your written backup is correct while nothing is at risk.",
+   "vo": "Question two. Why test the restore before depositing? [[pause 4]] The answer: To prove your written backup is correct while nothing is at risk.",
+   "cap": "Question 2. Why test the restore before depositing? The answer: To prove your written backup is correct while nothing is at risk."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Is a cloud-drive photo of your seed phrase a safe backup?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Is a cloud-drive photo of your seed phrase a safe backup?",
+   "a": "No. Anyone who gets into that account can take everything.",
+   "vo": "Question three. Is a cloud-drive photo of your seed phrase a safe backup? [[pause 4]] The answer: No. Anyone who gets into that account can take everything.",
+   "cap": "Question 3. Is a cloud-drive photo of your seed phrase a safe backup? The answer: No. Anyone who gets into that account can take everything."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Software wallet (browser extension or phone app, e.g. MetaMask, Rabby)",
+    "Hardware wallet (a small device, e.g. Ledger, Trezor)",
+    "Get the wallet from the official website (type the address yourself or use the link from the official site)",
+    "Create a new wallet: Never use a seed phrase someone else gave you or that came pre-printed in a box"
    ],
-   "sub": "Answer: No. Anyone who gets into that account can take everything.",
-   "subAt": 0.62,
-   "vo": "Is a cloud-drive photo of your seed phrase a safe backup? ... Pause and think. ... The answer: No. Anyone who gets into that account can take everything.",
-   "cap": "Is a cloud-drive photo of your seed phrase a safe backup? Pause and think. The answer: No. Anyone who gets into that account can take everything."
+   "vo": "Let's recap. Software wallet (browser extension or phone app, for example MetaMask, Rabby). Hardware wallet (a small device, for example Ledger, Trezor). Get the wallet from the official website (type the address yourself or use the link from the official site). Create a new wallet: Never use a seed phrase someone else gave you or that came pre-printed in a box.",
+   "cap": "Let's recap. Software wallet (browser extension or phone app, e.g. MetaMask, Rabby). Hardware wallet (a small device, e.g. Ledger, Trezor). Get the wallet from the official website (type the address yourself or use the link from the official site). Create a new wallet: Never use a seed phrase someone else gave you or that came pre-printed in a box."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 0.6",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson zero point six: Networks, gas and your first transfer.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 0.6: Networks, gas and your first transfer."
   }
  ]
 }

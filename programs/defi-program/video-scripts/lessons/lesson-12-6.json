@@ -6,61 +6,80 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 12.6",
  "use": "Lesson 12.6 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Books, records and succession",
+  "subtitle": "Lesson 12.6"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-12.png",
-   "eyebrow": "Lesson 12.6",
-   "vo": "Lesson twelve point six. Books, records and succession.",
-   "cap": "Lesson 12.6. Books, records and succession."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 12 · Operate as Your Own Bank",
+   "num": "12.6",
+   "title": "Books, records and succession",
    "sub": "Keep books a stranger could follow, and make sure your family could recover everything if you couldn't.",
-   "vo": "Keep books a stranger could follow, and make sure your family could recover everything if you couldn't.",
-   "cap": "Keep books a stranger could follow, and make sure your family could recover everything if you couldn't."
+   "vo": "Lesson twelve point six. Books, records and succession. By the end of this lesson, you'll be able to keep books a stranger could follow, and make sure your family could recover everything if you couldn't.",
+   "cap": "Lesson 12.6. Books, records and succession. By the end of this lesson, you'll be able to keep books a stranger could follow, and make sure your family could recover everything if you couldn't."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Every position",
     "Every loan",
     "Every approval granted, and when it was revoked",
     "Income received, by source and date",
-    "Keep exportable records for tax. Rules differ by country, so use a crypto-aware tax…"
+    "Keep exportable records for tax"
    ],
-   "vo": "Books (update weekly from your journal, Module 8): Succession: self-custody means that if you're gone and nobody can sign, the money is gone too. the documents are, who to contact), stored separately from any seed or key Every position: protocol, chain, contract, amount, entry date and price, cost basis Every loan: collateral, debt, rate, health factor, action levels Every approval granted, and when it was revoked Income received, by source and date Keep exportable records for tax. Rules differ by country, so use a crypto-aware tax professional.",
-   "cap": "Every position: protocol, chain, contract, amount, entry date and price, cost basis Every loan: collateral, debt, rate, HF, action levels Every approval granted, and when it was revoked Income received, by source and date Keep exportable records for tax. Rules differ by country, so use a crypto-aware tax professional."
+   "vo": "Books (update weekly from your journal, Module 8): Succession: self-custody means that if you're gone and nobody can sign, the money is gone too. the documents are, who to contact), stored separately from any seed or key First, every position: protocol, chain, contract, amount, entry date and price, cost basis. Next, every loan: collateral, debt, rate, health factor, action levels. Then, every approval granted, and when it was revoked. Also, Income received, by source and date. On top of that, keep exportable records for tax. Rules differ by country, so use a crypto-aware tax professional.",
+   "cap": "Books (update weekly from your journal, Module 8): Succession: self-custody means that if you're gone and nobody can sign, the money is gone too. the documents are, who to contact), stored separately from any seed or key First, every position: protocol, chain, contract, amount, entry date and price, cost basis. Next, every loan: collateral, debt, rate, HF, action levels. Then, every approval granted, and when it was revoked. Also, Income received, by source and date. On top of that, keep exportable records for tax. Rules differ by country, so use a crypto-aware tax professional."
   },
   {
    "type": "bullets",
-   "title": "Key ideas",
+   "chapter": "Key ideas",
+   "title": "Key ideas (cont.)",
    "items": [
     "A letter of instruction that explains the setup (wallets, multisig, where",
     "Multisig with a trusted co-signer or professional service, so recovery doesn't depend on…",
     "Legal documents (will, powers of attorney) that reference the digital assets",
     "Annual drill"
    ],
-   "vo": "A letter of instruction that explains the setup (wallets, multisig, where Multisig with a trusted co-signer or professional service, so recovery doesn't depend on one person Legal documents (will, powers of attorney) that reference the digital assets: use a lawyer Annual drill: walk a trusted person through the letter without revealing secrets",
-   "cap": "A letter of instruction that explains the setup (wallets, multisig, where Multisig with a trusted co-signer or professional service, so recovery doesn't depend on one person Legal documents (will, powers of attorney) that reference the digital assets: use a lawyer Annual drill: walk a trusted person through the letter without revealing secrets"
+   "vo": "And A letter of instruction that explains the setup (wallets, multisig, where. Plus, Multisig with a trusted co-signer or professional service, so recovery doesn't depend on one person. One more: Legal documents (will, powers of attorney) that reference the digital assets: use a lawyer. And finally, Annual drill: walk a trusted person through the letter without revealing secrets.",
+   "cap": "And A letter of instruction that explains the setup (wallets, multisig, where. Plus, Multisig with a trusted co-signer or professional service, so recovery doesn't depend on one person. One more: Legal documents (will, powers of attorney) that reference the digital assets: use a lawyer. And finally, Annual drill: walk a trusted person through the letter without revealing secrets."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "A 2-of-3 vault",
+    "Your letter of instruction, stored with your will, explains how your…",
+    "No single document contains enough to steal the funds."
    ],
-   "sub": "A 2-of-3 vault: you hold two keys (home + safe-deposit box); a professional co-signer holds the third under an agreed recovery process. Your letter of instruction, stored with your will, explains how your executor works with the co-signer. No single document c",
-   "vo": "A 2-of-3 vault: you hold two keys (home + safe-deposit box); a professional co-signer holds the third under an agreed recovery process. Your letter of instruction, stored with your will, explains how your executor works with the co-signer. No single document contains enough to steal the funds.",
-   "cap": "A 2-of-3 vault: you hold two keys (home + safe-deposit box); a professional co-signer holds the third under an agreed recovery process. Your letter of instruction, stored with your will, explains how your executor works with the co-signer. No single document contains enough to steal the funds."
+   "vo": "Let's work an example, step by step. A 2-of-3 vault: you hold two keys (home + safe-deposit box); a professional co-signer holds the third under an agreed recovery process. Your letter of instruction, stored with your will, explains how your executor works with the co-signer. No single document contains enough to steal the funds.",
+   "cap": "Let's work an example, step by step. A 2-of-3 vault: you hold two keys (home + safe-deposit box); a professional co-signer holds the third under an agreed recovery process. Your letter of instruction, stored with your will, explains how your executor works with the co-signer. No single document contains enough to steal the funds."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Books current within a week",
@@ -68,48 +87,59 @@
     "Letter of instruction written and stored apart from keys",
     "Annual succession drill done"
    ],
-   "vo": "Your checklist. Books current within a week Tax records exportable; professional engaged Letter of instruction written and stored apart from keys Annual succession drill done",
-   "cap": "Books current within a week Tax records exportable; professional engaged Letter of instruction written and stored apart from keys Annual succession drill done"
+   "vo": "Here's your checklist. Do it now, for real. First, Books current within a week. Next, Tax records exportable; professional engaged. Then, Letter of instruction written and stored apart from keys. And finally, Annual succession drill done.",
+   "cap": "Here's your checklist. Do it now, for real. First, Books current within a week. Next, Tax records exportable; professional engaged. Then, Letter of instruction written and stored apart from keys. And finally, Annual succession drill done."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why keep the letter of instruction apart from seeds and keys?"
-   ],
-   "sub": "Answer: So finding the letter isn't enough to steal the funds.",
-   "subAt": 0.62,
-   "vo": "Why keep the letter of instruction apart from seeds and keys? ... Pause and think. ... The answer: So finding the letter isn't enough to steal the funds.",
-   "cap": "Why keep the letter of instruction apart from seeds and keys? Pause and think. The answer: So finding the letter isn't enough to steal the funds."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why keep the letter of instruction apart from seeds and keys?",
+   "a": "So finding the letter isn't enough to steal the funds.",
+   "vo": "Question one. Why keep the letter of instruction apart from seeds and keys? [[pause 4]] The answer: So finding the letter isn't enough to steal the funds.",
+   "cap": "Question 1. Why keep the letter of instruction apart from seeds and keys? The answer: So finding the letter isn't enough to steal the funds."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What's the risk of single-key self-custody for your family?"
-   ],
-   "sub": "Answer: If you can't sign and no one else can, the assets are unrecoverable.",
-   "subAt": 0.62,
-   "vo": "What's the risk of single-key self-custody for your family? ... Pause and think. ... The answer: If you can't sign and no one else can, the assets are unrecoverable.",
-   "cap": "What's the risk of single-key self-custody for your family? Pause and think. The answer: If you can't sign and no one else can, the assets are unrecoverable."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What's the risk of single-key self-custody for your family?",
+   "a": "If you can't sign and no one else can, the assets are unrecoverable.",
+   "vo": "Question two. What's the risk of single-key self-custody for your family? [[pause 4]] The answer: If you can't sign and no one else can, the assets are unrecoverable.",
+   "cap": "Question 2. What's the risk of single-key self-custody for your family? The answer: If you can't sign and no one else can, the assets are unrecoverable."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What goes in the books for each loan?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What goes in the books for each loan?",
+   "a": "Collateral, debt, rate, health factor and your action levels.",
+   "vo": "Question three. What goes in the books for each loan? [[pause 4]] The answer: Collateral, debt, rate, health factor and your action levels.",
+   "cap": "Question 3. What goes in the books for each loan? The answer: Collateral, debt, rate, health factor and your action levels."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Every position: protocol, chain, contract, amount, entry date and price, cost basis",
+    "Every loan: collateral, debt, rate, HF, action levels",
+    "Every approval granted, and when it was revoked",
+    "Income received, by source and date"
    ],
-   "sub": "Answer: Collateral, debt, rate, health factor and your action levels.",
-   "subAt": 0.62,
-   "vo": "What goes in the books for each loan? ... Pause and think. ... The answer: Collateral, debt, rate, health factor and your action levels.",
-   "cap": "What goes in the books for each loan? Pause and think. The answer: Collateral, debt, rate, health factor and your action levels."
+   "vo": "Let's recap. Every position: protocol, chain, contract, amount, entry date and price, cost basis. Every loan: collateral, debt, rate, health factor, action levels. Every approval granted, and when it was revoked. Income received, by source and date.",
+   "cap": "Let's recap. Every position: protocol, chain, contract, amount, entry date and price, cost basis. Every loan: collateral, debt, rate, HF, action levels. Every approval granted, and when it was revoked. Income received, by source and date."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 12.7",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson twelve point seven: Tax, regulation and compliance awareness.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 12.7: Tax, regulation and compliance awareness."
   }
  ]
 }

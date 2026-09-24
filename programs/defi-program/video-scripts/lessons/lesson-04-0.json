@@ -6,27 +6,38 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 4.0",
  "use": "Lesson 4.0 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Mastery Starter",
+  "subtitle": "Module 4 · Start here"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-04.png",
-   "eyebrow": "Lesson 4.0",
-   "vo": "Lesson four point zero. Mastery Starter.",
-   "cap": "Lesson 4.0. Mastery Starter."
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 4 · Yield",
+   "num": "4.0",
+   "title": "Mastery Starter",
+   "sub": "Every yield is payment for a risk. Staking pays you to secure a network, lending pays for borrower demand, farms often pay in newly printed tokens. This module teaches you to see what each yield reall",
+   "vo": "Mastery Starter four point zero. New to Yield? Start here. In about ten minutes, you'll go from zero to ready for this module.",
+   "cap": "Mastery Starter 4.0. New to Yield? Start here. In about ten minutes, you'll go from zero to ready for this module."
   },
   {
    "type": "statement",
+   "chapter": "The 60-second version",
+   "kicker": "The 60-second version",
    "lines": [
-    "The 60-second version"
+    "Every yield is payment for a risk"
    ],
-   "sub": "Every yield is payment for a risk. Staking pays you to secure a network, lending pays for borrower demand, farms often pay in newly printed tokens. This module teaches you to see what each yield really pays for.",
+   "sub": "Staking pays you to secure a network, lending pays for borrower demand, farms often pay in newly printed tokens. This module teaches you to see what each yield really pays for.",
    "vo": "Every yield is payment for a risk. Staking pays you to secure a network, lending pays for borrower demand, farms often pay in newly printed tokens. This module teaches you to see what each yield really pays for.",
    "cap": "Every yield is payment for a risk. Staking pays you to secure a network, lending pays for borrower demand, farms often pay in newly printed tokens. This module teaches you to see what each yield really pays for."
   },
   {
    "type": "bullets",
+   "chapter": "Words you'll need",
    "title": "Words you'll need",
    "items": [
     "APY",
@@ -36,29 +47,32 @@
     "RWA"
    ],
    "compact": true,
-   "vo": "A.P.Y., yearly return including compounding. Emissions, new reward tokens printed by a protocol. Staking, locking tokens to help secure a network. liquid staking token, a token representing staked assets. real-world asset, a token representing a real-world asset.",
-   "cap": "APY, yearly return including compounding Emissions, new reward tokens printed by a protocol Staking, locking tokens to help secure a network LST, a token representing staked assets RWA, a token representing a real-world asset"
+   "vo": "A.P.Y.: yearly return including compounding. Emissions: new reward tokens printed by a protocol. Staking: locking tokens to help secure a network. liquid staking token: a token representing staked assets. real-world asset: a token representing a real-world asset.",
+   "cap": "APY: yearly return including compounding. Emissions: new reward tokens printed by a protocol. Staking: locking tokens to help secure a network. LST: a token representing staked assets. RWA: a token representing a real-world asset."
   },
   {
    "type": "bullets",
+   "chapter": "Before you start",
    "title": "Before you start",
    "items": [
     "Modules 0–3"
    ],
-   "vo": "Modules 0–3",
-   "cap": "Modules 0–3"
+   "vo": "Modules 0 to 3.",
+   "cap": "Modules 0–3."
   },
   {
    "type": "statement",
+   "chapter": "Your first safe step",
+   "kicker": "Your first safe step",
    "lines": [
-    "Your first safe step"
+    "Take any advertised APY and split it into base yield vs incentives using the protocol's own dashboard."
    ],
-   "sub": "Take any advertised APY and split it into base yield vs incentives using the protocol's own dashboard.",
    "vo": "Take any advertised A.P.Y. and split it into base yield versus incentives using the protocol's own dashboard.",
    "cap": "Take any advertised APY and split it into base yield vs incentives using the protocol's own dashboard."
   },
   {
    "type": "bullets",
+   "chapter": "The mastery ladder",
    "title": "The mastery ladder",
    "items": [
     "Beginner",
@@ -66,24 +80,26 @@
     "Master"
    ],
    "compact": true,
-   "vo": "Beginner, Tells base yield from emissions. Practitioner, Compares vaults versus DIY and prices points/airdrops as bets. Master, Builds yield from durable sources: lending, staking, savings rates, tokenized treasuries.",
-   "cap": "Beginner, Tells base yield from emissions Practitioner, Compares vaults vs DIY and prices points/airdrops as bets Master, Builds yield from durable sources: lending, staking, savings rates, tokenized treasuries"
+   "vo": "Beginner: Tells base yield from emissions. Practitioner: Compares vaults versus DIY and prices points/airdrops as bets. Master: Builds yield from durable sources: lending, staking, savings rates, tokenized treasuries.",
+   "cap": "Beginner: Tells base yield from emissions. Practitioner: Compares vaults vs DIY and prices points/airdrops as bets. Master: Builds yield from durable sources: lending, staking, savings rates, tokenized treasuries."
   },
   {
    "type": "statement",
+   "chapter": "You've mastered it when…",
+   "kicker": "You've mastered it when…",
    "lines": [
-    "You've mastered it when…"
+    "You've mastered this module when you can name the source and the risk behind any yield in one sentence."
    ],
-   "sub": "…you can name the source and the risk behind any yield in one sentence. ---",
-   "vo": "…you can name the source and the risk behind any yield in one sentence. ---",
-   "cap": "…you can name the source and the risk behind any yield in one sentence. ---"
+   "vo": "You've mastered this module when you can name the source and the risk behind any yield in one sentence.",
+   "cap": "You've mastered this module when you can name the source and the risk behind any yield in one sentence."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 4.1",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson four point one: Yield farming: base yield versus emissions.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 4.1: Yield farming: base yield vs emissions."
   }
  ]
 }

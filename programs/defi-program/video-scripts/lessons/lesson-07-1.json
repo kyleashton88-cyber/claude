@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 7.1",
  "use": "Lesson 7.1 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "On-chain data foundations",
+  "subtitle": "Lesson 7.1"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-07.png",
-   "eyebrow": "Lesson 7.1",
-   "vo": "Lesson seven point one. On-chain data foundations.",
-   "cap": "Lesson 7.1. On-chain data foundations."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 7 · On-Chain Analytics",
+   "num": "7.1",
+   "title": "On-chain data foundations",
    "sub": "Avoid the classic misreads of on-chain data.",
-   "vo": "Avoid the classic misreads of on-chain data.",
-   "cap": "Avoid the classic misreads of on-chain data."
+   "vo": "Lesson seven point one. On-chain data foundations. By the end of this lesson, you'll be able to avoid the classic misreads of on-chain data.",
+   "cap": "Lesson 7.1. On-chain data foundations. By the end of this lesson, you'll be able to avoid the classic misreads of on-chain data."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Address ≠ person",
@@ -35,67 +49,82 @@
     "Active addresses can be inflated by bots or airdrop farming.",
     "Data provenance"
    ],
-   "vo": "Address ≠ person: one person can have many addresses; one exchange address serves millions. Transfer ≠ trade: moving tokens isn't buying or selling. Labels are probabilistic: providers guess who owns what; they can be wrong. Active addresses can be inflated by bots or airdrop farming. Data provenance: know chain coverage, indexing method and delay.",
-   "cap": "Address ≠ person: one person can have many addresses; one exchange address serves millions. Transfer ≠ trade: moving tokens isn't buying or selling. Labels are probabilistic: providers guess who owns what; they can be wrong. Active addresses can be inflated by bots or airdrop farming. Data provenance: know chain coverage, indexing method and delay."
+   "vo": "First, Address ≠ person: one person can have many addresses; one exchange address serves millions. Next, Transfer ≠ trade: moving tokens isn't buying or selling. Then, Labels are probabilistic: providers guess who owns what; they can be wrong. Also, Active addresses can be inflated by bots or airdrop farming. And finally, Data provenance: know chain coverage, indexing method and delay.",
+   "cap": "First, Address ≠ person: one person can have many addresses; one exchange address serves millions. Next, Transfer ≠ trade: moving tokens isn't buying or selling. Then, Labels are probabilistic: providers guess who owns what; they can be wrong. Also, Active addresses can be inflated by bots or airdrop farming. And finally, Data provenance: know chain coverage, indexing method and delay."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "\"Whale moves $100M of BTC!\" It's an exchange shuffling between its own cold…",
+    "No trade happened.",
+    "Check labels, destination and history before reacting."
    ],
-   "sub": "\"Whale moves $100M of BTC!\" It's an exchange shuffling between its own cold and hot wallets. No trade happened. Check labels, destination and history before reacting.",
-   "vo": "\"Whale moves $100M of bitcoin!\" It's an exchange shuffling between its own cold and hot wallets. No trade happened. Check labels, destination and history before reacting.",
-   "cap": "\"Whale moves $100M of BTC!\" It's an exchange shuffling between its own cold and hot wallets. No trade happened. Check labels, destination and history before reacting."
+   "vo": "Let's work an example, step by step. \"Whale moves $100M of bitcoin!\" It's an exchange shuffling between its own cold and hot wallets. No trade happened. Check labels, destination and history before reacting.",
+   "cap": "Let's work an example, step by step. \"Whale moves $100M of BTC!\" It's an exchange shuffling between its own cold and hot wallets. No trade happened. Check labels, destination and history before reacting."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "I check what an address is before interpreting a move",
     "I note each metric's source and definition"
    ],
-   "vo": "Your checklist. I check what an address is before interpreting a move I note each metric's source and definition",
-   "cap": "I check what an address is before interpreting a move I note each metric's source and definition"
+   "vo": "Here's your checklist. Do it now, for real. First, I check what an address is before interpreting a move. And finally, I note each metric's source and definition.",
+   "cap": "Here's your checklist. Do it now, for real. First, I check what an address is before interpreting a move. And finally, I note each metric's source and definition."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Does an address equal a person?"
-   ],
-   "sub": "Answer: No.",
-   "subAt": 0.62,
-   "vo": "Does an address equal a person? ... Pause and think. ... The answer: No.",
-   "cap": "Does an address equal a person? Pause and think. The answer: No."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Does an address equal a person?",
+   "a": "No.",
+   "vo": "Question one. Does an address equal a person? [[pause 4]] The answer: No.",
+   "cap": "Question 1. Does an address equal a person? The answer: No."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Is a large transfer a sale?"
-   ],
-   "sub": "Answer: Not necessarily. It may be internal or custodial.",
-   "subAt": 0.62,
-   "vo": "Is a large transfer a sale? ... Pause and think. ... The answer: Not necessarily. It may be internal or custodial.",
-   "cap": "Is a large transfer a sale? Pause and think. The answer: Not necessarily. It may be internal or custodial."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Is a large transfer a sale?",
+   "a": "Not necessarily. It may be internal or custodial.",
+   "vo": "Question two. Is a large transfer a sale? [[pause 4]] The answer: Not necessarily. It may be internal or custodial.",
+   "cap": "Question 2. Is a large transfer a sale? The answer: Not necessarily. It may be internal or custodial."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why can active-address counts mislead?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Why can active-address counts mislead?",
+   "a": "Bots and farming inflate them.",
+   "vo": "Question three. Why can active-address counts mislead? [[pause 4]] The answer: Bots and farming inflate them.",
+   "cap": "Question 3. Why can active-address counts mislead? The answer: Bots and farming inflate them."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Address ≠ person: one person can have many addresses",
+    "Transfer ≠ trade: moving tokens isn't buying or selling",
+    "Labels are probabilistic: providers guess who owns what",
+    "Active addresses can be inflated by bots or airdrop farming"
    ],
-   "sub": "Answer: Bots and farming inflate them.",
-   "subAt": 0.62,
-   "vo": "Why can active-address counts mislead? ... Pause and think. ... The answer: Bots and farming inflate them.",
-   "cap": "Why can active-address counts mislead? Pause and think. The answer: Bots and farming inflate them."
+   "vo": "Let's recap. Address ≠ person: one person can have many addresses. Transfer ≠ trade: moving tokens isn't buying or selling. Labels are probabilistic: providers guess who owns what. Active addresses can be inflated by bots or airdrop farming.",
+   "cap": "Let's recap. Address ≠ person: one person can have many addresses. Transfer ≠ trade: moving tokens isn't buying or selling. Labels are probabilistic: providers guess who owns what. Active addresses can be inflated by bots or airdrop farming."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 7.2",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson seven point two: Block explorer mastery.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 7.2: Block explorer mastery."
   }
  ]
 }

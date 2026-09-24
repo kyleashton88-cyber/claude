@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 6.5",
  "use": "Lesson 6.5 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Case studies",
+  "subtitle": "Lesson 6.5"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-06.png",
-   "eyebrow": "Lesson 6.5",
-   "vo": "Lesson six point five. Case studies: how DeFi failures happened.",
-   "cap": "Lesson 6.5. Case studies: how DeFi failures happened."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 6 · Protocol Research",
+   "num": "6.5",
+   "title": "Case studies: how DeFi failures happened",
    "sub": "Learn the patterns behind major failures so you recognise them early.",
-   "vo": "Learn the patterns behind major failures so you recognise them early.",
-   "cap": "Learn the patterns behind major failures so you recognise them early."
+   "vo": "Lesson six point five. Case studies: how DeFi failures happened. By the end of this lesson, you'll be able to learn the patterns behind major failures so you recognise them early.",
+   "cap": "Lesson 6.5. Case studies: how DeFi failures happened. By the end of this lesson, you'll be able to learn the patterns behind major failures so you recognise them early."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Explanation — seven failures, seven patt",
    "title": "Explanation — seven failures, seven patterns",
    "items": [
     "Black Thursday, March 2020 (Maker)",
@@ -37,86 +51,81 @@
     "Euler Finance, March 2023 (~$197M, later largely returned)"
    ],
    "compact": true,
-   "vo": "Black Thursday, March 2020 (Maker), ETH crashed; congested network and failing keeper bots let some collateral auctions clear at 0 DAI bids (about $8M lost), Liquidation mechanism failure under stress, Auctions relying on keepers during congestion; no minimum bid. TerraUSD (UST), May 2022, Algorithmic stablecoin lost its peg and collapsed, Reflexive design: confidence was the collateral, Yield (about 20%) far above any real cash flow; peg defended by a sister token. Ronin bridge, March 2022 (about $600M), Attackers got 5 of 9 validator keys, Weak bridge trust model, Small signer set; keys concentrated. Mango Markets, Oct 2022 (about $110M), Collateral price pumped on thin markets, then borrowed against, Oracle manipulation, Thin-market collateral valued at spot. FTX, Nov 2022, Exchange used customer funds, Custodial (CeFi) counterparty failure, Opaque reserves; \"not your keys\". Euler Finance, March 2023 (about $197M, later largely returned), Logic flaw in a lending function, Contract bug missed by audits, Complex new function added after earlier audits. Curve pools, July 2023, Reentrancy guard broken by a compiler bug, Toolchain risk, Rare. Shows audited code can fail from below.",
-   "cap": "Black Thursday, March 2020 (Maker), ETH crashed; congested network and failing keeper bots let some collateral auctions clear at 0 DAI bids (~$8M lost), Liquidation mechanism failure under stress, Auctions relying on keepers during congestion; no minimum bid TerraUSD (UST), May 2022, Algorithmic stablecoin lost its peg and collapsed, Reflexive design: confidence was the collateral, Yield (~20%) far above any real cash flow; peg defended by a sister token Ronin bridge, March 2022 (~$600M), Attackers got 5 of 9 validator keys, Weak bridge trust model, Small signer set; keys concentrated Mango Markets, Oct 2022 (~$110M), Collateral price pumped on thin markets, then borrowed against, Oracle manipulation, Thin-market collateral valued at spot FTX, Nov 2022, Exchange used customer funds, Custodial (CeFi) counterparty failure, Opaque reserves; \"not your keys\" Euler Finance, March 2023 (~$197M, later largely returned), Logic flaw in a lending function, Contract bug missed by audits, Complex new function added after earlier audits"
+   "vo": "Figures are approximate, from public reporting. Black Thursday, March 2020 (Maker), ETH crashed; congested network and failing keeper bots let some collateral auctions clear at 0 DAI bids (about $8M lost), Liquidation mechanism failure under stress, Auctions relying on keepers during congestion; no minimum bid. TerraUSD (UST), May 2022, Algorithmic stablecoin lost its peg and collapsed, Reflexive design: confidence was the collateral, Yield (about 20%) far above any real cash flow; peg defended by a sister token. Ronin bridge, March 2022 (about $600M), Attackers got 5 of 9 validator keys, Weak bridge trust model, Small signer set; keys concentrated. Mango Markets, Oct 2022 (about $110M), Collateral price pumped on thin markets, then borrowed against, Oracle manipulation, Thin-market collateral valued at spot. FTX, Nov 2022, Exchange used customer funds, Custodial (CeFi) counterparty failure, Opaque reserves; \"not your keys\". Euler Finance, March 2023 (about $197M, later largely returned), Logic flaw in a lending function, Contract bug missed by audits, Complex new function added after earlier audits.",
+   "cap": "Figures are approximate, from public reporting. Black Thursday, March 2020 (Maker), ETH crashed; congested network and failing keeper bots let some collateral auctions clear at 0 DAI bids (~$8M lost), Liquidation mechanism failure under stress, Auctions relying on keepers during congestion; no minimum bid. TerraUSD (UST), May 2022, Algorithmic stablecoin lost its peg and collapsed, Reflexive design: confidence was the collateral, Yield (~20%) far above any real cash flow; peg defended by a sister token. Ronin bridge, March 2022 (~$600M), Attackers got 5 of 9 validator keys, Weak bridge trust model, Small signer set; keys concentrated. Mango Markets, Oct 2022 (~$110M), Collateral price pumped on thin markets, then borrowed against, Oracle manipulation, Thin-market collateral valued at spot. FTX, Nov 2022, Exchange used customer funds, Custodial (CeFi) counterparty failure, Opaque reserves; \"not your keys\". Euler Finance, March 2023 (~$197M, later largely returned), Logic flaw in a lending function, Contract bug missed by audits, Complex new function added after earlier audits."
   },
   {
    "type": "bullets",
+   "chapter": "Explanation — seven failures, seven patt",
    "title": "Explanation — seven failures, seven patterns",
    "items": [
     "Curve pools, July 2023"
    ],
    "compact": true,
-   "vo": "Continuing.",
-   "cap": "Curve pools, July 2023, Reentrancy guard broken by a compiler bug, Toolchain risk, Rare. Shows audited code can fail from below"
+   "vo": "Curve pools, July 2023, Reentrancy guard broken by a compiler bug, Toolchain risk, Rare. Shows audited code can fail from below.",
+   "cap": "Curve pools, July 2023, Reentrancy guard broken by a compiler bug, Toolchain risk, Rare. Shows audited code can fail from below."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Explanation — seven failures, seven patterns"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Using the table",
+    "That's the UST pattern",
+    "Rating",
+    "Verdict"
    ],
-   "sub": "Figures are approximate, from public reporting.",
-   "vo": "Figures are approximate, from public reporting.",
-   "cap": "Figures are approximate, from public reporting."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Worked example"
-   ],
-   "sub": "Using the table: a new stablecoin offers 18% \"sustainable\" yield, backed by its own governance token. That's the UST pattern: reflexive collateral and yield with no matching cash flow. Rating: High. Verdict: don't hold.",
-   "vo": "Using the table: a new stablecoin offers 18% \"sustainable\" yield, backed by its own governance token. That's the UST pattern: reflexive collateral and yield with no matching cash flow. Rating: High. Verdict: don't hold.",
-   "cap": "Using the table: a new stablecoin offers 18% \"sustainable\" yield, backed by its own governance token. That's the UST pattern: reflexive collateral and yield with no matching cash flow. Rating: High. Verdict: don't hold."
+   "vo": "Let's work an example, step by step. Using the table: a new stablecoin offers 18% \"sustainable\" yield, backed by its own governance token. That's the UST pattern: reflexive collateral and yield with no matching cash flow. Rating: High. Verdict: don't hold.",
+   "cap": "Let's work an example, step by step. Using the table: a new stablecoin offers 18% \"sustainable\" yield, backed by its own governance token. That's the UST pattern: reflexive collateral and yield with no matching cash flow. Rating: High. Verdict: don't hold."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "For every position, I've asked which failure pattern it resembles",
     "My register (8.2) includes these seven patterns"
    ],
-   "vo": "Your checklist. For every position, I've asked which failure pattern it resembles My register (8.2) includes these seven patterns",
-   "cap": "For every position, I've asked which failure pattern it resembles My register (8.2) includes these seven patterns"
+   "vo": "Here's your checklist. Do it now, for real. First, for every position, I've asked which failure pattern it resembles. And finally, My register (8.2) includes these seven patterns.",
+   "cap": "Here's your checklist. Do it now, for real. First, for every position, I've asked which failure pattern it resembles. And finally, My register (8.2) includes these seven patterns."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What pattern did Mango Markets show?"
-   ],
-   "sub": "Answer: Oracle manipulation of thin-market collateral.",
-   "subAt": 0.62,
-   "vo": "What pattern did Mango Markets show? ... Pause and think. ... The answer: Oracle manipulation of thin-market collateral.",
-   "cap": "What pattern did Mango Markets show? Pause and think. The answer: Oracle manipulation of thin-market collateral."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "What pattern did Mango Markets show?",
+   "a": "Oracle manipulation of thin-market collateral.",
+   "vo": "Question one. What pattern did Mango Markets show? [[pause 4]] The answer: Oracle manipulation of thin-market collateral.",
+   "cap": "Question 1. What pattern did Mango Markets show? The answer: Oracle manipulation of thin-market collateral."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What did FTX show DeFi users?"
-   ],
-   "sub": "Answer: Custodial counterparty risk: \"not your keys, not your coins\".",
-   "subAt": 0.62,
-   "vo": "What did FTX show DeFi users? ... Pause and think. ... The answer: Custodial counterparty risk: \"not your keys, not your coins\".",
-   "cap": "What did FTX show DeFi users? Pause and think. The answer: Custodial counterparty risk: \"not your keys, not your coins\"."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What did FTX show DeFi users?",
+   "a": "Custodial counterparty risk: \"not your keys, not your coins\".",
+   "vo": "Question two. What did FTX show DeFi users? [[pause 4]] The answer: Custodial counterparty risk: \"not your keys, not your coins\".",
+   "cap": "Question 2. What did FTX show DeFi users? The answer: Custodial counterparty risk: \"not your keys, not your coins\"."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "UST's main warning sign?"
-   ],
-   "sub": "Answer: High yield with no matching real cash flow, backed by a reflexive sister token.",
-   "subAt": 0.62,
-   "vo": "UST's main warning sign? ... Pause and think. ... The answer: High yield with no matching real cash flow, backed by a reflexive sister token.",
-   "cap": "UST's main warning sign? Pause and think. The answer: High yield with no matching real cash flow, backed by a reflexive sister token."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "UST's main warning sign?",
+   "a": "High yield with no matching real cash flow, backed by a reflexive sister token.",
+   "vo": "Question three. UST's main warning sign? [[pause 4]] The answer: High yield with no matching real cash flow, backed by a reflexive sister token.",
+   "cap": "Question 3. UST's main warning sign? The answer: High yield with no matching real cash flow, backed by a reflexive sister token."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 6.6",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson six point six: Vote-escrow tokenomics, bribes and governance markets.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 6.6: Vote-escrow tokenomics, bribes and governance markets."
   }
  ]
 }

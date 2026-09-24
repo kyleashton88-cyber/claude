@@ -15,7 +15,7 @@ Contents: 1. Whop course layout · 2. Capstones & rubrics · 3. Certification ·
 |---|---|---|
 | Start here | Welcome, how the program works, Day-1 Setup Kit (PDF) | `video/welcome.mp4` |
 | Module 0–14 | One chapter per module; one lesson per page, with images and its own narrated video (≤ 25 min); module practical at the end | `video/module-NN-intro.mp4` at the top of each module; `video/lesson-NN-M.mp4` on each lesson page (plan: `10-video-production-plan.md`) |
-| Tools | Strategy calculator (`defi_calc.py`) instructions, worksheet templates (`08-worksheets.md`) | n/a |
+| Tools | Calculators (the Course Hub's in-browser versions, and `defi_calc.py`), worksheet templates (`08-worksheets.md`), the Course Hub (`course-hub/index.html`) as a downloadable offline companion | n/a |
 | Capstones | Briefs, rubrics, submission form | n/a |
 | Live (Live tier only) | Session calendar, recordings, review booking | n/a |
 

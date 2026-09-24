@@ -6,41 +6,56 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 0.7",
  "use": "Lesson 0.7 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Your first DeFi steps",
+  "subtitle": "Lesson 0.7"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-00.png",
-   "eyebrow": "Lesson 0.7",
-   "vo": "Lesson zero point seven. Your first DeFi steps (practice mode first).",
-   "cap": "Lesson 0.7. Your first DeFi steps (practice mode first)."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 0 · Crypto From Zero",
+   "num": "0.7",
+   "title": "Your first DeFi steps (practice mode first)",
    "sub": "Connect your wallet to a DeFi app, understand what you're signing, and practise on a free test network before using real money.",
-   "vo": "Connect your wallet to a DeFi app, understand what you're signing, and practise on a free test network before using real money.",
-   "cap": "Connect your wallet to a DeFi app, understand what you're signing, and practise on a free test network before using real money."
+   "vo": "Lesson zero point seven. Your first DeFi steps (practice mode first). By the end of this lesson, you'll be able to connect your wallet to a DeFi app, understand what you're signing, and practise on a free test network before using real money.",
+   "cap": "Lesson 0.7. Your first DeFi steps (practice mode first). By the end of this lesson, you'll be able to connect your wallet to a DeFi app, understand what you're signing, and practise on a free test network before using real money."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Connect wallet",
     "Sign a message",
     "Approve",
     "Transaction",
-    "Testnets are practice blockchains with free, worthless coins. Ethereum's main one is…"
+    "Testnets are practice blockchains with free, worthless coins"
    ],
-   "vo": "Practice run: read every prompt, do one small swap, then revoke the approval. Connect wallet: lets a site see your address. It can't move funds by itself. Sign a message: proves you own the address (for example to log in). Read it. Some \"messages\" are really permissions (Lesson 1.4). Approve: gives an app permission to move a specific token. Limit the amount. Transaction: actually does something (swap, deposit) and costs gas. Testnets are practice blockchains with free, worthless coins. Ethereum's main one is Sepolia. You get test ETH from a faucet (a free giveaway site). Use testnets to practise without risk.",
-   "cap": "Connect wallet: lets a site see your address. It can't move funds by itself. Sign a message: proves you own the address (e.g. to log in). Read it. Some \"messages\" are really permissions (Lesson 1.4). Approve: gives an app permission to move a specific token. Limit the amount. Transaction: actually does something (swap, deposit) and costs gas. Testnets are practice blockchains with free, worthless coins. Ethereum's main one is Sepolia. You get test ETH from a faucet (a free giveaway site). Use testnets to practise without risk."
+   "vo": "Practice run: read every prompt, do one small swap, then revoke the approval. First, Connect wallet: lets a site see your address. It can't move funds by itself. Next, Sign a message: proves you own the address (for example to log in). Read it. Some \"messages\" are really permissions (Lesson 1.4). Then, Approve: gives an app permission to move a specific token. Limit the amount. Also, Transaction: actually does something (swap, deposit) and costs gas. On top of that, Testnets are practice blockchains with free, worthless coins. Ethereum's main one is Sepolia. You get test ETH from a faucet (a free giveaway site). Use testnets to practise without risk.",
+   "cap": "Practice run: read every prompt, do one small swap, then revoke the approval. First, Connect wallet: lets a site see your address. It can't move funds by itself. Next, Sign a message: proves you own the address (e.g. to log in). Read it. Some \"messages\" are really permissions (Lesson 1.4). Then, Approve: gives an app permission to move a specific token. Limit the amount. Also, Transaction: actually does something (swap, deposit) and costs gas. On top of that, Testnets are practice blockchains with free, worthless coins. Ethereum's main one is Sepolia. You get test ETH from a faucet (a free giveaway site). Use testnets to practise without risk."
   },
   {
    "type": "bullets",
-   "title": "Key ideas",
+   "chapter": "Key ideas",
+   "title": "Key ideas (cont.)",
    "items": [
     "Revoke permissions you no longer need with a tool such as revoke.cash.",
     "Add the Sepolia test network in your wallet (most wallets have a \"show test networks\"…",
@@ -48,29 +63,36 @@
     "Make a test swap on a testnet version of a well-known DEX (or send test ETH to yourself).",
     "Look up the transaction on a block explorer (Lesson 1.2)."
    ],
-   "vo": "Revoke permissions you no longer need with a tool such as revoke.cash. Add the Sepolia test network in your wallet (most wallets have a \"show test networks\" setting). Get free test ETH from a Sepolia faucet. Make a test swap on a testnet version of a well-known decks (or send test ETH to yourself). Look up the transaction on a block explorer (Lesson 1.2).",
-   "cap": "Revoke permissions you no longer need with a tool such as revoke.cash. Add the Sepolia test network in your wallet (most wallets have a \"show test networks\" setting). Get free test ETH from a Sepolia faucet. Make a test swap on a testnet version of a well-known DEX (or send test ETH to yourself). Look up the transaction on a block explorer (Lesson 1.2)."
+   "vo": "And Revoke permissions you no longer need with a tool such as revoke.cash. Plus, Add the Sepolia test network in your wallet (most wallets have a \"show test networks\" setting). One more: Get free test ETH from a Sepolia faucet. One more: Make a test swap on a testnet version of a well-known decks (or send test ETH to yourself). One more: Look up the transaction on a block explorer (Lesson 1.2).",
+   "cap": "And Revoke permissions you no longer need with a tool such as revoke.cash. Plus, Add the Sepolia test network in your wallet (most wallets have a \"show test networks\" setting). One more: Get free test ETH from a Sepolia faucet. One more: Make a test swap on a testnet version of a well-known DEX (or send test ETH to yourself). One more: Look up the transaction on a block explorer (Lesson 1.2)."
   },
   {
    "type": "bullets",
-   "title": "Key ideas",
+   "chapter": "Key ideas",
+   "title": "Key ideas (cont.)",
    "items": [
     "Then, on a Layer 2 with a tiny real amount"
    ],
-   "vo": "Then, on a Layer 2 with a tiny real amount: connect to a well-known app,",
-   "cap": "Then, on a Layer 2 with a tiny real amount: connect to a well-known app,"
+   "vo": "And finally, Then, on a Layer 2 with a tiny real amount: connect to a well-known app,.",
+   "cap": "And finally, Then, on a Layer 2 with a tiny real amount: connect to a well-known app,."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Priya connects to a DEX on Arbitrum.",
+    "Her wallet shows \"Approve USDC",
+    "She edits it to $20, swaps $20 of USDC for ETH, pays ~$0.05 in gas, checks…",
+    "Total cost",
+    "Total lessons learned"
    ],
-   "sub": "Priya connects to a DEX on Arbitrum. Her wallet shows \"Approve USDC: Unlimited\". She edits it to $20, swaps $20 of USDC for ETH, pays ~$0.05 in gas, checks the transaction on the explorer, then revokes the approval. Total cost: a few cents. Total lessons learn",
-   "vo": "Priya connects to a decks on Arbitrum. Her wallet shows \"Approve U.S.D.C.: Unlimited\". She edits it to $20, swaps $20 of U.S.D.C. for ETH, pays about $0.05 in gas, checks the transaction on the explorer, then revokes the approval. Total cost: a few cents. Total lessons learned: five.",
-   "cap": "Priya connects to a DEX on Arbitrum. Her wallet shows \"Approve USDC: Unlimited\". She edits it to $20, swaps $20 of USDC for ETH, pays ~$0.05 in gas, checks the transaction on the explorer, then revokes the approval. Total cost: a few cents. Total lessons learned: five."
+   "vo": "Let's work an example, step by step. Priya connects to a decks on Arbitrum. Her wallet shows \"Approve U.S.D.C.: Unlimited\". She edits it to $20, swaps $20 of U.S.D.C. for ETH, pays about $0.05 in gas, checks the transaction on the explorer, then revokes the approval. Total cost: a few cents. Total lessons learned: five.",
+   "cap": "Let's work an example, step by step. Priya connects to a DEX on Arbitrum. Her wallet shows \"Approve USDC: Unlimited\". She edits it to $20, swaps $20 of USDC for ETH, pays ~$0.05 in gas, checks the transaction on the explorer, then revokes the approval. Total cost: a few cents. Total lessons learned: five."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "I know the difference between connect, sign, approve and transact",
@@ -79,48 +101,59 @@
     "Found my transaction on a block explorer",
     "Revoked the approval afterwards"
    ],
-   "vo": "Your checklist. I know the difference between connect, sign, approve and transact Practised on the Sepolia testnet Made one small real swap on a Layer 2 with a limited approval Found my transaction on a block explorer Revoked the approval afterwards",
-   "cap": "I know the difference between connect, sign, approve and transact Practised on the Sepolia testnet Made one small real swap on a Layer 2 with a limited approval Found my transaction on a block explorer Revoked the approval afterwards"
+   "vo": "Here's your checklist. Do it now, for real. First, I know the difference between connect, sign, approve and transact. Next, Practised on the Sepolia testnet. Then, Made one small real swap on a Layer 2 with a limited approval. Also, Found my transaction on a block explorer. And finally, Revoked the approval afterwards.",
+   "cap": "Here's your checklist. Do it now, for real. First, I know the difference between connect, sign, approve and transact. Next, Practised on the Sepolia testnet. Then, Made one small real swap on a Layer 2 with a limited approval. Also, Found my transaction on a block explorer. And finally, Revoked the approval afterwards."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Can \"connect wallet\" move your funds?"
-   ],
-   "sub": "Answer: No. It shares your address. Approvals and transactions are what move funds.",
-   "subAt": 0.62,
-   "vo": "Can \"connect wallet\" move your funds? ... Pause and think. ... The answer: No. It shares your address. Approvals and transactions are what move funds.",
-   "cap": "Can \"connect wallet\" move your funds? Pause and think. The answer: No. It shares your address. Approvals and transactions are what move funds."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Can \"connect wallet\" move your funds?",
+   "a": "No. It shares your address. Approvals and transactions are what move funds.",
+   "vo": "Question one. Can \"connect wallet\" move your funds? [[pause 4]] The answer: No. It shares your address. Approvals and transactions are what move funds.",
+   "cap": "Question 1. Can \"connect wallet\" move your funds? The answer: No. It shares your address. Approvals and transactions are what move funds."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What is a testnet for?"
-   ],
-   "sub": "Answer: Practising with worthless coins, so mistakes cost nothing.",
-   "subAt": 0.62,
-   "vo": "What is a testnet for? ... Pause and think. ... The answer: Practising with worthless coins, so mistakes cost nothing.",
-   "cap": "What is a testnet for? Pause and think. The answer: Practising with worthless coins, so mistakes cost nothing."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What is a testnet for?",
+   "a": "Practising with worthless coins, so mistakes cost nothing.",
+   "vo": "Question two. What is a testnet for? [[pause 4]] The answer: Practising with worthless coins, so mistakes cost nothing.",
+   "cap": "Question 2. What is a testnet for? The answer: Practising with worthless coins, so mistakes cost nothing."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What should you do with an approval after you're done?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What should you do with an approval after you're done?",
+   "a": "Revoke it, or limit it to the amount needed in the first place.",
+   "vo": "Question three. What should you do with an approval after you're done? [[pause 4]] The answer: Revoke it, or limit it to the amount needed in the first place.",
+   "cap": "Question 3. What should you do with an approval after you're done? The answer: Revoke it, or limit it to the amount needed in the first place."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Connect wallet: lets a site see your address",
+    "Sign a message: proves you own the address (e.g. to log in)",
+    "Approve: gives an app permission to move a specific token",
+    "Transaction: actually does something (swap, deposit) and costs gas"
    ],
-   "sub": "Answer: Revoke it, or limit it to the amount needed in the first place.",
-   "subAt": 0.62,
-   "vo": "What should you do with an approval after you're done? ... Pause and think. ... The answer: Revoke it, or limit it to the amount needed in the first place.",
-   "cap": "What should you do with an approval after you're done? Pause and think. The answer: Revoke it, or limit it to the amount needed in the first place."
+   "vo": "Let's recap. Connect wallet: lets a site see your address. Sign a message: proves you own the address (for example to log in). Approve: gives an app permission to move a specific token. Transaction: actually does something (swap, deposit) and costs gas.",
+   "cap": "Let's recap. Connect wallet: lets a site see your address. Sign a message: proves you own the address (e.g. to log in). Approve: gives an app permission to move a specific token. Transaction: actually does something (swap, deposit) and costs gas."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 0.8",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson zero point eight: Your security baseline, and the language of DeFi.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 0.8: Your security baseline, and the language of DeFi."
   }
  ]
 }

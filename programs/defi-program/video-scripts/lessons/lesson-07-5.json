@@ -6,96 +6,124 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 7.5",
  "use": "Lesson 7.5 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Holder & supply metrics",
+  "subtitle": "Lesson 7.5"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-07.png",
-   "eyebrow": "Lesson 7.5",
-   "vo": "Lesson seven point five. Holder and supply metrics.",
-   "cap": "Lesson 7.5. Holder & supply metrics."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 7 · On-Chain Analytics",
+   "num": "7.5",
+   "title": "Holder & supply metrics",
    "sub": "Read MVRV, SOPR and HODL waves as context, not signals.",
-   "vo": "Read MVRV, SOPR and HODL waves as context, not signals.",
-   "cap": "Read MVRV, SOPR and HODL waves as context, not signals."
+   "vo": "Lesson seven point five. Holder and supply metrics. By the end of this lesson, you'll be able to read MVRV, SOPR and HODL waves as context, not signals.",
+   "cap": "Lesson 7.5. Holder & supply metrics. By the end of this lesson, you'll be able to read MVRV, SOPR and HODL waves as context, not signals."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Realised cap",
-    "MVRV = market cap ÷ realised cap. High = holders in large aggregate profit.",
+    "MVRV = market cap ÷ realised cap",
     "SOPR (spent output profit ratio)",
     "HODL waves",
     "Definitions differ by provider; strongest on UTXO chains like Bitcoin."
    ],
-   "vo": "Realised cap: values each coin at the price it last moved (a cost-basis estimate). MVRV = market cap divided by realised cap. High = holders in large aggregate profit. SOPR (spent output profit ratio): >1 means coins moved today were, on average, sold at a profit. HODL waves: supply by coin age. Definitions differ by provider; strongest on UTXO chains like Bitcoin.",
-   "cap": "Realised cap: values each coin at the price it last moved (a cost-basis estimate). MVRV = market cap ÷ realised cap. High = holders in large aggregate profit. SOPR (spent output profit ratio): >1 means coins moved today were, on average, sold at a profit. HODL waves: supply by coin age. Definitions differ by provider; strongest on UTXO chains like Bitcoin."
+   "vo": "First, Realised cap: values each coin at the price it last moved (a cost-basis estimate). Next, MVRV equals market cap divided by realised cap. High equals holders in large aggregate profit. Then, SOPR (spent output profit ratio): >1 means coins moved today were, on average, sold at a profit. Also, HODL waves: supply by coin age. And finally, Definitions differ by provider; strongest on UTXO chains like Bitcoin.",
+   "cap": "First, Realised cap: values each coin at the price it last moved (a cost-basis estimate). Next, MVRV = market cap ÷ realised cap. High = holders in large aggregate profit. Then, SOPR (spent output profit ratio): >1 means coins moved today were, on average, sold at a profit. Also, HODL waves: supply by coin age. And finally, Definitions differ by provider; strongest on UTXO chains like Bitcoin."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Market cap $1.2T, realised cap $0.6T → MVRV 2.0",
+    "That's context for risk management (e.g. how much to de-risk), not a precise…"
    ],
-   "sub": "Market cap $1.2T, realised cap $0.6T → MVRV 2.0: the average holder is at roughly 2× their cost basis. That's context for risk management (e.g. how much to de-risk), not a precise top signal.",
-   "vo": "Market cap $1.2T, realised cap $0.6T to MVRV 2.0: the average holder is at roughly 2 times their cost basis. That's context for risk management (for example how much to de-risk), not a precise top signal.",
-   "cap": "Market cap $1.2T, realised cap $0.6T → MVRV 2.0: the average holder is at roughly 2× their cost basis. That's context for risk management (e.g. how much to de-risk), not a precise top signal."
+   "vo": "Let's work an example, step by step. Market cap $1.2T, realised cap $0.6T to MVRV 2.0: the average holder is at roughly 2 times their cost basis. That's context for risk management (for example how much to de-risk), not a precise top signal.",
+   "cap": "Let's work an example, step by step. Market cap $1.2T, realised cap $0.6T → MVRV 2.0: the average holder is at roughly 2× their cost basis. That's context for risk management (e.g. how much to de-risk), not a precise top signal."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Provider methodology read before using a metric",
     "Metrics used for context and sizing, not as triggers alone"
    ],
-   "vo": "Your checklist. Provider methodology read before using a metric Metrics used for context and sizing, not as triggers alone",
-   "cap": "Provider methodology read before using a metric Metrics used for context and sizing, not as triggers alone"
+   "vo": "Here's your checklist. Do it now, for real. First, Provider methodology read before using a metric. And finally, Metrics used for context and sizing, not as triggers alone.",
+   "cap": "Here's your checklist. Do it now, for real. First, Provider methodology read before using a metric. And finally, Metrics used for context and sizing, not as triggers alone."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "MVRV formula?"
-   ],
-   "sub": "Answer: Market cap ÷ realised cap.",
-   "subAt": 0.62,
-   "vo": "MVRV formula? ... Pause and think. ... The answer: Market cap divided by realised cap.",
-   "cap": "MVRV formula? Pause and think. The answer: Market cap ÷ realised cap."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "MVRV formula?",
+   "a": "Market cap ÷ realised cap.",
+   "vo": "Question one. MVRV formula? [[pause 4]] The answer: Market cap divided by realised cap.",
+   "cap": "Question 1. MVRV formula? The answer: Market cap ÷ realised cap."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "SOPR above 1 means?"
-   ],
-   "sub": "Answer: Coins moved were, on average, in profit.",
-   "subAt": 0.62,
-   "vo": "SOPR above 1 means? ... Pause and think. ... The answer: Coins moved were, on average, in profit.",
-   "cap": "SOPR above 1 means? Pause and think. The answer: Coins moved were, on average, in profit."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "SOPR above 1 means?",
+   "a": "Coins moved were, on average, in profit.",
+   "vo": "Question two. SOPR above 1 means? [[pause 4]] The answer: Coins moved were, on average, in profit.",
+   "cap": "Question 2. SOPR above 1 means? The answer: Coins moved were, on average, in profit."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why read the provider's methodology?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Why read the provider's methodology?",
+   "a": "Definitions vary, and interpretations depend on them.",
+   "vo": "Question three. Why read the provider's methodology? [[pause 4]] The answer: Definitions vary, and interpretations depend on them.",
+   "cap": "Question 3. Why read the provider's methodology? The answer: Definitions vary, and interpretations depend on them."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Realised cap: values each coin at the price it last moved (a cost-basis estimate)",
+    "MVRV = market cap ÷ realised cap",
+    "SOPR (spent output profit ratio)",
+    "HODL waves: supply by coin age"
    ],
-   "sub": "Answer: Definitions vary, and interpretations depend on them.",
-   "subAt": 0.62,
-   "vo": "Why read the provider's methodology? ... Pause and think. ... The answer: Definitions vary, and interpretations depend on them.",
-   "cap": "Why read the provider's methodology? Pause and think. The answer: Definitions vary, and interpretations depend on them."
+   "vo": "Let's recap. Realised cap: values each coin at the price it last moved (a cost-basis estimate). MVRV equals market cap divided by realised cap. SOPR (spent output profit ratio). HODL waves: supply by coin age.",
+   "cap": "Let's recap. Realised cap: values each coin at the price it last moved (a cost-basis estimate). MVRV = market cap ÷ realised cap. SOPR (spent output profit ratio). HODL waves: supply by coin age."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 7.6",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson seven point six: Network activity.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 7.6: Network activity."
   }
  ]
 }

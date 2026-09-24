@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 1.6",
  "use": "Lesson 1.6 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Scam defence",
+  "subtitle": "Lesson 1.6"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-01.png",
-   "eyebrow": "Lesson 1.6",
-   "vo": "Lesson one point six. Scam defence.",
-   "cap": "Lesson 1.6. Scam defence."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 1 · Foundations & Safety",
+   "num": "1.6",
+   "title": "Scam defence",
    "sub": "Recognise the common attacks before they cost you anything.",
-   "vo": "Recognise the common attacks before they cost you anything.",
-   "cap": "Recognise the common attacks before they cost you anything."
+   "vo": "Lesson one point six. Scam defence. By the end of this lesson, you'll be able to recognise the common attacks before they cost you anything.",
+   "cap": "Lesson 1.6. Scam defence. By the end of this lesson, you'll be able to recognise the common attacks before they cost you anything."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Phishing site",
@@ -37,20 +51,25 @@
     "Too-good yields"
    ],
    "compact": true,
-   "vo": "Phishing site, Look-alike URL / sponsored search ad / fake app, Bookmarks only. Never click links from DMs or ads. Wallet drainer, You sign an approval, Permit or setApprovalForAll for an attacker, Read every prompt. Burner wallet for new sites. Address poisoning, Attacker sends $0 transfers from an address that looks like one you use, so it appears in your history, Never copy addresses from history. Use a saved address book and check the full address. Fake token / airdrop, Unknown tokens appear in your wallet with a \"claim\" link, Ignore them. Don't interact or try to sell. Impersonation, \"Support\", \"admin\" or \"project team\" DMs you, Real teams never DM first and never ask for seeds. Too-good yields, New protocol, huge A.P.Y., anonymous team, no audit, Due diligence (Module 6). Burner wallet and small size, or skip.",
-   "cap": "Phishing site, Look-alike URL / sponsored search ad / fake app, Bookmarks only. Never click links from DMs or ads Wallet drainer, You sign an approval, Permit or setApprovalForAll for an attacker, Read every prompt. Burner wallet for new sites Address poisoning, Attacker sends $0 transfers from an address that looks like one you use, so it appears in your history, Never copy addresses from history. Use a saved address book and check the full address Fake token / airdrop, Unknown tokens appear in your wallet with a \"claim\" link, Ignore them. Don't interact or try to sell Impersonation, \"Support\", \"admin\" or \"project team\" DMs you, Real teams never DM first and never ask for seeds Too-good yields, New protocol, huge APY, anonymous team, no audit, Due diligence (Module 6). Burner wallet and small size, or skip"
+   "vo": "Phishing site, Look-alike URL or sponsored search ad or fake app, Bookmarks only. Never click links from DMs or ads. Wallet drainer, You sign an approval, Permit or setApprovalForAll for an attacker, Read every prompt. Burner wallet for new sites. Address poisoning, Attacker sends $0 transfers from an address that looks like one you use, so it appears in your history, Never copy addresses from history. Use a saved address book and check the full address. Fake token or airdrop, Unknown tokens appear in your wallet with a \"claim\" link, Ignore them. Don't interact or try to sell. Impersonation, \"Support\", \"admin\" or \"project team\" DMs you, Real teams never DM first and never ask for seeds. Too-good yields, New protocol, huge A.P.Y., anonymous team, no audit, Due diligence (Module 6). Burner wallet and small size, or skip.",
+   "cap": "Phishing site, Look-alike URL / sponsored search ad / fake app, Bookmarks only. Never click links from DMs or ads. Wallet drainer, You sign an approval, Permit or setApprovalForAll for an attacker, Read every prompt. Burner wallet for new sites. Address poisoning, Attacker sends $0 transfers from an address that looks like one you use, so it appears in your history, Never copy addresses from history. Use a saved address book and check the full address. Fake token / airdrop, Unknown tokens appear in your wallet with a \"claim\" link, Ignore them. Don't interact or try to sell. Impersonation, \"Support\", \"admin\" or \"project team\" DMs you, Real teams never DM first and never ask for seeds. Too-good yields, New protocol, huge APY, anonymous team, no audit, Due diligence (Module 6). Burner wallet and small size, or skip."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example — address poisoning"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "You regularly send to 0x7a3F…9c21.",
+    "Today your history shows a transfer from 0x7a3F…9c21, but the full address…",
+    "If you copy it from history you send your funds to the attacker.",
+    "Always paste from your address book and check the full address."
    ],
-   "sub": "You regularly send to 0x7a3F…9c21. Today your history shows a transfer from 0x7a3F…9c21, but the full address is 0x7a3Fe0b4…d189c21: same start and end, different middle. If you copy it from history you send your funds to the attacker. Always paste from your a",
-   "vo": "You regularly send to 0x7a3F…9c21. Today your history shows a transfer from 0x7a3F…9c21, but the full address is 0x7a3Fe0b4…d189c21: same start and end, different middle. If you copy it from history you send your funds to the attacker. Always paste from your address book and check the full address.",
-   "cap": "You regularly send to 0x7a3F…9c21. Today your history shows a transfer from 0x7a3F…9c21, but the full address is 0x7a3Fe0b4…d189c21: same start and end, different middle. If you copy it from history you send your funds to the attacker. Always paste from your address book and check the full address."
+   "vo": "Let's work an example, step by step. You regularly send to 0x7a3F…9c21. Today your history shows a transfer from 0x7a3F…9c21, but the full address is 0x7a3Fe0b4…d189c21: same start and end, different middle. If you copy it from history you send your funds to the attacker. Always paste from your address book and check the full address.",
+   "cap": "Let's work an example, step by step. You regularly send to 0x7a3F…9c21. Today your history shows a transfer from 0x7a3F…9c21, but the full address is 0x7a3Fe0b4…d189c21: same start and end, different middle. If you copy it from history you send your funds to the attacker. Always paste from your address book and check the full address."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Protocol sites bookmarked; never reached through search ads or DMs",
@@ -59,48 +78,46 @@
     "DMs from \"support\" treated as scams by default",
     "New sites only with the burner wallet"
    ],
-   "vo": "Your checklist. Protocol sites bookmarked; never reached through search ads or DMs Address book in use; full address checked before sending Unknown tokens ignored DMs from \"support\" treated as scams by default New sites only with the burner wallet",
-   "cap": "Protocol sites bookmarked; never reached through search ads or DMs Address book in use; full address checked before sending Unknown tokens ignored DMs from \"support\" treated as scams by default New sites only with the burner wallet"
+   "vo": "Here's your checklist. Do it now, for real. First, Protocol sites bookmarked; never reached through search ads or DMs. Next, Address book in use; full address checked before sending. Then, Unknown tokens ignored. Also, DMs from \"support\" treated as scams by default. And finally, New sites only with the burner wallet.",
+   "cap": "Here's your checklist. Do it now, for real. First, Protocol sites bookmarked; never reached through search ads or DMs. Next, Address book in use; full address checked before sending. Then, Unknown tokens ignored. Also, DMs from \"support\" treated as scams by default. And finally, New sites only with the burner wallet."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "A new token worth \"$5,000\" appears in your wallet with a claim site. What do you do?"
-   ],
-   "sub": "Answer: Ignore it. It's bait, and interacting risks a drainer approval.",
-   "subAt": 0.62,
-   "vo": "A new token worth \"$5,000\" appears in your wallet with a claim site. What do you do? ... Pause and think. ... The answer: Ignore it. It's bait, and interacting risks a drainer approval.",
-   "cap": "A new token worth \"$5,000\" appears in your wallet with a claim site. What do you do? Pause and think. The answer: Ignore it. It's bait, and interacting risks a drainer approval."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "A new token worth \"$5,000\" appears in your wallet with a claim site. What do you do?",
+   "a": "Ignore it. It's bait, and interacting risks a drainer approval.",
+   "vo": "Question one. A new token worth \"$5,000\" appears in your wallet with a claim site. What do you do? [[pause 4]] The answer: Ignore it. It's bait, and interacting risks a drainer approval.",
+   "cap": "Question 1. A new token worth \"$5,000\" appears in your wallet with a claim site. What do you do? The answer: Ignore it. It's bait, and interacting risks a drainer approval."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "How does address poisoning trick people?"
-   ],
-   "sub": "Answer: It puts a look-alike address in your history so you copy it by mistake.",
-   "subAt": 0.62,
-   "vo": "How does address poisoning trick people? ... Pause and think. ... The answer: It puts a look-alike address in your history so you copy it by mistake.",
-   "cap": "How does address poisoning trick people? Pause and think. The answer: It puts a look-alike address in your history so you copy it by mistake."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "How does address poisoning trick people?",
+   "a": "It puts a look-alike address in your history so you copy it by mistake.",
+   "vo": "Question two. How does address poisoning trick people? [[pause 4]] The answer: It puts a look-alike address in your history so you copy it by mistake.",
+   "cap": "Question 2. How does address poisoning trick people? The answer: It puts a look-alike address in your history so you copy it by mistake."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What's the single best habit against drainers?"
-   ],
-   "sub": "Answer: Reading every signature and approval prompt, and using a burner wallet for anything new.",
-   "subAt": 0.62,
-   "vo": "What's the single best habit against drainers? ... Pause and think. ... The answer: Reading every signature and approval prompt, and using a burner wallet for anything new.",
-   "cap": "What's the single best habit against drainers? Pause and think. The answer: Reading every signature and approval prompt, and using a burner wallet for anything new."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What's the single best habit against drainers?",
+   "a": "Reading every signature and approval prompt, and using a burner wallet for anything new.",
+   "vo": "Question three. What's the single best habit against drainers? [[pause 4]] The answer: Reading every signature and approval prompt, and using a burner wallet for anything new.",
+   "cap": "Question 3. What's the single best habit against drainers? The answer: Reading every signature and approval prompt, and using a burner wallet for anything new."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 1.7",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson one point seven: Reading signatures and simulating transactions.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 1.7: Reading signatures and simulating transactions."
   }
  ]
 }

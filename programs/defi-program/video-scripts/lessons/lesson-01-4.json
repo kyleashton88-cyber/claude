@@ -6,61 +6,77 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 1.4",
  "use": "Lesson 1.4 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Tokens, approvals & allowances",
+  "subtitle": "Lesson 1.4"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-01.png",
-   "eyebrow": "Lesson 1.4",
-   "vo": "Lesson one point four. Tokens, approvals and allowances.",
-   "cap": "Lesson 1.4. Tokens, approvals & allowances."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 1 · Foundations & Safety",
+   "num": "1.4",
+   "title": "Tokens, approvals & allowances",
    "sub": "Read an approval request and know what you're allowing.",
-   "vo": "Read an approval request and know what you're allowing.",
-   "cap": "Read an approval request and know what you're allowing."
+   "vo": "Lesson one point four. Tokens, approvals and allowances. By the end of this lesson, you'll be able to read an approval request and know what you're allowing.",
+   "cap": "Lesson 1.4. Tokens, approvals & allowances. By the end of this lesson, you'll be able to read an approval request and know what you're allowing."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
-    "Most tokens on EVM chains are ERC-20 (fungible). NFTs (ERC-721/1155)",
+    "Most tokens on EVM chains are ERC-20 (fungible)",
     "To let a protocol move your tokens you approve a spender for an",
     "Unlimited approvals are convenient but let that contract move all",
     "Signature approvals (Permit / Permit2) grant allowances with an",
     "Wrapped / receipt tokens"
    ],
-   "vo": "can also represent positions (for example concentrated L.P.). allowance. The protocol then pulls tokens when you act. of that token, now and in future. If the contract (or the approval) is exploited, the tokens can be taken. off-chain signature, not a transaction. There's no gas, so they're easy to sign without noticing. Drainers abuse exactly this. Most tokens on EVM chains are ERC-20 (fungible). NFTs (ERC-721/1155) To let a protocol move your tokens you approve a spender for an Unlimited approvals are convenient but let that contract move all Signature approvals (Permit / Permit2) grant allowances with an Wrapped / receipt tokens: WETH, L.P. tokens and lending receipts represent a claim on something else.",
-   "cap": "Most tokens on EVM chains are ERC-20 (fungible). NFTs (ERC-721/1155) To let a protocol move your tokens you approve a spender for an Unlimited approvals are convenient but let that contract move all Signature approvals (Permit / Permit2) grant allowances with an Wrapped / receipt tokens: WETH, LP tokens and lending receipts represent a claim on something else."
+   "vo": "can also represent positions (for example concentrated L.P.). allowance. The protocol then pulls tokens when you act. of that token, now and in future. If the contract (or the approval) is exploited, the tokens can be taken. off-chain signature, not a transaction. There's no gas, so they're easy to sign without noticing. Drainers abuse exactly this. First, most tokens on EVM chains are ERC-20 (fungible). NFTs (ERC-721 to 1155). Next, to let a protocol move your tokens you approve a spender for an. Then, Unlimited approvals are convenient but let that contract move all. Also, Signature approvals (Permit or Permit2) grant allowances with an. On top of that, Wrapped or receipt tokens: WETH, L.P. tokens and lending receipts represent a claim on something else.",
+   "cap": "can also represent positions (e.g. concentrated LP). allowance. The protocol then pulls tokens when you act. of that token, now and in future. If the contract (or the approval) is exploited, the tokens can be taken. off-chain signature, not a transaction. There's no gas, so they're easy to sign without noticing. Drainers abuse exactly this. First, most tokens on EVM chains are ERC-20 (fungible). NFTs (ERC-721/1155). Next, to let a protocol move your tokens you approve a spender for an. Then, Unlimited approvals are convenient but let that contract move all. Also, Signature approvals (Permit / Permit2) grant allowances with an. On top of that, Wrapped / receipt tokens: WETH, LP tokens and lending receipts represent a claim on something else."
   },
   {
    "type": "bullets",
-   "title": "Key ideas",
+   "chapter": "Key ideas",
+   "title": "Key ideas (cont.)",
    "items": [
     "Fake tokens"
    ],
-   "vo": "Fake tokens: anyone can create a token called \"U.S.D.C.\". Only the contract address identifies it.",
-   "cap": "Fake tokens: anyone can create a token called \"USDC\". Only the contract address identifies it."
+   "vo": "And finally, Fake tokens: anyone can create a token called \"U.S.D.C.\". Only the contract address identifies it.",
+   "cap": "And finally, Fake tokens: anyone can create a token called \"USDC\". Only the contract address identifies it."
   },
   {
-   "type": "bullets",
-   "title": "Worked example — reading an approval",
-   "items": [
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example: Wallet shows",
+   "steps": [
     "Is 0x3fC9…a1B2 the protocol's official router? Check the docs or explorer.",
     "Do I need unlimited? Edit it to the amount of this deposit.",
     "Is this USDC the real contract?",
-    "After finishing, revoke with a revoke tool (e.g. revoke.cash) if I won't be back."
+    "After finishing, revoke with a revoke tool (e.g. revoke.cash) if I won't be…"
    ],
-   "vo": "Wallet shows: \"Allow 0x3fC9…a1B2 to spend your U.S.D.C.. Amount: Unlimited.\" Is 0x3fC9…a1B2 the protocol's official router? Check the docs or explorer. Do I need unlimited? Edit it to the amount of this deposit. Is this U.S.D.C. the real contract? After finishing, revoke with a revoke tool (for example revoke.cash) if I won't be back.",
-   "cap": "Is 0x3fC9…a1B2 the protocol's official router? Check the docs or explorer. Do I need unlimited? Edit it to the amount of this deposit. Is this USDC the real contract? After finishing, revoke with a revoke tool (e.g. revoke.cash) if I won't be back."
+   "vo": "Let's work an example, step by step. Wallet shows: \"Allow 0x3fC9…a1B2 to spend your U.S.D.C. Amount: Unlimited.\" Is 0x3fC9…a1B2 the protocol's official router? Check the docs or explorer. Do I need unlimited? Edit it to the amount of this deposit. Is this U.S.D.C. the real contract?. After finishing, revoke with a revoke tool (for example revoke.cash) if I won't be back."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Spender verified against official docs",
@@ -68,48 +84,59 @@
     "Signature requests read as carefully as transactions",
     "Approvals reviewed and revoked monthly"
    ],
-   "vo": "Your checklist. Spender verified against official docs Allowance limited to what's needed Signature requests read as carefully as transactions Approvals reviewed and revoked monthly",
-   "cap": "Spender verified against official docs Allowance limited to what's needed Signature requests read as carefully as transactions Approvals reviewed and revoked monthly"
+   "vo": "Here's your checklist. Do it now, for real. First, Spender verified against official docs. Next, Allowance limited to what's needed. Then, Signature requests read as carefully as transactions. And finally, Approvals reviewed and revoked monthly.",
+   "cap": "Here's your checklist. Do it now, for real. First, Spender verified against official docs. Next, Allowance limited to what's needed. Then, Signature requests read as carefully as transactions. And finally, Approvals reviewed and revoked monthly."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why is a gasless \"Permit\" signature dangerous?"
-   ],
-   "sub": "Answer: It can grant a token allowance without a transaction, so it's easy to sign without noticing. Drainers use it to take tokens.",
-   "subAt": 0.62,
-   "vo": "Why is a gasless \"Permit\" signature dangerous? ... Pause and think. ... The answer: It can grant a token allowance without a transaction, so it's easy to sign without noticing. Drainers use it to take tokens.",
-   "cap": "Why is a gasless \"Permit\" signature dangerous? Pause and think. The answer: It can grant a token allowance without a transaction, so it's easy to sign without noticing. Drainers use it to take tokens."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why is a gasless \"Permit\" signature dangerous?",
+   "a": "It can grant a token allowance without a transaction, so it's easy to sign without noticing. Drainers use it to take tokens.",
+   "vo": "Question one. Why is a gasless \"Permit\" signature dangerous? [[pause 4]] The answer: It can grant a token allowance without a transaction, so it's easy to sign without noticing. Drainers use it to take tokens.",
+   "cap": "Question 1. Why is a gasless \"Permit\" signature dangerous? The answer: It can grant a token allowance without a transaction, so it's easy to sign without noticing. Drainers use it to take tokens."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "How do you know a token is the real one?"
-   ],
-   "sub": "Answer: By its contract address from an authoritative source, never by name or ticker.",
-   "subAt": 0.62,
-   "vo": "How do you know a token is the real one? ... Pause and think. ... The answer: By its contract address from an authoritative source, never by name or ticker.",
-   "cap": "How do you know a token is the real one? Pause and think. The answer: By its contract address from an authoritative source, never by name or ticker."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "How do you know a token is the real one?",
+   "a": "By its contract address from an authoritative source, never by name or ticker.",
+   "vo": "Question two. How do you know a token is the real one? [[pause 4]] The answer: By its contract address from an authoritative source, never by name or ticker.",
+   "cap": "Question 2. How do you know a token is the real one? The answer: By its contract address from an authoritative source, never by name or ticker."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "When should you revoke an approval?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "When should you revoke an approval?",
+   "a": "When you no longer use that protocol, or on a regular schedule.",
+   "vo": "Question three. When should you revoke an approval? [[pause 4]] The answer: When you no longer use that protocol, or on a regular schedule.",
+   "cap": "Question 3. When should you revoke an approval? The answer: When you no longer use that protocol, or on a regular schedule."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Most tokens on EVM chains are ERC-20 (fungible)",
+    "To let a protocol move your tokens you approve a spender for an",
+    "Unlimited approvals are convenient but let that contract move all",
+    "Signature approvals (Permit / Permit2) grant allowances with an"
    ],
-   "sub": "Answer: When you no longer use that protocol, or on a regular schedule.",
-   "subAt": 0.62,
-   "vo": "When should you revoke an approval? ... Pause and think. ... The answer: When you no longer use that protocol, or on a regular schedule.",
-   "cap": "When should you revoke an approval? Pause and think. The answer: When you no longer use that protocol, or on a regular schedule."
+   "vo": "Let's recap. Most tokens on EVM chains are ERC-20 (fungible). To let a protocol move your tokens you approve a spender for an. Unlimited approvals are convenient but let that contract move all. Signature approvals (Permit or Permit2) grant allowances with an.",
+   "cap": "Let's recap. Most tokens on EVM chains are ERC-20 (fungible). To let a protocol move your tokens you approve a spender for an. Unlimited approvals are convenient but let that contract move all. Signature approvals (Permit / Permit2) grant allowances with an."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 1.5",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson one point five: Stablecoins and how they break.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 1.5: Stablecoins and how they break."
   }
  ]
 }

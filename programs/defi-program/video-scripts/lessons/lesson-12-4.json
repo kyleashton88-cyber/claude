@@ -6,34 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 12.4",
  "use": "Lesson 12.4 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Treasury and the liquidity ladder",
+  "subtitle": "Lesson 12.4"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-12.png",
-   "eyebrow": "Lesson 12.4",
-   "vo": "Lesson twelve point four. Treasury and the liquidity ladder.",
-   "cap": "Lesson 12.4. Treasury and the liquidity ladder."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 12 · Operate as Your Own Bank",
+   "num": "12.4",
+   "title": "Treasury and the liquidity ladder",
    "sub": "Structure reserves so money is available when it's needed, earning a return at every tier.",
-   "vo": "Structure reserves so money is available when it's needed, earning a return at every tier.",
-   "cap": "Structure reserves so money is available when it's needed, earning a return at every tier."
-  },
-  {
-   "type": "image",
-   "src": "assets/diagrams/liquidity-ladder.png",
-   "eyebrow": "The liquidity ladder",
-   "vo": "Here's the picture: The liquidity ladder.",
-   "cap": "The liquidity ladder."
+   "vo": "Lesson twelve point four. Treasury and the liquidity ladder. By the end of this lesson, you'll be able to structure reserves so money is available when it's needed, earning a return at every tier.",
+   "cap": "Lesson 12.4. Treasury and the liquidity ladder. By the end of this lesson, you'll be able to structure reserves so money is available when it's needed, earning a return at every tier."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "T0 Instant",
@@ -42,29 +49,33 @@
     "T3 Growth"
    ],
    "compact": true,
-   "vo": "T0 Instant, Seconds, Stablecoins in the operating wallet, 1 month: $5,000. T1 Same day, Hours, Blue-chip stablecoin lending, split across 2 protocols, 5 months: $25,000. T2 Term, Scheduled, PTs maturing on dates you'll need the money (Lesson 10.1), Next 6–12 months of planned spending. T3 Growth, Days–weeks, Strategy positions, L.P.s, staking, The rest, within caps.",
-   "cap": "T0 Instant, Seconds, Stablecoins in the operating wallet, 1 month: $5,000 T1 Same day, Hours, Blue-chip stablecoin lending, split across 2 protocols, 5 months: $25,000 T2 Term, Scheduled, PTs maturing on dates you'll need the money (Lesson 10.1), Next 6–12 months of planned spending T3 Growth, Days–weeks, Strategy positions, LPs, staking, The rest, within caps"
+   "vo": "Banks match the timing of assets to the timing of what they owe. Your ladder: Refill downward on a schedule: T1 tops up T0 monthly; maturing PTs top up T1. Never fund a T0 need by selling a T3 position in a bad market. That's what the ladder exists to prevent. T0 Instant, Seconds, Stablecoins in the operating wallet, 1 month: $5,000. T1 Same day, Hours, Blue-chip stablecoin lending, split across 2 protocols, 5 months: $25,000. T2 Term, Scheduled, PTs maturing on dates you'll need the money (Lesson 10.1), Next 6 to 12 months of planned spending. T3 Growth, Days to weeks, Strategy positions, L.P.s, staking, The rest, within caps.",
+   "cap": "Banks match the timing of assets to the timing of what they owe. Your ladder: Refill downward on a schedule: T1 tops up T0 monthly; maturing PTs top up T1. Never fund a T0 need by selling a T3 position in a bad market. That's what the ladder exists to prevent. T0 Instant, Seconds, Stablecoins in the operating wallet, 1 month: $5,000. T1 Same day, Hours, Blue-chip stablecoin lending, split across 2 protocols, 5 months: $25,000. T2 Term, Scheduled, PTs maturing on dates you'll need the money (Lesson 10.1), Next 6–12 months of planned spending. T3 Growth, Days–weeks, Strategy positions, LPs, staking, The rest, within caps."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Key ideas"
-   ],
-   "sub": "Banks match the timing of assets to the timing of what they owe. Your ladder: Refill downward on a schedule: T1 tops up T0 monthly; maturing PTs top up T1. Never fund a T0 need by selling a T3 position in a bad market. That's what the ladder exists to prevent.",
-   "vo": "Banks match the timing of assets to the timing of what they owe. Your ladder: Refill downward on a schedule: T1 tops up T0 monthly; maturing PTs top up T1. Never fund a T0 need by selling a T3 position in a bad market. That's what the ladder exists to prevent.",
-   "cap": "Banks match the timing of assets to the timing of what they owe. Your ladder: Refill downward on a schedule: T1 tops up T0 monthly; maturing PTs top up T1. Never fund a T0 need by selling a T3 position in a bad market. That's what the ladder exists to prevent."
+   "type": "image",
+   "chapter": "Key ideas",
+   "src": "assets/diagrams/liquidity-ladder.png",
+   "eyebrow": "The liquidity ladder",
+   "wide": true,
+   "vo": "Let's look at the diagram: The liquidity ladder. Take a moment with it. It's everything we've just said, in one picture.",
+   "cap": "Let's look at the diagram: The liquidity ladder. Take a moment with it. It's everything we've just said, in one picture."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "T0 $5,000 + T1 $25,000 = 6 months instantly available.",
+    "T2 holds three PTs maturing in 3, 6 and 9 months, each sized for 3 months of…",
+    "A −50% market day touches none of it."
    ],
-   "sub": "T0 $5,000 + T1 $25,000 = 6 months instantly available. T2 holds three PTs maturing in 3, 6 and 9 months, each sized for 3 months of spending. A −50% market day touches none of it.",
-   "vo": "T0 $5,000 + T1 $25,000 = 6 months instantly available. T2 holds three PTs maturing in 3, 6 and 9 months, each sized for 3 months of spending. A minus 50% market day touches none of it.",
-   "cap": "T0 $5,000 + T1 $25,000 = 6 months instantly available. T2 holds three PTs maturing in 3, 6 and 9 months, each sized for 3 months of spending. A −50% market day touches none of it."
+   "vo": "Let's work an example, step by step. T0 $5,000 + T1 $25,000 equals 6 months instantly available. T2 holds three PTs maturing in 3, 6 and 9 months, each sized for 3 months of spending. A minus 50% market day touches none of it.",
+   "cap": "Let's work an example, step by step. T0 $5,000 + T1 $25,000 = 6 months instantly available. T2 holds three PTs maturing in 3, 6 and 9 months, each sized for 3 months of spending. A −50% market day touches none of it."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "T0 + T1 ≥ 6 months of obligations",
@@ -72,48 +83,46 @@
     "Monthly refill schedule set",
     "T3 never used for day-to-day needs"
    ],
-   "vo": "Your checklist. T0 + T1 at least 6 months of obligations T2 maturities matched to planned spending Monthly refill schedule set T3 never used for day-to-day needs",
-   "cap": "T0 + T1 ≥ 6 months of obligations T2 maturities matched to planned spending Monthly refill schedule set T3 never used for day-to-day needs"
+   "vo": "Here's your checklist. Do it now, for real. First, T0 + T1 at least 6 months of obligations. Next, T2 maturities matched to planned spending. Then, Monthly refill schedule set. And finally, T3 never used for day-to-day needs.",
+   "cap": "Here's your checklist. Do it now, for real. First, T0 + T1 ≥ 6 months of obligations. Next, T2 maturities matched to planned spending. Then, Monthly refill schedule set. And finally, T3 never used for day-to-day needs."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why hold T0 in plain stablecoins earning little?"
-   ],
-   "sub": "Answer: Instant, certain access. It's the tier that pays today's bills without selling anything.",
-   "subAt": 0.62,
-   "vo": "Why hold T0 in plain stablecoins earning little? ... Pause and think. ... The answer: Instant, certain access. It's the tier that pays today's bills without selling anything.",
-   "cap": "Why hold T0 in plain stablecoins earning little? Pause and think. The answer: Instant, certain access. It's the tier that pays today's bills without selling anything."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why hold T0 in plain stablecoins earning little?",
+   "a": "Instant, certain access. It's the tier that pays today's bills without selling anything.",
+   "vo": "Question one. Why hold T0 in plain stablecoins earning little? [[pause 4]] The answer: Instant, certain access. It's the tier that pays today's bills without selling anything.",
+   "cap": "Question 1. Why hold T0 in plain stablecoins earning little? The answer: Instant, certain access. It's the tier that pays today's bills without selling anything."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What's T2 for?"
-   ],
-   "sub": "Answer: Known future spending, with maturities matched to when the money is needed and a fixed return locked in.",
-   "subAt": 0.62,
-   "vo": "What's T2 for? ... Pause and think. ... The answer: Known future spending, with maturities matched to when the money is needed and a fixed return locked in.",
-   "cap": "What's T2 for? Pause and think. The answer: Known future spending, with maturities matched to when the money is needed and a fixed return locked in."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What's T2 for?",
+   "a": "Known future spending, with maturities matched to when the money is needed and a fixed return locked in.",
+   "vo": "Question two. What's T2 for? [[pause 4]] The answer: Known future spending, with maturities matched to when the money is needed and a fixed return locked in.",
+   "cap": "Question 2. What's T2 for? The answer: Known future spending, with maturities matched to when the money is needed and a fixed return locked in."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What does the ladder prevent?"
-   ],
-   "sub": "Answer: Forced selling of growth positions at bad prices to meet short-term needs.",
-   "subAt": 0.62,
-   "vo": "What does the ladder prevent? ... Pause and think. ... The answer: Forced selling of growth positions at bad prices to meet short-term needs.",
-   "cap": "What does the ladder prevent? Pause and think. The answer: Forced selling of growth positions at bad prices to meet short-term needs."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What does the ladder prevent?",
+   "a": "Forced selling of growth positions at bad prices to meet short-term needs.",
+   "vo": "Question three. What does the ladder prevent? [[pause 4]] The answer: Forced selling of growth positions at bad prices to meet short-term needs.",
+   "cap": "Question 3. What does the ladder prevent? The answer: Forced selling of growth positions at bad prices to meet short-term needs."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 12.5",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson twelve point five: Being the lender: supplying, curating and pricing credit risk.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 12.5: Being the lender: supplying, curating and pricing credit risk."
   }
  ]
 }

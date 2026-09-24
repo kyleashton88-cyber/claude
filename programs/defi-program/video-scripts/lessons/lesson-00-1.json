@@ -6,107 +6,139 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 0.1",
  "use": "Lesson 0.1 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Money, ledgers and why blockchains…",
+  "subtitle": "Lesson 0.1"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-00.png",
-   "eyebrow": "Lesson 0.1",
-   "vo": "Lesson zero point one. Money, ledgers and why blockchains exist.",
-   "cap": "Lesson 0.1. Money, ledgers and why blockchains exist."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 0 · Crypto From Zero",
+   "num": "0.1",
+   "title": "Money, ledgers and why blockchains exist",
    "sub": "Explain in plain words what a blockchain is, what a cryptocurrency is, and what \"DeFi\" means.",
-   "vo": "Explain in plain words what a blockchain is, what a cryptocurrency is, and what \"DeFi\" means.",
-   "cap": "Explain in plain words what a blockchain is, what a cryptocurrency is, and what \"DeFi\" means."
+   "vo": "Lesson zero point one. Money, ledgers and why blockchains exist. By the end of this lesson, you'll be able to explain in plain words what a blockchain is, what a cryptocurrency is, and what \"DeFi\" means.",
+   "cap": "Lesson 0.1. Money, ledgers and why blockchains exist. By the end of this lesson, you'll be able to explain in plain words what a blockchain is, what a cryptocurrency is, and what \"DeFi\" means."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
-    "Money is a record of who owns what. Your bank balance is a line in your bank's private…",
-    "A blockchain is a ledger that thousands of computers keep a copy of and agree on…",
-    "A cryptocurrency is a unit recorded on a blockchain. Bitcoin (BTC) was the first (2009).…",
+    "Money is a record of who owns what",
+    "A blockchain is a ledger that thousands of computers keep a copy of and agree on together",
+    "A cryptocurrency is a unit recorded on a blockchain",
     "A smart contract is a program that lives on a blockchain and follows fixed rules, for…",
-    "Stablecoins are tokens designed to stay worth $1 (e.g. USDC, USDT). You'll use them a…"
+    "Stablecoins are tokens designed to stay worth $1 (e.g. USDC, USDT)"
    ],
-   "vo": "Money is a record of who owns what. Your bank balance is a line in your bank's private ledger (record book). You trust the bank to keep it correct. A blockchain is a ledger that thousands of computers keep a copy of and agree on together. New entries are added in batches called blocks, each linked to the one before: a chain of blocks. Nobody can quietly change an old entry, because everyone else's copy would disagree. A cryptocurrency is a unit recorded on a blockchain. Bitcoin (bitcoin) was the first (2009). Ether (ETH) is the currency of the Ethereum blockchain, which also runs programs. A smart contract is a program that lives on a blockchain and follows fixed rules, for example \"whoever deposits X gets Y back plus interest\". Stablecoins are tokens designed to stay worth $1 (for example U.S.D.C., U.S.D.T.). You'll use them a lot, but they can fail (Lesson 1.5).",
-   "cap": "Money is a record of who owns what. Your bank balance is a line in your bank's private ledger (record book). You trust the bank to keep it correct. A blockchain is a ledger that thousands of computers keep a copy of and agree on together. New entries are added in batches called blocks, each linked to the one before: a chain of blocks. Nobody can quietly change an old entry, because everyone else's copy would disagree. A cryptocurrency is a unit recorded on a blockchain. Bitcoin (BTC) was the first (2009). Ether (ETH) is the currency of the Ethereum blockchain, which also runs programs. A smart contract is a program that lives on a blockchain and follows fixed rules, for example \"whoever deposits X gets Y back plus interest\". Stablecoins are tokens designed to stay worth $1 (e.g. USDC, USDT). You'll use them a lot, but they can fail (Lesson 1.5)."
+   "vo": "First, money is a record of who owns what. Your bank balance is a line in your bank's private ledger (record book). You trust the bank to keep it correct. Next, A blockchain is a ledger that thousands of computers keep a copy of and agree on together. New entries are added in batches called blocks, each linked to the one before: a chain of blocks. Nobody can quietly change an old entry, because everyone else's copy would disagree. Then, A cryptocurrency is a unit recorded on a blockchain. Bitcoin (bitcoin) was the first (2009). Ether (ETH) is the currency of the Ethereum blockchain, which also runs programs. Also, A smart contract is a program that lives on a blockchain and follows fixed rules, for example \"whoever deposits X gets Y back plus interest\". On top of that, Stablecoins are tokens designed to stay worth $1 (for example U.S.D.C., U.S.D.T.). You'll use them a lot, but they can fail (Lesson 1.5).",
+   "cap": "First, money is a record of who owns what. Your bank balance is a line in your bank's private ledger (record book). You trust the bank to keep it correct. Next, A blockchain is a ledger that thousands of computers keep a copy of and agree on together. New entries are added in batches called blocks, each linked to the one before: a chain of blocks. Nobody can quietly change an old entry, because everyone else's copy would disagree. Then, A cryptocurrency is a unit recorded on a blockchain. Bitcoin (BTC) was the first (2009). Ether (ETH) is the currency of the Ethereum blockchain, which also runs programs. Also, A smart contract is a program that lives on a blockchain and follows fixed rules, for example \"whoever deposits X gets Y back plus interest\". On top of that, Stablecoins are tokens designed to stay worth $1 (e.g. USDC, USDT). You'll use them a lot, but they can fail (Lesson 1.5)."
   },
   {
    "type": "bullets",
-   "title": "Key ideas",
+   "chapter": "Key ideas",
+   "title": "Key ideas (cont.)",
    "items": [
     "DeFi (decentralised finance) is financial services (trading, lending, earning interest)…",
     "The trade-off"
    ],
-   "vo": "DeFi (decentralised finance) is financial services (trading, lending, earning interest) run by smart contracts instead of banks. The trade-off: no bank in the middle means nobody can freeze your money, but also nobody can reverse your mistakes. That's why this program starts with safety.",
-   "cap": "DeFi (decentralised finance) is financial services (trading, lending, earning interest) run by smart contracts instead of banks. The trade-off: no bank in the middle means nobody can freeze your money, but also nobody can reverse your mistakes. That's why this program starts with safety."
+   "vo": "And DeFi (decentralised finance) is financial services (trading, lending, earning interest) run by smart contracts instead of banks. And finally, the trade-off: no bank in the middle means nobody can freeze your money, but also nobody can reverse your mistakes. That's why this program starts with safety.",
+   "cap": "And DeFi (decentralised finance) is financial services (trading, lending, earning interest) run by smart contracts instead of banks. And finally, the trade-off: no bank in the middle means nobody can freeze your money, but also nobody can reverse your mistakes. That's why this program starts with safety."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "When Alice sends Bob 0.1 ETH, she doesn't send a file.",
+    "She signs an instruction (\"move 0.1 ETH from my address to Bob's\").",
+    "The network checks she owns it, adds it to the next block, and every copy of…",
+    "Bob now owns it.",
+    "There is no \"undo\" button."
    ],
-   "sub": "When Alice sends Bob 0.1 ETH, she doesn't send a file. She signs an instruction (\"move 0.1 ETH from my address to Bob's\"). The network checks she owns it, adds it to the next block, and every copy of the ledger updates. Bob now owns it. There is no \"undo\" butt",
-   "vo": "When Alice sends Bob 0.1 ETH, she doesn't send a file. She signs an instruction (\"move 0.1 ETH from my address to Bob's\"). The network checks she owns it, adds it to the next block, and every copy of the ledger updates. Bob now owns it. There is no \"undo\" button.",
-   "cap": "When Alice sends Bob 0.1 ETH, she doesn't send a file. She signs an instruction (\"move 0.1 ETH from my address to Bob's\"). The network checks she owns it, adds it to the next block, and every copy of the ledger updates. Bob now owns it. There is no \"undo\" button."
+   "vo": "Let's work an example, step by step. When Alice sends Bob 0.1 ETH, she doesn't send a file. She signs an instruction (\"move 0.1 ETH from my address to Bob's\"). The network checks she owns it, adds it to the next block, and every copy of the ledger updates. Bob now owns it. There is no \"undo\" button.",
+   "cap": "Let's work an example, step by step. When Alice sends Bob 0.1 ETH, she doesn't send a file. She signs an instruction (\"move 0.1 ETH from my address to Bob's\"). The network checks she owns it, adds it to the next block, and every copy of the ledger updates. Bob now owns it. There is no \"undo\" button."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "I can explain a blockchain as \"a shared ledger nobody can quietly edit\"",
     "I know the difference between BTC, ETH and a stablecoin",
     "I understand that crypto transactions can't be reversed"
    ],
-   "vo": "Your checklist. I can explain a blockchain as \"a shared ledger nobody can quietly edit\" I know the difference between bitcoin, ETH and a stablecoin I understand that crypto transactions can't be reversed",
-   "cap": "I can explain a blockchain as \"a shared ledger nobody can quietly edit\" I know the difference between BTC, ETH and a stablecoin I understand that crypto transactions can't be reversed"
+   "vo": "Here's your checklist. Do it now, for real. First, I can explain a blockchain as \"a shared ledger nobody can quietly edit\". Next, I know the difference between bitcoin, ETH and a stablecoin. And finally, I understand that crypto transactions can't be reversed.",
+   "cap": "Here's your checklist. Do it now, for real. First, I can explain a blockchain as \"a shared ledger nobody can quietly edit\". Next, I know the difference between BTC, ETH and a stablecoin. And finally, I understand that crypto transactions can't be reversed."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why can't someone quietly change an old blockchain entry?"
-   ],
-   "sub": "Answer: Thousands of computers hold copies and would reject a version that doesn't match.",
-   "subAt": 0.62,
-   "vo": "Why can't someone quietly change an old blockchain entry? ... Pause and think. ... The answer: Thousands of computers hold copies and would reject a version that doesn't match.",
-   "cap": "Why can't someone quietly change an old blockchain entry? Pause and think. The answer: Thousands of computers hold copies and would reject a version that doesn't match."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why can't someone quietly change an old blockchain entry?",
+   "a": "Thousands of computers hold copies and would reject a version that doesn't match.",
+   "vo": "Question one. Why can't someone quietly change an old blockchain entry? [[pause 4]] The answer: Thousands of computers hold copies and would reject a version that doesn't match.",
+   "cap": "Question 1. Why can't someone quietly change an old blockchain entry? The answer: Thousands of computers hold copies and would reject a version that doesn't match."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What is a stablecoin designed to do?"
-   ],
-   "sub": "Answer: Stay worth about $1 (or another currency). It can still fail.",
-   "subAt": 0.62,
-   "vo": "What is a stablecoin designed to do? ... Pause and think. ... The answer: Stay worth about $1 (or another currency). It can still fail.",
-   "cap": "What is a stablecoin designed to do? Pause and think. The answer: Stay worth about $1 (or another currency). It can still fail."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What is a stablecoin designed to do?",
+   "a": "Stay worth about $1 (or another currency). It can still fail.",
+   "vo": "Question two. What is a stablecoin designed to do? [[pause 4]] The answer: Stay worth about $1 (or another currency). It can still fail.",
+   "cap": "Question 2. What is a stablecoin designed to do? The answer: Stay worth about $1 (or another currency). It can still fail."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What does DeFi replace, and what do you give up?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What does DeFi replace, and what do you give up?",
+   "a": "It replaces banks and brokers with smart contracts. You give up anyone who can reverse mistakes or help recover funds.",
+   "vo": "Question three. What does DeFi replace, and what do you give up? [[pause 4]] The answer: It replaces banks and brokers with smart contracts. You give up anyone who can reverse mistakes or help recover funds.",
+   "cap": "Question 3. What does DeFi replace, and what do you give up? The answer: It replaces banks and brokers with smart contracts. You give up anyone who can reverse mistakes or help recover funds."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Money is a record of who owns what",
+    "A blockchain is a ledger that thousands of computers keep a copy of and agree on together",
+    "A cryptocurrency is a unit recorded on a blockchain",
+    "A smart contract is a program that lives on a blockchain and follows fixed rules"
    ],
-   "sub": "Answer: It replaces banks and brokers with smart contracts. You give up anyone who can reverse mistakes or help recover funds.",
-   "subAt": 0.62,
-   "vo": "What does DeFi replace, and what do you give up? ... Pause and think. ... The answer: It replaces banks and brokers with smart contracts. You give up anyone who can reverse mistakes or help recover funds.",
-   "cap": "What does DeFi replace, and what do you give up? Pause and think. The answer: It replaces banks and brokers with smart contracts. You give up anyone who can reverse mistakes or help recover funds."
+   "vo": "Let's recap. Money is a record of who owns what. A blockchain is a ledger that thousands of computers keep a copy of and agree on together. A cryptocurrency is a unit recorded on a blockchain. A smart contract is a program that lives on a blockchain and follows fixed rules.",
+   "cap": "Let's recap. Money is a record of who owns what. A blockchain is a ledger that thousands of computers keep a copy of and agree on together. A cryptocurrency is a unit recorded on a blockchain. A smart contract is a program that lives on a blockchain and follows fixed rules."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 0.2",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson zero point two: Opening and securing an exchange account.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 0.2: Opening and securing an exchange account."
   }
  ]
 }

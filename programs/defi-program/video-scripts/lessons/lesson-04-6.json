@@ -6,93 +6,109 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 4.6",
  "use": "Lesson 4.6 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Airdrops & points",
+  "subtitle": "Lesson 4.6"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-04.png",
-   "eyebrow": "Lesson 4.6",
-   "vo": "Lesson four point six. Airdrops and points: opportunity cost.",
-   "cap": "Lesson 4.6. Airdrops & points: opportunity cost."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 4 · Yield",
+   "num": "4.6",
+   "title": "Airdrops & points: opportunity cost",
    "sub": "Price airdrop and points farming as a bet, including its costs.",
-   "vo": "Price airdrop and points farming as a bet, including its costs.",
-   "cap": "Price airdrop and points farming as a bet, including its costs."
+   "vo": "Lesson four point six. Airdrops and points: opportunity cost. By the end of this lesson, you'll be able to price airdrop and points farming as a bet, including its costs.",
+   "cap": "Lesson 4.6. Airdrops & points: opportunity cost. By the end of this lesson, you'll be able to price airdrop and points farming as a bet, including its costs."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
   },
   {
    "type": "statement",
+   "chapter": "Key ideas",
+   "kicker": "Key ideas",
    "lines": [
-    "Key ideas"
+    "Protocols reward early users with tokens (airdrops), often…"
    ],
-   "sub": "Protocols reward early users with tokens (airdrops), often tracked by points first. Eligibility rules, snapshots and sybil filters (removing people who split into many wallets) decide who gets what. Nothing is promised. Fake claim sites are one of the most com",
+   "sub": "Protocols reward early users with tokens (airdrops), often tracked by points first. Eligibility rules, snapshots and sybil filters (removing people who split into many wallets) decide who gets what. Nothing is promised. Fake claim sites are",
    "vo": "Protocols reward early users with tokens (airdrops), often tracked by points first. Eligibility rules, snapshots and sybil filters (removing people who split into many wallets) decide who gets what. Nothing is promised. Fake claim sites are one of the most common scams (Lesson 1.6).",
    "cap": "Protocols reward early users with tokens (airdrops), often tracked by points first. Eligibility rules, snapshots and sybil filters (removing people who split into many wallets) decide who gets what. Nothing is promised. Fake claim sites are one of the most common scams (Lesson 1.6)."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "the calculator gives EV $250.",
+    "If the same $10,000 could earn 5% ($500/yr) risk-light elsewhere, the farm…"
    ],
-   "sub": "the calculator → EV $250. If the same $10,000 could earn 5% ($500/yr) risk-light elsewhere, the farm must beat that plus its extra risk, or it's the worse choice.",
-   "vo": "the calculator to EV $250. If the same $10,000 could earn 5% ($500 a year) risk-light elsewhere, the farm must beat that plus its extra risk, or it's the worse choice.",
-   "cap": "the calculator → EV $250. If the same $10,000 could earn 5% ($500/yr) risk-light elsewhere, the farm must beat that plus its extra risk, or it's the worse choice."
+   "vo": "Let's work an example, step by step. the calculator gives EV $250. If the same $10,000 could earn 5% ($500 a year) risk-light elsewhere, the farm must beat that plus its extra risk, or it's the worse choice.",
+   "cap": "Let's work an example, step by step. the calculator gives EV $250. If the same $10,000 could earn 5% ($500/yr) risk-light elsewhere, the farm must beat that plus its extra risk, or it's the worse choice."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Only actions I'd take anyway, or a capped speculative budget",
     "Opportunity cost compared",
     "Claims only from verified official links"
    ],
-   "vo": "Your checklist. Only actions I'd take anyway, or a capped speculative budget Opportunity cost compared Claims only from verified official links",
-   "cap": "Only actions I'd take anyway, or a capped speculative budget Opportunity cost compared Claims only from verified official links"
+   "vo": "Here's your checklist. Do it now, for real. First, only actions I'd take anyway, or a capped speculative budget. Next, Opportunity cost compared. And finally, Claims only from verified official links.",
+   "cap": "Here's your checklist. Do it now, for real. First, only actions I'd take anyway, or a capped speculative budget. Next, Opportunity cost compared. And finally, Claims only from verified official links."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Are points a promise of tokens?"
-   ],
-   "sub": "Answer: No.",
-   "subAt": 0.62,
-   "vo": "Are points a promise of tokens? ... Pause and think. ... The answer: No.",
-   "cap": "Are points a promise of tokens? Pause and think. The answer: No."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Are points a promise of tokens?",
+   "a": "No.",
+   "vo": "Question one. Are points a promise of tokens? [[pause 4]] The answer: No.",
+   "cap": "Question 1. Are points a promise of tokens? The answer: No."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What's a sybil filter?"
-   ],
-   "sub": "Answer: Rules that exclude wallets believed to belong to the same person farming many times.",
-   "subAt": 0.62,
-   "vo": "What's a sybil filter? ... Pause and think. ... The answer: Rules that exclude wallets believed to belong to the same person farming many times.",
-   "cap": "What's a sybil filter? Pause and think. The answer: Rules that exclude wallets believed to belong to the same person farming many times."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What's a sybil filter?",
+   "a": "Rules that exclude wallets believed to belong to the same person farming many times.",
+   "vo": "Question two. What's a sybil filter? [[pause 4]] The answer: Rules that exclude wallets believed to belong to the same person farming many times.",
+   "cap": "Question 2. What's a sybil filter? The answer: Rules that exclude wallets believed to belong to the same person farming many times."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What's the airdrop EV formula?"
-   ],
-   "sub": "Answer: Probability × value − costs.",
-   "subAt": 0.62,
-   "vo": "What's the airdrop EV formula? ... Pause and think. ... The answer: Probability times value minus costs.",
-   "cap": "What's the airdrop EV formula? Pause and think. The answer: Probability × value − costs."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What's the airdrop EV formula?",
+   "a": "Probability × value − costs.",
+   "vo": "Question three. What's the airdrop EV formula? [[pause 4]] The answer: Probability times value minus costs.",
+   "cap": "Question 3. What's the airdrop EV formula? The answer: Probability × value − costs."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 4.7",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson four point seven: Stablecoin savings rates and yield-bearing stablecoins.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 4.7: Stablecoin savings rates and yield-bearing stablecoins."
   }
  ]
 }

@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 9.2",
  "use": "Lesson 9.2 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "When each one wins",
+  "subtitle": "Lesson 9.2"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-09.png",
-   "eyebrow": "Lesson 9.2",
-   "vo": "Lesson nine point two. When each one wins.",
-   "cap": "Lesson 9.2. When each one wins."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 9 · DeFi vs Grid Bots",
+   "num": "9.2",
+   "title": "When each one wins",
    "sub": "Pick grid bot, LP, both, or neither, for a given market and account.",
-   "vo": "Pick grid bot, L.P., both, or neither, for a given market and account.",
-   "cap": "Pick grid bot, LP, both, or neither, for a given market and account."
+   "vo": "Lesson nine point two. When each one wins. By the end of this lesson, you'll be able to pick grid bot, L.P., both, or neither, for a given market and account.",
+   "cap": "Lesson 9.2. When each one wins. By the end of this lesson, you'll be able to pick grid bot, LP, both, or neither, for a given market and account."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Position size",
@@ -37,89 +51,80 @@
     "Counterparty view"
    ],
    "compact": true,
-   "vo": "Position size, Small–medium (no gas per action), Larger (gas becomes a smaller share of returns). Pair, Major pairs listed on your exchange, Tokens only traded on-chain; pairs with deep pool volume. Fee economics, Low maker fees on your exchange, High-volume pools with a good fee tier (for example 0.05% / 0.3% / 1%). Management, Want automation (Grid Bot Builder), Happy to set ranges and rebalance by hand. Custody preference, Comfortable with exchange custody, Want self-custody. Counterparty view, Trust the exchange more than contracts, Trust audited contracts more than an exchange. Leverage wanted, Futures grid (advanced), Not applicable (L.P. is unlevered unless you borrow).",
-   "cap": "Position size, Small–medium (no gas per action), Larger (gas becomes a smaller share of returns) Pair, Major pairs listed on your exchange, Tokens only traded on-chain; pairs with deep pool volume Fee economics, Low maker fees on your exchange, High-volume pools with a good fee tier (e.g. 0.05% / 0.3% / 1%) Management, Want automation (Grid Bot Builder), Happy to set ranges and rebalance by hand Custody preference, Comfortable with exchange custody, Want self-custody Counterparty view, Trust the exchange more than contracts, Trust audited contracts more than an exchange"
+   "vo": "Neither, same as in the grid module: strong breakouts, parabolic moves, major news, thin liquidity. Waiting is a position. Position size, Small to medium (no gas per action), Larger (gas becomes a smaller share of returns). Pair, Major pairs listed on your exchange, Tokens only traded on-chain; pairs with deep pool volume. Fee economics, Low maker fees on your exchange, High-volume pools with a good fee tier (for example 0.05% or 0.3% or 1%). Management, Want automation (Grid Bot Builder), Happy to set ranges and rebalance by hand. Custody preference, Comfortable with exchange custody, Want self-custody. Counterparty view, Trust the exchange more than contracts, Trust audited contracts more than an exchange.",
+   "cap": "Neither, same as in the grid module: strong breakouts, parabolic moves, major news, thin liquidity. Waiting is a position. Position size, Small–medium (no gas per action), Larger (gas becomes a smaller share of returns). Pair, Major pairs listed on your exchange, Tokens only traded on-chain; pairs with deep pool volume. Fee economics, Low maker fees on your exchange, High-volume pools with a good fee tier (e.g. 0.05% / 0.3% / 1%). Management, Want automation (Grid Bot Builder), Happy to set ranges and rebalance by hand. Custody preference, Comfortable with exchange custody, Want self-custody. Counterparty view, Trust the exchange more than contracts, Trust audited contracts more than an exchange."
   },
   {
    "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Leverage wanted"
    ],
    "compact": true,
-   "vo": "Continuing.",
-   "cap": "Leverage wanted, Futures grid (advanced), Not applicable (LP is unlevered unless you borrow)"
+   "vo": "Leverage wanted, Futures grid (advanced), Not applicable (L.P. is unlevered unless you borrow).",
+   "cap": "Leverage wanted, Futures grid (advanced), Not applicable (LP is unlevered unless you borrow)."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Key ideas"
-   ],
-   "sub": "Neither, same as in the grid module: strong breakouts, parabolic moves, major news, thin liquidity. Waiting is a position.",
-   "vo": "Neither, same as in the grid module: strong breakouts, parabolic moves, major news, thin liquidity. Waiting is a position.",
-   "cap": "Neither, same as in the grid module: strong breakouts, parabolic moves, major news, thin liquidity. Waiting is a position."
-  },
-  {
-   "type": "bullets",
-   "title": "Worked example — three traders",
-   "items": [
-    "$3k, trades BTC/ETH, wants automation → grid bot. Gas would eat a small on-chain LP.",
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example: ETH/USDC concentrated LP could earn fees on part…",
+   "steps": [
+    "$3k, trades BTC/ETH, wants automation → grid bot",
     "$80k, holds ETH long-term, self-custody, checks weekly → a wide-range",
-    "A token that's only liquid on a DEX → only an LP is possible. Apply"
+    "A token that's only liquid on a DEX → only an LP is possible"
    ],
-   "vo": "ETH/U.S.D.C. concentrated L.P. could earn fees on part of the stack. Size it as ETH they're willing to sell higher and U.S.D.C. they're willing to spend lower. full due diligence (Module 6) and small size. $3k, trades bitcoin/ETH, wants automation to grid bot. Gas would eat a small on-chain L.P.. $80k, holds ETH long-term, self-custody, checks weekly to a wide-range A token that's only liquid on a decks to only an L.P. is possible. Apply",
-   "cap": "$3k, trades BTC/ETH, wants automation → grid bot. Gas would eat a small on-chain LP. $80k, holds ETH long-term, self-custody, checks weekly → a wide-range A token that's only liquid on a DEX → only an LP is possible. Apply"
+   "vo": "Let's work an example, step by step. ETH/U.S.D.C. concentrated L.P. could earn fees on part of the stack. Size it as ETH they're willing to sell higher and U.S.D.C. they're willing to spend lower. full due diligence (Module 6) and small size. $3k, trades bitcoin/ETH, wants automation to grid bot. Gas would eat a small on-chain L.P. $80k, holds ETH long-term, self-custody, checks weekly to a wide-range. A token that's only liquid on a decks to only an L.P. is possible. Apply."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "I've matched the tool to position size, pair, custody and management time",
     "I've compared expected fee income to costs (gas or exchange fees)",
     "I've checked the regime before choosing either"
    ],
-   "vo": "Your checklist. I've matched the tool to position size, pair, custody and management time I've compared expected fee income to costs (gas or exchange fees) I've checked the regime before choosing either",
-   "cap": "I've matched the tool to position size, pair, custody and management time I've compared expected fee income to costs (gas or exchange fees) I've checked the regime before choosing either"
+   "vo": "Here's your checklist. Do it now, for real. First, I've matched the tool to position size, pair, custody and management time. Next, I've compared expected fee income to costs (gas or exchange fees). And finally, I've checked the regime before choosing either.",
+   "cap": "Here's your checklist. Do it now, for real. First, I've matched the tool to position size, pair, custody and management time. Next, I've compared expected fee income to costs (gas or exchange fees). And finally, I've checked the regime before choosing either."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why does position size matter more on-chain?"
-   ],
-   "sub": "Answer: Gas is a roughly fixed cost per action, so it's a bigger percentage of a small position.",
-   "subAt": 0.62,
-   "vo": "Why does position size matter more on-chain? ... Pause and think. ... The answer: Gas is a roughly fixed cost per action, so it's a bigger percentage of a small position.",
-   "cap": "Why does position size matter more on-chain? Pause and think. The answer: Gas is a roughly fixed cost per action, so it's a bigger percentage of a small position."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why does position size matter more on-chain?",
+   "a": "Gas is a roughly fixed cost per action, so it's a bigger percentage of a small position.",
+   "vo": "Question one. Why does position size matter more on-chain? [[pause 4]] The answer: Gas is a roughly fixed cost per action, so it's a bigger percentage of a small position.",
+   "cap": "Question 1. Why does position size matter more on-chain? The answer: Gas is a roughly fixed cost per action, so it's a bigger percentage of a small position."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "When is an LP the only option?"
-   ],
-   "sub": "Answer: When the pair trades only on-chain.",
-   "subAt": 0.62,
-   "vo": "When is an L.P. the only option? ... Pause and think. ... The answer: When the pair trades only on-chain.",
-   "cap": "When is an LP the only option? Pause and think. The answer: When the pair trades only on-chain."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "When is an LP the only option?",
+   "a": "When the pair trades only on-chain.",
+   "vo": "Question two. When is an L.P. the only option? [[pause 4]] The answer: When the pair trades only on-chain.",
+   "cap": "Question 2. When is an LP the only option? The answer: When the pair trades only on-chain."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Market just broke out on huge news. Grid or LP?"
-   ],
-   "sub": "Answer: Neither, until a new range forms.",
-   "subAt": 0.62,
-   "vo": "Market just broke out on huge news. Grid or L.P.? ... Pause and think. ... The answer: Neither, until a new range forms.",
-   "cap": "Market just broke out on huge news. Grid or LP? Pause and think. The answer: Neither, until a new range forms."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Market just broke out on huge news. Grid or LP?",
+   "a": "Neither, until a new range forms.",
+   "vo": "Question three. Market just broke out on huge news. Grid or L.P.? [[pause 4]] The answer: Neither, until a new range forms.",
+   "cap": "Question 3. Market just broke out on huge news. Grid or LP? The answer: Neither, until a new range forms."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 9.3",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson nine point three: Building a combined system.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 9.3: Building a combined system."
   }
  ]
 }

@@ -1,0 +1,280 @@
+{
+ "id": "lesson-03-2",
+ "title": "Lesson 3.2: LTV, liquidation threshold & health factor",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "maxMinutes": 25,
+ "tag": "Lesson 3.2",
+ "gold": true,
+ "use": "Lesson 3.2 page in the Whop course. Hand-written gold-standard script: the model for every lesson video.",
+ "thumbnail": {
+  "title": "Never get liquidated",
+  "subtitle": "Lesson 3.2"
+ },
+ "scenes": [
+  {
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 3 · Lending & Leverage",
+   "num": "3.2",
+   "title": "LTV, liquidation threshold & health factor",
+   "sub": "Calculate your LTV, health factor and liquidation price before you borrow.",
+   "vo": "Lesson three point two. L.T.V., liquidation threshold, and health factor. These three numbers decide whether a loan is a tool, or a trap.",
+   "cap": "Lesson 3.2. LTV, liquidation threshold, and health factor. These three numbers decide whether a loan is a tool, or a trap."
+  },
+  {
+   "type": "statement",
+   "chapter": "Why it matters",
+   "kicker": "The problem",
+   "lines": [
+    "A lending protocol",
+    "never calls you."
+   ],
+   "sub": "When your collateral falls too far, it's sold automatically, at a penalty. No warning, no negotiation.",
+   "vo": "Here's the uncomfortable truth about borrowing on-chain. A lending protocol never calls you. There's no margin call, no grace period, and no one to negotiate with. When your collateral falls too far, it's sold automatically, at a penalty. So the only protection you have is arithmetic you did before you borrowed."
+  },
+  {
+   "type": "pillars",
+   "chapter": "Why it matters",
+   "title": "By the end of this lesson you'll be able to",
+   "items": [
+    {
+     "icon": "chart",
+     "title": "Measure",
+     "text": "Your LTV and health factor, for any position"
+    },
+    {
+     "icon": "target",
+     "title": "Locate",
+     "text": "The exact price at which you'd be liquidated"
+    },
+    {
+     "icon": "shield",
+     "title": "Defend",
+     "text": "Choose a buffer and a plan before you borrow"
+    }
+   ],
+   "vo": "By the end of this lesson, you'll be able to do three things. Measure your loan-to-value and health factor for any position. Locate the exact price at which you'd be liquidated. And defend the position, by choosing a buffer and a plan before you borrow a single dollar."
+  },
+  {
+   "type": "bullets",
+   "chapter": "The four numbers",
+   "title": "Four numbers, one position",
+   "numbered": true,
+   "items": [
+    "LTV = debt ÷ collateral value",
+    "Max LTV: the most you can borrow",
+    "Liquidation threshold: where liquidation starts",
+    "Health factor = collateral × LT ÷ debt"
+   ],
+   "vo": "Every lending position comes down to four numbers. First, L.T.V., or loan-to-value. It's simply your debt divided by the value of your collateral. Second, max L.T.V. That's the most the protocol lets you borrow against an asset. Third, the liquidation threshold. That's the loan-to-value at which your position can be liquidated, and it's always set higher than max L.T.V. Fourth, the health factor. Collateral value, times the liquidation threshold, divided by your debt.",
+   "cap": "Every lending position comes down to four numbers. First, LTV, or loan-to-value. It's simply your debt divided by the value of your collateral. Second, max LTV. That's the most the protocol lets you borrow against an asset. Third, the liquidation threshold. That's the loan-to-value at which your position can be liquidated, and it's always set higher than max LTV. Fourth, the health factor. Collateral value, times the liquidation threshold, divided by your debt."
+  },
+  {
+   "type": "statement",
+   "chapter": "The four numbers",
+   "kicker": "The one rule",
+   "lines": [
+    "Health factor below 1.0",
+    "= liquidatable"
+   ],
+   "sub": "Above 1, you're safe for now. At 1 or below, anyone can repay part of your debt and take your collateral at a discount.",
+   "vo": "If you remember one thing, remember this. When the health factor falls below one, your position is liquidatable. Above one, you're safe, for now. At one or below, anyone can repay part of your debt, and take some of your collateral at a discount. That discount is the penalty, and you pay it."
+  },
+  {
+   "type": "compare",
+   "chapter": "The four numbers",
+   "title": "Max LTV vs liquidation threshold",
+   "left": {
+    "label": "Max LTV",
+    "tone": "neutral",
+    "items": [
+     "A borrowing limit",
+     "Stops new borrowing",
+     "Can't hurt you on its own"
+    ]
+   },
+   "right": {
+    "label": "Liquidation threshold",
+    "tone": "bad",
+    "items": [
+     "A trigger",
+     "Starts liquidation",
+     "Where you lose collateral"
+    ]
+   },
+   "vo": "People mix up the two limits, so let's separate them. Max L.T.V. is a borrowing limit. It stops you taking on more debt, and on its own it can't hurt you. The liquidation threshold is a trigger. Cross it, and liquidation starts. That's where you actually lose collateral.",
+   "cap": "People mix up the two limits, so let's separate them. Max LTV is a borrowing limit. It stops you taking on more debt, and on its own it can't hurt you. The liquidation threshold is a trigger. Cross it, and liquidation starts. That's where you actually lose collateral."
+  },
+  {
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example: 10 ETH, borrow $12,000",
+   "steps": [
+    "Collateral = 10 × $3,000 = $30,000",
+    "LTV = $12,000 ÷ $30,000 = 40%",
+    "HF = $30,000 × 0.80 ÷ $12,000 = 2.0",
+    "Liq. price = $12,000 ÷ (10 × 0.80) = $1,500"
+   ],
+   "result": "ETH can fall 50% before liquidation",
+   "vo": "Let's work a real example, step by step. You deposit ten E.T.H. at three thousand dollars each. Your collateral is worth thirty thousand dollars. You borrow twelve thousand dollars of stablecoins. Loan-to-value is twelve thousand, divided by thirty thousand. That's forty percent. The liquidation threshold is point eight, so the health factor is thirty thousand, times point eight, divided by twelve thousand. That's exactly two. And the liquidation price is your debt, divided by your quantity times the threshold. Twelve thousand, divided by eight. That's fifteen hundred dollars. So E.T.H. can fall fifty percent before you're liquidated.",
+   "cap": "Let's work a real example, step by step. You deposit 10 ETH at $3,000 each. Your collateral is worth $30,000. You borrow $12,000 of stablecoins. Loan-to-value is $12,000 divided by $30,000. That's 40%. The liquidation threshold is 0.8, so the health factor is $30,000 × 0.8 ÷ $12,000. That's exactly 2. And the liquidation price is your debt divided by your quantity times the threshold. $12,000 ÷ 8. That's $1,500. So ETH can fall 50% before you're liquidated."
+  },
+  {
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Same collateral, more debt",
+   "steps": [
+    "Debt for HF 1.5 = $24,000 ÷ 1.5 = $16,000",
+    "Liq. price = $16,000 ÷ 8 = $2,000 (−33%)",
+    "Borrow to a 75% max LTV = $22,500",
+    "HF = $24,000 ÷ $22,500 ≈ 1.07 → liq. at $2,812.50 (−6%)"
+   ],
+   "result": "Borrowing the maximum leaves almost no room",
+   "vo": "Now watch what happens as you borrow more. Aim for a health factor of one and a half, and your debt can be sixteen thousand dollars. Your liquidation price rises to two thousand. A thirty-three percent drop now liquidates you. Suppose, as an illustration, the market lets you borrow up to seventy-five percent. That's twenty-two thousand five hundred dollars. The health factor is twenty-four thousand, divided by twenty-two thousand five hundred. About one point oh seven. Your liquidation price becomes two thousand, eight hundred and twelve dollars. A drop of just over six percent. Crypto can move that much in an hour. Borrowing the maximum leaves almost no room.",
+   "cap": "Now watch what happens as you borrow more. Aim for a health factor of 1.5, and your debt can be $16,000. Your liquidation price rises to $2,000. A 33% drop now liquidates you. Suppose, as an illustration, the market lets you borrow up to 75%. That's $22,500. The health factor is $24,000 ÷ $22,500. About 1.07. Your liquidation price becomes $2,812.50. A drop of just over 6%. Crypto can move that much in an hour. Borrowing the maximum leaves almost no room."
+  },
+  {
+   "type": "image",
+   "chapter": "Reading the chart",
+   "src": "assets/charts/health-factor.png",
+   "eyebrow": "The picture",
+   "wide": true,
+   "callouts": [
+    {
+     "x": 0.575,
+     "y": 0.431,
+     "text": "Today: HF 2.0",
+     "at": 1
+    },
+    {
+     "x": 0.222,
+     "y": 0.631,
+     "text": "$1,500",
+     "at": 2,
+     "below": true
+    },
+    {
+     "x": 0.34,
+     "y": 0.631,
+     "text": "$2,000",
+     "at": 3,
+     "below": true
+    }
+   ],
+   "vo": "Here's the same story as a picture. The horizontal axis is the price of E.T.H. The vertical axis is your health factor. Start at today, three thousand dollars, where the blue line sits at a health factor of two. Follow the blue line down and left, and it crosses one at fifteen hundred dollars. That's your liquidation price. Now the orange line, with sixteen thousand of debt. It starts lower, and it hits one at two thousand dollars. More debt doesn't just lower the line. It moves the cliff edge closer to where you're standing.",
+   "cap": "Here's the same story as a picture. The horizontal axis is the price of ETH. The vertical axis is your health factor. Start at today, $3,000, where the blue line sits at a health factor of 2. Follow the blue line down and left, and it crosses 1 at $1,500. That's your liquidation price. Now the orange line, with $16,000 of debt. It starts lower, and it hits 1 at $2,000. More debt doesn't just lower the line. It moves the cliff edge closer to where you're standing."
+  },
+  {
+   "type": "image",
+   "chapter": "Reading the chart",
+   "src": "assets/diagrams/liquidation-cascade.png",
+   "eyebrow": "Why falls accelerate",
+   "wide": true,
+   "vo": "And here's why the buffer matters more than it looks. Liquidations sell collateral into a falling market. That selling pushes the price lower, which triggers the next set of liquidations. A cascade. The move that reaches your liquidation price is often faster and deeper than anyone expected. Your buffer is the time you have to react.",
+   "cap": "And here's why the buffer matters more than it looks. Liquidations sell collateral into a falling market. That selling pushes the price lower, which triggers the next set of liquidations. A cascade. The move that reaches your liquidation price is often faster and deeper than anyone expected. Your buffer is the time you have to react."
+  },
+  {
+   "type": "pillars",
+   "chapter": "Your defence plan",
+   "title": "Three ways to raise a health factor",
+   "items": [
+    {
+     "icon": "exit",
+     "title": "Repay debt",
+     "text": "The most direct fix. Keep stablecoins ready."
+    },
+    {
+     "icon": "vault",
+     "title": "Add collateral",
+     "text": "Top up from a reserve you set aside."
+    },
+    {
+     "icon": "shield",
+     "title": "Borrow less",
+     "text": "The cheapest defence is a smaller loan."
+    }
+   ],
+   "vo": "When the health factor falls, you have three ways to raise it. Repay debt. That's the most direct fix, so keep some stablecoins ready for it. Add collateral, from a reserve you set aside before you borrowed. Or the cheapest defence of all: borrow less in the first place. Decide which lever you'll pull, and at what health factor, before you open the position. Not during the crash."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Common mistakes",
+   "title": "Mistakes that get people liquidated",
+   "check": false,
+   "items": [
+    "Borrowing up to max LTV",
+    "Forgetting interest grows the debt",
+    "No alert, or asleep when it fires",
+    "No reserve to repay or top up"
+   ],
+   "vo": "Four mistakes cause most liquidations. Borrowing right up to max L.T.V., because the button allows it. Forgetting that interest keeps growing the debt, so the health factor drifts down even when prices don't move. Having no alert, or an alert that fires while you're asleep. And having no reserve, so when the moment comes there's nothing to repay or top up with.",
+   "cap": "Four mistakes cause most liquidations. Borrowing right up to max LTV, because the button allows it. Forgetting that interest keeps growing the debt, so the health factor drifts down even when prices don't move. Having no alert, or an alert that fires while you're asleep. And having no reserve, so when the moment comes there's nothing to repay or top up with."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Checklist",
+   "title": "Checklist",
+   "items": [
+    "HF and liquidation price calculated before borrowing",
+    "HF ≥ 2 for volatile collateral",
+    "Alerts set (Module 14.1)"
+   ],
+   "vo": "Here's your checklist for this lesson. Health factor and liquidation price calculated before borrowing. A health factor of at least two for volatile collateral. And alerts set, which we build properly in Module fourteen, lesson one.",
+   "cap": "Here's your checklist for this lesson. HF and liquidation price calculated before borrowing. A health factor of at least 2 for volatile collateral. And alerts set, which we build properly in Module 14.1."
+  },
+  {
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Collateral $50,000, LT 0.8, debt $20,000. What's the health factor?",
+   "a": "2.0. $50,000 × 0.8 = $40,000, divided by $20,000.",
+   "vo": "Question one. Collateral is worth fifty thousand dollars, the liquidation threshold is point eight, and the debt is twenty thousand. What's the health factor? [[pause 4]] The answer: two. Fifty thousand times point eight is forty thousand, divided by twenty thousand.",
+   "cap": "Question one. Collateral is worth $50,000, the liquidation threshold is 0.8, and the debt is $20,000. What's the health factor? The answer: 2. $50,000 × 0.8 is $40,000, divided by $20,000."
+  },
+  {
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Why keep the health factor well above 1?",
+   "a": "Prices can fall fast. The buffer is your time to react.",
+   "vo": "Question two. Why keep the health factor well above one? [[pause 4]] The answer: collateral prices can fall fast. The buffer is your time to react.",
+   "cap": "Question two. Why keep the health factor well above 1? The answer: collateral prices can fall fast. The buffer is your time to react."
+  },
+  {
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Max LTV vs liquidation threshold: what's the difference?",
+   "a": "Max LTV caps new borrowing. The liquidation threshold is where liquidation becomes possible.",
+   "vo": "Question three. What's the difference between max L.T.V. and the liquidation threshold? [[pause 4]] The answer: max L.T.V. caps new borrowing. The liquidation threshold is where liquidation becomes possible.",
+   "cap": "Question three. What's the difference between max LTV and the liquidation threshold? The answer: max LTV caps new borrowing. The liquidation threshold is where liquidation becomes possible."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Health factor below 1.0 = liquidatable",
+    "Liquidation price = debt ÷ (quantity × LT)",
+    "More debt moves the cliff closer",
+    "Buffer + plan decided before you borrow"
+   ],
+   "vo": "Let's recap. A health factor below one means liquidatable. Your liquidation price is your debt, divided by quantity times the liquidation threshold. More debt moves the cliff closer, fast. And your buffer, and your plan, are decided before you borrow. Never during the crash."
+  },
+  {
+   "type": "cta",
+   "chapter": "Recap",
+   "button": "Next: Lesson 3.3",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, with the calculator, before you move on. Next up, lesson three point three: liquidations and cascades, and how to survive them.",
+   "cap": "Do the checklist now, with the calculator, before you move on. Next up, Lesson 3.3: liquidations and cascades, and how to survive them."
+  }
+ ]
+}

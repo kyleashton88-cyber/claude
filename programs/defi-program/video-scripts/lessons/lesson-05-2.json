@@ -6,97 +6,127 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 5.2",
  "use": "Lesson 5.2 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Layer 2s, sequencers & withdrawal…",
+  "subtitle": "Lesson 5.2"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-05.png",
-   "eyebrow": "Lesson 5.2",
-   "vo": "Lesson five point two. Layer 2s, sequencers and withdrawal paths.",
-   "cap": "Lesson 5.2. Layer 2s, sequencers & withdrawal paths."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 5 · Infrastructure Risk",
+   "num": "5.2",
+   "title": "Layer 2s, sequencers & withdrawal paths",
    "sub": "Understand how your L2 settles, who orders your transactions, and how you'd exit.",
-   "vo": "Understand how your layer two settles, who orders your transactions, and how you'd exit.",
-   "cap": "Understand how your L2 settles, who orders your transactions, and how you'd exit."
+   "vo": "Lesson five point two. Layer 2s, sequencers and withdrawal paths. By the end of this lesson, you'll be able to understand how your layer two settles, who orders your transactions, and how you'd exit.",
+   "cap": "Lesson 5.2. Layer 2s, sequencers & withdrawal paths. By the end of this lesson, you'll be able to understand how your L2 settles, who orders your transactions, and how you'd exit."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Rollups execute transactions off Ethereum and post data or proofs back to it.",
-    "Optimistic rollups assume transactions are valid unless challenged. Native withdrawals…",
+    "Optimistic rollups assume transactions are valid unless challenged",
     "ZK rollups post validity proofs, so native withdrawals can be faster.",
     "Sequencer",
     "Escape hatches"
    ],
-   "vo": "Rollups execute transactions off Ethereum and post data or proofs back to it. Optimistic rollups assume transactions are valid unless challenged. Native withdrawals to Ethereum wait out a challenge window (about 7 days on major optimistic rollups). ZK rollups post validity proofs, so native withdrawals can be faster. Sequencer: the operator that orders transactions. Often a single operator today; if it goes down, the chain may pause. Escape hatches: most rollups let you force a withdrawal via Ethereum if the sequencer censors you. Know if yours does.",
-   "cap": "Rollups execute transactions off Ethereum and post data or proofs back to it. Optimistic rollups assume transactions are valid unless challenged. Native withdrawals to Ethereum wait out a challenge window (about 7 days on major optimistic rollups). ZK rollups post validity proofs, so native withdrawals can be faster. Sequencer: the operator that orders transactions. Often a single operator today; if it goes down, the chain may pause. Escape hatches: most rollups let you force a withdrawal via Ethereum if the sequencer censors you. Know if yours does."
+   "vo": "First, Rollups execute transactions off Ethereum and post data or proofs back to it. Next, Optimistic rollups assume transactions are valid unless challenged. Native withdrawals to Ethereum wait out a challenge window (about 7 days on major optimistic rollups). Then, ZK rollups post validity proofs, so native withdrawals can be faster. Also, Sequencer: the operator that orders transactions. Often a single operator today; if it goes down, the chain may pause. And finally, Escape hatches: most rollups let you force a withdrawal via Ethereum if the sequencer censors you. Know if yours does.",
+   "cap": "First, Rollups execute transactions off Ethereum and post data or proofs back to it. Next, Optimistic rollups assume transactions are valid unless challenged. Native withdrawals to Ethereum wait out a challenge window (about 7 days on major optimistic rollups). Then, ZK rollups post validity proofs, so native withdrawals can be faster. Also, Sequencer: the operator that orders transactions. Often a single operator today; if it goes down, the chain may pause. And finally, Escape hatches: most rollups let you force a withdrawal via Ethereum if the sequencer censors you. Know if yours does."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "You hold $20,000 on an optimistic rollup and need it on Ethereum.",
+    "Native bridge",
+    "Fast bridge",
+    "Plan your liquidity ladder (Module 12.4) around the slow path."
    ],
-   "sub": "You hold $20,000 on an optimistic rollup and need it on Ethereum. Native bridge: safest, ~7 days. Fast bridge: minutes, for a fee, relying on its liquidity. Plan your liquidity ladder (Module 12.4) around the slow path.",
-   "vo": "You hold $20,000 on an optimistic rollup and need it on Ethereum. Native bridge: safest, about 7 days. Fast bridge: minutes, for a fee, relying on its liquidity. Plan your liquidity ladder (Module 12.4) around the slow path.",
-   "cap": "You hold $20,000 on an optimistic rollup and need it on Ethereum. Native bridge: safest, ~7 days. Fast bridge: minutes, for a fee, relying on its liquidity. Plan your liquidity ladder (Module 12.4) around the slow path."
+   "vo": "Let's work an example, step by step. You hold $20,000 on an optimistic rollup and need it on Ethereum. Native bridge: safest, about 7 days. Fast bridge: minutes, for a fee, relying on its liquidity. Plan your liquidity ladder (Module 12.4) around the slow path.",
+   "cap": "Let's work an example, step by step. You hold $20,000 on an optimistic rollup and need it on Ethereum. Native bridge: safest, ~7 days. Fast bridge: minutes, for a fee, relying on its liquidity. Plan your liquidity ladder (Module 12.4) around the slow path."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Rollup type and withdrawal time known for each L2 I use",
     "Sequencer setup and escape hatch known",
     "Liquidity plan assumes the slow path"
    ],
-   "vo": "Your checklist. Rollup type and withdrawal time known for each layer two I use Sequencer setup and escape hatch known Liquidity plan assumes the slow path",
-   "cap": "Rollup type and withdrawal time known for each L2 I use Sequencer setup and escape hatch known Liquidity plan assumes the slow path"
+   "vo": "Here's your checklist. Do it now, for real. First, Rollup type and withdrawal time known for each layer two I use. Next, Sequencer setup and escape hatch known. And finally, Liquidity plan assumes the slow path.",
+   "cap": "Here's your checklist. Do it now, for real. First, Rollup type and withdrawal time known for each L2 I use. Next, Sequencer setup and escape hatch known. And finally, Liquidity plan assumes the slow path."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why do optimistic rollup withdrawals take ~7 days?"
-   ],
-   "sub": "Answer: The challenge window lets anyone dispute an invalid state before it's final.",
-   "subAt": 0.62,
-   "vo": "Why do optimistic rollup withdrawals take about 7 days? ... Pause and think. ... The answer: The challenge window lets anyone dispute an invalid state before it's final.",
-   "cap": "Why do optimistic rollup withdrawals take ~7 days? Pause and think. The answer: The challenge window lets anyone dispute an invalid state before it's final."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why do optimistic rollup withdrawals take ~7 days?",
+   "a": "The challenge window lets anyone dispute an invalid state before it's final.",
+   "vo": "Question one. Why do optimistic rollup withdrawals take about 7 days? [[pause 4]] The answer: The challenge window lets anyone dispute an invalid state before it's final.",
+   "cap": "Question 1. Why do optimistic rollup withdrawals take ~7 days? The answer: The challenge window lets anyone dispute an invalid state before it's final."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What happens if a single sequencer goes down?"
-   ],
-   "sub": "Answer: The L2 may pause transactions until it recovers.",
-   "subAt": 0.62,
-   "vo": "What happens if a single sequencer goes down? ... Pause and think. ... The answer: The layer two may pause transactions until it recovers.",
-   "cap": "What happens if a single sequencer goes down? Pause and think. The answer: The L2 may pause transactions until it recovers."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What happens if a single sequencer goes down?",
+   "a": "The L2 may pause transactions until it recovers.",
+   "vo": "Question two. What happens if a single sequencer goes down? [[pause 4]] The answer: The layer two may pause transactions until it recovers.",
+   "cap": "Question 2. What happens if a single sequencer goes down? The answer: The L2 may pause transactions until it recovers."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What's an escape hatch?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What's an escape hatch?",
+   "a": "A way to force a transaction or withdrawal via the base chain if the sequencer censors you.",
+   "vo": "Question three. What's an escape hatch? [[pause 4]] The answer: A way to force a transaction or withdrawal via the base chain if the sequencer censors you.",
+   "cap": "Question 3. What's an escape hatch? The answer: A way to force a transaction or withdrawal via the base chain if the sequencer censors you."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Rollups execute transactions off Ethereum and post data or proofs back to it",
+    "Optimistic rollups assume transactions are valid unless challenged",
+    "ZK rollups post validity proofs, so native withdrawals can be faster",
+    "Sequencer: the operator that orders transactions"
    ],
-   "sub": "Answer: A way to force a transaction or withdrawal via the base chain if the sequencer censors you.",
-   "subAt": 0.62,
-   "vo": "What's an escape hatch? ... Pause and think. ... The answer: A way to force a transaction or withdrawal via the base chain if the sequencer censors you.",
-   "cap": "What's an escape hatch? Pause and think. The answer: A way to force a transaction or withdrawal via the base chain if the sequencer censors you."
+   "vo": "Let's recap. Rollups execute transactions off Ethereum and post data or proofs back to it. Optimistic rollups assume transactions are valid unless challenged. ZK rollups post validity proofs, so native withdrawals can be faster. Sequencer: the operator that orders transactions.",
+   "cap": "Let's recap. Rollups execute transactions off Ethereum and post data or proofs back to it. Optimistic rollups assume transactions are valid unless challenged. ZK rollups post validity proofs, so native withdrawals can be faster. Sequencer: the operator that orders transactions."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 5.3",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson five point three: Oracles, TWAPs and manipulation.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 5.3: Oracles, TWAPs & manipulation."
   }
  ]
 }

@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 7.8",
  "use": "Lesson 7.8 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Derivatives on-chain",
+  "subtitle": "Lesson 7.8"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-07.png",
-   "eyebrow": "Lesson 7.8",
-   "vo": "Lesson seven point eight. Derivatives on-chain.",
-   "cap": "Lesson 7.8. Derivatives on-chain."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 7 · On-Chain Analytics",
+   "num": "7.8",
+   "title": "Derivatives on-chain",
    "sub": "Read funding, open interest and liquidation data as positioning context.",
-   "vo": "Read funding, open interest and liquidation data as positioning context.",
-   "cap": "Read funding, open interest and liquidation data as positioning context."
+   "vo": "Lesson seven point eight. Derivatives on-chain. By the end of this lesson, you'll be able to read funding, open interest and liquidation data as positioning context.",
+   "cap": "Lesson 7.8. Derivatives on-chain. By the end of this lesson, you'll be able to read funding, open interest and liquidation data as positioning context."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Perpetual futures (perps)",
@@ -34,67 +48,81 @@
     "Open interest (OI)",
     "Liquidation data"
    ],
-   "vo": "Perpetual futures (perps): no expiry; kept near spot by funding payments. Positive funding: longs pay shorts (crowded longs). Negative: shorts pay longs. Open interest (open interest): total open contracts. Rising open interest with rising price means leverage building. Liquidation data: bursts of forced closes.",
-   "cap": "Perpetual futures (perps): no expiry; kept near spot by funding payments. Positive funding: longs pay shorts (crowded longs). Negative: shorts pay longs. Open interest (OI): total open contracts. Rising OI with rising price means leverage building. Liquidation data: bursts of forced closes."
+   "vo": "First, Perpetual futures (perps): no expiry; kept near spot by funding payments. Next, Positive funding: longs pay shorts (crowded longs). Negative: shorts pay longs. Then, Open interest (open interest): total open contracts. Rising open interest with rising price means leverage building. And finally, Liquidation data: bursts of forced closes.",
+   "cap": "First, Perpetual futures (perps): no expiry; kept near spot by funding payments. Next, Positive funding: longs pay shorts (crowded longs). Negative: shorts pay longs. Then, Open interest (OI): total open contracts. Rising OI with rising price means leverage building. And finally, Liquidation data: bursts of forced closes."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Price +8% in a week, OI +40%, funding at its highest in months",
+    "That's a fragile setup (a drop could cascade) and, for Lesson 10.3, a…"
    ],
-   "sub": "Price +8% in a week, OI +40%, funding at its highest in months: leverage is crowding into longs. That's a fragile setup (a drop could cascade) and, for Lesson 10.3, a funding-carry opportunity with a squeeze risk.",
-   "vo": "Price +8% in a week, open interest +40%, funding at its highest in months: leverage is crowding into longs. That's a fragile setup (a drop could cascade) and, for Lesson 10.3, a funding-carry opportunity with a squeeze risk.",
-   "cap": "Price +8% in a week, OI +40%, funding at its highest in months: leverage is crowding into longs. That's a fragile setup (a drop could cascade) and, for Lesson 10.3, a funding-carry opportunity with a squeeze risk."
+   "vo": "Let's work an example, step by step. Price +8% in a week, open interest +40%, funding at its highest in months: leverage is crowding into longs. That's a fragile setup (a drop could cascade) and, for Lesson 10.3, a funding-carry opportunity with a squeeze risk.",
+   "cap": "Let's work an example, step by step. Price +8% in a week, OI +40%, funding at its highest in months: leverage is crowding into longs. That's a fragile setup (a drop could cascade) and, for Lesson 10.3, a funding-carry opportunity with a squeeze risk."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Funding and OI checked before leveraged or carry trades",
     "Liquidation clusters noted"
    ],
-   "vo": "Your checklist. Funding and open interest checked before leveraged or carry trades Liquidation clusters noted",
-   "cap": "Funding and OI checked before leveraged or carry trades Liquidation clusters noted"
+   "vo": "Here's your checklist. Do it now, for real. First, Funding and open interest checked before leveraged or carry trades. And finally, Liquidation clusters noted.",
+   "cap": "Here's your checklist. Do it now, for real. First, Funding and OI checked before leveraged or carry trades. And finally, Liquidation clusters noted."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What does positive funding mean?"
-   ],
-   "sub": "Answer: Longs are paying shorts.",
-   "subAt": 0.62,
-   "vo": "What does positive funding mean? ... Pause and think. ... The answer: Longs are paying shorts.",
-   "cap": "What does positive funding mean? Pause and think. The answer: Longs are paying shorts."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "What does positive funding mean?",
+   "a": "Longs are paying shorts.",
+   "vo": "Question one. What does positive funding mean? [[pause 4]] The answer: Longs are paying shorts.",
+   "cap": "Question 1. What does positive funding mean? The answer: Longs are paying shorts."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Rising price + rising OI + high funding suggests?"
-   ],
-   "sub": "Answer: Leveraged longs are crowding in; the setup is fragile.",
-   "subAt": 0.62,
-   "vo": "Rising price + rising open interest + high funding suggests? ... Pause and think. ... The answer: Leveraged longs are crowding in; the setup is fragile.",
-   "cap": "Rising price + rising OI + high funding suggests? Pause and think. The answer: Leveraged longs are crowding in; the setup is fragile."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Rising price + rising OI + high funding suggests?",
+   "a": "Leveraged longs are crowding in; the setup is fragile.",
+   "vo": "Question two. Rising price + rising open interest + high funding suggests? [[pause 4]] The answer: Leveraged longs are crowding in; the setup is fragile.",
+   "cap": "Question 2. Rising price + rising OI + high funding suggests? The answer: Leveraged longs are crowding in; the setup is fragile."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What keeps a perp near spot?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What keeps a perp near spot?",
+   "a": "Funding payments.",
+   "vo": "Question three. What keeps a perp near spot? [[pause 4]] The answer: Funding payments.",
+   "cap": "Question 3. What keeps a perp near spot? The answer: Funding payments."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Perpetual futures (perps): no expiry",
+    "Positive funding: longs pay shorts (crowded longs)",
+    "Open interest (OI): total open contracts",
+    "Liquidation data: bursts of forced closes"
    ],
-   "sub": "Answer: Funding payments.",
-   "subAt": 0.62,
-   "vo": "What keeps a perp near spot? ... Pause and think. ... The answer: Funding payments.",
-   "cap": "What keeps a perp near spot? Pause and think. The answer: Funding payments."
+   "vo": "Let's recap. Perpetual futures (perps): no expiry. Positive funding: longs pay shorts (crowded longs). Open interest (open interest): total open contracts. Liquidation data: bursts of forced closes.",
+   "cap": "Let's recap. Perpetual futures (perps): no expiry. Positive funding: longs pay shorts (crowded longs). Open interest (OI): total open contracts. Liquidation data: bursts of forced closes."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 7.9",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson seven point nine: Querying chain data yourself.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 7.9: Querying chain data yourself."
   }
  ]
 }

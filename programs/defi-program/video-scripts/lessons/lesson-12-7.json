@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 12.7",
  "use": "Lesson 12.7 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Tax, regulation and compliance awareness",
+  "subtitle": "Lesson 12.7"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-12.png",
-   "eyebrow": "Lesson 12.7",
-   "vo": "Lesson twelve point seven. Tax, regulation and compliance awareness.",
-   "cap": "Lesson 12.7. Tax, regulation and compliance awareness."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 12 · Operate as Your Own Bank",
+   "num": "12.7",
+   "title": "Tax, regulation and compliance awareness",
    "sub": "Know which on-chain actions may have tax or legal consequences, keep the records to handle them, and know when to get professional help.",
-   "vo": "Know which on-chain actions may have tax or legal consequences, keep the records to handle them, and know when to get professional help.",
-   "cap": "Know which on-chain actions may have tax or legal consequences, keep the records to handle them, and know when to get professional help."
+   "vo": "Lesson twelve point seven. Tax, regulation and compliance awareness. By the end of this lesson, you'll be able to know which on-chain actions may have tax or legal consequences, keep the records to handle them, and know when to get professional help.",
+   "cap": "Lesson 12.7. Tax, regulation and compliance awareness. By the end of this lesson, you'll be able to know which on-chain actions may have tax or legal consequences, keep the records to handle them, and know when to get professional help."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Events that may be taxable in many countries",
@@ -35,20 +49,24 @@
     "Regulation",
     "Reporting"
    ],
-   "vo": "This lesson is awareness, not advice. Rules differ by country and change. Use a crypto-aware tax professional and, for legal questions, a lawyer. Events that may be taxable in many countries: selling crypto for cash, swapping one token for another, spending crypto, and receiving income (interest, staking rewards, L.P. fees, airdrops). Some treat borrowing, wrapping, L.P. deposits or bridging differently. Ask. Cost basis: what you paid, including fees. Methods (for example FIFO, specific identification) depend on local rules. Records: every buy, sell, swap, transfer, fee and income event, with dates, amounts and prices (W1 records sheet). On-chain data can be exported, but self-transfers must be labelled or they may look like disposals. Regulation: use services legally available where you live; don't use tools to get around geo-restrictions; never interact with sanctioned addresses or services; exchanges must run K.Y.C./AML checks, and some DeFi front ends block certain regions. Reporting: some countries require reporting of foreign accounts or digital assets. Ask your professional.",
-   "cap": "Events that may be taxable in many countries: selling crypto for cash, swapping one token for another, spending crypto, and receiving income (interest, staking rewards, LP fees, airdrops). Some treat borrowing, wrapping, LP deposits or bridging differently. Ask. Cost basis: what you paid, including fees. Methods (e.g. FIFO, specific identification) depend on local rules. Records: every buy, sell, swap, transfer, fee and income event, with dates, amounts and prices (W1 records sheet). On-chain data can be exported, but self-transfers must be labelled or they may look like disposals. Regulation: use services legally available where you live; don't use tools to get around geo-restrictions; never interact with sanctioned addresses or services; exchanges must run KYC/AML checks, and some DeFi front ends block certain regions. Reporting: some countries require reporting of foreign accounts or digital assets. Ask your professional."
+   "vo": "This lesson is awareness, not advice. Rules differ by country and change. Use a crypto-aware tax professional and, for legal questions, a lawyer. First, Events that may be taxable in many countries: selling crypto for cash, swapping one token for another, spending crypto, and receiving income (interest, staking rewards, L.P. fees, airdrops). Some treat borrowing, wrapping, L.P. deposits or bridging differently. Ask. Next, Cost basis: what you paid, including fees. Methods (for example FIFO, specific identification) depend on local rules. Then, Records: every buy, sell, swap, transfer, fee and income event, with dates, amounts and prices (W1 records sheet). On-chain data can be exported, but self-transfers must be labelled or they may look like disposals. Also, Regulation: use services legally available where you live; don't use tools to get around geo-restrictions; never interact with sanctioned addresses or services; exchanges must run K.Y.C./AML checks, and some DeFi front ends block certain regions. And finally, Reporting: some countries require reporting of foreign accounts or digital assets. Ask your professional.",
+   "cap": "This lesson is awareness, not advice. Rules differ by country and change. Use a crypto-aware tax professional and, for legal questions, a lawyer. First, Events that may be taxable in many countries: selling crypto for cash, swapping one token for another, spending crypto, and receiving income (interest, staking rewards, LP fees, airdrops). Some treat borrowing, wrapping, LP deposits or bridging differently. Ask. Next, Cost basis: what you paid, including fees. Methods (e.g. FIFO, specific identification) depend on local rules. Then, Records: every buy, sell, swap, transfer, fee and income event, with dates, amounts and prices (W1 records sheet). On-chain data can be exported, but self-transfers must be labelled or they may look like disposals. Also, Regulation: use services legally available where you live; don't use tools to get around geo-restrictions; never interact with sanctioned addresses or services; exchanges must run KYC/AML checks, and some DeFi front ends block certain regions. And finally, Reporting: some countries require reporting of foreign accounts or digital assets. Ask your professional."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "In one year",
+    "For your tax professional, you'd prepare",
+    "They tell you what's taxable where you live."
    ],
-   "sub": "In one year: bought ETH, swapped half to USDC, lent USDC for interest, received an airdrop, bridged to an L2 and moved funds between your own wallets. For your tax professional, you'd prepare: the records sheet, labelled self-transfers (not disposals), interes",
-   "vo": "In one year: bought ETH, swapped half to U.S.D.C., lent U.S.D.C. for interest, received an airdrop, bridged to an layer two and moved funds between your own wallets. For your tax professional, you'd prepare: the records sheet, labelled self-transfers (not disposals), interest and airdrop income with dates and values, and exchange statements. They tell you what's taxable where you live.",
-   "cap": "In one year: bought ETH, swapped half to USDC, lent USDC for interest, received an airdrop, bridged to an L2 and moved funds between your own wallets. For your tax professional, you'd prepare: the records sheet, labelled self-transfers (not disposals), interest and airdrop income with dates and values, and exchange statements. They tell you what's taxable where you live."
+   "vo": "Let's work an example, step by step. In one year: bought ETH, swapped half to U.S.D.C., lent U.S.D.C. for interest, received an airdrop, bridged to an layer two and moved funds between your own wallets. For your tax professional, you'd prepare: the records sheet, labelled self-transfers (not disposals), interest and airdrop income with dates and values, and exchange statements. They tell you what's taxable where you live.",
+   "cap": "Let's work an example, step by step. In one year: bought ETH, swapped half to USDC, lent USDC for interest, received an airdrop, bridged to an L2 and moved funds between your own wallets. For your tax professional, you'd prepare: the records sheet, labelled self-transfers (not disposals), interest and airdrop income with dates and values, and exchange statements. They tell you what's taxable where you live."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Records sheet complete, with self-transfers labelled",
@@ -56,48 +74,59 @@
     "Only legally available services used; no geo-restriction workarounds",
     "Sanctions awareness"
    ],
-   "vo": "Your checklist. Records sheet complete, with self-transfers labelled Crypto-aware tax professional engaged Only legally available services used; no geo-restriction workarounds Sanctions awareness: never interact with sanctioned addresses or services",
-   "cap": "Records sheet complete, with self-transfers labelled Crypto-aware tax professional engaged Only legally available services used; no geo-restriction workarounds Sanctions awareness: never interact with sanctioned addresses or services"
+   "vo": "Here's your checklist. Do it now, for real. First, Records sheet complete, with self-transfers labelled. Next, Crypto-aware tax professional engaged. Then, only legally available services used; no geo-restriction workarounds. And finally, Sanctions awareness: never interact with sanctioned addresses or services.",
+   "cap": "Here's your checklist. Do it now, for real. First, Records sheet complete, with self-transfers labelled. Next, Crypto-aware tax professional engaged. Then, only legally available services used; no geo-restriction workarounds. And finally, Sanctions awareness: never interact with sanctioned addresses or services."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Name three events that are often taxable."
-   ],
-   "sub": "Answer: Any three: selling for cash, swapping tokens, spending crypto, receiving interest, staking rewards, LP fees or airdrops.",
-   "subAt": 0.62,
-   "vo": "Name three events that are often taxable. ... Pause and think. ... The answer: Any three: selling for cash, swapping tokens, spending crypto, receiving interest, staking rewards, L.P. fees or airdrops.",
-   "cap": "Name three events that are often taxable. Pause and think. The answer: Any three: selling for cash, swapping tokens, spending crypto, receiving interest, staking rewards, LP fees or airdrops."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Name three events that are often taxable.",
+   "a": "Any three: selling for cash, swapping tokens, spending crypto, receiving interest, staking rewards, LP fees or airdrops.",
+   "vo": "Question one. Name three events that are often taxable. [[pause 4]] The answer: Any three: selling for cash, swapping tokens, spending crypto, receiving interest, staking rewards, L.P. fees or airdrops.",
+   "cap": "Question 1. Name three events that are often taxable. The answer: Any three: selling for cash, swapping tokens, spending crypto, receiving interest, staking rewards, LP fees or airdrops."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why label self-transfers?"
-   ],
-   "sub": "Answer: So moves between your own wallets aren't mistaken for disposals.",
-   "subAt": 0.62,
-   "vo": "Why label self-transfers? ... Pause and think. ... The answer: So moves between your own wallets aren't mistaken for disposals.",
-   "cap": "Why label self-transfers? Pause and think. The answer: So moves between your own wallets aren't mistaken for disposals."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Why label self-transfers?",
+   "a": "So moves between your own wallets aren't mistaken for disposals.",
+   "vo": "Question two. Why label self-transfers? [[pause 4]] The answer: So moves between your own wallets aren't mistaken for disposals.",
+   "cap": "Question 2. Why label self-transfers? The answer: So moves between your own wallets aren't mistaken for disposals."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Who decides what's taxable for you?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Who decides what's taxable for you?",
+   "a": "Your local rules, applied by a qualified tax professional.",
+   "vo": "Question three. Who decides what's taxable for you? [[pause 4]] The answer: Your local rules, applied by a qualified tax professional.",
+   "cap": "Question 3. Who decides what's taxable for you? The answer: Your local rules, applied by a qualified tax professional."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Events that may be taxable in many countries",
+    "Cost basis: what you paid, including fees",
+    "Records: every buy, sell, swap, transfer, fee and income event, with dates",
+    "Regulation: use services legally available where you live"
    ],
-   "sub": "Answer: Your local rules, applied by a qualified tax professional.",
-   "subAt": 0.62,
-   "vo": "Who decides what's taxable for you? ... Pause and think. ... The answer: Your local rules, applied by a qualified tax professional.",
-   "cap": "Who decides what's taxable for you? Pause and think. The answer: Your local rules, applied by a qualified tax professional."
+   "vo": "Let's recap. Events that may be taxable in many countries. Cost basis: what you paid, including fees. Records: every buy, sell, swap, transfer, fee and income event, with dates. Regulation: use services legally available where you live.",
+   "cap": "Let's recap. Events that may be taxable in many countries. Cost basis: what you paid, including fees. Records: every buy, sell, swap, transfer, fee and income event, with dates. Regulation: use services legally available where you live."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 12.8",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson twelve point eight: Institutional-grade custody: M.P.C., custodians and policy engines.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 12.8: Institutional-grade custody: MPC, custodians and policy engines."
   }
  ]
 }

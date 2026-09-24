@@ -646,6 +646,30 @@ function diagramMEV() {
     `<div style="position:absolute;left:0;right:0;bottom:-10px;text-align:center;font-size:22px;color:${C.text2}">Protect yourself: private/protected RPCs, intent systems, tight slippage, and MEV rebates where offered.</div>`);
 }
 
+function chartHF() {
+  // 10 ETH collateral, liquidation threshold 0.80. HF = price × 10 × 0.8 ÷ debt.
+  const W = 1672, H = 600, m = { l: 100, r: 40, t: 20, b: 70 };
+  const xs = v => m.l + (v - 1000) / 3500 * (W - m.l - m.r), ys = v => m.t + (3 - v) / 3 * (H - m.t - m.b);
+  const hf = (p, debt) => p * 8 / debt;
+  const line = debt => { let d = ''; for (let p = 1000; p <= 4500; p += 25) { const h = Math.min(3, hf(p, debt)); d += `${p === 1000 ? 'M' : 'L'}${xs(p).toFixed(1)},${ys(h).toFixed(1)}`; } return d; };
+  const band = (a, b, col) => `<rect x="${m.l}" y="${ys(b)}" width="${W - m.l - m.r}" height="${ys(a) - ys(b)}" fill="${col}"/>`;
+  return lightShell(1800, 820, 'Health factor as the price of ETH moves', '10 ETH collateral, liquidation threshold 0.80. Blue: $12,000 debt. Orange: $16,000 debt. Below 1.0 the position can be liquidated.',
+    `<svg width="100%" height="100%" viewBox="0 0 ${W} ${H}">
+    ${band(0, 1, 'rgba(235,104,52,.10)')}${band(1, 1.5, 'rgba(237,161,0,.08)')}
+    ${axisFrame(W, H, m, [1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500], [0, 0.5, 1, 1.5, 2, 2.5, 3], xs, ys, 'ETH price (USD)', 'Health factor', v => `$${v.toLocaleString('en-US')}`, v => v.toFixed(1))}
+    <path d="M${m.l},${ys(1)} H${W - m.r}" stroke="${C.orange}" stroke-width="2" stroke-dasharray="9 7"/>
+    <path d="M${xs(3000)},${m.t} V${H - m.b}" stroke="#9aa3ad" stroke-width="1.5" stroke-dasharray="4 6"/>
+    <path d="${line(12000)}" fill="none" stroke="${C.blue}" stroke-width="3.5"/>
+    <path d="${line(16000)}" fill="none" stroke="${C.orange}" stroke-width="3.5"/>
+    ${dot(xs(3000), ys(2))}${label(xs(3000) + 16, ys(2) + 34, 'Today: HF 2.0')}
+    ${dot(xs(3000), ys(1.5), C.orange)}${label(xs(3000) + 16, ys(1.5) + 32, 'HF 1.5')}
+    ${dot(xs(1500), ys(1))}${label(xs(1500) - 14, ys(1) - 18, 'Liquidation $1,500 (−50%)', 'end')}
+    ${dot(xs(2000), ys(1), C.orange)}${label(xs(2000) + 14, ys(1) + 36, 'Liquidation $2,000 (−33%)')}
+    ${label(xs(4450), ys(0.5), 'Liquidatable (HF below 1.0)', 'end', 600)}${label(xs(4450), ys(1.25), 'Danger zone (HF 1.0–1.5)', 'end', 600)}
+    ${label(xs(3000) + 8, m.t + 26, 'Price today $3,000', 'start', 600)}
+    </svg>`);
+}
+
 // ---------- registry ----------
 const ASSETS = [
   ['brand/logo-icon-1024.png', 1024, 1024, () => brandAsset('icon')],
@@ -688,6 +712,7 @@ const ASSETS = [
   ['charts/pt-convergence.png', 1800, 820, chartPT],
   ['charts/income-waterfall.png', 1800, 820, chartIncome],
   ['charts/lvr.png', 1800, 820, chartLVR],
+  ['charts/health-factor.png', 1800, 820, chartHF],
   ['diagrams/mev-supply-chain.png', 1800, 700, diagramMEV],
 ];
 

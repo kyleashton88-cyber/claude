@@ -6,99 +6,125 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 12.1",
  "use": "Lesson 12.1 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Your balance sheet",
+  "subtitle": "Lesson 12.1"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-12.png",
-   "eyebrow": "Lesson 12.1",
-   "vo": "Lesson twelve point one. Your balance sheet.",
-   "cap": "Lesson 12.1. Your balance sheet."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 12 · Operate as Your Own Bank",
+   "num": "12.1",
+   "title": "Your balance sheet",
    "sub": "Build a personal on-chain balance sheet and read the three numbers that matter: equity, LTV and liquidity runway.",
-   "vo": "Build a personal on-chain balance sheet and read the three numbers that matter: equity, L.T.V. and liquidity runway.",
-   "cap": "Build a personal on-chain balance sheet and read the three numbers that matter: equity, LTV and liquidity runway."
+   "vo": "Lesson twelve point one. Your balance sheet. By the end of this lesson, you'll be able to build a personal on-chain balance sheet and read the three numbers that matter: equity, L.T.V. and liquidity runway.",
+   "cap": "Lesson 12.1. Your balance sheet. By the end of this lesson, you'll be able to build a personal on-chain balance sheet and read the three numbers that matter: equity, LTV and liquidity runway."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Assets",
     "Liabilities",
-    "Equity = assets − liabilities. This is what's actually yours.",
-    "LTV = debt ÷ collateral. Your bank's leverage.",
+    "Equity = assets − liabilities",
+    "LTV = debt ÷ collateral",
     "Liquidity runway = liquid reserve ÷ monthly obligations (spending + interest)."
    ],
-   "vo": "Banks fail from liquidity (can't pay today) more often than from solvency (owe more than they own). Track both. Assets: everything you own, at market value: collateral, yield positions, reserves. Liabilities: everything you owe: loans, margin, any payables. Equity = assets minus liabilities. This is what's actually yours. L.T.V. = debt divided by collateral. Your bank's leverage. Liquidity runway = liquid reserve divided by monthly obligations (spending + interest).",
-   "cap": "Assets: everything you own, at market value: collateral, yield positions, reserves. Liabilities: everything you owe: loans, margin, any payables. Equity = assets − liabilities. This is what's actually yours. LTV = debt ÷ collateral. Your bank's leverage. Liquidity runway = liquid reserve ÷ monthly obligations (spending + interest)."
+   "vo": "Banks fail from liquidity (can't pay today) more often than from solvency (owe more than they own). Track both. First, Assets: everything you own, at market value: collateral, yield positions, reserves. Next, Liabilities: everything you owe: loans, margin, any payables. Then, Equity equals assets minus liabilities. This is what's actually yours. Also, L.T.V. = debt divided by collateral. Your bank's leverage. And finally, Liquidity runway equals liquid reserve divided by monthly obligations (spending + interest).",
+   "cap": "Banks fail from liquidity (can't pay today) more often than from solvency (owe more than they own). Track both. First, Assets: everything you own, at market value: collateral, yield positions, reserves. Next, Liabilities: everything you owe: loans, margin, any payables. Then, Equity = assets − liabilities. This is what's actually yours. Also, LTV = debt ÷ collateral. Your bank's leverage. And finally, Liquidity runway = liquid reserve ÷ monthly obligations (spending + interest)."
   },
   {
-   "type": "bullets",
-   "title": "Worked example",
-   "items": [
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example: $300,000 collateral, $60,000 debt at 5%, $40,000…",
+   "steps": [
     "Equity $280,000 · LTV 20% · health factor 4.0",
     "Obligations $5,250/month ($250 of it interest) → reserve covers 7.6 months",
     "Policy checks"
    ],
-   "vo": "$300,000 collateral, $60,000 debt at 5%, $40,000 stablecoin reserve, $5,000 a month spending: the calculator Equity $280,000 , L.T.V. 20% , health factor 4.0 Obligations $5,250 a month ($250 of it interest) to reserve covers 7.6 months Policy checks: L.T.V. at most 30% ✓ , health factor at least 2 ✓ , reserve at least 6 months ✓",
-   "cap": "Equity $280,000 · LTV 20% · health factor 4.0 Obligations $5,250/month ($250 of it interest) → reserve covers 7.6 months Policy checks: LTV ≤ 30% ✓ · HF ≥ 2 ✓ · reserve ≥ 6 months ✓"
+   "vo": "Let's work an example, step by step. $300,000 collateral, $60,000 debt at 5%, $40,000 stablecoin reserve, $5,000 a month spending: the calculator Equity $280,000 times L.T.V. 20% , health factor 4.0. Obligations $5,250 a month ($250 of it interest) to reserve covers 7.6 months. Policy checks: L.T.V. at most 30% ✓ , health factor at least 2 ✓ , reserve at least 6 months ✓."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Balance sheet updated weekly",
     "Equity, LTV and runway tracked over time",
     "Policy limits written (max LTV, min HF, min runway)"
    ],
-   "vo": "Your checklist. Balance sheet updated weekly Equity, L.T.V. and runway tracked over time Policy limits written (max L.T.V., min health factor, min runway)",
-   "cap": "Balance sheet updated weekly Equity, LTV and runway tracked over time Policy limits written (max LTV, min HF, min runway)"
+   "vo": "Here's your checklist. Do it now, for real. First, Balance sheet updated weekly. Next, Equity, L.T.V. and runway tracked over time. And finally, Policy limits written (max L.T.V., min health factor, min runway).",
+   "cap": "Here's your checklist. Do it now, for real. First, Balance sheet updated weekly. Next, Equity, LTV and runway tracked over time. And finally, Policy limits written (max LTV, min HF, min runway)."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Assets $500k, debt $100k. Equity?"
-   ],
-   "sub": "Answer: $400k.",
-   "subAt": 0.62,
-   "vo": "Assets $500k, debt $100k. Equity? ... Pause and think. ... The answer: $400k.",
-   "cap": "Assets $500k, debt $100k. Equity? Pause and think. The answer: $400k."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Assets $500k, debt $100k. Equity?",
+   "a": "$400k.",
+   "vo": "Question one. Assets $500k, debt $100k. Equity? [[pause 4]] The answer: $400k.",
+   "cap": "Question 1. Assets $500k, debt $100k. Equity? The answer: $400k."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Reserve $30k, obligations $6k/month. Runway?"
-   ],
-   "sub": "Answer: 5 months, below a 6-month policy.",
-   "subAt": 0.62,
-   "vo": "Reserve $30k, obligations $6k a month. Runway? ... Pause and think. ... The answer: 5 months, below a 6-month policy.",
-   "cap": "Reserve $30k, obligations $6k/month. Runway? Pause and think. The answer: 5 months, below a 6-month policy."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Reserve $30k, obligations $6k/month. Runway?",
+   "a": "5 months, below a 6-month policy.",
+   "vo": "Question two. Reserve $30k, obligations $6k a month. Runway? [[pause 4]] The answer: 5 months, below a 6-month policy.",
+   "cap": "Question 2. Reserve $30k, obligations $6k/month. Runway? The answer: 5 months, below a 6-month policy."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why track liquidity separately from equity?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Why track liquidity separately from equity?",
+   "a": "You can be solvent and still be forced to sell at the worst time if you can't meet obligations today.",
+   "vo": "Question three. Why track liquidity separately from equity? [[pause 4]] The answer: You can be solvent and still be forced to sell at the worst time if you can't meet obligations today.",
+   "cap": "Question 3. Why track liquidity separately from equity? The answer: You can be solvent and still be forced to sell at the worst time if you can't meet obligations today."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Assets: everything you own, at market value",
+    "Liabilities: everything you owe",
+    "Equity = assets − liabilities: This is what's actually yours",
+    "LTV = debt ÷ collateral: Your bank's leverage"
    ],
-   "sub": "Answer: You can be solvent and still be forced to sell at the worst time if you can't meet obligations today.",
-   "subAt": 0.62,
-   "vo": "Why track liquidity separately from equity? ... Pause and think. ... The answer: You can be solvent and still be forced to sell at the worst time if you can't meet obligations today.",
-   "cap": "Why track liquidity separately from equity? Pause and think. The answer: You can be solvent and still be forced to sell at the worst time if you can't meet obligations today."
+   "vo": "Let's recap. Assets: everything you own, at market value. Liabilities: everything you owe. Equity equals assets minus liabilities: This is what's actually yours. L.T.V. = debt divided by collateral: Your bank's leverage.",
+   "cap": "Let's recap. Assets: everything you own, at market value. Liabilities: everything you owe. Equity = assets − liabilities: This is what's actually yours. LTV = debt ÷ collateral: Your bank's leverage."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 12.2",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson twelve point two: Custody architecture: vault, multisig and spending policies.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 12.2: Custody architecture: vault, multisig and spending policies."
   }
  ]
 }

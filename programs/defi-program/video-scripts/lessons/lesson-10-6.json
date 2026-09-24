@@ -6,50 +6,69 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 10.6",
  "use": "Lesson 10.6 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Restaking and points",
+  "subtitle": "Lesson 10.6"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-10.png",
-   "eyebrow": "Lesson 10.6",
-   "vo": "Lesson ten point six. Restaking and points: pricing speculative yield.",
-   "cap": "Lesson 10.6. Restaking and points: pricing speculative yield."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 10 · Advanced Yield Engineering",
+   "num": "10.6",
+   "title": "Restaking and points: pricing speculative yield",
    "sub": "Value restaking and points programmes without letting unknown rewards drive position size.",
-   "vo": "Value restaking and points programmes without letting unknown rewards drive position size.",
-   "cap": "Value restaking and points programmes without letting unknown rewards drive position size."
+   "vo": "Lesson ten point six. Restaking and points: pricing speculative yield. By the end of this lesson, you'll be able to value restaking and points programmes without letting unknown rewards drive position size.",
+   "cap": "Lesson 10.6. Restaking and points: pricing speculative yield. By the end of this lesson, you'll be able to value restaking and points programmes without letting unknown rewards drive position size."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
-    "Plan with points at zero. Base the decision on yield you can measure.",
+    "Plan with points at zero",
     "Treat points as an airdrop bet",
     "Hedge price if you only want the yield",
     "Cap it"
    ],
-   "vo": "Restaking reuses staked assets to secure more services, paying extra rewards and often points: an off-chain score that may or may not become a token. The risk stack grows at each layer: staking to liquid restaking token to restaking protocol to each service it secures to slashing conditions. Professional rules: Plan with points at zero. Base the decision on yield you can measure. Treat points as an airdrop bet: EV = P(payout) times value minus costs. Hedge price if you only want the yield: short the underlying perp (strategy #24), knowing the hedge doesn't cover a depeg of the restaking token. Cap it: speculative bucket only (at most 5–10% of DeFi capital).",
-   "cap": "Plan with points at zero. Base the decision on yield you can measure. Treat points as an airdrop bet: EV = P(payout) × value − costs. Hedge price if you only want the yield: short the underlying perp (strategy #24), knowing the hedge doesn't cover a depeg of the restaking token. Cap it: speculative bucket only (≤ 5–10% of DeFi capital)."
+   "vo": "Restaking reuses staked assets to secure more services, paying extra rewards and often points: an off-chain score that may or may not become a token. The risk stack grows at each layer: staking to liquid restaking token to restaking protocol to each service it secures to slashing conditions. Professional rules: First, Plan with points at zero. Base the decision on yield you can measure. Next, Treat points as an airdrop bet: EV equals P(payout) times value minus costs. Then, Hedge price if you only want the yield: short the underlying perp (strategy #24), knowing the hedge doesn't cover a depeg of the restaking token. And finally, Cap it: speculative bucket only (at most 5 to 10% of DeFi capital).",
+   "cap": "Restaking reuses staked assets to secure more services, paying extra rewards and often points: an off-chain score that may or may not become a token. The risk stack grows at each layer: staking → liquid restaking token → restaking protocol → each service it secures → slashing conditions. Professional rules: First, Plan with points at zero. Base the decision on yield you can measure. Next, Treat points as an airdrop bet: EV = P(payout) × value − costs. Then, Hedge price if you only want the yield: short the underlying perp (strategy #24), knowing the hedge doesn't cover a depeg of the restaking token. And finally, Cap it: speculative bucket only (≤ 5–10% of DeFi capital)."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "$20,000 in a liquid restaking token",
+    "Points",
+    "Worth doing only if the position still makes sense at $600/yr and the risk…"
    ],
-   "sub": "$20,000 in a liquid restaking token: base staking yield ~3% ($600/yr). Points: you estimate a 30% chance of a payout worth $1,500, costing $200 in gas and bridging: the calculator → EV $250. Worth doing only if the position still makes sense at $600/yr and the",
-   "vo": "$20,000 in a liquid restaking token: base staking yield about 3% ($600 a year). Points: you estimate a 30% chance of a payout worth $1,500, costing $200 in gas and bridging: the calculator to EV $250. Worth doing only if the position still makes sense at $600 a year and the risk stack is acceptable.",
-   "cap": "$20,000 in a liquid restaking token: base staking yield ~3% ($600/yr). Points: you estimate a 30% chance of a payout worth $1,500, costing $200 in gas and bridging: the calculator → EV $250. Worth doing only if the position still makes sense at $600/yr and the risk stack is acceptable."
+   "vo": "Let's work an example, step by step. $20,000 in a liquid restaking token: base staking yield about 3% ($600 a year). Points: you estimate a 30% chance of a payout worth $1,500, costing $200 in gas and bridging: the calculator to EV $250. Worth doing only if the position still makes sense at $600 a year and the risk stack is acceptable.",
+   "cap": "Let's work an example, step by step. $20,000 in a liquid restaking token: base staking yield ~3% ($600/yr). Points: you estimate a 30% chance of a payout worth $1,500, costing $200 in gas and bridging: the calculator → EV $250. Worth doing only if the position still makes sense at $600/yr and the risk stack is acceptable."
   },
   {
    "type": "statement",
+   "chapter": "What this position is short",
+   "kicker": "What this position is short",
    "lines": [
-    "What this position is short"
+    "Slashing, depeg of the restaking token, and the chance…"
    ],
    "sub": "Slashing, depeg of the restaking token, and the chance that points never become anything.",
    "vo": "Slashing, depeg of the restaking token, and the chance that points never become anything.",
@@ -57,6 +76,7 @@
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Decision still works with points valued at zero",
@@ -64,48 +84,59 @@
     "Sized inside the speculative bucket",
     "Hedge (if any) and its gap understood"
    ],
-   "vo": "Your checklist. Decision still works with points valued at zero Full risk stack written, layer by layer Sized inside the speculative bucket Hedge (if any) and its gap understood",
-   "cap": "Decision still works with points valued at zero Full risk stack written, layer by layer Sized inside the speculative bucket Hedge (if any) and its gap understood"
+   "vo": "Here's your checklist. Do it now, for real. First, Decision still works with points valued at zero. Next, Full risk stack written, layer by layer. Then, Sized inside the speculative bucket. And finally, Hedge (if any) and its gap understood.",
+   "cap": "Here's your checklist. Do it now, for real. First, Decision still works with points valued at zero. Next, Full risk stack written, layer by layer. Then, Sized inside the speculative bucket. And finally, Hedge (if any) and its gap understood."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why value points at zero?"
-   ],
-   "sub": "Answer: They're not guaranteed to become anything, so a decision that needs them is a speculation.",
-   "subAt": 0.62,
-   "vo": "Why value points at zero? ... Pause and think. ... The answer: They're not guaranteed to become anything, so a decision that needs them is a speculation.",
-   "cap": "Why value points at zero? Pause and think. The answer: They're not guaranteed to become anything, so a decision that needs them is a speculation."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why value points at zero?",
+   "a": "They're not guaranteed to become anything, so a decision that needs them is a speculation.",
+   "vo": "Question one. Why value points at zero? [[pause 4]] The answer: They're not guaranteed to become anything, so a decision that needs them is a speculation.",
+   "cap": "Question 1. Why value points at zero? The answer: They're not guaranteed to become anything, so a decision that needs them is a speculation."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What does a perp hedge on the underlying miss?"
-   ],
-   "sub": "Answer: The restaking token depegging from the underlying.",
-   "subAt": 0.62,
-   "vo": "What does a perp hedge on the underlying miss? ... Pause and think. ... The answer: The restaking token depegging from the underlying.",
-   "cap": "What does a perp hedge on the underlying miss? Pause and think. The answer: The restaking token depegging from the underlying."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What does a perp hedge on the underlying miss?",
+   "a": "The restaking token depegging from the underlying.",
+   "vo": "Question two. What does a perp hedge on the underlying miss? [[pause 4]] The answer: The restaking token depegging from the underlying.",
+   "cap": "Question 2. What does a perp hedge on the underlying miss? The answer: The restaking token depegging from the underlying."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Name three layers of the restaking risk stack."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Name three layers of the restaking risk stack.",
+   "a": "Any three: staking/validators, the liquid restaking token, the restaking protocol, each service secured, slashing conditions.",
+   "vo": "Question three. Name three layers of the restaking risk stack. [[pause 4]] The answer: Any three: staking/validators, the liquid restaking token, the restaking protocol, each service secured, slashing conditions.",
+   "cap": "Question 3. Name three layers of the restaking risk stack. The answer: Any three: staking/validators, the liquid restaking token, the restaking protocol, each service secured, slashing conditions."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Plan with points at zero: Base the decision on yield you can measure",
+    "Treat points as an airdrop bet: EV = P(payout) × value − costs",
+    "Hedge price if you only want the yield",
+    "Cap it: speculative bucket only (≤ 5–10% of DeFi capital)"
    ],
-   "sub": "Answer: Any three: staking/validators, the liquid restaking token, the restaking protocol, each service secured, slashing conditions.",
-   "subAt": 0.62,
-   "vo": "Name three layers of the restaking risk stack. ... Pause and think. ... The answer: Any three: staking/validators, the liquid restaking token, the restaking protocol, each service secured, slashing conditions.",
-   "cap": "Name three layers of the restaking risk stack. Pause and think. The answer: Any three: staking/validators, the liquid restaking token, the restaking protocol, each service secured, slashing conditions."
+   "vo": "Let's recap. Plan with points at zero: Base the decision on yield you can measure. Treat points as an airdrop bet: EV equals P(payout) times value minus costs. Hedge price if you only want the yield. Cap it: speculative bucket only (at most 5 to 10% of DeFi capital).",
+   "cap": "Let's recap. Plan with points at zero: Base the decision on yield you can measure. Treat points as an airdrop bet: EV = P(payout) × value − costs. Hedge price if you only want the yield. Cap it: speculative bucket only (≤ 5–10% of DeFi capital)."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 10.7",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson ten point seven: Being the house: perp-exchange liquidity vaults.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 10.7: Being the house: perp-exchange liquidity vaults."
   }
  ]
 }

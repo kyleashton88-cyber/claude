@@ -6,57 +6,74 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 10.1",
  "use": "Lesson 10.1 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Fixed-rate yield",
+  "subtitle": "Lesson 10.1"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-10.png",
-   "eyebrow": "Lesson 10.1",
-   "vo": "Lesson ten point one. Fixed-rate yield: principal and yield tokens (P.T./Y.T.).",
-   "cap": "Lesson 10.1. Fixed-rate yield: principal and yield tokens (PT/YT)."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 10 · Advanced Yield Engineering",
+   "num": "10.1",
+   "title": "Fixed-rate yield: principal and yield tokens (PT/YT)",
    "sub": "Lock a fixed return using principal tokens, and price a yield token against its implied rate.",
-   "vo": "Lock a fixed return using principal tokens, and price a yield token against its implied rate.",
-   "cap": "Lock a fixed return using principal tokens, and price a yield token against its implied rate."
-  },
-  {
-   "type": "image",
-   "src": "assets/charts/pt-convergence.png",
-   "eyebrow": "PT price converges to 1.00 at maturity",
-   "vo": "Here's the picture: P.T. price converges to 1.00 at maturity.",
-   "cap": "PT price converges to 1.00 at maturity."
+   "vo": "Lesson ten point one. Fixed-rate yield: principal and yield tokens (P.T./Y.T.). By the end of this lesson, you'll be able to lock a fixed return using principal tokens, and price a yield token against its implied rate.",
+   "cap": "Lesson 10.1. Fixed-rate yield: principal and yield tokens (PT/YT). By the end of this lesson, you'll be able to lock a fixed return using principal tokens, and price a yield token against its implied rate."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "PT (principal token)",
     "YT (yield token)"
    ],
-   "vo": "Yield tokenization takes a yield-bearing asset (a staked asset, a lending receipt, a stablecoin savings token) and splits it into two tokens that mature on a set date: trades at a discount before then. Buy the discount, hold to maturity, and your return is fixed. the underlying earns until maturity, then is worth zero. P.T. + Y.T. = one unit of the underlying. The P.T. price implies a fixed rate; the Y.T. is a bet that realised yield beats it. fixed A.P.Y. = (1 divided by P.T. price)^(365 divided by days) minus 1 P.T. (principal token): redeems 1:1 for the underlying at maturity. It Y.T. (yield token): receives all the variable yield (and often points)",
-   "cap": "PT (principal token): redeems 1:1 for the underlying at maturity. It YT (yield token): receives all the variable yield (and often points)"
+   "vo": "Yield tokenization takes a yield-bearing asset (a staked asset, a lending receipt, a stablecoin savings token) and splits it into two tokens that mature on a set date: trades at a discount before then. Buy the discount, hold to maturity, and your return is fixed. the underlying earns until maturity, then is worth zero. P.T. + Y.T. = one unit of the underlying. The P.T. price implies a fixed rate; the Y.T. is a bet that realised yield beats it. fixed A.P.Y. = (1 divided by P.T. price)^(365 divided by days) minus 1 First, P.T. (principal token): redeems 1:1 for the underlying at maturity. It. And finally, Y.T. (yield token): receives all the variable yield (and often points).",
+   "cap": "Yield tokenization takes a yield-bearing asset (a staked asset, a lending receipt, a stablecoin savings token) and splits it into two tokens that mature on a set date: trades at a discount before then. Buy the discount, hold to maturity, and your return is fixed. the underlying earns until maturity, then is worth zero. PT + YT = one unit of the underlying. The PT price implies a fixed rate; the YT is a bet that realised yield beats it. fixed APY = (1 ÷ PT price)^(365 ÷ days) − 1 First, PT (principal token): redeems 1:1 for the underlying at maturity. It. And finally, YT (yield token): receives all the variable yield (and often points)."
   },
   {
-   "type": "bullets",
-   "title": "Worked example",
-   "items": [
-    "the calculator → 8.63% fixed APY if held to maturity.",
-    "$100,000 buys ~104,167 PT → redeems for ~104,167 of the underlying at maturity.",
-    "The YT costs ~0.04 per unit. It only profits if the underlying's realised"
+   "type": "image",
+   "chapter": "Key ideas",
+   "src": "assets/charts/pt-convergence.png",
+   "eyebrow": "PT price converges to 1.00 at maturity",
+   "wide": true,
+   "vo": "Let's look at the chart: P.T. price converges to 1.00 at maturity. Take a moment with it. It's everything we've just said, in one picture.",
+   "cap": "Let's look at the chart: PT price converges to 1.00 at maturity. Take a moment with it. It's everything we've just said, in one picture."
+  },
+  {
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example: A stablecoin savings token has a PT maturing in…",
+   "steps": [
+    "$100,000 buys ~104,167 PT → redeems for ~104,167 of the underlying at…",
+    "The YT costs ~0.04 per unit"
    ],
-   "vo": "A stablecoin savings token has a P.T. maturing in 180 days, priced at 0.96. yield (plus any points) averages above about 8.6% for the 180 days. Near maturity, small discounts are big rates: P.T. at 0.985 with 60 days left to 9.63% A.P.Y.. Check liquidity before chasing these; exiting early means selling into the pool. the calculator to 8.63% fixed A.P.Y. if held to maturity. $100,000 buys about 104,167 P.T. to redeems for about 104,167 of the underlying at maturity. The Y.T. costs about 0.04 per unit. It only profits if the underlying's realised",
-   "cap": "the calculator → 8.63% fixed APY if held to maturity. $100,000 buys ~104,167 PT → redeems for ~104,167 of the underlying at maturity. The YT costs ~0.04 per unit. It only profits if the underlying's realised"
+   "vo": "Let's work an example, step by step. A stablecoin savings token has a P.T. maturing in 180 days, priced at 0.96. yield (plus any points) averages above about 8.6% for the 180 days. Near maturity, small discounts are big rates: P.T. at 0.985 with 60 days left to 9.63% A.P.Y. Check liquidity before chasing these; exiting early means selling into the pool. $100,000 buys about 104,167 P.T. to redeems for about 104,167 of the underlying at maturity. The Y.T. costs about 0.04 per unit. It only profits if the underlying's realised. You can check every number with the program's calculator."
   },
   {
    "type": "statement",
+   "chapter": "What this position is short",
+   "kicker": "What this position is short",
    "lines": [
-    "What this position is short"
+    "PT"
    ],
    "sub": "PT: the underlying's credit/depeg risk, and liquidity if you exit early. YT: falling yields, and time (it decays to zero).",
    "vo": "P.T.: the underlying's credit/depeg risk, and liquidity if you exit early. Y.T.: falling yields, and time (it decays to zero).",
@@ -64,6 +81,7 @@
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "I'd hold the underlying asset anyway",
@@ -71,48 +89,57 @@
     "Pool depth checked for an early exit",
     "YT sized as speculation, not income"
    ],
-   "vo": "Your checklist. I'd hold the underlying asset anyway Maturity date matches when I'll need the money (Module 12.4 ladder) Pool depth checked for an early exit Y.T. sized as speculation, not income",
-   "cap": "I'd hold the underlying asset anyway Maturity date matches when I'll need the money (Module 12.4 ladder) Pool depth checked for an early exit YT sized as speculation, not income"
+   "vo": "Here's your checklist. Do it now, for real. First, I'd hold the underlying asset anyway. Next, Maturity date matches when I'll need the money (Module 12.4 ladder). Then, Pool depth checked for an early exit. And finally, Y.T. sized as speculation, not income.",
+   "cap": "Here's your checklist. Do it now, for real. First, I'd hold the underlying asset anyway. Next, Maturity date matches when I'll need the money (Module 12.4 ladder). Then, Pool depth checked for an early exit. And finally, YT sized as speculation, not income."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "PT at 0.97, 120 days to maturity. Fixed APY?"
-   ],
-   "sub": "Answer: (1/0.97)^(365/120) − 1 ≈ 9.7%.",
-   "subAt": 0.62,
-   "vo": "P.T. at 0.97, 120 days to maturity. Fixed A.P.Y.? ... Pause and think. ... The answer: (1/0.97)^(365/120) minus 1 about 9.7%.",
-   "cap": "PT at 0.97, 120 days to maturity. Fixed APY? Pause and think. The answer: (1/0.97)^(365/120) − 1 ≈ 9.7%."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "PT at 0.97, 120 days to maturity. Fixed APY?",
+   "a": "(1/0.97)^(365/120) − 1 ≈ 9.7%.",
+   "vo": "Question one. P.T. at 0.97, 120 days to maturity. Fixed A.P.Y.? [[pause 4]] The answer: (1 to 0.97)^(365 to 120) minus 1 about 9.7%.",
+   "cap": "Question 1. PT at 0.97, 120 days to maturity. Fixed APY? The answer: (1/0.97)^(365/120) − 1 ≈ 9.7%."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Does buying PT remove the underlying's risk?"
-   ],
-   "sub": "Answer: No. It fixes the rate. If the underlying depegs or is exploited, the PT redeems into a damaged asset.",
-   "subAt": 0.62,
-   "vo": "Does buying P.T. remove the underlying's risk? ... Pause and think. ... The answer: No. It fixes the rate. If the underlying depegs or is exploited, the P.T. redeems into a damaged asset.",
-   "cap": "Does buying PT remove the underlying's risk? Pause and think. The answer: No. It fixes the rate. If the underlying depegs or is exploited, the PT redeems into a damaged asset."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Does buying PT remove the underlying's risk?",
+   "a": "No. It fixes the rate. If the underlying depegs or is exploited, the PT redeems into a damaged asset.",
+   "vo": "Question two. Does buying P.T. remove the underlying's risk? [[pause 4]] The answer: No. It fixes the rate. If the underlying depegs or is exploited, the P.T. redeems into a damaged asset.",
+   "cap": "Question 2. Does buying PT remove the underlying's risk? The answer: No. It fixes the rate. If the underlying depegs or is exploited, the PT redeems into a damaged asset."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What must happen for a YT to profit?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What must happen for a YT to profit?",
+   "a": "Realised variable yield plus points must beat the implied rate priced into the PT.",
+   "vo": "Question three. What must happen for a Y.T. to profit? [[pause 4]] The answer: Realised variable yield plus points must beat the implied rate priced into the P.T.",
+   "cap": "Question 3. What must happen for a YT to profit? The answer: Realised variable yield plus points must beat the implied rate priced into the PT."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "PT (principal token): redeems 1:1 for the underlying at maturity",
+    "YT (yield token): receives all the variable yield (and often points)"
    ],
-   "sub": "Answer: Realised variable yield plus points must beat the implied rate priced into the PT.",
-   "subAt": 0.62,
-   "vo": "What must happen for a Y.T. to profit? ... Pause and think. ... The answer: Realised variable yield plus points must beat the implied rate priced into the P.T..",
-   "cap": "What must happen for a YT to profit? Pause and think. The answer: Realised variable yield plus points must beat the implied rate priced into the PT."
+   "vo": "Let's recap. P.T. (principal token): redeems 1:1 for the underlying at maturity. Y.T. (yield token): receives all the variable yield (and often points).",
+   "cap": "Let's recap. PT (principal token): redeems 1:1 for the underlying at maturity. YT (yield token): receives all the variable yield (and often points)."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 10.2",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson ten point two: Cash-and-carry basis trades.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 10.2: Cash-and-carry basis trades."
   }
  ]
 }

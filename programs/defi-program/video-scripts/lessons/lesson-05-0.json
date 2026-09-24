@@ -6,27 +6,38 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 5.0",
  "use": "Lesson 5.0 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Mastery Starter",
+  "subtitle": "Module 5 · Start here"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-05.png",
-   "eyebrow": "Lesson 5.0",
-   "vo": "Lesson five point zero. Mastery Starter.",
-   "cap": "Lesson 5.0. Mastery Starter."
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 5 · Infrastructure Risk",
+   "num": "5.0",
+   "title": "Mastery Starter",
+   "sub": "Your position is only as safe as the weakest thing it depends on: the bridge that moved your tokens, the oracle that prices your collateral, the admin key that can upgrade the contract. Most big DeFi ",
+   "vo": "Mastery Starter five point zero. New to Infrastructure Risk? Start here. In about ten minutes, you'll go from zero to ready for this module.",
+   "cap": "Mastery Starter 5.0. New to Infrastructure Risk? Start here. In about ten minutes, you'll go from zero to ready for this module."
   },
   {
    "type": "statement",
+   "chapter": "The 60-second version",
+   "kicker": "The 60-second version",
    "lines": [
-    "The 60-second version"
+    "Your position is only as safe as the weakest thing it depends on"
    ],
-   "sub": "Your position is only as safe as the weakest thing it depends on: the bridge that moved your tokens, the oracle that prices your collateral, the admin key that can upgrade the contract. Most big DeFi losses came from this plumbing.",
+   "sub": "the bridge that moved your tokens, the oracle that prices your collateral, the admin key that can upgrade the contract. Most big DeFi losses came from this plumbing.",
    "vo": "Your position is only as safe as the weakest thing it depends on: the bridge that moved your tokens, the oracle that prices your collateral, the admin key that can upgrade the contract. Most big DeFi losses came from this plumbing.",
    "cap": "Your position is only as safe as the weakest thing it depends on: the bridge that moved your tokens, the oracle that prices your collateral, the admin key that can upgrade the contract. Most big DeFi losses came from this plumbing."
   },
   {
    "type": "bullets",
+   "chapter": "Words you'll need",
    "title": "Words you'll need",
    "items": [
     "Bridge",
@@ -36,29 +47,33 @@
     "Timelock"
    ],
    "compact": true,
-   "vo": "Bridge, moves tokens between chains. Layer 2, a cheaper network built on Ethereum. Oracle, feeds prices into contracts. Proxy, a contract whose logic can be upgraded. Timelock, a delay before changes take effect.",
-   "cap": "Bridge, moves tokens between chains Layer 2, a cheaper network built on Ethereum Oracle, feeds prices into contracts Proxy, a contract whose logic can be upgraded Timelock, a delay before changes take effect"
+   "vo": "Bridge: moves tokens between chains. Layer 2: a cheaper network built on Ethereum. Oracle: feeds prices into contracts. Proxy: a contract whose logic can be upgraded. Timelock: a delay before changes take effect.",
+   "cap": "Bridge: moves tokens between chains. Layer 2: a cheaper network built on Ethereum. Oracle: feeds prices into contracts. Proxy: a contract whose logic can be upgraded. Timelock: a delay before changes take effect."
   },
   {
    "type": "bullets",
+   "chapter": "Before you start",
    "title": "Before you start",
    "items": [
     "Modules 0–4"
    ],
-   "vo": "Modules 0–4",
-   "cap": "Modules 0–4"
+   "vo": "Modules 0 to 4.",
+   "cap": "Modules 0–4."
   },
   {
    "type": "statement",
+   "chapter": "Your first safe step",
+   "kicker": "Your first safe step",
    "lines": [
-    "Your first safe step"
+    "On a block explorer, open a protocol you use"
    ],
-   "sub": "On a block explorer, open a protocol you use: is it a proxy? Who can upgrade it? Is there a timelock?",
+   "sub": "is it a proxy? Who can upgrade it? Is there a timelock?",
    "vo": "On a block explorer, open a protocol you use: is it a proxy? Who can upgrade it? Is there a timelock?",
    "cap": "On a block explorer, open a protocol you use: is it a proxy? Who can upgrade it? Is there a timelock?"
   },
   {
    "type": "bullets",
+   "chapter": "The mastery ladder",
    "title": "The mastery ladder",
    "items": [
     "Beginner",
@@ -66,24 +81,26 @@
     "Master"
    ],
    "compact": true,
-   "vo": "Beginner, Knows which chain, bridge and oracle each position uses. Practitioner, Draws a full dependency map and reads audits properly. Master, Operates across EVM and non-EVM chains with capped bridge and wrapper exposure.",
-   "cap": "Beginner, Knows which chain, bridge and oracle each position uses Practitioner, Draws a full dependency map and reads audits properly Master, Operates across EVM and non-EVM chains with capped bridge and wrapper exposure"
+   "vo": "Beginner: Knows which chain, bridge and oracle each position uses. Practitioner: Draws a full dependency map and reads audits properly. Master: Operates across EVM and non-EVM chains with capped bridge and wrapper exposure.",
+   "cap": "Beginner: Knows which chain, bridge and oracle each position uses. Practitioner: Draws a full dependency map and reads audits properly. Master: Operates across EVM and non-EVM chains with capped bridge and wrapper exposure."
   },
   {
    "type": "statement",
+   "chapter": "You've mastered it when…",
+   "kicker": "You've mastered it when…",
    "lines": [
-    "You've mastered it when…"
+    "You've mastered this module when you can draw the complete dependency map of any position and rate each link."
    ],
-   "sub": "…you can draw the complete dependency map of any position and rate each link. ---",
-   "vo": "…you can draw the complete dependency map of any position and rate each link. ---",
-   "cap": "…you can draw the complete dependency map of any position and rate each link. ---"
+   "vo": "You've mastered this module when you can draw the complete dependency map of any position and rate each link.",
+   "cap": "You've mastered this module when you can draw the complete dependency map of any position and rate each link."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 5.1",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson five point one: Bridges and trust assumptions.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 5.1: Bridges and trust assumptions."
   }
  ]
 }

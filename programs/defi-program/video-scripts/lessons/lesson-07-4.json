@@ -6,92 +6,109 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 7.4",
  "use": "Lesson 7.4 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Whale & entity analysis",
+  "subtitle": "Lesson 7.4"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-07.png",
-   "eyebrow": "Lesson 7.4",
-   "vo": "Lesson seven point four. Whale and entity analysis.",
-   "cap": "Lesson 7.4. Whale & entity analysis."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 7 · On-Chain Analytics",
+   "num": "7.4",
+   "title": "Whale & entity analysis",
    "sub": "Use large-holder data without copying wallets blindly.",
-   "vo": "Use large-holder data without copying wallets blindly.",
-   "cap": "Use large-holder data without copying wallets blindly."
+   "vo": "Lesson seven point four. Whale and entity analysis. By the end of this lesson, you'll be able to use large-holder data without copying wallets blindly.",
+   "cap": "Lesson 7.4. Whale & entity analysis. By the end of this lesson, you'll be able to use large-holder data without copying wallets blindly."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
   },
   {
    "type": "statement",
+   "chapter": "Key ideas",
+   "kicker": "Key ideas",
    "lines": [
-    "Key ideas"
+    "Separate exchanges and contracts from individuals before…"
    ],
-   "sub": "Separate exchanges and contracts from individuals before measuring concentration. Accumulation/distribution is inferred, not known. \"Smart money\" labels carry survivorship bias. Copying wallets ignores their hedges, size and private information.",
+   "sub": "Separate exchanges and contracts from individuals before measuring concentration. Accumulation/distribution is inferred, not known. \"Smart money\" labels carry survivorship bias. Copying wallets ignores their hedges, size and private informa",
    "vo": "Separate exchanges and contracts from individuals before measuring concentration. Accumulation/distribution is inferred, not known. \"Smart money\" labels carry survivorship bias. Copying wallets ignores their hedges, size and private information.",
    "cap": "Separate exchanges and contracts from individuals before measuring concentration. Accumulation/distribution is inferred, not known. \"Smart money\" labels carry survivorship bias. Copying wallets ignores their hedges, size and private information."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "A \"smart money\" wallet buys a token.",
+    "You don't see its perp short elsewhere; it may be hedged and farming.",
+    "Copying the visible leg makes you the unhedged one."
    ],
-   "sub": "A \"smart money\" wallet buys a token. You don't see its perp short elsewhere; it may be hedged and farming. Copying the visible leg makes you the unhedged one.",
-   "vo": "A \"smart money\" wallet buys a token. You don't see its perp short elsewhere; it may be hedged and farming. Copying the visible leg makes you the unhedged one.",
-   "cap": "A \"smart money\" wallet buys a token. You don't see its perp short elsewhere; it may be hedged and farming. Copying the visible leg makes you the unhedged one."
+   "vo": "Let's work an example, step by step. A \"smart money\" wallet buys a token. You don't see its perp short elsewhere; it may be hedged and farming. Copying the visible leg makes you the unhedged one.",
+   "cap": "Let's work an example, step by step. A \"smart money\" wallet buys a token. You don't see its perp short elsewhere; it may be hedged and farming. Copying the visible leg makes you the unhedged one."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Contracts/exchanges excluded from concentration figures",
     "Wallet-following treated as a lead to research, not a signal"
    ],
-   "vo": "Your checklist. Contracts/exchanges excluded from concentration figures Wallet-following treated as a lead to research, not a signal",
-   "cap": "Contracts/exchanges excluded from concentration figures Wallet-following treated as a lead to research, not a signal"
+   "vo": "Here's your checklist. Do it now, for real. First, Contracts/exchanges excluded from concentration figures. And finally, Wallet-following treated as a lead to research, not a signal.",
+   "cap": "Here's your checklist. Do it now, for real. First, Contracts/exchanges excluded from concentration figures. And finally, Wallet-following treated as a lead to research, not a signal."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why is wallet-copying risky?"
-   ],
-   "sub": "Answer: You can't see the wallet's hedges, size or intent.",
-   "subAt": 0.62,
-   "vo": "Why is wallet-copying risky? ... Pause and think. ... The answer: You can't see the wallet's hedges, size or intent.",
-   "cap": "Why is wallet-copying risky? Pause and think. The answer: You can't see the wallet's hedges, size or intent."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Why is wallet-copying risky?",
+   "a": "You can't see the wallet's hedges, size or intent.",
+   "vo": "Question one. Why is wallet-copying risky? [[pause 4]] The answer: You can't see the wallet's hedges, size or intent.",
+   "cap": "Question 1. Why is wallet-copying risky? The answer: You can't see the wallet's hedges, size or intent."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What is survivorship bias in labels?"
-   ],
-   "sub": "Answer: Only wallets that did well get labelled \"smart\".",
-   "subAt": 0.62,
-   "vo": "What is survivorship bias in labels? ... Pause and think. ... The answer: Only wallets that did well get labelled \"smart\".",
-   "cap": "What is survivorship bias in labels? Pause and think. The answer: Only wallets that did well get labelled \"smart\"."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What is survivorship bias in labels?",
+   "a": "Only wallets that did well get labelled \"smart\".",
+   "vo": "Question two. What is survivorship bias in labels? [[pause 4]] The answer: Only wallets that did well get labelled \"smart\".",
+   "cap": "Question 2. What is survivorship bias in labels? The answer: Only wallets that did well get labelled \"smart\"."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "First step in measuring holder concentration?"
-   ],
-   "sub": "Answer: Remove exchange and contract addresses.",
-   "subAt": 0.62,
-   "vo": "First step in measuring holder concentration? ... Pause and think. ... The answer: Remove exchange and contract addresses.",
-   "cap": "First step in measuring holder concentration? Pause and think. The answer: Remove exchange and contract addresses."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "First step in measuring holder concentration?",
+   "a": "Remove exchange and contract addresses.",
+   "vo": "Question three. First step in measuring holder concentration? [[pause 4]] The answer: Remove exchange and contract addresses.",
+   "cap": "Question 3. First step in measuring holder concentration? The answer: Remove exchange and contract addresses."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 7.5",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson seven point five: Holder and supply metrics.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 7.5: Holder & supply metrics."
   }
  ]
 }

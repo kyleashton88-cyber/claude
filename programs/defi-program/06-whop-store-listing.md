@@ -48,8 +48,8 @@ the rings, stretch the mark or put the light version on a dark background.
 | Gallery 5 | `assets/store/gallery-05-research-loop.png` | 1920×1080 |
 | Gallery 6 | `assets/store/gallery-06-grid-vs-lp.png` | 1920×1080 |
 | Gallery 7 | `assets/store/gallery-07-whats-included.png` | 1920×1080 |
-| **Listing video (VSL)** | `video/vsl-main.mp4` (≈90s, 1920×1080, captioned) | 16:9 |
-| Ads / Reels / Shorts | `video/vsl-short-vertical.mp4` (≈25s, 1080×1920) | 9:16 |
+| **Listing video (VSL)** | `video/vsl-main.mp4` (≈3.5 min, 1920×1080, captioned, music bed; thumbnail `video/thumbs/vsl-main.jpg`) | 16:9 |
+| Ads / Reels / Shorts | `video/vsl-short-vertical.mp4` (≈40s, 1080×1920) | 9:16 |
 | Course module headers | `assets/modules/module-00.png` … `module-14.png` | 1600×500 @2x |
 | In-lesson diagrams & charts | `assets/diagrams/*.png`, `assets/charts/*.png` | 1800 wide @2x |
 
@@ -88,7 +88,7 @@ income engine and run your capital like a bank. 15 modules · 107 lessons.
 > payout you can sustain.
 >
 > Six stages, 15 modules and 107 lessons, each module opening with a beginner Mastery Starter: wallets and safety, trading and
-> liquidity, lending and yield, protocol research and on-chain analytics, 25
+> liquidity, lending and yield, protocol research and on-chain analytics, 30
 > strategy playbooks up to fixed-rate, basis, options and hedged yield, and
 > finally operating your own on-chain bank. Every strategy is taught with its
 > maths, its kill rules and exactly how it loses money.
@@ -147,10 +147,11 @@ income are guaranteed.
 ---
 
 ## 4. Store setup checklist
-- [ ] Product created in the Whop dashboard as **hidden**, named "On-Chain Operator Program"
+- [ ] Product created in the Whop dashboard, named "On-Chain Operator Program"
 - [ ] Logo icon, banner and 7 gallery images uploaded in the order above
 - [ ] Copy pasted with the refund policy; `<DEFI_APPLICATION_URL>` filled
 - [ ] Course experience added with 15 modules; module headers uploaded; lessons pasted with their diagrams
-- [ ] Plans created via Zapier (course $15,000 one-time; live tier once priced), approved first
-- [ ] Checkout tested end to end on a hidden plan
+- [ ] Plans created (Course $15,000 one-time; Live on application)
+- [ ] Lesson videos uploaded with their thumbnails and captions (`video/thumbs/`, `video/captions/`)
+- [ ] Checkout tested end to end
 - [ ] Listing reviewed for any income or return claims before going public

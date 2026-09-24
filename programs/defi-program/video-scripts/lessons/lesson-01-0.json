@@ -6,27 +6,38 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 1.0",
  "use": "Lesson 1.0 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Mastery Starter",
+  "subtitle": "Module 1 · Start here"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-01.png",
-   "eyebrow": "Lesson 1.0",
-   "vo": "Lesson one point zero. Mastery Starter.",
-   "cap": "Lesson 1.0. Mastery Starter."
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 1 · Foundations & Safety",
+   "num": "1.0",
+   "title": "Mastery Starter",
+   "sub": "Most crypto losses aren't market losses; they're mistakes and scams: a seed phrase typed into a fake site, an approval signed without reading, the wrong network. This module builds the habits that pre",
+   "vo": "Mastery Starter one point zero. New to Foundations and Safety? Start here. In about ten minutes, you'll go from zero to ready for this module.",
+   "cap": "Mastery Starter 1.0. New to Foundations & Safety? Start here. In about ten minutes, you'll go from zero to ready for this module."
   },
   {
    "type": "statement",
+   "chapter": "The 60-second version",
+   "kicker": "The 60-second version",
    "lines": [
-    "The 60-second version"
+    "Most crypto losses aren't market losses"
    ],
-   "sub": "Most crypto losses aren't market losses; they're mistakes and scams: a seed phrase typed into a fake site, an approval signed without reading, the wrong network. This module builds the habits that prevent them.",
+   "sub": "they're mistakes and scams: a seed phrase typed into a fake site, an approval signed without reading, the wrong network. This module builds the habits that prevent them.",
    "vo": "Most crypto losses aren't market losses; they're mistakes and scams: a seed phrase typed into a fake site, an approval signed without reading, the wrong network. This module builds the habits that prevent them.",
    "cap": "Most crypto losses aren't market losses; they're mistakes and scams: a seed phrase typed into a fake site, an approval signed without reading, the wrong network. This module builds the habits that prevent them."
   },
   {
    "type": "bullets",
+   "chapter": "Words you'll need",
    "title": "Words you'll need",
    "items": [
     "Private key",
@@ -36,30 +47,34 @@
     "Simulation"
    ],
    "compact": true,
-   "vo": "Private key, the secret that signs transactions. Approval, permission for an app to move a token. Multisig, a wallet that needs several keys to act. Phishing, a fake site or message built to steal. Simulation, a preview of what a transaction will change.",
-   "cap": "Private key, the secret that signs transactions Approval, permission for an app to move a token Multisig, a wallet that needs several keys to act Phishing, a fake site or message built to steal Simulation, a preview of what a transaction will change"
+   "vo": "Private key: the secret that signs transactions. Approval: permission for an app to move a token. Multisig: a wallet that needs several keys to act. Phishing: a fake site or message built to steal. Simulation: a preview of what a transaction will change.",
+   "cap": "Private key: the secret that signs transactions. Approval: permission for an app to move a token. Multisig: a wallet that needs several keys to act. Phishing: a fake site or message built to steal. Simulation: a preview of what a transaction will change."
   },
   {
    "type": "bullets",
+   "chapter": "Before you start",
    "title": "Before you start",
    "items": [
     "Module 0 done (secured exchange, restore-tested wallet)",
     "A small amount in a wallet on a low-fee network"
    ],
-   "vo": "Module 0 done (secured exchange, restore-tested wallet) A small amount in a wallet on a low-fee network",
-   "cap": "Module 0 done (secured exchange, restore-tested wallet) A small amount in a wallet on a low-fee network"
+   "vo": "First, Module 0 done (secured exchange, restore-tested wallet). And finally, A small amount in a wallet on a low-fee network.",
+   "cap": "First, Module 0 done (secured exchange, restore-tested wallet). And finally, A small amount in a wallet on a low-fee network."
   },
   {
    "type": "statement",
+   "chapter": "Your first safe step",
+   "kicker": "Your first safe step",
    "lines": [
-    "Your first safe step"
+    "Open your wallet's approvals (or a revoke tool), list every approval you've granted"
    ],
-   "sub": "Open your wallet's approvals (or a revoke tool), list every approval you've granted, and revoke any you don't use.",
+   "sub": ", and revoke any you don't use.",
    "vo": "Open your wallet's approvals (or a revoke tool), list every approval you've granted, and revoke any you don't use.",
    "cap": "Open your wallet's approvals (or a revoke tool), list every approval you've granted, and revoke any you don't use."
   },
   {
    "type": "bullets",
+   "chapter": "The mastery ladder",
    "title": "The mastery ladder",
    "items": [
     "Beginner",
@@ -67,24 +82,27 @@
     "Master"
    ],
    "compact": true,
-   "vo": "Beginner, Uses a separate burner wallet and reads every prompt. Practitioner, Runs the before-signing checklist without notes; limited approvals; hardware wallet. Master, Multisig vault, simulation on every signature, private addresses, tested recovery.",
-   "cap": "Beginner, Uses a separate burner wallet and reads every prompt Practitioner, Runs the before-signing checklist without notes; limited approvals; hardware wallet Master, Multisig vault, simulation on every signature, private addresses, tested recovery"
+   "vo": "Beginner: Uses a separate burner wallet and reads every prompt. Practitioner: Runs the before-signing checklist without notes; limited approvals; hardware wallet. Master: Multisig vault, simulation on every signature, private addresses, tested recovery.",
+   "cap": "Beginner: Uses a separate burner wallet and reads every prompt. Practitioner: Runs the before-signing checklist without notes; limited approvals; hardware wallet. Master: Multisig vault, simulation on every signature, private addresses, tested recovery."
   },
   {
    "type": "statement",
+   "chapter": "You've mastered it when…",
+   "kicker": "You've mastered it when…",
    "lines": [
-    "You've mastered it when…"
+    "You've mastered this module when you can take a new app from first visit to a limited, simulated"
    ],
-   "sub": "…you can take a new app from first visit to a limited, simulated, verified transaction, and revoke it after. ---",
-   "vo": "…you can take a new app from first visit to a limited, simulated, verified transaction, and revoke it after. ---",
-   "cap": "…you can take a new app from first visit to a limited, simulated, verified transaction, and revoke it after. ---"
+   "sub": ", verified transaction, and revoke it after.",
+   "vo": "You've mastered this module when you can take a new app from first visit to a limited, simulated, verified transaction, and revoke it after.",
+   "cap": "You've mastered this module when you can take a new app from first visit to a limited, simulated, verified transaction, and revoke it after."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 1.1",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson one point one: What DeFi is, and the risk-first mindset.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 1.1: What DeFi is, and the risk-first mindset."
   }
  ]
 }

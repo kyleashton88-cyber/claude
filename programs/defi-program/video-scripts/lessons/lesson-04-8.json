@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 4.8",
  "use": "Lesson 4.8 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Tokenized treasuries and real-world assets",
+  "subtitle": "Lesson 4.8"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-04.png",
-   "eyebrow": "Lesson 4.8",
-   "vo": "Lesson four point eight. Tokenized treasuries and real-world assets (real-world asset).",
-   "cap": "Lesson 4.8. Tokenized treasuries and real-world assets (RWAs)."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 4 · Yield",
+   "num": "4.8",
+   "title": "Tokenized treasuries and real-world assets (RWAs)",
    "sub": "Use tokenized real-world assets knowing what you actually own and who you're trusting.",
-   "vo": "Use tokenized real-world assets knowing what you actually own and who you're trusting.",
-   "cap": "Use tokenized real-world assets knowing what you actually own and who you're trusting."
+   "vo": "Lesson four point eight. Tokenized treasuries and real-world assets (real-world asset). By the end of this lesson, you'll be able to use tokenized real-world assets knowing what you actually own and who you're trusting.",
+   "cap": "Lesson 4.8. Tokenized treasuries and real-world assets (RWAs). By the end of this lesson, you'll be able to use tokenized real-world assets knowing what you actually own and who you're trusting."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "RWAs are tokens that represent off-chain assets",
@@ -35,20 +49,23 @@
     "Access limits",
     "Composability"
    ],
-   "vo": "real-world asset are tokens that represent off-chain assets: short-term government bills (the most common), money-market funds, credit, commodities, property. Tokenized treasury products typically pay close to the short-term government rate minus a management fee. What you're trusting: the issuer (legal structure), the custodian holding the real assets, the redemption process, and the token's transfer rules. Access limits: many real-world asset tokens are only for verified (K.Y.C.'d) or accredited/qualified investors, and not available in every country. Check eligibility where you live; don't try to get around restrictions. Composability: some real-world asset tokens can be used as collateral in DeFi; others are restricted to allowlisted wallets.",
-   "cap": "RWAs are tokens that represent off-chain assets: short-term government bills (the most common), money-market funds, credit, commodities, property. Tokenized treasury products typically pay close to the short-term government rate minus a management fee. What you're trusting: the issuer (legal structure), the custodian holding the real assets, the redemption process, and the token's transfer rules. Access limits: many RWA tokens are only for verified (KYC'd) or accredited/qualified investors, and not available in every country. Check eligibility where you live; don't try to get around restrictions. Composability: some RWA tokens can be used as collateral in DeFi; others are restricted to allowlisted wallets."
+   "vo": "First, real-world asset are tokens that represent off-chain assets: short-term government bills (the most common), money-market funds, credit, commodities, property. Next, Tokenized treasury products typically pay close to the short-term government rate minus a management fee. Then, what you're trusting: the issuer (legal structure), the custodian holding the real assets, the redemption process, and the token's transfer rules. Also, Access limits: many real-world asset tokens are only for verified (K.Y.C.'d) or accredited/qualified investors, and not available in every country. Check eligibility where you live; don't try to get around restrictions. And finally, Composability: some real-world asset tokens can be used as collateral in DeFi; others are restricted to allowlisted wallets.",
+   "cap": "First, RWAs are tokens that represent off-chain assets: short-term government bills (the most common), money-market funds, credit, commodities, property. Next, Tokenized treasury products typically pay close to the short-term government rate minus a management fee. Then, what you're trusting: the issuer (legal structure), the custodian holding the real assets, the redemption process, and the token's transfer rules. Also, Access limits: many RWA tokens are only for verified (KYC'd) or accredited/qualified investors, and not available in every country. Check eligibility where you live; don't try to get around restrictions. And finally, Composability: some RWA tokens can be used as collateral in DeFi; others are restricted to allowlisted wallets."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example (illustrative)"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "If short-term government bills yield 4.0% and the product charges 0.15%,…",
+    "In the own-bank ladder (Module 12.4), this can suit the T1/T2 tiers, but…"
    ],
-   "sub": "If short-term government bills yield 4.0% and the product charges 0.15%, you'd earn about 3.85% before any on-chain costs. In the own-bank ladder (Module 12.4), this can suit the T1/T2 tiers, but only if redemption times match when you'll need the money.",
-   "vo": "If short-term government bills yield 4.0% and the product charges 0.15%, you'd earn about 3.85% before any on-chain costs. In the own-bank ladder (Module 12.4), this can suit the T1/T2 tiers, but only if redemption times match when you'll need the money.",
-   "cap": "If short-term government bills yield 4.0% and the product charges 0.15%, you'd earn about 3.85% before any on-chain costs. In the own-bank ladder (Module 12.4), this can suit the T1/T2 tiers, but only if redemption times match when you'll need the money."
+   "vo": "Let's work an example, step by step. If short-term government bills yield 4.0% and the product charges 0.15%, you'd earn about 3.85% before any on-chain costs. In the own-bank ladder (Module 12.4), this can suit the T1/T2 tiers, but only if redemption times match when you'll need the money.",
+   "cap": "Let's work an example, step by step. If short-term government bills yield 4.0% and the product charges 0.15%, you'd earn about 3.85% before any on-chain costs. In the own-bank ladder (Module 12.4), this can suit the T1/T2 tiers, but only if redemption times match when you'll need the money."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "I'm eligible in my country (and it's legal to hold)",
@@ -56,48 +73,59 @@
     "Transfer restrictions and minimums known",
     "Sized within caps, like any other issuer risk"
    ],
-   "vo": "Your checklist. I'm eligible in my country (and it's legal to hold) Issuer, custodian and redemption terms read Transfer restrictions and minimums known Sized within caps, like any other issuer risk",
-   "cap": "I'm eligible in my country (and it's legal to hold) Issuer, custodian and redemption terms read Transfer restrictions and minimums known Sized within caps, like any other issuer risk"
+   "vo": "Here's your checklist. Do it now, for real. First, I'm eligible in my country (and it's legal to hold). Next, Issuer, custodian and redemption terms read. Then, Transfer restrictions and minimums known. And finally, Sized within caps, like any other issuer risk.",
+   "cap": "Here's your checklist. Do it now, for real. First, I'm eligible in my country (and it's legal to hold). Next, Issuer, custodian and redemption terms read. Then, Transfer restrictions and minimums known. And finally, Sized within caps, like any other issuer risk."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What does a tokenized treasury product's yield track?"
-   ],
-   "sub": "Answer: Short-term government rates, minus the product's fees.",
-   "subAt": 0.62,
-   "vo": "What does a tokenized treasury product's yield track? ... Pause and think. ... The answer: Short-term government rates, minus the product's fees.",
-   "cap": "What does a tokenized treasury product's yield track? Pause and think. The answer: Short-term government rates, minus the product's fees."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "What does a tokenized treasury product's yield track?",
+   "a": "Short-term government rates, minus the product's fees.",
+   "vo": "Question one. What does a tokenized treasury product's yield track? [[pause 4]] The answer: Short-term government rates, minus the product's fees.",
+   "cap": "Question 1. What does a tokenized treasury product's yield track? The answer: Short-term government rates, minus the product's fees."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Name two parties you trust with an RWA token."
-   ],
-   "sub": "Answer: Any two: the issuer, the custodian, the redemption agent, the token's administrators.",
-   "subAt": 0.62,
-   "vo": "Name two parties you trust with an real-world asset token. ... Pause and think. ... The answer: Any two: the issuer, the custodian, the redemption agent, the token's administrators.",
-   "cap": "Name two parties you trust with an RWA token. Pause and think. The answer: Any two: the issuer, the custodian, the redemption agent, the token's administrators."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Name two parties you trust with an RWA token.",
+   "a": "Any two: the issuer, the custodian, the redemption agent, the token's administrators.",
+   "vo": "Question two. Name two parties you trust with an real-world asset token. [[pause 4]] The answer: Any two: the issuer, the custodian, the redemption agent, the token's administrators.",
+   "cap": "Question 2. Name two parties you trust with an RWA token. The answer: Any two: the issuer, the custodian, the redemption agent, the token's administrators."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why check transfer restrictions?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Why check transfer restrictions?",
+   "a": "Some RWA tokens only move between allowlisted wallets, which limits exit and DeFi use.",
+   "vo": "Question three. Why check transfer restrictions? [[pause 4]] The answer: Some real-world asset tokens only move between allowlisted wallets, which limits exit and DeFi use.",
+   "cap": "Question 3. Why check transfer restrictions? The answer: Some RWA tokens only move between allowlisted wallets, which limits exit and DeFi use."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "RWAs are tokens that represent off-chain assets",
+    "Tokenized treasury products typically pay close to the short-term government rate minus a management fee",
+    "What you're trusting: the issuer (legal structure), the custodian holding the real assets",
+    "Access limits: many RWA tokens are only for verified (KYC'd) or accredited/qualified investors"
    ],
-   "sub": "Answer: Some RWA tokens only move between allowlisted wallets, which limits exit and DeFi use.",
-   "subAt": 0.62,
-   "vo": "Why check transfer restrictions? ... Pause and think. ... The answer: Some real-world asset tokens only move between allowlisted wallets, which limits exit and DeFi use.",
-   "cap": "Why check transfer restrictions? Pause and think. The answer: Some RWA tokens only move between allowlisted wallets, which limits exit and DeFi use."
+   "vo": "Let's recap. real-world asset are tokens that represent off-chain assets. Tokenized treasury products typically pay close to the short-term government rate minus a management fee. What you're trusting: the issuer (legal structure), the custodian holding the real assets. Access limits: many real-world asset tokens are only for verified (K.Y.C.'d) or accredited/qualified investors.",
+   "cap": "Let's recap. RWAs are tokens that represent off-chain assets. Tokenized treasury products typically pay close to the short-term government rate minus a management fee. What you're trusting: the issuer (legal structure), the custodian holding the real assets. Access limits: many RWA tokens are only for verified (KYC'd) or accredited/qualified investors."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 5.0",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson five point zero: Mastery Starter.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 5.0: Mastery Starter."
   }
  ]
 }

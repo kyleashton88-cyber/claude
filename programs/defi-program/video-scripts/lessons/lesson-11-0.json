@@ -6,27 +6,38 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 11.0",
  "use": "Lesson 11.0 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Mastery Starter",
+  "subtitle": "Module 11 · Start here"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-11.png",
-   "eyebrow": "Lesson 11.0",
-   "vo": "Lesson eleven point zero. Mastery Starter.",
-   "cap": "Lesson 11.0. Mastery Starter."
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 11 · Hedging & Risk Engineering",
+   "num": "11.0",
+   "title": "Mastery Starter",
+   "sub": "Risk you don't want can often be hedged, insured or engineered away, at a cost. This module covers hedging, cover, liquidation protection, stress testing and what to do in the first hour of a crisis.",
+   "vo": "Mastery Starter eleven point zero. New to Hedging and Risk Engineering? Start here. In about ten minutes, you'll go from zero to ready for this module.",
+   "cap": "Mastery Starter 11.0. New to Hedging & Risk Engineering? Start here. In about ten minutes, you'll go from zero to ready for this module."
   },
   {
    "type": "statement",
+   "chapter": "The 60-second version",
+   "kicker": "The 60-second version",
    "lines": [
-    "The 60-second version"
+    "Risk you don't want can often be hedged, insured or engineered away, at a cost"
    ],
-   "sub": "Risk you don't want can often be hedged, insured or engineered away, at a cost. This module covers hedging, cover, liquidation protection, stress testing and what to do in the first hour of a crisis.",
+   "sub": "This module covers hedging, cover, liquidation protection, stress testing and what to do in the first hour of a crisis.",
    "vo": "Risk you don't want can often be hedged, insured or engineered away, at a cost. This module covers hedging, cover, liquidation protection, stress testing and what to do in the first hour of a crisis.",
    "cap": "Risk you don't want can often be hedged, insured or engineered away, at a cost. This module covers hedging, cover, liquidation protection, stress testing and what to do in the first hour of a crisis."
   },
   {
    "type": "bullets",
+   "chapter": "Words you'll need",
    "title": "Words you'll need",
    "items": [
     "Hedge",
@@ -36,29 +47,33 @@
     "Incident"
    ],
    "compact": true,
-   "vo": "Hedge, a position that offsets another's risk. Protective put, an option capping downside below a price. Cover, on-chain insurance for defined events. Stress test, a what-if shock on your book. Incident, an exploit, depeg or compromise.",
-   "cap": "Hedge, a position that offsets another's risk Protective put, an option capping downside below a price Cover, on-chain insurance for defined events Stress test, a what-if shock on your book Incident, an exploit, depeg or compromise"
+   "vo": "Hedge: a position that offsets another's risk. Protective put: an option capping downside below a price. Cover: on-chain insurance for defined events. Stress test: a what-if shock on your book. Incident: an exploit, depeg or compromise.",
+   "cap": "Hedge: a position that offsets another's risk. Protective put: an option capping downside below a price. Cover: on-chain insurance for defined events. Stress test: a what-if shock on your book. Incident: an exploit, depeg or compromise."
   },
   {
    "type": "bullets",
+   "chapter": "Before you start",
    "title": "Before you start",
    "items": [
     "Modules 0–10"
    ],
-   "vo": "Modules 0–10",
-   "cap": "Modules 0–10"
+   "vo": "Modules 0 to 10.",
+   "cap": "Modules 0–10."
   },
   {
    "type": "statement",
+   "chapter": "Your first safe step",
+   "kicker": "Your first safe step",
    "lines": [
-    "Your first safe step"
+    "Write down the single event that would hurt your portfolio most"
    ],
-   "sub": "Write down the single event that would hurt your portfolio most, and what you'd do in the first 10 minutes.",
+   "sub": ", and what you'd do in the first 10 minutes.",
    "vo": "Write down the single event that would hurt your portfolio most, and what you'd do in the first 10 minutes.",
    "cap": "Write down the single event that would hurt your portfolio most, and what you'd do in the first 10 minutes."
   },
   {
    "type": "bullets",
+   "chapter": "The mastery ladder",
    "title": "The mastery ladder",
    "items": [
     "Beginner",
@@ -66,24 +81,26 @@
     "Master"
    ],
    "compact": true,
-   "vo": "Beginner, Knows the hedge tools and what they cost. Practitioner, Hedges one real exposure and runs the five stress tests. Master, Runs a stress-tested book with a rehearsed incident playbook.",
-   "cap": "Beginner, Knows the hedge tools and what they cost Practitioner, Hedges one real exposure and runs the five stress tests Master, Runs a stress-tested book with a rehearsed incident playbook"
+   "vo": "Beginner: Knows the hedge tools and what they cost. Practitioner: Hedges one real exposure and runs the five stress tests. Master: Runs a stress-tested book with a rehearsed incident playbook.",
+   "cap": "Beginner: Knows the hedge tools and what they cost. Practitioner: Hedges one real exposure and runs the five stress tests. Master: Runs a stress-tested book with a rehearsed incident playbook."
   },
   {
    "type": "statement",
+   "chapter": "You've mastered it when…",
+   "kicker": "You've mastered it when…",
    "lines": [
-    "You've mastered it when…"
+    "You've mastered this module when your book survives all five stress scenarios and your incident playbook is saved offline."
    ],
-   "sub": "…your book survives all five stress scenarios and your incident playbook is saved offline. ---",
-   "vo": "…your book survives all five stress scenarios and your incident playbook is saved offline. ---",
-   "cap": "…your book survives all five stress scenarios and your incident playbook is saved offline. ---"
+   "vo": "You've mastered this module when your book survives all five stress scenarios and your incident playbook is saved offline.",
+   "cap": "You've mastered this module when your book survives all five stress scenarios and your incident playbook is saved offline."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 11.1",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson eleven point one: Hedging price exposure with perps and options.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 11.1: Hedging price exposure with perps and options."
   }
  ]
 }

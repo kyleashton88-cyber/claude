@@ -9,7 +9,7 @@
 ![Module 8 — The DeFi Operating System](../assets/modules/module-08.png)
 
 *Outcome: a written portfolio plan with risk buckets, limits and an emergency plan.*
-*Stage 4 · Strategist. Source: ATLAS "DeFi & On-Chain" ch. 38–40, 42. Lesson 8.3 (the 25-strategy library) is in `03-defi-strategy-mastery.md`. Educational content only. Not financial advice. Figures are illustrative.*
+*Stage 4 · Strategist. Source: ATLAS "DeFi & On-Chain" ch. 38–40, 42. Lesson 8.3 (the 30-strategy library) is in `03-defi-strategy-mastery.md`. Educational content only. Not financial advice. Figures are illustrative.*
 
 ---
 

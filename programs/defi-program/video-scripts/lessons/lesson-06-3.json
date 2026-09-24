@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 6.3",
  "use": "Lesson 6.3 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Governance & DAOs",
+  "subtitle": "Lesson 6.3"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-06.png",
-   "eyebrow": "Lesson 6.3",
-   "vo": "Lesson six point three. Governance and DAOs.",
-   "cap": "Lesson 6.3. Governance & DAOs."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 6 · Protocol Research",
+   "num": "6.3",
+   "title": "Governance & DAOs",
    "sub": "Read how a protocol is controlled and spot governance risk before it hits your position.",
-   "vo": "Read how a protocol is controlled and spot governance risk before it hits your position.",
-   "cap": "Read how a protocol is controlled and spot governance risk before it hits your position."
+   "vo": "Lesson six point three. Governance and DAOs. By the end of this lesson, you'll be able to read how a protocol is controlled and spot governance risk before it hits your position.",
+   "cap": "Lesson 6.3. Governance & DAOs. By the end of this lesson, you'll be able to read how a protocol is controlled and spot governance risk before it hits your position."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Governance tokens vote on parameters, upgrades and treasury.",
@@ -34,68 +48,84 @@
     "Delegation lets holders assign votes to representatives.",
     "Risks"
    ],
-   "vo": "Governance tokens vote on parameters, upgrades and treasury. Proposal lifecycle: forum discussion to vote to timelock to execution. Delegation lets holders assign votes to representatives. Risks: low turnout, concentrated voting power, borrowed votes, rushed proposals, weak timelocks.",
-   "cap": "Governance tokens vote on parameters, upgrades and treasury. Proposal lifecycle: forum discussion → vote → timelock → execution. Delegation lets holders assign votes to representatives. Risks: low turnout, concentrated voting power, borrowed votes, rushed proposals, weak timelocks."
+   "vo": "First, Governance tokens vote on parameters, upgrades and treasury. Next, Proposal lifecycle: forum discussion to vote to timelock to execution. Then, Delegation lets holders assign votes to representatives. And finally, Risks: low turnout, concentrated voting power, borrowed votes, rushed proposals, weak timelocks.",
+   "cap": "First, Governance tokens vote on parameters, upgrades and treasury. Next, Proposal lifecycle: forum discussion → vote → timelock → execution. Then, Delegation lets holders assign votes to representatives. And finally, Risks: low turnout, concentrated voting power, borrowed votes, rushed proposals, weak timelocks."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "A proposal to raise a collateral's LTV passes with 8% turnout, 70% of it…",
+    "Lenders now carry more bad-debt risk, decided by a few voters.",
+    "Track governance for markets you're in.",
+    "It changes your risk without you doing anything."
    ],
-   "sub": "A proposal to raise a collateral's LTV passes with 8% turnout, 70% of it from three wallets. Lenders now carry more bad-debt risk, decided by a few voters. Track governance for markets you're in. It changes your risk without you doing anything.",
-   "vo": "A proposal to raise a collateral's L.T.V. passes with 8% turnout, 70% of it from three wallets. Lenders now carry more bad-debt risk, decided by a few voters. Track governance for markets you're in. It changes your risk without you doing anything.",
-   "cap": "A proposal to raise a collateral's LTV passes with 8% turnout, 70% of it from three wallets. Lenders now carry more bad-debt risk, decided by a few voters. Track governance for markets you're in. It changes your risk without you doing anything."
+   "vo": "Let's work an example, step by step. A proposal to raise a collateral's L.T.V. passes with 8% turnout, 70% of it from three wallets. Lenders now carry more bad-debt risk, decided by a few voters. Track governance for markets you're in. It changes your risk without you doing anything.",
+   "cap": "Let's work an example, step by step. A proposal to raise a collateral's LTV passes with 8% turnout, 70% of it from three wallets. Lenders now carry more bad-debt risk, decided by a few voters. Track governance for markets you're in. It changes your risk without you doing anything."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Governance forum/alerts followed for protocols I use",
     "Voting concentration checked",
     "Timelock length known"
    ],
-   "vo": "Your checklist. Governance forum/alerts followed for protocols I use Voting concentration checked Timelock length known",
-   "cap": "Governance forum/alerts followed for protocols I use Voting concentration checked Timelock length known"
+   "vo": "Here's your checklist. Do it now, for real. First, Governance forum/alerts followed for protocols I use. Next, Voting concentration checked. And finally, Timelock length known.",
+   "cap": "Here's your checklist. Do it now, for real. First, Governance forum/alerts followed for protocols I use. Next, Voting concentration checked. And finally, Timelock length known."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What's a governance attack?"
-   ],
-   "sub": "Answer: Using concentrated or borrowed voting power to pass harmful changes.",
-   "subAt": 0.62,
-   "vo": "What's a governance attack? ... Pause and think. ... The answer: Using concentrated or borrowed voting power to pass harmful changes.",
-   "cap": "What's a governance attack? Pause and think. The answer: Using concentrated or borrowed voting power to pass harmful changes."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "What's a governance attack?",
+   "a": "Using concentrated or borrowed voting power to pass harmful changes.",
+   "vo": "Question one. What's a governance attack? [[pause 4]] The answer: Using concentrated or borrowed voting power to pass harmful changes.",
+   "cap": "Question 1. What's a governance attack? The answer: Using concentrated or borrowed voting power to pass harmful changes."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why follow governance as a user?"
-   ],
-   "sub": "Answer: Parameter changes alter your risk.",
-   "subAt": 0.62,
-   "vo": "Why follow governance as a user? ... Pause and think. ... The answer: Parameter changes alter your risk.",
-   "cap": "Why follow governance as a user? Pause and think. The answer: Parameter changes alter your risk."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Why follow governance as a user?",
+   "a": "Parameter changes alter your risk.",
+   "vo": "Question two. Why follow governance as a user? [[pause 4]] The answer: Parameter changes alter your risk.",
+   "cap": "Question 2. Why follow governance as a user? The answer: Parameter changes alter your risk."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Order of the proposal lifecycle?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Order of the proposal lifecycle?",
+   "a": "Discussion → vote → timelock → execution.",
+   "vo": "Question three. Order of the proposal lifecycle? [[pause 4]] The answer: Discussion to vote to timelock to execution.",
+   "cap": "Question 3. Order of the proposal lifecycle? The answer: Discussion → vote → timelock → execution."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Governance tokens vote on parameters, upgrades and treasury",
+    "Proposal lifecycle: forum discussion → vote → timelock → execution",
+    "Delegation lets holders assign votes to representatives",
+    "Risks: low turnout, concentrated voting power, borrowed votes, rushed proposals, weak timelocks"
    ],
-   "sub": "Answer: Discussion → vote → timelock → execution.",
-   "subAt": 0.62,
-   "vo": "Order of the proposal lifecycle? ... Pause and think. ... The answer: Discussion to vote to timelock to execution.",
-   "cap": "Order of the proposal lifecycle? Pause and think. The answer: Discussion → vote → timelock → execution."
+   "vo": "Let's recap. Governance tokens vote on parameters, upgrades and treasury. Proposal lifecycle: forum discussion to vote to timelock to execution. Delegation lets holders assign votes to representatives. Risks: low turnout, concentrated voting power, borrowed votes, rushed proposals, weak timelocks.",
+   "cap": "Let's recap. Governance tokens vote on parameters, upgrades and treasury. Proposal lifecycle: forum discussion → vote → timelock → execution. Delegation lets holders assign votes to representatives. Risks: low turnout, concentrated voting power, borrowed votes, rushed proposals, weak timelocks."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 6.4",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson six point four: The on-chain research workflow.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 6.4: The on-chain research workflow."
   }
  ]
 }

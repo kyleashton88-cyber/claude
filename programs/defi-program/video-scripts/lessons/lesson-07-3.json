@@ -6,92 +6,109 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 7.3",
  "use": "Lesson 7.3 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Exchange flows",
+  "subtitle": "Lesson 7.3"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-07.png",
-   "eyebrow": "Lesson 7.3",
-   "vo": "Lesson seven point three. Exchange flows.",
-   "cap": "Lesson 7.3. Exchange flows."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 7 · On-Chain Analytics",
+   "num": "7.3",
+   "title": "Exchange flows",
    "sub": "Interpret exchange inflows and outflows with the right caveats.",
-   "vo": "Interpret exchange inflows and outflows with the right caveats.",
-   "cap": "Interpret exchange inflows and outflows with the right caveats."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Key ideas"
-   ],
-   "sub": "Inflows to exchanges may precede selling (or collateral posting, internal moves). Outflows may mean self-custody or DeFi use. Netflow = inflows − outflows. Exchange reserves on-chain aren't proof of solvency (liabilities aren't visible).",
-   "vo": "Inflows to exchanges may precede selling (or collateral posting, internal moves). Outflows may mean self-custody or DeFi use. Netflow = inflows minus outflows. Exchange reserves on-chain aren't proof of solvency (liabilities aren't visible).",
-   "cap": "Inflows to exchanges may precede selling (or collateral posting, internal moves). Outflows may mean self-custody or DeFi use. Netflow = inflows − outflows. Exchange reserves on-chain aren't proof of solvency (liabilities aren't visible)."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Worked example"
-   ],
-   "sub": "Netflow +20,000 ETH in a day. Before concluding \"selling pressure\": check if it's one exchange reshuffling, whether derivatives open interest rose (collateral), and whether price and volume confirm. One metric is a hypothesis, not a signal.",
-   "vo": "Netflow +20,000 ETH in a day. Before concluding \"selling pressure\": check if it's one exchange reshuffling, whether derivatives open interest rose (collateral), and whether price and volume confirm. One metric is a hypothesis, not a signal.",
-   "cap": "Netflow +20,000 ETH in a day. Before concluding \"selling pressure\": check if it's one exchange reshuffling, whether derivatives open interest rose (collateral), and whether price and volume confirm. One metric is a hypothesis, not a signal."
+   "vo": "Lesson seven point three. Exchange flows. By the end of this lesson, you'll be able to interpret exchange inflows and outflows with the right caveats.",
+   "cap": "Lesson 7.3. Exchange flows. By the end of this lesson, you'll be able to interpret exchange inflows and outflows with the right caveats."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "statement",
+   "chapter": "Key ideas",
+   "kicker": "Key ideas",
+   "lines": [
+    "Inflows to exchanges may precede selling (or collateral…"
+   ],
+   "sub": "Inflows to exchanges may precede selling (or collateral posting, internal moves). Outflows may mean self-custody or DeFi use. Netflow = inflows − outflows. Exchange reserves on-chain aren't proof of solvency (liabilities aren't visible).",
+   "vo": "Inflows to exchanges may precede selling (or collateral posting, internal moves). Outflows may mean self-custody or DeFi use. Netflow equals inflows minus outflows. Exchange reserves on-chain aren't proof of solvency (liabilities aren't visible).",
+   "cap": "Inflows to exchanges may precede selling (or collateral posting, internal moves). Outflows may mean self-custody or DeFi use. Netflow = inflows − outflows. Exchange reserves on-chain aren't proof of solvency (liabilities aren't visible)."
+  },
+  {
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Netflow +20,000 ETH in a day.",
+    "Before concluding \"selling pressure\"",
+    "One metric is a hypothesis, not a signal."
+   ],
+   "vo": "Let's work an example, step by step. Netflow +20,000 ETH in a day. Before concluding \"selling pressure\": check if it's one exchange reshuffling, whether derivatives open interest rose (collateral), and whether price and volume confirm. One metric is a hypothesis, not a signal.",
+   "cap": "Let's work an example, step by step. Netflow +20,000 ETH in a day. Before concluding \"selling pressure\": check if it's one exchange reshuffling, whether derivatives open interest rose (collateral), and whether price and volume confirm. One metric is a hypothesis, not a signal."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Flows cross-checked with price, volume and derivatives",
     "Internal exchange moves ruled out"
    ],
-   "vo": "Your checklist. Flows cross-checked with price, volume and derivatives Internal exchange moves ruled out",
-   "cap": "Flows cross-checked with price, volume and derivatives Internal exchange moves ruled out"
+   "vo": "Here's your checklist. Do it now, for real. First, Flows cross-checked with price, volume and derivatives. And finally, Internal exchange moves ruled out.",
+   "cap": "Here's your checklist. Do it now, for real. First, Flows cross-checked with price, volume and derivatives. And finally, Internal exchange moves ruled out."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What is netflow?"
-   ],
-   "sub": "Answer: Inflows minus outflows over a period.",
-   "subAt": 0.62,
-   "vo": "What is netflow? ... Pause and think. ... The answer: Inflows minus outflows over a period.",
-   "cap": "What is netflow? Pause and think. The answer: Inflows minus outflows over a period."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "What is netflow?",
+   "a": "Inflows minus outflows over a period.",
+   "vo": "Question one. What is netflow? [[pause 4]] The answer: Inflows minus outflows over a period.",
+   "cap": "Question 1. What is netflow? The answer: Inflows minus outflows over a period."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Do exchange reserves prove solvency?"
-   ],
-   "sub": "Answer: No. Liabilities aren't visible on-chain.",
-   "subAt": 0.62,
-   "vo": "Do exchange reserves prove solvency? ... Pause and think. ... The answer: No. Liabilities aren't visible on-chain.",
-   "cap": "Do exchange reserves prove solvency? Pause and think. The answer: No. Liabilities aren't visible on-chain."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Do exchange reserves prove solvency?",
+   "a": "No. Liabilities aren't visible on-chain.",
+   "vo": "Question two. Do exchange reserves prove solvency? [[pause 4]] The answer: No. Liabilities aren't visible on-chain.",
+   "cap": "Question 2. Do exchange reserves prove solvency? The answer: No. Liabilities aren't visible on-chain."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Is a large inflow always bearish?"
-   ],
-   "sub": "Answer: No. It can be collateral or an internal move.",
-   "subAt": 0.62,
-   "vo": "Is a large inflow always bearish? ... Pause and think. ... The answer: No. It can be collateral or an internal move.",
-   "cap": "Is a large inflow always bearish? Pause and think. The answer: No. It can be collateral or an internal move."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Is a large inflow always bearish?",
+   "a": "No. It can be collateral or an internal move.",
+   "vo": "Question three. Is a large inflow always bearish? [[pause 4]] The answer: No. It can be collateral or an internal move.",
+   "cap": "Question 3. Is a large inflow always bearish? The answer: No. It can be collateral or an internal move."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 7.4",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson seven point four: Whale and entity analysis.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 7.4: Whale & entity analysis."
   }
  ]
 }

@@ -6,97 +6,127 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 6.2",
  "use": "Lesson 6.2 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Tokenomics",
+  "subtitle": "Lesson 6.2"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-06.png",
-   "eyebrow": "Lesson 6.2",
-   "vo": "Lesson six point two. Tokenomics: supply, unlocks, F.D.V., value capture.",
-   "cap": "Lesson 6.2. Tokenomics: supply, unlocks, FDV, value capture."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 6 · Protocol Research",
+   "num": "6.2",
+   "title": "Tokenomics: supply, unlocks, FDV, value capture",
    "sub": "Read a token's supply schedule and judge whether protocol success reaches the token.",
-   "vo": "Read a token's supply schedule and judge whether protocol success reaches the token.",
-   "cap": "Read a token's supply schedule and judge whether protocol success reaches the token."
+   "vo": "Lesson six point two. Tokenomics: supply, unlocks, F.D.V., value capture. By the end of this lesson, you'll be able to read a token's supply schedule and judge whether protocol success reaches the token.",
+   "cap": "Lesson 6.2. Tokenomics: supply, unlocks, FDV, value capture. By the end of this lesson, you'll be able to read a token's supply schedule and judge whether protocol success reaches the token."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Circulating supply",
-    "Market cap = price × circulating. FDV (fully diluted valuation) = price × max supply.",
+    "Market cap = price × circulating",
     "Unlocks/vesting",
     "Emissions",
     "Value capture"
    ],
-   "vo": "Circulating supply: tokens tradable now. Max/total supply: all that will exist. Market cap = price times circulating. F.D.V. (fully diluted valuation) = price times max supply. Unlocks/vesting: team and investor tokens released on a schedule; new supply that may be sold. Emissions: ongoing new tokens (rewards). Value capture: does protocol revenue actually reach token holders (fee share, buybacks), and how is it enforced?",
-   "cap": "Circulating supply: tokens tradable now. Max/total supply: all that will exist. Market cap = price × circulating. FDV (fully diluted valuation) = price × max supply. Unlocks/vesting: team and investor tokens released on a schedule; new supply that may be sold. Emissions: ongoing new tokens (rewards). Value capture: does protocol revenue actually reach token holders (fee share, buybacks), and how is it enforced?"
+   "vo": "First, Circulating supply: tokens tradable now. Max/total supply: all that will exist. Next, Market cap equals price times circulating. F.D.V. (fully diluted valuation) = price times max supply. Then, Unlocks/vesting: team and investor tokens released on a schedule; new supply that may be sold. Also, Emissions: ongoing new tokens (rewards). And finally, Value capture: does protocol revenue actually reach token holders (fee share, buybacks), and how is it enforced?",
+   "cap": "First, Circulating supply: tokens tradable now. Max/total supply: all that will exist. Next, Market cap = price × circulating. FDV (fully diluted valuation) = price × max supply. Then, Unlocks/vesting: team and investor tokens released on a schedule; new supply that may be sold. Also, Emissions: ongoing new tokens (rewards). And finally, Value capture: does protocol revenue actually reach token holders (fee share, buybacks), and how is it enforced?"
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Price $2, circulating 100M, max 1B",
+    "Next month 50M unlock",
+    "Unless demand grows to match, that's heavy selling pressure.",
+    "A low market cap with a huge FDV is a warning."
    ],
-   "sub": "Price $2, circulating 100M, max 1B: market cap $200M, FDV $2B. Next month 50M unlock: circulating supply rises 50%. Unless demand grows to match, that's heavy selling pressure. A low market cap with a huge FDV is a warning.",
-   "vo": "Price $2, circulating 100M, max 1B: market cap $200M, F.D.V. $2B. Next month 50M unlock: circulating supply rises 50%. Unless demand grows to match, that's heavy selling pressure. A low market cap with a huge F.D.V. is a warning.",
-   "cap": "Price $2, circulating 100M, max 1B: market cap $200M, FDV $2B. Next month 50M unlock: circulating supply rises 50%. Unless demand grows to match, that's heavy selling pressure. A low market cap with a huge FDV is a warning."
+   "vo": "Let's work an example, step by step. Price $2, circulating 100M, max 1B: market cap $200M, F.D.V. $2B. Next month 50M unlock: circulating supply rises 50%. Unless demand grows to match, that's heavy selling pressure. A low market cap with a huge F.D.V. is a warning.",
+   "cap": "Let's work an example, step by step. Price $2, circulating 100M, max 1B: market cap $200M, FDV $2B. Next month 50M unlock: circulating supply rises 50%. Unless demand grows to match, that's heavy selling pressure. A low market cap with a huge FDV is a warning."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Market cap vs FDV compared",
     "Next 12 months of unlocks listed",
     "Value-capture mechanism identified (or \"none\")"
    ],
-   "vo": "Your checklist. Market cap versus F.D.V. compared Next 12 months of unlocks listed Value-capture mechanism identified (or \"none\")",
-   "cap": "Market cap vs FDV compared Next 12 months of unlocks listed Value-capture mechanism identified (or \"none\")"
+   "vo": "Here's your checklist. Do it now, for real. First, Market cap versus F.D.V. compared. Next, Next 12 months of unlocks listed. And finally, Value-capture mechanism identified (or \"none\").",
+   "cap": "Here's your checklist. Do it now, for real. First, Market cap vs FDV compared. Next, Next 12 months of unlocks listed. And finally, Value-capture mechanism identified (or \"none\")."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Price $5, circulating 20M, max 100M. FDV?"
-   ],
-   "sub": "Answer: $500M.",
-   "subAt": 0.62,
-   "vo": "Price $5, circulating 20M, max 100M. F.D.V.? ... Pause and think. ... The answer: $500M.",
-   "cap": "Price $5, circulating 20M, max 100M. FDV? Pause and think. The answer: $500M."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "Price $5, circulating 20M, max 100M. FDV?",
+   "a": "$500M.",
+   "vo": "Question one. Price $5, circulating 20M, max 100M. F.D.V.? [[pause 4]] The answer: $500M.",
+   "cap": "Question 1. Price $5, circulating 20M, max 100M. FDV? The answer: $500M."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why do unlocks matter?"
-   ],
-   "sub": "Answer: They add supply that recipients may sell.",
-   "subAt": 0.62,
-   "vo": "Why do unlocks matter? ... Pause and think. ... The answer: They add supply that recipients may sell.",
-   "cap": "Why do unlocks matter? Pause and think. The answer: They add supply that recipients may sell."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Why do unlocks matter?",
+   "a": "They add supply that recipients may sell.",
+   "vo": "Question two. Why do unlocks matter? [[pause 4]] The answer: They add supply that recipients may sell.",
+   "cap": "Question 2. Why do unlocks matter? The answer: They add supply that recipients may sell."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What is value capture?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "What is value capture?",
+   "a": "An enforceable way protocol success benefits the token.",
+   "vo": "Question three. What is value capture? [[pause 4]] The answer: An enforceable way protocol success benefits the token.",
+   "cap": "Question 3. What is value capture? The answer: An enforceable way protocol success benefits the token."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Circulating supply: tokens tradable now",
+    "Market cap = price × circulating",
+    "Unlocks/vesting: team and investor tokens released on a schedule",
+    "Emissions: ongoing new tokens (rewards)"
    ],
-   "sub": "Answer: An enforceable way protocol success benefits the token.",
-   "subAt": 0.62,
-   "vo": "What is value capture? ... Pause and think. ... The answer: An enforceable way protocol success benefits the token.",
-   "cap": "What is value capture? Pause and think. The answer: An enforceable way protocol success benefits the token."
+   "vo": "Let's recap. Circulating supply: tokens tradable now. Market cap equals price times circulating. Unlocks/vesting: team and investor tokens released on a schedule. Emissions: ongoing new tokens (rewards).",
+   "cap": "Let's recap. Circulating supply: tokens tradable now. Market cap = price × circulating. Unlocks/vesting: team and investor tokens released on a schedule. Emissions: ongoing new tokens (rewards)."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 6.3",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson six point three: Governance and DAOs.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 6.3: Governance & DAOs."
   }
  ]
 }

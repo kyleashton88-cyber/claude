@@ -6,56 +6,76 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 1.9",
  "use": "Lesson 1.9 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Smart accounts and account abstraction",
+  "subtitle": "Lesson 1.9"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-01.png",
-   "eyebrow": "Lesson 1.9",
-   "vo": "Lesson one point nine. Smart accounts and account abstraction.",
-   "cap": "Lesson 1.9. Smart accounts and account abstraction."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 1 · Foundations & Safety",
+   "num": "1.9",
+   "title": "Smart accounts and account abstraction",
    "sub": "Understand how smart accounts change wallet security, and use their features without adding new risks.",
-   "vo": "Understand how smart accounts change wallet security, and use their features without adding new risks.",
-   "cap": "Understand how smart accounts change wallet security, and use their features without adding new risks."
-  },
-  {
-   "type": "image",
-   "src": "assets/diagrams/three-wallets.png",
-   "eyebrow": "The 3-wallet setup",
-   "vo": "Here's the picture: The 3-wallet setup.",
-   "cap": "The 3-wallet setup."
+   "vo": "Lesson one point nine. Smart accounts and account abstraction. By the end of this lesson, you'll be able to understand how smart accounts change wallet security, and use their features without adding new risks.",
+   "cap": "Lesson 1.9. Smart accounts and account abstraction. By the end of this lesson, you'll be able to understand how smart accounts change wallet security, and use their features without adding new risks."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
-    "A normal wallet (an EOA, externally owned account) is controlled by one private key. A…",
+    "A normal wallet (an EOA, externally owned account) is controlled by one private key",
     "ERC-4337 (account abstraction)",
     "Features",
     "EIP-7702 (2025)",
     "New risks"
    ],
-   "vo": "A normal wallet (an EOA, externally owned account) is controlled by one private key. A smart account is a contract wallet whose rules you choose. ERC-4337 (account abstraction): smart accounts without changing Ethereum itself. Transactions become \"user operations\" handled by bundlers; paymasters can pay gas for you (for example in U.S.D.C.). Features: multisig and social recovery (trusted \"guardians\" can restore access), spending limits, session keys (Lesson 14.2), batching (approve + swap in one step), passkeys (log in with your device's biometrics instead of a seed phrase). EIP-7702 (2025): lets an ordinary wallet temporarily or permanently delegate to smart-account code: powerful, and a phishing target (Lesson 1.7). New risks: the account's contract code, module/plugin permissions, guardian collusion, and differences between chains (the same address may not exist on every chain).",
-   "cap": "A normal wallet (an EOA, externally owned account) is controlled by one private key. A smart account is a contract wallet whose rules you choose. ERC-4337 (account abstraction): smart accounts without changing Ethereum itself. Transactions become \"user operations\" handled by bundlers; paymasters can pay gas for you (e.g. in USDC). Features: multisig and social recovery (trusted \"guardians\" can restore access), spending limits, session keys (Lesson 14.2), batching (approve + swap in one step), passkeys (log in with your device's biometrics instead of a seed phrase). EIP-7702 (2025): lets an ordinary wallet temporarily or permanently delegate to smart-account code: powerful, and a phishing target (Lesson 1.7). New risks: the account's contract code, module/plugin permissions, guardian collusion, and differences between chains (the same address may not exist on every chain)."
+   "vo": "First, A normal wallet (an EOA, externally owned account) is controlled by one private key. A smart account is a contract wallet whose rules you choose. Next, ERC-4337 (account abstraction): smart accounts without changing Ethereum itself. Transactions become \"user operations\" handled by bundlers; paymasters can pay gas for you (for example in U.S.D.C.). Then, Features: multisig and social recovery (trusted \"guardians\" can restore access), spending limits, session keys (Lesson 14.2), batching (approve + swap in one step), passkeys (log in with your device's biometrics instead of a seed phrase). Also, EIP-7702 (2025): lets an ordinary wallet temporarily or permanently delegate to smart-account code: powerful, and a phishing target (Lesson 1.7). And finally, New risks: the account's contract code, module/plugin permissions, guardian collusion, and differences between chains (the same address may not exist on every chain).",
+   "cap": "First, A normal wallet (an EOA, externally owned account) is controlled by one private key. A smart account is a contract wallet whose rules you choose. Next, ERC-4337 (account abstraction): smart accounts without changing Ethereum itself. Transactions become \"user operations\" handled by bundlers; paymasters can pay gas for you (e.g. in USDC). Then, Features: multisig and social recovery (trusted \"guardians\" can restore access), spending limits, session keys (Lesson 14.2), batching (approve + swap in one step), passkeys (log in with your device's biometrics instead of a seed phrase). Also, EIP-7702 (2025): lets an ordinary wallet temporarily or permanently delegate to smart-account code: powerful, and a phishing target (Lesson 1.7). And finally, New risks: the account's contract code, module/plugin permissions, guardian collusion, and differences between chains (the same address may not exist on every chain)."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "image",
+   "chapter": "Key ideas",
+   "src": "assets/diagrams/three-wallets.png",
+   "eyebrow": "The 3-wallet setup",
+   "wide": true,
+   "vo": "Let's look at the diagram: The 3-wallet setup. Take a moment with it. It's everything we've just said, in one picture.",
+   "cap": "Let's look at the diagram: The 3-wallet setup. Take a moment with it. It's everything we've just said, in one picture."
+  },
+  {
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "Your operating wallet becomes a smart account with",
+    "Lose your phone",
+    "Phone stolen"
    ],
-   "sub": "Your operating wallet becomes a smart account with: a passkey on your phone plus a hardware key (2-of-2 for large moves); a $2,000/day limit for small moves with just the passkey; 3 guardians (2-of-3) who can recover access after a 48-hour delay you can cancel",
-   "vo": "Your operating wallet becomes a smart account with: a passkey on your phone plus a hardware key (2-of-2 for large moves); a $2,000 a day limit for small moves with just the passkey; 3 guardians (2-of-3) who can recover access after a 48-hour delay you can cancel. Lose your phone: recover via guardians. Phone stolen: the thief is capped at $2,000 a day and you have 48 hours to cancel a recovery you didn't start.",
-   "cap": "Your operating wallet becomes a smart account with: a passkey on your phone plus a hardware key (2-of-2 for large moves); a $2,000/day limit for small moves with just the passkey; 3 guardians (2-of-3) who can recover access after a 48-hour delay you can cancel. Lose your phone: recover via guardians. Phone stolen: the thief is capped at $2,000/day and you have 48 hours to cancel a recovery you didn't start."
+   "vo": "Let's work an example, step by step. Your operating wallet becomes a smart account with: a passkey on your phone plus a hardware key (2-of-2 for large moves); a $2,000 a day limit for small moves with just the passkey; 3 guardians (2-of-3) who can recover access after a 48-hour delay you can cancel. Lose your phone: recover via guardians. Phone stolen: the thief is capped at $2,000 a day and you have 48 hours to cancel a recovery you didn't start.",
+   "cap": "Let's work an example, step by step. Your operating wallet becomes a smart account with: a passkey on your phone plus a hardware key (2-of-2 for large moves); a $2,000/day limit for small moves with just the passkey; 3 guardians (2-of-3) who can recover access after a 48-hour delay you can cancel. Lose your phone: recover via guardians. Phone stolen: the thief is capped at $2,000/day and you have 48 hours to cancel a recovery you didn't start."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "I know which of my wallets are EOAs and which are smart accounts",
@@ -63,48 +83,59 @@
     "Module/plugin permissions reviewed like approvals",
     "Smart account deployed (or deployable) on every chain I send to"
    ],
-   "vo": "Your checklist. I know which of my wallets are EOAs and which are smart accounts Guardians chosen so no two could plausibly collude; recovery has a cancel delay Module/plugin permissions reviewed like approvals Smart account deployed (or deployable) on every chain I send to",
-   "cap": "I know which of my wallets are EOAs and which are smart accounts Guardians chosen so no two could plausibly collude; recovery has a cancel delay Module/plugin permissions reviewed like approvals Smart account deployed (or deployable) on every chain I send to"
+   "vo": "Here's your checklist. Do it now, for real. First, I know which of my wallets are EOAs and which are smart accounts. Next, Guardians chosen so no two could plausibly collude; recovery has a cancel delay. Then, Module/plugin permissions reviewed like approvals. And finally, Smart account deployed (or deployable) on every chain I send to.",
+   "cap": "Here's your checklist. Do it now, for real. First, I know which of my wallets are EOAs and which are smart accounts. Next, Guardians chosen so no two could plausibly collude; recovery has a cancel delay. Then, Module/plugin permissions reviewed like approvals. And finally, Smart account deployed (or deployable) on every chain I send to."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What does a paymaster do?"
-   ],
-   "sub": "Answer: Pays gas on your behalf, e.g. letting you pay fees in USDC.",
-   "subAt": 0.62,
-   "vo": "What does a paymaster do? ... Pause and think. ... The answer: Pays gas on your behalf, for example letting you pay fees in U.S.D.C..",
-   "cap": "What does a paymaster do? Pause and think. The answer: Pays gas on your behalf, e.g. letting you pay fees in USDC."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "What does a paymaster do?",
+   "a": "Pays gas on your behalf, e.g. letting you pay fees in USDC.",
+   "vo": "Question one. What does a paymaster do? [[pause 4]] The answer: Pays gas on your behalf, for example letting you pay fees in U.S.D.C.",
+   "cap": "Question 1. What does a paymaster do? The answer: Pays gas on your behalf, e.g. letting you pay fees in USDC."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What is social recovery?"
-   ],
-   "sub": "Answer: Trusted guardians can restore access to your account, usually after a delay.",
-   "subAt": 0.62,
-   "vo": "What is social recovery? ... Pause and think. ... The answer: Trusted guardians can restore access to your account, usually after a delay.",
-   "cap": "What is social recovery? Pause and think. The answer: Trusted guardians can restore access to your account, usually after a delay."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "What is social recovery?",
+   "a": "Trusted guardians can restore access to your account, usually after a delay.",
+   "vo": "Question two. What is social recovery? [[pause 4]] The answer: Trusted guardians can restore access to your account, usually after a delay.",
+   "cap": "Question 2. What is social recovery? The answer: Trusted guardians can restore access to your account, usually after a delay."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why check the smart account exists on the destination chain?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Why check the smart account exists on the destination chain?",
+   "a": "Smart-account addresses may not be deployed on every chain; funds sent there may be hard to access.",
+   "vo": "Question three. Why check the smart account exists on the destination chain? [[pause 4]] The answer: Smart-account addresses may not be deployed on every chain; funds sent there may be hard to access.",
+   "cap": "Question 3. Why check the smart account exists on the destination chain? The answer: Smart-account addresses may not be deployed on every chain; funds sent there may be hard to access."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "A normal wallet (an EOA, externally owned account) is controlled by one private key",
+    "ERC-4337 (account abstraction): smart accounts without changing Ethereum itself",
+    "Features: multisig and social recovery (trusted \"guardians\" can restore access), spending limits",
+    "EIP-7702 (2025): lets an ordinary wallet temporarily or permanently delegate to smart-account code"
    ],
-   "sub": "Answer: Smart-account addresses may not be deployed on every chain; funds sent there may be hard to access.",
-   "subAt": 0.62,
-   "vo": "Why check the smart account exists on the destination chain? ... Pause and think. ... The answer: Smart-account addresses may not be deployed on every chain; funds sent there may be hard to access.",
-   "cap": "Why check the smart account exists on the destination chain? Pause and think. The answer: Smart-account addresses may not be deployed on every chain; funds sent there may be hard to access."
+   "vo": "Let's recap. A normal wallet (an EOA, externally owned account) is controlled by one private key. ERC-4337 (account abstraction): smart accounts without changing Ethereum itself. Features: multisig and social recovery (trusted \"guardians\" can restore access), spending limits. EIP-7702 (2025): lets an ordinary wallet temporarily or permanently delegate to smart-account code.",
+   "cap": "Let's recap. A normal wallet (an EOA, externally owned account) is controlled by one private key. ERC-4337 (account abstraction): smart accounts without changing Ethereum itself. Features: multisig and social recovery (trusted \"guardians\" can restore access), spending limits. EIP-7702 (2025): lets an ordinary wallet temporarily or permanently delegate to smart-account code."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 2.0",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson two point zero: Mastery Starter.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 2.0: Mastery Starter."
   }
  ]
 }

@@ -6,27 +6,41 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 8.5",
  "use": "Lesson 8.5 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Measuring performance honestly",
+  "subtitle": "Lesson 8.5"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-08.png",
-   "eyebrow": "Lesson 8.5",
-   "vo": "Lesson eight point five. Measuring performance honestly.",
-   "cap": "Lesson 8.5. Measuring performance honestly."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 8 · The DeFi Operating System",
+   "num": "8.5",
+   "title": "Measuring performance honestly",
    "sub": "Measure your results so deposits, withdrawals and lucky markets don't fool you.",
-   "vo": "Measure your results so deposits, withdrawals and lucky markets don't fool you.",
-   "cap": "Measure your results so deposits, withdrawals and lucky markets don't fool you."
+   "vo": "Lesson eight point five. Measuring performance honestly. By the end of this lesson, you'll be able to measure your results so deposits, withdrawals and lucky markets don't fool you.",
+   "cap": "Lesson 8.5. Measuring performance honestly. By the end of this lesson, you'll be able to measure your results so deposits, withdrawals and lucky markets don't fool you."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Key ideas",
    "title": "Key ideas",
    "items": [
     "Time-weighted return (TWR)",
@@ -34,69 +48,81 @@
     "Benchmark",
     "Attribution"
    ],
-   "vo": "Time-weighted return (time-weighted return): chains the return of each period, ignoring when you added or removed money. It measures your decisions. Money-weighted / simple gain: what your total capital actually did, including the timing of deposits. Benchmark: compare against what you'd have got doing something simple: holding the same assets, or plain stablecoin lending. Beating zero isn't the test. Attribution: split the result into sources: price moves, fees, interest, incentives, costs, losses. Only the parts you control show skill.",
-   "cap": "Time-weighted return (TWR): chains the return of each period, ignoring when you added or removed money. It measures your decisions. Money-weighted / simple gain: what your total capital actually did, including the timing of deposits. Benchmark: compare against what you'd have got doing something simple: holding the same assets, or plain stablecoin lending. Beating zero isn't the test. Attribution: split the result into sources: price moves, fees, interest, incentives, costs, losses. Only the parts you control show skill."
+   "vo": "First, Time-weighted return (time-weighted return): chains the return of each period, ignoring when you added or removed money. It measures your decisions. Next, Money-weighted or simple gain: what your total capital actually did, including the timing of deposits. Then, Benchmark: compare against what you'd have got doing something simple: holding the same assets, or plain stablecoin lending. Beating zero isn't the test. And finally, Attribution: split the result into sources: price moves, fees, interest, incentives, costs, losses. Only the parts you control show skill.",
+   "cap": "First, Time-weighted return (TWR): chains the return of each period, ignoring when you added or removed money. It measures your decisions. Next, Money-weighted / simple gain: what your total capital actually did, including the timing of deposits. Then, Benchmark: compare against what you'd have got doing something simple: holding the same assets, or plain stablecoin lending. Beating zero isn't the test. And finally, Attribution: split the result into sources: price moves, fees, interest, incentives, costs, losses. Only the parts you control show skill."
   },
   {
-   "type": "bullets",
-   "title": "Worked example",
-   "items": [
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example: Start $100,000 → +10% in Q1 ($110,000) → deposit…",
+   "steps": [
     "TWR",
     "Simple gain on $150,000 put in"
    ],
-   "vo": "Start $100,000 to +10% in Q1 ($110,000) to deposit $50,000 ($160,000) to minus 5% in Q2 to $152,000. the calculator Then compare 4.50% with holding ETH over the same period, and with stablecoin lending. time-weighted return: 1.10 times 0.95 minus 1 = 4.50% (your decisions) Simple gain on $150,000 put in: 1.33% (hurt by the deposit landing before a down quarter)",
-   "cap": "TWR: 1.10 × 0.95 − 1 = 4.50% (your decisions) Simple gain on $150,000 put in: 1.33% (hurt by the deposit landing before a down quarter)"
+   "vo": "Let's work an example, step by step. Start $100,000 to +10% in Q1 ($110,000) to deposit $50,000 ($160,000) to minus 5% in Q2 to $152,000. the calculator Then compare 4.50% with holding ETH over the same period, and with stablecoin lending. time-weighted return: 1.10 times 0.95 minus 1 equals 4.50% (your decisions). Simple gain on $150,000 put in: 1.33% (hurt by the deposit landing before a down quarter)."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "TWR calculated quarterly",
     "Benchmark chosen and compared",
     "Results attributed by source"
    ],
-   "vo": "Your checklist. time-weighted return calculated quarterly Benchmark chosen and compared Results attributed by source",
-   "cap": "TWR calculated quarterly Benchmark chosen and compared Results attributed by source"
+   "vo": "Here's your checklist. Do it now, for real. First, time-weighted return calculated quarterly. Next, Benchmark chosen and compared. And finally, Results attributed by source.",
+   "cap": "Here's your checklist. Do it now, for real. First, TWR calculated quarterly. Next, Benchmark chosen and compared. And finally, Results attributed by source."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "What does TWR remove?"
-   ],
-   "sub": "Answer: The effect of when deposits and withdrawals happened.",
-   "subAt": 0.62,
-   "vo": "What does time-weighted return remove? ... Pause and think. ... The answer: The effect of when deposits and withdrawals happened.",
-   "cap": "What does TWR remove? Pause and think. The answer: The effect of when deposits and withdrawals happened."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "What does TWR remove?",
+   "a": "The effect of when deposits and withdrawals happened.",
+   "vo": "Question one. What does time-weighted return remove? [[pause 4]] The answer: The effect of when deposits and withdrawals happened.",
+   "cap": "Question 1. What does TWR remove? The answer: The effect of when deposits and withdrawals happened."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Why use a benchmark?"
-   ],
-   "sub": "Answer: To see whether the strategy beat doing something simple, not just beat zero.",
-   "subAt": 0.62,
-   "vo": "Why use a benchmark? ... Pause and think. ... The answer: To see whether the strategy beat doing something simple, not just beat zero.",
-   "cap": "Why use a benchmark? Pause and think. The answer: To see whether the strategy beat doing something simple, not just beat zero."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Why use a benchmark?",
+   "a": "To see whether the strategy beat doing something simple, not just beat zero.",
+   "vo": "Question two. Why use a benchmark? [[pause 4]] The answer: To see whether the strategy beat doing something simple, not just beat zero.",
+   "cap": "Question 2. Why use a benchmark? The answer: To see whether the strategy beat doing something simple, not just beat zero."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Two quarters, +8% then +2%. TWR?"
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Two quarters, +8% then +2%. TWR?",
+   "a": "1.08 × 1.02 − 1 = 10.16%.",
+   "vo": "Question three. Two quarters, +8% then +2%. time-weighted return? [[pause 4]] The answer: 1.08 times 1.02 minus 1 equals 10.16%.",
+   "cap": "Question 3. Two quarters, +8% then +2%. TWR? The answer: 1.08 × 1.02 − 1 = 10.16%."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "items": [
+    "Time-weighted return (TWR): chains the return of each period",
+    "Money-weighted / simple gain: what your total capital actually did, including the timing of deposits",
+    "Benchmark: compare against what you'd have got doing something simple",
+    "Attribution: split the result into sources"
    ],
-   "sub": "Answer: 1.08 × 1.02 − 1 = 10.16%.",
-   "subAt": 0.62,
-   "vo": "Two quarters, +8% then +2%. time-weighted return? ... Pause and think. ... The answer: 1.08 times 1.02 minus 1 = 10.16%.",
-   "cap": "Two quarters, +8% then +2%. TWR? Pause and think. The answer: 1.08 × 1.02 − 1 = 10.16%."
+   "vo": "Let's recap. Time-weighted return (time-weighted return): chains the return of each period. Money-weighted or simple gain: what your total capital actually did, including the timing of deposits. Benchmark: compare against what you'd have got doing something simple. Attribution: split the result into sources.",
+   "cap": "Let's recap. Time-weighted return (TWR): chains the return of each period. Money-weighted / simple gain: what your total capital actually did, including the timing of deposits. Benchmark: compare against what you'd have got doing something simple. Attribution: split the result into sources."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Recap",
+   "button": "Next: Lesson 8.6",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson eight point six: Psychology and discipline.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 8.6: Psychology and discipline."
   }
  ]
 }

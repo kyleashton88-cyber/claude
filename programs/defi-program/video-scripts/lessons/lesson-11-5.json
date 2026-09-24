@@ -6,95 +6,113 @@
   1080
  ],
  "group": "lessons",
+ "tag": "Lesson 11.5",
  "use": "Lesson 11.5 page in the Whop course.",
  "maxMinutes": 25,
+ "thumbnail": {
+  "title": "Incident response",
+  "subtitle": "Lesson 11.5"
+ },
  "scenes": [
   {
-   "type": "image",
-   "src": "assets/modules/module-11.png",
-   "eyebrow": "Lesson 11.5",
-   "vo": "Lesson eleven point five. Incident response: the first 60 minutes.",
-   "cap": "Lesson 11.5. Incident response: the first 60 minutes."
-  },
-  {
-   "type": "statement",
-   "lines": [
-    "Objective"
-   ],
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Module 11 · Hedging & Risk Engineering",
+   "num": "11.5",
+   "title": "Incident response: the first 60 minutes",
    "sub": "Know exactly what to do when a protocol you use is exploited, a stablecoin depegs, or your wallet is compromised.",
-   "vo": "Know exactly what to do when a protocol you use is exploited, a stablecoin depegs, or your wallet is compromised.",
-   "cap": "Know exactly what to do when a protocol you use is exploited, a stablecoin depegs, or your wallet is compromised."
+   "vo": "Lesson eleven point five. Incident response: the first 60 minutes. By the end of this lesson, you'll be able to know exactly what to do when a protocol you use is exploited, a stablecoin depegs, or your wallet is compromised.",
+   "cap": "Lesson 11.5. Incident response: the first 60 minutes. By the end of this lesson, you'll be able to know exactly what to do when a protocol you use is exploited, a stablecoin depegs, or your wallet is compromised."
   },
   {
    "type": "bullets",
+   "chapter": "Plan",
+   "title": "The plan",
+   "numbered": true,
+   "items": [
+    "Key ideas",
+    "Worked example",
+    "Checklist",
+    "Quiz"
+   ],
+   "vo": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz.",
+   "cap": "Here's the plan. First, the key ideas. Then, a worked example, step by step. Then, your checklist. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Explanation — the 60-minute playbook",
    "title": "Explanation — the 60-minute playbook",
    "items": [
     "Protocol exploit",
     "Depeg",
     "Wallet compromise"
    ],
-   "vo": "0–5 min: Verify. Official channels only (bookmarked X/Discord/status page, security firms). Don't click links in DMs, and don't sign anything \"to protect funds\". 5–20 min: Contain. 20–60 min: Stabilise. Check HFs across all positions (prices may be moving), top up from the reserve, and journal every action with timestamps. After: Review. What was the signal, what worked, and what changes in the caps and the register? Protocol exploit: withdraw if still possible and safe; revoke approvals to affected contracts. Depeg: follow your written peg rule (for example exit below 0.99 for X hours); don't panic-sell far below it on a thin book. Wallet compromise: move remaining assets to a fresh wallet (new seed, clean device); revoke approvals; assume the old seed is burned.",
-   "cap": "Protocol exploit: withdraw if still possible and safe; revoke approvals to affected contracts. Depeg: follow your written peg rule (e.g. exit below 0.99 for X hours); don't panic-sell far below it on a thin book. Wallet compromise: move remaining assets to a fresh wallet (new seed, clean device); revoke approvals; assume the old seed is burned."
+   "vo": "0 to 5 min: Verify. Official channels only (bookmarked X/Discord/status page, security firms). Don't click links in DMs, and don't sign anything \"to protect funds\". 5 to 20 min: Contain. 20 to 60 min: Stabilise. Check HFs across all positions (prices may be moving), top up from the reserve, and journal every action with timestamps. After: Review. What was the signal, what worked, and what changes in the caps and the register? First, Protocol exploit: withdraw if still possible and safe; revoke approvals to affected contracts. Next, Depeg: follow your written peg rule (for example exit below 0.99 for X hours); don't panic-sell far below it on a thin book. And finally, Wallet compromise: move remaining assets to a fresh wallet (new seed, clean device); revoke approvals; assume the old seed is burned.",
+   "cap": "0–5 min: Verify. Official channels only (bookmarked X/Discord/status page, security firms). Don't click links in DMs, and don't sign anything \"to protect funds\". 5–20 min: Contain. 20–60 min: Stabilise. Check HFs across all positions (prices may be moving), top up from the reserve, and journal every action with timestamps. After: Review. What was the signal, what worked, and what changes in the caps and the register? First, Protocol exploit: withdraw if still possible and safe; revoke approvals to affected contracts. Next, Depeg: follow your written peg rule (e.g. exit below 0.99 for X hours); don't panic-sell far below it on a thin book. And finally, Wallet compromise: move remaining assets to a fresh wallet (new seed, clean device); revoke approvals; assume the old seed is burned."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Worked example"
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Worked example",
+   "steps": [
+    "A lending protocol you use announces a paused market after an exploit.",
+    "You verify on its bookmarked status page, see withdrawals still work on…",
+    "Total time",
+    "Loss",
+    "Because the steps were written in advance."
    ],
-   "sub": "A lending protocol you use announces a paused market after an exploit. You verify on its bookmarked status page, see withdrawals still work on unaffected markets, withdraw your USDC, revoke the pool approval, check your other HFs, and journal it. Total time: 2",
-   "vo": "A lending protocol you use announces a paused market after an exploit. You verify on its bookmarked status page, see withdrawals still work on unaffected markets, withdraw your U.S.D.C., revoke the pool approval, check your other HFs, and journal it. Total time: 25 minutes. Loss: none. Because the steps were written in advance.",
-   "cap": "A lending protocol you use announces a paused market after an exploit. You verify on its bookmarked status page, see withdrawals still work on unaffected markets, withdraw your USDC, revoke the pool approval, check your other HFs, and journal it. Total time: 25 minutes. Loss: none. Because the steps were written in advance."
+   "vo": "Let's work an example, step by step. A lending protocol you use announces a paused market after an exploit. You verify on its bookmarked status page, see withdrawals still work on unaffected markets, withdraw your U.S.D.C., revoke the pool approval, check your other HFs, and journal it. Total time: 25 minutes. Loss: none. Because the steps were written in advance.",
+   "cap": "Let's work an example, step by step. A lending protocol you use announces a paused market after an exploit. You verify on its bookmarked status page, see withdrawals still work on unaffected markets, withdraw your USDC, revoke the pool approval, check your other HFs, and journal it. Total time: 25 minutes. Loss: none. Because the steps were written in advance."
   },
   {
    "type": "bullets",
+   "chapter": "Checklist",
    "title": "Checklist",
    "items": [
     "Incident playbook printed/saved offline",
     "Official channels bookmarked for every protocol I use",
     "A clean \"fresh wallet\" procedure written"
    ],
-   "vo": "Your checklist. Incident playbook printed/saved offline Official channels bookmarked for every protocol I use A clean \"fresh wallet\" procedure written",
-   "cap": "Incident playbook printed/saved offline Official channels bookmarked for every protocol I use A clean \"fresh wallet\" procedure written"
+   "vo": "Here's your checklist. Do it now, for real. First, Incident playbook printed/saved offline. Next, Official channels bookmarked for every protocol I use. And finally, A clean \"fresh wallet\" procedure written.",
+   "cap": "Here's your checklist. Do it now, for real. First, Incident playbook printed/saved offline. Next, Official channels bookmarked for every protocol I use. And finally, A clean \"fresh wallet\" procedure written."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "First thing to do in an incident?"
-   ],
-   "sub": "Answer: Verify through official, bookmarked channels.",
-   "subAt": 0.62,
-   "vo": "First thing to do in an incident? ... Pause and think. ... The answer: Verify through official, bookmarked channels.",
-   "cap": "First thing to do in an incident? Pause and think. The answer: Verify through official, bookmarked channels."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 1,
+   "of": 3,
+   "q": "First thing to do in an incident?",
+   "a": "Verify through official, bookmarked channels.",
+   "vo": "Question one. First thing to do in an incident? [[pause 4]] The answer: Verify through official, bookmarked channels.",
+   "cap": "Question 1. First thing to do in an incident? The answer: Verify through official, bookmarked channels."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Someone offers a link to \"rescue your funds\". What do you do?"
-   ],
-   "sub": "Answer: Ignore it. It's a common scam during incidents.",
-   "subAt": 0.62,
-   "vo": "Someone offers a link to \"rescue your funds\". What do you do? ... Pause and think. ... The answer: Ignore it. It's a common scam during incidents.",
-   "cap": "Someone offers a link to \"rescue your funds\". What do you do? Pause and think. The answer: Ignore it. It's a common scam during incidents."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 2,
+   "of": 3,
+   "q": "Someone offers a link to \"rescue your funds\". What do you do?",
+   "a": "Ignore it. It's a common scam during incidents.",
+   "vo": "Question two. Someone offers a link to \"rescue your funds\". What do you do? [[pause 4]] The answer: Ignore it. It's a common scam during incidents.",
+   "cap": "Question 2. Someone offers a link to \"rescue your funds\". What do you do? The answer: Ignore it. It's a common scam during incidents."
   },
   {
-   "type": "statement",
-   "lines": [
-    "Quiz",
-    "Wallet compromised: can you keep using the seed?"
-   ],
-   "sub": "Answer: No. Move to a fresh wallet with a new seed; the old one is burned.",
-   "subAt": 0.62,
-   "vo": "Wallet compromised: can you keep using the seed? ... Pause and think. ... The answer: No. Move to a fresh wallet with a new seed; the old one is burned.",
-   "cap": "Wallet compromised: can you keep using the seed? Pause and think. The answer: No. Move to a fresh wallet with a new seed; the old one is burned."
+   "type": "quiz",
+   "chapter": "Quiz",
+   "n": 3,
+   "of": 3,
+   "q": "Wallet compromised: can you keep using the seed?",
+   "a": "No. Move to a fresh wallet with a new seed; the old one is burned.",
+   "vo": "Question three. Wallet compromised: can you keep using the seed? [[pause 4]] The answer: No. Move to a fresh wallet with a new seed; the old one is burned.",
+   "cap": "Question 3. Wallet compromised: can you keep using the seed? The answer: No. Move to a fresh wallet with a new seed; the old one is burned."
   },
   {
    "type": "cta",
-   "button": "Do the checklist",
-   "sub": "Educational content only · Not financial advice",
-   "vo": "Now do the checklist before moving on. See you in the next lesson.",
-   "cap": "Now do the checklist before moving on."
+   "chapter": "Next",
+   "button": "Next: Lesson 12.0",
+   "sub": "Do the checklist first · Educational content only · Not financial advice",
+   "vo": "Do the checklist now, before you move on. Next up, lesson twelve point zero: Mastery Starter.",
+   "cap": "Do the checklist now, before you move on. Next up, Lesson 12.0: Mastery Starter."
   }
  ]
 }
