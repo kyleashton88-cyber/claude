@@ -130,6 +130,36 @@ function counter(str) {
   return { pre: m[1], val: parseFloat(m[2].replace(/,/g, '')), dec, comma: m[2].includes(','), post: m[3] };
 }
 
+// Flow layout: explicit x/y (0..1 of the stage) or automatic row / cycle / column.
+function flowLayout(s, W, H) {
+  const v = H > W, n = s.nodes.length;
+  const top = s.title ? (v ? 560 : 330) : (v ? 380 : 170), bot = H - (v ? 460 : 220), left = v ? 120 : 170, right = W - (v ? 120 : 170);
+  const mode = s.layout || (v ? 'column' : 'row');
+  const auto = (n2, i) => mode === 'cycle' ? [0.5 + 0.38 * Math.cos(-Math.PI / 2 + 2 * Math.PI * i / n2), 0.5 + 0.42 * Math.sin(-Math.PI / 2 + 2 * Math.PI * i / n2)]
+    : mode === 'column' ? [0.5, n2 === 1 ? 0.5 : i / (n2 - 1)] : [n2 === 1 ? 0.5 : i / (n2 - 1), 0.5];
+  const nw = mode === 'cycle' ? (v ? 380 : 250) : Math.min(v ? 440 : 300, ((mode === 'row' ? right - left : W * 0.6) / Math.max(1, mode === 'row' ? n : 3)) * 0.62);
+  const nh = nw * (mode === 'cycle' ? 0.75 : 0.9), ix = nw / 2;
+  const nodes = s.nodes.map((nd, i) => {
+    if (mode === 'cycle' && nd.x == null) { // ellipse filling the stage, first node at the top
+      const a = -Math.PI / 2 + 2 * Math.PI * i / n, rx = (right - left) / 2 - nw / 2, ry = (bot - top) / 2 - nh / 2;
+      return { ...nd, px: (left + right) / 2 + rx * Math.cos(a), py: (top + bot) / 2 + ry * Math.sin(a) };
+    }
+    const [ax, ay] = nd.x != null ? [nd.x, nd.y] : auto(n, i);
+    return { ...nd, px: left + ix + ax * (right - left - 2 * ix), py: top + nh / 2 + ay * (bot - top - nh) }; });
+  const byId = Object.fromEntries(nodes.map((nd, i) => [nd.id ?? String(i), nd]));
+  const rx = nw / 2 + 16, ry = nh / 2 + 16;
+  const edges = (s.edges || nodes.slice(1).map((nd, i) => ({ from: nodes[i].id ?? String(i), to: nd.id ?? String(i + 1) }))).map(e => {
+    const a = byId[e.from], b = byId[e.to]; if (!a || !b) throw new Error(`flow edge ${e.from}->${e.to}: unknown node`);
+    const dx = b.px - a.px, dy = b.py - a.py, d = Math.hypot(dx, dy) || 1, ux = dx / d, uy = dy / d;
+    // leave each node where the ray exits its bounding box
+    const cut = (tx, ty) => Math.min(Math.abs(tx) > 1e-6 ? rx / Math.abs(tx) : 1e9, Math.abs(ty) > 1e-6 ? ry / Math.abs(ty) : 1e9);
+    const k = Math.min(cut(ux, uy), d * 0.38), x1 = a.px + ux * k, y1 = a.py + uy * k, x2 = b.px - ux * k, y2 = b.py - uy * k;
+    const bend = e.bend || 0, cx = (x1 + x2) / 2 - uy * bend, cy = (y1 + y2) / 2 + ux * bend;
+    return { ...e, d: `M${x1.toFixed(1)} ${y1.toFixed(1)} Q${cx.toFixed(1)} ${cy.toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)}`, lx: cx + uy * 34, ly: cy - ux * 22 + (Math.abs(uy) > Math.abs(ux) ? 10 : 0), anchor: Math.abs(uy) > Math.abs(ux) ? 'start' : 'middle' };
+  });
+  return { nodes, edges, nw, fz: v ? 38 : Math.max(26, Math.min(36, nw / 8)) };
+}
+
 // ------------------------------------------------------------------ scenes
 function sceneBody(s, W, H, T) {
   const v = H > W, fs = (a, b) => (v ? b : a);
@@ -223,6 +253,47 @@ function sceneBody(s, W, H, T) {
       <div class="in" data-in="${T.v0 + 0.3}" style="font-weight:800;font-size:${fs(60, 64)}px;letter-spacing:.06em">ON-CHAIN <span style="color:${C.aquaDark}">OPERATOR</span> PROGRAM</div>
       <div class="pop btn" data-in="${T.v0 + 0.8}" style="padding:${fs(28, 34)}px ${fs(70, 80)}px;border-radius:999px;background:linear-gradient(90deg,${C.aquaDark},${C.blueDark});color:${C.ink};font-weight:800;font-size:${fs(46, 54)}px">${esc(s.button)} →</div>
       <div class="in" data-in="${T.v0 + 1.2}" style="font-size:${fs(32, 36)}px;color:rgba(255,255,255,.75)">${esc(s.sub)}</div></div>`;
+    case 'flow': {
+      // Animated flow diagram: nodes appear as they're narrated, arrows draw into them,
+      // and a token travels along the arrow into whichever node is being spoken about.
+      const L = flowLayout(s, W, H);
+      const nb = L.nodes.map((n, i) => `<div style="position:absolute;left:${n.px}px;top:${n.py}px;transform:translate(-50%,-50%);width:${L.nw}px">
+        ${item(i, `<div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px">
+          <div style="width:${L.nw * 0.34}px;height:${L.nw * 0.34}px;border-radius:26px;display:flex;align-items:center;justify-content:center;background:${n.tone === 'bad' ? 'rgba(235,104,52,.14)' : 'rgba(46,230,166,.12)'};border:1px solid ${n.tone === 'bad' ? 'rgba(235,104,52,.5)' : 'rgba(46,230,166,.4)'}">${icon(n.icon || 'check', L.nw * 0.18, n.tone === 'bad' ? C.orange : C.aquaDark, 1.7)}</div>
+          <div style="font-size:${L.fz}px;font-weight:800;line-height:1.15">${esc(n.label)}</div>
+          ${n.sub ? `<div style="font-size:${L.fz * 0.72}px;line-height:1.3;color:rgba(255,255,255,.72)">${esc(n.sub)}</div>` : ''}</div>`,
+          'padding:22px 18px;border-radius:24px')}</div>`).join('');
+      const eb = L.edges.map((e, k) => `<path class="edge" id="e${k}" data-in="${T.edges[k][0]}" d="${e.d}" fill="none" stroke="${e.tone === 'bad' ? C.orange : 'rgba(127,178,255,.9)'}" stroke-width="5" stroke-linecap="round" ${e.dashed ? 'data-dash="1"' : ''} marker-end="url(#ah${e.tone === 'bad' ? 'b' : ''})"/>
+        <circle class="tok" data-e="e${k}" data-a="${T.edges[k][0]}" data-b="${T.edges[k][1]}" r="11" fill="${C.aquaDark}" style="filter:drop-shadow(0 0 10px ${C.aquaDark})"/>
+        ${e.label ? `<text class="elab" data-in="${T.edges[k][0] + 0.4}" x="${e.lx}" y="${e.ly}" text-anchor="${e.anchor}" font-size="${L.fz * 0.7}" font-weight="700" fill="rgba(255,255,255,.8)" style="paint-order:stroke;stroke:${C.ink};stroke-width:8px">${esc(e.label)}</text>` : ''}`).join('');
+      return `<div style="position:absolute;inset:0">
+        ${s.title ? `<div style="position:absolute;left:150px;right:150px;top:${fs(120, 330)}px;text-align:center">${title(s.title)}</div>` : ''}
+        <svg width="${W}" height="${H}" style="position:absolute;inset:0;overflow:visible"><defs>
+          <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="rgba(127,178,255,.9)"/></marker>
+          <marker id="ahb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="${C.orange}"/></marker></defs>${eb}</svg>
+        ${nb}</div>`;
+    }
+    case 'cutaway': {
+      // Screen cutaway: a sequence of real screenshots in a browser frame, each with a
+      // highlight box, a push-in zoom towards the box and a step caption, synced to the voice.
+      const fw = fs(1280, 980), fh = Math.round(fw * 9 / 16);
+      return `<div style="position:absolute;left:0;right:0;top:${fs(104, 360)}px;display:flex;flex-direction:column;align-items:center">
+        <div class="in" data-in="${T.v0 - 0.2}" style="display:flex;align-items:center;gap:14px;font-size:${fs(26, 32)}px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:${C.orange}">
+          <span style="width:14px;height:14px;border-radius:50%;background:${C.orange};box-shadow:0 0 12px ${C.orange}"></span>${esc(s.label || 'On screen')}</div>
+        <div class="wipe" data-in="${T.v0}" style="margin-top:${fs(20, 34)}px;width:${fw}px;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.18);background:#0d1726">
+          <div style="height:42px;display:flex;align-items:center;gap:10px;padding:0 18px;background:#1b2636">
+            <span style="width:13px;height:13px;border-radius:50%;background:#ff5f57"></span><span style="width:13px;height:13px;border-radius:50%;background:#febc2e"></span><span style="width:13px;height:13px;border-radius:50%;background:#28c840"></span>
+            ${s.url ? `<span style="margin-left:18px;flex:1;padding:5px 16px;border-radius:8px;background:rgba(255,255,255,.07);font-size:18px;color:rgba(255,255,255,.65);font-family:'JetBrains Mono',monospace">${esc(s.url)}</span>` : ''}</div>
+          <div style="position:relative;width:${fw}px;height:${fh}px;overflow:hidden">
+          ${s.shots.map((sh, i) => `<div class="shot" data-a="${T.items[i][0]}" data-b="${T.items[i][1]}" data-zoom='${JSON.stringify(sh.zoom || (sh.box ? { s: sh.push || 1.35, x: sh.box[0] + sh.box[2] / 2, y: sh.box[1] + sh.box[3] / 2 } : null))}' style="position:absolute;inset:0;opacity:0">
+            <img src="${asset(sh.src)}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top">
+            ${sh.box ? `<div class="hbox" style="position:absolute;left:${sh.box[0] * 100}%;top:${sh.box[1] * 100}%;width:${sh.box[2] * 100}%;height:${sh.box[3] * 100}%;border:4px solid ${C.orange};border-radius:10px;box-shadow:0 0 0 9999px rgba(3,10,20,.45),0 0 24px rgba(235,104,52,.6)"></div>` : ''}
+            ${(sh.blur || []).map(b => `<div style="position:absolute;left:${b[0] * 100}%;top:${b[1] * 100}%;width:${b[2] * 100}%;height:${b[3] * 100}%;backdrop-filter:blur(14px);background:rgba(13,23,38,.35);border-radius:6px"></div>`).join('')}
+          </div>`).join('')}
+          </div></div>
+        ${s.shots.map((sh, i) => sh.caption ? `<div class="scap" data-a="${T.items[i][0]}" data-b="${T.items[i][1]}" style="position:absolute;left:${(W - fw) / 2 + 24}px;top:${fs(20, 34) + fs(38, 46) + 42 + fh - fs(84, 96)}px;padding:12px 24px;border-radius:12px;background:rgba(4,13,26,.88);border-left:5px solid ${C.orange};font-size:${fs(28, 32)}px;font-weight:700;opacity:0"><span style="color:${C.orange}">Step ${i + 1}</span> · ${esc(sh.caption)}</div>` : '').join('')}
+      </div>`;
+    }
   }
   throw new Error(`unknown scene type ${s.type}`);
 }
@@ -247,6 +318,15 @@ function planTimes(s, sents, voStart, voDur) {
     case 'compare': T.items = syncItems([...s.left.items, ...s.right.items], sents, voStart, voDur, s.at); break;
     case 'quiz': { const a = byText(/^(the )?answer/i, at(0.7)); const q = sents.findIndex(x => /^(the )?answer/i.test(x[2]));
       T.answer = a; T.think = [q > 0 ? voStart + sents[q - 1][1] : a - 3, a]; break; }
+    case 'flow': {
+      T.items = syncItems(s.nodes.map(n => `${n.label} ${n.sub || ''}`), sents, voStart, voDur, s.at);
+      const idx = Object.fromEntries(s.nodes.map((n, i) => [n.id ?? String(i), i]));
+      const edges = s.edges || s.nodes.slice(1).map((n, i) => ({ from: s.nodes[i].id ?? String(i), to: n.id ?? String(i + 1) }));
+      T.edges = edges.map(e => { const j = idx[e.to]; return [Math.max(voStart, T.items[j][0] - 0.45), T.items[j][1]]; });
+      break;
+    }
+    case 'cutaway': T.items = syncItems(s.shots.map(x => x.caption || ''), sents, voStart, voDur, s.at);
+      T.items = T.items.map(([a, b], i, arr) => [i === 0 ? voStart : a, i === arr.length - 1 ? voStart + voDur + 5 : arr[i + 1][0]]); break;
     case 'image': T.callouts = (s.callouts || []).map((c, i) => sentAt(c.at ?? Math.min(i + 1, sents.length - 1), at(0.3 + i * 0.2)));
       if (s.zoom) T.zoom = sentAt(s.zoom.at ?? Math.min(1, sents.length - 1), at(0.45)); break;
   }
@@ -332,6 +412,21 @@ function scenePage(video, s, W, H, sc) {
     document.querySelectorAll('.call').forEach(el => { const p = ease((t - +el.dataset.in) / .5); el.style.opacity = p; const r = el.querySelector('.pulse'); r.style.transform = 'scale(' + (.6 + .4 * p + .06 * Math.sin((t - +el.dataset.in) * 5)) + ')'; });
     document.querySelectorAll('.ring').forEach(el => { const a = +el.dataset.a, b = +el.dataset.b, p = (t - a) / Math.max(.1, b - a);
       el.style.opacity = t < a - .2 ? 0 : t > b ? Math.max(0, 1 - (t - b) / .3) : 1; el.querySelector('.arc').style.strokeDashoffset = String(Math.min(1, Math.max(0, p))); });
+    // flow: arrows draw on, tokens travel into the node being spoken about
+    document.querySelectorAll('.edge').forEach(el => { const p = easeIO((t - +el.dataset.in) / .7); el.setAttribute('pathLength', '1');
+      el.style.strokeDasharray = el.dataset.dash ? (p < 1 ? '1' : '.03 .02') : '1'; el.style.strokeDashoffset = p < 1 ? String(1 - p) : '0'; el.style.opacity = p > 0 ? 1 : 0; });
+    document.querySelectorAll('.elab').forEach(el => { el.style.opacity = ease((t - +el.dataset.in) / .5); });
+    document.querySelectorAll('.tok').forEach(el => { const a = +el.dataset.a, b = Math.min(+el.dataset.b, VOEND), path = document.getElementById(el.dataset.e);
+      if (t < a + .5 || t > b) { el.style.opacity = 0; return; } const L = path.getTotalLength(), f = ((t - a - .5) / 1.4) % 1, pt = path.getPointAtLength(L * easeIO(f));
+      el.setAttribute('cx', pt.x); el.setAttribute('cy', pt.y); el.style.opacity = f < .1 ? f * 10 : f > .9 ? (1 - f) * 10 : 1; });
+    // cutaway: crossfade shots, push in towards the highlight, draw the box
+    document.querySelectorAll('.shot').forEach(el => { const a = +el.dataset.a, b = +el.dataset.b, p = ease((t - a) / .45);
+      el.style.opacity = t < a ? 0 : t < b ? p : ease(1 - (t - b) / .45);
+      const z = JSON.parse(el.dataset.zoom || 'null'); let sc = 1 + .03 * Math.max(0, t - a) / 8, ox = 50, oy = 30;
+      if (z) { const k = easeIO((t - a - .6) / 1.5); sc += (z.s - 1) * k; ox = z.x * 100; oy = z.y * 100; }
+      el.style.transformOrigin = ox + '% ' + oy + '%'; el.style.transform = 'scale(' + sc + ')';
+      const hb = el.querySelector('.hbox'); if (hb) { const h = ease((t - a - .35) / .5); hb.style.opacity = h; hb.style.transform = 'scale(' + (1.12 - .12 * h) + ')'; } });
+    document.querySelectorAll('.scap').forEach(el => { const a = +el.dataset.a, b = +el.dataset.b; el.style.opacity = t < a || t >= b ? 0 : Math.min(ease((t - a - .3) / .4), ease((b - t) / .3)); });
     const prog = document.getElementById('prog'); if (prog) prog.style.width = (g / TOTAL * 100) + '%';
     const chap = document.getElementById('chap'); if (chap) chap.textContent = CHAP;
     const c = CUES.find(x => t >= x.a && t < x.b), cap = document.getElementById('cap');
@@ -462,6 +557,7 @@ function visual(s) {
     title: () => `Title card: ${s.num || ''} ${s.title}`, pillars: () => `${s.title}: ${(s.items || []).map(p => p.title).join(' · ')}`,
     compare: () => `${s.title}: ${s.left.label} (${s.left.items.join(', ')}) vs ${s.right.label} (${s.right.items.join(', ')})`,
     steps: () => `${s.title}: ${(s.steps || []).join(' → ')}${s.result ? ` ⇒ ${s.result}` : ''}`, quiz: () => `Quiz: ${s.q} → ${s.a}`,
+    flow: () => `Flow: ${(s.nodes || []).map(n => n.label).join(' → ')}`, cutaway: () => `Screen cutaway: ${(s.shots || []).map(x => x.caption || x.src).join(' → ')}`,
   };
   return V[s.type]();
 }

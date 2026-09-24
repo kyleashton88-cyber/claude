@@ -44,3 +44,10 @@ Course videos: every lesson and Mastery Starter has a ready-to-render script (`v
 - **Motion:** captions highlight word by word with the voice; bullets, steps, pillars and comparisons reveal and highlight on the sentence that mentions them; living node-network background, progress bar, chapter tag, chart callouts and zooms, counting stats, logo draw-on. Scene types: title, statement, strike, image, bullets, pillars, compare, steps, stats, quiz, logo, cta.
 - **Per video:** MP4 (1080p, H.264/AAC), thumbnail, WebVTT captions, chapter list.
 - **Documents:** the PDF has a full-bleed cover, module banner pages, lesson header bands and styled callouts (Objective, Worked example, Checklist, Quiz and every Mastery Starter section).
+
+## Course video tooling
+
+- **New scene types** in `export/build_video.js`: `flow` (animated mechanism diagrams: nodes light up as they're named, arrows draw on, a token travels along the path) and `cutaway` (real screenshots in a browser frame with a highlight box, push-in zoom and step captions). Field reference: `.claude/skills/lesson-script-writing/references/scene-reference.md`.
+- **Screen demos:** `node export/capture_demo.js demos/<id>.json` captures shots and writes a ready `cutaway` scene (see `demos/README.md`).
+- **Script linter:** `python3 export/lint_video_script.py --all --summary` checks structure, teaching quality (visual variety, worked examples, quizzes, hook, recap) and compliance before rendering.
+- **Skills:** start with `course-video-director` in `.claude/skills/`.
