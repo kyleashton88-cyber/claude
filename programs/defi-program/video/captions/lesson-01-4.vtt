@@ -1,0 +1,226 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.225
+Lesson 1.4.
+
+00:00:02.225 --> 00:00:04.735
+Tokens, approvals & allowances.
+
+00:00:04.735 --> 00:00:06.420
+By the end of this lesson, you'll
+
+00:00:06.420 --> 00:00:08.204
+be able to read an approval request
+
+00:00:08.204 --> 00:00:09.690
+and know what you're allowing.
+
+00:00:10.990 --> 00:00:12.280
+Here's the plan.
+
+00:00:12.280 --> 00:00:13.965
+First, the key ideas.
+
+00:00:13.965 --> 00:00:16.680
+Then, a worked example, step by step.
+
+00:00:16.680 --> 00:00:18.205
+Then, your checklist.
+
+00:00:18.205 --> 00:00:20.367
+And finally, a three-question quiz.
+
+00:00:21.667 --> 00:00:23.698
+can also represent positions (e.g.
+
+00:00:23.698 --> 00:00:26.377
+concentrated LP). allowance. The protocol
+
+00:00:26.377 --> 00:00:27.442
+then pulls
+
+00:00:27.442 --> 00:00:30.417
+tokens when you act. of that
+
+00:00:30.417 --> 00:00:32.862
+token, now and in future.
+
+00:00:32.862 --> 00:00:34.703
+If the contract (or the
+
+00:00:34.703 --> 00:00:37.612
+approval) is exploited, the tokens
+
+00:00:37.612 --> 00:00:40.277
+can be taken. off-chain signature,
+
+00:00:40.277 --> 00:00:43.757
+not a transaction. There's no gas, so
+
+00:00:43.757 --> 00:00:45.887
+they're easy to sign
+
+00:00:45.887 --> 00:00:48.919
+without noticing. Drainers abuse exactly this.
+
+00:00:48.919 --> 00:00:50.832
+First, most tokens on EVM
+
+00:00:50.832 --> 00:00:54.123
+chains are ERC-20 (fungible). NFTs (ERC-721/1155).
+
+00:00:54.123 --> 00:00:55.907
+Next, to let a protocol
+
+00:00:55.907 --> 00:01:00.072
+move your tokens you approve a spender for an.
+
+00:01:00.072 --> 00:01:02.817
+Then, Unlimited approvals are convenient
+
+00:01:02.817 --> 00:01:04.857
+but let that contract move
+
+00:01:04.857 --> 00:01:07.558
+all. Also, Signature approvals (Permit /
+
+00:01:07.558 --> 00:01:10.097
+Permit2) grant allowances with an.
+
+00:01:10.097 --> 00:01:12.477
+On top of that, Wrapped / receipt
+
+00:01:12.477 --> 00:01:15.626
+tokens: WETH, LP tokens and lending receipts
+
+00:01:15.626 --> 00:01:18.146
+represent a claim on something else.
+
+00:01:19.446 --> 00:01:22.263
+And finally, Fake tokens: anyone can
+
+00:01:22.263 --> 00:01:24.771
+create a token called "USDC".
+
+00:01:24.771 --> 00:01:26.971
+Only the contract address identifies it.
+
+00:01:28.271 --> 00:01:30.786
+Let's work an example, step
+
+00:01:30.786 --> 00:01:33.771
+by step. Wallet shows: "Allow 0x3fC9…a1B2
+
+00:01:34.471 --> 00:01:37.519
+to spend your U.S.D.C. Amount: Unlimited." Is
+
+00:01:37.519 --> 00:01:41.031
+0x3fC9…a1B2 the protocol's official router? Check the
+
+00:01:41.731 --> 00:01:44.956
+docs or explorer. Do I need
+
+00:01:44.956 --> 00:01:46.881
+unlimited? Edit it to
+
+00:01:46.881 --> 00:01:48.556
+the amount of
+
+00:01:48.556 --> 00:01:51.126
+this deposit. Is this U.S.D.C.
+
+00:01:51.126 --> 00:01:54.286
+the real contract?. After finishing, revoke
+
+00:01:54.286 --> 00:01:57.079
+with a revoke tool (for example
+
+00:01:57.079 --> 00:01:59.871
+revoke.cash) if I won't be back.
+
+00:02:01.171 --> 00:02:02.631
+Here's your checklist.
+
+00:02:02.631 --> 00:02:04.166
+Do it now, for real.
+
+00:02:04.166 --> 00:02:07.181
+First, Spender verified against official docs.
+
+00:02:07.181 --> 00:02:09.796
+Next, Allowance limited to what's needed.
+
+00:02:09.796 --> 00:02:13.601
+Then, Signature requests read as carefully as transactions.
+
+00:02:13.601 --> 00:02:16.771
+And finally, Approvals reviewed and revoked monthly.
+
+00:02:18.071 --> 00:02:19.281
+Question 1.
+
+00:02:19.281 --> 00:02:22.116
+Why is a gasless "Permit" signature dangerous?
+
+00:02:26.536 --> 00:02:29.596
+The answer: It can grant a token allowance without
+
+00:02:29.596 --> 00:02:33.076
+a transaction, so it's easy to sign without noticing.
+
+00:02:33.076 --> 00:02:34.936
+Drainers use it to take tokens.
+
+00:02:36.236 --> 00:02:37.481
+Question 2.
+
+00:02:37.481 --> 00:02:38.424
+How do you know a
+
+00:02:38.424 --> 00:02:39.576
+token is the real one?
+
+00:02:43.996 --> 00:02:46.646
+The answer: By its contract address from an
+
+00:02:46.646 --> 00:02:49.416
+authoritative source, never by name or ticker.
+
+00:02:50.716 --> 00:02:51.986
+Question 3.
+
+00:02:51.986 --> 00:02:53.631
+When should you revoke an approval?
+
+00:02:58.051 --> 00:03:00.172
+The answer: When you no longer use
+
+00:03:00.172 --> 00:03:02.596
+that protocol, or on a regular schedule.
+
+00:03:03.896 --> 00:03:05.141
+Let's recap.
+
+00:03:05.141 --> 00:03:09.591
+Most tokens on EVM chains are ERC-20 (fungible).
+
+00:03:09.591 --> 00:03:11.554
+To let a protocol move your tokens
+
+00:03:11.554 --> 00:03:13.481
+you approve a spender for an.
+
+00:03:13.481 --> 00:03:15.827
+Unlimited approvals are convenient but
+
+00:03:15.827 --> 00:03:17.751
+let that contract move all.
+
+00:03:17.751 --> 00:03:22.196
+Signature approvals (Permit / Permit2) grant allowances with an.
+
+00:03:23.496 --> 00:03:26.011
+Do the checklist now, before you move on.
+
+00:03:26.011 --> 00:03:30.036
+Next up, Lesson 1.5: Stablecoins and how they break.

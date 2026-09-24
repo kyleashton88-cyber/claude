@@ -1,0 +1,205 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.205
+Lesson 1.3.
+
+00:00:02.205 --> 00:00:04.985
+Wallets, keys, hardware & multisig.
+
+00:00:04.985 --> 00:00:06.849
+By the end of this lesson, you'll
+
+00:00:06.849 --> 00:00:08.329
+be able to set up a wallet
+
+00:00:08.329 --> 00:00:11.070
+structure where one mistake can't lose everything.
+
+00:00:12.370 --> 00:00:13.660
+Here's the plan.
+
+00:00:13.660 --> 00:00:15.345
+First, the key ideas.
+
+00:00:15.345 --> 00:00:18.060
+Then, a worked example, step by step.
+
+00:00:18.060 --> 00:00:19.585
+Then, your checklist.
+
+00:00:19.585 --> 00:00:21.747
+And finally, a three-question quiz.
+
+00:00:23.047 --> 00:00:26.042
+a website, never photograph it, never share it.
+
+00:00:26.042 --> 00:00:28.972
+No legitimate support team will ever ask for it.
+
+00:00:28.972 --> 00:00:31.995
+Compartmentalise: separate wallets by job, so a
+
+00:00:31.995 --> 00:00:34.562
+compromise only reaches one of them.
+
+00:00:34.562 --> 00:00:37.477
+First, Private key: the authority to sign.
+
+00:00:37.477 --> 00:00:39.651
+Whoever has it controls the funds.
+
+00:00:39.651 --> 00:00:44.356
+Next, Seed phrase: 12–24 words that recreate your keys.
+
+00:00:44.356 --> 00:00:45.901
+Never type it into.
+
+00:00:45.901 --> 00:00:49.631
+Then, Hardware wallet: keeps keys on a separate device.
+
+00:00:49.631 --> 00:00:52.196
+Signing requires physical confirmation.
+
+00:00:52.196 --> 00:00:54.823
+Also, Multisig: needs M of N
+
+00:00:54.823 --> 00:00:57.116
+signers (e.g. 2 of 3).
+
+00:00:57.116 --> 00:00:59.231
+Good for large or shared funds.
+
+00:00:59.231 --> 00:01:02.309
+And finally, Smart wallets: contract accounts that
+
+00:01:02.309 --> 00:01:05.146
+can add spending limits, recovery and batching.
+
+00:01:06.446 --> 00:01:09.333
+Move money down the chain (vault → operator →
+
+00:01:09.333 --> 00:01:12.771
+burner) only as needed, and sweep profits back up.
+
+00:01:12.771 --> 00:01:14.548
+If the burner gets drained, you
+
+00:01:14.548 --> 00:01:16.570
+lose only the burner's balance.
+
+00:01:16.570 --> 00:01:19.395
+Vault, Long-term holdings, Almost never.
+
+00:01:19.395 --> 00:01:22.555
+No DeFi approvals, Hardware (or multisig).
+
+00:01:22.555 --> 00:01:28.245
+Operator, Active DeFi positions, Known, verified protocols only, Hardware.
+
+00:01:28.245 --> 00:01:30.546
+Burner, Small amounts for new apps,
+
+00:01:30.546 --> 00:01:33.805
+mints, airdrops, Anything experimental, Hot wallet.
+
+00:01:35.105 --> 00:01:38.120
+Let's look at the diagram: The 3-wallet setup.
+
+00:01:38.120 --> 00:01:39.680
+Take a moment with it.
+
+00:01:39.680 --> 00:01:42.090
+It's everything we've just said, in one picture.
+
+00:01:43.390 --> 00:01:44.850
+Here's your checklist.
+
+00:01:44.850 --> 00:01:46.385
+Do it now, for real.
+
+00:01:46.385 --> 00:01:48.634
+First, Seed phrase stored offline,
+
+00:01:48.634 --> 00:01:50.990
+in two separate physical places.
+
+00:01:50.990 --> 00:01:54.752
+Next, Vault wallet has never approved a DeFi contract.
+
+00:01:54.752 --> 00:01:57.537
+Then, Separate burner wallet for anything new.
+
+00:01:57.537 --> 00:02:00.160
+And finally, I read every signing prompt on
+
+00:02:00.160 --> 00:02:03.082
+the hardware device screen, not just the website.
+
+00:02:04.382 --> 00:02:05.592
+Question 1.
+
+00:02:05.592 --> 00:02:08.011
+A "support agent" in DMs needs your
+
+00:02:08.011 --> 00:02:10.932
+seed phrase to fix a stuck transaction.
+
+00:02:10.932 --> 00:02:11.782
+What do you do?
+
+00:02:16.202 --> 00:02:17.937
+The answer: Nothing.
+
+00:02:17.937 --> 00:02:19.842
+It's a scam, every time.
+
+00:02:19.842 --> 00:02:21.042
+Block and report.
+
+00:02:22.342 --> 00:02:23.587
+Question 2.
+
+00:02:23.587 --> 00:02:25.802
+Why keep the vault wallet free of approvals?
+
+00:02:30.222 --> 00:02:33.762
+The answer: Approvals let contracts move your tokens.
+
+00:02:33.762 --> 00:02:36.606
+With none, a compromised protocol can't reach it.
+
+00:02:37.906 --> 00:02:39.176
+Question 3.
+
+00:02:39.176 --> 00:02:41.711
+What does 2-of-3 multisig protect against?
+
+00:02:46.131 --> 00:02:49.321
+The answer: A single lost or compromised key.
+
+00:02:49.321 --> 00:02:51.631
+Two signers are still needed to move funds.
+
+00:02:52.931 --> 00:02:54.176
+Let's recap.
+
+00:02:54.176 --> 00:02:56.681
+Private key: the authority to sign.
+
+00:02:56.681 --> 00:03:00.786
+Seed phrase: 12–24 words that recreate your keys.
+
+00:03:00.786 --> 00:03:04.161
+Hardware wallet: keeps keys on a separate device.
+
+00:03:04.161 --> 00:03:06.203
+Multisig: needs M of N
+
+00:03:06.203 --> 00:03:08.156
+signers (e.g. 2 of 3).
+
+00:03:09.456 --> 00:03:11.971
+Do the checklist now, before you move on.
+
+00:03:11.971 --> 00:03:16.393
+Next up, Lesson 1.4: Tokens, approvals & allowances.
