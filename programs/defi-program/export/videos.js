@@ -69,7 +69,7 @@ const VIDEOS = [
   },
   {
     id: 'vsl-short-vertical',
-    title: 'VSL: 40-second vertical cut (ads, Reels, Shorts, TikTok)',
+    title: 'VSL: 30-second vertical cut (ads, Reels, Shorts, TikTok)',
     size: [1080, 1920], chrome: 'minimal', music: true, speed: 1.0, seed: 8,
     use: 'Paid social and organic short-form. Upload as 9:16.',
     scenes: [
@@ -95,7 +95,7 @@ const VIDEOS = [
     use: 'First thing a new member sees after purchase.',
     scenes: [
       { type: 'logo', chapter: 'Welcome', tagline: 'Welcome, operator.',
-        vo: "Welcome to the On-Chain Operator Program. I'm glad you're here. In the next two minutes, I'll show you exactly how to get the most from it." },
+        vo: "Welcome to the On-Chain Operator Program. I'm glad you're here. In the next minute, I'll show you exactly how to get the most from it." },
       { type: 'image', chapter: 'How it works', src: 'assets/diagrams/path-to-mastery.png', eyebrow: 'Six stages, in order', wide: true,
         vo: "The program runs in six stages, and each one builds on the last. So do them in order. Stage zero gets you set up safely. Stage five has you running your own on-chain bank. Everything in between is the path from one to the other.",
         cap: "The program runs in six stages, and each one builds on the last. So do them in order. Stage 0 gets you set up safely. Stage 5 has you running your own on-chain bank. Everything in between is the path from one to the other." },
@@ -146,7 +146,7 @@ function moduleIntros() {
         { type: 'statement', chapter: 'The goal', kicker: 'By the end of this module', lines: ['You will be able to…'], sub: goal,
           vo: `By the end of this module, you'll be able to ${say(outcome.replace(/\.$/, '')).replace(/^./, c => c.toLowerCase())}. That's the standard. Every lesson moves you toward it.`,
           cap: `By the end of this module, you'll be able to ${outcome.replace(/\.$/, '').replace(/^./, c => c.toLowerCase())}. That's the standard. Every lesson moves you toward it.` },
-        { type: 'bullets', chapter: 'The lessons', title: `${rows.length} lessons`, items: lessons, compact: true,
+        { type: 'bullets', chapter: 'The lessons', title: `${rows.length} lessons`, items: lessons, compact: true, highlight: false,
           vo: `There are ${NUM[rows.length] ? NUM[rows.length].toLowerCase() : rows.length} lessons, starting with ${say(first)}. Each one ends with a checklist to do for real, and a three-question quiz.`,
           cap: `There are ${rows.length} lessons, starting with ${first}. Each one ends with a checklist to do for real, and a three-question quiz.` },
         { type: 'pillars', chapter: 'How to use it', title: 'How to work this module',

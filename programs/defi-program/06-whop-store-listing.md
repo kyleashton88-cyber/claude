@@ -49,7 +49,7 @@ the rings, stretch the mark or put the light version on a dark background.
 | Gallery 6 | `assets/store/gallery-06-grid-vs-lp.png` | 1920×1080 |
 | Gallery 7 | `assets/store/gallery-07-whats-included.png` | 1920×1080 |
 | **Listing video (VSL)** | `video/vsl-main.mp4` (≈3.5 min, 1920×1080, captioned, music bed; thumbnail `video/thumbs/vsl-main.jpg`) | 16:9 |
-| Ads / Reels / Shorts | `video/vsl-short-vertical.mp4` (≈40s, 1080×1920) | 9:16 |
+| Ads / Reels / Shorts | `video/vsl-short-vertical.mp4` (≈30s, 1080×1920) | 9:16 |
 | Course module headers | `assets/modules/module-00.png` … `module-14.png` | 1600×500 @2x |
 | In-lesson diagrams & charts | `assets/diagrams/*.png`, `assets/charts/*.png` | 1800 wide @2x |
 

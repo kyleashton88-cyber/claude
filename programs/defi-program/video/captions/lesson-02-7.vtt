@@ -1,0 +1,220 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.245
+Lesson 2.7.
+
+00:00:02.245 --> 00:00:05.360
+Advanced AMM design and LVR.
+
+00:00:05.360 --> 00:00:08.208
+By the end of this lesson, you'll be
+
+00:00:08.208 --> 00:00:11.210
+able to know the major AMM designs and
+
+00:00:11.210 --> 00:00:15.905
+measure an LP's real cost with loss-versus-rebalancing (LVR).
+
+00:00:17.205 --> 00:00:18.495
+Here's the plan.
+
+00:00:18.495 --> 00:00:20.180
+First, the key ideas.
+
+00:00:20.180 --> 00:00:22.895
+Then, a worked example, step by step.
+
+00:00:22.895 --> 00:00:24.420
+Then, your checklist.
+
+00:00:24.420 --> 00:00:26.582
+And finally, a three-question quiz.
+
+00:00:27.882 --> 00:00:31.750
+First, Constant product (x·y=k): works for any
+
+00:00:31.750 --> 00:00:35.507
+pair; spreads liquidity across all prices.
+
+00:00:35.507 --> 00:00:39.570
+Next, StableSwap: for assets that should
+
+00:00:39.570 --> 00:00:43.636
+trade near 1:1 (stablecoins, LST/ETH).
+
+00:00:43.636 --> 00:00:46.741
+Blends constant-sum (flat, low slippage near the
+
+00:00:46.741 --> 00:00:49.910
+peg) with constant-product (safety away from it),
+
+00:00:49.910 --> 00:00:52.491
+tuned by an amplification parameter.
+
+00:00:52.491 --> 00:00:58.435
+Then, Weighted pools: more than two tokens or uneven
+
+00:00:58.435 --> 00:01:04.231
+weights (e.g. 80/20), with invariant ∏ xᵢ^wᵢ = k.
+
+00:01:04.231 --> 00:01:07.212
+An 80/20 pool has less impermanent
+
+00:01:07.212 --> 00:01:09.386
+loss on the 80% token.
+
+00:01:09.386 --> 00:01:13.616
+Also, Concentrated liquidity: positions in price ranges
+
+00:01:13.616 --> 00:01:17.316
+("ticks"); the pool tracks √price internally.
+
+00:01:17.316 --> 00:01:21.337
+On top of that, Hooks and dynamic fees: newer
+
+00:01:21.337 --> 00:01:25.970
+designs (e.g. Uniswap v4, 2025) let pools run custom
+
+00:01:25.970 --> 00:01:31.078
+code at swap time: dynamic fees, limit orders, oracles.
+
+00:01:31.078 --> 00:01:33.158
+Each hook is extra contract risk.
+
+00:01:34.458 --> 00:01:40.356
+And finally, LVR (loss-versus-rebalancing): pool prices only update when
+
+00:01:40.356 --> 00:01:45.423
+arbitrageurs trade against LPs after prices move elsewhere.
+
+00:01:45.423 --> 00:01:49.201
+LVR measures what LPs lose to that arbitrage,
+
+00:01:49.201 --> 00:01:53.772
+versus a portfolio that rebalances at market prices.
+
+00:01:53.772 --> 00:01:58.850
+For a full-range constant-product pool, LVR ≈ σ²/8 of
+
+00:01:58.850 --> 00:02:03.287
+pool value per year (σ = annual volatility).
+
+00:02:03.287 --> 00:02:06.962
+Fees must beat LVR, not just impermanent loss.
+
+00:02:08.262 --> 00:02:12.717
+Let's look at the chart: Loss-versus-rebalancing vs volatility.
+
+00:02:12.717 --> 00:02:14.277
+Take a moment with it.
+
+00:02:14.277 --> 00:02:16.687
+It's everything we've just said, in one picture.
+
+00:02:17.987 --> 00:02:20.502
+Let's work an example, step by step.
+
+00:02:20.502 --> 00:02:26.407
+An ETH/USDC full-range pool with ETH volatility
+
+00:02:26.407 --> 00:02:31.997
+80%/yr: the calculator gives LVR ≈ 8.0%/yr.
+
+00:02:31.997 --> 00:02:34.841
+With 12% fee APR, LPs
+
+00:02:34.841 --> 00:02:38.373
+keep ≈ +4%/yr before gas.
+
+00:02:38.373 --> 00:02:42.950
+If volatility rises to 110%, LVR ≈ 15%/yr,
+
+00:02:42.950 --> 00:02:46.763
+and the same fees now lose money.
+
+00:02:46.763 --> 00:02:49.820
+Higher-volatility pairs need much higher fee tiers.
+
+00:02:51.120 --> 00:02:52.580
+Here's your checklist.
+
+00:02:52.580 --> 00:02:54.115
+Do it now, for real.
+
+00:02:54.115 --> 00:02:56.654
+First, I choose pool type by pair:
+
+00:02:56.654 --> 00:03:00.653
+StableSwap for pegged pairs, weighted/CL otherwise.
+
+00:03:00.653 --> 00:03:03.272
+Next, I compare fee APR
+
+00:03:03.272 --> 00:03:05.973
+with LVR, not just IL.
+
+00:03:05.973 --> 00:03:09.521
+And finally, Hook contracts reviewed like any other contract.
+
+00:03:10.821 --> 00:03:12.031
+Question 1.
+
+00:03:12.031 --> 00:03:14.726
+Why do stable pairs use StableSwap curves?
+
+00:03:19.146 --> 00:03:21.351
+The answer: They give very low slippage
+
+00:03:21.351 --> 00:03:23.446
+near the peg, where these pairs trade.
+
+00:03:24.746 --> 00:03:25.991
+Question 2.
+
+00:03:25.991 --> 00:03:27.626
+What does LVR measure?
+
+00:03:32.046 --> 00:03:35.308
+The answer: What LPs lose to arbitrageurs
+
+00:03:35.308 --> 00:03:38.026
+because pool prices lag the market.
+
+00:03:39.326 --> 00:03:40.596
+Question 3.
+
+00:03:40.596 --> 00:03:45.741
+Volatility 60%/yr: approximate LVR for a full-range pool?
+
+00:03:50.161 --> 00:03:53.438
+The answer: 0.6²/8 = 4.5%
+
+00:03:53.438 --> 00:03:56.336
+of pool value per year.
+
+00:03:57.636 --> 00:03:58.881
+Let's recap.
+
+00:03:58.881 --> 00:04:03.311
+Constant product (x·y=k): works for any pair.
+
+00:04:03.311 --> 00:04:06.847
+StableSwap: for assets that should
+
+00:04:06.847 --> 00:04:10.986
+trade near 1:1 (stablecoins, LST/ETH).
+
+00:04:10.986 --> 00:04:17.199
+Weighted pools: more than two tokens or uneven weights
+
+00:04:17.199 --> 00:04:22.131
+(e.g. 80/20), with invariant ∏ xᵢ^wᵢ = k.
+
+00:04:22.131 --> 00:04:26.031
+Concentrated liquidity: positions in price ranges ("ticks").
+
+00:04:27.331 --> 00:04:29.846
+Do the checklist now, before you move on.
+
+00:04:29.846 --> 00:04:33.911
+Next up, Lesson 2.8: The MEV supply chain.

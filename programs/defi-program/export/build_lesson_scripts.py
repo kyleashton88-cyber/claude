@@ -342,7 +342,7 @@ Baseline scripts run about 3–7 minutes; rewritten gold scripts target 5–25 m
 ## What exists
 | Video type | Count | Where | Status |
 |---|---|---|---|
-| VSL (main ≈3.5 min + 40s vertical) | 2 | `video/vsl-*.mp4` | Rendered |
+| VSL (main ≈3.5 min + 30s vertical) | 2 | `video/vsl-*.mp4` | Rendered |
 | Welcome | 1 | `video/welcome.mp4` | Rendered |
 | Module intros | 15 | `video/module-NN-intro.mp4` | Rendered |
 | **Lesson videos (incl. Mastery Starters)** | **{len(rows)}** | `video-scripts/lessons/*.json` + `video-scripts/gold/*.json` → `video/lesson-*.mp4` | Scripts ready (Lesson 3.2 gold standard); {len(rendered)} rendered |

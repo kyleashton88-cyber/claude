@@ -1,0 +1,451 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.245
+Lesson 3.2.
+
+00:00:02.245 --> 00:00:05.855
+LTV, liquidation threshold, and health factor.
+
+00:00:05.855 --> 00:00:08.285
+These three numbers decide whether a loan
+
+00:00:08.285 --> 00:00:09.500
+is a tool, or a trap.
+
+00:00:10.800 --> 00:00:14.165
+Here's the uncomfortable truth about borrowing on-chain.
+
+00:00:14.165 --> 00:00:16.640
+A lending protocol never calls you.
+
+00:00:16.640 --> 00:00:19.290
+There's no margin call, no grace period,
+
+00:00:19.290 --> 00:00:21.465
+and no one to negotiate with.
+
+00:00:21.465 --> 00:00:23.477
+When your collateral falls too far,
+
+00:00:23.477 --> 00:00:25.900
+it's sold automatically, at a penalty.
+
+00:00:25.900 --> 00:00:27.865
+So the only protection you have is
+
+00:00:27.865 --> 00:00:30.055
+arithmetic you did before you borrowed.
+
+00:00:31.355 --> 00:00:33.052
+By the end of this lesson, you'll
+
+00:00:33.052 --> 00:00:34.700
+be able to do three things.
+
+00:00:34.700 --> 00:00:38.290
+Measure your loan-to-value and health factor for any position.
+
+00:00:38.290 --> 00:00:41.625
+Locate the exact price at which you'd be liquidated.
+
+00:00:41.625 --> 00:00:44.466
+And defend the position, by choosing a buffer and
+
+00:00:44.466 --> 00:00:46.795
+a plan before you borrow a single dollar.
+
+00:00:48.095 --> 00:00:51.313
+Every lending position comes down to four numbers.
+
+00:00:51.313 --> 00:00:53.948
+First, LTV, or loan-to-value.
+
+00:00:53.948 --> 00:00:55.726
+It's simply your debt divided by
+
+00:00:55.726 --> 00:00:57.588
+the value of your collateral.
+
+00:00:57.588 --> 00:01:00.155
+Second, max LTV. That's the most the
+
+00:01:00.155 --> 00:01:03.368
+protocol lets you borrow against an asset.
+
+00:01:03.368 --> 00:01:05.683
+Third, the liquidation threshold.
+
+00:01:05.683 --> 00:01:08.960
+That's the loan-to-value at which your position can
+
+00:01:08.960 --> 00:01:11.922
+be liquidated, and it's always set higher than
+
+00:01:11.922 --> 00:01:14.428
+max LTV. Fourth, the health factor.
+
+00:01:14.428 --> 00:01:16.956
+Collateral value, times the liquidation
+
+00:01:16.956 --> 00:01:18.978
+threshold, divided by your debt.
+
+00:01:20.278 --> 00:01:22.698
+If you remember one thing, remember this.
+
+00:01:22.698 --> 00:01:24.595
+When the health factor falls below
+
+00:01:24.595 --> 00:01:26.793
+one, your position is liquidatable.
+
+00:01:26.793 --> 00:01:28.658
+Above one, you're safe, for now.
+
+00:01:28.658 --> 00:01:30.516
+At one or below, anyone can repay
+
+00:01:30.516 --> 00:01:32.320
+part of your debt, and take some
+
+00:01:32.320 --> 00:01:34.423
+of your collateral at a discount.
+
+00:01:34.423 --> 00:01:37.003
+That discount is the penalty, and you pay it.
+
+00:01:38.302 --> 00:01:39.425
+People mix up the two
+
+00:01:39.425 --> 00:01:41.307
+limits, so let's separate them.
+
+00:01:41.307 --> 00:01:44.082
+Max LTV is a borrowing limit.
+
+00:01:44.082 --> 00:01:46.084
+It stops you taking on more debt, and
+
+00:01:46.084 --> 00:01:47.912
+on its own it can't hurt you.
+
+00:01:47.912 --> 00:01:50.527
+The liquidation threshold is a trigger.
+
+00:01:50.527 --> 00:01:52.777
+Cross it, and liquidation starts.
+
+00:01:52.777 --> 00:01:54.652
+That's where you actually lose collateral.
+
+00:01:55.952 --> 00:01:58.717
+Let's work a real example, step by step.
+
+00:01:58.717 --> 00:02:02.842
+You deposit 10 ETH at $3,000 each.
+
+00:02:02.842 --> 00:02:05.826
+Your collateral is worth $30,000.
+
+00:02:05.826 --> 00:02:08.916
+You borrow $12,000 of stablecoins.
+
+00:02:08.916 --> 00:02:12.996
+Loan-to-value is $12,000 divided by $30,000.
+
+00:02:12.996 --> 00:02:14.481
+That's 40%.
+
+00:02:14.481 --> 00:02:19.044
+The liquidation threshold is 0.8, so the health
+
+00:02:19.044 --> 00:02:22.576
+factor is $30,000 × 0.8 ÷ $12,000.
+
+00:02:22.576 --> 00:02:24.171
+That's exactly 2.
+
+00:02:24.171 --> 00:02:26.446
+And the liquidation price is your debt
+
+00:02:26.446 --> 00:02:29.371
+divided by your quantity times the threshold.
+
+00:02:29.371 --> 00:02:31.841
+$12,000 ÷ 8.
+
+00:02:31.841 --> 00:02:33.756
+That's $1,500.
+
+00:02:33.756 --> 00:02:37.841
+So ETH can fall 50% before you're liquidated.
+
+00:02:39.141 --> 00:02:41.806
+Now watch what happens as you borrow more.
+
+00:02:41.806 --> 00:02:44.347
+Aim for a health factor of 1.5,
+
+00:02:44.347 --> 00:02:46.949
+and your debt can be $16,000.
+
+00:02:46.949 --> 00:02:50.284
+Your liquidation price rises to $2,000.
+
+00:02:50.284 --> 00:02:53.144
+A 33% drop now liquidates you.
+
+00:02:53.144 --> 00:02:56.292
+Suppose, as an illustration, the market
+
+00:02:56.292 --> 00:02:58.639
+lets you borrow up to 75%.
+
+00:02:58.639 --> 00:03:01.324
+That's $22,500.
+
+00:03:01.324 --> 00:03:06.494
+The health factor is $24,000 ÷ $22,500.
+
+00:03:06.494 --> 00:03:08.269
+About 1.07.
+
+00:03:08.269 --> 00:03:12.954
+Your liquidation price becomes $2,812.50.
+
+00:03:12.954 --> 00:03:15.199
+A drop of just over 6%.
+
+00:03:15.199 --> 00:03:17.479
+Crypto can move that much in an hour.
+
+00:03:17.479 --> 00:03:20.134
+Borrowing the maximum leaves almost no room.
+
+00:03:21.434 --> 00:03:23.709
+Here's the same story as a picture.
+
+00:03:23.709 --> 00:03:26.632
+The horizontal axis is the price of ETH.
+
+00:03:26.632 --> 00:03:29.784
+The vertical axis is your health factor.
+
+00:03:29.784 --> 00:03:32.804
+Start at today, $3,000, where the blue line
+
+00:03:32.804 --> 00:03:35.094
+sits at a health factor of 2.
+
+00:03:35.094 --> 00:03:37.707
+Follow the blue line down and left,
+
+00:03:37.707 --> 00:03:39.967
+and it crosses 1 at $1,500.
+
+00:03:39.967 --> 00:03:41.902
+That's your liquidation price.
+
+00:03:41.902 --> 00:03:45.167
+Now the orange line, with $16,000 of debt.
+
+00:03:45.167 --> 00:03:48.677
+It starts lower, and it hits 1 at $2,000.
+
+00:03:48.677 --> 00:03:50.992
+More debt doesn't just lower the line.
+
+00:03:50.992 --> 00:03:52.046
+It moves the cliff edge
+
+00:03:52.046 --> 00:03:53.452
+closer to where you're standing.
+
+00:03:54.752 --> 00:03:55.937
+And here's why the buffer
+
+00:03:55.937 --> 00:03:57.467
+matters more than it looks.
+
+00:03:57.467 --> 00:04:00.832
+Liquidations sell collateral into a falling market.
+
+00:04:00.832 --> 00:04:03.144
+That selling pushes the price lower, which
+
+00:04:03.144 --> 00:04:05.487
+triggers the next set of liquidations.
+
+00:04:05.487 --> 00:04:06.607
+A cascade.
+
+00:04:06.607 --> 00:04:09.373
+The move that reaches your liquidation price is
+
+00:04:09.373 --> 00:04:12.267
+often faster and deeper than anyone expected.
+
+00:04:12.267 --> 00:04:14.572
+Your buffer is the time you have to react.
+
+00:04:15.872 --> 00:04:17.619
+When the health factor falls, you
+
+00:04:17.619 --> 00:04:19.357
+have three ways to raise it.
+
+00:04:19.357 --> 00:04:20.542
+Repay debt.
+
+00:04:20.542 --> 00:04:22.193
+That's the most direct fix, so
+
+00:04:22.193 --> 00:04:24.357
+keep some stablecoins ready for it.
+
+00:04:24.357 --> 00:04:26.204
+Add collateral, from a reserve you
+
+00:04:26.204 --> 00:04:28.087
+set aside before you borrowed.
+
+00:04:28.087 --> 00:04:29.944
+Or the cheapest defence of all:
+
+00:04:29.944 --> 00:04:32.042
+borrow less in the first place.
+
+00:04:32.042 --> 00:04:34.485
+Decide which lever you'll pull, and at what
+
+00:04:34.485 --> 00:04:37.227
+health factor, before you open the position.
+
+00:04:37.227 --> 00:04:38.452
+Not during the crash.
+
+00:04:39.752 --> 00:04:42.247
+Four mistakes cause most liquidations.
+
+00:04:42.247 --> 00:04:44.208
+Borrowing right up to max LTV,
+
+00:04:44.208 --> 00:04:46.342
+because the button allows it.
+
+00:04:46.342 --> 00:04:49.435
+Forgetting that interest keeps growing the debt, so the
+
+00:04:49.435 --> 00:04:52.717
+health factor drifts down even when prices don't move.
+
+00:04:52.717 --> 00:04:54.305
+Having no alert, or an alert
+
+00:04:54.305 --> 00:04:56.302
+that fires while you're asleep.
+
+00:04:56.302 --> 00:04:58.885
+And having no reserve, so when the moment comes
+
+00:04:58.885 --> 00:05:01.037
+there's nothing to repay or top up with.
+
+00:05:02.337 --> 00:05:04.472
+Here's your checklist for this lesson.
+
+00:05:04.472 --> 00:05:08.787
+HF and liquidation price calculated before borrowing.
+
+00:05:08.787 --> 00:05:10.032
+A health factor of at
+
+00:05:10.032 --> 00:05:12.142
+least 2 for volatile collateral.
+
+00:05:12.142 --> 00:05:14.033
+And alerts set, which we
+
+00:05:14.033 --> 00:05:16.302
+build properly in Module 14.1.
+
+00:05:17.602 --> 00:05:18.812
+Question one.
+
+00:05:18.812 --> 00:05:23.206
+Collateral is worth $50,000, the liquidation threshold
+
+00:05:23.206 --> 00:05:26.062
+is 0.8, and the debt is $20,000.
+
+00:05:26.062 --> 00:05:27.347
+What's the health factor?
+
+00:05:31.767 --> 00:05:33.252
+The answer: 2.
+
+00:05:33.252 --> 00:05:38.187
+$50,000 × 0.8 is $40,000, divided by $20,000.
+
+00:05:39.487 --> 00:05:40.732
+Question two.
+
+00:05:40.732 --> 00:05:42.777
+Why keep the health factor well above 1?
+
+00:05:47.197 --> 00:05:50.298
+The answer: collateral prices can fall fast.
+
+00:05:50.298 --> 00:05:52.113
+The buffer is your time to react.
+
+00:05:53.413 --> 00:05:54.683
+Question three.
+
+00:05:54.683 --> 00:05:56.856
+What's the difference between max
+
+00:05:56.856 --> 00:05:59.028
+LTV and the liquidation threshold?
+
+00:06:03.448 --> 00:06:06.778
+The answer: max LTV caps new borrowing.
+
+00:06:06.778 --> 00:06:10.488
+The liquidation threshold is where liquidation becomes possible.
+
+00:06:11.788 --> 00:06:13.033
+Let's recap.
+
+00:06:13.033 --> 00:06:15.958
+A health factor below one means liquidatable.
+
+00:06:15.958 --> 00:06:18.762
+Your liquidation price is your debt, divided
+
+00:06:18.762 --> 00:06:21.803
+by quantity times the liquidation threshold.
+
+00:06:21.803 --> 00:06:24.378
+More debt moves the cliff closer, fast.
+
+00:06:24.378 --> 00:06:26.115
+And your buffer, and your plan,
+
+00:06:26.115 --> 00:06:28.043
+are decided before you borrow.
+
+00:06:28.043 --> 00:06:29.348
+Never during the crash.
+
+00:06:30.648 --> 00:06:32.261
+Do the checklist now, with the
+
+00:06:32.261 --> 00:06:34.173
+calculator, before you move on.
+
+00:06:34.173 --> 00:06:36.968
+Next up, Lesson 3.3: liquidations and
+
+00:06:36.968 --> 00:06:39.468
+cascades, and how to survive them.

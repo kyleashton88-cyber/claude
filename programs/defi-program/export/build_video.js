@@ -208,8 +208,8 @@ function sceneBody(s, W, H, T) {
       const wide = s.wide ? fs(1560, 1000) : fs(1300, 1000);
       return `<div style="position:absolute;left:0;right:0;top:${fs(96, 330)}px;display:flex;flex-direction:column;align-items:center">
       <div class="in" data-in="${T.v0 - 0.2}" style="font-size:${fs(28, 34)}px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:${C.aquaDark}">${esc(s.eyebrow)}</div>
-      <div class="wipe" data-in="${T.v0}" style="position:relative;margin-top:${fs(26, 40)}px;width:${wide}px;max-height:${fs(740, 1100)}px;border-radius:24px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.16)">
-        <img class="kb" src="${asset(s.src)}" style="display:block;width:100%" data-zoom='${JSON.stringify(s.zoom ? { ...s.zoom, t: T.zoom } : null)}'>
+      <div class="wipe" data-in="${T.v0}" style="position:relative;margin-top:${fs(26, 40)}px;max-width:${wide}px;border-radius:24px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.16)">
+        <img class="kb" src="${asset(s.src)}" style="display:block;max-width:${wide}px;max-height:${fs(670, 1100)}px;width:auto;height:auto" data-zoom='${JSON.stringify(s.zoom ? { ...s.zoom, t: T.zoom } : null)}'>
         ${(s.callouts || []).map((c, i) => `<div class="call" data-in="${T.callouts[i]}" style="position:absolute;left:${c.x * 100}%;top:${c.y * 100}%;transform:translate(-50%,-50%)">
           <div class="pulse" style="width:74px;height:74px;border-radius:50%;border:5px solid ${C.orange};box-shadow:0 0 0 6px rgba(235,104,52,.25)"></div>
           ${c.text ? `<div style="position:absolute;${c.below ? 'top:88px' : 'bottom:88px'};left:50%;transform:translateX(-50%);white-space:nowrap;padding:10px 20px;border-radius:12px;background:${C.orange};color:#fff;font-weight:800;font-size:26px">${esc(c.text)}</div>` : ''}</div>`).join('')}
@@ -285,7 +285,7 @@ function scenePage(video, s, W, H, sc) {
     <div class="foot2"><div style="transform:scale(${v ? 0.9 : 0.72});transform-origin:left center">${wordmark(16)}</div><span>${v ? '' : DISCLAIMER}</span></div>
   </div>
   <script>
-  const DUR = ${sc.dur}, T0 = ${sc.start}, TOTAL = ${sc.total}, CUES = ${JSON.stringify(sc.cues)}, CHAP = ${JSON.stringify(sc.chapter || '')}, VOEND = ${sc.voEnd}, W = ${W}, H = ${H};
+  const DUR = ${sc.dur}, T0 = ${sc.start}, TOTAL = ${sc.total}, CUES = ${JSON.stringify(sc.cues)}, CHAP = ${JSON.stringify(sc.chapter || '')}, VOEND = ${sc.voEnd}, W = ${W}, H = ${H}, NOHI = ${s.highlight === false};
   const ease = x => x <= 0 ? 0 : x >= 1 ? 1 : 1 - Math.pow(1 - x, 3);
   const easeIO = x => x <= 0 ? 0 : x >= 1 ? 1 : x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
   // --- living network background (continuous across scenes: uses global time)
@@ -321,7 +321,7 @@ function scenePage(video, s, W, H, sc) {
     // synced items: reveal, then highlight the one being spoken; all settle when narration ends
     const its = [...document.querySelectorAll('.it')];
     its.forEach(el => { const a = +el.dataset.a, b = +el.dataset.b, p = ease((t - a) / .55);
-      const active = t >= a && t < b && t < VOEND && its.length > 1, anyActive = its.some(e => t >= +e.dataset.a && t < +e.dataset.b && t < VOEND);
+      const active = t >= a && t < b && t < VOEND && its.length > 1 && !NOHI && !el.querySelector('.num'), anyActive = !NOHI && its.some(e => t >= +e.dataset.a && t < +e.dataset.b && t < VOEND);
       el.style.opacity = p * (active || !anyActive ? 1 : .5); el.style.transform = 'translateX(' + (1 - p) * -30 + 'px)';
       el.style.background = active ? 'rgba(46,230,166,.09)' : 'transparent'; el.style.boxShadow = active ? 'inset 4px 0 0 ${C.aquaDark}' : 'none';
       const num = el.querySelector('.num'); if (num) { const c = JSON.parse(num.dataset.count); if (c) { const q = easeIO((t - a) / 1.3); let x = (c.val * q).toFixed(c.dec); if (c.comma) x = Number(x).toLocaleString('en-US', { minimumFractionDigits: c.dec, maximumFractionDigits: c.dec }); num.textContent = c.pre + x + c.post; } } });
@@ -454,10 +454,16 @@ async function render(video, browser) {
 
 // ------------------------------------------------------------------ SCRIPTS.md
 function visual(s) {
-  return { strike: `"${s.big}" struck out → "${s.after}"`, statement: (s.lines || []).join(' / ') + (s.sub ? ` — ${s.sub}` : ''), bullets: `${s.title}: ${(s.items || []).join(' · ')}`,
-    logo: `Logo draws on + "${s.tagline}"`, image: `${s.eyebrow}: \`${s.src}\`${s.callouts ? ' + callouts' : ''}${s.zoom ? ' + zoom' : ''}`, stats: (s.stats || []).map(x => x.join(' ')).join(' · ') + ' (counting up)',
-    cta: `Logo + "${s.button}" button · ${s.sub}`, title: `Title card: ${s.num || ''} ${s.title}`, pillars: `${s.title}: ${(s.items || []).map(p => p.title).join(' · ')}`,
-    compare: `${s.title}: ${s.left.label} vs ${s.right.label}`, steps: `${s.title}: ${(s.steps || []).join(' → ')}${s.result ? ` ⇒ ${s.result}` : ''}`, quiz: `Quiz: ${s.q} → ${s.a}` }[s.type];
+  const V = {
+    strike: () => `"${s.big}" struck out → "${s.after}"`, statement: () => (s.lines || []).join(' / ') + (s.sub ? ` — ${s.sub}` : ''),
+    bullets: () => `${s.title}: ${(s.items || []).join(' · ')}`, logo: () => `Logo draws on + "${s.tagline}"`,
+    image: () => `${s.eyebrow}: \`${s.src}\`${s.callouts ? ' + callouts' : ''}${s.zoom ? ' + zoom' : ''}`,
+    stats: () => (s.stats || []).map(x => x.join(' ')).join(' · ') + ' (counting up)', cta: () => `Logo + "${s.button}" button · ${s.sub}`,
+    title: () => `Title card: ${s.num || ''} ${s.title}`, pillars: () => `${s.title}: ${(s.items || []).map(p => p.title).join(' · ')}`,
+    compare: () => `${s.title}: ${s.left.label} (${s.left.items.join(', ')}) vs ${s.right.label} (${s.right.items.join(', ')})`,
+    steps: () => `${s.title}: ${(s.steps || []).join(' → ')}${s.result ? ` ⇒ ${s.result}` : ''}`, quiz: () => `Quiz: ${s.q} → ${s.a}`,
+  };
+  return V[s.type]();
 }
 function writeScripts(results) {
   let md = `# Video scripts: On-Chain Operator Program
@@ -486,6 +492,14 @@ Compliance: no income or return claims, no fake urgency, keys never requested, d
   fs.mkdirSync(OUT, { recursive: true });
   const arg = process.argv[2];
   const browser = await chromium.launch({ executablePath: CHROME });
+  if (arg === '--scripts-only') {  // rebuild SCRIPTS.md from the last render's narration timings
+    const results = VIDEOS.filter(v => v.group !== 'lessons').map(video => {
+      const t = JSON.parse(fs.readFileSync(path.join(WORK, video.id, 'timings.json')));
+      let start = 0; const timeline = video.scenes.map((s, i) => { const vo = t[`s${String(i + 1).padStart(2, '0')}`].dur, dur = LEAD_IN + vo + TAIL + (s.hold || 0), r = { start, dur, vo }; start += dur; return r; });
+      return { video, timeline, total: start };
+    });
+    writeScripts(results); await browser.close(); console.log('wrote video/SCRIPTS.md'); return;
+  }
   if (arg === '--thumbs-only') { for (const v of VIDEOS) await thumbnail(v, browser); await browser.close(); console.log(`${VIDEOS.length} thumbnails`); return; }
   const ids = arg ? new Set(arg.split(',')) : null;
   const results = [];
