@@ -1,0 +1,124 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.275
+Lesson 6.4.
+
+00:00:02.275 --> 00:00:04.300
+The on-chain research workflow.
+
+00:00:04.300 --> 00:00:06.216
+By the end of this lesson, you'll
+
+00:00:06.216 --> 00:00:08.020
+be able to turn research into a
+
+00:00:08.020 --> 00:00:10.725
+written thesis with invalidation and monitoring.
+
+00:00:12.025 --> 00:00:13.315
+Here's the plan.
+
+00:00:13.315 --> 00:00:15.000
+First, the key ideas.
+
+00:00:15.000 --> 00:00:17.715
+Then, a worked example, step by step.
+
+00:00:17.715 --> 00:00:19.240
+Then, your checklist.
+
+00:00:19.240 --> 00:00:21.402
+And finally, a three-question quiz.
+
+00:00:22.702 --> 00:00:27.093
+Question first → primary sources (docs, contracts, governance) →
+
+00:00:27.093 --> 00:00:31.755
+economic reality (fees vs incentives) → cross-check with independent
+
+00:00:31.755 --> 00:00:34.795
+data → thesis: what must be true, what would
+
+00:00:34.795 --> 00:00:36.957
+prove it wrong, what to monitor.
+
+00:00:38.257 --> 00:00:40.772
+Let's work an example, step by step.
+
+00:00:40.772 --> 00:00:44.289
+"Thesis: stablecoin lending on Protocol Z
+
+00:00:44.289 --> 00:00:47.437
+earns ~5% from real borrow demand.
+
+00:00:47.437 --> 00:00:51.060
+Must be true: utilisation 60–85%, oracle
+
+00:00:51.060 --> 00:00:54.452
+unchanged, no new risky collateral.
+
+00:00:54.452 --> 00:00:58.923
+Invalidation: utilisation > 95% for 48h, a governance
+
+00:00:58.923 --> 00:01:03.032
+change adding thin collateral, or an incident.
+
+00:01:03.032 --> 00:01:05.927
+Monitor: weekly utilisation, governance feed."
+
+00:01:07.227 --> 00:01:08.687
+Here's your checklist.
+
+00:01:08.687 --> 00:01:10.222
+Do it now, for real.
+
+00:01:10.222 --> 00:01:12.797
+First, Research question written first.
+
+00:01:12.797 --> 00:01:16.487
+Next, Thesis, invalidation and monitoring written.
+
+00:01:16.487 --> 00:01:19.928
+And finally, Evidence from at least two independent sources.
+
+00:01:21.228 --> 00:01:22.438
+Question 1.
+
+00:01:22.438 --> 00:01:23.793
+Why start with a question?
+
+00:01:28.213 --> 00:01:30.528
+The answer: To avoid hunting for data
+
+00:01:30.528 --> 00:01:32.903
+that confirms what you already believe.
+
+00:01:34.203 --> 00:01:35.448
+Question 2.
+
+00:01:35.448 --> 00:01:36.973
+What makes a thesis useful?
+
+00:01:41.393 --> 00:01:44.183
+The answer: A clear invalidation you'll act on.
+
+00:01:45.483 --> 00:01:46.753
+Question 3.
+
+00:01:46.753 --> 00:01:48.208
+What should monitoring track?
+
+00:01:52.628 --> 00:01:54.220
+The answer: Only the metrics
+
+00:01:54.220 --> 00:01:55.813
+that would change the thesis.
+
+00:01:57.113 --> 00:01:59.628
+Do the checklist now, before you move on.
+
+00:01:59.628 --> 00:02:01.693
+Next up, Lesson 6.5: Case
+
+00:02:01.693 --> 00:02:04.553
+studies: how DeFi failures happened.
