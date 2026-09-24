@@ -96,7 +96,7 @@ function moduleIntros() {
       scenes: [
         { type: 'image', src: `assets/modules/module-${nn}.png`, eyebrow: `Module ${n}`,
           vo: `Module ${NUM[+n]}. ${say(title)}.`, cap: `Module ${n}. ${title}.` },
-        { type: 'statement', lines: ['The goal'], sub: outcome.replace(/\.$/, '') + '.',
+        { type: 'statement', lines: ['The goal'], sub: outcome.charAt(0).toUpperCase() + outcome.slice(1).replace(/\.$/, '') + '.',
           vo: `The goal: ${say(outcome)}`, cap: `The goal: ${outcome}` },
         { type: 'bullets', title: `${count} lessons`, items: lessons, compact: true,
           vo: `${NUM[+count] || count} lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on.`,

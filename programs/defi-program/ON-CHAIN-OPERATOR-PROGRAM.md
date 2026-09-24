@@ -5,15 +5,17 @@
 *Generated 2026-09-24 from `programs/defi-program/`. Don't edit this file directly: edit the source files and run `python3 programs/defi-program/build_master.py`.*
 
 ## Contents
-0. Brand & logo (see `06-whop-store-listing.md`)
 1. Build status
 2. Offer, decisions & curriculum
 3. Whop setup
-4. Whop store listing
-5. Funnel changes
-6. Course content (finished lessons)
-7. Skills archive
-8. Build prompt (hand this to Claude Code)
+4. Whop store listing (logo, images, copy)
+5. Operations kit (capstones, application, call script, emails, live tier, terms)
+6. Worksheets & templates
+7. Funnel changes
+8. Video scripts (VSLs, welcome, module intros)
+9. Course content (all 79 lessons)
+10. Skills archive
+11. Build prompt (hand this to Grok or Claude Code)
 
 ---
 
@@ -22,7 +24,7 @@
 
 **Everything in one file:** `ON-CHAIN-OPERATOR-PROGRAM.md`, also as `On-Chain-Operator-Program.docx` (Word) and `On-Chain-Operator-Program.pdf`.
 Rebuild: `python3 programs/defi-program/build_master.py`, then `cd programs/defi-program/export && npm install && npm run build`.
-**To finish the build with AI:** paste `BUILD-PROMPT.md` into Claude Code.
+**To finish the build with AI:** paste `BUILD-PROMPT.md` into Grok (or Claude Code) and attach the files it lists.
 
 | File | Phase | Status |
 |---|---|---|
@@ -34,17 +36,22 @@ Rebuild: `python3 programs/defi-program/build_master.py`, then `cd programs/defi
 | `06-whop-store-listing.md` | Store product listing: copy + image upload map | Ready to paste (3 placeholders) |
 | `assets/` | 53 images: logo system (8), store icon + banner + 7 gallery (9), 15 module banners, 16 diagrams, 5 charts | Rendered by `export/build_images.js` |
 | `Day-1-Setup-Kit.pdf` | Printable beginner setup checklist (generated from Module 0) | Built by `npm run build` |
+| `07-program-operations.md` | Capstones & rubrics, certification, application form & scoring, call script, member emails, live tier, community, terms, support, launch plan | Draft (legal review + your decisions) |
+| `08-worksheets.md` | 17 worksheet templates used by lessons and capstones | Ready |
+| `video/` | 18 videos: main VSL, 30s vertical VSL, welcome, 15 module intros + `SCRIPTS.md` | Rendered by `export/build_video.js` |
 | `lessons/module-00-crypto-from-zero.md` | Module 0 (8) + Day-1 Setup Kit | Written |
 | `lessons/module-01-foundations-safety.md` | Module 1 (6) | Written |
 | `lessons/module-02-trading-on-chain.md` | Module 2 (4 + sample 2.2) | Written |
+| `lessons/module-03…module-08` | Modules 3–8 (lesson 8.3 = `03-…`) | Written |
 | `lessons/module-09-defi-vs-grid-bots.md` | Module 9 (3) | Written |
 | `lessons/module-10-advanced-yield-engineering.md` | Module 10 (6) | Written |
+| `lessons/module-11-hedging-risk-engineering.md` | Module 11 (5) | Written |
 | `lessons/module-12-own-bank.md` | Module 12 (6) | Written |
 | `lessons/module-13-income-engine.md` | Module 13 (5) | Written |
+| `lessons/module-14-automation-mastery.md` | Module 14 (4) | Written |
 
 
-Lessons written: 40 of 79 (Modules 0, 1, 2, 9, 10, 12, 13 + lesson 8.3).
-Still to write (39): Modules 3–7 · lessons 8.1, 8.2, 8.4 · Module 11 · Module 14.
+**All 79 lessons are written** (Modules 0–14, plus lesson 8.3 in `03-defi-strategy-mastery.md`).
 Phase 3: blocked until Whop is reconnected in Zapier and the product is created in the Whop dashboard (see `05-whop-setup.md`).
 
 ---
@@ -393,7 +400,7 @@ Outcome: monitor and automate safely, run multisig operations, and complete the 
   payout policy, stress test and incident plan. Reviewed on the Live tier.
 
 ### Totals
-15 modules · 79 lessons (42 ATLAS + 37 new) · 237 quiz questions · 25 strategy playbooks · 2 capstones · strategy calculator with 15 commands.
+15 modules · 79 lessons (42 ATLAS + 37 new) · 239 quiz questions · 25 strategy playbooks · 2 capstones · strategy calculator with 15 commands.
 
 ---
 
@@ -449,10 +456,10 @@ the Starter tier / GBB price conflict.
 Nothing gets created until you've seen the exact values and said yes.
 
 ## Step 3 — Upload content
-Written and ready to paste in (40 of 79 lessons): Modules 0, 1, 2, 9, 10,
-12 and 13, plus lesson 8.3 (`lessons/`, `02-…`, `03-…`). Module 0 includes
-the Day-1 Setup Kit. Still to write: Modules 3–7, lessons 8.1/8.2/8.4,
-Modules 11 and 14.
+All 79 lessons are written and ready to paste in (`lessons/`, `02-…`,
+`03-…`), with module banners, diagrams, the Day-1 Setup Kit PDF, the welcome
+video and 15 module intro videos (`video/`). Course layout and drip plan:
+`07-program-operations.md` section 1.
 
 ## Step 4 — High-ticket sales path
 ![High-ticket sales path](assets/diagrams/sales-funnel.png)
@@ -514,6 +521,8 @@ the rings, stretch the mark or put the light version on a dark background.
 | Gallery 5 | `assets/store/gallery-05-research-loop.png` | 1920×1080 |
 | Gallery 6 | `assets/store/gallery-06-grid-vs-lp.png` | 1920×1080 |
 | Gallery 7 | `assets/store/gallery-07-whats-included.png` | 1920×1080 |
+| **Listing video (VSL)** | `video/vsl-main.mp4` (≈90s, 1920×1080, captioned) | 16:9 |
+| Ads / Reels / Shorts | `video/vsl-short-vertical.mp4` (≈25s, 1080×1920) | 9:16 |
 | Course module headers | `assets/modules/module-00.png` … `module-14.png` | 1600×500 @2x |
 | In-lesson diagrams & charts | `assets/diagrams/*.png`, `assets/charts/*.png` | 1800 wide @2x |
 
@@ -571,6 +580,7 @@ income engine and run your capital like a bank. 15 modules · 79 lessons.
 | 15 modules, 79 lessons, zero to operator | ✓ | ✓ |
 | 25 strategy playbooks with maths and kill rules | ✓ | ✓ |
 | Printable Day-1 Setup Kit for complete beginners | ✓ | ✓ |
+| Welcome video + 15 module intro videos | ✓ | ✓ |
 | Checklists and quizzes in every lesson | ✓ | ✓ |
 | Due-diligence, pre-launch and bank-policy worksheets | ✓ | ✓ |
 | Strategy, income and balance-sheet calculators | ✓ | ✓ |
@@ -618,7 +628,295 @@ income are guaranteed.
 
 ---
 
-# 5. Funnel changes (draft, not applied)
+# 5. Operations kit
+
+Everything around the lessons needed to sell, deliver and run the program.
+Items marked **YOU DECIDE** need your call. Legal wording is a starting draft:
+**have a lawyer review terms and disclaimers before launch.**
+
+Contents: 1. Whop course layout · 2. Capstones & rubrics · 3. Certification ·
+4. Application form & scoring · 5. Sales call script · 6. Member email sequence ·
+7. Live tier design · 8. Community rules · 9. Terms, disclaimers & refunds ·
+10. Support & FAQ · 11. Launch plan
+
+---
+
+## 1. Whop course layout
+
+| Whop section | Contents | Video |
+|---|---|---|
+| Start here | Welcome, how the program works, Day-1 Setup Kit (PDF) | `video/welcome.mp4` |
+| Module 0–14 | One chapter per module; one lesson per page, with images; module practical at the end | `video/module-NN-intro.mp4` at the top of each module |
+| Tools | Strategy calculator (`defi_calc.py`) instructions, worksheet templates (`08-worksheets.md`) | n/a |
+| Capstones | Briefs, rubrics, submission form | n/a |
+| Live (Live tier only) | Session calendar, recordings, review booking | n/a |
+
+**Drip (recommended):** release a stage at a time as the previous stage's quiz is
+passed, not by date. Beginners shouldn't reach leverage before safety.
+
+---
+
+## 2. Capstones & rubrics
+
+### Analyst capstone (after Module 7)
+**Brief:** a due-diligence file on one real protocol: the 6-step loop
+(Module 6), tokenomics and governance, and an on-chain section (Module 7), ending
+in a verdict with size, conditions and exit.
+
+| Criterion | Weight | Pass standard |
+|---|---|---|
+| Mechanism and cash flow correctly explained | 20% | Fees vs emissions separated with sources |
+| Dependency map complete | 20% | Oracles, bridges, admin/timelock, stablecoins, other protocols |
+| Evidence quality | 20% | Primary sources + at least two independent data views |
+| On-chain analysis without over-interpretation | 15% | Caveats stated for every metric |
+| Verdict: size, conditions, exit | 25% | Actionable, with kill rules and an unwind path |
+
+Pass: ≥ 70%. Resubmission allowed.
+
+### Operator capstone (Module 14.4)
+**Brief:** the ten-section personal bank (see 14.4). No keys, seeds or account access anywhere.
+
+| Criterion | Weight | Pass standard |
+|---|---|---|
+| Balance sheet & policies internally consistent | 20% | LTV, HF and runway match the credit and ladder policies |
+| Custody & security | 15% | Multisig or equivalent, limits, a tested recovery, succession |
+| Income engine honesty | 20% | Loss assumptions stated; payout ≤ 80% of expected income |
+| Stress test & fixes | 20% | Five scenarios, each failure fixed |
+| Operations | 15% | Alerts mapped to actions; automation scoped; signing procedure |
+| Clarity | 10% | A stranger could run it from the document |
+
+Pass: ≥ 70%. Distinction: ≥ 90% plus one quarter of books kept to standard.
+
+---
+
+## 3. Certification
+- **On-Chain Analyst:** analyst capstone passed
+- **On-Chain Operator:** operator capstone passed
+- **On-Chain Operator, with distinction:** as above
+Certificates state that they reflect course completion only, not a licence or a professional qualification.
+
+---
+
+## 4. Application form & scoring
+
+**Form (Typeform or Whop form):**
+1. Name, email, country
+2. Experience: never owned crypto / some / active trader / advanced
+3. Capital you plan to operate: < $10k / $10–50k / $50–250k / $250k+
+4. Goal: learn safely from zero / earn income / borrow against assets / run a structured portfolio / other
+5. Do you already use Grid Bot Builder? (yes/no)
+6. Why now? (short text)
+7. Acknowledgement (required): *"I understand this is education, not financial advice, and that no returns are promised."*
+
+**Scoring** (plugs into `gbb-new-lead` as `interest = defi`):
+| Answer | Points |
+|---|---|
+| Capital $250k+ / $50–250k / $10–50k / < $10k | 4 / 3 / 1 / 0 |
+| Clear goal (not "get rich quick") | 2 |
+| GBB customer | 1 |
+| Thoughtful "why now" | 1 |
+
+≥ 6 → invite to call · 3–5 → call optional + nurture · < 3 → nurture + Elite Intel Community trial.
+**Disqualify** anyone seeking guaranteed returns or asking the program to manage funds.
+
+---
+
+## 5. Sales call script (30 min)
+
+1. **Open (2 min):** "This call is to see if the program fits you. If it doesn't, I'll tell you."
+2. **Where are you now? (8 min):** experience, current setup, what's gone wrong before, goal.
+3. **Where do you want to be? (5 min):** in a year, what does "working" look like? (Steer from return targets to capabilities: a safe setup, research ability, income policy, credit line.)
+4. **The gap (5 min):** reflect back what's missing: process, safety, policy.
+5. **The program (5 min):** stages, what they'll build, Course vs Live, capstones. Show the path image.
+6. **Fit and objections (4 min):** see below.
+7. **Close (1 min):** "Would you like the enrolment link?" If yes, send a per-buyer checkout link (with UTM metadata).
+
+**Objection answers (never make return promises):**
+- *"Will I make my money back?"* "I can't promise returns and nobody honestly can. What you'll leave with is a process to research, size and exit positions, and an income policy that doesn't depend on luck."
+- *"It's expensive."* "It is. If the cost would strain you, don't do it now; start with the free Day-1 Setup Kit and Elite Intel."
+- *"I've lost money in crypto before."* "Most losses come from setup mistakes, leverage and yields nobody explained. Those are the first things we fix."
+
+**Never:** promise returns, pressure with fake deadlines, or ask for keys or account access.
+
+---
+
+## 6. Member email sequence (after purchase)
+
+| Day | Subject | Body (plain text, < 120 words) |
+|---|---|---|
+| 0 | Welcome, operator | Access link · watch the welcome video · start Module 0 · print the Day-1 Setup Kit · "we'll never ask for your seed phrase" |
+| 2 | Your Day-1 Setup Kit | "Tick Part A today. Secure your email before anything else." |
+| 7 | Did your restore test pass? | Nudge for Lesson 0.5; link to support |
+| 14 | Stage 1 unlocked | What Modules 1–2 build; Live tier: first session date |
+| 30 | Your first month | Progress check; invite to book a check-in (Live) |
+| 60 | Halfway to analyst | Analyst capstone brief |
+| 90 | From analyst to operator | Stage 4–5 preview; operator capstone brief |
+
+---
+
+## 7. Live tier design (**YOU DECIDE: price, cadence**)
+
+| Component | Proposed | Notes |
+|---|---|---|
+| Group sessions | 2 × 60 min per month | One teaching deep-dive, one Q&A |
+| Capstone reviews | Written review + 20-min call, each capstone | Uses the rubrics above |
+| Portfolio/policy review | 1 per quarter, 30 min | Reviews policies, never gives personalised investment advice |
+| Protocol research clinic | Monthly, recorded | Walks through a due-diligence file live |
+| Recordings | All sessions | Stored in the Live section |
+
+Boundaries: education and process review only; no personalised financial
+advice, no trade calls, no fund management.
+
+---
+
+## 8. Community rules
+1. Education, not signals. No "buy X now" posts.
+2. Never ask for or share seed phrases, keys or account access. Anyone who asks is removed.
+3. No DMs offering "help", "recovery" or investments. Report them.
+4. No referral links or shilling.
+5. Show your working: numbers from the calculators, sources linked.
+6. Be kind to beginners. Everyone started at Module 0.
+
+---
+
+## 9. Terms, disclaimers & refunds (draft; lawyer review required)
+
+**Disclaimer (listing, checkout, every module):**
+*The On-Chain Operator Program is educational content only. It is not
+financial, investment, tax or legal advice, and nothing in it is a
+recommendation to buy, sell or hold any asset. Digital assets are volatile and
+you can lose some or all of your capital. No results or income are promised or
+guaranteed. Examples are illustrative. "Operate as your own bank" describes a
+personal method, not a licence or financial service. We will never ask for your
+seed phrase, private keys or account access.*
+
+**Refund policy (YOU DECIDE):** options:
+- (a) 14 days, if under 30% of lessons completed
+- (b) 7 days, no questions asked
+- (c) no refunds after access (state clearly at checkout)
+
+**Other terms to include:** access duration (lifetime / 12 months), no sharing
+of accounts, content copyright, conduct rules (section 8), Live-tier boundaries (section 7).
+
+---
+
+## 10. Support & FAQ
+- Support channel: email (response within 2 business days) + community.
+- **Top questions:** "I sent crypto on the wrong network" (check whether the address
+  exists on that network; contact the receiving service; prevention in 0.6) ·
+  "I lost my seed phrase" (if the wallet is still accessible, move funds to a new
+  wallet with a new seed now) · "A support person DM'd me" (it's a scam; block) ·
+  "Is X protocol safe?" (run the 6-step loop; staff don't give recommendations).
+
+---
+
+## 11. Launch plan
+1. Reconnect Whop in Zapier; create the hidden product; upload logo, banner and gallery images; paste the listing.
+2. Upload the course: 15 modules, lesson pages with images, intro videos, Day-1 Setup Kit.
+3. Create plans via Zapier (course $15,000 one-time; live tier once priced), approved first.
+4. Publish the application form; connect scoring to `gbb-new-lead`.
+5. Test end to end: application → call → per-buyer checkout → onboarding email → access.
+6. Soft launch to the warm list (GBB customers, Elite Intel) and cold ads at the same time (per decision), with the VSLs.
+7. Weekly: `gbb-ad-performance` and `gbb-pipeline-check` including DeFi.
+
+---
+
+# 6. Worksheets & templates
+
+Copy these into Notion, a spreadsheet or a document. Numbers come from
+`defi_calc.py`. **Never write seed phrases, private keys or passwords in any
+worksheet.**
+
+---
+
+## W1 · Records sheet (from Lesson 0.3, keep forever)
+| Date | Action (buy/sell/transfer/swap/fee/income) | Asset | Amount | Price (USD) | Fee | Network | Tx link | Notes |
+|---|---|---|---|---|---|---|---|---|
+
+## W2 · Position journal (Lesson 8.4)
+| Position | Protocol / chain | Contracts | Amount | Entry date/price | Profit engine | Thesis | Kill rules | Approvals | Weekly result |
+|---|---|---|---|---|---|---|---|---|---|
+
+## W3 · Due-diligence file (Module 6; mirrors the Notion tracker)
+- Protocol · chain · TVL (source/date) · risk rating · verdict
+- 1 Mechanism · 2 Cash flow (organic vs subsidised) · 3 Dependencies · 4 Solvency · 5 Evidence (links) · 6 Exit
+- Tokenomics: market cap, FDV, 12-month unlocks, value capture
+- Governance: voting concentration, timelock
+- On-chain: holders, flows, activity, depth, derivatives
+- Monitoring triggers
+
+## W4 · Risk register (Lesson 8.2)
+| Position | Risk surface | Description | Likelihood 1–5 | Impact 1–5 | Score | Response |
+|---|---|---|---|---|---|---|
+
+## W5 · Portfolio plan (Lesson 8.1)
+| Bucket | Target % | Current % | Holdings | Caps (protocol / chain / issuer / bridge) |
+|---|---|---|---|---|
+Rebalance rule: ________
+
+## W6 · Balance sheet (Lesson 12.1)
+| Assets | Value | Liabilities | Value |
+|---|---|---|---|
+| Collateral | | Loans | |
+| Yield positions | | Margin | |
+| Reserve (T0+T1) | | | |
+| **Total assets** | | **Total liabilities** | |
+Equity = ____ · LTV = ____ · HF = ____ · Runway (months) = ____
+
+## W7 · Custody policy (Lesson 12.2)
+- Vault: type (multisig m-of-n) · key locations (general, not exact) · allowlisted destinations · timelock
+- Operating: wallet type · daily limit · protocols allowed
+- Hot: float size · refill schedule
+- Recovery test log: date · path tested · result
+
+## W8 · Credit policy (Lesson 12.3)
+Max LTV __% · HF floor __ · alert levels __ / __ · actions at each level · fixed or variable (why) · repayment source · collateral allowed
+
+## W9 · Liquidity ladder (Lesson 12.4)
+| Tier | Access | Holds | Target (months of obligations) | Current | Refill rule |
+|---|---|---|---|---|---|
+| T0 | Seconds | | | | |
+| T1 | Hours | | | | |
+| T2 | Scheduled | | | | |
+| T3 | Days–weeks | | | | |
+
+## W10 · Lending policy (Lesson 12.5)
+| Market/vault | Collateral | Oracle | Liquidation LTV | Curator | Loss prob. (assumed) | LGD | Cap |
+|---|---|---|---|---|---|---|---|
+
+## W11 · Income portfolio & payout policy (Module 13)
+`defi_calc.py income --pos "name:amount:yield:loss_prob:lgd" ... --payout 0.7`
+Blended risk-adjusted yield __% · expected income __/yr · payout ratio __% · monthly payout __ · review rule ________
+
+## W12 · Stress test (Lesson 11.4)
+| Scenario | Loss | Liquidations? | Liquidity OK? | Payout OK? | Fix |
+|---|---|---|---|---|---|
+| Crypto −50% | | | | | |
+| Stablecoin −10% | | | | | |
+| Borrow rate 20% | | | | | |
+| Largest protocol hacked | | | | | |
+| Main L2 halted 48h | | | | | |
+
+## W13 · Incident playbook (Lesson 11.5)
+Official channels per protocol (bookmarked) · containment steps per incident type · fresh-wallet procedure · who to contact · journal template
+
+## W14 · Alert sheet (Lesson 14.1)
+| Alert | Threshold | Tool | Action |
+|---|---|---|---|
+
+## W15 · Automation permissions (Lesson 14.2)
+| Bot/automation | Permission | Contract | Cap | Expiry | Revoke method |
+|---|---|---|---|---|---|
+
+## W16 · Annual review (Lesson 13.5)
+Equity start/end · LTV · runway · income expected vs realised by source · losses & near-misses · payout paid vs policy · updated loss assumptions · custody & succession drill done?
+
+## W17 · Letter of instruction (Lesson 12.6), stored apart from any key
+What exists (wallet types, multisig setup) · where documents are · who the co-signer/professional is · how the executor should proceed · **no seeds, no keys, no passwords**
+
+---
+
+# 7. Funnel changes (draft, not applied)
 
 Proposed changes to the four live Zapier skills so they handle the DeFi
 program alongside Grid Bot Builder. **Nothing has been changed in Zapier.**
@@ -724,7 +1022,259 @@ before sending, no profit promises.
 
 ---
 
-# 6. Course content
+# 8. Video scripts
+
+Generated by `export/build_video.js` from `export/videos.js` (edit the scripts there, then rebuild).
+Narration: Kokoro TTS, voice `af_heart` (offline, Apache-2.0 model). To use your own voice,
+record the VO lines below and replace the audio track, or re-run with `VOICE=am_michael` etc.
+
+Compliance: no income or return claims, no fake urgency, keys never requested, disclaimer on screen.
+
+---
+
+## VSL: main (sales page & store listing)
+
+File: `video/vsl-main.mp4` · 1920×1080 · 92.0s · Use: Whop store listing video, sales page hero, application page.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–9.4s | "12% APY" struck out → "What am I being paid to risk?" | Most people enter DeFi through a number. An APY. Operators start with a different question. What am I being paid to risk? |
+| 2 | 9.4–15.4s | And how do I get out? | And how do I get out? If you can't explain the exit, you don't understand the position yet. |
+| 3 | 15.4–25.5s | Without a process, DeFi is a maze: Wallets, seed phrases and networks · Approvals you can't read · Yields you can't explain · Mistakes that can't be undone | Without a process, DeFi is a maze. Wallets, networks, approvals, and yields nobody can explain. And on-chain, a mistake can't be undone. |
+| 4 | 25.5–34.2s | Logo reveal + "From zero to your own on-chain bank." | The On-Chain Operator Program takes you from zero, never having owned crypto, to running your capital like your own on-chain bank. |
+| 5 | 34.2–44.6s | The path: `assets/store/gallery-01-path-to-mastery.png` | 6 stages. 15 modules. 79 lessons. You start by setting everything up safely, step by step, with a Day-1 Setup Kit. |
+| 6 | 44.6–55.9s | Strategy library: `assets/store/gallery-04-strategy-levels.png` | Then you learn to research any protocol, and work through 25 strategy playbooks. Each one with its maths, its exit rules, and exactly how it loses money. |
+| 7 | 55.9–64.5s | Stage five: `assets/store/gallery-03-own-bank.png` | Finally, you build your own bank. A balance sheet. Multisig custody. A credit line against your assets. A liquidity ladder. |
+| 8 | 64.5–73.6s | The income engine: `assets/charts/income-waterfall.png` | And an income engine that measures what you expect to earn after expected losses, and pays out less than that. Never from principal. |
+| 9 | 73.6–84.2s | What you won't get: Signals to copy · Guaranteed returns · Anyone asking for your keys | What you won't get: signals to copy, guaranteed returns, or anyone asking for your keys. Just a process you can explain, position by position. |
+| 10 | 84.2–92.0s | Logo + "Apply to join" button · Application-only · Course and Live tiers | The On-Chain Operator Program is application-only. Apply today, and we'll see if it's the right fit for you. |
+
+---
+
+## VSL: 30-second vertical cut (ads, Reels, Shorts, TikTok)
+
+File: `video/vsl-short-vertical.mp4` · 1080×1920 · 23.3s · Use: Paid social and organic short-form. Upload as 9:16.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–5.9s | "12% APY" struck out → "Paid to risk what?" | 12% APY. The real question is: what are you being paid to risk? |
+| 2 | 5.9–12.4s | Logo reveal + "From zero to your own on-chain bank." | The On-Chain Operator Program takes you from zero to running your crypto like your own bank. |
+| 3 | 12.4–19.6s | 79 lessons · 25 strategy playbooks · 0 guaranteed returns | 79 lessons. 25 strategy playbooks. And zero promises. Just a process. |
+| 4 | 19.6–23.3s | Logo + "Apply to join" button · Application-only | Apply to join the On-Chain Operator Program. |
+
+---
+
+## Welcome video (inside the program, top of Module 0)
+
+File: `video/welcome.mp4` · 1920×1080 · 44.8s · Use: First thing a new member sees after purchase.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–5.3s | Logo reveal + "Welcome, operator." | Welcome to the On-Chain Operator Program. Here's how to get the most from it. |
+| 2 | 5.3–15.0s | How it works: `assets/diagrams/path-to-mastery.png` | The program runs in six stages. Do them in order. Each stage unlocks the next, from your first wallet to running your own on-chain bank. |
+| 3 | 15.0–25.9s | Every lesson, the same shape: Objective · Explanation · Worked example · Checklist · Three-question quiz | Every lesson has the same shape. An objective, an explanation, a worked example, a checklist, and a short quiz. Do the checklist. That's where the learning sticks. |
+| 4 | 25.9–33.4s | Start here: `assets/diagrams/setup-roadmap.png` | Start with Module 0 and the Day-1 Setup Kit. Use a small amount you can afford to lose while you learn. |
+| 5 | 33.4–41.3s | One rule, forever: / never share your seed phrase. | And one rule, forever. Never share your seed phrase. Nobody from this program, or anywhere else, will ever ask for it. |
+| 6 | 41.3–44.8s | Logo + "Open Module 0" button · Educational content only · Not financial advice | Open Module 0, and let's begin. |
+
+---
+
+## Module 0 intro: Crypto From Zero
+
+File: `video/module-00-intro.mp4` · 1920×1080 · 29.4s · Use: Top of Module 0 in the Whop course.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–3.4s | Module 0: `assets/modules/module-00.png` | Module 0. Crypto From Zero. |
+| 2 | 3.4–19.3s | The goal | The goal: go from never having owned crypto to a secured exchange account, a backed-up wallet, a first transfer and a first practice DeFi transaction. Ends with the **Day-1 Setup Kit** checklist. |
+| 3 | 19.3–26.2s | 8 lessons: 0.1 Money, ledgers and why blockchains exist · 0.2 Opening and securing an exchange account · 0.3 Buying your first crypto without overpaying · 0.4 Exchange account vs your own wallet: who holds the keys? · 0.5 Setting up your wallet and backing it up · 0.6 Networks, gas and your first transfer · 0.7 Your first DeFi steps · 0.8 Your security baseline, and the language of DeFi | 8 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
+| 4 | 26.2–29.4s | Logo + "Start lesson 0.1" button · Educational content only · Not financial advice | Start with lesson 0.1. |
+
+---
+
+## Module 1 intro: Foundations & Safety
+
+File: `video/module-01-intro.mp4` · 1920×1080 · 19.2s · Use: Top of Module 1 in the Whop course.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–3.7s | Module 1: `assets/modules/module-01.png` | Module 1. Foundations & Safety. |
+| 2 | 3.7–9.4s | The goal | The goal: set up and use a wallet safely; know what can go irreversibly wrong. |
+| 3 | 9.4–16.4s | 6 lessons: 1.1 What DeFi is — and the risk-first mindset · 1.2 How a transaction actually happens · 1.3 Wallets, keys, hardware & multisig · 1.4 Tokens, approvals & allowances · 1.5 Stablecoins and how they break · 1.6 Scam defence: phishing, drainers, address poisoning | 6 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
+| 4 | 16.4–19.2s | Logo + "Start lesson 1.1" button · Educational content only · Not financial advice | Start with lesson 1.1. |
+
+---
+
+## Module 2 intro: Trading On-Chain
+
+File: `video/module-02-intro.mp4` · 1920×1080 · 19.1s · Use: Top of Module 2 in the Whop course.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–3.1s | Module 2: `assets/modules/module-02.png` | Module 2. Trading On-Chain. |
+| 2 | 3.1–9.3s | The goal | The goal: execute a swap deliberately, understanding price impact and MEV. |
+| 3 | 9.3–16.3s | 5 lessons: 2.1 DEXs, aggregators & routing · 2.2 AMM mathematics · 2.3 Providing liquidity · 2.4 Impermanent loss & true LP P&L · 2.5 MEV and how to protect your trades | 5 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
+| 4 | 16.3–19.1s | Logo + "Start lesson 2.1" button · Educational content only · Not financial advice | Start with lesson 2.1. |
+
+---
+
+## Module 3 intro: Lending & Leverage
+
+File: `video/module-03-intro.mp4` · 1920×1080 · 18.6s · Use: Top of Module 3 in the Whop course.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–3.5s | Module 3: `assets/modules/module-03.png` | Module 3. Lending & Leverage. |
+| 2 | 3.5–8.7s | The goal | The goal: borrow against collateral with a buffer and a written defence plan. |
+| 3 | 8.7–15.7s | 4 lessons: 3.1 How lending markets work · 3.2 LTV, liquidation threshold & health factor · 3.3 Liquidations and cascades · 3.4 Borrowing strategies & looping | 4 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
+| 4 | 15.7–18.6s | Logo + "Start lesson 3.1" button · Educational content only · Not financial advice | Start with lesson 3.1. |
+
+---
+
+## Module 4 intro: Yield
+
+File: `video/module-04-intro.mp4` · 1920×1080 · 20.1s · Use: Top of Module 4 in the Whop course.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–2.8s | Module 4: `assets/modules/module-04.png` | Module 4. Yield. |
+| 2 | 2.8–10.2s | The goal | The goal: split any APY into organic vs subsidised, and name the risk being paid for. |
+| 3 | 10.2–17.2s | 6 lessons: 4.1 Yield farming: base yield vs emissions · 4.2 Native staking · 4.3 Liquid staking · 4.4 Restaking & shared security · 4.5 Vaults & yield optimisers · 4.6 Airdrops & points — opportunity cost | 6 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
+| 4 | 17.2–20.1s | Logo + "Start lesson 4.1" button · Educational content only · Not financial advice | Start with lesson 4.1. |
+
+---
+
+## Module 5 intro: Infrastructure Risk
+
+File: `video/module-05-intro.mp4` · 1920×1080 · 19.8s · Use: Top of Module 5 in the Whop course.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–3.4s | Module 5: `assets/modules/module-05.png` | Module 5. Infrastructure Risk. |
+| 2 | 3.4–9.8s | The goal | The goal: map every bridge, oracle, L2 and contract a position depends on. |
+| 3 | 9.8–16.8s | 5 lessons: 5.1 Bridges and trust assumptions · 5.2 Layer 2s, sequencers & withdrawal paths · 5.3 Oracles, TWAPs & manipulation · 5.4 Smart contracts: state, proxies, admin keys · 5.5 Smart-contract risk & what audits don't prove | 5 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
+| 4 | 16.8–19.8s | Logo + "Start lesson 5.1" button · Educational content only · Not financial advice | Start with lesson 5.1. |
+
+---
+
+## Module 6 intro: Protocol Research
+
+File: `video/module-06-intro.mp4` · 1920×1080 · 18.2s · Use: Top of Module 6 in the Whop course.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–3.4s | Module 6: `assets/modules/module-06.png` | Module 6. Protocol Research. |
+| 2 | 3.4–8.2s | The goal | The goal: complete a full due-diligence file on a real protocol. |
+| 3 | 8.2–15.2s | 4 lessons: 6.1 Protocol due diligence · 6.2 Tokenomics: supply, unlocks, FDV, value capture · 6.3 Governance & DAOs · 6.4 The on-chain research workflow | 4 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
+| 4 | 15.2–18.2s | Logo + "Start lesson 6.1" button · Educational content only · Not financial advice | Start with lesson 6.1. |
+
+---
+
+## Module 7 intro: On-Chain Analytics
+
+File: `video/module-07-intro.mp4` · 1920×1080 · 17.6s · Use: Top of Module 7 in the Whop course.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–3.4s | Module 7: `assets/modules/module-07.png` | Module 7. On-Chain Analytics. |
+| 2 | 3.4–7.7s | The goal | The goal: read on-chain data without over-interpreting it. |
+| 3 | 7.7–14.6s | 8 lessons: 7.1 On-chain data foundations · 7.2 Block explorer mastery · 7.3 Exchange flows · 7.4 Whale & entity analysis · 7.5 Holder & supply metrics · 7.6 Network activity · 7.7 DEX & liquidity analytics · 7.8 Derivatives on-chain | 8 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
+| 4 | 14.6–17.6s | Logo + "Start lesson 7.1" button · Educational content only · Not financial advice | Start with lesson 7.1. |
+
+---
+
+## Module 8 intro: The DeFi Operating System
+
+File: `video/module-08-intro.mp4` · 1920×1080 · 20.2s · Use: Top of Module 8 in the Whop course.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–3.9s | Module 8: `assets/modules/module-08.png` | Module 8. The DeFi Operating System. |
+| 2 | 3.9–10.3s | The goal | The goal: a written portfolio plan with risk buckets, limits and an emergency plan. |
+| 3 | 10.3–17.2s | 4 lessons: 8.1 DeFi portfolio construction · 8.2 The DeFi risk framework · 8.3 Strategy library · 8.4 The operating playbook: deploy, monitor, respond, review | 4 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
+| 4 | 17.2–20.2s | Logo + "Start lesson 8.1" button · Educational content only · Not financial advice | Start with lesson 8.1. |
+
+---
+
+## Module 9 intro: DeFi vs Grid Bots
+
+File: `video/module-09-intro.mp4` · 1920×1080 · 19.6s · Use: Top of Module 9 in the Whop course.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–3.7s | Module 9: `assets/modules/module-09.png` | Module 9. DeFi vs Grid Bots. |
+| 2 | 3.7–9.7s | The goal | The goal: choose the right tool for the market — and the natural bridge into GBB. |
+| 3 | 9.7–16.7s | 3 lessons: 9.1 LP position vs grid bot: same idea (sell high/buy low inside a range), different risks · 9.2 When a CEX grid beats on-chain LP, and when it doesn't · 9.3 Building a combined system: grid bots for range markets, DeFi for yield/collateral | 3 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
+| 4 | 16.7–19.6s | Logo + "Start lesson 9.1" button · Educational content only · Not financial advice | Start with lesson 9.1. |
+
+---
+
+## Module 10 intro: Advanced Yield Engineering
+
+File: `video/module-10-intro.mp4` · 1920×1080 · 20.0s · Use: Top of Module 10 in the Whop course.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–3.7s | Module 10: `assets/modules/module-10.png` | Module 10. Advanced Yield Engineering. |
+| 2 | 3.7–10.2s | The goal | The goal: build fixed, hedged and structured yield, and know exactly what each one is short. |
+| 3 | 10.2–17.2s | 6 lessons: 10.1 Fixed-rate yield: principal and yield tokens · 10.2 Cash-and-carry basis trades · 10.3 Delta-neutral funding carry, done properly · 10.4 Options income: covered calls, cash-secured puts, options vaults · 10.5 Active concentrated-liquidity management · 10.6 Restaking and points: pricing speculative yield | 6 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
+| 4 | 17.2–20.0s | Logo + "Start lesson 10.1" button · Educational content only · Not financial advice | Start with lesson 10.1. |
+
+---
+
+## Module 11 intro: Hedging & Risk Engineering
+
+File: `video/module-11-intro.mp4` · 1920×1080 · 21.1s · Use: Top of Module 11 in the Whop course.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–4.1s | Module 11: `assets/modules/module-11.png` | Module 11. Hedging & Risk Engineering. |
+| 2 | 4.1–10.8s | The goal | The goal: hedge the risks you don't want, stress-test the portfolio, and have an incident plan ready. |
+| 3 | 10.8–17.8s | 5 lessons: 11.1 Hedging price exposure with perps and options · 11.2 Depeg, protocol and smart-contract cover · 11.3 Liquidation protection: buffers, alerts and automated deleveraging · 11.4 Stress-testing a portfolio: −50% days, depegs, rate spikes · 11.5 Incident response: what to do in the first 60 minutes | 5 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
+| 4 | 17.8–21.1s | Logo + "Start lesson 11.1" button · Educational content only · Not financial advice | Start with lesson 11.1. |
+
+---
+
+## Module 12 intro: Operate as Your Own Bank
+
+File: `video/module-12-intro.mp4` · 1920×1080 · 23.0s · Use: Top of Module 12 in the Whop course.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–3.7s | Module 12: `assets/modules/module-12.png` | Module 12. Operate as Your Own Bank. |
+| 2 | 3.7–13.1s | The goal | The goal: run your crypto like a bank runs its book: a balance sheet, custody policy, a credit line, a liquidity ladder and records. |
+| 3 | 13.1–20.0s | 6 lessons: 12.1 Your balance sheet: assets, liabilities, equity · 12.2 Custody architecture: vault, multisig and spending policies · 12.3 The credit line: borrowing against your assets like a bank client · 12.4 Treasury and the liquidity ladder · 12.5 Being the lender: supplying, curating and pricing credit risk · 12.6 Books, records and succession: if you're gone, can your family recover it? | 6 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
+| 4 | 20.0–23.0s | Logo + "Start lesson 12.1" button · Educational content only · Not financial advice | Start with lesson 12.1. |
+
+---
+
+## Module 13 intro: The Income Engine
+
+File: `video/module-13-intro.mp4` · 1920×1080 · 22.9s · Use: Top of Module 13 in the Whop course.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–3.5s | Module 13: `assets/modules/module-13.png` | Module 13. The Income Engine. |
+| 2 | 3.5–12.8s | The goal | The goal: design an income portfolio, measure expected income after expected losses, and set a payout you can sustain. |
+| 3 | 12.8–19.8s | 5 lessons: 13.1 Income sources ranked by durability · 13.2 Risk-adjusted yield: subtracting expected losses · 13.3 Building the income portfolio · 13.4 The payout policy: how much you can take out · 13.5 Scaling, compounding and the annual review | 5 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
+| 4 | 19.8–22.9s | Logo + "Start lesson 13.1" button · Educational content only · Not financial advice | Start with lesson 13.1. |
+
+---
+
+## Module 14 intro: Automation & Mastery
+
+File: `video/module-14-intro.mp4` · 1920×1080 · 21.6s · Use: Top of Module 14 in the Whop course.
+
+| # | Time | Visual | Voice-over |
+|---|---|---|---|
+| 1 | 0.0–3.9s | Module 14: `assets/modules/module-14.png` | Module 14. Automation & Mastery. |
+| 2 | 3.9–11.6s | The goal | The goal: monitor and automate safely, run multisig operations, and complete the operator capstone. |
+| 3 | 11.6–18.5s | 4 lessons: 14.1 Monitoring: dashboards, alerts and on-chain watchers · 14.2 Automation: keepers, bots and agents without handing over the keys · 14.3 Operating procedures: multisig signing, change control, reviews · 14.4 Operator capstone and certification | 4 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
+| 4 | 18.5–21.6s | Logo + "Start lesson 14.1" button · Educational content only · Not financial advice | Start with lesson 14.1. |
+
+---
+
+# 9. Course content
 
 Finished lessons in curriculum order. Lesson 8.3 (strategy mastery) appears before Module 9.
 
@@ -1636,6 +2186,1005 @@ fail, and failed transactions still cost gas (Lesson 1.2).
 
 ---
 
+# Module 3 — Lending & Leverage
+
+![Module 3 — Lending & Leverage](assets/modules/module-03.png)
+
+*Outcome: borrow against collateral with a buffer and a written defence plan.*
+*Stage 2 · Practitioner. Source: ATLAS "DeFi & On-Chain" ch. 10–13. Educational content only. Not financial advice. Figures are illustrative.*
+
+---
+
+## Lesson 3.1 — How lending markets work *(ch. 10)*
+
+### Objective
+Explain where lending yields come from and why rates jump when a market is nearly fully borrowed.
+
+### Explanation
+A DeFi **money market** is a pool: lenders **supply** assets, borrowers
+**borrow** them against collateral, and a smart contract sets the rates.
+- **Utilisation** = borrowed ÷ supplied. It drives the rates.
+- **Interest-rate curve:** most markets use a "kinked" curve. Rates rise gently
+  up to an **optimal utilisation** (e.g. 80%), then steeply above it, to pull in
+  lenders and push out borrowers.
+- **Supply APY ≈ borrow APY × utilisation × (1 − reserve factor).** The reserve
+  factor is the protocol's cut.
+- **Receipt tokens:** when you supply, you get a token representing your
+  deposit plus interest.
+
+### Worked example (illustrative curve: 4% at 80% optimal, +60% slope above)
+| Utilisation | Borrow APY | Supply APY (10% reserve factor) |
+|---|---|---|
+| 50% | 2.5% | 1.1% |
+| 70% | 3.5% | 2.2% |
+| 80% | 4.0% | 2.9% |
+| 90% | 34.0% | 27.5% |
+| 95% | 49.0% | 41.9% |
+
+Near 100% utilisation, rates spike **and lenders may not be able to withdraw**,
+because the money is lent out. A sudden high supply APY is often a warning, not a gift.
+
+### Checklist
+- [ ] I check utilisation before supplying
+- [ ] I know the market's optimal-utilisation kink
+- [ ] I treat a sudden rate spike as a liquidity warning
+
+### Quiz
+<details><summary>1. What sets the rates in a money market?</summary>Mainly utilisation, through the protocol's interest-rate curve.</details>
+<details><summary>2. Why does the curve kink?</summary>To make borrowing expensive and supplying attractive when liquidity runs low, restoring withdrawal capacity.</details>
+<details><summary>3. Utilisation is 99%. Risk for lenders?</summary>Withdrawals may be blocked until borrowers repay or new supply arrives.</details>
+
+---
+
+## Lesson 3.2 — LTV, liquidation threshold & health factor *(ch. 11)*
+
+### Objective
+Calculate your LTV, health factor and liquidation price before you borrow.
+
+### Explanation
+- **LTV (loan-to-value)** = debt ÷ collateral value.
+- **Max LTV:** the most you can borrow against an asset.
+- **Liquidation threshold (LT):** the LTV at which your position can be liquidated. It's higher than max LTV.
+- **Health factor (HF)** = (collateral value × LT) ÷ debt. **Below 1.0 = liquidatable.**
+- **Liquidation price** = debt ÷ (collateral quantity × LT).
+
+![The liquidation cascade](assets/diagrams/liquidation-cascade.png)
+
+### Worked example
+10 ETH at $3,000 ($30,000), LT 0.80, borrow $12,000:
+- LTV **40%** · HF **2.0** · liquidation at **$1,500** (−50%)
+- `defi_calc.py health --qty 10 --price 3000 --lt 0.8 --debt 12000`
+- Max debt for HF 2.0 = $12,000; for HF 1.5 = $16,000.
+
+### Checklist
+- [ ] HF and liquidation price calculated before borrowing
+- [ ] HF ≥ 2 for volatile collateral
+- [ ] Alerts set (Module 14.1)
+
+### Quiz
+<details><summary>1. Collateral $50,000, LT 0.8, debt $20,000. HF?</summary>2.0.</details>
+<details><summary>2. Why keep HF well above 1?</summary>Collateral prices can fall fast; the buffer is your time to react.</details>
+<details><summary>3. Max LTV vs liquidation threshold?</summary>Max LTV caps new borrowing; the liquidation threshold is where liquidation becomes possible.</details>
+
+---
+
+## Lesson 3.3 — Liquidations and cascades *(ch. 12)*
+
+### Objective
+Know exactly what a liquidation costs you, and how to avoid ever reaching one.
+
+### Explanation
+When HF drops below 1, a **liquidator** (usually a bot) repays part of your debt
+(up to the **close factor**, often 50%) and takes that value of your
+collateral **plus a bonus** (the liquidation penalty, often 5–10%).
+Liquidations sell collateral into a falling market, which can push prices
+lower and trigger more liquidations: a **cascade**.
+
+### Worked example
+Your position from 3.2. ETH falls to **$1,490**, HF just under 1:
+- A liquidator repays **$6,000** (50% close factor) and seizes $6,000 × 1.05 = **$6,300** of ETH ≈ **4.228 ETH**.
+- The **$300** bonus is a pure loss to you, on top of having sold ETH near the low.
+
+**Defence ladder:** HF 2.0 → alert; HF 1.7 → repay from reserve or add
+collateral; HF 1.5 → sell part of the collateral yourself. Never wait for 1.1.
+
+### Checklist
+- [ ] Defence ladder written with exact HF levels
+- [ ] Reserve set aside to repay (Module 12.4)
+- [ ] Oracle for my collateral known (Module 5.3)
+
+### Quiz
+<details><summary>1. What does a liquidator receive?</summary>Collateral equal to the debt repaid plus a bonus (penalty).</details>
+<details><summary>2. Why is self-deleveraging better than being liquidated?</summary>You avoid the penalty and choose the size and timing.</details>
+<details><summary>3. How do cascades form?</summary>Liquidations sell collateral, pushing prices down, which pushes more positions below HF 1.</details>
+
+---
+
+## Lesson 3.4 — Borrowing strategies & looping *(ch. 13)*
+
+### Objective
+Use borrowing deliberately, and know when looping adds return and when it just adds risk.
+
+### Explanation
+- **Liquidity without selling:** borrow stablecoins against assets you want to keep (Module 12.3 turns this into a credit policy).
+- **Looping:** deposit → borrow → re-deposit → repeat, to multiply exposure. After n loops at LTV L: leverage = `(1 − L^(n+1)) ÷ (1 − L)`.
+- **Net APY on equity** = collateral yield × leverage − borrow rate × (leverage − 1).
+- **Correlated loops** (an LST against its underlying, or stablecoin against stablecoin) are far safer than volatile-against-stable loops.
+
+![Leveraged loop: the spread is everything](assets/charts/loop-spread.png)
+
+### Worked example
+LTV 0.7, 3 loops, 3.5% collateral yield, 2.5% borrow:
+`defi_calc.py loop --ltv 0.7 --loops 3 --collateral-apy 3.5 --borrow-apy 2.5`
+→ **2.53×** leverage, **5.03%** net on equity. The return is wiped out if borrow rises to **5.78%**.
+Section 3.1 showed borrow rates can jump from 4% to 34% in hours. That's the risk.
+
+### Checklist
+- [ ] Repayment source named before borrowing
+- [ ] Loops only on correlated pairs, below max leverage
+- [ ] Break-even borrow rate known and alerted
+
+### Quiz
+<details><summary>1. Max leverage at LTV 0.75?</summary>4×.</details>
+<details><summary>2. What single number decides whether a loop is worth it?</summary>The spread between collateral yield and borrow rate.</details>
+<details><summary>3. Why prefer correlated loops?</summary>Collateral and debt move together, so price moves barely change HF.</details>
+
+---
+
+### Module 3 practical
+1. Pick a real lending market: record utilisation, supply and borrow APY, and the kink.
+2. Model a borrow with `defi_calc.py health`; write your defence ladder.
+3. Model one loop with `defi_calc.py loop` and write its break-even borrow rate.
+
+---
+
+# Module 4 — Yield
+
+![Module 4 — Yield](assets/modules/module-04.png)
+
+*Outcome: split any APY into organic vs subsidised, and name the risk being paid for.*
+*Stage 2 · Practitioner. Source: ATLAS "DeFi & On-Chain" ch. 14–18, 37. Educational content only. Not financial advice. Figures are illustrative.*
+
+![Where DeFi returns come from](assets/diagrams/profit-sources.png)
+
+---
+
+## Lesson 4.1 — Yield farming: base yield vs emissions *(ch. 14)*
+
+### Objective
+Split a farm's APY into what's earned from real activity and what's paid in newly minted tokens.
+
+### Explanation
+- **Base yield:** trading fees or borrower interest. Paid by real users.
+- **Emissions / incentives:** new tokens the protocol prints to attract deposits. The reward token often falls while emissions continue.
+- **Mercenary liquidity:** capital that leaves when incentives end, often taking the base yield with it.
+
+### Worked example
+A farm shows **60% APY**: 5% fees + 55% in reward tokens. If the reward token
+falls 50% on average while you harvest, the emissions are worth ~27.5%, so the
+real return is ~**32.5%**, before impermanent loss and gas. Remove emissions
+entirely and you're left with 5%. **Would you take the risk for 5%?** That's the real question.
+
+### Checklist
+- [ ] APY split into base vs incentives
+- [ ] Reward token valued at a realistic, falling price
+- [ ] Harvest-and-sell schedule set
+
+### Quiz
+<details><summary>1. What's the test for a farm?</summary>Does the base yield alone justify the risk?</details>
+<details><summary>2. Why do emissions APYs fall?</summary>More capital shares the rewards, and the reward token's price often declines.</details>
+<details><summary>3. What is mercenary liquidity?</summary>Capital that moves on as soon as incentives end.</details>
+
+---
+
+## Lesson 4.2 — Native staking *(ch. 15)*
+
+### Objective
+Understand what staking pays for, and its lock-up and validator risks.
+
+### Explanation
+Proof-of-stake networks pay **stakers** to secure the chain. You either run a
+validator or **delegate** to one. Rewards come from issuance and fees. Risks:
+**slashing** (penalties for validator misbehaviour on some networks),
+**unbonding periods** (waiting time to withdraw) and validator downtime.
+
+### Worked example
+Staking yields a few percent a year in the staked asset (e.g. ~3%, illustrative).
+Your dollar return is still dominated by the asset's price: +3% staking on an
+asset that falls 30% is still a large loss. **Stake what you'd hold anyway.**
+
+### Checklist
+- [ ] Validator/provider chosen on uptime, fee, concentration and record
+- [ ] Unbonding period known
+- [ ] Only "hold-anyway" capital staked
+
+### Quiz
+<details><summary>1. What do staking rewards pay for?</summary>Securing the network.</details>
+<details><summary>2. What is unbonding?</summary>A waiting period before unstaked assets become transferable.</details>
+<details><summary>3. Does staking protect against price falls?</summary>No. It adds a small yield; price moves dominate.</details>
+
+---
+
+## Lesson 4.3 — Liquid staking (LSTs) *(ch. 16)*
+
+### Objective
+Use liquid staking tokens knowing how they accrue value and how they can depeg.
+
+### Explanation
+A **liquid staking token (LST)** represents staked assets plus rewards, and can
+be traded or used as collateral. Value accrues by **rebasing** (your balance
+grows) or an **exchange rate** that rises (each token is worth more of the
+underlying). In stress, an LST can trade at a **discount** to what it redeems for.
+
+### Worked example
+An exchange-rate LST goes from 1.000 to 1.030 of the underlying over a year: **3%**.
+In a panic it trades at 0.98 on the market. Holders who can wait for redemption
+(queue) recover 1.03; holders forced to sell take the 2% discount.
+**Never borrow so close to the limit that an LST discount liquidates you.**
+
+### Checklist
+- [ ] Accrual method known (rebase vs exchange rate)
+- [ ] Redemption path and queue length known
+- [ ] Discount alert set if used as collateral
+
+### Quiz
+<details><summary>1. Two ways LSTs pass on rewards?</summary>Rebasing balances, or a rising exchange rate.</details>
+<details><summary>2. What is an LST discount?</summary>Its market price falling below its redemption value.</details>
+<details><summary>3. Who is hurt most by a discount?</summary>Forced sellers and leveraged holders who get liquidated.</details>
+
+---
+
+## Lesson 4.4 — Restaking & shared security *(ch. 17)*
+
+### Objective
+Map the extra risk layers restaking adds before accepting its extra yield.
+
+### Explanation
+Restaking reuses staked assets to secure additional services, for extra
+rewards and often points. Each service adds its own **slashing conditions**,
+and **operators** (who run the services) add operational risk. One collateral
+base securing many services creates **correlated failure**. Full strategy
+treatment: Lesson 10.6.
+
+### Worked example
+Stack for one position: ETH → staked → LST → liquid restaking token →
+restaking protocol → 4 services. That's **6 layers**, each able to fail. The extra
+yield must pay for all of them. Plan with points valued at zero.
+
+### Checklist
+- [ ] Every layer of the stack written down
+- [ ] Slashing conditions of each service read
+- [ ] Sized in the speculative bucket
+
+### Quiz
+<details><summary>1. What does restaking add?</summary>Extra rewards in exchange for extra slashing and operator risk.</details>
+<details><summary>2. Why is correlated failure a concern?</summary>One collateral base secures many services; a failure can hit them all.</details>
+<details><summary>3. How should points be valued when planning?</summary>At zero.</details>
+
+---
+
+## Lesson 4.5 — Vaults & yield optimisers *(ch. 18)*
+
+### Objective
+Decide when a vault's fees are worth paying compared with doing it yourself.
+
+### Explanation
+A **vault** pools deposits and runs a strategy (often harvesting and
+reinvesting rewards). You get **shares**. Costs: **performance fee** (a share of
+profits), **management fee** (a share of assets per year), sometimes
+**withdrawal fees**. Risks: the vault's code plus **every protocol it uses**.
+
+### Worked example
+Gross 10%, 20% performance fee, 0.5% management → **7.5%** net.
+DIY instead, compounding weekly at $2 gas:
+- $5,000 position: gas = $104/yr = **2.08%** drag → the vault probably wins.
+- $500,000 position: gas = **0.02%** drag, while the vault's fees cost 2.5 points → DIY probably wins.
+
+### Checklist
+- [ ] Net APY after all vault fees computed
+- [ ] Compared with DIY gas drag at my size
+- [ ] Every underlying protocol reviewed
+
+### Quiz
+<details><summary>1. Gross 12%, 10% performance fee, 1% management. Net?</summary>12 × 0.9 − 1 = 9.8%.</details>
+<details><summary>2. Why do vaults suit small positions?</summary>They spread gas costs across all depositors.</details>
+<details><summary>3. What risk does a vault add?</summary>Its own code and strategy, on top of every protocol it deposits into.</details>
+
+---
+
+## Lesson 4.6 — Airdrops & points: opportunity cost *(ch. 37)*
+
+### Objective
+Price airdrop and points farming as a bet, including its costs.
+
+### Explanation
+Protocols reward early users with tokens (**airdrops**), often tracked by
+**points** first. Eligibility rules, snapshots and **sybil filters** (removing
+people who split into many wallets) decide who gets what. Nothing is promised.
+Fake claim sites are one of the most common scams (Lesson 1.6).
+
+### Worked example
+`defi_calc.py airdrop --probability 0.3 --value 1500 --costs 200` → EV **$250**.
+If the same $10,000 could earn 5% ($500/yr) risk-light elsewhere, the farm must
+beat that plus its extra risk, or it's the worse choice.
+
+### Checklist
+- [ ] Only actions I'd take anyway, or a capped speculative budget
+- [ ] Opportunity cost compared
+- [ ] Claims only from verified official links
+
+### Quiz
+<details><summary>1. Are points a promise of tokens?</summary>No.</details>
+<details><summary>2. What's a sybil filter?</summary>Rules that exclude wallets believed to belong to the same person farming many times.</details>
+<details><summary>3. What's the airdrop EV formula?</summary>Probability × value − costs.</details>
+
+---
+
+### Module 4 practical
+1. Decompose three real APYs into base vs incentive.
+2. Compare one vault's net APY with DIY at your position size.
+3. Write the risk stack for one staking or restaking position.
+
+---
+
+# Module 5 — Infrastructure Risk
+
+![Module 5 — Infrastructure Risk](assets/modules/module-05.png)
+
+*Outcome: map every bridge, oracle, L2 and contract a position depends on.*
+*Stage 2 · Practitioner. Source: ATLAS "DeFi & On-Chain" ch. 19–23. Educational content only. Not financial advice.*
+
+**Why this module matters:** most of DeFi's largest losses came from the
+plumbing (bridges, oracles, admin keys, contract bugs), not from price moves.
+
+---
+
+## Lesson 5.1 — Bridges and trust assumptions *(ch. 19)*
+
+### Objective
+Choose bridge routes by their trust model, and size bridge exposure accordingly.
+
+### Explanation
+Bridges move value between chains:
+- **Canonical bridges:** the chain's official route (e.g. a rollup's native bridge). Usually the strongest security, sometimes slower.
+- **Lock-and-mint:** assets locked on chain A, a wrapped copy minted on chain B. The wrapped copy is only as good as the lock.
+- **Liquidity networks:** market makers pay you out on the other side. Fast; you rely on their contracts and liquidity.
+- **Trust model:** who can approve a transfer: a multisig of a few keys, a validator set, a light client, or fraud/validity proofs? Fewer, weaker signers = more risk.
+
+Bridges hold large pools of value, which makes them prime targets.
+
+### Worked example
+Moving $50,000 to a Layer 2: use the canonical route for the bulk (even if
+slower), a reputable fast bridge for a small, time-sensitive amount, and send a
+test first. Never leave large balances as a **wrapped** asset from a weak bridge.
+
+### Checklist
+- [ ] Trust model of every bridge I use written down
+- [ ] Canonical route preferred for size
+- [ ] Wrapped-asset exposure capped
+
+### Quiz
+<details><summary>1. What backs a lock-and-mint wrapped token?</summary>The locked assets on the source chain, and the bridge's security.</details>
+<details><summary>2. Why are bridges frequent hack targets?</summary>They concentrate large amounts of value behind complex, cross-chain logic.</details>
+<details><summary>3. Fast bridge or canonical for $50k?</summary>Canonical for the bulk; fast only for small, urgent amounts.</details>
+
+---
+
+## Lesson 5.2 — Layer 2s, sequencers & withdrawal paths *(ch. 20)*
+
+### Objective
+Understand how your L2 settles, who orders your transactions, and how you'd exit.
+
+### Explanation
+- **Rollups** execute transactions off Ethereum and post data or proofs back to it.
+- **Optimistic rollups** assume transactions are valid unless challenged. Native withdrawals to Ethereum wait out a **challenge window** (about 7 days on major optimistic rollups).
+- **ZK rollups** post validity proofs, so native withdrawals can be faster.
+- **Sequencer:** the operator that orders transactions. Often a single operator today; if it goes down, the chain may pause.
+- **Escape hatches:** most rollups let you force a withdrawal via Ethereum if the sequencer censors you. Know if yours does.
+
+### Worked example
+You hold $20,000 on an optimistic rollup and need it on Ethereum. Native bridge:
+safest, ~7 days. Fast bridge: minutes, for a fee, relying on its liquidity.
+**Plan your liquidity ladder (Module 12.4) around the slow path.**
+
+### Checklist
+- [ ] Rollup type and withdrawal time known for each L2 I use
+- [ ] Sequencer setup and escape hatch known
+- [ ] Liquidity plan assumes the slow path
+
+### Quiz
+<details><summary>1. Why do optimistic rollup withdrawals take ~7 days?</summary>The challenge window lets anyone dispute an invalid state before it's final.</details>
+<details><summary>2. What happens if a single sequencer goes down?</summary>The L2 may pause transactions until it recovers.</details>
+<details><summary>3. What's an escape hatch?</summary>A way to force a transaction or withdrawal via the base chain if the sequencer censors you.</details>
+
+---
+
+## Lesson 5.3 — Oracles, TWAPs & manipulation *(ch. 21)*
+
+### Objective
+Know which price feed secures each position, and how it can fail.
+
+### Explanation
+Smart contracts can't see market prices; **oracles** bring them in. Lending
+markets liquidate based on the oracle price, not the price you see on screen.
+- **Push oracles:** a network updates prices on a schedule or when price moves past a **deviation threshold**.
+- **Pull oracles:** prices are fetched and verified when a transaction needs them.
+- **TWAP** (time-weighted average price) smooths manipulation, but **lags** fast moves.
+- **Failures:** stale prices in outages, manipulation of thin markets, misconfigured feeds.
+
+### Worked example
+Your collateral is priced by a 30-minute TWAP. The market drops 10% in 5
+minutes. Your screen shows −10%; the oracle shows maybe −2%. You feel liquidated
+and aren't yet, **but you also can't rely on the lag**: it catches up.
+Conversely, a thinly traded collateral token can be pushed up and borrowed against by an attacker.
+
+### Checklist
+- [ ] Oracle type and source known for each collateral
+- [ ] Thin-market collateral avoided or capped
+- [ ] Buffers sized for oracle catch-up
+
+### Quiz
+<details><summary>1. Which price triggers a DeFi liquidation?</summary>The oracle price used by the protocol.</details>
+<details><summary>2. What's the trade-off of a TWAP?</summary>Harder to manipulate, but it lags fast moves.</details>
+<details><summary>3. Why is thin-market collateral dangerous for lenders?</summary>Its price can be manipulated to borrow more than it's really worth.</details>
+
+---
+
+## Lesson 5.4 — Smart contracts: state, proxies, admin keys *(ch. 22)*
+
+### Objective
+Read who controls a contract and whether its code can change after you deposit.
+
+### Explanation
+- **State:** what a contract stores (balances, parameters). **Functions** change it; **events** log what happened.
+- **Verified source:** the code published on the explorer matches what's deployed. That's good, not proof of safety.
+- **Proxy / upgradeable contracts:** the address you use stays the same, but the logic behind it can be swapped. Whoever controls upgrades controls your funds' rules.
+- **Admin keys and roles:** owners, guardians, multisigs; can they pause, upgrade or move funds?
+- **Timelocks:** a delay between an approved change and it taking effect. Your window to exit.
+
+### Worked example
+On a block explorer, the vault you use shows "Proxy", with the upgrade admin a
+**3-of-5 multisig** behind a **48-hour timelock**. That means no instant rug by
+one key, and 48 hours to exit if a change you don't like is queued.
+A 1-of-1 admin with no timelock is a red flag.
+
+### Checklist
+- [ ] Proxy or not, and who can upgrade
+- [ ] Admin roles and multisig threshold known
+- [ ] Timelock length known; alert on queued changes for large positions
+
+### Quiz
+<details><summary>1. Does verified source code mean safe?</summary>No. It means the published code matches the deployed code.</details>
+<details><summary>2. Why does a timelock matter to users?</summary>It gives time to see and exit before a change takes effect.</details>
+<details><summary>3. Red flag in admin setup?</summary>A single key that can upgrade or move funds instantly.</details>
+
+---
+
+## Lesson 5.5 — Smart-contract risk & what audits don't prove *(ch. 23)*
+
+### Objective
+Weigh contract risk honestly, and read an audit for what it actually covers.
+
+### Explanation
+- **Common failure types:** logic bugs, **reentrancy** (a contract is called back before it updates its state), broken access control, and **economic exploits** (correct code, exploitable incentives or oracles).
+- **Audits** review specific code at a specific time. Check the **scope** (which contracts), **date** (before later changes?), **severity of findings** and whether they were **fixed**.
+- **Bug bounties** pay hackers to report instead of exploit. A large, active bounty is a good sign.
+- **Time and value at risk:** code that has safely held large value for years has survived more real attacks.
+
+### Worked example
+Protocol X: two audits, but the latest upgrade (last month) isn't in either
+scope; bounty $50k; TVL $400M. The newest code is unaudited and the bounty is
+small relative to the value. Size down, or wait.
+
+### Checklist
+- [ ] Audit scope matches deployed code; date after last upgrade
+- [ ] Critical/high findings resolved
+- [ ] Bug bounty size relative to TVL checked
+
+### Quiz
+<details><summary>1. What does an audit not prove?</summary>That the code (or later changes, or economic design) is safe.</details>
+<details><summary>2. What is reentrancy?</summary>A contract being called back before it finishes updating its state, letting an attacker repeat actions.</details>
+<details><summary>3. Why check audit dates?</summary>Code changed after the audit wasn't reviewed.</details>
+
+---
+
+### Module 5 practical
+Pick one position you hold or plan. Draw its dependency map: chain, bridge,
+oracle, contracts, admin/timelock, audits. Mark each link Low/Medium/High risk.
+
+---
+
+# Module 6 — Protocol Research
+
+![Module 6 — Protocol Research](assets/modules/module-06.png)
+
+*Outcome: complete a full due-diligence file on a real protocol.*
+*Stage 3 · Analyst. Source: ATLAS "DeFi & On-Chain" ch. 24–26, 41. Educational content only. Not financial advice.*
+
+![The 6-step research loop](assets/diagrams/research-loop.png)
+
+---
+
+## Lesson 6.1 — Protocol due diligence *(ch. 24)*
+
+### Objective
+Run the 6-step research loop on a protocol and reach a written verdict.
+
+### Explanation
+1. **Mechanism:** what the contracts do; users, assets, incentives.
+2. **Cash flow:** real fees and interest vs emissions.
+3. **Dependencies:** oracles, bridges, admin keys, stablecoins, other protocols.
+4. **Solvency:** collateral quality, liquidation design, bad-debt paths.
+5. **Evidence:** explorers, audits, governance, independent data.
+6. **Exit:** exact unwind, gas, slippage, approvals to revoke.
+
+Log it in the **DeFi Protocol Due Diligence Tracker** (Notion) and tick a box
+only when the step is **evidenced**, not assumed.
+
+### Worked example (template verdict)
+*"Protocol Y (lending, Arbitrum). Risk: Medium. Fees are real (borrow demand
+$2M/yr), but one collateral uses a thin-market oracle and upgrades have a
+24h timelock. Verdict: supply stablecoins only, cap at 10% of the DeFi book,
+alert on queued upgrades."*
+
+### Checklist
+- [ ] All six steps written with sources
+- [ ] Risk rating = worst material risk, not an average
+- [ ] Verdict states size, conditions and exit
+
+### Quiz
+<details><summary>1. Why is the rating the worst risk, not the average?</summary>One failure point is enough to lose the position.</details>
+<details><summary>2. Which step prevents getting stuck?</summary>Step 6: Exit.</details>
+<details><summary>3. When do you tick a tracker box?</summary>Only when there's evidence for it.</details>
+
+---
+
+## Lesson 6.2 — Tokenomics: supply, unlocks, FDV, value capture *(ch. 25)*
+
+### Objective
+Read a token's supply schedule and judge whether protocol success reaches the token.
+
+### Explanation
+- **Circulating supply:** tokens tradable now. **Max/total supply:** all that will exist.
+- **Market cap** = price × circulating. **FDV** (fully diluted valuation) = price × max supply.
+- **Unlocks/vesting:** team and investor tokens released on a schedule; new supply that may be sold.
+- **Emissions:** ongoing new tokens (rewards).
+- **Value capture:** does protocol revenue actually reach token holders (fee share, buybacks), and how is it enforced?
+
+### Worked example
+Price $2, circulating 100M, max 1B: market cap **$200M**, FDV **$2B**.
+Next month 50M unlock: circulating supply rises **50%**. Unless demand grows
+to match, that's heavy selling pressure. A low market cap with a huge FDV is a warning.
+
+### Checklist
+- [ ] Market cap vs FDV compared
+- [ ] Next 12 months of unlocks listed
+- [ ] Value-capture mechanism identified (or "none")
+
+### Quiz
+<details><summary>1. Price $5, circulating 20M, max 100M. FDV?</summary>$500M.</details>
+<details><summary>2. Why do unlocks matter?</summary>They add supply that recipients may sell.</details>
+<details><summary>3. What is value capture?</summary>An enforceable way protocol success benefits the token.</details>
+
+---
+
+## Lesson 6.3 — Governance & DAOs *(ch. 26)*
+
+### Objective
+Read how a protocol is controlled and spot governance risk before it hits your position.
+
+### Explanation
+- **Governance tokens** vote on parameters, upgrades and treasury.
+- **Proposal lifecycle:** forum discussion → vote → timelock → execution.
+- **Delegation** lets holders assign votes to representatives.
+- **Risks:** low turnout, concentrated voting power, borrowed votes, rushed proposals, weak timelocks.
+
+### Worked example
+A proposal to raise a collateral's LTV passes with 8% turnout, 70% of it from
+three wallets. Lenders now carry more bad-debt risk, decided by a few voters.
+**Track governance for markets you're in.** It changes your risk without you doing anything.
+
+### Checklist
+- [ ] Governance forum/alerts followed for protocols I use
+- [ ] Voting concentration checked
+- [ ] Timelock length known
+
+### Quiz
+<details><summary>1. What's a governance attack?</summary>Using concentrated or borrowed voting power to pass harmful changes.</details>
+<details><summary>2. Why follow governance as a user?</summary>Parameter changes alter your risk.</details>
+<details><summary>3. Order of the proposal lifecycle?</summary>Discussion → vote → timelock → execution.</details>
+
+---
+
+## Lesson 6.4 — The on-chain research workflow *(ch. 41)*
+
+### Objective
+Turn research into a written thesis with invalidation and monitoring.
+
+### Explanation
+**Question first** → primary sources (docs, contracts, governance) → economic
+reality (fees vs incentives) → cross-check with independent data → **thesis**:
+what must be true, what would prove it wrong, what to monitor.
+
+### Worked example (thesis template)
+*"Thesis: stablecoin lending on Protocol Z earns ~5% from real borrow demand.
+Must be true: utilisation 60–85%, oracle unchanged, no new risky collateral.
+Invalidation: utilisation > 95% for 48h, a governance change adding thin
+collateral, or an incident. Monitor: weekly utilisation, governance feed."*
+
+### Checklist
+- [ ] Research question written first
+- [ ] Thesis, invalidation and monitoring written
+- [ ] Evidence from at least two independent sources
+
+### Quiz
+<details><summary>1. Why start with a question?</summary>To avoid hunting for data that confirms what you already believe.</details>
+<details><summary>2. What makes a thesis useful?</summary>A clear invalidation you'll act on.</details>
+<details><summary>3. What should monitoring track?</summary>Only the metrics that would change the thesis.</details>
+
+---
+
+### Module 6 practical: analyst capstone part 1
+Complete a full due-diligence file on one real protocol using lessons 6.1–6.4
+and the Notion tracker. (Submitted with Module 7 as the **analyst capstone**.)
+
+---
+
+# Module 7 — On-Chain Analytics
+
+![Module 7 — On-Chain Analytics](assets/modules/module-07.png)
+
+*Outcome: read on-chain data without over-interpreting it.*
+*Stage 3 · Analyst. Source: ATLAS "DeFi & On-Chain" ch. 27–34. Educational content only. Not financial advice.*
+
+**The analyst's rule:** a transfer is observable; the owner's intention usually
+isn't. Every metric needs a definition, a methodology, and context.
+
+---
+
+## Lesson 7.1 — On-chain data foundations *(ch. 27)*
+
+### Objective
+Avoid the classic misreads of on-chain data.
+
+### Explanation
+- **Address ≠ person:** one person can have many addresses; one exchange address serves millions.
+- **Transfer ≠ trade:** moving tokens isn't buying or selling.
+- **Labels are probabilistic:** providers guess who owns what; they can be wrong.
+- **Active addresses** can be inflated by bots or airdrop farming.
+- **Data provenance:** know chain coverage, indexing method and delay.
+
+### Worked example
+"Whale moves $100M of BTC!" It's an exchange shuffling between its own cold and
+hot wallets. No trade happened. Check labels, destination and history before reacting.
+
+### Checklist
+- [ ] I check what an address is before interpreting a move
+- [ ] I note each metric's source and definition
+
+### Quiz
+<details><summary>1. Does an address equal a person?</summary>No.</details>
+<details><summary>2. Is a large transfer a sale?</summary>Not necessarily. It may be internal or custodial.</details>
+<details><summary>3. Why can active-address counts mislead?</summary>Bots and farming inflate them.</details>
+
+---
+
+## Lesson 7.2 — Block explorer mastery *(ch. 28)*
+
+### Objective
+Read any transaction on an explorer without using the app's interface.
+
+### Explanation
+For a transaction: **status** (success/fail), **block**, **from/to**, **value**,
+**fee**, **method** called, **token transfers** (events), **internal calls**, and
+**logs**. For a contract: **read** (state, parameters) and **write** (call
+functions directly, carefully) tabs; **proxy** info; **verified source**.
+
+### Worked example
+Your swap on an L2: status Success · method `swap` · token transfers: 100 USDC
+out, 0.0331 ETH in · fee 0.00002 ETH. The event log confirms the router and
+pool. You've verified the trade without trusting the website.
+
+### Checklist
+- [ ] I can find status, fee, method and token transfers
+- [ ] I can read a contract's parameters on the Read tab
+- [ ] I can check and revoke approvals
+
+### Quiz
+<details><summary>1. Where do you see tokens that actually moved?</summary>Token transfers (event logs).</details>
+<details><summary>2. What does the Read tab show?</summary>A contract's public state and parameters.</details>
+<details><summary>3. Why verify on the explorer?</summary>It's the ground truth, independent of any website.</details>
+
+---
+
+## Lesson 7.3 — Exchange flows *(ch. 29)*
+
+### Objective
+Interpret exchange inflows and outflows with the right caveats.
+
+### Explanation
+**Inflows** to exchanges *may* precede selling (or collateral posting,
+internal moves). **Outflows** *may* mean self-custody or DeFi use.
+**Netflow** = inflows − outflows. Exchange reserves on-chain aren't proof of
+solvency (liabilities aren't visible).
+
+### Worked example
+Netflow +20,000 ETH in a day. Before concluding "selling pressure": check if it's
+one exchange reshuffling, whether derivatives open interest rose (collateral), and
+whether price and volume confirm. One metric is a hypothesis, not a signal.
+
+### Checklist
+- [ ] Flows cross-checked with price, volume and derivatives
+- [ ] Internal exchange moves ruled out
+
+### Quiz
+<details><summary>1. What is netflow?</summary>Inflows minus outflows over a period.</details>
+<details><summary>2. Do exchange reserves prove solvency?</summary>No. Liabilities aren't visible on-chain.</details>
+<details><summary>3. Is a large inflow always bearish?</summary>No. It can be collateral or an internal move.</details>
+
+---
+
+## Lesson 7.4 — Whale & entity analysis *(ch. 30)*
+
+### Objective
+Use large-holder data without copying wallets blindly.
+
+### Explanation
+Separate exchanges and contracts from individuals before measuring
+concentration. **Accumulation/distribution** is inferred, not known.
+**"Smart money" labels** carry survivorship bias. **Copying wallets** ignores
+their hedges, size and private information.
+
+### Worked example
+A "smart money" wallet buys a token. You don't see its perp short elsewhere; it
+may be hedged and farming. Copying the visible leg makes you the unhedged one.
+
+### Checklist
+- [ ] Contracts/exchanges excluded from concentration figures
+- [ ] Wallet-following treated as a lead to research, not a signal
+
+### Quiz
+<details><summary>1. Why is wallet-copying risky?</summary>You can't see the wallet's hedges, size or intent.</details>
+<details><summary>2. What is survivorship bias in labels?</summary>Only wallets that did well get labelled "smart".</details>
+<details><summary>3. First step in measuring holder concentration?</summary>Remove exchange and contract addresses.</details>
+
+---
+
+## Lesson 7.5 — Holder & supply metrics *(ch. 31)*
+
+### Objective
+Read MVRV, SOPR and HODL waves as context, not signals.
+
+### Explanation
+- **Realised cap:** values each coin at the price it last moved (a cost-basis estimate).
+- **MVRV** = market cap ÷ realised cap. High = holders in large aggregate profit.
+- **SOPR** (spent output profit ratio): >1 means coins moved today were, on average, sold at a profit.
+- **HODL waves:** supply by coin age.
+- Definitions differ by provider; strongest on UTXO chains like Bitcoin.
+
+### Worked example
+Market cap $1.2T, realised cap $0.6T → **MVRV 2.0**: the average holder is at
+roughly 2× their cost basis. That's context for risk management (e.g. how much to
+de-risk), not a precise top signal.
+
+### Checklist
+- [ ] Provider methodology read before using a metric
+- [ ] Metrics used for context and sizing, not as triggers alone
+
+### Quiz
+<details><summary>1. MVRV formula?</summary>Market cap ÷ realised cap.</details>
+<details><summary>2. SOPR above 1 means?</summary>Coins moved were, on average, in profit.</details>
+<details><summary>3. Why read the provider's methodology?</summary>Definitions vary, and interpretations depend on them.</details>
+
+---
+
+## Lesson 7.6 — Network activity *(ch. 32)*
+
+### Objective
+Judge a chain's real usage beyond transaction counts.
+
+### Explanation
+Transaction counts depend on architecture and bots. Better: **fees paid**
+(real demand for blockspace), **stablecoin activity**, **DEX volume**, **app
+revenue**, and retention of users over time.
+
+### Worked example
+Chain A: 5M transactions/day, $20k fees. Chain B: 500k transactions/day, $2M
+fees. B's users pay 100× more for blockspace, a stronger sign of valuable activity.
+
+### Checklist
+- [ ] Fees and app revenue compared, not just transaction counts
+- [ ] Bot activity considered
+
+### Quiz
+<details><summary>1. Why are fees a better usage signal than transaction counts?</summary>Paying fees shows real demand; counts are easy to inflate.</details>
+<details><summary>2. What distorts transaction counts?</summary>Bots, batching and chain design.</details>
+<details><summary>3. Name one strong activity metric.</summary>Fees, app revenue, stablecoin activity or user retention.</details>
+
+---
+
+## Lesson 7.7 — DEX & liquidity analytics *(ch. 33)*
+
+### Objective
+Measure whether a pool can actually absorb your trade and pay you as an LP.
+
+### Explanation
+- **TVL** can double count and moves with token prices.
+- **Depth:** the price impact for a given trade size. The number that matters for execution.
+- **Volume/TVL:** rough capital turnover; higher means more fees per dollar (Lesson 2.3).
+- **Liquidity migration:** incentives move liquidity quickly between pools and chains.
+
+### Worked example
+Pool A: $50M TVL, $5M daily volume (0.1 turnover). Pool B: $10M TVL, $8M
+volume (0.8 turnover). B pays LPs far more per dollar, but a $1M trade will
+move B's price much more than A's.
+
+### Checklist
+- [ ] Depth checked at my trade size
+- [ ] Volume/TVL used for LP fee estimates
+
+### Quiz
+<details><summary>1. Why is depth more useful than TVL for traders?</summary>It measures price impact at a given size.</details>
+<details><summary>2. High volume/TVL means?</summary>More fees per dollar of liquidity.</details>
+<details><summary>3. What causes liquidity migration?</summary>Incentives moving between pools and chains.</details>
+
+---
+
+## Lesson 7.8 — Derivatives on-chain *(ch. 34)*
+
+### Objective
+Read funding, open interest and liquidation data as positioning context.
+
+### Explanation
+- **Perpetual futures (perps):** no expiry; kept near spot by **funding** payments.
+- **Positive funding:** longs pay shorts (crowded longs). **Negative:** shorts pay longs.
+- **Open interest (OI):** total open contracts. Rising OI with rising price means leverage building.
+- **Liquidation data:** bursts of forced closes.
+
+### Worked example
+Price +8% in a week, OI +40%, funding at its highest in months: leverage is
+crowding into longs. That's a fragile setup (a drop could cascade) and, for
+Lesson 10.3, a funding-carry opportunity with a squeeze risk.
+
+### Checklist
+- [ ] Funding and OI checked before leveraged or carry trades
+- [ ] Liquidation clusters noted
+
+### Quiz
+<details><summary>1. What does positive funding mean?</summary>Longs are paying shorts.</details>
+<details><summary>2. Rising price + rising OI + high funding suggests?</summary>Leveraged longs are crowding in; the setup is fragile.</details>
+<details><summary>3. What keeps a perp near spot?</summary>Funding payments.</details>
+
+---
+
+### Module 7 practical: analyst capstone part 2
+Add an on-chain section to your Module 6 file: holder concentration, flows,
+activity (fees/revenue), liquidity depth and derivatives positioning for the
+protocol's token or markets. Submit both parts as the **analyst capstone**
+(brief and rubric in `07-program-operations.md`).
+
+---
+
+# Module 8 — The DeFi Operating System
+
+![Module 8 — The DeFi Operating System](assets/modules/module-08.png)
+
+*Outcome: a written portfolio plan with risk buckets, limits and an emergency plan.*
+*Stage 4 · Strategist. Source: ATLAS "DeFi & On-Chain" ch. 38–40, 42. Lesson 8.3 (the 25-strategy library) is in `03-defi-strategy-mastery.md`. Educational content only. Not financial advice. Figures are illustrative.*
+
+---
+
+## Lesson 8.1 — DeFi portfolio construction *(ch. 38)*
+
+### Objective
+Split capital into risk buckets with caps, so no single failure can sink the portfolio.
+
+### Explanation
+- **Buckets:** liquidity reserve · core (simple, durable) · productive (LP, vaults, carry) · speculative (new, points, experiments).
+- **Concentration caps:** per protocol, per chain, per stablecoin issuer, per bridge.
+- **Genuine diversification:** two front ends on the same protocol, or two stablecoins with the same backing, are one risk, not two.
+- **Rebalancing rules:** thresholds that trigger moving money between buckets.
+
+### Worked example — a $100,000 DeFi book (illustrative)
+| Bucket | Share | Example holdings | Cap per protocol |
+|---|---|---|---|
+| Reserve | 15% | Stablecoins split across 2 issuers, instant access | n/a |
+| Core | 45% | Blue-chip stable lending (2 protocols), ETH staking | 20% |
+| Productive | 30% | Wide concentrated LP, a vault, a PT | 10% |
+| Speculative | ≤10% | Points, new protocols | 5% |
+
+Rebalance when any bucket drifts more than 5 points from target, or after any incident.
+
+### Checklist
+- [ ] Buckets and targets written
+- [ ] Caps per protocol, chain, issuer, bridge written
+- [ ] Rebalancing rule written
+
+### Quiz
+<details><summary>1. Two stablecoins backed by the same collateral: diversified?</summary>No. They share one failure point.</details>
+<details><summary>2. Why keep a reserve bucket?</summary>To defend debt, meet needs and redeploy without forced selling.</details>
+<details><summary>3. When should you rebalance?</summary>When buckets drift past the threshold, or after an incident.</details>
+
+---
+
+## Lesson 8.2 — The DeFi risk framework *(ch. 39)*
+
+### Objective
+Keep a risk register that scores every position's risks and names the response.
+
+### Explanation
+The eight risk surfaces: **smart-contract · economic · oracle · liquidity ·
+governance · bridge/chain · counterparty · user-operation.**
+Score each for **likelihood (1–5) × impact (1–5)**. Anything ≥ 15 needs a
+mitigation or an exit; anything ≥ 20 shouldn't be held.
+
+### Worked example — one register row
+| Position | Risk | L | I | Score | Response |
+|---|---|---|---|---|---|
+| USDC lending, Protocol Y | Oracle on one collateral is thin | 3 | 4 | 12 | Cap 10%, alert on governance changes |
+| LST loop | Rate spike above break-even | 3 | 3 | 9 | Alert at 4.5% borrow; unwind rule |
+| Bridged stablecoin on new L2 | Bridge exploit | 2 | 5 | 10 | Canonical bridge; cap 5% |
+| New farm | Contract bug (unaudited upgrade) | 4 | 5 | **20** | **Don't hold** |
+
+### Checklist
+- [ ] Register covers every position and all eight surfaces
+- [ ] Scores ≥ 15 have a mitigation or exit
+- [ ] Reviewed monthly and after incidents
+
+### Quiz
+<details><summary>1. How is a risk scored?</summary>Likelihood × impact, each 1–5.</details>
+<details><summary>2. What's a user-operation risk?</summary>Your own mistakes: wrong network, bad signature, lost keys.</details>
+<details><summary>3. Score 20. Action?</summary>Don't hold it.</details>
+
+---
+
+## Lesson 8.3 — Strategy library
+
+The full strategy library (25 strategies in 6 levels, each with its profit
+engine, maths, execution, kill rules and failure modes) is **Lesson 8.3:
+DeFi Strategy Mastery** (`03-defi-strategy-mastery.md`).
+
+---
+
+## Lesson 8.4 — The operating playbook: deploy, monitor, respond, review *(ch. 42)*
+
+### Objective
+Run every position through the same four-phase routine.
+
+### Explanation
+1. **Deploy:** due diligence done · before-signing checklist · test amount · journal row (protocol, chain, contracts, amount, entry, thesis, kill rules, approvals).
+2. **Monitor:** daily HF/pegs/ranges/incidents; weekly P&L vs benchmark, harvest, revoke; monthly register review.
+3. **Respond:** pre-written actions for each trigger (see Module 11.5 for incidents).
+4. **Review:** net return after all costs vs benchmark; simplify anything you can't explain in one sentence.
+
+### Worked example — a journal row
+| Field | Entry |
+|---|---|
+| Position | USDC supply, Protocol Y, Arbitrum |
+| Amount / date | $10,000 · 2026-09-01 |
+| Thesis | ~5% from real borrow demand |
+| Kill rules | Utilisation > 95% for 48h; oracle or collateral change; any incident |
+| Approvals | USDC → Protocol Y pool, limited to $10,000 |
+| Weekly | Interest earned, utilisation, governance notes |
+
+### Checklist
+- [ ] Journal row for every position
+- [ ] Daily / weekly / monthly routine in the calendar
+- [ ] Response actions written per trigger
+
+### Quiz
+<details><summary>1. The four phases?</summary>Deploy, monitor, respond, review.</details>
+<details><summary>2. What goes in a journal row?</summary>Position, amount, date, thesis, kill rules, approvals and ongoing results.</details>
+<details><summary>3. What to do with a strategy you can't explain simply?</summary>Simplify it or exit.</details>
+
+---
+
+### Module 8 practical
+Write your portfolio plan: buckets and caps (8.1), risk register (8.2), your
+chosen strategies from 8.3 with kill rules, and your operating calendar (8.4).
+
+---
+
 # DeFi Strategy Mastery — How Strategies Make (and Lose) Money
 
 *On-Chain Operator Program · Strategy module · Built on ATLAS "DeFi & On-Chain" ch. 7–18, 38–42 and the 16-framework Strategy Library, expanded to 25 strategies.*
@@ -2517,6 +4066,176 @@ Slashing, depeg of the restaking token, and the chance that points never become 
 
 ---
 
+# Module 11 — Hedging & Risk Engineering
+
+![Module 11 — Hedging & Risk Engineering](assets/modules/module-11.png)
+
+*Outcome: hedge the risks you don't want, stress-test the portfolio, and have an incident plan ready.*
+*Stage 4 · Strategist. Prerequisites: Modules 1–10. Educational content only. Not financial advice. Figures are illustrative.*
+
+---
+
+## Lesson 11.1 — Hedging price exposure with perps and options
+
+### Objective
+Reduce price exposure deliberately, and know what each hedge costs.
+
+### Explanation
+- **Perp hedge:** short a perpetual future against spot you hold. Cheap to open;
+  pays or earns funding; needs margin; the hedge ratio is your choice.
+- **Protective put:** buy the right to sell at a strike. Costs a premium, and your loss is capped below the strike.
+- **Collar:** buy a put and sell a call to pay for it. Cheaper protection in exchange for capped upside.
+- A hedge **costs** something (premium, funding, capped upside). Hedge the risk you can't afford, not every risk.
+
+### Worked example
+You hold **10 ETH at $3,000** ($30,000).
+- **50% perp hedge** (short 5 ETH): ETH falls 30% → spot −$9,000, short +$4,500 → **−$4,500** (−15%) instead of −30%.
+- **Protective put:** buy a 30-day $2,700 put for 2% ($60/ETH). Worst case per ETH = $300 drop to the strike + $60 premium = **$360 (12%)**, however far ETH falls in that month.
+
+### Checklist
+- [ ] Hedge target stated (which risk, how much)
+- [ ] Cost computed (premium, funding, capped upside)
+- [ ] Margin buffer for perp hedges set
+
+### Quiz
+<details><summary>1. What does a protective put cap?</summary>Your loss below the strike, for the option's term, at the cost of the premium.</details>
+<details><summary>2. What does a collar trade away?</summary>Upside above the call strike, to pay for the put.</details>
+<details><summary>3. 20 ETH, 25% perp hedge, ETH −40%. Net loss if ETH was $3,000?</summary>Spot −$24,000, short +$6,000 → −$18,000.</details>
+
+---
+
+## Lesson 11.2 — Depeg, protocol and smart-contract cover
+
+### Objective
+Evaluate on-chain cover products as insurance: what they pay, when, and what they don't.
+
+### Explanation
+Cover protocols sell protection against defined events (a protocol hack, a
+depeg beyond a threshold). Read: **what's covered** (exact wording), **exclusions**,
+**claim process** (who decides, how long), **payout asset**, and the cover
+provider's **own** solvency and contract risk.
+
+### Worked example
+Cover $50,000 in a lending protocol at 2.5%/yr = **$1,250/yr**. If your
+risk-adjusted yield there is 4.5%, cover takes more than half of it. Worth it
+for a large, concentrated position; often not for a small, diversified one.
+
+### Checklist
+- [ ] Cover wording and exclusions read
+- [ ] Claim process and payout asset understood
+- [ ] Cost compared with the yield it protects
+
+### Quiz
+<details><summary>1. Name two things to check in cover terms.</summary>Any two: covered events, exclusions, claim process, payout asset, provider solvency.</details>
+<details><summary>2. Cover costs 3%/yr on a 5% yield. Net?</summary>About 2%.</details>
+<details><summary>3. Does cover remove all risk?</summary>No. The cover provider has its own claim, solvency and contract risks.</details>
+
+---
+
+## Lesson 11.3 — Liquidation protection: buffers, alerts and automated deleveraging
+
+### Objective
+Make liquidation practically impossible with buffers, alerts and pre-computed repayment.
+
+### Explanation
+Three layers: **buffer** (HF ≥ 2–2.5 at entry) → **alerts** (HF 2.0 and 1.7,
+Module 14.1) → **action** (repay, add collateral, or automated deleveraging tools
+that repay debt when HF crosses a trigger; these add their own contract and permission risk).
+**Pre-compute** the repayment needed to restore your target HF:
+`debt to keep = collateral value × LT ÷ target HF`.
+
+### Worked example
+10 ETH falls to $2,400 → collateral $24,000, LT 0.8, debt $12,000 → **HF 1.6**.
+To restore HF 2.5: debt must be 24,000 × 0.8 ÷ 2.5 = $7,680 → **repay $4,320** from the reserve.
+
+### Checklist
+- [ ] Alerts at HF 2.0 and 1.7
+- [ ] Repayment to restore target HF pre-computed
+- [ ] Reserve covers that repayment
+
+### Quiz
+<details><summary>1. Collateral $40,000, LT 0.8, target HF 2. Max debt?</summary>$16,000.</details>
+<details><summary>2. What do automated deleveraging tools add?</summary>Their own contract and permission risk.</details>
+<details><summary>3. Why pre-compute the repayment?</summary>So you act immediately, not while calculating under stress.</details>
+
+---
+
+## Lesson 11.4 — Stress-testing a portfolio
+
+### Objective
+Run standard shock scenarios on your book and fix what fails before markets test it.
+
+### Explanation
+Scenarios every operator runs: **crypto −50% in a day** · **a stablecoin depegs 10%**
+· **borrow rates spike to 20%** · **your largest protocol is hacked** · **your main L2 halts for 48h**.
+For each: loss, liquidations, liquidity, and whether the payout policy survives.
+
+### Worked example — $200,000 book
+Holdings: ETH spot $60k · LST collateral $60k with $12k debt · stable lending $50k
+($25k each in two protocols) · ETH/USDC LP $20k · PT stable $10k.
+
+| Scenario | Impact | Passes? |
+|---|---|---|
+| ETH −50% | Spot −$30k; collateral −$30k (HF 4.0 → 2.0, no liquidation); LP $20k → $14.1k (−$5.9k) → **−$65.9k (−32.9%)** | Survives, but the payout must fall |
+| One stablecoin −10% | −$2.5k on $25k | Yes |
+| Borrow rate 20% | Interest on $12k rises from ~$600 to $2,400/yr | Yes: covered by reserve |
+| One lending protocol hacked (total loss) | −$25k (−12.5%) | Survives; cap was 12.5% |
+| L2 halted 48h | Positions frozen; the reserve on another chain covers needs | Yes, *if* the reserve isn't on the same L2 |
+
+### Checklist
+- [ ] Five scenarios run on the current book
+- [ ] Every "fail" has a fix (smaller cap, bigger buffer, move the reserve)
+- [ ] Re-run quarterly and after big changes
+
+### Quiz
+<details><summary>1. Why did the collateral position survive −50%?</summary>It started at HF 4.0; halving the price took it to 2.0.</details>
+<details><summary>2. What does the L2-halt scenario test?</summary>Whether your liquidity depends on a single chain.</details>
+<details><summary>3. What's the output of a stress test?</summary>Fixes: smaller caps, bigger buffers, better-placed reserves.</details>
+
+---
+
+## Lesson 11.5 — Incident response: the first 60 minutes
+
+### Objective
+Know exactly what to do when a protocol you use is exploited, a stablecoin depegs, or your wallet is compromised.
+
+### Explanation — the 60-minute playbook
+**0–5 min: Verify.** Official channels only (bookmarked X/Discord/status page,
+security firms). Don't click links in DMs, and don't sign anything "to protect funds".
+**5–20 min: Contain.**
+- *Protocol exploit:* withdraw if still possible and safe; revoke approvals to affected contracts.
+- *Depeg:* follow your written peg rule (e.g. exit below 0.99 for X hours); don't panic-sell far below it on a thin book.
+- *Wallet compromise:* move remaining assets to a **fresh** wallet (new seed, clean device); revoke approvals; assume the old seed is burned.
+
+**20–60 min: Stabilise.** Check HFs across all positions (prices may be
+moving), top up from the reserve, and journal every action with timestamps.
+**After: Review.** What was the signal, what worked, and what changes in the caps and the register?
+
+### Worked example
+A lending protocol you use announces a paused market after an exploit. You
+verify on its bookmarked status page, see withdrawals still work on unaffected
+markets, withdraw your USDC, revoke the pool approval, check your other HFs,
+and journal it. Total time: 25 minutes. Loss: none. Because the steps were written in advance.
+
+### Checklist
+- [ ] Incident playbook printed/saved offline
+- [ ] Official channels bookmarked for every protocol I use
+- [ ] A clean "fresh wallet" procedure written
+
+### Quiz
+<details><summary>1. First thing to do in an incident?</summary>Verify through official, bookmarked channels.</details>
+<details><summary>2. Someone offers a link to "rescue your funds". What do you do?</summary>Ignore it. It's a common scam during incidents.</details>
+<details><summary>3. Wallet compromised: can you keep using the seed?</summary>No. Move to a fresh wallet with a new seed; the old one is burned.</details>
+
+---
+
+### Module 11 practical
+1. Price one hedge (perp and put) for your largest price exposure.
+2. Run the five stress scenarios on your book and write the fixes.
+3. Write and save your incident playbook, with bookmarks.
+
+---
+
 # Module 12 — Operate as Your Own Bank
 
 ![Module 12 — Operate as Your Own Bank](assets/modules/module-12.png)
@@ -2970,7 +4689,155 @@ $16,310 → ~$17,480 after five years (before any new capital).
 
 ---
 
-# 7. Skills archive
+# Module 14 — Automation & Mastery
+
+![Module 14 — Automation & Mastery](assets/modules/module-14.png)
+
+*Outcome: monitor and automate safely, run multisig operations, and complete the operator capstone.*
+*Stage 5 · Operator. Prerequisites: Modules 0–13. Educational content only. Not financial advice.*
+
+**The automation rule:** automate *watching* freely; automate *acting* only with
+limited permissions you can revoke, and never by handing over your keys.
+
+---
+
+## Lesson 14.1 — Monitoring: dashboards, alerts and on-chain watchers
+
+### Objective
+Set up monitoring so you hear about problems before they cost money.
+
+### Explanation
+Watch four things:
+1. **Positions:** health factors, LP ranges, pegs, utilisation of markets you lend to.
+2. **Protocols:** governance proposals, queued upgrades (timelocks), incidents.
+3. **Wallets:** any outgoing transaction or new approval from your vault/operating wallets.
+4. **Market:** funding, large depegs, liquidations.
+
+Tools: portfolio dashboards, protocol-native alerts, wallet-activity watchers,
+block-explorer address alerts, and official status/X accounts. Alerts should reach your **phone**.
+
+### Worked example — alert sheet
+| Alert | Threshold | Action (from your policies) |
+|---|---|---|
+| HF, credit line | < 2.0 / < 1.7 | Repay per 11.3 |
+| Stablecoin peg | < 0.99 for 2h | Peg rule |
+| Market utilisation | > 95% for 24h | Withdraw per kill rule |
+| Vault wallet outflow | Any | Verify immediately (11.5) |
+| Queued upgrade | Any, on protocols > 10% of book | Review within timelock |
+
+### Checklist
+- [ ] Alerts for all four categories, delivered to phone
+- [ ] Every alert maps to a written action
+
+### Quiz
+<details><summary>1. Why alert on any vault-wallet outflow?</summary>The vault should almost never move; any movement could be a compromise.</details>
+<details><summary>2. Why watch queued upgrades?</summary>The timelock is your window to exit before the change takes effect.</details>
+<details><summary>3. An alert with no action attached is…?</summary>Noise. Every alert needs a written response.</details>
+
+---
+
+## Lesson 14.2 — Automation: keepers, bots and agents without handing over the keys
+
+### Objective
+Automate routine actions with the least permission possible.
+
+### Explanation
+- **Keeper / automation networks** execute pre-defined actions when conditions
+  are met (e.g. repay when HF < 1.8, rebalance an LP range).
+- **Smart-account permissions / session keys:** grant a bot the right to do
+  *one thing* (e.g. repay debt on one protocol, up to $X per day), revocable at any time.
+- **AI agents and bots:** treat them like any other contract permission. They get
+  scoped rights, never your seed phrase or unlimited approvals.
+- **Test on a testnet or with tiny amounts first; log every automated action.**
+
+### Worked example
+Automated repay: a session key allowed only to call `repay` on your lending
+position, from your operating wallet, capped at $5,000/day, expiring in 30 days.
+Worst case if the bot is compromised: it repays your debt, which is annoying, not catastrophic.
+
+### Checklist
+- [ ] Each automation has a scoped, capped, expiring permission
+- [ ] No automation holds seed phrases or unlimited approvals
+- [ ] Tested small; actions logged; revoke procedure known
+
+### Quiz
+<details><summary>1. What's a session key?</summary>A limited, revocable permission for a specific action.</details>
+<details><summary>2. Should an AI agent ever get your seed phrase?</summary>No. Give it scoped, revocable permissions only.</details>
+<details><summary>3. Worst case of a well-scoped repay bot?</summary>It repays debt within its cap. No funds leave your control.</details>
+
+---
+
+## Lesson 14.3 — Operating procedures: multisig signing, change control, reviews
+
+### Objective
+Run your bank with procedures that prevent single-point mistakes.
+
+### Explanation
+- **Multisig signing procedure:** every signer independently verifies the
+  transaction (destination, amount, calldata) on their **own device screen**, not a shared screenshot.
+- **Change control:** new protocol, new chain, new strategy, or a cap change is
+  written up (thesis, risk register row, size) and waits 24h before execution.
+- **Separation:** the person proposing a vault transaction isn't the only one approving it.
+- **Review calendar:** weekly books · monthly register · quarterly stress test and recovery drill · annual review (Module 13.5).
+
+### Worked example
+A 2-of-3 vault moves $40,000 to the operating wallet. Signer 1 proposes; Signer 2
+checks the destination against the allowlist and the amount against the ladder
+refill schedule on their hardware wallet screen, then signs. Logged in the books with both names.
+
+### Checklist
+- [ ] Signing procedure written for every signer
+- [ ] Change-control template and 24h rule
+- [ ] Review calendar set
+
+### Quiz
+<details><summary>1. Why verify on your own device screen?</summary>Screens and screenshots can be faked; the hardware display shows what you're actually signing.</details>
+<details><summary>2. What is change control for?</summary>Forcing new risks through thesis, register and a cooling-off period.</details>
+<details><summary>3. How often is the stress test re-run?</summary>Quarterly, and after big changes.</details>
+
+---
+
+## Lesson 14.4 — Operator capstone and certification
+
+### Objective
+Assemble your complete on-chain bank and have it assessed.
+
+### Explanation — the operator capstone
+Submit one document (template in `07-program-operations.md`) containing:
+1. **Balance sheet** with equity, LTV and runway (12.1)
+2. **Custody policy** and recovery-test log (12.2)
+3. **Credit policy** with action levels (12.3)
+4. **Liquidity ladder** T0–T3 (12.4)
+5. **Lending policy** with risk assumptions (12.5)
+6. **Books template** and letter of instruction location (12.6; never the seed)
+7. **Income portfolio** with risk-adjusted expected income (13.3)
+8. **Payout policy** (13.4)
+9. **Stress test**, five scenarios, with fixes (11.4)
+10. **Incident playbook** (11.5), **alert sheet** (14.1) and **automation permissions** (14.2)
+
+**Certification levels** (assessed against the rubric in `07-program-operations.md`):
+- **Analyst:** passed the analyst capstone (Modules 6–7)
+- **Operator:** passed the operator capstone
+- **Operator with distinction:** operator capstone scored ≥ 90%, plus one quarter of books kept to standard
+
+### Checklist
+- [ ] All ten sections complete
+- [ ] Calculators used for every number
+- [ ] Submitted (Live tier: booked for review)
+
+### Quiz
+<details><summary>1. What must never appear in the capstone?</summary>Seed phrases, private keys or anything that grants access.</details>
+<details><summary>2. Which lesson's output shows income is sustainable?</summary>13.4: the payout policy, based on risk-adjusted expected income.</details>
+<details><summary>3. What's needed for "with distinction"?</summary>≥ 90% on the operator capstone plus a quarter of books kept to standard.</details>
+
+---
+
+### Module 14 practical
+Build your alert sheet, scope one automation, write your signing procedure, then complete the operator capstone.
+
+---
+
+# 10. Skills archive
 
 Claude skills for building and running the Grid Bot Builder business and the
 new DeFi program on Whop. Everything lives in `.claude/skills/`, so Claude Code
@@ -2984,7 +4851,8 @@ and calls the others as needed.
 
 ## On-Chain Operator Program
 Everything for the DeFi program is in one file: [`ON-CHAIN-OPERATOR-PROGRAM.md`](programs/defi-program/ON-CHAIN-OPERATOR-PROGRAM.md), also as [Word](programs/defi-program/On-Chain-Operator-Program.docx) and [PDF](programs/defi-program/On-Chain-Operator-Program.pdf).
-To finish building it, paste [`programs/defi-program/BUILD-PROMPT.md`](programs/defi-program/BUILD-PROMPT.md) into Claude Code.
+All 79 lessons are written; VSLs and module intro videos are in [`programs/defi-program/video/`](programs/defi-program/video/).
+To finish and launch it, paste [`programs/defi-program/BUILD-PROMPT.md`](programs/defi-program/BUILD-PROMPT.md) into Grok 4.6 (medium) with the files it lists, or run it in Claude Code.
 
 ## Skills
 
@@ -3021,88 +4889,78 @@ To finish building it, paste [`programs/defi-program/BUILD-PROMPT.md`](programs/
 
 ---
 
-# 8. Build Prompt: On-Chain Operator Program
+# 11. Build Prompt: On-Chain Operator Program (for Grok 4.6 · medium)
 
-**Run it in:** Claude Code (claude.ai/code, the desktop app or the CLI) with
-the GitHub repo `kyleashton88-cyber/claude` open on branch
-`claude/grid-bot-builder-skills-bmrez2`. Connect **Notion** and **Zapier**,
-and make sure **Whop is connected inside Zapier**. Claude Code loads the
-skills in `.claude/skills/` automatically. Other AIs won't, and they can't
-reach your Notion or Zapier, so use Claude Code.
+## How to run it
+1. Open a new Grok conversation (Grok 4.6, medium reasoning).
+2. **Attach these files** from the GitHub repo `kyleashton88-cyber/claude`,
+   branch `claude/grid-bot-builder-skills-bmrez2`, folder `programs/defi-program/`:
+   - `ON-CHAIN-OPERATOR-PROGRAM.md` (the master file: everything in one document), or the PDF if Grok can't take large markdown
+   - `07-program-operations.md` and `06-whop-store-listing.md` (also inside the master, but easier to edit on their own)
+   - `assets/brand/brand-guide.png`, `assets/store/banner-1920x1080.png` (so Grok can see the brand)
+   - `video/SCRIPTS.md` (VSL and video scripts)
+3. Paste everything below the line as your first message.
+4. When Grok returns edited files, put them back in the repo folder and rebuild:
+   `python3 programs/defi-program/build_master.py && cd programs/defi-program/export && npm install && npm run build`
+   (or ask Claude Code to do it).
 
-Paste everything below the line as your first message.
+Grok doesn't load the Claude skills in `.claude/skills/` and may not reach your
+Notion, Zapier or Whop. Anything that needs those accounts comes back to you
+as exact values and step-by-step clicks.
 
 ---
 
-You're building out my **On-Chain Operator Program**, a high-ticket DeFi
-program that takes someone who knows nothing to complete mastery: every
-professional strategy, a risk-adjusted income engine, and operating as their
-own on-chain bank. It goes into my Whop store as a new product alongside
-Grid Bot Builder. Work in this repo on branch
-`claude/grid-bot-builder-skills-bmrez2`. Commit and push after each finished piece.
+You're finishing and launching my **On-Chain Operator Program**: a high-ticket
+DeFi education program on Whop that takes someone who knows nothing about crypto
+to complete mastery: a safe setup, 25 professional strategies, a risk-adjusted
+income engine, and operating as their own on-chain bank. It sits in my Whop
+store alongside Grid Bot Builder ($997) and Elite Intel Community ($67/mo).
 
-## Read first
-1. `README.md` (skills archive) and `programs/defi-program/README.md` (build status)
-2. `programs/defi-program/ON-CHAIN-OPERATOR-PROGRAM.md`: master file with decisions, curriculum, setup, funnel and finished lessons
-3. `programs/defi-program/06-whop-store-listing.md`: logo system, store listing copy and image upload map
-4. Skills: `whop-defi-program` (master workflow), `defi-strategies`, `defi-due-diligence`, `grid-bot-design`, `gbb-*`, `frontend-design`, `dataviz`
-5. Notion: "ATLAS — The Universal Trading Library" → "DeFi & On-Chain (Complete Module)". This is the source for every lesson.
+The attached master file contains everything built so far: decisions,
+curriculum (6 stages, 15 modules, **all 79 lessons written**), Whop setup,
+store listing, operations kit, 17 worksheets, funnel changes, video scripts
+and the brand system. Read it fully before doing anything.
 
 ## Locked decisions (don't change them)
-- Name: On-Chain Operator Program. Course tier $15,000 one-time. Live tier priced higher.
-- Launch to everyone. Cold traffic goes application → call (vip-defi-consult Calendly) → checkout.
-- **6 stages, 15 modules, 79 lessons**, Module 0 (Crypto From Zero) to Module 14 (Automation & Mastery). Structure in `01-offer-and-curriculum.md`. Every lesson follows: Objective → Explanation → Worked example → Checklist → 3-question quiz.
-- **Depth standard:** match `lessons/module-10-…`, `module-12-…` and `module-13-…`. Advanced lessons state "what this position is short", show computed numbers, and give professional rules (sizing, exits, caps).
+- Name: **On-Chain Operator Program**. Tagline: **From zero to your own on-chain bank.**
+- Course tier **$15,000 one-time**. Live tier priced higher (not yet set).
+- Launch to everyone; cold traffic goes **application → call → checkout**.
+- 6 stages · 15 modules (0–14) · 79 lessons · 25 strategy playbooks · 2 capstones.
+- Every lesson: Objective → Explanation → Worked example → Checklist → 3-question quiz, with at least one image.
 
-## Logo & brand (lead with it)
-The logo is two interlocked chain rings inside a hexagonal block with corner
-nodes (`logoMark()` in `export/build_images.js`). It leads every surface.
-- Use the rendered files in `assets/brand/`: stacked icon, marks (dark and light transparent), horizontal lockups, favicon, brand guide.
-- Every store image, module banner and document cover carries the logo. Document diagrams carry the small mark in the footer.
-- Never recolour the rings, stretch the mark, or put the light version on dark.
+## Brand (lead with the logo)
+- Logo: two interlocked chain rings inside a hexagonal block with corner nodes. Colours: ink `#0B1F33`, navy `#12355B`, brand `#1F4E79`, teal `#2ee6a6` (on dark only), blue `#2a78d6`, orange `#eb6834`. Type: Inter; formulas in JetBrains Mono.
+- Dark navy gradient with a faint node-network motif for marketing; `#FCFCFB` light surface for documents.
+- Never recolour or stretch the logo. Every marketing asset carries the logo and the footer: "Educational content only · Not financial advice · No results are guaranteed".
 
-## Beginner standard (Module 0 is the model)
-The program must work for someone who has never owned crypto. `lessons/module-00-crypto-from-zero.md` sets the bar:
-- Define every term the first time it's used; keep the glossary in 0.8 current.
-- Give real, ordered, do-it-now steps, with a small test amount before any real one.
-- Name well-known products only as examples, and always say to check availability and regulation where the learner lives.
-- Keep the **Day-1 Setup Kit** complete: if a later module needs something set up (a hardware wallet, a multisig, alerts), add a matching setup checklist to that module.
-
-## Imagery standard (every deliverable must meet it)
-All images come from one generator, `programs/defi-program/export/build_images.js`,
-so the brand stays consistent. Extend that file and don't hand-place one-off images.
-- **Brand:** Inter typeface (bundled via `@fontsource`). Navy `#0B1F33`→`#12355B` gradient with a faint node-network motif for dark/store images. `#FCFCFB` surface for light document images. Teal `#2ee6a6` accent on dark only.
-- **Charts:** follow the `dataviz` skill. Blue `#2a78d6` is the primary series, orange `#eb6834` the secondary (validated pair). One y-axis. Recessive grid. Direct labels on the empty side of the line, never overlapping. Every number must be computed, not typed.
-- **Resolution:** document images at 2× (1800 px wide), store images at exact upload size (1024×1024, 1920×1080).
-- **Every module** gets its banner (`assets/modules/module-NN.png`, already rendered for 0–14) at the top of its lesson file. **Every lesson** gets at least one diagram or chart where a picture explains the mechanism better than text (a flow, a curve, a comparison). Add new ones to the `ASSETS` list.
-- **Review:** after rendering, open every new or changed image and check it by eye. Fix any label collision, overflow, clipped text or empty-looking layout before committing.
-- Every image carries the footer "Educational content only · Not financial advice · No results are guaranteed" (the shells already do this).
+## Non-negotiable rules
+1. **No promised, projected or guaranteed returns or income** anywhere: lessons, ads, emails, sales page, call script, videos. Show how every strategy loses money next to how it earns. No fake scarcity or countdowns.
+2. "Operate as your own bank" is a **method**, never presented as a licence or financial service.
+3. Never ask for or accept seed phrases, private keys, exchange API keys or account access.
+4. Beginner standard: define every term on first use; give do-it-now steps with a small test amount first; name products only as examples and tell learners to check availability and regulation where they live.
+5. Every number must be computed, not typed. Show the calculation. If you can run code, check it; otherwise show the arithmetic.
+6. Tax and legal points always say to consult a professional. Terms and disclaimers need a lawyer's review before launch: say so.
+7. No Discord, Skool or Slack. Use only the Calendly links named in the master file.
+8. The repo is public: never put internal IDs, plan IDs, list IDs or private emails in files. Use `<PLACEHOLDERS>`.
+9. Ask me before anything outward-facing: publishing, emailing, changing prices or changing any live system.
 
 ## Work to do, in order
-1. **Write the remaining 39 lessons** (40 of 79 are done: Modules 0, 1, 2, 9, 10, 12, 13 and lesson 8.3), one file per module in `programs/defi-program/lessons/` (`module-NN-name.md`):
-   - **Modules 3–7** (27) from the Notion ATLAS chapters listed in the curriculum.
-   - **Lessons 8.1, 8.2, 8.4** (3) into `module-08-…` (8.3 is `03-defi-strategy-mastery.md`).
-   - **Module 11** Hedging & Risk Engineering (5) and **Module 14** Automation & Mastery (4): original content at the depth of Modules 10/12/13.
-   Check every number with `.claude/skills/defi-strategies/scripts/defi_calc.py` (15 calculators, including `pt`, `basis`, `covered-call`, `expected`, `income`, `bank`) or Python. Add a practical at the end of each module. Suggested new visuals: health-factor gauge (M3), APY decomposition bar (M4), bridge/oracle dependency map (M5), due-diligence scorecard (M6), exchange-flow and holder-metric examples (M7), portfolio risk buckets (M8), hedge payoff chart and stress-test table (M11), monitoring/alert flow (M14).
-2. **Capstones**: the analyst capstone (due-diligence file, after Module 7) and the operator capstone (a complete personal bank: balance sheet, custody, credit, ladder, income portfolio, payout policy, stress test, incident plan). Write briefs and grading rubrics, each with a one-page visual overview.
-3. **Live tier**: design what it includes (session cadence, capstone reviews, portfolio reviews, Q&A), then propose a price and wait for my approval. Update the "What's included" gallery image once it's priced.
-4. **Application form** (questions + scoring that plugs into `gbb-new-lead` with interest = defi) and a **sales call script**.
-5. **Sales page**: build it with the `frontend-design` skill using the store images, the copy in `06-whop-store-listing.md`, and the brand above.
-6. **Add the product to my Whop store** per `05-whop-setup.md` and `06-whop-store-listing.md`. I create the hidden product in the dashboard and upload the images in the listed order, then give you the `prod_` ID. You create plans and checkout links through Zapier, but only after showing me the exact values.
-7. **Funnel**: apply `04-funnel-changes.md` to my Zapier skills (`update_zapier_skill`) after I approve, and mirror the changes into `.claude/skills/gbb-*`.
-8. **Rebuild everything and push**: `python3 programs/defi-program/build_master.py`, then `cd programs/defi-program/export && npm install && npm run build` (renders all images, then the Word and PDF copies). Open the PDF and spot-check pages that have images.
+1. **Ask me the open decisions first** (one message, multiple choice where possible): live-tier price and exact inclusions · refund policy (options in the operations kit §9) · Grid Bot Builder customer pricing (if any) · whether a "Grid Bot Starter" tier exists · access duration (lifetime or 12 months).
+2. **Quality pass on all 79 lessons.** Check facts are current (products, networks, mechanisms), recompute every worked example, make sure every term is defined, and that each lesson follows the template. Return a change list, then the corrected lesson files in full.
+3. **Sales page:** a complete, responsive HTML page in the brand: hero with logo and the main VSL embed (`video/vsl-main.mp4`), the path (6 stages), curriculum, own-bank section, strategy library, what's included (Course vs Live), who it's for/not for, FAQ, application CTA, disclaimer footer. Single file, no external dependencies except Google Fonts (Inter).
+4. **Application form:** build-ready spec (every question, field type, required flag, scoring) from operations kit §4, in Typeform- or Whop-form-ready format.
+5. **Whop store setup:** exact values and click-by-click steps for me to create the hidden product, upload the logo/banner/7 gallery images in order (`06-whop-store-listing.md`), paste the copy, set up the course (15 chapters, lesson pages, videos, drip rules from §1), and create the plans once priced.
+6. **Funnel:** rewrite my four Zapier skills (`gbb new lead`, `gbb customer onboarding`, `gbb ad performance`, `gbb pipeline check`) as full text, applying `04-funnel-changes.md` with the application-first path, for me to paste into Zapier.
+7. **Marketing pack (compliant):** 20 ad hooks, 5 ad scripts (15–30s) matching the VSL's style, a 5-email launch sequence, and 10 organic post ideas, all with no return claims.
+8. **Video:** using `video/SCRIPTS.md`, write alternate VSL cuts (a 60s version and a 15s version) and shot-by-shot notes so the same renderer or a video tool can produce them. If you have video/voice generation available, produce them in the brand and say which tool you used.
+9. **Final checklist** of everything left for me to do, in order.
 
-## Rules
-- Educational only. No promised, projected or guaranteed returns or income anywhere: lessons, images, emails, sales page, store listing or call script. Always show how a strategy loses money next to how it earns. "Own bank" is a method, never presented as a licence or financial service. Tax and legal points always say to consult a professional.
-- Never ask for seed phrases, private keys or exchange API keys.
-- No Discord, Skool or Slack. Use only the Calendly links named in the skills.
-- Ask me before anything outward-facing: creating or changing anything on Whop, sending emails, editing Zapier skills, changing prices.
-- This repo is public. Never commit internal IDs (Mailchimp list, Whop business or plan IDs, private emails). Use `<PLACEHOLDERS>`.
-- Still open, ask me: live-tier price, refund policy, Grid Bot Builder customer pricing, whether the "Grid Bot Starter" tier exists.
+## Output format
+- Deliver each item as complete files (markdown or HTML) with the file name as a heading, ready to drop into `programs/defi-program/`.
+- Keep my existing file names; new files get the next number (`09-sales-page.html`, `10-application-form.md`, `11-marketing-pack.md`, …).
+- After each item, list what changed and anything you couldn't verify.
 
 ## Done when
-- All 79 lessons and both capstones are written, number-checked and illustrated to the imagery standard, with the logo leading every surface.
-- Live tier, application, call script and sales page are approved.
-- The product is in my Whop store (hidden until I say launch) with icon, banner and gallery images, and its plans and checkout links exist.
-- Funnel skills are updated in Zapier and the repo.
-- The master file, Word and PDF are rebuilt and pushed.
+Decisions answered · lessons quality-checked · sales page, application form,
+Whop setup steps, funnel skill text, marketing pack and extra video cuts
+delivered · final checklist written.
