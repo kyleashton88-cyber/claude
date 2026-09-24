@@ -21,8 +21,8 @@ const VIDEOS = [
       { type: 'logo', tagline: 'From zero to your own on-chain bank.',
         vo: 'The On-Chain Operator Program takes you from zero, never having owned crypto, to running your capital like your own on-chain bank.' },
       { type: 'image', src: 'assets/store/gallery-01-path-to-mastery.png', eyebrow: 'The path',
-        vo: 'Six stages. Fifteen modules. Seventy-nine lessons. You start by setting everything up safely, step by step, with a Day-One Setup Kit.',
-        cap: '6 stages. 15 modules. 79 lessons. You start by setting everything up safely, step by step, with a Day-1 Setup Kit.' },
+        vo: 'Six stages. Fifteen modules. Ninety-two lessons, each module opening with a beginner starter. You start by setting everything up safely, step by step, with a Day-One Setup Kit.',
+        cap: '6 stages. 15 modules. 92 lessons, each module opening with a beginner starter. You start by setting everything up safely, step by step, with a Day-1 Setup Kit.' },
       { type: 'image', src: 'assets/store/gallery-04-strategy-levels.png', eyebrow: 'Strategy library',
         vo: 'Then you learn to research any protocol, and work through twenty-five strategy playbooks. Each one with its maths, its exit rules, and exactly how it loses money.',
         cap: 'Then you learn to research any protocol, and work through 25 strategy playbooks. Each one with its maths, its exit rules, and exactly how it loses money.' },
@@ -47,9 +47,9 @@ const VIDEOS = [
         cap: '12% APY. The real question is: what are you being paid to risk?' },
       { type: 'logo', tagline: 'From zero to your own on-chain bank.',
         vo: 'The On-Chain Operator Program takes you from zero to running your crypto like your own bank.' },
-      { type: 'stats', stats: [['79', 'lessons'], ['25', 'strategy playbooks'], ['0', 'guaranteed returns']],
-        vo: 'Seventy-nine lessons. Twenty-five strategy playbooks. And zero promises. Just a process.',
-        cap: '79 lessons. 25 strategy playbooks. And zero promises. Just a process.' },
+      { type: 'stats', stats: [['92', 'lessons'], ['25', 'strategy playbooks'], ['0', 'guaranteed returns']],
+        vo: 'Ninety-two lessons. Twenty-five strategy playbooks. And zero promises. Just a process.',
+        cap: '92 lessons. 25 strategy playbooks. And zero promises. Just a process.' },
       { type: 'cta', button: 'Apply to join', sub: 'Application-only',
         vo: 'Apply to join the On-Chain Operator Program.' },
     ],
@@ -82,7 +82,7 @@ const VIDEOS = [
 const fs = require('fs');
 const path = require('path');
 const NUM = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen'];
-const clean = s => s.replace(/\*|`/g, '').replace(/\s+—\s+sample lesson/i, '').replace(/,\s*full content in.*$/, '').replace(/\s*\(.*?\)\s*$/, '').trim();
+const clean = s => s.replace(/Mastery Starter:.*$/, 'Mastery Starter').replace(/\*|`/g, '').replace(/\s+—\s+sample lesson/i, '').replace(/,\s*full content in.*$/, '').replace(/\s*\(.*?\)\s*$/, '').trim();
 function moduleIntros() {
   const md = fs.readFileSync(path.resolve(__dirname, '../01-offer-and-curriculum.md'), 'utf8');
   const out = [];
@@ -98,9 +98,9 @@ function moduleIntros() {
           vo: `Module ${NUM[+n]}. ${say(title)}.`, cap: `Module ${n}. ${title}.` },
         { type: 'statement', lines: ['The goal'], sub: outcome.charAt(0).toUpperCase() + outcome.slice(1).replace(/\.$/, '') + '.',
           vo: `The goal: ${say(outcome)}`, cap: `The goal: ${outcome}` },
-        { type: 'bullets', title: `${count} lessons`, items: lessons, compact: true,
-          vo: `${NUM[+count] || count} lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on.`,
-          cap: `${count} lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on.` },
+        { type: 'bullets', title: `Mastery Starter + ${count} lessons`, items: lessons, compact: true,
+          vo: `${NUM[+count] || count} lessons, and a Mastery Starter if you're new to the topic. Each lesson ends with a checklist and a short quiz.`,
+          cap: `${count} lessons, plus a Mastery Starter if you're new to the topic. Each lesson ends with a checklist and a short quiz.` },
         { type: 'cta', button: `Start lesson ${n}.1`, sub: 'Educational content only · Not financial advice',
           vo: `Start with lesson ${NUM[+n]} point one.`, cap: `Start with lesson ${n}.1.` },
       ],

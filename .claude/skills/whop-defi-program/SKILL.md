@@ -46,7 +46,7 @@ Ask (or propose, then confirm):
   a 6-step risk loop"), never returns or APY.
 
 ### 2. Curriculum (from Notion)
-**Current structure (source of truth):** `programs/defi-program/01-offer-and-curriculum.md`: 6 stages, 15 modules, 79 lessons, from Crypto From Zero to Operate as Your Own Bank. The grouping below is the original ATLAS mapping for Modules 1–9.
+**Current structure (source of truth):** `programs/defi-program/01-offer-and-curriculum.md`: 6 stages, 15 modules, 92 lessons + a Mastery Starter per module, from Crypto From Zero to Operate as Your Own Bank. The grouping below is the original ATLAS mapping for Modules 1–9.
 
 Fetch the Notion page "DeFi & On-Chain (Complete Module)" and group the 42
 chapters into Whop course modules. Default grouping:

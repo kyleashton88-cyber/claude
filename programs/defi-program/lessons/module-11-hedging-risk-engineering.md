@@ -7,6 +7,40 @@
 
 ---
 
+## Lesson 11.0 — Mastery Starter
+
+*New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
+
+### The 60-second version
+Risk you don't want can often be hedged, insured or engineered away, at a cost. This module covers hedging, cover, liquidation protection, stress testing and what to do in the first hour of a crisis.
+
+### Words you'll need
+| Term | Meaning |
+|---|---|
+| Hedge | a position that offsets another's risk |
+| Protective put | an option capping downside below a price |
+| Cover | on-chain insurance for defined events |
+| Stress test | a what-if shock on your book |
+| Incident | an exploit, depeg or compromise |
+
+### Before you start
+- [ ] Modules 0–10
+
+### Your first safe step
+Write down the single event that would hurt your portfolio most, and what you'd do in the first 10 minutes.
+
+### The mastery ladder
+| Level | You can… |
+|---|---|
+| **Beginner** | Knows the hedge tools and what they cost |
+| **Practitioner** | Hedges one real exposure and runs the five stress tests |
+| **Master** | Runs a stress-tested book with a rehearsed incident playbook |
+
+### You've mastered this module when…
+…your book survives all five stress scenarios and your incident playbook is saved offline.
+
+---
+
 ## Lesson 11.1 — Hedging price exposure with perps and options
 
 ### Objective

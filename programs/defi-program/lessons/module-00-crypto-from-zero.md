@@ -16,6 +16,42 @@ rest of the program needs.
 
 ---
 
+## Lesson 0.0 — Mastery Starter
+
+*New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
+
+### The 60-second version
+Crypto is money recorded on a public ledger that nobody can quietly edit. You'll open an exchange account, buy a little crypto, move it into a wallet only you control, and make your first practice DeFi transaction, all with a small amount and a checklist.
+
+### Words you'll need
+| Term | Meaning |
+|---|---|
+| Blockchain | a shared ledger kept by thousands of computers |
+| Wallet | an app or device holding the keys that control your crypto |
+| Seed phrase | 12–24 words that are your wallet. Never share |
+| Exchange | a company that swaps your money for crypto |
+| Gas | the network fee for a transaction |
+
+### Before you start
+- [ ] A phone, a computer, ID for KYC, a bank account
+- [ ] $50–$200 you can afford to lose while learning
+- [ ] 2–3 hours over a few days
+
+### Your first safe step
+Read Lesson 0.1, then secure your email with a unique password and authenticator-app 2FA. No money needed yet.
+
+### The mastery ladder
+| Level | You can… |
+|---|---|
+| **Beginner** | Can explain blockchain, wallet and seed phrase in plain words |
+| **Practitioner** | Has a secured exchange account and a restore-tested wallet |
+| **Master** | Completes the whole Day-1 Setup Kit and can coach a friend through it |
+
+### You've mastered this module when…
+…every box of the Day-1 Setup Kit is ticked.
+
+---
+
 ## Lesson 0.1 — Money, ledgers and why blockchains exist
 
 ### Objective

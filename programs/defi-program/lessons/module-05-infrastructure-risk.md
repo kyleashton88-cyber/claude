@@ -10,6 +10,40 @@ plumbing (bridges, oracles, admin keys, contract bugs), not from price moves.
 
 ---
 
+## Lesson 5.0 — Mastery Starter
+
+*New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
+
+### The 60-second version
+Your position is only as safe as the weakest thing it depends on: the bridge that moved your tokens, the oracle that prices your collateral, the admin key that can upgrade the contract. Most big DeFi losses came from this plumbing.
+
+### Words you'll need
+| Term | Meaning |
+|---|---|
+| Bridge | moves tokens between chains |
+| Layer 2 | a cheaper network built on Ethereum |
+| Oracle | feeds prices into contracts |
+| Proxy | a contract whose logic can be upgraded |
+| Timelock | a delay before changes take effect |
+
+### Before you start
+- [ ] Modules 0–4
+
+### Your first safe step
+On a block explorer, open a protocol you use: is it a proxy? Who can upgrade it? Is there a timelock?
+
+### The mastery ladder
+| Level | You can… |
+|---|---|
+| **Beginner** | Knows which chain, bridge and oracle each position uses |
+| **Practitioner** | Draws a full dependency map and reads audits properly |
+| **Master** | Operates across EVM and non-EVM chains with capped bridge and wrapper exposure |
+
+### You've mastered this module when…
+…you can draw the complete dependency map of any position and rate each link.
+
+---
+
 ## Lesson 5.1 — Bridges and trust assumptions *(ch. 19)*
 
 ### Objective
@@ -156,6 +190,63 @@ small relative to the value. Size down, or wait.
 <details><summary>1. What does an audit not prove?</summary>That the code (or later changes, or economic design) is safe.</details>
 <details><summary>2. What is reentrancy?</summary>A contract being called back before it finishes updating its state, letting an attacker repeat actions.</details>
 <details><summary>3. Why check audit dates?</summary>Code changed after the audit wasn't reviewed.</details>
+
+---
+
+## Lesson 5.6 — Beyond Ethereum: Solana, Bitcoin and other ecosystems *(new)*
+
+### Objective
+Operate safely on non-EVM chains and understand how Bitcoin is used in DeFi.
+
+### Explanation
+- **Solana:** a separate, high-throughput chain with its own wallets (e.g. Phantom, Solflare), its own address format, very low fees (paid in SOL), and priority fees when busy. Tokens follow its own standard (SPL). Your Ethereum address **doesn't** work there. Sending between ecosystems needs a bridge or an exchange.
+- **Bitcoin in DeFi:** BTC itself doesn't run DeFi apps, so it's usually used as a **wrapped** token on other chains (backed by a custodian, a group of signers, or a protocol), or on Bitcoin layer 2s and sidechains. **Each wrapper has its own trust model.** Your "BTC" is only as good as whoever holds the real BTC.
+- **Other ecosystems** (e.g. Cosmos chains connected by IBC, Move-based chains) each have their own wallets, fees and bridges. Apply Module 5's dependency map to each.
+- **Same rules everywhere:** official wallet from the official site, test transaction first, correct network, gas token on hand.
+
+### Worked example
+You hold 1 BTC and want to lend it on Ethereum. Options: a custodial wrapper (trust
+one company), a decentralised wrapper (trust a signer set or protocol), or not
+wrapping at all. Write each option's trust model and cap wrapped BTC as bridge risk (5.1).
+
+### Checklist
+- [ ] Separate, official wallet for each non-EVM chain I use
+- [ ] Gas token held on each chain
+- [ ] Wrapped-BTC trust model known and capped
+
+### Quiz
+<details><summary>1. Does your Ethereum address work on Solana?</summary>No. It's a different ecosystem with its own address format and wallets.</details>
+<details><summary>2. What determines a wrapped BTC token's safety?</summary>Who holds the real BTC and how it can be redeemed: its trust model.</details>
+<details><summary>3. What's Solana's gas token?</summary>SOL.</details>
+
+---
+
+## Lesson 5.7 — Operating across chains: gas, routes and chain abstraction *(new)*
+
+### Objective
+Move value between chains cheaply and safely, without getting stranded without gas.
+
+### Explanation
+- **Gas stranding:** tokens on a chain where you have no gas token can't move. Keep a small gas float on every chain you use.
+- **Route choice:** canonical bridge (safest, sometimes slow), fast bridge/liquidity network, exchange deposit-withdraw (often simplest for large amounts, but custodial for a moment), or intent-based cross-chain swaps (solvers deliver on the other chain).
+- **Chain abstraction:** wallets and apps increasingly hide chains ("pay gas in USDC", "one balance across chains") using smart accounts, paymasters and solvers. It's convenient, and every layer that hides complexity is also a dependency.
+- **Always:** check the destination network, send a test first, and record the route in your journal.
+
+### Worked example
+Moving $30,000 USDC from Arbitrum to Base: compare a canonical route via Ethereum
+(two transactions, slower, higher gas), a reputable fast bridge ($5–$15 fee, minutes),
+and an exchange (withdraw on Base; check the exchange supports USDC on both networks).
+Send $50 first by the chosen route, keep ~$5 of ETH on Base for gas, then send the rest.
+
+### Checklist
+- [ ] Gas float on every chain I use
+- [ ] Route chosen by trust model and size, not just speed
+- [ ] Test amount first; route recorded
+
+### Quiz
+<details><summary>1. What is gas stranding?</summary>Having tokens on a chain with no gas token to move them.</details>
+<details><summary>2. Risk of chain abstraction?</summary>Each hidden layer (smart accounts, paymasters, solvers) is an extra dependency.</details>
+<details><summary>3. First step on any new route?</summary>Send a small test amount.</details>
 
 ---
 

@@ -14,6 +14,40 @@ module turns that into written policy.
 
 ---
 
+## Lesson 12.0 — Mastery Starter
+
+*New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
+
+### The 60-second version
+A bank keeps assets safe, lends, borrows and always has cash for what it owes. With DeFi you can run those four jobs yourself, with written policies, because there's nobody to call when something goes wrong.
+
+### Words you'll need
+| Term | Meaning |
+|---|---|
+| Balance sheet | assets, liabilities and equity |
+| Liquidity ladder | reserves tiered by how fast you can access them |
+| Credit line | borrowing against assets under a policy |
+| Runway | months your reserve can cover |
+| Succession | how others recover your assets if you can't |
+
+### Before you start
+- [ ] Modules 0–11
+
+### Your first safe step
+Fill in the balance sheet worksheet (W6) with rough numbers: equity, LTV and runway.
+
+### The mastery ladder
+| Level | You can… |
+|---|---|
+| **Beginner** | Has a balance sheet and a basic custody split |
+| **Practitioner** | Runs written custody, credit, ladder and lending policies |
+| **Master** | Operates a complete bank with books, tax-ready records, succession and quarterly reviews |
+
+### You've mastered this module when…
+…a stranger could run your bank from your written policies, with no keys in any document.
+
+---
+
 ## Lesson 12.1 — Your balance sheet
 
 ### Objective
@@ -246,6 +280,39 @@ the co-signer. No single document contains enough to steal the funds.
 <details><summary>1. Why keep the letter of instruction apart from seeds and keys?</summary>So finding the letter isn't enough to steal the funds.</details>
 <details><summary>2. What's the risk of single-key self-custody for your family?</summary>If you can't sign and no one else can, the assets are unrecoverable.</details>
 <details><summary>3. What goes in the books for each loan?</summary>Collateral, debt, rate, health factor and your action levels.</details>
+
+---
+
+## Lesson 12.7 — Tax, regulation and compliance awareness *(new)*
+
+### Objective
+Know which on-chain actions may have tax or legal consequences, keep the records to handle them, and know when to get professional help.
+
+### Explanation
+**This lesson is awareness, not advice. Rules differ by country and change. Use a crypto-aware tax professional and, for legal questions, a lawyer.**
+- **Events that may be taxable** in many countries: selling crypto for cash, swapping one token for another, spending crypto, and receiving income (interest, staking rewards, LP fees, airdrops). Some treat borrowing, wrapping, LP deposits or bridging differently. Ask.
+- **Cost basis:** what you paid, including fees. Methods (e.g. FIFO, specific identification) depend on local rules.
+- **Records:** every buy, sell, swap, transfer, fee and income event, with dates, amounts and prices (W1 records sheet). On-chain data can be exported, but self-transfers must be labelled or they may look like disposals.
+- **Regulation:** use services legally available where you live; don't use tools to get around geo-restrictions; never interact with sanctioned addresses or services; exchanges must run KYC/AML checks, and some DeFi front ends block certain regions.
+- **Reporting:** some countries require reporting of foreign accounts or digital assets. Ask your professional.
+
+### Worked example
+In one year: bought ETH, swapped half to USDC, lent USDC for interest, received an
+airdrop, bridged to an L2 and moved funds between your own wallets. For your tax
+professional, you'd prepare: the records sheet, labelled self-transfers (not
+disposals), interest and airdrop income with dates and values, and exchange
+statements. **They** tell you what's taxable where you live.
+
+### Checklist
+- [ ] Records sheet complete, with self-transfers labelled
+- [ ] Crypto-aware tax professional engaged
+- [ ] Only legally available services used; no geo-restriction workarounds
+- [ ] Sanctions awareness: never interact with sanctioned addresses or services
+
+### Quiz
+<details><summary>1. Name three events that are often taxable.</summary>Any three: selling for cash, swapping tokens, spending crypto, receiving interest, staking rewards, LP fees or airdrops.</details>
+<details><summary>2. Why label self-transfers?</summary>So moves between your own wallets aren't mistaken for disposals.</details>
+<details><summary>3. Who decides what's taxable for you?</summary>Your local rules, applied by a qualified tax professional.</details>
 
 ---
 

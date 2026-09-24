@@ -9,6 +9,40 @@
 
 ---
 
+## Lesson 4.0 — Mastery Starter
+
+*New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
+
+### The 60-second version
+Every yield is payment for a risk. Staking pays you to secure a network, lending pays for borrower demand, farms often pay in newly printed tokens. This module teaches you to see what each yield really pays for.
+
+### Words you'll need
+| Term | Meaning |
+|---|---|
+| APY | yearly return including compounding |
+| Emissions | new reward tokens printed by a protocol |
+| Staking | locking tokens to help secure a network |
+| LST | a token representing staked assets |
+| RWA | a token representing a real-world asset |
+
+### Before you start
+- [ ] Modules 0–3
+
+### Your first safe step
+Take any advertised APY and split it into base yield vs incentives using the protocol's own dashboard.
+
+### The mastery ladder
+| Level | You can… |
+|---|---|
+| **Beginner** | Tells base yield from emissions |
+| **Practitioner** | Compares vaults vs DIY and prices points/airdrops as bets |
+| **Master** | Builds yield from durable sources: lending, staking, savings rates, tokenized treasuries |
+
+### You've mastered this module when…
+…you can name the source and the risk behind any yield in one sentence.
+
+---
+
 ## Lesson 4.1 — Yield farming: base yield vs emissions *(ch. 14)*
 
 ### Objective
@@ -177,6 +211,68 @@ beat that plus its extra risk, or it's the worse choice.
 <details><summary>1. Are points a promise of tokens?</summary>No.</details>
 <details><summary>2. What's a sybil filter?</summary>Rules that exclude wallets believed to belong to the same person farming many times.</details>
 <details><summary>3. What's the airdrop EV formula?</summary>Probability × value − costs.</details>
+
+---
+
+## Lesson 4.7 — Stablecoin savings rates and yield-bearing stablecoins *(new)*
+
+### Objective
+Tell apart the different ways a stablecoin can pay yield, and the risk behind each.
+
+### Explanation
+Yield on "dollars" on-chain comes from one of four places:
+1. **Lending:** you lend stablecoins to borrowers (Module 3). Risk: the protocol, collateral and oracles.
+2. **Savings rates:** some stablecoin protocols pay a set rate to holders who deposit into a savings contract, funded by their own revenue. Risk: the stablecoin's design and governance setting the rate.
+3. **Treasury-backed:** the issuer holds short-term government debt and passes on part of the interest (Lesson 4.8). Risk: the issuer, custodian and redemption terms.
+4. **Synthetic / basis-backed:** yield comes from a hedged derivatives position (spot long + perp short) earning funding. Risk: funding turns negative, exchange failure, and the design itself (Lesson 10.3).
+
+Same "4–10% on dollars", four completely different risks.
+
+### Worked example
+$10,000 in a yield-bearing stablecoin paying 4.5% earns ~**$450/yr** *if* the rate
+holds. Before buying, answer: where does the 4.5% come from (1–4 above)? What
+happens to it in a bear market when funding goes negative? Can you redeem for
+$1, and who can?
+
+### Checklist
+- [ ] Yield source identified (lending, savings rate, treasuries or basis)
+- [ ] Redemption path and who can redeem known
+- [ ] Split across different yield sources, not just different tickers
+
+### Quiz
+<details><summary>1. Name the four sources of stablecoin yield.</summary>Lending, protocol savings rates, treasury backing, and synthetic basis/funding positions.</details>
+<details><summary>2. Why can a basis-backed stablecoin's yield fall to zero?</summary>Funding can turn negative in bear markets.</details>
+<details><summary>3. Two yield-bearing stablecoins both backed by basis trades: diversified?</summary>Not really. They share the same yield source and failure mode.</details>
+
+---
+
+## Lesson 4.8 — Tokenized treasuries and real-world assets (RWAs) *(new)*
+
+### Objective
+Use tokenized real-world assets knowing what you actually own and who you're trusting.
+
+### Explanation
+- **RWAs** are tokens that represent off-chain assets: short-term government bills (the most common), money-market funds, credit, commodities, property.
+- Tokenized treasury products typically pay close to the short-term government rate **minus a management fee**.
+- **What you're trusting:** the **issuer** (legal structure), the **custodian** holding the real assets, the **redemption** process, and the token's **transfer rules**.
+- **Access limits:** many RWA tokens are only for verified (KYC'd) or accredited/qualified investors, and not available in every country. Check eligibility where you live; don't try to get around restrictions.
+- **Composability:** some RWA tokens can be used as collateral in DeFi; others are restricted to allowlisted wallets.
+
+### Worked example (illustrative)
+If short-term government bills yield 4.0% and the product charges 0.15%, you'd
+earn about **3.85%** before any on-chain costs. In the own-bank ladder (Module 12.4),
+this can suit the T1/T2 tiers, but only if redemption times match when you'll need the money.
+
+### Checklist
+- [ ] I'm eligible in my country (and it's legal to hold)
+- [ ] Issuer, custodian and redemption terms read
+- [ ] Transfer restrictions and minimums known
+- [ ] Sized within caps, like any other issuer risk
+
+### Quiz
+<details><summary>1. What does a tokenized treasury product's yield track?</summary>Short-term government rates, minus the product's fees.</details>
+<details><summary>2. Name two parties you trust with an RWA token.</summary>Any two: the issuer, the custodian, the redemption agent, the token's administrators.</details>
+<details><summary>3. Why check transfer restrictions?</summary>Some RWA tokens only move between allowlisted wallets, which limits exit and DeFi use.</details>
 
 ---
 

@@ -9,6 +9,41 @@ Lesson 2.2 (AMM mathematics) is in `../02-sample-lesson-amm-math.md`.
 
 ---
 
+## Lesson 2.0 — Mastery Starter
+
+*New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
+
+### The 60-second version
+A swap on a DEX trades against a pool of tokens priced by a formula. Providing liquidity to that pool earns fees but changes what you hold. This module teaches you to trade and provide liquidity knowing the real cost.
+
+### Words you'll need
+| Term | Meaning |
+|---|---|
+| DEX | a decentralised exchange you use from your wallet |
+| Liquidity pool | a pot of two tokens traders swap against |
+| Price impact | how much your trade moves the price |
+| Slippage | the worst price you'll accept |
+| Impermanent loss | how far an LP lags simply holding |
+
+### Before you start
+- [ ] Modules 0–1
+- [ ] A little ETH for gas and some USDC on a low-fee network
+
+### Your first safe step
+Quote a $20 swap on one DEX and on an aggregator; compare what you'd actually receive after gas. Don't execute yet.
+
+### The mastery ladder
+| Level | You can… |
+|---|---|
+| **Beginner** | Makes small swaps with deliberate slippage and protected routing |
+| **Practitioner** | Calculates fee APR and IL, and tracks LP vs holding |
+| **Master** | Uses limit/TWAP/intent orders and runs LPs with written rules |
+
+### You've mastered this module when…
+…you can predict a swap's cost and an LP position's result against holding, before you enter.
+
+---
+
 ## Lesson 2.1 — DEXs, aggregators & routing *(ch. 6)*
 
 ### Objective
@@ -170,6 +205,35 @@ fail, and failed transactions still cost gas (Lesson 1.2).
 <details><summary>1. What limits how much a sandwich bot can take?</summary>Your slippage tolerance (and the pool's depth).</details>
 <details><summary>2. Why not set slippage near zero?</summary>Normal price movement makes the transaction revert, and you still pay gas.</details>
 <details><summary>3. Name two MEV defences.</summary>Any two: tight slippage, private/protected routing, splitting trades, using deep pools.</details>
+
+---
+
+## Lesson 2.6 — Advanced execution: limit, TWAP and intent-based orders *(new)*
+
+### Objective
+Use order types that give you better prices and protection than a plain swap.
+
+### Explanation
+- **On-chain limit orders:** you sign an order off-chain ("sell 1 ETH at 3,300 or better"); it fills only if the price is reached. Usually gasless until filled.
+- **TWAP orders:** split a large trade into equal slices over time to reduce price impact.
+- **Intent-based / RFQ trading:** you state what you want ("100,000 USDC → ETH, at least X"); competing **solvers** or market makers fill it, often with MEV protection and no failed-transaction gas.
+- **Trade-offs:** limit orders may never fill; TWAP takes time and the price can move away; intents rely on the protocol's solver design.
+
+### Worked example
+Buying $50,000 of ETH in a pool where a single $50,000 trade has ~1.5% price impact
+(~$750). A TWAP of 10 × $5,000 over an hour has far less impact per slice, as long
+as the price doesn't trend against you during the hour. An intent-based order may
+beat both by sourcing liquidity from several venues at once. Compare the quotes.
+
+### Checklist
+- [ ] I compare a plain swap, a TWAP and an intent quote for large trades
+- [ ] Limit orders have an expiry I've chosen
+- [ ] I know which order types include MEV protection
+
+### Quiz
+<details><summary>1. Why split a large trade into a TWAP?</summary>Smaller slices cause less price impact each.</details>
+<details><summary>2. What's the risk of a limit order?</summary>It may never fill.</details>
+<details><summary>3. Who fills an intent-based order?</summary>Competing solvers or market makers.</details>
 
 ---
 

@@ -2,8 +2,8 @@
 """DeFi strategy calculator: IL, LP break-even, concentrated-liquidity
 efficiency, health factor / liquidation price, leverage loops, funding carry,
 lending supply rate, APR->APY, airdrop EV, principal-token fixed yield,
-cash-and-carry basis, covered calls, risk-adjusted yield, income portfolios
-and a personal balance sheet.
+cash-and-carry basis, covered calls, risk-adjusted yield, income portfolios,
+a personal balance sheet, perp liquidation prices and time-weighted returns.
 
 Educational modelling only. Rates are inputs you supply from live sources;
 outputs are not forecasts.
@@ -167,6 +167,24 @@ def cmd_bank(a):
         print(f"  [{'PASS' if ok else 'FAIL'}] {label}")
 
 
+def cmd_perp(a):
+    move = 1 / a.leverage - a.mmr / 100
+    liq = a.entry * (1 - move) if a.side == "long" else a.entry * (1 + move)
+    print(f"{a.side} {a.leverage:g}x from {a.entry:,.2f}, maintenance margin {a.mmr:g}%")
+    print(f"Approx. liquidation price {liq:,.2f} ({(liq / a.entry - 1) * 100:+.1f}%), before fees and funding")
+    print(f"Margin per $1,000 of position: ${1000 / a.leverage:,.2f}")
+
+
+def cmd_twr(a):
+    growth = 1.0
+    for r in a.period:
+        growth *= 1 + r / 100
+    print(f"Periods {a.period} -> time-weighted return {(growth - 1) * 100:.2f}%")
+    if a.start is not None and a.end is not None and a.net_deposits is not None:
+        simple = (a.end - a.start - a.net_deposits) / (a.start + a.net_deposits) * 100
+        print(f"Simple gain on total capital in: {simple:.2f}% (deposits distort this; TWR measures skill)")
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -264,6 +282,20 @@ def main():
     s.add_argument("--monthly-spend", type=float, default=0.0)
     s.add_argument("--max-ltv", type=float, default=30.0, help="policy max LTV, percent")
     s.set_defaults(fn=cmd_bank)
+
+    s = sub.add_parser("perp", help="approximate liquidation price of an isolated perp position")
+    s.add_argument("--entry", type=float, required=True)
+    s.add_argument("--leverage", type=float, required=True)
+    s.add_argument("--side", choices=["long", "short"], default="long")
+    s.add_argument("--mmr", type=float, default=0.5, help="maintenance margin, percent")
+    s.set_defaults(fn=cmd_perp)
+
+    s = sub.add_parser("twr", help="time-weighted return across periods")
+    s.add_argument("--period", type=float, action="append", required=True, help="return of each period, percent (repeat)")
+    s.add_argument("--start", type=float)
+    s.add_argument("--end", type=float)
+    s.add_argument("--net-deposits", type=float)
+    s.set_defaults(fn=cmd_twr)
 
     a = p.parse_args()
     a.fn(a)

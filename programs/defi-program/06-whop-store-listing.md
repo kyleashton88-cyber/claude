@@ -75,7 +75,7 @@ the rings, stretch the mark or put the light version on a dark background.
 
 **Short description (≈150 characters):**
 DeFi from first principles to professional strategies. Build a risk-adjusted
-income engine and run your capital like a bank. 15 modules · 79 lessons.
+income engine and run your capital like a bank. 15 modules · 92 lessons.
 
 **Headline:** From zero to your own on-chain bank.
 
@@ -89,7 +89,7 @@ income engine and run your capital like a bank. 15 modules · 79 lessons.
 > policy, a credit line, a liquidity ladder, and an income engine with a
 > payout you can sustain.
 >
-> Six stages, 15 modules and 79 lessons: wallets and safety, trading and
+> Six stages, 15 modules and 92 lessons, each module opening with a beginner Mastery Starter: wallets and safety, trading and
 > liquidity, lending and yield, protocol research and on-chain analytics, 25
 > strategy playbooks up to fixed-rate, basis, options and hedged yield, and
 > finally operating your own on-chain bank. Every strategy is taught with its
@@ -106,7 +106,8 @@ income engine and run your capital like a bank. 15 modules · 79 lessons.
 
 | | Course | Live |
 |---|---|---|
-| 15 modules, 79 lessons, zero to operator | ✓ | ✓ |
+| 15 modules, 92 lessons, zero to operator |
+| A Mastery Starter in every module: start any topic from zero | ✓ | ✓ |
 | 25 strategy playbooks with maths and kill rules | ✓ | ✓ |
 | Printable Day-1 Setup Kit for complete beginners | ✓ | ✓ |
 | Welcome video + 15 module intro videos | ✓ | ✓ |

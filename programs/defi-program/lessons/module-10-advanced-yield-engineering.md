@@ -11,6 +11,40 @@ is short ___."* If you can't fill the blank, you're not ready to enter.
 
 ---
 
+## Lesson 10.0 — Mastery Starter
+
+*New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
+
+### The 60-second version
+Professionals don't just take the yield on offer: they engineer it. Fixed rates, hedged carry, option income and managed ranges each swap one risk for another. This module teaches you to build them and say exactly what each one is short.
+
+### Words you'll need
+| Term | Meaning |
+|---|---|
+| PT / YT | principal and yield tokens splitting a yield-bearing asset |
+| Basis | a future's premium over spot |
+| Funding | payments between perp longs and shorts |
+| Covered call | selling upside for a premium |
+| Delta-neutral | price moves roughly cancel out |
+
+### Before you start
+- [ ] Modules 0–9, including perps (3.5) and LP maths (Module 2)
+
+### Your first safe step
+Price one live PT with `defi_calc.py pt` and write: "This position is short ___."
+
+### The mastery ladder
+| Level | You can… |
+|---|---|
+| **Beginner** | Understands each structure and its payoff |
+| **Practitioner** | Sizes and runs one structured position with written exits |
+| **Master** | Combines fixed, carry, options and LP yield inside caps, naming every short exposure |
+
+### You've mastered this module when…
+…you can complete "this position is short ___" for every structured position you hold.
+
+---
+
 ## Lesson 10.1 — Fixed-rate yield: principal and yield tokens (PT/YT)
 
 ### Objective

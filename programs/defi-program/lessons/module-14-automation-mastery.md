@@ -10,6 +10,40 @@ limited permissions you can revoke, and never by handing over your keys.
 
 ---
 
+## Lesson 14.0 — Mastery Starter
+
+*New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
+
+### The 60-second version
+At mastery, you watch everything automatically and act through rules and limited permissions, never by handing over keys. Then you prove it with the operator capstone.
+
+### Words you'll need
+| Term | Meaning |
+|---|---|
+| Alert | an automatic notification tied to an action |
+| Keeper | an automated service that executes conditions |
+| Session key | a limited, revocable permission |
+| Change control | a written, delayed process for new risks |
+| RPC | a connection that lets software read the chain |
+
+### Before you start
+- [ ] Modules 0–13
+
+### Your first safe step
+Set one alert today: a health factor, a peg or any outflow from your vault wallet.
+
+### The mastery ladder
+| Level | You can… |
+|---|---|
+| **Beginner** | Has alerts mapped to actions |
+| **Practitioner** | Automates one task with scoped permissions and writes signing procedures |
+| **Master** | Builds read-only tools and passes the operator capstone |
+
+### You've mastered this module when…
+…you've passed the operator capstone.
+
+---
+
 ## Lesson 14.1 — Monitoring: dashboards, alerts and on-chain watchers
 
 ### Objective
@@ -138,6 +172,41 @@ Submit one document (template in `07-program-operations.md`) containing:
 <details><summary>1. What must never appear in the capstone?</summary>Seed phrases, private keys or anything that grants access.</details>
 <details><summary>2. Which lesson's output shows income is sustainable?</summary>13.4: the payout policy, based on risk-adjusted expected income.</details>
 <details><summary>3. What's needed for "with distinction"?</summary>≥ 90% on the operator capstone plus a quarter of books kept to standard.</details>
+
+---
+
+## Lesson 14.5 — Building your own tools: reading contracts, data and simple scripts *(new)*
+
+### Objective
+Read on-chain data directly and build simple read-only tools, so you're not dependent on any one dashboard.
+
+### Explanation
+- **Reading without code:** block explorers' Read tabs show a contract's public state (e.g. a lending market's parameters, your position).
+- **Public data APIs** (e.g. protocol analytics sites, explorers) return TVL, fees, yields and prices as JSON.
+- **RPC:** a node endpoint that lets a script read chain state directly (balances, contract calls). Use a reputable provider; reading is free or cheap.
+- **Scripts that only read** (never hold keys) can check health factors, pegs and utilisation, and send you alerts.
+- **Rule:** tools that *read* are low-risk; tools that *sign* follow Lesson 14.2 (scoped, capped, revocable permissions). Never put a seed phrase or private key in a script, a file or an environment variable on a shared machine.
+
+### Worked example (read-only, pseudo-code)
+```
+every 15 minutes:
+    position = lending_protocol.getUserAccountData(my_address)   # public read call
+    if position.health_factor < 1.8: send_phone_alert("HF " + position.health_factor)
+    peg = price_api.get("USDC")
+    if peg < 0.99: send_phone_alert("USDC peg " + peg)
+```
+Uses only public reads, holds no keys, and can't move funds. Worst case if it
+breaks: you miss an alert, so keep your other alerts (14.1) as a backup.
+
+### Checklist
+- [ ] I can read a contract's state on an explorer
+- [ ] My monitoring scripts are read-only and hold no keys
+- [ ] Backup alerts exist if my script fails
+
+### Quiz
+<details><summary>1. Why prefer read-only tools?</summary>They can't move funds, so a bug or breach costs little.</details>
+<details><summary>2. Where should a private key go in a script?</summary>Nowhere. Use scoped permissions (14.2) if a tool must act.</details>
+<details><summary>3. What's an RPC endpoint?</summary>A node connection that lets software read (and submit to) the blockchain.</details>
 
 ---
 

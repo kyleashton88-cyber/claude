@@ -9,6 +9,40 @@
 
 ---
 
+## Lesson 6.0 — Mastery Starter
+
+*New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
+
+### The 60-second version
+Before trusting a protocol with money, a professional researches it the same way every time: what it does, where its money comes from, what it depends on, whether it's solvent, what the evidence says, and how to get out.
+
+### Words you'll need
+| Term | Meaning |
+|---|---|
+| Due diligence | structured research before investing |
+| TVL | total value deposited in a protocol |
+| FDV | token price × maximum supply |
+| Governance | how holders vote on changes |
+| Thesis | what must be true for the position to work |
+
+### Before you start
+- [ ] Modules 0–5
+
+### Your first safe step
+Pick a protocol you've heard of and write one sentence for each of the six research steps, even if it's "don't know yet".
+
+### The mastery ladder
+| Level | You can… |
+|---|---|
+| **Beginner** | Completes the six-step loop with sources |
+| **Practitioner** | Reads tokenomics and governance and writes a thesis with invalidation |
+| **Master** | Spots failure patterns early and writes verdicts others can act on |
+
+### You've mastered this module when…
+…your due-diligence file ends in a verdict with size, conditions and an exit.
+
+---
+
 ## Lesson 6.1 — Protocol due diligence *(ch. 24)*
 
 ### Objective
@@ -125,6 +159,39 @@ collateral, or an incident. Monitor: weekly utilisation, governance feed."*
 <details><summary>1. Why start with a question?</summary>To avoid hunting for data that confirms what you already believe.</details>
 <details><summary>2. What makes a thesis useful?</summary>A clear invalidation you'll act on.</details>
 <details><summary>3. What should monitoring track?</summary>Only the metrics that would change the thesis.</details>
+
+---
+
+## Lesson 6.5 — Case studies: how DeFi failures happened *(new)*
+
+### Objective
+Learn the patterns behind major failures so you recognise them early.
+
+### Explanation — six failures, six patterns
+| Case | What broke | Pattern | Warning signs |
+|---|---|---|---|
+| **TerraUSD (UST), May 2022** | Algorithmic stablecoin lost its peg and collapsed | Reflexive design: confidence was the collateral | Yield (~20%) far above any real cash flow; peg defended by a sister token |
+| **Ronin bridge, March 2022** (~$600M) | Attackers got 5 of 9 validator keys | Weak bridge trust model | Small signer set; keys concentrated |
+| **Mango Markets, Oct 2022** (~$110M) | Collateral price pumped on thin markets, then borrowed against | Oracle manipulation | Thin-market collateral valued at spot |
+| **FTX, Nov 2022** | Exchange used customer funds | Custodial (CeFi) counterparty failure | Opaque reserves; "not your keys" |
+| **Euler Finance, March 2023** (~$197M, later largely returned) | Logic flaw in a lending function | Contract bug missed by audits | Complex new function added after earlier audits |
+| **Curve pools, July 2023** | Reentrancy guard broken by a compiler bug | Toolchain risk | Rare. Shows audited code can fail from below |
+
+Figures are approximate, from public reporting.
+
+### Worked example
+Using the table: a new stablecoin offers 18% "sustainable" yield, backed by its own
+governance token. That's the UST pattern: reflexive collateral and yield with no
+matching cash flow. Rating: High. Verdict: don't hold.
+
+### Checklist
+- [ ] For every position, I've asked which failure pattern it resembles
+- [ ] My register (8.2) includes these six patterns
+
+### Quiz
+<details><summary>1. What pattern did Mango Markets show?</summary>Oracle manipulation of thin-market collateral.</details>
+<details><summary>2. What did FTX show DeFi users?</summary>Custodial counterparty risk: "not your keys, not your coins".</details>
+<details><summary>3. UST's main warning sign?</summary>High yield with no matching real cash flow, backed by a reflexive sister token.</details>
 
 ---
 

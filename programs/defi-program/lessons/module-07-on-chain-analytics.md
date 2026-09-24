@@ -10,6 +10,40 @@ isn't. Every metric needs a definition, a methodology, and context.
 
 ---
 
+## Lesson 7.0 — Mastery Starter
+
+*New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
+
+### The 60-second version
+Everything on a public blockchain can be seen, but not everything can be understood. On-chain analytics means reading that data carefully: who moved what, where liquidity sits, how positioned the market is, without jumping to conclusions.
+
+### Words you'll need
+| Term | Meaning |
+|---|---|
+| Explorer | a site showing every transaction |
+| Netflow | exchange inflows minus outflows |
+| MVRV | market value ÷ realised value |
+| Open interest | total open futures contracts |
+| Depth | how much a trade moves price |
+
+### Before you start
+- [ ] Modules 0–6
+
+### Your first safe step
+Find your own last transaction on an explorer and identify: status, fee, method and token transfers.
+
+### The mastery ladder
+| Level | You can… |
+|---|---|
+| **Beginner** | Reads transactions and addresses on explorers |
+| **Practitioner** | Uses flows, holder, activity and liquidity metrics with caveats |
+| **Master** | Combines on-chain, derivatives and liquidity data into a research view without over-interpreting |
+
+### You've mastered this module when…
+…every metric in your research has a definition, a source and a caveat.
+
+---
+
 ## Lesson 7.1 — On-chain data foundations *(ch. 27)*
 
 ### Objective

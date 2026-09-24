@@ -12,7 +12,7 @@ and calls the others as needed.
 
 ## On-Chain Operator Program
 Everything for the DeFi program is in one file: [`ON-CHAIN-OPERATOR-PROGRAM.md`](programs/defi-program/ON-CHAIN-OPERATOR-PROGRAM.md), also as [Word](programs/defi-program/On-Chain-Operator-Program.docx) and [PDF](programs/defi-program/On-Chain-Operator-Program.pdf).
-All 79 lessons are written; VSLs and module intro videos are in [`programs/defi-program/video/`](programs/defi-program/video/).
+All 92 lessons and 15 Mastery Starters are written (topic map: `programs/defi-program/09-mastery-map.md`); VSLs and module intro videos are in [`programs/defi-program/video/`](programs/defi-program/video/).
 To finish and launch it, paste [`programs/defi-program/BUILD-PROMPT.md`](programs/defi-program/BUILD-PROMPT.md) into Grok 4.6 (medium) with the files it lists, or run it in Claude Code.
 
 ## Skills
@@ -21,7 +21,7 @@ To finish and launch it, paste [`programs/defi-program/BUILD-PROMPT.md`](program
 | Skill | What it does | Source |
 |---|---|---|
 | `whop-defi-program` | Master playbook: turn the 42-chapter DeFi module into a Whop product and wire it into the GBB funnel | New, built from Notion + Zapier |
-| `defi-strategies` | 25 DeFi strategies in 6 levels (up to fixed-rate, basis, options, credit lines and hedged yield), plus `defi_calc.py` with 15 calculators including income portfolios and a personal balance sheet | Notion strategy library, expanded |
+| `defi-strategies` | 25 DeFi strategies in 6 levels (up to fixed-rate, basis, options, credit lines and hedged yield), plus `defi_calc.py` with 17 calculators including income portfolios and a personal balance sheet | Notion strategy library, expanded |
 | `defi-due-diligence` | 6-step protocol risk loop, before-signing checklist, logs to Notion tracker | Notion: DeFi & On-Chain module |
 | `grid-bot-design` | Regime/range/spacing/fees/risk method + `grid_calc.py` calculator, logs to Notion checklist | Notion: Grid Bot Builder module |
 | `gbb-new-lead` | Score, tag and email new leads | Zapier (archive copy) |

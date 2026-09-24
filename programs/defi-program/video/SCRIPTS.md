@@ -10,7 +10,7 @@ Compliance: no income or return claims, no fake urgency, keys never requested, d
 
 ## VSL: main (sales page & store listing)
 
-File: `video/vsl-main.mp4` · 1920×1080 · 92.0s · Use: Whop store listing video, sales page hero, application page.
+File: `video/vsl-main.mp4` · 1920×1080 · 94.7s · Use: Whop store listing video, sales page hero, application page.
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
@@ -18,25 +18,25 @@ File: `video/vsl-main.mp4` · 1920×1080 · 92.0s · Use: Whop store listing vid
 | 2 | 9.4–15.4s | And how do I get out? | And how do I get out? If you can't explain the exit, you don't understand the position yet. |
 | 3 | 15.4–25.5s | Without a process, DeFi is a maze: Wallets, seed phrases and networks · Approvals you can't read · Yields you can't explain · Mistakes that can't be undone | Without a process, DeFi is a maze. Wallets, networks, approvals, and yields nobody can explain. And on-chain, a mistake can't be undone. |
 | 4 | 25.5–34.2s | Logo reveal + "From zero to your own on-chain bank." | The On-Chain Operator Program takes you from zero, never having owned crypto, to running your capital like your own on-chain bank. |
-| 5 | 34.2–44.6s | The path: `assets/store/gallery-01-path-to-mastery.png` | 6 stages. 15 modules. 79 lessons. You start by setting everything up safely, step by step, with a Day-1 Setup Kit. |
-| 6 | 44.6–55.9s | Strategy library: `assets/store/gallery-04-strategy-levels.png` | Then you learn to research any protocol, and work through 25 strategy playbooks. Each one with its maths, its exit rules, and exactly how it loses money. |
-| 7 | 55.9–64.5s | Stage five: `assets/store/gallery-03-own-bank.png` | Finally, you build your own bank. A balance sheet. Multisig custody. A credit line against your assets. A liquidity ladder. |
-| 8 | 64.5–73.6s | The income engine: `assets/charts/income-waterfall.png` | And an income engine that measures what you expect to earn after expected losses, and pays out less than that. Never from principal. |
-| 9 | 73.6–84.2s | What you won't get: Signals to copy · Guaranteed returns · Anyone asking for your keys | What you won't get: signals to copy, guaranteed returns, or anyone asking for your keys. Just a process you can explain, position by position. |
-| 10 | 84.2–92.0s | Logo + "Apply to join" button · Application-only · Course and Live tiers | The On-Chain Operator Program is application-only. Apply today, and we'll see if it's the right fit for you. |
+| 5 | 34.2–47.4s | The path: `assets/store/gallery-01-path-to-mastery.png` | 6 stages. 15 modules. 92 lessons, each module opening with a beginner starter. You start by setting everything up safely, step by step, with a Day-1 Setup Kit. |
+| 6 | 47.4–58.6s | Strategy library: `assets/store/gallery-04-strategy-levels.png` | Then you learn to research any protocol, and work through 25 strategy playbooks. Each one with its maths, its exit rules, and exactly how it loses money. |
+| 7 | 58.6–67.3s | Stage five: `assets/store/gallery-03-own-bank.png` | Finally, you build your own bank. A balance sheet. Multisig custody. A credit line against your assets. A liquidity ladder. |
+| 8 | 67.3–76.3s | The income engine: `assets/charts/income-waterfall.png` | And an income engine that measures what you expect to earn after expected losses, and pays out less than that. Never from principal. |
+| 9 | 76.3–87.0s | What you won't get: Signals to copy · Guaranteed returns · Anyone asking for your keys | What you won't get: signals to copy, guaranteed returns, or anyone asking for your keys. Just a process you can explain, position by position. |
+| 10 | 87.0–94.7s | Logo + "Apply to join" button · Application-only · Course and Live tiers | The On-Chain Operator Program is application-only. Apply today, and we'll see if it's the right fit for you. |
 
 ---
 
 ## VSL: 30-second vertical cut (ads, Reels, Shorts, TikTok)
 
-File: `video/vsl-short-vertical.mp4` · 1080×1920 · 23.3s · Use: Paid social and organic short-form. Upload as 9:16.
+File: `video/vsl-short-vertical.mp4` · 1080×1920 · 23.1s · Use: Paid social and organic short-form. Upload as 9:16.
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
 | 1 | 0.0–5.9s | "12% APY" struck out → "Paid to risk what?" | 12% APY. The real question is: what are you being paid to risk? |
 | 2 | 5.9–12.4s | Logo reveal + "From zero to your own on-chain bank." | The On-Chain Operator Program takes you from zero to running your crypto like your own bank. |
-| 3 | 12.4–19.6s | 79 lessons · 25 strategy playbooks · 0 guaranteed returns | 79 lessons. 25 strategy playbooks. And zero promises. Just a process. |
-| 4 | 19.6–23.3s | Logo + "Apply to join" button · Application-only | Apply to join the On-Chain Operator Program. |
+| 3 | 12.4–19.4s | 92 lessons · 25 strategy playbooks · 0 guaranteed returns | 92 lessons. 25 strategy playbooks. And zero promises. Just a process. |
+| 4 | 19.4–23.1s | Logo + "Apply to join" button · Application-only | Apply to join the On-Chain Operator Program. |
 
 ---
 
@@ -57,193 +57,193 @@ File: `video/welcome.mp4` · 1920×1080 · 44.8s · Use: First thing a new membe
 
 ## Module 0 intro: Crypto From Zero
 
-File: `video/module-00-intro.mp4` · 1920×1080 · 29.4s · Use: Top of Module 0 in the Whop course.
+File: `video/module-00-intro.mp4` · 1920×1080 · 30.3s · Use: Top of Module 0 in the Whop course.
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
 | 1 | 0.0–3.4s | Module 0: `assets/modules/module-00.png` | Module 0. Crypto From Zero. |
 | 2 | 3.4–19.3s | The goal | The goal: go from never having owned crypto to a secured exchange account, a backed-up wallet, a first transfer and a first practice DeFi transaction. Ends with the **Day-1 Setup Kit** checklist. |
-| 3 | 19.3–26.2s | 8 lessons: 0.1 Money, ledgers and why blockchains exist · 0.2 Opening and securing an exchange account · 0.3 Buying your first crypto without overpaying · 0.4 Exchange account vs your own wallet: who holds the keys? · 0.5 Setting up your wallet and backing it up · 0.6 Networks, gas and your first transfer · 0.7 Your first DeFi steps · 0.8 Your security baseline, and the language of DeFi | 8 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
-| 4 | 26.2–29.4s | Logo + "Start lesson 0.1" button · Educational content only · Not financial advice | Start with lesson 0.1. |
+| 3 | 19.3–27.1s | Mastery Starter + 8 lessons: 0.0 Mastery Starter · 0.1 Money, ledgers and why blockchains exist · 0.2 Opening and securing an exchange account · 0.3 Buying your first crypto without overpaying · 0.4 Exchange account vs your own wallet: who holds the keys? · 0.5 Setting up your wallet and backing it up · 0.6 Networks, gas and your first transfer · 0.7 Your first DeFi steps · 0.8 Your security baseline, and the language of DeFi | 8 lessons, plus a Mastery Starter if you're new to the topic. Each lesson ends with a checklist and a short quiz. |
+| 4 | 27.1–30.3s | Logo + "Start lesson 0.1" button · Educational content only · Not financial advice | Start with lesson 0.1. |
 
 ---
 
 ## Module 1 intro: Foundations & Safety
 
-File: `video/module-01-intro.mp4` · 1920×1080 · 19.2s · Use: Top of Module 1 in the Whop course.
+File: `video/module-01-intro.mp4` · 1920×1080 · 20.1s · Use: Top of Module 1 in the Whop course.
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
 | 1 | 0.0–3.7s | Module 1: `assets/modules/module-01.png` | Module 1. Foundations & Safety. |
 | 2 | 3.7–9.4s | The goal | The goal: set up and use a wallet safely; know what can go irreversibly wrong. |
-| 3 | 9.4–16.4s | 6 lessons: 1.1 What DeFi is — and the risk-first mindset · 1.2 How a transaction actually happens · 1.3 Wallets, keys, hardware & multisig · 1.4 Tokens, approvals & allowances · 1.5 Stablecoins and how they break · 1.6 Scam defence: phishing, drainers, address poisoning | 6 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
-| 4 | 16.4–19.2s | Logo + "Start lesson 1.1" button · Educational content only · Not financial advice | Start with lesson 1.1. |
+| 3 | 9.4–17.3s | Mastery Starter + 8 lessons: 1.0 Mastery Starter · 1.1 What DeFi is — and the risk-first mindset · 1.2 How a transaction actually happens · 1.3 Wallets, keys, hardware & multisig · 1.4 Tokens, approvals & allowances · 1.5 Stablecoins and how they break · 1.6 Scam defence: phishing, drainers, address poisoning · 1.7 Reading signatures and simulating transactions · 1.8 Privacy and physical security | 8 lessons, plus a Mastery Starter if you're new to the topic. Each lesson ends with a checklist and a short quiz. |
+| 4 | 17.3–20.1s | Logo + "Start lesson 1.1" button · Educational content only · Not financial advice | Start with lesson 1.1. |
 
 ---
 
 ## Module 2 intro: Trading On-Chain
 
-File: `video/module-02-intro.mp4` · 1920×1080 · 19.1s · Use: Top of Module 2 in the Whop course.
+File: `video/module-02-intro.mp4` · 1920×1080 · 19.9s · Use: Top of Module 2 in the Whop course.
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
 | 1 | 0.0–3.1s | Module 2: `assets/modules/module-02.png` | Module 2. Trading On-Chain. |
 | 2 | 3.1–9.3s | The goal | The goal: execute a swap deliberately, understanding price impact and MEV. |
-| 3 | 9.3–16.3s | 5 lessons: 2.1 DEXs, aggregators & routing · 2.2 AMM mathematics · 2.3 Providing liquidity · 2.4 Impermanent loss & true LP P&L · 2.5 MEV and how to protect your trades | 5 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
-| 4 | 16.3–19.1s | Logo + "Start lesson 2.1" button · Educational content only · Not financial advice | Start with lesson 2.1. |
+| 3 | 9.3–17.1s | Mastery Starter + 6 lessons: 2.0 Mastery Starter · 2.1 DEXs, aggregators & routing · 2.2 AMM mathematics · 2.3 Providing liquidity · 2.4 Impermanent loss & true LP P&L · 2.5 MEV and how to protect your trades · 2.6 Advanced execution: limit, TWAP and intent-based orders | 6 lessons, plus a Mastery Starter if you're new to the topic. Each lesson ends with a checklist and a short quiz. |
+| 4 | 17.1–19.9s | Logo + "Start lesson 2.1" button · Educational content only · Not financial advice | Start with lesson 2.1. |
 
 ---
 
 ## Module 3 intro: Lending & Leverage
 
-File: `video/module-03-intro.mp4` · 1920×1080 · 18.6s · Use: Top of Module 3 in the Whop course.
+File: `video/module-03-intro.mp4` · 1920×1080 · 19.5s · Use: Top of Module 3 in the Whop course.
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
 | 1 | 0.0–3.5s | Module 3: `assets/modules/module-03.png` | Module 3. Lending & Leverage. |
 | 2 | 3.5–8.7s | The goal | The goal: borrow against collateral with a buffer and a written defence plan. |
-| 3 | 8.7–15.7s | 4 lessons: 3.1 How lending markets work · 3.2 LTV, liquidation threshold & health factor · 3.3 Liquidations and cascades · 3.4 Borrowing strategies & looping | 4 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
-| 4 | 15.7–18.6s | Logo + "Start lesson 3.1" button · Educational content only · Not financial advice | Start with lesson 3.1. |
+| 3 | 8.7–16.6s | Mastery Starter + 5 lessons: 3.0 Mastery Starter · 3.1 How lending markets work · 3.2 LTV, liquidation threshold & health factor · 3.3 Liquidations and cascades · 3.4 Borrowing strategies & looping · 3.5 Perpetual futures and margin on-chain | 5 lessons, plus a Mastery Starter if you're new to the topic. Each lesson ends with a checklist and a short quiz. |
+| 4 | 16.6–19.5s | Logo + "Start lesson 3.1" button · Educational content only · Not financial advice | Start with lesson 3.1. |
 
 ---
 
 ## Module 4 intro: Yield
 
-File: `video/module-04-intro.mp4` · 1920×1080 · 20.1s · Use: Top of Module 4 in the Whop course.
+File: `video/module-04-intro.mp4` · 1920×1080 · 20.9s · Use: Top of Module 4 in the Whop course.
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
 | 1 | 0.0–2.8s | Module 4: `assets/modules/module-04.png` | Module 4. Yield. |
 | 2 | 2.8–10.2s | The goal | The goal: split any APY into organic vs subsidised, and name the risk being paid for. |
-| 3 | 10.2–17.2s | 6 lessons: 4.1 Yield farming: base yield vs emissions · 4.2 Native staking · 4.3 Liquid staking · 4.4 Restaking & shared security · 4.5 Vaults & yield optimisers · 4.6 Airdrops & points — opportunity cost | 6 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
-| 4 | 17.2–20.1s | Logo + "Start lesson 4.1" button · Educational content only · Not financial advice | Start with lesson 4.1. |
+| 3 | 10.2–18.1s | Mastery Starter + 8 lessons: 4.0 Mastery Starter · 4.1 Yield farming: base yield vs emissions · 4.2 Native staking · 4.3 Liquid staking · 4.4 Restaking & shared security · 4.5 Vaults & yield optimisers · 4.6 Airdrops & points — opportunity cost · 4.7 Stablecoin savings rates and yield-bearing stablecoins · 4.8 Tokenized treasuries and real-world assets | 8 lessons, plus a Mastery Starter if you're new to the topic. Each lesson ends with a checklist and a short quiz. |
+| 4 | 18.1–20.9s | Logo + "Start lesson 4.1" button · Educational content only · Not financial advice | Start with lesson 4.1. |
 
 ---
 
 ## Module 5 intro: Infrastructure Risk
 
-File: `video/module-05-intro.mp4` · 1920×1080 · 19.8s · Use: Top of Module 5 in the Whop course.
+File: `video/module-05-intro.mp4` · 1920×1080 · 20.8s · Use: Top of Module 5 in the Whop course.
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
 | 1 | 0.0–3.4s | Module 5: `assets/modules/module-05.png` | Module 5. Infrastructure Risk. |
 | 2 | 3.4–9.8s | The goal | The goal: map every bridge, oracle, L2 and contract a position depends on. |
-| 3 | 9.8–16.8s | 5 lessons: 5.1 Bridges and trust assumptions · 5.2 Layer 2s, sequencers & withdrawal paths · 5.3 Oracles, TWAPs & manipulation · 5.4 Smart contracts: state, proxies, admin keys · 5.5 Smart-contract risk & what audits don't prove | 5 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
-| 4 | 16.8–19.8s | Logo + "Start lesson 5.1" button · Educational content only · Not financial advice | Start with lesson 5.1. |
+| 3 | 9.8–17.8s | Mastery Starter + 7 lessons: 5.0 Mastery Starter · 5.1 Bridges and trust assumptions · 5.2 Layer 2s, sequencers & withdrawal paths · 5.3 Oracles, TWAPs & manipulation · 5.4 Smart contracts: state, proxies, admin keys · 5.5 Smart-contract risk & what audits don't prove · 5.6 Beyond Ethereum: Solana, Bitcoin and other ecosystems · 5.7 Operating across chains: gas, routes and chain abstraction | 7 lessons, plus a Mastery Starter if you're new to the topic. Each lesson ends with a checklist and a short quiz. |
+| 4 | 17.8–20.8s | Logo + "Start lesson 5.1" button · Educational content only · Not financial advice | Start with lesson 5.1. |
 
 ---
 
 ## Module 6 intro: Protocol Research
 
-File: `video/module-06-intro.mp4` · 1920×1080 · 18.2s · Use: Top of Module 6 in the Whop course.
+File: `video/module-06-intro.mp4` · 1920×1080 · 19.1s · Use: Top of Module 6 in the Whop course.
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
 | 1 | 0.0–3.4s | Module 6: `assets/modules/module-06.png` | Module 6. Protocol Research. |
 | 2 | 3.4–8.2s | The goal | The goal: complete a full due-diligence file on a real protocol. |
-| 3 | 8.2–15.2s | 4 lessons: 6.1 Protocol due diligence · 6.2 Tokenomics: supply, unlocks, FDV, value capture · 6.3 Governance & DAOs · 6.4 The on-chain research workflow | 4 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
-| 4 | 15.2–18.2s | Logo + "Start lesson 6.1" button · Educational content only · Not financial advice | Start with lesson 6.1. |
+| 3 | 8.2–16.2s | Mastery Starter + 5 lessons: 6.0 Mastery Starter · 6.1 Protocol due diligence · 6.2 Tokenomics: supply, unlocks, FDV, value capture · 6.3 Governance & DAOs · 6.4 The on-chain research workflow · 6.5 Case studies: how DeFi failures happened | 5 lessons, plus a Mastery Starter if you're new to the topic. Each lesson ends with a checklist and a short quiz. |
+| 4 | 16.2–19.1s | Logo + "Start lesson 6.1" button · Educational content only · Not financial advice | Start with lesson 6.1. |
 
 ---
 
 ## Module 7 intro: On-Chain Analytics
 
-File: `video/module-07-intro.mp4` · 1920×1080 · 17.6s · Use: Top of Module 7 in the Whop course.
+File: `video/module-07-intro.mp4` · 1920×1080 · 18.6s · Use: Top of Module 7 in the Whop course.
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
 | 1 | 0.0–3.4s | Module 7: `assets/modules/module-07.png` | Module 7. On-Chain Analytics. |
 | 2 | 3.4–7.7s | The goal | The goal: read on-chain data without over-interpreting it. |
-| 3 | 7.7–14.6s | 8 lessons: 7.1 On-chain data foundations · 7.2 Block explorer mastery · 7.3 Exchange flows · 7.4 Whale & entity analysis · 7.5 Holder & supply metrics · 7.6 Network activity · 7.7 DEX & liquidity analytics · 7.8 Derivatives on-chain | 8 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
-| 4 | 14.6–17.6s | Logo + "Start lesson 7.1" button · Educational content only · Not financial advice | Start with lesson 7.1. |
+| 3 | 7.7–15.6s | Mastery Starter + 8 lessons: 7.0 Mastery Starter · 7.1 On-chain data foundations · 7.2 Block explorer mastery · 7.3 Exchange flows · 7.4 Whale & entity analysis · 7.5 Holder & supply metrics · 7.6 Network activity · 7.7 DEX & liquidity analytics · 7.8 Derivatives on-chain | 8 lessons, plus a Mastery Starter if you're new to the topic. Each lesson ends with a checklist and a short quiz. |
+| 4 | 15.6–18.6s | Logo + "Start lesson 7.1" button · Educational content only · Not financial advice | Start with lesson 7.1. |
 
 ---
 
 ## Module 8 intro: The DeFi Operating System
 
-File: `video/module-08-intro.mp4` · 1920×1080 · 20.2s · Use: Top of Module 8 in the Whop course.
+File: `video/module-08-intro.mp4` · 1920×1080 · 21.1s · Use: Top of Module 8 in the Whop course.
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
 | 1 | 0.0–3.9s | Module 8: `assets/modules/module-08.png` | Module 8. The DeFi Operating System. |
 | 2 | 3.9–10.3s | The goal | The goal: a written portfolio plan with risk buckets, limits and an emergency plan. |
-| 3 | 10.3–17.2s | 4 lessons: 8.1 DeFi portfolio construction · 8.2 The DeFi risk framework · 8.3 Strategy library · 8.4 The operating playbook: deploy, monitor, respond, review | 4 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
-| 4 | 17.2–20.2s | Logo + "Start lesson 8.1" button · Educational content only · Not financial advice | Start with lesson 8.1. |
+| 3 | 10.3–18.1s | Mastery Starter + 6 lessons: 8.0 Mastery Starter · 8.1 DeFi portfolio construction · 8.2 The DeFi risk framework · 8.3 Strategy library · 8.4 The operating playbook: deploy, monitor, respond, review · 8.5 Measuring performance honestly · 8.6 Psychology and discipline | 6 lessons, plus a Mastery Starter if you're new to the topic. Each lesson ends with a checklist and a short quiz. |
+| 4 | 18.1–21.1s | Logo + "Start lesson 8.1" button · Educational content only · Not financial advice | Start with lesson 8.1. |
 
 ---
 
 ## Module 9 intro: DeFi vs Grid Bots
 
-File: `video/module-09-intro.mp4` · 1920×1080 · 19.6s · Use: Top of Module 9 in the Whop course.
+File: `video/module-09-intro.mp4` · 1920×1080 · 20.5s · Use: Top of Module 9 in the Whop course.
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
 | 1 | 0.0–3.7s | Module 9: `assets/modules/module-09.png` | Module 9. DeFi vs Grid Bots. |
 | 2 | 3.7–9.7s | The goal | The goal: choose the right tool for the market — and the natural bridge into GBB. |
-| 3 | 9.7–16.7s | 3 lessons: 9.1 LP position vs grid bot: same idea (sell high/buy low inside a range), different risks · 9.2 When a CEX grid beats on-chain LP, and when it doesn't · 9.3 Building a combined system: grid bots for range markets, DeFi for yield/collateral | 3 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
-| 4 | 16.7–19.6s | Logo + "Start lesson 9.1" button · Educational content only · Not financial advice | Start with lesson 9.1. |
+| 3 | 9.7–17.6s | Mastery Starter + 3 lessons: 9.0 Mastery Starter · 9.1 LP position vs grid bot: same idea (sell high/buy low inside a range), different risks · 9.2 When a CEX grid beats on-chain LP, and when it doesn't · 9.3 Building a combined system: grid bots for range markets, DeFi for yield/collateral | 3 lessons, plus a Mastery Starter if you're new to the topic. Each lesson ends with a checklist and a short quiz. |
+| 4 | 17.6–20.5s | Logo + "Start lesson 9.1" button · Educational content only · Not financial advice | Start with lesson 9.1. |
 
 ---
 
 ## Module 10 intro: Advanced Yield Engineering
 
-File: `video/module-10-intro.mp4` · 1920×1080 · 20.0s · Use: Top of Module 10 in the Whop course.
+File: `video/module-10-intro.mp4` · 1920×1080 · 20.9s · Use: Top of Module 10 in the Whop course.
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
 | 1 | 0.0–3.7s | Module 10: `assets/modules/module-10.png` | Module 10. Advanced Yield Engineering. |
 | 2 | 3.7–10.2s | The goal | The goal: build fixed, hedged and structured yield, and know exactly what each one is short. |
-| 3 | 10.2–17.2s | 6 lessons: 10.1 Fixed-rate yield: principal and yield tokens · 10.2 Cash-and-carry basis trades · 10.3 Delta-neutral funding carry, done properly · 10.4 Options income: covered calls, cash-secured puts, options vaults · 10.5 Active concentrated-liquidity management · 10.6 Restaking and points: pricing speculative yield | 6 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
-| 4 | 17.2–20.0s | Logo + "Start lesson 10.1" button · Educational content only · Not financial advice | Start with lesson 10.1. |
+| 3 | 10.2–18.1s | Mastery Starter + 6 lessons: 10.0 Mastery Starter · 10.1 Fixed-rate yield: principal and yield tokens · 10.2 Cash-and-carry basis trades · 10.3 Delta-neutral funding carry, done properly · 10.4 Options income: covered calls, cash-secured puts, options vaults · 10.5 Active concentrated-liquidity management · 10.6 Restaking and points: pricing speculative yield | 6 lessons, plus a Mastery Starter if you're new to the topic. Each lesson ends with a checklist and a short quiz. |
+| 4 | 18.1–20.9s | Logo + "Start lesson 10.1" button · Educational content only · Not financial advice | Start with lesson 10.1. |
 
 ---
 
 ## Module 11 intro: Hedging & Risk Engineering
 
-File: `video/module-11-intro.mp4` · 1920×1080 · 21.1s · Use: Top of Module 11 in the Whop course.
+File: `video/module-11-intro.mp4` · 1920×1080 · 22.0s · Use: Top of Module 11 in the Whop course.
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
 | 1 | 0.0–4.1s | Module 11: `assets/modules/module-11.png` | Module 11. Hedging & Risk Engineering. |
 | 2 | 4.1–10.8s | The goal | The goal: hedge the risks you don't want, stress-test the portfolio, and have an incident plan ready. |
-| 3 | 10.8–17.8s | 5 lessons: 11.1 Hedging price exposure with perps and options · 11.2 Depeg, protocol and smart-contract cover · 11.3 Liquidation protection: buffers, alerts and automated deleveraging · 11.4 Stress-testing a portfolio: −50% days, depegs, rate spikes · 11.5 Incident response: what to do in the first 60 minutes | 5 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
-| 4 | 17.8–21.1s | Logo + "Start lesson 11.1" button · Educational content only · Not financial advice | Start with lesson 11.1. |
+| 3 | 10.8–18.7s | Mastery Starter + 5 lessons: 11.0 Mastery Starter · 11.1 Hedging price exposure with perps and options · 11.2 Depeg, protocol and smart-contract cover · 11.3 Liquidation protection: buffers, alerts and automated deleveraging · 11.4 Stress-testing a portfolio: −50% days, depegs, rate spikes · 11.5 Incident response: what to do in the first 60 minutes | 5 lessons, plus a Mastery Starter if you're new to the topic. Each lesson ends with a checklist and a short quiz. |
+| 4 | 18.7–22.0s | Logo + "Start lesson 11.1" button · Educational content only · Not financial advice | Start with lesson 11.1. |
 
 ---
 
 ## Module 12 intro: Operate as Your Own Bank
 
-File: `video/module-12-intro.mp4` · 1920×1080 · 23.0s · Use: Top of Module 12 in the Whop course.
+File: `video/module-12-intro.mp4` · 1920×1080 · 24.0s · Use: Top of Module 12 in the Whop course.
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
 | 1 | 0.0–3.7s | Module 12: `assets/modules/module-12.png` | Module 12. Operate as Your Own Bank. |
 | 2 | 3.7–13.1s | The goal | The goal: run your crypto like a bank runs its book: a balance sheet, custody policy, a credit line, a liquidity ladder and records. |
-| 3 | 13.1–20.0s | 6 lessons: 12.1 Your balance sheet: assets, liabilities, equity · 12.2 Custody architecture: vault, multisig and spending policies · 12.3 The credit line: borrowing against your assets like a bank client · 12.4 Treasury and the liquidity ladder · 12.5 Being the lender: supplying, curating and pricing credit risk · 12.6 Books, records and succession: if you're gone, can your family recover it? | 6 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
-| 4 | 20.0–23.0s | Logo + "Start lesson 12.1" button · Educational content only · Not financial advice | Start with lesson 12.1. |
+| 3 | 13.1–21.1s | Mastery Starter + 7 lessons: 12.0 Mastery Starter · 12.1 Your balance sheet: assets, liabilities, equity · 12.2 Custody architecture: vault, multisig and spending policies · 12.3 The credit line: borrowing against your assets like a bank client · 12.4 Treasury and the liquidity ladder · 12.5 Being the lender: supplying, curating and pricing credit risk · 12.6 Books, records and succession: if you're gone, can your family recover it? · 12.7 Tax, regulation and compliance awareness | 7 lessons, plus a Mastery Starter if you're new to the topic. Each lesson ends with a checklist and a short quiz. |
+| 4 | 21.1–24.0s | Logo + "Start lesson 12.1" button · Educational content only · Not financial advice | Start with lesson 12.1. |
 
 ---
 
 ## Module 13 intro: The Income Engine
 
-File: `video/module-13-intro.mp4` · 1920×1080 · 22.9s · Use: Top of Module 13 in the Whop course.
+File: `video/module-13-intro.mp4` · 1920×1080 · 23.8s · Use: Top of Module 13 in the Whop course.
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
 | 1 | 0.0–3.5s | Module 13: `assets/modules/module-13.png` | Module 13. The Income Engine. |
 | 2 | 3.5–12.8s | The goal | The goal: design an income portfolio, measure expected income after expected losses, and set a payout you can sustain. |
-| 3 | 12.8–19.8s | 5 lessons: 13.1 Income sources ranked by durability · 13.2 Risk-adjusted yield: subtracting expected losses · 13.3 Building the income portfolio · 13.4 The payout policy: how much you can take out · 13.5 Scaling, compounding and the annual review | 5 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
-| 4 | 19.8–22.9s | Logo + "Start lesson 13.1" button · Educational content only · Not financial advice | Start with lesson 13.1. |
+| 3 | 12.8–20.7s | Mastery Starter + 5 lessons: 13.0 Mastery Starter · 13.1 Income sources ranked by durability · 13.2 Risk-adjusted yield: subtracting expected losses · 13.3 Building the income portfolio · 13.4 The payout policy: how much you can take out · 13.5 Scaling, compounding and the annual review | 5 lessons, plus a Mastery Starter if you're new to the topic. Each lesson ends with a checklist and a short quiz. |
+| 4 | 20.7–23.8s | Logo + "Start lesson 13.1" button · Educational content only · Not financial advice | Start with lesson 13.1. |
 
 ---
 
 ## Module 14 intro: Automation & Mastery
 
-File: `video/module-14-intro.mp4` · 1920×1080 · 21.6s · Use: Top of Module 14 in the Whop course.
+File: `video/module-14-intro.mp4` · 1920×1080 · 22.6s · Use: Top of Module 14 in the Whop course.
 
 | # | Time | Visual | Voice-over |
 |---|---|---|---|
 | 1 | 0.0–3.9s | Module 14: `assets/modules/module-14.png` | Module 14. Automation & Mastery. |
 | 2 | 3.9–11.6s | The goal | The goal: monitor and automate safely, run multisig operations, and complete the operator capstone. |
-| 3 | 11.6–18.5s | 4 lessons: 14.1 Monitoring: dashboards, alerts and on-chain watchers · 14.2 Automation: keepers, bots and agents without handing over the keys · 14.3 Operating procedures: multisig signing, change control, reviews · 14.4 Operator capstone and certification | 4 lessons. Each one ends with a checklist and a short quiz. Do the checklist before moving on. |
-| 4 | 18.5–21.6s | Logo + "Start lesson 14.1" button · Educational content only · Not financial advice | Start with lesson 14.1. |
+| 3 | 11.6–19.5s | Mastery Starter + 5 lessons: 14.0 Mastery Starter · 14.1 Monitoring: dashboards, alerts and on-chain watchers · 14.2 Automation: keepers, bots and agents without handing over the keys · 14.3 Operating procedures: multisig signing, change control, reviews · 14.4 Operator capstone and certification · 14.5 Building your own tools: reading contracts, data and simple scripts | 5 lessons, plus a Mastery Starter if you're new to the topic. Each lesson ends with a checklist and a short quiz. |
+| 4 | 19.5–22.6s | Logo + "Start lesson 14.1" button · Educational content only · Not financial advice | Start with lesson 14.1. |

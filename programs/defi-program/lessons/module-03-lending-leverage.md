@@ -7,6 +7,41 @@
 
 ---
 
+## Lesson 3.0 — Mastery Starter
+
+*New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
+
+### The 60-second version
+Lending markets let you earn interest by lending, or borrow against what you own without selling it. Borrowing comes with one hard rule: if your collateral falls too far, it's sold automatically, at a penalty.
+
+### Words you'll need
+| Term | Meaning |
+|---|---|
+| Collateral | what you lock up to borrow |
+| LTV | debt ÷ collateral value |
+| Health factor | your safety margin; below 1 means liquidation |
+| Liquidation | forced sale of collateral to repay debt |
+| Utilisation | how much of a pool is borrowed |
+
+### Before you start
+- [ ] Modules 0–2
+- [ ] Comfort using a DEX on a low-fee network
+
+### Your first safe step
+Supply $20 of USDC to a blue-chip lending market, read its utilisation, then withdraw it. No borrowing yet.
+
+### The mastery ladder
+| Level | You can… |
+|---|---|
+| **Beginner** | Supplies stablecoins and reads utilisation and rates |
+| **Practitioner** | Borrows with HF ≥ 2 and a written defence ladder |
+| **Master** | Runs correlated loops and perps with computed liquidation prices and break-even rates |
+
+### You've mastered this module when…
+…you can open, monitor and unwind a borrow without ever approaching liquidation.
+
+---
+
 ## Lesson 3.1 — How lending markets work *(ch. 10)*
 
 ### Objective
@@ -140,6 +175,36 @@ Section 3.1 showed borrow rates can jump from 4% to 34% in hours. That's the ris
 <details><summary>1. Max leverage at LTV 0.75?</summary>4×.</details>
 <details><summary>2. What single number decides whether a loop is worth it?</summary>The spread between collateral yield and borrow rate.</details>
 <details><summary>3. Why prefer correlated loops?</summary>Collateral and debt move together, so price moves barely change HF.</details>
+
+---
+
+## Lesson 3.5 — Perpetual futures and margin on-chain *(new)*
+
+### Objective
+Understand perp positions well enough to use them for hedging (Module 11) and carry (10.3), and to see why high leverage fails.
+
+### Explanation
+- A **perpetual future (perp)** tracks an asset's price with no expiry. You post **margin** and choose **leverage**.
+- **Isolated margin:** only the margin in that position is at risk. **Cross margin:** your whole account backs every position (one bad trade can drain the rest).
+- **Mark price** (used for liquidation) vs **index price** (spot reference). **Funding** is paid between longs and shorts, usually every hour or 8 hours.
+- **Liquidation** happens when your margin falls to the **maintenance margin**. Roughly, a long is liquidated after a fall of `1 ÷ leverage − maintenance margin`.
+
+### Worked example
+Long ETH from $3,000 at **5×**, 0.5% maintenance margin:
+`defi_calc.py perp --entry 3000 --leverage 5 --mmr 0.5` → liquidation ≈ **$2,415 (−19.5%)**.
+The same short at **20×** is liquidated at ≈ **$3,135 (+4.5%)**, a move ETH can make in an hour.
+Leverage doesn't just magnify gains: it shrinks how wrong you're allowed to be.
+
+### Checklist
+- [ ] Isolated margin by default
+- [ ] Liquidation price computed before opening
+- [ ] Leverage ≤ 2–3× for anything but a hedge I fully understand
+- [ ] Funding cost checked for how long I'll hold
+
+### Quiz
+<details><summary>1. Isolated vs cross margin?</summary>Isolated risks only that position's margin; cross puts the whole account behind every position.</details>
+<details><summary>2. Roughly how far can a 10× long fall before liquidation (0.5% maintenance)?</summary>About 9.5%.</details>
+<details><summary>3. Which price triggers liquidation?</summary>The mark price.</details>
 
 ---
 

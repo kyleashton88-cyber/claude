@@ -64,20 +64,20 @@ const icon = (name, size = 24, color = 'currentColor', sw = 1.8) =>
 
 const MODULES = [
   { n: 0, t: 'Crypto From Zero', o: 'From never owning crypto to a secured wallet, a first transfer and a first DeFi step.', i: 'compass', l: 8 },
-  { n: 1, t: 'Foundations & Safety', o: 'Set up and use a wallet safely. Know what can go irreversibly wrong.', i: 'shield', l: 6 },
-  { n: 2, t: 'Trading On-Chain', o: 'Swap and provide liquidity deliberately: price impact, IL, MEV.', i: 'swap', l: 5 },
-  { n: 3, t: 'Lending & Leverage', o: 'Borrow against collateral with a buffer and a written defence plan.', i: 'bank', l: 4 },
-  { n: 4, t: 'Yield', o: 'Split any APY into organic vs subsidised, and name the risk being paid for.', i: 'sprout', l: 6 },
-  { n: 5, t: 'Infrastructure Risk', o: 'Map every bridge, oracle, L2 and contract a position depends on.', i: 'layers', l: 5 },
-  { n: 6, t: 'Protocol Research', o: 'Complete a full due-diligence file on a real protocol.', i: 'search', l: 4 },
+  { n: 1, t: 'Foundations & Safety', o: 'Set up and use a wallet safely. Know what can go irreversibly wrong.', i: 'shield', l: 8 },
+  { n: 2, t: 'Trading On-Chain', o: 'Swap and provide liquidity deliberately: price impact, IL, MEV.', i: 'swap', l: 6 },
+  { n: 3, t: 'Lending & Leverage', o: 'Borrow against collateral with a buffer and a written defence plan.', i: 'bank', l: 5 },
+  { n: 4, t: 'Yield', o: 'Split any APY into organic vs subsidised, and name the risk being paid for.', i: 'sprout', l: 8 },
+  { n: 5, t: 'Infrastructure Risk', o: 'Map every bridge, oracle, L2 and contract a position depends on.', i: 'layers', l: 7 },
+  { n: 6, t: 'Protocol Research', o: 'Complete a full due-diligence file on a real protocol.', i: 'search', l: 5 },
   { n: 7, t: 'On-Chain Analytics', o: 'Read on-chain data without over-interpreting it.', i: 'chart', l: 8 },
-  { n: 8, t: 'The DeFi Operating System', o: 'Portfolio plan with risk buckets, limits and an emergency plan.', i: 'cog', l: 4 },
+  { n: 8, t: 'The DeFi Operating System', o: 'Portfolio plan with risk buckets, limits and an emergency plan.', i: 'cog', l: 6 },
   { n: 9, t: 'DeFi vs Grid Bots', o: 'Choose the right tool for the market, and run both as one system.', i: 'grid', l: 3 },
   { n: 10, t: 'Advanced Yield Engineering', o: 'Fixed, hedged and structured yield, and exactly what each is short.', i: 'target', l: 6 },
   { n: 11, t: 'Hedging & Risk Engineering', o: 'Hedge unwanted risk, stress-test the book, run an incident plan.', i: 'umbrella', l: 5 },
-  { n: 12, t: 'Operate as Your Own Bank', o: 'Balance sheet, custody, credit line, liquidity ladder, records.', i: 'vault', l: 6 },
+  { n: 12, t: 'Operate as Your Own Bank', o: 'Balance sheet, custody, credit line, liquidity ladder, records.', i: 'vault', l: 7 },
   { n: 13, t: 'The Income Engine', o: 'Risk-adjusted income and a payout policy you can sustain.', i: 'coins', l: 5 },
-  { n: 14, t: 'Automation & Mastery', o: 'Monitor, automate safely, and complete the operator capstone.', i: 'bot', l: 4 },
+  { n: 14, t: 'Automation & Mastery', o: 'Monitor, automate safely, and complete the operator capstone.', i: 'bot', l: 5 },
 ];
 const STAGES = [
   ['0', 'Zero', [0], 'Open an account, buy, set up a wallet, first transfer'],
@@ -174,7 +174,7 @@ function storeIcon() { return brandAsset('icon'); }
 
 function storeBanner() {
   const w = 1920, h = 1080;
-  const stats = [['15', 'modules'], ['79', 'lessons'], ['25', 'strategy playbooks'], ['2', 'capstones']];
+  const stats = [['15', 'modules'], ['92', 'lessons'], ['25', 'strategy playbooks'], ['2', 'capstones']];
   return page(w, h, 'dark', `${network(w, h, 3, 60)}
   <div style="position:absolute;right:110px;top:200px">${logoMark(600)}</div>
   <div style="position:absolute;left:120px;top:100px">${wordmark(30)}</div>
@@ -224,7 +224,7 @@ function galleryCurriculum() {
     <div style="display:flex;align-items:center;gap:14px"><div style="flex:none;width:50px;height:50px;border-radius:14px;background:rgba(46,230,166,.14);display:flex;align-items:center;justify-content:center;color:${C.aquaDark}">${icon(m.i, 28)}</div>
     <div style="font-size:15px;color:rgba(255,255,255,.6);font-weight:700;letter-spacing:.06em">MODULE ${m.n} · ${m.l} LESSONS</div></div>
     <div style="font-size:25px;font-weight:700;margin-top:14px;line-height:1.2">${m.t}</div></div>`).join('');
-  return galleryShell('Curriculum', '15 modules · 79 lessons · 2 capstones',
+  return galleryShell('Curriculum', '15 modules · 92 lessons · 2 capstones',
     `<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:20px">${cards}</div>`, 5);
 }
 
@@ -271,7 +271,7 @@ function galleryIncluded() {
     ${items.map(([ic, t]) => `<div style="display:flex;gap:20px;align-items:center;margin:26px 0;font-size:32px;color:rgba(255,255,255,.92)"><span style="color:${C.aquaDark}">${icon(ic, 36)}</span>${t}</div>`).join('')}
   </div>`;
   return galleryShell('What\'s included', 'Two ways to join', `<div style="display:flex;gap:36px;height:100%">
-    ${col('Course', 'Self-paced', [['book', '15 modules, 79 lessons, zero to operator'], ['target', '25 strategy playbooks'], ['search', 'Due-diligence & bank-policy worksheets'], ['chart', 'Strategy, income & bank calculators'], ['lock', 'Analyst + operator capstones']], false)}
+    ${col('Course', 'Self-paced', [['book', '15 modules, 92 lessons, zero to operator'], ['target', '25 strategy playbooks'], ['search', 'Due-diligence & bank-policy worksheets'], ['chart', 'Strategy, income & bank calculators'], ['lock', 'Analyst + operator capstones']], false)}
     ${col('Live', 'Course + coaching', [['check', 'Everything in Course'], ['video', 'Live group sessions'], ['users', 'Capstone & portfolio reviews'], ['vault', 'Own-bank policy review'], ['coins', 'Income-engine & payout review']], true)}
   </div>`, 19);
 }

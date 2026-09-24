@@ -17,6 +17,41 @@ The **before-signing checklist** is introduced in this module and used in every 
 
 ---
 
+## Lesson 1.0 — Mastery Starter
+
+*New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
+
+### The 60-second version
+Most crypto losses aren't market losses; they're mistakes and scams: a seed phrase typed into a fake site, an approval signed without reading, the wrong network. This module builds the habits that prevent them.
+
+### Words you'll need
+| Term | Meaning |
+|---|---|
+| Private key | the secret that signs transactions |
+| Approval | permission for an app to move a token |
+| Multisig | a wallet that needs several keys to act |
+| Phishing | a fake site or message built to steal |
+| Simulation | a preview of what a transaction will change |
+
+### Before you start
+- [ ] Module 0 done (secured exchange, restore-tested wallet)
+- [ ] A small amount in a wallet on a low-fee network
+
+### Your first safe step
+Open your wallet's approvals (or a revoke tool), list every approval you've granted, and revoke any you don't use.
+
+### The mastery ladder
+| Level | You can… |
+|---|---|
+| **Beginner** | Uses a separate burner wallet and reads every prompt |
+| **Practitioner** | Runs the before-signing checklist without notes; limited approvals; hardware wallet |
+| **Master** | Multisig vault, simulation on every signature, private addresses, tested recovery |
+
+### You've mastered this module when…
+…you can take a new app from first visit to a limited, simulated, verified transaction, and revoke it after.
+
+---
+
 ## Lesson 1.1 — What DeFi is, and the risk-first mindset *(ch. 1)*
 
 ### Objective
@@ -259,6 +294,67 @@ full address.**
 <details><summary>1. A new token worth "$5,000" appears in your wallet with a claim site. What do you do?</summary>Ignore it. It's bait, and interacting risks a drainer approval.</details>
 <details><summary>2. How does address poisoning trick people?</summary>It puts a look-alike address in your history so you copy it by mistake.</details>
 <details><summary>3. What's the single best habit against drainers?</summary>Reading every signature and approval prompt, and using a burner wallet for anything new.</details>
+
+---
+
+## Lesson 1.7 — Reading signatures and simulating transactions *(new)*
+
+### Objective
+Know exactly what a signature or transaction will do before you approve it.
+
+### Explanation
+- **Transaction simulation:** good wallets (and tools like transaction simulators) show the **expected balance changes** before you sign: "−100 USDC, +0.033 ETH". If the preview shows assets leaving that you didn't intend, stop.
+- **Typed-data signatures (EIP-712):** structured messages (orders, Permits) that your wallet shows as fields. Read the **spender**, **token**, **amount** and **deadline**. A "Permit" or "Permit2" signature can hand over token access without any gas.
+- **Blind signing:** when a hardware wallet can't decode a transaction, it shows only a hash. Keep blind signing **off** by default; turn it on only for a specific, verified action, then off again.
+- **Account delegation (EIP-7702):** since Ethereum's 2025 Pectra upgrade, a normal wallet can sign an authorisation that delegates its behaviour to a smart contract. A malicious delegation can hand control of the whole account to an attacker. Only sign delegations from wallets and apps you trust, for a stated purpose.
+- **Rule:** if you can't say in one sentence what a prompt does, don't sign it.
+
+### Worked example
+A site asks you to "verify your wallet". The wallet shows a typed-data message:
+`Permit2 · token: USDC · spender: 0x9f…c3 · amount: 115792089… (unlimited) · deadline: 2030`.
+That isn't verification: it's unlimited USDC access for an unknown spender. Reject it, close the tab, and check your approvals.
+
+### Checklist
+- [ ] My wallet shows simulated balance changes before signing
+- [ ] I read spender, token, amount and deadline on every typed-data prompt
+- [ ] Blind signing is off on my hardware wallet
+- [ ] I never sign account-delegation requests from unknown sites
+
+### Quiz
+<details><summary>1. What does transaction simulation show?</summary>The expected balance changes before you sign.</details>
+<details><summary>2. Why is a Permit signature risky if you don't read it?</summary>It can grant token access without a transaction or gas, so it's easy to approve by accident.</details>
+<details><summary>3. When should blind signing be on?</summary>Only briefly, for a specific verified action, then switched off.</details>
+
+---
+
+## Lesson 1.8 — Privacy and physical security *(new)*
+
+### Objective
+Keep your holdings private and your household safe as your on-chain wealth grows.
+
+### Explanation
+- **Blockchains are public.** Anyone who links an address to you can see its balance and history, forever.
+- **Link less:** don't post addresses, screenshots or wins publicly; use separate addresses for public activity (e.g. donations, NFTs) and for savings; be aware that exchange withdrawals link your identity (KYC) to the receiving address.
+- **Name services** (e.g. an ENS name) are convenient but make an address easy to find and associate with you.
+- **Physical risk ("wrench attacks"):** criminals target people known to hold crypto. Low profile is the first defence. Multisig with keys in separate locations means no single person can be forced to move everything.
+- **Home and devices:** hardware wallets and backups out of sight; encrypted devices; don't discuss holdings with people who don't need to know.
+
+### Worked example
+Alex posts a screenshot of a big win, with the address visible. Anyone can now see
+Alex's balance and follow every future move, and scammers and thieves now have a target.
+Better: no screenshots, a vault address that has never been shared, and a
+2-of-3 multisig so no single key holder can be coerced into draining it.
+
+### Checklist
+- [ ] Savings addresses have never been posted or linked publicly
+- [ ] No holdings screenshots or wins on social media
+- [ ] Vault keys held so no single person can move everything
+- [ ] Backups stored discreetly, away from where people would look
+
+### Quiz
+<details><summary>1. What does linking an address to your identity reveal?</summary>Its full balance and history, now and in the future.</details>
+<details><summary>2. How does multisig help against physical threats?</summary>No single person can be forced to move everything; other keys are elsewhere.</details>
+<details><summary>3. What links your identity to a wallet address?</summary>For example, KYC exchange withdrawals, name services, or posting the address publicly.</details>
 
 ---
 

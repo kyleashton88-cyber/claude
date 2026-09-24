@@ -7,6 +7,40 @@
 
 ---
 
+## Lesson 9.0 — Mastery Starter
+
+*New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
+
+### The 60-second version
+A grid bot on an exchange and a liquidity position on a DEX both buy as price falls and sell as it rises inside a range. This module shows when each is the better tool, and how to run both without doubling your risk.
+
+### Words you'll need
+| Term | Meaning |
+|---|---|
+| Grid bot | automated buy/sell orders at set price levels |
+| Range | the price band a strategy works in |
+| Concentrated liquidity | LP capital placed in a chosen range |
+| Correlation | positions that move together |
+| Invalidation | the event that ends a range thesis |
+
+### Before you start
+- [ ] Modules 0–8 (Grid Bot Builder helpful but not required)
+
+### Your first safe step
+Take one asset and write the range you'd use for a grid bot and for an LP. Would they be the same?
+
+### The mastery ladder
+| Level | You can… |
+|---|---|
+| **Beginner** | Explains the grid–LP similarity |
+| **Practitioner** | Chooses the right tool by size, custody and pair |
+| **Master** | Runs grid bots and DeFi as one system with exposure counted by asset and range |
+
+### You've mastered this module when…
+…your exposure is counted by underlying asset and range, not by number of positions.
+
+---
+
 ## Lesson 9.1 — Same idea, different machine
 
 ### Objective

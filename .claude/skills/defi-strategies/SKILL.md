@@ -32,6 +32,7 @@ Read the relevant strategy card from it before answering.
    - `expected --yield-apy 9 --loss-prob 0.03`
    - `income --pos "name:amount:yield:loss_prob:lgd" ... --payout 0.7`
    - `bank --collateral 300000 --debt 60000 --borrow-apy 5 --reserve 40000 --monthly-spend 5000`
+   - `perp --entry 3000 --leverage 5 --mmr 0.5` · `twr --period 10 --period -5 --start 100000 --end 152000 --net-deposits 50000`
 4. **Compare to a benchmark** (holding the assets, or plain stablecoin
    lending). The strategy has to beat it after costs by enough to pay for the extra risk.
 5. **Protocol check** with `defi-due-diligence` before any capital moves.

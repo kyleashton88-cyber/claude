@@ -10,6 +10,40 @@ expected losses), pay out **less** than that, and never pay out of principal.
 
 ---
 
+## Lesson 13.0 — Mastery Starter
+
+*New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
+
+### The 60-second version
+Income from DeFi should be planned like a pension, not chased like a jackpot: build it from durable sources, subtract the losses you should expect, and pay yourself less than that.
+
+### Words you'll need
+| Term | Meaning |
+|---|---|
+| Durability | how long and reliably a source tends to pay |
+| Risk-adjusted yield | yield minus expected losses |
+| LGD | how much you lose if a loss event happens |
+| Payout ratio | share of expected income you take out |
+| Principal | the capital itself, never spent as income |
+
+### Before you start
+- [ ] Modules 0–12
+
+### Your first safe step
+Take one position and compute its risk-adjusted yield with `defi_calc.py expected`.
+
+### The mastery ladder
+| Level | You can… |
+|---|---|
+| **Beginner** | Ranks income sources by durability |
+| **Practitioner** | Builds an income portfolio with risk-adjusted expected income |
+| **Master** | Runs a payout policy that survives bad years, with annual reviews and scaling rules |
+
+### You've mastered this module when…
+…your payout is set below risk-adjusted expected income and never draws on principal.
+
+---
+
 ## Lesson 13.1 — Income sources ranked by durability
 
 ### Objective

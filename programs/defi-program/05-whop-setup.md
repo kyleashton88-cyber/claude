@@ -4,7 +4,7 @@
 | Item | Decision |
 |---|---|
 | Name | On-Chain Operator Program |
-| Tier 1 — Course (self-paced, 15 modules, 79 lessons, worksheets, 2 capstones) | **$15,000 one-time** (no payment plan) |
+| Tier 1 — Course (self-paced, 15 modules, 92 lessons + Mastery Starters, worksheets, 2 capstones) | **$15,000 one-time** (no payment plan) |
 | Tier 2 — Live (course + live sessions) | **Priced above $15,000 — number TBD** |
 | Audience | Everyone at launch (GBB customers, Elite Intel members, cold ads) |
 | Sales path | **Application → call → checkout** (no straight-to-checkout ads) |
@@ -42,7 +42,7 @@ the Starter tier / GBB price conflict.
 Nothing gets created until you've seen the exact values and said yes.
 
 ## Step 3 — Upload content
-All 79 lessons are written and ready to paste in (`lessons/`, `02-…`,
+All 92 lessons and 15 Mastery Starters are written and ready to paste in (`lessons/`, `02-…`,
 `03-…`), with module banners, diagrams, the Day-1 Setup Kit PDF, the welcome
 video and 15 module intro videos (`video/`). Course layout and drip plan:
 `07-program-operations.md` section 1.
