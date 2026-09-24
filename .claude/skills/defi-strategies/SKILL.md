@@ -1,12 +1,14 @@
 ---
 name: defi-strategies
-description: Explain, choose, model and plan DeFi strategies (stablecoin lending, staking/LSTs, collateral borrowing, AMM and concentrated LP, stable LP, vaults, incentive farming, airdrops, leveraged loops, delta-neutral funding carry, LP hedges, treasury management) — where each one's return comes from, the maths, execution steps, kill rules and how it loses. Use when the user asks which DeFi strategy to use, how a strategy makes money, whether a yield is worth it, how to size or exit a position, or wants DeFi strategy course content.
+description: Explain, choose, model and plan DeFi strategies (stablecoin lending, staking/LSTs, collateral borrowing, AMM and concentrated LP, stable LP, vaults, incentive farming, airdrops, leveraged loops, delta-neutral funding carry, LP hedges, treasury management, fixed-rate PT/YT, cash-and-carry basis, covered calls and cash-secured puts, fixed-rate borrowing, curated lending vaults, hedged restaking, yield-covered credit lines, income portfolios and personal balance sheets) — where each one's return comes from, the maths, execution steps, kill rules and how it loses. Use when the user asks which DeFi strategy to use, how a strategy makes money, whether a yield is worth it, how to size or exit a position, or wants DeFi strategy course content.
 ---
 
 # DeFi Strategies
 
 The full playbook is `programs/defi-program/03-defi-strategy-mastery.md`
-(16 strategies across 5 levels, execution system, progression path, quiz).
+(25 strategies across 6 levels, execution system, progression path, quiz).
+The professional level (#17–25) is taught in depth in
+`programs/defi-program/lessons/module-10-…`, `module-12-…` and `module-13-…`.
 Read the relevant strategy card from it before answering.
 
 ## Workflow
@@ -25,6 +27,11 @@ Read the relevant strategy card from it before answering.
    - `carry --rate-8h 0.01 --short-lev 2`
    - `supply --borrow-apy 8 --utilisation 0.8` · `apy --apr 10 --position 5000 --gas 2`
    - `airdrop --probability 0.3 --value 1500 --costs 200`
+   - `pt --price 0.96 --days 180` · `basis --spot 3000 --future 3060 --days 90`
+   - `covered-call --spot 3000 --strike 3300 --premium 0.4`
+   - `expected --yield-apy 9 --loss-prob 0.03`
+   - `income --pos "name:amount:yield:loss_prob:lgd" ... --payout 0.7`
+   - `bank --collateral 300000 --debt 60000 --borrow-apy 5 --reserve 40000 --monthly-spend 5000`
 4. **Compare to a benchmark** (holding the assets, or plain stablecoin
    lending). The strategy has to beat it after costs by enough to pay for the extra risk.
 5. **Protocol check** with `defi-due-diligence` before any capital moves.

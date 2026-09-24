@@ -1,0 +1,258 @@
+# Module 12 — Operate as Your Own Bank
+
+![Module 12 — Operate as Your Own Bank](../assets/modules/module-12.png)
+
+*Outcome: run your crypto the way a bank runs its book: a balance sheet, a custody policy, a credit line, a liquidity ladder, a lending desk and records someone else could follow.*
+*Stage 5 · Operator. Prerequisites: Modules 1–11. Educational content only. Not financial, tax or legal advice. Figures are illustrative.*
+
+A bank does four things: it **keeps assets safe**, **lends**, **borrows**,
+and **manages liquidity** so it can always meet what it owes. DeFi lets you
+do all four yourself, with no one to call when something goes wrong. This
+module turns that into written policy.
+
+![Operate as your own bank](../assets/diagrams/own-bank.png)
+
+---
+
+## Lesson 12.1 — Your balance sheet
+
+### Objective
+Build a personal on-chain balance sheet and read the three numbers that matter: equity, LTV and liquidity runway.
+
+### Explanation
+- **Assets:** everything you own, at market value: collateral, yield positions, reserves.
+- **Liabilities:** everything you owe: loans, margin, any payables.
+- **Equity** = assets − liabilities. This is what's actually yours.
+- **LTV** = debt ÷ collateral. Your bank's leverage.
+- **Liquidity runway** = liquid reserve ÷ monthly obligations (spending + interest).
+
+Banks fail from **liquidity** (can't pay today) more often than from
+**solvency** (owe more than they own). Track both.
+
+### Worked example
+$300,000 collateral, $60,000 debt at 5%, $40,000 stablecoin reserve, $5,000/month spending:
+
+`defi_calc.py bank --collateral 300000 --debt 60000 --borrow-apy 5 --reserve 40000 --monthly-spend 5000`
+- Equity **$280,000** · LTV **20%** · health factor **4.0**
+- Obligations $5,250/month ($250 of it interest) → reserve covers **7.6 months**
+- Policy checks: LTV ≤ 30% ✓ · HF ≥ 2 ✓ · reserve ≥ 6 months ✓
+
+### Checklist
+- [ ] Balance sheet updated weekly
+- [ ] Equity, LTV and runway tracked over time
+- [ ] Policy limits written (max LTV, min HF, min runway)
+
+### Quiz
+<details><summary>1. Assets $500k, debt $100k. Equity?</summary>$400k.</details>
+<details><summary>2. Reserve $30k, obligations $6k/month. Runway?</summary>5 months, below a 6-month policy.</details>
+<details><summary>3. Why track liquidity separately from equity?</summary>You can be solvent and still be forced to sell at the worst time if you can't meet obligations today.</details>
+
+---
+
+## Lesson 12.2 — Custody architecture: vault, multisig and spending policies
+
+### Objective
+Design custody so that no single lost device, stolen key or mistaken signature can drain the bank.
+
+### Explanation
+Scale Module 1's three wallets into a bank-grade setup:
+
+| Tier | Holds | Control | Rules |
+|---|---|---|---|
+| **Vault** | Most of your equity | **Multisig**, e.g. 2-of-3 hardware keys in separate locations | No DeFi approvals. Moves only to the Operating tier, to allowlisted addresses |
+| **Operating** | Active positions | Hardware wallet or a smart account with limits | Verified protocols only. Spending limit per day |
+| **Hot** | Small float | Hot wallet | Anything new or experimental. Refilled on schedule |
+
+Smart-account features to use where available:
+- **Spending limits** per day/week
+- **Allowlists** (it can only send to addresses you pre-approved)
+- **Timelocks** on large moves (a delay you can cancel if it wasn't you)
+- **Recovery** paths agreed and tested in advance
+
+![Custody architecture](../assets/diagrams/custody-architecture.png)
+
+### Worked example
+Vault: 2-of-3 multisig, with key A at home, key B in a safe-deposit box and
+key C with a trusted person or a professional co-signer. Losing any one key
+is survivable; stealing any one key is useless. **Test it:** move $10 through
+every path once a quarter.
+
+### Checklist
+- [ ] Vault is multisig; keys in separate physical locations
+- [ ] Operating tier has a daily limit
+- [ ] Allowlist on vault outflows
+- [ ] Quarterly recovery test done and logged
+
+### Quiz
+<details><summary>1. Why 2-of-3 rather than 1-of-1?</summary>One key can be lost or stolen without losing the funds or giving an attacker control.</details>
+<details><summary>2. What does a timelock buy you?</summary>Time to notice and cancel an unauthorised large move.</details>
+<details><summary>3. Why test recovery with a small amount?</summary>A recovery plan you've never run is an assumption. Testing proves every key and path works.</details>
+
+---
+
+## Lesson 12.3 — The credit line: borrowing like a bank client
+
+### Objective
+Use your assets as collateral for liquidity without selling, under a written credit policy.
+
+### Explanation
+Wealthy clients rarely sell appreciating assets to raise cash; they borrow
+against them. DeFi money markets offer the same: deposit collateral, borrow
+stablecoins, repay when it suits you, with no credit check. **The collateral
+is liquidated if you breach the threshold**, and nobody calls first.
+
+**A credit policy (write yours):**
+- Max LTV **25–30%** on volatile collateral (liquidation is often near 80%+)
+- Health factor floor **2.5**; act at **2.0**
+- Prefer collateral whose **yield covers the interest** (strategy #25)
+- Consider **fixed-rate** borrowing when a rate spike would force a sale (strategy #22)
+- **Repayment source** named before borrowing (income, reserve, maturing PT)
+- Tax treatment of borrowing varies by country: **check with a tax professional**
+
+### Worked example
+$200,000 of liquid-staked ETH earning 3.2% ($6,400/yr). Borrow **$40,000** stablecoins at 5% ($2,000/yr).
+- Yield covers interest **3.2×**. LTV 20%. HF **4.0** at a 0.8 threshold.
+- ETH would have to fall **~75%** before liquidation (HF falls in proportion to price).
+- Defence plan: at HF 2.0, repay from reserve; at HF 1.7, sell part of the collateral deliberately rather than let a liquidator do it at a penalty.
+
+### Checklist
+- [ ] Credit policy written: max LTV, HF floor, action levels
+- [ ] Repayment source named
+- [ ] Alerts set at the action levels (Module 14.1)
+- [ ] Fixed vs variable decision made on purpose
+
+### Quiz
+<details><summary>1. Why borrow against assets instead of selling them?</summary>You keep the asset and its upside (and in some jurisdictions avoid a taxable sale), at the cost of interest and liquidation risk.</details>
+<details><summary>2. HF is 4.0. Roughly how far can collateral fall before liquidation?</summary>About 75%, since HF scales with collateral price (HF 1.0 at a quarter of the current price).</details>
+<details><summary>3. What should happen at your action level?</summary>Repay or add collateral per the written plan. Sell deliberately before a liquidator does it at a penalty.</details>
+
+---
+
+## Lesson 12.4 — Treasury and the liquidity ladder
+
+### Objective
+Structure reserves so money is available when it's needed, earning a return at every tier.
+
+### Explanation
+Banks match the timing of assets to the timing of what they owe. Your ladder:
+
+| Tier | Access | Holds | Size (example: $5,000/month spend) |
+|---|---|---|---|
+| **T0 Instant** | Seconds | Stablecoins in the operating wallet | 1 month: $5,000 |
+| **T1 Same day** | Hours | Blue-chip stablecoin lending, split across 2 protocols | 5 months: $25,000 |
+| **T2 Term** | Scheduled | PTs maturing on dates you'll need the money (Lesson 10.1) | Next 6–12 months of planned spending |
+| **T3 Growth** | Days–weeks | Strategy positions, LPs, staking | The rest, within caps |
+
+![The liquidity ladder](../assets/diagrams/liquidity-ladder.png)
+
+Refill downward on a schedule: T1 tops up T0 monthly; maturing PTs top up T1.
+Never fund a T0 need by selling a T3 position in a bad market. That's what the
+ladder exists to prevent.
+
+### Worked example
+T0 $5,000 + T1 $25,000 = **6 months** instantly available. T2 holds three PTs
+maturing in 3, 6 and 9 months, each sized for 3 months of spending. A −50%
+market day touches none of it.
+
+### Checklist
+- [ ] T0 + T1 ≥ 6 months of obligations
+- [ ] T2 maturities matched to planned spending
+- [ ] Monthly refill schedule set
+- [ ] T3 never used for day-to-day needs
+
+### Quiz
+<details><summary>1. Why hold T0 in plain stablecoins earning little?</summary>Instant, certain access. It's the tier that pays today's bills without selling anything.</details>
+<details><summary>2. What's T2 for?</summary>Known future spending, with maturities matched to when the money is needed and a fixed return locked in.</details>
+<details><summary>3. What does the ladder prevent?</summary>Forced selling of growth positions at bad prices to meet short-term needs.</details>
+
+---
+
+## Lesson 12.5 — Being the lender: supplying, curating and pricing credit risk
+
+### Objective
+Act as the lending side of the bank: choose markets, price the risk, and know when to pull liquidity.
+
+### Explanation
+When you supply to a money market, you're the bank's depositor, and
+effectively its credit desk. Your return:
+`supply APY ≈ borrow APY × utilisation × (1 − reserve factor)`.
+
+Modern designs split lending into **isolated markets** (one collateral, one
+loan asset, one oracle, one liquidation LTV). **Curated vaults** spread
+deposits across several of these; the curator decides the allocation.
+
+What a lender must check:
+- **Collateral quality and liquidation LTV:** the higher the LTV, the thinner the buffer before bad debt
+- **Oracle:** what prices the collateral, and can it be manipulated? (Module 5.3)
+- **Utilisation:** near 100% means you may not be able to withdraw
+- **Curator:** track record, how allocations are changed, timelocks
+- **Risk-adjusted return**, not headline
+
+### Worked example
+Vault A: 7% headline, exposure to newer collateral; you assume a 2%/yr chance of a loss event losing half the deposit → **6.0%** risk-adjusted.
+Vault B: 4.5% headline, blue-chip collateral; 0.5%/yr, total loss assumed → **4.0%**.
+`defi_calc.py expected --yield-apy 7 --loss-prob 0.02 --lgd 0.5`
+
+A pays more after the haircut, *if* your loss estimates are honest. Split
+between them, and cap A lower because its tail is fatter and less known.
+
+### Checklist
+- [ ] Every market's collateral, oracle and LTV listed
+- [ ] Loss probability and loss-given-default written down (your assumptions)
+- [ ] Utilisation alert (e.g. > 90%)
+- [ ] Per-vault and per-curator caps
+
+### Quiz
+<details><summary>1. Borrow APY 10%, utilisation 70%, reserve factor 10%. Supply APY?</summary>6.3%.</details>
+<details><summary>2. Why is utilisation at 100% a lender's problem?</summary>All liquidity is lent out, so withdrawals wait until borrowers repay or new deposits arrive.</details>
+<details><summary>3. What's a curated vault's extra risk?</summary>The curator's allocation decisions and permissions, on top of each market's risk.</details>
+
+---
+
+## Lesson 12.6 — Books, records and succession
+
+### Objective
+Keep books a stranger could follow, and make sure your family could recover everything if you couldn't.
+
+### Explanation
+**Books** (update weekly from your journal, Module 8):
+- Every position: protocol, chain, contract, amount, entry date and price, cost basis
+- Every loan: collateral, debt, rate, HF, action levels
+- Every approval granted, and when it was revoked
+- Income received, by source and date
+- Keep exportable records for tax. Rules differ by country, so **use a crypto-aware tax professional.**
+
+**Succession:** self-custody means that if you're gone and nobody can sign,
+the money is gone too.
+- A **letter of instruction** that explains the setup (wallets, multisig, where
+  the documents are, who to contact), **stored separately from any seed or key**
+- Multisig with a trusted co-signer or professional service, so recovery doesn't depend on one person
+- Legal documents (will, powers of attorney) that reference the digital assets: **use a lawyer**
+- **Annual drill:** walk a trusted person through the letter without revealing secrets
+
+### Worked example
+A 2-of-3 vault: you hold two keys (home + safe-deposit box); a professional
+co-signer holds the third under an agreed recovery process. Your letter of
+instruction, stored with your will, explains how your executor works with
+the co-signer. No single document contains enough to steal the funds.
+
+### Checklist
+- [ ] Books current within a week
+- [ ] Tax records exportable; professional engaged
+- [ ] Letter of instruction written and stored apart from keys
+- [ ] Annual succession drill done
+
+### Quiz
+<details><summary>1. Why keep the letter of instruction apart from seeds and keys?</summary>So finding the letter isn't enough to steal the funds.</details>
+<details><summary>2. What's the risk of single-key self-custody for your family?</summary>If you can't sign and no one else can, the assets are unrecoverable.</details>
+<details><summary>3. What goes in the books for each loan?</summary>Collateral, debt, rate, health factor and your action levels.</details>
+
+---
+
+### Module 12 practical: your bank's founding documents
+1. Balance sheet with equity, LTV and runway (`defi_calc.py bank`).
+2. Custody policy: tiers, multisig setup, limits, allowlists, recovery test log.
+3. Credit policy: max LTV, HF floor, action levels, repayment source.
+4. Liquidity ladder: T0–T3 sizes and refill schedule.
+5. Lending policy: markets, caps, risk assumptions.
+6. Books template and letter of instruction (stored separately).

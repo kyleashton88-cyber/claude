@@ -59,9 +59,9 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><style>
   .cover .s { font-size: 14pt; color: #404040; margin: 12px 0 40px; }
   .cover .d { color: #707070; }
 </style></head><body>
-<div class="cover"><img src="data:image/png;base64,${fs.readFileSync(path.resolve(__dirname, '../assets/store/banner-1920x1080.png')).toString('base64')}" style="width:100%;border-radius:10px;margin-bottom:48px">
+<div class="cover"><img src="data:image/png;base64,${fs.readFileSync(path.resolve(__dirname, '../assets/brand/logo-icon-1024.png')).toString('base64')}" style="width:118mm;margin:0 auto 34px;border-radius:18px;box-shadow:0 10px 30px rgba(11,31,51,.25)">
 <div class="t">On-Chain Operator Program</div>
-<div class="s">Master File — Offer, Curriculum, Setup, Funnel &amp; Course Content</div>
+<div class="s">From zero to your own on-chain bank · Master File</div>
 <div class="d">Draft · ${date}</div>
 <div class="d"><em>Educational content only. Not financial advice. No results are guaranteed.</em></div></div>
 ${body}</body></html>`;

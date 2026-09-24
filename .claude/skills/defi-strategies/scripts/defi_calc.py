@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """DeFi strategy calculator: IL, LP break-even, concentrated-liquidity
 efficiency, health factor / liquidation price, leverage loops, funding carry,
-lending supply rate, APR->APY and airdrop EV.
+lending supply rate, APR->APY, airdrop EV, principal-token fixed yield,
+cash-and-carry basis, covered calls, risk-adjusted yield, income portfolios
+and a personal balance sheet.
 
 Educational modelling only. Rates are inputs you supply from live sources;
 outputs are not forecasts.
@@ -102,6 +104,69 @@ def cmd_airdrop(a):
     print(f"EV = {a.probability:g} x ${a.value:,.2f} - ${a.costs:,.2f} = ${ev:,.2f}")
 
 
+def cmd_pt(a):
+    fixed = (1 / a.price) ** (365 / a.days) - 1
+    simple = (1 / a.price - 1) * 365 / a.days
+    print(f"PT at {a.price:g} of underlying, {a.days:g} days to maturity")
+    print(f"Fixed APY if held to maturity: {fixed * 100:.2f}% (simple {simple * 100:.2f}%)")
+    print(f"YT costs ~{1 - a.price:.4f} per unit: profits only if realised variable yield "
+          f"(plus any points) beats ~{fixed * 100:.2f}% over the period")
+
+
+def cmd_basis(a):
+    b = a.future / a.spot - 1
+    print(f"Basis {b * 100:.2f}% over {a.days:g} days -> {b * 365 / a.days * 100:.2f}% annualised (simple)")
+    print("Locked only if both legs are held to expiry and margin is never called.")
+
+
+def cmd_covered_call(a):
+    cap = a.strike / a.spot - 1
+    print(f"Premium {a.premium:g}% per {a.days:g}-day period "
+          f"-> {a.premium * 365 / a.days:.1f}% annualised IF repeated at the same premium (it won't be exactly)")
+    print(f"Max gain per period: {a.premium + cap * 100:.2f}% (upside capped at strike {a.strike:,.2f})")
+    print(f"Break-even price: {a.spot * (1 - a.premium / 100):,.2f}; below that you lose like a holder, minus the premium")
+
+
+def cmd_expected(a):
+    haircut = a.loss_prob * a.lgd
+    net = a.yield_apy - haircut * 100 - a.costs
+    print(f"Headline {a.yield_apy:g}% - expected loss {haircut * 100:.2f}% "
+          f"({a.loss_prob:g} x {a.lgd:g} LGD) - costs {a.costs:g}% = {net:.2f}% risk-adjusted")
+
+
+def cmd_income(a):
+    total = exp = 0.0
+    print(f"{'position':<22}{'amount':>12}{'yield':>8}{'exp.loss':>10}{'net':>8}{'income/yr':>12}")
+    for spec in a.pos:
+        name, amt, y, p, lgd = spec.split(":")
+        amt, y, p, lgd = float(amt), float(y), float(p), float(lgd)
+        net = y - p * lgd * 100
+        inc = amt * net / 100
+        total += amt; exp += inc
+        print(f"{name:<22}{amt:>12,.0f}{y:>7.2f}%{p * lgd * 100:>9.2f}%{net:>7.2f}%{inc:>12,.0f}")
+    blended = exp / total * 100
+    payout = exp * a.payout
+    print(f"\nBlended risk-adjusted yield {blended:.2f}% on {total:,.0f}")
+    print(f"Expected income {exp:,.0f}/yr -> pay out {a.payout:.0%} = {payout:,.0f}/yr "
+          f"({payout / 12:,.0f}/month); retain {exp - payout:,.0f} as loss buffer")
+
+
+def cmd_bank(a):
+    coll = a.collateral
+    ltv = a.debt / coll if coll else 0
+    hf = coll * a.lt / a.debt if a.debt else float("inf")
+    interest_m = a.debt * a.borrow_apy / 100 / 12
+    obligations = a.monthly_spend + interest_m
+    months = a.reserve / obligations if obligations else float("inf")
+    equity = coll + a.reserve + a.other_assets - a.debt
+    print(f"Assets: collateral {coll:,.0f} + reserve {a.reserve:,.0f} + other {a.other_assets:,.0f}")
+    print(f"Liabilities: debt {a.debt:,.0f} at {a.borrow_apy:g}% ({interest_m:,.0f}/month interest)")
+    print(f"Equity {equity:,.0f} | LTV {ltv * 100:.1f}% | health factor {hf:.2f}")
+    print(f"Liquidity: reserve covers {months:.1f} months of obligations ({obligations:,.0f}/month)")
+    for label, ok in (("LTV <= policy", ltv * 100 <= a.max_ltv), ("HF >= 2", hf >= 2), ("reserve >= 6 months", months >= 6)):
+        print(f"  [{'PASS' if ok else 'FAIL'}] {label}")
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -158,6 +223,47 @@ def main():
     s.add_argument("--value", type=float, required=True, help="expected $ if it happens")
     s.add_argument("--costs", type=float, required=True, help="gas + bridge + opportunity cost, $")
     s.set_defaults(fn=cmd_airdrop)
+
+    s = sub.add_parser("pt", help="fixed yield from a principal token (yield tokenization)")
+    s.add_argument("--price", type=float, required=True, help="PT price in units of the underlying, e.g. 0.96")
+    s.add_argument("--days", type=float, required=True)
+    s.set_defaults(fn=cmd_pt)
+
+    s = sub.add_parser("basis", help="cash-and-carry basis")
+    s.add_argument("--spot", type=float, required=True)
+    s.add_argument("--future", type=float, required=True)
+    s.add_argument("--days", type=float, required=True)
+    s.set_defaults(fn=cmd_basis)
+
+    s = sub.add_parser("covered-call", help="covered call / options vault economics")
+    s.add_argument("--spot", type=float, required=True)
+    s.add_argument("--strike", type=float, required=True)
+    s.add_argument("--premium", type=float, required=True, help="premium per period, percent of spot")
+    s.add_argument("--days", type=float, default=7)
+    s.set_defaults(fn=cmd_covered_call)
+
+    s = sub.add_parser("expected", help="risk-adjusted yield after expected losses")
+    s.add_argument("--yield-apy", type=float, required=True)
+    s.add_argument("--loss-prob", type=float, required=True, help="annual probability of a loss event, 0-1")
+    s.add_argument("--lgd", type=float, default=1.0, help="loss given default, 0-1")
+    s.add_argument("--costs", type=float, default=0.0, help="gas/fees as percent per year")
+    s.set_defaults(fn=cmd_expected)
+
+    s = sub.add_parser("income", help="income portfolio: risk-adjusted income and payout")
+    s.add_argument("--pos", action="append", required=True, help="name:amount:yield%:loss_prob:lgd (repeat)")
+    s.add_argument("--payout", type=float, default=0.7, help="share of expected income paid out, 0-1")
+    s.set_defaults(fn=cmd_income)
+
+    s = sub.add_parser("bank", help="personal balance sheet: LTV, health factor, liquidity runway")
+    s.add_argument("--collateral", type=float, required=True)
+    s.add_argument("--lt", type=float, default=0.8)
+    s.add_argument("--debt", type=float, default=0.0)
+    s.add_argument("--borrow-apy", type=float, default=0.0)
+    s.add_argument("--reserve", type=float, default=0.0, help="liquid stablecoin reserve")
+    s.add_argument("--other-assets", type=float, default=0.0)
+    s.add_argument("--monthly-spend", type=float, default=0.0)
+    s.add_argument("--max-ltv", type=float, default=30.0, help="policy max LTV, percent")
+    s.set_defaults(fn=cmd_bank)
 
     a = p.parse_args()
     a.fn(a)

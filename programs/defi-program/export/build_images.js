@@ -52,11 +52,18 @@ const ICON = {
   video: '<rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/>',
   book: '<path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M4 21V5"/>',
   check: '<path d="M5 12l4 4 10-10"/>',
+  compass: '<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
+  target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/>',
+  umbrella: '<path d="M3 12a9 9 0 0118 0z"/><path d="M12 12v7a2 2 0 01-4 0"/>',
+  vault: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="12" cy="12" r="4"/><path d="M12 8v1.5M12 14.5V16M8 12h1.5M14.5 12H16M6 20v1.5M18 20v1.5"/>',
+  coins: '<ellipse cx="9" cy="7" rx="6" ry="2.5"/><path d="M3 7v4c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V7"/><path d="M9 16.5c-3.3 0-6-1.1-6-2.5"/><path d="M3 11v5c0 1.4 2.7 2.5 6 2.5 1 0 2-.1 2.8-.3"/><circle cx="17" cy="16" r="4.5"/>',
+  bot: '<rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 4v4"/><circle cx="12" cy="3.5" r="1"/><circle cx="9" cy="13.5" r="1.3"/><circle cx="15" cy="13.5" r="1.3"/><path d="M9.5 17h5"/>',
 };
 const icon = (name, size = 24, color = 'currentColor', sw = 1.8) =>
   `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round">${ICON[name]}</svg>`;
 
 const MODULES = [
+  { n: 0, t: 'Crypto From Zero', o: 'From never owning crypto to a secured wallet and a first transaction.', i: 'compass', l: 5 },
   { n: 1, t: 'Foundations & Safety', o: 'Set up and use a wallet safely. Know what can go irreversibly wrong.', i: 'shield', l: 6 },
   { n: 2, t: 'Trading On-Chain', o: 'Swap and provide liquidity deliberately: price impact, IL, MEV.', i: 'swap', l: 5 },
   { n: 3, t: 'Lending & Leverage', o: 'Borrow against collateral with a buffer and a written defence plan.', i: 'bank', l: 4 },
@@ -66,6 +73,19 @@ const MODULES = [
   { n: 7, t: 'On-Chain Analytics', o: 'Read on-chain data without over-interpreting it.', i: 'chart', l: 8 },
   { n: 8, t: 'The DeFi Operating System', o: 'Portfolio plan with risk buckets, limits and an emergency plan.', i: 'cog', l: 4 },
   { n: 9, t: 'DeFi vs Grid Bots', o: 'Choose the right tool for the market, and run both as one system.', i: 'grid', l: 3 },
+  { n: 10, t: 'Advanced Yield Engineering', o: 'Fixed, hedged and structured yield, and exactly what each is short.', i: 'target', l: 6 },
+  { n: 11, t: 'Hedging & Risk Engineering', o: 'Hedge unwanted risk, stress-test the book, run an incident plan.', i: 'umbrella', l: 5 },
+  { n: 12, t: 'Operate as Your Own Bank', o: 'Balance sheet, custody, credit line, liquidity ladder, records.', i: 'vault', l: 6 },
+  { n: 13, t: 'The Income Engine', o: 'Risk-adjusted income and a payout policy you can sustain.', i: 'coins', l: 5 },
+  { n: 14, t: 'Automation & Mastery', o: 'Monitor, automate safely, and complete the operator capstone.', i: 'bot', l: 4 },
+];
+const STAGES = [
+  ['0', 'Zero', [0], 'Buy crypto, secure a wallet, first transaction'],
+  ['1', 'Foundations', [1, 2], 'Protect a wallet, swap and LP deliberately'],
+  ['2', 'Practitioner', [3, 4, 5], 'Borrow, earn yield, map infrastructure risk'],
+  ['3', 'Analyst', [6, 7], 'Research any protocol, read on-chain data'],
+  ['4', 'Strategist', [8, 9, 10, 11], '25 strategies, fixed & hedged yield, stress tests'],
+  ['5', 'Operator', [12, 13, 14], 'Run your own on-chain bank and income engine'],
 ];
 
 const BASE_CSS = `
@@ -73,6 +93,7 @@ const BASE_CSS = `
   body { font-family: Inter, sans-serif; -webkit-font-smoothing: antialiased; }
   .mono { font-family: 'JetBrains Mono', monospace; }
   .dark { background: radial-gradient(120% 90% at 85% 0%, #1d4a78 0%, ${C.navy} 38%, ${C.ink} 100%); color: #fff; position: relative; overflow: hidden; }
+  .transparent { background: transparent; position: relative; overflow: hidden; }
   .light { background: ${C.surface}; color: ${C.text}; position: relative; overflow: hidden; }
   .bg { position: absolute; inset: 0; }
   .eyebrow { font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
@@ -88,48 +109,85 @@ function page(w, h, cls, inner) {
   <body><div id="root" class="${cls}">${inner}</div></body></html>`;
 }
 
-const brandMark = (size = 40) => `
-  <svg width="${size}" height="${size}" viewBox="0 0 40 40">
-    <rect x="1" y="1" width="38" height="38" rx="10" fill="none" stroke="${C.aquaDark}" stroke-width="2"/>
-    <circle cx="13" cy="20" r="5" fill="none" stroke="#fff" stroke-width="2.4"/>
-    <circle cx="27" cy="20" r="5" fill="none" stroke="#fff" stroke-width="2.4"/>
-    <path d="M18 20h4" stroke="${C.aquaDark}" stroke-width="2.4"/>
+// ---------- logo system ----------
+// Mark: two interlocked chain rings (over-under) inside a hexagonal block,
+// with node dots on the vertices. Works on dark (white + teal) and light (navy + blue).
+let logoId = 0;
+function logoMark(size, { dark = true, nodes = true } = {}) {
+  const id = `lg${logoId++}`;
+  const ringA = dark ? '#ffffff' : C.ink;
+  const hex = [0, 1, 2, 3, 4, 5].map(i => { const a = Math.PI / 6 + i * Math.PI / 3; return [100 + 88 * Math.cos(a), 100 + 88 * Math.sin(a)]; });
+  const hexPath = hex.map(([x, y], i) => `${i ? 'L' : 'M'}${x.toFixed(2)},${y.toFixed(2)}`).join('') + 'Z';
+  return `<svg width="${size}" height="${size}" viewBox="0 0 200 200">
+    <defs>
+      <linearGradient id="${id}g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${dark ? C.aquaDark : '#14a874'}"/><stop offset="1" stop-color="${dark ? C.blueDark : C.blue}"/></linearGradient>
+      <clipPath id="${id}c"><rect x="86" y="58" width="28" height="30"/></clipPath>
+      ${dark ? `<filter id="${id}f" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6"/></filter>` : ''}
+    </defs>
+    ${dark ? `<path d="${hexPath}" fill="none" stroke="url(#${id}g)" stroke-width="10" opacity=".45" filter="url(#${id}f)"/>` : ''}
+    <path d="${hexPath}" fill="${dark ? 'rgba(255,255,255,.03)' : 'none'}" stroke="url(#${id}g)" stroke-width="7" stroke-linejoin="round"/>
+    ${nodes ? hex.map(([x, y], i) => `<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="${i % 2 ? 6 : 8.5}" fill="${i % 2 ? (dark ? C.ink : C.surface) : `url(#${id}g)`}" stroke="url(#${id}g)" stroke-width="4"/>`).join('') : ''}
+    <circle cx="78" cy="100" r="33" fill="none" stroke="${ringA}" stroke-width="13"/>
+    <circle cx="122" cy="100" r="33" fill="none" stroke="url(#${id}g)" stroke-width="13"/>
+    <circle cx="78" cy="100" r="33" fill="none" stroke="${ringA}" stroke-width="13" clip-path="url(#${id}c)"/>
   </svg>`;
-const wordmark = (s = 22) => `<div style="display:flex;align-items:center;gap:14px">${brandMark(s * 1.8)}
-  <div style="font-weight:700;font-size:${s}px;letter-spacing:.02em">On-Chain Operator Program</div></div>`;
+}
+const brandMark = (size = 40, dark = true) => logoMark(size, { dark, nodes: size >= 60 });
+function wordmark(s = 22, dark = true) {
+  return `<div style="display:flex;align-items:center;gap:${s * 0.6}px">${logoMark(s * 3, { dark, nodes: s >= 26 })}
+    <div style="line-height:1"><div style="font-weight:800;font-size:${s}px;letter-spacing:.06em;color:${dark ? '#fff' : C.ink}">ON-CHAIN <span style="color:${dark ? C.aquaDark : C.blue}">OPERATOR</span></div>
+    <div style="font-weight:600;font-size:${s * 0.5}px;letter-spacing:.42em;margin-top:${s * 0.3}px;color:${dark ? 'rgba(255,255,255,.6)' : C.text2}">PROGRAM</div></div></div>`;
+}
+function lockupStacked(scale = 1, dark = true) {
+  return `<div style="display:flex;flex-direction:column;align-items:center">${logoMark(540 * scale, { dark })}
+    <div style="font-weight:800;font-size:${86 * scale}px;letter-spacing:.14em;margin-top:${6 * scale}px;color:${dark ? '#fff' : C.ink}">ON-CHAIN</div>
+    <div style="font-weight:800;font-size:${60 * scale}px;letter-spacing:.34em;margin-top:${6 * scale}px;background:linear-gradient(90deg,${C.aquaDark},${C.blueDark});-webkit-background-clip:text;color:transparent">OPERATOR</div>
+    <div style="font-weight:600;font-size:${22 * scale}px;letter-spacing:.6em;margin-top:${18 * scale}px;color:${dark ? 'rgba(255,255,255,.6)' : C.text2}">PROGRAM</div></div>`;
+}
+function brandAsset(kind) {
+  if (kind === 'icon') return page(1024, 1024, 'dark', `${network(1024, 1024, 11, 30, 0.2)}
+    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">${lockupStacked(1)}</div>`);
+  if (kind === 'mark-dark') return page(1024, 1024, 'dark', `${network(1024, 1024, 4, 26, 0.18)}
+    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">${logoMark(760)}</div>`);
+  if (kind === 'mark-transparent-light') return page(1024, 1024, 'transparent', `<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">${logoMark(900, { dark: false })}</div>`);
+  if (kind === 'mark-transparent') return page(1024, 1024, 'transparent', `<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">${logoMark(900)}</div>`);
+  if (kind === 'horizontal-dark') return page(1800, 520, 'dark', `${network(1800, 520, 6, 30, 0.14)}
+    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">${wordmark(84)}</div>`);
+  if (kind === 'horizontal-light') return page(1800, 520, 'light', `<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">${wordmark(84, false)}</div>`);
+  if (kind === 'favicon') return page(256, 256, 'dark', `<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">${logoMark(230, { nodes: false })}</div>`);
+  if (kind === 'guide') return page(1920, 1080, 'dark', `${network(1920, 1080, 8, 40, 0.1)}
+    <div style="position:absolute;left:110px;top:90px;display:flex;justify-content:space-between;right:110px;align-items:center">${wordmark(20)}<div class="eyebrow" style="color:${C.aquaDark};font-size:20px">Brand guide</div></div>
+    <div style="position:absolute;left:110px;top:220px;width:760px;height:700px;border-radius:28px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center">${lockupStacked(0.95)}</div>
+    <div style="position:absolute;left:920px;top:220px;right:110px;height:330px;border-radius:28px;background:${C.surface};display:flex;align-items:center;justify-content:center">${wordmark(52, false)}</div>
+    <div style="position:absolute;left:920px;top:590px;right:110px;display:flex;gap:18px">
+      ${[['Ink', C.ink], ['Navy', C.navy], ['Brand', C.brand], ['Teal', C.aquaDark], ['Blue', C.blue], ['Orange', C.orange]].map(([n, c]) => `<div style="flex:1"><div style="height:120px;border-radius:16px;background:${c};border:1px solid rgba(255,255,255,.2)"></div><div style="font-size:20px;margin-top:10px;font-weight:700">${n}</div><div class="mono" style="font-size:16px;color:rgba(255,255,255,.65)">${c}</div></div>`).join('')}
+    </div>
+    <div style="position:absolute;left:920px;top:830px;right:110px;display:flex;gap:40px;align-items:flex-end">
+      <div><div style="font-size:64px;font-weight:800">Aa</div><div style="font-size:18px;color:rgba(255,255,255,.65)">Inter · 400–800</div></div>
+      <div><div class="mono" style="font-size:44px">x·y=k</div><div style="font-size:18px;color:rgba(255,255,255,.65)">JetBrains Mono · figures & formulas</div></div>
+      <div style="font-size:18px;color:rgba(255,255,255,.65);max-width:420px;line-height:1.4">Mark: two interlocked rings (a chain) inside a block. Keep clear space of one ring's width. Never recolour the rings or stretch the mark.</div>
+    </div>`);
+}
 
 // ---------- store assets (dark) ----------
-function storeIcon() {
-  const w = 1024;
-  return page(w, w, 'dark', `${network(w, w, 11, 30, 0.22)}
-  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px">
-    <svg width="560" height="360" viewBox="0 0 280 180">
-      <circle cx="90" cy="90" r="62" fill="none" stroke="#fff" stroke-width="14"/>
-      <circle cx="190" cy="90" r="62" fill="none" stroke="#fff" stroke-width="14"/>
-      <path d="M140 46v88" stroke="${C.aquaDark}" stroke-width="14" stroke-linecap="round"/>
-      <circle cx="140" cy="90" r="10" fill="${C.aquaDark}"/>
-    </svg>
-    <div class="eyebrow" style="font-size:54px;color:#fff;letter-spacing:.3em">ON-CHAIN</div>
-    <div class="eyebrow" style="font-size:34px;color:${C.aquaDark};letter-spacing:.42em;margin-top:-26px">OPERATOR</div>
-  </div>`);
-}
+function storeIcon() { return brandAsset('icon'); }
 
 function storeBanner() {
   const w = 1920, h = 1080;
-  const stats = [['9', 'modules'], ['45', 'lessons'], ['16', 'strategy playbooks'], ['1', 'capstone']];
+  const stats = [['15', 'modules'], ['76', 'lessons'], ['25', 'strategy playbooks'], ['2', 'capstones']];
   return page(w, h, 'dark', `${network(w, h, 3, 60)}
-  <div style="position:absolute;left:120px;top:110px">${wordmark(26)}</div>
-  <div style="position:absolute;left:120px;top:300px;width:1180px">
-    <div class="eyebrow" style="color:${C.aquaDark};font-size:24px">The risk-first DeFi operating system</div>
-    <div style="font-size:112px;font-weight:800;line-height:1.02;margin-top:26px;letter-spacing:-.02em">Research. Size.<br>Exit. <span style="color:${C.aquaDark}">On-chain.</span></div>
-    <div style="font-size:34px;line-height:1.4;color:rgba(255,255,255,.82);margin-top:34px;width:1000px">Learn to research any protocol, know exactly where yield comes from, and never sign a position you can't unwind.</div>
+  <div style="position:absolute;right:110px;top:200px">${logoMark(600)}</div>
+  <div style="position:absolute;left:120px;top:100px">${wordmark(30)}</div>
+  <div style="position:absolute;left:120px;top:330px;width:1150px">
+    <div class="eyebrow" style="color:${C.aquaDark};font-size:24px">Zero to operator · the risk-first DeFi program</div>
+    <div style="font-size:104px;font-weight:800;line-height:1.02;margin-top:26px;letter-spacing:-.02em">From zero to your<br>own <span style="color:${C.aquaDark}">on-chain bank.</span></div>
+    <div style="font-size:32px;line-height:1.42;color:rgba(255,255,255,.82);margin-top:34px;width:1020px">DeFi from first principles to professional strategies. Build a risk-adjusted income engine and run your capital like a bank, with written policy for every position.</div>
   </div>
-  <div style="position:absolute;left:120px;bottom:120px;display:flex;gap:26px">
+  <div style="position:absolute;left:120px;bottom:110px;display:flex;gap:26px">
     ${stats.map(([a, b]) => `<div style="padding:22px 34px;border:1px solid rgba(255,255,255,.18);border-radius:18px;background:rgba(255,255,255,.05)">
       <div style="font-size:52px;font-weight:800">${a}</div><div style="font-size:22px;color:rgba(255,255,255,.7)">${b}</div></div>`).join('')}
   </div>
-  ${heroVisual(1360, 250)}
-  <div class="foot" style="padding:22px 120px"><span>${DISCLAIMER}</span><span>Live tier available</span></div>`);
+  <div class="foot" style="padding:22px 120px"><span>${DISCLAIMER}</span><span>Course · Live tier</span></div>`);
 }
 
 // Stylised concentrated-liquidity range visual used on the banner.
@@ -162,17 +220,48 @@ function galleryShell(eyebrow, title, body, seed) {
 }
 
 function galleryCurriculum() {
-  const cards = MODULES.map(m => `<div style="border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);border-radius:20px;padding:26px 28px;display:flex;gap:22px;align-items:flex-start">
-    <div style="flex:none;width:62px;height:62px;border-radius:16px;background:rgba(46,230,166,.14);display:flex;align-items:center;justify-content:center;color:${C.aquaDark}">${icon(m.i, 34)}</div>
-    <div><div style="font-size:17px;color:rgba(255,255,255,.6);font-weight:600">MODULE ${m.n} · ${m.l} LESSONS</div>
-    <div style="font-size:29px;font-weight:700;margin-top:6px">${m.t}</div>
-    <div style="font-size:19px;color:rgba(255,255,255,.72);margin-top:8px;line-height:1.35">${m.o}</div></div></div>`).join('');
-  return galleryShell('Curriculum', '9 modules · 45 lessons · 1 capstone',
-    `<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">${cards}</div>`, 5);
+  const cards = MODULES.map(m => `<div style="border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);border-radius:18px;padding:22px 22px">
+    <div style="display:flex;align-items:center;gap:14px"><div style="flex:none;width:50px;height:50px;border-radius:14px;background:rgba(46,230,166,.14);display:flex;align-items:center;justify-content:center;color:${C.aquaDark}">${icon(m.i, 28)}</div>
+    <div style="font-size:15px;color:rgba(255,255,255,.6);font-weight:700;letter-spacing:.06em">MODULE ${m.n} · ${m.l} LESSONS</div></div>
+    <div style="font-size:25px;font-weight:700;margin-top:14px;line-height:1.2">${m.t}</div></div>`).join('');
+  return galleryShell('Curriculum', '15 modules · 76 lessons · 2 capstones',
+    `<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:20px">${cards}</div>`, 5);
 }
 
+function pathHtml(dark) {
+  const fg = dark ? '#fff' : C.ink, sub = dark ? 'rgba(255,255,255,.72)' : C.text2, acc = dark ? C.aquaDark : C.blue;
+  return `<div style="display:flex;align-items:flex-end;gap:18px;height:100%">
+    ${STAGES.map(([n, name, mods, can], i) => `<div style="flex:1;height:${34 + i * 13}%;border-radius:20px 20px 8px 8px;padding:24px 22px;display:flex;flex-direction:column;justify-content:flex-end;
+      background:${dark ? `rgba(46,230,166,${0.05 + i * 0.035})` : (i === 5 ? C.brand : '#fff')};border:1.5px solid ${dark ? 'rgba(46,230,166,.35)' : (i === 5 ? C.brand : C.line)};color:${!dark && i === 5 ? '#fff' : fg}">
+      <div style="font-size:18px;font-weight:700;letter-spacing:.12em;color:${!dark && i === 5 ? 'rgba(255,255,255,.75)' : acc}">STAGE ${n}</div>
+      <div style="font-size:32px;font-weight:800;margin-top:6px">${name}</div>
+      <div style="font-size:18px;margin-top:8px;opacity:.85">Modules ${mods.length > 1 ? `${mods[0]}–${mods[mods.length - 1]}` : mods[0]}</div>
+      <div style="font-size:19px;margin-top:10px;line-height:1.35;color:${!dark && i === 5 ? 'rgba(255,255,255,.85)' : sub}">${can}</div></div>`).join('')}
+  </div>`;
+}
+function galleryPath() { return galleryShell('The path', 'From knowing nothing to operating your own bank', pathHtml(true), 23); }
+
+function ownBankHtml(dark) {
+  const fg = dark ? '#fff' : C.ink, sub = dark ? 'rgba(255,255,255,.75)' : C.text2, acc = dark ? C.aquaDark : C.blue;
+  const card = dark ? 'rgba(255,255,255,.06)' : '#fff', line = dark ? 'rgba(255,255,255,.18)' : C.line;
+  const pillars = [['vault', 'Custody', 'Multisig vault, limits, allowlists'], ['bank', 'Credit line', 'Borrow against assets under policy'],
+    ['coins', 'Lending desk', 'Supply, curate, price credit risk'], ['layers', 'Treasury', 'Liquidity ladder T0–T3']];
+  return `<div style="display:flex;flex-direction:column;height:100%;gap:18px">
+    <div style="height:26%;clip-path:polygon(50% 0,100% 100%,0 100%);background:${dark ? 'rgba(46,230,166,.16)' : C.brand};display:flex;align-items:flex-end;justify-content:center;padding-bottom:18px">
+      <div style="text-align:center;color:${dark ? '#fff' : '#fff'}"><div style="font-size:34px;font-weight:800">Your on-chain bank</div><div style="font-size:20px;opacity:.85">Income engine · payout policy</div></div></div>
+    <div style="flex:1;display:flex;gap:22px">
+      ${pillars.map(([ic, tt, s]) => `<div style="flex:1;border-radius:16px;background:${card};border:1.5px solid ${line};padding:26px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+        <div style="color:${acc}">${icon(ic, 46)}</div><div style="font-size:30px;font-weight:800;margin-top:14px;color:${fg}">${tt}</div>
+        <div style="font-size:20px;margin-top:8px;color:${sub};line-height:1.35">${s}</div></div>`).join('')}
+    </div>
+    <div style="height:13%;border-radius:12px;background:${dark ? 'rgba(255,255,255,.08)' : C.panel};border:1.5px solid ${line};display:flex;align-items:center;justify-content:center;gap:12px;font-size:24px;font-weight:700;color:${fg}">
+      <span style="color:${acc}">${icon('book', 30)}</span>Books · records · succession</div>
+  </div>`;
+}
+function galleryOwnBank() { return galleryShell('Stage 5 · Operator', 'Operate as your own bank', ownBankHtml(true), 29); }
+
 function galleryLoop() { return galleryShell('Method', 'The 6-step research loop', loopSvg(true), 9); }
-function galleryLevels() { return galleryShell('Strategy library', '16 strategies, 5 levels, risk first', levelsHtml(true), 13); }
+function galleryLevels() { return galleryShell('Strategy library', '25 strategies, 6 levels, risk first', levelsHtml(true), 13); }
 function galleryGridLp() { return galleryShell('Module 9', 'A DeFi LP is an on-chain grid bot', gridLpSvg(true), 17); }
 
 function galleryIncluded() {
@@ -182,8 +271,8 @@ function galleryIncluded() {
     ${items.map(([ic, t]) => `<div style="display:flex;gap:20px;align-items:center;margin:26px 0;font-size:32px;color:rgba(255,255,255,.92)"><span style="color:${C.aquaDark}">${icon(ic, 36)}</span>${t}</div>`).join('')}
   </div>`;
   return galleryShell('What\'s included', 'Two ways to join', `<div style="display:flex;gap:36px;height:100%">
-    ${col('Course', 'Self-paced', [['book', '9 modules, 45 lessons'], ['check', 'Checklists & quizzes every lesson'], ['search', 'Due-diligence & pre-launch worksheets'], ['chart', 'Strategy calculator'], ['lock', 'Capstone project']], false)}
-    ${col('Live', 'Course + coaching', [['check', 'Everything in Course'], ['video', 'Live group sessions'], ['users', 'Capstone & portfolio reviews'], ['search', 'Protocol research Q&A'], ['shield', 'Risk-plan feedback']], true)}
+    ${col('Course', 'Self-paced', [['book', '15 modules, 76 lessons, zero to operator'], ['target', '25 strategy playbooks'], ['search', 'Due-diligence & bank-policy worksheets'], ['chart', 'Strategy, income & bank calculators'], ['lock', 'Analyst + operator capstones']], false)}
+    ${col('Live', 'Course + coaching', [['check', 'Everything in Course'], ['video', 'Live group sessions'], ['users', 'Capstone & portfolio reviews'], ['vault', 'Own-bank policy review'], ['coins', 'Income-engine & payout review']], true)}
   </div>`, 19);
 }
 
@@ -192,15 +281,15 @@ function moduleBanner(m) {
   const w = 1600, h = 500;
   return page(w, h, 'dark', `${network(w, h, 30 + m.n, 34, 0.14)}
   <div style="position:absolute;left:80px;top:0;bottom:0;display:flex;align-items:center;gap:40px">
-    <div style="width:330px;flex:none;font-size:230px;font-weight:800;line-height:1;color:transparent;-webkit-text-stroke:3px rgba(255,255,255,.35)">${String(m.n).padStart(2, '0')}</div>
-    <div style="width:880px">
+    <div style="width:340px;flex:none;font-size:${m.n > 9 ? 200 : 230}px;letter-spacing:-.04em;font-weight:800;line-height:1;color:transparent;-webkit-text-stroke:3px rgba(255,255,255,.35)">${String(m.n).padStart(2, '0')}</div>
+    <div style="width:820px">
       <div class="eyebrow" style="color:${C.aquaDark};font-size:22px">Module ${m.n} · ${m.l} lessons</div>
-      <div style="font-size:66px;font-weight:800;margin-top:12px;letter-spacing:-.015em;white-space:nowrap">${m.t}</div>
+      <div style="font-size:${m.t.length > 22 ? 54 : 66}px;font-weight:800;margin-top:12px;letter-spacing:-.015em;white-space:nowrap">${m.t}</div>
       <div style="font-size:28px;color:rgba(255,255,255,.8);margin-top:18px;line-height:1.35">${m.o}</div>
     </div>
   </div>
   <div style="position:absolute;right:90px;top:50%;transform:translateY(-50%);width:170px;height:170px;border-radius:40px;background:rgba(46,230,166,.12);border:1px solid rgba(46,230,166,.4);display:flex;align-items:center;justify-content:center;color:${C.aquaDark}">${icon(m.i, 96, 'currentColor', 1.5)}</div>
-  <div style="position:absolute;left:80px;bottom:34px;font-size:18px;color:rgba(255,255,255,.55)">On-Chain Operator Program</div>`);
+  <div style="position:absolute;left:80px;bottom:26px;transform:scale(.9);transform-origin:left bottom">${wordmark(14)}</div>`);
 }
 
 // ---------- diagrams (light for documents; some reused dark in gallery) ----------
@@ -211,7 +300,7 @@ function lightShell(w, h, title, sub, body) {
     ${sub ? `<div style="font-size:22px;color:${C.text2};margin-top:10px">${sub}</div>` : ''}
   </div>
   <div style="position:absolute;left:64px;right:64px;top:${sub ? 170 : 130}px;bottom:70px">${body}</div>
-  <div class="foot" style="padding:18px 64px;font-size:14px"><span>On-Chain Operator Program</span><span>${DISCLAIMER}</span></div>`);
+  <div class="foot" style="padding:14px 64px;font-size:14px;align-items:center"><span style="display:flex;align-items:center;gap:10px">${logoMark(30, { dark: false, nodes: false })}On-Chain Operator Program</span><span>${DISCLAIMER}</span></div>`);
 }
 
 function loopSvg(dark) {
@@ -236,14 +325,15 @@ function loopSvg(dark) {
 function levelsHtml(dark) {
   const L = [['1', 'Core', 'Stable lending · Staking & LSTs · Collateral borrowing'], ['2', 'Liquidity', '50/50 LP · Concentrated LP · Stable-stable LP'],
     ['3', 'Yield', 'Vaults · Incentive farming · Airdrops & points'], ['4', 'Advanced', 'Leveraged loops · LST loops · Funding carry · LP hedge'],
-    ['5', 'Treasury & research', 'Cash management · Accumulation & growth screens']];
+    ['5', 'Treasury & research', 'Cash management · Accumulation & growth screens'],
+    ['6', 'Professional', 'PT/YT fixed rate · Basis · Options · Credit lines · Lending vaults · Hedged restaking']];
   const fg = dark ? '#fff' : C.ink, sub = dark ? 'rgba(255,255,255,.75)' : C.text2;
-  return `<div style="display:flex;flex-direction:column;gap:18px;height:100%;justify-content:center">
-    ${L.map(([n, t, s], i) => `<div style="display:flex;align-items:center;gap:30px;margin-left:${i * 70}px;padding:20px 30px;border-radius:18px;
+  return `<div style="display:flex;flex-direction:column;gap:10px;height:100%;justify-content:center">
+    ${L.map(([n, t, s], i) => `<div style="display:flex;align-items:center;gap:30px;margin-left:${i * 56}px;padding:11px 30px;border-radius:18px;
       background:${dark ? `rgba(46,230,166,${0.05 + i * 0.03})` : '#fff'};border:1px solid ${dark ? 'rgba(46,230,166,.35)' : C.line}">
-      <div style="font-size:54px;font-weight:800;width:60px;color:${dark ? C.aquaDark : C.blue}">${n}</div>
+      <div style="font-size:46px;font-weight:800;width:60px;color:${dark ? C.aquaDark : C.blue}">${n}</div>
       <div style="font-size:32px;font-weight:700;width:360px;color:${fg}">${t}</div>
-      <div style="font-size:24px;color:${sub}">${s}</div></div>`).join('')}
+      <div style="font-size:22px;color:${sub};white-space:nowrap">${s}</div></div>`).join('')}
     <div style="font-size:22px;color:${sub};margin-top:8px">Graduate a level only when the one below is routine. Leverage and carry come last.</div>
   </div>`;
 }
@@ -424,18 +514,103 @@ function chartLoop() {
     </svg>`);
 }
 
+function diagramCustody() {
+  const tiers = [['vault', 'Vault', 'Most of your equity', ['2-of-3 multisig, keys in separate places', 'No DeFi approvals', 'Outflows allowlisted + timelocked']],
+    ['wallet', 'Operating', 'Active positions', ['Hardware wallet or limited smart account', 'Verified protocols only', 'Daily spending limit']],
+    ['flame', 'Hot', 'Small float', ['Anything new or experimental', 'Refilled on schedule', 'A drain costs only the float']]];
+  const body = `<div style="display:flex;flex-direction:column;gap:0;height:100%;justify-content:center">
+    ${tiers.map(([ic, t2, h2, rules], i) => `
+      <div style="display:flex;align-items:center;gap:28px;background:#fff;border:1.5px solid ${i === 0 ? C.brand : C.line};border-radius:18px;padding:22px 30px;margin:0 ${i * 90}px">
+        <div style="width:70px;height:70px;border-radius:18px;background:${i === 0 ? C.brand : C.panel};color:${i === 0 ? '#fff' : C.blue};display:flex;align-items:center;justify-content:center;flex:none">${icon(ic, 38)}</div>
+        <div style="width:260px;flex:none"><div style="font-size:32px;font-weight:800;color:${C.ink}">${t2}</div><div style="font-size:20px;color:${C.text2}">${h2}</div></div>
+        <div style="display:flex;gap:26px;font-size:20px;color:${C.text}">${rules.map(r => `<div style="display:flex;gap:8px;align-items:center"><span style="color:${C.blue}">${icon('check', 22)}</span>${r}</div>`).join('')}</div>
+      </div>
+      ${i < 2 ? `<div style="display:flex;justify-content:space-between;padding:10px ${i * 90 + 120}px;font-size:18px;color:${C.text2}"><span>↓ funds move down only as needed</span><span>profits swept back up ↑</span></div>` : ''}`).join('')}
+  </div>`;
+  return lightShell(1800, 820, 'Custody architecture', 'No single lost device, stolen key or bad signature can drain the bank', body);
+}
+
+function diagramLadder2() {
+  const T = [['T0', 'Instant', 'Seconds', 'Stablecoins in the operating wallet', '1 month · $5,000', 58],
+    ['T1', 'Same day', 'Hours', 'Blue-chip lending, split across 2 protocols', '5 months · $25,000', 72],
+    ['T2', 'Term', 'Scheduled', 'PTs maturing when money is needed', 'Next 6–12 months of plans', 86],
+    ['T3', 'Growth', 'Days–weeks', 'Strategy positions, LPs, staking', 'The rest, within caps', 100]];
+  const body = `<div style="display:flex;flex-direction:column;gap:18px;height:100%;justify-content:center">
+    ${T.map(([k, n, acc, what, size, w], i) => `<div style="display:flex;align-items:center;gap:26px">
+      <div style="width:90px;font-size:40px;font-weight:800;color:${C.blue}">${k}</div>
+      <div style="width:${w}%;background:${i === 0 ? C.brand : '#fff'};color:${i === 0 ? '#fff' : C.ink};border:1.5px solid ${i === 0 ? C.brand : C.line};border-radius:14px;padding:18px 26px;display:flex;gap:30px;align-items:center">
+        <div style="width:170px;flex:none"><div style="font-size:26px;font-weight:800">${n}</div><div style="font-size:18px;opacity:.75">${acc}</div></div>
+        <div style="font-size:21px;flex:1">${what}</div><div style="font-size:20px;font-weight:700;white-space:nowrap">${size}</div></div></div>`).join('')}
+    <div style="font-size:20px;color:${C.text2};margin-left:116px">Refill downward on a schedule. Never fund a T0 need by selling T3 in a bad market. Example: $5,000/month spending.</div>
+  </div>`;
+  return lightShell(1800, 760, 'The liquidity ladder', 'Match the timing of your assets to the timing of what you owe', body);
+}
+
+function chartPT() {
+  const W = 1672, H = 600, m = { l: 110, r: 40, t: 20, b: 70 }, r = 0.0863, T = 180;
+  const xs = v => m.l + v / T * (W - m.l - m.r), ys = v => m.t + (1.01 - v) / 0.06 * (H - m.t - m.b);
+  const pt = d => Math.pow(1 + r, -(T - d) / 365);
+  let d = '';
+  for (let x = 0; x <= T; x += 1) d += `${x ? 'L' : 'M'}${xs(x).toFixed(1)},${ys(pt(x)).toFixed(1)}`;
+  return lightShell(1800, 820, 'Principal tokens pull to par', 'PT bought at 0.96 with 180 days left redeems at 1.00: an 8.63% fixed APY if held to maturity.',
+    `<svg width="100%" height="100%" viewBox="0 0 ${W} ${H}">
+    ${axisFrame(W, H, m, [0, 30, 60, 90, 120, 150, 180], [0.95, 0.96, 0.97, 0.98, 0.99, 1.0], xs, ys, 'Days since purchase', 'PT price (in underlying)', v => v, v => v.toFixed(2))}
+    <path d="M${xs(0)},${ys(1)} H${xs(T)}" stroke="${C.orange}" stroke-width="2.5" stroke-dasharray="10 8"/>
+    <path d="${d}" fill="none" stroke="${C.blue}" stroke-width="3"/>
+    ${dot(xs(0), ys(pt(0)))}${label(xs(0) + 16, ys(pt(0)) + 34, 'Buy at 0.96')}
+    ${dot(xs(T), ys(1), C.orange)}${label(xs(T) - 16, ys(1) - 18, 'Redeem 1:1 at maturity', 'end')}
+    ${label(xs(90) + 16, ys(pt(90)) + 36, `Day 90 ≈ ${pt(90).toFixed(3)} (if the implied rate holds)`, 'start', 600)}
+    ${label(xs(4), ys(1) - 16, 'Underlying = 1.00 (dashed)', 'start', 600)}
+    </svg>`);
+}
+
+function chartIncome() {
+  const W = 1672, H = 600, m = { l: 120, r: 40, t: 30, b: 70 };
+  const steps = [['Headline yield', 26800, 'total'], ['Expected losses', -3500, 'minus'], ['Expected income', 23300, 'total'], ['Retained buffer (30%)', -6990, 'minus'], ['Sustainable payout', 16310, 'total']];
+  const ys = v => m.t + (30000 - v) / 30000 * (H - m.t - m.b);
+  const bw = 200, gap = (W - m.l - m.r - bw * steps.length) / (steps.length - 1);
+  let level = 0, bars = '';
+  steps.forEach(([name, v, kind], i) => {
+    const x = m.l + i * (bw + gap);
+    const top = kind === 'total' ? v : level, bottom = kind === 'total' ? 0 : level + v;
+    if (kind === 'total') level = v; else level = level + v;
+    const col = kind === 'total' ? C.blue : C.orange;
+    bars += `<rect x="${x}" y="${ys(top)}" width="${bw}" height="${ys(bottom) - ys(top)}" rx="4" fill="${col}"/>
+      <text x="${x + bw / 2}" y="${ys(top) - 14}" text-anchor="middle" font-size="24" font-weight="800" fill="${C.text}" font-family="Inter">${v < 0 ? '−' : ''}$${Math.abs(v).toLocaleString()}</text>
+      <text x="${x + bw / 2}" y="${H - m.b + 34}" text-anchor="middle" font-size="19" fill="${C.text2}" font-family="Inter">${name}</text>`;
+    if (i < steps.length - 1) bars += `<line x1="${x + bw}" x2="${x + bw + gap}" y1="${ys(level)}" y2="${ys(level)}" stroke="#9aa3ad" stroke-dasharray="5 5"/>`;
+  });
+  const grid = [0, 10000, 20000, 30000].map(v => `<line x1="${m.l}" x2="${W - m.r}" y1="${ys(v)}" y2="${ys(v)}" stroke="${v ? '#E6EAF0' : '#9aa3ad'}"/><text x="${m.l - 14}" y="${ys(v) + 7}" text-anchor="end" font-size="20" fill="${C.text2}" font-family="Inter">$${v / 1000}k</text>`).join('');
+  return lightShell(1800, 820, 'From headline yield to a sustainable payout', 'Illustrative $500,000 income portfolio (Module 13). Loss rates are assumptions; income is not guaranteed.',
+    `<svg width="100%" height="100%" viewBox="0 0 ${W} ${H}">${grid}${bars}</svg>`);
+}
+
 // ---------- registry ----------
 const ASSETS = [
+  ['brand/logo-icon-1024.png', 1024, 1024, () => brandAsset('icon')],
+  ['brand/logo-mark-dark-1024.png', 1024, 1024, () => brandAsset('mark-dark')],
+  ['brand/logo-mark-transparent-dark-1024.png', 1024, 1024, () => brandAsset('mark-transparent')],
+  ['brand/logo-mark-transparent-light-1024.png', 1024, 1024, () => brandAsset('mark-transparent-light')],
+  ['brand/logo-horizontal-dark.png', 1800, 520, () => brandAsset('horizontal-dark')],
+  ['brand/logo-horizontal-light.png', 1800, 520, () => brandAsset('horizontal-light')],
+  ['brand/favicon-256.png', 256, 256, () => brandAsset('favicon')],
+  ['brand/brand-guide.png', 1920, 1080, () => brandAsset('guide')],
   ['store/icon-1024.png', 1024, 1024, storeIcon],
   ['store/banner-1920x1080.png', 1920, 1080, storeBanner],
-  ['store/gallery-01-curriculum.png', 1920, 1080, galleryCurriculum],
-  ['store/gallery-02-research-loop.png', 1920, 1080, galleryLoop],
-  ['store/gallery-03-strategy-levels.png', 1920, 1080, galleryLevels],
-  ['store/gallery-04-grid-vs-lp.png', 1920, 1080, galleryGridLp],
-  ['store/gallery-05-whats-included.png', 1920, 1080, galleryIncluded],
+  ['store/gallery-01-path-to-mastery.png', 1920, 1080, galleryPath],
+  ['store/gallery-02-curriculum.png', 1920, 1080, galleryCurriculum],
+  ['store/gallery-03-own-bank.png', 1920, 1080, galleryOwnBank],
+  ['store/gallery-04-strategy-levels.png', 1920, 1080, galleryLevels],
+  ['store/gallery-05-research-loop.png', 1920, 1080, galleryLoop],
+  ['store/gallery-06-grid-vs-lp.png', 1920, 1080, galleryGridLp],
+  ['store/gallery-07-whats-included.png', 1920, 1080, galleryIncluded],
   ...MODULES.map(m => [`modules/module-${String(m.n).padStart(2, '0')}.png`, 1600, 500, () => moduleBanner(m)]),
+  ['diagrams/path-to-mastery.png', 1800, 820, () => lightShell(1800, 820, 'The path to mastery', 'Six stages from knowing nothing to operating your own on-chain bank', pathHtml(false))],
+  ['diagrams/own-bank.png', 1800, 900, () => lightShell(1800, 900, 'Operate as your own bank', 'Four pillars on a base of records, under one income policy', ownBankHtml(false))],
+  ['diagrams/custody-architecture.png', 1800, 820, diagramCustody],
+  ['diagrams/liquidity-ladder.png', 1800, 760, diagramLadder2],
   ['diagrams/research-loop.png', 1800, 640, () => lightShell(1800, 640, 'The 6-step research loop', 'Run every protocol through it before any capital moves', loopSvg(false))],
-  ['diagrams/strategy-levels.png', 1800, 860, () => lightShell(1800, 860, 'The strategy library', '16 strategies in 5 levels', levelsHtml(false))],
+  ['diagrams/strategy-levels.png', 1800, 900, () => lightShell(1800, 900, 'The strategy library', '25 strategies in 6 levels', levelsHtml(false))],
   ['diagrams/grid-vs-lp.png', 1800, 860, () => lightShell(1800, 860, 'Grid bot vs concentrated LP', 'Same range, almost the same inventory path', gridLpSvg(false))],
   ['diagrams/liquidation-cascade.png', 1800, 900, diagramLiquidation],
   ['diagrams/three-wallets.png', 1800, 720, diagramWallets],
@@ -446,6 +621,8 @@ const ASSETS = [
   ['charts/impermanent-loss.png', 1800, 820, chartIL],
   ['charts/amm-curve.png', 1800, 820, chartAMM],
   ['charts/loop-spread.png', 1800, 820, chartLoop],
+  ['charts/pt-convergence.png', 1800, 820, chartPT],
+  ['charts/income-waterfall.png', 1800, 820, chartIncome],
 ];
 
 (async () => {
@@ -456,7 +633,7 @@ const ASSETS = [
   const pages = { 1: await browser.newPage({ deviceScaleFactor: 1 }), 2: await browser.newPage({ deviceScaleFactor: 2 }) };
   for (const [rel, w, h, fn] of ASSETS) {
     if (only && !rel.includes(only)) continue;
-    const page = pages[rel.startsWith('store/') ? 1 : 2];
+    const page = pages[rel.startsWith('store/') || rel.startsWith('brand/') ? 1 : 2];
     const file = path.join(RENDER, rel.replace(/\//g, '_') + '.html');
     fs.writeFileSync(file, fn());
     await page.setViewportSize({ width: w, height: h });
@@ -464,7 +641,7 @@ const ASSETS = [
     await page.evaluate(() => document.fonts.ready);
     const out = path.join(OUT, rel);
     fs.mkdirSync(path.dirname(out), { recursive: true });
-    await (await page.$('#root')).screenshot({ path: out });
+    await (await page.$('#root')).screenshot({ path: out, omitBackground: rel.includes('transparent') });
     console.log('wrote', path.relative(path.dirname(OUT), out));
   }
   await browser.close();

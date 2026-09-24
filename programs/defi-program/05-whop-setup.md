@@ -4,7 +4,7 @@
 | Item | Decision |
 |---|---|
 | Name | On-Chain Operator Program |
-| Tier 1 — Course (self-paced, 9 modules, worksheets, capstone) | **$15,000 one-time** (no payment plan) |
+| Tier 1 — Course (self-paced, 15 modules, 76 lessons, worksheets, 2 capstones) | **$15,000 one-time** (no payment plan) |
 | Tier 2 — Live (course + live sessions) | **Priced above $15,000 — number TBD** |
 | Audience | Everyone at launch (GBB customers, Elite Intel members, cold ads) |
 | Sales path | **Application → call → checkout** (no straight-to-checkout ads) |
@@ -42,8 +42,9 @@ the Starter tier / GBB price conflict.
 Nothing gets created until you've seen the exact values and said yes.
 
 ## Step 3 — Upload content
-Written and ready to paste in: Modules 1, 2 and 9, plus lesson 8.3
-(`lessons/`, `02-…`, `03-…`). Modules 3–8 are still being written.
+Written and ready to paste in (32 of 76 lessons): Modules 1, 2, 9, 10, 12
+and 13, plus lesson 8.3 (`lessons/`, `02-…`, `03-…`). Still to write:
+Module 0, Modules 3–7, lessons 8.1/8.2/8.4, Modules 11 and 14.
 
 ## Step 4 — High-ticket sales path
 ![High-ticket sales path](assets/diagrams/sales-funnel.png)

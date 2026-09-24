@@ -50,10 +50,9 @@ function inline(tokens, base = {}) {
 }
 
 // Markdown images resolve relative to the master file; fit to text width.
-function imageRun(href) {
+function imageRun(href, width = 600) {
   const buf = fs.readFileSync(path.resolve(path.dirname(src), href));
   const w = buf.readUInt32BE(16), h = buf.readUInt32BE(20);
-  const width = 600;
   return new ImageRun({ type: 'png', data: buf, transformation: { width, height: Math.round(h * width / w) } });
 }
 
@@ -160,11 +159,11 @@ const body = tokens.flatMap(block);
 
 const title = [
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 400, after: 600 },
-    children: [imageRun(path.relative(path.dirname(src), path.resolve(__dirname, '../assets/store/banner-1920x1080.png')))] }),
+    children: [imageRun(path.relative(path.dirname(src), path.resolve(__dirname, '../assets/brand/logo-icon-1024.png')), 380)] }),
   new Paragraph({ spacing: { before: 200, after: 200 }, alignment: AlignmentType.CENTER,
     children: [new TextRun({ text: 'On-Chain Operator Program', bold: true, size: 56, color: ACCENT })] }),
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 600 },
-    children: [new TextRun({ text: 'Master File — Offer, Curriculum, Setup, Funnel & Course Content', size: 28, color: '404040' })] }),
+    children: [new TextRun({ text: 'From zero to your own on-chain bank · Master File', size: 28, color: '404040' })] }),
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 120 },
     children: [new TextRun({ text: `Draft · ${new Date().toISOString().slice(0, 10)}`, size: 22, color: '707070' })] }),
   new Paragraph({ alignment: AlignmentType.CENTER,

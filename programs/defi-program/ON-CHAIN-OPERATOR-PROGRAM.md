@@ -1,8 +1,11 @@
 # On-Chain Operator Program — Master File
 
+![On-Chain Operator Program](assets/brand/logo-horizontal-light.png)
+
 *Generated 2026-09-24 from `programs/defi-program/`. Don't edit this file directly: edit the source files and run `python3 programs/defi-program/build_master.py`.*
 
 ## Contents
+0. Brand & logo (see `06-whop-store-listing.md`)
 1. Build status
 2. Offer, decisions & curriculum
 3. Whop setup
@@ -23,19 +26,23 @@ Rebuild: `python3 programs/defi-program/build_master.py`, then `cd programs/defi
 
 | File | Phase | Status |
 |---|---|---|
-| `01-offer-and-curriculum.md` | 1–2 Offer + curriculum | Draft, waiting on your decisions |
+| `01-offer-and-curriculum.md` | 1–2 Offer + curriculum | Decisions locked; curriculum expanded to 6 stages · 15 modules · 76 lessons |
 | `02-sample-lesson-amm-math.md` | Lesson 2.2 | Written |
 | `03-defi-strategy-mastery.md` | Lesson 8.3 (strategy library) | Written |
 | `04-funnel-changes.md` | 4 Funnel wiring | Draft, not applied to Zapier |
 | `05-whop-setup.md` | 3 Whop setup | Decisions locked; waiting on Whop reconnect + product ID |
 | `06-whop-store-listing.md` | Store product listing: copy + image upload map | Ready to paste (3 placeholders) |
-| `assets/` | 28 images: store icon/banner/gallery, 9 module banners, diagrams, charts | Rendered by `export/build_images.js` |
-| `lessons/module-01-foundations-safety.md` | Module 1 (6 lessons) | Written |
-| `lessons/module-02-trading-on-chain.md` | Module 2 (2.1, 2.3–2.5; 2.2 is the sample) | Written |
-| `lessons/module-09-defi-vs-grid-bots.md` | Module 9 (3 lessons) | Written |
+| `assets/` | 50 images: logo system (8), store icon + banner + 7 gallery (9), 15 module banners, 13 diagrams, 5 charts | Rendered by `export/build_images.js` |
+| `lessons/module-01-foundations-safety.md` | Module 1 (6) | Written |
+| `lessons/module-02-trading-on-chain.md` | Module 2 (4 + sample 2.2) | Written |
+| `lessons/module-09-defi-vs-grid-bots.md` | Module 9 (3) | Written |
+| `lessons/module-10-advanced-yield-engineering.md` | Module 10 (6) | Written |
+| `lessons/module-12-own-bank.md` | Module 12 (6) | Written |
+| `lessons/module-13-income-engine.md` | Module 13 (5) | Written |
 
-Lessons written: Modules 1, 2 and 9 in full, plus 8.3 (15 of 45).
-Still to write: Module 3 · 4 · 5 · 6 · 7 · 8.1, 8.2, 8.4.
+
+Lessons written: 32 of 76 (Modules 1, 2, 9, 10, 12, 13 + lesson 8.3).
+Still to write (44): Module 0 · Modules 3–7 · lessons 8.1, 8.2, 8.4 · Module 11 · Module 14.
 Phase 3: blocked until Whop is reconnected in Zapier and the product is created in the Whop dashboard (see `05-whop-setup.md`).
 
 ---
@@ -57,7 +64,7 @@ your call before phase 3 (Whop setup).
 | Price | **Course $15,000 one-time** · live tier priced higher (TBD) |
 | Refund policy | Open |
 | Starter tier / GBB pricing conflict | Open |
-| 9-module structure | Assumed OK unless you say otherwise |
+| Structure | **15 modules, 76 lessons, 6 stages: zero to operator** (expanded 2026-09-24) |
 
 **What $15,000 changes (recommendations, your call):**
 - It becomes the top of the ladder (above Grid Bot Elite at $2,497), so it
@@ -111,7 +118,7 @@ lower CAC, real feedback), open to cold traffic once conversion is proven.
 
 ### Format — DECIDE
 *Superseded: see "Decisions so far" at the top. Kept for the record.*
-- **Core (recommended):** self-paced Whop course (9 modules below) + worksheets
+- **Core (recommended):** self-paced Whop course (15 modules below) + worksheets
   (the two Notion trackers as templates) + quizzes + capstone.
 - **Optional higher tier:** Core + live monthly DeFi Q&A / portfolio review.
   Your Calendly already has `vip-defi-consult` and `defi` links — are those
@@ -142,17 +149,47 @@ course, suggest **14 days, if under 30% of lessons completed**.
 
 ---
 
-## Phase 2 — Curriculum
+## Phase 2 — Curriculum: zero to mastery
 
-![Curriculum: 9 modules, 45 lessons](assets/store/gallery-01-curriculum.png)
+![Path to mastery](assets/diagrams/path-to-mastery.png)
 
-**Change from the skill's default:** I split "Research" (12 chapters) into
-two modules, so it's **9 modules** instead of 8 and every module is 3–8
-lessons. All 42 chapters are used exactly once.
+**Expanded 2026-09-24:** the program now takes someone who knows nothing all
+the way to operating as their own bank. That's **15 modules and 76 lessons in
+6 stages**. Modules 1–9 keep their numbers. Module 0 and Modules 10–14 are new.
+All 42 ATLAS chapters are still used exactly once; the new modules are
+original content.
 
 Every lesson follows one template: **Objective → Explanation → Worked example
-→ Checklist → 3 quiz questions.** A full sample lesson is in
-`02-sample-lesson-amm-math.md`.
+→ Checklist → 3 quiz questions**, with at least one diagram or chart. A full
+sample lesson is in `02-sample-lesson-amm-math.md`.
+
+| Stage | Modules | You can… |
+|---|---|---|
+| **0 · Zero** | 0 | Buy crypto, set up a wallet and send a first transaction safely |
+| **1 · Foundations** | 1–2 | Protect a wallet, read a transaction, swap and LP deliberately |
+| **2 · Practitioner** | 3–5 | Borrow, earn yield and map infrastructure risk |
+| **3 · Analyst** | 6–7 | Research any protocol and read on-chain data |
+| **4 · Strategist** | 8–11 | Run the 25-strategy library, engineer fixed and hedged yield, stress-test a portfolio |
+| **5 · Operator** | 12–14 | Run your own on-chain bank: balance sheet, credit line, income engine, automation |
+
+---
+
+## Stage 0 · Zero
+
+### Module 0 — Crypto From Zero *(5 lessons, new)*
+Outcome: go from never having owned crypto to a funded, secured wallet and a first on-chain transaction.
+
+| # | Lesson | Source |
+|---|---|---|
+| 0.1 | Money, ledgers and why blockchains exist | new |
+| 0.2 | Buying your first crypto: exchanges, KYC, fees, withdrawals | new |
+| 0.3 | Exchange account vs self-custody wallet: who holds the keys | new |
+| 0.4 | Your first wallet and first transaction (small test amount) | new |
+| 0.5 | The language of DeFi: a working glossary and mental models | new |
+
+---
+
+## Stage 1 · Foundations
 
 ### Module 1 — Foundations & Safety *(6 lessons)*
 Outcome: set up and use a wallet safely; know what can go irreversibly wrong.
@@ -179,6 +216,10 @@ Outcome: execute a swap deliberately, understanding price impact and MEV.
 | 2.5 | MEV and how to protect your trades | 35 |
 
 Assets: AMM flow diagram, 100 ETH / 300k USDC worked example, LP-vs-hold benchmark.
+
+---
+
+## Stage 2 · Practitioner
 
 ### Module 3 — Lending & Leverage *(4 lessons)*
 Outcome: borrow against collateral with a buffer and a written defence plan.
@@ -215,6 +256,10 @@ Outcome: map every bridge, oracle, L2 and contract a position depends on.
 | 5.4 | Smart contracts: state, proxies, admin keys | 22 |
 | 5.5 | Smart-contract risk & what audits don't prove | 23 |
 
+---
+
+## Stage 3 · Analyst
+
 ### Module 6 — Protocol Research *(4 lessons)*
 Outcome: complete a full due-diligence file on a real protocol.
 
@@ -245,6 +290,10 @@ Outcome: read on-chain data without over-interpreting it.
 
 Assets: 20-metric directory as a downloadable reference card.
 
+---
+
+## Stage 4 · Strategist
+
 ### Module 8 — The DeFi Operating System *(4 lessons)*
 Outcome: a written portfolio plan with risk buckets, limits and an emergency plan.
 
@@ -252,7 +301,7 @@ Outcome: a written portfolio plan with risk buckets, limits and an emergency pla
 |---|---|---|
 | 8.1 | DeFi portfolio construction | 38 |
 | 8.2 | The DeFi risk framework | 39 |
-| 8.3 | Strategy library (16 frameworks, Core → Advanced), full content in `03-defi-strategy-mastery.md` | 40 |
+| 8.3 | Strategy library (25 strategies in 6 levels, Core → Professional), full content in `03-defi-strategy-mastery.md` | 40 |
 | 8.4 | The operating playbook: deploy, monitor, respond, review | 42 |
 
 ### Module 9 — DeFi vs Grid Bots *(3 lessons, new content)*
@@ -266,23 +315,86 @@ Outcome: choose the right tool for the market — and the natural bridge into GB
 
 Cross-sell: GBB checkout link for non-customers; Elite Intel invite for everyone.
 
-### Capstone
-Pick one real protocol → complete the due-diligence file (Module 6) → write a
-position plan with sizing, monitoring triggers and exact unwind (Module 8).
-Submitted via Whop; optional review on the higher tier.
+### Module 10 — Advanced Yield Engineering *(6 lessons, new)*
+Outcome: build fixed, hedged and structured yield, and know exactly what each one is short.
 
-### Totals
-9 modules · 45 lessons (42 ATLAS + 3 new) · 135 quiz questions · 2 worksheets · 1 capstone.
+| # | Lesson | Source |
+|---|---|---|
+| 10.1 | Fixed-rate yield: principal and yield tokens (PT/YT) | new |
+| 10.2 | Cash-and-carry basis trades | new |
+| 10.3 | Delta-neutral funding carry, done properly | new |
+| 10.4 | Options income: covered calls, cash-secured puts, options vaults | new |
+| 10.5 | Active concentrated-liquidity management | new |
+| 10.6 | Restaking and points: pricing speculative yield | new |
+
+### Module 11 — Hedging & Risk Engineering *(5 lessons, new)*
+Outcome: hedge the risks you don't want, stress-test the portfolio, and have an incident plan ready.
+
+| # | Lesson | Source |
+|---|---|---|
+| 11.1 | Hedging price exposure with perps and options | new |
+| 11.2 | Depeg, protocol and smart-contract cover | new |
+| 11.3 | Liquidation protection: buffers, alerts and automated deleveraging | new |
+| 11.4 | Stress-testing a portfolio: −50% days, depegs, rate spikes | new |
+| 11.5 | Incident response: what to do in the first 60 minutes | new |
 
 ---
 
-## What I need from you to move to Phase 3 (Whop setup)
-1. Name
-2. Primary audience (warm-first recommended?)
-3. Format: core only, or core + live tier (and are `vip-defi-consult` / `defi` Calendly links for this?)
-4. Prices + refund policy
-5. Starter tier: does it exist?
-6. 9-module structure OK?
+## Stage 5 · Operator — operate as your own bank
+
+![Operate as your own bank](assets/diagrams/own-bank.png)
+
+### Module 12 — Operate as Your Own Bank *(6 lessons, new)*
+Outcome: run your crypto like a bank runs its book: a balance sheet, custody policy, a credit line, a liquidity ladder and records.
+
+| # | Lesson | Source |
+|---|---|---|
+| 12.1 | Your balance sheet: assets, liabilities, equity | new |
+| 12.2 | Custody architecture: vault, multisig and spending policies | new |
+| 12.3 | The credit line: borrowing against your assets like a bank client | new |
+| 12.4 | Treasury and the liquidity ladder | new |
+| 12.5 | Being the lender: supplying, curating and pricing credit risk | new |
+| 12.6 | Books, records and succession: if you're gone, can your family recover it? | new |
+
+### Module 13 — The Income Engine *(5 lessons, new)*
+Outcome: design an income portfolio, measure expected income after expected losses, and set a payout you can sustain.
+
+| # | Lesson | Source |
+|---|---|---|
+| 13.1 | Income sources ranked by durability | new |
+| 13.2 | Risk-adjusted yield: subtracting expected losses | new |
+| 13.3 | Building the income portfolio | new |
+| 13.4 | The payout policy: how much you can take out | new |
+| 13.5 | Scaling, compounding and the annual review | new |
+
+### Module 14 — Automation & Mastery *(4 lessons, new)*
+Outcome: monitor and automate safely, run multisig operations, and complete the operator capstone.
+
+| # | Lesson | Source |
+|---|---|---|
+| 14.1 | Monitoring: dashboards, alerts and on-chain watchers | new |
+| 14.2 | Automation: keepers, bots and agents without handing over the keys | new |
+| 14.3 | Operating procedures: multisig signing, change control, reviews | new |
+| 14.4 | Operator capstone and certification | new |
+
+---
+
+### Capstones
+- **Analyst capstone (after Module 7):** a complete due-diligence file on one real protocol.
+- **Operator capstone (Module 14):** a full personal "bank": balance sheet, custody
+  policy, credit-line policy, income portfolio with risk-adjusted expected income,
+  payout policy, stress test and incident plan. Reviewed on the Live tier.
+
+### Totals
+15 modules · 76 lessons (42 ATLAS + 34 new) · 228 quiz questions · 25 strategy playbooks · 2 capstones · strategy calculator with 15 commands.
+
+---
+
+## Still open
+1. Live-tier price
+2. Refund policy
+3. Grid Bot Builder customer pricing (if any)
+4. Does the "Grid Bot Starter" tier exist?
 
 ---
 
@@ -292,7 +404,7 @@ Submitted via Whop; optional review on the higher tier.
 | Item | Decision |
 |---|---|
 | Name | On-Chain Operator Program |
-| Tier 1 — Course (self-paced, 9 modules, worksheets, capstone) | **$15,000 one-time** (no payment plan) |
+| Tier 1 — Course (self-paced, 15 modules, 76 lessons, worksheets, 2 capstones) | **$15,000 one-time** (no payment plan) |
 | Tier 2 — Live (course + live sessions) | **Priced above $15,000 — number TBD** |
 | Audience | Everyone at launch (GBB customers, Elite Intel members, cold ads) |
 | Sales path | **Application → call → checkout** (no straight-to-checkout ads) |
@@ -330,8 +442,9 @@ the Starter tier / GBB price conflict.
 Nothing gets created until you've seen the exact values and said yes.
 
 ## Step 3 — Upload content
-Written and ready to paste in: Modules 1, 2 and 9, plus lesson 8.3
-(`lessons/`, `02-…`, `03-…`). Modules 3–8 are still being written.
+Written and ready to paste in (32 of 76 lessons): Modules 1, 2, 9, 10, 12
+and 13, plus lesson 8.3 (`lessons/`, `02-…`, `03-…`). Still to write:
+Module 0, Modules 3–7, lessons 8.1/8.2/8.4, Modules 11 and 14.
 
 ## Step 4 — High-ticket sales path
 ![High-ticket sales path](assets/diagrams/sales-funnel.png)
@@ -346,7 +459,7 @@ major exchange / some experience) **and** completed application.
 ![On-Chain Operator Program](assets/store/banner-1920x1080.png)
 
 Everything needed to add the program to your Whop store as a new product:
-copy, images and upload order. **Nothing is published.** You create the
+logo, images, copy and upload order. **Nothing is published.** You create the
 product in the Whop dashboard (Zapier can't create products), paste this in,
 and keep it hidden until launch.
 
@@ -356,109 +469,139 @@ and keep it hidden until launch.
 
 ---
 
-## 1. Images: upload map
+## 1. The logo
+
+![Brand guide](assets/brand/brand-guide.png)
+
+The mark is **two interlocked chain rings inside a hexagonal block**, with
+nodes on its corners: a chain (on-chain), a block, and a network. The rings
+link, like the two halves of the program: DeFi strategy and running your own bank.
+
+| File | Use |
+|---|---|
+| `assets/brand/logo-icon-1024.png` | **Whop product icon**, social avatars (stacked lockup on navy) |
+| `assets/brand/logo-mark-dark-1024.png` | App icon / square badge without text |
+| `assets/brand/logo-mark-transparent-dark-1024.png` | Mark over dark backgrounds (transparent PNG) |
+| `assets/brand/logo-mark-transparent-light-1024.png` | Mark over light backgrounds (transparent PNG) |
+| `assets/brand/logo-horizontal-dark.png` | Headers, email banners on dark |
+| `assets/brand/logo-horizontal-light.png` | Documents, invoices, light pages |
+| `assets/brand/favicon-256.png` | Favicon / tiny sizes (no corner nodes) |
+| `assets/brand/brand-guide.png` | Colours, type and usage rules |
+
+Rules: keep clear space of one ring's width around the mark; never recolour
+the rings, stretch the mark or put the light version on a dark background.
+
+---
+
+## 2. Images: upload map
 
 | Whop slot | File | Size |
 |---|---|---|
-| Product icon / logo | `assets/store/icon-1024.png` | 1024×1024 |
+| Product icon / logo | `assets/store/icon-1024.png` (same as `brand/logo-icon-1024.png`) | 1024×1024 |
 | Cover / hero banner | `assets/store/banner-1920x1080.png` | 1920×1080 |
-| Gallery 1 | `assets/store/gallery-01-curriculum.png` | 1920×1080 |
-| Gallery 2 | `assets/store/gallery-02-research-loop.png` | 1920×1080 |
-| Gallery 3 | `assets/store/gallery-03-strategy-levels.png` | 1920×1080 |
-| Gallery 4 | `assets/store/gallery-04-grid-vs-lp.png` | 1920×1080 |
-| Gallery 5 | `assets/store/gallery-05-whats-included.png` | 1920×1080 |
-| Course module headers | `assets/modules/module-01.png` … `module-09.png` | 1600×500 @2x |
+| Gallery 1 | `assets/store/gallery-01-path-to-mastery.png` | 1920×1080 |
+| Gallery 2 | `assets/store/gallery-02-curriculum.png` | 1920×1080 |
+| Gallery 3 | `assets/store/gallery-03-own-bank.png` | 1920×1080 |
+| Gallery 4 | `assets/store/gallery-04-strategy-levels.png` | 1920×1080 |
+| Gallery 5 | `assets/store/gallery-05-research-loop.png` | 1920×1080 |
+| Gallery 6 | `assets/store/gallery-06-grid-vs-lp.png` | 1920×1080 |
+| Gallery 7 | `assets/store/gallery-07-whats-included.png` | 1920×1080 |
+| Course module headers | `assets/modules/module-00.png` … `module-14.png` | 1600×500 @2x |
 | In-lesson diagrams & charts | `assets/diagrams/*.png`, `assets/charts/*.png` | 1800 wide @2x |
 
 ![Icon](assets/store/icon-1024.png)
 
-![Curriculum](assets/store/gallery-01-curriculum.png)
-![Research loop](assets/store/gallery-02-research-loop.png)
-![Strategy levels](assets/store/gallery-03-strategy-levels.png)
-![Grid vs LP](assets/store/gallery-04-grid-vs-lp.png)
-![What's included](assets/store/gallery-05-whats-included.png)
+![Path to mastery](assets/store/gallery-01-path-to-mastery.png)
+![Curriculum](assets/store/gallery-02-curriculum.png)
+![Own bank](assets/store/gallery-03-own-bank.png)
+![Strategy levels](assets/store/gallery-04-strategy-levels.png)
+![Research loop](assets/store/gallery-05-research-loop.png)
+![Grid vs LP](assets/store/gallery-06-grid-vs-lp.png)
+![What's included](assets/store/gallery-07-whats-included.png)
 
 ---
 
-## 2. Listing copy
+## 3. Listing copy
 
 **Product name:** On-Chain Operator Program
 
-**Tagline (short):** The risk-first DeFi operating system.
+**Tagline (short):** From zero to your own on-chain bank.
 
 **Short description (≈150 characters):**
-Research any protocol, know where yield really comes from, and never sign a
-position you can't unwind. 9 modules · 45 lessons · capstone.
+DeFi from first principles to professional strategies. Build a risk-adjusted
+income engine and run your capital like a bank. 15 modules · 76 lessons.
 
-**Headline:** Research. Size. Exit. On-chain.
+**Headline:** From zero to your own on-chain bank.
 
 **Full description:**
 
 > Most people enter DeFi through a number: an APY. Operators start with a
 > different question: *what am I being paid to risk, and how do I get out?*
 >
-> The On-Chain Operator Program is a structured, application-only program
-> that teaches you to run DeFi positions the way a professional runs a
-> desk: with a research process, position limits, written exit rules and a
-> weekly review.
+> The On-Chain Operator Program takes you from never having owned crypto to
+> running your capital the way a bank runs its book: a balance sheet, a custody
+> policy, a credit line, a liquidity ladder, and an income engine with a
+> payout you can sustain.
 >
-> You'll learn to set up wallets that survive mistakes, read any protocol
-> from contract to cash flow, model liquidity, lending and yield strategies
-> before capital moves, and combine on-chain positions with automated grid
-> bots without doubling your risk.
+> Six stages, 15 modules and 76 lessons: wallets and safety, trading and
+> liquidity, lending and yield, protocol research and on-chain analytics, 25
+> strategy playbooks up to fixed-rate, basis, options and hedged yield, and
+> finally operating your own on-chain bank. Every strategy is taught with its
+> maths, its kill rules and exactly how it loses money.
 
 **What you'll learn**
-- A 6-step research loop for any protocol: mechanism, cash flow, dependencies, solvency, evidence, exit
-- Where DeFi returns actually come from, and how each one fails
-- Liquidity providing, impermanent loss and true LP P&L, measured against holding
-- Lending, health factors and liquidations, with a written defence plan
-- 16 strategy playbooks across 5 levels, each with its maths, kill rules and failure modes
-- How a concentrated LP compares to a grid bot, and how to run both as one system
-- Wallet security, approvals, and the scams that drain wallets
+- Stage 0–1: buy, store and move crypto safely; read any transaction; swap and provide liquidity deliberately
+- Stage 2–3: lending, health factors and liquidations; yield, staking and restaking; a 6-step research loop for any protocol; on-chain analytics
+- Stage 4: 25 strategy playbooks in 6 levels, including fixed-rate yield (PT/YT), cash-and-carry basis, delta-neutral funding carry, covered calls and cash-secured puts, hedging and stress testing
+- Stage 5: operate as your own bank. Balance sheet, multisig custody, a credit line against your assets, a liquidity ladder, lending-desk decisions, books and succession, and an income engine that pays out less than it expects to earn
 
 **What's included**
 
 | | Course | Live |
 |---|---|---|
-| 9 modules, 45 lessons | ✓ | ✓ |
+| 15 modules, 76 lessons, zero to operator | ✓ | ✓ |
+| 25 strategy playbooks with maths and kill rules | ✓ | ✓ |
 | Checklists and quizzes in every lesson | ✓ | ✓ |
-| Due-diligence and pre-launch worksheets | ✓ | ✓ |
-| Strategy calculator | ✓ | ✓ |
-| Capstone project | ✓ | ✓ |
+| Due-diligence, pre-launch and bank-policy worksheets | ✓ | ✓ |
+| Strategy, income and balance-sheet calculators | ✓ | ✓ |
+| Analyst and operator capstones | ✓ | ✓ |
 | Live group sessions | | ✓ |
 | Capstone and portfolio reviews | | ✓ |
-| Protocol research Q&A | | ✓ |
+| Own-bank policy and income-engine reviews | | ✓ |
 | **Price** | **$15,000 one-time** | **`<LIVE_PRICE>`** |
 
 **Who it's for**
-- Traders and Grid Bot Builder customers ready to operate on-chain with a process
-- Investors holding crypto who want to put it to work without taking risks they don't understand
+- Complete beginners who want to learn DeFi properly, from zero, with a process
+- Traders and Grid Bot Builder customers ready to operate on-chain
+- Holders of meaningful crypto who want income and liquidity from it without taking risks they don't understand
 
 **Who it's not for**
 - Anyone looking for guaranteed returns or signals to copy
-- Anyone unwilling to self-custody or follow a checklist
+- Anyone unwilling to self-custody or follow a written policy
 
 **How to join:** Apply → short call → enrolment link. (Application link:
 `<DEFI_APPLICATION_URL>`)
 
 **FAQ**
-- *Do I need DeFi experience?* No. Module 1 starts from wallets and transactions. You do need to be comfortable with crypto exchanges.
+- *I've never owned crypto. Is this for me?* Yes. Module 0 starts from buying your first crypto and setting up a wallet.
 - *Do you manage my funds or need my keys?* Never. You keep custody. We will never ask for a seed phrase, private key or API key.
-- *Will I make money?* The program teaches a process for researching, sizing and exiting positions. It doesn't promise or project returns, and every strategy is taught alongside how it loses money.
+- *Will I make money / earn an income?* The program teaches you to build and run an income portfolio and to measure it honestly: expected income after expected losses, with a payout below that. It doesn't promise or project returns, and every strategy is taught alongside how it loses money.
+- *What does "operate as your own bank" mean?* Running your crypto with the disciplines a bank uses: a balance sheet, custody controls, a credit policy, liquidity management and records. It's a method, not a licence or a financial service.
 - *How does this relate to Grid Bot Builder?* Module 9 shows how on-chain liquidity and exchange grid bots do similar jobs, and how to run both in one portfolio.
 - *Refunds?* `<REFUND_POLICY>`
 
 **Footer disclaimer (put on the listing and at checkout):**
-Educational content only. Not financial advice. Digital assets are volatile
-and you can lose some or all of your capital. No results are guaranteed.
+Educational content only. Not financial, tax or legal advice. Digital assets
+are volatile and you can lose some or all of your capital. No results or
+income are guaranteed.
 
 ---
 
-## 3. Store setup checklist
+## 4. Store setup checklist
 - [ ] Product created in the Whop dashboard as **hidden**, named "On-Chain Operator Program"
-- [ ] Icon, banner and 5 gallery images uploaded in the order above
+- [ ] Logo icon, banner and 7 gallery images uploaded in the order above
 - [ ] Copy pasted; `<LIVE_PRICE>`, `<REFUND_POLICY>`, `<DEFI_APPLICATION_URL>` filled
-- [ ] Course experience added; module headers uploaded; lessons pasted with their diagrams
+- [ ] Course experience added with 15 modules; module headers uploaded; lessons pasted with their diagrams
 - [ ] Plans created via Zapier (course $15,000 one-time; live tier once priced), approved first
 - [ ] Checkout tested end to end on a hidden plan
 - [ ] Listing reviewed for any income or return claims before going public
@@ -500,7 +643,7 @@ Scoring stays the same. Capital and experience predict fit for both products.
 *DeFi — warm/hot*
 > Hi {first},
 > Thanks for your interest in On-Chain Operator Program. It's a step-by-step program for operating in DeFi safely: how to research a protocol, where yield actually comes from, and how to plan the exit before you enter.
-> 9 modules, worksheets and a capstone, all self-paced.
+> 15 modules and 76 lessons, from zero to running your own on-chain bank.
 > It's application-only. Apply here: <DEFI_APPLICATION_URL>
 > Qualified applicants book a call to see if it's the right fit: <DEFI_CALL_LINK>
 > Stewart
@@ -1091,7 +1234,7 @@ fail, and failed transactions still cost gas (Lesson 1.2).
 
 # DeFi Strategy Mastery — How Strategies Make (and Lose) Money
 
-*On-Chain Operator Program · Strategy module · Built on ATLAS "DeFi & On-Chain" ch. 7–18, 38–42 and the 16-framework Strategy Library.*
+*On-Chain Operator Program · Strategy module · Built on ATLAS "DeFi & On-Chain" ch. 7–18, 38–42 and the 16-framework Strategy Library, expanded to 25 strategies.*
 
 > **Read this first.** This is educational material, not financial advice.
 > No DeFi strategy guarantees profit. Every return in DeFi is payment for
@@ -1167,7 +1310,7 @@ first, then the strategy.**
 
 ## Part 3 — The strategy playbook
 
-![The strategy library: 16 strategies in 5 levels](assets/diagrams/strategy-levels.png)
+![The strategy library: 25 strategies in 6 levels](assets/diagrams/strategy-levels.png)
 
 Each strategy card has the same sections:
 **Profit engine · Key maths · Execute · Monitor · Exit/kill rules · How it loses · Size cap**.
@@ -1364,6 +1507,100 @@ liquidity for. Never act on one metric (ATLAS ch. 27–34).
 
 ---
 
+### LEVEL 6 — PROFESSIONAL (structured, fixed and hedged yield)
+
+These are the strategies professional desks and treasuries use. Each one
+swaps a risk you don't want for one you've chosen, so **name what you're
+short before you enter.** Full lessons: Module 10 (Advanced Yield
+Engineering), Module 11 (Hedging) and Module 12 (Own Bank).
+
+#### 17. Fixed-rate yield with principal tokens (PT)
+
+![PT price converges to 1.00 at maturity](assets/charts/pt-convergence.png)
+
+- **Profit engine:** yield tokenization splits a yield-bearing asset into a
+  **principal token (PT)**, which redeems 1:1 for the underlying at maturity,
+  and a **yield token (YT)**, which collects all the variable yield until then.
+  Buying PT at a discount locks in a fixed return (source 2/3, bought forward).
+- **Key maths:** `fixed APY = (1 ÷ PT price)^(365 ÷ days) − 1`.
+  PT at 0.96 with 180 days left → **8.63%** fixed if held to maturity.
+  `defi_calc.py pt --price 0.96 --days 180`
+- **Execute:** pick a PT on an underlying you'd hold anyway → check pool depth
+  (for early exit) → buy → hold to maturity → redeem.
+- **Kill:** underlying depeg or exploit. You're still exposed to the underlying asset; the rate is fixed, the asset risk isn't.
+- **How it loses:** underlying fails; selling before maturity at a worse price; illiquid PT pools.
+
+#### 18. Yield tokens (YT): buying variable yield
+- **Profit engine:** YT collects all yield (and often points) on the underlying until maturity, then goes to zero.
+- **Key maths:** a YT costs ~`1 − PT price` (0.04 above). It profits only if
+  **realised variable yield plus points beats the implied rate (~8.6%)**.
+- **Use:** a speculative, time-decaying position. Size it as speculation.
+- **How it loses:** yields fall, points turn out worthless; the YT is worth zero at maturity by design.
+
+#### 19. Cash-and-carry basis
+- **Profit engine:** dated futures often trade above spot in bull markets.
+  Buy spot, short the future at the same size, and the premium (basis) converges to zero at expiry (source 4).
+- **Key maths:** `annualised basis = (future ÷ spot − 1) × 365 ÷ days`.
+  Spot 3,000, 90-day future 3,060 → 2% → **8.11%** annualised.
+  `defi_calc.py basis --spot 3000 --future 3060 --days 90`
+- **Execute:** open both legs together → keep enough margin that the short survives a large rally → hold to expiry.
+- **How it loses:** short-leg margin call in a squeeze, venue/counterparty failure, closing early at a wider basis.
+
+#### 20. Covered calls and options vaults
+- **Profit engine:** sell upside you're willing to give away. The option premium is paid to you (source 4: selling volatility).
+- **Key maths:** ETH at 3,000, sell a 7-day 3,300 call for 0.4% →
+  **20.9%** annualised *if* repeated at that premium (it won't be exactly).
+  Max gain per week = 0.4% + 10% = 10.4%. Break-even price 2,988.
+  `defi_calc.py covered-call --spot 3000 --strike 3300 --premium 0.4`
+- **Execute:** only on assets you'd hold anyway → strikes above levels you'd happily sell at → roll weekly or monthly.
+- **How it loses:** the asset falls (the premium is a small cushion); you miss big rallies; options-vault contract risk.
+
+#### 21. Cash-secured puts: getting paid to wait for a lower entry
+- **Profit engine:** sell a put at a price you'd buy at anyway, holding the cash to pay for it.
+- **Key maths:** sell a 2,700 put for $12 with $2,700 of stablecoins reserved
+  → **0.44%** for the week on the cash. If assigned, your effective entry is **$2,688**.
+- **How it loses:** price falls far below the strike (you buy at 2,688 while the market is lower); you miss the move if price rips upward.
+
+#### 22. Fixed-rate borrowing
+- **Profit engine:** none by itself. It's insurance on your cost of credit (Module 12.3).
+- **Worked comparison:** borrow $50,000 for a year. Fixed at 6% costs **$3,000**.
+  Variable at 4% for 9 months, then spiking to 12% for 3 months, costs
+  50,000 × (4% × 0.75 + 12% × 0.25) = **$3,000**. Same cost, but fixed let you plan.
+  If the spike lasted longer, variable costs more; if rates stayed at 4%, fixed cost $1,000 more.
+- **Use:** when the borrowing funds something with a fixed payoff, or when a rate spike would force a bad sale.
+
+#### 23. Being the lender: curated lending vaults
+- **Profit engine:** supply stablecoins to a vault whose curator spreads them
+  across isolated lending markets (source 2). You're the bank's depositor
+  *and* its credit committee.
+- **Key maths:** judge risk-adjusted, not headline: 7% headline with an
+  assumed 2%/yr chance of a loss event losing half → **6.0%** risk-adjusted.
+  `defi_calc.py expected --yield-apy 7 --loss-prob 0.02 --lgd 0.5`
+- **Due diligence:** which markets, which collateral, which oracles, what
+  liquidation LTVs, the curator's record, and how fast you can withdraw.
+- **How it loses:** bad debt in any one market, oracle failure, curator error, withdrawal queues in stress.
+
+#### 24. Hedged restaking / points farming
+- **Profit engine:** hold a liquid restaking token (staking yield + points)
+  and short the underlying perp to remove price exposure. When funding is
+  positive, the short *receives* funding too.
+- **Key maths:** `net ≈ staking yield + funding received + points value − costs`.
+  **Value the points at zero for planning.** Anything they pay is upside.
+- **How it loses:** the restaking token depegs from the asset you hedged with
+  (the hedge doesn't cover that), slashing, funding turns negative, short-leg liquidation.
+
+#### 25. The yield-covered credit line
+- **Profit engine:** borrow against yield-bearing collateral where the collateral's yield pays the interest.
+- **Key maths:** $200,000 of an LST at 3.2% earns **$6,400/yr**. A $40,000
+  stablecoin loan at 5% costs **$2,000/yr**, so yield covers interest 3.2×.
+  LTV 20%, health factor 4.0 at an 0.8 liquidation threshold.
+  `defi_calc.py bank --collateral 200000 --debt 40000 --borrow-apy 5`
+- **Use:** access to liquidity without selling, as a bank client would (Module 12.3).
+- **How it loses:** the collateral price falls (the LTV rises even if the
+  interest is covered), the borrow rate spikes above the yield, the LST depegs.
+
+---
+
 ## Part 4 — Execution system (what turns strategies into results)
 
 ### Position sizing rules (starting point, tighten as needed)
@@ -1412,6 +1649,7 @@ weekly: fees/interest earned, IL, costs, net vs benchmark.
 | 4. Leverage | #3 borrowing, #10–11 loops | You've written and rehearsed a defence plan |
 | 5. Carry & hedging | #12 funding carry, #13 LP hedge | You understand perp margin, funding and venue risk |
 | 6. Operator | #14 treasury + #15–16 research | Your portfolio has caps, a journal, and a review you actually run |
+| 7. Professional | #17–21 fixed, basis and options yield · #22–25 credit and hedged yield | You can state what every position is short, and your stress test survives a −50% day |
 
 ---
 
@@ -1595,6 +1833,739 @@ Rules for this system:
 
 ---
 
+# Module 10 — Advanced Yield Engineering
+
+![Module 10 — Advanced Yield Engineering](assets/modules/module-10.png)
+
+*Outcome: build fixed, hedged and structured yield, and know exactly what each position is short.*
+*Stage 4 · Strategist. Prerequisites: Modules 1–9. Educational content only. Not financial advice. Figures are illustrative; use live rates.*
+
+**The professional's rule for this module:** every structured position swaps
+one risk for another. Before entering, write one sentence: *"This position
+is short ___."* If you can't fill the blank, you're not ready to enter.
+
+---
+
+## Lesson 10.1 — Fixed-rate yield: principal and yield tokens (PT/YT)
+
+### Objective
+Lock a fixed return using principal tokens, and price a yield token against its implied rate.
+
+### Explanation
+**Yield tokenization** takes a yield-bearing asset (a staked asset, a lending
+receipt, a stablecoin savings token) and splits it into two tokens that
+mature on a set date:
+
+- **PT (principal token):** redeems 1:1 for the underlying at maturity. It
+  trades at a **discount** before then. Buy the discount, hold to maturity,
+  and your return is fixed.
+- **YT (yield token):** receives *all* the variable yield (and often points)
+  the underlying earns until maturity, then is worth zero.
+
+PT + YT = one unit of the underlying. The PT price implies a fixed rate; the
+YT is a bet that realised yield beats it.
+
+`fixed APY = (1 ÷ PT price)^(365 ÷ days) − 1`
+
+![PT price converges to 1.00 at maturity](assets/charts/pt-convergence.png)
+
+### Worked example
+A stablecoin savings token has a PT maturing in **180 days**, priced at **0.96**.
+- `defi_calc.py pt --price 0.96 --days 180` → **8.63%** fixed APY if held to maturity.
+- $100,000 buys ~104,167 PT → redeems for ~104,167 of the underlying at maturity.
+- The YT costs ~0.04 per unit. It only profits if the underlying's realised
+  yield (plus any points) averages above ~8.6% for the 180 days.
+
+**Near maturity, small discounts are big rates:** PT at 0.985 with 60 days left
+→ **9.63%** APY. Check liquidity before chasing these; exiting early means
+selling into the pool.
+
+### What this position is short
+PT: the underlying's credit/depeg risk, and liquidity if you exit early.
+YT: falling yields, and time (it decays to zero).
+
+### Checklist
+- [ ] I'd hold the underlying asset anyway
+- [ ] Maturity date matches when I'll need the money (Module 12.4 ladder)
+- [ ] Pool depth checked for an early exit
+- [ ] YT sized as speculation, not income
+
+### Quiz
+<details><summary>1. PT at 0.97, 120 days to maturity. Fixed APY?</summary>(1/0.97)^(365/120) − 1 ≈ 9.7%.</details>
+<details><summary>2. Does buying PT remove the underlying's risk?</summary>No. It fixes the rate. If the underlying depegs or is exploited, the PT redeems into a damaged asset.</details>
+<details><summary>3. What must happen for a YT to profit?</summary>Realised variable yield plus points must beat the implied rate priced into the PT.</details>
+
+---
+
+## Lesson 10.2 — Cash-and-carry basis trades
+
+### Objective
+Capture the premium of a dated future over spot without taking a view on price.
+
+### Explanation
+In rising markets, dated futures usually trade **above** spot. The gap (basis)
+shrinks to zero at expiry because the future settles at spot.
+**Buy spot + short the future at the same size** and you lock that gap,
+whatever the price does, as long as both legs survive to expiry.
+
+`annualised basis = (future ÷ spot − 1) × 365 ÷ days`
+
+### Worked example
+ETH spot **3,000**, 90-day future **3,060**.
+- Basis = 2.0% → **8.11%** annualised (`defi_calc.py basis --spot 3000 --future 3060 --days 90`).
+- At expiry, if ETH is 2,000: spot leg −1,000, short future +1,060 → +60 per ETH.
+- At expiry, if ETH is 4,500: spot leg +1,500, short future −1,440 → +60 per ETH.
+- **The catch:** before expiry, a rally to 4,500 means the short leg shows
+  −1,440 per ETH. Without enough margin on the futures venue, it's closed out
+  and you're left long spot at the top.
+
+### What this position is short
+Margin and venue risk: a squeeze on the short leg, or the venue failing.
+
+### Checklist
+- [ ] Both legs opened together, same size
+- [ ] Futures margin survives at least a +100% move, or a rule to top up
+- [ ] Venue risk sized (cap per venue)
+- [ ] Plan to hold to expiry; early exit may be at a worse basis
+
+### Quiz
+<details><summary>1. Spot 2,000, 180-day future 2,080. Annualised basis?</summary>4% × 365/180 ≈ 8.1%.</details>
+<details><summary>2. Why is the return "locked" at expiry?</summary>The future settles at spot, so the gain on one leg offsets the loss on the other, leaving the entry basis.</details>
+<details><summary>3. What breaks the trade before expiry?</summary>A margin call or liquidation on the short future during a rally, or venue failure.</details>
+
+---
+
+## Lesson 10.3 — Delta-neutral funding carry, done properly
+
+### Objective
+Run a funding-carry position with proper sizing, venue limits and exit rules.
+
+### Explanation
+Perpetual futures pay **funding** between longs and shorts to keep the perp
+near spot. In bullish markets longs usually pay shorts. Long spot + short
+perp at the same size = no net price exposure, while collecting funding.
+
+Professional rules:
+1. **Measure funding over time, not today.** Use a 7- and 30-day average.
+2. **Exit rule:** close when the 7-day average turns negative (you'd start paying).
+3. **Margin buffer:** the short leg's leverage decides how big a rally it survives.
+4. **Venue limits:** split across venues; cap each one.
+
+### Worked example
+Funding **+0.01% per 8h** ≈ **10.95% APR** on the hedged size.
+| Short-leg leverage | Capital per $1 hedged | Return on capital | Short liquidates on a rally of roughly |
+|---|---|---|---|
+| 1× | $2.00 | ~5.5% | +100% |
+| 2× | $1.50 | ~7.3% | +50% |
+| 3× | $1.33 | ~8.2% | +33% |
+
+`defi_calc.py carry --rate-8h 0.01 --short-lev 3`
+
+Higher leverage improves return on capital a little and makes the position
+much more fragile. Most operators stay at 1–2× and top up margin from reserve.
+
+### What this position is short
+Funding turning negative, short squeezes, and venue failure.
+
+### Checklist
+- [ ] 7- and 30-day funding averages checked
+- [ ] Exit rule written (e.g. 7-day average < 0)
+- [ ] Short-leg leverage ≤ 2×, top-up plan from reserve
+- [ ] Per-venue cap set
+
+### Quiz
+<details><summary>1. Funding is +0.005%/8h. APR on hedged size?</summary>≈ 5.5%.</details>
+<details><summary>2. Why not run the short at 5×?</summary>A ~20% rally would liquidate the short and leave you unhedged long.</details>
+<details><summary>3. What's the exit signal?</summary>Average funding turning negative, meaning shorts start paying.</details>
+
+---
+
+## Lesson 10.4 — Options income: covered calls, cash-secured puts, options vaults
+
+### Objective
+Earn option premium on assets you'd hold or buy anyway, knowing exactly what you give up.
+
+### Explanation
+- **Covered call:** you hold the asset and sell someone the right to buy it
+  from you at a higher **strike**. You keep the premium, and your upside is capped at the strike.
+- **Cash-secured put:** you hold stablecoins and sell someone the right to sell
+  you the asset at a lower strike. You keep the premium. If price falls below
+  the strike, you buy at the strike.
+- **The wheel:** sell puts until assigned → hold the asset → sell calls until
+  called away → repeat.
+- **Options vaults** automate this on-chain. They add contract risk and you
+  don't choose the strikes.
+
+### Worked example
+ETH at **3,000**.
+- **Covered call:** sell a 7-day **3,300** call for **0.4%** ($12).
+  ≈ **20.9%** annualised *if* repeated at that premium, which it won't be exactly.
+  Max gain for the week 10.4%. Break-even **2,988**.
+  `defi_calc.py covered-call --spot 3000 --strike 3300 --premium 0.4`
+- **Cash-secured put:** sell a 7-day **2,700** put for **$12** with $2,700 reserved
+  → **0.44%** on the cash for the week. If assigned, effective entry **$2,688**.
+
+### What this position is short
+Covered call: upside above the strike, plus the full downside of the asset.
+Cash-secured put: a crash through the strike.
+
+### Checklist
+- [ ] Only on assets I'd hold (calls) or buy at the strike (puts)
+- [ ] Strike chosen from levels, not from the premium
+- [ ] Annualised premium treated as "if repeated", never promised
+- [ ] Vault due diligence done if automating
+
+### Quiz
+<details><summary>1. What do you give up by selling a covered call?</summary>Gains above the strike for that period.</details>
+<details><summary>2. Put strike 2,700, premium $15. Effective entry if assigned?</summary>$2,685.</details>
+<details><summary>3. Does premium protect you in a crash?</summary>Only by the size of the premium. The asset's downside remains.</details>
+
+---
+
+## Lesson 10.5 — Active concentrated-liquidity management
+
+### Objective
+Choose a range width and a rebalance rule that fee income can actually pay for.
+
+### Explanation
+Narrower ranges earn more fees per dollar *while in range* and go out of range sooner.
+
+| Range around $3,000 | Capital efficiency vs full range |
+|---|---|
+| $2,400–$3,600 (±20%) | ~10.4× |
+| $2,700–$3,300 (±10%) | ~20.4× |
+| $2,850–$3,150 (±5%) | ~40.5× |
+
+`defi_calc.py cl --low 2850 --high 3150`
+
+Every rebalance costs gas and swap fees and **locks in** the impermanent loss
+so far. Professionals set a rule before entering:
+- **Width from volatility:** at least ~1.5× the typical weekly move.
+- **Rebalance trigger:** out of range for 24h+, *and* the range thesis still holds.
+- **Invalidation:** a structural break (as with a grid bot) means exit, not re-centre.
+- **Budget:** rebalancing costs capped at a share of expected fees (e.g. ≤ 25%).
+
+### Worked example
+ETH typically moves ±7% a week. A ±5% range would be out of range most
+weeks. The rule points to **±10–12%**: ~20× efficiency, and time in range to earn.
+
+### What this position is short
+Trending markets and volatility above what the range was sized for.
+
+### Checklist
+- [ ] Width ≥ 1.5× typical weekly move
+- [ ] Rebalance trigger and invalidation written
+- [ ] Rebalance cost budget set
+- [ ] P&L tracked against holding (Lesson 2.4)
+
+### Quiz
+<details><summary>1. Why does a ±5% range earn ~2× the fees of ±10% while in range?</summary>The same capital is concentrated in half the price range, so it provides about twice the liquidity there.</details>
+<details><summary>2. What does a rebalance lock in?</summary>The impermanent loss accrued so far, plus gas and swap costs.</details>
+<details><summary>3. Price breaks structure and exits the range. Re-centre?</summary>No. That's an invalidation. Exit per plan.</details>
+
+---
+
+## Lesson 10.6 — Restaking and points: pricing speculative yield
+
+### Objective
+Value restaking and points programmes without letting unknown rewards drive position size.
+
+### Explanation
+Restaking reuses staked assets to secure more services, paying extra rewards
+and often **points**: an off-chain score that may or may not become a token.
+The risk stack grows at each layer: staking → liquid restaking token →
+restaking protocol → each service it secures → slashing conditions.
+
+Professional rules:
+- **Plan with points at zero.** Base the decision on yield you can measure.
+- **Treat points as an airdrop bet:** `EV = P(payout) × value − costs`.
+- **Hedge price if you only want the yield:** short the underlying perp (strategy #24), knowing the hedge doesn't cover a depeg of the restaking token.
+- **Cap it:** speculative bucket only (≤ 5–10% of DeFi capital).
+
+### Worked example
+$20,000 in a liquid restaking token: base staking yield ~3% ($600/yr).
+Points: you estimate a 30% chance of a payout worth $1,500, costing $200 in
+gas and bridging: `defi_calc.py airdrop --probability 0.3 --value 1500 --costs 200`
+→ EV **$250**. Worth doing only if the position still makes sense at $600/yr
+and the risk stack is acceptable.
+
+### What this position is short
+Slashing, depeg of the restaking token, and the chance that points never become anything.
+
+### Checklist
+- [ ] Decision still works with points valued at zero
+- [ ] Full risk stack written, layer by layer
+- [ ] Sized inside the speculative bucket
+- [ ] Hedge (if any) and its gap understood
+
+### Quiz
+<details><summary>1. Why value points at zero?</summary>They're not guaranteed to become anything, so a decision that needs them is a speculation.</details>
+<details><summary>2. What does a perp hedge on the underlying miss?</summary>The restaking token depegging from the underlying.</details>
+<details><summary>3. Name three layers of the restaking risk stack.</summary>Any three: staking/validators, the liquid restaking token, the restaking protocol, each service secured, slashing conditions.</details>
+
+---
+
+### Module 10 practical
+1. Price three live PTs with `defi_calc.py pt` and choose the one whose maturity fits your liquidity ladder.
+2. Paper-trade a basis position: record entry basis, margin, and the rally it would survive.
+3. Write the "this position is short ___" sentence for every strategy in this module.
+4. Size a concentrated LP range from a real asset's weekly volatility and write its rebalance rule.
+
+---
+
+# Module 12 — Operate as Your Own Bank
+
+![Module 12 — Operate as Your Own Bank](assets/modules/module-12.png)
+
+*Outcome: run your crypto the way a bank runs its book: a balance sheet, a custody policy, a credit line, a liquidity ladder, a lending desk and records someone else could follow.*
+*Stage 5 · Operator. Prerequisites: Modules 1–11. Educational content only. Not financial, tax or legal advice. Figures are illustrative.*
+
+A bank does four things: it **keeps assets safe**, **lends**, **borrows**,
+and **manages liquidity** so it can always meet what it owes. DeFi lets you
+do all four yourself, with no one to call when something goes wrong. This
+module turns that into written policy.
+
+![Operate as your own bank](assets/diagrams/own-bank.png)
+
+---
+
+## Lesson 12.1 — Your balance sheet
+
+### Objective
+Build a personal on-chain balance sheet and read the three numbers that matter: equity, LTV and liquidity runway.
+
+### Explanation
+- **Assets:** everything you own, at market value: collateral, yield positions, reserves.
+- **Liabilities:** everything you owe: loans, margin, any payables.
+- **Equity** = assets − liabilities. This is what's actually yours.
+- **LTV** = debt ÷ collateral. Your bank's leverage.
+- **Liquidity runway** = liquid reserve ÷ monthly obligations (spending + interest).
+
+Banks fail from **liquidity** (can't pay today) more often than from
+**solvency** (owe more than they own). Track both.
+
+### Worked example
+$300,000 collateral, $60,000 debt at 5%, $40,000 stablecoin reserve, $5,000/month spending:
+
+`defi_calc.py bank --collateral 300000 --debt 60000 --borrow-apy 5 --reserve 40000 --monthly-spend 5000`
+- Equity **$280,000** · LTV **20%** · health factor **4.0**
+- Obligations $5,250/month ($250 of it interest) → reserve covers **7.6 months**
+- Policy checks: LTV ≤ 30% ✓ · HF ≥ 2 ✓ · reserve ≥ 6 months ✓
+
+### Checklist
+- [ ] Balance sheet updated weekly
+- [ ] Equity, LTV and runway tracked over time
+- [ ] Policy limits written (max LTV, min HF, min runway)
+
+### Quiz
+<details><summary>1. Assets $500k, debt $100k. Equity?</summary>$400k.</details>
+<details><summary>2. Reserve $30k, obligations $6k/month. Runway?</summary>5 months, below a 6-month policy.</details>
+<details><summary>3. Why track liquidity separately from equity?</summary>You can be solvent and still be forced to sell at the worst time if you can't meet obligations today.</details>
+
+---
+
+## Lesson 12.2 — Custody architecture: vault, multisig and spending policies
+
+### Objective
+Design custody so that no single lost device, stolen key or mistaken signature can drain the bank.
+
+### Explanation
+Scale Module 1's three wallets into a bank-grade setup:
+
+| Tier | Holds | Control | Rules |
+|---|---|---|---|
+| **Vault** | Most of your equity | **Multisig**, e.g. 2-of-3 hardware keys in separate locations | No DeFi approvals. Moves only to the Operating tier, to allowlisted addresses |
+| **Operating** | Active positions | Hardware wallet or a smart account with limits | Verified protocols only. Spending limit per day |
+| **Hot** | Small float | Hot wallet | Anything new or experimental. Refilled on schedule |
+
+Smart-account features to use where available:
+- **Spending limits** per day/week
+- **Allowlists** (it can only send to addresses you pre-approved)
+- **Timelocks** on large moves (a delay you can cancel if it wasn't you)
+- **Recovery** paths agreed and tested in advance
+
+![Custody architecture](assets/diagrams/custody-architecture.png)
+
+### Worked example
+Vault: 2-of-3 multisig, with key A at home, key B in a safe-deposit box and
+key C with a trusted person or a professional co-signer. Losing any one key
+is survivable; stealing any one key is useless. **Test it:** move $10 through
+every path once a quarter.
+
+### Checklist
+- [ ] Vault is multisig; keys in separate physical locations
+- [ ] Operating tier has a daily limit
+- [ ] Allowlist on vault outflows
+- [ ] Quarterly recovery test done and logged
+
+### Quiz
+<details><summary>1. Why 2-of-3 rather than 1-of-1?</summary>One key can be lost or stolen without losing the funds or giving an attacker control.</details>
+<details><summary>2. What does a timelock buy you?</summary>Time to notice and cancel an unauthorised large move.</details>
+<details><summary>3. Why test recovery with a small amount?</summary>A recovery plan you've never run is an assumption. Testing proves every key and path works.</details>
+
+---
+
+## Lesson 12.3 — The credit line: borrowing like a bank client
+
+### Objective
+Use your assets as collateral for liquidity without selling, under a written credit policy.
+
+### Explanation
+Wealthy clients rarely sell appreciating assets to raise cash; they borrow
+against them. DeFi money markets offer the same: deposit collateral, borrow
+stablecoins, repay when it suits you, with no credit check. **The collateral
+is liquidated if you breach the threshold**, and nobody calls first.
+
+**A credit policy (write yours):**
+- Max LTV **25–30%** on volatile collateral (liquidation is often near 80%+)
+- Health factor floor **2.5**; act at **2.0**
+- Prefer collateral whose **yield covers the interest** (strategy #25)
+- Consider **fixed-rate** borrowing when a rate spike would force a sale (strategy #22)
+- **Repayment source** named before borrowing (income, reserve, maturing PT)
+- Tax treatment of borrowing varies by country: **check with a tax professional**
+
+### Worked example
+$200,000 of liquid-staked ETH earning 3.2% ($6,400/yr). Borrow **$40,000** stablecoins at 5% ($2,000/yr).
+- Yield covers interest **3.2×**. LTV 20%. HF **4.0** at a 0.8 threshold.
+- ETH would have to fall **~75%** before liquidation (HF falls in proportion to price).
+- Defence plan: at HF 2.0, repay from reserve; at HF 1.7, sell part of the collateral deliberately rather than let a liquidator do it at a penalty.
+
+### Checklist
+- [ ] Credit policy written: max LTV, HF floor, action levels
+- [ ] Repayment source named
+- [ ] Alerts set at the action levels (Module 14.1)
+- [ ] Fixed vs variable decision made on purpose
+
+### Quiz
+<details><summary>1. Why borrow against assets instead of selling them?</summary>You keep the asset and its upside (and in some jurisdictions avoid a taxable sale), at the cost of interest and liquidation risk.</details>
+<details><summary>2. HF is 4.0. Roughly how far can collateral fall before liquidation?</summary>About 75%, since HF scales with collateral price (HF 1.0 at a quarter of the current price).</details>
+<details><summary>3. What should happen at your action level?</summary>Repay or add collateral per the written plan. Sell deliberately before a liquidator does it at a penalty.</details>
+
+---
+
+## Lesson 12.4 — Treasury and the liquidity ladder
+
+### Objective
+Structure reserves so money is available when it's needed, earning a return at every tier.
+
+### Explanation
+Banks match the timing of assets to the timing of what they owe. Your ladder:
+
+| Tier | Access | Holds | Size (example: $5,000/month spend) |
+|---|---|---|---|
+| **T0 Instant** | Seconds | Stablecoins in the operating wallet | 1 month: $5,000 |
+| **T1 Same day** | Hours | Blue-chip stablecoin lending, split across 2 protocols | 5 months: $25,000 |
+| **T2 Term** | Scheduled | PTs maturing on dates you'll need the money (Lesson 10.1) | Next 6–12 months of planned spending |
+| **T3 Growth** | Days–weeks | Strategy positions, LPs, staking | The rest, within caps |
+
+![The liquidity ladder](assets/diagrams/liquidity-ladder.png)
+
+Refill downward on a schedule: T1 tops up T0 monthly; maturing PTs top up T1.
+Never fund a T0 need by selling a T3 position in a bad market. That's what the
+ladder exists to prevent.
+
+### Worked example
+T0 $5,000 + T1 $25,000 = **6 months** instantly available. T2 holds three PTs
+maturing in 3, 6 and 9 months, each sized for 3 months of spending. A −50%
+market day touches none of it.
+
+### Checklist
+- [ ] T0 + T1 ≥ 6 months of obligations
+- [ ] T2 maturities matched to planned spending
+- [ ] Monthly refill schedule set
+- [ ] T3 never used for day-to-day needs
+
+### Quiz
+<details><summary>1. Why hold T0 in plain stablecoins earning little?</summary>Instant, certain access. It's the tier that pays today's bills without selling anything.</details>
+<details><summary>2. What's T2 for?</summary>Known future spending, with maturities matched to when the money is needed and a fixed return locked in.</details>
+<details><summary>3. What does the ladder prevent?</summary>Forced selling of growth positions at bad prices to meet short-term needs.</details>
+
+---
+
+## Lesson 12.5 — Being the lender: supplying, curating and pricing credit risk
+
+### Objective
+Act as the lending side of the bank: choose markets, price the risk, and know when to pull liquidity.
+
+### Explanation
+When you supply to a money market, you're the bank's depositor, and
+effectively its credit desk. Your return:
+`supply APY ≈ borrow APY × utilisation × (1 − reserve factor)`.
+
+Modern designs split lending into **isolated markets** (one collateral, one
+loan asset, one oracle, one liquidation LTV). **Curated vaults** spread
+deposits across several of these; the curator decides the allocation.
+
+What a lender must check:
+- **Collateral quality and liquidation LTV:** the higher the LTV, the thinner the buffer before bad debt
+- **Oracle:** what prices the collateral, and can it be manipulated? (Module 5.3)
+- **Utilisation:** near 100% means you may not be able to withdraw
+- **Curator:** track record, how allocations are changed, timelocks
+- **Risk-adjusted return**, not headline
+
+### Worked example
+Vault A: 7% headline, exposure to newer collateral; you assume a 2%/yr chance of a loss event losing half the deposit → **6.0%** risk-adjusted.
+Vault B: 4.5% headline, blue-chip collateral; 0.5%/yr, total loss assumed → **4.0%**.
+`defi_calc.py expected --yield-apy 7 --loss-prob 0.02 --lgd 0.5`
+
+A pays more after the haircut, *if* your loss estimates are honest. Split
+between them, and cap A lower because its tail is fatter and less known.
+
+### Checklist
+- [ ] Every market's collateral, oracle and LTV listed
+- [ ] Loss probability and loss-given-default written down (your assumptions)
+- [ ] Utilisation alert (e.g. > 90%)
+- [ ] Per-vault and per-curator caps
+
+### Quiz
+<details><summary>1. Borrow APY 10%, utilisation 70%, reserve factor 10%. Supply APY?</summary>6.3%.</details>
+<details><summary>2. Why is utilisation at 100% a lender's problem?</summary>All liquidity is lent out, so withdrawals wait until borrowers repay or new deposits arrive.</details>
+<details><summary>3. What's a curated vault's extra risk?</summary>The curator's allocation decisions and permissions, on top of each market's risk.</details>
+
+---
+
+## Lesson 12.6 — Books, records and succession
+
+### Objective
+Keep books a stranger could follow, and make sure your family could recover everything if you couldn't.
+
+### Explanation
+**Books** (update weekly from your journal, Module 8):
+- Every position: protocol, chain, contract, amount, entry date and price, cost basis
+- Every loan: collateral, debt, rate, HF, action levels
+- Every approval granted, and when it was revoked
+- Income received, by source and date
+- Keep exportable records for tax. Rules differ by country, so **use a crypto-aware tax professional.**
+
+**Succession:** self-custody means that if you're gone and nobody can sign,
+the money is gone too.
+- A **letter of instruction** that explains the setup (wallets, multisig, where
+  the documents are, who to contact), **stored separately from any seed or key**
+- Multisig with a trusted co-signer or professional service, so recovery doesn't depend on one person
+- Legal documents (will, powers of attorney) that reference the digital assets: **use a lawyer**
+- **Annual drill:** walk a trusted person through the letter without revealing secrets
+
+### Worked example
+A 2-of-3 vault: you hold two keys (home + safe-deposit box); a professional
+co-signer holds the third under an agreed recovery process. Your letter of
+instruction, stored with your will, explains how your executor works with
+the co-signer. No single document contains enough to steal the funds.
+
+### Checklist
+- [ ] Books current within a week
+- [ ] Tax records exportable; professional engaged
+- [ ] Letter of instruction written and stored apart from keys
+- [ ] Annual succession drill done
+
+### Quiz
+<details><summary>1. Why keep the letter of instruction apart from seeds and keys?</summary>So finding the letter isn't enough to steal the funds.</details>
+<details><summary>2. What's the risk of single-key self-custody for your family?</summary>If you can't sign and no one else can, the assets are unrecoverable.</details>
+<details><summary>3. What goes in the books for each loan?</summary>Collateral, debt, rate, health factor and your action levels.</details>
+
+---
+
+### Module 12 practical: your bank's founding documents
+1. Balance sheet with equity, LTV and runway (`defi_calc.py bank`).
+2. Custody policy: tiers, multisig setup, limits, allowlists, recovery test log.
+3. Credit policy: max LTV, HF floor, action levels, repayment source.
+4. Liquidity ladder: T0–T3 sizes and refill schedule.
+5. Lending policy: markets, caps, risk assumptions.
+6. Books template and letter of instruction (stored separately).
+
+---
+
+# Module 13 — The Income Engine
+
+![Module 13 — The Income Engine](assets/modules/module-13.png)
+
+*Outcome: design an income portfolio, measure expected income after expected losses, and set a payout you can sustain.*
+*Stage 5 · Operator. Prerequisites: Modules 1–12. Educational content only. Not financial or tax advice. No income is guaranteed. Loss probabilities are your own assumptions; figures are illustrative.*
+
+**The operator's income rule:** plan on **expected** income (yield minus
+expected losses), pay out **less** than that, and never pay out of principal.
+
+---
+
+## Lesson 13.1 — Income sources ranked by durability
+
+### Objective
+Rank income sources by how long and how reliably they're likely to pay, not by their headline rate.
+
+### Explanation
+| Source | Typical driver | Durability | Variability |
+|---|---|---|---|
+| Blue-chip stablecoin lending | Borrower demand | High | Medium: moves with demand |
+| Staking / LSTs | Network security rewards | High | Low–medium |
+| Fixed-rate PTs to maturity | Locked at purchase | Fixed for the term | None until maturity |
+| Curated lending vaults | Borrower demand in isolated markets | Medium | Medium |
+| LP fees (major pairs) | Trading volume | Medium | High |
+| Funding / basis carry | Market positioning | Low–medium | High: can turn negative |
+| Options premium | Volatility | Medium | High |
+| Incentives / points | Protocol budgets | Low | Very high |
+
+A durable income engine is built mostly from the top of this table. The
+bottom rows are **boosters** you size small and expect to switch off.
+
+### Checklist
+- [ ] Every income position tagged with its source and durability
+- [ ] Core income from high-durability sources
+
+### Quiz
+<details><summary>1. Why is funding carry low durability?</summary>It depends on market positioning and can turn negative for long periods.</details>
+<details><summary>2. Which source gives a known rate for a set term?</summary>Fixed-rate PTs held to maturity.</details>
+<details><summary>3. How should incentive income be treated?</summary>As a temporary booster, sold on a schedule and not relied on.</details>
+
+---
+
+## Lesson 13.2 — Risk-adjusted yield: subtracting expected losses
+
+### Objective
+Convert every headline yield into an expected yield after the losses it statistically carries.
+
+### Explanation
+`risk-adjusted yield = headline − (annual loss probability × loss given default) − costs`
+
+You don't know the true loss probability, so **write down an assumption and
+be conservative.** Newer protocols, more dependencies and higher leverage
+deserve higher numbers. The point isn't precision; it's making you compare
+positions on the same footing.
+
+### Worked example
+| Position | Headline | Assumed loss prob. | LGD | Risk-adjusted |
+|---|---|---|---|---|
+| New protocol vault | 9.0% | 3%/yr | 100% | **6.0%** |
+| Blue-chip lending | 4.5% | 0.5%/yr | 100% | **4.0%** |
+
+`defi_calc.py expected --yield-apy 9 --loss-prob 0.03`
+
+The 9% vault still wins on expectation, but by 2 points, not 4.5. Its bad
+outcome is also far worse, so size it smaller (Lesson 13.3).
+
+### Checklist
+- [ ] Loss probability and LGD written for every position
+- [ ] Decisions made on risk-adjusted, not headline
+
+### Quiz
+<details><summary>1. 12% headline, 5%/yr loss probability, 60% LGD. Risk-adjusted?</summary>12 − 3 = 9%.</details>
+<details><summary>2. Why assume conservatively?</summary>Losses cluster in stress, when many positions fail together; optimistic assumptions overstate income.</details>
+<details><summary>3. Two positions, same risk-adjusted yield. Which gets more capital?</summary>The one with the smaller and better-understood worst case.</details>
+
+---
+
+## Lesson 13.3 — Building the income portfolio
+
+### Objective
+Assemble an income portfolio and calculate its blended risk-adjusted yield and expected income.
+
+### Explanation
+Build in layers: **core** (high-durability, 60–80%), **term** (fixed PTs matched
+to the liquidity ladder), **boosters** (carry, options, LP; small). Apply
+Module 8's caps: per protocol, per chain, per stablecoin issuer.
+
+### Worked example — $500,000 income portfolio
+`defi_calc.py income --pos "Stable lending A:100000:5:0.005:1" --pos "Stable lending B:100000:4.5:0.005:1" --pos "LST staking:150000:3.2:0.01:0.5" --pos "PT fixed stable:100000:8:0.02:0.5" --pos "Funding carry:50000:9:0.05:0.3"`
+
+| Position | Amount | Yield | Expected loss | Net | Income/yr |
+|---|---|---|---|---|---|
+| Stable lending A | 100,000 | 5.0% | 0.5% | 4.5% | 4,500 |
+| Stable lending B | 100,000 | 4.5% | 0.5% | 4.0% | 4,000 |
+| LST staking | 150,000 | 3.2% | 0.5% | 2.7% | 4,050 |
+| PT fixed stable | 100,000 | 8.0% | 1.0% | 7.0% | 7,000 |
+| Funding carry | 50,000 | 9.0% | 1.5% | 7.5% | 3,750 |
+| **Total** | **500,000** | | | **4.66%** | **23,300** |
+
+![From headline yield to sustainable payout](assets/charts/income-waterfall.png)
+
+Note: the LST line is priced in ETH, so its dollar value, and therefore the
+dollar income, moves with ETH. The rest is stablecoin-denominated.
+
+### Checklist
+- [ ] Core ≥ 60% from high-durability sources
+- [ ] Caps respected per protocol, chain and issuer
+- [ ] Blended risk-adjusted yield calculated
+
+### Quiz
+<details><summary>1. Which line contributes the most expected income, and why?</summary>PT fixed stable ($7,000): a high locked rate on a sizeable allocation, even after the haircut.</details>
+<details><summary>2. Why is the carry line only $50,000?</summary>It's a low-durability booster with a higher assumed loss rate.</details>
+<details><summary>3. What makes the LST income variable in dollars?</summary>It's denominated in ETH, so the dollar value moves with the ETH price.</details>
+
+---
+
+## Lesson 13.4 — The payout policy: how much you can take out
+
+### Objective
+Set a payout you can sustain through bad years, and the rules that change it.
+
+### Explanation
+- **Pay out a share of *expected* income, not headline** (e.g. 70%).
+- **Retain the rest** as a loss buffer; it absorbs the losses you assumed in 13.2.
+- **Pay from the T0/T1 ladder** (Module 12.4), refilled by income, so payouts never depend on selling anything that day.
+- **Never pay from principal.** If income falls short, the payout falls.
+- **Review quarterly:** if realised income is below expected for two quarters, cut the payout to 70% of the new realised level.
+
+### Worked example
+Expected income **$23,300/yr** × 70% = **$16,310/yr** paid out (**$1,359/month**).
+**$6,990/yr** retained. If a position fails as assumed, the buffer absorbs it
+and the payout continues.
+
+### Checklist
+- [ ] Payout ratio written (≤ 70–80% of expected income)
+- [ ] Paid from the ladder, not from positions
+- [ ] Quarterly review rule written
+- [ ] "Never from principal" rule written
+
+### Quiz
+<details><summary>1. Expected income $40,000. Payout at 70%?</summary>$28,000/yr (~$2,333/month).</details>
+<details><summary>2. What's the retained 30% for?</summary>Absorbing expected losses and bad years without cutting into principal.</details>
+<details><summary>3. Realised income lags expected for two quarters. What happens?</summary>Cut the payout to the policy share of the new realised level.</details>
+
+---
+
+## Lesson 13.5 — Scaling, compounding and the annual review
+
+### Objective
+Grow the engine safely and review it like a bank's annual report.
+
+### Explanation
+**Compounding:** reinvesting the retained share grows principal, and income
+with it. At a 4.66% risk-adjusted yield with 30% retained, principal grows
+~**1.4%/yr** from retention alone. The payout grows at about the same rate:
+$16,310 → ~$17,480 after five years (before any new capital).
+
+**Scaling rules as the book grows:**
+- Caps are **percentages**, so position sizes rise, and so does market impact.
+  Check pool depth and exit liquidity at the new size.
+- Add independent protocols and issuers before adding size to existing ones.
+- More size means more value at stake in custody: revisit Module 12.2.
+
+**Annual review (one page):**
+1. Balance sheet: start vs end equity, LTV, runway
+2. Income: expected vs realised, by source
+3. Losses and near-misses: what happened, what changed
+4. Payout: paid vs policy
+5. Risk assumptions: update loss probabilities from the year's incidents
+6. Custody and succession drill: done?
+
+### Checklist
+- [ ] Retained income reinvested per policy
+- [ ] Exit liquidity checked at current size
+- [ ] Annual review completed and filed with the books
+
+### Quiz
+<details><summary>1. Yield 5%, 40% retained. Growth from retention alone?</summary>~2% a year.</details>
+<details><summary>2. Why check exit liquidity as the book grows?</summary>A position that was easy to exit at $50k may move the market at $500k.</details>
+<details><summary>3. What should the annual review update?</summary>Loss-probability assumptions, from the year's incidents and near-misses.</details>
+
+---
+
+### Module 13 practical
+1. Tag every position by source and durability (13.1).
+2. Write loss assumptions and compute risk-adjusted yields (13.2).
+3. Build your income portfolio with `defi_calc.py income` (13.3).
+4. Write your payout policy (13.4) and first annual-review template (13.5).
+
+---
+
 # 7. Skills archive
 
 Claude skills for building and running the Grid Bot Builder business and the
@@ -1617,7 +2588,7 @@ To finish building it, paste [`programs/defi-program/BUILD-PROMPT.md`](programs/
 | Skill | What it does | Source |
 |---|---|---|
 | `whop-defi-program` | Master playbook: turn the 42-chapter DeFi module into a Whop product and wire it into the GBB funnel | New, built from Notion + Zapier |
-| `defi-strategies` | 16 DeFi strategies: where each return comes from, the maths, execution, kill rules, plus the `defi_calc.py` calculator | Notion strategy library, expanded |
+| `defi-strategies` | 25 DeFi strategies in 6 levels (up to fixed-rate, basis, options, credit lines and hedged yield), plus `defi_calc.py` with 15 calculators including income portfolios and a personal balance sheet | Notion strategy library, expanded |
 | `defi-due-diligence` | 6-step protocol risk loop, before-signing checklist, logs to Notion tracker | Notion: DeFi & On-Chain module |
 | `grid-bot-design` | Regime/range/spacing/fees/risk method + `grid_calc.py` calculator, logs to Notion checklist | Notion: Grid Bot Builder module |
 | `gbb-new-lead` | Score, tag and email new leads | Zapier (archive copy) |
@@ -1660,21 +2631,31 @@ Paste everything below the line as your first message.
 ---
 
 You're building out my **On-Chain Operator Program**, a high-ticket DeFi
-education product that goes into my Whop store as a new product alongside
+program that takes someone who knows nothing to complete mastery: every
+professional strategy, a risk-adjusted income engine, and operating as their
+own on-chain bank. It goes into my Whop store as a new product alongside
 Grid Bot Builder. Work in this repo on branch
 `claude/grid-bot-builder-skills-bmrez2`. Commit and push after each finished piece.
 
 ## Read first
 1. `README.md` (skills archive) and `programs/defi-program/README.md` (build status)
 2. `programs/defi-program/ON-CHAIN-OPERATOR-PROGRAM.md`: master file with decisions, curriculum, setup, funnel and finished lessons
-3. `programs/defi-program/06-whop-store-listing.md`: store listing copy and image upload map
+3. `programs/defi-program/06-whop-store-listing.md`: logo system, store listing copy and image upload map
 4. Skills: `whop-defi-program` (master workflow), `defi-strategies`, `defi-due-diligence`, `grid-bot-design`, `gbb-*`, `frontend-design`, `dataviz`
 5. Notion: "ATLAS — The Universal Trading Library" → "DeFi & On-Chain (Complete Module)". This is the source for every lesson.
 
 ## Locked decisions (don't change them)
 - Name: On-Chain Operator Program. Course tier $15,000 one-time. Live tier priced higher.
 - Launch to everyone. Cold traffic goes application → call (vip-defi-consult Calendly) → checkout.
-- 9 modules, 45 lessons. Every lesson follows: Objective → Explanation → Worked example → Checklist → 3-question quiz.
+- **6 stages, 15 modules, 76 lessons**, Module 0 (Crypto From Zero) to Module 14 (Automation & Mastery). Structure in `01-offer-and-curriculum.md`. Every lesson follows: Objective → Explanation → Worked example → Checklist → 3-question quiz.
+- **Depth standard:** match `lessons/module-10-…`, `module-12-…` and `module-13-…`. Advanced lessons state "what this position is short", show computed numbers, and give professional rules (sizing, exits, caps).
+
+## Logo & brand (lead with it)
+The logo is two interlocked chain rings inside a hexagonal block with corner
+nodes (`logoMark()` in `export/build_images.js`). It leads every surface.
+- Use the rendered files in `assets/brand/`: stacked icon, marks (dark and light transparent), horizontal lockups, favicon, brand guide.
+- Every store image, module banner and document cover carries the logo. Document diagrams carry the small mark in the footer.
+- Never recolour the rings, stretch the mark, or put the light version on dark.
 
 ## Imagery standard (every deliverable must meet it)
 All images come from one generator, `programs/defi-program/export/build_images.js`,
@@ -1682,13 +2663,18 @@ so the brand stays consistent. Extend that file and don't hand-place one-off ima
 - **Brand:** Inter typeface (bundled via `@fontsource`). Navy `#0B1F33`→`#12355B` gradient with a faint node-network motif for dark/store images. `#FCFCFB` surface for light document images. Teal `#2ee6a6` accent on dark only.
 - **Charts:** follow the `dataviz` skill. Blue `#2a78d6` is the primary series, orange `#eb6834` the secondary (validated pair). One y-axis. Recessive grid. Direct labels on the empty side of the line, never overlapping. Every number must be computed, not typed.
 - **Resolution:** document images at 2× (1800 px wide), store images at exact upload size (1024×1024, 1920×1080).
-- **Every module** gets its banner (`assets/modules/module-0N.png`, already rendered for 1–9) at the top of its lesson file. **Every lesson** gets at least one diagram or chart where a picture explains the mechanism better than text (a flow, a curve, a comparison). Add new ones to the `ASSETS` list.
+- **Every module** gets its banner (`assets/modules/module-NN.png`, already rendered for 0–14) at the top of its lesson file. **Every lesson** gets at least one diagram or chart where a picture explains the mechanism better than text (a flow, a curve, a comparison). Add new ones to the `ASSETS` list.
 - **Review:** after rendering, open every new or changed image and check it by eye. Fix any label collision, overflow, clipped text or empty-looking layout before committing.
 - Every image carries the footer "Educational content only · Not financial advice · No results are guaranteed" (the shells already do this).
 
 ## Work to do, in order
-1. **Write the remaining 30 lessons**: Modules 3, 4, 5, 6, 7 and lessons 8.1, 8.2, 8.4, one file per module in `programs/defi-program/lessons/`, matching the style of `module-01-…` and `module-02-…`, with module banner + lesson imagery per the standard above. Check every number with `.claude/skills/defi-strategies/scripts/defi_calc.py` or Python. Add a practical at the end of each module. Suggested new visuals: health-factor gauge (M3), APY decomposition bar (M4), bridge/oracle dependency map (M5), due-diligence scorecard (M6), exchange-flow and holder-metric examples (M7), portfolio risk buckets (M8).
-2. **Capstone brief and grading rubric** (due-diligence file + position plan with sizing, monitoring triggers and exact unwind), with a one-page visual overview.
+1. **Write the remaining 44 lessons** (32 of 76 are done: Modules 1, 2, 9, 10, 12, 13 and lesson 8.3), one file per module in `programs/defi-program/lessons/` (`module-NN-name.md`):
+   - **Module 0** Crypto From Zero (5): absolute beginner, no jargon without a definition.
+   - **Modules 3–7** (27) from the Notion ATLAS chapters listed in the curriculum.
+   - **Lessons 8.1, 8.2, 8.4** (3) into `module-08-…` (8.3 is `03-defi-strategy-mastery.md`).
+   - **Module 11** Hedging & Risk Engineering (5) and **Module 14** Automation & Mastery (4): original content at the depth of Modules 10/12/13.
+   Check every number with `.claude/skills/defi-strategies/scripts/defi_calc.py` (15 calculators, including `pt`, `basis`, `covered-call`, `expected`, `income`, `bank`) or Python. Add a practical at the end of each module. Suggested new visuals: first-transaction walkthrough (M0), health-factor gauge (M3), APY decomposition bar (M4), bridge/oracle dependency map (M5), due-diligence scorecard (M6), exchange-flow and holder-metric examples (M7), portfolio risk buckets (M8), hedge payoff chart and stress-test table (M11), monitoring/alert flow (M14).
+2. **Capstones**: the analyst capstone (due-diligence file, after Module 7) and the operator capstone (a complete personal bank: balance sheet, custody, credit, ladder, income portfolio, payout policy, stress test, incident plan). Write briefs and grading rubrics, each with a one-page visual overview.
 3. **Live tier**: design what it includes (session cadence, capstone reviews, portfolio reviews, Q&A), then propose a price and wait for my approval. Update the "What's included" gallery image once it's priced.
 4. **Application form** (questions + scoring that plugs into `gbb-new-lead` with interest = defi) and a **sales call script**.
 5. **Sales page**: build it with the `frontend-design` skill using the store images, the copy in `06-whop-store-listing.md`, and the brand above.
@@ -1697,7 +2683,7 @@ so the brand stays consistent. Extend that file and don't hand-place one-off ima
 8. **Rebuild everything and push**: `python3 programs/defi-program/build_master.py`, then `cd programs/defi-program/export && npm install && npm run build` (renders all images, then the Word and PDF copies). Open the PDF and spot-check pages that have images.
 
 ## Rules
-- Educational only. No promised, projected or guaranteed returns anywhere: lessons, images, emails, sales page, store listing or call script. Always show how a strategy loses money next to how it earns.
+- Educational only. No promised, projected or guaranteed returns or income anywhere: lessons, images, emails, sales page, store listing or call script. Always show how a strategy loses money next to how it earns. "Own bank" is a method, never presented as a licence or financial service. Tax and legal points always say to consult a professional.
 - Never ask for seed phrases, private keys or exchange API keys.
 - No Discord, Skool or Slack. Use only the Calendly links named in the skills.
 - Ask me before anything outward-facing: creating or changing anything on Whop, sending emails, editing Zapier skills, changing prices.
@@ -1705,7 +2691,7 @@ so the brand stays consistent. Extend that file and don't hand-place one-off ima
 - Still open, ask me: live-tier price, refund policy, Grid Bot Builder customer pricing, whether the "Grid Bot Starter" tier exists.
 
 ## Done when
-- All 45 lessons and the capstone are written, number-checked and illustrated to the imagery standard.
+- All 76 lessons and both capstones are written, number-checked and illustrated to the imagery standard, with the logo leading every surface.
 - Live tier, application, call script and sales page are approved.
 - The product is in my Whop store (hidden until I say launch) with icon, banner and gallery images, and its plans and checkout links exist.
 - Funnel skills are updated in Zapier and the repo.

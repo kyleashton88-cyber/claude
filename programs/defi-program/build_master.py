@@ -45,11 +45,12 @@ def lesson_files():
 def main():
     sections = [
         f"# On-Chain Operator Program — Master File\n\n"
+        f"![On-Chain Operator Program](assets/brand/logo-horizontal-light.png)\n\n"
         f"*Generated {date.today().isoformat()} from `programs/defi-program/`. "
         f"Don't edit this file directly: edit the source files and run "
         f"`python3 programs/defi-program/build_master.py`.*\n\n"
         "## Contents\n"
-        "1. Build status\n2. Offer, decisions & curriculum\n3. Whop setup\n"
+        "0. Brand & logo (see `06-whop-store-listing.md`)\n1. Build status\n2. Offer, decisions & curriculum\n3. Whop setup\n"
         "4. Whop store listing\n5. Funnel changes\n6. Course content (finished lessons)\n"
         "7. Skills archive\n8. Build prompt (hand this to Claude Code)",
         "# 1. Build status\n\n" + read("README.md").split("\n", 1)[1],
