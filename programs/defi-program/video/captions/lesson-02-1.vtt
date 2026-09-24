@@ -1,0 +1,187 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.135
+Lesson 2.1.
+
+00:00:02.135 --> 00:00:04.290
+DEXs, aggregators & routing.
+
+00:00:04.290 --> 00:00:06.319
+By the end of this lesson, you'll be
+
+00:00:06.319 --> 00:00:08.622
+able to choose where to swap by comparing
+
+00:00:08.622 --> 00:00:11.145
+the net amount received, not the quoted price.
+
+00:00:12.445 --> 00:00:13.735
+Here's the plan.
+
+00:00:13.735 --> 00:00:15.420
+First, the key ideas.
+
+00:00:15.420 --> 00:00:18.135
+Then, a worked example, step by step.
+
+00:00:18.135 --> 00:00:19.660
+Then, your checklist.
+
+00:00:19.660 --> 00:00:21.822
+And finally, a three-question quiz.
+
+00:00:23.122 --> 00:00:26.539
+What you actually get = quoted output −
+
+00:00:26.539 --> 00:00:29.487
+price impact − pool fees − gas.
+
+00:00:29.487 --> 00:00:33.016
+First, AMM DEX: you trade against a liquidity
+
+00:00:33.016 --> 00:00:36.232
+pool priced by a formula (Lesson 2.2).
+
+00:00:36.232 --> 00:00:39.128
+Next, On-chain order book: orders matched by
+
+00:00:39.128 --> 00:00:42.067
+price and time, fully or partly on-chain.
+
+00:00:42.067 --> 00:00:45.040
+Then, Aggregator: searches many pools and venues
+
+00:00:45.040 --> 00:00:47.707
+and may split your order across routes.
+
+00:00:47.707 --> 00:00:49.541
+Also, Price impact: how much
+
+00:00:49.541 --> 00:00:51.548
+your trade moves the price.
+
+00:00:51.548 --> 00:00:54.338
+It grows with size relative to pool depth.
+
+00:00:54.338 --> 00:00:56.996
+On top of that, Slippage tolerance: the worst
+
+00:00:56.996 --> 00:00:59.943
+price you'll accept before the transaction reverts.
+
+00:01:01.243 --> 00:01:04.094
+And finally, Routing: multi-hop routes (A →
+
+00:01:04.094 --> 00:01:05.714
+B → C) can give a better
+
+00:01:05.714 --> 00:01:07.723
+price but touch more contracts.
+
+00:01:09.023 --> 00:01:14.303
+Selling 20 ETH: The aggregator wins by ~$308.
+
+00:01:14.303 --> 00:01:18.084
+Now selling 0.5 ETH: the aggregator quotes
+
+00:01:18.084 --> 00:01:20.898
+$3 better but costs $12 more in
+
+00:01:20.898 --> 00:01:23.748
+gas, so the direct pool wins.
+
+00:01:23.748 --> 00:01:25.903
+Big trades benefit from routing.
+
+00:01:25.903 --> 00:01:28.193
+Small trades mostly lose to gas.
+
+00:01:28.193 --> 00:01:35.798
+Single pool direct, 59,100 USDC, $8, 59,092.
+
+00:01:35.798 --> 00:01:44.968
+Aggregator (split across 3 pools), 59,420 USDC, $20, 59,400.
+
+00:01:46.268 --> 00:01:47.728
+Here's your checklist.
+
+00:01:47.728 --> 00:01:49.263
+Do it now, for real.
+
+00:01:49.263 --> 00:01:53.238
+First, Compare net output after gas, not headline price.
+
+00:01:53.238 --> 00:01:57.032
+Next, Price impact shown and acceptable for the size.
+
+00:01:57.032 --> 00:02:01.377
+Then, Route uses reputable pools and tokens you've verified.
+
+00:02:01.377 --> 00:02:04.732
+And finally, Slippage set on purpose (see 2.5).
+
+00:02:06.032 --> 00:02:07.242
+Question 1.
+
+00:02:07.242 --> 00:02:09.424
+Why can an aggregator give a better price?
+
+00:02:13.844 --> 00:02:16.389
+The answer: It can split an order across
+
+00:02:16.389 --> 00:02:18.809
+pools, so each pool's price moves less.
+
+00:02:20.109 --> 00:02:21.354
+Question 2.
+
+00:02:21.354 --> 00:02:22.899
+When does the best quote lose?
+
+00:02:27.319 --> 00:02:30.064
+The answer: When the extra gas costs more than
+
+00:02:30.064 --> 00:02:33.335
+the price improvement, which is common for small trades.
+
+00:02:34.635 --> 00:02:35.905
+Question 3.
+
+00:02:35.905 --> 00:02:37.500
+What drives price impact?
+
+00:02:41.920 --> 00:02:45.020
+The answer: Trade size relative to pool liquidity.
+
+00:02:46.320 --> 00:02:47.565
+Let's recap.
+
+00:02:47.565 --> 00:02:50.591
+AMM DEX: you trade against a liquidity
+
+00:02:50.591 --> 00:02:53.840
+pool priced by a formula (Lesson 2.2).
+
+00:02:53.840 --> 00:02:56.703
+On-chain order book: orders matched by price
+
+00:02:56.703 --> 00:02:59.230
+and time, fully or partly on-chain.
+
+00:02:59.230 --> 00:03:02.004
+Aggregator: searches many pools and venues and
+
+00:03:02.004 --> 00:03:04.370
+may split your order across routes.
+
+00:03:04.370 --> 00:03:07.352
+Price impact: how much your trade moves the price.
+
+00:03:08.652 --> 00:03:11.167
+Do the checklist now, before you move on.
+
+00:03:11.167 --> 00:03:15.248
+Next up, Lesson 2.2: AMM Mathematics
+
+00:03:15.248 --> 00:03:16.572
+(x · y = k).
