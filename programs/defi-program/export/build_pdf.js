@@ -61,7 +61,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><style>
 </style></head><body>
 <div class="cover"><img src="data:image/png;base64,${fs.readFileSync(path.resolve(__dirname, '../assets/brand/logo-icon-1024.png')).toString('base64')}" style="width:118mm;margin:0 auto 34px;border-radius:18px;box-shadow:0 10px 30px rgba(11,31,51,.25)">
 <div class="t">On-Chain Operator Program</div>
-<div class="s">From zero to your own on-chain bank · Master File</div>
+<div class="s">${process.env.PDF_SUBTITLE || 'From zero to your own on-chain bank · Master File'}</div>
 <div class="d">Draft · ${date}</div>
 <div class="d"><em>Educational content only. Not financial advice. No results are guaranteed.</em></div></div>
 ${body}</body></html>`;
@@ -73,7 +73,7 @@ ${body}</body></html>`;
   await page.pdf({
     path: out, format: 'A4', printBackground: true, displayHeaderFooter: true,
     headerTemplate: '<span></span>',
-    footerTemplate: '<div style="font-size:8px;color:#808080;width:100%;text-align:center">On-Chain Operator Program · <span class="pageNumber"></span> / <span class="totalPages"></span></div>',
+    footerTemplate: `<div style="font-size:8px;color:#808080;width:100%;text-align:center">On-Chain Operator Program${process.env.PDF_SUBTITLE ? ' · ' + process.env.PDF_SUBTITLE : ''} · <span class="pageNumber"></span> / <span class="totalPages"></span></div>`,
     margin: { top: '20mm', bottom: '22mm', left: '18mm', right: '18mm' },
   });
   await browser.close();

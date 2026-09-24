@@ -15,7 +15,7 @@ your call before phase 3 (Whop setup).
 | Price | **Course $15,000 one-time** · live tier priced higher (TBD) |
 | Refund policy | Open |
 | Starter tier / GBB pricing conflict | Open |
-| Structure | **15 modules, 76 lessons, 6 stages: zero to operator** (expanded 2026-09-24) |
+| Structure | **15 modules, 79 lessons, 6 stages: zero to operator** (expanded 2026-09-24) |
 
 **What $15,000 changes (recommendations, your call):**
 - It becomes the top of the ladder (above Grid Bot Elite at $2,497), so it
@@ -105,7 +105,7 @@ course, suggest **14 days, if under 30% of lessons completed**.
 ![Path to mastery](assets/diagrams/path-to-mastery.png)
 
 **Expanded 2026-09-24:** the program now takes someone who knows nothing all
-the way to operating as their own bank. That's **15 modules and 76 lessons in
+the way to operating as their own bank. That's **15 modules and 79 lessons in
 6 stages**. Modules 1–9 keep their numbers. Module 0 and Modules 10–14 are new.
 All 42 ATLAS chapters are still used exactly once; the new modules are
 original content.
@@ -116,7 +116,7 @@ sample lesson is in `02-sample-lesson-amm-math.md`.
 
 | Stage | Modules | You can… |
 |---|---|---|
-| **0 · Zero** | 0 | Buy crypto, set up a wallet and send a first transaction safely |
+| **0 · Zero** | 0 | Open and secure an account, buy, set up and back up a wallet, make a first transfer and a first practice DeFi transaction |
 | **1 · Foundations** | 1–2 | Protect a wallet, read a transaction, swap and LP deliberately |
 | **2 · Practitioner** | 3–5 | Borrow, earn yield and map infrastructure risk |
 | **3 · Analyst** | 6–7 | Research any protocol and read on-chain data |
@@ -127,16 +127,21 @@ sample lesson is in `02-sample-lesson-amm-math.md`.
 
 ## Stage 0 · Zero
 
-### Module 0 — Crypto From Zero *(5 lessons, new)*
-Outcome: go from never having owned crypto to a funded, secured wallet and a first on-chain transaction.
+### Module 0 — Crypto From Zero *(8 lessons, new)*
+Outcome: go from never having owned crypto to a secured exchange account, a backed-up wallet, a first transfer and a first practice DeFi transaction. Ends with the **Day-1 Setup Kit** checklist.
+
+![Your setup roadmap](assets/diagrams/setup-roadmap.png)
 
 | # | Lesson | Source |
 |---|---|---|
 | 0.1 | Money, ledgers and why blockchains exist | new |
-| 0.2 | Buying your first crypto: exchanges, KYC, fees, withdrawals | new |
-| 0.3 | Exchange account vs self-custody wallet: who holds the keys | new |
-| 0.4 | Your first wallet and first transaction (small test amount) | new |
-| 0.5 | The language of DeFi: a working glossary and mental models | new |
+| 0.2 | Opening and securing an exchange account (KYC, 2FA, allowlists) | new |
+| 0.3 | Buying your first crypto without overpaying | new |
+| 0.4 | Exchange account vs your own wallet: who holds the keys? | new |
+| 0.5 | Setting up your wallet and backing it up (restore test) | new |
+| 0.6 | Networks, gas and your first transfer | new |
+| 0.7 | Your first DeFi steps (testnet practice first) | new |
+| 0.8 | Your security baseline, and the language of DeFi | new |
 
 ---
 
@@ -337,7 +342,7 @@ Outcome: monitor and automate safely, run multisig operations, and complete the 
   payout policy, stress test and incident plan. Reviewed on the Live tier.
 
 ### Totals
-15 modules · 76 lessons (42 ATLAS + 34 new) · 228 quiz questions · 25 strategy playbooks · 2 capstones · strategy calculator with 15 commands.
+15 modules · 79 lessons (42 ATLAS + 37 new) · 237 quiz questions · 25 strategy playbooks · 2 capstones · strategy calculator with 15 commands.
 
 ---
 

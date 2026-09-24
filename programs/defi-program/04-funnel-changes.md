@@ -33,7 +33,7 @@ Scoring stays the same. Capital and experience predict fit for both products.
 *DeFi — warm/hot*
 > Hi {first},
 > Thanks for your interest in On-Chain Operator Program. It's a step-by-step program for operating in DeFi safely: how to research a protocol, where yield actually comes from, and how to plan the exit before you enter.
-> 15 modules and 76 lessons, from zero to running your own on-chain bank.
+> 15 modules and 79 lessons, from zero to running your own on-chain bank.
 > It's application-only. Apply here: <DEFI_APPLICATION_URL>
 > Qualified applicants book a call to see if it's the right fit: <DEFI_CALL_LINK>
 > Stewart

@@ -28,7 +28,7 @@ Grid Bot Builder. Work in this repo on branch
 ## Locked decisions (don't change them)
 - Name: On-Chain Operator Program. Course tier $15,000 one-time. Live tier priced higher.
 - Launch to everyone. Cold traffic goes application → call (vip-defi-consult Calendly) → checkout.
-- **6 stages, 15 modules, 76 lessons**, Module 0 (Crypto From Zero) to Module 14 (Automation & Mastery). Structure in `01-offer-and-curriculum.md`. Every lesson follows: Objective → Explanation → Worked example → Checklist → 3-question quiz.
+- **6 stages, 15 modules, 79 lessons**, Module 0 (Crypto From Zero) to Module 14 (Automation & Mastery). Structure in `01-offer-and-curriculum.md`. Every lesson follows: Objective → Explanation → Worked example → Checklist → 3-question quiz.
 - **Depth standard:** match `lessons/module-10-…`, `module-12-…` and `module-13-…`. Advanced lessons state "what this position is short", show computed numbers, and give professional rules (sizing, exits, caps).
 
 ## Logo & brand (lead with it)
@@ -37,6 +37,13 @@ nodes (`logoMark()` in `export/build_images.js`). It leads every surface.
 - Use the rendered files in `assets/brand/`: stacked icon, marks (dark and light transparent), horizontal lockups, favicon, brand guide.
 - Every store image, module banner and document cover carries the logo. Document diagrams carry the small mark in the footer.
 - Never recolour the rings, stretch the mark, or put the light version on dark.
+
+## Beginner standard (Module 0 is the model)
+The program must work for someone who has never owned crypto. `lessons/module-00-crypto-from-zero.md` sets the bar:
+- Define every term the first time it's used; keep the glossary in 0.8 current.
+- Give real, ordered, do-it-now steps, with a small test amount before any real one.
+- Name well-known products only as examples, and always say to check availability and regulation where the learner lives.
+- Keep the **Day-1 Setup Kit** complete: if a later module needs something set up (a hardware wallet, a multisig, alerts), add a matching setup checklist to that module.
 
 ## Imagery standard (every deliverable must meet it)
 All images come from one generator, `programs/defi-program/export/build_images.js`,
@@ -49,12 +56,11 @@ so the brand stays consistent. Extend that file and don't hand-place one-off ima
 - Every image carries the footer "Educational content only · Not financial advice · No results are guaranteed" (the shells already do this).
 
 ## Work to do, in order
-1. **Write the remaining 44 lessons** (32 of 76 are done: Modules 1, 2, 9, 10, 12, 13 and lesson 8.3), one file per module in `programs/defi-program/lessons/` (`module-NN-name.md`):
-   - **Module 0** Crypto From Zero (5): absolute beginner, no jargon without a definition.
+1. **Write the remaining 39 lessons** (40 of 79 are done: Modules 0, 1, 2, 9, 10, 12, 13 and lesson 8.3), one file per module in `programs/defi-program/lessons/` (`module-NN-name.md`):
    - **Modules 3–7** (27) from the Notion ATLAS chapters listed in the curriculum.
    - **Lessons 8.1, 8.2, 8.4** (3) into `module-08-…` (8.3 is `03-defi-strategy-mastery.md`).
    - **Module 11** Hedging & Risk Engineering (5) and **Module 14** Automation & Mastery (4): original content at the depth of Modules 10/12/13.
-   Check every number with `.claude/skills/defi-strategies/scripts/defi_calc.py` (15 calculators, including `pt`, `basis`, `covered-call`, `expected`, `income`, `bank`) or Python. Add a practical at the end of each module. Suggested new visuals: first-transaction walkthrough (M0), health-factor gauge (M3), APY decomposition bar (M4), bridge/oracle dependency map (M5), due-diligence scorecard (M6), exchange-flow and holder-metric examples (M7), portfolio risk buckets (M8), hedge payoff chart and stress-test table (M11), monitoring/alert flow (M14).
+   Check every number with `.claude/skills/defi-strategies/scripts/defi_calc.py` (15 calculators, including `pt`, `basis`, `covered-call`, `expected`, `income`, `bank`) or Python. Add a practical at the end of each module. Suggested new visuals: health-factor gauge (M3), APY decomposition bar (M4), bridge/oracle dependency map (M5), due-diligence scorecard (M6), exchange-flow and holder-metric examples (M7), portfolio risk buckets (M8), hedge payoff chart and stress-test table (M11), monitoring/alert flow (M14).
 2. **Capstones**: the analyst capstone (due-diligence file, after Module 7) and the operator capstone (a complete personal bank: balance sheet, custody, credit, ladder, income portfolio, payout policy, stress test, incident plan). Write briefs and grading rubrics, each with a one-page visual overview.
 3. **Live tier**: design what it includes (session cadence, capstone reviews, portfolio reviews, Q&A), then propose a price and wait for my approval. Update the "What's included" gallery image once it's priced.
 4. **Application form** (questions + scoring that plugs into `gbb-new-lead` with interest = defi) and a **sales call script**.
@@ -72,7 +78,7 @@ so the brand stays consistent. Extend that file and don't hand-place one-off ima
 - Still open, ask me: live-tier price, refund policy, Grid Bot Builder customer pricing, whether the "Grid Bot Starter" tier exists.
 
 ## Done when
-- All 76 lessons and both capstones are written, number-checked and illustrated to the imagery standard, with the logo leading every surface.
+- All 79 lessons and both capstones are written, number-checked and illustrated to the imagery standard, with the logo leading every surface.
 - Live tier, application, call script and sales page are approved.
 - The product is in my Whop store (hidden until I say launch) with icon, banner and gallery images, and its plans and checkout links exist.
 - Funnel skills are updated in Zapier and the repo.

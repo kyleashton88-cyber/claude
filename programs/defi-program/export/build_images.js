@@ -63,7 +63,7 @@ const icon = (name, size = 24, color = 'currentColor', sw = 1.8) =>
   `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round">${ICON[name]}</svg>`;
 
 const MODULES = [
-  { n: 0, t: 'Crypto From Zero', o: 'From never owning crypto to a secured wallet and a first transaction.', i: 'compass', l: 5 },
+  { n: 0, t: 'Crypto From Zero', o: 'From never owning crypto to a secured wallet, a first transfer and a first DeFi step.', i: 'compass', l: 8 },
   { n: 1, t: 'Foundations & Safety', o: 'Set up and use a wallet safely. Know what can go irreversibly wrong.', i: 'shield', l: 6 },
   { n: 2, t: 'Trading On-Chain', o: 'Swap and provide liquidity deliberately: price impact, IL, MEV.', i: 'swap', l: 5 },
   { n: 3, t: 'Lending & Leverage', o: 'Borrow against collateral with a buffer and a written defence plan.', i: 'bank', l: 4 },
@@ -80,7 +80,7 @@ const MODULES = [
   { n: 14, t: 'Automation & Mastery', o: 'Monitor, automate safely, and complete the operator capstone.', i: 'bot', l: 4 },
 ];
 const STAGES = [
-  ['0', 'Zero', [0], 'Buy crypto, secure a wallet, first transaction'],
+  ['0', 'Zero', [0], 'Open an account, buy, set up a wallet, first transfer'],
   ['1', 'Foundations', [1, 2], 'Protect a wallet, swap and LP deliberately'],
   ['2', 'Practitioner', [3, 4, 5], 'Borrow, earn yield, map infrastructure risk'],
   ['3', 'Analyst', [6, 7], 'Research any protocol, read on-chain data'],
@@ -174,7 +174,7 @@ function storeIcon() { return brandAsset('icon'); }
 
 function storeBanner() {
   const w = 1920, h = 1080;
-  const stats = [['15', 'modules'], ['76', 'lessons'], ['25', 'strategy playbooks'], ['2', 'capstones']];
+  const stats = [['15', 'modules'], ['79', 'lessons'], ['25', 'strategy playbooks'], ['2', 'capstones']];
   return page(w, h, 'dark', `${network(w, h, 3, 60)}
   <div style="position:absolute;right:110px;top:200px">${logoMark(600)}</div>
   <div style="position:absolute;left:120px;top:100px">${wordmark(30)}</div>
@@ -224,7 +224,7 @@ function galleryCurriculum() {
     <div style="display:flex;align-items:center;gap:14px"><div style="flex:none;width:50px;height:50px;border-radius:14px;background:rgba(46,230,166,.14);display:flex;align-items:center;justify-content:center;color:${C.aquaDark}">${icon(m.i, 28)}</div>
     <div style="font-size:15px;color:rgba(255,255,255,.6);font-weight:700;letter-spacing:.06em">MODULE ${m.n} · ${m.l} LESSONS</div></div>
     <div style="font-size:25px;font-weight:700;margin-top:14px;line-height:1.2">${m.t}</div></div>`).join('');
-  return galleryShell('Curriculum', '15 modules · 76 lessons · 2 capstones',
+  return galleryShell('Curriculum', '15 modules · 79 lessons · 2 capstones',
     `<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:20px">${cards}</div>`, 5);
 }
 
@@ -271,7 +271,7 @@ function galleryIncluded() {
     ${items.map(([ic, t]) => `<div style="display:flex;gap:20px;align-items:center;margin:26px 0;font-size:32px;color:rgba(255,255,255,.92)"><span style="color:${C.aquaDark}">${icon(ic, 36)}</span>${t}</div>`).join('')}
   </div>`;
   return galleryShell('What\'s included', 'Two ways to join', `<div style="display:flex;gap:36px;height:100%">
-    ${col('Course', 'Self-paced', [['book', '15 modules, 76 lessons, zero to operator'], ['target', '25 strategy playbooks'], ['search', 'Due-diligence & bank-policy worksheets'], ['chart', 'Strategy, income & bank calculators'], ['lock', 'Analyst + operator capstones']], false)}
+    ${col('Course', 'Self-paced', [['book', '15 modules, 79 lessons, zero to operator'], ['target', '25 strategy playbooks'], ['search', 'Due-diligence & bank-policy worksheets'], ['chart', 'Strategy, income & bank calculators'], ['lock', 'Analyst + operator capstones']], false)}
     ${col('Live', 'Course + coaching', [['check', 'Everything in Course'], ['video', 'Live group sessions'], ['users', 'Capstone & portfolio reviews'], ['vault', 'Own-bank policy review'], ['coins', 'Income-engine & payout review']], true)}
   </div>`, 19);
 }
@@ -585,6 +585,40 @@ function chartIncome() {
     `<svg width="100%" height="100%" viewBox="0 0 ${W} ${H}">${grid}${bars}</svg>`);
 }
 
+function diagramSetupRoadmap() {
+  const S = [['users', 'Accounts', 'Password manager, secure email, 2FA'], ['bank', 'Exchange', 'Open, KYC, lock it down'], ['coins', 'First buy', 'A little ETH + USDC, cheapest route'],
+    ['wallet', 'Wallet', 'Official install, seed on paper, restore test'], ['swap', 'First transfer', 'Right network, test amount first'], ['target', 'Practice DeFi', 'Testnet, then a tiny real swap'],
+    ['shield', 'Security baseline', '10 rules, bookmarks, hardware wallet']];
+  const body = `<div style="display:flex;align-items:stretch;gap:0;height:100%">${S.map(([ic, t2, s], i) => `
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative">
+      <div style="width:96px;height:96px;border-radius:50%;background:${i === 6 ? C.brand : '#fff'};border:2px solid ${i === 6 ? C.brand : C.blue};color:${i === 6 ? '#fff' : C.blue};display:flex;align-items:center;justify-content:center;z-index:2">${icon(ic, 44)}</div>
+      ${i < 6 ? `<div style="position:absolute;top:47px;left:calc(50% + 48px);right:calc(-50% + 48px);height:3px;background:${C.blue};opacity:.5"></div>` : ''}
+      <div style="font-size:18px;font-weight:700;color:${C.blue};margin-top:18px;letter-spacing:.1em">STEP ${i + 1}</div>
+      <div style="font-size:28px;font-weight:800;color:${C.ink};margin-top:6px">${t2}</div>
+      <div style="font-size:20px;color:${C.text2};margin-top:8px;line-height:1.35;padding:0 10px">${s}</div></div>`).join('')}</div>
+    <div style="position:absolute;left:0;right:0;bottom:-6px;text-align:center;font-size:21px;color:${C.text2}">Do it in order, with a small learning amount. Allow 2–3 hours over a few days. Checklist: the Day-1 Setup Kit.</div>`;
+  return lightShell(1800, 640, 'Your setup roadmap', 'From zero to ready for Module 1, in seven steps', body);
+}
+
+function diagramFirstTransfer() {
+  return lightShell(1800, 700, 'Your first transfer: exchange → your wallet', 'The network must match on both sides. Send a small test first.',
+    flowBoxes([['Copy address', 'Wallet copy button: never type it', 'wallet'], ['Choose network', 'One your wallet supports, e.g. an L2', 'layers'],
+      ['Check address', 'First and last 6 characters, ideally all', 'search'], ['Send a test', '$10 first, wait until it arrives', 'check'],
+      ['Send the rest', 'Then allowlist the address', 'lock']], false, { w: 296, h: 250, gap: 48 }) +
+    `<div style="position:absolute;left:0;right:0;bottom:-10px;text-align:center;font-size:22px;color:${C.text2}">Keep a little ETH on that network for gas, or you can't move anything.</div>`);
+}
+
+function diagramSeedBackup() {
+  const col = (good, title, items) => `<div style="flex:1;background:#fff;border:2px solid ${good ? C.blue : C.orange};border-radius:22px;padding:34px 40px">
+    <div style="display:flex;align-items:center;gap:14px;color:${good ? C.blue : C.orange}">${icon(good ? 'check' : 'flame', 40)}<div style="font-size:38px;font-weight:800;color:${C.ink}">${title}</div></div>
+    ${items.map(x => `<div style="font-size:25px;color:${C.text};margin-top:20px;display:flex;gap:14px;align-items:flex-start"><span style="color:${good ? C.blue : C.orange};font-weight:800">${good ? '✓' : '✕'}</span><span>${x}</span></div>`).join('')}</div>`;
+  return lightShell(1800, 640, 'Your seed phrase: do and don\'t', 'The 12–24 words are the wallet. Whoever has them has everything.',
+    `<div style="display:flex;gap:40px;height:100%">
+      ${col(true, 'Do', ['Write it on paper or stamp it in metal, in order', 'Store it privately, safe from fire and water', 'Keep a second copy elsewhere for larger amounts', 'Test a restore before depositing', 'Use a hardware wallet once the amount matters'])}
+      ${col(false, 'Never', ['Type it into any website or form', 'Photograph it or keep it in notes, email or cloud', 'Share it with anyone: no real support will ask', 'Use a phrase that came pre-printed or from someone else', 'Store it next to written instructions on how to use it'])}
+    </div>`);
+}
+
 // ---------- registry ----------
 const ASSETS = [
   ['brand/logo-icon-1024.png', 1024, 1024, () => brandAsset('icon')],
@@ -605,6 +639,9 @@ const ASSETS = [
   ['store/gallery-06-grid-vs-lp.png', 1920, 1080, galleryGridLp],
   ['store/gallery-07-whats-included.png', 1920, 1080, galleryIncluded],
   ...MODULES.map(m => [`modules/module-${String(m.n).padStart(2, '0')}.png`, 1600, 500, () => moduleBanner(m)]),
+  ['diagrams/setup-roadmap.png', 1800, 640, diagramSetupRoadmap],
+  ['diagrams/first-transfer.png', 1800, 700, diagramFirstTransfer],
+  ['diagrams/seed-backup.png', 1800, 640, diagramSeedBackup],
   ['diagrams/path-to-mastery.png', 1800, 820, () => lightShell(1800, 820, 'The path to mastery', 'Six stages from knowing nothing to operating your own on-chain bank', pathHtml(false))],
   ['diagrams/own-bank.png', 1800, 900, () => lightShell(1800, 900, 'Operate as your own bank', 'Four pillars on a base of records, under one income policy', ownBankHtml(false))],
   ['diagrams/custody-architecture.png', 1800, 820, diagramCustody],

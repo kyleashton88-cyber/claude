@@ -73,7 +73,7 @@ the rings, stretch the mark or put the light version on a dark background.
 
 **Short description (≈150 characters):**
 DeFi from first principles to professional strategies. Build a risk-adjusted
-income engine and run your capital like a bank. 15 modules · 76 lessons.
+income engine and run your capital like a bank. 15 modules · 79 lessons.
 
 **Headline:** From zero to your own on-chain bank.
 
@@ -87,14 +87,15 @@ income engine and run your capital like a bank. 15 modules · 76 lessons.
 > policy, a credit line, a liquidity ladder, and an income engine with a
 > payout you can sustain.
 >
-> Six stages, 15 modules and 76 lessons: wallets and safety, trading and
+> Six stages, 15 modules and 79 lessons: wallets and safety, trading and
 > liquidity, lending and yield, protocol research and on-chain analytics, 25
 > strategy playbooks up to fixed-rate, basis, options and hedged yield, and
 > finally operating your own on-chain bank. Every strategy is taught with its
 > maths, its kill rules and exactly how it loses money.
 
 **What you'll learn**
-- Stage 0–1: buy, store and move crypto safely; read any transaction; swap and provide liquidity deliberately
+- Stage 0: from knowing nothing to set up. Secure accounts, open an exchange, buy your first crypto without overpaying, set up and back up a wallet, make your first transfer on the right network, and practise DeFi on a free test network (with the Day-1 Setup Kit)
+- Stage 1: protect a wallet, read any transaction, swap and provide liquidity deliberately
 - Stage 2–3: lending, health factors and liquidations; yield, staking and restaking; a 6-step research loop for any protocol; on-chain analytics
 - Stage 4: 25 strategy playbooks in 6 levels, including fixed-rate yield (PT/YT), cash-and-carry basis, delta-neutral funding carry, covered calls and cash-secured puts, hedging and stress testing
 - Stage 5: operate as your own bank. Balance sheet, multisig custody, a credit line against your assets, a liquidity ladder, lending-desk decisions, books and succession, and an income engine that pays out less than it expects to earn
@@ -103,8 +104,9 @@ income engine and run your capital like a bank. 15 modules · 76 lessons.
 
 | | Course | Live |
 |---|---|---|
-| 15 modules, 76 lessons, zero to operator | ✓ | ✓ |
+| 15 modules, 79 lessons, zero to operator | ✓ | ✓ |
 | 25 strategy playbooks with maths and kill rules | ✓ | ✓ |
+| Printable Day-1 Setup Kit for complete beginners | ✓ | ✓ |
 | Checklists and quizzes in every lesson | ✓ | ✓ |
 | Due-diligence, pre-launch and bank-policy worksheets | ✓ | ✓ |
 | Strategy, income and balance-sheet calculators | ✓ | ✓ |
@@ -127,7 +129,7 @@ income engine and run your capital like a bank. 15 modules · 76 lessons.
 `<DEFI_APPLICATION_URL>`)
 
 **FAQ**
-- *I've never owned crypto. Is this for me?* Yes. Module 0 starts from buying your first crypto and setting up a wallet.
+- *I've never owned crypto. Is this for me?* Yes. Module 0 assumes zero knowledge and walks you through every setup step in order: securing your email, opening and locking down an exchange account, your first purchase, setting up and backing up a wallet, your first transfer, and a first practice DeFi transaction on a free test network. It ends with a printable Day-1 Setup Kit checklist.
 - *Do you manage my funds or need my keys?* Never. You keep custody. We will never ask for a seed phrase, private key or API key.
 - *Will I make money / earn an income?* The program teaches you to build and run an income portfolio and to measure it honestly: expected income after expected losses, with a payout below that. It doesn't promise or project returns, and every strategy is taught alongside how it loses money.
 - *What does "operate as your own bank" mean?* Running your crypto with the disciplines a bank uses: a balance sheet, custody controls, a credit policy, liquidity management and records. It's a method, not a licence or a financial service.

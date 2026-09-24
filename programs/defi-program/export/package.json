@@ -4,7 +4,7 @@
   "description": "Export the On-Chain Operator Program master file to Word and PDF",
   "scripts": {
     "images": "node build_images.js",
-    "build": "node build_images.js && node render_mermaid.js ../ON-CHAIN-OPERATOR-PROGRAM.md && node build_docx.js ../ON-CHAIN-OPERATOR-PROGRAM.md ../On-Chain-Operator-Program.docx && node build_pdf.js ../ON-CHAIN-OPERATOR-PROGRAM.md ../On-Chain-Operator-Program.pdf"
+    "build": "node build_images.js && node render_mermaid.js ../ON-CHAIN-OPERATOR-PROGRAM.md && node build_docx.js ../ON-CHAIN-OPERATOR-PROGRAM.md ../On-Chain-Operator-Program.docx && node build_pdf.js ../ON-CHAIN-OPERATOR-PROGRAM.md ../On-Chain-Operator-Program.pdf && node build_kit.js && PDF_SUBTITLE='Day-1 Setup Kit' node build_pdf.js ../Day-1-Setup-Kit.md ../Day-1-Setup-Kit.pdf"
   },
   "dependencies": {
     "@fontsource/inter": "^5.3.0",
