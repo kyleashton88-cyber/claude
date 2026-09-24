@@ -1,0 +1,130 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.225
+Lesson 8.2.
+
+00:00:02.225 --> 00:00:03.930
+The DeFi risk framework.
+
+00:00:03.930 --> 00:00:06.055
+By the end of this lesson, you'll be
+
+00:00:06.055 --> 00:00:08.409
+able to keep a risk register that scores
+
+00:00:08.409 --> 00:00:11.050
+every position's risks and names the response.
+
+00:00:12.350 --> 00:00:13.640
+Here's the plan.
+
+00:00:13.640 --> 00:00:15.325
+First, the key ideas.
+
+00:00:15.325 --> 00:00:18.040
+Then, a worked example, step by step.
+
+00:00:18.040 --> 00:00:19.565
+Then, your checklist.
+
+00:00:19.565 --> 00:00:21.727
+And finally, a three-question quiz.
+
+00:00:23.028 --> 00:00:27.564
+The eight risk surfaces: smart-contract · economic
+
+00:00:27.564 --> 00:00:30.766
+· oracle · liquidity · governance ·
+
+00:00:30.766 --> 00:00:35.068
+bridge/chain · counterparty · user-operation.
+
+00:00:35.068 --> 00:00:39.478
+Score each for likelihood (1–5) × impact (1–5).
+
+00:00:39.478 --> 00:00:42.406
+Anything ≥ 15 needs a mitigation or an
+
+00:00:42.406 --> 00:00:45.258
+exit; anything ≥ 20 shouldn't be held.
+
+00:00:46.558 --> 00:00:50.272
+USDC lending, Protocol Y, Oracle on one
+
+00:00:50.272 --> 00:00:53.430
+collateral is thin, 3, 4, 12, Cap
+
+00:00:53.430 --> 00:00:56.794
+10%, alert on governance changes.
+
+00:00:56.794 --> 00:01:01.516
+LST loop, Rate spike above break-even, 3, 3,
+
+00:01:01.516 --> 00:01:05.699
+9, Alert at 4.5% borrow; unwind rule.
+
+00:01:05.699 --> 00:01:09.643
+Bridged stablecoin on new L2, Bridge exploit,
+
+00:01:09.643 --> 00:01:12.944
+2, 5, 10, Canonical bridge; cap 5%.
+
+00:01:12.944 --> 00:01:16.186
+New farm, Contract bug (unaudited upgrade),
+
+00:01:16.186 --> 00:01:17.734
+4, 5, 20, Don't hold.
+
+00:01:19.034 --> 00:01:20.494
+Here's your checklist.
+
+00:01:20.494 --> 00:01:22.029
+Do it now, for real.
+
+00:01:22.029 --> 00:01:26.390
+First, Register covers every position and all eight surfaces.
+
+00:01:26.390 --> 00:01:30.145
+Next, Scores ≥ 15 have a mitigation or exit.
+
+00:01:30.145 --> 00:01:33.132
+And finally, Reviewed monthly and after incidents.
+
+00:01:34.432 --> 00:01:35.642
+Question 1.
+
+00:01:35.642 --> 00:01:36.917
+How is a risk scored?
+
+00:01:41.337 --> 00:01:44.887
+The answer: Likelihood × impact, each 1–5.
+
+00:01:46.187 --> 00:01:47.432
+Question 2.
+
+00:01:47.432 --> 00:01:49.257
+What's a user-operation risk?
+
+00:01:53.677 --> 00:01:55.915
+The answer: Your own mistakes: wrong
+
+00:01:55.915 --> 00:01:57.971
+network, bad signature, lost keys.
+
+00:01:59.271 --> 00:02:00.541
+Question 3.
+
+00:02:00.541 --> 00:02:01.781
+Score 20.
+
+00:02:01.781 --> 00:02:02.416
+Action?
+
+00:02:06.836 --> 00:02:08.351
+The answer: Don't hold it.
+
+00:02:09.651 --> 00:02:12.166
+Do the checklist now, before you move on.
+
+00:02:12.166 --> 00:02:15.601
+Next up, Lesson 8.3: The strategy library.

@@ -1,0 +1,157 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.350
+Lesson 7.9.
+
+00:00:02.350 --> 00:00:04.260
+Querying chain data yourself.
+
+00:00:04.260 --> 00:00:06.605
+By the end of this lesson, you'll be able
+
+00:00:06.605 --> 00:00:10.011
+to answer your own research questions with on-chain queries,
+
+00:00:10.011 --> 00:00:12.635
+instead of relying on someone else's dashboard.
+
+00:00:13.935 --> 00:00:15.225
+Here's the plan.
+
+00:00:15.225 --> 00:00:16.910
+First, the key ideas.
+
+00:00:16.910 --> 00:00:19.625
+Then, a worked example, step by step.
+
+00:00:19.625 --> 00:00:21.150
+Then, your checklist.
+
+00:00:21.150 --> 00:00:23.312
+And finally, a three-question quiz.
+
+00:00:24.612 --> 00:00:29.172
+First, Query platforms (e.g. Dune, Flipside, Allium) index
+
+00:00:29.172 --> 00:00:33.346
+blockchain data into SQL tables: raw transactions and
+
+00:00:33.346 --> 00:00:37.906
+logs, decoded tables per protocol, and curated "spellbook"
+
+00:00:37.906 --> 00:00:40.447
+tables (e.g. all DEX trades).
+
+00:00:40.447 --> 00:00:43.574
+Next, Indexers / subgraphs (e.g. The
+
+00:00:43.574 --> 00:00:47.677
+Graph) serve protocol-specific data via APIs.
+
+00:00:47.677 --> 00:00:50.859
+Then, Skills: SELECT, WHERE, GROUP BY, date
+
+00:00:50.859 --> 00:00:54.042
+truncation, and joining a token price table
+
+00:00:54.042 --> 00:00:56.222
+to convert amounts to USD.
+
+00:00:56.222 --> 00:01:00.431
+And finally, Discipline: check your numbers against the protocol's
+
+00:01:00.431 --> 00:01:04.514
+own dashboard; know table definitions (what counts as "volume");
+
+00:01:04.514 --> 00:01:07.467
+watch out for wash trading and double counting.
+
+00:01:08.767 --> 00:01:11.282
+Let's work an example, step by step.
+
+00:01:11.282 --> 00:01:14.692
+Then cross-check one day against another data source.
+
+00:01:14.692 --> 00:01:17.444
+If they differ a lot, find out why (different
+
+00:01:17.444 --> 00:01:21.572
+pools, wash-trade filters, price sources) before using either number.
+
+00:01:22.872 --> 00:01:24.332
+Here's your checklist.
+
+00:01:24.332 --> 00:01:25.867
+Do it now, for real.
+
+00:01:25.867 --> 00:01:28.712
+First, I can run and adapt a basic query.
+
+00:01:28.712 --> 00:01:31.987
+Next, I cross-check results against a second source.
+
+00:01:31.987 --> 00:01:34.387
+And finally, I note table definitions
+
+00:01:34.387 --> 00:01:36.092
+and filters in my research.
+
+00:01:37.392 --> 00:01:38.602
+Question 1.
+
+00:01:38.602 --> 00:01:40.007
+What is a decoded table?
+
+00:01:44.427 --> 00:01:47.671
+The answer: Contract events and calls translated
+
+00:01:47.671 --> 00:01:50.717
+into readable columns for a specific protocol.
+
+00:01:52.017 --> 00:01:53.262
+Question 2.
+
+00:01:53.262 --> 00:01:55.087
+Why cross-check query results?
+
+00:01:59.507 --> 00:02:02.227
+The answer: Definitions, filters and price
+
+00:02:02.227 --> 00:02:04.377
+sources differ; errors are common.
+
+00:02:05.677 --> 00:02:06.947
+Question 3.
+
+00:02:06.947 --> 00:02:09.312
+What SQL clause groups results by day?
+
+00:02:13.732 --> 00:02:16.837
+The answer: GROUP BY on a date-truncated timestamp.
+
+00:02:18.137 --> 00:02:19.382
+Let's recap.
+
+00:02:19.382 --> 00:02:23.109
+Query platforms (e.g. Dune, Flipside, Allium)
+
+00:02:23.109 --> 00:02:26.487
+index blockchain data into SQL tables.
+
+00:02:26.487 --> 00:02:29.645
+Indexers / subgraphs (e.g. The Graph)
+
+00:02:29.645 --> 00:02:33.102
+serve protocol-specific data via APIs.
+
+00:02:33.102 --> 00:02:36.282
+Skills: SELECT, WHERE, GROUP BY, date truncation.
+
+00:02:36.282 --> 00:02:39.887
+Discipline: check your numbers against the protocol's own dashboard.
+
+00:02:41.187 --> 00:02:43.702
+Do the checklist now, before you move on.
+
+00:02:43.702 --> 00:02:46.877
+Next up, Lesson 8.0: Mastery Starter.
