@@ -1,0 +1,178 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.345
+Lesson 5.5.
+
+00:00:02.345 --> 00:00:05.465
+Smart-contract risk & what audits don't prove.
+
+00:00:05.465 --> 00:00:07.491
+By the end of this lesson, you'll be
+
+00:00:07.491 --> 00:00:10.064
+able to weigh contract risk honestly, and read
+
+00:00:10.064 --> 00:00:12.090
+an audit for what it actually covers.
+
+00:00:13.390 --> 00:00:14.680
+Here's the plan.
+
+00:00:14.680 --> 00:00:16.365
+First, the key ideas.
+
+00:00:16.365 --> 00:00:19.080
+Then, a worked example, step by step.
+
+00:00:19.080 --> 00:00:20.605
+Then, your checklist.
+
+00:00:20.605 --> 00:00:22.767
+And finally, a three-question quiz.
+
+00:00:24.067 --> 00:00:27.899
+First, Common failure types: logic bugs, reentrancy (a
+
+00:00:27.899 --> 00:00:31.105
+contract is called back before it updates its
+
+00:00:31.105 --> 00:00:35.425
+state), broken access control, and economic exploits (correct
+
+00:00:35.425 --> 00:00:38.582
+code, exploitable incentives or oracles).
+
+00:00:38.582 --> 00:00:42.387
+Next, Audits review specific code at a specific time.
+
+00:00:42.387 --> 00:00:46.059
+Check the scope (which contracts), date (before later changes?),
+
+00:00:46.059 --> 00:00:49.127
+severity of findings and whether they were fixed.
+
+00:00:49.127 --> 00:00:51.052
+Then, Bug bounties pay hackers
+
+00:00:51.052 --> 00:00:53.152
+to report instead of exploit.
+
+00:00:53.152 --> 00:00:55.987
+A large, active bounty is a good sign.
+
+00:00:55.987 --> 00:00:58.502
+And finally, Time and value at risk:
+
+00:00:58.502 --> 00:01:01.085
+code that has safely held large value
+
+00:01:01.085 --> 00:01:03.872
+for years has survived more real attacks.
+
+00:01:05.172 --> 00:01:07.687
+Let's work an example, step by step.
+
+00:01:07.687 --> 00:01:12.177
+Protocol X: two audits, but the latest upgrade (last
+
+00:01:12.177 --> 00:01:16.967
+month) isn't in either scope; bounty $50k; TVL $400M.
+
+00:01:16.967 --> 00:01:19.123
+The newest code is unaudited and the
+
+00:01:19.123 --> 00:01:21.637
+bounty is small relative to the value.
+
+00:01:21.637 --> 00:01:23.002
+Size down, or wait.
+
+00:01:24.302 --> 00:01:25.762
+Here's your checklist.
+
+00:01:25.762 --> 00:01:27.297
+Do it now, for real.
+
+00:01:27.297 --> 00:01:29.574
+First, Audit scope matches deployed
+
+00:01:29.574 --> 00:01:31.772
+code; date after last upgrade.
+
+00:01:31.772 --> 00:01:34.907
+Next, Critical/high findings resolved.
+
+00:01:34.907 --> 00:01:38.832
+And finally, Bug bounty size relative to TVL checked.
+
+00:01:40.132 --> 00:01:41.342
+Question 1.
+
+00:01:41.342 --> 00:01:42.847
+What does an audit not prove?
+
+00:01:47.267 --> 00:01:49.575
+The answer: That the code (or later
+
+00:01:49.575 --> 00:01:51.947
+changes, or economic design) is safe.
+
+00:01:53.247 --> 00:01:54.492
+Question 2.
+
+00:01:54.492 --> 00:01:55.677
+What is reentrancy?
+
+00:02:00.097 --> 00:02:03.088
+The answer: A contract being called back before it
+
+00:02:03.088 --> 00:02:06.842
+finishes updating its state, letting an attacker repeat actions.
+
+00:02:08.142 --> 00:02:09.412
+Question 3.
+
+00:02:09.412 --> 00:02:10.767
+Why check audit dates?
+
+00:02:15.187 --> 00:02:18.507
+The answer: Code changed after the audit wasn't reviewed.
+
+00:02:19.807 --> 00:02:21.052
+Let's recap.
+
+00:02:21.052 --> 00:02:24.420
+Common failure types: logic bugs, reentrancy (a
+
+00:02:24.420 --> 00:02:27.368
+contract is called back before it updates
+
+00:02:27.368 --> 00:02:30.736
+its state), broken access control, and economic
+
+00:02:30.736 --> 00:02:35.176
+exploits (correct code, exploitable incentives or oracles).
+
+00:02:35.176 --> 00:02:38.346
+Audits review specific code at a specific time.
+
+00:02:38.346 --> 00:02:41.821
+Bug bounties pay hackers to report instead of exploit.
+
+00:02:41.821 --> 00:02:44.138
+Time and value at risk: code that
+
+00:02:44.138 --> 00:02:46.727
+has safely held large value for years
+
+00:02:46.727 --> 00:02:48.840
+has survived more real attacks.
+
+00:02:50.140 --> 00:02:52.655
+Do the checklist now, before you move on.
+
+00:02:52.655 --> 00:02:55.922
+Next up, Lesson 5.6: Beyond Ethereum:
+
+00:02:55.922 --> 00:02:59.104
+Solana, Bitcoin and other ecosystems.
