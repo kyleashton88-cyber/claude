@@ -1,0 +1,103 @@
+{
+ "id": "lesson-01-8",
+ "title": "Lesson 1.8: Privacy and physical security",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 1.8 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-01.png",
+   "eyebrow": "Lesson 1.8",
+   "vo": "Lesson one point eight. Privacy and physical security.",
+   "cap": "Lesson 1.8. Privacy and physical security."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Keep your holdings private and your household safe as your on-chain wealth grows.",
+   "vo": "Keep your holdings private and your household safe as your on-chain wealth grows.",
+   "cap": "Keep your holdings private and your household safe as your on-chain wealth grows."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Blockchains are public. Anyone who links an address to you can see its balance and…",
+    "Link less",
+    "Name services (e.g. an ENS name) are convenient but make an address easy to find and…",
+    "Physical risk (\"wrench attacks\")",
+    "Home and devices"
+   ],
+   "vo": "Blockchains are public. Anyone who links an address to you can see its balance and history, forever. Link less: don't post addresses, screenshots or wins publicly; use separate addresses for public activity (for example donations, NFTs) and for savings; be aware that exchange withdrawals link your identity (K.Y.C.) to the receiving address. Name services (for example an ENS name) are convenient but make an address easy to find and associate with you. Physical risk (\"wrench attacks\"): criminals target people known to hold crypto. Low profile is the first defence. Multisig with keys in separate locations means no single person can be forced to move everything. Home and devices: hardware wallets and backups out of sight; encrypted devices; don't discuss holdings with people who don't need to know.",
+   "cap": "Blockchains are public. Anyone who links an address to you can see its balance and history, forever. Link less: don't post addresses, screenshots or wins publicly; use separate addresses for public activity (e.g. donations, NFTs) and for savings; be aware that exchange withdrawals link your identity (KYC) to the receiving address. Name services (e.g. an ENS name) are convenient but make an address easy to find and associate with you. Physical risk (\"wrench attacks\"): criminals target people known to hold crypto. Low profile is the first defence. Multisig with keys in separate locations means no single person can be forced to move everything. Home and devices: hardware wallets and backups out of sight; encrypted devices; don't discuss holdings with people who don't need to know."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Alex posts a screenshot of a big win, with the address visible. Anyone can now see Alex's balance and follow every future move, and scammers and thieves now have a target. Better: no screenshots, a vault address that has never been shared, and a 2-of-3 multisi",
+   "vo": "Alex posts a screenshot of a big win, with the address visible. Anyone can now see Alex's balance and follow every future move, and scammers and thieves now have a target. Better: no screenshots, a vault address that has never been shared, and a 2-of-3 multisig so no single key holder can be coerced into draining it.",
+   "cap": "Alex posts a screenshot of a big win, with the address visible. Anyone can now see Alex's balance and follow every future move, and scammers and thieves now have a target. Better: no screenshots, a vault address that has never been shared, and a 2-of-3 multisig so no single key holder can be coerced into draining it."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Savings addresses have never been posted or linked publicly",
+    "No holdings screenshots or wins on social media",
+    "Vault keys held so no single person can move everything",
+    "Backups stored discreetly, away from where people would look"
+   ],
+   "vo": "Your checklist. Savings addresses have never been posted or linked publicly No holdings screenshots or wins on social media Vault keys held so no single person can move everything Backups stored discreetly, away from where people would look",
+   "cap": "Savings addresses have never been posted or linked publicly No holdings screenshots or wins on social media Vault keys held so no single person can move everything Backups stored discreetly, away from where people would look"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does linking an address to your identity reveal?"
+   ],
+   "sub": "Answer: Its full balance and history, now and in the future.",
+   "subAt": 0.62,
+   "vo": "What does linking an address to your identity reveal? ... Pause and think. ... The answer: Its full balance and history, now and in the future.",
+   "cap": "What does linking an address to your identity reveal? Pause and think. The answer: Its full balance and history, now and in the future."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "How does multisig help against physical threats?"
+   ],
+   "sub": "Answer: No single person can be forced to move everything; other keys are elsewhere.",
+   "subAt": 0.62,
+   "vo": "How does multisig help against physical threats? ... Pause and think. ... The answer: No single person can be forced to move everything; other keys are elsewhere.",
+   "cap": "How does multisig help against physical threats? Pause and think. The answer: No single person can be forced to move everything; other keys are elsewhere."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What links your identity to a wallet address?"
+   ],
+   "sub": "Answer: For example, KYC exchange withdrawals, name services, or posting the address publicly.",
+   "subAt": 0.62,
+   "vo": "What links your identity to a wallet address? ... Pause and think. ... The answer: For example, K.Y.C. exchange withdrawals, name services, or posting the address publicly.",
+   "cap": "What links your identity to a wallet address? Pause and think. The answer: For example, KYC exchange withdrawals, name services, or posting the address publicly."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

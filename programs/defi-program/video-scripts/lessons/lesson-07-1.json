@@ -1,0 +1,101 @@
+{
+ "id": "lesson-07-1",
+ "title": "Lesson 7.1: On-chain data foundations",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 7.1 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-07.png",
+   "eyebrow": "Lesson 7.1",
+   "vo": "Lesson seven point one. On-chain data foundations.",
+   "cap": "Lesson 7.1. On-chain data foundations."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Avoid the classic misreads of on-chain data.",
+   "vo": "Avoid the classic misreads of on-chain data.",
+   "cap": "Avoid the classic misreads of on-chain data."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Address ≠ person",
+    "Transfer ≠ trade",
+    "Labels are probabilistic",
+    "Active addresses can be inflated by bots or airdrop farming.",
+    "Data provenance"
+   ],
+   "vo": "Address ≠ person: one person can have many addresses; one exchange address serves millions. Transfer ≠ trade: moving tokens isn't buying or selling. Labels are probabilistic: providers guess who owns what; they can be wrong. Active addresses can be inflated by bots or airdrop farming. Data provenance: know chain coverage, indexing method and delay.",
+   "cap": "Address ≠ person: one person can have many addresses; one exchange address serves millions. Transfer ≠ trade: moving tokens isn't buying or selling. Labels are probabilistic: providers guess who owns what; they can be wrong. Active addresses can be inflated by bots or airdrop farming. Data provenance: know chain coverage, indexing method and delay."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "\"Whale moves $100M of BTC!\" It's an exchange shuffling between its own cold and hot wallets. No trade happened. Check labels, destination and history before reacting.",
+   "vo": "\"Whale moves $100M of bitcoin!\" It's an exchange shuffling between its own cold and hot wallets. No trade happened. Check labels, destination and history before reacting.",
+   "cap": "\"Whale moves $100M of BTC!\" It's an exchange shuffling between its own cold and hot wallets. No trade happened. Check labels, destination and history before reacting."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "I check what an address is before interpreting a move",
+    "I note each metric's source and definition"
+   ],
+   "vo": "Your checklist. I check what an address is before interpreting a move I note each metric's source and definition",
+   "cap": "I check what an address is before interpreting a move I note each metric's source and definition"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Does an address equal a person?"
+   ],
+   "sub": "Answer: No.",
+   "subAt": 0.62,
+   "vo": "Does an address equal a person? ... Pause and think. ... The answer: No.",
+   "cap": "Does an address equal a person? Pause and think. The answer: No."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Is a large transfer a sale?"
+   ],
+   "sub": "Answer: Not necessarily. It may be internal or custodial.",
+   "subAt": 0.62,
+   "vo": "Is a large transfer a sale? ... Pause and think. ... The answer: Not necessarily. It may be internal or custodial.",
+   "cap": "Is a large transfer a sale? Pause and think. The answer: Not necessarily. It may be internal or custodial."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why can active-address counts mislead?"
+   ],
+   "sub": "Answer: Bots and farming inflate them.",
+   "subAt": 0.62,
+   "vo": "Why can active-address counts mislead? ... Pause and think. ... The answer: Bots and farming inflate them.",
+   "cap": "Why can active-address counts mislead? Pause and think. The answer: Bots and farming inflate them."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

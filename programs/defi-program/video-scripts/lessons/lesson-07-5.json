@@ -1,0 +1,101 @@
+{
+ "id": "lesson-07-5",
+ "title": "Lesson 7.5: Holder & supply metrics",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 7.5 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-07.png",
+   "eyebrow": "Lesson 7.5",
+   "vo": "Lesson seven point five. Holder and supply metrics.",
+   "cap": "Lesson 7.5. Holder & supply metrics."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Read MVRV, SOPR and HODL waves as context, not signals.",
+   "vo": "Read MVRV, SOPR and HODL waves as context, not signals.",
+   "cap": "Read MVRV, SOPR and HODL waves as context, not signals."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Realised cap",
+    "MVRV = market cap ÷ realised cap. High = holders in large aggregate profit.",
+    "SOPR (spent output profit ratio)",
+    "HODL waves",
+    "Definitions differ by provider; strongest on UTXO chains like Bitcoin."
+   ],
+   "vo": "Realised cap: values each coin at the price it last moved (a cost-basis estimate). MVRV = market cap divided by realised cap. High = holders in large aggregate profit. SOPR (spent output profit ratio): >1 means coins moved today were, on average, sold at a profit. HODL waves: supply by coin age. Definitions differ by provider; strongest on UTXO chains like Bitcoin.",
+   "cap": "Realised cap: values each coin at the price it last moved (a cost-basis estimate). MVRV = market cap ÷ realised cap. High = holders in large aggregate profit. SOPR (spent output profit ratio): >1 means coins moved today were, on average, sold at a profit. HODL waves: supply by coin age. Definitions differ by provider; strongest on UTXO chains like Bitcoin."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Market cap $1.2T, realised cap $0.6T → MVRV 2.0: the average holder is at roughly 2× their cost basis. That's context for risk management (e.g. how much to de-risk), not a precise top signal.",
+   "vo": "Market cap $1.2T, realised cap $0.6T to MVRV 2.0: the average holder is at roughly 2 times their cost basis. That's context for risk management (for example how much to de-risk), not a precise top signal.",
+   "cap": "Market cap $1.2T, realised cap $0.6T → MVRV 2.0: the average holder is at roughly 2× their cost basis. That's context for risk management (e.g. how much to de-risk), not a precise top signal."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Provider methodology read before using a metric",
+    "Metrics used for context and sizing, not as triggers alone"
+   ],
+   "vo": "Your checklist. Provider methodology read before using a metric Metrics used for context and sizing, not as triggers alone",
+   "cap": "Provider methodology read before using a metric Metrics used for context and sizing, not as triggers alone"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "MVRV formula?"
+   ],
+   "sub": "Answer: Market cap ÷ realised cap.",
+   "subAt": 0.62,
+   "vo": "MVRV formula? ... Pause and think. ... The answer: Market cap divided by realised cap.",
+   "cap": "MVRV formula? Pause and think. The answer: Market cap ÷ realised cap."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "SOPR above 1 means?"
+   ],
+   "sub": "Answer: Coins moved were, on average, in profit.",
+   "subAt": 0.62,
+   "vo": "SOPR above 1 means? ... Pause and think. ... The answer: Coins moved were, on average, in profit.",
+   "cap": "SOPR above 1 means? Pause and think. The answer: Coins moved were, on average, in profit."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why read the provider's methodology?"
+   ],
+   "sub": "Answer: Definitions vary, and interpretations depend on them.",
+   "subAt": 0.62,
+   "vo": "Why read the provider's methodology? ... Pause and think. ... The answer: Definitions vary, and interpretations depend on them.",
+   "cap": "Why read the provider's methodology? Pause and think. The answer: Definitions vary, and interpretations depend on them."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

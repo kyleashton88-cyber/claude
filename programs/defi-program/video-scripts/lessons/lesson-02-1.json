@@ -1,0 +1,123 @@
+{
+ "id": "lesson-02-1",
+ "title": "Lesson 2.1: DEXs, aggregators & routing",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 2.1 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-02.png",
+   "eyebrow": "Lesson 2.1",
+   "vo": "Lesson two point one. decks, aggregators and routing.",
+   "cap": "Lesson 2.1. DEXs, aggregators & routing."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Choose where to swap by comparing the net amount received, not the quoted price.",
+   "vo": "Choose where to swap by comparing the net amount received, not the quoted price.",
+   "cap": "Choose where to swap by comparing the net amount received, not the quoted price."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "AMM DEX",
+    "On-chain order book",
+    "Aggregator",
+    "Price impact",
+    "Slippage tolerance"
+   ],
+   "vo": "What you actually get = quoted output minus price impact minus pool fees minus gas. AMM decks: you trade against a liquidity pool priced by a formula (Lesson 2.2). On-chain order book: orders matched by price and time, fully or partly on-chain. Aggregator: searches many pools and venues and may split your order across routes. Price impact: how much your trade moves the price. It grows with size relative to pool depth. Slippage tolerance: the worst price you'll accept before the transaction reverts.",
+   "cap": "AMM DEX: you trade against a liquidity pool priced by a formula (Lesson 2.2). On-chain order book: orders matched by price and time, fully or partly on-chain. Aggregator: searches many pools and venues and may split your order across routes. Price impact: how much your trade moves the price. It grows with size relative to pool depth. Slippage tolerance: the worst price you'll accept before the transaction reverts."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Routing"
+   ],
+   "vo": "Routing: multi-hop routes (A to B to C) can give a better price but touch more contracts.",
+   "cap": "Routing: multi-hop routes (A → B → C) can give a better price but touch more contracts."
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example",
+   "items": [
+    "Single pool direct",
+    "Aggregator (split across 3 pools)"
+   ],
+   "compact": true,
+   "vo": "Single pool direct, 59,100 U.S.D.C., $8, 59,092. Aggregator (split across 3 pools), 59,420 U.S.D.C., $20, 59,400.",
+   "cap": "Single pool direct, 59,100 USDC, $8, 59,092 Aggregator (split across 3 pools), 59,420 USDC, $20, 59,400"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Selling 20 ETH: The aggregator wins by ~$308. Now selling 0.5 ETH: the aggregator quotes $3 better but costs $12 more in gas, so the direct pool wins. Big trades benefit from routing. Small trades mostly lose to gas.",
+   "vo": "Selling 20 ETH: The aggregator wins by about $308. Now selling 0.5 ETH: the aggregator quotes $3 better but costs $12 more in gas, so the direct pool wins. Big trades benefit from routing. Small trades mostly lose to gas.",
+   "cap": "Selling 20 ETH: The aggregator wins by ~$308. Now selling 0.5 ETH: the aggregator quotes $3 better but costs $12 more in gas, so the direct pool wins. Big trades benefit from routing. Small trades mostly lose to gas."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Compare net output after gas, not headline price",
+    "Price impact shown and acceptable for the size",
+    "Route uses reputable pools and tokens you've verified",
+    "Slippage set on purpose (see 2.5)"
+   ],
+   "vo": "Your checklist. Compare net output after gas, not headline price Price impact shown and acceptable for the size Route uses reputable pools and tokens you've verified Slippage set on purpose (see 2.5)",
+   "cap": "Compare net output after gas, not headline price Price impact shown and acceptable for the size Route uses reputable pools and tokens you've verified Slippage set on purpose (see 2.5)"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why can an aggregator give a better price?"
+   ],
+   "sub": "Answer: It can split an order across pools, so each pool's price moves less.",
+   "subAt": 0.62,
+   "vo": "Why can an aggregator give a better price? ... Pause and think. ... The answer: It can split an order across pools, so each pool's price moves less.",
+   "cap": "Why can an aggregator give a better price? Pause and think. The answer: It can split an order across pools, so each pool's price moves less."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "When does the best quote lose?"
+   ],
+   "sub": "Answer: When the extra gas costs more than the price improvement, which is common for small trades.",
+   "subAt": 0.62,
+   "vo": "When does the best quote lose? ... Pause and think. ... The answer: When the extra gas costs more than the price improvement, which is common for small trades.",
+   "cap": "When does the best quote lose? Pause and think. The answer: When the extra gas costs more than the price improvement, which is common for small trades."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What drives price impact?"
+   ],
+   "sub": "Answer: Trade size relative to pool liquidity.",
+   "subAt": 0.62,
+   "vo": "What drives price impact? ... Pause and think. ... The answer: Trade size relative to pool liquidity.",
+   "cap": "What drives price impact? Pause and think. The answer: Trade size relative to pool liquidity."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

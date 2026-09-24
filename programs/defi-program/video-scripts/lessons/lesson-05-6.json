@@ -1,0 +1,101 @@
+{
+ "id": "lesson-05-6",
+ "title": "Lesson 5.6: Beyond Ethereum: Solana, Bitcoin and other ecosystems",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 5.6 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-05.png",
+   "eyebrow": "Lesson 5.6",
+   "vo": "Lesson five point six. Beyond Ethereum: Solana, Bitcoin and other ecosystems.",
+   "cap": "Lesson 5.6. Beyond Ethereum: Solana, Bitcoin and other ecosystems."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Operate safely on non-EVM chains and understand how Bitcoin is used in DeFi.",
+   "vo": "Operate safely on non-EVM chains and understand how Bitcoin is used in DeFi.",
+   "cap": "Operate safely on non-EVM chains and understand how Bitcoin is used in DeFi."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Solana",
+    "Bitcoin in DeFi",
+    "Other ecosystems (e.g. Cosmos chains connected by IBC, Move-based chains) each have…",
+    "Same rules everywhere"
+   ],
+   "vo": "Solana: a separate, high-throughput chain with its own wallets (for example Phantom, Solflare), its own address format, very low fees (paid in SOL), and priority fees when busy. Tokens follow its own standard (SPL). Your Ethereum address doesn't work there. Sending between ecosystems needs a bridge or an exchange. Bitcoin in DeFi: bitcoin itself doesn't run DeFi apps, so it's usually used as a wrapped token on other chains (backed by a custodian, a group of signers, or a protocol), or on Bitcoin layer 2s and sidechains. Each wrapper has its own trust model. Your \"bitcoin\" is only as good as whoever holds the real bitcoin. Other ecosystems (for example Cosmos chains connected by IBC, Move-based chains) each have their own wallets, fees and bridges. Apply Module 5's dependency map to each. Same rules everywhere: official wallet from the official site, test transaction first, correct network, gas token on hand.",
+   "cap": "Solana: a separate, high-throughput chain with its own wallets (e.g. Phantom, Solflare), its own address format, very low fees (paid in SOL), and priority fees when busy. Tokens follow its own standard (SPL). Your Ethereum address doesn't work there. Sending between ecosystems needs a bridge or an exchange. Bitcoin in DeFi: BTC itself doesn't run DeFi apps, so it's usually used as a wrapped token on other chains (backed by a custodian, a group of signers, or a protocol), or on Bitcoin layer 2s and sidechains. Each wrapper has its own trust model. Your \"BTC\" is only as good as whoever holds the real BTC. Other ecosystems (e.g. Cosmos chains connected by IBC, Move-based chains) each have their own wallets, fees and bridges. Apply Module 5's dependency map to each. Same rules everywhere: official wallet from the official site, test transaction first, correct network, gas token on hand."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "You hold 1 BTC and want to lend it on Ethereum. Options: a custodial wrapper (trust one company), a decentralised wrapper (trust a signer set or protocol), or not wrapping at all. Write each option's trust model and cap wrapped BTC as bridge risk (5.1).",
+   "vo": "You hold 1 bitcoin and want to lend it on Ethereum. Options: a custodial wrapper (trust one company), a decentralised wrapper (trust a signer set or protocol), or not wrapping at all. Write each option's trust model and cap wrapped bitcoin as bridge risk (5.1).",
+   "cap": "You hold 1 BTC and want to lend it on Ethereum. Options: a custodial wrapper (trust one company), a decentralised wrapper (trust a signer set or protocol), or not wrapping at all. Write each option's trust model and cap wrapped BTC as bridge risk (5.1)."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Separate, official wallet for each non-EVM chain I use",
+    "Gas token held on each chain",
+    "Wrapped-BTC trust model known and capped"
+   ],
+   "vo": "Your checklist. Separate, official wallet for each non-EVM chain I use Gas token held on each chain Wrapped-bitcoin trust model known and capped",
+   "cap": "Separate, official wallet for each non-EVM chain I use Gas token held on each chain Wrapped-BTC trust model known and capped"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Does your Ethereum address work on Solana?"
+   ],
+   "sub": "Answer: No. It's a different ecosystem with its own address format and wallets.",
+   "subAt": 0.62,
+   "vo": "Does your Ethereum address work on Solana? ... Pause and think. ... The answer: No. It's a different ecosystem with its own address format and wallets.",
+   "cap": "Does your Ethereum address work on Solana? Pause and think. The answer: No. It's a different ecosystem with its own address format and wallets."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What determines a wrapped BTC token's safety?"
+   ],
+   "sub": "Answer: Who holds the real BTC and how it can be redeemed: its trust model.",
+   "subAt": 0.62,
+   "vo": "What determines a wrapped bitcoin token's safety? ... Pause and think. ... The answer: Who holds the real bitcoin and how it can be redeemed: its trust model.",
+   "cap": "What determines a wrapped BTC token's safety? Pause and think. The answer: Who holds the real BTC and how it can be redeemed: its trust model."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What's Solana's gas token?"
+   ],
+   "sub": "Answer: SOL.",
+   "subAt": 0.62,
+   "vo": "What's Solana's gas token? ... Pause and think. ... The answer: SOL.",
+   "cap": "What's Solana's gas token? Pause and think. The answer: SOL."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

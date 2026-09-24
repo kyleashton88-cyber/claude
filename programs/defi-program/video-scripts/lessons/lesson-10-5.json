@@ -1,0 +1,120 @@
+{
+ "id": "lesson-10-5",
+ "title": "Lesson 10.5: Active concentrated-liquidity management",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 10.5 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-10.png",
+   "eyebrow": "Lesson 10.5",
+   "vo": "Lesson ten point five. Active concentrated-liquidity management.",
+   "cap": "Lesson 10.5. Active concentrated-liquidity management."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Choose a range width and a rebalance rule that fee income can actually pay for.",
+   "vo": "Choose a range width and a rebalance rule that fee income can actually pay for.",
+   "cap": "Choose a range width and a rebalance rule that fee income can actually pay for."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "$2,400–$3,600 (±20%)",
+    "$2,700–$3,300 (±10%)",
+    "$2,850–$3,150 (±5%)"
+   ],
+   "compact": true,
+   "vo": "$2,400–$3,600 (±20%), about 10.4 times. $2,700–$3,300 (±10%), about 20.4 times. $2,850–$3,150 (±5%), about 40.5 times.",
+   "cap": "$2,400–$3,600 (±20%), ~10.4× $2,700–$3,300 (±10%), ~20.4× $2,850–$3,150 (±5%), ~40.5×"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "Narrower ranges earn more fees per dollar while in range and go out of range sooner. the calculator Every rebalance costs gas and swap fees and locks in the impermanent loss so far. Professionals set a rule before entering: Width from volatility: at least ~1.5",
+   "vo": "Narrower ranges earn more fees per dollar while in range and go out of range sooner. the calculator Every rebalance costs gas and swap fees and locks in the impermanent loss so far. Professionals set a rule before entering: Width from volatility: at least about 1.5 times the typical weekly move. Rebalance trigger: out of range for 24h+, and the range thesis still holds. Invalidation: a structural break (as with a grid bot) means exit, not re-centre. Budget: rebalancing costs capped at a share of expected fees (for example at most 25%).",
+   "cap": "Narrower ranges earn more fees per dollar while in range and go out of range sooner. the calculator Every rebalance costs gas and swap fees and locks in the impermanent loss so far. Professionals set a rule before entering: Width from volatility: at least ~1.5× the typical weekly move. Rebalance trigger: out of range for 24h+, and the range thesis still holds. Invalidation: a structural break (as with a grid bot) means exit, not re-centre. Budget: rebalancing costs capped at a share of expected fees (e.g. ≤ 25%)."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "ETH typically moves ±7% a week. A ±5% range would be out of range most weeks. The rule points to ±10–12%: ~20× efficiency, and time in range to earn.",
+   "vo": "ETH typically moves ±7% a week. A ±5% range would be out of range most weeks. The rule points to ±10–12%: about 20 times efficiency, and time in range to earn.",
+   "cap": "ETH typically moves ±7% a week. A ±5% range would be out of range most weeks. The rule points to ±10–12%: ~20× efficiency, and time in range to earn."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "What this position is short"
+   ],
+   "sub": "Trending markets and volatility above what the range was sized for.",
+   "vo": "Trending markets and volatility above what the range was sized for.",
+   "cap": "Trending markets and volatility above what the range was sized for."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Width ≥ 1.5× typical weekly move",
+    "Rebalance trigger and invalidation written",
+    "Rebalance cost budget set",
+    "P&L tracked against holding (Lesson 2.4)"
+   ],
+   "vo": "Your checklist. Width at least 1.5 times typical weekly move Rebalance trigger and invalidation written Rebalance cost budget set P and L tracked against holding (Lesson 2.4)",
+   "cap": "Width ≥ 1.5× typical weekly move Rebalance trigger and invalidation written Rebalance cost budget set P&L tracked against holding (Lesson 2.4)"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why does a ±5% range earn ~2× the fees of ±10% while in range?"
+   ],
+   "sub": "Answer: The same capital is concentrated in half the price range, so it provides about twice the liquidity there.",
+   "subAt": 0.62,
+   "vo": "Why does a ±5% range earn about 2 times the fees of ±10% while in range? ... Pause and think. ... The answer: The same capital is concentrated in half the price range, so it provides about twice the liquidity there.",
+   "cap": "Why does a ±5% range earn ~2× the fees of ±10% while in range? Pause and think. The answer: The same capital is concentrated in half the price range, so it provides about twice the liquidity there."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does a rebalance lock in?"
+   ],
+   "sub": "Answer: The impermanent loss accrued so far, plus gas and swap costs.",
+   "subAt": 0.62,
+   "vo": "What does a rebalance lock in? ... Pause and think. ... The answer: The impermanent loss accrued so far, plus gas and swap costs.",
+   "cap": "What does a rebalance lock in? Pause and think. The answer: The impermanent loss accrued so far, plus gas and swap costs."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Price breaks structure and exits the range. Re-centre?"
+   ],
+   "sub": "Answer: No. That's an invalidation. Exit per plan.",
+   "subAt": 0.62,
+   "vo": "Price breaks structure and exits the range. Re-centre? ... Pause and think. ... The answer: No. That's an invalidation. Exit per plan.",
+   "cap": "Price breaks structure and exits the range. Re-centre? Pause and think. The answer: No. That's an invalidation. Exit per plan."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

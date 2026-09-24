@@ -1,0 +1,114 @@
+{
+ "id": "lesson-02-5",
+ "title": "Lesson 2.5: MEV and protecting your trades",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 2.5 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-02.png",
+   "eyebrow": "Lesson 2.5",
+   "vo": "Lesson two point five. M.E.V. and protecting your trades.",
+   "cap": "Lesson 2.5. MEV and protecting your trades."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Set slippage and routing so your trades aren't easy targets.",
+   "vo": "Set slippage and routing so your trades aren't easy targets.",
+   "cap": "Set slippage and routing so your trades aren't easy targets."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Sandwich attack",
+    "Tight but realistic slippage (e.g. 0.1–0.5% for liquid majors, more only when you…",
+    "MEV-protected / private transaction routing (many wallets and aggregators offer this)",
+    "Split large trades. Avoid thin pools",
+    "Don't broadcast huge swaps in illiquid pairs"
+   ],
+   "vo": "M.E.V. (maximal extractable value) is profit taken by whoever orders transactions in a block. Some is harmless (arbitrage realigning prices). The kind that hurts you: (pushing the price up), lets your trade execute at the worse price, then sells just after. Your slippage tolerance is its profit ceiling. Defences: Sandwich attack: a bot sees your pending swap, buys just before you Tight but realistic slippage (for example 0.1–0.5% for liquid majors, more only when you understand why) M.E.V.-protected / private transaction routing (many wallets and aggregators offer this) Split large trades. Avoid thin pools Don't broadcast huge swaps in illiquid pairs",
+   "cap": "Sandwich attack: a bot sees your pending swap, buys just before you Tight but realistic slippage (e.g. 0.1–0.5% for liquid majors, more only when you understand why) MEV-protected / private transaction routing (many wallets and aggregators offer this) Split large trades. Avoid thin pools Don't broadcast huge swaps in illiquid pairs"
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example",
+   "items": [
+    "3%",
+    "0.5%",
+    "Private / protected route"
+   ],
+   "compact": true,
+   "vo": "3%, up to about $600. 0.5%, up to about $100. Private / protected route, Transaction isn't visible in the public mempool, so it can't be sandwiched from there.",
+   "cap": "3%, up to ~$600 0.5%, up to ~$100 Private / protected route, Transaction isn't visible in the public mempool, so it can't be sandwiched from there"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Swapping $20,000: Too tight a tolerance (e.g. 0.05% on a volatile pair) just makes the transaction fail, and failed transactions still cost gas (Lesson 1.2).",
+   "vo": "Swapping $20,000: Too tight a tolerance (for example 0.05% on a volatile pair) just makes the transaction fail, and failed transactions still cost gas (Lesson 1.2).",
+   "cap": "Swapping $20,000: Too tight a tolerance (e.g. 0.05% on a volatile pair) just makes the transaction fail, and failed transactions still cost gas (Lesson 1.2)."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Slippage set for this pair and size, never left at a high default",
+    "Protected routing on for larger swaps",
+    "Large orders split or routed through deep liquidity"
+   ],
+   "vo": "Your checklist. Slippage set for this pair and size, never left at a high default Protected routing on for larger swaps Large orders split or routed through deep liquidity",
+   "cap": "Slippage set for this pair and size, never left at a high default Protected routing on for larger swaps Large orders split or routed through deep liquidity"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What limits how much a sandwich bot can take?"
+   ],
+   "sub": "Answer: Your slippage tolerance (and the pool's depth).",
+   "subAt": 0.62,
+   "vo": "What limits how much a sandwich bot can take? ... Pause and think. ... The answer: Your slippage tolerance (and the pool's depth).",
+   "cap": "What limits how much a sandwich bot can take? Pause and think. The answer: Your slippage tolerance (and the pool's depth)."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why not set slippage near zero?"
+   ],
+   "sub": "Answer: Normal price movement makes the transaction revert, and you still pay gas.",
+   "subAt": 0.62,
+   "vo": "Why not set slippage near zero? ... Pause and think. ... The answer: Normal price movement makes the transaction revert, and you still pay gas.",
+   "cap": "Why not set slippage near zero? Pause and think. The answer: Normal price movement makes the transaction revert, and you still pay gas."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Name two MEV defences."
+   ],
+   "sub": "Answer: Any two: tight slippage, private/protected routing, splitting trades, using deep pools.",
+   "subAt": 0.62,
+   "vo": "Name two M.E.V. defences. ... Pause and think. ... The answer: Any two: tight slippage, private/protected routing, splitting trades, using deep pools.",
+   "cap": "Name two MEV defences. Pause and think. The answer: Any two: tight slippage, private/protected routing, splitting trades, using deep pools."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

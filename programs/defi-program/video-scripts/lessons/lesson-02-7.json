@@ -1,0 +1,118 @@
+{
+ "id": "lesson-02-7",
+ "title": "Lesson 2.7: Advanced AMM design and LVR",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 2.7 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-02.png",
+   "eyebrow": "Lesson 2.7",
+   "vo": "Lesson two point seven. Advanced AMM design and L.V.R..",
+   "cap": "Lesson 2.7. Advanced AMM design and LVR."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Know the major AMM designs and measure an LP's real cost with loss-versus-rebalancing (LVR).",
+   "vo": "Know the major AMM designs and measure an L.P.'s real cost with loss-versus-rebalancing (L.V.R.).",
+   "cap": "Know the major AMM designs and measure an LP's real cost with loss-versus-rebalancing (LVR)."
+  },
+  {
+   "type": "image",
+   "src": "assets/charts/lvr.png",
+   "eyebrow": "Loss-versus-rebalancing vs volatility",
+   "vo": "Here's the picture: Loss-versus-rebalancing versus volatility.",
+   "cap": "Loss-versus-rebalancing vs volatility."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Constant product (x·y=k)",
+    "StableSwap",
+    "Weighted pools",
+    "Concentrated liquidity",
+    "Hooks and dynamic fees"
+   ],
+   "vo": "Constant product (x,y=k): works for any pair; spreads liquidity across all prices. StableSwap: for assets that should trade near 1:1 (stablecoins, liquid staking token/ETH). Blends constant-sum (flat, low slippage near the peg) with constant-product (safety away from it), tuned by an amplification parameter. Weighted pools: more than two tokens or uneven weights (for example 80/20), with invariant ∏ xᵢ^wᵢ = k. An 80/20 pool has less impermanent loss on the 80% token. Concentrated liquidity: positions in price ranges (\"ticks\"); the pool tracks the square root of price internally. Hooks and dynamic fees: newer designs (for example Uniswap v4, 2025) let pools run custom code at swap time: dynamic fees, limit orders, oracles. Each hook is extra contract risk.",
+   "cap": "Constant product (x·y=k): works for any pair; spreads liquidity across all prices. StableSwap: for assets that should trade near 1:1 (stablecoins, LST/ETH). Blends constant-sum (flat, low slippage near the peg) with constant-product (safety away from it), tuned by an amplification parameter. Weighted pools: more than two tokens or uneven weights (e.g. 80/20), with invariant ∏ xᵢ^wᵢ = k. An 80/20 pool has less impermanent loss on the 80% token. Concentrated liquidity: positions in price ranges (\"ticks\"); the pool tracks √price internally. Hooks and dynamic fees: newer designs (e.g. Uniswap v4, 2025) let pools run custom code at swap time: dynamic fees, limit orders, oracles. Each hook is extra contract risk."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "LVR (loss-versus-rebalancing)"
+   ],
+   "vo": "L.V.R. (loss-versus-rebalancing): pool prices only update when arbitrageurs trade against L.P.s after prices move elsewhere. L.V.R. measures what L.P.s lose to that arbitrage, versus a portfolio that rebalances at market prices. For a full-range constant-product pool, L.V.R. about sigma squared/8 of pool value per year (sigma = annual volatility). Fees must beat L.V.R., not just impermanent loss.",
+   "cap": "LVR (loss-versus-rebalancing): pool prices only update when arbitrageurs trade against LPs after prices move elsewhere. LVR measures what LPs lose to that arbitrage, versus a portfolio that rebalances at market prices. For a full-range constant-product pool, LVR ≈ σ²/8 of pool value per year (σ = annual volatility). Fees must beat LVR, not just impermanent loss."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "An ETH/USDC full-range pool with ETH volatility 80%/yr: the calculator → LVR ≈ 8.0%/yr. With 12% fee APR, LPs keep ≈ +4%/yr before gas. If volatility rises to 110%, LVR ≈ 15%/yr, and the same fees now lose money. Higher-volatility pairs need much higher fee ti",
+   "vo": "An ETH/U.S.D.C. full-range pool with ETH volatility 80% a year: the calculator to L.V.R. about 8.0% a year. With 12% fee A.P.R., L.P.s keep about +4% a year before gas. If volatility rises to 110%, L.V.R. about 15% a year, and the same fees now lose money. Higher-volatility pairs need much higher fee tiers.",
+   "cap": "An ETH/USDC full-range pool with ETH volatility 80%/yr: the calculator → LVR ≈ 8.0%/yr. With 12% fee APR, LPs keep ≈ +4%/yr before gas. If volatility rises to 110%, LVR ≈ 15%/yr, and the same fees now lose money. Higher-volatility pairs need much higher fee tiers."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "I choose pool type by pair",
+    "I compare fee APR with LVR, not just IL",
+    "Hook contracts reviewed like any other contract"
+   ],
+   "vo": "Your checklist. I choose pool type by pair: StableSwap for pegged pairs, weighted/CL otherwise I compare fee A.P.R. with L.V.R., not just impermanent loss Hook contracts reviewed like any other contract",
+   "cap": "I choose pool type by pair: StableSwap for pegged pairs, weighted/CL otherwise I compare fee APR with LVR, not just IL Hook contracts reviewed like any other contract"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why do stable pairs use StableSwap curves?"
+   ],
+   "sub": "Answer: They give very low slippage near the peg, where these pairs trade.",
+   "subAt": 0.62,
+   "vo": "Why do stable pairs use StableSwap curves? ... Pause and think. ... The answer: They give very low slippage near the peg, where these pairs trade.",
+   "cap": "Why do stable pairs use StableSwap curves? Pause and think. The answer: They give very low slippage near the peg, where these pairs trade."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does LVR measure?"
+   ],
+   "sub": "Answer: What LPs lose to arbitrageurs because pool prices lag the market.",
+   "subAt": 0.62,
+   "vo": "What does L.V.R. measure? ... Pause and think. ... The answer: What L.P.s lose to arbitrageurs because pool prices lag the market.",
+   "cap": "What does LVR measure? Pause and think. The answer: What LPs lose to arbitrageurs because pool prices lag the market."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Volatility 60%/yr: approximate LVR for a full-range pool?"
+   ],
+   "sub": "Answer: 0.6²/8 = 4.5% of pool value per year.",
+   "subAt": 0.62,
+   "vo": "Volatility 60% a year: approximate L.V.R. for a full-range pool? ... Pause and think. ... The answer: 0.6 squared/8 = 4.5% of pool value per year.",
+   "cap": "Volatility 60%/yr: approximate LVR for a full-range pool? Pause and think. The answer: 0.6²/8 = 4.5% of pool value per year."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

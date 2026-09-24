@@ -1,0 +1,97 @@
+{
+ "id": "lesson-07-6",
+ "title": "Lesson 7.6: Network activity",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 7.6 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-07.png",
+   "eyebrow": "Lesson 7.6",
+   "vo": "Lesson seven point six. Network activity.",
+   "cap": "Lesson 7.6. Network activity."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Judge a chain's real usage beyond transaction counts.",
+   "vo": "Judge a chain's real usage beyond transaction counts.",
+   "cap": "Judge a chain's real usage beyond transaction counts."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "Transaction counts depend on architecture and bots. Better: fees paid (real demand for blockspace), stablecoin activity, DEX volume, app revenue, and retention of users over time.",
+   "vo": "Transaction counts depend on architecture and bots. Better: fees paid (real demand for blockspace), stablecoin activity, decks volume, app revenue, and retention of users over time.",
+   "cap": "Transaction counts depend on architecture and bots. Better: fees paid (real demand for blockspace), stablecoin activity, DEX volume, app revenue, and retention of users over time."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Chain A: 5M transactions/day, $20k fees. Chain B: 500k transactions/day, $2M fees. B's users pay 100× more for blockspace, a stronger sign of valuable activity.",
+   "vo": "Chain A: 5M transactions a day, $20k fees. Chain B: 500k transactions a day, $2M fees. B's users pay 100 times more for blockspace, a stronger sign of valuable activity.",
+   "cap": "Chain A: 5M transactions/day, $20k fees. Chain B: 500k transactions/day, $2M fees. B's users pay 100× more for blockspace, a stronger sign of valuable activity."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Fees and app revenue compared, not just transaction counts",
+    "Bot activity considered"
+   ],
+   "vo": "Your checklist. Fees and app revenue compared, not just transaction counts Bot activity considered",
+   "cap": "Fees and app revenue compared, not just transaction counts Bot activity considered"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why are fees a better usage signal than transaction counts?"
+   ],
+   "sub": "Answer: Paying fees shows real demand; counts are easy to inflate.",
+   "subAt": 0.62,
+   "vo": "Why are fees a better usage signal than transaction counts? ... Pause and think. ... The answer: Paying fees shows real demand; counts are easy to inflate.",
+   "cap": "Why are fees a better usage signal than transaction counts? Pause and think. The answer: Paying fees shows real demand; counts are easy to inflate."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What distorts transaction counts?"
+   ],
+   "sub": "Answer: Bots, batching and chain design.",
+   "subAt": 0.62,
+   "vo": "What distorts transaction counts? ... Pause and think. ... The answer: Bots, batching and chain design.",
+   "cap": "What distorts transaction counts? Pause and think. The answer: Bots, batching and chain design."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Name one strong activity metric."
+   ],
+   "sub": "Answer: Fees, app revenue, stablecoin activity or user retention.",
+   "subAt": 0.62,
+   "vo": "Name one strong activity metric. ... Pause and think. ... The answer: Fees, app revenue, stablecoin activity or user retention.",
+   "cap": "Name one strong activity metric. Pause and think. The answer: Fees, app revenue, stablecoin activity or user retention."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

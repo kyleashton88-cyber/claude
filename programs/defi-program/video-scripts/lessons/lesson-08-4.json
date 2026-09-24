@@ -1,0 +1,107 @@
+{
+ "id": "lesson-08-4",
+ "title": "Lesson 8.4: The operating playbook: deploy, monitor, respond, review",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 8.4 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-08.png",
+   "eyebrow": "Lesson 8.4",
+   "vo": "Lesson eight point four. The operating playbook: deploy, monitor, respond, review.",
+   "cap": "Lesson 8.4. The operating playbook: deploy, monitor, respond, review."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Run every position through the same four-phase routine.",
+   "vo": "Run every position through the same four-phase routine.",
+   "cap": "Run every position through the same four-phase routine."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Deploy",
+    "Monitor",
+    "Respond",
+    "Review"
+   ],
+   "vo": "Deploy: due diligence done , before-signing checklist , test amount , journal row (protocol, chain, contracts, amount, entry, thesis, kill rules, approvals). Monitor: daily health factor/pegs/ranges/incidents; weekly P and L versus benchmark, harvest, revoke; monthly register review. Respond: pre-written actions for each trigger (see Module 11.5 for incidents). Review: net return after all costs versus benchmark; simplify anything you can't explain in one sentence.",
+   "cap": "Deploy: due diligence done · before-signing checklist · test amount · journal row (protocol, chain, contracts, amount, entry, thesis, kill rules, approvals). Monitor: daily HF/pegs/ranges/incidents; weekly P&L vs benchmark, harvest, revoke; monthly register review. Respond: pre-written actions for each trigger (see Module 11.5 for incidents). Review: net return after all costs vs benchmark; simplify anything you can't explain in one sentence."
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example — a journal row",
+   "items": [
+    "Position",
+    "Amount / date",
+    "Thesis",
+    "Kill rules",
+    "Approvals",
+    "Weekly"
+   ],
+   "compact": true,
+   "vo": "Position, U.S.D.C. supply, Protocol Y, Arbitrum. Amount / date, $10,000 , 2026-09-01. Thesis, about 5% from real borrow demand. Kill rules, Utilisation > 95% for 48h; oracle or collateral change; any incident. Approvals, U.S.D.C. to Protocol Y pool, limited to $10,000. Weekly, Interest earned, utilisation, governance notes.",
+   "cap": "Position, USDC supply, Protocol Y, Arbitrum Amount / date, $10,000 · 2026-09-01 Thesis, ~5% from real borrow demand Kill rules, Utilisation > 95% for 48h; oracle or collateral change; any incident Approvals, USDC → Protocol Y pool, limited to $10,000 Weekly, Interest earned, utilisation, governance notes"
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Journal row for every position",
+    "Daily / weekly / monthly routine in the calendar",
+    "Response actions written per trigger"
+   ],
+   "vo": "Your checklist. Journal row for every position Daily / weekly / monthly routine in the calendar Response actions written per trigger",
+   "cap": "Journal row for every position Daily / weekly / monthly routine in the calendar Response actions written per trigger"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "The four phases?"
+   ],
+   "sub": "Answer: Deploy, monitor, respond, review.",
+   "subAt": 0.62,
+   "vo": "The four phases? ... Pause and think. ... The answer: Deploy, monitor, respond, review.",
+   "cap": "The four phases? Pause and think. The answer: Deploy, monitor, respond, review."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What goes in a journal row?"
+   ],
+   "sub": "Answer: Position, amount, date, thesis, kill rules, approvals and ongoing results.",
+   "subAt": 0.62,
+   "vo": "What goes in a journal row? ... Pause and think. ... The answer: Position, amount, date, thesis, kill rules, approvals and ongoing results.",
+   "cap": "What goes in a journal row? Pause and think. The answer: Position, amount, date, thesis, kill rules, approvals and ongoing results."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What to do with a strategy you can't explain simply?"
+   ],
+   "sub": "Answer: Simplify it or exit.",
+   "subAt": 0.62,
+   "vo": "What to do with a strategy you can't explain simply? ... Pause and think. ... The answer: Simplify it or exit.",
+   "cap": "What to do with a strategy you can't explain simply? Pause and think. The answer: Simplify it or exit."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

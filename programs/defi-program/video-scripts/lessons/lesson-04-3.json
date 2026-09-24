@@ -1,0 +1,98 @@
+{
+ "id": "lesson-04-3",
+ "title": "Lesson 4.3: Liquid staking (LSTs)",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 4.3 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-04.png",
+   "eyebrow": "Lesson 4.3",
+   "vo": "Lesson four point three. Liquid staking (liquid staking token).",
+   "cap": "Lesson 4.3. Liquid staking (LSTs)."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Use liquid staking tokens knowing how they accrue value and how they can depeg.",
+   "vo": "Use liquid staking tokens knowing how they accrue value and how they can depeg.",
+   "cap": "Use liquid staking tokens knowing how they accrue value and how they can depeg."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "A liquid staking token (LST) represents staked assets plus rewards, and can be traded or used as collateral. Value accrues by rebasing (your balance grows) or an exchange rate that rises (each token is worth more of the underlying). In stress, an LST can trade",
+   "vo": "A liquid staking token (liquid staking token) represents staked assets plus rewards, and can be traded or used as collateral. Value accrues by rebasing (your balance grows) or an exchange rate that rises (each token is worth more of the underlying). In stress, an liquid staking token can trade at a discount to what it redeems for.",
+   "cap": "A liquid staking token (LST) represents staked assets plus rewards, and can be traded or used as collateral. Value accrues by rebasing (your balance grows) or an exchange rate that rises (each token is worth more of the underlying). In stress, an LST can trade at a discount to what it redeems for."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "An exchange-rate LST goes from 1.000 to 1.030 of the underlying over a year: 3%. In a panic it trades at 0.98 on the market. Holders who can wait for redemption (queue) recover 1.03; holders forced to sell take the 2% discount. Never borrow so close to the lim",
+   "vo": "An exchange-rate liquid staking token goes from 1.000 to 1.030 of the underlying over a year: 3%. In a panic it trades at 0.98 on the market. Holders who can wait for redemption (queue) recover 1.03; holders forced to sell take the 2% discount. Never borrow so close to the limit that an liquid staking token discount liquidates you.",
+   "cap": "An exchange-rate LST goes from 1.000 to 1.030 of the underlying over a year: 3%. In a panic it trades at 0.98 on the market. Holders who can wait for redemption (queue) recover 1.03; holders forced to sell take the 2% discount. Never borrow so close to the limit that an LST discount liquidates you."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Accrual method known (rebase vs exchange rate)",
+    "Redemption path and queue length known",
+    "Discount alert set if used as collateral"
+   ],
+   "vo": "Your checklist. Accrual method known (rebase versus exchange rate) Redemption path and queue length known Discount alert set if used as collateral",
+   "cap": "Accrual method known (rebase vs exchange rate) Redemption path and queue length known Discount alert set if used as collateral"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Two ways LSTs pass on rewards?"
+   ],
+   "sub": "Answer: Rebasing balances, or a rising exchange rate.",
+   "subAt": 0.62,
+   "vo": "Two ways liquid staking token pass on rewards? ... Pause and think. ... The answer: Rebasing balances, or a rising exchange rate.",
+   "cap": "Two ways LSTs pass on rewards? Pause and think. The answer: Rebasing balances, or a rising exchange rate."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What is an LST discount?"
+   ],
+   "sub": "Answer: Its market price falling below its redemption value.",
+   "subAt": 0.62,
+   "vo": "What is an liquid staking token discount? ... Pause and think. ... The answer: Its market price falling below its redemption value.",
+   "cap": "What is an LST discount? Pause and think. The answer: Its market price falling below its redemption value."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Who is hurt most by a discount?"
+   ],
+   "sub": "Answer: Forced sellers and leveraged holders who get liquidated.",
+   "subAt": 0.62,
+   "vo": "Who is hurt most by a discount? ... Pause and think. ... The answer: Forced sellers and leveraged holders who get liquidated.",
+   "cap": "Who is hurt most by a discount? Pause and think. The answer: Forced sellers and leveraged holders who get liquidated."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

@@ -1,0 +1,234 @@
+{
+ "id": "lesson-00-8",
+ "title": "Lesson 0.8: Your security baseline, and the language of DeFi",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 0.8 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-00.png",
+   "eyebrow": "Lesson 0.8",
+   "vo": "Lesson zero point eight. Your security baseline, and the language of DeFi.",
+   "cap": "Lesson 0.8. Your security baseline, and the language of DeFi."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Lock in the habits that prevent most losses, and learn the words used in the rest of the program.",
+   "vo": "Lock in the habits that prevent most losses, and learn the words used in the rest of the program.",
+   "cap": "Lock in the habits that prevent most losses, and learn the words used in the rest of the program."
+  },
+  {
+   "type": "bullets",
+   "title": "Explanation — the 10 rules",
+   "items": [
+    "Never share your seed phrase. No real person or company will ever ask for it.",
+    "Bookmark the sites you use; never reach them from ads, DMs or emails.",
+    "Nobody legitimate DMs you first offering help, investments or \"recovery\".",
+    "Guaranteed returns are a scam. Always.",
+    "Read every wallet prompt before approving"
+   ],
+   "vo": "Never share your seed phrase. No real person or company will ever ask for it. Bookmark the sites you use; never reach them from ads, DMs or emails. Nobody legitimate DMs you first offering help, investments or \"recovery\". Guaranteed returns are a scam. Always. Read every wallet prompt before approving: what, how much, to whom.",
+   "cap": "Never share your seed phrase. No real person or company will ever ask for it. Bookmark the sites you use; never reach them from ads, DMs or emails. Nobody legitimate DMs you first offering help, investments or \"recovery\". Guaranteed returns are a scam. Always. Read every wallet prompt before approving: what, how much, to whom."
+  },
+  {
+   "type": "bullets",
+   "title": "Explanation — the 10 rules",
+   "items": [
+    "Test first with a small amount on anything new.",
+    "Use a hardware wallet once the amount matters to you.",
+    "Keep devices updated, and use a separate browser profile for crypto.",
+    "Keep records of every buy, sell, transfer and fee.",
+    "If something feels urgent, stop. Scammers create urgency; real opportunities wait."
+   ],
+   "vo": "Test first with a small amount on anything new. Use a hardware wallet once the amount matters to you. Keep devices updated, and use a separate browser profile for crypto. Keep records of every buy, sell, transfer and fee. If something feels urgent, stop. Scammers create urgency; real opportunities wait.",
+   "cap": "Test first with a small amount on anything new. Use a hardware wallet once the amount matters to you. Keep devices updated, and use a separate browser profile for crypto. Keep records of every buy, sell, transfer and fee. If something feels urgent, stop. Scammers create urgency; real opportunities wait."
+  },
+  {
+   "type": "bullets",
+   "title": "Glossary (the words you'll meet next)",
+   "items": [
+    "Address",
+    "Seed phrase",
+    "Private key",
+    "Custody",
+    "Gas",
+    "Network / chain"
+   ],
+   "compact": true,
+   "vo": "Address, Your public \"account number\" on a blockchain. Seed phrase, 12–24 words that recreate your wallet's keys. Never share. Private key, The secret that signs transactions (your seed phrase generates it). Custody, Who holds the keys: an exchange (custodial) or you (self-custody). Gas, The network fee for a transaction, paid in the network's token. Network / chain, A blockchain, for example Ethereum, Arbitrum, Base. Layer 2 (layer two), A cheaper, faster network built on top of Ethereum. Token, A unit of value on a blockchain, for example U.S.D.C.. Stablecoin, A token designed to hold a steady value, usually $1. Smart contract, A program on a blockchain that follows fixed rules. decks, Decentralised exchange: swap tokens from your wallet. Approval, Permission for an app to move a specific token. Block explorer, A website that shows every transaction (for example Etherscan). Testnet / faucet, A practice blockchain / a site giving free test coins. A.P.Y., Annual percentage yield: yearly return including compounding. Liquidity, How easily something can be bought or sold without moving the price. K.Y.C., ID checks required by regulated exchanges. two-factor, Two-factor authentication: a second proof of identity at login.",
+   "cap": "Address, Your public \"account number\" on a blockchain Seed phrase, 12–24 words that recreate your wallet's keys. Never share Private key, The secret that signs transactions (your seed phrase generates it) Custody, Who holds the keys: an exchange (custodial) or you (self-custody) Gas, The network fee for a transaction, paid in the network's token Network / chain, A blockchain, e.g. Ethereum, Arbitrum, Base"
+  },
+  {
+   "type": "bullets",
+   "title": "Glossary (the words you'll meet next)",
+   "items": [
+    "Layer 2 (L2)",
+    "Token",
+    "Stablecoin",
+    "Smart contract",
+    "DEX",
+    "Approval"
+   ],
+   "compact": true,
+   "vo": "Continuing.",
+   "cap": "Layer 2 (L2), A cheaper, faster network built on top of Ethereum Token, A unit of value on a blockchain, e.g. USDC Stablecoin, A token designed to hold a steady value, usually $1 Smart contract, A program on a blockchain that follows fixed rules DEX, Decentralised exchange: swap tokens from your wallet Approval, Permission for an app to move a specific token"
+  },
+  {
+   "type": "bullets",
+   "title": "Glossary (the words you'll meet next)",
+   "items": [
+    "Block explorer",
+    "Testnet / faucet",
+    "APY",
+    "Liquidity",
+    "KYC",
+    "2FA"
+   ],
+   "compact": true,
+   "vo": "Continuing.",
+   "cap": "Block explorer, A website that shows every transaction (e.g. Etherscan) Testnet / faucet, A practice blockchain / a site giving free test coins APY, Annual percentage yield: yearly return including compounding Liquidity, How easily something can be bought or sold without moving the price KYC, ID checks required by regulated exchanges 2FA, Two-factor authentication: a second proof of identity at login"
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "I've read the 10 rules and can repeat them",
+    "Separate browser profile set up for crypto",
+    "I know every word in the glossary"
+   ],
+   "vo": "Your checklist. I've read the 10 rules and can repeat them Separate browser profile set up for crypto I know every word in the glossary",
+   "cap": "I've read the 10 rules and can repeat them Separate browser profile set up for crypto I know every word in the glossary"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Someone offers a \"guaranteed 2% a day\". What is it?"
+   ],
+   "sub": "Answer: A scam. Guaranteed returns don't exist.",
+   "subAt": 0.62,
+   "vo": "Someone offers a \"guaranteed 2% a day\". What is it? ... Pause and think. ... The answer: A scam. Guaranteed returns don't exist.",
+   "cap": "Someone offers a \"guaranteed 2% a day\". What is it? Pause and think. The answer: A scam. Guaranteed returns don't exist."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What's gas?"
+   ],
+   "sub": "Answer: The network fee for a transaction, paid in the network's token.",
+   "subAt": 0.62,
+   "vo": "What's gas? ... Pause and think. ... The answer: The network fee for a transaction, paid in the network's token.",
+   "cap": "What's gas? Pause and think. The answer: The network fee for a transaction, paid in the network's token."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "A message says your wallet will be \"suspended\" unless you act in 1 hour. What do you do?"
+   ],
+   "sub": "Answer: Stop. Urgency is a scam tactic. Wallets can't be suspended; check only through bookmarked official sites.",
+   "subAt": 0.62,
+   "vo": "A message says your wallet will be \"suspended\" unless you act in 1 hour. What do you do? ... Pause and think. ... The answer: Stop. Urgency is a scam tactic. Wallets can't be suspended; check only through bookmarked official sites.",
+   "cap": "A message says your wallet will be \"suspended\" unless you act in 1 hour. What do you do? Pause and think. The answer: Stop. Urgency is a scam tactic. Wallets can't be suspended; check only through bookmarked official sites."
+  },
+  {
+   "type": "bullets",
+   "title": "Part A — Accounts (≈ 45 min)",
+   "items": [
+    "Password manager installed; master password written down and stored safely",
+    "Email secured",
+    "Authenticator app installed on your phone",
+    "Exchange chosen (legally available to you, reputable)",
+    "Exchange account opened and KYC completed"
+   ],
+   "vo": "Password manager installed; master password written down and stored safely Email secured: unique password + authenticator-app two-factor Authenticator app installed on your phone Exchange chosen (legally available to you, reputable) Exchange account opened and K.Y.C. completed",
+   "cap": "Password manager installed; master password written down and stored safely Email secured: unique password + authenticator-app 2FA Authenticator app installed on your phone Exchange chosen (legally available to you, reputable) Exchange account opened and KYC completed"
+  },
+  {
+   "type": "bullets",
+   "title": "Part A — Accounts (≈ 45 min)",
+   "items": [
+    "Exchange 2FA on (authenticator or security key, not SMS); backup codes stored offline",
+    "Anti-phishing code and withdrawal allowlist switched on"
+   ],
+   "vo": "Exchange two-factor on (authenticator or security key, not SMS); backup codes stored offline Anti-phishing code and withdrawal allowlist switched on",
+   "cap": "Exchange 2FA on (authenticator or security key, not SMS); backup codes stored offline Anti-phishing code and withdrawal allowlist switched on"
+  },
+  {
+   "type": "bullets",
+   "title": "Part B — First purchase (≈ 20 min)",
+   "items": [
+    "Deposited a small learning amount by the cheapest method",
+    "Bought a little ETH (gas) and some USDC (practice)",
+    "Tried a limit order",
+    "Started a simple records sheet"
+   ],
+   "vo": "Deposited a small learning amount by the cheapest method Bought a little ETH (gas) and some U.S.D.C. (practice) Tried a limit order Started a simple records sheet: date, action, amount, price, fees",
+   "cap": "Deposited a small learning amount by the cheapest method Bought a little ETH (gas) and some USDC (practice) Tried a limit order Started a simple records sheet: date, action, amount, price, fees"
+  },
+  {
+   "type": "bullets",
+   "title": "Part C — Your wallet (≈ 30 min)",
+   "items": [
+    "Wallet installed from the official website (separate browser profile)",
+    "New seed phrase written on paper/metal, in order; never digital",
+    "Restore test passed",
+    "Wallet address saved in the password manager's notes (address only, never the seed)"
+   ],
+   "vo": "Wallet installed from the official website (separate browser profile) New seed phrase written on paper/metal, in order; never digital Restore test passed: same address appears Wallet address saved in the password manager's notes (address only, never the seed)",
+   "cap": "Wallet installed from the official website (separate browser profile) New seed phrase written on paper/metal, in order; never digital Restore test passed: same address appears Wallet address saved in the password manager's notes (address only, never the seed)"
+  },
+  {
+   "type": "bullets",
+   "title": "Part D — First transfer (≈ 20 min)",
+   "items": [
+    "Network chosen (low-fee L2 supported by your wallet)",
+    "Test withdrawal (e.g. $10 of ETH) sent and received",
+    "Remaining learning funds sent; address added to the allowlist",
+    "Transfer found on a block explorer"
+   ],
+   "vo": "Network chosen (low-fee layer two supported by your wallet) Test withdrawal (for example $10 of ETH) sent and received Remaining learning funds sent; address added to the allowlist Transfer found on a block explorer",
+   "cap": "Network chosen (low-fee L2 supported by your wallet) Test withdrawal (e.g. $10 of ETH) sent and received Remaining learning funds sent; address added to the allowlist Transfer found on a block explorer"
+  },
+  {
+   "type": "bullets",
+   "title": "Part E — Practice DeFi (≈ 30 min)",
+   "items": [
+    "Sepolia test network added; free test ETH from a faucet",
+    "One practice transaction on the testnet",
+    "One tiny real swap on an L2 with a limited approval",
+    "Approval revoked afterwards"
+   ],
+   "vo": "Sepolia test network added; free test ETH from a faucet One practice transaction on the testnet One tiny real swap on an layer two with a limited approval Approval revoked afterwards",
+   "cap": "Sepolia test network added; free test ETH from a faucet One practice transaction on the testnet One tiny real swap on an L2 with a limited approval Approval revoked afterwards"
+  },
+  {
+   "type": "bullets",
+   "title": "Part F — Security baseline (≈ 15 min)",
+   "items": [
+    "The 10 rules read and understood",
+    "Sites bookmarked; no links from ads or DMs",
+    "Hardware wallet ordered from the maker (when the amount will matter)",
+    "Records sheet up to date"
+   ],
+   "vo": "All ticked? You're ready for Module 1 — Foundations and Safety. The 10 rules read and understood Sites bookmarked; no links from ads or DMs Hardware wallet ordered from the maker (when the amount will matter) Records sheet up to date",
+   "cap": "The 10 rules read and understood Sites bookmarked; no links from ads or DMs Hardware wallet ordered from the maker (when the amount will matter) Records sheet up to date"
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "id": "lesson-07-0",
+ "title": "Lesson 7.0: Mastery Starter",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 7.0 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-07.png",
+   "eyebrow": "Lesson 7.0",
+   "vo": "Lesson seven point zero. Mastery Starter.",
+   "cap": "Lesson 7.0. Mastery Starter."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "The 60-second version"
+   ],
+   "sub": "Everything on a public blockchain can be seen, but not everything can be understood. On-chain analytics means reading that data carefully: who moved what, where liquidity sits, how positioned the market is, without jumping to conclusions.",
+   "vo": "Everything on a public blockchain can be seen, but not everything can be understood. On-chain analytics means reading that data carefully: who moved what, where liquidity sits, how positioned the market is, without jumping to conclusions.",
+   "cap": "Everything on a public blockchain can be seen, but not everything can be understood. On-chain analytics means reading that data carefully: who moved what, where liquidity sits, how positioned the market is, without jumping to conclusions."
+  },
+  {
+   "type": "bullets",
+   "title": "Words you'll need",
+   "items": [
+    "Explorer",
+    "Netflow",
+    "MVRV",
+    "Open interest",
+    "Depth"
+   ],
+   "compact": true,
+   "vo": "Explorer, a site showing every transaction. Netflow, exchange inflows minus outflows. MVRV, market value divided by realised value. Open interest, total open futures contracts. Depth, how much a trade moves price.",
+   "cap": "Explorer, a site showing every transaction Netflow, exchange inflows minus outflows MVRV, market value ÷ realised value Open interest, total open futures contracts Depth, how much a trade moves price"
+  },
+  {
+   "type": "bullets",
+   "title": "Before you start",
+   "items": [
+    "Modules 0–6"
+   ],
+   "vo": "Modules 0–6",
+   "cap": "Modules 0–6"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Your first safe step"
+   ],
+   "sub": "Find your own last transaction on an explorer and identify: status, fee, method and token transfers.",
+   "vo": "Find your own last transaction on an explorer and identify: status, fee, method and token transfers.",
+   "cap": "Find your own last transaction on an explorer and identify: status, fee, method and token transfers."
+  },
+  {
+   "type": "bullets",
+   "title": "The mastery ladder",
+   "items": [
+    "Beginner",
+    "Practitioner",
+    "Master"
+   ],
+   "compact": true,
+   "vo": "Beginner, Reads transactions and addresses on explorers. Practitioner, Uses flows, holder, activity and liquidity metrics with caveats. Master, Combines on-chain, derivatives and liquidity data into a research view without over-interpreting.",
+   "cap": "Beginner, Reads transactions and addresses on explorers Practitioner, Uses flows, holder, activity and liquidity metrics with caveats Master, Combines on-chain, derivatives and liquidity data into a research view without over-interpreting"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "You've mastered it when…"
+   ],
+   "sub": "…every metric in your research has a definition, a source and a caveat. ---",
+   "vo": "…every metric in your research has a definition, a source and a caveat. ---",
+   "cap": "…every metric in your research has a definition, a source and a caveat. ---"
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

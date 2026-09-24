@@ -1,0 +1,101 @@
+{
+ "id": "lesson-04-7",
+ "title": "Lesson 4.7: Stablecoin savings rates and yield-bearing stablecoins",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 4.7 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-04.png",
+   "eyebrow": "Lesson 4.7",
+   "vo": "Lesson four point seven. Stablecoin savings rates and yield-bearing stablecoins.",
+   "cap": "Lesson 4.7. Stablecoin savings rates and yield-bearing stablecoins."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Tell apart the different ways a stablecoin can pay yield, and the risk behind each.",
+   "vo": "Tell apart the different ways a stablecoin can pay yield, and the risk behind each.",
+   "cap": "Tell apart the different ways a stablecoin can pay yield, and the risk behind each."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Lending",
+    "Savings rates",
+    "Treasury-backed",
+    "Synthetic / basis-backed"
+   ],
+   "vo": "Yield on \"dollars\" on-chain comes from one of four places: Same \"4–10% on dollars\", four completely different risks. Lending: you lend stablecoins to borrowers (Module 3). Risk: the protocol, collateral and oracles. Savings rates: some stablecoin protocols pay a set rate to holders who deposit into a savings contract, funded by their own revenue. Risk: the stablecoin's design and governance setting the rate. Treasury-backed: the issuer holds short-term government debt and passes on part of the interest (Lesson 4.8). Risk: the issuer, custodian and redemption terms. Synthetic / basis-backed: yield comes from a hedged derivatives position (spot long + perp short) earning funding. Risk: funding turns negative, exchange failure, and the design itself (Lesson 10.3).",
+   "cap": "Lending: you lend stablecoins to borrowers (Module 3). Risk: the protocol, collateral and oracles. Savings rates: some stablecoin protocols pay a set rate to holders who deposit into a savings contract, funded by their own revenue. Risk: the stablecoin's design and governance setting the rate. Treasury-backed: the issuer holds short-term government debt and passes on part of the interest (Lesson 4.8). Risk: the issuer, custodian and redemption terms. Synthetic / basis-backed: yield comes from a hedged derivatives position (spot long + perp short) earning funding. Risk: funding turns negative, exchange failure, and the design itself (Lesson 10.3)."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "$10,000 in a yield-bearing stablecoin paying 4.5% earns ~$450/yr if the rate holds. Before buying, answer: where does the 4.5% come from (1–4 above)? What happens to it in a bear market when funding goes negative? Can you redeem for $1, and who can?",
+   "vo": "$10,000 in a yield-bearing stablecoin paying 4.5% earns about $450 a year if the rate holds. Before buying, answer: where does the 4.5% come from (1–4 above)? What happens to it in a bear market when funding goes negative? Can you redeem for $1, and who can?",
+   "cap": "$10,000 in a yield-bearing stablecoin paying 4.5% earns ~$450/yr if the rate holds. Before buying, answer: where does the 4.5% come from (1–4 above)? What happens to it in a bear market when funding goes negative? Can you redeem for $1, and who can?"
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Yield source identified (lending, savings rate, treasuries or basis)",
+    "Redemption path and who can redeem known",
+    "Split across different yield sources, not just different tickers"
+   ],
+   "vo": "Your checklist. Yield source identified (lending, savings rate, treasuries or basis) Redemption path and who can redeem known Split across different yield sources, not just different tickers",
+   "cap": "Yield source identified (lending, savings rate, treasuries or basis) Redemption path and who can redeem known Split across different yield sources, not just different tickers"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Name the four sources of stablecoin yield."
+   ],
+   "sub": "Answer: Lending, protocol savings rates, treasury backing, and synthetic basis/funding positions.",
+   "subAt": 0.62,
+   "vo": "Name the four sources of stablecoin yield. ... Pause and think. ... The answer: Lending, protocol savings rates, treasury backing, and synthetic basis/funding positions.",
+   "cap": "Name the four sources of stablecoin yield. Pause and think. The answer: Lending, protocol savings rates, treasury backing, and synthetic basis/funding positions."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why can a basis-backed stablecoin's yield fall to zero?"
+   ],
+   "sub": "Answer: Funding can turn negative in bear markets.",
+   "subAt": 0.62,
+   "vo": "Why can a basis-backed stablecoin's yield fall to zero? ... Pause and think. ... The answer: Funding can turn negative in bear markets.",
+   "cap": "Why can a basis-backed stablecoin's yield fall to zero? Pause and think. The answer: Funding can turn negative in bear markets."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Two yield-bearing stablecoins both backed by basis trades: diversified?"
+   ],
+   "sub": "Answer: Not really. They share the same yield source and failure mode.",
+   "subAt": 0.62,
+   "vo": "Two yield-bearing stablecoins both backed by basis trades: diversified? ... Pause and think. ... The answer: Not really. They share the same yield source and failure mode.",
+   "cap": "Two yield-bearing stablecoins both backed by basis trades: diversified? Pause and think. The answer: Not really. They share the same yield source and failure mode."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

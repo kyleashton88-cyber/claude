@@ -1,0 +1,120 @@
+{
+ "id": "lesson-13-3",
+ "title": "Lesson 13.3: Building the income portfolio",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 13.3 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-13.png",
+   "eyebrow": "Lesson 13.3",
+   "vo": "Lesson thirteen point three. Building the income portfolio.",
+   "cap": "Lesson 13.3. Building the income portfolio."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Assemble an income portfolio and calculate its blended risk-adjusted yield and expected income.",
+   "vo": "Assemble an income portfolio and calculate its blended risk-adjusted yield and expected income.",
+   "cap": "Assemble an income portfolio and calculate its blended risk-adjusted yield and expected income."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "Build in layers: core (high-durability, 60–80%), term (fixed PTs matched to the liquidity ladder), boosters (carry, options, LP; small). Apply Module 8's caps: per protocol, per chain, per stablecoin issuer.",
+   "vo": "Build in layers: core (high-durability, 60–80%), term (fixed PTs matched to the liquidity ladder), boosters (carry, options, L.P.; small). Apply Module 8's caps: per protocol, per chain, per stablecoin issuer.",
+   "cap": "Build in layers: core (high-durability, 60–80%), term (fixed PTs matched to the liquidity ladder), boosters (carry, options, LP; small). Apply Module 8's caps: per protocol, per chain, per stablecoin issuer."
+  },
+  {
+   "type": "image",
+   "src": "assets/charts/income-waterfall.png",
+   "eyebrow": "From headline yield to sustainable payou",
+   "vo": "Here's the picture: From headline yield to sustainable payout.",
+   "cap": "From headline yield to sustainable payout."
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example — $500,000 income portfolio",
+   "items": [
+    "Stable lending A",
+    "Stable lending B",
+    "LST staking",
+    "PT fixed stable",
+    "Funding carry",
+    "Total"
+   ],
+   "compact": true,
+   "vo": "Stable lending A, 100,000, 5.0%, 0.5%, 4.5%, 4,500. Stable lending B, 100,000, 4.5%, 0.5%, 4.0%, 4,000. liquid staking token staking, 150,000, 3.2%, 0.5%, 2.7%, 4,050. P.T. fixed stable, 100,000, 8.0%, 1.0%, 7.0%, 7,000. Funding carry, 50,000, 9.0%, 1.5%, 7.5%, 3,750. Total, 500,000, , , 4.66%, 23,300.",
+   "cap": "Stable lending A, 100,000, 5.0%, 0.5%, 4.5%, 4,500 Stable lending B, 100,000, 4.5%, 0.5%, 4.0%, 4,000 LST staking, 150,000, 3.2%, 0.5%, 2.7%, 4,050 PT fixed stable, 100,000, 8.0%, 1.0%, 7.0%, 7,000 Funding carry, 50,000, 9.0%, 1.5%, 7.5%, 3,750 Total, 500,000, , , 4.66%, 23,300"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example — $500,000 income portfolio"
+   ],
+   "sub": "the calculator Note: the LST line is priced in ETH, so its dollar value, and therefore the dollar income, moves with ETH. The rest is stablecoin-denominated.",
+   "vo": "the calculator Note: the liquid staking token line is priced in ETH, so its dollar value, and therefore the dollar income, moves with ETH. The rest is stablecoin-denominated.",
+   "cap": "the calculator Note: the LST line is priced in ETH, so its dollar value, and therefore the dollar income, moves with ETH. The rest is stablecoin-denominated."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Core ≥ 60% from high-durability sources",
+    "Caps respected per protocol, chain and issuer",
+    "Blended risk-adjusted yield calculated"
+   ],
+   "vo": "Your checklist. Core at least 60% from high-durability sources Caps respected per protocol, chain and issuer Blended risk-adjusted yield calculated",
+   "cap": "Core ≥ 60% from high-durability sources Caps respected per protocol, chain and issuer Blended risk-adjusted yield calculated"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Which line contributes the most expected income, and why?"
+   ],
+   "sub": "Answer: PT fixed stable ($7,000): a high locked rate on a sizeable allocation, even after the haircut.",
+   "subAt": 0.62,
+   "vo": "Which line contributes the most expected income, and why? ... Pause and think. ... The answer: P.T. fixed stable ($7,000): a high locked rate on a sizeable allocation, even after the haircut.",
+   "cap": "Which line contributes the most expected income, and why? Pause and think. The answer: PT fixed stable ($7,000): a high locked rate on a sizeable allocation, even after the haircut."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why is the carry line only $50,000?"
+   ],
+   "sub": "Answer: It's a low-durability booster with a higher assumed loss rate.",
+   "subAt": 0.62,
+   "vo": "Why is the carry line only $50,000? ... Pause and think. ... The answer: It's a low-durability booster with a higher assumed loss rate.",
+   "cap": "Why is the carry line only $50,000? Pause and think. The answer: It's a low-durability booster with a higher assumed loss rate."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What makes the LST income variable in dollars?"
+   ],
+   "sub": "Answer: It's denominated in ETH, so the dollar value moves with the ETH price.",
+   "subAt": 0.62,
+   "vo": "What makes the liquid staking token income variable in dollars? ... Pause and think. ... The answer: It's denominated in ETH, so the dollar value moves with the ETH price.",
+   "cap": "What makes the LST income variable in dollars? Pause and think. The answer: It's denominated in ETH, so the dollar value moves with the ETH price."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

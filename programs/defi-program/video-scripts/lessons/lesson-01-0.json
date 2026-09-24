@@ -1,0 +1,90 @@
+{
+ "id": "lesson-01-0",
+ "title": "Lesson 1.0: Mastery Starter",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 1.0 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-01.png",
+   "eyebrow": "Lesson 1.0",
+   "vo": "Lesson one point zero. Mastery Starter.",
+   "cap": "Lesson 1.0. Mastery Starter."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "The 60-second version"
+   ],
+   "sub": "Most crypto losses aren't market losses; they're mistakes and scams: a seed phrase typed into a fake site, an approval signed without reading, the wrong network. This module builds the habits that prevent them.",
+   "vo": "Most crypto losses aren't market losses; they're mistakes and scams: a seed phrase typed into a fake site, an approval signed without reading, the wrong network. This module builds the habits that prevent them.",
+   "cap": "Most crypto losses aren't market losses; they're mistakes and scams: a seed phrase typed into a fake site, an approval signed without reading, the wrong network. This module builds the habits that prevent them."
+  },
+  {
+   "type": "bullets",
+   "title": "Words you'll need",
+   "items": [
+    "Private key",
+    "Approval",
+    "Multisig",
+    "Phishing",
+    "Simulation"
+   ],
+   "compact": true,
+   "vo": "Private key, the secret that signs transactions. Approval, permission for an app to move a token. Multisig, a wallet that needs several keys to act. Phishing, a fake site or message built to steal. Simulation, a preview of what a transaction will change.",
+   "cap": "Private key, the secret that signs transactions Approval, permission for an app to move a token Multisig, a wallet that needs several keys to act Phishing, a fake site or message built to steal Simulation, a preview of what a transaction will change"
+  },
+  {
+   "type": "bullets",
+   "title": "Before you start",
+   "items": [
+    "Module 0 done (secured exchange, restore-tested wallet)",
+    "A small amount in a wallet on a low-fee network"
+   ],
+   "vo": "Module 0 done (secured exchange, restore-tested wallet) A small amount in a wallet on a low-fee network",
+   "cap": "Module 0 done (secured exchange, restore-tested wallet) A small amount in a wallet on a low-fee network"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Your first safe step"
+   ],
+   "sub": "Open your wallet's approvals (or a revoke tool), list every approval you've granted, and revoke any you don't use.",
+   "vo": "Open your wallet's approvals (or a revoke tool), list every approval you've granted, and revoke any you don't use.",
+   "cap": "Open your wallet's approvals (or a revoke tool), list every approval you've granted, and revoke any you don't use."
+  },
+  {
+   "type": "bullets",
+   "title": "The mastery ladder",
+   "items": [
+    "Beginner",
+    "Practitioner",
+    "Master"
+   ],
+   "compact": true,
+   "vo": "Beginner, Uses a separate burner wallet and reads every prompt. Practitioner, Runs the before-signing checklist without notes; limited approvals; hardware wallet. Master, Multisig vault, simulation on every signature, private addresses, tested recovery.",
+   "cap": "Beginner, Uses a separate burner wallet and reads every prompt Practitioner, Runs the before-signing checklist without notes; limited approvals; hardware wallet Master, Multisig vault, simulation on every signature, private addresses, tested recovery"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "You've mastered it when…"
+   ],
+   "sub": "…you can take a new app from first visit to a limited, simulated, verified transaction, and revoke it after. ---",
+   "vo": "…you can take a new app from first visit to a limited, simulated, verified transaction, and revoke it after. ---",
+   "cap": "…you can take a new app from first visit to a limited, simulated, verified transaction, and revoke it after. ---"
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

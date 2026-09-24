@@ -1,0 +1,41 @@
+{
+ "id": "lesson-02-2",
+ "title": "Lesson 2.2: AMM Mathematics (x · y = k)",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 2.2 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-02.png",
+   "eyebrow": "Lesson 2.2",
+   "vo": "Lesson two point two. AMM Mathematics (x , y = k).",
+   "cap": "Lesson 2.2. AMM Mathematics (x · y = k)."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/amm-swap-flow.png",
+   "eyebrow": "How a constant-product swap is priced",
+   "vo": "Here's the picture: How a constant-product swap is priced.",
+   "cap": "How a constant-product swap is priced."
+  },
+  {
+   "type": "image",
+   "src": "assets/charts/amm-curve.png",
+   "eyebrow": "The x·y=k curve",
+   "vo": "Here's the picture: The x,y=k curve.",
+   "cap": "The x·y=k curve."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

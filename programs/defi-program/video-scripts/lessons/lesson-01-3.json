@@ -1,0 +1,122 @@
+{
+ "id": "lesson-01-3",
+ "title": "Lesson 1.3: Wallets, keys, hardware & multisig",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 1.3 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-01.png",
+   "eyebrow": "Lesson 1.3",
+   "vo": "Lesson one point three. Wallets, keys, hardware and multisig.",
+   "cap": "Lesson 1.3. Wallets, keys, hardware & multisig."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Set up a wallet structure where one mistake can't lose everything.",
+   "vo": "Set up a wallet structure where one mistake can't lose everything.",
+   "cap": "Set up a wallet structure where one mistake can't lose everything."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Private key",
+    "Seed phrase",
+    "Hardware wallet",
+    "Multisig",
+    "Smart wallets"
+   ],
+   "vo": "a website, never photograph it, never share it. No legitimate support team will ever ask for it. Compartmentalise: separate wallets by job, so a compromise only reaches one of them. Private key: the authority to sign. Whoever has it controls the funds. Seed phrase: 12–24 words that recreate your keys. Never type it into Hardware wallet: keeps keys on a separate device. Signing requires physical confirmation. Multisig: needs M of N signers (for example 2 of 3). Good for large or shared funds. Smart wallets: contract accounts that can add spending limits, recovery and batching.",
+   "cap": "Private key: the authority to sign. Whoever has it controls the funds. Seed phrase: 12–24 words that recreate your keys. Never type it into Hardware wallet: keeps keys on a separate device. Signing requires physical confirmation. Multisig: needs M of N signers (e.g. 2 of 3). Good for large or shared funds. Smart wallets: contract accounts that can add spending limits, recovery and batching."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/three-wallets.png",
+   "eyebrow": "The 3-wallet setup",
+   "vo": "Here's the picture: The 3-wallet setup.",
+   "cap": "The 3-wallet setup."
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example — the 3-wallet setup",
+   "items": [
+    "Vault",
+    "Operator",
+    "Burner"
+   ],
+   "compact": true,
+   "vo": "Vault, Long-term holdings, Almost never. No DeFi approvals, Hardware (or multisig). Operator, Active DeFi positions, Known, verified protocols only, Hardware. Burner, Small amounts for new apps, mints, airdrops, Anything experimental, Hot wallet.",
+   "cap": "Vault, Long-term holdings, Almost never. No DeFi approvals, Hardware (or multisig) Operator, Active DeFi positions, Known, verified protocols only, Hardware Burner, Small amounts for new apps, mints, airdrops, Anything experimental, Hot wallet"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example — the 3-wallet setup"
+   ],
+   "sub": "Move money down the chain (vault → operator → burner) only as needed, and sweep profits back up. If the burner gets drained, you lose only the burner's balance.",
+   "vo": "Move money down the chain (vault to operator to burner) only as needed, and sweep profits back up. If the burner gets drained, you lose only the burner's balance.",
+   "cap": "Move money down the chain (vault → operator → burner) only as needed, and sweep profits back up. If the burner gets drained, you lose only the burner's balance."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Seed phrase stored offline, in two separate physical places",
+    "Vault wallet has never approved a DeFi contract",
+    "Separate burner wallet for anything new",
+    "I read every signing prompt on the hardware device screen, not just the website"
+   ],
+   "vo": "Your checklist. Seed phrase stored offline, in two separate physical places Vault wallet has never approved a DeFi contract Separate burner wallet for anything new I read every signing prompt on the hardware device screen, not just the website",
+   "cap": "Seed phrase stored offline, in two separate physical places Vault wallet has never approved a DeFi contract Separate burner wallet for anything new I read every signing prompt on the hardware device screen, not just the website"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "A \"support agent\" in DMs needs your seed phrase to fix a stuck transaction. What do you do?"
+   ],
+   "sub": "Answer: Nothing. It's a scam, every time. Block and report.",
+   "subAt": 0.62,
+   "vo": "A \"support agent\" in DMs needs your seed phrase to fix a stuck transaction. What do you do? ... Pause and think. ... The answer: Nothing. It's a scam, every time. Block and report.",
+   "cap": "A \"support agent\" in DMs needs your seed phrase to fix a stuck transaction. What do you do? Pause and think. The answer: Nothing. It's a scam, every time. Block and report."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why keep the vault wallet free of approvals?"
+   ],
+   "sub": "Answer: Approvals let contracts move your tokens. With none, a compromised protocol can't reach it.",
+   "subAt": 0.62,
+   "vo": "Why keep the vault wallet free of approvals? ... Pause and think. ... The answer: Approvals let contracts move your tokens. With none, a compromised protocol can't reach it.",
+   "cap": "Why keep the vault wallet free of approvals? Pause and think. The answer: Approvals let contracts move your tokens. With none, a compromised protocol can't reach it."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does 2-of-3 multisig protect against?"
+   ],
+   "sub": "Answer: A single lost or compromised key. Two signers are still needed to move funds.",
+   "subAt": 0.62,
+   "vo": "What does 2-of-3 multisig protect against? ... Pause and think. ... The answer: A single lost or compromised key. Two signers are still needed to move funds.",
+   "cap": "What does 2-of-3 multisig protect against? Pause and think. The answer: A single lost or compromised key. Two signers are still needed to move funds."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

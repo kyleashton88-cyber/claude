@@ -1,0 +1,103 @@
+{
+ "id": "lesson-04-8",
+ "title": "Lesson 4.8: Tokenized treasuries and real-world assets (RWAs)",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 4.8 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-04.png",
+   "eyebrow": "Lesson 4.8",
+   "vo": "Lesson four point eight. Tokenized treasuries and real-world assets (real-world asset).",
+   "cap": "Lesson 4.8. Tokenized treasuries and real-world assets (RWAs)."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Use tokenized real-world assets knowing what you actually own and who you're trusting.",
+   "vo": "Use tokenized real-world assets knowing what you actually own and who you're trusting.",
+   "cap": "Use tokenized real-world assets knowing what you actually own and who you're trusting."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "RWAs are tokens that represent off-chain assets",
+    "Tokenized treasury products typically pay close to the short-term government rate minus…",
+    "What you're trusting",
+    "Access limits",
+    "Composability"
+   ],
+   "vo": "real-world asset are tokens that represent off-chain assets: short-term government bills (the most common), money-market funds, credit, commodities, property. Tokenized treasury products typically pay close to the short-term government rate minus a management fee. What you're trusting: the issuer (legal structure), the custodian holding the real assets, the redemption process, and the token's transfer rules. Access limits: many real-world asset tokens are only for verified (K.Y.C.'d) or accredited/qualified investors, and not available in every country. Check eligibility where you live; don't try to get around restrictions. Composability: some real-world asset tokens can be used as collateral in DeFi; others are restricted to allowlisted wallets.",
+   "cap": "RWAs are tokens that represent off-chain assets: short-term government bills (the most common), money-market funds, credit, commodities, property. Tokenized treasury products typically pay close to the short-term government rate minus a management fee. What you're trusting: the issuer (legal structure), the custodian holding the real assets, the redemption process, and the token's transfer rules. Access limits: many RWA tokens are only for verified (KYC'd) or accredited/qualified investors, and not available in every country. Check eligibility where you live; don't try to get around restrictions. Composability: some RWA tokens can be used as collateral in DeFi; others are restricted to allowlisted wallets."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example (illustrative)"
+   ],
+   "sub": "If short-term government bills yield 4.0% and the product charges 0.15%, you'd earn about 3.85% before any on-chain costs. In the own-bank ladder (Module 12.4), this can suit the T1/T2 tiers, but only if redemption times match when you'll need the money.",
+   "vo": "If short-term government bills yield 4.0% and the product charges 0.15%, you'd earn about 3.85% before any on-chain costs. In the own-bank ladder (Module 12.4), this can suit the T1/T2 tiers, but only if redemption times match when you'll need the money.",
+   "cap": "If short-term government bills yield 4.0% and the product charges 0.15%, you'd earn about 3.85% before any on-chain costs. In the own-bank ladder (Module 12.4), this can suit the T1/T2 tiers, but only if redemption times match when you'll need the money."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "I'm eligible in my country (and it's legal to hold)",
+    "Issuer, custodian and redemption terms read",
+    "Transfer restrictions and minimums known",
+    "Sized within caps, like any other issuer risk"
+   ],
+   "vo": "Your checklist. I'm eligible in my country (and it's legal to hold) Issuer, custodian and redemption terms read Transfer restrictions and minimums known Sized within caps, like any other issuer risk",
+   "cap": "I'm eligible in my country (and it's legal to hold) Issuer, custodian and redemption terms read Transfer restrictions and minimums known Sized within caps, like any other issuer risk"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does a tokenized treasury product's yield track?"
+   ],
+   "sub": "Answer: Short-term government rates, minus the product's fees.",
+   "subAt": 0.62,
+   "vo": "What does a tokenized treasury product's yield track? ... Pause and think. ... The answer: Short-term government rates, minus the product's fees.",
+   "cap": "What does a tokenized treasury product's yield track? Pause and think. The answer: Short-term government rates, minus the product's fees."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Name two parties you trust with an RWA token."
+   ],
+   "sub": "Answer: Any two: the issuer, the custodian, the redemption agent, the token's administrators.",
+   "subAt": 0.62,
+   "vo": "Name two parties you trust with an real-world asset token. ... Pause and think. ... The answer: Any two: the issuer, the custodian, the redemption agent, the token's administrators.",
+   "cap": "Name two parties you trust with an RWA token. Pause and think. The answer: Any two: the issuer, the custodian, the redemption agent, the token's administrators."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why check transfer restrictions?"
+   ],
+   "sub": "Answer: Some RWA tokens only move between allowlisted wallets, which limits exit and DeFi use.",
+   "subAt": 0.62,
+   "vo": "Why check transfer restrictions? ... Pause and think. ... The answer: Some real-world asset tokens only move between allowlisted wallets, which limits exit and DeFi use.",
+   "cap": "Why check transfer restrictions? Pause and think. The answer: Some RWA tokens only move between allowlisted wallets, which limits exit and DeFi use."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "id": "lesson-07-4",
+ "title": "Lesson 7.4: Whale & entity analysis",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 7.4 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-07.png",
+   "eyebrow": "Lesson 7.4",
+   "vo": "Lesson seven point four. Whale and entity analysis.",
+   "cap": "Lesson 7.4. Whale & entity analysis."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Use large-holder data without copying wallets blindly.",
+   "vo": "Use large-holder data without copying wallets blindly.",
+   "cap": "Use large-holder data without copying wallets blindly."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "Separate exchanges and contracts from individuals before measuring concentration. Accumulation/distribution is inferred, not known. \"Smart money\" labels carry survivorship bias. Copying wallets ignores their hedges, size and private information.",
+   "vo": "Separate exchanges and contracts from individuals before measuring concentration. Accumulation/distribution is inferred, not known. \"Smart money\" labels carry survivorship bias. Copying wallets ignores their hedges, size and private information.",
+   "cap": "Separate exchanges and contracts from individuals before measuring concentration. Accumulation/distribution is inferred, not known. \"Smart money\" labels carry survivorship bias. Copying wallets ignores their hedges, size and private information."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "A \"smart money\" wallet buys a token. You don't see its perp short elsewhere; it may be hedged and farming. Copying the visible leg makes you the unhedged one.",
+   "vo": "A \"smart money\" wallet buys a token. You don't see its perp short elsewhere; it may be hedged and farming. Copying the visible leg makes you the unhedged one.",
+   "cap": "A \"smart money\" wallet buys a token. You don't see its perp short elsewhere; it may be hedged and farming. Copying the visible leg makes you the unhedged one."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Contracts/exchanges excluded from concentration figures",
+    "Wallet-following treated as a lead to research, not a signal"
+   ],
+   "vo": "Your checklist. Contracts/exchanges excluded from concentration figures Wallet-following treated as a lead to research, not a signal",
+   "cap": "Contracts/exchanges excluded from concentration figures Wallet-following treated as a lead to research, not a signal"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why is wallet-copying risky?"
+   ],
+   "sub": "Answer: You can't see the wallet's hedges, size or intent.",
+   "subAt": 0.62,
+   "vo": "Why is wallet-copying risky? ... Pause and think. ... The answer: You can't see the wallet's hedges, size or intent.",
+   "cap": "Why is wallet-copying risky? Pause and think. The answer: You can't see the wallet's hedges, size or intent."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What is survivorship bias in labels?"
+   ],
+   "sub": "Answer: Only wallets that did well get labelled \"smart\".",
+   "subAt": 0.62,
+   "vo": "What is survivorship bias in labels? ... Pause and think. ... The answer: Only wallets that did well get labelled \"smart\".",
+   "cap": "What is survivorship bias in labels? Pause and think. The answer: Only wallets that did well get labelled \"smart\"."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "First step in measuring holder concentration?"
+   ],
+   "sub": "Answer: Remove exchange and contract addresses.",
+   "subAt": 0.62,
+   "vo": "First step in measuring holder concentration? ... Pause and think. ... The answer: Remove exchange and contract addresses.",
+   "cap": "First step in measuring holder concentration? Pause and think. The answer: Remove exchange and contract addresses."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

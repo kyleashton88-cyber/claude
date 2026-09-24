@@ -1,0 +1,111 @@
+{
+ "id": "lesson-06-1",
+ "title": "Lesson 6.1: Protocol due diligence",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 6.1 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-06.png",
+   "eyebrow": "Lesson 6.1",
+   "vo": "Lesson six point one. Protocol due diligence.",
+   "cap": "Lesson 6.1. Protocol due diligence."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Run the 6-step research loop on a protocol and reach a written verdict.",
+   "vo": "Run the 6-step research loop on a protocol and reach a written verdict.",
+   "cap": "Run the 6-step research loop on a protocol and reach a written verdict."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Mechanism",
+    "Cash flow",
+    "Dependencies",
+    "Solvency",
+    "Evidence"
+   ],
+   "vo": "Log it in the DeFi Protocol Due Diligence Tracker (Notion) and tick a box only when the step is evidenced, not assumed. Mechanism: what the contracts do; users, assets, incentives. Cash flow: real fees and interest versus emissions. Dependencies: oracles, bridges, admin keys, stablecoins, other protocols. Solvency: collateral quality, liquidation design, bad-debt paths. Evidence: explorers, audits, governance, independent data.",
+   "cap": "Mechanism: what the contracts do; users, assets, incentives. Cash flow: real fees and interest vs emissions. Dependencies: oracles, bridges, admin keys, stablecoins, other protocols. Solvency: collateral quality, liquidation design, bad-debt paths. Evidence: explorers, audits, governance, independent data."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Exit"
+   ],
+   "vo": "Exit: exact unwind, gas, slippage, approvals to revoke.",
+   "cap": "Exit: exact unwind, gas, slippage, approvals to revoke."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example (template verdict)"
+   ],
+   "sub": "\"Protocol Y (lending, Arbitrum). Risk: Medium. Fees are real (borrow demand $2M/yr), but one collateral uses a thin-market oracle and upgrades have a 24h timelock. Verdict: supply stablecoins only, cap at 10% of the DeFi book, alert on queued upgrades.\"",
+   "vo": "\"Protocol Y (lending, Arbitrum). Risk: Medium. Fees are real (borrow demand $2M a year), but one collateral uses a thin-market oracle and upgrades have a 24h timelock. Verdict: supply stablecoins only, cap at 10% of the DeFi book, alert on queued upgrades.\"",
+   "cap": "\"Protocol Y (lending, Arbitrum). Risk: Medium. Fees are real (borrow demand $2M/yr), but one collateral uses a thin-market oracle and upgrades have a 24h timelock. Verdict: supply stablecoins only, cap at 10% of the DeFi book, alert on queued upgrades.\""
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "All six steps written with sources",
+    "Risk rating = worst material risk, not an average",
+    "Verdict states size, conditions and exit"
+   ],
+   "vo": "Your checklist. All six steps written with sources Risk rating = worst material risk, not an average Verdict states size, conditions and exit",
+   "cap": "All six steps written with sources Risk rating = worst material risk, not an average Verdict states size, conditions and exit"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why is the rating the worst risk, not the average?"
+   ],
+   "sub": "Answer: One failure point is enough to lose the position.",
+   "subAt": 0.62,
+   "vo": "Why is the rating the worst risk, not the average? ... Pause and think. ... The answer: One failure point is enough to lose the position.",
+   "cap": "Why is the rating the worst risk, not the average? Pause and think. The answer: One failure point is enough to lose the position."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Which step prevents getting stuck?"
+   ],
+   "sub": "Answer: Step 6: Exit.",
+   "subAt": 0.62,
+   "vo": "Which step prevents getting stuck? ... Pause and think. ... The answer: Step 6: Exit.",
+   "cap": "Which step prevents getting stuck? Pause and think. The answer: Step 6: Exit."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "When do you tick a tracker box?"
+   ],
+   "sub": "Answer: Only when there's evidence for it.",
+   "subAt": 0.62,
+   "vo": "When do you tick a tracker box? ... Pause and think. ... The answer: Only when there's evidence for it.",
+   "cap": "When do you tick a tracker box? Pause and think. The answer: Only when there's evidence for it."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

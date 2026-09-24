@@ -1,0 +1,104 @@
+{
+ "id": "lesson-12-1",
+ "title": "Lesson 12.1: Your balance sheet",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 12.1 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-12.png",
+   "eyebrow": "Lesson 12.1",
+   "vo": "Lesson twelve point one. Your balance sheet.",
+   "cap": "Lesson 12.1. Your balance sheet."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Build a personal on-chain balance sheet and read the three numbers that matter: equity, LTV and liquidity runway.",
+   "vo": "Build a personal on-chain balance sheet and read the three numbers that matter: equity, L.T.V. and liquidity runway.",
+   "cap": "Build a personal on-chain balance sheet and read the three numbers that matter: equity, LTV and liquidity runway."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Assets",
+    "Liabilities",
+    "Equity = assets − liabilities. This is what's actually yours.",
+    "LTV = debt ÷ collateral. Your bank's leverage.",
+    "Liquidity runway = liquid reserve ÷ monthly obligations (spending + interest)."
+   ],
+   "vo": "Banks fail from liquidity (can't pay today) more often than from solvency (owe more than they own). Track both. Assets: everything you own, at market value: collateral, yield positions, reserves. Liabilities: everything you owe: loans, margin, any payables. Equity = assets minus liabilities. This is what's actually yours. L.T.V. = debt divided by collateral. Your bank's leverage. Liquidity runway = liquid reserve divided by monthly obligations (spending + interest).",
+   "cap": "Assets: everything you own, at market value: collateral, yield positions, reserves. Liabilities: everything you owe: loans, margin, any payables. Equity = assets − liabilities. This is what's actually yours. LTV = debt ÷ collateral. Your bank's leverage. Liquidity runway = liquid reserve ÷ monthly obligations (spending + interest)."
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example",
+   "items": [
+    "Equity $280,000 · LTV 20% · health factor 4.0",
+    "Obligations $5,250/month ($250 of it interest) → reserve covers 7.6 months",
+    "Policy checks"
+   ],
+   "vo": "$300,000 collateral, $60,000 debt at 5%, $40,000 stablecoin reserve, $5,000 a month spending: the calculator Equity $280,000 , L.T.V. 20% , health factor 4.0 Obligations $5,250 a month ($250 of it interest) to reserve covers 7.6 months Policy checks: L.T.V. at most 30% ✓ , health factor at least 2 ✓ , reserve at least 6 months ✓",
+   "cap": "Equity $280,000 · LTV 20% · health factor 4.0 Obligations $5,250/month ($250 of it interest) → reserve covers 7.6 months Policy checks: LTV ≤ 30% ✓ · HF ≥ 2 ✓ · reserve ≥ 6 months ✓"
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Balance sheet updated weekly",
+    "Equity, LTV and runway tracked over time",
+    "Policy limits written (max LTV, min HF, min runway)"
+   ],
+   "vo": "Your checklist. Balance sheet updated weekly Equity, L.T.V. and runway tracked over time Policy limits written (max L.T.V., min health factor, min runway)",
+   "cap": "Balance sheet updated weekly Equity, LTV and runway tracked over time Policy limits written (max LTV, min HF, min runway)"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Assets $500k, debt $100k. Equity?"
+   ],
+   "sub": "Answer: $400k.",
+   "subAt": 0.62,
+   "vo": "Assets $500k, debt $100k. Equity? ... Pause and think. ... The answer: $400k.",
+   "cap": "Assets $500k, debt $100k. Equity? Pause and think. The answer: $400k."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Reserve $30k, obligations $6k/month. Runway?"
+   ],
+   "sub": "Answer: 5 months, below a 6-month policy.",
+   "subAt": 0.62,
+   "vo": "Reserve $30k, obligations $6k a month. Runway? ... Pause and think. ... The answer: 5 months, below a 6-month policy.",
+   "cap": "Reserve $30k, obligations $6k/month. Runway? Pause and think. The answer: 5 months, below a 6-month policy."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why track liquidity separately from equity?"
+   ],
+   "sub": "Answer: You can be solvent and still be forced to sell at the worst time if you can't meet obligations today.",
+   "subAt": 0.62,
+   "vo": "Why track liquidity separately from equity? ... Pause and think. ... The answer: You can be solvent and still be forced to sell at the worst time if you can't meet obligations today.",
+   "cap": "Why track liquidity separately from equity? Pause and think. The answer: You can be solvent and still be forced to sell at the worst time if you can't meet obligations today."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

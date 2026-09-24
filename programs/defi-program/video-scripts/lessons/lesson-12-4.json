@@ -1,0 +1,119 @@
+{
+ "id": "lesson-12-4",
+ "title": "Lesson 12.4: Treasury and the liquidity ladder",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 12.4 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-12.png",
+   "eyebrow": "Lesson 12.4",
+   "vo": "Lesson twelve point four. Treasury and the liquidity ladder.",
+   "cap": "Lesson 12.4. Treasury and the liquidity ladder."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Structure reserves so money is available when it's needed, earning a return at every tier.",
+   "vo": "Structure reserves so money is available when it's needed, earning a return at every tier.",
+   "cap": "Structure reserves so money is available when it's needed, earning a return at every tier."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/liquidity-ladder.png",
+   "eyebrow": "The liquidity ladder",
+   "vo": "Here's the picture: The liquidity ladder.",
+   "cap": "The liquidity ladder."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "T0 Instant",
+    "T1 Same day",
+    "T2 Term",
+    "T3 Growth"
+   ],
+   "compact": true,
+   "vo": "T0 Instant, Seconds, Stablecoins in the operating wallet, 1 month: $5,000. T1 Same day, Hours, Blue-chip stablecoin lending, split across 2 protocols, 5 months: $25,000. T2 Term, Scheduled, PTs maturing on dates you'll need the money (Lesson 10.1), Next 6–12 months of planned spending. T3 Growth, Days–weeks, Strategy positions, L.P.s, staking, The rest, within caps.",
+   "cap": "T0 Instant, Seconds, Stablecoins in the operating wallet, 1 month: $5,000 T1 Same day, Hours, Blue-chip stablecoin lending, split across 2 protocols, 5 months: $25,000 T2 Term, Scheduled, PTs maturing on dates you'll need the money (Lesson 10.1), Next 6–12 months of planned spending T3 Growth, Days–weeks, Strategy positions, LPs, staking, The rest, within caps"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "Banks match the timing of assets to the timing of what they owe. Your ladder: Refill downward on a schedule: T1 tops up T0 monthly; maturing PTs top up T1. Never fund a T0 need by selling a T3 position in a bad market. That's what the ladder exists to prevent.",
+   "vo": "Banks match the timing of assets to the timing of what they owe. Your ladder: Refill downward on a schedule: T1 tops up T0 monthly; maturing PTs top up T1. Never fund a T0 need by selling a T3 position in a bad market. That's what the ladder exists to prevent.",
+   "cap": "Banks match the timing of assets to the timing of what they owe. Your ladder: Refill downward on a schedule: T1 tops up T0 monthly; maturing PTs top up T1. Never fund a T0 need by selling a T3 position in a bad market. That's what the ladder exists to prevent."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "T0 $5,000 + T1 $25,000 = 6 months instantly available. T2 holds three PTs maturing in 3, 6 and 9 months, each sized for 3 months of spending. A −50% market day touches none of it.",
+   "vo": "T0 $5,000 + T1 $25,000 = 6 months instantly available. T2 holds three PTs maturing in 3, 6 and 9 months, each sized for 3 months of spending. A minus 50% market day touches none of it.",
+   "cap": "T0 $5,000 + T1 $25,000 = 6 months instantly available. T2 holds three PTs maturing in 3, 6 and 9 months, each sized for 3 months of spending. A −50% market day touches none of it."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "T0 + T1 ≥ 6 months of obligations",
+    "T2 maturities matched to planned spending",
+    "Monthly refill schedule set",
+    "T3 never used for day-to-day needs"
+   ],
+   "vo": "Your checklist. T0 + T1 at least 6 months of obligations T2 maturities matched to planned spending Monthly refill schedule set T3 never used for day-to-day needs",
+   "cap": "T0 + T1 ≥ 6 months of obligations T2 maturities matched to planned spending Monthly refill schedule set T3 never used for day-to-day needs"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why hold T0 in plain stablecoins earning little?"
+   ],
+   "sub": "Answer: Instant, certain access. It's the tier that pays today's bills without selling anything.",
+   "subAt": 0.62,
+   "vo": "Why hold T0 in plain stablecoins earning little? ... Pause and think. ... The answer: Instant, certain access. It's the tier that pays today's bills without selling anything.",
+   "cap": "Why hold T0 in plain stablecoins earning little? Pause and think. The answer: Instant, certain access. It's the tier that pays today's bills without selling anything."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What's T2 for?"
+   ],
+   "sub": "Answer: Known future spending, with maturities matched to when the money is needed and a fixed return locked in.",
+   "subAt": 0.62,
+   "vo": "What's T2 for? ... Pause and think. ... The answer: Known future spending, with maturities matched to when the money is needed and a fixed return locked in.",
+   "cap": "What's T2 for? Pause and think. The answer: Known future spending, with maturities matched to when the money is needed and a fixed return locked in."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does the ladder prevent?"
+   ],
+   "sub": "Answer: Forced selling of growth positions at bad prices to meet short-term needs.",
+   "subAt": 0.62,
+   "vo": "What does the ladder prevent? ... Pause and think. ... The answer: Forced selling of growth positions at bad prices to meet short-term needs.",
+   "cap": "What does the ladder prevent? Pause and think. The answer: Forced selling of growth positions at bad prices to meet short-term needs."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

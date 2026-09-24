@@ -1,0 +1,111 @@
+{
+ "id": "lesson-10-2",
+ "title": "Lesson 10.2: Cash-and-carry basis trades",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 10.2 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-10.png",
+   "eyebrow": "Lesson 10.2",
+   "vo": "Lesson ten point two. Cash-and-carry basis trades.",
+   "cap": "Lesson 10.2. Cash-and-carry basis trades."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Capture the premium of a dated future over spot without taking a view on price.",
+   "vo": "Capture the premium of a dated future over spot without taking a view on price.",
+   "cap": "Capture the premium of a dated future over spot without taking a view on price."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "In rising markets, dated futures usually trade above spot. The gap (basis) shrinks to zero at expiry because the future settles at spot. Buy spot + short the future at the same size and you lock that gap, whatever the price does, as long as both legs survive t",
+   "vo": "In rising markets, dated futures usually trade above spot. The gap (basis) shrinks to zero at expiry because the future settles at spot. Buy spot + short the future at the same size and you lock that gap, whatever the price does, as long as both legs survive to expiry. annualised basis = (future divided by spot minus 1) times 365 divided by days",
+   "cap": "In rising markets, dated futures usually trade above spot. The gap (basis) shrinks to zero at expiry because the future settles at spot. Buy spot + short the future at the same size and you lock that gap, whatever the price does, as long as both legs survive to expiry. annualised basis = (future ÷ spot − 1) × 365 ÷ days"
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example",
+   "items": [
+    "Basis = 2.0% → 8.11% annualised (the calculator",
+    "At expiry, if ETH is 2,000",
+    "At expiry, if ETH is 4,500",
+    "The catch"
+   ],
+   "vo": "ETH spot 3,000, 90-day future 3,060. minus 1,440 per ETH. Without enough margin on the futures venue, it's closed out and you're left long spot at the top. Basis = 2.0% to 8.11% annualised (the calculator At expiry, if ETH is 2,000: spot leg minus 1,000, short future +1,060 to +60 per ETH. At expiry, if ETH is 4,500: spot leg +1,500, short future minus 1,440 to +60 per ETH. The catch: before expiry, a rally to 4,500 means the short leg shows",
+   "cap": "Basis = 2.0% → 8.11% annualised (the calculator → +60 per ETH. At expiry, if ETH is 4,500: spot leg +1,500, short future −1,440 → +60 per ETH. The catch: before expiry, a rally to 4,500 means the short leg shows"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "What this position is short"
+   ],
+   "sub": "Margin and venue risk: a squeeze on the short leg, or the venue failing.",
+   "vo": "Margin and venue risk: a squeeze on the short leg, or the venue failing.",
+   "cap": "Margin and venue risk: a squeeze on the short leg, or the venue failing."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Both legs opened together, same size",
+    "Futures margin survives at least a +100% move, or a rule to top up",
+    "Venue risk sized (cap per venue)",
+    "Plan to hold to expiry; early exit may be at a worse basis"
+   ],
+   "vo": "Your checklist. Both legs opened together, same size Futures margin survives at least a +100% move, or a rule to top up Venue risk sized (cap per venue) Plan to hold to expiry; early exit may be at a worse basis",
+   "cap": "Both legs opened together, same size Futures margin survives at least a +100% move, or a rule to top up Venue risk sized (cap per venue) Plan to hold to expiry; early exit may be at a worse basis"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Spot 2,000, 180-day future 2,080. Annualised basis?"
+   ],
+   "sub": "Answer: 4% × 365/180 ≈ 8.1%.",
+   "subAt": 0.62,
+   "vo": "Spot 2,000, 180-day future 2,080. Annualised basis? ... Pause and think. ... The answer: 4% times 365/180 about 8.1%.",
+   "cap": "Spot 2,000, 180-day future 2,080. Annualised basis? Pause and think. The answer: 4% × 365/180 ≈ 8.1%."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why is the return \"locked\" at expiry?"
+   ],
+   "sub": "Answer: The future settles at spot, so the gain on one leg offsets the loss on the other, leaving the entry basis.",
+   "subAt": 0.62,
+   "vo": "Why is the return \"locked\" at expiry? ... Pause and think. ... The answer: The future settles at spot, so the gain on one leg offsets the loss on the other, leaving the entry basis.",
+   "cap": "Why is the return \"locked\" at expiry? Pause and think. The answer: The future settles at spot, so the gain on one leg offsets the loss on the other, leaving the entry basis."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What breaks the trade before expiry?"
+   ],
+   "sub": "Answer: A margin call or liquidation on the short future during a rally, or venue failure.",
+   "subAt": 0.62,
+   "vo": "What breaks the trade before expiry? ... Pause and think. ... The answer: A margin call or liquidation on the short future during a rally, or venue failure.",
+   "cap": "What breaks the trade before expiry? Pause and think. The answer: A margin call or liquidation on the short future during a rally, or venue failure."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

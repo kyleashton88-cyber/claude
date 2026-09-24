@@ -1,0 +1,101 @@
+{
+ "id": "lesson-14-2",
+ "title": "Lesson 14.2: Automation: keepers, bots and agents without handing over the keys",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 14.2 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-14.png",
+   "eyebrow": "Lesson 14.2",
+   "vo": "Lesson fourteen point two. Automation: keepers, bots and agents without handing over the keys.",
+   "cap": "Lesson 14.2. Automation: keepers, bots and agents without handing over the keys."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Automate routine actions with the least permission possible.",
+   "vo": "Automate routine actions with the least permission possible.",
+   "cap": "Automate routine actions with the least permission possible."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Keeper / automation networks execute pre-defined actions when conditions",
+    "Smart-account permissions / session keys",
+    "AI agents and bots",
+    "Test on a testnet or with tiny amounts first; log every automated action."
+   ],
+   "vo": "are met (for example repay when health factor < 1.8, rebalance an L.P. range). one thing (for example repay debt on one protocol, up to $X per day), revocable at any time. scoped rights, never your seed phrase or unlimited approvals. Keeper / automation networks execute pre-defined actions when conditions Smart-account permissions / session keys: grant a bot the right to do AI agents and bots: treat them like any other contract permission. They get Test on a testnet or with tiny amounts first; log every automated action.",
+   "cap": "Keeper / automation networks execute pre-defined actions when conditions Smart-account permissions / session keys: grant a bot the right to do AI agents and bots: treat them like any other contract permission. They get Test on a testnet or with tiny amounts first; log every automated action."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Automated repay: a session key allowed only to call repay on your lending position, from your operating wallet, capped at $5,000/day, expiring in 30 days. Worst case if the bot is compromised: it repays your debt, which is annoying, not catastrophic.",
+   "vo": "Automated repay: a session key allowed only to call repay on your lending position, from your operating wallet, capped at $5,000 a day, expiring in 30 days. Worst case if the bot is compromised: it repays your debt, which is annoying, not catastrophic.",
+   "cap": "Automated repay: a session key allowed only to call repay on your lending position, from your operating wallet, capped at $5,000/day, expiring in 30 days. Worst case if the bot is compromised: it repays your debt, which is annoying, not catastrophic."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Each automation has a scoped, capped, expiring permission",
+    "No automation holds seed phrases or unlimited approvals",
+    "Tested small; actions logged; revoke procedure known"
+   ],
+   "vo": "Your checklist. Each automation has a scoped, capped, expiring permission No automation holds seed phrases or unlimited approvals Tested small; actions logged; revoke procedure known",
+   "cap": "Each automation has a scoped, capped, expiring permission No automation holds seed phrases or unlimited approvals Tested small; actions logged; revoke procedure known"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What's a session key?"
+   ],
+   "sub": "Answer: A limited, revocable permission for a specific action.",
+   "subAt": 0.62,
+   "vo": "What's a session key? ... Pause and think. ... The answer: A limited, revocable permission for a specific action.",
+   "cap": "What's a session key? Pause and think. The answer: A limited, revocable permission for a specific action."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Should an AI agent ever get your seed phrase?"
+   ],
+   "sub": "Answer: No. Give it scoped, revocable permissions only.",
+   "subAt": 0.62,
+   "vo": "Should an AI agent ever get your seed phrase? ... Pause and think. ... The answer: No. Give it scoped, revocable permissions only.",
+   "cap": "Should an AI agent ever get your seed phrase? Pause and think. The answer: No. Give it scoped, revocable permissions only."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Worst case of a well-scoped repay bot?"
+   ],
+   "sub": "Answer: It repays debt within its cap. No funds leave your control.",
+   "subAt": 0.62,
+   "vo": "Worst case of a well-scoped repay bot? ... Pause and think. ... The answer: It repays debt within its cap. No funds leave your control.",
+   "cap": "Worst case of a well-scoped repay bot? Pause and think. The answer: It repays debt within its cap. No funds leave your control."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

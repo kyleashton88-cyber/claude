@@ -1,8 +1,6 @@
 # On-Chain Operator Program — Operations Kit
 
 Everything around the lessons needed to sell, deliver and run the program.
-Items marked **YOU DECIDE** need your call. Legal wording is a starting draft:
-**have a lawyer review terms and disclaimers before launch.**
 
 Contents: 1. Whop course layout · 2. Capstones & rubrics · 3. Certification ·
 4. Application form & scoring · 5. Sales call script · 6. Member email sequence ·
@@ -16,7 +14,7 @@ Contents: 1. Whop course layout · 2. Capstones & rubrics · 3. Certification ·
 | Whop section | Contents | Video |
 |---|---|---|
 | Start here | Welcome, how the program works, Day-1 Setup Kit (PDF) | `video/welcome.mp4` |
-| Module 0–14 | One chapter per module; one lesson per page, with images; module practical at the end | `video/module-NN-intro.mp4` at the top of each module |
+| Module 0–14 | One chapter per module; one lesson per page, with images and its own narrated video (≤ 25 min); module practical at the end | `video/module-NN-intro.mp4` at the top of each module; `video/lesson-NN-M.mp4` on each lesson page (plan: `10-video-production-plan.md`) |
 | Tools | Strategy calculator (`defi_calc.py`) instructions, worksheet templates (`08-worksheets.md`) | n/a |
 | Capstones | Briefs, rubrics, submission form | n/a |
 | Live (Live tier only) | Session calendar, recordings, review booking | n/a |
@@ -76,7 +74,7 @@ Certificates state that they reflect course completion only, not a licence or a 
 4. Goal: learn safely from zero / earn income / borrow against assets / run a structured portfolio / other
 5. Do you already use Grid Bot Builder? (yes/no)
 6. Why now? (short text)
-7. Acknowledgement (required): *"I understand this is education, not financial advice, and that no returns are promised."*
+7. Acknowledgement (required): *"I understand this is education, not financial advice, that no returns are promised, and I've read the 14-day conditional refund policy."*
 
 **Scoring** (plugs into `gbb-new-lead` as `interest = defi`):
 | Answer | Points |
@@ -124,7 +122,7 @@ Certificates state that they reflect course completion only, not a licence or a 
 
 ---
 
-## 7. Live tier design (**YOU DECIDE: price, cadence**)
+## 7. Live tier design (price on application, set on the sales call)
 
 | Component | Proposed | Notes |
 |---|---|---|
@@ -149,7 +147,7 @@ advice, no trade calls, no fund management.
 
 ---
 
-## 9. Terms, disclaimers & refunds (draft; lawyer review required)
+## 9. Terms, disclaimers & refunds
 
 **Disclaimer (listing, checkout, every module):**
 *The On-Chain Operator Program is educational content only. It is not
@@ -160,12 +158,22 @@ guaranteed. Examples are illustrative. "Operate as your own bank" describes a
 personal method, not a licence or financial service. We will never ask for your
 seed phrase, private keys or account access.*
 
-**Refund policy (YOU DECIDE):** options:
-- (a) 14 days, if under 30% of lessons completed
-- (b) 7 days, no questions asked
-- (c) no refunds after access (state clearly at checkout)
+**Refund policy: 14-day conditional refund**
 
-**Other terms to include:** access duration (lifetime / 12 months), no sharing
+1. **Eligibility.** You can request a full refund within **14 days of purchase** if **all** of these are true:
+   - you've completed **no more than 10% of the lessons** (10 of 107; Mastery Starters don't count),
+   - you haven't submitted a capstone, and
+   - you haven't attended a live session or used a review (Live tier).
+2. **Always refunded:** duplicate purchases, and access problems we can't fix within 7 days of you reporting them (whatever your progress).
+3. **Not refunded:** requests after 14 days or beyond the progress limit, and any request based on investment or trading results. This is an education program, and no returns are promised.
+4. **Live tier and upgrades:** the same 14-day conditions apply from the purchase or upgrade date; if you upgrade Course → Live, the price difference is refundable under the same conditions.
+5. **How to request:** email support with your order ID and the reason. Refunds go back to the original payment method through Whop, normally within 5–10 business days. Access ends when the refund is issued.
+6. **Chargebacks:** please contact support first. A chargeback ends access immediately.
+7. **Your rights:** this policy doesn't limit any rights you have under consumer law where you live.
+
+The policy is shown on the listing, at checkout and in the application acknowledgement.
+
+**Other terms to include:** lifetime access to course content, no sharing
 of accounts, content copyright, conduct rules (section 8), Live-tier boundaries (section 7).
 
 ---
@@ -181,9 +189,9 @@ of accounts, content copyright, conduct rules (section 8), Live-tier boundaries 
 ---
 
 ## 11. Launch plan
-1. Reconnect Whop in Zapier; create the hidden product; upload logo, banner and gallery images; paste the listing.
+1. Create the product; upload logo, banner and gallery images; paste the listing and the refund policy.
 2. Upload the course: 15 modules, lesson pages with images, intro videos, Day-1 Setup Kit.
-3. Create plans via Zapier (course $15,000 one-time; live tier once priced), approved first.
+3. Create the plans: course $15,000 one-time; Live tier priced on application.
 4. Publish the application form; connect scoring to `gbb-new-lead`.
 5. Test end to end: application → call → per-buyer checkout → onboarding email → access.
 6. Soft launch to the warm list (GBB customers, Elite Intel) and cold ads at the same time (per decision), with the VSLs.

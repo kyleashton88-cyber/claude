@@ -1,0 +1,118 @@
+{
+ "id": "lesson-01-1",
+ "title": "Lesson 1.1: What DeFi is, and the risk-first mindset",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 1.1 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-01.png",
+   "eyebrow": "Lesson 1.1",
+   "vo": "Lesson one point one. What DeFi is, and the risk-first mindset.",
+   "cap": "Lesson 1.1. What DeFi is, and the risk-first mindset."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Describe the DeFi stack and explain why every yield is payment for a risk.",
+   "vo": "Describe the DeFi stack and explain why every yield is payment for a risk.",
+   "cap": "Describe the DeFi stack and explain why every yield is payment for a risk."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Blockchain",
+    "Smart contracts",
+    "Tokens",
+    "Wallets",
+    "Interfaces"
+   ],
+   "vo": "DeFi replaces intermediaries (banks, brokers, exchanges) with smart contracts: public programs on a blockchain that hold assets and follow fixed rules. The stack, bottom to top: Three properties make DeFi powerful and dangerous: Risk-first rule: before comparing returns, list what could make you lose money. A higher yield means you're being paid to carry more risk, whether or not the website mentions it. Blockchain: records every balance and transaction (Ethereum, layer twos, other chains). Smart contracts: the protocol logic (a lending market, an exchange pool). Tokens: the assets the contracts move. Wallets: where you hold keys and sign actions. Interfaces: websites that build transactions for you. They're a convenience, not the protocol itself.",
+   "cap": "Blockchain: records every balance and transaction (Ethereum, L2s, other chains). Smart contracts: the protocol logic (a lending market, an exchange pool). Tokens: the assets the contracts move. Wallets: where you hold keys and sign actions. Interfaces: websites that build transactions for you. They're a convenience, not the protocol itself."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Data layers",
+    "Self-custody",
+    "Composability",
+    "Transparency"
+   ],
+   "vo": "Data layers: explorers and dashboards you use to verify what happened. Self-custody: nobody can freeze your funds, and nobody can recover them either. Composability: protocols plug into each other. That makes products powerful, and a position can fail because of something it depends on. Transparency: you can verify everything on-chain. Transparent doesn't mean safe.",
+   "cap": "Data layers: explorers and dashboards you use to verify what happened. Self-custody: nobody can freeze your funds, and nobody can recover them either. Composability: protocols plug into each other. That makes products powerful, and a position can fail because of something it depends on. Transparency: you can verify everything on-chain. Transparent doesn't mean safe."
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example",
+   "items": [
+    "Where does the 12% come from? Borrowers paying interest, trading fees, or a reward token?",
+    "Which stablecoin, and what backs it? (Lesson 1.5)",
+    "Which contracts hold the money, and who can upgrade them?",
+    "Is there a bridge or oracle involved?",
+    "How do I withdraw, and could withdrawals be blocked?"
+   ],
+   "vo": "A pool advertises 12% A.P.Y. on a stablecoin. Before depositing, ask: If you can't answer these, you don't know what the 12% is paying you for. Where does the 12% come from? Borrowers paying interest, trading fees, or a reward token? Which stablecoin, and what backs it? (Lesson 1.5) Which contracts hold the money, and who can upgrade them? Is there a bridge or oracle involved? How do I withdraw, and could withdrawals be blocked?",
+   "cap": "Where does the 12% come from? Borrowers paying interest, trading fees, or a reward token? Which stablecoin, and what backs it? (Lesson 1.5) Which contracts hold the money, and who can upgrade them? Is there a bridge or oracle involved? How do I withdraw, and could withdrawals be blocked?"
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "I can name the six layers of the DeFi stack",
+    "I can explain why self-custody cuts both ways",
+    "Before any yield, I ask \"what am I being paid to risk?\""
+   ],
+   "vo": "Your checklist. I can name the six layers of the DeFi stack I can explain why self-custody cuts both ways Before any yield, I ask \"what am I being paid to risk?\"",
+   "cap": "I can name the six layers of the DeFi stack I can explain why self-custody cuts both ways Before any yield, I ask \"what am I being paid to risk?\""
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why can composability increase risk?"
+   ],
+   "sub": "Answer: A position inherits the failure risk of every protocol, asset, oracle and bridge it depends on.",
+   "subAt": 0.62,
+   "vo": "Why can composability increase risk? ... Pause and think. ... The answer: A position inherits the failure risk of every protocol, asset, oracle and bridge it depends on.",
+   "cap": "Why can composability increase risk? Pause and think. The answer: A position inherits the failure risk of every protocol, asset, oracle and bridge it depends on."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Is a website the same thing as the protocol?"
+   ],
+   "sub": "Answer: No. The interface only builds transactions. The contracts are the protocol, and interfaces can be faked or compromised.",
+   "subAt": 0.62,
+   "vo": "Is a website the same thing as the protocol? ... Pause and think. ... The answer: No. The interface only builds transactions. The contracts are the protocol, and interfaces can be faked or compromised.",
+   "cap": "Is a website the same thing as the protocol? Pause and think. The answer: No. The interface only builds transactions. The contracts are the protocol, and interfaces can be faked or compromised."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What is the risk-first mindset in one sentence?"
+   ],
+   "sub": "Answer: Identify what could make you lose money before you compare returns.",
+   "subAt": 0.62,
+   "vo": "What is the risk-first mindset in one sentence? ... Pause and think. ... The answer: Identify what could make you lose money before you compare returns.",
+   "cap": "What is the risk-first mindset in one sentence? Pause and think. The answer: Identify what could make you lose money before you compare returns."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

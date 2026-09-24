@@ -1,0 +1,102 @@
+{
+ "id": "lesson-06-2",
+ "title": "Lesson 6.2: Tokenomics: supply, unlocks, FDV, value capture",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 6.2 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-06.png",
+   "eyebrow": "Lesson 6.2",
+   "vo": "Lesson six point two. Tokenomics: supply, unlocks, F.D.V., value capture.",
+   "cap": "Lesson 6.2. Tokenomics: supply, unlocks, FDV, value capture."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Read a token's supply schedule and judge whether protocol success reaches the token.",
+   "vo": "Read a token's supply schedule and judge whether protocol success reaches the token.",
+   "cap": "Read a token's supply schedule and judge whether protocol success reaches the token."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Circulating supply",
+    "Market cap = price × circulating. FDV (fully diluted valuation) = price × max supply.",
+    "Unlocks/vesting",
+    "Emissions",
+    "Value capture"
+   ],
+   "vo": "Circulating supply: tokens tradable now. Max/total supply: all that will exist. Market cap = price times circulating. F.D.V. (fully diluted valuation) = price times max supply. Unlocks/vesting: team and investor tokens released on a schedule; new supply that may be sold. Emissions: ongoing new tokens (rewards). Value capture: does protocol revenue actually reach token holders (fee share, buybacks), and how is it enforced?",
+   "cap": "Circulating supply: tokens tradable now. Max/total supply: all that will exist. Market cap = price × circulating. FDV (fully diluted valuation) = price × max supply. Unlocks/vesting: team and investor tokens released on a schedule; new supply that may be sold. Emissions: ongoing new tokens (rewards). Value capture: does protocol revenue actually reach token holders (fee share, buybacks), and how is it enforced?"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Price $2, circulating 100M, max 1B: market cap $200M, FDV $2B. Next month 50M unlock: circulating supply rises 50%. Unless demand grows to match, that's heavy selling pressure. A low market cap with a huge FDV is a warning.",
+   "vo": "Price $2, circulating 100M, max 1B: market cap $200M, F.D.V. $2B. Next month 50M unlock: circulating supply rises 50%. Unless demand grows to match, that's heavy selling pressure. A low market cap with a huge F.D.V. is a warning.",
+   "cap": "Price $2, circulating 100M, max 1B: market cap $200M, FDV $2B. Next month 50M unlock: circulating supply rises 50%. Unless demand grows to match, that's heavy selling pressure. A low market cap with a huge FDV is a warning."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Market cap vs FDV compared",
+    "Next 12 months of unlocks listed",
+    "Value-capture mechanism identified (or \"none\")"
+   ],
+   "vo": "Your checklist. Market cap versus F.D.V. compared Next 12 months of unlocks listed Value-capture mechanism identified (or \"none\")",
+   "cap": "Market cap vs FDV compared Next 12 months of unlocks listed Value-capture mechanism identified (or \"none\")"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Price $5, circulating 20M, max 100M. FDV?"
+   ],
+   "sub": "Answer: $500M.",
+   "subAt": 0.62,
+   "vo": "Price $5, circulating 20M, max 100M. F.D.V.? ... Pause and think. ... The answer: $500M.",
+   "cap": "Price $5, circulating 20M, max 100M. FDV? Pause and think. The answer: $500M."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why do unlocks matter?"
+   ],
+   "sub": "Answer: They add supply that recipients may sell.",
+   "subAt": 0.62,
+   "vo": "Why do unlocks matter? ... Pause and think. ... The answer: They add supply that recipients may sell.",
+   "cap": "Why do unlocks matter? Pause and think. The answer: They add supply that recipients may sell."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What is value capture?"
+   ],
+   "sub": "Answer: An enforceable way protocol success benefits the token.",
+   "subAt": 0.62,
+   "vo": "What is value capture? ... Pause and think. ... The answer: An enforceable way protocol success benefits the token.",
+   "cap": "What is value capture? Pause and think. The answer: An enforceable way protocol success benefits the token."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

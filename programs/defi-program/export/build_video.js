@@ -7,7 +7,11 @@ const path = require('path');
 const { spawn, execFileSync } = require('child_process');
 const { chromium } = require('playwright-core');
 const { C, FONT, BASE_CSS, network, icon, logoMark, wordmark, DISCLAIMER } = require('./build_images.js');
-const { VIDEOS } = require('./videos.js');
+const { VIDEOS: CORE } = require('./videos.js');
+// Extra video specs (e.g. lesson videos) as JSON in ../video-scripts/**/*.json, same schema as videos.js.
+const SCRIPT_DIR = path.resolve(__dirname, '..', 'video-scripts');
+const walk = d => (fs.existsSync(d) ? fs.readdirSync(d, { withFileTypes: true }).flatMap(e => (e.isDirectory() ? walk(path.join(d, e.name)) : e.name.endsWith('.json') ? [path.join(d, e.name)] : [])) : []);
+const VIDEOS = [...CORE, ...walk(SCRIPT_DIR).sort().map(f => JSON.parse(fs.readFileSync(f, 'utf8')))];
 
 const FPS = 30;
 const LEAD_IN = 0.45, TAIL = 0.6; // seconds of breathing room around each voice line
@@ -113,7 +117,7 @@ function scenePage(s, W, H, dur, voStart, voDur) {
 function planTimes(s, voStart, voDur) {
   const at = f => +(voStart + voDur * f).toFixed(2);
   if (s.type === 'strike') { s.tStrike = at(0.3); s.tAfter = at(0.55); }
-  if (s.type === 'statement') s.tSub = at(0.45);
+  if (s.type === 'statement') s.tSub = at(s.subAt || 0.45);
   if (s.type === 'bullets' || s.type === 'stats') { const n = (s.items || s.stats).length; s.tItems = Array.from({ length: n }, (_, i) => at(0.06 + i * 0.5 / n)); }
 }
 
@@ -126,7 +130,7 @@ record the VO lines below and replace the audio track, or re-run with \`VOICE=am
 
 Compliance: no income or return claims, no fake urgency, keys never requested, disclaimer on screen.
 `;
-  for (const { video, timeline, total } of results) {
+  for (const { video, timeline, total } of results.filter(r => r.video.group !== 'lessons')) {
     md += `\n---\n\n## ${video.title}\n\nFile: \`video/${video.id}.mp4\` · ${video.size[0]}×${video.size[1]} · ${total.toFixed(1)}s · Use: ${video.use}\n\n| # | Time | Visual | Voice-over |\n|---|---|---|---|\n`;
     timeline.forEach((t, i) => {
       const s = video.scenes[i];
@@ -151,6 +155,7 @@ async function render(video, browser) {
   let start = 0; const timeline = [];
   for (const s of scenes) { const dur = LEAD_IN + durs[s.id] + TAIL; timeline.push({ start, dur, vo: durs[s.id] }); start += dur; }
   const total = start;
+  if (total > (video.maxMinutes || 25) * 60) throw new Error(`${video.id} is ${(total / 60).toFixed(1)} min, over the ${video.maxMinutes || 25}-minute cap: split it`);
   const inputs = scenes.flatMap(s => ['-i', path.join(dir, `${s.id}.wav`)]);
   const delays = scenes.map((s, i) => `[${i}:a]adelay=${Math.round((timeline[i].start + LEAD_IN) * 1000)}|${Math.round((timeline[i].start + LEAD_IN) * 1000)}[a${i}]`).join(';');
   const mix = `${delays};${scenes.map((_, i) => `[a${i}]`).join('')}amix=inputs=${scenes.length}:normalize=0,apad=whole_dur=${total.toFixed(3)},loudnorm=I=-16:TP=-1.5[out]`;
@@ -188,7 +193,11 @@ async function render(video, browser) {
   const only = process.argv[2];
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
   const results = [];
-  for (const v of VIDEOS) if (!only || v.id === only || v.group === only) results.push(await render(v, browser));
+  // No argument: core videos only (VSLs, welcome, module intros). 'lessons' renders every lesson video.
+  for (const v of VIDEOS) {
+    const pick = only ? (v.id === only || v.group === only) : v.group !== 'lessons';
+    if (pick) results.push(await render(v, browser));
+  }
   await browser.close();
   if (!only) writeScripts(results);
   else console.log('(SCRIPTS.md only regenerates on a full build)');

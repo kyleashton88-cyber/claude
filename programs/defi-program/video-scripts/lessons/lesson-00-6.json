@@ -1,0 +1,124 @@
+{
+ "id": "lesson-00-6",
+ "title": "Lesson 0.6: Networks, gas and your first transfer",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 0.6 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-00.png",
+   "eyebrow": "Lesson 0.6",
+   "vo": "Lesson zero point six. Networks, gas and your first transfer.",
+   "cap": "Lesson 0.6. Networks, gas and your first transfer."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Move crypto from the exchange to your own wallet safely, on the right network, starting with a test amount.",
+   "vo": "Move crypto from the exchange to your own wallet safely, on the right network, starting with a test amount.",
+   "cap": "Move crypto from the exchange to your own wallet safely, on the right network, starting with a test amount."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/first-transfer.png",
+   "eyebrow": "Your first transfer",
+   "vo": "Here's the picture: Your first transfer.",
+   "cap": "Your first transfer."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Networks (chains)",
+    "The golden rule",
+    "Gas",
+    "Your wallet address is usually the same on Ethereum and its Layer 2s, but your balances…",
+    "In your wallet, copy your address (use the copy button; never type it)."
+   ],
+   "vo": "Step by step: Networks (chains): the same token (for example U.S.D.C.) can exist on several blockchains: Ethereum (the main one, higher fees) and cheaper Layer 2 networks such as Arbitrum, Base and Optimism. The golden rule: the network you withdraw on must match a network your wallet (or the receiving service) supports. Sending on the wrong network can mean lost funds. Gas: every transaction pays a small network fee in the network's gas token. On Ethereum and its Layer 2s that's ETH. Without a little ETH on the network you're using, you can't move anything. Your wallet address is usually the same on Ethereum and its Layer 2s, but your balances are separate per network. Switch networks in your wallet to see them. In your wallet, copy your address (use the copy button; never type it).",
+   "cap": "Networks (chains): the same token (e.g. USDC) can exist on several blockchains: Ethereum (the main one, higher fees) and cheaper Layer 2 networks such as Arbitrum, Base and Optimism. The golden rule: the network you withdraw on must match a network your wallet (or the receiving service) supports. Sending on the wrong network can mean lost funds. Gas: every transaction pays a small network fee in the network's gas token. On Ethereum and its Layer 2s that's ETH. Without a little ETH on the network you're using, you can't move anything. Your wallet address is usually the same on Ethereum and its Layer 2s, but your balances are separate per network. Switch networks in your wallet to see them. In your wallet, copy your address (use the copy button; never type it)."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "On the exchange, choose Withdraw → the coin → pick the network (for learning, a low-fee…",
+    "Paste the address. Check the first 6 and last 6 characters match your wallet. Better,…",
+    "Send a small test first (e.g. $10 of ETH).",
+    "Wait for it to arrive; see it in your wallet on that network.",
+    "Only then send the rest. Add the address to the exchange allowlist."
+   ],
+   "vo": "On the exchange, choose Withdraw to the coin to pick the network (for learning, a low-fee Layer 2 your wallet supports, for example Arbitrum or Base). Paste the address. Check the first 6 and last 6 characters match your wallet. Better, check it all. Send a small test first (for example $10 of ETH). Wait for it to arrive; see it in your wallet on that network. Only then send the rest. Add the address to the exchange allowlist.",
+   "cap": "On the exchange, choose Withdraw → the coin → pick the network (for learning, a low-fee Layer 2 your wallet supports, e.g. Arbitrum or Base). Paste the address. Check the first 6 and last 6 characters match your wallet. Better, check it all. Send a small test first (e.g. $10 of ETH). Wait for it to arrive; see it in your wallet on that network. Only then send the rest. Add the address to the exchange allowlist."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example (illustrative)"
+   ],
+   "sub": "Withdrawing $100 of ETH to Arbitrum: exchange withdrawal fee ~$0.10–$1. Later, a swap on Arbitrum costs a few cents in gas. The same swap on Ethereum might cost a few dollars, more when the network is busy. That's why beginners learn on Layer 2s.",
+   "vo": "Withdrawing $100 of ETH to Arbitrum: exchange withdrawal fee about $0.10–$1. Later, a swap on Arbitrum costs a few cents in gas. The same swap on Ethereum might cost a few dollars, more when the network is busy. That's why beginners learn on Layer 2s.",
+   "cap": "Withdrawing $100 of ETH to Arbitrum: exchange withdrawal fee ~$0.10–$1. Later, a swap on Arbitrum costs a few cents in gas. The same swap on Ethereum might cost a few dollars, more when the network is busy. That's why beginners learn on Layer 2s."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Network chosen on purpose, and supported by my wallet",
+    "Address pasted, first and last 6 characters checked",
+    "Test amount sent and received before the rest",
+    "A little ETH held on that network for gas",
+    "Address added to the exchange withdrawal allowlist"
+   ],
+   "vo": "Your checklist. Network chosen on purpose, and supported by my wallet Address pasted, first and last 6 characters checked Test amount sent and received before the rest A little ETH held on that network for gas Address added to the exchange withdrawal allowlist",
+   "cap": "Network chosen on purpose, and supported by my wallet Address pasted, first and last 6 characters checked Test amount sent and received before the rest A little ETH held on that network for gas Address added to the exchange withdrawal allowlist"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What's the golden rule of withdrawals?"
+   ],
+   "sub": "Answer: The network you send on must be one the receiving wallet or service supports.",
+   "subAt": 0.62,
+   "vo": "What's the golden rule of withdrawals? ... Pause and think. ... The answer: The network you send on must be one the receiving wallet or service supports.",
+   "cap": "What's the golden rule of withdrawals? Pause and think. The answer: The network you send on must be one the receiving wallet or service supports."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "You have USDC on Arbitrum but zero ETH there. Can you send it?"
+   ],
+   "sub": "Answer: No. You need a little ETH on Arbitrum to pay gas.",
+   "subAt": 0.62,
+   "vo": "You have U.S.D.C. on Arbitrum but zero ETH there. Can you send it? ... Pause and think. ... The answer: No. You need a little ETH on Arbitrum to pay gas.",
+   "cap": "You have USDC on Arbitrum but zero ETH there. Can you send it? Pause and think. The answer: No. You need a little ETH on Arbitrum to pay gas."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why send a test amount?"
+   ],
+   "sub": "Answer: To confirm the address and network are right before risking the full amount.",
+   "subAt": 0.62,
+   "vo": "Why send a test amount? ... Pause and think. ... The answer: To confirm the address and network are right before risking the full amount.",
+   "cap": "Why send a test amount? Pause and think. The answer: To confirm the address and network are right before risking the full amount."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

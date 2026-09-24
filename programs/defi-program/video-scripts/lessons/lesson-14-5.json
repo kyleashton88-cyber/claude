@@ -1,0 +1,102 @@
+{
+ "id": "lesson-14-5",
+ "title": "Lesson 14.5: Building your own tools: reading contracts, data and simple scripts",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 14.5 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-14.png",
+   "eyebrow": "Lesson 14.5",
+   "vo": "Lesson fourteen point five. Building your own tools: reading contracts, data and simple scripts.",
+   "cap": "Lesson 14.5. Building your own tools: reading contracts, data and simple scripts."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Read on-chain data directly and build simple read-only tools, so you're not dependent on any one dashboard.",
+   "vo": "Read on-chain data directly and build simple read-only tools, so you're not dependent on any one dashboard.",
+   "cap": "Read on-chain data directly and build simple read-only tools, so you're not dependent on any one dashboard."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Reading without code",
+    "Public data APIs (e.g. protocol analytics sites, explorers) return TVL, fees, yields and…",
+    "RPC",
+    "Scripts that only read (never hold keys) can check health factors, pegs and utilisation,…",
+    "Rule"
+   ],
+   "vo": "Reading without code: block explorers' Read tabs show a contract's public state (for example a lending market's parameters, your position). Public data APIs (for example protocol analytics sites, explorers) return T.V.L., fees, yields and prices as JSON. R.P.C.: a node endpoint that lets a script read chain state directly (balances, contract calls). Use a reputable provider; reading is free or cheap. Scripts that only read (never hold keys) can check health factors, pegs and utilisation, and send you alerts. Rule: tools that read are low-risk; tools that sign follow Lesson 14.2 (scoped, capped, revocable permissions). Never put a seed phrase or private key in a script, a file or an environment variable on a shared machine.",
+   "cap": "Reading without code: block explorers' Read tabs show a contract's public state (e.g. a lending market's parameters, your position). Public data APIs (e.g. protocol analytics sites, explorers) return TVL, fees, yields and prices as JSON. RPC: a node endpoint that lets a script read chain state directly (balances, contract calls). Use a reputable provider; reading is free or cheap. Scripts that only read (never hold keys) can check health factors, pegs and utilisation, and send you alerts. Rule: tools that read are low-risk; tools that sign follow Lesson 14.2 (scoped, capped, revocable permissions). Never put a seed phrase or private key in a script, a file or an environment variable on a shared machine."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example (read-only, pseudo-code)"
+   ],
+   "sub": "Uses only public reads, holds no keys, and can't move funds. Worst case if it breaks: you miss an alert, so keep your other alerts (14.1) as a backup.",
+   "vo": "Uses only public reads, holds no keys, and can't move funds. Worst case if it breaks: you miss an alert, so keep your other alerts (14.1) as a backup.",
+   "cap": "Uses only public reads, holds no keys, and can't move funds. Worst case if it breaks: you miss an alert, so keep your other alerts (14.1) as a backup."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "I can read a contract's state on an explorer",
+    "My monitoring scripts are read-only and hold no keys",
+    "Backup alerts exist if my script fails"
+   ],
+   "vo": "Your checklist. I can read a contract's state on an explorer My monitoring scripts are read-only and hold no keys Backup alerts exist if my script fails",
+   "cap": "I can read a contract's state on an explorer My monitoring scripts are read-only and hold no keys Backup alerts exist if my script fails"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why prefer read-only tools?"
+   ],
+   "sub": "Answer: They can't move funds, so a bug or breach costs little.",
+   "subAt": 0.62,
+   "vo": "Why prefer read-only tools? ... Pause and think. ... The answer: They can't move funds, so a bug or breach costs little.",
+   "cap": "Why prefer read-only tools? Pause and think. The answer: They can't move funds, so a bug or breach costs little."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Where should a private key go in a script?"
+   ],
+   "sub": "Answer: Nowhere. Use scoped permissions (14.2) if a tool must act.",
+   "subAt": 0.62,
+   "vo": "Where should a private key go in a script? ... Pause and think. ... The answer: Nowhere. Use scoped permissions (14.2) if a tool must act.",
+   "cap": "Where should a private key go in a script? Pause and think. The answer: Nowhere. Use scoped permissions (14.2) if a tool must act."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What's an RPC endpoint?"
+   ],
+   "sub": "Answer: A node connection that lets software read (and submit to) the blockchain.",
+   "subAt": 0.62,
+   "vo": "What's an R.P.C. endpoint? ... Pause and think. ... The answer: A node connection that lets software read (and submit to) the blockchain.",
+   "cap": "What's an RPC endpoint? Pause and think. The answer: A node connection that lets software read (and submit to) the blockchain."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

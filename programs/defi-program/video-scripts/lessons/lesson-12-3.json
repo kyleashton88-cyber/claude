@@ -1,0 +1,114 @@
+{
+ "id": "lesson-12-3",
+ "title": "Lesson 12.3: The credit line: borrowing like a bank client",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 12.3 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-12.png",
+   "eyebrow": "Lesson 12.3",
+   "vo": "Lesson twelve point three. The credit line: borrowing like a bank client.",
+   "cap": "Lesson 12.3. The credit line: borrowing like a bank client."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Use your assets as collateral for liquidity without selling, under a written credit policy.",
+   "vo": "Use your assets as collateral for liquidity without selling, under a written credit policy.",
+   "cap": "Use your assets as collateral for liquidity without selling, under a written credit policy."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Max LTV 25–30% on volatile collateral (liquidation is often near 80%+)",
+    "Health factor floor 2.5; act at 2.0",
+    "Prefer collateral whose yield covers the interest (strategy #25)",
+    "Consider fixed-rate borrowing when a rate spike would force a sale (strategy #22)",
+    "Repayment source named before borrowing (income, reserve, maturing PT)"
+   ],
+   "vo": "Wealthy clients rarely sell appreciating assets to raise cash; they borrow against them. DeFi money markets offer the same: deposit collateral, borrow stablecoins, repay when it suits you, with no credit check. The collateral is liquidated if you breach the threshold, and nobody calls first. A credit policy (write yours): Max L.T.V. 25–30% on volatile collateral (liquidation is often near 80%+) Health factor floor 2.5; act at 2.0 Prefer collateral whose yield covers the interest (strategy #25) Consider fixed-rate borrowing when a rate spike would force a sale (strategy #22) Repayment source named before borrowing (income, reserve, maturing P.T.)",
+   "cap": "Max LTV 25–30% on volatile collateral (liquidation is often near 80%+) Health factor floor 2.5; act at 2.0 Prefer collateral whose yield covers the interest (strategy #25) Consider fixed-rate borrowing when a rate spike would force a sale (strategy #22) Repayment source named before borrowing (income, reserve, maturing PT)"
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Tax treatment of borrowing varies by country"
+   ],
+   "vo": "Tax treatment of borrowing varies by country: check with a tax professional",
+   "cap": "Tax treatment of borrowing varies by country: check with a tax professional"
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example",
+   "items": [
+    "Yield covers interest 3.2×. LTV 20%. HF 4.0 at a 0.8 threshold.",
+    "ETH would have to fall ~75% before liquidation (HF falls in proportion to price).",
+    "Defence plan"
+   ],
+   "vo": "$200,000 of liquid-staked ETH earning 3.2% ($6,400 a year). Borrow $40,000 stablecoins at 5% ($2,000 a year). Yield covers interest 3.2 times . L.T.V. 20%. health factor 4.0 at a 0.8 threshold. ETH would have to fall about 75% before liquidation (health factor falls in proportion to price). Defence plan: at health factor 2.0, repay from reserve; at health factor 1.7, sell part of the collateral deliberately rather than let a liquidator do it at a penalty.",
+   "cap": "Yield covers interest 3.2×. LTV 20%. HF 4.0 at a 0.8 threshold. ETH would have to fall ~75% before liquidation (HF falls in proportion to price). Defence plan: at HF 2.0, repay from reserve; at HF 1.7, sell part of the collateral deliberately rather than let a liquidator do it at a penalty."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Credit policy written",
+    "Repayment source named",
+    "Alerts set at the action levels (Module 14.1)",
+    "Fixed vs variable decision made on purpose"
+   ],
+   "vo": "Your checklist. Credit policy written: max L.T.V., health factor floor, action levels Repayment source named Alerts set at the action levels (Module 14.1) Fixed versus variable decision made on purpose",
+   "cap": "Credit policy written: max LTV, HF floor, action levels Repayment source named Alerts set at the action levels (Module 14.1) Fixed vs variable decision made on purpose"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why borrow against assets instead of selling them?"
+   ],
+   "sub": "Answer: You keep the asset and its upside (and in some jurisdictions avoid a taxable sale), at the cost of interest and liquidation risk.",
+   "subAt": 0.62,
+   "vo": "Why borrow against assets instead of selling them? ... Pause and think. ... The answer: You keep the asset and its upside (and in some jurisdictions avoid a taxable sale), at the cost of interest and liquidation risk.",
+   "cap": "Why borrow against assets instead of selling them? Pause and think. The answer: You keep the asset and its upside (and in some jurisdictions avoid a taxable sale), at the cost of interest and liquidation risk."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "HF is 4.0. Roughly how far can collateral fall before liquidation?"
+   ],
+   "sub": "Answer: About 75%, since HF scales with collateral price (HF 1.0 at a quarter of the current price).",
+   "subAt": 0.62,
+   "vo": "health factor is 4.0. Roughly how far can collateral fall before liquidation? ... Pause and think. ... The answer: About 75%, since health factor scales with collateral price (health factor 1.0 at a quarter of the current price).",
+   "cap": "HF is 4.0. Roughly how far can collateral fall before liquidation? Pause and think. The answer: About 75%, since HF scales with collateral price (HF 1.0 at a quarter of the current price)."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What should happen at your action level?"
+   ],
+   "sub": "Answer: Repay or add collateral per the written plan. Sell deliberately before a liquidator does it at a penalty.",
+   "subAt": 0.62,
+   "vo": "What should happen at your action level? ... Pause and think. ... The answer: Repay or add collateral per the written plan. Sell deliberately before a liquidator does it at a penalty.",
+   "cap": "What should happen at your action level? Pause and think. The answer: Repay or add collateral per the written plan. Sell deliberately before a liquidator does it at a penalty."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

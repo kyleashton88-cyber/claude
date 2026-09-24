@@ -1,0 +1,103 @@
+{
+ "id": "lesson-08-7",
+ "title": "Lesson 8.7: Quantitative risk: volatility, VaR, drawdown, correlation and sizing",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 8.7 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-08.png",
+   "eyebrow": "Lesson 8.7",
+   "vo": "Lesson eight point seven. Quantitative risk: volatility, value at risk, drawdown, correlation and sizing.",
+   "cap": "Lesson 8.7. Quantitative risk: volatility, VaR, drawdown, correlation and sizing."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Put numbers on portfolio risk and size positions from them.",
+   "vo": "Put numbers on portfolio risk and size positions from them.",
+   "cap": "Put numbers on portfolio risk and size positions from them."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Volatility (σ)",
+    "Value at risk (VaR)",
+    "Max drawdown",
+    "Correlation",
+    "Sizing"
+   ],
+   "vo": "Volatility (sigma): annualised standard deviation of returns. Daily sigma about annual sigma divided by the square root of 365 (crypto trades every day). Value at risk (value at risk): a loss level you'd expect to exceed only rarely (for example 1 day in 20 at 95%). Parametric 1-day value at risk about 1.65 times daily sigma times position. It assumes normal returns; crypto has fat tails, so real losses exceed value at risk more often. Use it as a floor, plus stress tests (11.4). Max drawdown: the largest peak-to-trough fall. Ask: could I live through it, and would my policies survive it? Correlation: in crashes, correlations between crypto assets rise towards 1. Diversifying within crypto helps less when you need it most. Sizing: volatility targeting (size so each position contributes similar risk); the Kelly criterion gives a theoretical maximum bet size from edge and odds, but estimates are noisy, so professionals use a small fraction of it or skip it.",
+   "cap": "Volatility (σ): annualised standard deviation of returns. Daily σ ≈ annual σ ÷ √365 (crypto trades every day). Value at risk (VaR): a loss level you'd expect to exceed only rarely (e.g. 1 day in 20 at 95%). Parametric 1-day VaR ≈ 1.65 × daily σ × position. It assumes normal returns; crypto has fat tails, so real losses exceed VaR more often. Use it as a floor, plus stress tests (11.4). Max drawdown: the largest peak-to-trough fall. Ask: could I live through it, and would my policies survive it? Correlation: in crashes, correlations between crypto assets rise towards 1. Diversifying within crypto helps less when you need it most. Sizing: volatility targeting (size so each position contributes similar risk); the Kelly criterion gives a theoretical maximum bet size from edge and odds, but estimates are noisy, so professionals use a small fraction of it or skip it."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "$100,000 of ETH at 70% annual volatility: the calculator → daily σ ≈ 3.66%, 1-day 95% VaR ≈ $6,046. Real single-day falls have been far larger (in March 2020, ETH fell by roughly 40% in a day). So: VaR for day-to-day sizing, stress tests for survival.",
+   "vo": "$100,000 of ETH at 70% annual volatility: the calculator to daily sigma about 3.66%, 1-day 95% value at risk about $6,046. Real single-day falls have been far larger (in March 2020, ETH fell by roughly 40% in a day). So: value at risk for day-to-day sizing, stress tests for survival.",
+   "cap": "$100,000 of ETH at 70% annual volatility: the calculator → daily σ ≈ 3.66%, 1-day 95% VaR ≈ $6,046. Real single-day falls have been far larger (in March 2020, ETH fell by roughly 40% in a day). So: VaR for day-to-day sizing, stress tests for survival."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Volatility and VaR computed for my largest positions",
+    "Portfolio survives the worst historical drawdown of what it holds",
+    "Correlation assumed to rise in stress",
+    "Sizing rule written (e.g. volatility targeting)"
+   ],
+   "vo": "Your checklist. Volatility and value at risk computed for my largest positions Portfolio survives the worst historical drawdown of what it holds Correlation assumed to rise in stress Sizing rule written (for example volatility targeting)",
+   "cap": "Volatility and VaR computed for my largest positions Portfolio survives the worst historical drawdown of what it holds Correlation assumed to rise in stress Sizing rule written (e.g. volatility targeting)"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Annual volatility 50%. Daily σ?"
+   ],
+   "sub": "Answer: About 2.6% (50 ÷ √365).",
+   "subAt": 0.62,
+   "vo": "Annual volatility 50%. Daily sigma? ... Pause and think. ... The answer: About 2.6% (50 divided by the square root of 365).",
+   "cap": "Annual volatility 50%. Daily σ? Pause and think. The answer: About 2.6% (50 ÷ √365)."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why is VaR a floor, not a ceiling?"
+   ],
+   "sub": "Answer: It assumes normal returns; crypto's fat tails make big losses more common.",
+   "subAt": 0.62,
+   "vo": "Why is value at risk a floor, not a ceiling? ... Pause and think. ... The answer: It assumes normal returns; crypto's fat tails make big losses more common.",
+   "cap": "Why is VaR a floor, not a ceiling? Pause and think. The answer: It assumes normal returns; crypto's fat tails make big losses more common."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What happens to correlations in a crash?"
+   ],
+   "sub": "Answer: They tend to rise towards 1.",
+   "subAt": 0.62,
+   "vo": "What happens to correlations in a crash? ... Pause and think. ... The answer: They tend to rise towards 1.",
+   "cap": "What happens to correlations in a crash? Pause and think. The answer: They tend to rise towards 1."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

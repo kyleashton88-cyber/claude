@@ -1,0 +1,108 @@
+{
+ "id": "lesson-13-2",
+ "title": "Lesson 13.2: Risk-adjusted yield: subtracting expected losses",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 13.2 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-13.png",
+   "eyebrow": "Lesson 13.2",
+   "vo": "Lesson thirteen point two. Risk-adjusted yield: subtracting expected losses.",
+   "cap": "Lesson 13.2. Risk-adjusted yield: subtracting expected losses."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Convert every headline yield into an expected yield after the losses it statistically carries.",
+   "vo": "Convert every headline yield into an expected yield after the losses it statistically carries.",
+   "cap": "Convert every headline yield into an expected yield after the losses it statistically carries."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "risk-adjusted yield = headline − (annual loss probability × loss given default) − costs You don't know the true loss probability, so write down an assumption and be conservative. Newer protocols, more dependencies and higher leverage deserve higher numbers. Th",
+   "vo": "risk-adjusted yield = headline minus (annual loss probability times loss given default) minus costs You don't know the true loss probability, so write down an assumption and be conservative. Newer protocols, more dependencies and higher leverage deserve higher numbers. The point isn't precision; it's making you compare positions on the same footing.",
+   "cap": "risk-adjusted yield = headline − (annual loss probability × loss given default) − costs You don't know the true loss probability, so write down an assumption and be conservative. Newer protocols, more dependencies and higher leverage deserve higher numbers. The point isn't precision; it's making you compare positions on the same footing."
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example",
+   "items": [
+    "New protocol vault",
+    "Blue-chip lending"
+   ],
+   "compact": true,
+   "vo": "New protocol vault, 9.0%, 3% a year, 100%, 6.0%. Blue-chip lending, 4.5%, 0.5% a year, 100%, 4.0%.",
+   "cap": "New protocol vault, 9.0%, 3%/yr, 100%, 6.0% Blue-chip lending, 4.5%, 0.5%/yr, 100%, 4.0%"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "the calculator The 9% vault still wins on expectation, but by 2 points, not 4.5. Its bad outcome is also far worse, so size it smaller (Lesson 13.3).",
+   "vo": "the calculator The 9% vault still wins on expectation, but by 2 points, not 4.5. Its bad outcome is also far worse, so size it smaller (Lesson 13.3).",
+   "cap": "the calculator The 9% vault still wins on expectation, but by 2 points, not 4.5. Its bad outcome is also far worse, so size it smaller (Lesson 13.3)."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Loss probability and LGD written for every position",
+    "Decisions made on risk-adjusted, not headline"
+   ],
+   "vo": "Your checklist. Loss probability and LGD written for every position Decisions made on risk-adjusted, not headline",
+   "cap": "Loss probability and LGD written for every position Decisions made on risk-adjusted, not headline"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "12% headline, 5%/yr loss probability, 60% LGD. Risk-adjusted?"
+   ],
+   "sub": "Answer: 12 − 3 = 9%.",
+   "subAt": 0.62,
+   "vo": "12% headline, 5% a year loss probability, 60% LGD. Risk-adjusted? ... Pause and think. ... The answer: 12 minus 3 = 9%.",
+   "cap": "12% headline, 5%/yr loss probability, 60% LGD. Risk-adjusted? Pause and think. The answer: 12 − 3 = 9%."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why assume conservatively?"
+   ],
+   "sub": "Answer: Losses cluster in stress, when many positions fail together; optimistic assumptions overstate income.",
+   "subAt": 0.62,
+   "vo": "Why assume conservatively? ... Pause and think. ... The answer: Losses cluster in stress, when many positions fail together; optimistic assumptions overstate income.",
+   "cap": "Why assume conservatively? Pause and think. The answer: Losses cluster in stress, when many positions fail together; optimistic assumptions overstate income."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Two positions, same risk-adjusted yield. Which gets more capital?"
+   ],
+   "sub": "Answer: The one with the smaller and better-understood worst case.",
+   "subAt": 0.62,
+   "vo": "Two positions, same risk-adjusted yield. Which gets more capital? ... Pause and think. ... The answer: The one with the smaller and better-understood worst case.",
+   "cap": "Two positions, same risk-adjusted yield. Which gets more capital? Pause and think. The answer: The one with the smaller and better-understood worst case."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

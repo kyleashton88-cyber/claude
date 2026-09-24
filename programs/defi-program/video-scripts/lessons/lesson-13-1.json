@@ -1,0 +1,114 @@
+{
+ "id": "lesson-13-1",
+ "title": "Lesson 13.1: Income sources ranked by durability",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 13.1 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-13.png",
+   "eyebrow": "Lesson 13.1",
+   "vo": "Lesson thirteen point one. Income sources ranked by durability.",
+   "cap": "Lesson 13.1. Income sources ranked by durability."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Rank income sources by how long and how reliably they're likely to pay, not by their headline rate.",
+   "vo": "Rank income sources by how long and how reliably they're likely to pay, not by their headline rate.",
+   "cap": "Rank income sources by how long and how reliably they're likely to pay, not by their headline rate."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Blue-chip stablecoin lending",
+    "Staking / LSTs",
+    "Fixed-rate PTs to maturity",
+    "Curated lending vaults",
+    "LP fees (major pairs)",
+    "Funding / basis carry"
+   ],
+   "compact": true,
+   "vo": "Blue-chip stablecoin lending, Borrower demand, High, Medium: moves with demand. Staking / liquid staking token, Network security rewards, High, Low–medium. Fixed-rate PTs to maturity, Locked at purchase, Fixed for the term, None until maturity. Curated lending vaults, Borrower demand in isolated markets, Medium, Medium. L.P. fees (major pairs), Trading volume, Medium, High. Funding / basis carry, Market positioning, Low–medium, High: can turn negative. Options premium, Volatility, Medium, High. Incentives / points, Protocol budgets, Low, Very high.",
+   "cap": "Blue-chip stablecoin lending, Borrower demand, High, Medium: moves with demand Staking / LSTs, Network security rewards, High, Low–medium Fixed-rate PTs to maturity, Locked at purchase, Fixed for the term, None until maturity Curated lending vaults, Borrower demand in isolated markets, Medium, Medium LP fees (major pairs), Trading volume, Medium, High Funding / basis carry, Market positioning, Low–medium, High: can turn negative"
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Options premium",
+    "Incentives / points"
+   ],
+   "compact": true,
+   "vo": "Continuing.",
+   "cap": "Options premium, Volatility, Medium, High Incentives / points, Protocol budgets, Low, Very high"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "A durable income engine is built mostly from the top of this table. The bottom rows are boosters you size small and expect to switch off.",
+   "vo": "A durable income engine is built mostly from the top of this table. The bottom rows are boosters you size small and expect to switch off.",
+   "cap": "A durable income engine is built mostly from the top of this table. The bottom rows are boosters you size small and expect to switch off."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Every income position tagged with its source and durability",
+    "Core income from high-durability sources"
+   ],
+   "vo": "Your checklist. Every income position tagged with its source and durability Core income from high-durability sources",
+   "cap": "Every income position tagged with its source and durability Core income from high-durability sources"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why is funding carry low durability?"
+   ],
+   "sub": "Answer: It depends on market positioning and can turn negative for long periods.",
+   "subAt": 0.62,
+   "vo": "Why is funding carry low durability? ... Pause and think. ... The answer: It depends on market positioning and can turn negative for long periods.",
+   "cap": "Why is funding carry low durability? Pause and think. The answer: It depends on market positioning and can turn negative for long periods."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Which source gives a known rate for a set term?"
+   ],
+   "sub": "Answer: Fixed-rate PTs held to maturity.",
+   "subAt": 0.62,
+   "vo": "Which source gives a known rate for a set term? ... Pause and think. ... The answer: Fixed-rate PTs held to maturity.",
+   "cap": "Which source gives a known rate for a set term? Pause and think. The answer: Fixed-rate PTs held to maturity."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "How should incentive income be treated?"
+   ],
+   "sub": "Answer: As a temporary booster, sold on a schedule and not relied on.",
+   "subAt": 0.62,
+   "vo": "How should incentive income be treated? ... Pause and think. ... The answer: As a temporary booster, sold on a schedule and not relied on.",
+   "cap": "How should incentive income be treated? Pause and think. The answer: As a temporary booster, sold on a schedule and not relied on."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

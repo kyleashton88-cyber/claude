@@ -1,0 +1,98 @@
+{
+ "id": "lesson-11-2",
+ "title": "Lesson 11.2: Depeg, protocol and smart-contract cover",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 11.2 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-11.png",
+   "eyebrow": "Lesson 11.2",
+   "vo": "Lesson eleven point two. Depeg, protocol and smart-contract cover.",
+   "cap": "Lesson 11.2. Depeg, protocol and smart-contract cover."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Evaluate on-chain cover products as insurance: what they pay, when, and what they don't.",
+   "vo": "Evaluate on-chain cover products as insurance: what they pay, when, and what they don't.",
+   "cap": "Evaluate on-chain cover products as insurance: what they pay, when, and what they don't."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "Cover protocols sell protection against defined events (a protocol hack, a depeg beyond a threshold). Read: what's covered (exact wording), exclusions, claim process (who decides, how long), payout asset, and the cover provider's own solvency and contract risk",
+   "vo": "Cover protocols sell protection against defined events (a protocol hack, a depeg beyond a threshold). Read: what's covered (exact wording), exclusions, claim process (who decides, how long), payout asset, and the cover provider's own solvency and contract risk.",
+   "cap": "Cover protocols sell protection against defined events (a protocol hack, a depeg beyond a threshold). Read: what's covered (exact wording), exclusions, claim process (who decides, how long), payout asset, and the cover provider's own solvency and contract risk."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Cover $50,000 in a lending protocol at 2.5%/yr = $1,250/yr. If your risk-adjusted yield there is 4.5%, cover takes more than half of it. Worth it for a large, concentrated position; often not for a small, diversified one.",
+   "vo": "Cover $50,000 in a lending protocol at 2.5% a year = $1,250 a year. If your risk-adjusted yield there is 4.5%, cover takes more than half of it. Worth it for a large, concentrated position; often not for a small, diversified one.",
+   "cap": "Cover $50,000 in a lending protocol at 2.5%/yr = $1,250/yr. If your risk-adjusted yield there is 4.5%, cover takes more than half of it. Worth it for a large, concentrated position; often not for a small, diversified one."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Cover wording and exclusions read",
+    "Claim process and payout asset understood",
+    "Cost compared with the yield it protects"
+   ],
+   "vo": "Your checklist. Cover wording and exclusions read Claim process and payout asset understood Cost compared with the yield it protects",
+   "cap": "Cover wording and exclusions read Claim process and payout asset understood Cost compared with the yield it protects"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Name two things to check in cover terms."
+   ],
+   "sub": "Answer: Any two: covered events, exclusions, claim process, payout asset, provider solvency.",
+   "subAt": 0.62,
+   "vo": "Name two things to check in cover terms. ... Pause and think. ... The answer: Any two: covered events, exclusions, claim process, payout asset, provider solvency.",
+   "cap": "Name two things to check in cover terms. Pause and think. The answer: Any two: covered events, exclusions, claim process, payout asset, provider solvency."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Cover costs 3%/yr on a 5% yield. Net?"
+   ],
+   "sub": "Answer: About 2%.",
+   "subAt": 0.62,
+   "vo": "Cover costs 3% a year on a 5% yield. Net? ... Pause and think. ... The answer: About 2%.",
+   "cap": "Cover costs 3%/yr on a 5% yield. Net? Pause and think. The answer: About 2%."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Does cover remove all risk?"
+   ],
+   "sub": "Answer: No. The cover provider has its own claim, solvency and contract risks.",
+   "subAt": 0.62,
+   "vo": "Does cover remove all risk? ... Pause and think. ... The answer: No. The cover provider has its own claim, solvency and contract risks.",
+   "cap": "Does cover remove all risk? Pause and think. The answer: No. The cover provider has its own claim, solvency and contract risks."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

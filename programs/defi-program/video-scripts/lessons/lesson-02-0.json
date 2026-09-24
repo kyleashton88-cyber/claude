@@ -1,0 +1,90 @@
+{
+ "id": "lesson-02-0",
+ "title": "Lesson 2.0: Mastery Starter",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 2.0 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-02.png",
+   "eyebrow": "Lesson 2.0",
+   "vo": "Lesson two point zero. Mastery Starter.",
+   "cap": "Lesson 2.0. Mastery Starter."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "The 60-second version"
+   ],
+   "sub": "A swap on a DEX trades against a pool of tokens priced by a formula. Providing liquidity to that pool earns fees but changes what you hold. This module teaches you to trade and provide liquidity knowing the real cost.",
+   "vo": "A swap on a decks trades against a pool of tokens priced by a formula. Providing liquidity to that pool earns fees but changes what you hold. This module teaches you to trade and provide liquidity knowing the real cost.",
+   "cap": "A swap on a DEX trades against a pool of tokens priced by a formula. Providing liquidity to that pool earns fees but changes what you hold. This module teaches you to trade and provide liquidity knowing the real cost."
+  },
+  {
+   "type": "bullets",
+   "title": "Words you'll need",
+   "items": [
+    "DEX",
+    "Liquidity pool",
+    "Price impact",
+    "Slippage",
+    "Impermanent loss"
+   ],
+   "compact": true,
+   "vo": "decks, a decentralised exchange you use from your wallet. Liquidity pool, a pot of two tokens traders swap against. Price impact, how much your trade moves the price. Slippage, the worst price you'll accept. Impermanent loss, how far an L.P. lags simply holding.",
+   "cap": "DEX, a decentralised exchange you use from your wallet Liquidity pool, a pot of two tokens traders swap against Price impact, how much your trade moves the price Slippage, the worst price you'll accept Impermanent loss, how far an LP lags simply holding"
+  },
+  {
+   "type": "bullets",
+   "title": "Before you start",
+   "items": [
+    "Modules 0–1",
+    "A little ETH for gas and some USDC on a low-fee network"
+   ],
+   "vo": "Modules 0–1 A little ETH for gas and some U.S.D.C. on a low-fee network",
+   "cap": "Modules 0–1 A little ETH for gas and some USDC on a low-fee network"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Your first safe step"
+   ],
+   "sub": "Quote a $20 swap on one DEX and on an aggregator; compare what you'd actually receive after gas. Don't execute yet.",
+   "vo": "Quote a $20 swap on one decks and on an aggregator; compare what you'd actually receive after gas. Don't execute yet.",
+   "cap": "Quote a $20 swap on one DEX and on an aggregator; compare what you'd actually receive after gas. Don't execute yet."
+  },
+  {
+   "type": "bullets",
+   "title": "The mastery ladder",
+   "items": [
+    "Beginner",
+    "Practitioner",
+    "Master"
+   ],
+   "compact": true,
+   "vo": "Beginner, Makes small swaps with deliberate slippage and protected routing. Practitioner, Calculates fee A.P.R. and impermanent loss, and tracks L.P. versus holding. Master, Uses limit/T-wap/intent orders and runs L.P.s with written rules.",
+   "cap": "Beginner, Makes small swaps with deliberate slippage and protected routing Practitioner, Calculates fee APR and IL, and tracks LP vs holding Master, Uses limit/TWAP/intent orders and runs LPs with written rules"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "You've mastered it when…"
+   ],
+   "sub": "…you can predict a swap's cost and an LP position's result against holding, before you enter. ---",
+   "vo": "…you can predict a swap's cost and an L.P. position's result against holding, before you enter. ---",
+   "cap": "…you can predict a swap's cost and an LP position's result against holding, before you enter. ---"
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

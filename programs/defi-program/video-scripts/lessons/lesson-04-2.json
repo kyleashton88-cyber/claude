@@ -1,0 +1,98 @@
+{
+ "id": "lesson-04-2",
+ "title": "Lesson 4.2: Native staking",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 4.2 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-04.png",
+   "eyebrow": "Lesson 4.2",
+   "vo": "Lesson four point two. Native staking.",
+   "cap": "Lesson 4.2. Native staking."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Understand what staking pays for, and its lock-up and validator risks.",
+   "vo": "Understand what staking pays for, and its lock-up and validator risks.",
+   "cap": "Understand what staking pays for, and its lock-up and validator risks."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "Proof-of-stake networks pay stakers to secure the chain. You either run a validator or delegate to one. Rewards come from issuance and fees. Risks: slashing (penalties for validator misbehaviour on some networks), unbonding periods (waiting time to withdraw) a",
+   "vo": "Proof-of-stake networks pay stakers to secure the chain. You either run a validator or delegate to one. Rewards come from issuance and fees. Risks: slashing (penalties for validator misbehaviour on some networks), unbonding periods (waiting time to withdraw) and validator downtime.",
+   "cap": "Proof-of-stake networks pay stakers to secure the chain. You either run a validator or delegate to one. Rewards come from issuance and fees. Risks: slashing (penalties for validator misbehaviour on some networks), unbonding periods (waiting time to withdraw) and validator downtime."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Staking yields a few percent a year in the staked asset (e.g. ~3%, illustrative). Your dollar return is still dominated by the asset's price: +3% staking on an asset that falls 30% is still a large loss. Stake what you'd hold anyway.",
+   "vo": "Staking yields a few percent a year in the staked asset (for example about 3%, illustrative). Your dollar return is still dominated by the asset's price: +3% staking on an asset that falls 30% is still a large loss. Stake what you'd hold anyway.",
+   "cap": "Staking yields a few percent a year in the staked asset (e.g. ~3%, illustrative). Your dollar return is still dominated by the asset's price: +3% staking on an asset that falls 30% is still a large loss. Stake what you'd hold anyway."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Validator/provider chosen on uptime, fee, concentration and record",
+    "Unbonding period known",
+    "Only \"hold-anyway\" capital staked"
+   ],
+   "vo": "Your checklist. Validator/provider chosen on uptime, fee, concentration and record Unbonding period known Only \"hold-anyway\" capital staked",
+   "cap": "Validator/provider chosen on uptime, fee, concentration and record Unbonding period known Only \"hold-anyway\" capital staked"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What do staking rewards pay for?"
+   ],
+   "sub": "Answer: Securing the network.",
+   "subAt": 0.62,
+   "vo": "What do staking rewards pay for? ... Pause and think. ... The answer: Securing the network.",
+   "cap": "What do staking rewards pay for? Pause and think. The answer: Securing the network."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What is unbonding?"
+   ],
+   "sub": "Answer: A waiting period before unstaked assets become transferable.",
+   "subAt": 0.62,
+   "vo": "What is unbonding? ... Pause and think. ... The answer: A waiting period before unstaked assets become transferable.",
+   "cap": "What is unbonding? Pause and think. The answer: A waiting period before unstaked assets become transferable."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Does staking protect against price falls?"
+   ],
+   "sub": "Answer: No. It adds a small yield; price moves dominate.",
+   "subAt": 0.62,
+   "vo": "Does staking protect against price falls? ... Pause and think. ... The answer: No. It adds a small yield; price moves dominate.",
+   "cap": "Does staking protect against price falls? Pause and think. The answer: No. It adds a small yield; price moves dominate."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

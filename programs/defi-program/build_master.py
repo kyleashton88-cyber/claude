@@ -87,7 +87,7 @@ def main():
         "4. Complete mastery map (every topic, where it's taught, at what level)\n"
         "5. Whop store listing (logo, images, copy)\n"
         "6. Operations kit (capstones, application, call script, emails, live tier, terms)\n"
-        "7. Worksheets & templates\n8. Funnel changes\n9. Video scripts (VSLs, welcome, module intros)\n"
+        "7. Worksheets & templates\n8. Funnel changes\n9. Video scripts (VSLs, welcome, module intros) & course video plan\n"
         "10. Course content (92 lessons + 15 Mastery Starters)\n11. Skills archive\n12. Build prompt (hand this to Grok or Claude Code)",
         "# 1. Build status\n\n" + read("README.md").split("\n", 1)[1],
         numbered("01-offer-and-curriculum.md", 2, "Offer, decisions & curriculum"),
@@ -98,6 +98,7 @@ def main():
         numbered("08-worksheets.md", 7, "Worksheets & templates"),
         numbered("04-funnel-changes.md", 8, "Funnel changes (draft, not applied)"),
         *([numbered("video/SCRIPTS.md", 9, "Video scripts")] if (HERE / "video/SCRIPTS.md").exists() else []),
+        *([numbered("10-video-production-plan.md", "9b", "Course video production plan")] if (HERE / "10-video-production-plan.md").exists() else []),
         "# 10. Course content\n\nFinished lessons in curriculum order. "
         "Lesson 8.3 (strategy mastery) appears before Module 9.",
         *lesson_files(),

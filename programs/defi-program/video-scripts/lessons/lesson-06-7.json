@@ -1,0 +1,101 @@
+{
+ "id": "lesson-06-7",
+ "title": "Lesson 6.7: Valuing DeFi protocols: fees, revenue, earnings and multiples",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 6.7 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-06.png",
+   "eyebrow": "Lesson 6.7",
+   "vo": "Lesson six point seven. Valuing DeFi protocols: fees, revenue, earnings and multiples.",
+   "cap": "Lesson 6.7. Valuing DeFi protocols: fees, revenue, earnings and multiples."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Compare protocols on their economics, not their narratives.",
+   "vo": "Compare protocols on their economics, not their narratives.",
+   "cap": "Compare protocols on their economics, not their narratives."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Fees",
+    "Multiples",
+    "Quality checks",
+    "Multiples compare protocols; they don't set a \"right\" price."
+   ],
+   "vo": "Fees: everything users pay. Revenue: the part that goes to the protocol or token holders (the rest goes to L.P.s/lenders). Earnings: revenue minus token incentives paid out. Multiples: price-to-fees (P/F), price-to-sales (P/S, on revenue), price-to-earnings (P/E). Use F.D.V. as well as market cap, since unlocks will arrive (6.2). Quality checks: is revenue growing without rising incentives? Is it concentrated in one pool or chain? Does it survive a bear market? Does the token actually receive it (value capture)? Multiples compare protocols; they don't set a \"right\" price.",
+   "cap": "Fees: everything users pay. Revenue: the part that goes to the protocol or token holders (the rest goes to LPs/lenders). Earnings: revenue minus token incentives paid out. Multiples: price-to-fees (P/F), price-to-sales (P/S, on revenue), price-to-earnings (P/E). Use FDV as well as market cap, since unlocks will arrive (6.2). Quality checks: is revenue growing without rising incentives? Is it concentrated in one pool or chain? Does it survive a bear market? Does the token actually receive it (value capture)? Multiples compare protocols; they don't set a \"right\" price."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "FDV $2B, annual revenue $100M, token incentives $60M → earnings $40M. P/S (FDV) = 20×; P/E (FDV) = 50×. A rival with the same revenue but no incentives has earnings of $100M: at the same FDV its P/E is 20×. Same revenue, very different economics.",
+   "vo": "F.D.V. $2B, annual revenue $100M, token incentives $60M to earnings $40M. P/S (F.D.V.) = 20 times ; P/E (F.D.V.) = 50 times . A rival with the same revenue but no incentives has earnings of $100M: at the same F.D.V. its P/E is 20 times . Same revenue, very different economics.",
+   "cap": "FDV $2B, annual revenue $100M, token incentives $60M → earnings $40M. P/S (FDV) = 20×; P/E (FDV) = 50×. A rival with the same revenue but no incentives has earnings of $100M: at the same FDV its P/E is 20×. Same revenue, very different economics."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Fees, revenue and earnings separated, with sources",
+    "Multiples on FDV and market cap",
+    "Revenue quality and value capture assessed"
+   ],
+   "vo": "Your checklist. Fees, revenue and earnings separated, with sources Multiples on F.D.V. and market cap Revenue quality and value capture assessed",
+   "cap": "Fees, revenue and earnings separated, with sources Multiples on FDV and market cap Revenue quality and value capture assessed"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Revenue vs earnings?"
+   ],
+   "sub": "Answer: Earnings are revenue minus token incentives (and other costs).",
+   "subAt": 0.62,
+   "vo": "Revenue versus earnings? ... Pause and think. ... The answer: Earnings are revenue minus token incentives (and other costs).",
+   "cap": "Revenue vs earnings? Pause and think. The answer: Earnings are revenue minus token incentives (and other costs)."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why use FDV in multiples?"
+   ],
+   "sub": "Answer: Future unlocks will add supply; FDV shows the fully diluted price.",
+   "subAt": 0.62,
+   "vo": "Why use F.D.V. in multiples? ... Pause and think. ... The answer: Future unlocks will add supply; F.D.V. shows the fully diluted price.",
+   "cap": "Why use FDV in multiples? Pause and think. The answer: Future unlocks will add supply; FDV shows the fully diluted price."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "FDV $600M, earnings $20M. P/E?"
+   ],
+   "sub": "Answer: 30×.",
+   "subAt": 0.62,
+   "vo": "F.D.V. $600M, earnings $20M. P/E? ... Pause and think. ... The answer: 30 times .",
+   "cap": "FDV $600M, earnings $20M. P/E? Pause and think. The answer: 30×."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

@@ -1,0 +1,125 @@
+{
+ "id": "lesson-00-2",
+ "title": "Lesson 0.2: Opening and securing an exchange account",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 0.2 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-00.png",
+   "eyebrow": "Lesson 0.2",
+   "vo": "Lesson zero point two. Opening and securing an exchange account.",
+   "cap": "Lesson 0.2. Opening and securing an exchange account."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Open an account on a reputable exchange and lock it down before putting money in.",
+   "vo": "Open an account on a reputable exchange and lock it down before putting money in.",
+   "cap": "Open an account on a reputable exchange and lock it down before putting money in."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Licensed or registered where you live (check your country's financial regulator)",
+    "Large and long-established, with a good security record",
+    "Supports your bank's deposit method and the coins/networks you'll use (ETH, USDC, and…",
+    "Unique, long password stored in a password manager (e.g. Bitwarden, 1Password)",
+    "Secure your email first. Whoever controls your email can often reset your exchange…"
+   ],
+   "vo": "An exchange is a company that lets you swap your normal money (dollars, pounds, euros) for crypto. It's your on-ramp. Choose one that is: Well-known examples include Coinbase, Kraken, Binance, Bybit and OKX, but availability differs by country. Pick one that's legally available to you. You'll be asked for K.Y.C. (\"know your customer\"): ID and sometimes proof of address. This is normal and legally required for regulated exchanges. Secure it before depositing: Licensed or registered where you live (check your country's financial regulator) Large and long-established, with a good security record Supports your bank's deposit method and the coins/networks you'll use (ETH, U.S.D.C., and low-cost networks such as Arbitrum or Base) Unique, long password stored in a password manager (for example Bitwarden, 1Password) Secure your email first. Whoever controls your email can often reset your exchange account. Give it its own strong password and two-factor.",
+   "cap": "Licensed or registered where you live (check your country's financial regulator) Large and long-established, with a good security record Supports your bank's deposit method and the coins/networks you'll use (ETH, USDC, and low-cost networks such as Arbitrum or Base) Unique, long password stored in a password manager (e.g. Bitwarden, 1Password) Secure your email first. Whoever controls your email can often reset your exchange account. Give it its own strong password and 2FA."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Two-factor authentication (2FA) with an authenticator app (e.g. Google Authenticator,…",
+    "Save the 2FA backup codes offline (on paper, stored safely)",
+    "Turn on the anti-phishing code if offered (a word that appears in every real email from…",
+    "Turn on the withdrawal address allowlist if offered (withdrawals can only go to…"
+   ],
+   "vo": "Two-factor authentication (two-factor) with an authenticator app (for example Google Authenticator, Authy) or a hardware security key. Avoid SMS codes: phone numbers can be hijacked (\"SIM swap\"). Save the two-factor backup codes offline (on paper, stored safely) Turn on the anti-phishing code if offered (a word that appears in every real email from the exchange) Turn on the withdrawal address allowlist if offered (withdrawals can only go to addresses you pre-approved)",
+   "cap": "Two-factor authentication (2FA) with an authenticator app (e.g. Google Authenticator, Authy) or a hardware security key. Avoid SMS codes: phone numbers can be hijacked (\"SIM swap\"). Save the 2FA backup codes offline (on paper, stored safely) Turn on the anti-phishing code if offered (a word that appears in every real email from the exchange) Turn on the withdrawal address allowlist if offered (withdrawals can only go to addresses you pre-approved)"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Maria signs up, completes KYC in 10 minutes, then spends another 10 on security: password manager, authenticator-app 2FA on both her email and the exchange, backup codes on paper, and an anti-phishing code \"blue-kettle\". Later, an email arrives about a \"suspic",
+   "vo": "Maria signs up, completes K.Y.C. in 10 minutes, then spends another 10 on security: password manager, authenticator-app two-factor on both her email and the exchange, backup codes on paper, and an anti-phishing code \"blue-kettle\". Later, an email arrives about a \"suspicious login\" with no \"blue-kettle\" in it. She knows it's fake and deletes it.",
+   "cap": "Maria signs up, completes KYC in 10 minutes, then spends another 10 on security: password manager, authenticator-app 2FA on both her email and the exchange, backup codes on paper, and an anti-phishing code \"blue-kettle\". Later, an email arrives about a \"suspicious login\" with no \"blue-kettle\" in it. She knows it's fake and deletes it."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Exchange chosen",
+    "KYC complete",
+    "Email secured with its own strong password + 2FA",
+    "Exchange 2FA via authenticator app or security key (not SMS)",
+    "Backup codes stored offline"
+   ],
+   "vo": "Your checklist. Exchange chosen: legally available and reputable where I live K.Y.C. complete Email secured with its own strong password + two-factor Exchange two-factor via authenticator app or security key (not SMS) Backup codes stored offline",
+   "cap": "Exchange chosen: legally available and reputable where I live KYC complete Email secured with its own strong password + 2FA Exchange 2FA via authenticator app or security key (not SMS) Backup codes stored offline"
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Anti-phishing code and withdrawal allowlist switched on (if offered)"
+   ],
+   "vo": "Anti-phishing code and withdrawal allowlist switched on (if offered)",
+   "cap": "Anti-phishing code and withdrawal allowlist switched on (if offered)"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why secure your email before the exchange?"
+   ],
+   "sub": "Answer: Email is often how accounts are reset. Whoever controls it can take over the exchange account.",
+   "subAt": 0.62,
+   "vo": "Why secure your email before the exchange? ... Pause and think. ... The answer: Email is often how accounts are reset. Whoever controls it can take over the exchange account.",
+   "cap": "Why secure your email before the exchange? Pause and think. The answer: Email is often how accounts are reset. Whoever controls it can take over the exchange account."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why avoid SMS 2FA?"
+   ],
+   "sub": "Answer: Attackers can hijack phone numbers (SIM swap) and receive your codes.",
+   "subAt": 0.62,
+   "vo": "Why avoid SMS two-factor? ... Pause and think. ... The answer: Attackers can hijack phone numbers (SIM swap) and receive your codes.",
+   "cap": "Why avoid SMS 2FA? Pause and think. The answer: Attackers can hijack phone numbers (SIM swap) and receive your codes."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does a withdrawal allowlist do?"
+   ],
+   "sub": "Answer: Only lets withdrawals go to addresses you approved in advance.",
+   "subAt": 0.62,
+   "vo": "What does a withdrawal allowlist do? ... Pause and think. ... The answer: Only lets withdrawals go to addresses you approved in advance.",
+   "cap": "What does a withdrawal allowlist do? Pause and think. The answer: Only lets withdrawals go to addresses you approved in advance."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

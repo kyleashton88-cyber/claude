@@ -1,0 +1,116 @@
+{
+ "id": "lesson-02-4",
+ "title": "Lesson 2.4: Impermanent loss & true LP P&L",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 2.4 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-02.png",
+   "eyebrow": "Lesson 2.4",
+   "vo": "Lesson two point four. Impermanent loss and true L.P. P and L.",
+   "cap": "Lesson 2.4. Impermanent loss & true LP P&L."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Calculate an LP position's full P&L and judge it against simply holding.",
+   "vo": "Calculate an L.P. position's full P and L and judge it against simply holding.",
+   "cap": "Calculate an LP position's full P&L and judge it against simply holding."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "Impermanent loss (IL) is how much the LP position lags simply holding the same starting tokens when their relative price changes: IL = 2√r ÷ (1 + r) − 1 (r = new price ÷ entry price). It's \"impermanent\" only if price returns. Withdraw after the move and it's p",
+   "vo": "Impermanent loss (impermanent loss) is how much the L.P. position lags simply holding the same starting tokens when their relative price changes: impermanent loss = 2the square root of r divided by (1 + r) minus 1 (r = new price divided by entry price). It's \"impermanent\" only if price returns. Withdraw after the move and it's permanent. Full L.P. P and L = L.P. value + fees + incentives minus gas, compared to hold value.",
+   "cap": "Impermanent loss (IL) is how much the LP position lags simply holding the same starting tokens when their relative price changes: IL = 2√r ÷ (1 + r) − 1 (r = new price ÷ entry price). It's \"impermanent\" only if price returns. Withdraw after the move and it's permanent. Full LP P&L = LP value + fees + incentives − gas, compared to hold value."
+  },
+  {
+   "type": "image",
+   "src": "assets/charts/impermanent-loss.png",
+   "eyebrow": "Impermanent loss vs holding",
+   "vo": "Here's the picture: Impermanent loss versus holding.",
+   "cap": "Impermanent loss vs holding."
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example",
+   "items": [
+    "Starting $6,000",
+    "Holding"
+   ],
+   "compact": true,
+   "vo": "Starting $6,000, +$1,058 (mostly from ETH going up, not from LPing). Holding, +$58, the actual value added by LPing.",
+   "cap": "Starting $6,000, +$1,058 (mostly from ETH going up, not from LPing) Holding, +$58, the actual value added by LPing"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Deposit 1 ETH + 3,000 USDC at ETH = $3,000 (total $6,000). ETH rises to $4,000. Pool rebalances you to √(3,000 ÷ 4,000) = 0.866 ETH and √(3,000 × 4,000) = 3,464 USDC LP value = 0.866 × 4,000 + 3,464 = $6,928 Hold value = 4,000 + 3,000 = $7,000 → IL = −$72 (−1.",
+   "vo": "Deposit 1 ETH + 3,000 U.S.D.C. at ETH = $3,000 (total $6,000). ETH rises to $4,000. Pool rebalances you to the square root of (3,000 divided by 4,000) = 0.866 ETH and the square root of (3,000 times 4,000) = 3,464 U.S.D.C. L.P. value = 0.866 times 4,000 + 3,464 = $6,928 Hold value = 4,000 + 3,000 = $7,000 to impermanent loss = minus $72 (minus 1.03%) Fees earned $150, gas $20 to L.P. total $7,058 A master judges the L.P. on the +$58, not the +$1,058. Calculator: the calculator",
+   "cap": "Deposit 1 ETH + 3,000 USDC at ETH = $3,000 (total $6,000). ETH rises to $4,000. Pool rebalances you to √(3,000 ÷ 4,000) = 0.866 ETH and √(3,000 × 4,000) = 3,464 USDC LP value = 0.866 × 4,000 + 3,464 = $6,928 Hold value = 4,000 + 3,000 = $7,000 → IL = −$72 (−1.03%) Fees earned $150, gas $20 → LP total $7,058 A master judges the LP on the +$58, not the +$1,058. Calculator: the calculator"
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "P&L tracked against hold, weekly",
+    "IL, fees, incentives and gas recorded separately",
+    "Exit if fees consistently fail to cover IL"
+   ],
+   "vo": "Your checklist. P and L tracked against hold, weekly impermanent loss, fees, incentives and gas recorded separately Exit if fees consistently fail to cover impermanent loss",
+   "cap": "P&L tracked against hold, weekly IL, fees, incentives and gas recorded separately Exit if fees consistently fail to cover IL"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "ETH doubles. IL on a 50/50 pool?"
+   ],
+   "sub": "Answer: About −5.7% vs holding.",
+   "subAt": 0.62,
+   "vo": "ETH doubles. impermanent loss on a 50/50 pool? ... Pause and think. ... The answer: About minus 5.7% versus holding.",
+   "cap": "ETH doubles. IL on a 50/50 pool? Pause and think. The answer: About −5.7% vs holding."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Your LP is up 20% since deposit. Did LPing work?"
+   ],
+   "sub": "Answer: Unknown until you compare with holding. The 20% could be all price.",
+   "subAt": 0.62,
+   "vo": "Your L.P. is up 20% since deposit. Did LPing work? ... Pause and think. ... The answer: Unknown until you compare with holding. The 20% could be all price.",
+   "cap": "Your LP is up 20% since deposit. Did LPing work? Pause and think. The answer: Unknown until you compare with holding. The 20% could be all price."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "When does IL become permanent?"
+   ],
+   "sub": "Answer: When you withdraw while the price ratio is different from entry.",
+   "subAt": 0.62,
+   "vo": "When does impermanent loss become permanent? ... Pause and think. ... The answer: When you withdraw while the price ratio is different from entry.",
+   "cap": "When does IL become permanent? Pause and think. The answer: When you withdraw while the price ratio is different from entry."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

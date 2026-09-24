@@ -1,0 +1,101 @@
+{
+ "id": "lesson-14-3",
+ "title": "Lesson 14.3: Operating procedures: multisig signing, change control, reviews",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 14.3 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-14.png",
+   "eyebrow": "Lesson 14.3",
+   "vo": "Lesson fourteen point three. Operating procedures: multisig signing, change control, reviews.",
+   "cap": "Lesson 14.3. Operating procedures: multisig signing, change control, reviews."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Run your bank with procedures that prevent single-point mistakes.",
+   "vo": "Run your bank with procedures that prevent single-point mistakes.",
+   "cap": "Run your bank with procedures that prevent single-point mistakes."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Multisig signing procedure",
+    "Change control",
+    "Separation",
+    "Review calendar"
+   ],
+   "vo": "transaction (destination, amount, calldata) on their own device screen, not a shared screenshot. written up (thesis, risk register row, size) and waits 24h before execution. Multisig signing procedure: every signer independently verifies the Change control: new protocol, new chain, new strategy, or a cap change is Separation: the person proposing a vault transaction isn't the only one approving it. Review calendar: weekly books , monthly register , quarterly stress test and recovery drill , annual review (Module 13.5).",
+   "cap": "Multisig signing procedure: every signer independently verifies the Change control: new protocol, new chain, new strategy, or a cap change is Separation: the person proposing a vault transaction isn't the only one approving it. Review calendar: weekly books · monthly register · quarterly stress test and recovery drill · annual review (Module 13.5)."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "A 2-of-3 vault moves $40,000 to the operating wallet. Signer 1 proposes; Signer 2 checks the destination against the allowlist and the amount against the ladder refill schedule on their hardware wallet screen, then signs. Logged in the books with both names.",
+   "vo": "A 2-of-3 vault moves $40,000 to the operating wallet. Signer 1 proposes; Signer 2 checks the destination against the allowlist and the amount against the ladder refill schedule on their hardware wallet screen, then signs. Logged in the books with both names.",
+   "cap": "A 2-of-3 vault moves $40,000 to the operating wallet. Signer 1 proposes; Signer 2 checks the destination against the allowlist and the amount against the ladder refill schedule on their hardware wallet screen, then signs. Logged in the books with both names."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Signing procedure written for every signer",
+    "Change-control template and 24h rule",
+    "Review calendar set"
+   ],
+   "vo": "Your checklist. Signing procedure written for every signer Change-control template and 24h rule Review calendar set",
+   "cap": "Signing procedure written for every signer Change-control template and 24h rule Review calendar set"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why verify on your own device screen?"
+   ],
+   "sub": "Answer: Screens and screenshots can be faked; the hardware display shows what you're actually signing.",
+   "subAt": 0.62,
+   "vo": "Why verify on your own device screen? ... Pause and think. ... The answer: Screens and screenshots can be faked; the hardware display shows what you're actually signing.",
+   "cap": "Why verify on your own device screen? Pause and think. The answer: Screens and screenshots can be faked; the hardware display shows what you're actually signing."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What is change control for?"
+   ],
+   "sub": "Answer: Forcing new risks through thesis, register and a cooling-off period.",
+   "subAt": 0.62,
+   "vo": "What is change control for? ... Pause and think. ... The answer: Forcing new risks through thesis, register and a cooling-off period.",
+   "cap": "What is change control for? Pause and think. The answer: Forcing new risks through thesis, register and a cooling-off period."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "How often is the stress test re-run?"
+   ],
+   "sub": "Answer: Quarterly, and after big changes.",
+   "subAt": 0.62,
+   "vo": "How often is the stress test re-run? ... Pause and think. ... The answer: Quarterly, and after big changes.",
+   "cap": "How often is the stress test re-run? Pause and think. The answer: Quarterly, and after big changes."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

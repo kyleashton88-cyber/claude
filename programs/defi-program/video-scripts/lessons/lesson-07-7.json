@@ -1,0 +1,100 @@
+{
+ "id": "lesson-07-7",
+ "title": "Lesson 7.7: DEX & liquidity analytics",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 7.7 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-07.png",
+   "eyebrow": "Lesson 7.7",
+   "vo": "Lesson seven point seven. decks and liquidity analytics.",
+   "cap": "Lesson 7.7. DEX & liquidity analytics."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Measure whether a pool can actually absorb your trade and pay you as an LP.",
+   "vo": "Measure whether a pool can actually absorb your trade and pay you as an L.P..",
+   "cap": "Measure whether a pool can actually absorb your trade and pay you as an LP."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "TVL can double count and moves with token prices.",
+    "Depth",
+    "Volume/TVL",
+    "Liquidity migration"
+   ],
+   "vo": "T.V.L. can double count and moves with token prices. Depth: the price impact for a given trade size. The number that matters for execution. Volume/T.V.L.: rough capital turnover; higher means more fees per dollar (Lesson 2.3). Liquidity migration: incentives move liquidity quickly between pools and chains.",
+   "cap": "TVL can double count and moves with token prices. Depth: the price impact for a given trade size. The number that matters for execution. Volume/TVL: rough capital turnover; higher means more fees per dollar (Lesson 2.3). Liquidity migration: incentives move liquidity quickly between pools and chains."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Pool A: $50M TVL, $5M daily volume (0.1 turnover). Pool B: $10M TVL, $8M volume (0.8 turnover). B pays LPs far more per dollar, but a $1M trade will move B's price much more than A's.",
+   "vo": "Pool A: $50M T.V.L., $5M daily volume (0.1 turnover). Pool B: $10M T.V.L., $8M volume (0.8 turnover). B pays L.P.s far more per dollar, but a $1M trade will move B's price much more than A's.",
+   "cap": "Pool A: $50M TVL, $5M daily volume (0.1 turnover). Pool B: $10M TVL, $8M volume (0.8 turnover). B pays LPs far more per dollar, but a $1M trade will move B's price much more than A's."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Depth checked at my trade size",
+    "Volume/TVL used for LP fee estimates"
+   ],
+   "vo": "Your checklist. Depth checked at my trade size Volume/T.V.L. used for L.P. fee estimates",
+   "cap": "Depth checked at my trade size Volume/TVL used for LP fee estimates"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why is depth more useful than TVL for traders?"
+   ],
+   "sub": "Answer: It measures price impact at a given size.",
+   "subAt": 0.62,
+   "vo": "Why is depth more useful than T.V.L. for traders? ... Pause and think. ... The answer: It measures price impact at a given size.",
+   "cap": "Why is depth more useful than TVL for traders? Pause and think. The answer: It measures price impact at a given size."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "High volume/TVL means?"
+   ],
+   "sub": "Answer: More fees per dollar of liquidity.",
+   "subAt": 0.62,
+   "vo": "High volume/T.V.L. means? ... Pause and think. ... The answer: More fees per dollar of liquidity.",
+   "cap": "High volume/TVL means? Pause and think. The answer: More fees per dollar of liquidity."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What causes liquidity migration?"
+   ],
+   "sub": "Answer: Incentives moving between pools and chains.",
+   "subAt": 0.62,
+   "vo": "What causes liquidity migration? ... Pause and think. ... The answer: Incentives moving between pools and chains.",
+   "cap": "What causes liquidity migration? Pause and think. The answer: Incentives moving between pools and chains."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

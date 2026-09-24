@@ -3,9 +3,7 @@
 ![On-Chain Operator Program](assets/store/banner-1920x1080.png)
 
 Everything needed to add the program to your Whop store as a new product:
-logo, images, copy and upload order. **Nothing is published.** You create the
-product in the Whop dashboard (Zapier can't create products), paste this in,
-and keep it hidden until launch.
+logo, images, copy and upload order. **Nothing is published yet.** Create the product, paste this in, and publish when ready.
 
 > Check Whop's current image size limits in the dashboard when you upload.
 > These files are produced at standard sizes (1024×1024 square, 1920×1080
@@ -111,7 +109,7 @@ income engine and run your capital like a bank. 15 modules · 107 lessons.
 | A Mastery Starter in every module: start any topic from zero | ✓ | ✓ |
 | 30 strategy playbooks with maths and kill rules | ✓ | ✓ |
 | Printable Day-1 Setup Kit for complete beginners | ✓ | ✓ |
-| Welcome video + 15 module intro videos | ✓ | ✓ |
+| Welcome video, 15 module intros and a narrated video for every lesson | ✓ | ✓ |
 | Checklists and quizzes in every lesson | ✓ | ✓ |
 | Due-diligence, pre-launch and bank-policy worksheets | ✓ | ✓ |
 | Strategy, income and balance-sheet calculators | ✓ | ✓ |
@@ -119,7 +117,7 @@ income engine and run your capital like a bank. 15 modules · 107 lessons.
 | Live group sessions | | ✓ |
 | Capstone and portfolio reviews | | ✓ |
 | Own-bank policy and income-engine reviews | | ✓ |
-| **Price** | **$15,000 one-time** | **`<LIVE_PRICE>`** |
+| **Price** | **$15,000 one-time** | **On application** |
 
 **Who it's for**
 - Complete beginners who want to learn DeFi properly, from zero, with a process
@@ -139,7 +137,7 @@ income engine and run your capital like a bank. 15 modules · 107 lessons.
 - *Will I make money / earn an income?* The program teaches you to build and run an income portfolio and to measure it honestly: expected income after expected losses, with a payout below that. It doesn't promise or project returns, and every strategy is taught alongside how it loses money.
 - *What does "operate as your own bank" mean?* Running your crypto with the disciplines a bank uses: a balance sheet, custody controls, a credit policy, liquidity management and records. It's a method, not a licence or a financial service.
 - *How does this relate to Grid Bot Builder?* Module 9 shows how on-chain liquidity and exchange grid bots do similar jobs, and how to run both in one portfolio.
-- *Refunds?* `<REFUND_POLICY>`
+- *Refunds?* 14-day conditional refund: full refund within 14 days of purchase if you've completed no more than 10% of lessons, haven't submitted a capstone and haven't used a live session or review. Duplicate purchases and unfixable access problems are always refunded. No refunds based on investment results. Full policy at checkout.
 
 **Footer disclaimer (put on the listing and at checkout):**
 Educational content only. Not financial, tax or legal advice. Digital assets
@@ -151,7 +149,7 @@ income are guaranteed.
 ## 4. Store setup checklist
 - [ ] Product created in the Whop dashboard as **hidden**, named "On-Chain Operator Program"
 - [ ] Logo icon, banner and 7 gallery images uploaded in the order above
-- [ ] Copy pasted; `<LIVE_PRICE>`, `<REFUND_POLICY>`, `<DEFI_APPLICATION_URL>` filled
+- [ ] Copy pasted with the refund policy; `<DEFI_APPLICATION_URL>` filled
 - [ ] Course experience added with 15 modules; module headers uploaded; lessons pasted with their diagrams
 - [ ] Plans created via Zapier (course $15,000 one-time; live tier once priced), approved first
 - [ ] Checkout tested end to end on a hidden plan

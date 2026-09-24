@@ -1,0 +1,101 @@
+{
+ "id": "lesson-06-3",
+ "title": "Lesson 6.3: Governance & DAOs",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 6.3 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-06.png",
+   "eyebrow": "Lesson 6.3",
+   "vo": "Lesson six point three. Governance and DAOs.",
+   "cap": "Lesson 6.3. Governance & DAOs."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Read how a protocol is controlled and spot governance risk before it hits your position.",
+   "vo": "Read how a protocol is controlled and spot governance risk before it hits your position.",
+   "cap": "Read how a protocol is controlled and spot governance risk before it hits your position."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Governance tokens vote on parameters, upgrades and treasury.",
+    "Proposal lifecycle",
+    "Delegation lets holders assign votes to representatives.",
+    "Risks"
+   ],
+   "vo": "Governance tokens vote on parameters, upgrades and treasury. Proposal lifecycle: forum discussion to vote to timelock to execution. Delegation lets holders assign votes to representatives. Risks: low turnout, concentrated voting power, borrowed votes, rushed proposals, weak timelocks.",
+   "cap": "Governance tokens vote on parameters, upgrades and treasury. Proposal lifecycle: forum discussion → vote → timelock → execution. Delegation lets holders assign votes to representatives. Risks: low turnout, concentrated voting power, borrowed votes, rushed proposals, weak timelocks."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "A proposal to raise a collateral's LTV passes with 8% turnout, 70% of it from three wallets. Lenders now carry more bad-debt risk, decided by a few voters. Track governance for markets you're in. It changes your risk without you doing anything.",
+   "vo": "A proposal to raise a collateral's L.T.V. passes with 8% turnout, 70% of it from three wallets. Lenders now carry more bad-debt risk, decided by a few voters. Track governance for markets you're in. It changes your risk without you doing anything.",
+   "cap": "A proposal to raise a collateral's LTV passes with 8% turnout, 70% of it from three wallets. Lenders now carry more bad-debt risk, decided by a few voters. Track governance for markets you're in. It changes your risk without you doing anything."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Governance forum/alerts followed for protocols I use",
+    "Voting concentration checked",
+    "Timelock length known"
+   ],
+   "vo": "Your checklist. Governance forum/alerts followed for protocols I use Voting concentration checked Timelock length known",
+   "cap": "Governance forum/alerts followed for protocols I use Voting concentration checked Timelock length known"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What's a governance attack?"
+   ],
+   "sub": "Answer: Using concentrated or borrowed voting power to pass harmful changes.",
+   "subAt": 0.62,
+   "vo": "What's a governance attack? ... Pause and think. ... The answer: Using concentrated or borrowed voting power to pass harmful changes.",
+   "cap": "What's a governance attack? Pause and think. The answer: Using concentrated or borrowed voting power to pass harmful changes."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why follow governance as a user?"
+   ],
+   "sub": "Answer: Parameter changes alter your risk.",
+   "subAt": 0.62,
+   "vo": "Why follow governance as a user? ... Pause and think. ... The answer: Parameter changes alter your risk.",
+   "cap": "Why follow governance as a user? Pause and think. The answer: Parameter changes alter your risk."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Order of the proposal lifecycle?"
+   ],
+   "sub": "Answer: Discussion → vote → timelock → execution.",
+   "subAt": 0.62,
+   "vo": "Order of the proposal lifecycle? ... Pause and think. ... The answer: Discussion to vote to timelock to execution.",
+   "cap": "Order of the proposal lifecycle? Pause and think. The answer: Discussion → vote → timelock → execution."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

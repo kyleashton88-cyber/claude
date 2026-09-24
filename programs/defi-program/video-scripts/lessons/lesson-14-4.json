@@ -1,0 +1,117 @@
+{
+ "id": "lesson-14-4",
+ "title": "Lesson 14.4: Operator capstone and certification",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 14.4 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-14.png",
+   "eyebrow": "Lesson 14.4",
+   "vo": "Lesson fourteen point four. Operator capstone and certification.",
+   "cap": "Lesson 14.4. Operator capstone and certification."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Assemble your complete on-chain bank and have it assessed.",
+   "vo": "Assemble your complete on-chain bank and have it assessed.",
+   "cap": "Assemble your complete on-chain bank and have it assessed."
+  },
+  {
+   "type": "bullets",
+   "title": "Explanation — the operator capstone",
+   "items": [
+    "Balance sheet with equity, LTV and runway (12.1)",
+    "Custody policy and recovery-test log (12.2)",
+    "Credit policy with action levels (12.3)",
+    "Liquidity ladder T0–T3 (12.4)",
+    "Lending policy with risk assumptions (12.5)"
+   ],
+   "vo": "Submit one document (template in 07-program-operations.md) containing: Certification levels (assessed against the rubric in 07-program-operations.md): Balance sheet with equity, L.T.V. and runway (12.1) Custody policy and recovery-test log (12.2) Credit policy with action levels (12.3) Liquidity ladder T0–T3 (12.4) Lending policy with risk assumptions (12.5)",
+   "cap": "Balance sheet with equity, LTV and runway (12.1) Custody policy and recovery-test log (12.2) Credit policy with action levels (12.3) Liquidity ladder T0–T3 (12.4) Lending policy with risk assumptions (12.5)"
+  },
+  {
+   "type": "bullets",
+   "title": "Explanation — the operator capstone",
+   "items": [
+    "Books template and letter of instruction location (12.6; never the seed)",
+    "Income portfolio with risk-adjusted expected income (13.3)",
+    "Payout policy (13.4)",
+    "Stress test, five scenarios, with fixes (11.4)",
+    "Incident playbook (11.5), alert sheet (14.1) and automation permissions (14.2)"
+   ],
+   "vo": "Books template and letter of instruction location (12.6; never the seed) Income portfolio with risk-adjusted expected income (13.3) Payout policy (13.4) Stress test, five scenarios, with fixes (11.4) Incident playbook (11.5), alert sheet (14.1) and automation permissions (14.2)",
+   "cap": "Books template and letter of instruction location (12.6; never the seed) Income portfolio with risk-adjusted expected income (13.3) Payout policy (13.4) Stress test, five scenarios, with fixes (11.4) Incident playbook (11.5), alert sheet (14.1) and automation permissions (14.2)"
+  },
+  {
+   "type": "bullets",
+   "title": "Explanation — the operator capstone",
+   "items": [
+    "Analyst",
+    "Operator",
+    "Operator with distinction"
+   ],
+   "vo": "Analyst: passed the analyst capstone (Modules 6–7) Operator: passed the operator capstone Operator with distinction: operator capstone scored at least 90%, plus one quarter of books kept to standard",
+   "cap": "Analyst: passed the analyst capstone (Modules 6–7) Operator: passed the operator capstone Operator with distinction: operator capstone scored ≥ 90%, plus one quarter of books kept to standard"
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "All ten sections complete",
+    "Calculators used for every number",
+    "Submitted (Live tier"
+   ],
+   "vo": "Your checklist. All ten sections complete Calculators used for every number Submitted (Live tier: booked for review)",
+   "cap": "All ten sections complete Calculators used for every number Submitted (Live tier: booked for review)"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What must never appear in the capstone?"
+   ],
+   "sub": "Answer: Seed phrases, private keys or anything that grants access.",
+   "subAt": 0.62,
+   "vo": "What must never appear in the capstone? ... Pause and think. ... The answer: Seed phrases, private keys or anything that grants access.",
+   "cap": "What must never appear in the capstone? Pause and think. The answer: Seed phrases, private keys or anything that grants access."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Which lesson's output shows income is sustainable?"
+   ],
+   "sub": "Answer: 13.4: the payout policy, based on risk-adjusted expected income.",
+   "subAt": 0.62,
+   "vo": "Which lesson's output shows income is sustainable? ... Pause and think. ... The answer: 13.4: the payout policy, based on risk-adjusted expected income.",
+   "cap": "Which lesson's output shows income is sustainable? Pause and think. The answer: 13.4: the payout policy, based on risk-adjusted expected income."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What's needed for \"with distinction\"?"
+   ],
+   "sub": "Answer: ≥ 90% on the operator capstone plus a quarter of books kept to standard.",
+   "subAt": 0.62,
+   "vo": "What's needed for \"with distinction\"? ... Pause and think. ... The answer: at least 90% on the operator capstone plus a quarter of books kept to standard.",
+   "cap": "What's needed for \"with distinction\"? Pause and think. The answer: ≥ 90% on the operator capstone plus a quarter of books kept to standard."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

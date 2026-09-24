@@ -1,0 +1,103 @@
+{
+ "id": "lesson-01-7",
+ "title": "Lesson 1.7: Reading signatures and simulating transactions",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 1.7 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-01.png",
+   "eyebrow": "Lesson 1.7",
+   "vo": "Lesson one point seven. Reading signatures and simulating transactions.",
+   "cap": "Lesson 1.7. Reading signatures and simulating transactions."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Know exactly what a signature or transaction will do before you approve it.",
+   "vo": "Know exactly what a signature or transaction will do before you approve it.",
+   "cap": "Know exactly what a signature or transaction will do before you approve it."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Transaction simulation",
+    "Typed-data signatures (EIP-712)",
+    "Blind signing",
+    "Account delegation (EIP-7702)",
+    "Rule"
+   ],
+   "vo": "Transaction simulation: good wallets (and tools like transaction simulators) show the expected balance changes before you sign: \"minus 100 U.S.D.C., +0.033 ETH\". If the preview shows assets leaving that you didn't intend, stop. Typed-data signatures (EIP-712): structured messages (orders, Permits) that your wallet shows as fields. Read the spender, token, amount and deadline. A \"Permit\" or \"Permit2\" signature can hand over token access without any gas. Blind signing: when a hardware wallet can't decode a transaction, it shows only a hash. Keep blind signing off by default; turn it on only for a specific, verified action, then off again. Account delegation (EIP-7702): since Ethereum's 2025 Pectra upgrade, a normal wallet can sign an authorisation that delegates its behaviour to a smart contract. A malicious delegation can hand control of the whole account to an attacker. Only sign delegations from wallets and apps you trust, for a stated purpose. Rule: if you can't say in one sentence what a prompt does, don't sign it.",
+   "cap": "Transaction simulation: good wallets (and tools like transaction simulators) show the expected balance changes before you sign: \"−100 USDC, +0.033 ETH\". If the preview shows assets leaving that you didn't intend, stop. Typed-data signatures (EIP-712): structured messages (orders, Permits) that your wallet shows as fields. Read the spender, token, amount and deadline. A \"Permit\" or \"Permit2\" signature can hand over token access without any gas. Blind signing: when a hardware wallet can't decode a transaction, it shows only a hash. Keep blind signing off by default; turn it on only for a specific, verified action, then off again. Account delegation (EIP-7702): since Ethereum's 2025 Pectra upgrade, a normal wallet can sign an authorisation that delegates its behaviour to a smart contract. A malicious delegation can hand control of the whole account to an attacker. Only sign delegations from wallets and apps you trust, for a stated purpose. Rule: if you can't say in one sentence what a prompt does, don't sign it."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "A site asks you to \"verify your wallet\". The wallet shows a typed-data message: Permit2 · token: USDC · spender: 0x9f…c3 · amount: 115792089… (unlimited) · deadline: 2030. That isn't verification: it's unlimited USDC access for an unknown spender. Reject it, c",
+   "vo": "A site asks you to \"verify your wallet\". The wallet shows a typed-data message: Permit2 , token: U.S.D.C. , spender: 0x9f…c3 , amount: 115792089… (unlimited) , deadline: 2030. That isn't verification: it's unlimited U.S.D.C. access for an unknown spender. Reject it, close the tab, and check your approvals.",
+   "cap": "A site asks you to \"verify your wallet\". The wallet shows a typed-data message: Permit2 · token: USDC · spender: 0x9f…c3 · amount: 115792089… (unlimited) · deadline: 2030. That isn't verification: it's unlimited USDC access for an unknown spender. Reject it, close the tab, and check your approvals."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "My wallet shows simulated balance changes before signing",
+    "I read spender, token, amount and deadline on every typed-data prompt",
+    "Blind signing is off on my hardware wallet",
+    "I never sign account-delegation requests from unknown sites"
+   ],
+   "vo": "Your checklist. My wallet shows simulated balance changes before signing I read spender, token, amount and deadline on every typed-data prompt Blind signing is off on my hardware wallet I never sign account-delegation requests from unknown sites",
+   "cap": "My wallet shows simulated balance changes before signing I read spender, token, amount and deadline on every typed-data prompt Blind signing is off on my hardware wallet I never sign account-delegation requests from unknown sites"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does transaction simulation show?"
+   ],
+   "sub": "Answer: The expected balance changes before you sign.",
+   "subAt": 0.62,
+   "vo": "What does transaction simulation show? ... Pause and think. ... The answer: The expected balance changes before you sign.",
+   "cap": "What does transaction simulation show? Pause and think. The answer: The expected balance changes before you sign."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why is a Permit signature risky if you don't read it?"
+   ],
+   "sub": "Answer: It can grant token access without a transaction or gas, so it's easy to approve by accident.",
+   "subAt": 0.62,
+   "vo": "Why is a Permit signature risky if you don't read it? ... Pause and think. ... The answer: It can grant token access without a transaction or gas, so it's easy to approve by accident.",
+   "cap": "Why is a Permit signature risky if you don't read it? Pause and think. The answer: It can grant token access without a transaction or gas, so it's easy to approve by accident."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "When should blind signing be on?"
+   ],
+   "sub": "Answer: Only briefly, for a specific verified action, then switched off.",
+   "subAt": 0.62,
+   "vo": "When should blind signing be on? ... Pause and think. ... The answer: Only briefly, for a specific verified action, then switched off.",
+   "cap": "When should blind signing be on? Pause and think. The answer: Only briefly, for a specific verified action, then switched off."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

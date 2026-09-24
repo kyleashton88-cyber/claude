@@ -1,0 +1,105 @@
+{
+ "id": "lesson-13-5",
+ "title": "Lesson 13.5: Scaling, compounding and the annual review",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 13.5 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-13.png",
+   "eyebrow": "Lesson 13.5",
+   "vo": "Lesson thirteen point five. Scaling, compounding and the annual review.",
+   "cap": "Lesson 13.5. Scaling, compounding and the annual review."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Grow the engine safely and review it like a bank's annual report.",
+   "vo": "Grow the engine safely and review it like a bank's annual report.",
+   "cap": "Grow the engine safely and review it like a bank's annual report."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Caps are percentages, so position sizes rise, and so does market impact.",
+    "Add independent protocols and issuers before adding size to existing ones.",
+    "More size means more value at stake in custody",
+    "Balance sheet",
+    "Income"
+   ],
+   "vo": "Compounding: reinvesting the retained share grows principal, and income with it. At a 4.66% risk-adjusted yield with 30% retained, principal grows about 1.4% a year from retention alone. The payout grows at about the same rate: $16,310 to about $17,480 after five years (before any new capital). Scaling rules as the book grows: Check pool depth and exit liquidity at the new size. Annual review (one page): Caps are percentages, so position sizes rise, and so does market impact. Add independent protocols and issuers before adding size to existing ones. More size means more value at stake in custody: revisit Module 12.2. Balance sheet: start versus end equity, L.T.V., runway Income: expected versus realised, by source",
+   "cap": "Caps are percentages, so position sizes rise, and so does market impact. Add independent protocols and issuers before adding size to existing ones. More size means more value at stake in custody: revisit Module 12.2. Balance sheet: start vs end equity, LTV, runway Income: expected vs realised, by source"
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Losses and near-misses",
+    "Payout",
+    "Risk assumptions",
+    "Custody and succession drill"
+   ],
+   "vo": "Losses and near-misses: what happened, what changed Payout: paid versus policy Risk assumptions: update loss probabilities from the year's incidents Custody and succession drill: done?",
+   "cap": "Losses and near-misses: what happened, what changed Payout: paid vs policy Risk assumptions: update loss probabilities from the year's incidents Custody and succession drill: done?"
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Retained income reinvested per policy",
+    "Exit liquidity checked at current size",
+    "Annual review completed and filed with the books"
+   ],
+   "vo": "Your checklist. Retained income reinvested per policy Exit liquidity checked at current size Annual review completed and filed with the books",
+   "cap": "Retained income reinvested per policy Exit liquidity checked at current size Annual review completed and filed with the books"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Yield 5%, 40% retained. Growth from retention alone?"
+   ],
+   "sub": "Answer: ~2% a year.",
+   "subAt": 0.62,
+   "vo": "Yield 5%, 40% retained. Growth from retention alone? ... Pause and think. ... The answer: about 2% a year.",
+   "cap": "Yield 5%, 40% retained. Growth from retention alone? Pause and think. The answer: ~2% a year."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why check exit liquidity as the book grows?"
+   ],
+   "sub": "Answer: A position that was easy to exit at $50k may move the market at $500k.",
+   "subAt": 0.62,
+   "vo": "Why check exit liquidity as the book grows? ... Pause and think. ... The answer: A position that was easy to exit at $50k may move the market at $500k.",
+   "cap": "Why check exit liquidity as the book grows? Pause and think. The answer: A position that was easy to exit at $50k may move the market at $500k."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What should the annual review update?"
+   ],
+   "sub": "Answer: Loss-probability assumptions, from the year's incidents and near-misses.",
+   "subAt": 0.62,
+   "vo": "What should the annual review update? ... Pause and think. ... The answer: Loss-probability assumptions, from the year's incidents and near-misses.",
+   "cap": "What should the annual review update? Pause and think. The answer: Loss-probability assumptions, from the year's incidents and near-misses."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

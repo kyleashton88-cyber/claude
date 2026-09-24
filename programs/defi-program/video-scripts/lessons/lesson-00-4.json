@@ -1,0 +1,103 @@
+{
+ "id": "lesson-00-4",
+ "title": "Lesson 0.4: Exchange account vs your own wallet: who holds the keys?",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 0.4 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-00.png",
+   "eyebrow": "Lesson 0.4",
+   "vo": "Lesson zero point four. Exchange account versus your own wallet: who holds the keys?.",
+   "cap": "Lesson 0.4. Exchange account vs your own wallet: who holds the keys?."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Understand custody and decide what stays on the exchange and what moves to your own wallet.",
+   "vo": "Understand custody and decide what stays on the exchange and what moves to your own wallet.",
+   "cap": "Understand custody and decide what stays on the exchange and what moves to your own wallet."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Who holds keys",
+    "Recover if you forget password",
+    "Can be frozen",
+    "Can use DeFi",
+    "Your main risk"
+   ],
+   "compact": true,
+   "vo": "Who holds keys, The exchange, You. Recover if you forget password, Yes, with ID, Only with your seed phrase. Can be frozen, Yes, No. Can use DeFi, Limited, Yes. Your main risk, The company, Your own mistakes and scams.",
+   "cap": "Who holds keys, The exchange, You Recover if you forget password, Yes, with ID, Only with your seed phrase Can be frozen, Yes, No Can use DeFi, Limited, Yes Your main risk, The company, Your own mistakes and scams"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "On an exchange (custodial): the exchange holds your crypto and owes it to you. Easy, recoverable with ID, but if the exchange fails, freezes or is hacked, your money is at risk. \"Not your keys, not your coins.\" In your own wallet (self-custody): you hold the k",
+   "vo": "On an exchange (custodial): the exchange holds your crypto and owes it to you. Easy, recoverable with ID, but if the exchange fails, freezes or is hacked, your money is at risk. \"Not your keys, not your coins.\" In your own wallet (self-custody): you hold the keys, which are the secret codes that control your crypto. Nobody can freeze it; nobody can recover it for you. A wallet doesn't \"store\" coins. The coins are on the blockchain; the wallet holds the keys that let you move them. That's why a backup of the keys (your seed phrase) is the wallet. Addresses: your wallet gives you a public address (like 0x7a3F…9c21) to receive funds. Safe to share, like an account number. Seed phrase / recovery phrase: 12 or 24 words that recreate your keys. Never share it, never type it into a website, never photograph it.",
+   "cap": "On an exchange (custodial): the exchange holds your crypto and owes it to you. Easy, recoverable with ID, but if the exchange fails, freezes or is hacked, your money is at risk. \"Not your keys, not your coins.\" In your own wallet (self-custody): you hold the keys, which are the secret codes that control your crypto. Nobody can freeze it; nobody can recover it for you. A wallet doesn't \"store\" coins. The coins are on the blockchain; the wallet holds the keys that let you move them. That's why a backup of the keys (your seed phrase) is the wallet. Addresses: your wallet gives you a public address (like 0x7a3F…9c21) to receive funds. Safe to share, like an account number. Seed phrase / recovery phrase: 12 or 24 words that recreate your keys. Never share it, never type it into a website, never photograph it."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "I can explain custodial vs self-custody",
+    "I know my seed phrase is the wallet",
+    "I know an address is safe to share and a seed phrase never is"
+   ],
+   "vo": "Your checklist. I can explain custodial versus self-custody I know my seed phrase is the wallet I know an address is safe to share and a seed phrase never is",
+   "cap": "I can explain custodial vs self-custody I know my seed phrase is the wallet I know an address is safe to share and a seed phrase never is"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does \"not your keys, not your coins\" mean?"
+   ],
+   "sub": "Answer: If someone else holds the keys, you depend on them to give your crypto back.",
+   "subAt": 0.62,
+   "vo": "What does \"not your keys, not your coins\" mean? ... Pause and think. ... The answer: If someone else holds the keys, you depend on them to give your crypto back.",
+   "cap": "What does \"not your keys, not your coins\" mean? Pause and think. The answer: If someone else holds the keys, you depend on them to give your crypto back."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Is your crypto stored inside your wallet app?"
+   ],
+   "sub": "Answer: No. It's on the blockchain. The wallet holds the keys that control it.",
+   "subAt": 0.62,
+   "vo": "Is your crypto stored inside your wallet app? ... Pause and think. ... The answer: No. It's on the blockchain. The wallet holds the keys that control it.",
+   "cap": "Is your crypto stored inside your wallet app? Pause and think. The answer: No. It's on the blockchain. The wallet holds the keys that control it."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Which can you share: your address or your seed phrase?"
+   ],
+   "sub": "Answer: Your address. Never the seed phrase.",
+   "subAt": 0.62,
+   "vo": "Which can you share: your address or your seed phrase? ... Pause and think. ... The answer: Your address. Never the seed phrase.",
+   "cap": "Which can you share: your address or your seed phrase? Pause and think. The answer: Your address. Never the seed phrase."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

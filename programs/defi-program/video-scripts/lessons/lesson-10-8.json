@@ -1,0 +1,109 @@
+{
+ "id": "lesson-10-8",
+ "title": "Lesson 10.8: DeFi rates: term structure, fixed vs floating",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 10.8 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-10.png",
+   "eyebrow": "Lesson 10.8",
+   "vo": "Lesson ten point eight. DeFi rates: term structure, fixed versus floating.",
+   "cap": "Lesson 10.8. DeFi rates: term structure, fixed vs floating."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Read DeFi's interest-rate curve and position for fixed or floating rates deliberately.",
+   "vo": "Read DeFi's interest-rate curve and position for fixed or floating rates deliberately.",
+   "cap": "Read DeFi's interest-rate curve and position for fixed or floating rates deliberately."
+  },
+  {
+   "type": "image",
+   "src": "assets/charts/pt-convergence.png",
+   "eyebrow": "PT price converges to 1.00 at maturity",
+   "vo": "Here's the picture: P.T. price converges to 1.00 at maturity.",
+   "cap": "PT price converges to 1.00 at maturity."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Floating rates",
+    "Fixed rates",
+    "Term structure",
+    "Positioning",
+    "Basis between venues"
+   ],
+   "vo": "Floating rates: lending and borrowing APYs that change with utilisation (Module 3). Fixed rates: PTs (10.1), fixed-rate lending markets and fixed-rate borrowing (#22). Term structure: P.T. implied yields across maturities form a yield curve (for example 3-month versus 12-month). Upward sloping: the market expects rates to stay high or rise. Inverted: it expects them to fall. Positioning: buying P.T. = receiving a fixed rate (you win if floating rates fall). Buying Y.T. = receiving the floating rate (you win if floating rates rise). Fixed-rate borrowing = paying a fixed rate (you win if floating borrow rates rise). Basis between venues: the same asset's rates can differ across protocols and chains; the gap reflects risk, liquidity and friction as much as opportunity.",
+   "cap": "Floating rates: lending and borrowing APYs that change with utilisation (Module 3). Fixed rates: PTs (10.1), fixed-rate lending markets and fixed-rate borrowing (#22). Term structure: PT implied yields across maturities form a yield curve (e.g. 3-month vs 12-month). Upward sloping: the market expects rates to stay high or rise. Inverted: it expects them to fall. Positioning: buying PT = receiving a fixed rate (you win if floating rates fall). Buying YT = receiving the floating rate (you win if floating rates rise). Fixed-rate borrowing = paying a fixed rate (you win if floating borrow rates rise). Basis between venues: the same asset's rates can differ across protocols and chains; the gap reflects risk, liquidity and friction as much as opportunity."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Stablecoin PT implied yields: 3-month 7%, 12-month 9%. You need the money in 12 months and think rates will fall: buy the 12-month PT and lock 9%. If you think rates will rise instead, stay floating (supply to lending) or buy YT with a small, capped amount.",
+   "vo": "Stablecoin P.T. implied yields: 3-month 7%, 12-month 9%. You need the money in 12 months and think rates will fall: buy the 12-month P.T. and lock 9%. If you think rates will rise instead, stay floating (supply to lending) or buy Y.T. with a small, capped amount.",
+   "cap": "Stablecoin PT implied yields: 3-month 7%, 12-month 9%. You need the money in 12 months and think rates will fall: buy the 12-month PT and lock 9%. If you think rates will rise instead, stay floating (supply to lending) or buy YT with a small, capped amount."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "I can state whether each position is fixed or floating",
+    "I compare implied rates across maturities before locking",
+    "Maturities match my liquidity ladder (12.4)"
+   ],
+   "vo": "Your checklist. I can state whether each position is fixed or floating I compare implied rates across maturities before locking Maturities match my liquidity ladder (12.4)",
+   "cap": "I can state whether each position is fixed or floating I compare implied rates across maturities before locking Maturities match my liquidity ladder (12.4)"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "You buy a PT. Are you receiving fixed or floating?"
+   ],
+   "sub": "Answer: Fixed.",
+   "subAt": 0.62,
+   "vo": "You buy a P.T.. Are you receiving fixed or floating? ... Pause and think. ... The answer: Fixed.",
+   "cap": "You buy a PT. Are you receiving fixed or floating? Pause and think. The answer: Fixed."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "An inverted curve suggests?"
+   ],
+   "sub": "Answer: The market expects rates to fall.",
+   "subAt": 0.62,
+   "vo": "An inverted curve suggests? ... Pause and think. ... The answer: The market expects rates to fall.",
+   "cap": "An inverted curve suggests? Pause and think. The answer: The market expects rates to fall."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "You think borrow rates will spike. How do you protect a loan?"
+   ],
+   "sub": "Answer: Switch to fixed-rate borrowing.",
+   "subAt": 0.62,
+   "vo": "You think borrow rates will spike. How do you protect a loan? ... Pause and think. ... The answer: Switch to fixed-rate borrowing.",
+   "cap": "You think borrow rates will spike. How do you protect a loan? Pause and think. The answer: Switch to fixed-rate borrowing."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

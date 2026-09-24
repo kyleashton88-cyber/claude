@@ -1,0 +1,106 @@
+{
+ "id": "lesson-01-6",
+ "title": "Lesson 1.6: Scam defence",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 1.6 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-01.png",
+   "eyebrow": "Lesson 1.6",
+   "vo": "Lesson one point six. Scam defence.",
+   "cap": "Lesson 1.6. Scam defence."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Recognise the common attacks before they cost you anything.",
+   "vo": "Recognise the common attacks before they cost you anything.",
+   "cap": "Recognise the common attacks before they cost you anything."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Phishing site",
+    "Wallet drainer",
+    "Address poisoning",
+    "Fake token / airdrop",
+    "Impersonation",
+    "Too-good yields"
+   ],
+   "compact": true,
+   "vo": "Phishing site, Look-alike URL / sponsored search ad / fake app, Bookmarks only. Never click links from DMs or ads. Wallet drainer, You sign an approval, Permit or setApprovalForAll for an attacker, Read every prompt. Burner wallet for new sites. Address poisoning, Attacker sends $0 transfers from an address that looks like one you use, so it appears in your history, Never copy addresses from history. Use a saved address book and check the full address. Fake token / airdrop, Unknown tokens appear in your wallet with a \"claim\" link, Ignore them. Don't interact or try to sell. Impersonation, \"Support\", \"admin\" or \"project team\" DMs you, Real teams never DM first and never ask for seeds. Too-good yields, New protocol, huge A.P.Y., anonymous team, no audit, Due diligence (Module 6). Burner wallet and small size, or skip.",
+   "cap": "Phishing site, Look-alike URL / sponsored search ad / fake app, Bookmarks only. Never click links from DMs or ads Wallet drainer, You sign an approval, Permit or setApprovalForAll for an attacker, Read every prompt. Burner wallet for new sites Address poisoning, Attacker sends $0 transfers from an address that looks like one you use, so it appears in your history, Never copy addresses from history. Use a saved address book and check the full address Fake token / airdrop, Unknown tokens appear in your wallet with a \"claim\" link, Ignore them. Don't interact or try to sell Impersonation, \"Support\", \"admin\" or \"project team\" DMs you, Real teams never DM first and never ask for seeds Too-good yields, New protocol, huge APY, anonymous team, no audit, Due diligence (Module 6). Burner wallet and small size, or skip"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example — address poisoning"
+   ],
+   "sub": "You regularly send to 0x7a3F…9c21. Today your history shows a transfer from 0x7a3F…9c21, but the full address is 0x7a3Fe0b4…d189c21: same start and end, different middle. If you copy it from history you send your funds to the attacker. Always paste from your a",
+   "vo": "You regularly send to 0x7a3F…9c21. Today your history shows a transfer from 0x7a3F…9c21, but the full address is 0x7a3Fe0b4…d189c21: same start and end, different middle. If you copy it from history you send your funds to the attacker. Always paste from your address book and check the full address.",
+   "cap": "You regularly send to 0x7a3F…9c21. Today your history shows a transfer from 0x7a3F…9c21, but the full address is 0x7a3Fe0b4…d189c21: same start and end, different middle. If you copy it from history you send your funds to the attacker. Always paste from your address book and check the full address."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Protocol sites bookmarked; never reached through search ads or DMs",
+    "Address book in use; full address checked before sending",
+    "Unknown tokens ignored",
+    "DMs from \"support\" treated as scams by default",
+    "New sites only with the burner wallet"
+   ],
+   "vo": "Your checklist. Protocol sites bookmarked; never reached through search ads or DMs Address book in use; full address checked before sending Unknown tokens ignored DMs from \"support\" treated as scams by default New sites only with the burner wallet",
+   "cap": "Protocol sites bookmarked; never reached through search ads or DMs Address book in use; full address checked before sending Unknown tokens ignored DMs from \"support\" treated as scams by default New sites only with the burner wallet"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "A new token worth \"$5,000\" appears in your wallet with a claim site. What do you do?"
+   ],
+   "sub": "Answer: Ignore it. It's bait, and interacting risks a drainer approval.",
+   "subAt": 0.62,
+   "vo": "A new token worth \"$5,000\" appears in your wallet with a claim site. What do you do? ... Pause and think. ... The answer: Ignore it. It's bait, and interacting risks a drainer approval.",
+   "cap": "A new token worth \"$5,000\" appears in your wallet with a claim site. What do you do? Pause and think. The answer: Ignore it. It's bait, and interacting risks a drainer approval."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "How does address poisoning trick people?"
+   ],
+   "sub": "Answer: It puts a look-alike address in your history so you copy it by mistake.",
+   "subAt": 0.62,
+   "vo": "How does address poisoning trick people? ... Pause and think. ... The answer: It puts a look-alike address in your history so you copy it by mistake.",
+   "cap": "How does address poisoning trick people? Pause and think. The answer: It puts a look-alike address in your history so you copy it by mistake."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What's the single best habit against drainers?"
+   ],
+   "sub": "Answer: Reading every signature and approval prompt, and using a burner wallet for anything new.",
+   "subAt": 0.62,
+   "vo": "What's the single best habit against drainers? ... Pause and think. ... The answer: Reading every signature and approval prompt, and using a burner wallet for anything new.",
+   "cap": "What's the single best habit against drainers? Pause and think. The answer: Reading every signature and approval prompt, and using a burner wallet for anything new."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

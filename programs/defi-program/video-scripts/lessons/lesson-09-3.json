@@ -1,0 +1,116 @@
+{
+ "id": "lesson-09-3",
+ "title": "Lesson 9.3: Building a combined system",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 9.3 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-09.png",
+   "eyebrow": "Lesson 9.3",
+   "vo": "Lesson nine point three. Building a combined system.",
+   "cap": "Lesson 9.3. Building a combined system."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Design a portfolio that uses exchange grid bots and DeFi together without doubling up on the same risk.",
+   "vo": "Design a portfolio that uses exchange grid bots and DeFi together without doubling up on the same risk.",
+   "cap": "Design a portfolio that uses exchange grid bots and DeFi together without doubling up on the same risk."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Grid bots → capture oscillation in range-bound major pairs, fully automated.",
+    "DeFi lending / stable LP → earn on idle stablecoins and reserves.",
+    "Staking / LSTs → earn on assets you'd hold anyway.",
+    "Concentrated LP → earn fees on-chain in ranges, for larger, self-custodied sizes."
+   ],
+   "vo": "Each tool is good at a different job: The trap: correlation. An ETH grid bot + an ETH/U.S.D.C. L.P. + an liquid staking token loop are three bets on ETH staying in a range. If ETH breaks down, they all lose together. Add up your exposure by underlying asset and by range, not by number of positions. Grid bots to capture oscillation in range-bound major pairs, fully automated. DeFi lending / stable L.P. to earn on idle stablecoins and reserves. Staking / liquid staking token to earn on assets you'd hold anyway. Concentrated L.P. to earn fees on-chain in ranges, for larger, self-custodied sizes.",
+   "cap": "Grid bots → capture oscillation in range-bound major pairs, fully automated. DeFi lending / stable LP → earn on idle stablecoins and reserves. Staking / LSTs → earn on assets you'd hold anyway. Concentrated LP → earn fees on-chain in ranges, for larger, self-custodied sizes."
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example — an illustrative allocation framework",
+   "items": [
+    "Reserve",
+    "Core yield",
+    "Hold-anyway assets",
+    "Range income",
+    "Speculative"
+   ],
+   "compact": true,
+   "vo": "Reserve, 15%, Stablecoin lending (split across 2 protocols), Liquidity to defend positions and redeploy after range breaks. Core yield, 25%, Stable-stable L.P. / stable lending, Base return on cash. Hold-anyway assets, 25%, Staking / liquid staking token, Earn on long-term holdings. Range income, 30%, Grid bots on liquid majors (+ optional wide on-chain L.P.), Capture oscillation. Speculative, at most 5%, Burner-wallet farms, airdrops, new protocols, Capped experiments.",
+   "cap": "Reserve, 15%, Stablecoin lending (split across 2 protocols), Liquidity to defend positions and redeploy after range breaks Core yield, 25%, Stable-stable LP / stable lending, Base return on cash Hold-anyway assets, 25%, Staking / LSTs, Earn on long-term holdings Range income, 30%, Grid bots on liquid majors (+ optional wide on-chain LP), Capture oscillation Speculative, ≤5%, Burner-wallet farms, airdrops, new protocols, Capped experiments"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example — an illustrative allocation framework"
+   ],
+   "sub": "Percentages are an example structure, not a recommendation. Set your own from your risk budget. Rules for this system: 1. One range thesis per asset. If a grid bot and an LP both run on ETH, their combined size must fit your ETH range-risk cap. 2. Reserve fund",
+   "vo": "Percentages are an example structure, not a recommendation. Set your own from your risk budget. Rules for this system: 1. One range thesis per asset. If a grid bot and an L.P. both run on ETH, their combined size must fit your ETH range-risk cap. 2. Reserve funds the defence. Range breaks and health-factor defence draw from reserve, never from other positions. 3. Sweep profits up. Realised grid profits and harvested yield go to reserve or vault on a schedule. 4. Review together. One weekly review across CEX and on-chain positions, using the same journal.",
+   "cap": "Percentages are an example structure, not a recommendation. Set your own from your risk budget. Rules for this system: 1. One range thesis per asset. If a grid bot and an LP both run on ETH, their combined size must fit your ETH range-risk cap. 2. Reserve funds the defence. Range breaks and health-factor defence draw from reserve, never from other positions. 3. Sweep profits up. Realised grid profits and harvested yield go to reserve or vault on a schedule. 4. Review together. One weekly review across CEX and on-chain positions, using the same journal."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Exposure added up by underlying asset, not by bot/position count",
+    "Reserve sized and kept out of positions",
+    "Profit sweep schedule set",
+    "One journal covering bots and DeFi positions"
+   ],
+   "vo": "Your checklist. Exposure added up by underlying asset, not by bot/position count Reserve sized and kept out of positions Profit sweep schedule set One journal covering bots and DeFi positions",
+   "cap": "Exposure added up by underlying asset, not by bot/position count Reserve sized and kept out of positions Profit sweep schedule set One journal covering bots and DeFi positions"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "ETH grid bot + ETH/USDC LP + ETH LST loop. How many independent bets?"
+   ],
+   "sub": "Answer: Essentially one: ETH staying in range or rising. They're correlated.",
+   "subAt": 0.62,
+   "vo": "ETH grid bot + ETH/U.S.D.C. L.P. + ETH liquid staking token loop. How many independent bets? ... Pause and think. ... The answer: Essentially one: ETH staying in range or rising. They're correlated.",
+   "cap": "ETH grid bot + ETH/USDC LP + ETH LST loop. How many independent bets? Pause and think. The answer: Essentially one: ETH staying in range or rising. They're correlated."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What is the reserve for?"
+   ],
+   "sub": "Answer: Defending debt positions and redeploying after invalidations, without forced selling.",
+   "subAt": 0.62,
+   "vo": "What is the reserve for? ... Pause and think. ... The answer: Defending debt positions and redeploying after invalidations, without forced selling.",
+   "cap": "What is the reserve for? Pause and think. The answer: Defending debt positions and redeploying after invalidations, without forced selling."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why sweep profits out of positions?"
+   ],
+   "sub": "Answer: Profits left in a position stay exposed to its risks. Sweeping locks them in.",
+   "subAt": 0.62,
+   "vo": "Why sweep profits out of positions? ... Pause and think. ... The answer: Profits left in a position stay exposed to its risks. Sweeping locks them in.",
+   "cap": "Why sweep profits out of positions? Pause and think. The answer: Profits left in a position stay exposed to its risks. Sweeping locks them in."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

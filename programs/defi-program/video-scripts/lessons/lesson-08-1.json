@@ -1,0 +1,114 @@
+{
+ "id": "lesson-08-1",
+ "title": "Lesson 8.1: DeFi portfolio construction",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 8.1 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-08.png",
+   "eyebrow": "Lesson 8.1",
+   "vo": "Lesson eight point one. DeFi portfolio construction.",
+   "cap": "Lesson 8.1. DeFi portfolio construction."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Split capital into risk buckets with caps, so no single failure can sink the portfolio.",
+   "vo": "Split capital into risk buckets with caps, so no single failure can sink the portfolio.",
+   "cap": "Split capital into risk buckets with caps, so no single failure can sink the portfolio."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Buckets",
+    "Concentration caps",
+    "Genuine diversification",
+    "Rebalancing rules"
+   ],
+   "vo": "Buckets: liquidity reserve , core (simple, durable) , productive (L.P., vaults, carry) , speculative (new, points, experiments). Concentration caps: per protocol, per chain, per stablecoin issuer, per bridge. Genuine diversification: two front ends on the same protocol, or two stablecoins with the same backing, are one risk, not two. Rebalancing rules: thresholds that trigger moving money between buckets.",
+   "cap": "Buckets: liquidity reserve · core (simple, durable) · productive (LP, vaults, carry) · speculative (new, points, experiments). Concentration caps: per protocol, per chain, per stablecoin issuer, per bridge. Genuine diversification: two front ends on the same protocol, or two stablecoins with the same backing, are one risk, not two. Rebalancing rules: thresholds that trigger moving money between buckets."
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example — a $100,000 DeFi book (illustrative)",
+   "items": [
+    "Reserve",
+    "Core",
+    "Productive",
+    "Speculative"
+   ],
+   "compact": true,
+   "vo": "Reserve, 15%, Stablecoins split across 2 issuers, instant access, n/a. Core, 45%, Blue-chip stable lending (2 protocols), ETH staking, 20%. Productive, 30%, Wide concentrated L.P., a vault, a P.T., 10%. Speculative, at most 10%, Points, new protocols, 5%.",
+   "cap": "Reserve, 15%, Stablecoins split across 2 issuers, instant access, n/a Core, 45%, Blue-chip stable lending (2 protocols), ETH staking, 20% Productive, 30%, Wide concentrated LP, a vault, a PT, 10% Speculative, ≤10%, Points, new protocols, 5%"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example — a $100,000 DeFi book (illustrative)"
+   ],
+   "sub": "Rebalance when any bucket drifts more than 5 points from target, or after any incident.",
+   "vo": "Rebalance when any bucket drifts more than 5 points from target, or after any incident.",
+   "cap": "Rebalance when any bucket drifts more than 5 points from target, or after any incident."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Buckets and targets written",
+    "Caps per protocol, chain, issuer, bridge written",
+    "Rebalancing rule written"
+   ],
+   "vo": "Your checklist. Buckets and targets written Caps per protocol, chain, issuer, bridge written Rebalancing rule written",
+   "cap": "Buckets and targets written Caps per protocol, chain, issuer, bridge written Rebalancing rule written"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Two stablecoins backed by the same collateral: diversified?"
+   ],
+   "sub": "Answer: No. They share one failure point.",
+   "subAt": 0.62,
+   "vo": "Two stablecoins backed by the same collateral: diversified? ... Pause and think. ... The answer: No. They share one failure point.",
+   "cap": "Two stablecoins backed by the same collateral: diversified? Pause and think. The answer: No. They share one failure point."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why keep a reserve bucket?"
+   ],
+   "sub": "Answer: To defend debt, meet needs and redeploy without forced selling.",
+   "subAt": 0.62,
+   "vo": "Why keep a reserve bucket? ... Pause and think. ... The answer: To defend debt, meet needs and redeploy without forced selling.",
+   "cap": "Why keep a reserve bucket? Pause and think. The answer: To defend debt, meet needs and redeploy without forced selling."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "When should you rebalance?"
+   ],
+   "sub": "Answer: When buckets drift past the threshold, or after an incident.",
+   "subAt": 0.62,
+   "vo": "When should you rebalance? ... Pause and think. ... The answer: When buckets drift past the threshold, or after an incident.",
+   "cap": "When should you rebalance? Pause and think. The answer: When buckets drift past the threshold, or after an incident."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "id": "lesson-13-0",
+ "title": "Lesson 13.0: Mastery Starter",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 13.0 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-13.png",
+   "eyebrow": "Lesson 13.0",
+   "vo": "Lesson thirteen point zero. Mastery Starter.",
+   "cap": "Lesson 13.0. Mastery Starter."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "The 60-second version"
+   ],
+   "sub": "Income from DeFi should be planned like a pension, not chased like a jackpot: build it from durable sources, subtract the losses you should expect, and pay yourself less than that.",
+   "vo": "Income from DeFi should be planned like a pension, not chased like a jackpot: build it from durable sources, subtract the losses you should expect, and pay yourself less than that.",
+   "cap": "Income from DeFi should be planned like a pension, not chased like a jackpot: build it from durable sources, subtract the losses you should expect, and pay yourself less than that."
+  },
+  {
+   "type": "bullets",
+   "title": "Words you'll need",
+   "items": [
+    "Durability",
+    "Risk-adjusted yield",
+    "LGD",
+    "Payout ratio",
+    "Principal"
+   ],
+   "compact": true,
+   "vo": "Durability, how long and reliably a source tends to pay. Risk-adjusted yield, yield minus expected losses. LGD, how much you lose if a loss event happens. Payout ratio, share of expected income you take out. Principal, the capital itself, never spent as income.",
+   "cap": "Durability, how long and reliably a source tends to pay Risk-adjusted yield, yield minus expected losses LGD, how much you lose if a loss event happens Payout ratio, share of expected income you take out Principal, the capital itself, never spent as income"
+  },
+  {
+   "type": "bullets",
+   "title": "Before you start",
+   "items": [
+    "Modules 0–12"
+   ],
+   "vo": "Modules 0–12",
+   "cap": "Modules 0–12"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Your first safe step"
+   ],
+   "sub": "Take one position and compute its risk-adjusted yield with the calculator",
+   "vo": "Take one position and compute its risk-adjusted yield with the calculator",
+   "cap": "Take one position and compute its risk-adjusted yield with the calculator"
+  },
+  {
+   "type": "bullets",
+   "title": "The mastery ladder",
+   "items": [
+    "Beginner",
+    "Practitioner",
+    "Master"
+   ],
+   "compact": true,
+   "vo": "Beginner, Ranks income sources by durability. Practitioner, Builds an income portfolio with risk-adjusted expected income. Master, Runs a payout policy that survives bad years, with annual reviews and scaling rules.",
+   "cap": "Beginner, Ranks income sources by durability Practitioner, Builds an income portfolio with risk-adjusted expected income Master, Runs a payout policy that survives bad years, with annual reviews and scaling rules"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "You've mastered it when…"
+   ],
+   "sub": "…your payout is set below risk-adjusted expected income and never draws on principal. ---",
+   "vo": "…your payout is set below risk-adjusted expected income and never draws on principal. ---",
+   "cap": "…your payout is set below risk-adjusted expected income and never draws on principal. ---"
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

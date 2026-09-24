@@ -1,0 +1,99 @@
+{
+ "id": "lesson-04-5",
+ "title": "Lesson 4.5: Vaults & yield optimisers",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 4.5 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-04.png",
+   "eyebrow": "Lesson 4.5",
+   "vo": "Lesson four point five. Vaults and yield optimisers.",
+   "cap": "Lesson 4.5. Vaults & yield optimisers."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Decide when a vault's fees are worth paying compared with doing it yourself.",
+   "vo": "Decide when a vault's fees are worth paying compared with doing it yourself.",
+   "cap": "Decide when a vault's fees are worth paying compared with doing it yourself."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "A vault pools deposits and runs a strategy (often harvesting and reinvesting rewards). You get shares. Costs: performance fee (a share of profits), management fee (a share of assets per year), sometimes withdrawal fees. Risks: the vault's code plus every proto",
+   "vo": "A vault pools deposits and runs a strategy (often harvesting and reinvesting rewards). You get shares. Costs: performance fee (a share of profits), management fee (a share of assets per year), sometimes withdrawal fees. Risks: the vault's code plus every protocol it uses.",
+   "cap": "A vault pools deposits and runs a strategy (often harvesting and reinvesting rewards). You get shares. Costs: performance fee (a share of profits), management fee (a share of assets per year), sometimes withdrawal fees. Risks: the vault's code plus every protocol it uses."
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example",
+   "items": [
+    "$5,000 position",
+    "$500,000 position"
+   ],
+   "vo": "Gross 10%, 20% performance fee, 0.5% management to 7.5% net. DIY instead, compounding weekly at $2 gas: $5,000 position: gas = $104 a year = 2.08% drag to the vault probably wins. $500,000 position: gas = 0.02% drag, while the vault's fees cost 2.5 points to DIY probably wins.",
+   "cap": "$5,000 position: gas = $104/yr = 2.08% drag → the vault probably wins. $500,000 position: gas = 0.02% drag, while the vault's fees cost 2.5 points → DIY probably wins."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Net APY after all vault fees computed",
+    "Compared with DIY gas drag at my size",
+    "Every underlying protocol reviewed"
+   ],
+   "vo": "Your checklist. Net A.P.Y. after all vault fees computed Compared with DIY gas drag at my size Every underlying protocol reviewed",
+   "cap": "Net APY after all vault fees computed Compared with DIY gas drag at my size Every underlying protocol reviewed"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Gross 12%, 10% performance fee, 1% management. Net?"
+   ],
+   "sub": "Answer: 12 × 0.9 − 1 = 9.8%.",
+   "subAt": 0.62,
+   "vo": "Gross 12%, 10% performance fee, 1% management. Net? ... Pause and think. ... The answer: 12 times 0.9 minus 1 = 9.8%.",
+   "cap": "Gross 12%, 10% performance fee, 1% management. Net? Pause and think. The answer: 12 × 0.9 − 1 = 9.8%."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why do vaults suit small positions?"
+   ],
+   "sub": "Answer: They spread gas costs across all depositors.",
+   "subAt": 0.62,
+   "vo": "Why do vaults suit small positions? ... Pause and think. ... The answer: They spread gas costs across all depositors.",
+   "cap": "Why do vaults suit small positions? Pause and think. The answer: They spread gas costs across all depositors."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What risk does a vault add?"
+   ],
+   "sub": "Answer: Its own code and strategy, on top of every protocol it deposits into.",
+   "subAt": 0.62,
+   "vo": "What risk does a vault add? ... Pause and think. ... The answer: Its own code and strategy, on top of every protocol it deposits into.",
+   "cap": "What risk does a vault add? Pause and think. The answer: Its own code and strategy, on top of every protocol it deposits into."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

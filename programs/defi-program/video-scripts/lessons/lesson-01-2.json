@@ -1,0 +1,102 @@
+{
+ "id": "lesson-01-2",
+ "title": "Lesson 1.2: How a transaction actually happens",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 1.2 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-01.png",
+   "eyebrow": "Lesson 1.2",
+   "vo": "Lesson one point two. How a transaction actually happens.",
+   "cap": "Lesson 1.2. How a transaction actually happens."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Follow a transaction from signature to finality, and estimate its cost.",
+   "vo": "Follow a transaction from signature to finality, and estimate its cost.",
+   "cap": "Follow a transaction from signature to finality, and estimate its cost."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Gas is the unit of computation. Cost = gas used × gas price. On",
+    "Nonce",
+    "Failed transactions still cost gas. The network did the computation even though the…",
+    "Finality",
+    "Explorers (e.g. Etherscan) show status, fee, sender, contract called, token transfers…"
+   ],
+   "vo": "Lifecycle: create to sign to broadcast to mempool (waiting) to included in a block to confirmed to final. Ethereum the price has a base fee (burned) plus a priority tip (to get included sooner). Gas price is quoted in gwei (1 gwei = 0.000000001 ETH). low-nonce transaction blocks all later ones until it confirms or is replaced (same nonce, higher fee). reversed. It differs by chain, and layer twos have their own rules (Module 5). Gas is the unit of computation. Cost = gas used times gas price. On Nonce: each account's transactions are numbered in order. A stuck Failed transactions still cost gas. The network did the computation even though the result was reverted. Finality: the point after which a transaction can't realistically be Explorers (for example Etherscan) show status, fee, sender, contract called, token transfers and logs.",
+   "cap": "Gas is the unit of computation. Cost = gas used × gas price. On Nonce: each account's transactions are numbered in order. A stuck Failed transactions still cost gas. The network did the computation even though the result was reverted. Finality: the point after which a transaction can't realistically be Explorers (e.g. Etherscan) show status, fee, sender, contract called, token transfers and logs."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "A swap uses 150,000 gas at 20 gwei: 150,000 × 20 = 3,000,000 gwei = 0.003 ETH. At $3,000/ETH that's $9. The same swap during congestion at 80 gwei costs $36. If you're compounding $1.50 of rewards, the gas costs more than the rewards. That's why position size ",
+   "vo": "A swap uses 150,000 gas at 20 gwei: 150,000 times 20 = 3,000,000 gwei = 0.003 ETH. At $3,000/ETH that's $9. The same swap during congestion at 80 gwei costs $36. If you're compounding $1.50 of rewards, the gas costs more than the rewards. That's why position size matters on-chain.",
+   "cap": "A swap uses 150,000 gas at 20 gwei: 150,000 × 20 = 3,000,000 gwei = 0.003 ETH. At $3,000/ETH that's $9. The same swap during congestion at 80 gwei costs $36. If you're compounding $1.50 of rewards, the gas costs more than the rewards. That's why position size matters on-chain."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "I check the fee estimate before signing",
+    "I know how to find my transaction on an explorer",
+    "I know a stuck transaction can be sped up or cancelled with the same nonce"
+   ],
+   "vo": "Your checklist. I check the fee estimate before signing I know how to find my transaction on an explorer I know a stuck transaction can be sped up or cancelled with the same nonce",
+   "cap": "I check the fee estimate before signing I know how to find my transaction on an explorer I know a stuck transaction can be sped up or cancelled with the same nonce"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Your transaction reverted. Did you pay?"
+   ],
+   "sub": "Answer: Yes, for the gas used up to the point of failure.",
+   "subAt": 0.62,
+   "vo": "Your transaction reverted. Did you pay? ... Pause and think. ... The answer: Yes, for the gas used up to the point of failure.",
+   "cap": "Your transaction reverted. Did you pay? Pause and think. The answer: Yes, for the gas used up to the point of failure."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "200,000 gas at 10 gwei with ETH at $2,500 costs?"
+   ],
+   "sub": "Answer: 2,000,000 gwei = 0.002 ETH = $5.",
+   "subAt": 0.62,
+   "vo": "200,000 gas at 10 gwei with ETH at $2,500 costs? ... Pause and think. ... The answer: 2,000,000 gwei = 0.002 ETH = $5.",
+   "cap": "200,000 gas at 10 gwei with ETH at $2,500 costs? Pause and think. The answer: 2,000,000 gwei = 0.002 ETH = $5."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why are your newer transactions all pending?"
+   ],
+   "sub": "Answer: An earlier nonce is stuck. Replace or speed it up, and the rest follow.",
+   "subAt": 0.62,
+   "vo": "Why are your newer transactions all pending? ... Pause and think. ... The answer: An earlier nonce is stuck. Replace or speed it up, and the rest follow.",
+   "cap": "Why are your newer transactions all pending? Pause and think. The answer: An earlier nonce is stuck. Replace or speed it up, and the rest follow."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

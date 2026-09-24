@@ -1,0 +1,91 @@
+{
+ "id": "lesson-00-0",
+ "title": "Lesson 0.0: Mastery Starter",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 0.0 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-00.png",
+   "eyebrow": "Lesson 0.0",
+   "vo": "Lesson zero point zero. Mastery Starter.",
+   "cap": "Lesson 0.0. Mastery Starter."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "The 60-second version"
+   ],
+   "sub": "Crypto is money recorded on a public ledger that nobody can quietly edit. You'll open an exchange account, buy a little crypto, move it into a wallet only you control, and make your first practice DeFi transaction, all with a small amount and a checklist.",
+   "vo": "Crypto is money recorded on a public ledger that nobody can quietly edit. You'll open an exchange account, buy a little crypto, move it into a wallet only you control, and make your first practice DeFi transaction, all with a small amount and a checklist.",
+   "cap": "Crypto is money recorded on a public ledger that nobody can quietly edit. You'll open an exchange account, buy a little crypto, move it into a wallet only you control, and make your first practice DeFi transaction, all with a small amount and a checklist."
+  },
+  {
+   "type": "bullets",
+   "title": "Words you'll need",
+   "items": [
+    "Blockchain",
+    "Wallet",
+    "Seed phrase",
+    "Exchange",
+    "Gas"
+   ],
+   "compact": true,
+   "vo": "Blockchain, a shared ledger kept by thousands of computers. Wallet, an app or device holding the keys that control your crypto. Seed phrase, 12–24 words that are your wallet. Never share. Exchange, a company that swaps your money for crypto. Gas, the network fee for a transaction.",
+   "cap": "Blockchain, a shared ledger kept by thousands of computers Wallet, an app or device holding the keys that control your crypto Seed phrase, 12–24 words that are your wallet. Never share Exchange, a company that swaps your money for crypto Gas, the network fee for a transaction"
+  },
+  {
+   "type": "bullets",
+   "title": "Before you start",
+   "items": [
+    "A phone, a computer, ID for KYC, a bank account",
+    "$50–$200 you can afford to lose while learning",
+    "2–3 hours over a few days"
+   ],
+   "vo": "A phone, a computer, ID for K.Y.C., a bank account $50–$200 you can afford to lose while learning 2–3 hours over a few days",
+   "cap": "A phone, a computer, ID for KYC, a bank account $50–$200 you can afford to lose while learning 2–3 hours over a few days"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Your first safe step"
+   ],
+   "sub": "Read Lesson 0.1, then secure your email with a unique password and authenticator-app 2FA. No money needed yet.",
+   "vo": "Read Lesson 0.1, then secure your email with a unique password and authenticator-app two-factor. No money needed yet.",
+   "cap": "Read Lesson 0.1, then secure your email with a unique password and authenticator-app 2FA. No money needed yet."
+  },
+  {
+   "type": "bullets",
+   "title": "The mastery ladder",
+   "items": [
+    "Beginner",
+    "Practitioner",
+    "Master"
+   ],
+   "compact": true,
+   "vo": "Beginner, Can explain blockchain, wallet and seed phrase in plain words. Practitioner, Has a secured exchange account and a restore-tested wallet. Master, Completes the whole Day-1 Setup Kit and can coach a friend through it.",
+   "cap": "Beginner, Can explain blockchain, wallet and seed phrase in plain words Practitioner, Has a secured exchange account and a restore-tested wallet Master, Completes the whole Day-1 Setup Kit and can coach a friend through it"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "You've mastered it when…"
+   ],
+   "sub": "…every box of the Day-1 Setup Kit is ticked. ---",
+   "vo": "…every box of the Day-1 Setup Kit is ticked. ---",
+   "cap": "…every box of the Day-1 Setup Kit is ticked. ---"
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

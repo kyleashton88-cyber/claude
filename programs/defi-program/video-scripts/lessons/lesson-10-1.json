@@ -1,0 +1,118 @@
+{
+ "id": "lesson-10-1",
+ "title": "Lesson 10.1: Fixed-rate yield: principal and yield tokens (PT/YT)",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 10.1 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-10.png",
+   "eyebrow": "Lesson 10.1",
+   "vo": "Lesson ten point one. Fixed-rate yield: principal and yield tokens (P.T./Y.T.).",
+   "cap": "Lesson 10.1. Fixed-rate yield: principal and yield tokens (PT/YT)."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Lock a fixed return using principal tokens, and price a yield token against its implied rate.",
+   "vo": "Lock a fixed return using principal tokens, and price a yield token against its implied rate.",
+   "cap": "Lock a fixed return using principal tokens, and price a yield token against its implied rate."
+  },
+  {
+   "type": "image",
+   "src": "assets/charts/pt-convergence.png",
+   "eyebrow": "PT price converges to 1.00 at maturity",
+   "vo": "Here's the picture: P.T. price converges to 1.00 at maturity.",
+   "cap": "PT price converges to 1.00 at maturity."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "PT (principal token)",
+    "YT (yield token)"
+   ],
+   "vo": "Yield tokenization takes a yield-bearing asset (a staked asset, a lending receipt, a stablecoin savings token) and splits it into two tokens that mature on a set date: trades at a discount before then. Buy the discount, hold to maturity, and your return is fixed. the underlying earns until maturity, then is worth zero. P.T. + Y.T. = one unit of the underlying. The P.T. price implies a fixed rate; the Y.T. is a bet that realised yield beats it. fixed A.P.Y. = (1 divided by P.T. price)^(365 divided by days) minus 1 P.T. (principal token): redeems 1:1 for the underlying at maturity. It Y.T. (yield token): receives all the variable yield (and often points)",
+   "cap": "PT (principal token): redeems 1:1 for the underlying at maturity. It YT (yield token): receives all the variable yield (and often points)"
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example",
+   "items": [
+    "the calculator → 8.63% fixed APY if held to maturity.",
+    "$100,000 buys ~104,167 PT → redeems for ~104,167 of the underlying at maturity.",
+    "The YT costs ~0.04 per unit. It only profits if the underlying's realised"
+   ],
+   "vo": "A stablecoin savings token has a P.T. maturing in 180 days, priced at 0.96. yield (plus any points) averages above about 8.6% for the 180 days. Near maturity, small discounts are big rates: P.T. at 0.985 with 60 days left to 9.63% A.P.Y.. Check liquidity before chasing these; exiting early means selling into the pool. the calculator to 8.63% fixed A.P.Y. if held to maturity. $100,000 buys about 104,167 P.T. to redeems for about 104,167 of the underlying at maturity. The Y.T. costs about 0.04 per unit. It only profits if the underlying's realised",
+   "cap": "the calculator → 8.63% fixed APY if held to maturity. $100,000 buys ~104,167 PT → redeems for ~104,167 of the underlying at maturity. The YT costs ~0.04 per unit. It only profits if the underlying's realised"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "What this position is short"
+   ],
+   "sub": "PT: the underlying's credit/depeg risk, and liquidity if you exit early. YT: falling yields, and time (it decays to zero).",
+   "vo": "P.T.: the underlying's credit/depeg risk, and liquidity if you exit early. Y.T.: falling yields, and time (it decays to zero).",
+   "cap": "PT: the underlying's credit/depeg risk, and liquidity if you exit early. YT: falling yields, and time (it decays to zero)."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "I'd hold the underlying asset anyway",
+    "Maturity date matches when I'll need the money (Module 12.4 ladder)",
+    "Pool depth checked for an early exit",
+    "YT sized as speculation, not income"
+   ],
+   "vo": "Your checklist. I'd hold the underlying asset anyway Maturity date matches when I'll need the money (Module 12.4 ladder) Pool depth checked for an early exit Y.T. sized as speculation, not income",
+   "cap": "I'd hold the underlying asset anyway Maturity date matches when I'll need the money (Module 12.4 ladder) Pool depth checked for an early exit YT sized as speculation, not income"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "PT at 0.97, 120 days to maturity. Fixed APY?"
+   ],
+   "sub": "Answer: (1/0.97)^(365/120) − 1 ≈ 9.7%.",
+   "subAt": 0.62,
+   "vo": "P.T. at 0.97, 120 days to maturity. Fixed A.P.Y.? ... Pause and think. ... The answer: (1/0.97)^(365/120) minus 1 about 9.7%.",
+   "cap": "PT at 0.97, 120 days to maturity. Fixed APY? Pause and think. The answer: (1/0.97)^(365/120) − 1 ≈ 9.7%."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Does buying PT remove the underlying's risk?"
+   ],
+   "sub": "Answer: No. It fixes the rate. If the underlying depegs or is exploited, the PT redeems into a damaged asset.",
+   "subAt": 0.62,
+   "vo": "Does buying P.T. remove the underlying's risk? ... Pause and think. ... The answer: No. It fixes the rate. If the underlying depegs or is exploited, the P.T. redeems into a damaged asset.",
+   "cap": "Does buying PT remove the underlying's risk? Pause and think. The answer: No. It fixes the rate. If the underlying depegs or is exploited, the PT redeems into a damaged asset."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What must happen for a YT to profit?"
+   ],
+   "sub": "Answer: Realised variable yield plus points must beat the implied rate priced into the PT.",
+   "subAt": 0.62,
+   "vo": "What must happen for a Y.T. to profit? ... Pause and think. ... The answer: Realised variable yield plus points must beat the implied rate priced into the P.T..",
+   "cap": "What must happen for a YT to profit? Pause and think. The answer: Realised variable yield plus points must beat the implied rate priced into the PT."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

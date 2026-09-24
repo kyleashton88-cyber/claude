@@ -1,0 +1,118 @@
+{
+ "id": "lesson-12-2",
+ "title": "Lesson 12.2: Custody architecture: vault, multisig and spending policies",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 12.2 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-12.png",
+   "eyebrow": "Lesson 12.2",
+   "vo": "Lesson twelve point two. Custody architecture: vault, multisig and spending policies.",
+   "cap": "Lesson 12.2. Custody architecture: vault, multisig and spending policies."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Design custody so that no single lost device, stolen key or mistaken signature can drain the bank.",
+   "vo": "Design custody so that no single lost device, stolen key or mistaken signature can drain the bank.",
+   "cap": "Design custody so that no single lost device, stolen key or mistaken signature can drain the bank."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/custody-architecture.png",
+   "eyebrow": "Custody architecture",
+   "vo": "Here's the picture: Custody architecture.",
+   "cap": "Custody architecture."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Vault",
+    "Operating",
+    "Hot"
+   ],
+   "compact": true,
+   "vo": "Vault, Most of your equity, Multisig, for example 2-of-3 hardware keys in separate locations, No DeFi approvals. Moves only to the Operating tier, to allowlisted addresses. Operating, Active positions, Hardware wallet or a smart account with limits, Verified protocols only. Spending limit per day. Hot, Small float, Hot wallet, Anything new or experimental. Refilled on schedule.",
+   "cap": "Vault, Most of your equity, Multisig, e.g. 2-of-3 hardware keys in separate locations, No DeFi approvals. Moves only to the Operating tier, to allowlisted addresses Operating, Active positions, Hardware wallet or a smart account with limits, Verified protocols only. Spending limit per day Hot, Small float, Hot wallet, Anything new or experimental. Refilled on schedule"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "Scale Module 1's three wallets into a bank-grade setup: Smart-account features to use where available: Spending limits per day/week Allowlists (it can only send to addresses you pre-approved) Timelocks on large moves (a delay you can cancel if it wasn't you) R",
+   "vo": "Scale Module 1's three wallets into a bank-grade setup: Smart-account features to use where available: Spending limits per day/week Allowlists (it can only send to addresses you pre-approved) Timelocks on large moves (a delay you can cancel if it wasn't you) Recovery paths agreed and tested in advance",
+   "cap": "Scale Module 1's three wallets into a bank-grade setup: Smart-account features to use where available: Spending limits per day/week Allowlists (it can only send to addresses you pre-approved) Timelocks on large moves (a delay you can cancel if it wasn't you) Recovery paths agreed and tested in advance"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Vault: 2-of-3 multisig, with key A at home, key B in a safe-deposit box and key C with a trusted person or a professional co-signer. Losing any one key is survivable; stealing any one key is useless. Test it: move $10 through every path once a quarter.",
+   "vo": "Vault: 2-of-3 multisig, with key A at home, key B in a safe-deposit box and key C with a trusted person or a professional co-signer. Losing any one key is survivable; stealing any one key is useless. Test it: move $10 through every path once a quarter.",
+   "cap": "Vault: 2-of-3 multisig, with key A at home, key B in a safe-deposit box and key C with a trusted person or a professional co-signer. Losing any one key is survivable; stealing any one key is useless. Test it: move $10 through every path once a quarter."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Vault is multisig; keys in separate physical locations",
+    "Operating tier has a daily limit",
+    "Allowlist on vault outflows",
+    "Quarterly recovery test done and logged"
+   ],
+   "vo": "Your checklist. Vault is multisig; keys in separate physical locations Operating tier has a daily limit Allowlist on vault outflows Quarterly recovery test done and logged",
+   "cap": "Vault is multisig; keys in separate physical locations Operating tier has a daily limit Allowlist on vault outflows Quarterly recovery test done and logged"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why 2-of-3 rather than 1-of-1?"
+   ],
+   "sub": "Answer: One key can be lost or stolen without losing the funds or giving an attacker control.",
+   "subAt": 0.62,
+   "vo": "Why 2-of-3 rather than 1-of-1? ... Pause and think. ... The answer: One key can be lost or stolen without losing the funds or giving an attacker control.",
+   "cap": "Why 2-of-3 rather than 1-of-1? Pause and think. The answer: One key can be lost or stolen without losing the funds or giving an attacker control."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does a timelock buy you?"
+   ],
+   "sub": "Answer: Time to notice and cancel an unauthorised large move.",
+   "subAt": 0.62,
+   "vo": "What does a timelock buy you? ... Pause and think. ... The answer: Time to notice and cancel an unauthorised large move.",
+   "cap": "What does a timelock buy you? Pause and think. The answer: Time to notice and cancel an unauthorised large move."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why test recovery with a small amount?"
+   ],
+   "sub": "Answer: A recovery plan you've never run is an assumption. Testing proves every key and path works.",
+   "subAt": 0.62,
+   "vo": "Why test recovery with a small amount? ... Pause and think. ... The answer: A recovery plan you've never run is an assumption. Testing proves every key and path works.",
+   "cap": "Why test recovery with a small amount? Pause and think. The answer: A recovery plan you've never run is an assumption. Testing proves every key and path works."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

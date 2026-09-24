@@ -1,0 +1,98 @@
+{
+ "id": "lesson-11-3",
+ "title": "Lesson 11.3: Liquidation protection: buffers, alerts and automated deleveraging",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 11.3 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-11.png",
+   "eyebrow": "Lesson 11.3",
+   "vo": "Lesson eleven point three. Liquidation protection: buffers, alerts and automated deleveraging.",
+   "cap": "Lesson 11.3. Liquidation protection: buffers, alerts and automated deleveraging."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Make liquidation practically impossible with buffers, alerts and pre-computed repayment.",
+   "vo": "Make liquidation practically impossible with buffers, alerts and pre-computed repayment.",
+   "cap": "Make liquidation practically impossible with buffers, alerts and pre-computed repayment."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "Three layers: buffer (HF ≥ 2–2.5 at entry) → alerts (HF 2.0 and 1.7, Module 14.1) → action (repay, add collateral, or automated deleveraging tools that repay debt when HF crosses a trigger; these add their own contract and permission risk). Pre-compute the rep",
+   "vo": "Three layers: buffer (health factor at least 2–2.5 at entry) to alerts (health factor 2.0 and 1.7, Module 14.1) to action (repay, add collateral, or automated deleveraging tools that repay debt when health factor crosses a trigger; these add their own contract and permission risk). Pre-compute the repayment needed to restore your target health factor: debt to keep = collateral value times LT divided by target health factor.",
+   "cap": "Three layers: buffer (HF ≥ 2–2.5 at entry) → alerts (HF 2.0 and 1.7, Module 14.1) → action (repay, add collateral, or automated deleveraging tools that repay debt when HF crosses a trigger; these add their own contract and permission risk). Pre-compute the repayment needed to restore your target HF: debt to keep = collateral value × LT ÷ target HF."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "10 ETH falls to $2,400 → collateral $24,000, LT 0.8, debt $12,000 → HF 1.6. To restore HF 2.5: debt must be 24,000 × 0.8 ÷ 2.5 = $7,680 → repay $4,320 from the reserve.",
+   "vo": "10 ETH falls to $2,400 to collateral $24,000, LT 0.8, debt $12,000 to health factor 1.6. To restore health factor 2.5: debt must be 24,000 times 0.8 divided by 2.5 = $7,680 to repay $4,320 from the reserve.",
+   "cap": "10 ETH falls to $2,400 → collateral $24,000, LT 0.8, debt $12,000 → HF 1.6. To restore HF 2.5: debt must be 24,000 × 0.8 ÷ 2.5 = $7,680 → repay $4,320 from the reserve."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Alerts at HF 2.0 and 1.7",
+    "Repayment to restore target HF pre-computed",
+    "Reserve covers that repayment"
+   ],
+   "vo": "Your checklist. Alerts at health factor 2.0 and 1.7 Repayment to restore target health factor pre-computed Reserve covers that repayment",
+   "cap": "Alerts at HF 2.0 and 1.7 Repayment to restore target HF pre-computed Reserve covers that repayment"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Collateral $40,000, LT 0.8, target HF 2. Max debt?"
+   ],
+   "sub": "Answer: $16,000.",
+   "subAt": 0.62,
+   "vo": "Collateral $40,000, LT 0.8, target health factor 2. Max debt? ... Pause and think. ... The answer: $16,000.",
+   "cap": "Collateral $40,000, LT 0.8, target HF 2. Max debt? Pause and think. The answer: $16,000."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What do automated deleveraging tools add?"
+   ],
+   "sub": "Answer: Their own contract and permission risk.",
+   "subAt": 0.62,
+   "vo": "What do automated deleveraging tools add? ... Pause and think. ... The answer: Their own contract and permission risk.",
+   "cap": "What do automated deleveraging tools add? Pause and think. The answer: Their own contract and permission risk."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why pre-compute the repayment?"
+   ],
+   "sub": "Answer: So you act immediately, not while calculating under stress.",
+   "subAt": 0.62,
+   "vo": "Why pre-compute the repayment? ... Pause and think. ... The answer: So you act immediately, not while calculating under stress.",
+   "cap": "Why pre-compute the repayment? Pause and think. The answer: So you act immediately, not while calculating under stress."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

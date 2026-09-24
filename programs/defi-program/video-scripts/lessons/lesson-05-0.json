@@ -1,0 +1,89 @@
+{
+ "id": "lesson-05-0",
+ "title": "Lesson 5.0: Mastery Starter",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 5.0 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-05.png",
+   "eyebrow": "Lesson 5.0",
+   "vo": "Lesson five point zero. Mastery Starter.",
+   "cap": "Lesson 5.0. Mastery Starter."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "The 60-second version"
+   ],
+   "sub": "Your position is only as safe as the weakest thing it depends on: the bridge that moved your tokens, the oracle that prices your collateral, the admin key that can upgrade the contract. Most big DeFi losses came from this plumbing.",
+   "vo": "Your position is only as safe as the weakest thing it depends on: the bridge that moved your tokens, the oracle that prices your collateral, the admin key that can upgrade the contract. Most big DeFi losses came from this plumbing.",
+   "cap": "Your position is only as safe as the weakest thing it depends on: the bridge that moved your tokens, the oracle that prices your collateral, the admin key that can upgrade the contract. Most big DeFi losses came from this plumbing."
+  },
+  {
+   "type": "bullets",
+   "title": "Words you'll need",
+   "items": [
+    "Bridge",
+    "Layer 2",
+    "Oracle",
+    "Proxy",
+    "Timelock"
+   ],
+   "compact": true,
+   "vo": "Bridge, moves tokens between chains. Layer 2, a cheaper network built on Ethereum. Oracle, feeds prices into contracts. Proxy, a contract whose logic can be upgraded. Timelock, a delay before changes take effect.",
+   "cap": "Bridge, moves tokens between chains Layer 2, a cheaper network built on Ethereum Oracle, feeds prices into contracts Proxy, a contract whose logic can be upgraded Timelock, a delay before changes take effect"
+  },
+  {
+   "type": "bullets",
+   "title": "Before you start",
+   "items": [
+    "Modules 0–4"
+   ],
+   "vo": "Modules 0–4",
+   "cap": "Modules 0–4"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Your first safe step"
+   ],
+   "sub": "On a block explorer, open a protocol you use: is it a proxy? Who can upgrade it? Is there a timelock?",
+   "vo": "On a block explorer, open a protocol you use: is it a proxy? Who can upgrade it? Is there a timelock?",
+   "cap": "On a block explorer, open a protocol you use: is it a proxy? Who can upgrade it? Is there a timelock?"
+  },
+  {
+   "type": "bullets",
+   "title": "The mastery ladder",
+   "items": [
+    "Beginner",
+    "Practitioner",
+    "Master"
+   ],
+   "compact": true,
+   "vo": "Beginner, Knows which chain, bridge and oracle each position uses. Practitioner, Draws a full dependency map and reads audits properly. Master, Operates across EVM and non-EVM chains with capped bridge and wrapper exposure.",
+   "cap": "Beginner, Knows which chain, bridge and oracle each position uses Practitioner, Draws a full dependency map and reads audits properly Master, Operates across EVM and non-EVM chains with capped bridge and wrapper exposure"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "You've mastered it when…"
+   ],
+   "sub": "…you can draw the complete dependency map of any position and rate each link. ---",
+   "vo": "…you can draw the complete dependency map of any position and rate each link. ---",
+   "cap": "…you can draw the complete dependency map of any position and rate each link. ---"
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

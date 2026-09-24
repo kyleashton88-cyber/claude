@@ -13,7 +13,7 @@ and calls the others as needed.
 ## On-Chain Operator Program
 Everything for the DeFi program is in one file: [`ON-CHAIN-OPERATOR-PROGRAM.md`](programs/defi-program/ON-CHAIN-OPERATOR-PROGRAM.md), also as [Word](programs/defi-program/On-Chain-Operator-Program.docx) and [PDF](programs/defi-program/On-Chain-Operator-Program.pdf).
 All 107 lessons and 15 Mastery Starters are written (topic map: `programs/defi-program/09-mastery-map.md`); VSLs and module intro videos are in [`programs/defi-program/video/`](programs/defi-program/video/).
-To finish and launch it, paste [`programs/defi-program/BUILD-PROMPT.md`](programs/defi-program/BUILD-PROMPT.md) into Grok 4.6 (medium) with the files it lists, or run it in Claude Code.
+To finish and launch it, paste [`programs/defi-program/BUILD-PROMPT.md`](programs/defi-program/BUILD-PROMPT.md) into Whop's AI (Grok 4.6) with the files it lists, or run it in Claude Code.
 
 ## Skills
 

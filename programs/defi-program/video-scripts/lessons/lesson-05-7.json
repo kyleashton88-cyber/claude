@@ -1,0 +1,101 @@
+{
+ "id": "lesson-05-7",
+ "title": "Lesson 5.7: Operating across chains: gas, routes and chain abstraction",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 5.7 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-05.png",
+   "eyebrow": "Lesson 5.7",
+   "vo": "Lesson five point seven. Operating across chains: gas, routes and chain abstraction.",
+   "cap": "Lesson 5.7. Operating across chains: gas, routes and chain abstraction."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Move value between chains cheaply and safely, without getting stranded without gas.",
+   "vo": "Move value between chains cheaply and safely, without getting stranded without gas.",
+   "cap": "Move value between chains cheaply and safely, without getting stranded without gas."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Gas stranding",
+    "Route choice",
+    "Chain abstraction",
+    "Always"
+   ],
+   "vo": "Gas stranding: tokens on a chain where you have no gas token can't move. Keep a small gas float on every chain you use. Route choice: canonical bridge (safest, sometimes slow), fast bridge/liquidity network, exchange deposit-withdraw (often simplest for large amounts, but custodial for a moment), or intent-based cross-chain swaps (solvers deliver on the other chain). Chain abstraction: wallets and apps increasingly hide chains (\"pay gas in U.S.D.C.\", \"one balance across chains\") using smart accounts, paymasters and solvers. It's convenient, and every layer that hides complexity is also a dependency. Always: check the destination network, send a test first, and record the route in your journal.",
+   "cap": "Gas stranding: tokens on a chain where you have no gas token can't move. Keep a small gas float on every chain you use. Route choice: canonical bridge (safest, sometimes slow), fast bridge/liquidity network, exchange deposit-withdraw (often simplest for large amounts, but custodial for a moment), or intent-based cross-chain swaps (solvers deliver on the other chain). Chain abstraction: wallets and apps increasingly hide chains (\"pay gas in USDC\", \"one balance across chains\") using smart accounts, paymasters and solvers. It's convenient, and every layer that hides complexity is also a dependency. Always: check the destination network, send a test first, and record the route in your journal."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Moving $30,000 USDC from Arbitrum to Base: compare a canonical route via Ethereum (two transactions, slower, higher gas), a reputable fast bridge ($5–$15 fee, minutes), and an exchange (withdraw on Base; check the exchange supports USDC on both networks). Send",
+   "vo": "Moving $30,000 U.S.D.C. from Arbitrum to Base: compare a canonical route via Ethereum (two transactions, slower, higher gas), a reputable fast bridge ($5–$15 fee, minutes), and an exchange (withdraw on Base; check the exchange supports U.S.D.C. on both networks). Send $50 first by the chosen route, keep about $5 of ETH on Base for gas, then send the rest.",
+   "cap": "Moving $30,000 USDC from Arbitrum to Base: compare a canonical route via Ethereum (two transactions, slower, higher gas), a reputable fast bridge ($5–$15 fee, minutes), and an exchange (withdraw on Base; check the exchange supports USDC on both networks). Send $50 first by the chosen route, keep ~$5 of ETH on Base for gas, then send the rest."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Gas float on every chain I use",
+    "Route chosen by trust model and size, not just speed",
+    "Test amount first; route recorded"
+   ],
+   "vo": "Your checklist. Gas float on every chain I use Route chosen by trust model and size, not just speed Test amount first; route recorded",
+   "cap": "Gas float on every chain I use Route chosen by trust model and size, not just speed Test amount first; route recorded"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What is gas stranding?"
+   ],
+   "sub": "Answer: Having tokens on a chain with no gas token to move them.",
+   "subAt": 0.62,
+   "vo": "What is gas stranding? ... Pause and think. ... The answer: Having tokens on a chain with no gas token to move them.",
+   "cap": "What is gas stranding? Pause and think. The answer: Having tokens on a chain with no gas token to move them."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Risk of chain abstraction?"
+   ],
+   "sub": "Answer: Each hidden layer (smart accounts, paymasters, solvers) is an extra dependency.",
+   "subAt": 0.62,
+   "vo": "Risk of chain abstraction? ... Pause and think. ... The answer: Each hidden layer (smart accounts, paymasters, solvers) is an extra dependency.",
+   "cap": "Risk of chain abstraction? Pause and think. The answer: Each hidden layer (smart accounts, paymasters, solvers) is an extra dependency."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "First step on any new route?"
+   ],
+   "sub": "Answer: Send a small test amount.",
+   "subAt": 0.62,
+   "vo": "First step on any new route? ... Pause and think. ... The answer: Send a small test amount.",
+   "cap": "First step on any new route? Pause and think. The answer: Send a small test amount."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

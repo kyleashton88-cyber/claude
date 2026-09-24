@@ -1,0 +1,102 @@
+{
+ "id": "lesson-05-4",
+ "title": "Lesson 5.4: Smart contracts: state, proxies, admin keys",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 5.4 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-05.png",
+   "eyebrow": "Lesson 5.4",
+   "vo": "Lesson five point four. Smart contracts: state, proxies, admin keys.",
+   "cap": "Lesson 5.4. Smart contracts: state, proxies, admin keys."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Read who controls a contract and whether its code can change after you deposit.",
+   "vo": "Read who controls a contract and whether its code can change after you deposit.",
+   "cap": "Read who controls a contract and whether its code can change after you deposit."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "State",
+    "Verified source",
+    "Proxy / upgradeable contracts",
+    "Admin keys and roles",
+    "Timelocks"
+   ],
+   "vo": "State: what a contract stores (balances, parameters). Functions change it; events log what happened. Verified source: the code published on the explorer matches what's deployed. That's good, not proof of safety. Proxy / upgradeable contracts: the address you use stays the same, but the logic behind it can be swapped. Whoever controls upgrades controls your funds' rules. Admin keys and roles: owners, guardians, multisigs; can they pause, upgrade or move funds? Timelocks: a delay between an approved change and it taking effect. Your window to exit.",
+   "cap": "State: what a contract stores (balances, parameters). Functions change it; events log what happened. Verified source: the code published on the explorer matches what's deployed. That's good, not proof of safety. Proxy / upgradeable contracts: the address you use stays the same, but the logic behind it can be swapped. Whoever controls upgrades controls your funds' rules. Admin keys and roles: owners, guardians, multisigs; can they pause, upgrade or move funds? Timelocks: a delay between an approved change and it taking effect. Your window to exit."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "On a block explorer, the vault you use shows \"Proxy\", with the upgrade admin a 3-of-5 multisig behind a 48-hour timelock. That means no instant rug by one key, and 48 hours to exit if a change you don't like is queued. A 1-of-1 admin with no timelock is a red ",
+   "vo": "On a block explorer, the vault you use shows \"Proxy\", with the upgrade admin a 3-of-5 multisig behind a 48-hour timelock. That means no instant rug by one key, and 48 hours to exit if a change you don't like is queued. A 1-of-1 admin with no timelock is a red flag.",
+   "cap": "On a block explorer, the vault you use shows \"Proxy\", with the upgrade admin a 3-of-5 multisig behind a 48-hour timelock. That means no instant rug by one key, and 48 hours to exit if a change you don't like is queued. A 1-of-1 admin with no timelock is a red flag."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Proxy or not, and who can upgrade",
+    "Admin roles and multisig threshold known",
+    "Timelock length known; alert on queued changes for large positions"
+   ],
+   "vo": "Your checklist. Proxy or not, and who can upgrade Admin roles and multisig threshold known Timelock length known; alert on queued changes for large positions",
+   "cap": "Proxy or not, and who can upgrade Admin roles and multisig threshold known Timelock length known; alert on queued changes for large positions"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Does verified source code mean safe?"
+   ],
+   "sub": "Answer: No. It means the published code matches the deployed code.",
+   "subAt": 0.62,
+   "vo": "Does verified source code mean safe? ... Pause and think. ... The answer: No. It means the published code matches the deployed code.",
+   "cap": "Does verified source code mean safe? Pause and think. The answer: No. It means the published code matches the deployed code."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why does a timelock matter to users?"
+   ],
+   "sub": "Answer: It gives time to see and exit before a change takes effect.",
+   "subAt": 0.62,
+   "vo": "Why does a timelock matter to users? ... Pause and think. ... The answer: It gives time to see and exit before a change takes effect.",
+   "cap": "Why does a timelock matter to users? Pause and think. The answer: It gives time to see and exit before a change takes effect."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Red flag in admin setup?"
+   ],
+   "sub": "Answer: A single key that can upgrade or move funds instantly.",
+   "subAt": 0.62,
+   "vo": "Red flag in admin setup? ... Pause and think. ... The answer: A single key that can upgrade or move funds instantly.",
+   "cap": "Red flag in admin setup? Pause and think. The answer: A single key that can upgrade or move funds instantly."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

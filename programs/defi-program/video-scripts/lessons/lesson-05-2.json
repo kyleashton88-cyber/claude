@@ -1,0 +1,102 @@
+{
+ "id": "lesson-05-2",
+ "title": "Lesson 5.2: Layer 2s, sequencers & withdrawal paths",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 5.2 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-05.png",
+   "eyebrow": "Lesson 5.2",
+   "vo": "Lesson five point two. Layer 2s, sequencers and withdrawal paths.",
+   "cap": "Lesson 5.2. Layer 2s, sequencers & withdrawal paths."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Understand how your L2 settles, who orders your transactions, and how you'd exit.",
+   "vo": "Understand how your layer two settles, who orders your transactions, and how you'd exit.",
+   "cap": "Understand how your L2 settles, who orders your transactions, and how you'd exit."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Rollups execute transactions off Ethereum and post data or proofs back to it.",
+    "Optimistic rollups assume transactions are valid unless challenged. Native withdrawals…",
+    "ZK rollups post validity proofs, so native withdrawals can be faster.",
+    "Sequencer",
+    "Escape hatches"
+   ],
+   "vo": "Rollups execute transactions off Ethereum and post data or proofs back to it. Optimistic rollups assume transactions are valid unless challenged. Native withdrawals to Ethereum wait out a challenge window (about 7 days on major optimistic rollups). ZK rollups post validity proofs, so native withdrawals can be faster. Sequencer: the operator that orders transactions. Often a single operator today; if it goes down, the chain may pause. Escape hatches: most rollups let you force a withdrawal via Ethereum if the sequencer censors you. Know if yours does.",
+   "cap": "Rollups execute transactions off Ethereum and post data or proofs back to it. Optimistic rollups assume transactions are valid unless challenged. Native withdrawals to Ethereum wait out a challenge window (about 7 days on major optimistic rollups). ZK rollups post validity proofs, so native withdrawals can be faster. Sequencer: the operator that orders transactions. Often a single operator today; if it goes down, the chain may pause. Escape hatches: most rollups let you force a withdrawal via Ethereum if the sequencer censors you. Know if yours does."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "You hold $20,000 on an optimistic rollup and need it on Ethereum. Native bridge: safest, ~7 days. Fast bridge: minutes, for a fee, relying on its liquidity. Plan your liquidity ladder (Module 12.4) around the slow path.",
+   "vo": "You hold $20,000 on an optimistic rollup and need it on Ethereum. Native bridge: safest, about 7 days. Fast bridge: minutes, for a fee, relying on its liquidity. Plan your liquidity ladder (Module 12.4) around the slow path.",
+   "cap": "You hold $20,000 on an optimistic rollup and need it on Ethereum. Native bridge: safest, ~7 days. Fast bridge: minutes, for a fee, relying on its liquidity. Plan your liquidity ladder (Module 12.4) around the slow path."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Rollup type and withdrawal time known for each L2 I use",
+    "Sequencer setup and escape hatch known",
+    "Liquidity plan assumes the slow path"
+   ],
+   "vo": "Your checklist. Rollup type and withdrawal time known for each layer two I use Sequencer setup and escape hatch known Liquidity plan assumes the slow path",
+   "cap": "Rollup type and withdrawal time known for each L2 I use Sequencer setup and escape hatch known Liquidity plan assumes the slow path"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why do optimistic rollup withdrawals take ~7 days?"
+   ],
+   "sub": "Answer: The challenge window lets anyone dispute an invalid state before it's final.",
+   "subAt": 0.62,
+   "vo": "Why do optimistic rollup withdrawals take about 7 days? ... Pause and think. ... The answer: The challenge window lets anyone dispute an invalid state before it's final.",
+   "cap": "Why do optimistic rollup withdrawals take ~7 days? Pause and think. The answer: The challenge window lets anyone dispute an invalid state before it's final."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What happens if a single sequencer goes down?"
+   ],
+   "sub": "Answer: The L2 may pause transactions until it recovers.",
+   "subAt": 0.62,
+   "vo": "What happens if a single sequencer goes down? ... Pause and think. ... The answer: The layer two may pause transactions until it recovers.",
+   "cap": "What happens if a single sequencer goes down? Pause and think. The answer: The L2 may pause transactions until it recovers."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What's an escape hatch?"
+   ],
+   "sub": "Answer: A way to force a transaction or withdrawal via the base chain if the sequencer censors you.",
+   "subAt": 0.62,
+   "vo": "What's an escape hatch? ... Pause and think. ... The answer: A way to force a transaction or withdrawal via the base chain if the sequencer censors you.",
+   "cap": "What's an escape hatch? Pause and think. The answer: A way to force a transaction or withdrawal via the base chain if the sequencer censors you."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

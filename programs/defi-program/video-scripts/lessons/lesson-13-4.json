@@ -1,0 +1,103 @@
+{
+ "id": "lesson-13-4",
+ "title": "Lesson 13.4: The payout policy: how much you can take out",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 13.4 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-13.png",
+   "eyebrow": "Lesson 13.4",
+   "vo": "Lesson thirteen point four. The payout policy: how much you can take out.",
+   "cap": "Lesson 13.4. The payout policy: how much you can take out."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Set a payout you can sustain through bad years, and the rules that change it.",
+   "vo": "Set a payout you can sustain through bad years, and the rules that change it.",
+   "cap": "Set a payout you can sustain through bad years, and the rules that change it."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Pay out a share of expected income, not headline (e.g. 70%).",
+    "Retain the rest as a loss buffer; it absorbs the losses you assumed in 13.2.",
+    "Pay from the T0/T1 ladder (Module 12.4), refilled by income, so payouts never depend on…",
+    "Never pay from principal. If income falls short, the payout falls.",
+    "Review quarterly"
+   ],
+   "vo": "Pay out a share of expected income, not headline (for example 70%). Retain the rest as a loss buffer; it absorbs the losses you assumed in 13.2. Pay from the T0/T1 ladder (Module 12.4), refilled by income, so payouts never depend on selling anything that day. Never pay from principal. If income falls short, the payout falls. Review quarterly: if realised income is below expected for two quarters, cut the payout to 70% of the new realised level.",
+   "cap": "Pay out a share of expected income, not headline (e.g. 70%). Retain the rest as a loss buffer; it absorbs the losses you assumed in 13.2. Pay from the T0/T1 ladder (Module 12.4), refilled by income, so payouts never depend on selling anything that day. Never pay from principal. If income falls short, the payout falls. Review quarterly: if realised income is below expected for two quarters, cut the payout to 70% of the new realised level."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Expected income $23,300/yr × 70% = $16,310/yr paid out ($1,359/month). $6,990/yr retained. If a position fails as assumed, the buffer absorbs it and the payout continues.",
+   "vo": "Expected income $23,300 a year times 70% = $16,310 a year paid out ($1,359 a month). $6,990 a year retained. If a position fails as assumed, the buffer absorbs it and the payout continues.",
+   "cap": "Expected income $23,300/yr × 70% = $16,310/yr paid out ($1,359/month). $6,990/yr retained. If a position fails as assumed, the buffer absorbs it and the payout continues."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Payout ratio written (≤ 70–80% of expected income)",
+    "Paid from the ladder, not from positions",
+    "Quarterly review rule written",
+    "\"Never from principal\" rule written"
+   ],
+   "vo": "Your checklist. Payout ratio written (at most 70–80% of expected income) Paid from the ladder, not from positions Quarterly review rule written \"Never from principal\" rule written",
+   "cap": "Payout ratio written (≤ 70–80% of expected income) Paid from the ladder, not from positions Quarterly review rule written \"Never from principal\" rule written"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Expected income $40,000. Payout at 70%?"
+   ],
+   "sub": "Answer: $28,000/yr (~$2,333/month).",
+   "subAt": 0.62,
+   "vo": "Expected income $40,000. Payout at 70%? ... Pause and think. ... The answer: $28,000 a year (about $2,333 a month).",
+   "cap": "Expected income $40,000. Payout at 70%? Pause and think. The answer: $28,000/yr (~$2,333/month)."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What's the retained 30% for?"
+   ],
+   "sub": "Answer: Absorbing expected losses and bad years without cutting into principal.",
+   "subAt": 0.62,
+   "vo": "What's the retained 30% for? ... Pause and think. ... The answer: Absorbing expected losses and bad years without cutting into principal.",
+   "cap": "What's the retained 30% for? Pause and think. The answer: Absorbing expected losses and bad years without cutting into principal."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Realised income lags expected for two quarters. What happens?"
+   ],
+   "sub": "Answer: Cut the payout to the policy share of the new realised level.",
+   "subAt": 0.62,
+   "vo": "Realised income lags expected for two quarters. What happens? ... Pause and think. ... The answer: Cut the payout to the policy share of the new realised level.",
+   "cap": "Realised income lags expected for two quarters. What happens? Pause and think. The answer: Cut the payout to the policy share of the new realised level."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

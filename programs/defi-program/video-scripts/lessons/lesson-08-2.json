@@ -1,0 +1,102 @@
+{
+ "id": "lesson-08-2",
+ "title": "Lesson 8.2: The DeFi risk framework",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 8.2 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-08.png",
+   "eyebrow": "Lesson 8.2",
+   "vo": "Lesson eight point two. The DeFi risk framework.",
+   "cap": "Lesson 8.2. The DeFi risk framework."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Keep a risk register that scores every position's risks and names the response.",
+   "vo": "Keep a risk register that scores every position's risks and names the response.",
+   "cap": "Keep a risk register that scores every position's risks and names the response."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "The eight risk surfaces: smart-contract · economic · oracle · liquidity · governance · bridge/chain · counterparty · user-operation. Score each for likelihood (1–5) × impact (1–5). Anything ≥ 15 needs a mitigation or an exit; anything ≥ 20 shouldn't be held.",
+   "vo": "The eight risk surfaces: smart-contract , economic , oracle , liquidity , governance , bridge/chain , counterparty , user-operation. Score each for likelihood (1–5) times impact (1–5). Anything at least 15 needs a mitigation or an exit; anything at least 20 shouldn't be held.",
+   "cap": "The eight risk surfaces: smart-contract · economic · oracle · liquidity · governance · bridge/chain · counterparty · user-operation. Score each for likelihood (1–5) × impact (1–5). Anything ≥ 15 needs a mitigation or an exit; anything ≥ 20 shouldn't be held."
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example — one register row",
+   "items": [
+    "USDC lending, Protocol Y",
+    "LST loop",
+    "Bridged stablecoin on new L2",
+    "New farm"
+   ],
+   "compact": true,
+   "vo": "U.S.D.C. lending, Protocol Y, Oracle on one collateral is thin, 3, 4, 12, Cap 10%, alert on governance changes. liquid staking token loop, Rate spike above break-even, 3, 3, 9, Alert at 4.5% borrow; unwind rule. Bridged stablecoin on new layer two, Bridge exploit, 2, 5, 10, Canonical bridge; cap 5%. New farm, Contract bug (unaudited upgrade), 4, 5, 20, Don't hold.",
+   "cap": "USDC lending, Protocol Y, Oracle on one collateral is thin, 3, 4, 12, Cap 10%, alert on governance changes LST loop, Rate spike above break-even, 3, 3, 9, Alert at 4.5% borrow; unwind rule Bridged stablecoin on new L2, Bridge exploit, 2, 5, 10, Canonical bridge; cap 5% New farm, Contract bug (unaudited upgrade), 4, 5, 20, Don't hold"
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Register covers every position and all eight surfaces",
+    "Scores ≥ 15 have a mitigation or exit",
+    "Reviewed monthly and after incidents"
+   ],
+   "vo": "Your checklist. Register covers every position and all eight surfaces Scores at least 15 have a mitigation or exit Reviewed monthly and after incidents",
+   "cap": "Register covers every position and all eight surfaces Scores ≥ 15 have a mitigation or exit Reviewed monthly and after incidents"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "How is a risk scored?"
+   ],
+   "sub": "Answer: Likelihood × impact, each 1–5.",
+   "subAt": 0.62,
+   "vo": "How is a risk scored? ... Pause and think. ... The answer: Likelihood times impact, each 1–5.",
+   "cap": "How is a risk scored? Pause and think. The answer: Likelihood × impact, each 1–5."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What's a user-operation risk?"
+   ],
+   "sub": "Answer: Your own mistakes: wrong network, bad signature, lost keys.",
+   "subAt": 0.62,
+   "vo": "What's a user-operation risk? ... Pause and think. ... The answer: Your own mistakes: wrong network, bad signature, lost keys.",
+   "cap": "What's a user-operation risk? Pause and think. The answer: Your own mistakes: wrong network, bad signature, lost keys."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Score 20. Action?"
+   ],
+   "sub": "Answer: Don't hold it.",
+   "subAt": 0.62,
+   "vo": "Score 20. Action? ... Pause and think. ... The answer: Don't hold it.",
+   "cap": "Score 20. Action? Pause and think. The answer: Don't hold it."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

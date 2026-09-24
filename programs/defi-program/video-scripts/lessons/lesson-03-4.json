@@ -1,0 +1,108 @@
+{
+ "id": "lesson-03-4",
+ "title": "Lesson 3.4: Borrowing strategies & looping",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 3.4 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-03.png",
+   "eyebrow": "Lesson 3.4",
+   "vo": "Lesson three point four. Borrowing strategies and looping.",
+   "cap": "Lesson 3.4. Borrowing strategies & looping."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Use borrowing deliberately, and know when looping adds return and when it just adds risk.",
+   "vo": "Use borrowing deliberately, and know when looping adds return and when it just adds risk.",
+   "cap": "Use borrowing deliberately, and know when looping adds return and when it just adds risk."
+  },
+  {
+   "type": "image",
+   "src": "assets/charts/loop-spread.png",
+   "eyebrow": "Leveraged loop: the spread is everything",
+   "vo": "Here's the picture: Leveraged loop: the spread is everything.",
+   "cap": "Leveraged loop: the spread is everything."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Liquidity without selling",
+    "Looping",
+    "Net APY on equity = collateral yield × leverage − borrow rate × (leverage − 1).",
+    "Correlated loops (an LST against its underlying, or stablecoin against stablecoin) are…"
+   ],
+   "vo": "Liquidity without selling: borrow stablecoins against assets you want to keep (Module 12.3 turns this into a credit policy). Looping: deposit to borrow to re-deposit to repeat, to multiply exposure. After n loops at L.T.V. L: leverage = (1 minus L^(n+1)) divided by (1 minus L). Net A.P.Y. on equity = collateral yield times leverage minus borrow rate times (leverage minus 1). Correlated loops (an liquid staking token against its underlying, or stablecoin against stablecoin) are far safer than volatile-against-stable loops.",
+   "cap": "Liquidity without selling: borrow stablecoins against assets you want to keep (Module 12.3 turns this into a credit policy). Looping: deposit → borrow → re-deposit → repeat, to multiply exposure. After n loops at LTV L: leverage = (1 − L^(n+1)) ÷ (1 − L). Net APY on equity = collateral yield × leverage − borrow rate × (leverage − 1). Correlated loops (an LST against its underlying, or stablecoin against stablecoin) are far safer than volatile-against-stable loops."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "LTV 0.7, 3 loops, 3.5% collateral yield, 2.5% borrow: the calculator → 2.53× leverage, 5.03% net on equity. The return is wiped out if borrow rises to 5.78%. Section 3.1 showed borrow rates can jump from 4% to 34% in hours. That's the risk.",
+   "vo": "L.T.V. 0.7, 3 loops, 3.5% collateral yield, 2.5% borrow: the calculator to 2.53 times leverage, 5.03% net on equity. The return is wiped out if borrow rises to 5.78%. Section 3.1 showed borrow rates can jump from 4% to 34% in hours. That's the risk.",
+   "cap": "LTV 0.7, 3 loops, 3.5% collateral yield, 2.5% borrow: the calculator → 2.53× leverage, 5.03% net on equity. The return is wiped out if borrow rises to 5.78%. Section 3.1 showed borrow rates can jump from 4% to 34% in hours. That's the risk."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Repayment source named before borrowing",
+    "Loops only on correlated pairs, below max leverage",
+    "Break-even borrow rate known and alerted"
+   ],
+   "vo": "Your checklist. Repayment source named before borrowing Loops only on correlated pairs, below max leverage Break-even borrow rate known and alerted",
+   "cap": "Repayment source named before borrowing Loops only on correlated pairs, below max leverage Break-even borrow rate known and alerted"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Max leverage at LTV 0.75?"
+   ],
+   "sub": "Answer: 4×.",
+   "subAt": 0.62,
+   "vo": "Max leverage at L.T.V. 0.75? ... Pause and think. ... The answer: 4 times .",
+   "cap": "Max leverage at LTV 0.75? Pause and think. The answer: 4×."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What single number decides whether a loop is worth it?"
+   ],
+   "sub": "Answer: The spread between collateral yield and borrow rate.",
+   "subAt": 0.62,
+   "vo": "What single number decides whether a loop is worth it? ... Pause and think. ... The answer: The spread between collateral yield and borrow rate.",
+   "cap": "What single number decides whether a loop is worth it? Pause and think. The answer: The spread between collateral yield and borrow rate."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why prefer correlated loops?"
+   ],
+   "sub": "Answer: Collateral and debt move together, so price moves barely change HF.",
+   "subAt": 0.62,
+   "vo": "Why prefer correlated loops? ... Pause and think. ... The answer: Collateral and debt move together, so price moves barely change health factor.",
+   "cap": "Why prefer correlated loops? Pause and think. The answer: Collateral and debt move together, so price moves barely change HF."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

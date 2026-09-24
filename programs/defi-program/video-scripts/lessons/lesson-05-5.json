@@ -1,0 +1,101 @@
+{
+ "id": "lesson-05-5",
+ "title": "Lesson 5.5: Smart-contract risk & what audits don't prove",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 5.5 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-05.png",
+   "eyebrow": "Lesson 5.5",
+   "vo": "Lesson five point five. Smart-contract risk and what audits don't prove.",
+   "cap": "Lesson 5.5. Smart-contract risk & what audits don't prove."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Weigh contract risk honestly, and read an audit for what it actually covers.",
+   "vo": "Weigh contract risk honestly, and read an audit for what it actually covers.",
+   "cap": "Weigh contract risk honestly, and read an audit for what it actually covers."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Common failure types",
+    "Audits review specific code at a specific time. Check the scope (which contracts), date…",
+    "Bug bounties pay hackers to report instead of exploit. A large, active bounty is a good…",
+    "Time and value at risk"
+   ],
+   "vo": "Common failure types: logic bugs, reentrancy (a contract is called back before it updates its state), broken access control, and economic exploits (correct code, exploitable incentives or oracles). Audits review specific code at a specific time. Check the scope (which contracts), date (before later changes?), severity of findings and whether they were fixed. Bug bounties pay hackers to report instead of exploit. A large, active bounty is a good sign. Time and value at risk: code that has safely held large value for years has survived more real attacks.",
+   "cap": "Common failure types: logic bugs, reentrancy (a contract is called back before it updates its state), broken access control, and economic exploits (correct code, exploitable incentives or oracles). Audits review specific code at a specific time. Check the scope (which contracts), date (before later changes?), severity of findings and whether they were fixed. Bug bounties pay hackers to report instead of exploit. A large, active bounty is a good sign. Time and value at risk: code that has safely held large value for years has survived more real attacks."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Protocol X: two audits, but the latest upgrade (last month) isn't in either scope; bounty $50k; TVL $400M. The newest code is unaudited and the bounty is small relative to the value. Size down, or wait.",
+   "vo": "Protocol X: two audits, but the latest upgrade (last month) isn't in either scope; bounty $50k; T.V.L. $400M. The newest code is unaudited and the bounty is small relative to the value. Size down, or wait.",
+   "cap": "Protocol X: two audits, but the latest upgrade (last month) isn't in either scope; bounty $50k; TVL $400M. The newest code is unaudited and the bounty is small relative to the value. Size down, or wait."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Audit scope matches deployed code; date after last upgrade",
+    "Critical/high findings resolved",
+    "Bug bounty size relative to TVL checked"
+   ],
+   "vo": "Your checklist. Audit scope matches deployed code; date after last upgrade Critical/high findings resolved Bug bounty size relative to T.V.L. checked",
+   "cap": "Audit scope matches deployed code; date after last upgrade Critical/high findings resolved Bug bounty size relative to TVL checked"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does an audit not prove?"
+   ],
+   "sub": "Answer: That the code (or later changes, or economic design) is safe.",
+   "subAt": 0.62,
+   "vo": "What does an audit not prove? ... Pause and think. ... The answer: That the code (or later changes, or economic design) is safe.",
+   "cap": "What does an audit not prove? Pause and think. The answer: That the code (or later changes, or economic design) is safe."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What is reentrancy?"
+   ],
+   "sub": "Answer: A contract being called back before it finishes updating its state, letting an attacker repeat actions.",
+   "subAt": 0.62,
+   "vo": "What is reentrancy? ... Pause and think. ... The answer: A contract being called back before it finishes updating its state, letting an attacker repeat actions.",
+   "cap": "What is reentrancy? Pause and think. The answer: A contract being called back before it finishes updating its state, letting an attacker repeat actions."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why check audit dates?"
+   ],
+   "sub": "Answer: Code changed after the audit wasn't reviewed.",
+   "subAt": 0.62,
+   "vo": "Why check audit dates? ... Pause and think. ... The answer: Code changed after the audit wasn't reviewed.",
+   "cap": "Why check audit dates? Pause and think. The answer: Code changed after the audit wasn't reviewed."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "id": "lesson-09-0",
+ "title": "Lesson 9.0: Mastery Starter",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 9.0 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-09.png",
+   "eyebrow": "Lesson 9.0",
+   "vo": "Lesson nine point zero. Mastery Starter.",
+   "cap": "Lesson 9.0. Mastery Starter."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "The 60-second version"
+   ],
+   "sub": "A grid bot on an exchange and a liquidity position on a DEX both buy as price falls and sell as it rises inside a range. This module shows when each is the better tool, and how to run both without doubling your risk.",
+   "vo": "A grid bot on an exchange and a liquidity position on a decks both buy as price falls and sell as it rises inside a range. This module shows when each is the better tool, and how to run both without doubling your risk.",
+   "cap": "A grid bot on an exchange and a liquidity position on a DEX both buy as price falls and sell as it rises inside a range. This module shows when each is the better tool, and how to run both without doubling your risk."
+  },
+  {
+   "type": "bullets",
+   "title": "Words you'll need",
+   "items": [
+    "Grid bot",
+    "Range",
+    "Concentrated liquidity",
+    "Correlation",
+    "Invalidation"
+   ],
+   "compact": true,
+   "vo": "Grid bot, automated buy/sell orders at set price levels. Range, the price band a strategy works in. Concentrated liquidity, L.P. capital placed in a chosen range. Correlation, positions that move together. Invalidation, the event that ends a range thesis.",
+   "cap": "Grid bot, automated buy/sell orders at set price levels Range, the price band a strategy works in Concentrated liquidity, LP capital placed in a chosen range Correlation, positions that move together Invalidation, the event that ends a range thesis"
+  },
+  {
+   "type": "bullets",
+   "title": "Before you start",
+   "items": [
+    "Modules 0–8 (Grid Bot Builder helpful but not required)"
+   ],
+   "vo": "Modules 0–8 (Grid Bot Builder helpful but not required)",
+   "cap": "Modules 0–8 (Grid Bot Builder helpful but not required)"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Your first safe step"
+   ],
+   "sub": "Take one asset and write the range you'd use for a grid bot and for an LP. Would they be the same?",
+   "vo": "Take one asset and write the range you'd use for a grid bot and for an L.P.. Would they be the same?",
+   "cap": "Take one asset and write the range you'd use for a grid bot and for an LP. Would they be the same?"
+  },
+  {
+   "type": "bullets",
+   "title": "The mastery ladder",
+   "items": [
+    "Beginner",
+    "Practitioner",
+    "Master"
+   ],
+   "compact": true,
+   "vo": "Beginner, Explains the grid–L.P. similarity. Practitioner, Chooses the right tool by size, custody and pair. Master, Runs grid bots and DeFi as one system with exposure counted by asset and range.",
+   "cap": "Beginner, Explains the grid–LP similarity Practitioner, Chooses the right tool by size, custody and pair Master, Runs grid bots and DeFi as one system with exposure counted by asset and range"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "You've mastered it when…"
+   ],
+   "sub": "…your exposure is counted by underlying asset and range, not by number of positions. ---",
+   "vo": "…your exposure is counted by underlying asset and range, not by number of positions. ---",
+   "cap": "…your exposure is counted by underlying asset and range, not by number of positions. ---"
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

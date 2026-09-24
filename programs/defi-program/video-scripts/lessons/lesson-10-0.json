@@ -1,0 +1,89 @@
+{
+ "id": "lesson-10-0",
+ "title": "Lesson 10.0: Mastery Starter",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 10.0 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-10.png",
+   "eyebrow": "Lesson 10.0",
+   "vo": "Lesson ten point zero. Mastery Starter.",
+   "cap": "Lesson 10.0. Mastery Starter."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "The 60-second version"
+   ],
+   "sub": "Professionals don't just take the yield on offer: they engineer it. Fixed rates, hedged carry, option income and managed ranges each swap one risk for another. This module teaches you to build them and say exactly what each one is short.",
+   "vo": "Professionals don't just take the yield on offer: they engineer it. Fixed rates, hedged carry, option income and managed ranges each swap one risk for another. This module teaches you to build them and say exactly what each one is short.",
+   "cap": "Professionals don't just take the yield on offer: they engineer it. Fixed rates, hedged carry, option income and managed ranges each swap one risk for another. This module teaches you to build them and say exactly what each one is short."
+  },
+  {
+   "type": "bullets",
+   "title": "Words you'll need",
+   "items": [
+    "PT / YT",
+    "Basis",
+    "Funding",
+    "Covered call",
+    "Delta-neutral"
+   ],
+   "compact": true,
+   "vo": "P.T. / Y.T., principal and yield tokens splitting a yield-bearing asset. Basis, a future's premium over spot. Funding, payments between perp longs and shorts. Covered call, selling upside for a premium. Delta-neutral, price moves roughly cancel out.",
+   "cap": "PT / YT, principal and yield tokens splitting a yield-bearing asset Basis, a future's premium over spot Funding, payments between perp longs and shorts Covered call, selling upside for a premium Delta-neutral, price moves roughly cancel out"
+  },
+  {
+   "type": "bullets",
+   "title": "Before you start",
+   "items": [
+    "Modules 0–9, including perps (3.5) and LP maths (Module 2)"
+   ],
+   "vo": "Modules 0–9, including perps (3.5) and L.P. maths (Module 2)",
+   "cap": "Modules 0–9, including perps (3.5) and LP maths (Module 2)"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Your first safe step"
+   ],
+   "sub": "Price one live PT with the calculator",
+   "vo": "Price one live P.T. with the calculator",
+   "cap": "Price one live PT with the calculator"
+  },
+  {
+   "type": "bullets",
+   "title": "The mastery ladder",
+   "items": [
+    "Beginner",
+    "Practitioner",
+    "Master"
+   ],
+   "compact": true,
+   "vo": "Beginner, Understands each structure and its payoff. Practitioner, Sizes and runs one structured position with written exits. Master, Combines fixed, carry, options and L.P. yield inside caps, naming every short exposure.",
+   "cap": "Beginner, Understands each structure and its payoff Practitioner, Sizes and runs one structured position with written exits Master, Combines fixed, carry, options and LP yield inside caps, naming every short exposure"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "You've mastered it when…"
+   ],
+   "sub": "…you can complete \"this position is short ___\" for every structured position you hold. ---",
+   "vo": "…you can complete \"this position is short ___\" for every structured position you hold. ---",
+   "cap": "…you can complete \"this position is short ___\" for every structured position you hold. ---"
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

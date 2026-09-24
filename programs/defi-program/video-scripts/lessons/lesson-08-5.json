@@ -1,0 +1,102 @@
+{
+ "id": "lesson-08-5",
+ "title": "Lesson 8.5: Measuring performance honestly",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 8.5 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-08.png",
+   "eyebrow": "Lesson 8.5",
+   "vo": "Lesson eight point five. Measuring performance honestly.",
+   "cap": "Lesson 8.5. Measuring performance honestly."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Measure your results so deposits, withdrawals and lucky markets don't fool you.",
+   "vo": "Measure your results so deposits, withdrawals and lucky markets don't fool you.",
+   "cap": "Measure your results so deposits, withdrawals and lucky markets don't fool you."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Time-weighted return (TWR)",
+    "Money-weighted / simple gain",
+    "Benchmark",
+    "Attribution"
+   ],
+   "vo": "Time-weighted return (time-weighted return): chains the return of each period, ignoring when you added or removed money. It measures your decisions. Money-weighted / simple gain: what your total capital actually did, including the timing of deposits. Benchmark: compare against what you'd have got doing something simple: holding the same assets, or plain stablecoin lending. Beating zero isn't the test. Attribution: split the result into sources: price moves, fees, interest, incentives, costs, losses. Only the parts you control show skill.",
+   "cap": "Time-weighted return (TWR): chains the return of each period, ignoring when you added or removed money. It measures your decisions. Money-weighted / simple gain: what your total capital actually did, including the timing of deposits. Benchmark: compare against what you'd have got doing something simple: holding the same assets, or plain stablecoin lending. Beating zero isn't the test. Attribution: split the result into sources: price moves, fees, interest, incentives, costs, losses. Only the parts you control show skill."
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example",
+   "items": [
+    "TWR",
+    "Simple gain on $150,000 put in"
+   ],
+   "vo": "Start $100,000 to +10% in Q1 ($110,000) to deposit $50,000 ($160,000) to minus 5% in Q2 to $152,000. the calculator Then compare 4.50% with holding ETH over the same period, and with stablecoin lending. time-weighted return: 1.10 times 0.95 minus 1 = 4.50% (your decisions) Simple gain on $150,000 put in: 1.33% (hurt by the deposit landing before a down quarter)",
+   "cap": "TWR: 1.10 × 0.95 − 1 = 4.50% (your decisions) Simple gain on $150,000 put in: 1.33% (hurt by the deposit landing before a down quarter)"
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "TWR calculated quarterly",
+    "Benchmark chosen and compared",
+    "Results attributed by source"
+   ],
+   "vo": "Your checklist. time-weighted return calculated quarterly Benchmark chosen and compared Results attributed by source",
+   "cap": "TWR calculated quarterly Benchmark chosen and compared Results attributed by source"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does TWR remove?"
+   ],
+   "sub": "Answer: The effect of when deposits and withdrawals happened.",
+   "subAt": 0.62,
+   "vo": "What does time-weighted return remove? ... Pause and think. ... The answer: The effect of when deposits and withdrawals happened.",
+   "cap": "What does TWR remove? Pause and think. The answer: The effect of when deposits and withdrawals happened."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why use a benchmark?"
+   ],
+   "sub": "Answer: To see whether the strategy beat doing something simple, not just beat zero.",
+   "subAt": 0.62,
+   "vo": "Why use a benchmark? ... Pause and think. ... The answer: To see whether the strategy beat doing something simple, not just beat zero.",
+   "cap": "Why use a benchmark? Pause and think. The answer: To see whether the strategy beat doing something simple, not just beat zero."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Two quarters, +8% then +2%. TWR?"
+   ],
+   "sub": "Answer: 1.08 × 1.02 − 1 = 10.16%.",
+   "subAt": 0.62,
+   "vo": "Two quarters, +8% then +2%. time-weighted return? ... Pause and think. ... The answer: 1.08 times 1.02 minus 1 = 10.16%.",
+   "cap": "Two quarters, +8% then +2%. TWR? Pause and think. The answer: 1.08 × 1.02 − 1 = 10.16%."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

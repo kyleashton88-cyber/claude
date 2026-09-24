@@ -12,8 +12,8 @@ your call before phase 3 (Whop setup).
 | Format | **Two tiers:** self-paced course + a higher tier with live sessions |
 | Sales path | **Application → call → checkout** |
 | Audience | **Everyone at once:** GBB customers, Elite Intel members and cold ad traffic from launch |
-| Price | **Course $15,000 one-time** · live tier priced higher (TBD) |
-| Refund policy | Open |
+| Price | **Course $15,000 one-time** · Live tier on application |
+| Refund policy | **14-day conditional refund** (≤ 10% of lessons, no capstone, no live session used); full text in `07-program-operations.md` §9 |
 | Starter tier / GBB pricing conflict | Open |
 | Structure | **15 modules, 107 lessons (incl. 15 expert) + a Mastery Starter per module, 6 stages: zero to operator** (expanded 2026-09-24) |
 
@@ -391,8 +391,5 @@ Outcome: monitor and automate safely, run multisig operations, and complete the 
 
 ---
 
-## Still open
-1. Live-tier price
-2. Refund policy
-3. Grid Bot Builder customer pricing (if any)
-4. Does the "Grid Bot Starter" tier exist?
+## Decided
+All launch decisions are made: pricing (Course $15,000; Live on application), the 14-day conditional refund policy, lifetime access, and the 6-stage structure.

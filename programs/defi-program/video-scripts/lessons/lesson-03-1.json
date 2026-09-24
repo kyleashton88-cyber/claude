@@ -1,0 +1,115 @@
+{
+ "id": "lesson-03-1",
+ "title": "Lesson 3.1: How lending markets work",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 3.1 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-03.png",
+   "eyebrow": "Lesson 3.1",
+   "vo": "Lesson three point one. How lending markets work.",
+   "cap": "Lesson 3.1. How lending markets work."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Explain where lending yields come from and why rates jump when a market is nearly fully borrowed.",
+   "vo": "Explain where lending yields come from and why rates jump when a market is nearly fully borrowed.",
+   "cap": "Explain where lending yields come from and why rates jump when a market is nearly fully borrowed."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Utilisation = borrowed ÷ supplied. It drives the rates.",
+    "Interest-rate curve",
+    "Supply APY ≈ borrow APY × utilisation × (1 − reserve factor). The reserve",
+    "Receipt tokens"
+   ],
+   "vo": "A DeFi money market is a pool: lenders supply assets, borrowers borrow them against collateral, and a smart contract sets the rates. up to an optimal utilisation (for example 80%), then steeply above it, to pull in lenders and push out borrowers. factor is the protocol's cut. deposit plus interest. Utilisation = borrowed divided by supplied. It drives the rates. Interest-rate curve: most markets use a \"kinked\" curve. Rates rise gently Supply A.P.Y. about borrow A.P.Y. times utilisation times (1 minus reserve factor). The reserve Receipt tokens: when you supply, you get a token representing your",
+   "cap": "Utilisation = borrowed ÷ supplied. It drives the rates. Interest-rate curve: most markets use a \"kinked\" curve. Rates rise gently Supply APY ≈ borrow APY × utilisation × (1 − reserve factor). The reserve Receipt tokens: when you supply, you get a token representing your"
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example (illustrative curve: 4% at 80% optimal, +60% ",
+   "items": [
+    "50%",
+    "70%",
+    "80%",
+    "90%",
+    "95%"
+   ],
+   "compact": true,
+   "vo": "50%, 2.5%, 1.1%. 70%, 3.5%, 2.2%. 80%, 4.0%, 2.9%. 90%, 34.0%, 27.5%. 95%, 49.0%, 41.9%.",
+   "cap": "50%, 2.5%, 1.1% 70%, 3.5%, 2.2% 80%, 4.0%, 2.9% 90%, 34.0%, 27.5% 95%, 49.0%, 41.9%"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example (illustrative curve: 4% at 80% optimal, +60% "
+   ],
+   "sub": "Near 100% utilisation, rates spike and lenders may not be able to withdraw, because the money is lent out. A sudden high supply APY is often a warning, not a gift.",
+   "vo": "Near 100% utilisation, rates spike and lenders may not be able to withdraw, because the money is lent out. A sudden high supply A.P.Y. is often a warning, not a gift.",
+   "cap": "Near 100% utilisation, rates spike and lenders may not be able to withdraw, because the money is lent out. A sudden high supply APY is often a warning, not a gift."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "I check utilisation before supplying",
+    "I know the market's optimal-utilisation kink",
+    "I treat a sudden rate spike as a liquidity warning"
+   ],
+   "vo": "Your checklist. I check utilisation before supplying I know the market's optimal-utilisation kink I treat a sudden rate spike as a liquidity warning",
+   "cap": "I check utilisation before supplying I know the market's optimal-utilisation kink I treat a sudden rate spike as a liquidity warning"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What sets the rates in a money market?"
+   ],
+   "sub": "Answer: Mainly utilisation, through the protocol's interest-rate curve.",
+   "subAt": 0.62,
+   "vo": "What sets the rates in a money market? ... Pause and think. ... The answer: Mainly utilisation, through the protocol's interest-rate curve.",
+   "cap": "What sets the rates in a money market? Pause and think. The answer: Mainly utilisation, through the protocol's interest-rate curve."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why does the curve kink?"
+   ],
+   "sub": "Answer: To make borrowing expensive and supplying attractive when liquidity runs low, restoring withdrawal capacity.",
+   "subAt": 0.62,
+   "vo": "Why does the curve kink? ... Pause and think. ... The answer: To make borrowing expensive and supplying attractive when liquidity runs low, restoring withdrawal capacity.",
+   "cap": "Why does the curve kink? Pause and think. The answer: To make borrowing expensive and supplying attractive when liquidity runs low, restoring withdrawal capacity."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Utilisation is 99%. Risk for lenders?"
+   ],
+   "sub": "Answer: Withdrawals may be blocked until borrowers repay or new supply arrives.",
+   "subAt": 0.62,
+   "vo": "Utilisation is 99%. Risk for lenders? ... Pause and think. ... The answer: Withdrawals may be blocked until borrowers repay or new supply arrives.",
+   "cap": "Utilisation is 99%. Risk for lenders? Pause and think. The answer: Withdrawals may be blocked until borrowers repay or new supply arrives."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

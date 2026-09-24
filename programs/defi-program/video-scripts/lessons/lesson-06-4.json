@@ -1,0 +1,98 @@
+{
+ "id": "lesson-06-4",
+ "title": "Lesson 6.4: The on-chain research workflow",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 6.4 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-06.png",
+   "eyebrow": "Lesson 6.4",
+   "vo": "Lesson six point four. The on-chain research workflow.",
+   "cap": "Lesson 6.4. The on-chain research workflow."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Turn research into a written thesis with invalidation and monitoring.",
+   "vo": "Turn research into a written thesis with invalidation and monitoring.",
+   "cap": "Turn research into a written thesis with invalidation and monitoring."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "Question first → primary sources (docs, contracts, governance) → economic reality (fees vs incentives) → cross-check with independent data → thesis: what must be true, what would prove it wrong, what to monitor.",
+   "vo": "Question first to primary sources (docs, contracts, governance) to economic reality (fees versus incentives) to cross-check with independent data to thesis: what must be true, what would prove it wrong, what to monitor.",
+   "cap": "Question first → primary sources (docs, contracts, governance) → economic reality (fees vs incentives) → cross-check with independent data → thesis: what must be true, what would prove it wrong, what to monitor."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example (thesis template)"
+   ],
+   "sub": "\"Thesis: stablecoin lending on Protocol Z earns ~5% from real borrow demand. Must be true: utilisation 60–85%, oracle unchanged, no new risky collateral. Invalidation: utilisation > 95% for 48h, a governance change adding thin collateral, or an incident. Monit",
+   "vo": "\"Thesis: stablecoin lending on Protocol Z earns about 5% from real borrow demand. Must be true: utilisation 60–85%, oracle unchanged, no new risky collateral. Invalidation: utilisation > 95% for 48h, a governance change adding thin collateral, or an incident. Monitor: weekly utilisation, governance feed.\"",
+   "cap": "\"Thesis: stablecoin lending on Protocol Z earns ~5% from real borrow demand. Must be true: utilisation 60–85%, oracle unchanged, no new risky collateral. Invalidation: utilisation > 95% for 48h, a governance change adding thin collateral, or an incident. Monitor: weekly utilisation, governance feed.\""
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Research question written first",
+    "Thesis, invalidation and monitoring written",
+    "Evidence from at least two independent sources"
+   ],
+   "vo": "Your checklist. Research question written first Thesis, invalidation and monitoring written Evidence from at least two independent sources",
+   "cap": "Research question written first Thesis, invalidation and monitoring written Evidence from at least two independent sources"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why start with a question?"
+   ],
+   "sub": "Answer: To avoid hunting for data that confirms what you already believe.",
+   "subAt": 0.62,
+   "vo": "Why start with a question? ... Pause and think. ... The answer: To avoid hunting for data that confirms what you already believe.",
+   "cap": "Why start with a question? Pause and think. The answer: To avoid hunting for data that confirms what you already believe."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What makes a thesis useful?"
+   ],
+   "sub": "Answer: A clear invalidation you'll act on.",
+   "subAt": 0.62,
+   "vo": "What makes a thesis useful? ... Pause and think. ... The answer: A clear invalidation you'll act on.",
+   "cap": "What makes a thesis useful? Pause and think. The answer: A clear invalidation you'll act on."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What should monitoring track?"
+   ],
+   "sub": "Answer: Only the metrics that would change the thesis.",
+   "subAt": 0.62,
+   "vo": "What should monitoring track? ... Pause and think. ... The answer: Only the metrics that would change the thesis.",
+   "cap": "What should monitoring track? Pause and think. The answer: Only the metrics that would change the thesis."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

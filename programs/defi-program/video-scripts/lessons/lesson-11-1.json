@@ -1,0 +1,102 @@
+{
+ "id": "lesson-11-1",
+ "title": "Lesson 11.1: Hedging price exposure with perps and options",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 11.1 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-11.png",
+   "eyebrow": "Lesson 11.1",
+   "vo": "Lesson eleven point one. Hedging price exposure with perps and options.",
+   "cap": "Lesson 11.1. Hedging price exposure with perps and options."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Reduce price exposure deliberately, and know what each hedge costs.",
+   "vo": "Reduce price exposure deliberately, and know what each hedge costs.",
+   "cap": "Reduce price exposure deliberately, and know what each hedge costs."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Perp hedge",
+    "Protective put",
+    "Collar",
+    "A hedge costs something (premium, funding, capped upside). Hedge the risk you can't…"
+   ],
+   "vo": "pays or earns funding; needs margin; the hedge ratio is your choice. Perp hedge: short a perpetual future against spot you hold. Cheap to open; Protective put: buy the right to sell at a strike. Costs a premium, and your loss is capped below the strike. Collar: buy a put and sell a call to pay for it. Cheaper protection in exchange for capped upside. A hedge costs something (premium, funding, capped upside). Hedge the risk you can't afford, not every risk.",
+   "cap": "Perp hedge: short a perpetual future against spot you hold. Cheap to open; Protective put: buy the right to sell at a strike. Costs a premium, and your loss is capped below the strike. Collar: buy a put and sell a call to pay for it. Cheaper protection in exchange for capped upside. A hedge costs something (premium, funding, capped upside). Hedge the risk you can't afford, not every risk."
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example",
+   "items": [
+    "50% perp hedge (short 5 ETH)",
+    "Protective put"
+   ],
+   "vo": "You hold 10 ETH at $3,000 ($30,000). 50% perp hedge (short 5 ETH): ETH falls 30% to spot minus $9,000, short +$4,500 to minus $4,500 (minus 15%) instead of minus 30%. Protective put: buy a 30-day $2,700 put for 2% ($60/ETH). Worst case per ETH = $300 drop to the strike + $60 premium = $360 (12%), however far ETH falls in that month.",
+   "cap": "50% perp hedge (short 5 ETH): ETH falls 30% → spot −$9,000, short +$4,500 → −$4,500 (−15%) instead of −30%. Protective put: buy a 30-day $2,700 put for 2% ($60/ETH). Worst case per ETH = $300 drop to the strike + $60 premium = $360 (12%), however far ETH falls in that month."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Hedge target stated (which risk, how much)",
+    "Cost computed (premium, funding, capped upside)",
+    "Margin buffer for perp hedges set"
+   ],
+   "vo": "Your checklist. Hedge target stated (which risk, how much) Cost computed (premium, funding, capped upside) Margin buffer for perp hedges set",
+   "cap": "Hedge target stated (which risk, how much) Cost computed (premium, funding, capped upside) Margin buffer for perp hedges set"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does a protective put cap?"
+   ],
+   "sub": "Answer: Your loss below the strike, for the option's term, at the cost of the premium.",
+   "subAt": 0.62,
+   "vo": "What does a protective put cap? ... Pause and think. ... The answer: Your loss below the strike, for the option's term, at the cost of the premium.",
+   "cap": "What does a protective put cap? Pause and think. The answer: Your loss below the strike, for the option's term, at the cost of the premium."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does a collar trade away?"
+   ],
+   "sub": "Answer: Upside above the call strike, to pay for the put.",
+   "subAt": 0.62,
+   "vo": "What does a collar trade away? ... Pause and think. ... The answer: Upside above the call strike, to pay for the put.",
+   "cap": "What does a collar trade away? Pause and think. The answer: Upside above the call strike, to pay for the put."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "20 ETH, 25% perp hedge, ETH −40%. Net loss if ETH was $3,000?"
+   ],
+   "sub": "Answer: Spot −$24,000, short +$6,000 → −$18,000.",
+   "subAt": 0.62,
+   "vo": "20 ETH, 25% perp hedge, ETH minus 40%. Net loss if ETH was $3,000? ... Pause and think. ... The answer: Spot minus $24,000, short +$6,000 to minus $18,000.",
+   "cap": "20 ETH, 25% perp hedge, ETH −40%. Net loss if ETH was $3,000? Pause and think. The answer: Spot −$24,000, short +$6,000 → −$18,000."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

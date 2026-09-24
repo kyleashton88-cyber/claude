@@ -1,0 +1,102 @@
+{
+ "id": "lesson-03-7",
+ "title": "Lesson 3.7: CDP stablecoins: minting your own dollars",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 3.7 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-03.png",
+   "eyebrow": "Lesson 3.7",
+   "vo": "Lesson three point seven. C.D.P. stablecoins: minting your own dollars.",
+   "cap": "Lesson 3.7. CDP stablecoins: minting your own dollars."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Mint stablecoins against your own collateral (as your own bank would), and manage the position safely.",
+   "vo": "Mint stablecoins against your own collateral (as your own bank would), and manage the position safely.",
+   "cap": "Mint stablecoins against your own collateral (as your own bank would), and manage the position safely."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "A CDP (collateralised debt position) lets you lock collateral and mint a stablecoin…",
+    "Minimum collateral ratio (e.g. 150%)",
+    "The stablecoin holds its peg through over-collateralisation, liquidations, interest…",
+    "Compared with borrowing from a lending pool",
+    "Uses"
+   ],
+   "vo": "A C.D.P. (collateralised debt position) lets you lock collateral and mint a stablecoin against it. You owe the stablecoin back, plus a stability fee (interest). Minimum collateral ratio (for example 150%): below it, the position is liquidated. The stablecoin holds its peg through over-collateralisation, liquidations, interest rates and often a peg stability module (P.S.M.) that swaps it 1:1 (minus a small fee) with other stablecoins. Compared with borrowing from a lending pool: you create new money rather than borrow someone's deposit; rates are set by governance, not utilisation. Uses: liquidity without selling (Module 12.3), funding a liquidity ladder, or a yield-covered credit line (strategy #25).",
+   "cap": "A CDP (collateralised debt position) lets you lock collateral and mint a stablecoin against it. You owe the stablecoin back, plus a stability fee (interest). Minimum collateral ratio (e.g. 150%): below it, the position is liquidated. The stablecoin holds its peg through over-collateralisation, liquidations, interest rates and often a peg stability module (PSM) that swaps it 1:1 (minus a small fee) with other stablecoins. Compared with borrowing from a lending pool: you create new money rather than borrow someone's deposit; rates are set by governance, not utilisation. Uses: liquidity without selling (Module 12.3), funding a liquidity ladder, or a yield-covered credit line (strategy #25)."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "10 ETH at $3,000 ($30,000) with a 150% minimum ratio: you could mint up to $20,000. Mint $10,000 instead: the calculator → ratio 300%, liquidation at $1,500 (−50%), stability fee $600/yr. Operators treat the maximum as a cliff, not a target.",
+   "vo": "10 ETH at $3,000 ($30,000) with a 150% minimum ratio: you could mint up to $20,000. Mint $10,000 instead: the calculator to ratio 300%, liquidation at $1,500 (minus 50%), stability fee $600 a year. Operators treat the maximum as a cliff, not a target.",
+   "cap": "10 ETH at $3,000 ($30,000) with a 150% minimum ratio: you could mint up to $20,000. Mint $10,000 instead: the calculator → ratio 300%, liquidation at $1,500 (−50%), stability fee $600/yr. Operators treat the maximum as a cliff, not a target."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Collateral ratio target (e.g. ≥ 250%) and action levels written",
+    "Stability fee vs alternatives (lending-pool borrow rates) compared",
+    "Peg mechanism (PSM, rates) understood, and my exit if the stablecoin depegs"
+   ],
+   "vo": "Your checklist. Collateral ratio target (for example at least 250%) and action levels written Stability fee versus alternatives (lending-pool borrow rates) compared Peg mechanism (P.S.M., rates) understood, and my exit if the stablecoin depegs",
+   "cap": "Collateral ratio target (e.g. ≥ 250%) and action levels written Stability fee vs alternatives (lending-pool borrow rates) compared Peg mechanism (PSM, rates) understood, and my exit if the stablecoin depegs"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What do you owe on a CDP?"
+   ],
+   "sub": "Answer: The minted stablecoin plus the accrued stability fee.",
+   "subAt": 0.62,
+   "vo": "What do you owe on a C.D.P.? ... Pause and think. ... The answer: The minted stablecoin plus the accrued stability fee.",
+   "cap": "What do you owe on a CDP? Pause and think. The answer: The minted stablecoin plus the accrued stability fee."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Collateral $40,000, 150% minimum ratio. Maximum mint?"
+   ],
+   "sub": "Answer: About $26,667.",
+   "subAt": 0.62,
+   "vo": "Collateral $40,000, 150% minimum ratio. Maximum mint? ... Pause and think. ... The answer: About $26,667.",
+   "cap": "Collateral $40,000, 150% minimum ratio. Maximum mint? Pause and think. The answer: About $26,667."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does a PSM do?"
+   ],
+   "sub": "Answer: Swaps the stablecoin 1:1 (minus a fee) with other stablecoins, supporting the peg.",
+   "subAt": 0.62,
+   "vo": "What does a P.S.M. do? ... Pause and think. ... The answer: Swaps the stablecoin 1:1 (minus a fee) with other stablecoins, supporting the peg.",
+   "cap": "What does a PSM do? Pause and think. The answer: Swaps the stablecoin 1:1 (minus a fee) with other stablecoins, supporting the peg."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

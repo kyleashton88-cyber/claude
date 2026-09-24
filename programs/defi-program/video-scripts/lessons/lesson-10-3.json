@@ -1,0 +1,123 @@
+{
+ "id": "lesson-10-3",
+ "title": "Lesson 10.3: Delta-neutral funding carry, done properly",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 10.3 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-10.png",
+   "eyebrow": "Lesson 10.3",
+   "vo": "Lesson ten point three. Delta-neutral funding carry, done properly.",
+   "cap": "Lesson 10.3. Delta-neutral funding carry, done properly."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Run a funding-carry position with proper sizing, venue limits and exit rules.",
+   "vo": "Run a funding-carry position with proper sizing, venue limits and exit rules.",
+   "cap": "Run a funding-carry position with proper sizing, venue limits and exit rules."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Measure funding over time, not today. Use a 7- and 30-day average.",
+    "Exit rule",
+    "Margin buffer",
+    "Venue limits"
+   ],
+   "vo": "Perpetual futures pay funding between longs and shorts to keep the perp near spot. In bullish markets longs usually pay shorts. Long spot + short perp at the same size = no net price exposure, while collecting funding. Professional rules: Measure funding over time, not today. Use a 7- and 30-day average. Exit rule: close when the 7-day average turns negative (you'd start paying). Margin buffer: the short leg's leverage decides how big a rally it survives. Venue limits: split across venues; cap each one.",
+   "cap": "Measure funding over time, not today. Use a 7- and 30-day average. Exit rule: close when the 7-day average turns negative (you'd start paying). Margin buffer: the short leg's leverage decides how big a rally it survives. Venue limits: split across venues; cap each one."
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example",
+   "items": [
+    "1×",
+    "2×",
+    "3×"
+   ],
+   "compact": true,
+   "vo": "1 times , $2.00, about 5.5%, +100%. 2 times , $1.50, about 7.3%, +50%. 3 times , $1.33, about 8.2%, +33%.",
+   "cap": "1×, $2.00, ~5.5%, +100% 2×, $1.50, ~7.3%, +50% 3×, $1.33, ~8.2%, +33%"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Funding +0.01% per 8h ≈ 10.95% APR on the hedged size. the calculator Higher leverage improves return on capital a little and makes the position much more fragile. Most operators stay at 1–2× and top up margin from reserve.",
+   "vo": "Funding +0.01% per 8h about 10.95% A.P.R. on the hedged size. the calculator Higher leverage improves return on capital a little and makes the position much more fragile. Most operators stay at 1–2 times and top up margin from reserve.",
+   "cap": "Funding +0.01% per 8h ≈ 10.95% APR on the hedged size. the calculator Higher leverage improves return on capital a little and makes the position much more fragile. Most operators stay at 1–2× and top up margin from reserve."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "What this position is short"
+   ],
+   "sub": "Funding turning negative, short squeezes, and venue failure.",
+   "vo": "Funding turning negative, short squeezes, and venue failure.",
+   "cap": "Funding turning negative, short squeezes, and venue failure."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "7- and 30-day funding averages checked",
+    "Exit rule written (e.g. 7-day average < 0)",
+    "Short-leg leverage ≤ 2×, top-up plan from reserve",
+    "Per-venue cap set"
+   ],
+   "vo": "Your checklist. 7- and 30-day funding averages checked Exit rule written (for example 7-day average < 0) Short-leg leverage at most 2 times , top-up plan from reserve Per-venue cap set",
+   "cap": "7- and 30-day funding averages checked Exit rule written (e.g. 7-day average < 0) Short-leg leverage ≤ 2×, top-up plan from reserve Per-venue cap set"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Funding is +0.005%/8h. APR on hedged size?"
+   ],
+   "sub": "Answer: ≈ 5.5%.",
+   "subAt": 0.62,
+   "vo": "Funding is +0.005%/8h. A.P.R. on hedged size? ... Pause and think. ... The answer: about 5.5%.",
+   "cap": "Funding is +0.005%/8h. APR on hedged size? Pause and think. The answer: ≈ 5.5%."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why not run the short at 5×?"
+   ],
+   "sub": "Answer: A ~20% rally would liquidate the short and leave you unhedged long.",
+   "subAt": 0.62,
+   "vo": "Why not run the short at 5 times ? ... Pause and think. ... The answer: A about 20% rally would liquidate the short and leave you unhedged long.",
+   "cap": "Why not run the short at 5×? Pause and think. The answer: A ~20% rally would liquidate the short and leave you unhedged long."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What's the exit signal?"
+   ],
+   "sub": "Answer: Average funding turning negative, meaning shorts start paying.",
+   "subAt": 0.62,
+   "vo": "What's the exit signal? ... Pause and think. ... The answer: Average funding turning negative, meaning shorts start paying.",
+   "cap": "What's the exit signal? Pause and think. The answer: Average funding turning negative, meaning shorts start paying."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

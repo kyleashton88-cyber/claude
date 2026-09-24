@@ -1,0 +1,111 @@
+{
+ "id": "lesson-10-6",
+ "title": "Lesson 10.6: Restaking and points: pricing speculative yield",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 10.6 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-10.png",
+   "eyebrow": "Lesson 10.6",
+   "vo": "Lesson ten point six. Restaking and points: pricing speculative yield.",
+   "cap": "Lesson 10.6. Restaking and points: pricing speculative yield."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Value restaking and points programmes without letting unknown rewards drive position size.",
+   "vo": "Value restaking and points programmes without letting unknown rewards drive position size.",
+   "cap": "Value restaking and points programmes without letting unknown rewards drive position size."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Plan with points at zero. Base the decision on yield you can measure.",
+    "Treat points as an airdrop bet",
+    "Hedge price if you only want the yield",
+    "Cap it"
+   ],
+   "vo": "Restaking reuses staked assets to secure more services, paying extra rewards and often points: an off-chain score that may or may not become a token. The risk stack grows at each layer: staking to liquid restaking token to restaking protocol to each service it secures to slashing conditions. Professional rules: Plan with points at zero. Base the decision on yield you can measure. Treat points as an airdrop bet: EV = P(payout) times value minus costs. Hedge price if you only want the yield: short the underlying perp (strategy #24), knowing the hedge doesn't cover a depeg of the restaking token. Cap it: speculative bucket only (at most 5–10% of DeFi capital).",
+   "cap": "Plan with points at zero. Base the decision on yield you can measure. Treat points as an airdrop bet: EV = P(payout) × value − costs. Hedge price if you only want the yield: short the underlying perp (strategy #24), knowing the hedge doesn't cover a depeg of the restaking token. Cap it: speculative bucket only (≤ 5–10% of DeFi capital)."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "$20,000 in a liquid restaking token: base staking yield ~3% ($600/yr). Points: you estimate a 30% chance of a payout worth $1,500, costing $200 in gas and bridging: the calculator → EV $250. Worth doing only if the position still makes sense at $600/yr and the",
+   "vo": "$20,000 in a liquid restaking token: base staking yield about 3% ($600 a year). Points: you estimate a 30% chance of a payout worth $1,500, costing $200 in gas and bridging: the calculator to EV $250. Worth doing only if the position still makes sense at $600 a year and the risk stack is acceptable.",
+   "cap": "$20,000 in a liquid restaking token: base staking yield ~3% ($600/yr). Points: you estimate a 30% chance of a payout worth $1,500, costing $200 in gas and bridging: the calculator → EV $250. Worth doing only if the position still makes sense at $600/yr and the risk stack is acceptable."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "What this position is short"
+   ],
+   "sub": "Slashing, depeg of the restaking token, and the chance that points never become anything.",
+   "vo": "Slashing, depeg of the restaking token, and the chance that points never become anything.",
+   "cap": "Slashing, depeg of the restaking token, and the chance that points never become anything."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Decision still works with points valued at zero",
+    "Full risk stack written, layer by layer",
+    "Sized inside the speculative bucket",
+    "Hedge (if any) and its gap understood"
+   ],
+   "vo": "Your checklist. Decision still works with points valued at zero Full risk stack written, layer by layer Sized inside the speculative bucket Hedge (if any) and its gap understood",
+   "cap": "Decision still works with points valued at zero Full risk stack written, layer by layer Sized inside the speculative bucket Hedge (if any) and its gap understood"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why value points at zero?"
+   ],
+   "sub": "Answer: They're not guaranteed to become anything, so a decision that needs them is a speculation.",
+   "subAt": 0.62,
+   "vo": "Why value points at zero? ... Pause and think. ... The answer: They're not guaranteed to become anything, so a decision that needs them is a speculation.",
+   "cap": "Why value points at zero? Pause and think. The answer: They're not guaranteed to become anything, so a decision that needs them is a speculation."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does a perp hedge on the underlying miss?"
+   ],
+   "sub": "Answer: The restaking token depegging from the underlying.",
+   "subAt": 0.62,
+   "vo": "What does a perp hedge on the underlying miss? ... Pause and think. ... The answer: The restaking token depegging from the underlying.",
+   "cap": "What does a perp hedge on the underlying miss? Pause and think. The answer: The restaking token depegging from the underlying."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Name three layers of the restaking risk stack."
+   ],
+   "sub": "Answer: Any three: staking/validators, the liquid restaking token, the restaking protocol, each service secured, slashing conditions.",
+   "subAt": 0.62,
+   "vo": "Name three layers of the restaking risk stack. ... Pause and think. ... The answer: Any three: staking/validators, the liquid restaking token, the restaking protocol, each service secured, slashing conditions.",
+   "cap": "Name three layers of the restaking risk stack. Pause and think. The answer: Any three: staking/validators, the liquid restaking token, the restaking protocol, each service secured, slashing conditions."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

@@ -1,0 +1,114 @@
+{
+ "id": "lesson-01-5",
+ "title": "Lesson 1.5: Stablecoins and how they break",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 1.5 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-01.png",
+   "eyebrow": "Lesson 1.5",
+   "vo": "Lesson one point five. Stablecoins and how they break.",
+   "cap": "Lesson 1.5. Stablecoins and how they break."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Classify a stablecoin by design and name what could break its peg.",
+   "vo": "Classify a stablecoin by design and name what could break its peg.",
+   "cap": "Classify a stablecoin by design and name what could break its peg."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Fiat-backed",
+    "Crypto-backed",
+    "Synthetic / hedged",
+    "Algorithmic"
+   ],
+   "compact": true,
+   "vo": "Fiat-backed, Cash/treasuries held by an issuer, Issuer, bank and custodian risk; freezes; redemption limited to approved parties. Crypto-backed, Over-collateralised on-chain crypto, Collateral crash, liquidations, oracle failure. Synthetic / hedged, Derivative positions (for example spot + short perp), Funding turns negative, exchange/venue risk, model risk. Algorithmic, Mostly its own mechanism / sister token, Reflexive death spiral when confidence breaks.",
+   "cap": "Fiat-backed, Cash/treasuries held by an issuer, Issuer, bank and custodian risk; freezes; redemption limited to approved parties Crypto-backed, Over-collateralised on-chain crypto, Collateral crash, liquidations, oracle failure Synthetic / hedged, Derivative positions (e.g. spot + short perp), Funding turns negative, exchange/venue risk, model risk Algorithmic, Mostly its own mechanism / sister token, Reflexive death spiral when confidence breaks"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "Peg mechanics: if a stablecoin trades at $0.98 and can be redeemed for $1.00, arbitrageurs buy and redeem it, pushing the price back up. The peg is only as strong as redemption access and reserve quality. History (research these as case studies): May 2022: Ter",
+   "vo": "Peg mechanics: if a stablecoin trades at $0.98 and can be redeemed for $1.00, arbitrageurs buy and redeem it, pushing the price back up. The peg is only as strong as redemption access and reserve quality. History (research these as case studies): May 2022: TerraUSD (UST), an algorithmic design, lost its peg and collapsed toward zero. March 2023: U.S.D.C. briefly traded well below $1 after part of its reserves were exposed to the failed Silicon Valley Bank, then recovered once reserves were confirmed.",
+   "cap": "Peg mechanics: if a stablecoin trades at $0.98 and can be redeemed for $1.00, arbitrageurs buy and redeem it, pushing the price back up. The peg is only as strong as redemption access and reserve quality. History (research these as case studies): May 2022: TerraUSD (UST), an algorithmic design, lost its peg and collapsed toward zero. March 2023: USDC briefly traded well below $1 after part of its reserves were exposed to the failed Silicon Valley Bank, then recovered once reserves were confirmed."
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example",
+   "items": [
+    "A minter makes ~2.9% per coin by buying and redeeming, so arbitrage should restore the…",
+    "You can't redeem, so you rely on minters acting and on the reserves being real.",
+    "If markets doubt the reserves, minters may not step in, and the discount can grow."
+   ],
+   "vo": "A fiat-backed coin trades at $0.97. Redemption is $1.00 minus a 0.1% fee, but only for verified institutional minters. A minter makes about 2.9% per coin by buying and redeeming, so arbitrage should restore the peg. You can't redeem, so you rely on minters acting and on the reserves being real. If markets doubt the reserves, minters may not step in, and the discount can grow.",
+   "cap": "A minter makes ~2.9% per coin by buying and redeeming, so arbitrage should restore the peg. You can't redeem, so you rely on minters acting and on the reserves being real. If markets doubt the reserves, minters may not step in, and the discount can grow."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "I know the type and backing of every stablecoin I hold",
+    "I know who can redeem, and how",
+    "I don't treat \"different stablecoins\" as diversified if they share issuers or collateral",
+    "I have a depeg exit rule (e.g. sell or rotate below $0.99 for longer than X hours)"
+   ],
+   "vo": "Your checklist. I know the type and backing of every stablecoin I hold I know who can redeem, and how I don't treat \"different stablecoins\" as diversified if they share issuers or collateral I have a depeg exit rule (for example sell or rotate below $0.99 for longer than X hours)",
+   "cap": "I know the type and backing of every stablecoin I hold I know who can redeem, and how I don't treat \"different stablecoins\" as diversified if they share issuers or collateral I have a depeg exit rule (e.g. sell or rotate below $0.99 for longer than X hours)"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What keeps a fiat-backed stablecoin near $1?"
+   ],
+   "sub": "Answer: Redemption for $1 of reserves, plus arbitrageurs who can redeem.",
+   "subAt": 0.62,
+   "vo": "What keeps a fiat-backed stablecoin near $1? ... Pause and think. ... The answer: Redemption for $1 of reserves, plus arbitrageurs who can redeem.",
+   "cap": "What keeps a fiat-backed stablecoin near $1? Pause and think. The answer: Redemption for $1 of reserves, plus arbitrageurs who can redeem."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why are algorithmic designs fragile?"
+   ],
+   "sub": "Answer: They rely on confidence and their own token. When demand falls, the mechanism can amplify the fall.",
+   "subAt": 0.62,
+   "vo": "Why are algorithmic designs fragile? ... Pause and think. ... The answer: They rely on confidence and their own token. When demand falls, the mechanism can amplify the fall.",
+   "cap": "Why are algorithmic designs fragile? Pause and think. The answer: They rely on confidence and their own token. When demand falls, the mechanism can amplify the fall."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Two stablecoins both backed by the same collateral. Diversified?"
+   ],
+   "sub": "Answer: No. They share the same failure point.",
+   "subAt": 0.62,
+   "vo": "Two stablecoins both backed by the same collateral. Diversified? ... Pause and think. ... The answer: No. They share the same failure point.",
+   "cap": "Two stablecoins both backed by the same collateral. Diversified? Pause and think. The answer: No. They share the same failure point."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

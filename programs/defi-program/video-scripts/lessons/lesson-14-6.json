@@ -1,0 +1,101 @@
+{
+ "id": "lesson-14-6",
+ "title": "Lesson 14.6: Searchers, keepers and arbitrage bots: how they work",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 14.6 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-14.png",
+   "eyebrow": "Lesson 14.6",
+   "vo": "Lesson fourteen point six. Searchers, keepers and arbitrage bots: how they work.",
+   "cap": "Lesson 14.6. Searchers, keepers and arbitrage bots: how they work."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Understand the professional bot economy that shapes DeFi prices, and why competing in it is hard.",
+   "vo": "Understand the professional bot economy that shapes DeFi prices, and why competing in it is hard.",
+   "cap": "Understand the professional bot economy that shapes DeFi prices, and why competing in it is hard."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Searchers run bots that find and capture opportunities",
+    "Keepers perform maintenance jobs for protocols (liquidations, auction bids, rebalancing)…",
+    "The economics",
+    "Why it matters to you",
+    "For a learner"
+   ],
+   "vo": "Searchers run bots that find and capture opportunities: decks arbitrage (price gaps between pools/venues), liquidations (repay debt, take the bonus), backruns (trading right after a large swap), and, harmfully, sandwiches. Keepers perform maintenance jobs for protocols (liquidations, auction bids, rebalancing) for a fee. The economics: bots bid for inclusion by paying builders/validators (2.8). Competition drives profits towards zero; the winners have the lowest latency, best infrastructure, private order flow and capital. Why it matters to you: these bots are why pool prices track the market (and cause L.V.R., 2.7), why liquidations happen within seconds (3.3), and why tight slippage and protected routing matter (2.5). For a learner: build read-only monitors (14.5) and understand the mechanics. Running competitive bots is a professional engineering business with real losses from failed transactions and bugs.",
+   "cap": "Searchers run bots that find and capture opportunities: DEX arbitrage (price gaps between pools/venues), liquidations (repay debt, take the bonus), backruns (trading right after a large swap), and, harmfully, sandwiches. Keepers perform maintenance jobs for protocols (liquidations, auction bids, rebalancing) for a fee. The economics: bots bid for inclusion by paying builders/validators (2.8). Competition drives profits towards zero; the winners have the lowest latency, best infrastructure, private order flow and capital. Why it matters to you: these bots are why pool prices track the market (and cause LVR, 2.7), why liquidations happen within seconds (3.3), and why tight slippage and protected routing matter (2.5). For a learner: build read-only monitors (14.5) and understand the mechanics. Running competitive bots is a professional engineering business with real losses from failed transactions and bugs."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "A liquidation worth a $300 bonus (3.3) appears. Dozens of bots see it in the same block; the winner pays most of the $300 to the block builder to be included first. The \"profit\" left after fees and gas might be a few dollars, and losing bots may still pay gas.",
+   "vo": "A liquidation worth a $300 bonus (3.3) appears. Dozens of bots see it in the same block; the winner pays most of the $300 to the block builder to be included first. The \"profit\" left after fees and gas might be a few dollars, and losing bots may still pay gas. That's why liquidations are near-instant, and why your buffer (not a liquidator's delay) is your protection.",
+   "cap": "A liquidation worth a $300 bonus (3.3) appears. Dozens of bots see it in the same block; the winner pays most of the $300 to the block builder to be included first. The \"profit\" left after fees and gas might be a few dollars, and losing bots may still pay gas. That's why liquidations are near-instant, and why your buffer (not a liquidator's delay) is your protection."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "I can name the main searcher strategies and their effect on me",
+    "My protections (slippage, private routing, HF buffers) assume bots act within seconds"
+   ],
+   "vo": "Your checklist. I can name the main searcher strategies and their effect on me My protections (slippage, private routing, health factor buffers) assume bots act within seconds",
+   "cap": "I can name the main searcher strategies and their effect on me My protections (slippage, private routing, HF buffers) assume bots act within seconds"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Where does most of a competitive searcher's profit go?"
+   ],
+   "sub": "Answer: To builders/validators, through bids for inclusion.",
+   "subAt": 0.62,
+   "vo": "Where does most of a competitive searcher's profit go? ... Pause and think. ... The answer: To builders/validators, through bids for inclusion.",
+   "cap": "Where does most of a competitive searcher's profit go? Pause and think. The answer: To builders/validators, through bids for inclusion."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What do keepers do?"
+   ],
+   "sub": "Answer: Paid maintenance for protocols: liquidations, auctions, rebalancing.",
+   "subAt": 0.62,
+   "vo": "What do keepers do? ... Pause and think. ... The answer: Paid maintenance for protocols: liquidations, auctions, rebalancing.",
+   "cap": "What do keepers do? Pause and think. The answer: Paid maintenance for protocols: liquidations, auctions, rebalancing."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why do liquidations happen so fast?"
+   ],
+   "sub": "Answer: Competing bots race to capture the bonus.",
+   "subAt": 0.62,
+   "vo": "Why do liquidations happen so fast? ... Pause and think. ... The answer: Competing bots race to capture the bonus.",
+   "cap": "Why do liquidations happen so fast? Pause and think. The answer: Competing bots race to capture the bonus."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

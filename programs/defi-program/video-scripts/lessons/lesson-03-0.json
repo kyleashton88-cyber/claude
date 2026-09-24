@@ -1,0 +1,90 @@
+{
+ "id": "lesson-03-0",
+ "title": "Lesson 3.0: Mastery Starter",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 3.0 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-03.png",
+   "eyebrow": "Lesson 3.0",
+   "vo": "Lesson three point zero. Mastery Starter.",
+   "cap": "Lesson 3.0. Mastery Starter."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "The 60-second version"
+   ],
+   "sub": "Lending markets let you earn interest by lending, or borrow against what you own without selling it. Borrowing comes with one hard rule: if your collateral falls too far, it's sold automatically, at a penalty.",
+   "vo": "Lending markets let you earn interest by lending, or borrow against what you own without selling it. Borrowing comes with one hard rule: if your collateral falls too far, it's sold automatically, at a penalty.",
+   "cap": "Lending markets let you earn interest by lending, or borrow against what you own without selling it. Borrowing comes with one hard rule: if your collateral falls too far, it's sold automatically, at a penalty."
+  },
+  {
+   "type": "bullets",
+   "title": "Words you'll need",
+   "items": [
+    "Collateral",
+    "LTV",
+    "Health factor",
+    "Liquidation",
+    "Utilisation"
+   ],
+   "compact": true,
+   "vo": "Collateral, what you lock up to borrow. L.T.V., debt divided by collateral value. Health factor, your safety margin; below 1 means liquidation. Liquidation, forced sale of collateral to repay debt. Utilisation, how much of a pool is borrowed.",
+   "cap": "Collateral, what you lock up to borrow LTV, debt ÷ collateral value Health factor, your safety margin; below 1 means liquidation Liquidation, forced sale of collateral to repay debt Utilisation, how much of a pool is borrowed"
+  },
+  {
+   "type": "bullets",
+   "title": "Before you start",
+   "items": [
+    "Modules 0–2",
+    "Comfort using a DEX on a low-fee network"
+   ],
+   "vo": "Modules 0–2 Comfort using a decks on a low-fee network",
+   "cap": "Modules 0–2 Comfort using a DEX on a low-fee network"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Your first safe step"
+   ],
+   "sub": "Supply $20 of USDC to a blue-chip lending market, read its utilisation, then withdraw it. No borrowing yet.",
+   "vo": "Supply $20 of U.S.D.C. to a blue-chip lending market, read its utilisation, then withdraw it. No borrowing yet.",
+   "cap": "Supply $20 of USDC to a blue-chip lending market, read its utilisation, then withdraw it. No borrowing yet."
+  },
+  {
+   "type": "bullets",
+   "title": "The mastery ladder",
+   "items": [
+    "Beginner",
+    "Practitioner",
+    "Master"
+   ],
+   "compact": true,
+   "vo": "Beginner, Supplies stablecoins and reads utilisation and rates. Practitioner, Borrows with health factor at least 2 and a written defence ladder. Master, Runs correlated loops and perps with computed liquidation prices and break-even rates.",
+   "cap": "Beginner, Supplies stablecoins and reads utilisation and rates Practitioner, Borrows with HF ≥ 2 and a written defence ladder Master, Runs correlated loops and perps with computed liquidation prices and break-even rates"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "You've mastered it when…"
+   ],
+   "sub": "…you can open, monitor and unwind a borrow without ever approaching liquidation. ---",
+   "vo": "…you can open, monitor and unwind a borrow without ever approaching liquidation. ---",
+   "cap": "…you can open, monitor and unwind a borrow without ever approaching liquidation. ---"
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

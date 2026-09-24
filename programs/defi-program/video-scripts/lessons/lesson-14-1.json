@@ -1,0 +1,105 @@
+{
+ "id": "lesson-14-1",
+ "title": "Lesson 14.1: Monitoring: dashboards, alerts and on-chain watchers",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 14.1 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-14.png",
+   "eyebrow": "Lesson 14.1",
+   "vo": "Lesson fourteen point one. Monitoring: dashboards, alerts and on-chain watchers.",
+   "cap": "Lesson 14.1. Monitoring: dashboards, alerts and on-chain watchers."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Set up monitoring so you hear about problems before they cost money.",
+   "vo": "Set up monitoring so you hear about problems before they cost money.",
+   "cap": "Set up monitoring so you hear about problems before they cost money."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Positions",
+    "Protocols",
+    "Wallets",
+    "Market"
+   ],
+   "vo": "Watch four things: Tools: portfolio dashboards, protocol-native alerts, wallet-activity watchers, block-explorer address alerts, and official status/X accounts. Alerts should reach your phone. Positions: health factors, L.P. ranges, pegs, utilisation of markets you lend to. Protocols: governance proposals, queued upgrades (timelocks), incidents. Wallets: any outgoing transaction or new approval from your vault/operating wallets. Market: funding, large depegs, liquidations.",
+   "cap": "Positions: health factors, LP ranges, pegs, utilisation of markets you lend to. Protocols: governance proposals, queued upgrades (timelocks), incidents. Wallets: any outgoing transaction or new approval from your vault/operating wallets. Market: funding, large depegs, liquidations."
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example — alert sheet",
+   "items": [
+    "HF, credit line",
+    "Stablecoin peg",
+    "Market utilisation",
+    "Vault wallet outflow",
+    "Queued upgrade"
+   ],
+   "compact": true,
+   "vo": "health factor, credit line, < 2.0 / < 1.7, Repay per 11.3. Stablecoin peg, < 0.99 for 2h, Peg rule. Market utilisation, > 95% for 24h, Withdraw per kill rule. Vault wallet outflow, Any, Verify immediately (11.5). Queued upgrade, Any, on protocols > 10% of book, Review within timelock.",
+   "cap": "HF, credit line, 95% for 24h, Withdraw per kill rule Vault wallet outflow, Any, Verify immediately (11.5) Queued upgrade, Any, on protocols > 10% of book, Review within timelock"
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Alerts for all four categories, delivered to phone",
+    "Every alert maps to a written action"
+   ],
+   "vo": "Your checklist. Alerts for all four categories, delivered to phone Every alert maps to a written action",
+   "cap": "Alerts for all four categories, delivered to phone Every alert maps to a written action"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why alert on any vault-wallet outflow?"
+   ],
+   "sub": "Answer: The vault should almost never move; any movement could be a compromise.",
+   "subAt": 0.62,
+   "vo": "Why alert on any vault-wallet outflow? ... Pause and think. ... The answer: The vault should almost never move; any movement could be a compromise.",
+   "cap": "Why alert on any vault-wallet outflow? Pause and think. The answer: The vault should almost never move; any movement could be a compromise."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why watch queued upgrades?"
+   ],
+   "sub": "Answer: The timelock is your window to exit before the change takes effect.",
+   "subAt": 0.62,
+   "vo": "Why watch queued upgrades? ... Pause and think. ... The answer: The timelock is your window to exit before the change takes effect.",
+   "cap": "Why watch queued upgrades? Pause and think. The answer: The timelock is your window to exit before the change takes effect."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "An alert with no action attached is…?"
+   ],
+   "sub": "Answer: Noise. Every alert needs a written response.",
+   "subAt": 0.62,
+   "vo": "An alert with no action attached is…? ... Pause and think. ... The answer: Noise. Every alert needs a written response.",
+   "cap": "An alert with no action attached is…? Pause and think. The answer: Noise. Every alert needs a written response."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "id": "lesson-07-2",
+ "title": "Lesson 7.2: Block explorer mastery",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 7.2 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-07.png",
+   "eyebrow": "Lesson 7.2",
+   "vo": "Lesson seven point two. Block explorer mastery.",
+   "cap": "Lesson 7.2. Block explorer mastery."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Read any transaction on an explorer without using the app's interface.",
+   "vo": "Read any transaction on an explorer without using the app's interface.",
+   "cap": "Read any transaction on an explorer without using the app's interface."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Key ideas"
+   ],
+   "sub": "For a transaction: status (success/fail), block, from/to, value, fee, method called, token transfers (events), internal calls, and logs. For a contract: read (state, parameters) and write (call functions directly, carefully) tabs; proxy info; verified source.",
+   "vo": "For a transaction: status (success/fail), block, from/to, value, fee, method called, token transfers (events), internal calls, and logs. For a contract: read (state, parameters) and write (call functions directly, carefully) tabs; proxy info; verified source.",
+   "cap": "For a transaction: status (success/fail), block, from/to, value, fee, method called, token transfers (events), internal calls, and logs. For a contract: read (state, parameters) and write (call functions directly, carefully) tabs; proxy info; verified source."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Your swap on an L2: status Success · method swap · token transfers: 100 USDC out, 0.0331 ETH in · fee 0.00002 ETH. The event log confirms the router and pool. You've verified the trade without trusting the website.",
+   "vo": "Your swap on an layer two: status Success , method swap , token transfers: 100 U.S.D.C. out, 0.0331 ETH in , fee 0.00002 ETH. The event log confirms the router and pool. You've verified the trade without trusting the website.",
+   "cap": "Your swap on an L2: status Success · method swap · token transfers: 100 USDC out, 0.0331 ETH in · fee 0.00002 ETH. The event log confirms the router and pool. You've verified the trade without trusting the website."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "I can find status, fee, method and token transfers",
+    "I can read a contract's parameters on the Read tab",
+    "I can check and revoke approvals"
+   ],
+   "vo": "Your checklist. I can find status, fee, method and token transfers I can read a contract's parameters on the Read tab I can check and revoke approvals",
+   "cap": "I can find status, fee, method and token transfers I can read a contract's parameters on the Read tab I can check and revoke approvals"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Where do you see tokens that actually moved?"
+   ],
+   "sub": "Answer: Token transfers (event logs).",
+   "subAt": 0.62,
+   "vo": "Where do you see tokens that actually moved? ... Pause and think. ... The answer: Token transfers (event logs).",
+   "cap": "Where do you see tokens that actually moved? Pause and think. The answer: Token transfers (event logs)."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does the Read tab show?"
+   ],
+   "sub": "Answer: A contract's public state and parameters.",
+   "subAt": 0.62,
+   "vo": "What does the Read tab show? ... Pause and think. ... The answer: A contract's public state and parameters.",
+   "cap": "What does the Read tab show? Pause and think. The answer: A contract's public state and parameters."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why verify on the explorer?"
+   ],
+   "sub": "Answer: It's the ground truth, independent of any website.",
+   "subAt": 0.62,
+   "vo": "Why verify on the explorer? ... Pause and think. ... The answer: It's the ground truth, independent of any website.",
+   "cap": "Why verify on the explorer? Pause and think. The answer: It's the ground truth, independent of any website."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

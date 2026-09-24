@@ -1,0 +1,112 @@
+{
+ "id": "lesson-10-4",
+ "title": "Lesson 10.4: Options income: covered calls, cash-secured puts, options vaults",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 10.4 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-10.png",
+   "eyebrow": "Lesson 10.4",
+   "vo": "Lesson ten point four. Options income: covered calls, cash-secured puts, options vaults.",
+   "cap": "Lesson 10.4. Options income: covered calls, cash-secured puts, options vaults."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Earn option premium on assets you'd hold or buy anyway, knowing exactly what you give up.",
+   "vo": "Earn option premium on assets you'd hold or buy anyway, knowing exactly what you give up.",
+   "cap": "Earn option premium on assets you'd hold or buy anyway, knowing exactly what you give up."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Covered call",
+    "Cash-secured put",
+    "The wheel",
+    "Options vaults automate this on-chain. They add contract risk and you"
+   ],
+   "vo": "from you at a higher strike. You keep the premium, and your upside is capped at the strike. you the asset at a lower strike. You keep the premium. If price falls below the strike, you buy at the strike. called away to repeat. don't choose the strikes. Covered call: you hold the asset and sell someone the right to buy it Cash-secured put: you hold stablecoins and sell someone the right to sell The wheel: sell puts until assigned to hold the asset to sell calls until Options vaults automate this on-chain. They add contract risk and you",
+   "cap": "Covered call: you hold the asset and sell someone the right to buy it Cash-secured put: you hold stablecoins and sell someone the right to sell The wheel: sell puts until assigned → hold the asset → sell calls until Options vaults automate this on-chain. They add contract risk and you"
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example",
+   "items": [
+    "Covered call",
+    "Cash-secured put"
+   ],
+   "vo": "ETH at 3,000. about 20.9% annualised if repeated at that premium, which it won't be exactly. Max gain for the week 10.4%. Break-even 2,988. the calculator to 0.44% on the cash for the week. If assigned, effective entry $2,688. Covered call: sell a 7-day 3,300 call for 0.4% ($12). Cash-secured put: sell a 7-day 2,700 put for $12 with $2,700 reserved",
+   "cap": "Covered call: sell a 7-day 3,300 call for 0.4% ($12). Cash-secured put: sell a 7-day 2,700 put for $12 with $2,700 reserved"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "What this position is short"
+   ],
+   "sub": "Covered call: upside above the strike, plus the full downside of the asset. Cash-secured put: a crash through the strike.",
+   "vo": "Covered call: upside above the strike, plus the full downside of the asset. Cash-secured put: a crash through the strike.",
+   "cap": "Covered call: upside above the strike, plus the full downside of the asset. Cash-secured put: a crash through the strike."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Only on assets I'd hold (calls) or buy at the strike (puts)",
+    "Strike chosen from levels, not from the premium",
+    "Annualised premium treated as \"if repeated\", never promised",
+    "Vault due diligence done if automating"
+   ],
+   "vo": "Your checklist. Only on assets I'd hold (calls) or buy at the strike (puts) Strike chosen from levels, not from the premium Annualised premium treated as \"if repeated\", never promised Vault due diligence done if automating",
+   "cap": "Only on assets I'd hold (calls) or buy at the strike (puts) Strike chosen from levels, not from the premium Annualised premium treated as \"if repeated\", never promised Vault due diligence done if automating"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What do you give up by selling a covered call?"
+   ],
+   "sub": "Answer: Gains above the strike for that period.",
+   "subAt": 0.62,
+   "vo": "What do you give up by selling a covered call? ... Pause and think. ... The answer: Gains above the strike for that period.",
+   "cap": "What do you give up by selling a covered call? Pause and think. The answer: Gains above the strike for that period."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Put strike 2,700, premium $15. Effective entry if assigned?"
+   ],
+   "sub": "Answer: $2,685.",
+   "subAt": 0.62,
+   "vo": "Put strike 2,700, premium $15. Effective entry if assigned? ... Pause and think. ... The answer: $2,685.",
+   "cap": "Put strike 2,700, premium $15. Effective entry if assigned? Pause and think. The answer: $2,685."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Does premium protect you in a crash?"
+   ],
+   "sub": "Answer: Only by the size of the premium. The asset's downside remains.",
+   "subAt": 0.62,
+   "vo": "Does premium protect you in a crash? ... Pause and think. ... The answer: Only by the size of the premium. The asset's downside remains.",
+   "cap": "Does premium protect you in a crash? Pause and think. The answer: Only by the size of the premium. The asset's downside remains."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

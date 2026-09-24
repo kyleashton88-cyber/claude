@@ -1,0 +1,119 @@
+{
+ "id": "lesson-02-8",
+ "title": "Lesson 2.8: The MEV supply chain",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 2.8 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-02.png",
+   "eyebrow": "Lesson 2.8",
+   "vo": "Lesson two point eight. The M.E.V. supply chain.",
+   "cap": "Lesson 2.8. The MEV supply chain."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Understand who sees, orders and profits from your transactions, and how to get some of that value back.",
+   "vo": "Understand who sees, orders and profits from your transactions, and how to get some of that value back.",
+   "cap": "Understand who sees, orders and profits from your transactions, and how to get some of that value back."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/mev-supply-chain.png",
+   "eyebrow": "The MEV supply chain",
+   "vo": "Here's the picture: The M.E.V. supply chain.",
+   "cap": "The MEV supply chain."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "You / your wallet send it, either to the public mempool or to a private RPC (e.g. an…",
+    "Searchers scan for opportunities (arbitrage, liquidations, backruns, sandwiches) and…",
+    "Builders assemble the most profitable blocks from transactions and bundles.",
+    "Relays pass blocks to proposers (validators), who pick the highest-paying block…",
+    "Order-flow auctions / MEV rebates"
+   ],
+   "vo": "The path of an Ethereum transaction today: You / your wallet send it, either to the public mempool or to a private R.P.C. (for example an M.E.V.-protection endpoint). Searchers scan for opportunities (arbitrage, liquidations, backruns, sandwiches) and submit bundles. Builders assemble the most profitable blocks from transactions and bundles. Relays pass blocks to proposers (validators), who pick the highest-paying block (proposer-builder separation, via M.E.V.-Boost). Order-flow auctions / M.E.V. rebates: some private RPCs and wallets let searchers bid to backrun your transaction and refund you part of the value.",
+   "cap": "You / your wallet send it, either to the public mempool or to a private RPC (e.g. an MEV-protection endpoint). Searchers scan for opportunities (arbitrage, liquidations, backruns, sandwiches) and submit bundles. Builders assemble the most profitable blocks from transactions and bundles. Relays pass blocks to proposers (validators), who pick the highest-paying block (proposer-builder separation, via MEV-Boost). Order-flow auctions / MEV rebates: some private RPCs and wallets let searchers bid to backrun your transaction and refund you part of the value."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Intent systems (Lesson 2.6) move competition to solvers, often with built-in protection.",
+    "L2s usually have a single sequencer ordering transactions, which changes MEV dynamics…"
+   ],
+   "vo": "Intent systems (Lesson 2.6) move competition to solvers, often with built-in protection. layer twos usually have a single sequencer ordering transactions, which changes M.E.V. dynamics (for example first-come-first-served or priority-fee ordering).",
+   "cap": "Intent systems (Lesson 2.6) move competition to solvers, often with built-in protection. L2s usually have a single sequencer ordering transactions, which changes MEV dynamics (e.g. first-come-first-served or priority-fee ordering)."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "A $100,000 swap sent publicly with 1% slippage could leak up to ~$1,000 to a sandwich. Sent through a protected RPC with rebates: no sandwich, and if the trade creates a backrun opportunity (e.g. arbitrage between pools), you may receive a share of it back. Sa",
+   "vo": "A $100,000 swap sent publicly with 1% slippage could leak up to about $1,000 to a sandwich. Sent through a protected R.P.C. with rebates: no sandwich, and if the trade creates a backrun opportunity (for example arbitrage between pools), you may receive a share of it back. Same trade, very different outcome, decided by where you send it.",
+   "cap": "A $100,000 swap sent publicly with 1% slippage could leak up to ~$1,000 to a sandwich. Sent through a protected RPC with rebates: no sandwich, and if the trade creates a backrun opportunity (e.g. arbitrage between pools), you may receive a share of it back. Same trade, very different outcome, decided by where you send it."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Large trades go through a protected RPC, an intent system or an aggregator with MEV…",
+    "I know whether my wallet's RPC offers rebates",
+    "I understand my L2's sequencer ordering rules"
+   ],
+   "vo": "Your checklist. Large trades go through a protected R.P.C., an intent system or an aggregator with M.E.V. protection I know whether my wallet's R.P.C. offers rebates I understand my layer two's sequencer ordering rules",
+   "cap": "Large trades go through a protected RPC, an intent system or an aggregator with MEV protection I know whether my wallet's RPC offers rebates I understand my L2's sequencer ordering rules"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What do builders do?"
+   ],
+   "sub": "Answer: Assemble blocks from transactions and searcher bundles to maximise value.",
+   "subAt": 0.62,
+   "vo": "What do builders do? ... Pause and think. ... The answer: Assemble blocks from transactions and searcher bundles to maximise value.",
+   "cap": "What do builders do? Pause and think. The answer: Assemble blocks from transactions and searcher bundles to maximise value."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What is an MEV rebate?"
+   ],
+   "sub": "Answer: A refund of part of the value searchers extract from backrunning your transaction.",
+   "subAt": 0.62,
+   "vo": "What is an M.E.V. rebate? ... Pause and think. ... The answer: A refund of part of the value searchers extract from backrunning your transaction.",
+   "cap": "What is an MEV rebate? Pause and think. The answer: A refund of part of the value searchers extract from backrunning your transaction."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Who orders transactions on most L2s today?"
+   ],
+   "sub": "Answer: A sequencer, often a single operator.",
+   "subAt": 0.62,
+   "vo": "Who orders transactions on most layer twos today? ... Pause and think. ... The answer: A sequencer, often a single operator.",
+   "cap": "Who orders transactions on most L2s today? Pause and think. The answer: A sequencer, often a single operator."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

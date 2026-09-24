@@ -1,0 +1,123 @@
+{
+ "id": "lesson-00-3",
+ "title": "Lesson 0.3: Buying your first crypto without overpaying",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 0.3 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-00.png",
+   "eyebrow": "Lesson 0.3",
+   "vo": "Lesson zero point three. Buying your first crypto without overpaying.",
+   "cap": "Lesson 0.3. Buying your first crypto without overpaying."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Fund your account and make a first purchase at a sensible cost.",
+   "vo": "Fund your account and make a first purchase at a sensible cost.",
+   "cap": "Fund your account and make a first purchase at a sensible cost."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Deposit your money, usually by bank transfer (cheapest) or card (fastest, most expensive).",
+    "Instant buy / convert buttons are simple but often include a spread",
+    "The trading screen (\"advanced\" or \"spot trading\") uses an order book:",
+    "Market order",
+    "Limit order"
+   ],
+   "vo": "(a price markup) plus a fee. network fees, called \"gas\") and some U.S.D.C. (a dollar stablecoin for practice). Deposit your money, usually by bank transfer (cheapest) or card (fastest, most expensive). Instant buy / convert buttons are simple but often include a spread The trading screen (\"advanced\" or \"spot trading\") uses an order book: Market order: buy now at the best available price Limit order: buy only at your chosen price or better. It often has a lower fee (\"maker\" fee).",
+   "cap": "Deposit your money, usually by bank transfer (cheapest) or card (fastest, most expensive). Instant buy / convert buttons are simple but often include a spread The trading screen (\"advanced\" or \"spot trading\") uses an order book: Market order: buy now at the best available price Limit order: buy only at your chosen price or better. It often has a lower fee (\"maker\" fee)."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "What to buy first for this program"
+   ],
+   "vo": "What to buy first for this program: a little ETH (you need it to pay",
+   "cap": "What to buy first for this program: a little ETH (you need it to pay"
+  },
+  {
+   "type": "bullets",
+   "title": "Worked example (illustrative fees)",
+   "items": [
+    "Card + instant buy",
+    "Bank transfer + limit order"
+   ],
+   "compact": true,
+   "vo": "Card + instant buy, about 3.99%, about $19.95. Bank transfer + limit order, about 0.4%, about $2.00.",
+   "cap": "Card + instant buy, ~3.99%, ~$19.95 Bank transfer + limit order, ~0.4%, ~$2.00"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example (illustrative fees)"
+   ],
+   "sub": "Buying $500 of ETH: Same ETH, ~$18 difference. Your exchange's fee page has the real numbers.",
+   "vo": "Buying $500 of ETH: Same ETH, about $18 difference. Your exchange's fee page has the real numbers.",
+   "cap": "Buying $500 of ETH: Same ETH, ~$18 difference. Your exchange's fee page has the real numbers."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Deposited by the cheapest method available to me",
+    "Bought a small amount of ETH (for gas) and USDC (for practice)",
+    "Tried a limit order on the trading screen",
+    "Saved a record"
+   ],
+   "vo": "Your checklist. Deposited by the cheapest method available to me Bought a small amount of ETH (for gas) and U.S.D.C. (for practice) Tried a limit order on the trading screen Saved a record: date, amount, price, fees (you'll need records for tax)",
+   "cap": "Deposited by the cheapest method available to me Bought a small amount of ETH (for gas) and USDC (for practice) Tried a limit order on the trading screen Saved a record: date, amount, price, fees (you'll need records for tax)"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why keep a little ETH even if you mostly want stablecoins?"
+   ],
+   "sub": "Answer: You need ETH to pay network fees (gas) on Ethereum and most of its low-cost networks.",
+   "subAt": 0.62,
+   "vo": "Why keep a little ETH even if you mostly want stablecoins? ... Pause and think. ... The answer: You need ETH to pay network fees (gas) on Ethereum and most of its low-cost networks.",
+   "cap": "Why keep a little ETH even if you mostly want stablecoins? Pause and think. The answer: You need ETH to pay network fees (gas) on Ethereum and most of its low-cost networks."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Market or limit order: which controls the price you pay?"
+   ],
+   "sub": "Answer: A limit order.",
+   "subAt": 0.62,
+   "vo": "Market or limit order: which controls the price you pay? ... Pause and think. ... The answer: A limit order.",
+   "cap": "Market or limit order: which controls the price you pay? Pause and think. The answer: A limit order."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why keep records from day one?"
+   ],
+   "sub": "Answer: Most countries tax crypto gains. Records of dates, amounts, prices and fees make that straightforward.",
+   "subAt": 0.62,
+   "vo": "Why keep records from day one? ... Pause and think. ... The answer: Most countries tax crypto gains. Records of dates, amounts, prices and fees make that straightforward.",
+   "cap": "Why keep records from day one? Pause and think. The answer: Most countries tax crypto gains. Records of dates, amounts, prices and fees make that straightforward."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

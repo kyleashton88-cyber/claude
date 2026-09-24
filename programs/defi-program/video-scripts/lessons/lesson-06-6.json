@@ -1,0 +1,102 @@
+{
+ "id": "lesson-06-6",
+ "title": "Lesson 6.6: Vote-escrow tokenomics, bribes and governance markets",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 6.6 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-06.png",
+   "eyebrow": "Lesson 6.6",
+   "vo": "Lesson six point six. Vote-escrow tokenomics, bribes and governance markets.",
+   "cap": "Lesson 6.6. Vote-escrow tokenomics, bribes and governance markets."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Understand vote-escrow (\"ve\") systems and bribe markets, a major source of DeFi yield and power.",
+   "vo": "Understand vote-escrow (\"ve\") systems and bribe markets, a major source of DeFi yield and power.",
+   "cap": "Understand vote-escrow (\"ve\") systems and bribe markets, a major source of DeFi yield and power."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Vote-escrow",
+    "Gauges",
+    "Bribes / voting incentives",
+    "Liquid lockers / meta-governance",
+    "Risks"
+   ],
+   "vo": "Vote-escrow: you lock a governance token for a period (often up to 4 years) and get ve-tokens with voting power that decays as the unlock approaches. Longer lock = more power. Gauges: ve-holders vote on which pools receive the protocol's token emissions. Emissions attract liquidity, so votes are valuable. Bribes / voting incentives: protocols that want liquidity pay ve-holders to vote for their pool. Voters earn this as yield (plus a share of fees in some designs). Liquid lockers / meta-governance: protocols that lock on your behalf and give you a tradable token. It's liquid, but it can trade at a discount, and it adds a layer of risk. Risks: long locks (you can't sell), the token's price over the lock, emissions diluting holders, and governance capture.",
+   "cap": "Vote-escrow: you lock a governance token for a period (often up to 4 years) and get ve-tokens with voting power that decays as the unlock approaches. Longer lock = more power. Gauges: ve-holders vote on which pools receive the protocol's token emissions. Emissions attract liquidity, so votes are valuable. Bribes / voting incentives: protocols that want liquidity pay ve-holders to vote for their pool. Voters earn this as yield (plus a share of fees in some designs). Liquid lockers / meta-governance: protocols that lock on your behalf and give you a tradable token. It's liquid, but it can trade at a discount, and it adds a layer of risk. Risks: long locks (you can't sell), the token's price over the lock, emissions diluting holders, and governance capture."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "$10,000 of a ve-token earning ~15% APR in bribes ≈ $1,500/yr, paid in various tokens. But the underlying is locked for 4 years: if the token falls 60%, the position is worth $4,000 plus the bribes collected. A liquid-locker version lets you exit, but it traded",
+   "vo": "$10,000 of a ve-token earning about 15% A.P.R. in bribes about $1,500 a year, paid in various tokens. But the underlying is locked for 4 years: if the token falls 60%, the position is worth $4,000 plus the bribes collected. A liquid-locker version lets you exit, but it traded at a 20% discount during the last sell-off. Price the lock, not just the A.P.R..",
+   "cap": "$10,000 of a ve-token earning ~15% APR in bribes ≈ $1,500/yr, paid in various tokens. But the underlying is locked for 4 years: if the token falls 60%, the position is worth $4,000 plus the bribes collected. A liquid-locker version lets you exit, but it traded at a 20% discount during the last sell-off. Price the lock, not just the APR."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Lock length and decay understood",
+    "Bribe income valued at a realistic sale price",
+    "Liquid-locker discount history checked before using one"
+   ],
+   "vo": "Your checklist. Lock length and decay understood Bribe income valued at a realistic sale price Liquid-locker discount history checked before using one",
+   "cap": "Lock length and decay understood Bribe income valued at a realistic sale price Liquid-locker discount history checked before using one"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What do ve-holders vote on?"
+   ],
+   "sub": "Answer: Which pools receive emissions (gauge weights) and other governance decisions.",
+   "subAt": 0.62,
+   "vo": "What do ve-holders vote on? ... Pause and think. ... The answer: Which pools receive emissions (gauge weights) and other governance decisions.",
+   "cap": "What do ve-holders vote on? Pause and think. The answer: Which pools receive emissions (gauge weights) and other governance decisions."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Why do protocols pay bribes?"
+   ],
+   "sub": "Answer: Votes direct emissions to their pools, attracting liquidity.",
+   "subAt": 0.62,
+   "vo": "Why do protocols pay bribes? ... Pause and think. ... The answer: Votes direct emissions to their pools, attracting liquidity.",
+   "cap": "Why do protocols pay bribes? Pause and think. The answer: Votes direct emissions to their pools, attracting liquidity."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Main cost of a 4-year lock?"
+   ],
+   "sub": "Answer: You can't sell during the lock, whatever the token's price does.",
+   "subAt": 0.62,
+   "vo": "Main cost of a 4-year lock? ... Pause and think. ... The answer: You can't sell during the lock, whatever the token's price does.",
+   "cap": "Main cost of a 4-year lock? Pause and think. The answer: You can't sell during the lock, whatever the token's price does."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}

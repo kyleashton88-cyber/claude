@@ -1,0 +1,100 @@
+{
+ "id": "lesson-07-8",
+ "title": "Lesson 7.8: Derivatives on-chain",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "use": "Lesson 7.8 page in the Whop course.",
+ "maxMinutes": 25,
+ "scenes": [
+  {
+   "type": "image",
+   "src": "assets/modules/module-07.png",
+   "eyebrow": "Lesson 7.8",
+   "vo": "Lesson seven point eight. Derivatives on-chain.",
+   "cap": "Lesson 7.8. Derivatives on-chain."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Objective"
+   ],
+   "sub": "Read funding, open interest and liquidation data as positioning context.",
+   "vo": "Read funding, open interest and liquidation data as positioning context.",
+   "cap": "Read funding, open interest and liquidation data as positioning context."
+  },
+  {
+   "type": "bullets",
+   "title": "Key ideas",
+   "items": [
+    "Perpetual futures (perps)",
+    "Positive funding",
+    "Open interest (OI)",
+    "Liquidation data"
+   ],
+   "vo": "Perpetual futures (perps): no expiry; kept near spot by funding payments. Positive funding: longs pay shorts (crowded longs). Negative: shorts pay longs. Open interest (open interest): total open contracts. Rising open interest with rising price means leverage building. Liquidation data: bursts of forced closes.",
+   "cap": "Perpetual futures (perps): no expiry; kept near spot by funding payments. Positive funding: longs pay shorts (crowded longs). Negative: shorts pay longs. Open interest (OI): total open contracts. Rising OI with rising price means leverage building. Liquidation data: bursts of forced closes."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Worked example"
+   ],
+   "sub": "Price +8% in a week, OI +40%, funding at its highest in months: leverage is crowding into longs. That's a fragile setup (a drop could cascade) and, for Lesson 10.3, a funding-carry opportunity with a squeeze risk.",
+   "vo": "Price +8% in a week, open interest +40%, funding at its highest in months: leverage is crowding into longs. That's a fragile setup (a drop could cascade) and, for Lesson 10.3, a funding-carry opportunity with a squeeze risk.",
+   "cap": "Price +8% in a week, OI +40%, funding at its highest in months: leverage is crowding into longs. That's a fragile setup (a drop could cascade) and, for Lesson 10.3, a funding-carry opportunity with a squeeze risk."
+  },
+  {
+   "type": "bullets",
+   "title": "Checklist",
+   "items": [
+    "Funding and OI checked before leveraged or carry trades",
+    "Liquidation clusters noted"
+   ],
+   "vo": "Your checklist. Funding and open interest checked before leveraged or carry trades Liquidation clusters noted",
+   "cap": "Funding and OI checked before leveraged or carry trades Liquidation clusters noted"
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What does positive funding mean?"
+   ],
+   "sub": "Answer: Longs are paying shorts.",
+   "subAt": 0.62,
+   "vo": "What does positive funding mean? ... Pause and think. ... The answer: Longs are paying shorts.",
+   "cap": "What does positive funding mean? Pause and think. The answer: Longs are paying shorts."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "Rising price + rising OI + high funding suggests?"
+   ],
+   "sub": "Answer: Leveraged longs are crowding in; the setup is fragile.",
+   "subAt": 0.62,
+   "vo": "Rising price + rising open interest + high funding suggests? ... Pause and think. ... The answer: Leveraged longs are crowding in; the setup is fragile.",
+   "cap": "Rising price + rising OI + high funding suggests? Pause and think. The answer: Leveraged longs are crowding in; the setup is fragile."
+  },
+  {
+   "type": "statement",
+   "lines": [
+    "Quiz",
+    "What keeps a perp near spot?"
+   ],
+   "sub": "Answer: Funding payments.",
+   "subAt": 0.62,
+   "vo": "What keeps a perp near spot? ... Pause and think. ... The answer: Funding payments.",
+   "cap": "What keeps a perp near spot? Pause and think. The answer: Funding payments."
+  },
+  {
+   "type": "cta",
+   "button": "Do the checklist",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "Now do the checklist before moving on. See you in the next lesson.",
+   "cap": "Now do the checklist before moving on."
+  }
+ ]
+}
