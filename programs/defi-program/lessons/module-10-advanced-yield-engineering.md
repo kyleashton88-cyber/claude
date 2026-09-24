@@ -15,6 +15,8 @@ is short ___."* If you can't fill the blank, you're not ready to enter.
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 10 — Advanced Yield Engineering](../assets/modules/module-10.png)
+
 ### The 60-second version
 Professionals don't just take the yield on offer: they engineer it. Fixed rates, hedged carry, option income and managed ranges each swap one risk for another. This module teaches you to build them and say exactly what each one is short.
 
@@ -101,6 +103,8 @@ YT: falling yields, and time (it decays to zero).
 ### Objective
 Capture the premium of a dated future over spot without taking a view on price.
 
+![Cash-and-carry](../assets/diagrams/cash-and-carry.png)
+
 ### Explanation
 In rising markets, dated futures usually trade **above** spot. The gap (basis)
 shrinks to zero at expiry because the future settles at spot.
@@ -138,6 +142,8 @@ Margin and venue risk: a squeeze on the short leg, or the venue failing.
 
 ### Objective
 Run a funding-carry position with proper sizing, venue limits and exit rules.
+
+![Funding carry](../assets/diagrams/funding-carry.png)
 
 ### Explanation
 Perpetual futures pay **funding** between longs and shorts to keep the perp
@@ -184,6 +190,8 @@ Funding turning negative, short squeezes, and venue failure.
 ### Objective
 Earn option premium on assets you'd hold or buy anyway, knowing exactly what you give up.
 
+![Options income](../assets/diagrams/covered-call-put.png)
+
 ### Explanation
 - **Covered call:** you hold the asset and sell someone the right to buy it
   from you at a higher **strike**. You keep the premium, and your upside is capped at the strike.
@@ -225,6 +233,8 @@ Cash-secured put: a crash through the strike.
 
 ### Objective
 Choose a range width and a rebalance rule that fee income can actually pay for.
+
+![Concentrated liquidity](../assets/diagrams/cl-range-rebalance.png)
 
 ### Explanation
 Narrower ranges earn more fees per dollar *while in range* and go out of range sooner.
@@ -269,6 +279,8 @@ Trending markets and volatility above what the range was sized for.
 ### Objective
 Value restaking and points programmes without letting unknown rewards drive position size.
 
+![Points are an option](../assets/diagrams/points-as-option.png)
+
 ### Explanation
 Restaking reuses staked assets to secure more services, paying extra rewards
 and often **points**: an off-chain score that may or may not become a token.
@@ -308,6 +320,8 @@ Slashing, depeg of the restaking token, and the chance that points never become 
 
 ### Objective
 Understand what you're really taking on when you provide liquidity to a perpetuals exchange.
+
+![You are the house](../assets/diagrams/perp-lp-vault.png)
 
 ### Explanation
 Many on-chain perp exchanges let you deposit into a **liquidity vault** that acts as the
@@ -373,6 +387,8 @@ will rise instead, stay floating (supply to lending) or buy YT with a small, cap
 
 ### Objective
 Understand the arbitrages that keep stablecoins and LSTs near their value, and when a retail operator can take part.
+
+![Peg and redemption](../assets/diagrams/peg-arb.png)
 
 ### Explanation
 - **Stablecoin peg arbitrage:** if a stablecoin trades at 0.995 on a DEX and a **PSM** or issuer redeems it at 1.00 (minus a fee), buy-and-redeem closes the gap. It's competitive, needs fast execution, and is often limited to whoever can redeem.

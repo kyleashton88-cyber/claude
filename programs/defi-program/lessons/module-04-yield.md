@@ -13,6 +13,8 @@
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 4 — Yield](../assets/modules/module-04.png)
+
 ### The 60-second version
 Every yield is payment for a risk. Staking pays you to secure a network, lending pays for borrower demand, farms often pay in newly printed tokens. This module teaches you to see what each yield really pays for.
 
@@ -48,6 +50,8 @@ Take any advertised APY and split it into base yield vs incentives using the pro
 ### Objective
 Split a farm's APY into what's earned from real activity and what's paid in newly minted tokens.
 
+![Base yield vs emissions](../assets/diagrams/base-vs-emissions.png)
+
 ### Explanation
 - **Base yield:** trading fees or borrower interest. Paid by real users.
 - **Emissions / incentives:** new tokens the protocol prints to attract deposits. The reward token often falls while emissions continue.
@@ -76,6 +80,8 @@ entirely and you're left with 5%. **Would you take the risk for 5%?** That's the
 ### Objective
 Understand what staking pays for, and its lock-up and validator risks.
 
+![Native staking](../assets/diagrams/native-staking.png)
+
 ### Explanation
 Proof-of-stake networks pay **stakers** to secure the chain. You either run a
 validator or **delegate** to one. Rewards come from issuance and fees. Risks:
@@ -103,6 +109,8 @@ asset that falls 30% is still a large loss. **Stake what you'd hold anyway.**
 
 ### Objective
 Use liquid staking tokens knowing how they accrue value and how they can depeg.
+
+![Liquid staking tokens](../assets/diagrams/lst-accrual.png)
 
 ### Explanation
 A **liquid staking token (LST)** represents staked assets plus rewards, and can
@@ -133,6 +141,8 @@ In a panic it trades at 0.98 on the market. Holders who can wait for redemption
 ### Objective
 Map the extra risk layers restaking adds before accepting its extra yield.
 
+![Restaking adds layers](../assets/diagrams/restaking-layers.png)
+
 ### Explanation
 Restaking reuses staked assets to secure additional services, for extra
 rewards and often points. Each service adds its own **slashing conditions**,
@@ -161,6 +171,8 @@ yield must pay for all of them. Plan with points valued at zero.
 
 ### Objective
 Decide when a vault's fees are worth paying compared with doing it yourself.
+
+![Vault vs doing it yourself](../assets/diagrams/vault-vs-diy.png)
 
 ### Explanation
 A **vault** pools deposits and runs a strategy (often harvesting and
@@ -191,6 +203,8 @@ DIY instead, compounding weekly at $2 gas:
 ### Objective
 Price airdrop and points farming as a bet, including its costs.
 
+![Points are a bet](../assets/diagrams/points-opportunity-cost.png)
+
 ### Explanation
 Protocols reward early users with tokens (**airdrops**), often tracked by
 **points** first. Eligibility rules, snapshots and **sybil filters** (removing
@@ -218,6 +232,8 @@ beat that plus its extra risk, or it's the worse choice.
 
 ### Objective
 Tell apart the different ways a stablecoin can pay yield, and the risk behind each.
+
+![Yield-bearing stablecoins](../assets/diagrams/yield-bearing-stables.png)
 
 ### Explanation
 Yield on "dollars" on-chain comes from one of four places:
@@ -250,6 +266,8 @@ $1, and who can?
 
 ### Objective
 Use tokenized real-world assets knowing what you actually own and who you're trusting.
+
+![Tokenized real-world assets](../assets/diagrams/rwa-trust.png)
 
 ### Explanation
 - **RWAs** are tokens that represent off-chain assets: short-term government bills (the most common), money-market funds, credit, commodities, property.

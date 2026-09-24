@@ -14,6 +14,8 @@ plumbing (bridges, oracles, admin keys, contract bugs), not from price moves.
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 5 — Infrastructure Risk](../assets/modules/module-05.png)
+
 ### The 60-second version
 Your position is only as safe as the weakest thing it depends on: the bridge that moved your tokens, the oracle that prices your collateral, the admin key that can upgrade the contract. Most big DeFi losses came from this plumbing.
 
@@ -49,6 +51,8 @@ On a block explorer, open a protocol you use: is it a proxy? Who can upgrade it?
 ### Objective
 Choose bridge routes by their trust model, and size bridge exposure accordingly.
 
+![Bridge trust models](../assets/diagrams/bridge-trust.png)
+
 ### Explanation
 Bridges move value between chains:
 - **Canonical bridges:** the chain's official route (e.g. a rollup's native bridge). Usually the strongest security, sometimes slower.
@@ -80,6 +84,8 @@ test first. Never leave large balances as a **wrapped** asset from a weak bridge
 ### Objective
 Understand how your L2 settles, who orders your transactions, and how you'd exit.
 
+![How an L2 settles](../assets/diagrams/l2-exit.png)
+
 ### Explanation
 - **Rollups** execute transactions off Ethereum and post data or proofs back to it.
 - **Optimistic rollups** assume transactions are valid unless challenged. Native withdrawals to Ethereum wait out a **challenge window** (about 7 days on major optimistic rollups).
@@ -108,6 +114,8 @@ safest, ~7 days. Fast bridge: minutes, for a fee, relying on its liquidity.
 
 ### Objective
 Know which price feed secures each position, and how it can fail.
+
+![Oracles and TWAPs](../assets/diagrams/oracle-twap.png)
 
 ### Explanation
 Smart contracts can't see market prices; **oracles** bring them in. Lending
@@ -140,6 +148,8 @@ Conversely, a thinly traded collateral token can be pushed up and borrowed again
 ### Objective
 Read who controls a contract and whether its code can change after you deposit.
 
+![Proxies and admin keys](../assets/diagrams/proxy-admin-keys.png)
+
 ### Explanation
 - **State:** what a contract stores (balances, parameters). **Functions** change it; **events** log what happened.
 - **Verified source:** the code published on the explorer matches what's deployed. That's good, not proof of safety.
@@ -170,6 +180,8 @@ A 1-of-1 admin with no timelock is a red flag.
 ### Objective
 Weigh contract risk honestly, and read an audit for what it actually covers.
 
+![What an audit covers](../assets/diagrams/audit-coverage.png)
+
 ### Explanation
 - **Common failure types:** logic bugs, **reentrancy** (a contract is called back before it updates its state), broken access control, and **economic exploits** (correct code, exploitable incentives or oracles).
 - **Audits** review specific code at a specific time. Check the **scope** (which contracts), **date** (before later changes?), **severity of findings** and whether they were **fixed**.
@@ -197,6 +209,8 @@ small relative to the value. Size down, or wait.
 
 ### Objective
 Operate safely on non-EVM chains and understand how Bitcoin is used in DeFi.
+
+![Beyond Ethereum](../assets/diagrams/ecosystem-map.png)
 
 ### Explanation
 - **Solana:** a separate, high-throughput chain with its own wallets (e.g. Phantom, Solflare), its own address format, very low fees (paid in SOL), and priority fees when busy. Tokens follow its own standard (SPL). Your Ethereum address **doesn't** work there. Sending between ecosystems needs a bridge or an exchange.
@@ -226,6 +240,8 @@ wrapping at all. Write each option's trust model and cap wrapped BTC as bridge r
 ### Objective
 Move value between chains cheaply and safely, without getting stranded without gas.
 
+![Operating across chains](../assets/diagrams/cross-chain-gas.png)
+
 ### Explanation
 - **Gas stranding:** tokens on a chain where you have no gas token can't move. Keep a small gas float on every chain you use.
 - **Route choice:** canonical bridge (safest, sometimes slow), fast bridge/liquidity network, exchange deposit-withdraw (often simplest for large amounts, but custodial for a moment), or intent-based cross-chain swaps (solvers deliver on the other chain).
@@ -254,6 +270,8 @@ Send $50 first by the chosen route, keep ~$5 of ETH on Base for gas, then send t
 
 ### Objective
 Read verified contract code well enough to check the claims a protocol makes about itself.
+
+![Read the verified code](../assets/diagrams/read-verified-code.png)
 
 ### Explanation
 You don't need to be a developer to spot the things that matter. In verified Solidity code on an explorer, look for:

@@ -14,6 +14,8 @@ expected losses), pay out **less** than that, and never pay out of principal.
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 13 — The Income Engine](../assets/modules/module-13.png)
+
 ### The 60-second version
 Income from DeFi should be planned like a pension, not chased like a jackpot: build it from durable sources, subtract the losses you should expect, and pay yourself less than that.
 
@@ -49,6 +51,8 @@ Take one position and compute its risk-adjusted yield with `defi_calc.py expecte
 ### Objective
 Rank income sources by how long and how reliably they're likely to pay, not by their headline rate.
 
+![Income by durability](../assets/diagrams/durability-rank.png)
+
 ### Explanation
 | Source | Typical driver | Durability | Variability |
 |---|---|---|---|
@@ -79,6 +83,8 @@ bottom rows are **boosters** you size small and expect to switch off.
 
 ### Objective
 Convert every headline yield into an expected yield after the losses it statistically carries.
+
+![Expected yield](../assets/charts/expected-yield.png)
 
 ### Explanation
 `risk-adjusted yield = headline − (annual loss probability × loss given default) − costs`
@@ -154,6 +160,8 @@ dollar income, moves with ETH. The rest is stablecoin-denominated.
 ### Objective
 Set a payout you can sustain through bad years, and the rules that change it.
 
+![The payout policy](../assets/diagrams/payout-policy.png)
+
 ### Explanation
 - **Pay out a share of *expected* income, not headline** (e.g. 70%).
 - **Retain the rest** as a loss buffer; it absorbs the losses you assumed in 13.2.
@@ -183,6 +191,8 @@ and the payout continues.
 
 ### Objective
 Grow the engine safely and review it like a bank's annual report.
+
+![Annual review](../assets/diagrams/annual-review.png)
 
 ### Explanation
 **Compounding:** reinvesting the retained share grows principal, and income

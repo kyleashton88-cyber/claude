@@ -11,6 +11,8 @@
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 11 — Hedging & Risk Engineering](../assets/modules/module-11.png)
+
 ### The 60-second version
 Risk you don't want can often be hedged, insured or engineered away, at a cost. This module covers hedging, cover, liquidation protection, stress testing and what to do in the first hour of a crisis.
 
@@ -46,6 +48,8 @@ Write down the single event that would hurt your portfolio most, and what you'd 
 ### Objective
 Reduce price exposure deliberately, and know what each hedge costs.
 
+![Hedging price](../assets/diagrams/hedge-perp-option.png)
+
 ### Explanation
 - **Perp hedge:** short a perpetual future against spot you hold. Cheap to open;
   pays or earns funding; needs margin; the hedge ratio is your choice.
@@ -75,6 +79,8 @@ You hold **10 ETH at $3,000** ($30,000).
 ### Objective
 Evaluate on-chain cover products as insurance: what they pay, when, and what they don't.
 
+![On-chain cover](../assets/diagrams/cover-what-pays.png)
+
 ### Explanation
 Cover protocols sell protection against defined events (a protocol hack, a
 depeg beyond a threshold). Read: **what's covered** (exact wording), **exclusions**,
@@ -103,6 +109,8 @@ for a large, concentrated position; often not for a small, diversified one.
 ### Objective
 Make liquidation practically impossible with buffers, alerts and pre-computed repayment.
 
+![Liquidation protection](../assets/diagrams/liq-buffer-alerts.png)
+
 ### Explanation
 Three layers: **buffer** (HF ≥ 2–2.5 at entry) → **alerts** (HF 2.0 and 1.7,
 Module 14.1) → **action** (repay, add collateral, or automated deleveraging tools
@@ -130,6 +138,8 @@ To restore HF 2.5: debt must be 24,000 × 0.8 ÷ 2.5 = $7,680 → **repay $4,320
 
 ### Objective
 Run standard shock scenarios on your book and fix what fails before markets test it.
+
+![Stress-test the book](../assets/diagrams/stress-grid.png)
 
 ### Explanation
 Scenarios every operator runs: **crypto −50% in a day** · **a stablecoin depegs 10%**
@@ -164,6 +174,8 @@ Holdings: ETH spot $60k · LST collateral $60k with $12k debt · stable lending 
 
 ### Objective
 Know exactly what to do when a protocol you use is exploited, a stablecoin depegs, or your wallet is compromised.
+
+![The first 60 minutes](../assets/diagrams/incident-60min.png)
 
 ### Explanation — the 60-minute playbook
 **0–5 min: Verify.** Official channels only (bookmarked X/Discord/status page,

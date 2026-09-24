@@ -11,6 +11,8 @@
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 8 — The DeFi Operating System](../assets/modules/module-08.png)
+
 ### The 60-second version
 Individual positions don't make a portfolio. This module turns strategies into a system: buckets and caps, a risk register, a strategy library, a routine, honest performance measurement, and rules for your own behaviour.
 
@@ -46,6 +48,8 @@ Write your current holdings into four buckets (reserve, core, productive, specul
 ### Objective
 Split capital into risk buckets with caps, so no single failure can sink the portfolio.
 
+![Portfolio risk buckets](../assets/diagrams/risk-buckets.png)
+
 ### Explanation
 - **Buckets:** liquidity reserve · core (simple, durable) · productive (LP, vaults, carry) · speculative (new, points, experiments).
 - **Concentration caps:** per protocol, per chain, per stablecoin issuer, per bridge.
@@ -78,6 +82,8 @@ Rebalance when any bucket drifts more than 5 points from target, or after any in
 
 ### Objective
 Keep a risk register that scores every position's risks and names the response.
+
+![The risk register](../assets/diagrams/risk-register.png)
 
 ### Explanation
 The eight risk surfaces: **smart-contract · economic · oracle · liquidity ·
@@ -118,6 +124,8 @@ DeFi Strategy Mastery** (`03-defi-strategy-mastery.md`).
 ### Objective
 Run every position through the same four-phase routine.
 
+![The operating playbook](../assets/diagrams/deploy-monitor-respond.png)
+
 ### Explanation
 1. **Deploy:** due diligence done · before-signing checklist · test amount · journal row (protocol, chain, contracts, amount, entry, thesis, kill rules, approvals).
 2. **Monitor:** daily HF/pegs/ranges/incidents; weekly P&L vs benchmark, harvest, revoke; monthly register review.
@@ -151,6 +159,8 @@ Run every position through the same four-phase routine.
 ### Objective
 Measure your results so deposits, withdrawals and lucky markets don't fool you.
 
+![Honest performance](../assets/diagrams/twr-vs-deposits.png)
+
 ### Explanation
 - **Time-weighted return (TWR):** chains the return of each period, ignoring when you added or removed money. It measures your *decisions*.
 - **Money-weighted / simple gain:** what your total capital actually did, including the timing of deposits.
@@ -180,6 +190,8 @@ Then compare 4.50% with holding ETH over the same period, and with stablecoin le
 
 ### Objective
 Recognise the behaviours that turn good strategies into losses, and build rules that stop them.
+
+![Impulse vs a written rule](../assets/diagrams/discipline-rules.png)
 
 ### Explanation
 | Bias | What it looks like | Rule that stops it |
@@ -216,6 +228,8 @@ and at review decides the idea doesn't meet the thesis standard at all.
 
 ### Objective
 Put numbers on portfolio risk and size positions from them.
+
+![Quantitative risk](../assets/charts/var-drawdown.png)
 
 ### Explanation
 - **Volatility (σ):** annualised standard deviation of returns. **Daily σ ≈ annual σ ÷ √365** (crypto trades every day).

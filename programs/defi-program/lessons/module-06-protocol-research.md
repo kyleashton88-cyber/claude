@@ -13,6 +13,8 @@
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 6 — Protocol Research](../assets/modules/module-06.png)
+
 ### The 60-second version
 Before trusting a protocol with money, a professional researches it the same way every time: what it does, where its money comes from, what it depends on, whether it's solvent, what the evidence says, and how to get out.
 
@@ -48,6 +50,8 @@ Pick a protocol you've heard of and write one sentence for each of the six resea
 ### Objective
 Run the 6-step research loop on a protocol and reach a written verdict.
 
+![The 6-step research loop](../assets/diagrams/research-loop.png)
+
 ### Explanation
 1. **Mechanism:** what the contracts do; users, assets, incentives.
 2. **Cash flow:** real fees and interest vs emissions.
@@ -82,6 +86,8 @@ alert on queued upgrades."*
 ### Objective
 Read a token's supply schedule and judge whether protocol success reaches the token.
 
+![Supply, unlocks, FDV](../assets/diagrams/token-supply-unlocks.png)
+
 ### Explanation
 - **Circulating supply:** tokens tradable now. **Max/total supply:** all that will exist.
 - **Market cap** = price × circulating. **FDV** (fully diluted valuation) = price × max supply.
@@ -111,6 +117,8 @@ to match, that's heavy selling pressure. A low market cap with a huge FDV is a w
 ### Objective
 Read how a protocol is controlled and spot governance risk before it hits your position.
 
+![Who controls the protocol](../assets/diagrams/dao-control.png)
+
 ### Explanation
 - **Governance tokens** vote on parameters, upgrades and treasury.
 - **Proposal lifecycle:** forum discussion → vote → timelock → execution.
@@ -139,6 +147,8 @@ three wallets. Lenders now carry more bad-debt risk, decided by a few voters.
 ### Objective
 Turn research into a written thesis with invalidation and monitoring.
 
+![Thesis and kill conditions](../assets/diagrams/thesis-invalidation.png)
+
 ### Explanation
 **Question first** → primary sources (docs, contracts, governance) → economic
 reality (fees vs incentives) → cross-check with independent data → **thesis**:
@@ -166,6 +176,8 @@ collateral, or an incident. Monitor: weekly utilisation, governance feed."*
 
 ### Objective
 Learn the patterns behind major failures so you recognise them early.
+
+![How DeFi failures rhyme](../assets/diagrams/failure-patterns.png)
 
 ### Explanation — seven failures, seven patterns
 | Case | What broke | Pattern | Warning signs |
@@ -201,6 +213,8 @@ matching cash flow. Rating: High. Verdict: don't hold.
 ### Objective
 Understand vote-escrow ("ve") systems and bribe markets, a major source of DeFi yield and power.
 
+![Vote-escrow and bribes](../assets/diagrams/ve-bribe-flow.png)
+
 ### Explanation
 - **Vote-escrow:** you lock a governance token for a period (often up to 4 years) and get **ve-tokens** with voting power that decays as the unlock approaches. Longer lock = more power.
 - **Gauges:** ve-holders vote on which pools receive the protocol's token **emissions**. Emissions attract liquidity, so votes are valuable.
@@ -230,6 +244,8 @@ $4,000 plus the bribes collected. A liquid-locker version lets you exit, but it 
 
 ### Objective
 Compare protocols on their economics, not their narratives.
+
+![Protocol economics](../assets/diagrams/protocol-multiples.png)
 
 ### Explanation
 - **Fees:** everything users pay. **Revenue:** the part that goes to the protocol or token holders (the rest goes to LPs/lenders). **Earnings:** revenue minus token incentives paid out.

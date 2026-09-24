@@ -11,6 +11,8 @@
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 3 — Lending & Leverage](../assets/modules/module-03.png)
+
 ### The 60-second version
 Lending markets let you earn interest by lending, or borrow against what you own without selling it. Borrowing comes with one hard rule: if your collateral falls too far, it's sold automatically, at a penalty.
 
@@ -46,6 +48,8 @@ Supply $20 of USDC to a blue-chip lending market, read its utilisation, then wit
 
 ### Objective
 Explain where lending yields come from and why rates jump when a market is nearly fully borrowed.
+
+![How a lending pool works](../assets/diagrams/lending-pool-flow.png)
 
 ### Explanation
 A DeFi **money market** is a pool: lenders **supply** assets, borrowers
@@ -122,6 +126,8 @@ Calculate your LTV, health factor and liquidation price before you borrow.
 ### Objective
 Know exactly what a liquidation costs you, and how to avoid ever reaching one.
 
+![The liquidation cascade](../assets/diagrams/liquidation-cascade.png)
+
 ### Explanation
 When HF drops below 1, a **liquidator** (usually a bot) repays part of your debt
 (up to the **close factor**, often 50%) and takes that value of your
@@ -185,6 +191,8 @@ Section 3.1 showed borrow rates can jump from 4% to 34% in hours. That's the ris
 ### Objective
 Understand perp positions well enough to use them for hedging (Module 11) and carry (10.3), and to see why high leverage fails.
 
+![Perpetual futures](../assets/diagrams/perp-anatomy.png)
+
 ### Explanation
 - A **perpetual future (perp)** tracks an asset's price with no expiry. You post **margin** and choose **leverage**.
 - **Isolated margin:** only the margin in that position is at risk. **Cross margin:** your whole account backs every position (one bad trade can drain the rest).
@@ -247,6 +255,8 @@ oracle prices the LST (market price vs exchange rate) before trusting e-mode.
 
 ### Objective
 Mint stablecoins against your own collateral (as your own bank would), and manage the position safely.
+
+![Minting your own dollars](../assets/diagrams/cdp-mint.png)
 
 ### Explanation
 - A **CDP** (collateralised debt position) lets you lock collateral and **mint** a stablecoin against it. You owe the stablecoin back, plus a **stability fee** (interest).

@@ -14,6 +14,8 @@ limited permissions you can revoke, and never by handing over your keys.
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 14 — Automation & Mastery](../assets/modules/module-14.png)
+
 ### The 60-second version
 At mastery, you watch everything automatically and act through rules and limited permissions, never by handing over keys. Then you prove it with the operator capstone.
 
@@ -48,6 +50,8 @@ Set one alert today: a health factor, a peg or any outflow from your vault walle
 
 ### Objective
 Set up monitoring so you hear about problems before they cost money.
+
+![Monitoring](../assets/diagrams/alert-stack.png)
 
 ### Explanation
 Watch four things:
@@ -84,6 +88,8 @@ block-explorer address alerts, and official status/X accounts. Alerts should rea
 ### Objective
 Automate routine actions with the least permission possible.
 
+![Automate with least permission](../assets/diagrams/least-permission-bot.png)
+
 ### Explanation
 - **Keeper / automation networks** execute pre-defined actions when conditions
   are met (e.g. repay when HF < 1.8, rebalance an LP range).
@@ -115,6 +121,8 @@ Worst case if the bot is compromised: it repays your debt, which is annoying, no
 ### Objective
 Run your bank with procedures that prevent single-point mistakes.
 
+![Change control](../assets/diagrams/change-control.png)
+
 ### Explanation
 - **Multisig signing procedure:** every signer independently verifies the
   transaction (destination, amount, calldata) on their **own device screen**, not a shared screenshot.
@@ -144,6 +152,8 @@ refill schedule on their hardware wallet screen, then signs. Logged in the books
 
 ### Objective
 Assemble your complete on-chain bank and have it assessed.
+
+![Capstone pack](../assets/diagrams/capstone-pack.png)
 
 ### Explanation — the operator capstone
 Submit one document (template in `07-program-operations.md`) containing:
@@ -180,6 +190,8 @@ Submit one document (template in `07-program-operations.md`) containing:
 ### Objective
 Read on-chain data directly and build simple read-only tools, so you're not dependent on any one dashboard.
 
+![Read-only tools](../assets/diagrams/readonly-tools.png)
+
 ### Explanation
 - **Reading without code:** block explorers' Read tabs show a contract's public state (e.g. a lending market's parameters, your position).
 - **Public data APIs** (e.g. protocol analytics sites, explorers) return TVL, fees, yields and prices as JSON.
@@ -214,6 +226,8 @@ breaks: you miss an alert, so keep your other alerts (14.1) as a backup.
 
 ### Objective
 Understand the professional bot economy that shapes DeFi prices, and why competing in it is hard.
+
+![Searchers and keepers](../assets/diagrams/searcher-keeper.png)
 
 ### Explanation
 - **Searchers** run bots that find and capture opportunities: **DEX arbitrage** (price gaps between pools/venues), **liquidations** (repay debt, take the bonus), **backruns** (trading right after a large swap), and, harmfully, sandwiches.

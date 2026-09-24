@@ -13,6 +13,8 @@ Lesson 2.2 (AMM mathematics) is in `../02-sample-lesson-amm-math.md`.
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 2 — Trading On-Chain](../assets/modules/module-02.png)
+
 ### The 60-second version
 A swap on a DEX trades against a pool of tokens priced by a formula. Providing liquidity to that pool earns fees but changes what you hold. This module teaches you to trade and provide liquidity knowing the real cost.
 
@@ -48,6 +50,8 @@ Quote a $20 swap on one DEX and on an aggregator; compare what you'd actually re
 
 ### Objective
 Choose where to swap by comparing the **net amount received**, not the quoted price.
+
+![DEX vs aggregator](../assets/diagrams/dex-vs-aggregator.png)
 
 ### Explanation
 - **AMM DEX**: you trade against a liquidity pool priced by a formula (Lesson 2.2).
@@ -87,6 +91,8 @@ benefit from routing. Small trades mostly lose to gas.**
 
 ### Objective
 Estimate an LP position's fee income from real pool data.
+
+![Providing liquidity](../assets/diagrams/lp-position.png)
 
 ### Explanation
 When you LP you deposit both tokens and receive a share of the pool (a token,
@@ -171,6 +177,8 @@ Calculator: `defi_calc.py il --ratio 1.3333` · `defi_calc.py lp-breakeven --rat
 ### Objective
 Set slippage and routing so your trades aren't easy targets.
 
+![A sandwich](../assets/diagrams/mev-sandwich.png)
+
 ### Explanation
 **MEV** (maximal extractable value) is profit taken by whoever orders
 transactions in a block. Some is harmless (arbitrage realigning prices). The
@@ -212,6 +220,8 @@ fail, and failed transactions still cost gas (Lesson 1.2).
 
 ### Objective
 Use order types that give you better prices and protection than a plain swap.
+
+![Order types](../assets/diagrams/order-types.png)
 
 ### Explanation
 - **On-chain limit orders:** you sign an order off-chain ("sell 1 ETH at 3,300 or better"); it fills only if the price is reached. Usually gasless until filled.

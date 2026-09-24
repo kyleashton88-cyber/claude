@@ -11,6 +11,8 @@
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 9 — DeFi vs Grid Bots](../assets/modules/module-09.png)
+
 ### The 60-second version
 A grid bot on an exchange and a liquidity position on a DEX both buy as price falls and sell as it rises inside a range. This module shows when each is the better tool, and how to run both without doubling your risk.
 
@@ -99,6 +101,8 @@ income on all trading volume in range (after impermanent loss).
 ### Objective
 Pick grid bot, LP, both, or neither, for a given market and account.
 
+![When each one wins](../assets/diagrams/when-each-wins.png)
+
 ### Explanation
 | Factor | Favours grid bot | Favours on-chain LP |
 |---|---|---|
@@ -138,6 +142,8 @@ major news, thin liquidity. Waiting is a position.
 ### Objective
 Design a portfolio that uses exchange grid bots and DeFi together without
 doubling up on the same risk.
+
+![One system, two sleeves](../assets/diagrams/combined-system.png)
 
 ### Explanation
 Each tool is good at a different job:

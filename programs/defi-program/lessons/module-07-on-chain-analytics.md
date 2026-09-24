@@ -14,6 +14,8 @@ isn't. Every metric needs a definition, a methodology, and context.
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 7 — On-Chain Analytics](../assets/modules/module-07.png)
+
 ### The 60-second version
 Everything on a public blockchain can be seen, but not everything can be understood. On-chain analytics means reading that data carefully: who moved what, where liquidity sits, how positioned the market is, without jumping to conclusions.
 
@@ -49,6 +51,8 @@ Find your own last transaction on an explorer and identify: status, fee, method 
 ### Objective
 Avoid the classic misreads of on-chain data.
 
+![Classic on-chain misreads](../assets/diagrams/onchain-misreads.png)
+
 ### Explanation
 - **Address ≠ person:** one person can have many addresses; one exchange address serves millions.
 - **Transfer ≠ trade:** moving tokens isn't buying or selling.
@@ -75,6 +79,8 @@ hot wallets. No trade happened. Check labels, destination and history before rea
 
 ### Objective
 Read any transaction on an explorer without using the app's interface.
+
+![A transaction on the explorer](../assets/diagrams/explorer-anatomy.png)
 
 ### Explanation
 For a transaction: **status** (success/fail), **block**, **from/to**, **value**,
@@ -104,6 +110,8 @@ pool. You've verified the trade without trusting the website.
 ### Objective
 Interpret exchange inflows and outflows with the right caveats.
 
+![Exchange inflows and outflows](../assets/diagrams/exchange-flows.png)
+
 ### Explanation
 **Inflows** to exchanges *may* precede selling (or collateral posting,
 internal moves). **Outflows** *may* mean self-custody or DeFi use.
@@ -131,6 +139,8 @@ whether price and volume confirm. One metric is a hypothesis, not a signal.
 ### Objective
 Use large-holder data without copying wallets blindly.
 
+![Whales vs clusters](../assets/diagrams/entity-clusters.png)
+
 ### Explanation
 Separate exchanges and contracts from individuals before measuring
 concentration. **Accumulation/distribution** is inferred, not known.
@@ -156,6 +166,8 @@ may be hedged and farming. Copying the visible leg makes you the unhedged one.
 
 ### Objective
 Read MVRV, SOPR and HODL waves as context, not signals.
+
+![Holder metrics as context](../assets/diagrams/holder-metrics.png)
 
 ### Explanation
 - **Realised cap:** values each coin at the price it last moved (a cost-basis estimate).
@@ -185,6 +197,8 @@ de-risk), not a precise top signal.
 ### Objective
 Judge a chain's real usage beyond transaction counts.
 
+![Real network usage](../assets/diagrams/real-usage.png)
+
 ### Explanation
 Transaction counts depend on architecture and bots. Better: **fees paid**
 (real demand for blockspace), **stablecoin activity**, **DEX volume**, **app
@@ -209,6 +223,8 @@ fees. B's users pay 100× more for blockspace, a stronger sign of valuable activ
 
 ### Objective
 Measure whether a pool can actually absorb your trade and pay you as an LP.
+
+![Can this pool take your trade](../assets/diagrams/pool-depth.png)
 
 ### Explanation
 - **TVL** can double count and moves with token prices.
@@ -237,6 +253,8 @@ move B's price much more than A's.
 ### Objective
 Read funding, open interest and liquidation data as positioning context.
 
+![Derivatives positioning](../assets/diagrams/funding-oi.png)
+
 ### Explanation
 - **Perpetual futures (perps):** no expiry; kept near spot by **funding** payments.
 - **Positive funding:** longs pay shorts (crowded longs). **Negative:** shorts pay longs.
@@ -263,6 +281,8 @@ Lesson 10.3, a funding-carry opportunity with a squeeze risk.
 
 ### Objective
 Answer your own research questions with on-chain queries, instead of relying on someone else's dashboard.
+
+![Query the chain yourself](../assets/diagrams/query-your-own.png)
 
 ### Explanation
 - **Query platforms** (e.g. Dune, Flipside, Allium) index blockchain data into SQL tables: raw transactions and logs, **decoded** tables per protocol, and curated "spellbook" tables (e.g. all DEX trades).

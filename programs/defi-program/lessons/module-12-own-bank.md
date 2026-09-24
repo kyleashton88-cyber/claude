@@ -18,6 +18,8 @@ module turns that into written policy.
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 12 — Operate as Your Own Bank](../assets/modules/module-12.png)
+
 ### The 60-second version
 A bank keeps assets safe, lends, borrows and always has cash for what it owes. With DeFi you can run those four jobs yourself, with written policies, because there's nobody to call when something goes wrong.
 
@@ -52,6 +54,8 @@ Fill in the balance sheet worksheet (W6) with rough numbers: equity, LTV and run
 
 ### Objective
 Build a personal on-chain balance sheet and read the three numbers that matter: equity, LTV and liquidity runway.
+
+![Your on-chain balance sheet](../assets/diagrams/personal-balance-sheet.png)
 
 ### Explanation
 - **Assets:** everything you own, at market value: collateral, yield positions, reserves.
@@ -128,6 +132,8 @@ every path once a quarter.
 
 ### Objective
 Use your assets as collateral for liquidity without selling, under a written credit policy.
+
+![The credit line](../assets/diagrams/credit-policy.png)
 
 ### Explanation
 Wealthy clients rarely sell appreciating assets to raise cash; they borrow
@@ -206,6 +212,8 @@ market day touches none of it.
 ### Objective
 Act as the lending side of the bank: choose markets, price the risk, and know when to pull liquidity.
 
+![Being the lender](../assets/diagrams/lender-side.png)
+
 ### Explanation
 When you supply to a money market, you're the bank's depositor, and
 effectively its credit desk. Your return:
@@ -248,6 +256,8 @@ between them, and cap A lower because its tail is fatter and less known.
 ### Objective
 Keep books a stranger could follow, and make sure your family could recover everything if you couldn't.
 
+![Books and succession](../assets/diagrams/books-succession.png)
+
 ### Explanation
 **Books** (update weekly from your journal, Module 8):
 - Every position: protocol, chain, contract, amount, entry date and price, cost basis
@@ -287,6 +297,8 @@ the co-signer. No single document contains enough to steal the funds.
 
 ### Objective
 Know which on-chain actions may have tax or legal consequences, keep the records to handle them, and know when to get professional help.
+
+![Records for tax and legal](../assets/diagrams/tax-records.png)
 
 ### Explanation
 **This lesson is awareness, not advice. Rules differ by country and change. Use a crypto-aware tax professional and, for legal questions, a lawyer.**

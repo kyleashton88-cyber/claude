@@ -21,6 +21,8 @@ The **before-signing checklist** is introduced in this module and used in every 
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 1 — Foundations & Safety](../assets/modules/module-01.png)
+
 ### The 60-second version
 Most crypto losses aren't market losses; they're mistakes and scams: a seed phrase typed into a fake site, an approval signed without reading, the wrong network. This module builds the habits that prevent them.
 
@@ -56,6 +58,8 @@ Open your wallet's approvals (or a revoke tool), list every approval you've gran
 
 ### Objective
 Describe the DeFi stack and explain why every yield is payment for a risk.
+
+![The DeFi stack](../assets/diagrams/defi-stack.png)
 
 ### Explanation
 DeFi replaces intermediaries (banks, brokers, exchanges) with **smart
@@ -104,6 +108,8 @@ If you can't answer these, you don't know what the 12% is paying you for.
 
 ### Objective
 Follow a transaction from signature to finality, and estimate its cost.
+
+![A transaction’s life](../assets/diagrams/tx-lifecycle.png)
 
 ### Explanation
 **Lifecycle:** create → sign → broadcast → mempool (waiting) → included in a
@@ -186,6 +192,8 @@ sweep profits back *up*. If the burner gets drained, you lose only the burner's 
 ### Objective
 Read an approval request and know what you're allowing.
 
+![Anatomy of an approval](../assets/diagrams/approval-anatomy.png)
+
 ### Explanation
 - Most tokens on EVM chains are **ERC-20** (fungible). NFTs (ERC-721/1155)
   can also represent positions (e.g. concentrated LP).
@@ -224,6 +232,8 @@ Wallet shows: *"Allow 0x3fC9…a1B2 to spend your USDC. Amount: Unlimited."*
 
 ### Objective
 Classify a stablecoin by design and name what could break its peg.
+
+![How stablecoins are built](../assets/diagrams/stablecoin-designs.png)
 
 ### Explanation
 | Type | Backing | Main risks |
@@ -266,6 +276,8 @@ but only for verified institutional minters.
 ### Objective
 Recognise the common attacks before they cost you anything.
 
+![Common attacks](../assets/diagrams/scam-patterns.png)
+
 ### Explanation
 | Attack | How it works | Defence |
 |---|---|---|
@@ -302,6 +314,8 @@ full address.**
 ### Objective
 Know exactly what a signature or transaction will do before you approve it.
 
+![Simulate before you sign](../assets/diagrams/simulate-before-sign.png)
+
 ### Explanation
 - **Transaction simulation:** good wallets (and tools like transaction simulators) show the **expected balance changes** before you sign: "−100 USDC, +0.033 ETH". If the preview shows assets leaving that you didn't intend, stop.
 - **Typed-data signatures (EIP-712):** structured messages (orders, Permits) that your wallet shows as fields. Read the **spender**, **token**, **amount** and **deadline**. A "Permit" or "Permit2" signature can hand over token access without any gas.
@@ -331,6 +345,8 @@ That isn't verification: it's unlimited USDC access for an unknown spender. Reje
 
 ### Objective
 Keep your holdings private and your household safe as your on-chain wealth grows.
+
+![Privacy and physical security](../assets/diagrams/privacy-physical.png)
 
 ### Explanation
 - **Blockchains are public.** Anyone who links an address to you can see its balance and history, forever.

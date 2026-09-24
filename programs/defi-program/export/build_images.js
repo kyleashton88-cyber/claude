@@ -57,6 +57,16 @@ const ICON = {
   umbrella: '<path d="M3 12a9 9 0 0118 0z"/><path d="M12 12v7a2 2 0 01-4 0"/>',
   vault: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="12" cy="12" r="4"/><path d="M12 8v1.5M12 14.5V16M8 12h1.5M14.5 12H16M6 20v1.5M18 20v1.5"/>',
   coins: '<ellipse cx="9" cy="7" rx="6" ry="2.5"/><path d="M3 7v4c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V7"/><path d="M9 16.5c-3.3 0-6-1.1-6-2.5"/><path d="M3 11v5c0 1.4 2.7 2.5 6 2.5 1 0 2-.1 2.8-.3"/><circle cx="17" cy="16" r="4.5"/>',
+  link: '<path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/>',
+  eye: '<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+  key: '<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/>',
+  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  code: '<path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/>',
+  globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"/>',
+  alert: '<path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/>',
+  bell: '<path d="M6 16V11a6 6 0 0112 0v5l2 2H4z"/><path d="M10 20a2 2 0 004 0"/>',
+  doc: '<path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h7"/>',
+  scale: '<path d="M12 4v16M5 20h14M4 8h16"/><path d="M4 8l-2 6h4zM20 8l-2 6h4z"/>',
   bot: '<rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 4v4"/><circle cx="12" cy="3.5" r="1"/><circle cx="9" cy="13.5" r="1.3"/><circle cx="15" cy="13.5" r="1.3"/><path d="M9.5 17h5"/>',
 };
 const icon = (name, size = 24, color = 'currentColor', sw = 1.8) =>
@@ -670,6 +680,329 @@ function chartHF() {
     </svg>`);
 }
 
+// ---------- lesson images: layout templates + one data row per image ----------
+// Every image goes through lightShell (title, logo footer, DISCLAIMER). Blue = neutral,
+// orange = the risk or failure side. Copy is illustrative; it never promises returns.
+const noteBar = note => note ? `<div style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:23px;color:${C.text2};font-weight:500">${note}</div>` : '';
+const withNote = (inner, note) => `<div style="position:absolute;inset:0 0 ${note ? 60 : 0}px 0">${inner}</div>${noteBar(note)}`;
+function tplFlow(r) {
+  const n = r.steps.length, gap = n > 4 ? 48 : 64, w = Math.floor((1672 - gap * (n - 1)) / n);
+  return lightShell(1800, 640, r.title, r.sub, withNote(flowBoxes(r.steps, false, { w, h: 250, gap }), r.note));
+}
+function tplCols(r) {
+  const n = r.cols.length;
+  const cards = r.cols.map(c => {
+    const col = c.tone === 'risk' ? C.orange : c.tone === 'good' ? C.brand : C.blue;
+    return `<div style="flex:1;background:#fff;border:1.5px solid ${c.tone ? col : C.line};border-top:6px solid ${col};border-radius:20px;padding:30px 32px">
+      <div style="display:flex;align-items:center;gap:16px"><div style="width:62px;height:62px;border-radius:16px;background:${C.panel};color:${col};display:flex;align-items:center;justify-content:center;flex:none">${icon(c.ic || 'check', 34)}</div>
+      <div style="font-size:${n > 3 ? 28 : 32}px;font-weight:800;color:${C.ink};line-height:1.15">${c.t}</div></div>
+      <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px">${c.lines.map(l => `<div style="display:flex;gap:12px;font-size:${n > 3 ? 21 : 23}px;line-height:1.4;color:${C.text}"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:${col};margin-top:12px"></span><span>${l}</span></div>`).join('')}</div></div>`;
+  }).join('');
+  return lightShell(1800, 760, r.title, r.sub, withNote(`<div style="display:flex;gap:30px;height:100%;align-items:stretch">${cards}</div>`, r.note));
+}
+function tplTiles(r) {
+  const n = r.tiles.length;
+  const tiles = r.tiles.map(([t, s, ic], i) => `<div style="background:#fff;border:1.5px solid ${C.line};border-radius:20px;padding:30px 28px">
+    <div style="width:64px;height:64px;border-radius:16px;background:${C.panel};color:${C.blue};display:flex;align-items:center;justify-content:center">${icon(ic, 36)}</div>
+    <div style="font-size:30px;font-weight:800;color:${C.ink};margin-top:22px">${t}</div>
+    <div style="font-size:22px;color:${C.text2};margin-top:10px;line-height:1.4">${s}</div></div>`).join('');
+  return lightShell(1800, 640, r.title, r.sub, withNote(`<div style="display:grid;grid-template-columns:repeat(${n},1fr);gap:26px;height:100%">${tiles}</div>`, r.note));
+}
+function tplRank(r) {
+  const n = r.rows.length;
+  const rows = r.rows.map(([t, s], i) => { const f = i / (n - 1);
+    return `<div style="display:flex;align-items:center;gap:24px;background:#fff;border:1.5px solid ${C.line};border-radius:14px;padding:12px 24px">
+      <div style="font-size:26px;font-weight:800;color:${f > .6 ? C.orange : C.blue};width:34px">${i + 1}</div>
+      <div style="width:380px;font-size:26px;font-weight:700;color:${C.ink}">${t}</div><div style="flex:1;font-size:21px;color:${C.text2}">${s}</div>
+      <div style="width:260px;height:12px;border-radius:6px;background:${C.panel}"><div style="height:100%;width:${100 - f * 85}%;border-radius:6px;background:${f > .6 ? C.orange : C.blue}"></div></div></div>`; }).join('');
+  return lightShell(1800, 820, r.title, r.sub, withNote(`<div style="display:flex;flex-direction:column;justify-content:space-between;height:100%">
+    <div style="display:flex;justify-content:space-between;font-size:18px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:${C.text2}"><span>More durable</span><span>More fragile ↓</span></div>${rows}</div>`, r.note));
+}
+function tplBars(r) { // stacked bars in HTML: [label, [[part, value, 'blue'|'orange'], ...]]
+  const max = Math.max(...r.bars.map(b => b[1].reduce((a, p) => a + p[1], 0)));
+  const bars = r.bars.map(([label, parts]) => { const tot = parts.reduce((a, p) => a + p[1], 0);
+    return `<div style="display:flex;align-items:center;gap:26px"><div style="width:230px;font-size:26px;font-weight:700;color:${C.ink}">${label}</div>
+      <div style="flex:1;display:flex;height:84px">${parts.map(([p, v, c]) => `<div style="width:${v / max * 88}%;background:${c === 'orange' ? C.orange : C.blue};color:#fff;font-size:21px;font-weight:700;display:flex;align-items:center;justify-content:center;border-right:3px solid #fff">${v / max * 88 >= 12 ? `${p} ${v}%` : ''}</div>`).join('')}
+      <div style="padding-left:18px;align-self:center"><div style="font-size:30px;font-weight:800;color:${C.ink}">${tot}%</div><div style="font-size:18px;color:${C.text2};white-space:nowrap">${parts.map(([p, v]) => `${p} ${v}%`).join(' + ')}</div></div></div></div>`; }).join('');
+  return lightShell(1800, 640, r.title, r.sub, withNote(`<div style="display:flex;flex-direction:column;justify-content:center;gap:40px;height:100%">${bars}</div>`, r.note));
+}
+function tplTable(r) {
+  const body = `<table style="width:100%;border-collapse:separate;border-spacing:0;font-size:23px;background:#fff;border:1.5px solid ${C.line};border-radius:16px;overflow:hidden">
+    <tr>${r.head.map(h => `<th style="text-align:left;padding:18px 22px;background:${C.ink};color:#fff;font-size:19px;letter-spacing:.06em;text-transform:uppercase">${h}</th>`).join('')}</tr>
+    ${r.rows.map(row => `<tr>${row.map((c, j) => `<td style="padding:18px 22px;border-top:1px solid ${C.line};color:${j === 2 ? (c === 'High' ? C.orange : C.blue) : C.text};font-weight:${j === 0 || j === 2 ? 700 : 400}">${c}</td>`).join('')}</tr>`).join('')}</table>`;
+  return lightShell(1800, 700, r.title, r.sub, withNote(body, r.note));
+}
+function diagramPoolDepth() {
+  const W = 1672, H = 470, m = { l: 110, r: 40, t: 20, b: 70 };
+  const xs = v => m.l + v / 20 * (W - m.l - m.r), ys = v => m.t + (20 - v) / 20 * (H - m.t - m.b);
+  const imp = s => s / (100 + s) * 100; // % price impact for a trade of s% of the pool's reserve (x·y=k)
+  let d = ''; for (let s = 0; s <= 20; s += 0.25) d += `${s ? 'L' : 'M'}${xs(s).toFixed(1)},${ys(imp(s)).toFixed(1)}`;
+  return lightShell(1800, 760, 'Can this pool take your trade', 'Depth vs your size: price impact in a constant-product pool, before fees',
+    `<svg width="100%" height="100%" viewBox="0 0 ${W} ${H}">${axisFrame(W, H, m, [0, 5, 10, 15, 20], [0, 5, 10, 15, 20], xs, ys, 'Your trade as % of the pool reserve', 'Price impact', v => `${v}%`, v => `${v}%`)}
+    <path d="${d}" fill="none" stroke="${C.blue}" stroke-width="3.5"/>
+    ${dot(xs(1), ys(imp(1)))}${label(xs(1.9), ys(0.25), '1% of the pool → ≈1.0% impact')}
+    ${dot(xs(10), ys(imp(10)), C.orange)}${label(xs(10) + 16, ys(imp(10)) + 34, '10% of the pool → ≈9.1% impact')}</svg>`);
+}
+function chartVarDrawdown() {
+  const W = 1672, H = 600, m = { l: 120, r: 40, t: 20, b: 70 };
+  const xs = v => m.l + (v - 20) / 100 * (W - m.l - m.r), ys = v => m.t + (14000 - v) / 14000 * (H - m.t - m.b);
+  const vaR = (vol, z) => z * vol / 100 / Math.sqrt(365) * 100000;
+  const line = z => { let d = ''; for (let v = 20; v <= 120; v += 1) d += `${v === 20 ? 'M' : 'L'}${xs(v).toFixed(1)},${ys(vaR(v, z)).toFixed(1)}`; return d; };
+  return lightShell(1800, 820, 'Quantitative risk', 'Size from the number: 1-day value at risk on a $100,000 position. Assumes normal returns, and crypto tails are fatter, so treat it as a floor.',
+    `<svg width="100%" height="100%" viewBox="0 0 ${W} ${H}">${axisFrame(W, H, m, [20, 40, 60, 80, 100, 120], [0, 2000, 4000, 6000, 8000, 10000, 12000, 14000], xs, ys, 'Annualised volatility (%)', '1-day VaR', v => `${v}%`, v => `$${(v / 1000).toFixed(0)}k`)}
+    <path d="${line(1.65)}" fill="none" stroke="${C.blue}" stroke-width="3.5"/><path d="${line(2.33)}" fill="none" stroke="${C.orange}" stroke-width="3.5"/>
+    ${dot(xs(70), ys(vaR(70, 1.65)))}${label(xs(70) + 16, ys(vaR(70, 1.65)) + 32, '70% vol, 95%: ≈$6,040')}
+    ${dot(xs(70), ys(vaR(70, 2.33)), C.orange)}${label(xs(70) - 16, ys(vaR(70, 2.33)) - 16, '70% vol, 99%: ≈$8,530', 'end')}
+    ${label(xs(118), ys(vaR(118, 1.65)) + 34, 'Blue: 95% (z = 1.65)', 'end', 600)}${label(xs(118), ys(vaR(118, 2.33)) - 18, 'Orange: 99% (z = 2.33)', 'end', 600)}</svg>`);
+}
+function chartExpectedYield() {
+  const W = 1672, H = 600, m = { l: 110, r: 40, t: 40, b: 70 };
+  const P = [['Stablecoin lending', 5, 0.02, 0.5], ['Blue-chip LP farm', 18, 0.10, 0.6], ['New high-APY farm', 40, 0.30, 0.9]];
+  const ys = v => m.t + (45 - v) / 45 * (H - m.t - m.b), bw = 260, gap = (W - m.l - m.r - bw * 3) / 4;
+  const bars = P.map(([n, y, p, lgd], i) => { const loss = p * lgd * 100, x = m.l + gap + i * (bw + gap), e = y - loss;
+    return `<rect x="${x}" y="${ys(e)}" width="${bw}" height="${ys(0) - ys(e)}" fill="${C.blue}"/><rect x="${x}" y="${ys(y)}" width="${bw}" height="${ys(e) - ys(y)}" fill="${C.orange}"/>
+      <text x="${x + bw / 2}" y="${ys(y) - 14}" text-anchor="middle" font-size="22" font-weight="800" fill="${C.text}" font-family="Inter">${y}% headline</text>
+      ${e > 3 ? `<text x="${x + bw / 2}" y="${ys(e) + 32}" text-anchor="middle" font-size="22" font-weight="800" fill="#fff" font-family="Inter">${e.toFixed(1)}% expected</text>` : ''}
+      <text x="${x + bw / 2}" y="${H - m.b + 32}" text-anchor="middle" font-size="20" fill="${C.text2}" font-family="Inter">${n}</text>
+      <text x="${x + bw / 2}" y="${H - m.b + 56}" text-anchor="middle" font-size="17" fill="${C.text2}" font-family="Inter">loss ${p} × ${lgd} = ${loss.toFixed(1)}%</text>`; }).join('');
+  const grid = [0, 10, 20, 30, 40].map(v => `<line x1="${m.l}" x2="${W - m.r}" y1="${ys(v)}" y2="${ys(v)}" stroke="${v ? '#E6EAF0' : '#9aa3ad'}"/><text x="${m.l - 14}" y="${ys(v) + 7}" text-anchor="end" font-size="20" fill="${C.text2}" font-family="Inter">${v}%</text>`).join('');
+  return lightShell(1800, 820, 'Expected yield', 'Headline APY − expected loss (annual loss probability × loss given default) = expected yield. Blue: expected yield. Orange: expected loss. Illustrative inputs.',
+    `<svg width="100%" height="100%" viewBox="0 0 ${W} ${H + 20}">${grid}${bars}</svg>`);
+}
+
+const LESSON_IMAGES = [
+  // Module 0
+  { file: 'ledgers-vs-blockchain', lesson: '0.1', kind: 'cols', title: 'Ledgers vs a blockchain', sub: 'Same record, different trust', note: 'On a blockchain there is no undo.',
+    cols: [{ t: 'A bank’s private ledger', ic: 'bank', lines: ['One copy, kept by the bank', 'The bank can correct or reverse entries', 'You trust the bank'] },
+      { t: 'A shared blockchain', ic: 'layers', tone: 'risk', lines: ['Thousands of computers keep the same copy', 'Old entries can’t be quietly changed', 'No undo: a mistake is final'] }] },
+  { file: 'exchange-lockdown', lesson: '0.2', kind: 'flow', title: 'Lock the exchange down first', sub: 'Before any deposit', note: 'Do all four before the first deposit.',
+    steps: [['Account', 'Unique email and a password manager', 'users'], ['2FA', 'Authenticator app, not SMS', 'lock'], ['Whitelist', 'Withdrawals only to your own addresses', 'shield'], ['Anti-phishing', 'A code shown in every real email', 'check']] },
+  { file: 'first-buy-costs', lesson: '0.3', kind: 'flow', title: 'What a first buy actually costs', sub: 'Headline price is not the fill', note: 'Compare offers by what you receive, not the quoted price.',
+    steps: [['Price', 'What the chart shows', 'chart'], ['− Spread', 'Gap between buy and sell', 'swap'], ['− Fee', 'Trading or “convenience” fee', 'coins'], ['− Network', 'Withdrawal or gas cost', 'layers'], ['= Received', 'What lands in your wallet', 'wallet']] },
+  { file: 'custody-split', lesson: '0.4', kind: 'cols', title: 'Who holds the keys', sub: 'Exchange account vs your wallet', note: 'Your keys, your coins, and your responsibility. Never share a seed phrase.',
+    cols: [{ t: 'Exchange account', ic: 'bank', lines: ['The exchange holds the keys', 'Belongs here: buying, selling, cashing out', 'Risk: freezes, hacks, insolvency'] },
+      { t: 'Your wallet', ic: 'wallet', lines: ['You hold the keys (the seed phrase)', 'Belongs here: holding and using DeFi', 'Risk: lose the seed, lose the funds'] }] },
+  { file: 'practice-mode-first', lesson: '0.7', kind: 'flow', title: 'Practice mode first', sub: 'Test net, then a tiny real amount',
+    steps: [['Test network', 'Free test tokens with no value', 'compass'], ['Connect', 'Only from a bookmarked site', 'link'], ['Read it', 'What, to whom, how much', 'eye'], ['Tiny real amount', 'Last, after the test works', 'coins']] },
+  { file: 'security-baseline', lesson: '0.8', kind: 'tiles', title: 'Security baseline', sub: 'The habits that prevent most losses',
+    tiles: [['Hardware wallet', 'Keys never touch the internet', 'lock'], ['Unique passwords', 'A password manager plus 2FA everywhere', 'key'], ['Never share keys', 'Real support never asks for a seed phrase', 'shield'], ['Bookmark apps', 'Never follow links to wallets or DeFi apps', 'book']] },
+  // Module 1
+  { file: 'defi-stack', lesson: '1.1', kind: 'flow', title: 'The DeFi stack', sub: 'Yield is payment for a risk', note: 'Every yield pays for a risk. Name it before you deposit.',
+    steps: [['Chain', 'Settles every transaction', 'layers'], ['Wallet', 'Holds your keys and signs', 'wallet'], ['App', 'Smart contracts: swap, lend, stake', 'grid'], ['Position', 'What you hold and what it risks', 'target']] },
+  { file: 'tx-lifecycle', lesson: '1.2', kind: 'flow', title: 'A transaction’s life', sub: 'Sign to finality', note: 'Gas is paid whether the transaction succeeds or fails.',
+    steps: [['Sign', 'Your wallet signs it', 'key'], ['Mempool', 'Waiting, publicly visible', 'clock'], ['Block', 'A validator includes it', 'layers'], ['Finality', 'Now irreversible', 'check']] },
+  { file: 'approval-anatomy', lesson: '1.4', kind: 'cols', title: 'Anatomy of an approval', sub: 'Read it before you sign', note: 'An approval outlives the trade. Revoke the ones you no longer use.',
+    cols: [{ t: 'Token', ic: 'coins', lines: ['Which asset the app may move'] }, { t: 'Spender', ic: 'eye', lines: ['The contract that can move it', 'Check it on the explorer'] },
+      { t: 'Amount', ic: 'target', tone: 'risk', lines: ['Infinite: no limit, until revoked', 'Exact: only this trade', 'Exact is the default'] }] },
+  { file: 'stablecoin-designs', lesson: '1.5', kind: 'cols', title: 'How stablecoins are built', sub: 'And how each design breaks',
+    cols: [{ t: 'Fiat-backed', ic: 'bank', lines: ['Cash and T-bills held by an issuer', 'Breaks if: reserves are frozen or missing'] },
+      { t: 'Crypto-backed', ic: 'vault', lines: ['Over-collateralised on-chain', 'Breaks if: collateral falls faster than liquidations'] },
+      { t: 'Algorithmic', ic: 'cog', tone: 'risk', lines: ['Held up by incentives and a sister token', 'Breaks if: confidence goes and it spirals'] }] },
+  { file: 'scam-patterns', lesson: '1.6', kind: 'tiles', title: 'Common attacks', sub: 'Recognise them before they cost you', note: 'Nobody legitimate will ever ask for your seed phrase or keys.',
+    tiles: [['Fake sites', 'Look-alike URLs and sponsored ads', 'globe'], ['Drainers', 'One signature that grants everything', 'flame'], ['Fake support', '“Support” DMs asking for your seed', 'users'], ['Poisoned addresses', 'Look-alike addresses in your history', 'alert']] },
+  { file: 'simulate-before-sign', lesson: '1.7', kind: 'flow', title: 'Simulate before you sign', sub: 'Know what the call does',
+    steps: [['Wallet preview', 'What the wallet says will happen', 'wallet'], ['Simulator', 'Run it without sending', 'search'], ['Decoded calls', 'Function, token, amount, spender', 'code'], ['Sign or reject', 'Only if all three agree', 'check']] },
+  { file: 'privacy-physical', lesson: '1.8', kind: 'cols', title: 'Privacy and physical security', sub: 'Address ≠ identity, until you connect the two',
+    cols: [{ t: 'Public address', ic: 'globe', lines: ['Every balance and trade is public', 'Anyone can follow the funds'] },
+      { t: 'Your identity', ic: 'users', lines: ['Exchanges link it to your address', 'Don’t post addresses or balances'] },
+      { t: 'Home and devices', ic: 'lock', tone: 'risk', lines: ['Seed backups out of sight', 'A separate device for signing', 'Tell no one what you hold'] }] },
+  // Module 2
+  { file: 'dex-vs-aggregator', lesson: '2.1', kind: 'cols', title: 'DEX vs aggregator', sub: 'Compare net received, not the quote',
+    cols: [{ t: 'Direct pool', ic: 'swap', lines: ['One pool, one price curve', 'Simple, but size moves the price'] },
+      { t: 'Aggregator', ic: 'grid', lines: ['Routes across many pools', 'Often a better fill, plus its own contract risk'] },
+      { t: 'Compare this', ic: 'target', tone: 'good', lines: ['Net received after fees and gas', 'Not the headline quote'] }] },
+  { file: 'lp-position', lesson: '2.3', kind: 'flow', title: 'Providing liquidity', sub: 'Fees vs inventory change', note: 'Result = fees earned − impermanent loss, compared with just holding.',
+    steps: [['Deposit both', 'Equal value of each asset', 'coins'], ['Pool share', 'A receipt for your slice', 'layers'], ['Earn fees', 'From every swap through the pool', 'sprout'], ['The bag changes', 'You end up holding more of the loser', 'alert']] },
+  { file: 'mev-sandwich', lesson: '2.5', kind: 'flow', title: 'A sandwich', sub: 'Your swap in the middle', note: 'Loose slippage is the open door. Keep it tight and use a protected RPC.',
+    steps: [['Attacker buys', 'Front-runs you and pushes the price up', 'flame'], ['Your swap', 'Fills at the worse price', 'swap'], ['Attacker sells', 'Keeps the difference', 'flame']] },
+  { file: 'order-types', lesson: '2.6', kind: 'cols', title: 'Order types', sub: 'Better than a plain swap',
+    cols: [{ t: 'Market', ic: 'swap', lines: ['Fills now at the current price', 'Safer when: small size, deep pool'] }, { t: 'Limit', ic: 'target', lines: ['Fills only at your price or better', 'Safer when: you can wait'] },
+      { t: 'TWAP', ic: 'clock', lines: ['Splits a large order over time', 'Safer when: size is large vs the pool'] }, { t: 'Intent', ic: 'users', lines: ['You sign the outcome; solvers compete', 'Safer when: MEV is a concern'] }] },
+  // Module 3
+  { file: 'lending-pool-flow', lesson: '3.1', kind: 'flow', title: 'How a lending pool works', sub: 'Rates jump when utilisation is high', note: 'Near 100% utilisation, lenders may not be able to withdraw.',
+    steps: [['Suppliers', 'Deposit assets, earn interest', 'coins'], ['Pool', 'Utilisation = borrowed ÷ supplied', 'bank'], ['Borrowers', 'Post collateral, pay interest', 'wallet']] },
+  { file: 'perp-anatomy', lesson: '3.5', kind: 'cols', title: 'Perpetual futures', sub: 'Margin, funding, liquidation',
+    cols: [{ t: 'Position', ic: 'chart', lines: ['Long or short, no expiry', 'Margin backs the position'] }, { t: 'Funding', ic: 'swap', lines: ['Longs and shorts pay each other', 'Keeps the perp near spot'] },
+      { t: 'Liquidation', ic: 'alert', tone: 'risk', lines: ['Margin falls below maintenance', 'At 20× leverage, a move of under 5% can wipe out the margin'] }] },
+  { file: 'cdp-mint', lesson: '3.7', kind: 'flow', title: 'Minting your own dollars', sub: 'A CDP, managed like a bank', note: 'Keep the collateral ratio well above the minimum, like any loan.',
+    steps: [['Lock collateral', 'An approved asset such as ETH', 'vault'], ['Mint', 'Stablecoins up to the ratio', 'coins'], ['Use it', 'Spend, lend or hold', 'wallet'], ['Repay + fee', 'Plus the stability fee; collateral unlocks', 'exit']] },
+  // Module 4
+  { file: 'base-vs-emissions', lesson: '4.1', kind: 'bars', title: 'Base yield vs emissions', sub: 'Split the APY (illustrative pools)', note: 'Emissions are paid in a token that can fall. Fees are the part that lasts.',
+    bars: [['Pool A', [['Fees', 4, 'blue'], ['Emissions', 16, 'orange']]], ['Pool B', [['Fees', 8, 'blue'], ['Emissions', 1, 'orange']]]] },
+  { file: 'native-staking', lesson: '4.2', kind: 'flow', title: 'Native staking', sub: 'What the yield is paying for', note: 'The yield pays for locking capital and taking validator risk.',
+    steps: [['Stake', 'Deposit to the protocol', 'lock'], ['Validator', 'Secures the chain, earns rewards', 'shield'], ['Exit queue', 'Unstaking takes time', 'clock'], ['Slashing', 'A penalty for validator faults', 'alert']] },
+  { file: 'lst-accrual', lesson: '4.3', kind: 'flow', title: 'Liquid staking tokens', sub: 'Accrual vs depeg',
+    steps: [['ETH', 'Staked through a provider', 'coins'], ['LST', 'A token for your staked ETH', 'layers'], ['Accrues', 'Rewards build into its value', 'sprout'], ['Depeg risk', 'It can trade below the ETH behind it', 'alert']] },
+  { file: 'restaking-layers', lesson: '4.4', kind: 'flow', title: 'Restaking adds layers', sub: 'Extra yield, extra slashing', note: 'Each layer adds yield and adds another way to lose it.',
+    steps: [['Stake', 'Base staking yield', 'lock'], ['Restake', 'Reuse the same stake', 'layers'], ['Extra services', 'Extra rewards', 'sprout'], ['Extra slashing', 'Each service can penalise you', 'alert']] },
+  { file: 'vault-vs-diy', lesson: '4.5', kind: 'cols', title: 'Vault vs doing it yourself', sub: 'Fees for automation', note: 'Pay for automation when its fees cost less than your gas and time.',
+    cols: [{ t: 'Vault', ic: 'bot', lines: ['Automates harvesting and rebalancing', 'Charges management or performance fees', 'Adds the vault’s own contract risk'] },
+      { t: 'Do it yourself', ic: 'users', lines: ['The same steps by hand', 'Gas every time you act', 'Your time and your mistakes'] }] },
+  { file: 'points-opportunity-cost', lesson: '4.6', kind: 'cols', title: 'Points are a bet', sub: 'Include the costs', note: 'Value = probability × airdrop size − costs. Size it as a bet.',
+    cols: [{ t: 'What you pay', ic: 'lock', tone: 'risk', lines: ['Capital locked, yield given up', 'Gas and bridge costs', 'Protocol risk while you wait'] },
+      { t: 'What you might get', ic: 'sprout', lines: ['An airdrop of unknown size', 'Possibly nothing at all'] }] },
+  { file: 'yield-bearing-stables', lesson: '4.7', kind: 'cols', title: 'Yield-bearing stablecoins', sub: 'Different machines, different risk',
+    cols: [{ t: 'Idle stablecoin', ic: 'coins', lines: ['No yield', 'Risk: issuer and peg'] }, { t: 'Savings-rate stable', ic: 'bank', lines: ['Yield from protocol lending', 'Risk: adds the protocol’s loans and contracts'] },
+      { t: 'RWA-backed stable', ic: 'vault', tone: 'risk', lines: ['Yield from off-chain T-bills', 'Risk: adds custodian, legal wrapper, redemption'] }] },
+  { file: 'rwa-trust', lesson: '4.8', kind: 'flow', title: 'Tokenized real-world assets', sub: 'What you actually own', note: 'You own a claim on the issuer, not the asset itself.',
+    steps: [['Token', 'What you hold on-chain', 'coins'], ['Issuer', 'Promises redemption', 'bank'], ['Custodian', 'Holds the real asset', 'vault'], ['Real asset', 'T-bills, credit, property', 'doc']] },
+  // Module 5
+  { file: 'bridge-trust', lesson: '5.1', kind: 'cols', title: 'Bridge trust models', sub: 'Size exposure to the model',
+    cols: [{ t: 'Custodial / multisig', ic: 'users', tone: 'risk', lines: ['You trust a small set of signers', 'Keys compromised: funds gone'] },
+      { t: 'Light-client', ic: 'shield', lines: ['You trust the chains’ own consensus', 'Strongest, slower and rarer'] },
+      { t: 'Optimistic', ic: 'clock', lines: ['You trust at least one honest watcher', 'Withdrawals wait out a challenge window'] }] },
+  { file: 'l2-exit', lesson: '5.2', kind: 'flow', title: 'How an L2 settles', sub: 'And how you exit',
+    steps: [['You', 'Transact on the L2', 'wallet'], ['Sequencer', 'Orders the transactions', 'cog'], ['L1 settlement', 'Batches posted to Ethereum', 'layers'], ['Forced exit', 'Withdraw via L1 if the sequencer fails', 'exit']] },
+  { file: 'oracle-twap', lesson: '5.3', kind: 'cols', title: 'Oracles and TWAPs', sub: 'Which price secures the position',
+    cols: [{ t: 'Spot print', ic: 'chart', tone: 'risk', lines: ['One price at one moment', 'A thin pool can be pushed for a block'] },
+      { t: 'TWAP', ic: 'clock', lines: ['Averaged over a time window', 'Costly to manipulate, lags fast moves'] },
+      { t: 'Ask', ic: 'search', lines: ['Which price secures this position?', 'Where does it come from?'] }] },
+  { file: 'proxy-admin-keys', lesson: '5.4', kind: 'flow', title: 'Proxies and admin keys', sub: 'Code can change after you deposit', note: 'Check the timelock and who holds the admin key before you deposit.',
+    steps: [['You call', 'The proxy address', 'wallet'], ['Proxy', 'Holds your funds and state', 'layers'], ['Logic', 'The implementation, replaceable', 'code'], ['Admin', 'Can upgrade the logic', 'key']] },
+  { file: 'audit-coverage', lesson: '5.5', kind: 'cols', title: 'What an audit covers', sub: 'And what it never proved',
+    cols: [{ t: 'An audit checked', ic: 'check', lines: ['One specific code version', 'Known classes of bugs', 'The scope written in the report'] },
+      { t: 'It never proved', ic: 'alert', tone: 'risk', lines: ['Later upgrades', 'Economic and oracle attacks', 'Admin-key misuse', 'That the code is safe'] }] },
+  { file: 'ecosystem-map', lesson: '5.6', kind: 'tiles', title: 'Beyond Ethereum', sub: 'Different chains, different trust', note: 'Know which chain, and which trust assumption, you rely on.',
+    tiles: [['Ethereum', 'The base layer with the deepest DeFi', 'layers'], ['L2s', 'Cheaper; settle to Ethereum with added trust', 'grid'], ['Solana', 'A fast single chain with its own validators', 'swap'], ['Bitcoin wrappers', 'BTC used elsewhere via a custodian or bridge', 'link']] },
+  { file: 'cross-chain-gas', lesson: '5.7', kind: 'flow', title: 'Operating across chains', sub: 'Don’t get stranded without gas', note: 'Bring a little native gas token before, or with, the bridge.',
+    steps: [['Bridge', 'Assets move across', 'link'], ['Arrive', 'Funds on the destination', 'wallet'], ['Gas tank', 'Native token for fees', 'flame'], ['Stranded?', 'No gas, no transactions', 'alert']] },
+  { file: 'read-verified-code', lesson: '5.8', kind: 'flow', title: 'Read the verified code', sub: 'Check the claim',
+    steps: [['Explorer', 'Open the contract', 'search'], ['Code tab', 'The verified source', 'code'], ['Function', 'Find the one you’ll call', 'target'], ['The claim', 'Does the code match the docs?', 'check']] },
+  // Module 6
+  { file: 'token-supply-unlocks', lesson: '6.2', kind: 'cols', title: 'Supply, unlocks, FDV', sub: 'Does success reach the token',
+    cols: [{ t: 'Circulating vs FDV', ic: 'coins', lines: ['Circulating: tradable today', 'FDV: price × every token that will exist'] },
+      { t: 'Unlock cliff', ic: 'clock', tone: 'risk', lines: ['Large unlocks add supply', 'Check the schedule before you buy'] },
+      { t: 'Value capture', ic: 'target', lines: ['Does protocol success reach the token?', 'Fees, buybacks, or nothing'] }] },
+  { file: 'dao-control', lesson: '6.3', kind: 'flow', title: 'Who controls the protocol', sub: 'Governance risk before it hits you', note: 'Short timelocks and powerful admins are governance risk.',
+    steps: [['Token vote', 'Holders propose and vote', 'users'], ['Timelock', 'A delay before changes run', 'clock'], ['Admin / multisig', 'Executes; may hold emergency powers', 'key']] },
+  { file: 'thesis-invalidation', lesson: '6.4', kind: 'flow', title: 'Thesis and kill conditions', sub: 'Written before capital moves', note: 'All three fit on one page.',
+    steps: [['Thesis', 'Why this position, in one line', 'doc'], ['Monitors', 'What you’ll watch', 'eye'], ['Invalidation', 'What makes you exit', 'exit']] },
+  { file: 'failure-patterns', lesson: '6.5', kind: 'tiles', title: 'How DeFi failures rhyme', sub: 'Patterns, not headlines',
+    tiles: [['Oracle', 'A manipulated or stale price', 'chart'], ['Upgrade', 'A bad or malicious code change', 'code'], ['Bank run', 'Everyone exits at once', 'users'], ['Incentive death', 'Emissions stop, liquidity leaves', 'sprout']] },
+  { file: 've-bribe-flow', lesson: '6.6', kind: 'flow', title: 'Vote-escrow and bribes', sub: 'Lock, votes, gauges',
+    steps: [['Lock', 'Tokens locked for voting power', 'lock'], ['Votes', 've-holders vote on gauges', 'users'], ['Bribes', 'Protocols pay for votes', 'coins'], ['Gauges', 'Emissions go to the winning pools', 'sprout']] },
+  { file: 'protocol-multiples', lesson: '6.7', kind: 'flow', title: 'Protocol economics', sub: 'Fees to multiples, no narrative', note: 'Compare multiples across protocols using real data only.',
+    steps: [['Fees', 'Paid by users', 'coins'], ['Revenue', 'The protocol’s share', 'bank'], ['Earnings', 'Revenue − incentives − costs', 'chart'], ['Multiple', 'Value ÷ earnings', 'target']] },
+  // Module 7
+  { file: 'onchain-misreads', lesson: '7.1', kind: 'cols', title: 'Classic on-chain misreads', sub: 'Volume, users, TVL', note: 'Every metric needs its caveat.',
+    cols: [{ t: 'Volume', ic: 'swap', lines: ['Can be wash-traded', 'Check: unique traders, fees paid'] }, { t: 'Users', ic: 'users', lines: ['Addresses are not people', 'Check: sybil and airdrop farming'] },
+      { t: 'TVL', ic: 'vault', lines: ['Counts looped and subsidised capital', 'Check: organic fees'] }] },
+  { file: 'explorer-anatomy', lesson: '7.2', kind: 'tiles', title: 'A transaction on the explorer', sub: 'You do not need the app UI',
+    tiles: [['Tx hash', 'The receipt ID', 'doc'], ['From / to', 'Who signed, which contract', 'users'], ['Logs', 'Events: transfers, swaps', 'book'], ['Internal calls', 'What the contract did next', 'code']] },
+  { file: 'exchange-flows', lesson: '7.3', kind: 'cols', title: 'Exchange inflows and outflows', sub: 'Read them with caveats',
+    cols: [{ t: 'Inflows', ic: 'exit', lines: ['Coins moving to exchanges', 'Often read as: selling ahead', 'Caveat: also collateral and market makers'] },
+      { t: 'Outflows', ic: 'wallet', lines: ['Coins leaving exchanges', 'Often read as: holding', 'Caveat: also internal reshuffles'] }] },
+  { file: 'entity-clusters', lesson: '7.4', kind: 'cols', title: 'Whales vs clusters', sub: 'Do not copy blindly', note: 'Don’t copy a wallet you can’t identify.',
+    cols: [{ t: 'One whale', ic: 'wallet', lines: ['A single large address', 'Motive unknown: hedge, OTC deal, error'] },
+      { t: 'Exchange cluster', ic: 'grid', tone: 'risk', lines: ['Many addresses, one entity', 'Looks like whales; it’s customer flow'] }] },
+  { file: 'holder-metrics', lesson: '7.5', kind: 'tiles', title: 'Holder metrics as context', sub: 'Not a trade signal', note: 'Context, not a signal.',
+    tiles: [['MVRV', 'Market value vs realised value', 'chart'], ['SOPR', 'Are coins being spent at a profit?', 'coins'], ['HODL waves', 'Supply grouped by age', 'layers']] },
+  { file: 'real-usage', lesson: '7.6', kind: 'cols', title: 'Real network usage', sub: 'Beyond transaction counts',
+    cols: [{ t: 'Transaction count', ic: 'swap', tone: 'risk', lines: ['Cheap to inflate', 'Bots and spam count too'] }, { t: 'Fees paid', ic: 'coins', lines: ['Users paying to use it', 'Hard to fake at scale'] },
+      { t: 'Active addresses that matter', ic: 'users', lines: ['Addresses moving real value', 'Dust and sybils filtered out'] }] },
+  { file: 'pool-depth', lesson: '7.7', kind: 'custom', fn: diagramPoolDepth, w: 1800, h: 760, title: 'Can this pool take your trade' },
+  { file: 'funding-oi', lesson: '7.8', kind: 'tiles', title: 'Derivatives positioning', sub: 'Funding, OI, liquidations', note: 'Positioning is context for risk, not a prediction.',
+    tiles: [['Funding', 'Positive: longs pay shorts', 'swap'], ['Open interest', 'Total open positions', 'layers'], ['Liquidation levels', 'Where forced selling clusters', 'alert']] },
+  { file: 'query-your-own', lesson: '7.9', kind: 'flow', title: 'Query the chain yourself', sub: 'Don’t depend on one dashboard',
+    steps: [['Question', 'One precise question', 'search'], ['RPC / SQL / subgraph', 'Pull the raw data', 'code'], ['Table', 'An answer you can check', 'grid']] },
+  // Module 8
+  { file: 'risk-buckets', lesson: '8.1', kind: 'cols', title: 'Portfolio risk buckets', sub: 'Caps so one failure cannot sink you', note: 'Each bucket has a written cap, and so does each position inside it.',
+    cols: [{ t: 'Core', ic: 'shield', lines: ['Most of the capital', 'Simple, well-tested positions'] }, { t: 'Satellite', ic: 'target', lines: ['A moderate share', 'Strategies you have tested'] },
+      { t: 'Speculative', ic: 'flame', tone: 'risk', lines: ['A small, capped share', 'Money you can afford to lose entirely'] }] },
+  { file: 'risk-register', lesson: '8.2', kind: 'table', title: 'The risk register', sub: 'Score it, name the response (illustrative rows)',
+    head: ['Position', 'Risks', 'Score', 'Written response'],
+    rows: [['Stablecoin lending', 'Depeg, contract bug', 'Low', 'Peg alert; exit rule written'], ['ETH/USDC LP', 'Impermanent loss, MEV', 'Medium', 'Weekly range review; fee vs LVR check'], ['Leveraged loop', 'Liquidation, borrow-rate spike', 'High', 'Health-factor alert; repay amount pre-computed']] },
+  { file: 'deploy-monitor-respond', lesson: '8.4', kind: 'flow', title: 'The operating playbook', sub: 'Same four phases every time',
+    steps: [['Deploy', 'Small first, then size up', 'target'], ['Monitor', 'Alerts on the risks you named', 'eye'], ['Respond', 'Pre-written actions', 'alert'], ['Review', 'What happened, what changes', 'doc']] },
+  { file: 'twr-vs-deposits', lesson: '8.5', kind: 'cols', title: 'Honest performance', sub: 'Strip out deposits',
+    cols: [{ t: 'Headline P&L', ic: 'chart', tone: 'risk', lines: ['Balance now − balance then', 'Deposits look like profit'] },
+      { t: 'Time-weighted return', ic: 'clock', lines: ['Chains each period’s return', 'Deposits and withdrawals stripped out'] }] },
+  { file: 'discipline-rules', lesson: '8.6', kind: 'cols', title: 'Impulse vs a written rule', sub: 'Psychology that turns strategy into losses',
+    cols: [{ t: 'Impulse', ic: 'flame', tone: 'risk', lines: ['“It’s pumping, add more”', '“It’ll come back”', '“Just this once, more leverage”'] },
+      { t: 'Written rule', ic: 'doc', lines: ['Size set before entry', 'Exit at the invalidation', 'Leverage cap written in the policy'] }] },
+  { file: 'var-drawdown', dir: 'charts', lesson: '8.7', kind: 'custom', fn: chartVarDrawdown, w: 1800, h: 820, title: 'Quantitative risk' },
+  // Module 9
+  { file: 'when-each-wins', lesson: '9.2', kind: 'cols', title: 'When each one wins', sub: 'Grid, LP, both, or neither', note: 'Match the tool to the market regime.',
+    cols: [{ t: 'Range-bound', ic: 'grid', lines: ['Grid bot or concentrated LP', 'Both earn from oscillation'] },
+      { t: 'Strong trend', ic: 'chart', tone: 'risk', lines: ['Neither, or much smaller', 'Both sell into strength and buy into weakness'] },
+      { t: 'Choppy, thin volume', ic: 'clock', lines: ['A grid with wider spacing', 'LP fees may not cover the losses'] }] },
+  { file: 'combined-system', lesson: '9.3', kind: 'cols', title: 'One system, two sleeves', sub: 'Shared risk cap',
+    cols: [{ t: 'Exchange grid sleeve', ic: 'grid', lines: ['Grid bots on an exchange', 'Risk: exchange custody'] }, { t: 'On-chain sleeve', ic: 'layers', lines: ['LPs and lending in DeFi', 'Risk: contracts and oracles'] },
+      { t: 'One risk cap', ic: 'shield', tone: 'good', lines: ['One exposure limit across both', 'One kill rule for the whole book'] }] },
+  // Module 10
+  { file: 'cash-and-carry', lesson: '10.2', kind: 'flow', title: 'Cash-and-carry', sub: 'Capture the basis, not a price view', note: 'Locked only if both legs are held to expiry and margin is never called.',
+    steps: [['Buy spot', 'Hold the asset', 'coins'], ['Short future', 'Same size, fixed expiry', 'chart'], ['Basis', 'Future − spot, fixed at entry', 'target'], ['Expiry', 'Prices converge', 'check']] },
+  { file: 'funding-carry', lesson: '10.3', kind: 'flow', title: 'Funding carry', sub: 'Sizing, venue limits, exit', note: 'The risks are the venue and a funding flip. Size to venue limits.',
+    steps: [['Hold spot', 'Long the asset', 'coins'], ['Short perp', 'Same size, opposite side', 'swap'], ['Collect funding', 'While longs pay shorts', 'sprout'], ['Exit', 'Funding flips or a limit is hit', 'exit']] },
+  { file: 'covered-call-put', lesson: '10.4', kind: 'cols', title: 'Options income', sub: 'Premium in, upside capped',
+    cols: [{ t: 'Covered call', ic: 'coins', lines: ['Hold the asset, sell a call', 'Premium in', 'Upside capped at the strike'] },
+      { t: 'Cash-secured put', ic: 'bank', lines: ['Hold cash, sell a put', 'Premium in', 'You may buy the asset at the strike after a fall'] }] },
+  { file: 'cl-range-rebalance', lesson: '10.5', kind: 'cols', title: 'Concentrated liquidity', sub: 'Can fees pay for the rebalance',
+    cols: [{ t: 'Narrow range', ic: 'target', lines: ['Bigger fee share while in range', 'Frequent rebalances, more cost'] }, { t: 'Wide range', ic: 'grid', lines: ['Smaller fee share', 'Rarely rebalances'] },
+      { t: 'The test', ic: 'check', tone: 'good', lines: ['Fees earned > rebalance cost + impermanent loss'] }] },
+  { file: 'points-as-option', lesson: '10.6', kind: 'cols', title: 'Points are an option', sub: 'Size from the known yield',
+    cols: [{ t: 'Known yield', ic: 'coins', lines: ['The yield you can measure', 'Size the position on this alone'] },
+      { t: 'Unknown points', ic: 'sprout', tone: 'risk', lines: ['A free option if it pays', 'Never the reason for the size'] }] },
+  { file: 'perp-lp-vault', lesson: '10.7', kind: 'flow', title: 'You are the house', sub: 'Perp LP vault', note: 'The house can lose: big trader wins are vault losses.',
+    steps: [['Traders', 'Open perp positions', 'users'], ['Trader P&L', 'Traders win or lose', 'chart'], ['Your vault', 'The other side, plus fees', 'vault'], ['Risk', 'Traders win big, vault loses', 'alert']] },
+  { file: 'peg-arb', lesson: '10.9', kind: 'cols', title: 'Peg and redemption', sub: 'When retail can take part',
+    cols: [{ t: 'Mint / redeem', ic: 'bank', lines: ['At $1 with the issuer', 'Often limited to approved parties'] }, { t: 'Secondary market', ic: 'swap', lines: ['Trades at $0.99 or $1.01', 'Open to everyone'] },
+      { t: 'Arbitrage', ic: 'target', tone: 'good', lines: ['Buy below, redeem at $1', 'Only where you can redeem'] }] },
+  // Module 11
+  { file: 'hedge-perp-option', lesson: '11.1', kind: 'cols', title: 'Hedging price', sub: 'Perp vs put, cost of each',
+    cols: [{ t: 'Perp short', ic: 'swap', lines: ['Offsets price moves one for one', 'Cost: funding and margin risk'] },
+      { t: 'Put option', ic: 'umbrella', lines: ['Pays below the strike', 'Cost: the premium, paid up front'] }] },
+  { file: 'cover-what-pays', lesson: '11.2', kind: 'cols', title: 'On-chain cover', sub: 'What it pays and what it excludes', note: 'Read the wording: a payout needs a claim that matches it.',
+    cols: [{ t: 'Depeg cover', ic: 'coins', lines: ['Pays: a covered stablecoin below its threshold for the set period', 'Excludes: brief dips, other assets'] },
+      { t: 'Protocol cover', ic: 'shield', lines: ['Pays: covered exploit losses', 'Excludes: market losses, your own errors'] },
+      { t: 'Contract cover', ic: 'code', lines: ['Pays: bugs in named contracts', 'Excludes: phishing, key compromise'] }] },
+  { file: 'liq-buffer-alerts', lesson: '11.3', kind: 'flow', title: 'Liquidation protection', sub: 'Buffer, alerts, pre-computed repay',
+    steps: [['Buffer', 'Health factor well above 1', 'shield'], ['Alerts', 'A warning long before trouble', 'bell'], ['Repay ready', 'Amount computed, funds on hand', 'exit']] },
+  { file: 'stress-grid', lesson: '11.4', kind: 'cols', title: 'Stress-test the book', sub: 'Fix it before the market does',
+    cols: [{ t: '−30% price', ic: 'chart', tone: 'risk', lines: ['Breaks: leveraged loops, tight LP ranges', 'Fix: less leverage, a wider buffer'] },
+      { t: 'Stablecoin depeg', ic: 'coins', tone: 'risk', lines: ['Breaks: stable LPs, “safe” yield', 'Fix: spread across issuers'] },
+      { t: 'Protocol exploit', ic: 'alert', tone: 'risk', lines: ['Breaks: everything in that protocol', 'Fix: a per-protocol cap'] }] },
+  { file: 'incident-60min', lesson: '11.5', kind: 'flow', title: 'The first 60 minutes', sub: 'Exploit, depeg, or compromised wallet',
+    steps: [['0–5 min', 'Stop. Sign nothing new', 'alert'], ['5–20 min', 'Size the exposure', 'target'], ['20–40 min', 'Move keys and funds to safety', 'key'], ['40–60 min', 'Public facts only; record everything', 'doc']] },
+  // Module 12
+  { file: 'personal-balance-sheet', lesson: '12.1', kind: 'cols', title: 'Your on-chain balance sheet', sub: 'Equity, LTV, runway',
+    cols: [{ t: 'Assets', ic: 'coins', lines: ['Wallet balances', 'DeFi positions at market value'] }, { t: 'Liabilities', ic: 'bank', tone: 'risk', lines: ['Loans outstanding', 'Accrued interest'] },
+      { t: 'The numbers', ic: 'chart', tone: 'good', lines: ['Equity = assets − liabilities', 'LTV = debt ÷ collateral', 'Runway = liquid assets ÷ monthly spend'] }] },
+  { file: 'credit-policy', lesson: '12.3', kind: 'flow', title: 'The credit line', sub: 'Liquidity without selling', note: 'The written limits come first: max LTV, minimum health factor, repayment plan.',
+    steps: [['Collateral', 'Assets you won’t sell', 'vault'], ['Borrow', 'Within written limits', 'bank'], ['Use', 'Liquidity without selling', 'wallet'], ['Repay', 'On the plan, not on hope', 'exit']] },
+  { file: 'lender-side', lesson: '12.5', kind: 'flow', title: 'Being the lender', sub: 'Supply, price, pull',
+    steps: [['Choose', 'Collateral and oracle you accept', 'search'], ['Price', 'Rate vs what can go wrong', 'scale'], ['Supply', 'Sized within your cap', 'coins'], ['Pull', 'On utilisation spikes or weak collateral', 'exit']] },
+  { file: 'books-succession', lesson: '12.6', kind: 'tiles', title: 'Books and succession', sub: 'A stranger could follow this',
+    tiles: [['Ledger', 'Every position and transaction', 'book'], ['Locations', 'Where keys and backups are kept', 'lock'], ['Recovery', 'Who can recover if you can’t', 'users'], ['Instructions', 'Clear enough for a stranger', 'doc']] },
+  { file: 'tax-records', lesson: '12.7', kind: 'cols', title: 'Records for tax and legal', sub: 'Not tax advice', note: 'Not tax or legal advice. Consult a qualified professional where you live.',
+    cols: [{ t: 'Log for every transaction', ic: 'doc', lines: ['Date, asset, amount', 'Value in your currency', 'Fees paid', 'Transaction hash'] },
+      { t: 'Keep', ic: 'book', lines: ['Exchange statements', 'Wallet exports', 'Your own ledger'] }] },
+  // Module 13
+  { file: 'durability-rank', lesson: '13.1', kind: 'rank', title: 'Income by durability', sub: 'Not by headline APY',
+    rows: [['Staking rewards', 'Paid for securing the chain'], ['Lending interest', 'Paid by borrowers'], ['Trading fees', 'Paid by traders; varies with volume'], ['Funding / basis carry', 'Real, but flips and gets crowded'], ['Emissions', 'Newly printed tokens; fade over time'], ['Points', 'Unknown; may be worth nothing']] },
+  { file: 'expected-yield', dir: 'charts', lesson: '13.2', kind: 'custom', fn: chartExpectedYield, w: 1800, h: 820, title: 'Expected yield' },
+  { file: 'payout-policy', lesson: '13.4', kind: 'flow', title: 'The payout policy', sub: 'What you may take out', note: 'Never pay out from principal.',
+    steps: [['Expected income', 'After expected losses', 'chart'], ['Buffer', 'Part stays in the book', 'vault'], ['Payout', 'What you may take out', 'wallet'], ['Cut rules', 'Income falls or drawdown: pay less', 'alert']] },
+  { file: 'annual-review', lesson: '13.5', kind: 'flow', title: 'Annual review', sub: 'Grow it like a bank', note: 'Slowly, and on evidence.',
+    steps: [['Compound', 'Reinvest what you retain', 'sprout'], ['Scale', 'Grow only what worked', 'chart'], ['Review', 'Yearly: policies, limits, results', 'doc']] },
+  // Module 14
+  { file: 'alert-stack', lesson: '14.1', kind: 'flow', title: 'Monitoring', sub: 'Hear about it before it costs money',
+    steps: [['Positions', 'Health factor, peg, ranges', 'target'], ['Watchers', 'Bots and dashboards read the chain', 'eye'], ['Phone', 'Alerts that wake you', 'bell']] },
+  { file: 'least-permission-bot', lesson: '14.2', kind: 'cols', title: 'Automate with least permission', sub: 'No key handover',
+    cols: [{ t: 'Keeper / agent', ic: 'bot', lines: ['Does one job', 'Can’t withdraw to new addresses'] }, { t: 'Permission box', ic: 'lock', tone: 'good', lines: ['Named functions only', 'Spending caps', 'Revocable at any time'] },
+      { t: 'Never', ic: 'key', tone: 'risk', lines: ['Hand over a seed phrase or key', 'Grant unlimited approvals'] }] },
+  { file: 'change-control', lesson: '14.3', kind: 'flow', title: 'Change control', sub: 'No single-point mistakes',
+    steps: [['Propose', 'Write the change down', 'doc'], ['Review', 'A second person checks it', 'eye'], ['Multi-sign', 'More than one key approves', 'key'], ['Execute', 'Then verify it worked', 'check']] },
+  { file: 'capstone-pack', lesson: '14.4', kind: 'tiles', title: 'Capstone pack', sub: 'What you submit', note: 'No keys, seed phrases or account access anywhere in the pack.',
+    tiles: [['Balance sheet', 'Assets, liabilities, equity, LTV', 'doc'], ['Policies', 'Custody, credit, liquidity, payout', 'book'], ['Monitors', 'Alerts mapped to actions', 'bell'], ['Stress test', 'Five scenarios, each one fixed', 'chart']] },
+  { file: 'readonly-tools', lesson: '14.5', kind: 'tiles', title: 'Read-only tools', sub: 'No signing', note: 'Read-only tools can’t move funds.',
+    tiles: [['Read contract', 'The explorer’s read functions', 'search'], ['Query', 'SQL or a subgraph', 'code'], ['Small script', 'Read-only RPC calls', 'bot']] },
+  { file: 'searcher-keeper', lesson: '14.6', kind: 'flow', title: 'Searchers and keepers', sub: 'Why competing is hard', note: 'Competing means racing professionals on speed and capital.',
+    steps: [['Mempool', 'Pending transactions', 'clock'], ['Searcher', 'Finds profitable orderings', 'search'], ['Keeper', 'Runs liquidations and upkeep', 'bot'], ['Builder', 'Picks the highest bid', 'layers']] },
+];
+const renderLessonImage = r => ({ flow: tplFlow, cols: tplCols, tiles: tplTiles, rank: tplRank, bars: tplBars, table: tplTable }[r.kind] || r.fn)(r);
+const lessonAsset = r => [`${r.dir || 'diagrams'}/${r.file}.png`, r.w || 1800, r.h || ({ flow: 640, cols: 760, tiles: 640, rank: 820, bars: 640, table: 700 }[r.kind]), () => renderLessonImage(r)];
+
 // ---------- registry ----------
 const ASSETS = [
   ['brand/logo-icon-1024.png', 1024, 1024, () => brandAsset('icon')],
@@ -714,18 +1047,19 @@ const ASSETS = [
   ['charts/lvr.png', 1800, 820, chartLVR],
   ['charts/health-factor.png', 1800, 820, chartHF],
   ['diagrams/mev-supply-chain.png', 1800, 700, diagramMEV],
+  ...LESSON_IMAGES.map(lessonAsset),
 ];
 
-module.exports = { C, FONT, BASE_CSS, network, icon, logoMark, wordmark, lockupStacked, DISCLAIMER };
+module.exports = { C, FONT, BASE_CSS, network, icon, logoMark, wordmark, lockupStacked, DISCLAIMER, LESSON_IMAGES };
 
 if (require.main === module) (async () => {
   fs.mkdirSync(RENDER, { recursive: true });
-  const only = process.argv[2];
+  const only = process.argv.slice(2); // one or more name filters; none = everything
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
   // Store uploads at exact pixel size; document images at 2x for print sharpness.
   const pages = { 1: await browser.newPage({ deviceScaleFactor: 1 }), 2: await browser.newPage({ deviceScaleFactor: 2 }) };
   for (const [rel, w, h, fn] of ASSETS) {
-    if (only && !rel.includes(only)) continue;
+    if (only.length && !only.some(o => rel.includes(o))) continue;
     const page = pages[rel.startsWith('store/') || rel.startsWith('brand/') ? 1 : 2];
     const file = path.join(RENDER, rel.replace(/\//g, '_') + '.html');
     fs.writeFileSync(file, fn());
