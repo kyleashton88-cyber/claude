@@ -1,0 +1,175 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.205
+Lesson 10.2.
+
+00:00:02.205 --> 00:00:04.185
+Cash-and-carry basis trades.
+
+00:00:04.185 --> 00:00:06.561
+By the end of this lesson, you'll be able
+
+00:00:06.561 --> 00:00:09.163
+to capture the premium of a dated future over
+
+00:00:09.163 --> 00:00:11.199
+spot without taking a view on price.
+
+00:00:12.499 --> 00:00:13.789
+Here's the plan.
+
+00:00:13.789 --> 00:00:15.474
+First, the key ideas.
+
+00:00:15.474 --> 00:00:18.189
+Then, a worked example, step by step.
+
+00:00:18.189 --> 00:00:19.714
+Then, your checklist.
+
+00:00:19.714 --> 00:00:21.876
+And finally, a three-question quiz.
+
+00:00:23.176 --> 00:00:27.256
+In rising markets, dated futures usually trade above spot.
+
+00:00:27.256 --> 00:00:29.592
+The gap (basis) shrinks to zero
+
+00:00:29.592 --> 00:00:32.521
+at expiry because the future settles
+
+00:00:32.521 --> 00:00:35.021
+at spot. Buy spot + short the
+
+00:00:35.021 --> 00:00:37.687
+future at the same size and you
+
+00:00:37.687 --> 00:00:41.236
+lock that gap, whatever the price does,
+
+00:00:41.236 --> 00:00:43.986
+as long as both legs survive to
+
+00:00:43.986 --> 00:00:47.595
+expiry. annualised basis = (future ÷ spot
+
+00:00:47.595 --> 00:00:49.056
+− 1) × 365 ÷ days
+
+00:00:50.356 --> 00:00:52.871
+Let's work an example,
+
+00:00:52.871 --> 00:00:57.621
+step by step. ETH spot 3,000, 90-day future 3,060.
+
+00:00:57.621 --> 00:01:01.206
+minus 1,440 per ETH. Without enough margin
+
+00:01:01.206 --> 00:01:04.462
+on the futures venue, it's closed
+
+00:01:04.462 --> 00:01:07.061
+out and you're left long
+
+00:01:07.061 --> 00:01:10.282
+spot at the top. At expiry, if
+
+00:01:10.282 --> 00:01:14.023
+ETH is 2,000: spot leg minus 1,000,
+
+00:01:14.023 --> 00:01:17.025
+short future +1,060 to +60
+
+00:01:17.025 --> 00:01:20.648
+per ETH. At expiry, if ETH is 4,500:
+
+00:01:20.648 --> 00:01:25.055
+spot leg +1,500, short future minus 1,440 to
+
+00:01:25.055 --> 00:01:29.272
++60 per ETH. The catch: before expiry, a
+
+00:01:29.272 --> 00:01:32.519
+rally to 4,500 means the short
+
+00:01:32.519 --> 00:01:35.332
+leg shows. You can check
+
+00:01:35.332 --> 00:01:38.327
+every number with the program's calculator.
+
+00:01:39.627 --> 00:01:41.979
+Margin and venue risk: a squeeze on
+
+00:01:41.979 --> 00:01:44.332
+the short leg, or the venue failing.
+
+00:01:45.632 --> 00:01:47.092
+Here's your checklist.
+
+00:01:47.092 --> 00:01:48.627
+Do it now, for real.
+
+00:01:48.627 --> 00:01:51.708
+First, Both legs opened together, same size.
+
+00:01:51.708 --> 00:01:55.491
+Next, Futures margin survives at least a +100%
+
+00:01:55.491 --> 00:01:57.883
+move, or a rule to top up.
+
+00:01:57.883 --> 00:02:00.768
+Then, Venue risk sized (cap per venue).
+
+00:02:00.768 --> 00:02:03.595
+And finally, Plan to hold to expiry; early
+
+00:02:03.595 --> 00:02:05.502
+exit may be at a worse basis.
+
+00:02:06.802 --> 00:02:08.012
+Question 1.
+
+00:02:08.012 --> 00:02:12.372
+Spot 2,000, 180-day future 2,080.
+
+00:02:12.372 --> 00:02:13.657
+Annualised basis?
+
+00:02:18.077 --> 00:02:24.285
+The answer: 4% × 365/180 ≈ 8.1%.
+
+00:02:25.585 --> 00:02:26.830
+Question 2.
+
+00:02:26.830 --> 00:02:29.325
+Why is the return "locked" at expiry?
+
+00:02:33.745 --> 00:02:36.394
+The answer: The future settles at spot, so
+
+00:02:36.394 --> 00:02:38.674
+the gain on one leg offsets the loss
+
+00:02:38.674 --> 00:02:41.015
+on the other, leaving the entry basis.
+
+00:02:42.315 --> 00:02:43.585
+Question 3.
+
+00:02:43.585 --> 00:02:45.500
+What breaks the trade before expiry?
+
+00:02:49.920 --> 00:02:53.009
+The answer: A margin call or liquidation on the
+
+00:02:53.009 --> 00:02:55.970
+short future during a rally, or venue failure.
+
+00:02:57.270 --> 00:02:59.785
+Do the checklist now, before you move on.
+
+00:02:59.785 --> 00:03:04.365
+Next up, Lesson 10.3: Delta-neutral funding carry, done properly.

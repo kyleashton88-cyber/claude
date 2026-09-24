@@ -1,0 +1,220 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.195
+Lesson 10.1.
+
+00:00:02.195 --> 00:00:06.910
+Fixed-rate yield: principal and yield tokens (PT/YT).
+
+00:00:06.910 --> 00:00:09.462
+By the end of this lesson, you'll be able
+
+00:00:09.462 --> 00:00:12.561
+to lock a fixed return using principal tokens, and
+
+00:00:12.561 --> 00:00:15.295
+price a yield token against its implied rate.
+
+00:00:16.595 --> 00:00:17.885
+Here's the plan.
+
+00:00:17.885 --> 00:00:19.570
+First, the key ideas.
+
+00:00:19.570 --> 00:00:22.285
+Then, a worked example, step by step.
+
+00:00:22.285 --> 00:00:23.810
+Then, your checklist.
+
+00:00:23.810 --> 00:00:25.972
+And finally, a three-question quiz.
+
+00:00:27.272 --> 00:00:31.658
+Yield tokenization takes a yield-bearing asset (a staked
+
+00:00:31.658 --> 00:00:35.814
+asset, a lending receipt, a stablecoin savings token)
+
+00:00:35.814 --> 00:00:39.046
+and splits it into two tokens that mature
+
+00:00:39.046 --> 00:00:41.347
+on a set date: trades at a
+
+00:00:41.347 --> 00:00:45.232
+discount before then. Buy the discount, hold to
+
+00:00:45.232 --> 00:00:48.952
+maturity, and your return is fixed. the underlying
+
+00:00:48.952 --> 00:00:53.112
+earns until maturity, then is worth zero. PT +
+
+00:00:53.112 --> 00:00:56.119
+YT = one unit of the underlying.
+
+00:00:56.119 --> 00:00:59.517
+The PT price implies a fixed rate;
+
+00:00:59.517 --> 00:01:02.607
+the YT is a bet that realised yield
+
+00:01:02.607 --> 00:01:05.182
+beats it. fixed APY = (1 ÷ PT
+
+00:01:05.182 --> 00:01:09.044
+price)^(365 ÷ days) − 1 First, PT (principal
+
+00:01:09.044 --> 00:01:13.722
+token): redeems 1:1 for the underlying at maturity.
+
+00:01:13.722 --> 00:01:14.457
+It.
+
+00:01:14.457 --> 00:01:17.545
+And finally, YT (yield token): receives all
+
+00:01:17.545 --> 00:01:20.212
+the variable yield (and often points).
+
+00:01:21.512 --> 00:01:24.010
+Let's look at the chart: PT
+
+00:01:24.010 --> 00:01:27.522
+price converges to 1.00 at maturity.
+
+00:01:27.522 --> 00:01:29.082
+Take a moment with it.
+
+00:01:29.082 --> 00:01:31.492
+It's everything we've just said, in one picture.
+
+00:01:32.792 --> 00:01:35.307
+Let's work an example, step by step.
+
+00:01:35.307 --> 00:01:37.828
+A stablecoin savings token has a P.T. maturing in
+
+00:01:37.828 --> 00:01:40.350
+180 days, priced at 0.96. yield (plus any points)
+
+00:01:40.350 --> 00:01:42.818
+averages above about 8.6% for the 180 days.
+
+00:01:42.818 --> 00:01:46.308
+Near maturity, small discounts are big rates: P.T. at
+
+00:01:46.308 --> 00:01:49.128
+0.985 with 60 days left to 9.63% A.P.Y.
+
+00:01:49.128 --> 00:01:58.066
+Check liquidity before chasing these; exiting
+
+00:01:58.066 --> 00:02:04.973
+early means selling into the pool.
+
+00:02:04.973 --> 00:02:11.847
+$100,000 buys about 104,167 P.T. to redeems for
+
+00:02:11.847 --> 00:02:18.448
+about 104,167 of the underlying at maturity.
+
+00:02:18.448 --> 00:02:22.223
+The Y.T. costs about 0.04 per unit.
+
+00:02:22.223 --> 00:02:25.258
+It only profits if the underlying's realised.
+
+00:02:25.258 --> 00:02:28.253
+You can check every number with the program's calculator.
+
+00:02:29.553 --> 00:02:32.792
+PT: the underlying's credit/depeg risk, and
+
+00:02:32.792 --> 00:02:35.153
+liquidity if you exit early.
+
+00:02:35.153 --> 00:02:38.548
+YT: falling yields, and time (it decays to zero).
+
+00:02:39.848 --> 00:02:41.308
+Here's your checklist.
+
+00:02:41.308 --> 00:02:42.843
+Do it now, for real.
+
+00:02:42.843 --> 00:02:45.758
+First, I'd hold the underlying asset anyway.
+
+00:02:45.758 --> 00:02:48.333
+Next, Maturity date matches when I'll
+
+00:02:48.333 --> 00:02:51.073
+need the money (Module 12.4 ladder).
+
+00:02:51.073 --> 00:02:53.878
+Then, Pool depth checked for an early exit.
+
+00:02:53.878 --> 00:02:57.868
+And finally, YT sized as speculation, not income.
+
+00:02:59.168 --> 00:03:00.378
+Question 1.
+
+00:03:00.378 --> 00:03:05.318
+PT at 0.97, 120 days to maturity.
+
+00:03:05.318 --> 00:03:06.603
+Fixed APY?
+
+00:03:11.023 --> 00:03:19.428
+The answer: (1/0.97)^(365/120) − 1 ≈ 9.7%.
+
+00:03:20.728 --> 00:03:21.973
+Question 2.
+
+00:03:21.973 --> 00:03:25.208
+Does buying PT remove the underlying's risk?
+
+00:03:29.628 --> 00:03:32.093
+The answer: No. It fixes the rate.
+
+00:03:32.093 --> 00:03:35.141
+If the underlying depegs or is exploited,
+
+00:03:35.141 --> 00:03:37.753
+the PT redeems into a damaged asset.
+
+00:03:39.053 --> 00:03:40.323
+Question 3.
+
+00:03:40.323 --> 00:03:43.078
+What must happen for a YT to profit?
+
+00:03:47.498 --> 00:03:51.073
+The answer: Realised variable yield plus points must
+
+00:03:51.073 --> 00:03:53.838
+beat the implied rate priced into the PT.
+
+00:03:55.138 --> 00:03:56.383
+Let's recap.
+
+00:03:56.383 --> 00:03:59.009
+PT (principal token): redeems 1:1
+
+00:03:59.009 --> 00:04:01.703
+for the underlying at maturity.
+
+00:04:01.703 --> 00:04:04.163
+YT (yield token): receives all the
+
+00:04:04.163 --> 00:04:06.552
+variable yield (and often points).
+
+00:04:07.852 --> 00:04:10.367
+Do the checklist now, before you move on.
+
+00:04:10.367 --> 00:04:14.157
+Next up, Lesson 10.2: Cash-and-carry basis trades.

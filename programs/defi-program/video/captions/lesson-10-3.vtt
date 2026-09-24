@@ -1,0 +1,178 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.245
+Lesson 10.3.
+
+00:00:02.245 --> 00:00:04.940
+Delta-neutral funding carry, done properly.
+
+00:00:04.940 --> 00:00:07.116
+By the end of this lesson, you'll be
+
+00:00:07.116 --> 00:00:09.998
+able to run a funding-carry position with proper
+
+00:00:09.998 --> 00:00:12.115
+sizing, venue limits and exit rules.
+
+00:00:13.415 --> 00:00:14.705
+Here's the plan.
+
+00:00:14.705 --> 00:00:16.390
+First, the key ideas.
+
+00:00:16.390 --> 00:00:19.105
+Then, a worked example, step by step.
+
+00:00:19.105 --> 00:00:20.630
+Then, your checklist.
+
+00:00:20.630 --> 00:00:22.792
+And finally, a three-question quiz.
+
+00:00:24.092 --> 00:00:27.063
+Perpetual futures pay funding between longs and
+
+00:00:27.063 --> 00:00:29.467
+shorts to keep the perp near spot.
+
+00:00:29.467 --> 00:00:32.597
+In bullish markets longs usually pay shorts.
+
+00:00:32.597 --> 00:00:35.384
+Long spot + short perp at the same size
+
+00:00:35.384 --> 00:00:39.167
+= no net price exposure, while collecting funding.
+
+00:00:39.167 --> 00:00:43.547
+Professional rules: First, Measure funding over time, not today.
+
+00:00:43.547 --> 00:00:46.002
+Use a 7- and 30-day average.
+
+00:00:46.002 --> 00:00:48.442
+Next, Exit rule: close when the 7-day
+
+00:00:48.442 --> 00:00:51.567
+average turns negative (you'd start paying).
+
+00:00:51.567 --> 00:00:54.484
+Then, Margin buffer: the short leg's leverage
+
+00:00:54.484 --> 00:00:57.067
+decides how big a rally it survives.
+
+00:00:57.067 --> 00:00:59.093
+And finally, Venue limits: split
+
+00:00:59.093 --> 00:01:00.812
+across venues; cap each one.
+
+00:01:02.113 --> 00:01:06.439
+Funding +0.01% per 8h ≈ 10.95%
+
+00:01:06.439 --> 00:01:09.948
+APR on the hedged size.
+
+00:01:09.948 --> 00:01:16.578
+the calculator Higher leverage improves return on capital a
+
+00:01:16.578 --> 00:01:21.323
+little and makes the position much
+
+00:01:21.323 --> 00:01:27.698
+more fragile. Most operators stay at 1–2× and top
+
+00:01:27.698 --> 00:01:33.708
+up margin from reserve. 1×, $2.00, ~5.5%, +100%.
+
+00:01:33.708 --> 00:01:39.273
+2×, $1.50, ~7.3%, +50%. 3×, $1.33, ~8.2%, +33%.
+
+00:01:40.573 --> 00:01:43.938
+Funding turning negative, short squeezes, and venue failure.
+
+00:01:45.238 --> 00:01:46.698
+Here's your checklist.
+
+00:01:46.698 --> 00:01:48.233
+Do it now, for real.
+
+00:01:48.233 --> 00:01:51.677
+First, 7- and 30-day funding averages checked.
+
+00:01:51.677 --> 00:01:55.982
+Next, Exit rule written (e.g. 7-day average < 0).
+
+00:01:55.982 --> 00:02:00.697
+Then, Short-leg leverage ≤ 2×, top-up plan from reserve.
+
+00:02:00.697 --> 00:02:02.642
+And finally, Per-venue cap set.
+
+00:02:03.941 --> 00:02:05.151
+Question 1.
+
+00:02:05.151 --> 00:02:09.576
+Funding is +0.005%/8h.
+
+00:02:09.576 --> 00:02:11.411
+APR on hedged size?
+
+00:02:15.831 --> 00:02:18.376
+The answer: ≈ 5.5%.
+
+00:02:19.676 --> 00:02:20.921
+Question 2.
+
+00:02:20.921 --> 00:02:22.846
+Why not run the short at 5×?
+
+00:02:27.266 --> 00:02:30.014
+The answer: A ~20% rally would liquidate
+
+00:02:30.014 --> 00:02:32.561
+the short and leave you unhedged long.
+
+00:02:33.861 --> 00:02:35.131
+Question 3.
+
+00:02:35.131 --> 00:02:36.491
+What's the exit signal?
+
+00:02:40.911 --> 00:02:43.008
+The answer: Average funding turning
+
+00:02:43.008 --> 00:02:45.221
+negative, meaning shorts start paying.
+
+00:02:46.521 --> 00:02:47.766
+Let's recap.
+
+00:02:47.766 --> 00:02:50.401
+Measure funding over time, not today.
+
+00:02:50.401 --> 00:02:52.418
+Exit rule: close when the 7-day
+
+00:02:52.418 --> 00:02:55.491
+average turns negative (you'd start paying).
+
+00:02:55.491 --> 00:02:58.469
+Margin buffer: the short leg's leverage decides
+
+00:02:58.469 --> 00:03:00.506
+how big a rally it survives.
+
+00:03:00.506 --> 00:03:02.701
+Venue limits: split across venues.
+
+00:03:04.001 --> 00:03:06.516
+Do the checklist now, before you move on.
+
+00:03:06.516 --> 00:03:09.362
+Next up, Lesson 10.4: Options income:
+
+00:03:09.362 --> 00:03:13.031
+covered calls, cash-secured puts, options vaults.
