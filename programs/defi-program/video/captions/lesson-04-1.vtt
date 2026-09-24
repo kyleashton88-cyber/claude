@@ -1,0 +1,154 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.185
+Lesson 4.1.
+
+00:00:02.185 --> 00:00:05.371
+Yield farming: base yield vs emissions.
+
+00:00:05.371 --> 00:00:08.115
+By the end of this lesson, you'll be able
+
+00:00:08.115 --> 00:00:11.121
+to split a farm's APY into what's earned from
+
+00:00:11.121 --> 00:00:14.584
+real activity and what's paid in newly minted tokens.
+
+00:00:15.884 --> 00:00:17.174
+Here's the plan.
+
+00:00:17.174 --> 00:00:18.859
+First, the key ideas.
+
+00:00:18.859 --> 00:00:21.574
+Then, a worked example, step by step.
+
+00:00:21.574 --> 00:00:23.099
+Then, your checklist.
+
+00:00:23.099 --> 00:00:25.261
+And finally, a three-question quiz.
+
+00:00:26.561 --> 00:00:30.266
+First, Base yield: trading fees or borrower interest.
+
+00:00:30.266 --> 00:00:31.941
+Paid by real users.
+
+00:00:31.941 --> 00:00:34.832
+Next, Emissions / incentives: new tokens
+
+00:00:34.832 --> 00:00:37.953
+the protocol prints to attract deposits.
+
+00:00:37.953 --> 00:00:41.633
+The reward token often falls while emissions continue.
+
+00:00:41.633 --> 00:00:45.947
+And finally, Mercenary liquidity: capital that leaves when incentives
+
+00:00:45.947 --> 00:00:48.473
+end, often taking the base yield with it.
+
+00:00:49.773 --> 00:00:52.288
+Let's work an example, step by step.
+
+00:00:52.288 --> 00:00:55.528
+A farm shows 60% APY: 5%
+
+00:00:55.528 --> 00:00:59.457
+fees + 55% in reward tokens.
+
+00:00:59.457 --> 00:01:03.748
+If the reward token falls 50% on average while
+
+00:01:03.748 --> 00:01:08.495
+you harvest, the emissions are worth ~27.5%, so the
+
+00:01:08.495 --> 00:01:13.816
+real return is ~32.5%, before impermanent loss and gas.
+
+00:01:13.816 --> 00:01:17.576
+Remove emissions entirely and you're left with 5%.
+
+00:01:17.576 --> 00:01:20.061
+Would you take the risk for 5%?
+
+00:01:20.061 --> 00:01:21.366
+That's the real question.
+
+00:01:22.666 --> 00:01:24.126
+Here's your checklist.
+
+00:01:24.126 --> 00:01:25.661
+Do it now, for real.
+
+00:01:25.661 --> 00:01:29.486
+First, APY split into base vs incentives.
+
+00:01:29.486 --> 00:01:33.706
+Next, Reward token valued at a realistic, falling price.
+
+00:01:33.706 --> 00:01:36.271
+And finally, Harvest-and-sell schedule set.
+
+00:01:37.571 --> 00:01:38.781
+Question 1.
+
+00:01:38.781 --> 00:01:40.216
+What's the test for a farm?
+
+00:01:44.636 --> 00:01:46.257
+The answer: Does the base
+
+00:01:46.257 --> 00:01:48.066
+yield alone justify the risk?
+
+00:01:49.366 --> 00:01:50.611
+Question 2.
+
+00:01:50.611 --> 00:01:52.566
+Why do emissions APYs fall?
+
+00:01:56.986 --> 00:01:59.780
+The answer: More capital shares the rewards,
+
+00:01:59.780 --> 00:02:02.511
+and the reward token's price often declines.
+
+00:02:03.812 --> 00:02:05.082
+Question 3.
+
+00:02:05.082 --> 00:02:06.777
+What is mercenary liquidity?
+
+00:02:11.197 --> 00:02:13.209
+The answer: Capital that moves on
+
+00:02:13.209 --> 00:02:14.747
+as soon as incentives end.
+
+00:02:16.047 --> 00:02:17.292
+Let's recap.
+
+00:02:17.292 --> 00:02:20.427
+Base yield: trading fees or borrower interest.
+
+00:02:20.427 --> 00:02:23.053
+Emissions / incentives: new tokens the
+
+00:02:23.053 --> 00:02:25.777
+protocol prints to attract deposits.
+
+00:02:25.777 --> 00:02:29.557
+Mercenary liquidity: capital that leaves when incentives end,
+
+00:02:29.557 --> 00:02:31.752
+often taking the base yield with it.
+
+00:02:33.052 --> 00:02:35.567
+Do the checklist now, before you move on.
+
+00:02:35.567 --> 00:02:38.592
+Next up, Lesson 4.2: Native staking.

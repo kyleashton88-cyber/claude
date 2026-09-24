@@ -1,0 +1,124 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.215
+Lesson 4.4.
+
+00:00:02.215 --> 00:00:04.480
+Restaking & shared security.
+
+00:00:04.480 --> 00:00:06.661
+By the end of this lesson, you'll be
+
+00:00:06.661 --> 00:00:09.255
+able to map the extra risk layers restaking
+
+00:00:09.255 --> 00:00:11.495
+adds before accepting its extra yield.
+
+00:00:12.795 --> 00:00:14.085
+Here's the plan.
+
+00:00:14.085 --> 00:00:15.770
+First, the key ideas.
+
+00:00:15.770 --> 00:00:18.485
+Then, a worked example, step by step.
+
+00:00:18.485 --> 00:00:20.010
+Then, your checklist.
+
+00:00:20.010 --> 00:00:22.172
+And finally, a three-question quiz.
+
+00:00:23.472 --> 00:00:26.986
+Restaking reuses staked assets to secure additional
+
+00:00:26.986 --> 00:00:30.327
+services, for extra rewards and often points.
+
+00:00:30.327 --> 00:00:33.649
+Each service adds its own slashing conditions, and
+
+00:00:33.649 --> 00:00:37.467
+operators (who run the services) add operational risk.
+
+00:00:37.467 --> 00:00:42.157
+One collateral base securing many services creates correlated failure.
+
+00:00:42.157 --> 00:00:45.110
+Full strategy treatment: Lesson 10.6.
+
+00:00:46.410 --> 00:00:48.925
+Let's work an example, step by step.
+
+00:00:48.925 --> 00:00:52.193
+Stack for one position: ETH → staked
+
+00:00:52.193 --> 00:00:55.108
+→ LST → liquid restaking token →
+
+00:00:55.108 --> 00:00:58.234
+restaking protocol → 4 services.
+
+00:00:58.234 --> 00:01:00.679
+That's 6 layers, each able to fail.
+
+00:01:00.679 --> 00:01:03.344
+The extra yield must pay for all of them.
+
+00:01:03.344 --> 00:01:05.154
+Plan with points valued at zero.
+
+00:01:06.454 --> 00:01:07.914
+Here's your checklist.
+
+00:01:07.914 --> 00:01:09.449
+Do it now, for real.
+
+00:01:09.449 --> 00:01:12.224
+First, every layer of the stack written down.
+
+00:01:12.224 --> 00:01:15.399
+Next, Slashing conditions of each service read.
+
+00:01:15.399 --> 00:01:18.124
+And finally, Sized in the speculative bucket.
+
+00:01:19.424 --> 00:01:20.634
+Question 1.
+
+00:01:20.634 --> 00:01:21.984
+What does restaking add?
+
+00:01:26.404 --> 00:01:28.920
+The answer: Extra rewards in exchange
+
+00:01:28.920 --> 00:01:31.369
+for extra slashing and operator risk.
+
+00:01:32.669 --> 00:01:33.914
+Question 2.
+
+00:01:33.914 --> 00:01:35.959
+Why is correlated failure a concern?
+
+00:01:40.379 --> 00:01:43.161
+The answer: One collateral base secures many
+
+00:01:43.161 --> 00:01:45.449
+services; a failure can hit them all.
+
+00:01:46.749 --> 00:01:48.019
+Question 3.
+
+00:01:48.019 --> 00:01:49.914
+How should points be valued when planning?
+
+00:01:54.334 --> 00:01:55.809
+The answer: At zero.
+
+00:01:57.109 --> 00:01:59.624
+Do the checklist now, before you move on.
+
+00:01:59.624 --> 00:02:03.734
+Next up, Lesson 4.5: Vaults & yield optimisers.
