@@ -1,0 +1,250 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.465
+Lesson 0.7.
+
+00:00:02.465 --> 00:00:05.620
+Your first DeFi steps (practice mode first).
+
+00:00:05.620 --> 00:00:07.678
+By the end of this lesson, you'll be
+
+00:00:07.678 --> 00:00:09.791
+able to connect your wallet to a DeFi
+
+00:00:09.791 --> 00:00:12.738
+app, understand what you're signing, and practise on
+
+00:00:12.738 --> 00:00:15.185
+a free test network before using real money.
+
+00:00:16.485 --> 00:00:17.775
+Here's the plan.
+
+00:00:17.775 --> 00:00:19.460
+First, the key ideas.
+
+00:00:19.460 --> 00:00:22.175
+Then, a worked example, step by step.
+
+00:00:22.175 --> 00:00:23.700
+Then, your checklist.
+
+00:00:23.700 --> 00:00:25.862
+And finally, a three-question quiz.
+
+00:00:27.162 --> 00:00:29.531
+Practice run: read every prompt, do one
+
+00:00:29.531 --> 00:00:32.022
+small swap, then revoke the approval.
+
+00:00:32.022 --> 00:00:35.287
+First, Connect wallet: lets a site see your address.
+
+00:00:35.287 --> 00:00:37.322
+It can't move funds by itself.
+
+00:00:37.322 --> 00:00:39.780
+Next, Sign a message: proves you own
+
+00:00:39.780 --> 00:00:42.007
+the address (e.g. to log in).
+
+00:00:42.007 --> 00:00:42.972
+Read it.
+
+00:00:42.972 --> 00:00:46.912
+Some "messages" are really permissions (Lesson 1.4).
+
+00:00:46.912 --> 00:00:49.340
+Then, Approve: gives an app permission
+
+00:00:49.340 --> 00:00:51.197
+to move a specific token.
+
+00:00:51.197 --> 00:00:52.552
+Limit the amount.
+
+00:00:52.552 --> 00:00:55.452
+Also, Transaction: actually does something
+
+00:00:55.452 --> 00:00:57.775
+(swap, deposit) and costs gas.
+
+00:00:57.775 --> 00:00:59.503
+On top of that, Testnets are
+
+00:00:59.503 --> 00:01:02.662
+practice blockchains with free, worthless coins.
+
+00:01:02.662 --> 00:01:04.997
+Ethereum's main one is Sepolia.
+
+00:01:04.997 --> 00:01:06.661
+You get test ETH from a
+
+00:01:06.661 --> 00:01:09.042
+faucet (a free giveaway site).
+
+00:01:09.042 --> 00:01:11.217
+Use testnets to practise without risk.
+
+00:01:12.517 --> 00:01:15.290
+And Revoke permissions you no longer need
+
+00:01:15.290 --> 00:01:17.702
+with a tool such as revoke.cash.
+
+00:01:17.702 --> 00:01:20.717
+Plus, Add the Sepolia test network in your wallet
+
+00:01:20.717 --> 00:01:24.092
+(most wallets have a "show test networks" setting).
+
+00:01:24.092 --> 00:01:25.746
+One more: Get free test
+
+00:01:25.746 --> 00:01:27.837
+ETH from a Sepolia faucet.
+
+00:01:27.837 --> 00:01:29.872
+One more: Make a test swap on
+
+00:01:29.872 --> 00:01:32.449
+a testnet version of a well-known DEX
+
+00:01:32.449 --> 00:01:34.852
+(or send test ETH to yourself).
+
+00:01:34.852 --> 00:01:37.199
+One more: Look up the transaction
+
+00:01:37.199 --> 00:01:39.477
+on a block explorer (Lesson 1.2).
+
+00:01:40.777 --> 00:01:43.242
+And finally, Then, on a Layer 2 with a
+
+00:01:43.242 --> 00:01:46.212
+tiny real amount: connect to a well-known app,.
+
+00:01:47.512 --> 00:01:50.027
+Let's work an example, step by step.
+
+00:01:50.027 --> 00:01:52.367
+Priya connects to a DEX on Arbitrum.
+
+00:01:52.367 --> 00:01:55.922
+Her wallet shows "Approve USDC: Unlimited".
+
+00:01:55.922 --> 00:01:59.640
+She edits it to $20, swaps $20 of USDC
+
+00:01:59.640 --> 00:02:04.598
+for ETH, pays ~$0.05 in gas, checks the transaction
+
+00:02:04.598 --> 00:02:08.997
+on the explorer, then revokes the approval.
+
+00:02:08.997 --> 00:02:10.942
+Total cost: a few cents.
+
+00:02:10.942 --> 00:02:12.852
+Total lessons learned: five.
+
+00:02:14.152 --> 00:02:15.612
+Here's your checklist.
+
+00:02:15.612 --> 00:02:17.147
+Do it now, for real.
+
+00:02:17.147 --> 00:02:19.349
+First, I know the difference between
+
+00:02:19.349 --> 00:02:21.792
+connect, sign, approve and transact.
+
+00:02:21.792 --> 00:02:24.527
+Next, Practised on the Sepolia testnet.
+
+00:02:24.527 --> 00:02:26.665
+Then, Made one small real swap on
+
+00:02:26.665 --> 00:02:29.102
+a Layer 2 with a limited approval.
+
+00:02:29.102 --> 00:02:32.357
+Also, Found my transaction on a block explorer.
+
+00:02:32.357 --> 00:02:35.024
+And finally, Revoked the approval afterwards.
+
+00:02:36.324 --> 00:02:37.534
+Question 1.
+
+00:02:37.534 --> 00:02:39.504
+Can "connect wallet" move your funds?
+
+00:02:43.924 --> 00:02:46.469
+The answer: No. It shares your address.
+
+00:02:46.469 --> 00:02:49.392
+Approvals and transactions are what move funds.
+
+00:02:50.692 --> 00:02:51.937
+Question 2.
+
+00:02:51.937 --> 00:02:53.222
+What is a testnet for?
+
+00:02:57.642 --> 00:02:59.944
+The answer: Practising with worthless
+
+00:02:59.944 --> 00:03:01.882
+coins, so mistakes cost nothing.
+
+00:03:03.182 --> 00:03:04.452
+Question 3.
+
+00:03:04.452 --> 00:03:05.419
+What should you do with
+
+00:03:05.419 --> 00:03:06.627
+an approval after you're done?
+
+00:03:11.047 --> 00:03:13.327
+The answer: Revoke it, or limit it to
+
+00:03:13.327 --> 00:03:15.547
+the amount needed in the first place.
+
+00:03:16.847 --> 00:03:18.092
+Let's recap.
+
+00:03:18.092 --> 00:03:20.824
+Connect wallet: lets a site see your address.
+
+00:03:20.824 --> 00:03:22.885
+Sign a message: proves you own
+
+00:03:22.885 --> 00:03:25.114
+the address (e.g. to log in).
+
+00:03:25.114 --> 00:03:27.003
+Approve: gives an app permission
+
+00:03:27.003 --> 00:03:28.734
+to move a specific token.
+
+00:03:28.734 --> 00:03:33.084
+Transaction: actually does something (swap, deposit) and costs gas.
+
+00:03:34.384 --> 00:03:36.899
+Do the checklist now, before you move on.
+
+00:03:36.899 --> 00:03:39.502
+Next up, Lesson 0.8: Your security
+
+00:03:39.502 --> 00:03:42.104
+baseline, and the language of DeFi.

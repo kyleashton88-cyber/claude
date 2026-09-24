@@ -1,0 +1,232 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.195
+Lesson 1.1.
+
+00:00:02.195 --> 00:00:05.010
+What DeFi is, and the risk-first mindset.
+
+00:00:05.010 --> 00:00:07.163
+By the end of this lesson, you'll be
+
+00:00:07.163 --> 00:00:09.724
+able to describe the DeFi stack and explain
+
+00:00:09.724 --> 00:00:11.935
+why every yield is payment for a risk.
+
+00:00:13.235 --> 00:00:14.525
+Here's the plan.
+
+00:00:14.525 --> 00:00:16.210
+First, the key ideas.
+
+00:00:16.210 --> 00:00:18.925
+Then, a worked example, step by step.
+
+00:00:18.925 --> 00:00:20.450
+Then, your checklist.
+
+00:00:20.450 --> 00:00:22.612
+And finally, a three-question quiz.
+
+00:00:23.912 --> 00:00:28.281
+DeFi replaces intermediaries (banks, brokers, exchanges) with
+
+00:00:28.281 --> 00:00:31.733
+smart contracts: public programs on a blockchain
+
+00:00:31.733 --> 00:00:34.852
+that hold assets and follow fixed rules.
+
+00:00:34.852 --> 00:00:37.915
+The stack, bottom to top: Three properties make
+
+00:00:37.915 --> 00:00:41.935
+DeFi powerful and dangerous: Risk-first rule: before comparing
+
+00:00:41.935 --> 00:00:45.107
+returns, list what could make you lose money.
+
+00:00:45.107 --> 00:00:47.767
+A higher yield means you're being paid to carry
+
+00:00:47.767 --> 00:00:50.837
+more risk, whether or not the website mentions it.
+
+00:00:50.837 --> 00:00:53.997
+First, Blockchain: records every balance and
+
+00:00:53.997 --> 00:00:57.246
+transaction (Ethereum, L2s, other chains).
+
+00:00:57.246 --> 00:00:59.976
+Next, Smart contracts: the protocol logic
+
+00:00:59.976 --> 00:01:02.681
+(a lending market, an exchange pool).
+
+00:01:02.681 --> 00:01:05.791
+Then, Tokens: the assets the contracts move.
+
+00:01:05.791 --> 00:01:09.256
+Also, Wallets: where you hold keys and sign actions.
+
+00:01:09.256 --> 00:01:11.621
+On top of that, Interfaces: websites
+
+00:01:11.621 --> 00:01:13.966
+that build transactions for you.
+
+00:01:13.966 --> 00:01:16.681
+They're a convenience, not the protocol itself.
+
+00:01:17.982 --> 00:01:20.553
+And Data layers: explorers and dashboards
+
+00:01:20.553 --> 00:01:22.812
+you use to verify what happened.
+
+00:01:22.812 --> 00:01:25.941
+Plus, Self-custody: nobody can freeze your funds,
+
+00:01:25.941 --> 00:01:28.432
+and nobody can recover them either.
+
+00:01:28.432 --> 00:01:32.307
+One more: Composability: protocols plug into each other.
+
+00:01:32.307 --> 00:01:35.008
+That makes products powerful, and a position can
+
+00:01:35.008 --> 00:01:37.512
+fail because of something it depends on.
+
+00:01:37.512 --> 00:01:41.802
+And finally, Transparency: you can verify everything on-chain.
+
+00:01:41.802 --> 00:01:43.502
+Transparent doesn't mean safe.
+
+00:01:44.802 --> 00:01:47.317
+Let's work an example, step by step.
+
+00:01:47.317 --> 00:01:52.027
+A pool advertises 12% A.P.Y. on a stablecoin.
+
+00:01:52.027 --> 00:01:55.370
+Before depositing, ask: If you can't answer these, you
+
+00:01:55.370 --> 00:01:58.222
+don't know what the 12% is paying you for.
+
+00:01:58.222 --> 00:02:00.407
+Where does the 12% come from?
+
+00:02:00.407 --> 00:02:04.332
+Borrowers paying interest, trading fees, or a reward token?.
+
+00:02:04.332 --> 00:02:06.707
+Which stablecoin, and what backs it?
+
+00:02:06.707 --> 00:02:08.422
+(Lesson 1.5).
+
+00:02:08.422 --> 00:02:10.058
+Which contracts hold the money,
+
+00:02:10.058 --> 00:02:11.687
+and who can upgrade them?.
+
+00:02:11.687 --> 00:02:14.232
+Is there a bridge or oracle involved?.
+
+00:02:14.232 --> 00:02:17.057
+How do I withdraw, and could withdrawals be blocked?.
+
+00:02:18.357 --> 00:02:19.817
+Here's your checklist.
+
+00:02:19.817 --> 00:02:21.352
+Do it now, for real.
+
+00:02:21.352 --> 00:02:22.869
+First, I can name the six
+
+00:02:22.869 --> 00:02:24.627
+layers of the DeFi stack.
+
+00:02:24.627 --> 00:02:28.332
+Next, I can explain why self-custody cuts both ways.
+
+00:02:28.332 --> 00:02:30.506
+And finally, before any yield, I ask
+
+00:02:30.506 --> 00:02:32.387
+"what am I being paid to risk?".
+
+00:02:33.687 --> 00:02:34.897
+Question 1.
+
+00:02:34.897 --> 00:02:37.162
+Why can composability increase risk?
+
+00:02:41.582 --> 00:02:45.006
+The answer: A position inherits the failure risk of
+
+00:02:45.006 --> 00:02:48.627
+every protocol, asset, oracle and bridge it depends on.
+
+00:02:49.927 --> 00:02:51.172
+Question 2.
+
+00:02:51.172 --> 00:02:53.577
+Is a website the same thing as the protocol?
+
+00:02:57.997 --> 00:03:01.877
+The answer: No. The interface only builds transactions.
+
+00:03:01.877 --> 00:03:04.126
+The contracts are the protocol, and
+
+00:03:04.126 --> 00:03:06.562
+interfaces can be faked or compromised.
+
+00:03:07.862 --> 00:03:09.132
+Question 3.
+
+00:03:09.132 --> 00:03:11.837
+What is the risk-first mindset in one sentence?
+
+00:03:16.257 --> 00:03:18.659
+The answer: Identify what could make you
+
+00:03:18.659 --> 00:03:20.886
+lose money before you compare returns.
+
+00:03:22.186 --> 00:03:23.431
+Let's recap.
+
+00:03:23.431 --> 00:03:26.105
+Blockchain: records every balance and
+
+00:03:26.105 --> 00:03:29.361
+transaction (Ethereum, L2s, other chains).
+
+00:03:29.361 --> 00:03:31.877
+Smart contracts: the protocol logic (a
+
+00:03:31.877 --> 00:03:34.371
+lending market, an exchange pool).
+
+00:03:34.371 --> 00:03:37.001
+Tokens: the assets the contracts move.
+
+00:03:37.001 --> 00:03:39.456
+Wallets: where you hold keys and sign actions.
+
+00:03:40.756 --> 00:03:43.271
+Do the checklist now, before you move on.
+
+00:03:43.271 --> 00:03:47.303
+Next up, Lesson 1.2: How a transaction actually happens.
