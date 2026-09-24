@@ -1,0 +1,94 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.735
+Mastery Starter 5.0.
+
+00:00:02.735 --> 00:00:04.740
+New to Infrastructure Risk?
+
+00:00:04.740 --> 00:00:05.800
+Start here.
+
+00:00:05.800 --> 00:00:07.887
+In about ten minutes, you'll go from
+
+00:00:07.887 --> 00:00:09.580
+zero to ready for this module.
+
+00:00:10.880 --> 00:00:13.606
+Your position is only as safe as the weakest
+
+00:00:13.606 --> 00:00:16.513
+thing it depends on: the bridge that moved your
+
+00:00:16.513 --> 00:00:20.026
+tokens, the oracle that prices your collateral, the admin
+
+00:00:20.026 --> 00:00:22.385
+key that can upgrade the contract.
+
+00:00:22.385 --> 00:00:24.830
+Most big DeFi losses came from this plumbing.
+
+00:00:26.130 --> 00:00:28.725
+Bridge: moves tokens between chains.
+
+00:00:28.725 --> 00:00:32.030
+Layer 2: a cheaper network built on Ethereum.
+
+00:00:32.030 --> 00:00:34.760
+Oracle: feeds prices into contracts.
+
+00:00:34.760 --> 00:00:38.045
+Proxy: a contract whose logic can be upgraded.
+
+00:00:38.045 --> 00:00:40.965
+Timelock: a delay before changes take effect.
+
+00:00:42.265 --> 00:00:43.850
+Modules 0–4.
+
+00:00:45.150 --> 00:00:47.515
+On a block explorer, open a protocol
+
+00:00:47.515 --> 00:00:49.405
+you use: is it a proxy?
+
+00:00:49.405 --> 00:00:50.920
+Who can upgrade it?
+
+00:00:50.920 --> 00:00:52.085
+Is there a timelock?
+
+00:00:53.385 --> 00:00:55.654
+Beginner: Knows which chain, bridge
+
+00:00:55.654 --> 00:00:57.845
+and oracle each position uses.
+
+00:00:57.845 --> 00:01:00.321
+Practitioner: Draws a full dependency
+
+00:01:00.321 --> 00:01:02.575
+map and reads audits properly.
+
+00:01:02.575 --> 00:01:05.976
+Master: Operates across EVM and non-EVM chains
+
+00:01:05.976 --> 00:01:08.870
+with capped bridge and wrapper exposure.
+
+00:01:10.170 --> 00:01:12.594
+You've mastered this module when you can
+
+00:01:12.594 --> 00:01:14.959
+draw the complete dependency map of any
+
+00:01:14.959 --> 00:01:16.615
+position and rate each link.
+
+00:01:17.915 --> 00:01:20.430
+Do the checklist now, before you move on.
+
+00:01:20.430 --> 00:01:24.430
+Next up, Lesson 5.1: Bridges and trust assumptions.
