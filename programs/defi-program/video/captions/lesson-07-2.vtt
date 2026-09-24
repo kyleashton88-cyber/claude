@@ -1,0 +1,118 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.345
+Lesson 7.2.
+
+00:00:02.345 --> 00:00:04.070
+Block explorer mastery.
+
+00:00:04.070 --> 00:00:05.910
+By the end of this lesson, you'll
+
+00:00:05.910 --> 00:00:07.804
+be able to read any transaction on
+
+00:00:07.804 --> 00:00:10.294
+an explorer without using the app's interface.
+
+00:00:11.594 --> 00:00:12.884
+Here's the plan.
+
+00:00:12.884 --> 00:00:14.569
+First, the key ideas.
+
+00:00:14.569 --> 00:00:17.284
+Then, a worked example, step by step.
+
+00:00:17.284 --> 00:00:18.809
+Then, your checklist.
+
+00:00:18.809 --> 00:00:20.971
+And finally, a three-question quiz.
+
+00:00:22.272 --> 00:00:27.387
+For a transaction: status (success/fail), block, from/to, value, fee,
+
+00:00:27.387 --> 00:00:32.510
+method called, token transfers (events), internal calls, and logs.
+
+00:00:32.510 --> 00:00:36.310
+For a contract: read (state, parameters) and write (call
+
+00:00:36.310 --> 00:00:40.644
+functions directly, carefully) tabs; proxy info; verified source.
+
+00:00:41.944 --> 00:00:44.459
+Let's work an example, step by step.
+
+00:00:44.459 --> 00:00:49.623
+Your swap on an L2: status Success ·
+
+00:00:49.623 --> 00:00:55.903
+method swap · token transfers: 100 USDC out,
+
+00:00:55.903 --> 00:01:00.669
+0.0331 ETH in · fee 0.00002 ETH.
+
+00:01:00.669 --> 00:01:03.289
+The event log confirms the router and pool.
+
+00:01:03.289 --> 00:01:06.134
+You've verified the trade without trusting the website.
+
+00:01:07.433 --> 00:01:08.893
+Here's your checklist.
+
+00:01:08.893 --> 00:01:10.428
+Do it now, for real.
+
+00:01:10.428 --> 00:01:12.129
+First, I can find status,
+
+00:01:12.129 --> 00:01:14.523
+fee, method and token transfers.
+
+00:01:14.523 --> 00:01:16.231
+Next, I can read a contract's
+
+00:01:16.231 --> 00:01:18.068
+parameters on the Read tab.
+
+00:01:18.068 --> 00:01:20.869
+And finally, I can check and revoke approvals.
+
+00:01:22.169 --> 00:01:23.379
+Question 1.
+
+00:01:23.379 --> 00:01:25.714
+Where do you see tokens that actually moved?
+
+00:01:30.134 --> 00:01:32.714
+The answer: Token transfers (event logs).
+
+00:01:34.014 --> 00:01:35.259
+Question 2.
+
+00:01:35.259 --> 00:01:36.624
+What does the Read tab show?
+
+00:01:41.044 --> 00:01:44.234
+The answer: A contract's public state and parameters.
+
+00:01:45.534 --> 00:01:46.804
+Question 3.
+
+00:01:46.804 --> 00:01:48.549
+Why verify on the explorer?
+
+00:01:52.969 --> 00:01:54.629
+The answer: It's the ground
+
+00:01:54.629 --> 00:01:56.644
+truth, independent of any website.
+
+00:01:57.944 --> 00:02:00.459
+Do the checklist now, before you move on.
+
+00:02:00.459 --> 00:02:03.774
+Next up, Lesson 7.3: Exchange flows.

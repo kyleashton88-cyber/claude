@@ -1,0 +1,142 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.410
+Lesson 7.7.
+
+00:00:02.410 --> 00:00:04.495
+DEX & liquidity analytics.
+
+00:00:04.495 --> 00:00:06.999
+By the end of this lesson, you'll be able
+
+00:00:06.999 --> 00:00:10.040
+to measure whether a pool can actually absorb your
+
+00:00:10.040 --> 00:00:11.650
+trade and pay you as an LP.
+
+00:00:12.950 --> 00:00:14.240
+Here's the plan.
+
+00:00:14.240 --> 00:00:15.925
+First, the key ideas.
+
+00:00:15.925 --> 00:00:18.640
+Then, a worked example, step by step.
+
+00:00:18.640 --> 00:00:20.165
+Then, your checklist.
+
+00:00:20.165 --> 00:00:22.327
+And finally, a three-question quiz.
+
+00:00:23.627 --> 00:00:25.700
+First, TVL can double count
+
+00:00:25.700 --> 00:00:28.073
+and moves with token prices.
+
+00:00:28.073 --> 00:00:30.057
+Next, Depth: the price impact
+
+00:00:30.057 --> 00:00:31.878
+for a given trade size.
+
+00:00:31.878 --> 00:00:34.118
+The number that matters for execution.
+
+00:00:34.118 --> 00:00:38.601
+Then, Volume/TVL: rough capital turnover; higher means
+
+00:00:38.601 --> 00:00:41.673
+more fees per dollar (Lesson 2.3).
+
+00:00:41.673 --> 00:00:44.965
+And finally, Liquidity migration: incentives move
+
+00:00:44.965 --> 00:00:47.796
+liquidity quickly between pools and chains.
+
+00:00:49.096 --> 00:00:51.611
+Let's work an example, step by step.
+
+00:00:51.611 --> 00:00:58.111
+Pool A: $50M TVL, $5M daily volume (0.1 turnover).
+
+00:00:58.111 --> 00:01:04.251
+Pool B: $10M TVL, $8M volume (0.8 turnover).
+
+00:01:04.251 --> 00:01:06.817
+B pays LPs far more per dollar,
+
+00:01:06.817 --> 00:01:09.222
+but a $1M trade will move B's
+
+00:01:09.222 --> 00:01:11.227
+price much more than A's.
+
+00:01:12.527 --> 00:01:13.987
+Here's your checklist.
+
+00:01:13.987 --> 00:01:15.522
+Do it now, for real.
+
+00:01:15.522 --> 00:01:18.006
+First, Depth checked at my trade size.
+
+00:01:18.006 --> 00:01:22.591
+And finally, Volume/TVL used for LP fee estimates.
+
+00:01:23.891 --> 00:01:25.101
+Question 1.
+
+00:01:25.101 --> 00:01:28.680
+Why is depth more useful than TVL for traders?
+
+00:01:33.100 --> 00:01:34.899
+The answer: It measures price
+
+00:01:34.899 --> 00:01:36.279
+impact at a given size.
+
+00:01:37.579 --> 00:01:38.824
+Question 2.
+
+00:01:38.824 --> 00:01:41.289
+High volume/TVL means?
+
+00:01:45.709 --> 00:01:48.339
+The answer: More fees per dollar of liquidity.
+
+00:01:49.639 --> 00:01:50.909
+Question 3.
+
+00:01:50.909 --> 00:01:52.784
+What causes liquidity migration?
+
+00:01:57.204 --> 00:02:00.553
+The answer: Incentives moving between pools and chains.
+
+00:02:01.853 --> 00:02:03.098
+Let's recap.
+
+00:02:03.098 --> 00:02:07.195
+TVL can double count and moves with token prices.
+
+00:02:07.195 --> 00:02:10.300
+Depth: the price impact for a given trade size.
+
+00:02:10.300 --> 00:02:13.745
+Volume/TVL: rough capital turnover.
+
+00:02:13.745 --> 00:02:16.725
+Liquidity migration: incentives move liquidity
+
+00:02:16.725 --> 00:02:18.818
+quickly between pools and chains.
+
+00:02:20.118 --> 00:02:22.633
+Do the checklist now, before you move on.
+
+00:02:22.633 --> 00:02:26.148
+Next up, Lesson 7.8: Derivatives on-chain.

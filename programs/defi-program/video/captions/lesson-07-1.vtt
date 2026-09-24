@@ -1,0 +1,142 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.345
+Lesson 7.1.
+
+00:00:02.345 --> 00:00:04.300
+On-chain data foundations.
+
+00:00:04.300 --> 00:00:06.530
+By the end of this lesson, you'll be able
+
+00:00:06.530 --> 00:00:09.025
+to avoid the classic misreads of on-chain data.
+
+00:00:10.325 --> 00:00:11.615
+Here's the plan.
+
+00:00:11.615 --> 00:00:13.300
+First, the key ideas.
+
+00:00:13.300 --> 00:00:16.015
+Then, a worked example, step by step.
+
+00:00:16.015 --> 00:00:17.540
+Then, your checklist.
+
+00:00:17.540 --> 00:00:19.702
+And finally, a three-question quiz.
+
+00:00:21.002 --> 00:00:24.255
+First, Address ≠ person: one person can have
+
+00:00:24.255 --> 00:00:28.387
+many addresses; one exchange address serves millions.
+
+00:00:28.387 --> 00:00:30.832
+Next, Transfer ≠ trade: moving
+
+00:00:30.832 --> 00:00:33.577
+tokens isn't buying or selling.
+
+00:00:33.577 --> 00:00:36.755
+Then, Labels are probabilistic: providers guess who
+
+00:00:36.755 --> 00:00:38.827
+owns what; they can be wrong.
+
+00:00:38.827 --> 00:00:41.338
+Also, Active addresses can be inflated
+
+00:00:41.338 --> 00:00:43.377
+by bots or airdrop farming.
+
+00:00:43.377 --> 00:00:45.989
+And finally, Data provenance: know chain
+
+00:00:45.989 --> 00:00:48.282
+coverage, indexing method and delay.
+
+00:00:49.582 --> 00:00:52.097
+Let's work an example, step by step.
+
+00:00:52.097 --> 00:00:55.475
+"Whale moves $100M of BTC!" It's an exchange
+
+00:00:55.475 --> 00:00:59.304
+shuffling between its own cold and hot wallets.
+
+00:00:59.304 --> 00:01:00.799
+No trade happened.
+
+00:01:00.799 --> 00:01:04.109
+Check labels, destination and history before reacting.
+
+00:01:05.409 --> 00:01:06.869
+Here's your checklist.
+
+00:01:06.869 --> 00:01:08.404
+Do it now, for real.
+
+00:01:08.404 --> 00:01:10.063
+First, I check what an address
+
+00:01:10.063 --> 00:01:11.969
+is before interpreting a move.
+
+00:01:11.969 --> 00:01:15.409
+And finally, I note each metric's source and definition.
+
+00:01:16.709 --> 00:01:17.919
+Question 1.
+
+00:01:17.919 --> 00:01:19.594
+Does an address equal a person?
+
+00:01:24.014 --> 00:01:25.189
+The answer: No.
+
+00:01:26.489 --> 00:01:27.734
+Question 2.
+
+00:01:27.734 --> 00:01:29.359
+Is a large transfer a sale?
+
+00:01:33.779 --> 00:01:35.904
+The answer: Not necessarily.
+
+00:01:35.904 --> 00:01:37.839
+It may be internal or custodial.
+
+00:01:39.139 --> 00:01:40.409
+Question 3.
+
+00:01:40.409 --> 00:01:42.454
+Why can active-address counts mislead?
+
+00:01:46.874 --> 00:01:49.329
+The answer: Bots and farming inflate them.
+
+00:01:50.629 --> 00:01:51.874
+Let's recap.
+
+00:01:51.874 --> 00:01:56.334
+Address ≠ person: one person can have many addresses.
+
+00:01:56.334 --> 00:02:00.914
+Transfer ≠ trade: moving tokens isn't buying or selling.
+
+00:02:00.914 --> 00:02:04.864
+Labels are probabilistic: providers guess who owns what.
+
+00:02:04.864 --> 00:02:06.960
+Active addresses can be inflated
+
+00:02:06.960 --> 00:02:08.674
+by bots or airdrop farming.
+
+00:02:09.974 --> 00:02:12.489
+Do the checklist now, before you move on.
+
+00:02:12.489 --> 00:02:16.104
+Next up, Lesson 7.2: Block explorer mastery.
