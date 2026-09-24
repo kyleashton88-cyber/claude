@@ -1,0 +1,220 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.265
+Lesson 1.7.
+
+00:00:02.265 --> 00:00:05.440
+Reading signatures and simulating transactions.
+
+00:00:05.440 --> 00:00:07.418
+By the end of this lesson, you'll be
+
+00:00:07.418 --> 00:00:09.610
+able to know exactly what a signature or
+
+00:00:09.610 --> 00:00:11.855
+transaction will do before you approve it.
+
+00:00:13.155 --> 00:00:14.445
+Here's the plan.
+
+00:00:14.445 --> 00:00:16.130
+First, the key ideas.
+
+00:00:16.130 --> 00:00:18.845
+Then, a worked example, step by step.
+
+00:00:18.845 --> 00:00:20.370
+Then, your checklist.
+
+00:00:20.370 --> 00:00:22.532
+And finally, a three-question quiz.
+
+00:00:23.832 --> 00:00:29.196
+First, Transaction simulation: good wallets (and tools like
+
+00:00:29.196 --> 00:00:35.007
+transaction simulators) show the expected balance changes before
+
+00:00:35.007 --> 00:00:38.347
+you sign: "−100 USDC, +0.033 ETH".
+
+00:00:38.347 --> 00:00:40.302
+If the preview shows assets leaving
+
+00:00:40.302 --> 00:00:42.177
+that you didn't intend, stop.
+
+00:00:42.177 --> 00:00:47.237
+Next, Typed-data signatures (EIP-712): structured messages (orders,
+
+00:00:47.237 --> 00:00:50.662
+Permits) that your wallet shows as fields.
+
+00:00:50.662 --> 00:00:53.767
+Read the spender, token, amount and deadline.
+
+00:00:53.767 --> 00:00:56.543
+A "Permit" or "Permit2" signature can hand
+
+00:00:56.543 --> 00:00:59.038
+over token access without any gas.
+
+00:00:59.038 --> 00:01:02.180
+Then, Blind signing: when a hardware wallet can't
+
+00:01:02.180 --> 00:01:05.183
+decode a transaction, it shows only a hash.
+
+00:01:05.183 --> 00:01:08.106
+Keep blind signing off by default; turn it on
+
+00:01:08.106 --> 00:01:11.773
+only for a specific, verified action, then off again.
+
+00:01:11.773 --> 00:01:17.381
+Also, Account delegation (EIP-7702): since Ethereum's 2025 Pectra
+
+00:01:17.381 --> 00:01:21.714
+upgrade, a normal wallet can sign an authorisation
+
+00:01:21.714 --> 00:01:26.178
+that delegates its behaviour to a smart contract.
+
+00:01:26.178 --> 00:01:28.730
+A malicious delegation can hand control of
+
+00:01:28.730 --> 00:01:30.988
+the whole account to an attacker.
+
+00:01:30.988 --> 00:01:33.686
+Only sign delegations from wallets and apps
+
+00:01:33.686 --> 00:01:35.948
+you trust, for a stated purpose.
+
+00:01:35.948 --> 00:01:38.495
+And finally, Rule: if you can't say in one
+
+00:01:38.495 --> 00:01:41.043
+sentence what a prompt does, don't sign it.
+
+00:01:42.343 --> 00:01:44.858
+Let's work an example,
+
+00:01:44.858 --> 00:01:47.533
+step by step. A site
+
+00:01:47.533 --> 00:01:50.946
+asks you to "verify your wallet". The
+
+00:01:50.946 --> 00:01:54.898
+wallet shows a typed-data message: Permit2 ·
+
+00:01:55.598 --> 00:01:58.110
+token: USDC · spender: 0x9f…c3 ·
+
+00:01:58.110 --> 00:02:01.308
+amount: 115792089… (unlimited) · deadline:
+
+00:02:02.008 --> 00:02:04.823
+2030. That isn't verification: it's
+
+00:02:04.823 --> 00:02:08.058
+unlimited USDC access for an unknown
+
+00:02:08.058 --> 00:02:10.893
+spender. Reject it, close the
+
+00:02:10.893 --> 00:02:13.683
+tab, and check your approvals.
+
+00:02:14.983 --> 00:02:16.443
+Here's your checklist.
+
+00:02:16.443 --> 00:02:17.978
+Do it now, for real.
+
+00:02:17.978 --> 00:02:22.143
+First, My wallet shows simulated balance changes before signing.
+
+00:02:22.143 --> 00:02:24.659
+Next, I read spender, token, amount
+
+00:02:24.659 --> 00:02:27.755
+and deadline on every typed-data prompt.
+
+00:02:27.755 --> 00:02:30.997
+Then, Blind signing is off on my hardware wallet.
+
+00:02:30.997 --> 00:02:32.591
+And finally, I never sign
+
+00:02:32.591 --> 00:02:35.472
+account-delegation requests from unknown sites.
+
+00:02:36.772 --> 00:02:37.982
+Question 1.
+
+00:02:37.982 --> 00:02:40.077
+What does transaction simulation show?
+
+00:02:44.497 --> 00:02:47.942
+The answer: The expected balance changes before you sign.
+
+00:02:49.242 --> 00:02:50.487
+Question 2.
+
+00:02:50.487 --> 00:02:52.356
+Why is a Permit signature risky
+
+00:02:52.356 --> 00:02:53.582
+if you don't read it?
+
+00:02:58.002 --> 00:03:00.406
+The answer: It can grant token access
+
+00:03:00.406 --> 00:03:02.810
+without a transaction or gas, so it's
+
+00:03:02.810 --> 00:03:04.582
+easy to approve by accident.
+
+00:03:05.882 --> 00:03:07.152
+Question 3.
+
+00:03:07.152 --> 00:03:08.817
+When should blind signing be on?
+
+00:03:13.237 --> 00:03:15.237
+The answer: Only briefly, for a
+
+00:03:15.237 --> 00:03:17.987
+specific verified action, then switched off.
+
+00:03:19.287 --> 00:03:20.532
+Let's recap.
+
+00:03:20.532 --> 00:03:25.540
+Transaction simulation: good wallets (and tools like transaction simulators)
+
+00:03:25.540 --> 00:03:29.092
+show the expected balance changes before you sign.
+
+00:03:29.092 --> 00:03:34.232
+Typed-data signatures (EIP-712): structured messages (orders.
+
+00:03:34.232 --> 00:03:37.396
+Blind signing: when a hardware wallet can't decode
+
+00:03:37.396 --> 00:03:39.929
+a transaction, it shows only a hash.
+
+00:03:39.929 --> 00:03:47.334
+Account delegation (EIP-7702): since Ethereum's 2025 Pectra upgrade.
+
+00:03:48.634 --> 00:03:51.149
+Do the checklist now, before you move on.
+
+00:03:51.149 --> 00:03:55.319
+Next up, Lesson 1.8: Privacy and physical security.
