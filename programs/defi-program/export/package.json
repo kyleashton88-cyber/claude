@@ -7,7 +7,9 @@
     "video": "node build_video.js",
     "build": "node build_images.js && node render_mermaid.js ../ON-CHAIN-OPERATOR-PROGRAM.md && node build_docx.js ../ON-CHAIN-OPERATOR-PROGRAM.md ../On-Chain-Operator-Program.docx && node build_pdf.js ../ON-CHAIN-OPERATOR-PROGRAM.md ../On-Chain-Operator-Program.pdf && node build_kit.js && PDF_SUBTITLE='Day-1 Setup Kit' node build_pdf.js ../Day-1-Setup-Kit.md ../Day-1-Setup-Kit.pdf && node build_hub.js",
     "hub": "node build_hub.js",
-    "lessons": "python3 build_lesson_scripts.py && node build_video.js lessons"
+    "lessons": "python3 build_lesson_scripts.py && node build_video.js lessons",
+    "lint:video": "python3 lint_video_script.py --all --summary",
+    "capture": "node capture_demo.js"
   },
   "dependencies": {
     "@fontsource/inter": "^5.3.0",
