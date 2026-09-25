@@ -66,7 +66,8 @@ def lesson_block(lid, title, src, imgs):
 chapters = []
 chapters.append("\n".join([
     "### Chapter: Start here",
-    f"- Welcome video: {url('video/welcome.mp4')}  (thumbnail {url('video/thumbs/welcome.jpg')}, captions {url('video/captions/welcome.vtt')})",
+    f"- Welcome video, full tour (10 min, first item): {url('video/welcome-long.mp4')}  (thumbnail {url('video/thumbs/welcome-long.jpg')}, captions {url('video/captions/welcome-long.vtt')}, chapters {url('video/chapters/welcome-long.txt')})",
+    f"- Short welcome (1 min, optional second item): {url('video/welcome.mp4')}  (thumbnail {url('video/thumbs/welcome.jpg')}, captions {url('video/captions/welcome.vtt')})",
     f"- Day-1 Setup Kit (PDF download): {url('Day-1-Setup-Kit.pdf')}",
     f"- Full course PDF (optional download): {url('On-Chain-Operator-Program.pdf')}",
     f"- Course Hub (optional offline companion; the file needs the repo's assets and video folders beside it): {url('course-hub/index.html')}",
