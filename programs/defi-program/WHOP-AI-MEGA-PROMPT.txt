@@ -32,7 +32,7 @@ and **end** with the wrap-up report in Phase 8.
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/07-program-operations.md  (11 KB)  <- capstones, application form, call script, emails, live tier, refund policy (section 9)
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/08-worksheets.md  (4 KB)  <- 17 worksheet templates
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/05-whop-setup.md  (2 KB)  <- product, plans and course structure
-- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/SCRIPTS.md  (46 KB)  <- VSL, welcome and module intro scripts with timings
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/SCRIPTS.md  (75 KB)  <- VSL, welcome and module intro scripts with timings
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/gold/lesson-03-2.json  (16 KB)  <- the GOLD-STANDARD lesson video script: the quality bar
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/WHOP-UPLOAD-GUIDE.md  (3 KB)  <- the upload process, step by step
 ### B. Brand and store images (upload to the product listing)
