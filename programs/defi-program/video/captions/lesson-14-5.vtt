@@ -1,0 +1,193 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.465
+Lesson 14.5.
+
+00:00:02.465 --> 00:00:04.438
+Building your own tools: reading
+
+00:00:04.438 --> 00:00:06.830
+contracts, data and simple scripts.
+
+00:00:06.830 --> 00:00:09.285
+By the end of this lesson, you'll be able
+
+00:00:09.285 --> 00:00:12.675
+to read on-chain data directly and build simple read-only
+
+00:00:12.675 --> 00:00:15.715
+tools, so you're not dependent on any one dashboard.
+
+00:00:17.015 --> 00:00:18.305
+Here's the plan.
+
+00:00:18.305 --> 00:00:19.990
+First, the key ideas.
+
+00:00:19.990 --> 00:00:22.705
+Then, a worked example, step by step.
+
+00:00:22.705 --> 00:00:24.230
+Then, your checklist.
+
+00:00:24.230 --> 00:00:26.392
+And finally, a three-question quiz.
+
+00:00:27.692 --> 00:00:31.047
+First, Reading without code: block explorers' Read
+
+00:00:31.047 --> 00:00:33.811
+tabs show a contract's public state (e.g.
+
+00:00:33.811 --> 00:00:37.137
+a lending market's parameters, your position).
+
+00:00:37.137 --> 00:00:43.143
+Next, Public data APIs (e.g. protocol analytics sites, explorers)
+
+00:00:43.143 --> 00:00:47.447
+return TVL, fees, yields and prices as JSON.
+
+00:00:47.447 --> 00:00:50.298
+Then, RPC: a node endpoint that lets a
+
+00:00:50.298 --> 00:00:54.985
+script read chain state directly (balances, contract calls).
+
+00:00:54.985 --> 00:00:58.640
+Use a reputable provider; reading is free or cheap.
+
+00:00:58.640 --> 00:01:01.340
+Also, Scripts that only read (never hold
+
+00:01:01.340 --> 00:01:04.041
+keys) can check health factors, pegs and
+
+00:01:04.041 --> 00:01:06.514
+utilisation, and send you alerts.
+
+00:01:06.514 --> 00:01:10.583
+And finally, Rule: tools that read are low-risk; tools
+
+00:01:10.583 --> 00:01:15.987
+that sign follow Lesson 14.2 (scoped, capped, revocable permissions).
+
+00:01:15.987 --> 00:01:18.122
+Never put a seed phrase or private
+
+00:01:18.122 --> 00:01:19.768
+key in a script, a file or
+
+00:01:19.768 --> 00:01:22.452
+an environment variable on a shared machine.
+
+00:01:23.752 --> 00:01:26.267
+Let's work an example, step by step.
+
+00:01:26.267 --> 00:01:28.520
+Uses only public reads, holds no
+
+00:01:28.520 --> 00:01:30.663
+keys, and can't move funds.
+
+00:01:30.663 --> 00:01:33.619
+Worst case if it breaks: you miss an alert,
+
+00:01:33.619 --> 00:01:36.643
+so keep your other alerts (14.1) as a backup.
+
+00:01:37.943 --> 00:01:39.403
+Here's your checklist.
+
+00:01:39.403 --> 00:01:40.938
+Do it now, for real.
+
+00:01:40.938 --> 00:01:42.025
+First, I can read a
+
+00:01:42.025 --> 00:01:44.063
+contract's state on an explorer.
+
+00:01:44.063 --> 00:01:46.134
+Next, My monitoring scripts are
+
+00:01:46.134 --> 00:01:48.182
+read-only and hold no keys.
+
+00:01:48.182 --> 00:01:51.537
+And finally, Backup alerts exist if my script fails.
+
+00:01:52.838 --> 00:01:54.048
+Question 1.
+
+00:01:54.048 --> 00:01:55.773
+Why prefer read-only tools?
+
+00:02:00.193 --> 00:02:02.374
+The answer: They can't move funds, so
+
+00:02:02.374 --> 00:02:04.038
+a bug or breach costs little.
+
+00:02:05.338 --> 00:02:06.583
+Question 2.
+
+00:02:06.583 --> 00:02:08.498
+Where should a private key go in a script?
+
+00:02:12.918 --> 00:02:14.643
+The answer: Nowhere.
+
+00:02:14.643 --> 00:02:18.573
+Use scoped permissions (14.2) if a tool must act.
+
+00:02:19.873 --> 00:02:21.143
+Question 3.
+
+00:02:21.143 --> 00:02:23.118
+What's an RPC endpoint?
+
+00:02:27.538 --> 00:02:29.889
+The answer: A node connection that lets
+
+00:02:29.889 --> 00:02:32.533
+software read (and submit to) the blockchain.
+
+00:02:33.833 --> 00:02:35.078
+Let's recap.
+
+00:02:35.078 --> 00:02:38.302
+Reading without code: block explorers' Read tabs
+
+00:02:38.302 --> 00:02:40.868
+show a contract's public state (e.g. a
+
+00:02:40.868 --> 00:02:44.063
+lending market's parameters, your position).
+
+00:02:44.063 --> 00:02:47.843
+Public data APIs (e.g. protocol analytics
+
+00:02:47.843 --> 00:02:51.293
+sites, explorers) return TVL, fees.
+
+00:02:51.293 --> 00:02:54.207
+RPC: a node endpoint that lets a script
+
+00:02:54.207 --> 00:02:58.368
+read chain state directly (balances, contract calls).
+
+00:02:58.368 --> 00:03:01.028
+Scripts that only read (never hold keys)
+
+00:03:01.028 --> 00:03:04.078
+can check health factors, pegs and utilisation.
+
+00:03:05.378 --> 00:03:07.893
+Do the checklist now, before you move on.
+
+00:03:07.893 --> 00:03:11.066
+Next up, Lesson 14.6: Searchers, keepers
+
+00:03:11.066 --> 00:03:13.698
+and arbitrage bots: how they work.

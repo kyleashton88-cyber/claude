@@ -1,0 +1,187 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.475
+Lesson 14.6.
+
+00:00:02.475 --> 00:00:06.040
+Searchers, keepers and arbitrage bots: how they work.
+
+00:00:06.040 --> 00:00:08.535
+By the end of this lesson, you'll be able
+
+00:00:08.535 --> 00:00:12.099
+to understand the professional bot economy that shapes DeFi
+
+00:00:12.099 --> 00:00:14.475
+prices, and why competing in it is hard.
+
+00:00:15.775 --> 00:00:17.065
+Here's the plan.
+
+00:00:17.065 --> 00:00:18.750
+First, the key ideas.
+
+00:00:18.750 --> 00:00:21.465
+Then, a worked example, step by step.
+
+00:00:21.465 --> 00:00:22.990
+Then, your checklist.
+
+00:00:22.990 --> 00:00:25.152
+And finally, a three-question quiz.
+
+00:00:26.452 --> 00:00:29.769
+First, Searchers run bots that find and capture
+
+00:00:29.769 --> 00:00:35.091
+opportunities: DEX arbitrage (price gaps between pools/venues), liquidations
+
+00:00:35.091 --> 00:00:38.824
+(repay debt, take the bonus), backruns (trading right
+
+00:00:38.824 --> 00:00:42.441
+after a large swap), and, harmfully, sandwiches.
+
+00:00:42.441 --> 00:00:46.141
+Next, Keepers perform maintenance jobs for protocols
+
+00:00:46.141 --> 00:00:50.071
+(liquidations, auction bids, rebalancing) for a fee.
+
+00:00:50.071 --> 00:00:52.776
+Then, the economics: bots bid for
+
+00:00:52.776 --> 00:00:56.736
+inclusion by paying builders/validators (2.8).
+
+00:00:56.736 --> 00:01:00.795
+Competition drives profits towards zero; the winners have the
+
+00:01:00.795 --> 00:01:05.546
+lowest latency, best infrastructure, private order flow and capital.
+
+00:01:05.546 --> 00:01:08.936
+Also, why it matters to you: these bots are
+
+00:01:08.936 --> 00:01:12.711
+why pool prices track the market (and cause LVR,
+
+00:01:12.711 --> 00:01:17.334
+2.7), why liquidations happen within seconds (3.3), and why
+
+00:01:17.334 --> 00:01:21.486
+tight slippage and protected routing matter (2.5).
+
+00:01:21.486 --> 00:01:24.650
+And finally, for a learner: build read-only
+
+00:01:24.650 --> 00:01:28.186
+monitors (14.5) and understand the mechanics.
+
+00:01:28.186 --> 00:01:32.135
+Running competitive bots is a professional engineering business
+
+00:01:32.135 --> 00:01:35.281
+with real losses from failed transactions and bugs.
+
+00:01:36.581 --> 00:01:39.096
+Let's work an example, step by step.
+
+00:01:39.096 --> 00:01:44.068
+A liquidation worth a $300 bonus (3.3) appears.
+
+00:01:44.068 --> 00:01:46.182
+Dozens of bots see it in the same
+
+00:01:46.182 --> 00:01:48.668
+block; the winner pays most of the $300
+
+00:01:48.668 --> 00:01:51.579
+to the block builder to be included first.
+
+00:01:51.579 --> 00:01:53.984
+The "profit" left after fees and gas
+
+00:01:53.984 --> 00:01:56.259
+might be a few dollars, and losing
+
+00:01:56.259 --> 00:01:58.054
+bots may still pay gas.
+
+00:01:58.054 --> 00:02:01.217
+That's why liquidations are near-instant, and why your
+
+00:02:01.217 --> 00:02:04.264
+buffer (not a liquidator's delay) is your protection.
+
+00:02:05.564 --> 00:02:07.024
+Here's your checklist.
+
+00:02:07.024 --> 00:02:08.559
+Do it now, for real.
+
+00:02:08.559 --> 00:02:10.542
+First, I can name the main searcher
+
+00:02:10.542 --> 00:02:12.714
+strategies and their effect on me.
+
+00:02:12.714 --> 00:02:16.668
+And finally, My protections (slippage, private routing,
+
+00:02:16.668 --> 00:02:19.704
+HF buffers) assume bots act within seconds.
+
+00:02:21.004 --> 00:02:22.214
+Question 1.
+
+00:02:22.214 --> 00:02:24.984
+Where does most of a competitive searcher's profit go?
+
+00:02:29.404 --> 00:02:33.444
+The answer: To builders/validators, through bids for inclusion.
+
+00:02:34.744 --> 00:02:35.989
+Question 2.
+
+00:02:35.989 --> 00:02:37.234
+What do keepers do?
+
+00:02:41.654 --> 00:02:46.894
+The answer: Paid maintenance for protocols: liquidations, auctions, rebalancing.
+
+00:02:48.194 --> 00:02:49.464
+Question 3.
+
+00:02:49.464 --> 00:02:51.719
+Why do liquidations happen so fast?
+
+00:02:56.139 --> 00:02:59.424
+The answer: Competing bots race to capture the bonus.
+
+00:03:00.724 --> 00:03:01.969
+Let's recap.
+
+00:03:01.969 --> 00:03:05.634
+Searchers run bots that find and capture opportunities.
+
+00:03:05.634 --> 00:03:09.868
+Keepers perform maintenance jobs for protocols (liquidations,
+
+00:03:09.868 --> 00:03:12.694
+auction bids, rebalancing) for a fee.
+
+00:03:12.694 --> 00:03:14.879
+The economics: bots bid for
+
+00:03:14.879 --> 00:03:18.769
+inclusion by paying builders/validators (2.8).
+
+00:03:18.769 --> 00:03:21.967
+Why it matters to you: these bots are why
+
+00:03:21.967 --> 00:03:25.774
+pool prices track the market (and cause LVR, 2.7).
+
+00:03:27.074 --> 00:03:29.289
+Do the checklist now, before you move on.
