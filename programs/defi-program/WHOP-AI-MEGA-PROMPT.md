@@ -32,7 +32,7 @@ and **end** with the wrap-up report in Phase 8.
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/07-program-operations.md  (11 KB)  <- capstones, application form, call script, emails, live tier, refund policy (section 9)
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/08-worksheets.md  (4 KB)  <- 17 worksheet templates
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/05-whop-setup.md  (2 KB)  <- product, plans and course structure
-- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/SCRIPTS.md  (87 KB)  <- VSL, welcome and module intro scripts with timings
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/SCRIPTS.md  (108 KB)  <- VSL, welcome and module intro scripts with timings
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/gold/lesson-03-2.json  (16 KB)  <- the GOLD-STANDARD lesson video script: the quality bar
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/WHOP-UPLOAD-GUIDE.md  (3 KB)  <- the upload process, step by step
 ### B. Brand and store images (upload to the product listing)
@@ -50,7 +50,7 @@ and **end** with the wrap-up report in Phase 8.
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/vsl-main.mp4  (40.4 MB)  <- LISTING VIDEO + website hero (3:36)
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/vsl-short-vertical.mp4  (3.3 MB)  <- ads, Reels, Shorts (9:16)
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/welcome.mp4  (19.5 MB)  <- Start here chapter, first item
-- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-00-intro.mp4  (7.9 MB)  <- top of Module 0
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-00-intro.mp4  (91.6 MB)  <- top of Module 0
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-01-intro.mp4  (6.7 MB)  <- top of Module 1
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-02-intro.mp4  (6.4 MB)  <- top of Module 2
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-03-intro.mp4  (6.5 MB)  <- top of Module 3
