@@ -6,209 +6,635 @@ Lesson 1.2.
 00:00:02.185 --> 00:00:04.490
 How a transaction actually happens.
 
-00:00:04.490 --> 00:00:06.455
-By the end of this lesson, you'll
+00:00:04.490 --> 00:00:06.624
+By the end, you'll be able to follow
 
-00:00:06.455 --> 00:00:08.594
-be able to follow a transaction from
+00:00:06.624 --> 00:00:09.797
+a transaction from signature to finality, and estimate
 
-00:00:08.594 --> 00:00:11.195
-signature to finality, and estimate its cost.
+00:00:09.797 --> 00:00:12.220
+what it actually costs before you send it.
 
-00:00:12.495 --> 00:00:13.785
+00:00:13.520 --> 00:00:14.810
 Here's the plan.
 
-00:00:13.785 --> 00:00:15.470
-First, the key ideas.
+00:00:14.810 --> 00:00:18.007
+First, the full lifecycle, every stop a transaction
 
-00:00:15.470 --> 00:00:18.185
-Then, a worked example, step by step.
+00:00:18.007 --> 00:00:21.505
+makes between your signature and being irreversible.
 
-00:00:18.185 --> 00:00:19.710
-Then, your checklist.
+00:00:21.505 --> 00:00:23.248
+Second, gas: what it is, and
 
-00:00:19.710 --> 00:00:21.872
-And finally, a three-question quiz.
+00:00:23.248 --> 00:00:25.170
+the two parts of its price.
 
-00:00:23.172 --> 00:00:26.867
-Lifecycle: create → sign → broadcast → mempool
+00:00:25.170 --> 00:00:27.508
+Third, the nonce, and why one stuck
 
-00:00:26.867 --> 00:00:30.547
-(waiting) → included in a block → confirmed
+00:00:27.508 --> 00:00:30.405
+transaction can jam every one behind it.
 
-00:00:30.547 --> 00:00:33.427
-→ final. Ethereum the price has
+00:00:30.405 --> 00:00:32.773
+And finally, the real math: what a
 
-00:00:33.427 --> 00:00:36.067
-a base fee (burned) plus a
+00:00:32.773 --> 00:00:35.750
+swap actually costs, quiet versus congested.
 
-00:00:36.067 --> 00:00:39.155
-priority tip (to get included sooner). Gas
+00:00:37.050 --> 00:00:38.255
+The full lifecycle.
 
-00:00:39.155 --> 00:00:41.452
-price is quoted in gwei (1 gwei
+00:00:39.555 --> 00:00:41.310
+Here's the complete path.
 
-00:00:41.452 --> 00:00:45.199
-= 0.000000001 ETH). low-nonce transaction blocks
+00:00:41.310 --> 00:00:44.618
+You create the transaction, specifying what it does.
 
-00:00:45.199 --> 00:00:48.083
-all later ones until it confirms or is
+00:00:44.618 --> 00:00:46.633
+You sign it with your private key.
 
-00:00:48.083 --> 00:00:52.449
-replaced (same nonce, higher fee). reversed. It differs
+00:00:46.633 --> 00:00:49.048
+Your wallet broadcasts it to the network.
 
-00:00:52.449 --> 00:00:53.449
-by chain,
+00:00:49.048 --> 00:00:50.560
+It sits in the mempool, a
 
-00:00:53.449 --> 00:00:55.388
-and L2s have their own
+00:00:50.560 --> 00:00:53.128
+public waiting room, visible to anyone.
 
-00:00:55.388 --> 00:00:58.049
-rules (Module 5). First, Gas
+00:00:53.128 --> 00:00:55.443
+A validator includes it in a block.
 
-00:00:58.049 --> 00:01:01.014
-is the unit of computation. Cost
+00:00:55.443 --> 00:00:57.498
+The network confirms that block.
 
-00:01:01.014 --> 00:01:03.784
-= gas used × gas price.
+00:00:57.498 --> 00:01:01.071
+And after enough confirmations, it reaches finality: the
 
-00:01:03.784 --> 00:01:04.609
-On.
+00:01:01.071 --> 00:01:04.393
+point after which it can't realistically be reversed.
 
-00:01:04.609 --> 00:01:08.764
-Next, Nonce: each account's transactions are numbered in order.
+00:01:05.693 --> 00:01:08.831
+Here's the short version, the one worth keeping in
 
-00:01:08.764 --> 00:01:09.764
-A stuck.
+00:01:08.831 --> 00:01:12.393
+your head day to day: sign, mempool, block, finality.
 
-00:01:09.764 --> 00:01:12.679
-Then, Failed transactions still cost gas.
+00:01:12.393 --> 00:01:14.880
+Gas is paid whether the transaction succeeds
 
-00:01:12.679 --> 00:01:16.864
-The network did the computation even though the result
+00:01:14.880 --> 00:01:17.091
+or fails, because the network still did
 
-00:01:16.864 --> 00:01:19.591
-was reverted. Also, Finality: the point
+00:01:17.091 --> 00:01:18.718
+the work of checking it.
 
-00:01:19.591 --> 00:01:22.004
-after which a transaction can't
+00:01:18.718 --> 00:01:21.270
+That single fact explains most of what's
 
-00:01:22.004 --> 00:01:26.365
-realistically be. And finally, Explorers (e.g. Etherscan) show status,
+00:01:21.270 --> 00:01:24.008
+counterintuitive about how DeFi charges you.
 
-00:01:26.365 --> 00:01:29.744
-fee, sender, contract called, token transfers and logs.
+00:01:25.308 --> 00:01:28.394
+One more distinction worth holding onto: “pending”
 
-00:01:31.044 --> 00:01:33.559
-Let's work an example, step by step.
+00:01:28.394 --> 00:01:31.053
+and “confirmed” are not the same claim.
 
-00:01:33.559 --> 00:01:39.657
-A swap uses 150,000 gas at 20 gwei: 150,000
+00:01:31.053 --> 00:01:33.165
+Pending means the network has seen your
 
-00:01:39.657 --> 00:01:44.669
-× 20 = 3,000,000 gwei = 0.003 ETH.
+00:01:33.165 --> 00:01:35.788
+transaction and it's waiting in the mempool.
 
-00:01:44.669 --> 00:01:48.394
-At $3,000/ETH that's $9.
+00:01:35.788 --> 00:01:38.428
+Confirmed means it made it into a block.
 
-00:01:48.394 --> 00:01:51.096
-The same swap during congestion
+00:01:38.428 --> 00:01:41.956
+Until it's confirmed, anyone watching the mempool, including
 
-00:01:51.096 --> 00:01:53.169
-at 80 gwei costs $36.
+00:01:41.956 --> 00:01:44.732
+a rival bidder, can technically see what you're
 
-00:01:53.169 --> 00:01:56.516
-If you're compounding $1.50 of rewards, the
+00:01:44.732 --> 00:01:46.941
+about to do and try to act first.
 
-00:01:56.516 --> 00:01:59.250
-gas costs more than the rewards.
+00:01:46.941 --> 00:01:49.276
+That's part of why priority tips exist.
 
-00:01:59.250 --> 00:02:01.580
-That's why position size matters on-chain.
+00:01:50.576 --> 00:01:53.501
+Notice the word “realistically” in finality.
 
-00:02:02.881 --> 00:02:04.341
-Here's your checklist.
+00:01:53.501 --> 00:01:56.885
+On most chains, a transaction can technically still be
 
-00:02:04.341 --> 00:02:05.876
-Do it now, for real.
+00:01:56.885 --> 00:02:00.631
+reorganised for a short window right after confirmation.
 
-00:02:05.876 --> 00:02:08.781
-First, I check the fee estimate before signing.
+00:02:00.631 --> 00:02:03.642
+Waiting for a few more confirmations, or for the
 
-00:02:08.781 --> 00:02:10.297
-Next, I know how to find
+00:02:03.642 --> 00:02:06.775
+finality rules of the specific chain and layer two
 
-00:02:10.297 --> 00:02:12.416
-my transaction on an explorer.
+00:02:06.775 --> 00:02:09.970
+you're using, which you'll cover in Module Five, is
 
-00:02:12.416 --> 00:02:15.271
-And finally, I know a stuck transaction can be
+00:02:09.970 --> 00:02:12.366
+what makes “final” actually mean final.
 
-00:02:15.271 --> 00:02:17.761
-sped up or cancelled with the same nonce.
+00:02:13.666 --> 00:02:14.291
+Gas.
 
-00:02:19.061 --> 00:02:20.271
-Question 1.
+00:02:15.591 --> 00:02:18.166
+Gas is the unit of computation.
 
-00:02:20.271 --> 00:02:22.101
-Your transaction reverted.
+00:02:18.166 --> 00:02:21.250
+Every operation a transaction performs, reading a
 
-00:02:22.101 --> 00:02:22.916
-Did you pay?
+00:02:21.250 --> 00:02:24.396
+balance, updating a balance, checking a signature,
 
-00:02:27.336 --> 00:02:29.373
-The answer: Yes, for the gas used
+00:02:24.396 --> 00:02:26.423
+costs a fixed amount of gas.
 
-00:02:29.373 --> 00:02:30.991
+00:02:26.423 --> 00:02:28.059
+Your total cost is gas
+
+00:02:28.059 --> 00:02:30.494
+used, multiplied by gas price.
+
+00:02:30.494 --> 00:02:33.299
+Both numbers matter, and they move independently.
+
+00:02:34.600 --> 00:02:37.645
+Gas price itself has two parts, on Ethereum.
+
+00:02:37.645 --> 00:02:39.699
+The base fee, set by the network
+
+00:02:39.699 --> 00:02:41.504
+based on how busy it is, and
+
+00:02:41.504 --> 00:02:44.170
+burned, destroyed, not paid to anyone.
+
+00:02:44.170 --> 00:02:46.418
+And the priority tip, an extra amount
+
+00:02:46.418 --> 00:02:48.666
+you add to get included sooner, which
+
+00:02:48.666 --> 00:02:50.445
+does go to the validator.
+
+00:02:50.445 --> 00:02:52.955
+Gas price is quoted in gwei: one
+
+00:02:52.955 --> 00:02:55.389
+gwei is one billionth of an ETH.
+
+00:02:56.689 --> 00:03:00.339
+One real pattern worth knowing: priority tips spike
+
+00:03:00.339 --> 00:03:03.849
+hardest during sudden demand, a popular NFT mint,
+
+00:03:03.849 --> 00:03:07.078
+a hyped token launch, everyone racing for the
+
+00:03:07.078 --> 00:03:09.694
+same limited block space at once.
+
+00:03:09.694 --> 00:03:13.022
+That's a real, recurring phenomenon on Ethereum and
+
+00:03:13.022 --> 00:03:15.690
+similar chains, not a rare edge case.
+
+00:03:15.690 --> 00:03:17.895
+If you're not in a race for a scarce,
+
+00:03:17.895 --> 00:03:21.143
+time-limited slot, there's usually no reason to pay the
+
+00:03:21.143 --> 00:03:23.870
+premium everyone else is paying in that moment.
+
+00:03:25.170 --> 00:03:27.758
+Gas price isn't fixed, it's an auction for
+
+00:03:27.758 --> 00:03:30.585
+block space, and it follows real patterns.
+
+00:03:30.585 --> 00:03:33.728
+Weekday business hours in the US and Europe tend
+
+00:03:33.728 --> 00:03:36.551
+to run busier, and so does any period right
+
+00:03:36.551 --> 00:03:39.930
+after major news or a popular new app launching.
+
+00:03:39.930 --> 00:03:42.844
+Quiet periods, like weekends and the middle of the
+
+00:03:42.844 --> 00:03:45.830
+night in those time zones, tend to run cheaper.
+
+00:03:45.830 --> 00:03:48.328
+None of this is guaranteed on any given
+
+00:03:48.328 --> 00:03:50.827
+day, but if a fee looks unusually high,
+
+00:03:50.827 --> 00:03:53.075
+waiting an hour is often free money.
+
+00:03:54.375 --> 00:03:55.465
+Quick check.
+
+00:03:55.465 --> 00:03:57.870
+Your transaction fails and reverts.
+
+00:03:57.870 --> 00:03:59.165
+Did you still pay for it?
+
+00:04:03.585 --> 00:04:05.622
+The answer: yes, for the gas used
+
+00:04:05.622 --> 00:04:07.540
 up to the point of failure.
 
-00:02:32.291 --> 00:02:33.536
-Question 2.
+00:04:07.540 --> 00:04:09.566
+The network did the computation, even
 
-00:02:33.536 --> 00:02:36.439
-200,000 gas at 10 gwei
+00:04:09.566 --> 00:04:11.485
+though the result didn't go through.
 
-00:02:36.439 --> 00:02:39.595
-with ETH at $2,500 costs?
+00:04:12.785 --> 00:04:13.610
+The nonce.
 
-00:02:44.015 --> 00:02:49.465
-The answer: 2,000,000 gwei = 0.002 ETH = $5.
+00:04:14.910 --> 00:04:17.293
+Every account's transactions are numbered,
 
-00:02:50.764 --> 00:02:52.034
-Question 3.
+00:04:17.293 --> 00:04:19.200
+in order, starting from zero.
 
-00:02:52.034 --> 00:02:54.429
-Why are your newer transactions all pending?
+00:04:19.200 --> 00:04:20.955
+That number is the nonce.
 
-00:02:58.849 --> 00:03:01.454
-The answer: An earlier nonce is stuck.
+00:04:20.955 --> 00:04:24.712
+The network processes them strictly in sequence: it won't
 
-00:03:01.454 --> 00:03:04.029
-Replace or speed it up, and the rest follow.
+00:04:24.712 --> 00:04:28.146
+process nonce six until nonce five has confirmed, no
 
-00:03:05.329 --> 00:03:06.574
+00:04:28.146 --> 00:04:31.126
+matter how much you're willing to pay for six.
+
+00:04:32.426 --> 00:04:35.326
+So here's what a stuck transaction actually does.
+
+00:04:35.326 --> 00:04:37.796
+You send transaction five with too low a
+
+00:04:37.796 --> 00:04:40.806
+fee, and it sits in the mempool, unconfirmed.
+
+00:04:40.806 --> 00:04:44.036
+You send transactions six and seven right after.
+
+00:04:44.036 --> 00:04:46.646
+They also sit and wait, even though they're
+
+00:04:46.646 --> 00:04:49.971
+perfectly valid, because five hasn't confirmed yet.
+
+00:04:49.971 --> 00:04:52.607
+The fix is to replace transaction five
+
+00:04:52.607 --> 00:04:55.649
+itself, same nonce, higher fee, which either
+
+00:04:55.649 --> 00:04:57.706
+confirms it or cancels it.
+
+00:04:57.706 --> 00:05:00.781
+Once five clears, six and seven follow immediately.
+
+00:05:02.081 --> 00:05:05.176
+When you replace a stuck transaction, you actually
+
+00:05:05.176 --> 00:05:08.146
+have two choices, both using the same nonce.
+
+00:05:08.146 --> 00:05:11.404
+Speed it up: keep the same instruction, just raise
+
+00:05:11.404 --> 00:05:14.706
+the fee, so it confirms as originally intended.
+
+00:05:14.706 --> 00:05:17.579
+Or cancel it: replace it with a zero-value
+
+00:05:17.579 --> 00:05:20.786
+transaction to yourself, at a higher fee, which
+
+00:05:20.786 --> 00:05:23.793
+uses up that nonce harmlessly and clears the
+
+00:05:23.793 --> 00:05:26.666
+jam without ever doing the original action.
+
+00:05:27.966 --> 00:05:29.056
+Quick check.
+
+00:05:29.056 --> 00:05:31.741
+All your newer transactions are stuck pending.
+
+00:05:31.741 --> 00:05:33.266
+What's the most likely cause?
+
+00:05:37.686 --> 00:05:40.291
+The answer: an earlier nonce is stuck.
+
+00:05:40.291 --> 00:05:42.824
+Replace it or speed it up, same nonce,
+
+00:05:42.824 --> 00:05:46.526
+higher fee, and everything behind it follows immediately.
+
+00:05:47.826 --> 00:05:48.776
+The real math.
+
+00:05:50.076 --> 00:05:52.101
+Here's a real worked example.
+
+00:05:52.101 --> 00:05:55.061
+A swap uses 150,000 gas.
+
+00:05:55.061 --> 00:05:59.571
+At 20 gwei, a quiet network, that's
+
+00:05:59.571 --> 00:06:04.207
+150,000 × 20 = 3,000,000 gwei, which
+
+00:06:04.207 --> 00:06:09.393
+is 0.003 ETH. At $3,000/ETH, that's $9.
+
+00:06:09.393 --> 00:06:12.110
+The same swap, during congestion,
+
+00:06:12.110 --> 00:06:14.168
+at 80 gwei, costs $36.
+
+00:06:14.168 --> 00:06:15.333
+Same swap.
+
+00:06:15.333 --> 00:06:16.533
+Same wallet.
+
+00:06:16.533 --> 00:06:19.458
+Four times the price, because the network got busy.
+
+00:06:20.758 --> 00:06:23.630
+And here's the number that changes everything:
+
+00:06:23.630 --> 00:06:25.707
+the same swap, on a popular layer
+
+00:06:25.707 --> 00:06:28.268
+two instead of Ethereum's main chain.
+
+00:06:28.268 --> 00:06:31.444
+Layer 2s batch many transactions together and settle
+
+00:06:31.444 --> 00:06:33.961
+them back to Ethereum as one group, which
+
+00:06:33.961 --> 00:06:37.018
+typically brings the cost down to somewhere around
+
+00:06:37.018 --> 00:06:38.936
+a cent or two, not dollars.
+
+00:06:38.936 --> 00:06:42.261
+That's an illustrative, rounded range, real costs
+
+00:06:42.261 --> 00:06:44.654
+vary by network and moment, but the
+
+00:06:44.654 --> 00:06:47.215
+direction is consistent and large.
+
+00:06:47.215 --> 00:06:49.461
+It's exactly why Module 0 has you
+
+00:06:49.461 --> 00:06:51.972
+practising on a low-fee network first.
+
+00:06:53.272 --> 00:06:54.625
+And here's why that number
+
+00:06:54.625 --> 00:06:56.277
+matters more than it looks.
+
+00:06:56.277 --> 00:07:00.321
+If you're compounding $1.50 of rewards, and gas costs
+
+00:07:00.321 --> 00:07:03.617
+$9, the gas costs more than the rewards.
+
+00:07:03.617 --> 00:07:05.667
+That's not a rare edge case, it's
+
+00:07:05.667 --> 00:07:08.137
+the default at small position sizes.
+
+00:07:08.137 --> 00:07:11.322
+That's exactly why position size matters on-chain, and
+
+00:07:11.322 --> 00:07:13.697
+why this program keeps coming back to it.
+
+00:07:14.997 --> 00:07:16.853
+One more real habit: checking
+
+00:07:16.853 --> 00:07:18.947
+a transaction on an explorer.
+
+00:07:18.947 --> 00:07:21.892
+It shows the status, the fee actually paid, the
+
+00:07:21.892 --> 00:07:25.452
+sender and receiver, which contract was called, and every
+
+00:07:25.452 --> 00:07:28.697
+token transfer and log the transaction produced.
+
+00:07:28.697 --> 00:07:29.622
+Get in the habit of
+
+00:07:29.622 --> 00:07:31.632
+checking your own transactions there.
+
+00:07:31.632 --> 00:07:34.402
+It's the fastest way to confirm a transaction
+
+00:07:34.402 --> 00:07:37.292
+did exactly what you expected, and nothing more.
+
+00:07:38.592 --> 00:07:40.227
+Last check, the numbers.
+
+00:07:40.227 --> 00:07:46.027
+200,000 gas at 10 gwei, with ETH at $2,500.
+
+00:07:46.027 --> 00:07:46.658
+What does that cost? [[pause 4]] The answer: 200,000
+
+00:07:46.658 --> 00:07:47.062
+× 10 = 2,000,000 gwei = 0.002 ETH.
+
+00:07:51.482 --> 00:08:04.027
+At $2,500/ETH, that's $5.
+
+00:08:05.327 --> 00:08:06.367
+One more.
+
+00:08:06.367 --> 00:08:08.575
+You're about to sign a transaction, and
+
+00:08:08.575 --> 00:08:10.972
+the fee estimate looks unusually high.
+
+00:08:10.972 --> 00:08:12.877
+What should you do, in a single word?
+
+00:08:17.297 --> 00:08:18.892
+The answer: wait.
+
+00:08:18.892 --> 00:08:21.679
+Check the fee estimate before signing, every
+
+00:08:21.679 --> 00:08:23.786
+time, and if it's high, a quieter
+
+00:08:23.786 --> 00:08:25.582
+moment is often minutes away.
+
+00:08:26.882 --> 00:08:28.775
+Put it all together, and here's the
+
+00:08:28.775 --> 00:08:31.442
+habit for every transaction you'll ever sign.
+
+00:08:31.442 --> 00:08:33.342
+Check the fee estimate first.
+
+00:08:33.342 --> 00:08:34.487
+If it looks high and
+
+00:08:34.487 --> 00:08:36.477
+you're not racing anyone, wait.
+
+00:08:36.477 --> 00:08:38.048
+Sign only once the number makes
+
+00:08:38.048 --> 00:08:39.722
+sense for what you're doing.
+
+00:08:39.722 --> 00:08:42.785
+And afterward, confirm it on an explorer: status,
+
+00:08:42.785 --> 00:08:45.167
+fee paid, and exactly what it did.
+
+00:08:45.167 --> 00:08:47.009
+Four steps, every time, and
+
+00:08:47.009 --> 00:08:49.312
+gas surprises stop being surprises.
+
+00:08:50.612 --> 00:08:52.072
+Here's your checklist.
+
+00:08:52.072 --> 00:08:53.607
+Do it now, for real.
+
+00:08:53.607 --> 00:08:56.512
+First, you check the fee estimate before signing.
+
+00:08:56.512 --> 00:08:58.095
+Second, you know how to find
+
+00:08:58.095 --> 00:09:00.142
+your transaction on an explorer.
+
+00:09:00.142 --> 00:09:02.451
+And third, you know a stuck transaction
+
+00:09:02.451 --> 00:09:04.414
+can be sped up or cancelled, with
+
+00:09:04.414 --> 00:09:06.262
+the same nonce and a higher fee.
+
+00:09:07.562 --> 00:09:08.807
 Let's recap.
 
-00:03:06.574 --> 00:03:09.585
-Gas is the unit of computation: Cost
+00:09:08.807 --> 00:09:11.931
+Every transaction runs the same path: create,
 
-00:03:09.585 --> 00:03:11.756
-= gas used × gas price.
+00:09:11.931 --> 00:09:15.627
+sign, broadcast, mempool, block, confirmed, final.
 
-00:03:11.756 --> 00:03:15.451
-Nonce: each account's transactions are numbered in order.
+00:09:15.627 --> 00:09:18.200
+Gas is computation, priced as base fee
 
-00:03:15.451 --> 00:03:17.886
-Failed transactions still cost gas.
+00:09:18.200 --> 00:09:20.378
+plus tip, in gwei, and it's paid
 
-00:03:17.886 --> 00:03:19.757
-Finality: the point after which
+00:09:20.378 --> 00:09:23.317
+whether or not the transaction succeeds.
 
-00:03:19.757 --> 00:03:21.921
-a transaction can't realistically be.
+00:09:23.317 --> 00:09:26.585
+The nonce orders your transactions strictly, so one
 
-00:03:23.221 --> 00:03:25.736
+00:09:26.585 --> 00:09:29.587
+stuck transaction jams every one behind it.
+
+00:09:29.587 --> 00:09:31.730
+And the real cost of a swap can
+
+00:09:31.730 --> 00:09:35.280
+swing four times over, quiet versus congested, which
+
+00:09:35.280 --> 00:09:37.758
+is exactly why position size matters.
+
+00:09:39.058 --> 00:09:41.573
 Do the checklist now, before you move on.
 
-00:03:25.736 --> 00:03:30.266
-Next up, Lesson 1.3: Wallets, keys, hardware & multisig.
+00:09:41.573 --> 00:09:44.555
+You now have the whole lesson in your head:
+
+00:09:44.555 --> 00:09:48.349
+the seven-stop lifecycle, what gas actually is, why the
+
+00:09:48.349 --> 00:09:52.144
+nonce orders everything strictly, how the real cost can
+
+00:09:52.144 --> 00:09:55.261
+swing 4x over with congestion and drop by two
+
+00:09:55.261 --> 00:09:58.107
+orders of magnitude on a layer 2, and how
+
+00:09:58.107 --> 00:10:01.118
+to estimate a real cost before you sign.
+
+00:10:01.118 --> 00:10:05.648
+Next up, Lesson 1.3: Wallets, keys, hardware and multisig.
