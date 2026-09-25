@@ -1,0 +1,1021 @@
+{
+ "queue": [
+  {
+   "id": "lesson-01-0",
+   "lesson": "1.0",
+   "module": 1,
+   "module_title": "Foundations & Safety",
+   "title": "Mastery Starter",
+   "source": "lessons/module-01-foundations-safety.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-01-1",
+   "lesson": "1.1",
+   "module": 1,
+   "module_title": "Foundations & Safety",
+   "title": "What DeFi is, and the risk-first mindset",
+   "source": "lessons/module-01-foundations-safety.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-01-2",
+   "lesson": "1.2",
+   "module": 1,
+   "module_title": "Foundations & Safety",
+   "title": "How a transaction actually happens",
+   "source": "lessons/module-01-foundations-safety.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-01-3",
+   "lesson": "1.3",
+   "module": 1,
+   "module_title": "Foundations & Safety",
+   "title": "Wallets, keys, hardware & multisig",
+   "source": "lessons/module-01-foundations-safety.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-01-4",
+   "lesson": "1.4",
+   "module": 1,
+   "module_title": "Foundations & Safety",
+   "title": "Tokens, approvals & allowances",
+   "source": "lessons/module-01-foundations-safety.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-01-5",
+   "lesson": "1.5",
+   "module": 1,
+   "module_title": "Foundations & Safety",
+   "title": "Stablecoins and how they break",
+   "source": "lessons/module-01-foundations-safety.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-01-6",
+   "lesson": "1.6",
+   "module": 1,
+   "module_title": "Foundations & Safety",
+   "title": "Scam defence",
+   "source": "lessons/module-01-foundations-safety.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-01-7",
+   "lesson": "1.7",
+   "module": 1,
+   "module_title": "Foundations & Safety",
+   "title": "Reading signatures and simulating transactions",
+   "source": "lessons/module-01-foundations-safety.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-01-8",
+   "lesson": "1.8",
+   "module": 1,
+   "module_title": "Foundations & Safety",
+   "title": "Privacy and physical security",
+   "source": "lessons/module-01-foundations-safety.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-01-9",
+   "lesson": "1.9",
+   "module": 1,
+   "module_title": "Foundations & Safety",
+   "title": "Smart accounts and account abstraction",
+   "source": "lessons/module-01-foundations-safety.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-02-0",
+   "lesson": "2.0",
+   "module": 2,
+   "module_title": "Trading On-Chain",
+   "title": "Mastery Starter",
+   "source": "lessons/module-02-trading-on-chain.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-02-1",
+   "lesson": "2.1",
+   "module": 2,
+   "module_title": "Trading On-Chain",
+   "title": "DEXs, aggregators & routing",
+   "source": "lessons/module-02-trading-on-chain.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-02-2",
+   "lesson": "2.2",
+   "module": 2,
+   "module_title": "Trading On-Chain",
+   "title": "AMM mathematics (x \u00b7 y = k)",
+   "source": "02-sample-lesson-amm-math.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-02-3",
+   "lesson": "2.3",
+   "module": 2,
+   "module_title": "Trading On-Chain",
+   "title": "Providing liquidity",
+   "source": "lessons/module-02-trading-on-chain.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-02-4",
+   "lesson": "2.4",
+   "module": 2,
+   "module_title": "Trading On-Chain",
+   "title": "Impermanent loss & true LP P&L",
+   "source": "lessons/module-02-trading-on-chain.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-02-5",
+   "lesson": "2.5",
+   "module": 2,
+   "module_title": "Trading On-Chain",
+   "title": "MEV and protecting your trades",
+   "source": "lessons/module-02-trading-on-chain.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-02-6",
+   "lesson": "2.6",
+   "module": 2,
+   "module_title": "Trading On-Chain",
+   "title": "Advanced execution: limit, TWAP and intent-based orders",
+   "source": "lessons/module-02-trading-on-chain.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-02-7",
+   "lesson": "2.7",
+   "module": 2,
+   "module_title": "Trading On-Chain",
+   "title": "Advanced AMM design and LVR",
+   "source": "lessons/module-02-trading-on-chain.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-02-8",
+   "lesson": "2.8",
+   "module": 2,
+   "module_title": "Trading On-Chain",
+   "title": "The MEV supply chain",
+   "source": "lessons/module-02-trading-on-chain.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-03-0",
+   "lesson": "3.0",
+   "module": 3,
+   "module_title": "Lending & Leverage",
+   "title": "Mastery Starter",
+   "source": "lessons/module-03-lending-leverage.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-03-1",
+   "lesson": "3.1",
+   "module": 3,
+   "module_title": "Lending & Leverage",
+   "title": "How lending markets work",
+   "source": "lessons/module-03-lending-leverage.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-03-2",
+   "lesson": "3.2",
+   "module": 3,
+   "module_title": "Lending & Leverage",
+   "title": "LTV, liquidation threshold & health factor",
+   "source": "lessons/module-03-lending-leverage.md",
+   "status": "done_gold"
+  },
+  {
+   "id": "lesson-03-3",
+   "lesson": "3.3",
+   "module": 3,
+   "module_title": "Lending & Leverage",
+   "title": "Liquidations and cascades",
+   "source": "lessons/module-03-lending-leverage.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-03-4",
+   "lesson": "3.4",
+   "module": 3,
+   "module_title": "Lending & Leverage",
+   "title": "Borrowing strategies & looping",
+   "source": "lessons/module-03-lending-leverage.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-03-5",
+   "lesson": "3.5",
+   "module": 3,
+   "module_title": "Lending & Leverage",
+   "title": "Perpetual futures and margin on-chain",
+   "source": "lessons/module-03-lending-leverage.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-03-6",
+   "lesson": "3.6",
+   "module": 3,
+   "module_title": "Lending & Leverage",
+   "title": "Lending design deep dive: e-mode, caps, auctions, soft liquidation, bad debt",
+   "source": "lessons/module-03-lending-leverage.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-03-7",
+   "lesson": "3.7",
+   "module": 3,
+   "module_title": "Lending & Leverage",
+   "title": "CDP stablecoins: minting your own dollars",
+   "source": "lessons/module-03-lending-leverage.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-04-0",
+   "lesson": "4.0",
+   "module": 4,
+   "module_title": "Yield",
+   "title": "Mastery Starter",
+   "source": "lessons/module-04-yield.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-04-1",
+   "lesson": "4.1",
+   "module": 4,
+   "module_title": "Yield",
+   "title": "Yield farming: base yield vs emissions",
+   "source": "lessons/module-04-yield.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-04-2",
+   "lesson": "4.2",
+   "module": 4,
+   "module_title": "Yield",
+   "title": "Native staking",
+   "source": "lessons/module-04-yield.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-04-3",
+   "lesson": "4.3",
+   "module": 4,
+   "module_title": "Yield",
+   "title": "Liquid staking (LSTs)",
+   "source": "lessons/module-04-yield.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-04-4",
+   "lesson": "4.4",
+   "module": 4,
+   "module_title": "Yield",
+   "title": "Restaking & shared security",
+   "source": "lessons/module-04-yield.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-04-5",
+   "lesson": "4.5",
+   "module": 4,
+   "module_title": "Yield",
+   "title": "Vaults & yield optimisers",
+   "source": "lessons/module-04-yield.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-04-6",
+   "lesson": "4.6",
+   "module": 4,
+   "module_title": "Yield",
+   "title": "Airdrops & points: opportunity cost",
+   "source": "lessons/module-04-yield.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-04-7",
+   "lesson": "4.7",
+   "module": 4,
+   "module_title": "Yield",
+   "title": "Stablecoin savings rates and yield-bearing stablecoins",
+   "source": "lessons/module-04-yield.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-04-8",
+   "lesson": "4.8",
+   "module": 4,
+   "module_title": "Yield",
+   "title": "Tokenized treasuries and real-world assets (RWAs)",
+   "source": "lessons/module-04-yield.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-05-0",
+   "lesson": "5.0",
+   "module": 5,
+   "module_title": "Infrastructure Risk",
+   "title": "Mastery Starter",
+   "source": "lessons/module-05-infrastructure-risk.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-05-1",
+   "lesson": "5.1",
+   "module": 5,
+   "module_title": "Infrastructure Risk",
+   "title": "Bridges and trust assumptions",
+   "source": "lessons/module-05-infrastructure-risk.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-05-2",
+   "lesson": "5.2",
+   "module": 5,
+   "module_title": "Infrastructure Risk",
+   "title": "Layer 2s, sequencers & withdrawal paths",
+   "source": "lessons/module-05-infrastructure-risk.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-05-3",
+   "lesson": "5.3",
+   "module": 5,
+   "module_title": "Infrastructure Risk",
+   "title": "Oracles, TWAPs & manipulation",
+   "source": "lessons/module-05-infrastructure-risk.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-05-4",
+   "lesson": "5.4",
+   "module": 5,
+   "module_title": "Infrastructure Risk",
+   "title": "Smart contracts: state, proxies, admin keys",
+   "source": "lessons/module-05-infrastructure-risk.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-05-5",
+   "lesson": "5.5",
+   "module": 5,
+   "module_title": "Infrastructure Risk",
+   "title": "Smart-contract risk & what audits don't prove",
+   "source": "lessons/module-05-infrastructure-risk.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-05-6",
+   "lesson": "5.6",
+   "module": 5,
+   "module_title": "Infrastructure Risk",
+   "title": "Beyond Ethereum: Solana, Bitcoin and other ecosystems",
+   "source": "lessons/module-05-infrastructure-risk.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-05-7",
+   "lesson": "5.7",
+   "module": 5,
+   "module_title": "Infrastructure Risk",
+   "title": "Operating across chains: gas, routes and chain abstraction",
+   "source": "lessons/module-05-infrastructure-risk.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-05-8",
+   "lesson": "5.8",
+   "module": 5,
+   "module_title": "Infrastructure Risk",
+   "title": "Reading smart-contract code: enough to verify claims",
+   "source": "lessons/module-05-infrastructure-risk.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-06-0",
+   "lesson": "6.0",
+   "module": 6,
+   "module_title": "Protocol Research",
+   "title": "Mastery Starter",
+   "source": "lessons/module-06-protocol-research.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-06-1",
+   "lesson": "6.1",
+   "module": 6,
+   "module_title": "Protocol Research",
+   "title": "Protocol due diligence",
+   "source": "lessons/module-06-protocol-research.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-06-2",
+   "lesson": "6.2",
+   "module": 6,
+   "module_title": "Protocol Research",
+   "title": "Tokenomics: supply, unlocks, FDV, value capture",
+   "source": "lessons/module-06-protocol-research.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-06-3",
+   "lesson": "6.3",
+   "module": 6,
+   "module_title": "Protocol Research",
+   "title": "Governance & DAOs",
+   "source": "lessons/module-06-protocol-research.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-06-4",
+   "lesson": "6.4",
+   "module": 6,
+   "module_title": "Protocol Research",
+   "title": "The on-chain research workflow",
+   "source": "lessons/module-06-protocol-research.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-06-5",
+   "lesson": "6.5",
+   "module": 6,
+   "module_title": "Protocol Research",
+   "title": "Case studies: how DeFi failures happened",
+   "source": "lessons/module-06-protocol-research.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-06-6",
+   "lesson": "6.6",
+   "module": 6,
+   "module_title": "Protocol Research",
+   "title": "Vote-escrow tokenomics, bribes and governance markets",
+   "source": "lessons/module-06-protocol-research.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-06-7",
+   "lesson": "6.7",
+   "module": 6,
+   "module_title": "Protocol Research",
+   "title": "Valuing DeFi protocols: fees, revenue, earnings and multiples",
+   "source": "lessons/module-06-protocol-research.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-07-0",
+   "lesson": "7.0",
+   "module": 7,
+   "module_title": "On-Chain Analytics",
+   "title": "Mastery Starter",
+   "source": "lessons/module-07-on-chain-analytics.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-07-1",
+   "lesson": "7.1",
+   "module": 7,
+   "module_title": "On-Chain Analytics",
+   "title": "On-chain data foundations",
+   "source": "lessons/module-07-on-chain-analytics.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-07-2",
+   "lesson": "7.2",
+   "module": 7,
+   "module_title": "On-Chain Analytics",
+   "title": "Block explorer mastery",
+   "source": "lessons/module-07-on-chain-analytics.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-07-3",
+   "lesson": "7.3",
+   "module": 7,
+   "module_title": "On-Chain Analytics",
+   "title": "Exchange flows",
+   "source": "lessons/module-07-on-chain-analytics.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-07-4",
+   "lesson": "7.4",
+   "module": 7,
+   "module_title": "On-Chain Analytics",
+   "title": "Whale & entity analysis",
+   "source": "lessons/module-07-on-chain-analytics.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-07-5",
+   "lesson": "7.5",
+   "module": 7,
+   "module_title": "On-Chain Analytics",
+   "title": "Holder & supply metrics",
+   "source": "lessons/module-07-on-chain-analytics.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-07-6",
+   "lesson": "7.6",
+   "module": 7,
+   "module_title": "On-Chain Analytics",
+   "title": "Network activity",
+   "source": "lessons/module-07-on-chain-analytics.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-07-7",
+   "lesson": "7.7",
+   "module": 7,
+   "module_title": "On-Chain Analytics",
+   "title": "DEX & liquidity analytics",
+   "source": "lessons/module-07-on-chain-analytics.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-07-8",
+   "lesson": "7.8",
+   "module": 7,
+   "module_title": "On-Chain Analytics",
+   "title": "Derivatives on-chain",
+   "source": "lessons/module-07-on-chain-analytics.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-07-9",
+   "lesson": "7.9",
+   "module": 7,
+   "module_title": "On-Chain Analytics",
+   "title": "Querying chain data yourself",
+   "source": "lessons/module-07-on-chain-analytics.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-08-0",
+   "lesson": "8.0",
+   "module": 8,
+   "module_title": "The DeFi Operating System",
+   "title": "Mastery Starter",
+   "source": "lessons/module-08-operating-system.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-08-1",
+   "lesson": "8.1",
+   "module": 8,
+   "module_title": "The DeFi Operating System",
+   "title": "DeFi portfolio construction",
+   "source": "lessons/module-08-operating-system.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-08-2",
+   "lesson": "8.2",
+   "module": 8,
+   "module_title": "The DeFi Operating System",
+   "title": "The DeFi risk framework",
+   "source": "lessons/module-08-operating-system.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-08-3",
+   "lesson": "8.3",
+   "module": 8,
+   "module_title": "The DeFi Operating System",
+   "title": "The strategy library (30 strategies in 7 levels)",
+   "source": "03-defi-strategy-mastery.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-08-4",
+   "lesson": "8.4",
+   "module": 8,
+   "module_title": "The DeFi Operating System",
+   "title": "The operating playbook: deploy, monitor, respond, review",
+   "source": "lessons/module-08-operating-system.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-08-5",
+   "lesson": "8.5",
+   "module": 8,
+   "module_title": "The DeFi Operating System",
+   "title": "Measuring performance honestly",
+   "source": "lessons/module-08-operating-system.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-08-6",
+   "lesson": "8.6",
+   "module": 8,
+   "module_title": "The DeFi Operating System",
+   "title": "Psychology and discipline",
+   "source": "lessons/module-08-operating-system.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-08-7",
+   "lesson": "8.7",
+   "module": 8,
+   "module_title": "The DeFi Operating System",
+   "title": "Quantitative risk: volatility, VaR, drawdown, correlation and sizing",
+   "source": "lessons/module-08-operating-system.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-09-0",
+   "lesson": "9.0",
+   "module": 9,
+   "module_title": "DeFi vs Grid Bots",
+   "title": "Mastery Starter",
+   "source": "lessons/module-09-defi-vs-grid-bots.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-09-1",
+   "lesson": "9.1",
+   "module": 9,
+   "module_title": "DeFi vs Grid Bots",
+   "title": "Same idea, different machine",
+   "source": "lessons/module-09-defi-vs-grid-bots.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-09-2",
+   "lesson": "9.2",
+   "module": 9,
+   "module_title": "DeFi vs Grid Bots",
+   "title": "When each one wins",
+   "source": "lessons/module-09-defi-vs-grid-bots.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-09-3",
+   "lesson": "9.3",
+   "module": 9,
+   "module_title": "DeFi vs Grid Bots",
+   "title": "Building a combined system",
+   "source": "lessons/module-09-defi-vs-grid-bots.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-10-0",
+   "lesson": "10.0",
+   "module": 10,
+   "module_title": "Advanced Yield Engineering",
+   "title": "Mastery Starter",
+   "source": "lessons/module-10-advanced-yield-engineering.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-10-1",
+   "lesson": "10.1",
+   "module": 10,
+   "module_title": "Advanced Yield Engineering",
+   "title": "Fixed-rate yield: principal and yield tokens (PT/YT)",
+   "source": "lessons/module-10-advanced-yield-engineering.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-10-2",
+   "lesson": "10.2",
+   "module": 10,
+   "module_title": "Advanced Yield Engineering",
+   "title": "Cash-and-carry basis trades",
+   "source": "lessons/module-10-advanced-yield-engineering.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-10-3",
+   "lesson": "10.3",
+   "module": 10,
+   "module_title": "Advanced Yield Engineering",
+   "title": "Delta-neutral funding carry, done properly",
+   "source": "lessons/module-10-advanced-yield-engineering.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-10-4",
+   "lesson": "10.4",
+   "module": 10,
+   "module_title": "Advanced Yield Engineering",
+   "title": "Options income: covered calls, cash-secured puts, options vaults",
+   "source": "lessons/module-10-advanced-yield-engineering.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-10-5",
+   "lesson": "10.5",
+   "module": 10,
+   "module_title": "Advanced Yield Engineering",
+   "title": "Active concentrated-liquidity management",
+   "source": "lessons/module-10-advanced-yield-engineering.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-10-6",
+   "lesson": "10.6",
+   "module": 10,
+   "module_title": "Advanced Yield Engineering",
+   "title": "Restaking and points: pricing speculative yield",
+   "source": "lessons/module-10-advanced-yield-engineering.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-10-7",
+   "lesson": "10.7",
+   "module": 10,
+   "module_title": "Advanced Yield Engineering",
+   "title": "Being the house: perp-exchange liquidity vaults",
+   "source": "lessons/module-10-advanced-yield-engineering.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-10-8",
+   "lesson": "10.8",
+   "module": 10,
+   "module_title": "Advanced Yield Engineering",
+   "title": "DeFi rates: term structure, fixed vs floating",
+   "source": "lessons/module-10-advanced-yield-engineering.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-10-9",
+   "lesson": "10.9",
+   "module": 10,
+   "module_title": "Advanced Yield Engineering",
+   "title": "Peg and redemption arbitrage",
+   "source": "lessons/module-10-advanced-yield-engineering.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-11-0",
+   "lesson": "11.0",
+   "module": 11,
+   "module_title": "Hedging & Risk Engineering",
+   "title": "Mastery Starter",
+   "source": "lessons/module-11-hedging-risk-engineering.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-11-1",
+   "lesson": "11.1",
+   "module": 11,
+   "module_title": "Hedging & Risk Engineering",
+   "title": "Hedging price exposure with perps and options",
+   "source": "lessons/module-11-hedging-risk-engineering.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-11-2",
+   "lesson": "11.2",
+   "module": 11,
+   "module_title": "Hedging & Risk Engineering",
+   "title": "Depeg, protocol and smart-contract cover",
+   "source": "lessons/module-11-hedging-risk-engineering.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-11-3",
+   "lesson": "11.3",
+   "module": 11,
+   "module_title": "Hedging & Risk Engineering",
+   "title": "Liquidation protection: buffers, alerts and automated deleveraging",
+   "source": "lessons/module-11-hedging-risk-engineering.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-11-4",
+   "lesson": "11.4",
+   "module": 11,
+   "module_title": "Hedging & Risk Engineering",
+   "title": "Stress-testing a portfolio",
+   "source": "lessons/module-11-hedging-risk-engineering.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-11-5",
+   "lesson": "11.5",
+   "module": 11,
+   "module_title": "Hedging & Risk Engineering",
+   "title": "Incident response: the first 60 minutes",
+   "source": "lessons/module-11-hedging-risk-engineering.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-12-0",
+   "lesson": "12.0",
+   "module": 12,
+   "module_title": "Operate as Your Own Bank",
+   "title": "Mastery Starter",
+   "source": "lessons/module-12-own-bank.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-12-1",
+   "lesson": "12.1",
+   "module": 12,
+   "module_title": "Operate as Your Own Bank",
+   "title": "Your balance sheet",
+   "source": "lessons/module-12-own-bank.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-12-2",
+   "lesson": "12.2",
+   "module": 12,
+   "module_title": "Operate as Your Own Bank",
+   "title": "Custody architecture: vault, multisig and spending policies",
+   "source": "lessons/module-12-own-bank.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-12-3",
+   "lesson": "12.3",
+   "module": 12,
+   "module_title": "Operate as Your Own Bank",
+   "title": "The credit line: borrowing like a bank client",
+   "source": "lessons/module-12-own-bank.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-12-4",
+   "lesson": "12.4",
+   "module": 12,
+   "module_title": "Operate as Your Own Bank",
+   "title": "Treasury and the liquidity ladder",
+   "source": "lessons/module-12-own-bank.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-12-5",
+   "lesson": "12.5",
+   "module": 12,
+   "module_title": "Operate as Your Own Bank",
+   "title": "Being the lender: supplying, curating and pricing credit risk",
+   "source": "lessons/module-12-own-bank.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-12-6",
+   "lesson": "12.6",
+   "module": 12,
+   "module_title": "Operate as Your Own Bank",
+   "title": "Books, records and succession",
+   "source": "lessons/module-12-own-bank.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-12-7",
+   "lesson": "12.7",
+   "module": 12,
+   "module_title": "Operate as Your Own Bank",
+   "title": "Tax, regulation and compliance awareness",
+   "source": "lessons/module-12-own-bank.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-12-8",
+   "lesson": "12.8",
+   "module": 12,
+   "module_title": "Operate as Your Own Bank",
+   "title": "Institutional-grade custody: MPC, custodians and policy engines",
+   "source": "lessons/module-12-own-bank.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-13-0",
+   "lesson": "13.0",
+   "module": 13,
+   "module_title": "The Income Engine",
+   "title": "Mastery Starter",
+   "source": "lessons/module-13-income-engine.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-13-1",
+   "lesson": "13.1",
+   "module": 13,
+   "module_title": "The Income Engine",
+   "title": "Income sources ranked by durability",
+   "source": "lessons/module-13-income-engine.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-13-2",
+   "lesson": "13.2",
+   "module": 13,
+   "module_title": "The Income Engine",
+   "title": "Risk-adjusted yield: subtracting expected losses",
+   "source": "lessons/module-13-income-engine.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-13-3",
+   "lesson": "13.3",
+   "module": 13,
+   "module_title": "The Income Engine",
+   "title": "Building the income portfolio",
+   "source": "lessons/module-13-income-engine.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-13-4",
+   "lesson": "13.4",
+   "module": 13,
+   "module_title": "The Income Engine",
+   "title": "The payout policy: how much you can take out",
+   "source": "lessons/module-13-income-engine.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-13-5",
+   "lesson": "13.5",
+   "module": 13,
+   "module_title": "The Income Engine",
+   "title": "Scaling, compounding and the annual review",
+   "source": "lessons/module-13-income-engine.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-14-0",
+   "lesson": "14.0",
+   "module": 14,
+   "module_title": "Automation & Mastery",
+   "title": "Mastery Starter",
+   "source": "lessons/module-14-automation-mastery.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-14-1",
+   "lesson": "14.1",
+   "module": 14,
+   "module_title": "Automation & Mastery",
+   "title": "Monitoring: dashboards, alerts and on-chain watchers",
+   "source": "lessons/module-14-automation-mastery.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-14-2",
+   "lesson": "14.2",
+   "module": 14,
+   "module_title": "Automation & Mastery",
+   "title": "Automation: keepers, bots and agents without handing over the keys",
+   "source": "lessons/module-14-automation-mastery.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-14-3",
+   "lesson": "14.3",
+   "module": 14,
+   "module_title": "Automation & Mastery",
+   "title": "Operating procedures: multisig signing, change control, reviews",
+   "source": "lessons/module-14-automation-mastery.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-14-4",
+   "lesson": "14.4",
+   "module": 14,
+   "module_title": "Automation & Mastery",
+   "title": "Operator capstone and certification",
+   "source": "lessons/module-14-automation-mastery.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-14-5",
+   "lesson": "14.5",
+   "module": 14,
+   "module_title": "Automation & Mastery",
+   "title": "Building your own tools: reading contracts, data and simple scripts",
+   "source": "lessons/module-14-automation-mastery.md",
+   "status": "pending"
+  },
+  {
+   "id": "lesson-14-6",
+   "lesson": "14.6",
+   "module": 14,
+   "module_title": "Automation & Mastery",
+   "title": "Searchers, keepers and arbitrage bots: how they work",
+   "source": "lessons/module-14-automation-mastery.md",
+   "status": "pending"
+  }
+ ]
+}
