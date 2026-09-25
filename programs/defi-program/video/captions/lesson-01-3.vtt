@@ -4,202 +4,649 @@ WEBVTT
 Lesson 1.3.
 
 00:00:02.205 --> 00:00:04.985
-Wallets, keys, hardware & multisig.
+Wallets, keys, hardware and multisig.
 
-00:00:04.985 --> 00:00:06.849
-By the end of this lesson, you'll
+00:00:04.985 --> 00:00:06.625
+By the end, you'll be able to
 
-00:00:06.849 --> 00:00:08.329
-be able to set up a wallet
+00:00:06.625 --> 00:00:08.593
+set up a wallet structure where one
 
-00:00:08.329 --> 00:00:11.070
-structure where one mistake can't lose everything.
+00:00:08.593 --> 00:00:10.670
+mistake can't lose everything you own.
 
-00:00:12.370 --> 00:00:13.660
+00:00:11.970 --> 00:00:13.260
 Here's the plan.
 
-00:00:13.660 --> 00:00:15.345
-First, the key ideas.
+00:00:13.260 --> 00:00:15.865
+First, the five words: private key, seed
 
-00:00:15.345 --> 00:00:18.060
-Then, a worked example, step by step.
+00:00:15.865 --> 00:00:19.405
+phrase, hardware wallet, multisig and smart wallet.
 
-00:00:18.060 --> 00:00:19.585
-Then, your checklist.
+00:00:19.405 --> 00:00:23.171
+Second, compartmentalising: why one wallet for everything is
 
-00:00:19.585 --> 00:00:21.747
-And finally, a three-question quiz.
+00:00:23.171 --> 00:00:26.435
+the single biggest structural risk you can take.
 
-00:00:23.047 --> 00:00:26.042
-a website, never photograph it, never share it.
+00:00:26.435 --> 00:00:29.678
+And third, the worked example this whole lesson builds
 
-00:00:26.042 --> 00:00:28.972
-No legitimate support team will ever ask for it.
+00:00:29.678 --> 00:00:32.920
+to: the three-wallet setup, vault, operator and burner.
 
-00:00:28.972 --> 00:00:31.995
-Compartmentalise: separate wallets by job, so a
+00:00:34.220 --> 00:00:35.135
+Five words.
 
-00:00:31.995 --> 00:00:34.562
-compromise only reaches one of them.
+00:00:36.435 --> 00:00:38.260
+Word one: private key.
 
-00:00:34.562 --> 00:00:37.477
-First, Private key: the authority to sign.
+00:00:38.260 --> 00:00:39.855
+The authority to sign.
 
-00:00:37.477 --> 00:00:39.651
-Whoever has it controls the funds.
+00:00:39.855 --> 00:00:42.741
+Whoever has it controls the funds, completely,
 
-00:00:39.651 --> 00:00:44.356
-Next, Seed phrase: 12–24 words that recreate your keys.
+00:00:42.741 --> 00:00:45.190
+with no exceptions and no override.
 
-00:00:44.356 --> 00:00:45.901
-Never type it into.
+00:00:45.190 --> 00:00:47.265
+It isn't a password you can reset.
 
-00:00:45.901 --> 00:00:49.631
-Then, Hardware wallet: keeps keys on a separate device.
+00:00:47.265 --> 00:00:49.474
+It's closer to the only physical key
 
-00:00:49.631 --> 00:00:52.196
-Signing requires physical confirmation.
+00:00:49.474 --> 00:00:51.445
+to a vault that has no locksmith.
 
-00:00:52.196 --> 00:00:54.823
-Also, Multisig: needs M of N
+00:00:52.745 --> 00:00:54.660
+Word two: seed phrase.
 
-00:00:54.823 --> 00:00:57.116
-signers (e.g. 2 of 3).
+00:00:54.660 --> 00:00:57.947
+12 to 24 words that recreate your keys.
 
-00:00:57.116 --> 00:00:59.231
-Good for large or shared funds.
+00:00:57.947 --> 00:00:59.972
+Never type it into a website.
 
-00:00:59.231 --> 00:01:02.309
-And finally, Smart wallets: contract accounts that
+00:00:59.972 --> 00:01:01.517
+Never photograph it.
 
-00:01:02.309 --> 00:01:05.146
-can add spending limits, recovery and batching.
+00:01:01.517 --> 00:01:02.722
+Never share it.
 
-00:01:06.446 --> 00:01:09.333
-Move money down the chain (vault → operator →
+00:01:02.722 --> 00:01:05.596
+No legitimate support team will ever ask for
 
-00:01:09.333 --> 00:01:12.771
-burner) only as needed, and sweep profits back up.
+00:01:05.596 --> 00:01:08.087
+it, not once, not for any reason, ever.
 
-00:01:12.771 --> 00:01:14.548
-If the burner gets drained, you
+00:01:09.387 --> 00:01:12.282
+Here's why the checklist says two separate physical
 
-00:01:14.548 --> 00:01:16.570
-lose only the burner's balance.
+00:01:12.282 --> 00:01:14.642
+places, and an honest caveat with it.
 
-00:01:16.570 --> 00:01:19.395
-Vault, Long-term holdings, Almost never.
+00:01:14.642 --> 00:01:17.519
+A single copy protects against theft, but not
 
-00:01:19.395 --> 00:01:22.555
-No DeFi approvals, Hardware (or multisig).
+00:01:17.519 --> 00:01:20.146
+against a fire, a flood, or simply losing
 
-00:01:22.555 --> 00:01:28.245
-Operator, Active DeFi positions, Known, verified protocols only, Hardware.
+00:01:20.146 --> 00:01:22.072
+the one place you kept it.
 
-00:01:28.245 --> 00:01:30.546
-Burner, Small amounts for new apps,
+00:01:22.072 --> 00:01:25.132
+A second copy, somewhere else, protects against that.
 
-00:01:30.546 --> 00:01:33.805
-mints, airdrops, Anything experimental, Hot wallet.
+00:01:25.132 --> 00:01:28.159
+But be precise about what it doesn't do: each
 
-00:01:35.105 --> 00:01:38.120
-Let's look at the diagram: The 3-wallet setup.
+00:01:28.159 --> 00:01:31.121
+full copy can recreate every key on its own,
 
-00:01:38.120 --> 00:01:39.680
-Take a moment with it.
+00:01:31.121 --> 00:01:34.544
+so a second copy is redundancy against disaster and
 
-00:01:39.680 --> 00:01:42.090
-It's everything we've just said, in one picture.
+00:01:34.544 --> 00:01:37.542
+loss, not extra protection against theft.
 
-00:01:43.390 --> 00:01:44.850
-Here's your checklist.
+00:01:37.542 --> 00:01:39.394
+Both locations still need to
 
-00:01:44.850 --> 00:01:46.385
-Do it now, for real.
+00:01:39.394 --> 00:01:41.437
+be genuinely secure and private.
 
-00:01:46.385 --> 00:01:48.634
-First, Seed phrase stored offline,
+00:01:42.737 --> 00:01:44.802
+Word three: hardware wallet.
 
-00:01:48.634 --> 00:01:50.990
-in two separate physical places.
+00:01:44.802 --> 00:01:46.969
+A separate physical device that keeps
 
-00:01:50.990 --> 00:01:54.752
-Next, Vault wallet has never approved a DeFi contract.
+00:01:46.969 --> 00:01:49.322
+your keys off the internet entirely.
 
-00:01:54.752 --> 00:01:57.537
-Then, Separate burner wallet for anything new.
+00:01:49.322 --> 00:01:51.280
+When an app asks you to sign, the
 
-00:01:57.537 --> 00:02:00.160
-And finally, I read every signing prompt on
+00:01:51.280 --> 00:01:53.756
+request travels to the device, you read it
 
-00:02:00.160 --> 00:02:03.082
-the hardware device screen, not just the website.
+00:01:53.756 --> 00:01:56.289
+on the device's own screen, and you confirm
 
-00:02:04.382 --> 00:02:05.592
-Question 1.
+00:01:56.289 --> 00:01:58.432
+it with a physical button press.
 
-00:02:05.592 --> 00:02:08.011
-A "support agent" in DMs needs your
+00:01:58.432 --> 00:02:01.145
+Even if the computer you're using is compromised,
 
-00:02:08.011 --> 00:02:10.932
+00:02:01.145 --> 00:02:03.967
+the signing itself happens somewhere it can't reach.
+
+00:02:05.267 --> 00:02:08.702
+Word four: multisig, from Lesson one point zero.
+
+00:02:08.702 --> 00:02:10.964
+Needs M of N signers, for example
+
+00:02:10.964 --> 00:02:13.392
+two of three, before it can act.
+
+00:02:13.392 --> 00:02:15.985
+Good for large or shared funds, because
+
+00:02:15.985 --> 00:02:18.448
+a single compromised key, on its own,
+
+00:02:18.448 --> 00:02:20.847
+is no longer enough to lose anything.
+
+00:02:22.147 --> 00:02:24.372
+And word five: smart wallets.
+
+00:02:24.372 --> 00:02:29.055
+These are contract accounts, not simple key-controlled addresses, which
+
+00:02:29.055 --> 00:02:32.307
+means they can add features a basic wallet can't:
+
+00:02:32.307 --> 00:02:35.820
+spending limits, social recovery if a device is lost,
+
+00:02:35.820 --> 00:02:39.242
+and batching several actions into one signature.
+
+00:02:39.242 --> 00:02:42.427
+You'll see these in more depth in Lesson 1.9.
+
+00:02:42.427 --> 00:02:44.557
+For now, just know the category exists,
+
+00:02:44.557 --> 00:02:46.741
+and that it's a genuinely different kind
+
+00:02:46.741 --> 00:02:48.072
+of wallet under the hood.
+
+00:02:49.372 --> 00:02:52.317
+Here's why the device matters, not just the key.
+
+00:02:52.317 --> 00:02:54.865
+A software wallet keeps your key inside
+
+00:02:54.865 --> 00:02:57.159
+an app on your everyday computer or
+
+00:02:57.159 --> 00:02:59.580
+phone, the same device you browse the
+
+00:02:59.580 --> 00:03:02.747
+internet, open email and install software on.
+
+00:03:02.747 --> 00:03:05.438
+A hardware wallet keeps the key on a separate,
+
+00:03:05.438 --> 00:03:09.287
+purpose-built device that never touches the internet directly.
+
+00:03:09.287 --> 00:03:11.491
+Malware on your computer can potentially
+
+00:03:11.491 --> 00:03:13.297
+see a software wallet's key.
+
+00:03:13.297 --> 00:03:15.502
+It cannot reach inside a hardware device.
+
+00:03:16.802 --> 00:03:18.995
+One real example of why reading the
+
+00:03:18.995 --> 00:03:21.732
+device screen matters, not just the app.
+
+00:03:21.732 --> 00:03:24.474
+In December of two thousand twenty-three, a
+
+00:03:24.474 --> 00:03:28.027
+widely used wallet-connection library was compromised at
+
+00:03:28.027 --> 00:03:31.205
+the supply-chain level, briefly showing some users
+
+00:03:31.205 --> 00:03:36.304
+malicious transaction requests through otherwise legitimate-looking websites.
+
+00:03:36.304 --> 00:03:38.919
+People who read and verified the request on
+
+00:03:38.919 --> 00:03:41.894
+their hardware device's own screen caught it.
+
+00:03:41.894 --> 00:03:44.839
+People who only glanced at the website did not.
+
+00:03:44.839 --> 00:03:46.976
+The device screen is the one thing an
+
+00:03:46.976 --> 00:03:49.844
+attacker who's compromised your browser can't fake.
+
+00:03:51.144 --> 00:03:54.346
+One more real, current fact on smart wallets:
+
+00:03:54.346 --> 00:03:58.940
+the underlying standard, generally called account abstraction, is
+
+00:03:58.940 --> 00:04:02.282
+a real and increasingly used part of Ethereum's
+
+00:04:02.282 --> 00:04:04.809
+ecosystem, not a future promise.
+
+00:04:04.809 --> 00:04:07.771
+It's what lets a wallet require two devices to
+
+00:04:07.771 --> 00:04:11.740
+approve a large transaction, or recover access through trusted
+
+00:04:11.740 --> 00:04:14.624
+contacts instead of a single seed phrase.
+
+00:04:14.624 --> 00:04:17.419
+You'll build on this properly in Lesson 1.9.
+
+00:04:18.719 --> 00:04:19.809
+Quick check.
+
+00:04:19.809 --> 00:04:22.164
+A message from “support” asks for your
+
+00:04:22.164 --> 00:04:24.819
 seed phrase to fix a stuck transaction.
 
-00:02:10.932 --> 00:02:11.782
+00:04:24.819 --> 00:04:25.669
 What do you do?
 
-00:02:16.202 --> 00:02:17.937
-The answer: Nothing.
+00:04:30.089 --> 00:04:31.824
+The answer: nothing.
 
-00:02:17.937 --> 00:02:19.842
-It's a scam, every time.
+00:04:31.824 --> 00:04:34.114
+It's a scam, every single time.
 
-00:02:19.842 --> 00:02:21.042
+00:04:34.114 --> 00:04:35.614
 Block and report.
 
-00:02:22.342 --> 00:02:23.587
-Question 2.
+00:04:35.614 --> 00:04:38.244
+No legitimate support team will ever ask for it.
 
-00:02:23.587 --> 00:02:25.802
-Why keep the vault wallet free of approvals?
+00:04:39.544 --> 00:04:40.724
+Compartmentalise.
 
-00:02:30.222 --> 00:02:33.762
-The answer: Approvals let contracts move your tokens.
+00:04:42.024 --> 00:04:46.015
+Compartmentalising isn't unique to crypto; it's the same logic
 
-00:02:33.762 --> 00:02:36.606
-With none, a compromised protocol can't reach it.
+00:04:46.015 --> 00:04:49.119
+behind carrying a slim wallet with a little cash
 
-00:02:37.906 --> 00:02:39.176
-Question 3.
+00:04:49.119 --> 00:04:52.286
+instead of your entire bank card collection, or a
 
-00:02:39.176 --> 00:02:41.711
-What does 2-of-3 multisig protect against?
+00:04:52.286 --> 00:04:56.767
+business keeping its operating account separate from its reserves.
 
-00:02:46.131 --> 00:02:49.321
-The answer: A single lost or compromised key.
+00:04:56.767 --> 00:04:59.793
+On-chain, it matters more, because there's no bank
 
-00:02:49.321 --> 00:02:51.631
-Two signers are still needed to move funds.
+00:04:59.793 --> 00:05:02.763
+to call if the wrong wallet gets compromised.
 
-00:02:52.931 --> 00:02:54.176
+00:05:02.763 --> 00:05:04.560
+The structure has to do the job
+
+00:05:04.560 --> 00:05:06.581
+a phone call would do anywhere else.
+
+00:05:07.881 --> 00:05:11.436
+Here's the structural risk most beginners never think about.
+
+00:05:11.436 --> 00:05:14.903
+One wallet for everything means your life savings, your
+
+00:05:14.903 --> 00:05:18.926
+everyday DeFi positions and your experiments with brand-new apps
+
+00:05:18.926 --> 00:05:21.331
+all sit behind the exact same key.
+
+00:05:21.331 --> 00:05:23.797
+One bad signature on one sketchy new app,
+
+00:05:23.797 --> 00:05:26.856
+and everything you own is reachable through it.
+
+00:05:26.856 --> 00:05:29.914
+Separate wallets by job, and a compromise in one
+
+00:05:29.914 --> 00:05:32.723
+only ever reaches what that one wallet holds.
+
+00:05:34.023 --> 00:05:35.298
+The 3-wallet setup.
+
+00:05:36.598 --> 00:05:38.018
+Here's the structure.
+
+00:05:38.018 --> 00:05:41.081
+The vault holds your long-term holdings, and it
+
+00:05:41.081 --> 00:05:44.188
+almost never signs: no DeFi approvals, ever.
+
+00:05:44.188 --> 00:05:47.325
+The operator holds your active DeFi positions,
+
+00:05:47.325 --> 00:05:50.696
+and only signs with known, verified protocols.
+
+00:05:50.696 --> 00:05:53.011
+And the burner holds small amounts for
+
+00:05:53.011 --> 00:05:55.266
+new apps, mints and airdrops, and can
+
+00:05:55.266 --> 00:05:58.294
+sign anything experimental, because it never holds
+
+00:05:58.294 --> 00:06:00.846
+more than you're prepared to lose entirely.
+
+00:06:02.146 --> 00:06:05.176
+Money moves down this chain, only as needed.
+
+00:06:05.176 --> 00:06:07.289
+From the vault, to the operator, to the
+
+00:06:07.289 --> 00:06:10.071
+burner, when you actually need funds in motion.
+
+00:06:10.071 --> 00:06:12.629
+And profits sweep back up, from burner to
+
+00:06:12.629 --> 00:06:16.036
+operator to vault, once a position's proven itself.
+
+00:06:16.036 --> 00:06:18.163
+If the burner gets drained completely,
+
+00:06:18.163 --> 00:06:20.536
+you've lost only the burner's balance.
+
+00:06:20.536 --> 00:06:22.916
+The vault was never in the blast radius.
+
+00:06:24.216 --> 00:06:27.187
+Here's an illustrative example of how someone might
+
+00:06:27.187 --> 00:06:30.001
+split their crypto across the three wallets.
+
+00:06:30.001 --> 00:06:31.575
+The bulk, say 80%, sits
+
+00:06:31.575 --> 00:06:33.776
+in the vault, rarely touched.
+
+00:06:33.776 --> 00:06:38.051
+15% sits in the operator, in active, known positions.
+
+00:06:38.051 --> 00:06:40.795
+And 5%, or less, sits in the burner, small
+
+00:06:40.795 --> 00:06:44.541
+enough that losing all of it wouldn't change anything.
+
+00:06:44.541 --> 00:06:47.253
+Your own split depends on your total and your
+
+00:06:47.253 --> 00:06:49.966
+comfort with risk, but the shape, most in the
+
+00:06:49.966 --> 00:06:53.091
+vault, least in the burner, holds regardless of size.
+
+00:06:54.391 --> 00:06:57.389
+Here's the compartmentalising habit as four steps,
+
+00:06:57.389 --> 00:06:59.276
+so it's not just a diagram.
+
+00:06:59.276 --> 00:07:01.667
+Decide a position's job first: is
+
+00:07:01.667 --> 00:07:04.901
+this long-term, active, or experimental?
+
+00:07:04.901 --> 00:07:06.257
+Route it to the matching
+
+00:07:06.257 --> 00:07:08.346
+wallet, never the convenient one.
+
+00:07:08.346 --> 00:07:10.981
+Sign only what that wallet's job allows.
+
+00:07:10.981 --> 00:07:13.518
+And sweep profits back up the chain once a
+
+00:07:13.518 --> 00:07:16.999
+position's proven itself, so the operator and burner don't
+
+00:07:16.999 --> 00:07:19.831
+quietly grow past what they're supposed to hold.
+
+00:07:21.131 --> 00:07:23.799
+Notice the device column too: vault and
+
+00:07:23.799 --> 00:07:26.333
+operator on hardware, or the vault in
+
+00:07:26.333 --> 00:07:28.300
+a multisig for real size.
+
+00:07:28.300 --> 00:07:30.263
+The burner can stay a simple hot
+
+00:07:30.263 --> 00:07:33.360
+wallet, because it's designed to be disposable.
+
+00:07:33.360 --> 00:07:35.415
+The structure does the protecting.
+
+00:07:35.415 --> 00:07:37.240
+You don't have to remember to be
+
+00:07:37.240 --> 00:07:39.783
+careful every single time, because the wallet
+
+00:07:39.783 --> 00:07:41.940
+you're using already limits the damage.
+
+00:07:43.239 --> 00:07:46.264
+Here's a habit worth naming out loud: labelling
+
+00:07:46.264 --> 00:07:49.163
+your wallets by name, right inside the wallet
+
+00:07:49.163 --> 00:07:51.795
+app, not just by remembering which is
+
+00:07:51.795 --> 00:07:55.551
+which. “Vault,” “Operator,” “Burner,” or whatever names you choose,
+
+00:07:55.551 --> 00:07:58.005
+visible every time you open the app. It
+
+00:07:58.005 --> 00:07:59.300
+sounds small. In
+
+00:07:59.300 --> 00:08:02.104
+practice, it's the difference between pausing to
+
+00:08:02.104 --> 00:08:04.621
+check which wallet you're signing from, and
+
+00:08:04.621 --> 00:08:06.910
+signing on autopilot from the wrong one.
+
+00:08:08.210 --> 00:08:09.300
+Quick check.
+
+00:08:09.300 --> 00:08:10.727
+Why keep the vault wallet
+
+00:08:10.727 --> 00:08:12.592
+completely free of DeFi approvals?
+
+00:08:17.012 --> 00:08:20.597
+The answer: approvals let a contract move your tokens.
+
+00:08:20.597 --> 00:08:23.675
+With none granted, a compromised protocol has no
+
+00:08:23.675 --> 00:08:25.622
+path to reach the vault at all.
+
+00:08:26.922 --> 00:08:29.187
+One last thing worth saying plainly.
+
+00:08:29.187 --> 00:08:30.827
+None of this structure has to
+
+00:08:30.827 --> 00:08:32.822
+be built in a single afternoon.
+
+00:08:32.822 --> 00:08:35.624
+Set up the burner first, since it's the lowest-stakes
+
+00:08:35.624 --> 00:08:38.777
+piece and the one you'll use constantly while learning.
+
+00:08:38.777 --> 00:08:40.616
+Add the operator once you have
+
+00:08:40.616 --> 00:08:43.051
+real positions worth separating out.
+
+00:08:43.051 --> 00:08:45.180
+And build the vault, with a hardware
+
+00:08:45.180 --> 00:08:47.770
+device or a multisig, once there's something
+
+00:08:47.770 --> 00:08:49.681
+in it worth that extra step.
+
+00:08:49.681 --> 00:08:52.771
+The order matters less than eventually having all three.
+
+00:08:54.072 --> 00:08:55.257
+Last check.
+
+00:08:55.257 --> 00:08:58.542
+What does a two-of-three multisig actually protect against?
+
+00:09:02.962 --> 00:09:06.152
+The answer: a single lost or compromised key.
+
+00:09:06.152 --> 00:09:08.635
+Two signers are still needed to move funds,
+
+00:09:08.635 --> 00:09:10.272
+so one key alone can't do it.
+
+00:09:11.572 --> 00:09:13.032
+Here's your checklist.
+
+00:09:13.032 --> 00:09:14.567
+Do it now, for real.
+
+00:09:14.567 --> 00:09:16.684
+First, your seed phrase is stored
+
+00:09:16.684 --> 00:09:19.537
+offline, in two separate physical places.
+
+00:09:19.537 --> 00:09:21.475
+Second, your vault wallet has
+
+00:09:21.475 --> 00:09:23.777
+never approved a DeFi contract.
+
+00:09:23.777 --> 00:09:25.115
+Third, you have a separate
+
+00:09:25.115 --> 00:09:26.952
+burner wallet for anything new.
+
+00:09:26.952 --> 00:09:29.794
+And fourth, you read every signing prompt on the
+
+00:09:29.794 --> 00:09:32.752
+hardware device's own screen, not just the website.
+
+00:09:34.051 --> 00:09:35.296
 Let's recap.
 
-00:02:54.176 --> 00:02:56.681
-Private key: the authority to sign.
+00:09:35.296 --> 00:09:37.666
+Five words: private key, seed phrase,
 
-00:02:56.681 --> 00:03:00.786
-Seed phrase: 12–24 words that recreate your keys.
+00:09:37.666 --> 00:09:40.461
+hardware wallet, multisig, smart wallet.
 
-00:03:00.786 --> 00:03:04.161
-Hardware wallet: keeps keys on a separate device.
+00:09:40.461 --> 00:09:43.682
+Compartmentalise: separate wallets by job, so one
 
-00:03:04.161 --> 00:03:06.203
-Multisig: needs M of N
+00:09:43.682 --> 00:09:46.301
+compromise reaches only one of them.
 
-00:03:06.203 --> 00:03:08.156
-signers (e.g. 2 of 3).
+00:09:46.301 --> 00:09:49.910
+And the three-wallet setup: vault, operator, burner, money
 
-00:03:09.456 --> 00:03:11.971
+00:09:49.910 --> 00:09:52.846
+moving down as needed, profits sweeping back up.
+
+00:09:54.146 --> 00:09:56.661
 Do the checklist now, before you move on.
 
-00:03:11.971 --> 00:03:16.393
-Next up, Lesson 1.4: Tokens, approvals & allowances.
+00:09:56.661 --> 00:09:58.854
+You now have the whole lesson in your
+
+00:09:58.854 --> 00:10:02.202
+head: the five words, why compartmentalising matters, and
+
+00:10:02.202 --> 00:10:05.388
+the three-wallet setup that puts it into practice.
+
+00:10:05.388 --> 00:10:09.810
+Next up, Lesson 1.4: Tokens, approvals and allowances.

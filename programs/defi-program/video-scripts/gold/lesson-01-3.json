@@ -1,0 +1,435 @@
+{
+ "id": "lesson-01-3",
+ "title": "Lesson 1.3: Wallets, keys, hardware & multisig",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "maxMinutes": 25,
+ "tag": "Lesson 1.3",
+ "gold": true,
+ "music": true,
+ "musicLevel": 0.14,
+ "seed": 45,
+ "use": "Lesson 1.3 page in the Whop course. Hand-written gold-standard script: keys/seed/hardware/multisig/smart wallets, compartmentalising, the 3-wallet setup.",
+ "thumbnail": {
+  "title": "Wallets, keys & multisig",
+  "subtitle": "Lesson 1.3"
+ },
+ "scenes": [
+  {
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Lesson 1.3",
+   "num": "1.3",
+   "title": "Wallets, keys, hardware & multisig",
+   "sub": "One mistake shouldn't be able to lose everything.",
+   "vo": "Lesson one point three. Wallets, keys, hardware and multisig. By the end, you'll be able to set up a wallet structure where one mistake can't lose everything you own.",
+   "cap": "Lesson 1.3. Wallets, keys, hardware and multisig. By the end, you'll be able to set up a wallet structure where one mistake can't lose everything you own."
+  },
+  {
+   "type": "pillars",
+   "chapter": "Intro",
+   "title": "What this lesson covers",
+   "items": [
+    {
+     "icon": "key",
+     "title": "Five words",
+     "text": "Key, seed, hardware, multisig, smart wallet"
+    },
+    {
+     "icon": "grid",
+     "title": "Compartmentalise",
+     "text": "Separate wallets by job"
+    },
+    {
+     "icon": "layers",
+     "title": "The 3-wallet setup",
+     "text": "Vault, operator, burner"
+    }
+   ],
+   "vo": "Here's the plan. First, the five words: private key, seed phrase, hardware wallet, multisig and smart wallet. Second, compartmentalising: why one wallet for everything is the single biggest structural risk you can take. And third, the worked example this whole lesson builds to: the three-wallet setup, vault, operator and burner."
+  },
+  {
+   "type": "title",
+   "chapter": "Five words",
+   "eyebrow": "Five words",
+   "num": "5",
+   "title": "Five words, drawn out",
+   "sub": "Private key · Seed phrase · Hardware wallet · Multisig · Smart wallet",
+   "vo": "Five words."
+  },
+  {
+   "type": "statement",
+   "chapter": "Five words",
+   "kicker": "Word one",
+   "lines": [
+    "The private key",
+    "is the authority to sign."
+   ],
+   "sub": "Whoever has it controls the funds. No resets, no exceptions.",
+   "vo": "Word one: private key. The authority to sign. Whoever has it controls the funds, completely, with no exceptions and no override. It isn't a password you can reset. It's closer to the only physical key to a vault that has no locksmith."
+  },
+  {
+   "type": "statement",
+   "chapter": "Five words",
+   "kicker": "Word two",
+   "lines": [
+    "Never typed.",
+    "Never photographed. Never shared."
+   ],
+   "sub": "No legitimate support team will ever ask for it.",
+   "vo": "Word two: seed phrase. Twelve to twenty-four words that recreate your keys. Never type it into a website. Never photograph it. Never share it. No legitimate support team will ever ask for it, not once, not for any reason, ever.",
+   "cap": "Word two: seed phrase. 12 to 24 words that recreate your keys. Never type it into a website. Never photograph it. Never share it. No legitimate support team will ever ask for it, not once, not for any reason, ever."
+  },
+  {
+   "type": "statement",
+   "chapter": "Five words",
+   "kicker": "An honest caveat",
+   "lines": [
+    "A second copy guards against loss.",
+    "Not against theft — each copy is complete."
+   ],
+   "sub": "Both locations still need to be genuinely secure and private.",
+   "vo": "Here's why the checklist says two separate physical places, and an honest caveat with it. A single copy protects against theft, but not against a fire, a flood, or simply losing the one place you kept it. A second copy, somewhere else, protects against that. But be precise about what it doesn't do: each full copy can recreate every key on its own, so a second copy is redundancy against disaster and loss, not extra protection against theft. Both locations still need to be genuinely secure and private."
+  },
+  {
+   "type": "flow",
+   "chapter": "Five words",
+   "title": "A hardware wallet, signing",
+   "nodes": [
+    {
+     "label": "App requests a signature",
+     "sub": "From your computer or phone",
+     "icon": "globe"
+    },
+    {
+     "label": "Sent to the device",
+     "sub": "Keys never leave it",
+     "icon": "wallet"
+    },
+    {
+     "label": "You read it there",
+     "sub": "On the device's own screen",
+     "icon": "eye"
+    },
+    {
+     "label": "Physical confirm",
+     "sub": "A button press, on the device",
+     "icon": "check"
+    }
+   ],
+   "vo": "Word three: hardware wallet. A separate physical device that keeps your keys off the internet entirely. When an app asks you to sign, the request travels to the device, you read it on the device's own screen, and you confirm it with a physical button press. Even if the computer you're using is compromised, the signing itself happens somewhere it can't reach."
+  },
+  {
+   "type": "statement",
+   "chapter": "Five words",
+   "kicker": "Word four",
+   "lines": [
+    "M of N signers",
+    "needed before it can act."
+   ],
+   "sub": "A single compromised key, on its own, can't move the funds.",
+   "vo": "Word four: multisig, from Lesson one point zero. Needs M of N signers, for example two of three, before it can act. Good for large or shared funds, because a single compromised key, on its own, is no longer enough to lose anything."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/three-wallets.png",
+   "eyebrow": "Word five: smart wallets",
+   "wide": true,
+   "chapter": "Five words",
+   "vo": "And word five: smart wallets. These are contract accounts, not simple key-controlled addresses, which means they can add features a basic wallet can't: spending limits, social recovery if a device is lost, and batching several actions into one signature. You'll see these in more depth in Lesson one point nine. For now, just know the category exists, and that it's a genuinely different kind of wallet under the hood.",
+   "cap": "And word five: smart wallets. These are contract accounts, not simple key-controlled addresses, which means they can add features a basic wallet can't: spending limits, social recovery if a device is lost, and batching several actions into one signature. You'll see these in more depth in Lesson 1.9. For now, just know the category exists, and that it's a genuinely different kind of wallet under the hood."
+  },
+  {
+   "type": "compare",
+   "chapter": "Five words",
+   "left": {
+    "label": "A software wallet",
+    "tone": "neutral",
+    "items": [
+     "Key lives inside an everyday app",
+     "Same device as browsing, email, downloads",
+     "Malware there can potentially reach it"
+    ]
+   },
+   "right": {
+    "label": "A hardware wallet",
+    "tone": "good",
+    "items": [
+     "Key lives on a separate device",
+     "Never touches the internet directly",
+     "Malware on your computer can't reach inside it"
+    ]
+   },
+   "vo": "Here's why the device matters, not just the key. A software wallet keeps your key inside an app on your everyday computer or phone, the same device you browse the internet, open email and install software on. A hardware wallet keeps the key on a separate, purpose-built device that never touches the internet directly. Malware on your computer can potentially see a software wallet's key. It cannot reach inside a hardware device."
+  },
+  {
+   "type": "statement",
+   "chapter": "Five words",
+   "kicker": "A real example",
+   "lines": [
+    "Dec 2023: a compromised library",
+    "showed malicious requests on real sites."
+   ],
+   "sub": "The device's own screen is the one thing a browser compromise can't fake.",
+   "vo": "One real example of why reading the device screen matters, not just the app. In December of two thousand twenty-three, a widely used wallet-connection library was compromised at the supply-chain level, briefly showing some users malicious transaction requests through otherwise legitimate-looking websites. People who read and verified the request on their hardware device's own screen caught it. People who only glanced at the website did not. The device screen is the one thing an attacker who's compromised your browser can't fake."
+  },
+  {
+   "type": "statement",
+   "chapter": "Five words",
+   "kicker": "Not a future promise",
+   "lines": [
+    "Account abstraction is real,",
+    "and increasingly used today."
+   ],
+   "sub": "Two-device approval, or recovery through trusted contacts, instead of one seed phrase.",
+   "vo": "One more real, current fact on smart wallets: the underlying standard, generally called account abstraction, is a real and increasingly used part of Ethereum's ecosystem, not a future promise. It's what lets a wallet require two devices to approve a large transaction, or recover access through trusted contacts instead of a single seed phrase. You'll build on this properly in Lesson one point nine.",
+   "cap": "One more real, current fact on smart wallets: the underlying standard, generally called account abstraction, is a real and increasingly used part of Ethereum's ecosystem, not a future promise. It's what lets a wallet require two devices to approve a large transaction, or recover access through trusted contacts instead of a single seed phrase. You'll build on this properly in Lesson 1.9."
+  },
+  {
+   "type": "quiz",
+   "chapter": "Five words",
+   "n": 1,
+   "of": 3,
+   "q": "A “support agent” in DMs asks for your seed phrase to fix a stuck transaction. What do you do?",
+   "a": "Nothing. It's a scam, every time. Block and report — no legitimate support team will ever ask for it.",
+   "vo": "Quick check. A message from “support” asks for your seed phrase to fix a stuck transaction. What do you do? [[pause 4]] The answer: nothing. It's a scam, every single time. Block and report. No legitimate support team will ever ask for it."
+  },
+  {
+   "type": "title",
+   "chapter": "Compartmentalise",
+   "eyebrow": "Compartmentalise",
+   "num": "1",
+   "title": "Separate wallets, by job",
+   "sub": "So one compromise only reaches one of them.",
+   "vo": "Compartmentalise."
+  },
+  {
+   "type": "statement",
+   "chapter": "Compartmentalise",
+   "kicker": "Not a new idea",
+   "lines": [
+    "A slim wallet, not your whole card collection.",
+    "On-chain, there's no call to make afterward."
+   ],
+   "sub": "The structure does the job a phone call would do anywhere else.",
+   "vo": "Compartmentalising isn't unique to crypto; it's the same logic behind carrying a slim wallet with a little cash instead of your entire bank card collection, or a business keeping its operating account separate from its reserves. On-chain, it matters more, because there's no bank to call if the wrong wallet gets compromised. The structure has to do the job a phone call would do anywhere else."
+  },
+  {
+   "type": "compare",
+   "chapter": "Compartmentalise",
+   "left": {
+    "label": "One wallet for everything",
+    "tone": "bad",
+    "items": [
+     "Savings, DeFi and experiments, same key",
+     "One bad signature reaches everything"
+    ]
+   },
+   "right": {
+    "label": "Separate wallets by job",
+    "tone": "good",
+    "items": [
+     "Each wallet holds only what its job needs",
+     "A compromise reaches only that one wallet"
+    ]
+   },
+   "vo": "Here's the structural risk most beginners never think about. One wallet for everything means your life savings, your everyday DeFi positions and your experiments with brand-new apps all sit behind the exact same key. One bad signature on one sketchy new app, and everything you own is reachable through it. Separate wallets by job, and a compromise in one only ever reaches what that one wallet holds."
+  },
+  {
+   "type": "title",
+   "chapter": "The 3-wallet setup",
+   "eyebrow": "Worked example",
+   "num": "3",
+   "title": "Vault · Operator · Burner",
+   "sub": "This is what compartmentalising actually looks like.",
+   "vo": "The 3-wallet setup."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/three-wallets.png",
+   "eyebrow": "The three roles",
+   "wide": true,
+   "chapter": "The 3-wallet setup",
+   "vo": "Here's the structure. The vault holds your long-term holdings, and it almost never signs: no DeFi approvals, ever. The operator holds your active DeFi positions, and only signs with known, verified protocols. And the burner holds small amounts for new apps, mints and airdrops, and can sign anything experimental, because it never holds more than you're prepared to lose entirely."
+  },
+  {
+   "type": "flow",
+   "chapter": "The 3-wallet setup",
+   "title": "Money moves down, profits sweep up",
+   "nodes": [
+    {
+     "label": "Vault",
+     "sub": "Long-term. Almost never signs.",
+     "icon": "shield"
+    },
+    {
+     "label": "Operator",
+     "sub": "Active DeFi, known protocols",
+     "icon": "grid"
+    },
+    {
+     "label": "Burner",
+     "sub": "New apps. Anything experimental.",
+     "icon": "alert"
+    }
+   ],
+   "edges": [
+    {
+     "from": "0",
+     "to": "1",
+     "label": "down, as needed"
+    },
+    {
+     "from": "1",
+     "to": "2",
+     "label": "down, as needed"
+    },
+    {
+     "from": "2",
+     "to": "1",
+     "label": "profits sweep up",
+     "bend": -60
+    },
+    {
+     "from": "1",
+     "to": "0",
+     "label": "profits sweep up",
+     "bend": -60
+    }
+   ],
+   "vo": "Money moves down this chain, only as needed. From the vault, to the operator, to the burner, when you actually need funds in motion. And profits sweep back up, from burner to operator to vault, once a position's proven itself. If the burner gets drained completely, you've lost only the burner's balance. The vault was never in the blast radius."
+  },
+  {
+   "type": "chart",
+   "chapter": "The 3-wallet setup",
+   "kind": "donut",
+   "title": "An illustrative 3-wallet split",
+   "sub": "Example only — your own split depends on your total",
+   "segs": [
+    {
+     "label": "Vault",
+     "text": "Rarely touched",
+     "value": 80,
+     "show": "80%",
+     "tone": "good"
+    },
+    {
+     "label": "Operator",
+     "text": "Active, known positions",
+     "value": 15,
+     "show": "15%",
+     "tone": "blue"
+    },
+    {
+     "label": "Burner",
+     "text": "Losing it all wouldn't matter",
+     "value": 5,
+     "show": "≤5%",
+     "tone": "warn"
+    }
+   ],
+   "vo": "Here's an illustrative example of how someone might split their crypto across the three wallets. The bulk, say eighty percent, sits in the vault, rarely touched. Fifteen percent sits in the operator, in active, known positions. And five percent, or less, sits in the burner, small enough that losing all of it wouldn't change anything. Your own split depends on your total and your comfort with risk, but the shape, most in the vault, least in the burner, holds regardless of size.",
+   "cap": "Here's an illustrative example of how someone might split their crypto across the three wallets. The bulk, say 80%, sits in the vault, rarely touched. 15% sits in the operator, in active, known positions. And 5%, or less, sits in the burner, small enough that losing all of it wouldn't change anything. Your own split depends on your total and your comfort with risk, but the shape, most in the vault, least in the burner, holds regardless of size."
+  },
+  {
+   "type": "steps",
+   "chapter": "The 3-wallet setup",
+   "title": "Compartmentalising, as a habit",
+   "steps": [
+    "Decide the position's job first",
+    "Route it to the matching wallet",
+    "Sign only what that wallet's job allows",
+    "Sweep profits back up once proven"
+   ],
+   "result": "No wallet quietly grows past its job",
+   "vo": "Here's the compartmentalising habit as four steps, so it's not just a diagram. Decide a position's job first: is this long-term, active, or experimental? Route it to the matching wallet, never the convenient one. Sign only what that wallet's job allows. And sweep profits back up the chain once a position's proven itself, so the operator and burner don't quietly grow past what they're supposed to hold."
+  },
+  {
+   "type": "statement",
+   "chapter": "The 3-wallet setup",
+   "kicker": "Why it works",
+   "lines": [
+    "The structure protects you.",
+    "Not just your memory, in the moment."
+   ],
+   "sub": "Vault and operator on hardware (or multisig). The burner stays disposable.",
+   "vo": "Notice the device column too: vault and operator on hardware, or the vault in a multisig for real size. The burner can stay a simple hot wallet, because it's designed to be disposable. The structure does the protecting. You don't have to remember to be careful every single time, because the wallet you're using already limits the damage."
+  },
+  {
+   "type": "statement",
+   "chapter": "The 3-wallet setup",
+   "kicker": "A small habit that matters",
+   "lines": [
+    "Label the wallets, in the app.",
+    "“Vault.” “Operator.” “Burner.”"
+   ],
+   "sub": "The difference between pausing to check, and signing on autopilot.",
+   "vo": "Here's a habit worth naming out loud: labelling your wallets by name, right inside the wallet app, not just by remembering which is which. “Vault,” “Operator,” “Burner,” or whatever names you choose, visible every time you open the app. It sounds small. In practice, it's the difference between pausing to check which wallet you're signing from, and signing on autopilot from the wrong one."
+  },
+  {
+   "type": "quiz",
+   "chapter": "The 3-wallet setup",
+   "n": 2,
+   "of": 3,
+   "q": "Why keep the vault wallet completely free of DeFi approvals?",
+   "a": "Approvals let a contract move your tokens. With none granted, a compromised protocol has no path to reach the vault.",
+   "vo": "Quick check. Why keep the vault wallet completely free of DeFi approvals? [[pause 4]] The answer: approvals let a contract move your tokens. With none granted, a compromised protocol has no path to reach the vault at all."
+  },
+  {
+   "type": "statement",
+   "chapter": "The 3-wallet setup",
+   "kicker": "No rush",
+   "lines": [
+    "Burner first.",
+    "Operator, then vault, as they're needed."
+   ],
+   "sub": "The order matters less than eventually having all three.",
+   "vo": "One last thing worth saying plainly. None of this structure has to be built in a single afternoon. Set up the burner first, since it's the lowest-stakes piece and the one you'll use constantly while learning. Add the operator once you have real positions worth separating out. And build the vault, with a hardware device or a multisig, once there's something in it worth that extra step. The order matters less than eventually having all three."
+  },
+  {
+   "type": "quiz",
+   "chapter": "The 3-wallet setup",
+   "n": 3,
+   "of": 3,
+   "q": "What does a 2-of-3 multisig actually protect against?",
+   "a": "A single lost or compromised key. Two signers are still needed to move funds.",
+   "vo": "Last check. What does a two-of-three multisig actually protect against? [[pause 4]] The answer: a single lost or compromised key. Two signers are still needed to move funds, so one key alone can't do it."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Checklist",
+   "title": "Your checklist",
+   "numbered": true,
+   "items": [
+    "Seed phrase stored offline, in two separate places",
+    "Vault wallet has never approved a DeFi contract",
+    "A separate burner wallet for anything new",
+    "Read every prompt on the hardware device's screen"
+   ],
+   "vo": "Here's your checklist. Do it now, for real. First, your seed phrase is stored offline, in two separate physical places. Second, your vault wallet has never approved a DeFi contract. Third, you have a separate burner wallet for anything new. And fourth, you read every signing prompt on the hardware device's own screen, not just the website."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "check": false,
+   "items": [
+    "Five words: key, seed phrase, hardware wallet, multisig, smart wallet",
+    "Compartmentalise: separate wallets by job",
+    "Vault → Operator → Burner: down as needed, profits sweep up"
+   ],
+   "vo": "Let's recap. Five words: private key, seed phrase, hardware wallet, multisig, smart wallet. Compartmentalise: separate wallets by job, so one compromise reaches only one of them. And the three-wallet setup: vault, operator, burner, money moving down as needed, profits sweeping back up."
+  },
+  {
+   "type": "cta",
+   "chapter": "Recap",
+   "button": "Next: Lesson 1.4",
+   "sub": "Tokens, approvals and allowances",
+   "vo": "Do the checklist now, before you move on. You now have the whole lesson in your head: the five words, why compartmentalising matters, and the three-wallet setup that puts it into practice. Next up, Lesson one point four: Tokens, approvals and allowances.",
+   "cap": "Do the checklist now, before you move on. You now have the whole lesson in your head: the five words, why compartmentalising matters, and the three-wallet setup that puts it into practice. Next up, Lesson 1.4: Tokens, approvals and allowances."
+  }
+ ]
+}

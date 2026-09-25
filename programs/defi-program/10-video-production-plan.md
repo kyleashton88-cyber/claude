@@ -60,7 +60,7 @@ node build_video.js lessons              # all lessons (several hours of renderi
 | 1.0 | Mastery Starter | 32 | 10.3 min | `video-scripts/gold/lesson-01-0.json` (gold: donut of loss causes, burner-wallet/multisig flows, approval & phishing compares, animated ladder) | ✓ |
 | 1.1 | What DeFi is, and the risk-first mindset | 29 | 10.2 min | `video-scripts/gold/lesson-01-1.json` (gold: 6-layer stack flow, composability/self-custody, risk-first habit flow, 12% APY decomposed) | ✓ |
 | 1.2 | How a transaction actually happens | 29 | 10.1 min | `video-scripts/gold/lesson-01-2.json` (gold: 7-stop lifecycle flow, gas/nonce flows, real gas-cost math, mainnet vs L2, gas-demand line chart) | ✓ |
-| 1.3 | Wallets, keys, hardware & multisig | 11 | 3.3 min | `video-scripts/lessons/lesson-01-3.json` | ✓ |
+| 1.3 | Wallets, keys, hardware & multisig | 29 | 10.2 min | `video-scripts/gold/lesson-01-3.json` (gold: 5-word flows/compares, hardware wallet signing, illustrative 3-wallet split, compartmentalising habit) | ✓ |
 | 1.4 | Tokens, approvals & allowances | 11 | 3.3 min | `video-scripts/lessons/lesson-01-4.json` | ✓ |
 | 1.5 | Stablecoins and how they break | 9 | 2.9 min | `video-scripts/lessons/lesson-01-5.json` | ✓ |
 | 1.6 | Scam defence | 9 | 3.0 min | `video-scripts/lessons/lesson-01-6.json` | ✓ |
