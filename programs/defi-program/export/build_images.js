@@ -1069,7 +1069,64 @@ function storyJourney() {
   return lightShell(1800, 760, 'Your journey through Module 0', 'Nine stops, in order: from knowing nothing to set up safely',
     `<div style="position:absolute;inset:0 0 60px 0">${svg}</div><div style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:23px;color:${C.text2}">It ends with the Day-1 Setup Kit ticked off, and you ready for Module 1: Foundations & Safety.</div>`);
 }
+function storyBlockExplorer() {
+  const chrome = `<div style="height:46px;display:flex;align-items:center;gap:10px;padding:0 20px;background:#eef2f6;border-bottom:1px solid ${C.line}">
+    <span style="width:13px;height:13px;border-radius:50%;background:#ff5f57"></span><span style="width:13px;height:13px;border-radius:50%;background:#febc2e"></span><span style="width:13px;height:13px;border-radius:50%;background:#28c840"></span>
+    <span style="margin-left:14px;flex:1;padding:6px 16px;border-radius:8px;background:#fff;border:1px solid ${C.line};font-size:16px;color:${C.text2};font-family:'JetBrains Mono',monospace">a block explorer (illustrative)</span></div>`;
+  const rows = [['0x71C7…976F', '0x3aB1…44E2', '0.10 ETH', 'Confirmed'], ['0x9e02…1bCa', '0x71C7…976F', '2.00 ETH', 'Confirmed'], ['0x44E2…3aB1', '0x8f10…c02d', '0.05 ETH', 'Confirmed']];
+  const table = `<div style="border:1px solid ${C.line};border-radius:14px;overflow:hidden">
+    <div style="display:grid;grid-template-columns:1.3fr 1.3fr 1fr 1fr;background:${C.panel};padding:14px 20px;font-size:16px;font-weight:700;color:${C.text2}"><span>From</span><span>To</span><span>Value</span><span>Status</span></div>
+    ${rows.map(([f, t, v, st]) => `<div style="display:grid;grid-template-columns:1.3fr 1.3fr 1fr 1fr;padding:16px 20px;border-top:1px solid ${C.line};font-family:'JetBrains Mono',monospace;font-size:18px;align-items:center">
+      <span style="color:${C.blue}">${f}</span><span style="color:${C.blue}">${t}</span><span style="font-weight:700">${v}</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;color:${C.aqua};font-weight:700">${icon('check', 18, C.aqua)} ${st}</span></div>`).join('')}
+  </div>`;
+  const body = `<div style="border-radius:18px;overflow:hidden;border:1px solid ${C.line};box-shadow:0 20px 50px rgba(20,30,50,.12)">${chrome}
+    <div style="padding:26px 28px;background:#fff">
+      <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:18px">
+        <span style="font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:${C.blue}">Block</span>
+        <span style="font-size:32px;font-weight:800;color:${C.ink}">#19,204,551</span>
+        <span style="font-size:16px;color:${C.text2}">· 3 transactions · sealed 12 seconds ago</span></div>
+      ${table}</div></div>`;
+  return lightShell(1800, 700, 'What a block explorer shows', 'Anyone can look up any block or transaction, for free',
+    `${body}<div style="position:absolute;left:0;right:0;bottom:-6px;text-align:center;font-size:22px;color:${C.text2}">A block explorer just reads the public ledger. It can show you a transaction; it can never undo one.</div>`);
+}
+function storyTimeline() {
+  const stops = [['2008', 'The idea', 'Satoshi Nakamoto publishes the Bitcoin white paper: money with no bank in the middle.'],
+    ['2009', 'Bitcoin launches', 'The first block is mined. The first working blockchain, and the first cryptocurrency, BTC.'],
+    ['2015', 'Ethereum launches', 'A blockchain that also runs small programs — smart contracts — not just payments.'],
+    ['2020s', 'DeFi grows up', 'Lending, trading and stablecoins run by those programs, at real scale.']];
+  const W = 1700, seg = W / stops.length;
+  const row = stops.map(([y, t, s], i) => `<div style="flex:1;min-width:0;position:relative;padding:0 18px">
+    <div style="width:22px;height:22px;border-radius:50%;background:${i === stops.length - 1 ? C.aqua : C.brand};margin:0 0 18px;box-shadow:0 0 0 6px ${C.panel}"></div>
+    <div style="font-size:30px;font-weight:800;color:${C.blue}">${y}</div>
+    <div style="font-size:22px;font-weight:700;color:${C.ink};margin-top:4px">${t}</div>
+    <div style="font-size:17px;color:${C.text2};margin-top:8px;line-height:1.4">${s}</div></div>`).join('');
+  return lightShell(1800, 640, 'A short, real timeline', 'Bitcoin, then Ethereum, then DeFi built on top',
+    `<div style="position:relative;padding-top:8px">
+      <div style="position:absolute;left:18px;right:18px;top:19px;height:3px;background:${C.line}"></div>
+      <div style="display:flex">${row}</div></div>`);
+}
+function storyWalletSend() {
+  const chrome = `<div style="height:46px;display:flex;align-items:center;gap:10px;padding:0 20px;background:#eef2f6;border-bottom:1px solid ${C.line}">
+    <span style="width:13px;height:13px;border-radius:50%;background:#ff5f57"></span><span style="width:13px;height:13px;border-radius:50%;background:#febc2e"></span><span style="width:13px;height:13px;border-radius:50%;background:#28c840"></span>
+    <span style="margin-left:14px;flex:1;padding:6px 16px;border-radius:8px;background:#fff;border:1px solid ${C.line};font-size:16px;color:${C.text2};font-family:'JetBrains Mono',monospace">a wallet's send screen (illustrative)</span></div>`;
+  const field = (label, value, mono) => `<div style="margin-bottom:20px"><div style="font-size:15px;font-weight:700;color:${C.text2};margin-bottom:8px">${label}</div>
+    <div style="padding:16px 18px;border-radius:12px;background:${C.panel};border:1px solid ${C.line};font-size:${mono ? 22 : 26}px;font-weight:${mono ? 500 : 700};color:${C.ink}${mono ? ";font-family:'JetBrains Mono',monospace" : ''}">${value}</div></div>`;
+  const body = `<div style="max-width:820px;margin:0 auto;border-radius:18px;overflow:hidden;border:1px solid ${C.line};box-shadow:0 20px 50px rgba(20,30,50,.12)">${chrome}
+    <div style="padding:30px 34px;background:#fff">
+      ${field('Send to', "0x3aB1…44E2 (Bob's address)", true)}
+      ${field('Amount', '0.10 ETH')}
+      ${field('Network fee (gas)', '≈ $1.10', false)}
+      <div style="display:flex;justify-content:center;margin-top:10px"><div style="padding:16px 60px;border-radius:14px;background:${C.brand};color:#fff;font-weight:800;font-size:24px">Sign & Send</div></div>
+    </div></div>`;
+  return lightShell(1800, 800, "Alice's wallet, right before she sends", "She signs an instruction. She never hands over a file, or her keys.",
+    `${body}<div style="margin-top:34px;text-align:center;font-size:22px;color:${C.text2}">The wallet asks her to sign; her private key does the signing. Bob never sees it.</div>`);
+}
 const STORY_IMAGES = [
+  { file: 'story-block-explorer', w: 1800, h: 700, fn: storyBlockExplorer },
+  { file: 'story-btc-eth-timeline', w: 1800, h: 640, fn: storyTimeline },
+  { file: 'story-wallet-send', w: 1800, h: 800, fn: storyWalletSend },
+
   { file: 'story-chain-of-blocks', w: 1800, h: 560, fn: storyChain },
   { file: 'story-many-copies', w: 1800, h: 760, fn: storyCopies },
   { file: 'story-seed-words', w: 1800, h: 760, fn: storySeedWords },
