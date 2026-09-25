@@ -274,6 +274,61 @@ function sceneBody(s, W, H, T) {
           <marker id="ahb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="${C.orange}"/></marker></defs>${eb}</svg>
         ${nb}</div>`;
     }
+    case 'chart': {
+      // Animated chart: bars grow (or a waterfall steps down), a line draws itself, or a donut
+      // fills segment by segment, each part revealed as the narration reaches it.
+      const tone = t => ({ good: C.aquaDark, bad: C.orange, muted: 'rgba(255,255,255,.34)', warn: C.yellow }[t] || C.blueDark);
+      const cnt = (txt, a, extra) => { const c = counter(txt); return `<div class="cfade${c ? ' ccount' : ''}" data-a="${a}"${c ? ` data-count='${JSON.stringify(c)}'` : ''} style="${extra}">${esc(txt)}</div>`; };
+      const L = 200, R = W - 200, top = s.sub ? 330 : 280, bot = H - 250;
+      const head = `<div style="position:absolute;left:150px;right:150px;top:${fs(104, 300)}px;text-align:center">${title(s.title)}
+        ${s.sub ? `<div class="in" data-in="${T.v0 + 0.3}" style="margin-top:14px;font-size:32px;color:rgba(255,255,255,.72)">${esc(s.sub)}</div>` : ''}</div>`;
+      const note = s.note ? `<div class="in" data-in="${T.note}" style="position:absolute;left:220px;right:220px;bottom:${fs(200, 380)}px;text-align:center;font-size:30px;font-weight:700;color:${C.aquaDark}">${esc(s.note)}</div>` : '';
+      if (s.kind === 'donut') {
+        const tot = s.segs.reduce((a, g) => a + g.value, 0), cx = W * 0.3, cy = (top + bot) / 2 + 10, r = Math.min(230, (bot - top) / 2 - 30);
+        let acc = 0;
+        const arcs = s.segs.map((g, i) => { const f = g.value / tot, st = acc; acc += f;
+          return `<circle class="carc" data-a="${T.items[i][0]}" data-b="${T.items[i][1]}" data-f="${f}" data-s="${st}" cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${tone(g.tone)}" stroke-width="${r * 0.36}" pathLength="1" transform="rotate(-90 ${cx} ${cy})" style="stroke-dasharray:0 1"/>`; }).join('');
+        const legend = s.segs.map((g, i) => `<div class="cfade" data-a="${T.items[i][0]}" style="display:flex;align-items:center;gap:22px;padding:14px 22px;border-radius:14px">
+          <span style="flex:none;width:26px;height:26px;border-radius:7px;background:${tone(g.tone)}"></span>
+          <span style="flex:1;font-size:34px;font-weight:700">${esc(g.label)}${g.text ? `<span style="display:block;font-size:24px;font-weight:500;color:rgba(255,255,255,.66);margin-top:4px">${esc(g.text)}</span>` : ''}</span>
+          <span style="font-size:40px;font-weight:800;color:${tone(g.tone)}">${esc(g.show || String(g.value))}</span></div>`).join('');
+        return `<div style="position:absolute;inset:0">${head}
+          <svg width="${W}" height="${H}" style="position:absolute;inset:0"><circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="${r * 0.36}"/>${arcs}</svg>
+          ${s.center ? `<div class="in" data-in="${T.v0 + 0.4}" style="position:absolute;left:${cx - 150}px;top:${cy - 60}px;width:300px;text-align:center"><div style="font-size:64px;font-weight:800">${esc(s.center)}</div>${s.centerSub ? `<div style="font-size:24px;color:rgba(255,255,255,.66)">${esc(s.centerSub)}</div>` : ''}</div>` : ''}
+          <div style="position:absolute;left:${W * 0.52}px;right:190px;top:${top + 10}px;height:${bot - top - 20}px;display:flex;flex-direction:column;justify-content:center;gap:8px">${legend}</div>${note}</div>`;
+      }
+      if (s.kind === 'line') {
+        const series = s.series, n = series[0].values.length, all = series.flatMap(x => x.values);
+        const lo = s.ymin ?? Math.min(0, ...all), hi = s.ymax ?? Math.max(...all) * 1.1;
+        const x0 = L + 110, x1 = R - 40, y0 = top + 30, y1 = bot - 60;
+        const X = i => x0 + (x1 - x0) * i / (n - 1), Y = v => y1 - (y1 - y0) * (v - lo) / (hi - lo);
+        const grid = (s.yticks || []).map(([v, lab]) => `<line x1="${x0}" x2="${x1}" y1="${Y(v)}" y2="${Y(v)}" stroke="rgba(255,255,255,.09)" stroke-width="2"/>
+          <text x="${x0 - 20}" y="${Y(v) + 9}" text-anchor="end" font-size="26" fill="rgba(255,255,255,.55)">${esc(lab)}</text>`).join('');
+        const xl = (s.xlabels || []).map((lab, i) => lab ? `<text x="${X(i)}" y="${y1 + 46}" text-anchor="middle" font-size="26" fill="rgba(255,255,255,.55)">${esc(lab)}</text>` : '').join('');
+        const lines = series.map((sr, k) => { const d = sr.values.map((v, i) => `${i ? 'L' : 'M'}${X(i).toFixed(1)} ${Y(v).toFixed(1)}`).join(' ');
+          return `${k === 0 && s.area !== false ? `<path class="cfade" data-a="${T.lines[k][0] + T.lines[k][1] * 0.6}" d="${d} L${X(n - 1)} ${y1} L${X(0)} ${y1} Z" fill="${tone(sr.tone)}" fill-opacity=".10" stroke="none"/>` : ''}
+            <path class="cline" data-a="${T.lines[k][0]}" data-d="${T.lines[k][1]}" d="${d}" fill="none" stroke="${tone(sr.tone)}" stroke-width="${sr.width || 6}" stroke-linejoin="round" stroke-linecap="round" ${sr.dash ? 'stroke-dasharray="14 12"' : ''}/>
+            ${sr.label ? `<text class="cfade" data-a="${T.lines[k][0] + T.lines[k][1]}" x="${X(n - 1) + 14}" y="${Y(sr.values[n - 1]) + 9}" font-size="28" font-weight="800" fill="${tone(sr.tone)}">${esc(sr.label)}</text>` : ''}`; }).join('');
+        const marks = (s.marks || []).map((m, i) => { const v = series[m.series || 0].values[m.i], px = X(m.i), py = Y(v), up = m.below ? 1 : -1;
+          return `<g class="cfade" data-a="${T.items[i][0]}"><circle cx="${px}" cy="${py}" r="13" fill="${tone(m.tone)}" stroke="#fff" stroke-width="4"/>
+            <line x1="${px}" x2="${px}" y1="${py + up * 18}" y2="${py + up * 58}" stroke="${tone(m.tone)}" stroke-width="3"/>
+            <foreignObject x="${Math.max(x0, Math.min(x1 - 420, px - 210))}" y="${m.below ? py + 60 : py - 128}" width="420" height="70"><div xmlns="http://www.w3.org/1999/xhtml" style="text-align:center"><span style="display:inline-block;padding:10px 20px;border-radius:12px;background:${tone(m.tone)};color:${m.tone === 'good' ? C.ink : '#fff'};font-weight:800;font-size:26px;white-space:nowrap">${esc(m.text)}</span></div></foreignObject></g>`; }).join('');
+        return `<div style="position:absolute;inset:0">${head}
+          <svg width="${W}" height="${H}" style="position:absolute;inset:0;overflow:visible;font-family:Inter">${grid}${xl}
+            <line x1="${x0}" x2="${x1}" y1="${y1}" y2="${y1}" stroke="rgba(255,255,255,.3)" stroke-width="2"/>${lines}${marks}</svg>
+          ${s.caption ? `<div class="in" data-in="${T.v0 + 0.4}" style="position:absolute;right:${W - x1}px;top:${y0 - 44}px;font-size:22px;color:rgba(255,255,255,.5)">${esc(s.caption)}</div>` : ''}${note}</div>`;
+      }
+      // bars: vertical columns, or a waterfall when bars carry a base
+      const bars = s.bars, n = bars.length, hi = s.max ?? Math.max(...bars.map(b => (b.base || 0) + b.value)) * 1.08;
+      const x0 = L + 40, x1 = R - 40, y0 = top + 70, y1 = bot - 70, slot = (x1 - x0) / n, bw = Math.min(200, slot * 0.58);
+      const Yp = v => (y1 - y0) * v / hi;
+      const cols = bars.map((b, i) => { const cx = x0 + slot * (i + 0.5), h = Yp(b.value), yb = y1 - Yp(b.base || 0), a = T.items[i][0];
+        return `<div class="cbar" data-a="${a}" data-b="${T.items[i][1]}" style="position:absolute;left:${cx - bw / 2}px;top:${yb - h}px;width:${bw}px;height:${h}px;border-radius:12px 12px 4px 4px;background:linear-gradient(180deg,${tone(b.tone)},${tone(b.tone)}bb);transform-origin:${b.base && s.waterfall ? 'top' : 'bottom'};transform:scaleY(0)"></div>
+          ${cnt(b.show || String(b.value), a + 0.3, `position:absolute;left:${cx - 160}px;width:320px;top:${yb - h - 60}px;text-align:center;font-size:38px;font-weight:800;color:${tone(b.tone)}`)}
+          <div class="cfade" data-a="${a}" style="position:absolute;left:${cx - slot / 2 + 6}px;width:${slot - 12}px;top:${y1 + 18}px;text-align:center;font-size:${n > 5 ? 25 : 29}px;font-weight:700;line-height:1.2">${esc(b.label)}${b.text ? `<div style="font-size:${n > 5 ? 20 : 23}px;font-weight:500;color:rgba(255,255,255,.62);margin-top:4px">${esc(b.text)}</div>` : ''}</div>`; }).join('');
+      return `<div style="position:absolute;inset:0">${head}
+        <div style="position:absolute;left:${x0}px;width:${x1 - x0}px;top:${y1}px;height:2px;background:rgba(255,255,255,.3)"></div>${cols}${note}</div>`;
+    }
     case 'cutaway': {
       // Screen cutaway: a sequence of real screenshots in a browser frame, each with a
       // highlight box, a push-in zoom towards the box and a step caption, synced to the voice.
@@ -324,6 +379,13 @@ function planTimes(s, sents, voStart, voDur) {
       const idx = Object.fromEntries(s.nodes.map((n, i) => [n.id ?? String(i), i]));
       const edges = s.edges || s.nodes.slice(1).map((n, i) => ({ from: s.nodes[i].id ?? String(i), to: n.id ?? String(i + 1) }));
       T.edges = edges.map(e => { const j = idx[e.to]; return [Math.max(voStart, T.items[j][0] - 0.45), T.items[j][1]]; });
+      break;
+    }
+    case 'chart': {
+      const texts = s.kind === 'donut' ? s.segs.map(g => `${g.label} ${g.text || ''}`) : s.kind === 'line' ? (s.marks || []).map(m => m.text) : s.bars.map(b => `${b.label} ${b.text || ''}`);
+      T.items = texts.length ? syncItems(texts, sents, voStart, voDur, s.at) : [];
+      if (s.kind === 'line') T.lines = s.series.map((sr, k) => [sr.at != null ? sentAt(sr.at, T.v0 + 0.4) : T.v0 + 0.4 + k * 0.6, sr.draw || Math.min(5, voDur * 0.35)]);
+      T.note = s.noteAt != null ? sentAt(s.noteAt, at(0.8)) : Math.max(...T.items.map(x => x[0]), T.v0) + 1.2;
       break;
     }
     case 'cutaway': T.items = syncItems(s.shots.map(x => x.caption || ''), sents, voStart, voDur, s.at);
@@ -420,6 +482,19 @@ function scenePage(video, s, W, H, sc) {
     document.querySelectorAll('.tok').forEach(el => { const a = +el.dataset.a, b = Math.min(+el.dataset.b, VOEND), path = document.getElementById(el.dataset.e);
       if (t < a + .5 || t > b) { el.style.opacity = 0; return; } const L = path.getTotalLength(), f = ((t - a - .5) / 1.4) % 1, pt = path.getPointAtLength(L * easeIO(f));
       el.setAttribute('cx', pt.x); el.setAttribute('cy', pt.y); el.style.opacity = f < .1 ? f * 10 : f > .9 ? (1 - f) * 10 : 1; });
+    // charts: bars grow, lines draw, donut segments fill, numbers count up
+    document.querySelectorAll('.cbar').forEach(el => { const a = +el.dataset.a, b = +el.dataset.b, p = easeIO((t - a) / .9); el.style.transform = 'scaleY(' + p + ')';
+      const act = t >= a && t < b && t < VOEND && !NOHI; el.style.filter = act ? 'brightness(1.18) drop-shadow(0 0 22px rgba(46,230,166,.45))' : 'none'; });
+    document.querySelectorAll('.cfade').forEach(el => { el.style.opacity = ease((t - +el.dataset.a) / .5); });
+    document.querySelectorAll('.ccount').forEach(el => { const c = JSON.parse(el.dataset.count), q = easeIO((t - +el.dataset.a) / 1.1); let x = (c.val * q).toFixed(c.dec);
+      if (c.comma) x = Number(x).toLocaleString('en-US', { minimumFractionDigits: c.dec, maximumFractionDigits: c.dec }); el.textContent = c.pre + x + c.post; });
+    document.querySelectorAll('.cline').forEach(el => { const p = easeIO((t - +el.dataset.a) / +el.dataset.d); el.setAttribute('pathLength', '1');
+      if (!el.dataset.dash0) el.dataset.dash0 = el.getAttribute('stroke-dasharray') || '';
+      if (p < 1) { el.style.strokeDasharray = '1 1'; el.style.strokeDashoffset = String(1 - p); } else { el.style.strokeDasharray = el.dataset.dash0 ? '.012 .01' : '1 0'; el.style.strokeDashoffset = '0'; }
+      el.style.opacity = p > 0 ? 1 : 0; });
+    document.querySelectorAll('.carc').forEach(el => { const a = +el.dataset.a, b = +el.dataset.b, f = +el.dataset.f, p = easeIO((t - a) / .9);
+      el.style.strokeDasharray = (f * p) + ' ' + (1 - f * p + 1); el.style.strokeDashoffset = String(-(+el.dataset.s));
+      el.style.filter = t >= a && t < b && t < VOEND ? 'brightness(1.2) drop-shadow(0 0 18px rgba(46,230,166,.4))' : 'none'; });
     // cutaway: crossfade shots, push in towards the highlight, draw the box
     document.querySelectorAll('.shot').forEach(el => { const a = +el.dataset.a, b = +el.dataset.b, p = ease((t - a) / .45);
       el.style.opacity = t < a ? 0 : t < b ? p : ease(1 - (t - b) / .45);
@@ -558,6 +633,7 @@ function visual(s) {
     title: () => `Title card: ${s.num || ''} ${s.title}`, pillars: () => `${s.title}: ${(s.items || []).map(p => p.title).join(' · ')}`,
     compare: () => `${s.title}: ${s.left.label} (${s.left.items.join(', ')}) vs ${s.right.label} (${s.right.items.join(', ')})`,
     steps: () => `${s.title}: ${(s.steps || []).join(' → ')}${s.result ? ` ⇒ ${s.result}` : ''}`, quiz: () => `Quiz: ${s.q} → ${s.a}`,
+    chart: () => `Chart (${s.kind || 'bars'}): ${s.title}`,
     flow: () => `Flow: ${(s.nodes || []).map(n => n.label).join(' → ')}`, cutaway: () => `Screen cutaway: ${(s.shots || []).map(x => x.caption || x.src).join(' → ')}`,
   };
   return V[s.type]();
