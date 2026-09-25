@@ -67,7 +67,12 @@ already does.
    generator and never overwritten, so this is a one-way promotion).
 4. **Best visual for every idea — in this order of preference:**
    - `flow` for any process, cycle or mechanism (deposits, liquidations, bridges, MEV, grid
-     cycles) — reuse the `animated-flows` conventions already in this codebase.
+     cycles) — reuse the `animated-flows` conventions already in this codebase. Leave
+     `layout` unset for a landscape (1920x1080) video: the default is already `row`, which
+     sizes nodes to fit the count. Explicitly setting `layout="column"` in landscape crams
+     nodes into an overlapping vertical stack once there are more than 2-3 of them (caught
+     in Lesson 1.1's six-layer stack scene, which rendered fully illegible before the fix) —
+     only use `column` for a portrait video, and `cycle` only for a genuine loop.
    - `chart` (bars/waterfall, donut, line — added to `build_video.js` this session) for any
      comparison of sizes, a budget/split, a trend over time, or a before/after number. A
      single-value stat reads better as a `stats` scene than a lone bar (established this

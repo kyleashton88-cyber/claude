@@ -3,230 +3,662 @@ WEBVTT
 00:00:00.550 --> 00:00:02.195
 Lesson 1.1.
 
-00:00:02.195 --> 00:00:05.010
+00:00:02.195 --> 00:00:05.170
 What DeFi is, and the risk-first mindset.
 
-00:00:05.010 --> 00:00:07.163
-By the end of this lesson, you'll be
+00:00:05.170 --> 00:00:07.211
+By the end, you'll be able to name
 
-00:00:07.163 --> 00:00:09.724
-able to describe the DeFi stack and explain
+00:00:07.211 --> 00:00:09.485
+every layer of the DeFi stack, and ask
 
-00:00:09.724 --> 00:00:11.935
-why every yield is payment for a risk.
+00:00:09.485 --> 00:00:12.284
+the one question that matters before any yield:
 
-00:00:13.235 --> 00:00:14.525
+00:00:12.284 --> 00:00:13.975
+what am I being paid to risk?
+
+00:00:15.275 --> 00:00:16.565
 Here's the plan.
 
-00:00:14.525 --> 00:00:16.210
-First, the key ideas.
+00:00:16.565 --> 00:00:19.608
+First, what DeFi actually replaces, and the six
 
-00:00:16.210 --> 00:00:18.925
-Then, a worked example, step by step.
+00:00:19.608 --> 00:00:22.698
+layers underneath every app you'll ever use.
 
-00:00:18.925 --> 00:00:20.450
-Then, your checklist.
+00:00:22.698 --> 00:00:25.076
+Second, the three properties that make
 
-00:00:20.450 --> 00:00:22.612
-And finally, a three-question quiz.
+00:00:25.076 --> 00:00:27.388
+DeFi both powerful and dangerous.
 
-00:00:23.912 --> 00:00:28.281
-DeFi replaces intermediaries (banks, brokers, exchanges) with
+00:00:27.388 --> 00:00:29.173
+Third, the risk-first rule.
 
-00:00:28.281 --> 00:00:31.733
-smart contracts: public programs on a blockchain
+00:00:29.173 --> 00:00:32.237
+And finally, a full worked example: a
 
-00:00:31.733 --> 00:00:34.852
-that hold assets and follow fixed rules.
+00:00:32.237 --> 00:00:35.382
+pool advertising 12% APY, and the five
 
-00:00:34.852 --> 00:00:37.915
-The stack, bottom to top: Three properties make
+00:00:35.382 --> 00:00:38.608
+questions you ask before you believe it.
 
-00:00:37.915 --> 00:00:41.935
-DeFi powerful and dangerous: Risk-first rule: before comparing
+00:00:39.908 --> 00:00:40.993
+The DeFi stack.
 
-00:00:41.935 --> 00:00:45.107
-returns, list what could make you lose money.
+00:00:42.293 --> 00:00:44.543
+Start with what DeFi replaces.
 
-00:00:45.107 --> 00:00:47.767
+00:00:44.543 --> 00:00:48.586
+Banks, brokers and exchanges are intermediaries: companies that
+
+00:00:48.586 --> 00:00:51.728
+sit in the middle of a financial transaction.
+
+00:00:51.728 --> 00:00:55.799
+DeFi replaces them with smart contracts: public programs on
+
+00:00:55.799 --> 00:00:59.462
+a blockchain that hold assets and follow fixed rules,
+
+00:00:59.462 --> 00:01:02.108
+for everyone, the same way, every time.
+
+00:01:03.408 --> 00:01:05.583
+Here's the stack, bottom to top.
+
+00:01:05.583 --> 00:01:08.708
+The blockchain records every balance and transaction.
+
+00:01:08.708 --> 00:01:11.281
+Smart contracts are the protocol logic:
+
+00:01:11.281 --> 00:01:13.833
+a lending market, an exchange pool.
+
+00:01:13.833 --> 00:01:16.688
+Tokens are the assets those contracts move.
+
+00:01:16.688 --> 00:01:18.262
+Your wallet is where you hold
+
+00:01:18.262 --> 00:01:19.927
+the keys and sign actions.
+
+00:01:19.927 --> 00:01:23.119
+The interface is the website that builds transactions
+
+00:01:23.119 --> 00:01:26.257
+for you, a convenience, not the protocol itself.
+
+00:01:26.257 --> 00:01:29.127
+And data layers, explorers and dashboards, are
+
+00:01:29.127 --> 00:01:31.447
+how you verify what actually happened.
+
+00:01:32.747 --> 00:01:34.553
+A quick preview, because it matters
+
+00:01:34.553 --> 00:01:36.307
+for the whole stack above it.
+
+00:01:36.307 --> 00:01:40.125
+The blockchain layer isn't abstract: every action you take,
+
+00:01:40.125 --> 00:01:43.816
+in every layer above it, ultimately becomes a transaction
+
+00:01:43.816 --> 00:01:46.662
+that goes through this exact life cycle.
+
+00:01:46.662 --> 00:01:49.477
+You'll get the full picture in Lesson 1.2.
+
+00:01:49.477 --> 00:01:51.243
+For now, just notice that “the
+
+00:01:51.243 --> 00:01:53.822
+blockchain records it” isn't a metaphor.
+
+00:01:53.822 --> 00:01:55.767
+It's the layer everything else sits on.
+
+00:01:57.067 --> 00:01:59.062
+Notice where the interface sits.
+
+00:01:59.062 --> 00:02:01.507
+It's a convenience, not the protocol.
+
+00:02:01.507 --> 00:02:03.675
+A website can go down, get hacked,
+
+00:02:03.675 --> 00:02:06.215
+or be faked entirely, and the underlying
+
+00:02:06.215 --> 00:02:09.117
+contracts keep running exactly as written.
+
+00:02:09.117 --> 00:02:11.393
+That's also why a fake website is such
+
+00:02:11.393 --> 00:02:14.195
+an effective scam: it looks identical, but it's
+
+00:02:14.195 --> 00:02:16.822
+not the layer that actually holds your money.
+
+00:02:18.122 --> 00:02:19.212
+Quick check.
+
+00:02:19.212 --> 00:02:20.885
+Is a DeFi website the same
+
+00:02:20.885 --> 00:02:23.116
+thing as the protocol it represents?
+
+00:02:27.536 --> 00:02:29.441
+The answer: no. The interface
+
+00:02:29.441 --> 00:02:31.836
+only builds transactions for you.
+
+00:02:31.836 --> 00:02:34.347
+The smart contracts are the protocol, and
+
+00:02:34.347 --> 00:02:37.157
+interfaces can be faked or compromised without
+
+00:02:37.157 --> 00:02:38.951
+touching the contracts at all.
+
+00:02:40.251 --> 00:02:41.776
+Powerful and dangerous.
+
+00:02:43.076 --> 00:02:45.291
+Property one: self-custody.
+
+00:02:45.291 --> 00:02:47.195
+In a bank, the bank can freeze your
+
+00:02:47.195 --> 00:02:49.310
+account, and the bank can also help you
+
+00:02:49.310 --> 00:02:51.461
+recover it if something goes wrong.
+
+00:02:51.461 --> 00:02:53.002
+In your own DeFi wallet,
+
+00:02:53.002 --> 00:02:55.089
+nobody can freeze your funds.
+
+00:02:55.089 --> 00:02:57.524
+Nobody can recover them for you either.
+
+00:02:57.524 --> 00:02:59.972
+It's the same trade-off from Module Zero,
+
+00:02:59.972 --> 00:03:02.479
+and it's worth repeating here because this
+
+00:03:02.479 --> 00:03:04.344
+whole module is built around it.
+
+00:03:05.644 --> 00:03:08.349
+One sobering number on self-custody, from
+
+00:03:08.349 --> 00:03:10.904
+outside research, not this program.
+
+00:03:10.904 --> 00:03:15.426
+Blockchain-analytics researchers have estimated that somewhere around a
+
+00:03:15.426 --> 00:03:17.938
+fifth of all bitcoin ever mined sits in
+
+00:03:17.938 --> 00:03:22.084
+wallets that are effectively lost: forgotten passwords, discarded
+
+00:03:22.084 --> 00:03:25.524
+hard drives, seed phrases nobody can find anymore.
+
+00:03:25.524 --> 00:03:27.289
+Nobody can recover it.
+
+00:03:27.289 --> 00:03:29.214
+Nobody can freeze it either.
+
+00:03:29.214 --> 00:03:31.769
+Same coin, both directions, permanently.
+
+00:03:33.069 --> 00:03:35.299
+Property two: composability.
+
+00:03:35.299 --> 00:03:39.199
+DeFi protocols plug into each other, like building blocks.
+
+00:03:39.199 --> 00:03:42.839
+A stablecoin can be deposited into a lending market.
+
+00:03:42.839 --> 00:03:45.857
+The interest-bearing receipt from that lending market
+
+00:03:45.857 --> 00:03:48.169
+can be deposited into a yield vault.
+
+00:03:48.169 --> 00:03:49.576
+That vault's shares can be
+
+00:03:49.576 --> 00:03:51.648
+used as collateral somewhere else.
+
+00:03:51.648 --> 00:03:54.979
+Composability is what makes DeFi powerful, letting
+
+00:03:54.979 --> 00:03:58.087
+small pieces combine into complex products.
+
+00:03:58.087 --> 00:04:00.898
+It's also why one position can fail because of
+
+00:04:00.898 --> 00:04:04.307
+something several layers away that it quietly depends on.
+
+00:04:05.607 --> 00:04:07.777
+Property three: transparency.
+
+00:04:07.777 --> 00:04:11.382
+Every DeFi transaction and every contract's code can be
+
+00:04:11.382 --> 00:04:14.837
+checked by anyone, for free, on a block explorer.
+
+00:04:14.837 --> 00:04:16.582
+That's genuinely powerful.
+
+00:04:16.582 --> 00:04:18.687
+But transparent doesn't mean safe.
+
+00:04:18.687 --> 00:04:20.969
+A contract can be fully visible and
+
+00:04:20.969 --> 00:04:23.125
+still contain a bug, an admin key
+
+00:04:23.125 --> 00:04:25.661
+that can change the rules, or economics
+
+00:04:25.661 --> 00:04:28.307
+that only work while a subsidy lasts.
+
+00:04:28.307 --> 00:04:31.257
+Transparency gives you the ability to check.
+
+00:04:31.257 --> 00:04:32.452
+It doesn't check for you.
+
+00:04:33.752 --> 00:04:35.364
+Here's a real example of
+
+00:04:35.364 --> 00:04:38.307
+composability biting, not a hypothetical.
+
+00:04:38.307 --> 00:04:42.034
+In May of two thousand twenty-two, during the collapse
+
+00:04:42.034 --> 00:04:45.693
+of the Terra ecosystem, a liquid staking token called
+
+00:04:45.693 --> 00:04:48.945
+stETH briefly traded below the value of the ETH
+
+00:04:48.945 --> 00:04:52.401
+it represented, on the open market, even though it
+
+00:04:52.401 --> 00:04:55.547
+was still redeemable one-to-one over time.
+
+00:04:55.547 --> 00:04:59.319
+Protocols that had accepted stETH as collateral, several
+
+00:04:59.319 --> 00:05:02.496
+layers away from Terra itself, felt real stress
+
+00:05:02.496 --> 00:05:05.144
+from an event that, on the surface, had
+
+00:05:05.144 --> 00:05:06.732
+nothing to do with them.
+
+00:05:08.032 --> 00:05:09.122
+Quick check.
+
+00:05:09.122 --> 00:05:11.964
+Why can composability increase risk, even in a
+
+00:05:11.964 --> 00:05:14.504
+position that looks simple on the surface?
+
+00:05:18.924 --> 00:05:21.761
+The answer: a position inherits the failure
+
+00:05:21.761 --> 00:05:24.470
+risk of every protocol, asset, oracle and
+
+00:05:24.470 --> 00:05:26.791
+bridge it depends on, even the ones
+
+00:05:26.791 --> 00:05:28.919
+you can't see from the front end.
+
+00:05:30.219 --> 00:05:31.404
+The risk-first rule.
+
+00:05:32.704 --> 00:05:34.739
+Apply that rule to the stETH
+
+00:05:34.739 --> 00:05:36.864
+example from a moment ago.
+
+00:05:36.864 --> 00:05:40.860
+A risk-first operator, before ever depositing stETH as
+
+00:05:40.860 --> 00:05:44.856
+collateral anywhere, would have asked: what happens to
+
+00:05:44.856 --> 00:05:47.979
+this position if stETH trades below ETH on
+
+00:05:47.979 --> 00:05:50.579
+the open market, even briefly?
+
+00:05:50.579 --> 00:05:53.418
+That single question, asked in advance, is the
+
+00:05:53.418 --> 00:05:56.681
+entire difference between being surprised by an event
+
+00:05:56.681 --> 00:05:58.614
+and having already sized for it.
+
+00:05:59.914 --> 00:06:02.774
+Here's the rule this whole program is built on.
+
+00:06:02.774 --> 00:06:04.742
+Before comparing returns, list what
+
+00:06:04.742 --> 00:06:06.464
+could make you lose money.
+
+00:06:06.464 --> 00:06:09.124
 A higher yield means you're being paid to carry
 
-00:00:47.767 --> 00:00:50.837
+00:06:09.124 --> 00:06:12.194
 more risk, whether or not the website mentions it.
 
-00:00:50.837 --> 00:00:53.997
-First, Blockchain: records every balance and
+00:06:12.194 --> 00:06:14.709
+If you can't name the risk, you don't understand
 
-00:00:53.997 --> 00:00:57.246
-transaction (Ethereum, L2s, other chains).
+00:06:14.709 --> 00:06:17.122
+the yield, no matter how good the number looks.
 
-00:00:57.246 --> 00:00:59.976
-Next, Smart contracts: the protocol logic
+00:06:18.422 --> 00:06:20.342
+Here's the difference between the
 
-00:00:59.976 --> 00:01:02.681
-(a lending market, an exchange pool).
+00:06:20.342 --> 00:06:22.167
+two mindsets, side by side.
 
-00:01:02.681 --> 00:01:05.791
-Then, Tokens: the assets the contracts move.
+00:06:22.167 --> 00:06:24.969
+Return-first starts with the number, asks how to
 
-00:01:05.791 --> 00:01:09.256
-Also, Wallets: where you hold keys and sign actions.
+00:06:24.969 --> 00:06:26.971
+get more of it, and treats risk as
 
-00:01:09.256 --> 00:01:11.621
-On top of that, Interfaces: websites
+00:06:26.971 --> 00:06:29.272
+a footnote to check later, if ever.
 
-00:01:11.621 --> 00:01:13.966
-that build transactions for you.
+00:06:29.272 --> 00:06:32.356
+Risk-first starts with what could go wrong, sizes the
 
-00:01:13.966 --> 00:01:16.681
-They're a convenience, not the protocol itself.
+00:06:32.356 --> 00:06:35.326
+position around that answer, and only then looks at
 
-00:01:17.982 --> 00:01:20.553
-And Data layers: explorers and dashboards
+00:06:35.326 --> 00:06:37.967
+whether the remaining return is worth it.
 
-00:01:20.553 --> 00:01:22.812
-you use to verify what happened.
+00:06:37.967 --> 00:06:39.362
+Same opportunity.
 
-00:01:22.812 --> 00:01:25.941
-Plus, Self-custody: nobody can freeze your funds,
+00:06:39.362 --> 00:06:41.709
+Completely different order of operations.
 
-00:01:25.941 --> 00:01:28.432
-and nobody can recover them either.
+00:06:43.009 --> 00:06:45.342
+Here's what asking the question actually
 
-00:01:28.432 --> 00:01:32.307
-One more: Composability: protocols plug into each other.
+00:06:45.342 --> 00:06:47.064
+looks like, step by step.
 
-00:01:32.307 --> 00:01:35.008
-That makes products powerful, and a position can
+00:06:47.064 --> 00:06:48.329
+You see a yield.
 
-00:01:35.008 --> 00:01:37.512
-fail because of something it depends on.
+00:06:48.329 --> 00:06:49.562
+You ask what could make
 
-00:01:37.512 --> 00:01:41.802
-And finally, Transparency: you can verify everything on-chain.
+00:06:49.562 --> 00:06:51.404
+it fail, before anything else.
 
-00:01:41.802 --> 00:01:43.502
-Transparent doesn't mean safe.
+00:06:51.404 --> 00:06:53.200
+You name every risk you can
 
-00:01:44.802 --> 00:01:47.317
-Let's work an example, step by step.
+00:06:53.200 --> 00:06:55.809
+find: contract, oracle, bridge, peg.
 
-00:01:47.317 --> 00:01:52.027
-A pool advertises 12% A.P.Y. on a stablecoin.
+00:06:55.809 --> 00:06:57.446
+You size the position so that if
 
-00:01:52.027 --> 00:01:55.370
-Before depositing, ask: If you can't answer these, you
+00:06:57.446 --> 00:06:59.581
+you're wrong, it doesn't matter much.
 
-00:01:55.370 --> 00:01:58.222
-don't know what the 12% is paying you for.
+00:06:59.581 --> 00:07:00.906
+And only then do you
 
-00:01:58.222 --> 00:02:00.407
-Where does the 12% come from?
+00:07:00.906 --> 00:07:02.546
+deposit, or decide not to.
 
-00:02:00.407 --> 00:02:04.332
-Borrowers paying interest, trading fees, or a reward token?.
+00:07:03.846 --> 00:07:04.851
+Worked example.
 
-00:02:04.332 --> 00:02:06.707
-Which stablecoin, and what backs it?
+00:07:06.151 --> 00:07:08.965
+Question one, and the most important: where
 
-00:02:06.707 --> 00:02:08.422
-(Lesson 1.5).
+00:07:08.965 --> 00:07:11.431
+does the 12% actually come from?
 
-00:02:08.422 --> 00:02:10.058
+00:07:11.431 --> 00:07:14.739
+Every DeFi return is a mix of five sources.
+
+00:07:14.739 --> 00:07:17.064
+Service fees, paid by traders.
+
+00:07:17.064 --> 00:07:19.184
+Interest, paid by borrowers.
+
+00:07:19.184 --> 00:07:21.434
+Security rewards, for staking.
+
+00:07:21.434 --> 00:07:24.310
+Structural carry, like funding and basis.
+
+00:07:24.310 --> 00:07:27.151
+And incentives: emissions or points, which are
+
+00:07:27.151 --> 00:07:29.385
+only real once you've sold them.
+
+00:07:29.385 --> 00:07:31.997
+If the answer is “incentives,” that
+
+00:07:31.997 --> 00:07:33.665
+12% has an expiry date.
+
+00:07:34.965 --> 00:07:37.570
+So let's actually decompose an example
+
+00:07:37.570 --> 00:07:39.940
+12%, the way an operator would.
+
+00:07:39.940 --> 00:07:42.970
+Say 2% comes from real trading fees.
+
+00:07:42.970 --> 00:07:45.590
+1% from real borrower interest.
+
+00:07:45.590 --> 00:07:48.702
+And the remaining 9%, the biggest slice by far,
+
+00:07:48.702 --> 00:07:52.503
+from a reward token being emitted to attract deposits.
+
+00:07:52.503 --> 00:07:55.314
+That 9% only exists while the emissions keep
+
+00:07:55.314 --> 00:07:58.126
+flowing, and it's only real once you've sold
+
+00:07:58.126 --> 00:08:00.675
+the reward token for something else.
+
+00:08:00.675 --> 00:08:02.609
+The headline number and the durable
+
+00:08:02.609 --> 00:08:04.597
+number are two very different things.
+
+00:08:05.897 --> 00:08:08.662
+And four more questions, before you deposit.
+
+00:08:08.662 --> 00:08:11.607
+Which stablecoin, and what actually backs it?
+
+00:08:11.607 --> 00:08:15.202
+You'll learn to judge that properly in Lesson 1.5.
+
+00:08:15.202 --> 00:08:16.883
 Which contracts hold the money,
 
-00:02:10.058 --> 00:02:11.687
-and who can upgrade them?.
+00:08:16.883 --> 00:08:18.617
+and who can upgrade them?
 
-00:02:11.687 --> 00:02:14.232
-Is there a bridge or oracle involved?.
+00:08:18.617 --> 00:08:21.003
+Is there a bridge or an oracle involved,
 
-00:02:14.232 --> 00:02:17.057
-How do I withdraw, and could withdrawals be blocked?.
+00:08:21.003 --> 00:08:23.577
+each one another thing that can fail?
 
-00:02:18.357 --> 00:02:19.817
+00:08:23.577 --> 00:08:25.080
+And how do you withdraw, and
+
+00:08:25.080 --> 00:08:27.262
+could withdrawals ever be blocked?
+
+00:08:27.262 --> 00:08:30.234
+If you can't answer these five questions, you don't
+
+00:08:30.234 --> 00:08:32.292
+know what the 12% is paying you for.
+
+00:08:33.592 --> 00:08:34.632
+One more.
+
+00:08:34.632 --> 00:08:36.976
+If 9 of a pool's 12% APY comes
+
+00:08:36.976 --> 00:08:40.529
+from a reward token being emitted, what should
+
+00:08:40.529 --> 00:08:43.327
+you assume about that 9%? [[pause 4]]
+
+00:08:47.747 --> 00:08:49.812
+The answer: it's not durable.
+
+00:08:49.812 --> 00:08:53.166
+It only exists while the emissions continue, and it's
+
+00:08:53.166 --> 00:08:56.457
+only real once you've actually sold the reward token.
+
+00:08:57.757 --> 00:08:58.942
+Last check.
+
+00:08:58.942 --> 00:09:01.702
+In one sentence, what is the risk-first mindset?
+
+00:09:06.122 --> 00:09:08.567
+The answer: identify what could make you
+
+00:09:08.567 --> 00:09:10.892
+lose money, before you compare returns.
+
+00:09:12.192 --> 00:09:13.652
 Here's your checklist.
 
-00:02:19.817 --> 00:02:21.352
+00:09:13.652 --> 00:09:15.187
 Do it now, for real.
 
-00:02:21.352 --> 00:02:22.869
-First, I can name the six
+00:09:15.187 --> 00:09:16.796
+First, you can name the six
 
-00:02:22.869 --> 00:02:24.627
+00:09:16.796 --> 00:09:18.532
 layers of the DeFi stack.
 
-00:02:24.627 --> 00:02:28.332
-Next, I can explain why self-custody cuts both ways.
+00:09:18.532 --> 00:09:22.237
+Second, you can explain why self-custody cuts both ways.
 
-00:02:28.332 --> 00:02:30.506
-And finally, before any yield, I ask
+00:09:22.237 --> 00:09:24.341
+And third, before any yield, you ask:
 
-00:02:30.506 --> 00:02:32.387
-"what am I being paid to risk?".
+00:09:24.341 --> 00:09:25.947
+what am I being paid to risk?
 
-00:02:33.687 --> 00:02:34.897
-Question 1.
-
-00:02:34.897 --> 00:02:37.162
-Why can composability increase risk?
-
-00:02:41.582 --> 00:02:45.006
-The answer: A position inherits the failure risk of
-
-00:02:45.006 --> 00:02:48.627
-every protocol, asset, oracle and bridge it depends on.
-
-00:02:49.927 --> 00:02:51.172
-Question 2.
-
-00:02:51.172 --> 00:02:53.577
-Is a website the same thing as the protocol?
-
-00:02:57.997 --> 00:03:01.877
-The answer: No. The interface only builds transactions.
-
-00:03:01.877 --> 00:03:04.126
-The contracts are the protocol, and
-
-00:03:04.126 --> 00:03:06.562
-interfaces can be faked or compromised.
-
-00:03:07.862 --> 00:03:09.132
-Question 3.
-
-00:03:09.132 --> 00:03:11.837
-What is the risk-first mindset in one sentence?
-
-00:03:16.257 --> 00:03:18.659
-The answer: Identify what could make you
-
-00:03:18.659 --> 00:03:20.886
-lose money before you compare returns.
-
-00:03:22.186 --> 00:03:23.431
+00:09:27.247 --> 00:09:28.492
 Let's recap.
 
-00:03:23.431 --> 00:03:26.105
-Blockchain: records every balance and
+00:09:28.492 --> 00:09:33.343
+DeFi replaces intermediaries with smart contracts, across six layers:
 
-00:03:26.105 --> 00:03:29.361
-transaction (Ethereum, L2s, other chains).
+00:09:33.343 --> 00:09:38.147
+blockchain, contracts, tokens, wallet, interface and data layers.
 
-00:03:29.361 --> 00:03:31.877
-Smart contracts: the protocol logic (a
+00:09:38.147 --> 00:09:41.489
+Self-custody, composability and transparency make
 
-00:03:31.877 --> 00:03:34.371
-lending market, an exchange pool).
+00:09:41.489 --> 00:09:43.861
+it both powerful and dangerous.
 
-00:03:34.371 --> 00:03:37.001
-Tokens: the assets the contracts move.
+00:09:43.861 --> 00:09:46.450
+And the risk-first rule: list what could make
 
-00:03:37.001 --> 00:03:39.456
-Wallets: where you hold keys and sign actions.
+00:09:46.450 --> 00:09:49.151
+you lose money, before you ever compare returns.
 
-00:03:40.756 --> 00:03:43.271
+00:09:50.451 --> 00:09:52.966
 Do the checklist now, before you move on.
 
-00:03:43.271 --> 00:03:47.303
+00:09:52.966 --> 00:09:55.226
+You now have the whole lesson in your
+
+00:09:55.226 --> 00:09:58.379
+head: the six-layer stack, the three properties that
+
+00:09:58.379 --> 00:10:01.650
+make DeFi powerful and dangerous, the risk-first rule,
+
+00:10:01.650 --> 00:10:04.746
+and how to actually decompose a headline yield.
+
+00:10:04.746 --> 00:10:08.778
 Next up, Lesson 1.2: How a transaction actually happens.
