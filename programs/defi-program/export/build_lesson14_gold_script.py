@@ -1,0 +1,134 @@
+#!/usr/bin/env python3
+"""Gold-standard script for Lesson 1.4, Tokens, approvals & allowances
+(about 11-14 minutes). Teaches ERC-20/NFT tokens, approvals and allowances,
+why unlimited approvals are risky, the special danger of gasless Permit/
+Permit2 signatures, wrapped/receipt tokens, fake tokens and contract-address
+verification, and a full worked example reading a real approval request.
+
+Writes video-scripts/gold/lesson-01-4.json (the generator skips lessons with a
+gold script). Spoken text (vo) spells numbers for the voice; cap is the written
+caption, same sentence count as vo."""
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+S = []
+
+
+def sc(type_, vo, cap=None, **k):
+    d = {"type": type_, **k, "vo": vo}
+    if cap:
+        d["cap"] = cap
+    S.append(d)
+
+
+def img(src, eyebrow, vo, cap=None, **k):
+    sc("image", vo, cap, src=src, eyebrow=eyebrow, wide=True, **k)
+
+
+D = "assets/diagrams/"
+
+# ---------------------------------------------------------------- intro
+sc("title", "Lesson one point four. Tokens, approvals and allowances. By the end, you'll be able to read an approval request and know exactly what you're allowing, before you sign it.",
+   "Lesson 1.4. Tokens, approvals and allowances. By the end, you'll be able to read an approval request and know exactly what you're allowing, before you sign it.",
+   chapter="Intro", eyebrow="Lesson 1.4", num="1.4", title="Tokens, approvals & allowances", sub="Know exactly what you're allowing, before you sign.")
+sc("pillars", "Here's the plan. First, what tokens actually are, and why a name can be faked but a contract address can't. Second, approvals and allowances, and why unlimited ones are the trap. Third, the gasless signature that's even easier to sign by mistake. And finally, a full worked example: reading a real approval request, step by step.",
+   chapter="Intro", title="What this lesson covers",
+   items=[{"icon": "coins", "title": "What a token is", "text": "And how to verify the real one"}, {"icon": "key", "title": "Approvals", "text": "Why unlimited is the trap"},
+          {"icon": "alert", "title": "The gasless signature", "text": "Easier to sign without noticing"}, {"icon": "eye", "title": "A worked example", "text": "Reading a real approval, live"}])
+
+# ---------------------------------------------------------------- tokens
+sc("title", "What a token actually is.", chapter="What a token is", eyebrow="What a token is", num="20", title="ERC-20s, NFTs, and the one thing that identifies them",
+   sub="A name can be faked. An address can't.")
+sc("statement", "Most tokens on Ethereum and similar chains follow a standard called E.R.C. dash twenty: fungible tokens, where every unit is interchangeable, like U.S.D.C. or E.T.H. itself. N.F.Ts, following E.R.C. dash seven twenty-one or eleven fifty-five, are non-fungible: each one is unique, and in DeFi they can represent something like a specific concentrated liquidity position, not just art.",
+   "Most tokens on Ethereum and similar chains follow a standard called ERC-20: fungible tokens, where every unit is interchangeable, like USDC or ETH itself. NFTs, following ERC-721 or ERC-1155, are non-fungible: each one is unique, and in DeFi they can represent something like a specific concentrated liquidity position, not just art.",
+   chapter="What a token is", kicker="Two standards", lines=["ERC-20: fungible,", "interchangeable, like USDC."], sub="NFTs (ERC-721/1155): unique — sometimes a specific DeFi position, not just art.")
+sc("statement", "Here's how a fake token actually gets in front of you, since it's more mundane than it sounds. Someone deploys a token, names it and its ticker identically to a real one, and adds it to a decentralised exchange's listing, or airdrops it directly into wallets. Your wallet app might even display it with the right name and logo, pulled automatically from that fake contract's own metadata, because the display name is exactly as fakeable as everything else about it.",
+   chapter="What a token is", kicker="How the fake gets in front of you", lines=["Same name. Same ticker.", "Even the logo can be faked."], sub="Your wallet's display name comes from the token's own metadata — which anyone controls.")
+sc("statement", "Here's the fact that matters more than either standard. Anyone can create a token and call it “USDC.” The name and the ticker symbol are just text, chosen by whoever deployed the token, and they're completely free to fake. The only thing that actually identifies a token is its contract address, a fixed string that only the real, original deployment has.",
+   chapter="What a token is", kicker="The fact that matters", lines=["Anyone can name a token “USDC.”", "Only the contract address is real."], sub="Verify the address, from an authoritative source. Never trust the name alone.")
+sc("statement", "One concrete example of an N.F.T. as a DeFi position, not art: a concentrated liquidity position on an exchange like Uniswap can itself be an N.F.T. Its metadata encodes your price range and your share of the pool. You'll price and manage exactly this kind of position properly in Module Two, but it's worth knowing now that “N.F.T.” doesn't always mean a picture. Sometimes it's the deed to a real, active position.",
+   "One concrete example of an NFT as a DeFi position, not art: a concentrated liquidity position on an exchange like Uniswap can itself be an NFT. Its metadata encodes your price range and your share of the pool. You'll price and manage exactly this kind of position properly in Module 2, but it's worth knowing now that “NFT” doesn't always mean a picture. Sometimes it's the deed to a real, active position.",
+   chapter="What a token is", kicker="Not always a picture", lines=["A concentrated LP position", "can itself be an NFT."], sub="Its metadata encodes your price range and your share of the pool.")
+img(D + "tx-lifecycle.png", "Wrapped and receipt tokens",
+    "One more category worth knowing: wrapped and receipt tokens. W.E.T.H. wraps E.T.H. into an E.R.C. dash twenty so it behaves like any other token in a contract. Lending receipts and L.P. tokens work the same way: they're not the underlying asset itself, they're a claim on it, tracked by a separate token you hold instead. That claim is only as good as the contract that issued it.",
+    "One more category worth knowing: wrapped and receipt tokens. WETH wraps ETH into an ERC-20 so it behaves like any other token in a contract. Lending receipts and LP tokens work the same way: they're not the underlying asset itself, they're a claim on it, tracked by a separate token you hold instead. That claim is only as good as the contract that issued it.",
+    chapter="What a token is")
+
+# ---------------------------------------------------------------- approvals
+sc("title", "Approvals and allowances.", chapter="Approvals and allowances", eyebrow="Approvals and allowances", num="1", title="Permission to move your tokens",
+   sub="A spender, a token, and an allowance.")
+img(D + "approval-anatomy.png", "Anatomy of an approval",
+    "To let a protocol move your tokens on your behalf, you approve a spender, usually the protocol's own contract, for an allowance, an amount of a specific token. From that point on, the protocol can pull tokens up to that allowance, whenever you act, without asking you to sign again each time. Read every part before you sign: which token, which spender, and how much.",
+    chapter="Approvals and allowances")
+sc("compare", "Here's the trap, and it's the single most common one in this lesson's checklist. Unlimited approvals are convenient: sign once, and every future deposit just works, no repeated prompts. But it lets that contract move all of that token, forever, not just this transaction's amount. If the contract, or the approval mechanism itself, is ever exploited, everything you approved is reachable. An exact approval costs one extra signature later, in exchange for a hard ceiling on what any single exploit can take.",
+   chapter="Approvals and allowances",
+   left={"label": "Unlimited approval", "tone": "bad", "items": ["Sign once, never prompted again", "Can move all of that token, forever", "An exploit reaches everything approved"]},
+   right={"label": "Exact approval", "tone": "good", "items": ["One more signature, next time", "Can only move what you approved now", "An exploit is capped at that amount"]})
+sc("stats", "One real number to make this concrete, not hypothetical. Blockchain-security researchers have tracked hundreds of millions of dollars taken by wallet-drainer scams across 2023 and 2024, and old, unrevoked approvals are one of their primary tools: no new signature needed if a spender contract is later found to be malicious or gets exploited. This isn't a rare failure mode. It's one of the most common ones in the entire industry.",
+   "One real number to make this concrete, not hypothetical. Blockchain-security researchers have tracked hundreds of millions of dollars taken by wallet-drainer scams across 2023 and 2024, and old, unrevoked approvals are one of their primary tools: no new signature needed if a spender contract is later found to be malicious or gets exploited. This isn't a rare failure mode. It's one of the most common ones in the entire industry.",
+   chapter="Approvals and allowances", stats=[["$100Ms+", "tracked drainer losses, 2023-2024 (outside research)"]])
+sc("statement", "One habit worth naming before the checklist: treat “edit allowance” as a button you look for, not a rare option. Most modern wallets let you change the requested amount right in the signing screen, down to exactly what this one transaction needs. It's not hidden to discourage you. It's just easy to miss the first few times, because unlimited is usually the number a protocol pre-fills.",
+   chapter="Approvals and allowances", kicker="A button to look for", lines=["“Edit allowance” usually exists.", "Unlimited is just the pre-filled default."], sub="Most wallets let you change the amount right in the signing screen.")
+sc("quiz", "Quick check. What's the actual risk of leaving an unlimited approval in place on a protocol you no longer use? [[pause 4]] The answer: if that contract is ever exploited, or the approval itself is abused, it can move every unit of that token you hold, not just what you originally deposited.",
+   chapter="Approvals and allowances", n=1, of=3, q="What's the actual risk of leaving an unlimited approval on a protocol you no longer use?",
+   a="If that contract is ever exploited, it can move every unit of that token you hold, not just what you originally deposited.")
+
+# ---------------------------------------------------------------- the gasless signature
+sc("title", "The gasless signature.", chapter="The gasless signature", eyebrow="The gasless signature", num="0", title="Permit and Permit2",
+   sub="No gas. No transaction. Easy to sign without noticing.")
+sc("statement", "Here's a detail that catches out even careful people. Signature approvals, using a standard called Permit, or its successor Permit2, grant an allowance with an off-chain signature, not an on-chain transaction. There's no gas fee, and often no separate confirmation screen with a network warning on it. It can feel like a lighter-weight action than it is, which is exactly why drainers use it.",
+   "Here's a detail that catches out even careful people. Signature approvals, using a standard called Permit, or its successor Permit2, grant an allowance with an off-chain signature, not an on-chain transaction. There's no gas fee, and often no separate confirmation screen with a network warning on it. It can feel like a lighter-weight action than it is, which is exactly why drainers use it.",
+   chapter="The gasless signature", kicker="Why it's dangerous", lines=["No gas. No transaction.", "It feels lighter than it is."], sub="Drainers use exactly this to get a real allowance, cheaply.")
+sc("compare", "Here's the two side by side, so the difference is concrete. A normal on-chain approval costs gas, appears on an explorer, and usually shows a clear network warning in your wallet. A Permit signature costs nothing, never touches the blockchain until it's actually used, and can look like a routine “sign in” prompt. Read a Permit request exactly as carefully as a transaction, every time, because it grants exactly the same power.",
+   chapter="The gasless signature",
+   left={"label": "A normal approval", "tone": "neutral", "items": ["Costs gas", "Visible on an explorer immediately", "Usually shows a network warning"]},
+   right={"label": "A Permit signature", "tone": "bad", "items": ["Costs nothing", "Invisible until it's actually used", "Can look like a routine “sign in”"]})
+sc("steps", "So here's the habit for reading any signature request, Permit included, in four steps. Stop before signing, even if it looks routine. Read what it actually says: token, spender, amount. Ask whether this specific action needs that permission at all. And only then, sign, or decline. The whole habit takes maybe ten extra seconds, and it's the difference between a routine signature and a drained wallet.",
+   chapter="The gasless signature", title="Reading any signature request",
+   steps=["Stop, even if it looks routine", "Read it: token, spender, amount", "Ask if this action needs that permission", "Sign, or decline"], result="10 extra seconds, every time")
+sc("quiz", "Quick check. Why is a gasless Permit signature dangerous? [[pause 4]] The answer: it can grant a token allowance without a transaction, so it's easy to sign without noticing, and drainers use it to take tokens.",
+   chapter="The gasless signature", n=2, of=3, q="Why is a gasless “Permit” signature dangerous?",
+   a="It can grant a token allowance without a transaction, so it's easy to sign without noticing. Drainers use it to take tokens.")
+
+# ---------------------------------------------------------------- worked example
+sc("title", "Worked example.", chapter="Worked example", eyebrow="Worked example", num="4", title="Reading a real approval request",
+   sub="Four checks, before you sign.")
+sc("statement", "One last honest note. None of these four checks require you to read code, or understand what the contract does internally. They're all things anyone can verify: an address that matches published docs, a number you can see and edit, a contract address you can compare character by character, and a revoke button in a tool built for exactly this. The skill isn't technical. It's just doing the check, every time, instead of trusting the popup.",
+   chapter="Worked example", kicker="Not a technical skill", lines=["None of these four checks", "require reading code."], sub="The skill is doing the check every time, not trusting the popup.")
+sc("statement", "Here's the request, exactly as your wallet might show it. “Allow zero x three F C nine, dot dot dot, A one B two, to spend your U.S.D.C. Amount: unlimited.” Four checks, in order, before you sign anything.",
+   "Here's the request, exactly as your wallet might show it. “Allow 0x3fC9…a1B2 to spend your USDC. Amount: Unlimited.” Four checks, in order, before you sign anything.",
+   chapter="Worked example", kicker="The request", lines=["“Allow 0x3fC9…a1B2", "to spend your USDC. Unlimited.”"], sub="Four checks, before you sign anything.")
+sc("flow", "Check one: is that address the protocol's official router? Verify it against the docs or an explorer, never just trust the popup. Check two: do you actually need unlimited? Edit it down to this deposit's amount if your wallet allows it. Check three: is this actually the real U.S.D.C. contract, not a look-alike? And check four, for later: once you're done with this protocol, revoke the approval with a revoke tool, if you won't be back.",
+   "Check one: is that address the protocol's official router? Verify it against the docs or an explorer, never just trust the popup. Check two: do you actually need unlimited? Edit it down to this deposit's amount if your wallet allows it. Check three: is this actually the real USDC contract, not a look-alike? And check four, for later: once you're done with this protocol, revoke the approval with a revoke tool, if you won't be back.",
+   chapter="Worked example", title="Four checks, before you sign",
+   nodes=[{"label": "Verify the spender", "sub": "Against docs or an explorer", "icon": "search"}, {"label": "Edit the amount", "sub": "Down to what you need", "icon": "key"},
+          {"label": "Verify the token", "sub": "The real contract, not a look-alike", "icon": "eye"}, {"label": "Revoke later", "sub": "When you're done with the protocol", "icon": "check"}])
+sc("compare", "One more comparison worth carrying with you: monthly review versus never reviewing at all. A monthly pass through a revoke tool takes a few minutes, costs a small network fee per revocation, and keeps your live approval list matching what you're actually still using. Never reviewing means every approval you've ever granted stays live indefinitely, on every protocol you've ever tried once, whether or not it's still trustworthy today.",
+   chapter="Worked example",
+   left={"label": "Never reviewed", "tone": "bad", "items": ["Every approval ever granted stays live", "Includes apps you tried once, years ago"]},
+   right={"label": "Reviewed monthly", "tone": "good", "items": ["A few minutes, a small fee per revoke", "Matches what you're actually still using"]})
+sc("quiz", "Last check. How do you actually know a token is the real one, and not a fake with the same name? [[pause 4]] The answer: by its contract address, from an authoritative source like the project's own docs, never by its name or ticker symbol alone.",
+   chapter="Worked example", n=3, of=3, q="How do you know a token is the real one, and not a fake with the same name?",
+   a="By its contract address, from an authoritative source. Never by name or ticker alone.")
+
+# ---------------------------------------------------------------- checklist and recap
+sc("bullets", "Here's your checklist. Do it now, for real. First, the spender is verified against official docs. Second, the allowance is limited to what's needed. Third, you read signature requests as carefully as transactions. And fourth, you review and revoke approvals on a regular schedule, monthly is a good default.",
+   chapter="Checklist", title="Your checklist", numbered=True,
+   items=["Spender verified against official docs", "Allowance limited to what's needed", "Signature requests read as carefully as transactions", "Approvals reviewed and revoked monthly"])
+sc("bullets", "Let's recap. A token's name can be faked; only its contract address is real. An approval grants a spender an allowance, and unlimited approvals let one exploit reach everything you've approved. A Permit signature grants the same power with no gas and no transaction, which is exactly why drainers love it. And before signing any approval: verify the spender, edit the amount, verify the token, and revoke it later when you're done.",
+   chapter="Recap", title="Recap", check=False,
+   items=["A token's name can be faked; only the contract address is real", "Unlimited approvals let one exploit reach everything approved",
+          "A Permit signature: same power, no gas, no transaction", "Verify the spender, edit the amount, verify the token, revoke later"])
+sc("cta", "Do the checklist now, before you move on. You now have the whole lesson in your head: what actually identifies a real token, why unlimited approvals are the trap, why a gasless Permit deserves the same care as a transaction, and how to read a real approval request. Next up, Lesson one point five: Stablecoins and how they break.",
+   "Do the checklist now, before you move on. You now have the whole lesson in your head: what actually identifies a real token, why unlimited approvals are the trap, why a gasless Permit deserves the same care as a transaction, and how to read a real approval request. Next up, Lesson 1.5: Stablecoins and how they break.",
+   chapter="Recap", button="Next: Lesson 1.5", sub="Stablecoins and how they break")
+
+spec = {"id": "lesson-01-4", "title": "Lesson 1.4: Tokens, approvals & allowances", "size": [1920, 1080], "group": "lessons", "maxMinutes": 25,
+        "tag": "Lesson 1.4", "gold": True, "music": True, "musicLevel": 0.14, "seed": 46,
+        "use": "Lesson 1.4 page in the Whop course. Hand-written gold-standard script: ERC-20/NFT tokens, allowances, unlimited-vs-exact, Permit/Permit2 danger, reading a real approval.",
+        "thumbnail": {"title": "Tokens & approvals", "subtitle": "Lesson 1.4"}, "scenes": S}
+out = ROOT / "video-scripts" / "gold" / "lesson-01-4.json"
+out.write_text(json.dumps(spec, indent=1, ensure_ascii=False))
+words = sum(len(s["vo"].replace("[[pause 4]]", "").split()) for s in S)
+print(f"{len(S)} scenes, {words} words, est {(words / 171 * 60 + len(S) * 1.3 + 4 * 3) / 60:.1f} min")
