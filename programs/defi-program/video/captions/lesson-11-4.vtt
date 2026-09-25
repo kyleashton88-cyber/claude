@@ -1,0 +1,154 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.435
+Lesson 11.4.
+
+00:00:02.435 --> 00:00:04.450
+Stress-testing a portfolio.
+
+00:00:04.450 --> 00:00:06.789
+By the end of this lesson, you'll be able
+
+00:00:06.789 --> 00:00:09.518
+to run standard shock scenarios on your book and
+
+00:00:09.518 --> 00:00:11.635
+fix what fails before markets test it.
+
+00:00:12.935 --> 00:00:14.225
+Here's the plan.
+
+00:00:14.225 --> 00:00:15.910
+First, the key ideas.
+
+00:00:15.910 --> 00:00:18.625
+Then, a worked example, step by step.
+
+00:00:18.625 --> 00:00:20.150
+Then, your checklist.
+
+00:00:20.150 --> 00:00:22.312
+And finally, a three-question quiz.
+
+00:00:23.612 --> 00:00:28.251
+Scenarios every operator runs: crypto −50% in a day
+
+00:00:28.251 --> 00:00:32.445
+· a stablecoin depegs 10% · borrow rates spike
+
+00:00:32.445 --> 00:00:36.281
+to 20% · your largest protocol is hacked ·
+
+00:00:36.281 --> 00:00:38.990
+your main L2 halts for 48h.
+
+00:00:38.990 --> 00:00:41.790
+For each: loss, liquidations, liquidity, and
+
+00:00:41.790 --> 00:00:43.967
+whether the payout policy survives.
+
+00:00:45.267 --> 00:00:50.709
+Holdings: ETH spot $60k · LST collateral
+
+00:00:50.709 --> 00:00:55.620
+$60k with $12k debt · stable lending
+
+00:00:55.620 --> 00:01:00.399
+$50k ($25k each in two protocols) ·
+
+00:01:00.399 --> 00:01:05.212
+ETH/USDC LP $20k · PT stable $10k.
+
+00:01:05.212 --> 00:01:12.881
+ETH −50%, Spot −$30k; collateral −$30k (HF 4.0 →
+
+00:01:12.881 --> 00:01:20.707
+2.0, no liquidation); LP $20k → $14.1k (−$5.9k) →
+
+00:01:20.707 --> 00:01:29.302
+−$65.9k (−32.9%), Survives, but the payout must fall.
+
+00:01:29.302 --> 00:01:36.338
+One stablecoin −10%, −$2.5k on $25k, Yes.
+
+00:01:36.338 --> 00:01:41.816
+Borrow rate 20%, Interest on $12k rises from
+
+00:01:41.816 --> 00:01:47.473
+~$600 to $2,400/yr, Yes: covered by reserve.
+
+00:01:47.473 --> 00:01:52.418
+One lending protocol hacked (total loss),
+
+00:01:52.418 --> 00:01:57.428
+−$25k (−12.5%), Survives; cap was 12.5%.
+
+00:01:57.428 --> 00:02:01.076
+L2 halted 48h, Positions frozen; the reserve
+
+00:02:01.076 --> 00:02:04.238
+on another chain covers needs, Yes, if
+
+00:02:04.238 --> 00:02:06.913
+the reserve isn't on the same L2.
+
+00:02:08.213 --> 00:02:09.673
+Here's your checklist.
+
+00:02:09.673 --> 00:02:11.208
+Do it now, for real.
+
+00:02:11.208 --> 00:02:14.143
+First, Five scenarios run on the current book.
+
+00:02:14.143 --> 00:02:16.370
+Next, every "fail" has a fix (smaller
+
+00:02:16.370 --> 00:02:18.898
+cap, bigger buffer, move the reserve).
+
+00:02:18.898 --> 00:02:22.266
+And finally, Re-run quarterly and after big changes.
+
+00:02:23.567 --> 00:02:24.777
+Question 1.
+
+00:02:24.777 --> 00:02:28.212
+Why did the collateral position survive −50%?
+
+00:02:32.632 --> 00:02:35.522
+The answer: It started at HF 4.0;
+
+00:02:35.522 --> 00:02:38.327
+halving the price took it to 2.0.
+
+00:02:39.627 --> 00:02:40.872
+Question 2.
+
+00:02:40.872 --> 00:02:43.147
+What does the L2-halt scenario test?
+
+00:02:47.567 --> 00:02:49.495
+The answer: Whether your liquidity
+
+00:02:49.495 --> 00:02:50.927
+depends on a single chain.
+
+00:02:52.227 --> 00:02:53.497
+Question 3.
+
+00:02:53.497 --> 00:02:55.272
+What's the output of a stress test?
+
+00:02:59.692 --> 00:03:04.471
+The answer: Fixes: smaller caps, bigger buffers, better-placed reserves.
+
+00:03:05.770 --> 00:03:08.285
+Do the checklist now, before you move on.
+
+00:03:08.285 --> 00:03:10.885
+Next up, Lesson 11.5: Incident
+
+00:03:10.885 --> 00:03:13.485
+response: the first 60 minutes.

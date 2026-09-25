@@ -1,0 +1,160 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.235
+Lesson 12.2.
+
+00:00:02.235 --> 00:00:06.631
+Custody architecture: vault, multisig and spending policies.
+
+00:00:06.631 --> 00:00:09.241
+By the end of this lesson, you'll be able
+
+00:00:09.241 --> 00:00:12.285
+to design custody so that no single lost device,
+
+00:00:12.285 --> 00:00:15.516
+stolen key or mistaken signature can drain the bank.
+
+00:00:16.816 --> 00:00:18.106
+Here's the plan.
+
+00:00:18.106 --> 00:00:19.791
+First, the key ideas.
+
+00:00:19.791 --> 00:00:22.506
+Then, a worked example, step by step.
+
+00:00:22.506 --> 00:00:24.031
+Then, your checklist.
+
+00:00:24.031 --> 00:00:26.193
+And finally, a three-question quiz.
+
+00:00:27.493 --> 00:00:31.055
+Scale Module 1's three wallets into a bank-grade
+
+00:00:31.055 --> 00:00:35.489
+setup: Smart-account features to use where available: Vault,
+
+00:00:35.489 --> 00:00:39.269
+Most of your equity, Multisig, e.g. 2-of-3 hardware
+
+00:00:39.269 --> 00:00:42.913
+keys in separate locations, No DeFi approvals.
+
+00:00:42.913 --> 00:00:46.828
+Moves only to the Operating tier, to allowlisted addresses.
+
+00:00:46.828 --> 00:00:50.155
+Operating, Active positions, Hardware wallet or a
+
+00:00:50.155 --> 00:00:53.848
+smart account with limits, Verified protocols only.
+
+00:00:53.848 --> 00:00:55.443
+Spending limit per day.
+
+00:00:55.443 --> 00:00:59.668
+Hot, Small float, Hot wallet, Anything new or experimental.
+
+00:00:59.668 --> 00:01:00.923
+Refilled on schedule.
+
+00:01:02.223 --> 00:01:05.363
+Let's look at the diagram: Custody architecture.
+
+00:01:05.363 --> 00:01:06.923
+Take a moment with it.
+
+00:01:06.923 --> 00:01:09.333
+It's everything we've just said, in one picture.
+
+00:01:10.633 --> 00:01:13.148
+Let's work an example, step by step.
+
+00:01:13.148 --> 00:01:16.604
+Vault: 2-of-3 multisig, with key A at home, key
+
+00:01:16.604 --> 00:01:19.413
+B in a safe-deposit box and key C with
+
+00:01:19.413 --> 00:01:22.953
+a trusted person or a professional co-signer.
+
+00:01:22.953 --> 00:01:25.083
+Losing any one key is survivable;
+
+00:01:25.083 --> 00:01:27.387
+stealing any one key is useless.
+
+00:01:27.387 --> 00:01:29.077
+Test it: move $10 through
+
+00:01:29.077 --> 00:01:30.767
+every path once a quarter.
+
+00:01:32.067 --> 00:01:33.527
+Here's your checklist.
+
+00:01:33.527 --> 00:01:35.062
+Do it now, for real.
+
+00:01:35.062 --> 00:01:39.517
+First, Vault is multisig; keys in separate physical locations.
+
+00:01:39.517 --> 00:01:42.312
+Next, Operating tier has a daily limit.
+
+00:01:42.312 --> 00:01:44.777
+Then, Allowlist on vault outflows.
+
+00:01:44.777 --> 00:01:47.802
+And finally, Quarterly recovery test done and logged.
+
+00:01:49.102 --> 00:01:50.312
+Question 1.
+
+00:01:50.312 --> 00:01:52.597
+Why 2-of-3 rather than 1-of-1?
+
+00:01:57.017 --> 00:01:59.611
+The answer: One key can be lost or stolen
+
+00:01:59.611 --> 00:02:03.007
+without losing the funds or giving an attacker control.
+
+00:02:04.307 --> 00:02:05.552
+Question 2.
+
+00:02:05.552 --> 00:02:07.097
+What does a timelock buy you?
+
+00:02:11.517 --> 00:02:13.568
+The answer: Time to notice and
+
+00:02:13.568 --> 00:02:15.817
+cancel an unauthorised large move.
+
+00:02:17.117 --> 00:02:18.387
+Question 3.
+
+00:02:18.387 --> 00:02:20.562
+Why test recovery with a small amount?
+
+00:02:24.982 --> 00:02:26.963
+The answer: A recovery plan you've
+
+00:02:26.963 --> 00:02:28.792
+never run is an assumption.
+
+00:02:28.792 --> 00:02:31.072
+Testing proves every key and path works.
+
+00:02:32.372 --> 00:02:34.887
+Do the checklist now, before you move on.
+
+00:02:34.887 --> 00:02:37.214
+Next up, Lesson 12.3: The credit
+
+00:02:37.214 --> 00:02:39.682
+line: borrowing like a bank client.

@@ -1,0 +1,181 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.445
+Lesson 11.5.
+
+00:00:02.445 --> 00:00:05.369
+Incident response: the first 60 minutes.
+
+00:00:05.369 --> 00:00:07.644
+By the end of this lesson, you'll be
+
+00:00:07.644 --> 00:00:09.919
+able to know exactly what to do when
+
+00:00:09.919 --> 00:00:12.747
+a protocol you use is exploited, a stablecoin
+
+00:00:12.747 --> 00:00:15.084
+depegs, or your wallet is compromised.
+
+00:00:16.384 --> 00:00:17.674
+Here's the plan.
+
+00:00:17.674 --> 00:00:19.359
+First, the key ideas.
+
+00:00:19.359 --> 00:00:22.074
+Then, a worked example, step by step.
+
+00:00:22.074 --> 00:00:23.599
+Then, your checklist.
+
+00:00:23.599 --> 00:00:25.761
+And finally, a three-question quiz.
+
+00:00:27.061 --> 00:00:29.541
+0–5 min: Verify.
+
+00:00:29.541 --> 00:00:35.531
+Official channels only (bookmarked X/Discord/status page, security firms).
+
+00:00:35.531 --> 00:00:37.288
+Don't click links in DMs, and
+
+00:00:37.288 --> 00:00:39.871
+don't sign anything "to protect funds".
+
+00:00:39.871 --> 00:00:42.156
+5–20 min: Contain.
+
+00:00:42.156 --> 00:00:44.746
+20–60 min: Stabilise.
+
+00:00:44.746 --> 00:00:47.558
+Check HFs across all positions (prices may
+
+00:00:47.558 --> 00:00:49.978
+be moving), top up from the reserve,
+
+00:00:49.978 --> 00:00:52.960
+and journal every action with timestamps.
+
+00:00:52.960 --> 00:00:54.335
+After: Review.
+
+00:00:54.335 --> 00:00:56.697
+What was the signal, what worked, and what
+
+00:00:56.697 --> 00:00:59.150
+changes in the caps and the register?
+
+00:00:59.150 --> 00:01:02.633
+First, Protocol exploit: withdraw if still possible
+
+00:01:02.633 --> 00:01:06.215
+and safe; revoke approvals to affected contracts.
+
+00:01:06.215 --> 00:01:10.092
+Next, Depeg: follow your written peg rule (e.g.
+
+00:01:10.092 --> 00:01:13.888
+exit below 0.99 for X hours); don't panic-sell
+
+00:01:13.888 --> 00:01:16.450
+far below it on a thin book.
+
+00:01:16.450 --> 00:01:20.350
+And finally, Wallet compromise: move remaining assets to
+
+00:01:20.350 --> 00:01:23.635
+a fresh wallet (new seed, clean device); revoke
+
+00:01:23.635 --> 00:01:26.440
+approvals; assume the old seed is burned.
+
+00:01:27.741 --> 00:01:30.256
+Let's work an example, step by step.
+
+00:01:30.256 --> 00:01:32.724
+A lending protocol you use announces
+
+00:01:32.724 --> 00:01:35.226
+a paused market after an exploit.
+
+00:01:35.226 --> 00:01:38.053
+You verify on its bookmarked status page,
+
+00:01:38.053 --> 00:01:41.419
+see withdrawals still work on unaffected markets,
+
+00:01:41.419 --> 00:01:44.515
+withdraw your USDC, revoke the pool approval,
+
+00:01:44.515 --> 00:01:47.306
+check your other HFs, and journal it.
+
+00:01:47.306 --> 00:01:49.636
+Total time: 25 minutes.
+
+00:01:49.636 --> 00:01:51.051
+Loss: none.
+
+00:01:51.051 --> 00:01:52.976
+Because the steps were written in advance.
+
+00:01:54.276 --> 00:01:55.736
+Here's your checklist.
+
+00:01:55.736 --> 00:01:57.271
+Do it now, for real.
+
+00:01:57.271 --> 00:02:00.766
+First, Incident playbook printed/saved offline.
+
+00:02:00.766 --> 00:02:04.848
+Next, Official channels bookmarked for every protocol I use.
+
+00:02:04.848 --> 00:02:08.063
+And finally, A clean "fresh wallet" procedure written.
+
+00:02:09.363 --> 00:02:10.573
+Question 1.
+
+00:02:10.573 --> 00:02:12.268
+First thing to do in an incident?
+
+00:02:16.688 --> 00:02:19.948
+The answer: Verify through official, bookmarked channels.
+
+00:02:21.248 --> 00:02:22.493
+Question 2.
+
+00:02:22.493 --> 00:02:25.188
+Someone offers a link to "rescue your funds".
+
+00:02:25.188 --> 00:02:26.038
+What do you do?
+
+00:02:30.458 --> 00:02:32.273
+The answer: Ignore it.
+
+00:02:32.273 --> 00:02:34.223
+It's a common scam during incidents.
+
+00:02:35.523 --> 00:02:36.793
+Question 3.
+
+00:02:36.793 --> 00:02:39.528
+Wallet compromised: can you keep using the seed?
+
+00:02:43.948 --> 00:02:46.616
+The answer: No. Move to a fresh wallet with
+
+00:02:46.616 --> 00:02:48.678
+a new seed; the old one is burned.
+
+00:02:49.978 --> 00:02:52.493
+Do the checklist now, before you move on.
+
+00:02:52.493 --> 00:02:55.638
+Next up, Lesson 12.0: Mastery Starter.
