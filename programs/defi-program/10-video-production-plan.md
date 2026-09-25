@@ -57,7 +57,7 @@ node build_video.js lessons              # all lessons (several hours of renderi
 | 0.6 | Networks, gas and your first transfer | 12 | 4.3 min | `video-scripts/lessons/lesson-00-6.json` | ✓ |
 | 0.7 | Your first DeFi steps (practice mode first) | 12 | 3.8 min | `video-scripts/lessons/lesson-00-7.json` | ✓ |
 | 0.8 | Your security baseline, and the language of DeFi | 19 | 5.7 min | `video-scripts/lessons/lesson-00-8.json` | ✓ |
-| 1.0 | Mastery Starter | 8 | 1.6 min | `video-scripts/lessons/lesson-01-0.json` | ✓ |
+| 1.0 | Mastery Starter | 32 | 10.3 min | `video-scripts/gold/lesson-01-0.json` (gold: donut of loss causes, burner-wallet/multisig flows, approval & phishing compares, animated ladder) | ✓ |
 | 1.1 | What DeFi is, and the risk-first mindset | 11 | 3.8 min | `video-scripts/lessons/lesson-01-1.json` | ✓ |
 | 1.2 | How a transaction actually happens | 10 | 3.2 min | `video-scripts/lessons/lesson-01-2.json` | ✓ |
 | 1.3 | Wallets, keys, hardware & multisig | 11 | 3.3 min | `video-scripts/lessons/lesson-01-3.json` | ✓ |

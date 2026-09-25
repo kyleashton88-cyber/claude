@@ -1,0 +1,483 @@
+{
+ "id": "lesson-01-0",
+ "title": "Lesson 1.0: Mastery Starter",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "maxMinutes": 25,
+ "tag": "Lesson 1.0",
+ "gold": true,
+ "music": true,
+ "musicLevel": 0.14,
+ "seed": 42,
+ "use": "Lesson 1.0 page in the Whop course. Hand-written gold-standard script: the Module 1 Mastery Starter, taught with animated flows and charts.",
+ "thumbnail": {
+  "title": "Foundations & Safety",
+  "subtitle": "Lesson 1.0 · Mastery Starter"
+ },
+ "scenes": [
+  {
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Lesson 1.0 · Mastery Starter",
+   "num": "1.0",
+   "title": "Foundations & Safety",
+   "sub": "Your map for Module 1, in pictures.",
+   "vo": "Lesson one point zero. The Mastery Starter for Module One: Foundations and Safety. By the end, you'll know the five words this module runs on, and exactly how to tell when you've mastered it.",
+   "cap": "Lesson 1.0. The Mastery Starter for Module 1: Foundations and Safety. By the end, you'll know the five words this module runs on, and exactly how to tell when you've mastered it."
+  },
+  {
+   "type": "pillars",
+   "chapter": "Intro",
+   "title": "What this lesson covers",
+   "items": [
+    {
+     "icon": "alert",
+     "title": "Why losses happen",
+     "text": "Mistakes and scams, not markets"
+    },
+    {
+     "icon": "book",
+     "title": "Five words",
+     "text": "Drawn out, not just defined"
+    },
+    {
+     "icon": "clock",
+     "title": "Before you start",
+     "text": "What Module 0 should've left you with"
+    },
+    {
+     "icon": "target",
+     "title": "The ladder",
+     "text": "How you'll know you've mastered it"
+    }
+   ],
+   "vo": "Here's the plan. First, the sixty-second version: why almost every loss in crypto is a mistake, not a market move. Second, the five words you'll need, each one drawn out. Third, what to have ready before you start. Fourth, your first safe step: auditing your approvals. And finally, the mastery ladder, so you know exactly what finishing this module looks like."
+  },
+  {
+   "type": "statement",
+   "chapter": "The 60-second version",
+   "kicker": "The 60-second version",
+   "lines": [
+    "Most losses aren't market losses.",
+    "They're mistakes and scams."
+   ],
+   "sub": "This module builds the habits that prevent them.",
+   "vo": "Here's the whole module in one sentence. Most crypto losses aren't market losses. They're mistakes and scams: a seed phrase typed into a fake site, an approval signed without reading, a transaction sent on the wrong network. This module builds the habits that prevent them."
+  },
+  {
+   "type": "chart",
+   "chapter": "The 60-second version",
+   "kind": "donut",
+   "title": "Where beginner losses usually come from",
+   "sub": "Illustrative categories, not measured data",
+   "center": "Not the market",
+   "centerSub": "four preventable doors",
+   "segs": [
+    {
+     "label": "Leaked keys or seed",
+     "text": "Typed in, photographed, shared",
+     "value": 30,
+     "show": "≈30%",
+     "tone": "bad"
+    },
+    {
+     "label": "Bad approvals",
+     "text": "Signed without reading",
+     "value": 25,
+     "show": "≈25%",
+     "tone": "warn"
+    },
+    {
+     "label": "Wrong address/network",
+     "text": "Sent to the wrong place",
+     "value": 20,
+     "show": "≈20%",
+     "tone": "warn"
+    },
+    {
+     "label": "Phishing",
+     "text": "Fake sites, fake support",
+     "value": 25,
+     "show": "≈25%",
+     "tone": "bad"
+    }
+   ],
+   "vo": "Here's roughly how beginner losses break down, as categories, not measured statistics. A leaked seed phrase or private key. A signed approval that let someone else move funds. A payment sent on the wrong network or to the wrong address. And outright phishing, a fake site or a fake support agent. Notice what's missing: “the market went down” isn't on this list. That's what this module is built to close."
+  },
+  {
+   "type": "statement",
+   "chapter": "The 60-second version",
+   "kicker": "Why this module exists",
+   "lines": [
+    "Wallet-draining scams:",
+    "one of the biggest loss categories."
+   ],
+   "sub": "Habits are the actual perimeter. Not the technology.",
+   "vo": "This isn't a small problem. Multiple industry trackers have found that wallet-draining phishing scams are now one of the largest single categories of user-level crypto loss, year after year, bigger than exchange hacks. Not because the technology is weak. Because habits are the actual perimeter."
+  },
+  {
+   "type": "title",
+   "chapter": "Words you'll need",
+   "eyebrow": "Words you'll need",
+   "num": "5",
+   "title": "Five words, drawn out",
+   "sub": "Private key · Approval · Multisig · Phishing · Simulation",
+   "vo": "Now, the five words you'll need."
+  },
+  {
+   "type": "flow",
+   "chapter": "Words you'll need",
+   "title": "A burner wallet's key",
+   "nodes": [
+    {
+     "label": "Small amount",
+     "sub": "Disposable, for trying new apps",
+     "icon": "wallet"
+    },
+    {
+     "label": "Private key",
+     "sub": "Signs transactions, same as any wallet",
+     "icon": "key"
+    },
+    {
+     "label": "Limited risk",
+     "sub": "If compromised, you lose a little",
+     "icon": "shield"
+    }
+   ],
+   "vo": "Word one: private key. The secret that signs transactions. You met this in Module Zero, but here's the operator version. A burner wallet is a wallet with only a small, disposable amount in it, used to try new apps first. Its private key can sign transactions, same as any wallet. The difference is what's at risk if it's ever compromised: a little, not everything."
+  },
+  {
+   "type": "stats",
+   "chapter": "Words you'll need",
+   "stats": [
+    [
+     "$20–$100",
+     "a typical burner wallet balance (illustrative)"
+    ]
+   ],
+   "vo": "One real-world number for the burner wallet. Most operators keep somewhere between twenty and a hundred dollars in a burner, enough to actually use a new app, small enough that losing it entirely wouldn't hurt. That's the number to aim for while you're still learning which apps you trust.",
+   "cap": "One real-world number for the burner wallet. Most operators keep somewhere between $20 and $100 in a burner, enough to actually use a new app, small enough that losing it entirely wouldn't hurt. That's the number to aim for while you're still learning which apps you trust."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/approval-anatomy.png",
+   "eyebrow": "Word two: approval",
+   "wide": true,
+   "chapter": "Words you'll need",
+   "vo": "Word two: approval. Permission for an app to move a token on your behalf. From Lesson one point four: an approval names a spender, a token, and an amount, and it keeps working every time after you sign it once. That's the trap. An approval outlives the trade it was signed for. Revoke the ones you no longer use."
+  },
+  {
+   "type": "compare",
+   "chapter": "Words you'll need",
+   "left": {
+    "label": "Unlimited approval",
+    "tone": "bad",
+    "items": [
+     "The app's default, usually",
+     "Never asks again",
+     "A compromise can take everything approved"
+    ]
+   },
+   "right": {
+    "label": "Exact approval",
+    "tone": "good",
+    "items": [
+     "One extra click, sometimes",
+     "Just enough for this transaction",
+     "A compromise can only take that amount"
+    ]
+   },
+   "vo": "One habit that comes straight from that anatomy. Most apps default to asking for an unlimited approval, permission to move any amount, forever, because it means you won't be asked again next time. A safer habit, where your wallet allows it, is an exact approval: just enough for this one transaction. It costs you one extra click now and then. It also means a compromised app can only ever take what you approved."
+  },
+  {
+   "type": "flow",
+   "chapter": "Words you'll need",
+   "title": "A 2-of-3 multisig",
+   "layout": "cycle",
+   "nodes": [
+    {
+     "label": "Key 1",
+     "sub": "Held separately",
+     "icon": "key"
+    },
+    {
+     "label": "Key 2",
+     "sub": "Held separately",
+     "icon": "key"
+    },
+    {
+     "label": "Key 3",
+     "sub": "Held separately",
+     "icon": "key"
+    }
+   ],
+   "vo": "Word three: multisig, short for multi-signature. A wallet that needs several separate keys to agree before it can act. Picture a vault with three locks, held by three different people, and any two of them are enough to open it. One compromised key isn't enough on its own. That's the whole idea: no single point of failure."
+  },
+  {
+   "type": "statement",
+   "chapter": "Words you'll need",
+   "kicker": "The point of a multisig",
+   "lines": [
+    "One stolen key,",
+    "on its own, does nothing."
+   ],
+   "sub": "Any 2 of 3 can act. No single point of failure.",
+   "vo": "So with a two-of-three multisig, any two keys can move funds, but one stolen key, on its own, can do nothing. That's why serious amounts, later in this program, move into a multisig, not a single wallet."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/scam-patterns.png",
+   "eyebrow": "Word four: phishing",
+   "wide": true,
+   "chapter": "Words you'll need",
+   "vo": "Word four: phishing. A fake site or message built to steal. From Lesson one point six: fake look-alike sites, drainers that get one signature to grant everything, fake support messages asking for your seed, and poisoned addresses slipped into your history hoping you'll copy the wrong one. The pattern is always pressure, plus a shortcut around your own checks."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/simulate-before-sign.png",
+   "eyebrow": "Word five: simulation",
+   "wide": true,
+   "chapter": "Words you'll need",
+   "vo": "Word five: simulation. A preview of what a transaction will actually change, before you sign it. From Lesson one point seven: a simulator shows you the real result, what leaves your wallet, what arrives, what approvals get granted, so you're never signing blind. If a wallet or tool can show you a simulation, use it, every time."
+  },
+  {
+   "type": "compare",
+   "chapter": "Words you'll need",
+   "left": {
+    "label": "Likely fake",
+    "tone": "bad",
+    "items": [
+     "Address is slightly off",
+     "Reached via a search ad or message",
+     "Padlock icon present (proves nothing here)"
+    ]
+   },
+   "right": {
+    "label": "Likely real",
+    "tone": "good",
+    "items": [
+     "Address matches exactly",
+     "Reached via your own bookmark",
+     "You typed it yourself, or confirmed it first"
+    ]
+   },
+   "vo": "And here's how to actually catch phishing in the moment. A fake site copies the real one closely, but the web address is slightly wrong, and you usually reached it through a search ad or a message, not a bookmark. A real site's address matches exactly, and you got there through your own bookmark or by typing it yourself. A padlock icon in the browser proves the connection is encrypted. It proves nothing about who's on the other end."
+  },
+  {
+   "type": "quiz",
+   "chapter": "Words you'll need",
+   "n": 1,
+   "of": 4,
+   "q": "What's the core idea behind a multisig wallet?",
+   "a": "It needs several separate keys to agree before it acts. One stolen key, on its own, can't move the funds.",
+   "vo": "Quick check. What's the core idea behind a multisig wallet? [[pause 4]] The answer: it needs several separate keys to agree before it can act, so one stolen key, on its own, can't move the funds."
+  },
+  {
+   "type": "title",
+   "chapter": "Before you start",
+   "eyebrow": "Before you start",
+   "num": "2",
+   "title": "What Module 0 should have left you with",
+   "sub": "Two things, ready before Lesson 1.1",
+   "vo": "Before you start."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/tx-lifecycle.png",
+   "eyebrow": "A quick preview",
+   "wide": true,
+   "chapter": "Before you start",
+   "vo": "Here's a preview of Lesson one point two, because it matters for everything else in this module. Every transaction you'll ever sign follows this same life cycle: you sign it, the network checks it, it's added to a block, and it reaches finality. Every safety habit in this module, exact approvals, simulation, multisig, is really about controlling what happens at that first step: the sign."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Before you start",
+   "title": "Two things, ready to go",
+   "numbered": true,
+   "items": [
+    "Module 0 done: secured exchange, restore-tested wallet",
+    "A small amount in your wallet, on a low-fee network"
+   ],
+   "vo": "Two things, both from Module Zero. First, Module Zero done: a secured exchange account, and a wallet whose restore you've tested. Second, a small amount already sitting in that wallet, on a low-fee network, ready to practise with. If either is missing, go back and finish Module Zero first. This module builds directly on those habits."
+  },
+  {
+   "type": "title",
+   "chapter": "Your first safe step",
+   "eyebrow": "Your first safe step",
+   "num": "1",
+   "title": "Audit your approvals",
+   "sub": "Ten minutes, no new risk.",
+   "vo": "Your first safe step."
+  },
+  {
+   "type": "statement",
+   "chapter": "Your first safe step",
+   "kicker": "Step one",
+   "lines": [
+    "List every approval.",
+    "Revoke what you don't use."
+   ],
+   "sub": "About 10 minutes. It closes the door word two warned you about.",
+   "vo": "Your first step in this module doesn't touch a new app at all. Open your wallet's approvals screen, or a revoke tool, list every approval you've ever granted, and revoke any you don't currently use. It takes about ten minutes, and it closes the exact door word two warned you about."
+  },
+  {
+   "type": "flow",
+   "chapter": "Your first safe step",
+   "title": "Auditing your approvals",
+   "nodes": [
+    {
+     "label": "Open approvals",
+     "sub": "In your wallet or a revoke tool",
+     "icon": "eye"
+    },
+    {
+     "label": "Read each one",
+     "sub": "App, token, amount",
+     "icon": "doc"
+    },
+    {
+     "label": "Still using it?",
+     "sub": "Decide, one by one",
+     "icon": "search"
+    },
+    {
+     "label": "Revoke unused",
+     "sub": "Small fee, permanent",
+     "icon": "check"
+    }
+   ],
+   "vo": "Here's the worked example. Open your wallet's approvals screen. Read down the list: which app, which token, how much it can move. For each one, ask: am I still using this? If yes, leave it. If no, revoke it, which costs a small network fee but permanently removes that permission. Ten minutes, and every unused door is closed."
+  },
+  {
+   "type": "quiz",
+   "chapter": "Your first safe step",
+   "n": 2,
+   "of": 4,
+   "q": "Why is an old, unused approval worth revoking, even if nothing's gone wrong yet?",
+   "a": "It outlives the trade it was signed for and keeps working until revoked. If that app is ever compromised, an old approval is still a live door.",
+   "vo": "Quick check. Why is an old, unused approval worth revoking, even if nothing's gone wrong yet? [[pause 4]] The answer: an approval outlives the trade it was signed for, and keeps working until you revoke it. If that app is ever compromised, an old approval is still a live door."
+  },
+  {
+   "type": "title",
+   "chapter": "The mastery ladder",
+   "eyebrow": "The mastery ladder",
+   "num": "3",
+   "title": "Three rungs",
+   "sub": "Beginner · Practitioner · Master",
+   "vo": "The mastery ladder."
+  },
+  {
+   "type": "chart",
+   "chapter": "The mastery ladder",
+   "kind": "bars",
+   "title": "The mastery ladder",
+   "bars": [
+    {
+     "label": "Beginner",
+     "text": "Burner wallet, reads every prompt",
+     "value": 1,
+     "show": "Rung 1",
+     "tone": "blue"
+    },
+    {
+     "label": "Practitioner",
+     "text": "Checklist from memory, hardware wallet",
+     "value": 2,
+     "show": "Rung 2",
+     "tone": "blue"
+    },
+    {
+     "label": "Master",
+     "text": "Multisig, tested recovery",
+     "value": 3,
+     "show": "Rung 3",
+     "tone": "good"
+    }
+   ],
+   "vo": "Here's how you'll measure your progress through Module One. Beginner: uses a separate burner wallet, and reads every prompt before signing. Practitioner: runs the before-signing checklist from memory, keeps approvals limited, and uses a hardware wallet. And Master: a multisig vault, a simulation on every signature, private addresses, and a tested recovery plan."
+  },
+  {
+   "type": "bullets",
+   "chapter": "The mastery ladder",
+   "title": "The road ahead",
+   "numbered": true,
+   "compact": true,
+   "items": [
+    "1.1 · What DeFi is, and the risk-first mindset",
+    "1.2 · How a transaction actually happens",
+    "1.3 · Wallets, keys, hardware & multisig",
+    "1.4 · Tokens, approvals & allowances",
+    "1.5 · Stablecoins and how they break",
+    "1.6 · Scam defence",
+    "1.7 · Reading signatures, simulating transactions",
+    "1.8 · Privacy and physical security",
+    "1.9 · Smart accounts & account abstraction"
+   ],
+   "vo": "Here's the road ahead, lesson by lesson. One point one, what DeFi is, and the risk-first mindset. One point two, how a transaction actually happens. One point three, wallets, keys, hardware and multisig. One point four, tokens, approvals and allowances. One point five, stablecoins and how they break. One point six, scam defence. One point seven, reading signatures and simulating transactions. One point eight, privacy and physical security. And one point nine, smart accounts and account abstraction.",
+   "cap": "Here's the road ahead, lesson by lesson. 1.1, what DeFi is, and the risk-first mindset. 1.2, how a transaction actually happens. 1.3, wallets, keys, hardware and multisig. 1.4, tokens, approvals and allowances. 1.5, stablecoins and how they break. 1.6, scam defence. 1.7, reading signatures and simulating transactions. 1.8, privacy and physical security. And 1.9, smart accounts and account abstraction."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/privacy-physical.png",
+   "eyebrow": "One more preview",
+   "wide": true,
+   "chapter": "You've mastered it when…",
+   "vo": "One more preview, from Lesson one point eight. Your wallet address isn't your identity, until you connect the two, by posting it publicly next to your name, or letting a delivery address and a crypto balance touch the same paper trail. Privacy and physical security round out this module for exactly that reason: the safest signature in the world doesn't help if someone knows which door to knock on."
+  },
+  {
+   "type": "statement",
+   "chapter": "You've mastered it when…",
+   "kicker": "The top rung",
+   "lines": [
+    "First visit to a new app,",
+    "to a verified, revoked transaction."
+   ],
+   "sub": "Not a big balance. A repeatable, careful process.",
+   "vo": "You've mastered this module when you can take a brand-new app from first visit, to a limited, simulated, verified transaction, and revoke that approval afterward. Not a big balance. A repeatable, careful process."
+  },
+  {
+   "type": "quiz",
+   "chapter": "You've mastered it when…",
+   "n": 3,
+   "of": 4,
+   "q": "A “support” message with an almost-right link and a padlock icon asks you to click. What should you do?",
+   "a": "Don't click it. Nobody legitimate messages you first, “almost right” isn't right, and a padlock only proves encryption, not who's on the other end.",
+   "vo": "One more. You get a message from “support,” claiming your wallet has a problem, with a link to fix it. The web address looks almost right, and there's a padlock icon. What should you do? [[pause 4]] The answer: don't click it. Nobody legitimate messages you first, the address is “almost right,” not right, and a padlock only means the connection is encrypted, not that the destination is real."
+  },
+  {
+   "type": "quiz",
+   "chapter": "You've mastered it when…",
+   "n": 4,
+   "of": 4,
+   "q": "What does mastering Module 1 actually look like?",
+   "a": "Taking a new app from first visit to a limited, simulated, verified transaction, and revoking the approval afterward.",
+   "vo": "Last check. What does mastering Module One actually look like? [[pause 4]] The answer: taking a new app from first visit to a limited, simulated, verified transaction, and revoking the approval afterward."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "check": false,
+   "items": [
+    "Private key: the secret that signs; keep it small in a burner wallet",
+    "Approval: outlives the trade; revoke what you don't use",
+    "Multisig: several keys, no single point of failure",
+    "Phishing: pressure plus a shortcut around your checks",
+    "Simulation: never sign blind"
+   ],
+   "vo": "Let's recap the five words. Private key: the secret that signs, kept small in a burner wallet while you're learning. Approval: permission that outlives the trade, so revoke what you don't use. Multisig: several keys, no single point of failure. Phishing: pressure plus a shortcut around your checks. And simulation: never sign blind."
+  },
+  {
+   "type": "cta",
+   "chapter": "Recap",
+   "button": "Next: Lesson 1.1",
+   "sub": "What DeFi is, and the risk-first mindset",
+   "vo": "That's the Mastery Starter. You now have the whole module in your head: why losses happen, the five words, your first safe step, and the ladder that tells you when you're done. Next up, Lesson one point one: What DeFi is, and the risk-first mindset.",
+   "cap": "That's the Mastery Starter. You now have the whole module in your head: why losses happen, the five words, your first safe step, and the ladder that tells you when you're done. Next up, Lesson 1.1: What DeFi is, and the risk-first mindset."
+  }
+ ]
+}

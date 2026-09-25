@@ -71,7 +71,11 @@ already does.
    - `chart` (bars/waterfall, donut, line — added to `build_video.js` this session) for any
      comparison of sizes, a budget/split, a trend over time, or a before/after number. A
      single-value stat reads better as a `stats` scene than a lone bar (established this
-     session after a visual review caught a sparse-looking single-bar chart).
+     session after a visual review caught a sparse-looking single-bar chart). Keep every
+     `bars`/`chart` item's `text` short enough to fit on one line under its label (roughly 40
+     characters, fewer for a 3-item chart) — a two-line sub-label sits low enough to collide
+     with the caption strip during whichever sentence is on screen at that moment (caught and
+     fixed twice in Lesson 1.0's mastery-ladder chart).
    - `compare` for exactly two options side by side; `steps`/`bullets` only when the content
      is genuinely a flat list with no relationships to show.
    - `image` for anything a static diagram explains well — **reuse an existing file** in
