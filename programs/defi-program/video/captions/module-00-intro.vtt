@@ -1,67 +1,1342 @@
 WEBVTT
 
-00:00:00.550 --> 00:00:01.905
-Module 0.
+00:00:00.550 --> 00:00:03.810
+Welcome to Module 0: Crypto From Zero.
 
-00:00:01.905 --> 00:00:03.440
-Crypto From Zero.
+00:00:03.810 --> 00:00:06.288
+If you've never owned crypto, never opened a
 
-00:00:03.440 --> 00:00:05.125
-Part of Stage 0, Zero.
+00:00:06.288 --> 00:00:08.491
+wallet, and you're not even sure what a
 
-00:00:06.425 --> 00:00:08.919
-By the end of this module, you'll be able
+00:00:08.491 --> 00:00:11.490
+blockchain is, you're in exactly the right place.
 
-00:00:08.919 --> 00:00:11.413
-to go from never having owned crypto to a
+00:00:11.490 --> 00:00:13.175
+This module was built for you.
 
-00:00:11.413 --> 00:00:15.154
-secured exchange account, a backed-up wallet, a first transfer
+00:00:14.475 --> 00:00:16.214
+Over the next 20 minutes or so,
 
-00:00:15.154 --> 00:00:17.710
-and a first practice DeFi transaction.
+00:00:16.214 --> 00:00:18.145
+I'm going to tell you a story.
 
-00:00:17.710 --> 00:00:22.715
-Ends with the **Day-1 Setup Kit** checklist.
+00:00:18.145 --> 00:00:19.960
+It's about someone called Sam.
 
-00:00:22.715 --> 00:00:24.070
-That's the standard.
+00:00:19.960 --> 00:00:21.338
+Sam is a lot like most
 
-00:00:24.070 --> 00:00:26.040
-Every lesson moves you toward it.
+00:00:21.338 --> 00:00:23.375
+people who join this program.
 
-00:00:27.340 --> 00:00:29.401
-There are 8 lessons, starting with
+00:00:23.375 --> 00:00:25.895
+Curious, a little nervous, and completely new.
 
-00:00:29.401 --> 00:00:32.115
-Money, ledgers and why blockchains exist.
+00:00:27.195 --> 00:00:29.245
+Sam had heard the words everywhere.
 
-00:00:32.115 --> 00:00:34.094
-Each one ends with a checklist to
+00:00:29.245 --> 00:00:30.840
+Bitcoin, on the news.
 
-00:00:34.094 --> 00:00:36.365
-do for real, and a three-question quiz.
+00:00:30.840 --> 00:00:33.895
+Wallets and seed phrases, from a friend at work.
 
-00:00:37.665 --> 00:00:39.341
-If the topic is new to
+00:00:33.895 --> 00:00:36.560
+DeFi, in a video that promised the moon.
 
-00:00:39.341 --> 00:00:42.265
-you, start with Mastery Starter 0.0.
+00:00:36.560 --> 00:00:38.165
+And a story about someone who
 
-00:00:42.265 --> 00:00:44.160
-It takes about ten minutes.
+00:00:38.165 --> 00:00:40.445
+lost everything with one wrong click.
 
-00:00:44.160 --> 00:00:46.314
-Then take the lessons in order, because
+00:00:40.445 --> 00:00:42.854
+It all sounded exciting, confusing and
 
-00:00:46.314 --> 00:00:48.445
-each one builds on the one before.
+00:00:42.854 --> 00:00:44.645
+a bit dangerous, all at once.
 
-00:00:48.445 --> 00:00:50.252
-And do the checklists for real,
+00:00:45.945 --> 00:00:48.175
+So here's what this video will do.
 
-00:00:50.252 --> 00:00:52.285
-with small test amounts, every time.
+00:00:48.175 --> 00:00:51.042
+First, you'll understand what crypto actually
 
-00:00:53.585 --> 00:00:56.210
-Let's begin, with lesson 0.0.
+00:00:51.042 --> 00:00:53.710
+is, using pictures from everyday life.
+
+00:00:53.710 --> 00:00:55.638
+Second, you'll see the tools Sam
+
+00:00:55.638 --> 00:00:57.690
+used, and why each one exists.
+
+00:00:57.690 --> 00:01:00.689
+Third, you'll learn the handful of mistakes that cause
+
+00:01:00.689 --> 00:01:03.715
+almost every beginner loss, and how to avoid them.
+
+00:01:03.715 --> 00:01:06.291
+And fourth, you'll see exactly how Module
+
+00:01:06.291 --> 00:01:08.192
+0 walks you through all of it,
+
+00:01:08.192 --> 00:01:09.725
+one small step at a time.
+
+00:01:11.025 --> 00:01:12.145
+Chapter 1.
+
+00:01:12.145 --> 00:01:13.305
+Money is a record.
+
+00:01:14.605 --> 00:01:16.635
+Sam's first surprise was this.
+
+00:01:16.635 --> 00:01:19.170
+Most of the money in your life isn't cash.
+
+00:01:19.170 --> 00:01:20.815
+It's a number in a list.
+
+00:01:20.815 --> 00:01:22.225
+When you get paid, no one
+
+00:01:22.225 --> 00:01:23.990
+carries notes to your bank.
+
+00:01:23.990 --> 00:01:25.980
+Someone changes a number in the bank's
+
+00:01:25.980 --> 00:01:27.970
+records, and that number is your money.
+
+00:01:29.270 --> 00:01:31.465
+Picture a village with one notebook.
+
+00:01:31.465 --> 00:01:33.451
+Every time someone pays someone else,
+
+00:01:33.451 --> 00:01:35.475
+the village clerk writes it down.
+
+00:01:35.475 --> 00:01:37.405
+Ana paid Ben 10 coins.
+
+00:01:37.405 --> 00:01:39.075
+Ben paid Cai 5.
+
+00:01:39.075 --> 00:01:42.855
+Everyone trusts the notebook, because everyone trusts the clerk.
+
+00:01:42.855 --> 00:01:44.550
+That notebook has a name.
+
+00:01:44.550 --> 00:01:45.705
+It's called a ledger.
+
+00:01:47.005 --> 00:01:48.670
+Your bank is that clerk.
+
+00:01:48.670 --> 00:01:50.375
+It keeps the record for you.
+
+00:01:50.375 --> 00:01:53.245
+It can reverse a payment if something goes wrong.
+
+00:01:53.245 --> 00:01:55.360
+It can help when you forget a password.
+
+00:01:55.360 --> 00:01:57.207
+But it can also freeze your account,
+
+00:01:57.207 --> 00:01:59.305
+and you have to trust it completely.
+
+00:01:59.305 --> 00:02:01.585
+Crypto changes who's in charge.
+
+00:02:01.585 --> 00:02:04.073
+In your own wallet, the network keeps the
+
+00:02:04.073 --> 00:02:06.502
+record, no one can reverse a payment, no
+
+00:02:06.502 --> 00:02:08.872
+one can reset your password, and no one
+
+00:02:08.872 --> 00:02:10.175
+can freeze it but you.
+
+00:02:11.475 --> 00:02:12.936
+So what if the village didn't
+
+00:02:12.936 --> 00:02:14.330
+need a clerk at all?
+
+00:02:14.330 --> 00:02:16.667
+What if, instead of one notebook, every
+
+00:02:16.667 --> 00:02:19.121
+villager kept an identical copy, and they
+
+00:02:19.121 --> 00:02:21.645
+all checked each new entry together?
+
+00:02:21.645 --> 00:02:24.040
+That's the idea behind a blockchain.
+
+00:02:24.040 --> 00:02:25.495
+It's a shared ledger.
+
+00:02:25.495 --> 00:02:28.113
+Thousands of computers keep the same copy,
+
+00:02:28.113 --> 00:02:30.910
+and old entries can't be quietly changed.
+
+00:02:30.910 --> 00:02:32.495
+The trade-off is simple, and
+
+00:02:32.495 --> 00:02:34.025
+it matters: there's no undo.
+
+00:02:35.325 --> 00:02:37.310
+Here's why nobody can cheat.
+
+00:02:37.310 --> 00:02:39.757
+Imagine someone edits their copy to
+
+00:02:39.757 --> 00:02:41.960
+say they received 100 coins.
+
+00:02:41.960 --> 00:02:44.060
+Every other copy disagrees, so the
+
+00:02:44.060 --> 00:02:46.640
+network simply ignores the edited one.
+
+00:02:46.640 --> 00:02:49.534
+To fake a payment, you'd have to overpower most
+
+00:02:49.534 --> 00:02:53.090
+of the network at once, which is enormously expensive.
+
+00:02:53.090 --> 00:02:56.012
+No single company is in charge, and that's also
+
+00:02:56.012 --> 00:02:58.325
+why no one can undo a payment for you.
+
+00:02:59.625 --> 00:03:01.250
+And why the word chain?
+
+00:03:01.250 --> 00:03:04.558
+New entries are grouped into pages, called blocks.
+
+00:03:04.558 --> 00:03:06.634
+Each block carries a kind of seal, a
+
+00:03:06.634 --> 00:03:09.607
+fingerprint made from everything written on it, plus
+
+00:03:09.607 --> 00:03:11.478
+the seal of the page before.
+
+00:03:11.478 --> 00:03:13.163
+So the pages are linked.
+
+00:03:13.163 --> 00:03:16.057
+Change one old entry, and its seal changes,
+
+00:03:16.057 --> 00:03:18.923
+and every page after it stops matching.
+
+00:03:18.923 --> 00:03:20.262
+That's why history on a
+
+00:03:20.262 --> 00:03:22.383
+blockchain can't be quietly rewritten.
+
+00:03:23.683 --> 00:03:25.318
+So, in one picture.
+
+00:03:25.318 --> 00:03:28.960
+Bitcoin, launched in 2009, was the first blockchain:
+
+00:03:28.960 --> 00:03:32.078
+digital money with no bank in the middle.
+
+00:03:32.078 --> 00:03:35.898
+Ethereum, launched in 2015, went further.
+
+00:03:35.898 --> 00:03:38.035
+It lets people put small programs on
+
+00:03:38.035 --> 00:03:40.404
+the blockchain, which is what makes apps
+
+00:03:40.404 --> 00:03:42.668
+like lending and trading possible.
+
+00:03:42.668 --> 00:03:45.103
+Most of this program happens on Ethereum
+
+00:03:45.103 --> 00:03:47.063
+and the networks built around it.
+
+00:03:48.363 --> 00:03:50.428
+Sam asked the obvious question.
+
+00:03:50.428 --> 00:03:52.253
+Why would anyone want this?
+
+00:03:52.253 --> 00:03:53.468
+Four reasons.
+
+00:03:53.468 --> 00:03:55.953
+You can send money worldwide, to anyone,
+
+00:03:55.953 --> 00:03:58.072
+at any time, often in minutes.
+
+00:03:58.072 --> 00:04:00.907
+You can hold it yourself, with no bank needed.
+
+00:04:00.907 --> 00:04:03.012
+The money is programmable, so apps
+
+00:04:03.012 --> 00:04:05.597
+can lend, trade and pay automatically.
+
+00:04:05.597 --> 00:04:06.938
+And the rules are open:
+
+00:04:06.938 --> 00:04:08.802
+anyone can check the record.
+
+00:04:08.802 --> 00:04:10.797
+But notice the line at the bottom.
+
+00:04:10.797 --> 00:04:12.204
+The same things that make
+
+00:04:12.204 --> 00:04:14.452
+it powerful make mistakes permanent.
+
+00:04:14.452 --> 00:04:16.067
+That's why we start with safety.
+
+00:04:17.368 --> 00:04:18.558
+Chapter 2.
+
+00:04:18.558 --> 00:04:19.443
+The front door.
+
+00:04:20.743 --> 00:04:23.433
+Sam's first practical question was simple.
+
+00:04:23.433 --> 00:04:25.408
+How do I actually get some?
+
+00:04:25.408 --> 00:04:28.538
+The answer, for almost everyone, is an exchange.
+
+00:04:28.538 --> 00:04:30.014
+Think of it as a currency
+
+00:04:30.014 --> 00:04:31.903
+exchange desk at an airport.
+
+00:04:31.903 --> 00:04:33.844
+You hand over dollars, pounds or
+
+00:04:33.844 --> 00:04:35.668
+euros, and you get crypto back.
+
+00:04:36.968 --> 00:04:38.666
+Before Sam deposited a single
+
+00:04:38.666 --> 00:04:40.608
+dollar, they locked the door.
+
+00:04:40.608 --> 00:04:42.436
+First, the account: a unique
+
+00:04:42.436 --> 00:04:44.563
+email and a password manager.
+
+00:04:44.563 --> 00:04:48.713
+Second, two-factor authentication, using an authenticator app,
+
+00:04:48.713 --> 00:04:51.713
+not text messages, which can be hijacked.
+
+00:04:51.713 --> 00:04:54.352
+Third, a withdrawal whitelist, so money can
+
+00:04:54.352 --> 00:04:57.111
+only leave to addresses Sam has approved.
+
+00:04:57.111 --> 00:05:00.043
+And fourth, an anti-phishing code, a word that
+
+00:05:00.043 --> 00:05:03.213
+appears in every real email from the exchange.
+
+00:05:03.213 --> 00:05:04.788
+Fake emails won't have it.
+
+00:05:06.088 --> 00:05:07.591
+Then Sam made a small first
+
+00:05:07.591 --> 00:05:09.663
+buy, and learned the next lesson.
+
+00:05:09.663 --> 00:05:10.928
+The price on the chart
+
+00:05:10.928 --> 00:05:12.328
+is not what you get.
+
+00:05:12.328 --> 00:05:14.198
+There's the spread, the gap between
+
+00:05:14.198 --> 00:05:16.005
+the buying and selling price.
+
+00:05:16.005 --> 00:05:17.866
+There's a trading fee, sometimes
+
+00:05:17.866 --> 00:05:19.745
+hidden as a convenience fee.
+
+00:05:19.745 --> 00:05:21.075
+And there's a network cost
+
+00:05:21.075 --> 00:05:22.410
+when you move it out.
+
+00:05:22.410 --> 00:05:25.305
+What matters is what actually lands in your wallet.
+
+00:05:25.305 --> 00:05:28.329
+Compare offers by that, not by the headline price.
+
+00:05:29.629 --> 00:05:32.444
+Sam also met something called a stablecoin.
+
+00:05:32.444 --> 00:05:35.049
+Think of it as a digital dollar voucher.
+
+00:05:35.049 --> 00:05:37.979
+For each token, the issuer holds about a dollar
+
+00:05:37.979 --> 00:05:41.454
+in reserve, in cash and short-term government bonds.
+
+00:05:41.454 --> 00:05:43.802
+The token moves on the blockchain, any
+
+00:05:43.802 --> 00:05:46.209
+time of day, like any other crypto.
+
+00:05:46.209 --> 00:05:48.334
+And you can swap it back for a dollar.
+
+00:05:48.334 --> 00:05:50.994
+It's how people hold steady value on-chain.
+
+00:05:50.994 --> 00:05:52.525
+But it's only as good as the
+
+00:05:52.525 --> 00:05:54.619
+reserves and the issuer behind it.
+
+00:05:54.619 --> 00:05:56.144
+It can still fail, and you'll
+
+00:05:56.144 --> 00:05:57.669
+learn how to judge that later.
+
+00:05:58.969 --> 00:06:02.444
+So Sam's first-buy plan was deliberately boring.
+
+00:06:02.444 --> 00:06:04.043
+A small learning amount, money
+
+00:06:04.043 --> 00:06:05.684
+they could afford to lose.
+
+00:06:05.684 --> 00:06:07.432
+A little ETH, the coin
+
+00:06:07.432 --> 00:06:09.784
+that pays fees on Ethereum.
+
+00:06:09.784 --> 00:06:13.479
+A little USDC, a widely used stablecoin.
+
+00:06:13.479 --> 00:06:16.064
+And the cheapest route, checked before clicking buy.
+
+00:06:17.364 --> 00:06:18.564
+Chapter 3.
+
+00:06:18.564 --> 00:06:19.739
+Who holds the keys?
+
+00:06:21.039 --> 00:06:22.789
+Here's the idea that changed how
+
+00:06:22.789 --> 00:06:24.574
+Sam thought about all of it.
+
+00:06:24.574 --> 00:06:26.184
+When your crypto sits on an
+
+00:06:26.184 --> 00:06:28.669
+exchange, the exchange holds the keys.
+
+00:06:28.669 --> 00:06:31.727
+It's convenient for buying, selling and cashing out,
+
+00:06:31.727 --> 00:06:34.553
+but you're trusting a company, and companies can
+
+00:06:34.553 --> 00:06:37.161
+freeze accounts, get hacked, or go bust.
+
+00:06:37.161 --> 00:06:39.453
+In your own wallet, you hold the keys.
+
+00:06:39.453 --> 00:06:41.078
+Nobody can freeze it.
+
+00:06:41.078 --> 00:06:42.469
+But if you lose the keys,
+
+00:06:42.469 --> 00:06:43.913
+nobody can help you either.
+
+00:06:45.213 --> 00:06:47.138
+So what is a wallet, really?
+
+00:06:47.138 --> 00:06:49.133
+Picture a row of mailboxes.
+
+00:06:49.133 --> 00:06:51.797
+Your address is the slot on your mailbox.
+
+00:06:51.797 --> 00:06:53.451
+You can share it freely, and
+
+00:06:53.451 --> 00:06:55.177
+anyone can drop coins in.
+
+00:06:55.177 --> 00:06:57.019
+Your private key is the only
+
+00:06:57.019 --> 00:06:58.779
+key that opens the box.
+
+00:06:58.779 --> 00:07:00.268
+Whoever has it can empty the
+
+00:07:00.268 --> 00:07:01.954
+box, so you never share it.
+
+00:07:01.954 --> 00:07:04.478
+And your seed phrase is the master
+
+00:07:04.478 --> 00:07:06.785
+recipe: 12 or 24 words that can
+
+00:07:06.785 --> 00:07:09.104
+recreate every key you have.
+
+00:07:09.104 --> 00:07:10.333
+It's your backup if a
+
+00:07:10.333 --> 00:07:11.674
+phone is lost or broken.
+
+00:07:12.974 --> 00:07:15.968
+Here's a detail that surprises most beginners.
+
+00:07:15.968 --> 00:07:19.043
+Your coins aren't actually inside the wallet app.
+
+00:07:19.043 --> 00:07:20.798
+They live on the blockchain.
+
+00:07:20.798 --> 00:07:22.368
+The wallet just holds the keys
+
+00:07:22.368 --> 00:07:23.833
+that let you move them.
+
+00:07:23.833 --> 00:07:25.924
+That's why a seed phrase can restore
+
+00:07:25.924 --> 00:07:27.733
+everything on a brand new phone.
+
+00:07:29.033 --> 00:07:31.383
+This is what a seed phrase looks like.
+
+00:07:31.383 --> 00:07:34.028
+These are example words, never use them.
+
+00:07:34.028 --> 00:07:37.808
+The words come from a standard list of 2,048.
+
+00:07:37.808 --> 00:07:40.097
+Whoever has these words, in this order,
+
+00:07:40.097 --> 00:07:42.343
+controls every coin in the wallet.
+
+00:07:42.343 --> 00:07:45.104
+So they're written on paper or stamped in metal,
+
+00:07:45.104 --> 00:07:48.203
+and never typed, photographed, stored online or shared.
+
+00:07:49.503 --> 00:07:52.556
+Sam set up their wallet from the official website,
+
+00:07:52.556 --> 00:07:55.370
+wrote the words on paper, in order, and stored
+
+00:07:55.370 --> 00:07:58.783
+them somewhere private and safe from fire and water.
+
+00:07:58.783 --> 00:08:01.248
+Then Sam did the step most people skip.
+
+00:08:01.248 --> 00:08:04.252
+They tested a restore, before depositing anything,
+
+00:08:04.252 --> 00:08:06.613
+to prove the backup actually works.
+
+00:08:06.613 --> 00:08:09.056
+And they learned the don'ts: never type it
+
+00:08:09.056 --> 00:08:11.840
+into a website, never photograph it, never share
+
+00:08:11.840 --> 00:08:13.942
+it, and never use a phrase that came
+
+00:08:13.942 --> 00:08:15.817
+pre-printed or from someone else.
+
+00:08:17.117 --> 00:08:18.552
+And here's the rule that will
+
+00:08:18.552 --> 00:08:20.382
+protect you more than any other.
+
+00:08:20.382 --> 00:08:23.338
+No real support team, no exchange, no wallet
+
+00:08:23.338 --> 00:08:26.491
+company, and nobody from this program will ever
+
+00:08:26.491 --> 00:08:28.959
+ask for your seed phrase or keys.
+
+00:08:28.959 --> 00:08:31.299
+Anyone who asks is trying to rob you.
+
+00:08:31.299 --> 00:08:32.124
+Every time.
+
+00:08:33.424 --> 00:08:34.514
+Quick check.
+
+00:08:34.514 --> 00:08:37.434
+A friendly support agent messages Sam and asks
+
+00:08:37.434 --> 00:08:40.094
+for the seed phrase, to fix a problem.
+
+00:08:40.094 --> 00:08:41.139
+What should Sam do?
+
+00:08:45.559 --> 00:08:47.464
+The answer: never share it.
+
+00:08:47.464 --> 00:08:49.429
+Real support never asks.
+
+00:08:49.429 --> 00:08:51.049
+Close the chat and report it.
+
+00:08:52.349 --> 00:08:53.559
+Chapter 4.
+
+00:08:53.559 --> 00:08:54.679
+Roads and stamps.
+
+00:08:55.979 --> 00:08:57.957
+Now Sam wanted to move crypto from
+
+00:08:57.957 --> 00:09:00.234
+the exchange into their own wallet.
+
+00:09:00.234 --> 00:09:02.009
+That's when they met networks.
+
+00:09:02.009 --> 00:09:04.204
+Think of networks as separate roads.
+
+00:09:04.204 --> 00:09:06.537
+Ethereum is the original road: the
+
+00:09:06.537 --> 00:09:09.104
+most secure, but with higher fees.
+
+00:09:09.104 --> 00:09:12.000
+Layer 2s are faster, cheaper roads built on top
+
+00:09:12.000 --> 00:09:14.894
+of Ethereum, and there are several of them.
+
+00:09:14.894 --> 00:09:17.116
+Your address can exist on many roads
+
+00:09:17.116 --> 00:09:19.218
+at once, but a parcel only travels
+
+00:09:19.218 --> 00:09:21.139
+on the road it was sent on.
+
+00:09:21.139 --> 00:09:23.217
+Send on a road your wallet doesn't
+
+00:09:23.217 --> 00:09:25.295
+support, and the money can be very
+
+00:09:25.295 --> 00:09:27.254
+hard, or impossible, to get back.
+
+00:09:28.554 --> 00:09:30.954
+Every trip on those roads needs a stamp.
+
+00:09:30.954 --> 00:09:32.299
+It's called gas.
+
+00:09:32.299 --> 00:09:35.243
+When you send a transaction, you pay a small
+
+00:09:35.243 --> 00:09:38.450
+fee in the network's own coin, which on Ethereum
+
+00:09:38.450 --> 00:09:41.394
+and most layer 2s is ETH. The computers that
+
+00:09:41.394 --> 00:09:45.516
+run the network, called validators, check your transaction and
+
+00:09:45.516 --> 00:09:46.994
+add it to a block.
+
+00:09:46.994 --> 00:09:49.559
+When roads are busy, stamps cost more.
+
+00:09:49.559 --> 00:09:52.155
+And one detail catches people out: if a
+
+00:09:52.155 --> 00:09:55.529
+transaction fails, the stamp is usually still spent.
+
+00:09:56.829 --> 00:09:58.994
+Here's what happened when Sam pressed send.
+
+00:09:58.994 --> 00:10:02.419
+Sam's wallet signed the transaction with their private key.
+
+00:10:02.419 --> 00:10:03.364
+It went out to the
+
+00:10:03.364 --> 00:10:05.504
+network, where validators checked it.
+
+00:10:05.504 --> 00:10:07.239
+It was sealed into a block.
+
+00:10:07.239 --> 00:10:08.540
+And a few moments later,
+
+00:10:08.540 --> 00:10:10.193
+it arrived at the address.
+
+00:10:10.193 --> 00:10:11.988
+Once it's in a block, it's final.
+
+00:10:13.289 --> 00:10:16.179
+So Sam's first transfer followed five steps.
+
+00:10:16.179 --> 00:10:18.127
+Copy the address with the wallet's
+
+00:10:18.127 --> 00:10:19.929
+copy button, never type it.
+
+00:10:19.929 --> 00:10:22.089
+Choose a network your wallet supports.
+
+00:10:22.089 --> 00:10:23.663
+Check the first and last 6
+
+00:10:23.663 --> 00:10:25.829
+characters, ideally all of them.
+
+00:10:25.829 --> 00:10:27.886
+Send a small test, about $10,
+
+00:10:27.886 --> 00:10:29.969
+and wait until it arrives.
+
+00:10:29.969 --> 00:10:31.481
+Then send the rest, and add
+
+00:10:31.481 --> 00:10:33.994
+the address to your exchange's whitelist.
+
+00:10:33.994 --> 00:10:35.759
+It took ten extra minutes.
+
+00:10:35.759 --> 00:10:38.864
+Those ten minutes are the cheapest insurance in crypto.
+
+00:10:40.164 --> 00:10:41.254
+Quick check.
+
+00:10:41.254 --> 00:10:44.398
+Sam's exchange offers two networks for a withdrawal,
+
+00:10:44.398 --> 00:10:47.249
+and Sam's wallet supports only one of them.
+
+00:10:47.249 --> 00:10:48.294
+What should Sam do?
+
+00:10:52.714 --> 00:10:55.733
+The answer: choose the network the wallet supports,
+
+00:10:55.733 --> 00:10:57.765
+send a small test, and wait for it
+
+00:10:57.765 --> 00:10:59.739
+to arrive before sending the rest.
+
+00:11:01.039 --> 00:11:02.279
+Chapter 5.
+
+00:11:02.279 --> 00:11:03.794
+Machines with no cashier.
+
+00:11:05.094 --> 00:11:07.286
+Now for the part everyone talks
+
+00:11:07.286 --> 00:11:10.669
+about: DeFi, short for decentralised finance.
+
+00:11:10.669 --> 00:11:13.149
+At its heart is the smart contract, and the
+
+00:11:13.149 --> 00:11:15.759
+best picture for it is a vending machine.
+
+00:11:15.759 --> 00:11:17.224
+You insert coins.
+
+00:11:17.224 --> 00:11:20.314
+The rules, written in code, decide what happens.
+
+00:11:20.314 --> 00:11:22.159
+You get the result instantly.
+
+00:11:22.159 --> 00:11:23.664
+And there's no cashier.
+
+00:11:23.664 --> 00:11:25.240
+If you press the wrong button,
+
+00:11:25.240 --> 00:11:27.014
+there's no one to refund you.
+
+00:11:27.014 --> 00:11:29.615
+DeFi apps are simply collections of these
+
+00:11:29.615 --> 00:11:32.339
+machines, for swapping, lending and earning.
+
+00:11:33.638 --> 00:11:34.838
+So how do you learn to
+
+00:11:34.838 --> 00:11:37.188
+use machines that don't give refunds?
+
+00:11:37.188 --> 00:11:39.313
+The same way pilots learn to fly.
+
+00:11:39.313 --> 00:11:43.043
+Pilots train in a simulator before they carry passengers.
+
+00:11:43.043 --> 00:11:45.146
+In crypto, the simulator is a test
+
+00:11:45.146 --> 00:11:47.429
+network, where the coins are free and
+
+00:11:47.429 --> 00:11:50.133
+worth nothing, but the buttons are real.
+
+00:11:50.133 --> 00:11:51.610
+Then you do a short hop,
+
+00:11:51.610 --> 00:11:53.328
+with a tiny real amount.
+
+00:11:53.328 --> 00:11:55.233
+You check it did what you expected.
+
+00:11:55.233 --> 00:11:56.699
+And only then do you fly
+
+00:11:56.699 --> 00:11:58.985
+normally, with the same careful habits.
+
+00:12:00.286 --> 00:12:03.656
+Sam's first DeFi steps followed that exact path.
+
+00:12:03.656 --> 00:12:06.421
+Free test tokens on a test network first.
+
+00:12:06.421 --> 00:12:09.181
+Connecting the wallet only from a bookmarked site,
+
+00:12:09.181 --> 00:12:11.158
+never from a link in a message.
+
+00:12:11.158 --> 00:12:14.312
+Reading every request before signing: what it does,
+
+00:12:14.312 --> 00:12:16.371
+who it goes to, and how much.
+
+00:12:16.371 --> 00:12:17.931
+And only after the test
+
+00:12:17.931 --> 00:12:19.686
+worked, one tiny real swap.
+
+00:12:20.986 --> 00:12:22.714
+One idea from this chapter
+
+00:12:22.714 --> 00:12:24.486
+is worth holding on to.
+
+00:12:24.486 --> 00:12:27.474
+In DeFi, your wallet asks you to sign things.
+
+00:12:27.474 --> 00:12:28.949
+A signature is like a signed
+
+00:12:28.949 --> 00:12:30.674
+cheque with your name on it.
+
+00:12:30.674 --> 00:12:32.869
+Read what you're signing, every time.
+
+00:12:32.869 --> 00:12:34.924
+If you don't understand it, don't sign it.
+
+00:12:36.224 --> 00:12:37.474
+Chapter 6.
+
+00:12:37.474 --> 00:12:38.809
+Where beginners get hurt.
+
+00:12:40.109 --> 00:12:42.813
+Sam's friend, the one who lost everything with
+
+00:12:42.813 --> 00:12:45.644
+one wrong click, didn't do anything unusual.
+
+00:12:45.644 --> 00:12:47.546
+Almost every beginner loss starts
+
+00:12:47.546 --> 00:12:49.189
+with one of four things.
+
+00:12:49.189 --> 00:12:50.816
+A lost seed phrase, with
+
+00:12:50.816 --> 00:12:52.809
+no backup and no recovery.
+
+00:12:52.809 --> 00:12:54.849
+Coins sent on the wrong network.
+
+00:12:54.849 --> 00:12:56.740
+A fake website or a fake support
+
+00:12:56.740 --> 00:12:58.989
+agent who tricks you into signing.
+
+00:12:58.989 --> 00:13:00.953
+And rushing: urgency and fear of
+
+00:13:00.953 --> 00:13:03.158
+missing out beating good habits.
+
+00:13:03.158 --> 00:13:05.475
+Module 0 exists to close all four
+
+00:13:05.475 --> 00:13:07.723
+doors before you move real money.
+
+00:13:09.023 --> 00:13:11.888
+Scams in crypto follow patterns, and once you've
+
+00:13:11.888 --> 00:13:14.468
+seen them, they're much easier to spot.
+
+00:13:14.468 --> 00:13:16.938
+Fake sites, with look-alike web addresses,
+
+00:13:16.938 --> 00:13:19.363
+often bought as sponsored search ads.
+
+00:13:19.363 --> 00:13:21.950
+Drainers: a single signature that quietly
+
+00:13:21.950 --> 00:13:24.653
+grants a stranger access to everything.
+
+00:13:24.653 --> 00:13:27.281
+Fake support, in direct messages you never
+
+00:13:27.281 --> 00:13:29.965
+asked for, asking for your seed phrase.
+
+00:13:29.965 --> 00:13:33.395
+And poisoned addresses: a look-alike address slipped into
+
+00:13:33.395 --> 00:13:36.475
+your history, hoping you'll copy it by mistake.
+
+00:13:36.475 --> 00:13:38.510
+The pattern is always the same.
+
+00:13:38.510 --> 00:13:41.045
+Pressure, and a shortcut around your own checks.
+
+00:13:42.345 --> 00:13:44.963
+So Sam finished the module with a security
+
+00:13:44.963 --> 00:13:48.125
+baseline, four habits that prevent most losses.
+
+00:13:48.125 --> 00:13:50.537
+A hardware wallet, once the amount matters,
+
+00:13:50.537 --> 00:13:52.865
+so the keys never touch the internet.
+
+00:13:52.865 --> 00:13:56.935
+Unique passwords in a password manager, and two-factor everywhere.
+
+00:13:56.935 --> 00:14:00.025
+Never sharing keys, with anyone, for any reason.
+
+00:14:00.025 --> 00:14:02.419
+And bookmarking the apps they use, never
+
+00:14:02.419 --> 00:14:04.755
+following links to wallets or DeFi apps.
+
+00:14:06.055 --> 00:14:07.853
+And there are three rules that sit
+
+00:14:07.853 --> 00:14:10.105
+above everything else in this program.
+
+00:14:10.105 --> 00:14:11.697
+Only use money you can afford
+
+00:14:11.697 --> 00:14:13.270
+to lose while you learn.
+
+00:14:13.270 --> 00:14:16.373
+Never trust anyone who promises returns, including
+
+00:14:16.373 --> 00:14:18.620
+anyone who says they're from us.
+
+00:14:18.620 --> 00:14:21.070
+And slow is safe: there's no deadline in
+
+00:14:21.070 --> 00:14:23.760
+crypto that's worth a mistake you can't undo.
+
+00:14:25.060 --> 00:14:26.505
+Last quick check.
+
+00:14:26.505 --> 00:14:28.290
+A message says a new token will
+
+00:14:28.290 --> 00:14:30.019
+double in an hour and asks Sam
+
+00:14:30.019 --> 00:14:32.495
+to connect their wallet through a link.
+
+00:14:32.495 --> 00:14:33.690
+What's the right move?
+
+00:14:38.110 --> 00:14:39.925
+The answer: ignore it.
+
+00:14:39.925 --> 00:14:42.299
+Urgency, a promised return and a link
+
+00:14:42.299 --> 00:14:44.598
+are three warning signs at once.
+
+00:14:44.598 --> 00:14:46.143
+Only use bookmarked sites.
+
+00:14:47.444 --> 00:14:48.684
+Chapter 7.
+
+00:14:48.684 --> 00:14:50.359
+Your path through Module 0.
+
+00:14:51.659 --> 00:14:53.944
+Here's your journey, stop by stop.
+
+00:14:53.944 --> 00:14:56.694
+0.0, the Mastery Starter, where you'll see
+
+00:14:56.694 --> 00:14:59.489
+what mastery of this module looks like.
+
+00:14:59.489 --> 00:15:03.721
+0.1, money, ledgers and why blockchains exist.
+
+00:15:03.721 --> 00:15:07.211
+0.2, opening and securing an exchange.
+
+00:15:07.211 --> 00:15:10.651
+0.3, your first buy without overpaying.
+
+00:15:10.651 --> 00:15:13.226
+0.4, who holds the keys.
+
+00:15:13.226 --> 00:15:16.681
+0.5, setting up and backing up your wallet.
+
+00:15:16.681 --> 00:15:20.516
+0.6, networks, gas and your first transfer.
+
+00:15:20.516 --> 00:15:24.856
+0.7, your first DeFi steps, practice mode first.
+
+00:15:24.856 --> 00:15:27.240
+And 0.8, your security baseline,
+
+00:15:27.240 --> 00:15:29.046
+and the language of DeFi.
+
+00:15:30.345 --> 00:15:33.078
+Underneath those lessons are seven practical
+
+00:15:33.078 --> 00:15:35.200
+steps, the same ones Sam took.
+
+00:15:35.200 --> 00:15:36.210
+Accounts.
+
+00:15:36.210 --> 00:15:37.440
+The exchange.
+
+00:15:37.440 --> 00:15:38.670
+A first buy.
+
+00:15:38.670 --> 00:15:39.700
+The wallet.
+
+00:15:39.700 --> 00:15:41.135
+A first transfer.
+
+00:15:41.135 --> 00:15:42.520
+Practice DeFi.
+
+00:15:42.520 --> 00:15:44.325
+And your security baseline.
+
+00:15:44.325 --> 00:15:47.125
+Do them in order, with a small learning amount.
+
+00:15:47.125 --> 00:15:48.416
+Allow 2 to 3 hours,
+
+00:15:48.416 --> 00:15:50.200
+spread over a few days.
+
+00:15:50.200 --> 00:15:51.165
+There's no rush.
+
+00:15:52.465 --> 00:15:55.030
+And you won't have to remember any of it.
+
+00:15:55.030 --> 00:15:57.421
+Everything is in the Day-1 Setup Kit, a
+
+00:15:57.421 --> 00:16:00.470
+printable checklist in the Start here chapter.
+
+00:16:00.470 --> 00:16:02.310
+Tick each box as you go.
+
+00:16:02.310 --> 00:16:04.845
+When every box is ticked, you're set up safely.
+
+00:16:06.145 --> 00:16:08.660
+Here's how Sam's first week actually went.
+
+00:16:08.660 --> 00:16:10.559
+Day 1: a password manager, a
+
+00:16:10.559 --> 00:16:13.805
+secured email, and two-factor authentication.
+
+00:16:13.805 --> 00:16:17.100
+Day 2: the exchange account opened and locked down.
+
+00:16:17.100 --> 00:16:19.568
+Day 3: a small first buy, and the wallet
+
+00:16:19.568 --> 00:16:22.275
+set up with the backup written on paper.
+
+00:16:22.275 --> 00:16:24.000
+Day 4: a restore test, then
+
+00:16:24.000 --> 00:16:26.640
+the first transfer, test amount first.
+
+00:16:26.640 --> 00:16:29.262
+Day 5: practice on a test network, one
+
+00:16:29.262 --> 00:16:32.385
+tiny real swap, and the security baseline.
+
+00:16:32.385 --> 00:16:34.030
+About half an hour a day.
+
+00:16:34.030 --> 00:16:35.105
+Nothing heroic.
+
+00:16:36.405 --> 00:16:38.380
+Every lesson works the same way.
+
+00:16:38.380 --> 00:16:39.700
+Watch the video.
+
+00:16:39.700 --> 00:16:40.940
+Read the lesson.
+
+00:16:40.940 --> 00:16:43.895
+Do the checklist, for real, with small amounts.
+
+00:16:43.895 --> 00:16:46.440
+Then take the short quiz before moving on.
+
+00:16:46.440 --> 00:16:47.703
+That rhythm is how you
+
+00:16:47.703 --> 00:16:49.515
+build habits, not just knowledge.
+
+00:16:50.815 --> 00:16:52.860
+So how did Sam's story end?
+
+00:16:52.860 --> 00:16:55.467
+A week later, Sam had a secured exchange
+
+00:16:55.467 --> 00:16:58.709
+account, a wallet they controlled, a backup they'd
+
+00:16:58.709 --> 00:17:01.888
+tested, a first transfer that arrived safely, and
+
+00:17:01.888 --> 00:17:04.350
+a first practice DeFi transaction.
+
+00:17:04.350 --> 00:17:05.640
+Nothing lost.
+
+00:17:05.640 --> 00:17:06.895
+Nothing rushed.
+
+00:17:06.895 --> 00:17:08.800
+And for the first time, the words
+
+00:17:08.800 --> 00:17:10.592
+on the news actually made sense.
+
+00:17:11.892 --> 00:17:13.055
+Sam didn't need to be
+
+00:17:13.055 --> 00:17:14.942
+technical, and neither do you.
+
+00:17:14.942 --> 00:17:16.552
+You just need to go in order,
+
+00:17:16.552 --> 00:17:19.267
+keep amounts small, and follow the checklist.
+
+00:17:19.267 --> 00:17:22.019
+This is education, not financial advice,
+
+00:17:22.019 --> 00:17:24.332
+and no results are guaranteed.
+
+00:17:24.332 --> 00:17:25.791
+What you'll get is a safe
+
+00:17:25.791 --> 00:17:28.092
+foundation, and a process you understand.
+
+00:17:29.392 --> 00:17:31.487
+That's the story of Module 0.
+
+00:17:31.487 --> 00:17:32.882
+Now it's your turn.
+
+00:17:32.882 --> 00:17:34.857
+Welcome aboard, operator.
+
+00:17:34.857 --> 00:17:38.022
+Start now with Lesson 0.0, the Mastery
+
+00:17:38.022 --> 00:17:41.487
+Starter for Module 0: Crypto From Zero.
+
+00:17:41.487 --> 00:17:44.473
+And when you've finished Module 0, Module 1:
+
+00:17:44.473 --> 00:17:47.127
+Foundations & Safety is waiting for you.

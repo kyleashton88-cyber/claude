@@ -11,7 +11,7 @@ Baseline scripts run about 3–7 minutes; rewritten gold scripts target 5–25 m
 |---|---|---|---|
 | VSL (main ≈3.5 min + 30s vertical) | 2 | `video/vsl-*.mp4` | Rendered |
 | Welcome | 1 | `video/welcome.mp4` | Rendered |
-| Module intros | 15 | `video/module-NN-intro.mp4` | Rendered |
+| Module intros | 15 | `video/module-NN-intro.mp4` | Rendered (Module 0: story-led long form, script `video-scripts/core/module-00-intro.json`) |
 | **Lesson videos (incl. Mastery Starters)** | **121** | `video-scripts/lessons/*.json` + `video-scripts/gold/*.json` → `video/lesson-*.mp4` | Scripts ready (Lesson 3.2 gold standard); 121 rendered |
 | Strategy library series (8.3) | 7 (one per level) | to be scripted (see prompt) | To do |
 

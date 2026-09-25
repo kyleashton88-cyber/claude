@@ -80,8 +80,8 @@ n_lessons = n_videos = n_images = 0
 for num in range(15):
     rows, mtitle = lessons_of(num)
     head = [f"### Chapter: Module {num} · {mtitle}",
-            f"- Module intro video (first item in the chapter): {url(f'video/module-{num:02d}-intro.mp4')}  "
-            f"(thumbnail {url(f'video/thumbs/module-{num:02d}-intro.jpg')}, captions {url(f'video/captions/module-{num:02d}-intro.vtt')})",
+            (f"- Module intro video (first item in the chapter; for Module 0 it's the long, story-led crypto-from-zero intro that ends by sending learners to Lesson 0.0): " if num == 0 else "- Module intro video (first item in the chapter): ") + f"{url(f'video/module-{num:02d}-intro.mp4')}  "
+            f"(thumbnail {url(f'video/thumbs/module-{num:02d}-intro.jpg')}, captions {url(f'video/captions/module-{num:02d}-intro.vtt')}" + (f", chapters {url('video/chapters/module-00-intro.txt')}" if num == 0 else "") + ")",
             f"- Chapter cover image: {url(f'assets/modules/module-{num:02d}.png')}", ""]
     blocks = []
     for r in rows:

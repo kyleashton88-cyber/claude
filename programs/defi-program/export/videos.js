@@ -233,10 +233,13 @@ function moduleIntros() {
   const md = fs.readFileSync(path.resolve(__dirname, '../01-offer-and-curriculum.md'), 'utf8');
   const out = [];
   for (const m of md.matchAll(/### Module (\d+) — (.+?) \*\((\d+) lessons?[^)]*\)\*\n(?:Outcome: (.+)\n)?([\s\S]*?)(?=\n### |\n## |$)/g)) {
-    const [, n, title, count, outcome = '', rest] = m;
+    const [, n, title, count, rawOutcome = '', rest] = m;
+    const outcome = rawOutcome.replace(/\*\*/g, '');
     const rows = [...rest.matchAll(/^\| (\d+\.\d+) \| (.+?) \|/gm)].map(r => [r[1], clean(r[2])]).filter(r => !r[1].startsWith('Mastery Starter'));
     const lessons = rows.map(([id, t]) => `${id} ${t}`);
     const nn = String(n).padStart(2, '0'), st = STAGE_OF[+n];
+    // a hand-written long-form intro in video-scripts/core replaces the generated one
+    if (fs.existsSync(path.resolve(__dirname, `../video-scripts/core/module-${nn}-intro.json`))) continue;
     const goal = outcome.charAt(0).toUpperCase() + outcome.slice(1).replace(/\.$/, '') + '.';
     const first = rows[0] ? rows[0][1] : '';
     out.push({

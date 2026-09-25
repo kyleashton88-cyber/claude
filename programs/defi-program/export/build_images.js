@@ -687,7 +687,7 @@ const noteBar = note => note ? `<div style="position:absolute;left:0;right:0;bot
 const withNote = (inner, note) => `<div style="position:absolute;inset:0 0 ${note ? 60 : 0}px 0">${inner}</div>${noteBar(note)}`;
 function tplFlow(r) {
   const n = r.steps.length, gap = n > 4 ? 48 : 64, w = Math.floor((1672 - gap * (n - 1)) / n);
-  return lightShell(1800, 640, r.title, r.sub, withNote(flowBoxes(r.steps, false, { w, h: 250, gap }), r.note));
+  return lightShell(1800, r.h || 640, r.title, r.sub, withNote(flowBoxes(r.steps, false, { w, h: 250, gap }), r.note));
 }
 function tplCols(r) {
   const n = r.cols.length;
@@ -698,7 +698,7 @@ function tplCols(r) {
       <div style="font-size:${n > 3 ? 28 : 32}px;font-weight:800;color:${C.ink};line-height:1.15">${c.t}</div></div>
       <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px">${c.lines.map(l => `<div style="display:flex;gap:12px;font-size:${n > 3 ? 21 : 23}px;line-height:1.4;color:${C.text}"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:${col};margin-top:12px"></span><span>${l}</span></div>`).join('')}</div></div>`;
   }).join('');
-  return lightShell(1800, 760, r.title, r.sub, withNote(`<div style="display:flex;gap:30px;height:100%;align-items:stretch">${cards}</div>`, r.note));
+  return lightShell(1800, r.h || 760, r.title, r.sub, withNote(`<div style="display:flex;gap:30px;height:100%;align-items:stretch">${cards}</div>`, r.note));
 }
 function tplTiles(r) {
   const n = r.tiles.length;
@@ -706,7 +706,7 @@ function tplTiles(r) {
     <div style="width:64px;height:64px;border-radius:16px;background:${C.panel};color:${C.blue};display:flex;align-items:center;justify-content:center">${icon(ic, 36)}</div>
     <div style="font-size:30px;font-weight:800;color:${C.ink};margin-top:22px">${t}</div>
     <div style="font-size:22px;color:${C.text2};margin-top:10px;line-height:1.4">${s}</div></div>`).join('');
-  return lightShell(1800, 640, r.title, r.sub, withNote(`<div style="display:grid;grid-template-columns:repeat(${n},1fr);gap:26px;height:100%">${tiles}</div>`, r.note));
+  return lightShell(1800, r.h || 640, r.title, r.sub, withNote(`<div style="display:grid;grid-template-columns:repeat(${n},1fr);gap:26px;height:100%">${tiles}</div>`, r.note));
 }
 function tplRank(r) {
   const n = r.rows.length;
@@ -1003,6 +1003,100 @@ const LESSON_IMAGES = [
 const renderLessonImage = r => ({ flow: tplFlow, cols: tplCols, tiles: tplTiles, rank: tplRank, bars: tplBars, table: tplTable }[r.kind] || r.fn)(r);
 const lessonAsset = r => [`${r.dir || 'diagrams'}/${r.file}.png`, r.w || 1800, r.h || ({ flow: 640, cols: 760, tiles: 640, rank: 820, bars: 640, table: 700 }[r.kind]), () => renderLessonImage(r)];
 
+// ---------- Module 0 story illustrations (beginner analogies, drawn accurately) ----------
+function storyChain() {
+  const blocks = [['1,001', ['Ana → Ben · 0.10', 'Cai → Dee · 2.00'], '3e9a…', '7c41…'], ['1,002', ['Ben → Eli · 0.05', 'Fay → Ana · 1.20'], '7c41…', 'b2d8…'],
+    ['1,003', ['Dee → Gus · 0.30', 'Eli → Cai · 0.75'], 'b2d8…', '51fa…'], ['1,004', ['Gus → Fay · 0.02', 'Ana → Hal · 4.00'], '51fa…', '9e07…']];
+  const card = ([n, tx, prev, seal], i) => `<div style="flex:1;background:#fff;border:1.5px solid ${C.line};border-radius:18px;padding:22px 22px 18px">
+    <div style="font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:${C.blue}">Block</div>
+    <div style="font-size:34px;font-weight:800;color:${C.ink}">#${n}</div>
+    <div style="margin:14px 0;padding:12px 14px;border-radius:12px;background:${C.panel};font-family:'JetBrains Mono',monospace;font-size:19px;line-height:1.7;color:${C.text}">${tx.join('<br>')}</div>
+    <div style="font-size:17px;color:${C.text2}">Previous seal: <b style="font-family:'JetBrains Mono',monospace;color:${i ? C.blue : C.text2}">${prev}</b></div>
+    <div style="font-size:17px;color:${C.text2};margin-top:4px">This block's seal: <b style="font-family:'JetBrains Mono',monospace;color:${C.ink}">${seal}</b></div></div>`;
+  const link = `<div style="flex:none;width:54px;display:flex;align-items:center;justify-content:center;color:${C.blue}">${icon('link', 38)}</div>`;
+  return lightShell(1800, 560, 'A blockchain is a chain of sealed pages', 'Each page (block) records transactions and carries the seal of the page before it',
+    `<div style="position:absolute;inset:0 0 60px 0;display:flex;align-items:stretch">${blocks.map(card).join(link)}</div>
+    <div style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:23px;color:${C.text2}">Change one old entry and its seal changes, so every page after it stops matching. That's why history can't be quietly edited.</div>`);
+}
+function storyCopies() {
+  const W = 1672, H = 470, cx = W / 2, cy = H / 2 - 10, n = 12;
+  const nodes = Array.from({ length: n }, (_, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / n; return [cx + 560 * Math.cos(a), cy + 190 * Math.sin(a), i === 4]; });
+  const svg = `<svg width="100%" height="100%" viewBox="0 0 ${W} ${H}">
+    ${nodes.map(([x, y, bad]) => `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="${bad ? C.orange : '#c9d6e4'}" stroke-width="2" ${bad ? 'stroke-dasharray="8 7"' : ''}/>`).join('')}
+    <rect x="${cx - 120}" y="${cy - 70}" width="240" height="140" rx="18" fill="${C.brand}"/>
+    <text x="${cx}" y="${cy - 12}" text-anchor="middle" font-family="Inter" font-weight="800" font-size="30" fill="#fff">The ledger</text>
+    <text x="${cx}" y="${cy + 26}" text-anchor="middle" font-family="Inter" font-size="20" fill="rgba(255,255,255,.8)">one shared record</text>
+    ${nodes.map(([x, y, bad]) => `<g transform="translate(${x - 70},${y - 38})"><rect width="140" height="76" rx="14" fill="#fff" stroke="${bad ? C.orange : C.line}" stroke-width="2"/>
+      <text x="70" y="32" text-anchor="middle" font-family="Inter" font-weight="700" font-size="18" fill="${bad ? C.orange : C.ink}">${bad ? 'Edited copy' : 'Copy'}</text>
+      <text x="70" y="56" text-anchor="middle" font-family="Inter" font-size="16" fill="${bad ? C.orange : C.text2}">${bad ? '✕ rejected' : '✓ matches'}</text></g>`).join('')}
+  </svg>`;
+  return lightShell(1800, 760, 'Thousands of copies, all in agreement', 'Computers around the world keep the same ledger and check every new entry',
+    `<div style="position:absolute;inset:0 0 60px 0">${svg}</div><div style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:23px;color:${C.text2}">A copy that doesn't match everyone else's is simply ignored. No single company is in charge, and no one can undo a payment.</div>`);
+}
+function storySeedWords() {
+  const words = ['orbit', 'velvet', 'canyon', 'ladder', 'pilot', 'harvest', 'maple', 'anchor', 'silent', 'ribbon', 'tunnel', 'frost'];
+  const chips = words.map((w, i) => `<div style="display:flex;align-items:center;gap:14px;background:#fff;border:1.5px solid ${C.line};border-radius:14px;padding:16px 20px">
+    <span style="font-size:18px;font-weight:700;color:${C.blue};width:28px">${i + 1}</span><span style="font-family:'JetBrains Mono',monospace;font-size:28px;color:${C.ink}">${w}</span></div>`).join('');
+  return lightShell(1800, 760, 'A seed phrase: 12 words that are your wallet', 'Whoever has these words, in this order, controls every coin in the wallet',
+    `<div style="position:absolute;inset:0;display:flex;gap:44px">
+      <div style="flex:1.5;position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-content:start">${chips}
+        <div style="grid-column:1/-1;justify-self:center;margin-top:26px;transform:rotate(-3deg);padding:10px 30px;border:5px solid ${C.orange};border-radius:14px;color:${C.orange};font-weight:800;font-size:40px;letter-spacing:.08em">EXAMPLE WORDS · NEVER USE THESE</div></div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:16px;font-size:23px;color:${C.text}">
+        ${[['check', 'Usually 12 or 24 words, from a standard list of 2,048'], ['doc', 'Written on paper or stamped in metal, in order'], ['wallet', 'Restores your wallet on any device, anywhere'], ['alert', 'Never typed, photographed, stored online or shared']].map(([ic, t], i) => `<div style="display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:14px;background:${i === 3 ? '#fff5ef' : C.panel};border:1.5px solid ${i === 3 ? C.orange : C.line}"><span style="color:${i === 3 ? C.orange : C.blue};flex:none">${icon(ic, 28)}</span><span>${t}</span></div>`).join('')}
+      </div></div>`);
+}
+function storyRoads() {
+  const roads = [['Ethereum mainnet', 'The original road: highest security, higher fees', 'layers'], ['Layer 2 “A”', 'A faster, cheaper road built on top of Ethereum', 'swap'], ['Layer 2 “B”', 'Another cheaper road, separate from A', 'swap']];
+  const rows = roads.map(([t, s, ic], i) => `<div style="display:flex;align-items:center;gap:24px">
+    <div style="width:330px;flex:none;display:flex;align-items:center;gap:14px"><span style="color:${C.blue}">${icon(ic, 32)}</span><div><div style="font-size:26px;font-weight:800;color:${C.ink}">${t}</div><div style="font-size:18px;color:${C.text2}">${s}</div></div></div>
+    <div style="flex:1;position:relative;height:66px;border-radius:14px;background:repeating-linear-gradient(90deg,#dfe7f0 0 40px,#eef3f8 40px 80px);border:1.5px solid ${C.line}">
+      <div style="position:absolute;left:${[8, 38, 64][i]}%;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:10px;padding:8px 16px;border-radius:10px;background:${i === 2 ? C.orange : C.blue};color:#fff;font-weight:700;font-size:19px">${icon('coins', 22, '#fff')} ${i === 2 ? 'Sent on the wrong road' : 'Your parcel'}</div>
+      <div style="position:absolute;right:14px;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:8px;font-size:18px;font-weight:700;color:${C.ink}">${icon('wallet', 26, C.brand)} Your address</div></div></div>`).join('');
+  return lightShell(1800, 760, 'Networks are separate roads', 'The same address can exist on many roads, but a parcel only travels on the road it was sent on',
+    `<div style="position:absolute;inset:0 0 70px 0;display:flex;flex-direction:column;justify-content:center;gap:34px">${rows}</div>
+    <div style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:23px;color:${C.text2}">Always pick a network that both the sender and your wallet support, and send a small test first. Sending on an unsupported road can mean the money is very hard, or impossible, to get back.</div>`);
+}
+function storyJourney() {
+  const stops = [['0.0', 'Mastery Starter', 'compass'], ['0.1', 'Ledgers & blockchains', 'book'], ['0.2', 'Open & secure an exchange', 'bank'], ['0.3', 'Your first buy', 'coins'],
+    ['0.4', 'Who holds the keys', 'key'], ['0.5', 'Wallet & backup', 'wallet'], ['0.6', 'Networks & first transfer', 'swap'], ['0.7', 'First DeFi steps', 'grid'], ['0.8', 'Security baseline', 'shield']];
+  const W = 1672, H = 520, pts = stops.map((_, i) => [80 + i * (W - 160) / (stops.length - 1), i % 2 ? 150 : 330]);
+  let d = `M${pts[0][0]},${pts[0][1]}`; for (let i = 1; i < pts.length; i++) { const [x0, y0] = pts[i - 1], [x1, y1] = pts[i]; d += ` C${x0 + 80},${y0} ${x1 - 80},${y1} ${x1},${y1}`; }
+  const svg = `<svg width="100%" height="100%" viewBox="0 0 ${W} ${H}"><path d="${d}" fill="none" stroke="#c9d6e4" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 18"/>
+    ${pts.map(([x, y], i) => `<g transform="translate(${x},${y})"><circle r="42" fill="${i === 0 ? C.aqua : i === stops.length - 1 ? C.brand : '#fff'}" stroke="${i === 0 ? C.aqua : C.brand}" stroke-width="4"/>
+      <g transform="translate(-16,-16)" color="${i === 0 || i === stops.length - 1 ? '#fff' : C.blue}">${icon(stops[i][2], 32)}</g>
+      <text y="${i % 2 ? -62 : 78}" text-anchor="middle" font-family="Inter" font-weight="800" font-size="22" fill="${C.blue}">${stops[i][0]}</text>
+      <text y="${i % 2 ? -88 : 104}" text-anchor="middle" font-family="Inter" font-weight="700" font-size="19" fill="${C.ink}">${stops[i][1]}</text></g>`).join('')}</svg>`;
+  return lightShell(1800, 760, 'Your journey through Module 0', 'Nine stops, in order: from knowing nothing to set up safely',
+    `<div style="position:absolute;inset:0 0 60px 0">${svg}</div><div style="position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:23px;color:${C.text2}">It ends with the Day-1 Setup Kit ticked off, and you ready for Module 1: Foundations & Safety.</div>`);
+}
+const STORY_IMAGES = [
+  { file: 'story-chain-of-blocks', w: 1800, h: 560, fn: storyChain },
+  { file: 'story-many-copies', w: 1800, h: 760, fn: storyCopies },
+  { file: 'story-seed-words', w: 1800, h: 760, fn: storySeedWords },
+  { file: 'story-networks-roads', w: 1800, h: 760, fn: storyRoads },
+  { file: 'story-module0-journey', w: 1800, h: 760, fn: storyJourney },
+  { file: 'story-why-crypto', kind: 'tiles', h: 540, title: 'What crypto makes possible', sub: 'And the responsibility that comes with it', note: 'The same things that make it powerful make mistakes permanent. That is why we start with safety.',
+    tiles: [['Send worldwide', 'To anyone, any time, in minutes', 'globe'], ['Hold it yourself', 'No bank needed to keep it', 'wallet'], ['Programmable money', 'Apps that lend, trade and pay by code', 'code'], ['Open rules', 'Anyone can check the record', 'eye']] },
+  { file: 'story-mailbox-and-key', kind: 'cols', h: 560, title: 'Your address is a mailbox. Your key opens it.', sub: 'Three things, three different jobs',
+    cols: [{ t: 'Address = your mailbox slot', ic: 'globe', lines: ['Share it freely', 'Anyone can send you coins through it', 'Looks like 0x71C7…976F'] },
+      { t: 'Private key = the only key', ic: 'key', tone: 'risk', lines: ['Opens the box and signs for you', 'Whoever has it can empty the box', 'Never share it with anyone'] },
+      { t: 'Seed phrase = the master recipe', ic: 'doc', tone: 'risk', lines: ['12 or 24 words that recreate every key', 'Your backup if a device is lost', 'Paper or metal, never online'] }] },
+  { file: 'story-gas-stamp', kind: 'flow', h: 540, title: 'Gas is the postage stamp', sub: 'Every transaction pays a small fee to the network that delivers it', note: 'Busy roads cost more. The stamp is paid even if the letter comes back undelivered.',
+    steps: [['Your letter', 'The transaction you sign', 'doc'], ['The stamp', 'Gas: a small fee in the network’s coin', 'flame'], ['Post office', 'Validators check and order it', 'shield'], ['Delivered', 'Added to a block, final', 'check']] },
+  { file: 'story-stablecoin-voucher', kind: 'flow', h: 540, title: 'A stablecoin is a digital dollar voucher', sub: 'Built to stay worth $1, like a voucher backed by cash in a vault', note: 'It’s only as good as the reserves and the issuer behind it. It can still fail.',
+    steps: [['$1 in reserve', 'Held by the issuer', 'bank'], ['1 token', 'Issued on the blockchain', 'coins'], ['Moves 24/7', 'Send it like any crypto', 'swap'], ['Redeem', 'Swap back for $1', 'exit']] },
+  { file: 'story-vending-machine', kind: 'flow', h: 540, title: 'A smart contract is a vending machine', sub: 'DeFi apps are programs with fixed rules, and no cashier', note: 'It does exactly what its code says. If you press the wrong button, there’s no one to refund you.',
+    steps: [['Insert', 'You send coins to it', 'coins'], ['Rules run', 'Code decides what happens', 'code'], ['Output', 'You get the result instantly', 'check'], ['No cashier', 'No refunds, no exceptions', 'alert']] },
+  { file: 'story-flight-simulator', kind: 'flow', h: 540, title: 'Practise like a pilot', sub: 'Pilots train in a simulator before they fly passengers', note: 'The test network is your simulator: free, fake money, real buttons.',
+    steps: [['Simulator', 'Test network, free test coins', 'compass'], ['Short hop', 'A tiny real amount', 'coins'], ['Check it', 'Did it do what you expected?', 'search'], ['Fly', 'Normal use, same habits', 'check']] },
+  { file: 'story-what-can-go-wrong', kind: 'tiles', h: 540, title: 'What goes wrong for beginners', sub: 'Almost every loss starts with one of these four', note: 'Module 0 exists to close all four doors before you move real money.',
+    tiles: [['Lost seed phrase', 'No backup, no recovery', 'doc'], ['Wrong network', 'Coins sent on the wrong road', 'swap'], ['Fake sites & support', 'Someone tricks you into signing', 'users'], ['Rushing', 'Urgency and FOMO beat good habits', 'clock']] },
+  { file: 'story-bank-vs-you', kind: 'cols', h: 560, title: 'The bank model vs the crypto model', sub: 'Same money idea, different person in charge',
+    cols: [{ t: 'Your bank', ic: 'bank', lines: ['Keeps the record for you', 'Can reverse a payment', 'Helps if you forget a password', 'Can freeze your account'] },
+      { t: 'Crypto, in your own wallet', ic: 'wallet', tone: 'good', lines: ['The network keeps the record', 'No one can reverse a payment', 'No one can reset your password', 'No one can freeze it but you'] }] },
+];
+const storyAsset = r => [`diagrams/${r.file}.png`, r.w || 1800, r.h || ({ flow: 640, cols: 760, tiles: 640 }[r.kind]), () => (r.fn ? r.fn() : renderLessonImage(r))];
+
 // ---------- registry ----------
 const ASSETS = [
   ['brand/logo-icon-1024.png', 1024, 1024, () => brandAsset('icon')],
@@ -1048,6 +1142,7 @@ const ASSETS = [
   ['charts/health-factor.png', 1800, 820, chartHF],
   ['diagrams/mev-supply-chain.png', 1800, 700, diagramMEV],
   ...LESSON_IMAGES.map(lessonAsset),
+  ...STORY_IMAGES.map(storyAsset),
 ];
 
 module.exports = { C, FONT, BASE_CSS, network, icon, logoMark, wordmark, lockupStacked, DISCLAIMER, LESSON_IMAGES };

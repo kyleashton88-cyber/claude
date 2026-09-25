@@ -123,6 +123,7 @@ class Voice:
         os.makedirs(CACHE, exist_ok=True)
 
     def say(self, text, speed):
+        text = re.sub(r"\bDeFi\b", "Dee-Fye", text, flags=re.I)  # "DEE-fye", not "duh-FYE"
         key = hashlib.sha1(f"{self.voice}|{speed}|{text}".encode()).hexdigest()[:20]
         path = os.path.join(CACHE, key + ".npy")
         if os.path.exists(path):
