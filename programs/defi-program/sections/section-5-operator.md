@@ -24,6 +24,8 @@ module turns that into written policy.
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 12 — Operate as Your Own Bank](../assets/modules/module-12.png)
+
 ### The 60-second version
 A bank keeps assets safe, lends, borrows and always has cash for what it owes. With DeFi you can run those four jobs yourself, with written policies, because there's nobody to call when something goes wrong.
 
@@ -58,6 +60,8 @@ Fill in the balance sheet worksheet (W6) with rough numbers: equity, LTV and run
 
 ### Objective
 Build a personal on-chain balance sheet and read the three numbers that matter: equity, LTV and liquidity runway.
+
+![Your on-chain balance sheet](../assets/diagrams/personal-balance-sheet.png)
 
 ### Explanation
 - **Assets:** everything you own, at market value: collateral, yield positions, reserves.
@@ -134,6 +138,8 @@ every path once a quarter.
 
 ### Objective
 Use your assets as collateral for liquidity without selling, under a written credit policy.
+
+![The credit line](../assets/diagrams/credit-policy.png)
 
 ### Explanation
 Wealthy clients rarely sell appreciating assets to raise cash; they borrow
@@ -212,6 +218,8 @@ market day touches none of it.
 ### Objective
 Act as the lending side of the bank: choose markets, price the risk, and know when to pull liquidity.
 
+![Being the lender](../assets/diagrams/lender-side.png)
+
 ### Explanation
 When you supply to a money market, you're the bank's depositor, and
 effectively its credit desk. Your return:
@@ -254,6 +262,8 @@ between them, and cap A lower because its tail is fatter and less known.
 ### Objective
 Keep books a stranger could follow, and make sure your family could recover everything if you couldn't.
 
+![Books and succession](../assets/diagrams/books-succession.png)
+
 ### Explanation
 **Books** (update weekly from your journal, Module 8):
 - Every position: protocol, chain, contract, amount, entry date and price, cost basis
@@ -293,6 +303,8 @@ the co-signer. No single document contains enough to steal the funds.
 
 ### Objective
 Know which on-chain actions may have tax or legal consequences, keep the records to handle them, and know when to get professional help.
+
+![Records for tax and legal](../assets/diagrams/tax-records.png)
 
 ### Explanation
 **This lesson is awareness, not advice. Rules differ by country and change. Use a crypto-aware tax professional and, for legal questions, a lawyer.**
@@ -380,6 +392,8 @@ expected losses), pay out **less** than that, and never pay out of principal.
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 13 — The Income Engine](../assets/modules/module-13.png)
+
 ### The 60-second version
 Income from DeFi should be planned like a pension, not chased like a jackpot: build it from durable sources, subtract the losses you should expect, and pay yourself less than that.
 
@@ -415,6 +429,8 @@ Take one position and compute its risk-adjusted yield with `defi_calc.py expecte
 ### Objective
 Rank income sources by how long and how reliably they're likely to pay, not by their headline rate.
 
+![Income by durability](../assets/diagrams/durability-rank.png)
+
 ### Explanation
 | Source | Typical driver | Durability | Variability |
 |---|---|---|---|
@@ -445,6 +461,8 @@ bottom rows are **boosters** you size small and expect to switch off.
 
 ### Objective
 Convert every headline yield into an expected yield after the losses it statistically carries.
+
+![Expected yield](../assets/charts/expected-yield.png)
 
 ### Explanation
 `risk-adjusted yield = headline − (annual loss probability × loss given default) − costs`
@@ -520,6 +538,8 @@ dollar income, moves with ETH. The rest is stablecoin-denominated.
 ### Objective
 Set a payout you can sustain through bad years, and the rules that change it.
 
+![The payout policy](../assets/diagrams/payout-policy.png)
+
 ### Explanation
 - **Pay out a share of *expected* income, not headline** (e.g. 70%).
 - **Retain the rest** as a loss buffer; it absorbs the losses you assumed in 13.2.
@@ -549,6 +569,8 @@ and the payout continues.
 
 ### Objective
 Grow the engine safely and review it like a bank's annual report.
+
+![Annual review](../assets/diagrams/annual-review.png)
 
 ### Explanation
 **Compounding:** reinvesting the retained share grows principal, and income
@@ -606,6 +628,8 @@ limited permissions you can revoke, and never by handing over your keys.
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 14 — Automation & Mastery](../assets/modules/module-14.png)
+
 ### The 60-second version
 At mastery, you watch everything automatically and act through rules and limited permissions, never by handing over keys. Then you prove it with the operator capstone.
 
@@ -640,6 +664,8 @@ Set one alert today: a health factor, a peg or any outflow from your vault walle
 
 ### Objective
 Set up monitoring so you hear about problems before they cost money.
+
+![Monitoring](../assets/diagrams/alert-stack.png)
 
 ### Explanation
 Watch four things:
@@ -676,6 +702,8 @@ block-explorer address alerts, and official status/X accounts. Alerts should rea
 ### Objective
 Automate routine actions with the least permission possible.
 
+![Automate with least permission](../assets/diagrams/least-permission-bot.png)
+
 ### Explanation
 - **Keeper / automation networks** execute pre-defined actions when conditions
   are met (e.g. repay when HF < 1.8, rebalance an LP range).
@@ -707,6 +735,8 @@ Worst case if the bot is compromised: it repays your debt, which is annoying, no
 ### Objective
 Run your bank with procedures that prevent single-point mistakes.
 
+![Change control](../assets/diagrams/change-control.png)
+
 ### Explanation
 - **Multisig signing procedure:** every signer independently verifies the
   transaction (destination, amount, calldata) on their **own device screen**, not a shared screenshot.
@@ -736,6 +766,8 @@ refill schedule on their hardware wallet screen, then signs. Logged in the books
 
 ### Objective
 Assemble your complete on-chain bank and have it assessed.
+
+![Capstone pack](../assets/diagrams/capstone-pack.png)
 
 ### Explanation — the operator capstone
 Submit one document (template in `07-program-operations.md`) containing:
@@ -772,6 +804,8 @@ Submit one document (template in `07-program-operations.md`) containing:
 ### Objective
 Read on-chain data directly and build simple read-only tools, so you're not dependent on any one dashboard.
 
+![Read-only tools](../assets/diagrams/readonly-tools.png)
+
 ### Explanation
 - **Reading without code:** block explorers' Read tabs show a contract's public state (e.g. a lending market's parameters, your position).
 - **Public data APIs** (e.g. protocol analytics sites, explorers) return TVL, fees, yields and prices as JSON.
@@ -806,6 +840,8 @@ breaks: you miss an alert, so keep your other alerts (14.1) as a backup.
 
 ### Objective
 Understand the professional bot economy that shapes DeFi prices, and why competing in it is hard.
+
+![Searchers and keepers](../assets/diagrams/searcher-keeper.png)
 
 ### Explanation
 - **Searchers** run bots that find and capture opportunities: **DEX arbitrage** (price gaps between pools/venues), **liquidations** (repay debt, take the bonus), **backruns** (trading right after a large swap), and, harmfully, sandwiches.

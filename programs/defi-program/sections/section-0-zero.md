@@ -26,6 +26,8 @@ rest of the program needs.
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 0 — Crypto From Zero](../assets/modules/module-00.png)
+
 ### The 60-second version
 Crypto is money recorded on a public ledger that nobody can quietly edit. You'll open an exchange account, buy a little crypto, move it into a wallet only you control, and make your first practice DeFi transaction, all with a small amount and a checklist.
 
@@ -63,6 +65,8 @@ Read Lesson 0.1, then secure your email with a unique password and authenticator
 ### Objective
 Explain in plain words what a blockchain is, what a cryptocurrency is, and what "DeFi" means.
 
+![Ledgers vs a blockchain](../assets/diagrams/ledgers-vs-blockchain.png)
+
 ### Explanation
 - **Money is a record of who owns what.** Your bank balance is a line in your bank's private ledger (record book). You trust the bank to keep it correct.
 - **A blockchain** is a ledger that thousands of computers keep a copy of and agree on together. New entries are added in batches called **blocks**, each linked to the one before: a chain of blocks. Nobody can quietly change an old entry, because everyone else's copy would disagree.
@@ -94,6 +98,8 @@ There is no "undo" button.
 
 ### Objective
 Open an account on a reputable exchange and lock it down before putting money in.
+
+![Lock the exchange down first](../assets/diagrams/exchange-lockdown.png)
 
 ### Explanation
 An **exchange** is a company that lets you swap your normal money (dollars,
@@ -143,6 +149,8 @@ She knows it's fake and deletes it.
 ### Objective
 Fund your account and make a first purchase at a sensible cost.
 
+![What a first buy actually costs](../assets/diagrams/first-buy-costs.png)
+
 ### Explanation
 - **Deposit** your money, usually by bank transfer (cheapest) or card (fastest, most expensive).
 - **Instant buy / convert** buttons are simple but often include a **spread**
@@ -179,6 +187,8 @@ Same ETH, ~$18 difference. Your exchange's fee page has the real numbers.
 
 ### Objective
 Understand custody and decide what stays on the exchange and what moves to your own wallet.
+
+![Who holds the keys](../assets/diagrams/custody-split.png)
 
 ### Explanation
 - **On an exchange (custodial):** the exchange holds your crypto and owes it to you. Easy, recoverable with ID, but if the exchange fails, freezes or is hacked, your money is at risk. *"Not your keys, not your coins."*
@@ -294,6 +304,8 @@ learn on Layer 2s.
 ### Objective
 Connect your wallet to a DeFi app, understand what you're signing, and practise on a free test network before using real money.
 
+![Practice mode first](../assets/diagrams/practice-mode-first.png)
+
 ### Explanation
 - **Connect wallet:** lets a site *see* your address. It can't move funds by itself.
 - **Sign a message:** proves you own the address (e.g. to log in). Read it. Some "messages" are really permissions (Lesson 1.4).
@@ -334,6 +346,8 @@ Total lessons learned: five.
 
 ### Objective
 Lock in the habits that prevent most losses, and learn the words used in the rest of the program.
+
+![Security baseline](../assets/diagrams/security-baseline.png)
 
 ### Explanation — the 10 rules
 1. **Never share your seed phrase.** No real person or company will ever ask for it.

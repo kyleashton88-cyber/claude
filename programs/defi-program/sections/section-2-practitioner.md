@@ -17,6 +17,8 @@
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 3 — Lending & Leverage](../assets/modules/module-03.png)
+
 ### The 60-second version
 Lending markets let you earn interest by lending, or borrow against what you own without selling it. Borrowing comes with one hard rule: if your collateral falls too far, it's sold automatically, at a penalty.
 
@@ -52,6 +54,8 @@ Supply $20 of USDC to a blue-chip lending market, read its utilisation, then wit
 
 ### Objective
 Explain where lending yields come from and why rates jump when a market is nearly fully borrowed.
+
+![How a lending pool works](../assets/diagrams/lending-pool-flow.png)
 
 ### Explanation
 A DeFi **money market** is a pool: lenders **supply** assets, borrowers
@@ -128,6 +132,8 @@ Calculate your LTV, health factor and liquidation price before you borrow.
 ### Objective
 Know exactly what a liquidation costs you, and how to avoid ever reaching one.
 
+![The liquidation cascade](../assets/diagrams/liquidation-cascade.png)
+
 ### Explanation
 When HF drops below 1, a **liquidator** (usually a bot) repays part of your debt
 (up to the **close factor**, often 50%) and takes that value of your
@@ -190,6 +196,8 @@ Section 3.1 showed borrow rates can jump from 4% to 34% in hours. That's the ris
 
 ### Objective
 Understand perp positions well enough to use them for hedging (Module 11) and carry (10.3), and to see why high leverage fails.
+
+![Perpetual futures](../assets/diagrams/perp-anatomy.png)
 
 ### Explanation
 - A **perpetual future (perp)** tracks an asset's price with no expiry. You post **margin** and choose **leverage**.
@@ -254,6 +262,8 @@ oracle prices the LST (market price vs exchange rate) before trusting e-mode.
 ### Objective
 Mint stablecoins against your own collateral (as your own bank would), and manage the position safely.
 
+![Minting your own dollars](../assets/diagrams/cdp-mint.png)
+
 ### Explanation
 - A **CDP** (collateralised debt position) lets you lock collateral and **mint** a stablecoin against it. You owe the stablecoin back, plus a **stability fee** (interest).
 - **Minimum collateral ratio** (e.g. 150%): below it, the position is liquidated.
@@ -302,6 +312,8 @@ Operators treat the maximum as a cliff, not a target.
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 4 — Yield](../assets/modules/module-04.png)
+
 ### The 60-second version
 Every yield is payment for a risk. Staking pays you to secure a network, lending pays for borrower demand, farms often pay in newly printed tokens. This module teaches you to see what each yield really pays for.
 
@@ -337,6 +349,8 @@ Take any advertised APY and split it into base yield vs incentives using the pro
 ### Objective
 Split a farm's APY into what's earned from real activity and what's paid in newly minted tokens.
 
+![Base yield vs emissions](../assets/diagrams/base-vs-emissions.png)
+
 ### Explanation
 - **Base yield:** trading fees or borrower interest. Paid by real users.
 - **Emissions / incentives:** new tokens the protocol prints to attract deposits. The reward token often falls while emissions continue.
@@ -365,6 +379,8 @@ entirely and you're left with 5%. **Would you take the risk for 5%?** That's the
 ### Objective
 Understand what staking pays for, and its lock-up and validator risks.
 
+![Native staking](../assets/diagrams/native-staking.png)
+
 ### Explanation
 Proof-of-stake networks pay **stakers** to secure the chain. You either run a
 validator or **delegate** to one. Rewards come from issuance and fees. Risks:
@@ -392,6 +408,8 @@ asset that falls 30% is still a large loss. **Stake what you'd hold anyway.**
 
 ### Objective
 Use liquid staking tokens knowing how they accrue value and how they can depeg.
+
+![Liquid staking tokens](../assets/diagrams/lst-accrual.png)
 
 ### Explanation
 A **liquid staking token (LST)** represents staked assets plus rewards, and can
@@ -422,6 +440,8 @@ In a panic it trades at 0.98 on the market. Holders who can wait for redemption
 ### Objective
 Map the extra risk layers restaking adds before accepting its extra yield.
 
+![Restaking adds layers](../assets/diagrams/restaking-layers.png)
+
 ### Explanation
 Restaking reuses staked assets to secure additional services, for extra
 rewards and often points. Each service adds its own **slashing conditions**,
@@ -450,6 +470,8 @@ yield must pay for all of them. Plan with points valued at zero.
 
 ### Objective
 Decide when a vault's fees are worth paying compared with doing it yourself.
+
+![Vault vs doing it yourself](../assets/diagrams/vault-vs-diy.png)
 
 ### Explanation
 A **vault** pools deposits and runs a strategy (often harvesting and
@@ -480,6 +502,8 @@ DIY instead, compounding weekly at $2 gas:
 ### Objective
 Price airdrop and points farming as a bet, including its costs.
 
+![Points are a bet](../assets/diagrams/points-opportunity-cost.png)
+
 ### Explanation
 Protocols reward early users with tokens (**airdrops**), often tracked by
 **points** first. Eligibility rules, snapshots and **sybil filters** (removing
@@ -507,6 +531,8 @@ beat that plus its extra risk, or it's the worse choice.
 
 ### Objective
 Tell apart the different ways a stablecoin can pay yield, and the risk behind each.
+
+![Yield-bearing stablecoins](../assets/diagrams/yield-bearing-stables.png)
 
 ### Explanation
 Yield on "dollars" on-chain comes from one of four places:
@@ -539,6 +565,8 @@ $1, and who can?
 
 ### Objective
 Use tokenized real-world assets knowing what you actually own and who you're trusting.
+
+![Tokenized real-world assets](../assets/diagrams/rwa-trust.png)
 
 ### Explanation
 - **RWAs** are tokens that represent off-chain assets: short-term government bills (the most common), money-market funds, credit, commodities, property.
@@ -588,6 +616,8 @@ plumbing (bridges, oracles, admin keys, contract bugs), not from price moves.
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 5 — Infrastructure Risk](../assets/modules/module-05.png)
+
 ### The 60-second version
 Your position is only as safe as the weakest thing it depends on: the bridge that moved your tokens, the oracle that prices your collateral, the admin key that can upgrade the contract. Most big DeFi losses came from this plumbing.
 
@@ -623,6 +653,8 @@ On a block explorer, open a protocol you use: is it a proxy? Who can upgrade it?
 ### Objective
 Choose bridge routes by their trust model, and size bridge exposure accordingly.
 
+![Bridge trust models](../assets/diagrams/bridge-trust.png)
+
 ### Explanation
 Bridges move value between chains:
 - **Canonical bridges:** the chain's official route (e.g. a rollup's native bridge). Usually the strongest security, sometimes slower.
@@ -654,6 +686,8 @@ test first. Never leave large balances as a **wrapped** asset from a weak bridge
 ### Objective
 Understand how your L2 settles, who orders your transactions, and how you'd exit.
 
+![How an L2 settles](../assets/diagrams/l2-exit.png)
+
 ### Explanation
 - **Rollups** execute transactions off Ethereum and post data or proofs back to it.
 - **Optimistic rollups** assume transactions are valid unless challenged. Native withdrawals to Ethereum wait out a **challenge window** (about 7 days on major optimistic rollups).
@@ -682,6 +716,8 @@ safest, ~7 days. Fast bridge: minutes, for a fee, relying on its liquidity.
 
 ### Objective
 Know which price feed secures each position, and how it can fail.
+
+![Oracles and TWAPs](../assets/diagrams/oracle-twap.png)
 
 ### Explanation
 Smart contracts can't see market prices; **oracles** bring them in. Lending
@@ -714,6 +750,8 @@ Conversely, a thinly traded collateral token can be pushed up and borrowed again
 ### Objective
 Read who controls a contract and whether its code can change after you deposit.
 
+![Proxies and admin keys](../assets/diagrams/proxy-admin-keys.png)
+
 ### Explanation
 - **State:** what a contract stores (balances, parameters). **Functions** change it; **events** log what happened.
 - **Verified source:** the code published on the explorer matches what's deployed. That's good, not proof of safety.
@@ -744,6 +782,8 @@ A 1-of-1 admin with no timelock is a red flag.
 ### Objective
 Weigh contract risk honestly, and read an audit for what it actually covers.
 
+![What an audit covers](../assets/diagrams/audit-coverage.png)
+
 ### Explanation
 - **Common failure types:** logic bugs, **reentrancy** (a contract is called back before it updates its state), broken access control, and **economic exploits** (correct code, exploitable incentives or oracles).
 - **Audits** review specific code at a specific time. Check the **scope** (which contracts), **date** (before later changes?), **severity of findings** and whether they were **fixed**.
@@ -771,6 +811,8 @@ small relative to the value. Size down, or wait.
 
 ### Objective
 Operate safely on non-EVM chains and understand how Bitcoin is used in DeFi.
+
+![Beyond Ethereum](../assets/diagrams/ecosystem-map.png)
 
 ### Explanation
 - **Solana:** a separate, high-throughput chain with its own wallets (e.g. Phantom, Solflare), its own address format, very low fees (paid in SOL), and priority fees when busy. Tokens follow its own standard (SPL). Your Ethereum address **doesn't** work there. Sending between ecosystems needs a bridge or an exchange.
@@ -800,6 +842,8 @@ wrapping at all. Write each option's trust model and cap wrapped BTC as bridge r
 ### Objective
 Move value between chains cheaply and safely, without getting stranded without gas.
 
+![Operating across chains](../assets/diagrams/cross-chain-gas.png)
+
 ### Explanation
 - **Gas stranding:** tokens on a chain where you have no gas token can't move. Keep a small gas float on every chain you use.
 - **Route choice:** canonical bridge (safest, sometimes slow), fast bridge/liquidity network, exchange deposit-withdraw (often simplest for large amounts, but custodial for a moment), or intent-based cross-chain swaps (solvers deliver on the other chain).
@@ -828,6 +872,8 @@ Send $50 first by the chosen route, keep ~$5 of ETH on Base for gas, then send t
 
 ### Objective
 Read verified contract code well enough to check the claims a protocol makes about itself.
+
+![Read the verified code](../assets/diagrams/read-verified-code.png)
 
 ### Explanation
 You don't need to be a developer to spot the things that matter. In verified Solidity code on an explorer, look for:

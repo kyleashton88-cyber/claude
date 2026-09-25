@@ -65,9 +65,127 @@ and **end** with the wrap-up report in Phase 8.
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-12-intro.mp4  (7.5 MB)  <- top of Module 12
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-13-intro.mp4  (7.0 MB)  <- top of Module 13
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-14-intro.mp4  (7.3 MB)  <- top of Module 14
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-0.mp4  (13.0 MB)  <- Lesson 0.0 page
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-1.mp4  (28.2 MB)  <- Lesson 0.1 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-2.mp4  (32.1 MB)  <- Lesson 0.2 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-3.mp4  (23.3 MB)  <- Lesson 0.3 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-4.mp4  (12.4 MB)  <- Lesson 0.4 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-5.mp4  (33.3 MB)  <- Lesson 0.5 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-6.mp4  (33.1 MB)  <- Lesson 0.6 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-7.mp4  (27.6 MB)  <- Lesson 0.7 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-8.mp4  (46.3 MB)  <- Lesson 0.8 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-0.mp4  (12.3 MB)  <- Lesson 1.0 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-1.mp4  (27.4 MB)  <- Lesson 1.1 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-2.mp4  (24.7 MB)  <- Lesson 1.2 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-3.mp4  (25.9 MB)  <- Lesson 1.3 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-4.mp4  (25.7 MB)  <- Lesson 1.4 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-5.mp4  (21.8 MB)  <- Lesson 1.5 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-6.mp4  (22.4 MB)  <- Lesson 1.6 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-7.mp4  (28.2 MB)  <- Lesson 1.7 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-8.mp4  (25.2 MB)  <- Lesson 1.8 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-9.mp4  (32.0 MB)  <- Lesson 1.9 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-0.mp4  (12.3 MB)  <- Lesson 2.0 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-1.mp4  (23.5 MB)  <- Lesson 2.1 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-2.mp4  (40.1 MB)  <- Lesson 2.2 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-3.mp4  (23.1 MB)  <- Lesson 2.3 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-4.mp4  (22.1 MB)  <- Lesson 2.4 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-5.mp4  (24.1 MB)  <- Lesson 2.5 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-6.mp4  (22.4 MB)  <- Lesson 2.6 page
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-7.mp4  (34.4 MB)  <- Lesson 2.7 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-8.mp4  (31.2 MB)  <- Lesson 2.8 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-03-0.mp4  (11.6 MB)  <- Lesson 3.0 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-03-1.mp4  (22.8 MB)  <- Lesson 3.1 page
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-03-2.mp4  (54.5 MB)  <- Lesson 3.2 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-03-3.mp4  (18.7 MB)  <- Lesson 3.3 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-03-4.mp4  (27.2 MB)  <- Lesson 3.4 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-03-5.mp4  (23.8 MB)  <- Lesson 3.5 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-03-6.mp4  (34.1 MB)  <- Lesson 3.6 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-03-7.mp4  (25.1 MB)  <- Lesson 3.7 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-0.mp4  (11.1 MB)  <- Lesson 4.0 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-1.mp4  (18.5 MB)  <- Lesson 4.1 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-2.mp4  (14.6 MB)  <- Lesson 4.2 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-3.mp4  (16.5 MB)  <- Lesson 4.3 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-4.mp4  (14.7 MB)  <- Lesson 4.4 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-5.mp4  (16.8 MB)  <- Lesson 4.5 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-6.mp4  (14.4 MB)  <- Lesson 4.6 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-7.mp4  (25.8 MB)  <- Lesson 4.7 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-8.mp4  (25.6 MB)  <- Lesson 4.8 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-0.mp4  (10.9 MB)  <- Lesson 5.0 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-1.mp4  (20.6 MB)  <- Lesson 5.1 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-2.mp4  (21.5 MB)  <- Lesson 5.2 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-3.mp4  (21.0 MB)  <- Lesson 5.3 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-4.mp4  (20.5 MB)  <- Lesson 5.4 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-5.mp4  (22.0 MB)  <- Lesson 5.5 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-6.mp4  (23.8 MB)  <- Lesson 5.6 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-7.mp4  (23.3 MB)  <- Lesson 5.7 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-8.mp4  (24.3 MB)  <- Lesson 5.8 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-06-0.mp4  (10.6 MB)  <- Lesson 6.0 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-06-1.mp4  (19.2 MB)  <- Lesson 6.1 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-06-2.mp4  (18.8 MB)  <- Lesson 6.2 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-06-3.mp4  (18.2 MB)  <- Lesson 6.3 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-06-4.mp4  (14.3 MB)  <- Lesson 6.4 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-06-5.mp4  (24.7 MB)  <- Lesson 6.5 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-06-6.mp4  (25.0 MB)  <- Lesson 6.6 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-06-7.mp4  (22.9 MB)  <- Lesson 6.7 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-0.mp4  (11.2 MB)  <- Lesson 7.0 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-1.mp4  (16.4 MB)  <- Lesson 7.1 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-2.mp4  (14.2 MB)  <- Lesson 7.2 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-3.mp4  (13.4 MB)  <- Lesson 7.3 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-4.mp4  (13.6 MB)  <- Lesson 7.4 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-5.mp4  (17.7 MB)  <- Lesson 7.5 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-6.mp4  (13.1 MB)  <- Lesson 7.6 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-7.mp4  (16.9 MB)  <- Lesson 7.7 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-8.mp4  (16.4 MB)  <- Lesson 7.8 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-9.mp4  (20.7 MB)  <- Lesson 7.9 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-08-0.mp4  (11.3 MB)  <- Lesson 8.0 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-08-1.mp4  (19.9 MB)  <- Lesson 8.1 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-08-2.mp4  (15.9 MB)  <- Lesson 8.2 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-08-4.mp4  (20.7 MB)  <- Lesson 8.4 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-08-5.mp4  (22.6 MB)  <- Lesson 8.5 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-08-6.mp4  (19.8 MB)  <- Lesson 8.6 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-08-7.mp4  (26.3 MB)  <- Lesson 8.7 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-09-0.mp4  (11.4 MB)  <- Lesson 9.0 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-09-1.mp4  (32.2 MB)  <- Lesson 9.1 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-09-2.mp4  (21.7 MB)  <- Lesson 9.2 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-09-3.mp4  (26.8 MB)  <- Lesson 9.3 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-0.mp4  (11.5 MB)  <- Lesson 10.0 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-1.mp4  (31.6 MB)  <- Lesson 10.1 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-2.mp4  (21.7 MB)  <- Lesson 10.2 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-3.mp4  (22.7 MB)  <- Lesson 10.3 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-4.mp4  (23.7 MB)  <- Lesson 10.4 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-5.mp4  (19.2 MB)  <- Lesson 10.5 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-6.mp4  (24.6 MB)  <- Lesson 10.6 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-7.mp4  (23.5 MB)  <- Lesson 10.7 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-8.mp4  (28.2 MB)  <- Lesson 10.8 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-9.mp4  (25.6 MB)  <- Lesson 10.9 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-11-0.mp4  (10.7 MB)  <- Lesson 11.0 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-11-1.mp4  (21.9 MB)  <- Lesson 11.1 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-11-2.mp4  (16.2 MB)  <- Lesson 11.2 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-11-3.mp4  (17.4 MB)  <- Lesson 11.3 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-11-4.mp4  (22.4 MB)  <- Lesson 11.4 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-11-5.mp4  (20.4 MB)  <- Lesson 11.5 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-0.mp4  (10.8 MB)  <- Lesson 12.0 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-1.mp4  (22.0 MB)  <- Lesson 12.1 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-2.mp4  (21.7 MB)  <- Lesson 12.2 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-3.mp4  (28.5 MB)  <- Lesson 12.3 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-4.mp4  (23.6 MB)  <- Lesson 12.4 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-5.mp4  (25.3 MB)  <- Lesson 12.5 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-6.mp4  (24.7 MB)  <- Lesson 12.6 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-7.mp4  (27.2 MB)  <- Lesson 12.7 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-8.mp4  (30.2 MB)  <- Lesson 12.8 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-13-0.mp4  (10.8 MB)  <- Lesson 13.0 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-13-1.mp4  (15.7 MB)  <- Lesson 13.1 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-13-2.mp4  (17.4 MB)  <- Lesson 13.2 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-13-3.mp4  (24.6 MB)  <- Lesson 13.3 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-13-4.mp4  (22.2 MB)  <- Lesson 13.4 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-13-5.mp4  (22.1 MB)  <- Lesson 13.5 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-14-0.mp4  (10.2 MB)  <- Lesson 14.0 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-14-1.mp4  (20.4 MB)  <- Lesson 14.1 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-14-2.mp4  (20.6 MB)  <- Lesson 14.2 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-14-3.mp4  (21.5 MB)  <- Lesson 14.3 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-14-4.mp4  (20.9 MB)  <- Lesson 14.4 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-14-5.mp4  (24.4 MB)  <- Lesson 14.5 page
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-14-6.mp4  (26.0 MB)  <- Lesson 14.6 page
 - Thumbnails (same name, .jpg): https://github.com/kyleashton88-cyber/claude/tree/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs
 - Captions (same name, .vtt): https://github.com/kyleashton88-cyber/claude/tree/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions
 - Chapter lists (same name, .txt): https://github.com/kyleashton88-cyber/claude/tree/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters
@@ -95,7 +213,7 @@ and **end** with the wrap-up report in Phase 8.
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-00-8.json  (16 KB)
 
 ### F1. Stage 1 · Foundations (Modules 1, 2)
-- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/sections/section-1-foundations.md  (42 KB)  <- the lessons for this stage
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/sections/section-1-foundations.md  (43 KB)  <- the lessons for this stage
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-01-0.json  (5 KB)
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-01-1.json  (9 KB)
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-01-2.json  (8 KB)
@@ -117,7 +235,7 @@ and **end** with the wrap-up report in Phase 8.
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-02-8.json  (9 KB)
 
 ### F2. Stage 2 · Practitioner (Modules 3, 4, 5)
-- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/sections/section-2-practitioner.md  (45 KB)  <- the lessons for this stage
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/sections/section-2-practitioner.md  (46 KB)  <- the lessons for this stage
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/gold/lesson-03-2.json  (16 KB)  <- GOLD STANDARD (finished)
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-03-0.json  (5 KB)
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-03-1.json  (7 KB)
@@ -146,7 +264,7 @@ and **end** with the wrap-up report in Phase 8.
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-05-8.json  (8 KB)
 
 ### F3. Stage 3 · Analyst (Modules 6, 7)
-- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/sections/section-3-analyst.md  (27 KB)  <- the lessons for this stage
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/sections/section-3-analyst.md  (28 KB)  <- the lessons for this stage
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-06-0.json  (5 KB)
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-06-1.json  (7 KB)
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-06-2.json  (6 KB)
@@ -167,7 +285,7 @@ and **end** with the wrap-up report in Phase 8.
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-07-9.json  (7 KB)
 
 ### F4. Stage 4 · Strategist (Modules 8, 9, 10, 11)
-- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/sections/section-4-strategist.md  (81 KB)  <- the lessons for this stage
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/sections/section-4-strategist.md  (82 KB)  <- the lessons for this stage
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-08-0.json  (5 KB)
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-08-1.json  (7 KB)
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-08-2.json  (6 KB)
@@ -197,7 +315,7 @@ and **end** with the wrap-up report in Phase 8.
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-11-5.json  (7 KB)
 
 ### F5. Stage 5 · Operator (Modules 12, 13, 14)
-- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/sections/section-5-operator.md  (43 KB)  <- the lessons for this stage
+- https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/sections/section-5-operator.md  (44 KB)  <- the lessons for this stage
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-12-0.json  (5 KB)
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-12-1.json  (7 KB)
 - https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video-scripts/lessons/lesson-12-2.json  (7 KB)

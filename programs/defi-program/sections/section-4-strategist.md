@@ -17,6 +17,8 @@
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 8 — The DeFi Operating System](../assets/modules/module-08.png)
+
 ### The 60-second version
 Individual positions don't make a portfolio. This module turns strategies into a system: buckets and caps, a risk register, a strategy library, a routine, honest performance measurement, and rules for your own behaviour.
 
@@ -52,6 +54,8 @@ Write your current holdings into four buckets (reserve, core, productive, specul
 ### Objective
 Split capital into risk buckets with caps, so no single failure can sink the portfolio.
 
+![Portfolio risk buckets](../assets/diagrams/risk-buckets.png)
+
 ### Explanation
 - **Buckets:** liquidity reserve · core (simple, durable) · productive (LP, vaults, carry) · speculative (new, points, experiments).
 - **Concentration caps:** per protocol, per chain, per stablecoin issuer, per bridge.
@@ -84,6 +88,8 @@ Rebalance when any bucket drifts more than 5 points from target, or after any in
 
 ### Objective
 Keep a risk register that scores every position's risks and names the response.
+
+![The risk register](../assets/diagrams/risk-register.png)
 
 ### Explanation
 The eight risk surfaces: **smart-contract · economic · oracle · liquidity ·
@@ -124,6 +130,8 @@ DeFi Strategy Mastery** (`03-defi-strategy-mastery.md`).
 ### Objective
 Run every position through the same four-phase routine.
 
+![The operating playbook](../assets/diagrams/deploy-monitor-respond.png)
+
 ### Explanation
 1. **Deploy:** due diligence done · before-signing checklist · test amount · journal row (protocol, chain, contracts, amount, entry, thesis, kill rules, approvals).
 2. **Monitor:** daily HF/pegs/ranges/incidents; weekly P&L vs benchmark, harvest, revoke; monthly register review.
@@ -157,6 +165,8 @@ Run every position through the same four-phase routine.
 ### Objective
 Measure your results so deposits, withdrawals and lucky markets don't fool you.
 
+![Honest performance](../assets/diagrams/twr-vs-deposits.png)
+
 ### Explanation
 - **Time-weighted return (TWR):** chains the return of each period, ignoring when you added or removed money. It measures your *decisions*.
 - **Money-weighted / simple gain:** what your total capital actually did, including the timing of deposits.
@@ -186,6 +196,8 @@ Then compare 4.50% with holding ETH over the same period, and with stablecoin le
 
 ### Objective
 Recognise the behaviours that turn good strategies into losses, and build rules that stop them.
+
+![Impulse vs a written rule](../assets/diagrams/discipline-rules.png)
 
 ### Explanation
 | Bias | What it looks like | Rule that stops it |
@@ -222,6 +234,8 @@ and at review decides the idea doesn't meet the thesis standard at all.
 
 ### Objective
 Put numbers on portfolio risk and size positions from them.
+
+![Quantitative risk](../assets/charts/var-drawdown.png)
 
 ### Explanation
 - **Volatility (σ):** annualised standard deviation of returns. **Daily σ ≈ annual σ ÷ √365** (crypto trades every day).
@@ -745,6 +759,8 @@ don't enter the position.*
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 9 — DeFi vs Grid Bots](../assets/modules/module-09.png)
+
 ### The 60-second version
 A grid bot on an exchange and a liquidity position on a DEX both buy as price falls and sell as it rises inside a range. This module shows when each is the better tool, and how to run both without doubling your risk.
 
@@ -833,6 +849,8 @@ income on all trading volume in range (after impermanent loss).
 ### Objective
 Pick grid bot, LP, both, or neither, for a given market and account.
 
+![When each one wins](../assets/diagrams/when-each-wins.png)
+
 ### Explanation
 | Factor | Favours grid bot | Favours on-chain LP |
 |---|---|---|
@@ -872,6 +890,8 @@ major news, thin liquidity. Waiting is a position.
 ### Objective
 Design a portfolio that uses exchange grid bots and DeFi together without
 doubling up on the same risk.
+
+![One system, two sleeves](../assets/diagrams/combined-system.png)
 
 ### Explanation
 Each tool is good at a different job:
@@ -938,6 +958,8 @@ is short ___."* If you can't fill the blank, you're not ready to enter.
 ## Lesson 10.0 — Mastery Starter
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
+
+![Module 10 — Advanced Yield Engineering](../assets/modules/module-10.png)
 
 ### The 60-second version
 Professionals don't just take the yield on offer: they engineer it. Fixed rates, hedged carry, option income and managed ranges each swap one risk for another. This module teaches you to build them and say exactly what each one is short.
@@ -1025,6 +1047,8 @@ YT: falling yields, and time (it decays to zero).
 ### Objective
 Capture the premium of a dated future over spot without taking a view on price.
 
+![Cash-and-carry](../assets/diagrams/cash-and-carry.png)
+
 ### Explanation
 In rising markets, dated futures usually trade **above** spot. The gap (basis)
 shrinks to zero at expiry because the future settles at spot.
@@ -1062,6 +1086,8 @@ Margin and venue risk: a squeeze on the short leg, or the venue failing.
 
 ### Objective
 Run a funding-carry position with proper sizing, venue limits and exit rules.
+
+![Funding carry](../assets/diagrams/funding-carry.png)
 
 ### Explanation
 Perpetual futures pay **funding** between longs and shorts to keep the perp
@@ -1108,6 +1134,8 @@ Funding turning negative, short squeezes, and venue failure.
 ### Objective
 Earn option premium on assets you'd hold or buy anyway, knowing exactly what you give up.
 
+![Options income](../assets/diagrams/covered-call-put.png)
+
 ### Explanation
 - **Covered call:** you hold the asset and sell someone the right to buy it
   from you at a higher **strike**. You keep the premium, and your upside is capped at the strike.
@@ -1149,6 +1177,8 @@ Cash-secured put: a crash through the strike.
 
 ### Objective
 Choose a range width and a rebalance rule that fee income can actually pay for.
+
+![Concentrated liquidity](../assets/diagrams/cl-range-rebalance.png)
 
 ### Explanation
 Narrower ranges earn more fees per dollar *while in range* and go out of range sooner.
@@ -1193,6 +1223,8 @@ Trending markets and volatility above what the range was sized for.
 ### Objective
 Value restaking and points programmes without letting unknown rewards drive position size.
 
+![Points are an option](../assets/diagrams/points-as-option.png)
+
 ### Explanation
 Restaking reuses staked assets to secure more services, paying extra rewards
 and often **points**: an off-chain score that may or may not become a token.
@@ -1232,6 +1264,8 @@ Slashing, depeg of the restaking token, and the chance that points never become 
 
 ### Objective
 Understand what you're really taking on when you provide liquidity to a perpetuals exchange.
+
+![You are the house](../assets/diagrams/perp-lp-vault.png)
 
 ### Explanation
 Many on-chain perp exchanges let you deposit into a **liquidity vault** that acts as the
@@ -1298,6 +1332,8 @@ will rise instead, stay floating (supply to lending) or buy YT with a small, cap
 ### Objective
 Understand the arbitrages that keep stablecoins and LSTs near their value, and when a retail operator can take part.
 
+![Peg and redemption](../assets/diagrams/peg-arb.png)
+
 ### Explanation
 - **Stablecoin peg arbitrage:** if a stablecoin trades at 0.995 on a DEX and a **PSM** or issuer redeems it at 1.00 (minus a fee), buy-and-redeem closes the gap. It's competitive, needs fast execution, and is often limited to whoever can redeem.
 - **LST discount arbitrage:** if an LST trades below its redemption value, buy it and **queue a redemption**. Your return is the discount over the waiting time, with the risk that the discount reflects a real problem (slashing, a bug) or that the queue lengthens.
@@ -1345,6 +1381,8 @@ The reason the discount exists: an actual problem with the asset, or redemption 
 
 *New to this topic? Start here. It takes about 10 minutes and gets you from zero to ready for this module.*
 
+![Module 11 — Hedging & Risk Engineering](../assets/modules/module-11.png)
+
 ### The 60-second version
 Risk you don't want can often be hedged, insured or engineered away, at a cost. This module covers hedging, cover, liquidation protection, stress testing and what to do in the first hour of a crisis.
 
@@ -1380,6 +1418,8 @@ Write down the single event that would hurt your portfolio most, and what you'd 
 ### Objective
 Reduce price exposure deliberately, and know what each hedge costs.
 
+![Hedging price](../assets/diagrams/hedge-perp-option.png)
+
 ### Explanation
 - **Perp hedge:** short a perpetual future against spot you hold. Cheap to open;
   pays or earns funding; needs margin; the hedge ratio is your choice.
@@ -1409,6 +1449,8 @@ You hold **10 ETH at $3,000** ($30,000).
 ### Objective
 Evaluate on-chain cover products as insurance: what they pay, when, and what they don't.
 
+![On-chain cover](../assets/diagrams/cover-what-pays.png)
+
 ### Explanation
 Cover protocols sell protection against defined events (a protocol hack, a
 depeg beyond a threshold). Read: **what's covered** (exact wording), **exclusions**,
@@ -1437,6 +1479,8 @@ for a large, concentrated position; often not for a small, diversified one.
 ### Objective
 Make liquidation practically impossible with buffers, alerts and pre-computed repayment.
 
+![Liquidation protection](../assets/diagrams/liq-buffer-alerts.png)
+
 ### Explanation
 Three layers: **buffer** (HF ≥ 2–2.5 at entry) → **alerts** (HF 2.0 and 1.7,
 Module 14.1) → **action** (repay, add collateral, or automated deleveraging tools
@@ -1464,6 +1508,8 @@ To restore HF 2.5: debt must be 24,000 × 0.8 ÷ 2.5 = $7,680 → **repay $4,320
 
 ### Objective
 Run standard shock scenarios on your book and fix what fails before markets test it.
+
+![Stress-test the book](../assets/diagrams/stress-grid.png)
 
 ### Explanation
 Scenarios every operator runs: **crypto −50% in a day** · **a stablecoin depegs 10%**
@@ -1498,6 +1544,8 @@ Holdings: ETH spot $60k · LST collateral $60k with $12k debt · stable lending 
 
 ### Objective
 Know exactly what to do when a protocol you use is exploited, a stablecoin depegs, or your wallet is compromised.
+
+![The first 60 minutes](../assets/diagrams/incident-60min.png)
 
 ### Explanation — the 60-minute playbook
 **0–5 min: Verify.** Official channels only (bookmarked X/Discord/status page,

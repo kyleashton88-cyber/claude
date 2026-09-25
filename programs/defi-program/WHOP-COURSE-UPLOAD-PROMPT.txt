@@ -1,0 +1,1101 @@
+# ON-CHAIN OPERATOR PROGRAM: FILL EVERY CHAPTER OF THE WHOP COURSE
+
+You're adding the finished course content to my Whop course for the **On-Chain Operator Program**: every chapter,
+every lesson page, with its text, its narrated video (thumbnail and captions) and its images. Everything is in a public
+GitHub repository; every link below downloads directly, no login needed.
+
+**Scope:** 122 lesson pages in 16 chapters (Start here + Modules 0-14), 121 lesson videos, 15 module intro videos,
+the welcome video and 129 lesson images.
+
+## Rules
+- **Only the course content.** Don't change the product, prices, plans, checkout, refund policy or store listing.
+  Don't approve waitlist entries or applications. Don't publish or unhide anything unless I tell you to.
+- **Use the files exactly as they are.** Don't rewrite lessons, re-cut videos or edit images. Never invent content for a
+  file you couldn't open; tell me instead.
+- **Keep the order** below: chapters in order, lessons in order inside each chapter (N.0 Mastery Starter first).
+- **Compliance stays on every page:** "Educational content only. Not financial advice. No results are guaranteed."
+  Nothing may promise or project returns, and nothing may ask for seed phrases, keys or account access.
+- If Whop limits upload size or count, tell me the limit and continue with the next item; list what's left at the end.
+
+## How to build each lesson page
+1. Title: "Lesson N.M · <title>" (Mastery Starters: "N.0 · Mastery Starter").
+2. Video at the top: upload the MP4, set the thumbnail, attach the captions (.vtt, English), and paste the chapter list
+   (from the Chapters link) into the video description so learners can jump to sections.
+3. Lesson text: open the Text link, take the section for that lesson, and paste it as the page body, keeping its
+   headings (Objective, Explanation, Worked example, Checklist, Quiz). Keep the checklist as checkboxes if Whop supports
+   them, and the quiz answers hidden or collapsed if it can.
+4. Images: upload each Image and place it where its tag appears in the lesson text (the tag looks like
+   `![Alt text](../assets/...png)`); use the alt text as the caption. If you can't place images inline, put them right
+   under the Objective.
+5. End every page with the disclaimer line above.
+
+## How to work
+- One chapter per reply: build it, then report what you created (every page and upload), what failed and why, and
+  "Ready for the next chapter". Wait for me to say **continue**.
+- If a reply would be cut off, stop at a lesson boundary, say where, and I'll say **continue**.
+- If you can't create pages or upload files directly in Whop, give me exact click-by-click steps for each page with the
+  links to use, and I'll do it.
+
+## FINAL WRAP-UP (after the last chapter, end the process here)
+1. Totals: chapters built, lesson pages built, videos uploaded, images uploaded, captions attached; anything missing,
+   with the lesson id.
+2. Spot-check: open Lesson 0.1, Lesson 3.2 and Lesson 14.6 as a member would and confirm video, captions, images, text,
+   checklist, quiz and disclaimer all show.
+3. Compliance pass: no return promises, the disclaimer on every page, nothing asking for keys or account access.
+4. Open items and the single next action for me.
+
+---
+
+## THE CONTENT, CHAPTER BY CHAPTER
+
+### Chapter: Start here
+- Welcome video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/welcome.mp4  (thumbnail https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/welcome.jpg, captions https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/welcome.vtt)
+- Day-1 Setup Kit (PDF download): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/Day-1-Setup-Kit.pdf
+- Full course PDF (optional download): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/On-Chain-Operator-Program.pdf
+- Course Hub (optional offline companion; the file needs the repo's assets and video folders beside it): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/course-hub/index.html
+- Text for this page: a short welcome, how every lesson works (watch → do the checklist → quiz), and the rule
+  "Nobody from this program will ever ask for your seed phrase or keys."
+
+### Chapter: Module 0 · Crypto From Zero
+- Module intro video (first item in the chapter): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-00-intro.mp4  (thumbnail https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/module-00-intro.jpg, captions https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/module-00-intro.vtt)
+- Chapter cover image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-00.png
+
+#### Lesson 0.0 · Mastery Starter
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-00-crypto-from-zero.md  (use the section headed "Lesson 0.0")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-0.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-00-0.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-00-0.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-00-0.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-00.png
+
+#### Lesson 0.1 · Money, ledgers and why blockchains exist
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-00-crypto-from-zero.md  (use the section headed "Lesson 0.1")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-1.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-00-1.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-00-1.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-00-1.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/ledgers-vs-blockchain.png
+
+#### Lesson 0.2 · Opening and securing an exchange account
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-00-crypto-from-zero.md  (use the section headed "Lesson 0.2")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-2.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-00-2.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-00-2.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-00-2.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/exchange-lockdown.png
+
+#### Lesson 0.3 · Buying your first crypto without overpaying
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-00-crypto-from-zero.md  (use the section headed "Lesson 0.3")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-3.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-00-3.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-00-3.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-00-3.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/first-buy-costs.png
+
+#### Lesson 0.4 · Exchange account vs your own wallet: who holds the keys?
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-00-crypto-from-zero.md  (use the section headed "Lesson 0.4")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-4.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-00-4.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-00-4.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-00-4.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/custody-split.png
+
+#### Lesson 0.5 · Setting up your wallet and backing it up
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-00-crypto-from-zero.md  (use the section headed "Lesson 0.5")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-5.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-00-5.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-00-5.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-00-5.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/seed-backup.png
+
+#### Lesson 0.6 · Networks, gas and your first transfer
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-00-crypto-from-zero.md  (use the section headed "Lesson 0.6")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-6.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-00-6.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-00-6.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-00-6.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/first-transfer.png
+
+#### Lesson 0.7 · Your first DeFi steps (practice mode first)
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-00-crypto-from-zero.md  (use the section headed "Lesson 0.7")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-7.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-00-7.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-00-7.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-00-7.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/practice-mode-first.png
+
+#### Lesson 0.8 · Your security baseline, and the language of DeFi
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-00-crypto-from-zero.md  (use the section headed "Lesson 0.8")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-00-8.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-00-8.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-00-8.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-00-8.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/security-baseline.png
+
+### Chapter: Module 1 · Foundations & Safety
+- Module intro video (first item in the chapter): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-01-intro.mp4  (thumbnail https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/module-01-intro.jpg, captions https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/module-01-intro.vtt)
+- Chapter cover image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-01.png
+
+#### Lesson 1.0 · Mastery Starter
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-01-foundations-safety.md  (use the section headed "Lesson 1.0")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-0.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-01-0.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-01-0.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-01-0.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-01.png
+
+#### Lesson 1.1 · What DeFi is, and the risk-first mindset
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-01-foundations-safety.md  (use the section headed "Lesson 1.1")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-1.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-01-1.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-01-1.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-01-1.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/defi-stack.png
+
+#### Lesson 1.2 · How a transaction actually happens
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-01-foundations-safety.md  (use the section headed "Lesson 1.2")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-2.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-01-2.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-01-2.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-01-2.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/tx-lifecycle.png
+
+#### Lesson 1.3 · Wallets, keys, hardware & multisig
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-01-foundations-safety.md  (use the section headed "Lesson 1.3")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-3.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-01-3.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-01-3.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-01-3.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/three-wallets.png
+
+#### Lesson 1.4 · Tokens, approvals & allowances
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-01-foundations-safety.md  (use the section headed "Lesson 1.4")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-4.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-01-4.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-01-4.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-01-4.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/approval-anatomy.png
+
+#### Lesson 1.5 · Stablecoins and how they break
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-01-foundations-safety.md  (use the section headed "Lesson 1.5")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-5.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-01-5.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-01-5.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-01-5.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/stablecoin-designs.png
+
+#### Lesson 1.6 · Scam defence
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-01-foundations-safety.md  (use the section headed "Lesson 1.6")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-6.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-01-6.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-01-6.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-01-6.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/scam-patterns.png
+
+#### Lesson 1.7 · Reading signatures and simulating transactions
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-01-foundations-safety.md  (use the section headed "Lesson 1.7")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-7.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-01-7.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-01-7.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-01-7.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/simulate-before-sign.png
+
+#### Lesson 1.8 · Privacy and physical security
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-01-foundations-safety.md  (use the section headed "Lesson 1.8")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-8.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-01-8.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-01-8.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-01-8.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/privacy-physical.png
+
+#### Lesson 1.9 · Smart accounts and account abstraction
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-01-foundations-safety.md  (use the section headed "Lesson 1.9")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-01-9.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-01-9.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-01-9.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-01-9.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/three-wallets.png
+
+### Chapter: Module 2 · Trading On-Chain
+- Module intro video (first item in the chapter): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-02-intro.mp4  (thumbnail https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/module-02-intro.jpg, captions https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/module-02-intro.vtt)
+- Chapter cover image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-02.png
+
+#### Lesson 2.0 · Mastery Starter
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-02-trading-on-chain.md  (use the section headed "Lesson 2.0")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-0.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-02-0.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-02-0.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-02-0.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-02.png
+
+#### Lesson 2.1 · DEXs, aggregators & routing
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-02-trading-on-chain.md  (use the section headed "Lesson 2.1")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-1.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-02-1.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-02-1.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-02-1.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/dex-vs-aggregator.png
+
+#### Lesson 2.2 · AMM mathematics (x · y = k)
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/02-sample-lesson-amm-math.md  (the whole file is this lesson)
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-2.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-02-2.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-02-2.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-02-2.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/amm-swap-flow.png
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/charts/amm-curve.png
+
+#### Lesson 2.3 · Providing liquidity
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-02-trading-on-chain.md  (use the section headed "Lesson 2.3")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-3.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-02-3.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-02-3.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-02-3.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/lp-position.png
+
+#### Lesson 2.4 · Impermanent loss & true LP P&L
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-02-trading-on-chain.md  (use the section headed "Lesson 2.4")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-4.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-02-4.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-02-4.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-02-4.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/charts/impermanent-loss.png
+
+#### Lesson 2.5 · MEV and protecting your trades
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-02-trading-on-chain.md  (use the section headed "Lesson 2.5")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-5.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-02-5.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-02-5.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-02-5.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/mev-sandwich.png
+
+#### Lesson 2.6 · Advanced execution: limit, TWAP and intent-based orders
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-02-trading-on-chain.md  (use the section headed "Lesson 2.6")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-6.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-02-6.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-02-6.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-02-6.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/order-types.png
+
+#### Lesson 2.7 · Advanced AMM design and LVR
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-02-trading-on-chain.md  (use the section headed "Lesson 2.7")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-7.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-02-7.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-02-7.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-02-7.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/charts/lvr.png
+
+#### Lesson 2.8 · The MEV supply chain
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-02-trading-on-chain.md  (use the section headed "Lesson 2.8")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-02-8.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-02-8.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-02-8.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-02-8.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/mev-supply-chain.png
+
+### Chapter: Module 3 · Lending & Leverage
+- Module intro video (first item in the chapter): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-03-intro.mp4  (thumbnail https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/module-03-intro.jpg, captions https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/module-03-intro.vtt)
+- Chapter cover image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-03.png
+
+#### Lesson 3.0 · Mastery Starter
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-03-lending-leverage.md  (use the section headed "Lesson 3.0")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-03-0.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-03-0.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-03-0.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-03-0.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-03.png
+
+#### Lesson 3.1 · How lending markets work
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-03-lending-leverage.md  (use the section headed "Lesson 3.1")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-03-1.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-03-1.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-03-1.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-03-1.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/lending-pool-flow.png
+
+#### Lesson 3.2 · LTV, liquidation threshold & health factor
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-03-lending-leverage.md  (use the section headed "Lesson 3.2")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-03-2.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-03-2.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-03-2.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-03-2.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/liquidation-cascade.png
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/charts/health-factor.png
+
+#### Lesson 3.3 · Liquidations and cascades
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-03-lending-leverage.md  (use the section headed "Lesson 3.3")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-03-3.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-03-3.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-03-3.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-03-3.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/liquidation-cascade.png
+
+#### Lesson 3.4 · Borrowing strategies & looping
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-03-lending-leverage.md  (use the section headed "Lesson 3.4")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-03-4.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-03-4.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-03-4.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-03-4.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/charts/loop-spread.png
+
+#### Lesson 3.5 · Perpetual futures and margin on-chain
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-03-lending-leverage.md  (use the section headed "Lesson 3.5")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-03-5.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-03-5.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-03-5.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-03-5.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/perp-anatomy.png
+
+#### Lesson 3.6 · Lending design deep dive: e-mode, caps, auctions, soft liquidation, bad debt
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-03-lending-leverage.md  (use the section headed "Lesson 3.6")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-03-6.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-03-6.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-03-6.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-03-6.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/liquidation-cascade.png
+
+#### Lesson 3.7 · CDP stablecoins: minting your own dollars
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-03-lending-leverage.md  (use the section headed "Lesson 3.7")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-03-7.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-03-7.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-03-7.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-03-7.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/cdp-mint.png
+
+### Chapter: Module 4 · Yield
+- Module intro video (first item in the chapter): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-04-intro.mp4  (thumbnail https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/module-04-intro.jpg, captions https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/module-04-intro.vtt)
+- Chapter cover image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-04.png
+
+#### Lesson 4.0 · Mastery Starter
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-04-yield.md  (use the section headed "Lesson 4.0")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-0.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-04-0.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-04-0.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-04-0.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-04.png
+
+#### Lesson 4.1 · Yield farming: base yield vs emissions
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-04-yield.md  (use the section headed "Lesson 4.1")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-1.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-04-1.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-04-1.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-04-1.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/base-vs-emissions.png
+
+#### Lesson 4.2 · Native staking
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-04-yield.md  (use the section headed "Lesson 4.2")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-2.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-04-2.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-04-2.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-04-2.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/native-staking.png
+
+#### Lesson 4.3 · Liquid staking (LSTs)
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-04-yield.md  (use the section headed "Lesson 4.3")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-3.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-04-3.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-04-3.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-04-3.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/lst-accrual.png
+
+#### Lesson 4.4 · Restaking & shared security
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-04-yield.md  (use the section headed "Lesson 4.4")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-4.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-04-4.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-04-4.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-04-4.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/restaking-layers.png
+
+#### Lesson 4.5 · Vaults & yield optimisers
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-04-yield.md  (use the section headed "Lesson 4.5")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-5.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-04-5.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-04-5.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-04-5.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/vault-vs-diy.png
+
+#### Lesson 4.6 · Airdrops & points: opportunity cost
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-04-yield.md  (use the section headed "Lesson 4.6")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-6.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-04-6.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-04-6.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-04-6.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/points-opportunity-cost.png
+
+#### Lesson 4.7 · Stablecoin savings rates and yield-bearing stablecoins
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-04-yield.md  (use the section headed "Lesson 4.7")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-7.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-04-7.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-04-7.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-04-7.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/yield-bearing-stables.png
+
+#### Lesson 4.8 · Tokenized treasuries and real-world assets (RWAs)
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-04-yield.md  (use the section headed "Lesson 4.8")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-04-8.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-04-8.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-04-8.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-04-8.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/rwa-trust.png
+
+### Chapter: Module 5 · Infrastructure Risk
+- Module intro video (first item in the chapter): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-05-intro.mp4  (thumbnail https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/module-05-intro.jpg, captions https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/module-05-intro.vtt)
+- Chapter cover image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-05.png
+
+#### Lesson 5.0 · Mastery Starter
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-05-infrastructure-risk.md  (use the section headed "Lesson 5.0")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-0.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-05-0.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-05-0.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-05-0.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-05.png
+
+#### Lesson 5.1 · Bridges and trust assumptions
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-05-infrastructure-risk.md  (use the section headed "Lesson 5.1")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-1.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-05-1.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-05-1.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-05-1.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/bridge-trust.png
+
+#### Lesson 5.2 · Layer 2s, sequencers & withdrawal paths
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-05-infrastructure-risk.md  (use the section headed "Lesson 5.2")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-2.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-05-2.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-05-2.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-05-2.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/l2-exit.png
+
+#### Lesson 5.3 · Oracles, TWAPs & manipulation
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-05-infrastructure-risk.md  (use the section headed "Lesson 5.3")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-3.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-05-3.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-05-3.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-05-3.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/oracle-twap.png
+
+#### Lesson 5.4 · Smart contracts: state, proxies, admin keys
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-05-infrastructure-risk.md  (use the section headed "Lesson 5.4")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-4.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-05-4.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-05-4.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-05-4.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/proxy-admin-keys.png
+
+#### Lesson 5.5 · Smart-contract risk & what audits don't prove
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-05-infrastructure-risk.md  (use the section headed "Lesson 5.5")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-5.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-05-5.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-05-5.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-05-5.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/audit-coverage.png
+
+#### Lesson 5.6 · Beyond Ethereum: Solana, Bitcoin and other ecosystems
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-05-infrastructure-risk.md  (use the section headed "Lesson 5.6")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-6.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-05-6.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-05-6.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-05-6.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/ecosystem-map.png
+
+#### Lesson 5.7 · Operating across chains: gas, routes and chain abstraction
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-05-infrastructure-risk.md  (use the section headed "Lesson 5.7")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-7.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-05-7.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-05-7.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-05-7.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/cross-chain-gas.png
+
+#### Lesson 5.8 · Reading smart-contract code: enough to verify claims
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-05-infrastructure-risk.md  (use the section headed "Lesson 5.8")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-05-8.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-05-8.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-05-8.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-05-8.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/read-verified-code.png
+
+### Chapter: Module 6 · Protocol Research
+- Module intro video (first item in the chapter): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-06-intro.mp4  (thumbnail https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/module-06-intro.jpg, captions https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/module-06-intro.vtt)
+- Chapter cover image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-06.png
+
+#### Lesson 6.0 · Mastery Starter
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-06-protocol-research.md  (use the section headed "Lesson 6.0")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-06-0.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-06-0.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-06-0.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-06-0.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-06.png
+
+#### Lesson 6.1 · Protocol due diligence
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-06-protocol-research.md  (use the section headed "Lesson 6.1")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-06-1.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-06-1.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-06-1.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-06-1.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/research-loop.png
+
+#### Lesson 6.2 · Tokenomics: supply, unlocks, FDV, value capture
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-06-protocol-research.md  (use the section headed "Lesson 6.2")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-06-2.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-06-2.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-06-2.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-06-2.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/token-supply-unlocks.png
+
+#### Lesson 6.3 · Governance & DAOs
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-06-protocol-research.md  (use the section headed "Lesson 6.3")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-06-3.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-06-3.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-06-3.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-06-3.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/dao-control.png
+
+#### Lesson 6.4 · The on-chain research workflow
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-06-protocol-research.md  (use the section headed "Lesson 6.4")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-06-4.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-06-4.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-06-4.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-06-4.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/thesis-invalidation.png
+
+#### Lesson 6.5 · Case studies: how DeFi failures happened
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-06-protocol-research.md  (use the section headed "Lesson 6.5")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-06-5.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-06-5.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-06-5.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-06-5.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/failure-patterns.png
+
+#### Lesson 6.6 · Vote-escrow tokenomics, bribes and governance markets
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-06-protocol-research.md  (use the section headed "Lesson 6.6")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-06-6.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-06-6.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-06-6.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-06-6.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/ve-bribe-flow.png
+
+#### Lesson 6.7 · Valuing DeFi protocols: fees, revenue, earnings and multiples
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-06-protocol-research.md  (use the section headed "Lesson 6.7")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-06-7.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-06-7.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-06-7.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-06-7.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/protocol-multiples.png
+
+### Chapter: Module 7 · On-Chain Analytics
+- Module intro video (first item in the chapter): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-07-intro.mp4  (thumbnail https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/module-07-intro.jpg, captions https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/module-07-intro.vtt)
+- Chapter cover image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-07.png
+
+#### Lesson 7.0 · Mastery Starter
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-07-on-chain-analytics.md  (use the section headed "Lesson 7.0")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-0.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-07-0.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-07-0.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-07-0.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-07.png
+
+#### Lesson 7.1 · On-chain data foundations
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-07-on-chain-analytics.md  (use the section headed "Lesson 7.1")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-1.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-07-1.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-07-1.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-07-1.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/onchain-misreads.png
+
+#### Lesson 7.2 · Block explorer mastery
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-07-on-chain-analytics.md  (use the section headed "Lesson 7.2")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-2.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-07-2.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-07-2.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-07-2.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/explorer-anatomy.png
+
+#### Lesson 7.3 · Exchange flows
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-07-on-chain-analytics.md  (use the section headed "Lesson 7.3")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-3.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-07-3.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-07-3.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-07-3.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/exchange-flows.png
+
+#### Lesson 7.4 · Whale & entity analysis
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-07-on-chain-analytics.md  (use the section headed "Lesson 7.4")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-4.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-07-4.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-07-4.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-07-4.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/entity-clusters.png
+
+#### Lesson 7.5 · Holder & supply metrics
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-07-on-chain-analytics.md  (use the section headed "Lesson 7.5")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-5.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-07-5.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-07-5.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-07-5.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/holder-metrics.png
+
+#### Lesson 7.6 · Network activity
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-07-on-chain-analytics.md  (use the section headed "Lesson 7.6")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-6.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-07-6.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-07-6.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-07-6.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/real-usage.png
+
+#### Lesson 7.7 · DEX & liquidity analytics
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-07-on-chain-analytics.md  (use the section headed "Lesson 7.7")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-7.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-07-7.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-07-7.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-07-7.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/pool-depth.png
+
+#### Lesson 7.8 · Derivatives on-chain
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-07-on-chain-analytics.md  (use the section headed "Lesson 7.8")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-8.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-07-8.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-07-8.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-07-8.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/funding-oi.png
+
+#### Lesson 7.9 · Querying chain data yourself
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-07-on-chain-analytics.md  (use the section headed "Lesson 7.9")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-07-9.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-07-9.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-07-9.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-07-9.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/query-your-own.png
+
+### Chapter: Module 8 · The DeFi Operating System
+- Module intro video (first item in the chapter): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-08-intro.mp4  (thumbnail https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/module-08-intro.jpg, captions https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/module-08-intro.vtt)
+- Chapter cover image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-08.png
+
+#### Lesson 8.0 · Mastery Starter
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-08-operating-system.md  (use the section headed "Lesson 8.0")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-08-0.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-08-0.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-08-0.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-08-0.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-08.png
+
+#### Lesson 8.1 · DeFi portfolio construction
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-08-operating-system.md  (use the section headed "Lesson 8.1")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-08-1.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-08-1.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-08-1.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-08-1.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/risk-buckets.png
+
+#### Lesson 8.2 · The DeFi risk framework
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-08-operating-system.md  (use the section headed "Lesson 8.2")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-08-2.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-08-2.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-08-2.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-08-2.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/risk-register.png
+
+#### Lesson 8.3 · The strategy library (30 strategies in 7 levels)
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/03-defi-strategy-mastery.md  (the whole file is this lesson)
+- Video: none yet (leave the video slot empty)
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/profit-sources.png
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/strategy-levels.png
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/liquidation-cascade.png
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/charts/impermanent-loss.png
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/charts/loop-spread.png
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/charts/pt-convergence.png
+
+#### Lesson 8.4 · The operating playbook: deploy, monitor, respond, review
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-08-operating-system.md  (use the section headed "Lesson 8.4")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-08-4.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-08-4.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-08-4.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-08-4.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/deploy-monitor-respond.png
+
+#### Lesson 8.5 · Measuring performance honestly
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-08-operating-system.md  (use the section headed "Lesson 8.5")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-08-5.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-08-5.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-08-5.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-08-5.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/twr-vs-deposits.png
+
+#### Lesson 8.6 · Psychology and discipline
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-08-operating-system.md  (use the section headed "Lesson 8.6")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-08-6.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-08-6.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-08-6.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-08-6.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/discipline-rules.png
+
+#### Lesson 8.7 · Quantitative risk: volatility, VaR, drawdown, correlation and sizing
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-08-operating-system.md  (use the section headed "Lesson 8.7")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-08-7.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-08-7.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-08-7.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-08-7.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/charts/var-drawdown.png
+
+### Chapter: Module 9 · DeFi vs Grid Bots
+- Module intro video (first item in the chapter): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-09-intro.mp4  (thumbnail https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/module-09-intro.jpg, captions https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/module-09-intro.vtt)
+- Chapter cover image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-09.png
+
+#### Lesson 9.0 · Mastery Starter
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-09-defi-vs-grid-bots.md  (use the section headed "Lesson 9.0")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-09-0.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-09-0.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-09-0.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-09-0.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-09.png
+
+#### Lesson 9.1 · Same idea, different machine
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-09-defi-vs-grid-bots.md  (use the section headed "Lesson 9.1")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-09-1.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-09-1.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-09-1.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-09-1.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/grid-vs-lp.png
+
+#### Lesson 9.2 · When each one wins
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-09-defi-vs-grid-bots.md  (use the section headed "Lesson 9.2")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-09-2.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-09-2.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-09-2.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-09-2.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/when-each-wins.png
+
+#### Lesson 9.3 · Building a combined system
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-09-defi-vs-grid-bots.md  (use the section headed "Lesson 9.3")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-09-3.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-09-3.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-09-3.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-09-3.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/combined-system.png
+
+### Chapter: Module 10 · Advanced Yield Engineering
+- Module intro video (first item in the chapter): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-10-intro.mp4  (thumbnail https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/module-10-intro.jpg, captions https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/module-10-intro.vtt)
+- Chapter cover image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-10.png
+
+#### Lesson 10.0 · Mastery Starter
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-10-advanced-yield-engineering.md  (use the section headed "Lesson 10.0")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-0.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-10-0.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-10-0.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-10-0.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-10.png
+
+#### Lesson 10.1 · Fixed-rate yield: principal and yield tokens (PT/YT)
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-10-advanced-yield-engineering.md  (use the section headed "Lesson 10.1")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-1.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-10-1.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-10-1.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-10-1.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/charts/pt-convergence.png
+
+#### Lesson 10.2 · Cash-and-carry basis trades
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-10-advanced-yield-engineering.md  (use the section headed "Lesson 10.2")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-2.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-10-2.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-10-2.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-10-2.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/cash-and-carry.png
+
+#### Lesson 10.3 · Delta-neutral funding carry, done properly
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-10-advanced-yield-engineering.md  (use the section headed "Lesson 10.3")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-3.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-10-3.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-10-3.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-10-3.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/funding-carry.png
+
+#### Lesson 10.4 · Options income: covered calls, cash-secured puts, options vaults
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-10-advanced-yield-engineering.md  (use the section headed "Lesson 10.4")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-4.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-10-4.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-10-4.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-10-4.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/covered-call-put.png
+
+#### Lesson 10.5 · Active concentrated-liquidity management
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-10-advanced-yield-engineering.md  (use the section headed "Lesson 10.5")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-5.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-10-5.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-10-5.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-10-5.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/cl-range-rebalance.png
+
+#### Lesson 10.6 · Restaking and points: pricing speculative yield
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-10-advanced-yield-engineering.md  (use the section headed "Lesson 10.6")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-6.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-10-6.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-10-6.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-10-6.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/points-as-option.png
+
+#### Lesson 10.7 · Being the house: perp-exchange liquidity vaults
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-10-advanced-yield-engineering.md  (use the section headed "Lesson 10.7")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-7.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-10-7.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-10-7.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-10-7.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/perp-lp-vault.png
+
+#### Lesson 10.8 · DeFi rates: term structure, fixed vs floating
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-10-advanced-yield-engineering.md  (use the section headed "Lesson 10.8")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-8.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-10-8.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-10-8.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-10-8.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/charts/pt-convergence.png
+
+#### Lesson 10.9 · Peg and redemption arbitrage
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-10-advanced-yield-engineering.md  (use the section headed "Lesson 10.9")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-10-9.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-10-9.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-10-9.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-10-9.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/peg-arb.png
+
+### Chapter: Module 11 · Hedging & Risk Engineering
+- Module intro video (first item in the chapter): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-11-intro.mp4  (thumbnail https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/module-11-intro.jpg, captions https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/module-11-intro.vtt)
+- Chapter cover image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-11.png
+
+#### Lesson 11.0 · Mastery Starter
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-11-hedging-risk-engineering.md  (use the section headed "Lesson 11.0")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-11-0.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-11-0.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-11-0.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-11-0.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-11.png
+
+#### Lesson 11.1 · Hedging price exposure with perps and options
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-11-hedging-risk-engineering.md  (use the section headed "Lesson 11.1")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-11-1.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-11-1.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-11-1.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-11-1.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/hedge-perp-option.png
+
+#### Lesson 11.2 · Depeg, protocol and smart-contract cover
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-11-hedging-risk-engineering.md  (use the section headed "Lesson 11.2")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-11-2.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-11-2.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-11-2.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-11-2.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/cover-what-pays.png
+
+#### Lesson 11.3 · Liquidation protection: buffers, alerts and automated deleveraging
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-11-hedging-risk-engineering.md  (use the section headed "Lesson 11.3")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-11-3.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-11-3.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-11-3.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-11-3.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/liq-buffer-alerts.png
+
+#### Lesson 11.4 · Stress-testing a portfolio
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-11-hedging-risk-engineering.md  (use the section headed "Lesson 11.4")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-11-4.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-11-4.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-11-4.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-11-4.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/stress-grid.png
+
+#### Lesson 11.5 · Incident response: the first 60 minutes
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-11-hedging-risk-engineering.md  (use the section headed "Lesson 11.5")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-11-5.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-11-5.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-11-5.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-11-5.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/incident-60min.png
+
+### Chapter: Module 12 · Operate as Your Own Bank
+- Module intro video (first item in the chapter): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-12-intro.mp4  (thumbnail https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/module-12-intro.jpg, captions https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/module-12-intro.vtt)
+- Chapter cover image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-12.png
+
+#### Lesson 12.0 · Mastery Starter
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-12-own-bank.md  (use the section headed "Lesson 12.0")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-0.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-12-0.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-12-0.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-12-0.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-12.png
+
+#### Lesson 12.1 · Your balance sheet
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-12-own-bank.md  (use the section headed "Lesson 12.1")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-1.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-12-1.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-12-1.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-12-1.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/personal-balance-sheet.png
+
+#### Lesson 12.2 · Custody architecture: vault, multisig and spending policies
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-12-own-bank.md  (use the section headed "Lesson 12.2")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-2.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-12-2.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-12-2.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-12-2.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/custody-architecture.png
+
+#### Lesson 12.3 · The credit line: borrowing like a bank client
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-12-own-bank.md  (use the section headed "Lesson 12.3")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-3.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-12-3.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-12-3.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-12-3.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/credit-policy.png
+
+#### Lesson 12.4 · Treasury and the liquidity ladder
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-12-own-bank.md  (use the section headed "Lesson 12.4")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-4.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-12-4.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-12-4.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-12-4.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/liquidity-ladder.png
+
+#### Lesson 12.5 · Being the lender: supplying, curating and pricing credit risk
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-12-own-bank.md  (use the section headed "Lesson 12.5")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-5.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-12-5.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-12-5.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-12-5.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/lender-side.png
+
+#### Lesson 12.6 · Books, records and succession
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-12-own-bank.md  (use the section headed "Lesson 12.6")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-6.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-12-6.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-12-6.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-12-6.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/books-succession.png
+
+#### Lesson 12.7 · Tax, regulation and compliance awareness
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-12-own-bank.md  (use the section headed "Lesson 12.7")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-7.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-12-7.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-12-7.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-12-7.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/tax-records.png
+
+#### Lesson 12.8 · Institutional-grade custody: MPC, custodians and policy engines
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-12-own-bank.md  (use the section headed "Lesson 12.8")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-12-8.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-12-8.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-12-8.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-12-8.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/custody-architecture.png
+
+### Chapter: Module 13 · The Income Engine
+- Module intro video (first item in the chapter): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-13-intro.mp4  (thumbnail https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/module-13-intro.jpg, captions https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/module-13-intro.vtt)
+- Chapter cover image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-13.png
+
+#### Lesson 13.0 · Mastery Starter
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-13-income-engine.md  (use the section headed "Lesson 13.0")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-13-0.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-13-0.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-13-0.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-13-0.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-13.png
+
+#### Lesson 13.1 · Income sources ranked by durability
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-13-income-engine.md  (use the section headed "Lesson 13.1")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-13-1.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-13-1.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-13-1.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-13-1.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/durability-rank.png
+
+#### Lesson 13.2 · Risk-adjusted yield: subtracting expected losses
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-13-income-engine.md  (use the section headed "Lesson 13.2")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-13-2.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-13-2.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-13-2.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-13-2.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/charts/expected-yield.png
+
+#### Lesson 13.3 · Building the income portfolio
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-13-income-engine.md  (use the section headed "Lesson 13.3")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-13-3.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-13-3.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-13-3.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-13-3.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/charts/income-waterfall.png
+
+#### Lesson 13.4 · The payout policy: how much you can take out
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-13-income-engine.md  (use the section headed "Lesson 13.4")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-13-4.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-13-4.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-13-4.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-13-4.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/payout-policy.png
+
+#### Lesson 13.5 · Scaling, compounding and the annual review
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-13-income-engine.md  (use the section headed "Lesson 13.5")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-13-5.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-13-5.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-13-5.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-13-5.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/annual-review.png
+
+### Chapter: Module 14 · Automation & Mastery
+- Module intro video (first item in the chapter): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/module-14-intro.mp4  (thumbnail https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/module-14-intro.jpg, captions https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/module-14-intro.vtt)
+- Chapter cover image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-14.png
+
+#### Lesson 14.0 · Mastery Starter
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-14-automation-mastery.md  (use the section headed "Lesson 14.0")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-14-0.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-14-0.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-14-0.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-14-0.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/modules/module-14.png
+
+#### Lesson 14.1 · Monitoring: dashboards, alerts and on-chain watchers
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-14-automation-mastery.md  (use the section headed "Lesson 14.1")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-14-1.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-14-1.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-14-1.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-14-1.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/alert-stack.png
+
+#### Lesson 14.2 · Automation: keepers, bots and agents without handing over the keys
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-14-automation-mastery.md  (use the section headed "Lesson 14.2")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-14-2.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-14-2.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-14-2.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-14-2.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/least-permission-bot.png
+
+#### Lesson 14.3 · Operating procedures: multisig signing, change control, reviews
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-14-automation-mastery.md  (use the section headed "Lesson 14.3")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-14-3.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-14-3.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-14-3.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-14-3.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/change-control.png
+
+#### Lesson 14.4 · Operator capstone and certification
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-14-automation-mastery.md  (use the section headed "Lesson 14.4")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-14-4.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-14-4.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-14-4.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-14-4.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/capstone-pack.png
+
+#### Lesson 14.5 · Building your own tools: reading contracts, data and simple scripts
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-14-automation-mastery.md  (use the section headed "Lesson 14.5")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-14-5.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-14-5.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-14-5.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-14-5.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/readonly-tools.png
+
+#### Lesson 14.6 · Searchers, keepers and arbitrage bots: how they work
+- Text: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/lessons/module-14-automation-mastery.md  (use the section headed "Lesson 14.6")
+- Video: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/lesson-14-6.mp4
+- Thumbnail: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/thumbs/lesson-14-6.jpg
+- Captions: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/captions/lesson-14-6.vtt
+- Chapters (paste into the description): https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/video/chapters/lesson-14-6.txt
+- Image: https://raw.githubusercontent.com/kyleashton88-cyber/claude/refs/heads/claude/grid-bot-builder-skills-bmrez2/programs/defi-program/assets/diagrams/searcher-keeper.png
+
+---
+
+Start now with **Chapter: Start here**.
