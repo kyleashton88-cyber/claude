@@ -1,0 +1,862 @@
+{
+ "id": "how-the-program-works",
+ "title": "How the program works (long form)",
+ "size": [
+  1920,
+  1080
+ ],
+ "music": true,
+ "musicLevel": 0.18,
+ "tag": "How it works",
+ "seed": 23,
+ "maxMinutes": 25,
+ "thumbnail": {
+  "title": "How the program works",
+  "subtitle": "The full walkthrough"
+ },
+ "use": "Start here chapter: the in-depth walkthrough of the whole program, module by module.",
+ "scenes": [
+  {
+   "type": "logo",
+   "chapter": "Welcome",
+   "tagline": "How the program works",
+   "vo": "Welcome to the On-Chain Operator Program. This is the long version of how the program works. Over the next twenty-odd minutes, I'll take you inside all of it: why it exists, how it's built, every module in order, the tools you'll use, and how to get the most out of it. Get comfortable. This is the map for everything that follows.",
+   "cap": "Welcome to the On-Chain Operator Program. This is the long version of how the program works. Over the next twenty-odd minutes, I'll take you inside all of it: why it exists, how it's built, every module in order, the tools you'll use, and how to get the most out of it. Get comfortable. This is the map for everything that follows."
+  },
+  {
+   "type": "pillars",
+   "chapter": "Welcome",
+   "title": "What this video covers",
+   "items": [
+    {
+     "icon": "compass",
+     "title": "Why",
+     "text": "The problem and the mindset"
+    },
+    {
+     "icon": "layers",
+     "title": "How it's built",
+     "text": "Stages, modules, lessons, starters"
+    },
+    {
+     "icon": "book",
+     "title": "All 15 modules",
+     "text": "With the pictures inside them"
+    },
+    {
+     "icon": "target",
+     "title": "Tools & success",
+     "text": "Calculators, capstones, habits"
+    }
+   ],
+   "vo": "Here's the plan. First, why this program exists, and the mindset it teaches. Second, how it's built: stages, modules, lessons and starters. Third, a walk through all fifteen modules, with the pictures you'll see inside them. And fourth, your tools, your capstones, and how to succeed.",
+   "cap": "Here's the plan. First, why this program exists, and the mindset it teaches. Second, how it's built: stages, modules, lessons and starters. Third, a walk through all 15 modules, with the pictures you'll see inside them. And fourth, your tools, your capstones, and how to succeed."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Why it exists",
+   "title": "How people get hurt in DeFi",
+   "check": false,
+   "items": [
+    "Setup mistakes that can’t be undone",
+    "Yields nobody can explain",
+    "Borrowing with no buffer",
+    "No plan for the way out"
+   ],
+   "vo": "Let's start with why this program exists. Most people get hurt in DeFi in the same four ways. Setup mistakes that can't be undone, like the wrong network, a leaked seed phrase, or one bad approval. Yields nobody can explain, until the subsidy stops. Borrowing with no buffer, so one sharp move liquidates the position. And no plan for the way out."
+  },
+  {
+   "type": "statement",
+   "chapter": "Why it exists",
+   "kicker": "On-chain",
+   "lines": [
+    "There's no help desk."
+   ],
+   "sub": "The only protection is the process you follow before you act.",
+   "vo": "And on-chain, there's no help desk. No chargebacks. No margin calls. No one to phone. The only protection you have is the process you follow before you act. That process is what this program teaches."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/ledgers-vs-blockchain.png",
+   "eyebrow": "Why mistakes are final",
+   "wide": true,
+   "vo": "Here's why. A bank keeps a private ledger, and it can correct or reverse an entry. A blockchain is a shared ledger that thousands of computers keep identical copies of. That's what makes it trustworthy, and it's also why a mistake is final. You'll meet this idea in the very first lesson, because everything else builds on it."
+  },
+  {
+   "type": "strike",
+   "chapter": "The operator mindset",
+   "big": "12% APY",
+   "after": "What am I being paid to risk?",
+   "vo": "Most people enter DeFi through a number. Twelve percent A.P.Y. Operators start with a different question. What am I being paid to risk?",
+   "cap": "Most people enter DeFi through a number. 12% APY. Operators start with a different question. What am I being paid to risk?"
+  },
+  {
+   "type": "pillars",
+   "chapter": "The operator mindset",
+   "title": "Three questions before every position",
+   "items": [
+    {
+     "icon": "search",
+     "title": "What's the risk?",
+     "text": "What am I being paid to take on?"
+    },
+    {
+     "icon": "exit",
+     "title": "What's the exit?",
+     "text": "How do I get out, and how fast?"
+    },
+    {
+     "icon": "target",
+     "title": "How big?",
+     "text": "Sized so being wrong doesn't matter much"
+    }
+   ],
+   "vo": "The operator mindset comes down to three questions, asked before every position. What am I being paid to risk? How do I get out, and how fast? And how big should this be, so that if I'm wrong, it doesn't matter much? Every lesson in this program trains one of those three questions."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/profit-sources.png",
+   "eyebrow": "Where returns come from",
+   "wide": true,
+   "vo": "Here's the first answer you'll learn. Every DeFi return comes from one of five places. Service fees, like swap fees paid to liquidity providers. Interest, paid by borrowers. Security rewards, for staking. Structural carry, like funding and basis. And incentives, which are only real once you've sold them. Price going up is not a strategy. If you can't name which of these five is paying you, you don't understand the position yet."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/defi-stack.png",
+   "eyebrow": "Every yield pays for a risk",
+   "wide": true,
+   "vo": "And here's the second. Every position sits on a stack. The chain that settles it. The wallet that signs it. The app that runs it. And the position itself. Each layer can fail, and every yield is a payment for taking on some of that risk. Your job is to name that risk before you deposit."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/path-to-mastery.png",
+   "eyebrow": "Six stages, in order",
+   "wide": true,
+   "chapter": "How it's built",
+   "vo": "Now, how the program is built. It runs in six stages. Zero, you get set up safely. Foundations, you protect a wallet and learn to trade and provide liquidity. Practitioner, you borrow, earn yield and map infrastructure risk. Analyst, you research any protocol and read on-chain data. Strategist, thirty strategies, hedging and stress tests. And Operator, you run your own on-chain bank."
+  },
+  {
+   "type": "stats",
+   "chapter": "How it's built",
+   "stats": [
+    [
+     "15",
+     "modules"
+    ],
+    [
+     "107",
+     "lessons + 15 starters"
+    ],
+    [
+     "30",
+     "strategy playbooks"
+    ]
+   ],
+   "lastAccent": false,
+   "vo": "In numbers: fifteen modules, a hundred and seven lessons, plus a Mastery Starter at the top of every module, and thirty strategy playbooks.",
+   "cap": "In numbers: 15 modules, 107 lessons, plus a Mastery Starter at the top of every module, and 30 strategy playbooks."
+  },
+  {
+   "type": "statement",
+   "chapter": "How it's built",
+   "kicker": "The drip rule",
+   "lines": [
+    "Each stage unlocks",
+    "when you pass the last."
+   ],
+   "sub": "Nobody reaches leverage before safety. No deadlines; lifetime access.",
+   "vo": "The stages unlock in order. You move on by passing the previous stage's quizzes, not by the calendar. That's deliberate. It means nobody reaches leverage before they've mastered safety. Go at your own pace. There's no deadline, and you keep lifetime access."
+  },
+  {
+   "type": "steps",
+   "chapter": "How it's built",
+   "title": "The anatomy of every lesson",
+   "steps": [
+    "Objective: what you'll be able to do",
+    "Explanation: plain words, every term defined",
+    "Worked example: every number calculated",
+    "Checklist: done for real, small amounts",
+    "Quiz: three questions before you move on"
+   ],
+   "vo": "Every lesson has the same five parts, so you always know where you are. It starts with an objective: what you'll be able to do. Then an explanation, in plain words, with every term defined the first time it appears. Then a worked example, with every number calculated on screen. Then a checklist, which you do for real, with a small test amount. And finally, a three-question quiz."
+  },
+  {
+   "type": "bullets",
+   "chapter": "How it's built",
+   "title": "Inside every Mastery Starter",
+   "numbered": true,
+   "items": [
+    "The 60-second version",
+    "Words you’ll need",
+    "Before you start",
+    "Your first safe step",
+    "The mastery ladder",
+    "You’ve mastered it when…"
+   ],
+   "vo": "And every module opens with a Mastery Starter, so you can start any topic from zero. It has a sixty-second version of the whole module. The words you'll need. What to have in place before you start. One safe first step you can take today. A ladder from beginner, to practitioner, to master. And a clear test for when you've mastered the module.",
+   "cap": "And every module opens with a Mastery Starter, so you can start any topic from zero. It has a 60-second version of the whole module. The words you'll need. What to have in place before you start. One safe first step you can take today. A ladder from beginner, to practitioner, to master. And a clear test for when you've mastered the module."
+  },
+  {
+   "type": "statement",
+   "chapter": "How it's built",
+   "kicker": "Going deeper",
+   "lines": [
+    "15 expert lessons"
+   ],
+   "sub": "How the machinery really works: AMM design, bad debt, contract code, protocol valuation.",
+   "vo": "Most modules also have expert lessons, fifteen in all. They show how the machinery really works underneath: how automated market makers are designed, how lending protocols handle bad debt, how to read contract code, how to value a protocol. You don't need them to operate safely. They're there when you want to go deeper.",
+   "cap": "Most modules also have expert lessons, 15 in all. They show how the machinery really works underneath: how automated market makers are designed, how lending protocols handle bad debt, how to read contract code, how to value a protocol. You don't need them to operate safely. They're there when you want to go deeper."
+  },
+  {
+   "type": "image",
+   "src": "assets/modules/module-00.png",
+   "eyebrow": "Module 0",
+   "wide": true,
+   "chapter": "Module 0 · Crypto From Zero",
+   "vo": "Module zero. Crypto From Zero.",
+   "cap": "Module 0. Crypto From Zero."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/setup-roadmap.png",
+   "eyebrow": "The Day-1 Setup Kit",
+   "wide": true,
+   "vo": "Module zero assumes you've never owned crypto. Its seven steps take you from nothing to set up: secure your accounts, open and lock down an exchange, make a first small purchase, set up and back up a wallet, send a first transfer on the right network, practise on a test network, and finish with a security baseline. It all comes with a printable Day-One Setup Kit.",
+   "cap": "Module 0 assumes you've never owned crypto. Its seven steps take you from nothing to set up: secure your accounts, open and lock down an exchange, make a first small purchase, set up and back up a wallet, send a first transfer on the right network, practise on a test network, and finish with a security baseline. It all comes with a printable Day-1 Setup Kit."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/first-buy-costs.png",
+   "eyebrow": "From Lesson 0.3",
+   "wide": true,
+   "vo": "Here's a Module zero example. The price on the chart isn't what you pay. You lose a little to the spread, a little to the trading fee, and a little more to the network when you withdraw. So you'll compare offers by what actually lands in your wallet.",
+   "cap": "Here's a Module 0 example. The price on the chart isn't what you pay. You lose a little to the spread, a little to the trading fee, and a little more to the network when you withdraw. So you'll compare offers by what actually lands in your wallet."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/custody-split.png",
+   "eyebrow": "From Lesson 0.4",
+   "wide": true,
+   "vo": "One of the first ideas you'll meet is who holds the keys. On an exchange, the exchange holds them, which is fine for buying and cashing out. In your own wallet, you hold them, which is what you need for DeFi, and it means your backup is your responsibility. You'll test that backup by restoring it, before you ever rely on it."
+  },
+  {
+   "type": "image",
+   "src": "assets/modules/module-01.png",
+   "eyebrow": "Module 1",
+   "wide": true,
+   "chapter": "Module 1 · Foundations & Safety",
+   "vo": "Module one. Foundations and Safety.",
+   "cap": "Module 1. Foundations & Safety."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/tx-lifecycle.png",
+   "eyebrow": "From Lesson 1.2",
+   "wide": true,
+   "vo": "Module one is foundations and safety. You'll learn what really happens when you press send: you sign, the transaction waits publicly in the mempool, a validator puts it in a block, and then it's final. You'll learn why gas is paid even when a transaction fails.",
+   "cap": "Module 1 is foundations and safety. You'll learn what really happens when you press send: you sign, the transaction waits publicly in the mempool, a validator puts it in a block, and then it's final. You'll learn why gas is paid even when a transaction fails."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/scam-patterns.png",
+   "eyebrow": "From Lesson 1.6",
+   "wide": true,
+   "vo": "Then the attacks. Fake sites that look exactly like the real one. Drainers, where a single signature hands over everything. Fake support staff who ask for your seed phrase. And poisoned addresses planted in your history. You'll learn to recognise all four, and to simulate a transaction before you sign it, so you know exactly what it does."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/approval-anatomy.png",
+   "eyebrow": "From Lesson 1.4",
+   "wide": true,
+   "vo": "And you'll read every approval before you sign it: which token, which contract can spend it, and how much. An infinite approval stays open after the trade. An exact one covers only this trade. You'll default to exact, and revoke what you don't use."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/stablecoin-designs.png",
+   "eyebrow": "From Lesson 1.5",
+   "wide": true,
+   "vo": "You'll also learn how stablecoins are built, and how each design breaks. Fiat-backed coins depend on an issuer's reserves. Crypto-backed coins depend on collateral and liquidations. And algorithmic designs depend on confidence, which can vanish in days."
+  },
+  {
+   "type": "image",
+   "src": "assets/modules/module-02.png",
+   "eyebrow": "Module 2",
+   "wide": true,
+   "chapter": "Module 2 · Trading On-Chain",
+   "vo": "Module two. Trading On-Chain.",
+   "cap": "Module 2. Trading On-Chain."
+  },
+  {
+   "type": "image",
+   "src": "assets/charts/amm-curve.png",
+   "eyebrow": "From Lesson 2.2",
+   "wide": true,
+   "vo": "Module two is trading on-chain. It starts with the maths behind every automated market maker. In this example, a pool holds a hundred E.T.H. and three hundred thousand dollars. Swapping in ten E.T.H. returns about twenty-seven thousand, two hundred and seventy-three dollars, not thirty thousand. That's price impact, and you'll learn to calculate it before you trade.",
+   "cap": "Module 2 is trading on-chain. It starts with the maths behind every automated market maker. In this example, a pool holds 100 ETH and $300,000. Swapping in 10 ETH returns about $27,273, not $30,000. That's price impact, and you'll learn to calculate it before you trade."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/lp-position.png",
+   "eyebrow": "From Lesson 2.3",
+   "wide": true,
+   "vo": "Then providing liquidity. You deposit two assets, earn a share of every swap's fees, and your mix of assets shifts as prices move. Your real result is the fees you earned, minus the impermanent loss, compared with simply holding. You'll learn to measure that honestly, and when it's worth doing at all."
+  },
+  {
+   "type": "image",
+   "src": "assets/charts/impermanent-loss.png",
+   "eyebrow": "From Lesson 2.4",
+   "wide": true,
+   "vo": "Here's impermanent loss as a chart. If the price doubles, or halves, a fifty-fifty pool leaves you about five point seven percent behind simply holding. If it triples, thirteen point four percent. Your fees have to beat this line, or holding would have been better.",
+   "cap": "Here's impermanent loss as a chart. If the price doubles, or halves, a 50/50 pool leaves you about 5.7% behind simply holding. If it triples, 13.4%. Your fees have to beat this line, or holding would have been better."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/order-types.png",
+   "eyebrow": "From Lesson 2.6",
+   "wide": true,
+   "vo": "And execution. Market orders, limit orders, orders split over time, and intent-based orders where solvers compete to fill you. Each one is safer in different situations, and you'll learn which to use when."
+  },
+  {
+   "type": "image",
+   "src": "assets/modules/module-03.png",
+   "eyebrow": "Module 3",
+   "wide": true,
+   "chapter": "Module 3 · Lending & Leverage",
+   "vo": "Module three. Lending and Leverage.",
+   "cap": "Module 3. Lending & Leverage."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/lending-pool-flow.png",
+   "eyebrow": "From Lesson 3.1",
+   "wide": true,
+   "vo": "Module three is lending and leverage. You'll see how a lending pool works: suppliers deposit, borrowers post collateral and pay interest, and the rate rises with how much of the pool is borrowed. Near full utilisation, rates jump, and lenders may not be able to withdraw.",
+   "cap": "Module 3 is lending and leverage. You'll see how a lending pool works: suppliers deposit, borrowers post collateral and pay interest, and the rate rises with how much of the pool is borrowed. Near full utilisation, rates jump, and lenders may not be able to withdraw."
+  },
+  {
+   "type": "image",
+   "src": "assets/charts/health-factor.png",
+   "eyebrow": "From Lesson 3.2",
+   "wide": true,
+   "vo": "The centre of this module is the health factor. Ten E.T.H. at three thousand dollars, with twelve thousand borrowed, gives a health factor of two, and liquidation at fifteen hundred dollars. Borrow sixteen thousand instead, and liquidation moves up to two thousand. You'll draw this line before every borrow, for the rest of your life.",
+   "cap": "The centre of this module is the health factor. 10 ETH at $3,000, with $12,000 borrowed, gives a health factor of 2, and liquidation at $1,500. Borrow $16,000 instead, and liquidation moves up to $2,000. You'll draw this line before every borrow, for the rest of your life."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/perp-anatomy.png",
+   "eyebrow": "From Lesson 3.5",
+   "wide": true,
+   "vo": "You'll also learn perpetual futures: longs and shorts with no expiry, funding payments that keep them near the spot price, and liquidation. At twenty times leverage, a move of under five percent can wipe out the margin. That's why you'll use perps to hedge and to earn carry, not to gamble.",
+   "cap": "You'll also learn perpetual futures: longs and shorts with no expiry, funding payments that keep them near the spot price, and liquidation. At 20× leverage, a move of under 5% can wipe out the margin. That's why you'll use perps to hedge and to earn carry, not to gamble."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/liquidation-cascade.png",
+   "eyebrow": "From Lesson 3.2",
+   "wide": true,
+   "vo": "And you'll learn why falls accelerate. Liquidations sell collateral into a falling market, which pushes prices lower, which triggers more liquidations. Your buffer is your time to react, and you'll write your defence plan before you borrow, not during the crash."
+  },
+  {
+   "type": "image",
+   "src": "assets/modules/module-04.png",
+   "eyebrow": "Module 4",
+   "wide": true,
+   "chapter": "Module 4 · Yield",
+   "vo": "Module four. Yield.",
+   "cap": "Module 4. Yield."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/base-vs-emissions.png",
+   "eyebrow": "From Lesson 4.1",
+   "wide": true,
+   "vo": "Module four is yield. The core skill is splitting any A.P.Y. into what's organic and what's subsidised. Here, Pool A shows twenty percent, but sixteen of it is emissions. Pool B shows nine, and eight of it is real fees. You'll learn which part lasts, and which part disappears when the incentives stop.",
+   "cap": "Module 4 is yield. The core skill is splitting any APY into what's organic and what's subsidised. Here, Pool A shows 20%, but 16 of it is emissions. Pool B shows 9, and 8 of it is real fees. You'll learn which part lasts, and which part disappears when the incentives stop."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/lst-accrual.png",
+   "eyebrow": "From Lesson 4.3",
+   "wide": true,
+   "vo": "Then staking. Native staking, liquid staking tokens that accrue rewards but can trade below the E.T.H. behind them, and restaking, which adds yield and adds new ways to be slashed.",
+   "cap": "Then staking. Native staking, liquid staking tokens that accrue rewards but can trade below the ETH behind them, and restaking, which adds yield and adds new ways to be slashed."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/rwa-trust.png",
+   "eyebrow": "From Lesson 4.8",
+   "wide": true,
+   "vo": "And real-world assets. When you buy a tokenized treasury, you own a claim on an issuer, who promises redemption, through a custodian who holds the real asset. You'll learn to see every link in that chain before you trust it."
+  },
+  {
+   "type": "image",
+   "src": "assets/modules/module-05.png",
+   "eyebrow": "Module 5",
+   "wide": true,
+   "chapter": "Module 5 · Infrastructure Risk",
+   "vo": "Module five. Infrastructure Risk.",
+   "cap": "Module 5. Infrastructure Risk."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/bridge-trust.png",
+   "eyebrow": "From Lesson 5.1",
+   "wide": true,
+   "vo": "Module five is infrastructure risk: everything a position depends on that isn't the position itself. Bridges first. Some depend on a small set of signers, some on the chains' own consensus, and some on at least one honest watcher. You'll size your exposure to the trust model.",
+   "cap": "Module 5 is infrastructure risk: everything a position depends on that isn't the position itself. Bridges first. Some depend on a small set of signers, some on the chains' own consensus, and some on at least one honest watcher. You'll size your exposure to the trust model."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/oracle-twap.png",
+   "eyebrow": "From Lesson 5.3",
+   "wide": true,
+   "vo": "Then oracles, the price feeds that decide when positions get liquidated. A single spot price can be pushed around in a thin pool. A time-weighted average is harder to manipulate, but lags fast moves. You'll always ask which price secures your position."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/proxy-admin-keys.png",
+   "eyebrow": "From Lesson 5.4",
+   "wide": true,
+   "vo": "And the code itself. Many contracts can be upgraded after you deposit, by whoever holds the admin key. You'll learn to check the timelock and the admin before you put money in, and to read verified code well enough to check a claim."
+  },
+  {
+   "type": "image",
+   "src": "assets/modules/module-06.png",
+   "eyebrow": "Module 6",
+   "wide": true,
+   "chapter": "Module 6 · Protocol Research",
+   "vo": "Module six. Protocol Research.",
+   "cap": "Module 6. Protocol Research."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/research-loop.png",
+   "eyebrow": "From Lesson 6.1",
+   "wide": true,
+   "vo": "Module six is protocol research. You'll learn a six-step loop you can run on anything. Mechanism: how it works. Cash flow: where the money comes from. Dependencies. Solvency. Evidence. And exit. You'll finish with a full due-diligence file on a real protocol.",
+   "cap": "Module 6 is protocol research. You'll learn a six-step loop you can run on anything. Mechanism: how it works. Cash flow: where the money comes from. Dependencies. Solvency. Evidence. And exit. You'll finish with a full due-diligence file on a real protocol."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/token-supply-unlocks.png",
+   "eyebrow": "From Lesson 6.2",
+   "wide": true,
+   "vo": "You'll learn tokenomics: the difference between the supply trading today and the fully diluted value, how large unlocks add supply, and whether the protocol's success ever reaches the token at all."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/failure-patterns.png",
+   "eyebrow": "From Lesson 6.5",
+   "wide": true,
+   "vo": "And you'll study how DeFi failures happened, through real case studies. They rhyme. Manipulated oracles. Bad upgrades. Bank runs. And incentive programmes that end, taking the liquidity with them. Learn the patterns, and you'll spot them early."
+  },
+  {
+   "type": "image",
+   "src": "assets/modules/module-07.png",
+   "eyebrow": "Module 7",
+   "wide": true,
+   "chapter": "Module 7 · On-Chain Analytics",
+   "vo": "Module seven. On-Chain Analytics.",
+   "cap": "Module 7. On-Chain Analytics."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/onchain-misreads.png",
+   "eyebrow": "From Lesson 7.1",
+   "wide": true,
+   "vo": "Module seven is on-chain analytics, and it starts with humility. Volume can be faked. Addresses aren't people. And total value locked counts capital that's only there for the rewards. Every metric gets its caveat.",
+   "cap": "Module 7 is on-chain analytics, and it starts with humility. Volume can be faked. Addresses aren't people. And total value locked counts capital that's only there for the rewards. Every metric gets its caveat."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/explorer-anatomy.png",
+   "eyebrow": "From Lesson 7.2",
+   "wide": true,
+   "vo": "You'll master the block explorer: the transaction hash, who signed and which contract was called, the event logs, and the internal calls that show what really happened. You won't need an app's interface to know what a transaction did."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/pool-depth.png",
+   "eyebrow": "From Lesson 7.7",
+   "wide": true,
+   "vo": "And you'll read markets. Here, a trade that's one percent of a pool's reserve moves the price about one percent. At ten percent, it moves it over nine. You'll check whether a pool can take your trade before you place it, and query the chain yourself when a dashboard isn't enough.",
+   "cap": "And you'll read markets. Here, a trade that's 1% of a pool's reserve moves the price about 1%. At 10%, it moves it over 9. You'll check whether a pool can take your trade before you place it, and query the chain yourself when a dashboard isn't enough."
+  },
+  {
+   "type": "image",
+   "src": "assets/modules/module-08.png",
+   "eyebrow": "Module 8",
+   "wide": true,
+   "chapter": "Module 8 · The DeFi Operating System",
+   "vo": "Module eight. The DeFi Operating System.",
+   "cap": "Module 8. The DeFi Operating System."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/risk-buckets.png",
+   "eyebrow": "From Lesson 8.1",
+   "wide": true,
+   "vo": "Module eight turns knowledge into a system. You'll build a portfolio in buckets: a core of simple, well-tested positions, a satellite of strategies you've tested, and a small, capped speculative bucket. Each bucket, and each position inside it, has a written cap.",
+   "cap": "Module 8 turns knowledge into a system. You'll build a portfolio in buckets: a core of simple, well-tested positions, a satellite of strategies you've tested, and a small, capped speculative bucket. Each bucket, and each position inside it, has a written cap."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/risk-register.png",
+   "eyebrow": "From Lesson 8.2",
+   "wide": true,
+   "vo": "You'll keep a risk register: every position, its risks, a score, and a written response. Then an operating playbook with the same four phases every time: deploy, monitor, respond, and review."
+  },
+  {
+   "type": "image",
+   "src": "assets/charts/var-drawdown.png",
+   "eyebrow": "From Lesson 8.7",
+   "wide": true,
+   "vo": "And you'll size positions from numbers, not feelings. This chart shows one-day value at risk for a hundred-thousand-dollar position. At seventy percent volatility, a bad day at the ninety-five percent level is about six thousand dollars. And because crypto has fatter tails than this model assumes, you'll treat it as a floor, not a ceiling.",
+   "cap": "And you'll size positions from numbers, not feelings. This chart shows one-day value at risk for a $100,000 position. At 70% volatility, a bad day at the 95% level is about $6,040. And because crypto has fatter tails than this model assumes, you'll treat it as a floor, not a ceiling."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/strategy-levels.png",
+   "eyebrow": "From Lesson 8.3",
+   "wide": true,
+   "chapter": "The strategy library",
+   "vo": "Inside Module eight is the strategy library: thirty strategies in seven levels. Core, like stablecoin lending and staking. Liquidity. Yield. Advanced, like leveraged loops and funding carry. Treasury and research. Professional, like fixed rates, basis and options. And Expert. Every strategy shows where its return comes from, the maths, the steps, the kill rules, and exactly how it loses money.",
+   "cap": "Inside Module 8 is the strategy library: 30 strategies in 7 levels. Core, like stablecoin lending and staking. Liquidity. Yield. Advanced, like leveraged loops and funding carry. Treasury and research. Professional, like fixed rates, basis and options. And Expert. Every strategy shows where its return comes from, the maths, the steps, the kill rules, and exactly how it loses money."
+  },
+  {
+   "type": "image",
+   "src": "assets/charts/loop-spread.png",
+   "eyebrow": "From Lesson 3.4",
+   "wide": true,
+   "vo": "Here's an example from the library. A three-times loop on three and a half percent collateral yield. At a two and a half percent borrow rate, you net five and a half percent. Above three and a half percent borrow, leverage adds nothing. And at five and a quarter, the return is wiped out. The spread is everything, and you'll know the break-even before you start.",
+   "cap": "Here's an example from the library. A 3× loop on 3.5% collateral yield. At a 2.5% borrow rate, you net 5.5%. Above 3.5% borrow, leverage adds nothing. And at 5.25%, the return is wiped out. The spread is everything, and you'll know the break-even before you start."
+  },
+  {
+   "type": "image",
+   "src": "assets/modules/module-09.png",
+   "eyebrow": "Module 9",
+   "wide": true,
+   "chapter": "Module 9 · DeFi vs Grid Bots",
+   "vo": "Module nine. DeFi vs Grid Bots.",
+   "cap": "Module 9. DeFi vs Grid Bots."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/grid-vs-lp.png",
+   "eyebrow": "From Lesson 9.1",
+   "wide": true,
+   "vo": "Module nine connects DeFi to grid bots. A concentrated liquidity position and a grid bot do almost the same job: both sell as the price rises and buy as it falls, inside a range. The difference is the risks: fees, custody, and what happens when the price leaves the range.",
+   "cap": "Module 9 connects DeFi to grid bots. A concentrated liquidity position and a grid bot do almost the same job: both sell as the price rises and buy as it falls, inside a range. The difference is the risks: fees, custody, and what happens when the price leaves the range."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/when-each-wins.png",
+   "eyebrow": "From Lesson 9.2",
+   "wide": true,
+   "vo": "You'll learn when each one wins. In a range, both can work. In a strong trend, neither does well. And you'll build one system with two sleeves, an exchange grid sleeve and an on-chain sleeve, under a single risk cap."
+  },
+  {
+   "type": "image",
+   "src": "assets/modules/module-10.png",
+   "eyebrow": "Module 10",
+   "wide": true,
+   "chapter": "Module 10 · Advanced Yield Engineering",
+   "vo": "Module ten. Advanced Yield Engineering.",
+   "cap": "Module 10. Advanced Yield Engineering."
+  },
+  {
+   "type": "image",
+   "src": "assets/charts/pt-convergence.png",
+   "eyebrow": "From Lesson 10.1",
+   "wide": true,
+   "vo": "Module ten is advanced yield engineering. Fixed-rate yield first. A principal token bought at a discount converges to its full value at maturity, which locks in a fixed rate if you hold it to the end. You'll learn exactly what that fixed rate is short.",
+   "cap": "Module 10 is advanced yield engineering. Fixed-rate yield first. A principal token bought at a discount converges to its full value at maturity, which locks in a fixed rate if you hold it to the end. You'll learn exactly what that fixed rate is short."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/cash-and-carry.png",
+   "eyebrow": "From Lesson 10.2",
+   "wide": true,
+   "vo": "Then basis and carry. Buy spot, short a dated future, and capture the gap between them, without a view on price. It works only if both legs are held to expiry and your margin is never called. You'll also learn funding carry, options income, and when you're really being paid to be the house."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/covered-call-put.png",
+   "eyebrow": "From Lesson 10.4",
+   "wide": true,
+   "vo": "And options income. A covered call earns a premium but caps your upside. A cash-secured put earns a premium, and may buy the asset for you after a fall. Every one of these strategies is taught with how it loses."
+  },
+  {
+   "type": "image",
+   "src": "assets/modules/module-11.png",
+   "eyebrow": "Module 11",
+   "wide": true,
+   "chapter": "Module 11 · Hedging & Risk Engineering",
+   "vo": "Module eleven. Hedging and Risk Engineering.",
+   "cap": "Module 11. Hedging & Risk Engineering."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/hedge-perp-option.png",
+   "eyebrow": "From Lesson 11.1",
+   "wide": true,
+   "vo": "Module eleven is hedging and risk engineering. You'll hedge the risks you don't want, with a perpetual short, which costs funding, or a put option, which costs a premium upfront. You'll learn what on-chain cover actually pays, and what it excludes.",
+   "cap": "Module 11 is hedging and risk engineering. You'll hedge the risks you don't want, with a perpetual short, which costs funding, or a put option, which costs a premium upfront. You'll learn what on-chain cover actually pays, and what it excludes."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/liq-buffer-alerts.png",
+   "eyebrow": "From Lesson 11.3",
+   "wide": true,
+   "vo": "You'll protect every borrow with three layers. A buffer, keeping the health factor well above one. Alerts that warn you long before trouble. And a repayment amount worked out in advance, with the funds ready."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/stress-grid.png",
+   "eyebrow": "From Lesson 11.4",
+   "wide": true,
+   "vo": "Then you'll stress-test the whole book. A thirty percent price fall. A stablecoin depeg. A protocol exploit. For each one, what breaks, and how you fix it now, before the market does it for you.",
+   "cap": "Then you'll stress-test the whole book. A 30% price fall. A stablecoin depeg. A protocol exploit. For each one, what breaks, and how you fix it now, before the market does it for you."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/incident-60min.png",
+   "eyebrow": "From Lesson 11.5",
+   "wide": true,
+   "vo": "And you'll have an incident plan for the first sixty minutes of an exploit, a depeg, or a compromised wallet. Stop and sign nothing new. Size the exposure. Move keys and funds to safety. Then act on public facts only, and record everything.",
+   "cap": "And you'll have an incident plan for the first 60 minutes of an exploit, a depeg, or a compromised wallet. Stop and sign nothing new. Size the exposure. Move keys and funds to safety. Then act on public facts only, and record everything."
+  },
+  {
+   "type": "image",
+   "src": "assets/modules/module-12.png",
+   "eyebrow": "Module 12",
+   "wide": true,
+   "chapter": "Module 12 · Operate as Your Own Bank",
+   "vo": "Module twelve. Operate as Your Own Bank.",
+   "cap": "Module 12. Operate as Your Own Bank."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/own-bank.png",
+   "eyebrow": "Stage 5 · Operator",
+   "wide": true,
+   "vo": "Module twelve is where you operate as your own bank. It's a method, not a licence. Four pillars: custody, a credit line, a lending desk and a treasury, standing on a base of books, records and succession, under one income policy.",
+   "cap": "Module 12 is where you operate as your own bank. It's a method, not a licence. Four pillars: custody, a credit line, a lending desk and a treasury, standing on a base of books, records and succession, under one income policy."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/personal-balance-sheet.png",
+   "eyebrow": "From Lesson 12.1",
+   "wide": true,
+   "vo": "You'll build a real balance sheet. Assets at market value. Liabilities, like loans and accrued interest. And the numbers that matter: equity, loan-to-value, and how many months of runway your liquid assets cover."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/custody-architecture.png",
+   "eyebrow": "From Lesson 12.2",
+   "wide": true,
+   "vo": "You'll design custody in three tiers. A vault that needs more than one key. An operating wallet with limits. And a small hot float for anything new. No single lost phone, stolen key or bad signature can drain the bank."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/liquidity-ladder.png",
+   "eyebrow": "From Lesson 12.4",
+   "wide": true,
+   "vo": "And a liquidity ladder. Using an example of five thousand dollars a month of spending, one month sits instantly available, five more in blue-chip lending you can reach the same day, and the next six to twelve months in positions that mature when you'll need them. Everything else can grow. Add a written plan so your family could recover everything if you couldn't, and you're running a bank.",
+   "cap": "And a liquidity ladder. Using an example of $5,000 a month of spending, one month sits instantly available, five more in blue-chip lending you can reach the same day, and the next 6 to 12 months in positions that mature when you'll need them. Everything else can grow. Add a written plan so your family could recover everything if you couldn't, and you're running a bank."
+  },
+  {
+   "type": "image",
+   "src": "assets/modules/module-13.png",
+   "eyebrow": "Module 13",
+   "wide": true,
+   "chapter": "Module 13 · The Income Engine",
+   "vo": "Module thirteen. The Income Engine.",
+   "cap": "Module 13. The Income Engine."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/durability-rank.png",
+   "eyebrow": "From Lesson 13.1",
+   "wide": true,
+   "vo": "Module thirteen is the income engine. You'll rank income by durability, not by headline yield. Staking rewards and lending interest at the durable end. Emissions and points at the fragile end.",
+   "cap": "Module 13 is the income engine. You'll rank income by durability, not by headline yield. Staking rewards and lending interest at the durable end. Emissions and points at the fragile end."
+  },
+  {
+   "type": "image",
+   "src": "assets/charts/expected-yield.png",
+   "eyebrow": "From Lesson 13.2",
+   "wide": true,
+   "vo": "You'll subtract expected losses from every yield. An eighteen percent farm, with a ten percent yearly chance of losing sixty percent, has an expected yield of twelve. The forty percent farm barely beats it, with far more risk.",
+   "cap": "You'll subtract expected losses from every yield. An 18% farm, with a 10% yearly chance of losing 60%, has an expected yield of 12. The 40% farm barely beats it, with far more risk."
+  },
+  {
+   "type": "image",
+   "src": "assets/charts/income-waterfall.png",
+   "eyebrow": "From Lesson 13.3",
+   "wide": true,
+   "vo": "And you'll set a payout policy. Start from the headline. Subtract expected losses. Keep part as a buffer. Only then decide what you may take out, and never from principal. This is an illustration, not a promise. No income is guaranteed, and the whole point is to live within what's real."
+  },
+  {
+   "type": "image",
+   "src": "assets/modules/module-14.png",
+   "eyebrow": "Module 14",
+   "wide": true,
+   "chapter": "Module 14 · Automation & Mastery",
+   "vo": "Module fourteen. Automation and Mastery.",
+   "cap": "Module 14. Automation & Mastery."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/alert-stack.png",
+   "eyebrow": "From Lesson 14.1",
+   "wide": true,
+   "vo": "Module fourteen is automation and mastery. You'll set up monitoring, so you hear about a problem before it costs money: positions, watchers that read the chain, and alerts that reach your phone.",
+   "cap": "Module 14 is automation and mastery. You'll set up monitoring, so you hear about a problem before it costs money: positions, watchers that read the chain, and alerts that reach your phone."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/least-permission-bot.png",
+   "eyebrow": "From Lesson 14.2",
+   "wide": true,
+   "vo": "You'll automate with the least permission possible. A keeper that does one job, inside a box of limited functions and spending caps, that you can revoke at any time. And never, ever, a handed-over seed phrase."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/capstone-pack.png",
+   "eyebrow": "From Lesson 14.4",
+   "wide": true,
+   "vo": "And you'll finish with the operator capstone: your balance sheet, your policies, your monitors, and a stress test with every failure fixed. A document clear enough that a stranger could run your bank from it."
+  },
+  {
+   "type": "steps",
+   "chapter": "Your tools",
+   "title": "Example: the health factor calculator",
+   "steps": [
+    "Inputs: 10 ETH · $3,000 · LT 0.80 · debt $12,000",
+    "LTV = 40%",
+    "Health factor = 2.00",
+    "Liquidation price = $1,500 (−50%)"
+   ],
+   "result": "20 calculators in all",
+   "vo": "Now your tools. The program comes with calculators, so every number you act on is computed. Here's the health factor calculator on the example from Module three. Ten E.T.H. at three thousand dollars, a liquidation threshold of point eight, and twelve thousand dollars of debt. It returns a loan-to-value of forty percent, a health factor of two, and a liquidation price of fifteen hundred dollars. There are twenty calculators, from impermanent loss to income and value at risk.",
+   "cap": "Now your tools. The program comes with calculators, so every number you act on is computed. Here's the health factor calculator on the example from Module 3. 10 ETH at $3,000, a liquidation threshold of 0.8, and $12,000 of debt. It returns a loan-to-value of 40%, a health factor of 2, and a liquidation price of $1,500. There are 20 calculators, from impermanent loss to income and value at risk."
+  },
+  {
+   "type": "pillars",
+   "chapter": "Your tools",
+   "title": "Worksheets, hub and kit",
+   "items": [
+    {
+     "icon": "book",
+     "title": "17 worksheets",
+     "text": "Due diligence, pre-launch, bank policies"
+    },
+    {
+     "icon": "compass",
+     "title": "Course Hub",
+     "text": "Lessons, videos, checklists, calculators, progress"
+    },
+    {
+     "icon": "check",
+     "title": "Day-1 Setup Kit",
+     "text": "A printable checklist for Module 0"
+    }
+   ],
+   "vo": "You'll also have seventeen worksheets, for due diligence, pre-launch checks and your bank policies. The Course Hub, which puts every lesson, video, checklist and calculator in one place, with search and progress tracking. And a Day-One Setup Kit you can print.",
+   "cap": "You'll also have 17 worksheets, for due diligence, pre-launch checks and your bank policies. The Course Hub, which puts every lesson, video, checklist and calculator in one place, with search and progress tracking. And a Day-1 Setup Kit you can print."
+  },
+  {
+   "type": "compare",
+   "chapter": "Capstones",
+   "title": "Two capstones, two certificates",
+   "left": {
+    "label": "Analyst capstone",
+    "tone": "neutral",
+    "items": [
+     "After Module 7",
+     "Due-diligence file on a real protocol",
+     "Verdict: size, conditions, exit"
+    ]
+   },
+   "right": {
+    "label": "Operator capstone",
+    "tone": "good",
+    "items": [
+     "At the end of Module 14",
+     "Your personal bank, ten sections",
+     "Stress-tested, with every failure fixed"
+    ]
+   },
+   "vo": "There are two capstones. The analyst capstone, after Module seven, is a due-diligence file on a real protocol, ending in a verdict with size, conditions and exit. The operator capstone, at the end, is your personal bank. Each is marked against a written rubric, and passing earns a certificate. Certificates reflect course completion only, not a licence.",
+   "cap": "There are two capstones. The analyst capstone, after Module 7, is a due-diligence file on a real protocol, ending in a verdict with size, conditions and exit. The operator capstone, at the end, is your personal bank. Each is marked against a written rubric, and passing earns a certificate. Certificates reflect course completion only, not a licence."
+  },
+  {
+   "type": "bullets",
+   "chapter": "How to succeed",
+   "title": "How to succeed",
+   "numbered": true,
+   "items": [
+    "Do the stages in order",
+    "Do every checklist for real, small amounts",
+    "Use the calculators, not guesses",
+    "Write down the thesis, the exit, the policy"
+   ],
+   "vo": "Finally, how to succeed. Do the stages in order. Do every checklist for real, with small amounts. Use the calculators instead of guessing. And write things down: your thesis, your exit, and your policies. The people who get the most from this program are the ones who do the work, not the ones who watch the most videos."
+  },
+  {
+   "type": "quiz",
+   "chapter": "How to succeed",
+   "n": 1,
+   "of": 1,
+   "q": "Before any position, what’s the first question an operator asks?",
+   "a": "What am I being paid to risk? Then: how do I get out, and how big should it be?",
+   "vo": "Let's check the most important idea in this video. Before any position, what's the first question an operator asks? [[pause 4]] The answer: what am I being paid to risk? Then how do I get out, and how big should this be?"
+  },
+  {
+   "type": "bullets",
+   "chapter": "How to succeed",
+   "title": "Rules that never change",
+   "check": false,
+   "items": [
+    "Never share a seed phrase or keys",
+    "Never use money you can’t afford to lose",
+    "Never trust anyone who promises returns"
+   ],
+   "vo": "And the rules that never change. Never share your seed phrase or keys. Nobody from this program will ever ask for them. Use only money you can afford to lose while you learn. And no one, including us, can promise you returns. What you get is a process."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Your first week",
+   "title": "Your first week",
+   "numbered": true,
+   "items": [
+    "Open Module 0, print the Day-1 Setup Kit",
+    "Secure your email: password manager + 2FA",
+    "Work through the kit, in order, over a few days",
+    "Take each lesson’s quiz before moving on"
+   ],
+   "vo": "So here's your first week. Open Module Zero and print the Day-One Setup Kit. Secure your email with a password manager and two-factor. Work through the kit in order, over a few days. And take each lesson's quiz before moving on. By the end of the week, you'll be set up safely, and ready for Module One.",
+   "cap": "So here's your first week. Open Module 0 and print the Day-1 Setup Kit. Secure your email with a password manager and 2FA. Work through the kit in order, over a few days. And take each lesson's quiz before moving on. By the end of the week, you'll be set up safely, and ready for Module 1."
+  },
+  {
+   "type": "statement",
+   "chapter": "Begin",
+   "kicker": "Educational content only",
+   "lines": [
+    "A process,",
+    "not a prediction."
+   ],
+   "sub": "Not financial advice. No results are guaranteed. You keep custody, always.",
+   "vo": "This is education, not financial advice, and no results are guaranteed. What you're getting is a process: one you can explain, position by position, for as long as you invest."
+  },
+  {
+   "type": "cta",
+   "chapter": "Begin",
+   "button": "Open Module 0",
+   "sub": "Educational content only · Not financial advice",
+   "vo": "That's how the program works. Welcome aboard, operator. Open Module Zero, and let's begin.",
+   "cap": "That's how the program works. Welcome aboard, operator. Open Module 0, and let's begin."
+  }
+ ]
+}

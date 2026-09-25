@@ -1,0 +1,1657 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:03.225
+Welcome to the On-Chain Operator Program.
+
+00:00:03.225 --> 00:00:04.612
+This is the long version
+
+00:00:04.612 --> 00:00:06.300
+of how the program works.
+
+00:00:06.300 --> 00:00:09.461
+Over the next twenty-odd minutes, I'll take you inside
+
+00:00:09.461 --> 00:00:11.875
+all of it: why it exists, how it's built,
+
+00:00:11.875 --> 00:00:14.691
+every module in order, the tools you'll use, and
+
+00:00:14.691 --> 00:00:16.715
+how to get the most out of it.
+
+00:00:16.715 --> 00:00:17.950
+Get comfortable.
+
+00:00:17.950 --> 00:00:20.215
+This is the map for everything that follows.
+
+00:00:21.515 --> 00:00:22.805
+Here's the plan.
+
+00:00:22.805 --> 00:00:24.657
+First, why this program exists,
+
+00:00:24.657 --> 00:00:26.520
+and the mindset it teaches.
+
+00:00:26.520 --> 00:00:30.911
+Second, how it's built: stages, modules, lessons and starters.
+
+00:00:30.911 --> 00:00:33.160
+Third, a walk through all 15 modules,
+
+00:00:33.160 --> 00:00:35.886
+with the pictures you'll see inside them.
+
+00:00:35.886 --> 00:00:37.464
+And fourth, your tools, your
+
+00:00:37.464 --> 00:00:39.096
+capstones, and how to succeed.
+
+00:00:40.396 --> 00:00:42.971
+Let's start with why this program exists.
+
+00:00:42.971 --> 00:00:44.621
+Most people get hurt in DeFi
+
+00:00:44.621 --> 00:00:46.172
+in the same four ways.
+
+00:00:46.172 --> 00:00:49.214
+Setup mistakes that can't be undone, like the wrong
+
+00:00:49.214 --> 00:00:52.497
+network, a leaked seed phrase, or one bad approval.
+
+00:00:52.497 --> 00:00:55.976
+Yields nobody can explain, until the subsidy stops.
+
+00:00:55.976 --> 00:00:57.886
+Borrowing with no buffer, so one
+
+00:00:57.886 --> 00:01:00.211
+sharp move liquidates the position.
+
+00:01:00.211 --> 00:01:01.786
+And no plan for the way out.
+
+00:01:03.086 --> 00:01:05.451
+And on-chain, there's no help desk.
+
+00:01:05.451 --> 00:01:06.966
+No chargebacks.
+
+00:01:06.966 --> 00:01:08.541
+No margin calls.
+
+00:01:08.541 --> 00:01:09.916
+No one to phone.
+
+00:01:09.916 --> 00:01:11.999
+The only protection you have is the
+
+00:01:11.999 --> 00:01:14.266
+process you follow before you act.
+
+00:01:14.266 --> 00:01:16.871
+That process is what this program teaches.
+
+00:01:18.171 --> 00:01:19.326
+Here's why.
+
+00:01:19.326 --> 00:01:21.371
+A bank keeps a private ledger, and
+
+00:01:21.371 --> 00:01:23.716
+it can correct or reverse an entry.
+
+00:01:23.716 --> 00:01:26.023
+A blockchain is a shared ledger that
+
+00:01:26.023 --> 00:01:29.316
+thousands of computers keep identical copies of.
+
+00:01:29.316 --> 00:01:31.642
+That's what makes it trustworthy, and it's
+
+00:01:31.642 --> 00:01:33.456
+also why a mistake is final.
+
+00:01:33.456 --> 00:01:35.562
+You'll meet this idea in the very first
+
+00:01:35.562 --> 00:01:37.931
+lesson, because everything else builds on it.
+
+00:01:39.231 --> 00:01:41.656
+Most people enter DeFi through a number.
+
+00:01:41.656 --> 00:01:46.316
+12% APY. Operators start with a different question.
+
+00:01:46.316 --> 00:01:47.861
+What am I being paid to risk?
+
+00:01:49.161 --> 00:01:51.316
+The operator mindset comes down to
+
+00:01:51.316 --> 00:01:54.386
+three questions, asked before every position.
+
+00:01:54.386 --> 00:01:56.351
+What am I being paid to risk?
+
+00:01:56.351 --> 00:01:58.666
+How do I get out, and how fast?
+
+00:01:58.666 --> 00:02:00.453
+And how big should this be, so that
+
+00:02:00.453 --> 00:02:02.710
+if I'm wrong, it doesn't matter much?
+
+00:02:02.710 --> 00:02:04.766
+Every lesson in this program trains
+
+00:02:04.766 --> 00:02:06.422
+one of those three questions.
+
+00:02:07.722 --> 00:02:09.797
+Here's the first answer you'll learn.
+
+00:02:09.797 --> 00:02:13.276
+Every DeFi return comes from one of five places.
+
+00:02:13.276 --> 00:02:17.206
+Service fees, like swap fees paid to liquidity providers.
+
+00:02:17.206 --> 00:02:19.325
+Interest, paid by borrowers.
+
+00:02:19.325 --> 00:02:21.575
+Security rewards, for staking.
+
+00:02:21.575 --> 00:02:24.452
+Structural carry, like funding and basis.
+
+00:02:24.452 --> 00:02:26.138
+And incentives, which are only
+
+00:02:26.138 --> 00:02:27.907
+real once you've sold them.
+
+00:02:27.907 --> 00:02:30.342
+Price going up is not a strategy.
+
+00:02:30.342 --> 00:02:32.408
+If you can't name which of these five is
+
+00:02:32.408 --> 00:02:34.928
+paying you, you don't understand the position yet.
+
+00:02:36.229 --> 00:02:37.744
+And here's the second.
+
+00:02:37.744 --> 00:02:39.804
+Every position sits on a stack.
+
+00:02:39.804 --> 00:02:41.489
+The chain that settles it.
+
+00:02:41.489 --> 00:02:43.144
+The wallet that signs it.
+
+00:02:43.144 --> 00:02:44.589
+The app that runs it.
+
+00:02:44.589 --> 00:02:46.264
+And the position itself.
+
+00:02:46.264 --> 00:02:48.600
+Each layer can fail, and every yield is a
+
+00:02:48.600 --> 00:02:51.124
+payment for taking on some of that risk.
+
+00:02:51.124 --> 00:02:52.273
+Your job is to name
+
+00:02:52.273 --> 00:02:53.939
+that risk before you deposit.
+
+00:02:55.239 --> 00:02:57.294
+Now, how the program is built.
+
+00:02:57.294 --> 00:02:59.169
+It runs in six stages.
+
+00:02:59.169 --> 00:03:01.314
+Zero, you get set up safely.
+
+00:03:01.314 --> 00:03:03.642
+Foundations, you protect a wallet and
+
+00:03:03.642 --> 00:03:06.209
+learn to trade and provide liquidity.
+
+00:03:06.209 --> 00:03:10.429
+Practitioner, you borrow, earn yield and map infrastructure risk.
+
+00:03:10.429 --> 00:03:14.374
+Analyst, you research any protocol and read on-chain data.
+
+00:03:14.374 --> 00:03:18.204
+Strategist, thirty strategies, hedging and stress tests.
+
+00:03:18.204 --> 00:03:20.769
+And Operator, you run your own on-chain bank.
+
+00:03:22.069 --> 00:03:25.376
+In numbers: 15 modules, 107 lessons, plus
+
+00:03:25.376 --> 00:03:27.896
+a Mastery Starter at the top of
+
+00:03:27.896 --> 00:03:31.045
+every module, and 30 strategy playbooks.
+
+00:03:32.345 --> 00:03:34.420
+The stages unlock in order.
+
+00:03:34.420 --> 00:03:36.560
+You move on by passing the previous
+
+00:03:36.560 --> 00:03:39.060
+stage's quizzes, not by the calendar.
+
+00:03:39.060 --> 00:03:40.375
+That's deliberate.
+
+00:03:40.375 --> 00:03:44.295
+It means nobody reaches leverage before they've mastered safety.
+
+00:03:44.295 --> 00:03:45.740
+Go at your own pace.
+
+00:03:45.740 --> 00:03:48.720
+There's no deadline, and you keep lifetime access.
+
+00:03:50.020 --> 00:03:52.118
+Every lesson has the same five parts,
+
+00:03:52.118 --> 00:03:54.240
+so you always know where you are.
+
+00:03:54.240 --> 00:03:55.980
+It starts with an objective: what
+
+00:03:55.980 --> 00:03:57.355
+you'll be able to do.
+
+00:03:57.355 --> 00:04:00.199
+Then an explanation, in plain words, with every
+
+00:04:00.199 --> 00:04:02.810
+term defined the first time it appears.
+
+00:04:02.810 --> 00:04:04.370
+Then a worked example, with
+
+00:04:04.370 --> 00:04:06.565
+every number calculated on screen.
+
+00:04:06.565 --> 00:04:08.540
+Then a checklist, which you do for
+
+00:04:08.540 --> 00:04:10.590
+real, with a small test amount.
+
+00:04:10.590 --> 00:04:12.752
+And finally, a three-question quiz.
+
+00:04:14.052 --> 00:04:16.869
+And every module opens with a Mastery Starter,
+
+00:04:16.869 --> 00:04:19.387
+so you can start any topic from zero.
+
+00:04:19.387 --> 00:04:22.412
+It has a 60-second version of the whole module.
+
+00:04:22.412 --> 00:04:23.857
+The words you'll need.
+
+00:04:23.857 --> 00:04:26.102
+What to have in place before you start.
+
+00:04:26.102 --> 00:04:28.507
+One safe first step you can take today.
+
+00:04:28.507 --> 00:04:31.712
+A ladder from beginner, to practitioner, to master.
+
+00:04:31.712 --> 00:04:32.760
+And a clear test for
+
+00:04:32.760 --> 00:04:34.357
+when you've mastered the module.
+
+00:04:35.657 --> 00:04:39.442
+Most modules also have expert lessons, 15 in all.
+
+00:04:39.442 --> 00:04:42.807
+They show how the machinery really works underneath:
+
+00:04:42.807 --> 00:04:46.235
+how automated market makers are designed, how lending
+
+00:04:46.235 --> 00:04:49.282
+protocols handle bad debt, how to read contract
+
+00:04:49.282 --> 00:04:51.487
+code, how to value a protocol.
+
+00:04:51.487 --> 00:04:53.682
+You don't need them to operate safely.
+
+00:04:53.682 --> 00:04:55.647
+They're there when you want to go deeper.
+
+00:04:56.947 --> 00:04:58.302
+Module 0.
+
+00:04:58.302 --> 00:04:59.537
+Crypto From Zero.
+
+00:05:00.837 --> 00:05:04.102
+Module 0 assumes you've never owned crypto.
+
+00:05:04.102 --> 00:05:06.788
+Its seven steps take you from nothing to set
+
+00:05:06.788 --> 00:05:09.653
+up: secure your accounts, open and lock down an
+
+00:05:09.653 --> 00:05:12.637
+exchange, make a first small purchase, set up and
+
+00:05:12.637 --> 00:05:15.203
+back up a wallet, send a first transfer on
+
+00:05:15.203 --> 00:05:18.247
+the right network, practise on a test network, and
+
+00:05:18.247 --> 00:05:20.457
+finish with a security baseline.
+
+00:05:20.457 --> 00:05:23.102
+It all comes with a printable Day-1 Setup Kit.
+
+00:05:24.402 --> 00:05:26.792
+Here's a Module 0 example.
+
+00:05:26.792 --> 00:05:29.357
+The price on the chart isn't what you pay.
+
+00:05:29.357 --> 00:05:31.087
+You lose a little to the spread, a
+
+00:05:31.087 --> 00:05:33.064
+little to the trading fee, and a little
+
+00:05:33.064 --> 00:05:35.242
+more to the network when you withdraw.
+
+00:05:35.242 --> 00:05:36.957
+So you'll compare offers by what
+
+00:05:36.957 --> 00:05:38.517
+actually lands in your wallet.
+
+00:05:39.817 --> 00:05:41.456
+One of the first ideas you'll
+
+00:05:41.456 --> 00:05:43.232
+meet is who holds the keys.
+
+00:05:43.232 --> 00:05:46.058
+On an exchange, the exchange holds them, which
+
+00:05:46.058 --> 00:05:48.462
+is fine for buying and cashing out.
+
+00:05:48.462 --> 00:05:50.811
+In your own wallet, you hold them, which
+
+00:05:50.811 --> 00:05:52.758
+is what you need for DeFi, and it
+
+00:05:52.758 --> 00:05:55.407
+means your backup is your responsibility.
+
+00:05:55.407 --> 00:05:57.659
+You'll test that backup by restoring it,
+
+00:05:57.659 --> 00:05:59.142
+before you ever rely on it.
+
+00:06:00.442 --> 00:06:01.707
+Module 1.
+
+00:06:01.707 --> 00:06:03.182
+Foundations & Safety.
+
+00:06:04.482 --> 00:06:07.177
+Module 1 is foundations and safety.
+
+00:06:07.177 --> 00:06:09.923
+You'll learn what really happens when you press
+
+00:06:09.923 --> 00:06:12.783
+send: you sign, the transaction waits publicly in
+
+00:06:12.783 --> 00:06:14.957
+the mempool, a validator puts it in a
+
+00:06:14.957 --> 00:06:16.802
+block, and then it's final.
+
+00:06:16.802 --> 00:06:18.498
+You'll learn why gas is paid
+
+00:06:18.498 --> 00:06:20.253
+even when a transaction fails.
+
+00:06:21.553 --> 00:06:22.883
+Then the attacks.
+
+00:06:22.883 --> 00:06:25.678
+Fake sites that look exactly like the real one.
+
+00:06:25.678 --> 00:06:29.058
+Drainers, where a single signature hands over everything.
+
+00:06:29.058 --> 00:06:32.083
+Fake support staff who ask for your seed phrase.
+
+00:06:32.083 --> 00:06:34.983
+And poisoned addresses planted in your history.
+
+00:06:34.983 --> 00:06:37.386
+You'll learn to recognise all four, and to
+
+00:06:37.386 --> 00:06:39.957
+simulate a transaction before you sign it, so
+
+00:06:39.957 --> 00:06:41.633
+you know exactly what it does.
+
+00:06:42.933 --> 00:06:45.308
+And you'll read every approval before you
+
+00:06:45.308 --> 00:06:47.627
+sign it: which token, which contract can
+
+00:06:47.627 --> 00:06:49.228
+spend it, and how much.
+
+00:06:49.228 --> 00:06:52.468
+An infinite approval stays open after the trade.
+
+00:06:52.468 --> 00:06:54.903
+An exact one covers only this trade.
+
+00:06:54.903 --> 00:06:56.456
+You'll default to exact, and
+
+00:06:56.456 --> 00:06:57.848
+revoke what you don't use.
+
+00:06:59.148 --> 00:07:01.304
+You'll also learn how stablecoins are
+
+00:07:01.304 --> 00:07:03.533
+built, and how each design breaks.
+
+00:07:03.533 --> 00:07:06.678
+Fiat-backed coins depend on an issuer's reserves.
+
+00:07:06.678 --> 00:07:10.477
+Crypto-backed coins depend on collateral and liquidations.
+
+00:07:10.477 --> 00:07:13.415
+And algorithmic designs depend on confidence,
+
+00:07:13.415 --> 00:07:15.012
+which can vanish in days.
+
+00:07:16.312 --> 00:07:17.577
+Module 2.
+
+00:07:17.577 --> 00:07:18.657
+Trading On-Chain.
+
+00:07:19.957 --> 00:07:22.302
+Module 2 is trading on-chain.
+
+00:07:22.302 --> 00:07:23.659
+It starts with the maths
+
+00:07:23.659 --> 00:07:25.912
+behind every automated market maker.
+
+00:07:25.912 --> 00:07:28.510
+In this example, a pool
+
+00:07:28.510 --> 00:07:31.732
+holds 100 ETH and $300,000.
+
+00:07:31.732 --> 00:07:39.972
+Swapping in 10 ETH returns about $27,273, not $30,000.
+
+00:07:39.972 --> 00:07:41.939
+That's price impact, and you'll learn
+
+00:07:41.939 --> 00:07:43.647
+to calculate it before you trade.
+
+00:07:44.947 --> 00:07:46.732
+Then providing liquidity.
+
+00:07:46.732 --> 00:07:49.016
+You deposit two assets, earn a share
+
+00:07:49.016 --> 00:07:51.177
+of every swap's fees, and your mix
+
+00:07:51.177 --> 00:07:53.452
+of assets shifts as prices move.
+
+00:07:53.452 --> 00:07:55.860
+Your real result is the fees you earned,
+
+00:07:55.860 --> 00:07:59.507
+minus the impermanent loss, compared with simply holding.
+
+00:07:59.507 --> 00:08:01.558
+You'll learn to measure that honestly, and
+
+00:08:01.558 --> 00:08:02.942
+when it's worth doing at all.
+
+00:08:04.242 --> 00:08:06.557
+Here's impermanent loss as a chart.
+
+00:08:06.557 --> 00:08:09.796
+If the price doubles, or halves, a 50/50
+
+00:08:09.796 --> 00:08:13.967
+pool leaves you about 5.7% behind simply holding.
+
+00:08:13.967 --> 00:08:16.687
+If it triples, 13.4%.
+
+00:08:16.687 --> 00:08:18.437
+Your fees have to beat this line,
+
+00:08:18.437 --> 00:08:20.187
+or holding would have been better.
+
+00:08:21.487 --> 00:08:22.782
+And execution.
+
+00:08:22.782 --> 00:08:26.361
+Market orders, limit orders, orders split over time, and
+
+00:08:26.361 --> 00:08:30.052
+intent-based orders where solvers compete to fill you.
+
+00:08:30.052 --> 00:08:32.318
+Each one is safer in different situations,
+
+00:08:32.318 --> 00:08:34.162
+and you'll learn which to use when.
+
+00:08:35.462 --> 00:08:36.767
+Module 3.
+
+00:08:36.767 --> 00:08:38.122
+Lending & Leverage.
+
+00:08:39.422 --> 00:08:42.150
+Module 3 is lending and leverage.
+
+00:08:42.150 --> 00:08:45.608
+You'll see how a lending pool works: suppliers deposit,
+
+00:08:45.608 --> 00:08:49.128
+borrowers post collateral and pay interest, and the rate
+
+00:08:49.128 --> 00:08:52.145
+rises with how much of the pool is borrowed.
+
+00:08:52.145 --> 00:08:55.172
+Near full utilisation, rates jump, and lenders
+
+00:08:55.172 --> 00:08:56.975
+may not be able to withdraw.
+
+00:08:58.275 --> 00:09:01.130
+The centre of this module is the health factor.
+
+00:09:01.130 --> 00:09:05.847
+10 ETH at $3,000, with $12,000 borrowed, gives a
+
+00:09:05.847 --> 00:09:10.575
+health factor of 2, and liquidation at $1,500.
+
+00:09:10.575 --> 00:09:15.350
+Borrow $16,000 instead, and liquidation moves up to $2,000.
+
+00:09:15.350 --> 00:09:17.503
+You'll draw this line before every borrow,
+
+00:09:17.503 --> 00:09:18.805
+for the rest of your life.
+
+00:09:20.105 --> 00:09:23.578
+You'll also learn perpetual futures: longs and shorts
+
+00:09:23.578 --> 00:09:26.665
+with no expiry, funding payments that keep them
+
+00:09:26.665 --> 00:09:29.345
+near the spot price, and liquidation.
+
+00:09:29.345 --> 00:09:31.922
+At 20× leverage, a move of under
+
+00:09:31.922 --> 00:09:34.330
+5% can wipe out the margin.
+
+00:09:34.330 --> 00:09:36.259
+That's why you'll use perps to hedge
+
+00:09:36.259 --> 00:09:37.980
+and to earn carry, not to gamble.
+
+00:09:39.280 --> 00:09:41.475
+And you'll learn why falls accelerate.
+
+00:09:41.475 --> 00:09:45.008
+Liquidations sell collateral into a falling market, which
+
+00:09:45.008 --> 00:09:48.597
+pushes prices lower, which triggers more liquidations.
+
+00:09:48.597 --> 00:09:50.491
+Your buffer is your time to react,
+
+00:09:50.491 --> 00:09:52.763
+and you'll write your defence plan before
+
+00:09:52.763 --> 00:09:54.549
+you borrow, not during the crash.
+
+00:09:55.849 --> 00:09:57.159
+Module 4.
+
+00:09:57.159 --> 00:09:57.779
+Yield.
+
+00:09:59.079 --> 00:10:00.844
+Module 4 is yield.
+
+00:10:00.844 --> 00:10:03.329
+The core skill is splitting any APY
+
+00:10:03.329 --> 00:10:06.529
+into what's organic and what's subsidised.
+
+00:10:06.529 --> 00:10:08.659
+Here, Pool A shows 20%, but
+
+00:10:08.659 --> 00:10:10.633
+16 of it is emissions.
+
+00:10:10.633 --> 00:10:12.313
+Pool B shows 9, and 8
+
+00:10:12.313 --> 00:10:14.064
+of it is real fees.
+
+00:10:14.064 --> 00:10:16.279
+You'll learn which part lasts, and which
+
+00:10:16.279 --> 00:10:18.494
+part disappears when the incentives stop.
+
+00:10:19.794 --> 00:10:21.049
+Then staking.
+
+00:10:21.049 --> 00:10:24.560
+Native staking, liquid staking tokens that accrue
+
+00:10:24.560 --> 00:10:27.087
+rewards but can trade below the ETH
+
+00:10:27.087 --> 00:10:30.247
+behind them, and restaking, which adds yield
+
+00:10:30.247 --> 00:10:32.494
+and adds new ways to be slashed.
+
+00:10:33.794 --> 00:10:35.529
+And real-world assets.
+
+00:10:35.529 --> 00:10:38.192
+When you buy a tokenized treasury, you own
+
+00:10:38.192 --> 00:10:41.102
+a claim on an issuer, who promises redemption,
+
+00:10:41.102 --> 00:10:44.189
+through a custodian who holds the real asset.
+
+00:10:44.189 --> 00:10:45.729
+You'll learn to see every link in
+
+00:10:45.729 --> 00:10:47.134
+that chain before you trust it.
+
+00:10:48.434 --> 00:10:49.799
+Module 5.
+
+00:10:49.799 --> 00:10:51.024
+Infrastructure Risk.
+
+00:10:52.324 --> 00:10:56.069
+Module 5 is infrastructure risk: everything a position
+
+00:10:56.069 --> 00:10:59.229
+depends on that isn't the position itself.
+
+00:10:59.229 --> 00:11:00.594
+Bridges first.
+
+00:11:00.594 --> 00:11:03.028
+Some depend on a small set of signers,
+
+00:11:03.028 --> 00:11:05.774
+some on the chains' own consensus, and some
+
+00:11:05.774 --> 00:11:08.009
+on at least one honest watcher.
+
+00:11:08.009 --> 00:11:10.174
+You'll size your exposure to the trust model.
+
+00:11:11.474 --> 00:11:13.567
+Then oracles, the price feeds that
+
+00:11:13.567 --> 00:11:16.079
+decide when positions get liquidated.
+
+00:11:16.079 --> 00:11:17.603
+A single spot price can be
+
+00:11:17.603 --> 00:11:19.539
+pushed around in a thin pool.
+
+00:11:19.539 --> 00:11:21.770
+A time-weighted average is harder to
+
+00:11:21.770 --> 00:11:23.999
+manipulate, but lags fast moves.
+
+00:11:23.999 --> 00:11:26.669
+You'll always ask which price secures your position.
+
+00:11:27.969 --> 00:11:29.414
+And the code itself.
+
+00:11:29.414 --> 00:11:31.940
+Many contracts can be upgraded after you
+
+00:11:31.940 --> 00:11:34.704
+deposit, by whoever holds the admin key.
+
+00:11:34.704 --> 00:11:37.414
+You'll learn to check the timelock and the admin
+
+00:11:37.414 --> 00:11:39.958
+before you put money in, and to read verified
+
+00:11:39.958 --> 00:11:41.839
+code well enough to check a claim.
+
+00:11:43.139 --> 00:11:44.479
+Module 6.
+
+00:11:44.479 --> 00:11:45.759
+Protocol Research.
+
+00:11:47.059 --> 00:11:49.684
+Module 6 is protocol research.
+
+00:11:49.684 --> 00:11:51.087
+You'll learn a six-step loop
+
+00:11:51.087 --> 00:11:52.549
+you can run on anything.
+
+00:11:52.549 --> 00:11:54.424
+Mechanism: how it works.
+
+00:11:54.424 --> 00:11:56.789
+Cash flow: where the money comes from.
+
+00:11:56.789 --> 00:11:58.049
+Dependencies.
+
+00:11:58.049 --> 00:11:59.209
+Solvency.
+
+00:11:59.209 --> 00:12:00.219
+Evidence.
+
+00:12:00.219 --> 00:12:01.269
+And exit.
+
+00:12:01.269 --> 00:12:03.594
+You'll finish with a full due-diligence
+
+00:12:03.594 --> 00:12:04.989
+file on a real protocol.
+
+00:12:06.289 --> 00:12:10.009
+You'll learn tokenomics: the difference between the supply
+
+00:12:10.009 --> 00:12:12.972
+trading today and the fully diluted value, how
+
+00:12:12.972 --> 00:12:16.313
+large unlocks add supply, and whether the protocol's
+
+00:12:16.313 --> 00:12:18.709
+success ever reaches the token at all.
+
+00:12:20.009 --> 00:12:21.923
+And you'll study how DeFi failures
+
+00:12:21.923 --> 00:12:24.192
+happened, through real case studies.
+
+00:12:24.192 --> 00:12:25.212
+They rhyme.
+
+00:12:25.212 --> 00:12:26.979
+Manipulated oracles.
+
+00:12:26.979 --> 00:12:28.234
+Bad upgrades.
+
+00:12:28.234 --> 00:12:29.419
+Bank runs.
+
+00:12:29.419 --> 00:12:31.241
+And incentive programmes that end,
+
+00:12:31.241 --> 00:12:33.154
+taking the liquidity with them.
+
+00:12:33.154 --> 00:12:35.459
+Learn the patterns, and you'll spot them early.
+
+00:12:36.758 --> 00:12:38.128
+Module 7.
+
+00:12:38.128 --> 00:12:39.383
+On-Chain Analytics.
+
+00:12:40.683 --> 00:12:42.851
+Module 7 is on-chain analytics,
+
+00:12:42.851 --> 00:12:45.048
+and it starts with humility.
+
+00:12:45.048 --> 00:12:46.733
+Volume can be faked.
+
+00:12:46.733 --> 00:12:48.448
+Addresses aren't people.
+
+00:12:48.448 --> 00:12:50.632
+And total value locked counts capital
+
+00:12:50.632 --> 00:12:52.887
+that's only there for the rewards.
+
+00:12:52.887 --> 00:12:54.702
+Every metric gets its caveat.
+
+00:12:56.002 --> 00:12:59.513
+You'll master the block explorer: the transaction hash, who
+
+00:12:59.513 --> 00:13:02.672
+signed and which contract was called, the event logs,
+
+00:13:02.672 --> 00:13:06.132
+and the internal calls that show what really happened.
+
+00:13:06.132 --> 00:13:07.824
+You won't need an app's interface
+
+00:13:07.824 --> 00:13:09.367
+to know what a transaction did.
+
+00:13:10.667 --> 00:13:12.282
+And you'll read markets.
+
+00:13:12.282 --> 00:13:14.531
+Here, a trade that's 1% of a
+
+00:13:14.531 --> 00:13:17.932
+pool's reserve moves the price about 1%.
+
+00:13:17.932 --> 00:13:20.512
+At 10%, it moves it over 9.
+
+00:13:20.512 --> 00:13:22.601
+You'll check whether a pool can take your
+
+00:13:22.601 --> 00:13:24.639
+trade before you place it, and query the
+
+00:13:24.639 --> 00:13:26.877
+chain yourself when a dashboard isn't enough.
+
+00:13:28.177 --> 00:13:29.442
+Module 8.
+
+00:13:29.442 --> 00:13:31.217
+The DeFi Operating System.
+
+00:13:32.517 --> 00:13:35.222
+Module 8 turns knowledge into a system.
+
+00:13:35.222 --> 00:13:37.978
+You'll build a portfolio in buckets: a core
+
+00:13:37.978 --> 00:13:41.735
+of simple, well-tested positions, a satellite of strategies
+
+00:13:41.735 --> 00:13:45.417
+you've tested, and a small, capped speculative bucket.
+
+00:13:45.417 --> 00:13:47.589
+Each bucket, and each position inside
+
+00:13:47.589 --> 00:13:48.847
+it, has a written cap.
+
+00:13:50.147 --> 00:13:53.055
+You'll keep a risk register: every position, its
+
+00:13:53.055 --> 00:13:55.669
+risks, a score, and a written response.
+
+00:13:55.669 --> 00:13:58.634
+Then an operating playbook with the same four
+
+00:13:58.634 --> 00:14:02.244
+phases every time: deploy, monitor, respond, and review.
+
+00:14:03.543 --> 00:14:06.743
+And you'll size positions from numbers, not feelings.
+
+00:14:06.743 --> 00:14:09.242
+This chart shows one-day value at
+
+00:14:09.242 --> 00:14:11.673
+risk for a $100,000 position.
+
+00:14:11.673 --> 00:14:15.085
+At 70% volatility, a bad day at
+
+00:14:15.085 --> 00:14:18.583
+the 95% level is about $6,040.
+
+00:14:18.583 --> 00:14:20.816
+And because crypto has fatter tails than
+
+00:14:20.816 --> 00:14:22.940
+this model assumes, you'll treat it as
+
+00:14:22.940 --> 00:14:24.193
+a floor, not a ceiling.
+
+00:14:25.493 --> 00:14:28.109
+Inside Module 8 is the strategy
+
+00:14:28.109 --> 00:14:31.271
+library: 30 strategies in 7 levels.
+
+00:14:31.271 --> 00:14:33.996
+Core, like stablecoin lending and staking.
+
+00:14:33.996 --> 00:14:35.096
+Liquidity.
+
+00:14:35.096 --> 00:14:36.016
+Yield.
+
+00:14:36.016 --> 00:14:39.041
+Advanced, like leveraged loops and funding carry.
+
+00:14:39.041 --> 00:14:40.691
+Treasury and research.
+
+00:14:40.691 --> 00:14:43.981
+Professional, like fixed rates, basis and options.
+
+00:14:43.981 --> 00:14:45.166
+And Expert.
+
+00:14:45.166 --> 00:14:47.854
+Every strategy shows where its return comes
+
+00:14:47.854 --> 00:14:50.114
+from, the maths, the steps, the kill
+
+00:14:50.114 --> 00:14:52.436
+rules, and exactly how it loses money.
+
+00:14:53.736 --> 00:14:55.996
+Here's an example from the library.
+
+00:14:55.996 --> 00:14:59.656
+A 3× loop on 3.5% collateral yield.
+
+00:14:59.656 --> 00:15:03.726
+At a 2.5% borrow rate, you net 5.5%.
+
+00:15:03.726 --> 00:15:07.336
+Above 3.5% borrow, leverage adds nothing.
+
+00:15:07.336 --> 00:15:10.531
+And at 5.25%, the return is wiped out.
+
+00:15:10.531 --> 00:15:12.428
+The spread is everything, and you'll
+
+00:15:12.428 --> 00:15:14.326
+know the break-even before you start.
+
+00:15:15.626 --> 00:15:16.941
+Module 9.
+
+00:15:16.941 --> 00:15:18.606
+DeFi vs Grid Bots.
+
+00:15:19.906 --> 00:15:23.071
+Module 9 connects DeFi to grid bots.
+
+00:15:23.071 --> 00:15:26.737
+A concentrated liquidity position and a grid bot do
+
+00:15:26.737 --> 00:15:29.838
+almost the same job: both sell as the price
+
+00:15:29.838 --> 00:15:33.099
+rises and buy as it falls, inside a range.
+
+00:15:33.099 --> 00:15:35.797
+The difference is the risks: fees, custody, and
+
+00:15:35.797 --> 00:15:38.326
+what happens when the price leaves the range.
+
+00:15:39.626 --> 00:15:41.421
+You'll learn when each one wins.
+
+00:15:41.421 --> 00:15:43.346
+In a range, both can work.
+
+00:15:43.346 --> 00:15:45.706
+In a strong trend, neither does well.
+
+00:15:45.706 --> 00:15:47.826
+And you'll build one system with two
+
+00:15:47.826 --> 00:15:50.117
+sleeves, an exchange grid sleeve and an
+
+00:15:50.117 --> 00:15:52.466
+on-chain sleeve, under a single risk cap.
+
+00:15:53.766 --> 00:15:55.071
+Module 10.
+
+00:15:55.071 --> 00:15:56.586
+Advanced Yield Engineering.
+
+00:15:57.886 --> 00:16:00.996
+Module 10 is advanced yield engineering.
+
+00:16:00.996 --> 00:16:02.631
+Fixed-rate yield first.
+
+00:16:02.631 --> 00:16:05.747
+A principal token bought at a discount converges to
+
+00:16:05.747 --> 00:16:08.444
+its full value at maturity, which locks in a
+
+00:16:08.444 --> 00:16:10.961
+fixed rate if you hold it to the end.
+
+00:16:10.961 --> 00:16:13.626
+You'll learn exactly what that fixed rate is short.
+
+00:16:14.926 --> 00:16:16.606
+Then basis and carry.
+
+00:16:16.606 --> 00:16:19.355
+Buy spot, short a dated future, and capture the
+
+00:16:19.355 --> 00:16:22.061
+gap between them, without a view on price.
+
+00:16:22.061 --> 00:16:24.304
+It works only if both legs are held
+
+00:16:24.304 --> 00:16:27.221
+to expiry and your margin is never called.
+
+00:16:27.221 --> 00:16:30.492
+You'll also learn funding carry, options income, and when
+
+00:16:30.492 --> 00:16:32.805
+you're really being paid to be the house.
+
+00:16:34.105 --> 00:16:35.700
+And options income.
+
+00:16:35.700 --> 00:16:37.031
+A covered call earns a
+
+00:16:37.031 --> 00:16:39.010
+premium but caps your upside.
+
+00:16:39.010 --> 00:16:41.550
+A cash-secured put earns a premium, and may
+
+00:16:41.550 --> 00:16:43.870
+buy the asset for you after a fall.
+
+00:16:43.870 --> 00:16:45.654
+Every one of these strategies is
+
+00:16:45.654 --> 00:16:47.006
+taught with how it loses.
+
+00:16:48.306 --> 00:16:49.711
+Module 11.
+
+00:16:49.711 --> 00:16:51.491
+Hedging & Risk Engineering.
+
+00:16:52.791 --> 00:16:56.086
+Module 11 is hedging and risk engineering.
+
+00:16:56.086 --> 00:16:58.575
+You'll hedge the risks you don't want, with
+
+00:16:58.575 --> 00:17:01.120
+a perpetual short, which costs funding, or a
+
+00:17:01.120 --> 00:17:03.796
+put option, which costs a premium upfront.
+
+00:17:03.796 --> 00:17:06.179
+You'll learn what on-chain cover actually
+
+00:17:06.179 --> 00:17:07.711
+pays, and what it excludes.
+
+00:17:09.011 --> 00:17:11.606
+You'll protect every borrow with three layers.
+
+00:17:11.606 --> 00:17:14.531
+A buffer, keeping the health factor well above one.
+
+00:17:14.531 --> 00:17:16.886
+Alerts that warn you long before trouble.
+
+00:17:16.886 --> 00:17:18.695
+And a repayment amount worked out
+
+00:17:18.695 --> 00:17:20.451
+in advance, with the funds ready.
+
+00:17:21.751 --> 00:17:23.816
+Then you'll stress-test the whole book.
+
+00:17:23.816 --> 00:17:25.711
+A 30% price fall.
+
+00:17:25.711 --> 00:17:27.346
+A stablecoin depeg.
+
+00:17:27.346 --> 00:17:29.001
+A protocol exploit.
+
+00:17:29.001 --> 00:17:31.295
+For each one, what breaks, and how you fix
+
+00:17:31.295 --> 00:17:33.536
+it now, before the market does it for you.
+
+00:17:34.836 --> 00:17:37.063
+And you'll have an incident plan for
+
+00:17:37.063 --> 00:17:39.229
+the first 60 minutes of an exploit,
+
+00:17:39.229 --> 00:17:41.515
+a depeg, or a compromised wallet.
+
+00:17:41.515 --> 00:17:43.350
+Stop and sign nothing new.
+
+00:17:43.350 --> 00:17:44.895
+Size the exposure.
+
+00:17:44.895 --> 00:17:47.050
+Move keys and funds to safety.
+
+00:17:47.050 --> 00:17:50.225
+Then act on public facts only, and record everything.
+
+00:17:51.525 --> 00:17:52.915
+Module 12.
+
+00:17:52.915 --> 00:17:54.370
+Operate as Your Own Bank.
+
+00:17:55.670 --> 00:17:57.110
+Module 12 is where you
+
+00:17:57.110 --> 00:17:58.975
+operate as your own bank.
+
+00:17:58.975 --> 00:18:01.045
+It's a method, not a licence.
+
+00:18:01.045 --> 00:18:04.474
+Four pillars: custody, a credit line, a lending desk
+
+00:18:04.474 --> 00:18:07.385
+and a treasury, standing on a base of books,
+
+00:18:07.385 --> 00:18:10.490
+records and succession, under one income policy.
+
+00:18:11.790 --> 00:18:13.725
+You'll build a real balance sheet.
+
+00:18:13.725 --> 00:18:15.510
+Assets at market value.
+
+00:18:15.510 --> 00:18:18.590
+Liabilities, like loans and accrued interest.
+
+00:18:18.590 --> 00:18:21.994
+And the numbers that matter: equity, loan-to-value, and how
+
+00:18:21.994 --> 00:18:24.660
+many months of runway your liquid assets cover.
+
+00:18:25.959 --> 00:18:28.294
+You'll design custody in three tiers.
+
+00:18:28.294 --> 00:18:30.569
+A vault that needs more than one key.
+
+00:18:30.569 --> 00:18:32.690
+An operating wallet with limits.
+
+00:18:32.690 --> 00:18:35.055
+And a small hot float for anything new.
+
+00:18:35.055 --> 00:18:37.439
+No single lost phone, stolen key or
+
+00:18:37.439 --> 00:18:39.625
+bad signature can drain the bank.
+
+00:18:40.925 --> 00:18:42.420
+And a liquidity ladder.
+
+00:18:42.420 --> 00:18:44.798
+Using an example of $5,000 a month of
+
+00:18:44.798 --> 00:18:48.301
+spending, one month sits instantly available, five more
+
+00:18:48.301 --> 00:18:51.054
+in blue-chip lending you can reach the same
+
+00:18:51.054 --> 00:18:53.119
+day, and the next 6 to 12 months
+
+00:18:53.119 --> 00:18:56.360
+in positions that mature when you'll need them.
+
+00:18:56.360 --> 00:18:58.005
+Everything else can grow.
+
+00:18:58.005 --> 00:19:00.490
+Add a written plan so your family could recover
+
+00:19:00.490 --> 00:19:03.285
+everything if you couldn't, and you're running a bank.
+
+00:19:04.585 --> 00:19:06.120
+Module 13.
+
+00:19:06.120 --> 00:19:07.165
+The Income Engine.
+
+00:19:08.465 --> 00:19:11.255
+Module 13 is the income engine.
+
+00:19:11.255 --> 00:19:15.027
+You'll rank income by durability, not by headline yield.
+
+00:19:15.027 --> 00:19:18.707
+Staking rewards and lending interest at the durable end.
+
+00:19:18.707 --> 00:19:20.917
+Emissions and points at the fragile end.
+
+00:19:22.218 --> 00:19:25.313
+You'll subtract expected losses from every yield.
+
+00:19:25.313 --> 00:19:28.851
+An 18% farm, with a 10% yearly chance of
+
+00:19:28.851 --> 00:19:32.603
+losing 60%, has an expected yield of 12.
+
+00:19:32.603 --> 00:19:34.426
+The 40% farm barely beats
+
+00:19:34.426 --> 00:19:36.038
+it, with far more risk.
+
+00:19:37.338 --> 00:19:39.253
+And you'll set a payout policy.
+
+00:19:39.253 --> 00:19:40.828
+Start from the headline.
+
+00:19:40.828 --> 00:19:42.853
+Subtract expected losses.
+
+00:19:42.853 --> 00:19:44.533
+Keep part as a buffer.
+
+00:19:44.533 --> 00:19:46.197
+Only then decide what you may
+
+00:19:46.197 --> 00:19:48.438
+take out, and never from principal.
+
+00:19:48.438 --> 00:19:51.078
+This is an illustration, not a promise.
+
+00:19:51.078 --> 00:19:53.298
+No income is guaranteed, and the whole
+
+00:19:53.298 --> 00:19:55.348
+point is to live within what's real.
+
+00:19:56.648 --> 00:19:58.123
+Module 14.
+
+00:19:58.123 --> 00:19:59.558
+Automation & Mastery.
+
+00:20:00.858 --> 00:20:04.048
+Module 14 is automation and mastery.
+
+00:20:04.048 --> 00:20:06.730
+You'll set up monitoring, so you hear about a
+
+00:20:06.730 --> 00:20:10.287
+problem before it costs money: positions, watchers that read
+
+00:20:10.287 --> 00:20:12.853
+the chain, and alerts that reach your phone.
+
+00:20:14.153 --> 00:20:16.928
+You'll automate with the least permission possible.
+
+00:20:16.928 --> 00:20:19.272
+A keeper that does one job, inside a
+
+00:20:19.272 --> 00:20:22.377
+box of limited functions and spending caps, that
+
+00:20:22.377 --> 00:20:24.388
+you can revoke at any time.
+
+00:20:24.388 --> 00:20:27.104
+And never, ever, a handed-over seed phrase.
+
+00:20:28.403 --> 00:20:31.243
+And you'll finish with the operator capstone: your
+
+00:20:31.243 --> 00:20:34.083
+balance sheet, your policies, your monitors, and a
+
+00:20:34.083 --> 00:20:36.443
+stress test with every failure fixed.
+
+00:20:36.443 --> 00:20:38.443
+A document clear enough that a stranger
+
+00:20:38.443 --> 00:20:39.843
+could run your bank from it.
+
+00:20:41.143 --> 00:20:42.448
+Now your tools.
+
+00:20:42.448 --> 00:20:45.133
+The program comes with calculators, so every
+
+00:20:45.133 --> 00:20:47.223
+number you act on is computed.
+
+00:20:47.223 --> 00:20:49.617
+Here's the health factor calculator on
+
+00:20:49.617 --> 00:20:51.513
+the example from Module 3.
+
+00:20:51.513 --> 00:20:56.046
+10 ETH at $3,000, a liquidation threshold
+
+00:20:56.046 --> 00:20:59.368
+of 0.8, and $12,000 of debt.
+
+00:20:59.368 --> 00:21:03.347
+It returns a loan-to-value of 40%, a health factor
+
+00:21:03.347 --> 00:21:06.768
+of 2, and a liquidation price of $1,500.
+
+00:21:06.768 --> 00:21:09.784
+There are 20 calculators, from impermanent loss
+
+00:21:09.784 --> 00:21:11.543
+to income and value at risk.
+
+00:21:12.843 --> 00:21:15.284
+You'll also have 17 worksheets, for due
+
+00:21:15.284 --> 00:21:18.758
+diligence, pre-launch checks and your bank policies.
+
+00:21:18.758 --> 00:21:21.149
+The Course Hub, which puts every lesson,
+
+00:21:21.149 --> 00:21:23.831
+video, checklist and calculator in one place,
+
+00:21:23.831 --> 00:21:26.113
+with search and progress tracking.
+
+00:21:26.113 --> 00:21:28.108
+And a Day-1 Setup Kit you can print.
+
+00:21:29.408 --> 00:21:31.013
+There are two capstones.
+
+00:21:31.013 --> 00:21:34.046
+The analyst capstone, after Module 7, is a
+
+00:21:34.046 --> 00:21:37.501
+due-diligence file on a real protocol, ending in
+
+00:21:37.501 --> 00:21:40.693
+a verdict with size, conditions and exit.
+
+00:21:40.693 --> 00:21:42.354
+The operator capstone, at the
+
+00:21:42.354 --> 00:21:44.148
+end, is your personal bank.
+
+00:21:44.148 --> 00:21:46.038
+Each is marked against a written
+
+00:21:46.038 --> 00:21:48.628
+rubric, and passing earns a certificate.
+
+00:21:48.628 --> 00:21:52.193
+Certificates reflect course completion only, not a licence.
+
+00:21:53.493 --> 00:21:55.248
+Finally, how to succeed.
+
+00:21:55.248 --> 00:21:56.923
+Do the stages in order.
+
+00:21:56.923 --> 00:21:59.948
+Do every checklist for real, with small amounts.
+
+00:21:59.948 --> 00:22:02.453
+Use the calculators instead of guessing.
+
+00:22:02.453 --> 00:22:04.533
+And write things down: your thesis,
+
+00:22:04.533 --> 00:22:06.508
+your exit, and your policies.
+
+00:22:06.508 --> 00:22:08.551
+The people who get the most from this
+
+00:22:08.551 --> 00:22:10.594
+program are the ones who do the work,
+
+00:22:10.594 --> 00:22:12.691
+not the ones who watch the most videos.
+
+00:22:13.991 --> 00:22:16.876
+Let's check the most important idea in this video.
+
+00:22:16.876 --> 00:22:18.676
+Before any position, what's the
+
+00:22:18.676 --> 00:22:20.476
+first question an operator asks?
+
+00:22:24.896 --> 00:22:27.581
+The answer: what am I being paid to risk?
+
+00:22:27.581 --> 00:22:28.798
+Then how do I get out,
+
+00:22:28.798 --> 00:22:30.226
+and how big should this be?
+
+00:22:31.526 --> 00:22:33.421
+And the rules that never change.
+
+00:22:33.421 --> 00:22:35.781
+Never share your seed phrase or keys.
+
+00:22:35.781 --> 00:22:38.836
+Nobody from this program will ever ask for them.
+
+00:22:38.836 --> 00:22:40.450
+Use only money you can afford
+
+00:22:40.450 --> 00:22:42.041
+to lose while you learn.
+
+00:22:42.041 --> 00:22:45.370
+And no one, including us, can promise you returns.
+
+00:22:45.370 --> 00:22:46.855
+What you get is a process.
+
+00:22:48.156 --> 00:22:49.881
+So here's your first week.
+
+00:22:49.881 --> 00:22:53.386
+Open Module 0 and print the Day-1 Setup Kit.
+
+00:22:53.386 --> 00:22:56.966
+Secure your email with a password manager and 2FA.
+
+00:22:56.966 --> 00:22:58.251
+Work through the kit in
+
+00:22:58.251 --> 00:22:59.783
+order, over a few days.
+
+00:22:59.783 --> 00:23:02.498
+And take each lesson's quiz before moving on.
+
+00:23:02.498 --> 00:23:04.375
+By the end of the week, you'll be
+
+00:23:04.375 --> 00:23:06.473
+set up safely, and ready for Module 1.
+
+00:23:07.773 --> 00:23:10.525
+This is education, not financial advice,
+
+00:23:10.525 --> 00:23:12.838
+and no results are guaranteed.
+
+00:23:12.838 --> 00:23:15.144
+What you're getting is a process: one
+
+00:23:15.144 --> 00:23:17.753
+you can explain, position by position, for
+
+00:23:17.753 --> 00:23:19.088
+as long as you invest.
+
+00:23:20.388 --> 00:23:22.193
+That's how the program works.
+
+00:23:22.193 --> 00:23:24.168
+Welcome aboard, operator.
+
+00:23:24.168 --> 00:23:26.503
+Open Module 0, and let's begin.

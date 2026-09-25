@@ -67,7 +67,8 @@ chapters = []
 chapters.append("\n".join([
     "### Chapter: Start here",
     f"- Welcome video, full tour (10 min, first item): {url('video/welcome-long.mp4')}  (thumbnail {url('video/thumbs/welcome-long.jpg')}, captions {url('video/captions/welcome-long.vtt')}, chapters {url('video/chapters/welcome-long.txt')})",
-    f"- Short welcome (1 min, optional second item): {url('video/welcome.mp4')}  (thumbnail {url('video/thumbs/welcome.jpg')}, captions {url('video/captions/welcome.vtt')})",
+    f"- How the program works, full walkthrough (23 min, second item): {url('video/how-the-program-works.mp4')}  (thumbnail {url('video/thumbs/how-the-program-works.jpg')}, captions {url('video/captions/how-the-program-works.vtt')}, chapters {url('video/chapters/how-the-program-works.txt')})",
+    f"- Short welcome (1 min, optional third item): {url('video/welcome.mp4')}  (thumbnail {url('video/thumbs/welcome.jpg')}, captions {url('video/captions/welcome.vtt')})",
     f"- Day-1 Setup Kit (PDF download): {url('Day-1-Setup-Kit.pdf')}",
     f"- Full course PDF (optional download): {url('On-Chain-Operator-Program.pdf')}",
     f"- Course Hub (optional offline companion; the file needs the repo's assets and video folders beside it): {url('course-hub/index.html')}",
