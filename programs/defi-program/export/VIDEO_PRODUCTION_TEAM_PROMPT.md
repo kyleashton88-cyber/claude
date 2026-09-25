@@ -8,7 +8,7 @@ left. Do not stop to ask permission between lessons — keep going.
 
 **Strictly one lesson at a time, start to finish, in order.** Never script, render or touch more
 than one lesson concurrently, and never jump ahead to a later lesson while an earlier one is
-still mid-workflow. A lesson is only "complete" once steps 1–9 below have all finished for it —
+still mid-workflow. A lesson is only "complete" once steps 1–10 below have all finished for it —
 scripted, fact-checked, rendered, QA'd, encoded if needed, docs updated, queue row set to
 `done`, committed **and pushed**, with the push verified live. Only then read the queue again
 and start the next `pending` row from step 1. If you're re-entering this prompt mid-lesson
@@ -65,7 +65,20 @@ already does.
    `video-scripts/gold/lesson-NN-M.json`; `git rm` the old
    `video-scripts/lessons/lesson-NN-M.json` if one exists (gold scripts are skipped by the
    generator and never overwritten, so this is a one-way promotion).
-4. **Best visual for every idea — in this order of preference:**
+4. **Minimise plain narration; maximise visual walk-throughs.** The person watching learns by
+   seeing a mechanism happen, not by hearing it described over a static screen. Before writing
+   any `statement` scene, ask whether the idea it explains is actually a process, a comparison,
+   a sequence of checks, or a set of parts — almost everything in these lessons is one of those,
+   and each has a walk-through-capable scene type below. Reserve `statement` for a genuine
+   single flat claim or transition line with nothing to visually decompose (a rule, a quote, a
+   "here's why it matters" beat) — not as the default way to deliver a paragraph of teaching. A
+   scene that would have been three sentences of narration over a static screen should usually
+   become a `flow` the viewer watches assemble step by step, a `steps` scene numbered in order,
+   or an `image` with `callouts` that land on each part as it's named. Multi-part explanations
+   (four checks, five words, a lifecycle, a stack) are always a walk-through scene, never a
+   `statement` or `bullets` list read straight through — the reveal has to move in sync with
+   the idea, the same way `syncItems` already times bullets and flow nodes to the narration.
+5. **Best visual for every idea — in this order of preference:**
    - `flow` for any process, cycle or mechanism (deposits, liquidations, bridges, MEV, grid
      cycles) — reuse the `animated-flows` conventions already in this codebase. Leave
      `layout` unset for a landscape (1920x1080) video: the default is already `row`, which
@@ -96,7 +109,7 @@ already does.
      `story-wallet-send` — never implied to be a real capture of a named product.
    - Never use a real brand's exact logo artwork; product names as plain text plus generic
      icons only.
-5. **Render.**
+6. **Render.**
    ```
    cd export && export KOKORO_DIR=<the session's Kokoro TTS dir> && \
    nohup node build_video.js lesson-NN-M > <scratchpad>/lNN_M.log 2>&1 &
@@ -104,7 +117,7 @@ already does.
    Wait with the working blocking pattern (`timeout 590 bash -c 'while ps aux | grep -q
    "[b]uild_video.js lesson-NN-M"; do sleep 20; done'`), repeating the `timeout 590` call as
    many times as the render actually takes — do not guess it's done early.
-6. **QA before encoding — every one of these, every lesson:**
+7. **QA before encoding — every one of these, every lesson:**
    - Loudness: `ffmpeg -i <file> -af ebur128 -f null -` → Integrated loudness must read
      **-16.0 LUFS** (the mastering chain targets this; a different number means something
      upstream broke).
@@ -125,27 +138,27 @@ already does.
      broken silently.
    - Re-read the finished script's `vo` text once more against the source lesson: does every
      number and claim in the video still match what you fact-checked in step 2?
-7. **Encode if needed.** Only if the raw render is over ~95 MB (GitHub's cap is 100 MB): move
+8. **Encode if needed.** Only if the raw render is over ~95 MB (GitHub's cap is 100 MB): move
    it to the scratchpad as `<id>-master.mp4`, two-pass `libx264 -preset slow -tune animation`
    at a bitrate picked so `bitrate_kbps * duration_seconds / 8 + audio_size ≈ 90 MB`, `-c:a aac
    -b:a 96k -movflags +faststart`, write the result back to `video/lesson-NN-M.mp4`. Delete
    the pass-log files and the master from the scratchpad afterward (never commit the master).
-8. **Update the docs.** In `10-video-production-plan.md`, update that lesson's row (scene
+9. **Update the docs.** In `10-video-production-plan.md`, update that lesson's row (scene
    count, new duration, script path now `video-scripts/gold/...`, note what's new). Do **not**
    run `build_video.js --scripts-only` for lesson videos — that file only tracks core videos
    and lesson changes don't touch it; only run it if you also changed a core video.
-9. **Queue, commit, push.** Set this lesson's row in `video-scripts/PRODUCTION_QUEUE.json` to
+10. **Queue, commit, push.** Set this lesson's row in `video-scripts/PRODUCTION_QUEUE.json` to
    `"status": "done"`. `git add -A .`, one commit per lesson (small, reviewable — never batch
    several lessons into one commit) with a message describing what changed and why, ending
    with the branch's standard commit trailer. Push with the retry-with-backoff pattern used
    all session (`for i in 1 2 3 4; do git push -u origin claude/grid-bot-builder-skills-bmrez2
    ...; done`). Verify the pushed video is live with one `curl -sSI` content-length check
    against the raw GitHub URL before moving on.
-10. **Regenerate the Whop upload prompts** (`python3 export/build_course_upload_prompt.py &&
+11. **Regenerate the Whop upload prompts** (`python3 export/build_course_upload_prompt.py &&
     python3 export/build_mega_prompt.py`) every **5 lessons** (not every single one — they're
     large files and regenerating on every commit is wasted work), or at the end of a module,
     or right before you stop for any reason. Commit that separately, same trailer.
-11. **Move to the next `pending` row** in the queue and repeat from step 1. If a lesson's
+12. **Move to the next `pending` row** in the queue and repeat from step 1. If a lesson's
     source content is missing, contradictory, or you hit a hard blocker you can't resolve
     (never a stylistic judgement call — you decide those yourself), set its `status` to
     `"skipped:<short reason>"`, commit, and continue to the next lesson rather than stopping
