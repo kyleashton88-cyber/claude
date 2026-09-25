@@ -1,0 +1,169 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.395
+Lesson 14.3.
+
+00:00:02.395 --> 00:00:07.111
+Operating procedures: multisig signing, change control, reviews.
+
+00:00:07.111 --> 00:00:08.864
+By the end of this lesson, you'll
+
+00:00:08.864 --> 00:00:10.410
+be able to run your bank with
+
+00:00:10.410 --> 00:00:12.781
+procedures that prevent single-point mistakes.
+
+00:00:14.081 --> 00:00:15.371
+Here's the plan.
+
+00:00:15.371 --> 00:00:17.056
+First, the key ideas.
+
+00:00:17.056 --> 00:00:19.771
+Then, a worked example, step by step.
+
+00:00:19.771 --> 00:00:21.296
+Then, your checklist.
+
+00:00:21.296 --> 00:00:23.458
+And finally, a three-question quiz.
+
+00:00:24.758 --> 00:00:28.318
+transaction (destination, amount, calldata) on their own
+
+00:00:28.318 --> 00:00:31.053
+device screen, not a shared screenshot.
+
+00:00:31.053 --> 00:00:34.344
+written up (thesis, risk register row, size)
+
+00:00:34.344 --> 00:00:37.423
+and waits 24h before execution. First,
+
+00:00:37.423 --> 00:00:39.931
+Multisig signing procedure: every signer
+
+00:00:39.931 --> 00:00:42.678
+independently verifies the. Next, Change
+
+00:00:42.678 --> 00:00:45.833
+control: new protocol, new chain, new
+
+00:00:45.833 --> 00:00:48.541
+strategy, or a cap change is.
+
+00:00:48.541 --> 00:00:51.688
+Then, Separation: the person proposing a
+
+00:00:51.688 --> 00:00:54.751
+vault transaction isn't the only one
+
+00:00:54.751 --> 00:00:58.863
+approving it. And finally, Review calendar: weekly books
+
+00:00:58.863 --> 00:01:02.254
+· monthly register · quarterly stress test and
+
+00:01:02.254 --> 00:01:05.501
+recovery drill · annual review (Module 13.5).
+
+00:01:06.801 --> 00:01:09.316
+Let's work an example, step by step.
+
+00:01:09.316 --> 00:01:14.046
+A 2-of-3 vault moves $40,000 to the operating wallet.
+
+00:01:14.046 --> 00:01:17.745
+Signer 1 proposes; Signer 2 checks the destination against
+
+00:01:17.745 --> 00:01:21.193
+the allowlist and the amount against the ladder refill
+
+00:01:21.193 --> 00:01:24.816
+schedule on their hardware wallet screen, then signs.
+
+00:01:24.816 --> 00:01:26.666
+Logged in the books with both names.
+
+00:01:27.966 --> 00:01:29.426
+Here's your checklist.
+
+00:01:29.426 --> 00:01:30.961
+Do it now, for real.
+
+00:01:30.961 --> 00:01:34.086
+First, Signing procedure written for every signer.
+
+00:01:34.086 --> 00:01:37.851
+Next, Change-control template and 24h rule.
+
+00:01:37.851 --> 00:01:39.926
+And finally, Review calendar set.
+
+00:01:41.226 --> 00:01:42.436
+Question 1.
+
+00:01:42.436 --> 00:01:44.481
+Why verify on your own device screen?
+
+00:01:48.901 --> 00:01:51.736
+The answer: Screens and screenshots can be faked;
+
+00:01:51.736 --> 00:01:54.911
+the hardware display shows what you're actually signing.
+
+00:01:56.211 --> 00:01:57.456
+Question 2.
+
+00:01:57.456 --> 00:01:58.961
+What is change control for?
+
+00:02:03.381 --> 00:02:05.727
+The answer: Forcing new risks through
+
+00:02:05.727 --> 00:02:08.321
+thesis, register and a cooling-off period.
+
+00:02:09.621 --> 00:02:10.891
+Question 3.
+
+00:02:10.891 --> 00:02:12.956
+How often is the stress test re-run?
+
+00:02:17.376 --> 00:02:20.192
+The answer: Quarterly, and after big changes.
+
+00:02:21.492 --> 00:02:22.737
+Let's recap.
+
+00:02:22.737 --> 00:02:27.567
+Multisig signing procedure: every signer independently verifies the.
+
+00:02:27.567 --> 00:02:30.668
+Change control: new protocol, new chain, new
+
+00:02:30.668 --> 00:02:32.966
+strategy, or a cap change is.
+
+00:02:32.966 --> 00:02:36.358
+Separation: the person proposing a vault transaction
+
+00:02:36.358 --> 00:02:38.706
+isn't the only one approving it.
+
+00:02:38.706 --> 00:02:42.640
+Review calendar: weekly books · monthly register
+
+00:02:42.640 --> 00:02:46.092
+· quarterly stress test and recovery drill
+
+00:02:46.092 --> 00:02:48.501
+· annual review (Module 13.5).
+
+00:02:49.800 --> 00:02:52.315
+Do the checklist now, before you move on.
+
+00:02:52.315 --> 00:02:57.060
+Next up, Lesson 14.4: Operator capstone and certification.
