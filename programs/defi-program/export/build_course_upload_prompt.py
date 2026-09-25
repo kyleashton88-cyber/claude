@@ -70,6 +70,7 @@ chapters.append("\n".join([
     f"- How the program works, full walkthrough (23 min, second item): {url('video/how-the-program-works.mp4')}  (thumbnail {url('video/thumbs/how-the-program-works.jpg')}, captions {url('video/captions/how-the-program-works.vtt')}, chapters {url('video/chapters/how-the-program-works.txt')})",
     f"- Short welcome (1 min, optional third item): {url('video/welcome.mp4')}  (thumbnail {url('video/thumbs/welcome.jpg')}, captions {url('video/captions/welcome.vtt')})",
     f"- Day-1 Setup Kit (PDF download): {url('Day-1-Setup-Kit.pdf')}",
+    f"- How to use the Day-1 Setup Kit (video, 10 min, directly under the kit): {url('video/day1-kit-guide.mp4')}  (thumbnail {url('video/thumbs/day1-kit-guide.jpg')}, captions {url('video/captions/day1-kit-guide.vtt')}, chapters {url('video/chapters/day1-kit-guide.txt')})",
     f"- Full course PDF (optional download): {url('On-Chain-Operator-Program.pdf')}",
     f"- Course Hub (optional offline companion; the file needs the repo's assets and video folders beside it): {url('course-hub/index.html')}",
     "- Text for this page: a short welcome, how every lesson works (watch → do the checklist → quiz), and the rule",

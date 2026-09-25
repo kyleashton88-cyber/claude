@@ -125,6 +125,8 @@ ${[400, 500, 600, 700, 800].map(x => `<link rel="stylesheet" href="${FONT('inter
   blockquote { border-left: 4px solid var(--brand); background: var(--panel); margin: 10px 0; padding: 6px 14px; border-radius: 0 8px 8px 0; color: #34404d; }
   blockquote p { margin: 4px 0; }
   ul, ol { padding-left: 20px; } li { margin: 3px 0; } li::marker { color: var(--blue); }
+  ul:has(> li.task) { break-inside: avoid; }  /* a checklist never splits across pages */
+  h3:has(+ ul > li.task) { break-after: avoid; }
   li.task { list-style: none; margin-left: -20px; padding-left: 24px; position: relative; }
   li.task::before { content: ''; position: absolute; left: 2px; top: 3px; width: 11px; height: 11px; border: 1.6px solid var(--teal); border-radius: 3px; background: #fff; }
   li.task.done::before { background: var(--teal); }

@@ -56,7 +56,8 @@ function syncItems(texts, sents, voStart, voDur, explicit) {
     texts.forEach((txt, i) => {
       const tk = new Set(tokens(txt));
       let best = -1, bj = null;
-      for (let j = cur; j < sents.length; j++) {
+      const last = sents.length >= n ? sents.length - (n - i) : sents.length - 1; // leave a sentence for each later item
+      for (let j = cur; j <= last; j++) {
         const sc = tokens(sents[j][2]).filter(w => tk.has(w)).length;
         if (sc > best && sc > 0) { best = sc; bj = j; }
       }
