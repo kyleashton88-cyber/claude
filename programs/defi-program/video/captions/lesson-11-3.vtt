@@ -1,0 +1,127 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.395
+Lesson 11.3.
+
+00:00:02.395 --> 00:00:07.140
+Liquidation protection: buffers, alerts and automated deleveraging.
+
+00:00:07.140 --> 00:00:09.097
+By the end of this lesson, you'll
+
+00:00:09.097 --> 00:00:12.032
+be able to make liquidation practically impossible
+
+00:00:12.032 --> 00:00:14.794
+with buffers, alerts and pre-computed repayment.
+
+00:00:16.094 --> 00:00:17.384
+Here's the plan.
+
+00:00:17.384 --> 00:00:19.069
+First, the key ideas.
+
+00:00:19.069 --> 00:00:21.784
+Then, a worked example, step by step.
+
+00:00:21.784 --> 00:00:23.309
+Then, your checklist.
+
+00:00:23.309 --> 00:00:25.471
+And finally, a three-question quiz.
+
+00:00:26.771 --> 00:00:30.616
+Three layers: buffer (HF ≥ 2–2.5 at entry) →
+
+00:00:30.616 --> 00:00:34.546
+alerts (HF 2.0 and 1.7, Module 14.1) → action
+
+00:00:34.546 --> 00:00:40.270
+(repay, add collateral, or automated deleveraging tools that repay
+
+00:00:40.270 --> 00:00:44.371
+debt when HF crosses a trigger; these add their
+
+00:00:44.371 --> 00:00:47.576
+own contract and permission risk).
+
+00:00:47.576 --> 00:00:51.977
+Pre-compute the repayment needed to restore your
+
+00:00:51.977 --> 00:00:55.300
+target HF: debt to keep = collateral
+
+00:00:55.300 --> 00:00:57.366
+value × LT ÷ target HF.
+
+00:00:58.666 --> 00:01:01.181
+Let's work an example, step by step.
+
+00:01:01.181 --> 00:01:08.167
+10 ETH falls to $2,400 → collateral $24,000,
+
+00:01:08.167 --> 00:01:13.124
+LT 0.8, debt $12,000 → HF 1.6.
+
+00:01:13.124 --> 00:01:18.350
+To restore HF 2.5: debt must be
+
+00:01:18.350 --> 00:01:22.923
+24,000 × 0.8 ÷ 2.5 = $7,680
+
+00:01:22.923 --> 00:01:28.149
+→ repay $4,320 from the reserve.
+
+00:01:29.449 --> 00:01:30.909
+Here's your checklist.
+
+00:01:30.909 --> 00:01:32.444
+Do it now, for real.
+
+00:01:32.444 --> 00:01:36.639
+First, Alerts at HF 2.0 and 1.7.
+
+00:01:36.639 --> 00:01:40.479
+Next, Repayment to restore target HF pre-computed.
+
+00:01:40.479 --> 00:01:43.084
+And finally, Reserve covers that repayment.
+
+00:01:44.384 --> 00:01:45.594
+Question 1.
+
+00:01:45.594 --> 00:01:51.154
+Collateral $40,000, LT 0.8, target HF 2.
+
+00:01:51.154 --> 00:01:52.029
+Max debt?
+
+00:01:56.449 --> 00:01:58.574
+The answer: $16,000.
+
+00:01:59.874 --> 00:02:01.119
+Question 2.
+
+00:02:01.119 --> 00:02:03.404
+What do automated deleveraging tools add?
+
+00:02:07.824 --> 00:02:10.714
+The answer: Their own contract and permission risk.
+
+00:02:12.014 --> 00:02:13.284
+Question 3.
+
+00:02:13.284 --> 00:02:14.949
+Why pre-compute the repayment?
+
+00:02:19.369 --> 00:02:21.491
+The answer: So you act immediately,
+
+00:02:21.491 --> 00:02:23.554
+not while calculating under stress.
+
+00:02:24.854 --> 00:02:27.369
+Do the checklist now, before you move on.
+
+00:02:27.369 --> 00:02:31.384
+Next up, Lesson 11.4: Stress-testing a portfolio.
