@@ -3,152 +3,380 @@ WEBVTT
 00:00:00.550 --> 00:00:02.175
 Lesson 2.4.
 
-00:00:02.175 --> 00:00:05.320
+00:00:02.175 --> 00:00:05.824
 Impermanent loss & true LP P&L.
 
-00:00:05.320 --> 00:00:07.874
-By the end of this lesson, you'll be
+00:00:05.824 --> 00:00:07.775
+By the end, you'll be able to
 
-00:00:07.874 --> 00:00:10.910
-able to calculate an LP position's full P&L
+00:00:07.775 --> 00:00:10.572
+calculate an LP position's full profit and
 
-00:00:10.910 --> 00:00:13.395
-and judge it against simply holding.
+00:00:10.572 --> 00:00:13.304
+loss, and judge it against simply holding.
 
-00:00:14.695 --> 00:00:15.985
+00:00:14.604 --> 00:00:15.894
 Here's the plan.
 
-00:00:15.985 --> 00:00:17.670
-First, the key ideas.
+00:00:15.894 --> 00:00:18.479
+First, what impermanent loss actually is,
 
-00:00:17.670 --> 00:00:20.385
-Then, a worked example, step by step.
+00:00:18.479 --> 00:00:20.379
+and the formula behind it.
 
-00:00:20.385 --> 00:00:21.910
-Then, your checklist.
+00:00:20.379 --> 00:00:23.502
+Second, a real worked example, calculating the
 
-00:00:21.910 --> 00:00:24.072
-And finally, a three-question quiz.
+00:00:23.502 --> 00:00:26.394
+full P&L, not just the headline number.
 
-00:00:25.372 --> 00:00:29.759
-Impermanent loss (IL) is how much the LP
+00:00:26.394 --> 00:00:28.545
+And third, the checklist to run so
 
-00:00:29.759 --> 00:00:35.536
-position lags simply holding the same starting tokens
+00:00:28.545 --> 00:00:31.064
+you always know if LPing actually worked.
 
-00:00:35.536 --> 00:00:40.244
-when their relative price changes: IL = 2√r
+00:00:32.364 --> 00:00:35.682
+Your L.P. position can show a twenty percent gain,
 
-00:00:40.244 --> 00:00:42.277
-÷ (1 + r) − 1 (r =
+00:00:35.682 --> 00:00:38.584
+and LPing can still have cost you money.
 
-00:00:42.277 --> 00:00:45.252
-new price ÷ entry price).
+00:00:38.584 --> 00:00:41.728
+Until you compare against simply holding the same tokens,
 
-00:00:45.252 --> 00:00:48.212
-It's "impermanent" only if price returns.
+00:00:41.728 --> 00:00:44.059
+you genuinely don't know which one is true.
 
-00:00:48.212 --> 00:00:50.697
-Withdraw after the move and it's permanent.
+00:00:45.359 --> 00:00:46.884
+What impermanent loss is.
 
-00:00:50.697 --> 00:00:53.810
-Full LP P&L = LP value + fees
+00:00:48.184 --> 00:00:50.820
+Impermanent loss is how far your L.P.
 
-00:00:53.810 --> 00:00:58.272
-+ incentives − gas, compared to hold value.
+00:00:50.820 --> 00:00:54.080
+position lags simply holding the same starting
 
-00:00:59.572 --> 00:01:03.568
-Deposit 1 ETH + 3,000 USDC
+00:00:54.080 --> 00:00:57.294
+tokens, once their relative price changes.
 
-00:01:03.568 --> 00:01:08.457
-at ETH = $3,000 (total $6,000).
+00:00:57.294 --> 00:01:00.624
+The formula: I.L. equals two times the square
 
-00:01:08.457 --> 00:01:11.302
-ETH rises to $4,000.
+00:01:00.624 --> 00:01:03.086
+root of r, divided by one plus r,
 
-00:01:11.302 --> 00:01:14.610
-A master judges the LP on
+00:01:03.086 --> 00:01:05.692
+minus one, where r is the new price
 
-00:01:14.610 --> 00:01:18.217
-the +$58, not the +$1,058.
+00:01:05.692 --> 00:01:08.019
+divided by your entry price.
 
-00:01:18.217 --> 00:01:24.122
-Calculator: the calculator Starting $6,000: +$1,058 (mostly
+00:01:08.019 --> 00:01:10.759
+It's only impermanent if the price comes back.
 
-00:01:24.122 --> 00:01:27.867
-from ETH going up, not from LPing).
+00:01:10.759 --> 00:01:13.258
+Withdraw after the move, and it's permanent,
 
-00:01:27.867 --> 00:01:32.122
-Holding: +$58, the actual value added by LPing.
+00:01:13.258 --> 00:01:14.924
+locked in the moment you exit.
 
-00:01:33.422 --> 00:01:37.022
-Let's look at the chart: Impermanent loss vs holding.
+00:01:16.224 --> 00:01:18.329
+Here's that formula as a curve.
 
-00:01:37.022 --> 00:01:38.582
-Take a moment with it.
+00:01:18.329 --> 00:01:22.184
+At r = 1, price unchanged, IL is zero.
 
-00:01:38.582 --> 00:01:40.992
-It's everything we've just said, in one picture.
+00:01:22.184 --> 00:01:25.165
+Move the price either direction and IL grows,
 
-00:01:42.292 --> 00:01:43.752
-Here's your checklist.
+00:01:25.165 --> 00:01:27.758
+and it grows the same whether the price
 
-00:01:43.752 --> 00:01:45.287
-Do it now, for real.
+00:01:27.758 --> 00:01:29.897
+doubled or was cut in half — the
 
-00:01:45.287 --> 00:01:48.212
-First, P&L tracked against hold, weekly.
+00:01:29.897 --> 00:01:32.789
+formula doesn't care which way it moved.
 
-00:01:48.212 --> 00:01:53.347
-Next, IL, fees, incentives and gas recorded separately.
+00:01:32.789 --> 00:01:37.764
+Double the price, and IL is about −5.7%.
 
-00:01:53.347 --> 00:01:55.395
-And finally, Exit if fees
+00:01:37.764 --> 00:01:40.974
+Triple it, and it's already past −13%.
 
-00:01:55.395 --> 00:01:57.758
-consistently fail to cover IL.
+00:01:42.274 --> 00:01:43.364
+Quick check.
 
-00:01:59.058 --> 00:02:00.268
-Question 1.
+00:01:43.364 --> 00:01:45.614
+E.T.H. doubles in price.
 
-00:02:00.268 --> 00:02:01.833
-ETH doubles.
+00:01:45.614 --> 00:01:48.274
+What's the impermanent loss on a fifty-fifty pool?
 
-00:02:01.833 --> 00:02:04.343
-IL on a 50/50 pool?
+00:01:52.694 --> 00:01:55.094
+The answer: about negative five point
 
-00:02:08.763 --> 00:02:12.623
-The answer: About −5.7% vs holding.
+00:01:55.094 --> 00:01:57.494
+seven percent, against simply holding.
 
-00:02:13.923 --> 00:02:15.168
-Question 2.
+00:01:58.794 --> 00:01:59.879
+The full P&L.
 
-00:02:15.168 --> 00:02:18.443
-Your LP is up 20% since deposit.
+00:02:01.179 --> 00:02:04.685
+Full LP profit and loss equals your LP value,
 
-00:02:18.443 --> 00:02:19.528
-Did LPing work?
+00:02:04.685 --> 00:02:08.719
+plus fees earned, plus any incentives, minus gas.
 
-00:02:23.948 --> 00:02:27.138
-The answer: Unknown until you compare with holding.
+00:02:08.719 --> 00:02:11.834
+Compare that whole total against simply holding the
 
-00:02:27.138 --> 00:02:29.103
-The 20% could be all price.
+00:02:11.834 --> 00:02:15.489
+same starting tokens, not against your original deposit.
 
-00:02:30.403 --> 00:02:31.673
-Question 3.
+00:02:15.489 --> 00:02:18.229
+That second comparison is the only one that
 
-00:02:31.673 --> 00:02:34.062
-When does IL become permanent?
+00:02:18.229 --> 00:02:20.969
+tells you whether LPing itself was worth it.
 
-00:02:38.482 --> 00:02:40.593
-The answer: When you withdraw while the
+00:02:22.269 --> 00:02:24.264
+Walk through a real deposit.
 
-00:02:40.593 --> 00:02:42.492
-price ratio is different from entry.
+00:02:24.264 --> 00:02:27.853
+You put in 1 ETH and 3,000
 
-00:02:43.793 --> 00:02:46.308
-Do the checklist now, before you move on.
+00:02:27.853 --> 00:02:32.939
+USDC at $3,000 an ETH, $6,000 total.
 
-00:02:46.308 --> 00:02:51.072
-Next up, Lesson 2.5: MEV and protecting your trades.
+00:02:32.939 --> 00:02:34.644
+From here, two paths.
+
+00:02:34.644 --> 00:02:37.719
+Holding, your tokens just sit there, unchanged.
+
+00:02:37.719 --> 00:02:40.916
+LPing, the pool automatically rebalances your
+
+00:02:40.916 --> 00:02:42.953
+share as the price moves.
+
+00:02:42.953 --> 00:02:45.479
+Both paths land at the same finish line: a
+
+00:02:45.479 --> 00:02:48.768
+straight comparison of what each one was actually worth.
+
+00:02:50.068 --> 00:02:51.833
+Now the exact numbers.
+
+00:02:51.833 --> 00:02:54.949
+E.T.H. rises to four thousand dollars.
+
+00:02:54.949 --> 00:02:58.115
+The pool rebalances you to zero point eight six
+
+00:02:58.115 --> 00:03:01.677
+six E.T.H. and three thousand four hundred sixty four
+
+00:03:01.677 --> 00:03:05.041
+U.S.D.C. Your L.P. value: zero point eight six six
+
+00:03:05.041 --> 00:03:08.998
+times four thousand, plus three thousand four hundred sixty
+
+00:03:08.998 --> 00:03:12.794
+four, six thousand nine hundred twenty eight dollars.
+
+00:03:12.794 --> 00:03:15.408
+Holding instead would be worth four thousand
+
+00:03:15.408 --> 00:03:18.729
+plus three thousand, seven thousand dollars exactly.
+
+00:03:18.729 --> 00:03:21.534
+That's impermanent loss of seventy two dollars,
+
+00:03:21.534 --> 00:03:24.289
+about negative one point oh three percent.
+
+00:03:24.289 --> 00:03:27.184
+Add fees earned, one hundred fifty dollars,
+
+00:03:27.184 --> 00:03:29.948
+minus twenty dollars gas: your L.P. total
+
+00:03:29.948 --> 00:03:32.449
+is seven thousand fifty eight dollars.
+
+00:03:33.749 --> 00:03:36.404
+Here's the same result, framed two ways.
+
+00:03:36.404 --> 00:03:39.711
+Against your starting $6,000, you're up
+
+00:03:39.711 --> 00:03:42.409
+$1,058, and that looks great.
+
+00:03:42.409 --> 00:03:44.825
+But almost all of that came from
+
+00:03:44.825 --> 00:03:47.614
+ETH simply rising, not from LPing.
+
+00:03:47.614 --> 00:03:52.053
+Against holding, the honest comparison, you're up just $58.
+
+00:03:52.053 --> 00:03:54.739
+A master judges the position on
+
+00:03:54.739 --> 00:03:56.753
+the $58, not the $1,058.
+
+00:03:58.053 --> 00:03:59.143
+Quick check.
+
+00:03:59.143 --> 00:04:03.153
+Your L.P. position is up twenty percent since deposit.
+
+00:04:03.153 --> 00:04:04.698
+Did LPing actually work?
+
+00:04:09.118 --> 00:04:12.978
+The answer: unknown, until you compare against simply holding.
+
+00:04:12.978 --> 00:04:14.664
+That twenty percent could be
+
+00:04:14.664 --> 00:04:16.698
+entirely the underlying price move.
+
+00:04:17.998 --> 00:04:19.723
+Last check for this section.
+
+00:04:19.723 --> 00:04:22.112
+When does impermanent loss become permanent?
+
+00:04:26.532 --> 00:04:29.033
+The answer: the moment you withdraw while the
+
+00:04:29.033 --> 00:04:31.262
+price ratio is different from your entry.
+
+00:04:32.562 --> 00:04:34.157
+Where this judgment goes wrong.
+
+00:04:35.457 --> 00:04:37.626
+Here's how people misjudge a position
+
+00:04:37.626 --> 00:04:39.752
+even after learning the formula.
+
+00:04:39.752 --> 00:04:42.347
+Watching the token count go up, and calling
+
+00:04:42.347 --> 00:04:44.825
+that a win, while ignoring what that same
+
+00:04:44.825 --> 00:04:47.248
+basket is actually worth in dollars.
+
+00:04:47.248 --> 00:04:51.384
+Forgetting incentive reward tokens entirely, extra emissions
+
+00:04:51.384 --> 00:04:53.690
+on top of swap fees, which change
+
+00:04:53.690 --> 00:04:55.753
+the real total either way.
+
+00:04:55.753 --> 00:04:59.084
+Comparing against the wrong hold baseline, today's
+
+00:04:59.084 --> 00:05:01.435
+price of just one token, instead of
+
+00:05:01.435 --> 00:05:04.543
+the actual basket you originally deposited.
+
+00:05:04.543 --> 00:05:08.131
+And ignoring the gas cost of frequent compounding, which
+
+00:05:08.131 --> 00:05:11.279
+quietly eats the very fees it's meant to reinvest.
+
+00:05:12.579 --> 00:05:14.054
+Before you judge a position.
+
+00:05:15.354 --> 00:05:18.944
+Run this on every open L.P. position, weekly.
+
+00:05:18.944 --> 00:05:22.664
+Track P&L against holding, not against your deposit.
+
+00:05:22.664 --> 00:05:26.224
+Record impermanent loss, fees, incentives and gas as
+
+00:05:26.224 --> 00:05:29.949
+separate line items, never blended into one number.
+
+00:05:29.949 --> 00:05:33.042
+And set an exit rule: if fees consistently fail
+
+00:05:33.042 --> 00:05:36.499
+to cover impermanent loss, that position is done.
+
+00:05:36.499 --> 00:05:39.646
+Two calculator commands do this math for
+
+00:05:39.646 --> 00:05:42.562
+you directly: I.L. by ratio, and L.P.
+
+00:05:42.562 --> 00:05:45.709
+break-even by ratio, days, and fee A.P.R.
+
+00:05:47.009 --> 00:05:49.224
+Your turn, 5 to 10 minutes.
+
+00:05:49.224 --> 00:05:52.183
+Pull up one open LP position, yours or a
+
+00:05:52.183 --> 00:05:55.154
+real one you can see the numbers for.
+
+00:05:55.154 --> 00:05:58.826
+Calculate its full P&L against holding, not against the
+
+00:05:58.826 --> 00:06:02.564
+deposit, and write down what LPing itself actually added.
+
+00:06:03.864 --> 00:06:07.285
+To recap: impermanent loss is 2 times the square
+
+00:06:07.285 --> 00:06:09.728
+root of r, over 1 plus r, minus 1,
+
+00:06:09.728 --> 00:06:13.169
+and it's only impermanent until you withdraw.
+
+00:06:13.169 --> 00:06:15.712
+Full LP P&L is your LP value,
+
+00:06:15.712 --> 00:06:19.064
+plus fees and incentives, minus gas.
+
+00:06:19.064 --> 00:06:21.599
+And the only honest comparison is against
+
+00:06:21.599 --> 00:06:24.194
+holding, not against your original deposit.
+
+00:06:25.494 --> 00:06:29.394
+That's impermanent loss and true LP profit and loss.
+
+00:06:29.394 --> 00:06:31.978
+Next up, Lesson 2.5: MEV, and
+
+00:06:31.978 --> 00:06:34.649
+protecting your trades from it.

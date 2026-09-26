@@ -71,7 +71,7 @@ node build_video.js lessons              # all lessons (several hours of renderi
 | 2.1 | DEXs, aggregators & routing | 23 | 6:32 min | `video-scripts/gold/lesson-02-1.json` (gold: aggregator split-and-recombine routing as a flow3d branch/merge, 20 ETH net-output comparison as a chart3d) | ✓ |
 | 2.2 | AMM Mathematics (x · y = k) | 20 | 6:35 min | `video-scripts/gold/lesson-02-2.json` (gold: swap→arbitrage→rebalance cycle as a flow3d with layout="cycle", 1/10/50 ETH price-impact comparison as a chart3d) | ✓ |
 | 2.3 | Providing liquidity | 20 | 6:13 min | `video-scripts/gold/lesson-02-3.json` (gold: LP deposit→fees→mix-shift flow as a flow3d, fee-APR sensitivity as a chart3d) | ✓ |
-| 2.4 | Impermanent loss & true LP P&L | 10 | 2.6 min | `video-scripts/lessons/lesson-02-4.json` | ✓ |
+| 2.4 | Impermanent loss & true LP P&L | 21 | 6:35 min | `video-scripts/gold/lesson-02-4.json` (gold: IL-vs-ratio curve as a flat chart, diverge/converge hold-vs-LP flow3d, "+$1,058 vs +$58" framing as a chart3d) | ✓ |
 | 2.5 | MEV and protecting your trades | 10 | 3.0 min | `video-scripts/lessons/lesson-02-5.json` | ✓ |
 | 2.6 | Advanced execution: limit, TWAP and intent-based orders | 10 | 3.0 min | `video-scripts/lessons/lesson-02-6.json` | ✓ |
 | 2.7 | Advanced AMM design and LVR | 12 | 3.8 min | `video-scripts/lessons/lesson-02-7.json` | ✓ |
