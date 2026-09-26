@@ -6,218 +6,488 @@ Lesson 1.9.
 00:00:02.215 --> 00:00:04.760
 Smart accounts and account abstraction.
 
-00:00:04.760 --> 00:00:07.081
-By the end of this lesson, you'll be able
+00:00:04.760 --> 00:00:06.520
+By the end, you'll know how a
 
-00:00:07.081 --> 00:00:10.452
-to understand how smart accounts change wallet security, and
+00:00:06.520 --> 00:00:09.160
+smart account actually works under the hood,
 
-00:00:10.452 --> 00:00:12.883
-use their features without adding new risks.
+00:00:09.160 --> 00:00:11.448
+and how to use its features, recovery,
 
-00:00:14.183 --> 00:00:15.473
+00:00:11.448 --> 00:00:14.206
+limits, passkeys, without opening up new risks.
+
+00:00:15.506 --> 00:00:16.796
 Here's the plan.
 
-00:00:15.473 --> 00:00:17.158
-First, the key ideas.
+00:00:16.796 --> 00:00:19.797
+First, what actually changes when a wallet becomes a
 
-00:00:17.158 --> 00:00:19.873
-Then, a worked example, step by step.
+00:00:19.797 --> 00:00:23.211
+smart account, and the standard that makes it possible.
 
-00:00:19.873 --> 00:00:21.398
-Then, your checklist.
+00:00:23.211 --> 00:00:27.901
+Second, the features that standard unlocks, recovery, limits, passkeys.
 
-00:00:21.398 --> 00:00:23.560
-And finally, a three-question quiz.
+00:00:27.901 --> 00:00:31.062
+And third, the new risks those same features introduce,
 
-00:00:24.860 --> 00:00:28.029
-First, A normal wallet (an EOA, externally owned
+00:00:31.062 --> 00:00:33.151
+so you use them without a blind spot.
 
-00:00:28.029 --> 00:00:31.045
-account) is controlled by one private key.
+00:00:34.450 --> 00:00:36.952
+Every wallet so far in this program has
 
-00:00:31.045 --> 00:00:32.715
-A smart account is a contract
+00:00:36.952 --> 00:00:39.954
+had exactly one rule: whoever holds the private
 
-00:00:32.715 --> 00:00:34.685
-wallet whose rules you choose.
+00:00:39.954 --> 00:00:42.380
+key can move the funds, full stop.
 
-00:00:34.685 --> 00:00:38.811
-Next, ERC-4337 (account abstraction): smart
+00:00:42.380 --> 00:00:44.503
+A smart account changes that single
 
-00:00:38.811 --> 00:00:43.050
-accounts without changing Ethereum itself.
+00:00:44.503 --> 00:00:46.925
+rule into whatever rules you choose.
 
-00:00:43.050 --> 00:00:48.830
-Transactions become "user operations" handled by bundlers; paymasters
+00:00:46.925 --> 00:00:49.356
+That's a real upgrade in what's possible,
 
-00:00:48.830 --> 00:00:52.020
-can pay gas for you (e.g. in USDC).
+00:00:49.356 --> 00:00:51.324
+and it's also a real expansion of
 
-00:00:52.020 --> 00:00:57.018
-Then, Features: multisig and social recovery (trusted "guardians" can
+00:00:51.324 --> 00:00:52.945
+what you have to understand.
 
-00:00:57.018 --> 00:01:02.086
-restore access), spending limits, session keys (Lesson 14.2), batching
+00:00:54.246 --> 00:00:55.411
+Two kinds of wallet.
 
-00:01:02.086 --> 00:01:05.442
-(approve + swap in one step), passkeys (log in
+00:00:56.711 --> 00:00:58.351
+So, side by side.
 
-00:01:05.442 --> 00:01:09.740
-with your device's biometrics instead of a seed phrase).
+00:00:58.351 --> 00:01:01.947
+An EOA, an externally owned account, the wallet type
 
-00:01:09.740 --> 00:01:14.095
-Also, EIP-7702 (2025): lets an ordinary wallet
+00:01:01.947 --> 00:01:05.542
+you've used all module, is controlled by exactly one
 
-00:01:14.095 --> 00:01:19.561
-temporarily or permanently delegate to smart-account code:
+00:01:05.542 --> 00:01:08.963
+private key: that key signs, or nothing moves.
 
-00:01:19.561 --> 00:01:24.030
-powerful, and a phishing target (Lesson 1.7).
+00:01:08.963 --> 00:01:11.933
+A smart account is a contract wallet instead.
 
-00:01:24.030 --> 00:01:28.462
-And finally, New risks: the account's contract code, module/plugin
+00:01:11.933 --> 00:01:14.053
+Its rules, who can sign, how many
 
-00:01:28.462 --> 00:01:33.356
-permissions, guardian collusion, and differences between chains (the same
+00:01:14.053 --> 00:01:16.797
+signatures, what limits apply, are code you
 
-00:01:33.356 --> 00:01:35.870
-address may not exist on every chain).
+00:01:16.797 --> 00:01:18.543
+choose, not a fixed default.
 
-00:01:37.170 --> 00:01:40.185
-Let's look at the diagram: The 3-wallet setup.
+00:01:19.842 --> 00:01:23.194
+Here's the standard that makes this work
 
-00:01:40.185 --> 00:01:41.745
-Take a moment with it.
+00:01:23.194 --> 00:01:28.727
+without changing Ethereum itself: ERC-4337, account abstraction.
 
-00:01:41.745 --> 00:01:44.155
-It's everything we've just said, in one picture.
+00:01:28.727 --> 00:01:30.906
+You sign an intent, called a user
 
-00:01:45.455 --> 00:01:47.970
-Let's work an example, step by step.
+00:01:30.906 --> 00:01:33.962
+operation, instead of a normal transaction.
 
-00:01:47.970 --> 00:01:51.819
-Your operating wallet becomes a smart account with: a
+00:01:33.962 --> 00:01:37.466
+A bundler, a specialised network participant, collects
 
-00:01:51.819 --> 00:01:55.383
-passkey on your phone plus a hardware key (2-of-2
+00:01:37.466 --> 00:01:40.442
+user operations and submits them on-chain.
 
-00:01:55.383 --> 00:01:59.162
-for large moves); a $2,000/day limit for small moves
+00:01:40.442 --> 00:01:42.598
+A paymaster can step in and pay
 
-00:01:59.162 --> 00:02:02.868
-with just the passkey; 3 guardians (2-of-3) who can
+00:01:42.598 --> 00:01:44.619
+the gas for you, in USDC, for
 
-00:02:02.868 --> 00:02:06.875
-recover access after a 48-hour delay you can cancel.
+00:01:44.619 --> 00:01:48.152
+instance, instead of the network's native token.
 
-00:02:06.875 --> 00:02:09.775
-Lose your phone: recover via guardians.
+00:01:48.152 --> 00:01:51.199
+And the entry point contract validates everything
 
-00:02:09.775 --> 00:02:12.452
-Phone stolen: the thief is capped at
+00:01:51.199 --> 00:01:54.125
+and finally executes your smart account's rules.
 
-00:02:12.452 --> 00:02:15.057
-$2,000/day and you have 48 hours to
+00:01:55.426 --> 00:01:56.516
+Quick check.
 
-00:02:15.057 --> 00:02:17.590
-cancel a recovery you didn't start.
+00:01:56.516 --> 00:01:58.361
+What does a paymaster actually do?
 
-00:02:18.890 --> 00:02:20.350
-Here's your checklist.
+00:02:02.781 --> 00:02:05.269
+[[pause 4]] The answer: it pays gas on
 
-00:02:20.350 --> 00:02:21.885
-Do it now, for real.
+00:02:05.269 --> 00:02:07.820
+your behalf, which is what lets you pay
 
-00:02:21.885 --> 00:02:23.873
-First, I know which of my wallets
+00:02:07.820 --> 00:02:10.499
+network fees in a token like USDC instead
 
-00:02:23.873 --> 00:02:26.395
-are EOAs and which are smart accounts.
+00:02:10.499 --> 00:02:12.221
+of the chain's native coin.
 
-00:02:26.395 --> 00:02:28.955
-Next, Guardians chosen so no two could
+00:02:13.521 --> 00:02:14.496
+What it unlocks.
 
-00:02:28.955 --> 00:02:32.340
-plausibly collude; recovery has a cancel delay.
+00:02:15.796 --> 00:02:18.273
+Once your wallet is a contract you control,
 
-00:02:32.340 --> 00:02:36.710
-Then, Module/plugin permissions reviewed like approvals.
+00:02:18.273 --> 00:02:21.051
+all of this becomes possible in one account.
 
-00:02:36.710 --> 00:02:39.999
-And finally, Smart account deployed (or deployable)
+00:02:21.051 --> 00:02:23.736
+Multisig, more than one key required.
 
-00:02:39.999 --> 00:02:41.580
-on every chain I send to.
+00:02:23.736 --> 00:02:27.746
+Social recovery, trusted guardians who can restore access.
 
-00:02:42.880 --> 00:02:44.090
-Question 1.
+00:02:27.746 --> 00:02:30.216
+Spending limits, small moves need less.
 
-00:02:44.090 --> 00:02:45.425
-What does a paymaster do?
+00:02:30.216 --> 00:02:33.307
+Session keys, a temporary key scoped to one app,
 
-00:02:49.845 --> 00:02:52.878
-The answer: Pays gas on your behalf,
+00:02:33.307 --> 00:02:36.571
+which Lesson fourteen point two covers in full.
 
-00:02:52.878 --> 00:02:55.665
-e.g. letting you pay fees in USDC.
+00:02:36.571 --> 00:02:38.572
+Batching, approve and swap in a
 
-00:02:56.965 --> 00:02:58.210
-Question 2.
+00:02:38.572 --> 00:02:40.561
+single step instead of two.
 
-00:02:58.210 --> 00:02:59.625
-What is social recovery?
+00:02:40.561 --> 00:02:44.033
+And passkeys, logging in with your device's fingerprint
 
-00:03:04.045 --> 00:03:07.119
-The answer: Trusted guardians can restore access
+00:02:44.033 --> 00:02:46.513
+or face instead of typing a seed phrase.
 
-00:03:07.119 --> 00:03:09.565
-to your account, usually after a delay.
+00:02:47.813 --> 00:02:51.328
+Walk through social recovery as it actually plays out.
 
-00:03:10.865 --> 00:03:12.135
-Question 3.
+00:02:51.328 --> 00:02:52.856
+Normally, you just sign with
 
-00:03:12.135 --> 00:03:13.785
-Why check the smart account
+00:02:52.856 --> 00:02:54.473
+your passkey, day to day.
 
-00:03:13.785 --> 00:03:15.670
-exists on the destination chain?
+00:02:54.473 --> 00:02:55.993
+Say you lose your phone.
 
-00:03:20.090 --> 00:03:22.917
-The answer: Smart-account addresses may not be
+00:02:55.993 --> 00:02:58.255
+Your guardians, people you chose in
 
-00:03:22.917 --> 00:03:25.444
-deployed on every chain; funds sent there
+00:02:58.255 --> 00:03:00.943
+advance, can jointly request recovery.
 
-00:03:25.444 --> 00:03:26.767
-may be hard to access.
+00:03:00.943 --> 00:03:03.697
+That request sits for a cancellable delay, say
 
-00:03:28.068 --> 00:03:29.313
-Let's recap.
+00:03:03.697 --> 00:03:06.458
+forty eight hours, before it takes effect.
 
-00:03:29.313 --> 00:03:31.948
-A normal wallet (an EOA, externally owned
+00:03:06.458 --> 00:03:08.538
+If that request is really you, you
 
-00:03:31.948 --> 00:03:34.883
-account) is controlled by one private key.
+00:03:08.538 --> 00:03:10.918
+do nothing, and access is restored.
 
-00:03:34.883 --> 00:03:42.423
-ERC-4337 (account abstraction): smart accounts without changing Ethereum itself.
+00:03:10.918 --> 00:03:13.175
+If it isn't, if someone's trying to steal
 
-00:03:42.423 --> 00:03:45.592
-Features: multisig and social recovery (trusted
+00:03:13.175 --> 00:03:15.862
+the account through your guardians, you cancel it
 
-00:03:45.592 --> 00:03:49.128
-"guardians" can restore access), spending limits.
+00:03:15.862 --> 00:03:17.851
+in that window, and the attack fails.
 
-00:03:49.128 --> 00:03:54.117
-EIP-7702 (2025): lets an ordinary wallet temporarily
+00:03:19.151 --> 00:03:20.241
+Quick check.
 
-00:03:54.117 --> 00:03:58.448
-or permanently delegate to smart-account code.
+00:03:20.241 --> 00:03:22.616
+What is social recovery, in one sentence?
 
-00:03:59.748 --> 00:04:02.263
-Do the checklist now, before you move on.
+00:03:27.036 --> 00:03:30.322
+The answer: trusted guardians can restore access to
 
-00:04:02.263 --> 00:04:05.408
-Next up, Lesson 2.0: Mastery Starter.
+00:03:30.322 --> 00:03:33.356
+your account, usually after a cancellable delay.
+
+00:03:34.656 --> 00:03:36.694
+Two of those six are worth a closer
+
+00:03:36.694 --> 00:03:39.072
+look, because they change what you do day
+
+00:03:39.072 --> 00:03:41.806
+to day, not just what's possible in theory.
+
+00:03:41.806 --> 00:03:45.373
+Batching turns a two-step action, approve a token, then
+
+00:03:45.373 --> 00:03:48.558
+swap it, into one signature instead of two, which
+
+00:03:48.558 --> 00:03:52.871
+also means one less separate approval sitting around afterward.
+
+00:03:52.871 --> 00:03:55.326
+And a passkey is backed by your device's
+
+00:03:55.326 --> 00:03:58.321
+own secure hardware: nothing to type, and nothing
+
+00:03:58.321 --> 00:04:00.896
+a phishing site can trick you into pasting.
+
+00:04:02.196 --> 00:04:04.547
+Session keys deserve one honest caveat
+
+00:04:04.547 --> 00:04:06.656
+here, and a full lesson later.
+
+00:04:06.656 --> 00:04:08.760
+A session key is a temporary key,
+
+00:04:08.760 --> 00:04:11.113
+scoped to one specific app, so you're
+
+00:04:11.113 --> 00:04:14.136
+not re-approving that app every single time.
+
+00:04:14.136 --> 00:04:16.521
+Scoped correctly, it's convenient.
+
+00:04:16.521 --> 00:04:18.580
+Scoped too broadly, it's a standing
+
+00:04:18.580 --> 00:04:20.711
+approval you forgot you granted.
+
+00:04:20.711 --> 00:04:24.981
+Lesson 14.2 covers exactly how to scope one safely.
+
+00:04:26.281 --> 00:04:30.310
+One more standard worth naming: EIP-7702,
+
+00:04:30.310 --> 00:04:34.351
+part of Ethereum's 2025 Pectra upgrade.
+
+00:04:34.351 --> 00:04:37.578
+It lets an ordinary EOA wallet temporarily, or
+
+00:04:37.578 --> 00:04:42.246
+permanently, delegate to smart-account code, gaining these features
+
+00:04:42.246 --> 00:04:45.086
+without ever moving to a new address.
+
+00:04:45.086 --> 00:04:46.301
+It's powerful.
+
+00:04:46.301 --> 00:04:49.728
+It's also exactly the phishing target Lesson 1.7
+
+00:04:49.728 --> 00:04:53.294
+warned you about: a malicious delegation looks, to
+
+00:04:53.294 --> 00:04:56.861
+an untrained eye, like any other signature request.
+
+00:04:58.161 --> 00:04:59.096
+A worked setup.
+
+00:05:00.396 --> 00:05:04.221
+Here's a realistic shape for one operating wallet's limits.
+
+00:05:04.221 --> 00:05:06.779
+With just the passkey, day-to-day moves
+
+00:05:06.779 --> 00:05:09.061
+are capped around $2,000 a day.
+
+00:05:09.061 --> 00:05:11.916
+Above that, it requires both the passkey and
+
+00:05:11.916 --> 00:05:14.897
+a hardware key together, 2-of-2, with no daily
+
+00:05:14.897 --> 00:05:17.371
+cap, because a bigger move now needs a
+
+00:05:17.371 --> 00:05:19.401
+second factor to approve it too.
+
+00:05:20.701 --> 00:05:23.582
+Put together, one real setup looks like this.
+
+00:05:23.582 --> 00:05:25.687
+Day to day: a passkey on your phone,
+
+00:05:25.687 --> 00:05:28.092
+capped at two thousand dollars a day.
+
+00:05:28.092 --> 00:05:30.526
+Larger moves: that same passkey, plus a
+
+00:05:30.526 --> 00:05:33.442
+separate hardware key, two of two required.
+
+00:05:33.442 --> 00:05:36.180
+Recovery: three guardians, two of three, with a
+
+00:05:36.180 --> 00:05:39.047
+forty eight hour delay you can always cancel.
+
+00:05:39.047 --> 00:05:41.602
+Lose your phone, guardians recover you.
+
+00:05:41.602 --> 00:05:44.405
+Phone stolen, the thief is capped at two thousand
+
+00:05:44.405 --> 00:05:46.703
+a day, and you have forty eight hours to
+
+00:05:46.703 --> 00:05:49.226
+cancel any recovery attempt you didn't start.
+
+00:05:50.526 --> 00:05:51.371
+New risks.
+
+00:05:52.671 --> 00:05:55.130
+Every feature above adds something new to
+
+00:05:55.130 --> 00:05:57.771
+verify, not just something new to enjoy.
+
+00:05:57.771 --> 00:06:00.331
+The account's contract code itself can have
+
+00:06:00.331 --> 00:06:02.551
+bugs, same as any smart contract.
+
+00:06:02.551 --> 00:06:05.170
+Module and plugin permissions deserve the
+
+00:06:05.170 --> 00:06:07.591
+same scrutiny as a token approval.
+
+00:06:07.591 --> 00:06:10.786
+Guardians can collude, if you chose them carelessly.
+
+00:06:10.786 --> 00:06:13.371
+And a smart account's address may simply not
+
+00:06:13.371 --> 00:06:15.266
+exist yet on every chain you use.
+
+00:06:16.566 --> 00:06:19.801
+Guardian collusion is worth sitting with for a second.
+
+00:06:19.801 --> 00:06:22.560
+Three guardians who all live in the same house,
+
+00:06:22.560 --> 00:06:25.319
+or all work for the same company, aren't really
+
+00:06:25.319 --> 00:06:28.953
+three independent checks, they're one, wearing three hats.
+
+00:06:28.953 --> 00:06:32.371
+Choose guardians the same way you'd choose separated
+
+00:06:32.371 --> 00:06:36.305
+multisig key holders: people, or institutions, who genuinely
+
+00:06:36.305 --> 00:06:39.078
+couldn't coordinate even if they wanted to.
+
+00:06:40.378 --> 00:06:42.163
+Last check for this lesson.
+
+00:06:42.163 --> 00:06:45.134
+Why does it matter whether your smart account exists
+
+00:06:45.134 --> 00:06:47.768
+on the destination chain before you send to it?
+
+00:06:52.188 --> 00:06:55.103
+The answer: a smart-account address may not be
+
+00:06:55.103 --> 00:06:57.895
+deployed on every chain, so funds sent there
+
+00:06:57.895 --> 00:07:00.252
+can be hard, or impossible, to access.
+
+00:07:01.552 --> 00:07:03.937
+Your turn, 5 to 15 minutes.
+
+00:07:03.937 --> 00:07:06.292
+List which of your wallets are EOAs
+
+00:07:06.292 --> 00:07:09.012
+and which are already smart accounts.
+
+00:07:09.012 --> 00:07:11.188
+Choose guardians, on paper, so that no
+
+00:07:11.188 --> 00:07:13.497
+two of them could plausibly collude.
+
+00:07:13.497 --> 00:07:15.393
+And if you're moving to a smart
+
+00:07:15.393 --> 00:07:18.356
+account, confirm it's deployed, or deployable, on
+
+00:07:18.356 --> 00:07:20.312
+every chain you actually send to.
+
+00:07:21.612 --> 00:07:24.819
+To recap: a smart account turns one fixed rule,
+
+00:07:24.819 --> 00:07:28.828
+one key, into rules you choose, multisig, limits, recovery,
+
+00:07:28.828 --> 00:07:33.137
+passkeys, all through a standard called account abstraction.
+
+00:07:33.137 --> 00:07:36.337
+EIP-7702 brings those same features
+
+00:07:36.337 --> 00:07:39.304
+to an ordinary wallet address.
+
+00:07:39.304 --> 00:07:41.370
+And every one of those features is
+
+00:07:41.370 --> 00:07:43.730
+also something new to verify, the code,
+
+00:07:43.730 --> 00:07:46.209
+the permissions, the guardians, the chain.
+
+00:07:47.509 --> 00:07:50.001
+That's smart accounts and account abstraction,
+
+00:07:50.001 --> 00:07:51.679
+and the end of Module One.
+
+00:07:51.679 --> 00:07:55.075
+Next up, Module Two: Trading On-Chain, starting with
+
+00:07:55.075 --> 00:07:58.214
+how swaps, aggregators and routing actually work.
