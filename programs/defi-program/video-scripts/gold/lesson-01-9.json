@@ -1,0 +1,461 @@
+{
+ "id": "lesson-01-9",
+ "title": "Lesson 1.9: Smart accounts and account abstraction",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "maxMinutes": 25,
+ "tag": "Lesson 1.9",
+ "gold": true,
+ "music": true,
+ "musicLevel": 0.14,
+ "seed": 51,
+ "use": "Lesson 1.9 page in the Whop course. Hand-written gold-standard script: EOA vs smart account, ERC-4337 bundlers/paymasters, the five real features, new risks, and the worked 3-wallet setup, as walk-throughs.",
+ "thumbnail": {
+  "title": "Smart accounts & AA",
+  "subtitle": "Lesson 1.9"
+ },
+ "scenes": [
+  {
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Lesson 1.9",
+   "num": "1.9",
+   "title": "Smart accounts and account abstraction",
+   "sub": "New power, and the new risks that come with it.",
+   "vo": "Lesson one point nine. Smart accounts and account abstraction. By the end, you'll understand how a smart account changes wallet security, and how to use its features without adding new risk.",
+   "cap": "Lesson 1.9. Smart accounts and account abstraction. By the end, you'll understand how a smart account changes wallet security, and how to use its features without adding new risk."
+  },
+  {
+   "type": "pillars",
+   "chapter": "Intro",
+   "title": "What this lesson covers",
+   "items": [
+    {
+     "icon": "key",
+     "title": "EOA vs smart account",
+     "text": "One key, versus rules you choose"
+    },
+    {
+     "icon": "cog",
+     "title": "ERC-4337",
+     "text": "How it actually works"
+    },
+    {
+     "icon": "layers",
+     "title": "The features",
+     "text": "Recovery, limits, session keys, batching"
+    },
+    {
+     "icon": "alert",
+     "title": "New risks",
+     "text": "What a smart account adds to think about"
+    }
+   ],
+   "vo": "Here's the plan. What actually separates a normal wallet from a smart account. E.R.C. forty-three thirty-seven, the standard that makes smart accounts work, without changing Ethereum itself. The real features that standard unlocks. And the new risks worth knowing before you rely on any of it."
+  },
+  {
+   "type": "title",
+   "chapter": "EOA vs smart account",
+   "eyebrow": "Two kinds of wallet",
+   "num": "1",
+   "title": "One key, or a contract with rules",
+   "sub": "The difference decides what's even possible.",
+   "vo": "Two kinds of wallet."
+  },
+  {
+   "type": "compare",
+   "chapter": "EOA vs smart account",
+   "left": {
+    "label": "EOA (a normal wallet)",
+    "tone": "warn",
+    "items": [
+     "One private key controls it completely",
+     "The rules are fixed — there aren't any to choose"
+    ]
+   },
+   "right": {
+    "label": "A smart account",
+    "tone": "good",
+    "items": [
+     "A contract wallet: code, not just a key",
+     "Rules you choose: multisig, limits, recovery"
+    ]
+   },
+   "vo": "Here's the actual difference, side by side. An E.O.A., an externally owned account, is a normal wallet: one private key controls it completely, full stop. A smart account is a contract wallet instead: its rules, multisig, limits, recovery, whatever you configure, are code you choose, not a fixed default."
+  },
+  {
+   "type": "statement",
+   "chapter": "EOA vs smart account",
+   "kicker": "What this doesn't change",
+   "lines": [
+    "Not invulnerability.",
+    "A different structure, is all."
+   ],
+   "sub": "Everything else from this module still applies, in full.",
+   "vo": "Worth being precise about what this doesn't change, before going further. A smart account doesn't make you invulnerable, and it doesn't replace good judgement about what you sign. It changes what's structurally possible for your wallet to do, and what a single point of failure can actually reach. Everything else from this module still applies, in full."
+  },
+  {
+   "type": "quiz",
+   "chapter": "EOA vs smart account",
+   "n": 1,
+   "of": 3,
+   "q": "What's the core structural difference between an EOA and a smart account?",
+   "a": "An EOA: one fixed key. A smart account: a contract whose rules you configure.",
+   "vo": "Quick check. What's the core structural difference between an EOA and a smart account? [[pause 4]] The answer: an EOA is controlled by one private key, fixed. A smart account is a contract wallet whose rules, like multisig or spending limits, you configure yourself."
+  },
+  {
+   "type": "title",
+   "chapter": "ERC-4337",
+   "eyebrow": "ERC-4337",
+   "num": "2",
+   "title": "Account abstraction, without changing Ethereum",
+   "sub": "How a smart account transaction actually moves.",
+   "vo": "ERC-4337."
+  },
+  {
+   "type": "flow",
+   "chapter": "ERC-4337",
+   "title": "How a user operation actually moves",
+   "nodes": [
+    {
+     "label": "You sign a “user operation”",
+     "sub": "Not a standard transaction",
+     "icon": "key"
+    },
+    {
+     "label": "Bundlers package it",
+     "sub": "Collected with other user operations",
+     "icon": "layers"
+    },
+    {
+     "label": "A paymaster can cover gas",
+     "sub": "Optionally, in a token like USDC",
+     "icon": "coins"
+    },
+    {
+     "label": "Executes on-chain",
+     "sub": "As one batch",
+     "icon": "check"
+    }
+   ],
+   "vo": "Here's exactly how a smart-account transaction actually gets processed, step by step, since it's genuinely different from a normal one. You sign what's called a “user operation”, not a standard transaction. A network of bundlers collects these user operations and packages them together. A paymaster can optionally step in and cover the gas, in a token like U.S.D.C., instead of you needing the network's native asset. And the bundle finally executes on-chain, as one batch."
+  },
+  {
+   "type": "statement",
+   "chapter": "ERC-4337",
+   "kicker": "Why it didn't need a protocol change",
+   "lines": [
+    "Achieved entirely through contracts",
+    "and a bundler network, layered on top."
+   ],
+   "sub": "No change to Ethereum's own core protocol required.",
+   "vo": "Worth being precise on why this standard exists at all, since “without changing Ethereum itself” is the important part. Earlier attempts at account abstraction needed a change to Ethereum's own core protocol, which is slow and difficult to coordinate. E.R.C. forty-three thirty-seven achieves the same result entirely through smart contracts and this bundler network, layered on top of Ethereum exactly as it already runs."
+  },
+  {
+   "type": "stats",
+   "chapter": "ERC-4337",
+   "stats": [
+    [
+     "10Ms+",
+     "ERC-4337 smart accounts deployed since 2023 (outside research)"
+    ]
+   ],
+   "vo": "One real number, so this isn't theoretical. Industry trackers have recorded tens of millions of ERC-4337 smart accounts deployed since the standard launched in 2023, across major networks. This is outside research, not this program's own data, but it's real, current infrastructure, not an experimental idea still waiting to be adopted."
+  },
+  {
+   "type": "quiz",
+   "chapter": "ERC-4337",
+   "n": 2,
+   "of": 3,
+   "q": "What does a paymaster actually do in this system?",
+   "a": "Pays gas on your behalf — for example, letting you pay fees in USDC.",
+   "vo": "Quick check. What does a paymaster actually do in this system? [[pause 4]] The answer: it can pay the gas for your transaction on your behalf, for example letting you pay fees in USDC instead of the network's native token."
+  },
+  {
+   "type": "title",
+   "chapter": "The features",
+   "eyebrow": "The features",
+   "num": "3",
+   "title": "What a smart account actually unlocks",
+   "sub": "Five real capabilities, each worth understanding on its own.",
+   "vo": "The features."
+  },
+  {
+   "type": "pillars",
+   "chapter": "The features",
+   "title": "Five features, each worth understanding",
+   "items": [
+    {
+     "icon": "users",
+     "title": "Guardians / social recovery",
+     "text": "Restore access if you lose a device"
+    },
+    {
+     "icon": "shield",
+     "title": "Spending limits",
+     "text": "A cap that holds even if one key is compromised"
+    },
+    {
+     "icon": "key",
+     "title": "Session keys",
+     "text": "A limited, temporary key for one app"
+    },
+    {
+     "icon": "layers",
+     "title": "Batching & passkeys",
+     "text": "One signature, several actions; biometric login"
+    }
+   ],
+   "vo": "Here are the five features that actually matter in practice. Multisig and social recovery: trusted “guardians” can restore access if you lose a device. Spending limits: a daily cap that holds even if one key is compromised. Session keys: a limited, temporary key for one app, covered properly in Lesson fourteen point two. Batching: several actions, like an approval and a swap, combined into a single signature. And passkeys: logging in with your device's own biometrics, instead of a seed phrase."
+  },
+  {
+   "type": "flow",
+   "chapter": "The features",
+   "title": "How social recovery actually works",
+   "nodes": [
+    {
+     "label": "You choose guardians",
+     "sub": "In advance, people or devices you trust",
+     "icon": "users"
+    },
+    {
+     "label": "A guardian initiates recovery",
+     "sub": "If you lose access",
+     "icon": "key"
+    },
+    {
+     "label": "A delay you set yourself",
+     "sub": "Commonly measured in hours",
+     "icon": "lock"
+    },
+    {
+     "label": "You can cancel it",
+     "sub": "Instantly, if you didn't start it",
+     "icon": "shield"
+    }
+   ],
+   "vo": "Zoom into social recovery specifically, since it's the feature people ask about most. You choose a set of guardians in advance, people or devices you trust. If you lose access, a guardian, or enough of them together, can initiate recovery. That recovery then waits out a delay you set yourself, commonly measured in hours. And during that entire delay, you can cancel it yourself, instantly, if it wasn't you who started it."
+  },
+  {
+   "type": "flow",
+   "chapter": "The features",
+   "title": "How a session key actually works",
+   "nodes": [
+    {
+     "label": "You grant one app a session key",
+     "sub": "Not your main key",
+     "icon": "key"
+    },
+    {
+     "label": "Scoped narrowly",
+     "sub": "One app, one contract, a small cap",
+     "icon": "shield"
+    },
+    {
+     "label": "Use it freely",
+     "sub": "No signing prompt on every action",
+     "icon": "check"
+    },
+    {
+     "label": "Expires on its own",
+     "sub": "On a schedule you set in advance",
+     "icon": "lock"
+    }
+   ],
+   "vo": "And here's session keys, step by step, since “a limited, temporary key for one app” undersells how useful this actually is. You grant one specific app a session key, not your main key at all. That key is scoped narrowly: maybe only this game, only this contract, only a small spending cap. You use the app freely, without a signing prompt on every single action. And the session key simply expires, on its own, on a schedule you set in advance."
+  },
+  {
+   "type": "compare",
+   "chapter": "The features",
+   "left": {
+    "label": "A seed phrase",
+    "tone": "warn",
+    "items": [
+     "Words you write down and must never lose",
+     "Can be phished, copied, or physically stolen"
+    ]
+   },
+   "right": {
+    "label": "A passkey",
+    "tone": "good",
+    "items": [
+     "Your device's own biometrics authorise it",
+     "Nothing written down to lose or phish"
+    ]
+   },
+   "vo": "And passkeys deserve their own contrast against everything Module One taught about seed phrases. A seed phrase is words you must write down, store, and never lose, ever, with catastrophic consequences if it leaks. A passkey uses your device's own biometrics, fingerprint or face, to authorise a signature; there's no words to write down, and no phrase that can be phished out of you over a phone call."
+  },
+  {
+   "type": "compare",
+   "chapter": "The features",
+   "left": {
+    "label": "Without batching",
+    "tone": "warn",
+    "items": [
+     "Approve: one signature",
+     "Swap: a second, separate signature"
+    ]
+   },
+   "right": {
+    "label": "Batched, in a smart account",
+    "tone": "good",
+    "items": [
+     "Approve and swap: one signature",
+     "Either both happen, or neither does"
+    ]
+   },
+   "vo": "And here's exactly why batching matters more than it sounds like it should. Without it, approving a token and then swapping it are two separate signatures, two separate moments something could go wrong or get interrupted. Batched, through a smart account, they're one signature: you either approve-and-swap together, or nothing happens at all."
+  },
+  {
+   "type": "quiz",
+   "chapter": "The features",
+   "n": 3,
+   "of": 3,
+   "q": "What can guardians do in social recovery, and what protects you if a recovery wasn't yours?",
+   "a": "They can restore access; a cancellable delay protects against a recovery you didn't start.",
+   "vo": "Quick check. What can guardians do in social recovery, and what protects you if a recovery wasn't yours? [[pause 4]] The answer: guardians can restore your access if you lose it, and a delay you set yourself gives you a window to cancel any recovery you didn't start."
+  },
+  {
+   "type": "title",
+   "chapter": "New risks",
+   "eyebrow": "New risks",
+   "num": "4",
+   "title": "What a smart account adds to think about",
+   "sub": "Real power comes with new things to check.",
+   "vo": "New risks."
+  },
+  {
+   "type": "steps",
+   "chapter": "New risks",
+   "title": "What a smart account adds to check",
+   "steps": [
+    "Contract code: known and audited, not unverified",
+    "Module/plugin permissions: reviewed like an approval",
+    "Guardian collusion: could two of them plausibly coordinate?",
+    "Deployed on every chain you actually send to"
+   ],
+   "result": "New power, matched by new things to verify",
+   "vo": "Here's exactly what to check that an EOA never required, since a smart account genuinely adds new surface area. Read the account's actual contract code, or at least confirm it's a known, audited implementation, not something unverified. Review every module or plugin's permissions the same way you'd review a token approval, since a plugin can hold real power over the account. Think through guardian collusion specifically: could two guardians you chose plausibly coordinate against you. And check whether your smart-account address is actually deployed on every chain you plan to send to."
+  },
+  {
+   "type": "steps",
+   "chapter": "New risks",
+   "title": "Auditing a plugin's permissions, concretely",
+   "steps": [
+    "What exactly can it do: functions, assets, limits?",
+    "Can it be upgraded without your explicit signature?",
+    "Known, audited source — not unverified",
+    "Removed the moment you stop using it"
+   ],
+   "result": "Reviewed like an approval, because it functions like one",
+   "vo": "Here's what actually auditing a plugin's permissions looks like, concretely, not just in principle. Find out exactly what the plugin can do: which functions, which assets, which limits. Check whether it can be upgraded later without your explicit signature, since that changes what you're really trusting. Confirm it's from a known, audited source, not an unverified add-on. And remove any plugin the moment you stop actively using it."
+  },
+  {
+   "type": "statement",
+   "chapter": "New risks",
+   "kicker": "The trap that catches careful people",
+   "lines": [
+    "The same address, on the wrong chain,",
+    "may simply not be your account there."
+   ],
+   "sub": "Not stolen — structurally stuck. Check deployment first.",
+   "vo": "One specific trap worth naming on its own, since it catches people who otherwise did everything right. The same smart-account address doesn't necessarily exist, or hold any funds, on every chain. Sending to that address on a chain where your smart account was never deployed can leave funds sitting somewhere you genuinely can't reach, not lost to an attacker, just structurally stuck."
+  },
+  {
+   "type": "compare",
+   "chapter": "New risks",
+   "left": {
+    "label": "Poorly chosen guardians",
+    "tone": "bad",
+    "items": [
+     "People who talk daily, closely connected",
+     "Could plausibly coordinate against you"
+    ]
+   },
+   "right": {
+    "label": "Well-chosen guardians",
+    "tone": "good",
+    "items": [
+     "No real reason or means to collude",
+     "Structurally can't act together against you"
+    ]
+   },
+   "vo": "Put guardian collusion risk next to the alternative, since “trust your guardians” isn't the whole answer. Poorly chosen guardians, say, three close friends who all talk daily, could plausibly coordinate and recover your account without your consent. Well-chosen guardians, people or entities with no reason or means to collude, genuinely can't produce that outcome together."
+  },
+  {
+   "type": "title",
+   "chapter": "Worked example",
+   "eyebrow": "Worked example",
+   "num": "1",
+   "title": "One operating wallet, three real safeguards",
+   "sub": "Built from the setup in your source material.",
+   "vo": "Worked example."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/three-wallets.png",
+   "eyebrow": "The 3-wallet setup, made concrete",
+   "wide": true,
+   "chapter": "Worked example",
+   "vo": "Here's a real configuration. Your operating wallet becomes a smart account with three things layered together. A passkey on your phone, plus a hardware key, required together, two of two, for any large move. A two-thousand-dollar daily limit for small moves, using just the passkey alone. And three guardians, two of three, who can recover access, but only after a forty-eight hour delay you can cancel.",
+   "cap": "Here's a real configuration. Your operating wallet becomes a smart account with three things layered together. A passkey on your phone plus a hardware key, required together (2-of-2), for any large move. A $2,000/day limit for small moves, using just the passkey alone. And 3 guardians (2-of-3) who can recover access, but only after a 48-hour delay you can cancel."
+  },
+  {
+   "type": "compare",
+   "chapter": "Worked example",
+   "left": {
+    "label": "You lose your phone",
+    "tone": "warn",
+    "items": [
+     "Recover through your 3 guardians",
+     "Cancellable delay protects the process"
+    ]
+   },
+   "right": {
+    "label": "Your phone is stolen",
+    "tone": "good",
+    "items": [
+     "Thief capped at $2,000/day",
+     "48 hours to cancel any recovery they attempt"
+    ]
+   },
+   "vo": "Now play out the two scenarios this setup is actually built for. Lose your phone, and you recover through your three guardians, waiting out the cancellable delay. Have your phone stolen instead, and the thief is capped at two thousand dollars a day, with forty-eight hours for you to cancel any recovery attempt you didn't start yourself."
+  },
+  {
+   "type": "steps",
+   "chapter": "Checklist",
+   "title": "Your checklist",
+   "steps": [
+    "Know which wallets are EOAs vs smart accounts",
+    "Guardians chosen so no two could plausibly collude",
+    "Module/plugin permissions reviewed like approvals",
+    "Smart account deployed on every chain you send to"
+   ],
+   "vo": "Here's your checklist. Do it now, for real. You know exactly which of your wallets are EOAs, and which are smart accounts. Your guardians are chosen so that no two of them could plausibly collude, and recovery always has a cancel delay. Module and plugin permissions get reviewed the same way you'd review an approval. And your smart account is deployed, or deployable, on every chain you actually send to."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "check": false,
+   "items": [
+    "EOA: one fixed key. Smart account: a contract, rules you choose",
+    "ERC-4337: bundlers and paymasters, no change to Ethereum's core protocol",
+    "Real features: guardians, limits, session keys, batching, passkeys",
+    "New risks: contract code, plugin permissions, collusion, chain deployment"
+   ],
+   "vo": "Let's recap. An EOA is one fixed key; a smart account is a contract whose rules you choose. E.R.C. forty-three thirty-seven makes that possible without touching Ethereum's own core protocol, through bundlers and optional paymasters. The real features, guardians, spending limits, session keys, batching and passkeys, are genuinely useful, when configured deliberately. And the new risks, contract code, plugin permissions, guardian collusion and chain deployment, are exactly what deliberate configuration means checking."
+  },
+  {
+   "type": "cta",
+   "chapter": "Recap",
+   "button": "Next: Module 2",
+   "sub": "DeFi mechanics",
+   "vo": "Choose your guardians deliberately, review plugin permissions like approvals, and check your smart account actually exists on every chain you use it on. Next up, Module Two: DeFi mechanics.",
+   "cap": "Choose your guardians deliberately, review plugin permissions like approvals, and check your smart account actually exists on every chain you use it on. Next up, Module 2: DeFi mechanics."
+  }
+ ]
+}

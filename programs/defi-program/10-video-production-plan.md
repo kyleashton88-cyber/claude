@@ -66,7 +66,7 @@ node build_video.js lessons              # all lessons (several hours of renderi
 | 1.6 | Scam defence | 28 | 10.4 min | `video-scripts/gold/lesson-01-6.json` (gold: 6 attacks as visual walk-throughs — flow for real-site checks and setApprovalForAll, steps for Permit-popup checks, donut chart of attack shares, compare for burner-vs-main wallet, dedicated character-by-character address-poisoning image) | ✓ |
 | 1.7 | Reading signatures and simulating transactions | 30 | 10.3 min | `video-scripts/gold/lesson-01-7.json` (gold: simulation, typed-data 4-field, blind-signing and EIP-7702 delegation walk-throughs as flows/steps/compares, dedicated Permit2-phishing worked-example mockup, approval-checking flow) | ✓ |
 | 1.8 | Privacy and physical security | 28 | 10.1 min | `video-scripts/gold/lesson-01-8.json` (gold: address-linking, chain-analysis and exchange-withdrawal flows, multisig-vs-single-key coercion compare, a self-audit/remediation steps pair, and a dedicated "same win, two posts" social-leak worked-example mockup) | ✓ |
-| 1.9 | Smart accounts and account abstraction | 11 | 3.7 min | `video-scripts/lessons/lesson-01-9.json` | ✓ |
+| 1.9 | Smart accounts and account abstraction | 29 | 10.2 min | `video-scripts/gold/lesson-01-9.json` (gold: EOA-vs-smart-account compare, ERC-4337/bundler/paymaster flow, social-recovery and session-key flows, passkey-vs-seed-phrase and batching compares, plugin-permission-audit steps, and the worked 3-wallet setup) | ✓ |
 | 2.0 | Mastery Starter | 8 | 1.6 min | `video-scripts/lessons/lesson-02-0.json` | ✓ |
 | 2.1 | DEXs, aggregators & routing | 11 | 3.1 min | `video-scripts/lessons/lesson-02-1.json` | ✓ |
 | 2.2 | AMM Mathematics (x · y = k) | 12 | 4.6 min | `video-scripts/lessons/lesson-02-2.json` | ✓ |
