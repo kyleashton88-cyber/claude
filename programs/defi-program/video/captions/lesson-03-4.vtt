@@ -4,184 +4,556 @@ WEBVTT
 Lesson 3.4.
 
 00:00:02.235 --> 00:00:04.350
-Borrowing strategies & looping.
+Borrowing strategies and looping.
 
-00:00:04.350 --> 00:00:06.759
-By the end of this lesson, you'll be able
+00:00:04.350 --> 00:00:07.133
+By the end, you'll use borrowing deliberately,
 
-00:00:06.759 --> 00:00:10.085
-to use borrowing deliberately, and know when looping adds
+00:00:07.133 --> 00:00:09.502
+and know exactly when looping adds real
 
-00:00:10.085 --> 00:00:12.035
-return and when it just adds risk.
+00:00:09.502 --> 00:00:11.575
+return, and when it just adds risk.
 
-00:00:13.335 --> 00:00:14.625
+00:00:12.875 --> 00:00:14.165
 Here's the plan.
 
-00:00:14.625 --> 00:00:16.310
-First, the key ideas.
+00:00:14.165 --> 00:00:17.770
+Borrowing for liquidity, without ever selling what you hold.
 
-00:00:16.310 --> 00:00:19.025
-Then, a worked example, step by step.
+00:00:17.770 --> 00:00:22.315
+Looping, mechanically, and the leverage formula it actually produces.
 
-00:00:19.025 --> 00:00:20.550
-Then, your checklist.
+00:00:22.315 --> 00:00:25.344
+Correlated loops versus volatile ones, and why that
 
-00:00:20.550 --> 00:00:22.712
-And finally, a three-question quiz.
+00:00:25.344 --> 00:00:28.965
+distinction matters more than the leverage number itself.
 
-00:00:24.012 --> 00:00:28.363
-First, Liquidity without selling: borrow stablecoins against
+00:00:28.965 --> 00:00:32.304
+And a full worked example, with real numbers, showing
 
-00:00:28.363 --> 00:00:31.003
-assets you want to keep (Module 12.3
+00:00:32.304 --> 00:00:35.025
+exactly when a loop's return gets wiped out.
 
-00:00:31.003 --> 00:00:33.657
-turns this into a credit policy).
+00:00:36.325 --> 00:00:37.810
+Liquidity without selling.
 
-00:00:33.657 --> 00:00:36.223
-Next, Looping: deposit → borrow →
+00:00:39.110 --> 00:00:41.736
+Here's the actual use case borrowing solves,
 
-00:00:36.223 --> 00:00:39.692
-re-deposit → repeat, to multiply exposure.
+00:00:41.736 --> 00:00:44.545
+worth naming plainly before looping at all.
 
-00:00:39.692 --> 00:00:44.488
-After n loops at LTV L: leverage =
+00:00:44.545 --> 00:00:47.300
+You hold an asset you want to keep, long-term,
 
-00:00:44.488 --> 00:00:48.077
-(1 − L^(n+1)) ÷ (1 − L).
+00:00:47.300 --> 00:00:50.590
+but you need cash now, for something else entirely.
 
-00:00:48.077 --> 00:00:52.540
-Then, Net APY on equity = collateral yield ×
+00:00:50.590 --> 00:00:54.320
+Instead of selling, and losing your position, and potentially
 
-00:00:52.540 --> 00:00:56.807
-leverage − borrow rate × (leverage − 1).
+00:00:54.320 --> 00:00:58.111
+triggering a taxable event, you borrow stablecoins against it,
 
-00:00:56.807 --> 00:01:00.243
-And finally, Correlated loops (an LST against
+00:00:58.111 --> 00:01:01.600
+keep the asset locked as collateral, and repay later.
 
-00:01:00.243 --> 00:01:04.277
-its underlying, or stablecoin against stablecoin) are
+00:01:01.600 --> 00:01:04.574
+Module twelve point three turns this exact
 
-00:01:04.277 --> 00:01:07.639
-far safer than volatile-against-stable loops.
+00:01:04.574 --> 00:01:07.410
+habit into a real, written credit policy.
 
-00:01:08.940 --> 00:01:10.910
-Let's look at the chart: Leveraged
+00:01:08.710 --> 00:01:11.104
+Put a real example side by side with
 
-00:01:10.910 --> 00:01:12.955
-loop: the spread is everything.
+00:01:11.104 --> 00:01:15.415
+the alternative, to make “liquidity without selling” concrete.
 
-00:01:12.955 --> 00:01:14.515
-Take a moment with it.
+00:01:15.415 --> 00:01:18.441
+Sell ten thousand dollars of an asset for cash,
 
-00:01:14.515 --> 00:01:16.925
-It's everything we've just said, in one picture.
+00:01:18.441 --> 00:01:22.729
+and you've lost that entire position, permanently, plus potentially
 
-00:01:18.225 --> 00:01:20.740
-Let's work an example, step by step.
+00:01:22.729 --> 00:01:25.425
+triggered a taxable event on any gain.
 
-00:01:20.740 --> 00:01:28.083
-LTV 0.7, 3 loops, 3.5% collateral yield, 2.5% borrow:
+00:01:25.425 --> 00:01:28.386
+Borrow five thousand dollars against that same ten
 
-00:01:28.083 --> 00:01:35.590
-the calculator → 2.53× leverage, 5.03% net on equity.
+00:01:28.386 --> 00:01:31.288
+thousand instead, and you keep the full position,
 
-00:01:35.590 --> 00:01:37.718
-The return is wiped out
+00:01:31.288 --> 00:01:33.785
+still growing if the asset does, while the
 
-00:01:37.718 --> 00:01:40.235
-if borrow rises to 5.78%.
+00:01:33.785 --> 00:01:35.410
+cash need is met either way.
 
-00:01:40.235 --> 00:01:44.080
-Section 3.1 showed borrow rates can jump
+00:01:36.710 --> 00:01:37.800
+Quick check.
 
-00:01:44.080 --> 00:01:46.631
-from 4% to 34% in hours.
+00:01:37.800 --> 00:01:40.567
+What's the core benefit of borrowing stablecoins
 
-00:01:46.631 --> 00:01:47.526
-That's the risk.
+00:01:40.567 --> 00:01:42.825
+against an asset, instead of selling it?
 
-00:01:48.826 --> 00:01:50.286
-Here's your checklist.
+00:01:47.245 --> 00:01:50.096
+The answer: you get liquidity now, without losing
 
-00:01:50.286 --> 00:01:51.821
-Do it now, for real.
+00:01:50.096 --> 00:01:53.004
+your position in the asset, and without triggering
 
-00:01:51.821 --> 00:01:54.746
-First, Repayment source named before borrowing.
+00:01:53.004 --> 00:01:55.285
+a sale you didn't actually want to make.
 
-00:01:54.746 --> 00:01:58.988
-Next, Loops only on correlated pairs, below max leverage.
+00:01:56.585 --> 00:01:57.255
+Looping.
 
-00:01:58.988 --> 00:02:02.363
-And finally, Break-even borrow rate known and alerted.
+00:01:58.555 --> 00:02:01.287
+Here's exactly what a loop does, mechanically,
 
-00:02:03.663 --> 00:02:04.873
-Question 1.
+00:02:01.287 --> 00:02:03.040
+one full cycle at a time.
 
-00:02:04.873 --> 00:02:08.573
-Max leverage at LTV 0.75?
+00:02:03.040 --> 00:02:05.365
+Deposit an asset as collateral.
 
-00:02:12.993 --> 00:02:14.608
-The answer: 4×.
+00:02:05.365 --> 00:02:07.737
+Borrow against it, up to some chosen
 
-00:02:15.908 --> 00:02:17.153
-Question 2.
+00:02:07.737 --> 00:02:10.045
+L.T.V. Use what you borrowed to buy
 
-00:02:17.153 --> 00:02:19.042
-What single number decides whether
+00:02:10.045 --> 00:02:11.820
+more of the same asset.
 
-00:02:19.042 --> 00:02:20.068
-a loop is worth it?
+00:02:11.820 --> 00:02:15.607
+And re-deposit that, as more collateral, starting the exact
 
-00:02:24.488 --> 00:02:26.229
-The answer: The spread between
+00:02:15.607 --> 00:02:18.385
+same cycle again, one loop deeper each time.
 
-00:02:26.229 --> 00:02:28.083
+00:02:19.685 --> 00:02:22.132
+Here's the formula that falls directly out
+
+00:02:22.132 --> 00:02:24.466
+of repeating that cycle, worth seeing in
+
+00:02:24.466 --> 00:02:26.530
+full before the worked example.
+
+00:02:26.530 --> 00:02:30.422
+After n loops at L.T.V. L, your leverage equals
+
+00:02:30.422 --> 00:02:33.260
+one minus L to the power of n plus
+
+00:02:33.260 --> 00:02:36.155
+one, all divided by one minus L.
+
+00:02:36.155 --> 00:02:38.991
+More loops push you closer and closer to
+
+00:02:38.991 --> 00:02:42.034
+a ceiling; at L.T.V. zero point seven five,
+
+00:02:42.034 --> 00:02:45.354
+that ceiling is exactly four times leverage, no
+
+00:02:45.354 --> 00:02:48.190
+matter how many additional loops you run.
+
+00:02:49.490 --> 00:02:52.726
+Plot leverage against the number of loops, at
+
+00:02:52.726 --> 00:02:55.540
+an LTV of 0.7 specifically, and you can
+
+00:02:55.540 --> 00:02:59.006
+watch that ceiling actually being approached.
+
+00:02:59.006 --> 00:03:01.375
+1 loop: 1.7x.
+
+00:03:01.375 --> 00:03:06.560
+3 loops: 2.53x, exactly this lesson's worked example.
+
+00:03:06.560 --> 00:03:09.185
+5 loops: 2.94x.
+
+00:03:09.185 --> 00:03:12.736
+And 10 loops: 3.27x, closing in on,
+
+00:03:12.736 --> 00:03:17.075
+but never quite reaching, the 3.33x ceiling.
+
+00:03:18.376 --> 00:03:19.466
+Quick check.
+
+00:03:19.466 --> 00:03:23.716
+What's the maximum possible leverage from looping at an
+
+00:03:23.716 --> 00:03:26.751
+LTV of 0.75, however many loops you run?
+
+00:03:31.171 --> 00:03:34.741
+The answer: four times, exactly one divided by one
+
+00:03:34.741 --> 00:03:38.451
+minus zero point seven five, the ceiling the formula
+
+00:03:38.451 --> 00:03:41.811
+approaches as loops increase, but never exceeds.
+
+00:03:43.111 --> 00:03:45.159
+Correlated vs volatile loops.
+
+00:03:46.459 --> 00:03:49.325
+Here's the actual distinction that decides how
+
+00:03:49.325 --> 00:03:51.824
+dangerous any given loop really is, more
+
+00:03:51.824 --> 00:03:54.624
+than the leverage number alone ever does.
+
+00:03:54.624 --> 00:03:57.852
+A correlated loop, an L.S.T. against its own
+
+00:03:57.852 --> 00:04:02.085
+underlying asset, or one stablecoin against another, moves
+
+00:04:02.085 --> 00:04:05.254
+both sides together, almost in lockstep.
+
+00:04:05.254 --> 00:04:09.060
+A volatile-against-stable loop instead has collateral and debt
+
+00:04:09.060 --> 00:04:12.382
+that can move in completely opposite directions, which
+
+00:04:12.382 --> 00:04:15.644
+is exactly what actually threatens your health factor.
+
+00:04:16.944 --> 00:04:19.817
+Worth naming concrete examples of each, so
+
+00:04:19.817 --> 00:04:22.924
+“correlated” isn't just an abstract label.
+
+00:04:22.924 --> 00:04:27.558
+A liquid-staking token looped against its own underlying, an
+
+00:04:27.558 --> 00:04:31.813
+L.S.T. of E.T.H. against E.T.H. itself, is a correlated
+
+00:04:31.813 --> 00:04:36.519
+loop; both sides track the same underlying price, closely.
+
+00:04:36.519 --> 00:04:39.765
+E.T.H. looped against U.S.D.C. debt is a
+
+00:04:39.765 --> 00:04:44.674
+volatile-against-stable loop; E.T.H.'s price can move sharply
+
+00:04:44.674 --> 00:04:48.079
+while the U.S.D.C. debt stays exactly flat.
+
+00:04:49.379 --> 00:04:52.930
+Here's exactly why that correlation matters so directly
+
+00:04:52.930 --> 00:04:56.464
+to your safety, mechanically, not just intuitively.
+
+00:04:56.464 --> 00:04:58.871
+Health factor depends on your collateral's
+
+00:04:58.871 --> 00:05:00.739
+value relative to your debt.
+
+00:05:00.739 --> 00:05:03.009
+If both move together, in the same
+
+00:05:03.009 --> 00:05:05.864
+direction, by roughly the same amount, that
+
+00:05:05.864 --> 00:05:09.018
+ratio barely changes, even at high leverage.
+
+00:05:09.018 --> 00:05:12.328
+If they diverge instead, the exact same leverage
+
+00:05:12.328 --> 00:05:16.178
+multiple becomes dramatically more dangerous, far faster.
+
+00:05:17.477 --> 00:05:18.482
+Worked example.
+
+00:05:19.782 --> 00:05:22.185
+Here's the one relationship this entire
+
+00:05:22.185 --> 00:05:24.347
+lesson comes down to, visually.
+
+00:05:24.347 --> 00:05:27.013
+A leveraged loop's return depends entirely on
+
+00:05:27.013 --> 00:05:29.737
+the spread between what your collateral earns,
+
+00:05:29.737 --> 00:05:32.007
+and what your borrowed debt costs.
+
+00:05:32.007 --> 00:05:34.007
+Widen that spread, and leverage
+
+00:05:34.007 --> 00:05:36.432
+amplifies a genuinely good return.
+
+00:05:36.432 --> 00:05:39.261
+Narrow it, or let it flip negative, and the
+
+00:05:39.261 --> 00:05:42.476
+exact same leverage amplifies a loss just as fast.
+
+00:05:43.776 --> 00:05:47.261
+Here's the setup this entire worked example runs on.
+
+00:05:47.261 --> 00:05:50.519
+LTV 0.7, 3 loops, 3.5%
+
+00:05:50.519 --> 00:05:55.776
+collateral yield, 2.5% borrow rate.
+
+00:05:55.776 --> 00:05:59.054
+Run through this program's own calculator,
+
+00:05:59.054 --> 00:06:01.493
+and leverage comes out to 2.53x.
+
+00:06:02.793 --> 00:06:05.168
+Now the net A.P.Y. on equity, step
+
+00:06:05.168 --> 00:06:07.950
+by step, the formula that actually tells
+
+00:06:07.950 --> 00:06:10.828
+you whether this loop was worth doing.
+
+00:06:10.828 --> 00:06:14.027
+Collateral yield, times leverage: three point five
+
+00:06:14.027 --> 00:06:16.536
+percent, times two point five three, is
+
+00:06:16.536 --> 00:06:18.718
+eight point eight six percent.
+
+00:06:18.718 --> 00:06:21.528
+Borrow rate, times leverage minus one: two
+
+00:06:21.528 --> 00:06:24.208
+point five percent, times one point five
+
+00:06:24.208 --> 00:06:27.253
+three, is three point eight three percent.
+
+00:06:27.253 --> 00:06:30.796
+Subtract the second from the first, and net A.P.Y.
+
+00:06:30.796 --> 00:06:33.783
+on equity is five point zero three percent.
+
+00:06:35.083 --> 00:06:38.163
+Now find the exact point where that positive return
+
+00:06:38.163 --> 00:06:41.898
+actually disappears, since rates don't stay fixed forever.
+
+00:06:41.898 --> 00:06:44.397
+At a two point five percent borrow
+
+00:06:44.397 --> 00:06:46.895
+rate, net A.P.Y. on equity is five
+
+00:06:46.895 --> 00:06:50.408
+point zero three percent, genuinely positive.
+
+00:06:50.408 --> 00:06:53.333
+Raise the borrow rate to five point seven eight
+
+00:06:53.333 --> 00:06:56.806
+percent, with nothing else changed, and that same loop's
+
+00:06:56.806 --> 00:06:59.183
+net return on equity hits exactly zero.
+
+00:07:00.483 --> 00:07:03.560
+And here's exactly why that break-even number should
+
+00:07:03.560 --> 00:07:06.172
+worry you, not just interest you, given what
+
+00:07:06.172 --> 00:07:08.678
+Lesson three point one already showed.
+
+00:07:08.678 --> 00:07:11.784
+Borrow rates on a nearly-full pool can jump from
+
+00:07:11.784 --> 00:07:15.713
+around four percent to thirty-four percent, within hours, not
+
+00:07:15.713 --> 00:07:20.133
+months, exactly the kinked-curve mechanism from that same lesson.
+
+00:07:20.133 --> 00:07:23.084
+A loop that looks comfortably profitable today can
+
+00:07:23.084 --> 00:07:26.209
+be underwater by tomorrow morning, with nothing about
+
+00:07:26.209 --> 00:07:28.523
+your own position having changed at all.
+
+00:07:29.823 --> 00:07:30.913
+Quick check.
+
+00:07:30.913 --> 00:07:33.987
+What single number actually decides whether a loop is
+
+00:07:33.987 --> 00:07:36.948
+worth doing, more than the leverage multiple itself?
+
+00:07:41.368 --> 00:07:43.109
+The answer: the spread between
+
+00:07:43.109 --> 00:07:45.263
 collateral yield and borrow rate.
 
-00:02:29.383 --> 00:02:30.653
-Question 3.
+00:07:45.263 --> 00:07:48.290
+A wide, stable spread makes a loop worthwhile;
 
-00:02:30.653 --> 00:02:32.428
-Why prefer correlated loops?
+00:07:48.290 --> 00:07:51.123
+a narrow or shrinking one erases the return.
 
-00:02:36.848 --> 00:02:40.013
-The answer: Collateral and debt move together,
+00:07:52.423 --> 00:07:55.586
+Here's how to actually monitor an open loop, ongoing,
 
-00:02:40.013 --> 00:02:42.168
-so price moves barely change HF.
+00:07:55.586 --> 00:07:58.053
+not just at the moment you set it up.
 
-00:02:43.468 --> 00:02:44.713
+00:07:58.053 --> 00:08:00.979
+Check the current spread, collateral yield minus
+
+00:08:00.979 --> 00:08:03.367
+borrow rate, on a regular schedule, not
+
+00:08:03.367 --> 00:08:05.578
+only when something feels wrong.
+
+00:08:05.578 --> 00:08:09.437
+Watch for utilisation climbing on the borrow side specifically,
+
+00:08:09.437 --> 00:08:12.693
+since that's the exact signal from Lesson three point
+
+00:08:12.693 --> 00:08:14.983
+one that rates are about to move.
+
+00:08:14.983 --> 00:08:18.908
+And unwind, deliberately, the moment the spread turns negative,
+
+00:08:18.908 --> 00:08:21.483
+rather than waiting to see if it recovers.
+
+00:08:22.783 --> 00:08:24.243
+Here's your checklist.
+
+00:08:24.243 --> 00:08:26.498
+Do it now, before opening any loop.
+
+00:08:26.498 --> 00:08:29.165
+Name your actual repayment source, before you
+
+00:08:29.165 --> 00:08:31.553
+ever borrow, not as an afterthought.
+
+00:08:31.553 --> 00:08:35.507
+Only loop correlated pairs, and stay below the mathematical
+
+00:08:35.507 --> 00:08:39.196
+maximum leverage for your L.T.V. And know your specific
+
+00:08:39.196 --> 00:08:42.755
+break-even borrow rate, with an alert actually set on
+
+00:08:42.755 --> 00:08:45.588
+it, not just calculated once and forgotten.
+
+00:08:46.888 --> 00:08:49.938
+One last honest connection before the recap, tying
+
+00:08:49.938 --> 00:08:53.108
+looping directly back to Lesson three point two.
+
+00:08:53.108 --> 00:08:56.615
+Every loop still carries a health factor, exactly like
+
+00:08:56.615 --> 00:09:00.378
+any other borrow, and the exact same liquidation mechanics
+
+00:09:00.378 --> 00:09:03.567
+from Lesson three point three still apply, on the
+
+00:09:03.567 --> 00:09:07.438
+full, leveraged position, not just the original deposit.
+
+00:09:07.438 --> 00:09:10.373
+Looping doesn't create a new category of risk.
+
+00:09:10.373 --> 00:09:12.198
+It multiplies the familiar one.
+
+00:09:13.498 --> 00:09:14.743
 Let's recap.
 
-00:02:44.713 --> 00:02:49.111
-Liquidity without selling: borrow stablecoins against assets
+00:09:14.743 --> 00:09:18.511
+Borrowing against an asset gets you liquidity without selling
 
-00:02:49.111 --> 00:02:51.706
-you want to keep (Module 12.3 turns
+00:09:18.511 --> 00:09:21.668
+it, a deliberate credit policy, not a reaction.
 
-00:02:51.706 --> 00:02:53.953
-this into a credit policy).
+00:09:21.668 --> 00:09:27.149
+Looping multiplies exposure through repeated deposit-borrow cycles, approaching
 
-00:02:53.953 --> 00:02:56.710
-Looping: deposit → borrow → re-deposit
+00:09:27.149 --> 00:09:30.370
+a leverage ceiling that never exceeds one over
 
-00:02:56.710 --> 00:02:59.202
-→ repeat, to multiply exposure.
+00:09:30.370 --> 00:09:34.001
+one minus L.T.V. Correlated pairs keep health factor
 
-00:02:59.202 --> 00:03:03.139
-Net APY on equity = collateral yield ×
+00:09:34.001 --> 00:09:38.823
+stable even at high leverage; volatile-against-stable pairs don't.
 
-00:03:03.139 --> 00:03:07.477
-leverage − borrow rate × (leverage − 1).
+00:09:38.823 --> 00:09:41.763
+And the spread between collateral yield and borrow
 
-00:03:07.477 --> 00:03:11.387
-Correlated loops (an LST against its underlying.
+00:09:41.763 --> 00:09:44.817
+rate, not the leverage number alone, decides whether
 
-00:03:12.687 --> 00:03:15.202
-Do the checklist now, before you move on.
+00:09:44.817 --> 00:09:47.123
+any given loop was actually worth doing.
 
-00:03:15.202 --> 00:03:19.962
+00:09:48.423 --> 00:09:51.947
+Name your repayment source, loop only correlated pairs, and
+
+00:09:51.947 --> 00:09:55.653
+know your break-even borrow rate before you open anything.
+
+00:09:55.653 --> 00:10:00.413
 Next up, Lesson 3.5: Perpetual futures and margin on-chain.
