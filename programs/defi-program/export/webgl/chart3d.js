@@ -160,9 +160,11 @@ function runBars(DATA) {
       // counter never floats up into it, found on a "Rung 3" bar at 100% height.
       // The clamp target itself needs to clear the header PLUS the label's own
       // height, since it's anchored by its bottom edge (translate(-50%,-100%)),
-      // not its top - 250 alone still let a 36px counter's top row poke into
-      // the header on a second pass; 300 leaves it clear.
-      cp.y = Math.max(cp.y, 300);
+      // not its top - 250 wasn't enough for a 1-line title, 300 wasn't enough
+      // once a long title wrapped to 2 lines ("Swapping $20,000: sandwich
+      // exposure by defence" pushed the header itself further down). 420
+      // covers a 2-line title plus a 2-line sub, the realistic worst case.
+      cp.y = Math.max(cp.y, 420);
       const ce = countEls[i]; ce.style.opacity = String(ease((t - a) / 0.4)); ce.style.transform = `translate(${cp.x.toFixed(1)}px, ${cp.y.toFixed(1)}px)`;
       ce.style.color = active ? `#${b.color.toString(16).padStart(6, '0')}` : '#fff';
       ce.firstChild.textContent = b.count ? formatCounter(b.count, easeIO((t - a) / 1.1)) : b.show;
