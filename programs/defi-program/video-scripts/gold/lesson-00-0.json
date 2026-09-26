@@ -320,6 +320,7 @@
   {
    "type": "compare",
    "chapter": "Words you'll need",
+   "title": "Where your keys live",
    "left": {
     "label": "On an exchange",
     "tone": "neutral",
@@ -673,6 +674,7 @@
   {
    "type": "compare",
    "chapter": "Your first safe step",
+   "title": "Two-factor: which kind is safe",
    "left": {
     "label": "Text-message codes",
     "tone": "neutral",
@@ -874,7 +876,7 @@
      "icon": "swap"
     },
     {
-     "label": "Enter seed phrase",
+     "label": "Enter your recovery words",
      "sub": "In order",
      "icon": "doc"
     },
@@ -889,6 +891,7 @@
   {
    "type": "compare",
    "chapter": "Common questions",
+   "title": "Is your money insured?",
    "left": {
     "label": "A bank account",
     "tone": "neutral",
@@ -982,11 +985,11 @@
    "chapter": "Common questions",
    "kicker": "One more honest answer",
    "lines": [
-    "Nobody can guarantee returns.",
-    "We guarantee a process."
+    "No one can promise returns.",
+    "We give you a process."
    ],
    "sub": "A safe setup, clear checklists, and habits that protect you either way.",
-   "vo": "One more honest answer, because it comes up a lot. Can this program guarantee I'll make money? No. Nobody can, and anyone who tells you otherwise is a warning sign, not a promise. What this program guarantees is a process: a safe setup, clear checklists, and habits that protect you whether the market goes up or down."
+   "vo": "One more honest answer, because it comes up a lot. Can this program promise I'll make money? No. Nobody can, and anyone who tells you otherwise is a warning sign, not a promise. What this program gives you is a process: a safe setup, clear checklists, and habits that protect you whether the market goes up or down."
   },
   {
    "type": "quiz",

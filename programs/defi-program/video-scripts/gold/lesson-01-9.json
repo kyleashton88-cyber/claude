@@ -68,6 +68,7 @@
   {
    "type": "compare",
    "chapter": "EOA vs smart account",
+   "title": "A normal wallet vs a smart account",
    "left": {
     "label": "EOA (a normal wallet)",
     "tone": "warn",
@@ -270,6 +271,7 @@
   {
    "type": "compare",
    "chapter": "The features",
+   "title": "A seed phrase vs a passkey",
    "left": {
     "label": "A seed phrase",
     "tone": "warn",
@@ -291,6 +293,7 @@
   {
    "type": "compare",
    "chapter": "The features",
+   "title": "With vs without batching",
    "left": {
     "label": "Without batching",
     "tone": "warn",
@@ -367,6 +370,7 @@
   {
    "type": "compare",
    "chapter": "New risks",
+   "title": "Choosing your guardians",
    "left": {
     "label": "Poorly chosen guardians",
     "tone": "bad",
@@ -406,6 +410,7 @@
   {
    "type": "compare",
    "chapter": "Worked example",
+   "title": "Lost phone vs stolen phone",
    "left": {
     "label": "You lose your phone",
     "tone": "warn",

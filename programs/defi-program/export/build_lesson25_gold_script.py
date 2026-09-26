@@ -48,7 +48,7 @@ sc("stats", "One real, dated number, so this isn't an abstract worry. Blockchain
    chapter="What MEV actually is", stats=[["$100Ms+", "extracted via sandwich/MEV attacks, tracked across years (outside research)"]])
 sc("compare", "Put the two kinds of M.E.V. side by side, since telling them apart is the whole point of this chapter. Arbitrage M.E.V. reacts to a price that's already out of line, and its actual effect is to correct it, closer to the wider market. Sandwich M.E.V. creates the bad price itself, purely to profit from your specific trade, and leaves nothing corrected once it's done.",
    chapter="What MEV actually is",
-   left={"label": "Arbitrage MEV", "tone": "good", "items": ["Reacts to a price already out of line", "Corrects it, closer to the wider market"]},
+   title="Arbitrage vs sandwich MEV", left={"label": "Arbitrage MEV", "tone": "good", "items": ["Reacts to a price already out of line", "Corrects it, closer to the wider market"]},
    right={"label": "Sandwich MEV", "tone": "bad", "items": ["Creates the bad price itself", "Profits from your trade; corrects nothing"]})
 sc("quiz", "Quick check. Is all MEV harmful to you as a trader? [[pause 4]] The answer: no. Arbitrage that realigns a pool's price with the wider market is a harmless form of MEV. This lesson is about the specific kind that targets your own pending trade.",
    chapter="What MEV actually is", n=1, of=3, q="Is all MEV harmful to you as a trader?",
@@ -86,7 +86,7 @@ sc("steps", "Here's what turning on protected routing actually looks like, in pr
    steps=["Check your wallet/aggregator for a “protected” or “private” option", "Switch it on, as your default above a small size", "Confirm it still lands normally — just broadcast differently"], result="Simpler than it sounds; most major wallets offer this")
 sc("compare", "Worth being precise about the one mistake this lesson keeps circling back to, since it's the opposite failure to a sandwich. Slippage set too loose leaves room for a sandwich to profit inside it. Slippage set too tight, near zero, on a genuinely volatile pair, just makes ordinary price movement cause your transaction to fail outright, and a failed transaction still costs you the gas, from Lesson one point two.",
    chapter="The real defences",
-   left={"label": "Too loose", "tone": "bad", "items": ["Leaves room for a sandwich to profit", "The exact exposure this lesson measures"]},
+   title="Slippage: too loose vs too tight", left={"label": "Too loose", "tone": "bad", "items": ["Leaves room for a sandwich to profit", "The exact exposure this lesson measures"]},
    right={"label": "Too tight", "tone": "bad", "items": ["Ordinary price movement causes it to fail", "A failed transaction still costs gas"]})
 
 # ---------------------------------------------------------------- worked example
@@ -97,7 +97,7 @@ sc("stats", "Here's the exposure, at a slippage tolerance of three percent, on a
    chapter="Worked example", stats=[["~$600 exposed", "3% slippage tolerance, on a $20,000 swap"]])
 sc("compare", "Now tighten that same swap to zero point five percent slippage, and see how directly the exposure shrinks with it. At three percent, up to roughly six hundred dollars is exposed. At zero point five percent, that drops to roughly one hundred dollars, a six-fold reduction, from tightening one single setting, on the exact same trade.",
    chapter="Worked example",
-   left={"label": "3% slippage tolerance", "tone": "bad", "items": ["Up to ~$600 exposed", "1.5% of the full $20,000 trade"]},
+   title="3% vs 0.5% slippage tolerance", left={"label": "3% slippage tolerance", "tone": "bad", "items": ["Up to ~$600 exposed", "1.5% of the full $20,000 trade"]},
    right={"label": "0.5% slippage tolerance", "tone": "good", "items": ["Up to ~$100 exposed", "A 6× reduction, same trade"]})
 sc("chart", "Plot exposure against slippage tolerance across a wider range, and the relationship is exactly as direct as it looks. Three percent slippage exposes roughly six hundred dollars. One percent exposes roughly two hundred. Zero point five percent, one hundred. And zero point one percent, roughly twenty dollars, though at that tightness, ordinary price movement starts making the trade fail outright, exactly the trade-off from a moment ago.",
    chapter="Worked example", kind="line", title="Exposure vs slippage tolerance, on a $20,000 swap", sub="Illustrative — roughly linear with your setting",
@@ -112,7 +112,7 @@ sc("quiz", "Quick check. Why does setting slippage tolerance near zero on a genu
 # ---------------------------------------------------------------- checklist and recap
 sc("compare", "One last reason splitting large trades specifically works, worth naming before the checklist. A sandwich bot pays its own gas, twice, to set up and close its attack, so it needs enough expected profit to justify that cost. A large trade, sandwiched once, can easily clear that bar. That same total value, split into several smaller trades, may simply not be worth attacking, individually, at all.",
    chapter="Checklist",
-   left={"label": "One large trade", "tone": "bad", "items": ["Clears the bot's own gas cost easily", "A worthwhile target, on its own"]},
+   title="One large trade vs several smaller", left={"label": "One large trade", "tone": "bad", "items": ["Clears the bot's own gas cost easily", "A worthwhile target, on its own"]},
    right={"label": "Split into smaller trades", "tone": "good", "items": ["Each one, individually, may not be worth it", "The bot's gas cost has to be justified each time"]})
 sc("steps", "Here's your checklist. Do it now, on every trade of real size. Slippage is set specifically for this pair and this size, never left on whatever high default the interface picked. Protected or private routing is switched on for larger swaps. And large orders are split, or routed through genuinely deep liquidity, not broadcast as one big, visible target.",
    chapter="Checklist", title="Your checklist",

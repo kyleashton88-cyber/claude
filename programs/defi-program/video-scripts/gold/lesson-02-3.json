@@ -87,6 +87,7 @@
   {
    "type": "compare",
    "chapter": "What LPing actually does",
+   "title": "Full-range vs concentrated",
    "left": {
     "label": "Full-range position",
     "tone": "good",
@@ -136,6 +137,7 @@
   {
    "type": "compare",
    "chapter": "What LPing actually does",
+   "title": "Two-sided vs single-sided deposit",
    "left": {
     "label": "Depositing both tokens yourself",
     "tone": "good",
@@ -214,6 +216,7 @@
   {
    "type": "compare",
    "chapter": "The fee APR formula",
+   "title": "Today's vs 30-day volume",
    "left": {
     "label": "Today's volume",
     "tone": "bad",
@@ -247,6 +250,7 @@
   {
    "type": "compare",
    "chapter": "The fee APR formula",
+   "title": "A higher vs a lower fee tier",
    "left": {
     "label": "A higher fee tier",
     "tone": "warn",
@@ -310,6 +314,7 @@
   {
    "type": "compare",
    "chapter": "Worked example",
+   "title": "If volume halves vs if TVL joins",
    "left": {
     "label": "If volume halves",
     "tone": "warn",
