@@ -67,7 +67,7 @@ node build_video.js lessons              # all lessons (several hours of renderi
 | 1.7 | Reading signatures and simulating transactions | 30 | 10.3 min | `video-scripts/gold/lesson-01-7.json` (gold: simulation, typed-data 4-field, blind-signing and EIP-7702 delegation walk-throughs as flows/steps/compares, dedicated Permit2-phishing worked-example mockup, approval-checking flow) | ✓ |
 | 1.8 | Privacy and physical security | 29 | 8:58 min | `video-scripts/gold/lesson-01-8.json` (gold: identity-linking chain as a flow3d, exposure-surface chart3d donut, wrench-attack risk, separated multisig as a flow3d, home/device discretion) | ✓ |
 | 1.9 | Smart accounts and account abstraction | 24 | 7:58 min | `video-scripts/gold/lesson-01-9.json` (gold: ERC-4337 user-operation flow as a flow3d, spending-tier chart3d bars, social recovery as a flat flow) | ✓ |
-| 2.0 | Mastery Starter | 8 | 1.6 min | `video-scripts/lessons/lesson-02-0.json` | ✓ |
+| 2.0 | Mastery Starter | 24 | 6:50 min | `video-scripts/gold/lesson-02-0.json` (gold: swap-routing mechanism as a flow3d, price-impact and IL-vs-holding as flat line charts, mastery-ladder rungs as a chart3d) | ✓ |
 | 2.1 | DEXs, aggregators & routing | 11 | 3.1 min | `video-scripts/lessons/lesson-02-1.json` | ✓ |
 | 2.2 | AMM Mathematics (x · y = k) | 12 | 4.6 min | `video-scripts/lessons/lesson-02-2.json` | ✓ |
 | 2.3 | Providing liquidity | 9 | 2.9 min | `video-scripts/lessons/lesson-02-3.json` | ✓ |

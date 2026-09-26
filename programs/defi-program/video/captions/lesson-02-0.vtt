@@ -1,103 +1,433 @@
 WEBVTT
 
-00:00:00.550 --> 00:00:02.635
-Mastery Starter 2.0.
+00:00:00.550 --> 00:00:02.065
+Lesson 2.0.
 
-00:00:02.635 --> 00:00:04.480
-New to Trading On-Chain?
+00:00:02.065 --> 00:00:03.420
+Mastery Starter.
 
-00:00:04.480 --> 00:00:05.540
+00:00:03.420 --> 00:00:05.265
+New to trading on-chain?
+
+00:00:05.265 --> 00:00:06.325
 Start here.
 
-00:00:05.540 --> 00:00:07.627
-In about ten minutes, you'll go from
+00:00:06.325 --> 00:00:08.932
+In about 10 minutes, you'll have the five words
 
-00:00:07.627 --> 00:00:09.320
-zero to ready for this module.
+00:00:08.932 --> 00:00:11.485
+and the first move this whole module builds on.
 
-00:00:10.620 --> 00:00:12.629
-A swap on a DEX trades against a
+00:00:12.785 --> 00:00:14.075
+Here's the plan.
 
-00:00:12.629 --> 00:00:15.060
-pool of tokens priced by a formula.
+00:00:14.075 --> 00:00:17.400
+First, the sixty second version of this whole module.
 
-00:00:15.060 --> 00:00:17.389
-Providing liquidity to that pool earns
+00:00:17.400 --> 00:00:20.630
+Second, five words you'll hear constantly from here on.
 
-00:00:17.389 --> 00:00:19.540
-fees but changes what you hold.
+00:00:20.630 --> 00:00:22.324
+Third, one safe first move you
 
-00:00:19.540 --> 00:00:21.744
-This module teaches you to trade and
+00:00:22.324 --> 00:00:24.865
+can make today, without risking anything.
 
-00:00:21.744 --> 00:00:24.127
-provide liquidity knowing the real cost.
+00:00:24.865 --> 00:00:27.368
+And finally, the mastery ladder that shows
 
-00:00:25.427 --> 00:00:28.882
-DEX: a decentralised exchange you use from your wallet.
+00:00:27.368 --> 00:00:29.230
+where this module is taking you.
 
-00:00:28.882 --> 00:00:30.428
-Liquidity pool: a pot of
+00:00:30.530 --> 00:00:33.292
+Every swap you'll ever make on-chain moves a
 
-00:00:30.428 --> 00:00:32.707
-two tokens traders swap against.
+00:00:33.292 --> 00:00:36.170
+price that isn't set by any single seller.
 
-00:00:32.707 --> 00:00:35.989
-Price impact: how much your trade moves the price.
+00:00:36.170 --> 00:00:39.167
+Trade blind to that, and the pool itself quietly
 
-00:00:35.989 --> 00:00:38.424
-Slippage: the worst price you'll accept.
+00:00:39.167 --> 00:00:41.858
+charges you for the size of your own trade,
 
-00:00:38.424 --> 00:00:42.154
-Impermanent loss: how far an LP lags simply holding.
+00:00:41.858 --> 00:00:44.060
+before a single fee is even counted.
 
-00:00:43.453 --> 00:00:45.698
-First, Modules 0–1.
+00:00:45.360 --> 00:00:46.785
+The 60-second version.
 
-00:00:45.698 --> 00:00:48.332
-And finally, A little ETH for gas
+00:00:48.085 --> 00:00:49.585
+Here it is, in full.
 
-00:00:48.332 --> 00:00:51.043
-and some USDC on a low-fee network.
+00:00:49.585 --> 00:00:52.875
+A swap on a decentralised exchange trades against
 
-00:00:52.343 --> 00:00:54.770
-Quote a $20 swap on one DEX and on
+00:00:52.875 --> 00:00:55.441
+a pool of tokens, priced by a formula,
 
-00:00:54.770 --> 00:00:59.299
-an aggregator; compare what you'd actually receive after gas.
+00:00:55.441 --> 00:00:57.715
+not by a company's order book.
 
-00:00:59.299 --> 00:01:00.564
-Don't execute yet.
+00:00:57.715 --> 00:01:00.198
+Providing liquidity to that same pool earns
 
-00:01:01.864 --> 00:01:03.818
-Beginner: Makes small swaps with
+00:01:00.198 --> 00:01:02.303
+you a share of its trading fees.
 
-00:01:03.818 --> 00:01:06.604
-deliberate slippage and protected routing.
+00:01:02.303 --> 00:01:04.817
+But it also changes what you hold, compared
 
-00:01:06.604 --> 00:01:10.493
-Practitioner: Calculates fee APR and IL,
+00:01:04.817 --> 00:01:07.403
+to just holding the two tokens yourself.
 
-00:01:10.493 --> 00:01:13.164
-and tracks LP vs holding.
+00:01:07.403 --> 00:01:09.566
+This module teaches you to do both,
 
-00:01:13.164 --> 00:01:16.892
-Master: Uses limit/TWAP/intent orders and
+00:01:09.566 --> 00:01:11.428
+knowing the real cost going in.
 
-00:01:16.892 --> 00:01:19.378
-runs LPs with written rules.
+00:01:12.728 --> 00:01:14.771
+Watch what actually happens when you
 
-00:01:20.679 --> 00:01:23.264
-You've mastered this module when you can
+00:01:14.771 --> 00:01:16.893
+tap “swap.” You submit the trade.
 
-00:01:23.264 --> 00:01:25.281
-predict a swap's cost and an LP
+00:01:16.893 --> 00:01:19.367
+An aggregator checks prices across many
 
-00:01:25.281 --> 00:01:28.559
-position's result against holding, before you enter.
+00:01:19.367 --> 00:01:21.398
+pools at once, not just one.
 
-00:01:29.859 --> 00:01:32.374
-Do the checklist now, before you move on.
+00:01:21.398 --> 00:01:24.083
+It routes your trade to whichever pool, or split
 
-00:01:32.374 --> 00:01:36.439
-Next up, Lesson 2.1: DEXs, aggregators & routing.
+00:01:24.083 --> 00:01:26.903
+of pools, gives you the best price after fees.
+
+00:01:26.903 --> 00:01:29.070
+That pool's own formula sets the
+
+00:01:29.070 --> 00:01:31.668
+exact price as your trade executes.
+
+00:01:31.668 --> 00:01:33.633
+And you receive the output token,
+
+00:01:33.633 --> 00:01:35.888
+at whatever price the formula produced.
+
+00:01:37.188 --> 00:01:38.278
+Quick check.
+
+00:01:38.278 --> 00:01:40.028
+What does providing liquidity to
+
+00:01:40.028 --> 00:01:41.353
+a pool actually earn you?
+
+00:01:45.773 --> 00:01:48.276
+The answer: a share of that pool's trading
+
+00:01:48.276 --> 00:01:50.895
+fees, in exchange for changing what you hold
+
+00:01:50.895 --> 00:01:53.863
+compared to simply holding the two tokens yourself.
+
+00:01:55.163 --> 00:01:56.468
+Five words you'll need.
+
+00:01:57.768 --> 00:02:00.363
+The first two describe where a trade happens.
+
+00:02:00.363 --> 00:02:02.916
+A DEX, a decentralised exchange, is one
+
+00:02:02.916 --> 00:02:05.404
+you use straight from your own wallet,
+
+00:02:05.404 --> 00:02:07.938
+no account, no custody handed over.
+
+00:02:07.938 --> 00:02:10.454
+A liquidity pool is the pot of two tokens
+
+00:02:10.454 --> 00:02:13.868
+sitting inside it that your trade actually swaps against.
+
+00:02:15.168 --> 00:02:17.568
+Put real numbers on price impact.
+
+00:02:17.568 --> 00:02:19.591
+In a typical pool, a tiny trade
+
+00:02:19.591 --> 00:02:21.788
+barely moves the price at all.
+
+00:02:21.788 --> 00:02:24.298
+Trade a size that's a meaningful slice of
+
+00:02:24.298 --> 00:02:26.688
+the pool, and the price you get worsens
+
+00:02:26.688 --> 00:02:29.498
+fast, well before any fee is even applied.
+
+00:02:29.498 --> 00:02:32.860
+That's why the same $20 trade can cost noticeably
+
+00:02:32.860 --> 00:02:35.348
+more in a small pool than a deep one.
+
+00:02:36.648 --> 00:02:38.203
+The next two describe cost,
+
+00:02:38.203 --> 00:02:40.058
+and they're easy to confuse.
+
+00:02:40.058 --> 00:02:42.101
+Price impact is how much your own
+
+00:02:42.101 --> 00:02:44.565
+trade moves the price, purely because of
+
+00:02:44.565 --> 00:02:46.668
+its size relative to the pool.
+
+00:02:46.668 --> 00:02:48.720
+Slippage is the worst price you've told
+
+00:02:48.720 --> 00:02:51.123
+the app you'll accept, your safety limit.
+
+00:02:51.123 --> 00:02:53.836
+A big trade has real price impact whether
+
+00:02:53.836 --> 00:02:56.742
+you set slippage or not; slippage just stops
+
+00:02:56.742 --> 00:02:59.713
+it from executing far worse than you expected.
+
+00:03:01.013 --> 00:03:02.318
+The fifth word is the
+
+00:03:02.318 --> 00:03:04.458
+one that surprises people most.
+
+00:03:04.458 --> 00:03:07.100
+Impermanent loss is how far a liquidity
+
+00:03:07.100 --> 00:03:09.874
+position lags simply holding the same two
+
+00:03:09.874 --> 00:03:12.618
+tokens, once their prices move apart.
+
+00:03:12.618 --> 00:03:14.953
+It isn't a fee, and it isn't theft.
+
+00:03:14.953 --> 00:03:18.620
+It's the mathematical cost of the formula rebalancing your
+
+00:03:18.620 --> 00:03:22.100
+pool for you, automatically, every time the price moves.
+
+00:03:23.399 --> 00:03:24.994
+Here's the shape of it.
+
+00:03:24.994 --> 00:03:27.518
+Deposit into a pool when both tokens are
+
+00:03:27.518 --> 00:03:30.034
+worth the same as just holding them.
+
+00:03:30.034 --> 00:03:31.999
+Let one token's price run up.
+
+00:03:31.999 --> 00:03:34.769
+Simply holding would have captured that whole move.
+
+00:03:34.769 --> 00:03:38.348
+The pool, instead, has been automatically selling the
+
+00:03:38.348 --> 00:03:41.331
+rising token into the falling one the entire
+
+00:03:41.331 --> 00:03:43.752
+way up, so the LP position lags.
+
+00:03:43.752 --> 00:03:46.765
+Fees earned can close that gap, or even close
+
+00:03:46.765 --> 00:03:49.712
+it entirely, but the gap itself is real, and
+
+00:03:49.712 --> 00:03:52.267
+it starts the moment prices move apart.
+
+00:03:53.567 --> 00:03:54.657
+Quick check.
+
+00:03:54.657 --> 00:03:57.822
+What's the real difference between price impact and slippage?
+
+00:04:02.242 --> 00:04:04.795
+The answer: price impact is how much your
+
+00:04:04.795 --> 00:04:07.408
+trade moves the price, caused by its size;
+
+00:04:07.408 --> 00:04:10.083
+slippage is the worst price you've told the
+
+00:04:10.083 --> 00:04:12.757
+app you'll accept, a limit you set yourself.
+
+00:04:14.057 --> 00:04:15.332
+Your first safe step.
+
+00:04:16.632 --> 00:04:18.274
+Before you start this module
+
+00:04:18.274 --> 00:04:20.217
+for real, confirm two things.
+
+00:04:20.217 --> 00:04:22.642
+You've completed Modules 0 and 1.
+
+00:04:22.642 --> 00:04:25.618
+And you have a little ETH for gas, plus
+
+00:04:25.618 --> 00:04:28.967
+some USDC, on a low-fee network, ready to go.
+
+00:04:30.267 --> 00:04:31.862
+Here's the move itself.
+
+00:04:31.862 --> 00:04:34.111
+Pick a token pair you'd actually
+
+00:04:34.111 --> 00:04:35.842
+trade, say $20 of it.
+
+00:04:35.842 --> 00:04:39.722
+Quote that exact trade on a single DEX directly.
+
+00:04:39.722 --> 00:04:43.007
+Then quote the same trade on an aggregator instead.
+
+00:04:43.007 --> 00:04:46.331
+Compare what you'd actually receive after gas, on each.
+
+00:04:46.331 --> 00:04:48.153
+Don't execute either yet, just look
+
+00:04:48.153 --> 00:04:49.976
+at the difference the routing makes.
+
+00:04:51.277 --> 00:04:52.367
+Quick check.
+
+00:04:52.367 --> 00:04:53.704
+Why quote the same trade
+
+00:04:53.704 --> 00:04:55.522
+both ways before executing either?
+
+00:04:59.942 --> 00:05:03.068
+The answer: routing through an aggregator can find a
+
+00:05:03.068 --> 00:05:06.665
+better price across several pools, and comparing first shows
+
+00:05:06.665 --> 00:05:09.732
+you exactly what that's worth, with nothing at risk.
+
+00:05:11.032 --> 00:05:12.127
+The mastery ladder.
+
+00:05:13.427 --> 00:05:16.442
+Here's where this module takes you, as three rungs.
+
+00:05:16.442 --> 00:05:20.432
+Beginner: small swaps, deliberate slippage, protected routing.
+
+00:05:20.432 --> 00:05:24.295
+Practitioner: calculating fee APR and impermanent loss,
+
+00:05:24.295 --> 00:05:27.562
+tracking a position against simply holding.
+
+00:05:27.562 --> 00:05:31.946
+Master: running limit, TWAP and intent-based orders, with
+
+00:05:31.946 --> 00:05:35.347
+written rules for every LP position you open.
+
+00:05:36.647 --> 00:05:39.247
+Here's the road ahead, lesson by lesson.
+
+00:05:39.247 --> 00:05:44.467
+2.1 covers DEXs, aggregators and routing in full.
+
+00:05:44.467 --> 00:05:48.057
+2.3 and 2.4 are providing liquidity, and the
+
+00:05:48.057 --> 00:05:51.707
+true P&L once impermanent loss is counted.
+
+00:05:51.707 --> 00:05:54.504
+2.5 is MEV, the value extracted from
+
+00:05:54.504 --> 00:05:57.677
+your trades if you don't protect them.
+
+00:05:57.677 --> 00:06:00.635
+And 2.6 through 2.8 take you into
+
+00:06:00.635 --> 00:06:04.376
+limit orders, advanced AMM design, and the
+
+00:06:04.376 --> 00:06:06.812
+MEV supply chain end to end.
+
+00:06:08.112 --> 00:06:11.338
+You've mastered this module when you can predict a
+
+00:06:11.338 --> 00:06:14.817
+swap's real cost, and an L.P. position's likely result
+
+00:06:14.817 --> 00:06:18.422
+against simply holding, before you ever enter either one.
+
+00:06:19.722 --> 00:06:21.942
+To recap: a swap trades against a
+
+00:06:21.942 --> 00:06:25.599
+formula-priced pool, and providing liquidity earns fees
+
+00:06:25.599 --> 00:06:27.597
+but changes what you hold.
+
+00:06:27.597 --> 00:06:31.431
+Price impact and slippage are different things, and impermanent
+
+00:06:31.431 --> 00:06:34.547
+loss is the formula rebalancing you, not a fee.
+
+00:06:34.547 --> 00:06:37.052
+And your first move is simply to compare,
+
+00:06:37.052 --> 00:06:39.497
+quoted two ways, before you ever execute.
+
+00:06:40.797 --> 00:06:43.212
+That's your Mastery Starter for Module Two.
+
+00:06:43.212 --> 00:06:46.818
+Next up, Lesson 2.1: DEXs, aggregators, and
+
+00:06:46.818 --> 00:06:50.097
+how routing actually decides your price.
