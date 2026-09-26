@@ -24,9 +24,15 @@ REQUIRED = {
     'pillars': ['title', 'items'], 'compare': ['title', 'left', 'right'], 'steps': ['title', 'steps'],
     'quiz': ['q', 'a', 'n', 'of'], 'logo': ['tagline'], 'image': ['src'], 'stats': ['stats'],
     'cta': ['button'], 'flow': ['nodes'], 'cutaway': ['shots'],
+    # chart/flow3d/chart3d predate this linter (chart shipped without a linter update;
+    # flow3d/chart3d are the WebGL scene types - see .claude/skills/webgl-motion-graphics).
+    # `kind` defaults to "bars" in build_video.js, so it's not required here either -
+    # these are deliberately as loose as `flow`: real per-kind field checks (bars vs
+    # segs vs series) aren't cross-checked.
+    'chart': [], 'flow3d': ['nodes'], 'chart3d': [],
 }
 TEXT_SLIDES = {'bullets', 'statement', 'steps', 'pillars'}
-VISUALS = {'image', 'flow', 'cutaway', 'compare', 'stats', 'strike'}
+VISUALS = {'image', 'flow', 'flow3d', 'cutaway', 'compare', 'stats', 'strike', 'chart', 'chart3d'}
 FORBIDDEN = [
     (r'\bguarantee(d|s)?\b(?!.*\bno\b)', 'promise of guaranteed results'),
     (r'\brisk[- ]free\b', '"risk-free"'),
@@ -93,13 +99,13 @@ def lint(path):
                 err(i, f'missing asset {src}')
         if t == 'quiz' and not any(re.match(r'(the )?answer', x, re.I) for x in sentences(vo)):
             err(i, 'quiz: "vo" needs a sentence starting "The answer..." so the timer and reveal sync')
-        if t == 'flow':
+        if t in ('flow', 'flow3d'):
             ids = {n.get('id', str(j)) for j, n in enumerate(s.get('nodes', []))}
             for e in s.get('edges', []):
                 if e.get('from') not in ids or e.get('to') not in ids:
-                    err(i, f'flow: edge {e.get("from")}->{e.get("to")} points at an unknown node')
+                    err(i, f'{t}: edge {e.get("from")}->{e.get("to")} points at an unknown node')
             if len(s.get('nodes', [])) > 6:
-                warn(i, 'flow: more than 6 nodes is hard to read: split into two flows')
+                warn(i, f'{t}: more than 6 nodes is hard to read: split into two flows')
         if t == 'cutaway':
             for j, sh in enumerate(s.get('shots', []), 1):
                 if not sh.get('box') and not sh.get('zoom'):
