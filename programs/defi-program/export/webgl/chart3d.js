@@ -89,6 +89,16 @@ function runBars(DATA) {
   const { centroid, dist: camDist } = frameFromPoints(
     bars.flatMap(b => [new THREE.Vector3(b.x, 0, b.z), new THREE.Vector3(b.x, maxH, b.z)]), W, H, { marginX: 2.4, marginY: 2.6 });
 
+  // Measure the actual projected gap between neighboring bars' label anchors
+  // (using the same moveCamera/project the render hook uses) so long labels
+  // (e.g. "Passkey + hardware key") wrap instead of overflowing sideways into
+  // the next bar's label - a fixed nowrap here read fine with short labels but
+  // clipped a neighbor's sub-label once real lesson copy ran longer.
+  moveCamera(camera, centroid, camDist, 0, DATA.cameraMove || pickCameraMove(DATA.seed), { duration: DATA.dur });
+  const anchorX = bars.map(b => project(new THREE.Vector3(b.x, -0.35, b.z), camera, W, H).x);
+  const gaps = anchorX.slice(1).map((x, i) => Math.abs(x - anchorX[i]));
+  const maxLabelW = Math.max(150, (gaps.length ? Math.min(...gaps) : W * 0.6) * 0.92);
+
   // ground plinth: a faint line under the whole row
   const plinthGeo = new THREE.BufferGeometry().setAttribute('position', new THREE.BufferAttribute(
     new Float32Array([bars[0].x - spacing * 0.6, 0, 0, bars[n - 1].x + spacing * 0.6, 0, 0]), 3));
@@ -114,9 +124,9 @@ function runBars(DATA) {
 
   const particles = ambientParticles(scene, DATA.seed || 7, { count: 110 });
 
-  const labelEls = bars.map(b => labelDiv(labels, `<div style="text-align:center;transform:translate(-50%,0)">
-    <div style="font-size:29px;font-weight:700;line-height:1.2;white-space:nowrap;text-shadow:0 2px 12px rgba(0,0,0,.85)">${b.label}</div>
-    ${b.text ? `<div style="font-size:22px;font-weight:500;color:rgba(255,255,255,.66);white-space:nowrap;text-shadow:0 2px 10px rgba(0,0,0,.85)">${b.text}</div>` : ''}</div>`));
+  const labelEls = bars.map(b => labelDiv(labels, `<div style="text-align:center;max-width:${maxLabelW}px;transform:translate(-50%,0)">
+    <div style="font-size:29px;font-weight:700;line-height:1.2;text-shadow:0 2px 12px rgba(0,0,0,.85)">${b.label}</div>
+    ${b.text ? `<div style="font-size:22px;font-weight:500;color:rgba(255,255,255,.66);line-height:1.25;text-shadow:0 2px 10px rgba(0,0,0,.85)">${b.text}</div>` : ''}</div>`));
   const countEls = bars.map(b => labelDiv(labels, `<div style="font-size:36px;font-weight:800;white-space:nowrap;transform:translate(-50%,-100%);text-shadow:0 2px 12px rgba(0,0,0,.85)"></div>`));
 
   window.__hooks = window.__hooks || [];
