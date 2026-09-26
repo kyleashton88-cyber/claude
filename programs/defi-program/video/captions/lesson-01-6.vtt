@@ -6,188 +6,668 @@ Lesson 1.6.
 00:00:02.295 --> 00:00:03.520
 Scam defence.
 
-00:00:03.520 --> 00:00:05.297
-By the end of this lesson, you'll
+00:00:03.520 --> 00:00:05.221
+By the end, you'll be able to
 
-00:00:05.297 --> 00:00:07.387
-be able to recognise the common attacks
+00:00:05.221 --> 00:00:07.774
+recognise the six most common attacks before
 
-00:00:07.387 --> 00:00:08.955
-before they cost you anything.
+00:00:07.774 --> 00:00:09.475
+any of them cost you anything.
 
-00:00:10.255 --> 00:00:11.545
-Here's the plan.
+00:00:10.775 --> 00:00:13.146
+Here's the plan, and every one of these six
 
-00:00:11.545 --> 00:00:13.230
-First, the key ideas.
+00:00:13.146 --> 00:00:16.410
+attacks gets a proper walk-through, not just a mention.
 
-00:00:13.230 --> 00:00:15.945
-Then, a worked example, step by step.
+00:00:16.410 --> 00:00:19.027
+Four attacks you've already glimpsed in earlier
 
-00:00:15.945 --> 00:00:17.470
-Then, your checklist.
+00:00:19.027 --> 00:00:21.944
+lessons, revisited together with their defences.
 
-00:00:17.470 --> 00:00:19.632
-And finally, a three-question quiz.
+00:00:21.944 --> 00:00:23.639
+Two more you haven't met yet.
 
-00:00:20.932 --> 00:00:24.315
-Phishing site, Look-alike URL / sponsored search
+00:00:23.639 --> 00:00:25.628
+And a full worked example on the
 
-00:00:24.315 --> 00:00:26.687
-ad / fake app, Bookmarks only.
+00:00:25.628 --> 00:00:28.160
+one that catches out even careful people:
 
-00:00:26.687 --> 00:00:29.382
-Never click links from DMs or ads.
+00:00:28.160 --> 00:00:31.054
+address poisoning, shown character by character.
 
-00:00:29.382 --> 00:00:32.336
-Wallet drainer, You sign an approval, Permit or
+00:00:32.354 --> 00:00:35.473
+Here's roughly how these six attacks break down,
 
-00:00:32.336 --> 00:00:35.897
-setApprovalForAll for an attacker, Read every prompt.
+00:00:35.473 --> 00:00:38.911
+as categories, not measured statistics, based on what
 
-00:00:35.897 --> 00:00:37.812
-Burner wallet for new sites.
+00:00:38.911 --> 00:00:42.139
+security researchers report seeing most often.
 
-00:00:37.812 --> 00:00:41.921
-Address poisoning, Attacker sends $0 transfers from an address
+00:00:42.139 --> 00:00:44.669
+Drainer signatures and fake sites together
 
-00:00:41.921 --> 00:00:44.726
-that looks like one you use, so it appears
+00:00:44.669 --> 00:00:46.499
+make up the largest share.
 
-00:00:44.726 --> 00:00:48.352
-in your history, Never copy addresses from history.
+00:00:46.499 --> 00:00:48.568
+Fake support and poisoned addresses
 
-00:00:48.352 --> 00:00:49.741
-Use a saved address book
+00:00:48.568 --> 00:00:50.534
+are smaller but still common.
 
-00:00:49.741 --> 00:00:51.542
-and check the full address.
+00:00:50.534 --> 00:00:52.258
+And fake tokens and too-good
 
-00:00:51.542 --> 00:00:54.523
-Fake token / airdrop, Unknown tokens appear in
+00:00:52.258 --> 00:00:54.104
+yields round out the rest.
 
-00:00:54.523 --> 00:00:57.677
-your wallet with a "claim" link, Ignore them.
+00:00:54.104 --> 00:00:57.049
+Notice what they all have in common: every single
 
-00:00:57.677 --> 00:00:59.672
-Don't interact or try to sell.
+00:00:57.049 --> 00:00:59.588
+one needs you to take an action first.
 
-00:00:59.672 --> 00:01:04.631
-Impersonation, "Support", "admin" or "project team" DMs you, Real
+00:00:59.588 --> 00:01:00.930
+None of them can reach a
 
-00:01:04.631 --> 00:01:08.312
-teams never DM first and never ask for seeds.
+00:01:00.930 --> 00:01:02.593
+wallet that simply doesn't act.
 
-00:01:08.312 --> 00:01:12.155
-Too-good yields, New protocol, huge APY, anonymous
+00:01:03.893 --> 00:01:04.838
+Four attacks.
 
-00:01:12.155 --> 00:01:15.545
-team, no audit, Due diligence (Module 6).
+00:01:06.138 --> 00:01:08.751
+Fake sites: a look-alike web address, reached
 
-00:01:15.545 --> 00:01:17.850
-Burner wallet and small size, or skip.
+00:01:08.751 --> 00:01:10.739
+through a sponsored search ad or a
 
-00:01:19.151 --> 00:01:21.666
-Let's work an example,
+00:01:10.739 --> 00:01:12.913
+message, never your own bookmark.
 
-00:01:21.666 --> 00:01:24.581
-step by step. You regularly send
+00:01:12.913 --> 00:01:15.405
+Drainers: one signature, often a Permit,
 
-00:01:25.281 --> 00:01:26.876
-to 0x7a3F…9c21. Today
+00:01:15.405 --> 00:01:17.833
+that grants an attacker everything.
 
-00:01:26.876 --> 00:01:31.026
-your history shows a transfer from 0x7a3F…9c21, but
+00:01:17.833 --> 00:01:21.942
+Fake support: a “support,” “admin” or “project team” message
 
-00:01:31.726 --> 00:01:34.966
-the full address is 0x7a3Fe0b4…d189c21: same
+00:01:21.942 --> 00:01:25.408
+that DM's you first, which real teams never do.
 
-00:01:34.966 --> 00:01:37.486
-start and end, different middle. If
+00:01:25.408 --> 00:01:29.089
+And poisoned addresses: a look-alike address planted in your
 
-00:01:38.186 --> 00:01:40.723
-you copy it from history
+00:01:29.089 --> 00:01:32.348
+transaction history, hoping you'll copy it by mistake.
 
-00:01:40.723 --> 00:01:43.256
-you send your funds to
+00:01:33.648 --> 00:01:35.532
+Before any of that, here's how to
 
-00:01:43.256 --> 00:01:47.076
-the attacker. Always paste from your address
+00:01:35.532 --> 00:01:37.748
+actually check you're on the real site,
 
-00:01:47.076 --> 00:01:50.316
-book and check the full address.
+00:01:37.748 --> 00:01:39.433
+step by step, every time.
 
-00:01:51.616 --> 00:01:53.076
+00:01:39.433 --> 00:01:41.083
+Don't trust the link a search
+
+00:01:41.083 --> 00:01:42.758
+ad or a message gave you.
+
+00:01:42.758 --> 00:01:45.248
+Open your own saved bookmark instead.
+
+00:01:45.248 --> 00:01:48.880
+Look at the address bar itself, character by character,
+
+00:01:48.880 --> 00:01:51.733
+not just the logo or the page design, since
+
+00:01:51.733 --> 00:01:54.433
+a fake page can copy those perfectly.
+
+00:01:54.433 --> 00:01:56.249
+Confirm the domain matches your
+
+00:01:56.249 --> 00:01:58.763
+bookmark exactly, including the ending.
+
+00:01:58.763 --> 00:02:00.658
+And only then, connect your wallet.
+
+00:02:01.958 --> 00:02:05.198
+One real, dated fact behind the drainer pattern.
+
+00:02:05.198 --> 00:02:11.144
+Security researchers publicly tracked organised phishing-kit services, sold
+
+00:02:11.144 --> 00:02:15.760
+to affiliates as ready-made drainer toolkits, operating at
+
+00:02:15.760 --> 00:02:19.033
+real scale through 2023 and into 2024.
+
+00:02:19.033 --> 00:02:21.288
+This isn't lone opportunists guessing.
+
+00:02:21.288 --> 00:02:24.751
+It's an organised, professionalised industry, which is
+
+00:02:24.751 --> 00:02:26.892
+exactly why the defence has to be
+
+00:02:26.892 --> 00:02:29.348
+a habit, not a one-time judgement call.
+
+00:02:30.648 --> 00:02:33.228
+Zoom into how a drainer signature actually
+
+00:02:33.228 --> 00:02:36.948
+works technically, because “one signature” undersells it.
+
+00:02:36.948 --> 00:02:40.441
+Many drainers target a specific permission called “set
+
+00:02:40.441 --> 00:02:43.616
+approval for all,” which doesn't just approve one
+
+00:02:43.616 --> 00:02:46.728
+token, it approves an entire collection or every
+
+00:02:46.728 --> 00:02:49.204
+future balance of a token type, to one
+
+00:02:49.204 --> 00:02:51.473
+spender, in a single signature.
+
+00:02:51.473 --> 00:02:53.558
+You see a routine-looking popup.
+
+00:02:53.558 --> 00:02:56.323
+You sign it, thinking it's for one small action.
+
+00:02:56.323 --> 00:02:59.157
+And that single signature can now move everything
+
+00:02:59.157 --> 00:03:01.198
+of that type you hold, or ever will.
+
+00:03:02.498 --> 00:03:04.496
+So here's exactly what to check on
+
+00:03:04.496 --> 00:03:06.793
+that popup before you ever sign it.
+
+00:03:06.793 --> 00:03:09.216
+Read the function name your wallet shows,
+
+00:03:09.216 --> 00:03:11.708
+not just the token or collection name.
+
+00:03:11.708 --> 00:03:15.938
+Treat “Permit,” “Approve,” and “setApprovalForAll” as red flags
+
+00:03:15.938 --> 00:03:19.543
+worth stopping on, every time, not routine clicks.
+
+00:03:19.543 --> 00:03:22.609
+Check whether the amount or scope is limited, or
+
+00:03:22.609 --> 00:03:25.737
+unlimited and for “all.” And if anything reads as
+
+00:03:25.737 --> 00:03:28.616
+unlimited when you only meant to do one small
+
+00:03:28.616 --> 00:03:30.618
+thing, reject it and look again.
+
+00:03:31.918 --> 00:03:34.808
+And here's real support against fake support,
+
+00:03:34.808 --> 00:03:37.133
+side by side, since the fake version
+
+00:03:37.133 --> 00:03:39.758
+is designed to look almost identical.
+
+00:03:39.758 --> 00:03:42.045
+Real support waits for you to reach out
+
+00:03:42.045 --> 00:03:44.903
+first, on the project's own official channel, and
+
+00:03:44.903 --> 00:03:47.318
+never needs your seed phrase to help.
+
+00:03:47.318 --> 00:03:50.286
+Fake support messages you first, out of nowhere, and
+
+00:03:50.286 --> 00:03:53.533
+always eventually asks for something it should never need.
+
+00:03:54.833 --> 00:03:55.923
+Quick check.
+
+00:03:55.923 --> 00:03:59.723
+A “support” account messages you first, offering to help.
+
+00:03:59.723 --> 00:04:01.478
+What does that tell you, immediately?
+
+00:04:05.898 --> 00:04:07.703
+The answer: it's a scam.
+
+00:04:07.703 --> 00:04:10.357
+Real support teams never message you first,
+
+00:04:10.357 --> 00:04:12.468
+and never ask for your seed phrase.
+
+00:04:13.768 --> 00:04:14.443
+Two more.
+
+00:04:15.743 --> 00:04:18.208
+Fifth: the fake token or airdrop.
+
+00:04:18.208 --> 00:04:21.394
+An unknown token simply appears in your wallet,
+
+00:04:21.394 --> 00:04:24.946
+uninvited, often showing a large made-up balance.
+
+00:04:24.946 --> 00:04:26.781
+It comes with a “claim” link.
+
+00:04:26.781 --> 00:04:28.616
+You visit the site to claim it.
+
+00:04:28.616 --> 00:04:30.871
+And that site's real job is to get you
+
+00:04:30.871 --> 00:04:33.946
+to sign an approval, which is the actual attack.
+
+00:04:33.946 --> 00:04:35.851
+The token itself is just bait;
+
+00:04:35.851 --> 00:04:37.511
+the signature is the theft.
+
+00:04:38.811 --> 00:04:41.461
+Real airdrops and fake ones look similar at a
+
+00:04:41.461 --> 00:04:44.641
+glance, so here's how to actually tell them apart.
+
+00:04:44.641 --> 00:04:47.892
+A real airdrop is usually announced in advance, on
+
+00:04:47.892 --> 00:04:51.652
+the project's own official channels, and claiming it never
+
+00:04:51.652 --> 00:04:56.031
+requires an unlimited approval, just a simple claim transaction.
+
+00:04:56.031 --> 00:04:58.730
+A fake one appears with no warning, pushes
+
+00:04:58.730 --> 00:05:01.680
+you toward an unfamiliar site, and its “claim”
+
+00:05:01.680 --> 00:05:04.756
+button is really an approval request in disguise.
+
+00:05:06.056 --> 00:05:07.901
+Sixth: the too-good yield.
+
+00:05:07.901 --> 00:05:10.991
+A brand-new protocol, an anonymous team, a
+
+00:05:10.991 --> 00:05:14.596
+huge advertised A.P.Y., and no audit anywhere.
+
+00:05:14.596 --> 00:05:17.136
+Deposits flow in on the promise alone.
+
+00:05:17.136 --> 00:05:19.977
+Early depositors sometimes really do get paid,
+
+00:05:19.977 --> 00:05:22.334
+funded by the deposits that come after
+
+00:05:22.334 --> 00:05:25.051
+them, which is what makes it convincing.
+
+00:05:25.051 --> 00:05:27.446
+And it collapses the moment new deposits
+
+00:05:27.446 --> 00:05:29.608
+slow down, because there was never a
+
+00:05:29.608 --> 00:05:31.886
+real, independent source of that yield.
+
+00:05:33.186 --> 00:05:37.052
+Put real numbers on “too good.” Genuine, well-understood
+
+00:05:37.052 --> 00:05:40.239
+stablecoin yields in DeFi typically run in the
+
+00:05:40.239 --> 00:05:43.630
+low single digits to perhaps low teens, depending
+
+00:05:43.630 --> 00:05:45.761
+on the source and the risk.
+
+00:05:45.761 --> 00:05:49.905
+A “protocol” advertising several hundred percent, or thousands of
+
+00:05:49.905 --> 00:05:53.108
+percent, on a stablecoin, with no clear source for
+
+00:05:53.108 --> 00:05:56.296
+that return, isn't offering you a better deal.
+
+00:05:56.296 --> 00:05:58.429
+It's describing the size of the bait,
+
+00:05:58.429 --> 00:06:00.056
+not the size of a real yield.
+
+00:06:01.356 --> 00:06:03.759
+Here's a quick pre-check you can run on
+
+00:06:03.759 --> 00:06:06.583
+any protocol before sizing up, a small preview
+
+00:06:06.583 --> 00:06:09.887
+of the full due-diligence process from Module Six.
+
+00:06:09.887 --> 00:06:13.827
+Is the team named and identifiable, or fully anonymous?
+
+00:06:13.827 --> 00:06:15.663
+Has it been audited by a firm you
+
+00:06:15.663 --> 00:06:18.242
+can verify, and can you find that audit?
+
+00:06:18.242 --> 00:06:20.141
+Can you explain, in one sentence,
+
+00:06:20.141 --> 00:06:22.572
+where the yield actually comes from?
+
+00:06:22.572 --> 00:06:24.590
+And would you still deposit if you had
+
+00:06:24.590 --> 00:06:27.132
+to start with a burner-sized amount only?
+
+00:06:27.132 --> 00:06:29.552
+If any answer is no, that's your answer too.
+
+00:06:30.852 --> 00:06:33.249
+One more habit that runs through almost
+
+00:06:33.249 --> 00:06:35.765
+every attack in this lesson, worth making
+
+00:06:35.765 --> 00:06:38.462
+concrete: which wallet you use for what.
+
+00:06:38.462 --> 00:06:41.466
+Your main wallet holds real funds, and only ever
+
+00:06:41.466 --> 00:06:45.077
+connects to sites you already trust and use regularly.
+
+00:06:45.077 --> 00:06:48.238
+A burner wallet holds a small, disposable amount,
+
+00:06:48.238 --> 00:06:50.704
+and is exactly what you connect to any
+
+00:06:50.704 --> 00:06:53.297
+new or unproven site, so a bad signature
+
+00:06:53.297 --> 00:06:55.257
+there costs you almost nothing.
+
+00:06:56.557 --> 00:06:57.647
+Quick check.
+
+00:06:57.647 --> 00:06:59.979
+A new token worth, according to its
+
+00:06:59.979 --> 00:07:02.763
+own wallet display, $5,000, appears with a
+
+00:07:02.763 --> 00:07:05.136
+claim site attached. What do you
+
+00:07:05.136 --> 00:07:05.986
+do? [[pause
+
+00:07:10.406 --> 00:07:12.221
+4]] The answer: ignore
+
+00:07:12.221 --> 00:07:13.898
+it. It's bait, and interacting
+
+00:07:13.898 --> 00:07:15.791
+risks signing a drainer's approval.
+
+00:07:17.092 --> 00:07:18.097
+Worked example.
+
+00:07:19.397 --> 00:07:21.352
+Here's exactly how it works.
+
+00:07:21.352 --> 00:07:24.365
+You regularly send to an address
+
+00:07:24.365 --> 00:07:27.677
+starting 0x7a3F, and ending 9c21.
+
+00:07:27.677 --> 00:07:31.048
+Today, your transaction history shows a transfer from an
+
+00:07:31.048 --> 00:07:34.127
+address with that same start and that same end.
+
+00:07:34.127 --> 00:07:36.652
+But the full address has
+
+00:07:36.652 --> 00:07:41.092
+a completely different middle: e0b4…d189.
+
+00:07:41.092 --> 00:07:43.182
+If you copy that address straight from
+
+00:07:43.182 --> 00:07:45.164
+your history, you send your funds to
+
+00:07:45.164 --> 00:07:46.772
+the attacker, not to yourself.
+
+00:07:48.072 --> 00:07:50.773
+One more reason this one works so well on
+
+00:07:50.773 --> 00:07:55.210
+careful people: the poisoned transaction usually moves zero dollars,
+
+00:07:55.210 --> 00:07:58.168
+sent as a tiny or worthless amount, purely to
+
+00:07:58.168 --> 00:08:00.847
+plant the look-alike in your history.
+
+00:08:00.847 --> 00:08:02.494
+There's no loss at the moment
+
+00:08:02.494 --> 00:08:05.046
+it's planted, nothing alarming to notice.
+
+00:08:05.046 --> 00:08:07.064
+The only moment of danger is later,
+
+00:08:07.064 --> 00:08:08.858
+when you're in a hurry and copy
+
+00:08:08.858 --> 00:08:10.315
+from history out of habit.
+
+00:08:11.615 --> 00:08:13.342
+So here's the defence, as a
+
+00:08:13.342 --> 00:08:15.740
+habit, every single time you send.
+
+00:08:15.740 --> 00:08:17.710
+Never copy an address from your
+
+00:08:17.710 --> 00:08:20.535
+transaction history, ever, no exceptions.
+
+00:08:20.535 --> 00:08:21.780
+Paste only from a saved
+
+00:08:21.780 --> 00:08:23.740
+address book you built yourself.
+
+00:08:23.740 --> 00:08:26.045
+And check the full address, not just the
+
+00:08:26.045 --> 00:08:29.155
+first and last few characters, before you confirm.
+
+00:08:29.155 --> 00:08:31.980
+Three steps, and this entire attack stops working.
+
+00:08:33.280 --> 00:08:34.370
+Quick check.
+
+00:08:34.370 --> 00:08:37.015
+How does address poisoning actually trick people?
+
+00:08:41.435 --> 00:08:44.217
+The answer: it plants a look-alike address in
+
+00:08:44.217 --> 00:08:47.302
+your transaction history, hoping you'll copy it by
+
+00:08:47.302 --> 00:08:50.265
+mistake instead of using your saved address book.
+
+00:08:51.565 --> 00:08:54.817
+Notice something that runs through every single attack in
+
+00:08:54.817 --> 00:08:58.201
+this lesson, worth naming plainly before the checklist.
+
+00:08:58.201 --> 00:09:00.331
+Every one of them needs you to do
+
+00:09:00.331 --> 00:09:03.089
+something: click a link, sign a popup, copy
+
+00:09:03.089 --> 00:09:06.271
+an address, deposit into an unproven contract.
+
+00:09:06.271 --> 00:09:09.012
+A wallet that simply pauses, checks, and takes
+
+00:09:09.012 --> 00:09:11.753
+no action when something feels off has already
+
+00:09:11.753 --> 00:09:14.670
+defeated most of what this lesson covers, without
+
+00:09:14.670 --> 00:09:16.711
+needing to spot the specific trick.
+
+00:09:18.011 --> 00:09:19.471
 Here's your checklist.
 
-00:01:53.076 --> 00:01:54.611
+00:09:19.471 --> 00:09:21.006
 Do it now, for real.
 
-00:01:54.611 --> 00:01:57.630
-First, Protocol sites bookmarked; never reached
+00:09:21.006 --> 00:09:23.822
+Protocol sites are bookmarked, and never reached
 
-00:01:57.630 --> 00:01:59.566
-through search ads or DMs.
+00:09:23.822 --> 00:09:25.731
+through a search ad or a DM.
 
-00:01:59.566 --> 00:02:01.120
-Next, Address book in use;
+00:09:25.731 --> 00:09:27.429
+Your address book is in use, and
 
-00:02:01.120 --> 00:02:03.491
-full address checked before sending.
+00:09:27.429 --> 00:09:29.891
+you check the full address before sending.
 
-00:02:03.491 --> 00:02:05.706
-Then, Unknown tokens ignored.
+00:09:29.891 --> 00:09:32.576
+Unknown tokens get ignored, completely.
 
-00:02:05.706 --> 00:02:09.796
-Also, DMs from "support" treated as scams by default.
+00:09:32.576 --> 00:09:36.281
+DMs from “support” are treated as scams by default.
 
-00:02:09.796 --> 00:02:12.641
-And finally, New sites only with the burner wallet.
+00:09:36.281 --> 00:09:38.886
+And new sites only ever get your burner wallet.
 
-00:02:13.941 --> 00:02:15.151
-Question 1.
+00:09:40.186 --> 00:09:41.431
+Let's recap.
 
-00:02:15.151 --> 00:02:17.822
-A new token worth "$5,000" appears in
+00:09:41.431 --> 00:09:44.590
+Six attacks, one underlying pattern: pressure, plus
 
-00:02:17.822 --> 00:02:20.230
-your wallet with a claim site.
+00:09:44.590 --> 00:09:46.956
+a shortcut around your own checks.
 
-00:02:20.230 --> 00:02:21.080
-What do you do?
+00:09:46.956 --> 00:09:49.896
+Fake sites, drainers, fake support and poisoned
 
-00:02:25.500 --> 00:02:27.315
-The answer: Ignore it.
+00:09:49.896 --> 00:09:52.891
+addresses you've now seen defended together.
 
-00:02:27.315 --> 00:02:30.325
-It's bait, and interacting risks a drainer approval.
+00:09:52.891 --> 00:09:55.405
+Fake airdrops and too-good yields both rely
 
-00:02:31.624 --> 00:02:32.869
-Question 2.
+00:09:55.405 --> 00:09:57.476
+on you acting before you think.
 
-00:02:32.869 --> 00:02:34.964
-How does address poisoning trick people?
+00:09:57.476 --> 00:10:00.444
+And the single best habit against nearly all of
 
-00:02:39.384 --> 00:02:41.995
-The answer: It puts a look-alike address in
+00:10:00.444 --> 00:10:03.969
+them: read every signature and approval prompt, and keep
 
-00:02:41.995 --> 00:02:44.309
-your history so you copy it by mistake.
+00:10:03.969 --> 00:10:06.381
+new, unproven sites on a burner wallet.
 
-00:02:45.609 --> 00:02:46.879
-Question 3.
-
-00:02:46.879 --> 00:02:49.284
-What's the single best habit against drainers?
-
-00:02:53.704 --> 00:02:57.036
-The answer: Reading every signature and approval prompt,
-
-00:02:57.036 --> 00:02:59.549
-and using a burner wallet for anything new.
-
-00:03:00.849 --> 00:03:03.364
+00:10:07.681 --> 00:10:10.196
 Do the checklist now, before you move on.
 
-00:03:03.364 --> 00:03:08.504
+00:10:10.196 --> 00:10:12.436
+You now have the whole lesson in your
+
+00:10:12.436 --> 00:10:14.852
+head: all six attacks, why they all need
+
+00:10:14.852 --> 00:10:17.092
+you to act first, and the exact habit
+
+00:10:17.092 --> 00:10:19.396
+that stops address poisoning cold.
+
+00:10:19.396 --> 00:10:24.536
 Next up, Lesson 1.7: Reading signatures and simulating transactions.

@@ -1122,7 +1122,24 @@ function storyWalletSend() {
   return lightShell(1800, 800, "Alice's wallet, right before she sends", "She signs an instruction. She never hands over a file, or her keys.",
     `${body}<div style="margin-top:34px;text-align:center;font-size:22px;color:${C.text2}">The wallet asks her to sign; her private key does the signing. Bob never sees it.</div>`);
 }
+function storyAddressPoisoning() {
+  const seg = (t, hi) => `<span style="${hi ? `background:${C.orange};color:#fff;padding:2px 4px;border-radius:6px` : `color:${C.text}`}">${t}</span>`;
+  const row = (label, parts, tone) => `<div style="margin-bottom:26px">
+    <div style="font-size:17px;font-weight:700;color:${C.text2};margin-bottom:10px">${label}</div>
+    <div style="padding:20px 26px;border-radius:14px;background:${C.panel};border:2px solid ${tone === 'bad' ? C.orange : C.line};font-family:'JetBrains Mono',monospace;font-size:32px;letter-spacing:.01em">${parts}</div></div>`;
+  const good = seg('0x7a3F') + seg('9c21');
+  const bad = seg('0x7a3F') + seg('e0b4…d189', true) + seg('9c21');
+  const body = `<div style="max-width:1000px;margin:0 auto">
+    ${row('Your usual address (saved in your address book)', good, 'good')}
+    ${row('What showed up in your history today', bad, 'bad')}
+    <div style="display:flex;align-items:center;gap:14px;padding:16px 20px;border-radius:12px;background:#fff5ef;border:1.5px solid ${C.orange}">
+      ${icon('alert', 26, C.orange)}<span style="font-size:19px;color:${C.text}">Same first 4 and last 4 characters. A completely different address in the middle.</span></div>
+  </div>`;
+  return lightShell(1800, 560, 'Address poisoning, character by character', 'Never copy an address from your history — only from your saved address book',
+    body);
+}
 const STORY_IMAGES = [
+  { file: 'story-address-poisoning', w: 1800, h: 560, fn: storyAddressPoisoning },
   { file: 'story-block-explorer', w: 1800, h: 700, fn: storyBlockExplorer },
   { file: 'story-btc-eth-timeline', w: 1800, h: 640, fn: storyTimeline },
   { file: 'story-wallet-send', w: 1800, h: 800, fn: storyWalletSend },

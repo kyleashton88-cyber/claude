@@ -63,7 +63,7 @@ node build_video.js lessons              # all lessons (several hours of renderi
 | 1.3 | Wallets, keys, hardware & multisig | 29 | 10.2 min | `video-scripts/gold/lesson-01-3.json` (gold: 5-word flows/compares, hardware wallet signing, illustrative 3-wallet split, compartmentalising habit) | ✓ |
 | 1.4 | Tokens, approvals & allowances | 28 | 10.2 min | `video-scripts/gold/lesson-01-4.json` (gold: token-address verification, unlimited-vs-exact/Permit compares, reading-a-signature steps, 4-check flow) | ✓ |
 | 1.5 | Stablecoins and how they break | 29 | 10.2 min | `video-scripts/gold/lesson-01-5.json` (gold: 4-design callout walkthrough, animated peg-arbitrage loop, real Terra 2022 & USDC 2023 case studies with a real-shaped line chart) | ✓ |
-| 1.6 | Scam defence | 9 | 3.0 min | `video-scripts/lessons/lesson-01-6.json` | ✓ |
+| 1.6 | Scam defence | 28 | 10.4 min | `video-scripts/gold/lesson-01-6.json` (gold: 6 attacks as visual walk-throughs — flow for real-site checks and setApprovalForAll, steps for Permit-popup checks, donut chart of attack shares, compare for burner-vs-main wallet, dedicated character-by-character address-poisoning image) | ✓ |
 | 1.7 | Reading signatures and simulating transactions | 10 | 3.5 min | `video-scripts/lessons/lesson-01-7.json` | ✓ |
 | 1.8 | Privacy and physical security | 10 | 3.4 min | `video-scripts/lessons/lesson-01-8.json` | ✓ |
 | 1.9 | Smart accounts and account abstraction | 11 | 3.7 min | `video-scripts/lessons/lesson-01-9.json` | ✓ |

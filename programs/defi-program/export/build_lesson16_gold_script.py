@@ -1,0 +1,145 @@
+#!/usr/bin/env python3
+"""Gold-standard script for Lesson 1.6, Scam defence (about 12-15 minutes).
+Walks all six attack patterns as visual walk-throughs (reusing scam-patterns.png
+with staggered callouts for four of them, animated flows for the other two),
+and builds the address-poisoning worked example around a dedicated
+character-by-character image. Built to the walk-through-first standard: almost
+every idea is a flow, steps or callout image, not a statement read over a
+static screen.
+
+Writes video-scripts/gold/lesson-01-6.json (the generator skips lessons with a
+gold script). Spoken text (vo) spells numbers for the voice; cap is the written
+caption, same sentence count as vo."""
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+S = []
+
+
+def sc(type_, vo, cap=None, **k):
+    d = {"type": type_, **k, "vo": vo}
+    if cap:
+        d["cap"] = cap
+    S.append(d)
+
+
+def img(src, eyebrow, vo, cap=None, **k):
+    sc("image", vo, cap, src=src, eyebrow=eyebrow, wide=True, **k)
+
+
+D = "assets/diagrams/"
+
+# ---------------------------------------------------------------- intro
+sc("title", "Lesson one point six. Scam defence. By the end, you'll be able to recognise the six most common attacks before any of them cost you anything.",
+   "Lesson 1.6. Scam defence. By the end, you'll be able to recognise the six most common attacks before any of them cost you anything.",
+   chapter="Intro", eyebrow="Lesson 1.6", num="1.6", title="Scam defence", sub="Recognise the attack before it costs you anything.")
+sc("pillars", "Here's the plan, and every one of these six attacks gets a proper walk-through, not just a mention. Four attacks you've already glimpsed in earlier lessons, revisited together with their defences. Two more you haven't met yet. And a full worked example on the one that catches out even careful people: address poisoning, shown character by character.",
+   chapter="Intro", title="What this lesson covers",
+   items=[{"icon": "globe", "title": "Four familiar attacks", "text": "Sites, drainers, support, poisoning"}, {"icon": "coins", "title": "Two more", "text": "Fake tokens, too-good yields"},
+          {"icon": "eye", "title": "Address poisoning", "text": "Character by character"}, {"icon": "shield", "title": "One habit", "text": "That defeats most of them at once"}])
+
+sc("chart", "Here's roughly how these six attacks break down, as categories, not measured statistics, based on what security researchers report seeing most often. Drainer signatures and fake sites together make up the largest share. Fake support and poisoned addresses are smaller but still common. And fake tokens and too-good yields round out the rest. Notice what they all have in common: every single one needs you to take an action first. None of them can reach a wallet that simply doesn't act.",
+   chapter="Intro", kind="donut", title="Roughly how these attacks break down", sub="Illustrative categories, not measured data", center="6 patterns", centerSub="one shared requirement: you act first",
+   segs=[{"label": "Drainer signatures", "text": "One signature, everything gone", "value": 28, "show": "≈28%", "tone": "bad"}, {"label": "Fake sites", "text": "Look-alike URLs, sponsored ads", "value": 24, "show": "≈24%", "tone": "bad"},
+         {"label": "Fake support", "text": "DMs asking for your seed", "value": 18, "show": "≈18%", "tone": "warn"}, {"label": "Poisoned addresses", "text": "Look-alikes in your history", "value": 14, "show": "≈14%", "tone": "warn"},
+         {"label": "Fake tokens & too-good yields", "text": "Bait, and unaudited promises", "value": 16, "show": "≈16%", "tone": "warn"}])
+
+# ---------------------------------------------------------------- four familiar attacks
+sc("title", "Four attacks.", chapter="Four attacks", eyebrow="Four attacks", num="4", title="Patterns you've seen pieces of already",
+   sub="Now the defence for each one, together.")
+img(D + "scam-patterns.png", "Four patterns, four defences",
+    "Fake sites: a look-alike web address, reached through a sponsored search ad or a message, never your own bookmark. Drainers: one signature, often a Permit, that grants an attacker everything. Fake support: a “support,” “admin” or “project team” message that DM's you first, which real teams never do. And poisoned addresses: a look-alike address planted in your transaction history, hoping you'll copy it by mistake.",
+    chapter="Four attacks", callouts=[{"x": 0.145, "y": 0.68, "text": "Bookmarks only", "at": 1}, {"x": 0.38, "y": 0.68, "text": "Read every prompt", "at": 3},
+           {"x": 0.62, "y": 0.68, "text": "Real teams never DM first", "at": 5}, {"x": 0.855, "y": 0.68, "text": "Use an address book", "at": 7}])
+sc("flow", "Before any of that, here's how to actually check you're on the real site, step by step, every time. Don't trust the link a search ad or a message gave you. Open your own saved bookmark instead. Look at the address bar itself, character by character, not just the logo or the page design, since a fake page can copy those perfectly. Confirm the domain matches your bookmark exactly, including the ending. And only then, connect your wallet.",
+   chapter="Four attacks", title="Checking you're on the real site",
+   nodes=[{"label": "Ignore the ad or DM link", "sub": "Use your own bookmark instead", "icon": "globe"}, {"label": "Read the address bar", "sub": "Character by character, not just the logo", "icon": "eye"},
+          {"label": "Match the domain exactly", "sub": "Including the ending", "icon": "check"}, {"label": "Only then connect", "sub": "Your wallet, to a confirmed site", "icon": "key"}])
+sc("statement", "One real, dated fact behind the drainer pattern. Security researchers publicly tracked organised phishing-kit services, sold to affiliates as ready-made drainer toolkits, operating at real scale through 2023 and into 2024. This isn't lone opportunists guessing. It's an organised, professionalised industry, which is exactly why the defence has to be a habit, not a one-time judgement call.",
+   chapter="Four attacks", kicker="Not lone opportunists", lines=["Organised drainer-kit services,", "tracked publicly through 2023-2024."], sub="A professionalised industry. The defence has to be a habit.")
+sc("flow", "Zoom into how a drainer signature actually works technically, because “one signature” undersells it. Many drainers target a specific permission called “set approval for all,” which doesn't just approve one token, it approves an entire collection or every future balance of a token type, to one spender, in a single signature. You see a routine-looking popup. You sign it, thinking it's for one small action. And that single signature can now move everything of that type you hold, or ever will.",
+   chapter="Four attacks", title="How “one signature” actually drains a wallet",
+   nodes=[{"label": "Routine-looking popup", "sub": "Often disguised as something small", "icon": "eye"}, {"label": "“setApprovalForAll”", "sub": "Approves an entire collection, or all future balance", "icon": "key"},
+          {"label": "You sign it", "sub": "Thinking it's for one action", "icon": "check"}, {"label": "Everything is reachable", "sub": "That token type, present and future", "icon": "alert"}])
+sc("steps", "So here's exactly what to check on that popup before you ever sign it. Read the function name your wallet shows, not just the token or collection name. Treat “Permit,” “Approve,” and “setApprovalForAll” as red flags worth stopping on, every time, not routine clicks. Check whether the amount or scope is limited, or unlimited and for “all.” And if anything reads as unlimited when you only meant to do one small thing, reject it and look again.",
+   chapter="Four attacks", title="What to check before you sign",
+   steps=["Read the function name, not just the token name", "Treat “Permit” / “Approve” / “setApprovalForAll” as a stop sign", "Check: is the amount or scope limited, or unlimited?", "Unlimited for one small action? Reject and re-check"], result="Most drainer signatures get caught right here")
+sc("compare", "And here's real support against fake support, side by side, since the fake version is designed to look almost identical. Real support waits for you to reach out first, on the project's own official channel, and never needs your seed phrase to help. Fake support messages you first, out of nowhere, and always eventually asks for something it should never need.",
+   chapter="Four attacks",
+   left={"label": "Real support", "tone": "good", "items": ["You reach out first", "On the project's own official channel", "Never needs your seed phrase"]},
+   right={"label": "Fake support", "tone": "bad", "items": ["Messages you first, out of nowhere", "Often an unofficial channel or DM", "Eventually asks for something it shouldn't need"]})
+sc("quiz", "Quick check. A “support” account messages you first, offering to help. What does that tell you, immediately? [[pause 4]] The answer: it's a scam. Real support teams never message you first, and never ask for your seed phrase.",
+   chapter="Four attacks", n=1, of=3, q="A “support” account messages you first, offering to help. What does that tell you, immediately?",
+   a="It's a scam. Real support teams never message you first, and never ask for your seed phrase.")
+
+# ---------------------------------------------------------------- two more attacks
+sc("title", "Two more.", chapter="Two more attacks", eyebrow="Two more attacks", num="2", title="Fake tokens, and too-good yields",
+   sub="Both rely on you acting before you think.")
+sc("flow", "Fifth: the fake token or airdrop. An unknown token simply appears in your wallet, uninvited, often showing a large made-up balance. It comes with a “claim” link. You visit the site to claim it. And that site's real job is to get you to sign an approval, which is the actual attack. The token itself is just bait; the signature is the theft.",
+   chapter="Two more attacks", title="A fake airdrop, step by step",
+   nodes=[{"label": "Token appears", "sub": "Uninvited, in your wallet", "icon": "coins"}, {"label": "“Claim” link", "sub": "Often a large fake balance", "icon": "globe"},
+          {"label": "You visit the site", "sub": "To “claim” it", "icon": "eye"}, {"label": "Asked to sign", "sub": "The real attack", "icon": "alert"}])
+sc("compare", "Real airdrops and fake ones look similar at a glance, so here's how to actually tell them apart. A real airdrop is usually announced in advance, on the project's own official channels, and claiming it never requires an unlimited approval, just a simple claim transaction. A fake one appears with no warning, pushes you toward an unfamiliar site, and its “claim” button is really an approval request in disguise.",
+   chapter="Two more attacks",
+   left={"label": "A real airdrop", "tone": "good", "items": ["Announced in advance, on official channels", "A simple claim, no unlimited approval needed"]},
+   right={"label": "A fake airdrop", "tone": "bad", "items": ["No warning, appears out of nowhere", "“Claim” is really an approval in disguise"]})
+sc("flow", "Sixth: the too-good yield. A brand-new protocol, an anonymous team, a huge advertised A.P.Y., and no audit anywhere. Deposits flow in on the promise alone. Early depositors sometimes really do get paid, funded by the deposits that come after them, which is what makes it convincing. And it collapses the moment new deposits slow down, because there was never a real, independent source of that yield.",
+   chapter="Two more attacks", title="A too-good yield, unwinding",
+   nodes=[{"label": "Huge APY, no audit", "sub": "Anonymous team", "icon": "alert"}, {"label": "Deposits flow in", "sub": "On the promise alone", "icon": "coins"},
+          {"label": "Early depositors paid", "sub": "Funded by later deposits", "icon": "check"}, {"label": "Collapses", "sub": "When new deposits slow", "icon": "chart"}])
+sc("chart", "Put real numbers on “too good.” Genuine, well-understood stablecoin yields in DeFi typically run in the low single digits to perhaps low teens, depending on the source and the risk. A “protocol” advertising several hundred percent, or thousands of percent, on a stablecoin, with no clear source for that return, isn't offering you a better deal. It's describing the size of the bait, not the size of a real yield.",
+   "Put real numbers on “too good.” Genuine, well-understood stablecoin yields in DeFi typically run in the low single digits to perhaps low teens, depending on the source and the risk. A “protocol” advertising several hundred percent, or thousands of percent, on a stablecoin, with no clear source for that return, isn't offering you a better deal. It's describing the size of the bait, not the size of a real yield.",
+   chapter="Two more attacks", kind="bars", title="A realistic range vs a scam-level promise", sub="Illustrative — genuine yields vary by source and risk",
+   bars=[{"label": "Genuine range", "text": "Low single digits to low teens", "value": 12, "show": "~2-12%", "tone": "good"}, {"label": "Scam-level promise", "text": "No real source for the return", "value": 100, "show": "100s-1,000s%", "tone": "bad"}],
+   note="Not a better deal. The size of the bait, not the size of a real yield.")
+sc("steps", "Here's a quick pre-check you can run on any protocol before sizing up, a small preview of the full due-diligence process from Module Six. Is the team named and identifiable, or fully anonymous? Has it been audited by a firm you can verify, and can you find that audit? Can you explain, in one sentence, where the yield actually comes from? And would you still deposit if you had to start with a burner-sized amount only? If any answer is no, that's your answer too.",
+   chapter="Two more attacks", title="A quick pre-check, before sizing up",
+   steps=["Is the team named and identifiable?", "Is there a verifiable audit?", "Can you name where the yield comes from?", "Would a burner-sized amount still be worth it?"], result="Any “no” is your answer")
+sc("compare", "One more habit that runs through almost every attack in this lesson, worth making concrete: which wallet you use for what. Your main wallet holds real funds, and only ever connects to sites you already trust and use regularly. A burner wallet holds a small, disposable amount, and is exactly what you connect to any new or unproven site, so a bad signature there costs you almost nothing.",
+   chapter="Two more attacks",
+   left={"label": "Main wallet", "tone": "good", "items": ["Holds your real funds", "Only connects to sites you already trust"]},
+   right={"label": "Burner wallet", "tone": "warn", "items": ["Small, disposable amount only", "Connects to anything new or unproven"]})
+sc("quiz", "Quick check. A new token worth, according to its own wallet display, five thousand dollars, appears with a claim site attached. What do you do? [[pause 4]] The answer: ignore it. It's bait, and interacting risks signing a drainer's approval.",
+   "Quick check. A new token worth, according to its own wallet display, $5,000, appears with a claim site attached. What do you do? [[pause 4]] The answer: ignore it. It's bait, and interacting risks signing a drainer's approval.",
+   chapter="Two more attacks", n=2, of=3, q="A new token worth “$5,000” appears in your wallet with a claim site. What do you do?",
+   a="Ignore it. It's bait, and interacting risks a drainer approval.")
+
+# ---------------------------------------------------------------- address poisoning worked example
+sc("title", "Worked example.", chapter="Address poisoning", eyebrow="Worked example", num="1", title="Address poisoning, character by character",
+   sub="The attack that catches out even careful people.")
+img(D + "story-address-poisoning.png", "Same start. Same end. Different middle.",
+    "Here's exactly how it works. You regularly send to an address starting zero x seven a three F, and ending nine c two one. Today, your transaction history shows a transfer from an address with that same start and that same end. But the full address has a completely different middle: e zero b four, dot dot dot, d one eight nine. If you copy that address straight from your history, you send your funds to the attacker, not to yourself.",
+    "Here's exactly how it works. You regularly send to an address starting 0x7a3F, and ending 9c21. Today, your transaction history shows a transfer from an address with that same start and that same end. But the full address has a completely different middle: e0b4…d189. If you copy that address straight from your history, you send your funds to the attacker, not to yourself.",
+    chapter="Address poisoning")
+sc("statement", "One more reason this one works so well on careful people: the poisoned transaction usually moves zero dollars, sent as a tiny or worthless amount, purely to plant the look-alike in your history. There's no loss at the moment it's planted, nothing alarming to notice. The only moment of danger is later, when you're in a hurry and copy from history out of habit.",
+   chapter="Address poisoning", kicker="Why it works on careful people", lines=["The poisoning transaction itself", "moves nothing. Nothing to notice."], sub="The danger is later, when you're in a hurry and copy from habit.")
+sc("steps", "So here's the defence, as a habit, every single time you send. Never copy an address from your transaction history, ever, no exceptions. Paste only from a saved address book you built yourself. And check the full address, not just the first and last few characters, before you confirm. Three steps, and this entire attack stops working.",
+   chapter="Address poisoning", title="The defence, as a habit",
+   steps=["Never copy an address from history", "Paste only from your saved address book", "Check the full address before confirming"], result="This attack stops working")
+sc("quiz", "Quick check. How does address poisoning actually trick people? [[pause 4]] The answer: it plants a look-alike address in your transaction history, hoping you'll copy it by mistake instead of using your saved address book.",
+   chapter="Address poisoning", n=3, of=3, q="How does address poisoning actually trick people?",
+   a="It puts a look-alike address in your history so you copy it by mistake.")
+sc("statement", "Notice something that runs through every single attack in this lesson, worth naming plainly before the checklist. Every one of them needs you to do something: click a link, sign a popup, copy an address, deposit into an unproven contract. A wallet that simply pauses, checks, and takes no action when something feels off has already defeated most of what this lesson covers, without needing to spot the specific trick.",
+   chapter="Address poisoning", kicker="The one thing they all share", lines=["Every attack needs you", "to take an action first."], sub="Pausing and checking defeats most of them, without spotting the specific trick.")
+
+# ---------------------------------------------------------------- checklist and recap
+sc("steps", "Here's your checklist. Do it now, for real. Protocol sites are bookmarked, and never reached through a search ad or a DM. Your address book is in use, and you check the full address before sending. Unknown tokens get ignored, completely. DMs from “support” are treated as scams by default. And new sites only ever get your burner wallet.",
+   chapter="Checklist", title="Your checklist",
+   steps=["Sites bookmarked, never via search ads or DMs", "Address book in use; full address checked", "Unknown tokens ignored, completely", "“Support” DMs treated as scams by default", "New sites: burner wallet only"])
+sc("bullets", "Let's recap. Six attacks, one underlying pattern: pressure, plus a shortcut around your own checks. Fake sites, drainers, fake support and poisoned addresses you've now seen defended together. Fake airdrops and too-good yields both rely on you acting before you think. And the single best habit against nearly all of them: read every signature and approval prompt, and keep new, unproven sites on a burner wallet.",
+   chapter="Recap", title="Recap", check=False,
+   items=["Six attacks, one pattern: pressure plus a shortcut around your checks", "Fake sites, drainers, fake support, poisoned addresses: defended together",
+          "Fake airdrops and too-good yields: both rely on acting before thinking", "Best habit: read every prompt, and use a burner wallet for anything new"])
+sc("cta", "Do the checklist now, before you move on. You now have the whole lesson in your head: all six attacks, why they all need you to act first, and the exact habit that stops address poisoning cold. Next up, Lesson one point seven: Reading signatures and simulating transactions.",
+   "Do the checklist now, before you move on. You now have the whole lesson in your head: all six attacks, why they all need you to act first, and the exact habit that stops address poisoning cold. Next up, Lesson 1.7: Reading signatures and simulating transactions.",
+   chapter="Recap", button="Next: Lesson 1.7", sub="Reading signatures and simulating transactions")
+
+spec = {"id": "lesson-01-6", "title": "Lesson 1.6: Scam defence", "size": [1920, 1080], "group": "lessons", "maxMinutes": 25,
+        "tag": "Lesson 1.6", "gold": True, "music": True, "musicLevel": 0.14, "seed": 48,
+        "use": "Lesson 1.6 page in the Whop course. Hand-written gold-standard script: 6 attacks as walk-throughs, address poisoning shown character by character.",
+        "thumbnail": {"title": "Scam defence", "subtitle": "Lesson 1.6"}, "scenes": S}
+out = ROOT / "video-scripts" / "gold" / "lesson-01-6.json"
+out.write_text(json.dumps(spec, indent=1, ensure_ascii=False))
+words = sum(len(s["vo"].replace("[[pause 4]]", "").split()) for s in S)
+print(f"{len(S)} scenes, {words} words, est {(words / 171 * 60 + len(S) * 1.3 + 4 * 3) / 60:.1f} min")
