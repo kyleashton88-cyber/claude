@@ -158,7 +158,11 @@ function runBars(DATA) {
       // the frame, where the scene's own title/sub header sits (a flat 2D
       // overlay the camera framing above doesn't know about) - clamp so the
       // counter never floats up into it, found on a "Rung 3" bar at 100% height.
-      cp.y = Math.max(cp.y, 250);
+      // The clamp target itself needs to clear the header PLUS the label's own
+      // height, since it's anchored by its bottom edge (translate(-50%,-100%)),
+      // not its top - 250 alone still let a 36px counter's top row poke into
+      // the header on a second pass; 300 leaves it clear.
+      cp.y = Math.max(cp.y, 300);
       const ce = countEls[i]; ce.style.opacity = String(ease((t - a) / 0.4)); ce.style.transform = `translate(${cp.x.toFixed(1)}px, ${cp.y.toFixed(1)}px)`;
       ce.style.color = active ? `#${b.color.toString(16).padStart(6, '0')}` : '#fff';
       ce.firstChild.textContent = b.count ? formatCounter(b.count, easeIO((t - a) / 1.1)) : b.show;
