@@ -161,7 +161,7 @@ function runBars(DATA) {
       cp.y = Math.max(cp.y, 250);
       const ce = countEls[i]; ce.style.opacity = String(ease((t - a) / 0.4)); ce.style.transform = `translate(${cp.x.toFixed(1)}px, ${cp.y.toFixed(1)}px)`;
       ce.style.color = active ? `#${b.color.toString(16).padStart(6, '0')}` : '#fff';
-      ce.firstChild.textContent = formatCounter(b.count, easeIO((t - a) / 1.1));
+      ce.firstChild.textContent = b.count ? formatCounter(b.count, easeIO((t - a) / 1.1)) : b.show;
     });
 
     for (let k = 0; k < total; k++) {
@@ -253,7 +253,7 @@ function runDonut(DATA) {
       const row = legendRows[i];
       row.style.opacity = String(ease((t - a) / 0.5));
       row.style.background = active ? 'rgba(255,255,255,.06)' : 'transparent';
-      row.querySelector('.v').textContent = formatCounter(g.count, easeIO((t - a) / 1.1));
+      row.querySelector('.v').textContent = g.count ? formatCounter(g.count, easeIO((t - a) / 1.1)) : g.show;
     });
 
     if (centerEl) { const s = project(new THREE.Vector3(0, 0, 0), camera, W, H); centerEl.style.opacity = '1'; centerEl.style.transform = `translate(${s.x.toFixed(1)}px, ${s.y.toFixed(1)}px)`; }

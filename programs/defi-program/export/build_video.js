@@ -315,14 +315,14 @@ function sceneBody(s, W, H, T) {
       if (s.kind === 'donut') {
         const tot = s.segs.reduce((a, g) => a + g.value, 0);
         let acc = 0;
-        const segs = s.segs.map((g, i) => { const f = g.value / tot, st = acc; acc += f;
-          return { label: esc(g.label), text: g.text ? esc(g.text) : '', tone: g.tone, f, st, count: counter(g.show || String(g.value)) }; });
+        const segs = s.segs.map((g, i) => { const f = g.value / tot, st = acc; acc += f; const show = g.show || String(g.value);
+          return { label: esc(g.label), text: g.text ? esc(g.text) : '', tone: g.tone, f, st, count: counter(show), show }; });
         data = { kind: 'donut', W, H, seed: s.seed ?? 11, cameraMove: s.cameraMove, dur: Math.max(6, ...T.items.flat()),
           segs, center: s.center ? esc(s.center) : '', centerSub: s.centerSub ? esc(s.centerSub) : '', itemsT: T.items };
       } else {
         const bars = s.bars, hi = s.max ?? Math.max(...bars.map(b => (b.base || 0) + b.value)) * 1.08;
         data = { kind: 'bars', W, H, seed: s.seed ?? 11, cameraMove: s.cameraMove, dur: Math.max(6, ...T.items.flat()), max: hi,
-          bars: bars.map(b => ({ label: esc(b.label), text: b.text ? esc(b.text) : '', tone: b.tone, value: b.value, base: b.base || 0, count: counter(b.show || String(b.value)) })),
+          bars: bars.map(b => { const show = b.show || String(b.value); return { label: esc(b.label), text: b.text ? esc(b.text) : '', tone: b.tone, value: b.value, base: b.base || 0, count: counter(show), show }; }),
           itemsT: T.items };
       }
       const json = JSON.stringify(data).replace(/<\/script/gi, '<\\/script');
