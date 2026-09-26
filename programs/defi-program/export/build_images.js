@@ -1138,7 +1138,32 @@ function storyAddressPoisoning() {
   return lightShell(1800, 560, 'Address poisoning, character by character', 'Never copy an address from your history — only from your saved address book',
     body);
 }
+function storyPermitPhishing() {
+  const chrome = `<div style="height:46px;display:flex;align-items:center;gap:10px;padding:0 20px;background:#eef2f6;border-bottom:1px solid ${C.line}">
+    <span style="width:13px;height:13px;border-radius:50%;background:#ff5f57"></span><span style="width:13px;height:13px;border-radius:50%;background:#febc2e"></span><span style="width:13px;height:13px;border-radius:50%;background:#28c840"></span>
+    <span style="margin-left:14px;flex:1;padding:6px 16px;border-radius:8px;background:#fff;border:1px solid ${C.line};font-size:16px;color:${C.text2};font-family:'JetBrains Mono',monospace">"Verify your wallet" signature request (illustrative)</span></div>`;
+  const field = (label, value, tone) => `<div style="display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-radius:12px;margin-bottom:12px;background:${tone === 'bad' ? '#fff5ef' : C.panel};border:1.5px solid ${tone === 'bad' ? C.orange : C.line}">
+    <span style="font-size:16px;font-weight:700;color:${C.text2}">${label}</span>
+    <span style="font-size:20px;font-weight:${tone === 'bad' ? 800 : 600};color:${tone === 'bad' ? C.orange : C.ink};font-family:'JetBrains Mono',monospace">${value}</span></div>`;
+  const body = `<div style="max-width:900px;margin:0 auto;border-radius:18px;overflow:hidden;border:1px solid ${C.line};box-shadow:0 20px 50px rgba(20,30,50,.12)">${chrome}
+    <div style="padding:28px 32px;background:#fff">
+      <div style="font-size:15px;font-weight:800;letter-spacing:.06em;color:${C.muted};margin-bottom:16px">TYPED-DATA SIGNATURE REQUEST</div>
+      ${field('Type', 'Permit2')}
+      ${field('Token', 'USDC')}
+      ${field('Spender', '0x9f3a…c3 (unknown)')}
+      ${field('Amount', '115792089… (unlimited)', 'bad')}
+      ${field('Deadline', '2030 (5+ years away)', 'bad')}
+      <div style="display:flex;gap:16px;margin-top:8px">
+        <div style="flex:1;text-align:center;padding:14px;border-radius:12px;background:${C.panel};color:${C.text2};font-weight:700">Reject</div>
+        <div style="flex:1;text-align:center;padding:14px;border-radius:12px;background:${C.brand};color:#fff;font-weight:800">Sign</div>
+      </div>
+    </div></div>`;
+  return lightShell(1800, 800, 'This is not "verifying your wallet"', "It's unlimited USDC access for a spender you've never seen, for the next five years",
+    `${body}<div style="margin-top:26px;display:flex;align-items:center;gap:14px;padding:16px 20px;border-radius:12px;background:#fff5ef;border:1.5px solid ${C.orange};max-width:900px;margin-left:auto;margin-right:auto">
+      ${icon('alert', 26, C.orange)}<span style="font-size:19px;color:${C.text}">No real verification needs a token approval. Reject, close the tab, and check your existing approvals.</span></div>`);
+}
 const STORY_IMAGES = [
+  { file: 'story-permit-phishing', w: 1800, h: 800, fn: storyPermitPhishing },
   { file: 'story-address-poisoning', w: 1800, h: 560, fn: storyAddressPoisoning },
   { file: 'story-block-explorer', w: 1800, h: 700, fn: storyBlockExplorer },
   { file: 'story-btc-eth-timeline', w: 1800, h: 640, fn: storyTimeline },

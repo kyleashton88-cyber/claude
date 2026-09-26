@@ -1,0 +1,146 @@
+#!/usr/bin/env python3
+"""Gold-standard script for Lesson 1.7, Reading signatures and simulating
+transactions (target 10-20 minutes). Walks transaction simulation, typed-data
+(EIP-712) fields, blind signing, and EIP-7702 account delegation as visual
+walk-throughs (flows, steps, and a dedicated fake "verify your wallet"
+Permit2 phishing mockup for the worked example), built to the
+walk-through-first standard: almost every idea is a flow, steps or callout
+image, not a statement read over a static screen.
+
+Writes video-scripts/gold/lesson-01-7.json (the generator skips lessons with
+a gold script). Spoken text (vo) spells numbers for the voice; cap is the
+written caption, same sentence count as vo."""
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+S = []
+
+
+def sc(type_, vo, cap=None, **k):
+    d = {"type": type_, **k, "vo": vo}
+    if cap:
+        d["cap"] = cap
+    S.append(d)
+
+
+def img(src, eyebrow, vo, cap=None, **k):
+    sc("image", vo, cap, src=src, eyebrow=eyebrow, wide=True, **k)
+
+
+D = "assets/diagrams/"
+
+# ---------------------------------------------------------------- intro
+sc("title", "Lesson one point seven. Reading signatures and simulating transactions. By the end, you'll know exactly what a signature or transaction will do, before you ever approve it.",
+   "Lesson 1.7. Reading signatures and simulating transactions. By the end, you'll know exactly what a signature or transaction will do, before you ever approve it.",
+   chapter="Intro", eyebrow="Lesson 1.7", num="1.7", title="Reading signatures and simulating transactions", sub="Know what it does before you approve it.")
+sc("pillars", "Here's the plan. Simulation, which previews the balance changes before you sign anything. Typed-data signatures, and the four fields worth reading on every single one. Blind signing, and why it should stay off by default. And account delegation, the newest and most powerful thing a signature can now do to your wallet.",
+   chapter="Intro", title="What this lesson covers",
+   items=[{"icon": "eye", "title": "Simulation", "text": "Preview balance changes first"}, {"icon": "key", "title": "Typed-data signatures", "text": "Four fields, every time"},
+          {"icon": "shield", "title": "Blind signing", "text": "Off by default"}, {"icon": "alert", "title": "Account delegation", "text": "The newest, most powerful risk"}])
+sc("stats", "One rule to hold onto through all four topics, before the detail. If you can't say, in one plain sentence, what a prompt actually does, that's not a detail to skip past. It's the answer already: don't sign it.",
+   chapter="Intro", stats=[["1 sentence", "if you can't say what it does, don't sign it"]])
+
+# ---------------------------------------------------------------- simulation
+sc("title", "Simulation.", chapter="Simulation", eyebrow="Simulation", num="1", title="Preview it before you approve it",
+   sub="Good wallets show you the outcome first.")
+sc("flow", "Here's what a good wallet, or a transaction simulator built into one, actually does before you ever sign. You ask for an action, say a swap. Before showing you the signing prompt, it runs that exact transaction against current chain state, without broadcasting it. And it shows you the result in plain terms: balances leaving, and balances arriving. You're not guessing what a contract call does. You're looking at the outcome, in advance.",
+   chapter="Simulation", title="How a simulation preview actually works",
+   nodes=[{"label": "You request an action", "sub": "For example, a swap", "icon": "swap"}, {"label": "Wallet simulates it", "sub": "Runs it against current state, without broadcasting", "icon": "cog"},
+          {"label": "Shows the outcome", "sub": "−100 USDC, +0.033 ETH", "icon": "eye"}, {"label": "You decide", "sub": "With the real result in front of you", "icon": "check"}])
+sc("compare", "So here's the check that actually matters, every time that preview appears. A normal, expected preview shows exactly what you intended, one asset out, one asset in, nothing else moving. A warning sign is a preview showing an asset leaving that you never mentioned, an approval appearing you didn't ask for, or your entire balance of something being touched.",
+   chapter="Simulation",
+   left={"label": "What you expected", "tone": "good", "items": ["Exactly the asset you intended, leaving", "Exactly the asset you intended, arriving", "Nothing else moves"]},
+   right={"label": "Stop and re-check", "tone": "bad", "items": ["An asset leaving you never mentioned", "An approval appearing you didn't ask for", "Your entire balance of something, touched"]})
+sc("steps", "Not every wallet or every action has a simulator attached, so here's the manual fallback when you don't get a preview. Look up the contract on a block explorer first, and check it's verified. Read the actual function name the transaction calls, not just the button you clicked. And start with a small test amount before ever sending your full position through an unfamiliar contract.",
+   chapter="Simulation", title="No simulator available? Do this instead",
+   steps=["Look up the contract on a block explorer; confirm it's verified", "Read the actual function name being called", "Start with a small test amount first"], result="A manual check, when a preview isn't there to do it for you")
+sc("quiz", "Quick check. A simulator previews your swap and shows an unrelated token leaving your wallet too. What do you do? [[pause 4]] The answer: stop. That's not the transaction you asked for, whatever the interface claims it's doing.",
+   chapter="Simulation", n=1, of=3, q="A simulator previews your swap and shows an unrelated token leaving your wallet too. What do you do?",
+   a="Stop. That's not the transaction you asked for.")
+
+# ---------------------------------------------------------------- typed-data signatures
+sc("title", "Typed-data signatures.", chapter="Typed-data signatures", eyebrow="Typed-data signatures", num="2", title="Four fields, read every time",
+   sub="A structured message, not a random blob of text.")
+sc("statement", "First, what a typed-data signature actually is, since “Permit” sounds harmless. It's a standard called E.I.P. seven-twelve: a structured message, like an order or a token approval, that your wallet can show you as readable fields instead of raw bytes. A “Permit” or “Permit2” signature specifically can hand over token access without any transaction, and without any gas. That's exactly why it's worth reading carefully; nothing about the cost warns you.",
+   chapter="Typed-data signatures", kicker="Why “Permit” deserves extra care", lines=["It can grant token access", "with no transaction, and no gas."], sub="Nothing about the cost warns you. Reading the fields does.")
+sc("flow", "Here are the four fields that matter on every single typed-data prompt, in the order to actually read them. Spender: which address is being given access, and do you recognise it. Token: which asset this covers. Amount: a specific number, or “unlimited.” And deadline: how long this grant stays valid, sometimes years away. Read all four, every time, before you sign anything.",
+   chapter="Typed-data signatures", title="The four fields, every time",
+   nodes=[{"label": "Spender", "sub": "Which address, and do you recognise it", "icon": "eye"}, {"label": "Token", "sub": "Which asset this covers", "icon": "coins"},
+          {"label": "Amount", "sub": "A number, or “unlimited”", "icon": "alert"}, {"label": "Deadline", "sub": "How long the grant stays valid", "icon": "key"}])
+sc("steps", "Put those four fields into a decision you can actually make in the moment. Read the spender first, and if it's unfamiliar, that alone is reason to stop. Check whether the amount matches what this one action needs, or reads as unlimited. Check the deadline: real actions rarely need years of validity. And if any of the three feels wrong, reject and re-check, rather than assume the interface knows best.",
+   chapter="Typed-data signatures", title="Turning the four fields into a decision",
+   steps=["Unfamiliar spender? That alone is reason to stop", "Amount: matches this action, or unlimited?", "Deadline: does it really need years of validity?", "Anything wrong? Reject and re-check"], result="Most bad Permits get caught right here")
+sc("compare", "Worth knowing why “Permit” signatures exist at all, since it's a real convenience, not just a risk. A classic approval is its own on-chain transaction: it costs gas, and you'd notice it as a separate step. A Permit or Permit2 signature does the same job, off-chain and free, bundled invisibly into the action you were already taking. Convenient when you understand it. Exactly why it also needs reading.",
+   chapter="Typed-data signatures",
+   left={"label": "A classic approval", "tone": "warn", "items": ["Its own on-chain transaction", "Costs gas; you'd notice it as a step"]},
+   right={"label": "A Permit / Permit2 signature", "tone": "warn", "items": ["Off-chain, free, and instant", "Bundled invisibly into your action"]})
+sc("quiz", "Quick check. What can a “Permit” signature grant, without any transaction or gas at all? [[pause 4]] The answer: token access, for the spender, amount and duration written into the message, exactly as shown in those four fields.",
+   chapter="Typed-data signatures", n=2, of=3, q="What can a “Permit” signature grant, without any transaction or gas at all?",
+   a="Token access, for the spender, amount and duration in the message.")
+
+# ---------------------------------------------------------------- blind signing and delegation
+sc("title", "Blind signing, and delegation.", chapter="Blind signing", eyebrow="Blind signing", num="3", title="When your wallet can't show you what you're signing",
+   sub="And the newest, most powerful signature of all.")
+sc("compare", "Here's the distinction that matters on a hardware wallet specifically. Normal signing decodes the transaction and shows you readable fields, spender, amount, deadline, the works. Blind signing is what happens when the device can't decode it: you see only a hash, a string of characters that tells you nothing about what you're actually approving.",
+   chapter="Blind signing",
+   left={"label": "Normal signing", "tone": "good", "items": ["Device decodes the transaction", "Shows readable fields: spender, amount, deadline"]},
+   right={"label": "Blind signing", "tone": "bad", "items": ["Device can't decode it", "Shows only a hash — tells you nothing"]})
+sc("steps", "So here's the actual rule for blind signing, as a habit. Keep it off by default, every day, on every device. Turn it on only for one specific, already-verified action you understand. Complete that one action. Then turn it straight back off, before you forget you left it on.",
+   chapter="Blind signing", title="The blind-signing habit",
+   steps=["Off by default, every day", "On only for one verified, understood action", "Complete that one action", "Off again, immediately after"], result="A hash tells you nothing — don't sign what you can't read")
+sc("flow", "Now the newest risk: account delegation, under a standard called E.I.P. seventy-seven-oh-two, live since Ethereum's twenty twenty-five Pectra upgrade. Normally, a wallet is just a key. This lets that same wallet sign an authorisation that delegates its behaviour to smart-contract code instead. A legitimate app might use this for useful features. A malicious site can use the exact same signature to hand your entire account over to an attacker.",
+   chapter="Blind signing", title="What an account-delegation signature actually does",
+   nodes=[{"label": "Normal wallet", "sub": "Controlled by one private key", "icon": "wallet"}, {"label": "You sign a delegation", "sub": "E.I.P. 7702, since Pectra (2025)", "icon": "key"},
+          {"label": "Behaviour delegated", "sub": "To smart-contract code you may not have read", "icon": "cog"}, {"label": "Malicious code = full control", "sub": "The attacker's contract now runs your account", "icon": "alert"}])
+sc("flow", "And here's what actually happens next, once a malicious delegation signature goes through. The attacker's contract is now the code controlling your account, immediately. It can move every asset the account holds, without asking for a single further signature from you. This often happens within minutes of the signing, sometimes faster. And once it's done, it's done: there's no undo, and no support line to call.",
+   chapter="Blind signing", title="What happens after a malicious delegation",
+   nodes=[{"label": "Attacker's code controls the account", "sub": "Immediately, after one signature", "icon": "alert"}, {"label": "Moves every asset held", "sub": "No further signature required", "icon": "coins"},
+          {"label": "Often within minutes", "sub": "Sometimes faster", "icon": "chart"}, {"label": "No undo", "sub": "Nothing to call, nothing to reverse", "icon": "lock"}])
+sc("statement", "So the rule for delegation signatures is narrower than for anything else in this lesson, on purpose. Only sign one from a wallet feature or app you already trust, for a purpose you can state in one sentence. An unfamiliar site asking for a delegation isn't offering you a feature. It's asking for control of the whole account, in a single signature.",
+   chapter="Blind signing", kicker="The narrowest rule in this lesson", lines=["Only from apps you trust,", "for a purpose you can state in one sentence."], sub="An unfamiliar site asking for this wants control of the whole account.")
+sc("compare", "Delegation itself isn't automatically the enemy here, so here's the honest contrast. A legitimate use is a wallet feature you deliberately chose, upgrading your own account to add multisig or spending limits, from an app you already trust. A malicious one is an unfamiliar site asking for the exact same signature, with no feature explained, no purpose you could state back in a sentence.",
+   chapter="Blind signing",
+   left={"label": "A legitimate delegation", "tone": "good", "items": ["A feature you deliberately chose", "From an app you already trust"]},
+   right={"label": "A malicious delegation request", "tone": "bad", "items": ["An unfamiliar site, out of nowhere", "No purpose you could state in a sentence"]})
+sc("quiz", "Quick check. Your hardware wallet shows only a hash for a transaction, no readable fields. What should your default response be? [[pause 4]] The answer: don't sign it. Keep blind signing off, and only enable it briefly for one action you already understand.",
+   chapter="Blind signing", n=3, of=3, q="Your hardware wallet shows only a hash for a transaction, no readable fields. What should your default response be?",
+   a="Don't sign it. Keep blind signing off by default.")
+
+# ---------------------------------------------------------------- worked example
+sc("title", "Worked example.", chapter="Worked example", eyebrow="Worked example", num="1", title="“Verify your wallet”, one field at a time",
+   sub="Reading the four fields turns a scam into an obvious one.")
+img(D + "story-permit-phishing.png", "A “verification” that verifies nothing",
+    "A site asks you to “verify your wallet.” Your wallet shows a typed-data message: Permit2, token U.S.D.C., spender zero x nine f three a, dot dot dot, c three, amount one one five, seven nine two, oh eight nine and more, which is the unlimited number, deadline twenty thirty. Read those four fields and the trick collapses instantly. This isn't verification. It's unlimited U.S.D.C. access, for a spender you've never seen, for the next five years.",
+    "A site asks you to “verify your wallet.” Your wallet shows a typed-data message: Permit2, token USDC, spender 0x9f3a…c3, amount 115792089… (the unlimited number), deadline 2030. Read those four fields and the trick collapses instantly. This isn't verification. It's unlimited USDC access, for a spender you've never seen, for the next five years.",
+    chapter="Worked example")
+sc("stats", "One real, dated fact behind why this exact scam works so well. Security researchers have documented Permit and Permit2 phishing signatures draining six- and seven-figure sums from individual wallets in a single approval, across 2023 and 2024. Not a rare edge case: one of the highest-value theft techniques currently in use, and it starts with exactly the prompt you just read.",
+   chapter="Worked example", stats=[["6-7 figures", "drained per wallet in documented Permit2 phishing cases (outside research)"]])
+sc("steps", "So here's exactly what you do with that prompt in front of you, right now. Reject the signature, don't sign it under any circumstance. Close the tab completely; don't navigate elsewhere on that same site. And go check your existing approvals afterward, since a site willing to try this once may have others live from before you knew to look.",
+   chapter="Worked example", title="What you actually do with this prompt",
+   steps=["Reject the signature", "Close the tab entirely", "Check your existing approvals afterward"], result="No real verification ever needs a token approval")
+sc("flow", "And here's what “check your existing approvals” actually means as a walk-through, since it's worth doing on a schedule, not just after a scare. Open an approval-checker tool for your wallet address. Review the full list of spenders it shows you, not just the newest one. Revoke anything unfamiliar, or anything unlimited you no longer need. And put a reminder in your calendar to repeat this, since old approvals accumulate quietly.",
+   chapter="Worked example", title="Checking your existing approvals, step by step",
+   nodes=[{"label": "Open an approval-checker tool", "sub": "For your own wallet address", "icon": "search"}, {"label": "Review the full list", "sub": "Not just the newest spender", "icon": "eye"},
+          {"label": "Revoke unfamiliar or unlimited ones", "sub": "Anything you no longer need", "icon": "shield"}, {"label": "Repeat on a schedule", "sub": "Old approvals accumulate quietly", "icon": "check"}])
+
+# ---------------------------------------------------------------- checklist and recap
+sc("steps", "Here's your checklist. Do it now, for real. Your wallet shows simulated balance changes before you sign, every time. You read spender, token, amount and deadline on every typed-data prompt. Blind signing stays off on your hardware wallet by default. And you never sign an account-delegation request from a site or app you don't already trust.",
+   chapter="Checklist", title="Your checklist",
+   steps=["Simulated balance changes shown before signing", "Spender, token, amount, deadline: read every time", "Blind signing off by default", "Delegations only from apps you already trust"])
+sc("bullets", "Let's recap. Four ideas, one shared habit underneath them. Simulation previews the outcome before you commit to it. Typed-data signatures reduce to four fields worth reading, every time. Blind signing hides those fields, so it stays off unless you've verified the action yourself. And account delegation is the newest, most powerful signature of all, worth the narrowest trust rule you have.",
+   chapter="Recap", title="Recap", check=False,
+   items=["Simulation: preview the outcome before you commit", "Typed-data: four fields, read every time",
+          "Blind signing: hides those fields, so it stays off by default", "Delegation: the newest, most powerful signature — narrowest trust rule"])
+sc("cta", "Read every prompt, and simulate before you sign, and the vast majority of what could go wrong on-chain simply stops reaching you. Next up, Lesson one point eight: Privacy and physical security.",
+   "Read every prompt, and simulate before you sign, and the vast majority of what could go wrong on-chain simply stops reaching you. Next up, Lesson 1.8: Privacy and physical security.",
+   chapter="Recap", button="Next: Lesson 1.8", sub="Privacy and physical security")
+
+spec = {"id": "lesson-01-7", "title": "Lesson 1.7: Reading signatures and simulating transactions", "size": [1920, 1080], "group": "lessons", "maxMinutes": 25,
+        "tag": "Lesson 1.7", "gold": True, "music": True, "musicLevel": 0.14, "seed": 49,
+        "use": "Lesson 1.7 page in the Whop course. Hand-written gold-standard script: simulation, typed-data fields, blind signing and EIP-7702 delegation as walk-throughs, with a dedicated Permit2-phishing worked example.",
+        "thumbnail": {"title": "Reading signatures & simulation", "subtitle": "Lesson 1.7"}, "scenes": S}
+out = ROOT / "video-scripts" / "gold" / "lesson-01-7.json"
+out.write_text(json.dumps(spec, indent=1, ensure_ascii=False))
+words = sum(len(s["vo"].replace("[[pause 4]]", "").split()) for s in S)
+print(f"{len(S)} scenes, {words} words, est {(words / 171 * 60 + len(S) * 1.3 + 4 * 3) / 60:.1f} min")
