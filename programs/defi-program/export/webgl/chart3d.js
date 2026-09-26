@@ -154,6 +154,11 @@ function runBars(DATA) {
       const lp = project(new THREE.Vector3(b.x, -0.35, b.z), camera, W, H);
       const le = labelEls[i]; le.style.opacity = String(ease((t - a) / 0.5) * (0.55 + 0.45 * (active || activeIdx < 0 ? 1 : 0))); le.style.transform = `translate(${lp.x.toFixed(1)}px, ${lp.y.toFixed(1)}px)`;
       const cp = project(new THREE.Vector3(b.x, h + 0.55, b.z), camera, W, H);
+      // A bar at (or near) max height projects its counter close to the top of
+      // the frame, where the scene's own title/sub header sits (a flat 2D
+      // overlay the camera framing above doesn't know about) - clamp so the
+      // counter never floats up into it, found on a "Rung 3" bar at 100% height.
+      cp.y = Math.max(cp.y, 250);
       const ce = countEls[i]; ce.style.opacity = String(ease((t - a) / 0.4)); ce.style.transform = `translate(${cp.x.toFixed(1)}px, ${cp.y.toFixed(1)}px)`;
       ce.style.color = active ? `#${b.color.toString(16).padStart(6, '0')}` : '#fff';
       ce.firstChild.textContent = formatCounter(b.count, easeIO((t - a) / 1.1));
