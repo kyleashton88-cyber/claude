@@ -3,209 +3,581 @@ WEBVTT
 00:00:00.550 --> 00:00:02.165
 Lesson 2.8.
 
-00:00:02.165 --> 00:00:04.360
+00:00:02.165 --> 00:00:04.030
 The MEV supply chain.
 
-00:00:04.360 --> 00:00:06.261
-By the end of this lesson, you'll
+00:00:04.030 --> 00:00:06.702
+By the end, you'll understand who sees, orders
 
-00:00:06.261 --> 00:00:08.442
-be able to understand who sees, orders
+00:00:06.702 --> 00:00:09.373
+and profits from your transactions, and how to
 
-00:00:08.442 --> 00:00:10.902
-and profits from your transactions, and how
+00:00:09.373 --> 00:00:10.965
+get some of that value back.
 
-00:00:10.902 --> 00:00:12.635
-to get some of that value back.
-
-00:00:13.935 --> 00:00:15.225
+00:00:12.265 --> 00:00:13.555
 Here's the plan.
 
-00:00:15.225 --> 00:00:16.910
-First, the key ideas.
+00:00:13.555 --> 00:00:16.245
+The full path your transaction actually takes,
 
-00:00:16.910 --> 00:00:19.625
-Then, a worked example, step by step.
+00:00:16.245 --> 00:00:18.720
+from your wallet to a confirmed block.
 
-00:00:19.625 --> 00:00:21.150
-Then, your checklist.
+00:00:18.720 --> 00:00:21.441
+Order-flow auctions and rebates, and how you can
 
-00:00:21.150 --> 00:00:23.312
-And finally, a three-question quiz.
+00:00:21.441 --> 00:00:23.795
+actually get some of that value back.
 
-00:00:24.612 --> 00:00:28.043
-The path of an Ethereum transaction today:
+00:00:23.795 --> 00:00:26.340
+What changes once you're on a layer two, with
 
-00:00:28.043 --> 00:00:30.755
-First, you / your wallet send it,
+00:00:26.340 --> 00:00:29.240
+a single sequencer instead of this whole chain.
 
-00:00:30.755 --> 00:00:33.548
-either to the public mempool or to
+00:00:29.240 --> 00:00:31.927
+And a full worked example, showing exactly how
 
-00:00:33.548 --> 00:00:37.677
-a private RPC (e.g. an MEV-protection endpoint).
+00:00:31.927 --> 00:00:34.100
+differently the same trade can end up.
 
-00:00:37.677 --> 00:00:40.908
-Next, Searchers scan for opportunities (arbitrage,
+00:00:35.400 --> 00:00:36.310
+The full path.
 
-00:00:40.908 --> 00:00:44.692
-liquidations, backruns, sandwiches) and submit bundles.
+00:00:37.610 --> 00:00:40.618
+Here's exactly where your transaction goes, step by
 
-00:00:44.692 --> 00:00:47.222
-Then, Builders assemble the most profitable
+00:00:40.618 --> 00:00:42.885
+step, from the moment you sign it.
 
-00:00:47.222 --> 00:00:49.649
-blocks from transactions and bundles.
+00:00:42.885 --> 00:00:45.742
+Your wallet sends it, either to the public
 
-00:00:49.649 --> 00:00:53.697
-Also, Relays pass blocks to proposers (validators), who
+00:00:45.742 --> 00:00:48.799
+mempool, visible to everyone, or to a private
 
-00:00:53.697 --> 00:00:59.419
-pick the highest-paying block (proposer-builder separation, via MEV-Boost).
+00:00:48.799 --> 00:00:53.020
+R.P.C., an M.E.V.-protection endpoint that keeps it hidden.
 
-00:00:59.419 --> 00:01:02.270
-On top of that, Order-flow auctions /
+00:00:53.020 --> 00:00:58.173
+Searchers scan constantly for opportunities, arbitrage, liquidations, backruns,
 
-00:01:02.270 --> 00:01:05.497
-MEV rebates: some private RPCs and wallets
+00:00:58.173 --> 00:01:02.145
+sandwiches, and submit bundles competing to capture them.
 
-00:01:05.497 --> 00:01:08.948
-let searchers bid to backrun your transaction
+00:01:02.145 --> 00:01:05.525
+Builders assemble the most profitable possible block, from
 
-00:01:08.948 --> 00:01:11.424
-and refund you part of the value.
+00:01:05.525 --> 00:01:08.447
+all the transactions and bundles available to them.
 
-00:01:12.724 --> 00:01:16.284
-And Intent systems (Lesson 2.6) move competition
+00:01:09.747 --> 00:01:11.941
+And here's the fourth and final stop,
 
-00:01:16.284 --> 00:01:19.709
-to solvers, often with built-in protection.
+00:01:11.941 --> 00:01:14.897
+before your transaction is actually confirmed.
 
-00:01:19.709 --> 00:01:22.737
-And finally, L2s usually have a single
+00:01:14.897 --> 00:01:18.793
+Relays pass completed blocks along to proposers, the validators
 
-00:01:22.737 --> 00:01:27.396
-sequencer ordering transactions, which changes MEV dynamics
+00:01:18.793 --> 00:01:21.407
+who actually add a block to the chain.
 
-00:01:27.396 --> 00:01:31.744
-(e.g. first-come-first-served or priority-fee ordering).
+00:01:21.407 --> 00:01:24.738
+Those proposers simply pick whichever block pays
 
-00:01:33.044 --> 00:01:36.749
-Let's look at the diagram: The MEV supply chain.
+00:01:24.738 --> 00:01:28.001
+them the most, a system called proposer-builder
 
-00:01:36.749 --> 00:01:38.309
-Take a moment with it.
+00:01:28.001 --> 00:01:32.312
+separation, run through infrastructure called M.E.V.-Boost.
 
-00:01:38.309 --> 00:01:40.719
-It's everything we've just said, in one picture.
+00:01:32.312 --> 00:01:35.448
+Your transaction, wherever it landed in that winning
 
-00:01:42.019 --> 00:01:44.534
-Let's work an example, step by step.
+00:01:35.448 --> 00:01:38.110
+block, is now confirmed, for better or worse.
 
-00:01:44.534 --> 00:01:48.825
-A $100,000 swap sent publicly with 1% slippage
+00:01:39.410 --> 00:01:41.579
+Here's the entire path, laid out as
 
-00:01:48.825 --> 00:01:52.685
-could leak up to ~$1,000 to a sandwich.
+00:01:41.579 --> 00:01:43.989
+one picture, worth holding in your head
 
-00:01:52.685 --> 00:01:55.983
-Sent through a protected RPC with rebates: no
+00:01:43.989 --> 00:01:45.795
+as a single mental model.
 
-00:01:55.983 --> 00:01:59.210
-sandwich, and if the trade creates a backrun
+00:01:45.795 --> 00:01:47.711
+Your wallet, to the mempool or
 
-00:01:59.210 --> 00:02:03.513
-opportunity (e.g. arbitrage between pools), you may receive
+00:01:47.711 --> 00:01:50.915
+a private R.P.C. Searchers, submitting bundles.
 
-00:02:03.513 --> 00:02:05.175
-a share of it back.
+00:01:50.915 --> 00:01:52.949
+Builders, assembling blocks.
 
-00:02:05.175 --> 00:02:07.832
-Same trade, very different outcome, decided
+00:01:52.949 --> 00:01:55.344
+Relays, passing them to proposers.
 
-00:02:07.832 --> 00:02:09.100
-by where you send it.
+00:01:55.344 --> 00:01:57.490
+Every one of those five stops is a
 
-00:02:10.400 --> 00:02:11.860
+00:01:57.490 --> 00:02:00.432
+separate party, each one capable of seeing, and
+
+00:02:00.432 --> 00:02:03.804
+acting on, your pending transaction before it confirms.
+
+00:02:05.104 --> 00:02:08.561
+One real number, so this whole chain isn't abstract.
+
+00:02:08.561 --> 00:02:13.137
+Blockchain researchers have tracked hundreds of millions of dollars
+
+00:02:13.137 --> 00:02:16.771
+in total M.E.V. extracted across Ethereum in a single
+
+00:02:16.771 --> 00:02:22.051
+year, spread across arbitrage, liquidations and sandwich attacks combined.
+
+00:02:22.051 --> 00:02:24.976
+This is outside research, not this program's own
+
+00:02:24.976 --> 00:02:27.305
+data, but it's the actual scale of the
+
+00:02:27.305 --> 00:02:29.991
+supply chain this lesson just walked through.
+
+00:02:31.292 --> 00:02:32.382
+Quick check.
+
+00:02:32.382 --> 00:02:34.547
+What do builders actually do, in this chain?
+
+00:02:38.967 --> 00:02:41.631
+The answer: they assemble the most profitable
+
+00:02:41.631 --> 00:02:44.527
+possible block, out of the available transactions
+
+00:02:44.527 --> 00:02:46.844
+and searcher bundles, to earn the right
+
+00:02:46.844 --> 00:02:48.697
+to have it chosen by a proposer.
+
+00:02:49.997 --> 00:02:51.222
+Getting value back.
+
+00:02:52.522 --> 00:02:56.381
+Here's how an M.E.V. rebate actually works, mechanically,
+
+00:02:56.381 --> 00:03:00.407
+since “getting value back” can sound abstract otherwise.
+
+00:03:00.407 --> 00:03:04.036
+Some private R.P.C.s and wallets let searchers bid
+
+00:03:04.036 --> 00:03:07.736
+directly for the right to backrun your transaction,
+
+00:03:07.736 --> 00:03:11.167
+the harmless kind of M.E.V., not a sandwich.
+
+00:03:11.167 --> 00:03:13.272
+The highest bidder wins that right.
+
+00:03:13.272 --> 00:03:15.344
+And a share of what they bid gets
+
+00:03:15.344 --> 00:03:18.392
+refunded straight back to you, the sender, simply
+
+00:03:18.392 --> 00:03:20.647
+for having routed through that R.P.C.
+
+00:03:21.947 --> 00:03:24.741
+Worth connecting this directly to Lesson two
+
+00:03:24.741 --> 00:03:27.660
+point six, since intent-based trading solves a
+
+00:03:27.660 --> 00:03:30.382
+related problem from a different angle.
+
+00:03:30.382 --> 00:03:33.617
+Intent systems move the entire competition to
+
+00:03:33.617 --> 00:03:36.993
+solvers, before your transaction even exists as
+
+00:03:36.993 --> 00:03:39.806
+a signed transaction at all, often with
+
+00:03:39.806 --> 00:03:43.412
+M.E.V. protection built into the system itself.
+
+00:03:43.412 --> 00:03:48.412
+A protected R.P.C. with rebates protects an existing transaction.
+
+00:03:48.412 --> 00:03:50.362
+An intent system changes how the
+
+00:03:50.362 --> 00:03:52.312
+trade happens in the first place.
+
+00:03:53.612 --> 00:03:56.190
+Here's how to actually check whether your own
+
+00:03:56.190 --> 00:03:58.881
+wallet already offers this, since it's often on
+
+00:03:58.881 --> 00:04:01.367
+by default without being named clearly.
+
+00:04:01.367 --> 00:04:05.412
+Open your wallet's network or R.P.C. settings directly.
+
+00:04:05.412 --> 00:04:08.816
+Look for a name like “protected,” “private,” or
+
+00:04:08.816 --> 00:04:13.017
+a specific R.P.C. provider known for M.E.V. protection.
+
+00:04:13.017 --> 00:04:16.325
+And check its own documentation specifically for whether
+
+00:04:16.325 --> 00:04:18.588
+it pays rebates, and how large a share
+
+00:04:18.588 --> 00:04:20.387
+it actually passes back to you.
+
+00:04:21.687 --> 00:04:24.277
+Worth being honest about the actual size
+
+00:04:24.277 --> 00:04:27.357
+of a rebate, so expectations stay realistic.
+
+00:04:27.357 --> 00:04:29.373
+A rebate is a share of a backrun
+
+00:04:29.373 --> 00:04:32.306
+opportunity's value, not a share of your entire
+
+00:04:32.306 --> 00:04:35.056
+trade; it's typically a modest amount, not a
+
+00:04:35.056 --> 00:04:37.067
+meaningful yield on its own.
+
+00:04:37.067 --> 00:04:39.360
+The real value of routing correctly is
+
+00:04:39.360 --> 00:04:41.830
+avoiding the sandwich in the first place,
+
+00:04:41.830 --> 00:04:43.717
+from Lesson two point five.
+
+00:04:43.717 --> 00:04:45.735
+The rebate is a genuine bonus on
+
+00:04:45.735 --> 00:04:47.692
+top of that, not the main event.
+
+00:04:48.992 --> 00:04:50.082
+Quick check.
+
+00:04:50.082 --> 00:04:52.247
+What is an MEV rebate, specifically?
+
+00:04:56.667 --> 00:04:58.891
+The answer: a refund of part of the
+
+00:04:58.891 --> 00:05:01.363
+value searchers bid to win the right to
+
+00:05:01.363 --> 00:05:04.267
+backrun your transaction, paid back to you for
+
+00:05:04.267 --> 00:05:07.047
+routing through a private RPC that offers it.
+
+00:05:08.347 --> 00:05:09.562
+L2 sequencers.
+
+00:05:10.862 --> 00:05:14.155
+Here's the actual difference worth holding clearly, since
+
+00:05:14.155 --> 00:05:17.237
+an L2 changes almost everything from this lesson.
+
+00:05:17.237 --> 00:05:21.112
+Ethereum mainnet runs the full chain: searchers, builders,
+
+00:05:21.112 --> 00:05:24.827
+relays, proposers, each a separate, competing party.
+
+00:05:24.827 --> 00:05:27.795
+Most layer twos today instead run a single
+
+00:05:27.795 --> 00:05:32.695
+sequencer, one operator, ordering every transaction directly, commonly
+
+00:05:32.695 --> 00:05:36.353
+on a first-come-first-served or a priority-fee basis.
+
+00:05:37.653 --> 00:05:40.843
+Worth knowing where this is actually heading, since “a
+
+00:05:40.843 --> 00:05:44.972
+single sequencer” isn't necessarily the permanent state of things.
+
+00:05:44.972 --> 00:05:48.992
+Today, most L2s run one operator, ordering everything.
+
+00:05:48.992 --> 00:05:53.394
+Several roadmaps now point toward shared or decentralised sequencing,
+
+00:05:53.394 --> 00:05:57.405
+spreading that same ordering power across multiple parties.
+
+00:05:57.405 --> 00:06:00.493
+And the actual M.E.V. dynamics on any given
+
+00:06:00.493 --> 00:06:03.370
+L2 will keep shifting as that rolls out,
+
+00:06:03.370 --> 00:06:07.230
+worth rechecking periodically, not assumed to be fixed.
+
+00:06:08.530 --> 00:06:11.659
+Worth being precise about what this actually means
+
+00:06:11.659 --> 00:06:14.290
+for you, practically, on any given L2.
+
+00:06:14.290 --> 00:06:17.745
+It's genuinely worth knowing that specific L2's own
+
+00:06:17.745 --> 00:06:21.067
+ordering rule, since it directly shapes what kind
+
+00:06:21.067 --> 00:06:23.560
+of M.E.V. is even possible there.
+
+00:06:23.560 --> 00:06:27.661
+A single, trusted sequencer removes the multi-party competition
+
+00:06:27.661 --> 00:06:30.737
+this lesson just walked through, but it doesn't
+
+00:06:30.737 --> 00:06:34.006
+automatically remove every form of M.E.V.; it just
+
+00:06:34.006 --> 00:06:36.505
+changes who's positioned to capture it.
+
+00:06:37.805 --> 00:06:38.810
+Worked example.
+
+00:06:40.110 --> 00:06:44.298
+Here's the same one-hundred-thousand-dollar swap, sent two different
+
+00:06:44.298 --> 00:06:47.815
+ways, with one percent slippage tolerance either way.
+
+00:06:47.815 --> 00:06:50.980
+Sent publicly, to the open mempool: up to roughly
+
+00:06:50.980 --> 00:06:54.462
+one thousand dollars could leak straight to a sandwich
+
+00:06:54.462 --> 00:06:58.180
+bot, exactly the mechanism from Lesson two point five.
+
+00:06:58.180 --> 00:07:01.273
+Sent through a protected R.P.C. with rebates
+
+00:07:01.273 --> 00:07:04.023
+instead: no sandwich reaches it at all,
+
+00:07:04.023 --> 00:07:06.360
+since it was never visible to see.
+
+00:07:07.660 --> 00:07:10.505
+And here's the part worth naming specifically,
+
+00:07:10.505 --> 00:07:12.988
+since the protected route isn't just “no
+
+00:07:12.988 --> 00:07:15.225
+loss,” it can be a genuine gain.
+
+00:07:15.225 --> 00:07:17.552
+If that same trade happens to create a
+
+00:07:17.552 --> 00:07:20.954
+backrun opportunity, say, an arbitrage between two pools
+
+00:07:20.954 --> 00:07:23.640
+it touches, you may actually receive a share
+
+00:07:23.640 --> 00:07:26.564
+of that value back, through the rebate mechanism
+
+00:07:26.564 --> 00:07:28.535
+from earlier in this lesson.
+
+00:07:28.535 --> 00:07:29.735
+Same trade.
+
+00:07:29.735 --> 00:07:30.980
+Same size.
+
+00:07:30.980 --> 00:07:34.062
+A meaningfully different financial outcome, decided
+
+00:07:34.062 --> 00:07:35.840
+entirely by where you sent it.
+
+00:07:37.140 --> 00:07:38.230
+Quick check.
+
+00:07:38.230 --> 00:07:41.710
+Sending the exact same $100,000 swap through a
+
+00:07:41.710 --> 00:07:45.633
+protected RPC with rebates, instead of publicly, can
+
+00:07:45.633 --> 00:07:49.335
+result in what, beyond simply avoiding a sandwich?
+
+00:07:53.755 --> 00:07:56.799
+The answer: potentially receiving a share of a
+
+00:07:56.799 --> 00:08:00.360
+backrun opportunity's value back, as a rebate, turning
+
+00:08:00.360 --> 00:08:03.145
+a possible loss into a possible small gain.
+
+00:08:04.445 --> 00:08:06.859
+Here's the actual decision, boiled down
+
+00:08:06.859 --> 00:08:09.150
+to when protection pays off most.
+
+00:08:09.150 --> 00:08:11.546
+It matters most on large trades, where
+
+00:08:11.546 --> 00:08:14.610
+a sandwich's absolute dollar take is largest.
+
+00:08:14.610 --> 00:08:17.686
+It matters most on volatile pairs, where backrun
+
+00:08:17.686 --> 00:08:21.250
+opportunities, and rebate value, show up most often.
+
+00:08:21.250 --> 00:08:23.998
+And it matters least on tiny, routine trades,
+
+00:08:23.998 --> 00:08:26.866
+where neither the risk nor the potential rebate
+
+00:08:26.866 --> 00:08:29.375
+is large enough to change much either way.
+
+00:08:30.675 --> 00:08:32.135
 Here's your checklist.
 
-00:02:11.860 --> 00:02:13.395
-Do it now, for real.
+00:08:32.135 --> 00:08:34.710
+Do it now, before your next large trade.
 
-00:02:13.395 --> 00:02:17.432
-First, Large trades go through a protected RPC, an
+00:08:34.710 --> 00:08:38.281
+Large trades go through a protected R.P.C., an
 
-00:02:17.432 --> 00:02:21.770
-intent system or an aggregator with MEV protection.
+00:08:38.281 --> 00:08:42.460
+intent system, or an aggregator with M.E.V. protection
 
-00:02:21.770 --> 00:02:25.655
-Next, I know whether my wallet's RPC offers rebates.
+00:08:42.460 --> 00:08:45.115
+built in, not the open mempool.
 
-00:02:25.655 --> 00:02:29.703
-And finally, I understand my L2's sequencer ordering rules.
+00:08:45.115 --> 00:08:47.358
+You know specifically whether your
 
-00:02:31.003 --> 00:02:32.213
-Question 1.
+00:08:47.358 --> 00:08:49.900
+own wallet's R.P.C. offers rebates.
 
-00:02:32.213 --> 00:02:33.438
-What do builders do?
+00:08:49.900 --> 00:08:52.749
+And you understand your own L2's sequencer ordering
 
-00:02:37.858 --> 00:02:40.845
-The answer: Assemble blocks from transactions
+00:08:52.749 --> 00:08:55.215
+rules, since they're not the same everywhere.
 
-00:02:40.845 --> 00:02:43.378
-and searcher bundles to maximise value.
+00:08:56.515 --> 00:08:58.347
+One last thing worth naming,
 
-00:02:44.678 --> 00:02:45.923
-Question 2.
+00:08:58.347 --> 00:09:00.605
+closing out this entire module.
 
-00:02:45.923 --> 00:02:47.918
-What is an MEV rebate?
+00:09:00.605 --> 00:09:04.817
+Every lesson in Module Two, price impact, slippage, impermanent
 
-00:02:52.338 --> 00:02:54.500
-The answer: A refund of part of the
+00:09:04.817 --> 00:09:08.766
+loss, L.V.R., sandwich defence, order types, and this exact
 
-00:02:54.500 --> 00:02:57.983
-value searchers extract from backrunning your transaction.
+00:09:08.766 --> 00:09:12.517
+supply chain, is really one connected skill: knowing the
 
-00:02:59.283 --> 00:03:00.553
-Question 3.
+00:09:12.517 --> 00:09:15.281
+real cost of a trade before you commit to
 
-00:03:00.553 --> 00:03:03.508
-Who orders transactions on most L2s today?
+00:09:15.281 --> 00:09:18.045
+it, from every direction it can come from.
 
-00:03:07.928 --> 00:03:11.173
-The answer: A sequencer, often a single operator.
-
-00:03:12.473 --> 00:03:13.718
+00:09:19.345 --> 00:09:20.590
 Let's recap.
 
-00:03:13.718 --> 00:03:16.473
-You / your wallet send it, either
+00:09:20.590 --> 00:09:23.705
+Your transaction passes through the mempool or
 
-00:03:16.473 --> 00:03:18.903
-to the public mempool or to a
+00:09:23.705 --> 00:09:27.018
+a private R.P.C., searchers, builders, and relays
 
-00:03:18.903 --> 00:03:22.930
-private RPC (e.g. an MEV-protection endpoint).
+00:09:27.018 --> 00:09:30.035
+to proposers, before it's ever confirmed.
 
-00:03:22.930 --> 00:03:26.559
-Searchers scan for opportunities (arbitrage, liquidations,
+00:09:30.035 --> 00:09:33.154
+Order-flow auctions can rebate you a share of the
 
-00:03:26.559 --> 00:03:29.381
-backruns, sandwiches) and submit bundles.
+00:09:33.154 --> 00:09:37.570
+value a backrun opportunity creates, simply for routing correctly.
 
-00:03:29.381 --> 00:03:31.491
-Builders assemble the most profitable
+00:09:37.570 --> 00:09:40.992
+Most L2s replace that whole chain with a single
 
-00:03:31.491 --> 00:03:33.846
-blocks from transactions and bundles.
+00:09:40.992 --> 00:09:45.925
+sequencer, which changes, but doesn't eliminate, M.E.V. dynamics.
 
-00:03:33.846 --> 00:03:36.811
-Relays pass blocks to proposers (validators).
+00:09:45.925 --> 00:09:48.544
+And the exact same trade, sent two different
 
-00:03:38.111 --> 00:03:40.626
-Do the checklist now, before you move on.
+00:09:48.544 --> 00:09:52.095
+ways, can produce a meaningfully different financial outcome.
 
-00:03:40.626 --> 00:03:43.791
-Next up, Lesson 3.0: Mastery Starter.
+00:09:53.395 --> 00:09:56.942
+Route large trades through protection, know your wallet's
+
+00:09:56.942 --> 00:10:00.300
+rebate policy, and know your L2's sequencer rules.
+
+00:10:00.300 --> 00:10:02.225
+That's Module 2, complete.
+
+00:10:02.225 --> 00:10:05.080
+Next up, Module 3: Lending and leverage.
