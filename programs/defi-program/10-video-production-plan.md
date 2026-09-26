@@ -79,7 +79,7 @@ node build_video.js lessons              # all lessons (several hours of renderi
 | 3.0 | Mastery Starter | 31 | 10.3 min | `video-scripts/gold/lesson-03-0.json` (gold: lending-pool-flow/health-factor/liquidation-cascade images, an LTV worked stat, a utilisation-rates flow, a TVL stat, loop-spread and cdp-mint previews, animated ladder; two-pass encoded to 85MB) | ✓ |
 | 3.1 | How lending markets work | 26 | 10.0 min | `video-scripts/gold/lesson-03-1.json` (gold: lending-pool-flow image, a receipt-token flow, a bank-vs-DeFi-lending compare, the kinked-curve flow with a below/above-optimal compare, the source material's own verified rate table as a 5-point line chart plus an 80%-vs-95% APY stat pair, a real utilisation-incident stat, and a near-full-utilisation cascade flow) | ✓ |
 | 3.2 | LTV, liquidation threshold & health factor **(gold standard)** | 18 | 7.1 min | `video-scripts/gold/lesson-03-2.json` | ✓ |
-| 3.3 | Liquidations and cascades | 9 | 2.5 min | `video-scripts/lessons/lesson-03-3.json` | ✓ |
+| 3.3 | Liquidations and cascades | 27 | 9.9 min | `video-scripts/gold/lesson-03-3.json` (gold: liquidation-cascade.png image and a 4-step flow, a real liquidations-volume stat, a cascade-mechanism flow, the source material's own worked example continuing Lesson 3.2's position, the written defence ladder with an alert-setup flow, and a wait-vs-act compare) | ✓ |
 | 3.4 | Borrowing strategies & looping | 11 | 3.0 min | `video-scripts/lessons/lesson-03-4.json` | ✓ |
 | 3.5 | Perpetual futures and margin on-chain | 10 | 3.0 min | `video-scripts/lessons/lesson-03-5.json` | ✓ |
 | 3.6 | Lending design deep dive: e-mode, caps, auctions, soft liquidation, bad debt | 12 | 4.2 min | `video-scripts/lessons/lesson-03-6.json` | ✓ |
