@@ -6,167 +6,569 @@ Lesson 2.3.
 00:00:02.185 --> 00:00:03.750
 Providing liquidity.
 
-00:00:03.750 --> 00:00:06.012
-By the end of this lesson, you'll
+00:00:03.750 --> 00:00:06.940
+By the end, you'll estimate an LP position's fee
 
-00:00:06.012 --> 00:00:08.473
-be able to estimate an LP position's
+00:00:06.940 --> 00:00:10.325
+income from real pool data, before you ever deposit.
 
-00:00:08.473 --> 00:00:10.535
-fee income from real pool data.
-
-00:00:11.835 --> 00:00:13.125
+00:00:11.625 --> 00:00:12.915
 Here's the plan.
 
-00:00:13.125 --> 00:00:14.810
-First, the key ideas.
+00:00:12.915 --> 00:00:15.542
+What providing liquidity actually does to your
 
-00:00:14.810 --> 00:00:17.525
-Then, a worked example, step by step.
+00:00:15.542 --> 00:00:17.910
+position, not just the fees it earns.
 
-00:00:17.525 --> 00:00:19.050
-Then, your checklist.
+00:00:17.910 --> 00:00:21.527
+The fee A.P.R. formula, spelled out piece by piece,
 
-00:00:19.050 --> 00:00:21.212
-And finally, a three-question quiz.
+00:00:21.527 --> 00:00:25.096
+and why thirty-day volume is the number to use.
 
-00:00:22.512 --> 00:00:25.354
-When you LP you deposit both tokens and
+00:00:25.096 --> 00:00:28.094
+And a full worked example, with real numbers,
 
-00:00:25.354 --> 00:00:28.053
-receive a share of the pool (a token,
+00:00:28.094 --> 00:00:32.070
+showing exactly how a ten-thousand-dollar deposit turns into
 
-00:00:28.053 --> 00:00:31.053
-or an NFT for concentrated positions).
+00:00:32.070 --> 00:00:34.286
+an actual daily and annual return.
 
-00:00:31.053 --> 00:00:32.968
-You earn your share of swap fees.
+00:00:35.586 --> 00:00:37.111
+What LPing actually does.
 
-00:00:32.968 --> 00:00:36.050
-In return, your token mix changes as traders move
+00:00:38.411 --> 00:00:41.566
+Here's the mechanics of becoming a liquidity provider.
 
-00:00:36.050 --> 00:00:39.678
-the price: you become the counterparty to every trade.
+00:00:41.566 --> 00:00:43.649
+You deposit both tokens, in the
 
-00:00:39.678 --> 00:00:44.038
-Fee APR estimate: fee APR ≈ (daily volume ×
+00:00:43.649 --> 00:00:45.706
+pool's ratio, not just one.
 
-00:00:44.038 --> 00:00:47.605
-fee tier × your pool share × 365) ÷
+00:00:45.706 --> 00:00:48.529
+In return, you receive a share, a token,
 
-00:00:47.605 --> 00:00:52.362
-your deposit For a full-range pool your share =
+00:00:48.529 --> 00:00:51.695
+or an N.F.T. if it's a concentrated position,
 
-00:00:52.362 --> 00:00:57.118
-deposit ÷ pool TVL, so this simplifies to daily
+00:00:51.695 --> 00:00:54.336
+covered in Lesson two point seven.
 
-00:00:57.118 --> 00:01:00.587
-volume × fee tier × 365 ÷ TVL. Use
+00:00:54.336 --> 00:00:57.040
+That share entitles you to your proportional cut
 
-00:01:00.587 --> 00:01:04.553
-a 30-day average volume, not today's.
+00:00:57.040 --> 00:00:59.137
+of every swap fee the pool earns, for
 
-00:01:04.553 --> 00:01:07.316
-Volume spikes on volatile days, which are also
+00:00:59.137 --> 00:01:00.406
+as long as you hold it.
 
-00:01:07.316 --> 00:01:09.903
-the days you take the most impermanent loss.
+00:01:01.706 --> 00:01:03.322
+Here's the part that's easy to
 
-00:01:11.203 --> 00:01:13.718
-Let's work an example, step by step.
+00:01:03.322 --> 00:01:05.081
+skip past, and shouldn't be.
 
-00:01:13.718 --> 00:01:19.409
-Pool T.V.L. $10M, 30-day average daily volume $2M, fee
+00:01:05.081 --> 00:01:07.128
+When you provide liquidity, you're not
 
-00:01:19.409 --> 00:01:25.090
-tier 0.3%: If volume halves, your fee A.P.R. halves.
+00:01:07.128 --> 00:01:09.370
+a passive lender collecting interest.
 
-00:01:25.090 --> 00:01:26.765
-If a lot more T.V.L. joins
+00:01:09.370 --> 00:01:11.705
+You become the counterparty to every single
 
-00:01:26.765 --> 00:01:28.865
-the pool, your share shrinks.
+00:01:11.705 --> 00:01:13.810
+trade that goes through that pool.
 
-00:01:28.865 --> 00:01:35.450
-Daily pool fees equals 2,000,000 times 0.003 = $6,000.
+00:01:13.810 --> 00:01:16.651
+When a trader buys the token that's rising, they're
 
-00:01:35.450 --> 00:01:39.280
-Your $10,000 equals 0.1% share to $6
+00:01:16.651 --> 00:01:19.245
+buying it from the pool, meaning from you.
 
-00:01:39.280 --> 00:01:42.593
-a day to about 21.9% fee A.P.R.
+00:01:19.245 --> 00:01:22.492
+That's exactly where impermanent loss, covered fully in
 
-00:01:42.593 --> 00:01:46.112
-(before impermanent loss and gas).
+00:01:22.492 --> 00:01:24.985
+Lesson two point four, actually comes from.
 
-00:01:47.412 --> 00:01:48.872
+00:01:26.285 --> 00:01:28.751
+Worth naming the two position types you'll
+
+00:01:28.751 --> 00:01:31.561
+actually choose between, even though this lesson
+
+00:01:31.561 --> 00:01:33.410
+focuses on the simpler one.
+
+00:01:33.410 --> 00:01:37.178
+A full-range position covers every possible price, simple to
+
+00:01:37.178 --> 00:01:40.320
+reason about, earning fees on the whole curve.
+
+00:01:40.320 --> 00:01:43.725
+A concentrated position, an NFT instead of a token,
+
+00:01:43.725 --> 00:01:46.803
+covers only a price band you choose, which can
+
+00:01:46.803 --> 00:01:49.881
+earn far more fee income inside that band, but
+
+00:01:49.881 --> 00:01:53.090
+earns nothing at all once price moves outside it.
+
+00:01:54.390 --> 00:01:58.059
+Here's what actually happens when you eventually withdraw, since
+
+00:01:58.059 --> 00:02:01.295
+it's the moment your changed token mix becomes real.
+
+00:02:01.295 --> 00:02:04.069
+You redeem your share, your L.P. token
+
+00:02:04.069 --> 00:02:06.360
+or N.F.T., back to the pool.
+
+00:02:06.360 --> 00:02:08.994
+The pool returns whatever mix of the two
+
+00:02:08.994 --> 00:02:12.142
+tokens your share is currently worth, at today's
+
+00:02:12.142 --> 00:02:15.590
+ratio, not the ratio you originally deposited at.
+
+00:02:15.590 --> 00:02:18.195
+And you collect the accumulated fees your share
+
+00:02:18.195 --> 00:02:19.878
+has earned, on top of that mix.
+
+00:02:21.178 --> 00:02:24.031
+One practical option worth knowing before you
+
+00:02:24.031 --> 00:02:26.873
+assume you always need both tokens ready.
+
+00:02:26.873 --> 00:02:30.114
+Some protocols accept a single-sided deposit, and
+
+00:02:30.114 --> 00:02:32.448
+swap half of it internally to build
+
+00:02:32.448 --> 00:02:34.498
+your pool position for you.
+
+00:02:34.498 --> 00:02:37.534
+The trade-off: that internal swap has its own
+
+00:02:37.534 --> 00:02:40.372
+price impact and fee, paid once, up front,
+
+00:02:40.372 --> 00:02:44.001
+versus depositing both tokens yourself, which needs no
+
+00:02:44.001 --> 00:02:46.641
+internal swap at all, but does need you
+
+00:02:46.641 --> 00:02:48.753
+to already hold the right ratio.
+
+00:02:50.053 --> 00:02:51.143
+Quick check.
+
+00:02:51.143 --> 00:02:54.850
+When you provide liquidity, what does becoming “the counterparty
+
+00:02:54.850 --> 00:02:57.588
+to every trade” actually mean for your position?
+
+00:03:02.008 --> 00:03:04.650
+The answer: as traders move the price, your
+
+00:03:04.650 --> 00:03:07.293
+token mix changes with it, since you're the
+
+00:03:07.293 --> 00:03:10.596
+one supplying whichever token they're buying, which is
+
+00:03:10.596 --> 00:03:13.118
+exactly where impermanent loss comes from.
+
+00:03:14.418 --> 00:03:15.773
+The fee APR formula.
+
+00:03:17.073 --> 00:03:19.067
+Here's the formula, broken into the
+
+00:03:19.067 --> 00:03:21.362
+four numbers that actually build it.
+
+00:03:21.362 --> 00:03:23.797
+Daily trading volume through the pool.
+
+00:03:23.797 --> 00:03:25.996
+Multiplied by the pool's fee tier,
+
+00:03:25.996 --> 00:03:27.867
+the cut every trade pays.
+
+00:03:27.867 --> 00:03:30.490
+Multiplied by your share of the pool, your
+
+00:03:30.490 --> 00:03:33.352
+deposit divided by the pool's total value.
+
+00:03:33.352 --> 00:03:36.962
+And annualised, multiplied by three hundred sixty-five,
+
+00:03:36.962 --> 00:03:39.025
+to turn a daily number into the
+
+00:03:39.025 --> 00:03:41.539
+yearly rate everyone actually compares.
+
+00:03:42.839 --> 00:03:46.405
+One simplification worth knowing, since it makes the mental
+
+00:03:46.405 --> 00:03:49.974
+math far easier for a full-range position specifically.
+
+00:03:49.974 --> 00:03:52.753
+Your share of a full-range pool is just your
+
+00:03:52.753 --> 00:03:56.079
+deposit divided by the pool's total value locked.
+
+00:03:56.079 --> 00:03:59.996
+Once you substitute that in, the whole formula collapses
+
+00:03:59.996 --> 00:04:03.363
+to one line: daily volume, times fee tier, times
+
+00:04:03.363 --> 00:04:07.692
+three hundred sixty-five, divided by T.V.L. Nothing about your
+
+00:04:07.692 --> 00:04:10.784
+specific deposit size needs to appear at all.
+
+00:04:12.084 --> 00:04:14.842
+And here's exactly why this lesson insists on
+
+00:04:14.842 --> 00:04:18.380
+thirty-day average volume, not today's number, since using
+
+00:04:18.380 --> 00:04:21.199
+the wrong one quietly wrecks the estimate.
+
+00:04:21.199 --> 00:04:24.394
+A single volatile day can spike volume far above
+
+00:04:24.394 --> 00:04:27.914
+normal, making the fee APR look unusually good, right
+
+00:04:27.914 --> 00:04:31.539
+when impermanent loss is also running at its worst.
+
+00:04:31.539 --> 00:04:34.188
+A thirty-day average smooths that out, giving
+
+00:04:34.188 --> 00:04:36.491
+you a number that actually represents a
+
+00:04:36.491 --> 00:04:38.219
+typical day, not the best one.
+
+00:04:39.519 --> 00:04:43.662
+One more real pair of numbers,
+
+00:04:43.662 --> 00:04:48.239
+at a completely different scale.
+
+00:04:48.239 --> 00:04:55.179
+A $5M TVL pool, $1M in 30-day volume, a
+
+00:04:55.179 --> 00:05:02.640
+0.05% fee tier: 1,000,000 × 0.0005 × 365 ÷
+
+00:05:02.640 --> 00:05:09.059
+5,000,000 comes out to 3.65% fee APR.
+
+00:05:10.359 --> 00:05:12.970
+One nuance worth knowing before you assume a
+
+00:05:12.970 --> 00:05:15.822
+higher fee tier is always the better choice.
+
+00:05:15.822 --> 00:05:18.334
+A higher fee tier earns more per trade,
+
+00:05:18.334 --> 00:05:21.475
+but often attracts less volume, since traders and
+
+00:05:21.475 --> 00:05:25.167
+aggregators route toward the cheapest available price.
+
+00:05:25.167 --> 00:05:27.092
+A lower fee tier earns less per
+
+00:05:27.092 --> 00:05:29.677
+trade, but often wins far more volume.
+
+00:05:29.677 --> 00:05:33.029
+The fee A.P.R. formula is what actually tells you
+
+00:05:33.029 --> 00:05:36.112
+which one wins, not the fee tier number alone.
+
+00:05:37.412 --> 00:05:38.502
+Quick check.
+
+00:05:38.502 --> 00:05:41.160
+Why use a 30-day average volume instead
+
+00:05:41.160 --> 00:05:44.017
+of today's volume, when estimating fee APR?
+
+00:05:48.437 --> 00:05:51.717
+The answer: single-day spikes overstate fee income,
+
+00:05:51.717 --> 00:05:53.987
+and they happen on exactly the days
+
+00:05:53.987 --> 00:05:56.447
+you take the most impermanent loss, so
+
+00:05:56.447 --> 00:05:58.907
+the average gives a more honest number.
+
+00:06:00.207 --> 00:06:01.212
+Worked example.
+
+00:06:02.512 --> 00:06:05.267
+Here's the pool this worked example runs on.
+
+00:06:05.267 --> 00:06:08.106
+$10M in total value locked.
+
+00:06:08.106 --> 00:06:11.756
+$2M in 30-day average daily volume.
+
+00:06:11.756 --> 00:06:14.121
+And a 0.3% fee tier.
+
+00:06:14.121 --> 00:06:16.413
+Every number that follows comes directly
+
+00:06:16.413 --> 00:06:18.425
+out of these three starting figures.
+
+00:06:19.725 --> 00:06:22.528
+Now the arithmetic, step by step, exactly
+
+00:06:22.528 --> 00:06:24.630
+as the formula lays it out.
+
+00:06:24.630 --> 00:06:27.823
+Daily pool fees: two million dollars in volume,
+
+00:06:27.823 --> 00:06:31.282
+times zero point three percent, equals six thousand
+
+00:06:31.282 --> 00:06:34.575
+dollars, earned by the entire pool, that day.
+
+00:06:34.575 --> 00:06:37.554
+Your ten-thousand-dollar deposit is zero point
+
+00:06:37.554 --> 00:06:40.580
+one percent of the ten-million-dollar pool.
+
+00:06:40.580 --> 00:06:43.447
+Zero point one percent of six thousand dollars
+
+00:06:43.447 --> 00:06:46.070
+is six dollars a day, for you specifically.
+
+00:06:47.370 --> 00:06:50.262
+Now see how sensitive that twenty-one point nine
+
+00:06:50.262 --> 00:06:52.859
+percent actually is, to the two things most
+
+00:06:52.859 --> 00:06:55.225
+likely to change after you deposit.
+
+00:06:55.225 --> 00:06:57.822
+If daily volume halves, your fee A.P.R.
+
+00:06:57.822 --> 00:07:00.678
+halves with it, straight line, since volume
+
+00:07:00.678 --> 00:07:03.445
+is a direct multiplier in the formula.
+
+00:07:03.445 --> 00:07:05.732
+And if a lot more T.V.L. joins the
+
+00:07:05.732 --> 00:07:08.543
+same pool, your share shrinks, at the same
+
+00:07:08.543 --> 00:07:11.484
+volume, so your fee income shrinks too, even
+
+00:07:11.484 --> 00:07:14.490
+though nothing about your own deposit changed.
+
+00:07:15.790 --> 00:07:18.123
+Here's exactly where to actually go find
+
+00:07:18.123 --> 00:07:20.513
+these three numbers yourself, on any pool
+
+00:07:20.513 --> 00:07:23.545
+you're considering, before you deposit a dollar.
+
+00:07:23.545 --> 00:07:26.221
+Open the pool on its own protocol's app or
+
+00:07:26.221 --> 00:07:29.570
+a pool-analytics site, not a general price chart.
+
+00:07:29.570 --> 00:07:31.635
+Read T.V.L. and the fee tier
+
+00:07:31.635 --> 00:07:34.285
+directly off the pool's own page.
+
+00:07:34.285 --> 00:07:36.646
+And pull thirty days of volume from that
+
+00:07:36.646 --> 00:07:39.755
+same analytics view, not just today's headline number.
+
+00:07:41.055 --> 00:07:42.145
+Quick check.
+
+00:07:42.145 --> 00:07:45.318
+In this worked example, what happens to your fee
+
+00:07:45.318 --> 00:07:48.750
+APR if the pool's TVL doubles, with volume unchanged?
+
+00:07:53.170 --> 00:07:55.233
+The answer: your share of the pool
+
+00:07:55.233 --> 00:07:57.414
+halves, and so does your fee income,
+
+00:07:57.414 --> 00:07:59.772
+at the same volume, since more deposits
+
+00:07:59.772 --> 00:08:02.130
+are now splitting the same trading fees.
+
+00:08:03.430 --> 00:08:06.127
+One last honest number, before the checklist,
+
+00:08:06.127 --> 00:08:08.648
+since twenty-one point nine percent on its
+
+00:08:08.648 --> 00:08:11.000
+own can sound like the whole story.
+
+00:08:11.000 --> 00:08:13.701
+That figure is before impermanent loss and
+
+00:08:13.701 --> 00:08:16.087
+before gas, both real costs this same
+
+00:08:16.087 --> 00:08:18.460
+worked example is still ignoring.
+
+00:08:18.460 --> 00:08:21.491
+Lesson two point four takes this exact pool and
+
+00:08:21.491 --> 00:08:25.280
+shows what actually survives once both are counted properly.
+
+00:08:26.580 --> 00:08:28.040
 Here's your checklist.
 
-00:01:48.872 --> 00:01:50.407
-Do it now, for real.
+00:08:28.040 --> 00:08:30.245
+Do it now, before any deposit.
 
-00:01:50.407 --> 00:01:54.292
-First, Fee APR calculated from 30-day volume.
+00:08:30.245 --> 00:08:32.290
+Your fee A.P.R. is calculated
 
-00:01:54.292 --> 00:01:58.082
-Next, I'm OK holding 100% of either token.
+00:08:32.290 --> 00:08:35.045
+from thirty-day volume, not today's.
 
-00:01:58.082 --> 00:02:02.197
-Then, Entry prices recorded for the "vs hold" benchmark.
+00:08:35.045 --> 00:08:38.891
+You're genuinely comfortable ending up holding one hundred percent
 
-00:02:02.197 --> 00:02:05.590
-And finally, Exit rule written (volume drops,
+00:08:38.891 --> 00:08:42.290
+of either token, since that's a real possible outcome.
 
-00:02:05.590 --> 00:02:08.320
-trend starts, fees stop covering IL).
+00:08:42.290 --> 00:08:44.596
+Your entry prices are recorded, so you
 
-00:02:09.620 --> 00:02:10.830
-Question 1.
+00:08:44.596 --> 00:08:47.735
+have an actual “versus holding” benchmark later.
 
-00:02:10.830 --> 00:02:17.580
-Pool TVL $5M, daily volume $1M, 0.05% fee.
+00:08:47.735 --> 00:08:49.944
+And your exit rule is written down
 
-00:02:17.580 --> 00:02:19.395
-Full-range fee APR?
+00:08:49.944 --> 00:08:52.532
+now: volume drops, a clear trend starts,
 
-00:02:23.815 --> 00:02:29.958
-The answer: 1,000,000 × 0.0005 ×
+00:08:52.532 --> 00:08:55.436
+or fees simply stop covering impermanent loss.
 
-00:02:29.958 --> 00:02:34.425
-365 ÷ 5,000,000 = 3.65%.
+00:08:56.737 --> 00:08:57.982
+Let's recap.
 
-00:02:35.725 --> 00:02:36.970
-Question 2.
+00:08:57.982 --> 00:09:02.244
+Providing liquidity means depositing both tokens and becoming the
 
-00:02:36.970 --> 00:02:38.515
-Why use 30-day volume?
+00:09:02.244 --> 00:09:05.772
+counterparty to every trade, not a passive lender.
 
-00:02:42.935 --> 00:02:46.118
-The answer: Single-day spikes overstate fee income,
+00:09:05.772 --> 00:09:08.969
+Fee A.P.R. is four numbers: daily volume, fee
 
-00:02:46.118 --> 00:02:48.077
-and they happen on the days you
+00:09:08.969 --> 00:09:12.514
+tier, your share, annualised, and for a full-range
 
-00:02:48.077 --> 00:02:49.975
-take the most impermanent loss.
+00:09:12.514 --> 00:09:15.247
+position it simplifies to one line.
 
-00:02:51.275 --> 00:02:52.545
-Question 3.
+00:09:15.247 --> 00:09:18.725
+Use thirty-day volume, since single-day spikes overstate
 
-00:02:52.545 --> 00:02:55.270
-What happens to your share if TVL doubles?
+00:09:18.725 --> 00:09:21.832
+income exactly when impermanent loss is worst.
 
-00:02:59.690 --> 00:03:01.636
-The answer: It halves, and so do
+00:09:21.832 --> 00:09:24.772
+And your fee A.P.R. is sensitive to both
 
-00:03:01.636 --> 00:03:03.405
-your fees, at the same volume.
+00:09:24.772 --> 00:09:28.932
+volume and T.V.L. changing after you've already deposited.
 
-00:03:04.705 --> 00:03:07.220
-Do the checklist now, before you move on.
+00:09:30.232 --> 00:09:33.077
+Calculate the real fee APR from thirty-day
 
-00:03:07.220 --> 00:03:10.352
+00:09:33.077 --> 00:09:35.892
+volume, before any deposit, not after.
+
+00:09:35.892 --> 00:09:39.064
 Next up, Lesson 2.4: Impermanent
 
-00:03:10.352 --> 00:03:12.155
-loss & true LP P&L.
+00:09:39.064 --> 00:09:41.082
+loss and true LP P&L.
