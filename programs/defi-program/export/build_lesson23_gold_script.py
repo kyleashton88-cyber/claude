@@ -50,14 +50,13 @@ sc("bullets", "When you L.P., you deposit both tokens, and you receive a share o
    items=["Deposit both tokens, receive a share back (token, or NFT if concentrated)",
           "Earn your share of every swap fee the pool collects",
           "Your token mix changes as traders move the price"])
-sc("flow3d", "Here's that exchange, start to finish. You deposit both tokens into the pool. The pool issues you a position, representing your exact share. From that point on, you earn a slice of every swap fee that passes through. And as traders push the price around, your own token mix shifts underneath you, automatically, to match the pool's new ratio.",
-   "Here's that exchange, start to finish. You deposit both tokens into the pool. The pool issues you a position, representing your exact share. From that point on, you earn a slice of every swap fee that passes through. And as traders push the price around, your own token mix shifts underneath you, automatically, to match the pool's new ratio.",
+sc("flow3d", "Here's that exchange, start to finish. You deposit both tokens into the pool, and the pool issues you a position back, representing your exact share, a token, or an N.F.T. if it's concentrated. From that point on, you earn a slice of every swap fee that passes through. And as traders push the price around, your own token mix shifts underneath you, automatically, to match the pool's new ratio.",
+   "Here's that exchange, start to finish. You deposit both tokens into the pool, and the pool issues you a position back, representing your exact share, a token, or an NFT if it's concentrated. From that point on, you earn a slice of every swap fee that passes through. And as traders push the price around, your own token mix shifts underneath you, automatically, to match the pool's new ratio.",
    chapter="What you get", title="Providing liquidity, start to finish", seed=23, layout="column",
-   nodes=[{"id": "deposit", "label": "You deposit both tokens", "sub": "Into the pool", "icon": "wallet"},
-          {"id": "position", "label": "Pool issues your position", "sub": "A token, or an NFT if concentrated", "icon": "layers"},
+   nodes=[{"id": "deposit", "label": "You deposit, pool issues a position", "sub": "Both tokens in; a token or NFT back", "icon": "wallet"},
           {"id": "fees", "label": "You earn a fee slice", "sub": "On every swap that passes through", "icon": "coins"},
           {"id": "shift", "label": "Your mix shifts", "sub": "As traders move the price", "icon": "chart", "tone": "warn"}],
-   edges=[{"from": "deposit", "to": "position"}, {"from": "position", "to": "fees"}, {"from": "fees", "to": "shift"}])
+   edges=[{"from": "deposit", "to": "fees"}, {"from": "fees", "to": "shift"}])
 sc("quiz", "Quick check. What do you actually receive when you deposit into a pool? [[pause 4]] The answer: a share of the pool, a fungible token for a full-range position, or an N.F.T. representing a concentrated one.",
    n=1, of=3, q="What do you receive when you deposit into a pool?", a="A share of the pool: a token (full-range) or an NFT (concentrated).", chapter="What you get")
 
