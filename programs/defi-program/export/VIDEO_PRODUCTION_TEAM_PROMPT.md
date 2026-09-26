@@ -86,6 +86,21 @@ already does.
      nodes into an overlapping vertical stack once there are more than 2-3 of them (caught
      in Lesson 1.1's six-layer stack scene, which rendered fully illegible before the fix) —
      only use `column` for a portrait video, and `cycle` only for a genuine loop.
+   - `flow3d` is an **experimental, opt-in** WebGL/Three.js alternative to `flow`: same JSON
+     shape (`nodes`, `edges`, `title`, `layout`, `at`) — just change `"type": "flow"` to
+     `"type": "flow3d"` and nothing else — but renders the nodes as floating holographic
+     icosahedra with glowing edges, a travelling signal, an ambient depth-particle field and a
+     bounded isometric camera sway instead of flat cards and SVG arrows. It's real WebGL2
+     (rendered in headless Chromium via SwiftShader, bundled with esbuild — see
+     `webgl/flow3d.js` and `build_webgl_engine.js`), not a CSS trick. Use it **sparingly — at
+     most one or two scenes per lesson**, for a mechanism you want to visually anchor the
+     lesson around (not as a wholesale replacement for `flow`): it costs roughly 3x the
+     render time per frame and, because its faceted/particle detail compresses less
+     efficiently than flat color fields, roughly 1.5–2x the encoded KB/s of the flat version
+     at the same CRF — fine for one or two scenes inside a lesson's size budget, but not
+     something every `flow` scene in a lesson should switch to without re-checking the final
+     file size against the ~95MB cap. `chart3d` and a shader-based ambient background do not
+     exist yet; don't invent them.
    - `chart` (bars/waterfall, donut, line — added to `build_video.js` this session) for any
      comparison of sizes, a budget/split, a trend over time, or a before/after number. A
      single-value stat reads better as a `stats` scene than a lone bar (established this

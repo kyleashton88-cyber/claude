@@ -19,6 +19,7 @@ const { spawn, execFileSync } = require('child_process');
 const { chromium } = require('playwright-core');
 const { C, FONT, BASE_CSS, icon, logoMark, wordmark, DISCLAIMER } = require('./build_images.js');
 const { VIDEOS: CORE } = require('./videos.js');
+const webglEngine = require('./build_webgl_engine.js');
 
 // Extra specs as JSON under ../video-scripts/** (lessons, hand-written gold scripts).
 const SCRIPT_DIR = path.resolve(__dirname, '..', 'video-scripts');
@@ -36,6 +37,11 @@ const VOICE = process.env.VOICE || 'af_heart';
 const CHROME = process.env.CHROMIUM_PATH || '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 
 const asset = rel => `file://${path.join(ROOT, rel)}`;
+// WebGL scene engines (bundled from webgl/*.js) are heavier to build than to skip,
+// so they're only compiled the first time a video actually uses one — see
+// ensureWebgl() in render(). Populated with `file://` script src URLs.
+const WEBGL_BUNDLE = {};
+async function ensureWebgl(name) { if (!WEBGL_BUNDLE[name]) WEBGL_BUNDLE[name] = `file://${await webglEngine.ensure(name)}`; return WEBGL_BUNDLE[name]; }
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const fmtTime = (s, ms) => { const h = Math.floor(s / 3600), m = Math.floor(s / 60) % 60, x = s % 60;
   return ms ? `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${x.toFixed(3).padStart(6, '0')}` : `${h ? h + ':' : ''}${h ? String(m).padStart(2, '0') : m}:${String(Math.floor(x)).padStart(2, '0')}`; };
@@ -275,6 +281,26 @@ function sceneBody(s, W, H, T) {
           <marker id="ahb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="${C.orange}"/></marker></defs>${eb}</svg>
         ${nb}</div>`;
     }
+    case 'flow3d': {
+      // WebGL counterpart of `flow`: same node/edge JSON, same flowLayout() stage
+      // positions and the same T.items/T.edges timing, rendered as floating
+      // holographic nodes with glowing edges instead of flat cards and SVG arrows.
+      // The heavy lifting is in webgl/flow3d.js (bundled by build_webgl_engine.js);
+      // this just hands it the layout + timing data and mounts its canvas.
+      const L = flowLayout(s, W, H);
+      const data = {
+        W, H, seed: s.seed ?? 11,
+        nodes: L.nodes.map((n, i) => ({ id: n.id ?? String(i), label: esc(n.label), sub: n.sub ? esc(n.sub) : '', tone: n.tone, px: n.px, py: n.py, nw: L.nw })),
+        edges: L.edges.map(e => ({ from: e.from, to: e.to, label: e.label || '', tone: e.tone })),
+        itemsT: T.items, edgesT: T.edges,
+      };
+      const json = JSON.stringify(data).replace(/<\/script/gi, '<\\/script');
+      return `<div style="position:absolute;inset:0">
+        ${s.title ? `<div style="position:absolute;left:150px;right:150px;top:${fs(120, 330)}px;text-align:center;z-index:2">${title(s.title)}</div>` : ''}
+        <div id="gl3d-mount" style="position:absolute;inset:0"></div>
+        <script>window.__WEBGL_SCENE = ${json};</script>
+        <script src="${WEBGL_BUNDLE.flow3d}"></script></div>`;
+    }
     case 'chart': {
       // Animated chart: bars grow (or a waterfall steps down), a line draws itself, or a donut
       // fills segment by segment, each part revealed as the narration reaches it.
@@ -375,7 +401,7 @@ function planTimes(s, sents, voStart, voDur) {
     case 'compare': T.items = syncItems([...s.left.items, ...s.right.items], sents, voStart, voDur, s.at); break;
     case 'quiz': { const a = byText(/^(the )?answer/i, at(0.7)); const q = sents.findIndex(x => /^(the )?answer/i.test(x[2]));
       T.answer = a; T.think = [q > 0 ? voStart + sents[q - 1][1] : a - 3, a]; break; }
-    case 'flow': {
+    case 'flow': case 'flow3d': {
       T.items = syncItems(s.nodes.map(n => `${n.label} ${n.sub || ''}`), sents, voStart, voDur, s.at);
       const idx = Object.fromEntries(s.nodes.map((n, i) => [n.id ?? String(i), i]));
       const edges = s.edges || s.nodes.slice(1).map((n, i) => ({ from: s.nodes[i].id ?? String(i), to: n.id ?? String(i + 1) }));
@@ -511,6 +537,7 @@ function scenePage(video, s, W, H, sc) {
     const c = CUES.find(x => t >= x.a && t < x.b), cap = document.getElementById('cap');
     if (c) { cap.innerHTML = c.words.map((w, i) => '<span class="w' + (t >= c.wt[i] ? (i === c.words.length - 1 || t < c.wt[i + 1] ? ' on now' : ' on') : '') + '">' + w.replace(/</g, '&lt;') + '</span>').join(' '); cap.style.opacity = Math.min(1, ease((t - c.a) / .12) * 1.0) * outF; }
     else cap.style.opacity = 0;
+    (window.__hooks || []).forEach(fn => fn(t));
   };
   </script></body></html>`;
 }
@@ -579,6 +606,7 @@ async function thumbnail(video, browser) {
 async function render(video, browser) {
   if (process.env.SCENES) { const [x, y] = process.env.SCENES.split('-').map(Number); video = { ...video, id: `${video.id}-test`, scenes: video.scenes.slice(x - 1, y || x) }; }
   const [W, H] = video.size;
+  for (const name of new Set(video.scenes.map(s => s.type).filter(t => t === 'flow3d'))) await ensureWebgl(name);
   const dir = path.join(WORK, video.id);
   fs.mkdirSync(dir, { recursive: true });
   const scenes = video.scenes.map((s, i) => ({ id: `s${String(i + 1).padStart(2, '0')}`, vo: s.vo, speed: s.speed || video.speed || 0.96 }));
@@ -637,7 +665,8 @@ function visual(s) {
     compare: () => `${s.title}: ${s.left.label} (${s.left.items.join(', ')}) vs ${s.right.label} (${s.right.items.join(', ')})`,
     steps: () => `${s.title}: ${(s.steps || []).join(' → ')}${s.result ? ` ⇒ ${s.result}` : ''}`, quiz: () => `Quiz: ${s.q} → ${s.a}`,
     chart: () => `Chart (${s.kind || 'bars'}): ${s.title}`,
-    flow: () => `Flow: ${(s.nodes || []).map(n => n.label).join(' → ')}`, cutaway: () => `Screen cutaway: ${(s.shots || []).map(x => x.caption || x.src).join(' → ')}`,
+    flow: () => `Flow: ${(s.nodes || []).map(n => n.label).join(' → ')}`, flow3d: () => `Flow (3D/WebGL): ${(s.nodes || []).map(n => n.label).join(' → ')}`,
+    cutaway: () => `Screen cutaway: ${(s.shots || []).map(x => x.caption || x.src).join(' → ')}`,
   };
   return V[s.type]();
 }
