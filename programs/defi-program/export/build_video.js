@@ -166,14 +166,15 @@ function sceneBody(s, W, H, T) {
   const v = H > W, fs = (a, b) => (v ? b : a);
   const center = `position:absolute;inset:${fs(90, 200)}px 0 ${fs(210, 420)}px 0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center`;
   const item = (i, html, extra = '') => `<div class="it" data-a="${T.items[i][0]}" data-b="${T.items[i][1]}" style="${extra}">${html}</div>`;
-  const title = (txt, extra = '') => `<div class="in" data-in="${T.v0}" style="font-size:${fs(70, 76)}px;font-weight:800;letter-spacing:-.02em;line-height:1.08;${extra}">${esc(txt)}</div>`;
+  const kineticWords = (txt, t0) => esc(txt).split(' ').map((w, i) => `<span class="kw" data-in="${(t0 + i * 0.05).toFixed(3)}" style="display:inline-block;opacity:0">${w}</span>`).join(' ');
+  const title = (txt, extra = '') => `<div style="font-size:${fs(70, 76)}px;font-weight:800;letter-spacing:-.02em;line-height:1.08;${extra}">${kineticWords(txt, T.v0)}</div>`;
   switch (s.type) {
     case 'title': return `<div style="position:absolute;left:${fs(170, 90)}px;right:${fs(170, 90)}px;top:0;bottom:${fs(210, 420)}px;display:flex;flex-direction:column;justify-content:center">
       <div class="in" data-in="${T.v0}" style="display:flex;align-items:center;gap:18px;font-size:${fs(28, 32)}px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:${C.aquaDark}">
         <span class="bar" data-in="${T.v0}" style="display:block;width:70px;height:4px;border-radius:2px;background:${C.aquaDark};transform-origin:left"></span>${esc(s.eyebrow)}</div>
       <div style="display:flex;align-items:flex-end;gap:${fs(50, 30)}px;margin-top:${fs(34, 40)}px">
         ${s.num ? `<div class="pop" data-in="${T.v0 + 0.15}" style="font-size:${fs(260, 200)}px;font-weight:800;line-height:.82;letter-spacing:-.05em;background:linear-gradient(135deg,${C.aquaDark},${C.blueDark});-webkit-background-clip:text;color:transparent">${esc(s.num)}</div>` : ''}
-        <div class="in" data-in="${T.v0 + 0.35}" style="font-size:${fs(84, 80)}px;font-weight:800;letter-spacing:-.025em;line-height:1.04;max-width:${fs(1150, 900)}px">${esc(s.title)}</div></div>
+        <div style="font-size:${fs(84, 80)}px;font-weight:800;letter-spacing:-.025em;line-height:1.04;max-width:${fs(1150, 900)}px">${kineticWords(s.title, T.v0 + 0.35)}</div></div>
       ${s.sub ? `<div class="in" data-in="${T.v0 + 0.8}" style="margin-top:${fs(44, 50)}px;font-size:${fs(38, 42)}px;line-height:1.4;color:rgba(255,255,255,.78);max-width:${fs(1350, 900)}px">${esc(s.sub)}</div>` : ''}
       ${s.src ? `<div class="in" data-in="${T.v0 + 1.1}" style="margin-top:${fs(50, 60)}px;width:${fs(640, 800)}px;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.14);box-shadow:0 20px 60px rgba(0,0,0,.4)"><img src="${asset(s.src)}" style="display:block;width:100%"></div>` : ''}</div>`;
     case 'strike': return `<div style="${center};gap:${fs(40, 60)}px">
@@ -182,7 +183,7 @@ function sceneBody(s, W, H, T) {
       <div class="in" data-in="${T.after}" style="font-size:${fs(72, 76)}px;font-weight:800;color:${C.aquaDark};max-width:${fs(1500, 900)}px">${esc(s.after)}</div></div>`;
     case 'statement': return `<div style="${center};padding:0 ${fs(160, 80)}px">
       ${s.kicker ? `<div class="in" data-in="${T.v0}" style="font-size:${fs(28, 32)}px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:${C.aquaDark};margin-bottom:28px">${esc(s.kicker)}</div>` : ''}
-      ${s.lines.map((l, i) => `<div class="in" data-in="${(T.lines || [])[i] ?? T.v0 + i * 0.7}" style="font-size:${fs(s.lines.join('').length > 70 ? 76 : 100, 88)}px;font-weight:800;line-height:1.1;letter-spacing:-.02em;${i ? `color:${C.aquaDark}` : ''}">${esc(l)}</div>`).join('')}
+      ${s.lines.map((l, i) => `<div style="font-size:${fs(s.lines.join('').length > 70 ? 76 : 100, 88)}px;font-weight:800;line-height:1.1;letter-spacing:-.02em;${i ? `color:${C.aquaDark}` : ''}">${kineticWords(l, (T.lines || [])[i] ?? T.v0 + i * 0.7)}</div>`).join('')}
       ${s.sub ? `<div class="in" data-in="${T.sub}" style="font-size:${fs(40, 44)}px;color:rgba(255,255,255,.82);margin-top:${fs(40, 50)}px;max-width:${fs(1350, 900)}px;line-height:1.42">${esc(s.sub)}</div>` : ''}</div>`;
     case 'bullets': {
       const n = s.items.length, compact = s.compact || n > 5;
@@ -455,9 +456,11 @@ function scenePage(video, s, W, H, sc) {
     drawBg(g);
     const inF = ease(t / .4), outF = ease((DUR - t) / .32), fade = Math.min(inF, outF);
     const sc = document.getElementById('scene'); sc.style.opacity = fade; sc.style.transform = 'translateY(' + ((1 - inF) * 18 - (1 - outF) * 14) + 'px)';
-    document.querySelectorAll('.in').forEach(el => { const p = ease((t - +el.dataset.in) / .6); el.style.opacity = p; el.style.transform = 'translateY(' + (1 - p) * 34 + 'px)'; });
+    document.querySelectorAll('.in').forEach(el => { const p = ease((t - +el.dataset.in) / .6); el.style.opacity = p; el.style.transform = 'translateY(' + ((1 - p) * 34 - p * p * Math.sin(t * .5 + +el.dataset.in) * 2.5) + 'px)'; });
+    document.querySelectorAll('.kw').forEach(el => { const p = ease((t - +el.dataset.in) / .5); el.style.opacity = p;
+      el.style.filter = 'blur(' + (6 * (1 - p)) + 'px)'; el.style.transform = 'translateY(' + ((1 - p) * 16 - p * p * Math.sin(t * .5 + +el.dataset.in) * 2.5) + 'px)'; });
     document.querySelectorAll('.bar').forEach(el => { el.style.transform = 'scaleX(' + ease((t - +el.dataset.in) / .8) + ')'; });
-    document.querySelectorAll('.pop').forEach(el => { const p = ease((t - +el.dataset.in) / .7); el.style.opacity = p; el.style.transform = 'scale(' + (.86 + .14 * p) + ')';
+    document.querySelectorAll('.pop').forEach(el => { const p = ease((t - +el.dataset.in) / .7); el.style.opacity = p; el.style.transform = 'scale(' + (.86 + .14 * p + p * p * .012 * Math.sin(t * .7 + +el.dataset.in)) + ')';
       if (el.classList.contains('draw')) { draw(el, easeIO((t - +el.dataset.in) / 1.6)); const glow = .3 + .12 * Math.sin(t * 2.2); el.style.filter = 'drop-shadow(0 0 ' + (46 * p) + 'px rgba(46,230,166,' + (glow * p) + '))'; }
       if (el.classList.contains('btn')) el.style.boxShadow = '0 0 ' + (30 + 16 * Math.sin(t * 3)) * p + 'px rgba(46,230,166,.45)'; });
     document.querySelectorAll('.strike').forEach(el => { el.style.transform = 'scaleX(' + ease((t - +el.dataset.in) / .45) + ')'; });
