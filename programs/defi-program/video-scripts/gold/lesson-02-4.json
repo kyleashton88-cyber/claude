@@ -1,0 +1,429 @@
+{
+ "id": "lesson-02-4",
+ "title": "Lesson 2.4: Impermanent loss & true LP P&L",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "maxMinutes": 25,
+ "tag": "Lesson 2.4",
+ "gold": true,
+ "music": true,
+ "musicLevel": 0.14,
+ "seed": 56,
+ "use": "Lesson 2.4 page in the Whop course. Hand-written gold-standard script: the IL formula, full LP P&L, and the source material's own 1 ETH + 3,000 USDC worked example (ETH to $4,000: -1.03% IL, +$1,058 vs starting, +$58 vs holding), as walk-throughs.",
+ "thumbnail": {
+  "title": "Impermanent loss & LP P&L",
+  "subtitle": "Lesson 2.4"
+ },
+ "scenes": [
+  {
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Lesson 2.4",
+   "num": "2.4",
+   "title": "Impermanent loss & true LP P&L",
+   "sub": "Judge the LP. Not the market.",
+   "vo": "Lesson two point four. Impermanent loss and true LP profit and loss. By the end, you'll calculate an LP position's full result, and judge it fairly against simply holding.",
+   "cap": "Lesson 2.4. Impermanent loss and true LP profit and loss. By the end, you'll calculate an LP position's full result, and judge it fairly against simply holding."
+  },
+  {
+   "type": "pillars",
+   "chapter": "Intro",
+   "title": "What this lesson covers",
+   "items": [
+    {
+     "icon": "chart",
+     "title": "What IL actually measures",
+     "text": "Lagging simply holding, not a loss in isolation"
+    },
+    {
+     "icon": "layers",
+     "title": "Full LP P&L",
+     "text": "LP value + fees + incentives − gas"
+    },
+    {
+     "icon": "target",
+     "title": "Worked example",
+     "text": "1 ETH + 3,000 USDC, ETH to $4,000"
+    },
+    {
+     "icon": "eye",
+     "title": "The honest question",
+     "text": "Judge the LP, not the market move"
+    }
+   ],
+   "vo": "Here's the plan. What impermanent loss actually measures, and the formula behind it. The full L.P. profit and loss formula, every real component, not just the headline number. A complete worked example, with real numbers, from entry to a real price move. And the one honest question that separates a good LP decision from a lucky market."
+  },
+  {
+   "type": "title",
+   "chapter": "What IL actually measures",
+   "eyebrow": "What IL actually measures",
+   "num": "1",
+   "title": "Lagging simply holding",
+   "sub": "Not a loss in isolation. A comparison.",
+   "vo": "What IL actually measures."
+  },
+  {
+   "type": "statement",
+   "chapter": "What IL actually measures",
+   "kicker": "The precise definition",
+   "lines": [
+    "Lags simply holding.",
+    "Not measured against zero — against never depositing."
+   ],
+   "sub": "A comparison, not a loss in isolation.",
+   "vo": "Here's the precise definition, worth getting exactly right, since the name itself is easy to misread. Impermanent loss is how much your L.P. position lags simply holding the same starting tokens, once their relative price has changed. It isn't measured against zero. It's measured against the specific alternative of never having deposited at all."
+  },
+  {
+   "type": "image",
+   "src": "assets/charts/impermanent-loss.png",
+   "eyebrow": "Why it's called “impermanent”",
+   "wide": true,
+   "chapter": "What IL actually measures",
+   "vo": "Here's exactly why the name includes “impermanent.” The gap between your L.P. position and simply holding only becomes a real, locked-in loss the moment you withdraw. If the price ratio moves back to where it started before you withdraw, that gap closes completely, back to zero. Withdraw while the ratio is still different from your entry, and what was impermanent becomes permanent, instantly."
+  },
+  {
+   "type": "flow",
+   "chapter": "What IL actually measures",
+   "title": "The IL formula, in two numbers",
+   "nodes": [
+    {
+     "label": "r = new price ÷ entry price",
+     "sub": "The one input the formula needs",
+     "icon": "swap"
+    },
+    {
+     "label": "2√r ÷ (1 + r)",
+     "sub": "The core of the formula",
+     "icon": "cog"
+    },
+    {
+     "label": "− 1",
+     "sub": "Turns it into a percentage lag",
+     "icon": "chart"
+    },
+    {
+     "label": "= impermanent loss",
+     "sub": "Before fees, before gas, before anything else",
+     "icon": "alert"
+    }
+   ],
+   "vo": "Here's the formula itself, broken into the two numbers it actually needs. Take r, the new price divided by your entry price. Impermanent loss equals two times the square root of r, divided by one plus r, minus one. Feed in any price ratio, and this formula alone tells you the percentage lag, before fees, before gas, before anything else."
+  },
+  {
+   "type": "compare",
+   "chapter": "What IL actually measures",
+   "left": {
+    "label": "ETH rises: $3,000 → $4,000",
+    "tone": "warn",
+    "items": [
+     "Ratio: 1.33",
+     "IL: about −1.03%"
+    ]
+   },
+   "right": {
+    "label": "ETH falls: $3,000 → $2,250",
+    "tone": "warn",
+    "items": [
+     "Ratio: 0.75 (the exact reciprocal)",
+     "IL: the same, about −1.03%"
+    ]
+   },
+   "vo": "Worth knowing this formula doesn't care which direction price moves, only how far the ratio has diverged. E.T.H. rising from three thousand to four thousand, a ratio of one point three three, gives about negative one percent. E.T.H. falling from three thousand to two thousand two hundred fifty, the exact reciprocal ratio, gives that same negative one percent. Divergence causes it, in either direction, symmetrically."
+  },
+  {
+   "type": "chart",
+   "chapter": "What IL actually measures",
+   "kind": "line",
+   "title": "Impermanent loss, as price ratio diverges",
+   "sub": "Illustrative shape — symmetric in both directions",
+   "series": [
+    {
+     "values": [
+      -20,
+      -5.7,
+      -1.03,
+      0,
+      -1.03,
+      -5.7,
+      -20
+     ],
+     "tone": "bad"
+    }
+   ],
+   "xlabels": [
+    "0.25×",
+    "0.5×",
+    "0.75×",
+    "1× (entry)",
+    "1.33×",
+    "2×",
+    "4×"
+   ],
+   "yticks": [
+    [
+     0,
+     "0%"
+    ],
+    [
+     -20,
+     "−20%"
+    ]
+   ],
+   "marks": [
+    {
+     "i": 3,
+     "text": "No divergence, no IL",
+     "tone": "good",
+     "below": true
+    }
+   ],
+   "vo": "Plot the formula across a wider range of price moves, and the shape makes the “either direction” point obvious. Barely any divergence, barely any impermanent loss. As the ratio moves further from one, in either direction, the loss grows, and it grows faster the further you go, the same bending-curve shape from Lesson two point two, just applied to your total position now, not a single trade."
+  },
+  {
+   "type": "quiz",
+   "chapter": "What IL actually measures",
+   "n": 1,
+   "of": 3,
+   "q": "ETH doubles in price. What's the impermanent loss on a 50/50 pool, from the formula?",
+   "a": "About −5.7% vs holding.",
+   "vo": "Quick check. E.T.H. doubles in price. What's the impermanent loss on a fifty-fifty pool, from the formula? [[pause 4]] The answer: about negative five point seven percent, versus simply holding. r equals two, and the formula gives two root two over three, minus one."
+  },
+  {
+   "type": "title",
+   "chapter": "Full LP P&L",
+   "eyebrow": "Full LP P&L",
+   "num": "2",
+   "title": "Every real component, not just the headline",
+   "sub": "LP value + fees + incentives − gas.",
+   "vo": "Full LP P&L."
+  },
+  {
+   "type": "flow",
+   "chapter": "Full LP P&L",
+   "title": "Every component, added up honestly",
+   "nodes": [
+    {
+     "label": "LP position value",
+     "sub": "Already includes impermanent loss",
+     "icon": "layers"
+    },
+    {
+     "label": "+ Fees earned",
+     "sub": "Every fee, along the way",
+     "icon": "coins"
+    },
+    {
+     "label": "+ Incentive rewards",
+     "sub": "Any extra the protocol paid you",
+     "icon": "chart"
+    },
+    {
+     "label": "− Gas",
+     "sub": "Depositing, and withdrawing",
+     "icon": "cog"
+    }
+   ],
+   "vo": "Here's the full formula, every component that actually determines whether L.P.ing was worth it. Start with your L.P. position's current value, which already has impermanent loss baked into it. Add every fee you've earned along the way. Add any extra incentive rewards the protocol paid you. Subtract gas, for depositing, and for withdrawing. And that total is what you actually compare against simply holding, not any single piece of it alone."
+  },
+  {
+   "type": "statement",
+   "chapter": "Full LP P&L",
+   "kicker": "The trap this closes",
+   "lines": [
+    "Up 20% since deposit means nothing alone.",
+    "It could be entirely the tokens rising."
+   ],
+   "sub": "LPing itself could still have cost you, once compared honestly.",
+   "vo": "Worth naming the trap this full formula exists to close. Looking only at your L.P. position's dollar value today, up twenty percent since you deposited, tells you almost nothing on its own. That twenty percent could be entirely the underlying tokens rising in price, with L.P.ing itself having actively cost you, once compared honestly against simply holding those same tokens."
+  },
+  {
+   "type": "steps",
+   "chapter": "Full LP P&L",
+   "title": "Tracking this weekly, in practice",
+   "steps": [
+    "LP value and implied price ratio, same day each week",
+    "Fees and incentives earned, recorded separately",
+    "What simply holding would be worth today, as the benchmark"
+   ],
+   "result": "Same three numbers, every single week",
+   "vo": "Here's how to actually track this weekly, in practice, not just in theory. Record your L.P. position's current value, and the price ratio it implies, every week, on the same day. Record fees and any incentive rewards earned since the last check-in, separately from the position value. And calculate what simply holding your original deposit would be worth today, as the one number everything else gets judged against."
+  },
+  {
+   "type": "compare",
+   "chapter": "Full LP P&L",
+   "left": {
+    "label": "$20 gas, on $6,000",
+    "tone": "good",
+    "items": [
+     "About 0.3% of the position",
+     "A small, real drag"
+    ]
+   },
+   "right": {
+    "label": "$20 gas, on $600",
+    "tone": "bad",
+    "items": [
+     "Over 3% of the position",
+     "Can wipe out a modest fee APR alone"
+    ]
+   },
+   "vo": "One more honest factor the full formula surfaces: gas matters far more, proportionally, on a small position than a large one. Twenty dollars of combined gas on a six-thousand-dollar position is about a third of a percent, a real but small drag. That same twenty dollars on a six-hundred-dollar position is over three percent, enough on its own to wipe out a modest fee APR before anything else is even counted."
+  },
+  {
+   "type": "quiz",
+   "chapter": "Full LP P&L",
+   "n": 2,
+   "of": 3,
+   "q": "Your LP is up 20% since deposit. Did LPing work?",
+   "a": "Unknown until you compare with holding — the 20% could be all price.",
+   "vo": "Quick check. Your LP position is up twenty percent since you deposited. Did LPing itself work? [[pause 4]] The answer: unknown, until you compare it with simply holding the same tokens. That twenty percent could be entirely from the price rising, not from LPing."
+  },
+  {
+   "type": "title",
+   "chapter": "Worked example",
+   "eyebrow": "Worked example",
+   "num": "1",
+   "title": "1 ETH + 3,000 USDC, ETH to $4,000",
+   "sub": "Real numbers, calculated live.",
+   "vo": "Worked example."
+  },
+  {
+   "type": "stats",
+   "chapter": "Worked example",
+   "stats": [
+    [
+     "$6,000",
+     "1 ETH + 3,000 USDC, at ETH = $3,000"
+    ]
+   ],
+   "vo": "Here's the starting position this entire worked example runs on. One E.T.H., plus three thousand U.S.D.C., deposited at an E.T.H. price of three thousand dollars. Total starting value: six thousand dollars, split evenly between the two.",
+   "cap": "Here's the starting position this entire worked example runs on. 1 ETH, plus 3,000 USDC, deposited at an ETH price of $3,000. Total starting value: $6,000, split evenly between the two."
+  },
+  {
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "What the pool does as ETH rises to $4,000",
+   "steps": [
+    "Rebalanced to: 0.866 ETH + 3,464 USDC",
+    "LP value: 0.866 × 4,000 + 3,464 = $6,928",
+    "Simply holding: 4,000 + 3,000 = $7,000"
+   ],
+   "result": "Impermanent loss: −$72, or about −1.03%",
+   "vo": "Now E.T.H. rises to four thousand dollars, and follow exactly what the pool does to your position. It rebalances you to zero point eight six six E.T.H., and three thousand four hundred sixty-four U.S.D.C., by the same constant-product formula from Lesson two point two. Your L.P. position's value: zero point eight six six times four thousand, plus three thousand four hundred sixty-four, comes to six thousand nine hundred twenty-eight dollars."
+  },
+  {
+   "type": "compare",
+   "chapter": "Worked example",
+   "left": {
+    "label": "LP value alone",
+    "tone": "warn",
+    "items": [
+     "$6,928",
+     "−1.03% vs holding, on its own"
+    ]
+   },
+   "right": {
+    "label": "Full LP total",
+    "tone": "good",
+    "items": [
+     "+ $150 fees, − $20 gas",
+     "= $7,058, all in"
+    ]
+   },
+   "vo": "Now add fees and gas, the parts a bare impermanent-loss number always leaves out. This position earned one hundred fifty dollars in fees along the way, and cost twenty dollars in gas, for depositing and withdrawing combined. LP total, all in: six thousand nine hundred twenty-eight, plus one hundred fifty, minus twenty, comes to seven thousand fifty-eight dollars."
+  },
+  {
+   "type": "stats",
+   "chapter": "Worked example",
+   "stats": [
+    [
+     "+$1,058",
+     "vs starting $6,000 — mostly ETH rising, not LPing"
+    ],
+    [
+     "+$58",
+     "vs simply holding — the value LPing itself added"
+    ]
+   ],
+   "vo": "Now compare that seven thousand fifty-eight dollars against two different baselines, since only one of them actually judges the LPing decision. Against your starting six thousand dollars, you're up one thousand fifty-eight, which is mostly E.T.H. simply rising in price. Against simply holding, seven thousand dollars, you're up only fifty-eight dollars. That fifty-eight dollars, not the one thousand fifty-eight, is the actual value LPing itself added.",
+   "cap": "Now compare that $7,058 against two different baselines, since only one of them actually judges the LPing decision. Against your starting $6,000, you're up $1,058, which is mostly ETH simply rising in price. Against simply holding, $7,000, you're up only $58. That $58, not the $1,058, is the actual value LPing itself added."
+  },
+  {
+   "type": "statement",
+   "chapter": "Worked example",
+   "kicker": "What a master actually judges",
+   "lines": [
+    "Judge the LP on the $58.",
+    "Not the $1,058. That part wasn't earned."
+   ],
+   "sub": "The market move isn't a skill. Beating holding is.",
+   "vo": "So here's the one sentence a master actually judges this position on, and it isn't the bigger number. A master judges the L.P. on the fifty-eight dollars, not the one thousand fifty-eight. The market move isn't a skill. Beating simply holding, even by a little, is the only part that was actually earned."
+  },
+  {
+   "type": "statement",
+   "chapter": "Worked example",
+   "kicker": "What could have gone the other way",
+   "lines": [
+    "Lower fees could have meant a real loss.",
+    "Fee income has to outrun the IL, every time."
+   ],
+   "sub": "The same price move, a different fee outcome, a different verdict.",
+   "vo": "Worth naming what could have gone the other way in this exact same worked example, since a positive fifty-eight dollars was not guaranteed. If thirty-day volume had been lower, fees earned might have been thirty dollars instead of one hundred fifty, which would have left this position at negative sixty-two dollars against simply holding, a real loss from LPing, on the very same price move. The fee income is what has to outrun the impermanent loss, not the other way around."
+  },
+  {
+   "type": "quiz",
+   "chapter": "Worked example",
+   "n": 3,
+   "of": 3,
+   "q": "When does impermanent loss actually become a permanent, locked-in loss?",
+   "a": "When you withdraw while the price ratio is still different from entry.",
+   "vo": "Quick check. When does impermanent loss actually become a permanent, locked-in loss? [[pause 4]] The answer: the moment you withdraw while the price ratio is still different from your entry ratio. If it moves back to entry first, the gap closes completely."
+  },
+  {
+   "type": "steps",
+   "chapter": "Checklist",
+   "title": "Your checklist",
+   "steps": [
+    "Track P&L against holding, weekly",
+    "Record IL, fees, incentives and gas separately",
+    "Exit if fees consistently fail to cover IL"
+   ],
+   "vo": "Here's your checklist. Do it now, and keep doing it weekly. Track your P&L against simply holding, every week, not just once at the end. Record impermanent loss, fees, incentives and gas separately, not as one blended number. And write your exit rule now: if fees consistently fail to cover impermanent loss, that's your signal to leave, not a reason to wait it out."
+  },
+  {
+   "type": "statement",
+   "chapter": "Recap",
+   "kicker": "Don't do this by hand every week",
+   "lines": [
+    "This program's calculator runs both formulas.",
+    "Feed it real numbers, instead of re-deriving them."
+   ],
+   "sub": "IL for any ratio; the fee APR needed to break even.",
+   "vo": "One practical note before the recap, so you're not doing this arithmetic by hand every week. This program's own calculator tool runs both formulas directly: the impermanent-loss percentage for any price ratio, and the fee A.P.R. needed to break even by a given day, at a given ratio move. Feed it real numbers, instead of re-deriving the formula from memory each time."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "check": false,
+   "items": [
+    "IL: how far an LP position lags simply holding",
+    "Full LP P&L: LP value + fees + incentives − gas, vs holding",
+    "The worked example: +$1,058 vs starting, but only +$58 vs holding",
+    "Judge the LP on the $58 — the market move isn't a skill"
+   ],
+   "vo": "Let's recap. Impermanent loss measures how far your LP position lags simply holding, once price has moved, and it's only permanent once you withdraw. Full LP P&L is LP value, plus fees, plus incentives, minus gas, compared honestly against holding. In the worked example, a thousand-dollar-plus gain was mostly the market; only fifty-eight dollars was actually earned by LPing. And that fifty-eight dollars, not the bigger number, is what a master actually judges the position on."
+  },
+  {
+   "type": "cta",
+   "chapter": "Recap",
+   "button": "Next: Lesson 2.5",
+   "sub": "MEV and protecting your trades",
+   "vo": "Track your P&L against simply holding, every week, and judge yourself on what LPing actually added. Next up, Lesson two point five: MEV and protecting your trades.",
+   "cap": "Track your P&L against simply holding, every week, and judge yourself on what LPing actually added. Next up, Lesson 2.5: MEV and protecting your trades."
+  }
+ ]
+}
