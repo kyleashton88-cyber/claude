@@ -6,200 +6,617 @@ Lesson 1.8.
 00:00:02.215 --> 00:00:04.560
 Privacy and physical security.
 
-00:00:04.560 --> 00:00:06.517
-By the end of this lesson, you'll be
+00:00:04.560 --> 00:00:06.235
+By the end, you'll know how to
 
-00:00:06.517 --> 00:00:08.845
-able to keep your holdings private and your
+00:00:06.235 --> 00:00:08.773
+keep your holdings private, and your household
 
-00:00:08.845 --> 00:00:11.225
-household safe as your on-chain wealth grows.
+00:00:08.773 --> 00:00:10.340
+safe, as what you hold grows.
 
-00:00:12.525 --> 00:00:13.815
+00:00:11.640 --> 00:00:12.930
 Here's the plan.
 
-00:00:13.815 --> 00:00:15.500
-First, the key ideas.
+00:00:12.930 --> 00:00:16.865
+Why blockchains being public matters more than people expect.
 
-00:00:15.500 --> 00:00:18.215
-Then, a worked example, step by step.
+00:00:16.865 --> 00:00:19.400
+How to actually link less, in practice.
 
-00:00:18.215 --> 00:00:19.740
-Then, your checklist.
+00:00:19.400 --> 00:00:21.733
+The physical risk that only shows up once
 
-00:00:19.740 --> 00:00:21.902
-And finally, a three-question quiz.
+00:00:21.733 --> 00:00:24.700
+holdings are large enough to be worth targeting.
 
-00:00:23.202 --> 00:00:25.337
-First, Blockchains are public.
+00:00:24.700 --> 00:00:26.350
+And the home and device habits
 
-00:00:25.337 --> 00:00:27.340
-Anyone who links an address to you
+00:00:26.350 --> 00:00:27.575
+that go with all of it.
 
-00:00:27.340 --> 00:00:29.987
-can see its balance and history, forever.
+00:00:28.875 --> 00:00:30.105
+Public by default.
 
-00:00:29.987 --> 00:00:34.325
-Next, Link less: don't post addresses, screenshots or wins
+00:00:31.405 --> 00:00:33.981
+Here's exactly what happens once one address
 
-00:00:34.325 --> 00:00:39.471
-publicly; use separate addresses for public activity (e.g. donations,
+00:00:33.981 --> 00:00:36.170
+gets linked to you, step by step.
 
-00:00:39.471 --> 00:00:43.735
-NFTs) and for savings; be aware that exchange withdrawals
+00:00:36.170 --> 00:00:39.312
+Someone connects your name to an address, maybe from
 
-00:00:43.735 --> 00:00:47.711
-link your identity (KYC) to the receiving address.
+00:00:39.312 --> 00:00:42.280
+a screenshot, a withdrawal, or a public post.
 
-00:00:47.711 --> 00:00:50.443
-Then, Name services (e.g. an ENS name)
+00:00:42.280 --> 00:00:44.250
+From that moment, its full balance
 
-00:00:50.443 --> 00:00:53.245
-are convenient but make an address easy
+00:00:44.250 --> 00:00:46.295
+is visible to anyone who looks.
 
-00:00:53.245 --> 00:00:55.716
-to find and associate with you.
+00:00:46.295 --> 00:00:49.957
+So is its complete history: every deposit, every trade,
 
-00:00:55.716 --> 00:00:58.910
-Also, Physical risk ("wrench attacks"): criminals
+00:00:49.957 --> 00:00:54.245
+every counterparty, going back to the very first transaction.
 
-00:00:58.910 --> 00:01:01.446
-target people known to hold crypto.
+00:00:54.245 --> 00:00:56.330
+And that visibility doesn't fade.
 
-00:01:01.446 --> 00:01:03.821
-Low profile is the first defence.
+00:00:56.330 --> 00:00:59.000
+It's permanent, and it covers every future
 
-00:01:03.821 --> 00:01:07.027
-Multisig with keys in separate locations means no
+00:00:59.000 --> 00:01:01.173
+transaction too, not just the past.
 
-00:01:07.027 --> 00:01:10.341
-single person can be forced to move everything.
+00:01:02.473 --> 00:01:05.040
+So here's the actual contrast worth holding
 
-00:01:10.341 --> 00:01:13.602
-And finally, Home and devices: hardware wallets and
+00:01:05.040 --> 00:01:06.798
+in your head, day to day.
 
-00:01:13.602 --> 00:01:17.052
-backups out of sight; encrypted devices; don't discuss
+00:01:06.798 --> 00:01:09.652
+A traditional bank balance is private by default;
 
-00:01:17.052 --> 00:01:19.811
-holdings with people who don't need to know.
+00:01:09.652 --> 00:01:11.608
+only you and the bank see it.
 
-00:01:21.112 --> 00:01:23.627
-Let's work an example, step by step.
+00:01:11.608 --> 00:01:14.283
+A blockchain address is public by default;
 
-00:01:23.627 --> 00:01:25.328
-Alex posts a screenshot of a
+00:01:14.283 --> 00:01:16.461
+only the link between you and that
 
-00:01:25.328 --> 00:01:27.622
-big win, with the address visible.
+00:01:16.461 --> 00:01:18.825
+address is ever hidden, and once that
 
-00:01:27.622 --> 00:01:30.012
-Anyone can now see Alex's balance and
+00:01:18.825 --> 00:01:20.878
+link is made, it can't be unmade.
 
-00:01:30.012 --> 00:01:32.717
-follow every future move, and scammers and
+00:01:22.178 --> 00:01:24.299
+Worth auditing your own exposure right
 
-00:01:32.717 --> 00:01:34.652
-thieves now have a target.
+00:01:24.299 --> 00:01:26.393
+now, before assuming you're fine.
 
-00:01:34.652 --> 00:01:38.099
-Better: no screenshots, a vault address that has never
+00:01:26.393 --> 00:01:28.496
+Search your own old posts and forum
 
-00:01:38.099 --> 00:01:41.107
-been shared, and a 2-of-3 multisig so no single
+00:01:28.496 --> 00:01:31.308
+history for any address you've ever pasted.
 
-00:01:41.107 --> 00:01:43.802
-key holder can be coerced into draining it.
+00:01:31.308 --> 00:01:33.817
+Check whether any address you use has
 
-00:01:45.102 --> 00:01:46.562
+00:01:33.817 --> 00:01:37.088
+an E.N.S.-style name pointing at it publicly.
+
+00:01:37.088 --> 00:01:39.876
+And check whether you've ever linked a wallet to
+
+00:01:39.876 --> 00:01:42.793
+a public profile, a Discord, or a leaderboard.
+
+00:01:42.793 --> 00:01:45.429
+Whatever turns up, you now know exactly what's
+
+00:01:45.429 --> 00:01:48.176
+already exposed, and can start a clean, separate
+
+00:01:48.176 --> 00:01:50.868
+address for anything that matters going forward.
+
+00:01:52.168 --> 00:01:54.101
+If your own audit just turned up
+
+00:01:54.101 --> 00:01:56.795
+an address you've already exposed, here's the
+
+00:01:56.795 --> 00:01:58.793
+actual fix, not just a worry.
+
+00:01:58.793 --> 00:02:01.308
+Treat that address as burned for privacy
+
+00:02:01.308 --> 00:02:04.553
+purposes, permanently; the link can't be undone.
+
+00:02:04.553 --> 00:02:08.337
+Move meaningful holdings to a fresh, never-shared address, using
+
+00:02:08.337 --> 00:02:11.373
+a method that doesn't itself create a new link.
+
+00:02:11.373 --> 00:02:13.317
+And simply stop using the old one
+
+00:02:13.317 --> 00:02:15.718
+for anything beyond what's already public.
+
+00:02:17.018 --> 00:02:18.108
+Quick check.
+
+00:02:18.108 --> 00:02:20.633
+Once an address is linked to your identity,
+
+00:02:20.633 --> 00:02:22.813
+what can anyone see, and for how long?
+
+00:02:27.233 --> 00:02:30.416
+The answer: its full balance and complete history,
+
+00:02:30.416 --> 00:02:34.535
+permanently, including every future transaction from that address.
+
+00:02:35.835 --> 00:02:36.690
+Link less.
+
+00:02:37.990 --> 00:02:40.492
+Here's what “link less” actually looks like
+
+00:02:40.492 --> 00:02:42.555
+as a habit, in order of impact.
+
+00:02:42.555 --> 00:02:44.641
+Never post an address, a balance,
+
+00:02:44.641 --> 00:02:47.395
+or a win publicly, screenshots included.
+
+00:02:47.395 --> 00:02:50.482
+Use one address for public activity, donations,
+
+00:02:50.482 --> 00:02:53.054
+NFTs, things you don't mind being seen,
+
+00:02:53.054 --> 00:02:56.055
+and a completely separate one for savings.
+
+00:02:56.055 --> 00:02:59.348
+Know that an exchange withdrawal links your verified
+
+00:02:59.348 --> 00:03:03.065
+identity to whichever address receives it, permanently.
+
+00:03:03.065 --> 00:03:05.592
+And think twice before using an ENS-style
+
+00:03:05.592 --> 00:03:08.600
+name service on your savings address specifically.
+
+00:03:09.900 --> 00:03:12.585
+Here's exactly why an exchange withdrawal is
+
+00:03:12.585 --> 00:03:14.735
+the one people miss most often.
+
+00:03:14.735 --> 00:03:17.291
+You complete K.Y.C. on an exchange,
+
+00:03:17.291 --> 00:03:20.005
+which verifies your real identity.
+
+00:03:20.005 --> 00:03:21.740
+You withdraw to an address.
+
+00:03:21.740 --> 00:03:25.003
+That withdrawal is now a permanent record connecting
+
+00:03:25.003 --> 00:03:28.512
+your verified identity to that specific address, sitting
+
+00:03:28.512 --> 00:03:32.260
+on the exchange's books and, in principle, discoverable.
+
+00:03:32.260 --> 00:03:34.999
+From that point on, that address is not anonymous
+
+00:03:34.999 --> 00:03:37.245
+to anyone who could ever see that record.
+
+00:03:38.545 --> 00:03:41.053
+And here's exactly why a name service cuts
+
+00:03:41.053 --> 00:03:43.570
+the other way from what people expect.
+
+00:03:43.570 --> 00:03:46.012
+It exists to make an address memorable
+
+00:03:46.012 --> 00:03:48.329
+and easy to find, which is genuinely
+
+00:03:48.329 --> 00:03:50.820
+useful for a public-facing address.
+
+00:03:50.820 --> 00:03:54.398
+On a savings address specifically, that convenience becomes
+
+00:03:54.398 --> 00:03:56.903
+the problem: it makes the one address you
+
+00:03:56.903 --> 00:03:59.587
+most want private the easiest one for anyone
+
+00:03:59.587 --> 00:04:01.615
+to look up and associate with you.
+
+00:04:02.915 --> 00:04:05.997
+Here's how a chain-analysis effort actually builds a
+
+00:04:05.997 --> 00:04:09.030
+full profile, since it's rarely one clue alone.
+
+00:04:09.030 --> 00:04:11.761
+It starts with an exchange withdrawal record,
+
+00:04:11.761 --> 00:04:14.791
+linking your verified identity to one address.
+
+00:04:14.791 --> 00:04:17.100
+From there, address reuse links that address
+
+00:04:17.100 --> 00:04:19.196
+to others you've used the same way.
+
+00:04:19.196 --> 00:04:21.216
+A public post, or an ENS name,
+
+00:04:21.216 --> 00:04:23.796
+adds a public label to the cluster.
+
+00:04:23.796 --> 00:04:26.511
+And the combination, not any single piece,
+
+00:04:26.511 --> 00:04:29.857
+produces a complete profile: identity, full balance,
+
+00:04:29.857 --> 00:04:31.941
+and behaviour, all tied together.
+
+00:04:33.241 --> 00:04:34.331
+Quick check.
+
+00:04:34.331 --> 00:04:36.765
+Why does an exchange withdrawal specifically
+
+00:04:36.765 --> 00:04:38.550
+link your identity to an address?
+
+00:04:42.970 --> 00:04:46.614
+The answer: because the exchange verified your identity
+
+00:04:46.614 --> 00:04:49.932
+through KYC, and its records connect that identity
+
+00:04:49.932 --> 00:04:52.340
+to whichever address you withdrew to.
+
+00:04:53.640 --> 00:04:54.625
+Physical risk.
+
+00:04:55.925 --> 00:04:59.180
+Here's the plain, uncomfortable version of this risk.
+
+00:04:59.180 --> 00:05:02.595
+Criminals have targeted people known, or believed, to
+
+00:05:02.595 --> 00:05:06.390
+hold significant crypto, specifically because a private key
+
+00:05:06.390 --> 00:05:09.236
+can move everything in minutes, with no bank
+
+00:05:09.236 --> 00:05:11.939
+to call and no transaction to reverse.
+
+00:05:11.939 --> 00:05:14.484
+This isn't a hypothetical for this lesson;
+
+00:05:14.484 --> 00:05:16.970
+it's documented, and it's exactly why the
+
+00:05:16.970 --> 00:05:19.634
+earlier habit of never posting your holdings
+
+00:05:19.634 --> 00:05:22.179
+matters as much as any technical safeguard.
+
+00:05:23.479 --> 00:05:27.374
+So here's how multisig actually defeats coercion specifically,
+
+00:05:27.374 --> 00:05:30.094
+step by step, since it's the one structural
+
+00:05:30.094 --> 00:05:33.114
+defence that works even under direct threat.
+
+00:05:33.114 --> 00:05:35.156
+Your funds require, say, two out of
+
+00:05:35.156 --> 00:05:37.044
+three keys to move, not one.
+
+00:05:37.044 --> 00:05:39.615
+Those keys are held in separate physical
+
+00:05:39.615 --> 00:05:42.799
+locations, ideally by separate trusted people.
+
+00:05:42.799 --> 00:05:45.163
+If someone coerces you specifically, you
+
+00:05:45.163 --> 00:05:47.539
+alone cannot produce the second key.
+
+00:05:47.539 --> 00:05:49.368
+And that means there is nothing a
+
+00:05:49.368 --> 00:05:51.789
+threat against you alone can actually unlock.
+
+00:05:53.089 --> 00:05:55.789
+Put a single key and multisig side by side,
+
+00:05:55.789 --> 00:05:59.464
+under exactly this threat, and the difference is total.
+
+00:05:59.464 --> 00:06:02.590
+A single key means one person, coerced once, can
+
+00:06:02.590 --> 00:06:06.654
+move everything, immediately, with no second step required.
+
+00:06:06.654 --> 00:06:09.820
+Two-of-three multisig means one person, even under
+
+00:06:09.820 --> 00:06:12.923
+direct threat, simply cannot move anything alone,
+
+00:06:12.923 --> 00:06:15.344
+no matter how much pressure is applied.
+
+00:06:16.644 --> 00:06:19.709
+One sobering, dated fact behind this chapter.
+
+00:06:19.709 --> 00:06:25.063
+Crypto-crime researchers and journalists have documented dozens of publicised
+
+00:06:25.063 --> 00:06:29.662
+physical robbery and coercion cases targeting known crypto holders
+
+00:06:29.662 --> 00:06:33.119
+across recent years, worldwide, not a handful.
+
+00:06:33.119 --> 00:06:36.239
+This is outside research, not this program's own
+
+00:06:36.239 --> 00:06:39.295
+data, but the pattern is consistent enough that
+
+00:06:39.295 --> 00:06:42.606
+low profile and multisig aren't optional extras for
+
+00:06:42.606 --> 00:06:44.834
+anyone holding a meaningful amount.
+
+00:06:46.134 --> 00:06:49.247
+Discretion doesn't mean total secrecy from everyone,
+
+00:06:49.247 --> 00:06:51.544
+so here's the honest line to draw.
+
+00:06:51.544 --> 00:06:54.304
+Worth telling: whoever holds one of your
+
+00:06:54.304 --> 00:06:57.400
+multisig keys, and, for real estate planning,
+
+00:06:57.400 --> 00:07:00.362
+a lawyer bound by confidentiality who knows
+
+00:07:00.362 --> 00:07:03.489
+a plan exists, not necessarily the amount.
+
+00:07:03.489 --> 00:07:07.893
+Not worth telling: casual acquaintances, coworkers, or anyone with
+
+00:07:07.893 --> 00:07:11.114
+no structural role in accessing or recovering it.
+
+00:07:12.414 --> 00:07:13.504
+Quick check.
+
+00:07:13.504 --> 00:07:17.012
+Why does 2-of-3 multisig specifically protect against a
+
+00:07:17.012 --> 00:07:19.769
+coercion threat, where a single key doesn't?
+
+00:07:24.189 --> 00:07:26.826
+The answer: no single coerced person can
+
+00:07:26.826 --> 00:07:29.270
+produce the second key, so nobody can
+
+00:07:29.270 --> 00:07:31.649
+be forced, alone, to move everything.
+
+00:07:32.949 --> 00:07:34.184
+Home and devices.
+
+00:07:35.484 --> 00:07:37.304
+Here's the home and device side,
+
+00:07:37.304 --> 00:07:39.369
+as a straightforward habit list.
+
+00:07:39.369 --> 00:07:42.447
+Hardware wallets and backups stay physically out of
+
+00:07:42.447 --> 00:07:45.765
+sight, never displayed or left visible to visitors.
+
+00:07:45.765 --> 00:07:49.118
+Devices holding any wallet access stay encrypted,
+
+00:07:49.118 --> 00:07:52.100
+with a real passcode, not left unlocked.
+
+00:07:52.100 --> 00:07:55.127
+And holdings simply aren't discussed with people
+
+00:07:55.127 --> 00:07:57.413
+who have no need to know, including,
+
+00:07:57.413 --> 00:08:00.378
+quietly, most extended family and acquaintances.
+
+00:08:01.678 --> 00:08:04.507
+And before that first large deposit specifically,
+
+00:08:04.507 --> 00:08:06.618
+do these three things, in order.
+
+00:08:06.618 --> 00:08:09.315
+Set up a dedicated savings address, separate
+
+00:08:09.315 --> 00:08:12.013
+from anything you've ever used publicly.
+
+00:08:12.013 --> 00:08:15.408
+Leave it unnamed; no ENS, no label anywhere.
+
+00:08:15.408 --> 00:08:17.704
+And if you tell anyone at all that it
+
+00:08:17.704 --> 00:08:21.270
+exists, tell one trusted person, through a secure channel,
+
+00:08:21.270 --> 00:08:24.533
+not a casual conversation where others might overhear.
+
+00:08:25.833 --> 00:08:28.083
+Alex posts a screenshot of a big
+
+00:08:28.083 --> 00:08:30.973
+win, with the address clearly visible.
+
+00:08:30.973 --> 00:08:34.502
+From that single post, anyone can now see Alex's
+
+00:08:34.502 --> 00:08:38.548
+full balance, and follow every future move, forever.
+
+00:08:38.548 --> 00:08:40.493
+A scammer or thief now has a
+
+00:08:40.493 --> 00:08:43.408
+specific, verified target, not a guess.
+
+00:08:43.408 --> 00:08:47.216
+The better version: no screenshots ever, a vault
+
+00:08:47.216 --> 00:08:50.479
+address that has never been shared, and a
+
+00:08:50.479 --> 00:08:53.976
+2-of-3 multisig, so no single key holder can
+
+00:08:53.976 --> 00:08:56.618
+be coerced into draining it alone.
+
+00:08:57.918 --> 00:08:59.378
 Here's your checklist.
 
-00:01:46.562 --> 00:01:48.097
+00:08:59.378 --> 00:09:00.913
 Do it now, for real.
 
-00:01:48.097 --> 00:01:50.373
-First, Savings addresses have never
+00:09:00.913 --> 00:09:03.178
+Your savings addresses have never been
 
-00:01:50.373 --> 00:01:52.632
-been posted or linked publicly.
+00:09:03.178 --> 00:09:05.568
+posted or linked publicly, anywhere.
 
-00:01:52.632 --> 00:01:56.697
-Next, no holdings screenshots or wins on social media.
+00:09:05.568 --> 00:09:07.743
+No holdings screenshots or wins
 
-00:01:56.697 --> 00:01:58.397
-Then, Vault keys held so no
+00:09:07.743 --> 00:09:09.743
+go on social media, ever.
 
-00:01:58.397 --> 00:02:00.762
-single person can move everything.
+00:09:09.743 --> 00:09:11.562
+Vault keys are held so that no
 
-00:02:00.762 --> 00:02:03.356
-And finally, Backups stored discreetly, away
+00:09:11.562 --> 00:09:14.208
+single person can move everything alone.
 
-00:02:03.356 --> 00:02:05.027
-from where people would look.
+00:09:14.208 --> 00:09:16.539
+And backups are stored discreetly, somewhere
 
-00:02:06.327 --> 00:02:07.537
-Question 1.
+00:09:16.539 --> 00:09:17.938
+nobody would think to look.
 
-00:02:07.537 --> 00:02:10.092
-What does linking an address to your identity reveal?
-
-00:02:14.512 --> 00:02:16.453
-The answer: Its full balance and
-
-00:02:16.453 --> 00:02:18.277
-history, now and in the future.
-
-00:02:19.577 --> 00:02:20.822
-Question 2.
-
-00:02:20.822 --> 00:02:23.452
-How does multisig help against physical threats?
-
-00:02:27.872 --> 00:02:30.432
-The answer: No single person can be forced
-
-00:02:30.432 --> 00:02:33.112
-to move everything; other keys are elsewhere.
-
-00:02:34.412 --> 00:02:35.682
-Question 3.
-
-00:02:35.682 --> 00:02:38.050
-What links your identity to a wallet address?
-
-00:02:42.470 --> 00:02:46.037
-The answer: For example, KYC exchange withdrawals,
-
-00:02:46.037 --> 00:02:49.325
-name services, or posting the address publicly.
-
-00:02:50.625 --> 00:02:51.870
+00:09:19.238 --> 00:09:20.483
 Let's recap.
 
-00:02:51.870 --> 00:02:55.033
-Blockchains are public: Anyone who links an address to
+00:09:20.483 --> 00:09:23.758
+Blockchains are public by default, permanently, and only
 
-00:02:55.033 --> 00:02:57.920
-you can see its balance and history, forever.
+00:09:23.758 --> 00:09:26.413
+the link to your identity is ever hidden.
 
-00:02:57.920 --> 00:03:02.165
-Link less: don't post addresses, screenshots or wins publicly.
+00:09:26.413 --> 00:09:30.256
+Linking less is a practical habit: separate addresses, care
 
-00:03:02.165 --> 00:03:04.776
-Name services (e.g. an ENS name) are
+00:09:30.256 --> 00:09:34.847
+around exchange withdrawals, caution with name services on savings.
 
-00:03:04.776 --> 00:03:07.529
-convenient but make an address easy to
+00:09:34.847 --> 00:09:37.279
+Physical risk is real once holdings are
 
-00:03:07.529 --> 00:03:09.805
-find and associate with you.
+00:09:37.279 --> 00:09:40.198
+worth targeting, and multisig is the structural
 
-00:03:09.805 --> 00:03:11.740
-Physical risk ("wrench attacks").
+00:09:40.198 --> 00:09:43.112
+defence that actually works under coercion.
 
-00:03:13.040 --> 00:03:15.555
-Do the checklist now, before you move on.
+00:09:43.112 --> 00:09:46.346
+And ordinary discretion, at home and on your devices,
 
-00:03:15.555 --> 00:03:19.880
+00:09:46.346 --> 00:09:48.802
+is what keeps all of it holding together.
+
+00:09:50.102 --> 00:09:53.470
+Stay quiet about what you hold, separate your addresses
+
+00:09:53.470 --> 00:09:56.658
+by purpose, and structure real holdings so no single
+
+00:09:56.658 --> 00:10:00.687
+person, including you under threat, can move everything alone.
+
+00:10:00.687 --> 00:10:05.012
 Next up, Lesson 1.9: Smart accounts and account abstraction.

@@ -1162,7 +1162,30 @@ function storyPermitPhishing() {
     `${body}<div style="margin-top:26px;display:flex;align-items:center;gap:14px;padding:16px 20px;border-radius:12px;background:#fff5ef;border:1.5px solid ${C.orange};max-width:900px;margin-left:auto;margin-right:auto">
       ${icon('alert', 26, C.orange)}<span style="font-size:19px;color:${C.text}">No real verification needs a token approval. Reject, close the tab, and check your existing approvals.</span></div>`);
 }
+function storySocialLeak() {
+  const phone = (badge, capt, addr, tone) => `<div style="flex:1;border-radius:22px;overflow:hidden;border:1px solid ${C.line};box-shadow:0 20px 50px rgba(20,30,50,.12);background:#fff">
+    <div style="padding:16px 20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid ${C.line}">
+      <div style="width:34px;height:34px;border-radius:50%;background:${C.panel};display:flex;align-items:center;justify-content:center;color:${C.muted}">${icon('users', 18, C.muted)}</div>
+      <div style="font-size:15px;font-weight:700;color:${C.ink}">@onchain_alex</div></div>
+    <div style="padding:22px 24px">
+      <div style="font-size:19px;color:${C.ink};margin-bottom:16px;line-height:1.4">${capt}</div>
+      <div style="border-radius:14px;background:${C.panel};border:1.5px solid ${tone === 'bad' ? C.orange : C.line};padding:18px 20px;position:relative">
+        <div style="font-size:14px;color:${C.text2};margin-bottom:6px">Wallet balance</div>
+        <div style="font-size:30px;font-weight:800;color:${C.ink}">$250,412</div>
+        ${addr ? `<div style="margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:16px;color:${tone === 'bad' ? C.orange : C.text2};font-weight:${tone === 'bad' ? 800 : 500};padding:8px 12px;border-radius:8px;background:${tone === 'bad' ? '#fff5ef' : '#fff'};border:1px solid ${tone === 'bad' ? C.orange : C.line}">${addr}</div>` : `<div style="margin-top:12px;font-size:15px;color:${C.text2};font-style:italic">No address shown</div>`}
+      </div>
+      <div style="margin-top:14px;display:flex;align-items:center;gap:8px;font-size:14px;font-weight:800;color:${tone === 'bad' ? C.orange : C.aqua}">${badge}</div>
+    </div></div>`;
+  const body = `<div style="display:flex;gap:40px;max-width:1560px;margin:0 auto">
+    ${phone('⚠ Address now public, forever', '“Just hit $250k on this wallet 🚀”', '0x7a3F9c21…e4B2', 'bad')}
+    ${phone('✓ Nothing for anyone to link', '“Big milestone this year. Grateful.”', null, 'good')}
+  </div>`;
+  return lightShell(1800, 780, 'Same win, two very different posts', 'The address is the only thing that changes — and it changes everything',
+    `${body}<div style="margin-top:28px;display:flex;align-items:center;gap:14px;padding:16px 20px;border-radius:12px;background:#fff5ef;border:1.5px solid ${C.orange};max-width:1560px;margin-left:auto;margin-right:auto">
+      ${icon('alert', 26, C.orange)}<span style="font-size:19px;color:${C.text}">Once that address is public, its full balance and history are visible to anyone — permanently, including every future transaction.</span></div>`);
+}
 const STORY_IMAGES = [
+  { file: 'story-social-leak', w: 1800, h: 780, fn: storySocialLeak },
   { file: 'story-permit-phishing', w: 1800, h: 800, fn: storyPermitPhishing },
   { file: 'story-address-poisoning', w: 1800, h: 560, fn: storyAddressPoisoning },
   { file: 'story-block-explorer', w: 1800, h: 700, fn: storyBlockExplorer },
