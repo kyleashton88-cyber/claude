@@ -6,200 +6,590 @@ Lesson 1.8.
 00:00:02.215 --> 00:00:04.560
 Privacy and physical security.
 
-00:00:04.560 --> 00:00:06.517
-By the end of this lesson, you'll be
+00:00:04.560 --> 00:00:06.765
+By the end, you'll know how an address
 
-00:00:06.517 --> 00:00:08.845
-able to keep your holdings private and your
+00:00:06.765 --> 00:00:09.084
+gets linked to your identity, and how to
 
-00:00:08.845 --> 00:00:11.225
-household safe as your on-chain wealth grows.
+00:00:09.084 --> 00:00:11.572
+structure your keys so no single person can
 
-00:00:12.525 --> 00:00:13.815
+00:00:11.572 --> 00:00:13.495
+ever be forced to move everything.
+
+00:00:14.795 --> 00:00:16.085
 Here's the plan.
 
-00:00:13.815 --> 00:00:15.500
-First, the key ideas.
+00:00:16.085 --> 00:00:18.666
+First, why a public ledger means privacy
 
-00:00:15.500 --> 00:00:18.215
-Then, a worked example, step by step.
+00:00:18.666 --> 00:00:21.610
+is something you have to actively protect.
 
-00:00:18.215 --> 00:00:19.740
-Then, your checklist.
+00:00:21.610 --> 00:00:24.467
+Second, the real physical risk this creates, and
 
-00:00:19.740 --> 00:00:21.902
-And finally, a three-question quiz.
+00:00:24.467 --> 00:00:27.275
+the one structural fix that actually works.
 
-00:00:23.202 --> 00:00:25.337
-First, Blockchains are public.
+00:00:27.275 --> 00:00:29.697
+And third, the quieter habits, at home and
 
-00:00:25.337 --> 00:00:27.340
-Anyone who links an address to you
+00:00:29.697 --> 00:00:31.555
+on your devices, that back it up.
 
-00:00:27.340 --> 00:00:29.987
-can see its balance and history, forever.
+00:00:32.855 --> 00:00:35.862
+Every earlier lesson in this module protected
 
-00:00:29.987 --> 00:00:34.325
-Next, Link less: don't post addresses, screenshots or wins
+00:00:35.862 --> 00:00:38.215
+you from losing funds to a mistake,
 
-00:00:34.325 --> 00:00:39.471
-publicly; use separate addresses for public activity (e.g. donations,
+00:00:38.215 --> 00:00:40.215
+a scam, or a bad contract.
 
-00:00:39.471 --> 00:00:43.735
-NFTs) and for savings; be aware that exchange withdrawals
+00:00:40.215 --> 00:00:41.790
+This one is different.
 
-00:00:43.735 --> 00:00:47.711
-link your identity (KYC) to the receiving address.
+00:00:41.790 --> 00:00:44.202
+It protects you from what happens when other
 
-00:00:47.711 --> 00:00:50.443
-Then, Name services (e.g. an ENS name)
+00:00:44.202 --> 00:00:45.970
+people can see how much you have.
 
-00:00:50.443 --> 00:00:53.245
-are convenient but make an address easy
+00:00:47.270 --> 00:00:48.330
+A public ledger.
 
-00:00:53.245 --> 00:00:55.716
-to find and associate with you.
+00:00:49.630 --> 00:00:51.225
+Start with the trade-off.
 
-00:00:55.716 --> 00:00:58.910
-Also, Physical risk ("wrench attacks"): criminals
+00:00:51.225 --> 00:00:54.253
+The same public ledger that lets anyone verify a
 
-00:00:58.910 --> 00:01:01.446
-target people known to hold crypto.
+00:00:54.253 --> 00:00:57.528
+transaction also lets anyone who links an address to
 
-00:01:01.446 --> 00:01:03.821
-Low profile is the first defence.
+00:00:57.528 --> 00:01:00.115
+you see its full balance and history.
 
-00:01:03.821 --> 00:01:07.027
-Multisig with keys in separate locations means no
+00:01:00.115 --> 00:01:01.940
+Not just today's balance.
 
-00:01:07.027 --> 00:01:10.341
-single person can be forced to move everything.
+00:01:01.940 --> 00:01:04.132
+Every transaction it has ever made, and
 
-00:01:10.341 --> 00:01:13.602
-And finally, Home and devices: hardware wallets and
+00:01:04.132 --> 00:01:05.830
+every one it makes from now on.
 
-00:01:13.602 --> 00:01:17.052
-backups out of sight; encrypted devices; don't discuss
+00:01:07.130 --> 00:01:09.545
+Here's how that link actually gets made.
 
-00:01:17.052 --> 00:01:19.811
-holdings with people who don't need to know.
+00:01:09.545 --> 00:01:11.620
+Say you withdraw from an exchange.
 
-00:01:21.112 --> 00:01:23.627
-Let's work an example, step by step.
+00:01:11.620 --> 00:01:14.469
+That exchange already knows who you are, because
 
-00:01:23.627 --> 00:01:25.328
-Alex posts a screenshot of a
+00:01:14.469 --> 00:01:17.095
+it collected your ID when you signed up.
 
-00:01:25.328 --> 00:01:27.622
-big win, with the address visible.
+00:01:17.095 --> 00:01:19.065
+The moment you withdraw, it records
 
-00:01:27.622 --> 00:01:30.012
-Anyone can now see Alex's balance and
+00:01:19.065 --> 00:01:21.171
+which address received the funds.
 
-00:01:30.012 --> 00:01:32.717
-follow every future move, and scammers and
+00:01:21.171 --> 00:01:25.203
+Separately, maybe you register an easy-to-remember name for that
 
-00:01:32.717 --> 00:01:34.652
-thieves now have a target.
+00:01:25.203 --> 00:01:28.242
+same address, or you post it publicly asking for
 
-00:01:34.652 --> 00:01:38.099
-Better: no screenshots, a vault address that has never
+00:01:28.242 --> 00:01:30.651
+a donation or showing off a trade.
 
-00:01:38.099 --> 00:01:41.107
-been shared, and a 2-of-3 multisig so no single
+00:01:30.651 --> 00:01:32.223
+Any one of those, on its own,
 
-00:01:41.107 --> 00:01:43.802
-key holder can be coerced into draining it.
+00:01:32.223 --> 00:01:34.356
+connects your name to that address.
 
-00:01:45.102 --> 00:01:46.562
-Here's your checklist.
+00:01:34.356 --> 00:01:37.703
+And once it's connected, every future transaction from
 
-00:01:46.562 --> 00:01:48.097
-Do it now, for real.
+00:01:37.703 --> 00:01:40.016
+that address is now readable as yours.
 
-00:01:48.097 --> 00:01:50.373
-First, Savings addresses have never
+00:01:41.316 --> 00:01:42.406
+Quick check.
 
-00:01:50.373 --> 00:01:52.632
+00:01:42.406 --> 00:01:43.929
+What does linking an address
+
+00:01:43.929 --> 00:01:45.661
+to your identity actually reveal?
+
+00:01:50.081 --> 00:01:52.415
+The answer: its full balance and history,
+
+00:01:52.415 --> 00:01:54.637
+both what's there now and everything it
+
+00:01:54.637 --> 00:01:55.971
+does from that point on.
+
+00:01:57.271 --> 00:01:59.202
+And it isn't just other individuals
+
+00:01:59.202 --> 00:02:00.736
+who can make that link.
+
+00:02:00.736 --> 00:02:04.556
+Chain-analysis firms exist specifically to cluster addresses
+
+00:02:04.556 --> 00:02:06.748
+and attach names to them, and they
+
+00:02:06.748 --> 00:02:10.116
+sell that service to exchanges and investigators.
+
+00:02:10.116 --> 00:02:13.201
+None of this requires anyone to break in anywhere.
+
+00:02:13.201 --> 00:02:15.024
+It's all sitting on a ledger that
+
+00:02:15.024 --> 00:02:16.901
+was built to be readable by design.
+
+00:02:18.201 --> 00:02:19.056
+Link less.
+
+00:02:20.356 --> 00:02:22.881
+So the habit is simple: link less.
+
+00:02:22.881 --> 00:02:26.421
+Don't post addresses, screenshots, or wins publicly.
+
+00:02:26.421 --> 00:02:30.088
+Keep a separate address for anything public, a donation
+
+00:02:30.088 --> 00:02:32.970
+link, an NFT you show off, and a completely
+
+00:02:32.970 --> 00:02:36.151
+different one for savings you never mention.
+
+00:02:36.151 --> 00:02:39.844
+And remember that any exchange withdrawal already links
+
+00:02:39.844 --> 00:02:42.811
+your ID to whichever address receives it, so
+
+00:02:42.811 --> 00:02:45.976
+treat that receiving address as semi-public too.
+
+00:02:47.276 --> 00:02:50.891
+Here's the difference this makes, as one real comparison.
+
+00:02:50.891 --> 00:02:52.893
+Alex posts a screenshot of a big
+
+00:02:52.893 --> 00:02:55.316
+win, address visible in the corner.
+
+00:02:55.316 --> 00:02:58.369
+Anyone can now see Alex's balance, and follow
+
+00:02:58.369 --> 00:03:01.656
+every future move: a target has been created.
+
+00:03:01.656 --> 00:03:04.594
+The fix costs nothing: no screenshots, a vault
+
+00:03:04.594 --> 00:03:07.470
+address that has never once been shared, and,
+
+00:03:07.470 --> 00:03:09.783
+as you'll see next, a multisig so no
+
+00:03:09.783 --> 00:03:11.221
+single key can move it.
+
+00:03:12.521 --> 00:03:14.076
+Put a rough shape on it.
+
+00:03:14.076 --> 00:03:16.920
+Across real cases of people getting doxxed
+
+00:03:16.920 --> 00:03:20.557
+on-chain, exchange withdrawals are usually the biggest
+
+00:03:20.557 --> 00:03:23.436
+source, because ID is already attached.
+
+00:03:23.436 --> 00:03:26.591
+Public posts and screenshots are the second biggest, and
+
+00:03:26.591 --> 00:03:30.156
+they're the one source that's entirely within your control.
+
+00:03:30.156 --> 00:03:33.701
+Name services and on-chain analysis make up the rest.
+
+00:03:35.001 --> 00:03:38.131
+One more habit worth naming: address reuse.
+
+00:03:38.131 --> 00:03:41.376
+Using the same address everywhere, for every swap,
+
+00:03:41.376 --> 00:03:44.494
+every deposit, every payment, makes every one of
+
+00:03:44.494 --> 00:03:47.466
+those chain-analysis links easier to draw.
+
+00:03:47.466 --> 00:03:50.039
+A fresh address for anything that doesn't
+
+00:03:50.039 --> 00:03:52.611
+need to persist costs nothing and quietly
+
+00:03:52.611 --> 00:03:54.326
+removes most of the pattern.
+
+00:03:55.626 --> 00:03:56.611
+Physical risk.
+
+00:03:57.911 --> 00:03:59.909
+Here's the risk that makes this lesson
+
+00:03:59.909 --> 00:04:02.156
+different from the rest of the module.
+
+00:04:02.156 --> 00:04:06.404
+Criminals have specifically targeted people known to hold crypto,
+
+00:04:06.404 --> 00:04:10.116
+in person, to coerce them into signing a transaction.
+
+00:04:10.116 --> 00:04:12.714
+In this industry it's bluntly called a wrench
+
+00:04:12.714 --> 00:04:15.199
+attack, and it's real enough that it shapes
+
+00:04:15.199 --> 00:04:17.514
+how serious holders structure their keys.
+
+00:04:18.814 --> 00:04:21.263
+Low profile is the first defence, and
+
+00:04:21.263 --> 00:04:24.099
+it's just everything from the last section:
+
+00:04:24.099 --> 00:04:27.299
+no posts, no screenshots, no visible balance.
+
+00:04:27.299 --> 00:04:29.294
+But a low profile can fail.
+
+00:04:29.294 --> 00:04:30.609
+Someone talks.
+
+00:04:30.609 --> 00:04:31.924
+Someone guesses.
+
+00:04:31.924 --> 00:04:33.806
+So the real defence has to work
+
+00:04:33.806 --> 00:04:36.099
+even if you've already been identified.
+
+00:04:37.399 --> 00:04:39.644
+That real fix is a multisig with
+
+00:04:39.644 --> 00:04:42.734
+keys held in separate physical locations.
+
+00:04:42.734 --> 00:04:44.414
+Say it's set up two of three.
+
+00:04:44.414 --> 00:04:46.039
+One key lives with you.
+
+00:04:46.039 --> 00:04:48.484
+One lives with a family member, or in
+
+00:04:48.484 --> 00:04:51.614
+a safe deposit box, somewhere else entirely.
+
+00:04:51.614 --> 00:04:53.027
+One lives with a lawyer
+
+00:04:53.027 --> 00:04:54.799
+or a trusted third party.
+
+00:04:54.799 --> 00:04:57.188
+No single key can move funds alone; any
+
+00:04:57.188 --> 00:04:59.339
+two of the three have to agree.
+
+00:04:59.339 --> 00:05:02.532
+Which means no single person, including you, under
+
+00:05:02.532 --> 00:05:05.524
+coercion, can be forced to move everything.
+
+00:05:05.524 --> 00:05:08.314
+The other key holders simply aren't there to sign.
+
+00:05:09.613 --> 00:05:12.251
+Setting this up is a few concrete decisions,
+
+00:05:12.251 --> 00:05:14.603
+not new software you have to learn.
+
+00:05:14.603 --> 00:05:17.989
+First, pick three people or places that genuinely couldn't
+
+00:05:17.989 --> 00:05:21.158
+collude, not two family members who live together.
+
+00:05:21.158 --> 00:05:23.519
+Second, set up the vault as a two of
+
+00:05:23.519 --> 00:05:27.603
+three, using an established, audited multisig contract; Safe is
+
+00:05:27.603 --> 00:05:30.392
+the most widely used one in this space.
+
+00:05:30.392 --> 00:05:33.261
+Third, physically distribute a hardware device
+
+00:05:33.261 --> 00:05:35.637
+to each key holder's own location.
+
+00:05:35.637 --> 00:05:38.330
+And fourth, test it first with a small amount,
+
+00:05:38.330 --> 00:05:40.737
+before you ever move real savings into it.
+
+00:05:42.037 --> 00:05:45.068
+One illustrative way to see why this matters.
+
+00:05:45.068 --> 00:05:47.560
+A single key gives an attacker exactly
+
+00:05:47.560 --> 00:05:50.288
+one target, and one signature ends it.
+
+00:05:50.288 --> 00:05:52.594
+A two of three vault, keys genuinely
+
+00:05:52.594 --> 00:05:55.648
+apart, gives an attacker three separate targets,
+
+00:05:55.648 --> 00:05:57.818
+none of which is enough alone.
+
+00:05:57.818 --> 00:05:59.923
+The defence isn't a bigger lock.
+
+00:05:59.923 --> 00:06:01.848
+It's removing the one moment where
+
+00:06:01.848 --> 00:06:03.443
+a single “yes” is sufficient.
+
+00:06:04.743 --> 00:06:05.833
+Quick check.
+
+00:06:05.833 --> 00:06:09.148
+How does multisig actually help against a physical threat?
+
+00:06:13.568 --> 00:06:16.305
+The answer: no single person can be forced to
+
+00:06:16.305 --> 00:06:19.756
+move everything, because the other keys needed to approve
+
+00:06:19.756 --> 00:06:23.147
+the transaction are somewhere else, held by someone else.
+
+00:06:24.446 --> 00:06:25.681
+Home and devices.
+
+00:06:26.981 --> 00:06:29.136
+Don't tell people who don't need to know.
+
+00:06:29.136 --> 00:06:30.886
+Keep your hardware wallet, and any
+
+00:06:30.886 --> 00:06:32.636
+written backup, out of sight.
+
+00:06:32.636 --> 00:06:34.921
+Not in a drawer a houseguest could
+
+00:06:34.921 --> 00:06:38.447
+open, and not photographed “for safekeeping.” Encrypt
+
+00:06:38.447 --> 00:06:40.797
+your devices, so a stolen laptop or
+
+00:06:40.797 --> 00:06:43.278
+phone isn't also a stolen seed phrase.
+
+00:06:44.578 --> 00:06:47.268
+Notice the pattern across this whole lesson.
+
+00:06:47.268 --> 00:06:48.501
+None of it is about a
+
+00:06:48.501 --> 00:06:50.988
+smarter contract, or a better exchange.
+
+00:06:50.988 --> 00:06:53.817
+It's entirely about how you've arranged people,
+
+00:06:53.817 --> 00:06:56.828
+places and habits, before anything goes wrong.
+
+00:06:56.828 --> 00:06:58.738
+That's what makes it work even when
+
+00:06:58.738 --> 00:07:00.488
+a low profile has already failed.
+
+00:07:01.788 --> 00:07:04.783
+So here's the practical setup, start to finish.
+
+00:07:04.783 --> 00:07:07.238
+Keep your operating wallet's balance modest
+
+00:07:07.238 --> 00:07:09.323
+and your vault address unlinked.
+
+00:07:09.323 --> 00:07:11.139
+Split custody of the vault two
+
+00:07:11.139 --> 00:07:13.607
+of three, keys in separate locations.
+
+00:07:13.607 --> 00:07:15.817
+Store the hardware wallet and any written
+
+00:07:15.817 --> 00:07:18.537
+backup out of sight, encrypted where possible.
+
+00:07:18.537 --> 00:07:20.760
+And simply don't discuss your holdings with
+
+00:07:20.760 --> 00:07:22.677
+anyone who doesn't need to know.
+
+00:07:22.677 --> 00:07:24.902
+None of that requires new software.
+
+00:07:24.902 --> 00:07:27.822
+It's entirely how you structure what you already have.
+
+00:07:29.122 --> 00:07:30.907
+Last check for this lesson.
+
+00:07:30.907 --> 00:07:32.677
+Name one thing that links your
+
+00:07:32.677 --> 00:07:34.332
+identity to a wallet address.
+
+00:07:38.632 --> 00:07:41.750
+The answer: an exchange withdrawal that already
+
+00:07:41.750 --> 00:07:43.699
+has your I.D. on file, a name
+
+00:07:43.699 --> 00:07:46.817
+service, or simply posting the address publicly.
+
+00:07:48.117 --> 00:07:50.141
+Before your turn, here's the checklist
+
+00:07:50.141 --> 00:07:52.257
+version of everything you just saw.
+
+00:07:52.257 --> 00:07:54.378
+Have your savings addresses never
+
+00:07:54.378 --> 00:07:56.612
 been posted or linked publicly.
 
-00:01:52.632 --> 00:01:56.697
-Next, no holdings screenshots or wins on social media.
+00:07:56.612 --> 00:07:59.847
+No holdings or wins on social media, ever.
 
-00:01:56.697 --> 00:01:58.397
-Then, Vault keys held so no
+00:07:59.847 --> 00:08:01.592
+Vault keys held so no single
 
-00:01:58.397 --> 00:02:00.762
-single person can move everything.
+00:08:01.592 --> 00:08:03.997
+person could move everything alone.
 
-00:02:00.762 --> 00:02:03.356
-And finally, Backups stored discreetly, away
+00:08:03.997 --> 00:08:06.339
+And backups stored discreetly, somewhere a
 
-00:02:03.356 --> 00:02:05.027
-from where people would look.
+00:08:06.339 --> 00:08:08.137
+casual search wouldn't find them.
 
-00:02:06.327 --> 00:02:07.537
-Question 1.
+00:08:09.437 --> 00:08:11.822
+Your turn, 5 to 15 minutes.
 
-00:02:07.537 --> 00:02:10.092
-What does linking an address to your identity reveal?
+00:08:11.822 --> 00:08:14.083
+Check every address you've ever posted,
 
-00:02:14.512 --> 00:02:16.453
-The answer: Its full balance and
+00:08:14.083 --> 00:08:15.852
+and stop posting new ones.
 
-00:02:16.453 --> 00:02:18.277
-history, now and in the future.
+00:08:15.852 --> 00:08:18.632
+Confirm your vault address has never been shared.
 
-00:02:19.577 --> 00:02:20.822
-Question 2.
+00:08:18.632 --> 00:08:21.027
+And if you don't already have a split-custody
 
-00:02:20.822 --> 00:02:23.452
-How does multisig help against physical threats?
+00:08:21.027 --> 00:08:23.265
+vault, write down who would hold each key,
 
-00:02:27.872 --> 00:02:30.432
-The answer: No single person can be forced
+00:08:23.265 --> 00:08:24.827
+and where, before you need it.
 
-00:02:30.432 --> 00:02:33.112
-to move everything; other keys are elsewhere.
+00:08:26.127 --> 00:08:29.489
+To recap: a public ledger means privacy is something
 
-00:02:34.412 --> 00:02:35.682
-Question 3.
+00:08:29.489 --> 00:08:32.707
+you protect, not something you get by default.
 
-00:02:35.682 --> 00:02:38.050
-What links your identity to a wallet address?
+00:08:32.707 --> 00:08:35.400
+Physical risk is real, and low profile
 
-00:02:42.470 --> 00:02:46.037
-The answer: For example, KYC exchange withdrawals,
+00:08:35.400 --> 00:08:38.576
+alone isn't enough; separated multisig is the
 
-00:02:46.037 --> 00:02:49.325
-name services, or posting the address publicly.
+00:08:38.576 --> 00:08:41.292
+fix that holds even under coercion.
 
-00:02:50.625 --> 00:02:51.870
-Let's recap.
+00:08:41.292 --> 00:08:44.331
+And the quiet habits at home, discretion, encryption,
 
-00:02:51.870 --> 00:02:55.033
-Blockchains are public: Anyone who links an address to
+00:08:44.331 --> 00:08:46.132
+out of sight, back all of it up.
 
-00:02:55.033 --> 00:02:57.920
-you can see its balance and history, forever.
+00:08:47.432 --> 00:08:50.017
+That's privacy and physical security.
 
-00:02:57.920 --> 00:03:02.165
-Link less: don't post addresses, screenshots or wins publicly.
+00:08:50.017 --> 00:08:53.334
+Next up, Lesson 1.9: smart accounts and account
 
-00:03:02.165 --> 00:03:04.776
-Name services (e.g. an ENS name) are
-
-00:03:04.776 --> 00:03:07.529
-convenient but make an address easy to
-
-00:03:07.529 --> 00:03:09.805
-find and associate with you.
-
-00:03:09.805 --> 00:03:11.740
-Physical risk ("wrench attacks").
-
-00:03:13.040 --> 00:03:15.555
-Do the checklist now, before you move on.
-
-00:03:15.555 --> 00:03:19.880
-Next up, Lesson 1.9: Smart accounts and account abstraction.
+00:08:53.334 --> 00:08:57.618
+abstraction, where your wallet itself gets programmable rules.

@@ -65,7 +65,7 @@ node build_video.js lessons              # all lessons (several hours of renderi
 | 1.5 | Stablecoins and how they break | 29 | 10.2 min | `video-scripts/gold/lesson-01-5.json` (gold: 4-design callout walkthrough, animated peg-arbitrage loop, real Terra 2022 & USDC 2023 case studies with a real-shaped line chart) | ✓ |
 | 1.6 | Scam defence | 28 | 10.4 min | `video-scripts/gold/lesson-01-6.json` (gold: 6 attacks as visual walk-throughs — flow for real-site checks and setApprovalForAll, steps for Permit-popup checks, donut chart of attack shares, compare for burner-vs-main wallet, dedicated character-by-character address-poisoning image) | ✓ |
 | 1.7 | Reading signatures and simulating transactions | 30 | 10.3 min | `video-scripts/gold/lesson-01-7.json` (gold: simulation, typed-data 4-field, blind-signing and EIP-7702 delegation walk-throughs as flows/steps/compares, dedicated Permit2-phishing worked-example mockup, approval-checking flow) | ✓ |
-| 1.8 | Privacy and physical security | 10 | 3.4 min | `video-scripts/lessons/lesson-01-8.json` | ✓ |
+| 1.8 | Privacy and physical security | 29 | 8:58 min | `video-scripts/gold/lesson-01-8.json` (gold: identity-linking chain as a flow3d, exposure-surface chart3d donut, wrench-attack risk, separated multisig as a flow3d, home/device discretion) | ✓ |
 | 1.9 | Smart accounts and account abstraction | 11 | 3.7 min | `video-scripts/lessons/lesson-01-9.json` | ✓ |
 | 2.0 | Mastery Starter | 8 | 1.6 min | `video-scripts/lessons/lesson-02-0.json` | ✓ |
 | 2.1 | DEXs, aggregators & routing | 11 | 3.1 min | `video-scripts/lessons/lesson-02-1.json` | ✓ |
