@@ -69,7 +69,7 @@ node build_video.js lessons              # all lessons (several hours of renderi
 | 1.9 | Smart accounts and account abstraction | 24 | 7:58 min | `video-scripts/gold/lesson-01-9.json` (gold: ERC-4337 user-operation flow as a flow3d, spending-tier chart3d bars, social recovery as a flat flow) | ✓ |
 | 2.0 | Mastery Starter | 24 | 6:50 min | `video-scripts/gold/lesson-02-0.json` (gold: swap-routing mechanism as a flow3d, price-impact and IL-vs-holding as flat line charts, mastery-ladder rungs as a chart3d) | ✓ |
 | 2.1 | DEXs, aggregators & routing | 23 | 6:32 min | `video-scripts/gold/lesson-02-1.json` (gold: aggregator split-and-recombine routing as a flow3d branch/merge, 20 ETH net-output comparison as a chart3d) | ✓ |
-| 2.2 | AMM Mathematics (x · y = k) | 12 | 4.6 min | `video-scripts/lessons/lesson-02-2.json` | ✓ |
+| 2.2 | AMM Mathematics (x · y = k) | 20 | 6:35 min | `video-scripts/gold/lesson-02-2.json` (gold: swap→arbitrage→rebalance cycle as a flow3d with layout="cycle", 1/10/50 ETH price-impact comparison as a chart3d) | ✓ |
 | 2.3 | Providing liquidity | 9 | 2.9 min | `video-scripts/lessons/lesson-02-3.json` | ✓ |
 | 2.4 | Impermanent loss & true LP P&L | 10 | 2.6 min | `video-scripts/lessons/lesson-02-4.json` | ✓ |
 | 2.5 | MEV and protecting your trades | 10 | 3.0 min | `video-scripts/lessons/lesson-02-5.json` | ✓ |
