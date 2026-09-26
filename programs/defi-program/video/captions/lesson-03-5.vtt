@@ -6,191 +6,548 @@ Lesson 3.5.
 00:00:02.305 --> 00:00:05.060
 Perpetual futures and margin on-chain.
 
-00:00:05.060 --> 00:00:07.440
-By the end of this lesson, you'll be
+00:00:05.060 --> 00:00:07.942
+By the end, you'll understand perp positions well
 
-00:00:07.440 --> 00:00:10.592
-able to understand perp positions well enough to
+00:00:07.942 --> 00:00:10.363
+enough to use them for hedging and carry,
 
-00:00:10.592 --> 00:00:13.359
-use them for hedging (Module 11) and carry
+00:00:10.363 --> 00:00:12.842
+and to see exactly why high leverage fails.
 
-00:00:13.359 --> 00:00:16.125
-(10.3), and to see why high leverage fails.
-
-00:00:17.425 --> 00:00:18.715
+00:00:14.142 --> 00:00:15.432
 Here's the plan.
 
-00:00:18.715 --> 00:00:20.400
-First, the key ideas.
+00:00:15.432 --> 00:00:18.029
+What a perpetual future actually is, and the
 
-00:00:20.400 --> 00:00:23.115
-Then, a worked example, step by step.
+00:00:18.029 --> 00:00:20.637
+two margin modes you can choose between.
 
-00:00:23.115 --> 00:00:24.640
-Then, your checklist.
+00:00:20.637 --> 00:00:24.343
+Mark price, index price, and funding, the three mechanics
 
-00:00:24.640 --> 00:00:26.802
-And finally, a three-question quiz.
+00:00:24.343 --> 00:00:27.582
+that keep a perp tracking spot with no expiry.
 
-00:00:28.102 --> 00:00:30.694
-First, A perpetual future (perp) tracks
+00:00:27.582 --> 00:00:29.671
+The liquidation formula, and what it
 
-00:00:30.694 --> 00:00:33.067
-an asset's price with no expiry.
+00:00:29.671 --> 00:00:31.722
+actually does at high leverage.
 
-00:00:33.067 --> 00:00:35.612
-You post margin and choose leverage.
+00:00:31.722 --> 00:00:34.957
+And a full worked example, with real numbers, showing
 
-00:00:35.612 --> 00:00:38.345
-Next, Isolated margin: only the margin
+00:00:34.957 --> 00:00:37.892
+exactly how little room high leverage leaves you.
 
-00:00:38.345 --> 00:00:40.607
-in that position is at risk.
+00:00:39.192 --> 00:00:40.557
+What a perp actually is.
 
-00:00:40.607 --> 00:00:43.895
-Cross margin: your whole account backs every position
+00:00:41.857 --> 00:00:44.232
+Here's a perpetual future, in full.
 
-00:00:43.895 --> 00:00:46.326
-(one bad trade can drain the rest).
+00:00:44.232 --> 00:00:46.477
+It tracks an asset's price, with no
 
-00:00:46.326 --> 00:00:49.028
-Then, Mark price (used for liquidation)
+00:00:46.477 --> 00:00:49.656
+expiry date, unlike a traditional futures contract
 
-00:00:49.028 --> 00:00:51.490
-vs index price (spot reference).
+00:00:49.656 --> 00:00:51.702
+that settles on a fixed day.
 
-00:00:51.490 --> 00:00:54.258
-Funding is paid between longs and shorts,
+00:00:51.702 --> 00:00:54.884
+You post margin, collateral backing the position,
 
-00:00:54.258 --> 00:00:56.535
-usually every hour or 8 hours.
+00:00:54.884 --> 00:00:57.557
+and choose leverage, a multiplier on your
 
-00:00:56.535 --> 00:00:59.044
-And finally, Liquidation happens when your
+00:00:57.557 --> 00:00:59.957
+exposure relative to that margin.
 
-00:00:59.044 --> 00:01:01.620
-margin falls to the maintenance margin.
+00:00:59.957 --> 00:01:03.888
+Higher leverage means more exposure, and controls, per dollar
 
-00:01:01.620 --> 00:01:05.122
-Roughly, a long is liquidated after a fall
+00:01:03.888 --> 00:01:07.882
+posted, but leaves proportionally less room before liquidation.
 
-00:01:05.122 --> 00:01:08.135
-of 1 ÷ leverage − maintenance margin.
+00:01:09.182 --> 00:01:12.092
+Here's the actual choice you make, before opening
 
-00:01:09.435 --> 00:01:11.950
-Let's work an example, step by step.
+00:01:12.092 --> 00:01:15.186
+any perp position, between the two margin modes.
 
-00:01:11.950 --> 00:01:18.075
-Long ETH from $3,000 at 5×, 0.5% maintenance
+00:01:15.186 --> 00:01:18.536
+Isolated margin risks only the margin you specifically
 
-00:01:18.075 --> 00:01:26.405
-margin: the calculator gives liquidation ≈ $2,415 (−19.5%).
+00:01:18.536 --> 00:01:20.972
+put into that one position; a bad trade
 
-00:01:26.405 --> 00:01:30.768
-The same short at 20× is liquidated
+00:01:20.972 --> 00:01:23.891
+there can't touch the rest of your account.
 
-00:01:30.768 --> 00:01:34.646
-at ≈ $3,135 (+4.5%), a move ETH
+00:01:23.891 --> 00:01:27.485
+Cross margin instead backs every open position with your
 
-00:01:34.646 --> 00:01:37.370
-can make in an hour.
+00:01:27.485 --> 00:01:31.142
+entire account balance, meaning one badly wrong trade can
 
-00:01:37.370 --> 00:01:40.189
-Leverage doesn't just magnify gains: it shrinks
+00:01:31.142 --> 00:01:34.421
+genuinely drain everything else you're holding open.
 
-00:01:40.189 --> 00:01:42.010
-how wrong you're allowed to be.
+00:01:35.720 --> 00:01:36.810
+Quick check.
 
-00:01:43.310 --> 00:01:44.770
-Here's your checklist.
+00:01:36.810 --> 00:01:40.520
+What's the actual difference between isolated and cross margin?
 
-00:01:44.770 --> 00:01:46.305
-Do it now, for real.
+00:01:44.940 --> 00:01:47.634
+The answer: isolated margin risks only
 
-00:01:46.305 --> 00:01:49.020
-First, Isolated margin by default.
+00:01:47.634 --> 00:01:50.420
+that specific position's own margin.
 
-00:01:49.020 --> 00:01:52.280
-Next, Liquidation price computed before opening.
+00:01:50.420 --> 00:01:52.766
+Cross margin puts your whole account
 
-00:01:52.280 --> 00:01:55.067
-Then, Leverage ≤ 2–3× for anything
+00:01:52.766 --> 00:01:54.985
+behind every open position at once.
 
-00:01:55.067 --> 00:01:57.835
-but a hedge I fully understand.
+00:01:56.286 --> 00:01:57.941
+Mark, index, and funding.
 
-00:01:57.835 --> 00:01:59.821
-And finally, Funding cost checked
+00:01:59.241 --> 00:02:01.213
+Here's what these three actually do,
 
-00:01:59.821 --> 00:02:01.165
-for how long I'll hold.
+00:02:01.213 --> 00:02:03.486
+and why each one matters differently.
 
-00:02:02.465 --> 00:02:03.675
-Question 1.
+00:02:03.486 --> 00:02:06.818
+Index price is the reference, pulled from spot markets
 
-00:02:03.675 --> 00:02:05.685
-Isolated vs cross margin?
+00:02:06.818 --> 00:02:10.451
+elsewhere, what the asset is genuinely worth right now.
 
-00:02:10.105 --> 00:02:13.826
-The answer: Isolated risks only that position's margin;
+00:02:10.451 --> 00:02:13.902
+Mark price is a smoothed version used specifically for
 
-00:02:13.826 --> 00:02:17.215
-cross puts the whole account behind every position.
+00:02:13.902 --> 00:02:18.846
+liquidation decisions, designed to resist brief, manipulated price spikes.
 
-00:02:18.515 --> 00:02:19.760
-Question 2.
+00:02:18.846 --> 00:02:21.959
+And funding is a periodic payment, usually every
 
-00:02:19.760 --> 00:02:21.884
-Roughly how far can a 10×
+00:02:21.959 --> 00:02:24.817
+hour or every eight hours, between longs and
 
-00:02:21.884 --> 00:02:25.804
-long fall before liquidation (0.5% maintenance)?
+00:02:24.817 --> 00:02:27.994
+shorts, that keeps the perp's price from drifting
 
-00:02:30.224 --> 00:02:32.739
-The answer: About 9.5%.
+00:02:27.994 --> 00:02:29.836
+too far from index over time.
 
-00:02:34.039 --> 00:02:35.309
-Question 3.
+00:02:31.136 --> 00:02:34.143
+Worth being precise about why liquidation uses
 
-00:02:35.309 --> 00:02:37.074
-Which price triggers liquidation?
+00:02:34.143 --> 00:02:37.405
+mark price specifically, not index price directly,
 
-00:02:41.494 --> 00:02:43.129
-The answer: The mark price.
+00:02:37.405 --> 00:02:40.136
+since it's an easy detail to overlook.
 
-00:02:44.429 --> 00:02:45.674
+00:02:40.136 --> 00:02:42.806
+A brief, thin-liquidity spike on one venue could
+
+00:02:42.806 --> 00:02:46.376
+otherwise trigger liquidations that shouldn't happen at all.
+
+00:02:46.376 --> 00:02:48.281
+Mark price smooths that out.
+
+00:02:48.281 --> 00:02:51.014
+But it also means your liquidation can technically
+
+00:02:51.014 --> 00:02:53.586
+trigger at a slightly different number than the
+
+00:02:53.586 --> 00:02:56.051
+headline spot price you're watching elsewhere.
+
+00:02:57.351 --> 00:02:58.441
+Quick check.
+
+00:02:58.441 --> 00:03:02.136
+Which price actually triggers your liquidation, mark or index?
+
+00:03:06.556 --> 00:03:09.639
+The answer: mark price, specifically because it's
+
+00:03:09.639 --> 00:03:12.723
+smoothed to resist brief, manipulated spikes that
+
+00:03:12.723 --> 00:03:15.066
+index price alone wouldn't filter out.
+
+00:03:16.366 --> 00:03:17.801
+The liquidation formula.
+
+00:03:19.101 --> 00:03:21.843
+Here's the formula, and exactly what it does to
+
+00:03:21.843 --> 00:03:24.485
+your room to be wrong as leverage climbs.
+
+00:03:24.485 --> 00:03:27.035
+Take one, divided by your leverage.
+
+00:03:27.035 --> 00:03:30.078
+Subtract your maintenance margin, the minimum buffer
+
+00:03:30.078 --> 00:03:32.330
+the exchange requires you to keep.
+
+00:03:32.330 --> 00:03:35.419
+The result is roughly how far, in percentage terms,
+
+00:03:35.419 --> 00:03:38.690
+the price can move against you before liquidation.
+
+00:03:38.690 --> 00:03:41.820
+Higher leverage shrinks that first term directly, which
+
+00:03:41.820 --> 00:03:44.335
+shrinks your entire allowed margin for error.
+
+00:03:45.634 --> 00:03:48.279
+Here's the one sentence this formula actually
+
+00:03:48.279 --> 00:03:50.637
+proves, worth holding onto more than any
+
+00:03:50.637 --> 00:03:52.719
+specific number in this lesson.
+
+00:03:52.719 --> 00:03:55.289
+Leverage doesn't just magnify your gains,
+
+00:03:55.289 --> 00:03:57.670
+the part everyone already expects.
+
+00:03:57.670 --> 00:04:00.047
+It shrinks how wrong you're allowed to be,
+
+00:04:00.047 --> 00:04:03.198
+mechanically, by the exact same multiple, whether you're
+
+00:04:03.198 --> 00:04:05.243
+thinking about that trade-off or not.
+
+00:04:06.543 --> 00:04:07.548
+Worked example.
+
+00:04:08.848 --> 00:04:12.346
+Here's the five-times long, step by step, starting
+
+00:04:12.346 --> 00:04:15.638
+from an E.T.H. entry of three thousand dollars,
+
+00:04:15.638 --> 00:04:19.093
+at zero point five percent maintenance margin.
+
+00:04:19.093 --> 00:04:22.048
+One divided by five is zero point two.
+
+00:04:22.048 --> 00:04:26.417
+Subtract zero point five percent maintenance margin: zero point
+
+00:04:26.417 --> 00:04:29.857
+one nine five, or nineteen point five percent.
+
+00:04:29.857 --> 00:04:33.185
+At three thousand dollars entry, that's a liquidation price
+
+00:04:33.185 --> 00:04:36.124
+of roughly two thousand four hundred fifteen dollars.
+
+00:04:37.425 --> 00:04:40.530
+Now the twenty-times short, the exact same entry
+
+00:04:40.530 --> 00:04:44.125
+price, and watch how dramatically less room remains.
+
+00:04:44.125 --> 00:04:48.905
+The five-times long survives roughly a nineteen-point-five-percent drop.
+
+00:04:48.905 --> 00:04:52.570
+The twenty-times short is liquidated by a price rise
+
+00:04:52.570 --> 00:04:55.750
+of only about four point five percent, a move
+
+00:04:55.750 --> 00:04:59.000
+E.T.H. can genuinely make within a single hour.
+
+00:05:00.300 --> 00:05:03.323
+Worth being precise about what that four point
+
+00:05:03.323 --> 00:05:06.926
+five percent actually represents, in real market terms,
+
+00:05:06.926 --> 00:05:09.220
+not just as an abstract number.
+
+00:05:09.220 --> 00:05:13.420
+E.T.H., and most volatile crypto assets, can genuinely move
+
+00:05:13.420 --> 00:05:17.620
+that much within a single hour, during ordinary volatility,
+
+00:05:17.620 --> 00:05:20.790
+without any unusual news or event at all.
+
+00:05:20.790 --> 00:05:24.443
+Twenty-times leverage isn't a bet on direction alone; it's
+
+00:05:24.443 --> 00:05:27.600
+a bet that nothing routine happens in the meantime.
+
+00:05:28.900 --> 00:05:29.990
+Quick check.
+
+00:05:29.990 --> 00:05:32.898
+Roughly how far can a 10x long fall
+
+00:05:32.898 --> 00:05:36.855
+before liquidation, at a 0.5% maintenance margin?
+
+00:05:41.275 --> 00:05:44.110
+The answer: about nine point five percent.
+
+00:05:44.110 --> 00:05:46.558
+One divided by ten is ten percent,
+
+00:05:46.558 --> 00:05:49.985
+minus zero point five percent maintenance margin.
+
+00:05:51.285 --> 00:05:52.195
+The full curve.
+
+00:05:53.495 --> 00:05:57.182
+Here's that same formula, run across six different leverage
+
+00:05:57.182 --> 00:06:00.316
+multiples, all at the same zero point five percent
+
+00:06:00.316 --> 00:06:03.512
+maintenance margin, so you can see the actual shape
+
+00:06:03.512 --> 00:06:06.270
+of the curve, not just two points on it.
+
+00:06:06.270 --> 00:06:08.569
+At two times leverage, you can be wrong
+
+00:06:08.569 --> 00:06:11.225
+by roughly forty-nine and a half percent.
+
+00:06:11.225 --> 00:06:14.145
+At three times, thirty-two point eight percent.
+
+00:06:14.145 --> 00:06:15.781
+By ten times, you're down to
+
+00:06:15.781 --> 00:06:17.435
+nine and a half percent.
+
+00:06:17.435 --> 00:06:19.412
+And by fifty times, just one and
+
+00:06:19.412 --> 00:06:21.328
+a half percent, a move that can
+
+00:06:21.328 --> 00:06:23.125
+happen inside a single candle.
+
+00:06:24.425 --> 00:06:27.547
+Notice how the curve isn't a straight line down;
+
+00:06:27.547 --> 00:06:30.924
+it falls fastest exactly where most people first add
+
+00:06:30.924 --> 00:06:33.900
+leverage, between two times and ten times.
+
+00:06:33.900 --> 00:06:36.070
+Going from two times to five times
+
+00:06:36.070 --> 00:06:39.035
+costs you thirty percentage points of room.
+
+00:06:39.035 --> 00:06:41.126
+Going from twenty times to fifty
+
+00:06:41.126 --> 00:06:43.390
+times only costs another three.
+
+00:06:43.390 --> 00:06:46.374
+The most dangerous leverage decision is usually
+
+00:06:46.374 --> 00:06:48.550
+the early one, not the extreme one.
+
+00:06:49.850 --> 00:06:51.075
+Put another way.
+
+00:06:51.075 --> 00:06:53.515
+Doubling your leverage from two times to four
+
+00:06:53.515 --> 00:06:56.095
+times roughly halves your room to be wrong.
+
+00:06:56.095 --> 00:06:58.182
+Doubling it again, from four times to
+
+00:06:58.182 --> 00:07:00.515
+eight times, roughly halves it again.
+
+00:07:00.515 --> 00:07:02.383
+It's not a gentle slope; it's a
+
+00:07:02.383 --> 00:07:04.485
+halving, every time you double down.
+
+00:07:05.785 --> 00:07:07.310
+Before you open the position.
+
+00:07:08.610 --> 00:07:10.909
+Here's how you actually check your own
+
+00:07:10.909 --> 00:07:14.092
+liquidation price before opening anything, using this
+
+00:07:14.092 --> 00:07:17.045
+program's own calculator instead of guessing.
+
+00:07:17.045 --> 00:07:20.301
+You run defi_calc.py perp, passing your entry price,
+
+00:07:20.301 --> 00:07:23.980
+your chosen leverage, and your maintenance margin rate.
+
+00:07:23.980 --> 00:07:26.332
+It returns your exact liquidation price
+
+00:07:26.332 --> 00:07:28.867
+and the percentage move it represents.
+
+00:07:28.867 --> 00:07:31.504
+Compare that percentage against how far the
+
+00:07:31.504 --> 00:07:33.902
+asset has actually moved on an ordinary
+
+00:07:33.902 --> 00:07:35.640
+day, not just on a good one,
+
+00:07:35.640 --> 00:07:38.337
+before you decide the leverage is reasonable.
+
+00:07:39.636 --> 00:07:42.119
+Funding also matters more the longer you
+
+00:07:42.119 --> 00:07:44.420
+hold, so weigh it against your actual
+
+00:07:44.420 --> 00:07:47.081
+timeframe, not just the entry decision.
+
+00:07:47.081 --> 00:07:49.322
+A short hedge held for a few hours
+
+00:07:49.322 --> 00:07:52.012
+pays or receives only a few small funding
+
+00:07:52.012 --> 00:07:54.681
+settlements, a minor cost either way.
+
+00:07:54.681 --> 00:07:57.679
+The same position held open for months compounds
+
+00:07:57.679 --> 00:08:00.677
+every single settlement, and can quietly erode a
+
+00:08:00.677 --> 00:08:02.941
+position that looked fine on day one.
+
+00:08:04.241 --> 00:08:05.976
+Here's your full checklist.
+
+00:08:05.976 --> 00:08:08.791
+Do it now, before opening any perp position.
+
+00:08:08.791 --> 00:08:13.331
+Isolated margin, by default, every time, not cross margin.
+
+00:08:13.331 --> 00:08:15.672
+Liquidation price computed and known,
+
+00:08:15.672 --> 00:08:17.636
+before you open, not after.
+
+00:08:17.636 --> 00:08:20.379
+Leverage kept at two to three times, or less,
+
+00:08:20.379 --> 00:08:23.601
+for anything except a hedge you fully understand.
+
+00:08:23.601 --> 00:08:26.283
+And funding cost checked specifically for however
+
+00:08:26.283 --> 00:08:27.946
+long you actually plan to hold.
+
+00:08:29.246 --> 00:08:30.491
 Let's recap.
 
-00:02:45.674 --> 00:02:47.945
-A perpetual future (perp) tracks an
+00:08:30.491 --> 00:08:32.752
+A perp tracks price with no expiry;
 
-00:02:47.945 --> 00:02:50.074
-asset's price with no expiry.
+00:08:32.752 --> 00:08:35.314
+you post margin and choose leverage.
 
-00:02:50.074 --> 00:02:52.538
-Isolated margin: only the margin in
+00:08:35.314 --> 00:08:38.096
+Isolated margin risks only that position;
 
-00:02:52.538 --> 00:02:54.549
-that position is at risk.
+00:08:38.096 --> 00:08:40.914
+cross margin risks your whole account.
 
-00:02:54.549 --> 00:02:56.865
-Mark price (used for liquidation)
+00:08:40.914 --> 00:08:45.711
+Mark price triggers liquidation specifically, smoothed against manipulation;
 
-00:02:56.865 --> 00:02:59.344
-vs index price (spot reference).
+00:08:45.711 --> 00:08:48.939
+funding keeps the perp tracking spot over time.
 
-00:02:59.344 --> 00:03:01.443
-Liquidation happens when your margin
+00:08:48.939 --> 00:08:52.085
+And the liquidation formula proves the real lesson:
 
-00:03:01.443 --> 00:03:03.259
-falls to the maintenance margin.
+00:08:52.085 --> 00:08:54.687
+leverage shrinks your room to be wrong, by
 
-00:03:04.559 --> 00:03:07.074
-Do the checklist now, before you move on.
+00:08:54.687 --> 00:08:57.772
+the same multiple it magnifies your gains, whether
 
-00:03:07.074 --> 00:03:10.846
-Next up, Lesson 3.6: Lending design deep dive:
+00:08:57.772 --> 00:08:59.829
+you're accounting for that or not.
 
-00:03:10.846 --> 00:03:14.939
-e-mode, caps, auctions, soft liquidation, bad debt.
+00:09:01.129 --> 00:09:04.440
+Default to isolated margin, compute your liquidation
+
+00:09:04.440 --> 00:09:07.188
+price before opening, and keep leverage low
+
+00:09:07.188 --> 00:09:09.862
+unless you fully understand the hedge.
+
+00:09:09.862 --> 00:09:17.057
+Next up, Lesson 3.6: lending design deep dive.
