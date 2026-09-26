@@ -6,188 +6,581 @@ Lesson 3.1.
 00:00:02.225 --> 00:00:04.040
 How lending markets work.
 
-00:00:04.040 --> 00:00:06.414
-By the end of this lesson, you'll be able
+00:00:04.040 --> 00:00:06.743
+By the end, you'll explain where lending yields
 
-00:00:06.414 --> 00:00:09.239
-to explain where lending yields come from and why
+00:00:06.743 --> 00:00:09.220
+actually come from, and why rates jump when
 
-00:00:09.239 --> 00:00:12.065
-rates jump when a market is nearly fully borrowed.
+00:00:09.220 --> 00:00:11.135
+a market is nearly fully borrowed.
 
-00:00:13.365 --> 00:00:14.655
+00:00:12.435 --> 00:00:13.725
 Here's the plan.
 
-00:00:14.655 --> 00:00:16.340
-First, the key ideas.
+00:00:13.725 --> 00:00:16.334
+What a money market actually is, mechanically,
 
-00:00:16.340 --> 00:00:19.055
-Then, a worked example, step by step.
+00:00:16.334 --> 00:00:18.910
+and where the yield genuinely comes from.
 
-00:00:19.055 --> 00:00:20.580
-Then, your checklist.
+00:00:18.910 --> 00:00:22.625
+Utilisation, and the kinked interest-rate curve it drives.
 
-00:00:20.580 --> 00:00:22.742
-And finally, a three-question quiz.
+00:00:22.625 --> 00:00:24.420
+A full worked example, with
 
-00:00:24.042 --> 00:00:26.232
-A DeFi money market is a pool:
+00:00:24.420 --> 00:00:26.515
+a real, verified rate table.
 
-00:00:26.232 --> 00:00:29.978
-lenders supply assets, borrowers borrow them against
+00:00:26.515 --> 00:00:29.056
+And why a sudden spike in rates near full
 
-00:00:29.978 --> 00:00:32.892
-collateral, and a smart contract sets
+00:00:29.056 --> 00:00:31.840
+utilisation is a warning sign, not free money.
 
-00:00:32.892 --> 00:00:37.089
-the rates. up to an optimal utilisation (e.g. 80%),
+00:00:33.140 --> 00:00:34.050
+The mechanism.
 
-00:00:37.089 --> 00:00:41.021
-then steeply above it, to pull in lenders and
+00:00:35.350 --> 00:00:37.430
+Here's the mechanism, in full.
 
-00:00:41.021 --> 00:00:43.156
-push out borrowers. factor
+00:00:37.430 --> 00:00:40.055
+Lenders supply assets into a shared pool.
 
-00:00:43.156 --> 00:00:44.941
-is the protocol's
+00:00:40.055 --> 00:00:42.180
+Borrowers borrow from that same pool,
 
-00:00:44.941 --> 00:00:49.096
-cut. deposit plus interest. First, Utilisation = borrowed ÷
+00:00:42.180 --> 00:00:44.550
+against collateral they've locked up.
 
-00:00:49.096 --> 00:00:50.591
-supplied. It drives
+00:00:44.550 --> 00:00:46.106
+A smart contract sets the
 
-00:00:50.591 --> 00:00:54.661
-the rates. Next, Interest-rate curve: most markets use a
+00:00:46.106 --> 00:00:48.500
+rates on both sides, automatically.
 
-00:00:54.661 --> 00:00:56.306
-"kinked" curve. Rates
+00:00:48.500 --> 00:00:51.374
+And when you supply, you receive a receipt token
 
-00:00:56.306 --> 00:00:59.871
-rise gently. Then, Supply APY ≈ borrow APY
+00:00:51.374 --> 00:00:55.129
+back, representing your deposit plus the interest it's earning,
 
-00:00:59.871 --> 00:01:03.571
-× utilisation × (1 − reserve factor). The
+00:00:55.129 --> 00:00:57.710
+growing in value the whole time you hold it.
 
-00:01:03.571 --> 00:01:04.731
-reserve. And
+00:00:59.010 --> 00:01:01.757
+Here's exactly where the yield genuinely comes
 
-00:01:04.731 --> 00:01:07.384
-finally, Receipt tokens: when you supply,
+00:01:01.757 --> 00:01:03.803
+from, since it isn't magic, and it
 
-00:01:07.384 --> 00:01:09.531
-you get a token representing your.
+00:01:03.803 --> 00:01:05.915
+isn't the protocol's own money.
 
-00:01:10.832 --> 00:01:14.047
-Near 100% utilisation, rates spike and lenders
+00:01:05.915 --> 00:01:08.352
+Every dollar a lender earns is a dollar a
 
-00:01:14.047 --> 00:01:16.577
-may not be able to withdraw, because
+00:01:08.352 --> 00:01:11.716
+borrower actually paid, in interest, for the privilege of
 
-00:01:16.577 --> 00:01:18.382
-the money is lent out.
+00:01:11.716 --> 00:01:15.555
+borrowing against their own collateral instead of selling it.
 
-00:01:18.382 --> 00:01:20.417
+00:01:15.555 --> 00:01:17.420
+No borrower, no yield.
+
+00:01:17.420 --> 00:01:19.815
+It's a direct transfer, mediated by a
+
+00:01:19.815 --> 00:01:22.840
+smart contract, not manufactured out of nowhere.
+
+00:01:24.140 --> 00:01:27.225
+Here's exactly what happens to your receipt token,
+
+00:01:27.225 --> 00:01:30.005
+step by step, from the moment you supply.
+
+00:01:30.005 --> 00:01:32.154
+You deposit an asset, and receive
+
+00:01:32.154 --> 00:01:34.920
+a receipt token in return, immediately.
+
+00:01:34.920 --> 00:01:38.497
+That token's exchange rate against the underlying asset
+
+00:01:38.497 --> 00:01:42.565
+climbs continuously, as interest accrues, second by second.
+
+00:01:42.565 --> 00:01:44.343
+You never need to claim interest
+
+00:01:44.343 --> 00:01:46.905
+separately, or take any additional action.
+
+00:01:46.905 --> 00:01:49.048
+And when you eventually redeem it, you
+
+00:01:49.048 --> 00:01:51.356
+receive back more of the underlying asset
+
+00:01:51.356 --> 00:01:52.840
+than you originally put in.
+
+00:01:54.140 --> 00:01:57.752
+Worth contrasting this against a traditional bank loan, since
+
+00:01:57.752 --> 00:02:01.605
+it explains why DeFi lending works so differently underneath.
+
+00:02:01.605 --> 00:02:04.177
+A bank lends based on your credit history
+
+00:02:04.177 --> 00:02:06.932
+and income, trusting you to repay over time,
+
+00:02:06.932 --> 00:02:09.375
+with no collateral locked up front.
+
+00:02:09.375 --> 00:02:12.933
+A DeFi money market instead requires collateral worth
+
+00:02:12.933 --> 00:02:16.359
+more than the loan, upfront, and enforces repayment
+
+00:02:16.359 --> 00:02:19.060
+through code, not trust or credit checks.
+
+00:02:20.360 --> 00:02:21.450
+Quick check.
+
+00:02:21.450 --> 00:02:23.088
+Where does a lender's yield in
+
+00:02:23.088 --> 00:02:24.885
+a money market actually come from?
+
+00:02:29.305 --> 00:02:31.944
+The answer: directly from the interest borrowers
+
+00:02:31.944 --> 00:02:34.345
+pay to borrow against their collateral.
+
+00:02:34.345 --> 00:02:36.610
+It's a transfer between the two sides,
+
+00:02:36.610 --> 00:02:38.585
+not money created by the protocol.
+
+00:02:39.885 --> 00:02:41.440
+The kinked interest-rate curve.
+
+00:02:42.740 --> 00:02:44.849
+Here's exactly what utilisation is,
+
+00:02:44.849 --> 00:02:46.965
+and what it does, mechanically.
+
+00:02:46.965 --> 00:02:50.290
+Utilisation equals the amount currently borrowed,
+
+00:02:50.290 --> 00:02:53.050
+divided by the total amount supplied.
+
+00:02:53.050 --> 00:02:57.267
+Below a market's chosen optimal point, commonly around eighty
+
+00:02:57.267 --> 00:03:01.240
+percent, rates rise only gently as utilisation climbs.
+
+00:03:01.240 --> 00:03:04.227
+Above that same optimal point, the curve kinks,
+
+00:03:04.227 --> 00:03:07.526
+and rates rise steeply instead, specifically to pull
+
+00:03:07.526 --> 00:03:10.264
+in more lenders and push out some borrowers.
+
+00:03:11.564 --> 00:03:15.381
+Worth naming the trade-off from each side's perspective directly,
+
+00:03:15.381 --> 00:03:19.614
+since “gentle then steep” affects lenders and borrowers differently.
+
+00:03:19.614 --> 00:03:22.246
+A lender below the optimal point earns a
+
+00:03:22.246 --> 00:03:25.136
+modest, steady rate; above it, a much richer
+
+00:03:25.136 --> 00:03:28.389
+one, but with growing liquidity risk attached.
+
+00:03:28.389 --> 00:03:31.621
+A borrower below the optimal point pays a modest,
+
+00:03:31.621 --> 00:03:34.853
+predictable rate; above it, a rate that can climb
+
+00:03:34.853 --> 00:03:38.279
+sharply, fast enough to force an unplanned repayment.
+
+00:03:39.579 --> 00:03:41.696
+Worth being precise about why the curve
+
+00:03:41.696 --> 00:03:44.077
+is deliberately shaped this way, rather than
+
+00:03:44.077 --> 00:03:45.964
+a straight line the whole way.
+
+00:03:45.964 --> 00:03:49.543
+A smooth, straight-line curve gives the market no urgent
+
+00:03:49.543 --> 00:03:53.248
+signal as it approaches full utilisation, the exact moment
+
+00:03:53.248 --> 00:03:56.374
+lenders might not be able to withdraw at all.
+
+00:03:56.374 --> 00:03:58.806
+The kink is a deliberate design choice:
+
+00:03:58.806 --> 00:04:01.543
+make the pain sharp and sudden, specifically
+
+00:04:01.543 --> 00:04:04.279
+where the actual danger, illiquidity, begins.
+
+00:04:05.579 --> 00:04:09.060
+One more piece worth naming before the worked
+
+00:04:09.060 --> 00:04:12.617
+example: supply A.P.Y. is never quite the same
+
+00:04:12.617 --> 00:04:16.474
+as borrow A.P.Y., even at the same utilisation.
+
+00:04:16.474 --> 00:04:21.602
+Supply A.P.Y. is roughly borrow A.P.Y., times utilisation, times
+
+00:04:21.602 --> 00:04:26.084
+one minus the reserve factor, the protocol's own cut.
+
+00:04:26.084 --> 00:04:29.571
+That reserve factor is exactly why lenders always earn
+
+00:04:29.571 --> 00:04:32.994
+somewhat less than what borrowers are actually paying.
+
+00:04:34.294 --> 00:04:36.853
+Here's how to actually check a market's own
+
+00:04:36.853 --> 00:04:39.470
+kink point yourself, since it isn't the same
+
+00:04:39.470 --> 00:04:41.689
+on every protocol or every asset.
+
+00:04:41.689 --> 00:04:45.589
+Open the market's own interface or documentation directly.
+
+00:04:45.589 --> 00:04:48.873
+Look specifically for its “optimal utilisation” or
+
+00:04:48.873 --> 00:04:52.263
+“kink” parameter, usually shown as a percentage.
+
+00:04:52.263 --> 00:04:55.308
+And compare that number against the market's current
+
+00:04:55.308 --> 00:04:58.065
+utilisation, so you know how much room actually
+
+00:04:58.065 --> 00:05:00.593
+remains before rates start climbing steeply.
+
+00:05:01.893 --> 00:05:02.983
+Quick check.
+
+00:05:02.983 --> 00:05:05.823
+Why does the interest-rate curve kink sharply
+
+00:05:05.823 --> 00:05:08.786
+above the optimal utilisation point, instead of
+
+00:05:08.786 --> 00:05:10.638
+rising smoothly the whole way?
+
+00:05:15.058 --> 00:05:18.561
+The answer: to make borrowing expensive and supplying
+
+00:05:18.561 --> 00:05:22.649
+attractive right when liquidity runs low, restoring withdrawal
+
+00:05:22.649 --> 00:05:25.568
+capacity before the market actually locks up.
+
+00:05:26.868 --> 00:05:27.873
+Worked example.
+
+00:05:29.173 --> 00:05:33.635
+Here's the actual curve, plotted from this specific
+
+00:05:33.635 --> 00:05:38.011
+illustrative example: 4% borrow APY at 80% optimal
+
+00:05:38.011 --> 00:05:41.658
+utilisation, then a 60% slope above it.
+
+00:05:41.658 --> 00:05:46.893
+At 50% utilisation, borrow APY is 2.5%.
+
+00:05:46.893 --> 00:05:49.783
+At 70%, 3.5%.
+
+00:05:49.783 --> 00:05:53.483
+At 80%, exactly 4%, the kink itself.
+
+00:05:53.483 --> 00:05:59.003
+And then it launches: 90% utilisation reaches
+
+00:05:59.003 --> 00:06:03.323
+34% borrow APY, and 95% reaches 49%.
+
+00:06:04.623 --> 00:06:07.471
+Now put supply A.P.Y. next to that same
+
+00:06:07.471 --> 00:06:11.317
+borrow A.P.Y., at a ten-percent reserve factor, since
+
+00:06:11.317 --> 00:06:14.038
+lenders never see the full number.
+
+00:06:14.038 --> 00:06:16.901
+At eighty percent utilisation: four percent
+
+00:06:16.901 --> 00:06:19.673
+borrow, two point nine percent supply.
+
+00:06:19.673 --> 00:06:24.460
+At ninety-five percent: forty-nine percent borrow, but supply climbs
+
+00:06:24.460 --> 00:06:28.969
+just as dramatically, to roughly forty-two percent, since supply
+
+00:06:28.969 --> 00:06:32.438
+A.P.Y. scales directly with that same borrow rate.
+
+00:06:33.738 --> 00:06:35.421
+One real, dated event, so
+
+00:06:35.421 --> 00:06:37.728
+this isn't a hypothetical risk.
+
+00:06:37.728 --> 00:06:41.625
+Major lending markets have genuinely experienced episodes of
+
+00:06:41.625 --> 00:06:45.521
+utilisation pushing well above ninety percent during periods
+
+00:06:45.521 --> 00:06:48.715
+of high demand, with supply rates spiking sharply
+
+00:06:48.715 --> 00:06:51.570
+and withdrawal delays reported by users.
+
+00:06:51.570 --> 00:06:54.305
+This is outside research, not this program's
+
+00:06:54.305 --> 00:06:56.736
+own data, but it's exactly the scenario
+
+00:06:56.736 --> 00:06:58.985
+this worked example is built to help
+
+00:06:58.985 --> 00:07:01.355
+you recognise before it happens to you.
+
+00:07:02.655 --> 00:07:04.307
+And here's the actual warning
+
+00:07:04.307 --> 00:07:06.425
+hidden inside that second number.
+
+00:07:06.425 --> 00:07:10.019
+A sudden forty-two-percent supply A.P.Y. looks like an
+
+00:07:10.019 --> 00:07:13.352
+incredible yield, right up until you remember what
+
+00:07:13.352 --> 00:07:16.227
+it actually means: the pool is nearly fully
+
+00:07:16.227 --> 00:07:19.167
+borrowed, and lenders may simply not be able
+
+00:07:19.167 --> 00:07:22.043
+to withdraw, because the money is out, lent
+
+00:07:22.043 --> 00:07:24.695
+to borrowers who haven't repaid yet.
+
+00:07:24.695 --> 00:07:26.605
 A sudden high supply APY is
 
-00:01:20.417 --> 00:01:22.752
+00:07:26.605 --> 00:07:28.514
 often a warning, not a gift.
 
-00:01:22.752 --> 00:01:26.547
-50%, 2.5%, 1.1%.
+00:07:29.813 --> 00:07:33.588
+Here's exactly what unfolds, step by step, as utilisation
 
-00:01:26.547 --> 00:01:30.422
-70%, 3.5%, 2.2%.
+00:07:33.588 --> 00:07:37.493
+actually climbs toward one hundred percent, so “lenders may
 
-00:01:30.422 --> 00:01:34.557
-80%, 4.0%, 2.9%.
+00:07:37.493 --> 00:07:40.722
+not be able to withdraw” isn't just a phrase.
 
-00:01:34.557 --> 00:01:39.682
-90%, 34.0%, 27.5%.
+00:07:40.722 --> 00:07:43.717
+Utilisation climbs past the optimal point.
 
-00:01:39.682 --> 00:01:44.677
-95%, 49.0%, 41.9%.
+00:07:43.717 --> 00:07:46.014
+Rates spike steeply, exactly as the
 
-00:01:45.977 --> 00:01:47.437
-Here's your checklist.
+00:07:46.014 --> 00:07:47.782
+kink is designed to do.
 
-00:01:47.437 --> 00:01:48.972
-Do it now, for real.
+00:07:47.782 --> 00:07:50.695
+Some lenders, seeing high rates, try to withdraw,
 
-00:01:48.972 --> 00:01:51.997
-First, I check utilisation before supplying.
+00:07:50.695 --> 00:07:53.792
+but the pool's available liquidity is shrinking.
 
-00:01:51.997 --> 00:01:55.372
-Next, I know the market's optimal-utilisation kink.
+00:07:53.792 --> 00:07:56.553
+And once utilisation is high enough, some
 
-00:01:55.372 --> 00:01:57.198
-And finally, I treat a sudden
+00:07:56.553 --> 00:07:59.839
+withdrawals simply queue, or fail outright, until
 
-00:01:57.198 --> 00:01:59.267
-rate spike as a liquidity warning.
-
-00:02:00.567 --> 00:02:01.777
-Question 1.
-
-00:02:01.777 --> 00:02:03.712
-What sets the rates in a money market?
-
-00:02:08.132 --> 00:02:12.612
-The answer: Mainly utilisation, through the protocol's interest-rate curve.
-
-00:02:13.912 --> 00:02:15.157
-Question 2.
-
-00:02:15.157 --> 00:02:16.412
-Why does the curve kink?
-
-00:02:20.832 --> 00:02:24.256
-The answer: To make borrowing expensive and supplying
-
-00:02:24.256 --> 00:02:28.442
-attractive when liquidity runs low, restoring withdrawal capacity.
-
-00:02:29.742 --> 00:02:31.012
-Question 3.
-
-00:02:31.012 --> 00:02:33.607
-Utilisation is 99%.
-
-00:02:33.607 --> 00:02:34.762
-Risk for lenders?
-
-00:02:39.182 --> 00:02:42.027
-The answer: Withdrawals may be blocked until
-
-00:02:42.027 --> 00:02:44.430
+00:07:59.839 --> 00:08:02.337
 borrowers repay or new supply arrives.
 
-00:02:45.730 --> 00:02:46.975
+00:08:03.637 --> 00:08:04.727
+Quick check.
+
+00:08:04.727 --> 00:08:08.532
+Utilisation on a lending market is ninety-nine percent.
+
+00:08:08.532 --> 00:08:10.807
+What's the actual risk for lenders right now?
+
+00:08:15.227 --> 00:08:19.328
+The answer: withdrawals may be blocked entirely, until borrowers
+
+00:08:19.328 --> 00:08:22.420
+repay or new supply arrives, since almost all of
+
+00:08:22.420 --> 00:08:25.007
+the pool's assets are currently lent out.
+
+00:08:26.307 --> 00:08:27.767
+Here's your checklist.
+
+00:08:27.767 --> 00:08:30.542
+Do it now, before supplying to any market.
+
+00:08:30.542 --> 00:08:32.790
+Check the market's current utilisation
+
+00:08:32.790 --> 00:08:34.762
+before you supply, not after.
+
+00:08:34.762 --> 00:08:37.862
+Know that specific market's optimal-utilisation kink,
+
+00:08:37.862 --> 00:08:40.172
+since it isn't the same everywhere.
+
+00:08:40.172 --> 00:08:42.987
+And treat any sudden rate spike as a liquidity
+
+00:08:42.987 --> 00:08:46.402
+warning to investigate, never as free money to celebrate.
+
+00:08:47.702 --> 00:08:51.013
+One last honest connection, before the recap, since this
+
+00:08:51.013 --> 00:08:54.857
+lesson sits right underneath everything else in Module Three.
+
+00:08:54.857 --> 00:08:57.895
+Every borrow you'll model in the lessons ahead,
+
+00:08:57.895 --> 00:09:02.200
+health factor, leveraged loops, perpetual futures, ultimately draws
+
+00:09:02.200 --> 00:09:04.795
+on the exact same pool mechanism and the
+
+00:09:04.795 --> 00:09:08.197
+exact same curve this lesson just walked through.
+
+00:09:08.197 --> 00:09:10.843
+Understanding this curve well is what makes
+
+00:09:10.843 --> 00:09:12.948
+the rest of the module make sense,
+
+00:09:12.948 --> 00:09:14.512
+not a detail to skip past.
+
+00:09:15.812 --> 00:09:17.057
 Let's recap.
 
-00:02:46.975 --> 00:02:50.800
-Utilisation = borrowed ÷ supplied.
+00:09:17.057 --> 00:09:20.393
+A money market is a pool: lenders supply, borrowers
 
-00:02:50.800 --> 00:02:54.330
-Interest-rate curve: most markets use a "kinked" curve.
+00:09:20.393 --> 00:09:24.157
+borrow against collateral, a contract sets both rates.
 
-00:02:54.330 --> 00:02:57.186
-Supply APY ≈ borrow APY ×
+00:09:24.157 --> 00:09:26.468
+Every dollar of yield a lender earns
 
-00:02:57.186 --> 00:03:01.330
-utilisation × (1 − reserve factor).
+00:09:26.468 --> 00:09:28.841
+is a dollar a borrower actually paid;
 
-00:03:01.330 --> 00:03:03.547
-Receipt tokens: when you supply, you
+00:09:28.841 --> 00:09:31.327
+it's a transfer, not created money.
 
-00:03:03.547 --> 00:03:05.345
-get a token representing your.
+00:09:31.327 --> 00:09:34.549
+The interest-rate curve kinks deliberately above an
 
-00:03:06.645 --> 00:03:09.160
-Do the checklist now, before you move on.
+00:09:34.549 --> 00:09:38.144
+optimal utilisation point, to protect withdrawal capacity
 
-00:03:09.160 --> 00:03:11.429
+00:09:38.144 --> 00:09:40.117
+right when it matters most.
+
+00:09:40.117 --> 00:09:42.476
+And a sudden spike in supply APY,
+
+00:09:42.476 --> 00:09:45.667
+near full utilisation, is a liquidity warning
+
+00:09:45.667 --> 00:09:48.442
+first, an opportunity second, if at all.
+
+00:09:49.742 --> 00:09:53.426
+Check utilisation before you supply, and treat any sudden
+
+00:09:53.426 --> 00:09:56.902
+rate spike as a warning worth investigating first.
+
+00:09:56.902 --> 00:09:58.992
 Next up, Lesson 3.2: LTV,
 
-00:03:11.429 --> 00:03:14.745
-liquidation threshold & health factor.
+00:09:58.992 --> 00:10:02.207
+liquidation threshold and health factor.

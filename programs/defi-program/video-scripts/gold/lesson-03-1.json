@@ -1,0 +1,428 @@
+{
+ "id": "lesson-03-1",
+ "title": "Lesson 3.1: How lending markets work",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "maxMinutes": 25,
+ "tag": "Lesson 3.1",
+ "gold": true,
+ "music": true,
+ "musicLevel": 0.14,
+ "seed": 62,
+ "use": "Lesson 3.1 page in the Whop course. Hand-written gold-standard script: the money-market mechanism, utilisation, the kinked interest-rate curve, and the source material's own verified rate table, as walk-throughs.",
+ "thumbnail": {
+  "title": "How lending markets work",
+  "subtitle": "Lesson 3.1"
+ },
+ "scenes": [
+  {
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Lesson 3.1",
+   "num": "3.1",
+   "title": "How lending markets work",
+   "sub": "A sudden high rate is often a warning, not a gift.",
+   "vo": "Lesson three point one. How lending markets work. By the end, you'll explain where lending yields actually come from, and why rates jump when a market is nearly fully borrowed.",
+   "cap": "Lesson 3.1. How lending markets work. By the end, you'll explain where lending yields actually come from, and why rates jump when a market is nearly fully borrowed."
+  },
+  {
+   "type": "pillars",
+   "chapter": "Intro",
+   "title": "What this lesson covers",
+   "items": [
+    {
+     "icon": "layers",
+     "title": "The mechanism",
+     "text": "Lenders supply, borrowers borrow, a contract sets rates"
+    },
+    {
+     "icon": "chart",
+     "title": "The kinked curve",
+     "text": "Gentle, then steep, above an optimal point"
+    },
+    {
+     "icon": "target",
+     "title": "Worked example",
+     "text": "A real, verified rate table"
+    },
+    {
+     "icon": "alert",
+     "title": "The warning sign",
+     "text": "A spike near full utilisation"
+    }
+   ],
+   "vo": "Here's the plan. What a money market actually is, mechanically, and where the yield genuinely comes from. Utilisation, and the kinked interest-rate curve it drives. A full worked example, with a real, verified rate table. And why a sudden spike in rates near full utilisation is a warning sign, not free money."
+  },
+  {
+   "type": "title",
+   "chapter": "The mechanism",
+   "eyebrow": "The mechanism",
+   "num": "1",
+   "title": "A pool, not a person on the other side",
+   "sub": "Same shape as an AMM, from Module 2.",
+   "vo": "The mechanism."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/lending-pool-flow.png",
+   "eyebrow": "How a money market actually works",
+   "wide": true,
+   "chapter": "The mechanism",
+   "vo": "Here's the mechanism, in full. Lenders supply assets into a shared pool. Borrowers borrow from that same pool, against collateral they've locked up. A smart contract sets the rates on both sides, automatically. And when you supply, you receive a receipt token back, representing your deposit plus the interest it's earning, growing in value the whole time you hold it."
+  },
+  {
+   "type": "statement",
+   "chapter": "The mechanism",
+   "kicker": "Where the yield actually comes from",
+   "lines": [
+    "A dollar a borrower paid.",
+    "Not manufactured. A direct transfer, mediated by contract."
+   ],
+   "sub": "No borrower, no yield.",
+   "vo": "Here's exactly where the yield genuinely comes from, since it isn't magic, and it isn't the protocol's own money. Every dollar a lender earns is a dollar a borrower actually paid, in interest, for the privilege of borrowing against their own collateral instead of selling it. No borrower, no yield. It's a direct transfer, mediated by a smart contract, not manufactured out of nowhere."
+  },
+  {
+   "type": "flow",
+   "chapter": "The mechanism",
+   "title": "What your receipt token actually does",
+   "nodes": [
+    {
+     "label": "You deposit, receive a receipt token",
+     "sub": "Immediately, in the same transaction",
+     "icon": "coins"
+    },
+    {
+     "label": "Its exchange rate climbs",
+     "sub": "Continuously, as interest accrues",
+     "icon": "chart"
+    },
+    {
+     "label": "No separate claim needed",
+     "sub": "Interest is baked into the token itself",
+     "icon": "check"
+    },
+    {
+     "label": "Redeem for more than you deposited",
+     "sub": "The accrued interest, included",
+     "icon": "coins"
+    }
+   ],
+   "vo": "Here's exactly what happens to your receipt token, step by step, from the moment you supply. You deposit an asset, and receive a receipt token in return, immediately. That token's exchange rate against the underlying asset climbs continuously, as interest accrues, second by second. You never need to claim interest separately, or take any additional action. And when you eventually redeem it, you receive back more of the underlying asset than you originally put in."
+  },
+  {
+   "type": "compare",
+   "chapter": "The mechanism",
+   "left": {
+    "label": "A traditional bank loan",
+    "tone": "warn",
+    "items": [
+     "Based on credit history and income",
+     "Trust, enforced by legal recourse"
+    ]
+   },
+   "right": {
+    "label": "A DeFi money market",
+    "tone": "good",
+    "items": [
+     "Over-collateralised, upfront, no credit check",
+     "Enforced by code, automatically"
+    ]
+   },
+   "vo": "Worth contrasting this against a traditional bank loan, since it explains why DeFi lending works so differently underneath. A bank lends based on your credit history and income, trusting you to repay over time, with no collateral locked up front. A DeFi money market instead requires collateral worth more than the loan, upfront, and enforces repayment through code, not trust or credit checks."
+  },
+  {
+   "type": "quiz",
+   "chapter": "The mechanism",
+   "n": 1,
+   "of": 3,
+   "q": "Where does a lender's yield in a money market actually come from?",
+   "a": "Directly from the interest borrowers pay — a transfer, not created money.",
+   "vo": "Quick check. Where does a lender's yield in a money market actually come from? [[pause 4]] The answer: directly from the interest borrowers pay to borrow against their collateral. It's a transfer between the two sides, not money created by the protocol."
+  },
+  {
+   "type": "title",
+   "chapter": "The kinked curve",
+   "eyebrow": "The kinked curve",
+   "num": "2",
+   "title": "Gentle, then steep, above one point",
+   "sub": "Utilisation is what drives it.",
+   "vo": "The kinked interest-rate curve."
+  },
+  {
+   "type": "flow",
+   "chapter": "The kinked curve",
+   "title": "What utilisation actually drives",
+   "nodes": [
+    {
+     "label": "Utilisation = borrowed ÷ supplied",
+     "sub": "The one number that drives everything here",
+     "icon": "chart"
+    },
+    {
+     "label": "Below the optimal point",
+     "sub": "Rates rise gently, e.g. up to ~80%",
+     "icon": "swap"
+    },
+    {
+     "label": "Above the optimal point",
+     "sub": "The curve kinks: rates rise steeply",
+     "icon": "alert"
+    },
+    {
+     "label": "Pulls in lenders, pushes out borrowers",
+     "sub": "Exactly the point of the kink",
+     "icon": "check"
+    }
+   ],
+   "vo": "Here's exactly what utilisation is, and what it does, mechanically. Utilisation equals the amount currently borrowed, divided by the total amount supplied. Below a market's chosen optimal point, commonly around eighty percent, rates rise only gently as utilisation climbs. Above that same optimal point, the curve kinks, and rates rise steeply instead, specifically to pull in more lenders and push out some borrowers."
+  },
+  {
+   "type": "compare",
+   "chapter": "The kinked curve",
+   "left": {
+    "label": "Below the optimal point",
+    "tone": "good",
+    "items": [
+     "Lenders: modest, steady rate",
+     "Borrowers: modest, predictable rate"
+    ]
+   },
+   "right": {
+    "label": "Above the optimal point",
+    "tone": "warn",
+    "items": [
+     "Lenders: richer rate, growing liquidity risk",
+     "Borrowers: rate that can force unplanned repayment"
+    ]
+   },
+   "vo": "Worth naming the trade-off from each side's perspective directly, since “gentle then steep” affects lenders and borrowers differently. A lender below the optimal point earns a modest, steady rate; above it, a much richer one, but with growing liquidity risk attached. A borrower below the optimal point pays a modest, predictable rate; above it, a rate that can climb sharply, fast enough to force an unplanned repayment."
+  },
+  {
+   "type": "statement",
+   "chapter": "The kinked curve",
+   "kicker": "Why the kink is deliberate",
+   "lines": [
+    "A straight line gives no urgent signal.",
+    "The kink makes the pain sharp, exactly where danger begins."
+   ],
+   "sub": "A design choice, not an accident of the formula.",
+   "vo": "Worth being precise about why the curve is deliberately shaped this way, rather than a straight line the whole way. A smooth, straight-line curve gives the market no urgent signal as it approaches full utilisation, the exact moment lenders might not be able to withdraw at all. The kink is a deliberate design choice: make the pain sharp and sudden, specifically where the actual danger, illiquidity, begins."
+  },
+  {
+   "type": "statement",
+   "chapter": "The kinked curve",
+   "kicker": "Supply APY vs borrow APY",
+   "lines": [
+    "Supply APY ≈ borrow APY × utilisation × (1 − reserve factor).",
+    "The reserve factor is the protocol's own cut."
+   ],
+   "sub": "Lenders always earn somewhat less than borrowers pay.",
+   "vo": "One more piece worth naming before the worked example: supply A.P.Y. is never quite the same as borrow A.P.Y., even at the same utilisation. Supply A.P.Y. is roughly borrow A.P.Y., times utilisation, times one minus the reserve factor, the protocol's own cut. That reserve factor is exactly why lenders always earn somewhat less than what borrowers are actually paying."
+  },
+  {
+   "type": "steps",
+   "chapter": "The kinked curve",
+   "title": "Checking a market's kink point yourself",
+   "steps": [
+    "Open the market's own interface or documentation",
+    "Look for its “optimal utilisation” / “kink” parameter",
+    "Compare it against current utilisation"
+   ],
+   "result": "Not the same on every protocol, or every asset",
+   "vo": "Here's how to actually check a market's own kink point yourself, since it isn't the same on every protocol or every asset. Open the market's own interface or documentation directly. Look specifically for its “optimal utilisation” or “kink” parameter, usually shown as a percentage. And compare that number against the market's current utilisation, so you know how much room actually remains before rates start climbing steeply."
+  },
+  {
+   "type": "quiz",
+   "chapter": "The kinked curve",
+   "n": 2,
+   "of": 3,
+   "q": "Why does the interest-rate curve kink sharply above the optimal utilisation point?",
+   "a": "To make borrowing expensive and supplying attractive when liquidity runs low, restoring withdrawal capacity.",
+   "vo": "Quick check. Why does the interest-rate curve kink sharply above the optimal utilisation point, instead of rising smoothly the whole way? [[pause 4]] The answer: to make borrowing expensive and supplying attractive right when liquidity runs low, restoring withdrawal capacity before the market actually locks up."
+  },
+  {
+   "type": "title",
+   "chapter": "Worked example",
+   "eyebrow": "Worked example",
+   "num": "1",
+   "title": "A real, verified rate table",
+   "sub": "4% at 80% optimal. +60% slope above it.",
+   "vo": "Worked example."
+  },
+  {
+   "type": "chart",
+   "chapter": "Worked example",
+   "kind": "line",
+   "title": "Borrow APY vs utilisation — the kinked curve",
+   "sub": "Illustrative curve: 4% at 80% optimal, +60% slope above",
+   "series": [
+    {
+     "label": "Borrow APY",
+     "values": [
+      2.5,
+      3.5,
+      4.0,
+      34.0,
+      49.0
+     ],
+     "tone": "bad"
+    }
+   ],
+   "xlabels": [
+    "50%",
+    "70%",
+    "80% (kink)",
+    "90%",
+    "95%"
+   ],
+   "yticks": [
+    [
+     4.0,
+     "4%"
+    ],
+    [
+     49.0,
+     "49%"
+    ]
+   ],
+   "ymin": 0,
+   "ymax": 54,
+   "marks": [
+    {
+     "i": 2,
+     "text": "The optimal point — the kink itself",
+     "tone": "warn",
+     "below": true
+    }
+   ],
+   "vo": "Here's the actual curve, plotted from this specific illustrative example: four percent borrow A.P.Y. at eighty percent optimal utilisation, then a sixty-percent slope above it. At fifty percent utilisation, borrow A.P.Y. is two point five percent. At seventy percent, three point five percent. At eighty percent, exactly four percent, the kink itself. And then it launches: ninety percent utilisation reaches thirty-four percent borrow A.P.Y., and ninety-five percent reaches forty-nine percent.",
+   "cap": "Here's the actual curve, plotted from this specific illustrative example: 4% borrow APY at 80% optimal utilisation, then a 60% slope above it. At 50% utilisation, borrow APY is 2.5%. At 70%, 3.5%. At 80%, exactly 4%, the kink itself. And then it launches: 90% utilisation reaches 34% borrow APY, and 95% reaches 49%."
+  },
+  {
+   "type": "compare",
+   "chapter": "Worked example",
+   "left": {
+    "label": "At 80% utilisation",
+    "tone": "warn",
+    "items": [
+     "Borrow APY: 4.0%",
+     "Supply APY: ~2.9%"
+    ]
+   },
+   "right": {
+    "label": "At 95% utilisation",
+    "tone": "bad",
+    "items": [
+     "Borrow APY: 49.0%",
+     "Supply APY: ~41.9%"
+    ]
+   },
+   "vo": "Now put supply A.P.Y. next to that same borrow A.P.Y., at a ten-percent reserve factor, since lenders never see the full number. At eighty percent utilisation: four percent borrow, two point nine percent supply. At ninety-five percent: forty-nine percent borrow, but supply climbs just as dramatically, to roughly forty-two percent, since supply A.P.Y. scales directly with that same borrow rate."
+  },
+  {
+   "type": "stats",
+   "chapter": "Worked example",
+   "stats": [
+    [
+     "90%+",
+     "utilisation events with reported withdrawal delays, on major markets (outside research)"
+    ]
+   ],
+   "vo": "One real, dated event, so this isn't a hypothetical risk. Major lending markets have genuinely experienced episodes of utilisation pushing well above ninety percent during periods of high demand, with supply rates spiking sharply and withdrawal delays reported by users. This is outside research, not this program's own data, but it's exactly the scenario this worked example is built to help you recognise before it happens to you."
+  },
+  {
+   "type": "statement",
+   "chapter": "Worked example",
+   "kicker": "What that spike actually means",
+   "lines": [
+    "Nearly fully borrowed.",
+    "Lenders may not be able to withdraw. A warning, not a gift."
+   ],
+   "sub": "The money is out. It hasn't disappeared — it just isn't liquid, right now.",
+   "vo": "And here's the actual warning hidden inside that second number. A sudden forty-two-percent supply A.P.Y. looks like an incredible yield, right up until you remember what it actually means: the pool is nearly fully borrowed, and lenders may simply not be able to withdraw, because the money is out, lent to borrowers who haven't repaid yet. A sudden high supply APY is often a warning, not a gift."
+  },
+  {
+   "type": "flow",
+   "chapter": "Worked example",
+   "title": "What actually unfolds, near full utilisation",
+   "nodes": [
+    {
+     "label": "Utilisation climbs past optimal",
+     "sub": "Rates spike steeply",
+     "icon": "chart"
+    },
+    {
+     "label": "Lenders try to withdraw",
+     "sub": "Drawn by the high rate itself",
+     "icon": "eye"
+    },
+    {
+     "label": "Available liquidity shrinks",
+     "sub": "Most of the pool is already lent out",
+     "icon": "alert"
+    },
+    {
+     "label": "Withdrawals queue, or fail",
+     "sub": "Until borrowers repay, or new supply arrives",
+     "icon": "lock"
+    }
+   ],
+   "vo": "Here's exactly what unfolds, step by step, as utilisation actually climbs toward one hundred percent, so “lenders may not be able to withdraw” isn't just a phrase. Utilisation climbs past the optimal point. Rates spike steeply, exactly as the kink is designed to do. Some lenders, seeing high rates, try to withdraw, but the pool's available liquidity is shrinking. And once utilisation is high enough, some withdrawals simply queue, or fail outright, until borrowers repay or new supply arrives."
+  },
+  {
+   "type": "quiz",
+   "chapter": "Worked example",
+   "n": 3,
+   "of": 3,
+   "q": "Utilisation is 99%. What's the actual risk for lenders?",
+   "a": "Withdrawals may be blocked until borrowers repay or new supply arrives.",
+   "vo": "Quick check. Utilisation on a lending market is ninety-nine percent. What's the actual risk for lenders right now? [[pause 4]] The answer: withdrawals may be blocked entirely, until borrowers repay or new supply arrives, since almost all of the pool's assets are currently lent out."
+  },
+  {
+   "type": "steps",
+   "chapter": "Checklist",
+   "title": "Your checklist",
+   "steps": [
+    "Check utilisation before supplying, not after",
+    "Know the market's specific optimal-utilisation kink",
+    "Treat a sudden rate spike as a warning, not a gift"
+   ],
+   "vo": "Here's your checklist. Do it now, before supplying to any market. Check the market's current utilisation before you supply, not after. Know that specific market's optimal-utilisation kink, since it isn't the same everywhere. And treat any sudden rate spike as a liquidity warning to investigate, never as free money to celebrate."
+  },
+  {
+   "type": "statement",
+   "chapter": "Recap",
+   "kicker": "Why this lesson comes first",
+   "lines": [
+    "Everything ahead draws on this same mechanism.",
+    "Understanding this curve makes the rest of the module make sense."
+   ],
+   "sub": "Not a detail to skip past.",
+   "vo": "One last honest connection, before the recap, since this lesson sits right underneath everything else in Module Three. Every borrow you'll model in the lessons ahead, health factor, leveraged loops, perpetual futures, ultimately draws on the exact same pool mechanism and the exact same curve this lesson just walked through. Understanding this curve well is what makes the rest of the module make sense, not a detail to skip past."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "check": false,
+   "items": [
+    "A money market: lenders supply, borrowers borrow, a contract sets rates",
+    "Yield is a transfer from borrowers — not created money",
+    "The curve kinks deliberately above the optimal utilisation point",
+    "A sudden rate spike near full utilisation: a warning, not a gift"
+   ],
+   "vo": "Let's recap. A money market is a pool: lenders supply, borrowers borrow against collateral, a contract sets both rates. Every dollar of yield a lender earns is a dollar a borrower actually paid; it's a transfer, not created money. The interest-rate curve kinks deliberately above an optimal utilisation point, to protect withdrawal capacity right when it matters most. And a sudden spike in supply APY, near full utilisation, is a liquidity warning first, an opportunity second, if at all."
+  },
+  {
+   "type": "cta",
+   "chapter": "Recap",
+   "button": "Next: Lesson 3.2",
+   "sub": "LTV, liquidation threshold and health factor",
+   "vo": "Check utilisation before you supply, and treat any sudden rate spike as a warning worth investigating first. Next up, Lesson three point two: LTV, liquidation threshold and health factor.",
+   "cap": "Check utilisation before you supply, and treat any sudden rate spike as a warning worth investigating first. Next up, Lesson 3.2: LTV, liquidation threshold and health factor."
+  }
+ ]
+}
