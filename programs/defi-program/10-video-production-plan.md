@@ -62,7 +62,7 @@ node build_video.js lessons              # all lessons (several hours of renderi
 | 1.2 | How a transaction actually happens | 29 | 10.1 min | `video-scripts/gold/lesson-01-2.json` (gold: 7-stop lifecycle flow, gas/nonce flows, real gas-cost math, mainnet vs L2, gas-demand line chart) | ✓ |
 | 1.3 | Wallets, keys, hardware & multisig | 29 | 10.2 min | `video-scripts/gold/lesson-01-3.json` (gold: 5-word flows/compares, hardware wallet signing, illustrative 3-wallet split, compartmentalising habit) | ✓ |
 | 1.4 | Tokens, approvals & allowances | 28 | 10.2 min | `video-scripts/gold/lesson-01-4.json` (gold: token-address verification, unlimited-vs-exact/Permit compares, reading-a-signature steps, 4-check flow) | ✓ |
-| 1.5 | Stablecoins and how they break | 9 | 2.9 min | `video-scripts/lessons/lesson-01-5.json` | ✓ |
+| 1.5 | Stablecoins and how they break | 29 | 10.2 min | `video-scripts/gold/lesson-01-5.json` (gold: 4-design callout walkthrough, animated peg-arbitrage loop, real Terra 2022 & USDC 2023 case studies with a real-shaped line chart) | ✓ |
 | 1.6 | Scam defence | 9 | 3.0 min | `video-scripts/lessons/lesson-01-6.json` | ✓ |
 | 1.7 | Reading signatures and simulating transactions | 10 | 3.5 min | `video-scripts/lessons/lesson-01-7.json` | ✓ |
 | 1.8 | Privacy and physical security | 10 | 3.4 min | `video-scripts/lessons/lesson-01-8.json` | ✓ |
