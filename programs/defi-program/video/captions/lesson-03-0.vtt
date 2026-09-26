@@ -1,88 +1,628 @@
 WEBVTT
 
-00:00:00.550 --> 00:00:02.735
-Mastery Starter 3.0.
+00:00:00.550 --> 00:00:02.325
+Lesson 3.0.
 
-00:00:02.735 --> 00:00:04.710
-New to Lending & Leverage?
+00:00:02.325 --> 00:00:06.160
+The Mastery Starter for Module 3: Lending and Leverage.
 
-00:00:04.710 --> 00:00:05.770
-Start here.
+00:00:06.160 --> 00:00:07.964
+By the end, you'll know the five
 
-00:00:05.770 --> 00:00:07.857
-In about ten minutes, you'll go from
+00:00:07.964 --> 00:00:10.096
+words this module runs on, and exactly
 
-00:00:07.857 --> 00:00:09.550
-zero to ready for this module.
+00:00:10.096 --> 00:00:12.064
+how to tell when you've mastered it.
 
-00:00:10.850 --> 00:00:13.877
-Lending markets let you earn interest by lending, or
+00:00:13.364 --> 00:00:14.654
+Here's the plan.
 
-00:00:13.877 --> 00:00:16.862
-borrow against what you own without selling it.
+00:00:14.654 --> 00:00:18.737
+First, the sixty-second version: how lending markets actually work,
 
-00:00:16.862 --> 00:00:20.205
-Borrowing comes with one hard rule: if your collateral
+00:00:18.737 --> 00:00:21.619
+and the one hard rule borrowing comes with.
 
-00:00:20.205 --> 00:00:23.427
-falls too far, it's sold automatically, at a penalty.
+00:00:21.619 --> 00:00:23.296
+Second, the five words you'll
 
-00:00:24.727 --> 00:00:27.212
-Collateral: what you lock up to borrow.
+00:00:23.296 --> 00:00:24.994
+need, each one drawn out.
 
-00:00:27.212 --> 00:00:30.637
-LTV: debt ÷ collateral value.
+00:00:24.994 --> 00:00:27.409
+Third, what to have ready before you start.
 
-00:00:30.637 --> 00:00:34.872
-Health factor: your safety margin; below 1 means liquidation.
+00:00:27.409 --> 00:00:29.862
+Fourth, your first safe step: supplying a
 
-00:00:34.872 --> 00:00:38.477
-Liquidation: forced sale of collateral to repay debt.
+00:00:29.862 --> 00:00:32.264
+small amount, with no borrowing yet.
 
-00:00:38.477 --> 00:00:41.322
-Utilisation: how much of a pool is borrowed.
+00:00:32.264 --> 00:00:34.779
+And finally, the mastery ladder, so you know
 
-00:00:42.622 --> 00:00:44.837
-First, Modules 0–2.
+00:00:34.779 --> 00:00:37.349
+exactly what finishing this module looks like.
 
-00:00:44.837 --> 00:00:46.633
-And finally, Comfort using a
+00:00:38.649 --> 00:00:41.214
+Here's the whole module in one sentence.
 
-00:00:46.633 --> 00:00:48.182
-DEX on a low-fee network.
+00:00:41.214 --> 00:00:43.969
+Lending markets let you earn interest by lending
 
-00:00:49.482 --> 00:00:52.986
-Supply $20 of USDC to a blue-chip lending
+00:00:43.969 --> 00:00:46.387
+your assets out, or let you borrow against
 
-00:00:52.986 --> 00:00:57.207
-market, read its utilisation, then withdraw it.
+00:00:46.387 --> 00:00:49.274
+what you already own, without ever selling it.
 
-00:00:57.207 --> 00:00:58.397
-No borrowing yet.
+00:00:49.274 --> 00:00:52.368
+Borrowing comes with exactly one hard rule, worth
 
-00:00:59.697 --> 00:01:04.072
-Beginner: Supplies stablecoins and reads utilisation and rates.
+00:00:52.368 --> 00:00:55.894
+knowing before anything else: if your collateral's value
 
-00:01:04.072 --> 00:01:06.684
-Practitioner: Borrows with HF ≥ 2
+00:00:55.894 --> 00:00:58.740
+falls too far, it gets sold automatically, at
 
-00:01:06.684 --> 00:01:09.212
-and a written defence ladder.
+00:00:58.740 --> 00:01:01.339
+a penalty, whether you're watching or not.
 
-00:01:09.212 --> 00:01:12.130
-Master: Runs correlated loops and perps with
+00:01:02.640 --> 00:01:05.960
+Here's the mechanism underneath every lending market.
 
-00:01:12.130 --> 00:01:15.308
-computed liquidation prices and break-even rates.
+00:01:05.960 --> 00:01:09.210
+Lenders deposit assets into a shared pool, and earn
 
-00:01:16.608 --> 00:01:19.964
-You've mastered this module when you can open, monitor
+00:01:09.210 --> 00:01:12.885
+interest, paid by whoever borrows from that same pool.
 
-00:01:19.964 --> 00:01:23.443
-and unwind a borrow without ever approaching liquidation.
+00:01:12.885 --> 00:01:16.015
+Borrowers lock up collateral, worth more than what they
 
-00:01:24.743 --> 00:01:27.258
-Do the checklist now, before you move on.
+00:01:16.015 --> 00:01:19.110
+borrow, and can borrow against it without selling.
 
-00:01:27.258 --> 00:01:30.753
+00:01:19.110 --> 00:01:21.706
+The interest rate itself moves with how much
+
+00:01:21.706 --> 00:01:24.245
+of the pool is currently borrowed, which is
+
+00:01:24.245 --> 00:01:26.380
+exactly word five, coming up shortly.
+
+00:01:27.680 --> 00:01:30.015
+This isn't a small corner of DeFi.
+
+00:01:30.015 --> 00:01:34.171
+Lending markets are consistently among the largest categories of
+
+00:01:34.171 --> 00:01:37.624
+value locked in the entire industry, because the core
+
+00:01:37.624 --> 00:01:41.780
+trade, earning yield, or unlocking liquidity without selling, is
+
+00:01:41.780 --> 00:01:44.510
+useful in almost any market condition.
+
+00:01:44.510 --> 00:01:47.148
+That's also exactly why the one hard rule
+
+00:01:47.148 --> 00:01:49.473
+matters so much: a lot of real value
+
+00:01:49.473 --> 00:01:51.860
+sits directly on the other side of it.
+
+00:01:53.160 --> 00:01:54.935
+Now, the five words you'll need.
+
+00:01:56.235 --> 00:01:57.950
+Word one: collateral.
+
+00:01:57.950 --> 00:01:59.975
+What you lock up in order to borrow.
+
+00:01:59.975 --> 00:02:01.830
+Here's the actual sequence.
+
+00:02:01.830 --> 00:02:04.765
+You deposit an asset you own, as collateral.
+
+00:02:04.765 --> 00:02:07.021
+The protocol values it, continuously,
+
+00:02:07.021 --> 00:02:09.280
+against the current market price.
+
+00:02:09.280 --> 00:02:12.559
+And it stays locked, entirely unavailable to you, for
+
+00:02:12.559 --> 00:02:15.170
+as long as your loan against it stays open.
+
+00:02:16.470 --> 00:02:19.075
+Word two: L.T.V., loan-to-value.
+
+00:02:19.075 --> 00:02:21.970
+Your debt, divided by your collateral's value.
+
+00:02:21.970 --> 00:02:24.202
+It's the single number that tells you how
+
+00:02:24.202 --> 00:02:26.680
+borrowed you actually are, at any moment.
+
+00:02:26.680 --> 00:02:29.329
+A lower L.T.V. means more room before
+
+00:02:29.329 --> 00:02:31.929
+trouble; a higher one means less.
+
+00:02:31.929 --> 00:02:34.389
+Every other safety number in this module,
+
+00:02:34.389 --> 00:02:36.672
+including word three, is really just a
+
+00:02:36.672 --> 00:02:39.659
+different way of expressing this same relationship.
+
+00:02:40.959 --> 00:02:42.799
+Word three: health factor.
+
+00:02:42.799 --> 00:02:46.569
+Your actual safety margin, expressed as a single number.
+
+00:02:46.569 --> 00:02:48.844
+Above one, your position is safe.
+
+00:02:48.844 --> 00:02:51.849
+At exactly one, it's at the liquidation line.
+
+00:02:51.849 --> 00:02:55.949
+Below one, liquidation can happen, automatically, without warning.
+
+00:02:55.949 --> 00:02:58.960
+Watch this chart as E.T.H.'s price moves: the
+
+00:02:58.960 --> 00:03:02.691
+health factor tracks it directly, since collateral value
+
+00:03:02.691 --> 00:03:05.244
+is what the whole number is built from.
+
+00:03:06.544 --> 00:03:08.454
+Word four: liquidation.
+
+00:03:08.454 --> 00:03:11.693
+The forced, automatic sale of your collateral, to repay
+
+00:03:11.693 --> 00:03:15.059
+your debt, once your health factor crosses below one.
+
+00:03:15.059 --> 00:03:17.102
+It isn't a warning, and it isn't
+
+00:03:17.102 --> 00:03:20.384
+negotiable; it's code, executing exactly as written,
+
+00:03:20.384 --> 00:03:23.099
+the moment the number crosses the line.
+
+00:03:23.099 --> 00:03:25.114
+And in a fast, falling market, one
+
+00:03:25.114 --> 00:03:28.164
+liquidation can trigger selling pressure that pushes
+
+00:03:28.164 --> 00:03:30.294
+prices further down, triggering more.
+
+00:03:31.594 --> 00:03:33.756
+One quick, concrete number, so
+
+00:03:33.756 --> 00:03:35.799
+LTV isn't just a formula.
+
+00:03:35.799 --> 00:03:42.511
+Deposit $1,000 of collateral, borrow $400 against it, and
+
+00:03:42.511 --> 00:03:47.324
+your LTV is exactly 40%: $400 ÷ $1,000.
+
+00:03:47.324 --> 00:03:50.160
+Most protocols cap how high that ratio can
+
+00:03:50.160 --> 00:03:53.919
+go before your position becomes eligible for liquidation.
+
+00:03:55.219 --> 00:03:56.309
+Quick check.
+
+00:03:56.309 --> 00:03:58.027
+What does a health factor below
+
+00:03:58.027 --> 00:03:59.584
+one actually mean, right now?
+
+00:04:04.004 --> 00:04:08.164
+The answer: liquidation can happen, automatically, without warning.
+
+00:04:08.164 --> 00:04:09.580
+It's not a soft warning
+
+00:04:09.580 --> 00:04:11.174
+zone; it's the line itself.
+
+00:04:12.474 --> 00:04:14.569
+Word five: utilisation.
+
+00:04:14.569 --> 00:04:16.166
+How much of a lending pool's
+
+00:04:16.166 --> 00:04:18.779
+total deposits are currently borrowed out.
+
+00:04:18.779 --> 00:04:20.804
+Here's why it matters directly.
+
+00:04:20.804 --> 00:04:23.740
+Low utilisation means most of the pool sits
+
+00:04:23.740 --> 00:04:26.709
+idle, so rates stay low, for both sides.
+
+00:04:26.709 --> 00:04:30.232
+As utilisation climbs toward full, rates rise, often
+
+00:04:30.232 --> 00:04:33.023
+sharply, to pull in more lenders and push
+
+00:04:33.023 --> 00:04:36.014
+out some borrowers, keeping the pool solvent.
+
+00:04:37.314 --> 00:04:38.359
+Before you start.
+
+00:04:39.659 --> 00:04:42.119
+Two things, both from earlier modules.
+
+00:04:42.119 --> 00:04:45.196
+First, Modules Zero through Two done: safe wallet
+
+00:04:45.196 --> 00:04:48.519
+habits, and comfort trading on-chain, since you'll be
+
+00:04:48.519 --> 00:04:52.204
+interacting with real lending contracts in this module.
+
+00:04:52.204 --> 00:04:54.756
+Second, comfort actually using a DEX on
+
+00:04:54.756 --> 00:04:57.372
+a low-fee network, since your first safe
+
+00:04:57.372 --> 00:04:59.969
+step needs no new skill beyond that.
+
+00:04:59.969 --> 00:05:01.353
+If either is missing, go
+
+00:05:01.353 --> 00:05:02.904
+back and finish those first.
+
+00:05:04.204 --> 00:05:05.479
+Your first safe step.
+
+00:05:06.779 --> 00:05:08.439
+Your first step in this module
+
+00:05:08.439 --> 00:05:10.399
+doesn't touch borrowing at all.
+
+00:05:10.399 --> 00:05:12.851
+Supply twenty dollars of U.S.D.C.
+
+00:05:12.851 --> 00:05:15.314
+to a blue-chip lending market.
+
+00:05:15.314 --> 00:05:18.699
+Read its utilisation, right there on the same screen.
+
+00:05:18.699 --> 00:05:20.049
+Then withdraw it.
+
+00:05:20.049 --> 00:05:22.961
+You're building the habit of reading a market's real
+
+00:05:22.961 --> 00:05:25.544
+state before you ever put real debt against it.
+
+00:05:26.844 --> 00:05:28.529
+Here's the worked example.
+
+00:05:28.529 --> 00:05:31.499
+Open a blue-chip lending market's supply screen.
+
+00:05:31.499 --> 00:05:35.082
+Deposit twenty dollars of U.S.D.C. Read the pool's
+
+00:05:35.082 --> 00:05:38.824
+current utilisation and supply rate, right there.
+
+00:05:38.824 --> 00:05:41.249
+Then withdraw the same twenty dollars.
+
+00:05:41.249 --> 00:05:44.044
+Small, reversible, and it teaches you exactly
+
+00:05:44.044 --> 00:05:46.475
+where to look before Lesson three point
+
+00:05:46.475 --> 00:05:49.149
+one asks you to actually calculate anything.
+
+00:05:50.449 --> 00:05:52.890
+One real number, so this module doesn't
+
+00:05:52.890 --> 00:05:55.204
+feel like a niche corner of DeFi.
+
+00:05:55.204 --> 00:05:58.410
+Lending protocols have consistently held tens of
+
+00:05:58.410 --> 00:06:01.223
+billions of dollars in total value locked,
+
+00:06:01.223 --> 00:06:03.944
+across major chains, year after year.
+
+00:06:03.944 --> 00:06:08.523
+This is outside research, not this program's own
+
+00:06:08.523 --> 00:06:12.355
+data, but it's exactly why the habits in
+
+00:06:12.355 --> 00:06:15.439
+this module matter at real scale.
+
+00:06:16.739 --> 00:06:17.829
+Quick check.
+
+00:06:17.829 --> 00:06:19.698
+Why does the first safe step in
+
+00:06:19.698 --> 00:06:22.034
+this module involve no borrowing at all?
+
+00:06:26.454 --> 00:06:29.170
+The answer: it builds the habit of reading
+
+00:06:29.170 --> 00:06:32.580
+a lending market's real state, utilisation and rates,
+
+00:06:32.580 --> 00:06:35.169
+before you ever put real debt against it.
+
+00:06:36.469 --> 00:06:37.564
+The mastery ladder.
+
+00:06:38.864 --> 00:06:41.879
+Here's how you'll measure your progress through Module Three.
+
+00:06:41.879 --> 00:06:44.577
+Beginner: supplies stablecoins, and reads
+
+00:06:44.577 --> 00:06:47.189
+utilisation and rates before acting.
+
+00:06:47.189 --> 00:06:50.146
+Practitioner: borrows with a health factor of two or
+
+00:06:50.146 --> 00:06:53.179
+higher, and keeps a written defence ladder ready.
+
+00:06:53.179 --> 00:06:56.391
+And Master: runs correlated loops and perpetual
+
+00:06:56.391 --> 00:07:00.138
+futures positions, with computed liquidation prices and
+
+00:07:00.138 --> 00:07:02.480
+break-even rates, known in advance.
+
+00:07:03.781 --> 00:07:06.381
+Here's the road ahead, lesson by lesson.
+
+00:07:06.381 --> 00:07:09.116
+3.1, how lending markets work.
+
+00:07:09.116 --> 00:07:12.131
+3.2, health factor and liquidation.
+
+00:07:12.131 --> 00:07:14.506
+3.3, leveraged loops.
+
+00:07:14.506 --> 00:07:16.981
+3.4, perpetual futures.
+
+00:07:16.981 --> 00:07:19.109
+And 3.5, CDPs and minting
+
+00:07:19.109 --> 00:07:22.056
+your own dollars against collateral.
+
+00:07:23.356 --> 00:07:26.226
+One more preview, from Lesson three point three.
+
+00:07:26.226 --> 00:07:30.210
+A leveraged loop, supplying, borrowing, and re-supplying the same
+
+00:07:30.210 --> 00:07:33.590
+asset repeatedly, only works when the supply rate beats
+
+00:07:33.590 --> 00:07:36.486
+the borrow rate; that spread is everything.
+
+00:07:36.486 --> 00:07:39.151
+Get the spread wrong, and leverage amplifies
+
+00:07:39.151 --> 00:07:40.868
+a loss exactly as fast as it
+
+00:07:40.868 --> 00:07:42.526
+would have amplified a gain.
+
+00:07:43.826 --> 00:07:46.528
+And one more preview, from Lesson three point
+
+00:07:46.528 --> 00:07:48.766
+five, the far end of this module.
+
+00:07:48.766 --> 00:07:52.492
+A C.D.P., a collateralised debt position, lets you mint
+
+00:07:52.492 --> 00:07:57.017
+your own stablecoin directly against locked collateral, rather than
+
+00:07:57.017 --> 00:07:59.846
+borrowing an existing one from a pool.
+
+00:07:59.846 --> 00:08:02.405
+Same core idea as everything else in this
+
+00:08:02.405 --> 00:08:06.670
+module, over-collateralise, respect the health-factor line, just with
+
+00:08:06.670 --> 00:08:09.351
+a different destination for what you borrow.
+
+00:08:10.651 --> 00:08:13.512
+You've mastered this module when you can open a
+
+00:08:13.512 --> 00:08:17.089
+borrow, monitor it, and unwind it, without ever approaching
+
+00:08:17.089 --> 00:08:20.846
+liquidation, and without needing to check on it anxiously.
+
+00:08:20.846 --> 00:08:22.511
+Not a large position.
+
+00:08:22.511 --> 00:08:25.348
+A repeatable, controlled process, with a defence
+
+00:08:25.348 --> 00:08:27.491
+plan written down before you need it.
+
+00:08:28.791 --> 00:08:29.831
+One more.
+
+00:08:29.831 --> 00:08:32.801
+Your health factor is currently one point three, and
+
+00:08:32.801 --> 00:08:35.846
+falling steadily as the market moves against you.
+
+00:08:35.846 --> 00:08:37.831
+What's the actual state of your position?
+
+00:08:42.251 --> 00:08:44.417
+The answer: still above the liquidation
+
+00:08:44.417 --> 00:08:46.341
+line, but with shrinking room.
+
+00:08:46.341 --> 00:08:48.510
+This is exactly when a written defence
+
+00:08:48.510 --> 00:08:50.401
+ladder tells you what to do next,
+
+00:08:50.401 --> 00:08:52.626
+not the moment to decide under pressure.
+
+00:08:53.926 --> 00:08:55.111
+Last check.
+
+00:08:55.111 --> 00:08:57.926
+What does mastering Module Three actually look like?
+
+00:09:02.346 --> 00:09:05.567
+The answer: opening, monitoring and unwinding a
+
+00:09:05.567 --> 00:09:09.460
+borrow without ever approaching liquidation, a repeatable
+
+00:09:09.460 --> 00:09:11.406
+process, not a lucky outcome.
+
+00:09:12.706 --> 00:09:15.712
+One honest note before the recap, since leverage
+
+00:09:15.712 --> 00:09:18.165
+and perpetual futures sit at the top of
+
+00:09:18.165 --> 00:09:20.551
+this module's ladder for a reason.
+
+00:09:20.551 --> 00:09:24.070
+Everything in this module works both directions: the
+
+00:09:24.070 --> 00:09:27.788
+same borrowing mechanism that lets you unlock liquidity
+
+00:09:27.788 --> 00:09:30.643
+without selling can amplify a loss just as
+
+00:09:30.643 --> 00:09:33.731
+fast as a gain, once leverage is involved.
+
+00:09:33.731 --> 00:09:36.676
+Master the beginner and practitioner rungs first.
+
+00:09:36.676 --> 00:09:38.321
+There's no shortcut past them.
+
+00:09:39.621 --> 00:09:41.576
+Let's recap the five words.
+
+00:09:41.576 --> 00:09:44.856
+Collateral: what you lock up, valued continuously.
+
+00:09:44.856 --> 00:09:48.956
+L.T.V.: debt over collateral value, how borrowed you are.
+
+00:09:48.956 --> 00:09:53.191
+Health factor: your safety margin; below one means liquidation.
+
+00:09:53.191 --> 00:09:56.256
+Liquidation: automatic, forced, no warning.
+
+00:09:56.256 --> 00:09:58.602
+And utilisation: how full a pool is,
+
+00:09:58.602 --> 00:10:00.757
+and exactly what drives its rates.
+
+00:10:02.057 --> 00:10:03.752
+That's the Mastery Starter.
+
+00:10:03.752 --> 00:10:05.898
+You now have the whole module in your
+
+00:10:05.898 --> 00:10:08.665
+head: why lending markets exist, the five words,
+
+00:10:08.665 --> 00:10:11.037
+your first safe step, and the ladder that
+
+00:10:11.037 --> 00:10:12.862
+tells you when you're done.
+
+00:10:12.862 --> 00:10:16.357
 Next up, Lesson 3.1: How lending markets work.
