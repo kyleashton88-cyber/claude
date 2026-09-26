@@ -44,7 +44,7 @@ sc("title", "Two kinds of wallet.", chapter="EOA vs smart account", eyebrow="Two
    sub="The difference decides what's even possible.")
 sc("compare", "Here's the actual difference, side by side. An E.O.A., an externally owned account, is a normal wallet: one private key controls it completely, full stop. A smart account is a contract wallet instead: its rules, multisig, limits, recovery, whatever you configure, are code you choose, not a fixed default.",
    chapter="EOA vs smart account",
-   left={"label": "EOA (a normal wallet)", "tone": "warn", "items": ["One private key controls it completely", "The rules are fixed — there aren't any to choose"]},
+   title="A normal wallet vs a smart account", left={"label": "EOA (a normal wallet)", "tone": "warn", "items": ["One private key controls it completely", "The rules are fixed — there aren't any to choose"]},
    right={"label": "A smart account", "tone": "good", "items": ["A contract wallet: code, not just a key", "Rules you choose: multisig, limits, recovery"]})
 sc("statement", "Worth being precise about what this doesn't change, before going further. A smart account doesn't make you invulnerable, and it doesn't replace good judgement about what you sign. It changes what's structurally possible for your wallet to do, and what a single point of failure can actually reach. Everything else from this module still applies, in full.",
    chapter="EOA vs smart account", kicker="What this doesn't change", lines=["Not invulnerability.", "A different structure, is all."], sub="Everything else from this module still applies, in full.")
@@ -84,11 +84,11 @@ sc("flow", "And here's session keys, step by step, since “a limited, temporary
           {"label": "Use it freely", "sub": "No signing prompt on every action", "icon": "check"}, {"label": "Expires on its own", "sub": "On a schedule you set in advance", "icon": "lock"}])
 sc("compare", "And passkeys deserve their own contrast against everything Module One taught about seed phrases. A seed phrase is words you must write down, store, and never lose, ever, with catastrophic consequences if it leaks. A passkey uses your device's own biometrics, fingerprint or face, to authorise a signature; there's no words to write down, and no phrase that can be phished out of you over a phone call.",
    chapter="The features",
-   left={"label": "A seed phrase", "tone": "warn", "items": ["Words you write down and must never lose", "Can be phished, copied, or physically stolen"]},
+   title="A seed phrase vs a passkey", left={"label": "A seed phrase", "tone": "warn", "items": ["Words you write down and must never lose", "Can be phished, copied, or physically stolen"]},
    right={"label": "A passkey", "tone": "good", "items": ["Your device's own biometrics authorise it", "Nothing written down to lose or phish"]})
 sc("compare", "And here's exactly why batching matters more than it sounds like it should. Without it, approving a token and then swapping it are two separate signatures, two separate moments something could go wrong or get interrupted. Batched, through a smart account, they're one signature: you either approve-and-swap together, or nothing happens at all.",
    chapter="The features",
-   left={"label": "Without batching", "tone": "warn", "items": ["Approve: one signature", "Swap: a second, separate signature"]},
+   title="With vs without batching", left={"label": "Without batching", "tone": "warn", "items": ["Approve: one signature", "Swap: a second, separate signature"]},
    right={"label": "Batched, in a smart account", "tone": "good", "items": ["Approve and swap: one signature", "Either both happen, or neither does"]})
 sc("quiz", "Quick check. What can guardians do in social recovery, and what protects you if a recovery wasn't yours? [[pause 4]] The answer: guardians can restore your access if you lose it, and a delay you set yourself gives you a window to cancel any recovery you didn't start.",
    chapter="The features", n=3, of=3, q="What can guardians do in social recovery, and what protects you if a recovery wasn't yours?",
@@ -107,7 +107,7 @@ sc("statement", "One specific trap worth naming on its own, since it catches peo
    chapter="New risks", kicker="The trap that catches careful people", lines=["The same address, on the wrong chain,", "may simply not be your account there."], sub="Not stolen — structurally stuck. Check deployment first.")
 sc("compare", "Put guardian collusion risk next to the alternative, since “trust your guardians” isn't the whole answer. Poorly chosen guardians, say, three close friends who all talk daily, could plausibly coordinate and recover your account without your consent. Well-chosen guardians, people or entities with no reason or means to collude, genuinely can't produce that outcome together.",
    chapter="New risks",
-   left={"label": "Poorly chosen guardians", "tone": "bad", "items": ["People who talk daily, closely connected", "Could plausibly coordinate against you"]},
+   title="Choosing your guardians", left={"label": "Poorly chosen guardians", "tone": "bad", "items": ["People who talk daily, closely connected", "Could plausibly coordinate against you"]},
    right={"label": "Well-chosen guardians", "tone": "good", "items": ["No real reason or means to collude", "Structurally can't act together against you"]})
 
 # ---------------------------------------------------------------- worked example
@@ -119,7 +119,7 @@ img(D + "three-wallets.png", "The 3-wallet setup, made concrete",
     chapter="Worked example")
 sc("compare", "Now play out the two scenarios this setup is actually built for. Lose your phone, and you recover through your three guardians, waiting out the cancellable delay. Have your phone stolen instead, and the thief is capped at two thousand dollars a day, with forty-eight hours for you to cancel any recovery attempt you didn't start yourself.",
    chapter="Worked example",
-   left={"label": "You lose your phone", "tone": "warn", "items": ["Recover through your 3 guardians", "Cancellable delay protects the process"]},
+   title="Lost phone vs stolen phone", left={"label": "You lose your phone", "tone": "warn", "items": ["Recover through your 3 guardians", "Cancellable delay protects the process"]},
    right={"label": "Your phone is stolen", "tone": "good", "items": ["Thief capped at $2,000/day", "48 hours to cancel any recovery they attempt"]})
 
 # ---------------------------------------------------------------- checklist and recap

@@ -88,7 +88,7 @@ sc("flow", "So here's what a stuck transaction actually does. You send transacti
           {"label": "Tx #7", "sub": "Also waiting", "icon": "clock"}, {"label": "Replace #5", "sub": "Same nonce, higher fee", "icon": "swap"}])
 sc("compare", "When you replace a stuck transaction, you actually have two choices, both using the same nonce. Speed it up: keep the same instruction, just raise the fee, so it confirms as originally intended. Or cancel it: replace it with a zero-value transaction to yourself, at a higher fee, which uses up that nonce harmlessly and clears the jam without ever doing the original action.",
    chapter="The nonce",
-   left={"label": "Speed up", "tone": "good", "items": ["Same instruction, higher fee", "Confirms as originally intended"]},
+   title="Speed up vs cancel a transaction", left={"label": "Speed up", "tone": "good", "items": ["Same instruction, higher fee", "Confirms as originally intended"]},
    right={"label": "Cancel", "tone": "neutral", "items": ["Zero-value tx to yourself, higher fee", "Clears the jam, does nothing else"]})
 sc("quiz", "Quick check. All your newer transactions are stuck pending. What's the most likely cause? [[pause 4]] The answer: an earlier nonce is stuck. Replace it or speed it up, same nonce, higher fee, and everything behind it follows immediately.",
    chapter="The nonce", n=2, of=4, q="All your newer transactions are stuck pending. What's the most likely cause?",

@@ -115,6 +115,7 @@
   {
    "type": "compare",
    "chapter": "What IL actually measures",
+   "title": "When ETH rises vs falls",
    "left": {
     "label": "ETH rises: $3,000 → $4,000",
     "tone": "warn",
@@ -254,6 +255,7 @@
   {
    "type": "compare",
    "chapter": "Full LP P&L",
+   "title": "The same gas on $6,000 vs $600",
    "left": {
     "label": "$20 gas, on $6,000",
     "tone": "good",
@@ -317,6 +319,7 @@
   {
    "type": "compare",
    "chapter": "Worked example",
+   "title": "LP value alone vs the full total",
    "left": {
     "label": "LP value alone",
     "tone": "warn",

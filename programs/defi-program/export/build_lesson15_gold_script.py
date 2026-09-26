@@ -101,7 +101,7 @@ sc("flow", "Zoom into just the two recovery days, because that's where the real 
           {"label": "Redemption confidence returns", "sub": "Minters act again", "icon": "check"}, {"label": "Mar 13: ≈$1.00", "sub": "Peg recovered", "icon": "swap"}])
 sc("compare", "Compare the two collapses directly, because the contrast is the whole lesson. Terra had no outside reserve, so the spiral had nothing to stop it, and it never recovered. U.S.D.C. had real reserves, just temporarily hard to access, so once access was restored, the peg came straight back. Same word, “depeg,” two completely different outcomes, because the underlying design was different.",
    chapter="Case study: USDC (2023)",
-   left={"label": "Terra (UST), 2022", "tone": "bad", "items": ["No outside reserve", "Nothing to stop the spiral", "Never recovered"]},
+   title="Two depegs: Terra vs USDC", left={"label": "Terra (UST), 2022", "tone": "bad", "items": ["No outside reserve", "Nothing to stop the spiral", "Never recovered"]},
    right={"label": "USDC, 2023", "tone": "good", "items": ["Real reserves, temporarily hard to reach", "Access restored within days", "Peg fully recovered"]})
 sc("quiz", "Quick check. What actually caused USDC's price to recover in March twenty twenty-three? [[pause 4]] The answer: confirmation that the reserves were real and depositors would be made whole, which restored confidence and let redemption function normally again. Not a change to how the coin itself works.",
    "Quick check. What actually caused USDC's price to recover in March 2023? [[pause 4]] The answer: confirmation that the reserves were real and depositors would be made whole, which restored confidence and let redemption function normally again. Not a change to how the coin itself works.",

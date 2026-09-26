@@ -96,6 +96,7 @@
   {
    "type": "compare",
    "chapter": "Public by default",
+   "title": "A bank balance vs a public address",
    "left": {
     "label": "A bank balance",
     "tone": "good",
@@ -200,6 +201,7 @@
   {
    "type": "compare",
    "chapter": "Link less",
+   "title": "Where you attach your name",
    "left": {
     "label": "A name on a public address",
     "tone": "good",
@@ -306,6 +308,7 @@
   {
    "type": "compare",
    "chapter": "Physical risk",
+   "title": "A single key vs 2-of-3 multisig",
    "left": {
     "label": "A single key",
     "tone": "bad",
@@ -338,6 +341,7 @@
   {
    "type": "compare",
    "chapter": "Physical risk",
+   "title": "What's worth sharing",
    "left": {
     "label": "Worth telling",
     "tone": "good",

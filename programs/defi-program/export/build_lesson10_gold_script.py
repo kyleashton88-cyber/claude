@@ -66,7 +66,7 @@ img(D + "approval-anatomy.png", "Word two: approval",
     chapter="Words you'll need")
 sc("compare", "One habit that comes straight from that anatomy. Most apps default to asking for an unlimited approval, permission to move any amount, forever, because it means you won't be asked again next time. A safer habit, where your wallet allows it, is an exact approval: just enough for this one transaction. It costs you one extra click now and then. It also means a compromised app can only ever take what you approved.",
    chapter="Words you'll need",
-   left={"label": "Unlimited approval", "tone": "bad", "items": ["The app's default, usually", "Never asks again", "A compromise can take everything approved"]},
+   title="Unlimited vs exact approval", left={"label": "Unlimited approval", "tone": "bad", "items": ["The app's default, usually", "Never asks again", "A compromise can take everything approved"]},
    right={"label": "Exact approval", "tone": "good", "items": ["One extra click, sometimes", "Just enough for this transaction", "A compromise can only take that amount"]})
 sc("flow", "Word three: multisig, short for multi-signature. A wallet that needs several separate keys to agree before it can act. Picture a vault with three locks, held by three different people, and any two of them are enough to open it. One compromised key isn't enough on its own. That's the whole idea: no single point of failure.",
    chapter="Words you'll need", title="A 2-of-3 multisig", layout="cycle",
@@ -81,7 +81,7 @@ img(D + "simulate-before-sign.png", "Word five: simulation",
     chapter="Words you'll need")
 sc("compare", "And here's how to actually catch phishing in the moment. A fake site copies the real one closely, but the web address is slightly wrong, and you usually reached it through a search ad or a message, not a bookmark. A real site's address matches exactly, and you got there through your own bookmark or by typing it yourself. A padlock icon in the browser proves the connection is encrypted. It proves nothing about who's on the other end.",
    chapter="Words you'll need",
-   left={"label": "Likely fake", "tone": "bad", "items": ["Address is slightly off", "Reached via a search ad or message", "Padlock icon present (proves nothing here)"]},
+   title="Spotting a fake token", left={"label": "Likely fake", "tone": "bad", "items": ["Address is slightly off", "Reached via a search ad or message", "Padlock icon present (proves nothing here)"]},
    right={"label": "Likely real", "tone": "good", "items": ["Address matches exactly", "Reached via your own bookmark", "You typed it yourself, or confirmed it first"]})
 sc("quiz", "Quick check. What's the core idea behind a multisig wallet? [[pause 4]] The answer: it needs several separate keys to agree before it can act, so one stolen key, on its own, can't move the funds.",
    chapter="Words you'll need", n=1, of=4, q="What's the core idea behind a multisig wallet?",
