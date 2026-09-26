@@ -289,7 +289,8 @@ function sceneBody(s, W, H, T) {
       // this just hands it the layout + timing data and mounts its canvas.
       const L = flowLayout(s, W, H);
       const data = {
-        W, H, seed: s.seed ?? 11,
+        W, H, seed: s.seed ?? 11, shape: s.shape, cameraMove: s.cameraMove,
+        dur: Math.max(6, ...[].concat(T.items, T.edges).flat()),
         nodes: L.nodes.map((n, i) => ({ id: n.id ?? String(i), label: esc(n.label), sub: n.sub ? esc(n.sub) : '', tone: n.tone, px: n.px, py: n.py, nw: L.nw })),
         edges: L.edges.map(e => ({ from: e.from, to: e.to, label: e.label || '', tone: e.tone })),
         itemsT: T.items, edgesT: T.edges,
@@ -300,6 +301,34 @@ function sceneBody(s, W, H, T) {
         <div id="gl3d-mount" style="position:absolute;inset:0"></div>
         <script>window.__WEBGL_SCENE = ${json};</script>
         <script src="${WEBGL_BUNDLE.flow3d}"></script></div>`;
+    }
+    case 'chart3d': {
+      // WebGL counterpart of `chart` (bars/donut only - no `line`, see the
+      // skill doc): glowing particle-stream bars or a glowing particle-arc
+      // donut instead of flat SVG shapes, same title/sub/note chrome and the
+      // same T.items counter-driven reveal timing as the flat version.
+      const mount = `<div id="gl3d-mount" style="position:absolute;inset:0"></div>`;
+      const head = s.title ? `<div style="position:absolute;left:150px;right:150px;top:${fs(104, 300)}px;text-align:center;z-index:2">${title(s.title)}
+        ${s.sub ? `<div class="in" data-in="${T.v0 + 0.3}" style="margin-top:14px;font-size:32px;color:rgba(255,255,255,.72)">${esc(s.sub)}</div>` : ''}</div>` : '';
+      const note = s.note ? `<div class="in" data-in="${T.note}" style="position:absolute;left:220px;right:220px;bottom:${fs(200, 380)}px;text-align:center;font-size:30px;font-weight:700;color:${C.aquaDark};z-index:2">${esc(s.note)}</div>` : '';
+      let data;
+      if (s.kind === 'donut') {
+        const tot = s.segs.reduce((a, g) => a + g.value, 0);
+        let acc = 0;
+        const segs = s.segs.map((g, i) => { const f = g.value / tot, st = acc; acc += f;
+          return { label: esc(g.label), text: g.text ? esc(g.text) : '', tone: g.tone, f, st, count: counter(g.show || String(g.value)) }; });
+        data = { kind: 'donut', W, H, seed: s.seed ?? 11, cameraMove: s.cameraMove, dur: Math.max(6, ...T.items.flat()),
+          segs, center: s.center ? esc(s.center) : '', centerSub: s.centerSub ? esc(s.centerSub) : '', itemsT: T.items };
+      } else {
+        const bars = s.bars, hi = s.max ?? Math.max(...bars.map(b => (b.base || 0) + b.value)) * 1.08;
+        data = { kind: 'bars', W, H, seed: s.seed ?? 11, cameraMove: s.cameraMove, dur: Math.max(6, ...T.items.flat()), max: hi,
+          bars: bars.map(b => ({ label: esc(b.label), text: b.text ? esc(b.text) : '', tone: b.tone, value: b.value, base: b.base || 0, count: counter(b.show || String(b.value)) })),
+          itemsT: T.items };
+      }
+      const json = JSON.stringify(data).replace(/<\/script/gi, '<\\/script');
+      return `<div style="position:absolute;inset:0">${head}${mount}${note}
+        <script>window.__WEBGL_SCENE = ${json};</script>
+        <script src="${WEBGL_BUNDLE.chart3d}"></script></div>`;
     }
     case 'chart': {
       // Animated chart: bars grow (or a waterfall steps down), a line draws itself, or a donut
@@ -408,7 +437,7 @@ function planTimes(s, sents, voStart, voDur) {
       T.edges = edges.map(e => { const j = idx[e.to]; return [Math.max(voStart, T.items[j][0] - 0.45), T.items[j][1]]; });
       break;
     }
-    case 'chart': {
+    case 'chart': case 'chart3d': {
       const texts = s.kind === 'donut' ? s.segs.map(g => `${g.label} ${g.text || ''}`) : s.kind === 'line' ? (s.marks || []).map(m => m.text) : s.bars.map(b => `${b.label} ${b.text || ''}`);
       T.items = texts.length ? syncItems(texts, sents, voStart, voDur, s.at) : [];
       if (s.kind === 'line') T.lines = s.series.map((sr, k) => [sr.at != null ? sentAt(sr.at, T.v0 + 0.4) : T.v0 + 0.4 + k * 0.6, sr.draw || Math.min(5, voDur * 0.35)]);
@@ -606,7 +635,7 @@ async function thumbnail(video, browser) {
 async function render(video, browser) {
   if (process.env.SCENES) { const [x, y] = process.env.SCENES.split('-').map(Number); video = { ...video, id: `${video.id}-test`, scenes: video.scenes.slice(x - 1, y || x) }; }
   const [W, H] = video.size;
-  for (const name of new Set(video.scenes.map(s => s.type).filter(t => t === 'flow3d'))) await ensureWebgl(name);
+  for (const name of new Set(video.scenes.map(s => s.type).filter(t => t === 'flow3d' || t === 'chart3d'))) await ensureWebgl(name);
   const dir = path.join(WORK, video.id);
   fs.mkdirSync(dir, { recursive: true });
   const scenes = video.scenes.map((s, i) => ({ id: `s${String(i + 1).padStart(2, '0')}`, vo: s.vo, speed: s.speed || video.speed || 0.96 }));
@@ -664,7 +693,7 @@ function visual(s) {
     title: () => `Title card: ${s.num || ''} ${s.title}`, pillars: () => `${s.title}: ${(s.items || []).map(p => p.title).join(' · ')}`,
     compare: () => `${s.title}: ${s.left.label} (${s.left.items.join(', ')}) vs ${s.right.label} (${s.right.items.join(', ')})`,
     steps: () => `${s.title}: ${(s.steps || []).join(' → ')}${s.result ? ` ⇒ ${s.result}` : ''}`, quiz: () => `Quiz: ${s.q} → ${s.a}`,
-    chart: () => `Chart (${s.kind || 'bars'}): ${s.title}`,
+    chart: () => `Chart (${s.kind || 'bars'}): ${s.title}`, chart3d: () => `Chart (3D/WebGL, ${s.kind || 'bars'}): ${s.title}`,
     flow: () => `Flow: ${(s.nodes || []).map(n => n.label).join(' → ')}`, flow3d: () => `Flow (3D/WebGL): ${(s.nodes || []).map(n => n.label).join(' → ')}`,
     cutaway: () => `Screen cutaway: ${(s.shots || []).map(x => x.caption || x.src).join(' → ')}`,
   };

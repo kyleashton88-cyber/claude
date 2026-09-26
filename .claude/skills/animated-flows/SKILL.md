@@ -58,3 +58,9 @@ If a mechanism needs more than a node graph (a price curve moving, an order book
 build it as an image or chart in `export/build_images.js`, then use an `image` scene with
 `callouts` and `zoom`. For truly bespoke motion, add a new scene type to `sceneBody`,
 `planTimes` and `setTime` in `export/build_video.js`, following the `flow` implementation.
+
+For a genuinely 3D/WebGL treatment of a flow (floating holographic nodes, glowing
+edges, a real Three.js camera) instead of flat CSS/SVG, use `flow3d` — same
+`nodes`/`edges` JSON, just `"type": "flow3d"` — see the `webgl-motion-graphics`
+skill for when it's a good fit, its render-time/file-size cost, and its
+current limits (6-node ceiling, no line-chart equivalent yet).
