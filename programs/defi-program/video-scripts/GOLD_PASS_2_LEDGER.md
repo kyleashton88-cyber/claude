@@ -6,7 +6,7 @@ Old mp4s / old gold scripts do not count, even if the queue elsewhere still says
 
 | Lesson | Title | New visual used | Status |
 |---|---|---|---|
-| 0.0 | Mastery Starter | | pending |
+| 0.0 | Mastery Starter | row+pop+area+ring+share bars/line/donut variants, chart3d bars anchor | done |
 | 0.1 | Money, ledgers and why blockchains exist | | pending |
 | 0.2 | Opening and securing an exchange account | | pending |
 | 0.3 | Buying your first crypto without overpaying | | pending |

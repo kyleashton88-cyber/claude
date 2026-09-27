@@ -48,7 +48,7 @@ node build_video.js lessons              # all lessons (several hours of renderi
 ## Every lesson video
 | Lesson | Title | Scenes | Est. length | Script | Rendered |
 |---|---|---|---|---|---|
-| 0.0 | Mastery Starter | 47 | 15.1 min | `video-scripts/gold/lesson-00-0.json` (gold: story-driven, animated charts) | ✓ |
+| 0.0 | Mastery Starter | 47 | 15:05 | `video-scripts/gold/lesson-00-0.json` (gold pass 2: row/pop/area/ring/share chart variants, chart3d mastery-ladder anchor) | ✓ |
 | 0.1 | Money, ledgers and why blockchains exist | 35 | 11.7 min | `video-scripts/gold/lesson-00-1.json` (gold: real BTC/ETH timeline, animated charts, labelled-illustrative screens) | ✓ |
 | 0.2 | Opening and securing an exchange account | 12 | 4.1 min | `video-scripts/lessons/lesson-00-2.json` | ✓ |
 | 0.3 | Buying your first crypto without overpaying | 11 | 3.0 min | `video-scripts/lessons/lesson-00-3.json` | ✓ |
