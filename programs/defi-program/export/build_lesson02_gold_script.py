@@ -67,6 +67,8 @@ sc("compare", "So flip those three checks around, and you get the red flags. A r
    chapter="Choosing an exchange", title="Reputable exchange vs. red flag",
    left={"label": "Red flags", "tone": "bad", "items": ["Unregistered, anywhere you can check", "Brand new, no track record", "Skips KYC entirely"]},
    right={"label": "Reputable", "tone": "good", "items": ["Licensed where you live", "Long, established track record", "Asks for KYC"]})
+sc("statement", "One caution, though. Choosing a licensed, reputable exchange doesn't mean zero risk. Even large, well-known exchanges have had outages and security incidents. It means a far better starting point, and someone accountable if something goes wrong, not a guarantee that nothing ever will.",
+   chapter="Choosing an exchange", kicker="One caution", lines=["\"Reputable\" isn't \"risk-free.\"", "It's a better starting point."], sub="Even large exchanges have had outages and incidents. This isn't a guarantee that nothing ever goes wrong.")
 sc("steps", "One habit protects you before any of the lockdown steps even apply: making sure you're actually on the real site. Type the address yourself, or use a bookmark you saved the first time. Check the domain matches, letter for letter, not just something that looks close. Look for the padlock. And never log in by following a link from an email, a text, or a search ad, even if it looks exactly right.",
    chapter="Choosing an exchange", title="Before you type a password",
    steps=["Type the address yourself, or use a saved bookmark", "Check the domain matches, letter for letter", "Look for the padlock", "Never log in via a link from an email, text or ad"],
