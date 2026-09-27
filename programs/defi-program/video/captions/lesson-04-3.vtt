@@ -1,133 +1,577 @@
 WEBVTT
 
 00:00:00.550 --> 00:00:02.195
-Lesson 4.3.
+Lesson 4.3. Liquid staking (LSTs).
 
-00:00:02.195 --> 00:00:04.970
-Liquid staking (LSTs).
+00:00:02.195 --> 00:00:06.103
+By the end, you'll know exactly how these tokens
 
-00:00:04.970 --> 00:00:07.120
-By the end of this lesson, you'll be
+00:00:06.103 --> 00:00:09.452
+accrue value, and how they can trade at a
 
-00:00:07.120 --> 00:00:09.793
-able to use liquid staking tokens knowing how
+00:00:09.452 --> 00:00:13.280
+discount, before you ever use one as collateral.
 
-00:00:09.793 --> 00:00:12.175
-they accrue value and how they can depeg.
-
-00:00:13.475 --> 00:00:14.765
+00:00:14.580 --> 00:00:15.870
 Here's the plan.
 
-00:00:14.765 --> 00:00:16.450
-First, the key ideas.
+00:00:15.870 --> 00:00:19.577
+What an L.S.T. actually represents, and the two different
 
-00:00:16.450 --> 00:00:19.165
-Then, a worked example, step by step.
+00:00:19.577 --> 00:00:22.625
+ways it can pass staking rewards on to you.
 
-00:00:19.165 --> 00:00:20.690
-Then, your checklist.
+00:00:22.625 --> 00:00:24.936
+How a discount can appear under stress,
 
-00:00:20.690 --> 00:00:22.852
-And finally, a three-question quiz.
+00:00:24.936 --> 00:00:27.200
+and exactly who it actually hurts.
 
-00:00:24.152 --> 00:00:28.779
-A liquid staking token (LST) represents staked assets plus
+00:00:27.200 --> 00:00:29.526
+A full worked example, using the source
 
-00:00:28.779 --> 00:00:32.922
-rewards, and can be traded or used as collateral.
+00:00:29.526 --> 00:00:32.385
+material's own accrual and discount numbers.
 
-00:00:32.922 --> 00:00:36.021
-Value accrues by rebasing (your balance grows)
+00:00:32.385 --> 00:00:34.230
+And a checklist for using
 
-00:00:36.021 --> 00:00:38.461
-or an exchange rate that rises (each
+00:00:34.230 --> 00:00:37.140
+L.S.T.s safely, especially as collateral.
 
-00:00:38.461 --> 00:00:41.332
-token is worth more of the underlying).
+00:00:38.440 --> 00:00:40.505
+What an LST actually represents.
 
-00:00:41.332 --> 00:00:43.721
-In stress, an LST can trade at
+00:00:41.805 --> 00:00:43.869
+Here's exactly what you're holding when
 
-00:00:43.721 --> 00:00:46.342
-a discount to what it redeems for.
+00:00:43.869 --> 00:00:45.820
+you hold a liquid staking token.
 
-00:00:47.642 --> 00:00:50.157
-Let's work an example, step by step.
+00:00:45.820 --> 00:00:49.252
+It represents your original staked assets, plus every
 
-00:00:50.157 --> 00:00:56.019
-An exchange-rate LST goes from 1.000 to 1.030
+00:00:49.252 --> 00:00:52.430
+reward that's accrued on them since, bundled into
 
-00:00:56.019 --> 00:01:00.652
-of the underlying over a year: 3%.
+00:00:52.430 --> 00:00:55.353
+a single token you can still trade, transfer,
 
-00:01:00.652 --> 00:01:02.288
-In a panic it trades
+00:00:55.353 --> 00:00:58.149
+or use as collateral elsewhere in DeFi, all
 
-00:01:02.288 --> 00:01:04.301
-at 0.98 on the market.
+00:00:58.149 --> 00:01:01.500
+without ever unstaking your underlying position.
 
-00:01:04.301 --> 00:01:08.762
-Holders who can wait for redemption (queue) recover 1.03;
+00:01:01.500 --> 00:01:04.052
+That's the entire point of the design: keeping
 
-00:01:08.762 --> 00:01:12.446
-holders forced to sell take the 2% discount.
+00:01:04.052 --> 00:01:06.604
+your capital liquid and useful, while it keeps
 
-00:01:12.446 --> 00:01:15.019
-Never borrow so close to the limit
+00:01:06.604 --> 00:01:08.885
+earning staking rewards in the background.
 
-00:01:15.019 --> 00:01:17.666
-that an LST discount liquidates you.
+00:01:10.185 --> 00:01:13.053
+Here's the two different ways an L.S.T. can
 
-00:01:18.967 --> 00:01:20.427
+00:01:13.053 --> 00:01:16.117
+actually pass those accrued rewards on to you,
+
+00:01:16.117 --> 00:01:19.090
+since protocols genuinely differ on this.
+
+00:01:19.090 --> 00:01:23.038
+A rebasing L.S.T. grows your token balance directly, over
+
+00:01:23.038 --> 00:01:26.306
+time, so you hold more tokens tomorrow than you
+
+00:01:26.306 --> 00:01:29.465
+do today, each still worth about the same.
+
+00:01:29.465 --> 00:01:33.910
+An exchange-rate L.S.T. instead keeps your token balance fixed,
+
+00:01:33.910 --> 00:01:37.731
+but each token becomes redeemable for a growing amount
+
+00:01:37.731 --> 00:01:41.690
+of the underlying asset, as rewards accrue underneath it.
+
+00:01:42.990 --> 00:01:46.979
+Worth being precise about why this distinction actually matters
+
+00:01:46.979 --> 00:01:50.395
+in practice, beyond just being a technical detail.
+
+00:01:50.395 --> 00:01:54.121
+A rebasing token can complicate certain integrations, since
+
+00:01:54.121 --> 00:01:57.102
+some contracts don't expect a balance to change
+
+00:01:57.102 --> 00:01:59.265
+on its own without a transfer.
+
+00:01:59.265 --> 00:02:03.113
+An exchange-rate token avoids that specific problem, which is
+
+00:02:03.113 --> 00:02:06.093
+part of why it's become the more common design,
+
+00:02:06.093 --> 00:02:08.886
+but it does mean the token's price, not your
+
+00:02:08.886 --> 00:02:11.555
+balance, is what carries the growing value.
+
+00:02:12.855 --> 00:02:15.030
+That 3% a year, compounded.
+
+00:02:16.330 --> 00:02:19.822
+Here's that same three percent annual rate, extended out
+
+00:02:19.822 --> 00:02:22.702
+across five years, so you can see what genuine
+
+00:02:22.702 --> 00:02:26.065
+compounding actually does to the redemption value.
+
+00:02:26.065 --> 00:02:28.981
+Starting at one point zero zero zero, year
+
+00:02:28.981 --> 00:02:31.655
+one closes at one point zero three.
+
+00:02:31.655 --> 00:02:34.495
+By year three, one point zero nine three.
+
+00:02:34.495 --> 00:02:37.015
+By year five, one point one five nine,
+
+00:02:37.015 --> 00:02:40.311
+meaning each token then redeems for nearly sixteen
+
+00:02:40.311 --> 00:02:43.348
+percent more of the underlying than it started
+
+00:02:43.348 --> 00:02:47.354
+with, entirely from staking rewards compounding on themselves.
+
+00:02:48.654 --> 00:02:49.744
+Quick check.
+
+00:02:49.744 --> 00:02:51.791
+What are the two ways an L.S.T.
+
+00:02:51.791 --> 00:02:53.519
+can pass rewards on to you?
+
+00:02:57.939 --> 00:03:01.484
+The answer: rebasing, where your token balance itself
+
+00:03:01.484 --> 00:03:04.438
+grows, or a rising exchange rate, where each
+
+00:03:04.438 --> 00:03:07.129
+token redeems for more of the underlying.
+
+00:03:08.429 --> 00:03:10.174
+How a discount actually appears.
+
+00:03:11.474 --> 00:03:14.369
+Here's exactly how this gap opens up, since
+
+00:03:14.369 --> 00:03:17.658
+an L.S.T.'s market price and its redemption value
+
+00:03:17.658 --> 00:03:20.919
+aren't actually the same thing, mechanically.
+
+00:03:20.919 --> 00:03:23.466
+Redemption value is what the L.S.T. is
+
+00:03:23.466 --> 00:03:26.535
+genuinely worth, based on its accrued rewards,
+
+00:03:26.535 --> 00:03:29.016
+if you're willing to wait through the
+
+00:03:29.016 --> 00:03:32.124
+protocol's own unstaking queue to claim it.
+
+00:03:32.124 --> 00:03:35.349
+Market price is simply whatever someone else will pay
+
+00:03:35.349 --> 00:03:37.919
+for it, right now, on the open market.
+
+00:03:37.919 --> 00:03:39.985
+In calm conditions, arbitrage keeps
+
+00:03:39.985 --> 00:03:42.179
+these two numbers close together.
+
+00:03:42.179 --> 00:03:44.574
+Under real stress, that arbitrage can
+
+00:03:44.574 --> 00:03:46.339
+break down, and a gap opens.
+
+00:03:47.639 --> 00:03:50.256
+Worth being precise about who actually has the
+
+00:03:50.256 --> 00:03:52.839
+power to close this gap, and who doesn't.
+
+00:03:52.839 --> 00:03:55.297
+Anyone willing, and able, to simply wait
+
+00:03:55.297 --> 00:03:58.294
+through the redemption queue can eventually claim
+
+00:03:58.294 --> 00:04:01.291
+the full redemption value, regardless of whatever
+
+00:04:01.291 --> 00:04:03.869
+the market price does in the meantime.
+
+00:04:03.869 --> 00:04:06.836
+The discount only becomes a real, permanent loss
+
+00:04:06.836 --> 00:04:09.197
+for whoever is forced to sell into the
+
+00:04:09.197 --> 00:04:12.224
+market immediately, unable to wait that queue out.
+
+00:04:13.524 --> 00:04:17.255
+Here's a distinction worth keeping clear, since an L.S.T.
+
+00:04:17.255 --> 00:04:20.922
+discount and a genuine protocol failure can look similar
+
+00:04:20.922 --> 00:04:24.889
+from a chart alone, but mean completely different things.
+
+00:04:24.889 --> 00:04:27.197
+A discount is a temporary market gap,
+
+00:04:27.197 --> 00:04:29.627
+fully backed the entire time, and fully
+
+00:04:29.627 --> 00:04:32.599
+recoverable simply by waiting out the queue.
+
+00:04:32.599 --> 00:04:35.703
+A genuine depeg, from an actual protocol failure,
+
+00:04:35.703 --> 00:04:38.806
+means the backing itself is impaired, and waiting
+
+00:04:38.806 --> 00:04:41.289
+doesn't necessarily fix anything at all.
+
+00:04:42.589 --> 00:04:43.679
+Quick check.
+
+00:04:43.679 --> 00:04:46.264
+What exactly is an L.S.T. discount?
+
+00:04:50.684 --> 00:04:53.204
+The answer: its market price falling below
+
+00:04:53.204 --> 00:04:55.723
+what it would actually redeem for, through
+
+00:04:55.723 --> 00:04:57.774
+the protocol's own unstaking queue.
+
+00:04:59.074 --> 00:05:00.079
+Worked example.
+
+00:05:01.379 --> 00:05:04.373
+Here's the accrual side first, over an ordinary
+
+00:05:04.373 --> 00:05:06.919
+year, with no panic involved at all.
+
+00:05:06.919 --> 00:05:10.722
+An exchange-rate L.S.T. starts the year redeemable
+
+00:05:10.722 --> 00:05:13.108
+for one point zero zero zero of
+
+00:05:13.108 --> 00:05:15.794
+the underlying asset, per token.
+
+00:05:15.794 --> 00:05:18.994
+Over that year, staking rewards accrue underneath it.
+
+00:05:18.994 --> 00:05:21.688
+By year's end, it's redeemable for one
+
+00:05:21.688 --> 00:05:24.382
+point zero three zero, a genuine three
+
+00:05:24.382 --> 00:05:27.421
+percent gain, entirely from staking rewards.
+
+00:05:28.721 --> 00:05:31.777
+Now here's what happens when a panic hits, right
+
+00:05:31.777 --> 00:05:34.896
+at that same one point zero three zero redemption
+
+00:05:34.896 --> 00:05:38.626
+value, and the market and redemption value split apart.
+
+00:05:38.626 --> 00:05:42.748
+Patient holders, willing to enter the protocol's own redemption
+
+00:05:42.748 --> 00:05:45.968
+queue and simply wait, still recover the full one
+
+00:05:45.968 --> 00:05:49.166
+point zero three zero they're genuinely owed.
+
+00:05:49.166 --> 00:05:52.134
+Forced sellers, who need to exit immediately on
+
+00:05:52.134 --> 00:05:54.545
+the open market, instead sell at a two
+
+00:05:54.545 --> 00:05:57.451
+percent discount to that same redemption value.
+
+00:05:58.751 --> 00:06:01.428
+Here's the one sentence this entire worked
+
+00:06:01.428 --> 00:06:04.167
+example exists to prove, worth holding onto
+
+00:06:04.167 --> 00:06:07.206
+more than the specific percentages involved.
+
+00:06:07.206 --> 00:06:09.907
+The exact same token, worth the exact same
+
+00:06:09.907 --> 00:06:13.111
+one point zero three zero underneath, delivers two
+
+00:06:13.111 --> 00:06:16.817
+completely different outcomes, purely based on whether its
+
+00:06:16.817 --> 00:06:18.876
+holder could afford to wait.
+
+00:06:18.876 --> 00:06:21.043
+That gap is never about the asset's
+
+00:06:21.043 --> 00:06:23.451
+real value; it's entirely about who was
+
+00:06:23.451 --> 00:06:24.956
+forced to sell, and when.
+
+00:06:26.256 --> 00:06:27.346
+Quick check.
+
+00:06:27.346 --> 00:06:30.481
+Who's actually hurt most by an L.S.T. discount?
+
+00:06:34.901 --> 00:06:37.412
+The answer: forced sellers, who can't wait
+
+00:06:37.412 --> 00:06:40.216
+out the redemption queue, and leveraged holders
+
+00:06:40.216 --> 00:06:42.961
+who get liquidated directly into that discount.
+
+00:06:44.261 --> 00:06:45.336
+The leverage trap.
+
+00:06:46.636 --> 00:06:49.554
+Here's exactly how this discount turns into
+
+00:06:49.554 --> 00:06:53.069
+forced liquidation, specifically for anyone using an
+
+00:06:53.069 --> 00:06:56.221
+L.S.T. as collateral, close to their limit.
+
+00:06:56.221 --> 00:07:00.472
+A protocol's own oracle reads the L.S.T.'s current market
+
+00:07:00.472 --> 00:07:05.316
+price, discount included, not its underlying redemption value.
+
+00:07:05.316 --> 00:07:08.771
+If that discounted price crosses your collateral's own
+
+00:07:08.771 --> 00:07:13.106
+liquidation threshold, you're liquidated immediately, at exactly the
+
+00:07:13.106 --> 00:07:16.184
+wrong moment, even though the asset itself never
+
+00:07:16.184 --> 00:07:18.446
+actually lost any real value at all.
+
+00:07:19.746 --> 00:07:23.396
+Here's that exact same two percent discount, applied to
+
+00:07:23.396 --> 00:07:27.503
+two different borrowers against the same L.S.T. collateral, to
+
+00:07:27.503 --> 00:07:30.671
+make the rule concrete rather than abstract.
+
+00:07:30.671 --> 00:07:32.706
+A borrower with real room to spare
+
+00:07:32.706 --> 00:07:35.323
+simply absorbs that two percent inside their
+
+00:07:35.323 --> 00:07:38.181
+existing buffer, and nothing happens at all.
+
+00:07:38.181 --> 00:07:40.620
+A borrower already sitting right at their
+
+00:07:40.620 --> 00:07:42.885
+limit gets liquidated by that same two
+
+00:07:42.885 --> 00:07:45.673
+percent, purely because they left themselves no
+
+00:07:45.673 --> 00:07:47.589
+buffer for it in the first place.
+
+00:07:48.889 --> 00:07:52.120
+Here's the actual rule this entire chain of reasoning
+
+00:07:52.120 --> 00:07:55.052
+leads to, and it's worth remembering on its own,
+
+00:07:55.052 --> 00:07:58.104
+independent of everything else in this lesson.
+
+00:07:58.104 --> 00:08:00.859
+Never borrow so close to your limit that
+
+00:08:00.859 --> 00:08:04.756
+an L.S.T. discount alone, entirely temporary and entirely
+
+00:08:04.756 --> 00:08:08.183
+disconnected from the asset's real value, could be
+
+00:08:08.183 --> 00:08:10.199
+the thing that liquidates you.
+
+00:08:11.499 --> 00:08:12.869
+Checking the queue yourself.
+
+00:08:14.169 --> 00:08:17.147
+Here's how to actually check a redemption queue before
+
+00:08:17.147 --> 00:08:19.504
+you rely on being able to wait it out.
+
+00:08:19.504 --> 00:08:23.031
+Check the protocol's own documentation or dashboard for
+
+00:08:23.031 --> 00:08:26.354
+its current stated unbonding or redemption time.
+
+00:08:26.354 --> 00:08:28.432
+Check whether that time is fixed, or
+
+00:08:28.432 --> 00:08:30.622
+can extend under heavy demand, since a
+
+00:08:30.622 --> 00:08:32.944
+rush of withdrawals can lengthen it.
+
+00:08:32.944 --> 00:08:35.721
+And size your own discount tolerance around that
+
+00:08:35.721 --> 00:08:38.384
+real number, not around an assumption that you
+
+00:08:38.384 --> 00:08:40.424
+can always exit whenever you'd like.
+
+00:08:41.724 --> 00:08:43.184
 Here's your checklist.
 
-00:01:20.427 --> 00:01:21.962
-Do it now, for real.
+00:08:43.184 --> 00:08:47.369
+Do it before using any L.S.T., especially as collateral.
 
-00:01:21.962 --> 00:01:25.957
-First, Accrual method known (rebase vs exchange rate).
+00:08:47.369 --> 00:08:50.948
+Know its accrual method, rebasing or exchange rate, since
 
-00:01:25.957 --> 00:01:28.792
-Next, Redemption path and queue length known.
+00:08:50.948 --> 00:08:54.149
+that changes how it behaves in other contracts.
 
-00:01:28.792 --> 00:01:32.042
-And finally, Discount alert set if used as collateral.
+00:08:54.149 --> 00:08:56.626
+Know its redemption path, and specifically
 
-00:01:33.342 --> 00:01:34.552
-Question 1.
+00:08:56.626 --> 00:08:58.884
+how long that queue actually runs.
 
-00:01:34.552 --> 00:01:37.432
-Two ways LSTs pass on rewards?
+00:08:58.884 --> 00:09:01.380
+And set a discount alert for yourself, if
 
-00:01:41.852 --> 00:01:45.692
-The answer: Rebasing balances, or a rising exchange rate.
+00:09:01.380 --> 00:09:04.054
+you're using it as collateral, so a widening
 
-00:01:46.992 --> 00:01:48.237
-Question 2.
+00:09:04.054 --> 00:09:06.074
+gap never catches you by surprise.
 
-00:01:48.237 --> 00:01:50.472
-What is an LST discount?
+00:09:07.374 --> 00:09:08.619
+Let's recap.
 
-00:01:54.892 --> 00:01:56.609
-The answer: Its market price
+00:09:08.619 --> 00:09:11.974
+An L.S.T. represents staked assets plus accrued
 
-00:01:56.609 --> 00:01:58.682
-falling below its redemption value.
+00:09:11.974 --> 00:09:15.769
+rewards, still tradeable and usable as collateral.
 
-00:01:59.982 --> 00:02:01.252
-Question 3.
+00:09:15.769 --> 00:09:18.234
+It accrues value either by rebasing your
 
-00:02:01.252 --> 00:02:02.947
-Who is hurt most by a discount?
+00:09:18.234 --> 00:09:21.120
+balance, or through a rising exchange rate.
 
-00:02:07.367 --> 00:02:09.186
-The answer: Forced sellers and
+00:09:21.120 --> 00:09:23.507
+Under real stress, it can trade at a
 
-00:02:09.186 --> 00:02:11.357
-leveraged holders who get liquidated.
+00:09:23.507 --> 00:09:26.410
+discount to its redemption value, a gap that
 
-00:02:12.657 --> 00:02:15.172
-Do the checklist now, before you move on.
+00:09:26.410 --> 00:09:29.548
+only becomes a real loss for forced sellers.
 
-00:02:15.172 --> 00:02:19.047
-Next up, Lesson 4.4: Restaking & shared security.
+00:09:29.548 --> 00:09:31.801
+And the rule that follows from all of
+
+00:09:31.801 --> 00:09:34.113
+it: never borrow so close to the limit
+
+00:09:34.113 --> 00:09:37.078
+that a temporary discount alone can liquidate you.
+
+00:09:38.378 --> 00:09:41.504
+Know your LST's accrual method and redemption queue,
+
+00:09:41.504 --> 00:09:43.804
+and never borrow so close to the limit
+
+00:09:43.804 --> 00:09:46.463
+that a discount alone can liquidate you.
+
+00:09:46.463 --> 00:09:50.338
+Next up, Lesson 4.4: restaking and shared security.
