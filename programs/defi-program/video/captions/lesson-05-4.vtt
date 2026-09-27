@@ -3,182 +3,557 @@ WEBVTT
 00:00:00.550 --> 00:00:02.285
 Lesson 5.4.
 
-00:00:02.285 --> 00:00:05.780
+00:00:02.285 --> 00:00:05.913
 Smart contracts: state, proxies, admin keys.
 
-00:00:05.780 --> 00:00:07.831
-By the end of this lesson, you'll be
+00:00:05.913 --> 00:00:08.373
+By the end, you'll be able to read exactly
 
-00:00:07.831 --> 00:00:10.105
-able to read who controls a contract and
+00:00:08.373 --> 00:00:11.234
+who controls a contract, and whether its code can
 
-00:00:10.105 --> 00:00:12.655
-whether its code can change after you deposit.
+00:00:11.234 --> 00:00:14.438
+genuinely change after you've already deposited into it.
 
-00:00:13.955 --> 00:00:15.245
+00:00:15.738 --> 00:00:17.028
 Here's the plan.
 
-00:00:15.245 --> 00:00:16.930
-First, the key ideas.
+00:00:17.028 --> 00:00:20.282
+What state, functions, and events actually are, and
 
-00:00:16.930 --> 00:00:19.645
-Then, a worked example, step by step.
+00:00:20.282 --> 00:00:23.523
+why verified source code isn't proof of safety.
 
-00:00:19.645 --> 00:00:21.170
-Then, your checklist.
+00:00:23.523 --> 00:00:25.701
+Proxies, in full, and exactly who
 
-00:00:21.170 --> 00:00:23.332
-And finally, a three-question quiz.
+00:00:25.701 --> 00:00:28.563
+controls upgrades once you've deposited.
 
-00:00:24.632 --> 00:00:28.577
-First, State: what a contract stores (balances, parameters).
+00:00:28.563 --> 00:00:30.409
+Admin keys and roles, and the
 
-00:00:28.577 --> 00:00:31.712
-Functions change it; events log what happened.
+00:00:30.409 --> 00:00:33.108
+specific powers they can actually hold.
 
-00:00:31.712 --> 00:00:34.342
-Next, Verified source: the code published
+00:00:33.108 --> 00:00:35.697
+And a full worked example, reading a real
 
-00:00:34.342 --> 00:00:37.147
-on the explorer matches what's deployed.
+00:00:35.697 --> 00:00:38.718
+vault's real setup, directly on a block explorer.
 
-00:00:37.147 --> 00:00:39.242
-That's good, not proof of safety.
+00:00:40.018 --> 00:00:41.728
+State, functions, and events.
 
-00:00:39.242 --> 00:00:42.429
-Then, Proxy / upgradeable contracts: the address
+00:00:43.028 --> 00:00:46.623
+Here's what these three actually mean, underneath the jargon.
 
-00:00:42.429 --> 00:00:44.511
-you use stays the same, but the
+00:00:46.623 --> 00:00:49.678
+State is simply what a contract stores: balances,
 
-00:00:44.511 --> 00:00:46.827
-logic behind it can be swapped.
+00:00:49.678 --> 00:00:53.033
+parameters, whatever it actually holds and tracks.
 
-00:00:46.827 --> 00:00:50.047
-Whoever controls upgrades controls your funds' rules.
+00:00:53.033 --> 00:00:55.232
+Functions are what change that state,
 
-00:00:50.047 --> 00:00:54.225
-Also, Admin keys and roles: owners, guardians, multisigs;
+00:00:55.232 --> 00:00:57.788
+the actual actions the contract allows.
 
-00:00:54.225 --> 00:00:57.382
-can they pause, upgrade or move funds?
+00:00:57.788 --> 00:01:00.332
+And events are the log, the on-chain record
 
-00:00:57.382 --> 00:01:00.067
-And finally, Timelocks: a delay between an
+00:01:00.332 --> 00:01:03.233
+of what actually happened, when, and to whom.
 
-00:01:00.067 --> 00:01:02.677
-approved change and it taking effect.
+00:01:03.233 --> 00:01:05.592
+Reading a contract, at its most basic
 
-00:01:02.677 --> 00:01:03.962
-Your window to exit.
+00:01:05.592 --> 00:01:08.075
+level, is reading exactly what state it
 
-00:01:05.263 --> 00:01:07.778
-Let's work an example, step by step.
+00:01:08.075 --> 00:01:10.558
+holds, and what functions can change it.
 
-00:01:07.778 --> 00:01:10.289
-On a block explorer, the vault you
+00:01:11.858 --> 00:01:14.879
+Worth being completely direct about verified source
 
-00:01:10.289 --> 00:01:13.302
-use shows "Proxy", with the upgrade admin
+00:01:14.879 --> 00:01:17.552
+code specifically, since it's easy to mistake
 
-00:01:13.302 --> 00:01:16.758
-a 3-of-5 multisig behind a 48-hour timelock.
+00:01:17.552 --> 00:01:19.363
+it for a safety guarantee.
 
-00:01:16.758 --> 00:01:18.896
-That means no instant rug by one
+00:01:19.363 --> 00:01:22.326
+Verified simply means the code published on the
 
-00:01:18.896 --> 00:01:20.775
-key, and 48 hours to exit if
+00:01:22.326 --> 00:01:26.763
+block explorer genuinely matches what's actually deployed on-chain.
 
-00:01:20.775 --> 00:01:23.278
-a change you don't like is queued.
+00:01:26.763 --> 00:01:29.148
+That's good, and genuinely worth checking.
 
-00:01:23.278 --> 00:01:24.928
-A 1-of-1 admin with no
+00:01:29.148 --> 00:01:31.175
+It is not proof the code itself
 
-00:01:24.928 --> 00:01:26.578
-timelock is a red flag.
+00:01:31.175 --> 00:01:33.202
+is safe, bug-free, or free of a
 
-00:01:27.878 --> 00:01:29.338
+00:01:33.202 --> 00:01:36.623
+deliberately malicious function hiding in plain sight.
+
+00:01:37.923 --> 00:01:40.755
+Worth naming why events specifically matter to
+
+00:01:40.755 --> 00:01:43.347
+you, beyond just being a technical detail,
+
+00:01:43.347 --> 00:01:46.238
+since they're genuinely useful in practice.
+
+00:01:46.238 --> 00:01:48.893
+Events are exactly what lets you, or any
+
+00:01:48.893 --> 00:01:52.519
+monitoring tool, watch a contract's real activity after
+
+00:01:52.519 --> 00:01:56.275
+the fact: every deposit, every withdrawal, every upgrade,
+
+00:01:56.275 --> 00:02:00.419
+all logged, timestamped, and publicly readable, without needing
+
+00:02:00.419 --> 00:02:03.463
+to trust anyone's own summary of what happened.
+
+00:02:04.763 --> 00:02:05.853
+Quick check.
+
+00:02:05.853 --> 00:02:07.923
+Does verified source code actually
+
+00:02:07.923 --> 00:02:09.343
+mean a contract is safe?
+
+00:02:13.763 --> 00:02:16.452
+The answer: no. It means the published code
+
+00:02:16.452 --> 00:02:19.508
+matches the deployed code, nothing more than that.
+
+00:02:20.808 --> 00:02:22.008
+Proxies, in full.
+
+00:02:23.308 --> 00:02:26.450
+Here's exactly what happens with a proxy contract,
+
+00:02:26.450 --> 00:02:29.284
+the word introduced back in this module's own
+
+00:02:29.284 --> 00:02:31.863
+Mastery Starter, now covered in full.
+
+00:02:31.863 --> 00:02:34.113
+You interact with one fixed address,
+
+00:02:34.113 --> 00:02:36.298
+the same one every single time.
+
+00:02:36.298 --> 00:02:39.563
+Behind that address, a separate logic contract actually
+
+00:02:39.563 --> 00:02:42.078
+defines what happens when you call it.
+
+00:02:42.078 --> 00:02:44.813
+And that logic contract can be swapped out for
+
+00:02:44.813 --> 00:02:48.013
+a different one entirely, by whoever holds the upgrade
+
+00:02:48.013 --> 00:02:51.388
+permission, without your own address ever changing at all.
+
+00:02:52.688 --> 00:02:55.702
+Worth being fair about why proxies exist at all,
+
+00:02:55.702 --> 00:02:59.693
+before treating the pattern itself as inherently suspicious.
+
+00:02:59.693 --> 00:03:01.795
+They let a team genuinely fix a
+
+00:03:01.795 --> 00:03:04.226
+real bug, or add a real improvement,
+
+00:03:04.226 --> 00:03:07.248
+without forcing every single user to manually
+
+00:03:07.248 --> 00:03:10.438
+migrate to an entirely new contract address.
+
+00:03:10.438 --> 00:03:13.243
+That's a legitimate, valuable capability.
+
+00:03:13.243 --> 00:03:16.441
+The actual question was never whether a contract is
+
+00:03:16.441 --> 00:03:20.253
+a proxy; it's specifically who controls that proxy's upgrade,
+
+00:03:20.253 --> 00:03:22.713
+and how much warning you'd actually get.
+
+00:03:24.013 --> 00:03:27.477
+Worth being completely precise about the actual consequence
+
+00:03:27.477 --> 00:03:30.028
+of this, since it's easy to gloss over.
+
+00:03:30.028 --> 00:03:34.459
+Whoever controls a proxy's upgrade permission genuinely controls the
+
+00:03:34.459 --> 00:03:38.183
+rules your deposited funds actually operate under, at any
+
+00:03:38.183 --> 00:03:42.165
+future point they choose to exercise it, entirely independent
+
+00:03:42.165 --> 00:03:45.504
+of whatever the contract's rules happened to say on
+
+00:03:45.504 --> 00:03:47.623
+the day you originally deposited.
+
+00:03:48.923 --> 00:03:50.418
+Admin keys, and roles.
+
+00:03:51.718 --> 00:03:54.496
+Here's what to actually check about the specific
+
+00:03:54.496 --> 00:03:57.063
+admin roles behind any contract you use.
+
+00:03:57.063 --> 00:03:59.551
+Owners typically hold the broadest powers,
+
+00:03:59.551 --> 00:04:02.513
+often including the upgrade permission itself.
+
+00:04:02.513 --> 00:04:06.772
+Guardians usually hold narrower, specifically emergency powers, like
+
+00:04:06.772 --> 00:04:09.973
+pausing the contract during an active incident.
+
+00:04:09.973 --> 00:04:12.384
+And whether any of these roles sits
+
+00:04:12.384 --> 00:04:16.401
+behind a multisig, genuinely requiring multiple independent
+
+00:04:16.401 --> 00:04:18.812
+people to agree, or behind a single
+
+00:04:18.812 --> 00:04:21.758
+key alone, changes the real risk enormously.
+
+00:04:23.058 --> 00:04:26.100
+Here's that exact difference, made concrete, between
+
+00:04:26.100 --> 00:04:28.753
+the two ends of the admin-setup spectrum.
+
+00:04:28.753 --> 00:04:33.569
+A well-structured multisig, needing several independent signers to agree,
+
+00:04:33.569 --> 00:04:37.084
+means no single compromised or malicious key can move
+
+00:04:37.084 --> 00:04:40.443
+funds, upgrade the contract, or pause it alone.
+
+00:04:40.443 --> 00:04:43.640
+A single key holding those same powers means
+
+00:04:43.640 --> 00:04:47.051
+exactly one compromise, one mistake, or one bad
+
+00:04:47.051 --> 00:04:49.253
+actor is all it actually takes.
+
+00:04:50.553 --> 00:04:52.627
+Here's exactly how to find all of
+
+00:04:52.627 --> 00:04:55.128
+this yourself, on a real block explorer,
+
+00:04:55.128 --> 00:04:57.873
+completing the first safe step this module's
+
+00:04:57.873 --> 00:05:00.308
+own Mastery Starter set up for you.
+
+00:05:00.308 --> 00:05:03.881
+Open the contract's page directly, and check its Contract
+
+00:05:03.881 --> 00:05:06.768
+tab for a label reading Proxy, or similar.
+
+00:05:06.768 --> 00:05:09.268
+Find the actual admin address it names,
+
+00:05:09.268 --> 00:05:11.706
+and look up what that specific address
+
+00:05:11.706 --> 00:05:14.193
+is, a multisig, or a single wallet.
+
+00:05:14.193 --> 00:05:17.193
+And check that address's own transaction history
+
+00:05:17.193 --> 00:05:19.703
+for anything resembling a timelock delay.
+
+00:05:21.003 --> 00:05:22.093
+Quick check.
+
+00:05:22.093 --> 00:05:23.869
+What's the actual red flag to
+
+00:05:23.869 --> 00:05:25.468
+look for in an admin setup?
+
+00:05:29.888 --> 00:05:32.711
+The answer: a single key that can upgrade the
+
+00:05:32.711 --> 00:05:36.578
+contract, or move funds, instantly, with nothing else required.
+
+00:05:37.878 --> 00:05:38.883
+Worked example.
+
+00:05:40.183 --> 00:05:43.175
+Here's exactly what you'd find, reading a real
+
+00:05:43.175 --> 00:05:46.357
+vault's real setup, directly on a block explorer,
+
+00:05:46.357 --> 00:05:49.458
+exactly as the source material describes it.
+
+00:05:49.458 --> 00:05:53.023
+The contract itself shows, explicitly, as a proxy.
+
+00:05:53.023 --> 00:05:57.061
+Its upgrade admin is a three-of-five multisig, meaning three
+
+00:05:57.061 --> 00:06:00.803
+of five independent signers genuinely have to agree.
+
+00:06:00.803 --> 00:06:03.766
+And that multisig sits behind a forty-eight
+
+00:06:03.766 --> 00:06:06.863
+hour timelock, a real, mandatory delay before
+
+00:06:06.863 --> 00:06:09.893
+any approved change can actually take effect.
+
+00:06:11.193 --> 00:06:14.834
+Here's exactly what that combination actually protects you from,
+
+00:06:14.834 --> 00:06:18.158
+and precisely how much warning it genuinely gives you.
+
+00:06:18.158 --> 00:06:21.001
+No single compromised key can instantly change
+
+00:06:21.001 --> 00:06:23.361
+your funds' rules, since three of five
+
+00:06:23.361 --> 00:06:26.323
+independent signers would all have to agree.
+
+00:06:26.323 --> 00:06:29.178
+And even after they do agree, you'd still have
+
+00:06:29.178 --> 00:06:32.155
+a real, full forty-eight hours to notice, and to
+
+00:06:32.155 --> 00:06:35.557
+exit, before that approved change actually takes effect.
+
+00:06:36.857 --> 00:06:39.062
+The full spectrum, not just two points.
+
+00:06:40.362 --> 00:06:44.085
+Here's that same idea, stretched across a wider, purely
+
+00:06:44.085 --> 00:06:48.339
+illustrative spectrum, from weakest to strongest, so the actual
+
+00:06:48.339 --> 00:06:52.029
+pattern is visible, not just two isolated examples.
+
+00:06:52.029 --> 00:06:54.195
+A one-of-one key, with no timelock,
+
+00:06:54.195 --> 00:06:55.939
+sits at the weakest end.
+
+00:06:55.939 --> 00:06:59.454
+The source material's own three-of-five, with a forty-eight
+
+00:06:59.454 --> 00:07:02.214
+hour timelock, sits solidly in the middle.
+
+00:07:02.214 --> 00:07:05.272
+And a broader, five-of-nine multisig, behind a
+
+00:07:05.272 --> 00:07:08.656
+full seven-day timelock, sits toward the strongest,
+
+00:07:08.656 --> 00:07:11.324
+slowest-moving end of that same spectrum.
+
+00:07:12.624 --> 00:07:15.879
+Here's the exact same vault, but with a meaningfully
+
+00:07:15.879 --> 00:07:19.679
+worse admin setup instead, to make the contrast concrete.
+
+00:07:19.679 --> 00:07:22.664
+A one-of-one admin, a single key alone, with no
+
+00:07:22.664 --> 00:07:25.588
+timelock at all, means that one key can change
+
+00:07:25.588 --> 00:07:29.133
+your funds' rules instantly, with zero warning, and zero
+
+00:07:29.133 --> 00:07:32.429
+chance for you to react before it's already happened.
+
+00:07:33.729 --> 00:07:34.819
+Quick check.
+
+00:07:34.819 --> 00:07:36.828
+Why does a timelock actually matter
+
+00:07:36.828 --> 00:07:38.614
+to you, specifically, as a user?
+
+00:07:43.034 --> 00:07:45.349
+The answer: it gives you real time to
+
+00:07:45.349 --> 00:07:47.968
+actually see a queued change, and to exit,
+
+00:07:47.968 --> 00:07:50.709
+before that change is allowed to take effect.
+
+00:07:52.009 --> 00:07:53.469
 Here's your checklist.
 
-00:01:29.338 --> 00:01:30.873
-Do it now, for real.
+00:07:53.469 --> 00:07:54.961
+Do it for every contract
 
-00:01:30.873 --> 00:01:33.778
-First, Proxy or not, and who can upgrade.
+00:07:54.961 --> 00:07:57.289
+holding meaningful funds of yours.
 
-00:01:33.778 --> 00:01:37.188
-Next, Admin roles and multisig threshold known.
+00:07:57.289 --> 00:07:58.999
+Check whether it's a proxy, and
 
-00:01:37.188 --> 00:01:39.976
-And finally, Timelock length known; alert
+00:07:58.999 --> 00:08:01.489
+specifically who can actually upgrade it.
 
-00:01:39.976 --> 00:01:42.498
-on queued changes for large positions.
+00:08:01.489 --> 00:08:03.982
+Know the admin roles, and the multisig
 
-00:01:43.798 --> 00:01:45.008
-Question 1.
+00:08:03.982 --> 00:08:07.051
+threshold behind them, precisely, not just that
 
-00:01:45.008 --> 00:01:47.108
-Does verified source code mean safe?
+00:08:07.051 --> 00:08:08.949
+a multisig exists at all.
 
-00:01:51.528 --> 00:01:53.322
-The answer: No. It means the
+00:08:08.949 --> 00:08:11.549
+And know the timelock's actual length, and
 
-00:01:53.322 --> 00:01:55.858
-published code matches the deployed code.
+00:08:11.549 --> 00:08:13.545
+set an alert for yourself on any
 
-00:01:57.158 --> 00:01:58.403
-Question 2.
+00:08:13.545 --> 00:08:16.266
+queued change, for genuinely large positions.
 
-00:01:58.403 --> 00:02:00.428
-Why does a timelock matter to users?
-
-00:02:04.848 --> 00:02:06.807
-The answer: It gives time to see
-
-00:02:06.807 --> 00:02:09.063
-and exit before a change takes effect.
-
-00:02:10.363 --> 00:02:11.633
-Question 3.
-
-00:02:11.633 --> 00:02:13.188
-Red flag in admin setup?
-
-00:02:17.608 --> 00:02:19.449
-The answer: A single key that
-
-00:02:19.449 --> 00:02:21.658
-can upgrade or move funds instantly.
-
-00:02:22.958 --> 00:02:24.203
+00:08:17.566 --> 00:08:18.811
 Let's recap.
 
-00:02:24.203 --> 00:02:27.783
-State: what a contract stores (balances, parameters).
+00:08:18.811 --> 00:08:20.747
+State is what a contract stores,
 
-00:02:27.783 --> 00:02:30.128
-Verified source: the code published on
+00:08:20.747 --> 00:08:23.101
+functions change it, events log it.
 
-00:02:30.128 --> 00:02:32.653
-the explorer matches what's deployed.
+00:08:23.101 --> 00:08:26.208
+Verified source code just means the published code
 
-00:02:32.653 --> 00:02:35.419
-Proxy / upgradeable contracts: the address
+00:08:26.208 --> 00:08:29.371
+matches what's deployed, never proof of safety.
 
-00:02:35.419 --> 00:02:37.198
-you use stays the same.
+00:08:29.371 --> 00:08:31.917
+A proxy's real address stays fixed, but
 
-00:02:37.198 --> 00:02:41.002
-Admin keys and roles: owners, guardians, multisigs.
+00:08:31.917 --> 00:08:34.144
+the logic behind it can be swapped
 
-00:02:42.301 --> 00:02:44.816
-Do the checklist now, before you move on.
+00:08:34.144 --> 00:08:36.481
+by whoever controls the upgrade.
 
-00:02:44.816 --> 00:02:47.977
-Next up, Lesson 5.5: Smart-contract risk
+00:08:36.481 --> 00:08:39.401
+A multisig needs several signers to agree;
 
-00:02:47.977 --> 00:02:49.981
+00:08:39.401 --> 00:08:42.349
+a single key needs just one compromise.
+
+00:08:42.349 --> 00:08:45.360
+And a timelock is your genuine window to notice,
+
+00:08:45.360 --> 00:08:48.494
+and to exit, before a change actually takes effect.
+
+00:08:49.794 --> 00:08:53.120
+Worth connecting this back to the dependency map from
+
+00:08:53.120 --> 00:08:56.499
+this module's own Mastery Starter, one final time.
+
+00:08:56.499 --> 00:08:59.313
+The contract itself, its proxy status, its
+
+00:08:59.313 --> 00:09:01.734
+admin, and its timelock, is the last
+
+00:09:01.734 --> 00:09:04.194
+specific link in that same chain.
+
+00:09:04.194 --> 00:09:06.565
+You now know exactly what to check on
+
+00:09:06.565 --> 00:09:09.373
+every single one: the chain, the bridge, the
+
+00:09:09.373 --> 00:09:12.119
+L2, the oracle, and now the contract itself.
+
+00:09:13.419 --> 00:09:16.253
+Check whether it's a proxy, know the admin roles
+
+00:09:16.253 --> 00:09:19.619
+and multisig threshold, and know the timelock length.
+
+00:09:19.619 --> 00:09:22.810
+Next up, Lesson 5.5: smart-contract risk
+
+00:09:22.810 --> 00:09:24.834
 & what audits don't prove.
