@@ -3,191 +3,575 @@ WEBVTT
 00:00:00.550 --> 00:00:02.255
 Lesson 4.7.
 
-00:00:02.255 --> 00:00:06.230
+00:00:02.255 --> 00:00:06.060
 Stablecoin savings rates and yield-bearing stablecoins.
 
-00:00:06.230 --> 00:00:08.607
-By the end of this lesson, you'll be able
+00:00:06.060 --> 00:00:08.544
+By the end, you'll be able to tell apart
 
-00:00:08.607 --> 00:00:11.437
-to tell apart the different ways a stablecoin can
+00:00:08.544 --> 00:00:12.118
+four completely different ways a stablecoin can pay yield,
 
-00:00:11.437 --> 00:00:13.475
-pay yield, and the risk behind each.
+00:00:12.118 --> 00:00:14.420
+and the specific risk behind each one.
 
-00:00:14.775 --> 00:00:16.065
+00:00:15.720 --> 00:00:17.010
 Here's the plan.
 
-00:00:16.065 --> 00:00:17.750
-First, the key ideas.
+00:00:17.010 --> 00:00:19.614
+The four genuinely different places yield
 
-00:00:17.750 --> 00:00:20.465
-Then, a worked example, step by step.
+00:00:19.614 --> 00:00:22.270
+on stablecoins can actually come from.
 
-00:00:20.465 --> 00:00:21.990
-Then, your checklist.
+00:00:22.270 --> 00:00:25.155
+The specific risk that rides along with each one.
 
-00:00:21.990 --> 00:00:24.152
-And finally, a three-question quiz.
+00:00:25.155 --> 00:00:28.591
+A full worked example, pricing a real, advertised rate
 
-00:00:25.452 --> 00:00:29.101
-Yield on "dollars" on-chain comes from one of four
+00:00:28.591 --> 00:00:32.015
+against three real questions you should ask first.
 
-00:00:29.101 --> 00:00:34.051
-places: Same "4–10% on dollars", four completely different risks.
+00:00:32.015 --> 00:00:34.226
+And a checklist for identifying, and
 
-00:00:34.051 --> 00:00:38.396
-First, Lending: you lend stablecoins to borrowers (Module 3).
+00:00:34.226 --> 00:00:36.915
+diversifying across, these sources correctly.
 
-00:00:38.396 --> 00:00:41.390
-Risk: the protocol, collateral and oracles.
+00:00:38.215 --> 00:00:40.090
+Four genuinely different sources.
 
-00:00:41.390 --> 00:00:44.989
-Next, Savings rates: some stablecoin protocols pay a
+00:00:41.390 --> 00:00:43.526
+Here are all four places yield on
 
-00:00:44.989 --> 00:00:47.637
-set rate to holders who deposit into a
+00:00:43.526 --> 00:00:47.345
+a dollar-pegged stablecoin can genuinely originate from.
 
-00:00:47.637 --> 00:00:51.060
-savings contract, funded by their own revenue.
+00:00:47.345 --> 00:00:51.644
+Lending, where you're lending stablecoins directly to borrowers, exactly
 
-00:00:51.060 --> 00:00:54.915
-Risk: the stablecoin's design and governance setting the rate.
+00:00:51.644 --> 00:00:54.830
+the lending markets covered back in Module three.
 
-00:00:54.915 --> 00:00:59.614
-Then, Treasury-backed: the issuer holds short-term government debt and
+00:00:54.830 --> 00:00:58.544
+Savings rates, a set rate some stablecoin protocols pay
 
-00:00:59.614 --> 00:01:02.826
-passes on part of the interest (Lesson 4.8).
+00:00:58.544 --> 00:01:02.690
+directly to holders, funded by the protocol's own revenue.
 
-00:01:02.826 --> 00:01:06.326
-Risk: the issuer, custodian and redemption terms.
+00:01:02.690 --> 00:01:06.594
+Treasury-backed, where the issuer holds real, short-term government
 
-00:01:06.326 --> 00:01:09.717
-And finally, Synthetic / basis-backed: yield comes
+00:01:06.594 --> 00:01:09.305
+debt, and passes on part of that interest.
 
-00:01:09.717 --> 00:01:12.776
-from a hedged derivatives position (spot long
+00:01:09.305 --> 00:01:12.418
+And synthetic, or basis-backed, where the yield comes
 
-00:01:12.776 --> 00:01:15.071
-+ perp short) earning funding.
+00:01:12.418 --> 00:01:15.415
+from a hedged derivatives position, earning funding.
 
-00:01:15.071 --> 00:01:18.477
-Risk: funding turns negative, exchange failure,
+00:01:16.715 --> 00:01:19.276
+Here's each of those four, paired directly
 
-00:01:18.477 --> 00:01:21.031
-and the design itself (Lesson 10.3).
+00:01:19.276 --> 00:01:21.540
+with its own specific risk, since the
 
-00:01:22.331 --> 00:01:24.846
-Let's work an example, step by step.
+00:01:21.540 --> 00:01:24.580
+risk is genuinely different every single time.
 
-00:01:24.846 --> 00:01:30.279
-$10,000 in a yield-bearing stablecoin paying 4.5%
+00:01:24.580 --> 00:01:27.799
+Lending's risk is the protocol, the collateral backing
 
-00:01:30.279 --> 00:01:34.165
-earns ~$450/yr if the rate holds.
+00:01:27.799 --> 00:01:30.675
+it, and the oracles pricing that collateral.
 
-00:01:34.165 --> 00:01:37.217
-Before buying, answer: where does the
+00:01:30.675 --> 00:01:34.466
+Savings rates carry the stablecoin's own design and governance
 
-00:01:37.217 --> 00:01:39.805
-4.5% come from (1–4 above)?
+00:01:34.466 --> 00:01:38.075
+risk, since governance is what actually sets that rate.
 
-00:01:39.805 --> 00:01:41.095
-What happens to it in a
+00:01:38.075 --> 00:01:41.346
+Treasury-backed carries the issuer, the custodian holding
 
-00:01:41.095 --> 00:01:43.610
-bear market when funding goes negative?
+00:01:41.346 --> 00:01:44.071
+those treasuries, and the redemption terms.
 
-00:01:43.610 --> 00:01:46.010
-Can you redeem for $1, and who can?
+00:01:44.071 --> 00:01:47.049
+And synthetic, basis-backed yield carries funding
 
-00:01:47.310 --> 00:01:48.770
-Here's your checklist.
+00:01:47.049 --> 00:01:49.551
+turning negative, and the exchange itself.
 
-00:01:48.770 --> 00:01:50.305
-Do it now, for real.
+00:01:50.851 --> 00:01:53.502
+Worth being precise about the actual lesson
 
-00:01:50.305 --> 00:01:53.032
-First, Yield source identified (lending,
+00:01:53.502 --> 00:01:56.092
+this comparison proves, since it's easy to
 
-00:01:53.032 --> 00:01:55.660
-savings rate, treasuries or basis).
+00:01:56.092 --> 00:01:58.501
+see one number and assume one risk.
 
-00:01:55.660 --> 00:01:58.840
-Next, Redemption path and who can redeem known.
+00:01:58.501 --> 00:02:01.939
+The exact same headline rate, somewhere between four and
 
-00:01:58.840 --> 00:02:01.188
-And finally, Split across different yield
+00:02:01.939 --> 00:02:04.533
+ten percent, can be sitting on top of four
 
-00:02:01.188 --> 00:02:03.200
-sources, not just different tickers.
+00:02:04.533 --> 00:02:07.971
+entirely different foundations, each one able to fail in
 
-00:02:04.500 --> 00:02:05.710
-Question 1.
+00:02:07.971 --> 00:02:11.711
+a completely different way, for a completely different reason.
 
-00:02:05.710 --> 00:02:08.160
+00:02:13.011 --> 00:02:15.757
+Here's how to actually identify which of the
+
+00:02:15.757 --> 00:02:19.236
+four sources a specific stablecoin actually uses, rather
+
+00:02:19.236 --> 00:02:21.916
+than guessing from its marketing alone.
+
+00:02:21.916 --> 00:02:25.404
+Read its own documentation specifically for the words it
+
+00:02:25.404 --> 00:02:28.708
+uses to describe where the yield comes from, lending,
+
+00:02:28.708 --> 00:02:32.006
+a savings rate, treasuries, or a hedged position.
+
+00:02:32.006 --> 00:02:34.792
+Check whether it discloses what it's actually
+
+00:02:34.792 --> 00:02:37.636
+holding, or invested in, behind the token.
+
+00:02:37.636 --> 00:02:40.841
+And if none of that is genuinely disclosed anywhere,
+
+00:02:40.841 --> 00:02:43.986
+treat the yield source itself as unknown, and price
+
+00:02:43.986 --> 00:02:46.526
+that uncertainty as its own separate risk.
+
+00:02:47.826 --> 00:02:49.927
+Here's a rough, useful way to group
+
+00:02:49.927 --> 00:02:51.970
+these four, by how much their rate
+
+00:02:51.970 --> 00:02:54.021
+tends to actually move around.
+
+00:02:54.021 --> 00:02:57.596
+Lending and treasury-backed yields tend to move relatively
+
+00:02:57.596 --> 00:03:01.531
+slowly, tracking broader interest-rate conditions over time.
+
+00:03:01.531 --> 00:03:05.589
+Protocol savings rates and synthetic, funding-based yields can
+
+00:03:05.589 --> 00:03:09.003
+move considerably faster, since a governance vote or
+
+00:03:09.003 --> 00:03:11.902
+a sharp shift in market sentiment can change
+
+00:03:11.902 --> 00:03:13.641
+either one in a single day.
+
+00:03:14.941 --> 00:03:16.031
+Quick check.
+
+00:03:16.031 --> 00:03:18.481
 Name the four sources of stablecoin yield.
 
-00:02:12.460 --> 00:02:15.574
-The answer: Lending, protocol savings rates,
+00:03:22.781 --> 00:03:26.199
+The answer: lending, protocol savings rates, treasury
 
-00:02:15.574 --> 00:02:19.450
-treasury backing, and synthetic basis/funding positions.
+00:03:26.199 --> 00:03:29.491
+backing, and synthetic basis, or funding, positions.
 
-00:02:20.750 --> 00:02:21.995
-Question 2.
+00:03:30.791 --> 00:03:32.626
+A closer look at synthetic yield.
 
-00:02:21.995 --> 00:02:25.140
-Why can a basis-backed stablecoin's yield fall to zero?
+00:03:33.926 --> 00:03:37.911
+Here's exactly how a synthetic, basis-backed yield actually gets
 
-00:02:29.560 --> 00:02:32.780
-The answer: Funding can turn negative in bear markets.
+00:03:37.911 --> 00:03:41.521
+generated, since it's the least intuitive of the four.
 
-00:02:34.080 --> 00:02:35.350
-Question 3.
+00:03:41.521 --> 00:03:44.331
+The protocol holds a spot position, long
 
-00:02:35.350 --> 00:02:40.075
-Two yield-bearing stablecoins both backed by basis trades: diversified?
+00:03:44.331 --> 00:03:47.688
+the underlying asset, and simultaneously holds a
 
-00:02:44.495 --> 00:02:46.200
-The answer: Not really.
+00:03:47.688 --> 00:03:51.346
+perpetual future, short, against that same asset.
 
-00:02:46.200 --> 00:02:48.835
-They share the same yield source and failure mode.
+00:03:51.346 --> 00:03:53.549
+Those two positions largely cancel
 
-00:02:50.135 --> 00:02:51.380
+00:03:53.549 --> 00:03:55.611
+each other's price risk out.
+
+00:03:55.611 --> 00:03:59.499
+The yield itself comes specifically from funding payments, paid
+
+00:03:59.499 --> 00:04:02.841
+between longs and shorts on the perpetual, a mechanism
+
+00:04:02.841 --> 00:04:05.271
+covered back in Lesson three point five.
+
+00:04:06.571 --> 00:04:09.209
+Worth being precise about why this specific
+
+00:04:09.209 --> 00:04:11.608
+yield source can genuinely fall all the
+
+00:04:11.608 --> 00:04:14.066
+way to zero, unlike the other three.
+
+00:04:14.066 --> 00:04:17.503
+Funding isn't fixed; it moves with market sentiment, and
+
+00:04:17.503 --> 00:04:20.819
+can turn negative during a bear market, meaning shorts
+
+00:04:20.819 --> 00:04:23.651
+pay longs instead of the other way around.
+
+00:04:23.651 --> 00:04:26.732
+When that happens, this yield source doesn't just
+
+00:04:26.732 --> 00:04:29.444
+shrink, it can disappear, or even turn into
+
+00:04:29.444 --> 00:04:32.464
+an active cost, entirely independent of what the
+
+00:04:32.464 --> 00:04:34.559
+underlying asset's own price does.
+
+00:04:35.858 --> 00:04:38.603
+Worth being precise about what the word hedged
+
+00:04:38.603 --> 00:04:41.232
+actually means here, since it's easy to hear
+
+00:04:41.232 --> 00:04:43.868
+it and assume the position is risk-free.
+
+00:04:43.868 --> 00:04:46.584
+Hedged specifically means the price risk of
+
+00:04:46.584 --> 00:04:49.723
+the underlying asset is largely cancelled out.
+
+00:04:49.723 --> 00:04:52.888
+It does not mean the exchange holding those positions
+
+00:04:52.888 --> 00:04:55.525
+can't fail, and it does not mean the funding
+
+00:04:55.525 --> 00:04:58.873
+payments themselves are guaranteed to stay positive.
+
+00:04:58.873 --> 00:05:01.328
+Hedged removes one specific risk.
+
+00:05:01.328 --> 00:05:02.978
+It doesn't remove risk itself.
+
+00:05:04.278 --> 00:05:05.368
+Quick check.
+
+00:05:05.368 --> 00:05:07.879
+Why can a basis-backed stablecoin's yield
+
+00:05:07.879 --> 00:05:09.373
+fall all the way to zero?
+
+00:05:13.793 --> 00:05:16.703
+The answer: funding can turn negative during
+
+00:05:16.703 --> 00:05:19.290
+a bear market, meaning shorts pay longs
+
+00:05:19.290 --> 00:05:21.683
+instead, removing the yield entirely.
+
+00:05:22.983 --> 00:05:23.988
+Worked example.
+
+00:05:25.288 --> 00:05:27.323
+Here's the headline number first.
+
+00:05:27.323 --> 00:05:31.223
+Ten thousand dollars, deposited into a yield-bearing stablecoin
+
+00:05:31.223 --> 00:05:34.391
+paying four and a half percent, earns approximately
+
+00:05:34.391 --> 00:05:36.763
+four hundred fifty dollars a year.
+
+00:05:36.763 --> 00:05:39.198
+That's the easy part of the arithmetic.
+
+00:05:39.198 --> 00:05:41.402
+Everything that actually matters in this
+
+00:05:41.402 --> 00:05:42.908
+lesson comes right after it.
+
+00:05:44.208 --> 00:05:46.920
+Here are the three real questions to answer,
+
+00:05:46.920 --> 00:05:50.053
+before ever buying in, regardless of how attractive
+
+00:05:50.053 --> 00:05:52.643
+that four hundred fifty dollars looks.
+
+00:05:52.643 --> 00:05:54.219
+Where does the four and a half
+
+00:05:54.219 --> 00:05:56.304
+percent actually come from, which of the
+
+00:05:56.304 --> 00:05:58.688
+four sources from earlier in this lesson.
+
+00:05:58.688 --> 00:06:01.035
+What happens to that rate specifically in a
+
+00:06:01.035 --> 00:06:04.003
+bear market, if it's resting on synthetic funding.
+
+00:06:04.003 --> 00:06:06.010
+And can you genuinely redeem for one
+
+00:06:06.010 --> 00:06:08.343
+dollar, and specifically who is allowed to.
+
+00:06:09.643 --> 00:06:13.510
+Here's why that third question, about redemption, deserves just
+
+00:06:13.510 --> 00:06:16.348
+as much weight as the yield source itself.
+
+00:06:16.348 --> 00:06:19.734
+Some yield-bearing stablecoins let any holder redeem
+
+00:06:19.734 --> 00:06:22.143
+directly for a dollar, on demand.
+
+00:06:22.143 --> 00:06:27.199
+Others restrict redemption to specific, whitelisted institutional accounts
+
+00:06:27.199 --> 00:06:31.446
+only, leaving ordinary holders dependent entirely on secondary
+
+00:06:31.446 --> 00:06:33.603
+market liquidity to exit at all.
+
+00:06:34.903 --> 00:06:38.079
+Here's what's actually at stake in dollar terms, if
+
+00:06:38.079 --> 00:06:41.988
+this specific position turned out to be synthetic, basis-backed
+
+00:06:41.988 --> 00:06:45.769
+yield, and funding genuinely went negative for a stretch.
+
+00:06:45.769 --> 00:06:48.955
+The four hundred fifty dollars a year doesn't just
+
+00:06:48.955 --> 00:06:52.702
+shrink; in a genuinely negative funding environment, it can
+
+00:06:52.702 --> 00:06:55.888
+disappear entirely, or even flip into a real cost,
+
+00:06:55.888 --> 00:06:58.949
+on the exact same ten thousand dollars, with the
+
+00:06:58.949 --> 00:07:03.071
+underlying dollar peg itself potentially still holding throughout.
+
+00:07:04.371 --> 00:07:07.504
+Here's the one sentence this entire worked example
+
+00:07:07.504 --> 00:07:10.330
+exists to prove, worth holding onto more than
+
+00:07:10.330 --> 00:07:13.456
+the specific four hundred fifty dollar figure.
+
+00:07:13.456 --> 00:07:15.850
+That number is only real for as long as
+
+00:07:15.850 --> 00:07:18.963
+the rate itself holds, and whether it holds depends
+
+00:07:18.963 --> 00:07:22.196
+entirely on the answers to those three questions, not
+
+00:07:22.196 --> 00:07:25.189
+on how attractive four and a half percent happens
+
+00:07:25.189 --> 00:07:26.386
+to sound on its own.
+
+00:07:27.686 --> 00:07:30.863
+Worth separating even those two steadier sources from
+
+00:07:30.863 --> 00:07:33.982
+each other, since grouping them together earlier was
+
+00:07:33.982 --> 00:07:36.453
+only about how much the rate itself tends
+
+00:07:36.453 --> 00:07:39.166
+to move, not about sharing the same risk.
+
+00:07:39.166 --> 00:07:42.847
+Lending's risk lives entirely on-chain: the protocol's
+
+00:07:42.847 --> 00:07:45.958
+own code, its collateral, and its oracles.
+
+00:07:45.958 --> 00:07:50.223
+Treasury-backed risk lives largely off-chain instead: the issuer's
+
+00:07:50.223 --> 00:07:54.233
+own solvency, the custodian actually holding those treasuries,
+
+00:07:54.233 --> 00:07:57.288
+and the real-world redemption terms behind them.
+
+00:07:58.588 --> 00:08:00.048
+Here's your checklist.
+
+00:08:00.048 --> 00:08:03.193
+Do it before holding any yield-bearing stablecoin.
+
+00:08:03.193 --> 00:08:07.019
+Identify its actual yield source: lending, a protocol
+
+00:08:07.019 --> 00:08:10.933
+savings rate, treasury backing, or synthetic basis.
+
+00:08:10.933 --> 00:08:13.338
+Know its redemption path, and specifically
+
+00:08:13.338 --> 00:08:15.483
+who's actually allowed to use it.
+
+00:08:15.483 --> 00:08:18.813
+And split your own holdings across genuinely different
+
+00:08:18.813 --> 00:08:22.627
+yield sources, not just across different-sounding tickers that
+
+00:08:22.627 --> 00:08:24.988
+all rest on the same underlying source.
+
+00:08:26.288 --> 00:08:29.571
+Here's exactly why that last point matters so much,
+
+00:08:29.571 --> 00:08:33.358
+using two yield-bearing stablecoins both backed by the same
+
+00:08:33.358 --> 00:08:36.373
+kind of basis trade, as a concrete example.
+
+00:08:36.373 --> 00:08:38.596
+They might carry different names, different
+
+00:08:38.596 --> 00:08:40.968
+branding, and different tickers entirely.
+
+00:08:40.968 --> 00:08:44.017
+But underneath, they share the exact same yield
+
+00:08:44.017 --> 00:08:47.193
+source, and the exact same failure mode: negative
+
+00:08:47.193 --> 00:08:49.734
+funding, in the exact same kind of bear
+
+00:08:49.734 --> 00:08:51.703
+market, at the exact same time.
+
+00:08:53.003 --> 00:08:54.093
+Quick check.
+
+00:08:54.093 --> 00:08:58.163
+Two yield-bearing stablecoins, both backed by basis trades.
+
+00:08:58.163 --> 00:09:00.438
+Are they actually diversified from each other?
+
+00:09:04.858 --> 00:09:06.563
+The answer: not really.
+
+00:09:06.563 --> 00:09:08.846
+They share the exact same yield source,
+
+00:09:08.846 --> 00:09:10.673
+and the exact same failure mode.
+
+00:09:11.973 --> 00:09:13.218
 Let's recap.
 
-00:02:51.380 --> 00:02:55.235
-Lending: you lend stablecoins to borrowers (Module 3).
+00:09:13.218 --> 00:09:15.935
+Stablecoin yield comes from one of four
 
-00:02:55.235 --> 00:02:58.647
-Savings rates: some stablecoin protocols pay a set
+00:09:15.935 --> 00:09:19.399
+places: lending, a protocol savings rate, treasury
 
-00:02:58.647 --> 00:03:01.523
-rate to holders who deposit into a savings
+00:09:19.399 --> 00:09:22.348
+backing, or a synthetic basis position.
 
-00:03:01.523 --> 00:03:04.365
-contract, funded by their own revenue.
+00:09:22.348 --> 00:09:24.944
+Each source carries its own distinct risk,
 
-00:03:04.365 --> 00:03:08.581
-Treasury-backed: the issuer holds short-term government debt and
+00:09:24.944 --> 00:09:27.478
+even at the exact same headline rate.
 
-00:03:08.581 --> 00:03:11.735
-passes on part of the interest (Lesson 4.8).
+00:09:27.478 --> 00:09:29.868
+Ask where the rate comes from, what happens
 
-00:03:11.735 --> 00:03:16.019
-Synthetic / basis-backed: yield comes from a hedged derivatives
+00:09:29.868 --> 00:09:31.605
+to it in a bear market, and who
 
-00:03:16.019 --> 00:03:19.365
-position (spot long + perp short) earning funding.
+00:09:31.605 --> 00:09:34.838
+can actually redeem, before the number means anything.
 
-00:03:20.665 --> 00:03:23.180
-Do the checklist now, before you move on.
+00:09:34.838 --> 00:09:37.262
+And real diversification means different
 
-00:03:23.180 --> 00:03:25.922
-Next up, Lesson 4.8: Tokenized
+00:09:37.262 --> 00:09:39.508
+sources, never just different tickers.
 
-00:03:25.922 --> 00:03:29.460
+00:09:40.808 --> 00:09:44.528
+Identify the actual yield source before buying, know the
+
+00:09:44.528 --> 00:09:48.678
+redemption path, and diversify across sources, not tickers.
+
+00:09:48.678 --> 00:09:50.800
+Next up, Lesson 4.8: tokenized
+
+00:09:50.800 --> 00:09:53.538
 treasuries and real-world assets (RWAs).
