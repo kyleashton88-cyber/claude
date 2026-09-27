@@ -3,200 +3,557 @@ WEBVTT
 00:00:00.550 --> 00:00:02.395
 Lesson 5.6.
 
-00:00:02.395 --> 00:00:06.723
+00:00:02.395 --> 00:00:06.746
 Beyond Ethereum: Solana, Bitcoin and other ecosystems.
 
-00:00:06.723 --> 00:00:09.100
-By the end of this lesson, you'll be
+00:00:06.746 --> 00:00:09.679
+By the end, you'll be able to operate
 
-00:00:09.100 --> 00:00:11.992
-able to operate safely on non-EVM chains and
+00:00:09.679 --> 00:00:13.771
+safely on non-EVM chains, and understand exactly how
 
-00:00:11.992 --> 00:00:14.498
-understand how Bitcoin is used in DeFi.
+00:00:13.771 --> 00:00:16.781
+Bitcoin actually gets used inside DeFi.
 
-00:00:15.798 --> 00:00:17.088
+00:00:18.081 --> 00:00:19.371
 Here's the plan.
 
-00:00:17.088 --> 00:00:18.773
-First, the key ideas.
+00:00:19.371 --> 00:00:22.642
+Solana, a genuinely separate ecosystem, with its
 
-00:00:18.773 --> 00:00:21.488
-Then, a worked example, step by step.
+00:00:22.642 --> 00:00:25.379
+own wallets, its own address format, and
 
-00:00:21.488 --> 00:00:23.013
-Then, your checklist.
+00:00:25.379 --> 00:00:27.481
+its own gas token entirely.
 
-00:00:23.013 --> 00:00:25.175
-And finally, a three-question quiz.
+00:00:27.481 --> 00:00:29.780
+Bitcoin in DeFi, and why it's almost
 
-00:00:26.476 --> 00:00:30.242
-First, Solana: a separate, high-throughput chain with
+00:00:29.780 --> 00:00:32.079
+always used as a wrapped token, with
 
-00:00:30.242 --> 00:00:33.451
-its own wallets (e.g. Phantom, Solflare), its
+00:00:32.079 --> 00:00:34.181
+its own distinct trust model.
 
-00:00:33.451 --> 00:00:36.240
-own address format, very low fees (paid
+00:00:34.181 --> 00:00:38.088
+Other ecosystems, and applying this module's own dependency
 
-00:00:36.240 --> 00:00:39.121
-in SOL), and priority fees when busy.
+00:00:38.088 --> 00:00:40.471
+map to every single one of them.
 
-00:00:39.121 --> 00:00:41.991
-Tokens follow its own standard (SPL).
+00:00:40.471 --> 00:00:42.911
+And a full worked example, choosing how
 
-00:00:41.991 --> 00:00:44.406
-Your Ethereum address doesn't work there.
+00:00:42.911 --> 00:00:45.411
+to actually lend one bitcoin on Ethereum.
 
-00:00:44.406 --> 00:00:48.306
-Sending between ecosystems needs a bridge or an exchange.
+00:00:46.711 --> 00:00:49.431
+Solana: a genuinely separate ecosystem.
 
-00:00:48.306 --> 00:00:51.516
-Next, Bitcoin in DeFi: BTC itself doesn't run
+00:00:50.731 --> 00:00:54.251
+Here's exactly what makes Solana genuinely separate, not
 
-00:00:51.516 --> 00:00:54.098
-DeFi apps, so it's usually used as a
+00:00:54.251 --> 00:00:58.626
+simply another Ethereum-compatible chain wearing a different name.
 
-00:00:54.098 --> 00:00:57.099
-wrapped token on other chains (backed by a
+00:00:58.626 --> 00:01:02.899
+It's a high-throughput chain with its own dedicated wallets,
 
-00:00:57.099 --> 00:01:00.379
-custodian, a group of signers, or a protocol),
+00:01:02.899 --> 00:01:06.961
+like Phantom or Solflare, its own distinct address format
 
-00:01:00.379 --> 00:01:03.331
-or on Bitcoin layer 2s and sidechains.
+00:01:06.961 --> 00:01:10.744
+entirely, and very low fees, paid specifically in its
 
-00:01:03.331 --> 00:01:05.721
-Each wrapper has its own trust model.
+00:01:10.744 --> 00:01:14.476
+own native token, SOL, not in Ethereum's own ETH.
 
-00:01:05.721 --> 00:01:07.476
-Your "BTC" is only as good
+00:01:14.476 --> 00:01:17.333
+Its tokens follow their own separate
 
-00:01:07.476 --> 00:01:09.726
-as whoever holds the real BTC.
+00:01:17.333 --> 00:01:21.116
+standard, S.P.L., not Ethereum's familiar ERC-20.
 
-00:01:09.726 --> 00:01:13.798
-Then, Other ecosystems (e.g. Cosmos chains connected
+00:01:22.416 --> 00:01:26.095
+Worth being precise about a distinction that trips people
 
-00:01:13.798 --> 00:01:17.101
-by IBC, Move-based chains) each have their
+00:01:26.095 --> 00:01:30.028
+up constantly: not every chain outside Ethereum's own mainnet
 
-00:01:17.101 --> 00:01:19.706
-own wallets, fees and bridges.
+00:01:30.028 --> 00:01:33.834
+is actually non-E.V.M. Layer twos, like the rollups covered
 
-00:01:19.706 --> 00:01:22.596
-Apply Module 5's dependency map to each.
+00:01:33.834 --> 00:01:37.640
+back in Lesson five point two, are still E.V.M.-compatible,
 
-00:01:22.596 --> 00:01:25.949
-And finally, Same rules everywhere: official wallet
+00:01:37.640 --> 00:01:41.192
+meaning your same Ethereum address, and often your same
 
-00:01:25.949 --> 00:01:29.044
-from the official site, test transaction first,
+00:01:41.192 --> 00:01:43.966
+wallet, genuinely works there directly.
 
-00:01:29.044 --> 00:01:31.301
-correct network, gas token on hand.
+00:01:43.966 --> 00:01:48.661
+Solana specifically is different: a genuinely separate, non-E.V.M.
 
-00:01:32.601 --> 00:01:35.116
-Let's work an example, step by step.
+00:01:48.661 --> 00:01:52.586
+architecture, needing its own dedicated wallet entirely.
 
-00:01:35.116 --> 00:01:36.712
-You hold 1 BTC and want
+00:01:53.886 --> 00:01:56.646
+Worth being completely direct about the single
 
-00:01:36.712 --> 00:01:38.541
-to lend it on Ethereum.
+00:01:56.646 --> 00:01:59.237
+most important consequence of all this.
 
-00:01:38.541 --> 00:01:41.812
-Options: a custodial wrapper (trust one company),
+00:01:59.237 --> 00:02:02.243
+Your Ethereum address genuinely does not work
 
-00:01:41.812 --> 00:01:44.690
-a decentralised wrapper (trust a signer set
+00:02:02.243 --> 00:02:05.352
+on Solana, at all, under any circumstances.
 
-00:01:44.690 --> 00:01:47.411
-or protocol), or not wrapping at all.
+00:02:05.352 --> 00:02:09.722
+Sending assets between these two ecosystems specifically requires
 
-00:01:47.411 --> 00:01:50.282
-Write each option's trust model and cap
+00:02:09.722 --> 00:02:12.966
+a bridge, or a centralised exchange, exactly the
 
-00:01:50.282 --> 00:01:52.651
-wrapped BTC as bridge risk (5.1).
+00:02:12.966 --> 00:02:16.475
+same category of infrastructure risk covered back in
 
-00:01:53.951 --> 00:01:55.411
-Here's your checklist.
+00:02:16.475 --> 00:02:19.852
+Lesson five point one, just connecting a different
 
-00:01:55.411 --> 00:01:56.946
-Do it now, for real.
+00:02:19.852 --> 00:02:21.507
+pair of chains this time.
 
-00:01:56.946 --> 00:01:59.348
-First, Separate, official wallet for
+00:02:22.807 --> 00:02:26.017
+Worth also naming priority fees specifically, since
 
-00:01:59.348 --> 00:02:01.271
-each non-EVM chain I use.
+00:02:26.017 --> 00:02:29.103
+they're a genuinely distinct Solana concept worth
 
-00:02:01.271 --> 00:02:03.766
-Next, Gas token held on each chain.
+00:02:29.103 --> 00:02:31.502
+knowing before you transact there.
 
-00:02:03.766 --> 00:02:07.030
-And finally, Wrapped-BTC trust model known and capped.
+00:02:31.502 --> 00:02:34.959
+During busy periods, you can pay an additional priority
 
-00:02:08.330 --> 00:02:09.540
-Question 1.
+00:02:34.959 --> 00:02:37.736
+fee, on top of the base fee, specifically to
 
-00:02:09.540 --> 00:02:11.875
-Does your Ethereum address work on Solana?
+00:02:37.736 --> 00:02:41.687
+have your transaction processed faster, ahead of others willing
 
-00:02:16.295 --> 00:02:18.951
-The answer: No. It's a different ecosystem
+00:02:41.687 --> 00:02:43.847
+to pay less for that same priority.
 
-00:02:18.951 --> 00:02:21.421
-with its own address format and wallets.
+00:02:45.147 --> 00:02:46.237
+Quick check.
 
-00:02:22.721 --> 00:02:23.966
-Question 2.
+00:02:46.237 --> 00:02:49.192
+Does your Ethereum address actually work on Solana?
 
-00:02:23.966 --> 00:02:26.441
-What determines a wrapped BTC token's safety?
+00:02:53.612 --> 00:02:56.446
+The answer: no. It's a genuinely different
 
-00:02:30.861 --> 00:02:33.366
-The answer: Who holds the real BTC and
+00:02:56.446 --> 00:02:59.280
+ecosystem, with its own address format and
 
-00:02:33.366 --> 00:02:35.936
-how it can be redeemed: its trust model.
+00:02:59.280 --> 00:03:01.587
+its own dedicated wallets entirely.
 
-00:02:37.236 --> 00:02:38.506
-Question 3.
+00:03:02.887 --> 00:03:04.142
+Bitcoin in DeFi.
 
-00:02:38.506 --> 00:02:40.061
-What's Solana's gas token?
+00:03:05.442 --> 00:03:08.849
+Here's exactly why Bitcoin itself can't simply run a
 
-00:02:44.481 --> 00:02:45.736
+00:03:08.849 --> 00:03:12.557
+DeFi app directly, and what actually happens instead.
+
+00:03:12.557 --> 00:03:16.168
+Bitcoin's own base layer genuinely doesn't support the
+
+00:03:16.168 --> 00:03:19.947
+kind of smart-contract logic DeFi apps actually need.
+
+00:03:19.947 --> 00:03:22.791
+So B.T.C. gets used instead as a wrapped
+
+00:03:22.791 --> 00:03:26.191
+token, on other chains, backed specifically by a
+
+00:03:26.191 --> 00:03:29.382
+custodian, a group of signers, or a dedicated
+
+00:03:29.382 --> 00:03:33.892
+protocol, or alternatively used through a Bitcoin-specific layer
+
+00:03:33.892 --> 00:03:37.222
+two or sidechain built for exactly this purpose.
+
+00:03:38.522 --> 00:03:42.193
+Worth being completely precise about the single sentence
+
+00:03:42.193 --> 00:03:45.285
+this entire topic actually reduces to, since it
+
+00:03:45.285 --> 00:03:48.677
+directly echoes this module's own bridge lesson.
+
+00:03:48.677 --> 00:03:51.620
+Your wrapped B.T.C. is only ever as good as
+
+00:03:51.620 --> 00:03:55.366
+whoever actually holds the real Bitcoin backing it, and
+
+00:03:55.366 --> 00:03:58.542
+exactly how you'd genuinely redeem it back.
+
+00:03:58.542 --> 00:04:01.485
+That's the exact same trust-model question from
+
+00:04:01.485 --> 00:04:03.938
+Lesson five point one, just asked about
+
+00:04:03.938 --> 00:04:06.207
+a different specific asset this time.
+
+00:04:07.507 --> 00:04:10.762
+Here's what those different backing arrangements actually
+
+00:04:10.762 --> 00:04:14.074
+look like, mechanically, since custodial and decentralised
+
+00:04:14.074 --> 00:04:16.731
+wrapping work in genuinely different ways.
+
+00:04:16.731 --> 00:04:20.048
+A custodial wrapper means one specific company holds
+
+00:04:20.048 --> 00:04:22.990
+the real Bitcoin directly, in its own custody,
+
+00:04:22.990 --> 00:04:25.731
+and mints the wrapped token against it.
+
+00:04:25.731 --> 00:04:29.225
+A decentralised wrapper instead means a broader group
+
+00:04:29.225 --> 00:04:32.848
+of signers, or a protocol's own mechanism, collectively
+
+00:04:32.848 --> 00:04:35.501
+holds and secures that same real Bitcoin.
+
+00:04:36.801 --> 00:04:37.891
+Quick check.
+
+00:04:37.891 --> 00:04:42.016
+What actually determines a wrapped B.T.C. token's real safety?
+
+00:04:46.436 --> 00:04:49.511
+The answer: who genuinely holds the real Bitcoin
+
+00:04:49.511 --> 00:04:52.210
+behind it, and exactly how it can actually
+
+00:04:52.210 --> 00:04:54.281
+be redeemed, its own trust model.
+
+00:04:55.581 --> 00:04:58.336
+Other ecosystems, same dependency map.
+
+00:04:59.636 --> 00:05:02.859
+Here's exactly how to treat any other ecosystem
+
+00:05:02.859 --> 00:05:06.419
+you encounter, whether it's a Cosmos chain connected
+
+00:05:06.419 --> 00:05:10.045
+through I.B.C., a Move-based chain, or something else
+
+00:05:10.045 --> 00:05:12.561
+entirely you haven't seen before.
+
+00:05:12.561 --> 00:05:15.163
+Each one genuinely has its own wallets,
+
+00:05:15.163 --> 00:05:17.439
+its own fee structure, and its own
+
+00:05:17.439 --> 00:05:20.601
+bridges, exactly like Solana and Bitcoin do.
+
+00:05:20.601 --> 00:05:23.209
+And this module's own dependency map, from
+
+00:05:23.209 --> 00:05:25.636
+its very first lesson, applies to every
+
+00:05:25.636 --> 00:05:27.941
+single one of them, without exception.
+
+00:05:29.241 --> 00:05:32.303
+Worth naming I.B.C. specifically, since it's a
+
+00:05:32.303 --> 00:05:35.821
+genuinely different approach from the bridges covered
+
+00:05:35.821 --> 00:05:38.076
+back in Lesson five point one.
+
+00:05:38.076 --> 00:05:42.729
+I.B.C. lets Cosmos chains communicate through a shared, standardised
+
+00:05:42.729 --> 00:05:46.371
+protocol, rather than each pair of chains needing its
+
+00:05:46.371 --> 00:05:49.841
+own separate, custom bridge built between them.
+
+00:05:49.841 --> 00:05:53.718
+That's a meaningfully different trust model worth understanding on
+
+00:05:53.718 --> 00:05:56.727
+its own terms, not simply assuming it works exactly
+
+00:05:56.727 --> 00:05:59.331
+like the bridges from earlier in this module.
+
+00:06:00.631 --> 00:06:03.252
+Worth being direct about the actual rules
+
+00:06:03.252 --> 00:06:06.560
+that stay identical, everywhere, regardless of which
+
+00:06:06.560 --> 00:06:09.856
+specific ecosystem you're actually operating in.
+
+00:06:09.856 --> 00:06:11.838
+Use the official wallet, from the
+
+00:06:11.838 --> 00:06:14.061
+official site, every single time.
+
+00:06:14.061 --> 00:06:16.391
+Send a small test transaction first.
+
+00:06:16.391 --> 00:06:19.321
+Confirm you're genuinely on the correct network.
+
+00:06:19.321 --> 00:06:21.581
+And hold that network's own gas token,
+
+00:06:21.581 --> 00:06:23.726
+on hand, before you actually need it.
+
+00:06:25.026 --> 00:06:28.386
+Here's how to actually verify you're genuinely using
+
+00:06:28.386 --> 00:06:31.429
+the official wallet for a new ecosystem, rather
+
+00:06:31.429 --> 00:06:34.391
+than assuming a top search result is safe.
+
+00:06:34.391 --> 00:06:37.945
+Get the download link directly from the ecosystem's own
+
+00:06:37.945 --> 00:06:41.926
+official documentation or website, never from a search ad.
+
+00:06:41.926 --> 00:06:44.408
+Confirm the wallet's own publisher name
+
+00:06:44.408 --> 00:06:47.687
+matches what that documentation actually states.
+
+00:06:47.687 --> 00:06:50.058
+And send a small test transaction first,
+
+00:06:50.058 --> 00:06:52.372
+exactly like every other lesson in this
+
+00:06:52.372 --> 00:06:54.107
+module has already taught you.
+
+00:06:55.407 --> 00:06:56.497
+Quick check.
+
+00:06:56.497 --> 00:06:59.682
+What's Solana's own native gas token specifically called?
+
+00:07:04.102 --> 00:07:05.357
 The answer: SOL.
 
-00:02:47.036 --> 00:02:48.281
+00:07:06.657 --> 00:07:07.662
+Worked example.
+
+00:07:08.962 --> 00:07:11.594
+Here's the actual choice, laid out fully,
+
+00:07:11.594 --> 00:07:14.777
+for genuinely lending one bitcoin on Ethereum.
+
+00:07:14.777 --> 00:07:17.983
+A custodial wrapper means trusting one specific
+
+00:07:17.983 --> 00:07:20.988
+company, directly, to actually hold the real
+
+00:07:20.988 --> 00:07:23.492
+B.T.C. behind your wrapped token.
+
+00:07:23.492 --> 00:07:26.584
+A decentralised wrapper instead means trusting a
+
+00:07:26.584 --> 00:07:29.108
+broader signer set, or a protocol's own
+
+00:07:29.108 --> 00:07:32.137
+mechanism, rather than one single company alone.
+
+00:07:33.437 --> 00:07:36.065
+Worth naming the third option too, since it's
+
+00:07:36.065 --> 00:07:38.992
+the one most likely to be overlooked entirely.
+
+00:07:38.992 --> 00:07:41.625
+Not wrapping at all means simply keeping
+
+00:07:41.625 --> 00:07:44.644
+your Bitcoin as Bitcoin, forgoing the specific
+
+00:07:44.644 --> 00:07:48.027
+yield this lending opportunity offers, entirely.
+
+00:07:48.027 --> 00:07:50.627
+That's a genuinely legitimate choice, not a
+
+00:07:50.627 --> 00:07:53.699
+failure to act, specifically when neither wrapper's
+
+00:07:53.699 --> 00:07:55.767
+trust model actually satisfies you.
+
+00:07:57.067 --> 00:07:59.352
+Here's exactly what to actually do with
+
+00:07:59.352 --> 00:08:02.038
+these three options, rather than picking based
+
+00:08:02.038 --> 00:08:04.052
+on the advertised yield alone.
+
+00:08:04.052 --> 00:08:06.776
+Write down each option's own specific trust
+
+00:08:06.776 --> 00:08:09.367
+model, explicitly, in your own words.
+
+00:08:09.367 --> 00:08:13.179
+Cap whatever wrapped B.T.C. exposure you do decide to
+
+00:08:13.179 --> 00:08:16.709
+take, treating it as exactly the same bridge risk
+
+00:08:16.709 --> 00:08:19.692
+covered back in Lesson five point one.
+
+00:08:19.692 --> 00:08:22.091
+And only then compare the actual yield
+
+00:08:22.091 --> 00:08:24.552
+on offer against that fully-priced risk.
+
+00:08:25.852 --> 00:08:27.312
+Here's your checklist.
+
+00:08:27.312 --> 00:08:31.127
+Do it for every non-E.V.M. chain you actually use.
+
+00:08:31.127 --> 00:08:34.637
+Keep a separate, official wallet for each one, specifically.
+
+00:08:34.637 --> 00:08:36.699
+Hold that chain's own gas token on
+
+00:08:36.699 --> 00:08:39.002
+hand, before you actually need it.
+
+00:08:39.002 --> 00:08:42.521
+And know your wrapped-B.T.C. trust model, precisely,
+
+00:08:42.521 --> 00:08:45.177
+and keep that exposure genuinely capped.
+
+00:08:46.477 --> 00:08:47.722
 Let's recap.
 
-00:02:48.281 --> 00:02:51.267
-Solana: a separate, high-throughput chain with
+00:08:47.722 --> 00:08:50.820
+Solana is a genuinely separate ecosystem: its
 
-00:02:51.267 --> 00:02:54.171
-its own wallets (e.g. Phantom, Solflare).
+00:08:50.820 --> 00:08:53.784
+own wallets, address format, and gas token;
 
-00:02:54.171 --> 00:02:58.076
-Bitcoin in DeFi: BTC itself doesn't run DeFi apps.
+00:08:53.784 --> 00:08:57.317
+your Ethereum address simply doesn't work there.
 
-00:02:58.076 --> 00:03:03.266
-Other ecosystems (e.g. Cosmos chains connected by IBC.
+00:08:57.317 --> 00:09:00.425
+Bitcoin gets used in DeFi almost entirely as a
 
-00:03:03.266 --> 00:03:05.932
-Same rules everywhere: official wallet from
+00:09:00.425 --> 00:09:04.195
+wrapped token, and that wrapper's real safety comes down
 
-00:03:05.932 --> 00:03:08.476
-the official site, test transaction first.
+00:09:04.195 --> 00:09:07.537
+to its own trust model, exactly like a bridge.
 
-00:03:09.776 --> 00:03:12.291
-Do the checklist now, before you move on.
+00:09:07.537 --> 00:09:11.837
+Other ecosystems, Cosmos, Move-based chains, and beyond, all
 
-00:03:12.291 --> 00:03:15.305
-Next up, Lesson 5.7: Operating across
+00:09:11.837 --> 00:09:15.662
+get this same module's own dependency map applied.
 
-00:03:15.305 --> 00:03:18.636
-chains: gas, routes and chain abstraction.
+00:09:15.662 --> 00:09:18.761
+And the same four rules hold everywhere: official
+
+00:09:18.761 --> 00:09:22.417
+wallet, test transaction, correct network, gas token ready.
+
+00:09:23.717 --> 00:09:27.231
+Worth closing on the actual point this lesson proves,
+
+00:09:27.231 --> 00:09:30.029
+one more time, since it's easy to think of
+
+00:09:30.029 --> 00:09:33.582
+non-Ethereum chains as an entirely separate topic.
+
+00:09:33.582 --> 00:09:37.299
+Everything this module already taught you, the dependency
+
+00:09:37.299 --> 00:09:40.761
+map, bridge trust models, oracle risk, contract risk,
+
+00:09:40.761 --> 00:09:43.432
+doesn't reset at Ethereum's own edge.
+
+00:09:43.432 --> 00:09:46.843
+It's the same map, applied to unfamiliar territory, not
+
+00:09:46.843 --> 00:09:49.341
+a new set of rules to learn from scratch.
+
+00:09:50.641 --> 00:09:53.833
+Use a separate official wallet per chain, hold each
+
+00:09:53.833 --> 00:09:57.631
+chain's gas token, and know your wrapped-BTC trust model.
+
+00:09:57.631 --> 00:10:00.597
+Next up, Lesson 5.7: operating across
+
+00:10:00.597 --> 00:10:03.876
+chains, gas, routes and chain abstraction.
