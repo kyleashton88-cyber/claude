@@ -3,149 +3,575 @@ WEBVTT
 00:00:00.550 --> 00:00:02.255
 Lesson 6.2.
 
-00:00:02.255 --> 00:00:06.325
-Tokenomics: supply, unlocks, FDV, value capture.
+00:00:02.255 --> 00:00:06.605
+Tokenomics: supply, unlocks, FDV, and value capture.
 
-00:00:06.325 --> 00:00:08.535
-By the end of this lesson, you'll be
+00:00:06.605 --> 00:00:08.941
+Today you'll learn to read a token's
 
-00:00:08.535 --> 00:00:11.103
-able to read a token's supply schedule and
+00:00:08.941 --> 00:00:11.971
+own supply schedule, and judge whether protocol
 
-00:00:11.103 --> 00:00:14.030
-judge whether protocol success reaches the token.
+00:00:11.971 --> 00:00:14.685
+success genuinely reaches the token itself.
 
-00:00:15.330 --> 00:00:16.620
-Here's the plan.
+00:00:15.985 --> 00:00:18.480
+Here's the objective, in one sentence.
 
-00:00:16.620 --> 00:00:18.305
-First, the key ideas.
+00:00:18.480 --> 00:00:21.514
+Read a token's supply schedule, and judge whether
 
-00:00:18.305 --> 00:00:21.020
-Then, a worked example, step by step.
+00:00:21.514 --> 00:00:24.790
+the protocol's own success actually reaches the token
 
-00:00:21.020 --> 00:00:22.545
-Then, your checklist.
+00:00:24.790 --> 00:00:27.763
+you'd be holding, rather than simply assuming it
 
-00:00:22.545 --> 00:00:24.707
-And finally, a three-question quiz.
+00:00:27.763 --> 00:00:30.615
+does because the protocol itself is doing well.
 
-00:00:26.007 --> 00:00:29.482
-First, Circulating supply: tokens tradable now.
+00:00:31.915 --> 00:00:35.982
+Here's the full picture this lesson builds: circulating and
 
-00:00:29.482 --> 00:00:32.557
-Max/total supply: all that will exist.
+00:00:35.982 --> 00:00:39.371
+max supply, market cap and F.D.V., the unlock and
 
-00:00:32.557 --> 00:00:35.902
-Next, Market cap = price × circulating.
+00:00:39.371 --> 00:00:43.302
+emissions schedule that grows supply over time, and value
 
-00:00:35.902 --> 00:00:41.242
-FDV (fully diluted valuation) = price × max supply.
+00:00:43.302 --> 00:00:47.030
+capture, whether protocol revenue actually reaches you.
 
-00:00:41.242 --> 00:00:45.340
-Then, Unlocks/vesting: team and investor tokens released on
+00:00:48.330 --> 00:00:51.932
+Here's all four pieces, named individually, since each one
 
-00:00:45.340 --> 00:00:48.372
-a schedule; new supply that may be sold.
+00:00:51.932 --> 00:00:55.895
+answers a genuinely different question about the same token.
 
-00:00:48.372 --> 00:00:52.097
-Also, Emissions: ongoing new tokens (rewards).
+00:00:55.895 --> 00:00:59.850
+Supply terms: how many tokens exist now, versus ever.
 
-00:00:52.097 --> 00:00:55.445
-And finally, Value capture: does protocol revenue
+00:00:59.850 --> 00:01:02.984
+Valuation terms: what the market actually says it's
 
-00:00:55.445 --> 00:00:58.927
-actually reach token holders (fee share, buybacks),
+00:01:02.984 --> 00:01:05.393
+worth, at each of those two counts.
 
-00:00:58.927 --> 00:01:00.467
-and how is it enforced?
+00:01:05.393 --> 00:01:09.938
+Supply growth: how fast new tokens actually enter circulation.
 
-00:01:01.767 --> 00:01:04.282
-Let's work an example, step by step.
+00:01:09.938 --> 00:01:12.424
+And value capture: whether the protocol's
 
-00:01:04.282 --> 00:01:08.683
-Price $2, circulating 100M, max 1B:
+00:01:12.424 --> 00:01:14.378
+own success actually reaches you.
 
-00:01:08.683 --> 00:01:12.162
-market cap $200M, FDV $2B.
+00:01:15.678 --> 00:01:18.408
+Circulating supply vs. max supply.
 
-00:01:12.162 --> 00:01:17.342
-Next month 50M unlock: circulating supply rises 50%.
+00:01:19.708 --> 00:01:23.142
+Circulating supply is the count that actually matters
 
-00:01:17.342 --> 00:01:20.952
-Unless demand grows to match, that's heavy selling pressure.
+00:01:23.142 --> 00:01:26.449
+for trading right now: every token that's genuinely
 
-00:01:20.952 --> 00:01:22.838
-A low market cap with a
+00:01:26.449 --> 00:01:29.293
+tradeable today, out in the open market.
 
-00:01:22.838 --> 00:01:24.567
-huge FDV is a warning.
+00:01:29.293 --> 00:01:32.757
+Max supply, sometimes called total supply, is every
 
-00:01:25.867 --> 00:01:27.327
-Here's your checklist.
+00:01:32.757 --> 00:01:36.088
+token that could ever genuinely exist, once every
 
-00:01:27.327 --> 00:01:28.862
-Do it now, for real.
+00:01:36.088 --> 00:01:39.353
+future unlock and emission has actually happened.
 
-00:01:28.862 --> 00:01:32.407
-First, Market cap vs FDV compared.
+00:01:40.653 --> 00:01:44.178
+Worth being direct about why that gap actually matters.
 
-00:01:32.407 --> 00:01:35.232
-Next, Next 12 months of unlocks listed.
+00:01:44.178 --> 00:01:47.760
+If circulating supply is small relative to max supply,
 
-00:01:35.232 --> 00:01:39.292
-And finally, Value-capture mechanism identified (or "none").
+00:01:47.760 --> 00:01:51.277
+most of the token's eventual total hasn't reached the
 
-00:01:40.592 --> 00:01:41.802
-Question 1.
+00:01:51.277 --> 00:01:54.404
+market yet, and it's going to, on some schedule
 
-00:01:41.802 --> 00:01:46.042
-Price $5, circulating 20M, max 100M.
+00:01:54.404 --> 00:01:56.618
+you can actually go find and read.
 
-00:01:46.042 --> 00:01:47.002
-FDV?
+00:01:57.918 --> 00:02:00.093
+Market cap vs. F.D.V.
 
-00:01:51.422 --> 00:01:53.467
-The answer: $500M.
+00:02:01.393 --> 00:02:03.746
+Two formulas, both built from the same
 
-00:01:54.767 --> 00:01:56.012
-Question 2.
+00:02:03.746 --> 00:02:07.003
+token price, each answering a different question.
 
-00:01:56.012 --> 00:01:57.397
-Why do unlocks matter?
+00:02:07.003 --> 00:02:10.555
+Market cap: price, multiplied by circulating supply,
 
-00:02:01.817 --> 00:02:04.887
-The answer: They add supply that recipients may sell.
+00:02:10.555 --> 00:02:13.938
+the value of what's genuinely tradeable today.
 
-00:02:06.187 --> 00:02:07.457
-Question 3.
+00:02:13.938 --> 00:02:17.914
+F.D.V., fully diluted valuation: price, multiplied by
 
-00:02:07.457 --> 00:02:08.742
-What is value capture?
+00:02:17.914 --> 00:02:20.933
+max supply, the value of everything that
 
-00:02:13.162 --> 00:02:15.142
-The answer: An enforceable way
+00:02:20.933 --> 00:02:23.658
+will ever exist, once fully released.
 
-00:02:15.142 --> 00:02:17.442
-protocol success benefits the token.
+00:02:24.958 --> 00:02:27.353
+Here's the source's own worked example.
 
-00:02:18.742 --> 00:02:19.987
-Let's recap.
+00:02:27.353 --> 00:02:29.724
+A token priced at two dollars, with a
 
-00:02:19.987 --> 00:02:23.072
-Circulating supply: tokens tradable now.
+00:02:29.724 --> 00:02:32.968
+circulating supply of one hundred million: that's a
 
-00:02:23.072 --> 00:02:25.927
-Market cap = price × circulating.
+00:02:32.968 --> 00:02:35.888
+market cap of two hundred million dollars.
 
-00:02:25.927 --> 00:02:30.687
-Unlocks/vesting: team and investor tokens released on a schedule.
+00:02:35.888 --> 00:02:38.802
+The same two-dollar price, applied to a max
 
-00:02:30.687 --> 00:02:33.402
-Emissions: ongoing new tokens (rewards).
+00:02:38.802 --> 00:02:41.583
+supply of one billion, gives an F.D.V. of
 
-00:02:34.702 --> 00:02:37.217
-Do the checklist now, before you move on.
+00:02:41.583 --> 00:02:44.696
+two billion dollars, ten times larger than the
 
-00:02:37.217 --> 00:02:40.837
-Next up, Lesson 6.3: Governance & DAOs.
+00:02:44.696 --> 00:02:48.073
+market cap you'd actually be trading against today.
+
+00:02:49.373 --> 00:02:52.443
+Here's what that ten-times gap actually tells you:
+
+00:02:52.443 --> 00:02:54.790
+nine out of every ten tokens that will
+
+00:02:54.790 --> 00:02:57.618
+ever exist haven't reached the market yet.
+
+00:02:57.618 --> 00:03:01.212
+A low market cap sitting underneath a huge F.D.V.
+
+00:03:01.212 --> 00:03:06.172
+isn't automatically disqualifying, but it's a real, specific warning
+
+00:03:06.172 --> 00:03:09.550
+worth investigating, not a detail to skip past.
+
+00:03:10.849 --> 00:03:11.939
+Quick check.
+
+00:03:11.939 --> 00:03:14.241
+A token trades at five dollars, with
+
+00:03:14.241 --> 00:03:16.979
+a circulating supply of twenty million, and
+
+00:03:16.979 --> 00:03:19.519
+a max supply of one hundred million.
+
+00:03:19.519 --> 00:03:20.994
+What's its F.D.V.?
+
+00:03:25.414 --> 00:03:28.991
+The answer: five hundred million dollars — five dollars,
+
+00:03:28.991 --> 00:03:32.254
+multiplied by the max supply of one hundred million.
+
+00:03:33.554 --> 00:03:34.799
+Unlocks and vesting.
+
+00:03:36.099 --> 00:03:38.933
+Unlocks, also called vesting, are team and
+
+00:03:38.933 --> 00:03:42.030
+investor tokens released into circulation on a
+
+00:03:42.030 --> 00:03:45.295
+fixed schedule, agreed to well before launch.
+
+00:03:45.295 --> 00:03:48.146
+Every unlocked token becomes new supply that
+
+00:03:48.146 --> 00:03:50.744
+its recipient is genuinely free to sell,
+
+00:03:50.744 --> 00:03:53.215
+whether or not they actually choose to.
+
+00:03:54.515 --> 00:03:58.070
+Here's the source's own unlock example, made visual.
+
+00:03:58.070 --> 00:04:01.933
+Circulating supply starts at one hundred million tokens.
+
+00:04:01.933 --> 00:04:05.547
+One month later, a fifty-million-token unlock lands, and
+
+00:04:05.547 --> 00:04:09.034
+circulating supply jumps to one hundred fifty million:
+
+00:04:09.034 --> 00:04:11.823
+a fifty percent increase, in a single month.
+
+00:04:13.123 --> 00:04:16.198
+Here's why that fifty-percent jump matters so much.
+
+00:04:16.198 --> 00:04:18.902
+Unless real demand for the token actually
+
+00:04:18.902 --> 00:04:21.027
+grows to match it, that much new
+
+00:04:21.027 --> 00:04:23.731
+sellable supply, arriving all at once, is
+
+00:04:23.731 --> 00:04:26.928
+genuine, heavy selling pressure on the price.
+
+00:04:26.928 --> 00:04:28.955
+This is exactly the kind of event
+
+00:04:28.955 --> 00:04:31.816
+worth knowing about in advance, not discovering
+
+00:04:31.816 --> 00:04:33.843
+after the price has already moved.
+
+00:04:35.143 --> 00:04:37.449
+Here's the actual fork in the road,
+
+00:04:37.449 --> 00:04:41.145
+once that fifty-million-token unlock genuinely lands.
+
+00:04:41.145 --> 00:04:43.392
+If real demand has grown enough to
+
+00:04:43.392 --> 00:04:45.831
+absorb it, price holds, and the extra
+
+00:04:45.831 --> 00:04:48.827
+supply simply gets absorbed by new buyers.
+
+00:04:48.827 --> 00:04:52.046
+If demand hasn't grown to match, recipients selling
+
+00:04:52.046 --> 00:04:54.770
+into a thin market can genuinely push price
+
+00:04:54.770 --> 00:04:57.432
+down, sometimes sharply, in a short window.
+
+00:04:58.732 --> 00:05:01.242
+Worth knowing the actual shape most real
+
+00:05:01.242 --> 00:05:03.998
+vesting schedules take, since it changes how
+
+00:05:03.998 --> 00:05:06.257
+urgently a given unlock matters.
+
+00:05:06.257 --> 00:05:09.546
+Many token launches use a one-year cliff: genuinely
+
+00:05:09.546 --> 00:05:12.583
+zero tokens unlock for the first year, followed
+
+00:05:12.583 --> 00:05:15.492
+by linear monthly unlocks spread over the two
+
+00:05:15.492 --> 00:05:17.437
+or three years after that.
+
+00:05:17.437 --> 00:05:20.054
+A schedule still inside its cliff period
+
+00:05:20.054 --> 00:05:22.734
+carries a very different urgency than one
+
+00:05:22.734 --> 00:05:24.840
+already deep into linear unlocks.
+
+00:05:26.139 --> 00:05:26.944
+Emissions.
+
+00:05:28.244 --> 00:05:32.252
+Emissions are ongoing, newly minted tokens, handed out as
+
+00:05:32.252 --> 00:05:36.284
+rewards, most often to liquidity providers or stakers.
+
+00:05:36.284 --> 00:05:40.338
+Unlike an unlock, which releases tokens that already existed,
+
+00:05:40.338 --> 00:05:45.046
+an emission genuinely creates brand-new supply, diluting every existing
+
+00:05:45.046 --> 00:05:48.054
+holder a little, every single time it happens.
+
+00:05:49.354 --> 00:05:51.421
+Worth connecting this directly back
+
+00:05:51.421 --> 00:05:53.559
+to last lesson's cash-flow step.
+
+00:05:53.559 --> 00:05:56.837
+If a protocol's own real revenue isn't growing fast
+
+00:05:56.837 --> 00:06:00.429
+enough to offset its ongoing emissions, the token supply
+
+00:06:00.429 --> 00:06:03.896
+keeps expanding faster than genuine demand for it, and
+
+00:06:03.896 --> 00:06:07.489
+price pressure is the structural result, not an accident.
+
+00:06:08.789 --> 00:06:09.799
+Value capture.
+
+00:06:11.099 --> 00:06:13.585
+Here's the real difference value capture
+
+00:06:13.585 --> 00:06:15.644
+actually makes, side by side.
+
+00:06:15.644 --> 00:06:20.211
+With genuine value capture, real, specific mechanisms send protocol
+
+00:06:20.211 --> 00:06:23.703
+revenue to holders: a direct fee share, or enforced
+
+00:06:23.703 --> 00:06:27.630
+token buybacks, written into the contracts themselves.
+
+00:06:27.630 --> 00:06:30.594
+Without it, all of that same revenue stays
+
+00:06:30.594 --> 00:06:33.835
+entirely with the team or the D.A.O. treasury,
+
+00:06:33.835 --> 00:06:37.075
+and holders benefit only indirectly, if at all.
+
+00:06:38.375 --> 00:06:42.090
+Here's the actual test worth applying, every single time.
+
+00:06:42.090 --> 00:06:45.268
+Don't just ask whether a protocol is profitable;
+
+00:06:45.268 --> 00:06:48.380
+ask specifically how that profit reaches you as
+
+00:06:48.380 --> 00:06:51.363
+a token holder, and whether that mechanism is
+
+00:06:51.363 --> 00:06:55.124
+genuinely enforced on-chain, or merely a stated intention
+
+00:06:55.124 --> 00:06:56.940
+the team could change later.
+
+00:06:58.240 --> 00:07:01.804
+Here's a specific, real pattern worth being able
+
+00:07:01.804 --> 00:07:04.931
+to spot on sight: a low circulating market
+
+00:07:04.931 --> 00:07:08.204
+cap sitting under a genuinely huge F.D.V. On
+
+00:07:08.204 --> 00:07:11.995
+its own, that's not automatically disqualifying.
+
+00:07:11.995 --> 00:07:15.132
+But combined with heavy near-term unlocks and no
+
+00:07:15.132 --> 00:07:18.845
+real value-capture mechanism, it's a pattern that's shown
+
+00:07:18.845 --> 00:07:21.598
+up in plenty of real token launches, worth
+
+00:07:21.598 --> 00:07:25.055
+naming precisely rather than reacting to only vaguely.
+
+00:07:26.355 --> 00:07:27.445
+Quick check.
+
+00:07:27.445 --> 00:07:29.880
+Why do unlocks matter for a token's price?
+
+00:07:34.300 --> 00:07:36.930
+The answer: they add real, sellable supply
+
+00:07:36.930 --> 00:07:39.622
+that recipients may choose to sell, whether
+
+00:07:39.622 --> 00:07:41.090
+or not they actually do.
+
+00:07:42.390 --> 00:07:44.310
+Reading a real supply schedule.
+
+00:07:45.610 --> 00:07:47.621
+Here's the actual sequence, run on
+
+00:07:47.621 --> 00:07:49.875
+any real token you're considering.
+
+00:07:49.875 --> 00:07:52.220
+Look up circulating and max supply.
+
+00:07:52.220 --> 00:07:54.821
+Calculate both market cap and F.D.V.,
+
+00:07:54.821 --> 00:07:57.380
+and compare the gap between them.
+
+00:07:57.380 --> 00:08:00.275
+Find the next twelve months of scheduled unlocks.
+
+00:08:00.275 --> 00:08:02.730
+Check the current emissions rate, and whether
+
+00:08:02.730 --> 00:08:05.005
+real revenue is growing to offset it.
+
+00:08:05.005 --> 00:08:08.204
+And identify the value-capture mechanism, or honestly
+
+00:08:08.204 --> 00:08:10.100
+write down that there isn't one.
+
+00:08:11.400 --> 00:08:14.528
+This is exactly the same discipline last lesson's
+
+00:08:14.528 --> 00:08:18.031
+evidenced-not-assumed rule asked for, applied here to a
+
+00:08:18.031 --> 00:08:21.897
+token's own numbers instead of a protocol's dependencies.
+
+00:08:21.897 --> 00:08:23.800
+Every one of these five checks
+
+00:08:23.800 --> 00:08:26.432
+has a real, specific, findable answer.
+
+00:08:26.432 --> 00:08:28.467
+None of them are a matter of opinion.
+
+00:08:29.767 --> 00:08:32.388
+Three more questions worth asking directly,
+
+00:08:32.388 --> 00:08:34.892
+if a schedule genuinely isn't public.
+
+00:08:34.892 --> 00:08:37.845
+Is the full unlock schedule actually published
+
+00:08:37.845 --> 00:08:40.972
+anywhere, or only described in general terms.
+
+00:08:40.972 --> 00:08:44.118
+Has that schedule ever genuinely been changed after
+
+00:08:44.118 --> 00:08:46.717
+launch, and if so, in which direction.
+
+00:08:46.717 --> 00:08:49.768
+And is there any lockup-extension option that
+
+00:08:49.768 --> 00:08:52.621
+team or investor tokens could actually use
+
+00:08:52.621 --> 00:08:54.412
+to delay their own unlocks.
+
+00:08:55.712 --> 00:08:56.807
+Before you move on.
+
+00:08:58.107 --> 00:09:01.267
+Confirm three things before calling this lesson done.
+
+00:09:01.267 --> 00:09:05.330
+Market cap has actually been compared against F.D.V., not
+
+00:09:05.330 --> 00:09:08.642
+just one of the two looked up in isolation.
+
+00:09:08.642 --> 00:09:10.460
+The next twelve months of unlocks
+
+00:09:10.460 --> 00:09:12.417
+have genuinely been listed out.
+
+00:09:12.417 --> 00:09:15.748
+And a value-capture mechanism has been identified, or
+
+00:09:15.748 --> 00:09:19.017
+honestly marked as none, rather than left unanswered.
+
+00:09:20.317 --> 00:09:21.357
+One more.
+
+00:09:21.357 --> 00:09:23.612
+What is value capture, in one sentence?
+
+00:09:28.032 --> 00:09:31.191
+The answer: an enforceable way that a protocol's
+
+00:09:31.191 --> 00:09:34.222
+own success actually benefits the token itself.
+
+00:09:35.522 --> 00:09:37.727
+Let's recap this entire lesson.
+
+00:09:37.727 --> 00:09:40.662
+Circulating supply is what trades today; max
+
+00:09:40.662 --> 00:09:43.702
+supply is everything that will ever exist.
+
+00:09:43.702 --> 00:09:46.579
+Market cap and F.D.V. use that same price
+
+00:09:46.579 --> 00:09:49.799
+against those two very different counts, and a
+
+00:09:49.799 --> 00:09:52.907
+large gap between them is a real warning.
+
+00:09:52.907 --> 00:09:55.600
+Unlocks and emissions both grow supply, on
+
+00:09:55.600 --> 00:09:58.217
+a schedule you can actually go check.
+
+00:09:58.217 --> 00:10:01.343
+And value capture asks whether the protocol's own
+
+00:10:01.343 --> 00:10:05.157
+success genuinely reaches you, enforced, not merely promised.
+
+00:10:06.457 --> 00:10:08.985
+Pick one real token, and run all five
+
+00:10:08.985 --> 00:10:11.947
+checks on its own supply schedule today.
+
+00:10:11.947 --> 00:10:16.092
+Next up, Lesson 6.3: governance and DAOs.
