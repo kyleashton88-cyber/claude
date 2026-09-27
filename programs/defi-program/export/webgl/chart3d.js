@@ -156,6 +156,17 @@ function runBars(DATA) {
       caps[i].scale.setScalar(barRadius * (active ? 2.9 + 0.2 * Math.sin(t * 3) : 2.3));
 
       const lp = project(new THREE.Vector3(b.x, -0.35, b.z), camera, W, H);
+      // The flat 2D caption strip (the spoken-word captions, on screen almost
+      // continuously) sits near the bottom of the frame - a WebGL label
+      // projected from the 3D ground plane knows nothing about it, so a bar
+      // whose base projects low on screen can float its category label and
+      // sub-label right into (or behind) the caption box. `lp.y` is the
+      // label div's *top* edge (translate(-50%,0), not centered), so the
+      // clamp has to leave room for the whole two-line block below it (name
+      // + a sub that can itself wrap to 2 lines) as well as a worst-case
+      // 2-line caption - H-250 measured as still overlapping on a real
+      // render; H-340 actually clears both.
+      lp.y = Math.min(lp.y, H - 340);
       const le = labelEls[i]; le.style.opacity = String(ease((t - a) / 0.5) * (0.55 + 0.45 * (active || activeIdx < 0 ? 1 : 0))); le.style.transform = `translate(${lp.x.toFixed(1)}px, ${lp.y.toFixed(1)}px)`;
       const cp = project(new THREE.Vector3(b.x, h + 0.55, b.z), camera, W, H);
       // A bar at (or near) max height projects its counter close to the top of
@@ -167,8 +178,13 @@ function runBars(DATA) {
       // not its top - 250 wasn't enough for a 1-line title, 300 wasn't enough
       // once a long title wrapped to 2 lines ("Swapping $20,000: sandwich
       // exposure by defence" pushed the header itself further down). 420
-      // covers a 2-line title plus a 2-line sub, the realistic worst case.
-      cp.y = Math.max(cp.y, 420);
+      // covers a 2-line title plus a 2-line sub, the realistic worst case -
+      // but that worst case doesn't apply to every scene, so build_video.js
+      // passes the actual clearance this scene's header needs as
+      // DATA.minLabelY; a bar tall enough to need clamping at all only
+      // happens with a short title (a long one leaves little room for a
+      // tall bar in the first place), so 420 stays a safe fallback.
+      cp.y = Math.max(cp.y, DATA.minLabelY ?? 420);
       const ce = countEls[i]; ce.style.opacity = String(ease((t - a) / 0.4)); ce.style.transform = `translate(${cp.x.toFixed(1)}px, ${cp.y.toFixed(1)}px)`;
       ce.style.color = active ? `#${b.color.toString(16).padStart(6, '0')}` : '#fff';
       ce.firstChild.textContent = b.count ? formatCounter(b.count, easeIO((t - a) / 1.1)) : b.show;
@@ -339,6 +355,7 @@ function runLine(DATA) {
     });
 
     xlabelEls.forEach((el, i) => { if (!el) return; const pt = first[i], gp = project(new THREE.Vector3(pt.x, -0.3, pt.z), camera, W, H);
+      gp.y = Math.min(gp.y, H - 160); // stay clear of the flat caption strip, same fix as runBars' category labels
       el.style.opacity = '0.8'; el.style.transform = `translate(${gp.x.toFixed(1)}px, ${gp.y.toFixed(1)}px)`; });
 
     (DATA.marks || []).forEach((m, i) => { const [a] = (DATA.itemsT || [])[i] || [0], el = markEls[i];

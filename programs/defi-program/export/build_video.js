@@ -333,7 +333,13 @@ function sceneBody(s, W, H, T) {
           linesT: T.lines, itemsT: T.items };
       } else {
         const bars = s.bars, hi = s.max ?? (Math.max(...bars.map(b => (b.base || 0) + b.value), 0) * 1.08 || 1);
-        data = { kind: 'bars', W, H, seed: s.seed ?? 11, cameraMove: s.cameraMove, dur: Math.max(6, ...T.items.flat()), max: hi,
+        // How far down a full-height bar's counter must be clamped depends on
+        // how tall this scene's own header actually is (see chart3d.js's
+        // runBars for why) - a rough estimate from title/sub presence and
+        // whether the title is long enough to wrap to 2 lines at 76px bold in
+        // a 1620px-wide, centered container (~38 chars/line).
+        const minLabelY = !s.title ? 120 : !s.sub ? (s.title.length > 34 ? 340 : 230) : 420;
+        data = { kind: 'bars', W, H, seed: s.seed ?? 11, cameraMove: s.cameraMove, dur: Math.max(6, ...T.items.flat()), max: hi, minLabelY,
           bars: bars.map(b => { const show = b.show || String(b.value); return { label: esc(b.label), text: b.text ? esc(b.text) : '', tone: b.tone, value: Math.max(0, b.value), base: Math.max(0, b.base || 0), count: counter(show), show }; }),
           itemsT: T.items };
       }
