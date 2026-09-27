@@ -164,7 +164,7 @@ const expertCount = allLessons.filter(l => l.expert).length;
 const starterCount = allLessons.filter(l => l.starter).length;
 
 function lessonLink(id, label) {
-  return `<a href="index.html#/l/${esc(id)}">${esc(label || 'Lesson ' + id)}</a>`;
+  return `<a href="#l-${String(id).replace('.', '-')}">${esc(label || 'Lesson ' + id)}</a>`;
 }
 
 const wsRaw = read('08-worksheets.md');
@@ -190,9 +190,9 @@ function lessonBlock(l) {
   const moreImg = img ? `<img data-img="${esc(img.id)}" alt="${esc(img.alt || l.title)}" width="800">` : '';
   const sheetWord = sheets.length ? `<span class="sheet">${esc(sheets.map(w => w.id).join(' '))}</span>` : '';
   const links = [
-    `<a class="go" href="index.html#/l/${esc(l.id)}">Open in Course Hub</a>`,
-    l.video ? `<a href="${esc(l.video)}">Video file</a>` : '',
-    sheets.map(sheetLink).join(''),
+    sheets.map(sheetLink).join(' · '),
+    l.video ? `<a class="folderlink" href="${esc(l.video)}">Video file</a>` : '',
+    `<a class="folderlink" href="index.html#/l/${esc(l.id)}">Course Hub copy</a>`,
   ].filter(Boolean).join(' · ');
   return `<details class="lesson" id="l-${l.id.replace('.', '-')}" data-kind="${l.starter ? 'starter' : l.expert ? 'expert' : 'lesson'}" data-find="${esc(find)}">
     <summary>
@@ -206,8 +206,8 @@ function lessonBlock(l) {
 
 function moduleBlock(m) {
   const banner = m.banner ? `<img class="banner" data-img="${esc(m.banner)}" alt="" width="1000">` : '';
-  const intro = m.intro ? `<a href="${esc(m.intro)}">Intro video</a>` : '';
-  const hub = `<a href="index.html#/m/${m.n}">Open module in Course Hub</a>`;
+  const intro = m.intro ? `<a class="folderlink" href="${esc(m.intro)}">Intro video</a>` : '';
+  const hub = `<a class="folderlink" href="index.html#/m/${m.n}">Course Hub copy</a>`;
   const modSheets = wsRefs.filter(w => !w.lesson && w.mod === String(m.n)).map(sheetLink).join('');
   return `<article class="module" id="m-${m.n}">
     ${banner}
@@ -311,18 +311,31 @@ const chartsBlock = chartFigs.length
   ? `<details class="pics" id="pics-charts"><summary>Charts <span>${chartFigs.length}</span></summary><div class="gallery">${chartFigs.map(pictureCard).join('')}</div></details>`
   : '';
 
+const FORMS = {
+  health: [['qty', 'Collateral quantity', 10], ['price', 'Collateral price ($)', 3000], ['lt', 'Liquidation threshold', 0.8], ['debt', 'Debt ($)', 12000]],
+  il: [['ratio', 'Price ratio (new ÷ entry)', 2], ['days', 'Days held', 90], ['fee', 'Fee APR (%)', 20]],
+  loop: [['lev', 'Leverage (×)', 3], ['capy', 'Collateral APY (%)', 3.5], ['bapy', 'Borrow APY (%)', 2.5]],
+  lvr: [['vol', 'Volatility (%/yr)', 80], ['fee', 'Fee APR (%)', 12]],
+  pt: [['price', 'PT price (of underlying)', 0.95], ['days', 'Days to maturity', 180]],
+  expected: [['y', 'Headline yield (%)', 12], ['p', 'Annual loss probability', 0.05], ['lgd', 'Loss given default (0–1)', 0.6], ['c', 'Costs (%)', 0.5]],
+  income: [['cap', 'Capital ($)', 250000], ['ry', 'Risk-adjusted yield (%)', 5], ['payout', 'Payout ratio (0–1)', 0.7]],
+  var: [['pos', 'Position ($)', 100000], ['vol', 'Volatility (%/yr)', 70], ['z', 'Confidence z (1.65 = 95%)', 1.65]],
+};
 const calcRows = CALCS.map(c => {
   const find = plain(c.cmd + ' ' + c.name + ' ' + c.what + ' calculator lesson ' + c.lesson).toLowerCase();
-  const hub = c.hub ? `<a href="index.html#/tools">Open the form</a>` : '<span class="quiet">In the course files</span>';
-  return `<div class="calc" data-find="${esc(find)}">
+  const fields = FORMS[c.cmd];
+  const form = fields ? `<div class="formgrid">${fields.map(([k, lab, def]) => `<label>${esc(lab)}<input type="number" step="any" data-k="${esc(k)}" value="${esc(def)}"></label>`).join('')}</div><div class="out" aria-live="polite"></div>` : '';
+  const extra = fields ? '' : ` · <span class="quiet">Described here. The course files run <code>${esc(c.cmd)}</code>.</span>`;
+  return `<div class="calc" data-c="${esc(c.cmd)}" data-find="${esc(find)}">
     <h3>${esc(c.name)}</h3>
     <p>${esc(c.what)}</p>
-    <p class="links">${lessonLink(c.lesson, 'Lesson ' + c.lesson)} · ${hub}${c.hub ? '' : ` · <code>${esc(c.cmd)}</code>`}</p>
+    ${form}
+    <p class="links">${lessonLink(c.lesson, 'Lesson ' + c.lesson)}${extra}</p>
   </div>`;
 }).join('\n');
 
 const orientation = ORIENTATION.filter(v => exists('video/' + v.file)).map(v =>
-  `<li><a href="../video/${esc(v.file)}">${esc(v.name)}</a> — ${esc(v.about)}</li>`
+  `<li><a class="folderlink" href="../video/${esc(v.file)}">${esc(v.name)}</a> — ${esc(v.about)}</li>`
 ).join('');
 
 const rail = STAGES.map(s => {
@@ -476,6 +489,12 @@ code { font-family: var(--mono); font-size: 0.86em; }
 .calc { border-top: 1px solid var(--line); padding: 14px 0; }
 .calc h3 { margin: 0 0 4px; font-size: 18px; }
 .calc p { margin: 0 0 6px; max-width: 66ch; }
+.formgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin: 10px 0; max-width: 720px; }
+.formgrid label { font-size: 13px; font-weight: 650; color: var(--muted); }
+.formgrid input { display: block; width: 100%; margin-top: 4px; font: inherit; font-size: 16px; padding: 8px; border: 1px solid var(--line); background: #fff; color: var(--text); }
+.out { font-family: var(--mono); font-size: 14px; white-space: pre-wrap; background: #fff; border: 1px solid var(--line); padding: 10px 12px; margin: 0 0 8px; max-width: 720px; }
+.out .warn { color: var(--warn); font-weight: 700; }
+#offline-note { margin-top: 12px; }
 #files table code { color: var(--muted); }
 footer { margin-top: 36px; color: var(--muted); font-size: 14.5px; max-width: 68ch; }
 @media (max-width: 860px) {
@@ -601,6 +620,38 @@ const openHash = () => {
 addEventListener('hashchange', openHash);
 openHash();
 apply();
+const money = x => (x < 0 ? '−$' : '$') + Math.abs(x).toLocaleString('en-US', { maximumFractionDigits: 2 });
+const pct = (x, d = 2) => (x * 100).toFixed(d) + '%';
+const RUN = {
+  health: v => { const coll = v.qty * v.price, hf = coll * v.lt / v.debt, liq = v.debt / (v.qty * v.lt); return 'Collateral ' + money(coll) + ' · LTV ' + pct(v.debt / coll, 1) + '\\nHealth factor ' + hf.toFixed(2) + ' · liquidation price ' + money(liq) + ' (' + ((liq / v.price - 1) * 100).toFixed(1) + '% from now)\\nMax debt for HF 1.5: ' + money(coll * v.lt / 1.5) + ' · for HF 2.0: ' + money(coll * v.lt / 2) + (hf < 1.5 ? '\\n<span class="warn">Warning: HF below 1.5. Repay or add collateral.</span>' : ''); },
+  il: v => { const il = 1 - 2 * Math.sqrt(v.ratio) / (1 + v.ratio), need = il * 365 / v.days, earned = v.fee / 100 * v.days / 365; return v.ratio + '× move → impermanent loss ' + pct(il) + '\\nFee APR needed over ' + v.days + ' days just to match holding: ' + pct(need) + '\\nAt ' + v.fee + '% fee APR you earn ' + pct(earned) + ' → net vs holding ' + (earned - il >= 0 ? '+' : '') + pct(earned - il); },
+  loop: v => { const net = v.capy * v.lev - v.bapy * (v.lev - 1), be = v.lev > 1 ? v.capy * v.lev / (v.lev - 1) : Infinity; return 'Net APY on equity ' + net.toFixed(2) + '% (unlevered ' + v.capy.toFixed(2) + '%)\\nBorrow rate that wipes out the return: ' + be.toFixed(2) + '%' + (net <= v.capy ? '\\n<span class="warn">Leverage adds nothing at this spread, only liquidation risk.</span>' : ''); },
+  lvr: v => { const r = (v.vol / 100) ** 2 / 8; return 'LVR ≈ ' + pct(r) + ' of pool value per year\\nFees minus LVR ≈ ' + (v.fee - r * 100 >= 0 ? '+' : '') + (v.fee - r * 100).toFixed(2) + '%/yr'; },
+  pt: v => { const fixed = (1 / v.price) ** (365 / v.days) - 1, simple = (1 / v.price - 1) * 365 / v.days; return 'Fixed APY if held to maturity: ' + pct(fixed) + ' (simple ' + pct(simple) + ')\\nYT profits only if realised variable yield beats ≈ ' + pct(fixed) + ' over the period'; },
+  expected: v => { const h = v.p * v.lgd * 100, net = v.y - h - v.c; return 'Headline ' + v.y + '% − expected loss ' + h.toFixed(2) + '% − costs ' + v.c + '% = ' + net.toFixed(2) + '% risk-adjusted'; },
+  income: v => { const exp = v.cap * v.ry / 100, pay = exp * v.payout; return 'Expected income ' + money(exp) + '/yr\\nPay out ' + pct(v.payout, 0) + ' = ' + money(pay) + '/yr (' + money(pay / 12) + '/month)\\nRetain ' + money(exp - pay) + ' as a loss buffer' + (v.payout > 0.8 ? '\\n<span class="warn">Payout above 80% of expected income leaves little buffer.</span>' : '') + '\\nIllustrative only. No income is promised.'; },
+  var: v => { const d = v.vol / 100 / Math.sqrt(365), x = v.z * d * v.pos; return 'Daily volatility ' + pct(d) + '\\n1-day VaR ≈ ' + money(x) + ' on ' + money(v.pos) + ' (' + pct(v.z * d) + ')'; }
+};
+document.querySelectorAll('.calc[data-c]').forEach(el => {
+  const run = RUN[el.dataset.c];
+  const out = el.querySelector('.out');
+  if (!run || !out) return;
+  const upd = () => {
+    const v = {};
+    el.querySelectorAll('input').forEach(i => v[i.dataset.k] = parseFloat(i.value));
+    out.innerHTML = Object.values(v).some(n => Number.isNaN(n)) ? 'Enter every value.' : run(v);
+  };
+  el.querySelectorAll('input').forEach(i => i.addEventListener('input', upd));
+  upd();
+});
+if (location.protocol === 'file:') {
+  const note = document.createElement('p');
+  note.id = 'offline-note';
+  note.className = 'safety';
+  note.textContent = 'This downloaded file is the whole directory. Search, lessons, pictures, worksheets, and the eight calculators all run here. Video files and the Course Hub are separate course files, so those links stay on this page.';
+  document.getElementById('intro').prepend(note);
+  document.querySelectorAll('a.folderlink').forEach(a => a.addEventListener('click', e => { e.preventDefault(); note.scrollIntoView({ block: 'nearest' }); }));
+}
 `;
 
 const html = `<!doctype html>
@@ -679,7 +730,7 @@ const html = `<!doctype html>
 
     <section id="calculators">
       <h2>Calculators</h2>
-      <p class="lede">Eight of these are forms in the Course Hub. The rest use the same formulas in the course files. Numbers are for learning. They are not a forecast and not a promise of income.</p>
+      <p class="lede">Eight forms run in this file. Change a number and the result updates. They are for learning, not a forecast, and no income is promised.</p>
       <div class="calcs">${calcRows}</div>
     </section>
 
