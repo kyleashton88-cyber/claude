@@ -3,122 +3,578 @@ WEBVTT
 00:00:00.550 --> 00:00:02.215
 Lesson 4.4.
 
-00:00:02.215 --> 00:00:04.480
+00:00:02.215 --> 00:00:04.520
 Restaking & shared security.
 
-00:00:04.480 --> 00:00:06.661
-By the end of this lesson, you'll be
+00:00:04.520 --> 00:00:06.642
+By the end, you'll be able to map
 
-00:00:06.661 --> 00:00:09.255
-able to map the extra risk layers restaking
+00:00:06.642 --> 00:00:09.824
+every extra risk layer restaking adds, before ever
 
-00:00:09.255 --> 00:00:11.495
-adds before accepting its extra yield.
+00:00:09.824 --> 00:00:12.195
+accepting its extra yield in exchange.
 
-00:00:12.795 --> 00:00:14.085
+00:00:13.495 --> 00:00:14.785
 Here's the plan.
 
-00:00:14.085 --> 00:00:15.770
-First, the key ideas.
+00:00:14.785 --> 00:00:17.764
+What restaking actually reuses, and why services
 
-00:00:15.770 --> 00:00:18.485
-Then, a worked example, step by step.
+00:00:17.764 --> 00:00:20.010
+are willing to pay extra for it.
 
-00:00:18.485 --> 00:00:20.010
-Then, your checklist.
+00:00:20.010 --> 00:00:22.605
+The two new risks this specifically adds:
 
-00:00:20.010 --> 00:00:22.172
-And finally, a three-question quiz.
+00:00:22.605 --> 00:00:25.685
+extra slashing conditions, and operator risk.
 
-00:00:23.472 --> 00:00:26.986
-Restaking reuses staked assets to secure additional
+00:00:25.685 --> 00:00:28.897
+Correlated failure, what happens when one collateral
 
-00:00:26.986 --> 00:00:30.327
-services, for extra rewards and often points.
+00:00:28.897 --> 00:00:31.318
+base secures many services at once.
 
-00:00:30.327 --> 00:00:33.649
-Each service adds its own slashing conditions, and
+00:00:31.318 --> 00:00:33.565
+And a full worked example, stacking up
 
-00:00:33.649 --> 00:00:37.467
-operators (who run the services) add operational risk.
+00:00:33.565 --> 00:00:36.158
+the source material's own six-layer scenario.
 
-00:00:37.467 --> 00:00:42.157
-One collateral base securing many services creates correlated failure.
+00:00:37.458 --> 00:00:39.393
+What restaking actually reuses.
 
-00:00:42.157 --> 00:00:45.110
-Full strategy treatment: Lesson 10.6.
+00:00:40.693 --> 00:00:42.681
+Here's what restaking actually does
 
-00:00:46.410 --> 00:00:48.925
-Let's work an example, step by step.
+00:00:42.681 --> 00:00:44.858
+with assets you've already staked.
 
-00:00:48.925 --> 00:00:52.193
-Stack for one position: ETH → staked
+00:00:44.858 --> 00:00:48.247
+Instead of that stake securing only its original
 
-00:00:52.193 --> 00:00:55.108
-→ LST → liquid restaking token →
+00:00:48.247 --> 00:00:51.982
+network, restaking reuses the exact same staked value
 
-00:00:55.108 --> 00:00:58.234
-restaking protocol → 4 services.
+00:00:51.982 --> 00:00:55.025
+to secure additional services on top of it,
 
-00:00:58.234 --> 00:01:00.679
-That's 6 layers, each able to fail.
+00:00:55.025 --> 00:00:59.106
+things like oracles, bridges, or other infrastructure that
 
-00:01:00.679 --> 00:01:03.344
-The extra yield must pay for all of them.
+00:00:59.106 --> 00:01:02.518
+also need real economic security behind them.
 
-00:01:03.344 --> 00:01:05.154
-Plan with points valued at zero.
+00:01:02.518 --> 00:01:05.429
+In exchange for taking on that extra duty, and
 
-00:01:06.454 --> 00:01:07.914
+00:01:05.429 --> 00:01:08.649
+its risk, you're paid extra rewards, and very often
+
+00:01:08.649 --> 00:01:11.498
+points, on top of your original staking yield.
+
+00:01:12.798 --> 00:01:16.308
+Worth being precise about why these additional services are
+
+00:01:16.308 --> 00:01:18.881
+willing to pay for this at all, rather than
+
+00:01:18.881 --> 00:01:21.989
+simply building their own security from scratch.
+
+00:01:21.989 --> 00:01:24.866
+Bootstrapping genuine economic security from
+
+00:01:24.866 --> 00:01:27.084
+nothing is slow and expensive.
+
+00:01:27.084 --> 00:01:30.529
+Renting already-staked, already-trusted value is faster,
+
+00:01:30.529 --> 00:01:32.944
+and often cheaper, for the service.
+
+00:01:32.944 --> 00:01:35.146
+That's a completely reasonable trade for
+
+00:01:35.146 --> 00:01:36.574
+them to want to make.
+
+00:01:36.574 --> 00:01:38.248
+It doesn't automatically make it
+
+00:01:38.248 --> 00:01:39.314
+a good trade for you.
+
+00:01:40.614 --> 00:01:43.274
+Here's the actual trade-off, side by side,
+
+00:01:43.274 --> 00:01:45.811
+between leaving a stake exactly where it
+
+00:01:45.811 --> 00:01:48.029
+is versus restaking it further.
+
+00:01:48.029 --> 00:01:51.717
+Plain staking carries one network's own slashing and downtime
+
+00:01:51.717 --> 00:01:54.870
+risk, already covered back in Lesson four point two,
+
+00:01:54.870 --> 00:01:57.074
+and nothing more on top of that.
+
+00:01:57.074 --> 00:02:01.811
+Restaking adds every additional service's own slashing conditions and
+
+00:02:01.811 --> 00:02:05.330
+operator risk, stacked directly on top of that same
+
+00:02:05.330 --> 00:02:08.849
+original exposure, in exchange for the extra reward.
+
+00:02:10.149 --> 00:02:11.239
+Quick check.
+
+00:02:11.239 --> 00:02:13.383
+What does restaking actually add,
+
+00:02:13.383 --> 00:02:15.274
+in exchange for extra rewards?
+
+00:02:19.694 --> 00:02:23.473
+The answer: extra slashing conditions, and operator risk, on
+
+00:02:23.473 --> 00:02:27.004
+top of whatever risk your original stake already carried.
+
+00:02:28.304 --> 00:02:30.139
+Two new risks, stacked on top.
+
+00:02:31.439 --> 00:02:34.527
+Here's exactly what each of these two risks actually
+
+00:02:34.527 --> 00:02:37.914
+means, since they compound rather than simply repeat.
+
+00:02:37.914 --> 00:02:40.708
+Every additional service you help secure comes
+
+00:02:40.708 --> 00:02:43.205
+with its own slashing conditions, its own
+
+00:02:43.205 --> 00:02:46.059
+specific rules for what counts as misbehaviour,
+
+00:02:46.059 --> 00:02:48.499
+and its own specific penalty for it.
+
+00:02:48.499 --> 00:02:51.387
+And every service also depends on an operator,
+
+00:02:51.387 --> 00:02:55.196
+the entity actually running that service's infrastructure day
+
+00:02:55.196 --> 00:02:58.452
+to day, whose own competence and reliability becomes
+
+00:02:58.452 --> 00:02:59.804
+part of your risk too.
+
+00:03:01.104 --> 00:03:04.089
+Worth being precise about how these risks actually
+
+00:03:04.089 --> 00:03:07.250
+stack across multiple services, since it isn't simply
+
+00:03:07.250 --> 00:03:10.009
+additive in the way it might first appear.
+
+00:03:10.009 --> 00:03:13.645
+Securing four separate services doesn't just mean four
+
+00:03:13.645 --> 00:03:17.184
+separate, independent risks sitting side by side.
+
+00:03:17.184 --> 00:03:19.923
+It means four separate ways your one underlying
+
+00:03:19.923 --> 00:03:22.148
+stake can be slashed, any one of which
+
+00:03:22.148 --> 00:03:24.602
+alone is enough to cost you, regardless of
+
+00:03:24.602 --> 00:03:26.884
+how well the other three are performing.
+
+00:03:28.184 --> 00:03:29.274
+Quick check.
+
+00:03:29.274 --> 00:03:31.382
+What are the two new risks restaking
+
+00:03:31.382 --> 00:03:34.059
+specifically stacks on top of ordinary staking?
+
+00:03:38.479 --> 00:03:42.285
+The answer: each service's own slashing conditions, and the
+
+00:03:42.285 --> 00:03:45.583
+operator risk of whoever actually runs that service.
+
+00:03:46.883 --> 00:03:48.043
+Correlated failure.
+
+00:03:49.343 --> 00:03:52.248
+Here's exactly why correlated failure is the
+
+00:03:52.248 --> 00:03:55.346
+real structural concern underneath all of this,
+
+00:03:55.346 --> 00:03:58.228
+not just a restatement of ordinary risk.
+
+00:03:58.228 --> 00:04:00.577
+One single collateral base ends up
+
+00:04:00.577 --> 00:04:04.098
+securing many different services simultaneously.
+
+00:04:04.098 --> 00:04:06.955
+That collateral base isn't duplicated for each
+
+00:04:06.955 --> 00:04:09.873
+service; it's the same underlying value, shared
+
+00:04:09.873 --> 00:04:11.693
+across every one of them.
+
+00:04:11.693 --> 00:04:14.834
+A serious failure in any single service can therefore
+
+00:04:14.834 --> 00:04:17.858
+reach back and hit that same shared collateral, and
+
+00:04:17.858 --> 00:04:20.883
+through it, every other service depending on it too.
+
+00:04:22.183 --> 00:04:25.130
+Worth being precise about what this actually means
+
+00:04:25.130 --> 00:04:28.193
+for how you should think about diversification here,
+
+00:04:28.193 --> 00:04:31.093
+since the usual instinct doesn't quite apply.
+
+00:04:31.093 --> 00:04:34.413
+Securing four services with the same underlying
+
+00:04:34.413 --> 00:04:37.526
+stake isn't the same kind of diversification
+
+00:04:37.526 --> 00:04:40.108
+as holding four unrelated assets.
+
+00:04:40.108 --> 00:04:42.431
+It's closer to four separate ways one
+
+00:04:42.431 --> 00:04:44.815
+single point can fail, all sharing the
+
+00:04:44.815 --> 00:04:47.138
+exact same foundation underneath them.
+
+00:04:48.438 --> 00:04:50.298
+Tracing one failure through the stack.
+
+00:04:51.598 --> 00:04:55.238
+Here's that mechanism traced through concretely, one step at
+
+00:04:55.238 --> 00:04:58.163
+a time, for a single service out of several.
+
+00:04:58.163 --> 00:05:01.280
+One of the four services you're securing suffers a
+
+00:05:01.280 --> 00:05:05.552
+genuine slashing event, triggered entirely by its own conditions.
+
+00:05:05.552 --> 00:05:08.294
+That slashing draws directly against the shared
+
+00:05:08.294 --> 00:05:11.378
+collateral underneath it, the same collateral backing
+
+00:05:11.378 --> 00:05:13.392
+your other three services too.
+
+00:05:13.392 --> 00:05:16.230
+Your position across all four services is now
+
+00:05:16.230 --> 00:05:18.883
+thinner than it was, even though the other
+
+00:05:18.883 --> 00:05:22.277
+three services themselves did absolutely nothing wrong.
+
+00:05:23.577 --> 00:05:26.244
+Here's how to actually read a service's slashing
+
+00:05:26.244 --> 00:05:29.102
+conditions yourself, before you ever secure it.
+
+00:05:29.102 --> 00:05:33.448
+Find its own published documentation specifically on what triggers
+
+00:05:33.448 --> 00:05:36.797
+a penalty, not just its advertised reward rate.
+
+00:05:36.797 --> 00:05:38.943
+Check whether the penalty is a small,
+
+00:05:38.943 --> 00:05:40.863
+capped amount, or can scale up to
+
+00:05:40.863 --> 00:05:43.027
+a much larger share of the stake.
+
+00:05:43.027 --> 00:05:45.210
+And check how the service's own operator
+
+00:05:45.210 --> 00:05:48.084
+has actually performed historically, since that track
+
+00:05:48.084 --> 00:05:50.107
+record is what you're really trusting.
+
+00:05:51.407 --> 00:05:52.412
+Worked example.
+
+00:05:53.712 --> 00:05:56.056
+Here's the full stack, exactly as the
+
+00:05:56.056 --> 00:05:58.401
+source material lays it out, layer by
+
+00:05:58.401 --> 00:06:01.107
+layer, for a single restaking position.
+
+00:06:01.107 --> 00:06:05.033
+E.T.H., staked to become native staked E.T.H. That
+
+00:06:05.033 --> 00:06:08.567
+becomes an L.S.T., a liquid staking token.
+
+00:06:08.567 --> 00:06:11.811
+The L.S.T. is deposited into a restaking
+
+00:06:11.811 --> 00:06:15.592
+protocol, becoming a liquid restaking token.
+
+00:06:15.592 --> 00:06:17.983
+That restaking protocol then secures
+
+00:06:17.983 --> 00:06:20.222
+four separate services on top.
+
+00:06:20.222 --> 00:06:22.785
+Count them up, and that's six layers, total,
+
+00:06:22.785 --> 00:06:25.292
+each one of them independently able to fail.
+
+00:06:26.592 --> 00:06:29.193
+Here's the one sentence this entire worked
+
+00:06:29.193 --> 00:06:31.855
+example exists to prove, worth holding onto
+
+00:06:31.855 --> 00:06:34.514
+more than the specific count of layers.
+
+00:06:34.514 --> 00:06:37.857
+The extra yield restaking offers has to genuinely pay
+
+00:06:37.857 --> 00:06:40.704
+for every single one of those six layers, not
+
+00:06:40.704 --> 00:06:44.099
+just the headline risk you happen to notice first.
+
+00:06:44.099 --> 00:06:45.802
+If it doesn't, you're not being paid
+
+00:06:45.802 --> 00:06:47.689
+enough for what you've actually taken on.
+
+00:06:48.990 --> 00:06:51.790
+Here's specifically why points deserve their own
+
+00:06:51.790 --> 00:06:54.419
+separate treatment in this stack, rather than
+
+00:06:54.419 --> 00:06:57.005
+being counted as guaranteed extra yield.
+
+00:06:57.005 --> 00:06:59.242
+A stated A.P.Y. is a number the
+
+00:06:59.242 --> 00:07:02.528
+protocol is actually committing to, right now,
+
+00:07:02.528 --> 00:07:05.205
+however it ultimately gets funded.
+
+00:07:05.205 --> 00:07:08.373
+Points are, at best, a claim on some future,
+
+00:07:08.373 --> 00:07:12.103
+unconfirmed reward, of unknown size, that may or may
+
+00:07:12.103 --> 00:07:15.060
+not ever materialise into anything at all.
+
+00:07:16.360 --> 00:07:17.450
+Quick check.
+
+00:07:17.450 --> 00:07:19.952
+How should points be valued, specifically, when
+
+00:07:19.952 --> 00:07:22.245
+you're planning around a restaking position?
+
+00:07:26.665 --> 00:07:28.440
+The answer: at zero.
+
+00:07:28.440 --> 00:07:31.311
+Treat any actual payout as a pleasant surprise,
+
+00:07:31.311 --> 00:07:33.285
+never as part of the plan itself.
+
+00:07:34.585 --> 00:07:36.830
+What 'speculative bucket' actually means.
+
+00:07:38.130 --> 00:07:41.253
+Worth being precise about what sizing something in
+
+00:07:41.253 --> 00:07:44.928
+your speculative bucket actually means, in practice, rather
+
+00:07:44.928 --> 00:07:47.310
+than treating it as a vague label.
+
+00:07:47.310 --> 00:07:50.797
+The real test is simple: could this entire position
+
+00:07:50.797 --> 00:07:53.747
+go to zero, all six layers at once, without
+
+00:07:53.747 --> 00:07:56.930
+changing a single one of your actual plans.
+
+00:07:56.930 --> 00:07:59.542
+If the honest answer is no, the position is
+
+00:07:59.542 --> 00:08:02.510
+currently sized too large for what it actually is.
+
+00:08:03.810 --> 00:08:05.270
 Here's your checklist.
 
-00:01:07.914 --> 00:01:09.449
-Do it now, for real.
+00:08:05.270 --> 00:08:07.310
+Do it before restaking anything.
 
-00:01:09.449 --> 00:01:12.224
-First, every layer of the stack written down.
+00:08:07.310 --> 00:08:10.328
+Write down every single layer of your own stack,
 
-00:01:12.224 --> 00:01:15.399
-Next, Slashing conditions of each service read.
+00:08:10.328 --> 00:08:13.585
+explicitly, the way the worked example just did.
 
-00:01:15.399 --> 00:01:18.124
-And finally, Sized in the speculative bucket.
+00:08:13.585 --> 00:08:17.500
+Read the actual slashing conditions of every service in
 
-00:01:19.424 --> 00:01:20.634
-Question 1.
+00:08:17.500 --> 00:08:21.645
+that stack, not just the headline A.P.Y. it advertises.
 
-00:01:20.634 --> 00:01:21.984
-What does restaking add?
+00:08:21.645 --> 00:08:24.777
+And size the entire position inside your speculative
 
-00:01:26.404 --> 00:01:28.920
-The answer: Extra rewards in exchange
+00:08:24.777 --> 00:08:28.440
+bucket specifically, never inside capital you're depending on.
 
-00:01:28.920 --> 00:01:31.369
-for extra slashing and operator risk.
+00:08:29.740 --> 00:08:32.738
+Here's the question this entire lesson reduces
 
-00:01:32.669 --> 00:01:33.914
-Question 2.
+00:08:32.738 --> 00:08:34.652
+to, in the same spirit as the
 
-00:01:33.914 --> 00:01:35.959
-Why is correlated failure a concern?
+00:08:34.652 --> 00:08:38.205
+yield-farming question from earlier in this module.
 
-00:01:40.379 --> 00:01:43.161
-The answer: One collateral base secures many
+00:08:38.205 --> 00:08:41.212
+Would you take on six separate, stacked failure
 
-00:01:43.161 --> 00:01:45.449
-services; a failure can hit them all.
+00:08:41.212 --> 00:08:43.906
+points, each capable of costing you on its
 
-00:01:46.749 --> 00:01:48.019
-Question 3.
+00:08:43.906 --> 00:08:47.665
+own, for whatever this specific restaking position actually
 
-00:01:48.019 --> 00:01:49.914
-How should points be valued when planning?
+00:08:47.665 --> 00:08:51.030
+pays, once points are correctly valued at zero?
 
-00:01:54.334 --> 00:01:55.809
-The answer: At zero.
+00:08:51.030 --> 00:08:52.819
+If the honest answer is no, the
 
-00:01:57.109 --> 00:01:59.624
-Do the checklist now, before you move on.
+00:08:52.819 --> 00:08:55.222
+extra yield isn't actually paying for what
 
-00:01:59.624 --> 00:02:03.734
-Next up, Lesson 4.5: Vaults & yield optimisers.
+00:08:55.222 --> 00:08:56.620
+it's asking you to carry.
+
+00:08:57.920 --> 00:08:59.165
+Let's recap.
+
+00:08:59.165 --> 00:09:03.594
+Restaking reuses your already-staked assets to secure additional
+
+00:09:03.594 --> 00:09:06.960
+services, for extra rewards and often points.
+
+00:09:06.960 --> 00:09:09.331
+Each new service adds its own slashing
+
+00:09:09.331 --> 00:09:11.824
+conditions and its own operator risk, on
+
+00:09:11.824 --> 00:09:14.070
+top of what you already carried.
+
+00:09:14.070 --> 00:09:17.547
+One shared collateral base securing many services
+
+00:09:17.547 --> 00:09:21.810
+creates correlated failure, not ordinary diversification.
+
+00:09:21.810 --> 00:09:25.128
+And points get valued at zero when planning, since
+
+00:09:25.128 --> 00:09:28.185
+only the stated A.P.Y. is an actual commitment.
+
+00:09:29.485 --> 00:09:32.125
+Write down every layer of your stack, read
+
+00:09:32.125 --> 00:09:35.257
+each service's slashing conditions, and size it in
+
+00:09:35.257 --> 00:09:38.750
+your speculative bucket, with points valued at zero.
+
+00:09:38.750 --> 00:09:42.860
+Next up, Lesson 4.5: vaults and yield optimisers.
