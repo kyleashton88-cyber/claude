@@ -114,12 +114,17 @@ sc("stats", "Put another way: about four hundred eighty dollars and five cents o
    chapter="Worked example", stats=[["$480.05", "arrives via card + instant buy (example)"], ["$498.00", "arrives via bank + limit order (example)"]], lastAccent=False)
 sc("statement", "And that gap isn't a one-time cost. It repeats every single time you buy the expensive way. Learn the cheaper route once, on this first small purchase, and it can pay off on every purchase after it.",
    chapter="Worked example", kicker="It repeats", lines=["Not a one-time cost.", "It repeats every time you buy."], sub="Learn the cheaper route once, on a small purchase, and use it every time after.")
+sc("stats", "And the percentages hold as the amount grows. Take that same roughly three point nine nine percent versus zero point four percent gap. Apply it to an illustrative five thousand dollar purchase instead of five hundred. It's about a hundred and ninety nine dollars against about twenty dollars. Same habit. A bigger number, later.",
+   "And the percentages hold as the amount grows. The same roughly 3.99% versus 0.4% gap, applied to an illustrative $5,000 purchase instead of $500, is about $199 against about $20. Same habit. A bigger number, later.",
+   chapter="Worked example", stats=[["~$199", "card + instant buy, on an illustrative $5,000 (example)"], ["~$20", "bank + limit order, on the same $5,000 (example)"]], lastAccent=False)
 
 # ---------------------------------------------------------------- records and checklist
 sc("title", "Keep a record.", chapter="Checklist and quiz", eyebrow="Checklist and quiz", num="4", title="Save it as you go",
    sub="Date, amount, price, fees.")
 sc("bullets", "Save a record of every purchase, from day one: the date, the amount, the price, and the fees you paid. Most countries tax crypto gains, and this simple habit is what makes that straightforward later, instead of a scramble through months of exchange history.",
    chapter="Checklist and quiz", title="What to record, every time", items=["Date", "Amount", "Price", "Fees paid"])
+sc("statement", "It's not only for tax season, either. That same record is the only honest way to know what you actually paid for something, months or years later, once memory has quietly rounded the number up or down. A spreadsheet, a notes app, even a photo of the confirmation screen all work. The habit matters more than the tool.",
+   chapter="Checklist and quiz", kicker="Not just for tax season", lines=["It's how you know what you paid.", "Memory rounds numbers. Records don't."], sub="A spreadsheet, a notes app, even a photo of the confirmation - the habit matters more than the tool.")
 sc("bullets", "Here's this lesson's checklist. Deposited by the cheapest method available to you. Bought a small amount of E.T.H., for gas, and U.S.D.C., for practice. Tried a limit order on the trading screen. And saved a record: date, amount, price and fees.",
    "Here's this lesson's checklist. Deposited by the cheapest method available to you. Bought a small amount of ETH, for gas, and USDC, for practice. Tried a limit order on the trading screen. And saved a record: date, amount, price and fees.",
    chapter="Checklist and quiz", title="Before you move on", numbered=True,
