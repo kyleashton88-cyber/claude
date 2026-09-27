@@ -8,7 +8,7 @@ Old mp4s / old gold scripts do not count, even if the queue elsewhere still says
 |---|---|---|---|
 | 0.0 | Mastery Starter | row+pop+area+ring+share bars/line/donut variants, chart3d bars anchor | done |
 | 0.1 | Money, ledgers and why blockchains exist | row-variant bars chart, flow3d anchor | done |
-| 0.2 | Opening and securing an exchange account | | pending |
+| 0.2 | Opening and securing an exchange account | new gold script: flow3d anchor, donut, 5 flows, 2 compares | done |
 | 0.3 | Buying your first crypto without overpaying | | pending |
 | 0.4 | Exchange account vs your own wallet: who holds the keys? | | pending |
 | 0.5 | Setting up your wallet and backing it up | | pending |
