@@ -1,0 +1,130 @@
+#!/usr/bin/env python3
+"""Gold-standard script for Lesson 5.2, Layer 2s, sequencers & withdrawal
+paths (target 11-14 minutes, per the "a bit longer" note for lessons from
+here on). Walks how rollups settle, optimistic vs ZK withdrawal times,
+what a sequencer actually is and what happens if it goes down, escape
+hatches, and the source material's own worked example ($20,000 on an
+optimistic rollup: native bridge is safest at ~7 days, a fast bridge takes
+minutes for a fee, relying on its liquidity — plan your liquidity ladder
+around the slow path), as visual walk-throughs. Written in one pass at
+the full target length (no separate expansion round).
+
+Writes video-scripts/gold/lesson-05-2.json (the generator skips lessons
+with a gold script). Spoken text (vo) spells numbers for the voice; cap is
+the written caption, same sentence count as vo."""
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+S = []
+
+
+def sc(type_, vo, cap=None, **k):
+    d = {"type": type_, **k, "vo": vo}
+    if cap:
+        d["cap"] = cap
+    S.append(d)
+
+
+def img(src, eyebrow, vo, cap=None, **k):
+    sc("image", vo, cap, src=src, eyebrow=eyebrow, wide=True, **k)
+
+
+D = "assets/diagrams/"
+
+# ---------------------------------------------------------------- intro
+sc("title", "Lesson five point two. Layer twos, sequencers, and withdrawal paths. By the end, you'll understand exactly how your L2 settles, who's actually ordering your transactions, and how you'd genuinely exit it if you needed to.",
+   "Lesson 5.2. Layer 2s, sequencers & withdrawal paths. By the end, you'll understand exactly how your L2 settles, who's actually ordering your transactions, and how you'd genuinely exit it if you needed to.",
+   chapter="Intro", eyebrow="Lesson 5.2", num="5.2", title="Layer 2s, sequencers & withdrawal paths", sub="Plan your liquidity ladder around the slow path, not the fast one.")
+sc("pillars", "Here's the plan. How a rollup actually settles back to Ethereum, and the real difference between optimistic and Z.K. rollups. What a sequencer actually is, and what happens if it goes down. Escape hatches, your genuine backup exit if a sequencer ever censors you. And a full worked example, planning a real withdrawal around the slow path, deliberately.",
+   chapter="Intro", title="What this lesson covers",
+   items=[{"icon": "chart", "title": "Optimistic vs. ZK", "text": "Two different ways to prove a rollup's state"}, {"icon": "shield", "title": "The sequencer", "text": "Who orders your transactions, and what if it stops"},
+          {"icon": "alert", "title": "Escape hatches", "text": "Your backup exit if you're ever censored"}, {"icon": "target", "title": "Worked example", "text": "$20,000 out: the safe path vs. the fast path"}])
+
+# ---------------------------------------------------------------- how a rollup settles
+sc("title", "How a rollup actually settles.", chapter="How a rollup settles", eyebrow="How a rollup settles", num="1", title="Executing off-chain, proving back on-chain",
+   sub="Optimistic vs. ZK: two different ways to prove it.")
+img(D + "l2-exit.png", "How your L2 actually settles",
+    "Here's what every rollup genuinely does, underneath its own branding. It executes your transactions off Ethereum, where it's cheaper and faster, then posts data or cryptographic proofs back to Ethereum itself, so the base chain can ultimately verify what actually happened. That posting-back step is exactly what lets a rollup inherit Ethereum's own underlying security, rather than needing to build an entirely separate security model of its own from scratch.",
+    chapter="How a rollup settles")
+sc("compare", "Here's the actual difference between the two major rollup designs, and specifically why it changes how long a native withdrawal takes. Optimistic rollups assume every transaction is valid unless someone actively challenges it, which means a native withdrawal back to Ethereum has to wait out a challenge window, commonly around seven days on major optimistic rollups today. Z.K. rollups instead post genuine validity proofs directly, so a native withdrawal can move considerably faster, since there's no challenge period to wait out at all.",
+   chapter="How a rollup settles",
+   left={"label": "Optimistic rollups", "tone": "warn", "items": ["Assumed valid unless challenged", "Native withdrawal: a ~7-day challenge window"]},
+   right={"label": "ZK rollups", "tone": "good", "items": ["Post genuine validity proofs directly", "Native withdrawal: no challenge period to wait out"]})
+sc("stats", "Here's all three withdrawal paths from this lesson, side by side, so the actual gap between them is concrete, not just described. An optimistic rollup's native withdrawal: roughly seven days. A Z.K. rollup's native withdrawal: considerably faster, often within hours, since there's no challenge window to wait out. A fast bridge, on either type: just minutes, for a fee, relying on that bridge's own liquidity instead.",
+   chapter="How a rollup settles", title="The same $20,000, three different withdrawal paths",
+   stats=[["~7 days", "Optimistic rollup, native"], ["Hours", "ZK rollup, native"], ["Minutes", "Fast bridge, either type"]])
+sc("statement", "Worth being precise about why a rollup posting data back to Ethereum is what actually matters here, compared with a chain that simply doesn't. That posted data, or proof, is exactly what lets Ethereum itself verify the rollup's state independently. A chain that skips this step entirely is building its own separate security model from scratch, which is a genuinely different, and often weaker, kind of trust assumption.",
+   chapter="How a rollup settles", kicker="Why posting back to Ethereum matters", lines=["It's what lets Ethereum verify the rollup's state independently.", "Skipping this means building security from scratch instead."], sub="This is the actual difference between a rollup and a plain sidechain.")
+sc("quiz", "Quick check. Why do optimistic rollup withdrawals typically take around seven days? [[pause 4]] The answer: the challenge window gives anyone the chance to dispute an invalid state, before it's actually allowed to become final.",
+   chapter="How a rollup settles", n=1, of=3, q="Why do optimistic rollup withdrawals take ~7 days?",
+   a="The challenge window lets anyone dispute an invalid state before it's final.")
+
+# ---------------------------------------------------------------- the sequencer
+sc("title", "The sequencer.", chapter="The sequencer", eyebrow="The sequencer", num="1", title="Whoever orders your transactions",
+   sub="Often a single operator, today, on most major rollups.")
+sc("flow", "Here's exactly what a sequencer actually does, and why its own reliability matters so directly to you. It's the operator that receives your transactions, and decides the specific order they actually get processed in, before eventually posting that data back to Ethereum. Today, on most major rollups, that's still a single operator, not a broad, decentralised set. If that one operator goes down, the entire chain can genuinely pause, until it recovers.",
+   chapter="The sequencer", title="What a sequencer actually does",
+   nodes=[{"label": "Receives your transactions", "sub": "And decides their processing order", "icon": "chart"}, {"label": "Posts data back to Ethereum", "sub": "So the base chain can eventually verify it", "icon": "coins"},
+          {"label": "Often a single operator, today", "sub": "Not yet a broad, decentralised set", "icon": "alert"}, {"label": "It goes down: the chain may pause", "sub": "Until that operator recovers", "icon": "target"}])
+sc("statement", "Worth being precise about what a sequencer pause actually means for you directly, since it's a genuinely different kind of risk from a price move or a hack. Your funds aren't stolen, or even necessarily at risk of loss. You simply can't transact, potentially for some real stretch of time, at exactly whatever moment you might have most wanted to.",
+   chapter="The sequencer", kicker="What a pause actually means for you", lines=["Your funds aren't stolen, or necessarily at risk.", "You simply can't transact, right when you might most want to."], sub="A liquidity risk, not a solvency risk. Still a real one.")
+sc("compare", "Here's why the actual sequencer setup differs so much from one rollup to another, in exactly the way that matters most to you. A single-operator sequencer is simple to run, but pausing that one operator pauses the entire chain along with it. A shared, or decentralised, sequencer set spreads that same responsibility across multiple independent parties, so any one of them pausing doesn't necessarily pause the chain itself.",
+   chapter="The sequencer",
+   left={"label": "Single-operator sequencer", "tone": "warn", "items": ["Simple to run", "One pause can pause the entire chain"]},
+   right={"label": "Shared / decentralised sequencer set", "tone": "good", "items": ["Responsibility spread across independent parties", "One party pausing doesn't necessarily pause the chain"]})
+sc("quiz", "Quick check. What actually happens if a single sequencer goes down? [[pause 4]] The answer: the L2 may pause transactions entirely, until that sequencer actually recovers.",
+   chapter="The sequencer", n=2, of=3, q="What happens if a single sequencer goes down?",
+   a="The L2 may pause transactions until it recovers.")
+
+# ---------------------------------------------------------------- escape hatches
+sc("title", "Escape hatches.", chapter="Escape hatches", eyebrow="Escape hatches", num="1", title="Your backup exit, if the sequencer censors you",
+   sub="Most rollups have one. Know whether yours actually does.")
+sc("flow", "Here's exactly what an escape hatch actually is, and why it matters even if you never expect to need it. Most rollups let you force a withdrawal directly through Ethereum itself, entirely bypassing the sequencer, specifically if that sequencer is ever censoring you, or simply refusing to process your transaction. It's slower, and often more involved, than the ordinary path. But it's the genuine difference between funds that are merely delayed, and funds you're actually locked out of entirely.",
+   chapter="Escape hatches", title="What an escape hatch actually does",
+   nodes=[{"label": "The sequencer censors, or refuses, you", "sub": "Or simply stops processing your transaction", "icon": "alert"}, {"label": "Force a withdrawal via Ethereum directly", "sub": "Bypassing the sequencer entirely", "icon": "shield"},
+          {"label": "Slower, more involved", "sub": "But genuinely available, if the rollup has one", "icon": "clock"}])
+sc("statement", "Worth being direct about the actual homework this creates for you, on every single rollup you use. Not every rollup has implemented a genuine escape hatch, and even among those that do, the actual process varies considerably. Know, specifically, whether yours has one, and roughly what using it would actually involve, before you're ever in a position where you'd need it.",
+   chapter="Escape hatches", kicker="The homework this creates", lines=["Not every rollup has a genuine escape hatch.", "Know whether yours does, before you're ever in a position to need it."], sub="This is exactly the kind of check this module's Mastery Starter asked you to run.")
+sc("steps", "Here's how to actually check this for a rollup you already use, rather than assuming it works a particular way. Search its own documentation specifically for the words sequencer, decentralisation, or escape hatch, and read what it actually says. Check whether it's ever published a real incident report from a sequencer outage, and how that outage was actually handled. And if you genuinely can't find a clear answer either way, treat that itself as the finding.",
+   chapter="Escape hatches", title="Checking this for a rollup you use",
+   steps=["Search its documentation for 'sequencer', 'decentralisation', 'escape hatch'", "Check for a published incident report from any past outage", "Can't find a clear answer? Treat that itself as the finding"])
+sc("quiz", "Quick check. What exactly is an escape hatch? [[pause 4]] The answer: a way to force a transaction or withdrawal directly through the base chain, if the sequencer is censoring you.",
+   chapter="Escape hatches", n=3, of=3, q="What's an escape hatch?",
+   a="A way to force a transaction or withdrawal via the base chain if the sequencer censors you.")
+
+# ---------------------------------------------------------------- worked example
+sc("title", "Worked example.", chapter="Worked example", eyebrow="Worked example", num="1", title="$20,000, off an optimistic rollup",
+   sub="The source material's own scenario.")
+sc("compare", "Here's the actual choice, laid out side by side, for genuinely moving twenty thousand dollars off an optimistic rollup, back onto Ethereum itself. The native bridge is the safest path available, but takes roughly seven days, waiting out that same challenge window from earlier in this lesson. A fast bridge instead takes just minutes, for a fee, specifically by relying on that fast bridge's own available liquidity, rather than the rollup's own native settlement.",
+   chapter="Worked example",
+   left={"label": "Native bridge", "tone": "good", "items": ["Safest available path", "~7 days, waiting out the challenge window"]},
+   right={"label": "Fast bridge", "tone": "warn", "items": ["Minutes, for a fee", "Relies on that bridge's own liquidity, not native settlement"]})
+sc("statement", "Here's the one sentence this entire worked example exists to prove, worth holding onto more than the specific seven-day figure. Plan your own liquidity ladder around the slow, native path, deliberately, treating the fast bridge as a genuine option for genuine emergencies, never as your actual, default plan for accessing this money at all.",
+   chapter="Worked example", kicker="The one sentence to keep", lines=["Plan your liquidity ladder around the slow, native path.", "The fast bridge is for emergencies, never the default plan."], sub="Assume the seven days. Let the fast bridge be a pleasant surprise, not a dependency.")
+sc("steps", "Here's how this actually connects to your own liquidity ladder, the framework covered properly back in Module twelve. Anything you might genuinely need within roughly seven days shouldn't be sitting on an optimistic rollup's native withdrawal path at all. Anything you're comfortable waiting a week for can sit there safely. And the fast bridge stays reserved specifically for the gap between those two, when real urgency and real cost both apply at once.",
+   chapter="Worked example", title="Connecting this to your own liquidity ladder",
+   steps=["Need it within ~7 days? Don't rely on the native path for it", "Comfortable waiting a week? The native path is genuinely safe", "Fast bridge: reserved for real urgency, at its real cost"])
+
+# ---------------------------------------------------------------- checklist and recap
+sc("steps", "Here's your checklist. Do it for every layer two you actually use. Know the rollup type, optimistic or Z.K., and the real native withdrawal time that comes with it. Know your sequencer's actual setup, and whether a genuine escape hatch exists if it ever censors you. And build your own liquidity plan assuming the slow path every time, never the fast one.",
+   chapter="Checklist", title="Your checklist",
+   steps=["Rollup type and withdrawal time known for each L2 I use", "Sequencer setup and escape hatch known", "Liquidity plan assumes the slow path"])
+sc("bullets", "Let's recap. A rollup executes off Ethereum, then settles back to it; optimistic rollups wait out a roughly seven-day challenge window for native withdrawals, Z.K. rollups can be faster. A sequencer orders your transactions, often as a single operator today; if it goes down, the chain may pause. An escape hatch is your backup exit through Ethereum itself, if you're ever censored. And the real plan is to build your liquidity ladder around the slow path, always, keeping the fast bridge as a genuine emergency option only.",
+   chapter="Recap", title="Recap", check=False,
+   items=["Rollups execute off Ethereum, then settle back to it", "Optimistic: ~7-day challenge window. ZK: can be faster",
+          "A sequencer orders transactions; if it goes down, the chain may pause", "Plan liquidity around the slow path — the fast bridge is for emergencies only"])
+sc("statement", "Worth connecting this back to the dependency map from this module's own Mastery Starter, one more time. Your layer two is another specific link in that same chain: its own rollup type, its own sequencer setup, and its own escape hatch, each one worth knowing before you ever need to rely on it under real pressure.",
+   chapter="Recap", kicker="Connecting back to the dependency map", lines=["Your L2 is another specific link in that same chain.", "Worth knowing before you ever need it under real pressure."], sub="Two links mapped so far. More still to come in this module.")
+sc("cta", "Know your rollup type and withdrawal time, know your sequencer and escape hatch, and plan your liquidity around the slow path. Next up, Lesson five point three: oracles, T.W.A.P.s, and manipulation.",
+   "Know your rollup type and withdrawal time, know your sequencer and escape hatch, and plan your liquidity around the slow path. Next up, Lesson 5.3: oracles, TWAPs & manipulation.",
+   chapter="Recap", button="Next: Lesson 5.3", sub="Oracles, TWAPs & manipulation")
+
+spec = {"id": "lesson-05-2", "title": "Lesson 5.2: Layer 2s, sequencers & withdrawal paths", "size": [1920, 1080], "group": "lessons", "maxMinutes": 25,
+        "tag": "Lesson 5.2", "gold": True, "music": True, "musicLevel": 0.14, "seed": 80,
+        "use": "Lesson 5.2 page in the Whop course. Hand-written gold-standard script: how rollups settle, optimistic vs ZK withdrawal times, what a sequencer is and escape hatches, and the source material's own $20,000-withdrawal worked example, as walk-throughs.",
+        "thumbnail": {"title": "L2s, sequencers & withdrawals", "subtitle": "Lesson 5.2"}, "scenes": S}
+out = ROOT / "video-scripts" / "gold" / "lesson-05-2.json"
+out.write_text(json.dumps(spec, indent=1, ensure_ascii=False))
+words = sum(len(s["vo"].replace("[[pause 4]]", "").split()) for s in S)
+print(f"{len(S)} scenes, {words} words, est {(words / 171 * 60 + len(S) * 1.3 + 4 * 3) / 60:.1f} min")
