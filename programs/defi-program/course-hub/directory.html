@@ -115,9 +115,12 @@ code { font-family: var(--mono); font-size: 0.86em; }
 .calc p { margin: 0 0 6px; max-width: 66ch; }
 .formgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin: 10px 0; max-width: 720px; }
 .formgrid label { font-size: 13px; font-weight: 650; color: var(--muted); }
-.formgrid input { display: block; width: 100%; margin-top: 4px; font: inherit; font-size: 16px; padding: 8px; border: 1px solid var(--line); background: #fff; color: var(--text); }
-.out { font-family: var(--mono); font-size: 14px; white-space: pre-wrap; background: #fff; border: 1px solid var(--line); padding: 10px 12px; margin: 0 0 8px; max-width: 720px; }
-.out .warn { color: var(--warn); font-weight: 700; }
+.formgrid input, .formgrid select { display: block; width: 100%; margin-top: 4px; font: inherit; font-size: 16px; padding: 8px; border: 1px solid var(--line); background: #fff; color: var(--text); }
+.out { font-size: 15px; line-height: 1.45; background: #fff; border: 1px solid var(--line); padding: 12px 14px; margin: 0 0 8px; max-width: 720px; }
+.out p { margin: 0 0 4px; max-width: none; }
+.out .result { font-size: 18px; font-weight: 720; color: var(--ink); margin-bottom: 8px; }
+.out p span { color: var(--muted); font-weight: 600; }
+.out .warn { display: block; color: var(--warn); font-weight: 700; margin-top: 8px; }
 #offline-note { margin-top: 12px; }
 #files table code { color: var(--muted); }
 footer { margin-top: 36px; color: var(--muted); font-size: 14.5px; max-width: 68ch; }
@@ -151,7 +154,7 @@ footer { margin-top: 36px; color: var(--muted); font-size: 14.5px; max-width: 68
 </svg><span><b>ON-CHAIN <i>OPERATOR</i></b><small>Course directory</small></span></a>
     <form class="search" role="search" action="#lessons" onsubmit="return false">
       <label class="visually-hidden" for="q">Search the course</label>
-      <input id="q" type="search" placeholder="Search lessons, pictures, worksheets" autocomplete="off" enterkeyhint="search">
+      <input id="q" type="search" placeholder="Search lessons, pictures, worksheets, calculators" autocomplete="off" enterkeyhint="search">
     </form>
   </header>
   <nav class="jumps" aria-label="Directory sections">
@@ -1847,29 +1850,29 @@ What exists (wallet types, multisig setup) · where documents are · who the co-
 
     <section id="calculators">
       <h2>Calculators</h2>
-      <p class="lede">Eight forms run in this file. Change a number and the result updates. They are for learning, not a forecast, and no income is promised.</p>
+      <p class="lede">Twenty forms run in this file. Change a number and the result updates. The numbers follow the course formulas. They are for learning, not a forecast, and no income is promised.</p>
       <div class="calcs"><div class="calc" data-c="health" data-find="health health factor and liquidation price collateral, liquidation threshold and debt, and the price that liquidates the position. calculator lesson 3.2">
     <h3>Health factor and liquidation price</h3>
     <p>Collateral, liquidation threshold and debt, and the price that liquidates the position.</p>
-    <div class="formgrid"><label>Collateral quantity<input type="number" step="any" data-k="qty" value="10"></label><label>Collateral price ($)<input type="number" step="any" data-k="price" value="3000"></label><label>Liquidation threshold<input type="number" step="any" data-k="lt" value="0.8"></label><label>Debt ($)<input type="number" step="any" data-k="debt" value="12000"></label></div><div class="out" aria-live="polite"></div>
+    <div class="formgrid"><label>Collateral quantity<input type="number" step="any" data-k="qty" value="10"></label><label>Collateral price ($)<input type="number" step="any" data-k="price" value="3000"></label><label>Liquidation threshold (0–1)<input type="number" step="any" data-k="lt" value="0.8"></label><label>Debt ($)<input type="number" step="any" data-k="debt" value="12000"></label></div><div class="out" aria-live="polite"></div>
     <p class="links"><a href="#l-3-2">Lesson 3.2</a></p>
   </div>
 <div class="calc" data-c="il" data-find="il impermanent loss how far a 50/50 pool falls behind simply holding, before fees. calculator lesson 2.4">
     <h3>Impermanent loss</h3>
     <p>How far a 50/50 pool falls behind simply holding, before fees.</p>
-    <div class="formgrid"><label>Price ratio (new ÷ entry)<input type="number" step="any" data-k="ratio" value="2"></label><label>Days held<input type="number" step="any" data-k="days" value="90"></label><label>Fee APR (%)<input type="number" step="any" data-k="fee" value="20"></label></div><div class="out" aria-live="polite"></div>
+    <div class="formgrid"><label>Price ratio (new ÷ entry)<input type="number" step="any" data-k="ratio" value="2"></label></div><div class="out" aria-live="polite"></div>
     <p class="links"><a href="#l-2-4">Lesson 2.4</a></p>
   </div>
 <div class="calc" data-c="lp-breakeven" data-find="lp-breakeven fee apr to beat holding the fee rate a liquidity position needs over a holding period to match holding both tokens. calculator lesson 2.4">
     <h3>Fee APR to beat holding</h3>
     <p>The fee rate a liquidity position needs over a holding period to match holding both tokens.</p>
-    
-    <p class="links"><a href="#l-2-4">Lesson 2.4</a> · <span class="quiet">Described here. The course files run <code>lp-breakeven</code>.</span></p>
+    <div class="formgrid"><label>Price ratio (new ÷ entry)<input type="number" step="any" data-k="ratio" value="2"></label><label>Days held<input type="number" step="any" data-k="days" value="90"></label><label>Fee APR (%)<input type="number" step="any" data-k="fee" value="20"></label></div><div class="out" aria-live="polite"></div>
+    <p class="links"><a href="#l-2-4">Lesson 2.4</a></p>
   </div>
-<div class="calc" data-c="loop" data-find="loop leveraged loop net yield on equity, and the borrow rate that wipes the extra return out. calculator lesson 3.4">
+<div class="calc" data-c="loop" data-find="loop leveraged loop leverage from a borrow ltv and a number of loops, the net yield on equity, and the borrow rate that wipes the extra return out. calculator lesson 3.4">
     <h3>Leveraged loop</h3>
-    <p>Net yield on equity, and the borrow rate that wipes the extra return out.</p>
-    <div class="formgrid"><label>Leverage (×)<input type="number" step="any" data-k="lev" value="3"></label><label>Collateral APY (%)<input type="number" step="any" data-k="capy" value="3.5"></label><label>Borrow APY (%)<input type="number" step="any" data-k="bapy" value="2.5"></label></div><div class="out" aria-live="polite"></div>
+    <p>Leverage from a borrow LTV and a number of loops, the net yield on equity, and the borrow rate that wipes the extra return out.</p>
+    <div class="formgrid"><label>Borrow LTV per loop (0–1)<input type="number" step="any" data-k="ltv" value="0.7"></label><label>Loops<input type="number" step="any" data-k="loops" value="3"></label><label>Collateral APY (%)<input type="number" step="any" data-k="capy" value="3.5"></label><label>Borrow APY (%)<input type="number" step="any" data-k="bapy" value="2.5"></label></div><div class="out" aria-live="polite"></div>
     <p class="links"><a href="#l-3-4">Lesson 3.4</a></p>
   </div>
 <div class="calc" data-c="lvr" data-find="lvr loss versus rebalancing what arbitrage costs a full-range liquidity position, set against fee income. calculator lesson 2.7">
@@ -1887,7 +1890,7 @@ What exists (wallet types, multisig setup) · where documents are · who the co-
 <div class="calc" data-c="expected" data-find="expected risk-adjusted yield headline yield minus expected loss and costs. calculator lesson 13.2">
     <h3>Risk-adjusted yield</h3>
     <p>Headline yield minus expected loss and costs.</p>
-    <div class="formgrid"><label>Headline yield (%)<input type="number" step="any" data-k="y" value="12"></label><label>Annual loss probability<input type="number" step="any" data-k="p" value="0.05"></label><label>Loss given default (0–1)<input type="number" step="any" data-k="lgd" value="0.6"></label><label>Costs (%)<input type="number" step="any" data-k="c" value="0.5"></label></div><div class="out" aria-live="polite"></div>
+    <div class="formgrid"><label>Headline yield (%)<input type="number" step="any" data-k="y" value="12"></label><label>Annual loss probability (0–1)<input type="number" step="any" data-k="p" value="0.05"></label><label>Loss given default (0–1)<input type="number" step="any" data-k="lgd" value="0.6"></label><label>Costs (%)<input type="number" step="any" data-k="c" value="0.5"></label></div><div class="out" aria-live="polite"></div>
     <p class="links"><a href="#l-13-2">Lesson 13.2</a></p>
   </div>
 <div class="calc" data-c="income" data-find="income income engine payout expected income after losses, and a payout that leaves a buffer. illustrative only. calculator lesson 13.4">
@@ -1899,74 +1902,74 @@ What exists (wallet types, multisig setup) · where documents are · who the co-
 <div class="calc" data-c="var" data-find="var one-day value at risk a floor for a bad day on a position. crypto tails are fatter than the model. calculator lesson 8.7">
     <h3>One-day value at risk</h3>
     <p>A floor for a bad day on a position. Crypto tails are fatter than the model.</p>
-    <div class="formgrid"><label>Position ($)<input type="number" step="any" data-k="pos" value="100000"></label><label>Volatility (%/yr)<input type="number" step="any" data-k="vol" value="70"></label><label>Confidence z (1.65 = 95%)<input type="number" step="any" data-k="z" value="1.65"></label></div><div class="out" aria-live="polite"></div>
+    <div class="formgrid"><label>Position ($)<input type="number" step="any" data-k="pos" value="100000"></label><label>Volatility (%/yr)<input type="number" step="any" data-k="vol" value="70"></label><label>Confidence z (1.65 ≈ 95%)<input type="number" step="any" data-k="z" value="1.65"></label></div><div class="out" aria-live="polite"></div>
     <p class="links"><a href="#l-8-7">Lesson 8.7</a></p>
   </div>
 <div class="calc" data-c="cl" data-find="cl concentrated liquidity range how much tighter a range concentrates a position, and the risk of leaving the range. calculator lesson 10.5">
     <h3>Concentrated liquidity range</h3>
     <p>How much tighter a range concentrates a position, and the risk of leaving the range.</p>
-    
-    <p class="links"><a href="#l-10-5">Lesson 10.5</a> · <span class="quiet">Described here. The course files run <code>cl</code>.</span></p>
+    <div class="formgrid"><label>Range low ($)<input type="number" step="any" data-k="low" value="1800"></label><label>Range high ($)<input type="number" step="any" data-k="high" value="3000"></label></div><div class="out" aria-live="polite"></div>
+    <p class="links"><a href="#l-10-5">Lesson 10.5</a></p>
   </div>
 <div class="calc" data-c="carry" data-find="carry funding carry what a delta-neutral funding position pays at a given 8-hour rate. calculator lesson 10.3">
     <h3>Funding carry</h3>
     <p>What a delta-neutral funding position pays at a given 8-hour rate.</p>
-    
-    <p class="links"><a href="#l-10-3">Lesson 10.3</a> · <span class="quiet">Described here. The course files run <code>carry</code>.</span></p>
+    <div class="formgrid"><label>Funding per 8 hours (%)<input type="number" step="any" data-k="rate" value="0.01"></label><label>Short leverage (×)<input type="number" step="any" data-k="shortlev" value="2"></label></div><div class="out" aria-live="polite"></div>
+    <p class="links"><a href="#l-10-3">Lesson 10.3</a></p>
   </div>
 <div class="calc" data-c="supply" data-find="supply supply apy lender yield implied by the borrow rate, utilisation and reserve factor. calculator lesson 3.1">
     <h3>Supply APY</h3>
     <p>Lender yield implied by the borrow rate, utilisation and reserve factor.</p>
-    
-    <p class="links"><a href="#l-3-1">Lesson 3.1</a> · <span class="quiet">Described here. The course files run <code>supply</code>.</span></p>
+    <div class="formgrid"><label>Borrow APY (%)<input type="number" step="any" data-k="bapy" value="5"></label><label>Utilisation (0–1)<input type="number" step="any" data-k="util" value="0.8"></label><label>Reserve factor (0–1)<input type="number" step="any" data-k="reserve" value="0.1"></label></div><div class="out" aria-live="polite"></div>
+    <p class="links"><a href="#l-3-1">Lesson 3.1</a></p>
   </div>
 <div class="calc" data-c="apy" data-find="apy apr, apy and gas what compounding turns an apr into, and when gas eats the extra compounds. calculator lesson 4.1">
     <h3>APR, APY and gas</h3>
     <p>What compounding turns an APR into, and when gas eats the extra compounds.</p>
-    
-    <p class="links"><a href="#l-4-1">Lesson 4.1</a> · <span class="quiet">Described here. The course files run <code>apy</code>.</span></p>
+    <div class="formgrid"><label>APR (%)<input type="number" step="any" data-k="apr" value="12"></label><label>Compounds per year<input type="number" step="any" data-k="n" value="365"></label><label>Position ($)<input type="number" step="any" data-k="pos" value="10000"></label><label>Gas per compound ($)<input type="number" step="any" data-k="gas" value="2"></label></div><div class="out" aria-live="polite"></div>
+    <p class="links"><a href="#l-4-1">Lesson 4.1</a></p>
   </div>
 <div class="calc" data-c="airdrop" data-find="airdrop airdrop expected value probability times value, minus the costs of chasing it. calculator lesson 4.6">
     <h3>Airdrop expected value</h3>
     <p>Probability times value, minus the costs of chasing it.</p>
-    
-    <p class="links"><a href="#l-4-6">Lesson 4.6</a> · <span class="quiet">Described here. The course files run <code>airdrop</code>.</span></p>
+    <div class="formgrid"><label>Probability (0–1)<input type="number" step="any" data-k="prob" value="0.3"></label><label>Value if it happens ($)<input type="number" step="any" data-k="value" value="1500"></label><label>Costs ($)<input type="number" step="any" data-k="costs" value="200"></label></div><div class="out" aria-live="polite"></div>
+    <p class="links"><a href="#l-4-6">Lesson 4.6</a></p>
   </div>
 <div class="calc" data-c="basis" data-find="basis cash-and-carry basis the annualised gap between spot and a future. calculator lesson 10.2">
     <h3>Cash-and-carry basis</h3>
     <p>The annualised gap between spot and a future.</p>
-    
-    <p class="links"><a href="#l-10-2">Lesson 10.2</a> · <span class="quiet">Described here. The course files run <code>basis</code>.</span></p>
+    <div class="formgrid"><label>Spot price ($)<input type="number" step="any" data-k="spot" value="3000"></label><label>Future price ($)<input type="number" step="any" data-k="future" value="3150"></label><label>Days to expiry<input type="number" step="any" data-k="days" value="90"></label></div><div class="out" aria-live="polite"></div>
+    <p class="links"><a href="#l-10-2">Lesson 10.2</a></p>
   </div>
 <div class="calc" data-c="covered-call" data-find="covered-call covered call premium income against the upside you give away. calculator lesson 10.4">
     <h3>Covered call</h3>
     <p>Premium income against the upside you give away.</p>
-    
-    <p class="links"><a href="#l-10-4">Lesson 10.4</a> · <span class="quiet">Described here. The course files run <code>covered-call</code>.</span></p>
+    <div class="formgrid"><label>Spot price ($)<input type="number" step="any" data-k="spot" value="3000"></label><label>Strike ($)<input type="number" step="any" data-k="strike" value="3300"></label><label>Premium per period (%)<input type="number" step="any" data-k="premium" value="1.5"></label><label>Days in the period<input type="number" step="any" data-k="days" value="7"></label></div><div class="out" aria-live="polite"></div>
+    <p class="links"><a href="#l-10-4">Lesson 10.4</a></p>
   </div>
 <div class="calc" data-c="bank" data-find="bank balance sheet ltv, health factor and how many months the liquid reserve covers. calculator lesson 12.1">
     <h3>Balance sheet</h3>
     <p>LTV, health factor and how many months the liquid reserve covers.</p>
-    
-    <p class="links"><a href="#l-12-1">Lesson 12.1</a> · <span class="quiet">Described here. The course files run <code>bank</code>.</span></p>
+    <div class="formgrid"><label>Collateral ($)<input type="number" step="any" data-k="coll" value="100000"></label><label>Liquidation threshold (0–1)<input type="number" step="any" data-k="lt" value="0.8"></label><label>Debt ($)<input type="number" step="any" data-k="debt" value="20000"></label><label>Borrow APY (%)<input type="number" step="any" data-k="bapy" value="5"></label><label>Liquid reserve ($)<input type="number" step="any" data-k="reserve" value="15000"></label><label>Other assets ($)<input type="number" step="any" data-k="other" value="0"></label><label>Monthly spend ($)<input type="number" step="any" data-k="spend" value="2000"></label><label>Policy max LTV (%)<input type="number" step="any" data-k="maxltv" value="30"></label></div><div class="out" aria-live="polite"></div>
+    <p class="links"><a href="#l-12-1">Lesson 12.1</a></p>
   </div>
 <div class="calc" data-c="perp" data-find="perp perp liquidation price approximate liquidation price of an isolated perpetual position. calculator lesson 3.5">
     <h3>Perp liquidation price</h3>
     <p>Approximate liquidation price of an isolated perpetual position.</p>
-    
-    <p class="links"><a href="#l-3-5">Lesson 3.5</a> · <span class="quiet">Described here. The course files run <code>perp</code>.</span></p>
+    <div class="formgrid"><label>Entry price ($)<input type="number" step="any" data-k="entry" value="3000"></label><label>Leverage (×)<input type="number" step="any" data-k="lev" value="5"></label><label>Side<select data-k="side"><option value="long" selected>long</option><option value="short">short</option></select></label><label>Maintenance margin (%)<input type="number" step="any" data-k="mmr" value="0.5"></label></div><div class="out" aria-live="polite"></div>
+    <p class="links"><a href="#l-3-5">Lesson 3.5</a></p>
   </div>
 <div class="calc" data-c="twr" data-find="twr time-weighted return return across periods that is not distorted by deposits and withdrawals. calculator lesson 8.5">
     <h3>Time-weighted return</h3>
     <p>Return across periods that is not distorted by deposits and withdrawals.</p>
-    
-    <p class="links"><a href="#l-8-5">Lesson 8.5</a> · <span class="quiet">Described here. The course files run <code>twr</code>.</span></p>
+    <div class="formgrid"><label>Period 1 return (%)<input type="number" step="any" data-k="p1" value="4"></label><label>Period 2 return (%)<input type="number" step="any" data-k="p2" value="-2"></label><label>Period 3 return (%)<input type="number" step="any" data-k="p3" value="3"></label><label>Start value ($), optional<input type="number" step="any" data-k="start" data-opt="1"></label><label>End value ($), optional<input type="number" step="any" data-k="end" data-opt="1"></label><label>Net deposits ($), optional<input type="number" step="any" data-k="deposits" data-opt="1"></label></div><div class="out" aria-live="polite"></div>
+    <p class="links"><a href="#l-8-5">Lesson 8.5</a></p>
   </div>
 <div class="calc" data-c="cdp" data-find="cdp cdp mint collateral ratio and stability fee when minting stablecoins against collateral. calculator lesson 3.7">
     <h3>CDP mint</h3>
     <p>Collateral ratio and stability fee when minting stablecoins against collateral.</p>
-    
-    <p class="links"><a href="#l-3-7">Lesson 3.7</a> · <span class="quiet">Described here. The course files run <code>cdp</code>.</span></p>
+    <div class="formgrid"><label>Collateral quantity<input type="number" step="any" data-k="qty" value="10"></label><label>Collateral price ($)<input type="number" step="any" data-k="price" value="3000"></label><label>Stablecoins to mint<input type="number" step="any" data-k="mint" value="10000"></label><label>Minimum collateral ratio (%)<input type="number" step="any" data-k="minr" value="150"></label><label>Stability fee (%/yr)<input type="number" step="any" data-k="fee" value="6"></label></div><div class="out" aria-live="polite"></div>
+    <p class="links"><a href="#l-3-7">Lesson 3.7</a></p>
   </div></div>
     </section>
 
@@ -2091,15 +2094,233 @@ openHash();
 apply();
 const money = x => (x < 0 ? '−$' : '$') + Math.abs(x).toLocaleString('en-US', { maximumFractionDigits: 2 });
 const pct = (x, d = 2) => (x * 100).toFixed(d) + '%';
+const signed = x => (x >= 0 ? '+' : '') + x.toFixed(1) + '%';
+const ilLoss = r => 1 - 2 * Math.sqrt(r) / (1 + r);
+const say = msg => '<p>' + msg + '</p>';
+const panel = (lead, bits, warn) => '<p class="result">' + lead + '</p>' + bits.map(b => '<p><span>' + b[0] + '</span> <b>' + b[1] + '</b></p>').join('') + (warn ? '<p class="warn">' + warn + '</p>' : '');
 const RUN = {
-  health: v => { const coll = v.qty * v.price, hf = coll * v.lt / v.debt, liq = v.debt / (v.qty * v.lt); return 'Collateral ' + money(coll) + ' · LTV ' + pct(v.debt / coll, 1) + '\nHealth factor ' + hf.toFixed(2) + ' · liquidation price ' + money(liq) + ' (' + ((liq / v.price - 1) * 100).toFixed(1) + '% from now)\nMax debt for HF 1.5: ' + money(coll * v.lt / 1.5) + ' · for HF 2.0: ' + money(coll * v.lt / 2) + (hf < 1.5 ? '\n<span class="warn">Warning: HF below 1.5. Repay or add collateral.</span>' : ''); },
-  il: v => { const il = 1 - 2 * Math.sqrt(v.ratio) / (1 + v.ratio), need = il * 365 / v.days, earned = v.fee / 100 * v.days / 365; return v.ratio + '× move → impermanent loss ' + pct(il) + '\nFee APR needed over ' + v.days + ' days just to match holding: ' + pct(need) + '\nAt ' + v.fee + '% fee APR you earn ' + pct(earned) + ' → net vs holding ' + (earned - il >= 0 ? '+' : '') + pct(earned - il); },
-  loop: v => { const net = v.capy * v.lev - v.bapy * (v.lev - 1), be = v.lev > 1 ? v.capy * v.lev / (v.lev - 1) : Infinity; return 'Net APY on equity ' + net.toFixed(2) + '% (unlevered ' + v.capy.toFixed(2) + '%)\nBorrow rate that wipes out the return: ' + be.toFixed(2) + '%' + (net <= v.capy ? '\n<span class="warn">Leverage adds nothing at this spread, only liquidation risk.</span>' : ''); },
-  lvr: v => { const r = (v.vol / 100) ** 2 / 8; return 'LVR ≈ ' + pct(r) + ' of pool value per year\nFees minus LVR ≈ ' + (v.fee - r * 100 >= 0 ? '+' : '') + (v.fee - r * 100).toFixed(2) + '%/yr'; },
-  pt: v => { const fixed = (1 / v.price) ** (365 / v.days) - 1, simple = (1 / v.price - 1) * 365 / v.days; return 'Fixed APY if held to maturity: ' + pct(fixed) + ' (simple ' + pct(simple) + ')\nYT profits only if realised variable yield beats ≈ ' + pct(fixed) + ' over the period'; },
-  expected: v => { const h = v.p * v.lgd * 100, net = v.y - h - v.c; return 'Headline ' + v.y + '% − expected loss ' + h.toFixed(2) + '% − costs ' + v.c + '% = ' + net.toFixed(2) + '% risk-adjusted'; },
-  income: v => { const exp = v.cap * v.ry / 100, pay = exp * v.payout; return 'Expected income ' + money(exp) + '/yr\nPay out ' + pct(v.payout, 0) + ' = ' + money(pay) + '/yr (' + money(pay / 12) + '/month)\nRetain ' + money(exp - pay) + ' as a loss buffer' + (v.payout > 0.8 ? '\n<span class="warn">Payout above 80% of expected income leaves little buffer.</span>' : '') + '\nIllustrative only. No income is promised.'; },
-  var: v => { const d = v.vol / 100 / Math.sqrt(365), x = v.z * d * v.pos; return 'Daily volatility ' + pct(d) + '\n1-day VaR ≈ ' + money(x) + ' on ' + money(v.pos) + ' (' + pct(v.z * d) + ')'; }
+  health: v => {
+    if (!(v.qty > 0 && v.price > 0 && v.debt > 0)) return say('Quantity, price, and debt must be above zero.');
+    if (!(v.lt > 0 && v.lt < 1)) return say('Liquidation threshold must be between 0 and 1.');
+    const coll = v.qty * v.price, hf = coll * v.lt / v.debt, liq = v.debt / (v.qty * v.lt);
+    const warn = hf < 1 ? 'Health factor is below 1. This position can be liquidated now.' : hf < 1.5 ? 'Health factor is below 1.5. Repay or add collateral.' : hf < 2 ? 'Health factor is under 2. The lesson buffer is 2.0.' : '';
+    return panel('Health factor ' + hf.toFixed(2), [
+      ['Collateral', money(coll)],
+      ['LTV', pct(v.debt / coll, 1)],
+      ['Liquidation price', money(liq) + ' (' + signed((liq / v.price - 1) * 100) + ' from now)'],
+      ['Max debt for health factor 1.5', money(coll * v.lt / 1.5)],
+      ['Max debt for health factor 2.0', money(coll * v.lt / 2)]
+    ], warn);
+  },
+  il: v => {
+    if (!(v.ratio > 0)) return say('Price ratio must be above zero.');
+    const loss = ilLoss(v.ratio);
+    const refs = [0.5, 2, 3].map(r => r + '× is ' + pct(ilLoss(r)) + ' behind').join(' · ');
+    return panel(pct(loss) + ' behind holding', [
+      ['Price move', v.ratio + '×, before fees'],
+      ['Same size at 0.5× and 2×', 'A drop to half and a rise to double leave you equally far behind holding.'],
+      ['Reference', refs]
+    ], '');
+  },
+  'lp-breakeven': v => {
+    if (!(v.ratio > 0) || !(v.days > 0)) return say('Price ratio and days must be above zero.');
+    const loss = ilLoss(v.ratio), need = loss * 365 / v.days, earned = v.fee / 100 * v.days / 365, net = earned - loss;
+    return panel('Fee APR of ' + pct(need) + ' to match holding', [
+      ['Move', v.ratio + '× over ' + v.days + ' days'],
+      ['Impermanent loss', pct(loss)],
+      ['Earned at ' + v.fee + '% fee APR', pct(earned)],
+      ['Net versus holding', (net >= 0 ? '+' : '') + pct(net)]
+    ], net < 0 ? 'Fees do not cover the loss versus holding.' : '');
+  },
+  loop: v => {
+    if (!(v.ltv > 0 && v.ltv < 1)) return say('Borrow LTV must be between 0 and 1.');
+    if (!(v.loops >= 0)) return say('Loops must be zero or more.');
+    const L = v.ltv, lev = (1 - Math.pow(L, v.loops + 1)) / (1 - L);
+    const net = v.capy * lev - v.bapy * (lev - 1);
+    const be = lev > 1 ? v.capy * lev / (lev - 1) : Infinity;
+    return panel(lev.toFixed(2) + '× leverage', [
+      ['Loops', v.loops + ' at LTV ' + L],
+      ['Maximum if you kept looping', (1 / (1 - L)).toFixed(2) + '×'],
+      ['Net APY on equity', net.toFixed(2) + '%'],
+      ['Unlevered collateral yield', v.capy.toFixed(2) + '%'],
+      ['Borrow rate that wipes the return', be === Infinity ? '—' : be.toFixed(2) + '%']
+    ], net <= v.capy ? 'Leverage adds nothing at this spread. It only adds liquidation risk.' : '');
+  },
+  lvr: v => {
+    if (!(v.vol >= 0)) return say('Volatility must be zero or more.');
+    const r = (v.vol / 100) ** 2 / 8, gap = v.fee - r * 100;
+    return panel('LVR about ' + pct(r) + ' of pool value per year', [
+      ['Fee APR', v.fee.toFixed(2) + '%'],
+      ['Fees minus LVR', (gap >= 0 ? '+' : '') + gap.toFixed(2) + '% per year']
+    ], gap < 0 ? 'Fees do not cover loss versus rebalancing.' : '');
+  },
+  pt: v => {
+    if (!(v.price > 0) || !(v.days > 0)) return say('Price and days must be above zero.');
+    if (v.price >= 1) return say('A principal token at or above 1 of the underlying does not lock in a positive fixed yield.');
+    const fixed = Math.pow(1 / v.price, 365 / v.days) - 1, simple = (1 / v.price - 1) * 365 / v.days;
+    return panel(pct(fixed) + ' fixed APY if held to maturity', [
+      ['PT price', v.price + ' of the underlying, ' + v.days + ' days'],
+      ['Simple annualised', pct(simple)],
+      ['Yield token', 'Costs about ' + (1 - v.price).toFixed(4) + ' per unit, and profits only if realised variable yield beats about ' + pct(fixed) + '.']
+    ], '');
+  },
+  expected: v => {
+    if (v.p < 0 || v.p > 1 || v.lgd < 0 || v.lgd > 1) return say('Loss probability and loss given default must be between 0 and 1.');
+    const h = v.p * v.lgd * 100, net = v.y - h - v.c;
+    return panel(net.toFixed(2) + '% risk-adjusted', [
+      ['Headline yield', v.y.toFixed(2) + '%'],
+      ['Expected loss', h.toFixed(2) + '% (' + v.p + ' × ' + v.lgd + ' loss given default)'],
+      ['Costs', v.c.toFixed(2) + '%']
+    ], '');
+  },
+  income: v => {
+    if (!(v.cap > 0)) return say('Capital must be above zero.');
+    if (v.payout < 0 || v.payout > 1) return say('Payout ratio must be between 0 and 1.');
+    const exp = v.cap * v.ry / 100, pay = exp * v.payout;
+    return panel(money(pay / 12) + ' per month', [
+      ['Expected income', money(exp) + ' per year at ' + v.ry.toFixed(2) + '% risk-adjusted yield'],
+      ['Payout', pct(v.payout, 0) + ' = ' + money(pay) + ' per year'],
+      ['Retained as a loss buffer', money(exp - pay)],
+      ['Scope', 'Illustrative only. No income is promised.']
+    ], v.payout > 0.8 ? 'A payout above 80% of expected income leaves little buffer.' : '');
+  },
+  var: v => {
+    if (!(v.pos > 0) || !(v.vol >= 0) || !(v.z > 0)) return say('Position and confidence must be above zero. Volatility must be zero or more.');
+    const d = v.vol / 100 / Math.sqrt(365), x = v.z * d * v.pos;
+    return panel(money(x) + ' one-day value at risk', [
+      ['Position', money(v.pos)],
+      ['Daily volatility', pct(d)],
+      ['Move at this confidence', pct(v.z * d)]
+    ], 'This is a floor. Crypto tails are fatter than a normal model.');
+  },
+  cl: v => {
+    if (!(v.low > 0 && v.low < v.high)) return say('The low price must be above zero and below the high price.');
+    const eff = 1 / (1 - Math.pow(v.low / v.high, 0.25));
+    return panel(eff.toFixed(1) + '× versus a full range', [
+      ['Range', money(v.low) + ' – ' + money(v.high)],
+      ['Geometric mid', money(Math.sqrt(v.low * v.high))],
+      ['Width', (v.high / v.low).toFixed(3) + '×'],
+      ['In range', 'Fees and impermanent loss both scale by about this multiple.'],
+      ['Out of range', 'No fees, and the position becomes one asset.']
+    ], '');
+  },
+  carry: v => {
+    if (!(v.shortlev > 0)) return say('Short leverage must be above zero.');
+    const apr = v.rate * 3 * 365, capital = 1 + 1 / v.shortlev, on = apr / capital;
+    return panel(on.toFixed(2) + '% on total capital', [
+      ['Funding', v.rate + '% per 8 hours is ' + apr.toFixed(2) + '% APR on the hedged size'],
+      ['Capital per $1 hedged', money(capital)],
+      ['Short liquidates near', '+' + (100 / v.shortlev).toFixed(0) + '% before maintenance margin']
+    ], 'Keep a buffer above that move.');
+  },
+  supply: v => {
+    if (v.util < 0 || v.util > 1 || v.reserve < 0 || v.reserve > 1) return say('Utilisation and reserve factor must be between 0 and 1.');
+    const s = v.bapy * v.util * (1 - v.reserve);
+    return panel(s.toFixed(2) + '% supply APY', [
+      ['Borrow APY', v.bapy + '%'],
+      ['Utilisation', String(v.util)],
+      ['Reserve factor', String(v.reserve)],
+      ['Product', v.bapy + '% × ' + v.util + ' × (1 − ' + v.reserve + ')']
+    ], '');
+  },
+  apy: v => {
+    if (!(v.n > 0)) return say('Compounds per year must be above zero.');
+    const apy = Math.pow(1 + v.apr / 100 / v.n, v.n) - 1;
+    const bits = [['APR', v.apr + '%'], ['Compounds per year', String(v.n)], ['APY before gas', pct(apy)]];
+    let warn = '';
+    if (v.pos > 0 && v.gas > 0) {
+      const per = v.pos * v.apr / 100 / v.n;
+      bits.push(['Reward per compound', money(per)], ['Gas per compound', money(v.gas)]);
+      warn = per >= 10 * v.gas ? '' : 'Compound less often. Gas is large next to each reward.';
+    }
+    return panel(pct(apy) + ' APY before gas', bits, warn);
+  },
+  airdrop: v => {
+    if (v.prob < 0 || v.prob > 1) return say('Probability must be between 0 and 1.');
+    const ev = v.prob * v.value - v.costs;
+    return panel(money(ev) + ' expected value', [
+      ['Probability', String(v.prob)],
+      ['Value if it happens', money(v.value)],
+      ['Costs', money(v.costs)]
+    ], ev < 0 ? 'Expected value is negative after costs.' : '');
+  },
+  basis: v => {
+    if (!(v.spot > 0) || !(v.future > 0) || !(v.days > 0)) return say('Spot, future, and days must be above zero.');
+    const b = v.future / v.spot - 1;
+    return panel(pct(b * 365 / v.days) + ' annualised, simple', [
+      ['Basis', pct(b) + ' over ' + v.days + ' days'],
+      ['Spot', money(v.spot)],
+      ['Future', money(v.future)]
+    ], 'Locked only if both legs are held to expiry and margin is never called.');
+  },
+  'covered-call': v => {
+    if (!(v.spot > 0) || !(v.strike > 0) || !(v.days > 0)) return say('Spot, strike, and days must be above zero.');
+    const cap = v.strike / v.spot - 1, ann = v.premium * 365 / v.days, be = v.spot * (1 - v.premium / 100);
+    return panel(ann.toFixed(1) + '% annualised if that premium repeats', [
+      ['Premium', v.premium + '% per ' + v.days + '-day period'],
+      ['Max gain this period', (v.premium + cap * 100).toFixed(2) + '%'],
+      ['Upside capped at', money(v.strike)],
+      ['Break-even price', money(be)]
+    ], 'Below the break-even you lose like a holder, minus the premium. The premium will not repeat exactly.');
+  },
+  bank: v => {
+    if (!(v.coll > 0)) return say('Collateral must be above zero.');
+    if (!(v.lt > 0 && v.lt < 1)) return say('Liquidation threshold must be between 0 and 1.');
+    if (v.debt < 0 || v.reserve < 0 || v.spend < 0) return say('Debt, reserve, and spend cannot be negative.');
+    const ltv = v.debt / v.coll, hf = v.debt ? v.coll * v.lt / v.debt : Infinity;
+    const interest = v.debt * v.bapy / 100 / 12, obligations = v.spend + interest;
+    const months = obligations ? v.reserve / obligations : Infinity;
+    const equity = v.coll + v.reserve + v.other - v.debt;
+    const mark = ok => ok ? 'Pass' : '<span class="warn">Fail</span>';
+    return panel('Equity ' + money(equity), [
+      ['Assets', money(v.coll) + ' collateral, ' + money(v.reserve) + ' reserve, ' + money(v.other) + ' other'],
+      ['Debt', money(v.debt) + ' at ' + v.bapy + '% (' + money(interest) + ' interest per month)'],
+      ['LTV', pct(ltv, 1)],
+      ['Health factor', hf === Infinity ? 'No debt' : hf.toFixed(2)],
+      ['Reserve runway', (months === Infinity ? 'No monthly obligations' : months.toFixed(1) + ' months of ' + money(obligations))],
+      ['LTV at or under ' + v.maxltv + '%', mark(ltv * 100 <= v.maxltv)],
+      ['Health factor at least 2', mark(hf >= 2)],
+      ['Reserve covers 6 months', mark(months >= 6)]
+    ], '');
+  },
+  perp: v => {
+    if (!(v.entry > 0) || !(v.lev > 0)) return say('Entry price and leverage must be above zero.');
+    if (!(v.mmr >= 0)) return say('Maintenance margin must be zero or more.');
+    const move = 1 / v.lev - v.mmr / 100;
+    if (!(move > 0)) return say('Maintenance margin uses the whole leverage buffer, so this approximation has no room before liquidation.');
+    const liq = v.side === 'short' ? v.entry * (1 + move) : v.entry * (1 - move);
+    return panel('Liquidation near ' + money(liq), [
+      ['Position', v.side + ' ' + v.lev + '× from ' + money(v.entry)],
+      ['Move to liquidation', signed((liq / v.entry - 1) * 100)],
+      ['Maintenance margin', v.mmr + '%'],
+      ['Margin per $1,000 of position', money(1000 / v.lev)]
+    ], 'Before fees and funding.');
+  },
+  twr: v => {
+    const periods = [v.p1, v.p2, v.p3];
+    let growth = 1;
+    periods.forEach(r => { growth *= 1 + r / 100; });
+    const tw = (growth - 1) * 100;
+    const bits = [['Period returns', periods.map(r => r + '%').join(', ')], ['Time-weighted return', tw.toFixed(2) + '%']];
+    if (v.start > 0 && v.end != null && v.deposits != null && !Number.isNaN(v.end) && !Number.isNaN(v.deposits)) {
+      const simple = (v.end - v.start - v.deposits) / (v.start + v.deposits) * 100;
+      bits.push(['Simple gain on capital in', simple.toFixed(2) + '%']);
+      bits.push(['Why they differ', 'Deposits distort the simple figure. Time-weighted return follows the periods.']);
+    }
+    return panel(tw.toFixed(2) + '% time-weighted', bits, '');
+  },
+  cdp: v => {
+    if (!(v.qty > 0 && v.price > 0 && v.mint > 0 && v.minr > 0)) return say('Quantity, price, mint amount, and minimum ratio must be above zero.');
+    const coll = v.qty * v.price, maxMint = coll / (v.minr / 100), ratio = coll / v.mint * 100;
+    const liq = v.mint * v.minr / 100 / v.qty;
+    return panel(ratio.toFixed(0) + '% collateral ratio', [
+      ['Collateral', money(coll)],
+      ['Maximum mint at ' + v.minr + '%', money(maxMint)],
+      ['Minting', money(v.mint)],
+      ['Liquidation price', money(liq) + ' (' + signed((liq / v.price - 1) * 100) + ' from now)'],
+      ['Stability fee', money(v.mint * v.fee / 100) + ' per year']
+    ], ratio < v.minr ? 'Collateral ratio is under the minimum. This mint can be liquidated.' : '');
+  }
 };
 document.querySelectorAll('.calc[data-c]').forEach(el => {
   const run = RUN[el.dataset.c];
@@ -2107,17 +2328,25 @@ document.querySelectorAll('.calc[data-c]').forEach(el => {
   if (!run || !out) return;
   const upd = () => {
     const v = {};
-    el.querySelectorAll('input').forEach(i => v[i.dataset.k] = parseFloat(i.value));
-    out.innerHTML = Object.values(v).some(n => Number.isNaN(n)) ? 'Enter every value.' : run(v);
+    let missing = false;
+    el.querySelectorAll('[data-k]').forEach(i => {
+      if (i.tagName === 'SELECT') { v[i.dataset.k] = i.value; return; }
+      if (i.dataset.opt === '1' && i.value.trim() === '') { v[i.dataset.k] = null; return; }
+      const n = parseFloat(i.value);
+      if (Number.isNaN(n)) missing = true;
+      v[i.dataset.k] = n;
+    });
+    out.innerHTML = missing ? say('Enter every value.') : run(v);
   };
-  el.querySelectorAll('input').forEach(i => i.addEventListener('input', upd));
+  el.querySelectorAll('input, select').forEach(i => i.addEventListener('input', upd));
+  el.querySelectorAll('select').forEach(i => i.addEventListener('change', upd));
   upd();
 });
 if (location.protocol === 'file:') {
   const note = document.createElement('p');
   note.id = 'offline-note';
   note.className = 'safety';
-  note.textContent = 'This downloaded file is the whole directory. Search, lessons, pictures, worksheets, and the eight calculators all run here. Video files and the Course Hub are separate course files, so those links stay on this page.';
+  note.textContent = 'This downloaded file is the whole directory. Search, lessons, pictures, worksheets, and the calculators all run here. Video files and the Course Hub are separate course files, so those links stay on this page.';
   document.getElementById('intro').prepend(note);
   document.querySelectorAll('a.folderlink').forEach(a => a.addEventListener('click', e => { e.preventDefault(); note.scrollIntoView({ block: 'nearest' }); }));
 }
