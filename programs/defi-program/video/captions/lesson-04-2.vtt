@@ -6,116 +6,596 @@ Lesson 4.2.
 00:00:02.185 --> 00:00:03.605
 Native staking.
 
-00:00:03.605 --> 00:00:05.549
-By the end of this lesson, you'll
+00:00:03.605 --> 00:00:07.180
+By the end, you'll understand exactly what staking rewards
 
-00:00:05.549 --> 00:00:07.836
-be able to understand what staking pays
+00:00:07.180 --> 00:00:10.150
+pay for, the real risks underneath them, and why
 
-00:00:07.836 --> 00:00:10.180
-for, and its lock-up and validator risks.
+00:00:10.150 --> 00:00:13.240
+staking is never a defence against a falling price.
 
-00:00:11.480 --> 00:00:12.770
+00:00:14.540 --> 00:00:15.830
 Here's the plan.
 
-00:00:12.770 --> 00:00:14.455
-First, the key ideas.
+00:00:15.830 --> 00:00:18.334
+What staking rewards actually pay for, and
 
-00:00:14.455 --> 00:00:17.170
-Then, a worked example, step by step.
+00:00:18.334 --> 00:00:20.555
+the two ways you can participate.
 
-00:00:17.170 --> 00:00:18.695
-Then, your checklist.
+00:00:20.555 --> 00:00:22.839
+The real risks underneath a staking
 
-00:00:18.695 --> 00:00:20.857
-And finally, a three-question quiz.
+00:00:22.839 --> 00:00:26.375
+yield: slashing, unbonding, and validator downtime.
 
-00:00:22.157 --> 00:00:25.567
-Proof-of-stake networks pay stakers to secure the chain.
+00:00:26.375 --> 00:00:29.104
+A worked example showing exactly why staking
 
-00:00:25.567 --> 00:00:28.532
-You either run a validator or delegate to one.
+00:00:29.104 --> 00:00:32.072
+is never protection against a falling price.
 
-00:00:28.532 --> 00:00:30.897
-Rewards come from issuance and fees.
+00:00:32.072 --> 00:00:33.790
+And a checklist for choosing who
 
-00:00:30.897 --> 00:00:35.831
-Risks: slashing (penalties for validator misbehaviour on some networks),
+00:00:33.790 --> 00:00:35.247
+to stake with, and how much.
 
-00:00:35.831 --> 00:00:40.427
-unbonding periods (waiting time to withdraw) and validator downtime.
+00:00:36.547 --> 00:00:38.882
+What staking rewards actually pay for.
 
-00:00:41.727 --> 00:00:44.242
-Let's work an example, step by step.
+00:00:40.182 --> 00:00:43.977
+Here's the mechanism underneath every proof-of-stake network.
 
-00:00:44.242 --> 00:00:46.986
-Staking yields a few percent a year
+00:00:43.977 --> 00:00:47.414
+Stakers lock up the network's own asset, specifically
 
-00:00:46.986 --> 00:00:50.717
-in the staked asset (e.g. ~3%, illustrative).
+00:00:47.414 --> 00:00:50.342
+to help secure the chain, by running software
 
-00:00:50.717 --> 00:00:54.119
-Your dollar return is still dominated by the
+00:00:50.342 --> 00:00:53.125
+that proposes and validates new blocks.
 
-00:00:54.119 --> 00:00:57.445
-asset's price: +3% staking on an asset that
+00:00:53.125 --> 00:00:56.789
+In return, the network pays stakers rewards, funded by
 
-00:00:57.445 --> 00:01:00.164
-falls 30% is still a large loss.
+00:00:56.789 --> 00:00:59.953
+a mix of new issuance and transaction fees.
 
-00:01:00.164 --> 00:01:01.679
-Stake what you'd hold anyway.
+00:00:59.953 --> 00:01:02.911
+You can participate in exactly one of two ways:
 
-00:01:02.979 --> 00:01:04.439
+00:01:02.911 --> 00:01:06.548
+run a validator yourself, directly, or delegate your stake
+
+00:01:06.548 --> 00:01:08.828
+to someone else who already runs one.
+
+00:01:10.129 --> 00:01:12.701
+Here's the actual choice between those two
+
+00:01:12.701 --> 00:01:15.034
+ways to participate, side by side.
+
+00:01:15.034 --> 00:01:18.382
+Running your own validator means keeping the full
+
+00:01:18.382 --> 00:01:21.864
+reward for yourself, but it requires real technical
+
+00:01:21.864 --> 00:01:26.114
+setup, reliable uptime, and genuine ongoing responsibility.
+
+00:01:26.114 --> 00:01:29.715
+Delegating to someone else's validator is far simpler to
+
+00:01:29.715 --> 00:01:32.559
+start, but that validator takes a cut of the
+
+00:01:32.559 --> 00:01:35.781
+reward, and your outcome now depends partly on how
+
+00:01:35.781 --> 00:01:37.929
+well they run their own operation.
+
+00:01:39.229 --> 00:01:41.847
+Worth being precise about why the network pays
+
+00:01:41.847 --> 00:01:43.852
+for this at all, since it's easy to
+
+00:01:43.852 --> 00:01:45.934
+just treat the yield as a given.
+
+00:01:45.934 --> 00:01:48.909
+Proof-of-stake networks need a large amount of
+
+00:01:48.909 --> 00:01:51.821
+value genuinely at risk, specifically to make
+
+00:01:51.821 --> 00:01:55.919
+attacking or corrupting the chain economically unattractive.
+
+00:01:55.919 --> 00:01:59.366
+Staking rewards are the network's direct payment for taking
+
+00:01:59.366 --> 00:02:01.836
+on that role, and the risk that comes with
+
+00:02:01.836 --> 00:02:04.479
+it, not a reward for simply holding the token.
+
+00:02:05.779 --> 00:02:08.918
+Here's where that reward actually comes from, since the
+
+00:02:08.918 --> 00:02:11.964
+source matters for who ultimately bears its cost.
+
+00:02:11.964 --> 00:02:16.070
+Issuance means the network mints brand-new tokens specifically to
+
+00:02:16.070 --> 00:02:20.164
+pay stakers, which mildly dilutes everyone who isn't staking.
+
+00:02:20.164 --> 00:02:23.291
+Fees mean the reward comes from transaction fees
+
+00:02:23.291 --> 00:02:27.311
+actual users already paid, redistributed to whoever's securing
+
+00:02:27.311 --> 00:02:30.419
+the chain, with no dilution involved at all.
+
+00:02:30.419 --> 00:02:33.454
+Most networks blend both, in varying proportions.
+
+00:02:34.754 --> 00:02:35.844
+Quick check.
+
+00:02:35.844 --> 00:02:38.399
+What do staking rewards actually pay for?
+
+00:02:42.819 --> 00:02:45.978
+The answer: securing the network, specifically by
+
+00:02:45.978 --> 00:02:48.189
+putting real value at risk to make
+
+00:02:48.189 --> 00:02:51.979
+attacking or corrupting the chain economically unattractive.
+
+00:02:53.279 --> 00:02:55.234
+The real risks underneath the yield.
+
+00:02:56.534 --> 00:02:58.354
+Here's all three risks, and what
+
+00:02:58.354 --> 00:03:00.309
+each one actually does to you.
+
+00:03:00.309 --> 00:03:03.378
+Slashing is a direct penalty, on some networks,
+
+00:03:03.378 --> 00:03:07.853
+for validator misbehaviour, like double-signing or extended downtime,
+
+00:03:07.853 --> 00:03:10.410
+and it can cut directly into the staked
+
+00:03:10.410 --> 00:03:13.139
+principal itself, not just the reward.
+
+00:03:13.139 --> 00:03:16.683
+An unbonding period is a mandatory waiting time between
+
+00:03:16.683 --> 00:03:20.733
+requesting to withdraw and actually receiving your assets back,
+
+00:03:20.733 --> 00:03:24.324
+during which the market can move freely against you.
+
+00:03:24.324 --> 00:03:27.516
+And validator downtime simply means missed rewards,
+
+00:03:27.516 --> 00:03:30.339
+for however long that validator stays offline.
+
+00:03:31.639 --> 00:03:34.385
+Worth being precise about the unbonding period
+
+00:03:34.385 --> 00:03:37.072
+specifically, since it's the risk most likely
+
+00:03:37.072 --> 00:03:38.949
+to catch someone off guard.
+
+00:03:38.949 --> 00:03:41.658
+It isn't a fee, and it isn't optional; it's
+
+00:03:41.658 --> 00:03:45.107
+simply time you cannot access your assets, whatever the
+
+00:03:45.107 --> 00:03:48.239
+market happens to do during that exact window.
+
+00:03:48.239 --> 00:03:52.154
+On some networks that's days; on others, considerably longer.
+
+00:03:52.154 --> 00:03:54.418
+Know the actual number before you stake,
+
+00:03:54.418 --> 00:03:56.074
+not after you try to withdraw.
+
+00:03:57.374 --> 00:04:00.845
+Here's why delegating specifically changes your exposure to
+
+00:04:00.845 --> 00:04:04.384
+these risks, compared with running a validator yourself.
+
+00:04:04.384 --> 00:04:07.818
+Delegating to a validator with a strong uptime record
+
+00:04:07.818 --> 00:04:11.760
+and no history of slashing meaningfully lowers your practical
+
+00:04:11.760 --> 00:04:14.604
+exposure to both of the first two risks.
+
+00:04:14.604 --> 00:04:18.188
+Delegating to an unproven or poorly run validator can
+
+00:04:18.188 --> 00:04:21.574
+expose you to the exact same slashing and downtime
+
+00:04:21.574 --> 00:04:25.224
+risk as running one badly yourself, without you having
+
+00:04:25.224 --> 00:04:27.614
+any direct control over the outcome.
+
+00:04:28.914 --> 00:04:31.543
+Here's how to actually plan around an unbonding
+
+00:04:31.543 --> 00:04:33.979
+period, rather than being caught by it.
+
+00:04:33.979 --> 00:04:36.381
+Know the exact number of days before you ever
+
+00:04:36.381 --> 00:04:38.979
+stake, not when you suddenly need the funds.
+
+00:04:38.979 --> 00:04:42.357
+Start the withdrawal well ahead of whenever you actually
+
+00:04:42.357 --> 00:04:45.971
+expect to need that liquidity, treating the unbonding period
+
+00:04:45.971 --> 00:04:48.345
+as a hard floor, not a rough guess.
+
+00:04:48.345 --> 00:04:51.346
+And never stake capital you might need on short
+
+00:04:51.346 --> 00:04:54.409
+notice, since no urgency on your end changes how
+
+00:04:54.409 --> 00:04:57.535
+long the network's own waiting period actually is.
+
+00:04:58.835 --> 00:04:59.925
+Quick check.
+
+00:04:59.925 --> 00:05:01.490
+What exactly is unbonding?
+
+00:05:05.910 --> 00:05:09.789
+The answer: a mandatory waiting period, after requesting a
+
+00:05:09.789 --> 00:05:14.720
+withdrawal, before your unstaked assets actually become transferable again.
+
+00:05:16.020 --> 00:05:17.025
+Worked example.
+
+00:05:18.325 --> 00:05:20.886
+Here's the scenario, step by step, using
+
+00:05:20.886 --> 00:05:24.810
+the source material's own realistic, illustrative numbers.
+
+00:05:24.810 --> 00:05:27.578
+You stake an asset, earning roughly three percent
+
+00:05:27.578 --> 00:05:29.650
+a year, paid in that same asset.
+
+00:05:29.650 --> 00:05:31.522
+Over that same year, the asset's
+
+00:05:31.522 --> 00:05:33.580
+own price falls thirty percent.
+
+00:05:33.580 --> 00:05:35.589
+Your staked balance is genuinely
+
+00:05:35.589 --> 00:05:37.715
+larger, by that three percent.
+
+00:05:37.715 --> 00:05:40.583
+But its dollar value has fallen anyway, because
+
+00:05:40.583 --> 00:05:43.750
+the price move overwhelms the staking yield entirely.
+
+00:05:45.050 --> 00:05:49.015
+Here's the actual dollar math behind that, computed precisely.
+
+00:05:49.015 --> 00:05:51.425
+One point zero three, for the three
+
+00:05:51.425 --> 00:05:54.572
+percent staking gain, multiplied by zero point
+
+00:05:54.572 --> 00:05:57.384
+seven, for the thirty percent price drop,
+
+00:05:57.384 --> 00:05:59.960
+comes to zero point seven two one.
+
+00:05:59.960 --> 00:06:02.884
+That's a loss of about twenty-seven point nine
+
+00:06:02.884 --> 00:06:06.307
+percent, in dollar terms, despite every single staking
+
+00:06:06.307 --> 00:06:08.920
+reward being paid out exactly as promised.
+
+00:06:10.220 --> 00:06:12.912
+Here's the one sentence this entire worked
+
+00:06:12.912 --> 00:06:15.666
+example exists to prove, worth holding onto
+
+00:06:15.666 --> 00:06:18.095
+more than any specific percentage.
+
+00:06:18.095 --> 00:06:20.689
+Staking adds a small, genuine yield on top
+
+00:06:20.689 --> 00:06:23.284
+of whatever the asset does anyway; it does
+
+00:06:23.284 --> 00:06:26.480
+not protect you from that asset's price falling.
+
+00:06:26.480 --> 00:06:30.225
+The three percent helped, technically, exactly as advertised.
+
+00:06:30.225 --> 00:06:32.675
+It simply wasn't remotely close to being enough.
+
+00:06:33.975 --> 00:06:36.860
+The same 3%, across different price moves.
+
+00:06:38.160 --> 00:06:41.612
+Here's that same three percent staking yield, applied
+
+00:06:41.612 --> 00:06:44.936
+across five different price scenarios, from a sharp
+
+00:06:44.936 --> 00:06:48.305
+fall to a solid gain, again purely illustrative.
+
+00:06:48.305 --> 00:06:50.609
+At a fifty percent price fall, you're down
+
+00:06:50.609 --> 00:06:53.855
+about forty-eight and a half percent, staking included.
+
+00:06:53.855 --> 00:06:55.736
+At the thirty percent fall from a
+
+00:06:55.736 --> 00:06:58.305
+moment ago, down twenty-seven point nine.
+
+00:06:58.305 --> 00:07:01.420
+At a ten percent fall, down about seven percent.
+
+00:07:01.420 --> 00:07:02.788
+With the price flat, you're
+
+00:07:02.788 --> 00:07:04.505
+simply up your three percent.
+
+00:07:04.505 --> 00:07:07.231
+And with a thirty percent gain, staking adds a
+
+00:07:07.231 --> 00:07:10.073
+little more on top, to about thirty-four percent.
+
+00:07:11.373 --> 00:07:14.013
+Notice how little that three percent staking
+
+00:07:14.013 --> 00:07:16.653
+yield actually shifts any of these outcomes,
+
+00:07:16.653 --> 00:07:18.948
+compared to the price move itself.
+
+00:07:18.948 --> 00:07:21.415
+It nudges every single result by roughly
+
+00:07:21.415 --> 00:07:24.243
+three percentage points, in the same direction
+
+00:07:24.243 --> 00:07:26.288
+the price was already moving.
+
+00:07:26.288 --> 00:07:29.895
+It never once changes which direction the outcome goes.
+
+00:07:29.895 --> 00:07:31.671
+The price move decides that,
+
+00:07:31.671 --> 00:07:33.080
+on its own, every time.
+
+00:07:34.379 --> 00:07:37.567
+Here's what this actually implies for deciding what to
+
+00:07:37.567 --> 00:07:40.292
+stake in the first place, since the math above
+
+00:07:40.292 --> 00:07:43.374
+applies to any asset, not just this one example.
+
+00:07:43.374 --> 00:07:46.084
+An asset you'd genuinely hold regardless of
+
+00:07:46.084 --> 00:07:48.917
+its price, for reasons entirely separate from
+
+00:07:48.917 --> 00:07:51.989
+the staking yield, is a reasonable candidate.
+
+00:07:51.989 --> 00:07:54.388
+An asset you're only holding because of
+
+00:07:54.388 --> 00:07:56.667
+the staking rate itself is exposed to
+
+00:07:56.667 --> 00:07:59.125
+exactly the loss the worked example just
+
+00:07:59.125 --> 00:08:01.584
+showed you, the instant that price falls.
+
+00:08:02.884 --> 00:08:03.974
+Quick check.
+
+00:08:03.974 --> 00:08:05.857
+Does staking protect you against
+
+00:08:05.857 --> 00:08:07.969
+the underlying asset's price falling?
+
+00:08:12.389 --> 00:08:14.469
+The answer: no. It adds a small
+
+00:08:14.469 --> 00:08:16.809
+yield on top; the asset's own price
+
+00:08:16.809 --> 00:08:19.864
+move still dominates your actual dollar result.
+
+00:08:21.164 --> 00:08:23.094
+Checking a validator, concretely.
+
+00:08:24.394 --> 00:08:26.885
+Here's exactly what to check on a validator
+
+00:08:26.885 --> 00:08:30.469
+or delegation provider, before staking anything with them.
+
+00:08:30.469 --> 00:08:33.863
+Its uptime percentage, over as long a track record
+
+00:08:33.863 --> 00:08:36.759
+as you can find, not just recent weeks.
+
+00:08:36.759 --> 00:08:38.633
+Whether it's ever been slashed, and
+
+00:08:38.633 --> 00:08:40.494
+if so, what actually happened.
+
+00:08:40.494 --> 00:08:43.774
+Its fee, and how that compares to similar providers.
+
+00:08:43.774 --> 00:08:46.796
+And how concentrated total stake already is with
+
+00:08:46.796 --> 00:08:49.817
+it, since heavy concentration in one provider is
+
+00:08:49.817 --> 00:08:52.099
+its own separate risk to the network.
+
+00:08:53.399 --> 00:08:54.859
 Here's your checklist.
 
-00:01:04.439 --> 00:01:05.974
-Do it now, for real.
+00:08:54.859 --> 00:08:56.744
+Do it before staking anything.
 
-00:01:05.974 --> 00:01:11.749
-First, Validator/provider chosen on uptime, fee, concentration and record.
+00:08:56.744 --> 00:08:59.908
+Choose your validator, or provider, based on its
 
-00:01:11.749 --> 00:01:13.834
-Next, Unbonding period known.
+00:08:59.908 --> 00:09:03.395
+actual uptime record, its fee, how concentrated stake
 
-00:01:13.834 --> 00:01:16.879
-And finally, only "hold-anyway" capital staked.
+00:09:03.395 --> 00:09:06.107
+already is with it, and its track record,
 
-00:01:18.179 --> 00:01:19.389
-Question 1.
+00:09:06.107 --> 00:09:08.279
+not just the advertised rate.
 
-00:01:19.389 --> 00:01:21.284
-What do staking rewards pay for?
+00:09:08.279 --> 00:09:10.086
+Know the unbonding period, in
 
-00:01:25.704 --> 00:01:27.649
-The answer: Securing the network.
+00:09:10.086 --> 00:09:12.254
+actual days, before you commit.
 
-00:01:28.949 --> 00:01:30.194
-Question 2.
+00:09:12.254 --> 00:09:15.102
+And stake only capital you'd genuinely hold
 
-00:01:30.194 --> 00:01:31.279
-What is unbonding?
+00:09:15.102 --> 00:09:18.274
+anyway, regardless of the staking yield entirely.
 
-00:01:35.699 --> 00:01:37.620
-The answer: A waiting period
+00:09:19.574 --> 00:09:20.819
+Let's recap.
 
-00:01:37.620 --> 00:01:40.469
-before unstaked assets become transferable.
+00:09:20.819 --> 00:09:24.344
+Staking rewards pay for securing the network, whether you
 
-00:01:41.769 --> 00:01:43.039
-Question 3.
+00:09:24.344 --> 00:09:27.319
+run a validator yourself or delegate to one.
 
-00:01:43.039 --> 00:01:45.274
-Does staking protect against price falls?
+00:09:27.319 --> 00:09:30.228
+The real risks are slashing, unbonding periods,
 
-00:01:49.694 --> 00:01:51.378
-The answer: No. It adds a
+00:09:30.228 --> 00:09:32.834
+and validator downtime, none of which show
 
-00:01:51.378 --> 00:01:53.579
-small yield; price moves dominate.
+00:09:32.834 --> 00:09:34.589
+up in the headline rate.
 
-00:01:54.879 --> 00:01:57.394
-Do the checklist now, before you move on.
+00:09:34.589 --> 00:09:36.624
+Staking adds a small yield on top
 
-00:01:57.394 --> 00:02:02.119
-Next up, Lesson 4.3: Liquid staking (LSTs).
+00:09:36.624 --> 00:09:38.899
+of whatever the asset does anyway; it
+
+00:09:38.899 --> 00:09:41.534
+never protects against a falling price.
+
+00:09:41.534 --> 00:09:43.577
+And the rule that follows from all of
+
+00:09:43.577 --> 00:09:46.104
+it: stake what you'd hold anyway, nothing more.
+
+00:09:47.404 --> 00:09:49.839
+Choose your validator on its record, not
+
+00:09:49.839 --> 00:09:52.392
+just its rate, know your unbonding period,
+
+00:09:52.392 --> 00:09:54.949
+and only stake what you'd hold anyway.
+
+00:09:54.949 --> 00:09:59.371
+Next up, Lesson 4.3: liquid staking (LSTs).
