@@ -38,8 +38,8 @@ sc("pillars", "Here's the plan. First, money as a record, and why a blockchain i
    chapter="Intro", title="What this lesson covers",
    items=[{"icon": "book", "title": "Money as a record", "text": "And why a blockchain is different"}, {"icon": "clock", "title": "BTC and ETH", "text": "The real history, in order"},
           {"icon": "code", "title": "Contracts, coins, DeFi", "text": "Three more words you'll need"}, {"icon": "swap", "title": "A worked example", "text": "Alice sends Bob 0.1 ETH"}])
-sc("statement", "One honest note before we start. Some of the screens in this lesson are clearly labelled illustrative: accurate recreations of what you'll see, built so we can show you the idea, not a live capture of any one exchange or wallet, whose exact design changes over time anyway. When you get to Lesson zero point two, you'll be looking at the real thing, on your own screen.",
-   "One honest note before we start. Some of the screens in this lesson are clearly labelled illustrative: accurate recreations of what you'll see, built so we can show you the idea, not a live capture of any one exchange or wallet, whose exact design changes over time anyway. When you get to Lesson 0.2, you'll be looking at the real thing, on your own screen.",
+sc("statement", "One honest note before we start. Some of the screens in this lesson are clearly labelled illustrative. They're accurate recreations of what you'll see, built so we can show you the idea, not a live capture of any one exchange or wallet, whose exact design changes over time anyway. When you get to Lesson zero point two, you'll be looking at the real thing, on your own screen.",
+   "One honest note before we start. Some of the screens in this lesson are clearly labelled illustrative. They're accurate recreations of what you'll see, built so we can show you the idea, not a live capture of any one exchange or wallet, whose exact design changes over time anyway. When you get to Lesson 0.2, you'll be looking at the real thing, on your own screen.",
    chapter="Intro", kicker="A quick note", lines=["Mockups here are labelled", "“illustrative”, not live captures."], sub="You'll be on the real thing yourself from Lesson 0.2 onward.")
 
 # ---------------------------------------------------------------- money is a record
@@ -64,7 +64,7 @@ img(D + "story-chain-of-blocks.png", "Why it's called a chain",
     "New entries arrive in batches called blocks. Each block carries a seal, a fingerprint built from everything inside it plus the seal of the block before. That links the blocks into a chain. Change one old entry, and its seal changes, which breaks every seal after it. Every other copy notices immediately. That's why a blockchain's history can't be quietly rewritten, only added to.",
     chapter="Money is a record", zoom={"x": 0.3, "y": 0.55, "s": 1.3, "at": 2})
 img(D + "story-block-explorer.png", "You can check it yourself",
-    "And because it's public, anyone can check it. This is what a block explorer shows, an illustrative recreation of the kind of tool you'll actually use later in this program: a block number, how many transactions it holds, and each one's sender, receiver and amount. It can show you a transaction happened. It can never undo one.",
+    "And because it's public, anyone can check it. This is what a block explorer shows: an illustrative recreation of the kind of tool you'll actually use later in this program. A block number, how many transactions it holds, and each one's sender, receiver and amount. It can show you a transaction happened. It can never undo one.",
     chapter="Money is a record")
 
 # ---------------------------------------------------------------- BTC and ETH
@@ -77,7 +77,7 @@ img(D + "story-btc-eth-timeline.png", "The real history",
     "Here's the real timeline, not a simplified version. In 2008, someone using the name Satoshi Nakamoto published the Bitcoin white paper: money with no bank in the middle. In 2009, the first block was mined, the first working blockchain, and the first cryptocurrency, BTC. In 2015, Ethereum launched: a blockchain that also runs small programs, not just payments. And through the 2020s, DeFi grew up on top of that: lending, trading and stablecoins, run by those programs at real scale.",
     chapter="Bitcoin and Ethereum")
 sc("compare", "So, side by side. Bitcoin does one thing and does it well: it moves and stores value, with the deepest security and the longest track record of any blockchain. Ethereum does that too, but it also runs smart contracts, which is what makes lending apps, exchanges and stablecoins possible. Most of this program happens on Ethereum and the networks built around it, because that's where DeFi actually lives.",
-   chapter="Bitcoin and Ethereum",
+   chapter="Bitcoin and Ethereum", title="Bitcoin vs. Ethereum",
    left={"label": "Bitcoin (BTC)", "tone": "neutral", "items": ["Moves and stores value", "Deepest security, longest track record", "Doesn't run smart contracts"]},
    right={"label": "Ethereum (ETH)", "tone": "good", "items": ["Moves and stores value too", "Also runs smart contracts", "Where most of this program happens"]})
 sc("stats", "One more real number, so “gas” isn't abstract later. Ethereum processes somewhere around one point two million transactions on an average day, each one checked by the network and added to a block. That volume is exactly why block space is scarce, and why, in Lesson zero point six, you'll learn that transaction fees rise and fall with demand.",
@@ -106,12 +106,14 @@ sc("flow", "The same trade in DeFi skips all of that. It goes straight into a sm
    nodes=[{"label": "You", "icon": "bell"}, {"label": "Smart contract", "sub": "No staff, no branch", "icon": "code"}, {"label": "Settled", "sub": "On the blockchain itself", "icon": "check"}],
    layout="row")
 sc("compare", "So here's DeFi against traditional finance, directly. A bank has a branch, staff and opening hours, and it can reverse a mistaken payment. A DeFi smart contract has none of that: it's open all day, every day, needs no staff, and treats everyone identically. But it also can't make an exception for you. That's the deal.",
-   chapter="Contracts, coins and DeFi",
+   chapter="Contracts, coins and DeFi", title="A bank vs. a DeFi contract",
    left={"label": "A bank", "tone": "neutral", "items": ["Branch, staff, opening hours", "Can reverse a mistaken payment", "Can make an exception"]},
    right={"label": "A DeFi smart contract", "tone": "good", "items": ["Open every hour, every day", "No staff, treats everyone the same", "Can never make an exception"]})
-sc("stats", "And here's why DeFi doesn't need banking hours. A bank transfer can sit for a business day or more, waiting on staff and settlement windows. A new block on Ethereum settles roughly every twelve seconds, day or night, weekend or holiday. DeFi isn't faster because it's magic. It's faster because there's no one to wait on.",
-   "And here's why DeFi doesn't need banking hours. A bank transfer can sit for a business day or more, waiting on staff and settlement windows. A new block on Ethereum settles roughly every 12 seconds, day or night, weekend or holiday. DeFi isn't faster because it's magic. It's faster because there's no one to wait on.",
-   chapter="Contracts, coins and DeFi", stats=[["1 business day", "typical bank transfer (illustrative)"], ["12 sec", "typical block on Ethereum (illustrative)"]])
+sc("chart", "And here's why DeFi doesn't need banking hours. A bank transfer can sit for a business day or more, waiting on staff and settlement windows. A new block on Ethereum settles roughly every twelve seconds, day or night, weekend or holiday. Look at that gap. DeFi isn't faster because it's magic. It's faster because there's no one to wait on.",
+   "And here's why DeFi doesn't need banking hours. A bank transfer can sit for a business day or more, waiting on staff and settlement windows. A new block on Ethereum settles roughly every 12 seconds, day or night, weekend or holiday. Look at that gap. DeFi isn't faster because it's magic. It's faster because there's no one to wait on.",
+   chapter="Contracts, coins and DeFi", kind="bars", variant="row", title="Settlement time, in seconds", sub="Illustrative, not a live measurement",
+   bars=[{"label": "Bank transfer", "text": "A business day or more", "value": 86400, "show": "~1 business day", "tone": "neutral"},
+         {"label": "Ethereum block", "text": "Roughly every 12 seconds", "value": 12, "show": "~12 sec", "tone": "good"}])
 sc("statement", "Which brings us to the trade-off underneath everything in this module. No bank in the middle means nobody can freeze your money without your keys. It also means nobody can reverse your mistakes. That single sentence is why this program starts with safety, not strategy.",
    chapter="Contracts, coins and DeFi", kicker="The trade-off", lines=["Nobody can freeze it.", "Nobody can undo it, either."], sub="That single sentence is why this program starts with safety.")
 
@@ -122,7 +124,7 @@ img(D + "story-wallet-send.png", "What Alice sees",
     "Here's Alice's wallet, right before she sends. This is a labelled, illustrative recreation of a typical wallet screen, built to show the real fields you'll see, not a capture of any one product. She fills in Bob's address, an amount, zero point one E.T.H., and sees the network fee, the gas, that this transaction will cost. When she taps Sign and Send, she isn't sending a file. She's signing an instruction: “move zero point one E.T.H. from my address to Bob's.”",
     "Here's Alice's wallet, right before she sends. This is a labelled, illustrative recreation of a typical wallet screen, built to show the real fields you'll see, not a capture of any one product. She fills in Bob's address, an amount, 0.1 ETH, and sees the network fee, the gas, that this transaction will cost. When she taps Sign and Send, she isn't sending a file. She's signing an instruction: “move 0.1 ETH from my address to Bob's.”",
     chapter="Worked example")
-sc("flow", "Now follow the instruction itself. Alice's wallet signs it with her private key, which proves it's really her without ever revealing the key. The network checks that she actually owns zero point one E.T.H. It's added to the next block. And every copy of the ledger updates at once. Bob now owns it. There is no undo button, anywhere in this chain.",
+sc("flow3d", "Now follow the instruction itself. Alice's wallet signs it with her private key, which proves it's really her without ever revealing the key. The network checks that she actually owns zero point one E.T.H. It's added to the next block. And every copy of the ledger updates at once. Bob now owns it. There is no undo button, anywhere in this chain.",
    "Now follow the instruction itself. Alice's wallet signs it with her private key, which proves it's really her without ever revealing the key. The network checks that she actually owns 0.1 ETH. It's added to the next block. And every copy of the ledger updates at once. Bob now owns it. There is no undo button, anywhere in this chain.",
    chapter="Worked example", title="What happens after she taps Send",
    nodes=[{"label": "Signed", "sub": "Her private key proves it", "icon": "key"}, {"label": "Checked", "sub": "She owns 0.1 ETH", "icon": "eye"},

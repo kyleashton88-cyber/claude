@@ -66,8 +66,8 @@
     "“illustrative”, not live captures."
    ],
    "sub": "You'll be on the real thing yourself from Lesson 0.2 onward.",
-   "vo": "One honest note before we start. Some of the screens in this lesson are clearly labelled illustrative: accurate recreations of what you'll see, built so we can show you the idea, not a live capture of any one exchange or wallet, whose exact design changes over time anyway. When you get to Lesson zero point two, you'll be looking at the real thing, on your own screen.",
-   "cap": "One honest note before we start. Some of the screens in this lesson are clearly labelled illustrative: accurate recreations of what you'll see, built so we can show you the idea, not a live capture of any one exchange or wallet, whose exact design changes over time anyway. When you get to Lesson 0.2, you'll be looking at the real thing, on your own screen."
+   "vo": "One honest note before we start. Some of the screens in this lesson are clearly labelled illustrative. They're accurate recreations of what you'll see, built so we can show you the idea, not a live capture of any one exchange or wallet, whose exact design changes over time anyway. When you get to Lesson zero point two, you'll be looking at the real thing, on your own screen.",
+   "cap": "One honest note before we start. Some of the screens in this lesson are clearly labelled illustrative. They're accurate recreations of what you'll see, built so we can show you the idea, not a live capture of any one exchange or wallet, whose exact design changes over time anyway. When you get to Lesson 0.2, you'll be looking at the real thing, on your own screen."
   },
   {
    "type": "title",
@@ -174,7 +174,7 @@
    "eyebrow": "You can check it yourself",
    "wide": true,
    "chapter": "Money is a record",
-   "vo": "And because it's public, anyone can check it. This is what a block explorer shows, an illustrative recreation of the kind of tool you'll actually use later in this program: a block number, how many transactions it holds, and each one's sender, receiver and amount. It can show you a transaction happened. It can never undo one."
+   "vo": "And because it's public, anyone can check it. This is what a block explorer shows: an illustrative recreation of the kind of tool you'll actually use later in this program. A block number, how many transactions it holds, and each one's sender, receiver and amount. It can show you a transaction happened. It can never undo one."
   },
   {
    "type": "title",
@@ -208,6 +208,7 @@
   {
    "type": "compare",
    "chapter": "Bitcoin and Ethereum",
+   "title": "Bitcoin vs. Ethereum",
    "left": {
     "label": "Bitcoin (BTC)",
     "tone": "neutral",
@@ -324,6 +325,7 @@
   {
    "type": "compare",
    "chapter": "Contracts, coins and DeFi",
+   "title": "A bank vs. a DeFi contract",
    "left": {
     "label": "A bank",
     "tone": "neutral",
@@ -345,20 +347,30 @@
    "vo": "So here's DeFi against traditional finance, directly. A bank has a branch, staff and opening hours, and it can reverse a mistaken payment. A DeFi smart contract has none of that: it's open all day, every day, needs no staff, and treats everyone identically. But it also can't make an exception for you. That's the deal."
   },
   {
-   "type": "stats",
+   "type": "chart",
    "chapter": "Contracts, coins and DeFi",
-   "stats": [
-    [
-     "1 business day",
-     "typical bank transfer (illustrative)"
-    ],
-    [
-     "12 sec",
-     "typical block on Ethereum (illustrative)"
-    ]
+   "kind": "bars",
+   "variant": "row",
+   "title": "Settlement time, in seconds",
+   "sub": "Illustrative, not a live measurement",
+   "bars": [
+    {
+     "label": "Bank transfer",
+     "text": "A business day or more",
+     "value": 86400,
+     "show": "~1 business day",
+     "tone": "neutral"
+    },
+    {
+     "label": "Ethereum block",
+     "text": "Roughly every 12 seconds",
+     "value": 12,
+     "show": "~12 sec",
+     "tone": "good"
+    }
    ],
-   "vo": "And here's why DeFi doesn't need banking hours. A bank transfer can sit for a business day or more, waiting on staff and settlement windows. A new block on Ethereum settles roughly every twelve seconds, day or night, weekend or holiday. DeFi isn't faster because it's magic. It's faster because there's no one to wait on.",
-   "cap": "And here's why DeFi doesn't need banking hours. A bank transfer can sit for a business day or more, waiting on staff and settlement windows. A new block on Ethereum settles roughly every 12 seconds, day or night, weekend or holiday. DeFi isn't faster because it's magic. It's faster because there's no one to wait on."
+   "vo": "And here's why DeFi doesn't need banking hours. A bank transfer can sit for a business day or more, waiting on staff and settlement windows. A new block on Ethereum settles roughly every twelve seconds, day or night, weekend or holiday. Look at that gap. DeFi isn't faster because it's magic. It's faster because there's no one to wait on.",
+   "cap": "And here's why DeFi doesn't need banking hours. A bank transfer can sit for a business day or more, waiting on staff and settlement windows. A new block on Ethereum settles roughly every 12 seconds, day or night, weekend or holiday. Look at that gap. DeFi isn't faster because it's magic. It's faster because there's no one to wait on."
   },
   {
    "type": "statement",
@@ -390,7 +402,7 @@
    "cap": "Here's Alice's wallet, right before she sends. This is a labelled, illustrative recreation of a typical wallet screen, built to show the real fields you'll see, not a capture of any one product. She fills in Bob's address, an amount, 0.1 ETH, and sees the network fee, the gas, that this transaction will cost. When she taps Sign and Send, she isn't sending a file. She's signing an instruction: “move 0.1 ETH from my address to Bob's.”"
   },
   {
-   "type": "flow",
+   "type": "flow3d",
    "chapter": "Worked example",
    "title": "What happens after she taps Send",
    "nodes": [
