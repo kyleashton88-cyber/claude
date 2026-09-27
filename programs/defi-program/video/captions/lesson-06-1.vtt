@@ -6,158 +6,659 @@ Lesson 6.1.
 00:00:02.245 --> 00:00:04.000
 Protocol due diligence.
 
-00:00:04.000 --> 00:00:06.021
-By the end of this lesson, you'll be
+00:00:04.000 --> 00:00:07.710
+Today you'll run the six-step research loop from Lesson
 
-00:00:06.021 --> 00:00:08.205
-able to run the 6-step research loop on
+00:00:07.710 --> 00:00:10.294
+6.0 in real depth, one step at a time,
 
-00:00:08.205 --> 00:00:10.335
-a protocol and reach a written verdict.
+00:00:10.294 --> 00:00:13.010
+and land it on an actual written verdict.
 
-00:00:11.635 --> 00:00:12.925
-Here's the plan.
+00:00:14.310 --> 00:00:17.624
+Here's the objective for this lesson, in one sentence.
 
-00:00:12.925 --> 00:00:14.610
-First, the key ideas.
+00:00:17.624 --> 00:00:20.195
+Run the six-step research loop on a real
 
-00:00:14.610 --> 00:00:17.325
-Then, a worked example, step by step.
+00:00:20.195 --> 00:00:23.017
+protocol, and reach a written verdict: not a
 
-00:00:17.325 --> 00:00:18.850
-Then, your checklist.
+00:00:23.017 --> 00:00:26.027
+vague feeling about it, an actual verdict, with
 
-00:00:18.850 --> 00:00:21.012
-And finally, a three-question quiz.
+00:00:26.027 --> 00:00:28.849
+a size, conditions, and an exit written down.
 
-00:00:22.312 --> 00:00:25.076
-Log it in the DeFi Protocol Due Diligence
+00:00:30.149 --> 00:00:32.300
+Here's the loop from last lesson again,
 
-00:00:25.076 --> 00:00:27.839
-Tracker (Notion) and tick a box only when
+00:00:32.300 --> 00:00:34.804
+since this entire video walks through it.
 
-00:00:27.839 --> 00:00:30.442
-the step is evidenced, not assumed.
+00:00:34.804 --> 00:00:39.279
+Mechanism, cash flow, dependencies, solvency, evidence, and exit.
 
-00:00:30.442 --> 00:00:35.285
-First, Mechanism: what the contracts do; users, assets, incentives.
+00:00:39.279 --> 00:00:42.409
+Six questions, asked in order, every single time.
 
-00:00:35.285 --> 00:00:39.425
-Next, Cash flow: real fees and interest vs emissions.
+00:00:43.709 --> 00:00:45.244
+Step one: mechanism.
 
-00:00:39.425 --> 00:00:45.525
-Then, Dependencies: oracles, bridges, admin keys, stablecoins, other protocols.
+00:00:46.544 --> 00:00:49.831
+Mechanism means answering three concrete questions
 
-00:00:45.525 --> 00:00:50.769
-Also, Solvency: collateral quality, liquidation design, bad-debt paths.
+00:00:49.831 --> 00:00:52.258
+about a protocol's own contracts.
 
-00:00:50.769 --> 00:00:52.461
-On top of that, Evidence:
+00:00:52.258 --> 00:00:57.227
+Who actually uses this: lenders, borrowers, traders, liquidity providers.
 
-00:00:52.461 --> 00:00:55.584
-explorers, audits, governance, independent data.
+00:00:57.227 --> 00:00:59.340
+What assets actually move through it:
 
-00:00:56.885 --> 00:00:59.365
-And finally, Exit: exact unwind,
+00:00:59.340 --> 00:01:01.252
+which tokens, on which chain.
 
-00:00:59.365 --> 00:01:01.995
-gas, slippage, approvals to revoke.
+00:01:01.252 --> 00:01:04.582
+And what incentive actually keeps people using it:
 
-00:01:03.295 --> 00:01:05.810
-Let's work an example, step by step.
+00:01:04.582 --> 00:01:08.107
+real yield, token rewards, or something else entirely.
 
-00:01:05.810 --> 00:01:08.425
-"Protocol Y (lending, Arbitrum).
+00:01:09.408 --> 00:01:12.181
+Worth being direct here: mechanism is about
 
-00:01:08.425 --> 00:01:09.860
-Risk: Medium.
+00:01:12.181 --> 00:01:14.828
+what the contracts genuinely do, not what
 
-00:01:09.860 --> 00:01:13.276
-Fees are real (borrow demand $2M/yr), but
+00:01:14.828 --> 00:01:16.703
+the website says they do.
 
-00:01:13.276 --> 00:01:16.936
-one collateral uses a thin-market oracle and
+00:01:16.703 --> 00:01:19.635
+A protocol's own marketing page and its actual
 
-00:01:16.936 --> 00:01:19.595
-upgrades have a 24h timelock.
+00:01:19.635 --> 00:01:23.129
+deployed contracts aren't always the same document, and
 
-00:01:19.595 --> 00:01:22.975
-Verdict: supply stablecoins only, cap at 10% of
+00:01:23.129 --> 00:01:24.938
+this step is where you check.
 
-00:01:22.975 --> 00:01:25.862
-the DeFi book, alert on queued upgrades."
+00:01:26.238 --> 00:01:27.638
+Step two: cash flow.
 
-00:01:27.162 --> 00:01:28.622
-Here's your checklist.
+00:01:28.938 --> 00:01:31.063
+Cash flow means separating two very
 
-00:01:28.622 --> 00:01:30.157
-Do it now, for real.
+00:01:31.063 --> 00:01:33.548
+different sources of protocol income.
 
-00:01:30.157 --> 00:01:32.772
-First, all six steps written with sources.
+00:01:33.548 --> 00:01:36.688
+Real revenue: actual fees and interest, paid
 
-00:01:32.772 --> 00:01:34.634
-Next, Risk rating = worst
+00:01:36.688 --> 00:01:39.710
+by actual users, for an actual service.
 
-00:01:34.634 --> 00:01:37.082
-material risk, not an average.
+00:01:39.710 --> 00:01:43.084
+And emissions: newly minted tokens, handed out as
 
-00:01:37.082 --> 00:01:40.517
-And finally, Verdict states size, conditions and exit.
+00:01:43.084 --> 00:01:46.661
+rewards, that dilute existing holders whether or not
 
-00:01:41.817 --> 00:01:43.027
-Question 1.
+00:01:46.661 --> 00:01:49.630
+the protocol itself is genuinely profitable.
 
-00:01:43.027 --> 00:01:44.217
-Why is the rating the
+00:01:50.929 --> 00:01:54.279
+Here's why that distinction actually matters, using
 
-00:01:44.217 --> 00:01:45.732
-worst risk, not the average?
+00:01:54.279 --> 00:01:57.284
+a purely illustrative example: Protocol Z.
 
-00:01:50.152 --> 00:01:52.105
-The answer: One failure point is
+00:01:57.284 --> 00:01:59.778
+It pays out five hundred thousand dollars a
 
-00:01:52.105 --> 00:01:53.762
-enough to lose the position.
+00:01:59.778 --> 00:02:02.725
+month in reward emissions, but collects only eighty
 
-00:01:55.062 --> 00:01:56.307
-Question 2.
+00:02:02.725 --> 00:02:05.179
+thousand dollars a month in real fees.
 
-00:01:56.307 --> 00:01:57.962
-Which step prevents getting stuck?
+00:02:05.179 --> 00:02:07.627
+That's real revenue covering just sixteen
 
-00:02:02.382 --> 00:02:04.457
-The answer: Step 6: Exit.
+00:02:07.627 --> 00:02:09.559
+percent of what it pays out.
 
-00:02:05.757 --> 00:02:07.027
-Question 3.
+00:02:09.559 --> 00:02:12.797
+With a seven-million-dollar rewards budget left in its
 
-00:02:07.027 --> 00:02:08.592
-When do you tick a tracker box?
+00:02:12.797 --> 00:02:15.858
+treasury, that gap runs for roughly fourteen months
 
-00:02:13.012 --> 00:02:15.467
-The answer: Only when there's evidence for it.
+00:02:15.858 --> 00:02:18.389
+before the rewards have to shrink, or stop.
 
-00:02:16.767 --> 00:02:18.012
-Let's recap.
+00:02:19.689 --> 00:02:23.232
+That's the actual risk emissions-funded activity carries.
 
-00:02:18.012 --> 00:02:20.317
-Mechanism: what the contracts do.
+00:02:23.232 --> 00:02:26.304
+It's not that emissions are inherently bad; new
 
-00:02:20.317 --> 00:02:23.881
-Cash flow: real fees and interest vs emissions.
+00:02:26.304 --> 00:02:29.804
+protocols often need them to bootstrap real usage.
 
-00:02:23.881 --> 00:02:29.429
-Dependencies: oracles, bridges, admin keys, stablecoins, other protocols.
+00:02:29.804 --> 00:02:32.779
+It's that emissions are temporary by construction,
 
-00:02:29.429 --> 00:02:33.840
-Solvency: collateral quality, liquidation design, bad-debt paths.
+00:02:32.779 --> 00:02:34.704
+and this step is where you check
 
-00:02:35.140 --> 00:02:37.655
-Do the checklist now, before you move on.
+00:02:34.704 --> 00:02:37.212
+whether real revenue is growing to replace
 
-00:02:37.655 --> 00:02:40.599
-Next up, Lesson 6.2: Tokenomics:
+00:02:37.212 --> 00:02:39.604
+them before the budget actually runs out.
 
-00:02:40.599 --> 00:02:43.810
-supply, unlocks, FDV, value capture.
+00:02:40.904 --> 00:02:42.499
+Step three: dependencies.
+
+00:02:43.799 --> 00:02:46.468
+This step is exactly Module five's own
+
+00:02:46.468 --> 00:02:50.189
+dependency map, run against one specific protocol.
+
+00:02:50.189 --> 00:02:52.415
+Oracles: what feeds it prices, and
+
+00:02:52.415 --> 00:02:54.559
+how manipulable is that feed.
+
+00:02:54.559 --> 00:02:56.756
+Bridges: does it hold or move assets
+
+00:02:56.756 --> 00:02:59.549
+across chains, and under what trust model.
+
+00:02:59.549 --> 00:03:02.664
+Admin keys: who can upgrade it, and how fast.
+
+00:03:02.664 --> 00:03:05.067
+Stablecoins: which ones does it accept as
+
+00:03:05.067 --> 00:03:07.769
+collateral, and are they genuinely backed.
+
+00:03:07.769 --> 00:03:09.880
+And other protocols: what does it build
+
+00:03:09.880 --> 00:03:11.674
+on top of, that could itself fail.
+
+00:03:12.974 --> 00:03:16.267
+If Module five's dependency map felt abstract at the
+
+00:03:16.267 --> 00:03:19.797
+time, this is exactly where it stops being abstract.
+
+00:03:19.797 --> 00:03:22.359
+Every one of those five links is a real,
+
+00:03:22.359 --> 00:03:25.795
+checkable fact about one specific protocol in front of
+
+00:03:25.795 --> 00:03:28.857
+you right now, not a general concept to remember.
+
+00:03:30.157 --> 00:03:31.752
+Step four: solvency.
+
+00:03:33.052 --> 00:03:35.968
+Solvency means checking three things about how a
+
+00:03:35.968 --> 00:03:39.005
+protocol handles the money it currently holds.
+
+00:03:39.005 --> 00:03:43.210
+Collateral quality: is what's backing deposits genuinely liquid
+
+00:03:43.210 --> 00:03:47.255
+and independently priced, or thin and easily manipulated.
+
+00:03:47.255 --> 00:03:50.345
+Liquidation design: does it actually liquidate bad
+
+00:03:50.345 --> 00:03:53.310
+positions fast enough, before losses spread.
+
+00:03:53.310 --> 00:03:56.497
+And bad-debt paths: if a liquidation genuinely
+
+00:03:56.497 --> 00:03:58.735
+fails, who absorbs that loss — a
+
+00:03:58.735 --> 00:04:01.515
+reserve fund, or every depositor at once.
+
+00:04:02.815 --> 00:04:04.963
+Solvency problems are quiet almost
+
+00:04:04.963 --> 00:04:06.920
+right up until they aren't.
+
+00:04:06.920 --> 00:04:10.000
+A protocol can carry real, satisfied users for
+
+00:04:10.000 --> 00:04:13.212
+months on thin collateral and a slow liquidation
+
+00:04:13.212 --> 00:04:16.226
+design, and the failure, when it comes, tends
+
+00:04:16.226 --> 00:04:19.110
+to arrive all at once rather than gradually.
+
+00:04:20.410 --> 00:04:21.875
+Step five: evidence.
+
+00:04:23.175 --> 00:04:25.055
+This step means checking four
+
+00:04:25.055 --> 00:04:27.485
+kinds of real, verifiable sources.
+
+00:04:27.485 --> 00:04:31.049
+Explorers: the actual on-chain contracts and transaction
+
+00:04:31.049 --> 00:04:33.350
+history, not a claim about them.
+
+00:04:33.350 --> 00:04:35.644
+Audits: who reviewed the code, when, and
+
+00:04:35.644 --> 00:04:38.237
+whether every finding was actually fixed.
+
+00:04:38.237 --> 00:04:40.570
+Governance: the real proposal and vote
+
+00:04:40.570 --> 00:04:43.322
+history, not just the current parameters.
+
+00:04:43.322 --> 00:04:45.607
+And independent data: numbers from a
+
+00:04:45.607 --> 00:04:48.262
+source the protocol itself doesn't control.
+
+00:04:49.562 --> 00:04:52.505
+Here's the actual standard this step holds you to:
+
+00:04:52.505 --> 00:04:55.506
+a claim only counts once you've genuinely traced it
+
+00:04:55.506 --> 00:04:58.287
+back to one of those four sources yourself.
+
+00:04:58.287 --> 00:05:01.037
+A protocol's own blog post, describing its
+
+00:05:01.037 --> 00:05:03.127
+own audit, is not the audit.
+
+00:05:03.127 --> 00:05:04.842
+Go find the actual report.
+
+00:05:06.142 --> 00:05:07.537
+Step six: exit.
+
+00:05:08.837 --> 00:05:11.209
+Exit means writing down the actual unwind,
+
+00:05:11.209 --> 00:05:13.140
+before you ever need it, not while
+
+00:05:13.140 --> 00:05:15.977
+you're already trying to leave under pressure.
+
+00:05:15.977 --> 00:05:19.037
+The exact steps to withdraw or close the position.
+
+00:05:19.037 --> 00:05:20.954
+The realistic gas cost of doing
+
+00:05:20.954 --> 00:05:22.992
+it, at a normal network load.
+
+00:05:22.992 --> 00:05:24.996
+The likely slippage if you had to
+
+00:05:24.996 --> 00:05:26.887
+exit the full size at once.
+
+00:05:26.887 --> 00:05:30.137
+And every token approval you'd need to revoke afterward.
+
+00:05:31.437 --> 00:05:33.177
+This is exactly the step this
+
+00:05:33.177 --> 00:05:36.202
+module's earlier lessons warned about skipping.
+
+00:05:36.202 --> 00:05:38.739
+An exit you've never actually mapped out is
+
+00:05:38.739 --> 00:05:41.276
+an exit you'll be improvising for the first
+
+00:05:41.276 --> 00:05:43.812
+time during whatever event made you want to
+
+00:05:43.812 --> 00:05:46.061
+leave in the first place, which is the
+
+00:05:46.061 --> 00:05:48.367
+worst possible moment to be improvising.
+
+00:05:49.667 --> 00:05:51.822
+Logging it: evidenced, not assumed.
+
+00:05:53.122 --> 00:05:55.629
+Here's the one rule that makes this loop
+
+00:05:55.629 --> 00:05:58.503
+actually worth running: log every step in your
+
+00:05:58.503 --> 00:06:01.377
+own due-diligence tracker, and tick a box only
+
+00:06:01.377 --> 00:06:04.857
+once it's genuinely evidenced, never merely assumed.
+
+00:06:04.857 --> 00:06:08.167
+An assumed box says you expect it's probably fine.
+
+00:06:08.167 --> 00:06:10.044
+An evidenced box says you actually
+
+00:06:10.044 --> 00:06:11.707
+checked, and here's the source.
+
+00:06:13.007 --> 00:06:15.464
+This single rule is what separates real
+
+00:06:15.464 --> 00:06:18.467
+due diligence from simply feeling reassured.
+
+00:06:18.467 --> 00:06:21.175
+Six ticked boxes built on assumptions is a
+
+00:06:21.175 --> 00:06:24.497
+false sense of safety with a checklist attached.
+
+00:06:24.497 --> 00:06:26.930
+Six ticked boxes built on evidence is
+
+00:06:26.930 --> 00:06:29.427
+an actual verdict you can stand behind.
+
+00:06:30.727 --> 00:06:32.312
+The worked example, in full.
+
+00:06:33.612 --> 00:06:35.605
+Here's how all six steps actually
+
+00:06:35.605 --> 00:06:37.547
+show up in one real verdict.
+
+00:06:37.547 --> 00:06:41.632
+Mechanism: Protocol Y, a lending market, on Arbitrum.
+
+00:06:41.632 --> 00:06:44.326
+Cash flow: fees are real, with two million
+
+00:06:44.326 --> 00:06:47.132
+dollars a year in genuine borrow demand.
+
+00:06:47.132 --> 00:06:50.154
+Dependencies: one collateral asset uses a
+
+00:06:50.154 --> 00:06:52.972
+thin-market oracle, a genuine risk.
+
+00:06:52.972 --> 00:06:57.426
+Governance found in dependencies: upgrades carry a twenty-four hour
+
+00:06:57.426 --> 00:07:01.132
+timelock, some real protection, but not a large one.
+
+00:07:01.132 --> 00:07:02.662
+Evidence: all four of that
+
+00:07:02.662 --> 00:07:04.832
+gathered and traced, not assumed.
+
+00:07:04.832 --> 00:07:08.622
+Exit: a stablecoins-only position keeps the exit simple.
+
+00:07:09.922 --> 00:07:12.432
+Read that whole verdict as one sentence, the
+
+00:07:12.432 --> 00:07:15.187
+way it actually gets written in the tracker.
+
+00:07:15.187 --> 00:07:17.812
+Protocol Y, lending, Arbitrum.
+
+00:07:17.812 --> 00:07:19.247
+Risk: medium.
+
+00:07:19.247 --> 00:07:22.638
+Fees are real, borrow demand two million dollars a
+
+00:07:22.638 --> 00:07:26.361
+year, but one collateral uses a thin-market oracle, and
+
+00:07:26.361 --> 00:07:29.552
+upgrades carry only a twenty-four hour timelock.
+
+00:07:30.852 --> 00:07:32.055
+Why the rating is the
+
+00:07:32.055 --> 00:07:33.587
+worst risk, not the average.
+
+00:07:34.887 --> 00:07:36.870
+Here's the mistake, made concrete
+
+00:07:36.870 --> 00:07:39.212
+with a purely illustrative example.
+
+00:07:39.212 --> 00:07:41.449
+Say four of your five checks come
+
+00:07:41.449 --> 00:07:44.410
+back genuinely strong: real cash flow, solid
+
+00:07:44.410 --> 00:07:47.407
+governance, a clean audit, a mapped exit.
+
+00:07:47.407 --> 00:07:50.190
+Averaging those five checks might suggest the
+
+00:07:50.190 --> 00:07:53.092
+protocol is roughly eighty percent healthy.
+
+00:07:53.092 --> 00:07:55.399
+But the fifth check found a thin-market
+
+00:07:55.399 --> 00:07:58.122
+oracle, a genuine single point of failure.
+
+00:07:58.122 --> 00:08:01.223
+The real rating is medium-to-high risk, not eighty
+
+00:08:01.223 --> 00:08:04.324
+percent healthy, because that one failure point is
+
+00:08:04.324 --> 00:08:07.181
+enough to lose the position, regardless of how
+
+00:08:07.181 --> 00:08:08.762
+strong the other four are.
+
+00:08:10.062 --> 00:08:12.535
+Here's why that's the actual correct way to
+
+00:08:12.535 --> 00:08:15.027
+rate it, not just a conservative habit.
+
+00:08:15.027 --> 00:08:17.894
+A chain is exactly as strong as its weakest
+
+00:08:17.894 --> 00:08:21.021
+link, and a protocol's risk works the same way:
+
+00:08:21.021 --> 00:08:24.148
+it fails at its single worst dependency, not at
+
+00:08:24.148 --> 00:08:27.927
+some blended average of all its dependencies put together.
+
+00:08:29.227 --> 00:08:31.222
+The verdict format, one more time.
+
+00:08:32.522 --> 00:08:35.435
+Break Protocol Y's own verdict down into its
+
+00:08:35.435 --> 00:08:38.995
+three real components, since every single verdict this
+
+00:08:38.995 --> 00:08:42.272
+module asks for follows this exact same shape.
+
+00:08:42.272 --> 00:08:45.127
+Size: supply stablecoins only, meaning the
+
+00:08:45.127 --> 00:08:48.082
+riskiest collateral is avoided entirely.
+
+00:08:48.082 --> 00:08:50.697
+Conditions: cap it at ten percent of the
+
+00:08:50.697 --> 00:08:54.442
+whole DeFi book, a specific, decided-in-advance limit.
+
+00:08:54.442 --> 00:08:57.133
+And exit: alert on any queued upgrade, a
+
+00:08:57.133 --> 00:09:00.547
+concrete trigger, decided now, not improvised later.
+
+00:09:01.847 --> 00:09:02.937
+Quick check.
+
+00:09:02.937 --> 00:09:05.361
+In the worked example, what specific exit
+
+00:09:05.361 --> 00:09:07.497
+trigger did the verdict actually set?
+
+00:09:11.917 --> 00:09:14.242
+The answer: alert on any queued upgrade.
+
+00:09:15.542 --> 00:09:16.637
+Before you move on.
+
+00:09:17.937 --> 00:09:21.097
+Confirm three things before calling this lesson done.
+
+00:09:21.097 --> 00:09:23.068
+All six steps written, with real
+
+00:09:23.068 --> 00:09:25.637
+sources for each one, not assumptions.
+
+00:09:25.637 --> 00:09:28.688
+The risk rating set to the single worst material
+
+00:09:28.688 --> 00:09:32.102
+risk found, never an average across all six steps.
+
+00:09:32.102 --> 00:09:34.822
+And the verdict itself states a size, real
+
+00:09:34.822 --> 00:09:37.542
+conditions, and an actual exit, every time.
+
+00:09:38.842 --> 00:09:39.932
+Quick check.
+
+00:09:39.932 --> 00:09:42.256
+Why is the rating set to the worst risk
+
+00:09:42.256 --> 00:09:45.218
+found, rather than an average across all six steps?
+
+00:09:49.638 --> 00:09:51.915
+The answer: one real failure point is
+
+00:09:51.915 --> 00:09:54.251
+enough to lose the position, no matter
+
+00:09:54.251 --> 00:09:56.468
+how strong the other five checks are.
+
+00:09:57.768 --> 00:09:58.808
+One more.
+
+00:09:58.808 --> 00:10:01.800
+Which of the six steps exists specifically to prevent
+
+00:10:01.800 --> 00:10:04.238
+getting stuck in a position you can't leave?
+
+00:10:08.658 --> 00:10:10.563
+The answer: step six, exit.
+
+00:10:11.863 --> 00:10:14.068
+Let's recap this entire lesson.
+
+00:10:14.068 --> 00:10:16.684
+The six-step loop, run in real depth:
+
+00:10:16.684 --> 00:10:21.183
+mechanism, cash flow, dependencies, solvency, evidence, exit.
+
+00:10:21.183 --> 00:10:23.848
+Log every step in your tracker, and tick a
+
+00:10:23.848 --> 00:10:27.928
+box only once it's genuinely evidenced, never merely assumed.
+
+00:10:27.928 --> 00:10:29.604
+Rate the risk at the single
+
+00:10:29.604 --> 00:10:32.358
+worst material finding, never an average.
+
+00:10:32.358 --> 00:10:34.758
+And every verdict ends the same way:
+
+00:10:34.758 --> 00:10:37.288
+a size, real conditions, and an actual
+
+00:10:37.288 --> 00:10:39.753
+exit, written down before you need it.
+
+00:10:41.053 --> 00:10:43.888
+Pick one real protocol, and write the full
+
+00:10:43.888 --> 00:10:48.143
+six-step verdict today, size, conditions, and exit included.
+
+00:10:48.143 --> 00:10:50.923
+Next up, Lesson 6.2: tokenomics
+
+00:10:50.923 --> 00:10:53.268
+— supply, unlocks, and FDV.
