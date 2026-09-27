@@ -1,17 +1,21 @@
 // Three.js scene engine for the `chart3d` scene type: the WebGL counterpart of
-// the flat `chart` scene's `bars` and `donut` kinds (no `line` yet - see
-// .claude/skills/webgl-motion-graphics/SKILL.md). Bars are glowing vertical
-// energy beams with a drifting particle stream instead of flat rounded
-// rectangles; a donut is a glowing particle-flecked arc that fills segment by
-// segment instead of an SVG stroke-dasharray circle. Same counter/reveal
-// timing (T.items) as the flat version, same window.__hooks per-frame
-// contract as flow3d.js.
+// the flat `chart` scene's `bars`, `donut` and `line` kinds. Bars are glowing
+// vertical energy beams with a drifting particle stream instead of flat
+// rounded rectangles; a donut is a glowing particle-flecked arc that fills
+// segment by segment instead of an SVG stroke-dasharray circle; a line is a
+// glowing 3D tube that grows point by point instead of an SVG stroke-dasharray
+// path. Bars and lines both clamp negative values to 0 (done in build_video.js
+// before this ever sees the data) - a series that crosses zero belongs on the
+// flat `chart` (kind bars), which draws it down from a zero line instead.
+// Same counter/reveal timing (T.items / linesT) as the flat version, same
+// window.__hooks per-frame contract as flow3d.js.
 //
 // Contract with build_video.js (see sceneBody()'s `chart3d` case):
 //   window.__WEBGL_SCENE = {
-//     kind: 'bars' | 'donut', W, H, seed, itemsT: [[a,b], ...],
+//     kind: 'bars' | 'donut' | 'line', W, H, seed, itemsT: [[a,b], ...],
 //     bars: [{ label, text, tone, value, base, count }],  max,       // kind:'bars'
 //     segs: [{ label, text, tone, f, st, count }], center, centerSub, // kind:'donut'
+//     series: [{ tone, label, values }], max, xlabels, marks, linesT, // kind:'line'
 //   }
 import * as THREE from 'three';
 import { lcg, ease, easeIO, clamp, toneColor, glowTexture, ambientParticles, frameFromPoints, moveCamera, pickCameraMove, project, formatCounter } from './lib/core.js';
@@ -268,5 +272,82 @@ function runDonut(DATA) {
   });
 }
 
+// DATA.kind === 'line': one or more series drawn as glowing 3D tubes that grow
+// left to right as the narration reaches each point, with small glowing point
+// markers, floating x-axis labels and callout marks - the 3D counterpart of the
+// flat scene's `line` kind. Negative values are already clamped to 0 by
+// build_video.js (see the chart3d case in build_video.js's sceneBody()), so
+// every series sits on one ground plane with no zero-crossing to draw - a
+// series that goes negative belongs on the flat `chart` (kind bars) instead.
+function runLine(DATA) {
+  const { W, H } = DATA;
+  const { renderer, scene, camera, labels } = mount(W, H);
+  const series = DATA.series, n = series[0].values.length, maxH = 6.0;
+  const spacing = clamp(9.5 / Math.max(1, n - 1), 0.55, 1.6);
+  const zStep = series.length > 1 ? 0.9 : 0;
+  const pointsFor = (sr, k) => sr.values.map((v, i) => new THREE.Vector3((i - (n - 1) / 2) * spacing, clamp(v / DATA.max, 0, 1) * maxH, (k - (series.length - 1) / 2) * zStep));
+  const seriesData = series.map((sr, k) => ({ ...sr, color: toneColor(sr.tone), pts: pointsFor(sr, k) }));
+
+  const framePts = seriesData.flatMap(s => s.pts.concat(s.pts.map(p => new THREE.Vector3(p.x, 0, p.z))));
+  const { centroid, dist: camDist } = frameFromPoints(framePts, W, H, { marginX: 2.2, marginY: 2.4 });
+  moveCamera(camera, centroid, camDist, 0, DATA.cameraMove || pickCameraMove(DATA.seed), { duration: DATA.dur });
+
+  const first = seriesData[0].pts;
+  const plinthGeo = new THREE.BufferGeometry().setAttribute('position', new THREE.BufferAttribute(
+    new Float32Array([first[0].x - spacing * 0.6, 0, first[0].z, first[n - 1].x + spacing * 0.6, 0, first[n - 1].z]), 3));
+  scene.add(new THREE.Line(plinthGeo, new THREE.LineBasicMaterial({ color: 0x2a4a6a, transparent: true, opacity: 0.6 })));
+
+  const TUBE_R = 0.08;
+  const tubes = seriesData.map(sr => { const mesh = new THREE.Mesh(new THREE.BufferGeometry(), new THREE.MeshStandardMaterial({
+    color: sr.color, transparent: true, opacity: 0.92, roughness: 0.3, metalness: 0.1, emissive: sr.color, emissiveIntensity: 0.75, depthWrite: false }));
+    mesh.visible = false; scene.add(mesh); return mesh; });
+  const dots = seriesData.map(sr => sr.pts.map(() => { const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTexture(), color: sr.color, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false })); sp.scale.setScalar(0.34); scene.add(sp); return sp; }));
+
+  const particles = ambientParticles(scene, DATA.seed || 7, { count: 110 });
+
+  const seriesLabelEls = seriesData.map(sr => sr.label ? labelDiv(labels, `<div style="font-size:30px;font-weight:800;white-space:nowrap;text-shadow:0 2px 12px rgba(0,0,0,.85)">${sr.label}</div>`) : null);
+  const xlabelEls = (DATA.xlabels || []).map(lab => lab ? labelDiv(labels, `<div style="font-size:24px;color:rgba(255,255,255,.6);white-space:nowrap;transform:translate(-50%,0);text-shadow:0 2px 10px rgba(0,0,0,.85)">${lab}</div>`) : null);
+  const markEls = (DATA.marks || []).map(m => labelDiv(labels, `<div style="text-align:center;transform:translate(-50%,-100%)"><span style="display:inline-block;padding:9px 18px;border-radius:12px;background:#${toneColor(m.tone).toString(16).padStart(6, '0')};color:#fff;font-weight:800;font-size:24px;white-space:nowrap">${m.text}</span></div>`));
+
+  window.__hooks = window.__hooks || [];
+  window.__hooks.push(t => {
+    moveCamera(camera, centroid, camDist, t, DATA.cameraMove || pickCameraMove(DATA.seed), { duration: DATA.dur });
+    particles.rotation.y = t * 0.012;
+
+    seriesData.forEach((sr, k) => {
+      const [a, d] = (DATA.linesT || [])[k] || [0, 3];
+      const p = clamp(easeIO((t - a) / d), 0, 1);
+      const revealed = Math.max(1, Math.round(p * (n - 1)) + 1);
+      const mesh = tubes[k];
+      if (revealed >= 2) {
+        const curve = new THREE.CatmullRomCurve3(sr.pts.slice(0, revealed));
+        mesh.geometry.dispose();
+        mesh.geometry = new THREE.TubeGeometry(curve, Math.max(8, revealed * 4), TUBE_R, 8, false);
+        mesh.visible = true;
+      } else mesh.visible = false;
+
+      dots[k].forEach((dot, i) => {
+        const show = i < revealed;
+        dot.position.copy(sr.pts[i]);
+        dot.material.opacity = show ? 0.95 : 0;
+        dot.scale.setScalar(0.3 + (show && i === revealed - 1 ? 0.12 * Math.sin(t * 3) : 0));
+      });
+
+      const lbl = seriesLabelEls[k];
+      if (lbl) { const last = sr.pts[revealed - 1], lp = project(last, camera, W, H);
+        lbl.style.opacity = revealed >= n ? '1' : '0'; lbl.style.transform = `translate(${(lp.x + 90).toFixed(1)}px, ${lp.y.toFixed(1)}px)`; lbl.style.color = `#${sr.color.toString(16).padStart(6, '0')}`; }
+    });
+
+    xlabelEls.forEach((el, i) => { if (!el) return; const pt = first[i], gp = project(new THREE.Vector3(pt.x, -0.3, pt.z), camera, W, H);
+      el.style.opacity = '0.8'; el.style.transform = `translate(${gp.x.toFixed(1)}px, ${gp.y.toFixed(1)}px)`; });
+
+    (DATA.marks || []).forEach((m, i) => { const [a] = (DATA.itemsT || [])[i] || [0], el = markEls[i];
+      const pt = seriesData[m.series || 0].pts[m.i], gp = project(new THREE.Vector3(pt.x, pt.y + (m.below ? -0.5 : 0.5), pt.z), camera, W, H);
+      el.style.opacity = t >= a ? String(clamp((t - a) / 0.4, 0, 1)) : '0'; el.style.transform = `translate(${gp.x.toFixed(1)}px, ${gp.y.toFixed(1)}px)`; });
+
+    renderer.render(scene, camera);
+  });
+}
+
 const DATA = window.__WEBGL_SCENE;
-if (DATA) (DATA.kind === 'donut' ? runDonut : runBars)(DATA);
+if (DATA) (DATA.kind === 'donut' ? runDonut : DATA.kind === 'line' ? runLine : runBars)(DATA);

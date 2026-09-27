@@ -29,10 +29,10 @@ REQUIRED = {
     # `kind` defaults to "bars" in build_video.js, so it's not required here either -
     # these are deliberately as loose as `flow`: real per-kind field checks (bars vs
     # segs vs series) aren't cross-checked.
-    'chart': [], 'flow3d': ['nodes'], 'chart3d': [],
+    'chart': [], 'flow3d': ['nodes'], 'chart3d': [], 'ticker': ['items'],
 }
 TEXT_SLIDES = {'bullets', 'statement', 'steps', 'pillars'}
-VISUALS = {'image', 'flow', 'flow3d', 'cutaway', 'compare', 'stats', 'strike', 'chart', 'chart3d'}
+VISUALS = {'image', 'flow', 'flow3d', 'cutaway', 'compare', 'stats', 'strike', 'chart', 'chart3d', 'ticker'}
 FORBIDDEN = [
     (r'\bguarantee(d|s)?\b(?!.*\bno\b)', 'promise of guaranteed results'),
     (r'\brisk[- ]free\b', '"risk-free"'),

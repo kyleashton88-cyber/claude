@@ -303,10 +303,14 @@ function sceneBody(s, W, H, T) {
         <script src="${WEBGL_BUNDLE.flow3d}"></script></div>`;
     }
     case 'chart3d': {
-      // WebGL counterpart of `chart` (bars/donut only - no `line`, see the
-      // skill doc): glowing particle-stream bars or a glowing particle-arc
-      // donut instead of flat SVG shapes, same title/sub/note chrome and the
-      // same T.items counter-driven reveal timing as the flat version.
+      // WebGL counterpart of `chart`: glowing particle-stream bars, a glowing
+      // particle-arc donut, or (added alongside the flat renderer's variants) a
+      // glowing 3D tube line, instead of flat SVG shapes - same title/sub/note
+      // chrome and the same T.items counter-driven reveal timing as the flat
+      // version. Bars and the line both clamp negative values to 0: a WebGL
+      // column or tube can't read cleanly below its own zero plinth the way an
+      // SVG bar can grow down from a zero line, so a series that crosses zero
+      // belongs on the flat `chart` (kind bars) instead, which handles it.
       const mount = `<div id="gl3d-mount" style="position:absolute;inset:0"></div>`;
       const head = s.title ? `<div style="position:absolute;left:150px;right:150px;top:${fs(104, 300)}px;text-align:center;z-index:2">${title(s.title)}
         ${s.sub ? `<div class="in" data-in="${T.v0 + 0.3}" style="margin-top:14px;font-size:32px;color:rgba(255,255,255,.72)">${esc(s.sub)}</div>` : ''}</div>` : '';
@@ -319,10 +323,18 @@ function sceneBody(s, W, H, T) {
           return { label: esc(g.label), text: g.text ? esc(g.text) : '', tone: g.tone, f, st, count: counter(show), show }; });
         data = { kind: 'donut', W, H, seed: s.seed ?? 11, cameraMove: s.cameraMove, dur: Math.max(6, ...T.items.flat()),
           segs, center: s.center ? esc(s.center) : '', centerSub: s.centerSub ? esc(s.centerSub) : '', itemsT: T.items };
+      } else if (s.kind === 'line') {
+        const series = s.series, n = series[0].values.length, all = series.flatMap(x => x.values.map(v => Math.max(0, v)));
+        const hi = s.ymax ?? (Math.max(...all) * 1.1 || 1);
+        data = { kind: 'line', W, H, seed: s.seed ?? 11, cameraMove: s.cameraMove, dur: Math.max(6, ...T.items.flat(), ...(T.lines || []).flat()), max: hi,
+          series: series.map(sr => ({ tone: sr.tone, label: sr.label ? esc(sr.label) : '', values: sr.values.map(v => Math.max(0, v)) })),
+          xlabels: (s.xlabels || []).map(esc),
+          marks: (s.marks || []).map(m => ({ i: m.i, series: m.series || 0, tone: m.tone, text: esc(m.text), below: !!m.below })),
+          linesT: T.lines, itemsT: T.items };
       } else {
-        const bars = s.bars, hi = s.max ?? Math.max(...bars.map(b => (b.base || 0) + b.value)) * 1.08;
+        const bars = s.bars, hi = s.max ?? (Math.max(...bars.map(b => (b.base || 0) + b.value), 0) * 1.08 || 1);
         data = { kind: 'bars', W, H, seed: s.seed ?? 11, cameraMove: s.cameraMove, dur: Math.max(6, ...T.items.flat()), max: hi,
-          bars: bars.map(b => { const show = b.show || String(b.value); return { label: esc(b.label), text: b.text ? esc(b.text) : '', tone: b.tone, value: b.value, base: b.base || 0, count: counter(show), show }; }),
+          bars: bars.map(b => { const show = b.show || String(b.value); return { label: esc(b.label), text: b.text ? esc(b.text) : '', tone: b.tone, value: Math.max(0, b.value), base: Math.max(0, b.base || 0), count: counter(show), show }; }),
           itemsT: T.items };
       }
       const json = JSON.stringify(data).replace(/<\/script/gi, '<\\/script');
@@ -340,20 +352,28 @@ function sceneBody(s, W, H, T) {
         ${s.sub ? `<div class="in" data-in="${T.v0 + 0.3}" style="margin-top:14px;font-size:32px;color:rgba(255,255,255,.72)">${esc(s.sub)}</div>` : ''}</div>`;
       const note = s.note ? `<div class="in" data-in="${T.note}" style="position:absolute;left:220px;right:220px;bottom:${fs(200, 380)}px;text-align:center;font-size:30px;font-weight:700;color:${C.aquaDark}">${esc(s.note)}</div>` : '';
       if (s.kind === 'donut') {
+        // variant "ring": a slimmer stroke reads as a ring rather than a filled donut -
+        // same fill-by-arc animation, just thinner, for when a lesson wants a second
+        // donut to look visually distinct from the first.
         const tot = s.segs.reduce((a, g) => a + g.value, 0), cx = W * 0.3, cy = (top + bot) / 2 + 10, r = Math.min(230, (bot - top) / 2 - 30);
+        const sw = s.variant === 'ring' ? r * 0.16 : r * 0.36;
         let acc = 0;
         const arcs = s.segs.map((g, i) => { const f = g.value / tot, st = acc; acc += f;
-          return `<circle class="carc" data-a="${T.items[i][0]}" data-b="${T.items[i][1]}" data-f="${f}" data-s="${st}" cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${tone(g.tone)}" stroke-width="${r * 0.36}" pathLength="1" transform="rotate(-90 ${cx} ${cy})" style="stroke-dasharray:0 1"/>`; }).join('');
+          return `<circle class="carc" data-a="${T.items[i][0]}" data-b="${T.items[i][1]}" data-f="${f}" data-s="${st}" cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${tone(g.tone)}" stroke-width="${sw}" pathLength="1" transform="rotate(-90 ${cx} ${cy})" style="stroke-dasharray:0 1"/>`; }).join('');
         const legend = s.segs.map((g, i) => `<div class="cfade" data-a="${T.items[i][0]}" style="display:flex;align-items:center;gap:22px;padding:14px 22px;border-radius:14px">
           <span style="flex:none;width:26px;height:26px;border-radius:7px;background:${tone(g.tone)}"></span>
           <span style="flex:1;font-size:34px;font-weight:700">${esc(g.label)}${g.text ? `<span style="display:block;font-size:24px;font-weight:500;color:rgba(255,255,255,.66);margin-top:4px">${esc(g.text)}</span>` : ''}</span>
           <span style="font-size:40px;font-weight:800;color:${tone(g.tone)}">${esc(g.show || String(g.value))}</span></div>`).join('');
         return `<div style="position:absolute;inset:0">${head}
-          <svg width="${W}" height="${H}" style="position:absolute;inset:0"><circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="${r * 0.36}"/>${arcs}</svg>
+          <svg width="${W}" height="${H}" style="position:absolute;inset:0"><circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="${sw}"/>${arcs}</svg>
           ${s.center ? `<div class="in" data-in="${T.v0 + 0.4}" style="position:absolute;left:${cx - 150}px;top:${cy - 60}px;width:300px;text-align:center"><div style="font-size:64px;font-weight:800">${esc(s.center)}</div>${s.centerSub ? `<div style="font-size:24px;color:rgba(255,255,255,.66)">${esc(s.centerSub)}</div>` : ''}</div>` : ''}
           <div style="position:absolute;left:${W * 0.52}px;right:190px;top:${top + 10}px;height:${bot - top - 20}px;display:flex;flex-direction:column;justify-content:center;gap:8px">${legend}</div>${note}</div>`;
       }
       if (s.kind === 'line') {
+        // variant "area": a stronger fill under the first series, for a single-series
+        // trend where the area under the curve is the point (a running total, TVL).
+        // variant "band": fills the range between series[0] and series[1] (a high/low
+        // envelope, a min-max band) - only meaningful with 2+ series.
         const series = s.series, n = series[0].values.length, all = series.flatMap(x => x.values);
         const lo = s.ymin ?? Math.min(0, ...all), hi = s.ymax ?? Math.max(...all) * 1.1;
         const x0 = L + 110, x1 = R - 40, y0 = top + 30, y1 = bot - 60;
@@ -361,8 +381,13 @@ function sceneBody(s, W, H, T) {
         const grid = (s.yticks || []).map(([v, lab]) => `<line x1="${x0}" x2="${x1}" y1="${Y(v)}" y2="${Y(v)}" stroke="rgba(255,255,255,.09)" stroke-width="2"/>
           <text x="${x0 - 20}" y="${Y(v) + 9}" text-anchor="end" font-size="26" fill="rgba(255,255,255,.55)">${esc(lab)}</text>`).join('');
         const xl = (s.xlabels || []).map((lab, i) => lab ? `<text x="${X(i)}" y="${y1 + 46}" text-anchor="middle" font-size="26" fill="rgba(255,255,255,.55)">${esc(lab)}</text>` : '').join('');
+        const bandMode = s.variant === 'band' && series.length >= 2;
+        const band = bandMode ? (() => { const hiS = series[0].values, loS = series[1].values;
+          const d = hiS.map((v, i) => `${i ? 'L' : 'M'}${X(i).toFixed(1)} ${Y(v).toFixed(1)}`).join(' ') + ' ' + loS.map((v, i) => `L${X(n - 1 - i).toFixed(1)} ${Y(loS[n - 1 - i]).toFixed(1)}`).join(' ') + ' Z';
+          return `<path class="cfade" data-a="${T.lines[0][0] + T.lines[0][1] * 0.6}" d="${d}" fill="${tone(series[0].tone)}" fill-opacity=".16" stroke="none"/>`; })() : '';
+        const areaOpacity = s.variant === 'area' ? '.28' : '.10';
         const lines = series.map((sr, k) => { const d = sr.values.map((v, i) => `${i ? 'L' : 'M'}${X(i).toFixed(1)} ${Y(v).toFixed(1)}`).join(' ');
-          return `${k === 0 && s.area !== false ? `<path class="cfade" data-a="${T.lines[k][0] + T.lines[k][1] * 0.6}" d="${d} L${X(n - 1)} ${y1} L${X(0)} ${y1} Z" fill="${tone(sr.tone)}" fill-opacity=".10" stroke="none"/>` : ''}
+          return `${k === 0 && !bandMode && s.area !== false ? `<path class="cfade" data-a="${T.lines[k][0] + T.lines[k][1] * 0.6}" d="${d} L${X(n - 1)} ${y1} L${X(0)} ${y1} Z" fill="${tone(sr.tone)}" fill-opacity="${areaOpacity}" stroke="none"/>` : ''}
             <path class="cline" data-a="${T.lines[k][0]}" data-d="${T.lines[k][1]}" d="${d}" fill="none" stroke="${tone(sr.tone)}" stroke-width="${sr.width || 6}" stroke-linejoin="round" stroke-linecap="round" ${sr.dash ? 'stroke-dasharray="14 12"' : ''}/>
             ${sr.label ? `<text class="cfade" data-a="${T.lines[k][0] + T.lines[k][1]}" x="${X(n - 1) + 14}" y="${Y(sr.values[n - 1]) + 9}" font-size="28" font-weight="800" fill="${tone(sr.tone)}">${esc(sr.label)}</text>` : ''}`; }).join('');
         const marks = (s.marks || []).map((m, i) => { const v = series[m.series || 0].values[m.i], px = X(m.i), py = Y(v), up = m.below ? 1 : -1;
@@ -371,19 +396,94 @@ function sceneBody(s, W, H, T) {
             <foreignObject x="${Math.max(x0, Math.min(x1 - 420, px - 210))}" y="${m.below ? py + 60 : py - 128}" width="420" height="70"><div xmlns="http://www.w3.org/1999/xhtml" style="text-align:center"><span style="display:inline-block;padding:10px 20px;border-radius:12px;background:${tone(m.tone)};color:${m.tone === 'good' ? C.ink : '#fff'};font-weight:800;font-size:26px;white-space:nowrap">${esc(m.text)}</span></div></foreignObject></g>`; }).join('');
         return `<div style="position:absolute;inset:0">${head}
           <svg width="${W}" height="${H}" style="position:absolute;inset:0;overflow:visible;font-family:Inter">${grid}${xl}
-            <line x1="${x0}" x2="${x1}" y1="${y1}" y2="${y1}" stroke="rgba(255,255,255,.3)" stroke-width="2"/>${lines}${marks}</svg>
+            <line x1="${x0}" x2="${x1}" y1="${y1}" y2="${y1}" stroke="rgba(255,255,255,.3)" stroke-width="2"/>${band}${lines}${marks}</svg>
           ${s.caption ? `<div class="in" data-in="${T.v0 + 0.4}" style="position:absolute;right:${W - x1}px;top:${y0 - 44}px;font-size:22px;color:rgba(255,255,255,.5)">${esc(s.caption)}</div>` : ''}${note}</div>`;
       }
-      // bars: vertical columns, or a waterfall when bars carry a base
-      const bars = s.bars, n = bars.length, hi = s.max ?? Math.max(...bars.map(b => (b.base || 0) + b.value)) * 1.08;
-      const x0 = L + 40, x1 = R - 40, y0 = top + 70, y1 = bot - 70, slot = (x1 - x0) / n, bw = Math.min(200, slot * 0.58);
-      const Yp = v => (y1 - y0) * v / hi;
-      const cols = bars.map((b, i) => { const cx = x0 + slot * (i + 0.5), h = Yp(b.value), yb = y1 - Yp(b.base || 0), a = T.items[i][0];
-        return `<div class="cbar" data-a="${a}" data-b="${T.items[i][1]}" style="position:absolute;left:${cx - bw / 2}px;top:${yb - h}px;width:${bw}px;height:${h}px;border-radius:12px 12px 4px 4px;background:linear-gradient(180deg,${tone(b.tone)},${tone(b.tone)}bb);transform-origin:${b.base && s.waterfall ? 'top' : 'bottom'};transform:scaleY(0)"></div>
-          ${cnt(b.show || String(b.value), a + 0.3, `position:absolute;left:${cx - 160}px;width:320px;top:${yb - h - 60}px;text-align:center;font-size:38px;font-weight:800;color:${tone(b.tone)}`)}
-          <div class="cfade" data-a="${a}" style="position:absolute;left:${cx - slot / 2 + 6}px;width:${slot - 12}px;top:${y1 + 18}px;text-align:center;font-size:${n > 5 ? 25 : 29}px;font-weight:700;line-height:1.2">${esc(b.label)}${b.text ? `<div style="font-size:${n > 5 ? 20 : 23}px;font-weight:500;color:rgba(255,255,255,.62);margin-top:4px">${esc(b.text)}</div>` : ''}</div>`; }).join('');
+      // bars: vertical columns (or a waterfall when bars carry a base, a "pop" lollipop
+      // variant, negative values drawn down from a zero line), a "row" horizontal layout,
+      // or a "share" 100%-stacked single bar (both handled below, before the shared axis math).
+      const bars = s.bars, n = bars.length;
+      if (s.variant === 'share') {
+        // One 100%-stacked horizontal bar: proportional segments side by side, for a
+        // budget/split where the *shares* matter more than each absolute size.
+        const tot = bars.reduce((a, b) => a + b.value, 0);
+        const rowH = Math.min(150, bot - top - 160), rowY = (top + bot) / 2 - rowH / 2;
+        const bx0 = L + 40, bx1 = R - 40, bw = bx1 - bx0;
+        let acc = 0;
+        const segs = bars.map((b, i) => { const f = b.value / tot, x0s = acc; acc += f; return { ...b, f, x0s }; });
+        const rows = segs.map((b, i) => { const a = T.items[i][0]; return `<div class="cbar" data-a="${a}" data-b="${T.items[i][1]}" style="position:absolute;left:${bx0 + bw * b.x0s}px;top:${rowY}px;width:${bw * b.f}px;height:${rowH}px;background:linear-gradient(90deg,${tone(b.tone)},${tone(b.tone)}bb);transform-origin:left;transform:scaleX(0)"></div>
+          <div class="cfade" data-a="${a}" style="position:absolute;left:${bx0 + bw * (b.x0s + b.f / 2)}px;top:${rowY - 58}px;width:280px;transform:translateX(-50%);text-align:center;font-size:30px;font-weight:800;color:${tone(b.tone)}">${esc(b.label)}</div>
+          <div class="cfade" data-a="${a}" style="position:absolute;left:${bx0 + bw * (b.x0s + b.f / 2)}px;top:${rowY + rowH + 14}px;width:280px;transform:translateX(-50%);text-align:center;font-size:27px;font-weight:700;color:rgba(255,255,255,.78)">${esc(b.show || String(b.value))}</div>`; }).join('');
+        return `<div style="position:absolute;inset:0">${head}
+          <div style="position:absolute;left:${bx0}px;width:${bw}px;top:${rowY}px;height:${rowH}px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)"></div>
+          ${rows}${note}</div>`;
+      }
+      if (s.variant === 'row') {
+        // Horizontal bars: label on the left, bar grows rightward from a zero line -
+        // reads better than columns when labels are long or there are many categories.
+        // The negative side needs its own headroom multiplier (matching `hi`'s
+        // 1.12) so the most-negative bar's tip - and its counter, which sits
+        // just past that tip - never reaches all the way to the plot's left
+        // edge, where it would collide with the row-label column beside it.
+        const rawLo = Math.min(0, ...bars.map(b => b.value)), lo = rawLo < 0 ? rawLo * 1.28 : 0;
+        const hi = s.max ?? (Math.max(...bars.map(b => b.value), 0) * 1.12 || 1);
+        const labelW = 380, bx0 = L + labelW, bx1 = R - 60, ry0 = top + 30, ry1 = bot - 20;
+        const rowH = Math.min(84, (ry1 - ry0) / n * 0.62), gap = (ry1 - ry0 - rowH * n) / Math.max(1, n - 1);
+        const X = v => bx0 + (bx1 - bx0) * (v - lo) / (hi - lo), zeroX = X(0);
+        const rows = bars.map((b, i) => { const ry = ry0 + i * (rowH + gap), a = T.items[i][0], w = X(b.value) - zeroX, neg = b.value < 0;
+          return `<div class="cfade" data-a="${a}" style="position:absolute;left:${L}px;width:${labelW - 24}px;top:${ry}px;height:${rowH}px;display:flex;flex-direction:column;justify-content:center;text-align:right;padding-right:20px;font-size:${n > 5 ? 24 : 28}px;font-weight:700;line-height:1.2">${esc(b.label)}${b.text ? `<div style="font-size:19px;font-weight:500;color:rgba(255,255,255,.6)">${esc(b.text)}</div>` : ''}</div>
+            <div class="cbar" data-a="${a}" data-b="${T.items[i][1]}" style="position:absolute;left:${neg ? zeroX + w : zeroX}px;top:${ry}px;width:${Math.abs(w)}px;height:${rowH}px;border-radius:8px;background:linear-gradient(90deg,${tone(b.tone)}bb,${tone(b.tone)});transform-origin:${neg ? 'right' : 'left'};transform:scaleX(0)"></div>
+            ${cnt(b.show || String(b.value), a + 0.3, `position:absolute;top:${ry}px;height:${rowH}px;display:flex;align-items:center;${neg ? `right:${W - (zeroX + w) + 16}px` : `left:${zeroX + w + 16}px`};font-size:${n > 5 ? 22 : 26}px;font-weight:800;color:${tone(b.tone)}`)}`; }).join('');
+        return `<div style="position:absolute;inset:0">${head}
+          <div style="position:absolute;left:${zeroX}px;width:2px;top:${ry0}px;height:${ry1 - ry0}px;background:rgba(255,255,255,.3)"></div>${rows}${note}</div>`;
+      }
+      const values = bars.map(b => (b.base || 0) + b.value);
+      const hasNeg = values.some(v => v < 0);
+      const hi = s.max ?? (Math.max(...values, 0) * 1.08 || 1);
+      const lo = hasNeg ? Math.min(...values) * 1.08 : 0;
+      const x0 = L + 40, x1 = R - 40, y0 = top + 70, y1 = bot - 70, slot = (x1 - x0) / n;
+      const bw = Math.min(s.variant === 'pop' ? 20 : 200, slot * (s.variant === 'pop' ? 0.16 : 0.58));
+      const range = (hi - lo) || 1, Y = v => y1 - (y1 - y0) * (v - lo) / range, yZero = Y(0);
+      // A negative bar's counter sits below its own bottom tip (mirroring a
+      // positive counter above its top) - and that tip can land only a few
+      // pixels above y1 by construction (the same small headroom `lo` gives
+      // every bar). Push the x-axis category-label row further down here so
+      // it clears that counter instead of landing right on top of it.
+      const labelRowY = y1 + (hasNeg ? 60 : 18);
+      const cols = bars.map((b, i) => { const cx = x0 + slot * (i + 0.5), a = T.items[i][0], neg = b.value < 0;
+        const vTop = Y((b.base || 0) + b.value), vBase = Y(b.base || 0), top_ = Math.min(vTop, vBase), h = Math.max(0.001, Math.abs(vBase - vTop));
+        const grow = neg ? 'top' : (b.base && s.waterfall ? 'top' : 'bottom');
+        if (s.variant === 'pop') {
+          const rad = Math.max(16, bw * 1.1), stemTop = Math.min(yZero, vTop), stemH = Math.abs(yZero - vTop);
+          return `<div class="cbar" data-a="${a}" data-b="${T.items[i][1]}" style="position:absolute;left:${cx - bw / 2}px;top:${stemTop}px;width:${bw}px;height:${stemH}px;background:${tone(b.tone)}55;transform-origin:${neg ? 'top' : 'bottom'};transform:scaleY(0)"></div>
+            <div class="cbar" data-a="${a}" data-b="${T.items[i][1]}" style="position:absolute;left:${cx - rad / 2}px;top:${vTop - rad / 2}px;width:${rad}px;height:${rad}px;border-radius:50%;background:${tone(b.tone)};box-shadow:0 0 20px ${tone(b.tone)}88;transform-origin:center;transform:scale(0)"></div>
+            ${cnt(b.show || String(b.value), a + 0.3, `position:absolute;left:${cx - 160}px;width:320px;top:${neg ? vTop + rad : vTop - rad - 54}px;text-align:center;font-size:36px;font-weight:800;color:${tone(b.tone)}`)}
+            <div class="cfade" data-a="${a}" style="position:absolute;left:${cx - slot / 2 + 6}px;width:${slot - 12}px;top:${labelRowY}px;text-align:center;font-size:${n > 5 ? 25 : 29}px;font-weight:700;line-height:1.2">${esc(b.label)}${b.text ? `<div style="font-size:${n > 5 ? 20 : 23}px;font-weight:500;color:rgba(255,255,255,.62);margin-top:4px">${esc(b.text)}</div>` : ''}</div>`;
+        }
+        return `<div class="cbar" data-a="${a}" data-b="${T.items[i][1]}" style="position:absolute;left:${cx - bw / 2}px;top:${top_}px;width:${bw}px;height:${h}px;border-radius:12px 12px 4px 4px;background:linear-gradient(180deg,${tone(b.tone)},${tone(b.tone)}bb);transform-origin:${grow};transform:scaleY(0)"></div>
+          ${cnt(b.show || String(b.value), a + 0.3, `position:absolute;left:${cx - 160}px;width:320px;top:${neg ? top_ + h + 16 : top_ - 60}px;text-align:center;font-size:38px;font-weight:800;color:${tone(b.tone)}`)}
+          <div class="cfade" data-a="${a}" style="position:absolute;left:${cx - slot / 2 + 6}px;width:${slot - 12}px;top:${labelRowY}px;text-align:center;font-size:${n > 5 ? 25 : 29}px;font-weight:700;line-height:1.2">${esc(b.label)}${b.text ? `<div style="font-size:${n > 5 ? 20 : 23}px;font-weight:500;color:rgba(255,255,255,.62);margin-top:4px">${esc(b.text)}</div>` : ''}</div>`; }).join('');
       return `<div style="position:absolute;inset:0">${head}
-        <div style="position:absolute;left:${x0}px;width:${x1 - x0}px;top:${y1}px;height:2px;background:rgba(255,255,255,.3)"></div>${cols}${note}</div>`;
+        <div style="position:absolute;left:${x0}px;width:${x1 - x0}px;top:${yZero}px;height:2px;background:rgba(255,255,255,.3)"></div>${cols}${note}</div>`;
+    }
+    case 'ticker': {
+      // Motion plate: a continuously scrolling row of label/value pills, like a
+      // market data ticker tape - for a lesson about a live feed (oracle prices,
+      // mempool activity, an exchange ticker) where the point is a stream of
+      // moving numbers, not one static comparison. Each item is drawn twice back
+      // to back so the loop is seamless; `.tick-track` scrolls at a constant
+      // pixel speed in the shared per-frame script below.
+      const itemW = fs(320, 280), gap = 28, unitW = itemW + gap, loopW = unitW * s.items.length;
+      const toneOf = t => t === 'bad' ? C.orange : t === 'good' ? C.aquaDark : '#fff';
+      const row = s.items.map((it, i) => `<div class="tick-item" style="flex:none;width:${itemW}px;margin-right:${gap}px;padding:22px 26px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);text-align:center">
+        <div style="font-size:24px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.62)">${esc(it.label)}</div>
+        <div style="margin-top:8px;font-size:${fs(40, 44)}px;font-weight:800;color:${toneOf(it.tone)}">${esc(it.value)}</div>
+        ${it.sub ? `<div style="margin-top:4px;font-size:19px;color:rgba(255,255,255,.55)">${esc(it.sub)}</div>` : ''}</div>`).join('');
+      return `<div style="position:absolute;left:0;right:0;top:${fs(440, 480)}px">
+        ${s.title ? `<div style="position:absolute;left:150px;right:150px;top:${fs(-230, -340)}px;text-align:center">${title(s.title)}</div>` : ''}
+        <div style="overflow:hidden;width:100%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)">
+          <div class="tick-track" data-loopw="${loopW}" data-speed="${s.speed || 110}" style="display:flex;width:${loopW * 2}px">${row}${row}</div>
+        </div>${s.sub ? `<div class="in" data-in="${T.v0 + 0.3}" style="margin-top:34px;text-align:center;font-size:28px;color:rgba(255,255,255,.6)">${esc(s.sub)}</div>` : ''}</div>`;
     }
     case 'cutaway': {
       // Screen cutaway: a sequence of real screenshots in a browser frame, each with a
@@ -444,6 +544,7 @@ function planTimes(s, sents, voStart, voDur) {
       T.note = s.noteAt != null ? sentAt(s.noteAt, at(0.8)) : Math.max(...T.items.map(x => x[0]), T.v0) + 1.2;
       break;
     }
+    case 'ticker': T.items = syncItems(s.items.map(it => `${it.label} ${it.value}`), sents, voStart, voDur, s.at); break;
     case 'cutaway': T.items = syncItems(s.shots.map(x => x.caption || ''), sents, voStart, voDur, s.at);
       T.items = T.items.map(([a, b], i, arr) => [i === 0 ? voStart : a, i === arr.length - 1 ? voStart + voDur + 5 : arr[i + 1][0]]); break;
     case 'image': T.callouts = (s.callouts || []).map((c, i) => sentAt(c.at ?? Math.min(i + 1, sents.length - 1), at(0.3 + i * 0.2)));
@@ -553,6 +654,9 @@ function scenePage(video, s, W, H, sc) {
     document.querySelectorAll('.carc').forEach(el => { const a = +el.dataset.a, b = +el.dataset.b, f = +el.dataset.f, p = easeIO((t - a) / .9);
       el.style.strokeDasharray = (f * p) + ' ' + (1 - f * p + 1); el.style.strokeDashoffset = String(-(+el.dataset.s));
       el.style.filter = t >= a && t < b && t < VOEND ? 'brightness(1.2) drop-shadow(0 0 18px rgba(46,230,166,.4))' : 'none'; });
+    // ticker: a constant-speed leftward scroll, wrapped seamlessly at one loop's width
+    document.querySelectorAll('.tick-track').forEach(el => { const speed = +el.dataset.speed, loopw = +el.dataset.loopw;
+      el.style.transform = 'translateX(' + (-((t * speed) % loopw)) + 'px)'; });
     // cutaway: crossfade shots, push in towards the highlight, draw the box
     document.querySelectorAll('.shot').forEach(el => { const a = +el.dataset.a, b = +el.dataset.b, p = ease((t - a) / .45);
       el.style.opacity = t < a ? 0 : t < b ? p : ease(1 - (t - b) / .45);
@@ -696,6 +800,7 @@ function visual(s) {
     chart: () => `Chart (${s.kind || 'bars'}): ${s.title}`, chart3d: () => `Chart (3D/WebGL, ${s.kind || 'bars'}): ${s.title}`,
     flow: () => `Flow: ${(s.nodes || []).map(n => n.label).join(' → ')}`, flow3d: () => `Flow (3D/WebGL): ${(s.nodes || []).map(n => n.label).join(' → ')}`,
     cutaway: () => `Screen cutaway: ${(s.shots || []).map(x => x.caption || x.src).join(' → ')}`,
+    ticker: () => `Ticker: ${(s.items || []).map(x => `${x.label} ${x.value}`).join(' · ')}`,
   };
   return V[s.type]();
 }
