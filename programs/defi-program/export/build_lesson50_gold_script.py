@@ -1,0 +1,133 @@
+#!/usr/bin/env python3
+"""Gold-standard script for Lesson 5.0, the Module 5 Mastery Starter
+(target 11-14 minutes, per the "a bit longer" note for lessons from here
+on). Infrastructure Risk: your position is only as safe as the weakest
+thing it depends on (bridges, oracles, admin keys, contracts). Teaches
+the module's five words (bridge, layer 2, oracle, proxy, timelock) and
+the mastery ladder with animated flows, reusing the module's own
+module-05.png diagram. Mirrors the Lesson 1.0/2.0/3.0/4.0 Mastery Starter
+pattern, written in one pass at the full target length.
+
+Writes video-scripts/gold/lesson-05-0.json (the generator skips lessons
+with a gold script). Spoken text (vo) spells numbers for the voice; cap is
+the written caption, same sentences."""
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+S = []
+
+
+def sc(type_, vo, cap=None, **k):
+    d = {"type": type_, **k, "vo": vo}
+    if cap:
+        d["cap"] = cap
+    S.append(d)
+
+
+def img(src, eyebrow, vo, cap=None, **k):
+    sc("image", vo, cap, src=src, eyebrow=eyebrow, wide=True, **k)
+
+
+D = "assets/diagrams/"
+M = "assets/modules/"
+
+# ---------------------------------------------------------------- intro
+sc("title", "Lesson five point zero. The Mastery Starter for Module Five: Infrastructure Risk. By the end, you'll know the five words this module runs on, and exactly how to tell when you've mastered it.",
+   "Lesson 5.0. The Mastery Starter for Module 5: Infrastructure Risk. By the end, you'll know the five words this module runs on, and exactly how to tell when you've mastered it.",
+   chapter="Intro", eyebrow="Lesson 5.0 · Mastery Starter", num="5.0", title="Infrastructure Risk", sub="Your map for Module 5, in pictures.")
+sc("pillars", "Here's the plan. First, the sixty-second version: why your position is only ever as safe as the weakest thing it actually depends on. Second, the five words you'll need, each one drawn out. Third, what to have ready before you start. Fourth, your first safe step: checking one protocol you already use, directly on a block explorer. And finally, the mastery ladder, so you know exactly what finishing this module looks like.",
+   chapter="Intro", title="What this lesson covers",
+   items=[{"icon": "chart", "title": "The 60-second version", "text": "Your position is only as safe as its weakest dependency"}, {"icon": "book", "title": "Five words", "text": "Drawn out, not just defined"},
+          {"icon": "clock", "title": "Before you start", "text": "Modules 0-4"}, {"icon": "target", "title": "The ladder", "text": "How you'll know you've mastered it"}])
+
+# ---------------------------------------------------------------- the 60-second version
+sc("statement", "Here's the whole module in one sentence. Your position is only ever as safe as the single weakest thing it actually depends on: the bridge that moved your tokens across, the oracle that prices your collateral, or the admin key that can upgrade the contract holding your funds, out from under you. Most of DeFi's largest losses in its entire history came from exactly this plumbing, not from price moves at all.",
+   chapter="The 60-second version", kicker="The 60-second version", lines=["Your position is only as safe as its weakest dependency.", "Most of DeFi's largest losses came from the plumbing, not price moves."], sub="This module teaches you to map every single link in that chain.")
+img(M + "module-05.png", "Infrastructure Risk",
+    "Here's what this module actually covers, laid out as a map. Every position you hold genuinely depends on a specific chain, a specific bridge if your assets ever crossed one, a specific oracle pricing whatever it's collateralised by, and a specific contract, which itself depends on whoever holds the keys to upgrade it. None of that plumbing is optional. All of it is exactly what this module teaches you to see, and to rate.",
+    chapter="The 60-second version")
+sc("statement", "Worth sitting with why this module exists at all, given how much attention usually goes to price risk instead. A protocol can have genuinely sound tokenomics, a fairly priced asset, and a sensible strategy, and still lose everything, instantly, through a single compromised bridge, a manipulated oracle, or a malicious contract upgrade. Price risk is visible on every chart. Infrastructure risk is invisible, right up until the moment it isn't.",
+   chapter="The 60-second version", kicker="Why this module exists", lines=["Sound tokenomics and a fair price don't protect against this.", "Price risk is visible on a chart. Infrastructure risk is invisible until it isn't."], sub="This module makes the invisible part visible, on purpose.")
+
+# ---------------------------------------------------------------- words you'll need
+sc("title", "Now, the five words you'll need.", chapter="Words you'll need", eyebrow="Words you'll need", num="5", title="Five words, drawn out",
+   sub="Bridge · Layer 2 · Oracle · Proxy · Timelock")
+sc("flow", "Word one: bridge. Here's the actual sequence a bridge runs, every single time. You send an asset in, on its original chain. The bridge locks, or burns, that original asset. And it mints, or releases, a representation of it, on the destination chain. Every one of those steps depends on the bridge's own security model actually holding, since your asset's real value now lives entirely in that bridge's own hands, for as long as it's crossed.",
+   chapter="Words you'll need", title="What a bridge actually does",
+   nodes=[{"label": "You send the asset in", "sub": "On its original chain", "icon": "coins"}, {"label": "Locked, or burned, there", "sub": "By the bridge's own contract", "icon": "shield"},
+          {"label": "Minted or released elsewhere", "sub": "A representation, on the destination chain", "icon": "chart"}])
+sc("statement", "Word two: layer two. A cheaper network, built directly on top of Ethereum, specifically to process transactions faster and more cheaply, while still relying on Ethereum itself for its underlying security. Different layer twos make genuinely different trade-offs in exactly how they inherit that security, which is precisely why this module treats each one as its own dependency to check, not as interchangeable copies of each other.",
+   chapter="Words you'll need", kicker="Word two: Layer 2", lines=["A cheaper network, built on top of Ethereum.", "Different L2s make different trade-offs in how they inherit security."], sub="Not interchangeable. Each is its own dependency to check.")
+sc("flow", "Word three: oracle. Here's exactly what an oracle does, and why contracts can't simply know a price on their own. A smart contract has no way to see the outside world directly. An oracle feeds it real, external prices, specifically so it can value collateral, trigger liquidations, or settle a trade correctly. If that oracle is wrong, manipulated, or simply delayed, every single decision the contract makes downstream of it inherits that same error.",
+   chapter="Words you'll need", title="Why contracts need an oracle at all",
+   nodes=[{"label": "A contract can't see outside itself", "sub": "No native access to real-world prices", "icon": "eye"}, {"label": "An oracle feeds it a price", "sub": "For collateral, liquidations, settlement", "icon": "chart"},
+          {"label": "Wrong feed, wrong decision", "sub": "Every downstream decision inherits that error", "icon": "alert"}])
+sc("quiz", "Quick check. Why does a smart contract actually need an oracle at all? [[pause 4]] The answer: a contract has no way to see real-world prices on its own; an oracle feeds it that external data directly.",
+   chapter="Words you'll need", n=1, of=2, q="Why does a contract need an oracle?",
+   a="It has no way to see real-world prices on its own.")
+sc("statement", "Word four: proxy. A contract whose actual logic can be upgraded later, after it's already deployed and already holding user funds. That's genuinely useful, since it lets a team fix real bugs without needing everyone to migrate to an entirely new contract. It also means whoever holds the upgrade key can, in principle, change what that contract does at any time, which is exactly why word five matters so much.",
+   chapter="Words you'll need", kicker="Word four: proxy", lines=["A contract whose logic can be upgraded after deployment.", "Useful for fixing bugs. Also means the key-holder can change behavior."], sub="That power cutting both ways is exactly why word five exists.")
+sc("statement", "Word five: timelock. A mandatory delay, built directly into the contract itself, between when an upgrade is proposed and when it's actually allowed to take effect. That delay is what gives you, and everyone else watching, a real, actual window to notice a malicious or mistaken change, before it can ever take hold. A proxy without a timelock can change instantly, with zero warning at all.",
+   chapter="Words you'll need", kicker="Word five: timelock", lines=["A mandatory delay between a proposed change and it taking effect.", "Gives you a real window to notice a bad change before it takes hold."], sub="A proxy without a timelock can change instantly, with no warning.")
+sc("title", "All five words, one real position.", chapter="Words you'll need", eyebrow="Words you'll need", num="6", title="Tying the whole dependency chain together",
+   sub="This exact chain is what the rest of this module teaches you to map.")
+sc("flow", "Here's all five words, tied together into one single, realistic position, so you can see exactly how they actually stack. You bridge an asset onto a layer two, to save on gas. You deposit it as collateral into a lending protocol there. An oracle prices that collateral, continuously. And the lending protocol itself is a proxy contract, upgradeable by its own team, hopefully behind a genuine timelock. Every one of those links is a separate thing that has to hold, for your position to stay exactly as safe as you assume it is.",
+   chapter="Words you'll need", title="One position, the full chain",
+   nodes=[{"label": "Bridge, onto a layer 2", "sub": "To save on gas", "icon": "coins"}, {"label": "Deposited as collateral", "sub": "Into a lending protocol there", "icon": "shield"},
+          {"label": "Priced by an oracle", "sub": "Continuously, the whole time it's held", "icon": "eye"}, {"label": "Held in a proxy, behind a timelock", "sub": "Hopefully. That's exactly what to check", "icon": "alert"}])
+sc("quiz", "Quick check. What does a timelock actually give you, specifically? [[pause 4]] The answer: a real window of time to notice a malicious, or simply mistaken, contract upgrade, before it's actually allowed to take effect.",
+   chapter="Words you'll need", n=2, of=2, q="What does a timelock give you?",
+   a="A window to notice a bad upgrade before it takes effect.")
+
+# ---------------------------------------------------------------- before you start
+sc("title", "Before you start.", chapter="Before you start", eyebrow="Before you start", num="1", title="What this module assumes you already have",
+   sub="Modules zero through four.")
+sc("steps", "Here's what this module assumes you're already comfortable with, before diving in. Everything from Module zero: wallets, networks, and gas. Module one's due-diligence habits. Module two's read on A.M.M.s and liquidity. Module three's lending and leverage concepts. And Module four's read on where yield genuinely comes from, and what risk it's paying for.",
+   chapter="Before you start", title="What you should already have",
+   steps=["Module 0: wallets, networks, gas", "Module 1: due-diligence habits", "Module 2: AMMs and liquidity", "Modules 3-4: lending, leverage, and yield sources"], result="If any of these feel shaky, that module is worth a quick revisit first")
+
+# ---------------------------------------------------------------- your first safe step
+sc("title", "Your first safe step.", chapter="Your first safe step", eyebrow="Your first safe step", num="1", title="Check one protocol you already use",
+   sub="Directly on a block explorer. No new money required.")
+sc("steps", "Here's exactly what to do, before this module goes any deeper into specific infrastructure risks. Pick any protocol you already actually use. Open its main contract directly on a block explorer. Check whether it's a proxy contract at all. If it is, check who's actually allowed to upgrade it. And check whether a timelock is genuinely in place, and how long its delay actually runs.",
+   chapter="Your first safe step", title="Checking a protocol you already use",
+   steps=["Pick a protocol you already use", "Open its main contract on a block explorer", "Check whether it's a proxy, and who can upgrade it", "Check whether a timelock exists, and its actual delay"], result="No new money required. Just genuine, first-hand reading practice")
+sc("statement", "Worth being precise about what to actually do if you find no timelock at all, or one with a genuinely short delay, since that's a real, specific finding, not just trivia. It doesn't automatically mean walk away; plenty of legitimate protocols are still early, or deliberately choose speed over that particular safeguard. It does mean you've just identified one real, specific risk, worth weighing directly against whatever that position is actually paying you.",
+   chapter="Your first safe step", kicker="What to do with what you find", lines=["No timelock isn't automatically a reason to walk away.", "It's one specific, identified risk to weigh against what you're paid."], sub="The point is finding it. What you do with it is a separate decision.")
+sc("statement", "Worth doing this on a protocol you already genuinely hold something in, not a hypothetical one, since the entire skill this module builds is reading real infrastructure under real conditions. You may be surprised by what you find, in either direction: a well-protected upgrade path, or one with far less warning built in than you assumed.",
+   chapter="Your first safe step", kicker="Why a real protocol, not a hypothetical", lines=["The skill is reading real infrastructure under real conditions.", "You may be surprised, in either direction."], sub="Read it yourself. Don't just assume from the protocol's reputation.")
+
+# ---------------------------------------------------------------- the mastery ladder
+sc("title", "The mastery ladder.", chapter="The mastery ladder", eyebrow="The mastery ladder", num="1", title="Three levels, each building on the last",
+   sub="Know exactly where you are, and what's next.")
+sc("compare", "Here's the first two rungs on this module's ladder, side by side. At the beginner level, you simply know which chain, which bridge, and which oracle each of your own positions actually uses, the basic map. At the practitioner level, you go further: drawing the complete dependency map for a position, and actually reading its audits properly, rather than just checking that one exists.",
+   chapter="The mastery ladder",
+   left={"label": "Beginner", "tone": "warn", "items": ["Knows which chain, bridge, and oracle each position uses", "The basic map, for your own positions"]},
+   right={"label": "Practitioner", "tone": "good", "items": ["Draws a full dependency map", "Reads audits properly, not just checks they exist"]})
+sc("flow", "Here's what drawing a full dependency map, at practitioner level, actually looks like in practice, concretely. Start with the chain itself, and its own security model. Add the bridge, if the asset ever crossed one, and its own trust assumptions. Add the oracle pricing anything held as collateral. And add the contract itself, noting specifically whether it's a proxy, and whether a timelock actually protects it.",
+   chapter="The mastery ladder", title="Drawing the map, concretely",
+   nodes=[{"label": "The chain, and its security model", "sub": "The base layer everything else sits on", "icon": "shield"}, {"label": "Any bridge crossed, and its trust model", "sub": "If the asset ever moved chains", "icon": "coins"},
+          {"label": "The oracle pricing the collateral", "sub": "Continuously, the whole time it's held", "icon": "eye"}, {"label": "The contract: proxy? Timelock?", "sub": "The last, and often most overlooked, link", "icon": "alert"}])
+sc("statement", "And here's the top rung, master level, the one this module ultimately builds toward. At that level, you can operate confidently across both E.V.M. and non-E.V.M. chains, with your bridge and wrapper exposure deliberately capped, on purpose, rather than simply accumulated as a byproduct of wherever opportunity happened to lead you.",
+   chapter="The mastery ladder", kicker="Master level", lines=["Operates across EVM and non-EVM chains.", "Bridge and wrapper exposure capped on purpose, not by accident."], sub="Deliberate exposure, not accumulated exposure.")
+sc("statement", "Here's how you'll actually know you've mastered this entire module, in one sentence. You can draw the complete dependency map of any position, for any protocol, and rate every single link in that chain, without needing to be told which parts matter, because you already recognise the pattern.",
+   chapter="The mastery ladder", kicker="You've mastered this module when…", lines=["You can draw the complete dependency map of any position.", "And rate every link in that chain, unprompted."], sub="That's the actual finish line for this module.")
+
+# ---------------------------------------------------------------- recap
+sc("bullets", "Let's recap. Your position is only as safe as its weakest dependency, and most of DeFi's largest losses came from exactly that plumbing, not price moves. The five words: bridge, layer two, oracle, proxy, and timelock. Your first safe step is checking one real protocol's own contract, directly, on a block explorer. And you'll know you've mastered this module when you can draw, and rate, the complete dependency map of any position, on sight.",
+   chapter="Recap", title="Recap", check=False,
+   items=["Your position is only as safe as its weakest dependency", "Five words: bridge, layer 2, oracle, proxy, timelock",
+          "First step: check one real protocol's contract on a block explorer", "Mastered when: you can draw and rate any position's full dependency map"])
+sc("cta", "Pick one protocol you already use, and check it directly on a block explorer today. Next up, Lesson five point one: bridges and trust assumptions.",
+   "Pick one protocol you already use, and check it directly on a block explorer today. Next up, Lesson 5.1: bridges and trust assumptions.",
+   chapter="Recap", button="Next: Lesson 5.1", sub="Bridges and trust assumptions")
+
+spec = {"id": "lesson-05-0", "title": "Lesson 5.0: Mastery Starter — Infrastructure Risk", "size": [1920, 1080], "group": "lessons", "maxMinutes": 25,
+        "tag": "Lesson 5.0 · Mastery Starter", "gold": True, "music": True, "musicLevel": 0.14, "seed": 78,
+        "use": "Lesson 5.0 page in the Whop course. Hand-written gold-standard Mastery Starter script for Module 5: the 60-second version, the module's five words, before-you-start, first safe step, and mastery ladder, as walk-throughs.",
+        "thumbnail": {"title": "Infrastructure Risk: Mastery Starter", "subtitle": "Lesson 5.0"}, "scenes": S}
+out = ROOT / "video-scripts" / "gold" / "lesson-05-0.json"
+out.write_text(json.dumps(spec, indent=1, ensure_ascii=False))
+words = sum(len(s["vo"].replace("[[pause 4]]", "").split()) for s in S)
+print(f"{len(S)} scenes, {words} words, est {(words / 171 * 60 + len(S) * 1.3 + 4 * 2) / 60:.1f} min")
