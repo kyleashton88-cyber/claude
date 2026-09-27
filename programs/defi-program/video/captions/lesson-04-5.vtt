@@ -3,125 +3,569 @@ WEBVTT
 00:00:00.550 --> 00:00:02.295
 Lesson 4.5.
 
-00:00:02.295 --> 00:00:04.460
+00:00:02.295 --> 00:00:04.510
 Vaults & yield optimisers.
 
-00:00:04.460 --> 00:00:06.388
-By the end of this lesson, you'll be
+00:00:04.510 --> 00:00:06.957
+By the end, you'll be able to decide, with
 
-00:00:06.388 --> 00:00:08.420
-able to decide when a vault's fees are
+00:00:06.957 --> 00:00:09.972
+real numbers, when a vault's fees are actually worth
 
-00:00:08.420 --> 00:00:10.765
-worth paying compared with doing it yourself.
+00:00:09.972 --> 00:00:13.215
+paying, compared with running the same strategy yourself.
 
-00:00:12.065 --> 00:00:13.355
+00:00:14.515 --> 00:00:15.805
 Here's the plan.
 
-00:00:13.355 --> 00:00:15.040
-First, the key ideas.
+00:00:15.805 --> 00:00:18.159
+What a vault actually does with your deposit,
 
-00:00:15.040 --> 00:00:17.755
-Then, a worked example, step by step.
+00:00:18.159 --> 00:00:20.250
+and the shares you get back for it.
 
-00:00:17.755 --> 00:00:19.280
-Then, your checklist.
+00:00:20.250 --> 00:00:23.093
+Its three possible costs: performance fees,
 
-00:00:19.280 --> 00:00:21.442
-And finally, a three-question quiz.
+00:00:23.093 --> 00:00:26.430
+management fees, and sometimes withdrawal fees.
 
-00:00:22.742 --> 00:00:24.972
-A vault pools deposits and runs a
+00:00:26.430 --> 00:00:28.789
+The extra risk layer a vault adds, on
 
-00:00:24.972 --> 00:00:28.682
-strategy (often harvesting and reinvesting rewards).
+00:00:28.789 --> 00:00:31.635
+top of every protocol it uses underneath.
 
-00:00:28.682 --> 00:00:29.887
-You get shares.
+00:00:31.635 --> 00:00:34.951
+And a full worked example, using the source material's
 
-00:00:29.887 --> 00:00:33.627
-Costs: performance fee (a share of profits), management fee
+00:00:34.951 --> 00:00:37.965
+own numbers, at two very different position sizes.
 
-00:00:33.627 --> 00:00:37.417
-(a share of assets per year), sometimes withdrawal fees.
+00:00:39.265 --> 00:00:40.760
+What a vault actually does.
 
-00:00:37.417 --> 00:00:40.672
-Risks: the vault's code plus every protocol it uses.
+00:00:42.060 --> 00:00:44.277
+Here's exactly what a vault does with
 
-00:00:41.972 --> 00:00:44.487
-Let's work an example, step by step.
+00:00:44.277 --> 00:00:46.385
+the assets you deposit into it.
 
-00:00:44.487 --> 00:00:48.468
-Gross 10%, 20% performance fee,
+00:00:46.385 --> 00:00:49.644
+It pools your deposit together with everyone else's,
 
-00:00:48.468 --> 00:00:52.252
-0.5% management to 7.5% net.
+00:00:49.644 --> 00:00:52.657
+and runs a specific strategy against that pooled
 
-00:00:52.252 --> 00:00:57.522
-DIY instead, compounding weekly at $2 gas: $5,000
+00:00:52.657 --> 00:00:56.162
+total, often harvesting rewards on some regular schedule
 
-00:00:57.522 --> 00:01:01.844
-position: gas = $104 a year equals 2.08%
+00:00:56.162 --> 00:00:59.482
+and automatically reinvesting them, so you don't have
 
-00:01:01.844 --> 00:01:05.517
-drag to the vault probably wins.
+00:00:59.482 --> 00:01:01.565
+to do that manually yourself.
 
-00:01:05.517 --> 00:01:11.703
-$500,000 position: gas equals 0.02% drag, while the vault's
+00:01:01.565 --> 00:01:04.041
+In exchange for your deposit, you receive
 
-00:01:11.703 --> 00:01:16.034
-fees cost 2.5 points to DIY probably wins.
+00:01:04.041 --> 00:01:07.164
+shares, representing your proportional claim on that
 
-00:01:17.335 --> 00:01:18.795
+00:01:07.164 --> 00:01:09.522
+pooled position, plus whatever it earns.
+
+00:01:10.822 --> 00:01:13.355
+Worth being precise about the actual value a
+
+00:01:13.355 --> 00:01:15.831
+vault is selling you, since it isn't really
+
+00:01:15.831 --> 00:01:18.363
+the strategy itself, most of which you could
+
+00:01:18.363 --> 00:01:20.577
+technically replicate on your own.
+
+00:01:20.577 --> 00:01:24.588
+It's automation, and pooled efficiency, specifically around the
+
+00:01:24.588 --> 00:01:28.412
+repetitive, gas-costing parts of running that strategy well,
+
+00:01:28.412 --> 00:01:32.347
+like harvesting and reinvesting on a disciplined schedule.
+
+00:01:32.347 --> 00:01:35.475
+Whether that's worth paying for depends entirely on how
+
+00:01:35.475 --> 00:01:38.882
+much those repetitive costs would actually cost you directly.
+
+00:01:40.182 --> 00:01:41.272
+Quick check.
+
+00:01:41.272 --> 00:01:42.513
+Why do vaults tend to
+
+00:01:42.513 --> 00:01:44.827
+suit smaller positions particularly well?
+
+00:01:49.247 --> 00:01:52.495
+The answer: they spread the gas costs of harvesting
+
+00:01:52.495 --> 00:01:56.243
+and reinvesting across every depositor in the pool, instead
+
+00:01:56.243 --> 00:01:58.617
+of each person paying that cost alone.
+
+00:01:59.917 --> 00:02:01.282
+Three possible costs.
+
+00:02:02.582 --> 00:02:04.645
+Here's exactly what each of these three
+
+00:02:04.645 --> 00:02:06.966
+costs actually takes from you, since they're
+
+00:02:06.966 --> 00:02:09.587
+structured quite differently from each other.
+
+00:02:09.587 --> 00:02:12.682
+A performance fee takes a share specifically of your
+
+00:02:12.682 --> 00:02:16.077
+profits, only when the strategy actually makes money.
+
+00:02:16.077 --> 00:02:18.381
+A management fee takes a share of your
+
+00:02:18.381 --> 00:02:21.454
+total assets, every year, regardless of whether the
+
+00:02:21.454 --> 00:02:24.117
+strategy made anything at all that year.
+
+00:02:24.117 --> 00:02:26.552
+And some vaults add a withdrawal fee too,
+
+00:02:26.552 --> 00:02:29.857
+charged specifically when you actually exit the position.
+
+00:02:31.157 --> 00:02:34.887
+Worth being precise about why the management fee specifically
+
+00:02:34.887 --> 00:02:38.797
+deserves extra attention, compared with the performance fee.
+
+00:02:38.797 --> 00:02:41.848
+A performance fee only costs you anything when you're
+
+00:02:41.848 --> 00:02:45.537
+actually making money, which softens its sting considerably.
+
+00:02:45.537 --> 00:02:48.289
+A management fee keeps taking its share every
+
+00:02:48.289 --> 00:02:50.981
+single year, even during a year the strategy
+
+00:02:50.981 --> 00:02:54.331
+loses money outright, which is a meaningfully different
+
+00:02:54.331 --> 00:02:55.647
+kind of cost to carry.
+
+00:02:56.947 --> 00:03:00.533
+Worth being precise about why a withdrawal fee specifically
+
+00:03:00.533 --> 00:03:03.402
+exists, on the vaults that charge one, since it
+
+00:03:03.402 --> 00:03:06.272
+isn't simply extra profit for its own sake.
+
+00:03:06.272 --> 00:03:10.516
+It's usually there to discourage very short-term, in-and-out deposits,
+
+00:03:10.516 --> 00:03:13.743
+which can otherwise force the vault to pay harvesting
+
+00:03:13.743 --> 00:03:16.493
+gas costs on behalf of a depositor who barely
+
+00:03:16.493 --> 00:03:19.362
+stayed long enough to benefit from them, at the
+
+00:03:19.362 --> 00:03:21.932
+expense of everyone else still in the pool.
+
+00:03:23.232 --> 00:03:24.322
+Quick check.
+
+00:03:24.322 --> 00:03:27.166
+Gross twelve percent, a ten percent performance
+
+00:03:27.166 --> 00:03:29.717
+fee, and a one percent management fee.
+
+00:03:29.717 --> 00:03:30.967
+What's the net return?
+
+00:03:35.387 --> 00:03:37.922
+The answer: nine point eight percent.
+
+00:03:37.922 --> 00:03:41.092
+Twelve times zero point nine, minus one percent.
+
+00:03:42.392 --> 00:03:43.687
+The extra risk layer.
+
+00:03:44.987 --> 00:03:48.044
+Here's exactly what risk a vault actually adds,
+
+00:03:48.044 --> 00:03:50.846
+on top of whatever you'd already be exposed
+
+00:03:50.846 --> 00:03:54.012
+to by using its underlying strategy directly.
+
+00:03:54.012 --> 00:03:57.118
+Its own smart contract code can contain a bug,
+
+00:03:57.118 --> 00:04:00.722
+entirely separate from any protocol it invests in.
+
+00:04:00.722 --> 00:04:03.713
+Its own strategy logic can make a mistake in
+
+00:04:03.713 --> 00:04:07.337
+how or when it harvests, reinvests, or rebalances.
+
+00:04:07.337 --> 00:04:10.357
+And every single protocol it deposits your funds
+
+00:04:10.357 --> 00:04:13.069
+into underneath, all of that risk, is still
+
+00:04:13.069 --> 00:04:16.213
+fully yours too, completely unremoved by the vault
+
+00:04:16.213 --> 00:04:17.507
+sitting on top of it.
+
+00:04:18.807 --> 00:04:21.278
+Here's why that extra risk layer isn't
+
+00:04:21.278 --> 00:04:23.621
+the same size for every vault, since
+
+00:04:23.621 --> 00:04:26.962
+complexity itself is a real, checkable variable.
+
+00:04:26.962 --> 00:04:30.628
+A simple vault, harvesting and reinvesting a single,
+
+00:04:30.628 --> 00:04:34.710
+well-understood strategy on one protocol, adds a genuinely
+
+00:04:34.710 --> 00:04:37.362
+small amount of extra risk on top.
+
+00:04:37.362 --> 00:04:41.200
+A complex vault, looping through several protocols, or adding
+
+00:04:41.200 --> 00:04:44.420
+its own leverage on top of the underlying strategy,
+
+00:04:44.420 --> 00:04:48.754
+adds meaningfully more, since every additional protocol and mechanism
+
+00:04:48.754 --> 00:04:51.292
+is one more place something can go wrong.
+
+00:04:52.592 --> 00:04:53.682
+Quick check.
+
+00:04:53.682 --> 00:04:56.067
+What extra risk does a vault actually add?
+
+00:05:00.487 --> 00:05:02.988
+The answer: its own code and strategy,
+
+00:05:02.988 --> 00:05:05.233
+on top of every single protocol it
+
+00:05:05.233 --> 00:05:07.542
+deposits your funds into underneath.
+
+00:05:08.842 --> 00:05:09.847
+Worked example.
+
+00:05:11.147 --> 00:05:13.479
+Here's the net calculation first, using
+
+00:05:13.479 --> 00:05:15.762
+the source material's own numbers.
+
+00:05:15.762 --> 00:05:17.977
+Gross return: ten percent.
+
+00:05:17.977 --> 00:05:20.103
+A twenty percent performance fee takes
+
+00:05:20.103 --> 00:05:22.257
+two points, leaving eight percent.
+
+00:05:22.257 --> 00:05:24.511
+A zero point five percent management
+
+00:05:24.511 --> 00:05:26.577
+fee takes another half point.
+
+00:05:26.577 --> 00:05:30.156
+Net result: seven point five percent, after both fees.
+
+00:05:31.456 --> 00:05:35.198
+Now here's the exact same strategy, run yourself instead,
+
+00:05:35.198 --> 00:05:38.359
+compounding weekly, at a flat two dollars of gas
+
+00:05:38.359 --> 00:05:42.465
+per harvest, compared at two very different position sizes.
+
+00:05:42.465 --> 00:05:45.606
+At five thousand dollars, that's one hundred four
+
+00:05:45.606 --> 00:05:47.805
+dollars a year in gas, a two point
+
+00:05:47.805 --> 00:05:51.135
+zero eight percent drag, considerably worse than the
+
+00:05:51.135 --> 00:05:53.320
+vault's own combined fee cost.
+
+00:05:53.320 --> 00:05:56.349
+At five hundred thousand dollars, that exact same
+
+00:05:56.349 --> 00:05:58.773
+one hundred four dollars is only a zero
+
+00:05:58.773 --> 00:06:01.621
+point zero two percent drag, while the vault's
+
+00:06:01.621 --> 00:06:03.923
+fees still cost two and a half points.
+
+00:06:05.223 --> 00:06:07.596
+Put side by side, here's the actual
+
+00:06:07.596 --> 00:06:11.257
+comparison at each size, in percentage-point terms.
+
+00:06:11.257 --> 00:06:14.734
+At the smaller size, D.I.Y.'s own gas drag of
+
+00:06:14.734 --> 00:06:18.662
+two point zero eight percent is the bigger cost.
+
+00:06:18.662 --> 00:06:21.716
+At the larger size, the vault's own fee drag
+
+00:06:21.716 --> 00:06:25.110
+of two point five points becomes the bigger cost,
+
+00:06:25.110 --> 00:06:28.707
+while D.I.Y.'s gas drag has shrunk to almost nothing.
+
+00:06:30.007 --> 00:06:32.122
+Finding the actual break-even point.
+
+00:06:33.422 --> 00:06:36.115
+Here's that same one hundred four dollars a
+
+00:06:36.115 --> 00:06:38.380
+year in gas, run across a much wider
+
+00:06:38.380 --> 00:06:40.829
+range of position sizes, so you can see
+
+00:06:40.829 --> 00:06:43.883
+exactly where the crossover actually happens.
+
+00:06:43.883 --> 00:06:46.408
+At one thousand dollars, gas drag is over
+
+00:06:46.408 --> 00:06:49.233
+ten percent, clearly worse than the vault.
+
+00:06:49.233 --> 00:06:52.349
+It keeps falling as size grows, crossing the vault's
+
+00:06:52.349 --> 00:06:54.700
+own two and a half point fee drag right
+
+00:06:54.700 --> 00:06:57.763
+around four thousand one hundred sixty dollars.
+
+00:06:57.763 --> 00:07:01.289
+Above that point, the vault's fees become the bigger
+
+00:07:01.289 --> 00:07:04.483
+cost every time; below it, D.I.Y.'s gas drag is.
+
+00:07:05.783 --> 00:07:08.398
+Notice what that break-even number actually
+
+00:07:08.398 --> 00:07:10.243
+tells you, in plain terms.
+
+00:07:10.243 --> 00:07:13.511
+Above roughly four thousand one hundred sixty dollars,
+
+00:07:13.511 --> 00:07:16.184
+at this specific gas cost and fee structure,
+
+00:07:16.184 --> 00:07:19.098
+running the strategy yourself probably wins.
+
+00:07:19.098 --> 00:07:21.423
+Below it, the vault probably wins.
+
+00:07:21.423 --> 00:07:23.962
+Change the gas cost, or the vault's own
+
+00:07:23.962 --> 00:07:26.692
+fees, and that exact number moves, but the
+
+00:07:26.692 --> 00:07:29.548
+method for finding it stays exactly the same.
+
+00:07:30.847 --> 00:07:33.319
+Here's how to actually run this comparison
+
+00:07:33.319 --> 00:07:35.560
+for your own numbers, rather than just
+
+00:07:35.560 --> 00:07:37.872
+reusing the ones from this example.
+
+00:07:37.872 --> 00:07:40.854
+Estimate your own realistic gas cost per harvest,
+
+00:07:40.854 --> 00:07:43.242
+and how often you'd actually do it.
+
+00:07:43.242 --> 00:07:45.850
+Divide that annual gas cost by your own
+
+00:07:45.850 --> 00:07:49.345
+position size, for your own real drag percentage.
+
+00:07:49.345 --> 00:07:51.861
+And compare that number directly against the
+
+00:07:51.861 --> 00:07:54.041
+vault's own total fee drag, the larger
+
+00:07:54.041 --> 00:07:55.830
+one is the one costing you more.
+
+00:07:57.130 --> 00:07:59.744
+Here's the one sentence this entire worked
+
+00:07:59.744 --> 00:08:02.419
+example exists to prove, worth holding onto
+
+00:08:02.419 --> 00:08:04.725
+more than either specific number.
+
+00:08:04.725 --> 00:08:07.407
+The exact same vault, with the exact same
+
+00:08:07.407 --> 00:08:10.218
+fees, is either clearly worth it or clearly
+
+00:08:10.218 --> 00:08:13.347
+not, purely depending on your own position size,
+
+00:08:13.347 --> 00:08:15.583
+since gas is a flat cost that only
+
+00:08:15.583 --> 00:08:18.265
+a larger position can meaningfully dilute.
+
+00:08:19.565 --> 00:08:21.025
 Here's your checklist.
 
-00:01:18.795 --> 00:01:20.330
-Do it now, for real.
+00:08:21.025 --> 00:08:23.600
+Do it before depositing into any vault.
 
-00:01:20.330 --> 00:01:24.085
-First, Net APY after all vault fees computed.
+00:08:23.600 --> 00:08:27.155
+Compute the actual net A.P.Y., after every fee the
 
-00:01:24.085 --> 00:01:27.655
-Next, Compared with DIY gas drag at my size.
+00:08:27.155 --> 00:08:31.080
+vault charges, not just its advertised gross number.
 
-00:01:27.655 --> 00:01:30.820
-And finally, every underlying protocol reviewed.
+00:08:31.080 --> 00:08:33.992
+Compare that against your own D.I.Y. gas
 
-00:01:32.120 --> 00:01:33.330
-Question 1.
+00:08:33.992 --> 00:08:36.833
+drag, at your own actual position size,
 
-00:01:33.330 --> 00:01:38.110
-Gross 12%, 10% performance fee, 1% management.
+00:08:36.833 --> 00:08:39.690
+the way the worked example just did.
 
-00:01:38.110 --> 00:01:38.665
-Net?
+00:08:39.690 --> 00:08:43.833
+And review every single underlying protocol the vault actually
 
-00:01:43.085 --> 00:01:48.248
-The answer: 12 × 0.9 − 1 = 9.8%.
+00:08:43.833 --> 00:08:47.450
+deposits into, since that risk is still entirely yours.
 
-00:01:49.548 --> 00:01:50.793
-Question 2.
+00:08:48.750 --> 00:08:49.995
+Let's recap.
 
-00:01:50.793 --> 00:01:52.658
-Why do vaults suit small positions?
+00:08:49.995 --> 00:08:52.616
+A vault pools deposits, runs a strategy,
 
-00:01:57.078 --> 00:02:00.488
-The answer: They spread gas costs across all depositors.
+00:08:52.616 --> 00:08:55.025
+and hands you shares in exchange.
 
-00:02:01.788 --> 00:02:03.058
-Question 3.
+00:08:55.025 --> 00:08:58.151
+It can charge a performance fee, a management fee,
 
-00:02:03.058 --> 00:02:04.558
-What risk does a vault add?
+00:08:58.151 --> 00:09:02.005
+and sometimes a withdrawal fee, each behaving differently.
 
-00:02:08.978 --> 00:02:11.877
-The answer: Its own code and strategy, on
+00:09:02.005 --> 00:09:04.302
+It adds its own code and strategy
 
-00:02:11.877 --> 00:02:14.568
-top of every protocol it deposits into.
+00:09:04.302 --> 00:09:06.598
+risk, on top of every protocol it
 
-00:02:15.868 --> 00:02:18.383
-Do the checklist now, before you move on.
+00:09:06.598 --> 00:09:09.735
+uses underneath, never removing that risk.
 
-00:02:18.383 --> 00:02:23.048
-Next up, Lesson 4.6: Airdrops & points: opportunity cost.
+00:09:09.735 --> 00:09:12.981
+And whether it's worth it comes down to one
+
+00:09:12.981 --> 00:09:17.112
+real comparison: its net A.P.Y. against your own D.I.Y.
+
+00:09:17.112 --> 00:09:19.620
+gas drag, at your own actual size.
+
+00:09:20.920 --> 00:09:23.760
+Compute the net APY after every fee, compare
+
+00:09:23.760 --> 00:09:26.096
+it against your own gas drag at your
+
+00:09:26.096 --> 00:09:29.110
+size, and review every protocol underneath.
+
+00:09:29.110 --> 00:09:33.695
+Next up, Lesson 4.6: airdrops and points, opportunity cost.

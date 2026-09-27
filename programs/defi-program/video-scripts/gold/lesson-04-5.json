@@ -1,0 +1,413 @@
+{
+ "id": "lesson-04-5",
+ "title": "Lesson 4.5: Vaults & yield optimisers",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "maxMinutes": 25,
+ "tag": "Lesson 4.5",
+ "gold": true,
+ "music": true,
+ "musicLevel": 0.14,
+ "seed": 74,
+ "use": "Lesson 4.5 page in the Whop course. Hand-written gold-standard script: what a vault does, its fee structure, the extra risk it adds, and the source material's own 7.5%-net-then-vault-vs-DIY-at-two-sizes worked example, as walk-throughs.",
+ "thumbnail": {
+  "title": "Vaults & yield optimisers",
+  "subtitle": "Lesson 4.5"
+ },
+ "scenes": [
+  {
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Lesson 4.5",
+   "num": "4.5",
+   "title": "Vaults & yield optimisers",
+   "sub": "The right answer depends entirely on your position size.",
+   "vo": "Lesson four point five. Vaults, and yield optimisers. By the end, you'll be able to decide, with real numbers, when a vault's fees are actually worth paying, compared with running the same strategy yourself.",
+   "cap": "Lesson 4.5. Vaults & yield optimisers. By the end, you'll be able to decide, with real numbers, when a vault's fees are actually worth paying, compared with running the same strategy yourself."
+  },
+  {
+   "type": "pillars",
+   "chapter": "Intro",
+   "title": "What this lesson covers",
+   "items": [
+    {
+     "icon": "coins",
+     "title": "What a vault does",
+     "text": "Pools deposits, runs a strategy, gives you shares"
+    },
+    {
+     "icon": "chart",
+     "title": "Three possible costs",
+     "text": "Performance, management, sometimes withdrawal fees"
+    },
+    {
+     "icon": "alert",
+     "title": "The extra risk layer",
+     "text": "The vault's own code, plus every protocol it uses"
+    },
+    {
+     "icon": "target",
+     "title": "Worked example",
+     "text": "7.5% net, then vault vs DIY at two sizes"
+    }
+   ],
+   "vo": "Here's the plan. What a vault actually does with your deposit, and the shares you get back for it. Its three possible costs: performance fees, management fees, and sometimes withdrawal fees. The extra risk layer a vault adds, on top of every protocol it uses underneath. And a full worked example, using the source material's own numbers, at two very different position sizes."
+  },
+  {
+   "type": "title",
+   "chapter": "What a vault does",
+   "eyebrow": "What a vault does",
+   "num": "1",
+   "title": "Pools deposits, runs a strategy, hands back shares",
+   "sub": "Often specifically: harvesting and reinvesting rewards for you.",
+   "vo": "What a vault actually does."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/vault-vs-diy.png",
+   "eyebrow": "A vault, next to doing it yourself",
+   "wide": true,
+   "chapter": "What a vault does",
+   "vo": "Here's exactly what a vault does with the assets you deposit into it. It pools your deposit together with everyone else's, and runs a specific strategy against that pooled total, often harvesting rewards on some regular schedule and automatically reinvesting them, so you don't have to do that manually yourself. In exchange for your deposit, you receive shares, representing your proportional claim on that pooled position, plus whatever it earns."
+  },
+  {
+   "type": "statement",
+   "chapter": "What a vault does",
+   "kicker": "What a vault is actually selling",
+   "lines": [
+    "Automation, and pooled efficiency around the repetitive parts.",
+    "Worth paying for depends on what those costs would be for you directly."
+   ],
+   "sub": "That's exactly what this lesson's worked example puts real numbers on.",
+   "vo": "Worth being precise about the actual value a vault is selling you, since it isn't really the strategy itself, most of which you could technically replicate on your own. It's automation, and pooled efficiency, specifically around the repetitive, gas-costing parts of running that strategy well, like harvesting and reinvesting on a disciplined schedule. Whether that's worth paying for depends entirely on how much those repetitive costs would actually cost you directly."
+  },
+  {
+   "type": "quiz",
+   "chapter": "What a vault does",
+   "n": 1,
+   "of": 3,
+   "q": "Why do vaults suit small positions?",
+   "a": "They spread gas costs across all depositors.",
+   "vo": "Quick check. Why do vaults tend to suit smaller positions particularly well? [[pause 4]] The answer: they spread the gas costs of harvesting and reinvesting across every depositor in the pool, instead of each person paying that cost alone."
+  },
+  {
+   "type": "title",
+   "chapter": "Three possible costs",
+   "eyebrow": "Three possible costs",
+   "num": "1",
+   "title": "Performance · Management · Withdrawal",
+   "sub": "Not every vault charges all three, but check for each one.",
+   "vo": "Three possible costs."
+  },
+  {
+   "type": "flow",
+   "chapter": "Three possible costs",
+   "title": "What each fee actually takes",
+   "nodes": [
+    {
+     "label": "Performance fee",
+     "sub": "A share of profits, only when it earns",
+     "icon": "chart"
+    },
+    {
+     "label": "Management fee",
+     "sub": "A share of assets, every year, regardless",
+     "icon": "coins"
+    },
+    {
+     "label": "Withdrawal fee",
+     "sub": "Charged specifically when you exit",
+     "icon": "alert"
+    }
+   ],
+   "vo": "Here's exactly what each of these three costs actually takes from you, since they're structured quite differently from each other. A performance fee takes a share specifically of your profits, only when the strategy actually makes money. A management fee takes a share of your total assets, every year, regardless of whether the strategy made anything at all that year. And some vaults add a withdrawal fee too, charged specifically when you actually exit the position."
+  },
+  {
+   "type": "statement",
+   "chapter": "Three possible costs",
+   "kicker": "Why management fees deserve extra attention",
+   "lines": [
+    "A performance fee only bites when you're making money.",
+    "A management fee keeps taking its share, even in a losing year."
+   ],
+   "sub": "Read both numbers separately. They behave very differently.",
+   "vo": "Worth being precise about why the management fee specifically deserves extra attention, compared with the performance fee. A performance fee only costs you anything when you're actually making money, which softens its sting considerably. A management fee keeps taking its share every single year, even during a year the strategy loses money outright, which is a meaningfully different kind of cost to carry."
+  },
+  {
+   "type": "statement",
+   "chapter": "Three possible costs",
+   "kicker": "Why a withdrawal fee exists",
+   "lines": [
+    "Usually meant to discourage very short-term deposits.",
+    "Protects longer-term depositors from subsidising in-and-out gas costs."
+   ],
+   "sub": "Read it as a signal about the vault's intended holding period.",
+   "vo": "Worth being precise about why a withdrawal fee specifically exists, on the vaults that charge one, since it isn't simply extra profit for its own sake. It's usually there to discourage very short-term, in-and-out deposits, which can otherwise force the vault to pay harvesting gas costs on behalf of a depositor who barely stayed long enough to benefit from them, at the expense of everyone else still in the pool."
+  },
+  {
+   "type": "quiz",
+   "chapter": "Three possible costs",
+   "n": 2,
+   "of": 3,
+   "q": "Gross 12%, 10% performance fee, 1% management. Net?",
+   "a": "12 × 0.9 − 1 = 9.8%.",
+   "vo": "Quick check. Gross twelve percent, a ten percent performance fee, and a one percent management fee. What's the net return? [[pause 4]] The answer: nine point eight percent. Twelve times zero point nine, minus one percent."
+  },
+  {
+   "type": "title",
+   "chapter": "The extra risk layer",
+   "eyebrow": "The extra risk layer",
+   "num": "1",
+   "title": "The vault's own code, plus everything underneath it",
+   "sub": "A vault never removes the risk of what it invests in. It adds to it.",
+   "vo": "The extra risk layer."
+  },
+  {
+   "type": "flow",
+   "chapter": "The extra risk layer",
+   "title": "What sits on top of the underlying protocols",
+   "nodes": [
+    {
+     "label": "The vault's own contract code",
+     "sub": "A bug here, separate from anything underneath",
+     "icon": "alert"
+    },
+    {
+     "label": "Its own strategy logic",
+     "sub": "A mistake in harvesting, reinvesting, rebalancing",
+     "icon": "chart"
+    },
+    {
+     "label": "Every underlying protocol",
+     "sub": "Still fully your risk, unremoved by the vault",
+     "icon": "shield"
+    }
+   ],
+   "vo": "Here's exactly what risk a vault actually adds, on top of whatever you'd already be exposed to by using its underlying strategy directly. Its own smart contract code can contain a bug, entirely separate from any protocol it invests in. Its own strategy logic can make a mistake in how or when it harvests, reinvests, or rebalances. And every single protocol it deposits your funds into underneath, all of that risk, is still fully yours too, completely unremoved by the vault sitting on top of it."
+  },
+  {
+   "type": "compare",
+   "chapter": "The extra risk layer",
+   "left": {
+    "label": "A simple, single-strategy vault",
+    "tone": "good",
+    "items": [
+     "One protocol, one well-understood strategy",
+     "A genuinely small amount of extra risk"
+    ]
+   },
+   "right": {
+    "label": "A complex, multi-protocol vault",
+    "tone": "warn",
+    "items": [
+     "Loops through several protocols, or adds leverage",
+     "Meaningfully more risk, one more place per protocol"
+    ]
+   },
+   "vo": "Here's why that extra risk layer isn't the same size for every vault, since complexity itself is a real, checkable variable. A simple vault, harvesting and reinvesting a single, well-understood strategy on one protocol, adds a genuinely small amount of extra risk on top. A complex vault, looping through several protocols, or adding its own leverage on top of the underlying strategy, adds meaningfully more, since every additional protocol and mechanism is one more place something can go wrong."
+  },
+  {
+   "type": "quiz",
+   "chapter": "The extra risk layer",
+   "n": 3,
+   "of": 3,
+   "q": "What risk does a vault add?",
+   "a": "Its own code and strategy, on top of every protocol it deposits into.",
+   "vo": "Quick check. What extra risk does a vault actually add? [[pause 4]] The answer: its own code and strategy, on top of every single protocol it deposits your funds into underneath."
+  },
+  {
+   "type": "title",
+   "chapter": "Worked example",
+   "eyebrow": "Worked example",
+   "num": "1",
+   "title": "7.5% net, then vault vs. DIY at two sizes",
+   "sub": "The source material's own scenario.",
+   "vo": "Worked example."
+  },
+  {
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "10% gross, 20% performance, 0.5% management",
+   "steps": [
+    "Gross: 10%",
+    "− 20% performance fee → 8%",
+    "− 0.5% management fee → 7.5% net"
+   ],
+   "result": "7.5% net, after both fees",
+   "vo": "Here's the net calculation first, using the source material's own numbers. Gross return: ten percent. A twenty percent performance fee takes two points, leaving eight percent. A zero point five percent management fee takes another half point. Net result: seven point five percent, after both fees."
+  },
+  {
+   "type": "compare",
+   "chapter": "Worked example",
+   "left": {
+    "label": "$5,000 position, DIY",
+    "tone": "bad",
+    "items": [
+     "$104/yr gas = 2.08% drag",
+     "Worse than the vault's fees — vault probably wins"
+    ]
+   },
+   "right": {
+    "label": "$500,000 position, DIY",
+    "tone": "good",
+    "items": [
+     "Same $104/yr gas = only 0.02% drag",
+     "Vault's fees cost 2.5 points — DIY probably wins"
+    ]
+   },
+   "vo": "Now here's the exact same strategy, run yourself instead, compounding weekly, at a flat two dollars of gas per harvest, compared at two very different position sizes. At five thousand dollars, that's one hundred four dollars a year in gas, a two point zero eight percent drag, considerably worse than the vault's own combined fee cost. At five hundred thousand dollars, that exact same one hundred four dollars is only a zero point zero two percent drag, while the vault's fees still cost two and a half points."
+  },
+  {
+   "type": "stats",
+   "chapter": "Worked example",
+   "title": "Which drag is bigger, at each size?",
+   "stats": [
+    [
+     "2.08%",
+     "DIY gas drag, at $5,000"
+    ],
+    [
+     "0.02%",
+     "DIY gas drag, at $500,000"
+    ],
+    [
+     "2.5 pts",
+     "Vault's fee drag, either size"
+    ]
+   ],
+   "vo": "Put side by side, here's the actual comparison at each size, in percentage-point terms. At the smaller size, D.I.Y.'s own gas drag of two point zero eight percent is the bigger cost. At the larger size, the vault's own fee drag of two point five points becomes the bigger cost, while D.I.Y.'s gas drag has shrunk to almost nothing."
+  },
+  {
+   "type": "title",
+   "chapter": "Worked example",
+   "eyebrow": "Worked example",
+   "num": "2",
+   "title": "Where DIY's gas drag crosses the vault's fee drag",
+   "sub": "Same $104/yr gas cost, run across a range of position sizes.",
+   "vo": "Finding the actual break-even point."
+  },
+  {
+   "type": "chart",
+   "chapter": "Worked example",
+   "title": "DIY gas drag vs. position size ($104/yr gas)",
+   "kind": "line",
+   "xlabels": [
+    "$1k",
+    "$2k",
+    "$4.16k",
+    "$10k",
+    "$50k"
+   ],
+   "ymin": 0,
+   "ymax": 11,
+   "yticks": [
+    [
+     0,
+     "0%"
+    ],
+    [
+     2.5,
+     "2.5%"
+    ],
+    [
+     10,
+     "10%"
+    ]
+   ],
+   "series": [
+    {
+     "values": [
+      10.4,
+      5.2,
+      2.5,
+      1.04,
+      0.208
+     ],
+     "tone": "warn",
+     "label": "DIY gas drag"
+    }
+   ],
+   "marks": [
+    {
+     "i": 2,
+     "text": "$4,160 — the break-even point",
+     "tone": "good"
+    },
+    {
+     "i": 0,
+     "text": "10.4%",
+     "tone": "bad"
+    }
+   ],
+   "vo": "Here's that same one hundred four dollars a year in gas, run across a much wider range of position sizes, so you can see exactly where the crossover actually happens. At one thousand dollars, gas drag is over ten percent, clearly worse than the vault. It keeps falling as size grows, crossing the vault's own two and a half point fee drag right around four thousand one hundred sixty dollars. Above that point, the vault's fees become the bigger cost every time; below it, D.I.Y.'s gas drag is."
+  },
+  {
+   "type": "statement",
+   "chapter": "Worked example",
+   "kicker": "What the break-even point tells you",
+   "lines": [
+    "Above ~$4,160 here, DIY probably wins.",
+    "Below it, the vault probably wins."
+   ],
+   "sub": "The number moves with your own gas and fees. The method doesn't.",
+   "vo": "Notice what that break-even number actually tells you, in plain terms. Above roughly four thousand one hundred sixty dollars, at this specific gas cost and fee structure, running the strategy yourself probably wins. Below it, the vault probably wins. Change the gas cost, or the vault's own fees, and that exact number moves, but the method for finding it stays exactly the same."
+  },
+  {
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Running this for your own numbers",
+   "steps": [
+    "Estimate your own realistic gas cost per harvest, and frequency",
+    "Divide annual gas cost by your position size, for your real drag %",
+    "Compare directly against the vault's total fee drag"
+   ],
+   "vo": "Here's how to actually run this comparison for your own numbers, rather than just reusing the ones from this example. Estimate your own realistic gas cost per harvest, and how often you'd actually do it. Divide that annual gas cost by your own position size, for your own real drag percentage. And compare that number directly against the vault's own total fee drag, the larger one is the one costing you more."
+  },
+  {
+   "type": "statement",
+   "chapter": "Worked example",
+   "kicker": "The one sentence to keep",
+   "lines": [
+    "The same vault is worth it, or not, purely based on your size.",
+    "Gas is flat. Only a bigger position dilutes it."
+   ],
+   "sub": "Run this comparison yourself, at your own actual size, every time.",
+   "vo": "Here's the one sentence this entire worked example exists to prove, worth holding onto more than either specific number. The exact same vault, with the exact same fees, is either clearly worth it or clearly not, purely depending on your own position size, since gas is a flat cost that only a larger position can meaningfully dilute."
+  },
+  {
+   "type": "steps",
+   "chapter": "Checklist",
+   "title": "Your checklist",
+   "steps": [
+    "Net APY after all vault fees computed",
+    "Compared with DIY gas drag at my size",
+    "Every underlying protocol reviewed"
+   ],
+   "vo": "Here's your checklist. Do it before depositing into any vault. Compute the actual net A.P.Y., after every fee the vault charges, not just its advertised gross number. Compare that against your own D.I.Y. gas drag, at your own actual position size, the way the worked example just did. And review every single underlying protocol the vault actually deposits into, since that risk is still entirely yours."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "check": false,
+   "items": [
+    "A vault: pools deposits, runs a strategy, hands back shares",
+    "Costs: performance fee, management fee, sometimes withdrawal fee",
+    "Adds its own code and strategy risk, on top of every protocol underneath",
+    "The real question: net APY vs. your own DIY gas drag, at your size"
+   ],
+   "vo": "Let's recap. A vault pools deposits, runs a strategy, and hands you shares in exchange. It can charge a performance fee, a management fee, and sometimes a withdrawal fee, each behaving differently. It adds its own code and strategy risk, on top of every protocol it uses underneath, never removing that risk. And whether it's worth it comes down to one real comparison: its net A.P.Y. against your own D.I.Y. gas drag, at your own actual size."
+  },
+  {
+   "type": "cta",
+   "chapter": "Recap",
+   "button": "Next: Lesson 4.6",
+   "sub": "Airdrops & points: opportunity cost",
+   "vo": "Compute the net APY after every fee, compare it against your own gas drag at your size, and review every protocol underneath. Next up, Lesson four point six: airdrops and points, opportunity cost.",
+   "cap": "Compute the net APY after every fee, compare it against your own gas drag at your size, and review every protocol underneath. Next up, Lesson 4.6: airdrops and points, opportunity cost."
+  }
+ ]
+}
