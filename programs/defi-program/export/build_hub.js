@@ -224,7 +224,7 @@ li.task input:checked + span { color: var(--muted); text-decoration: line-throug
   <a class="brand" href="#/">${logoMark(40, { nodes: false })}<div><b>ON-CHAIN <span>OPERATOR</span></b><small>COURSE HUB</small></div></a>
   <div class="search">${ICON('search', 16)}<input id="q" type="search" placeholder="Search lessons  ( / )" autocomplete="off"></div>
   <div class="overall"><span id="ovtxt"></span><div class="bar"><i id="ovbar"></i></div></div>
-  <nav class="nav-top"><a href="#/" data-r="home">${ICON('compass', 18)} Start here</a><a href="#/tools" data-r="tools">${ICON('chart', 18)} Calculators</a></nav>
+  <nav class="nav-top"><a href="#/" data-r="home">${ICON('compass', 18)} Start here</a><a href="directory.html">${ICON('book', 18)} Directory</a><a href="#/tools" data-r="tools">${ICON('chart', 18)} Calculators</a></nav>
   <nav id="tree"></nav>
 </aside>
 <main>
@@ -283,6 +283,7 @@ function home() {
     (D.welcome ? '<h2 class="sec">Welcome</h2>' + videoBlock(D.welcome) : '') +
     '<h2 class="sec">How every lesson works</h2><div class="grid">' +
     [['1 · Watch', 'The narrated video walks through the idea and the numbers on screen.'], ['2 · Do', 'Tick the checklist for real, with a small test amount. Your ticks are saved in this browser.'], ['3 · Check', 'Answer the quiz, reveal the answer, and mark yourself honestly.']].map(([a, b]) => '<div class="card"><h3>' + a + '</h3><p>' + b + '</p></div>').join('') + '</div>' +
+    '<p><a href="directory.html">Course directory</a> — every lesson, picture and worksheet, and where each one lives.</p>' +
     D.stages.map(([n, name, mods]) => '<h2 class="sec">Stage ' + n + ' · ' + name + '</h2><div class="grid">' + mods.map(mn => { const m = D.modules[mn], mt = m.lessons.filter(l => !l.starter), d = mt.filter(l => S.done[l.id]).length;
       return '<a class="card" href="#/m/' + mn + '"><div class="k">Module ' + mn + '</div><h3>' + esc(m.title) + '</h3><p>' + esc(m.outcome) + '</p><div class="bar" style="background:var(--panel)"><i style="width:' + (d / mt.length * 100) + '%"></i></div></a>'; }).join('') + '</div>').join('') +
     '<p class="disc">Educational content only · Not financial advice · No results are guaranteed · We will never ask for your seed phrase or keys.</p>';
