@@ -3,236 +3,563 @@ WEBVTT
 00:00:00.550 --> 00:00:02.305
 Lesson 3.6.
 
-00:00:02.305 --> 00:00:05.115
+00:00:02.305 --> 00:00:05.090
 Lending design deep dive: e-mode, caps,
 
-00:00:05.115 --> 00:00:08.015
-auctions, soft liquidation, bad debt.
+00:00:05.090 --> 00:00:08.245
+auctions, soft liquidation, and bad debt.
 
-00:00:08.015 --> 00:00:09.939
-By the end of this lesson, you'll
+00:00:08.245 --> 00:00:10.326
+By the end, you'll read a lending
 
-00:00:09.939 --> 00:00:12.033
-be able to read a lending protocol's
+00:00:10.326 --> 00:00:12.896
+protocol's risk parameters the way a risk
 
-00:00:12.033 --> 00:00:14.070
-risk parameters like a risk manager.
+00:00:12.896 --> 00:00:15.160
+manager does, not just as a borrower.
 
-00:00:15.370 --> 00:00:16.660
+00:00:16.460 --> 00:00:17.750
 Here's the plan.
 
-00:00:16.660 --> 00:00:18.345
-First, the key ideas.
+00:00:17.750 --> 00:00:21.472
+Efficiency mode, and isolation mode, the two ways protocols
 
-00:00:18.345 --> 00:00:21.060
-Then, a worked example, step by step.
+00:00:21.472 --> 00:00:25.060
+let some collateral behave differently from the rest.
 
-00:00:21.060 --> 00:00:22.585
-Then, your checklist.
+00:00:25.060 --> 00:00:26.801
+Supply and borrow caps, the
 
-00:00:22.585 --> 00:00:24.747
-And finally, a three-question quiz.
+00:00:26.801 --> 00:00:29.650
+limits that protect against manipulation.
 
-00:00:26.047 --> 00:00:32.037
-First, Efficiency mode (e-mode): higher LTVs for correlated assets
+00:00:29.650 --> 00:00:31.156
+The three different ways a
 
-00:00:32.037 --> 00:00:37.702
-(e.g. an LST against ETH, or stablecoin against stablecoin).
+00:00:31.156 --> 00:00:33.465
+protocol can actually liquidate you.
 
-00:00:37.702 --> 00:00:40.273
-Great for correlated loops; dangerous if
+00:00:33.465 --> 00:00:35.981
+And who pays when collateral ends up worth
 
-00:00:40.273 --> 00:00:42.642
-the correlation breaks (a depeg).
+00:00:35.981 --> 00:00:38.087
+less than the debt it backs, plus a
 
-00:00:42.642 --> 00:00:46.164
-Next, Isolation mode / isolated markets: newer or
+00:00:38.087 --> 00:00:40.310
+real worked example of e-mode failing.
 
-00:00:46.164 --> 00:00:50.039
-riskier collateral can only back limited borrowing, so
+00:00:41.610 --> 00:00:43.830
+Efficiency mode, and isolation mode.
 
-00:00:50.039 --> 00:00:53.157
-its failure can't infect the whole pool.
+00:00:45.130 --> 00:00:49.305
+Here's what efficiency mode, usually called e-mode, actually does.
 
-00:00:53.157 --> 00:00:56.051
-Then, Supply and borrow caps: limits on how
+00:00:49.305 --> 00:00:52.830
+It's a special setting for collateral and debt that
 
-00:00:56.051 --> 00:00:58.485
-much of an asset can be deposited or
+00:00:52.830 --> 00:00:56.355
+are expected to move together, like a staked E.T.H.
 
-00:00:58.485 --> 00:01:03.127
-borrowed, protecting against manipulation and illiquid collateral.
+00:00:56.355 --> 00:01:00.925
+token against E.T.H. itself, or one stablecoin against another.
 
-00:01:03.127 --> 00:01:07.655
-Also, Liquidation mechanisms: a fixed bonus (liquidators get e.g.
+00:01:00.925 --> 00:01:03.858
+Because the protocol expects those two prices to
 
-00:01:07.655 --> 00:01:11.153
-5% extra) vs Dutch auctions (the price falls until
+00:01:03.858 --> 00:01:06.851
+stay close, it allows a much higher loan-to-value
 
-00:01:11.153 --> 00:01:14.926
-someone buys, a better price discovery in calm markets
+00:01:06.851 --> 00:01:09.246
+than it would for unrelated assets.
 
-00:01:14.926 --> 00:01:19.317
-but vulnerable if keepers fail) vs soft liquidation (collateral
+00:01:09.246 --> 00:01:12.071
+That's genuinely useful for correlated loops.
 
-00:01:19.317 --> 00:01:23.090
-is converted gradually across price bands as the price
+00:01:12.071 --> 00:01:15.076
+But it's dangerous specifically if that correlation
 
-00:01:23.090 --> 00:01:26.588
-falls, and can convert back if the price recovers;
+00:01:15.076 --> 00:01:17.329
+breaks, meaning if the two assets ever
 
-00:01:26.588 --> 00:01:30.867
-losses come from the conversions rather than one penalty).
+00:01:17.329 --> 00:01:19.756
+trade apart from each other, even briefly.
 
-00:01:30.867 --> 00:01:33.241
-On top of that, Bad debt: when collateral
+00:01:21.056 --> 00:01:24.416
+Isolation mode does something almost the opposite.
 
-00:01:33.241 --> 00:01:35.632
-is worth less than the debt it backs.
+00:01:24.416 --> 00:01:27.106
+Instead of raising what one asset can do, it
 
-00:01:35.632 --> 00:01:38.562
-Who pays: a reserve or insurance fund, a
+00:01:27.106 --> 00:01:29.976
+contains what a risky one is allowed to do.
 
-00:01:38.562 --> 00:01:42.707
-staking "safety module", or lenders pro rata (socialised).
+00:01:29.976 --> 00:01:33.713
+A newer or less-proven collateral type gets isolated: it
 
-00:01:44.007 --> 00:01:46.821
-And finally, Risk curators / risk managers
+00:01:33.713 --> 00:01:36.860
+can only back a limited amount of borrowing, on
 
-00:01:46.821 --> 00:01:49.897
-set these parameters; governance approves them.
+00:01:36.860 --> 00:01:39.586
+its own, separate from the main pool.
 
-00:01:51.197 --> 00:01:54.507
-Let's look at the diagram: The liquidation cascade.
+00:01:39.586 --> 00:01:42.748
+That way, if that specific asset fails badly, the
 
-00:01:54.507 --> 00:01:56.067
-Take a moment with it.
+00:01:42.748 --> 00:01:46.480
+damage stays contained to its own isolated market, instead
 
-00:01:56.067 --> 00:01:58.477
-It's everything we've just said, in one picture.
+00:01:46.480 --> 00:01:49.832
+of spreading into everything else the protocol holds.
 
-00:01:59.777 --> 00:02:02.292
-Let's work an example, step by step.
+00:01:51.133 --> 00:01:52.223
+Quick check.
 
-00:02:02.292 --> 00:02:06.210
-An LST loop in e-mode at 90% LTV
+00:01:52.223 --> 00:01:53.758
+What's e-mode actually for?
 
-00:02:06.210 --> 00:02:11.852
-looks safe because LST and ETH move together.
+00:01:58.178 --> 00:02:03.864
+The answer: allowing higher loan-to-value ratios specifically for correlated
 
-00:02:11.852 --> 00:02:14.680
-If the LST trades at a 6% discount on
+00:02:03.864 --> 00:02:08.073
+assets, like a staked E.T.H. token against E.T.H. itself.
 
-00:02:14.680 --> 00:02:18.921
-the oracle during a panic, the "correlated" position can
+00:02:09.373 --> 00:02:12.157
+Here's how to actually check whether e-mode fits
 
-00:02:18.921 --> 00:02:22.942
-be liquidated even though ETH's price didn't move.
+00:02:12.157 --> 00:02:14.388
+a position, before you rely on it.
 
-00:02:22.942 --> 00:02:26.208
-Check what oracle prices the LST (market
+00:02:14.388 --> 00:02:17.250
+Confirm the two assets are genuinely expected
 
-00:02:26.208 --> 00:02:29.952
-price vs exchange rate) before trusting e-mode.
+00:02:17.250 --> 00:02:19.728
+to track, not just similarly named.
 
-00:02:31.252 --> 00:02:32.712
-Here's your checklist.
+00:02:19.728 --> 00:02:22.326
+Check what oracle prices each one, since that
 
-00:02:32.712 --> 00:02:34.247
-Do it now, for real.
+00:02:22.326 --> 00:02:24.998
+decides whether a brief panic reaches you.
 
-00:02:34.247 --> 00:02:36.579
-First, for each market: LTV,
+00:02:24.998 --> 00:02:27.823
+Ask what happens to your position specifically
 
-00:02:36.579 --> 00:02:41.142
-liquidation threshold, bonus/mechanism, caps, oracle.
+00:02:27.823 --> 00:02:30.468
+if that correlation gaps, even briefly.
 
-00:02:41.142 --> 00:02:43.480
-Next, I know who absorbs bad debt
+00:02:30.468 --> 00:02:32.790
+And only then decide whether the higher
 
-00:02:43.480 --> 00:02:45.637
-in each protocol I lend to.
+00:02:32.790 --> 00:02:35.228
+loan-to-value is worth that specific risk.
 
-00:02:45.637 --> 00:02:47.991
-And finally, E-mode positions have a
+00:02:36.528 --> 00:02:39.311
+Worth being precise about what isolation mode
 
-00:02:47.991 --> 00:02:50.091
-depeg scenario in my stress test.
+00:02:39.311 --> 00:02:42.215
+actually contains, since it's a boundary around
 
-00:02:51.391 --> 00:02:52.601
-Question 1.
+00:02:42.215 --> 00:02:44.693
+the asset, not a guarantee about it.
 
-00:02:52.601 --> 00:02:53.726
-What is e-mode for?
+00:02:44.693 --> 00:02:47.229
+An isolated market can still fail on
 
-00:02:58.146 --> 00:03:01.495
-The answer: Higher LTVs on correlated assets.
+00:02:47.229 --> 00:02:49.559
+its own terms, drop in value, get
 
-00:03:02.795 --> 00:03:04.040
-Question 2.
+00:02:49.559 --> 00:02:52.258
+liquidated, even run into bad debt.
 
-00:03:04.040 --> 00:03:07.835
-How does soft liquidation differ from a fixed-bonus liquidation?
+00:02:52.258 --> 00:02:55.077
+What isolation mode prevents is that failure
 
-00:03:12.255 --> 00:03:15.950
-The answer: Collateral is converted gradually across price
+00:02:55.077 --> 00:02:57.521
+from being able to touch collateral in
 
-00:03:15.950 --> 00:03:18.831
-bands (and can convert back) instead of being
+00:02:57.521 --> 00:03:00.653
+completely unrelated markets on the same protocol.
 
-00:03:18.831 --> 00:03:20.835
-seized in one go with a penalty.
+00:03:01.953 --> 00:03:03.543
+Supply and borrow caps.
 
-00:03:22.135 --> 00:03:23.405
-Question 3.
+00:03:04.843 --> 00:03:07.705
+Here's what caps actually protect against, and
 
-00:03:23.405 --> 00:03:25.280
+00:03:07.705 --> 00:03:10.867
+why they exist even on well-established assets.
+
+00:03:10.867 --> 00:03:12.982
+A supply cap limits how much of
+
+00:03:12.982 --> 00:03:15.360
+a given asset can be deposited into
+
+00:03:15.360 --> 00:03:17.907
+the protocol as collateral, total.
+
+00:03:17.907 --> 00:03:19.780
+A borrow cap limits how much of
+
+00:03:19.780 --> 00:03:22.187
+an asset can be borrowed out, total.
+
+00:03:22.187 --> 00:03:26.262
+Both exist specifically to protect against price manipulation on
+
+00:03:26.262 --> 00:03:29.835
+thin markets, and against a situation where the protocol
+
+00:03:29.835 --> 00:03:33.095
+holds more of an illiquid asset than could actually
+
+00:03:33.095 --> 00:03:35.477
+be sold if it needed to be liquidated.
+
+00:03:36.776 --> 00:03:39.790
+Worth being precise about who actually sets these
+
+00:03:39.790 --> 00:03:43.466
+numbers, since it isn't automatic or purely algorithmic.
+
+00:03:43.466 --> 00:03:47.711
+Risk curators, or risk managers, set the specific loan-to-value
+
+00:03:47.711 --> 00:03:51.956
+ratios, liquidation thresholds, and caps for each market, based
+
+00:03:51.956 --> 00:03:55.241
+on that asset's own liquidity and volatility.
+
+00:03:55.241 --> 00:03:59.381
+Protocol governance then reviews and approves those parameters.
+
+00:03:59.381 --> 00:04:02.225
+Both roles matter: read the parameters, not
+
+00:04:02.225 --> 00:04:04.746
+just the protocol's name or reputation.
+
+00:04:06.046 --> 00:04:07.671
+Three ways to get liquidated.
+
+00:04:08.971 --> 00:04:11.154
+Here's the first two, side by side,
+
+00:04:11.154 --> 00:04:14.547
+since they represent genuinely opposite trade-offs.
+
+00:04:14.547 --> 00:04:17.971
+A fixed bonus liquidation pays the liquidator a set
+
+00:04:17.971 --> 00:04:21.989
+extra amount, commonly around five percent of the collateral
+
+00:04:21.989 --> 00:04:24.857
+seized, as their incentive to act fast.
+
+00:04:24.857 --> 00:04:27.957
+It's simple and reliably fast, but that bonus is
+
+00:04:27.957 --> 00:04:31.547
+a fixed cost to you regardless of market conditions.
+
+00:04:31.547 --> 00:04:35.021
+A Dutch auction instead lets the price fall gradually
+
+00:04:35.021 --> 00:04:38.689
+until somebody actually buys, which can produce a better
+
+00:04:38.689 --> 00:04:41.777
+price in a calm market, but depends entirely on
+
+00:04:41.777 --> 00:04:45.637
+liquidator bots, called keepers, actually showing up to bid.
+
+00:04:46.937 --> 00:04:50.180
+And here's the third mechanism, soft liquidation, which
+
+00:04:50.180 --> 00:04:52.912
+works differently from both of the others.
+
+00:04:52.912 --> 00:04:55.341
+Instead of seizing your collateral all at
+
+00:04:55.341 --> 00:04:57.655
+once with a single penalty, it converts
+
+00:04:57.655 --> 00:05:00.316
+your collateral gradually, across a series of
+
+00:05:00.316 --> 00:05:02.872
+price bands as the price keeps falling.
+
+00:05:02.872 --> 00:05:05.927
+And critically, that conversion can actually reverse:
+
+00:05:05.927 --> 00:05:08.303
+if the price recovers before you're fully
+
+00:05:08.303 --> 00:05:11.432
+liquidated, some of that collateral converts back.
+
+00:05:11.432 --> 00:05:14.813
+Your losses come from the individual conversions along
+
+00:05:14.813 --> 00:05:17.517
+the way, not from one single, fixed penalty.
+
+00:05:18.817 --> 00:05:19.907
+Quick check.
+
+00:05:19.907 --> 00:05:21.985
+How does soft liquidation actually
+
+00:05:21.985 --> 00:05:24.242
+differ from a fixed-bonus liquidation?
+
+00:05:28.662 --> 00:05:32.812
+The answer: collateral is converted gradually across price bands,
+
+00:05:32.812 --> 00:05:36.019
+and can convert back if price recovers, instead of
+
+00:05:36.019 --> 00:05:38.912
+being seized all at once with a fixed penalty.
+
+00:05:40.212 --> 00:05:41.937
+Bad debt: who actually pays.
+
+00:05:43.237 --> 00:05:46.182
+Here's what happens when liquidation genuinely can't
+
+00:05:46.182 --> 00:05:48.293
+keep up, and collateral ends up worth
+
+00:05:48.293 --> 00:05:50.482
+less than the debt it was backing.
+
+00:05:50.482 --> 00:05:52.962
+That shortfall is called bad debt, and it
+
+00:05:52.962 --> 00:05:56.037
+doesn't just vanish; somebody has to absorb it.
+
+00:05:56.037 --> 00:05:58.055
+Some protocols hold a reserve or
+
+00:05:58.055 --> 00:06:00.802
+an insurance fund specifically for this.
+
+00:06:00.802 --> 00:06:03.628
+Others have a staking safety module, where staked
+
+00:06:03.628 --> 00:06:06.132
+tokens can be slashed to cover the gap.
+
+00:06:06.132 --> 00:06:09.639
+And some protocols instead socialise the loss, spreading
+
+00:06:09.639 --> 00:06:12.100
+it pro rata across all of their lenders.
+
+00:06:13.400 --> 00:06:16.829
+Worth being precise about why this question matters before
+
+00:06:16.829 --> 00:06:20.325
+you lend anywhere, not just after something goes wrong.
+
+00:06:20.325 --> 00:06:22.620
+Knowing who absorbs bad debt in a given
+
+00:06:22.620 --> 00:06:25.547
+protocol tells you what you're actually exposed to
+
+00:06:25.547 --> 00:06:28.129
+as a lender, even if you've never personally
+
+00:06:28.129 --> 00:06:29.921
+borrowed a dollar from it.
+
+00:06:29.921 --> 00:06:33.031
+A protocol with no reserve and no safety module
+
+00:06:33.031 --> 00:06:36.271
+is quietly asking its lenders to be that backstop.
+
+00:06:37.571 --> 00:06:38.576
+Worked example.
+
+00:06:39.876 --> 00:06:42.231
+Here's the scenario, step by step.
+
+00:06:42.231 --> 00:06:45.508
+An L.S.T., a liquid staking token, is looped
+
+00:06:45.508 --> 00:06:50.031
+against E.T.H. in e-mode, at ninety percent loan-to-value.
+
+00:06:50.031 --> 00:06:53.086
+It looks safe, because the L.S.T. and E.T.H.
+
+00:06:53.086 --> 00:06:56.781
+are expected to move together, almost in lockstep.
+
+00:06:56.781 --> 00:07:00.046
+Then, during a market panic, the L.S.T. trades
+
+00:07:00.046 --> 00:07:03.241
+at a six percent discount specifically on the
+
+00:07:03.241 --> 00:07:06.736
+oracle the protocol actually uses to price it.
+
+00:07:06.736 --> 00:07:09.132
+That discount alone is enough to push
+
+00:07:09.132 --> 00:07:11.906
+the position past its liquidation threshold.
+
+00:07:13.206 --> 00:07:15.164
+Here's the actual lesson this scenario
+
+00:07:15.164 --> 00:07:17.271
+proves, and it's worth sitting with.
+
+00:07:17.271 --> 00:07:21.747
+The position gets liquidated even though E.T.H.'s own price
+
+00:07:21.747 --> 00:07:25.552
+didn't move at all; only the LST's price, relative
+
+00:07:25.552 --> 00:07:28.986
+to E.T.H., on that specific oracle, moved.
+
+00:07:28.986 --> 00:07:31.083
+The correlation e-mode depends on
+
+00:07:31.083 --> 00:07:32.801
+isn't a law of physics.
+
+00:07:32.801 --> 00:07:35.218
+It's a market relationship that can gap,
+
+00:07:35.218 --> 00:07:37.399
+even briefly, and the oracle is what
+
+00:07:37.399 --> 00:07:40.111
+actually decides whether that gap reaches you.
+
+00:07:41.411 --> 00:07:44.932
+So the one thing worth checking before trusting any
+
+00:07:44.932 --> 00:07:48.996
+e-mode position is exactly which oracle prices your L.S.T.,
+
+00:07:48.996 --> 00:07:53.291
+since the two options behave very differently under stress.
+
+00:07:53.291 --> 00:07:56.865
+A market-price oracle reflects whatever the L.S.T.
+
+00:07:56.865 --> 00:07:59.318
+is actually trading at on the open
+
+00:07:59.318 --> 00:08:02.141
+market right now, discount included.
+
+00:08:02.141 --> 00:08:06.973
+An exchange-rate oracle instead reflects the token's underlying redemption
+
+00:08:06.973 --> 00:08:10.968
+value, which doesn't move just because trading briefly panics.
+
+00:08:12.268 --> 00:08:13.358
+Quick check.
+
+00:08:13.358 --> 00:08:15.233
 Who can end up paying for bad debt?
 
-00:03:29.700 --> 00:03:32.394
-The answer: Protocol reserves, a safety
+00:08:19.653 --> 00:08:23.312
+The answer: a protocol's reserve or insurance fund,
 
-00:03:32.394 --> 00:03:34.280
-module, or lenders pro rata.
+00:08:23.312 --> 00:08:26.618
+a staking safety module, or the protocol's own
 
-00:03:35.580 --> 00:03:36.825
+00:08:26.618 --> 00:08:29.503
+lenders, on a pro rata, socialised basis.
+
+00:08:30.803 --> 00:08:32.263
+Here's your checklist.
+
+00:08:32.263 --> 00:08:33.645
+Do it for every market
+
+00:08:33.645 --> 00:08:35.328
+you use, not just once.
+
+00:08:35.328 --> 00:08:39.015
+For each market: know its loan-to-value, its liquidation
+
+00:08:39.015 --> 00:08:42.766
+threshold, its liquidation mechanism and bonus, its caps,
+
+00:08:42.766 --> 00:08:45.653
+and specifically which oracle prices it.
+
+00:08:45.653 --> 00:08:47.838
+Know who actually absorbs bad debt
+
+00:08:47.838 --> 00:08:49.948
+in each protocol you lend to.
+
+00:08:49.948 --> 00:08:52.598
+And give every e-mode position of yours its
+
+00:08:52.598 --> 00:08:55.188
+own depeg scenario in your own stress test.
+
+00:08:56.488 --> 00:08:57.733
 Let's recap.
 
-00:03:36.825 --> 00:03:41.373
-Efficiency mode (e-mode): higher LTVs for correlated assets (e.g.
+00:08:57.733 --> 00:09:00.910
+E-mode raises LTV for correlated assets, but
 
-00:03:41.373 --> 00:03:45.395
-an LST against ETH. Isolation mode / isolated markets.
+00:09:00.910 --> 00:09:03.893
+is exposed if that correlation breaks.
 
-00:03:45.395 --> 00:03:46.821
-Supply and borrow caps: limits on how much
+00:09:03.893 --> 00:09:06.454
+Isolation mode contains a risky asset's
 
-00:03:46.821 --> 00:03:48.480
-of an asset can be deposited or borrowed.
+00:09:06.454 --> 00:09:08.418
+failure to its own market.
 
-00:03:48.480 --> 00:03:54.420
-Liquidation mechanisms: a fixed bonus (liquidators get e.g.
+00:09:08.418 --> 00:09:12.168
+Caps protect against manipulation and illiquid collateral.
 
-00:03:54.420 --> 00:03:58.859
-5% extra) vs Dutch auctions (the price falls until
+00:09:12.168 --> 00:09:16.219
+Liquidation mechanisms differ: fixed bonus, Dutch auction,
 
-00:03:58.859 --> 00:04:03.646
-someone buys, a better price discovery in calm markets
+00:09:16.219 --> 00:09:19.403
+or soft liquidation with reversible bands.
 
-00:04:03.646 --> 00:04:09.217
-but vulnerable if keepers fail) vs soft liquidation (collateral
+00:09:19.403 --> 00:09:21.478
+And bad debt has to go somewhere,
 
-00:04:09.217 --> 00:04:14.004
-is converted gradually across price bands as the price
+00:09:21.478 --> 00:09:23.859
+a reserve, a safety module, or lenders
 
-00:04:14.004 --> 00:04:18.356
-falls, and can convert back if the price recovers.
+00:09:23.859 --> 00:09:26.483
+themselves, so know which, before you lend.
 
-00:04:19.656 --> 00:04:22.171
-Do the checklist now, before you move on.
+00:09:27.783 --> 00:09:31.657
+Check the parameters, not just the protocol's name: LTV,
 
-00:04:22.171 --> 00:04:24.455
+00:09:31.657 --> 00:09:36.103
+threshold, mechanism, caps, oracle, and who absorbs bad debt.
+
+00:09:36.103 --> 00:09:38.347
 Next up, Lesson 3.7: CDP
 
-00:04:24.455 --> 00:04:27.926
-stablecoins: minting your own dollars.
+00:09:38.347 --> 00:09:41.758
+stablecoins, minting your own dollars.
