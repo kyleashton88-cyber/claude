@@ -1,0 +1,465 @@
+{
+ "id": "lesson-04-1",
+ "title": "Lesson 4.1: Yield farming, base yield vs emissions",
+ "size": [
+  1920,
+  1080
+ ],
+ "group": "lessons",
+ "maxMinutes": 25,
+ "tag": "Lesson 4.1",
+ "gold": true,
+ "music": true,
+ "musicLevel": 0.14,
+ "seed": 70,
+ "use": "Lesson 4.1 page in the Whop course. Hand-written gold-standard script: base yield vs emissions, why emissions APYs fall, mercenary liquidity, and the source material's own 60% APY worked example, as walk-throughs.",
+ "thumbnail": {
+  "title": "Yield farming",
+  "subtitle": "Lesson 4.1"
+ },
+ "scenes": [
+  {
+   "type": "title",
+   "chapter": "Intro",
+   "eyebrow": "Lesson 4.1",
+   "num": "4.1",
+   "title": "Yield farming: base yield vs emissions",
+   "sub": "Would you take the risk for what's left, once the printing stops?",
+   "vo": "Lesson four point one. Yield farming: base yield versus emissions. By the end, you'll be able to split any farm's advertised A.P.Y. into what's actually earned, and what's simply printed, and answer the one question that actually matters about it.",
+   "cap": "Lesson 4.1. Yield farming: base yield vs emissions. By the end, you'll be able to split any farm's advertised APY into what's actually earned, and what's simply printed, and answer the one question that actually matters about it."
+  },
+  {
+   "type": "pillars",
+   "chapter": "Intro",
+   "title": "What this lesson covers",
+   "items": [
+    {
+     "icon": "coins",
+     "title": "Base yield",
+     "text": "Trading fees or borrower interest, from real users"
+    },
+    {
+     "icon": "chart",
+     "title": "Emissions",
+     "text": "New tokens printed to attract deposits"
+    },
+    {
+     "icon": "alert",
+     "title": "Mercenary liquidity",
+     "text": "Leaves when the incentives end"
+    },
+    {
+     "icon": "target",
+     "title": "Worked example",
+     "text": "60% APY, split down to the real number"
+    }
+   ],
+   "vo": "Here's the plan. Base yield, what's genuinely earned from real activity. Emissions, what's simply printed and handed out. Mercenary liquidity, the capital that only ever showed up for the printing. And a full worked example, using the source material's own sixty percent A.P.Y. farm, split all the way down to the number that actually matters."
+  },
+  {
+   "type": "title",
+   "chapter": "Base yield vs emissions",
+   "eyebrow": "Base yield vs emissions",
+   "num": "1",
+   "title": "Two sources, one number on the dashboard",
+   "sub": "Both can produce the exact same-looking APY.",
+   "vo": "Base yield vs. emissions."
+  },
+  {
+   "type": "image",
+   "src": "assets/diagrams/base-vs-emissions.png",
+   "eyebrow": "Where a farm's APY actually comes from",
+   "wide": true,
+   "chapter": "Base yield vs emissions",
+   "vo": "Here's exactly where a farming A.P.Y. splits, underneath that single headline number. Base yield is trading fees, or borrower interest, paid by real users doing real activity, the same kind of yield you'd find in any lending market or A.M.M. Emissions are new tokens, printed directly by the protocol, and handed out specifically to attract deposits it wants right now. Both get added together into the one number the dashboard actually shows you."
+  },
+  {
+   "type": "flow",
+   "chapter": "Base yield vs emissions",
+   "title": "Why emissions APYs tend to fall",
+   "nodes": [
+    {
+     "label": "More capital arrives",
+     "sub": "Chasing the advertised rate",
+     "icon": "chart"
+    },
+    {
+     "label": "Shares the same reward pool",
+     "sub": "Each depositor's share shrinks",
+     "icon": "coins"
+    },
+    {
+     "label": "Reward token price often falls",
+     "sub": "As more of it gets printed and sold",
+     "icon": "alert"
+    },
+    {
+     "label": "Real value falls twice over",
+     "sub": "Dilution, plus a falling token price",
+     "icon": "target"
+    }
+   ],
+   "vo": "Here's the actual mechanism behind why emissions A.P.Y.s tend to fall over time, even when nothing else about the farm changes. More capital arrives, chasing the advertised rate. That capital shares the same fixed pool of reward tokens, so each depositor's individual share shrinks. And separately, as more of the reward token gets printed and sold, its own market price very often declines, shrinking the real value of that share even further, on top of the dilution."
+  },
+  {
+   "type": "statement",
+   "chapter": "Base yield vs emissions",
+   "kicker": "What emissions actually are",
+   "lines": [
+    "A deliberate cost, paid in the protocol's own token.",
+    "Reasonable for bootstrapping. The mistake is treating it as durable."
+   ],
+   "sub": "A subsidy, correctly labeled, is fine. Mislabeled, it's the whole problem.",
+   "vo": "Worth being precise about what emissions actually are, since the word can sound negative when it isn't automatically. Emissions are a cost, deliberately paid in the protocol's own token, to buy deposits faster than organic activity alone would attract them. That can be a completely reasonable strategy, for a protocol genuinely trying to bootstrap early liquidity. The only mistake is treating that printed cost as if it were durable, ordinary yield."
+  },
+  {
+   "type": "steps",
+   "chapter": "Base yield vs emissions",
+   "title": "Finding the split yourself",
+   "steps": [
+    "Check trading volume vs TVL, with the fee rate, for base yield",
+    "Check the emissions dashboard for reward tokens allocated to that pool",
+    "Headline APY minus base yield = the emissions portion"
+   ],
+   "vo": "Here's how to actually find this split yourself, when a farm's own dashboard doesn't show it broken out already. Check the underlying pool's trading volume against its total value locked, since that ratio, combined with the pool's fee rate, gives you a genuine estimate of the base yield. Separately, check the protocol's emissions dashboard or documentation for exactly how many reward tokens are allocated to that specific pool. And treat whatever's left over, once base yield is subtracted from the headline number, as the emissions portion."
+  },
+  {
+   "type": "quiz",
+   "chapter": "Base yield vs emissions",
+   "n": 1,
+   "of": 3,
+   "q": "What's the test for a farm?",
+   "a": "Does the base yield alone justify the risk?",
+   "vo": "Quick check. What's the actual test for whether a farm is worth the risk? [[pause 4]] The answer: does the base yield alone, with emissions removed entirely, justify the risk you'd be taking on."
+  },
+  {
+   "type": "title",
+   "chapter": "Mercenary liquidity",
+   "eyebrow": "Mercenary liquidity",
+   "num": "1",
+   "title": "Capital that only ever showed up for the printing",
+   "sub": "It leaves the moment the incentives do. Often taking the base yield with it.",
+   "vo": "Mercenary liquidity."
+  },
+  {
+   "type": "flow",
+   "chapter": "Mercenary liquidity",
+   "title": "The mercenary liquidity cycle",
+   "nodes": [
+    {
+     "label": "Arrives for the emissions rate",
+     "sub": "Not genuine interest in the protocol",
+     "icon": "chart"
+    },
+    {
+     "label": "Stays while it's attractive",
+     "sub": "Relative to alternatives elsewhere",
+     "icon": "eye"
+    },
+    {
+     "label": "Leaves when incentives end",
+     "sub": "Often within days",
+     "icon": "alert"
+    },
+    {
+     "label": "Takes base yield with it",
+     "sub": "Less real activity, for whoever remains",
+     "icon": "target"
+    }
+   ],
+   "vo": "Here's the actual sequence mercenary liquidity follows, from arrival to departure. It arrives specifically chasing an attractive emissions rate, not because it has any particular interest in that protocol. It stays for exactly as long as that rate remains attractive relative to alternatives elsewhere. And the moment incentives are reduced, or end, it leaves, often within days, taking a large share of the pool's total liquidity with it as it goes."
+  },
+  {
+   "type": "statement",
+   "chapter": "Mercenary liquidity",
+   "kicker": "The damage left behind",
+   "lines": [
+    "Thinner liquidity often means thinner base yield too.",
+    "Remaining depositors can lose on both fronts at once."
+   ],
+   "sub": "The exit doesn't just remove emissions. It can shrink what's left too.",
+   "vo": "Worth being precise about the actual damage this does to whoever stays behind, since it isn't just that the emissions disappear. When a large share of a pool's liquidity leaves all at once, trading in that pool often gets thinner and more volatile too, meaning even the genuine, organic base yield can fall for the depositors who remain, on top of losing the emissions entirely."
+  },
+  {
+   "type": "compare",
+   "chapter": "Mercenary liquidity",
+   "left": {
+    "label": "Mercenary capital",
+    "tone": "bad",
+    "items": [
+     "Tracks the emissions rate specifically",
+     "Moves the instant a better rate appears elsewhere"
+    ]
+   },
+   "right": {
+    "label": "Base-yield capital",
+    "tone": "good",
+    "items": [
+     "Was never there for the emissions",
+     "Tends to stay through emissions changes"
+    ]
+   },
+   "vo": "Here's the actual difference between capital that's mercenary and capital that isn't, side by side, since not every depositor in a farm behaves the same way. Mercenary capital tracks the emissions rate specifically, and moves the instant a better rate appears anywhere else. Capital that's there for the base yield itself tends to stay through emissions changes, since it was never the reason it showed up in the first place."
+  },
+  {
+   "type": "quiz",
+   "chapter": "Mercenary liquidity",
+   "n": 2,
+   "of": 3,
+   "q": "What is mercenary liquidity?",
+   "a": "Capital that moves on as soon as incentives end.",
+   "vo": "Quick check. What is mercenary liquidity, exactly? [[pause 4]] The answer: capital that moves on as soon as incentives end, often taking a large share of the pool's base yield along with it."
+  },
+  {
+   "type": "title",
+   "chapter": "Worked example",
+   "eyebrow": "Worked example",
+   "num": "1",
+   "title": "A 60% APY farm, split all the way down",
+   "sub": "The source material's own scenario.",
+   "vo": "Worked example."
+  },
+  {
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "The headline number, split",
+   "steps": [
+    "Dashboard shows: 60% APY, total",
+    "Split: 5% trading fees + 55% reward tokens (emissions)",
+    "Already: over 90% of the headline is emissions"
+   ],
+   "result": "A number that's almost entirely printed, not earned",
+   "vo": "Here's the farm, exactly as advertised. A dashboard shows sixty percent A.P.Y., total. Split honestly, that's five percent from genuine trading fees, and fifty-five percent paid out in reward tokens, as emissions. Already, before anything else happens, more than ninety percent of that headline number is emissions, not organic activity."
+  },
+  {
+   "type": "stats",
+   "chapter": "Worked example",
+   "title": "Valuing the reward token realistically (−50% average)",
+   "stats": [
+    [
+     "55%",
+     "Emissions, at face value"
+    ],
+    [
+     "27.5%",
+     "Emissions, at a realistic −50% price"
+    ],
+    [
+     "32.5%",
+     "Real return: 5% fees + 27.5%"
+    ]
+   ],
+   "vo": "Now here's what happens once you account for the reward token's actual price, using the source material's own realistic assumption: that it falls fifty percent, on average, across the period you're actually harvesting and selling it. Fifty-five percent of emissions, valued at half price, is worth about twenty-seven and a half percent, not the full fifty-five. Add that back to the five percent in genuine fees, and the real return comes to about thirty-two and a half percent."
+  },
+  {
+   "type": "compare",
+   "chapter": "Worked example",
+   "left": {
+    "label": "With emissions (realistic)",
+    "tone": "warn",
+    "items": [
+     "~32.5% real return",
+     "Depends on the printing continuing"
+    ]
+   },
+   "right": {
+    "label": "Emissions removed entirely",
+    "tone": "good",
+    "items": [
+     "5%, from genuine fees alone",
+     "What's left once the subsidy is gone"
+    ]
+   },
+   "vo": "And here's the actual question this whole exercise exists to answer, laid out side by side. With emissions included, even realistically discounted, the farm still shows an attractive thirty-two and a half percent. But strip emissions out completely, and account for nothing except genuine, durable activity, and you're left with exactly five percent."
+  },
+  {
+   "type": "statement",
+   "chapter": "Worked example",
+   "kicker": "The one question that matters",
+   "lines": [
+    "Would you take this protocol's risk for 5%?",
+    "Not the headline. Not the realistic number either."
+   ],
+   "sub": "That's the real question. Everything else is the subsidy talking.",
+   "vo": "Here's the one question this entire worked example exists to make you ask, every single time, before entering any farm. Would you take on this specific protocol's risk, its smart contract risk, its impermanent loss, its gas costs, for five percent? Not for the sixty percent headline. Not even for the thirty-two and a half percent realistic number. For the five percent that's actually durable."
+  },
+  {
+   "type": "title",
+   "chapter": "Worked example",
+   "eyebrow": "Worked example",
+   "num": "2",
+   "title": "The same farm, at five different price assumptions",
+   "sub": "One assumption drives almost the entire result.",
+   "vo": "How sensitive is that number, really?"
+  },
+  {
+   "type": "chart",
+   "chapter": "Worked example",
+   "title": "Real return vs. reward-token price decline",
+   "kind": "line",
+   "xlabels": [
+    "0%",
+    "25%",
+    "50%",
+    "75%",
+    "100%"
+   ],
+   "ymin": 0,
+   "ymax": 65,
+   "yticks": [
+    [
+     0,
+     "0%"
+    ],
+    [
+     30,
+     "30%"
+    ],
+    [
+     60,
+     "60%"
+    ]
+   ],
+   "series": [
+    {
+     "values": [
+      60,
+      46.25,
+      32.5,
+      18.75,
+      5
+     ],
+     "tone": "warn",
+     "label": "Real return"
+    }
+   ],
+   "marks": [
+    {
+     "i": 2,
+     "text": "32.5% (the source's own assumption)",
+     "tone": "good"
+    },
+    {
+     "i": 4,
+     "text": "5% (fees only)",
+     "tone": "bad",
+     "below": true
+    }
+   ],
+   "vo": "Here's the exact same farm, run across five different assumptions for how far the reward token actually falls, from a full recovery to a total collapse. If the reward token doesn't fall at all, the real return is the full sixty percent headline. At a twenty-five percent decline, it's about forty-six percent. At the source material's own fifty percent assumption, thirty-two and a half. At seventy-five percent, under nineteen. And if the reward token falls to zero, all that's left is the five percent in genuine fees."
+  },
+  {
+   "type": "statement",
+   "chapter": "Worked example",
+   "kicker": "What the straight line tells you",
+   "lines": [
+    "The whole result rides on one assumption.",
+    "Guess too small a decline, and you overestimate by that same margin."
+   ],
+   "sub": "This is why 'realistic, not best-case' matters so much.",
+   "vo": "Notice how this line is almost perfectly straight, which tells you something important: the entire result rides on a single assumption, how much the reward token actually falls, and that assumption drives the outcome almost one-for-one. Guess a smaller decline than what actually happens, and you've overestimated your real return by roughly that same margin."
+  },
+  {
+   "type": "steps",
+   "chapter": "Worked example",
+   "title": "Estimating the decline yourself",
+   "steps": [
+    "Check the reward token's price during past emissions periods",
+    "Check the emission schedule — faster printing, faster dilution",
+    "When unsure, default to the more conservative estimate"
+   ],
+   "result": "A farm that clears the conservative bar clears the optimistic one too",
+   "vo": "Here's how to actually estimate that decline yourself, for a real farm, instead of guessing. Pull up the reward token's own price chart, and look specifically at how it's behaved during past emissions periods, not just its all-time high. Check the emission schedule itself, since a faster printing rate tends to mean faster dilution. And when genuinely unsure, default to the more conservative estimate, since a farm that clears that bar clears the optimistic one too."
+  },
+  {
+   "type": "quiz",
+   "chapter": "Worked example",
+   "n": 3,
+   "of": 3,
+   "q": "Why do emissions APYs fall?",
+   "a": "More capital shares the rewards, and the reward token's price often declines.",
+   "vo": "Quick check. Why do emissions A.P.Y.s tend to fall over time? [[pause 4]] The answer: more capital arrives to share the same reward pool, and the reward token's own price often declines as more of it gets printed and sold."
+  },
+  {
+   "type": "title",
+   "chapter": "Checklist",
+   "eyebrow": "Checklist",
+   "num": "1",
+   "title": "Decide this before you enter, not during",
+   "sub": "A rule set in advance beats a decision made while watching the price move.",
+   "vo": "Setting your harvest schedule."
+  },
+  {
+   "type": "statement",
+   "chapter": "Checklist",
+   "kicker": "Why this gets decided in advance",
+   "lines": [
+    "A fixed schedule removes the in-the-moment temptation to hold.",
+    "Hoping for a recovery isn't a plan; it's the way you lose the real return."
+   ],
+   "sub": "Decide the rule once. Then just follow it.",
+   "vo": "Worth deciding this specific detail before you ever deposit, not while you're already watching the reward token's price move in real time. A fixed schedule, say harvesting and converting to a stablecoin on a set day each week, removes the temptation to hold reward tokens hoping for a recovery that the earlier chart just showed you isn't the way to bet."
+  },
+  {
+   "type": "steps",
+   "chapter": "Checklist",
+   "title": "Your checklist",
+   "steps": [
+    "APY split into base yield vs incentives",
+    "Reward token valued at a realistic, falling price",
+    "Harvest-and-sell schedule set in advance"
+   ],
+   "vo": "Here's your checklist. Do it before entering any farm, not after. Split the advertised A.P.Y. into base yield versus incentives, explicitly, using the protocol's own numbers. Value the reward token at a realistic price, one that assumes it falls, not its current, best-case price. And set your harvest-and-sell schedule in advance, rather than deciding it emotionally, in the moment, while watching the token's price move."
+  },
+  {
+   "type": "title",
+   "chapter": "Checklist",
+   "eyebrow": "Checklist",
+   "num": "2",
+   "title": "Just to prove this isn't a one-off calculation",
+   "sub": "Purely illustrative, to show the method transfers.",
+   "vo": "The same method, a different farm."
+  },
+  {
+   "type": "stats",
+   "chapter": "Checklist",
+   "title": "A different farm, same method (illustrative)",
+   "stats": [
+    [
+     "80%",
+     "Headline APY"
+    ],
+    [
+     "45%",
+     "Real return, at −50% decline"
+    ],
+    [
+     "10%",
+     "Fees only, emissions removed"
+    ]
+   ],
+   "vo": "Here's the same method, applied to a completely different, purely illustrative farm, just to show it's a repeatable habit, not a one-off calculation tied to that specific sixty percent example. Say a farm shows eighty percent A.P.Y.: ten percent fees, seventy percent emissions. At the same realistic fifty percent decline assumption, that's forty-five percent real return, and just ten percent with emissions removed entirely. Same method. Same honest question, on a completely different number."
+  },
+  {
+   "type": "bullets",
+   "chapter": "Recap",
+   "title": "Recap",
+   "check": false,
+   "items": [
+    "Base yield: real activity. Emissions: printed, not durable",
+    "Emissions APYs fall through dilution and falling token price",
+    "Mercenary liquidity leaves when incentives end — often taking base yield with it",
+    "The real question: what's left once emissions are removed entirely?"
+   ],
+   "vo": "Let's recap. Base yield comes from real activity: fees and borrower interest. Emissions are printed tokens, a deliberate cost, not durable yield. Emissions A.P.Y.s tend to fall, through dilution and falling token price, together. Mercenary liquidity arrives for the emissions and leaves the moment they end, often taking base yield with it. And the real question is never the headline number: it's what's left once emissions are gone entirely."
+  },
+  {
+   "type": "cta",
+   "chapter": "Recap",
+   "button": "Next: Lesson 4.2",
+   "sub": "Native staking",
+   "vo": "Before entering any farm, split its APY, value the reward token realistically, and ask whether the base yield alone is worth the risk. Next up, Lesson four point two: native staking.",
+   "cap": "Before entering any farm, split its APY, value the reward token realistically, and ask whether the base yield alone is worth the risk. Next up, Lesson 4.2: native staking."
+  }
+ ]
+}

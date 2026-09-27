@@ -6,149 +6,614 @@ Lesson 4.1.
 00:00:02.185 --> 00:00:05.371
 Yield farming: base yield vs emissions.
 
-00:00:05.371 --> 00:00:08.115
-By the end of this lesson, you'll be able
+00:00:05.371 --> 00:00:07.687
+By the end, you'll be able to split
 
-00:00:08.115 --> 00:00:11.121
-to split a farm's APY into what's earned from
+00:00:07.687 --> 00:00:11.224
+any farm's advertised APY into what's actually earned,
 
-00:00:11.121 --> 00:00:14.584
-real activity and what's paid in newly minted tokens.
+00:00:11.224 --> 00:00:14.183
+and what's simply printed, and answer the one
 
-00:00:15.884 --> 00:00:17.174
+00:00:14.183 --> 00:00:16.756
+question that actually matters about it.
+
+00:00:18.056 --> 00:00:19.346
 Here's the plan.
 
-00:00:17.174 --> 00:00:18.859
-First, the key ideas.
+00:00:19.346 --> 00:00:22.801
+Base yield, what's genuinely earned from real activity.
 
-00:00:18.859 --> 00:00:21.574
-Then, a worked example, step by step.
+00:00:22.801 --> 00:00:25.641
+Emissions, what's simply printed and handed out.
 
-00:00:21.574 --> 00:00:23.099
-Then, your checklist.
+00:00:25.641 --> 00:00:28.132
+Mercenary liquidity, the capital that only
 
-00:00:23.099 --> 00:00:25.261
-And finally, a three-question quiz.
+00:00:28.132 --> 00:00:30.286
+ever showed up for the printing.
 
-00:00:26.561 --> 00:00:30.266
-First, Base yield: trading fees or borrower interest.
+00:00:30.286 --> 00:00:34.035
+And a full worked example, using the source material's
 
-00:00:30.266 --> 00:00:31.941
-Paid by real users.
+00:00:34.035 --> 00:00:37.376
+own sixty percent A.P.Y. farm, split all the way
 
-00:00:31.941 --> 00:00:34.832
-Next, Emissions / incentives: new tokens
+00:00:37.376 --> 00:00:40.171
+down to the number that actually matters.
 
-00:00:34.832 --> 00:00:37.953
-the protocol prints to attract deposits.
+00:00:41.471 --> 00:00:43.486
+Base yield vs. emissions.
 
-00:00:37.953 --> 00:00:41.633
-The reward token often falls while emissions continue.
+00:00:44.786 --> 00:00:47.207
+Here's exactly where a farming A.P.Y.
 
-00:00:41.633 --> 00:00:45.947
-And finally, Mercenary liquidity: capital that leaves when incentives
+00:00:47.207 --> 00:00:50.501
+splits, underneath that single headline number.
 
-00:00:45.947 --> 00:00:48.473
-end, often taking the base yield with it.
+00:00:50.501 --> 00:00:53.860
+Base yield is trading fees, or borrower interest,
 
-00:00:49.773 --> 00:00:52.288
-Let's work an example, step by step.
+00:00:53.860 --> 00:00:56.815
+paid by real users doing real activity, the
 
-00:00:52.288 --> 00:00:55.528
-A farm shows 60% APY: 5%
+00:00:56.815 --> 00:00:59.301
+same kind of yield you'd find in any
 
-00:00:55.528 --> 00:00:59.457
-fees + 55% in reward tokens.
+00:00:59.301 --> 00:01:02.727
+lending market or A.M.M. Emissions are new tokens,
 
-00:00:59.457 --> 00:01:03.748
-If the reward token falls 50% on average while
+00:01:02.727 --> 00:01:06.018
+printed directly by the protocol, and handed out
 
-00:01:03.748 --> 00:01:08.495
-you harvest, the emissions are worth ~27.5%, so the
+00:01:06.018 --> 00:01:09.811
+specifically to attract deposits it wants right now.
 
-00:01:08.495 --> 00:01:13.816
-real return is ~32.5%, before impermanent loss and gas.
+00:01:09.811 --> 00:01:11.798
+Both get added together into the one
 
-00:01:13.816 --> 00:01:17.576
-Remove emissions entirely and you're left with 5%.
+00:01:11.798 --> 00:01:13.946
+number the dashboard actually shows you.
 
-00:01:17.576 --> 00:01:20.061
-Would you take the risk for 5%?
+00:01:15.246 --> 00:01:18.849
+Here's the actual mechanism behind why emissions
 
-00:01:20.061 --> 00:01:21.366
-That's the real question.
+00:01:18.849 --> 00:01:21.570
+A.P.Y.s tend to fall over time, even
 
-00:01:22.666 --> 00:01:24.126
+00:01:21.570 --> 00:01:24.885
+when nothing else about the farm changes.
+
+00:01:24.885 --> 00:01:28.250
+More capital arrives, chasing the advertised rate.
+
+00:01:28.250 --> 00:01:30.949
+That capital shares the same fixed pool of
+
+00:01:30.949 --> 00:01:35.014
+reward tokens, so each depositor's individual share shrinks.
+
+00:01:35.014 --> 00:01:38.150
+And separately, as more of the reward token gets
+
+00:01:38.150 --> 00:01:41.350
+printed and sold, its own market price very often
+
+00:01:41.350 --> 00:01:44.806
+declines, shrinking the real value of that share even
+
+00:01:44.806 --> 00:01:46.854
+further, on top of the dilution.
+
+00:01:48.154 --> 00:01:51.665
+Worth being precise about what emissions actually are, since
+
+00:01:51.665 --> 00:01:55.189
+the word can sound negative when it isn't automatically.
+
+00:01:55.189 --> 00:01:58.212
+Emissions are a cost, deliberately paid in the
+
+00:01:58.212 --> 00:02:01.427
+protocol's own token, to buy deposits faster than
+
+00:02:01.427 --> 00:02:04.428
+organic activity alone would attract them.
+
+00:02:04.428 --> 00:02:07.465
+That can be a completely reasonable strategy, for
+
+00:02:07.465 --> 00:02:11.228
+a protocol genuinely trying to bootstrap early liquidity.
+
+00:02:11.228 --> 00:02:14.109
+The only mistake is treating that printed cost
+
+00:02:14.109 --> 00:02:16.438
+as if it were durable, ordinary yield.
+
+00:02:17.738 --> 00:02:19.860
+Here's how to actually find this split
+
+00:02:19.860 --> 00:02:22.364
+yourself, when a farm's own dashboard doesn't
+
+00:02:22.364 --> 00:02:24.133
+show it broken out already.
+
+00:02:24.133 --> 00:02:27.458
+Check the underlying pool's trading volume against its
+
+00:02:27.458 --> 00:02:30.602
+total value locked, since that ratio, combined with
+
+00:02:30.602 --> 00:02:33.081
+the pool's fee rate, gives you a genuine
+
+00:02:33.081 --> 00:02:35.013
+estimate of the base yield.
+
+00:02:35.013 --> 00:02:38.583
+Separately, check the protocol's emissions dashboard or
+
+00:02:38.583 --> 00:02:41.708
+documentation for exactly how many reward tokens
+
+00:02:41.708 --> 00:02:44.303
+are allocated to that specific pool.
+
+00:02:44.303 --> 00:02:47.390
+And treat whatever's left over, once base yield is
+
+00:02:47.390 --> 00:02:51.143
+subtracted from the headline number, as the emissions portion.
+
+00:02:52.443 --> 00:02:53.533
+Quick check.
+
+00:02:53.533 --> 00:02:55.373
+What's the actual test for whether
+
+00:02:55.373 --> 00:02:56.688
+a farm is worth the risk?
+
+00:03:01.108 --> 00:03:04.583
+The answer: does the base yield alone, with emissions
+
+00:03:04.583 --> 00:03:08.058
+removed entirely, justify the risk you'd be taking on.
+
+00:03:09.358 --> 00:03:10.733
+Mercenary liquidity.
+
+00:03:12.033 --> 00:03:14.965
+Here's the actual sequence mercenary liquidity
+
+00:03:14.965 --> 00:03:17.448
+follows, from arrival to departure.
+
+00:03:17.448 --> 00:03:21.257
+It arrives specifically chasing an attractive emissions rate, not
+
+00:03:21.257 --> 00:03:24.788
+because it has any particular interest in that protocol.
+
+00:03:24.788 --> 00:03:26.985
+It stays for exactly as long as that
+
+00:03:26.985 --> 00:03:30.788
+rate remains attractive relative to alternatives elsewhere.
+
+00:03:30.788 --> 00:03:33.973
+And the moment incentives are reduced, or end, it
+
+00:03:33.973 --> 00:03:37.222
+leaves, often within days, taking a large share of
+
+00:03:37.222 --> 00:03:40.153
+the pool's total liquidity with it as it goes.
+
+00:03:41.453 --> 00:03:44.059
+Worth being precise about the actual damage
+
+00:03:44.059 --> 00:03:46.487
+this does to whoever stays behind, since
+
+00:03:46.487 --> 00:03:49.333
+it isn't just that the emissions disappear.
+
+00:03:49.333 --> 00:03:52.357
+When a large share of a pool's liquidity leaves
+
+00:03:52.357 --> 00:03:55.191
+all at once, trading in that pool often gets
+
+00:03:55.191 --> 00:03:58.782
+thinner and more volatile too, meaning even the genuine,
+
+00:03:58.782 --> 00:04:01.994
+organic base yield can fall for the depositors who
+
+00:04:01.994 --> 00:04:05.018
+remain, on top of losing the emissions entirely.
+
+00:04:06.318 --> 00:04:10.532
+Here's the actual difference between capital that's mercenary and
+
+00:04:10.532 --> 00:04:13.725
+capital that isn't, side by side, since not every
+
+00:04:13.725 --> 00:04:16.643
+depositor in a farm behaves the same way.
+
+00:04:16.643 --> 00:04:20.773
+Mercenary capital tracks the emissions rate specifically, and moves
+
+00:04:20.773 --> 00:04:23.988
+the instant a better rate appears anywhere else.
+
+00:04:23.988 --> 00:04:26.973
+Capital that's there for the base yield itself tends
+
+00:04:26.973 --> 00:04:30.014
+to stay through emissions changes, since it was never
+
+00:04:30.014 --> 00:04:32.436
+the reason it showed up in the first place.
+
+00:04:33.736 --> 00:04:34.826
+Quick check.
+
+00:04:34.826 --> 00:04:37.151
+What is mercenary liquidity, exactly?
+
+00:04:41.571 --> 00:04:44.174
+The answer: capital that moves on as soon
+
+00:04:44.174 --> 00:04:47.024
+as incentives end, often taking a large share
+
+00:04:47.024 --> 00:04:49.441
+of the pool's base yield along with it.
+
+00:04:50.741 --> 00:04:51.746
+Worked example.
+
+00:04:53.046 --> 00:04:55.911
+Here's the farm, exactly as advertised.
+
+00:04:55.911 --> 00:04:59.701
+A dashboard shows sixty percent A.P.Y., total.
+
+00:04:59.701 --> 00:05:02.829
+Split honestly, that's five percent from genuine
+
+00:05:02.829 --> 00:05:05.765
+trading fees, and fifty-five percent paid out
+
+00:05:05.765 --> 00:05:08.044
+in reward tokens, as emissions.
+
+00:05:08.044 --> 00:05:11.884
+Already, before anything else happens, more than ninety percent
+
+00:05:11.884 --> 00:05:15.424
+of that headline number is emissions, not organic activity.
+
+00:05:16.724 --> 00:05:19.764
+Now here's what happens once you account for the
+
+00:05:19.764 --> 00:05:23.548
+reward token's actual price, using the source material's own
+
+00:05:23.548 --> 00:05:27.457
+realistic assumption: that it falls fifty percent, on average,
+
+00:05:27.457 --> 00:05:31.479
+across the period you're actually harvesting and selling it.
+
+00:05:31.479 --> 00:05:34.395
+Fifty-five percent of emissions, valued at half
+
+00:05:34.395 --> 00:05:36.886
+price, is worth about twenty-seven and a
+
+00:05:36.886 --> 00:05:39.494
+half percent, not the full fifty-five.
+
+00:05:39.494 --> 00:05:41.657
+Add that back to the five percent in
+
+00:05:41.657 --> 00:05:44.170
+genuine fees, and the real return comes to
+
+00:05:44.170 --> 00:05:46.274
+about thirty-two and a half percent.
+
+00:05:47.574 --> 00:05:50.872
+And here's the actual question this whole exercise
+
+00:05:50.872 --> 00:05:53.759
+exists to answer, laid out side by side.
+
+00:05:53.759 --> 00:05:57.972
+With emissions included, even realistically discounted, the farm still
+
+00:05:57.972 --> 00:06:01.239
+shows an attractive thirty-two and a half percent.
+
+00:06:01.239 --> 00:06:04.175
+But strip emissions out completely, and account
+
+00:06:04.175 --> 00:06:07.234
+for nothing except genuine, durable activity, and
+
+00:06:07.234 --> 00:06:09.559
+you're left with exactly five percent.
+
+00:06:10.859 --> 00:06:13.593
+Here's the one question this entire worked
+
+00:06:13.593 --> 00:06:16.008
+example exists to make you ask, every
+
+00:06:16.008 --> 00:06:18.724
+single time, before entering any farm.
+
+00:06:18.724 --> 00:06:21.328
+Would you take on this specific protocol's
+
+00:06:21.328 --> 00:06:24.173
+risk, its smart contract risk, its impermanent
+
+00:06:24.173 --> 00:06:26.894
+loss, its gas costs, for five percent?
+
+00:06:26.894 --> 00:06:29.119
+Not for the sixty percent headline.
+
+00:06:29.119 --> 00:06:30.964
+Not even for the thirty-two and
+
+00:06:30.964 --> 00:06:33.109
+a half percent realistic number.
+
+00:06:33.109 --> 00:06:35.504
+For the five percent that's actually durable.
+
+00:06:36.804 --> 00:06:38.769
+How sensitive is that number, really?
+
+00:06:40.069 --> 00:06:43.535
+Here's the exact same farm, run across five different
+
+00:06:43.535 --> 00:06:47.193
+assumptions for how far the reward token actually falls,
+
+00:06:47.193 --> 00:06:50.125
+from a full recovery to a total collapse.
+
+00:06:50.125 --> 00:06:52.859
+If the reward token doesn't fall at all, the
+
+00:06:52.859 --> 00:06:56.015
+real return is the full sixty percent headline.
+
+00:06:56.015 --> 00:06:59.975
+At a twenty-five percent decline, it's about forty-six percent.
+
+00:06:59.975 --> 00:07:01.825
+At the source material's own fifty
+
+00:07:01.825 --> 00:07:04.345
+percent assumption, thirty-two and a half.
+
+00:07:04.345 --> 00:07:07.035
+At seventy-five percent, under nineteen.
+
+00:07:07.035 --> 00:07:09.774
+And if the reward token falls to zero, all
+
+00:07:09.774 --> 00:07:12.832
+that's left is the five percent in genuine fees.
+
+00:07:14.132 --> 00:07:17.727
+Notice how this line is almost perfectly straight, which
+
+00:07:17.727 --> 00:07:21.385
+tells you something important: the entire result rides on
+
+00:07:21.385 --> 00:07:24.917
+a single assumption, how much the reward token actually
+
+00:07:24.917 --> 00:07:29.317
+falls, and that assumption drives the outcome almost one-for-one.
+
+00:07:29.317 --> 00:07:31.939
+Guess a smaller decline than what actually
+
+00:07:31.939 --> 00:07:35.049
+happens, and you've overestimated your real return
+
+00:07:35.049 --> 00:07:36.757
+by roughly that same margin.
+
+00:07:38.057 --> 00:07:41.222
+Here's how to actually estimate that decline yourself,
+
+00:07:41.222 --> 00:07:43.652
+for a real farm, instead of guessing.
+
+00:07:43.652 --> 00:07:46.235
+Pull up the reward token's own price chart,
+
+00:07:46.235 --> 00:07:49.113
+and look specifically at how it's behaved during
+
+00:07:49.113 --> 00:07:52.407
+past emissions periods, not just its all-time high.
+
+00:07:52.407 --> 00:07:55.365
+Check the emission schedule itself, since a faster
+
+00:07:55.365 --> 00:07:58.217
+printing rate tends to mean faster dilution.
+
+00:07:58.217 --> 00:08:01.133
+And when genuinely unsure, default to the more
+
+00:08:01.133 --> 00:08:04.422
+conservative estimate, since a farm that clears that
+
+00:08:04.422 --> 00:08:06.532
+bar clears the optimistic one too.
+
+00:08:07.832 --> 00:08:08.922
+Quick check.
+
+00:08:08.922 --> 00:08:12.447
+Why do emissions A.P.Y.s tend to fall over time?
+
+00:08:16.867 --> 00:08:20.117
+The answer: more capital arrives to share the same
+
+00:08:20.117 --> 00:08:23.430
+reward pool, and the reward token's own price often
+
+00:08:23.430 --> 00:08:26.297
+declines as more of it gets printed and sold.
+
+00:08:27.597 --> 00:08:29.092
+Setting your harvest schedule.
+
+00:08:30.392 --> 00:08:33.634
+Worth deciding this specific detail before you ever
+
+00:08:33.634 --> 00:08:37.002
+deposit, not while you're already watching the reward
+
+00:08:37.002 --> 00:08:39.297
+token's price move in real time.
+
+00:08:39.297 --> 00:08:42.466
+A fixed schedule, say harvesting and converting to
+
+00:08:42.466 --> 00:08:44.765
+a stablecoin on a set day each week,
+
+00:08:44.765 --> 00:08:47.997
+removes the temptation to hold reward tokens hoping
+
+00:08:47.997 --> 00:08:50.669
+for a recovery that the earlier chart just
+
+00:08:50.669 --> 00:08:52.657
+showed you isn't the way to bet.
+
+00:08:53.957 --> 00:08:55.417
 Here's your checklist.
 
-00:01:24.126 --> 00:01:25.661
-Do it now, for real.
+00:08:55.417 --> 00:08:58.227
+Do it before entering any farm, not after.
 
-00:01:25.661 --> 00:01:29.486
-First, APY split into base vs incentives.
+00:08:58.227 --> 00:09:01.995
+Split the advertised A.P.Y. into base yield versus
 
-00:01:29.486 --> 00:01:33.706
-Next, Reward token valued at a realistic, falling price.
+00:09:01.995 --> 00:09:06.506
+incentives, explicitly, using the protocol's own numbers.
 
-00:01:33.706 --> 00:01:36.271
-And finally, Harvest-and-sell schedule set.
+00:09:06.506 --> 00:09:09.607
+Value the reward token at a realistic price, one
 
-00:01:37.571 --> 00:01:38.781
-Question 1.
+00:09:09.607 --> 00:09:13.451
+that assumes it falls, not its current, best-case price.
 
-00:01:38.781 --> 00:01:40.216
-What's the test for a farm?
+00:09:13.451 --> 00:09:16.348
+And set your harvest-and-sell schedule in advance,
 
-00:01:44.636 --> 00:01:46.257
-The answer: Does the base
+00:09:16.348 --> 00:09:18.848
+rather than deciding it emotionally, in the
 
-00:01:46.257 --> 00:01:48.066
-yield alone justify the risk?
+00:09:18.848 --> 00:09:21.461
+moment, while watching the token's price move.
 
-00:01:49.366 --> 00:01:50.611
-Question 2.
+00:09:22.761 --> 00:09:24.636
+The same method, a different farm.
 
-00:01:50.611 --> 00:01:52.566
-Why do emissions APYs fall?
+00:09:25.936 --> 00:09:28.988
+Here's the same method, applied to a completely
 
-00:01:56.986 --> 00:01:59.780
-The answer: More capital shares the rewards,
+00:09:28.988 --> 00:09:32.486
+different, purely illustrative farm, just to show it's
 
-00:01:59.780 --> 00:02:02.511
-and the reward token's price often declines.
+00:09:32.486 --> 00:09:35.729
+a repeatable habit, not a one-off calculation tied
 
-00:02:03.812 --> 00:02:05.082
-Question 3.
+00:09:35.729 --> 00:09:38.509
+to that specific sixty percent example.
 
-00:02:05.082 --> 00:02:06.777
-What is mercenary liquidity?
+00:09:38.509 --> 00:09:41.191
+Say a farm shows eighty percent A.P.Y.:
 
-00:02:11.197 --> 00:02:13.209
-The answer: Capital that moves on
+00:09:41.191 --> 00:09:44.441
+ten percent fees, seventy percent emissions.
 
-00:02:13.209 --> 00:02:14.747
-as soon as incentives end.
+00:09:44.441 --> 00:09:47.307
+At the same realistic fifty percent decline
 
-00:02:16.047 --> 00:02:17.292
+00:09:47.307 --> 00:09:50.889
+assumption, that's forty-five percent real return, and
+
+00:09:50.889 --> 00:09:54.381
+just ten percent with emissions removed entirely.
+
+00:09:54.381 --> 00:09:55.626
+Same method.
+
+00:09:55.626 --> 00:09:58.681
+Same honest question, on a completely different number.
+
+00:09:59.981 --> 00:10:01.226
 Let's recap.
 
-00:02:17.292 --> 00:02:20.427
-Base yield: trading fees or borrower interest.
+00:10:01.226 --> 00:10:02.998
+Base yield comes from real
 
-00:02:20.427 --> 00:02:23.053
-Emissions / incentives: new tokens the
+00:10:02.998 --> 00:10:05.726
+activity: fees and borrower interest.
 
-00:02:23.053 --> 00:02:25.777
-protocol prints to attract deposits.
+00:10:05.726 --> 00:10:07.775
+Emissions are printed tokens, a
 
-00:02:25.777 --> 00:02:29.557
-Mercenary liquidity: capital that leaves when incentives end,
+00:10:07.775 --> 00:10:10.316
+deliberate cost, not durable yield.
 
-00:02:29.557 --> 00:02:31.752
-often taking the base yield with it.
+00:10:10.316 --> 00:10:13.140
+Emissions A.P.Y.s tend to fall, through
 
-00:02:33.052 --> 00:02:35.567
-Do the checklist now, before you move on.
+00:10:13.140 --> 00:10:16.476
+dilution and falling token price, together.
 
-00:02:35.567 --> 00:02:38.592
-Next up, Lesson 4.2: Native staking.
+00:10:16.476 --> 00:10:20.200
+Mercenary liquidity arrives for the emissions and leaves the
+
+00:10:20.200 --> 00:10:23.491
+moment they end, often taking base yield with it.
+
+00:10:23.491 --> 00:10:26.591
+And the real question is never the headline number:
+
+00:10:26.591 --> 00:10:29.571
+it's what's left once emissions are gone entirely.
+
+00:10:30.871 --> 00:10:33.944
+Before entering any farm, split its APY, value
+
+00:10:33.944 --> 00:10:37.343
+the reward token realistically, and ask whether the
+
+00:10:37.343 --> 00:10:39.931
+base yield alone is worth the risk.
+
+00:10:39.931 --> 00:10:42.956
+Next up, Lesson 4.2: native staking.
