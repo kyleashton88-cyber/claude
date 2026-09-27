@@ -3,185 +3,557 @@ WEBVTT
 00:00:00.550 --> 00:00:02.275
 Lesson 5.1.
 
-00:00:02.275 --> 00:00:04.360
+00:00:02.275 --> 00:00:04.430
 Bridges and trust assumptions.
 
-00:00:04.360 --> 00:00:06.422
-By the end of this lesson, you'll be
+00:00:04.430 --> 00:00:06.544
+By the end, you'll be able to choose
 
-00:00:06.422 --> 00:00:08.873
-able to choose bridge routes by their trust
+00:00:06.544 --> 00:00:08.944
+a bridge route by its actual trust model,
 
-00:00:08.873 --> 00:00:11.325
-model, and size bridge exposure accordingly.
+00:00:08.944 --> 00:00:11.515
+and size your own exposure to it accordingly.
 
-00:00:12.625 --> 00:00:13.915
+00:00:12.815 --> 00:00:14.105
 Here's the plan.
 
-00:00:13.915 --> 00:00:15.600
-First, the key ideas.
+00:00:14.105 --> 00:00:16.711
+The three genuinely different ways a bridge
 
-00:00:15.600 --> 00:00:18.315
-Then, a worked example, step by step.
+00:00:16.711 --> 00:00:19.320
+can actually move value between chains.
 
-00:00:18.315 --> 00:00:19.840
-Then, your checklist.
+00:00:19.320 --> 00:00:21.458
+What a trust model actually is, and
 
-00:00:19.840 --> 00:00:22.002
-And finally, a three-question quiz.
+00:00:21.458 --> 00:00:24.075
+exactly who gets to approve a transfer.
 
-00:00:23.302 --> 00:00:26.868
-Bridges move value between chains: Bridges hold large
+00:00:24.075 --> 00:00:26.008
+Why bridges specifically end up
 
-00:00:26.868 --> 00:00:30.272
-pools of value, which makes them prime targets.
+00:00:26.008 --> 00:00:28.120
+as such frequent hack targets.
 
-00:00:30.272 --> 00:00:33.438
-First, Canonical bridges: the chain's official
+00:00:28.120 --> 00:00:30.654
+And a full worked example, routing a real
 
-00:00:33.438 --> 00:00:36.297
-route (e.g. a rollup's native bridge).
+00:00:30.654 --> 00:00:33.430
+amount of money across a real bridge decision.
 
-00:00:36.297 --> 00:00:39.582
-Usually the strongest security, sometimes slower.
+00:00:34.730 --> 00:00:37.005
+Three genuinely different ways to bridge.
 
-00:00:39.582 --> 00:00:42.749
-Next, Lock-and-mint: assets locked on chain A,
+00:00:38.305 --> 00:00:39.739
+Here are all three ways
 
-00:00:42.749 --> 00:00:45.272
-a wrapped copy minted on chain B.
+00:00:39.739 --> 00:00:42.190
+value actually moves between chains.
 
-00:00:45.272 --> 00:00:46.647
-The wrapped copy is only
+00:00:42.190 --> 00:00:45.413
+A canonical bridge is a chain's own official route,
 
-00:00:46.647 --> 00:00:48.047
-as good as the lock.
+00:00:45.413 --> 00:00:49.255
+like a rollup's native bridge, usually carrying the strongest
 
-00:00:48.047 --> 00:00:50.659
-Then, Liquidity networks: market makers pay
+00:00:49.255 --> 00:00:53.150
+security available, sometimes at the cost of being slower.
 
-00:00:50.659 --> 00:00:52.502
-you out on the other side.
+00:00:53.150 --> 00:00:56.316
+Lock-and-mint locks your asset on the source chain,
 
-00:00:52.502 --> 00:00:55.547
-Fast; you rely on their contracts and liquidity.
+00:00:56.316 --> 00:00:58.995
+and mints a wrapped copy on the destination
 
-00:00:55.547 --> 00:00:58.637
-And finally, Trust model: who can approve a
+00:00:58.995 --> 00:01:01.369
+chain, a copy that's only ever as good
 
-00:00:58.637 --> 00:01:01.306
-transfer: a multisig of a few keys, a
+00:01:01.369 --> 00:01:04.165
+as whatever's actually backing that lock.
 
-00:01:01.306 --> 00:01:05.659
-validator set, a light client, or fraud/validity proofs?
+00:01:04.165 --> 00:01:07.381
+And a liquidity network simply pays you out directly
 
-00:01:05.659 --> 00:01:08.054
-Fewer, weaker signers = more risk.
+00:01:07.381 --> 00:01:10.718
+on the other side, fast, but specifically dependent on
 
-00:01:09.354 --> 00:01:11.869
-Let's work an example, step by step.
+00:01:10.718 --> 00:01:14.420
+that network's own contracts and its own available liquidity.
 
-00:01:11.869 --> 00:01:14.535
-Moving $50,000 to a Layer 2: use the
+00:01:15.720 --> 00:01:18.959
+Here's the actual trade-off each of these three makes,
 
-00:01:14.535 --> 00:01:17.923
-canonical route for the bulk (even if slower),
+00:01:18.959 --> 00:01:21.491
+side by side, since none of them is simply
 
-00:01:17.923 --> 00:01:21.670
-a reputable fast bridge for a small, time-sensitive
+00:01:21.491 --> 00:01:24.265
+better than the others in every situation.
 
-00:01:21.670 --> 00:01:24.132
-amount, and send a test first.
+00:01:24.265 --> 00:01:27.455
+Canonical: strongest security, sometimes slower.
 
-00:01:24.132 --> 00:01:26.110
-Never leave large balances as a
+00:01:27.455 --> 00:01:30.874
+Lock-and-mint: fast, but the wrapped copy's real value
 
-00:01:26.110 --> 00:01:28.149
-wrapped asset from a weak bridge.
+00:01:30.874 --> 00:01:34.095
+depends entirely on the lock behind it holding.
 
-00:01:29.449 --> 00:01:30.909
+00:01:34.095 --> 00:01:37.272
+Liquidity network: fastest of all three, but you're now
+
+00:01:37.272 --> 00:01:40.675
+trusting that network's own contracts and its own liquidity
+
+00:01:40.675 --> 00:01:43.114
+being genuinely available when you need it.
+
+00:01:44.414 --> 00:01:46.807
+Here's a practical way to match these three
+
+00:01:46.807 --> 00:01:49.201
+types to what you're actually trying to do,
+
+00:01:49.201 --> 00:01:52.329
+rather than defaulting to whichever one loads first.
+
+00:01:52.329 --> 00:01:55.673
+Moving a genuinely large amount, with no particular
+
+00:01:55.673 --> 00:01:59.509
+urgency, is exactly the canonical route's own strength.
+
+00:01:59.509 --> 00:02:02.649
+Moving a small amount, where speed actually matters
+
+00:02:02.649 --> 00:02:05.185
+more than squeezing out the very last bit
+
+00:02:05.185 --> 00:02:08.022
+of security, is exactly where a fast liquidity
+
+00:02:08.022 --> 00:02:09.894
+network earns its keep instead.
+
+00:02:11.194 --> 00:02:12.284
+Quick check.
+
+00:02:12.284 --> 00:02:14.799
+What actually backs a lock-and-mint wrapped token?
+
+00:02:19.219 --> 00:02:22.272
+The answer: the assets locked on the source chain,
+
+00:02:22.272 --> 00:02:25.684
+and the bridge's own security actually holding that lock.
+
+00:02:26.984 --> 00:02:28.699
+What a trust model actually is.
+
+00:02:29.999 --> 00:02:33.065
+Here's exactly what decides a bridge's real trust
+
+00:02:33.065 --> 00:02:36.070
+model, the single most important question to ask
+
+00:02:36.070 --> 00:02:38.394
+about any bridge before using it.
+
+00:02:38.394 --> 00:02:41.762
+Who's actually allowed to approve a transfer moving
+
+00:02:41.762 --> 00:02:44.223
+through it: a multisig held by just a
+
+00:02:44.223 --> 00:02:47.072
+handful of keys, a broader validator set, a
+
+00:02:47.072 --> 00:02:50.505
+light client verifying the source chain directly, or
+
+00:02:50.505 --> 00:02:52.942
+genuine fraud or validity proofs.
+
+00:02:52.942 --> 00:02:55.524
+Fewer, weaker signers means more risk,
+
+00:02:55.524 --> 00:02:58.437
+in a direct, almost mechanical relationship.
+
+00:02:59.737 --> 00:03:02.423
+Worth being precise about why this specific
+
+00:03:02.423 --> 00:03:05.352
+question matters more than almost anything else
+
+00:03:05.352 --> 00:03:07.794
+about a bridge, including its own brand
+
+00:03:07.794 --> 00:03:10.352
+name or how long it's been operating.
+
+00:03:10.352 --> 00:03:12.962
+A bridge secured by a small multisig can
+
+00:03:12.962 --> 00:03:15.700
+be drained the moment enough of those keys
+
+00:03:15.700 --> 00:03:19.011
+are compromised, regardless of how much total value
+
+00:03:19.011 --> 00:03:22.322
+it's ever safely processed before that exact moment.
+
+00:03:23.622 --> 00:03:26.604
+Here's how to actually check a bridge's real trust
+
+00:03:26.604 --> 00:03:30.647
+model yourself, before ever routing meaningful value through it.
+
+00:03:30.647 --> 00:03:34.250
+Find its own documentation, specifically for how transfers
+
+00:03:34.250 --> 00:03:38.092
+actually get approved, not just its marketing description.
+
+00:03:38.092 --> 00:03:41.974
+Count how many signers, or validators, are genuinely required,
+
+00:03:41.974 --> 00:03:45.602
+and how independent they actually are from each other.
+
+00:03:45.602 --> 00:03:48.330
+And check whether it's ever published a real
+
+00:03:48.330 --> 00:03:52.392
+security audit covering that exact approval mechanism specifically.
+
+00:03:53.692 --> 00:03:56.121
+Worth making the multisig risk concrete,
+
+00:03:56.121 --> 00:03:58.317
+rather than leaving it abstract.
+
+00:03:58.317 --> 00:04:01.623
+If a bridge relies on a five-of-eight multisig, an
+
+00:04:01.623 --> 00:04:05.382
+attacker only needs to compromise five specific keys, out
+
+00:04:05.382 --> 00:04:08.729
+of eight, to move everything that bridge holds.
+
+00:04:08.729 --> 00:04:12.585
+That's a genuinely finite, achievable target, especially
+
+00:04:12.585 --> 00:04:15.426
+against keys held by individuals or small
+
+00:04:15.426 --> 00:04:18.809
+teams, not some enormous, near-impossible barrier.
+
+00:04:20.109 --> 00:04:21.199
+Quick check.
+
+00:04:21.199 --> 00:04:24.325
+What's the actual relationship between the number of
+
+00:04:24.325 --> 00:04:26.744
+signers a bridge relies on, and its risk?
+
+00:04:31.164 --> 00:04:35.187
+The answer: fewer, weaker signers means more risk, directly,
+
+00:04:35.187 --> 00:04:38.814
+since compromising a smaller group is genuinely easier.
+
+00:04:40.114 --> 00:04:42.359
+Why bridges are such frequent targets.
+
+00:04:43.659 --> 00:04:46.925
+Worth being precise about the actual mechanism that
+
+00:04:46.925 --> 00:04:50.316
+makes bridges such attractive targets, since it isn't
+
+00:04:50.316 --> 00:04:52.689
+random or purely about weak code.
+
+00:04:52.689 --> 00:04:57.023
+Bridges hold large, concentrated pools of value, specifically because
+
+00:04:57.023 --> 00:05:00.614
+every single user crossing that bridge needs their assets
+
+00:05:00.614 --> 00:05:03.762
+to sit somewhere while the transfer completes.
+
+00:05:03.762 --> 00:05:08.777
+That concentration, combined with genuinely complex cross-chain logic, is
+
+00:05:08.777 --> 00:05:12.436
+exactly the combination an attacker is looking for: a
+
+00:05:12.436 --> 00:05:15.757
+lot to gain, in one place, through one mechanism.
+
+00:05:17.058 --> 00:05:19.562
+Worth also naming why this pattern has
+
+00:05:19.562 --> 00:05:22.323
+repeated itself so often across DeFi's own
+
+00:05:22.323 --> 00:05:25.833
+history, rather than being an occasional accident.
+
+00:05:25.833 --> 00:05:29.276
+Complex cross-chain logic is genuinely hard to get
+
+00:05:29.276 --> 00:05:32.450
+perfectly right, and a single flaw anywhere in
+
+00:05:32.450 --> 00:05:35.218
+that logic can expose the entire pool at
+
+00:05:35.218 --> 00:05:38.421
+once, not just one user's individual funds.
+
+00:05:38.421 --> 00:05:41.085
+That's structurally different from a bug in
+
+00:05:41.085 --> 00:05:44.355
+an ordinary single-chain contract, which usually only
+
+00:05:44.355 --> 00:05:46.111
+exposes its own smaller pool.
+
+00:05:47.411 --> 00:05:48.501
+Quick check.
+
+00:05:48.501 --> 00:05:51.746
+Why are bridges such frequent hack targets, specifically?
+
+00:05:56.166 --> 00:06:00.163
+The answer: they concentrate large amounts of value behind
+
+00:06:00.163 --> 00:06:03.889
+genuinely complex, cross-chain logic, all in one place.
+
+00:06:05.188 --> 00:06:06.193
+Worked example.
+
+00:06:07.493 --> 00:06:10.202
+Here's exactly how to actually route this,
+
+00:06:10.202 --> 00:06:13.162
+step by step, applying everything from earlier
+
+00:06:13.162 --> 00:06:15.478
+in this lesson to a real amount.
+
+00:06:15.478 --> 00:06:17.688
+Use the canonical route for the bulk
+
+00:06:17.688 --> 00:06:20.018
+of the fifty thousand dollars, even if
+
+00:06:20.018 --> 00:06:22.946
+it's genuinely slower than the alternatives.
+
+00:06:22.946 --> 00:06:26.631
+Use a reputable, well-established fast bridge only for a
+
+00:06:26.631 --> 00:06:31.521
+small, specifically time-sensitive portion, if you actually need speed.
+
+00:06:31.521 --> 00:06:34.229
+And send a small test transaction first, on any
+
+00:06:34.229 --> 00:06:36.881
+route, before committing the full amount to it.
+
+00:06:38.181 --> 00:06:40.852
+Here's the actual reasoning behind splitting it
+
+00:06:40.852 --> 00:06:43.468
+this way, rather than simply picking whichever
+
+00:06:43.468 --> 00:06:45.716
+single route seems most convenient.
+
+00:06:45.716 --> 00:06:48.719
+The bulk of the value genuinely benefits from the
+
+00:06:48.719 --> 00:06:52.563
+canonical route's stronger security, since size is exactly what
+
+00:06:52.563 --> 00:06:55.806
+makes a position worth protecting most carefully.
+
+00:06:55.806 --> 00:06:58.633
+A small, urgent portion can reasonably accept
+
+00:06:58.633 --> 00:07:02.075
+a faster bridge's slightly different risk, specifically
+
+00:07:02.075 --> 00:07:04.656
+because the amount at stake, if something
+
+00:07:04.656 --> 00:07:07.176
+did go wrong, is deliberately kept small.
+
+00:07:08.476 --> 00:07:11.113
+Here's the one sentence this entire worked
+
+00:07:11.113 --> 00:07:13.810
+example exists to prove, worth holding onto
+
+00:07:13.810 --> 00:07:16.931
+more than the specific dollar figure involved.
+
+00:07:16.931 --> 00:07:19.898
+Never leave a large balance sitting as a wrapped
+
+00:07:19.898 --> 00:07:22.683
+asset from a weak bridge, for any longer than
+
+00:07:22.683 --> 00:07:25.893
+it genuinely has to, since that wrapped token's real
+
+00:07:25.893 --> 00:07:28.315
+value is only ever as good as the lock,
+
+00:07:28.315 --> 00:07:31.221
+or the trust model, actually standing behind it.
+
+00:07:32.521 --> 00:07:33.611
+Quick check.
+
+00:07:33.611 --> 00:07:36.786
+For fifty thousand dollars, fast bridge, or canonical?
+
+00:07:41.206 --> 00:07:44.068
+The answer: canonical for the bulk of it; a
+
+00:07:44.068 --> 00:07:47.581
+fast bridge only for a small, genuinely urgent amount.
+
+00:07:48.881 --> 00:07:51.902
+Here's why sending a small test transaction first
+
+00:07:51.902 --> 00:07:54.378
+is worth the extra few minutes it costs,
+
+00:07:54.378 --> 00:07:57.276
+on any bridge, even one you've used before.
+
+00:07:57.276 --> 00:08:00.706
+It catches a wrong destination address, an unexpected
+
+00:08:00.706 --> 00:08:03.373
+fee, or a genuinely broken route, all for
+
+00:08:03.373 --> 00:08:05.850
+the cost of a small amount, instead of
+
+00:08:05.850 --> 00:08:09.026
+discovering the exact same problem with your full
+
+00:08:09.026 --> 00:08:11.566
+balance already committed and in flight.
+
+00:08:12.866 --> 00:08:14.326
 Here's your checklist.
 
-00:01:30.909 --> 00:01:32.444
-Do it now, for real.
+00:08:14.326 --> 00:08:17.121
+Do it before bridging anything of real size.
 
-00:01:32.444 --> 00:01:34.106
-First, Trust model of every
+00:08:17.121 --> 00:08:19.824
+Write down the actual trust model of every
 
-00:01:34.106 --> 00:01:35.949
-bridge I use written down.
+00:08:19.824 --> 00:08:23.016
+bridge you use, explicitly, not just its name.
 
-00:01:35.949 --> 00:01:38.858
-Next, Canonical route preferred for size.
+00:08:23.016 --> 00:08:25.467
+Prefer the canonical route specifically for
 
-00:01:38.858 --> 00:01:41.453
-And finally, Wrapped-asset exposure capped.
+00:08:25.467 --> 00:08:27.326
+size, even when it's slower.
 
-00:01:42.753 --> 00:01:43.963
-Question 1.
+00:08:27.326 --> 00:08:31.015
+And cap your own wrapped-asset exposure, deliberately, the same
 
-00:01:43.963 --> 00:01:45.918
-What backs a lock-and-mint wrapped token?
+00:08:31.015 --> 00:08:33.781
+way you'd cap any other single point of failure.
 
-00:01:50.338 --> 00:01:52.423
-The answer: The locked assets on the
-
-00:01:52.423 --> 00:01:54.678
-source chain, and the bridge's security.
-
-00:01:55.978 --> 00:01:57.223
-Question 2.
-
-00:01:57.223 --> 00:01:59.348
-Why are bridges frequent hack targets?
-
-00:02:03.768 --> 00:02:06.598
-The answer: They concentrate large amounts
-
-00:02:06.598 --> 00:02:09.428
-of value behind complex, cross-chain logic.
-
-00:02:10.728 --> 00:02:11.998
-Question 3.
-
-00:02:11.998 --> 00:02:14.773
-Fast bridge or canonical for $50k?
-
-00:02:19.193 --> 00:02:21.561
-The answer: Canonical for the bulk;
-
-00:02:21.561 --> 00:02:23.929
-fast only for small, urgent amounts.
-
-00:02:25.229 --> 00:02:26.474
+00:08:35.081 --> 00:08:36.326
 Let's recap.
 
-00:02:26.474 --> 00:02:29.641
-Canonical bridges: the chain's official route
+00:08:36.326 --> 00:08:39.945
+Three bridge types: canonical, lock-and-mint, and liquidity
 
-00:02:29.641 --> 00:02:32.144
-(e.g. a rollup's native bridge).
+00:08:39.945 --> 00:08:43.441
+network, each making a genuinely different trade-off.
 
-00:02:32.144 --> 00:02:34.954
-Lock-and-mint: assets locked on chain A, a
+00:08:43.441 --> 00:08:46.509
+A bridge's trust model, who can actually approve
 
-00:02:34.954 --> 00:02:37.279
-wrapped copy minted on chain B.
+00:08:46.509 --> 00:08:49.703
+a transfer, is the single most important question,
 
-00:02:37.279 --> 00:02:39.638
-Liquidity networks: market makers pay you
+00:08:49.703 --> 00:08:53.071
+and fewer, weaker signers always means more risk.
 
-00:02:39.638 --> 00:02:41.174
-out on the other side.
+00:08:53.071 --> 00:08:56.764
+Bridges are frequent targets specifically because they
 
-00:02:41.174 --> 00:02:43.484
-Trust model: who can approve a transfer.
+00:08:56.764 --> 00:09:00.086
+concentrate large value behind complex logic.
 
-00:02:44.784 --> 00:02:47.299
-Do the checklist now, before you move on.
+00:09:00.086 --> 00:09:03.165
+And for real size, use the canonical route, keep
 
-00:02:47.299 --> 00:02:49.567
-Next up, Lesson 5.2: Layer
+00:09:03.165 --> 00:09:06.684
+fast bridges for small, urgent amounts, and never leave
 
-00:02:49.567 --> 00:02:52.424
+00:09:06.684 --> 00:09:09.386
+a large balance wrapped from a weak bridge.
+
+00:09:10.686 --> 00:09:13.945
+Worth connecting this directly back to the dependency
+
+00:09:13.945 --> 00:09:16.841
+map from this module's own Mastery Starter.
+
+00:09:16.841 --> 00:09:19.384
+A bridge is exactly one specific link in that
+
+00:09:19.384 --> 00:09:22.093
+chain, and now you know exactly what to actually
+
+00:09:22.093 --> 00:09:24.360
+check on it: which of the three types it
+
+00:09:24.360 --> 00:09:27.234
+is, who's allowed to approve a transfer through it,
+
+00:09:27.234 --> 00:09:29.888
+and how much of your own balance you're willing
+
+00:09:29.888 --> 00:09:32.265
+to leave sitting on the wrapped side of it
+
+00:09:32.265 --> 00:09:33.371
+at any given moment.
+
+00:09:34.671 --> 00:09:38.047
+Write down every bridge's trust model, prefer canonical
+
+00:09:38.047 --> 00:09:41.121
+for size, and cap your wrapped-asset exposure.
+
+00:09:41.121 --> 00:09:43.352
+Next up, Lesson 5.2: layer
+
+00:09:43.352 --> 00:09:46.162
 2s, sequencers & withdrawal paths.
