@@ -3,176 +3,578 @@ WEBVTT
 00:00:00.550 --> 00:00:02.345
 Lesson 5.5.
 
-00:00:02.345 --> 00:00:05.465
+00:00:02.345 --> 00:00:05.540
 Smart-contract risk & what audits don't prove.
 
-00:00:05.465 --> 00:00:07.491
-By the end of this lesson, you'll be
+00:00:05.540 --> 00:00:08.192
+By the end, you'll be able to weigh contract
 
-00:00:07.491 --> 00:00:10.064
-able to weigh contract risk honestly, and read
+00:00:08.192 --> 00:00:11.138
+risk honestly, and read an audit for exactly what
 
-00:00:10.064 --> 00:00:12.090
-an audit for what it actually covers.
+00:00:11.138 --> 00:00:14.085
+it actually covers, not what its own name implies.
 
-00:00:13.390 --> 00:00:14.680
+00:00:15.385 --> 00:00:16.675
 Here's the plan.
 
-00:00:14.680 --> 00:00:16.365
-First, the key ideas.
+00:00:16.675 --> 00:00:18.512
+The four common failure types
 
-00:00:16.365 --> 00:00:19.080
-Then, a worked example, step by step.
+00:00:18.512 --> 00:00:21.199
+behind most real smart-contract losses.
 
-00:00:19.080 --> 00:00:20.605
-Then, your checklist.
+00:00:21.199 --> 00:00:22.904
+What an audit actually covers,
 
-00:00:20.605 --> 00:00:22.767
-And finally, a three-question quiz.
+00:00:22.904 --> 00:00:24.854
+and precisely what it doesn't.
 
-00:00:24.067 --> 00:00:27.899
-First, Common failure types: logic bugs, reentrancy (a
+00:00:24.854 --> 00:00:27.308
+Bug bounties, and why their size matters
 
-00:00:27.899 --> 00:00:31.105
-contract is called back before it updates its
+00:00:27.308 --> 00:00:29.464
+relative to the value at stake.
 
-00:00:31.105 --> 00:00:35.425
-state), broken access control, and economic exploits (correct
+00:00:29.464 --> 00:00:32.011
+And a full worked example, reading a real
 
-00:00:35.425 --> 00:00:38.582
-code, exploitable incentives or oracles).
+00:00:32.011 --> 00:00:35.044
+protocol's real audit and bounty numbers together.
 
-00:00:38.582 --> 00:00:42.387
-Next, Audits review specific code at a specific time.
+00:00:36.344 --> 00:00:38.079
+The four common failure types.
 
-00:00:42.387 --> 00:00:46.059
-Check the scope (which contracts), date (before later changes?),
+00:00:39.379 --> 00:00:41.300
+Here are the four failure types
 
-00:00:46.059 --> 00:00:49.127
-severity of findings and whether they were fixed.
+00:00:41.300 --> 00:00:43.941
+behind most real smart-contract losses.
 
-00:00:49.127 --> 00:00:51.052
-Then, Bug bounties pay hackers
+00:00:43.941 --> 00:00:46.617
+Logic bugs, straightforward mistakes in how
 
-00:00:51.052 --> 00:00:53.152
-to report instead of exploit.
+00:00:46.617 --> 00:00:48.681
+the code is actually written.
 
-00:00:53.152 --> 00:00:55.987
-A large, active bounty is a good sign.
+00:00:48.681 --> 00:00:52.103
+Reentrancy, where a contract gets called back into, before
 
-00:00:55.987 --> 00:00:58.502
-And finally, Time and value at risk:
+00:00:52.103 --> 00:00:55.466
+it's finished updating its own state, letting an attacker
 
-00:00:58.502 --> 00:01:01.085
-code that has safely held large value
+00:00:55.466 --> 00:00:58.666
+repeat an action it should only have allowed once.
 
-00:01:01.085 --> 00:01:03.872
-for years has survived more real attacks.
+00:00:58.666 --> 00:01:01.194
+Broken access control, where a function that
 
-00:01:05.172 --> 00:01:07.687
-Let's work an example, step by step.
+00:01:01.194 --> 00:01:03.966
+should be restricted simply isn't, properly.
 
-00:01:07.687 --> 00:01:12.177
-Protocol X: two audits, but the latest upgrade (last
+00:01:03.966 --> 00:01:06.890
+And economic exploits, where the code itself is
 
-00:01:12.177 --> 00:01:16.967
-month) isn't in either scope; bounty $50k; TVL $400M.
+00:01:06.890 --> 00:01:10.361
+technically correct, but the incentives, or the oracles,
 
-00:01:16.967 --> 00:01:19.123
-The newest code is unaudited and the
+00:01:10.361 --> 00:01:12.676
+underneath it can be exploited anyway.
 
-00:01:19.123 --> 00:01:21.637
-bounty is small relative to the value.
+00:01:13.976 --> 00:01:16.486
+Worth naming the other two failure types
 
-00:01:21.637 --> 00:01:23.002
-Size down, or wait.
+00:01:16.486 --> 00:01:19.975
+specifically too, since reentrancy and economic exploits
 
-00:01:24.302 --> 00:01:25.762
+00:01:19.975 --> 00:01:22.356
+tend to get most of the attention.
+
+00:01:22.356 --> 00:01:25.673
+A logic bug is simply a straightforward mistake in
+
+00:01:25.673 --> 00:01:29.444
+the code itself, an off-by-one error, a wrong comparison,
+
+00:01:29.444 --> 00:01:32.996
+a case the developer genuinely didn't account for.
+
+00:01:32.996 --> 00:01:35.582
+Broken access control means a function that
+
+00:01:35.582 --> 00:01:38.403
+should have been restricted to specific callers
+
+00:01:38.403 --> 00:01:41.166
+simply wasn't, letting anyone call it directly.
+
+00:01:42.466 --> 00:01:45.941
+Worth being precise about that fourth category specifically,
+
+00:01:45.941 --> 00:01:48.049
+since it's the one most likely to be
+
+00:01:48.049 --> 00:01:50.571
+missed by a purely code-focused review.
+
+00:01:50.571 --> 00:01:54.145
+An economic exploit doesn't require finding any bug in
+
+00:01:54.145 --> 00:01:57.134
+the code at all; the code can execute exactly
+
+00:01:57.134 --> 00:02:00.578
+as written, every single time, and still be drained,
+
+00:02:00.578 --> 00:02:04.477
+because the underlying incentives or price feeds it depends
+
+00:02:04.477 --> 00:02:06.751
+on were exploitable from the start.
+
+00:02:08.051 --> 00:02:09.141
+Quick check.
+
+00:02:09.141 --> 00:02:10.896
+What exactly is reentrancy?
+
+00:02:15.316 --> 00:02:18.455
+The answer: a contract being called back into before
+
+00:02:18.455 --> 00:02:21.891
+it's finished updating its own state, letting an attacker
+
+00:02:21.891 --> 00:02:24.852
+repeat an action it should only have allowed once.
+
+00:02:26.152 --> 00:02:27.847
+What an audit actually covers.
+
+00:02:29.147 --> 00:02:31.188
+Here's exactly what to check on any
+
+00:02:31.188 --> 00:02:33.642
+audit, before trusting its name alone.
+
+00:02:33.642 --> 00:02:37.161
+Its scope: specifically which contracts it actually reviewed,
+
+00:02:37.161 --> 00:02:39.732
+not just the protocol's name in general.
+
+00:02:39.732 --> 00:02:42.598
+Its date: specifically whether it happened before
+
+00:02:42.598 --> 00:02:44.732
+or after any later code changes.
+
+00:02:44.732 --> 00:02:47.327
+The severity of whatever it actually found.
+
+00:02:47.327 --> 00:02:50.793
+And whether those specific findings were genuinely fixed
+
+00:02:50.793 --> 00:02:53.407
+afterward, not simply noted and left as-is.
+
+00:02:54.707 --> 00:02:57.566
+Worth being completely direct about the actual
+
+00:02:57.566 --> 00:02:59.817
+limit of what any audit can honestly
+
+00:02:59.817 --> 00:03:02.129
+claim, since the word itself tends to
+
+00:03:02.129 --> 00:03:04.862
+imply far more certainty than it should.
+
+00:03:04.862 --> 00:03:07.179
+An audit reviews specific code, at
+
+00:03:07.179 --> 00:03:09.267
+one specific point in time.
+
+00:03:09.267 --> 00:03:12.017
+It says nothing at all about code deployed
+
+00:03:12.017 --> 00:03:15.151
+afterward, and it can genuinely miss an economic
+
+00:03:15.151 --> 00:03:18.412
+exploit entirely, if that exploit never required a
+
+00:03:18.412 --> 00:03:20.267
+code-level bug to begin with.
+
+00:03:21.567 --> 00:03:22.657
+Quick check.
+
+00:03:22.657 --> 00:03:24.632
+What does an audit actually not prove?
+
+00:03:29.052 --> 00:03:31.445
+The answer: that the code, any later
+
+00:03:31.445 --> 00:03:33.903
+changes to it, or the economic design
+
+00:03:33.903 --> 00:03:36.037
+underneath it, is genuinely safe.
+
+00:03:37.337 --> 00:03:39.252
+Bug bounties, and time at risk.
+
+00:03:40.552 --> 00:03:43.323
+Worth being precise about what a bug bounty
+
+00:03:43.323 --> 00:03:46.093
+actually does, and why its size relative to
+
+00:03:46.093 --> 00:03:49.227
+the protocol's own value matters so directly.
+
+00:03:49.227 --> 00:03:51.649
+It pays hackers to responsibly report a
+
+00:03:51.649 --> 00:03:55.522
+vulnerability, instead of quietly exploiting it themselves.
+
+00:03:55.522 --> 00:03:58.268
+A large, genuinely active bounty is a good
+
+00:03:58.268 --> 00:04:02.227
+sign specifically because it makes responsible disclosure the
+
+00:04:02.227 --> 00:04:06.122
+more financially attractive choice, compared with an exploit.
+
+00:04:07.422 --> 00:04:10.596
+The same $50,000, at very different scales.
+
+00:04:11.895 --> 00:04:15.503
+Here's that exact same fifty thousand dollar bounty, held
+
+00:04:15.503 --> 00:04:20.418
+fixed, but measured against six genuinely different total-value-locked scales,
+
+00:04:20.418 --> 00:04:23.839
+purely illustrative, to show why the ratio matters far
+
+00:04:23.839 --> 00:04:26.130
+more than the raw dollar figure.
+
+00:04:26.130 --> 00:04:29.883
+Against one million dollars of T.V.L., fifty thousand
+
+00:04:29.883 --> 00:04:33.935
+dollars is five percent, a genuinely strong incentive.
+
+00:04:33.935 --> 00:04:36.330
+Against one hundred million, it's down
+
+00:04:36.330 --> 00:04:38.595
+to zero point zero five percent.
+
+00:04:38.595 --> 00:04:41.232
+And against the source material's own four
+
+00:04:41.232 --> 00:04:43.807
+hundred million, just zero point zero one
+
+00:04:43.807 --> 00:04:46.015
+two five percent, vanishingly small.
+
+00:04:47.315 --> 00:04:50.881
+Notice how quickly that ratio collapses, as the exact
+
+00:04:50.881 --> 00:04:55.210
+same bounty gets measured against genuinely larger protocols.
+
+00:04:55.210 --> 00:04:58.614
+A fifty thousand dollar bounty was never actually the
+
+00:04:58.614 --> 00:05:02.648
+fixed, meaningful number; it's only ever meaningful relative to
+
+00:05:02.648 --> 00:05:06.431
+what it's protecting, and it can look perfectly reasonable,
+
+00:05:06.431 --> 00:05:10.150
+or nearly irrelevant, depending entirely on that one ratio.
+
+00:05:11.450 --> 00:05:13.782
+Here's how to actually check an audit's
+
+00:05:13.782 --> 00:05:16.463
+scope and date yourself, rather than trusting
+
+00:05:16.463 --> 00:05:18.395
+a badge or a headline claim.
+
+00:05:18.395 --> 00:05:21.410
+Open the audit report itself, and read its stated
+
+00:05:21.410 --> 00:05:25.630
+scope section directly, for the exact contract addresses covered.
+
+00:05:25.630 --> 00:05:28.754
+Compare that report's own date against the protocol's
+
+00:05:28.754 --> 00:05:32.351
+own deployment history, for the currently live contracts.
+
+00:05:32.351 --> 00:05:34.599
+And if the two don't line up, treat the
+
+00:05:34.599 --> 00:05:37.466
+gap between them as genuinely unaudited, full stop.
+
+00:05:38.766 --> 00:05:41.886
+Here's why code that's safely held large value
+
+00:05:41.886 --> 00:05:44.408
+for a genuinely long time is itself a
+
+00:05:44.408 --> 00:05:47.961
+real, meaningful signal, separate from any audit.
+
+00:05:47.961 --> 00:05:50.816
+Every day that code sits there, holding real,
+
+00:05:50.816 --> 00:05:54.727
+significant value, is another day skilled, motivated attackers
+
+00:05:54.727 --> 00:05:57.520
+have genuinely had the opportunity to find a
+
+00:05:57.520 --> 00:05:59.931
+flaw in it, and haven't succeeded.
+
+00:05:59.931 --> 00:06:03.097
+That's not proof of safety either, but it's real,
+
+00:06:03.097 --> 00:06:07.466
+accumulated evidence, earned specifically by surviving real attempts.
+
+00:06:08.766 --> 00:06:11.186
+Worth being direct about how these three
+
+00:06:11.186 --> 00:06:13.841
+signals actually combine, since none of them
+
+00:06:13.841 --> 00:06:16.561
+alone is genuinely sufficient on its own.
+
+00:06:16.561 --> 00:06:21.235
+A recent, well-scoped audit, a meaningfully sized bounty relative
+
+00:06:21.235 --> 00:06:24.847
+to T.V.L., and real time safely holding real value
+
+00:06:24.847 --> 00:06:28.829
+together, are what actually build honest confidence.
+
+00:06:28.829 --> 00:06:30.936
+Any one of the three, missing or
+
+00:06:30.936 --> 00:06:33.107
+weak, is a real gap worth pricing
+
+00:06:33.107 --> 00:06:35.214
+in directly, not explaining away.
+
+00:06:36.514 --> 00:06:37.519
+Worked example.
+
+00:06:38.819 --> 00:06:41.043
+Here's Protocol X, exactly as the
+
+00:06:41.043 --> 00:06:43.174
+source material lays it out.
+
+00:06:43.174 --> 00:06:44.999
+It has two audits on record.
+
+00:06:44.999 --> 00:06:47.924
+But its latest upgrade, deployed just last month,
+
+00:06:47.924 --> 00:06:50.974
+isn't actually covered in either audit's scope.
+
+00:06:50.974 --> 00:06:54.124
+Its bug bounty sits at fifty thousand dollars.
+
+00:06:54.124 --> 00:06:55.804
+Its total value locked sits
+
+00:06:55.804 --> 00:06:57.724
+at four hundred million dollars.
+
+00:06:59.024 --> 00:07:02.234
+Here's what that bounty-to-value ratio actually looks
+
+00:07:02.234 --> 00:07:05.269
+like, precisely, once you compute it directly.
+
+00:07:05.269 --> 00:07:09.754
+Fifty thousand dollars, against four hundred million dollars, comes
+
+00:07:09.754 --> 00:07:12.722
+to just zero point zero one two five percent
+
+00:07:12.722 --> 00:07:16.745
+of total value locked, an extremely small incentive relative
+
+00:07:16.745 --> 00:07:19.647
+to what's genuinely at stake if a real flaw
+
+00:07:19.647 --> 00:07:21.824
+exists in that unaudited upgrade.
+
+00:07:23.124 --> 00:07:25.773
+Here's the one sentence this entire worked
+
+00:07:25.773 --> 00:07:28.484
+example exists to prove, worth holding onto
+
+00:07:28.484 --> 00:07:31.249
+more than the specific numbers involved.
+
+00:07:31.249 --> 00:07:35.016
+The newest code, the part actually deployed most recently,
+
+00:07:35.016 --> 00:07:38.910
+is entirely unaudited, and the financial incentive to report
+
+00:07:38.910 --> 00:07:42.293
+a flaw in it responsibly is genuinely tiny, relative
+
+00:07:42.293 --> 00:07:45.996
+to what a successful exploit against four hundred million
+
+00:07:45.996 --> 00:07:48.039
+dollars could actually be worth.
+
+00:07:49.339 --> 00:07:51.955
+Worth being concrete about what size down,
+
+00:07:51.955 --> 00:07:54.450
+or wait actually means here, rather than
+
+00:07:54.450 --> 00:07:57.244
+leaving it as an abstract recommendation.
+
+00:07:57.244 --> 00:08:00.208
+Size down means genuinely reducing the position
+
+00:08:00.208 --> 00:08:03.049
+specifically in that unaudited upgrade, to an
+
+00:08:03.049 --> 00:08:06.004
+amount you'd be fully fine losing outright.
+
+00:08:06.004 --> 00:08:08.991
+Wait means holding off entirely, until a real
+
+00:08:08.991 --> 00:08:12.302
+audit actually covers that exact code, rather than
+
+00:08:12.302 --> 00:08:15.679
+assuming the earlier two audits somehow still apply.
+
+00:08:16.979 --> 00:08:18.069
+Quick check.
+
+00:08:18.069 --> 00:08:19.643
+Why does it actually matter to
+
+00:08:19.643 --> 00:08:20.964
+check an audit's own date?
+
+00:08:25.384 --> 00:08:28.173
+The answer: any code changed after that audit
+
+00:08:28.173 --> 00:08:30.659
+happened was never reviewed by it at all.
+
+00:08:31.959 --> 00:08:33.419
 Here's your checklist.
 
-00:01:25.762 --> 00:01:27.297
-Do it now, for real.
+00:08:33.419 --> 00:08:36.743
+Do it before trusting any contract's own audit claims.
 
-00:01:27.297 --> 00:01:29.574
-First, Audit scope matches deployed
+00:08:36.743 --> 00:08:39.751
+Confirm the audit's scope genuinely matches the
 
-00:01:29.574 --> 00:01:31.772
-code; date after last upgrade.
+00:08:39.751 --> 00:08:42.508
+currently deployed code, and its date comes
 
-00:01:31.772 --> 00:01:34.907
-Next, Critical/high findings resolved.
+00:08:42.508 --> 00:08:44.563
+after the last real upgrade.
 
-00:01:34.907 --> 00:01:38.832
-And finally, Bug bounty size relative to TVL checked.
+00:08:44.563 --> 00:08:47.574
+Confirm any critical or high-severity findings
 
-00:01:40.132 --> 00:01:41.342
-Question 1.
+00:08:47.574 --> 00:08:50.373
+were actually resolved, not just noted.
 
-00:01:41.342 --> 00:01:42.847
-What does an audit not prove?
+00:08:50.373 --> 00:08:53.579
+And check the bug bounty's actual size, specifically
 
-00:01:47.267 --> 00:01:49.575
-The answer: That the code (or later
+00:08:53.579 --> 00:08:56.603
+relative to the protocol's own total value locked.
 
-00:01:49.575 --> 00:01:51.947
-changes, or economic design) is safe.
-
-00:01:53.247 --> 00:01:54.492
-Question 2.
-
-00:01:54.492 --> 00:01:55.677
-What is reentrancy?
-
-00:02:00.097 --> 00:02:03.088
-The answer: A contract being called back before it
-
-00:02:03.088 --> 00:02:06.842
-finishes updating its state, letting an attacker repeat actions.
-
-00:02:08.142 --> 00:02:09.412
-Question 3.
-
-00:02:09.412 --> 00:02:10.767
-Why check audit dates?
-
-00:02:15.187 --> 00:02:18.507
-The answer: Code changed after the audit wasn't reviewed.
-
-00:02:19.807 --> 00:02:21.052
+00:08:57.903 --> 00:08:59.148
 Let's recap.
 
-00:02:21.052 --> 00:02:24.420
-Common failure types: logic bugs, reentrancy (a
+00:08:59.148 --> 00:09:02.789
+Four common failure types: logic bugs, reentrancy,
 
-00:02:24.420 --> 00:02:27.368
-contract is called back before it updates
+00:09:02.789 --> 00:09:06.359
+broken access control, and economic exploits that
 
-00:02:27.368 --> 00:02:30.736
-its state), broken access control, and economic
+00:09:06.359 --> 00:09:08.373
+need no code bug at all.
 
-00:02:30.736 --> 00:02:35.176
-exploits (correct code, exploitable incentives or oracles).
+00:09:08.373 --> 00:09:10.524
+An audit reviews specific code, at a
 
-00:02:35.176 --> 00:02:38.346
-Audits review specific code at a specific time.
+00:09:10.524 --> 00:09:13.315
+specific time; check its scope, date, findings,
 
-00:02:38.346 --> 00:02:41.821
-Bug bounties pay hackers to report instead of exploit.
+00:09:13.315 --> 00:09:15.243
+and whether they were fixed.
 
-00:02:41.821 --> 00:02:44.138
-Time and value at risk: code that
+00:09:15.243 --> 00:09:17.325
+A bug bounty's size only matters
 
-00:02:44.138 --> 00:02:46.727
-has safely held large value for years
+00:09:17.325 --> 00:09:20.023
+relative to the value it's protecting.
 
-00:02:46.727 --> 00:02:48.840
-has survived more real attacks.
+00:09:20.023 --> 00:09:21.809
+Time and value safely held is
 
-00:02:50.140 --> 00:02:52.655
-Do the checklist now, before you move on.
+00:09:21.809 --> 00:09:24.133
+real evidence, though never proof.
 
-00:02:52.655 --> 00:02:55.922
-Next up, Lesson 5.6: Beyond Ethereum:
+00:09:24.133 --> 00:09:26.416
+And Protocol X shows exactly why all
 
-00:02:55.922 --> 00:02:59.104
-Solana, Bitcoin and other ecosystems.
+00:09:26.416 --> 00:09:29.007
+of this matters together: two audits, but
+
+00:09:29.007 --> 00:09:31.228
+the newest code isn't in either one.
+
+00:09:32.528 --> 00:09:36.011
+Check the audit's scope and date, confirm findings were
+
+00:09:36.011 --> 00:09:39.048
+fixed, and check the bounty relative to TVL.
+
+00:09:39.048 --> 00:09:42.136
+Next up, Lesson 5.6: beyond Ethereum
+
+00:09:42.136 --> 00:09:45.390
+— Solana, Bitcoin and other ecosystems.
