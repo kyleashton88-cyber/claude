@@ -125,6 +125,8 @@ sc("flow", "Here's why that one word works so well. You choose it yourself, when
           {"label": "An attacker can't know it", "sub": "They never set it", "icon": "users", "tone": "bad"}, {"label": "Missing word = fake", "sub": "The whole tell", "icon": "alert"}])
 sc("statement", "A few weeks later, an email arrives: “suspicious login, verify your account now.” It looks right. Same logo, same layout. But it doesn't say “blue-kettle” anywhere. Maria knows instantly it's fake, and deletes it without clicking a thing.",
    chapter="Worked example", kicker="Later, a test", lines=["No \"blue-kettle\" in the email.", "She knows it's fake."], sub="One missing word, and the whole attack fails.")
+sc("statement", "One more thing, if you already opened an exchange account before this lesson. Everything here still applies to it. Go back now, and work through all six lockdown steps on that account, before you do anything else with it.",
+   chapter="Worked example", kicker="Already have an account?", lines=["Everything here still applies.", "Go lock it down now."], sub="The six steps work just as well on an account you opened last year.")
 
 # ---------------------------------------------------------------- checklist and quiz
 sc("title", "Checklist and quiz.", chapter="Checklist and quiz", eyebrow="Checklist and quiz", num="6", title="Confirm you've got it",
