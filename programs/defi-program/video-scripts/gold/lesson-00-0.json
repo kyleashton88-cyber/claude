@@ -106,6 +106,7 @@
    "type": "chart",
    "chapter": "The 60-second version",
    "kind": "bars",
+   "variant": "row",
    "title": "Where your $100 goes",
    "sub": "Example numbers · real costs vary by exchange, network and day",
    "bars": [
@@ -162,6 +163,7 @@
    "type": "chart",
    "chapter": "The 60-second version",
    "kind": "bars",
+   "variant": "pop",
    "title": "Same $100, two routes",
    "sub": "Example numbers · real costs vary by exchange, network and day",
    "bars": [
@@ -320,6 +322,7 @@
   {
    "type": "compare",
    "chapter": "Words you'll need",
+   "title": "Who holds the keys?",
    "left": {
     "label": "On an exchange",
     "tone": "neutral",
@@ -351,6 +354,7 @@
    "type": "chart",
    "chapter": "Words you'll need",
    "kind": "line",
+   "variant": "area",
    "title": "Gas follows demand",
    "caption": "Illustrative, not real data",
    "series": [
@@ -494,6 +498,7 @@
    "type": "chart",
    "chapter": "Before you start",
    "kind": "donut",
+   "variant": "ring",
    "title": "An example $100 learning budget",
    "center": "$100",
    "centerSub": "example split",
@@ -562,6 +567,7 @@
    "type": "chart",
    "chapter": "Before you start",
    "kind": "bars",
+   "variant": "share",
    "title": "About 2 hours 40, over five days",
    "sub": "An example plan · minutes per day",
    "bars": [
@@ -673,6 +679,7 @@
   {
    "type": "compare",
    "chapter": "Your first safe step",
+   "title": "Text codes vs. an authenticator app",
    "left": {
     "label": "Text-message codes",
     "tone": "neutral",
@@ -689,7 +696,8 @@
      "Backup codes saved offline"
     ]
    },
-   "vo": "So, two changes. First, a unique password, created and stored by a password manager, so a leak somewhere else can't unlock your email. Second, two-factor authentication using an authenticator app. Why not text messages? Because a criminal can talk a phone company into moving your number to their SIM card. That's called a SIM swap, and it means your codes go straight to them. An authenticator app stays on your phone. And save your backup codes somewhere safe, offline."
+   "vo": "So, two changes. First, a unique password, created and stored by a password manager, so a leak somewhere else can't unlock your email. Second, two-factor authentication using an authenticator app. Why not text messages? Because a criminal can talk a phone company into moving your number to their SIM card. That's called a SIM swap, and it means your codes go straight to them. An authenticator app stays on your phone. And save your backup codes somewhere safe, offline.",
+   "cap": "So, two changes. First, a unique password, created and stored by a password manager, so a leak somewhere else can't unlock your email. Second, two-factor authentication using an authenticator app. Why not text messages? Because a criminal can talk a phone company into moving your number to their SIM card. That's called a SIM swap, and it means your codes go straight to them. An authenticator app stays on your phone. And save your backup codes somewhere safe, offline."
   },
   {
    "type": "steps",
@@ -724,7 +732,7 @@
    "vo": "The mastery ladder."
   },
   {
-   "type": "chart",
+   "type": "chart3d",
    "chapter": "The mastery ladder",
    "kind": "bars",
    "title": "The mastery ladder",
@@ -874,7 +882,7 @@
      "icon": "swap"
     },
     {
-     "label": "Enter seed phrase",
+     "label": "Restore with backup words",
      "sub": "In order",
      "icon": "doc"
     },
@@ -884,11 +892,12 @@
      "icon": "check"
     }
    ],
-   "vo": "Question one. What if I lose my phone? This is exactly why the seed phrase exists. You buy a new phone or device. You install the same wallet app. You choose restore, instead of create new. You type in your seed phrase, in order. And every key, every address, every balance comes back, because they were never really \"in\" the old phone to begin with."
+   "vo": "Question one. What if I lose my phone? This is exactly why the seed phrase exists. You buy a new phone or device. You install the same wallet app. You choose restore, instead of create new. You restore with your backup words, in order. And every key, every address, every balance comes back, because they were never really \"in\" the old phone to begin with."
   },
   {
    "type": "compare",
    "chapter": "Common questions",
+   "title": "Is my money insured?",
    "left": {
     "label": "A bank account",
     "tone": "neutral",
@@ -982,11 +991,11 @@
    "chapter": "Common questions",
    "kicker": "One more honest answer",
    "lines": [
-    "Nobody can guarantee returns.",
-    "We guarantee a process."
+    "No result is ever guaranteed.",
+    "We commit to a process."
    ],
    "sub": "A safe setup, clear checklists, and habits that protect you either way.",
-   "vo": "One more honest answer, because it comes up a lot. Can this program guarantee I'll make money? No. Nobody can, and anyone who tells you otherwise is a warning sign, not a promise. What this program guarantees is a process: a safe setup, clear checklists, and habits that protect you whether the market goes up or down."
+   "vo": "One more honest answer, because it comes up a lot. Nobody can guarantee you'll make money here, and anyone who tells you otherwise is a warning sign, not a promise. What this program does promise is a process: a safe setup, clear checklists, and habits that protect you whether the market goes up or down."
   },
   {
    "type": "quiz",
@@ -1000,7 +1009,7 @@
   },
   {
    "type": "bullets",
-   "chapter": "Next",
+   "chapter": "Recap and next",
    "title": "Do this now",
    "items": [
     "Phone, computer, ID, bank account",
@@ -1013,7 +1022,7 @@
   },
   {
    "type": "statement",
-   "chapter": "Next",
+   "chapter": "Recap and next",
    "kicker": "Educational content only",
    "lines": [
     "Small amounts.",
@@ -1024,11 +1033,11 @@
   },
   {
    "type": "cta",
-   "chapter": "Next",
+   "chapter": "Recap and next",
    "button": "Next: Lesson 0.1",
    "sub": "Money, ledgers and why blockchains exist",
-   "vo": "That's the Mastery Starter. You now have the whole module in your head: the journey of one hundred dollars, the five words, what to have ready, your first safe step, and the ladder that tells you when you're done. Next up, Lesson zero point one: Money, ledgers and why blockchains exist. See you there.",
-   "cap": "That's the Mastery Starter. You now have the whole module in your head: the journey of $100, the five words, what to have ready, your first safe step, and the ladder that tells you when you're done. Next up, Lesson 0.1: Money, ledgers and why blockchains exist. See you there."
+   "vo": "That's the Mastery Starter. You now have the whole module in your head. The journey of one hundred dollars, the five words, what to have ready, your first safe step, and the ladder that tells you when you're done. Next up, Lesson zero point one: Money, ledgers and why blockchains exist. See you there.",
+   "cap": "That's the Mastery Starter. You now have the whole module in your head. The journey of $100, the five words, what to have ready, your first safe step, and the ladder that tells you when you're done. Next up, Lesson 0.1: Money, ledgers and why blockchains exist. See you there."
   }
  ]
 }

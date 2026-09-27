@@ -50,7 +50,7 @@ sc("flow", "To make that real, let's follow one hundred dollars. It starts in yo
           {"label": "First DeFi step", "sub": "One small practice", "icon": "grid"}])
 sc("chart", "But here's something most beginners never see. Your hundred dollars shrinks a little at every step. Let's put example numbers on it. The spread, the gap between the buying and selling price, might cost around fifty cents. An instant-buy fee might be about a dollar fifty. And the withdrawal to your wallet, the network fee, might be around a dollar. That's roughly three dollars in total.",
    "But here's something most beginners never see. Your $100 shrinks a little at every step. Let's put example numbers on it. The spread, the gap between the buying and selling price, might cost around 50 cents. An instant-buy fee might be about $1.50. And the withdrawal to your wallet, the network fee, might be around $1. That's roughly $3 in total.",
-   chapter="The 60-second version", kind="bars", title="Where your $100 goes", sub=EX,
+   chapter="The 60-second version", kind="bars", variant="row", title="Where your $100 goes", sub=EX,
    bars=[{"label": "Spread", "text": "Buy vs sell price", "value": 0.5, "show": "$0.50", "tone": "warn"},
          {"label": "Instant-buy fee", "text": "The “convenience” fee", "value": 1.49, "show": "$1.49", "tone": "warn"},
          {"label": "Network fee", "text": "Withdrawal to your wallet", "value": 1.0, "show": "$1.00", "tone": "warn"},
@@ -60,7 +60,7 @@ sc("stats", "So you put in one hundred dollars, and about ninety-seven dollars a
    chapter="The 60-second version", stats=[["$100", "sent from your bank"], ["$97.01", "arrives in your wallet (example)"]], lastAccent=False)
 sc("chart", "And the route you choose matters more than people think. Buying with the big, friendly instant-buy button often costs the most. Using the exchange's advanced trading screen, with a simple limit order, often costs a fraction of that. Same exchange. Same coin. A different button. In this example, that's about three dollars against about sixty cents.",
    "And the route you choose matters more than people think. Buying with the big, friendly instant-buy button often costs the most. Using the exchange's advanced trading screen, with a simple limit order, often costs a fraction of that. Same exchange. Same coin. A different button. In this example, that's about $3 against about 60 cents.",
-   chapter="The 60-second version", kind="bars", title="Same $100, two routes", sub=EX,
+   chapter="The 60-second version", kind="bars", variant="pop", title="Same $100, two routes", sub=EX,
    bars=[{"label": "Instant buy", "text": "The big friendly button", "value": 2.99, "show": "$2.99", "tone": "bad"},
          {"label": "Advanced trade", "text": "A simple limit order", "value": 0.6, "show": "$0.60", "tone": "good"}],
    note="Same exchange. Same coin. A different button.", noteAt=4)
@@ -91,7 +91,7 @@ sc("statement", "Which leads to the most important idea in this module. Your see
    chapter="Words you'll need", kicker="The key insight", lines=["It can't be guessed.", "It can only be given away."], sub="Never type it, photograph it, store it online or share it. Nobody legitimate will ever ask.")
 sc("compare", "Word four: exchange. A company that swaps your money for crypto. It's your front door, and it's where you'll buy and cash out. But while your crypto sits on an exchange, the exchange holds the keys. In your own wallet, you hold the keys. That difference is the whole of Lesson zero point four.",
    "Word four: exchange. A company that swaps your money for crypto. It's your front door, and it's where you'll buy and cash out. But while your crypto sits on an exchange, the exchange holds the keys. In your own wallet, you hold the keys. That difference is the whole of Lesson 0.4.",
-   chapter="Words you'll need",
+   chapter="Words you'll need", title="Who holds the keys?",
    left={"label": "On an exchange", "tone": "neutral", "items": ["Swaps money for crypto", "Where you buy and cash out", "The exchange holds the keys"]},
    right={"label": "In your wallet", "tone": "good", "items": ["You hold the keys"]})
 img(D + "story-gas-stamp.png", "Word five: gas",
@@ -99,7 +99,7 @@ img(D + "story-gas-stamp.png", "Word five: gas",
     chapter="Words you'll need")
 sc("chart", "Gas isn't a fixed price, and this chart shows why. It's an auction for space in the next block. When the network is quiet, the stamp is cheap. When everyone rushes to send at once, the price climbs. These numbers are illustrative, but the shape is real: fees follow demand. So if a fee looks high, you can often simply wait, or use a cheaper network, which you'll learn about in Lesson zero point six.",
    "Gas isn't a fixed price, and this chart shows why. It's an auction for space in the next block. When the network is quiet, the stamp is cheap. When everyone rushes to send at once, the price climbs. These numbers are illustrative, but the shape is real: fees follow demand. So if a fee looks high, you can often simply wait, or use a cheaper network, which you'll learn about in Lesson 0.6.",
-   chapter="Words you'll need", kind="line", title="Gas follows demand", caption="Illustrative, not real data",
+   chapter="Words you'll need", kind="line", variant="area", title="Gas follows demand", caption="Illustrative, not real data",
    series=[{"values": [18, 14, 11, 9, 8, 9, 12, 16, 22, 28, 31, 29, 26, 30, 38, 52, 64, 58, 44, 36, 30, 26, 22, 19], "tone": "blue"}],
    xlabels=["00:00", "", "", "", "", "", "06:00", "", "", "", "", "", "12:00", "", "", "", "", "", "18:00", "", "", "", "", "23:00"],
    yticks=[[0, "Low"], [35, "Medium"], [70, "High"]], ymin=0, ymax=72,
@@ -117,7 +117,7 @@ sc("pillars", "First, four simple tools. A phone, for your authenticator app and
           {"icon": "users", "title": "Photo ID", "text": "For KYC: know your customer"}, {"icon": "bank", "title": "A bank account", "text": "Money in and out"}])
 sc("chart", "Second, money. Fifty to two hundred dollars that you can afford to lose while you learn. Here's one example of how a hundred dollars might be split. About forty dollars of E.T.H., the coin that pays gas, and that you'll use for practice. About forty-five dollars of U.S.D.C., a stablecoin, a digital dollar designed to hold its value. And about fifteen dollars set aside for spreads, fees and test transfers. That last slice matters. Test transfers are part of the lesson, not a waste.",
    "Second, money. $50 to $200 that you can afford to lose while you learn. Here's one example of how $100 might be split. About $40 of ETH, the coin that pays gas, and that you'll use for practice. About $45 of USDC, a stablecoin, a digital dollar designed to hold its value. And about $15 set aside for spreads, fees and test transfers. That last slice matters. Test transfers are part of the lesson, not a waste.",
-   chapter="Before you start", kind="donut", title="An example $100 learning budget", center="$100", centerSub="example split",
+   chapter="Before you start", kind="donut", variant="ring", title="An example $100 learning budget", center="$100", centerSub="example split",
    segs=[{"label": "ETH", "text": "Pays gas, used for practice", "value": 40, "show": "$40", "tone": "blue"},
          {"label": "USDC", "text": "A stablecoin: a digital dollar", "value": 45, "show": "$45", "tone": "good"},
          {"label": "Fees and tests", "text": "Spreads, fees, test transfers", "value": 15, "show": "$15", "tone": "warn"}],
@@ -131,7 +131,7 @@ sc("chart", "Why so small? Because on a blockchain, a mistake costs whatever you
    note="Small amounts make mistakes cheap while habits form.", noteAt=5)
 sc("chart", "And third, time. Two to three hours in total, spread over a few days. Here's what that can look like. Day one, about thirty minutes: your passwords and security. Day two, about thirty-five: the exchange account. Day three, about forty: a first buy and your wallet. Day four, about thirty: the restore test and first transfer. And day five, about twenty-five: practice DeFi and your security baseline. Short sessions beat one long one, because you'll be calmer, and calm people make fewer mistakes.",
    "And third, time. 2 to 3 hours in total, spread over a few days. Here's what that can look like. Day 1, about 30 minutes: your passwords and security. Day 2, about 35: the exchange account. Day 3, about 40: a first buy and your wallet. Day 4, about 30: the restore test and first transfer. And Day 5, about 25: practice DeFi and your security baseline. Short sessions beat one long one, because you'll be calmer, and calm people make fewer mistakes.",
-   chapter="Before you start", kind="bars", title="About 2 hours 40, over five days", sub="An example plan · minutes per day",
+   chapter="Before you start", kind="bars", variant="share", title="About 2 hours 40, over five days", sub="An example plan · minutes per day",
    bars=[{"label": "Day 1", "text": "Passwords and 2FA", "value": 30, "show": "30 min"}, {"label": "Day 2", "text": "Exchange account", "value": 35, "show": "35 min"},
          {"label": "Day 3", "text": "First buy, wallet", "value": 40, "show": "40 min"}, {"label": "Day 4", "text": "Restore test, transfer", "value": 30, "show": "30 min"},
          {"label": "Day 5", "text": "Practice DeFi, baseline", "value": 25, "show": "25 min", "tone": "good"}])
@@ -148,7 +148,8 @@ sc("flow", "Your email is the master key to everything else. Watch how an attack
           {"label": "Reset link", "sub": "Arrives in your email", "icon": "doc", "tone": "bad"}, {"label": "Account taken", "sub": "And your money", "icon": "bank", "tone": "bad"}],
    edges=[{"from": "0", "to": "1", "tone": "bad"}, {"from": "1", "to": "2", "tone": "bad"}, {"from": "2", "to": "3", "tone": "bad"}])
 sc("compare", "So, two changes. First, a unique password, created and stored by a password manager, so a leak somewhere else can't unlock your email. Second, two-factor authentication using an authenticator app. Why not text messages? Because a criminal can talk a phone company into moving your number to their SIM card. That's called a SIM swap, and it means your codes go straight to them. An authenticator app stays on your phone. And save your backup codes somewhere safe, offline.",
-   chapter="Your first safe step",
+   "So, two changes. First, a unique password, created and stored by a password manager, so a leak somewhere else can't unlock your email. Second, two-factor authentication using an authenticator app. Why not text messages? Because a criminal can talk a phone company into moving your number to their SIM card. That's called a SIM swap, and it means your codes go straight to them. An authenticator app stays on your phone. And save your backup codes somewhere safe, offline.",
+   chapter="Your first safe step", title="Text codes vs. an authenticator app",
    left={"label": "Text-message codes", "tone": "neutral", "items": ["Codes travel over your phone number", "A SIM swap sends them to a criminal"]},
    right={"label": "Authenticator app", "tone": "good", "items": ["Codes made on your own phone", "Backup codes saved offline"]})
 sc("steps", "Here's the first safe step as a checklist. Install a password manager. Give your email a long, unique password. Turn on authenticator-app two-factor. Save the backup codes offline. Then do the same for every account that touches money.",
@@ -160,7 +161,7 @@ sc("quiz", "Quick check. Why is text-message two-factor weaker than an authentic
 # ---------------------------------------------------------------- the mastery ladder
 sc("title", "The mastery ladder.", chapter="The mastery ladder", eyebrow="The mastery ladder", num="3", title="Three rungs",
    sub="Beginner · Practitioner · Master")
-sc("chart", "Here's how you'll measure your progress through Module Zero. Three rungs. Beginner: you can explain blockchain, wallet and seed phrase in plain words. Practitioner: you have a secured exchange account and a wallet whose restore you've tested. And Master: you've completed the whole Day-One Setup Kit, and you could coach a friend through it.",
+sc("chart3d", "Here's how you'll measure your progress through Module Zero. Three rungs. Beginner: you can explain blockchain, wallet and seed phrase in plain words. Practitioner: you have a secured exchange account and a wallet whose restore you've tested. And Master: you've completed the whole Day-One Setup Kit, and you could coach a friend through it.",
    "Here's how you'll measure your progress through Module 0. Three rungs. Beginner: you can explain blockchain, wallet and seed phrase in plain words. Practitioner: you have a secured exchange account and a wallet whose restore you've tested. And Master: you've completed the whole Day-1 Setup Kit, and you could coach a friend through it.",
    chapter="The mastery ladder", kind="bars", title="The mastery ladder",
    bars=[{"label": "Beginner", "text": "Explain it in plain words", "value": 1, "show": "Rung 1", "tone": "blue"},
@@ -191,13 +192,13 @@ sc("quiz", "Last check. What's the sign that you've mastered Module Zero? [[paus
 # ---------------------------------------------------------------- questions
 sc("title", "Three questions every beginner asks.", chapter="Common questions", eyebrow="Common questions", num="3", title="Before you ask, watch this",
    sub="What if I lose my phone? Is my money insured? What if the price crashes?")
-sc("flow", "Question one. What if I lose my phone? This is exactly why the seed phrase exists. You buy a new phone or device. You install the same wallet app. You choose restore, instead of create new. You type in your seed phrase, in order. And every key, every address, every balance comes back, because they were never really \"in\" the old phone to begin with.",
+sc("flow", "Question one. What if I lose my phone? This is exactly why the seed phrase exists. You buy a new phone or device. You install the same wallet app. You choose restore, instead of create new. You restore with your backup words, in order. And every key, every address, every balance comes back, because they were never really \"in\" the old phone to begin with.",
    chapter="Common questions", title="What if I lose my phone?",
    nodes=[{"label": "New device", "sub": "Any brand, any time", "icon": "bell"}, {"label": "Install wallet", "sub": "The same app", "icon": "wallet"},
-          {"label": "Choose restore", "sub": "Not create new", "icon": "swap"}, {"label": "Enter seed phrase", "sub": "In order", "icon": "doc"},
+          {"label": "Choose restore", "sub": "Not create new", "icon": "swap"}, {"label": "Restore with backup words", "sub": "In order", "icon": "doc"},
           {"label": "Everything's back", "sub": "Keys, addresses, balances", "icon": "check"}])
 sc("compare", "Question two. Is my money insured, like a bank account? Here's the honest answer. A bank deposit is typically protected by a government scheme, up to a limit, if the bank fails. Crypto in your own wallet has no such scheme. There's no one to call, and no claim to file. That's exactly why this module spends so much time on backups and safe habits: they're the only insurance that exists.",
-   chapter="Common questions",
+   chapter="Common questions", title="Is my money insured?",
    left={"label": "A bank account", "tone": "neutral", "items": ["Government-backed scheme, up to a limit", "Someone to call if it fails"]},
    right={"label": "Your own wallet", "tone": "bad", "items": ["No scheme, no one to call", "Your backup is the only insurance"]})
 sc("chart", "Question three. What if the price crashes right after I buy? Here's an honest example, not a prediction. Crypto prices move far more than most people expect: down thirty percent in a bad month is not unusual for some coins. That's exactly why your first buy is a small, learning-sized amount, and why this module teaches habits, not price calls. The goal of Module Zero isn't to time the market. It's to get you set up safely, whatever the price does next.",
@@ -211,8 +212,8 @@ sc("chart", "Question three. What if the price crashes right after I buy? Here's
 img(D + "story-what-can-go-wrong.png", "Where beginners lose the most",
     "Before we wrap the ladder up, one more picture worth remembering. Almost every beginner loss traces back to one of four doors: a lost seed phrase, a transfer sent on the wrong network, a fake site or fake support agent, or simple rushing. Module Zero is built to close all four before you ever move a serious amount.",
     chapter="Common questions")
-sc("statement", "One more honest answer, because it comes up a lot. Can this program guarantee I'll make money? No. Nobody can, and anyone who tells you otherwise is a warning sign, not a promise. What this program guarantees is a process: a safe setup, clear checklists, and habits that protect you whether the market goes up or down.",
-   chapter="Common questions", kicker="One more honest answer", lines=["Nobody can guarantee returns.", "We guarantee a process."], sub="A safe setup, clear checklists, and habits that protect you either way.")
+sc("statement", "One more honest answer, because it comes up a lot. Nobody can guarantee you'll make money here, and anyone who tells you otherwise is a warning sign, not a promise. What this program does promise is a process: a safe setup, clear checklists, and habits that protect you whether the market goes up or down.",
+   chapter="Common questions", kicker="One more honest answer", lines=["No result is ever guaranteed.", "We commit to a process."], sub="A safe setup, clear checklists, and habits that protect you either way.")
 sc("quiz", "One final check. Someone offers to \"guarantee\" you twenty percent a month if you send them crypto to manage. What should you do? [[pause 4]] The answer: walk away. No result is ever guaranteed, and nobody legitimate manages your money by taking custody of it through a message.",
    "One final check. Someone offers to \"guarantee\" you 20% a month if you send them crypto to manage. What should you do? [[pause 4]] The answer: walk away. No result is ever guaranteed, and nobody legitimate takes custody of your crypto through a message.",
    chapter="Common questions", n=4, of=4, q="Someone offers to “guarantee” 20% a month if you send them crypto to manage. What should you do?",
@@ -221,12 +222,12 @@ sc("quiz", "One final check. Someone offers to \"guarantee\" you twenty percent 
 # ---------------------------------------------------------------- next
 sc("bullets", "Before you move on, do this lesson's checklist. A phone, a computer, ID and a bank account, ready. A learning budget of fifty to two hundred dollars you can afford to lose. Two to three hours blocked out over a few days. And your email secured, with a unique password and authenticator-app two-factor.",
    "Before you move on, do this lesson's checklist. A phone, a computer, ID and a bank account, ready. A learning budget of $50 to $200 you can afford to lose. 2 to 3 hours blocked out over a few days. And your email secured, with a unique password and authenticator-app two-factor.",
-   chapter="Next", title="Do this now", items=["Phone, computer, ID, bank account", "$50–$200 learning budget", "2–3 hours over a few days", "Email: unique password + app 2FA"])
+   chapter="Recap and next", title="Do this now", items=["Phone, computer, ID, bank account", "$50–$200 learning budget", "2–3 hours over a few days", "Email: unique password + app 2FA"])
 sc("statement", "This is education, not financial advice. Crypto is volatile, you can lose some or all of what you put in, and no results are guaranteed. And nobody from this program will ever ask for your seed phrase, private keys or account access.",
-   chapter="Next", kicker="Educational content only", lines=["Small amounts.", "Your keys stay yours."], sub="Not financial advice. You can lose money. No results are guaranteed. We never ask for keys.")
-sc("cta", "That's the Mastery Starter. You now have the whole module in your head: the journey of one hundred dollars, the five words, what to have ready, your first safe step, and the ladder that tells you when you're done. Next up, Lesson zero point one: Money, ledgers and why blockchains exist. See you there.",
-   "That's the Mastery Starter. You now have the whole module in your head: the journey of $100, the five words, what to have ready, your first safe step, and the ladder that tells you when you're done. Next up, Lesson 0.1: Money, ledgers and why blockchains exist. See you there.",
-   chapter="Next", button="Next: Lesson 0.1", sub="Money, ledgers and why blockchains exist")
+   chapter="Recap and next", kicker="Educational content only", lines=["Small amounts.", "Your keys stay yours."], sub="Not financial advice. You can lose money. No results are guaranteed. We never ask for keys.")
+sc("cta", "That's the Mastery Starter. You now have the whole module in your head. The journey of one hundred dollars, the five words, what to have ready, your first safe step, and the ladder that tells you when you're done. Next up, Lesson zero point one: Money, ledgers and why blockchains exist. See you there.",
+   "That's the Mastery Starter. You now have the whole module in your head. The journey of $100, the five words, what to have ready, your first safe step, and the ladder that tells you when you're done. Next up, Lesson 0.1: Money, ledgers and why blockchains exist. See you there.",
+   chapter="Recap and next", button="Next: Lesson 0.1", sub="Money, ledgers and why blockchains exist")
 
 spec = {"id": "lesson-00-0", "title": "Lesson 0.0: Mastery Starter", "size": [1920, 1080], "group": "lessons", "maxMinutes": 25, "tag": "Lesson 0.0",
         "gold": True, "music": True, "musicLevel": 0.14, "seed": 40,
