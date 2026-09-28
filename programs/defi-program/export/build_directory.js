@@ -531,7 +531,8 @@ h3 { font-size: 22px; letter-spacing: -0.02em; margin: 14px 0 6px; }
 .flag.start { color: var(--link); }
 .hasvid, .sheet, .calclink { margin-left: 8px; font-weight: 680; font-size: 14px; }
 .hasvid { color: var(--muted); font-weight: 600; }
-.sheet, .calclink { color: var(--link); white-space: nowrap; }
+.sheet, .calclink { color: var(--link); }
+.ltext, .ltitle { min-width: 0; }
 .example { max-width: 66ch; }
 .hitcalc { display: flex; gap: 12px; align-items: baseline; border-top: 1px solid var(--line); padding: 12px 0; text-decoration: none; }
 .hitcalc span { font-family: var(--mono); font-size: 13.5px; font-weight: 600; }
@@ -544,7 +545,7 @@ h3 { font-size: 22px; letter-spacing: -0.02em; margin: 14px 0 6px; }
 .worksheet header { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; align-items: baseline; }
 .worksheet h3 { margin-top: 0; }
 .wsbody { max-width: 78ch; }
-.tablewrap { overflow-x: auto; margin: 10px 0 16px; }
+.tablewrap { overflow-x: auto; max-width: 100%; margin: 10px 0 16px; }
 table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
 th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
 th { font-weight: 680; }
@@ -562,7 +563,7 @@ code { font-family: var(--mono); font-size: 0.86em; }
 .calc { border-top: 1px solid var(--line); padding: 14px 0; scroll-margin-top: 120px; }
 .calc h3 { margin: 0 0 4px; font-size: 18px; }
 .calc p { margin: 0 0 6px; max-width: 66ch; }
-.formgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin: 10px 0; max-width: 720px; }
+.formgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 10px; margin: 10px 0; max-width: min(720px, 100%); }
 .formgrid label { font-size: 13px; font-weight: 650; color: var(--muted); }
 .formgrid input, .formgrid select { display: block; width: 100%; margin-top: 4px; font: inherit; font-size: 16px; padding: 8px; border: 1px solid var(--line); background: #fff; color: var(--text); }
 .out { font-size: 15px; line-height: 1.45; background: #fff; border: 1px solid var(--line); padding: 12px 14px; margin: 0 0 8px; max-width: 720px; }
@@ -574,12 +575,13 @@ code { font-family: var(--mono); font-size: 0.86em; }
 #files table code { color: var(--muted); }
 footer { margin-top: 36px; color: var(--muted); font-size: 14.5px; max-width: 68ch; }
 @media (max-width: 860px) {
-  .shell { grid-template-columns: 1fr; }
-  .rail { position: sticky; top: 96px; max-height: none; display: flex; gap: 0; overflow-x: auto; padding: 0 8px; }
+  .shell { grid-template-columns: minmax(0, 1fr); }
+  .rail, .main { min-width: 0; }
+  .rail { position: sticky; top: 96px; max-height: none; display: flex; width: 100%; gap: 0; overflow-x: auto; padding: 0 8px; }
   .rail a { white-space: nowrap; border-left: 0; border-bottom: 2px solid transparent; padding: 10px 12px; }
   .rail a.stagelink { margin: 0; }
   .rail a.modlink { font-size: 13px; }
-  .main { padding: 22px 16px 72px; }
+  .main { padding: 22px 16px 72px; max-width: 100%; }
   .search { width: min(240px, 42vw); }
   .gallery { grid-template-columns: 1fr; }
   .lesson summary { grid-template-columns: 2.8rem minmax(0, 1fr) 92px; gap: 8px; }
