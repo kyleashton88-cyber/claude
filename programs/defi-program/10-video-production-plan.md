@@ -54,7 +54,7 @@ node build_video.js lessons              # all lessons (several hours of renderi
 | 0.3 | Buying your first crypto without overpaying | 35 | 10:03 | `video-scripts/gold/lesson-00-3.json` (gold pass 2: chart3d $500-ETH two-routes anchor, spread/deposit/limit-order flows, market-vs-limit demo, ETH-for-gas compare, cycle recap) | ✓ |
 | 0.4 | Exchange account vs your own wallet: who holds the keys? | 34 | 10:00 | `video-scripts/gold/lesson-00-4.json` (gold pass 2: flow3d anchor, full 5-row compare, illustrative $1,000-split scenario, withdrawal steps demo, cycle recap) | ✓ |
 | 0.5 | Setting up your wallet and backing it up | 33 | 10:01 | `video-scripts/gold/lesson-00-5.json` (gold pass 2: flow3d restore-test anchor, safe-install and pre-printed-scam flows, Sam's worked example, cycle recap) | ✓ |
-| 0.6 | Networks, gas and your first transfer | 12 | 4.3 min | `video-scripts/lessons/lesson-00-6.json` | ✓ |
+| 0.6 | Networks, gas and your first transfer | 36 | 10:01 | `video-scripts/gold/lesson-00-6.json` (gold pass 2: chart3d Arbitrum-vs-mainnet cost anchor, flow3d confirm+allowlist anchor, wrong-network mechanism flow, six-step transfer demo, cycle recap) | ✓ |
 | 0.7 | Your first DeFi steps (practice mode first) | 12 | 3.8 min | `video-scripts/lessons/lesson-00-7.json` | ✓ |
 | 0.8 | Your security baseline, and the language of DeFi | 19 | 5.7 min | `video-scripts/lessons/lesson-00-8.json` | ✓ |
 | 1.0 | Mastery Starter | 32 | 10.3 min | `video-scripts/gold/lesson-01-0.json` (gold: donut of loss causes, burner-wallet/multisig flows, approval & phishing compares, animated ladder) | ✓ |

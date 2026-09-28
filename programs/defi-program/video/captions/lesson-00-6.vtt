@@ -1,268 +1,637 @@
 WEBVTT
 
 00:00:00.550 --> 00:00:02.415
-Lesson 0.6.
+Lesson zero point six.
 
-00:00:02.415 --> 00:00:04.870
-Networks, gas and your first transfer.
+00:00:02.415 --> 00:00:05.070
+Networks, gas, and your first transfer.
 
-00:00:04.870 --> 00:00:06.921
-By the end of this lesson, you'll be
+00:00:05.070 --> 00:00:07.326
+By the end, you'll move crypto from the
 
-00:00:06.921 --> 00:00:09.193
-able to move crypto from the exchange to
+00:00:07.326 --> 00:00:09.750
+exchange to your own wallet safely, on the
 
-00:00:09.193 --> 00:00:11.743
-your own wallet safely, on the right network,
+00:00:09.750 --> 00:00:12.175
+right network, starting with a test amount.
 
-00:00:11.743 --> 00:00:13.295
-starting with a test amount.
+00:00:13.475 --> 00:00:16.070
+Here's why this lesson is stricter than most.
 
-00:00:14.595 --> 00:00:15.885
+00:00:16.070 --> 00:00:18.125
+A wrong password can be reset.
+
+00:00:18.125 --> 00:00:20.290
+A wrong purchase can be sold back.
+
+00:00:20.290 --> 00:00:23.063
+But a transfer sent on the wrong network has
+
+00:00:23.063 --> 00:00:26.083
+no undo button, no support ticket that fixes it,
+
+00:00:26.083 --> 00:00:28.725
+and often no way to recover it at all.
+
+00:00:28.725 --> 00:00:31.475
+Everything in this lesson exists to make sure
+
+00:00:31.475 --> 00:00:34.045
+that specific mistake never happens to you.
+
+00:00:35.345 --> 00:00:36.635
 Here's the plan.
 
-00:00:15.885 --> 00:00:17.570
-First, the key ideas.
+00:00:36.635 --> 00:00:38.861
+First, networks, and why the same coin
 
-00:00:17.570 --> 00:00:20.285
-Then, a worked example, step by step.
+00:00:38.861 --> 00:00:40.760
+can live on several of them.
 
-00:00:20.285 --> 00:00:21.810
-Then, your checklist.
+00:00:40.760 --> 00:00:44.355
+Second, the golden rule that prevents the costly mistake.
 
-00:00:21.810 --> 00:00:23.972
-And finally, a three-question quiz.
+00:00:44.355 --> 00:00:47.120
+Third, the six-step transfer, done safely.
 
-00:00:25.272 --> 00:00:29.419
-Step by step: First, Networks (chains): the same token
+00:00:47.120 --> 00:00:49.584
+And finally, a real worked example with
 
-00:00:29.419 --> 00:00:33.942
-(e.g. USDC) can exist on several blockchains: Ethereum (the
+00:00:49.584 --> 00:00:52.048
+real numbers, your checklist and a quiz.
 
-00:00:33.942 --> 00:00:37.863
-main one, higher fees) and cheaper Layer 2 networks
+00:00:53.348 --> 00:00:54.123
+Networks.
 
-00:00:37.863 --> 00:00:40.877
-such as Arbitrum, Base and Optimism.
+00:00:55.423 --> 00:00:58.888
+Quick context on why several networks exist at all.
 
-00:00:40.877 --> 00:00:43.213
-Next, the golden rule: the network you
+00:00:58.888 --> 00:01:03.073
+Ethereum alone can only process so many transactions per
 
-00:00:43.213 --> 00:00:45.490
-withdraw on must match a network your
+00:01:03.073 --> 00:01:07.406
+second, and when demand outstrips that, fees rise sharply,
 
-00:00:45.490 --> 00:00:48.366
-wallet (or the receiving service) supports.
+00:01:07.406 --> 00:01:10.863
+exactly what Lesson 0.1's gas chart showed.
 
-00:00:48.366 --> 00:00:51.306
-Sending on the wrong network can mean lost funds.
+00:01:10.863 --> 00:01:13.479
+Layer 2s exist specifically to relieve that
 
-00:00:51.306 --> 00:00:53.953
-Then, Gas: every transaction pays a small
+00:01:13.479 --> 00:01:16.274
+pressure, moving most activity off the busiest
 
-00:00:53.953 --> 00:00:56.711
-network fee in the network's gas token.
+00:01:16.274 --> 00:01:18.653
+network while still settling back to it.
 
-00:00:56.711 --> 00:01:00.061
-On Ethereum and its Layer 2s that's ETH.
+00:01:19.953 --> 00:01:22.421
+The same token, USDC for example,
 
-00:01:00.061 --> 00:01:02.075
-Without a little ETH on the network
+00:01:22.421 --> 00:01:25.842
+can exist on several different blockchains.
 
-00:01:02.075 --> 00:01:04.501
-you're using, you can't move anything.
+00:01:25.842 --> 00:01:27.752
+Ethereum is the main one: the
 
-00:01:04.501 --> 00:01:07.233
-Also, your wallet address is usually the
+00:01:27.752 --> 00:01:30.281
+deepest security, the highest fees.
 
-00:01:07.233 --> 00:01:09.566
-same on Ethereum and its Layer 2s,
+00:01:30.281 --> 00:01:33.812
+Layer 2 networks, like Arbitrum, Base and Optimism,
 
-00:01:09.566 --> 00:01:12.731
-but your balances are separate per network.
+00:01:33.812 --> 00:01:37.208
+are built around Ethereum, inheriting much of its
 
-00:01:12.731 --> 00:01:15.166
-Switch networks in your wallet to see them.
+00:01:37.208 --> 00:01:39.653
+security, at a fraction of the cost.
 
-00:01:15.166 --> 00:01:17.512
-On top of that, in your wallet, copy your
+00:01:40.953 --> 00:01:43.143
+Here's a detail worth knowing early.
 
-00:01:17.512 --> 00:01:20.026
-address (use the copy button; never type it).
+00:01:43.143 --> 00:01:46.769
+Your wallet address is usually the same across Ethereum
 
-00:01:21.327 --> 00:01:24.539
-And on the exchange, choose Withdraw → the coin
+00:01:46.769 --> 00:01:50.048
+and its Layer 2s, one address, several chains.
 
-00:01:24.539 --> 00:01:27.885
-→ pick the network (for learning, a low-fee Layer
+00:01:50.048 --> 00:01:52.603
+But your balances are separate on each one.
 
-00:01:27.885 --> 00:01:31.330
-2 your wallet supports, e.g. Arbitrum or Base).
+00:01:52.603 --> 00:01:54.738
+Switch networks inside your wallet to
 
-00:01:31.330 --> 00:01:33.045
-Plus, Paste the address.
+00:01:54.738 --> 00:01:56.648
+see what's actually there on each.
 
-00:01:33.045 --> 00:01:34.637
-Check the first 6 and last
+00:01:57.948 --> 00:02:00.017
+And here's roughly why a Layer 2 can
 
-00:01:34.637 --> 00:01:36.765
-6 characters match your wallet.
+00:02:00.017 --> 00:02:02.778
+be so much cheaper while still being secure.
 
-00:01:36.765 --> 00:01:38.360
-Better, check it all.
+00:02:02.778 --> 00:02:05.958
+It bundles up many transactions together, off the
 
-00:01:38.360 --> 00:01:40.919
-One more: Send a small test
+00:02:05.958 --> 00:02:09.138
+main Ethereum network, then posts a compact proof
 
-00:01:40.919 --> 00:01:43.412
-first (e.g. $10 of ETH).
+00:02:09.138 --> 00:02:11.918
+of all of them back to Ethereum itself.
 
-00:01:43.412 --> 00:01:45.504
-One more: Wait for it to arrive; see
+00:02:11.918 --> 00:02:14.823
+You still get Ethereum's security backing it up.
 
-00:01:45.504 --> 00:01:47.727
-it in your wallet on that network.
+00:02:14.823 --> 00:02:17.154
+You just aren't paying for space on the
 
-00:01:47.727 --> 00:01:50.262
-And finally, only then send the rest.
+00:02:17.154 --> 00:02:20.708
+busiest, most expensive network for every single transaction.
 
-00:01:50.262 --> 00:01:52.357
-Add the address to the exchange allowlist.
+00:02:22.008 --> 00:02:25.320
+One practical habit: always check which network you're
 
-00:01:53.657 --> 00:01:56.527
-Let's look at the diagram: Your first transfer.
+00:02:25.320 --> 00:02:27.908
+actually on before you act, not after.
 
-00:01:56.527 --> 00:01:58.087
-Take a moment with it.
+00:02:27.908 --> 00:02:29.965
+Most wallets show a network name or
 
-00:01:58.087 --> 00:02:00.497
-It's everything we've just said, in one picture.
+00:02:29.965 --> 00:02:32.093
+logo near the top of the screen.
 
-00:02:01.797 --> 00:02:04.312
-Let's work an example, step by step.
+00:02:32.093 --> 00:02:34.694
+Look at it before every withdrawal, every
 
-00:02:04.312 --> 00:02:07.215
-Withdrawing $100 of ETH to
+00:02:34.694 --> 00:02:37.728
+swap, every transfer, until it becomes automatic.
 
-00:02:07.215 --> 00:02:12.247
-Arbitrum: exchange withdrawal fee ~$0.10–$1.
+00:02:39.028 --> 00:02:40.013
+The golden rule.
 
-00:02:12.247 --> 00:02:14.345
-Later, a swap on Arbitrum costs
+00:02:41.313 --> 00:02:43.783
+Here it is, in one sentence, because this
 
-00:02:14.345 --> 00:02:15.891
-a few cents in gas.
+00:02:43.783 --> 00:02:46.611
+is the one rule this whole lesson protects.
 
-00:02:15.891 --> 00:02:18.231
-The same swap on Ethereum might cost a
+00:02:46.611 --> 00:02:49.528
+The network you withdraw on must match a network
 
-00:02:18.231 --> 00:02:21.111
+00:02:49.528 --> 00:02:53.221
+your wallet, or the receiving service, actually supports.
+
+00:02:53.221 --> 00:02:55.098
+Sending on the wrong network can
+
+00:02:55.098 --> 00:02:56.861
+mean the funds are simply lost.
+
+00:02:58.161 --> 00:03:00.766
+Here's exactly how that mistake happens.
+
+00:03:00.766 --> 00:03:03.615
+You withdraw from the exchange, and pick a network
+
+00:03:03.615 --> 00:03:06.876
+without really checking it, maybe the default option.
+
+00:03:06.876 --> 00:03:09.067
+Your wallet, or the receiving service,
+
+00:03:09.067 --> 00:03:11.501
+doesn't actually support that network.
+
+00:03:11.501 --> 00:03:14.794
+The transaction still goes through, because the blockchain
+
+00:03:14.794 --> 00:03:16.936
+has no idea what you meant to do.
+
+00:03:16.936 --> 00:03:19.052
+And the funds land somewhere you can't
+
+00:03:19.052 --> 00:03:20.896
+see or reach, often gone for good.
+
+00:03:22.196 --> 00:03:24.151
+Notice there's no villain in that
+
+00:03:24.151 --> 00:03:26.464
+chain, no hacker, no phishing site.
+
+00:03:26.464 --> 00:03:28.061
+Just a dropdown menu, and a
+
+00:03:28.061 --> 00:03:29.844
+moment of not checking it.
+
+00:03:29.844 --> 00:03:32.554
+That's exactly why the fix isn't cleverness.
+
+00:03:32.554 --> 00:03:34.596
+It's a habit, the same small check,
+
+00:03:34.596 --> 00:03:36.694
+done the same way, every single time.
+
+00:03:37.994 --> 00:03:40.400
+Here are the shapes this mistake actually
+
+00:03:40.400 --> 00:03:42.819
+takes, so you recognise them by name.
+
+00:03:42.819 --> 00:03:45.721
+Withdrawing to an exchange deposit address on
+
+00:03:45.721 --> 00:03:48.370
+the wrong network, when the exchange only
+
+00:03:48.370 --> 00:03:50.815
+credits deposits on specific ones.
+
+00:03:50.815 --> 00:03:52.467
+Sending to a wallet that simply
+
+00:03:52.467 --> 00:03:54.780
+doesn't support the network you picked.
+
+00:03:54.780 --> 00:03:57.700
+And assuming an address looks the same everywhere,
+
+00:03:57.700 --> 00:04:00.277
+so it must work everywhere, which is exactly
+
+00:04:00.277 --> 00:04:02.510
+the assumption that catches people out.
+
+00:04:03.810 --> 00:04:04.900
+Quick check.
+
+00:04:04.900 --> 00:04:09.505
+You hold USDC on Arbitrum, but zero ETH there.
+
+00:04:09.505 --> 00:04:10.418
+Can you send the USDC?
+
+00:04:10.418 --> 00:04:11.490
+[[pause 4]] The answer: no.
+
+00:04:15.910 --> 00:04:18.105
+You need a little ETH on
+
+00:04:18.105 --> 00:04:21.830
+Arbitrum specifically to pay gas there.
+
+00:04:21.830 --> 00:04:24.685
+ETH on Ethereum mainnet doesn't help.
+
+00:04:25.985 --> 00:04:27.220
+Your first transfer.
+
+00:04:28.520 --> 00:04:31.179
+Here's the whole transfer in one picture, before
+
+00:04:31.179 --> 00:04:33.215
+we walk through it step by step.
+
+00:04:33.215 --> 00:04:36.285
+Copy, choose, check, test, wait, then send the rest.
+
+00:04:37.585 --> 00:04:38.980
+Steps one and two.
+
+00:04:38.980 --> 00:04:41.521
+In your wallet, copy your address, using the
+
+00:04:41.521 --> 00:04:43.910
+copy button, never typing it by hand.
+
+00:04:43.910 --> 00:04:47.329
+On the exchange, choose withdraw, then the coin, then
+
+00:04:47.329 --> 00:04:50.494
+pick the network: for learning, a low-fee Layer 2
+
+00:04:50.494 --> 00:04:53.849
+your wallet actually supports, like Arbitrum or Base.
+
+00:04:55.149 --> 00:04:56.994
+Steps three and four, in full.
+
+00:04:56.994 --> 00:04:59.090
+Paste the address into the withdrawal
+
+00:04:59.090 --> 00:05:00.989
+field, never type it by hand.
+
+00:05:00.989 --> 00:05:03.839
+Check the first 6 characters match your wallet.
+
+00:05:03.839 --> 00:05:06.009
+Check the last 6 characters too.
+
+00:05:06.009 --> 00:05:08.818
+Better still, check the whole address, character
+
+00:05:08.818 --> 00:05:11.168
+by character, since a single wrong digit
+
+00:05:11.168 --> 00:05:13.359
+sends it somewhere else entirely.
+
+00:05:13.359 --> 00:05:16.652
+Then choose an amount for a small test first,
+
+00:05:16.652 --> 00:05:20.661
+something like $10 of ETH, before anything larger moves.
+
+00:05:21.961 --> 00:05:23.586
+Steps five and six.
+
+00:05:23.586 --> 00:05:26.206
+Wait for the test to arrive, and confirm you
+
+00:05:26.206 --> 00:05:29.126
+see it in your wallet, on that exact network.
+
+00:05:29.126 --> 00:05:30.951
+Only then, send the rest.
+
+00:05:30.951 --> 00:05:34.502
+And add the address to the exchange's withdrawal allowlist,
+
+00:05:34.502 --> 00:05:37.816
+so future transfers to your own wallet are pre-approved.
+
+00:05:39.116 --> 00:05:40.993
+If the test doesn't show up within a
+
+00:05:40.993 --> 00:05:43.576
+few minutes, don't panic and don't send more.
+
+00:05:43.576 --> 00:05:45.592
+Check you're actually looking at the right
+
+00:05:45.592 --> 00:05:47.467
+network in your wallet, since it's easy
+
+00:05:47.467 --> 00:05:49.126
+to be watching the wrong one.
+
+00:05:49.126 --> 00:05:52.807
+Check the transaction on that network's block explorer,
+
+00:05:52.807 --> 00:05:55.933
+using the transaction ID from the exchange.
+
+00:05:55.933 --> 00:05:58.380
+And if the network is simply congested, a
+
+00:05:58.380 --> 00:06:00.593
+longer wait is often the whole answer.
+
+00:06:01.893 --> 00:06:04.378
+How small should that test actually be?
+
+00:06:04.378 --> 00:06:08.210
+Small enough that losing it entirely wouldn't bother you,
+
+00:06:08.210 --> 00:06:11.316
+the same principle Lesson 0.0 used for a whole
+
+00:06:11.316 --> 00:06:15.118
+learning budget, just applied to one single transfer.
+
+00:06:15.118 --> 00:06:17.569
+$10 is a reasonable starting point for
+
+00:06:17.569 --> 00:06:20.147
+most people; scale it to whatever number
+
+00:06:20.147 --> 00:06:22.158
+actually meets that bar for you.
+
+00:06:23.458 --> 00:06:24.548
+Quick check.
+
+00:06:24.548 --> 00:06:27.043
+Why send a small test amount before the rest?
+
+00:06:31.463 --> 00:06:33.724
+The answer: to confirm the address and
+
+00:06:33.724 --> 00:06:36.216
+the network are actually right, while only
+
+00:06:36.216 --> 00:06:38.023
+a small amount is at risk.
+
+00:06:38.023 --> 00:06:40.228
+If something's wrong, you find out cheaply.
+
+00:06:41.528 --> 00:06:42.933
+A real worked example.
+
+00:06:44.233 --> 00:06:48.947
+Withdrawing $100 of ETH to Arbitrum typically costs the
+
+00:06:48.947 --> 00:06:54.213
+exchange somewhere between $0.10 and $1 in withdrawal fees.
+
+00:06:54.213 --> 00:06:57.153
+Small, one-time, and worth it for what it unlocks.
+
+00:06:58.453 --> 00:07:00.128
+Here's what that unlocks.
+
+00:07:00.128 --> 00:07:02.649
+A swap on Arbitrum afterwards typically
+
+00:07:02.649 --> 00:07:04.524
+costs a few cents in gas.
+
+00:07:04.524 --> 00:07:07.414
+The same swap on Ethereum mainnet might cost a
+
+00:07:07.414 --> 00:07:10.359
 few dollars, more when the network is busy.
 
-00:02:21.111 --> 00:02:23.246
-That's why beginners learn on Layer 2s.
+00:07:10.359 --> 00:07:13.106
+That gap, cents against dollars, is exactly
 
-00:02:24.546 --> 00:02:26.006
-Here's your checklist.
+00:07:13.106 --> 00:07:15.103
+why beginners learn on Layer 2s.
 
-00:02:26.006 --> 00:02:27.541
-Do it now, for real.
+00:07:16.403 --> 00:07:18.289
+That's the whole reason this program
 
-00:02:27.541 --> 00:02:29.701
-First, Network chosen on purpose,
+00:07:18.289 --> 00:07:19.813
+starts you on a Layer 2.
 
-00:02:29.701 --> 00:02:31.716
-and supported by my wallet.
+00:07:19.813 --> 00:07:22.543
+It's not because Ethereum mainnet is wrong.
 
-00:02:31.716 --> 00:02:35.776
-Next, Address pasted, first and last 6 characters checked.
+00:07:22.543 --> 00:07:24.953
+It's because learning costs real money there.
 
-00:02:35.776 --> 00:02:39.176
-Then, Test amount sent and received before the rest.
+00:07:24.953 --> 00:07:27.199
+Cents instead of dollars means you can
 
-00:02:39.176 --> 00:02:40.860
-Also, A little ETH held
+00:07:27.199 --> 00:07:29.388
+make a mistake, or just try something
 
-00:02:40.860 --> 00:02:42.844
-on that network for gas.
+00:07:29.388 --> 00:07:32.153
+twice, without it costing anything that matters.
 
-00:02:42.844 --> 00:02:46.629
-And finally, Address added to the exchange withdrawal allowlist.
+00:07:33.453 --> 00:07:37.213
+That doesn't make Ethereum mainnet something to avoid forever.
 
-00:02:47.930 --> 00:02:49.140
-Question 1.
+00:07:37.213 --> 00:07:40.261
+As your habits solidify and the amounts involved
 
-00:02:49.140 --> 00:02:51.065
-What's the golden rule of withdrawals?
+00:07:40.261 --> 00:07:43.559
+grow, some activity genuinely belongs there, for its
 
-00:02:55.485 --> 00:02:57.933
-The answer: The network you send on must
+00:07:43.559 --> 00:07:46.658
+deeper liquidity and its longer track record.
 
-00:02:57.933 --> 00:03:00.800
-be one the receiving wallet or service supports.
+00:07:46.658 --> 00:07:49.063
+Learn the habits small and cheap, first.
 
-00:03:02.100 --> 00:03:03.345
-Question 2.
+00:07:49.063 --> 00:07:50.749
+Then decide where to apply
 
-00:03:03.345 --> 00:03:07.750
-You have USDC on Arbitrum but zero ETH there.
+00:07:50.749 --> 00:07:52.998
+them, deliberately, not by accident.
 
-00:03:07.750 --> 00:03:08.680
-Can you send it?
+00:07:54.298 --> 00:07:55.478
+Checklist and quiz.
 
-00:03:13.100 --> 00:03:15.513
-The answer: No. You need a little
+00:07:56.778 --> 00:07:58.673
+Here's this lesson's checklist.
 
-00:03:15.513 --> 00:03:17.430
-ETH on Arbitrum to pay gas.
+00:07:58.673 --> 00:08:02.288
+Network chosen on purpose, and supported by your wallet.
 
-00:03:18.730 --> 00:03:20.000
-Question 3.
+00:08:02.288 --> 00:08:05.763
+Address pasted, first and last 6 characters checked.
 
-00:03:20.000 --> 00:03:21.365
-Why send a test amount?
+00:08:05.763 --> 00:08:08.858
+A test amount sent and received before the rest.
 
-00:03:25.785 --> 00:03:28.413
-The answer: To confirm the address and network
+00:08:08.858 --> 00:08:12.303
+A little ETH held on that network for gas.
 
-00:03:28.413 --> 00:03:30.705
-are right before risking the full amount.
+00:08:12.303 --> 00:08:15.528
+And the address added to the exchange's withdrawal allowlist.
 
-00:03:32.005 --> 00:03:33.250
-Let's recap.
+00:08:16.827 --> 00:08:18.097
+Question three.
 
-00:03:33.250 --> 00:03:36.563
-Networks (chains): the same token (e.g.
+00:08:18.097 --> 00:08:21.069
+What's the golden rule of withdrawals, in one sentence?
 
-00:03:36.563 --> 00:03:40.094
-USDC) can exist on several blockchains.
+00:08:25.489 --> 00:08:28.257
+The answer: the network you send on must be
 
-00:03:40.094 --> 00:03:42.568
-The golden rule: the network you withdraw
+00:08:28.257 --> 00:08:31.654
+one the receiving wallet or service actually supports.
 
-00:03:42.568 --> 00:03:44.688
-on must match a network your wallet
+00:08:32.954 --> 00:08:34.209
+Question four.
 
-00:03:44.688 --> 00:03:47.109
-(or the receiving service) supports.
+00:08:34.209 --> 00:08:37.792
+True or false: your wallet address changes when you
 
-00:03:47.109 --> 00:03:49.963
-Gas: every transaction pays a small network
+00:08:37.792 --> 00:08:41.099
+switch from Ethereum to a Layer 2 like Arbitrum.
 
-00:03:49.963 --> 00:03:52.274
-fee in the network's gas token.
+00:08:45.399 --> 00:08:47.034
+The answer: false.
 
-00:03:52.274 --> 00:03:54.839
-Your wallet address is usually the same
+00:08:47.034 --> 00:08:49.249
+The address usually stays the same.
 
-00:03:54.839 --> 00:03:56.699
-on Ethereum and its Layer 2s.
+00:08:49.249 --> 00:08:51.679
+It's the balance on each network that's separate.
 
-00:03:57.999 --> 00:04:00.514
-Do the checklist now, before you move on.
+00:08:52.979 --> 00:08:54.294
+Question five.
 
-00:04:00.514 --> 00:04:03.126
-Next up, Lesson 0.7: Your first
+00:08:54.294 --> 00:08:56.122
+Your test transfer hasn't shown
 
-00:04:03.126 --> 00:04:05.819
-DeFi steps (practice mode first).
+00:08:56.122 --> 00:08:57.736
+up after a few minutes.
+
+00:08:57.736 --> 00:08:59.211
+What's the first thing to check?
+
+00:09:03.631 --> 00:09:05.592
+The answer: that you're actually viewing
+
+00:09:05.592 --> 00:09:07.566
+the correct network in your wallet.
+
+00:09:07.566 --> 00:09:09.434
+It's easy to be watching the wrong
+
+00:09:09.434 --> 00:09:11.516
+one and assume the transfer is missing.
+
+00:09:12.816 --> 00:09:15.626
+Here's the whole lesson, recapped as one loop.
+
+00:09:15.626 --> 00:09:16.976
+Copy your address.
+
+00:09:16.976 --> 00:09:19.726
+Choose a network your wallet actually supports.
+
+00:09:19.726 --> 00:09:22.476
+Check the address, first and last characters.
+
+00:09:22.476 --> 00:09:24.171
+Send a small test first.
+
+00:09:24.171 --> 00:09:25.661
+Confirm it arrives.
+
+00:09:25.661 --> 00:09:27.509
+And only then, send the rest, and
+
+00:09:27.509 --> 00:09:29.766
+allowlist the address for next time.
+
+00:09:29.766 --> 00:09:32.151
+Do those six things, and this lesson is done.
+
+00:09:33.451 --> 00:09:36.496
+This is education, not financial advice.
+
+00:09:36.496 --> 00:09:38.846
+Take your time on this lesson especially.
+
+00:09:38.846 --> 00:09:40.355
+It's the one with the least
+
+00:09:40.355 --> 00:09:42.056
+room for a casual mistake.
+
+00:09:42.056 --> 00:09:44.960
+And nobody from this program will ever ask for
+
+00:09:44.960 --> 00:09:47.987
+your seed phrase, private keys or account access.
+
+00:09:49.287 --> 00:09:52.112
+That's networks, gas, and your first transfer.
+
+00:09:52.112 --> 00:09:55.572
+Copy, choose, check, test, confirm, then send the rest.
+
+00:09:55.572 --> 00:09:58.153
+Next up, Lesson zero point seven: your
+
+00:09:58.153 --> 00:10:00.867
+first DeFi steps, in practice mode first.
