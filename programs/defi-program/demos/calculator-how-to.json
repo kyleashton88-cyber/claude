@@ -1,0 +1,15 @@
+{
+  "id": "calculator-how-to",
+  "chapter": "Do it",
+  "label": "On screen: the calculator",
+  "showUrl": "On-Chain-Operator-Calculator.html",
+  "url": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#health",
+  "viewport": [1600, 900],
+  "steps": [
+    { "wait": 700, "shot": "01", "caption": "Read the band and the figure", "highlight": "#verdict" },
+    { "shot": "02", "caption": "Change the lesson example", "highlight": "#form" },
+    { "type": ["label:has-text('Debt value') input", "20000"], "wait": 500, "shot": "03", "caption": "Watch the band change colour", "highlight": "#verdict" },
+    { "shot": "04", "caption": "Search any of the twenty tools", "highlight": ".find input" }
+  ],
+  "vo": "Start on health factor. Read the band and the figure before you touch a field. The lesson example is already filled in, so change one number. Watch the band change colour when the position leaves the buffer. Then search any of the twenty tools by name."
+}

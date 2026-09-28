@@ -1,0 +1,17 @@
+{
+  "id": "calculator-book",
+  "chapter": "The book",
+  "label": "On screen: the book",
+  "showUrl": "On-Chain-Operator-Calculator.html",
+  "url": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#expected",
+  "viewport": [1600, 900],
+  "steps": [
+    { "wait": 600, "shot": "01", "caption": "Open risk-adjusted yield", "highlight": "#verdict" },
+    { "goto": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#income", "wait": 500, "shot": "02", "caption": "Open the income plan", "highlight": "#verdict" },
+    { "goto": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#bank", "wait": 500, "shot": "03", "caption": "Open the balance sheet", "highlight": "#verdict" },
+    { "goto": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#twr", "wait": 500, "shot": "04", "caption": "Open time-weighted return", "highlight": "#verdict" },
+    { "goto": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#airdrop", "wait": 500, "shot": "05", "caption": "Open airdrop value", "highlight": "#verdict" },
+    { "goto": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#var", "wait": 500, "shot": "06", "caption": "Open value at risk", "highlight": "#verdict" }
+  ],
+  "vo": "Open risk-adjusted yield. Then the income plan. Then the balance sheet. Then time-weighted return. Then airdrop value. Then value at risk."
+}
