@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """Gold-standard script for Lesson 1.5, Stablecoins and how they break (about
-12-15 minutes). Classifies stablecoins by design (fiat-backed, crypto-backed,
-synthetic/hedged, algorithmic), walks the peg-arbitrage mechanism as an
-animated flow, and covers two real, dated case studies as visual walk-throughs:
-Terra's UST collapse (May 2022) and USDC's SVB-driven depeg and recovery
-(March 2023, as a real-shaped line chart). Built to the "walk-through, not
-narration" standard: almost every idea is a flow, steps, chart or callout
-image, not a statement read over a static screen.
+12-15 minutes). Replaces the pre-gold-pass-2 script from commit bf85b68,
+which predates the chart-variant/ticker/chart3d-line visual layer added in
+1e2d691. Teaches the four stablecoin designs as a glossary ticker, a flow3d
+recreation of the module's own stablecoin-designs.png (extended to all four
+types), peg mechanics with a chart3d anchor on the source's own arbitrage
+maths, two real historical case studies (UST May 2022, USDC March 2023),
+and the source's own $0.97 worked example.
 
-Writes video-scripts/gold/lesson-01-5.json (the generator skips lessons with a
-gold script). Spoken text (vo) spells numbers for the voice; cap is the written
-caption, same sentence count as vo."""
+Writes video-scripts/gold/lesson-01-5.json (the generator skips lessons with
+a gold script). Every illustrative number is labelled as an example on
+screen and in the narration; real historical figures are stated as
+approximate and clearly dated. Spoken text (vo) spells numbers and
+abbreviations for the voice; cap is the written caption, same sentences."""
 import json
 from pathlib import Path
 
@@ -25,127 +27,130 @@ def sc(type_, vo, cap=None, **k):
     S.append(d)
 
 
-def img(src, eyebrow, vo, cap=None, **k):
-    sc("image", vo, cap, src=src, eyebrow=eyebrow, wide=True, **k)
-
-
-D = "assets/diagrams/"
-
-# ---------------------------------------------------------------- intro
-sc("title", "Lesson one point five. Stablecoins and how they break. By the end, you'll be able to classify any stablecoin by its design, and name exactly what could break its peg.",
-   "Lesson 1.5. Stablecoins and how they break. By the end, you'll be able to classify any stablecoin by its design, and name exactly what could break its peg.",
-   chapter="Intro", eyebrow="Lesson 1.5", num="1.5", title="Stablecoins and how they break", sub="Classify the design. Name what could break it.")
-sc("pillars", "Here's the plan, and we'll walk through every part of it visually, not just talk about it. First, the four designs, side by side. Second, the arbitrage mechanism that holds a peg together, as a loop you'll watch run. Third, two real, dated collapses: Terra in twenty twenty-two, and U.S.D.C. in twenty twenty-three, each one walked through step by step. And finally, a full worked example with real percentages.",
-   "Here's the plan, and we'll walk through every part of it visually, not just talk about it. First, the four designs, side by side. Second, the arbitrage mechanism that holds a peg together, as a loop you'll watch run. Third, two real, dated collapses: Terra in 2022, and USDC in 2023, each one walked through step by step. And finally, a full worked example with real percentages.",
-   chapter="Intro", title="What this lesson covers",
-   items=[{"icon": "layers", "title": "Four designs", "text": "Fiat, crypto, synthetic, algorithmic"}, {"icon": "swap", "title": "The peg mechanism", "text": "Watch the arbitrage loop run"},
-          {"icon": "alert", "title": "Two real collapses", "text": "Terra 2022, USDC 2023"}, {"icon": "chart", "title": "A worked example", "text": "Real percentages, walked through"}])
+# ---------------------------------------------------------------- why it matters
+sc("title", "Lesson one point five. Stablecoins and how they break. By the end, you'll be able to classify a stablecoin by its design, and name exactly what could break its peg.",
+   chapter="Why it matters", eyebrow="Lesson 1.5", num="1.5", title="Stablecoins and how they break", sub="“Stable” describes an intention, not a guarantee.")
+sc("statement", "Here's the assumption this lesson challenges. 'Stablecoin' sounds like a single, simple thing: a dollar, on-chain. It isn't. Four genuinely different designs all get called stablecoins, and they can fail in four genuinely different ways. Which one you're holding matters enormously.",
+   chapter="Why it matters", kicker="Why it matters", lines=["“Stablecoin” sounds like one simple thing.", "Four different designs. Four different ways to break."], sub="Which one you're holding matters enormously.")
+sc("pillars", "Here's the plan. First, the four designs, and what backs each one. Second, peg mechanics, what actually keeps the price at one dollar. Third, two real historical case studies, one that recovered and one that didn't. And finally, a real worked example with real arbitrage maths.",
+   chapter="Why it matters", title="What this lesson covers",
+   items=[{"icon": "layers", "title": "Four designs", "text": "What actually backs each one"}, {"icon": "target", "title": "Peg mechanics", "text": "What keeps the price at $1"},
+          {"icon": "book", "title": "Two real case studies", "text": "One recovered. One didn't."}, {"icon": "coins", "title": "A worked example", "text": "Real arbitrage maths"}])
 
 # ---------------------------------------------------------------- four designs
-sc("title", "Four designs.", chapter="Four designs", eyebrow="Four designs", num="4", title="Every stablecoin is one of these",
-   sub="Fiat-backed · Crypto-backed · Synthetic/hedged · Algorithmic")
-img(D + "stablecoin-designs.png", "Three of the four",
-    "Three designs, and exactly how each one breaks. Fiat-backed: cash and treasuries held by an issuer, and it breaks if those reserves are frozen or turn out missing. Crypto-backed: over-collateralised with on-chain crypto, and it breaks if collateral falls faster than liquidations can catch up. Algorithmic: held up mostly by incentives and a sister token, and it breaks the moment confidence goes and the mechanism spirals against itself.",
-    chapter="Four designs", callouts=[{"x": 0.2, "y": 0.68, "text": "Breaks: reserves frozen", "at": 1}, {"x": 0.55, "y": 0.68, "text": "Breaks: collateral crashes", "at": 3}, {"x": 0.83, "y": 0.68, "text": "Breaks: confidence spiral", "at": 5}])
-sc("flow", "And the fourth design: synthetic, or hedged. This one holds a spot asset and a matching short position on a derivative, so the two move opposite each other and roughly cancel out. It breaks when funding on that short turns sharply negative for a sustained period, or when the exchange holding the position runs into trouble itself. Four designs, four different failure points, and none of them fail for the same reason.",
-   chapter="Four designs", title="Synthetic / hedged: how it's built",
-   nodes=[{"label": "Spot asset held", "sub": "Long exposure", "icon": "coins"}, {"label": "Matching short", "sub": "On a derivative", "icon": "chart"},
-          {"label": "Roughly cancels out", "sub": "That's the peg", "icon": "check"}, {"label": "Breaks if…", "sub": "Funding flips, or the venue fails", "icon": "alert"}])
-sc("stats", "One real number for scale, so this doesn't feel abstract. Stablecoins collectively represent well over a hundred billion dollars of value, moving through DeFi and exchanges every single day. That's the size of the thing whose design you're now able to classify, and whose failure points you can now name, before you deposit into any of it.",
-   chapter="Four designs", stats=[["$150B+", "combined stablecoin value, roughly (outside research, illustrative)"]])
-sc("quiz", "Quick check. Two stablecoins are both backed by the exact same collateral. Are they diversified, if you hold both? [[pause 4]] The answer: no. They share the same failure point, so a problem with that collateral hits both at once, not just one of them.",
-   chapter="Four designs", n=1, of=3, q="Two stablecoins are both backed by the same collateral. Are they diversified if you hold both?",
-   a="No. They share the same failure point — a problem with that collateral hits both at once.")
+sc("title", "Four designs.", chapter="Four designs", eyebrow="Four designs", num="4", title="Same label. Four different machines.",
+   sub="Backed very differently. Breaks very differently.")
+sc("flow3d", "Here are all four, side by side. Fiat-backed: cash and treasuries held by an issuer; it breaks if reserves are frozen or simply missing. Crypto-backed: over-collateralised with on-chain crypto; it breaks if that collateral crashes faster than liquidations can keep up. Synthetic, or hedged: built from derivative positions, like spot held against a short perpetual; it breaks if funding turns negative or the venue itself fails. And algorithmic: held up mostly by incentives and a sister token; it breaks when confidence goes, and the mechanism amplifies the fall instead of stopping it.",
+   chapter="Four designs", title="Four stablecoin designs",
+   nodes=[{"label": "Fiat-backed", "sub": "Cash & treasuries. Breaks: reserves frozen", "icon": "bank"}, {"label": "Crypto-backed", "sub": "Over-collateralised. Breaks: collateral crash", "icon": "layers"},
+          {"label": "Synthetic / hedged", "sub": "Spot + short perp. Breaks: funding, venue risk", "icon": "swap"}, {"label": "Algorithmic", "sub": "Incentives & a sister token. Breaks: confidence", "icon": "alert"}])
+sc("ticker", "In one line each. Fiat-backed: cash and treasuries, at an issuer you have to trust. Crypto-backed: over-collateralised, exposed to a collateral crash. Synthetic or hedged: a derivative position, exposed to funding and venue risk. And algorithmic: incentives and a sister token, exposed to confidence itself.",
+   chapter="Four designs", title="Backing, and the main risk",
+   items=[{"label": "Fiat-backed", "value": "Issuer & custodian risk"}, {"label": "Crypto-backed", "value": "Collateral crash, liquidations"}, {"label": "Synthetic / hedged", "value": "Funding, venue risk"},
+          {"label": "Algorithmic", "value": "Confidence, reflexively"}])
+sc("statement", "Take the synthetic design a little further, since it's the least obvious of the four. Hold spot E.T.H., and simultaneously short an E.T.H. perpetual future of equal size. If E.T.H. rises, the spot gains and the short loses, and the reverse if it falls; the two roughly cancel, leaving a dollar-stable position funded by whatever the perpetual's funding rate pays. When funding turns negative for long enough, that cost erodes the peg instead of supporting it.",
+   "Take the synthetic design a little further, since it's the least obvious of the four. Hold spot ETH, and simultaneously short an ETH perpetual future of equal size. If ETH rises, the spot gains and the short loses, and the reverse if it falls; the two roughly cancel, leaving a dollar-stable position funded by whatever the perpetual's funding rate pays. When funding turns negative for long enough, that cost erodes the peg instead of supporting it.",
+   chapter="Four designs", kicker="Synthetic, in a little more depth", lines=["Spot ETH, plus a short perp of equal size.", "Funded by the funding rate. Erodes it if negative."], sub="The least obvious of the four designs.")
+sc("statement", "You've already used a fiat-backed design without necessarily naming it: the U.S.D.C. from your very first buy, back in Lesson zero point three. Everything in this lesson has been running underneath that same coin the whole time.",
+   "You've already used a fiat-backed design without necessarily naming it: the USDC from your very first buy, back in Lesson 0.3. Everything in this lesson has been running underneath that same coin the whole time.",
+   chapter="Four designs", kicker="You've already held one of these", lines=["USDC, from your very first buy.", "Lesson 0.3. Fiat-backed, the whole time."], sub="Everything here has been running underneath it.")
+sc("compare", "Not every crypto-backed or synthetic design carries equal risk, either. A coin over-collateralised at three times its value can absorb a far larger crash than one collateralised at just one point two times. Module three covers exactly this ratio, and the liquidations it triggers, in full.",
+   "Not every crypto-backed or synthetic design carries equal risk, either. A coin over-collateralised at three times its value can absorb a far larger crash than one collateralised at just one point two times. Module 3 covers exactly this ratio, and the liquidations it triggers, in full.",
+   chapter="Four designs", title="The collateral ratio is the risk dial",
+   left={"label": "3x over-collateralised", "tone": "good", "items": ["Absorbs a much larger crash", "More buffer before liquidation"]},
+   right={"label": "1.2x over-collateralised", "tone": "bad", "items": ["Absorbs far less of a crash", "Liquidates much sooner"]})
+sc("statement", "Notice the pattern in how each one fails. Fiat-backed fails through a person or institution. Crypto-backed fails through a market crash. Synthetic fails through a funding rate or a venue. Algorithmic fails through belief itself, which is exactly why it can go to zero fastest of all four.",
+   chapter="Four designs", kicker="The pattern in how each fails", lines=["Fiat, crypto, synthetic: external failures.", "Algorithmic: belief itself. Which is why it's fastest."], sub="Same label, completely different failure points.")
 
 # ---------------------------------------------------------------- peg mechanics
-sc("title", "The peg mechanism.", chapter="The peg mechanism", eyebrow="The peg mechanism", num="1", title="Watch it hold itself together",
-   sub="Redemption access, plus arbitrage.")
-sc("flow", "Here's the loop that holds a peg near one dollar, running in real time. The coin trades at ninety-eight cents on the open market, below its dollar target. An arbitrageur buys it cheap, at ninety-eight cents. They redeem it with the issuer, for a full dollar. And they pocket the two-cent difference, which pushes buying pressure back into the market and nudges the price back toward one dollar. That loop runs constantly, automatically, as long as redemption actually works.",
-   chapter="The peg mechanism", title="The arbitrage loop, running", layout="cycle",
-   nodes=[{"label": "Trades at $0.98", "sub": "Below the $1 target", "icon": "chart"}, {"label": "Bought cheap", "sub": "By an arbitrageur", "icon": "coins"},
-          {"label": "Redeemed for $1.00", "sub": "With the issuer", "icon": "bank"}, {"label": "Price nudges up", "sub": "Toward $1 again", "icon": "check"}])
-sc("flow", "Now run the exact same loop backwards, above one dollar, because the peg works in both directions. The coin trades at one dollar two, above target. An arbitrageur mints new coins from the issuer, paying one dollar each. They sell those new coins on the open market, at one dollar two. And that new supply pushes the price back down, toward one dollar again. Above or below target, the same arbitrage pressure pulls the price back to the peg.",
-   chapter="The peg mechanism", title="The same loop, running above target", layout="cycle",
-   nodes=[{"label": "Trades at $1.02", "sub": "Above the $1 target", "icon": "chart"}, {"label": "Minted at $1.00", "sub": "By an arbitrageur", "icon": "bank"},
-          {"label": "Sold at $1.02", "sub": "On the open market", "icon": "coins"}, {"label": "Price nudges down", "sub": "Toward $1 again", "icon": "check"}])
-sc("statement", "Read both loops again, and notice the one word that makes them work: redemption. The peg isn't magic, and it isn't really about the price chart at all. It's only as strong as redemption access and reserve quality. Break either one, and the loop simply stops running.",
-   chapter="The peg mechanism", kicker="The one word that matters", lines=["Not the price chart.", "Redemption access and reserve quality."], sub="Break either one, and the loop stops running.")
+sc("title", "Peg mechanics.", chapter="Peg mechanics", eyebrow="Peg mechanics", num="1", title="What actually holds $1 in place",
+   sub="Redemption access, and reserve quality. That's it.")
+sc("statement", "Here's the whole mechanism, in one sentence. If a stablecoin trades at ninety-eight cents and can be redeemed for one dollar, arbitrageurs buy it cheap and redeem it at face value, pushing the price back up as they do. The peg is only ever as strong as two things: redemption access, and reserve quality.",
+   chapter="Peg mechanics", kicker="The whole mechanism", lines=["Trades at $0.98, redeems for $1.00.", "Arbitrage buys it back up to $1."], sub="Only as strong as redemption access and reserve quality.")
+sc("chart3d", "Here's that arbitrage, with the source's own real numbers. A coin trades at ninety-seven cents. Redemption pays one dollar, minus a naught point one percent fee, so ninety-nine point nine cents. Buy at ninety-seven, redeem for ninety-nine point nine. A minter earns roughly two point nine cents per coin, about two point nine percent, for doing the one thing that pushes the price back toward a dollar.",
+   chapter="Peg mechanics", kind="bars", title="The arbitrage that repairs a $0.97 peg",
+   sub="From the source's own worked example",
+   bars=[{"label": "Buy on the open market", "text": "The discounted price", "value": 0.97, "show": "$0.97", "tone": "bad"}, {"label": "Redeem from the issuer", "text": "$1.00 minus a 0.1% fee", "value": 0.999, "show": "$0.999", "tone": "good"}])
+sc("statement", "The same mechanism works in reverse, too. Say a fiat-backed coin trades above one dollar, at one dollar and two cents. An authorised minter can create new coins for one dollar and sell them at that premium, pushing the price back down. The peg is defended from both sides, by exactly the same profit motive.",
+   chapter="Peg mechanics", kicker="Defended from both sides", lines=["Above $1: mint new coins, sell at the premium.", "The same profit motive, working in reverse."], sub="Defended from both sides, by the same incentive.")
+sc("statement", "That naught point one percent redemption fee isn't arbitrary, either. It compensates the issuer for the operational cost of redeeming. It's small enough that arbitrage still works, but large enough to discourage redeeming and re-minting for no real reason at all.",
+   chapter="Peg mechanics", kicker="Why the fee exists", lines=["Small enough that arbitrage still works.", "Large enough to discourage pointless redemptions."], sub="Not arbitrary. A deliberately small friction.")
+sc("steps", "Here's how to actually check a stablecoin's backing yourself. Find the issuer's own attestation or reserve report, usually published regularly. Check who actually audits it, and how often, monthly is meaningfully better than never. Check exactly which assets back it, cash and short-term treasuries are very different from long-dated bonds or other crypto entirely. And check whether it's ever been tested by a real stress event, the way U.S.D.C. was in March twenty twenty-three.",
+   "Here's how to actually check a stablecoin's backing yourself. Find the issuer's own attestation or reserve report, usually published regularly. Check who actually audits it, and how often, monthly is meaningfully better than never. Check exactly which assets back it, cash and short-term treasuries are very different from long-dated bonds or other crypto entirely. And check whether it's ever been tested by a real stress event, the way USDC was in March 2023.",
+   chapter="Peg mechanics", title="Checking backing yourself",
+   steps=["Find the issuer's own attestation or reserve report", "Check who audits it, and how often", "Check exactly which assets back it", "Check if it's ever survived a real stress event"],
+   result="Four checks. Available for any stablecoin you hold.")
+sc("statement", "But notice every word doing real work in that sentence. Only verified institutional minters can actually redeem, not you. And the whole mechanism assumes minters act, and that the reserves are genuinely real. Doubt either one, and the discount can simply grow instead of closing.",
+   chapter="Peg mechanics", kicker="The mechanism has conditions", lines=["Only verified minters can redeem, not you.", "It assumes minters act, and reserves are real."], sub="Doubt either, and the discount can grow instead.")
 
-# ---------------------------------------------------------------- case study: Terra
-sc("title", "Case study: Terra, May 2022.", chapter="Case study: Terra (2022)", eyebrow="A real collapse", num="1", title="An algorithmic design, unwinding",
-   sub="TerraUSD (UST) lost its peg and collapsed toward zero.")
-sc("flow", "Here's how it actually unwound, step by step. U.S.T. depended on confidence in its sister token, Luna, to hold its peg, with no hard reserve behind it. Large withdrawals began, pushing U.S.T. below one dollar. The mechanism tried to defend the peg by minting huge amounts of Luna, which crashed Luna's own price. A falling Luna made the peg mechanism weaker, not stronger, which triggered still more withdrawals. And the two tokens spiralled down together, toward zero, in a matter of days.",
-   chapter="Case study: Terra (2022)", title="How UST actually unwound",
-   nodes=[{"label": "No hard reserve", "sub": "Depended on confidence in Luna", "icon": "alert"}, {"label": "Withdrawals begin", "sub": "UST slips below $1", "icon": "chart"},
-          {"label": "Mechanism mints Luna", "sub": "To try to defend the peg", "icon": "coins"}, {"label": "Luna price crashes", "sub": "The defense weakens the peg further", "icon": "alert"},
-          {"label": "Spiral to near zero", "sub": "In days, not months", "icon": "chart"}])
-sc("stats", "Put a real number on how fast it happened. UST traded near one dollar for most of its history, and within roughly five days in May of twenty twenty-two, it and Luna together lost tens of billions of dollars of combined value. That's not a slow decline you'd have weeks to react to. It's the specific speed a reflexive spiral moves at, once it actually starts.",
-   "Put a real number on how fast it happened. UST traded near $1 for most of its history, and within roughly five days in May 2022, it and Luna together lost tens of billions of dollars of combined value. That's not a slow decline you'd have weeks to react to. It's the specific speed a reflexive spiral moves at, once it actually starts.",
-   chapter="Case study: Terra (2022)", stats=[["≈5 days", "from depeg to near-total collapse (May 2022)"]])
-sc("statement", "This is what the checklist means by a reflexive death spiral. Each step made the next step worse, not better, and there was no outside reserve anywhere in the loop to stop it. That's the specific, structural weakness of an algorithmic design, not a one-off accident.",
-   chapter="Case study: Terra (2022)", kicker="Why it's called reflexive", lines=["Each step made the next", "step worse, not better."], sub="No outside reserve anywhere in the loop to stop it.")
+# ---------------------------------------------------------------- two real case studies
+sc("title", "Two real case studies.", chapter="Two real case studies", eyebrow="Two real case studies", num="2", title="One recovered. One didn't.",
+   sub="Real events. Worth knowing by name.")
+sc("flow", "First, the one that didn't recover. In May twenty twenty-two, TerraUSD, an algorithmic design, started slipping below its dollar peg. Confidence wavered, and holders began redeeming for its sister token instead. That sister token flooded the market, crashing its own price. And the falling price fed straight back into more panic selling, a genuine death spiral that took the whole design toward zero within days.",
+   chapter="Two real case studies", title="May 2022: TerraUSD's collapse",
+   nodes=[{"label": "TerraUSD slips below its peg", "sub": "Confidence starts to waver", "icon": "alert", "tone": "bad"}, {"label": "Holders redeem for the sister token", "sub": "Its supply floods the market", "icon": "swap", "tone": "bad"},
+          {"label": "The sister token's price crashes", "sub": "Which feeds straight back into more panic", "icon": "coins", "tone": "bad"}, {"label": "A death spiral toward zero", "sub": "Within days, not months", "icon": "lock", "tone": "bad"}],
+   edges=[{"from": "0", "to": "1", "tone": "bad"}, {"from": "1", "to": "2", "tone": "bad"}, {"from": "2", "to": "3", "tone": "bad"}])
+sc("compare", "Now, the one that recovered. In March twenty twenty-three, U.S.D.C. briefly traded as low as around eighty-seven cents, after part of its reserves turned out to be exposed to the failed Silicon Valley Bank. But the reserves themselves were real. Once that was confirmed, and depositors were made whole, U.S.D.C. recovered fully to one dollar within days.",
+   "Now, the one that recovered. In March 2023, USDC briefly traded as low as around $0.87, after part of its reserves turned out to be exposed to the failed Silicon Valley Bank. But the reserves themselves were real. Once that was confirmed, and depositors were made whole, USDC recovered fully to $1 within days.",
+   chapter="Two real case studies", title="March 2023: USDC's brief depeg",
+   left={"label": "TerraUSD, May 2022", "tone": "bad", "items": ["Algorithmic: backed by confidence", "Confidence broke. Never recovered"]},
+   right={"label": "USDC, March 2023", "tone": "good", "items": ["Fiat-backed: real reserves", "Reserves confirmed. Recovered in days"]})
+sc("statement", "The difference wasn't luck. One design's backing was, in the end, a belief. The other's backing was, in the end, real. That's the entire lesson of this section, in two real events instead of one abstract rule.",
+   chapter="Two real case studies", kicker="Not luck. Backing.", lines=["One was backed by belief.", "One was backed by something real."], sub="Two real events, not one abstract rule.")
 
-# ---------------------------------------------------------------- case study: USDC
-sc("title", "Case study: USDC, March 2023.", chapter="Case study: USDC (2023)", eyebrow="A real collapse, and a recovery", num="2", title="A fiat-backed design, under real stress",
-   sub="Briefly traded well below $1, then recovered.")
-sc("chart", "Here's the shape of it, as it actually happened. Through most of March, U.S.D.C. held steady near one dollar. Then, on March eleventh, news broke that part of its reserves sat at Silicon Valley Bank, which had just failed. The price dropped sharply, down toward eighty-seven cents at its worst. Once regulators confirmed depositors, including Circle's reserves, would be made whole, the price recovered fully within about two days, back to one dollar.",
-   "Here's the shape of it, as it actually happened. Through most of March, USDC held steady near one dollar. Then, on March 11th, news broke that part of its reserves sat at Silicon Valley Bank, which had just failed. The price dropped sharply, down toward $0.87 at its worst. Once regulators confirmed depositors, including Circle's reserves, would be made whole, the price recovered fully within about two days, back to $1.00.",
-   chapter="Case study: USDC (2023)", kind="line", title="USDC's price, March 2023", sub="Shape is real; exact intraday values vary by source",
-   series=[{"values": [1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 0.97, 0.87, 0.93, 0.99, 1.00, 1.00, 1.00, 1.00], "tone": "blue"}],
-   xlabels=["Mar 1", "", "", "", "", "", "", "", "", "", "Mar 11", "", "", "Mar 13", "", "", "", "Mar 18"],
-   yticks=[[0.87, "$0.87"], [1.00, "$1.00"]], ymin=0.83, ymax=1.03,
-   marks=[{"i": 11, "text": "SVB news breaks: reserves exposed", "tone": "bad", "below": True}, {"i": 14, "text": "Depositors backstopped: peg restored", "tone": "good", "below": False}])
-sc("flow", "Zoom into just the two recovery days, because that's where the real lesson sits. On March eleventh, the discount was near its worst, close to eighty-seven cents, and headlines were uncertain about the reserves. By March thirteenth, regulators had confirmed depositors would be made whole, redemption confidence returned, and the price closed the gap almost completely, back near one dollar. Two days, from worst point to fully recovered, once the actual question, “are the reserves real and reachable,” got a clear answer.",
-   chapter="Case study: USDC (2023)", title="Two days, worst point to recovered",
-   nodes=[{"label": "Mar 11: ≈$0.87", "sub": "Reserves' exposure unclear", "icon": "alert"}, {"label": "Regulators confirm", "sub": "Depositors made whole", "icon": "bank"},
-          {"label": "Redemption confidence returns", "sub": "Minters act again", "icon": "check"}, {"label": "Mar 13: ≈$1.00", "sub": "Peg recovered", "icon": "swap"}])
-sc("compare", "Compare the two collapses directly, because the contrast is the whole lesson. Terra had no outside reserve, so the spiral had nothing to stop it, and it never recovered. U.S.D.C. had real reserves, just temporarily hard to access, so once access was restored, the peg came straight back. Same word, “depeg,” two completely different outcomes, because the underlying design was different.",
-   chapter="Case study: USDC (2023)",
-   left={"label": "Terra (UST), 2022", "tone": "bad", "items": ["No outside reserve", "Nothing to stop the spiral", "Never recovered"]},
-   right={"label": "USDC, 2023", "tone": "good", "items": ["Real reserves, temporarily hard to reach", "Access restored within days", "Peg fully recovered"]})
-sc("quiz", "Quick check. What actually caused USDC's price to recover in March twenty twenty-three? [[pause 4]] The answer: confirmation that the reserves were real and depositors would be made whole, which restored confidence and let redemption function normally again. Not a change to how the coin itself works.",
-   "Quick check. What actually caused USDC's price to recover in March 2023? [[pause 4]] The answer: confirmation that the reserves were real and depositors would be made whole, which restored confidence and let redemption function normally again. Not a change to how the coin itself works.",
-   chapter="Case study: USDC (2023)", n=2, of=3, q="What actually caused USDC's price to recover in March 2023?",
-   a="Confirmation the reserves were real and depositors would be made whole — redemption confidence returned. Nothing about the coin's design changed.")
+# ---------------------------------------------------------------- a worked example
+sc("title", "A worked example.", chapter="A worked example", eyebrow="A worked example", num="97", title="A fiat-backed coin at $0.97",
+   sub="Should you expect the peg to hold?")
+sc("steps", "Here's the scenario. A fiat-backed coin trades at ninety-seven cents. Redemption pays one dollar, minus a naught point one percent fee, but only for verified institutional minters. A minter earns roughly two point nine percent per coin by buying and redeeming, so arbitrage should restore the peg. You, personally, can't redeem, so you're relying on minters actually acting, and on the reserves being real. If the market doubts those reserves, minters may simply not step in, and the discount can grow instead.",
+   "Here's the scenario. A fiat-backed coin trades at $0.97. Redemption pays $1.00, minus a 0.1% fee, but only for verified institutional minters. A minter earns roughly 2.9% per coin by buying and redeeming, so arbitrage should restore the peg. You, personally, can't redeem, so you're relying on minters actually acting, and on the reserves being real. If the market doubts those reserves, minters may simply not step in, and the discount can grow instead.",
+   chapter="A worked example", title="Should the peg hold, at $0.97?",
+   steps=["Minters earn ~2.9% per coin, buying and redeeming", "You personally can't redeem; only verified minters can", "It relies on minters acting, and reserves being real", "If reserves are doubted, minters may not step in"],
+   result="The peg should hold, on paper. “Should” is doing real work in that sentence.")
+sc("statement", "Notice this is exactly the risk-first mindset from Lesson one point one, applied to a specific two-point-nine percent discount. Before assuming arbitrage saves you, name what has to be true for it to actually happen.",
+   "Notice this is exactly the risk-first mindset from Lesson 1.1, applied to a specific 2.9% discount. Before assuming arbitrage saves you, name what has to be true for it to actually happen.",
+   chapter="A worked example", kicker="The risk-first mindset, applied", lines=["Lesson 1.1's rule, applied to one discount.", "Name what has to be true, before trusting it."], sub="“Should” is not the same as “will”.")
+sc("statement", "Notice why the phrase 'verified institutional minters' matters so much here. Most fiat-backed stablecoins restrict direct redemption to large, vetted counterparties, not everyday users like you. That's not a flaw, it's how the issuer manages compliance and operational load, but it does mean your own ability to close this gap is indirect, not direct.",
+   chapter="A worked example", kicker="Why “institutional” matters", lines=["Direct redemption: large, vetted counterparties only.", "Your ability to close the gap is indirect."], sub="Not a flaw. But not something you control directly.")
 
-# ---------------------------------------------------------------- worked example
-sc("title", "Worked example.", chapter="Worked example", eyebrow="Worked example", num="2.9%", title="A fiat-backed coin trades at $0.97",
-   sub="Redemption: $1.00 minus a 0.1% fee. Verified institutions only.")
-sc("chart", "Here's the arbitrage math, worked in full. Buy the coin on the open market for ninety-seven cents. Redeem it with the issuer for a dollar, minus a zero point one percent fee, so about ninety-nine cents ninety. The margin: roughly two point nine percent per coin. On paper, that margin should pull minters in and push the price back to one dollar, exactly like the loop you watched earlier.",
-   "Here's the arbitrage math, worked in full. Buy the coin on the open market for $0.97. Redeem it with the issuer for $1.00, minus a 0.1% fee, so about $0.999. The margin: roughly 2.9% per coin. On paper, that margin should pull minters in and push the price back to $1.00, exactly like the loop you watched earlier.",
-   chapter="Worked example", kind="bars", title="The arbitrage math", sub="Illustrative figures from this worked example",
-   bars=[{"label": "Buy price", "text": "On the open market", "value": 0.97, "show": "$0.97", "tone": "warn"}, {"label": "Redeem value", "text": "$1.00 minus 0.1% fee", "value": 0.999, "show": "≈$0.999", "tone": "good"}],
-   note="≈2.9% margin per coin — enough to normally pull arbitrageurs in.")
-sc("flow", "But notice exactly where you, personally, sit in this picture. You can't redeem directly, only verified institutional minters can. So you're not doing the arbitrage yourself. You're relying on minters acting, and on the reserves genuinely being real. If markets start doubting the reserves, minters may simply not step in, and the discount can grow instead of closing, no matter how attractive the math looks on paper.",
-   chapter="Worked example", title="Where you actually sit in this loop",
-   nodes=[{"label": "You hold the coin", "sub": "At $0.97", "icon": "wallet"}, {"label": "You can't redeem", "sub": "Only verified minters can", "icon": "alert"},
-          {"label": "You rely on minters", "sub": "To act, and reserves to be real", "icon": "eye"}, {"label": "If doubted: discount grows", "sub": "The math alone doesn't fix it", "icon": "chart"}])
-sc("steps", "So here's the same habit, as a decision walk-through you can actually run during a real depeg. First: check the type. Is it fiat, crypto, synthetic or algorithmic? Second: check redemption. Can you, or can only institutions, actually redeem right now? Third: check the news. Is this a reserve problem, or a market-wide panic with no reserve issue at all? And fourth: apply your exit rule, the one you set in advance, not one you invent under pressure.",
-   chapter="Worked example", title="Reading a depeg, in the moment",
-   steps=["Check the type: fiat, crypto, synthetic, algorithmic", "Check redemption: who can actually redeem, right now", "Check the news: reserve problem, or market panic", "Apply your exit rule, set in advance"], result="A decision made calmly, before the stress, not during it")
-sc("statement", "One honest note to close the worked example on. None of this means avoid stablecoins entirely. They're genuinely useful, and you'll use them constantly through this program. It means treat “stable” as a description of intent, not a guarantee, and know which of the four designs you're actually holding before size or urgency ever makes that question hard to answer calmly.",
-   chapter="Worked example", kicker="Not a reason to avoid them", lines=["“Stable” describes intent,", "not a guarantee."], sub="Know the design before size or urgency makes the question hard.")
-sc("quiz", "Last check. What keeps a fiat-backed stablecoin trading near one dollar? [[pause 4]] The answer: redemption for a dollar of reserves, plus arbitrageurs who can actually access that redemption.",
-   chapter="Worked example", n=3, of=3, q="What keeps a fiat-backed stablecoin trading near $1?",
-   a="Redemption for $1 of reserves, plus arbitrageurs who can actually access that redemption.")
+# ---------------------------------------------------------------- checklist and quiz
+sc("title", "Checklist and quiz.", chapter="Checklist and quiz", eyebrow="Checklist and quiz", num="4", title="Confirm you've got it",
+   sub="Four boxes, three questions.")
+sc("statement", "Everything Lesson one point four taught about verifying a token by its contract address applies doubly here. A fake token calling itself a well-known stablecoin's name is one of the single most common scams in this entire space.",
+   "Everything Lesson 1.4 taught about verifying a token by its contract address applies doubly here. A fake token calling itself a well-known stablecoin's name is one of the single most common scams in this entire space.",
+   chapter="Checklist and quiz", kicker="Lesson 1.4 applies doubly here", lines=["Verify by contract address. Doubly, for stablecoins.", "A fake “USDC” is one of the most common scams."], sub="The same habit, applied to the token you trust most.")
+sc("bullets", "Here's this lesson's checklist. You know the type and backing of every stablecoin you hold. You know exactly who can redeem it, and how. You don't treat different stablecoins as diversified if they share the same issuer or collateral. And you have an actual depeg exit rule, written down before you need it.",
+   chapter="Checklist and quiz", title="Before you move on", numbered=True,
+   items=["Know the type and backing of every stablecoin held", "Know who can redeem it, and how", "Don't count shared-issuer coins as diversified", "Have a written depeg exit rule, in advance"])
+sc("quiz", "Question one. What actually keeps a fiat-backed stablecoin near one dollar? [[pause 4]] The answer: redemption for one dollar of real reserves, plus arbitrageurs who are able to redeem it.",
+   chapter="Checklist and quiz", n=1, of=5, q="What keeps a fiat-backed stablecoin near $1?", a="Redemption for $1 of reserves, plus arbitrageurs who can redeem.")
+sc("quiz", "Question two. Why are algorithmic designs specifically fragile? [[pause 4]] The answer: they rely on confidence and their own sister token. When demand falls, the mechanism itself can amplify the fall instead of stopping it.",
+   chapter="Checklist and quiz", n=2, of=5, q="Why are algorithmic designs fragile?", a="They rely on confidence and their own token; falling demand can amplify the fall.")
+sc("quiz", "Question three. Two stablecoins, both backed by the exact same collateral. Are you diversified? [[pause 4]] The answer: no. They share the exact same failure point; if it fails, both fail together.",
+   chapter="Checklist and quiz", n=3, of=5, q="Two stablecoins backed by the same collateral. Diversified?", a="No. They share the same failure point.")
+sc("quiz", "Question four. What actually made U.S.D.C. recover in March twenty twenty-three, while TerraUSD never did in May twenty twenty-two? [[pause 4]] The answer: real, confirmable reserves. U.S.D.C.'s backing was real; TerraUSD's was ultimately just confidence.",
+   "Question four. What actually made USDC recover in March 2023, while TerraUSD never did in May 2022? [[pause 4]] The answer: real, confirmable reserves. USDC's backing was real; TerraUSD's was ultimately just confidence.",
+   chapter="Checklist and quiz", n=4, of=5, q="Why did USDC recover in 2023 while TerraUSD never did in 2022?", a="USDC's backing was real reserves. TerraUSD's was ultimately just confidence.")
+sc("quiz", "Question five. In the worked example, why can't you personally arbitrage the ninety-seven-cent discount? [[pause 4]] The answer: only verified institutional minters can redeem directly with the issuer; you have to rely on them acting instead.",
+   "Question five. In the worked example, why can't you personally arbitrage the $0.97 discount? [[pause 4]] The answer: only verified institutional minters can redeem directly with the issuer; you have to rely on them acting instead.",
+   chapter="Checklist and quiz", n=5, of=5, q="Why can't you personally arbitrage a $0.97 stablecoin discount?", a="Only verified institutional minters can redeem directly with the issuer.")
 
-# ---------------------------------------------------------------- checklist and recap
-sc("steps", "Here's your checklist, as a habit for every stablecoin you hold. Know the type and backing of each one. Know exactly who can redeem, and how. Don't count two stablecoins as diversified if they share issuers or collateral. And set a depeg exit rule in advance, for example: sell or rotate out if it's below ninety-nine cents for longer than a set number of hours.",
-   "Here's your checklist, as a habit for every stablecoin you hold. Know the type and backing of each one. Know exactly who can redeem, and how. Don't count two stablecoins as diversified if they share issuers or collateral. And set a depeg exit rule in advance, for example: sell or rotate out if it's below $0.99 for longer than a set number of hours.",
-   chapter="Checklist", title="Your checklist", steps=["Know the type and backing of each one", "Know who can redeem, and how", "Shared issuer/collateral isn't diversified", "Set a depeg exit rule in advance"], result="A rule set before the stress, not during it")
-sc("bullets", "Let's recap. Four designs, four different failure points: fiat, crypto, synthetic, algorithmic. A peg holds because of an arbitrage loop, and that loop only runs while redemption and reserves both hold up. Terra had neither, and spiralled to zero. U.S.D.C. had both, and recovered in days. Know your stablecoin's design, and have your exit rule ready before you ever need it.",
-   chapter="Recap", title="Recap", check=False,
-   items=["Four designs: fiat, crypto, synthetic, algorithmic — four failure points", "A peg runs on an arbitrage loop; it needs redemption and real reserves",
-          "Terra (2022): neither held, spiralled to zero. USDC (2023): both held, recovered.", "Know your stablecoin's design, and set your exit rule in advance"])
-sc("cta", "Do the checklist now, before you move on. You now have the whole lesson in your head: the four designs, the arbitrage loop that holds a peg together, two real collapses that ended completely differently, and a decision walk-through for the next time a stablecoin wobbles. Next up, Lesson one point six: Scam defence.",
-   "Do the checklist now, before you move on. You now have the whole lesson in your head: the four designs, the arbitrage loop that holds a peg together, two real collapses that ended completely differently, and a decision walk-through for the next time a stablecoin wobbles. Next up, Lesson 1.6: Scam defence.",
-   chapter="Recap", button="Next: Lesson 1.6", sub="Scam defence")
+# ---------------------------------------------------------------- recap and next
+sc("flow", "Here's the whole lesson, recapped as one loop. Know the design: fiat, crypto, synthetic or algorithmic. Know exactly who can redeem, and how. Watch redemption access and reserve quality, since that's the whole peg. Never count shared-collateral coins as diversified. And keep a written depeg exit rule, ready before you ever need it.",
+   chapter="Recap and next", title="This lesson, recapped as one loop", layout="cycle",
+   nodes=[{"label": "Know the design", "icon": "layers"}, {"label": "Know who can redeem", "icon": "key"}, {"label": "Watch access & reserves", "icon": "eye"},
+          {"label": "Shared collateral isn't diversified", "icon": "alert"}, {"label": "Have a written exit rule", "icon": "check"}])
+sc("statement", "This is education, not financial advice. The historical events in this lesson, TerraUSD in May twenty twenty-two and U.S.D.C. in March twenty twenty-three, are real and worth researching further; every other number is illustrative.",
+   "This is education, not financial advice. The historical events in this lesson, TerraUSD in May 2022 and USDC in March 2023, are real and worth researching further; every other number is illustrative.",
+   chapter="Recap and next", kicker="A reminder", lines=["The two historical events here are real.", "Every other figure is illustrative."], sub="Not financial advice. Worth researching further.")
+sc("cta", "That's stablecoins and how they break: four designs, peg mechanics, two real events, and a real worked example. Next, Lesson one point six: scam defence.",
+   chapter="Recap and next", button="Next: Lesson 1.6", sub="Scam defence")
 
-spec = {"id": "lesson-01-5", "title": "Lesson 1.5: Stablecoins and how they break", "size": [1920, 1080], "group": "lessons", "maxMinutes": 25,
-        "tag": "Lesson 1.5", "gold": True, "music": True, "musicLevel": 0.14, "seed": 47,
-        "use": "Lesson 1.5 page in the Whop course. Hand-written gold-standard script: 4 designs, the peg-arbitrage loop, real Terra (2022) and USDC (2023) case studies, worked arbitrage math.",
+spec = {"id": "lesson-01-5", "title": "Lesson 1.5: Stablecoins and how they break", "size": [1920, 1080], "group": "lessons", "maxMinutes": 25, "tag": "Lesson 1.5",
+        "gold": True, "seed": 115,
+        "use": "Lesson 1.5 page in the Whop course. Gold-standard script: a flow3d recreation of the module's own stablecoin-designs.png (extended to all 4 types) anchor, a backing/risk glossary ticker, a chart3d anchor on the source's own $0.97 arbitrage maths, two real historical case studies (UST May 2022, USDC March 2023), and the source's worked example.",
         "thumbnail": {"title": "Stablecoins & how they break", "subtitle": "Lesson 1.5"}, "scenes": S}
 out = ROOT / "video-scripts" / "gold" / "lesson-01-5.json"
 out.write_text(json.dumps(spec, indent=1, ensure_ascii=False))
 words = sum(len(s["vo"].replace("[[pause 4]]", "").split()) for s in S)
-print(f"{len(S)} scenes, {words} words, est {(words / 171 * 60 + len(S) * 1.3 + 4 * 3) / 60:.1f} min")
+print(f"{len(S)} scenes, {words} words, est {(words / 171 * 60 + len(S) * 1.3 + 5 * 3) / 60:.1f} min")
