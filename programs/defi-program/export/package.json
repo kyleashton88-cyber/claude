@@ -8,6 +8,8 @@
     "build": "node build_images.js && node render_mermaid.js ../ON-CHAIN-OPERATOR-PROGRAM.md && node build_docx.js ../ON-CHAIN-OPERATOR-PROGRAM.md ../On-Chain-Operator-Program.docx && node build_pdf.js ../ON-CHAIN-OPERATOR-PROGRAM.md ../On-Chain-Operator-Program.pdf && node build_kit.js && PDF_SUBTITLE='Day-1 Setup Kit' node build_pdf.js ../Day-1-Setup-Kit.md ../Day-1-Setup-Kit.pdf && node build_hub.js && node build_directory.js",
     "hub": "node build_hub.js",
     "directory": "node build_directory.js",
+    "worksheets": "python3 build_worksheets.py",
+    "worksheets:check": "python3 verify_worksheets.py",
     "lessons": "python3 build_lesson_scripts.py && node build_video.js lessons",
     "lint:video": "python3 lint_video_script.py --all --summary",
     "capture": "node capture_demo.js"
