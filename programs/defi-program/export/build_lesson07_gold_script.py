@@ -1,0 +1,159 @@
+#!/usr/bin/env python3
+"""Gold-standard script for Lesson 0.7, Your first DeFi steps (practice mode
+first) (about 12-15 minutes). Promotes the old ~4-minute bullet-heavy script
+to the gold standard: the four actions (connect, sign, approve, transact),
+why testnets exist, how a token approval actually works under the hood, and
+Priya's real worked example of editing an unlimited approval down to size.
+
+Writes video-scripts/gold/lesson-00-7.json (the generator skips lessons with a
+gold script). Every illustrative number is labelled as an example on screen
+and in the narration. Spoken text (vo) spells numbers for the voice; cap is
+the written caption, same sentences."""
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+S = []
+
+
+def sc(type_, vo, cap=None, **k):
+    d = {"type": type_, **k, "vo": vo}
+    if cap:
+        d["cap"] = cap
+    S.append(d)
+
+
+EX = "Illustrative example · not investment advice"
+
+# ---------------------------------------------------------------- intro
+sc("title", "Lesson zero point seven. Your first DeFi steps, practice mode first. By the end, you'll connect a wallet to an app, understand exactly what you're signing, and practise on a free test network before a single real dollar is at risk.",
+   chapter="Why it matters", eyebrow="Lesson 0.7", num="0.7", title="Your first DeFi steps (practice mode first)",
+   sub="Four actions. One of them can move your funds. Know which.")
+sc("statement", "Here's the shift this lesson makes. Every lesson so far has been about exchanges and your own wallet. From here, you start talking directly to apps, DeFi protocols themselves, through your wallet. That's a genuinely new kind of interaction, and it comes with a genuinely new kind of prompt: the popup asking you to sign or approve something.",
+   chapter="Why it matters", kicker="A new kind of interaction", lines=["You've used an exchange, and your own wallet.", "Now you talk directly to apps."], sub="A new kind of prompt shows up: sign, or approve.")
+sc("pillars", "Here's the plan. First, the four actions a wallet popup can ask for, and which ones actually move money. Second, why you practise on a free testnet before anything real. Third, what an approval actually does under the hood, and how to limit it. And finally, a real worked example, your checklist and a quiz.",
+   chapter="Why it matters", title="What this lesson covers",
+   items=[{"icon": "key", "title": "The four actions", "text": "Connect, sign, approve, transact"}, {"icon": "shield", "title": "Practice first", "text": "Free testnets, real mistakes cost nothing"},
+          {"icon": "lock", "title": "Approvals, under the hood", "text": "What they grant, and how to limit them"}, {"icon": "coins", "title": "A real worked example", "text": "Editing Unlimited down to size"}])
+
+# ---------------------------------------------------------------- the four actions
+sc("title", "The four actions.", chapter="The four actions", eyebrow="The four actions", num="4", title="Four kinds of popup",
+   sub="Only two of them can actually move your funds.")
+sc("flow3d", "Here they are, in the order you'll usually meet them. Connect wallet lets a site see your public address, nothing more. It cannot move funds by itself. Sign a message proves you own that address, often just to log in, though some 'messages' are really permissions in disguise, more on that shortly. Approve gives an app permission to move a specific token, up to a limit you set. And transact is the one that actually does something, a swap or a deposit, and it's the one that costs gas.",
+   chapter="The four actions", title="Connect, sign, approve, transact",
+   nodes=[{"label": "Connect", "sub": "Shares your address, nothing more", "icon": "eye"}, {"label": "Sign a message", "sub": "Proves ownership, often for login", "icon": "key"},
+          {"label": "Approve", "sub": "Grants permission for one token", "icon": "lock"}, {"label": "Transact", "sub": "Actually moves funds, costs gas", "icon": "coins"}])
+sc("bullets", "Notice the split. Connecting and signing a plain message cannot move a single coin out of your wallet. They're low-risk, and usually free. Approving and transacting are the two that can, which is exactly why they deserve your full attention every single time they appear.",
+   chapter="The four actions", title="The split that matters", items=["Connect & sign: cannot move funds, usually free", "Approve & transact: can move funds, read every word", "The popup's wording tells you which kind it is"])
+sc("ticker", "Here's roughly what each action costs, side by side. Connecting: free. Signing a login message: free. An approval or a swap: a small amount of gas, since it's writing something to the blockchain itself.",
+   chapter="The four actions", title="What each action typically costs",
+   items=[{"label": "Connect", "value": "$0 · no gas", "tone": "good"}, {"label": "Sign a message", "value": "$0 · no gas", "tone": "good"},
+          {"label": "Approve", "value": "Small gas fee", "tone": "neutral"}, {"label": "Transact", "value": "Small gas fee", "tone": "neutral"},
+          {"label": "Testnet ETH", "value": "$0 · free faucet", "tone": "good"}, {"label": "Revoke", "value": "Small gas fee", "tone": "neutral"}])
+sc("statement", "One caveat, worth remembering from here on. Some sites dress up an approval as if it were a harmless signature. Reading the popup's actual wording, not just clicking through it, is the one habit that catches that difference every time.",
+   chapter="The four actions", kicker="Read before you click", lines=["Some 'signatures' are really permissions.", "Reading the wording catches the difference."], sub="This exact confusion is the subject of Lesson 1.4.")
+
+# ---------------------------------------------------------------- practice first
+sc("title", "Practice first, for free.", chapter="Practice first, for free", eyebrow="Practice first, for free", num="0", title="A blockchain that isn't real money",
+   sub="Same buttons. Same popups. Zero stakes.")
+sc("statement", "Here's the tool that makes all of this free to practise, with nothing real on the line. A testnet is a practice version of a blockchain, running the same software as the real thing, but with coins that are worth nothing. Ethereum's main testnet is called Sepolia. Mistakes there cost exactly nothing.",
+   chapter="Practice first, for free", kicker="What a testnet actually is", lines=["A real blockchain, worthless coins.", "Ethereum's is called Sepolia."], sub="Same software, same popups, nothing real on the line.")
+sc("compare", "Compare the two side by side. On a testnet, the coins are free from a faucet, a giveaway site, and a mistake costs nothing. On mainnet, the real network, coins cost real money, and a mistake can too. Practising on the left before ever touching the right is the entire point of this lesson.",
+   chapter="Practice first, for free", title="Testnet vs. mainnet",
+   left={"label": "Testnet (Sepolia)", "tone": "good", "items": ["Coins are free, from a faucet", "A mistake costs nothing"]},
+   right={"label": "Mainnet (the real network)", "tone": "neutral", "items": ["Coins cost real money", "A mistake can too"]})
+sc("steps", "Here's the practice run, in order. Add the Sepolia test network in your wallet, most have a 'show test networks' setting. Get free test E.T.H. from a Sepolia faucet, a giveaway site built for exactly this. Make a test swap on a testnet version of a well-known exchange app, or simply send test E.T.H. to yourself. Then look up that transaction on a block explorer, which Lesson one point two covers in full.",
+   "Here's the practice run, in order. Add the Sepolia test network in your wallet, most have a 'show test networks' setting. Get free test ETH from a Sepolia faucet, a giveaway site built for exactly this. Make a test swap on a testnet version of a well-known exchange app, or simply send test ETH to yourself. Then look up that transaction on a block explorer, which Lesson 1.2 covers in full.",
+   chapter="Practice first, for free", title="The practice run",
+   steps=["Add the Sepolia test network to your wallet", "Get free test ETH from a Sepolia faucet", "Make a test swap, or send test ETH to yourself", "Look up the transaction on a block explorer"],
+   result="Every button, every popup, zero real stakes.")
+sc("bullets", "If a faucet doesn't hand over test E.T.H. right away, don't worry, that's common. Try a different Sepolia faucet if one is rate-limited or temporarily out. Some require a small existing mainnet balance or a free sign-in, precisely to slow down abuse. And a minute or two of waiting before it arrives is completely normal.",
+   "If a faucet doesn't hand over test ETH right away, don't worry, that's common. Try a different Sepolia faucet if one is rate-limited or temporarily out. Some require a small existing mainnet balance or a free sign-in, precisely to slow down abuse. And a minute or two of waiting before it arrives is completely normal.",
+   chapter="Practice first, for free", title="If the faucet doesn't cooperate",
+   items=["Try a different Sepolia faucet if one is rate-limited", "Some require a small mainnet balance or a free sign-in", "A minute or two of waiting is completely normal"])
+sc("statement", "Even experienced DeFi users still reach for a testnet years in, whenever something is genuinely new to them: an unfamiliar chain, a new kind of contract, an app they've never touched before. It isn't a beginner-only habit. It's a permanent one.",
+   chapter="Practice first, for free", kicker="Not just for beginners", lines=["Experienced users still use testnets.", "Whenever something is genuinely new to them."], sub="A permanent habit, not a training-wheels phase.")
+sc("statement", "Only after that practice run, move to a Layer 2 with a genuinely tiny real amount. Connect to a well-known app, read every single prompt before approving it, do one small swap, then revoke the approval when you're done. That sequence, small and deliberate, is how every experienced DeFi user actually starts.",
+   chapter="Practice first, for free", kicker="Then, a tiny real amount", lines=["Layer 2. A genuinely tiny amount.", "Read every prompt. Revoke afterward."], sub="Small and deliberate, every time, especially the first time.")
+
+# ---------------------------------------------------------------- how approvals work
+sc("title", "How approvals actually work.", chapter="How approvals actually work", eyebrow="How approvals actually work", num="1", title="A permission, not a payment",
+   sub="It doesn't move anything. It grants the right to, later.")
+sc("flow", "Here's what actually happens when you approve a token. You're not sending anything yet. You're writing a permission into the token's own contract: this app may move up to this much of this token, from my address. The app only uses that permission the moment you separately confirm a swap or a deposit. Two different actions, two different moments.",
+   chapter="How approvals actually work", title="What an approval writes on-chain",
+   nodes=[{"label": "You approve an amount", "sub": "Written into the token's contract", "icon": "lock"}, {"label": "The app can now move up to that much", "sub": "But only when you separately confirm", "icon": "key"},
+          {"label": "A transaction actually moves it", "sub": "A distinct, separate confirmation", "icon": "coins"}])
+sc("bullets", "This is exactly why the amount in that popup matters so much. 'Unlimited' means the app could move your entire balance of that token, today or at any point in the future, until you revoke it. A limited approval, say, twenty dollars, caps the exposure at twenty dollars, no matter what happens to that app later.",
+   chapter="How approvals actually work", title="Why the amount matters", items=["“Unlimited” exposes your whole balance, indefinitely", "A limited amount caps exposure at that number", "Most wallets let you edit the amount before confirming"])
+sc("chart3d", "Here's what that difference looks like on a real wallet holding, say, eight hundred and fifty dollars of U.S.D.C., purely as an illustration. An unlimited approval exposes the entire eight hundred and fifty. A twenty-dollar approval exposes exactly twenty, regardless of what the rest of the wallet holds.",
+   chapter="How approvals actually work", kind="bars", title="What's actually at risk: Unlimited vs. a $20 limit",
+   sub="Illustrative wallet holding $850 USDC · not a recommendation",
+   bars=[{"label": "Unlimited approval", "text": "The entire wallet balance", "value": 850, "show": "$850 exposed", "tone": "bad"}, {"label": "$20 approval", "text": "Capped, no matter what", "value": 20, "show": "$20 exposed", "tone": "good"}])
+sc("flow", "Here's exactly how that risk shows up in the real world, so you recognise it by shape, not by name. A fake or copycat site asks you to 'verify your wallet' or 'claim' something, dressed up as routine, sometimes as a giveaway. The popup underneath that friendly headline is really an unlimited approval, worded to look like a harmless signature. Approve without reading the actual wording, and the app now holds a standing permission. Funds can then move later, on the attacker's own schedule, sometimes days or months after you forgot the popup ever happened.",
+   chapter="How approvals actually work", title="How this risk shows up in practice",
+   nodes=[{"label": "A copycat site asks you to “verify” or “claim”", "sub": "Dressed up as routine, sometimes a giveaway", "icon": "alert", "tone": "bad"},
+          {"label": "The popup is really an unlimited approval", "sub": "Worded to look like a harmless signature", "icon": "lock", "tone": "bad"},
+          {"label": "You approve without reading the wording", "sub": "The exact habit this lesson exists to break", "icon": "eye", "tone": "bad"},
+          {"label": "Funds move later, on the attacker's schedule", "sub": "Sometimes days or months afterward", "icon": "coins", "tone": "bad"}],
+   edges=[{"from": "0", "to": "1", "tone": "bad"}, {"from": "1", "to": "2", "tone": "bad"}, {"from": "2", "to": "3", "tone": "bad"}])
+sc("bullets", "In practice, here's what to actually look at before confirming anything. Which token, and which amount, precisely. Does the underlying contract address match the site you think you're on. Does the word 'Unlimited' appear anywhere in that popup. And if anything about it feels off, close the popup and look up the app independently first; a legitimate one will still be there in five minutes.",
+   chapter="How approvals actually work", title="What to actually check before confirming",
+   items=["Which token, and which amount, exactly", "Does the contract address match the site you're on", "Does the word “Unlimited” appear anywhere", "When in doubt, close it and look the app up first"])
+sc("compare", "One nuance worth adding, so this doesn't read as absolute. This isn't an argument for editing every approval down to the exact cent, forever. A protocol you use daily and trust deeply might reasonably carry a sensible working limit, reviewed occasionally, rather than Unlimited. A brand-new or unfamiliar app gets the opposite treatment: the smallest amount that completes what you're doing, revoked the moment you're finished.",
+   chapter="How approvals actually work", title="Not every approval needs the bare minimum",
+   left={"label": "A protocol you use daily, deeply", "tone": "neutral", "items": ["A sensible working limit, not Unlimited", "Reviewed occasionally, not forgotten"]},
+   right={"label": "A brand-new or unfamiliar app", "tone": "bad", "items": ["The smallest amount that completes the swap", "Revoked the moment you're done"]})
+sc("flow", "And here's how to undo it, any time. Open a revocation tool such as revoke dot cash, connect the same wallet, find the approval you no longer need, and revoke it. It costs a small amount of gas, since it's writing to the blockchain, and it's worth doing the moment you're finished with an app.",
+   chapter="How approvals actually work", title="Revoking an approval",
+   nodes=[{"label": "Open a revocation tool", "sub": "For example, revoke.cash", "icon": "search"}, {"label": "Connect the same wallet", "sub": "It reads your existing approvals", "icon": "wallet"},
+          {"label": "Revoke the one you don't need", "sub": "A small gas fee, paid once", "icon": "lock"}])
+sc("statement", "One habit ties this whole section together. Limit the amount before you confirm, and revoke it once you're done. Do those two things, and an approval can never quietly outlive the reason you gave it.",
+   chapter="How approvals actually work", kicker="One habit, two parts", lines=["Limit it before you confirm.", "Revoke it once you're done."], sub="An approval should never quietly outlive its reason.")
+
+# ---------------------------------------------------------------- worked example
+sc("title", "A real worked example.", chapter="A real worked example", eyebrow="A real worked example", num="20", title="Priya's twenty-dollar swap",
+   sub="Five habits, one small transaction.")
+sc("steps", "Priya connects her wallet to a decentralised exchange on Arbitrum, a Layer 2. The wallet pops up: 'Approve U.S.D.C.: Unlimited.' She edits that amount down to twenty dollars before confirming anything. She swaps twenty dollars of U.S.D.C. for E.T.H., paying about five cents in gas. She checks the transaction on a block explorer to confirm it did exactly what she expected. Then she revokes the approval, since she's done with that app for now.",
+   "Priya connects her wallet to a decentralised exchange on Arbitrum, a Layer 2. The wallet pops up: 'Approve USDC: Unlimited.' She edits that amount down to $20 before confirming anything. She swaps $20 of USDC for ETH, paying about $0.05 in gas. She checks the transaction on a block explorer to confirm it did exactly what she expected. Then she revokes the approval, since she's done with that app for now.",
+   chapter="A real worked example", title="What Priya actually did",
+   steps=["Connected her wallet to a DEX on Arbitrum", "Edited “Approve USDC: Unlimited” down to $20", "Swapped $20 of USDC for ETH, ~$0.05 gas", "Checked the transaction on a block explorer", "Revoked the approval when she was done"],
+   result="Total cost: a few cents. Total lessons learned: five.")
+sc("statement", "Notice what made that safe wasn't luck, or any special knowledge. It was five small, repeatable habits, applied in order, on an amount small enough that even a mistake wouldn't have mattered. That's the whole template for every DeFi interaction that follows in this course.",
+   chapter="A real worked example", kicker="Not luck. A template.", lines=["Five small, repeatable habits.", "An amount small enough that a mistake wouldn't matter."], sub="This is the template for every interaction from here on.")
+
+# ---------------------------------------------------------------- checklist and quiz
+sc("title", "Checklist and quiz.", chapter="Checklist and quiz", eyebrow="Checklist and quiz", num="5", title="Confirm you've got it",
+   sub="Five boxes.")
+sc("bullets", "Here's this lesson's checklist. Know the difference between connect, sign, approve and transact. Practise on the Sepolia testnet first. Make one small real swap on a Layer 2, with a limited approval. Find that transaction on a block explorer. And revoke the approval once you're done with it.",
+   chapter="Checklist and quiz", title="Before you move on", numbered=True,
+   items=["Know connect vs. sign vs. approve vs. transact", "Practised on the Sepolia testnet first", "One small real swap, on a Layer 2, limited approval", "Found the transaction on a block explorer", "Revoked the approval afterward"])
+sc("quiz", "Question one. Can 'connect wallet' move your funds by itself? [[pause 4]] The answer: no. It shares your address. Only an approval or a transaction can actually move funds.",
+   chapter="Checklist and quiz", n=1, of=5, q="Can “connect wallet” move your funds?", a="No. It shares your address. Approvals and transactions are what move funds.")
+sc("quiz", "Question two. What's a testnet actually for? [[pause 4]] The answer: practising with worthless coins, so a mistake costs nothing while you're still learning the buttons.",
+   chapter="Checklist and quiz", n=2, of=5, q="What is a testnet for?", a="Practising with worthless coins, so mistakes cost nothing.")
+sc("quiz", "Question three. What should you do with an approval once you're finished using that app? [[pause 4]] The answer: revoke it, or limit the amount to exactly what you needed in the first place.",
+   chapter="Checklist and quiz", n=3, of=5, q="What should you do with an approval after you're done?", a="Revoke it, or limit it to the amount needed in the first place.")
+sc("quiz", "Question four. True or false: signing a plain login message can move tokens out of your wallet. [[pause 4]] The answer: false. A plain signed message proves ownership; it cannot move funds. Only an approval combined with a transaction can.",
+   chapter="Checklist and quiz", n=4, of=5, q="True or false: a signed login message can move your tokens.", a="False. A plain signature proves ownership; it cannot move funds by itself.")
+sc("quiz", "Question five. Priya's wallet shows 'Approve U.S.D.C.: Unlimited' for a twenty-dollar swap. What's the safer move? [[pause 4]] The answer: edit the approval down to twenty dollars, the amount she actually intends to swap, before confirming anything.",
+   "Question five. Priya's wallet shows 'Approve USDC: Unlimited' for a $20 swap. What's the safer move? [[pause 4]] The answer: edit the approval down to $20, the amount she actually intends to swap, before confirming anything.",
+   chapter="Checklist and quiz", n=5, of=5, q="A popup shows “Approve USDC: Unlimited” for a $20 swap. What's the safer move?", a="Edit the approval down to $20, the amount actually being swapped, before confirming.")
+
+# ---------------------------------------------------------------- recap
+sc("flow", "Here's the whole lesson, recapped as one loop. Connect your wallet. Practise first, on a free testnet. Read every prompt, and know which ones can move funds. Limit any approval to what you actually need. Transact small and deliberately. And revoke the approval once you're done. Do those six things, and you're ready for real DeFi, at real but tiny stakes.",
+   chapter="Recap and next", title="This lesson, recapped as one loop", layout="cycle",
+   nodes=[{"label": "Connect your wallet", "icon": "wallet"}, {"label": "Practise on a testnet first", "icon": "shield"}, {"label": "Read every prompt", "icon": "eye"},
+          {"label": "Limit the approval", "icon": "lock"}, {"label": "Transact small", "icon": "coins"}, {"label": "Revoke when done", "icon": "check"}])
+sc("statement", "This is education, not financial advice, and every dollar figure in this lesson is an illustrative example. Start on a testnet, then a Layer 2, then genuinely tiny real amounts. And nobody from this program will ever ask for your seed phrase, private keys or account access.",
+   chapter="Recap and next", kicker="A reminder", lines=["Testnet, then tiny amounts, always.", "We never ask for your keys."], sub="Not financial advice. Every figure here is illustrative.")
+sc("cta", "That's your first DeFi steps: the four actions, practice mode first, and how an approval actually works. Next up, Lesson zero point eight: your security baseline, and the language of DeFi.",
+   chapter="Recap and next", button="Next: Lesson 0.8", sub="Your security baseline, and the language of DeFi")
+
+spec = {"id": "lesson-00-7", "title": "Lesson 0.7: Your first DeFi steps (practice mode first)", "size": [1920, 1080], "group": "lessons", "maxMinutes": 25, "tag": "Lesson 0.7",
+        "gold": True, "seed": 47,
+        "use": "Lesson 0.7 page in the Whop course. Gold-standard script: the four wallet-popup actions (connect/sign/approve/transact) as a flow3d anchor, a costs ticker, testnet-vs-mainnet practice, how a token approval works under the hood with an Unlimited-vs-$20 chart3d anchor, revoke.cash, and Priya's real worked example.",
+        "thumbnail": {"title": "Your first DeFi steps", "subtitle": "Lesson 0.7"}, "scenes": S}
+out = ROOT / "video-scripts" / "gold" / "lesson-00-7.json"
+out.write_text(json.dumps(spec, indent=1, ensure_ascii=False))
+words = sum(len(s["vo"].replace("[[pause 4]]", "").split()) for s in S)
+print(f"{len(S)} scenes, {words} words, est {(words / 171 * 60 + len(S) * 1.3 + 5 * 3) / 60:.1f} min")
