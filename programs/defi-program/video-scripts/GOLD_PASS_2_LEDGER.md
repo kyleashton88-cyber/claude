@@ -14,7 +14,7 @@ Old mp4s / old gold scripts do not count, even if the queue elsewhere still says
 | 0.5 | Setting up your wallet and backing it up | new gold script: flow3d anchor, 4 flows, scam walkthrough, steps demo | done |
 | 0.6 | Networks, gas and your first transfer | new gold script: chart3d cost anchor, flow3d anchor, 3 flows, 2 compares | done |
 | 0.7 | Your first DeFi steps (practice mode first) | new gold script: flow3d + chart3d anchors, ticker, phishing flow, 2 compares | done |
-| 0.8 | Your security baseline, and the language of DeFi | | pending |
+| 0.8 | Your security baseline, and the language of DeFi | new gold script: flow3d + chart3d donut anchors, 4 ticker glossary scenes | done |
 | 1.0 | Mastery Starter | | pending |
 | 1.1 | What DeFi is, and the risk-first mindset | | pending |
 | 1.2 | How a transaction actually happens | | pending |
