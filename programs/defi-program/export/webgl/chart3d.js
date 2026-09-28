@@ -185,6 +185,17 @@ function runBars(DATA) {
       // happens with a short title (a long one leaves little room for a
       // tall bar in the first place), so 420 stays a safe fallback.
       cp.y = Math.max(cp.y, DATA.minLabelY ?? 420);
+      // That header clamp alone isn't enough: with very few bars of very
+      // different heights (found on a 2-bar chart where one bar reaches 92%
+      // of max height), the tall bar's own top edge can sit close to the
+      // frame's top too, closer than DATA.minLabelY - pulling the counter
+      // "up" to clear the header then sank it right back down *into* the
+      // bar's own glowing column, the same visual bug as the header case
+      // but caused by the bar's geometry, not the header. Re-project the
+      // bar's actual top (not the +0.55 offset above it) and never let the
+      // counter sink below that, whichever clamp above ends up binding.
+      const barTop = project(new THREE.Vector3(b.x, h, b.z), camera, W, H);
+      cp.y = Math.min(cp.y, barTop.y - 40);
       const ce = countEls[i]; ce.style.opacity = String(ease((t - a) / 0.4)); ce.style.transform = `translate(${cp.x.toFixed(1)}px, ${cp.y.toFixed(1)}px)`;
       ce.style.color = active ? `#${b.color.toString(16).padStart(6, '0')}` : '#fff';
       ce.firstChild.textContent = b.count ? formatCounter(b.count, easeIO((t - a) / 1.1)) : b.show;
