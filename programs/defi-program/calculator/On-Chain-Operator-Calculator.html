@@ -49,7 +49,11 @@
     border: 0; border-left: 2px solid transparent; padding: 7px 8px; cursor: pointer;
   }
   .nav button[aria-current="true"] { color: #fff; border-left-color: var(--mint); background: rgba(125,255,224,.08); }
-  .stage { padding: 22px 28px 48px; max-width: 980px; }
+  .stage { padding: 22px 28px 56px; max-width: 1180px; }
+  .work { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.72fr); gap: 18px; align-items: start; }
+  .side { display: flex; flex-direction: column; gap: 14px; }
+  .side .metrics { grid-template-columns: 1fr 1fr; margin: 0; }
+  .side .inputs { grid-template-columns: 1fr; margin: 0; }
   .stage h1 { font-family: var(--serif); font-weight: 500; font-size: 34px; line-height: 1.15; margin: 0 0 6px; }
   .blurb { margin: 0 0 16px; max-width: 62ch; color: var(--muted); }
   .verdict {
@@ -63,17 +67,18 @@
   .figure { text-align: right; }
   .figure b { display: block; font-family: var(--serif); font-size: 40px; font-weight: 500; line-height: 1; }
   .figure span { font-size: 14px; }
-  .panel { background: var(--sheet); border: 1px solid var(--line); padding: 12px 12px 8px; margin: 0 0 14px; }
+  .panel { background: var(--sheet); border: 1px solid var(--line); padding: 8px 10px 10px; margin: 0; }
   .panel svg { width: 100%; height: auto; display: block; }
-  .formula { margin: 8px 4px 4px; color: var(--muted); font-size: 14px; }
+  .axes { margin: 2px 8px 0; color: var(--muted); font-size: 13px; }
+  .formula { margin: 4px 8px 2px; color: var(--muted); font-size: 14px; }
   .legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 4px 4px 8px; font-size: 13px; color: var(--muted); }
-  .legend i { display: inline-block; width: 14px; height: 3px; margin-right: 5px; vertical-align: middle; background: var(--ink); }
-  .legend i.dash { background: repeating-linear-gradient(90deg, var(--muted) 0 4px, transparent 4px 7px); }
+  .legend i { display: inline-block; width: 16px; height: 0; margin-right: 6px; vertical-align: middle; border-bottom: 3px solid var(--ink); }
+  .legend i.dash { border-bottom-style: dashed; }
   .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 0 0 14px; }
   .metrics div { border-top: 2px solid var(--ink); padding-top: 6px; }
   .metrics b { display: block; font-size: 18px; font-weight: 650; }
   .metrics span { color: var(--muted); font-size: 13px; }
-  .checks { list-style: none; padding: 0; margin: 0 0 14px; }
+  .checks { list-style: none; padding: 0; margin: 16px 0 14px; }
   .checks li { padding: 6px 0; border-bottom: 1px solid var(--line); }
   .checks li.ok { color: var(--teal-ink); }
   .checks li.no { color: var(--bad); }
@@ -104,6 +109,8 @@
     .nav { display: none; }
     .picker { display: block; }
     .stage { padding: 16px 14px 40px; }
+    .work { grid-template-columns: 1fr; }
+    .side .inputs { grid-template-columns: 1fr 1fr; }
     .verdict, .metrics, .help, .inputs { grid-template-columns: 1fr; }
     .figure { text-align: left; }
     .pos-row { grid-template-columns: 1fr 1fr; }
@@ -145,12 +152,16 @@
       <div class="figure"><b id="figure"></b><span id="figure-label"></span></div>
     </div>
     <p class="error" id="error" hidden></p>
-    <div class="panel" id="chart"></div>
-    <div class="metrics" id="metrics"></div>
+    <div class="work">
+      <div class="panel" id="chart"></div>
+      <div class="side">
+        <div class="metrics" id="metrics"></div>
+        <form id="form" class="inputs"></form>
+        <button type="button" class="reset" id="reset">Reset to the lesson example</button>
+      </div>
+    </div>
     <ul class="checks" id="checks" hidden></ul>
     <div id="table"></div>
-    <form id="form" class="inputs"></form>
-    <button type="button" class="reset" id="reset">Reset to the lesson example</button>
     <div class="help">
       <section>
         <h2>How to use it</h2>
@@ -278,6 +289,7 @@
             yUnit: "percent",
             series: [{ name: "Gap versus holding", points: series(xs.map(function (x) { return [x, il(x) * 100]; })) }],
             guides: [{ y: -1, label: "1% gap", tone: "good" }, { y: -5, label: "5% gap", tone: "bad" }],
+            bands: [{ to: -5, tone: "bad" }, { from: -5, to: -1, tone: "watch" }, { from: -1, tone: "good" }],
             marker: { x: Math.min(5, Math.max(0.25, r)), y: loss, label: multiple(r, 2) }
           },
           numbers: { il: il(r) }
@@ -334,6 +346,7 @@
               }))
             }],
             guides: [{ y: 0, label: "Matches holding", tone: "good" }],
+            bands: [{ to: 0, tone: "bad" }, { from: 0, tone: "good" }],
             marker: { x: fee, y: net, label: pct(fee, 1) }
           },
           numbers: { need: need, net: net, loss: loss }
@@ -496,6 +509,7 @@
             xUnit: "money",
             series: [{ name: "Health factor", points: series(xs.map(function (x) { return [x, qty * x * lt / debt]; })) }],
             guides: [{ y: 1, label: "Liquidation", tone: "bad" }, { y: 1.5, label: "1.5 floor", tone: "watch" }, { y: 2, label: "2.0 floor", tone: "good" }],
+            bands: [{ to: 1.5, tone: "bad" }, { from: 1.5, to: 2, tone: "watch" }, { from: 2, tone: "good" }],
             marker: { x: price, y: hf, label: money(price, 0) }
           },
           numbers: { hf: hf, liq: liq, coll: coll }
@@ -550,6 +564,7 @@
             xUnit: "percent",
             series: [{ name: "Net APY on equity", points: series(xs.map(function (x) { return [x, cApy * lev - x * (lev - 1)]; })) }],
             guides: [{ y: 0, label: "Wiped out", tone: "bad" }, { y: cApy, label: "Unlevered", tone: "watch" }],
+            bands: [{ to: 0, tone: "bad" }, { from: 0, to: cApy, tone: "watch" }, { from: cApy, tone: "good" }],
             marker: { x: bApy, y: net, label: pct(bApy, 1) }
           },
           numbers: { lev: lev, net: net, breakeven: breakeven }
@@ -1664,16 +1679,33 @@
     host.hidden = false;
     var svg = chart.kind === "bar" ? barChart(chart) : lineChart(chart);
     host.appendChild(svg);
-    if (chart.kind === "line" && chart.series && chart.series.length > 1) {
-      var legend = document.createElement("div");
-      legend.className = "legend";
+    if (chart.yLabel || chart.xLabel) {
+      var axes = document.createElement("p");
+      axes.className = "axes";
+      axes.textContent = chart.xLabel ? chart.yLabel + " against " + chart.xLabel : chart.yLabel;
+      host.appendChild(axes);
+    }
+    var legendItems = [];
+    if (chart.kind === "line" && chart.series) {
       chart.series.forEach(function (s, i) {
         if (!s.points || !s.points.length) return;
+        legendItems.push({ name: s.name, dashed: !!(s.dashed || i > 0), tone: i === 0 ? "neutral" : "watch" });
+      });
+    }
+    (chart.guides || []).forEach(function (g) {
+      if (g.label) legendItems.push({ name: g.label, dashed: true, tone: g.tone || "neutral" });
+    });
+    if (legendItems.length > 1) {
+      var legend = document.createElement("div");
+      legend.className = "legend";
+      legendItems.forEach(function (item) {
         var span = document.createElement("span");
         var swatch = document.createElement("i");
-        if (s.dashed || i > 0) swatch.className = "dash";
+        if (item.dashed) swatch.className = "dash";
+        var swatchColor = washes[item.tone] || tones[item.tone] || "#07111c";
+        swatch.style.borderBottom = "3px " + (item.dashed ? "dashed " : "solid ") + swatchColor;
         span.appendChild(swatch);
-        span.appendChild(document.createTextNode(s.name));
+        span.appendChild(document.createTextNode(item.name));
         legend.appendChild(span);
       });
       host.appendChild(legend);
@@ -1701,8 +1733,18 @@
     return nice(n);
   }
 
+  var washes = { good: "#0c8f74", watch: "#3d6fbf", bad: "#9f1239" };
+
+  function tickStep(span) {
+    var rough = Math.abs(span) / 4 || 1;
+    var pow = Math.pow(10, Math.floor(Math.log10(rough)));
+    var err = rough / pow;
+    var nice = err >= 7 ? 10 : err >= 3.5 ? 5 : err >= 1.5 ? 2 : 1;
+    return nice * pow;
+  }
+
   function lineChart(chart) {
-    var w = 720, h = 280, l = 64, r = 16, t = 16, b = 36;
+    var w = 760, h = 320, l = 78, r = 18, t = 22, b = 32;
     var series = (chart.series || []).filter(function (s) { return s.points && s.points.length; });
     var xs = [], ys = [];
     series.forEach(function (s) {
@@ -1720,66 +1762,125 @@
     var y0 = Math.min.apply(null, ys), y1 = Math.max.apply(null, ys);
     if (x0 === x1) { x0 -= 1; x1 += 1; }
     if (y0 === y1) { y0 -= 1; y1 += 1; }
-    var yPad = (y1 - y0) * 0.12;
+    var yPad = (y1 - y0) * 0.08;
     y0 -= yPad; y1 += yPad;
+    var yStep = tickStep(y1 - y0);
+    var snapped0 = Math.floor(y0 / yStep) * yStep;
+    var snapped1 = Math.ceil(y1 / yStep) * yStep;
+    if (snapped1 > snapped0 && (snapped1 - snapped0) <= (y1 - y0) * 1.45) {
+      y0 = snapped0;
+      y1 = snapped1;
+    }
+    if (y0 === y1) y1 = y0 + yStep;
     function X(x) { return l + (x - x0) / (x1 - x0) * (w - l - r); }
     function Y(y) { return t + (y1 - y) / (y1 - y0) * (h - t - b); }
-    var svg = svgEl("svg", { viewBox: "0 0 " + w + " " + h, role: "img", "aria-label": chart.yLabel + " against " + chart.xLabel });
-    for (var i = 0; i < 4; i++) {
-      var gy = y0 + (y1 - y0) * i / 3;
-      svg.appendChild(svgEl("line", { x1: l, x2: w - r, y1: Y(gy), y2: Y(gy), stroke: "#d3dde6" }));
-      svg.appendChild(text(l - 8, Y(gy) + 4, formatTick(gy, chart.yUnit), "end"));
+    function clampY(y) { return Math.min(y1, Math.max(y0, y)); }
+    var svg = svgEl("svg", { viewBox: "0 0 " + w + " " + h, role: "img", "aria-label": (chart.yLabel || "Value") + " against " + (chart.xLabel || "input") });
+    (chart.bands || []).forEach(function (band) {
+      var yA = band.from == null ? y0 : clampY(band.from);
+      var yB = band.to == null ? y1 : clampY(band.to);
+      var top = Math.min(Y(yA), Y(yB));
+      var height = Math.abs(Y(yA) - Y(yB));
+      if (height < 1) return;
+      svg.appendChild(svgEl("rect", {
+        x: l, y: top, width: w - l - r, height: height,
+        fill: washes[band.tone] || "#94a3b8", opacity: "0.12"
+      }));
+    });
+    var tick = y0;
+    var lastTickY = -999;
+    for (var n = 0; n < 8 && tick <= y1 + yStep * 0.01; n++, tick += yStep) {
+      if (Math.abs(Y(tick) - lastTickY) < 16) continue;
+      lastTickY = Y(tick);
+      svg.appendChild(svgEl("line", { x1: l, x2: w - r, y1: Y(tick), y2: Y(tick), stroke: "#d3dde6" }));
+      svg.appendChild(text(l - 8, Y(tick) + 4, formatTick(tick, chart.yUnit), "end"));
+    }
+    if (y0 < 0 && y1 > 0) {
+      svg.appendChild(svgEl("line", { x1: l, x2: w - r, y1: Y(0), y2: Y(0), stroke: "#14202b", "stroke-width": "1.25" }));
     }
     svg.appendChild(text(l, h - 8, formatTick(x0, chart.xUnit), "start"));
     svg.appendChild(text(w - r, h - 8, formatTick(x1, chart.xUnit), "end"));
+    if (series[0]) {
+      var base = (y0 < 0 && y1 > 0) ? 0 : y0;
+      var area = "";
+      var first = null, last = null;
+      series[0].points.forEach(function (p) {
+        if (p.y == null || !isFinite(p.y)) return;
+        area += (area ? "L" : "M") + X(p.x).toFixed(1) + " " + Y(p.y).toFixed(1) + " ";
+        if (!first) first = p;
+        last = p;
+      });
+      if (first && last) {
+        area += "L" + X(last.x).toFixed(1) + " " + Y(base).toFixed(1) + " L" + X(first.x).toFixed(1) + " " + Y(base).toFixed(1) + " Z";
+        svg.appendChild(svgEl("path", { d: area, fill: "#07111c", opacity: "0.08" }));
+      }
+    }
     (chart.guides || []).forEach(function (g) {
       var color = tones[g.tone] || "#3e4c59";
-      if (g.y != null) {
-        svg.appendChild(svgEl("line", { x1: l, x2: w - r, y1: Y(g.y), y2: Y(g.y), stroke: color, "stroke-dasharray": "4 4" }));
+      if (g.y != null && g.y >= y0 && g.y <= y1) {
+        svg.appendChild(svgEl("line", { x1: l, x2: w - r, y1: Y(g.y), y2: Y(g.y), stroke: color, "stroke-dasharray": "5 4", "stroke-width": "1.25" }));
       }
-      if (g.x != null) {
-        svg.appendChild(svgEl("line", { y1: t, y2: h - b, x1: X(g.x), x2: X(g.x), stroke: color, "stroke-dasharray": "4 4" }));
+      if (g.x != null && g.x >= x0 && g.x <= x1) {
+        svg.appendChild(svgEl("line", { y1: t, y2: h - b, x1: X(g.x), x2: X(g.x), stroke: color, "stroke-dasharray": "5 4" }));
       }
     });
     series.forEach(function (s, idx) {
       var d = "";
       s.points.forEach(function (p) {
         if (p.y == null || !isFinite(p.y)) return;
-        d += (d ? " L" : "M") + X(p.x).toFixed(1) + " " + Y(p.y).toFixed(1);
+        d += (d ? "L" : "M") + X(p.x).toFixed(1) + " " + Y(p.y).toFixed(1);
       });
-      var attrs = { d: d, fill: "none", stroke: idx === 0 ? "#07111c" : "#3e4c59", "stroke-width": idx === 0 ? 2.25 : 1.75 };
-      if (s.dashed || idx > 0) attrs["stroke-dasharray"] = "5 4";
+      var color = idx === 0 ? "#07111c" : "#3d6fbf";
+      var attrs = { d: d, fill: "none", stroke: color, "stroke-width": idx === 0 ? "2.4" : "1.75", "stroke-linejoin": "round", "stroke-linecap": "round" };
+      if (s.dashed || idx > 0) attrs["stroke-dasharray"] = "6 4";
       svg.appendChild(svgEl("path", attrs));
     });
     if (chart.marker && isFinite(chart.marker.x) && isFinite(chart.marker.y)) {
       var mx = X(Math.min(x1, Math.max(x0, chart.marker.x)));
       var my = Y(Math.min(y1, Math.max(y0, chart.marker.y)));
-      svg.appendChild(svgEl("circle", { cx: mx, cy: my, r: 5, fill: "#0c8f74", stroke: "#fff", "stroke-width": 2 }));
+      svg.appendChild(svgEl("line", { x1: mx, x2: mx, y1: my, y2: h - b, stroke: "#0c8f74", "stroke-width": "1.25" }));
+      svg.appendChild(svgEl("circle", { cx: mx, cy: my, r: 7, fill: "#fff" }));
+      svg.appendChild(svgEl("circle", { cx: mx, cy: my, r: 4.5, fill: "#0c8f74" }));
+      if (chart.marker.label) {
+        var label = chart.marker.label;
+        var tw = Math.max(36, label.length * 6.6 + 12);
+        var lx = mx > (l + (w - r)) / 2 ? mx - tw - 12 : mx + 12;
+        lx = Math.min(w - r - tw, Math.max(l, lx));
+        var ly = my;
+        svg.appendChild(svgEl("rect", { x: lx, y: ly - 12, width: tw, height: 18, rx: "4", fill: "#fff", stroke: "#0c8f74" }));
+        svg.appendChild(text(lx + tw / 2, ly + 1, label, "middle", "#064e3b"));
+      }
     }
     return svg;
   }
 
   function barChart(chart) {
     var bars = chart.bars || [];
-    var w = 720, h = 300, l = 72, r = 16, t = 28, btm = 36;
+    var w = 760, h = 320, l = 78, r = 16, t = 26, btm = 40;
     var vals = bars.map(function (bar) { return bar.value; }).concat([0]);
     var y0 = Math.min.apply(null, vals);
     var y1 = Math.max.apply(null, vals);
     if (y0 === y1) { y0 -= 1; y1 += 1; }
-    var pad = (y1 - y0) * 0.22;
+    var pad = (y1 - y0) * 0.16;
     y0 -= pad; y1 += pad;
     function Y(y) { return t + (y1 - y) / (y1 - y0) * (h - t - btm); }
     var svg = svgEl("svg", { viewBox: "0 0 " + w + " " + h, role: "img", "aria-label": chart.yLabel || "Comparison" });
-    svg.appendChild(svgEl("line", { x1: l, x2: w - r, y1: Y(0), y2: Y(0), stroke: "#9aabba" }));
+    var step = tickStep(y1 - y0);
+    var tick = Math.ceil(y0 / step) * step;
+    for (var n = 0; n < 8 && tick <= y1 + step * 0.01; n++, tick += step) {
+      if (tick < y0) continue;
+      svg.appendChild(svgEl("line", { x1: l, x2: w - r, y1: Y(tick), y2: Y(tick), stroke: tick === 0 ? "#14202b" : "#d3dde6", "stroke-width": tick === 0 ? "1.25" : "1" }));
+      svg.appendChild(text(l - 8, Y(tick) + 4, formatTick(tick, chart.yLabel === "Dollars" || chart.yLabel === "Dollars a year" ? "money" : "percent"), "end"));
+    }
     var inner = w - l - r;
-    var gap = 12;
-    var bw = Math.max(12, (inner - gap * (bars.length + 1)) / Math.max(1, bars.length));
+    var gap = 16;
+    var bw = Math.max(18, (inner - gap * (bars.length + 1)) / Math.max(1, bars.length));
     bars.forEach(function (bar, i) {
       var x = l + gap + i * (bw + gap);
       var y = Y(Math.max(bar.value, 0));
-      var bh = Math.max(1, Math.abs(Y(bar.value) - Y(0)));
-      svg.appendChild(svgEl("rect", { x: x, y: y, width: bw, height: bh, fill: tones[bar.tone] || tones.neutral }));
-      svg.appendChild(text(x + bw / 2, h - 12, bar.label, "middle"));
+      var bh = Math.max(2, Math.abs(Y(bar.value) - Y(0)));
+      svg.appendChild(svgEl("rect", { x: x, y: y, width: bw, height: bh, rx: "3", fill: tones[bar.tone] || tones.neutral }));
+      svg.appendChild(text(x + bw / 2, h - 14, bar.label, "middle"));
     });
     return svg;
   }
@@ -1789,8 +1890,8 @@
     Object.keys(attrs).forEach(function (k) { el.setAttribute(k, attrs[k]); });
     return el;
   }
-  function text(x, y, value, anchor) {
-    var el = svgEl("text", { x: x, y: y, "text-anchor": anchor || "start", fill: "#3e4c59", "font-size": "12", "font-family": "Avenir Next, Segoe UI, sans-serif" });
+  function text(x, y, value, anchor, fill) {
+    var el = svgEl("text", { x: x, y: y, "text-anchor": anchor || "start", fill: fill || "#3e4c59", "font-size": "12", "font-family": "Avenir Next, Segoe UI, sans-serif" });
     el.textContent = value;
     return el;
   }

@@ -111,6 +111,7 @@
             yUnit: "percent",
             series: [{ name: "Gap versus holding", points: series(xs.map(function (x) { return [x, il(x) * 100]; })) }],
             guides: [{ y: -1, label: "1% gap", tone: "good" }, { y: -5, label: "5% gap", tone: "bad" }],
+            bands: [{ to: -5, tone: "bad" }, { from: -5, to: -1, tone: "watch" }, { from: -1, tone: "good" }],
             marker: { x: Math.min(5, Math.max(0.25, r)), y: loss, label: multiple(r, 2) }
           },
           numbers: { il: il(r) }
@@ -167,6 +168,7 @@
               }))
             }],
             guides: [{ y: 0, label: "Matches holding", tone: "good" }],
+            bands: [{ to: 0, tone: "bad" }, { from: 0, tone: "good" }],
             marker: { x: fee, y: net, label: pct(fee, 1) }
           },
           numbers: { need: need, net: net, loss: loss }
@@ -329,6 +331,7 @@
             xUnit: "money",
             series: [{ name: "Health factor", points: series(xs.map(function (x) { return [x, qty * x * lt / debt]; })) }],
             guides: [{ y: 1, label: "Liquidation", tone: "bad" }, { y: 1.5, label: "1.5 floor", tone: "watch" }, { y: 2, label: "2.0 floor", tone: "good" }],
+            bands: [{ to: 1.5, tone: "bad" }, { from: 1.5, to: 2, tone: "watch" }, { from: 2, tone: "good" }],
             marker: { x: price, y: hf, label: money(price, 0) }
           },
           numbers: { hf: hf, liq: liq, coll: coll }
@@ -383,6 +386,7 @@
             xUnit: "percent",
             series: [{ name: "Net APY on equity", points: series(xs.map(function (x) { return [x, cApy * lev - x * (lev - 1)]; })) }],
             guides: [{ y: 0, label: "Wiped out", tone: "bad" }, { y: cApy, label: "Unlevered", tone: "watch" }],
+            bands: [{ to: 0, tone: "bad" }, { from: 0, to: cApy, tone: "watch" }, { from: cApy, tone: "good" }],
             marker: { x: bApy, y: net, label: pct(bApy, 1) }
           },
           numbers: { lev: lev, net: net, breakeven: breakeven }
