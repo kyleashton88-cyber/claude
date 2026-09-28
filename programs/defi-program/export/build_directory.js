@@ -1113,8 +1113,9 @@ addEventListener('hashchange', openHash);
 openHash();
 apply();
 const money = x => (x < 0 ? '−$' : '$') + Math.abs(x).toLocaleString('en-US', { maximumFractionDigits: 2 });
-const pct = (x, d = 2) => (x * 100).toFixed(d) + '%';
-const signed = x => (x >= 0 ? '+' : '') + x.toFixed(1) + '%';
+const pct = (x, d = 2) => (x < 0 ? '−' : '') + Math.abs(x * 100).toFixed(d) + '%';
+const pctPts = (n, d = 2) => (n < 0 ? '−' : '') + Math.abs(n).toFixed(d) + '%';
+const signed = x => (x < 0 ? '−' : '+') + Math.abs(x).toFixed(1) + '%';
 const ilLoss = r => 1 - 2 * Math.sqrt(r) / (1 + r);
 const say = msg => '<p class="say">' + msg + '</p>';
 const panel = (lead, bits, spoken, status, graph) => {
@@ -1327,7 +1328,9 @@ function waterfall(o) {
       body += '<line x1="' + (x + bw).toFixed(1) + '" y1="' + Y(b.end).toFixed(1) + '" x2="' + (x + bw + gap).toFixed(1) + '" y2="' + Y(b.end).toFixed(1) + '" stroke="#9aafc0" stroke-dasharray="3 3"/>';
     }
     body += '<rect x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + bw.toFixed(1) + '" height="' + h.toFixed(1) + '" fill="' + b.fill + '"/>';
-    body += '<text x="' + (x + bw / 2).toFixed(1) + '" y="' + (y - 8).toFixed(1) + '" text-anchor="middle" font-size="13" font-weight="700" fill="#07111c">' + xml(b.label) + '</text>';
+    const below = b.hi <= 0 && b.lo < 0;
+    const labelY = below ? Y(b.lo) + 15 : y - 8;
+    body += '<text x="' + (x + bw / 2).toFixed(1) + '" y="' + labelY.toFixed(1) + '" text-anchor="middle" font-size="13" font-weight="700" fill="#07111c">' + xml(b.label) + '</text>';
     body += '<text x="' + (x + bw / 2).toFixed(1) + '" y="' + (H - 16) + '" text-anchor="middle" font-size="12" fill="#3e4c59">' + xml(b.name) + '</text>';
   });
   return figure('', body, o.legend, W, H);
@@ -1436,14 +1439,15 @@ const RUN = {
           : 'The position liquidates at ' + money(liq) + ', ' + pretty(move) + '% ' + (move < 0 ? 'under' : 'above') + ' the current price.';
     const x0 = liq * 0.55;
     const x1 = Math.max(v.price, liq * 2.4) * 1.2;
+    const yHi = Math.max(3.6, Math.min(12, hf * 1.12 + 0.3));
     const hfAt = p => v.qty * p * v.lt / v.debt;
     const graph = curve({
-      x0: x0, x1: x1, y0: 0, y1: 3.6, xunit: '$', zero: false,
+      x0: x0, x1: x1, y0: 0, y1: yHi, xunit: '$', zero: false,
       bands: [
         { from: 0, to: 1, fill: '#f8efea' },
         { from: 1, to: 1.5, fill: '#f8f1e6' },
         { from: 1.5, to: 2, fill: '#f3f6ea' },
-        { from: 2, to: 3.6, fill: '#e7f6f1' }
+        { from: 2, to: yHi, fill: '#e7f6f1' }
       ],
       hlines: [
         { y: 1, label: 'Can liquidate', color: '#9a3412' },
@@ -1544,13 +1548,13 @@ const RUN = {
       hlines: [{ y: v.capy, label: 'Unlevered ' + v.capy.toFixed(2) + '%', color: '#0a5c48' }],
       vlines: vlines,
       series: [{ pts: samples(0, x1, 72, false).map(b => [b, netAt(b)]), color: '#12a888', width: 2.5, split: true }],
-      dots: [{ x: Math.min(v.bapy, x1), y: net, label: 'Now ' + net.toFixed(2) + '%' }],
+      dots: [{ x: Math.min(v.bapy, x1), y: net, label: 'Now ' + pctPts(net) }],
       legend: [{ color: '#12a888', name: 'Net APY on your money' }, { color: '#0a5c48', name: 'Yield with no leverage' }]
     });
     return panel(lev.toFixed(2) + '× leverage', [
       ['Loops', v.loops + ' at LTV ' + L.toFixed(2)],
       ['Maximum if you kept looping', (1 / (1 - L)).toFixed(2) + '×'],
-      ['Net APY on equity', net.toFixed(2) + '%'],
+      ['Net APY on equity', pctPts(net)],
       ['Unlevered collateral yield', v.capy.toFixed(2) + '%'],
       ['Borrow rate that wipes the return', be === Infinity ? '—' : be.toFixed(2) + '%']
     ], spoken, flat ? { tone: 'warn', label: 'Leverage adds nothing' } : null, graph);
@@ -1573,8 +1577,8 @@ const RUN = {
     });
     return panel(pct(r) + ' lost to rebalancing', [
       ['Fee APR', v.fee.toFixed(2) + '%'],
-      ['Fees minus LVR', (gap >= 0 ? '+' : '') + gap.toFixed(2) + '% per year']
-    ], 'Arbitrage costs about ' + pct(r) + ' a year. Fees of ' + v.fee.toFixed(2) + '% leave ' + (gap >= 0 ? '+' : '') + gap.toFixed(2) + '% after that cost.', { tone: short ? 'warn' : 'ok', label: short ? 'Fees fall short' : 'Fees cover the cost' }, graph);
+      ['Fees minus LVR', (gap >= 0 ? '+' : '−') + Math.abs(gap).toFixed(2) + '% per year']
+    ], 'Arbitrage costs about ' + pct(r) + ' a year. Fees of ' + v.fee.toFixed(2) + '% leave ' + (gap >= 0 ? '+' : '−') + Math.abs(gap).toFixed(2) + '% after that cost.', { tone: short ? 'warn' : 'ok', label: short ? 'Fees fall short' : 'Fees cover the cost' }, graph);
   },
   pt: v => {
     if (!(v.price > 0) || !(v.days > 0)) return say('Price and days must be above zero.');
@@ -1610,19 +1614,19 @@ const RUN = {
     const graph = waterfall({
       yunit: '%',
       steps: [
-        { name: 'Headline', delta: v.y, label: v.y.toFixed(2) + '%' },
-        { name: 'Expected loss', delta: -h, label: '−' + h.toFixed(2) + '%' },
-        { name: 'Costs', delta: -v.c, label: '−' + Math.abs(v.c).toFixed(2) + '%' },
-        { name: 'Left', total: net, label: net.toFixed(2) + '%' }
+        { name: 'Headline', delta: v.y, label: pctPts(v.y) },
+        { name: 'Expected loss', delta: -h, label: pctPts(-h) },
+        { name: 'Costs', delta: -v.c, label: pctPts(-v.c) },
+        { name: 'Left', total: net, label: pctPts(net) }
       ]
     });
-    return panel(net.toFixed(2) + '% after risk', [
+    return panel(pctPts(net) + ' after risk', [
       ['Headline yield', v.y.toFixed(2) + '%'],
       ['Expected loss', h.toFixed(2) + '%'],
       ['Loss probability', v.p.toFixed(2)],
       ['Loss given default', v.lgd.toFixed(2)],
       ['Costs', v.c.toFixed(2) + '%']
-    ], 'After a ' + pct(v.p, 0) + ' chance of losing ' + pct(v.lgd, 0) + ', and ' + v.c + '% in costs, the ' + v.y + '% headline is ' + net.toFixed(2) + '%.', null, graph);
+    ], 'After a ' + pct(v.p, 0) + ' chance of losing ' + pct(v.lgd, 0) + ', and ' + v.c + '% in costs, the ' + v.y + '% headline is ' + pctPts(net) + '.', null, graph);
   },
   income: v => {
     if (!(v.cap > 0)) return say('Capital must be above zero.');
@@ -1702,17 +1706,17 @@ const RUN = {
         { pts: samples(x0, x1, 40, false).map(rate => [rate, hedgeAt(rate)]), color: '#0a5c48', width: 2, dash: '5 4' },
         { pts: samples(x0, x1, 40, false).map(rate => [rate, onAt(rate)]), color: '#12a888', width: 2.5, fill: '#12a888', base: 0 }
       ],
-      dots: [{ x: v.rate, y: on, label: 'Now ' + on.toFixed(2) + '%' }],
+      dots: [{ x: v.rate, y: on, label: 'Now ' + pctPts(on) }],
       legend: [
         { color: '#0a5c48', name: 'APR on the hedge' },
         { color: '#12a888', name: 'APR on the money you post' }
       ]
     });
-    return panel(on.toFixed(2) + '% on your money', [
-      ['Funding APR on the hedge', apr.toFixed(2) + '%'],
+    return panel(pctPts(on) + ' on your money', [
+      ['Funding APR on the hedge', pctPts(apr)],
       ['Capital per $1 hedged', money(capital)],
       ['Short liquidates near', '+' + (100 / v.shortlev).toFixed(0) + '%']
-    ], 'Funding of ' + v.rate + '% every 8 hours is ' + apr.toFixed(2) + '% a year on the hedge, and about ' + on.toFixed(2) + '% on the money you actually post. Keep a buffer above a ' + (100 / v.shortlev).toFixed(0) + '% move.', null, graph);
+    ], 'Funding of ' + v.rate + '% every 8 hours is ' + pctPts(apr) + ' a year on the hedge, and about ' + pctPts(on) + ' on the money you actually post. Keep a buffer above a ' + (100 / v.shortlev).toFixed(0) + '% move.', null, graph);
   },
   supply: v => {
     if (v.util < 0 || v.util > 1 || v.reserve < 0 || v.reserve > 1) return say('Utilisation and reserve factor must be between 0 and 1.');
@@ -1722,18 +1726,18 @@ const RUN = {
     const graph = waterfall({
       yunit: '%',
       steps: [
-        { name: 'Borrow rate', delta: v.bapy, label: v.bapy.toFixed(2) + '%' },
-        { name: 'Idle', delta: -idle, label: '−' + idle.toFixed(2) + '%' },
-        { name: 'Reserve', delta: -kept, label: '−' + kept.toFixed(2) + '%' },
-        { name: 'Lenders', total: s, label: s.toFixed(2) + '%' }
+        { name: 'Borrow rate', delta: v.bapy, label: pctPts(v.bapy) },
+        { name: 'Idle', delta: -idle, label: pctPts(-idle) },
+        { name: 'Reserve', delta: -kept, label: pctPts(-kept) },
+        { name: 'Lenders', total: s, label: pctPts(s) }
       ]
     });
-    return panel(s.toFixed(2) + '% to lenders', [
+    return panel(pctPts(s) + ' to lenders', [
       ['Borrow APY', v.bapy + '%'],
       ['Utilisation', v.util.toFixed(2)],
       ['Reserve factor', v.reserve.toFixed(2)],
       ['Kept by the protocol', (v.bapy * v.util * v.reserve).toFixed(2) + '%']
-    ], 'Lenders receive ' + s.toFixed(2) + '%: the ' + v.bapy + '% borrow rate times ' + v.util.toFixed(2) + ' utilisation, after a ' + v.reserve.toFixed(2) + ' reserve.', null, graph);
+    ], 'Lenders receive ' + pctPts(s) + ': the ' + v.bapy + '% borrow rate times ' + v.util.toFixed(2) + ' utilisation, after a ' + v.reserve.toFixed(2) + ' reserve.', null, graph);
   },
   apy: v => {
     if (!(v.n > 0)) return say('Compounds per year must be above zero.');
@@ -1769,9 +1773,14 @@ const RUN = {
       x0: x0, x1: x1, y0: ySpan[0], y1: ySpan[1], log: true,
       xticks: [1, 12, 52, 365].filter(t => t >= x0 && t <= x1),
       yunit: '%',
-      hlines: [{ y: cont, label: 'Continuous ' + cont.toFixed(2) + '%', color: '#3e4c59' }],
+      hlines: [{ y: cont, label: 'Continuous ' + pctPts(cont), color: '#3e4c59' }],
       series: series,
-      dots: [{ x: v.n, y: v.pos > 0 && v.gas > 0 ? netAt(v.n) : grossAt(v.n), label: 'Now ' + (v.pos > 0 && v.gas > 0 ? netAt(v.n) : apy * 100).toFixed(2) + '%' }],
+      dots: v.pos > 0 && v.gas > 0
+        ? [
+            { x: v.n, y: grossAt(v.n), label: 'Before gas ' + pctPts(grossAt(v.n)) },
+            { x: v.n, y: netAt(v.n), label: 'After gas ' + pctPts(netAt(v.n)) }
+          ]
+        : [{ x: v.n, y: grossAt(v.n), label: 'Now ' + pctPts(apy * 100) }],
       legend: legend
     });
     return panel(pct(apy) + ' before gas', bits, spoken, heavy ? { tone: 'warn', label: 'Compound less often' } : null, graph);
@@ -1836,12 +1845,12 @@ const RUN = {
       dots: [{ x: v.spot, y: payAt(v.spot), label: 'Spot ' + (v.premium >= 0 ? '+' : '') + v.premium.toFixed(2) + '%' }],
       legend: [{ color: '#07111c', name: 'Gain this period if price expires here' }, { color: '#9aafc0', name: 'Upside stays capped past the strike' }]
     });
-    return panel(ann.toFixed(1) + '% a year if it repeats', [
+    return panel(pctPts(ann, 1) + ' a year if it repeats', [
       ['Premium this period', v.premium + '%'],
-      ['Max gain this period', (v.premium + cap * 100).toFixed(2) + '%'],
+      ['Max gain this period', pctPts(v.premium + cap * 100)],
       ['Upside capped at', money(v.strike)],
       ['Break-even price', money(be)]
-    ], 'A ' + v.premium + '% premium every ' + v.days + ' days is ' + ann.toFixed(1) + '% a year if it repeats. The most you can make this period is ' + (v.premium + cap * 100).toFixed(2) + '%, and the break-even is ' + money(be) + '. Below that you lose like a holder, minus the premium.', null, graph);
+    ], 'A ' + v.premium + '% premium every ' + v.days + ' days is ' + pctPts(ann, 1) + ' a year if it repeats. The most you can make this period is ' + pctPts(v.premium + cap * 100) + ', and the break-even is ' + money(be) + '. Below that you lose like a holder, minus the premium.', null, graph);
   },
   bank: v => {
     if (!(v.coll > 0)) return say('Collateral must be above zero.');
@@ -1960,11 +1969,11 @@ const RUN = {
       ['Period 2', v.p2 + '%'],
       ['Period 3', v.p3 + '%']
     ];
-    let spoken = 'The three periods compound to ' + tw.toFixed(2) + '%.';
+    let spoken = 'The three periods compound to ' + pctPts(tw) + '.';
     if (v.start > 0 && v.end != null && v.deposits != null && !Number.isNaN(v.end) && !Number.isNaN(v.deposits)) {
       const simple = (v.end - v.start - v.deposits) / (v.start + v.deposits) * 100;
-      bits.push(['Simple gain on capital in', simple.toFixed(2) + '%']);
-      spoken += ' A simple gain on the money put in is ' + simple.toFixed(2) + '%, because deposits change that figure. Time-weighted return follows the periods.';
+      bits.push(['Simple gain on capital in', pctPts(simple)]);
+      spoken += ' A simple gain on the money put in is ' + pctPts(simple) + ', because deposits change that figure. Time-weighted return follows the periods.';
     }
     const c1 = v.p1;
     const c2 = ((1 + v.p1 / 100) * (1 + v.p2 / 100) - 1) * 100;
@@ -1976,13 +1985,13 @@ const RUN = {
         { name: 'Period 3', value: v.p3 }
       ],
       line: [c1, c2, tw],
-      lineLabel: 'Compounded ' + tw.toFixed(2) + '%',
+      lineLabel: 'Compounded ' + pctPts(tw),
       rule: (v.start > 0 && v.end != null && v.deposits != null && !Number.isNaN(v.end) && !Number.isNaN(v.deposits))
         ? { value: (v.end - v.start - v.deposits) / (v.start + v.deposits) * 100, label: 'Simple gain' }
         : null,
       legend: [{ color: '#12a888', name: 'Each period' }, { color: '#07111c', name: 'Compounded so far' }]
     });
-    return panel(tw.toFixed(2) + '% time-weighted', bits, spoken, null, graph);
+    return panel(pctPts(tw) + ' time-weighted', bits, spoken, null, graph);
   },
   cdp: v => {
     if (!(v.qty > 0 && v.price > 0 && v.mint > 0 && v.minr > 0)) return say('Quantity, price, mint amount, and minimum ratio must be above zero.');
