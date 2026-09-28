@@ -111,76 +111,98 @@ def main():
     check("health formula locked", tools["E9"].protection.locked is True)
     check("tools have no password", "password=" not in _protection_xml())
 
+    check("Start opens on W1", start["A6"].value == "W1 Records")
+    check("Start names the stage", start["B5"].value == "Stage")
+    check("W6 debt includes margin", "B10+B11" in str(wb["W6 Balance sheet"]["B21"].value))
+    check("W16 equity change", wb["W16 Annual review"]["A7"].value == "Change in equity")
+    check("W12 illustration", "B11*B12/100" in str(wb["W12 Stress test"]["B13"].value))
+    check("W1 fee total", wb["W1 Records"]["B47"].value == "=SUM(F5:F44)")
+    jumps = [wb["Tools"].cell(r, 7).value for r in range(5, 25)]
+    check("Tools jump list", len(jumps) == 20 and jumps[0] == "Health factor and liquidation price", str(len(jumps)))
+
     print("evaluating formulas")
     xl = formulas.ExcelModel().loads(str(PATH)).finish()
     sol = xl.calculate()
 
-    def got(sheet, addr):
+    def tool(title, label):
+        ws = wb["Tools"]
+        start_row = next(r for r in range(1, ws.max_row + 1) if str(ws.cell(r, 1).value or "").startswith(title))
+        for r in range(start_row + 1, ws.max_row + 1):
+            marker = ws.cell(r, 1).value
+            if isinstance(marker, str) and "·" in marker:
+                break
+            if ws.cell(r, 4).value == label:
+                return cell_value(sol, "TOOLS", ws.cell(r, 5).coordinate)
+        raise AssertionError(f"missing {title} / {label}")
+
+    def sheet_cell(sheet, addr):
         return cell_value(sol, sheet, addr)
 
     pairs = [
-        ("collateral", got("TOOLS", "E7"), 30000),
-        ("LTV", got("TOOLS", "E8"), 0.40),
-        ("health factor", got("TOOLS", "E9"), 2.00),
-        ("liquidation price", got("TOOLS", "E10"), 1500),
-        ("max debt HF 2", got("TOOLS", "E11"), 12000),
-        ("loop leverage", got("TOOLS", "E14"), 2.533),
-        ("loop net", got("TOOLS", "E15"), 5.033),
-        ("loop breakeven", got("TOOLS", "E16"), 5.783),
-        ("IL", got("TOOLS", "E20"), -5.719),
-        ("fee APR to match", got("TOOLS", "E24"), 23.194),
-        ("fees minus IL", got("TOOLS", "E26"), -0.788),
-        ("CL efficiency", got("TOOLS", "E30"), 8.341),
-        ("LVR", got("TOOLS", "E33"), 8.00),
-        ("fees minus LVR", got("TOOLS", "E34"), 4.00),
-        ("supply APY", got("TOOLS", "E37"), 3.60),
-        ("APY before gas", got("TOOLS", "E42"), 12.747),
-        ("APY after gas", got("TOOLS", "E44"), 5.447),
-        ("airdrop", got("TOOLS", "E48"), 250),
-        ("PT fixed", got("TOOLS", "E53"), 0.1096),
-        ("basis", got("TOOLS", "E57"), 0.05),
-        ("basis annualised", got("TOOLS", "E58"), 0.2028),
-        ("covered call annualised", got("TOOLS", "E62"), 78.21),
-        ("covered call max gain", got("TOOLS", "E63"), 11.50),
-        ("covered call breakeven", got("TOOLS", "E64"), 2955),
-        ("expected loss", got("TOOLS", "E68"), 3.0),
-        ("risk-adjusted", got("TOOLS", "E69"), 8.50),
-        ("income", got("TOOLS", "E74"), 12500),
-        ("payout", got("TOOLS", "E75"), 8750),
-        ("monthly payout", got("TOOLS", "E76"), 729.17),
-        ("retained", got("TOOLS", "E77"), 3750),
-        ("equity", got("TOOLS", "E80"), 280000),
-        ("bank LTV", got("TOOLS", "E81"), 0.20),
-        ("bank HF", got("TOOLS", "E82"), 4.0),
-        ("runway", got("TOOLS", "E83"), 7.619),
-        ("perp long", got("TOOLS", "E90"), 2415),
-        ("perp move", got("TOOLS", "E91"), -0.195),
-        ("TWR", got("TOOLS", "E96"), 0.0498),
-        ("CDP max mint", got("TOOLS", "E103"), 20000),
-        ("CDP ratio", got("TOOLS", "E104"), 3.0),
-        ("CDP liq", got("TOOLS", "E105"), 1500),
-        ("carry APR", got("TOOLS", "E109"), 10.95),
-        ("carry on capital", got("TOOLS", "E110"), 7.30),
-        ("carry liquidation", got("TOOLS", "E111"), 0.50),
-        ("VaR", got("TOOLS", "E114"), 6045.55),
-        ("W4 score 20", got("W4 RISK REGISTER", "F5"), 20),
-        ("W4 score 15", got("W4 RISK REGISTER", "F6"), 15),
-        ("W6 equity", got("W6 BALANCE SHEET", "B20"), 280000),
-        ("W6 LTV", got("W6 BALANCE SHEET", "B21"), 0.20),
-        ("W6 HF", got("W6 BALANCE SHEET", "B22"), 4.0),
-        ("W6 runway", got("W6 BALANCE SHEET", "B24"), 7.619),
-        ("W11 income", got("W11 INCOME", "G17"), 23300),
-        ("W11 blended", got("W11 INCOME", "F18"), 4.66),
-        ("W11 payout", got("W11 INCOME", "B21"), 16310),
-        ("W11 month", got("W11 INCOME", "B22"), 1359.17),
-        ("W11 retained", got("W11 INCOME", "B23"), 6990),
+        ("collateral", tool("Health factor", "Collateral value"), 30000),
+        ("LTV", tool("Health factor", "LTV"), 0.40),
+        ("health factor", tool("Health factor", "Health factor"), 2.00),
+        ("liquidation price", tool("Health factor", "Liquidation price"), 1500),
+        ("max debt HF 2", tool("Health factor", "Max debt for HF 2"), 12000),
+        ("loop leverage", tool("Leveraged loop", "Leverage"), 2.533),
+        ("loop net", tool("Leveraged loop", "Net APY on equity"), 5.033),
+        ("loop breakeven", tool("Leveraged loop", "Breakeven borrow APY"), 5.783),
+        ("IL", tool("Impermanent loss", "IL vs holding"), -5.719),
+        ("fee APR to match", tool("LP fee", "Fee APR to match holding"), 23.194),
+        ("fees minus IL", tool("LP fee", "Fees minus IL"), -0.788),
+        ("CL efficiency", tool("Concentrated liquidity", "Capital efficiency vs full range"), 8.341),
+        ("LVR", tool("Loss versus rebalancing", "LVR per year"), 8.00),
+        ("fees minus LVR", tool("Loss versus rebalancing", "Fees minus LVR"), 4.00),
+        ("supply APY", tool("Lending supply", "Supply APY"), 3.60),
+        ("APY before gas", tool("APR, APY", "APY before gas"), 12.747),
+        ("APY after gas", tool("APR, APY", "APY after gas"), 5.447),
+        ("airdrop", tool("Airdrop", "Expected value"), 250),
+        ("PT fixed", tool("Principal token", "Fixed APY if held"), 0.1096),
+        ("basis", tool("Cash-and-carry", "Basis"), 0.05),
+        ("basis annualised", tool("Cash-and-carry", "Annualised, simple"), 0.2028),
+        ("covered call annualised", tool("Covered call", "Annualised if repeated"), 78.21),
+        ("covered call max gain", tool("Covered call", "Max gain this period"), 11.50),
+        ("covered call breakeven", tool("Covered call", "Break-even price"), 2955),
+        ("expected loss", tool("Risk-adjusted", "Expected loss"), 3.0),
+        ("risk-adjusted", tool("Risk-adjusted", "Risk-adjusted result"), 8.50),
+        ("income", tool("Income and payout", "Expected income per year"), 12500),
+        ("payout", tool("Income and payout", "Payout per year"), 8750),
+        ("monthly payout", tool("Income and payout", "Payout per month"), 729.17),
+        ("retained", tool("Income and payout", "Retained as a buffer"), 3750),
+        ("equity", tool("Balance sheet check", "Equity"), 280000),
+        ("bank LTV", tool("Balance sheet check", "LTV"), 0.20),
+        ("bank HF", tool("Balance sheet check", "Health factor"), 4.0),
+        ("runway", tool("Balance sheet check", "Reserve runway (months)"), 7.619),
+        ("perp long", tool("Perp liquidation", "Liquidation price"), 2415),
+        ("perp move", tool("Perp liquidation", "Move to liquidation"), -0.195),
+        ("TWR", tool("Time-weighted", "Time-weighted return"), 0.0498),
+        ("CDP max mint", tool("CDP mint", "Maximum mint"), 20000),
+        ("CDP ratio", tool("CDP mint", "Collateral ratio"), 3.0),
+        ("CDP liq", tool("CDP mint", "Liquidation price"), 1500),
+        ("carry APR", tool("Funding carry", "APR on the hedged size"), 10.95),
+        ("carry on capital", tool("Funding carry", "Return on total capital"), 7.30),
+        ("carry liquidation", tool("Funding carry", "Short liquidates near"), 0.50),
+        ("VaR", tool("One-day value", "One-day VaR"), 6045.55),
+        ("W4 score 20", sheet_cell("W4 RISK REGISTER", "F5"), 20),
+        ("W4 score 15", sheet_cell("W4 RISK REGISTER", "F6"), 15),
+        ("W6 equity", sheet_cell("W6 BALANCE SHEET", "B20"), 280000),
+        ("W6 LTV", sheet_cell("W6 BALANCE SHEET", "B21"), 0.20),
+        ("W6 HF", sheet_cell("W6 BALANCE SHEET", "B22"), 4.0),
+        ("W6 runway", sheet_cell("W6 BALANCE SHEET", "B24"), 7.619),
+        ("W11 income", sheet_cell("W11 INCOME", "G17"), 23300),
+        ("W11 blended", sheet_cell("W11 INCOME", "F18"), 4.66),
+        ("W11 payout", sheet_cell("W11 INCOME", "B21"), 16310),
+        ("W11 month", sheet_cell("W11 INCOME", "B22"), 1359.17),
+        ("W11 retained", sheet_cell("W11 INCOME", "B23"), 6990),
     ]
     for name, actual, want in pairs:
         check(name, close(actual, want), f"got {actual} want {want}")
 
-    check("bank policy", got("TOOLS", "E84") == "Yes" and got("TOOLS", "E86") == "Yes")
-    check("W8 reads W6", got("W8 CREDIT POLICY", "B15") == "Yes" and got("W8 CREDIT POLICY", "B16") == "Yes")
-    check("empty portfolio check stays blank", got("W5 PORTFOLIO", "B20") in ("", None))
+    check("health floor text", tool("Health factor", "Check against 1.5") == "At or above 1.5")
+    check("loop spread text", "spread" in str(tool("Leveraged loop", "What the leverage did")).lower())
+    check("bank policy", tool("Balance sheet check", "LTV within policy") == "Yes" and tool("Balance sheet check", "Reserve covers 6 months") == "Yes")
+    check("W8 reads W6", sheet_cell("W8 CREDIT POLICY", "B15") == "Yes" and sheet_cell("W8 CREDIT POLICY", "B16") == "Yes")
+    check("empty portfolio check stays blank", sheet_cell("W5 PORTFOLIO", "B20") in ("", None))
 
     # Short perp uses the same formula with side -1. The sheet's example is the long.
     short = 3000 * (1 - (-1) * (1 / 5 - 0.5 / 100))

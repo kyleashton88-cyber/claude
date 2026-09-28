@@ -129,11 +129,29 @@ def widths(ws, pairs):
         ws.column_dimensions[letter].width = size
 
 
+_RATIO = {}
+
+
+def ratio_rule(ws):
+    dv = _RATIO.get(id(ws))
+    if dv is None:
+        dv = DataValidation(
+            type="decimal", operator="between", formula1="0", formula2="1", allow_blank=True
+        )
+        dv.error = "Enter a number from 0 to 1. 0.80 means 80%."
+        dv.errorTitle = "Use 0 to 1"
+        ws.add_data_validation(dv)
+        _RATIO[id(ws)] = dv
+    return dv
+
+
 def input_box(cell, value=None, fmt=None, hint=None):
     apply(cell, value, bg=INPUT, locked=False, fmt=fmt, align="right")
     cell.border = THIN
     if hint:
         cell.comment = Comment(hint, "On-Chain Operator Program", width=240, height=60)
+        if "0 to 1" in hint.lower():
+            ratio_rule(cell.parent).add(cell.coordinate)
     return cell
 
 
@@ -182,8 +200,12 @@ def journal(wb, name, title, lesson, note, headers, rows=24, dropdowns=None, wid
     return ws
 
 
+CATALOG = []
+
+
 def add_tool(ws, row, title, lesson, inputs, outputs):
     """inputs: (label, value, format, hint). outputs: (label, formula, format)."""
+    CATALOG.append((title, row))
     ws.merge_cells(start_row=row, start_column=1, end_row=row, end_column=5)
     apply(ws.cell(row, 1), f"{title}   ·   {lesson}", bold=True, size=13, color=WHITE, bg=TEAL)
     ws.row_dimensions[row].height = 22
@@ -215,40 +237,41 @@ def build_start(wb):
         4,
     )
     ws.row_dimensions[3].height = 48
-    headers = ["Sheet", "What you do with it", "Lesson"]
+    headers = ["Sheet", "Stage", "Lesson", "When you open it"]
     paint_header(ws, 5, headers)
     rows = [
-        ("Tools", "Change a yellow number and read the green answer. Same formulas as the course calculators.", "Lessons 2–14"),
-        ("W1 Records", "Log every buy, sell, transfer, swap, fee, and income line.", "0.3"),
-        ("W2 Journal", "One row per position: thesis, kill rules, and the weekly result.", "8.4"),
-        ("W3 Due diligence", "Walk a protocol through the six checks before you use it.", "Module 6"),
-        ("W4 Risk register", "Score likelihood times impact. A score of 20 or more is a don't-hold.", "8.2"),
-        ("W5 Portfolio", "Set bucket targets. The sheet adds them up and flags a total that is not 100%.", "8.1"),
-        ("W6 Balance sheet", "Enter assets and liabilities. Equity, LTV, health factor, and runway calculate.", "12.1"),
-        ("W7 Custody", "Write the policy: vault, operating wallet, hot float, and a recovery test. No secrets.", "12.2"),
-        ("W8 Credit policy", "Set the LTV cap and the health-factor floor, then check them against W6.", "12.3"),
-        ("W9 Liquidity", "Ladder cash by how fast you can reach it, and see the gap to each target.", "12.4"),
-        ("W10 Lending", "Record each market and its assumed loss. Expected loss calculates.", "12.5"),
-        ("W11 Income", "List positions. The sheet blends the risk-adjusted yield and the payout.", "Module 13"),
-        ("W12 Stress test", "Five scenarios are already named. You fill the loss and the fix.", "11.4"),
-        ("W13 Incident", "Official channel, containment, and who you call. Roles, not keys.", "11.5"),
-        ("W14 Alerts", "Threshold, tool, and the action you will take.", "14.1"),
-        ("W15 Automation", "What each bot is allowed to do, the cap, and how you revoke it.", "14.2"),
-        ("W16 Annual review", "Start and end equity, income against the plan, and whether the drill happened.", "13.5"),
-        ("W17 Letter", "Instructions for an executor. Store it apart from any key. No seeds.", "12.6"),
+        ("W1 Records", "0 · Zero", "0.3", "From the first action. One line each, and you keep the sheet."),
+        ("W3 Due diligence", "3 · Analyst", "Module 6", "Before you use a protocol. Six checks, then a verdict."),
+        ("W5 Portfolio", "4 · Strategist", "8.1", "When you set the buckets. Targets should add to 100%."),
+        ("W4 Risk register", "4 · Strategist", "8.2", "When you score a risk. 20 or higher: do not hold it."),
+        ("W2 Journal", "4 · Strategist", "8.4", "When a position is open. Thesis, kill rules, weekly result."),
+        ("W12 Stress test", "4 · Strategist", "11.4", "Before you size the book up. Five named scenarios."),
+        ("W13 Incident", "4 · Strategist", "11.5", "Before you need it. Channels and roles. No keys."),
+        ("W6 Balance sheet", "5 · Operator", "12.1", "When you build the bank. Equity, LTV, health factor, runway."),
+        ("W7 Custody", "5 · Operator", "12.2", "With the bank. Vault, operating wallet, hot float. No secrets."),
+        ("W8 Credit policy", "5 · Operator", "12.3", "With the bank. The checks read the balance sheet."),
+        ("W9 Liquidity", "5 · Operator", "12.4", "With the bank. Cash by how fast you can reach it."),
+        ("W10 Lending", "5 · Operator", "12.5", "With the bank. Your assumed loss on each market."),
+        ("W17 Letter", "5 · Operator", "12.6", "With the bank. Store it apart from any key."),
+        ("W11 Income", "5 · Operator", "Module 13", "When you set a payout from expected income, not the headline."),
+        ("W16 Annual review", "5 · Operator", "13.5", "Once a year. Equity, income, and whether the drill happened."),
+        ("W14 Alerts", "5 · Operator", "14.1", "When you automate watching. A threshold and an action."),
+        ("W15 Automation", "5 · Operator", "14.2", "When a bot can move funds. Write the cap and how you revoke it."),
+        ("Tools", "Lessons 2–14", "Calculators", "Any time a lesson has a number. Yellow in, green answer."),
     ]
-    for i, (sheet, what, lesson) in enumerate(rows):
+    for i, (sheet, stage, lesson, when) in enumerate(rows):
         r = 6 + i
         link = ws.cell(r, 1, sheet)
         apply(link, bold=True, color=TEAL, locked=True)
-        link.hyperlink = Hyperlink(ref=f"A{r}", location=f"'{sheet}'!A1", tooltip=what)
+        link.hyperlink = Hyperlink(ref=f"A{r}", location=f"'{sheet}'!A1", tooltip=when)
         link.font = font(11, True, TEAL)
-        apply(ws.cell(r, 2), what, locked=True, wrap=True)
+        apply(ws.cell(r, 2), stage, locked=True)
         apply(ws.cell(r, 3), lesson, locked=True)
-        for c in range(1, 4):
+        apply(ws.cell(r, 4), when, locked=True, wrap=True)
+        for c in range(1, 5):
             ws.cell(r, c).border = THIN
             ws.cell(r, c).fill = fill(WHITE if i % 2 == 0 else PAPER)
-        ws.row_dimensions[r].height = 28
+        ws.row_dimensions[r].height = 22
     apply(ws.cell(26, 1), "How to open this file", bold=True, size=14, color=INK)
     notes = [
         "Excel, LibreOffice Calc, and Apple Numbers open the file directly.",
@@ -261,10 +284,10 @@ def build_start(wb):
     ]
     for i, text in enumerate(notes):
         apply(ws.cell(27 + i, 1), text, locked=True, wrap=True)
-        ws.merge_cells(start_row=27 + i, start_column=1, end_row=27 + i, end_column=3)
+        ws.merge_cells(start_row=27 + i, start_column=1, end_row=27 + i, end_column=4)
         ws.row_dimensions[27 + i].height = 20
-    ws.auto_filter.ref = "A5:C23"
-    widths(ws, {"A": 28, "B": 88, "C": 18, "D": 18})
+    ws.auto_filter.ref = "A5:D23"
+    widths(ws, {"A": 24, "B": 18, "C": 14, "D": 78})
     ws.freeze_panes = "A6"
     ws.page_setup.orientation = "landscape"
     ws.print_title_rows = "1:5"
@@ -273,6 +296,7 @@ def build_start(wb):
 
 
 def build_tools(wb):
+    CATALOG.clear()
     ws = wb.create_sheet("Tools", 1)
     banner(
         ws,
@@ -296,7 +320,7 @@ def build_tools(wb):
     r = add_tool(ws, r, "Health factor and liquidation price", "Lesson 3.2", [
         ("Collateral quantity", 10, "0.00", "How many units of collateral."),
         ("Collateral price", 3000, '"$"#,##0.00', "Price per unit."),
-        ("Liquidation threshold (0 to 1)", 0.8, "0.00", "The LTV at which liquidation can start. 0.80 means 80%."),
+        ("Liquidation threshold (0 to 1)", 0.8, "0.00", "Use 0 to 1. 0.80 means 80%."),
         ("Debt", 12000, '"$"#,##0.00', "Amount borrowed."),
     ], [
         ("Collateral value", f"=B{b}*B{b+1}", '"$"#,##0.00'),
@@ -304,12 +328,13 @@ def build_tools(wb):
         ("Health factor", f'=IF(B{b+3}=0,"",B{b}*B{b+1}*B{b+2}/B{b+3})', "0.00"),
         ("Liquidation price", f'=IF(B{b}*B{b+2}=0,"",B{b+3}/(B{b}*B{b+2}))', '"$"#,##0.00'),
         ("Max debt for HF 2", f'=IF(B{b+2}=0,"",B{b}*B{b+1}*B{b+2}/2)', '"$"#,##0.00'),
+        ("Check against 1.5", f'=IF(E{b+2}="","",IF(E{b+2}<1.5,"Below 1.5: repay or add collateral","At or above 1.5"))', None),
     ])
 
     # Loop. LTV 0.70, 3 loops, 3.5%, 2.5% -> 2.53x, net 5.03%, breakeven 5.78%.
     b = r + 1
     r = add_tool(ws, r, "Leveraged loop", "Lesson 3.4", [
-        ("Borrow LTV (0 to 1)", 0.7, "0.00", "Loan-to-value used on each loop."),
+        ("Borrow LTV (0 to 1)", 0.7, "0.00", "Use 0 to 1. Loan-to-value on each loop."),
         ("Loops", 3, "0", "How many times you borrow and deposit again."),
         ("Collateral APY", 3.5, '0.00"%"', "Yield on the collateral, in percentage points."),
         ("Borrow APY", 2.5, '0.00"%"', "Cost of the debt, in percentage points."),
@@ -317,6 +342,7 @@ def build_tools(wb):
         ("Leverage", f'=IF(OR(B{b}<=0,B{b}>=1),"", (1-B{b}^(B{b+1}+1))/(1-B{b}))', '0.00"×"'),
         ("Net APY on equity", f'=IF(OR(B{b}<=0,B{b}>=1),"",B{b+2}*E{b}-B{b+3}*(E{b}-1))', '0.00"%"'),
         ("Breakeven borrow APY", f'=IF(OR(E{b}="",E{b}<=1),"",B{b+2}*E{b}/(E{b}-1))', '0.00"%"'),
+        ("What the leverage did", f'=IF(E{b+1}="","",IF(E{b+1}<=B{b+2},"Adds nothing: the borrow rate is too high","Adds a spread over the unlevered yield"))', None),
     ])
 
     # IL at 2x is -5.72%.
@@ -364,8 +390,8 @@ def build_tools(wb):
     b = r + 1
     r = add_tool(ws, r, "Lending supply APY", "Lesson 4.2", [
         ("Borrow APY", 5, '0.00"%"', "What borrowers pay."),
-        ("Utilisation (0 to 1)", 0.8, "0.00", "Share of deposits that is lent out."),
-        ("Reserve factor (0 to 1)", 0.1, "0.00", "Share of interest the protocol keeps."),
+        ("Utilisation (0 to 1)", 0.8, "0.00", "Use 0 to 1. Share of deposits that is lent out."),
+        ("Reserve factor (0 to 1)", 0.1, "0.00", "Use 0 to 1. Share of interest the protocol keeps."),
     ], [
         ("Supply APY", f"=B{b}*B{b+1}*(1-B{b+2})", '0.00"%"'),
     ])
@@ -386,7 +412,7 @@ def build_tools(wb):
     # Airdrop 0.3 * 1500 - 200 = 250
     b = r + 1
     r = add_tool(ws, r, "Airdrop expected value", "Lesson 4.6", [
-        ("Probability (0 to 1)", 0.3, "0.00", "Your estimate that the airdrop happens and you qualify."),
+        ("Probability (0 to 1)", 0.3, "0.00", "Use 0 to 1. Your estimate that it happens and you qualify."),
         ("Value if it happens", 1500, '"$"#,##0.00', "What you could sell it for, not the headline."),
         ("Costs", 200, '"$"#,##0.00', "Gas, bridges, and time you count as a cost."),
     ], [
@@ -430,8 +456,8 @@ def build_tools(wb):
     b = r + 1
     r = add_tool(ws, r, "Risk-adjusted yield", "Lesson 13.2", [
         ("Headline yield", 12, '0.00"%"', "The advertised rate, in percentage points."),
-        ("Loss probability (0 to 1)", 0.05, "0.00", "Your assumed chance of a loss event this year."),
-        ("Loss given default (0 to 1)", 0.6, "0.00", "Share of the position lost if that event happens."),
+        ("Loss probability (0 to 1)", 0.05, "0.00", "Use 0 to 1. Your assumed chance of a loss event this year."),
+        ("Loss given default (0 to 1)", 0.6, "0.00", "Use 0 to 1. Share of the position lost if that event happens."),
         ("Other costs", 0.5, '0.00"%"', "Fees and gas, in percentage points."),
     ], [
         ("Expected loss", f"=B{b+1}*B{b+2}*100", '0.00"%"'),
@@ -443,7 +469,7 @@ def build_tools(wb):
     r = add_tool(ws, r, "Income and payout", "Module 13", [
         ("Position amount", 250000, '"$"#,##0.00', "Capital in the position."),
         ("Risk-adjusted yield", 5, '0.00"%"', "Yield after the expected-loss haircut."),
-        ("Payout ratio (0 to 1)", 0.7, "0.00", "Share of expected income you pay out."),
+        ("Payout ratio (0 to 1)", 0.7, "0.00", "Use 0 to 1. Share of expected income you pay out."),
     ], [
         ("Expected income per year", f"=B{b}*B{b+1}/100", '"$"#,##0.00'),
         ("Payout per year", f"=E{b}*B{b+2}", '"$"#,##0.00'),
@@ -460,8 +486,8 @@ def build_tools(wb):
         ("Debt", 60000, '"$"#,##0.00', "What you owe."),
         ("Borrow APY", 5, '0.00"%"', "Interest rate on the debt."),
         ("Monthly spending", 5000, '"$"#,##0.00', "Spending the reserve must also cover."),
-        ("Liquidation threshold (0 to 1)", 0.8, "0.00", "Threshold used for the health factor. 0.80 means 80%."),
-        ("Max LTV policy (0 to 1)", 0.3, "0.00", "The cap from the lesson. 0.30 means 30%."),
+        ("Liquidation threshold (0 to 1)", 0.8, "0.00", "Use 0 to 1. 0.80 means 80%."),
+        ("Max LTV policy (0 to 1)", 0.3, "0.00", "Use 0 to 1. 0.30 means 30%."),
     ], [
         ("Equity", f"=B{b}+B{b+1}+B{b+2}-B{b+3}", '"$"#,##0.00'),
         ("LTV", f'=IF(B{b}=0,"",B{b+3}/B{b})', "0.0%"),
@@ -539,6 +565,13 @@ def build_tools(wb):
     ws.page_setup.fitToHeight = 0
     ws.sheet_properties.pageSetUpPr.fitToPage = True
     ws.sheet_properties.tabColor = TEAL
+    apply(ws.cell(4, 7), "Jump to a calculator", bold=True, size=12, color=WHITE, bg=INK, align="left")
+    for i, (title, row) in enumerate(CATALOG):
+        cell = ws.cell(5 + i, 7, title)
+        apply(cell, bold=True, color=TEAL, locked=True)
+        cell.hyperlink = Hyperlink(ref=f"G{5 + i}", location=f"'Tools'!A{row}", tooltip=title)
+        cell.font = font(11, True, TEAL)
+    ws.column_dimensions["G"].width = 38
     protect(ws)
     return ws
 
@@ -650,7 +683,8 @@ def build_w5(wb):
 def build_w6(wb):
     ws = wb.create_sheet("W6 Balance sheet")
     banner(ws, "W6 · Balance sheet", "Lesson 12.1",
-           "The numbers already here are the lesson example: $300,000 collateral, $60,000 debt, $40,000 reserve. Replace them with yours. " + SAFETY, 2)
+           "The numbers already here are the lesson example: $300,000 collateral, $60,000 debt, $40,000 reserve. "
+           "LTV, the health factor, and interest use loans plus margin. Yield positions sit in equity only. " + SAFETY, 2)
     rows = [
         (5, "Collateral", 300000, '"$"#,##0.00', "Lesson example. Market value of collateral."),
         (6, "Yield positions", 0, '"$"#,##0.00', None),
@@ -659,7 +693,7 @@ def build_w6(wb):
         (10, "Loans", 60000, '"$"#,##0.00', "Lesson example."),
         (11, "Margin", 0, '"$"#,##0.00', None),
         (12, "Other liabilities", 0, '"$"#,##0.00', None),
-        (14, "Liquidation threshold (0 to 1)", 0.8, "0.00", "0.80 means 80%."),
+        (14, "Liquidation threshold (0 to 1)", 0.8, "0.00", "Use 0 to 1. 0.80 means 80%."),
         (15, "Borrow APY", 5, '0.00"%"', "5 means 5%."),
         (16, "Monthly spending", 5000, '"$"#,##0.00', "Spending the reserve must also cover."),
     ]
@@ -672,12 +706,12 @@ def build_w6(wb):
     calc_box(ws.cell(19, 2), "=B10+B11+B12", '"$"#,##0.00')
     label(ws.cell(20, 1), "Equity", bold=True)
     calc_box(ws.cell(20, 2), "=B18-B19", '"$"#,##0.00')
-    label(ws.cell(21, 1), "LTV (loans ÷ collateral)", bold=True)
-    calc_box(ws.cell(21, 2), '=IF(B5=0,"",B10/B5)', "0.0%")
+    label(ws.cell(21, 1), "LTV (loans + margin ÷ collateral)", bold=True)
+    calc_box(ws.cell(21, 2), '=IF(B5=0,"",(B10+B11)/B5)', "0.0%")
     label(ws.cell(22, 1), "Health factor on collateral", bold=True)
-    calc_box(ws.cell(22, 2), '=IF(OR(B10=0,B14=""),"",B5*B14/B10)', "0.00")
-    label(ws.cell(23, 1), "Monthly interest", bold=True)
-    calc_box(ws.cell(23, 2), '=IF(B15="","",B10*B15/100/12)', '"$"#,##0.00')
+    calc_box(ws.cell(22, 2), '=IF(OR((B10+B11)=0,B14=""),"",B5*B14/(B10+B11))', "0.00")
+    label(ws.cell(23, 1), "Monthly interest on loans and margin", bold=True)
+    calc_box(ws.cell(23, 2), '=IF(B15="","",(B10+B11)*B15/100/12)', '"$"#,##0.00')
     label(ws.cell(24, 1), "Reserve runway (months)", bold=True)
     calc_box(ws.cell(24, 2), '=IF((B16+B23)=0,"",B7/(B16+B23))', "0.0")
     ws.row_dimensions[3].height = 48
@@ -685,7 +719,13 @@ def build_w6(wb):
         "B22",
         FormulaRule(formula=["AND(ISNUMBER(B22),B22<1.5)"], fill=fill("F4D6CC")),
     )
-    widths(ws, {"A": 42, "B": 22})
+    apply(
+        ws.cell(26, 1),
+        "Yield positions are inside equity. They are not treated as collateral on this sheet.",
+        color=MUTED, italic=True, locked=True,
+    )
+    ws.merge_cells("A26:B26")
+    widths(ws, {"A": 48, "B": 22})
     ws.freeze_panes = "A5"
     ws.sheet_properties.tabColor = "14202B"
     protect(ws)
@@ -723,7 +763,7 @@ def build_w8(wb):
     banner(ws, "W8 · Credit policy", "Lesson 12.3",
            "The checks read the balance sheet on W6. Fill that sheet first. " + SAFETY, 2)
     fields = [
-        (5, "Max LTV (0 to 1)", 0.3, "0.00", "0.30 means 30%, the lesson cap. Compared with W6 LTV."),
+        (5, "Max LTV (0 to 1)", 0.3, "0.00", "Use 0 to 1. 0.30 means 30%, the lesson cap. Compared with W6 LTV."),
         (6, "Health-factor floor", 2, "0.00", "The lesson floor is 2."),
         (7, "Alert level 1", None, "0.00", None),
         (8, "Action at alert 1", None, None, None),
@@ -750,7 +790,7 @@ def build_w9(wb):
     ws = wb.create_sheet("W9 Liquidity")
     banner(ws, "W9 · Liquidity ladder", "Lesson 12.4",
            "Target and current are in months of obligations. The gap is target minus current. " + SAFETY, 6)
-    headers = ["Tier", "Access", "Holds", "Target (months)", "Current (months)", "Gap"]
+    headers = ["Tier", "Access", "Holds", "Target (months)", "Current (months)", "Gap (above 0 is short)"]
     paint_header(ws, 4, headers)
     preset = [("T0", "Seconds"), ("T1", "Hours"), ("T2", "Scheduled"), ("T3", "Days–weeks")]
     for i, (tier, access) in enumerate(preset):
@@ -763,10 +803,11 @@ def build_w9(wb):
         input_box(ws.cell(r, 4), None, "0.0")
         input_box(ws.cell(r, 5), None, "0.0")
         calc_box(ws.cell(r, 6), f'=IF(OR(D{r}="",E{r}=""),"",D{r}-E{r})', "0.0")
+    ws.conditional_formatting.add("F5:F8", CellIsRule(operator="greaterThan", formula=["0"], fill=fill(WARN)))
     label(ws.cell(10, 1), "Refill rule", bold=True)
     input_box(ws.cell(10, 3))
     ws.merge_cells("C10:F10")
-    widths(ws, {"A": 14, "B": 18, "C": 36, "D": 20, "E": 20, "F": 14})
+    widths(ws, {"A": 14, "B": 18, "C": 36, "D": 20, "E": 20, "F": 24})
     ws.freeze_panes = "A5"
     ws.sheet_properties.tabColor = "14202B"
     protect(ws)
@@ -786,6 +827,7 @@ def build_w10(wb):
         ws.cell(r, 7).number_format = "0.00"
         ws.cell(r, 9).number_format = '"$"#,##0'
         calc_box(ws.cell(r, 8), f'=IF(OR(F{r}="",G{r}=""),"",F{r}*G{r})', "0.0%")
+    ratio_rule(ws).add("F5:G16")
     protect(ws)
 
 
@@ -824,7 +866,8 @@ def build_w11(wb):
     label(ws.cell(18, 1), "Blended risk-adjusted yield", bold=True)
     calc_box(ws.cell(18, 6), '=IF(B16=0,"",G17/B16*100)', '0.00"%"')
     label(ws.cell(20, 1), "Payout ratio (0 to 1)", bold=True)
-    input_box(ws.cell(20, 2), None, "0.00")
+    input_box(ws.cell(20, 2), None, "0.00", "Use 0 to 1. 0.70 means you pay out 70% of expected income.")
+    ratio_rule(ws).add("D5:E14")
     label(ws.cell(21, 1), "Payout per year", bold=True)
     calc_box(ws.cell(21, 2), '=IF(B20="","",G17*B20)', '"$"#,##0.00')
     label(ws.cell(22, 1), "Payout per month", bold=True)
@@ -856,7 +899,15 @@ def build_w12(wb):
     yn = DataValidation(type="list", formula1='"Yes,No"', allow_blank=True)
     yn.add("C5:E9")
     ws.add_data_validation(yn)
-    widths(ws, {"A": 32, "B": 16, "C": 16, "D": 16, "E": 16, "F": 42})
+    label(ws.cell(11, 1), "Portfolio value, for an illustration", bold=True)
+    input_box(ws.cell(11, 2), None, '"$"#,##0')
+    label(ws.cell(12, 1), "Shock, in percentage points", bold=True)
+    input_box(ws.cell(12, 2), None, '0.0"%"', "50 means a 50% move. An illustration, not a forecast.")
+    label(ws.cell(13, 1), "Illustrative dollar loss", bold=True)
+    calc_box(ws.cell(13, 2), '=IF(OR(B11="",B12=""),"",B11*B12/100)', '"$"#,##0')
+    apply(ws.cell(14, 1), "Put that dollar figure in the Loss column as a starting point, then write the fix.", color=MUTED, italic=True, locked=True)
+    ws.merge_cells("A14:F14")
+    widths(ws, {"A": 42, "B": 18, "C": 16, "D": 16, "E": 16, "F": 42})
     ws.freeze_panes = "A5"
     ws.sheet_properties.tabColor = "14202B"
     protect(ws)
@@ -868,32 +919,34 @@ def build_w16(wb):
     singles = [
         (5, "Equity at the start", '"$"#,##0.00'),
         (6, "Equity at the end", '"$"#,##0.00'),
-        (7, "LTV at the review", '0.0"%"'),
-        (8, "Runway at the review (months)", "0.0"),
-        (9, "Payout paid", '"$"#,##0.00'),
-        (10, "Payout the policy allowed", '"$"#,##0.00'),
+        (8, "LTV at the review", '0.0"%"'),
+        (9, "Runway at the review (months)", "0.0"),
+        (10, "Payout paid", '"$"#,##0.00'),
+        (11, "Payout the policy allowed", '"$"#,##0.00'),
     ]
     for row, text, fmt in singles:
         label(ws.cell(row, 1), text, bold=True)
         input_box(ws.cell(row, 2), None, fmt)
-    label(ws.cell(11, 1), "Payout versus policy", bold=True)
-    calc_box(ws.cell(11, 2), '=IF(OR(B9="",B10=""),"",B9-B10)', '"$"#,##0.00')
-    paint_header(ws, 13, ["Source", "Income expected", "Income realised", "Gap"])
-    blank_rows(ws, 14, 6, 4)
-    for r in range(14, 20):
+    label(ws.cell(7, 1), "Change in equity", bold=True)
+    calc_box(ws.cell(7, 2), '=IF(OR(B5="",B6=""),"",B6-B5)', '"$"#,##0.00')
+    label(ws.cell(12, 1), "Payout versus policy", bold=True)
+    calc_box(ws.cell(12, 2), '=IF(OR(B10="",B11=""),"",B10-B11)', '"$"#,##0.00')
+    paint_header(ws, 14, ["Source", "Income expected", "Income realised", "Gap"])
+    blank_rows(ws, 15, 6, 4)
+    for r in range(15, 21):
         ws.cell(r, 2).number_format = '"$"#,##0.00'
         ws.cell(r, 3).number_format = '"$"#,##0.00'
         calc_box(ws.cell(r, 4), f'=IF(OR(B{r}="",C{r}=""),"",C{r}-B{r})', '"$"#,##0.00')
-    label(ws.cell(21, 1), "Losses and near-misses", bold=True)
-    input_box(ws.cell(21, 2))
-    ws.merge_cells("B21:D21")
-    label(ws.cell(22, 1), "Updated loss assumptions", bold=True)
+    label(ws.cell(22, 1), "Losses and near-misses", bold=True)
     input_box(ws.cell(22, 2))
     ws.merge_cells("B22:D22")
-    label(ws.cell(23, 1), "Custody and succession drill done?", bold=True)
+    label(ws.cell(23, 1), "Updated loss assumptions", bold=True)
     input_box(ws.cell(23, 2))
+    ws.merge_cells("B23:D23")
+    label(ws.cell(24, 1), "Custody and succession drill done?", bold=True)
+    input_box(ws.cell(24, 2))
     dv = DataValidation(type="list", formula1='"Yes,No"', allow_blank=True)
-    dv.add("B23")
+    dv.add("B24")
     ws.add_data_validation(dv)
     widths(ws, {"A": 42, "B": 22, "C": 22, "D": 18})
     ws.freeze_panes = "A5"
@@ -943,10 +996,14 @@ def build():
         wide={"A": 14, "B": 14, "C": 14, "D": 14, "E": 14, "F": 12, "G": 16, "H": 28, "I": 28},
     )
     for r in range(5, 45):
-        w1.cell(r, 1).number_format = "YYYY-MM-DD"
+        w1.cell(r, 1).number_format = "yyyy-mm-dd"
         w1.cell(r, 4).number_format = "#,##0.00"
         w1.cell(r, 5).number_format = '"$"#,##0.00'
         w1.cell(r, 6).number_format = '"$"#,##0.00'
+    label(w1.cell(46, 1), "Lines with a date", bold=True)
+    calc_box(w1.cell(46, 2), "=COUNTA(A5:A44)", "0")
+    label(w1.cell(47, 1), "Fees recorded", bold=True)
+    calc_box(w1.cell(47, 2), "=SUM(F5:F44)", '"$"#,##0.00')
     journal(
         wb, "W2 Journal", "W2 · Position journal", "Lesson 8.4",
         "One row per position. Kill rules are numbers you will act on.",
