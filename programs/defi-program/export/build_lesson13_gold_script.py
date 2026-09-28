@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 """Gold-standard script for Lesson 1.3, Wallets, keys, hardware & multisig
-(about 11-14 minutes). Teaches the five words (private key, seed phrase,
-hardware wallet, multisig, smart wallet), compartmentalisation, and the
-3-wallet setup (vault / operator / burner), with animated flows and charts.
+(about 12-15 minutes). Replaces the pre-gold-pass-2 script from commit
+15ce21e, which predates the chart-variant/ticker/chart3d-line visual layer
+added in 1e2d691. Teaches the five words (private key, seed phrase, hardware
+wallet, multisig, smart wallets) as a glossary ticker, a flow3d recreation
+of the module's own three-wallets.png (Vault/Operator/Burner), a chart3d
+anchor on what's actually at risk per wallet, and the 2-of-3 multisig
+mechanism.
 
-Writes video-scripts/gold/lesson-01-3.json (the generator skips lessons with a
-gold script). Spoken text (vo) spells numbers for the voice; cap is the written
-caption, same sentence count as vo."""
+Writes video-scripts/gold/lesson-01-3.json (the generator skips lessons with
+a gold script). Every illustrative number is labelled as an example on
+screen and in the narration. Spoken text (vo) spells numbers and
+abbreviations for the voice; cap is the written caption, same sentences."""
 import json
 from pathlib import Path
 
@@ -21,112 +26,119 @@ def sc(type_, vo, cap=None, **k):
     S.append(d)
 
 
-def img(src, eyebrow, vo, cap=None, **k):
-    sc("image", vo, cap, src=src, eyebrow=eyebrow, wide=True, **k)
-
-
-D = "assets/diagrams/"
-
-# ---------------------------------------------------------------- intro
-sc("title", "Lesson one point three. Wallets, keys, hardware and multisig. By the end, you'll be able to set up a wallet structure where one mistake can't lose everything you own.",
-   "Lesson 1.3. Wallets, keys, hardware and multisig. By the end, you'll be able to set up a wallet structure where one mistake can't lose everything you own.",
-   chapter="Intro", eyebrow="Lesson 1.3", num="1.3", title="Wallets, keys, hardware & multisig", sub="One mistake shouldn't be able to lose everything.")
-sc("pillars", "Here's the plan. First, the five words: private key, seed phrase, hardware wallet, multisig and smart wallet. Second, compartmentalising: why one wallet for everything is the single biggest structural risk you can take. And third, the worked example this whole lesson builds to: the three-wallet setup, vault, operator and burner.",
-   chapter="Intro", title="What this lesson covers",
-   items=[{"icon": "key", "title": "Five words", "text": "Key, seed, hardware, multisig, smart wallet"}, {"icon": "grid", "title": "Compartmentalise", "text": "Separate wallets by job"},
-          {"icon": "layers", "title": "The 3-wallet setup", "text": "Vault, operator, burner"}])
+# ---------------------------------------------------------------- why it matters
+sc("title", "Lesson one point three. Wallets, keys, hardware and multisig. By the end, you'll be able to set up a wallet structure where one single mistake can't lose everything.",
+   chapter="Why it matters", eyebrow="Lesson 1.3", num="1.3", title="Wallets, keys, hardware & multisig", sub="One mistake shouldn't be able to lose everything.")
+sc("statement", "Here's the problem this lesson solves. Most beginners use one wallet for everything: savings, experiments, new apps, all in the same place. That means one bad approval, on one sketchy app, can reach every dollar you hold. This lesson replaces that single point of failure with structure, so that a mistake stays small, contained to exactly the wallet it happened in, instead of spreading to everything you own.",
+   "Here's the problem this lesson solves. Most beginners use one wallet for everything: savings, experiments, new apps, all in the same place. That means one bad approval, on one sketchy app, can reach every dollar you hold. This lesson replaces that single point of failure with structure, so that a mistake stays small, contained to exactly the wallet it happened in, instead of spreading to everything you own.",
+   chapter="Why it matters", kicker="Why it matters", lines=["One wallet for everything.", "One bad approval reaches all of it."], sub="This lesson makes a mistake stay small, and contained.")
+sc("pillars", "Here's the plan. First, the five words this lesson runs on. Second, compartmentalising, the three-wallet setup that limits any single mistake. Third, multisig, in depth, and what it actually protects against. And finally, your checklist and a quiz.",
+   chapter="Why it matters", title="What this lesson covers",
+   items=[{"icon": "book", "title": "Five words", "text": "Key, seed, hardware, multisig, smart wallet"}, {"icon": "layers", "title": "Compartmentalise", "text": "The 3-wallet setup"},
+          {"icon": "users", "title": "Multisig, in depth", "text": "What it actually protects against"}, {"icon": "check", "title": "Checklist and quiz", "text": "Confirm you've got it"}])
 
 # ---------------------------------------------------------------- five words
-sc("title", "Five words.", chapter="Five words", eyebrow="Five words", num="5", title="Five words, drawn out",
-   sub="Private key · Seed phrase · Hardware wallet · Multisig · Smart wallet")
-sc("statement", "Word one: private key. The authority to sign. Whoever has it controls the funds, completely, with no exceptions and no override. It isn't a password you can reset. It's closer to the only physical key to a vault that has no locksmith.",
-   chapter="Five words", kicker="Word one", lines=["The private key", "is the authority to sign."], sub="Whoever has it controls the funds. No resets, no exceptions.")
-sc("statement", "Word two: seed phrase. Twelve to twenty-four words that recreate your keys. Never type it into a website. Never photograph it. Never share it. No legitimate support team will ever ask for it, not once, not for any reason, ever.",
-   "Word two: seed phrase. 12 to 24 words that recreate your keys. Never type it into a website. Never photograph it. Never share it. No legitimate support team will ever ask for it, not once, not for any reason, ever.",
-   chapter="Five words", kicker="Word two", lines=["Never typed.", "Never photographed. Never shared."], sub="No legitimate support team will ever ask for it.")
-sc("statement", "Here's why the checklist says two separate physical places, and an honest caveat with it. A single copy protects against theft, but not against a fire, a flood, or simply losing the one place you kept it. A second copy, somewhere else, protects against that. But be precise about what it doesn't do: each full copy can recreate every key on its own, so a second copy is redundancy against disaster and loss, not extra protection against theft. Both locations still need to be genuinely secure and private.",
-   chapter="Five words", kicker="An honest caveat", lines=["A second copy guards against loss.", "Not against theft — each copy is complete."], sub="Both locations still need to be genuinely secure and private.")
-sc("flow", "Word three: hardware wallet. A separate physical device that keeps your keys off the internet entirely. When an app asks you to sign, the request travels to the device, you read it on the device's own screen, and you confirm it with a physical button press. Even if the computer you're using is compromised, the signing itself happens somewhere it can't reach.",
-   chapter="Five words", title="A hardware wallet, signing",
-   nodes=[{"label": "App requests a signature", "sub": "From your computer or phone", "icon": "globe"}, {"label": "Sent to the device", "sub": "Keys never leave it", "icon": "wallet"},
-          {"label": "You read it there", "sub": "On the device's own screen", "icon": "eye"}, {"label": "Physical confirm", "sub": "A button press, on the device", "icon": "check"}])
-sc("statement", "Word four: multisig, from Lesson one point zero. Needs M of N signers, for example two of three, before it can act. Good for large or shared funds, because a single compromised key, on its own, is no longer enough to lose anything.",
-   chapter="Five words", kicker="Word four", lines=["M of N signers", "needed before it can act."], sub="A single compromised key, on its own, can't move the funds.")
-img(D + "three-wallets.png", "Word five: smart wallets",
-    "And word five: smart wallets. These are contract accounts, not simple key-controlled addresses, which means they can add features a basic wallet can't: spending limits, social recovery if a device is lost, and batching several actions into one signature. You'll see these in more depth in Lesson one point nine. For now, just know the category exists, and that it's a genuinely different kind of wallet under the hood.",
-    "And word five: smart wallets. These are contract accounts, not simple key-controlled addresses, which means they can add features a basic wallet can't: spending limits, social recovery if a device is lost, and batching several actions into one signature. You'll see these in more depth in Lesson 1.9. For now, just know the category exists, and that it's a genuinely different kind of wallet under the hood.",
-    chapter="Five words")
-sc("compare", "Here's why the device matters, not just the key. A software wallet keeps your key inside an app on your everyday computer or phone, the same device you browse the internet, open email and install software on. A hardware wallet keeps the key on a separate, purpose-built device that never touches the internet directly. Malware on your computer can potentially see a software wallet's key. It cannot reach inside a hardware device.",
-   chapter="Five words",
-   left={"label": "A software wallet", "tone": "neutral", "items": ["Key lives inside an everyday app", "Same device as browsing, email, downloads", "Malware there can potentially reach it"]},
-   right={"label": "A hardware wallet", "tone": "good", "items": ["Key lives on a separate device", "Never touches the internet directly", "Malware on your computer can't reach inside it"]})
-sc("statement", "One real example of why reading the device screen matters, not just the app. In December of two thousand twenty-three, a widely used wallet-connection library was compromised at the supply-chain level, briefly showing some users malicious transaction requests through otherwise legitimate-looking websites. People who read and verified the request on their hardware device's own screen caught it. People who only glanced at the website did not. The device screen is the one thing an attacker who's compromised your browser can't fake.",
-   chapter="Five words", kicker="A real example", lines=["Dec 2023: a compromised library", "showed malicious requests on real sites."], sub="The device's own screen is the one thing a browser compromise can't fake.")
-sc("statement", "One more real, current fact on smart wallets: the underlying standard, generally called account abstraction, is a real and increasingly used part of Ethereum's ecosystem, not a future promise. It's what lets a wallet require two devices to approve a large transaction, or recover access through trusted contacts instead of a single seed phrase. You'll build on this properly in Lesson one point nine.",
-   "One more real, current fact on smart wallets: the underlying standard, generally called account abstraction, is a real and increasingly used part of Ethereum's ecosystem, not a future promise. It's what lets a wallet require two devices to approve a large transaction, or recover access through trusted contacts instead of a single seed phrase. You'll build on this properly in Lesson 1.9.",
-   chapter="Five words", kicker="Not a future promise", lines=["Account abstraction is real,", "and increasingly used today."], sub="Two-device approval, or recovery through trusted contacts, instead of one seed phrase.")
-
-sc("quiz", "Quick check. A message from “support” asks for your seed phrase to fix a stuck transaction. What do you do? [[pause 4]] The answer: nothing. It's a scam, every single time. Block and report. No legitimate support team will ever ask for it.",
-   chapter="Five words", n=1, of=3, q="A “support agent” in DMs asks for your seed phrase to fix a stuck transaction. What do you do?",
-   a="Nothing. It's a scam, every time. Block and report — no legitimate support team will ever ask for it.")
+sc("title", "Five words.", chapter="Five words", eyebrow="Five words", num="5", title="The words this lesson runs on",
+   sub="Get these right, and the rest follows.")
+sc("ticker", "A private key is the authority to sign; whoever holds it controls the funds, full stop. A seed phrase is twelve to twenty-four words that recreate your keys, never typed into a website, never photographed, never shared, with anyone. A hardware wallet keeps your keys on a separate physical device; signing requires a physical confirmation on that device. A multisig needs M of N signers, say two of three, to agree before it acts. And a smart wallet is a contract account that can add spending limits, recovery options and batching.",
+   "A private key is the authority to sign; whoever holds it controls the funds, full stop. A seed phrase is 12-24 words that recreate your keys, never typed into a website, never photographed, never shared, with anyone. A hardware wallet keeps your keys on a separate physical device; signing requires a physical confirmation on that device. A multisig needs M of N signers, say 2 of 3, to agree before it acts. And a smart wallet is a contract account that can add spending limits, recovery options and batching.",
+   chapter="Five words", title="Five words, all doing real work",
+   items=[{"label": "Private key", "value": "Controls the funds"}, {"label": "Seed phrase", "value": "Never typed, photographed, shared"}, {"label": "Hardware wallet", "value": "Physical confirmation to sign"},
+          {"label": "Multisig", "value": "M of N signers agree"}, {"label": "Smart wallet", "value": "Limits, recovery, batching"}])
+sc("statement", "One of these deserves zero exceptions, ever: the seed phrase. No legitimate support team, no real person, nothing legitimate will ever ask you to type it anywhere, photograph it, or read it aloud. If something asks, it has already told you everything you need to know about it.",
+   chapter="Five words", kicker="Zero exceptions, ever", lines=["Never typed, photographed, or shared.", "No legitimate reason ever asks for it."], sub="If something asks, that alone tells you what it is.")
+sc("statement", "Smart wallets deserve one more mention here. Because they're contract accounts rather than plain key pairs, they can add spending limits, social recovery if you lose access, and batching several actions into a single signature. All of it covered properly in Lesson one point nine, smart accounts and account abstraction.",
+   "Smart wallets deserve one more mention here. Because they're contract accounts rather than plain key pairs, they can add spending limits, social recovery if you lose access, and batching several actions into a single signature. All of it covered properly in Lesson 1.9, smart accounts and account abstraction.",
+   chapter="Five words", kicker="More on smart wallets, soon", lines=["Spending limits, social recovery, batching.", "All covered properly in Lesson 1.9."], sub="Smart accounts and account abstraction.")
 
 # ---------------------------------------------------------------- compartmentalise
-sc("title", "Compartmentalise.", chapter="Compartmentalise", eyebrow="Compartmentalise", num="1", title="Separate wallets, by job",
-   sub="So one compromise only reaches one of them.")
-sc("statement", "Compartmentalising isn't unique to crypto; it's the same logic behind carrying a slim wallet with a little cash instead of your entire bank card collection, or a business keeping its operating account separate from its reserves. On-chain, it matters more, because there's no bank to call if the wrong wallet gets compromised. The structure has to do the job a phone call would do anywhere else.",
-   chapter="Compartmentalise", kicker="Not a new idea", lines=["A slim wallet, not your whole card collection.", "On-chain, there's no call to make afterward."], sub="The structure does the job a phone call would do anywhere else.")
-sc("compare", "Here's the structural risk most beginners never think about. One wallet for everything means your life savings, your everyday DeFi positions and your experiments with brand-new apps all sit behind the exact same key. One bad signature on one sketchy new app, and everything you own is reachable through it. Separate wallets by job, and a compromise in one only ever reaches what that one wallet holds.",
-   chapter="Compartmentalise",
-   left={"label": "One wallet for everything", "tone": "bad", "items": ["Savings, DeFi and experiments, same key", "One bad signature reaches everything"]},
-   right={"label": "Separate wallets by job", "tone": "good", "items": ["Each wallet holds only what its job needs", "A compromise reaches only that one wallet"]})
+sc("title", "Compartmentalise.", chapter="Compartmentalise", eyebrow="Compartmentalise", num="3", title="The 3-wallet setup",
+   sub="One compromise reaches one wallet. Never all of them.")
+sc("flow3d", "Here's the structure. A vault holds your long-term holdings; it almost never signs, and grants no DeFi approvals at all, kept on hardware or a multisig. An operator holds your active DeFi positions, signing only with known, verified protocols, also on hardware. And a burner holds small amounts for anything experimental, new apps, mints, airdrops, on a regular hot wallet. Money moves down the chain only as needed, and profits sweep back up.",
+   chapter="Compartmentalise", title="The 3-wallet setup",
+   nodes=[{"label": "Vault", "sub": "Long-term holdings. Almost never signs", "icon": "lock"}, {"label": "Operator", "sub": "Active DeFi, verified protocols only", "icon": "wallet"},
+          {"label": "Burner", "sub": "Small amounts, anything experimental", "icon": "coins"}])
+sc("statement", "Notice the direction of movement. Funds flow down, vault to operator to burner, only when you actually need them there. Profits sweep back up, the opposite direction. If the burner gets drained completely, and it might, you've lost only the burner's balance, nothing else.",
+   chapter="Compartmentalise", kicker="Down as needed. Up when it grows.", lines=["Funds move down only as needed.", "If the burner drains, you lose only the burner."], sub="That's the entire point of the structure.")
+sc("chart3d", "Here's what that structure actually protects, made concrete with an illustrative ten-thousand-dollar portfolio. If the burner is drained, you lose about five hundred dollars, the small amount kept there for experiments. If the operator is compromised, you lose roughly fifteen hundred, still painful, but contained. The vault, holding the other eight thousand, never touches a DeFi approval at all, so it simply isn't exposed to this kind of loss.",
+   chapter="Compartmentalise", kind="bars", title="What's actually at risk, per wallet",
+   sub="Illustrative $10,000 split · not a recommended allocation",
+   bars=[{"label": "Burner drained", "text": "Small amounts, by design", "value": 500, "show": "$500 at risk", "tone": "good"}, {"label": "Operator compromised", "text": "Active DeFi positions", "value": 1500, "show": "$1,500 at risk", "tone": "warn"},
+         {"label": "Vault: no DeFi approvals", "text": "Simply not exposed this way", "value": 0, "show": "$0 exposed", "tone": "good"}])
+sc("compare", "Notice what makes a hardware wallet different from a purely software one. A software wallet signs the moment your device tells it to, no separate check. A hardware wallet requires a physical confirmation, a button press on a separate screen, showing you exactly what you're about to sign, on a device malware on your computer can't touch.",
+   chapter="Compartmentalise", title="Software wallet vs. hardware wallet",
+   left={"label": "Software wallet", "tone": "neutral", "items": ["Signs the moment your device says so", "No separate physical check"]},
+   right={"label": "Hardware wallet", "tone": "good", "items": ["Requires a physical button press", "Shows the details on a separate screen"]})
+sc("compare", "One clarification worth making explicit. These need to be genuinely separate wallets, with separate seed phrases, not just different accounts derived from the same one. Accounts sharing a seed phrase share its fate entirely; if that seed is ever compromised, every account under it falls at once, vault included.",
+   chapter="Compartmentalise", title="Separate wallets, not just separate accounts",
+   left={"label": "Separate wallets, separate seeds", "tone": "good", "items": ["Each wallet's fate is independent", "One compromise reaches one wallet"]},
+   right={"label": "Multiple accounts, one shared seed", "tone": "bad", "items": ["All accounts share one fate", "One compromised seed reaches all of them"]})
+sc("statement", "Losing the hardware device itself isn't the disaster it sounds like. The device only stores your keys; your seed phrase recreates them, identically, on a brand-new device. That's exactly why the seed phrase, not the device, is the thing worth two separate physical backups.",
+   chapter="Compartmentalise", kicker="Losing the device isn't losing the keys", lines=["The device only stores your keys.", "Your seed phrase recreates them, on a new one."], sub="The seed phrase is the backup. Not the device.")
+sc("statement", "This is Lesson one point one's self-custody property, applied deliberately. Nobody can freeze any of these three wallets. But equally, nobody recovers them for you either, which is exactly why the structure, and the backups behind it, matter this much.",
+   "This is Lesson 1.1's self-custody property, applied deliberately. Nobody can freeze any of these three wallets. But equally, nobody recovers them for you either, which is exactly why the structure, and the backups behind it, matter this much.",
+   chapter="Compartmentalise", kicker="Self-custody, applied deliberately", lines=["Nobody can freeze these three wallets.", "Nobody recovers them for you, either."], sub="Lesson 1.1's self-custody property, in practice.")
 
-# ---------------------------------------------------------------- the 3-wallet setup
-sc("title", "The 3-wallet setup.", chapter="The 3-wallet setup", eyebrow="Worked example", num="3", title="Vault · Operator · Burner",
-   sub="This is what compartmentalising actually looks like.")
-img(D + "three-wallets.png", "The three roles",
-    "Here's the structure. The vault holds your long-term holdings, and it almost never signs: no DeFi approvals, ever. The operator holds your active DeFi positions, and only signs with known, verified protocols. And the burner holds small amounts for new apps, mints and airdrops, and can sign anything experimental, because it never holds more than you're prepared to lose entirely.",
-    chapter="The 3-wallet setup")
-sc("flow", "Money moves down this chain, only as needed. From the vault, to the operator, to the burner, when you actually need funds in motion. And profits sweep back up, from burner to operator to vault, once a position's proven itself. If the burner gets drained completely, you've lost only the burner's balance. The vault was never in the blast radius.",
-   chapter="The 3-wallet setup", title="Money moves down, profits sweep up",
-   nodes=[{"label": "Vault", "sub": "Long-term. Almost never signs.", "icon": "shield"}, {"label": "Operator", "sub": "Active DeFi, known protocols", "icon": "grid"}, {"label": "Burner", "sub": "New apps. Anything experimental.", "icon": "alert"}],
-   edges=[{"from": "0", "to": "1", "label": "down, as needed"}, {"from": "1", "to": "2", "label": "down, as needed"}, {"from": "2", "to": "1", "label": "profits sweep up", "bend": -60}, {"from": "1", "to": "0", "label": "profits sweep up", "bend": -60}])
-sc("chart", "Here's an illustrative example of how someone might split their crypto across the three wallets. The bulk, say eighty percent, sits in the vault, rarely touched. Fifteen percent sits in the operator, in active, known positions. And five percent, or less, sits in the burner, small enough that losing all of it wouldn't change anything. Your own split depends on your total and your comfort with risk, but the shape, most in the vault, least in the burner, holds regardless of size.",
-   "Here's an illustrative example of how someone might split their crypto across the three wallets. The bulk, say 80%, sits in the vault, rarely touched. 15% sits in the operator, in active, known positions. And 5%, or less, sits in the burner, small enough that losing all of it wouldn't change anything. Your own split depends on your total and your comfort with risk, but the shape, most in the vault, least in the burner, holds regardless of size.",
-   chapter="The 3-wallet setup", kind="donut", title="An illustrative 3-wallet split", sub="Example only — your own split depends on your total",
-   segs=[{"label": "Vault", "text": "Rarely touched", "value": 80, "show": "80%", "tone": "good"}, {"label": "Operator", "text": "Active, known positions", "value": 15, "show": "15%", "tone": "blue"}, {"label": "Burner", "text": "Losing it all wouldn't matter", "value": 5, "show": "≤5%", "tone": "warn"}])
-sc("steps", "Here's the compartmentalising habit as four steps, so it's not just a diagram. Decide a position's job first: is this long-term, active, or experimental? Route it to the matching wallet, never the convenient one. Sign only what that wallet's job allows. And sweep profits back up the chain once a position's proven itself, so the operator and burner don't quietly grow past what they're supposed to hold.",
-   chapter="The 3-wallet setup", title="Compartmentalising, as a habit",
-   steps=["Decide the position's job first", "Route it to the matching wallet", "Sign only what that wallet's job allows", "Sweep profits back up once proven"], result="No wallet quietly grows past its job")
-sc("statement", "Notice the device column too: vault and operator on hardware, or the vault in a multisig for real size. The burner can stay a simple hot wallet, because it's designed to be disposable. The structure does the protecting. You don't have to remember to be careful every single time, because the wallet you're using already limits the damage.",
-   chapter="The 3-wallet setup", kicker="Why it works", lines=["The structure protects you.", "Not just your memory, in the moment."], sub="Vault and operator on hardware (or multisig). The burner stays disposable.")
-sc("statement", "Here's a habit worth naming out loud: labelling your wallets by name, right inside the wallet app, not just by remembering which is which. “Vault,” “Operator,” “Burner,” or whatever names you choose, visible every time you open the app. It sounds small. In practice, it's the difference between pausing to check which wallet you're signing from, and signing on autopilot from the wrong one.",
-   chapter="The 3-wallet setup", kicker="A small habit that matters", lines=["Label the wallets, in the app.", "“Vault.” “Operator.” “Burner.”"], sub="The difference between pausing to check, and signing on autopilot.")
-sc("quiz", "Quick check. Why keep the vault wallet completely free of DeFi approvals? [[pause 4]] The answer: approvals let a contract move your tokens. With none granted, a compromised protocol has no path to reach the vault at all.",
-   chapter="The 3-wallet setup", n=2, of=3, q="Why keep the vault wallet completely free of DeFi approvals?",
-   a="Approvals let a contract move your tokens. With none granted, a compromised protocol has no path to reach the vault.")
-sc("statement", "One last thing worth saying plainly. None of this structure has to be built in a single afternoon. Set up the burner first, since it's the lowest-stakes piece and the one you'll use constantly while learning. Add the operator once you have real positions worth separating out. And build the vault, with a hardware device or a multisig, once there's something in it worth that extra step. The order matters less than eventually having all three.",
-   chapter="The 3-wallet setup", kicker="No rush", lines=["Burner first.", "Operator, then vault, as they're needed."], sub="The order matters less than eventually having all three.")
-sc("quiz", "Last check. What does a two-of-three multisig actually protect against? [[pause 4]] The answer: a single lost or compromised key. Two signers are still needed to move funds, so one key alone can't do it.",
-   chapter="The 3-wallet setup", n=3, of=3, q="What does a 2-of-3 multisig actually protect against?",
-   a="A single lost or compromised key. Two signers are still needed to move funds.")
+# ---------------------------------------------------------------- multisig in depth
+sc("title", "Multisig, in depth.", chapter="Multisig, in depth", eyebrow="Multisig, in depth", num="2", title="Two of three, in practice",
+   sub="No single key can act alone.")
+sc("flow", "Here's roughly how two-of-three multisig actually works. One signer proposes a transaction, spending from the shared wallet. A second signer independently reviews it, and approves. Only once two signatures agree does the transaction actually execute. If one key is ever lost or stolen, on its own, it simply cannot move anything.",
+   chapter="Multisig, in depth", title="How 2-of-3 multisig actually works",
+   nodes=[{"label": "One signer proposes", "sub": "A transaction, from the shared wallet", "icon": "key"}, {"label": "A second signer reviews and approves", "sub": "Independently, not automatically", "icon": "eye"},
+          {"label": "Two agree: it executes", "sub": "One key alone can't move anything", "icon": "check"}])
+sc("statement", "That's precisely what multisig protects against: a single lost or compromised key. With two of three required, an attacker needs two separate compromises, not one, and losing one key yourself still leaves the wallet fully recoverable with the other two.",
+   chapter="Multisig, in depth", kicker="What it actually protects against", lines=["A single lost or compromised key.", "An attacker needs two compromises, not one."], sub="Good for large or shared funds specifically.")
+sc("statement", "None of this means you need a multisig today. For genuinely small amounts, a single hardware wallet, used carefully, is entirely reasonable. Multisig earns its added complexity once the amount would meaningfully hurt to lose, or once more than one person needs a say in moving it.",
+   chapter="Multisig, in depth", kicker="Not everyone needs this today", lines=["A single hardware wallet is fine, for small amounts.", "Multisig earns its complexity once the amount matters."], sub="Or once more than one person needs a say.")
 
-# ---------------------------------------------------------------- checklist and recap
-sc("bullets", "Here's your checklist. Do it now, for real. First, your seed phrase is stored offline, in two separate physical places. Second, your vault wallet has never approved a DeFi contract. Third, you have a separate burner wallet for anything new. And fourth, you read every signing prompt on the hardware device's own screen, not just the website.",
-   chapter="Checklist", title="Your checklist", numbered=True,
-   items=["Seed phrase stored offline, in two separate places", "Vault wallet has never approved a DeFi contract", "A separate burner wallet for anything new", "Read every prompt on the hardware device's screen"])
-sc("bullets", "Let's recap. Five words: private key, seed phrase, hardware wallet, multisig, smart wallet. Compartmentalise: separate wallets by job, so one compromise reaches only one of them. And the three-wallet setup: vault, operator, burner, money moving down as needed, profits sweeping back up.",
-   chapter="Recap", title="Recap", check=False,
-   items=["Five words: key, seed phrase, hardware wallet, multisig, smart wallet", "Compartmentalise: separate wallets by job",
-          "Vault → Operator → Burner: down as needed, profits sweep up"])
-sc("cta", "Do the checklist now, before you move on. You now have the whole lesson in your head: the five words, why compartmentalising matters, and the three-wallet setup that puts it into practice. Next up, Lesson one point four: Tokens, approvals and allowances.",
-   "Do the checklist now, before you move on. You now have the whole lesson in your head: the five words, why compartmentalising matters, and the three-wallet setup that puts it into practice. Next up, Lesson 1.4: Tokens, approvals and allowances.",
-   chapter="Recap", button="Next: Lesson 1.4", sub="Tokens, approvals and allowances")
+# ---------------------------------------------------------------- a worked example
+sc("title", "A worked example.", chapter="A worked example", eyebrow="A worked example", num="3", title="Maria's 3-wallet setup",
+   sub="Built once, from scratch.")
+sc("steps", "Maria buys a hardware wallet directly from the manufacturer, never a marketplace listing, exactly the habit from Lesson zero point five. She sets up her vault first, moving her long-term holdings across, and approving nothing on it, ever. She sets up her operator next, a second account on that same device, reserved for known, verified protocols only. And she sets up a burner, a free hot wallet, for anything experimental: new apps, mints, airdrops.",
+   "Maria buys a hardware wallet directly from the manufacturer, never a marketplace listing, exactly the habit from Lesson 0.5. She sets up her vault first, moving her long-term holdings across, and approving nothing on it, ever. She sets up her operator next, a second account on that same device, reserved for known, verified protocols only. And she sets up a burner, a free hot wallet, for anything experimental: new apps, mints, airdrops.",
+   chapter="A worked example", title="What Maria actually did",
+   steps=["Bought a hardware wallet from the manufacturer directly", "Set up the vault: long-term holdings, zero approvals", "Set up the operator: verified protocols only, same device", "Set up the burner: a free hot wallet, for anything new"],
+   result="Three wallets. One device for two of them. One habit, repeated.")
+sc("statement", "A new app Maria tries turns out to be a scam, and drains the burner completely: fifty dollars, gone. Her vault and operator, sitting in entirely separate wallets on entirely separate keys, are completely untouched. That's compartmentalisation working exactly as designed, not luck.",
+   chapter="A worked example", kicker="Then, a scam hits the burner", lines=["The burner drains completely: $50, gone.", "Vault and operator: untouched."], sub="Working exactly as designed. Not luck.")
+sc("statement", "If Maria later wanted a multisig vault instead, setting it up usually means a dedicated multisig tool, holding two or three hardware wallets as the signers. Those can belong to different trusted people entirely; none of them needs to fully trust the others, only the two-of-three rule itself. And one more forward reference: keeping any of this safe also means keeping it physically private. A hardware wallet is only ever as safe as the person holding it. Lesson one point eight covers physical security properly.",
+   "If Maria later wanted a multisig vault instead, setting it up usually means a dedicated multisig tool, holding two or three hardware wallets as the signers. Those can belong to different trusted people entirely; none of them needs to fully trust the others, only the two-of-three rule itself. And one more forward reference: keeping any of this safe also means keeping it physically private. A hardware wallet is only ever as safe as the person holding it. Lesson 1.8 covers physical security properly.",
+   chapter="A worked example", kicker="Multisig, and staying physically private", lines=["A dedicated tool, 2-3 hardware signers.", "A wallet is only as safe as its holder."], sub="Lesson 1.8 covers physical security properly.")
 
-spec = {"id": "lesson-01-3", "title": "Lesson 1.3: Wallets, keys, hardware & multisig", "size": [1920, 1080], "group": "lessons", "maxMinutes": 25,
-        "tag": "Lesson 1.3", "gold": True, "music": True, "musicLevel": 0.14, "seed": 45,
-        "use": "Lesson 1.3 page in the Whop course. Hand-written gold-standard script: keys/seed/hardware/multisig/smart wallets, compartmentalising, the 3-wallet setup.",
+# ---------------------------------------------------------------- checklist and quiz
+sc("title", "Checklist and quiz.", chapter="Checklist and quiz", eyebrow="Checklist and quiz", num="4", title="Confirm you've got it",
+   sub="Four boxes, five questions.")
+sc("statement", "One detail on that first checklist item: two separate physical places means exactly that, not two drawers in the same house. A fireproof safe and a trusted relative's home, or two safety deposit boxes in different locations, is the kind of separation that actually survives a fire, a flood, or a burglary.",
+   chapter="Checklist and quiz", kicker="What “two places” actually means", lines=["Not two drawers in the same house.", "Separated enough to survive a fire or flood."], sub="A safe and a relative's home. Or two deposit boxes.")
+sc("bullets", "Here's this lesson's checklist. Your seed phrase is stored offline, in two separate physical places. Your vault wallet has never approved a single DeFi contract. You keep a separate burner wallet for anything new. And you read every signing prompt on the hardware device's own screen, never just on the website.",
+   chapter="Checklist and quiz", title="Before you move on", numbered=True,
+   items=["Seed phrase stored offline, in two places", "Vault wallet has never approved a DeFi contract", "A separate burner wallet for anything new", "Read every prompt on the hardware device screen"])
+sc("quiz", "Question one. A 'support agent' in your D.M.s needs your seed phrase to fix a stuck transaction. What do you do? [[pause 4]] The answer: nothing. It's a scam, every single time, no exceptions. Block and report.",
+   chapter="Checklist and quiz", n=1, of=5, q="A “support agent” in DMs needs your seed phrase to fix a stuck transaction. What do you do?", a="Nothing. It's a scam, every time. Block and report.")
+sc("quiz", "Question two. Why keep the vault wallet completely free of approvals? [[pause 4]] The answer: approvals let contracts move your tokens. With none granted, a compromised protocol simply has no way to reach it.",
+   chapter="Checklist and quiz", n=2, of=5, q="Why keep the vault wallet free of approvals?", a="Approvals let contracts move your tokens. With none, a compromised protocol can't reach it.")
+sc("quiz", "Question three. What does two-of-three multisig actually protect against? [[pause 4]] The answer: a single lost or compromised key. Two signers are still required to move any funds.",
+   chapter="Checklist and quiz", n=3, of=5, q="What does 2-of-3 multisig protect against?", a="A single lost or compromised key. Two signers are still needed to move funds.")
+sc("quiz", "Question four. Your burner wallet gets completely drained by a malicious mint. What happens to your vault? [[pause 4]] The answer: nothing. It's a separate wallet, holding separate funds; the compromise never reaches it.",
+   chapter="Checklist and quiz", n=4, of=5, q="Your burner wallet gets drained by a malicious mint. What happens to your vault?", a="Nothing. It's a separate wallet; the compromise never reaches it.")
+sc("quiz", "Question five. What's the one thing no legitimate support team will ever ask for? [[pause 4]] The answer: your seed phrase. Not once, not for any reason, ever.",
+   chapter="Checklist and quiz", n=5, of=5, q="What's the one thing no legitimate support team will ever ask for?", a="Your seed phrase. Not once, not for any reason.")
+
+# ---------------------------------------------------------------- recap and next
+sc("flow", "Here's the whole lesson, recapped as one loop. Keep your seed phrase offline, always. Keep your vault free of approvals, permanently. Run active DeFi from an operator wallet, on hardware. Use a burner for anything new or experimental. And once the amount really matters, move to multisig. Do those five things, and one mistake can never reach everything.",
+   chapter="Recap and next", title="This lesson, recapped as one loop", layout="cycle",
+   nodes=[{"label": "Seed phrase, offline, always", "icon": "lock"}, {"label": "Vault: zero approvals", "icon": "shield"}, {"label": "Operator: hardware, verified only", "icon": "wallet"},
+          {"label": "Burner: anything experimental", "icon": "coins"}, {"label": "Multisig, once it matters", "icon": "users"}])
+sc("statement", "This is education, not financial advice, and the ten-thousand-dollar example in this lesson is illustrative, not a recommended allocation. Nobody from this program will ever ask for your seed phrase, private keys or account access.",
+   chapter="Recap and next", kicker="A reminder", lines=["The $10,000 example is illustrative.", "We never ask for your keys."], sub="Not financial advice.")
+sc("cta", "That's wallets, keys, hardware and multisig: five words, the three-wallet setup, and how two-of-three actually works. Next, Lesson one point four: tokens, approvals and allowances.",
+   chapter="Recap and next", button="Next: Lesson 1.4", sub="Tokens, approvals & allowances")
+
+spec = {"id": "lesson-01-3", "title": "Lesson 1.3: Wallets, keys, hardware & multisig", "size": [1920, 1080], "group": "lessons", "maxMinutes": 25, "tag": "Lesson 1.3",
+        "gold": True, "seed": 113,
+        "use": "Lesson 1.3 page in the Whop course. Gold-standard script: a 5-word glossary ticker, a flow3d recreation of the module's own three-wallets.png (Vault/Operator/Burner) anchor, a chart3d anchor on what's actually at risk per wallet, a software-vs-hardware compare, and the 2-of-3 multisig mechanism.",
         "thumbnail": {"title": "Wallets, keys & multisig", "subtitle": "Lesson 1.3"}, "scenes": S}
 out = ROOT / "video-scripts" / "gold" / "lesson-01-3.json"
 out.write_text(json.dumps(spec, indent=1, ensure_ascii=False))
 words = sum(len(s["vo"].replace("[[pause 4]]", "").split()) for s in S)
-print(f"{len(S)} scenes, {words} words, est {(words / 171 * 60 + len(S) * 1.3 + 4 * 3) / 60:.1f} min")
+print(f"{len(S)} scenes, {words} words, est {(words / 171 * 60 + len(S) * 1.3 + 5 * 3) / 60:.1f} min")
