@@ -76,9 +76,16 @@ const plain = s => String(s || '')
   .replace(/\s+/g, ' ')
   .trim();
 
-function sectionText(body, headingRe) {
+const readable = s => String(s || '')
+  .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+  .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+  .replace(/<[^>]+>/g, ' ')
+  .replace(/[*`#>]+/g, '')
+  .replace(/\s+/g, ' ')
+  .trim();
+function sectionText(body, headingRe, keepCode) {
   const m = body.match(new RegExp('### ' + headingRe + '\\s*\\n+([\\s\\S]*?)(?=\\n### |\\n## |$)'));
-  return m ? plain(m[1]) : '';
+  return m ? (keepCode ? readable(m[1]) : plain(m[1])) : '';
 }
 
 const images = new Map();
@@ -123,6 +130,21 @@ for (let num = 0; num <= 14; num++) {
       ? (sectionText(body, 'The 60-second version') || sectionText(body, 'Objective'))
       : (sectionText(body, 'Objective') || sectionText(body, 'The 60-second version'));
     if (!blurb) blurb = plain(body).slice(0, 360);
+    let example = sectionText(body, 'Worked example[^\\n]*', true);
+    let exampleKind = example ? 'worked' : '';
+    if (!example) {
+      example = sectionText(body, 'Explanation[^\\n]*', true) || sectionText(body, 'Your first safe step', true);
+      exampleKind = example ? 'from' : '';
+    }
+    if (example && example.length > 700) {
+      const cut = example.slice(0, 700);
+      const dot = cut.lastIndexOf('. ');
+      example = (dot > 160 ? cut.slice(0, dot + 1) : cut.trim()) + '…';
+    }
+    if (example && example === blurb) {
+      example = '';
+      exampleKind = '';
+    }
     const mastered = starter ? sectionText(body, "You.ve mastered this module when[.…]*") : '';
     let primary = null;
     for (const m of body.matchAll(/!\[([^\]]*)\]\(([^)]+)\)/g)) {
@@ -145,7 +167,7 @@ for (let num = 0; num <= 14; num++) {
     }
     const vid = `lesson-${lid.split('.')[0].padStart(2, '0')}-${lid.split('.')[1]}`;
     lessons.push({
-      id: lid, title: starter ? 'Mastery Starter' : ltitle, starter, expert, blurb, mastered, primary,
+      id: lid, title: starter ? 'Mastery Starter' : ltitle, starter, expert, blurb, example, exampleKind, mastered, primary,
       hay: plain(body).slice(0, 3500),
       video: exists(`video/${vid}.mp4`) ? `../video/${vid}.mp4` : '',
     });
@@ -157,7 +179,11 @@ for (let num = 0; num <= 14; num++) {
 addImage('assets/diagrams/path-to-mastery.png', 'Six stages from Zero to Operator', null);
 const pathImg = resolveAsset('assets/diagrams/path-to-mastery.png').id;
 
+let lessonSeq = 0;
+modules.forEach(m => m.lessons.forEach(l => { l.i = lessonSeq++; }));
 const allLessons = modules.flatMap(m => m.lessons.map(l => ({ ...l, module: m })));
+const calcByLesson = {};
+CALCS.forEach(c => { (calcByLesson[c.lesson] || (calcByLesson[c.lesson] = [])).push(c); });
 const lessonCount = allLessons.length;
 const expertCount = allLessons.filter(l => l.expert).length;
 const starterCount = allLessons.filter(l => l.starter).length;
@@ -186,20 +212,25 @@ function lessonBlock(l) {
   const videoWord = l.video ? '<span class="hasvid">Video</span>' : '';
   const sheets = wsRefs.filter(w => w.lesson === l.id);
   const find = plain([l.id, l.title, l.blurb, l.hay, l.module.title, l.module.outcome, img ? img.alt : '', sheets.map(w => w.id + ' ' + w.name).join(' '), l.starter ? 'mastery starter' : '', l.expert ? 'expert' : ''].join(' ')).toLowerCase();
-  const moreImg = img ? `<img data-img="${esc(img.id)}" alt="${esc(img.alt || l.title)}" width="800">` : '';
   const sheetWord = sheets.length ? `<span class="sheet">${esc(sheets.map(w => w.id).join(' '))}</span>` : '';
+  const calcs = calcByLesson[l.id] || [];
+  const calcWord = calcs.map(c => `<a class="calclink" href="#c-${esc(c.cmd)}">${calcs.length > 1 ? esc(c.name) : 'Calculator'}</a>`).join('');
+  const example = l.example
+    ? `<p class="example"><b>${l.exampleKind === 'worked' ? 'Worked example.' : 'From the lesson.'}</b> ${esc(l.example)}</p>`
+    : '';
   const links = [
+    calcs.map(c => `<a href="#c-${esc(c.cmd)}">${esc(c.name)}</a>`).join(' · '),
     sheets.map(sheetLink).join(' · '),
     l.video ? `<a class="folderlink" href="${esc(l.video)}">Video file</a>` : '',
     `<a class="folderlink" href="index.html#/l/${esc(l.id)}">Course Hub copy</a>`,
   ].filter(Boolean).join(' · ');
-  return `<details class="lesson" id="l-${l.id.replace('.', '-')}" data-kind="${l.starter ? 'starter' : l.expert ? 'expert' : 'lesson'}" data-find="${esc(find)}">
+  return `<details class="lesson" id="l-${l.id.replace('.', '-')}" data-kind="${l.starter ? 'starter' : l.expert ? 'expert' : 'lesson'}" data-id="${esc(l.id)}" data-mod="${l.module.n}" data-i="${l.i}" data-title="${esc(plain(l.title).toLowerCase())}" data-blurb="${esc(plain(l.blurb).toLowerCase())}" data-find="${esc(find)}">
     <summary>
       <span class="lid">${esc(l.id)}</span>
-      <span class="ltext"><span class="ltitle">${esc(l.title)}${flag}${videoWord}${sheetWord}</span><span class="ldesc">${esc(l.blurb)}</span></span>
+      <span class="ltext"><span class="ltitle">${esc(l.title)}${flag}${videoWord}${sheetWord}${calcWord}</span><span class="ldesc">${esc(l.blurb)}</span></span>
       ${img ? `<img data-img="${esc(img.id)}" alt="" width="140" height="78">` : '<span class="nopic"></span>'}
     </summary>
-    <div class="more">${moreImg}<p class="links">${links}</p></div>
+    <div class="more">${example}<p class="links">${links}</p></div>
   </details>`;
 }
 
@@ -344,17 +375,30 @@ function fieldControl(f) {
   return `<label>${esc(lab)}<input type="number" step="any" data-k="${esc(k)}"${val}${opt}></label>`;
 }
 
-const calcRows = CALCS.map(c => {
+function stageForLesson(id) {
+  const n = Number(String(id).split('.')[0]);
+  return STAGES.find(s => s.mods.includes(n));
+}
+function calcBlock(c) {
   const find = plain(c.cmd + ' ' + c.name + ' ' + c.what + ' calculator lesson ' + c.lesson).toLowerCase();
   const fields = FORMS[c.cmd];
   if (!fields) throw new Error('missing form for ' + c.cmd);
   const form = `<div class="formgrid">${fields.map(fieldControl).join('')}</div><div class="out" aria-live="polite"></div>`;
-  return `<div class="calc" data-c="${esc(c.cmd)}" data-find="${esc(find)}">
+  return `<div class="calc" id="c-${esc(c.cmd)}" data-c="${esc(c.cmd)}" data-name="${esc(c.name.toLowerCase())}" data-find="${esc(find)}">
     <h3>${esc(c.name)}</h3>
     <p>${esc(c.what)}</p>
     ${form}
     <p class="links">${lessonLink(c.lesson, 'Lesson ' + c.lesson)}</p>
   </div>`;
+}
+const calcRows = STAGES.map(s => {
+  const items = CALCS.filter(c => stageForLesson(c.lesson) === s).sort((a, b) => {
+    const [am, al] = a.lesson.split('.').map(Number);
+    const [bm, bl] = b.lesson.split('.').map(Number);
+    return am - bm || al - bl || CALCS.indexOf(a) - CALCS.indexOf(b);
+  });
+  if (!items.length) return '';
+  return `<div class="calcgroup"><h3 class="calcstage">Stage ${s.n} · ${esc(s.name)}</h3>${items.map(calcBlock).join('\n')}</div>`;
 }).join('\n');
 
 const orientation = ORIENTATION.filter(v => exists('video/' + v.file)).map(v =>
@@ -485,8 +529,13 @@ h3 { font-size: 22px; letter-spacing: -0.02em; margin: 14px 0 6px; }
 .ldesc { display: block; color: var(--muted); font-size: 15px; margin-top: 3px; }
 .flag { font-weight: 680; font-size: 14px; margin-left: 8px; color: var(--warn); }
 .flag.start { color: var(--link); }
-.hasvid, .sheet { margin-left: 8px; color: var(--muted); font-weight: 600; font-size: 14px; }
-.sheet { color: var(--link); }
+.hasvid, .sheet, .calclink { margin-left: 8px; font-weight: 680; font-size: 14px; }
+.hasvid { color: var(--muted); font-weight: 600; }
+.sheet, .calclink { color: var(--link); white-space: nowrap; }
+.example { max-width: 66ch; }
+.hitcalc { display: flex; gap: 12px; align-items: baseline; border-top: 1px solid var(--line); padding: 12px 0; text-decoration: none; }
+.hitcalc span { font-family: var(--mono); font-size: 13.5px; font-weight: 600; }
+.hitcalc b { color: var(--text); font-weight: 680; }
 .lesson summary img, .nopic { width: 140px; height: 78px; object-fit: cover; background: var(--ink); display: block; }
 .more { padding: 0 0 18px 4.3rem; }
 .more img { display: block; width: min(100%, 720px); background: var(--ink); margin-bottom: 10px; }
@@ -509,7 +558,8 @@ code { font-family: var(--mono); font-size: 0.86em; }
 .gallery figcaption { margin-top: 6px; font-size: 14.5px; }
 .gallery figcaption span { display: block; color: var(--muted); }
 .calcs { display: grid; gap: 0; }
-.calc { border-top: 1px solid var(--line); padding: 14px 0; }
+.calcstage { margin: 26px 0 0; font-size: 20px; }
+.calc { border-top: 1px solid var(--line); padding: 14px 0; scroll-margin-top: 120px; }
 .calc h3 { margin: 0 0 4px; font-size: 18px; }
 .calc p { margin: 0 0 6px; max-width: 66ch; }
 .formgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin: 10px 0; max-width: 720px; }
@@ -527,8 +577,8 @@ footer { margin-top: 36px; color: var(--muted); font-size: 14.5px; max-width: 68
   .shell { grid-template-columns: 1fr; }
   .rail { position: sticky; top: 96px; max-height: none; display: flex; gap: 0; overflow-x: auto; padding: 0 8px; }
   .rail a { white-space: nowrap; border-left: 0; border-bottom: 2px solid transparent; padding: 10px 12px; }
-  .rail a.modlink { display: none; }
   .rail a.stagelink { margin: 0; }
+  .rail a.modlink { font-size: 13px; }
   .main { padding: 22px 16px 72px; }
   .search { width: min(240px, 42vw); }
   .gallery { grid-template-columns: 1fr; }
@@ -552,9 +602,42 @@ const lessons = [...document.querySelectorAll('.lesson')];
 const blocks = [...document.querySelectorAll('[data-find]')];
 let mode = 'all';
 function words() { return q.value.toLowerCase().trim().split(/\\s+/).filter(Boolean); }
+function parkLessons() {
+  document.querySelectorAll('#hits .hitcalc').forEach(n => n.remove());
+  const byMod = new Map();
+  lessons.forEach(el => {
+    const id = el.dataset.mod;
+    if (!byMod.has(id)) byMod.set(id, []);
+    byMod.get(id).push(el);
+  });
+  byMod.forEach((els, id) => {
+    els.sort((a, b) => Number(a.dataset.i) - Number(b.dataset.i));
+    const parent = document.getElementById('m-' + id);
+    els.forEach(el => parent.appendChild(el));
+  });
+}
+function lessonScore(el, w) {
+  const title = el.dataset.title || '';
+  const blurb = el.dataset.blurb || '';
+  const hay = el.dataset.find || '';
+  if (!w.every(x => hay.includes(x))) return -1;
+  let s = 1;
+  const id = el.dataset.id || '';
+  if (w.length === 1 && (id === w[0] || id.replace('.', '') === w[0])) s += 300;
+  if (w.every(x => title.includes(x))) s += 120;
+  if (w.every(x => blurb.includes(x))) s += 40;
+  return s;
+}
+function calcScore(el, w) {
+  const name = el.dataset.name || '';
+  const hay = el.dataset.find || '';
+  if (!w.every(x => hay.includes(x))) return -1;
+  return w.every(x => name.includes(x)) ? 95 : 8;
+}
 function apply() {
   const w = words();
   const searching = w.length > 0;
+  parkLessons();
   lessons.forEach(el => {
     const kindOk = mode === 'all' || el.dataset.kind === mode;
     const textOk = !searching || w.every(x => el.dataset.find.includes(x));
@@ -568,15 +651,43 @@ function apply() {
     if (d && textOk && searching) { if (!d.open) { d.open = true; d.dataset.searchOpen = '1'; } }
   });
   if (!searching) document.querySelectorAll('details[data-search-open]').forEach(d => { d.open = false; delete d.dataset.searchOpen; });
+  const hits = document.getElementById('hits');
+  if (searching) {
+    const items = [];
+    lessons.forEach(el => { if (!el.hidden) items.push({ s: lessonScore(el, w), i: Number(el.dataset.i), el }); });
+    document.querySelectorAll('.calc').forEach(el => {
+      if (el.hidden) return;
+      items.push({ s: calcScore(el, w), i: 1000, calc: el });
+    });
+    items.sort((a, b) => b.s - a.s || a.i - b.i);
+    hits.hidden = items.length === 0;
+    items.forEach(item => {
+      if (item.el) { hits.appendChild(item.el); return; }
+      const a = document.createElement('a');
+      a.className = 'hitcalc';
+      a.href = '#' + item.calc.id;
+      const mark = document.createElement('span');
+      mark.textContent = 'Calculator';
+      const name = document.createElement('b');
+      name.textContent = item.calc.querySelector('h3').textContent;
+      a.append(mark, name);
+      hits.appendChild(a);
+    });
+  } else hits.hidden = true;
   document.querySelectorAll('.module').forEach(m => {
-    m.hidden = [...m.querySelectorAll('.lesson')].every(l => l.hidden);
+    const rows = [...m.querySelectorAll('.lesson')];
+    m.hidden = rows.length === 0 || rows.every(l => l.hidden);
   });
   document.querySelectorAll('details.pics').forEach(d => {
     const figs = [...d.querySelectorAll('figure')];
     d.hidden = searching && figs.every(f => f.hidden);
   });
   document.querySelectorAll('.stage-block').forEach(s => {
-    s.hidden = [...s.querySelectorAll('.module')].every(m => m.hidden);
+    const rows = [...s.querySelectorAll('.module')];
+    s.hidden = rows.length === 0 || rows.every(m => m.hidden);
+  });
+  document.querySelectorAll('.calcgroup').forEach(g => {
+    g.hidden = [...g.querySelectorAll('.calc')].every(c => c.hidden);
   });
   ['worksheets','pictures','calculators','files'].forEach(id => {
     const sec = document.getElementById(id);
@@ -591,8 +702,8 @@ function apply() {
   const key = mode + '\\n' + q.value;
   if (apply.last !== undefined && apply.last !== key && focusResults) {
     const target = shown
-      ? document.getElementById('lessons')
-      : document.querySelector('.worksheet:not([hidden]), #pictures figure:not([hidden]), .calc:not([hidden]), #files tr:not([hidden])');
+      ? (searching ? document.getElementById('hits') : document.getElementById('lessons'))
+      : document.querySelector('.hitcalc, .worksheet:not([hidden]), #pictures figure:not([hidden]), .calc:not([hidden]), #files tr:not([hidden])');
     if (target) target.scrollIntoView({ block: 'start' });
   }
   apply.last = key;
@@ -608,6 +719,7 @@ document.querySelectorAll('.filters button').forEach(b => b.addEventListener('cl
   apply();
 }));
 q.addEventListener('input', apply);
+document.querySelectorAll('a.calclink').forEach(a => a.addEventListener('click', e => e.stopPropagation()));
 document.querySelectorAll('button.copy').forEach(b => b.addEventListener('click', async () => {
   const pre = b.closest('.worksheet').querySelector('pre.plain');
   try {
@@ -944,7 +1056,7 @@ const html = `<!doctype html>
     <img class="path" data-img="${esc(pathImg)}" alt="Six stages in order: Zero, Foundations, Practitioner, Analyst, Strategist, Operator." width="1200">
     <ol class="steps">
       <li>Pick a stage in the list, or search for a topic or a lesson number.</li>
-      <li>Read the line. Open the lesson in the Course Hub when you want the video, the checklist and the quiz.</li>
+      <li>Open the lesson for the worked example, and use its calculator when the row has one.</li>
       <li>Copy the matching worksheet into your own notes. Leave every secret out of it.</li>
     </ol>
     <div class="safety">
@@ -952,7 +1064,7 @@ const html = `<!doctype html>
     </div>
     <h2>Films to start with</h2>
     <ul class="vids">${orientation}</ul>
-    <p class="links"><a href="index.html">Open the Course Hub</a> for the lessons themselves. Progress, ticks and quiz marks stay in that browser.</p>
+    <p class="links">The <a href="index.html">Course Hub</a>, in the same folder, has the video, the checklist and the quiz. Progress stays in that browser.</p>
     </div>
 
     <section id="lessons">
@@ -964,6 +1076,7 @@ const html = `<!doctype html>
         <button type="button" data-mode="expert" aria-pressed="false">Expert lessons (${expertCount})</button>
       </div>
       <p id="empty" hidden>Nothing matches that search. Try a lesson number such as 3.2, or a topic such as wallet, health factor, or worksheet.</p>
+      <div id="hits" hidden></div>
       ${stagesHtml}
     </section>
 
@@ -982,7 +1095,7 @@ const html = `<!doctype html>
 
     <section id="calculators">
       <h2>Calculators</h2>
-      <p class="lede">Twenty forms run in this file. Change a number and the result updates. The numbers follow the course formulas. They are for learning, not a forecast, and no income is promised.</p>
+      <p class="lede">Twenty forms run in this file, grouped by the stage that teaches them. Change a number and the result updates. The numbers follow the course formulas. They are for learning, not a forecast, and no income is promised.</p>
       <div class="calcs">${calcRows}</div>
     </section>
 
