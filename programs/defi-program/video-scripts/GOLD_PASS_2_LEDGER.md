@@ -18,7 +18,7 @@ Old mp4s / old gold scripts do not count, even if the queue elsewhere still says
 | 1.0 | Mastery Starter | new gold script: flow3d + chart3d anchors, glossary ticker, 3 diagram images | done |
 | 1.1 | What DeFi is, and the risk-first mindset | new gold script: flow3d + chart3d anchors, 6-layer ticker, cascade flow | done |
 | 1.2 | How a transaction actually happens | new gold script: flow3d + chart3d anchors, glossary ticker, nonce flow | done |
-| 1.3 | Wallets, keys, hardware & multisig | | pending |
+| 1.3 | Wallets, keys, hardware & multisig | new gold script: flow3d + chart3d anchors, glossary ticker, worked example | done |
 | 1.4 | Tokens, approvals & allowances | | pending |
 | 1.5 | Stablecoins and how they break | | pending |
 | 1.6 | Scam defence | | pending |
