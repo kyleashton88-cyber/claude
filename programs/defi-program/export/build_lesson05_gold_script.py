@@ -116,7 +116,7 @@ sc("steps", "Here's exactly what Sam does. Installs Rabby, from its official sit
    chapter="Sam's worked example", title="Sam's setup",
    steps=["Installs Rabby from its official site", "Writes the 12 words on the box's blank card", "Restores on a separate laptop", "Sees the same address: 0x4b...e1", "Only then sends real money"],
    result="Same address confirmed. The backup is proven, before a cent is at risk.")
-sc("statement", "Notice the detail that made this safe: the card in Sam's box arrived blank. That's exactly what a genuine device does, it generates the words with you, it never hands them to you pre-written. That one blank card is the whole tell.",
+sc("statement", "Notice the detail that made this safe: the card in Sam's box arrived blank. That's exactly what a genuine device does, it generates the words with you, it never hands them to you pre-written. That one blank card is the whole tell, and it's the same check worth making the moment any hardware wallet box is opened, regardless of the brand.",
    chapter="Sam's worked example", kicker="The tell", lines=["The card arrived blank.", "That's exactly what a real one does."], sub="A genuine device generates the words with you. It never hands them to you pre-written.")
 
 # ---------------------------------------------------------------- checklist and quiz
