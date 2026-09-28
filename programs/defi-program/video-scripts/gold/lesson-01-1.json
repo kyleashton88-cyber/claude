@@ -9,53 +9,62 @@
  "maxMinutes": 25,
  "tag": "Lesson 1.1",
  "gold": true,
- "music": true,
- "musicLevel": 0.14,
- "seed": 43,
- "use": "Lesson 1.1 page in the Whop course. Hand-written gold-standard script: the six-layer DeFi stack, self-custody/composability/transparency, risk-first rule, worked APY example.",
+ "seed": 111,
+ "use": "Lesson 1.1 page in the Whop course. Gold-standard script: a flow3d recreation of the module's own defi-stack.png anchor, a 6-layer glossary ticker, a chart3d anchor on how composability stacks dependencies, the risk-first rule, and the 12% APY worked example.",
  "thumbnail": {
-  "title": "The risk-first mindset",
+  "title": "What DeFi is, risk-first",
   "subtitle": "Lesson 1.1"
  },
  "scenes": [
   {
    "type": "title",
-   "chapter": "Intro",
+   "chapter": "Why it matters",
    "eyebrow": "Lesson 1.1",
    "num": "1.1",
    "title": "What DeFi is, and the risk-first mindset",
-   "sub": "The stack, the trade-offs, and the one question before any yield.",
-   "vo": "Lesson one point one. What DeFi is, and the risk-first mindset. By the end, you'll be able to name every layer of the DeFi stack, and ask the one question that matters before any yield: what am I being paid to risk?",
-   "cap": "Lesson 1.1. What DeFi is, and the risk-first mindset. By the end, you'll be able to name every layer of the DeFi stack, and ask the one question that matters before any yield: what am I being paid to risk?"
+   "sub": "Every yield is payment for a risk.",
+   "vo": "Lesson one point one. What DeFi is, and the risk-first mindset. By the end, you'll be able to describe the DeFi stack, and explain why every yield is payment for a risk, whether or not the website mentions it."
+  },
+  {
+   "type": "statement",
+   "chapter": "Why it matters",
+   "kicker": "Why it matters",
+   "lines": [
+    "Smart contracts replace intermediaries.",
+    "No support line. No manager to call."
+   ],
+   "sub": "Every protection now comes from your own habits.",
+   "vo": "Here's the shift this lesson makes. DeFi replaces intermediaries, banks, brokers, exchanges, with smart contracts: public programs on a blockchain that hold assets and follow fixed rules. Nobody's judgment sits in the middle. That's exactly what makes it powerful, and exactly what makes it dangerous. That absence of a middleman means something very practical, too: there's no support line to call if a transaction does something you didn't intend, and no manager who can reverse it. Every protection you'd normally get from an institution has to come from your own habits instead, which is exactly why this module exists.",
+   "cap": "Here's the shift this lesson makes. DeFi replaces intermediaries, banks, brokers, exchanges, with smart contracts: public programs on a blockchain that hold assets and follow fixed rules. Nobody's judgment sits in the middle. That's exactly what makes it powerful, and exactly what makes it dangerous. That absence of a middleman means something very practical, too: there's no support line to call if a transaction does something you didn't intend, and no manager who can reverse it. Every protection you'd normally get from an institution has to come from your own habits instead, which is exactly why this module exists."
   },
   {
    "type": "pillars",
-   "chapter": "Intro",
+   "chapter": "Why it matters",
    "title": "What this lesson covers",
    "items": [
     {
      "icon": "layers",
-     "title": "The six-layer stack",
-     "text": "What sits under every DeFi app"
+     "title": "The DeFi stack",
+     "text": "Six layers, bottom to top"
     },
     {
-     "icon": "grid",
-     "title": "Powerful & dangerous",
-     "text": "Self-custody, composability, transparency"
+     "icon": "alert",
+     "title": "Powerful and dangerous",
+     "text": "Three properties, both at once"
     },
     {
      "icon": "target",
-     "title": "Risk-first",
-     "text": "List the risk before the return"
+     "title": "The risk-first rule",
+     "text": "Name the risk before the return"
     },
     {
-     "icon": "search",
+     "icon": "coins",
      "title": "A worked example",
-     "text": "A 12% APY pool, checked properly"
+     "text": "A 12% pool, five questions"
     }
    ],
-   "vo": "Here's the plan. First, what DeFi actually replaces, and the six layers underneath every app you'll ever use. Second, the three properties that make DeFi both powerful and dangerous. Third, the risk-first rule. And finally, a full worked example: a pool advertising twelve percent A.P.Y., and the five questions you ask before you believe it.",
-   "cap": "Here's the plan. First, what DeFi actually replaces, and the six layers underneath every app you'll ever use. Second, the three properties that make DeFi both powerful and dangerous. Third, the risk-first rule. And finally, a full worked example: a pool advertising 12% APY, and the five questions you ask before you believe it."
+   "vo": "Here's the plan. First, the DeFi stack, six layers, bottom to top. Second, three properties that make it powerful and dangerous, at the same time. Third, the risk-first rule: name what you could lose before you compare returns. And finally, a real worked example, a pool advertising twelve percent, and the five questions it should raise.",
+   "cap": "Here's the plan. First, the DeFi stack, six layers, bottom to top. Second, three properties that make it powerful and dangerous, at the same time. Third, the risk-first rule: name what you could lose before you compare returns. And finally, a real worked example, a pool advertising 12%, and the five questions it should raise."
   },
   {
    "type": "title",
@@ -63,391 +72,464 @@
    "eyebrow": "The DeFi stack",
    "num": "6",
    "title": "Six layers, bottom to top",
-   "sub": "What DeFi actually replaces.",
+   "sub": "Each one a different place things can go wrong.",
    "vo": "The DeFi stack."
   },
   {
-   "type": "statement",
+   "type": "flow3d",
    "chapter": "The DeFi stack",
-   "kicker": "What DeFi replaces",
-   "lines": [
-    "Banks, brokers, exchanges.",
-    "With public, fixed-rule programs."
-   ],
-   "sub": "Smart contracts hold assets and follow the same rules for everyone.",
-   "vo": "Start with what DeFi replaces. Banks, brokers and exchanges are intermediaries: companies that sit in the middle of a financial transaction. DeFi replaces them with smart contracts: public programs on a blockchain that hold assets and follow fixed rules, for everyone, the same way, every time."
-  },
-  {
-   "type": "flow",
-   "chapter": "The DeFi stack",
-   "title": "The DeFi stack, bottom to top",
+   "title": "The DeFi stack, simplified",
    "nodes": [
     {
-     "label": "Blockchain",
-     "sub": "Records every balance and transaction",
+     "label": "Chain",
+     "sub": "Settles every transaction",
      "icon": "layers"
     },
     {
-     "label": "Smart contracts",
-     "sub": "The protocol logic itself",
-     "icon": "code"
-    },
-    {
-     "label": "Tokens",
-     "sub": "The assets the contracts move",
-     "icon": "coins"
-    },
-    {
      "label": "Wallet",
-     "sub": "You hold the keys, you sign",
+     "sub": "Holds your keys and signs",
      "icon": "wallet"
     },
     {
-     "label": "Interface",
-     "sub": "Builds transactions for you",
-     "icon": "globe"
+     "label": "App",
+     "sub": "Smart contracts: swap, lend, stake",
+     "icon": "grid"
+    },
+    {
+     "label": "Position",
+     "sub": "What you hold, and what it risks",
+     "icon": "target"
+    }
+   ],
+   "vo": "Here's the stack, simplified to its core idea. The chain settles every transaction. Your wallet holds the keys and signs. The app is the smart contract itself, doing the swapping, lending or staking. And your position is what you actually hold, and what it risks. Every yield you'll ever see pays for something in this chain."
+  },
+  {
+   "type": "ticker",
+   "chapter": "The DeFi stack",
+   "title": "The six layers, in full",
+   "items": [
+    {
+     "label": "Blockchain",
+     "value": "Records every transaction"
+    },
+    {
+     "label": "Smart contracts",
+     "value": "The protocol logic itself"
+    },
+    {
+     "label": "Tokens",
+     "value": "Assets the contracts move"
+    },
+    {
+     "label": "Wallets",
+     "value": "Where you hold your keys"
+    },
+    {
+     "label": "Interfaces",
+     "value": "Build transactions for you"
     },
     {
      "label": "Data layers",
-     "sub": "Explorers, dashboards: verify it",
-     "icon": "eye"
+     "value": "Verify what happened"
     }
    ],
-   "vo": "Here's the stack, bottom to top. The blockchain records every balance and transaction. Smart contracts are the protocol logic: a lending market, an exchange pool. Tokens are the assets those contracts move. Your wallet is where you hold the keys and sign actions. The interface is the website that builds transactions for you, a convenience, not the protocol itself. And data layers, explorers and dashboards, are how you verify what actually happened."
+   "vo": "In full, it's six layers. The blockchain records every balance and transaction. Smart contracts are the protocol logic itself, a lending market, an exchange pool. Tokens are the assets those contracts move. Wallets are where you hold keys and sign actions. Interfaces are websites that build transactions for you, a convenience, not the protocol. And data layers, explorers and dashboards, let you verify what actually happened."
   },
   {
-   "type": "image",
-   "src": "assets/diagrams/tx-lifecycle.png",
-   "eyebrow": "A preview of the bottom layer",
-   "wide": true,
+   "type": "bullets",
    "chapter": "The DeFi stack",
-   "vo": "A quick preview, because it matters for the whole stack above it. The blockchain layer isn't abstract: every action you take, in every layer above it, ultimately becomes a transaction that goes through this exact life cycle. You'll get the full picture in Lesson one point two. For now, just notice that “the blockchain records it” isn't a metaphor. It's the layer everything else sits on.",
-   "cap": "A quick preview, because it matters for the whole stack above it. The blockchain layer isn't abstract: every action you take, in every layer above it, ultimately becomes a transaction that goes through this exact life cycle. You'll get the full picture in Lesson 1.2. For now, just notice that “the blockchain records it” isn't a metaphor. It's the layer everything else sits on."
+   "title": "Six layers, six failure modes",
+   "items": [
+    "Chain: can reorg, stall, or get congested",
+    "Contracts: can contain bugs, or be upgraded against you",
+    "Tokens: can lose their peg",
+    "Wallets: can be compromised or phished",
+    "Interfaces: can be spoofed",
+    "Data layers: can be misread, or simply wrong"
+   ],
+   "vo": "Here's why memorising six layers actually matters: each one is also a place something specific can go wrong. The chain can reorg, go down, or get congested. Contracts can contain bugs, or be upgraded in ways that don't favour you. Tokens can lose their peg. Wallets can be compromised or phished. Interfaces can be spoofed. And data layers can simply be misread, or wrong. Six layers, six distinct failure modes."
   },
   {
    "type": "statement",
    "chapter": "The DeFi stack",
-   "kicker": "One layer to watch",
+   "kicker": "A website is not the protocol",
    "lines": [
-    "The interface isn't the protocol.",
-    "It's a convenience that can be faked."
+    "An interface only builds transactions.",
+    "It can be faked. The contracts still run."
    ],
-   "sub": "The contracts are what actually hold and move your money.",
-   "vo": "Notice where the interface sits. It's a convenience, not the protocol. A website can go down, get hacked, or be faked entirely, and the underlying contracts keep running exactly as written. That's also why a fake website is such an effective scam: it looks identical, but it's not the layer that actually holds your money."
-  },
-  {
-   "type": "quiz",
-   "chapter": "The DeFi stack",
-   "n": 1,
-   "of": 4,
-   "q": "Is a DeFi website the same thing as the protocol it represents?",
-   "a": "No. The interface only builds transactions. The contracts are the protocol, and interfaces can be faked or compromised.",
-   "vo": "Quick check. Is a DeFi website the same thing as the protocol it represents? [[pause 4]] The answer: no. The interface only builds transactions for you. The smart contracts are the protocol, and interfaces can be faked or compromised without touching the contracts at all."
+   "sub": "This exact distinction is one of this lesson's quiz questions.",
+   "vo": "One layer deserves special attention: the interface. A website is not the protocol. It's a convenience that builds transactions for you, nothing more. Interfaces can be faked, compromised, or simply wrong, while the underlying contracts keep working exactly as written."
   },
   {
    "type": "title",
    "chapter": "Powerful and dangerous",
    "eyebrow": "Powerful and dangerous",
    "num": "3",
-   "title": "Three properties, both ways",
+   "title": "Three properties, both at once",
    "sub": "Self-custody · Composability · Transparency",
    "vo": "Powerful and dangerous."
   },
   {
    "type": "compare",
    "chapter": "Powerful and dangerous",
+   "title": "Self-custody, composability, transparency",
    "left": {
-    "label": "A bank account",
-    "tone": "neutral",
+    "label": "The upside",
+    "tone": "good",
     "items": [
-     "The bank can freeze it",
-     "The bank can help you recover it"
+     "Nobody can freeze your funds",
+     "Protocols combine into powerful products",
+     "Everything is verifiable, on-chain"
     ]
    },
    "right": {
-    "label": "Your own DeFi wallet",
-    "tone": "good",
+    "label": "The same property, reversed",
+    "tone": "bad",
     "items": [
-     "Nobody can freeze it",
-     "Nobody can recover it for you, either"
+     "Nobody can recover them either",
+     "A position inherits what it depends on",
+     "Verifiable isn't the same as safe"
     ]
    },
-   "vo": "Property one: self-custody. In a bank, the bank can freeze your account, and the bank can also help you recover it if something goes wrong. In your own DeFi wallet, nobody can freeze your funds. Nobody can recover them for you either. It's the same trade-off from Module Zero, and it's worth repeating here because this whole module is built around it."
+   "vo": "Three properties define DeFi, and each one cuts both ways. Self-custody means nobody can freeze your funds; it also means nobody can recover them if something goes wrong. Composability means protocols plug into each other, making powerful products; it also means a position can fail because of something it merely depends on. And transparency means you can verify everything on-chain; it doesn't mean any of it is safe."
   },
   {
-   "type": "stats",
+   "type": "statement",
    "chapter": "Powerful and dangerous",
-   "stats": [
-    [
-     "≈ 1 in 5",
-     "bitcoin estimated permanently lost (outside research, illustrative)"
-    ]
+   "kicker": "Not a new idea",
+   "lines": [
+    "Lesson 0.4's exchange-vs-wallet distinction.",
+    "DeFi runs entirely on the wallet side."
    ],
-   "vo": "One sobering number on self-custody, from outside research, not this program. Blockchain-analytics researchers have estimated that somewhere around a fifth of all bitcoin ever mined sits in wallets that are effectively lost: forgotten passwords, discarded hard drives, seed phrases nobody can find anymore. Nobody can recover it. Nobody can freeze it either. Same coin, both directions, permanently.",
-   "cap": "One sobering number on self-custody, from outside research, not this program. Blockchain-analytics researchers have estimated that somewhere around a fifth of all bitcoin ever mined sits in wallets that are effectively lost: forgotten passwords, discarded hard drives, seed phrases nobody can find anymore. Nobody can recover it. Nobody can freeze it either. Same coin, both directions, permanently."
+   "sub": "By design, not by accident.",
+   "vo": "You've already met self-custody in practice, back in Lesson zero point four. An exchange can freeze a withdrawal; a wallet only you control cannot be frozen by anyone else, for any reason. DeFi runs entirely on that second kind of custody, by design, not by accident.",
+   "cap": "You've already met self-custody in practice, back in Lesson 0.4. An exchange can freeze a withdrawal; a wallet only you control cannot be frozen by anyone else, for any reason. DeFi runs entirely on that second kind of custody, by design, not by accident."
   },
   {
    "type": "flow",
    "chapter": "Powerful and dangerous",
-   "title": "Composability: blocks plugged into blocks",
+   "title": "How a dependency failure cascades",
    "nodes": [
     {
-     "label": "Stablecoin",
-     "sub": "Deposited into...",
-     "icon": "coins"
+     "label": "An oracle reports a bad price",
+     "sub": "Manipulated, even if briefly",
+     "icon": "alert",
+     "tone": "bad"
     },
     {
-     "label": "Lending market",
-     "sub": "Its receipt goes into...",
-     "icon": "bank"
+     "label": "A lending contract trusts it anyway",
+     "sub": "That's what it was built to do",
+     "icon": "grid",
+     "tone": "bad"
     },
     {
-     "label": "Yield vault",
-     "sub": "Its shares become...",
-     "icon": "grid"
+     "label": "Positions get wrongly liquidated",
+     "sub": "Through no fault of their own",
+     "icon": "coins",
+     "tone": "bad"
     },
     {
-     "label": "Collateral elsewhere",
-     "sub": "One failure, several layers down, reaches here",
-     "icon": "alert"
+     "label": "Real depositors carry the loss",
+     "sub": "For depending on that same oracle",
+     "icon": "users",
+     "tone": "bad"
     }
    ],
-   "vo": "Property two: composability. DeFi protocols plug into each other, like building blocks. A stablecoin can be deposited into a lending market. The interest-bearing receipt from that lending market can be deposited into a yield vault. That vault's shares can be used as collateral somewhere else. Composability is what makes DeFi powerful, letting small pieces combine into complex products. It's also why one position can fail because of something several layers away that it quietly depends on."
+   "edges": [
+    {
+     "from": "0",
+     "to": "1",
+     "tone": "bad"
+    },
+    {
+     "from": "1",
+     "to": "2",
+     "tone": "bad"
+    },
+    {
+     "from": "2",
+     "to": "3",
+     "tone": "bad"
+    }
+   ],
+   "vo": "Here's roughly how a composability failure actually cascades, so it isn't just an abstract word. A price oracle reports a manipulated, momentarily wrong price. A lending contract, built to trust that oracle completely, acts on it anyway. Positions get liquidated that never should have been. And the losses land on real depositors, who did nothing wrong except depend on that same oracle. Lesson five point three covers oracle manipulation properly.",
+   "cap": "Here's roughly how a composability failure actually cascades, so it isn't just an abstract word. A price oracle reports a manipulated, momentarily wrong price. A lending contract, built to trust that oracle completely, acts on it anyway. Positions get liquidated that never should have been. And the losses land on real depositors, who did nothing wrong except depend on that same oracle. Lesson 5.3 covers oracle manipulation properly."
   },
   {
    "type": "statement",
    "chapter": "Powerful and dangerous",
-   "kicker": "Property three",
+   "kicker": "Not hypothetical",
    "lines": [
-    "Transparent doesn't mean safe.",
-    "It means checkable."
+    "A well-documented category of real exploits.",
+    "Not a rare edge case."
    ],
-   "sub": "A visible contract can still have a bug, an admin key, or a subsidy that runs out.",
-   "vo": "Property three: transparency. Every DeFi transaction and every contract's code can be checked by anyone, for free, on a block explorer. That's genuinely powerful. But transparent doesn't mean safe. A contract can be fully visible and still contain a bug, an admin key that can change the rules, or economics that only work while a subsidy lasts. Transparency gives you the ability to check. It doesn't check for you."
+   "sub": "Why serious protocols invest so heavily in oracle design.",
+   "vo": "This isn't a hypothetical pattern, either. Oracle manipulation causing incorrect liquidations is a well-documented category of real DeFi exploits, not a rare edge case. It's precisely why serious protocols spend so much engineering effort on oracle design, and why Lesson five point three treats it as a subject on its own.",
+   "cap": "This isn't a hypothetical pattern, either. Oracle manipulation causing incorrect liquidations is a well-documented category of real DeFi exploits, not a rare edge case. It's precisely why serious protocols spend so much engineering effort on oracle design, and why Lesson 5.3 treats it as a subject on its own."
+  },
+  {
+   "type": "chart3d",
+   "chapter": "Powerful and dangerous",
+   "kind": "bars",
+   "title": "How many things a position depends on",
+   "sub": "Illustrative examples, not a formula",
+   "bars": [
+    {
+     "label": "Holding a token",
+     "text": "Just the chain itself",
+     "value": 1,
+     "show": "1 dependency"
+    },
+    {
+     "label": "A basic lending deposit",
+     "text": "Chain, contract, oracle",
+     "value": 3,
+     "show": "3 dependencies"
+    },
+    {
+     "label": "A leveraged, multi-protocol position",
+     "text": "Chain, contracts, oracle, bridge",
+     "value": 5,
+     "show": "5+ dependencies",
+     "tone": "bad"
+    }
+   ],
+   "vo": "Here's composability, made concrete, purely as an illustration of how dependencies stack. Simply holding a token depends on one thing: the chain itself. A basic lending deposit depends on three: the chain, the lending contract, and the price oracle it relies on. And a leveraged position across multiple protocols can depend on five or more: the chain, several contracts, an oracle, and often a bridge. More layers, more yield, usually more places for something to go wrong."
   },
   {
    "type": "statement",
    "chapter": "Powerful and dangerous",
-   "kicker": "A real example",
+   "kicker": "Seeing it isn't avoiding it",
    "lines": [
-    "May 2022: Terra's collapse",
-    "stressed stETH markets, layers away."
+    "Every layer is an extra way to lose money.",
+    "Transparency lets you see it. Not avoid it."
    ],
-   "sub": "A position can feel an event it has no obvious connection to.",
-   "vo": "Here's a real example of composability biting, not a hypothetical. In May of two thousand twenty-two, during the collapse of the Terra ecosystem, a liquid staking token called stETH briefly traded below the value of the ETH it represented, on the open market, even though it was still redeemable one-to-one over time. Protocols that had accepted stETH as collateral, several layers away from Terra itself, felt real stress from an event that, on the surface, had nothing to do with them."
-  },
-  {
-   "type": "quiz",
-   "chapter": "Powerful and dangerous",
-   "n": 2,
-   "of": 4,
-   "q": "Why can composability increase risk, even in a position that looks simple?",
-   "a": "A position inherits the failure risk of every protocol, asset, oracle and bridge it depends on — even ones you can't see from the front end.",
-   "vo": "Quick check. Why can composability increase risk, even in a position that looks simple on the surface? [[pause 4]] The answer: a position inherits the failure risk of every protocol, asset, oracle and bridge it depends on, even the ones you can't see from the front end."
+   "sub": "That's exactly why the next rule exists.",
+   "vo": "That's the real cost of composability: every extra layer you depend on is an extra way to lose money that has nothing to do with your own decisions. Transparency lets you see all of it, but seeing a risk and avoiding it are two very different things."
   },
   {
    "type": "title",
    "chapter": "The risk-first rule",
    "eyebrow": "The risk-first rule",
    "num": "1",
-   "title": "One rule, before every yield",
-   "sub": "List the risk before you compare the return.",
+   "title": "Name the risk, before the return",
+   "sub": "One sentence, before any deposit.",
    "vo": "The risk-first rule."
   },
   {
    "type": "statement",
    "chapter": "The risk-first rule",
-   "kicker": "Applying it",
+   "kicker": "The risk-first rule",
    "lines": [
-    "“What if stETH trades below ETH?”",
-    "Asked in advance, not after."
+    "List what could make you lose money.",
+    "Before you ever compare returns."
    ],
-   "sub": "The whole difference between surprised and already sized for it.",
-   "vo": "Apply that rule to the stETH example from a moment ago. A risk-first operator, before ever depositing stETH as collateral anywhere, would have asked: what happens to this position if stETH trades below ETH on the open market, even briefly? That single question, asked in advance, is the entire difference between being surprised by an event and having already sized for it."
-  },
-  {
-   "type": "statement",
-   "chapter": "The risk-first rule",
-   "kicker": "The rule",
-   "lines": [
-    "List the risk",
-    "before you compare the return."
-   ],
-   "sub": "A higher yield means you're paid to carry more risk, named or not.",
-   "vo": "Here's the rule this whole program is built on. Before comparing returns, list what could make you lose money. A higher yield means you're being paid to carry more risk, whether or not the website mentions it. If you can't name the risk, you don't understand the yield, no matter how good the number looks."
+   "sub": "A higher yield means more risk, mentioned or not.",
+   "vo": "Here's the whole rule, in one sentence. Before comparing returns, list what could make you lose money. A higher yield means you're being paid to carry more risk, whether or not the website ever mentions it. If you can't name the risk, you haven't actually evaluated the return."
   },
   {
    "type": "compare",
    "chapter": "The risk-first rule",
+   "title": "A familiar comparison",
    "left": {
-    "label": "Return-first",
-    "tone": "bad",
+    "label": "A modest, insured rate",
+    "tone": "neutral",
     "items": [
-     "Starts with the number",
-     "Risk is a footnote, checked later",
-     "Sizes around the opportunity"
+     "Well understood risk",
+     "Boring, by design"
     ]
    },
    "right": {
-    "label": "Risk-first",
-    "tone": "good",
+    "label": "Several times that, on the same dollar",
+    "tone": "bad",
     "items": [
-     "Starts with what could go wrong",
-     "Sizes the position around that",
-     "Then checks if the return is worth it"
+     "No such insurance",
+     "Several dependencies from the stack"
     ]
    },
-   "vo": "Here's the difference between the two mindsets, side by side. Return-first starts with the number, asks how to get more of it, and treats risk as a footnote to check later, if ever. Risk-first starts with what could go wrong, sizes the position around that answer, and only then looks at whether the remaining return is worth it. Same opportunity. Completely different order of operations."
+   "vo": "Try it on a familiar shape of comparison. An ordinary savings product paying a modest rate is boring precisely because its risk is well understood and, in many places, insured. A DeFi pool paying several times that on the same kind of dollar carries no such insurance, and probably several dependencies from the stack you just saw. The extra yield isn't free. It's the price of everything this lesson just described."
   },
   {
-   "type": "flow",
+   "type": "statement",
    "chapter": "The risk-first rule",
-   "title": "The risk-first rule, as a habit",
-   "nodes": [
-    {
-     "label": "See a yield",
-     "icon": "chart"
-    },
-    {
-     "label": "Ask what fails",
-     "sub": "Before anything else",
-     "icon": "search"
-    },
-    {
-     "label": "Name every risk",
-     "sub": "Contract, oracle, bridge, peg",
-     "icon": "alert"
-    },
-    {
-     "label": "Size for being wrong",
-     "sub": "So it doesn't matter much",
-     "icon": "target"
-    },
-    {
-     "label": "Then decide",
-     "sub": "Deposit, or don't",
-     "icon": "check"
-    }
+   "kicker": "Where this rule shows up again",
+   "lines": [
+    "1.5 stablecoins · 5.3 oracles · 6.1 due diligence.",
+    "Most of this program builds on this one rule."
    ],
-   "vo": "Here's what asking the question actually looks like, step by step. You see a yield. You ask what could make it fail, before anything else. You name every risk you can find: contract, oracle, bridge, peg. You size the position so that if you're wrong, it doesn't matter much. And only then do you deposit, or decide not to."
+   "sub": "Name the risk before the return. That's the model.",
+   "vo": "You'll apply this exact rule constantly from here on. Stablecoin risk gets its own lesson, one point five. Oracle risk gets its own lesson, five point three. Protocol due diligence gets an entire lesson, six point one. This single mental model, name the risk before the return, is what most of the rest of this program actually builds on.",
+   "cap": "You'll apply this exact rule constantly from here on. Stablecoin risk gets its own lesson, 1.5. Oracle risk gets its own lesson, 5.3. Protocol due diligence gets an entire lesson, 6.1. This single mental model, name the risk before the return, is what most of the rest of this program actually builds on."
   },
   {
    "type": "title",
-   "chapter": "Worked example",
-   "eyebrow": "Worked example",
-   "num": "12%",
-   "title": "A pool advertises 12% APY on a stablecoin",
-   "sub": "Five questions, before you deposit a cent.",
-   "vo": "Worked example."
+   "chapter": "A worked example",
+   "eyebrow": "A worked example",
+   "num": "12",
+   "title": "A pool advertising 12%",
+   "sub": "Five questions, before a single dollar moves.",
+   "vo": "A worked example."
   },
   {
-   "type": "image",
-   "src": "assets/diagrams/profit-sources.png",
-   "eyebrow": "Question one: where does it come from?",
-   "wide": true,
-   "chapter": "Worked example",
-   "vo": "Question one, and the most important: where does the twelve percent actually come from? Every DeFi return is a mix of five sources. Service fees, paid by traders. Interest, paid by borrowers. Security rewards, for staking. Structural carry, like funding and basis. And incentives: emissions or points, which are only real once you've sold them. If the answer is “incentives,” that twelve percent has an expiry date.",
-   "cap": "Question one, and the most important: where does the 12% actually come from? Every DeFi return is a mix of five sources. Service fees, paid by traders. Interest, paid by borrowers. Security rewards, for staking. Structural carry, like funding and basis. And incentives: emissions or points, which are only real once you've sold them. If the answer is “incentives,” that 12% has an expiry date."
-  },
-  {
-   "type": "chart",
-   "chapter": "Worked example",
-   "kind": "donut",
-   "title": "Decomposing an example 12% APY",
-   "sub": "Illustrative — every pool's mix is different",
-   "center": "12%",
-   "centerSub": "headline APY",
-   "segs": [
-    {
-     "label": "Trading fees",
-     "text": "Real, durable",
-     "value": 2,
-     "show": "2%",
-     "tone": "good"
-    },
-    {
-     "label": "Borrower interest",
-     "text": "Real, durable",
-     "value": 1,
-     "show": "1%",
-     "tone": "good"
-    },
-    {
-     "label": "Reward-token emissions",
-     "text": "Only real once sold; can stop anytime",
-     "value": 9,
-     "show": "9%",
-     "tone": "bad"
-    }
-   ],
-   "note": "9 of the 12 points only exist while the emissions keep flowing.",
-   "vo": "So let's actually decompose an example twelve percent, the way an operator would. Say two percent comes from real trading fees. One percent from real borrower interest. And the remaining nine percent, the biggest slice by far, from a reward token being emitted to attract deposits. That nine percent only exists while the emissions keep flowing, and it's only real once you've sold the reward token for something else. The headline number and the durable number are two very different things.",
-   "cap": "So let's actually decompose an example 12%, the way an operator would. Say 2% comes from real trading fees. 1% from real borrower interest. And the remaining 9%, the biggest slice by far, from a reward token being emitted to attract deposits. That 9% only exists while the emissions keep flowing, and it's only real once you've sold the reward token for something else. The headline number and the durable number are two very different things."
-  },
-  {
-   "type": "bullets",
-   "chapter": "Worked example",
-   "title": "Four more questions before you deposit",
-   "numbered": true,
-   "items": [
-    "Which stablecoin, and what backs it? (Lesson 1.5)",
+   "type": "steps",
+   "chapter": "A worked example",
+   "title": "Five questions, before you deposit",
+   "steps": [
+    "Where does the 12% actually come from?",
+    "Which stablecoin, and what backs it?",
     "Which contracts hold the money, and who can upgrade them?",
-    "Is a bridge or an oracle involved?",
-    "How do you withdraw — and could it be blocked?"
+    "Is a bridge or oracle involved?",
+    "How do you withdraw, and could it be blocked?"
    ],
-   "vo": "And four more questions, before you deposit. Which stablecoin, and what actually backs it? You'll learn to judge that properly in Lesson one point five. Which contracts hold the money, and who can upgrade them? Is there a bridge or an oracle involved, each one another thing that can fail? And how do you withdraw, and could withdrawals ever be blocked? If you can't answer these five questions, you don't know what the twelve percent is paying you for.",
-   "cap": "And four more questions, before you deposit. Which stablecoin, and what actually backs it? You'll learn to judge that properly in Lesson 1.5. Which contracts hold the money, and who can upgrade them? Is there a bridge or an oracle involved, each one another thing that can fail? And how do you withdraw, and could withdrawals ever be blocked? If you can't answer these five questions, you don't know what the 12% is paying you for."
+   "result": "If you can't answer these, you don't know what the 12% is paying you for.",
+   "vo": "Here's the worked example. A pool advertises twelve percent A.P.Y. on a stablecoin, purely as an illustration. Before depositing, ask five things. Where does the twelve percent actually come from: borrowers paying interest, trading fees, or a reward token? Which stablecoin is it, and what actually backs it, the subject of Lesson one point five? Which contracts hold the money, and who has the power to upgrade them? Is there a bridge or a price oracle quietly involved? And how do you withdraw, and could withdrawals ever be blocked?",
+   "cap": "Here's the worked example. A pool advertises 12% APY on a stablecoin, purely as an illustration. Before depositing, ask five things. Where does the 12% actually come from: borrowers paying interest, trading fees, or a reward token? Which stablecoin is it, and what actually backs it, the subject of Lesson 1.5? Which contracts hold the money, and who has the power to upgrade them? Is there a bridge or a price oracle quietly involved? And how do you withdraw, and could withdrawals ever be blocked?"
   },
   {
-   "type": "quiz",
-   "chapter": "Worked example",
-   "n": 3,
-   "of": 4,
-   "q": "If 9 of a pool's 12% APY comes from emitted reward tokens, what should you assume about that 9%?",
-   "a": "It's not durable — it only exists while emissions continue, and it's only real once you've sold the reward token.",
-   "vo": "One more. If nine of a pool's twelve percent A.P.Y. comes from a reward token being emitted, what should you assume about that nine percent? [[pause 4]] The answer: it's not durable. It only exists while the emissions continue, and it's only real once you've actually sold the reward token.",
-   "cap": "One more. If 9 of a pool's 12% APY comes from a reward token being emitted, what should you assume about that 9%? [[pause 4]] The answer: it's not durable. It only exists while the emissions continue, and it's only real once you've actually sold the reward token."
+   "type": "compare",
+   "chapter": "A worked example",
+   "title": "A real answer, versus a red flag",
+   "left": {
+    "label": "A real answer",
+    "tone": "good",
+    "items": [
+     "Specific: rates, sources, a schedule",
+     "Checkable against the contracts"
+    ]
+   },
+   "right": {
+    "label": "A red flag",
+    "tone": "bad",
+    "items": [
+     "“Just trust the protocol”",
+     "Vague, and permanent-sounding"
+    ]
+   },
+   "vo": "Here's the difference between an answer that actually tells you something, and one that doesn't. A real answer sounds specific: borrowers pay a base rate, the rest is a temporary reward token that will taper off on a known schedule. A red flag sounds like reassurance instead of information: just trust the protocol, it's always worked. Vague and permanent-sounding is exactly the shape a bad answer takes."
   },
   {
-   "type": "quiz",
-   "chapter": "Worked example",
-   "n": 4,
-   "of": 4,
-   "q": "In one sentence, what is the risk-first mindset?",
-   "a": "Identify what could make you lose money before you compare returns.",
-   "vo": "Last check. In one sentence, what is the risk-first mindset? [[pause 4]] The answer: identify what could make you lose money, before you compare returns."
+   "type": "statement",
+   "chapter": "A worked example",
+   "kicker": "Not cynicism. Due diligence.",
+   "lines": [
+    "The same due diligence a loan officer runs.",
+    "Except here, nobody does it for you."
+   ],
+   "sub": "That's the trade self-custody makes.",
+   "vo": "Notice what this exercise actually is. It isn't cynicism about DeFi. It's the same due diligence a bank loan officer runs before approving a rate, just done by you, because here, nobody else is going to do it on your behalf."
+  },
+  {
+   "type": "title",
+   "chapter": "Checklist and quiz",
+   "eyebrow": "Checklist and quiz",
+   "num": "3",
+   "title": "Confirm you've got it",
+   "sub": "Three boxes, five questions.",
+   "vo": "Checklist and quiz."
   },
   {
    "type": "bullets",
-   "chapter": "Checklist",
-   "title": "Your checklist",
+   "chapter": "Checklist and quiz",
+   "title": "Before you move on",
    "numbered": true,
    "items": [
-    "Name the six layers of the DeFi stack",
-    "Explain why self-custody cuts both ways",
+    "Can name the six layers of the DeFi stack",
+    "Can explain why self-custody cuts both ways",
     "Before any yield: “what am I being paid to risk?”"
    ],
-   "vo": "Here's your checklist. Do it now, for real. First, you can name the six layers of the DeFi stack. Second, you can explain why self-custody cuts both ways. And third, before any yield, you ask: what am I being paid to risk?"
+   "vo": "Here's this lesson's checklist. You can name the six layers of the DeFi stack, without looking them up. You can explain why self-custody cuts both ways, in one sentence. And before any yield, you ask yourself: what am I actually being paid to risk?"
   },
   {
-   "type": "bullets",
-   "chapter": "Recap",
-   "title": "Recap",
-   "check": false,
-   "items": [
-    "DeFi replaces intermediaries with smart contracts, six layers deep",
-    "Self-custody, composability, transparency: powerful and dangerous",
-    "Risk-first: list the risk before you compare the return"
+   "type": "quiz",
+   "chapter": "Checklist and quiz",
+   "n": 1,
+   "of": 5,
+   "q": "Why can composability increase risk?",
+   "a": "A position inherits the failure risk of everything it depends on.",
+   "vo": "Question one. Why can composability increase risk? [[pause 4]] The answer: a position inherits the failure risk of every protocol, asset, oracle and bridge it depends on, not just its own."
+  },
+  {
+   "type": "quiz",
+   "chapter": "Checklist and quiz",
+   "n": 2,
+   "of": 5,
+   "q": "Is a website the same thing as the protocol?",
+   "a": "No. The interface only builds transactions; the contracts are the protocol.",
+   "vo": "Question two. Is a website the same thing as the protocol? [[pause 4]] The answer: no. The interface only builds transactions. The contracts are the actual protocol, and interfaces can be faked or compromised."
+  },
+  {
+   "type": "quiz",
+   "chapter": "Checklist and quiz",
+   "n": 3,
+   "of": 5,
+   "q": "What is the risk-first mindset, in one sentence?",
+   "a": "Identify what could make you lose money before you compare returns.",
+   "vo": "Question three. What's the risk-first mindset, in one sentence? [[pause 4]] The answer: identify what could make you lose money, before you ever compare returns."
+  },
+  {
+   "type": "quiz",
+   "chapter": "Checklist and quiz",
+   "n": 4,
+   "of": 5,
+   "q": "A pool offers a much higher yield than everywhere else. What does that tell you?",
+   "a": "You're being paid to carry more risk somewhere, whether it's obvious yet or not.",
+   "vo": "Question four. A pool offers a much higher yield than everywhere else. What should that immediately tell you? [[pause 4]] The answer: that you're being paid to carry more risk somewhere, whether or not it's obvious yet."
+  },
+  {
+   "type": "quiz",
+   "chapter": "Checklist and quiz",
+   "n": 5,
+   "of": 5,
+   "q": "What does self-custody take away, in exchange for nobody freezing your funds?",
+   "a": "Nobody can recover them for you either, if something goes wrong.",
+   "vo": "Question five. What does self-custody take away, in exchange for nobody being able to freeze your funds? [[pause 4]] The answer: nobody can recover them for you either, if something goes wrong."
+  },
+  {
+   "type": "flow",
+   "chapter": "Recap and next",
+   "title": "This lesson, recapped as one loop",
+   "layout": "cycle",
+   "nodes": [
+    {
+     "label": "Know the stack",
+     "icon": "layers"
+    },
+    {
+     "label": "The interface isn't the protocol",
+     "icon": "eye"
+    },
+    {
+     "label": "Name what you depend on",
+     "icon": "grid"
+    },
+    {
+     "label": "Verify, don't just trust",
+     "icon": "search"
+    },
+    {
+     "label": "Ask what you're risking",
+     "icon": "target"
+    }
    ],
-   "vo": "Let's recap. DeFi replaces intermediaries with smart contracts, across six layers: blockchain, contracts, tokens, wallet, interface and data layers. Self-custody, composability and transparency make it both powerful and dangerous. And the risk-first rule: list what could make you lose money, before you ever compare returns."
+   "vo": "Here's the whole lesson, recapped as one loop. Know the stack, chain, wallet, app, position. Remember the interface isn't the protocol. Name what composability adds you depend on. Verify, don't just trust, because transparency isn't safety. And always ask what you're being paid to risk, before comparing any return."
+  },
+  {
+   "type": "statement",
+   "chapter": "Recap and next",
+   "kicker": "A reminder",
+   "lines": [
+    "Every number here is illustrative.",
+    "No yield is guaranteed. It's payment for something."
+   ],
+   "sub": "Not financial advice.",
+   "vo": "This is education, not financial advice, and every number in this lesson, the 12%, the dependency counts, is illustrative. No yield in DeFi is guaranteed, and none of it is risk-free; it's always payment for something."
   },
   {
    "type": "cta",
-   "chapter": "Recap",
+   "chapter": "Recap and next",
    "button": "Next: Lesson 1.2",
    "sub": "How a transaction actually happens",
-   "vo": "Do the checklist now, before you move on. You now have the whole lesson in your head: the six-layer stack, the three properties that make DeFi powerful and dangerous, the risk-first rule, and how to actually decompose a headline yield. Next up, Lesson one point two: How a transaction actually happens.",
-   "cap": "Do the checklist now, before you move on. You now have the whole lesson in your head: the six-layer stack, the three properties that make DeFi powerful and dangerous, the risk-first rule, and how to actually decompose a headline yield. Next up, Lesson 1.2: How a transaction actually happens."
+   "vo": "That's what DeFi is, and the risk-first mindset: the six-layer stack, three properties that cut both ways, and naming your risk before your return. Next, Lesson one point two: how a transaction actually happens."
   }
  ]
 }
