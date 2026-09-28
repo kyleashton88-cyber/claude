@@ -110,6 +110,33 @@ function addImage(href, alt, lessonId) {
   return asset.id;
 }
 
+function readCaption(vid) {
+  const rel = `video/captions/${vid}.vtt`;
+  if (!exists(rel)) return null;
+  const raw = read(rel);
+  const times = [...raw.matchAll(/-->\s+(\d{2}):(\d{2}):(\d{2})\.\d+/g)];
+  let secs = 0;
+  if (times.length) {
+    const t = times[times.length - 1];
+    secs = Number(t[1]) * 3600 + Number(t[2]) * 60 + Number(t[3]);
+  }
+  const text = raw.split('\n')
+    .map(line => line.trim())
+    .filter(line => line && line !== 'WEBVTT' && !line.includes('-->') && !/^\d+$/.test(line))
+    .join(' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return { mins: Math.max(1, Math.round(secs / 60)), text };
+}
+function readChapters(vid) {
+  const rel = `video/chapters/${vid}.txt`;
+  if (!exists(rel)) return [];
+  return read(rel).split('\n').map(line => {
+    const m = line.trim().match(/^(\d+:\d+)\s+(.+)$/);
+    return m ? { t: m[1], name: m[2] } : null;
+  }).filter(Boolean);
+}
+
 const modules = [];
 for (let num = 0; num <= 14; num++) {
   const src = moduleSource(num);
@@ -124,7 +151,7 @@ for (let num = 0; num <= 14; num++) {
     const rawTitle = parts[i + 1].trim();
     const expert = /\*\(expert\)\*/i.test(rawTitle);
     const ltitle = rawTitle.replace(/\s*\*\(.*?\)\*\s*$/, '').replace(/\s+/g, ' ').trim();
-    const body = parts[i + 2].split(/\n### Module /)[0].replace(/\n---\s*$/g, '').trim();
+    const body = parts[i + 2].split(/\n### Module /)[0].split(/\n## (?!#)/)[0].replace(/\n---\s*$/g, '').trim();
     const starter = lid.endsWith('.0');
     let blurb = starter
       ? (sectionText(body, 'The 60-second version') || sectionText(body, 'Objective'))
@@ -168,10 +195,14 @@ for (let num = 0; num <= 14; num++) {
       }
     }
     const vid = `lesson-${lid.split('.')[0].padStart(2, '0')}-${lid.split('.')[1]}`;
+    const cap = readCaption(vid);
     lessons.push({
-      id: lid, title: starter ? 'Mastery Starter' : ltitle, starter, expert, blurb, example, exampleKind, mastered, primary, library,
-      hay: plain(library || body),
+      id: lid, title: starter ? 'Mastery Starter' : ltitle, starter, expert, blurb, example, exampleKind, mastered, primary, library, body,
+      hay: plain((library || body) + ' ' + (cap ? cap.text : '')),
       video: exists(`video/${vid}.mp4`) ? `../video/${vid}.mp4` : '',
+      mins: cap ? cap.mins : 0,
+      transcript: cap ? cap.text : '',
+      chapters: readChapters(vid),
     });
   }
   lessons.sort((a, b) => a.id.split('.').map(Number)[1] - b.id.split('.').map(Number)[1]);
@@ -182,8 +213,14 @@ addImage('assets/diagrams/path-to-mastery.png', 'Six stages from Zero to Operato
 const pathImg = resolveAsset('assets/diagrams/path-to-mastery.png').id;
 
 let lessonSeq = 0;
-modules.forEach(m => m.lessons.forEach(l => { l.i = lessonSeq++; }));
-const allLessons = modules.flatMap(m => m.lessons.map(l => ({ ...l, module: m })));
+const allLessons = [];
+modules.forEach(m => m.lessons.forEach(l => {
+  l.i = lessonSeq++;
+  l.module = m;
+  l.stage = STAGES.find(s => s.mods.includes(m.n));
+  allLessons.push(l);
+}));
+allLessons.forEach((l, i) => { l.next = allLessons[i + 1] || null; });
 const calcByLesson = {};
 CALCS.forEach(c => { (calcByLesson[c.lesson] || (calcByLesson[c.lesson] = [])).push(c); });
 const lessonCount = allLessons.length;
@@ -211,29 +248,40 @@ function sheetLink(w) {
 function lessonBlock(l) {
   const img = l.primary ? images.get(l.primary) : null;
   const flag = l.starter ? '<span class="flag start">Start here</span>' : l.expert ? '<span class="flag">Expert</span>' : '';
-  const videoWord = l.video ? '<span class="hasvid">Video</span>' : '';
+  const videoWord = l.video ? `<span class="hasvid">${l.mins ? l.mins + ' min' : 'Video'}</span>` : '';
   const sheets = wsRefs.filter(w => w.lesson === l.id);
   const find = plain([l.id, l.title, l.blurb, l.hay, l.module.title, l.module.outcome, img ? img.alt : '', sheets.map(w => w.id + ' ' + w.name).join(' '), l.starter ? 'mastery starter' : '', l.expert ? 'expert' : ''].join(' ')).toLowerCase();
   const sheetWord = sheets.length ? `<span class="sheet">${esc(sheets.map(w => w.id).join(' '))}</span>` : '';
   const calcs = calcByLesson[l.id] || [];
-  const calcWord = calcs.map(c => `<a class="calclink" href="#c-${esc(c.cmd)}">${calcs.length > 1 ? esc(c.name) : 'Calculator'}</a>`).join('');
-  const example = l.example
-    ? `<p class="example"><b>${l.exampleKind === 'worked' ? 'Worked example.' : 'From the lesson.'}</b> ${esc(l.example)}</p>`
+  const calcWord = calcs.map(c => `<a class="calclink" href="#lc-${esc(c.cmd)}">${calcs.length > 1 ? esc(c.name) : 'Calculator'}</a>`).join('');
+  const read = l.library
+    ? `<div class="read library">${foldLibrary(l.library, l.id)}</div>`
+    : `<div class="read lessonbody">${mdBlocks(l.body || '', l.id)}</div>`;
+  const chapters = l.chapters && l.chapters.length
+    ? `<ol class="chapters">${l.chapters.map(c => `<li><span>${esc(c.t)}</span> ${esc(c.name)}</li>`).join('')}</ol>`
     : '';
-  const library = l.library ? `<div class="library">${mdBlocks(l.library, l.id)}</div>` : '';
+  const transcript = l.transcript
+    ? `<details class="transcript"><summary>Transcript${l.mins ? ' · ' + l.mins + ' min' : ''}</summary><p>${esc(l.transcript)}</p></details>`
+    : '';
+  const calcHere = calcs.map(c => calcBlock(c, 'in')).join('');
   const links = [
-    calcs.map(c => `<a href="#c-${esc(c.cmd)}">${esc(c.name)}</a>`).join(' · '),
     sheets.map(sheetLink).join(' · '),
     l.video ? `<a class="folderlink" href="${esc(l.video)}">Video file</a>` : '',
     `<a class="folderlink" href="index.html#/l/${esc(l.id)}">Course Hub copy</a>`,
   ].filter(Boolean).join(' · ');
+  const place = l.stage ? `Stage ${l.stage.n} · ${l.stage.name} · Module ${l.module.n}` : `Module ${l.module.n}`;
+  const next = l.next
+    ? `<a href="#l-${l.next.id.replace('.', '-')}">Next: ${esc(l.next.id)} ${esc(l.next.title)}</a>`
+    : 'End of the program';
   return `<details class="lesson" id="l-${l.id.replace('.', '-')}" data-kind="${l.starter ? 'starter' : l.expert ? 'expert' : 'lesson'}" data-id="${esc(l.id)}" data-mod="${l.module.n}" data-i="${l.i}" data-title="${esc(plain(l.title).toLowerCase())}" data-blurb="${esc(plain(l.blurb).toLowerCase())}" data-find="${esc(find)}">
     <summary>
+      <label class="done"><input type="checkbox" data-done="${esc(l.id)}" aria-label="Mark lesson ${esc(l.id)} done"></label>
       <span class="lid">${esc(l.id)}</span>
       <span class="ltext"><span class="ltitle">${esc(l.title)}${flag}${videoWord}${sheetWord}${calcWord}</span><span class="ldesc">${esc(l.blurb)}</span></span>
       ${img ? `<img data-img="${esc(img.id)}" alt="" width="140" height="78">` : '<span class="nopic"></span>'}
+      <span class="snip" hidden></span>
     </summary>
-    <div class="more">${example}${library}<p class="links">${links}</p></div>
+    <div class="more">${read}${chapters}${transcript}${calcHere}<p class="links">${links}</p><p class="nextline"><span>${esc(place)}</span> · ${next}</p></div>
   </details>`;
 }
 
@@ -369,6 +417,48 @@ function mdBlocks(text, lessonId) {
   return html;
 }
 
+function foldLibrary(md, lessonId) {
+  const introAt = md.search(/\n## /);
+  const intro = introAt < 0 ? md : md.slice(0, introAt);
+  const rest = introAt < 0 ? '' : md.slice(introAt + 1);
+  let html = mdBlocks(intro, lessonId);
+  for (const part of rest.split(/\n(?=## )/)) {
+    const title = part.split('\n')[0].replace(/^## /, '').trim();
+    if (/^Part 3\b/.test(title)) {
+      const chunks = part.split(/\n(?=### LEVEL )/);
+      const lead = chunks[0].replace(/^## [^\n]*\n?/, '');
+      let inner = mdBlocks(lead, lessonId);
+      for (const chunk of chunks.slice(1)) {
+        const heading = chunk.split('\n')[0].replace(/^### /, '').trim();
+        const names = [...chunk.matchAll(/^#### (.+)$/gm)].map(m => m[1].trim()).join(' · ');
+        const body = chunk.replace(/^### [^\n]*\n?/, '');
+        inner += `<details class="level"><summary><b>${esc(heading)}</b><span>${esc(names)}</span></summary>${mdBlocks(body, lessonId)}</details>`;
+      }
+      html += `<section class="playbook"><h3>${esc(title)}</h3>${inner}</section>`;
+    } else {
+      const body = part.replace(/^## [^\n]*\n?/, '');
+      html += `<details class="level part"><summary>${esc(title)}</summary>${mdBlocks(body, lessonId)}</details>`;
+    }
+  }
+  return html;
+}
+
+function fillable(html, id) {
+  let n = 0;
+  const nid = () => id.toLowerCase() + '-' + (n++);
+  const box = () => `<input class="blank" data-ws="${nid()}" aria-label="Your answer">`;
+  let out = html.replace(/_{2,}/g, box);
+  out = out.replace(/<td>(?:\s|&nbsp;)*<\/td>/g, () => `<td>${box()}</td>`);
+  out = out.replace(/<li>\[ \]\s*/g, () => `<li><label class="tick"><input type="checkbox" data-ws="${nid()}"> `);
+  out = out.replace(/<li><label class="tick">([\s\S]*?)<\/li>/g, '<li><label class="tick">$1</label></li>');
+  out = out.replace(/<thead><tr>([\s\S]*?)<\/tr><\/thead><tbody><\/tbody>/g, (m, head) => {
+    const cols = (head.match(/<th[\s>]/g) || []).length || 1;
+    const cells = Array.from({ length: cols }, () => `<td>${box()}</td>`).join('');
+    return `<thead><tr>${head}</tr></thead><tbody><tr>${cells}</tr></tbody>`;
+  });
+  return out;
+}
+
 const wsIntro = plain(wsRaw.split(/^## /m)[0].replace(/^#[^\n]*\n/, ''));
 const worksheets = wsRaw.split(/\n(?=## )/).filter(s => s.startsWith('## ')).map(chunk => {
   const lines = chunk.split('\n');
@@ -380,8 +470,8 @@ const worksheets = wsRaw.split(/\n(?=## )/).filter(s => s.startsWith('## ')).map
   const find = plain(title + ' ' + body + ' worksheet ' + id).toLowerCase();
   const where = lesson ? lessonLink(lesson, 'Used in lesson ' + lesson) : mod ? `<a href="index.html#/m/${mod}">Used in module ${mod}</a>` : '';
   return `<article class="worksheet" id="${id.toLowerCase()}" data-find="${esc(find)}">
-    <header><h3>${esc(title)}</h3><p class="links">${where}<button type="button" class="copy">Copy worksheet</button></p></header>
-    <div class="wsbody">${mdBlocks(body)}</div>
+    <header><h3>${esc(title)}</h3><p class="links">${where}<button type="button" class="copy">Copy worksheet</button><button type="button" class="print">Print worksheet</button></p></header>
+    <div class="wsbody">${fillable(mdBlocks(body), id)}</div>
     <pre class="plain" hidden>${esc(chunk.trim())}</pre>
   </article>`;
 });
@@ -448,33 +538,35 @@ function fieldControl(f) {
   const [k, lab, def, unit, kind, opts] = f;
   if (kind === 'select') {
     const options = opts.map(o => `<option value="${esc(o)}"${o === def ? ' selected' : ''}>${esc(o)}</option>`).join('');
-    return `<label class="field">${esc(lab)}<span class="box"><select data-k="${esc(k)}">${options}</select></span></label>`;
+    return `<label class="field">${esc(lab)}<span class="box"><select data-k="${esc(k)}" data-def="${esc(def)}">${options}</select></span></label>`;
   }
   const opt = kind === 'optional' ? ' data-opt="1"' : '';
   const shown = def === '' || def == null ? '' : (unit === '0–1' ? Number(def).toFixed(2) : String(def));
   const pre = unit === '$' ? '<span class="unit pre">$</span>' : '';
   const suf = unit && unit !== '$' ? `<span class="unit suf">${esc(unit)}</span>` : '';
-  return `<label class="field">${esc(lab)}<span class="box">${pre}<input type="number" inputmode="decimal" step="any" data-k="${esc(k)}" value="${esc(shown)}"${opt}>${suf}</span></label>`;
+  return `<label class="field">${esc(lab)}<span class="box">${pre}<input type="number" inputmode="decimal" step="any" data-k="${esc(k)}" data-def="${esc(shown)}" value="${esc(shown)}"${opt}>${suf}</span></label>`;
 }
 
 function stageForLesson(id) {
   const n = Number(String(id).split('.')[0]);
   return STAGES.find(s => s.mods.includes(n));
 }
-function calcBlock(c) {
+function calcBlock(c, place) {
   const find = plain(c.cmd + ' ' + c.name + ' ' + c.what + ' calculator lesson ' + c.lesson).toLowerCase();
   const fields = FORMS[c.cmd];
   if (!fields) throw new Error('missing form for ' + c.cmd);
   const required = fields.filter(f => f[4] !== 'optional');
   const optional = fields.filter(f => f[4] === 'optional');
   const opt = optional.length ? `<p class="optlabel">Optional</p><div class="formgrid">${optional.map(fieldControl).join('')}</div>` : '';
-  return `<div class="calc" id="c-${esc(c.cmd)}" data-c="${esc(c.cmd)}" data-name="${esc(c.name.toLowerCase())}" data-find="${esc(find)}">
+  const prefix = place === 'in' ? 'lc-' : 'c-';
+  return `<div class="calc" id="${prefix}${esc(c.cmd)}" data-c="${esc(c.cmd)}" data-name="${esc(c.name.toLowerCase())}" data-find="${esc(find)}">
     <div class="calctop">
       <h3>${esc(c.name)}</h3>
       <p class="calcwhat">${esc(c.what)}</p>
       <p class="exampletag">${lessonLink(c.lesson, 'Lesson ' + c.lesson + ' example')}</p>
       <div class="formgrid">${required.map(fieldControl).join('')}</div>
       ${opt}
+      <p class="exrow"><button type="button" class="resetex">Back to the lesson example</button></p>
     </div>
     <div class="out" aria-live="polite"></div>
   </div>`;
@@ -504,7 +596,7 @@ const rail = STAGES.map(s => {
 const stagesHtml = STAGES.map(s => {
   const body = s.mods.map(n => moduleBlock(modules[n])).join('\n');
   return `<section class="stage-block" id="stage-${s.n}">
-    <h2>Stage ${s.n} · ${esc(s.name)}</h2>
+    <h2>Stage ${s.n} · ${esc(s.name)} <span class="donecount" data-stage-count data-ids="${esc(s.mods.flatMap(n => modules[n].lessons.map(l => l.id)).join(','))}"></span></h2>
     <p class="stage-can">${esc(s.can)}</p>
     ${body}
   </section>`;
@@ -599,7 +691,7 @@ h3 { font-size: 22px; letter-spacing: -0.02em; margin: 14px 0 6px; }
 .vids { max-width: 68ch; }
 #count { color: var(--muted); font-variant-numeric: tabular-nums; }
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 18px; }
-.filters button, button.copy { font: inherit; font-size: 14.5px; background: transparent; color: var(--text); border: 1px solid #b7c6d4; padding: 6px 12px; cursor: pointer; }
+.filters button, button.copy, button.print, button.resetex { font: inherit; font-size: 14.5px; background: transparent; color: var(--text); border: 1px solid #b7c6d4; padding: 6px 12px; cursor: pointer; }
 .filters button[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
 .stage-block { margin-top: 42px; }
 .stage-block > h2 { padding-top: 8px; }
@@ -609,7 +701,7 @@ h3 { font-size: 22px; letter-spacing: -0.02em; margin: 14px 0 6px; }
 .links { font-size: 15px; }
 .links .go { font-weight: 700; }
 .lesson { border-top: 1px solid var(--line); scroll-margin-top: 120px; }
-.lesson summary { display: grid; grid-template-columns: 3.4rem minmax(0, 1fr) 140px; gap: 8px 14px; align-items: center; padding: 12px 0; cursor: pointer; list-style: none; }
+.lesson summary { display: grid; grid-template-columns: auto 3.4rem minmax(0, 1fr) 140px; gap: 8px 14px; align-items: center; padding: 12px 0; cursor: pointer; list-style: none; }
 .lesson summary::-webkit-details-marker { display: none; }
 .lesson summary:hover .ltitle { text-decoration: underline; text-underline-offset: 2px; }
 .lid { font-family: var(--mono); font-size: 13.5px; font-weight: 600; color: var(--link); font-variant-numeric: tabular-nums; }
@@ -626,25 +718,50 @@ h3 { font-size: 22px; letter-spacing: -0.02em; margin: 14px 0 6px; }
 .hitcalc span { font-family: var(--mono); font-size: 13.5px; font-weight: 600; }
 .hitcalc b { color: var(--text); font-weight: 680; }
 .lesson summary img, .nopic { width: 140px; height: 78px; object-fit: cover; background: var(--ink); display: block; }
-.more { padding: 0 0 18px 4.3rem; }
+.done { display: flex; align-items: center; }
+.done input { width: 1.15rem; height: 1.15rem; margin: 0; accent-color: var(--link); }
+.lesson.isdone .lid { color: var(--link); }
+.snip { display: none; grid-column: 1 / -1; font-size: 14.5px; font-weight: 450; color: var(--text); }
+#hits .lesson .snip { display: block; }
+.snip mark { background: #d9f6ec; color: inherit; padding: 0 1px; }
+.donecount { font-size: 15px; font-weight: 550; color: var(--muted); margin-left: 10px; }
+.more { padding: 0 0 18px 4.6rem; min-width: 0; }
 .more img { display: block; width: min(100%, 720px); background: var(--ink); margin-bottom: 10px; }
 .more p { max-width: 66ch; margin: 8px 0; }
-.library { max-width: 78ch; }
-.library h3 { font-size: 20px; margin: 22px 0 6px; }
-.library h4 { font-size: 17px; margin: 18px 0 4px; }
-.library h5 { font-size: 16px; margin: 16px 0 4px; }
-.library figure { margin: 12px 0 16px; }
-.library figcaption { color: var(--muted); font-size: 14px; margin-top: 4px; }
-.library pre.code { overflow-x: auto; max-width: 100%; background: var(--ink); color: #e7eef4; padding: 12px 14px; font-size: 13.5px; line-height: 1.45; }
-.library pre.code code { color: inherit; }
-.library blockquote { margin: 10px 0; padding: 8px 12px; border-left: 4px solid var(--warn); background: var(--warnbg); }
-.library blockquote p { margin: 0; max-width: none; }
-.library .quiz { margin: 8px 0; border-top: 1px solid var(--line); padding-top: 8px; }
-.library .quiz summary { cursor: pointer; font-weight: 650; }
-.library .quiz p { margin: 6px 0 0; }
-.library ol, .library ul { padding-left: 1.2em; margin: 8px 0; }
-.library li { margin: 4px 0; }
-.library hr { border: 0; border-top: 1px solid var(--line); margin: 18px 0; }
+.read { max-width: 78ch; min-width: 0; }
+.read h3 { font-size: 20px; margin: 22px 0 6px; }
+.read h4 { font-size: 17px; margin: 18px 0 4px; }
+.read h5 { font-size: 16px; margin: 16px 0 4px; }
+.read figure { margin: 12px 0 16px; }
+.read figcaption { color: var(--muted); font-size: 14px; margin-top: 4px; }
+.read pre.code { overflow-x: auto; max-width: 100%; background: var(--ink); color: #e7eef4; padding: 12px 14px; font-size: 13.5px; line-height: 1.45; }
+.read pre.code code { color: inherit; }
+.read blockquote { margin: 10px 0; padding: 8px 12px; border-left: 4px solid var(--warn); background: var(--warnbg); }
+.read blockquote p { margin: 0; max-width: none; }
+.read .quiz { margin: 8px 0; border-top: 1px solid var(--line); padding-top: 8px; }
+.read .quiz summary { cursor: pointer; font-weight: 650; }
+.read .quiz p { margin: 6px 0 0; }
+.read ol, .read ul { padding-left: 1.2em; margin: 8px 0; }
+.read li { margin: 4px 0; }
+.read hr { border: 0; border-top: 1px solid var(--line); margin: 18px 0; }
+.level { border-top: 1px solid var(--line); margin: 4px 0; }
+.level > summary { cursor: pointer; padding: 8px 0; }
+.level > summary b, .level.part > summary { display: block; font-weight: 700; }
+.level > summary span { display: block; margin-top: 3px; color: var(--muted); font-weight: 500; font-size: 14.5px; }
+.playbook > h3 { margin-top: 8px; }
+.chapters { list-style: none; padding: 0; margin: 8px 0 12px; }
+.chapters li { margin: 3px 0; }
+.chapters span { font-family: var(--mono); color: var(--muted); margin-right: 8px; }
+.transcript summary { cursor: pointer; font-weight: 680; }
+.transcript p { max-width: 72ch; }
+.nextline { font-size: 15px; }
+.exrow { margin: 10px 0 0; }
+.gloss { border-top: 1px solid var(--line); padding: 12px 0 8px; }
+.gloss h3 { font-size: 18px; margin: 0 0 4px; }
+.wsbody .blank { font: inherit; font-size: 15px; width: 100%; min-width: 0; border: 0; border-bottom: 1px solid #9aafc0; background: transparent; padding: 2px 0; color: var(--text); }
+.wsbody p .blank, .wsbody li .blank { width: 8rem; }
+.tick { font-weight: 450; }
+.tick input { margin-right: 6px; accent-color: var(--link); }
 .worksheet { border-top: 1px solid var(--line); padding: 18px 0 8px; }
 .worksheet header { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; align-items: baseline; }
 .worksheet h3 { margin-top: 0; }
@@ -701,7 +818,7 @@ footer { margin-top: 36px; color: var(--muted); font-size: 14.5px; max-width: 68
   .main { padding: 22px 16px 72px; max-width: 100%; }
   .search { width: min(240px, 42vw); }
   .gallery { grid-template-columns: 1fr; }
-  .lesson summary { grid-template-columns: 2.8rem minmax(0, 1fr) 92px; gap: 8px; }
+  .lesson summary { grid-template-columns: auto 2.8rem minmax(0, 1fr) 92px; gap: 8px; }
   .lesson summary img, .nopic { width: 92px; height: 52px; }
   .more { padding-left: 0; }
   .out .result { font-size: 24px; }
@@ -709,6 +826,15 @@ footer { margin-top: 36px; color: var(--muted); font-size: 14.5px; max-width: 68
 @media (max-width: 560px) {
   .mast { flex-wrap: wrap; }
   .search { width: 100%; margin-left: 0; }
+}
+@media print {
+  .top, .rail, #intro, #lessons, #glossary, #pictures, #calculators, #files, footer { display: none !important; }
+  body.print-one #worksheets .worksheet { display: none !important; }
+  body.print-one #worksheets .worksheet.printing { display: block !important; }
+  .shell { display: block; }
+  .main { max-width: none; padding: 0; }
+  button, .filters, #empty, #hits { display: none !important; }
+  .wsbody .blank { border-bottom: 1px solid #000; }
 }
 `;
 
@@ -764,7 +890,7 @@ function apply() {
     el.hidden = !(kindOk && textOk);
   });
   blocks.forEach(el => {
-    if (el.classList.contains('lesson')) return;
+    if (el.classList.contains('lesson') || el.closest('.lesson')) return;
     const textOk = !searching || w.every(x => el.dataset.find.includes(x));
     el.hidden = !textOk;
     const d = el.closest('details.pics');
@@ -775,7 +901,7 @@ function apply() {
   if (searching) {
     const items = [];
     lessons.forEach(el => { if (!el.hidden) items.push({ s: lessonScore(el, w), i: Number(el.dataset.i), el }); });
-    document.querySelectorAll('.calc').forEach(el => {
+    document.querySelectorAll('#calculators .calc').forEach(el => {
       if (el.hidden) return;
       items.push({ s: calcScore(el, w), i: 1000, calc: el });
     });
@@ -794,6 +920,17 @@ function apply() {
       hits.appendChild(a);
     });
   } else hits.hidden = true;
+  lessons.forEach(el => {
+    const snip = el.querySelector('.snip');
+    if (!snip) return;
+    if (searching && !el.hidden) {
+      snip.innerHTML = snippet(el, w);
+      snip.hidden = !snip.textContent;
+    } else {
+      snip.hidden = true;
+      snip.textContent = '';
+    }
+  });
   document.querySelectorAll('.module').forEach(m => {
     const rows = [...m.querySelectorAll('.lesson')];
     m.hidden = rows.length === 0 || rows.every(l => l.hidden);
@@ -809,7 +946,7 @@ function apply() {
   document.querySelectorAll('.calcgroup').forEach(g => {
     g.hidden = [...g.querySelectorAll('.calc')].every(c => c.hidden);
   });
-  ['worksheets','pictures','calculators','files'].forEach(id => {
+  ['glossary','worksheets','pictures','calculators','files'].forEach(id => {
     const sec = document.getElementById(id);
     if (!sec) return;
     const rows = [...sec.querySelectorAll('[data-find]')].filter(el => !el.classList.contains('lesson'));
@@ -818,7 +955,8 @@ function apply() {
   const shown = lessons.filter(l => !l.hidden).length;
   const focusResults = searching || mode !== 'all';
   document.getElementById('intro').hidden = focusResults;
-  count.textContent = focusResults ? shown + ' of ' + lessons.length + ' lessons' : lessons.length + ' lessons';
+  const doneN = document.querySelectorAll('input[data-done]:checked').length;
+  count.textContent = (focusResults ? shown + ' of ' + lessons.length + ' lessons' : lessons.length + ' lessons') + (doneN ? ' · ' + doneN + ' done' : '');
   const key = mode + '\\n' + q.value;
   if (apply.last !== undefined && apply.last !== key && focusResults) {
     const target = shown
@@ -827,7 +965,7 @@ function apply() {
     if (target) target.scrollIntoView({ block: 'start' });
   }
   apply.last = key;
-  const any = shown || ['worksheets','pictures','calculators','files'].some(id => {
+  const any = shown || ['glossary','worksheets','pictures','calculators','files'].some(id => {
     const sec = document.getElementById(id);
     return sec && !sec.hidden && [...sec.querySelectorAll('[data-find]')].some(el => !el.hidden);
   });
@@ -839,7 +977,43 @@ document.querySelectorAll('.filters button').forEach(b => b.addEventListener('cl
   apply();
 }));
 q.addEventListener('input', apply);
-document.querySelectorAll('a.calclink').forEach(a => a.addEventListener('click', e => e.stopPropagation()));
+function escHtml(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+function snippet(el, w) {
+  const box = el.querySelector('.read');
+  const text = ((box ? box.textContent : '') + ' ' + (el.querySelector('.ldesc') ? el.querySelector('.ldesc').textContent : '')).replace(/\\s+/g, ' ').trim();
+  const bits = text.split(/(?<=[.!?])\\s+/).map(s => s.trim()).filter(s => s.length > 24);
+  const lowerBits = bits.map(s => s.toLowerCase());
+  let idx = lowerBits.findIndex(s => w.every(x => s.includes(x)));
+  if (idx < 0) idx = lowerBits.findIndex(s => w.some(x => s.includes(x)));
+  if (idx < 0) return '';
+  let hit = bits[idx];
+  if (hit.length > 240) hit = hit.slice(0, 240).replace(/\\s+\\S*$/, '') + '…';
+  const lower = hit.toLowerCase();
+  const spans = [];
+  w.forEach(word => {
+    let from = 0;
+    while (word && from < lower.length) {
+      const at = lower.indexOf(word, from);
+      if (at < 0) break;
+      spans.push([at, at + word.length]);
+      from = at + word.length;
+    }
+  });
+  spans.sort((a, b) => a[0] - b[0] || b[1] - a[1]);
+  let html = '';
+  let i = 0;
+  spans.forEach(sp => {
+    if (sp[0] < i) return;
+    html += escHtml(hit.slice(i, sp[0])) + '<mark>' + escHtml(hit.slice(sp[0], sp[1])) + '</mark>';
+    i = sp[1];
+  });
+  return html + escHtml(hit.slice(i));
+}
+document.querySelectorAll('a.calclink').forEach(a => a.addEventListener('click', e => {
+  e.stopPropagation();
+  const lesson = a.closest('details.lesson');
+  if (lesson) lesson.open = true;
+}));
 document.querySelectorAll('button.copy').forEach(b => b.addEventListener('click', async () => {
   const pre = b.closest('.worksheet').querySelector('pre.plain');
   try {
@@ -873,8 +1047,63 @@ if ('IntersectionObserver' in window) {
 const openHash = () => {
   const id = location.hash.slice(1);
   const el = id && document.getElementById(id);
-  if (el && el.tagName === 'DETAILS') el.open = true;
+  if (!el) return;
+  if (el.tagName === 'DETAILS') el.open = true;
+  let parent = el.parentElement;
+  while (parent) {
+    if (parent.tagName === 'DETAILS') parent.open = true;
+    parent = parent.parentElement;
+  }
 };
+const DONEKEY = 'oc-operator-done';
+function readDone() { try { return new Set(JSON.parse(localStorage.getItem(DONEKEY) || '[]')); } catch (e) { return new Set(); } }
+function paintDone() {
+  const done = readDone();
+  document.querySelectorAll('input[data-done]').forEach(i => { i.checked = done.has(i.dataset.done); });
+  lessons.forEach(el => el.classList.toggle('isdone', done.has(el.dataset.id)));
+  document.querySelectorAll('[data-stage-count]').forEach(el => {
+    const ids = (el.dataset.ids || '').split(',').filter(Boolean);
+    const n = ids.filter(x => done.has(x)).length;
+    el.textContent = n ? n + ' of ' + ids.length + ' done' : '';
+  });
+}
+document.querySelectorAll('input[data-done]').forEach(i => {
+  const label = i.closest('label');
+  if (label) label.addEventListener('click', e => e.stopPropagation());
+  i.addEventListener('click', e => e.stopPropagation());
+  i.addEventListener('change', () => {
+    const done = readDone();
+    if (i.checked) done.add(i.dataset.done); else done.delete(i.dataset.done);
+    localStorage.setItem(DONEKEY, JSON.stringify([...done]));
+    paintDone();
+    apply();
+  });
+});
+paintDone();
+const WSKEY = 'oc-operator-worksheets';
+function readWs() { try { return JSON.parse(localStorage.getItem(WSKEY) || '{}'); } catch (e) { return {}; } }
+function saveWs() {
+  const data = {};
+  document.querySelectorAll('[data-ws]').forEach(el => { data[el.dataset.ws] = el.type === 'checkbox' ? (el.checked ? '1' : '') : el.value; });
+  localStorage.setItem(WSKEY, JSON.stringify(data));
+}
+const savedWs = readWs();
+document.querySelectorAll('[data-ws]').forEach(el => {
+  if (savedWs[el.dataset.ws]) {
+    if (el.type === 'checkbox') el.checked = savedWs[el.dataset.ws] === '1';
+    else el.value = savedWs[el.dataset.ws];
+  }
+  el.addEventListener('input', saveWs);
+  el.addEventListener('change', saveWs);
+});
+document.querySelectorAll('button.print').forEach(b => b.addEventListener('click', () => {
+  const sheet = b.closest('.worksheet');
+  document.body.classList.add('print-one');
+  sheet.classList.add('printing');
+  window.print();
+  sheet.classList.remove('printing');
+  document.body.classList.remove('print-one');
+}));
 addEventListener('hashchange', openHash);
 openHash();
 apply();
@@ -1167,6 +1396,11 @@ document.querySelectorAll('.calc[data-c]').forEach(el => {
   };
   el.querySelectorAll('input, select').forEach(i => i.addEventListener('input', upd));
   el.querySelectorAll('select').forEach(i => i.addEventListener('change', upd));
+  const reset = el.querySelector('.resetex');
+  if (reset) reset.addEventListener('click', () => {
+    el.querySelectorAll('[data-k]').forEach(i => { i.value = i.dataset.def || ''; });
+    upd();
+  });
   upd();
 });
 if (location.protocol === 'file:' && /On-Chain-Operator-Course-Directory\\.html$/i.test(decodeURIComponent(location.pathname))) {
@@ -1178,6 +1412,31 @@ if (location.protocol === 'file:' && /On-Chain-Operator-Course-Directory\\.html$
   document.querySelectorAll('a.folderlink').forEach(a => a.addEventListener('click', e => { e.preventDefault(); note.scrollIntoView({ block: 'nearest' }); }));
 }
 `;
+
+function parseGlossary(body) {
+  const m = String(body || '').match(/### Glossary[^\n]*\n+(\|[\s\S]*?)(?=\n### |\n## |$)/);
+  if (!m) return [];
+  return m[1].split('\n').map(line => {
+    if (!line.trim().startsWith('|')) return null;
+    const cells = line.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(c => c.trim());
+    if (!cells.length || cells.every(c => /^:?-+:?$/.test(c))) return null;
+    return cells;
+  }).filter(Boolean).slice(1).map(([word, meaning]) => ({ word, meaning: meaning || '' }));
+}
+function lessonForTerm(word) {
+  const key = word.split('(')[0].split('/')[0].trim().toLowerCase();
+  if (key.length < 3) return null;
+  return allLessons.find(l => l.id !== '0.8' && ((l.title || '').toLowerCase().includes(key) || (l.blurb || '').toLowerCase().includes(key)))
+    || allLessons.find(l => l.id !== '0.8' && (l.hay || '').toLowerCase().includes(key))
+    || null;
+}
+const glossSource = (allLessons.find(l => l.id === '0.8') || {}).body || '';
+const glossaryHtml = parseGlossary(glossSource).map(g => {
+  const other = lessonForTerm(g.word);
+  const links = [lessonLink('0.8', 'Defined in 0.8'), other ? lessonLink(other.id, 'Used in ' + other.id) : ''].filter(Boolean).join(' · ');
+  const find = plain(g.word + ' ' + g.meaning + ' glossary').toLowerCase();
+  return `<article class="gloss" data-find="${esc(find)}"><h3>${esc(g.word)}</h3><p>${esc(g.meaning)}</p><p class="links">${links}</p></article>`;
+}).join('\n');
 
 const html = `<!doctype html>
 <html lang="en">
@@ -1202,6 +1461,7 @@ const html = `<!doctype html>
   <nav class="jumps" aria-label="Directory sections">
     <a href="#start">Start</a>
     <a href="#lessons">Lessons</a>
+    <a href="#glossary">Glossary</a>
     <a href="#worksheets">Worksheets</a>
     <a href="#pictures">Pictures</a>
     <a href="#calculators">Calculators</a>
@@ -1217,8 +1477,9 @@ const html = `<!doctype html>
     <img class="path" data-img="${esc(pathImg)}" alt="Six stages in order: Zero, Foundations, Practitioner, Analyst, Strategist, Operator." width="1200">
     <ol class="steps">
       <li>Pick a stage in the list, or search for a topic or a lesson number.</li>
-      <li>Open the lesson for the worked example, and use its calculator when the row has one.</li>
-      <li>Copy the matching worksheet into your own notes. Leave every secret out of it.</li>
+      <li>Open the lesson and read it. Its calculator sits underneath when the lesson has one.</li>
+      <li>Mark a lesson done when you finish it. That check stays in this browser.</li>
+      <li>Fill in the worksheet on this page, or print it. Leave every secret out of it.</li>
     </ol>
     <div class="safety">
       <p>Educational content only. Not financial, tax or legal advice. Digital assets are volatile and you can lose some or all of your capital. No results or income are promised. Never enter a seed phrase, private key, API key or password into this directory, the Course Hub, or any worksheet. This program will not ask for them.</p>
@@ -1241,9 +1502,16 @@ const html = `<!doctype html>
       ${stagesHtml}
     </section>
 
+    <section id="glossary">
+      <h2>Glossary</h2>
+      <p class="lede">The words from lesson 0.8. Each one links back to that lesson, and to another lesson that uses it.</p>
+      ${glossaryHtml}
+    </section>
+
     <section id="worksheets">
       <h2>Worksheets</h2>
       <p class="lede">${esc(wsIntro)}</p>
+      <p class="quiet">What you type stays in this browser. Print uses the sheet as you filled it in.</p>
       ${worksheets.join('\n')}
     </section>
 
