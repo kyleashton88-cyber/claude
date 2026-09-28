@@ -1,0 +1,838 @@
+WEBVTT
+
+00:00:00.550 --> 00:00:02.845
+The On-Chain Operator calculator.
+
+00:00:02.845 --> 00:00:04.795
+Twenty tools, one habit.
+
+00:00:04.795 --> 00:00:06.330
+You bring a live rate.
+
+00:00:06.330 --> 00:00:09.075
+The picture tells you whether the idea still holds.
+
+00:00:10.375 --> 00:00:11.755
+Here's the problem.
+
+00:00:11.755 --> 00:00:14.070
+A headline rate is not a decision.
+
+00:00:14.070 --> 00:00:15.644
+A pool can quote a high fee
+
+00:00:15.644 --> 00:00:17.800
+while a price move beats holding.
+
+00:00:17.800 --> 00:00:19.664
+A loan can look cheap until price
+
+00:00:19.664 --> 00:00:21.145
+hits a line you never drew.
+
+00:00:22.445 --> 00:00:25.040
+A common shortcut is to trust the card.
+
+00:00:25.040 --> 00:00:26.955
+The card already did the math.
+
+00:00:26.955 --> 00:00:29.102
+That belief fails the moment the card
+
+00:00:29.102 --> 00:00:32.000
+used yesterday's rate, or someone else's hope.
+
+00:00:32.000 --> 00:00:33.980
+You still supply the live rate.
+
+00:00:33.980 --> 00:00:36.135
+This file only checks the rate you type.
+
+00:00:37.435 --> 00:00:38.587
+By the end, you'll be
+
+00:00:38.587 --> 00:00:40.143
+able to do three things.
+
+00:00:40.143 --> 00:00:42.848
+Pick the one tool that matches the question.
+
+00:00:42.848 --> 00:00:45.878
+Type live rates, in the form the field expects.
+
+00:00:45.878 --> 00:00:48.283
+And read the band, before you size anything.
+
+00:00:49.583 --> 00:00:52.163
+Every tool runs the same four beats.
+
+00:00:52.163 --> 00:00:53.688
+Start with your inputs.
+
+00:00:53.688 --> 00:00:54.954
+Those are the rates you
+
+00:00:54.954 --> 00:00:56.573
+type, from a live source.
+
+00:00:56.573 --> 00:00:58.608
+The picture updates as you type.
+
+00:00:58.608 --> 00:00:59.808
+Then the band.
+
+00:00:59.808 --> 00:01:02.268
+Green means inside the lesson's buffer.
+
+00:01:02.268 --> 00:01:03.853
+Blue means watch this.
+
+00:01:03.853 --> 00:01:05.848
+Red means outside that buffer.
+
+00:01:05.848 --> 00:01:07.333
+Last, your decision.
+
+00:01:07.333 --> 00:01:08.628
+Act, or wait.
+
+00:01:08.628 --> 00:01:10.893
+The band is a model of the inputs.
+
+00:01:10.893 --> 00:01:12.131
+It is not a promise,
+
+00:01:12.131 --> 00:01:13.368
+and it is not advice.
+
+00:01:14.668 --> 00:01:16.260
+Read the band and the figure
+
+00:01:16.260 --> 00:01:17.933
+before you touch a field.
+
+00:01:17.933 --> 00:01:20.473
+Change the lesson example, which is already
+
+00:01:20.473 --> 00:01:22.678
+filled in, by editing one number.
+
+00:01:22.678 --> 00:01:24.434
+Watch the band change colour when
+
+00:01:24.434 --> 00:01:26.283
+that number leaves the buffer.
+
+00:01:26.283 --> 00:01:27.929
+Search any of the twenty tools
+
+00:01:27.929 --> 00:01:29.363
+once you know the question.
+
+00:01:30.663 --> 00:01:33.528
+A liquidation threshold is eighty percent.
+
+00:01:33.528 --> 00:01:34.993
+What do you type in that field?
+
+00:01:39.413 --> 00:01:41.468
+The answer is point eight zero.
+
+00:01:41.468 --> 00:01:43.598
+The field runs from zero to one, so
+
+00:01:43.598 --> 00:01:46.083
+eighty percent is point eight, not eighty.
+
+00:01:47.383 --> 00:01:50.007
+Open impermanent loss when the question is
+
+00:01:50.007 --> 00:01:52.448
+the gap versus simply holding, and type
+
+00:01:52.448 --> 00:01:54.518
+the move you actually expect.
+
+00:01:54.518 --> 00:01:56.764
+Open fee break-even when you know that
+
+00:01:56.764 --> 00:01:58.491
+gap, and type the fee you can
+
+00:01:58.491 --> 00:02:00.403
+see, not a fee you hope for.
+
+00:02:00.403 --> 00:02:03.092
+Open concentrated range and type the lower
+
+00:02:03.092 --> 00:02:05.768
+and upper prices you would really set.
+
+00:02:05.768 --> 00:02:09.254
+Open loss versus rebalancing for a full-range pool, and
+
+00:02:09.254 --> 00:02:11.868
+type volatility and the fee you see today.
+
+00:02:13.168 --> 00:02:16.279
+Here is the lesson example for impermanent loss.
+
+00:02:16.279 --> 00:02:18.594
+The price multiple is two, a double.
+
+00:02:18.594 --> 00:02:21.179
+The baseline is to hold both assets.
+
+00:02:21.179 --> 00:02:23.424
+The pool keeps a fifty-fifty mix, so
+
+00:02:23.424 --> 00:02:25.847
+it sells the winner as price rises.
+
+00:02:25.847 --> 00:02:28.302
+A half, point five, mirrors this gap.
+
+00:02:28.302 --> 00:02:30.437
+The result is a gap versus holding
+
+00:02:30.437 --> 00:02:33.056
+of about five point seven two percent.
+
+00:02:33.056 --> 00:02:35.081
+Use this before you trust a fee quote.
+
+00:02:36.381 --> 00:02:38.436
+Why fee break-even exists.
+
+00:02:38.436 --> 00:02:40.177
+Hope says type a fee you wish
+
+00:02:40.177 --> 00:02:42.208
+for, ignore how long you stay, and
+
+00:02:42.208 --> 00:02:43.611
+call any fee a win.
+
+00:02:43.611 --> 00:02:45.682
+The check says type the fee you can
+
+00:02:45.682 --> 00:02:47.810
+see, type the move and the days, and
+
+00:02:47.810 --> 00:02:49.606
+ask if fees cover the gap.
+
+00:02:49.606 --> 00:02:51.159
+In the lesson, a one and a
+
+00:02:51.159 --> 00:02:53.403
+half times move over thirty days still
+
+00:02:53.403 --> 00:02:55.946
+trails holding at a twenty percent fee.
+
+00:02:55.946 --> 00:02:58.586
+It needs about twenty-five percent to break even.
+
+00:02:59.886 --> 00:03:02.111
+Best use, for the four pool tools.
+
+00:03:02.111 --> 00:03:04.510
+Impermanent loss: type two for a double,
+
+00:03:04.510 --> 00:03:06.331
+and point five for a half.
+
+00:03:06.331 --> 00:03:08.412
+Fee break-even: the fee on the pool
+
+00:03:08.412 --> 00:03:10.736
+today, plus how long you will stay.
+
+00:03:10.736 --> 00:03:14.513
+Concentrated range: your real lower and upper prices.
+
+00:03:14.513 --> 00:03:17.916
+A range from eighteen hundred to thirty-two hundred works
+
+00:03:17.916 --> 00:03:20.732
+the lesson capital about seven and a half times
+
+00:03:20.732 --> 00:03:23.731
+harder, and that work stops when price leaves.
+
+00:03:23.731 --> 00:03:25.639
+Loss versus rebalancing is the
+
+00:03:25.639 --> 00:03:28.401
+full-range case, before you concentrate.
+
+00:03:28.401 --> 00:03:31.721
+Eighty percent volatility is an eight percent drag.
+
+00:03:31.721 --> 00:03:33.396
+Fees have to clear that drag.
+
+00:03:34.696 --> 00:03:37.181
+Open health factor before you borrow.
+
+00:03:37.181 --> 00:03:39.175
+It shows how far the loan sits from
+
+00:03:39.175 --> 00:03:41.801
+liquidation, and the price that closes it.
+
+00:03:41.801 --> 00:03:43.884
+Open the lending loop to see what
+
+00:03:43.884 --> 00:03:47.186
+repeated borrow-and-supply does to your exposure.
+
+00:03:47.186 --> 00:03:49.630
+Open the supply rate to turn the borrow
+
+00:03:49.630 --> 00:03:52.985
+rate, utilisation, and reserve into the lend rate.
+
+00:03:52.985 --> 00:03:54.868
+Open the mint tool for how many
+
+00:03:54.868 --> 00:03:57.340
+stablecoins a vault allows, and the price
+
+00:03:57.340 --> 00:03:59.405
+that breaks its minimum ratio.
+
+00:03:59.405 --> 00:04:02.974
+Open perp liquidation for the approximate price that
+
+00:04:02.974 --> 00:04:06.610
+closes an isolated perpetual, before fees and funding.
+
+00:04:07.910 --> 00:04:09.475
+Work the lesson loan.
+
+00:04:09.475 --> 00:04:12.555
+Collateral is ten units at three thousand dollars.
+
+00:04:12.555 --> 00:04:15.660
+The liquidation threshold is point eight zero.
+
+00:04:15.660 --> 00:04:17.690
+Debt is ten thousand dollars.
+
+00:04:17.690 --> 00:04:20.290
+Health factor equals collateral, times the
+
+00:04:20.290 --> 00:04:22.465
+threshold, divided by the debt.
+
+00:04:22.465 --> 00:04:24.392
+The result is a health factor of
+
+00:04:24.392 --> 00:04:26.844
+two point four zero, and liquidation near
+
+00:04:26.844 --> 00:04:29.655
+one thousand two hundred and fifty dollars.
+
+00:04:29.655 --> 00:04:31.920
+That is the price where the buffer is gone.
+
+00:04:33.220 --> 00:04:34.875
+Why this tool exists.
+
+00:04:34.875 --> 00:04:36.800
+A protocol will not call you.
+
+00:04:36.800 --> 00:04:39.854
+Double the debt, to twenty thousand dollars, and the
+
+00:04:39.854 --> 00:04:42.575
+health factor falls to one point two zero.
+
+00:04:42.575 --> 00:04:44.179
+That is under the one point
+
+00:04:44.179 --> 00:04:46.140
+five floor this program uses.
+
+00:04:46.140 --> 00:04:48.135
+Repay, or add collateral.
+
+00:04:48.135 --> 00:04:50.187
+At ten thousand dollars of debt, the
+
+00:04:50.187 --> 00:04:52.540
+health factor is two point four zero.
+
+00:04:52.540 --> 00:04:54.716
+There is room above two point zero,
+
+00:04:54.716 --> 00:04:57.010
+and liquidation is far from spot.
+
+00:04:57.010 --> 00:04:59.161
+Best use: type today's price, and
+
+00:04:59.161 --> 00:05:01.565
+the protocol's threshold as a decimal.
+
+00:05:02.865 --> 00:05:05.520
+Best use, for the other four borrowing tools.
+
+00:05:05.520 --> 00:05:08.248
+Lending loop: type the loan-to-value you will
+
+00:05:08.248 --> 00:05:10.561
+really use, the passes you will really
+
+00:05:10.561 --> 00:05:12.284
+do, and both live rates.
+
+00:05:12.284 --> 00:05:15.029
+In the lesson, three passes at point seven
+
+00:05:15.029 --> 00:05:18.286
+five, with five percent supplied and three percent
+
+00:05:18.286 --> 00:05:21.395
+borrowed, lever about two point seven times.
+
+00:05:21.395 --> 00:05:23.396
+The spread in that example vanishes
+
+00:05:23.396 --> 00:05:25.585
+near an eight percent borrow rate.
+
+00:05:25.585 --> 00:05:28.747
+Supply rate: borrow rate, times utilisation,
+
+00:05:28.747 --> 00:05:31.015
+times one minus the reserve.
+
+00:05:31.015 --> 00:05:33.480
+Eight percent, times point seven, times
+
+00:05:33.480 --> 00:05:35.875
+point nine, is about five percent.
+
+00:05:35.875 --> 00:05:38.784
+Mint: type one hundred and fifty to mean one
+
+00:05:38.784 --> 00:05:42.380
+hundred and fifty percent, not one point five zero.
+
+00:05:42.380 --> 00:05:44.275
+The lesson vault can mint up to
+
+00:05:44.275 --> 00:05:46.288
+twenty thousand, and a fee of two
+
+00:05:46.288 --> 00:05:48.716
+percent is one hundred and sixty dollars
+
+00:05:48.716 --> 00:05:50.970
+a year on an eight thousand mint.
+
+00:05:50.970 --> 00:05:53.520
+Perp: a long closes below the entry.
+
+00:05:53.520 --> 00:05:55.295
+A short closes above it.
+
+00:05:55.295 --> 00:05:57.484
+A five times long from three thousand,
+
+00:05:57.484 --> 00:06:00.345
+with a half percent maintenance margin, liquidates
+
+00:06:00.345 --> 00:06:02.085
+near two thousand four hundred.
+
+00:06:03.385 --> 00:06:05.790
+Ten units at three thousand dollars.
+
+00:06:05.790 --> 00:06:07.625
+Threshold point eight zero.
+
+00:06:07.625 --> 00:06:09.410
+Debt ten thousand dollars.
+
+00:06:09.410 --> 00:06:10.735
+What is the health factor?
+
+00:06:15.155 --> 00:06:17.430
+The answer is two point four zero.
+
+00:06:17.430 --> 00:06:20.510
+Collateral times the threshold, divided by the debt.
+
+00:06:21.810 --> 00:06:24.375
+Open funding carry for what one eight-hour
+
+00:06:24.375 --> 00:06:26.522
+funding print means on a hedge, and
+
+00:06:26.522 --> 00:06:28.910
+for what the short leg can survive.
+
+00:06:28.910 --> 00:06:30.917
+Open cash and carry for the gap
+
+00:06:30.917 --> 00:06:33.174
+between a dated future and spot, if
+
+00:06:33.174 --> 00:06:35.230
+you can hold both to expiry.
+
+00:06:35.230 --> 00:06:37.452
+Open the covered call for the premium
+
+00:06:37.452 --> 00:06:39.850
+you keep this period, not the annualised
+
+00:06:39.850 --> 00:06:42.665
+figure, because a short window inflates it.
+
+00:06:42.665 --> 00:06:44.986
+Open the principal token for the fixed
+
+00:06:44.986 --> 00:06:47.307
+result of buying below one and holding
+
+00:06:47.307 --> 00:06:49.035
+to maturity, if it pays.
+
+00:06:49.035 --> 00:06:52.435
+Open rate to compounded rate to see what compounding
+
+00:06:52.435 --> 00:06:55.643
+adds, and whether gas eats the extra transactions.
+
+00:06:56.943 --> 00:06:58.513
+Best use for funding.
+
+00:06:58.513 --> 00:07:00.801
+Point zero one percent means point
+
+00:07:00.801 --> 00:07:03.323
+zero one percent, not one percent.
+
+00:07:03.323 --> 00:07:05.553
+In the lesson, that print each eight
+
+00:07:05.553 --> 00:07:07.903
+hours, at two times leverage, is about
+
+00:07:07.903 --> 00:07:10.254
+eleven percent a year on the position,
+
+00:07:10.254 --> 00:07:12.603
+and less on the capital behind it.
+
+00:07:12.603 --> 00:07:13.998
+Funding can flip.
+
+00:07:13.998 --> 00:07:15.915
+Then you are the one paying it, and
+
+00:07:15.915 --> 00:07:18.346
+the short still has a liquidation price.
+
+00:07:18.346 --> 00:07:21.086
+Type the live print, not last month's average.
+
+00:07:22.387 --> 00:07:24.592
+Best use, for the other yield tools.
+
+00:07:24.592 --> 00:07:26.493
+Cash and carry: type spot, the
+
+00:07:26.493 --> 00:07:28.387
+future, and the days left.
+
+00:07:28.387 --> 00:07:30.226
+A two dollar gap on a hundred
+
+00:07:30.226 --> 00:07:32.617
+dollar spot, with thirty days left, is
+
+00:07:32.617 --> 00:07:35.436
+two percent raw and about twenty-four percent
+
+00:07:35.436 --> 00:07:38.127
+annualised, only if you hold to expiry.
+
+00:07:38.127 --> 00:07:40.312
+Covered call: a one-week premium is
+
+00:07:40.312 --> 00:07:41.887
+not a year of income.
+
+00:07:41.887 --> 00:07:44.295
+Spot one hundred, strike one hundred and
+
+00:07:44.295 --> 00:07:46.769
+ten, premium two percent, seven days.
+
+00:07:46.769 --> 00:07:49.180
+The most you keep in that example is twelve
+
+00:07:49.180 --> 00:07:52.329
+percent, and the premium is used up at ninety-eight.
+
+00:07:52.329 --> 00:07:55.783
+Principal token: point nine five means you pay point
+
+00:07:55.783 --> 00:07:58.495
+nine five to receive one, if it pays.
+
+00:07:58.495 --> 00:07:59.935
+Ninety days in the lesson
+
+00:07:59.935 --> 00:08:02.230
+is about twenty-three percent fixed.
+
+00:08:02.230 --> 00:08:05.155
+The risk is whether it pays, not the formula.
+
+00:08:05.155 --> 00:08:08.851
+Compounding: twelve percent, compounded twelve times, is
+
+00:08:08.851 --> 00:08:12.004
+about twelve point seven percent before gas.
+
+00:08:12.004 --> 00:08:15.384
+Check gas against the position before you compound again.
+
+00:08:16.684 --> 00:08:19.393
+Open risk-adjusted yield to take a headline
+
+00:08:19.393 --> 00:08:21.239
+rate down by a loss you might
+
+00:08:21.239 --> 00:08:23.571
+actually take, and by your costs.
+
+00:08:23.571 --> 00:08:26.141
+Open the income plan to do that across every
+
+00:08:26.141 --> 00:08:29.411
+position, then choose a payout that leaves a buffer.
+
+00:08:29.411 --> 00:08:32.492
+Open the balance sheet for equity, your loan-to-value
+
+00:08:32.492 --> 00:08:35.246
+rule, health factor, and months of reserve.
+
+00:08:35.246 --> 00:08:38.560
+Open time-weighted return when deposits are mixed into
+
+00:08:38.560 --> 00:08:41.451
+the gain, and you want the decisions alone.
+
+00:08:41.451 --> 00:08:44.688
+Open airdrop value with an honest chance, the amount
+
+00:08:44.688 --> 00:08:47.676
+if it arrives, and every cost of chasing it.
+
+00:08:47.676 --> 00:08:49.280
+Open value at risk for a
+
+00:08:49.280 --> 00:08:51.826
+one-day loss floor from volatility.
+
+00:08:51.826 --> 00:08:54.333
+Crypto crashes run past a normal model,
+
+00:08:54.333 --> 00:08:56.276
+so treat the number as a floor.
+
+00:08:57.576 --> 00:08:59.901
+Risk-adjusted yield, in the lesson.
+
+00:08:59.901 --> 00:09:01.866
+The headline is twelve percent.
+
+00:09:01.866 --> 00:09:04.223
+The chance of a hit is point zero five,
+
+00:09:04.223 --> 00:09:07.411
+and that hit takes forty percent of the position.
+
+00:09:07.411 --> 00:09:09.046
+Costs are one percent.
+
+00:09:09.046 --> 00:09:13.026
+Twelve, minus point zero five times forty, minus one.
+
+00:09:13.026 --> 00:09:14.920
+The result is about nine percent
+
+00:09:14.920 --> 00:09:17.056
+after that loss and those costs.
+
+00:09:17.056 --> 00:09:18.661
+Best use: the chance and the
+
+00:09:18.661 --> 00:09:20.621
+share lost are your estimates.
+
+00:09:20.621 --> 00:09:22.666
+A wishful chance prints a wishful nine.
+
+00:09:23.966 --> 00:09:26.041
+Three ways the book gets misread.
+
+00:09:26.041 --> 00:09:28.836
+People spend the whole modelled income, mix
+
+00:09:28.836 --> 00:09:31.632
+deposits into the return, and treat one-day
+
+00:09:31.632 --> 00:09:33.901
+value at risk as the worst day.
+
+00:09:33.901 --> 00:09:35.041
+Best use.
+
+00:09:35.041 --> 00:09:37.461
+Keep a buffer, as in the income plan.
+
+00:09:37.461 --> 00:09:39.935
+The lesson book of one hundred and fifty
+
+00:09:39.935 --> 00:09:43.556
+thousand models about thirteen thousand of expected income,
+
+00:09:43.556 --> 00:09:46.452
+pays out about seventy percent, and keeps about
+
+00:09:46.452 --> 00:09:48.321
+four thousand as a buffer.
+
+00:09:48.321 --> 00:09:50.611
+Split the record at every deposit.
+
+00:09:50.611 --> 00:09:53.169
+The lesson stretches of five, minus two,
+
+00:09:53.169 --> 00:09:55.352
+and four percent are about a seven
+
+00:09:55.352 --> 00:09:58.471
+percent time-weighted return, close to the simple
+
+00:09:58.471 --> 00:10:01.266
+gain only because the deposit was small.
+
+00:10:01.266 --> 00:10:03.726
+Call value at risk a floor, not a cap.
+
+00:10:03.726 --> 00:10:06.731
+Fifty thousand dollars at eighty percent volatility
+
+00:10:06.731 --> 00:10:08.349
+is about a three and a half
+
+00:10:08.349 --> 00:10:10.961
+thousand dollar day in the normal model.
+
+00:10:10.961 --> 00:10:12.361
+Crash days can be worse.
+
+00:10:13.661 --> 00:10:15.407
+You might add liquidity, and you
+
+00:10:15.407 --> 00:10:17.136
+expect the price to double.
+
+00:10:17.136 --> 00:10:19.011
+Which pool tool do you open first?
+
+00:10:23.431 --> 00:10:25.593
+The answer is impermanent loss.
+
+00:10:25.593 --> 00:10:27.146
+Measure the gap versus holding
+
+00:10:27.146 --> 00:10:28.398
+before you trust the fee.
+
+00:10:29.698 --> 00:10:30.768
+Your turn.
+
+00:10:30.768 --> 00:10:33.723
+Open the calculator file on your own computer.
+
+00:10:33.723 --> 00:10:35.359
+Pick the tool that matches a
+
+00:10:35.359 --> 00:10:37.633
+position you already have on paper.
+
+00:10:37.633 --> 00:10:40.513
+Type the live numbers, not a hoped-for rate.
+
+00:10:40.513 --> 00:10:41.955
+Write down the band, and the
+
+00:10:41.955 --> 00:10:43.648
+one number you would act on.
+
+00:10:43.648 --> 00:10:45.673
+That takes five to twenty minutes.
+
+00:10:45.673 --> 00:10:47.288
+You do not need a wallet.
+
+00:10:47.288 --> 00:10:49.532
+Never type a seed phrase, a private
+
+00:10:49.532 --> 00:10:51.713
+key, or a password into this file,
+
+00:10:51.713 --> 00:10:53.396
+or into anything that asks.
+
+00:10:54.696 --> 00:10:56.201
+Three lines to keep.
+
+00:10:56.201 --> 00:10:58.151
+Twenty tools, one habit.
+
+00:10:58.151 --> 00:11:00.546
+Change one input, and read the band.
+
+00:11:00.546 --> 00:11:02.523
+The menu is pools, then borrowing,
+
+00:11:02.523 --> 00:11:04.291
+then yield, then the book.
+
+00:11:04.291 --> 00:11:05.846
+You supply the rates.
+
+00:11:05.846 --> 00:11:07.528
+The picture is a model, not
+
+00:11:07.528 --> 00:11:09.149
+a forecast, and not advice.
+
+00:11:10.449 --> 00:11:12.337
+Open the calculator and run one
+
+00:11:12.337 --> 00:11:14.289
+position before you size it.
+
+00:11:14.289 --> 00:11:17.406
+Next, take a health-factor loan back to lesson three
+
+00:11:17.406 --> 00:11:19.994
+point two, and say why a health factor near
+
+00:11:19.994 --> 00:11:22.229
+one is a closing price, not a cushion.

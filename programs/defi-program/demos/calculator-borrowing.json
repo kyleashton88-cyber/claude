@@ -1,0 +1,16 @@
+{
+  "id": "calculator-borrowing",
+  "chapter": "Borrowing",
+  "label": "On screen: borrowing tools",
+  "showUrl": "On-Chain-Operator-Calculator.html",
+  "url": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#health",
+  "viewport": [1600, 900],
+  "steps": [
+    { "wait": 600, "shot": "01", "caption": "Open health factor", "highlight": "#verdict" },
+    { "goto": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#loop", "wait": 500, "shot": "02", "caption": "Open the lending loop", "highlight": "#verdict" },
+    { "goto": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#supply", "wait": 500, "shot": "03", "caption": "Open the supply rate", "highlight": "#verdict" },
+    { "goto": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#cdp", "wait": 500, "shot": "04", "caption": "Open C.D.P. mint", "highlight": "#verdict" },
+    { "goto": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#perp", "wait": 500, "shot": "05", "caption": "Open perp liquidation", "highlight": "#verdict" }
+  ],
+  "vo": "Open health factor. Then the lending loop. Then the supply rate. Then a collateralised mint. Then perp liquidation."
+}

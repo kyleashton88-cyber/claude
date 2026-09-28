@@ -1,0 +1,59 @@
+{
+  "type": "cutaway",
+  "chapter": "Yield",
+  "label": "On screen: yield tools",
+  "url": "On-Chain-Operator-Calculator.html",
+  "shots": [
+    {
+      "src": "assets/demos/calculator-yield/01.png",
+      "caption": "Open funding carry",
+      "box": [
+        0.1575,
+        0.2863,
+        0.7125,
+        0.1486
+      ]
+    },
+    {
+      "src": "assets/demos/calculator-yield/02.png",
+      "caption": "Open cash and carry",
+      "box": [
+        0.1575,
+        0.2863,
+        0.7125,
+        0.1486
+      ]
+    },
+    {
+      "src": "assets/demos/calculator-yield/03.png",
+      "caption": "Open the covered call",
+      "box": [
+        0.1575,
+        0.2863,
+        0.7125,
+        0.1486
+      ]
+    },
+    {
+      "src": "assets/demos/calculator-yield/04.png",
+      "caption": "Open the principal token",
+      "box": [
+        0.1575,
+        0.2863,
+        0.7125,
+        0.1486
+      ]
+    },
+    {
+      "src": "assets/demos/calculator-yield/05.png",
+      "caption": "Open A.P.R. to A.P.Y.",
+      "box": [
+        0.1575,
+        0.2863,
+        0.7125,
+        0.1486
+      ]
+    }
+  ],
+  "vo": "Open funding carry. Then cash and carry. Then the covered call. Then the principal token. Then A.P.R. to A.P.Y."
+}

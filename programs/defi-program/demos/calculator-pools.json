@@ -1,0 +1,15 @@
+{
+  "id": "calculator-pools",
+  "chapter": "Pools",
+  "label": "On screen: pool tools",
+  "showUrl": "On-Chain-Operator-Calculator.html",
+  "url": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#il",
+  "viewport": [1600, 900],
+  "steps": [
+    { "wait": 600, "shot": "01", "caption": "Open impermanent loss", "highlight": "#verdict" },
+    { "goto": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#lp", "wait": 500, "shot": "02", "caption": "Open fee break-even", "highlight": "#verdict" },
+    { "goto": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#cl", "wait": 500, "shot": "03", "caption": "Open concentrated range", "highlight": "#verdict" },
+    { "goto": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#lvr", "wait": 500, "shot": "04", "caption": "Open loss versus rebalancing", "highlight": "#verdict" }
+  ],
+  "vo": "Open impermanent loss. Then fee break-even. Then concentrated range. Then loss versus rebalancing."
+}

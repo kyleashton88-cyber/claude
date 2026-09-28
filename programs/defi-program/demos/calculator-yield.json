@@ -1,0 +1,16 @@
+{
+  "id": "calculator-yield",
+  "chapter": "Yield",
+  "label": "On screen: yield tools",
+  "showUrl": "On-Chain-Operator-Calculator.html",
+  "url": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#carry",
+  "viewport": [1600, 900],
+  "steps": [
+    { "wait": 600, "shot": "01", "caption": "Open funding carry", "highlight": "#verdict" },
+    { "goto": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#basis", "wait": 500, "shot": "02", "caption": "Open cash and carry", "highlight": "#verdict" },
+    { "goto": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#covered", "wait": 500, "shot": "03", "caption": "Open the covered call", "highlight": "#verdict" },
+    { "goto": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#pt", "wait": 500, "shot": "04", "caption": "Open the principal token", "highlight": "#verdict" },
+    { "goto": "file:///workspace/programs/defi-program/calculator/On-Chain-Operator-Calculator.html#apy", "wait": 500, "shot": "05", "caption": "Open A.P.R. to A.P.Y.", "highlight": "#verdict" }
+  ],
+  "vo": "Open funding carry. Then cash and carry. Then the covered call. Then the principal token. Then A.P.R. to A.P.Y."
+}
