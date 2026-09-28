@@ -71,7 +71,7 @@ const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&am
 const plain = s => String(s || '')
   .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
   .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
-  .replace(/<[^>]+>/g, ' ')
+  .replace(/<\/?[a-zA-Z][^>]*>/g, ' ')
   .replace(/[*_`#>]+/g, '')
   .replace(/\s+/g, ' ')
   .trim();
@@ -79,7 +79,7 @@ const plain = s => String(s || '')
 const readable = s => String(s || '')
   .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
   .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
-  .replace(/<[^>]+>/g, ' ')
+  .replace(/<\/?[a-zA-Z][^>]*>/g, ' ')
   .replace(/[*`#>]+/g, '')
   .replace(/\s+/g, ' ')
   .trim();
@@ -154,12 +154,14 @@ for (let num = 0; num <= 14; num++) {
       if (!primary) primary = id;
       else if (images.get(primary).rel.includes('/modules/') && !isBanner) primary = id;
     }
-    if (lid === '8.3' && (!primary || images.get(primary).rel.includes('/modules/'))) {
-      const lib = read('03-defi-strategy-mastery.md');
-      const im = lib.match(/!\[([^\]]*)\]\(([^)]+)\)/);
-      if (im) {
+    let library = '';
+    if (lid === '8.3') {
+      library = read('03-defi-strategy-mastery.md');
+      for (const im of library.matchAll(/!\[([^\]]*)\]\(([^)]+)\)/g)) {
         const id = addImage(im[2], im[1], lid);
-        if (id) primary = id;
+        if (!id) continue;
+        const isBanner = images.get(id).rel.includes('/modules/');
+        if (!primary || (images.get(primary).rel.includes('/modules/') && !isBanner)) primary = id;
       }
       if (!/thirty strategies/i.test(blurb)) {
         blurb = 'Name where a strategy’s return comes from, the maths that tests it, how to run it, and how it loses money. Thirty strategies, in seven levels.';
@@ -167,8 +169,8 @@ for (let num = 0; num <= 14; num++) {
     }
     const vid = `lesson-${lid.split('.')[0].padStart(2, '0')}-${lid.split('.')[1]}`;
     lessons.push({
-      id: lid, title: starter ? 'Mastery Starter' : ltitle, starter, expert, blurb, example, exampleKind, mastered, primary,
-      hay: plain(body).slice(0, 3500),
+      id: lid, title: starter ? 'Mastery Starter' : ltitle, starter, expert, blurb, example, exampleKind, mastered, primary, library,
+      hay: plain(library || body),
       video: exists(`video/${vid}.mp4`) ? `../video/${vid}.mp4` : '',
     });
   }
@@ -218,6 +220,7 @@ function lessonBlock(l) {
   const example = l.example
     ? `<p class="example"><b>${l.exampleKind === 'worked' ? 'Worked example.' : 'From the lesson.'}</b> ${esc(l.example)}</p>`
     : '';
+  const library = l.library ? `<div class="library">${mdBlocks(l.library, l.id)}</div>` : '';
   const links = [
     calcs.map(c => `<a href="#c-${esc(c.cmd)}">${esc(c.name)}</a>`).join(' · '),
     sheets.map(sheetLink).join(' · '),
@@ -230,7 +233,7 @@ function lessonBlock(l) {
       <span class="ltext"><span class="ltitle">${esc(l.title)}${flag}${videoWord}${sheetWord}${calcWord}</span><span class="ldesc">${esc(l.blurb)}</span></span>
       ${img ? `<img data-img="${esc(img.id)}" alt="" width="140" height="78">` : '<span class="nopic"></span>'}
     </summary>
-    <div class="more">${example}<p class="links">${links}</p></div>
+    <div class="more">${example}${library}<p class="links">${links}</p></div>
   </details>`;
 }
 
@@ -252,16 +255,61 @@ function moduleBlock(m) {
 function inline(s) {
   return esc(s)
     .replace(/`([^`]+)`/g, '<code>$1</code>')
-    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|[^*])\*([^*]+)\*/g, '$1<em>$2</em>');
 }
-function mdBlocks(text) {
+function isMdBlock(line) {
+  const t = line.trim();
+  return !t
+    || t === '---'
+    || t.startsWith('|')
+    || t.startsWith('#')
+    || t.startsWith('>')
+    || t.startsWith('```')
+    || t.startsWith('<details>')
+    || /^[-*] /.test(t)
+    || /^\d+\. /.test(t)
+    || /^!\[[^\]]*\]\([^)]+\)$/.test(t);
+}
+function mdBlocks(text, lessonId) {
   const lines = text.replace(/\r/g, '').split('\n');
   let html = '';
   let i = 0;
   const isSep = cells => cells.every(c => /^:?-+:?$/.test(c));
+  const takeContinuation = item => {
+    while (i < lines.length && /^\s+\S/.test(lines[i]) && !isMdBlock(lines[i])) {
+      item += ' ' + lines[i].trim();
+      i++;
+    }
+    return item;
+  };
   while (i < lines.length) {
-    if (!lines[i].trim()) { i++; continue; }
-    if (lines[i].trim().startsWith('|')) {
+    const raw = lines[i];
+    const trim = raw.trim();
+    if (!trim) { i++; continue; }
+    if (trim === '---') { html += '<hr>'; i++; continue; }
+    if (trim.startsWith('```')) {
+      const code = [];
+      i++;
+      while (i < lines.length && !lines[i].trim().startsWith('```')) { code.push(lines[i]); i++; }
+      if (i < lines.length) i++;
+      html += `<pre class="code"><code>${esc(code.join('\n'))}</code></pre>`;
+      continue;
+    }
+    if (trim.startsWith('<details>')) {
+      const chunk = [];
+      while (i < lines.length) {
+        chunk.push(lines[i]);
+        if (lines[i].includes('</details>')) { i++; break; }
+        i++;
+      }
+      const block = chunk.join('\n');
+      const sum = block.match(/<summary>([\s\S]*?)<\/summary>/);
+      const rest = block.replace(/<details>\s*<summary>[\s\S]*?<\/summary>/, '').replace(/<\/details>\s*$/, '').trim();
+      html += `<details class="quiz"><summary>${inline(sum ? sum[1].trim() : '')}</summary><p>${inline(rest)}</p></details>`;
+      continue;
+    }
+    if (trim.startsWith('|')) {
       const rows = [];
       while (i < lines.length && lines[i].trim().startsWith('|')) {
         const cells = lines[i].trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(c => c.trim());
@@ -273,16 +321,45 @@ function mdBlocks(text) {
       html += '<div class="tablewrap"><table><thead><tr>' + head.map(c => `<th>${inline(c)}</th>`).join('') + '</tr></thead><tbody>'
         + rest.map(r => '<tr>' + r.map(c => `<td>${inline(c) || ' '}</td>`).join('') + '</tr>').join('')
         + '</tbody></table></div>';
-    } else if (/^[-*] /.test(lines[i])) {
+    } else if (/^[-*] /.test(trim) || /^\d+\. /.test(trim)) {
+      const ordered = /^\d+\. /.test(trim);
+      const re = ordered ? /^\d+\. / : /^[-*] /;
       const items = [];
-      while (i < lines.length && /^[-*] /.test(lines[i])) { items.push(lines[i].replace(/^[-*] /, '')); i++; }
-      html += '<ul>' + items.map(it => `<li>${inline(it)}</li>`).join('') + '</ul>';
-    } else if (lines[i].startsWith('### ')) {
-      html += `<h4>${inline(lines[i].replace(/^### /, ''))}</h4>`;
+      while (i < lines.length && re.test(lines[i].trim())) {
+        let item = lines[i].trim().replace(re, '');
+        i++;
+        item = takeContinuation(item);
+        items.push(item);
+      }
+      const tag = ordered ? 'ol' : 'ul';
+      html += `<${tag}>` + items.map(it => `<li>${inline(it)}</li>`).join('') + `</${tag}>`;
+    } else if (trim.startsWith('>')) {
+      const quote = [];
+      while (i < lines.length && lines[i].trim().startsWith('>')) {
+        quote.push(lines[i].trim().replace(/^>\s?/, ''));
+        i++;
+      }
+      html += `<blockquote><p>${inline(quote.join(' '))}</p></blockquote>`;
+    } else if (/^!\[[^\]]*\]\([^)]+\)$/.test(trim)) {
+      const img = trim.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+      const id = addImage(img[2], img[1], lessonId || null);
+      if (id) html += `<figure><img data-img="${esc(id)}" alt="${esc(plain(img[1]))}" width="800"><figcaption>${esc(plain(img[1]))}</figcaption></figure>`;
+      i++;
+    } else if (trim.startsWith('#### ')) {
+      html += `<h5>${inline(trim.slice(5))}</h5>`;
+      i++;
+    } else if (trim.startsWith('### ')) {
+      html += `<h4>${inline(trim.slice(4))}</h4>`;
+      i++;
+    } else if (trim.startsWith('## ')) {
+      html += `<h3>${inline(trim.slice(3))}</h3>`;
+      i++;
+    } else if (trim.startsWith('# ')) {
+      html += `<h3>${inline(trim.slice(2))}</h3>`;
       i++;
     } else {
       const para = [];
-      while (i < lines.length && lines[i].trim() && !lines[i].trim().startsWith('|') && !/^[-*] /.test(lines[i]) && !lines[i].startsWith('#')) {
+      while (i < lines.length && lines[i].trim() && !isMdBlock(lines[i])) {
         para.push(lines[i].trim());
         i++;
       }
@@ -427,7 +504,7 @@ const FILES = [
   ['Course Hub', 'index.html', 'Every lesson with its video, checklist, quiz, and your progress. Saved in this browser only.'],
   ['Day-1 Setup Kit', '../Day-1-Setup-Kit.pdf', 'Printable checklist from Module 0. The written version is Day-1-Setup-Kit.md.'],
   ['Full program book', '../On-Chain-Operator-Program.pdf', 'The same course as one document, with diagrams.'],
-  ['Written lessons', '../lessons/', 'One markdown file per module. Lesson 2.2 is also in 02-sample-lesson-amm-math.md. Lesson 8.3 is 03-defi-strategy-mastery.md.'],
+  ['Written lessons', '../lessons/', 'One markdown file per module. Lesson 2.2 is also in 02-sample-lesson-amm-math.md. Lesson 8.3 on this page includes the strategy library from 03-defi-strategy-mastery.md.'],
   ['Worksheets', '../08-worksheets.md', 'The same 17 templates as the Worksheets section of this page.'],
   ['Topic map', '../09-mastery-map.md', 'Every subject, the lesson that teaches it, and the level: beginner, practitioner, or master.'],
   ['Curriculum', '../01-offer-and-curriculum.md', 'Stages, modules, lesson titles, and what each stage leaves you able to do.'],
@@ -541,6 +618,22 @@ h3 { font-size: 22px; letter-spacing: -0.02em; margin: 14px 0 6px; }
 .more { padding: 0 0 18px 4.3rem; }
 .more img { display: block; width: min(100%, 720px); background: var(--ink); margin-bottom: 10px; }
 .more p { max-width: 66ch; margin: 8px 0; }
+.library { max-width: 78ch; }
+.library h3 { font-size: 20px; margin: 22px 0 6px; }
+.library h4 { font-size: 17px; margin: 18px 0 4px; }
+.library h5 { font-size: 16px; margin: 16px 0 4px; }
+.library figure { margin: 12px 0 16px; }
+.library figcaption { color: var(--muted); font-size: 14px; margin-top: 4px; }
+.library pre.code { overflow-x: auto; max-width: 100%; background: var(--ink); color: #e7eef4; padding: 12px 14px; font-size: 13.5px; line-height: 1.45; }
+.library pre.code code { color: inherit; }
+.library blockquote { margin: 10px 0; padding: 8px 12px; border-left: 4px solid var(--warn); background: var(--warnbg); }
+.library blockquote p { margin: 0; max-width: none; }
+.library .quiz { margin: 8px 0; border-top: 1px solid var(--line); padding-top: 8px; }
+.library .quiz summary { cursor: pointer; font-weight: 650; }
+.library .quiz p { margin: 6px 0 0; }
+.library ol, .library ul { padding-left: 1.2em; margin: 8px 0; }
+.library li { margin: 4px 0; }
+.library hr { border: 0; border-top: 1px solid var(--line); margin: 18px 0; }
 .worksheet { border-top: 1px solid var(--line); padding: 18px 0 8px; }
 .worksheet header { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; align-items: baseline; }
 .worksheet h3 { margin-top: 0; }
@@ -1010,11 +1103,11 @@ document.querySelectorAll('.calc[data-c]').forEach(el => {
   el.querySelectorAll('select').forEach(i => i.addEventListener('change', upd));
   upd();
 });
-if (location.protocol === 'file:') {
+if (location.protocol === 'file:' && /On-Chain-Operator-Course-Directory\\.html$/i.test(decodeURIComponent(location.pathname))) {
   const note = document.createElement('p');
   note.id = 'offline-note';
   note.className = 'safety';
-  note.textContent = 'This downloaded file is the whole directory. Search, lessons, pictures, worksheets, and the calculators all run here. Video files and the Course Hub are separate course files, so those links stay on this page.';
+  note.textContent = 'This downloaded file is the whole directory. Search, lessons, pictures, worksheets, and the calculators all run here. Video files and the Course Hub are the files next to directory.html in the course folder, so those links stay on this page.';
   document.getElementById('intro').prepend(note);
   document.querySelectorAll('a.folderlink').forEach(a => a.addEventListener('click', e => { e.preventDefault(); note.scrollIntoView({ block: 'nearest' }); }));
 }
