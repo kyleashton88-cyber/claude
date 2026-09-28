@@ -11,7 +11,7 @@ Old mp4s / old gold scripts do not count, even if the queue elsewhere still says
 | 0.2 | Opening and securing an exchange account | new gold script: flow3d anchor, donut, 5 flows, 2 compares | done |
 | 0.3 | Buying your first crypto without overpaying | new gold script: chart3d anchor, 4 flows, 3 compares, steps demo | done |
 | 0.4 | Exchange account vs your own wallet: who holds the keys? | new gold script: flow3d anchor, 5-row compare, row-bars scenario | done |
-| 0.5 | Setting up your wallet and backing it up | | pending |
+| 0.5 | Setting up your wallet and backing it up | new gold script: flow3d anchor, 4 flows, scam walkthrough, steps demo | done |
 | 0.6 | Networks, gas and your first transfer | | pending |
 | 0.7 | Your first DeFi steps (practice mode first) | | pending |
 | 0.8 | Your security baseline, and the language of DeFi | | pending |
