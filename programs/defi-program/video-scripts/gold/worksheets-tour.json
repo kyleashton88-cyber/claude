@@ -1,0 +1,216 @@
+{
+  "id": "worksheets-tour",
+  "title": "How to use the worksheets",
+  "size": [1920, 1080],
+  "group": "lessons",
+  "maxMinutes": 8,
+  "tag": "Worksheets",
+  "gold": true,
+  "music": true,
+  "musicLevel": 0.14,
+  "seed": 91,
+  "use": "Orientation film for the worksheet workbook (On-Chain-Operator-Worksheets.xlsx). UI captured 2026-09-28 from a preview of that workbook. Facts last checked: 2026-09-28. Lesson 3.2 example: quantity 10, price 3000, liquidation threshold 0.80, debt 12000 prints health factor 2.00 and liquidation price $1,500. Lesson 12.1 example: collateral 300000, reserve 40000, loans 60000, borrow 5%, spend 5000 prints equity $280,000, LTV 20%, health factor 4.0, runway about 7.6 months. Lesson 13.3 example: five positions, $500,000, payout ratio 0.70 prints expected income $23,300 and payout $16,310. W4 examples score 4×5=20 and 3×5=15. All figures are lesson examples for learning, not a forecast. The workbook is not inside the directory zip.",
+  "thumbnail": {
+    "title": "Fill the sheet",
+    "subtitle": "When each worksheet opens"
+  },
+  "scenes": [
+    {
+      "type": "title",
+      "chapter": "Why it matters",
+      "eyebrow": "On-Chain Operator Program",
+      "num": "Sheets",
+      "title": "How to use the worksheets",
+      "sub": "Which sheet, when, and what you type.",
+      "vo": "This is the worksheet workbook for the On-Chain Operator Program. In this film you will learn which sheet to open, when in the course you open it, and how a yellow cell becomes a green answer.",
+      "cap": "This is the worksheet workbook for the On-Chain Operator Program. In this film you will learn which sheet to open, when in the course you open it, and how a yellow cell becomes a green answer."
+    },
+    {
+      "type": "statement",
+      "chapter": "Why it matters",
+      "kicker": "Why the file exists",
+      "lines": ["The lesson ends.", "The record has to stay."],
+      "sub": "A decision you do not write down is one you cannot review.",
+      "vo": "A long course is easy to lose track of. The decision you do not write down is the one you cannot review. This file is where the lesson turns into a record.",
+      "cap": "A long course is easy to lose track of. The decision you do not write down is the one you cannot review. This file is where the lesson turns into a record."
+    },
+    {
+      "type": "pillars",
+      "chapter": "Why it matters",
+      "title": "What you will be able to do",
+      "items": [
+        {"icon": "book", "title": "Open it", "text": "Excel, Sheets, Calc, or Numbers"},
+        {"icon": "compass", "title": "Match the lesson", "text": "The Start sheet says when"},
+        {"icon": "chart", "title": "Type, then read", "text": "Yellow in, green answer"},
+        {"icon": "lock", "title": "Leave secrets out", "text": "No seed, key, or password"}
+      ],
+      "vo": "By the end you will be able to do four things. Open the workbook in a spreadsheet. Pick the sheet that matches the lesson you are on. Type in a yellow cell, and read the green answer. And keep secrets out of every sheet.",
+      "cap": "By the end you will be able to do four things. Open the workbook in a spreadsheet. Pick the sheet that matches the lesson you are on. Type in a yellow cell, and read the green answer. And keep secrets out of every sheet."
+    },
+    {
+      "type": "cutaway",
+      "chapter": "Open the file",
+      "label": "On screen: the worksheet workbook",
+      "url": "On-Chain-Operator-Worksheets.xlsx",
+      "shots": [
+        {"src": "assets/demos/worksheets-tour/01.png", "caption": "Read the safety line", "box": [0.0344, 0.2578, 0.9313, 0.0711]},
+        {"src": "assets/demos/worksheets-tour/02.png", "caption": "Open the workbook", "box": [0.0344, 0.3289, 0.9313, 0.1314]}
+      ],
+      "vo": "Start with the safety line. The file is educational only, and it will never ask for a seed phrase or a key. Then open the workbook. Excel, LibreOffice Calc, and Numbers open it directly. In Google Sheets, use File, Import, Upload.",
+      "cap": "Start with the safety line. The file is educational only, and it will never ask for a seed phrase or a key. Then open the workbook. Excel, LibreOffice Calc, and Numbers open it directly. In Google Sheets, use File, Import, Upload."
+    },
+    {
+      "type": "steps",
+      "chapter": "Open the file",
+      "title": "Open the file",
+      "steps": [
+        "Download the workbook",
+        "Open it in a spreadsheet",
+        "Read Start before you type"
+      ],
+      "result": "The Start sheet is the index",
+      "vo": "If you downloaded the file, open the workbook itself. Do not look for a website. The Start sheet is the index. Read it before you type a number.",
+      "cap": "If you downloaded the file, open the workbook itself. Do not look for a website. The Start sheet is the index. Read it before you type a number."
+    },
+    {
+      "type": "cutaway",
+      "chapter": "When to use it",
+      "label": "On screen: when each sheet opens",
+      "url": "On-Chain-Operator-Worksheets.xlsx",
+      "shots": [
+        {"src": "assets/demos/worksheets-tour/03.png", "caption": "Open W1 from lesson 0.3", "box": [0.0347, 0.2117, 0.9306, 0.0656]},
+        {"src": "assets/demos/worksheets-tour/04.png", "caption": "Match the sheet to the stage", "box": [0.0344, 0.1622, 0.9313, 0.4022]}
+      ],
+      "vo": "Open W one from lesson zero point three, and keep it from the first action. One line for every buy, sell, transfer, swap, fee, and income. The rest of the table is the map. Match the sheet to the stage you are in, not to the order of the tabs.",
+      "cap": "Open W1 from lesson 0.3, and keep it from the first action. One line for every buy, sell, transfer, swap, fee, and income. The rest of the table is the map. Match the sheet to the stage you are in, not to the order of the tabs."
+    },
+    {
+      "type": "flow",
+      "chapter": "When to use it",
+      "title": "When the sheet comes due",
+      "layout": "row",
+      "nodes": [
+        {"id": "day", "label": "Day one", "sub": "W1 records", "icon": "book"},
+        {"id": "proto", "label": "Before a protocol", "sub": "W3, six checks", "icon": "search"},
+        {"id": "hold", "label": "While you hold it", "sub": "W5, W4, W2", "icon": "chart"},
+        {"id": "size", "label": "Before you size up", "sub": "W12 and W13", "icon": "shield"},
+        {"id": "bank", "label": "The bank", "sub": "Modules 12 to 14", "icon": "bank"}
+      ],
+      "edges": [
+        {"from": "day", "to": "proto", "label": "then"},
+        {"from": "proto", "to": "hold", "label": "then"},
+        {"from": "hold", "to": "size", "label": "then"},
+        {"from": "size", "to": "bank", "label": "then"}
+      ],
+      "vo": "Day one is W one, the records sheet, and you keep it. Before you use a protocol, open W three and walk the six checks. While you hold a position, use the portfolio, the risk register, and the journal. Before you size the book up, write the stress test and the incident playbook. When you run the bank, Modules twelve through fourteen fill the rest.",
+      "cap": "Day one is W1, the records sheet, and you keep it. Before you use a protocol, open W3 and walk the six checks. While you hold a position, use the portfolio, the risk register, and the journal. Before you size the book up, write the stress test and the incident playbook. When you run the bank, Modules 12 through 14 fill the rest."
+    },
+    {
+      "type": "compare",
+      "chapter": "Yellow and green",
+      "title": "Where the number should live",
+      "left": {
+        "label": "A note, and then it goes stale",
+        "tone": "bad",
+        "items": ["The health factor does not update", "The risk score is not multiplied", "Nothing checks the balance sheet"]
+      },
+      "right": {
+        "label": "Yellow in, green out",
+        "tone": "good",
+        "items": ["You type the yellow cell", "The green cell is the formula", "W8 reads the balance sheet"]
+      },
+      "vo": "A note can hold a number, and then that number goes stale. The health factor does not update, and the risk score is not multiplied. The yellow cell is the one you type. The green cell is the course formula. And the credit policy on W eight reads the balance sheet, so the check stays tied to the numbers.",
+      "cap": "A note can hold a number, and then that number goes stale. The health factor does not update, and the risk score is not multiplied. The yellow cell is the one you type. The green cell is the course formula. And the credit policy on W8 reads the balance sheet, so the check stays tied to the numbers."
+    },
+    {
+      "type": "cutaway",
+      "chapter": "Yellow and green",
+      "label": "On screen: the health-factor tool",
+      "url": "On-Chain-Operator-Worksheets.xlsx",
+      "shots": [
+        {"src": "assets/demos/worksheets-tour/05.png", "caption": "Type in yellow, read green", "box": [0.0344, 0.1622, 0.9313, 0.0689]},
+        {"src": "assets/demos/worksheets-tour/06.png", "caption": "Read the health factor", "box": [0.75, 0.3761, 0.2153, 0.0656]},
+        {"src": "assets/demos/worksheets-tour/07.png", "caption": "Read the liquidation price", "box": [0.75, 0.4239, 0.2153, 0.0656]}
+      ],
+      "vo": "On Tools, yellow means you type, and green means the sheet answers. The lesson three point two example is ten units at three thousand dollars, a threshold of point eight zero, and twelve thousand dollars of debt. The health factor reads two point zero zero. The liquidation price reads one thousand five hundred dollars. Those figures are the lesson example, for learning, not a forecast.",
+      "cap": "On Tools, yellow means you type, and green means the sheet answers. The lesson 3.2 example is 10 units at $3,000, a threshold of 0.80, and $12,000 of debt. The health factor reads 2.00. The liquidation price reads $1,500. Those figures are the lesson example, for learning, not a forecast."
+    },
+    {
+      "type": "steps",
+      "chapter": "A worked sheet",
+      "title": "Lesson 12.1, on the balance sheet",
+      "steps": [
+        "Collateral $300,000 + reserve $40,000",
+        "Loans $60,000",
+        "Equity = $340,000 − $60,000",
+        "LTV = $60,000 ÷ $300,000"
+      ],
+      "result": "Equity $280,000 · LTV 20% · health factor 4.0 · runway 7.6 months",
+      "vo": "Here is the lesson twelve point one example, in order. Collateral of three hundred thousand, plus a reserve of forty thousand, is three hundred and forty thousand of assets. Loans are sixty thousand. Equity is three hundred and forty thousand minus sixty thousand, which is two hundred and eighty thousand. L.T.V. is sixty thousand divided by the collateral, which is twenty percent. The health factor is four point zero, and the reserve covers about seven point six months.",
+      "cap": "Here is the lesson 12.1 example, in order. Collateral of $300,000, plus a reserve of $40,000, is $340,000 of assets. Loans are $60,000. Equity is $340,000 minus $60,000, which is $280,000. LTV is $60,000 divided by the collateral, which is 20%. The health factor is 4.0, and the reserve covers about 7.6 months."
+    },
+    {
+      "type": "cutaway",
+      "chapter": "A worked sheet",
+      "label": "On screen: the bank, the payout, the score",
+      "url": "On-Chain-Operator-Worksheets.xlsx",
+      "shots": [
+        {"src": "assets/demos/worksheets-tour/08.png", "caption": "Read equity on the balance sheet", "box": [0.2416, 0.355, 0.1715, 0.0656]},
+        {"src": "assets/demos/worksheets-tour/09.png", "caption": "Let W8 check W6", "box": [0.8695, 0.355, 0.0958, 0.0656]},
+        {"src": "assets/demos/worksheets-tour/10.png", "caption": "Read the lesson payout", "box": [0.5894, 0.4028, 0.3759, 0.0656]},
+        {"src": "assets/demos/worksheets-tour/11.png", "caption": "Read a score of 20", "box": [0.5009, 0.2117, 0.0869, 0.0656]}
+      ],
+      "vo": "On the balance sheet, equity reads two hundred and eighty thousand dollars. W eight reads that sheet and answers yes, because the health factor is above the floor. The income sheet, in the lesson thirteen point three example, shows a payout of sixteen thousand three hundred and ten dollars a year. On the risk register, a score of twenty means do not hold it until the response is real.",
+      "cap": "On the balance sheet, equity reads $280,000. W8 reads that sheet and answers yes, because the health factor is above the floor. The income sheet, in the lesson 13.3 example, shows a payout of $16,310 a year. On the risk register, a score of 20 means do not hold it until the response is real."
+    },
+    {
+      "type": "quiz",
+      "chapter": "First check",
+      "n": 1,
+      "of": 2,
+      "q": "Collateral $300,000, reserve $40,000, loans $60,000. What is the equity?",
+      "a": "$280,000. Add the reserve, then subtract the loans. A lesson example, not your book.",
+      "vo": "Question one. The lesson balance sheet has three hundred thousand dollars of collateral, a forty thousand dollar reserve, and sixty thousand dollars of loans. What is the equity? [[pause 4]] The answer: two hundred and eighty thousand dollars. Add the reserve, then subtract the loans. This is a lesson example, not your book.",
+      "cap": "Question one. The lesson balance sheet has $300,000 of collateral, a $40,000 reserve, and $60,000 of loans. What is the equity? The answer: $280,000. Add the reserve, then subtract the loans. This is a lesson example, not your book."
+    },
+    {
+      "type": "quiz",
+      "chapter": "Second check",
+      "n": 2,
+      "of": 2,
+      "q": "You just finished lesson 0.3. Which sheet do you open, and how long do you keep it?",
+      "a": "W1 Records. One line per action, and you keep it.",
+      "vo": "Question two. You have just finished lesson zero point three. Which sheet do you open, and how long do you keep it? [[pause 4]] The answer: W one, the records sheet. One line per action, and you keep it.",
+      "cap": "Question two. You have just finished lesson 0.3. Which sheet do you open, and how long do you keep it? The answer: W1, the records sheet. One line per action, and you keep it."
+    },
+    {
+      "type": "statement",
+      "chapter": "Your turn",
+      "kicker": "Your turn",
+      "lines": ["Open Start.", "Then the sheet for this lesson."],
+      "sub": "Replace one yellow example. Read the green cell.",
+      "vo": "Your turn. Download the workbook and open the Start sheet. Find the lesson you are on, and open that sheet. Replace one yellow example with a number of your own, and read what the green cell does. Never type a seed phrase, a key, or a password.",
+      "cap": "Your turn. Download the workbook and open the Start sheet. Find the lesson you are on, and open that sheet. Replace one yellow example with a number of your own, and read what the green cell does. Never type a seed phrase, a key, or a password."
+    },
+    {
+      "type": "bullets",
+      "chapter": "Recap",
+      "title": "What to remember",
+      "items": [
+        "Start tells you when each sheet opens",
+        "Yellow is yours. Green is the formula.",
+        "W1 stays open from the first action"
+      ],
+      "vo": "Three things to keep. The Start sheet tells you when each worksheet opens. Yellow is what you type, and green is the formula. And W one, the records sheet, stays open from the first action.",
+      "cap": "Three things to keep. The Start sheet tells you when each worksheet opens. Yellow is what you type, and green is the formula. And W1, the records sheet, stays open from the first action."
+    },
+    {
+      "type": "cta",
+      "chapter": "Recap",
+      "button": "Open the Start sheet",
+      "sub": "Then the sheet for the lesson you are on.",
+      "vo": "Open the Start sheet. Then open the sheet for the lesson you are on. The workbook is there to be filled in, beside the course, one lesson at a time.",
+      "cap": "Open the Start sheet. Then open the sheet for the lesson you are on. The workbook is there to be filled in, beside the course, one lesson at a time."
+    }
+  ]
+}

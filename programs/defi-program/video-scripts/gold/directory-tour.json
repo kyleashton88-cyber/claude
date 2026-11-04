@@ -1,0 +1,354 @@
+{
+  "id": "directory-tour",
+  "title": "How to use the course directory",
+  "size": [1920, 1080],
+  "group": "lessons",
+  "maxMinutes": 12,
+  "tag": "Course directory",
+  "gold": true,
+  "music": true,
+  "musicLevel": 0.14,
+  "seed": 88,
+  "use": "Orientation film for the offline course directory (directory.html). UI captured 2026-09-28 from programs/defi-program/course-hub/directory.html. Facts last checked: 2026-09-28. Counts on the page: 6 stages, 15 modules, 122 lessons, 17 worksheets, 20 calculators. Lesson 3.4 example: borrow LTV 0.70, 3 loops, collateral APY 3.5%, borrow APY 2.5% prints about 2.53× leverage, net 5.03%, breakeven borrow 5.78%. Raising borrow APY to 6% prints about −0.33%. Lesson 3.2 example: quantity 10, price 3000, LT 0.80, debt 12000 prints health factor 2.00 and liquidation near $1,500. All calculator figures are lesson examples for learning, not a forecast. Lesson videos are not inside the directory zip.",
+  "thumbnail": {
+    "title": "Use the directory",
+    "subtitle": "Find a lesson, then run it"
+  },
+  "scenes": [
+    {
+      "type": "title",
+      "chapter": "Why it matters",
+      "eyebrow": "On-Chain Operator Program",
+      "num": "Map",
+      "title": "How to use the course directory",
+      "sub": "Search, read, calculate, and keep your place.",
+      "vo": "This is the course directory for the On-Chain Operator Program. In this film you will learn how to find a lesson, read it, run its calculator, and keep your place. The page works in your browser, even with no network.",
+      "cap": "This is the course directory for the On-Chain Operator Program. In this film you will learn how to find a lesson, read it, run its calculator, and keep your place. The page works in your browser, even with no network."
+    },
+    {
+      "type": "statement",
+      "chapter": "Why it matters",
+      "kicker": "Why this page exists",
+      "lines": ["One hundred and twenty-two lessons.", "One page to find them."],
+      "sub": "The lesson, the picture, the worksheet, and the calculator stay together.",
+      "vo": "A long course is easy to get lost in. This page is the map. Search it, or walk the stages, and you land on the lesson, the picture, the worksheet, and the calculator together.",
+      "cap": "A long course is easy to get lost in. This page is the map. Search it, or walk the stages, and you land on the lesson, the picture, the worksheet, and the calculator together."
+    },
+    {
+      "type": "pillars",
+      "chapter": "Why it matters",
+      "title": "What you will be able to do",
+      "items": [
+        {"icon": "search", "title": "Search", "text": "A lesson number or a topic"},
+        {"icon": "book", "title": "Read", "text": "The full lesson, on the page"},
+        {"icon": "chart", "title": "Calculate", "text": "The example, and its graph"},
+        {"icon": "check", "title": "Keep your place", "text": "Mark done, fill the sheet"}
+      ],
+      "vo": "By the end you will be able to do four things. Search for a lesson number or a topic. Open the lesson and read the full text. Run the calculator under that lesson, and read the graph. Then mark it done, and fill the worksheet without leaving the page.",
+      "cap": "By the end you will be able to do four things. Search for a lesson number or a topic. Open the lesson and read the full text. Run the calculator under that lesson, and read the graph. Then mark it done, and fill the worksheet without leaving the page."
+    },
+    {
+      "type": "cutaway",
+      "chapter": "The map",
+      "label": "On screen: the course directory",
+      "url": "course directory",
+      "shots": [
+        {"src": "assets/demos/directory-tour/01.png", "caption": "Search the whole directory", "box": [0.7063, 0.0044, 0.285, 0.065]},
+        {"src": "assets/demos/directory-tour/02.png", "caption": "Jump to a section", "box": [0, 0.0606, 1, 0.0686]},
+        {"src": "assets/demos/directory-tour/03.png", "caption": "Walk the six stages", "box": [0, 0.1114, 0.165, 0.8273]},
+        {"src": "assets/demos/directory-tour/04.png", "caption": "Read the path in order", "box": [0.1725, 0.3448, 0.5775, 0.4775]}
+      ],
+      "vo": "Start with the search box, which looks through lessons, pictures, worksheets, and calculators. The bar under the title jumps to lessons, glossary, worksheets, pictures, calculators, or where the files live. The list on the left walks six stages, from Zero through Operator. The picture under the title is that same path, in order.",
+      "cap": "Start with the search box, which looks through lessons, pictures, worksheets, and calculators. The bar under the title jumps to lessons, glossary, worksheets, pictures, calculators, or where the files live. The list on the left walks six stages, from Zero through Operator. The picture under the title is that same path, in order."
+    },
+    {
+      "type": "steps",
+      "chapter": "The map",
+      "title": "Open the file",
+      "steps": [
+        "Unzip the directory, if you downloaded it",
+        "Open the HTML file in your browser",
+        "Read the safety line before you search"
+      ],
+      "result": "The page runs from the file, with no network",
+      "vo": "If you downloaded the zip, unzip it and open the HTML file in your browser. Do not look for a website. The page runs from the file itself, with no network. Read the safety line at the top before you type anything. It says the page is educational only, and it will never ask for a seed phrase or a key.",
+      "cap": "If you downloaded the zip, unzip it and open the HTML file in your browser. Do not look for a website. The page runs from the file itself, with no network. Read the safety line at the top before you type anything. It says the page is educational only, and it will never ask for a seed phrase or a key."
+    },
+    {
+      "type": "stats",
+      "chapter": "The map",
+      "stats": [["6", "stages, in order"], ["15", "modules"], ["122", "lessons on this page"], ["20", "calculators, with graphs"]],
+      "vo": "Here is the size of the map. Six stages. Fifteen modules. One hundred and twenty-two lessons on this page. And twenty calculators, each tied to the lesson that teaches that formula. There are also seventeen worksheets.",
+      "cap": "Here is the size of the map. 6 stages. 15 modules. 122 lessons on this page. And 20 calculators, each tied to the lesson that teaches that formula. There are also 17 worksheets."
+    },
+    {
+      "type": "bullets",
+      "chapter": "The map",
+      "title": "Three filters, then search",
+      "items": [
+        "All lessons: the full list",
+        "Mastery starters: 15 openers",
+        "Expert lessons: 15 expert cuts",
+        "Search looks through the whole page"
+      ],
+      "vo": "Above the lesson list are three filters. All lessons is the full list of one hundred and twenty-two. Mastery starters is the fifteen openers, one at the start of each module. Expert lessons is the fifteen expert cuts. Type a search, and the page looks through the whole directory: lessons, worksheets, pictures, and calculators.",
+      "cap": "Above the lesson list are three filters. All lessons is the full list of 122. Mastery starters is the 15 openers, one at the start of each module. Expert lessons is the 15 expert cuts. Type a search, and the page looks through the whole directory: lessons, worksheets, pictures, and calculators."
+    },
+    {
+      "type": "flow",
+      "chapter": "The six stages",
+      "title": "Stages 0 to 2",
+      "nodes": [
+        {"id": "z", "label": "Zero", "sub": "a wallet and a backup", "icon": "wallet"},
+        {"id": "f", "label": "Foundations", "sub": "safety, then a swap", "icon": "shield"},
+        {"id": "p", "label": "Practitioner", "sub": "lending and yield", "icon": "bank"}
+      ],
+      "vo": "Stage Zero is Crypto From Zero: a wallet, a first buy, and a backup, using a small amount. Foundations covers safety habits, then trading on chain. Practitioner covers lending and leverage, yield, and infrastructure risk.",
+      "cap": "Stage Zero is Crypto From Zero: a wallet, a first buy, and a backup, using a small amount. Foundations covers safety habits, then trading on chain. Practitioner covers lending and leverage, yield, and infrastructure risk."
+    },
+    {
+      "type": "flow",
+      "chapter": "The six stages",
+      "title": "Stages 3 to 5",
+      "nodes": [
+        {"id": "a", "label": "Analyst", "sub": "research before you use it", "icon": "search"},
+        {"id": "s", "label": "Strategist", "sub": "a written operating system", "icon": "layers"},
+        {"id": "o", "label": "Operator", "sub": "run the book and the review", "icon": "compass"}
+      ],
+      "vo": "Analyst is where you research a protocol before you use it, and learn to read activity on chain. Strategist is the written operating system: the library, the plan, and the hedge. Operator is where you run the book, the credit line, and the review.",
+      "cap": "Analyst is where you research a protocol before you use it, and learn to read activity on chain. Strategist is the written operating system: the library, the plan, and the hedge. Operator is where you run the book, the credit line, and the review."
+    },
+    {
+      "type": "flow",
+      "chapter": "A study session",
+      "title": "One study session",
+      "nodes": [
+        {"id": "s", "label": "Search", "sub": "or pick a stage", "icon": "search"},
+        {"id": "l", "label": "Open the lesson", "sub": "read it on the page", "icon": "book"},
+        {"id": "c", "label": "Run the calculator", "sub": "the graph redraws", "icon": "chart"},
+        {"id": "w", "label": "Fill the worksheet", "sub": "on this page", "icon": "check"},
+        {"id": "n", "label": "Next lesson", "sub": "the link at the bottom", "icon": "compass"}
+      ],
+      "edges": [
+        {"from": "s", "to": "l", "label": "open"},
+        {"from": "l", "to": "c", "label": "example"},
+        {"from": "c", "to": "w", "label": "write it down"},
+        {"from": "w", "to": "n", "label": "continue"}
+      ],
+      "vo": "Here is one study session, in order. First, search, or pick the stage. Then open the lesson and read it on the page. If that lesson has a calculator, run the example underneath. The graph redraws from the numbers you type. Fill the worksheet while the lesson is still in front of you. Then follow the next-lesson link at the bottom.",
+      "cap": "Here is one study session, in order. First, search, or pick the stage. Then open the lesson and read it on the page. If that lesson has a calculator, run the example underneath. The graph redraws from the numbers you type. Fill the worksheet while the lesson is still in front of you. Then follow the next-lesson link at the bottom."
+    },
+    {
+      "type": "cutaway",
+      "chapter": "Open a lesson",
+      "label": "On screen: lesson 3.4",
+      "url": "course directory",
+      "shots": [
+        {"src": "assets/demos/directory-tour/05.png", "caption": "Open the lesson and read it", "box": [0.2185, 0.5674, 0.5315, 0.0461]}
+      ],
+      "vo": "Open lesson three point four, Borrowing strategies and looping. The full lesson is on the page: the objective, the explanation, the picture, and the worked example. You do not need a second file to read it.",
+      "cap": "Open lesson 3.4, Borrowing strategies and looping. The full lesson is on the page: the objective, the explanation, the picture, and the worked example. You do not need a second file to read it."
+    },
+    {
+      "type": "cutaway",
+      "chapter": "The calculator",
+      "label": "On screen: the loop calculator",
+      "url": "course directory",
+      "shots": [
+        {"src": "assets/demos/directory-tour/06.png", "caption": "Read the lesson example", "box": [0.2185, 0.4202, 0.46, 0.5798]},
+        {"src": "assets/demos/directory-tour/07.png", "caption": "Change the borrow rate", "box": [0.2185, 0.4202, 0.46, 0.5798]},
+        {"src": "assets/demos/directory-tour/08.png", "caption": "Reset to the lesson example", "box": [0.2185, 0.4202, 0.46, 0.5798]}
+      ],
+      "vo": "Under the lesson, the calculator is already filled with the lesson example, and the graph shows that result. Change the borrow rate to six percent, and the headline and the graph both drop below zero. Press Back to the lesson example, and the lesson numbers and the graph both return.",
+      "cap": "Under the lesson, the calculator is already filled with the lesson example, and the graph shows that result. Change the borrow rate to 6%, and the headline and the graph both drop below zero. Press Back to the lesson example, and the lesson numbers and the graph both return."
+    },
+    {
+      "type": "flow",
+      "chapter": "The calculator",
+      "title": "Three things move together",
+      "nodes": [
+        {"id": "t", "label": "You type", "sub": "one number", "icon": "cog"},
+        {"id": "h", "label": "Headline", "sub": "the result, in words", "icon": "book"},
+        {"id": "g", "label": "Graph", "sub": "the same result, drawn", "icon": "chart"},
+        {"id": "r", "label": "Lesson example", "sub": "the reset button", "icon": "check"}
+      ],
+      "edges": [
+        {"from": "t", "to": "h", "label": "updates"},
+        {"from": "h", "to": "g", "label": "redraws"},
+        {"from": "g", "to": "r", "label": "restore"}
+      ],
+      "vo": "Watch three things move together. You type one number. The headline states the result in words. The graph draws that same result, so you can see the shape, not only the figure. Back to the lesson example restores all three. The form in the calculators section is a second copy. It does not share what you typed under the lesson.",
+      "cap": "Watch three things move together. You type one number. The headline states the result in words. The graph draws that same result, so you can see the shape, not only the figure. Back to the lesson example restores all three. The form in the calculators section is a second copy. It does not share what you typed under the lesson."
+    },
+    {
+      "type": "steps",
+      "chapter": "Worked example",
+      "title": "The lesson 3.4 example",
+      "steps": [
+        "Borrow LTV 0.70",
+        "Loops 3",
+        "Collateral APY 3.5%",
+        "Borrow APY 2.5%"
+      ],
+      "result": "2.53× leverage · net 5.03% · breakeven borrow 5.78%",
+      "vo": "Read the example the way the lesson does. Borrow L.T.V. is zero point seven zero. There are three loops. Collateral A.P.Y. is three point five percent. Borrow A.P.Y. is two point five percent. The page prints about two point five three times leverage, a net of five point zero three percent, and a breakeven borrow rate near five point seven eight percent. These are lesson numbers, for learning. They are not a forecast, and nothing here promises a result.",
+      "cap": "Read the example the way the lesson does. Borrow LTV is 0.70. There are 3 loops. Collateral APY is 3.5%. Borrow APY is 2.5%. The page prints about 2.53× leverage, a net of 5.03%, and a breakeven borrow rate near 5.78%. These are lesson numbers, for learning. They are not a forecast, and nothing here promises a result."
+    },
+    {
+      "type": "quiz",
+      "chapter": "First check",
+      "n": 1,
+      "of": 2,
+      "q": "The lesson borrows at 2.5%. The breakeven borrow rate is about 5.78%. What happens at that rate?",
+      "a": "The extra return is wiped out. The spread was the whole gain. This is a lesson example, not a forecast.",
+      "vo": "Question one. The lesson example borrows at two point five percent. The calculator names a breakeven borrow rate near five point seven eight percent. What happens at that rate? [[pause 4]] The answer: the extra return is wiped out. The spread was the whole gain. This is a lesson example, not a forecast.",
+      "cap": "Question one. The lesson example borrows at 2.5%. The calculator names a breakeven borrow rate near 5.78%. What happens at that rate? The answer: the extra return is wiped out. The spread was the whole gain. This is a lesson example, not a forecast."
+    },
+    {
+      "type": "cutaway",
+      "chapter": "Find it again",
+      "label": "On screen: done, then search",
+      "url": "course directory",
+      "shots": [
+        {"src": "assets/demos/directory-tour/09.png", "caption": "Mark the lesson done", "box": [0.1725, 0.3785, 0.5775, 0.1311]},
+        {"src": "assets/demos/directory-tour/10.png", "caption": "Search and read the marked line", "box": [0.1725, 0.0983, 0.5775, 0.0661]}
+      ],
+      "vo": "Tick the box to mark the lesson done, and that check stays in this browser only. Search health factor, read the marked line, and open lesson three point two with its calculator.",
+      "cap": "Tick the box to mark the lesson done, and that check stays in this browser only. Search health factor, read the marked line, and open lesson 3.2 with its calculator."
+    },
+    {
+      "type": "steps",
+      "chapter": "Find it again",
+      "title": "Four searches that work",
+      "steps": [
+        "3.2 opens the health lesson",
+        "health factor marks the matching line",
+        "worksheet finds the sheets",
+        "8.3 opens the strategy library"
+      ],
+      "result": "A lesson number is the fastest search",
+      "vo": "Four searches are enough to learn the page. Type three point two, and the health factor lesson opens. Type health factor, and the matching line is marked, with the calculator beside it. Type worksheet, and the sheets come up. Type eight point three, and the strategy library opens. A lesson number is the fastest search on the page.",
+      "cap": "Four searches are enough to learn the page. Type 3.2, and the health factor lesson opens. Type health factor, and the matching line is marked, with the calculator beside it. Type worksheet, and the sheets come up. Type 8.3, and the strategy library opens. A lesson number is the fastest search on the page."
+    },
+    {
+      "type": "cutaway",
+      "chapter": "Find it again",
+      "label": "On screen: glossary and worksheet",
+      "url": "course directory",
+      "shots": [
+        {"src": "assets/demos/directory-tour/11.png", "caption": "Look up a word", "box": [0.1725, 0.1654, 0.5775, 0.0478]},
+        {"src": "assets/demos/directory-tour/12.png", "caption": "Fill the worksheet on this page", "box": [0.1725, 0.2218, 0.5328, 0.1344]}
+      ],
+      "vo": "The glossary is the word list from lesson zero point eight, and each word links back to the lesson that defines it. Worksheets are fillable on the page, what you type stays in this browser, and every secret stays off the sheet.",
+      "cap": "The glossary is the word list from lesson 0.8, and each word links back to the lesson that defines it. Worksheets are fillable on the page, what you type stays in this browser, and every secret stays off the sheet."
+    },
+    {
+      "type": "cutaway",
+      "chapter": "The library",
+      "label": "On screen: lesson 8.3",
+      "url": "course directory",
+      "shots": [
+        {"src": "assets/demos/directory-tour/15.png", "caption": "Open the strategy library", "box": [0.2185, 0.5896, 0.5315, 0.0639]},
+        {"src": "assets/demos/directory-tour/16.png", "caption": "Unfold one level", "box": [0.2185, 0.0102, 0.5315, 0.4014]}
+      ],
+      "vo": "Lesson eight point three folds thirty strategies into levels, so you open one level at a time. Open Level one for the core set: stablecoin lending, staking, and borrowing against collateral, with illustrative numbers.",
+      "cap": "Lesson 8.3 folds 30 strategies into levels, so you open one level at a time. Open Level 1 for the core set: stablecoin lending, staking, and borrowing against collateral, with illustrative numbers."
+    },
+    {
+      "type": "steps",
+      "chapter": "The library",
+      "title": "How to read one strategy",
+      "steps": [
+        "Open a single level",
+        "Name where the return comes from",
+        "Read how that strategy loses money"
+      ],
+      "result": "If you cannot explain the unwind, leave it folded",
+      "vo": "Read a strategy in three moves. Open a single level, not the whole library. Name where the return comes from. Then read how that strategy loses money. If you cannot explain the unwind, leave it folded. The library says the same thing in its own line: if you cannot name the source and the way out, do not enter.",
+      "cap": "Read a strategy in three moves. Open a single level, not the whole library. Name where the return comes from. Then read how that strategy loses money. If you cannot explain the unwind, leave it folded. The library says the same thing in its own line: if you cannot name the source and the way out, do not enter."
+    },
+    {
+      "type": "cutaway",
+      "chapter": "Pictures and files",
+      "label": "On screen: pictures and the health graph",
+      "url": "course directory",
+      "shots": [
+        {"src": "assets/demos/directory-tour/13.png", "caption": "Browse the pictures", "box": [0.1725, 0.2951, 0.2888, 0.2821]},
+        {"src": "assets/demos/directory-tour/14.png", "caption": "Read the health factor graph", "box": [0.185, 0.1167, 0.4369, 0.3667]}
+      ],
+      "vo": "Pictures are grouped by module, and each diagram links back to its lesson. The health calculator draws the lesson example: ten at three thousand dollars, threshold zero point eight, debt twelve thousand, health factor two, liquidation near one thousand five hundred dollars.",
+      "cap": "Pictures are grouped by module, and each diagram links back to its lesson. The health calculator draws the lesson example: 10 at $3,000, threshold 0.80, debt $12,000, health factor 2.00, liquidation near $1,500."
+    },
+    {
+      "type": "steps",
+      "chapter": "Pictures and files",
+      "title": "The lesson 3.2 example",
+      "steps": [
+        "10 × $3,000 = $30,000 collateral",
+        "× 0.80 = $24,000",
+        "÷ $12,000 of debt"
+      ],
+      "result": "Health factor 2.00 · liquidation $1,500",
+      "vo": "Say the health factor out loud from the lesson example. Ten units at three thousand dollars is thirty thousand dollars of collateral. Times a liquidation threshold of zero point eight is twenty four thousand. Divided by twelve thousand dollars of debt, the health factor is two point zero. Liquidation sits near one thousand five hundred dollars, about half the price. The graph shows that buffer. It is the lesson example, not a price target.",
+      "cap": "Say the health factor out loud from the lesson example. 10 units at $3,000 is $30,000 of collateral. Times a liquidation threshold of 0.80 is $24,000. Divided by $12,000 of debt, the health factor is 2.00. Liquidation sits near $1,500, about half the price. The graph shows that buffer. It is the lesson example, not a price target."
+    },
+    {
+      "type": "cutaway",
+      "chapter": "Pictures and files",
+      "label": "On screen: where things live",
+      "url": "course directory",
+      "shots": [
+        {"src": "assets/demos/directory-tour/17.png", "caption": "See where each file lives", "box": [0.1725, 0.3249, 0.5775, 0.6751]}
+      ],
+      "vo": "Where things live names this directory as the map, and points to the Course Hub beside it for the video, the checklist, and the quiz.",
+      "cap": "Where things live names this directory as the map, and points to the Course Hub beside it for the video, the checklist, and the quiz."
+    },
+    {
+      "type": "compare",
+      "chapter": "Pictures and files",
+      "title": "What you have open",
+      "left": {
+        "label": "Inside this file",
+        "tone": "good",
+        "items": ["122 lessons, full text", "Pictures and diagrams", "17 worksheets", "20 calculators and graphs", "Search, glossary, mark done"]
+      },
+      "right": {
+        "label": "Beside this file",
+        "items": ["Lesson videos", "Course Hub", "Program book", "Day-1 Setup Kit"]
+      },
+      "vo": "Split the folder in your mind. Inside this file you already have the lessons, the pictures, the seventeen worksheets, the twenty calculators, search, the glossary, and mark done. Beside this file, in the course folder, you have the lesson videos, the Course Hub, the program book, and the Day one Setup Kit. If a video link does nothing, you are in the directory file on its own. Open the course folder for the film.",
+      "cap": "Split the folder in your mind. Inside this file you already have the lessons, the pictures, the 17 worksheets, the 20 calculators, search, the glossary, and mark done. Beside this file, in the course folder, you have the lesson videos, the Course Hub, the program book, and the Day-1 Setup Kit. If a video link does nothing, you are in the directory file on its own. Open the course folder for the film."
+    },
+    {
+      "type": "quiz",
+      "chapter": "Second check",
+      "n": 2,
+      "of": 2,
+      "q": "You opened only the downloaded directory. A lesson video does not play. Where is the video?",
+      "a": "In the course folder, next to this file. The directory zip keeps the page, not the films.",
+      "vo": "Question two. You opened only the downloaded directory. A lesson video does not play. Where is the video? [[pause 4]] The answer: in the course folder, next to this file. The directory zip keeps the page, not the films.",
+      "cap": "Question two. You opened only the downloaded directory. A lesson video does not play. Where is the video? The answer: in the course folder, next to this file. The directory zip keeps the page, not the films."
+    },
+    {
+      "type": "statement",
+      "chapter": "Your turn",
+      "kicker": "Your turn",
+      "lines": ["Search 3.2.", "Confirm health factor 2.00."],
+      "sub": "Lesson example only. Never type a secret into this page.",
+      "vo": "Your turn. Open the directory file. Search three point two. Open the lesson, run the health calculator, and confirm a health factor of two point zero on the lesson example. Then mark the lesson done. Do not type a seed phrase, a private key, an A.P.I. key, or a password. This program will not ask for them. The page is educational only. It is not financial, tax, or legal advice.",
+      "cap": "Your turn. Open the directory file. Search 3.2. Open the lesson, run the health calculator, and confirm a health factor of 2.00 on the lesson example. Then mark the lesson done. Do not type a seed phrase, a private key, an API key, or a password. This program will not ask for them. The page is educational only. It is not financial, tax, or legal advice."
+    },
+    {
+      "type": "bullets",
+      "chapter": "Recap",
+      "title": "Keep this map",
+      "items": [
+        "Search, or walk the six stages",
+        "Read the lesson, then run its calculator",
+        "Mark done and fill the sheet in this browser"
+      ],
+      "vo": "Let's recap. Search, or walk the six stages. Read the lesson, then run its calculator, and treat the graph as the lesson example. Mark done, and fill the sheet, in this browser. Next, open lesson zero point zero if you are new, or lesson three point two if you want the health factor worked in full.",
+      "cap": "Let's recap. Search, or walk the six stages. Read the lesson, then run its calculator, and treat the graph as the lesson example. Mark done, and fill the sheet, in this browser. Next, open lesson 0.0 if you are new, or lesson 3.2 if you want the health factor worked in full."
+    }
+  ]
+}

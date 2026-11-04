@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>On-Chain Operator Worksheets</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #d5dee6; }
+  body { font-family: Calibri, "Segoe UI", sans-serif; color: #14202b; }
+  section.screen { width: 1600px; height: 900px; padding: 28px 40px 32px; }
+  .book { background: #fff; border: 1px solid #c5d0da; border-radius: 12px; height: 840px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(7,17,28,.12); }
+  .bar { background: #07111c; color: #fff; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; }
+  .bar b { font-size: 22px; font-weight: 700; }
+  .bar span { color: #8ef6d4; font-size: 15px; }
+  .tabs { display: flex; gap: 4px; background: #f3f6f8; padding: 8px 12px 0; border-bottom: 1px solid #c5d0da; }
+  .tab { padding: 8px 14px; color: #3e4c59; border-radius: 8px 8px 0 0; font-size: 15px; }
+  .tab.on { background: #fff; color: #0a5c48; font-weight: 700; }
+  .body { padding: 18px 22px 22px; }
+  .safety { background: #f8efea; color: #9a3412; padding: 12px 14px; border-radius: 8px; font-size: 18px; margin-bottom: 16px; }
+  h2 { margin: 0 0 8px; font-size: 28px; }
+  .sub { color: #3e4c59; margin: 0 0 16px; font-size: 18px; }
+  table { width: 100%; border-collapse: collapse; font-size: 18px; }
+  th { background: #07111c; color: #fff; text-align: left; padding: 10px 12px; font-weight: 700; }
+  td { border: 1px solid #c5d0da; padding: 9px 12px; }
+  tr.alt td { background: #f3f6f8; }
+  .y { background: #fff6d8 !important; text-align: right; font-variant-numeric: tabular-nums; }
+  .g { background: #e7f6f1 !important; text-align: right; font-weight: 700; color: #0a5c48; font-variant-numeric: tabular-nums; }
+  .name { color: #0a5c48; font-weight: 700; }
+  .red { background: #f4d6cc !important; font-weight: 700; text-align: right; }
+  .amber { background: #f8efea !important; font-weight: 700; text-align: right; }
+  .legend { display: flex; gap: 18px; margin-bottom: 16px; }
+  .chip { padding: 10px 14px; border-radius: 8px; font-size: 18px; border: 1px solid #c5d0da; }
+  ol { margin: 8px 0 0; font-size: 22px; line-height: 1.55; }
+  .note { margin-top: 14px; color: #3e4c59; font-size: 16px; }
+</style>
+</head>
+<body>
+<section class="screen" id="screen-open">
+  <div class="book">
+    <div class="bar"><b>On-Chain-Operator-Worksheets.xlsx</b><span>Educational only</span></div>
+    <div class="tabs"><div class="tab on">Start</div><div class="tab">Tools</div><div class="tab">W1 Records</div><div class="tab">W6 Balance sheet</div></div>
+    <div class="body">
+      <h2>How to open this file</h2>
+      <p class="sub">One workbook. Yellow cells are yours. Green cells are the course formulas.</p>
+      <div class="safety" id="safety">Educational only. Not financial, tax, or legal advice. Never type a seed phrase, private key, API key, or password.</div>
+      <ol id="open-list">
+        <li>Excel, LibreOffice Calc, and Numbers open the file directly.</li>
+        <li>Google Sheets: File, Import, Upload.</li>
+        <li>Replace the lesson examples with your own numbers.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+<section class="screen" id="screen-when">
+  <div class="book">
+    <div class="bar"><b>Start · when each sheet opens</b><span>Follow the course, not the tab order</span></div>
+    <div class="tabs"><div class="tab on">Start</div><div class="tab">Tools</div><div class="tab">W1</div><div class="tab">W6</div></div>
+    <div class="body">
+      <table id="when">
+        <thead><tr><th>Sheet</th><th>Stage</th><th>Lesson</th><th>When you open it</th></tr></thead>
+        <tbody>
+          <tr id="w1"><td class="name">W1 Records</td><td>0 · Zero</td><td>0.3</td><td>From the first action. One line each, and you keep the sheet.</td></tr>
+          <tr class="alt"><td class="name">W3 Due diligence</td><td>3 · Analyst</td><td>Module 6</td><td>Before you use a protocol.</td></tr>
+          <tr><td class="name">W5, W4, W2</td><td>4 · Strategist</td><td>8.1–8.4</td><td>Buckets, risk scores, and the position journal.</td></tr>
+          <tr class="alt"><td class="name">W12, W13</td><td>4 · Strategist</td><td>11.4–11.5</td><td>Stress test and incident playbook, before you size up.</td></tr>
+          <tr id="bank-row"><td class="name">W6–W10, W17</td><td>5 · Operator</td><td>Module 12</td><td>The bank: balance sheet, custody, credit, ladder, lending, letter.</td></tr>
+          <tr class="alt"><td class="name">W11, W16</td><td>5 · Operator</td><td>Module 13</td><td>Income payout, then the annual review.</td></tr>
+          <tr><td class="name">W14, W15</td><td>5 · Operator</td><td>Module 14</td><td>Alerts and what a bot is allowed to do.</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Tools sits beside any lesson that has a number, from lesson 2.4 on.</p>
+    </div>
+  </div>
+</section>
+<section class="screen" id="screen-health">
+  <div class="book">
+    <div class="bar"><b>Tools · Health factor</b><span>Lesson 3.2 example</span></div>
+    <div class="tabs"><div class="tab">Start</div><div class="tab on">Tools</div><div class="tab">W6</div></div>
+    <div class="body">
+      <div class="legend" id="legend">
+        <div class="chip y">Yellow · you type</div>
+        <div class="chip g">Green · the sheet answers</div>
+      </div>
+      <table>
+        <thead><tr><th>You type</th><th></th><th>The sheet answers</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>Collateral quantity</td><td class="y">10</td><td>Collateral value</td><td class="g">$30,000</td></tr>
+          <tr><td>Collateral price</td><td class="y">$3,000</td><td>LTV</td><td class="g">40.0%</td></tr>
+          <tr><td>Liquidation threshold (0 to 1)</td><td class="y" id="lt">0.80</td><td>Health factor</td><td class="g" id="hf">2.00</td></tr>
+          <tr><td>Debt</td><td class="y">$12,000</td><td>Liquidation price</td><td class="g" id="liq">$1,500</td></tr>
+          <tr><td></td><td></td><td>Check against 1.5</td><td class="g">At or above 1.5</td></tr>
+        </tbody>
+      </table>
+      <p class="note">0.80 means 80%. These figures are the lesson example, for learning.</p>
+    </div>
+  </div>
+</section>
+<section class="screen" id="screen-bank">
+  <div class="book">
+    <div class="bar"><b>W6 Balance sheet · Lesson 12.1</b><span>W8 reads this sheet</span></div>
+    <div class="tabs"><div class="tab">W6 Balance sheet</div><div class="tab on">W8 Credit policy</div></div>
+    <div class="body">
+      <table>
+        <thead><tr><th>Balance sheet</th><th></th><th>Credit policy check</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>Collateral</td><td class="y">$300,000</td><td>Max LTV (0 to 1)</td><td class="y">0.30</td></tr>
+          <tr><td>Reserve</td><td class="y">$40,000</td><td>Health-factor floor</td><td class="y">2.00</td></tr>
+          <tr><td>Loans</td><td class="y">$60,000</td><td>W6 LTV is within this cap</td><td class="g" id="yes-ltv">Yes</td></tr>
+          <tr><td>Equity</td><td class="g" id="equity">$280,000</td><td>W6 health factor is at or above the floor</td><td class="g" id="yes-hf">Yes</td></tr>
+          <tr><td>LTV</td><td class="g">20.0%</td><td>Health factor</td><td class="g">4.00</td></tr>
+          <tr><td>Reserve runway</td><td class="g" id="runway">7.6 months</td><td>Monthly interest</td><td class="g">$250</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Yield positions sit in equity. LTV and the health factor use loans plus margin against collateral.</p>
+    </div>
+  </div>
+</section>
+<section class="screen" id="screen-income">
+  <div class="book">
+    <div class="bar"><b>W11 Income · Lesson 13.3</b><span>Five positions, 70% payout</span></div>
+    <div class="tabs"><div class="tab on">W11 Income</div><div class="tab">W4 Risk register</div></div>
+    <div class="body">
+      <table>
+        <thead><tr><th></th><th>Lesson example</th></tr></thead>
+        <tbody>
+          <tr><td>Capital</td><td class="g">$500,000</td></tr>
+          <tr><td>Expected income per year</td><td class="g" id="income">$23,300</td></tr>
+          <tr><td>Blended risk-adjusted yield</td><td class="g">4.66%</td></tr>
+          <tr><td>Payout ratio</td><td class="y">0.70</td></tr>
+          <tr><td>Payout per year</td><td class="g" id="payout">$16,310</td></tr>
+          <tr><td>Payout per month</td><td class="g">$1,359</td></tr>
+          <tr><td>Retained as a buffer</td><td class="g">$6,990</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Pay from expected income. The headline yield is not the payout.</p>
+    </div>
+  </div>
+</section>
+<section class="screen" id="screen-risk">
+  <div class="book">
+    <div class="bar"><b>W4 Risk register · Lesson 8.2</b><span>Score = likelihood × impact</span></div>
+    <div class="tabs"><div class="tab on">W4 Risk register</div></div>
+    <div class="body">
+      <table id="risk">
+        <thead><tr><th>Position</th><th>Likelihood</th><th>Impact</th><th>Score</th><th>Response</th></tr></thead>
+        <tbody>
+          <tr><td>Example: looped ETH</td><td class="y">4</td><td class="y">5</td><td class="red" id="score20">20</td><td>Do not hold it until the response is real.</td></tr>
+          <tr><td>Example: stablecoin pool</td><td class="y">3</td><td class="y">5</td><td class="amber" id="score15">15</td><td>Write the mitigation before you size it.</td></tr>
+        </tbody>
+      </table>
+      <p class="note">15 or higher needs a mitigation or an exit. 20 or higher: do not hold it. Replace the example rows.</p>
+    </div>
+  </div>
+</section>
+</body>
+</html>

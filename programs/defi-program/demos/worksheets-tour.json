@@ -1,0 +1,21 @@
+{
+  "id": "worksheets-tour",
+  "chapter": "Do it",
+  "label": "On screen: the worksheet workbook",
+  "showUrl": "On-Chain-Operator-Worksheets.xlsx",
+  "url": "file:../worksheets/preview.html",
+  "viewport": [1600, 900],
+  "steps": [
+    { "wait": 400, "shot": "01", "caption": "Read the safety line", "highlight": "#safety" },
+    { "shot": "02", "caption": "Open the workbook", "highlight": "#open-list" },
+    { "click": "#screen-when", "wait": 300, "shot": "03", "caption": "Open W1 from lesson 0.3", "highlight": "#w1" },
+    { "shot": "04", "caption": "Match the sheet to the stage", "highlight": "#when" },
+    { "click": "#screen-health", "wait": 300, "shot": "05", "caption": "Type in yellow, read green", "highlight": "#legend" },
+    { "shot": "06", "caption": "Read the health factor", "highlight": "#hf" },
+    { "shot": "07", "caption": "Read the liquidation price", "highlight": "#liq" },
+    { "click": "#screen-bank", "wait": 300, "shot": "08", "caption": "Read equity on the balance sheet", "highlight": "#equity" },
+    { "shot": "09", "caption": "Let W8 check W6", "highlight": "#yes-hf" },
+    { "click": "#screen-income", "wait": 300, "shot": "10", "caption": "Read the lesson payout", "highlight": "#payout" },
+    { "click": "#screen-risk", "wait": 300, "shot": "11", "caption": "Read a score of 20", "highlight": "#score20" }
+  ]
+}
