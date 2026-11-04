@@ -96,6 +96,7 @@
   {
    "type": "compare",
    "chapter": "Two ways to price a trade",
+   "title": "AMM pool vs order book",
    "left": {
     "label": "AMM pool",
     "tone": "good",
@@ -233,6 +234,7 @@
   {
    "type": "compare",
    "chapter": "Aggregators & routing",
+   "title": "A direct trade vs an aggregator route",
    "left": {
     "label": "A direct DEX trade",
     "tone": "good",
@@ -300,6 +302,7 @@
   {
    "type": "compare",
    "chapter": "The real formula",
+   "title": "A deep pool vs a shallow pool",
    "left": {
     "label": "$10K trade, a deep pool",
     "tone": "good",
@@ -358,6 +361,7 @@
   {
    "type": "compare",
    "chapter": "Worked example",
+   "title": "Selling 20 ETH vs 0.5 ETH",
    "left": {
     "label": "Selling 20 ETH",
     "tone": "good",

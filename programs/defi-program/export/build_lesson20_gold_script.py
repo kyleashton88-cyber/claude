@@ -66,7 +66,7 @@ sc("flow", "Word three: price impact. Not a fee, a mechanical consequence of tra
           {"label": "Price impact", "sub": "A mechanical result, not a fee", "icon": "alert"}])
 sc("compare", "Word four: slippage, and it's easy to confuse with price impact, so here's the actual difference. Price impact is what your trade itself does to the pool's price, a real cost baked into the trade. Slippage tolerance is a setting you choose: the worst price you'll accept before your transaction simply reverts, protecting you from a price that moves between your quote and your confirmation.",
    chapter="Words you'll need",
-   left={"label": "Price impact", "tone": "warn", "items": ["What your trade does to the pool's price", "A real cost, part of the trade itself"]},
+   title="Price impact vs slippage tolerance", left={"label": "Price impact", "tone": "warn", "items": ["What your trade does to the pool's price", "A real cost, part of the trade itself"]},
    right={"label": "Slippage tolerance", "tone": "good", "items": ["A setting you choose in advance", "The worst price you'll accept before it reverts"]})
 sc("stats", "One real, worked number for a liquidity pool, from later in this module. Put ten thousand dollars into a pool as a zero point one percent share, and a typical day might earn around six dollars in fees, which annualises to roughly twenty-two percent, before impermanent loss and gas. That's the number Lesson two point three teaches you to calculate for real, on any pool you're considering.",
    chapter="Words you'll need", stats=[["~22%", "illustrative annualised fee return on a $10,000 / 0.1% pool share, before IL and gas"]])
@@ -95,7 +95,7 @@ img(D + "dex-vs-aggregator.png", "The worked example",
     chapter="Your first safe step")
 sc("compare", "One more routing trade-off worth knowing while you're comparing quotes. A single-pool route touches one contract, simple and predictable, but it might not be the cheapest path available. A multi-hop route, say, token A to B to C, can land a better price by spreading across pools, but it touches more contracts, meaning more that would need to behave correctly for your trade to succeed.",
    chapter="Your first safe step",
-   left={"label": "A single-pool route", "tone": "good", "items": ["One contract, simple and predictable", "May not be the cheapest path"]},
+   title="A single-pool vs a multi-hop route", left={"label": "A single-pool route", "tone": "good", "items": ["One contract, simple and predictable", "May not be the cheapest path"]},
    right={"label": "A multi-hop route", "tone": "warn", "items": ["Can land a better net price", "Touches more contracts along the way"]})
 sc("quiz", "Quick check. Why compare a DEX quote against an aggregator quote before trading, instead of just picking one? [[pause 4]] The answer: an aggregator searches many pools and can split your order for a better net result, but it isn't always better, so checking both tells you what you'd actually receive.",
    chapter="Your first safe step", n=2, of=4, q="Why compare a DEX quote against an aggregator quote before trading, instead of just picking one?",

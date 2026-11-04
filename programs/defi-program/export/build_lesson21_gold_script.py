@@ -48,7 +48,7 @@ sc("flow", "First mechanism: the A.M.M. DEX, the one most people mean by “DEX.
           {"label": "Your trade shifts the balance", "sub": "Which is what moves the price", "icon": "swap"}, {"label": "No counterparty needed", "sub": "No order book, no waiting", "icon": "check"}])
 sc("compare", "Second mechanism: the on-chain order book, less common but worth knowing by name. Here's the actual contrast. An A.M.M. pool always has a price, set by a formula, and always has some liquidity available, even if a large trade moves it a lot. An order book needs an actual matching order at your price, fully or partly on-chain, or your trade simply doesn't fill.",
    chapter="Two ways to price a trade",
-   left={"label": "AMM pool", "tone": "good", "items": ["Price set by a formula, always available", "Large trades move the price, but still fill"]},
+   title="AMM pool vs order book", left={"label": "AMM pool", "tone": "good", "items": ["Price set by a formula, always available", "Large trades move the price, but still fill"]},
    right={"label": "On-chain order book", "tone": "warn", "items": ["Needs a matching order, at your price", "No match at your price: it doesn't fill"]})
 sc("flow", "Worth seeing an on-chain order book as its own walk-through, since “needs a match” undersells how it actually works. You place an order, at a specific price you choose. It sits on the book, waiting, visible to everyone, fully or partly on-chain depending on the venue. Another trader's order arrives that matches your price. And the trade settles, for exactly your chosen price, no impact from pool depth at all.",
    chapter="Two ways to price a trade", title="How an on-chain order book actually fills",
@@ -77,7 +77,7 @@ sc("steps", "Before trusting any aggregator with real size, here's what's actual
    steps=["Reputable, widely used — not an unfamiliar link", "Any fee disclosed plainly, not hidden in the quote", "Read the proposed route before you sign"], result="Same habit as reading any other prompt")
 sc("compare", "One more honest trade-off worth naming, since aggregators aren't purely an upgrade. A direct DEX trade touches one contract, so there's exactly one thing that needs to behave correctly. An aggregator route touches its own routing contract, plus every pool along the path, which is more surface area, even though each individual contract is typically well-audited on a reputable aggregator.",
    chapter="Aggregators & routing",
-   left={"label": "A direct DEX trade", "tone": "good", "items": ["One contract, exactly", "Less surface area, simpler to reason about"]},
+   title="A direct trade vs an aggregator route", left={"label": "A direct DEX trade", "tone": "good", "items": ["One contract, exactly", "Less surface area, simpler to reason about"]},
    right={"label": "An aggregator route", "tone": "warn", "items": ["The router, plus every pool along the path", "More surface area, even if each is well-audited"]})
 sc("quiz", "Quick check. Why can splitting an order across several pools actually improve the price you get? [[pause 4]] The answer: no single pool absorbs the full trade, so no single pool's price moves as far, which is exactly what price impact is driven by.",
    chapter="Aggregators & routing", n=2, of=3, q="Why can splitting an order across several pools actually improve the price you get?",
@@ -92,7 +92,7 @@ sc("flow", "Here's the formula, spelled out as four steps, not just a line of te
           {"label": "− Pool fees", "sub": "Paid to liquidity providers", "icon": "coins"}, {"label": "− Gas", "sub": "The network fee to execute at all", "icon": "cog"}])
 sc("compare", "Put real numbers on how pool depth changes the same trade, since “relative to pool depth” is easy to nod along to and hard to picture. The same ten-thousand-dollar trade against a deep, million-dollar-plus pool might move the price by a few hundredths of a percent, barely measurable. Against a shallow, ten-thousand-dollar pool, that same trade is now a huge share of what's available, and price impact can run into double digits.",
    chapter="The real formula",
-   left={"label": "$10K trade, a deep pool", "tone": "good", "items": ["Millions in the pool", "Price impact: a few hundredths of a percent"]},
+   title="A deep pool vs a shallow pool", left={"label": "$10K trade, a deep pool", "tone": "good", "items": ["Millions in the pool", "Price impact: a few hundredths of a percent"]},
    right={"label": "$10K trade, a shallow pool", "tone": "bad", "items": ["Only tens of thousands in the pool", "Price impact: can run into double digits"]})
 sc("steps", "Turn that formula into an actual pre-trade habit, every time you swap. Check the price impact shown, and ask whether it's acceptable for a trade this size. Confirm the route uses pools and tokens you've actually verified, not an unfamiliar token that appeared in a route. And set your slippage tolerance on purpose, covered fully in Lesson two point five, not left on whatever default the interface picked.",
    chapter="The real formula", title="The pre-trade habit",
@@ -106,7 +106,7 @@ sc("stats", "Here's the real comparison, selling twenty E.T.H. A single pool, di
    chapter="Worked example", stats=[["$59,092", "Direct pool, net after $8 gas"], ["$59,400", "Aggregator (3 pools), net after $20 gas"]])
 sc("compare", "Now the same comparison, at a much smaller size, since the answer actually flips. Selling zero point five E.T.H., the aggregator quotes three dollars better than the direct pool. But it also costs twelve dollars more in gas. Net, the direct pool wins by nine dollars. Big trades benefit from routing. Small trades mostly lose to the extra gas.",
    chapter="Worked example",
-   left={"label": "Selling 20 ETH", "tone": "good", "items": ["Aggregator nets ~$308 more", "The extra gas is worth it, at this size"]},
+   title="Selling 20 ETH vs 0.5 ETH", left={"label": "Selling 20 ETH", "tone": "good", "items": ["Aggregator nets ~$308 more", "The extra gas is worth it, at this size"]},
    right={"label": "Selling 0.5 ETH", "tone": "warn", "items": ["Aggregator quotes $3 better, costs $12 more gas", "Direct pool wins, net, by $9"]})
 sc("steps", "Here's how to actually run this comparison yourself, on any trade, before you commit. Get a quote from a single DEX, direct. Get a quote from an aggregator, for the exact same pair and size. Subtract each route's own gas estimate from its quoted output. And take whichever net number is higher, not whichever quote looked better on its own.",
    chapter="Worked example", title="Running the comparison yourself",

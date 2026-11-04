@@ -50,7 +50,7 @@ sc("statement", "Here's the part that's easy to skip past, and shouldn't be. Whe
    chapter="What LPing actually does", kicker="Not a passive lender", lines=["You're the counterparty,", "to every trade that goes through the pool."], sub="That's exactly where impermanent loss comes from.")
 sc("compare", "Worth naming the two position types you'll actually choose between, even though this lesson focuses on the simpler one. A full-range position covers every possible price, simple to reason about, earning fees on the whole curve. A concentrated position, an NFT instead of a token, covers only a price band you choose, which can earn far more fee income inside that band, but earns nothing at all once price moves outside it.",
    chapter="What LPing actually does",
-   left={"label": "Full-range position", "tone": "good", "items": ["Covers every possible price", "Simpler; earns fees across the whole curve"]},
+   title="Full-range vs concentrated", left={"label": "Full-range position", "tone": "good", "items": ["Covers every possible price", "Simpler; earns fees across the whole curve"]},
    right={"label": "Concentrated position (an NFT)", "tone": "warn", "items": ["Covers only a price band you choose", "Can earn much more inside it; nothing outside it"]})
 sc("flow", "Here's what actually happens when you eventually withdraw, since it's the moment your changed token mix becomes real. You redeem your share, your L.P. token or N.F.T., back to the pool. The pool returns whatever mix of the two tokens your share is currently worth, at today's ratio, not the ratio you originally deposited at. And you collect the accumulated fees your share has earned, on top of that mix.",
    chapter="What LPing actually does", title="What happens when you withdraw",
@@ -58,7 +58,7 @@ sc("flow", "Here's what actually happens when you eventually withdraw, since it'
           {"label": "Plus accumulated fees", "sub": "Your share of everything earned", "icon": "coins"}, {"label": "That mix is now real", "sub": "Whatever it changed into, along the way", "icon": "check"}])
 sc("compare", "One practical option worth knowing before you assume you always need both tokens ready. Some protocols accept a single-sided deposit, and swap half of it internally to build your pool position for you. The trade-off: that internal swap has its own price impact and fee, paid once, up front, versus depositing both tokens yourself, which needs no internal swap at all, but does need you to already hold the right ratio.",
    chapter="What LPing actually does",
-   left={"label": "Depositing both tokens yourself", "tone": "good", "items": ["No internal swap needed", "You need the right ratio already"]},
+   title="Two-sided vs single-sided deposit", left={"label": "Depositing both tokens yourself", "tone": "good", "items": ["No internal swap needed", "You need the right ratio already"]},
    right={"label": "A single-sided deposit", "tone": "warn", "items": ["Convenient — no need to hold both first", "Pays a one-time swap cost and price impact"]})
 sc("quiz", "Quick check. When you provide liquidity, what does becoming “the counterparty to every trade” actually mean for your position? [[pause 4]] The answer: as traders move the price, your token mix changes with it, since you're the one supplying whichever token they're buying, which is exactly where impermanent loss comes from.",
    chapter="What LPing actually does", n=1, of=3, q="When you provide liquidity, what does becoming “the counterparty to every trade” actually mean for your position?",
@@ -75,14 +75,14 @@ sc("statement", "One simplification worth knowing, since it makes the mental mat
    chapter="The fee APR formula", kicker="The full-range simplification", lines=["Daily volume × fee tier × 365, divided by TVL.", "Your deposit size drops out entirely."], sub="One line, for a full-range position.")
 sc("compare", "And here's exactly why this lesson insists on thirty-day average volume, not today's number, since using the wrong one quietly wrecks the estimate. A single volatile day can spike volume far above normal, making the fee APR look unusually good, right when impermanent loss is also running at its worst. A thirty-day average smooths that out, giving you a number that actually represents a typical day, not the best one.",
    chapter="The fee APR formula",
-   left={"label": "Today's volume", "tone": "bad", "items": ["A volatile day can spike it artificially", "Overstates income exactly when IL is worst"]},
+   title="Today's vs 30-day volume", left={"label": "Today's volume", "tone": "bad", "items": ["A volatile day can spike it artificially", "Overstates income exactly when IL is worst"]},
    right={"label": "30-day average volume", "tone": "good", "items": ["Smooths out single-day spikes", "Represents a typical day, not the best one"]})
 sc("stats", "One more real pair of numbers, at a completely different scale, so the formula feels usable on any pool, not just the worked example ahead. A five-million-dollar T.V.L. pool, one million dollars in thirty-day volume, a zero point zero five percent fee tier: one million times zero point zero zero zero five, times three hundred sixty-five, divided by five million, comes out to three point six five percent fee A.P.R.",
    "One more real pair of numbers, at a completely different scale. A $5M TVL pool, $1M in 30-day volume, a 0.05% fee tier: 1,000,000 × 0.0005 × 365 ÷ 5,000,000 comes out to 3.65% fee APR.",
    chapter="The fee APR formula", stats=[["3.65%", "$5M TVL, $1M/day volume, 0.05% fee tier"]])
 sc("compare", "One nuance worth knowing before you assume a higher fee tier is always the better choice. A higher fee tier earns more per trade, but often attracts less volume, since traders and aggregators route toward the cheapest available price. A lower fee tier earns less per trade, but often wins far more volume. The fee A.P.R. formula is what actually tells you which one wins, not the fee tier number alone.",
    chapter="The fee APR formula",
-   left={"label": "A higher fee tier", "tone": "warn", "items": ["Earns more, per trade", "Often attracts less volume"]},
+   title="A higher vs a lower fee tier", left={"label": "A higher fee tier", "tone": "warn", "items": ["Earns more, per trade", "Often attracts less volume"]},
    right={"label": "A lower fee tier", "tone": "warn", "items": ["Earns less, per trade", "Often wins far more volume"]})
 sc("quiz", "Quick check. Why use a 30-day average volume instead of today's volume, when estimating fee APR? [[pause 4]] The answer: single-day spikes overstate fee income, and they happen on exactly the days you take the most impermanent loss, so the average gives a more honest number.",
    chapter="The fee APR formula", n=2, of=3, q="Why use a 30-day average volume instead of today's volume, when estimating fee APR?",
@@ -99,7 +99,7 @@ sc("steps", "Now the arithmetic, step by step, exactly as the formula lays it ou
    steps=["Daily pool fees: $2M × 0.3% = $6,000", "Your share: $10,000 ÷ $10M TVL = 0.1%", "Your daily income: 0.1% × $6,000 = $6/day"], result="Annualised: ~21.9% fee APR, before IL and gas")
 sc("compare", "Now see how sensitive that twenty-one point nine percent actually is, to the two things most likely to change after you deposit. If daily volume halves, your fee A.P.R. halves with it, straight line, since volume is a direct multiplier in the formula. And if a lot more T.V.L. joins the same pool, your share shrinks, at the same volume, so your fee income shrinks too, even though nothing about your own deposit changed.",
    chapter="Worked example",
-   left={"label": "If volume halves", "tone": "warn", "items": ["Fee APR halves, directly", "Volume is a straight multiplier in the formula"]},
+   title="If volume halves vs if TVL joins", left={"label": "If volume halves", "tone": "warn", "items": ["Fee APR halves, directly", "Volume is a straight multiplier in the formula"]},
    right={"label": "If more TVL joins the pool", "tone": "warn", "items": ["Your share shrinks, at the same volume", "Fee income shrinks, even though your deposit didn't change"]})
 sc("steps", "Here's exactly where to actually go find these three numbers yourself, on any pool you're considering, before you deposit a dollar. Open the pool on its own protocol's app or a pool-analytics site, not a general price chart. Read T.V.L. and the fee tier directly off the pool's own page. And pull thirty days of volume from that same analytics view, not just today's headline number.",
    chapter="Worked example", title="Finding these numbers yourself",

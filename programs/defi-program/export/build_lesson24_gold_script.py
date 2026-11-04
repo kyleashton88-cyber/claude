@@ -54,7 +54,7 @@ sc("flow", "Here's the formula itself, broken into the two numbers it actually n
           {"label": "− 1", "sub": "Turns it into a percentage lag", "icon": "chart"}, {"label": "= impermanent loss", "sub": "Before fees, before gas, before anything else", "icon": "alert"}])
 sc("compare", "Worth knowing this formula doesn't care which direction price moves, only how far the ratio has diverged. E.T.H. rising from three thousand to four thousand, a ratio of one point three three, gives about negative one percent. E.T.H. falling from three thousand to two thousand two hundred fifty, the exact reciprocal ratio, gives that same negative one percent. Divergence causes it, in either direction, symmetrically.",
    chapter="What IL actually measures",
-   left={"label": "ETH rises: $3,000 → $4,000", "tone": "warn", "items": ["Ratio: 1.33", "IL: about −1.03%"]},
+   title="When ETH rises vs falls", left={"label": "ETH rises: $3,000 → $4,000", "tone": "warn", "items": ["Ratio: 1.33", "IL: about −1.03%"]},
    right={"label": "ETH falls: $3,000 → $2,250", "tone": "warn", "items": ["Ratio: 0.75 (the exact reciprocal)", "IL: the same, about −1.03%"]})
 sc("chart", "Plot the formula across a wider range of price moves, and the shape makes the “either direction” point obvious. Barely any divergence, barely any impermanent loss. As the ratio moves further from one, in either direction, the loss grows, and it grows faster the further you go, the same bending-curve shape from Lesson two point two, just applied to your total position now, not a single trade.",
    chapter="What IL actually measures", kind="line", title="Impermanent loss, as price ratio diverges", sub="Illustrative shape — symmetric in both directions",
@@ -78,7 +78,7 @@ sc("steps", "Here's how to actually track this weekly, in practice, not just in 
    steps=["LP value and implied price ratio, same day each week", "Fees and incentives earned, recorded separately", "What simply holding would be worth today, as the benchmark"], result="Same three numbers, every single week")
 sc("compare", "One more honest factor the full formula surfaces: gas matters far more, proportionally, on a small position than a large one. Twenty dollars of combined gas on a six-thousand-dollar position is about a third of a percent, a real but small drag. That same twenty dollars on a six-hundred-dollar position is over three percent, enough on its own to wipe out a modest fee APR before anything else is even counted.",
    chapter="Full LP P&L",
-   left={"label": "$20 gas, on $6,000", "tone": "good", "items": ["About 0.3% of the position", "A small, real drag"]},
+   title="The same gas on $6,000 vs $600", left={"label": "$20 gas, on $6,000", "tone": "good", "items": ["About 0.3% of the position", "A small, real drag"]},
    right={"label": "$20 gas, on $600", "tone": "bad", "items": ["Over 3% of the position", "Can wipe out a modest fee APR alone"]})
 sc("quiz", "Quick check. Your LP position is up twenty percent since you deposited. Did LPing itself work? [[pause 4]] The answer: unknown, until you compare it with simply holding the same tokens. That twenty percent could be entirely from the price rising, not from LPing.",
    chapter="Full LP P&L", n=2, of=3, q="Your LP is up 20% since deposit. Did LPing work?",
@@ -95,7 +95,7 @@ sc("steps", "Now E.T.H. rises to four thousand dollars, and follow exactly what 
    steps=["Rebalanced to: 0.866 ETH + 3,464 USDC", "LP value: 0.866 × 4,000 + 3,464 = $6,928", "Simply holding: 4,000 + 3,000 = $7,000"], result="Impermanent loss: −$72, or about −1.03%")
 sc("compare", "Now add fees and gas, the parts a bare impermanent-loss number always leaves out. This position earned one hundred fifty dollars in fees along the way, and cost twenty dollars in gas, for depositing and withdrawing combined. LP total, all in: six thousand nine hundred twenty-eight, plus one hundred fifty, minus twenty, comes to seven thousand fifty-eight dollars.",
    chapter="Worked example",
-   left={"label": "LP value alone", "tone": "warn", "items": ["$6,928", "−1.03% vs holding, on its own"]},
+   title="LP value alone vs the full total", left={"label": "LP value alone", "tone": "warn", "items": ["$6,928", "−1.03% vs holding, on its own"]},
    right={"label": "Full LP total", "tone": "good", "items": ["+ $150 fees, − $20 gas", "= $7,058, all in"]})
 sc("stats", "Now compare that seven thousand fifty-eight dollars against two different baselines, since only one of them actually judges the LPing decision. Against your starting six thousand dollars, you're up one thousand fifty-eight, which is mostly E.T.H. simply rising in price. Against simply holding, seven thousand dollars, you're up only fifty-eight dollars. That fifty-eight dollars, not the one thousand fifty-eight, is the actual value LPing itself added.",
    "Now compare that $7,058 against two different baselines, since only one of them actually judges the LPing decision. Against your starting $6,000, you're up $1,058, which is mostly ETH simply rising in price. Against simply holding, $7,000, you're up only $58. That $58, not the $1,058, is the actual value LPing itself added.",

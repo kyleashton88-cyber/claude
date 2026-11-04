@@ -50,7 +50,7 @@ sc("flow", "Here's what a good wallet, or a transaction simulator built into one
           {"label": "Shows the outcome", "sub": "−100 USDC, +0.033 ETH", "icon": "eye"}, {"label": "You decide", "sub": "With the real result in front of you", "icon": "check"}])
 sc("compare", "So here's the check that actually matters, every time that preview appears. A normal, expected preview shows exactly what you intended, one asset out, one asset in, nothing else moving. A warning sign is a preview showing an asset leaving that you never mentioned, an approval appearing you didn't ask for, or your entire balance of something being touched.",
    chapter="Simulation",
-   left={"label": "What you expected", "tone": "good", "items": ["Exactly the asset you intended, leaving", "Exactly the asset you intended, arriving", "Nothing else moves"]},
+   title="When the preview surprises you", left={"label": "What you expected", "tone": "good", "items": ["Exactly the asset you intended, leaving", "Exactly the asset you intended, arriving", "Nothing else moves"]},
    right={"label": "Stop and re-check", "tone": "bad", "items": ["An asset leaving you never mentioned", "An approval appearing you didn't ask for", "Your entire balance of something, touched"]})
 sc("steps", "Not every wallet or every action has a simulator attached, so here's the manual fallback when you don't get a preview. Look up the contract on a block explorer first, and check it's verified. Read the actual function name the transaction calls, not just the button you clicked. And start with a small test amount before ever sending your full position through an unfamiliar contract.",
    chapter="Simulation", title="No simulator available? Do this instead",
@@ -73,7 +73,7 @@ sc("steps", "Put those four fields into a decision you can actually make in the 
    steps=["Unfamiliar spender? That alone is reason to stop", "Amount: matches this action, or unlimited?", "Deadline: does it really need years of validity?", "Anything wrong? Reject and re-check"], result="Most bad Permits get caught right here")
 sc("compare", "Worth knowing why “Permit” signatures exist at all, since it's a real convenience, not just a risk. A classic approval is its own on-chain transaction: it costs gas, and you'd notice it as a separate step. A Permit or Permit2 signature does the same job, off-chain and free, bundled invisibly into the action you were already taking. Convenient when you understand it. Exactly why it also needs reading.",
    chapter="Typed-data signatures",
-   left={"label": "A classic approval", "tone": "warn", "items": ["Its own on-chain transaction", "Costs gas; you'd notice it as a step"]},
+   title="A classic approval vs a Permit signature", left={"label": "A classic approval", "tone": "warn", "items": ["Its own on-chain transaction", "Costs gas; you'd notice it as a step"]},
    right={"label": "A Permit / Permit2 signature", "tone": "warn", "items": ["Off-chain, free, and instant", "Bundled invisibly into your action"]})
 sc("quiz", "Quick check. What can a “Permit” signature grant, without any transaction or gas at all? [[pause 4]] The answer: token access, for the spender, amount and duration written into the message, exactly as shown in those four fields.",
    chapter="Typed-data signatures", n=2, of=3, q="What can a “Permit” signature grant, without any transaction or gas at all?",
@@ -84,7 +84,7 @@ sc("title", "Blind signing, and delegation.", chapter="Blind signing", eyebrow="
    sub="And the newest, most powerful signature of all.")
 sc("compare", "Here's the distinction that matters on a hardware wallet specifically. Normal signing decodes the transaction and shows you readable fields, spender, amount, deadline, the works. Blind signing is what happens when the device can't decode it: you see only a hash, a string of characters that tells you nothing about what you're actually approving.",
    chapter="Blind signing",
-   left={"label": "Normal signing", "tone": "good", "items": ["Device decodes the transaction", "Shows readable fields: spender, amount, deadline"]},
+   title="Normal signing vs blind signing", left={"label": "Normal signing", "tone": "good", "items": ["Device decodes the transaction", "Shows readable fields: spender, amount, deadline"]},
    right={"label": "Blind signing", "tone": "bad", "items": ["Device can't decode it", "Shows only a hash — tells you nothing"]})
 sc("steps", "So here's the actual rule for blind signing, as a habit. Keep it off by default, every day, on every device. Turn it on only for one specific, already-verified action you understand. Complete that one action. Then turn it straight back off, before you forget you left it on.",
    chapter="Blind signing", title="The blind-signing habit",
@@ -101,7 +101,7 @@ sc("statement", "So the rule for delegation signatures is narrower than for anyt
    chapter="Blind signing", kicker="The narrowest rule in this lesson", lines=["Only from apps you trust,", "for a purpose you can state in one sentence."], sub="An unfamiliar site asking for this wants control of the whole account.")
 sc("compare", "Delegation itself isn't automatically the enemy here, so here's the honest contrast. A legitimate use is a wallet feature you deliberately chose, upgrading your own account to add multisig or spending limits, from an app you already trust. A malicious one is an unfamiliar site asking for the exact same signature, with no feature explained, no purpose you could state back in a sentence.",
    chapter="Blind signing",
-   left={"label": "A legitimate delegation", "tone": "good", "items": ["A feature you deliberately chose", "From an app you already trust"]},
+   title="A safe vs a malicious delegation", left={"label": "A legitimate delegation", "tone": "good", "items": ["A feature you deliberately chose", "From an app you already trust"]},
    right={"label": "A malicious delegation request", "tone": "bad", "items": ["An unfamiliar site, out of nowhere", "No purpose you could state in a sentence"]})
 sc("quiz", "Quick check. Your hardware wallet shows only a hash for a transaction, no readable fields. What should your default response be? [[pause 4]] The answer: don't sign it. Keep blind signing off, and only enable it briefly for one action you already understand.",
    chapter="Blind signing", n=3, of=3, q="Your hardware wallet shows only a hash for a transaction, no readable fields. What should your default response be?",

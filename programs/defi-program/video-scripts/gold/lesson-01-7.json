@@ -107,6 +107,7 @@
   {
    "type": "compare",
    "chapter": "Simulation",
+   "title": "When the preview surprises you",
    "left": {
     "label": "What you expected",
     "tone": "good",
@@ -212,6 +213,7 @@
   {
    "type": "compare",
    "chapter": "Typed-data signatures",
+   "title": "A classic approval vs a Permit signature",
    "left": {
     "label": "A classic approval",
     "tone": "warn",
@@ -251,6 +253,7 @@
   {
    "type": "compare",
    "chapter": "Blind signing",
+   "title": "Normal signing vs blind signing",
    "left": {
     "label": "Normal signing",
     "tone": "good",
@@ -352,6 +355,7 @@
   {
    "type": "compare",
    "chapter": "Blind signing",
+   "title": "A safe vs a malicious delegation",
    "left": {
     "label": "A legitimate delegation",
     "tone": "good",

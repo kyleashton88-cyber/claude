@@ -90,6 +90,7 @@
   {
    "type": "compare",
    "chapter": "What MEV actually is",
+   "title": "Arbitrage vs sandwich MEV",
    "left": {
     "label": "Arbitrage MEV",
     "tone": "good",
@@ -248,6 +249,7 @@
   {
    "type": "compare",
    "chapter": "The real defences",
+   "title": "Slippage: too loose vs too tight",
    "left": {
     "label": "Too loose",
     "tone": "bad",
@@ -290,6 +292,7 @@
   {
    "type": "compare",
    "chapter": "Worked example",
+   "title": "3% vs 0.5% slippage tolerance",
    "left": {
     "label": "3% slippage tolerance",
     "tone": "bad",
@@ -376,6 +379,7 @@
   {
    "type": "compare",
    "chapter": "Checklist",
+   "title": "One large trade vs several smaller",
    "left": {
     "label": "One large trade",
     "tone": "bad",

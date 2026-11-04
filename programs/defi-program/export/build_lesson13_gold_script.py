@@ -58,7 +58,7 @@ img(D + "three-wallets.png", "Word five: smart wallets",
     chapter="Five words")
 sc("compare", "Here's why the device matters, not just the key. A software wallet keeps your key inside an app on your everyday computer or phone, the same device you browse the internet, open email and install software on. A hardware wallet keeps the key on a separate, purpose-built device that never touches the internet directly. Malware on your computer can potentially see a software wallet's key. It cannot reach inside a hardware device.",
    chapter="Five words",
-   left={"label": "A software wallet", "tone": "neutral", "items": ["Key lives inside an everyday app", "Same device as browsing, email, downloads", "Malware there can potentially reach it"]},
+   title="Software vs hardware wallet", left={"label": "A software wallet", "tone": "neutral", "items": ["Key lives inside an everyday app", "Same device as browsing, email, downloads", "Malware there can potentially reach it"]},
    right={"label": "A hardware wallet", "tone": "good", "items": ["Key lives on a separate device", "Never touches the internet directly", "Malware on your computer can't reach inside it"]})
 sc("statement", "One real example of why reading the device screen matters, not just the app. In December of two thousand twenty-three, a widely used wallet-connection library was compromised at the supply-chain level, briefly showing some users malicious transaction requests through otherwise legitimate-looking websites. People who read and verified the request on their hardware device's own screen caught it. People who only glanced at the website did not. The device screen is the one thing an attacker who's compromised your browser can't fake.",
    chapter="Five words", kicker="A real example", lines=["Dec 2023: a compromised library", "showed malicious requests on real sites."], sub="The device's own screen is the one thing a browser compromise can't fake.")
@@ -77,7 +77,7 @@ sc("statement", "Compartmentalising isn't unique to crypto; it's the same logic 
    chapter="Compartmentalise", kicker="Not a new idea", lines=["A slim wallet, not your whole card collection.", "On-chain, there's no call to make afterward."], sub="The structure does the job a phone call would do anywhere else.")
 sc("compare", "Here's the structural risk most beginners never think about. One wallet for everything means your life savings, your everyday DeFi positions and your experiments with brand-new apps all sit behind the exact same key. One bad signature on one sketchy new app, and everything you own is reachable through it. Separate wallets by job, and a compromise in one only ever reaches what that one wallet holds.",
    chapter="Compartmentalise",
-   left={"label": "One wallet for everything", "tone": "bad", "items": ["Savings, DeFi and experiments, same key", "One bad signature reaches everything"]},
+   title="One wallet vs separate wallets", left={"label": "One wallet for everything", "tone": "bad", "items": ["Savings, DeFi and experiments, same key", "One bad signature reaches everything"]},
    right={"label": "Separate wallets by job", "tone": "good", "items": ["Each wallet holds only what its job needs", "A compromise reaches only that one wallet"]})
 
 # ---------------------------------------------------------------- the 3-wallet setup

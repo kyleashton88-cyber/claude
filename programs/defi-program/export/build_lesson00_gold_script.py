@@ -92,7 +92,7 @@ sc("statement", "Which leads to the most important idea in this module. Your see
 sc("compare", "Word four: exchange. A company that swaps your money for crypto. It's your front door, and it's where you'll buy and cash out. But while your crypto sits on an exchange, the exchange holds the keys. In your own wallet, you hold the keys. That difference is the whole of Lesson zero point four.",
    "Word four: exchange. A company that swaps your money for crypto. It's your front door, and it's where you'll buy and cash out. But while your crypto sits on an exchange, the exchange holds the keys. In your own wallet, you hold the keys. That difference is the whole of Lesson 0.4.",
    chapter="Words you'll need",
-   left={"label": "On an exchange", "tone": "neutral", "items": ["Swaps money for crypto", "Where you buy and cash out", "The exchange holds the keys"]},
+   title="Where your keys live", left={"label": "On an exchange", "tone": "neutral", "items": ["Swaps money for crypto", "Where you buy and cash out", "The exchange holds the keys"]},
    right={"label": "In your wallet", "tone": "good", "items": ["You hold the keys"]})
 img(D + "story-gas-stamp.png", "Word five: gas",
     "Word five: gas. The network fee for a transaction. Think of it as a postage stamp. Every transaction pays a small fee, in the network's own coin, to the computers that check it and add it to a block. And the stamp is usually spent even if the transaction fails.",
@@ -149,7 +149,7 @@ sc("flow", "Your email is the master key to everything else. Watch how an attack
    edges=[{"from": "0", "to": "1", "tone": "bad"}, {"from": "1", "to": "2", "tone": "bad"}, {"from": "2", "to": "3", "tone": "bad"}])
 sc("compare", "So, two changes. First, a unique password, created and stored by a password manager, so a leak somewhere else can't unlock your email. Second, two-factor authentication using an authenticator app. Why not text messages? Because a criminal can talk a phone company into moving your number to their SIM card. That's called a SIM swap, and it means your codes go straight to them. An authenticator app stays on your phone. And save your backup codes somewhere safe, offline.",
    chapter="Your first safe step",
-   left={"label": "Text-message codes", "tone": "neutral", "items": ["Codes travel over your phone number", "A SIM swap sends them to a criminal"]},
+   title="Two-factor: which kind is safe", left={"label": "Text-message codes", "tone": "neutral", "items": ["Codes travel over your phone number", "A SIM swap sends them to a criminal"]},
    right={"label": "Authenticator app", "tone": "good", "items": ["Codes made on your own phone", "Backup codes saved offline"]})
 sc("steps", "Here's the first safe step as a checklist. Install a password manager. Give your email a long, unique password. Turn on authenticator-app two-factor. Save the backup codes offline. Then do the same for every account that touches money.",
    chapter="Your first safe step", title="Your first safe step",
@@ -194,11 +194,11 @@ sc("title", "Three questions every beginner asks.", chapter="Common questions", 
 sc("flow", "Question one. What if I lose my phone? This is exactly why the seed phrase exists. You buy a new phone or device. You install the same wallet app. You choose restore, instead of create new. You type in your seed phrase, in order. And every key, every address, every balance comes back, because they were never really \"in\" the old phone to begin with.",
    chapter="Common questions", title="What if I lose my phone?",
    nodes=[{"label": "New device", "sub": "Any brand, any time", "icon": "bell"}, {"label": "Install wallet", "sub": "The same app", "icon": "wallet"},
-          {"label": "Choose restore", "sub": "Not create new", "icon": "swap"}, {"label": "Enter seed phrase", "sub": "In order", "icon": "doc"},
+          {"label": "Choose restore", "sub": "Not create new", "icon": "swap"}, {"label": "Enter your recovery words", "sub": "In order", "icon": "doc"},
           {"label": "Everything's back", "sub": "Keys, addresses, balances", "icon": "check"}])
 sc("compare", "Question two. Is my money insured, like a bank account? Here's the honest answer. A bank deposit is typically protected by a government scheme, up to a limit, if the bank fails. Crypto in your own wallet has no such scheme. There's no one to call, and no claim to file. That's exactly why this module spends so much time on backups and safe habits: they're the only insurance that exists.",
    chapter="Common questions",
-   left={"label": "A bank account", "tone": "neutral", "items": ["Government-backed scheme, up to a limit", "Someone to call if it fails"]},
+   title="Is your money insured?", left={"label": "A bank account", "tone": "neutral", "items": ["Government-backed scheme, up to a limit", "Someone to call if it fails"]},
    right={"label": "Your own wallet", "tone": "bad", "items": ["No scheme, no one to call", "Your backup is the only insurance"]})
 sc("chart", "Question three. What if the price crashes right after I buy? Here's an honest example, not a prediction. Crypto prices move far more than most people expect: down thirty percent in a bad month is not unusual for some coins. That's exactly why your first buy is a small, learning-sized amount, and why this module teaches habits, not price calls. The goal of Module Zero isn't to time the market. It's to get you set up safely, whatever the price does next.",
    "Question three. What if the price crashes right after I buy? Here's an honest example, not a prediction. Crypto prices move far more than most people expect: down 30% in a bad month is not unusual for some coins. That's exactly why your first buy is a small, learning-sized amount, and why this module teaches habits, not price calls. The goal of Module 0 isn't to time the market. It's to get you set up safely, whatever the price does next.",
@@ -211,8 +211,8 @@ sc("chart", "Question three. What if the price crashes right after I buy? Here's
 img(D + "story-what-can-go-wrong.png", "Where beginners lose the most",
     "Before we wrap the ladder up, one more picture worth remembering. Almost every beginner loss traces back to one of four doors: a lost seed phrase, a transfer sent on the wrong network, a fake site or fake support agent, or simple rushing. Module Zero is built to close all four before you ever move a serious amount.",
     chapter="Common questions")
-sc("statement", "One more honest answer, because it comes up a lot. Can this program guarantee I'll make money? No. Nobody can, and anyone who tells you otherwise is a warning sign, not a promise. What this program guarantees is a process: a safe setup, clear checklists, and habits that protect you whether the market goes up or down.",
-   chapter="Common questions", kicker="One more honest answer", lines=["Nobody can guarantee returns.", "We guarantee a process."], sub="A safe setup, clear checklists, and habits that protect you either way.")
+sc("statement", "One more honest answer, because it comes up a lot. Can this program promise I'll make money? No. Nobody can, and anyone who tells you otherwise is a warning sign, not a promise. What this program gives you is a process: a safe setup, clear checklists, and habits that protect you whether the market goes up or down.",
+   chapter="Common questions", kicker="One more honest answer", lines=["No one can promise returns.", "We give you a process."], sub="A safe setup, clear checklists, and habits that protect you either way.")
 sc("quiz", "One final check. Someone offers to \"guarantee\" you twenty percent a month if you send them crypto to manage. What should you do? [[pause 4]] The answer: walk away. No result is ever guaranteed, and nobody legitimate manages your money by taking custody of it through a message.",
    "One final check. Someone offers to \"guarantee\" you 20% a month if you send them crypto to manage. What should you do? [[pause 4]] The answer: walk away. No result is ever guaranteed, and nobody legitimate takes custody of your crypto through a message.",
    chapter="Common questions", n=4, of=4, q="Someone offers to “guarantee” 20% a month if you send them crypto to manage. What should you do?",

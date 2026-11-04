@@ -23,10 +23,10 @@ REQUIRED = {
     'title': ['title'], 'statement': ['lines'], 'strike': ['big', 'after'], 'bullets': ['title', 'items'],
     'pillars': ['title', 'items'], 'compare': ['title', 'left', 'right'], 'steps': ['title', 'steps'],
     'quiz': ['q', 'a', 'n', 'of'], 'logo': ['tagline'], 'image': ['src'], 'stats': ['stats'],
-    'cta': ['button'], 'flow': ['nodes'], 'cutaway': ['shots'],
+    'cta': ['button'], 'flow': ['nodes'], 'cutaway': ['shots'], 'chart': ['title', 'kind'],
 }
 TEXT_SLIDES = {'bullets', 'statement', 'steps', 'pillars'}
-VISUALS = {'image', 'flow', 'cutaway', 'compare', 'stats', 'strike'}
+VISUALS = {'image', 'flow', 'cutaway', 'compare', 'stats', 'strike', 'chart'}
 FORBIDDEN = [
     (r'\bguarantee(d|s)?\b(?!.*\bno\b)', 'promise of guaranteed results'),
     (r'\brisk[- ]free\b', '"risk-free"'),
@@ -37,7 +37,7 @@ FORBIDDEN = [
     (r'\b(zero|no) risk\b', '"no risk"'),
 ]
 # A match inside a warning ("never share your seed phrase", "guaranteed returns are a scam") is fine.
-NEGATION = re.compile(r"\b(never|not|no|scam|scams|fake|don't|doesn't|won't|isn't|aren't|red flag|beware|what is it|someone offers|offers you)\b|n't\b", re.I)
+NEGATION = re.compile(r"\b(never|not|no|none|nobody|no one|scam|scams|fake|don't|doesn't|won't|isn't|aren't|red flag|beware|what is it|someone offers|offers you)\b|n't\b", re.I)
 ABBR_OK = {'I', 'OK', 'TV', 'US', 'UK', 'AI'}
 
 
@@ -100,6 +100,12 @@ def lint(path):
                     err(i, f'flow: edge {e.get("from")}->{e.get("to")} points at an unknown node')
             if len(s.get('nodes', [])) > 6:
                 warn(i, 'flow: more than 6 nodes is hard to read: split into two flows')
+        if t == 'chart':
+            need = {'bars': 'bars', 'line': 'series', 'donut': 'segs'}.get(s.get('kind'))
+            if need is None:
+                err(i, f'chart: unknown kind "{s.get("kind")}" (expected bars, line or donut)')
+            elif need not in s:
+                err(i, f'chart ({s.get("kind")}): missing "{need}"')
         if t == 'cutaway':
             for j, sh in enumerate(s.get('shots', []), 1):
                 if not sh.get('box') and not sh.get('zoom'):
@@ -141,7 +147,14 @@ def main(argv):
     summary = '--summary' in argv
     files = [a for a in argv if not a.startswith('--')]
     if '--all' in argv:
-        files = sorted(str(p) for p in (ROOT / 'video-scripts').rglob('*.json'))
+        # Auto-discovery lints lesson scripts only; skip manifests/config JSON
+        # (e.g. PRODUCTION_QUEUE.json) that carry no "scenes" array.
+        def is_script(p):
+            try:
+                return isinstance(json.loads(p.read_text()).get('scenes'), list)
+            except Exception:  # noqa: BLE001
+                return True  # keep unparseable files so their errors surface
+        files = sorted(str(p) for p in (ROOT / 'video-scripts').rglob('*.json') if is_script(p))
     if not files:
         print(__doc__)
         return 2

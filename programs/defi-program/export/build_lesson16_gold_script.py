@@ -67,7 +67,7 @@ sc("steps", "So here's exactly what to check on that popup before you ever sign 
    steps=["Read the function name, not just the token name", "Treat “Permit” / “Approve” / “setApprovalForAll” as a stop sign", "Check: is the amount or scope limited, or unlimited?", "Unlimited for one small action? Reject and re-check"], result="Most drainer signatures get caught right here")
 sc("compare", "And here's real support against fake support, side by side, since the fake version is designed to look almost identical. Real support waits for you to reach out first, on the project's own official channel, and never needs your seed phrase to help. Fake support messages you first, out of nowhere, and always eventually asks for something it should never need.",
    chapter="Four attacks",
-   left={"label": "Real support", "tone": "good", "items": ["You reach out first", "On the project's own official channel", "Never needs your seed phrase"]},
+   title="Real vs fake support", left={"label": "Real support", "tone": "good", "items": ["You reach out first", "On the project's own official channel", "Never needs your seed phrase"]},
    right={"label": "Fake support", "tone": "bad", "items": ["Messages you first, out of nowhere", "Often an unofficial channel or DM", "Eventually asks for something it shouldn't need"]})
 sc("quiz", "Quick check. A “support” account messages you first, offering to help. What does that tell you, immediately? [[pause 4]] The answer: it's a scam. Real support teams never message you first, and never ask for your seed phrase.",
    chapter="Four attacks", n=1, of=3, q="A “support” account messages you first, offering to help. What does that tell you, immediately?",
@@ -82,7 +82,7 @@ sc("flow", "Fifth: the fake token or airdrop. An unknown token simply appears in
           {"label": "You visit the site", "sub": "To “claim” it", "icon": "eye"}, {"label": "Asked to sign", "sub": "The real attack", "icon": "alert"}])
 sc("compare", "Real airdrops and fake ones look similar at a glance, so here's how to actually tell them apart. A real airdrop is usually announced in advance, on the project's own official channels, and claiming it never requires an unlimited approval, just a simple claim transaction. A fake one appears with no warning, pushes you toward an unfamiliar site, and its “claim” button is really an approval request in disguise.",
    chapter="Two more attacks",
-   left={"label": "A real airdrop", "tone": "good", "items": ["Announced in advance, on official channels", "A simple claim, no unlimited approval needed"]},
+   title="A real vs a fake airdrop", left={"label": "A real airdrop", "tone": "good", "items": ["Announced in advance, on official channels", "A simple claim, no unlimited approval needed"]},
    right={"label": "A fake airdrop", "tone": "bad", "items": ["No warning, appears out of nowhere", "“Claim” is really an approval in disguise"]})
 sc("flow", "Sixth: the too-good yield. A brand-new protocol, an anonymous team, a huge advertised A.P.Y., and no audit anywhere. Deposits flow in on the promise alone. Early depositors sometimes really do get paid, funded by the deposits that come after them, which is what makes it convincing. And it collapses the moment new deposits slow down, because there was never a real, independent source of that yield.",
    chapter="Two more attacks", title="A too-good yield, unwinding",
@@ -98,7 +98,7 @@ sc("steps", "Here's a quick pre-check you can run on any protocol before sizing 
    steps=["Is the team named and identifiable?", "Is there a verifiable audit?", "Can you name where the yield comes from?", "Would a burner-sized amount still be worth it?"], result="Any “no” is your answer")
 sc("compare", "One more habit that runs through almost every attack in this lesson, worth making concrete: which wallet you use for what. Your main wallet holds real funds, and only ever connects to sites you already trust and use regularly. A burner wallet holds a small, disposable amount, and is exactly what you connect to any new or unproven site, so a bad signature there costs you almost nothing.",
    chapter="Two more attacks",
-   left={"label": "Main wallet", "tone": "good", "items": ["Holds your real funds", "Only connects to sites you already trust"]},
+   title="Main wallet vs burner wallet", left={"label": "Main wallet", "tone": "good", "items": ["Holds your real funds", "Only connects to sites you already trust"]},
    right={"label": "Burner wallet", "tone": "warn", "items": ["Small, disposable amount only", "Connects to anything new or unproven"]})
 sc("quiz", "Quick check. A new token worth, according to its own wallet display, five thousand dollars, appears with a claim site attached. What do you do? [[pause 4]] The answer: ignore it. It's bait, and interacting risks signing a drainer's approval.",
    "Quick check. A new token worth, according to its own wallet display, $5,000, appears with a claim site attached. What do you do? [[pause 4]] The answer: ignore it. It's bait, and interacting risks signing a drainer's approval.",

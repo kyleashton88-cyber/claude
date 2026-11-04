@@ -78,7 +78,7 @@ img(D + "story-btc-eth-timeline.png", "The real history",
     chapter="Bitcoin and Ethereum")
 sc("compare", "So, side by side. Bitcoin does one thing and does it well: it moves and stores value, with the deepest security and the longest track record of any blockchain. Ethereum does that too, but it also runs smart contracts, which is what makes lending apps, exchanges and stablecoins possible. Most of this program happens on Ethereum and the networks built around it, because that's where DeFi actually lives.",
    chapter="Bitcoin and Ethereum",
-   left={"label": "Bitcoin (BTC)", "tone": "neutral", "items": ["Moves and stores value", "Deepest security, longest track record", "Doesn't run smart contracts"]},
+   title="Bitcoin vs Ethereum", left={"label": "Bitcoin (BTC)", "tone": "neutral", "items": ["Moves and stores value", "Deepest security, longest track record", "Doesn't run smart contracts"]},
    right={"label": "Ethereum (ETH)", "tone": "good", "items": ["Moves and stores value too", "Also runs smart contracts", "Where most of this program happens"]})
 sc("stats", "One more real number, so “gas” isn't abstract later. Ethereum processes somewhere around one point two million transactions on an average day, each one checked by the network and added to a block. That volume is exactly why block space is scarce, and why, in Lesson zero point six, you'll learn that transaction fees rise and fall with demand.",
    "One more real number, so “gas” isn't abstract later. Ethereum processes somewhere around 1.2 million transactions on an average day, each one checked by the network and added to a block. That volume is exactly why block space is scarce, and why, in Lesson 0.6, you'll learn that transaction fees rise and fall with demand.",
@@ -107,7 +107,7 @@ sc("flow", "The same trade in DeFi skips all of that. It goes straight into a sm
    layout="row")
 sc("compare", "So here's DeFi against traditional finance, directly. A bank has a branch, staff and opening hours, and it can reverse a mistaken payment. A DeFi smart contract has none of that: it's open all day, every day, needs no staff, and treats everyone identically. But it also can't make an exception for you. That's the deal.",
    chapter="Contracts, coins and DeFi",
-   left={"label": "A bank", "tone": "neutral", "items": ["Branch, staff, opening hours", "Can reverse a mistaken payment", "Can make an exception"]},
+   title="A bank vs a smart contract", left={"label": "A bank", "tone": "neutral", "items": ["Branch, staff, opening hours", "Can reverse a mistaken payment", "Can make an exception"]},
    right={"label": "A DeFi smart contract", "tone": "good", "items": ["Open every hour, every day", "No staff, treats everyone the same", "Can never make an exception"]})
 sc("stats", "And here's why DeFi doesn't need banking hours. A bank transfer can sit for a business day or more, waiting on staff and settlement windows. A new block on Ethereum settles roughly every twelve seconds, day or night, weekend or holiday. DeFi isn't faster because it's magic. It's faster because there's no one to wait on.",
    "And here's why DeFi doesn't need banking hours. A bank transfer can sit for a business day or more, waiting on staff and settlement windows. A new block on Ethereum settles roughly every 12 seconds, day or night, weekend or holiday. DeFi isn't faster because it's magic. It's faster because there's no one to wait on.",

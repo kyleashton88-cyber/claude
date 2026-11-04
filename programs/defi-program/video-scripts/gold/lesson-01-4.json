@@ -140,6 +140,7 @@
   {
    "type": "compare",
    "chapter": "Approvals and allowances",
+   "title": "Unlimited vs exact approval",
    "left": {
     "label": "Unlimited approval",
     "tone": "bad",
@@ -216,6 +217,7 @@
   {
    "type": "compare",
    "chapter": "The gasless signature",
+   "title": "A normal approval vs a Permit signature",
    "left": {
     "label": "A normal approval",
     "tone": "neutral",
@@ -322,6 +324,7 @@
   {
    "type": "compare",
    "chapter": "Worked example",
+   "title": "Never reviewed vs reviewed monthly",
    "left": {
     "label": "Never reviewed",
     "tone": "bad",

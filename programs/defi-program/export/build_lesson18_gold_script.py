@@ -47,7 +47,7 @@ sc("flow", "Here's exactly what happens once one address gets linked to you, ste
           {"label": "Complete history visible", "sub": "Every deposit, trade and counterparty", "icon": "search"}, {"label": "Permanent, and ongoing", "sub": "Covers every future transaction too", "icon": "alert"}])
 sc("compare", "So here's the actual contrast worth holding in your head, day to day. A traditional bank balance is private by default; only you and the bank see it. A blockchain address is public by default; only the link between you and that address is ever hidden, and once that link is made, it can't be unmade.",
    chapter="Public by default",
-   left={"label": "A bank balance", "tone": "good", "items": ["Private by default", "Only you and the bank see it"]},
+   title="A bank balance vs a public address", left={"label": "A bank balance", "tone": "good", "items": ["Private by default", "Only you and the bank see it"]},
    right={"label": "A blockchain address", "tone": "warn", "items": ["Public by default, forever", "Only the link to you is ever hidden — and can't be undone once made"]})
 sc("steps", "Worth auditing your own exposure right now, before assuming you're fine. Search your own old posts and forum history for any address you've ever pasted. Check whether any address you use has an E.N.S.-style name pointing at it publicly. And check whether you've ever linked a wallet to a public profile, a Discord, or a leaderboard. Whatever turns up, you now know exactly what's already exposed, and can start a clean, separate address for anything that matters going forward.",
    chapter="Public by default", title="Audit your own exposure, right now",
@@ -71,7 +71,7 @@ sc("flow", "Here's exactly why an exchange withdrawal is the one people miss mos
           {"label": "Permanent record created", "sub": "Identity ↔ address, on the exchange's books", "icon": "link"}, {"label": "Not anonymous, from then on", "sub": "To anyone who could see that record", "icon": "alert"}])
 sc("compare", "And here's exactly why a name service cuts the other way from what people expect. It exists to make an address memorable and easy to find, which is genuinely useful for a public-facing address. On a savings address specifically, that convenience becomes the problem: it makes the one address you most want private the easiest one for anyone to look up and associate with you.",
    chapter="Link less",
-   left={"label": "A name on a public address", "tone": "good", "items": ["Convenient, easy to find", "Fine — it was never meant to be private"]},
+   title="Where you attach your name", left={"label": "A name on a public address", "tone": "good", "items": ["Convenient, easy to find", "Fine — it was never meant to be private"]},
    right={"label": "A name on your savings address", "tone": "bad", "items": ["Makes it the easiest address to look up", "Exactly the one you wanted private"]})
 sc("flow", "Here's how a chain-analysis effort actually builds a full profile, since it's rarely one clue alone. It starts with an exchange withdrawal record, linking your verified identity to one address. From there, address reuse links that address to others you've used the same way. A public post, or an ENS name, adds a public label to the cluster. And the combination, not any single piece, produces a complete profile: identity, full balance, and behaviour, all tied together.",
    chapter="Link less", title="How a full profile actually gets built",
@@ -92,13 +92,13 @@ sc("flow", "So here's how multisig actually defeats coercion specifically, step 
           {"label": "You alone are coerced", "sub": "You cannot produce the second key", "icon": "alert"}, {"label": "Nothing to unlock", "sub": "A threat against you alone achieves nothing", "icon": "shield"}])
 sc("compare", "Put a single key and multisig side by side, under exactly this threat, and the difference is total. A single key means one person, coerced once, can move everything, immediately, with no second step required. Two-of-three multisig means one person, even under direct threat, simply cannot move anything alone, no matter how much pressure is applied.",
    chapter="Physical risk",
-   left={"label": "A single key", "tone": "bad", "items": ["One person, coerced once", "Can move everything, immediately"]},
+   title="A single key vs 2-of-3 multisig", left={"label": "A single key", "tone": "bad", "items": ["One person, coerced once", "Can move everything, immediately"]},
    right={"label": "2-of-3 multisig", "tone": "good", "items": ["One person, even under direct threat", "Cannot move anything alone"]})
 sc("stats", "One sobering, dated fact behind this chapter. Crypto-crime researchers and journalists have documented dozens of publicised physical robbery and coercion cases targeting known crypto holders across recent years, worldwide, not a handful. This is outside research, not this program's own data, but the pattern is consistent enough that low profile and multisig aren't optional extras for anyone holding a meaningful amount.",
    chapter="Physical risk", stats=[["Dozens+", "publicised physical crypto-coercion cases tracked in recent years (outside research)"]])
 sc("compare", "Discretion doesn't mean total secrecy from everyone, so here's the honest line to draw. Worth telling: whoever holds one of your multisig keys, and, for real estate planning, a lawyer bound by confidentiality who knows a plan exists, not necessarily the amount. Not worth telling: casual acquaintances, coworkers, or anyone with no structural role in accessing or recovering it.",
    chapter="Physical risk",
-   left={"label": "Worth telling", "tone": "good", "items": ["A multisig key-holder you trust", "A confidentiality-bound advisor, for estate planning"]},
+   title="What's worth sharing", left={"label": "Worth telling", "tone": "good", "items": ["A multisig key-holder you trust", "A confidentiality-bound advisor, for estate planning"]},
    right={"label": "Not worth telling", "tone": "bad", "items": ["Casual acquaintances or coworkers", "Anyone with no structural role in access or recovery"]})
 sc("quiz", "Quick check. Why does 2-of-3 multisig specifically protect against a coercion threat, where a single key doesn't? [[pause 4]] The answer: no single coerced person can produce the second key, so nobody can be forced, alone, to move everything.",
    chapter="Physical risk", n=3, of=3, q="Why does 2-of-3 multisig specifically protect against a coercion threat, where a single key doesn't?",

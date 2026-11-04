@@ -62,7 +62,7 @@ sc("title", "Powerful and dangerous.", chapter="Powerful and dangerous", eyebrow
    sub="Self-custody · Composability · Transparency")
 sc("compare", "Property one: self-custody. In a bank, the bank can freeze your account, and the bank can also help you recover it if something goes wrong. In your own DeFi wallet, nobody can freeze your funds. Nobody can recover them for you either. It's the same trade-off from Module Zero, and it's worth repeating here because this whole module is built around it.",
    chapter="Powerful and dangerous",
-   left={"label": "A bank account", "tone": "neutral", "items": ["The bank can freeze it", "The bank can help you recover it"]},
+   title="A bank account vs your own wallet", left={"label": "A bank account", "tone": "neutral", "items": ["The bank can freeze it", "The bank can help you recover it"]},
    right={"label": "Your own DeFi wallet", "tone": "good", "items": ["Nobody can freeze it", "Nobody can recover it for you, either"]})
 sc("stats", "One sobering number on self-custody, from outside research, not this program. Blockchain-analytics researchers have estimated that somewhere around a fifth of all bitcoin ever mined sits in wallets that are effectively lost: forgotten passwords, discarded hard drives, seed phrases nobody can find anymore. Nobody can recover it. Nobody can freeze it either. Same coin, both directions, permanently.",
    "One sobering number on self-custody, from outside research, not this program. Blockchain-analytics researchers have estimated that somewhere around a fifth of all bitcoin ever mined sits in wallets that are effectively lost: forgotten passwords, discarded hard drives, seed phrases nobody can find anymore. Nobody can recover it. Nobody can freeze it either. Same coin, both directions, permanently.",
@@ -89,7 +89,7 @@ sc("statement", "Here's the rule this whole program is built on. Before comparin
 
 sc("compare", "Here's the difference between the two mindsets, side by side. Return-first starts with the number, asks how to get more of it, and treats risk as a footnote to check later, if ever. Risk-first starts with what could go wrong, sizes the position around that answer, and only then looks at whether the remaining return is worth it. Same opportunity. Completely different order of operations.",
    chapter="The risk-first rule",
-   left={"label": "Return-first", "tone": "bad", "items": ["Starts with the number", "Risk is a footnote, checked later", "Sizes around the opportunity"]},
+   title="Return-first vs risk-first", left={"label": "Return-first", "tone": "bad", "items": ["Starts with the number", "Risk is a footnote, checked later", "Sizes around the opportunity"]},
    right={"label": "Risk-first", "tone": "good", "items": ["Starts with what could go wrong", "Sizes the position around that", "Then checks if the return is worth it"]})
 sc("flow", "Here's what asking the question actually looks like, step by step. You see a yield. You ask what could make it fail, before anything else. You name every risk you can find: contract, oracle, bridge, peg. You size the position so that if you're wrong, it doesn't matter much. And only then do you deposit, or decide not to.",
    chapter="The risk-first rule", title="The risk-first rule, as a habit",
