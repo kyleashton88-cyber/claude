@@ -1,0 +1,12 @@
+{
+  "list_id": "F_EXAMPLE",
+  "roster": [
+    {"whop_member_id": "ausri_1", "name": "Ana Ng", "email": "ana@example.com", "role": "admin", "status": "joined", "slack_user_id": "U1"},
+    {"whop_member_id": "ausri_2", "name": "Ben Ортега", "email": "ben@example.com", "role": "support", "status": "joined", "slack_user_id": "U2"}
+  ],
+  "records": [
+    {"Record ID": "Rec1", "Task": "Ship the onboarding email", "Owner": "U1", "Status": "In Progress", "Priority": "High", "Due Date": "2026-09-20", "Last Update": "2026-09-20"},
+    {"Record ID": "Rec2", "Task": "Draft module 3 script", "Owner": "U1", "Status": "To Do", "Priority": "Medium", "Due Date": "2026-09-30", "Last Update": "2026-09-24"},
+    {"Record ID": "Rec3", "Task": "Reconcile ad spend report", "Owner": "U2", "Status": "Blocked", "Priority": "High", "Due Date": "2026-09-25", "Blocker": "waiting on Meta API access", "Last Update": "2026-09-22"}
+  ]
+}
