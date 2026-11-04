@@ -1,0 +1,331 @@
+{
+  "id": "calculator-guide",
+  "title": "How to use the On-Chain Operator calculator",
+  "size": [1920, 1080],
+  "group": "lessons",
+  "maxMinutes": 25,
+  "tag": "Calculator",
+  "gold": true,
+  "use": "Teach plan. Learner can: open the right calculator for a DeFi question, type live rates in the form the field expects, and read the band before acting. Proof: quiz 2 computes health factor 2.40; quiz 3 picks impermanent loss before fees. Already knows: a pool, a loan, and that rates on a website are inputs. Misconceptions: the headline rate is the decision; 80 means 80 percent in a decimal field; a one-week premium is a year of income; value at risk is a maximum loss. Mechanism: your inputs, the picture, the band, your decision. Real screen: On-Chain-Operator-Calculator.html, captured 2026-09-28. Worked examples use the lesson defaults in engine.js. Your turn: open the file, type one live position, write down the band. Facts last checked: 2026-09-28. Educational modelling only. Rates are user inputs, not forecasts.",
+  "thumbnail": {
+    "title": "Read the band first",
+    "subtitle": "Twenty DeFi calculators"
+  },
+  "scenes": [
+    {
+      "type": "title",
+      "chapter": "Intro",
+      "eyebrow": "On-Chain Operator",
+      "num": "20",
+      "title": "How to use the calculator",
+      "sub": "What each tool is, why it exists, and the best way to use it.",
+      "vo": "The On-Chain Operator calculator. Twenty tools, one habit. You bring a live rate. The picture tells you whether the idea still holds."
+    },
+    {
+      "type": "statement",
+      "chapter": "Why it matters",
+      "kicker": "The problem",
+      "lines": ["A headline rate", "is not a decision."],
+      "sub": "Fees, funding, and points skip the number that can wipe them out.",
+      "vo": "Here's the problem. A headline rate is not a decision. A pool can quote a high fee while a price move beats holding. A loan can look cheap until price hits a line you never drew."
+    },
+    {
+      "type": "strike",
+      "chapter": "Why it matters",
+      "big": "The card already did the math.",
+      "after": "You still supply the live rate.",
+      "vo": "A common shortcut is to trust the card. The card already did the math. That belief fails the moment the card used yesterday's rate, or someone else's hope. You still supply the live rate. This file only checks the rate you type."
+    },
+    {
+      "type": "pillars",
+      "chapter": "Why it matters",
+      "title": "By the end you'll be able to",
+      "items": [
+        {"icon": "search", "title": "Pick", "text": "The one tool that matches the question"},
+        {"icon": "wallet", "title": "Type", "text": "Live rates, in the form the field expects"},
+        {"icon": "shield", "title": "Read", "text": "The band, before you size anything"}
+      ],
+      "vo": "By the end, you'll be able to do three things. Pick the one tool that matches the question. Type live rates, in the form the field expects. And read the band, before you size anything."
+    },
+    {
+      "type": "flow",
+      "chapter": "How it works",
+      "title": "The same four beats, every tool",
+      "layout": "row",
+      "nodes": [
+        {"id": "in", "label": "Your inputs", "sub": "rates you type", "icon": "wallet"},
+        {"id": "pic", "label": "The picture", "sub": "updates as you type", "icon": "chart"},
+        {"id": "band", "label": "The band", "sub": "green, blue, or red", "icon": "shield"},
+        {"id": "out", "label": "Your decision", "sub": "act, or wait", "icon": "target"}
+      ],
+      "edges": [
+        {"from": "in", "to": "pic", "label": "one number"},
+        {"from": "pic", "to": "band", "label": "the readout"},
+        {"from": "band", "to": "out", "label": "what next"}
+      ],
+      "vo": "Every tool runs the same four beats. Start with your inputs. Those are the rates you type, from a live source. The picture updates as you type. Then the band. Green means inside the lesson's buffer. Blue means watch this. Red means outside that buffer. Last, your decision. Act, or wait. The band is a model of the inputs. It is not a promise, and it is not advice."
+    },
+    {
+      "type": "cutaway",
+      "chapter": "Do it",
+      "label": "On screen: the calculator",
+      "url": "On-Chain-Operator-Calculator.html",
+      "shots": [
+        {"src": "assets/demos/calculator-how-to/01.png", "caption": "Read the band and the figure", "box": [0.1575, 0.2863, 0.7125, 0.1252]},
+        {"src": "assets/demos/calculator-how-to/02.png", "caption": "Change the lesson example", "box": [0.5835, 0.4602, 0.2865, 0.3614]},
+        {"src": "assets/demos/calculator-how-to/03.png", "caption": "Watch the band change colour", "box": [0.1575, 0.2863, 0.7125, 0.1486]},
+        {"src": "assets/demos/calculator-how-to/04.png", "caption": "Search any of the twenty tools", "box": [0.0025, 0.1143, 0.14, 0.0603]}
+      ],
+      "vo": "Read the band and the figure before you touch a field. Change the lesson example, which is already filled in, by editing one number. Watch the band change colour when that number leaves the buffer. Search any of the twenty tools once you know the question.",
+      "cap": "Read the band and the figure before you touch a field. Change the lesson example, which is already filled in, by editing one number. Watch the band change colour when that number leaves the buffer. Search any of the twenty tools once you know the question."
+    },
+    {
+      "type": "quiz",
+      "chapter": "Quiz",
+      "n": "1",
+      "of": "3",
+      "q": "The threshold is 80%. What do you type?",
+      "a": "0.80. That field is a decimal from 0 to 1.",
+      "vo": "A liquidation threshold is eighty percent. What do you type in that field? [[pause 4]] The answer is point eight zero. The field runs from zero to one, so eighty percent is point eight, not eighty."
+    },
+    {
+      "type": "cutaway",
+      "chapter": "Pools",
+      "label": "On screen: pool tools",
+      "url": "On-Chain-Operator-Calculator.html",
+      "shots": [
+        {"src": "assets/demos/calculator-pools/01.png", "caption": "Open impermanent loss", "box": [0.1575, 0.2863, 0.7125, 0.1252]},
+        {"src": "assets/demos/calculator-pools/02.png", "caption": "Open fee break-even", "box": [0.1575, 0.2863, 0.7125, 0.1252]},
+        {"src": "assets/demos/calculator-pools/03.png", "caption": "Open concentrated range", "box": [0.1575, 0.2863, 0.7125, 0.1252]},
+        {"src": "assets/demos/calculator-pools/04.png", "caption": "Open loss versus rebalancing", "box": [0.1575, 0.2863, 0.7125, 0.1252]}
+      ],
+      "vo": "Open impermanent loss when the question is the gap versus simply holding, and type the move you actually expect. Open fee break-even when you know that gap, and type the fee you can see, not a fee you hope for. Open concentrated range and type the lower and upper prices you would really set. Open loss versus rebalancing for a full-range pool, and type volatility and the fee you see today.",
+      "cap": "Open impermanent loss when the question is the gap versus simply holding, and type the move you actually expect. Open fee break-even when you know that gap, and type the fee you can see, not a fee you hope for. Open concentrated range and type the lower and upper prices you would really set. Open loss versus rebalancing for a full-range pool, and type volatility and the fee you see today."
+    },
+    {
+      "type": "steps",
+      "chapter": "Pools",
+      "title": "A double, versus holding",
+      "steps": [
+        "Price multiple: 2",
+        "Baseline: hold both assets",
+        "Pool: a fifty-fifty mix",
+        "A half, 0.5, mirrors this gap"
+      ],
+      "result": "Gap versus holding: about −5.72%",
+      "vo": "Here is the lesson example for impermanent loss. The price multiple is two, a double. The baseline is to hold both assets. The pool keeps a fifty-fifty mix, so it sells the winner as price rises. A half, point five, mirrors this gap. The result is a gap versus holding of about five point seven two percent. Use this before you trust a fee quote."
+    },
+    {
+      "type": "compare",
+      "chapter": "Pools",
+      "title": "Fees only help after the gap",
+      "left": {
+        "label": "Hope",
+        "tone": "bad",
+        "items": ["Type a fee you wish for", "Ignore how long you stay", "Call any fee a win"]
+      },
+      "right": {
+        "label": "The check",
+        "tone": "good",
+        "items": ["Type the fee you can see", "Type the move and the days", "Ask if fees cover the gap"]
+      },
+      "vo": "Why fee break-even exists. Hope says type a fee you wish for, ignore how long you stay, and call any fee a win. The check says type the fee you can see, type the move and the days, and ask if fees cover the gap. In the lesson, a one and a half times move over thirty days still trails holding at a twenty percent fee. It needs about twenty-five percent to break even."
+    },
+    {
+      "type": "bullets",
+      "chapter": "Pools",
+      "title": "Best use, for the pool tools",
+      "items": [
+        "Impermanent loss: type 2 for a double, 0.5 for a half",
+        "Fee break-even: the fee on the pool today, plus your stay",
+        "Concentrated range: your real lower and upper prices",
+        "Loss versus rebalancing: full-range volatility, before you concentrate"
+      ],
+      "vo": "Best use, for the four pool tools. Impermanent loss: type two for a double, and point five for a half. Fee break-even: the fee on the pool today, plus how long you will stay. Concentrated range: your real lower and upper prices. A range from eighteen hundred to thirty-two hundred works the lesson capital about seven and a half times harder, and that work stops when price leaves. Loss versus rebalancing is the full-range case, before you concentrate. Eighty percent volatility is an eight percent drag. Fees have to clear that drag."
+    },
+    {
+      "type": "cutaway",
+      "chapter": "Borrowing",
+      "label": "On screen: borrowing tools",
+      "url": "On-Chain-Operator-Calculator.html",
+      "shots": [
+        {"src": "assets/demos/calculator-borrowing/01.png", "caption": "Open health factor", "box": [0.1575, 0.2863, 0.7125, 0.1252]},
+        {"src": "assets/demos/calculator-borrowing/02.png", "caption": "Open the lending loop", "box": [0.1575, 0.2863, 0.7125, 0.1252]},
+        {"src": "assets/demos/calculator-borrowing/03.png", "caption": "Open the supply rate", "box": [0.1575, 0.2863, 0.7125, 0.1252]},
+        {"src": "assets/demos/calculator-borrowing/04.png", "caption": "Open the mint tool", "box": [0.1575, 0.2863, 0.7125, 0.1252]},
+        {"src": "assets/demos/calculator-borrowing/05.png", "caption": "Open perp liquidation", "box": [0.1575, 0.2863, 0.7125, 0.1252]}
+      ],
+      "vo": "Open health factor before you borrow. It shows how far the loan sits from liquidation, and the price that closes it. Open the lending loop to see what repeated borrow-and-supply does to your exposure. Open the supply rate to turn the borrow rate, utilisation, and reserve into the lend rate. Open the mint tool for how many stablecoins a vault allows, and the price that breaks its minimum ratio. Open perp liquidation for the approximate price that closes an isolated perpetual, before fees and funding.",
+      "cap": "Open health factor before you borrow. It shows how far the loan sits from liquidation, and the price that closes it. Open the lending loop to see what repeated borrow-and-supply does to your exposure. Open the supply rate to turn the borrow rate, utilisation, and reserve into the lend rate. Open the mint tool for how many stablecoins a vault allows, and the price that breaks its minimum ratio. Open perp liquidation for the approximate price that closes an isolated perpetual, before fees and funding."
+    },
+    {
+      "type": "steps",
+      "chapter": "Borrowing",
+      "title": "Health factor, the lesson loan",
+      "steps": [
+        "Collateral: 10 units × $3,000",
+        "Liquidation threshold: 0.80",
+        "Debt: $10,000",
+        "Health factor = collateral × threshold ÷ debt"
+      ],
+      "result": "Health factor 2.40 · liquidation near $1,250",
+      "vo": "Work the lesson loan. Collateral is ten units at three thousand dollars. The liquidation threshold is point eight zero. Debt is ten thousand dollars. Health factor equals collateral, times the threshold, divided by the debt. The result is a health factor of two point four zero, and liquidation near one thousand two hundred and fifty dollars. That is the price where the buffer is gone."
+    },
+    {
+      "type": "compare",
+      "chapter": "Borrowing",
+      "title": "Same collateral, twice the debt",
+      "left": {
+        "label": "Debt $20,000",
+        "tone": "bad",
+        "items": ["Health factor 1.20", "Under the 1.5 floor", "Repay, or add collateral"]
+      },
+      "right": {
+        "label": "Debt $10,000",
+        "tone": "good",
+        "items": ["Health factor 2.40", "Room above 2.0", "Liquidation is far from spot"]
+      },
+      "vo": "Why this tool exists. A protocol will not call you. Double the debt, to twenty thousand dollars, and the health factor falls to one point two zero. That is under the one point five floor this program uses. Repay, or add collateral. At ten thousand dollars of debt, the health factor is two point four zero. There is room above two point zero, and liquidation is far from spot. Best use: type today's price, and the protocol's threshold as a decimal."
+    },
+    {
+      "type": "bullets",
+      "chapter": "Borrowing",
+      "title": "Best use, for the other four",
+      "items": [
+        "Lending loop: your real passes, and both live rates",
+        "Supply rate: borrow rate × utilisation × (1 − reserve)",
+        "Mint: 150 means 150 percent, not 1.50",
+        "Perp: a long closes below entry, a short closes above"
+      ],
+      "vo": "Best use, for the other four borrowing tools. Lending loop: type the loan-to-value you will really use, the passes you will really do, and both live rates. In the lesson, three passes at point seven five, with five percent supplied and three percent borrowed, lever about two point seven times. The spread in that example vanishes near an eight percent borrow rate. Supply rate: borrow rate, times utilisation, times one minus the reserve. Eight percent, times point seven, times point nine, is about five percent. Mint: type one hundred and fifty to mean one hundred and fifty percent, not one point five zero. The lesson vault can mint up to twenty thousand, and a fee of two percent is one hundred and sixty dollars a year on an eight thousand mint. Perp: a long closes below the entry. A short closes above it. A five times long from three thousand, with a half percent maintenance margin, liquidates near two thousand four hundred."
+    },
+    {
+      "type": "quiz",
+      "chapter": "Quiz",
+      "n": "2",
+      "of": "3",
+      "q": "10 units at $3,000. Threshold 0.80. Debt $10,000. Health factor?",
+      "a": "2.40. Collateral times the threshold, divided by debt.",
+      "vo": "Ten units at three thousand dollars. Threshold point eight zero. Debt ten thousand dollars. What is the health factor? [[pause 4]] The answer is two point four zero. Collateral times the threshold, divided by the debt."
+    },
+    {
+      "type": "cutaway",
+      "chapter": "Yield",
+      "label": "On screen: yield tools",
+      "url": "On-Chain-Operator-Calculator.html",
+      "shots": [
+        {"src": "assets/demos/calculator-yield/01.png", "caption": "Open funding carry", "box": [0.1575, 0.2863, 0.7125, 0.1486]},
+        {"src": "assets/demos/calculator-yield/02.png", "caption": "Open cash and carry", "box": [0.1575, 0.2863, 0.7125, 0.1486]},
+        {"src": "assets/demos/calculator-yield/03.png", "caption": "Open the covered call", "box": [0.1575, 0.2863, 0.7125, 0.1486]},
+        {"src": "assets/demos/calculator-yield/04.png", "caption": "Open the principal token", "box": [0.1575, 0.2863, 0.7125, 0.1486]},
+        {"src": "assets/demos/calculator-yield/05.png", "caption": "Open rate to compounded rate", "box": [0.1575, 0.2863, 0.7125, 0.1486]}
+      ],
+      "vo": "Open funding carry for what one eight-hour funding print means on a hedge, and for what the short leg can survive. Open cash and carry for the gap between a dated future and spot, if you can hold both to expiry. Open the covered call for the premium you keep this period, not the annualised figure, because a short window inflates it. Open the principal token for the fixed result of buying below one and holding to maturity, if it pays. Open rate to compounded rate to see what compounding adds, and whether gas eats the extra transactions.",
+      "cap": "Open funding carry for what one eight-hour funding print means on a hedge, and for what the short leg can survive. Open cash and carry for the gap between a dated future and spot, if you can hold both to expiry. Open the covered call for the premium you keep this period, not the annualised figure, because a short window inflates it. Open the principal token for the fixed result of buying below one and holding to maturity, if it pays. Open rate to compounded rate to see what compounding adds, and whether gas eats the extra transactions."
+    },
+    {
+      "type": "stats",
+      "chapter": "Yield",
+      "stats": [
+        ["0.01%", "means 0.01 percent, not 1"],
+        ["~11% a year", "lesson funding, on the position"],
+        ["Funding can flip", "then you are the one paying"]
+      ],
+      "lastAccent": true,
+      "vo": "Best use for funding. Point zero one percent means point zero one percent, not one percent. In the lesson, that print each eight hours, at two times leverage, is about eleven percent a year on the position, and less on the capital behind it. Funding can flip. Then you are the one paying it, and the short still has a liquidation price. Type the live print, not last month's average."
+    },
+    {
+      "type": "bullets",
+      "chapter": "Yield",
+      "title": "Best use, for the other yield tools",
+      "items": [
+        "Cash and carry: days left matter, or the annualised gap misleads",
+        "Covered call: a one-week premium is not a year of income",
+        "Principal token: 0.95 means you pay 0.95 to receive 1",
+        "Compounding: check gas against the position before you compound again"
+      ],
+      "vo": "Best use, for the other yield tools. Cash and carry: type spot, the future, and the days left. A two dollar gap on a hundred dollar spot, with thirty days left, is two percent raw and about twenty-four percent annualised, only if you hold to expiry. Covered call: a one-week premium is not a year of income. Spot one hundred, strike one hundred and ten, premium two percent, seven days. The most you keep in that example is twelve percent, and the premium is used up at ninety-eight. Principal token: point nine five means you pay point nine five to receive one, if it pays. Ninety days in the lesson is about twenty-three percent fixed. The risk is whether it pays, not the formula. Compounding: twelve percent, compounded twelve times, is about twelve point seven percent before gas. Check gas against the position before you compound again."
+    },
+    {
+      "type": "cutaway",
+      "chapter": "The book",
+      "label": "On screen: the book",
+      "url": "On-Chain-Operator-Calculator.html",
+      "shots": [
+        {"src": "assets/demos/calculator-book/01.png", "caption": "Open risk-adjusted yield", "box": [0.1575, 0.2589, 0.7125, 0.1486]},
+        {"src": "assets/demos/calculator-book/02.png", "caption": "Open the income plan", "box": [0.1575, 0.2589, 0.7125, 0.1486]},
+        {"src": "assets/demos/calculator-book/03.png", "caption": "Open the balance sheet", "box": [0.1575, 0.2589, 0.7125, 0.1486]},
+        {"src": "assets/demos/calculator-book/04.png", "caption": "Open time-weighted return", "box": [0.1575, 0.2589, 0.7125, 0.1486]},
+        {"src": "assets/demos/calculator-book/05.png", "caption": "Open airdrop value", "box": [0.1575, 0.2589, 0.7125, 0.1486]},
+        {"src": "assets/demos/calculator-book/06.png", "caption": "Open value at risk", "box": [0.1575, 0.2589, 0.7125, 0.1486]}
+      ],
+      "vo": "Open risk-adjusted yield to take a headline rate down by a loss you might actually take, and by your costs. Open the income plan to do that across every position, then choose a payout that leaves a buffer. Open the balance sheet for equity, your loan-to-value rule, health factor, and months of reserve. Open time-weighted return when deposits are mixed into the gain, and you want the decisions alone. Open airdrop value with an honest chance, the amount if it arrives, and every cost of chasing it. Open value at risk for a one-day loss floor from volatility. Crypto crashes run past a normal model, so treat the number as a floor.",
+      "cap": "Open risk-adjusted yield to take a headline rate down by a loss you might actually take, and by your costs. Open the income plan to do that across every position, then choose a payout that leaves a buffer. Open the balance sheet for equity, your loan-to-value rule, health factor, and months of reserve. Open time-weighted return when deposits are mixed into the gain, and you want the decisions alone. Open airdrop value with an honest chance, the amount if it arrives, and every cost of chasing it. Open value at risk for a one-day loss floor from volatility. Crypto crashes run past a normal model, so treat the number as a floor."
+    },
+    {
+      "type": "steps",
+      "chapter": "The book",
+      "title": "A headline twelve, after a loss you might take",
+      "steps": [
+        "Headline: 12%",
+        "Chance of a hit: 0.05, and 40% of the position",
+        "Costs: 1%",
+        "12 − 0.05 × 40 − 1"
+      ],
+      "result": "About 9% after that loss and those costs",
+      "vo": "Risk-adjusted yield, in the lesson. The headline is twelve percent. The chance of a hit is point zero five, and that hit takes forty percent of the position. Costs are one percent. Twelve, minus point zero five times forty, minus one. The result is about nine percent after that loss and those costs. Best use: the chance and the share lost are your estimates. A wishful chance prints a wishful nine."
+    },
+    {
+      "type": "compare",
+      "chapter": "The book",
+      "title": "The book, read the right way",
+      "left": {
+        "label": "Easy to misread",
+        "tone": "bad",
+        "items": ["Spend the whole modelled income", "Mix deposits into the return", "Treat one-day value at risk as the worst day"]
+      },
+      "right": {
+        "label": "Best use",
+        "tone": "good",
+        "items": ["Keep a buffer, as in the income plan", "Split the record at every deposit", "Call value at risk a floor, not a cap"]
+      },
+      "vo": "Three ways the book gets misread. People spend the whole modelled income, mix deposits into the return, and treat one-day value at risk as the worst day. Best use. Keep a buffer, as in the income plan. The lesson book of one hundred and fifty thousand models about thirteen thousand of expected income, pays out about seventy percent, and keeps about four thousand as a buffer. Split the record at every deposit. The lesson stretches of five, minus two, and four percent are about a seven percent time-weighted return, close to the simple gain only because the deposit was small. Call value at risk a floor, not a cap. Fifty thousand dollars at eighty percent volatility is about a three and a half thousand dollar day in the normal model. Crash days can be worse."
+    },
+    {
+      "type": "quiz",
+      "chapter": "Quiz",
+      "n": "3",
+      "of": "3",
+      "q": "You expect price to double. Which pool tool first?",
+      "a": "Impermanent loss. Measure the gap before you trust the fee.",
+      "vo": "You might add liquidity, and you expect the price to double. Which pool tool do you open first? [[pause 4]] The answer is impermanent loss. Measure the gap versus holding before you trust the fee."
+    },
+    {
+      "type": "statement",
+      "chapter": "Your turn",
+      "kicker": "Your turn",
+      "lines": ["Open the file.", "Type one real position."],
+      "sub": "Write down the band, and the one number you would act on. No wallet required.",
+      "vo": "Your turn. Open the calculator file on your own computer. Pick the tool that matches a position you already have on paper. Type the live numbers, not a hoped-for rate. Write down the band, and the one number you would act on. That takes five to twenty minutes. You do not need a wallet. Never type a seed phrase, a private key, or a password into this file, or into anything that asks."
+    },
+    {
+      "type": "bullets",
+      "chapter": "Recap",
+      "title": "Take this with you",
+      "numbered": true,
+      "items": [
+        "Twenty tools, one habit: change one input, read the band",
+        "Pools, borrowing, yield, then the book",
+        "You supply the rates. The picture is a model, not advice"
+      ],
+      "vo": "Three lines to keep. Twenty tools, one habit. Change one input, and read the band. The menu is pools, then borrowing, then yield, then the book. You supply the rates. The picture is a model, not a forecast, and not advice."
+    },
+    {
+      "type": "cta",
+      "chapter": "Recap",
+      "button": "Open the calculator",
+      "sub": "Next: bring a health-factor loan back to lesson 3.2.",
+      "vo": "Open the calculator and run one position before you size it. Next, take a health-factor loan back to lesson three point two, and say why a health factor near one is a closing price, not a cushion."
+    }
+  ]
+}

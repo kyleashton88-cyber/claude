@@ -1,0 +1,59 @@
+{
+  "type": "cutaway",
+  "chapter": "Borrowing",
+  "label": "On screen: borrowing tools",
+  "url": "On-Chain-Operator-Calculator.html",
+  "shots": [
+    {
+      "src": "assets/demos/calculator-borrowing/01.png",
+      "caption": "Open health factor",
+      "box": [
+        0.1575,
+        0.2863,
+        0.7125,
+        0.1252
+      ]
+    },
+    {
+      "src": "assets/demos/calculator-borrowing/02.png",
+      "caption": "Open the lending loop",
+      "box": [
+        0.1575,
+        0.2863,
+        0.7125,
+        0.1252
+      ]
+    },
+    {
+      "src": "assets/demos/calculator-borrowing/03.png",
+      "caption": "Open the supply rate",
+      "box": [
+        0.1575,
+        0.2863,
+        0.7125,
+        0.1252
+      ]
+    },
+    {
+      "src": "assets/demos/calculator-borrowing/04.png",
+      "caption": "Open C.D.P. mint",
+      "box": [
+        0.1575,
+        0.2863,
+        0.7125,
+        0.1252
+      ]
+    },
+    {
+      "src": "assets/demos/calculator-borrowing/05.png",
+      "caption": "Open perp liquidation",
+      "box": [
+        0.1575,
+        0.2863,
+        0.7125,
+        0.1252
+      ]
+    }
+  ],
+  "vo": "Open health factor. Then the lending loop. Then the supply rate. Then a collateralised mint. Then perp liquidation."
+}

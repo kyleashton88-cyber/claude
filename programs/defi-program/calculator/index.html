@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>On-Chain Operator Calculator</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%2307111c' width='200' height='200'/%3E%3Cpath d='M176 144 L100 188 L24 144 L24 56 L100 12 L176 56 Z' fill='none' stroke='%237dffe0' stroke-width='8'/%3E%3Ccircle cx='78' cy='100' r='30' fill='none' stroke='%23fff' stroke-width='12'/%3E%3Ccircle cx='122' cy='100' r='30' fill='none' stroke='%237eb6ff' stroke-width='12'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --ink: #07111c;
+    --paper: #e7eef2;
+    --sheet: #f7fafb;
+    --text: #14202b;
+    --muted: #3e4c59;
+    --line: #d3dde6;
+    --mint: #7dffe0;
+    --ring: #7eb6ff;
+    --teal: #0c8f74;
+    --teal-ink: #064e3b;
+    --good-bg: #e5fff6;
+    --watch: #1e3a5f;
+    --watch-bg: #e8f1ff;
+    --bad: #9f1239;
+    --bad-bg: #fde8e8;
+    --serif: Palatino, "Palatino Linotype", "Iowan Old Style", Georgia, serif;
+    --sans: "Avenir Next", "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--paper); color: var(--text); }
+  body { font-family: var(--sans); font-size: 17px; line-height: 1.45; }
+  button, input, select { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; }
+  .mast { display: flex; align-items: center; gap: 14px; background: var(--ink); color: #f4f7fa; padding: 14px 22px; position: sticky; top: 0; z-index: 30; }
+  .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+  .brand svg { display: block; flex: none; }
+  .word b { display: block; font-weight: 750; letter-spacing: 0.08em; font-size: 15px; line-height: 1.15; }
+  .word b em { font-style: normal; color: var(--mint); }
+  .word span { display: block; color: #b7c9da; font-size: 13px; font-weight: 500; margin-top: 2px; }
+  .skip { position: absolute; left: 12px; top: -40px; background: #fff; padding: 8px 12px; }
+  .skip:focus { top: 8px; z-index: 5; }
+  .app { display: grid; grid-template-columns: 232px 1fr; min-height: 100vh; }
+  .nav { background: var(--ink); color: #d5e2ee; padding: 12px 12px 32px; position: sticky; top: 76px; max-height: calc(100vh - 76px); overflow: auto; }
+  .find { display: block; margin: 0 0 8px; }
+  .find span { display: block; color: #8ea0b0; font-size: 13px; margin: 0 4px 4px; }
+  .find input { width: 100%; background: #122033; color: #f4f7fa; border: 1px solid #2a3c4e; padding: 8px 10px; }
+  .find input::placeholder { color: #8ea0b0; }
+  .nav button[hidden], .group[hidden] { display: none; }
+  .nav a.home { color: #f4f7fa; text-decoration: none; display: block; padding: 0 8px 14px; }
+  .nav a.home b { display: block; font-weight: 650; letter-spacing: 0; }
+  .nav a.home span { display: block; color: #8ef6d4; font-family: var(--serif); font-size: 15px; font-weight: 500; }
+  .group { margin: 14px 0 4px; padding: 0 8px; color: #8ea0b0; font-size: 13px; }
+  .nav button {
+    display: block; width: 100%; text-align: left; background: transparent; color: #d5e2ee;
+    border: 0; border-left: 2px solid transparent; padding: 7px 8px; cursor: pointer;
+  }
+  .nav button[aria-current="true"] { color: #fff; border-left-color: var(--mint); background: rgba(125,255,224,.08); }
+  .stage { padding: 22px 28px 56px; max-width: 1180px; }
+  .work { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.9fr); gap: 18px; align-items: start; }
+  .side { display: flex; flex-direction: column; gap: 14px; }
+  .side .metrics { grid-template-columns: 1fr 1fr; margin: 0; }
+  .side .inputs { grid-template-columns: 1fr; margin: 0; }
+  .stage h1 { font-family: var(--serif); font-weight: 500; font-size: 34px; line-height: 1.15; margin: 0 0 6px; }
+  .blurb { margin: 0 0 8px; max-width: 62ch; color: var(--muted); }
+  .cue { margin: 0 0 16px; max-width: 62ch; }
+  .left { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .side h2, .read h2 { font-family: var(--serif); font-weight: 500; font-size: 22px; margin: 0; }
+  .side details { color: var(--muted); }
+  .side details summary { cursor: pointer; color: var(--text); }
+  .side details p, .read p { margin: 8px 0 0; }
+  .hint { color: var(--muted); font-size: 13px; }
+  .work.cards { grid-template-columns: 1fr; }
+  .work.cards .side, .work.cards .left { display: contents; }
+  .work.cards .side h2 { order: 1; }
+  .work.cards #form { order: 2; }
+  .work.cards .reset, .work.cards details { order: 3; }
+  .work.cards #chart { order: 4; }
+  .work.cards .read { order: 5; }
+  .work.cards .metrics { order: 6; grid-template-columns: repeat(4, 1fr); }
+  .work.cards .side .inputs { grid-template-columns: minmax(0, 320px) 1fr; }
+  .work.cards .pos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; align-items: start; }
+  .work.cards .pos > .hint, .work.cards .pos > .row-actions { grid-column: 1 / -1; }
+  .pos-row label:first-child, .pos-row > button { grid-column: 1 / -1; }
+  .pos-row > button { justify-self: start; width: auto; }
+  .verdict {
+    display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: end;
+    padding: 16px 18px; margin: 0 0 14px; background: var(--watch-bg); color: var(--watch);
+  }
+  .verdict.good { background: var(--good-bg); color: var(--teal-ink); }
+  .verdict.bad { background: var(--bad-bg); color: var(--bad); }
+  .verdict p { margin: 0; font-family: var(--serif); font-size: 22px; line-height: 1.3; max-width: 62ch; }
+  .zone { margin: 0 0 6px; font-family: var(--sans); font-size: 14px; }
+  .figure { text-align: right; }
+  .figure b { display: block; font-family: var(--serif); font-size: 40px; font-weight: 500; line-height: 1; }
+  .figure span { font-size: 14px; }
+  .panel { background: var(--sheet); border: 1px solid var(--line); padding: 8px 10px 10px; margin: 0; }
+  .panel svg { width: 100%; height: auto; display: block; }
+  .axes { margin: 2px 8px 0; color: var(--muted); font-size: 13px; }
+  .formula { margin: 4px 8px 2px; color: var(--muted); font-size: 14px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 4px 4px 8px; font-size: 13px; color: var(--muted); }
+  .legend i { display: inline-block; width: 16px; height: 0; margin-right: 6px; vertical-align: middle; border-bottom: 3px solid var(--ink); }
+  .legend i.dash { border-bottom-style: dashed; }
+  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 0 0 14px; }
+  .metrics div { border-top: 2px solid var(--ink); padding-top: 6px; }
+  .metrics b { display: block; font-size: 18px; font-weight: 650; }
+  .metrics span { color: var(--muted); font-size: 13px; }
+  .checks { list-style: none; padding: 0; margin: 16px 0 14px; }
+  .checks li { padding: 6px 0; border-bottom: 1px solid var(--line); }
+  .checks li.ok { color: var(--teal-ink); }
+  .checks li.no { color: var(--bad); }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 15px; }
+  th, td { text-align: right; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  th:first-child, td:first-child { text-align: left; }
+  th { font-weight: 600; color: var(--muted); font-size: 13px; }
+  .inputs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 16px; margin: 0 0 8px; }
+  label { display: flex; flex-direction: column; gap: 4px; font-size: 14px; color: var(--muted); }
+  input, select { background: #fff; border: 1px solid var(--line); padding: 8px 10px; width: 100%; }
+  .pos { grid-column: 1 / -1; }
+  .pos-row, .period-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+  .pos-row { margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+  .period-row { grid-template-columns: 1fr auto; }
+  .row-actions { display: flex; gap: 8px; margin-top: 4px; }
+  .row-actions button, .reset {
+    background: #fff; border: 1px solid var(--line); padding: 8px 12px; cursor: pointer;
+  }
+  .reset { background: transparent; color: var(--muted); border: 0; padding: 0; text-align: left; }
+  .reset:hover { color: var(--ink); }
+  .error { color: var(--bad); margin: 0 0 12px; }
+  .read { margin-top: 4px; max-width: 68ch; }
+  .foot { margin-top: 28px; color: var(--muted); font-size: 14px; max-width: 68ch; }
+  .picker { display: none; margin: 0 0 12px; }
+  @media (max-width: 860px) {
+    .app { grid-template-columns: 1fr; }
+    .nav { display: none; }
+    .picker { display: block; }
+    .stage { padding: 16px 14px 40px; }
+    .work { grid-template-columns: 1fr; }
+    .side .inputs { grid-template-columns: 1fr 1fr; }
+    .nav { position: static; max-height: none; }
+    .verdict, .metrics, .inputs, .work.cards .pos { grid-template-columns: 1fr; }
+    .figure { text-align: left; }
+    .pos-row { grid-template-columns: 1fr 1fr; }
+    .stage h1 { font-size: 28px; }
+    .verdict p { font-size: 22px; }
+    .mast { padding: 12px 14px; }
+    .word b { font-size: 13px; letter-spacing: 0.06em; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#work">Skip to the calculator</a>
+<header class="mast">
+  <div class="brand">
+    <svg class="mark" width="48" height="48" viewBox="0 0 200 200" role="img" aria-label="On-Chain Operator">
+      <path d="M176 144 L100 188 L24 144 L24 56 L100 12 L176 56 Z" fill="none" stroke="#7dffe0" stroke-width="8"/>
+      <circle cx="78" cy="100" r="30" fill="none" stroke="#fff" stroke-width="12"/>
+      <circle cx="122" cy="100" r="30" fill="none" stroke="#7eb6ff" stroke-width="12"/>
+    </svg>
+    <div class="word"><b>ON-CHAIN <em>OPERATOR</em></b><span>Calculator</span></div>
+  </div>
+</header>
+<div class="app">
+  <nav class="nav" aria-label="Calculators" id="nav"></nav>
+  <main class="stage" id="work">
+    <label class="picker">Calculator
+      <select id="picker"></select>
+    </label>
+    <h1 id="title">Calculator</h1>
+    <p class="blurb" id="blurb"></p>
+    <p class="cue">The lesson example is already filled in. Change a number and the picture updates.</p>
+    <div class="verdict watch" id="verdict" aria-live="polite">
+      <div>
+        <p class="zone" id="zone"></p>
+        <p id="sentence"></p>
+      </div>
+      <div class="figure"><b id="figure"></b><span id="figure-label"></span></div>
+    </div>
+    <p class="error" id="error" hidden></p>
+    <div class="work" id="work-grid">
+      <div class="left">
+        <div class="panel" id="chart"></div>
+        <section class="read">
+          <h2>How to read it</h2>
+          <p id="read"></p>
+        </section>
+      </div>
+      <div class="side">
+        <h2>Change these</h2>
+        <form id="form" class="inputs"></form>
+        <button type="button" class="reset" id="reset">Reset to the lesson example</button>
+        <details>
+          <summary>How to use this one</summary>
+          <p id="use"></p>
+        </details>
+        <div class="metrics" id="metrics"></div>
+      </div>
+    </div>
+    <ul class="checks" id="checks" hidden></ul>
+    <div id="table"></div>
+    <p class="foot">Educational modelling for the On-Chain Operator Program. You supply the rates from a live source. The numbers are not a forecast, not income, and not financial, legal, or tax advice. Never type a seed phrase, a private key, or a password. This file works on its own. Open it in any browser.</p>
+  </main>
+</div>
+<script src="engine.js"></script>
+<script>
+(function () {
+  var state = load();
+  var fromHash = location.hash.replace("#", "");
+  var current = OcoCalc.toolById(fromHash) ? fromHash : (state.id && OcoCalc.toolById(state.id) ? state.id : "health");
+  var nav = document.getElementById("nav");
+  var picker = document.getElementById("picker");
+
+  var findLabel = document.createElement("label");
+  findLabel.className = "find";
+  var findName = document.createElement("span");
+  findName.textContent = "Find a calculator";
+  var find = document.createElement("input");
+  find.type = "search";
+  find.placeholder = "Health, loop, income";
+  find.setAttribute("aria-label", "Find a calculator");
+  findLabel.appendChild(findName);
+  findLabel.appendChild(find);
+  nav.appendChild(findLabel);
+  find.addEventListener("input", filterNav);
+
+  var lastGroup = "";
+  OcoCalc.tools.forEach(function (tool) {
+    if (tool.group !== lastGroup) {
+      var g = document.createElement("div");
+      g.className = "group";
+      g.textContent = tool.group;
+      nav.appendChild(g);
+      lastGroup = tool.group;
+    }
+    var b = document.createElement("button");
+    b.type = "button";
+    b.textContent = tool.name;
+    b.dataset.id = tool.id;
+    b.dataset.group = tool.group;
+    b.addEventListener("click", function () { select(tool.id); });
+    nav.appendChild(b);
+    var opt = document.createElement("option");
+    opt.value = tool.id;
+    opt.textContent = tool.group + " — " + tool.name;
+    picker.appendChild(opt);
+  });
+  picker.addEventListener("change", function () { select(picker.value); });
+
+  document.getElementById("form").addEventListener("submit", function (e) { e.preventDefault(); });
+  document.getElementById("reset").addEventListener("click", function () {
+    state.values[current] = OcoCalc.defaults(OcoCalc.toolById(current));
+    save();
+    draw();
+  });
+
+  function load() {
+    try {
+      var raw = localStorage.getItem("oco-calculator");
+      if (raw) return JSON.parse(raw);
+    } catch (e) {}
+    return { id: "health", values: {} };
+  }
+  function save() {
+    try { localStorage.setItem("oco-calculator", JSON.stringify(state)); } catch (e) {}
+  }
+  function valuesFor(tool) {
+    if (!state.values[tool.id]) state.values[tool.id] = OcoCalc.defaults(tool);
+    return state.values[tool.id];
+  }
+  function filterNav() {
+    var q = find.value.trim().toLowerCase();
+    var groups = nav.querySelectorAll(".group");
+    groups.forEach(function (g) { g.hidden = true; });
+    nav.querySelectorAll("button").forEach(function (b) {
+      var show = !q || b.textContent.toLowerCase().indexOf(q) >= 0 || (b.dataset.group || "").toLowerCase().indexOf(q) >= 0;
+      b.hidden = !show;
+      if (show) {
+        var prev = b.previousElementSibling;
+        while (prev && !prev.classList.contains("group")) prev = prev.previousElementSibling;
+        if (prev) prev.hidden = false;
+      }
+    });
+  }
+
+  function select(id) {
+    current = id;
+    state.id = id;
+    if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id);
+    save();
+    draw();
+    var chosen = nav.querySelector("button[data-id='" + id + "']");
+    if (chosen && chosen.scrollIntoView) chosen.scrollIntoView({ block: "nearest" });
+  }
+
+  function fieldInput(field, values) {
+    var label = document.createElement("label");
+    label.textContent = field.label + (field.unit ? " (" + field.unit + ")" : "");
+    var el;
+    if (field.type === "select") {
+      el = document.createElement("select");
+      field.options.forEach(function (opt) {
+        var o = document.createElement("option");
+        o.value = opt.value;
+        o.textContent = opt.label;
+        if (String(values[field.key]) === String(opt.value)) o.selected = true;
+        el.appendChild(o);
+      });
+      el.addEventListener("change", function () {
+        values[field.key] = el.value;
+        save();
+        paint();
+      });
+    } else {
+      el = document.createElement("input");
+      el.type = "number";
+      el.inputMode = "decimal";
+      el.step = "any";
+      if (field.min != null) el.min = field.min;
+      if (field.max != null) el.max = field.max;
+      el.value = values[field.key];
+      el.addEventListener("input", function () {
+        values[field.key] = el.value === "" ? "" : Number(el.value);
+        save();
+        paint();
+      });
+    }
+    label.appendChild(el);
+    if (field.type !== "select" && field.min >= 0 && field.max <= 1) {
+      var hint = document.createElement("span");
+      hint.className = "hint";
+      hint.textContent = "A decimal from 0 to 1. Type 0.80 for 80%.";
+      label.appendChild(hint);
+    }
+    return label;
+  }
+
+  function positionsEditor(values) {
+    var wrap = document.createElement("div");
+    wrap.className = "pos";
+    var note = document.createElement("p");
+    note.className = "hint";
+    note.textContent = "Chance of loss and share lost are decimals. Type 0.15 for 15%.";
+    wrap.appendChild(note);
+    function renderRows() {
+      wrap.innerHTML = "";
+      wrap.appendChild(note);
+      values.positions.forEach(function (row, index) {
+        var line = document.createElement("div");
+        line.className = "pos-row";
+        [
+          ["name", "Name", "text"],
+          ["amount", "Amount", "number"],
+          ["yield", "Yield %", "number"],
+          ["lossProb", "Chance of loss", "number"],
+          ["lgd", "Share lost", "number"]
+        ].forEach(function (spec) {
+          var lab = document.createElement("label");
+          lab.textContent = spec[1];
+          var input = document.createElement("input");
+          input.type = spec[2] === "text" ? "text" : "number";
+          if (spec[2] === "number") input.step = spec[0] === "amount" ? "1" : "0.01";
+          input.value = row[spec[0]];
+          input.addEventListener("input", function () {
+            row[spec[0]] = spec[2] === "text" ? input.value : (input.value === "" ? "" : Number(input.value));
+            save();
+            paint();
+          });
+          lab.appendChild(input);
+          line.appendChild(lab);
+        });
+        var remove = document.createElement("button");
+        remove.type = "button";
+        remove.textContent = "Remove";
+        remove.addEventListener("click", function () {
+          values.positions.splice(index, 1);
+          save();
+          draw();
+        });
+        line.appendChild(remove);
+        wrap.appendChild(line);
+      });
+      var actions = document.createElement("div");
+      actions.className = "row-actions";
+      var add = document.createElement("button");
+      add.type = "button";
+      add.textContent = "Add a position";
+      add.addEventListener("click", function () {
+        values.positions.push({ name: "New position", amount: 10000, yield: 6, lossProb: 0.02, lgd: 1 });
+        save();
+        draw();
+      });
+      actions.appendChild(add);
+      wrap.appendChild(actions);
+    }
+    renderRows();
+    return wrap;
+  }
+
+  function periodsEditor(values) {
+    var wrap = document.createElement("div");
+    wrap.className = "pos";
+    values.periods.forEach(function (p, index) {
+      var line = document.createElement("div");
+      line.className = "period-row";
+      var lab = document.createElement("label");
+      lab.textContent = "Period " + (index + 1) + " return (%)";
+      var input = document.createElement("input");
+      input.type = "number";
+      input.step = "0.1";
+      input.value = p;
+      input.addEventListener("input", function () {
+        values.periods[index] = input.value === "" ? "" : Number(input.value);
+        save();
+        paint();
+      });
+      lab.appendChild(input);
+      var remove = document.createElement("button");
+      remove.type = "button";
+      remove.textContent = "Remove";
+      remove.addEventListener("click", function () {
+        values.periods.splice(index, 1);
+        save();
+        draw();
+      });
+      line.appendChild(lab);
+      line.appendChild(remove);
+      wrap.appendChild(line);
+    });
+    var actions = document.createElement("div");
+    actions.className = "row-actions";
+    var add = document.createElement("button");
+    add.type = "button";
+    add.textContent = "Add a period";
+    add.addEventListener("click", function () {
+      values.periods.push(0);
+      save();
+      draw();
+    });
+    actions.appendChild(add);
+    wrap.appendChild(actions);
+    return wrap;
+  }
+
+  function drawForm(tool, values) {
+    var form = document.getElementById("form");
+    form.innerHTML = "";
+    tool.fields.forEach(function (field) {
+      if (field.type === "positions") form.appendChild(positionsEditor(values));
+      else if (field.type === "periods") form.appendChild(periodsEditor(values));
+      else form.appendChild(fieldInput(field, values));
+    });
+  }
+
+  function paint() {
+    var tool = OcoCalc.toolById(current);
+    var out = OcoCalc.run(current, valuesFor(tool));
+    document.getElementById("title").textContent = tool.name;
+    document.getElementById("blurb").textContent = tool.blurb;
+    var verdict = document.getElementById("verdict");
+    verdict.className = "verdict " + (out.status || "watch");
+    document.getElementById("zone").textContent = out.zone || "";
+    document.getElementById("sentence").textContent = out.verdict || "";
+    document.getElementById("figure").textContent = out.figure || "";
+    document.getElementById("figure-label").textContent = out.figureLabel || "";
+    var err = document.getElementById("error");
+    err.hidden = !out.error;
+    err.textContent = out.error || "";
+    document.getElementById("use").textContent = out.use || "";
+    document.getElementById("read").textContent = out.read || "";
+    renderMetrics(out.metrics || []);
+    renderChecks(out.checks || []);
+    renderTable(out.table);
+    renderChart(out.chart, out.formula);
+    var cards = tool.fields.some(function (f) { return f.type === "positions"; });
+    document.getElementById("work-grid").classList.toggle("cards", cards);
+    document.querySelectorAll("#nav button").forEach(function (b) {
+      if (b.dataset.id === current) b.setAttribute("aria-current", "true");
+      else b.removeAttribute("aria-current");
+    });
+    picker.value = current;
+    document.title = tool.name + " — On-Chain Operator Calculator";
+  }
+
+  function renderMetrics(items) {
+    var box = document.getElementById("metrics");
+    box.innerHTML = "";
+    items.forEach(function (item) {
+      var d = document.createElement("div");
+      var b = document.createElement("b");
+      b.textContent = item.value;
+      var s = document.createElement("span");
+      s.textContent = item.label;
+      d.appendChild(b);
+      d.appendChild(s);
+      box.appendChild(d);
+    });
+  }
+
+  function renderChecks(checks) {
+    var list = document.getElementById("checks");
+    list.innerHTML = "";
+    list.hidden = checks.length === 0;
+    checks.forEach(function (c) {
+      var li = document.createElement("li");
+      li.className = c.ok ? "ok" : "no";
+      li.textContent = (c.ok ? "Passes. " : "Fails. ") + c.label;
+      list.appendChild(li);
+    });
+  }
+
+  function renderTable(table) {
+    var host = document.getElementById("table");
+    host.innerHTML = "";
+    if (!table) return;
+    var el = document.createElement("table");
+    var head = document.createElement("tr");
+    table.headers.forEach(function (h) {
+      var th = document.createElement("th");
+      th.textContent = h;
+      head.appendChild(th);
+    });
+    el.appendChild(head);
+    table.rows.forEach(function (row) {
+      var tr = document.createElement("tr");
+      row.forEach(function (cell) {
+        var td = document.createElement("td");
+        td.textContent = cell;
+        tr.appendChild(td);
+      });
+      el.appendChild(tr);
+    });
+    host.appendChild(el);
+  }
+
+  var tones = { good: "#0c8f74", watch: "#3d6fbf", bad: "#9f1239", neutral: "#14202b" };
+
+  function renderChart(chart, formula) {
+    var host = document.getElementById("chart");
+    host.innerHTML = "";
+    if (!chart) {
+      host.hidden = true;
+      return;
+    }
+    host.hidden = false;
+    var svg = chart.kind === "bar" ? barChart(chart) : lineChart(chart);
+    host.appendChild(svg);
+    if (chart.yLabel || chart.xLabel) {
+      var axes = document.createElement("p");
+      axes.className = "axes";
+      axes.textContent = chart.xLabel ? chart.yLabel + " against " + chart.xLabel : chart.yLabel;
+      host.appendChild(axes);
+    }
+    var legendItems = [];
+    if (chart.kind === "line" && chart.series) {
+      chart.series.forEach(function (s, i) {
+        if (!s.points || !s.points.length) return;
+        legendItems.push({ name: s.name, dashed: !!(s.dashed || i > 0), tone: i === 0 ? "neutral" : "watch" });
+      });
+    }
+    (chart.guides || []).forEach(function (g) {
+      if (g.label) legendItems.push({ name: g.label, dashed: true, tone: g.tone || "neutral" });
+    });
+    if (legendItems.length > 1) {
+      var legend = document.createElement("div");
+      legend.className = "legend";
+      legendItems.forEach(function (item) {
+        var span = document.createElement("span");
+        var swatch = document.createElement("i");
+        if (item.dashed) swatch.className = "dash";
+        var swatchColor = washes[item.tone] || tones[item.tone] || "#07111c";
+        swatch.style.borderBottom = "3px " + (item.dashed ? "dashed " : "solid ") + swatchColor;
+        span.appendChild(swatch);
+        span.appendChild(document.createTextNode(item.name));
+        legend.appendChild(span);
+      });
+      host.appendChild(legend);
+    }
+    if (formula) {
+      var f = document.createElement("p");
+      f.className = "formula";
+      f.textContent = formula;
+      host.appendChild(f);
+    }
+  }
+
+  function nice(n) {
+    var a = Math.abs(n);
+    if (a >= 1000) return (n < 0 ? "−" : "") + "$" + Math.round(a).toLocaleString("en-US");
+    if (a >= 100) return (n < 0 ? "−" : "") + Math.round(n).toString();
+    return (n < 0 ? "−" : "") + (Math.round(n * 10) / 10).toString();
+  }
+
+  function formatTick(n, unit) {
+    if (unit === "percent") return nice(n) + "%";
+    if (unit === "money") return nice(n);
+    if (unit === "multiple") return nice(n) + "×";
+    if (unit === "share") return Math.round(n * 100) + "%";
+    return nice(n);
+  }
+
+  var washes = { good: "#0c8f74", watch: "#3d6fbf", bad: "#9f1239" };
+
+  function tickStep(span) {
+    var rough = Math.abs(span) / 4 || 1;
+    var pow = Math.pow(10, Math.floor(Math.log10(rough)));
+    var err = rough / pow;
+    var nice = err >= 7 ? 10 : err >= 3.5 ? 5 : err >= 1.5 ? 2 : 1;
+    return nice * pow;
+  }
+
+  function lineChart(chart) {
+    var w = 760, h = 320, l = 78, r = 18, t = 22, b = 32;
+    var series = (chart.series || []).filter(function (s) { return s.points && s.points.length; });
+    var xs = [], ys = [];
+    series.forEach(function (s) {
+      s.points.forEach(function (p) {
+        if (p.y == null || !isFinite(p.y) || !isFinite(p.x)) return;
+        xs.push(p.x); ys.push(p.y);
+      });
+    });
+    (chart.guides || []).forEach(function (g) {
+      if (g.y != null && isFinite(g.y)) ys.push(g.y);
+    });
+    if (!xs.length) xs = [0, 1];
+    if (!ys.length) ys = [0, 1];
+    var x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs);
+    var y0 = Math.min.apply(null, ys), y1 = Math.max.apply(null, ys);
+    if (x0 === x1) { x0 -= 1; x1 += 1; }
+    if (y0 === y1) { y0 -= 1; y1 += 1; }
+    var yPad = (y1 - y0) * 0.08;
+    y0 -= yPad; y1 += yPad;
+    var yStep = tickStep(y1 - y0);
+    var snapped0 = Math.floor(y0 / yStep) * yStep;
+    var snapped1 = Math.ceil(y1 / yStep) * yStep;
+    if (snapped1 > snapped0 && (snapped1 - snapped0) <= (y1 - y0) * 1.45) {
+      y0 = snapped0;
+      y1 = snapped1;
+    }
+    if (y0 === y1) y1 = y0 + yStep;
+    function X(x) { return l + (x - x0) / (x1 - x0) * (w - l - r); }
+    function Y(y) { return t + (y1 - y) / (y1 - y0) * (h - t - b); }
+    function clampY(y) { return Math.min(y1, Math.max(y0, y)); }
+    var svg = svgEl("svg", { viewBox: "0 0 " + w + " " + h, role: "img", "aria-label": (chart.yLabel || "Value") + " against " + (chart.xLabel || "input") });
+    (chart.bands || []).forEach(function (band) {
+      var yA = band.from == null ? y0 : clampY(band.from);
+      var yB = band.to == null ? y1 : clampY(band.to);
+      var top = Math.min(Y(yA), Y(yB));
+      var height = Math.abs(Y(yA) - Y(yB));
+      if (height < 1) return;
+      svg.appendChild(svgEl("rect", {
+        x: l, y: top, width: w - l - r, height: height,
+        fill: washes[band.tone] || "#94a3b8", opacity: "0.12"
+      }));
+    });
+    var tick = y0;
+    var lastTickY = -999;
+    for (var n = 0; n < 8 && tick <= y1 + yStep * 0.01; n++, tick += yStep) {
+      if (Math.abs(Y(tick) - lastTickY) < 16) continue;
+      lastTickY = Y(tick);
+      svg.appendChild(svgEl("line", { x1: l, x2: w - r, y1: Y(tick), y2: Y(tick), stroke: "#d3dde6" }));
+      svg.appendChild(text(l - 8, Y(tick) + 4, formatTick(tick, chart.yUnit), "end"));
+    }
+    if (y0 < 0 && y1 > 0) {
+      svg.appendChild(svgEl("line", { x1: l, x2: w - r, y1: Y(0), y2: Y(0), stroke: "#14202b", "stroke-width": "1.25" }));
+    }
+    svg.appendChild(text(l, h - 8, formatTick(x0, chart.xUnit), "start"));
+    svg.appendChild(text(w - r, h - 8, formatTick(x1, chart.xUnit), "end"));
+    if (series[0]) {
+      var base = (y0 < 0 && y1 > 0) ? 0 : y0;
+      var area = "";
+      var first = null, last = null;
+      series[0].points.forEach(function (p) {
+        if (p.y == null || !isFinite(p.y)) return;
+        area += (area ? "L" : "M") + X(p.x).toFixed(1) + " " + Y(p.y).toFixed(1) + " ";
+        if (!first) first = p;
+        last = p;
+      });
+      if (first && last) {
+        area += "L" + X(last.x).toFixed(1) + " " + Y(base).toFixed(1) + " L" + X(first.x).toFixed(1) + " " + Y(base).toFixed(1) + " Z";
+        svg.appendChild(svgEl("path", { d: area, fill: "#07111c", opacity: "0.08" }));
+      }
+    }
+    (chart.guides || []).forEach(function (g) {
+      var color = tones[g.tone] || "#3e4c59";
+      if (g.y != null && g.y >= y0 && g.y <= y1) {
+        svg.appendChild(svgEl("line", { x1: l, x2: w - r, y1: Y(g.y), y2: Y(g.y), stroke: color, "stroke-dasharray": "5 4", "stroke-width": "1.25" }));
+      }
+      if (g.x != null && g.x >= x0 && g.x <= x1) {
+        svg.appendChild(svgEl("line", { y1: t, y2: h - b, x1: X(g.x), x2: X(g.x), stroke: color, "stroke-dasharray": "5 4" }));
+      }
+    });
+    series.forEach(function (s, idx) {
+      var d = "";
+      s.points.forEach(function (p) {
+        if (p.y == null || !isFinite(p.y)) return;
+        d += (d ? "L" : "M") + X(p.x).toFixed(1) + " " + Y(p.y).toFixed(1);
+      });
+      var color = idx === 0 ? "#07111c" : "#3d6fbf";
+      var attrs = { d: d, fill: "none", stroke: color, "stroke-width": idx === 0 ? "2.4" : "1.75", "stroke-linejoin": "round", "stroke-linecap": "round" };
+      if (s.dashed || idx > 0) attrs["stroke-dasharray"] = "6 4";
+      svg.appendChild(svgEl("path", attrs));
+    });
+    if (chart.marker && isFinite(chart.marker.x) && isFinite(chart.marker.y)) {
+      var mx = X(Math.min(x1, Math.max(x0, chart.marker.x)));
+      var my = Y(Math.min(y1, Math.max(y0, chart.marker.y)));
+      svg.appendChild(svgEl("line", { x1: mx, x2: mx, y1: my, y2: h - b, stroke: "#0c8f74", "stroke-width": "1.25" }));
+      svg.appendChild(svgEl("circle", { cx: mx, cy: my, r: 7, fill: "#fff" }));
+      svg.appendChild(svgEl("circle", { cx: mx, cy: my, r: 4.5, fill: "#0c8f74" }));
+      if (chart.marker.label) {
+        var label = chart.marker.label;
+        var tw = Math.max(36, label.length * 6.6 + 12);
+        var lx = mx > (l + (w - r)) / 2 ? mx - tw - 12 : mx + 12;
+        lx = Math.min(w - r - tw, Math.max(l, lx));
+        var ly = my;
+        svg.appendChild(svgEl("rect", { x: lx, y: ly - 12, width: tw, height: 18, rx: "4", fill: "#fff", stroke: "#0c8f74" }));
+        svg.appendChild(text(lx + tw / 2, ly + 1, label, "middle", "#064e3b"));
+      }
+    }
+    return svg;
+  }
+
+  function barChart(chart) {
+    var bars = chart.bars || [];
+    var w = 760, h = 320, l = 78, r = 16, t = 26, btm = 40;
+    var vals = bars.map(function (bar) { return bar.value; }).concat([0]);
+    var y0 = Math.min.apply(null, vals);
+    var y1 = Math.max.apply(null, vals);
+    if (y0 === y1) { y0 -= 1; y1 += 1; }
+    var pad = (y1 - y0) * 0.16;
+    y0 -= pad; y1 += pad;
+    function Y(y) { return t + (y1 - y) / (y1 - y0) * (h - t - btm); }
+    var svg = svgEl("svg", { viewBox: "0 0 " + w + " " + h, role: "img", "aria-label": chart.yLabel || "Comparison" });
+    var step = tickStep(y1 - y0);
+    var tick = Math.ceil(y0 / step) * step;
+    for (var n = 0; n < 8 && tick <= y1 + step * 0.01; n++, tick += step) {
+      if (tick < y0) continue;
+      svg.appendChild(svgEl("line", { x1: l, x2: w - r, y1: Y(tick), y2: Y(tick), stroke: tick === 0 ? "#14202b" : "#d3dde6", "stroke-width": tick === 0 ? "1.25" : "1" }));
+      svg.appendChild(text(l - 8, Y(tick) + 4, formatTick(tick, chart.yLabel === "Dollars" || chart.yLabel === "Dollars a year" ? "money" : "percent"), "end"));
+    }
+    var inner = w - l - r;
+    var gap = 16;
+    var bw = Math.max(18, (inner - gap * (bars.length + 1)) / Math.max(1, bars.length));
+    bars.forEach(function (bar, i) {
+      var x = l + gap + i * (bw + gap);
+      var y = Y(Math.max(bar.value, 0));
+      var bh = Math.max(2, Math.abs(Y(bar.value) - Y(0)));
+      svg.appendChild(svgEl("rect", { x: x, y: y, width: bw, height: bh, rx: "3", fill: tones[bar.tone] || tones.neutral }));
+      svg.appendChild(text(x + bw / 2, h - 14, bar.label, "middle"));
+    });
+    return svg;
+  }
+
+  function svgEl(name, attrs) {
+    var el = document.createElementNS("http://www.w3.org/2000/svg", name);
+    Object.keys(attrs).forEach(function (k) { el.setAttribute(k, attrs[k]); });
+    return el;
+  }
+  function text(x, y, value, anchor, fill) {
+    var el = svgEl("text", { x: x, y: y, "text-anchor": anchor || "start", fill: fill || "#3e4c59", "font-size": "12", "font-family": "Avenir Next, Segoe UI, sans-serif" });
+    el.textContent = value;
+    return el;
+  }
+
+  function draw() {
+    if (location.hash !== "#" + current) history.replaceState(null, "", "#" + current);
+    var tool = OcoCalc.toolById(current);
+    drawForm(tool, valuesFor(tool));
+    paint();
+  }
+  draw();
+})();
+</script>
+</body>
+</html>

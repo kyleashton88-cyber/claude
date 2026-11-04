@@ -1,0 +1,49 @@
+{
+  "type": "cutaway",
+  "chapter": "Pools",
+  "label": "On screen: pool tools",
+  "url": "On-Chain-Operator-Calculator.html",
+  "shots": [
+    {
+      "src": "assets/demos/calculator-pools/01.png",
+      "caption": "Open impermanent loss",
+      "box": [
+        0.1575,
+        0.2863,
+        0.7125,
+        0.1252
+      ]
+    },
+    {
+      "src": "assets/demos/calculator-pools/02.png",
+      "caption": "Open fee break-even",
+      "box": [
+        0.1575,
+        0.2863,
+        0.7125,
+        0.1252
+      ]
+    },
+    {
+      "src": "assets/demos/calculator-pools/03.png",
+      "caption": "Open concentrated range",
+      "box": [
+        0.1575,
+        0.2863,
+        0.7125,
+        0.1252
+      ]
+    },
+    {
+      "src": "assets/demos/calculator-pools/04.png",
+      "caption": "Open loss versus rebalancing",
+      "box": [
+        0.1575,
+        0.2863,
+        0.7125,
+        0.1252
+      ]
+    }
+  ],
+  "vo": "Open impermanent loss. Then fee break-even. Then concentrated range. Then loss versus rebalancing."
+}

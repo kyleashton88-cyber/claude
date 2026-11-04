@@ -169,3 +169,4 @@ node build_video.js lessons              # all lessons (several hours of renderi
 | 14.4 | Operator capstone and certification | 10 | 2.4 min | `video-scripts/lessons/lesson-14-4.json` | ✓ |
 | 14.5 | Building your own tools: reading contracts, data and simple scripts | 10 | 3.1 min | `video-scripts/lessons/lesson-14-5.json` | ✓ |
 | 14.6 | Searchers, keepers and arbitrage bots: how they work | 10 | 3.2 min | `video-scripts/lessons/lesson-14-6.json` | ✓ |
+| — | How to use the calculator (all 20 tools) | 26 | 11.4 min | `video-scripts/gold/calculator-guide.json` | ✓ |
