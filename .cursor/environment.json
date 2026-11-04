@@ -1,0 +1,10 @@
+{
+  "name": "Grid Bot Builder + DeFi Program",
+  "install": "./.cursor/install.sh",
+  "terminals": [
+    {
+      "name": "course-hub",
+      "command": "cd programs/defi-program && python3 -m http.server 8000"
+    }
+  ]
+}
