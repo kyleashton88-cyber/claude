@@ -1,0 +1,241 @@
+{
+ "id": "bp-06-entry-and-exit",
+ "title": "Entry and exit rules",
+ "course": "Grid Bot Blueprint",
+ "palette": "navy-cyan",
+ "music": "course/music/komiku-ambiant-obscur-technology.ogg",
+ "next": "Bybit spot setup on paper",
+ "wpm_assumption": 143,
+ "word_count": 2388,
+ "estimated_minutes": 16.7,
+ "code_draws_visuals": false,
+ "overlays_only": [
+  "captions",
+  "lower thirds",
+  "intro title text",
+  "disclaimer line",
+  "Ken Burns"
+ ],
+ "beats": [
+  {
+   "n": 1,
+   "chapter": "Hook",
+   "role": "hook",
+   "vo": "Entry without an exit is a page that cannot finish. The exit is the stop sentence you can read when the path leaves. It is written before the entry is copied anywhere. On the diagram for this beat, look for two columns, Exit filled, Entry still empty. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Draw the two columns and fill Exit first, with Example on the page. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. This is a writing order, not a signal to enter. Say the opening line once more, and point at the part that belongs to Hook. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Entry without an exit is a page that cannot finish. The exit is the stop sentence you can read when the path.",
+   "concept": "Entry without an exit is a page that cannot finish.",
+   "image": "course/images/bp-06-entry-and-exit/001.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 1, role hook. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Hook. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Entry without an exit is a page that cannot finish; the problem visible in the first glance, before any logo. The picture must be understandable with the sound off. Teaching line: Entry without an exit is a page that cannot finish. Labels, spelled exactly: Entry. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 2,
+   "chapter": "Disclaimer",
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot.",
+   "cap": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of.",
+   "concept": "Education only, not financial advice.",
+   "image": "course/images/bp-06-entry-and-exit/002.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 2, role legal. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Disclaimer. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Education only, not financial advice. The picture must be understandable with the sound off. Teaching line: Education only, not financial advice. Labels, spelled exactly: Education. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 3,
+   "chapter": "Title card",
+   "role": "intro",
+   "vo": "This is the Grid Bot Blueprint. The lesson is Entry and exit rules. Navy and cyan on the frame. Education only. You will write on paper before any screen.",
+   "cap": "This is the Grid Bot Blueprint. The lesson is Entry and exit rules. Navy and cyan on the frame. Education.",
+   "concept": "Entry and exit rules",
+   "image": "course/images/bp-06-entry-and-exit/003.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 3, role intro. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Title card. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Entry and exit rules. The picture must be understandable with the sound off. Teaching line: Entry and exit rules Labels, spelled exactly: Entry. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 4,
+   "chapter": "Two columns",
+   "role": "body",
+   "vo": "The page has two columns: what must be true before you would start, and what finishes the idea. Both columns are sentences. A number without a sentence is not a rule. On the diagram for this beat, look for two headed columns with one sentence in each. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Title them Before and Finish. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Neither column is an order. Say the opening line once more, and point at the part that belongs to Two columns. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "The page has two columns: what must be true before you would start, and what finishes the idea. Both columns.",
+   "concept": "The page has two columns: what must be true before you would start, and what finishes the idea.",
+   "image": "course/images/bp-06-entry-and-exit/004.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 4, role body. A step-by-step illustrated form, generic and unbranded, with one field highlighted in cyan. Chapter context: Two columns. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: The page has two columns: what must be true before you would start, and what finishes the idea. The picture must be understandable with the sound off. Teaching line: The page has two columns: what must be true before you would start, and what finishes the idea. Labels, spelled exactly: The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 5,
+   "chapter": "Stop first",
+   "role": "body",
+   "vo": "Write the finish column first. If you write the start column first, the finish column shrinks to fit a hope. The other order keeps the finish honest. On the diagram for this beat, look for a numbered 1 on the finish column and a 2 on the start column. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Put the numbers 1 and 2 on your page in that order. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Hope is not a column. Say the opening line once more, and point at the part that belongs to Stop first. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Write the finish column first. If you write the start column first, the finish column shrinks to fit a hope.",
+   "concept": "Write the finish column first.",
+   "image": "course/images/bp-06-entry-and-exit/005.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 5, role body. One large diagram centered on an off-white panel, with thin cyan callout lines. Chapter context: Stop first. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Write the finish column first. The picture must be understandable with the sound off. Teaching line: Write the finish column first. Labels, spelled exactly: Write. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 6,
+   "chapter": "A finish sentence",
+   "role": "demo",
+   "vo": "A finish sentence names a path: price leaves the band and does not return on the next check. You can use other words. You cannot leave the sentence blank. The lesson does not give you the price. On the diagram for this beat, look for a path leaving a band, with a blank price tag and a full sentence. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write a finish sentence with no price in it, then add Example. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Adding a live price would be a different assignment. Say the opening line once more, and point at the part that belongs to A finish sentence. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "A finish sentence names a path: price leaves the band and does not return on the next check. You can use.",
+   "concept": "A finish sentence names a path: price leaves the band and does not return on the next check.",
+   "image": "course/images/bp-06-entry-and-exit/006.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 6, role demo. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: A finish sentence. Show a price band drawn as two horizontal cyan lines labelled Upper and Lower, with the word Range on a small tag; a dashed stop line below the band, and a price path that leaves the band and does not return; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: A finish sentence names a path: price leaves the band and does not return on the next check. Labels, spelled exactly: Example. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 7,
+   "chapter": "A before sentence",
+   "role": "body",
+   "vo": "A before sentence names the sort: the path you drew is a range, the gap clears a cost you looked up, and the page has both counts. If one of those is missing, the before sentence is false and you do not copy the page. On the diagram for this beat, look for three checks feeding the before column. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Turn the three checks into one sentence. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. The sentence is a gate on paper, not a button. Say the opening line once more, and point at the part that belongs to A before sentence. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "A before sentence names the sort: the path you drew is a range, the gap clears a cost you looked up, and the.",
+   "concept": "A before sentence names the sort: the path you drew is a range, the gap clears a cost you looked up, and the page has both counts.",
+   "image": "course/images/bp-06-entry-and-exit/007.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 7, role body. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: A before sentence. Show a price band drawn as two horizontal cyan lines labelled Upper and Lower, with the word Range on a small tag; nineteen even gaps between twenty horizontal lines, the gaps marked, the lines only the edges of the gaps, a small note that counting lines is the miss; one gap drawn wider than a two-way fee bar, and a second gap drawn thinner than that bar and crossed out. The picture must be understandable with the sound off. Teaching line: A before sentence names the sort: the path you drew is a range, the gap clears a cost you looked up, and the page has both counts. Labels, spelled exactly: Example. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 8,
+   "chapter": "Worked columns",
+   "role": "demo",
+   "vo": "Read a worked pair of sentences aloud and point at the drawing that matches each one. If you cannot point, the sentence is about a feeling, and you rewrite it until it points. On the diagram for this beat, look for two sentences with callout lines touching a band and an exit path. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Rewrite one vague sentence until your finger has a place to land. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Vague sentences are how a later form gets a blank. Say the opening line once more, and point at the part that belongs to Worked columns. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Read a worked pair of sentences aloud and point at the drawing that matches each one. If you cannot point.",
+   "concept": "Read a worked pair of sentences aloud and point at the drawing that matches each one.",
+   "image": "course/images/bp-06-entry-and-exit/008.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 8, role demo. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Worked columns. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Read a worked pair of sentences aloud and point at the drawing that matches each one; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Read a worked pair of sentences aloud and point at the drawing that matches each one. Labels, spelled exactly: Read. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 9,
+   "chapter": "What hope is not",
+   "role": "body",
+   "vo": "Hope is not an entry rule. A wish that the weave continues is not a finish rule. Both of those fail the pointing test. On the diagram for this beat, look for a thought bubble crossed out beside a sentence that touches the drawing. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Cross out one hopeful line if you wrote one. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. The course can describe hope. It cannot use it as a rule. Say the opening line once more, and point at the part that belongs to What hope is not. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Hope is not an entry rule. A wish that the weave continues is not a finish rule. Both of those fail the.",
+   "concept": "Hope is not an entry rule. A wish that the weave continues is not a finish rule.",
+   "image": "course/images/bp-06-entry-and-exit/009.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 9, role body. A step-by-step illustrated form, generic and unbranded, with one field highlighted in cyan. Chapter context: What hope is not. Show a cyan price path weaving through six horizontal levels, inside a band on the left and stepping out through the lower line on the right. The picture must be understandable with the sound off. Teaching line: Hope is not an entry rule. A wish that the weave continues is not a finish rule. Labels, spelled exactly: Hope. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 10,
+   "chapter": "Invalidation",
+   "role": "body",
+   "vo": "Invalidation is the name for the finish path. When that path is on the sketch, the idea you wrote is finished, whether or not you feel finished. On the diagram for this beat, look for the word Invalidation tagged to the exiting path. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Add the word under your finish sentence. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. The word is a label for the path, not a forecast that the path will print. Say the opening line once more, and point at the part that belongs to Invalidation. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Invalidation is the name for the finish path. When that path is on the sketch, the idea you wrote is.",
+   "concept": "Invalidation is the name for the finish path.",
+   "image": "course/images/bp-06-entry-and-exit/010.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 10, role body. One large diagram centered on an off-white panel, with thin cyan callout lines. Chapter context: Invalidation. Show a dashed stop line below the band, and a price path that leaves the band and does not return. The picture must be understandable with the sound off. Teaching line: Invalidation is the name for the finish path. Labels, spelled exactly: Invalidation. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 11,
+   "chapter": "Common miss",
+   "role": "body",
+   "vo": "The common miss is a stop that cites a feeling: I will know. A later you, looking at a screen, cannot see that sentence. Write a path instead. On the diagram for this beat, look for the words I will know crossed out, replaced by a path sentence. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Replace one feeling sentence on your page. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Knowing is not a rule you can audit. Say the opening line once more, and point at the part that belongs to Common miss. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "The common miss is a stop that cites a feeling: I will know. A later you, looking at a screen, cannot see.",
+   "concept": "The common miss is a stop that cites a feeling: I will know.",
+   "image": "course/images/bp-06-entry-and-exit/011.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 11, role body. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Common miss. Show a dashed stop line below the band, and a price path that leaves the band and does not return; one gap drawn wider than a two-way fee bar, and a second gap drawn thinner than that bar and crossed out; a two-panel miss: a blank stop on the left, a clean written stop on the right. The picture must be understandable with the sound off. Teaching line: The common miss is a stop that cites a feeling: I will know. Labels, spelled exactly: The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 12,
+   "chapter": "Copy order",
+   "role": "body",
+   "vo": "If a paper form comes later, you copy the finish sentence before the start sentence. The form is still a copy. This lesson still sends nothing. On the diagram for this beat, look for a copy arrow that hits the finish field first. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Number the copy order in the margin. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A form that asks for size before the stop is a form you pause. Say the opening line once more, and point at the part that belongs to Copy order. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "If a paper form comes later, you copy the finish sentence before the start sentence. The form is still a.",
+   "concept": "If a paper form comes later, you copy the finish sentence before the start sentence.",
+   "image": "course/images/bp-06-entry-and-exit/012.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 12, role body. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Copy order. Show an open notebook page with a short checklist, one row highlighted, next to the diagram it describes. The picture must be understandable with the sound off. Teaching line: If a paper form comes later, you copy the finish sentence before the start sentence. Use no words if a shape is clearer. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 13,
+   "chapter": "No size yet",
+   "role": "body",
+   "vo": "Size is not this lesson. A size written here would pretend the rules are done. The rules are the sentences. On the diagram for this beat, look for a size box left blank on purpose. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write Later, not this page, in the size box. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Scaling is a later lesson, and it still will not assign you a size. Say the opening line once more, and point at the part that belongs to No size yet. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Size is not this lesson. A size written here would pretend the rules are done. The rules are the sentences.",
+   "concept": "Size is not this lesson.",
+   "image": "course/images/bp-06-entry-and-exit/013.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 13, role body. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: No size yet. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Size is not this lesson. The picture must be understandable with the sound off. Teaching line: Size is not this lesson. Labels, spelled exactly: Size. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 14,
+   "chapter": "The action",
+   "role": "action",
+   "vo": "Write both sentences today, finish first, and read them to the drawing. Keep them with the spacing page so the percent and the sentences sit together. On the diagram for this beat, look for two pages clipped together. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Clip them, or write the link if you use one notebook. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Do not test the sentences on a live book. Say the opening line once more, and point at the part that belongs to The action. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Write both sentences today, finish first, and read them to the drawing. Keep them with the spacing page so.",
+   "concept": "Write both sentences today, finish first, and read them to the drawing.",
+   "image": "course/images/bp-06-entry-and-exit/014.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 14, role action. A step-by-step illustrated form, generic and unbranded, with one field highlighted in cyan. Chapter context: The action. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Write both sentences today, finish first, and read them to the drawing; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Write both sentences today, finish first, and read them to the drawing. Labels, spelled exactly: Write. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 15,
+   "chapter": "Recap",
+   "role": "recap",
+   "vo": "Recap: two columns, finish first, sentences that point, hope crossed out, size left blank. The paper setup lesson is next, and it may only copy pages that have these sentences. On the diagram for this beat, look for five recap rows. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Say them in order. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A page that fails this recap does not go to the next lesson's form. Say the opening line once more, and point at the part that belongs to Recap. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Recap: two columns, finish first, sentences that point, hope crossed out, size left blank. The paper setup.",
+   "concept": "Recap: two columns, finish first, sentences that point, hope crossed out, size left blank.",
+   "image": "course/images/bp-06-entry-and-exit/015.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 15, role recap. One large diagram centered on an off-white panel, with thin cyan callout lines. Chapter context: Recap. Show two columns labelled Isolated and Cross: the first box holds only its own inventory, the second box has a line reaching into a neighbouring box; a price path leaving the band; three short recap rows, each row a tiny diagram plus a two-word label. The picture must be understandable with the sound off. Teaching line: Recap: two columns, finish first, sentences that point, hope crossed out, size left blank. Labels, spelled exactly: Recap. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 16,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Two columns. Cover the notes and say this from memory: The page has two columns: what must be true before you would start, and what finishes the idea. Then uncover the diagram and check that you can still see two headed columns with one sentence in each. Title them Before and Finish. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Two columns. Cover the notes and say this from memory: The page has two columns: what.",
+   "concept": "Practice: The page has two columns: what must be true before you would start, and what finishes the idea.",
+   "image": "course/images/bp-06-entry-and-exit/016.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 16, role demo. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: The page has two columns: what must be true before you would start, and what finishes the idea; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: The page has two columns: what must be true before you would start, and what finishes the idea. Labels, spelled exactly: Practice, The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 17,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Stop first. Cover the notes and say this from memory: Write the finish column first. Then uncover the diagram and check that you can still see a numbered 1 on the finish column and a 2 on the start column. Put the numbers 1 and 2 on your page in that order. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Stop first. Cover the notes and say this from memory: Write the finish column first.",
+   "concept": "Practice: Write the finish column first.",
+   "image": "course/images/bp-06-entry-and-exit/017.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 17, role demo. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: Write the finish column first; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: Write the finish column first. Labels, spelled exactly: Practice, Write. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 18,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside A finish sentence. Cover the notes and say this from memory: A finish sentence names a path: price leaves the band and does not return on the next check. Then uncover the diagram and check that you can still see a path leaving a band, with a blank price tag and a full sentence. Write a finish sentence with no price in it, then add Example. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside A finish sentence. Cover the notes and say this from memory: A finish sentence names.",
+   "concept": "Practice: A finish sentence names a path: price leaves the band and does not return on the next check.",
+   "image": "course/images/bp-06-entry-and-exit/018.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 18, role demo. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Your turn. Show a price band drawn as two horizontal cyan lines labelled Upper and Lower, with the word Range on a small tag; a dashed stop line below the band, and a price path that leaves the band and does not return; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: A finish sentence names a path: price leaves the band and does not return on the next check. Labels, spelled exactly: Example, Practice. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 19,
+   "chapter": "Audit",
+   "role": "demo",
+   "vo": "Audit one page by asking: can a classmate point at the finish path from the sentence alone? If they cannot, the sentence is not done. Rewrite it and ask again. On the diagram for this beat, look for a sentence and a finger-line to a path, with a second failed line faded. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Do the audit once on your own page. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. The classmate can be you, ten minutes later. Say the opening line once more, and point at the part that belongs to Audit. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Audit one page by asking: can a classmate point at the finish path from the sentence alone? If they cannot.",
+   "concept": "Audit one page by asking: can a classmate point at the finish path from the sentence alone?",
+   "image": "course/images/bp-06-entry-and-exit/019.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 19, role demo. A step-by-step illustrated form, generic and unbranded, with one field highlighted in cyan. Chapter context: Audit. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Audit one page by asking: can a classmate point at the finish path from the sentence alone?; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Audit one page by asking: can a classmate point at the finish path from the sentence alone? Labels, spelled exactly: Audit. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 20,
+   "chapter": "Outro",
+   "role": "outro",
+   "vo": "Next lesson: Bybit spot setup on paper. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
+   "cap": "Next lesson: Bybit spot setup on paper. Bring the page you just wrote. Leave every example marked Example. No.",
+   "concept": "Next lesson: Bybit spot setup on paper. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
+   "image": "course/images/bp-06-entry-and-exit/020.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Entry and exit rules', beat 20, role outro. One large diagram centered on an off-white panel, with thin cyan callout lines. Chapter context: Outro. Show a dashed stop line below the band, and a price path that leaves the band and does not return; an open notebook page with a short checklist, one row highlighted, next to the diagram it describes; a quiet next-step card with a single arrow to a blank next title, no price and no button that buys anything. The picture must be understandable with the sound off. Teaching line: Next lesson: Bybit spot setup on paper. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons. Labels, spelled exactly: Next, Bybit, Bring, Leave. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  }
+ ]
+}
