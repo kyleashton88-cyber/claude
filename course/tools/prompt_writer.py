@@ -56,9 +56,22 @@ HARD_RULES = (
     "If a robot appears, it has straight visor-bar eyes and no smile, matching the passed el-06 shot 28. "
     "A toggle is OFF, knob left and track unlit, unless the label says otherwise. "
     "The picture must match its labels. "
+    "A variant must differ from its sibling on the named axis. "
+    "That difference is stated first, for example 'DIFFERENT FROM the centred sibling: subject at 80% scale, left of centre' "
+    "or 'all except the key element dimmed to 25%'. Do not redraw the sibling. "
     "Image quality must not degrade at any stage: no compression artifacts, no loss of detail, "
     "no colour shift, no softening of labels or text; full resolution preserved from generation "
     "through to the final 1080p video frame."
+)
+
+# Stated first so a variant cannot collapse into a copy of its sibling.
+VARIANTS = (
+    "VARIANT, base: hero centred.",
+    "DIFFERENT FROM the centred sibling: subject at 80% scale, left of centre, with a glow trail to the right.",
+    "DIFFERENT FROM the centred sibling: all except the key element dimmed to 25%.",
+    "DIFFERENT FROM the centred sibling: the key element is a glowing wireframe, not a solid render.",
+    "DIFFERENT FROM the centred sibling: hero at 60% scale with deep fog and bokeh.",
+    "DIFFERENT FROM the centred sibling: a faint empty glass card on the left and the hero card on the right.",
 )
 
 LAYOUTS_TEAL = (
@@ -176,12 +189,13 @@ def write_prompt(concept: str, chapter: str, role: str, beat_n: int, lesson_titl
     label_line = "Labels, spelled exactly: " + ", ".join(labs) + "." if labs else "Use no words if a shape is clearer."
     teal = palette == "teal"
     layout = (LAYOUTS_TEAL if teal else LAYOUTS)[beat_n % 5]
+    variant = VARIANTS[beat_n % len(VARIANTS)]
     scene = _scene(concept, chapter, role)
     if teal:
         scene = scene.replace("cyan", "teal")
     style = STYLE_TEAL if teal else STYLE
     return (
-        f"Lesson '{lesson_title}', beat {beat_n}, role {role}. {layout} {scene} "
+        f"{variant} Lesson '{lesson_title}', beat {beat_n}, role {role}. {layout} {scene} "
         f"The picture must be understandable with the sound off. Teaching line: {concept.strip()} "
         f"{label_line} {style} {HARD_RULES}"
     )

@@ -52,11 +52,17 @@ E5={
 '47':("REMOVE THE [TARGET]","two rule lines, the upper struck through in orange, beside a grouped-coin frame",["NO PRICE TARGET","KEEP GROUP"]),
 '48':("[REBUILT] PLAN","row of budget bar, lone coin and grouped coins, with an empty dashed EXAMPLE slot beneath",["SLOT (EXAMPLE)"]),
 }
-VAR=[('base layout','hero centred'),('shifted slightly left','hero left of centre at 80% scale, glow trail to the right'),('highlighted mint','key element lit in teal, the rest dimmed'),('outline only','key element drawn as glowing teal wireframe'),('60% scale','hero at 60% scale with more atmospheric depth'),('two-step layout','two-panel layout: faint empty glass card left, hero card right'),('mirrored','hero layout mirrored left-right')]
+VAR=[('base layout','VARIANT, base: hero centred.'),
+('shifted slightly left','DIFFERENT FROM the centred sibling: subject at 80% scale, left of centre, with a glow trail to the right.'),
+('highlighted mint','DIFFERENT FROM the centred sibling: all except the key element dimmed to 25%. Only the key element is lit in teal.'),
+('outline only','DIFFERENT FROM the centred sibling: the key element is a glowing teal wireframe, not a solid render.'),
+('60% scale','DIFFERENT FROM the centred sibling: hero at 60% scale with deep fog and bokeh.'),
+('two-step layout','DIFFERENT FROM the centred sibling: a faint empty glass card on the left and the hero card on the right.'),
+('mirrored','DIFFERENT FROM the centred sibling: the hero layout is mirrored left-right.')]
 def hl(h): return re.sub(r'\[(.+?)\]',r'"\1" (teal)',h)
 def shot(head,hero,labels,var):
-    return (f"SHOT: Headline at top-left inside the safe area: {hl(head)}. Hero visual: {hero}. Composition: {var}. "
-            f"Labels (short, crisp): {', '.join(labels)}. Keep it a hero visual with a few labels, not a full infographic page. All text and key content inside the centre 1536x864 safe area.")
+    return (f"{var} SHOT: Headline below the top 80px, inside the safe area: {hl(head)}. Hero visual: {hero}. "
+            f"Labels (short, crisp): {', '.join(labels)}. Keep it a hero visual with a few labels, not a full infographic page. All text and key content inside the centre 1536x864 safe area. Do not redraw the sibling.")
 def varof(s):
     for k,v in VAR:
         if k in s: return v
