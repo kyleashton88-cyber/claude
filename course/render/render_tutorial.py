@@ -54,17 +54,30 @@ def missing_images(script: dict) -> list[str]:
     return bad
 
 
+def _manifest_by_path() -> dict:
+    if not MANIFEST.is_file():
+        return {}
+    data = json.loads(MANIFEST.read_text())
+    images = data.get("images")
+    if isinstance(images, dict):
+        return images
+    if isinstance(images, list):
+        return {entry.get("path"): entry for entry in images if entry.get("path")}
+    return {}
+
+
 def fallback_unpassed(script: dict) -> list[str]:
-    """Fallback stills stay out of masters until Creative Studio sets qa to pass."""
-    images = manifest_images()
+    """Fallback stills stay out of masters until Creative Studio sets status to pass."""
+    by_path = _manifest_by_path()
     blocked = []
     for beat in script["beats"]:
-        entry = images.get(beat["image"])
-        if not entry or entry.get("marker") != "FALLBACK":
+        entry = by_path.get(beat["image"])
+        if not entry:
             continue
-        qa = str(entry.get("qa") or "pending").lower()
-        if qa not in {"pass", "passed"}:
-            blocked.append(beat["image"])
+        status = str(entry.get("status") or entry.get("qa") or "awaiting_qa").lower()
+        if status in {"pass", "passed"}:
+            continue
+        blocked.append(beat["image"])
     return blocked
 
 
