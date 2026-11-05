@@ -1,0 +1,500 @@
+{
+ "id": "lesson-05-4",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-05-4.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 5.3, Oracles, TWAPs & manipulation. Know which price feed secures each position, and how it can fail. Keep that page on the desk. This lesson adds one picture: Read who controls a contract and whether its code can change after you deposit."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 5.4, Smart contracts: state, proxies, admin keys. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You can already split base yield from emissions, and you can name an LST. This module asks what that position sits on: a bridge, a sequencer, an oracle, or a key."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "State: what a contract stores (balances, parameters)."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Verified source: the code published on the explorer matches what's deployed."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Proxy / upgradeable contracts: the address you use stays the same, but the logic behind it can be swapped."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Admin keys and roles: owners, guardians, multisigs; can they pause, upgrade or move funds?"
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Timelocks: a delay between an approved change and it taking effect."
+  },
+  {
+   "n": 10,
+   "role": "demo",
+   "vo": "Work the example on paper. On a block explorer, the vault you use shows \"Proxy\", with the upgrade admin a 3-of-5 multisig behind a 48-hour timelock. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "Work the example on paper. That means no instant rug by one key, and 48 hours to exit if a change you don't like is queued. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "Work the example on paper. A 1-of-1 admin with no timelock is a red flag. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Proxy or not, and who can upgrade. If you cannot write it, the line is open."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Admin roles and multisig threshold known. If you cannot write it, the line is open."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Timelock length known; alert on queued changes for large positions. If you cannot write it, the line is open."
+  },
+  {
+   "n": 16,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Does verified source code mean safe? The answer: No. It means the published code matches the deployed code."
+  },
+  {
+   "n": 17,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Why does a timelock matter to users? The answer: It gives time to see and exit before a change takes effect."
+  },
+  {
+   "n": 18,
+   "role": "quiz",
+   "vo": "Check yourself. 3. Red flag in admin setup? The answer: A single key that can upgrade or move funds instantly."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "By the end, you'll be able to read exactly who controls a contract, and whether its code can genuinely change after you've already deposited into it."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "What state, functions, and events actually are, and why verified source code isn't proof of safety."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "Proxies, in full, and exactly who controls upgrades once you've deposited."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "Admin keys and roles, and the specific powers they can actually hold."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "And a full worked example, reading a real vault's real setup, directly on a block explorer."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "Here's what these three actually mean, underneath the jargon."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "State is simply what a contract stores: balances, parameters, whatever it actually holds and tracks."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "Functions are what change that state, the actual actions the contract allows."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "And events are the log, the on-chain record of what actually happened, when, and to whom."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "Reading a contract, at its most basic level, is reading exactly what state it holds, and what functions can change it."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "Worth being completely direct about verified source code specifically, since it's easy to mistake it for a safety guarantee."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "Verified simply means the code published on the block explorer genuinely matches what's actually deployed on-chain."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "It is not proof the code itself is safe, bug-free, or free of a deliberately malicious function hiding in plain sight."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "Worth naming why events specifically matter to you, beyond just being a technical detail, since they're genuinely useful in practice."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "Events are exactly what lets you, or any monitoring tool, watch a contract's real activity after the fact: every deposit, every withdrawal, every upgrade, all logged, timestamped, and publicly readable, without needing to trust anyone's own summary of what happened."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "Does verified source code actually mean a contract is safe?"
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "It means the published code matches the deployed code, nothing more than that."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "Here's exactly what happens with a proxy contract, the word introduced back in this module's own Mastery Starter, now covered in full."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "You interact with one fixed address, the same one every single time."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "Behind that address, a separate logic contract actually defines what happens when you call it."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "And that logic contract can be swapped out for a different one entirely, by whoever holds the upgrade permission, without your own address ever changing at all."
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "Worth being fair about why proxies exist at all, before treating the pattern itself as inherently suspicious."
+  },
+  {
+   "n": 41,
+   "role": "body",
+   "vo": "They let a team genuinely fix a real bug, or add a real improvement, without forcing every single user to manually migrate to an entirely new contract address."
+  },
+  {
+   "n": 42,
+   "role": "body",
+   "vo": "The actual question was never whether a contract is a proxy; it's specifically who controls that proxy's upgrade, and how much warning you'd actually get."
+  },
+  {
+   "n": 43,
+   "role": "body",
+   "vo": "Worth being completely precise about the actual consequence of this, since it's easy to gloss over."
+  },
+  {
+   "n": 44,
+   "role": "body",
+   "vo": "Whoever controls a proxy's upgrade permission genuinely controls the rules your deposited funds actually operate under, at any future point they choose to exercise it, entirely independent of whatever the contract's rules happened to say on the day you originally deposited."
+  },
+  {
+   "n": 45,
+   "role": "body",
+   "vo": "Here's what to actually check about the specific admin roles behind any contract you use."
+  },
+  {
+   "n": 46,
+   "role": "body",
+   "vo": "Owners typically hold the broadest powers, often including the upgrade permission itself."
+  },
+  {
+   "n": 47,
+   "role": "body",
+   "vo": "Guardians usually hold narrower, specifically emergency powers, like pausing the contract during an active incident."
+  },
+  {
+   "n": 48,
+   "role": "body",
+   "vo": "And whether any of these roles sits behind a multisig, genuinely requiring multiple independent people to agree, or behind a single key alone, changes the real risk enormously."
+  },
+  {
+   "n": 49,
+   "role": "body",
+   "vo": "Here's that exact difference, made concrete, between the two ends of the admin-setup spectrum."
+  },
+  {
+   "n": 50,
+   "role": "body",
+   "vo": "A well-structured multisig, needing several independent signers to agree, means no single compromised or malicious key can move funds, upgrade the contract, or pause it alone."
+  },
+  {
+   "n": 51,
+   "role": "body",
+   "vo": "A single key holding those same powers means exactly one compromise, one mistake, or one bad actor is all it actually takes."
+  },
+  {
+   "n": 52,
+   "role": "body",
+   "vo": "Here's exactly how to find all of this yourself, on a real block explorer, completing the first safe step this module's own Mastery Starter set up for you."
+  },
+  {
+   "n": 53,
+   "role": "body",
+   "vo": "Open the contract's page directly, and check its Contract tab for a label reading Proxy, or similar."
+  },
+  {
+   "n": 54,
+   "role": "body",
+   "vo": "Find the actual admin address it names, and look up what that specific address is, a multisig, or a single wallet."
+  },
+  {
+   "n": 55,
+   "role": "body",
+   "vo": "And check that address's own transaction history for anything resembling a timelock delay."
+  },
+  {
+   "n": 56,
+   "role": "body",
+   "vo": "What's the actual red flag to look for in an admin setup?"
+  },
+  {
+   "n": 57,
+   "role": "body",
+   "vo": "The answer: a single key that can upgrade the contract, or move funds, instantly, with nothing else required."
+  },
+  {
+   "n": 58,
+   "role": "body",
+   "vo": "Here's exactly what you'd find, reading a real vault's real setup, directly on a block explorer, exactly as the source material describes it."
+  },
+  {
+   "n": 59,
+   "role": "body",
+   "vo": "The contract itself shows, explicitly, as a proxy."
+  },
+  {
+   "n": 60,
+   "role": "body",
+   "vo": "Its upgrade admin is a three-of-five multisig, meaning three of five independent signers genuinely have to agree."
+  },
+  {
+   "n": 61,
+   "role": "body",
+   "vo": "And that multisig sits behind a forty-eight hour timelock, a real, mandatory delay before any approved change can actually take effect."
+  },
+  {
+   "n": 62,
+   "role": "body",
+   "vo": "Here's exactly what that combination actually protects you from, and precisely how much warning it genuinely gives you."
+  },
+  {
+   "n": 63,
+   "role": "body",
+   "vo": "No single compromised key can instantly change your funds' rules, since three of five independent signers would all have to agree."
+  },
+  {
+   "n": 64,
+   "role": "body",
+   "vo": "And even after they do agree, you'd still have a real, full forty-eight hours to notice, and to exit, before that approved change actually takes effect."
+  },
+  {
+   "n": 65,
+   "role": "body",
+   "vo": "Here's that same idea, stretched across a wider, purely illustrative spectrum, from weakest to strongest, so the actual pattern is visible, not just two isolated examples."
+  },
+  {
+   "n": 66,
+   "role": "body",
+   "vo": "A one-of-one key, with no timelock, sits at the weakest end."
+  },
+  {
+   "n": 67,
+   "role": "body",
+   "vo": "The source material's own three-of-five, with a forty-eight hour timelock, sits solidly in the middle."
+  },
+  {
+   "n": 68,
+   "role": "body",
+   "vo": "And a broader, five-of-nine multisig, behind a full seven-day timelock, sits toward the strongest, slowest-moving end of that same spectrum."
+  },
+  {
+   "n": 69,
+   "role": "body",
+   "vo": "Here's the exact same vault, but with a meaningfully worse admin setup instead, to make the contrast concrete."
+  },
+  {
+   "n": 70,
+   "role": "body",
+   "vo": "A one-of-one admin, a single key alone, with no timelock at all, means that one key can change your funds' rules instantly, with zero warning, and zero chance for you to react before it's already happened."
+  },
+  {
+   "n": 71,
+   "role": "body",
+   "vo": "Why does a timelock actually matter to you, specifically, as a user?"
+  },
+  {
+   "n": 72,
+   "role": "body",
+   "vo": "The answer: it gives you real time to actually see a queued change, and to exit, before that change is allowed to take effect."
+  },
+  {
+   "n": 73,
+   "role": "body",
+   "vo": "Do it for every contract holding meaningful funds of yours."
+  },
+  {
+   "n": 74,
+   "role": "body",
+   "vo": "Check whether it's a proxy, and specifically who can actually upgrade it."
+  },
+  {
+   "n": 75,
+   "role": "body",
+   "vo": "Know the admin roles, and the multisig threshold behind them, precisely, not just that a multisig exists at all."
+  },
+  {
+   "n": 76,
+   "role": "body",
+   "vo": "And know the timelock's actual length, and set an alert for yourself on any queued change, for genuinely large positions."
+  },
+  {
+   "n": 77,
+   "role": "body",
+   "vo": "State is what a contract stores, functions change it, events log it."
+  },
+  {
+   "n": 78,
+   "role": "body",
+   "vo": "Verified source code just means the published code matches what's deployed, never proof of safety."
+  },
+  {
+   "n": 79,
+   "role": "body",
+   "vo": "A proxy's real address stays fixed, but the logic behind it can be swapped by whoever controls the upgrade."
+  },
+  {
+   "n": 80,
+   "role": "body",
+   "vo": "A multisig needs several signers to agree; a single key needs just one compromise."
+  },
+  {
+   "n": 81,
+   "role": "body",
+   "vo": "And a timelock is your genuine window to notice, and to exit, before a change actually takes effect."
+  },
+  {
+   "n": 82,
+   "role": "body",
+   "vo": "Worth connecting this back to the dependency map from this module's own Mastery Starter, one final time."
+  },
+  {
+   "n": 83,
+   "role": "body",
+   "vo": "The contract itself, its proxy status, its admin, and its timelock, is the last specific link in that same chain."
+  },
+  {
+   "n": 84,
+   "role": "body",
+   "vo": "You now know exactly what to check on every single one: the chain, the bridge, the L2, the oracle, and now the contract itself."
+  },
+  {
+   "n": 85,
+   "role": "body",
+   "vo": "Check whether it's a proxy, know the admin roles and multisig threshold, and know the timelock length."
+  },
+  {
+   "n": 86,
+   "role": "body",
+   "vo": "Next up, Lesson five point five: smart-contract risk, and what audits don't prove."
+  },
+  {
+   "n": 87,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. State: what a contract stores (balances, parameters). It sits in Smart contracts: state, proxies, admin keys. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 88,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Functions change it; events log what happened. It sits in Smart contracts: state, proxies, admin keys. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 89,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Verified source: the code published on the explorer matches what's deployed. It sits in Smart contracts: state, proxies, admin keys. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 90,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. That's good, not proof of safety. It sits in Smart contracts: state, proxies, admin keys. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 91,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Proxy / upgradeable contracts: the address you use stays the same, but the logic behind it can be swapped. It sits in Smart contracts: state, proxies, admin keys. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 92,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Whoever controls upgrades controls your funds' rules. It sits in Smart contracts: state, proxies, admin keys. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 93,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Admin keys and roles: owners, guardians, multisigs; can they pause, upgrade or move funds? It sits in Smart contracts: state, proxies, admin keys. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 94,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Timelocks: a delay between an approved change and it taking effect. It sits in Smart contracts: state, proxies, admin keys. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 95,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. On a block explorer, the vault you use shows \"Proxy\", with the upgrade admin a 3-of-5 multisig behind a 48-hour timelock. It sits in Smart contracts: state, proxies, admin keys. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 96,
+   "role": "recap",
+   "vo": "Three lines to keep. State: what a contract stores (balances, parameters). Functions change it; events log what happened. Next is Lesson 5.5, Smart-contract risk & what audits don't prove. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 97,
+   "role": "action",
+   "vo": "Your action for Smart contracts: state, proxies, admin keys: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 5.5, Smart-contract risk & what audits don't prove."
+  },
+  {
+   "n": 98,
+   "role": "outro",
+   "vo": "Next is Lesson 5.5, Smart-contract risk & what audits don't prove. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

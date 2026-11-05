@@ -9,7 +9,7 @@ Use this before writing narration. A lesson that starts as prose becomes a slide
 
 ## Length
 
-15 to 20 minutes of speech at the measured On-Chain Operator rate of about 143 words a minute. That is 2,350 to 2,550 words. Under 15 minutes is not done. Over 20 minutes, cut a practice beat, not the hook or the recap.
+15 to 20 minutes of speech at the measured On-Chain Operator rate of about 143 words a minute. That is 2,350 to 2,550 words. Under 15 minutes is not done. Over 20 minutes, cut a practice beat, not the hook or the recap. Module intros are the exception: a short branded intro is enough if it still has the plate, the disclaimer, music, and one still per beat. From Module 4 on, follow `series-continuity`: recap the previous lesson and name the next one.
 
 ## Order
 

@@ -1,0 +1,330 @@
+{
+ "id": "lesson-12-5",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-12-5.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 12.4, Treasury and the liquidity ladder. Structure reserves so money is available when it's needed, earning a return at every tier. Keep that page on the desk. This lesson adds one picture: Act as the lending side of the bank: choose markets, price the risk, and know when to pull liquidity."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 12.5, Being the lender: supplying, curating and pricing credit risk. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already keep a journal and a kill rule. A balance sheet is that habit turned into accounts."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "When you supply to a money market, you're the bank's depositor, and effectively its credit desk."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Your return: supply APY \u2248 borrow APY \u00d7 utilisation \u00d7 (1 \u2212 reserve factor)."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Modern designs split lending into isolated markets (one collateral, one loan asset, one oracle, one liquidation LTV)."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Curated vaults spread deposits across several of these; the curator decides the allocation."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "What a lender must check: Collateral quality and liquidation LTV: the higher the LTV, the thinner the buffer before bad debt Oracle: what prices the collateral, and can it be manipulated?"
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "(Module 5.3) Utilisation: near 100% means you may not be able to withdraw Curator: track record, how allocations are changed, timelocks Risk-adjusted return, not headline."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "Work the example on paper. Vault A: 7% headline, exposure to newer collateral; you assume a 2%/yr chance of a loss event losing half the deposit \u2192 6.0% risk-adjusted. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "Work the example on paper. Vault B: 4.5% headline, blue-chip collateral; 0.5%/yr, total loss assumed \u2192 4.0%. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "Work the example on paper. defi_calc.py expected --yield-apy 7 --loss-prob 0.02 --lgd 0.5 A pays more after the haircut, if your loss estimates are honest. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "Work the example on paper. Split between them, and cap A lower because its tail is fatter and less known. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Every market's collateral, oracle and LTV listed. If you cannot write it, the line is open."
+  },
+  {
+   "n": 16,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Loss probability and loss-given-default written down (your assumptions). If you cannot write it, the line is open."
+  },
+  {
+   "n": 17,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Utilisation alert (e.g. > 90%). If you cannot write it, the line is open."
+  },
+  {
+   "n": 18,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Per-vault and per-curator caps. If you cannot write it, the line is open."
+  },
+  {
+   "n": 19,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Borrow APY 10%, utilisation 70%, reserve factor 10%. Supply APY? The answer: 6.3%."
+  },
+  {
+   "n": 20,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Why is utilisation at 100% a lender's problem? The answer: All liquidity is lent out, so withdrawals wait until borrowers repay or new deposits arrive."
+  },
+  {
+   "n": 21,
+   "role": "quiz",
+   "vo": "Check yourself. 3. What's a curated vault's extra risk? The answer: The curator's allocation decisions and permissions, on top of each market's risk."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "Being the lender: supplying, curating and pricing credit risk."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to act as the lending side of the bank: choose markets, price the risk, and know when to pull liquidity."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "times utilisation times (1 minus reserve factor)."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "What a lender must check: First, Collateral quality and liquidation L.T.V.: the higher the L.T.V., the thinner the buffer before bad debt."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "Next, Oracle: what prices the collateral, and can it be manipulated?"
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Then, Utilisation: near 100% means you may not be able to withdraw."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "Also, Curator: track record, how allocations are changed, timelocks."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "Vault A: 7% headline, exposure to newer collateral; you assume a 2% a year chance of a loss event losing half the deposit to 6.0% risk-adjusted."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "Vault B: 4.5% headline, blue-chip collateral; 0.5% a year, total loss assumed to 4.0%."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "the calculator A pays more after the haircut, if your loss estimates are honest."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "Split between them, and cap A lower because its tail is fatter and less known."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "Next, Loss probability and loss-given-default written down (your assumptions)."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "And finally, Per-vault and per-curator caps."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "Why is utilisation at 100% a lender's problem?"
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "The answer: All liquidity is lent out, so withdrawals wait until borrowers repay or new deposits arrive."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "The answer: The curator's allocation decisions and permissions, on top of each market's risk."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "Oracle: what prices the collateral, and can it be manipulated?"
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "Utilisation: near 100% means you may not be able to withdraw."
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "Curator: track record, how allocations are changed, timelocks."
+  },
+  {
+   "n": 41,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 42,
+   "role": "body",
+   "vo": "Next up, lesson twelve point six: Books, records and succession."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. When you supply to a money market, you're the bank's depositor, and effectively its credit desk. It sits in Being the lender: supplying, curating and pricing credit risk. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Your return: supply APY \u2248 borrow APY \u00d7 utilisation \u00d7 (1 \u2212 reserve factor). It sits in Being the lender: supplying, curating and pricing credit risk. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Modern designs split lending into isolated markets (one collateral, one loan asset, one oracle, one liquidation LTV). It sits in Being the lender: supplying, curating and pricing credit risk. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Curated vaults spread deposits across several of these; the curator decides the allocation. It sits in Being the lender: supplying, curating and pricing credit risk. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. What a lender must check: Collateral quality and liquidation LTV: the higher the LTV, the thinner the buffer before bad debt Oracle: what prices the collateral, and can it be manipulated? It sits in Being the lender: supplying, curating and pricing credit risk. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. (Module 5.3) Utilisation: near 100% means you may not be able to withdraw Curator: track record, how allocations are changed, timelocks Risk-adjusted return, not headline. It sits in Being the lender: supplying, curating and pricing credit risk. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Vault A: 7% headline, exposure to newer collateral; you assume a 2%/yr chance of a loss event losing half the deposit \u2192 6.0% risk-adjusted. It sits in Being the lender: supplying, curating and pricing credit risk. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Vault B: 4.5% headline, blue-chip collateral; 0.5%/yr, total loss assumed \u2192 4.0%. It sits in Being the lender: supplying, curating and pricing credit risk. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. defi_calc.py expected --yield-apy 7 --loss-prob 0.02 --lgd 0.5 A pays more after the haircut, if your loss estimates are honest. It sits in Being the lender: supplying, curating and pricing credit risk. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Split between them, and cap A lower because its tail is fatter and less known. It sits in Being the lender: supplying, curating and pricing credit risk. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Act as the lending side of the bank: choose markets, price the risk, and know when to pull liquidity. It sits in Being the lender: supplying, curating and pricing credit risk. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 54,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Every market's collateral, oracle and LTV listed. It sits in Being the lender: supplying, curating and pricing credit risk. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 55,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Loss probability and loss-given-default written down (your assumptions). It sits in Being the lender: supplying, curating and pricing credit risk. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 56,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Utilisation alert (e.g. > 90%). It sits in Being the lender: supplying, curating and pricing credit risk. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 57,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Per-vault and per-curator caps. It sits in Being the lender: supplying, curating and pricing credit risk. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 58,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. When you supply to a money market, you're the bank's depositor, and effectively its credit desk. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 59,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Your return: supply APY \u2248 borrow APY \u00d7 utilisation \u00d7 (1 \u2212 reserve factor). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 60,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Modern designs split lending into isolated markets (one collateral, one loan asset, one oracle, one liquidation LTV). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 61,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Curated vaults spread deposits across several of these; the curator decides the allocation. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 62,
+   "role": "recap",
+   "vo": "Three lines to keep. When you supply to a money market, you're the bank's depositor, and effectively its credit desk. Your return: supply APY \u2248 borrow APY \u00d7 utilisation \u00d7 (1 \u2212 reserve factor). Next is Lesson 12.6, Books, records and succession. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 63,
+   "role": "action",
+   "vo": "Your action for Being the lender: supplying, curating and pricing credit risk: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 12.6, Books, records and succession."
+  },
+  {
+   "n": 64,
+   "role": "outro",
+   "vo": "Next is Lesson 12.6, Books, records and succession. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

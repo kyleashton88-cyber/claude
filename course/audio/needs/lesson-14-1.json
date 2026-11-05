@@ -1,0 +1,285 @@
+{
+ "id": "lesson-14-1",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-14-1.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 14.0, Mastery Starter. Mastery Starter. Keep that page on the desk. This lesson adds one picture: Set up monitoring so you hear about problems before they cost money."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 14.1, Monitoring: dashboards, alerts and on-chain watchers. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already have a playbook. Automation may watch it. Automation may not hold your keys."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Positions: health factors, LP ranges, pegs, utilisation of markets you lend to."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Wallets: any outgoing transaction or new approval from your vault/operating wallets."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Tools: portfolio dashboards, protocol-native alerts, wallet-activity watchers, block-explorer address alerts, and official status/X accounts."
+  },
+  {
+   "n": 8,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Alerts for all four categories, delivered to phone. If you cannot write it, the line is open."
+  },
+  {
+   "n": 9,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Every alert maps to a written action. If you cannot write it, the line is open."
+  },
+  {
+   "n": 10,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Why alert on any vault-wallet outflow? The answer: The vault should almost never move; any movement could be a compromise."
+  },
+  {
+   "n": 11,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Why watch queued upgrades? The answer: The timelock is your window to exit before the change takes effect."
+  },
+  {
+   "n": 12,
+   "role": "quiz",
+   "vo": "Check yourself. 3. An alert with no action attached is\u2026? The answer: Noise. Every alert needs a written response."
+  },
+  {
+   "n": 13,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to set up monitoring so you hear about problems before they cost money."
+  },
+  {
+   "n": 14,
+   "role": "body",
+   "vo": "Watch four things: Tools: portfolio dashboards, protocol-native alerts, wallet-activity watchers, block-explorer address alerts, and official status/X accounts."
+  },
+  {
+   "n": 15,
+   "role": "body",
+   "vo": "ranges, pegs, utilisation of markets you lend to."
+  },
+  {
+   "n": 16,
+   "role": "body",
+   "vo": "Next, Protocols: governance proposals, queued upgrades (timelocks), incidents."
+  },
+  {
+   "n": 17,
+   "role": "body",
+   "vo": "Then, Wallets: any outgoing transaction or new approval from your vault/operating wallets."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "health factor, credit line, < 2.0 or < 1.7, Repay per 11.3."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "Market utilisation, > 95% for 24h, Withdraw per kill rule."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "Vault wallet outflow, Any, Verify immediately (11.5)."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "Queued upgrade, Any, on protocols > 10% of book, Review within timelock."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "First, Alerts for all four categories, delivered to phone."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "And finally, every alert maps to a written action."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "The answer: The vault should almost never move; any movement could be a compromise."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "The answer: The timelock is your window to exit before the change takes effect."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Next up, lesson fourteen point two: Automation: keepers, bots and agents without handing over the keys."
+  },
+  {
+   "n": 28,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Positions: health factors, LP ranges, pegs, utilisation of markets you lend to. It sits in Monitoring: dashboards, alerts and on-chain watchers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 29,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Protocols: governance proposals, queued upgrades (timelocks), incidents. It sits in Monitoring: dashboards, alerts and on-chain watchers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 30,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Wallets: any outgoing transaction or new approval from your vault/operating wallets. It sits in Monitoring: dashboards, alerts and on-chain watchers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 31,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Tools: portfolio dashboards, protocol-native alerts, wallet-activity watchers, block-explorer address alerts, and official status/X accounts. It sits in Monitoring: dashboards, alerts and on-chain watchers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 32,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Set up monitoring so you hear about problems before they cost money. It sits in Monitoring: dashboards, alerts and on-chain watchers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 33,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Alerts for all four categories, delivered to phone. It sits in Monitoring: dashboards, alerts and on-chain watchers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 34,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Every alert maps to a written action. It sits in Monitoring: dashboards, alerts and on-chain watchers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 35,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Positions: health factors, LP ranges, pegs, utilisation of markets you lend to. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 36,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Protocols: governance proposals, queued upgrades (timelocks), incidents. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 37,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Wallets: any outgoing transaction or new approval from your vault/operating wallets. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 38,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Tools: portfolio dashboards, protocol-native alerts, wallet-activity watchers, block-explorer address alerts, and official status/X accounts. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 39,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Set up monitoring so you hear about problems before they cost money. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Alerts for all four categories, delivered to phone. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Every alert maps to a written action. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Positions: health factors, LP ranges, pegs, utilisation of markets you lend to. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Protocols: governance proposals, queued upgrades (timelocks), incidents. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Wallets: any outgoing transaction or new approval from your vault/operating wallets. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Tools: portfolio dashboards, protocol-native alerts, wallet-activity watchers, block-explorer address alerts, and official status/X accounts. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Set up monitoring so you hear about problems before they cost money. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Alerts for all four categories, delivered to phone. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Every alert maps to a written action. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Teach this line back, as if the previous minute had no sound. Positions: health factors, LP ranges, pegs, utilisation of markets you lend to. Say it in one breath. Then say the reason in a second breath. A classmate should be able to point at your drawing and mark it right or wrong. If they cannot, the line is not finished. Stamp Example. This check is understanding, not a trade."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 2, still on the same lesson. Take this line slowly. Positions: health factors, LP ranges, pegs, utilisation of markets you lend to. It sits in Monitoring: dashboards, alerts and on-chain watchers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent. Tie the line to the page you brought in from the previous lesson."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 2, still on the same lesson. Take this line slowly. Protocols: governance proposals, queued upgrades (timelocks), incidents. It sits in Monitoring: dashboards, alerts and on-chain watchers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent. Tie the line to the page you brought in from the previous lesson."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 2, still on the same lesson. Take this line slowly. Wallets: any outgoing transaction or new approval from your vault/operating wallets. It sits in Monitoring: dashboards, alerts and on-chain watchers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent. Tie the line to the page you brought in from the previous lesson."
+  },
+  {
+   "n": 53,
+   "role": "recap",
+   "vo": "Three lines to keep. Positions: health factors, LP ranges, pegs, utilisation of markets you lend to. Protocols: governance proposals, queued upgrades (timelocks), incidents. Next is Lesson 14.2, Automation: keepers, bots and agents without handing over the keys. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 54,
+   "role": "action",
+   "vo": "Your action for Monitoring: dashboards, alerts and on-chain watchers: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 14.2, Automation: keepers, bots and agents without handing over the keys."
+  },
+  {
+   "n": 55,
+   "role": "outro",
+   "vo": "Next is Lesson 14.2, Automation: keepers, bots and agents without handing over the keys. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

@@ -1,0 +1,320 @@
+{
+ "id": "lesson-10-5",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-10-5.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 10.4, Options income: covered calls, cash-secured puts, options vaults. Earn option premium on assets you'd hold or buy anyway, knowing exactly what you give up. Keep that page on the desk. This lesson adds one picture: Choose a range width and a rebalance rule that fee income can actually pay for."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 10.5, Active concentrated-liquidity management. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already split base yield from emissions. Advanced yield still starts with that split, then names a more particular engine."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Narrower ranges earn more fees per dollar while in range and go out of range sooner."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Capital efficiency vs full range $2,400\u2013$3,600 (\u00b120%)."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "~40.5\u00d7 defi_calc.py cl --low 2850 --high 3150 Every rebalance costs gas and swap fees and locks in the impermanent loss so far."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Professionals set a rule before entering: Width from volatility: at least ~1.5\u00d7 the typical weekly move."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Rebalance trigger: out of range for 24h+, and the range thesis still holds."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Invalidation: a structural break (as with a grid bot) means exit, not re-centre."
+  },
+  {
+   "n": 11,
+   "role": "body",
+   "vo": "Budget: rebalancing costs capped at a share of expected fees (e.g."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "Work the example on paper. ETH typically moves \u00b17% a week. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "Work the example on paper. A \u00b15% range would be out of range most weeks. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "Work the example on paper. The rule points to \u00b110\u201312%: ~20\u00d7 efficiency, and time in range to earn. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Width \u2265 1.5\u00d7 typical weekly move. If you cannot write it, the line is open."
+  },
+  {
+   "n": 16,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Rebalance trigger and invalidation written. If you cannot write it, the line is open."
+  },
+  {
+   "n": 17,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Rebalance cost budget set. If you cannot write it, the line is open."
+  },
+  {
+   "n": 18,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: P&L tracked against holding (Lesson 2.4). If you cannot write it, the line is open."
+  },
+  {
+   "n": 19,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Why does a \u00b15% range earn ~2\u00d7 the fees of \u00b110% while in range? The answer: The same capital is concentrated in half the price range, so it provides about twice the liquidity there."
+  },
+  {
+   "n": 20,
+   "role": "quiz",
+   "vo": "Check yourself. 2. What does a rebalance lock in? The answer: The impermanent loss accrued so far, plus gas and swap costs."
+  },
+  {
+   "n": 21,
+   "role": "quiz",
+   "vo": "Check yourself. 3. Price breaks structure and exits the range. Re-centre? The answer: No. That's an invalidation. Exit per plan."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to choose a range width and a rebalance rule that fee income can actually pay for."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "the calculator Every rebalance costs gas and swap fees and locks in the impermanent loss so far."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "Professionals set a rule before entering: $2,400 to $3,600 (\u00b120%): about 10.4 times."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "$2,700 to $3,300 (\u00b110%): about 20.4 times."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "$2,850 to $3,150 (\u00b15%): about 40.5 times."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "A \u00b15% range would be out of range most weeks."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "The rule points to \u00b110 to 12%: about 20 times efficiency, and time in range to earn."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "Trending markets and volatility above what the range was sized for."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "First, Width at least 1.5 times typical weekly move."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "And finally, P and L tracked against holding (Lesson 2.4)."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "Why does a \u00b15% range earn about 2 times the fees of \u00b110% while in range?"
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "The answer: The same capital is concentrated in half the price range, so it provides about twice the liquidity there."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "The answer: The impermanent loss accrued so far, plus gas and swap costs."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "Next up, lesson ten point six: Restaking and points: pricing speculative yield."
+  },
+  {
+   "n": 37,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Narrower ranges earn more fees per dollar while in range and go out of range sooner. It sits in Active concentrated-liquidity management. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 38,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Capital efficiency vs full range $2,400\u2013$3,600 (\u00b120%). It sits in Active concentrated-liquidity management. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 39,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. ~10.4\u00d7 $2,700\u2013$3,300 (\u00b110%). It sits in Active concentrated-liquidity management. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. ~20.4\u00d7 $2,850\u2013$3,150 (\u00b15%). It sits in Active concentrated-liquidity management. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. ~40.5\u00d7 defi_calc.py cl --low 2850 --high 3150 Every rebalance costs gas and swap fees and locks in the impermanent loss so far. It sits in Active concentrated-liquidity management. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Professionals set a rule before entering: Width from volatility: at least ~1.5\u00d7 the typical weekly move. It sits in Active concentrated-liquidity management. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Rebalance trigger: out of range for 24h+, and the range thesis still holds. It sits in Active concentrated-liquidity management. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Invalidation: a structural break (as with a grid bot) means exit, not re-centre. It sits in Active concentrated-liquidity management. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Budget: rebalancing costs capped at a share of expected fees (e.g. It sits in Active concentrated-liquidity management. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. ETH typically moves \u00b17% a week. It sits in Active concentrated-liquidity management. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. A \u00b15% range would be out of range most weeks. It sits in Active concentrated-liquidity management. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The rule points to \u00b110\u201312%: ~20\u00d7 efficiency, and time in range to earn. It sits in Active concentrated-liquidity management. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Choose a range width and a rebalance rule that fee income can actually pay for. It sits in Active concentrated-liquidity management. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Width \u2265 1.5\u00d7 typical weekly move. It sits in Active concentrated-liquidity management. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Rebalance trigger and invalidation written. It sits in Active concentrated-liquidity management. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Rebalance cost budget set. It sits in Active concentrated-liquidity management. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. P&L tracked against holding (Lesson 2.4). It sits in Active concentrated-liquidity management. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 54,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Narrower ranges earn more fees per dollar while in range and go out of range sooner. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 55,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Capital efficiency vs full range $2,400\u2013$3,600 (\u00b120%). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 56,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. ~10.4\u00d7 $2,700\u2013$3,300 (\u00b110%). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 57,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. ~20.4\u00d7 $2,850\u2013$3,150 (\u00b15%). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 58,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. ~40.5\u00d7 defi_calc.py cl --low 2850 --high 3150 Every rebalance costs gas and swap fees and locks in the impermanent loss so far. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 59,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Professionals set a rule before entering: Width from volatility: at least ~1.5\u00d7 the typical weekly move. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 60,
+   "role": "recap",
+   "vo": "Three lines to keep. Narrower ranges earn more fees per dollar while in range and go out of range sooner. Capital efficiency vs full range $2,400\u2013$3,600 (\u00b120%). Next is Lesson 10.6, Restaking and points: pricing speculative yield. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 61,
+   "role": "action",
+   "vo": "Your action for Active concentrated-liquidity management: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 10.6, Restaking and points: pricing speculative yield."
+  },
+  {
+   "n": 62,
+   "role": "outro",
+   "vo": "Next is Lesson 10.6, Restaking and points: pricing speculative yield. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

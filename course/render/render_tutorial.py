@@ -47,16 +47,26 @@ def missing_images(script: dict) -> list[str]:
 def check() -> int:
     total = 0
     blocked = 0
+    voice_blocked = 0
+    jobs = ROOT / "course" / "render" / "jobs"
     for path in scripts():
         script = load(path)
         bad = missing_images(script)
+        voice = ROOT / "course" / "audio" / f"{script['id']}.wav"
         total += len(script["beats"])
-        if bad:
+        job = jobs / f"{script['id']}.json"
+        waiting = job.is_file()
+        if bad or (waiting and not voice.is_file()):
             blocked += 1
-            print(f"BLOCKED {script['id']}: {len(bad)} of {len(script['beats'])} images missing, est {script['estimated_minutes']} min")
+            if waiting and not voice.is_file():
+                voice_blocked += 1
+            print(
+                f"BLOCKED {script['id']}: {len(bad)} of {len(script['beats'])} images missing, "
+                f"voice {'missing' if not voice.is_file() else 'ready'}, est {script['estimated_minutes']} min"
+            )
         else:
             print(f"READY   {script['id']}: {len(script['beats'])} images")
-    print(f"beats {total} lessons_blocked {blocked}")
+    print(f"beats {total} lessons_blocked {blocked} voice_blocked {voice_blocked}")
     return 2 if blocked else 0
 
 

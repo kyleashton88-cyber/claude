@@ -1,0 +1,480 @@
+{
+ "id": "lesson-04-5",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-04-5.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 4.4, Restaking & shared security. Map the extra risk layers restaking adds before accepting its extra yield. Keep that page on the desk. This lesson adds one picture: Decide when a vault's fees are worth paying compared with doing it yourself."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 4.5, Vaults & yield optimisers. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already have LTV, health factor, and liquidation from lending. A yield does not retire those numbers. It is payment for a risk you can name."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "A vault pools deposits and runs a strategy (often harvesting and reinvesting rewards)."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Costs: performance fee (a share of profits), management fee (a share of assets per year), sometimes withdrawal fees."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Risks: the vault's code plus every protocol it uses."
+  },
+  {
+   "n": 8,
+   "role": "demo",
+   "vo": "Work the example on paper. Gross 10%, 20% performance fee, 0.5% management \u2192 7.5% net. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 9,
+   "role": "demo",
+   "vo": "Work the example on paper. DIY instead, compounding weekly at $2 gas: $5,000 position: gas = $104/yr = 2.08% drag \u2192 the vault probably wins. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 10,
+   "role": "demo",
+   "vo": "Work the example on paper. $500,000 position: gas = 0.02% drag, while the vault's fees cost 2.5 points \u2192 DIY probably wins. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Net APY after all vault fees computed. If you cannot write it, the line is open."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Compared with DIY gas drag at my size. If you cannot write it, the line is open."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Every underlying protocol reviewed. If you cannot write it, the line is open."
+  },
+  {
+   "n": 14,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Gross 12%, 10% performance fee, 1% management. Net? The answer: 12 \u00d7 0.9 \u2212 1 = 9.8%."
+  },
+  {
+   "n": 15,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Why do vaults suit small positions? The answer: They spread gas costs across all depositors."
+  },
+  {
+   "n": 16,
+   "role": "quiz",
+   "vo": "Check yourself. 3. What risk does a vault add? The answer: Its own code and strategy, on top of every protocol it deposits into."
+  },
+  {
+   "n": 17,
+   "role": "body",
+   "vo": "By the end, you'll be able to decide, with real numbers, when a vault's fees are actually worth paying, compared with running the same strategy yourself."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "What a vault actually does with your deposit, and the shares you get back for it."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "Its three possible costs: performance fees, management fees, and sometimes withdrawal fees."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "The extra risk layer a vault adds, on top of every protocol it uses underneath."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "And a full worked example, using the source material's own numbers, at two very different position sizes."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "Here's exactly what a vault does with the assets you deposit into it."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "It pools your deposit together with everyone else's, and runs a specific strategy against that pooled total, often harvesting rewards on some regular schedule and automatically reinvesting them, so you don't have to do that manually yourself."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "In exchange for your deposit, you receive shares, representing your proportional claim on that pooled position, plus whatever it earns."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Worth being precise about the actual value a vault is selling you, since it isn't really the strategy itself, most of which you could technically replicate on your own."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "It's automation, and pooled efficiency, specifically around the repetitive, gas-costing parts of running that strategy well, like harvesting and reinvesting on a disciplined schedule."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Whether that's worth paying for depends entirely on how much those repetitive costs would actually cost you directly."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "Why do vaults tend to suit smaller positions particularly well?"
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "The answer: they spread the gas costs of harvesting and reinvesting across every depositor in the pool, instead of each person paying that cost alone."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "Here's exactly what each of these three costs actually takes from you, since they're structured quite differently from each other."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "A performance fee takes a share specifically of your profits, only when the strategy actually makes money."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "A management fee takes a share of your total assets, every year, regardless of whether the strategy made anything at all that year."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "And some vaults add a withdrawal fee too, charged specifically when you actually exit the position."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "Worth being precise about why the management fee specifically deserves extra attention, compared with the performance fee."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "A performance fee only costs you anything when you're actually making money, which softens its sting considerably."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "A management fee keeps taking its share every single year, even during a year the strategy loses money outright, which is a meaningfully different kind of cost to carry."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "Worth being precise about why a withdrawal fee specifically exists, on the vaults that charge one, since it isn't simply extra profit for its own sake."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "It's usually there to discourage very short-term, in-and-out deposits, which can otherwise force the vault to pay harvesting gas costs on behalf of a depositor who barely stayed long enough to benefit from them, at the expense of everyone else still in the pool."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "Gross twelve percent, a ten percent performance fee, and a one percent management fee."
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "Twelve times zero point nine, minus one percent."
+  },
+  {
+   "n": 41,
+   "role": "body",
+   "vo": "Here's exactly what risk a vault actually adds, on top of whatever you'd already be exposed to by using its underlying strategy directly."
+  },
+  {
+   "n": 42,
+   "role": "body",
+   "vo": "Its own smart contract code can contain a bug, entirely separate from any protocol it invests in."
+  },
+  {
+   "n": 43,
+   "role": "body",
+   "vo": "Its own strategy logic can make a mistake in how or when it harvests, reinvests, or rebalances."
+  },
+  {
+   "n": 44,
+   "role": "body",
+   "vo": "And every single protocol it deposits your funds into underneath, all of that risk, is still fully yours too, completely unremoved by the vault sitting on top of it."
+  },
+  {
+   "n": 45,
+   "role": "body",
+   "vo": "Here's why that extra risk layer isn't the same size for every vault, since complexity itself is a real, checkable variable."
+  },
+  {
+   "n": 46,
+   "role": "body",
+   "vo": "A simple vault, harvesting and reinvesting a single, well-understood strategy on one protocol, adds a genuinely small amount of extra risk on top."
+  },
+  {
+   "n": 47,
+   "role": "body",
+   "vo": "A complex vault, looping through several protocols, or adding its own leverage on top of the underlying strategy, adds meaningfully more, since every additional protocol and mechanism is one more place something can go wrong."
+  },
+  {
+   "n": 48,
+   "role": "body",
+   "vo": "What extra risk does a vault actually add?"
+  },
+  {
+   "n": 49,
+   "role": "body",
+   "vo": "The answer: its own code and strategy, on top of every single protocol it deposits your funds into underneath."
+  },
+  {
+   "n": 50,
+   "role": "body",
+   "vo": "Here's the net calculation first, using the source material's own numbers."
+  },
+  {
+   "n": 51,
+   "role": "body",
+   "vo": "A twenty percent performance fee takes two points, leaving eight percent."
+  },
+  {
+   "n": 52,
+   "role": "body",
+   "vo": "A zero point five percent management fee takes another half point."
+  },
+  {
+   "n": 53,
+   "role": "body",
+   "vo": "Net result: seven point five percent, after both fees."
+  },
+  {
+   "n": 54,
+   "role": "body",
+   "vo": "Now here's the exact same strategy, run yourself instead, compounding weekly, at a flat two dollars of gas per harvest, compared at two very different position sizes."
+  },
+  {
+   "n": 55,
+   "role": "body",
+   "vo": "At five thousand dollars, that's one hundred four dollars a year in gas, a two point zero eight percent drag, considerably worse than the vault's own combined fee cost."
+  },
+  {
+   "n": 56,
+   "role": "body",
+   "vo": "At five hundred thousand dollars, that exact same one hundred four dollars is only a zero point zero two percent drag, while the vault's fees still cost two and a half points."
+  },
+  {
+   "n": 57,
+   "role": "body",
+   "vo": "Put side by side, here's the actual comparison at each size, in percentage-point terms."
+  },
+  {
+   "n": 58,
+   "role": "body",
+   "vo": "At the smaller size, D.I.Y.'s own gas drag of two point zero eight percent is the bigger cost."
+  },
+  {
+   "n": 59,
+   "role": "body",
+   "vo": "At the larger size, the vault's own fee drag of two point five points becomes the bigger cost, while D.I.Y.'s gas drag has shrunk to almost nothing."
+  },
+  {
+   "n": 60,
+   "role": "body",
+   "vo": "Here's that same one hundred four dollars a year in gas, run across a much wider range of position sizes, so you can see exactly where the crossover actually happens."
+  },
+  {
+   "n": 61,
+   "role": "body",
+   "vo": "At one thousand dollars, gas drag is over ten percent, clearly worse than the vault."
+  },
+  {
+   "n": 62,
+   "role": "body",
+   "vo": "It keeps falling as size grows, crossing the vault's own two and a half point fee drag right around four thousand one hundred sixty dollars."
+  },
+  {
+   "n": 63,
+   "role": "body",
+   "vo": "Above that point, the vault's fees become the bigger cost every time; below it, D.I.Y.'s gas drag is."
+  },
+  {
+   "n": 64,
+   "role": "body",
+   "vo": "Notice what that break-even number actually tells you, in plain terms."
+  },
+  {
+   "n": 65,
+   "role": "body",
+   "vo": "Above roughly four thousand one hundred sixty dollars, at this specific gas cost and fee structure, running the strategy yourself probably wins."
+  },
+  {
+   "n": 66,
+   "role": "body",
+   "vo": "Change the gas cost, or the vault's own fees, and that exact number moves, but the method for finding it stays exactly the same."
+  },
+  {
+   "n": 67,
+   "role": "body",
+   "vo": "Here's how to actually run this comparison for your own numbers, rather than just reusing the ones from this example."
+  },
+  {
+   "n": 68,
+   "role": "body",
+   "vo": "Estimate your own realistic gas cost per harvest, and how often you'd actually do it."
+  },
+  {
+   "n": 69,
+   "role": "body",
+   "vo": "Divide that annual gas cost by your own position size, for your own real drag percentage."
+  },
+  {
+   "n": 70,
+   "role": "body",
+   "vo": "And compare that number directly against the vault's own total fee drag, the larger one is the one costing you more."
+  },
+  {
+   "n": 71,
+   "role": "body",
+   "vo": "Here's the one sentence this entire worked example exists to prove, worth holding onto more than either specific number."
+  },
+  {
+   "n": 72,
+   "role": "body",
+   "vo": "The exact same vault, with the exact same fees, is either clearly worth it or clearly not, purely depending on your own position size, since gas is a flat cost that only a larger position can meaningfully dilute."
+  },
+  {
+   "n": 73,
+   "role": "body",
+   "vo": "Compute the actual net A.P.Y., after every fee the vault charges, not just its advertised gross number."
+  },
+  {
+   "n": 74,
+   "role": "body",
+   "vo": "gas drag, at your own actual position size, the way the worked example just did."
+  },
+  {
+   "n": 75,
+   "role": "body",
+   "vo": "And review every single underlying protocol the vault actually deposits into, since that risk is still entirely yours."
+  },
+  {
+   "n": 76,
+   "role": "body",
+   "vo": "A vault pools deposits, runs a strategy, and hands you shares in exchange."
+  },
+  {
+   "n": 77,
+   "role": "body",
+   "vo": "It can charge a performance fee, a management fee, and sometimes a withdrawal fee, each behaving differently."
+  },
+  {
+   "n": 78,
+   "role": "body",
+   "vo": "It adds its own code and strategy risk, on top of every protocol it uses underneath, never removing that risk."
+  },
+  {
+   "n": 79,
+   "role": "body",
+   "vo": "And whether it's worth it comes down to one real comparison: its net A.P.Y."
+  },
+  {
+   "n": 80,
+   "role": "body",
+   "vo": "Compute the net APY after every fee, compare it against your own gas drag at your size, and review every protocol underneath."
+  },
+  {
+   "n": 81,
+   "role": "body",
+   "vo": "Next up, Lesson four point six: airdrops and points, opportunity cost."
+  },
+  {
+   "n": 82,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. A vault pools deposits and runs a strategy (often harvesting and reinvesting rewards). It sits in Vaults & yield optimisers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 83,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Costs: performance fee (a share of profits), management fee (a share of assets per year), sometimes withdrawal fees. It sits in Vaults & yield optimisers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 84,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Risks: the vault's code plus every protocol it uses. It sits in Vaults & yield optimisers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 85,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Gross 10%, 20% performance fee, 0.5% management \u2192 7.5% net. It sits in Vaults & yield optimisers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 86,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. DIY instead, compounding weekly at $2 gas: $5,000 position: gas = $104/yr = 2.08% drag \u2192 the vault probably wins. It sits in Vaults & yield optimisers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 87,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. $500,000 position: gas = 0.02% drag, while the vault's fees cost 2.5 points \u2192 DIY probably wins. It sits in Vaults & yield optimisers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 88,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Decide when a vault's fees are worth paying compared with doing it yourself. It sits in Vaults & yield optimisers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 89,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Net APY after all vault fees computed. It sits in Vaults & yield optimisers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 90,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Compared with DIY gas drag at my size. It sits in Vaults & yield optimisers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 91,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Every underlying protocol reviewed. It sits in Vaults & yield optimisers. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 92,
+   "role": "recap",
+   "vo": "Three lines to keep. A vault pools deposits and runs a strategy (often harvesting and reinvesting rewards). Costs: performance fee (a share of profits), management fee (a share of assets per year), sometimes withdrawal fees. Next is Lesson 4.6, Airdrops & points: opportunity cost. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 93,
+   "role": "action",
+   "vo": "Your action for Vaults & yield optimisers: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 4.6, Airdrops & points: opportunity cost."
+  },
+  {
+   "n": 94,
+   "role": "outro",
+   "vo": "Next is Lesson 4.6, Airdrops & points: opportunity cost. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

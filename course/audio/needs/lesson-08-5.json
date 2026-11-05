@@ -1,0 +1,300 @@
+{
+ "id": "lesson-08-5",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-08-5.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 8.4, The operating playbook: deploy, monitor, respond, review. Run every position through the same four-phase routine. Keep that page on the desk. This lesson adds one picture: Measure your results so deposits, withdrawals and lucky markets don't fool you."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 8.5, Measuring performance honestly. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You can already pull a number off a chain. The operating system is what you do with it: a register, a journal, and a kill rule."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Time-weighted return (TWR): chains the return of each period, ignoring when you added or removed money."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Money-weighted / simple gain: what your total capital actually did, including the timing of deposits."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Benchmark: compare against what you'd have got doing something simple: holding the same assets, or plain stablecoin lending."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Attribution: split the result into sources: price moves, fees, interest, incentives, costs, losses."
+  },
+  {
+   "n": 9,
+   "role": "demo",
+   "vo": "Work the example on paper. Start $100,000 \u2192 +10% in Q1 ($110,000) \u2192 deposit $50,000 ($160,000) \u2192 \u22125% in Q2 \u2192 $152,000. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 10,
+   "role": "demo",
+   "vo": "Work the example on paper. defi_calc.py twr --period 10 --period -5 --start 100000 --end 152000 --net-deposits 50000 TWR: 1.10 \u00d7 0.95 \u2212 1 = 4.50% (your decisions) Simple gain on $150,000 put in: 1.33% (hurt by the deposit landing before a down quarter) Then compare 4.50% with holding ETH over the same period, and with stablecoin lending. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: TWR calculated quarterly. If you cannot write it, the line is open."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Benchmark chosen and compared. If you cannot write it, the line is open."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Results attributed by source. If you cannot write it, the line is open."
+  },
+  {
+   "n": 14,
+   "role": "quiz",
+   "vo": "Check yourself. 1. What does TWR remove? The answer: The effect of when deposits and withdrawals happened."
+  },
+  {
+   "n": 15,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Why use a benchmark? The answer: To see whether the strategy beat doing something simple, not just beat zero."
+  },
+  {
+   "n": 16,
+   "role": "quiz",
+   "vo": "Check yourself. 3. Two quarters, +8% then +2%. TWR? The answer: 1.08 \u00d7 1.02 \u2212 1 = 10.16%."
+  },
+  {
+   "n": 17,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to measure your results so deposits, withdrawals and lucky markets don't fool you."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "First, Time-weighted return (time-weighted return): chains the return of each period, ignoring when you added or removed money."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "Next, Money-weighted or simple gain: what your total capital actually did, including the timing of deposits."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "Then, Benchmark: compare against what you'd have got doing something simple: holding the same assets, or plain stablecoin lending."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "And finally, Attribution: split the result into sources: price moves, fees, interest, incentives, costs, losses."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "Start $100,000 to +10% in Q1 ($110,000) to deposit $50,000 ($160,000) to minus 5% in Q2 to $152,000."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "the calculator Then compare 4.50% with holding ETH over the same period, and with stablecoin lending."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "time-weighted return: 1.10 times 0.95 minus 1 equals 4.50% (your decisions)."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Simple gain on $150,000 put in: 1.33% (hurt by the deposit landing before a down quarter)."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "The answer: The effect of when deposits and withdrawals happened."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "The answer: To see whether the strategy beat doing something simple, not just beat zero."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "The answer: 1.08 times 1.02 minus 1 equals 10.16%."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "Time-weighted return (time-weighted return): chains the return of each period."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "Money-weighted or simple gain: what your total capital actually did, including the timing of deposits."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "Benchmark: compare against what you'd have got doing something simple."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "Next up, lesson eight point six: Psychology and discipline."
+  },
+  {
+   "n": 34,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Time-weighted return (TWR): chains the return of each period, ignoring when you added or removed money. It sits in Measuring performance honestly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 35,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Money-weighted / simple gain: what your total capital actually did, including the timing of deposits. It sits in Measuring performance honestly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 36,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Benchmark: compare against what you'd have got doing something simple: holding the same assets, or plain stablecoin lending. It sits in Measuring performance honestly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 37,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Attribution: split the result into sources: price moves, fees, interest, incentives, costs, losses. It sits in Measuring performance honestly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 38,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Only the parts you control show skill. It sits in Measuring performance honestly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 39,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Start $100,000 \u2192 +10% in Q1 ($110,000) \u2192 deposit $50,000 ($160,000) \u2192 \u22125% in Q2 \u2192 $152,000. It sits in Measuring performance honestly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. defi_calc.py twr --period 10 --period -5 --start 100000 --end 152000 --net-deposits 50000 TWR: 1.10 \u00d7 0.95 \u2212 1 = 4.50% (your decisions) Simple gain on $150,000 put in: 1.33% (hurt by the deposit landing before a down quarter) Then compare 4.50% with holding ETH over the same period, and with stablecoin lending. It sits in Measuring performance honestly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Measure your results so deposits, withdrawals and lucky markets don't fool you. It sits in Measuring performance honestly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. TWR calculated quarterly. It sits in Measuring performance honestly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Benchmark chosen and compared. It sits in Measuring performance honestly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Results attributed by source. It sits in Measuring performance honestly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Time-weighted return (TWR): chains the return of each period, ignoring when you added or removed money. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Money-weighted / simple gain: what your total capital actually did, including the timing of deposits. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Benchmark: compare against what you'd have got doing something simple: holding the same assets, or plain stablecoin lending. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Attribution: split the result into sources: price moves, fees, interest, incentives, costs, losses. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Only the parts you control show skill. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Start $100,000 \u2192 +10% in Q1 ($110,000) \u2192 deposit $50,000 ($160,000) \u2192 \u22125% in Q2 \u2192 $152,000. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. defi_calc.py twr --period 10 --period -5 --start 100000 --end 152000 --net-deposits 50000 TWR: 1.10 \u00d7 0.95 \u2212 1 = 4.50% (your decisions) Simple gain on $150,000 put in: 1.33% (hurt by the deposit landing before a down quarter) Then compare 4.50% with holding ETH over the same period, and with stablecoin lending. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Measure your results so deposits, withdrawals and lucky markets don't fool you. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. TWR calculated quarterly. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 54,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Benchmark chosen and compared. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 55,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Results attributed by source. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 56,
+   "role": "recap",
+   "vo": "Three lines to keep. Time-weighted return (TWR): chains the return of each period, ignoring when you added or removed money. Money-weighted / simple gain: what your total capital actually did, including the timing of deposits. Next is Lesson 8.6, Psychology and discipline. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 57,
+   "role": "action",
+   "vo": "Your action for Measuring performance honestly: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 8.6, Psychology and discipline."
+  },
+  {
+   "n": 58,
+   "role": "outro",
+   "vo": "Next is Lesson 8.6, Psychology and discipline. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

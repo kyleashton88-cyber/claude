@@ -1,0 +1,325 @@
+{
+ "id": "lesson-12-8",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-12-8.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 12.7, Tax, regulation and compliance awareness. Know which on-chain actions may have tax or legal consequences, keep the records to handle them, and know when to get professional help. Keep that page on the desk. This lesson adds one picture: Know the custody options institutions use, and when they make sense for a large personal or family book."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 12.8, Institutional-grade custody: MPC, custodians and policy engines. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already keep a journal and a kill rule. A balance sheet is that habit turned into accounts."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Multisig (12.2): several keys, rules enforced on-chain, transparent and verifiable."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "MPC (multi-party computation): one key is split into shares held by different devices or parties; signatures are created together without ever assembling the key."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "The rules are enforced off-chain by the provider's software."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "It works on any chain, but you depend on the vendor and can't verify the policy on-chain."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Qualified custodians: regulated firms that hold assets for clients."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Strong legal protections in some jurisdictions; you give up self-custody and on-chain flexibility."
+  },
+  {
+   "n": 11,
+   "role": "body",
+   "vo": "Policy engines: approval workflows (who can approve what, above which amount), allowlists, time windows and velocity limits, available in both institutional MPC platforms and smart-account setups."
+  },
+  {
+   "n": 12,
+   "role": "body",
+   "vo": "Hybrid: many large holders use a custodian or MPC for long-term reserves and multisig/smart accounts for active DeFi."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "Work the example on paper. A $5M family book: cold reserves ($3M) with a qualified custodian (legal title, insurance terms read); active DeFi ($1.5M) in a 2-of-3 multisig with a policy of two approvers above $50,000 and an allowlist; hot float ($20,000) in a limited smart account. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "Work the example on paper. The succession plan (12.6) covers all three. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Custody option chosen per tier, with reasons. If you cannot write it, the line is open."
+  },
+  {
+   "n": 16,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Vendor/custodian terms, insurance and recovery read. If you cannot write it, the line is open."
+  },
+  {
+   "n": 17,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Policy engine rules written: approvers, thresholds, allowlists. If you cannot write it, the line is open."
+  },
+  {
+   "n": 18,
+   "role": "quiz",
+   "vo": "Check yourself. 1. MPC vs multisig: where are the rules enforced? The answer: MPC: off-chain by the provider's software. Multisig: on-chain by the contract."
+  },
+  {
+   "n": 19,
+   "role": "quiz",
+   "vo": "Check yourself. 2. What do you give up with a qualified custodian? The answer: Self-custody and on-chain flexibility."
+  },
+  {
+   "n": 20,
+   "role": "quiz",
+   "vo": "Check yourself. 3. What is a policy engine? The answer: Rules for approvals, thresholds, allowlists and limits on transactions."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "Institutional-grade custody: M.P.C., custodians and policy engines."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to know the custody options institutions use, and when they make sense for a large personal or family book."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "First, Multisig (12.2): several keys, rules enforced on-chain, transparent and verifiable."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "(multi-party computation): one key is split into shares held by different devices or parties; signatures are created together without ever assembling the key."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Then, Qualified custodians: regulated firms that hold assets for clients."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "Also, Policy engines: approval workflows (who can approve what, above which amount), allowlists, time windows and velocity limits, available in both institutional M.P.C."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "And finally, Hybrid: many large holders use a custodian or M.P.C."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "for long-term reserves and multisig/smart accounts for active DeFi."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "It's everything we've just said, in one picture."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "A $5M family book: cold reserves ($3M) with a qualified custodian (legal title, insurance terms read); active DeFi ($1.5M) in a 2-of-3 multisig with a policy of two approvers above $50,000 and an allowlist; hot float ($20,000) in a limited smart account."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "First, Custody option chosen per tier, with reasons."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "Next, Vendor/custodian terms, insurance and recovery read."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "And finally, Policy engine rules written: approvers, thresholds, allowlists."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "The answer: M.P.C.: off-chain by the provider's software."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "What do you give up with a qualified custodian?"
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "The answer: Self-custody and on-chain flexibility."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "The answer: Rules for approvals, thresholds, allowlists and limits on transactions."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "Policy engines: approval workflows (who can approve what, above which amount), allowlists."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "Next up, lesson thirteen point zero: Mastery Starter."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Multisig (12.2): several keys, rules enforced on-chain, transparent and verifiable. It sits in Institutional-grade custody: MPC, custodians and policy engines. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. MPC (multi-party computation): one key is split into shares held by different devices or parties; signatures are created together without ever assembling the key. It sits in Institutional-grade custody: MPC, custodians and policy engines. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The rules are enforced off-chain by the provider's software. It sits in Institutional-grade custody: MPC, custodians and policy engines. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. It works on any chain, but you depend on the vendor and can't verify the policy on-chain. It sits in Institutional-grade custody: MPC, custodians and policy engines. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Qualified custodians: regulated firms that hold assets for clients. It sits in Institutional-grade custody: MPC, custodians and policy engines. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Strong legal protections in some jurisdictions; you give up self-custody and on-chain flexibility. It sits in Institutional-grade custody: MPC, custodians and policy engines. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Policy engines: approval workflows (who can approve what, above which amount), allowlists, time windows and velocity limits, available in both institutional MPC platforms and smart-account setups. It sits in Institutional-grade custody: MPC, custodians and policy engines. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Hybrid: many large holders use a custodian or MPC for long-term reserves and multisig/smart accounts for active DeFi. It sits in Institutional-grade custody: MPC, custodians and policy engines. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. A $5M family book: cold reserves ($3M) with a qualified custodian (legal title, insurance terms read); active DeFi ($1.5M) in a 2-of-3 multisig with a policy of two approvers above $50,000 and an allowlist; hot float ($20,000) in a limited smart account. It sits in Institutional-grade custody: MPC, custodians and policy engines. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The succession plan (12.6) covers all three. It sits in Institutional-grade custody: MPC, custodians and policy engines. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Know the custody options institutions use, and when they make sense for a large personal or family book. It sits in Institutional-grade custody: MPC, custodians and policy engines. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Custody option chosen per tier, with reasons. It sits in Institutional-grade custody: MPC, custodians and policy engines. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Vendor/custodian terms, insurance and recovery read. It sits in Institutional-grade custody: MPC, custodians and policy engines. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 54,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Policy engine rules written: approvers, thresholds, allowlists. It sits in Institutional-grade custody: MPC, custodians and policy engines. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 55,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Multisig (12.2): several keys, rules enforced on-chain, transparent and verifiable. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 56,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. MPC (multi-party computation): one key is split into shares held by different devices or parties; signatures are created together without ever assembling the key. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 57,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. The rules are enforced off-chain by the provider's software. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 58,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. It works on any chain, but you depend on the vendor and can't verify the policy on-chain. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 59,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Qualified custodians: regulated firms that hold assets for clients. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 60,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Strong legal protections in some jurisdictions; you give up self-custody and on-chain flexibility. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 61,
+   "role": "recap",
+   "vo": "Three lines to keep. Multisig (12.2): several keys, rules enforced on-chain, transparent and verifiable. MPC (multi-party computation): one key is split into shares held by different devices or parties; signatures are created together without ever assembling the key. This is the last lesson of the program. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 62,
+   "role": "action",
+   "vo": "Your action for Institutional-grade custody: MPC, custodians and policy engines: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Close the notebook. The program's lessons end here."
+  },
+  {
+   "n": 63,
+   "role": "outro",
+   "vo": "This is the last On-Chain Operator lesson. Say today's recap once, then close the notebook. Education only, not financial advice."
+  }
+ ]
+}

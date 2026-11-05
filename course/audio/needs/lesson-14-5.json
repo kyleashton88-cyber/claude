@@ -1,0 +1,325 @@
+{
+ "id": "lesson-14-5",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-14-5.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 14.4, Operator capstone and certification. Assemble your complete on-chain bank and have it assessed. Keep that page on the desk. This lesson adds one picture: Read on-chain data directly and build simple read-only tools, so you're not dependent on any one dashboard."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 14.5, Building your own tools: reading contracts, data and simple scripts. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already have a playbook. Automation may watch it. Automation may not hold your keys."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Reading without code: block explorers' Read tabs show a contract's public state (e.g."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "protocol analytics sites, explorers) return TVL, fees, yields and prices as JSON."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "RPC: a node endpoint that lets a script read chain state directly (balances, contract calls)."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Use a reputable provider; reading is free or cheap."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Scripts that only read (never hold keys) can check health factors, pegs and utilisation, and send you alerts."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Rule: tools that read are low-risk; tools that sign follow Lesson 14.2 (scoped, capped, revocable permissions)."
+  },
+  {
+   "n": 11,
+   "role": "body",
+   "vo": "Never put a seed phrase or private key in a script, a file or an environment variable on a shared machine."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: I can read a contract's state on an explorer. If you cannot write it, the line is open."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: My monitoring scripts are read-only and hold no keys. If you cannot write it, the line is open."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Backup alerts exist if my script fails. If you cannot write it, the line is open."
+  },
+  {
+   "n": 15,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Why prefer read-only tools? The answer: They can't move funds, so a bug or breach costs little."
+  },
+  {
+   "n": 16,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Where should a private key go in a script? The answer: Nowhere. Use scoped permissions (14.2) if a tool must act."
+  },
+  {
+   "n": 17,
+   "role": "quiz",
+   "vo": "Check yourself. 3. What's an RPC endpoint? The answer: A node connection that lets software read (and submit to) the blockchain."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "Building your own tools: reading contracts, data and simple scripts."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to read on-chain data directly and build simple read-only tools, so you're not dependent on any one dashboard."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "First, Reading without code: block explorers' Read tabs show a contract's public state (for example a lending market's parameters, your position)."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "Next, Public data APIs (for example protocol analytics sites, explorers) return T.V.L., fees, yields and prices as JSON."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "Then, R.P.C.: a node endpoint that lets a script read chain state directly (balances, contract calls)."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Also, Scripts that only read (never hold keys) can check health factors, pegs and utilisation, and send you alerts."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "And finally, Rule: tools that read are low-risk; tools that sign follow Lesson 14.2 (scoped, capped, revocable permissions)."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Uses only public reads, holds no keys, and can't move funds."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "Worst case if it breaks: you miss an alert, so keep your other alerts (14.1) as a backup."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "First, I can read a contract's state on an explorer."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "Next, My monitoring scripts are read-only and hold no keys."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "And finally, Backup alerts exist if my script fails."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "The answer: They can't move funds, so a bug or breach costs little."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "Where should a private key go in a script?"
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "Use scoped permissions (14.2) if a tool must act."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "The answer: A node connection that lets software read (and submit to) the blockchain."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "Reading without code: block explorers' Read tabs show a contract's public state (for example a lending market's parameters, your position)."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "Public data APIs (for example protocol analytics sites, explorers) return T.V.L., fees."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "R.P.C.: a node endpoint that lets a script read chain state directly (balances, contract calls)."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "Scripts that only read (never hold keys) can check health factors, pegs and utilisation."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "Next up, lesson fourteen point six: Searchers, keepers and arbitrage bots: how they work."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Reading without code: block explorers' Read tabs show a contract's public state (e.g. It sits in Building your own tools: reading contracts, data and simple scripts. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. a lending market's parameters, your position). It sits in Building your own tools: reading contracts, data and simple scripts. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. protocol analytics sites, explorers) return TVL, fees, yields and prices as JSON. It sits in Building your own tools: reading contracts, data and simple scripts. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. RPC: a node endpoint that lets a script read chain state directly (balances, contract calls). It sits in Building your own tools: reading contracts, data and simple scripts. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Use a reputable provider; reading is free or cheap. It sits in Building your own tools: reading contracts, data and simple scripts. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Scripts that only read (never hold keys) can check health factors, pegs and utilisation, and send you alerts. It sits in Building your own tools: reading contracts, data and simple scripts. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Rule: tools that read are low-risk; tools that sign follow Lesson 14.2 (scoped, capped, revocable permissions). It sits in Building your own tools: reading contracts, data and simple scripts. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Never put a seed phrase or private key in a script, a file or an environment variable on a shared machine. It sits in Building your own tools: reading contracts, data and simple scripts. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Read on-chain data directly and build simple read-only tools, so you're not dependent on any one dashboard. It sits in Building your own tools: reading contracts, data and simple scripts. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. I can read a contract's state on an explorer. It sits in Building your own tools: reading contracts, data and simple scripts. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. My monitoring scripts are read-only and hold no keys. It sits in Building your own tools: reading contracts, data and simple scripts. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Backup alerts exist if my script fails. It sits in Building your own tools: reading contracts, data and simple scripts. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Reading without code: block explorers' Read tabs show a contract's public state (e.g. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. a lending market's parameters, your position). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 54,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. protocol analytics sites, explorers) return TVL, fees, yields and prices as JSON. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 55,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. RPC: a node endpoint that lets a script read chain state directly (balances, contract calls). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 56,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Use a reputable provider; reading is free or cheap. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 57,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Scripts that only read (never hold keys) can check health factors, pegs and utilisation, and send you alerts. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 58,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Rule: tools that read are low-risk; tools that sign follow Lesson 14.2 (scoped, capped, revocable permissions). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 59,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Never put a seed phrase or private key in a script, a file or an environment variable on a shared machine. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 60,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Read on-chain data directly and build simple read-only tools, so you're not dependent on any one dashboard. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 61,
+   "role": "recap",
+   "vo": "Three lines to keep. Reading without code: block explorers' Read tabs show a contract's public state (e.g. a lending market's parameters, your position). Next is Lesson 14.6, Searchers, keepers and arbitrage bots: how they work. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 62,
+   "role": "action",
+   "vo": "Your action for Building your own tools: reading contracts, data and simple scripts: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 14.6, Searchers, keepers and arbitrage bots: how they work."
+  },
+  {
+   "n": 63,
+   "role": "outro",
+   "vo": "Next is Lesson 14.6, Searchers, keepers and arbitrage bots: how they work. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

@@ -1,0 +1,505 @@
+{
+ "id": "lesson-05-0",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-05-0.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Module 5, Infrastructure risk. map every bridge, oracle, L2 and contract a position depends on. Keep that page on the desk. This lesson adds one picture: Mastery Starter."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 5.0, Mastery Starter. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You can already split base yield from emissions, and you can name an LST. This module asks what that position sits on: a bridge, a sequencer, an oracle, or a key."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "It takes about 10 minutes and gets you from zero to ready for this module."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "The 60-second version Your position is only as safe as the weakest thing it depends on: the bridge that moved your tokens, the oracle that prices your collateral, the admin key that can upgrade the contract."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Most big DeFi losses came from this plumbing."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "a contract whose logic can be upgraded Timelock."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "a delay before changes take effect Before you start [ ] Modules 0\u20134 Your first safe step On a block explorer, open a protocol you use: is it a proxy?"
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Knows which chain, bridge and oracle each position uses Practitioner."
+  },
+  {
+   "n": 11,
+   "role": "body",
+   "vo": "Draws a full dependency map and reads audits properly Master."
+  },
+  {
+   "n": 12,
+   "role": "body",
+   "vo": "Operates across EVM and non-EVM chains with capped bridge and wrapper exposure You've mastered this module when\u2026 \u2026you can draw the complete dependency map of any position and rate each link."
+  },
+  {
+   "n": 13,
+   "role": "body",
+   "vo": "The Mastery Starter for Module Five: Infrastructure Risk."
+  },
+  {
+   "n": 14,
+   "role": "body",
+   "vo": "By the end, you'll know the five words this module runs on, and exactly how to tell when you've mastered it."
+  },
+  {
+   "n": 15,
+   "role": "body",
+   "vo": "First, the sixty-second version: why your position is only ever as safe as the weakest thing it actually depends on."
+  },
+  {
+   "n": 16,
+   "role": "body",
+   "vo": "Second, the five words you'll need, each one drawn out."
+  },
+  {
+   "n": 17,
+   "role": "body",
+   "vo": "Third, what to have ready before you start."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "Fourth, your first safe step: checking one protocol you already use, directly on a block explorer."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "And finally, the mastery ladder, so you know exactly what finishing this module looks like."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "Your position is only ever as safe as the single weakest thing it actually depends on: the bridge that moved your tokens across, the oracle that prices your collateral, or the admin key that can upgrade the contract holding your funds, out from under you."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "Most of DeFi's largest losses in its entire history came from exactly this plumbing, not from price moves at all."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "Here's what this module actually covers, laid out as a map."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Every position you hold genuinely depends on a specific chain, a specific bridge if your assets ever crossed one, a specific oracle pricing whatever it's collateralised by, and a specific contract, which itself depends on whoever holds the keys to upgrade it."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "All of it is exactly what this module teaches you to see, and to rate."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Worth sitting with why this module exists at all, given how much attention usually goes to price risk instead."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "A protocol can have genuinely sound tokenomics, a fairly priced asset, and a sensible strategy, and still lose everything, instantly, through a single compromised bridge, a manipulated oracle, or a malicious contract upgrade."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Infrastructure risk is invisible, right up until the moment it isn't."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "Here's the actual sequence a bridge runs, every single time."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "You send an asset in, on its original chain."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "The bridge locks, or burns, that original asset."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "And it mints, or releases, a representation of it, on the destination chain."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "Every one of those steps depends on the bridge's own security model actually holding, since your asset's real value now lives entirely in that bridge's own hands, for as long as it's crossed."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "A cheaper network, built directly on top of Ethereum, specifically to process transactions faster and more cheaply, while still relying on Ethereum itself for its underlying security."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "Different layer twos make genuinely different trade-offs in exactly how they inherit that security, which is precisely why this module treats each one as its own dependency to check, not as interchangeable copies of each other."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "Here's exactly what an oracle does, and why contracts can't simply know a price on their own."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "A smart contract has no way to see the outside world directly."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "An oracle feeds it real, external prices, specifically so it can value collateral, trigger liquidations, or settle a trade correctly."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "If that oracle is wrong, manipulated, or simply delayed, every single decision the contract makes downstream of it inherits that same error."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "Why does a smart contract actually need an oracle at all?"
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "The answer: a contract has no way to see real-world prices on its own; an oracle feeds it that external data directly."
+  },
+  {
+   "n": 41,
+   "role": "body",
+   "vo": "A contract whose actual logic can be upgraded later, after it's already deployed and already holding user funds."
+  },
+  {
+   "n": 42,
+   "role": "body",
+   "vo": "That's genuinely useful, since it lets a team fix real bugs without needing everyone to migrate to an entirely new contract."
+  },
+  {
+   "n": 43,
+   "role": "body",
+   "vo": "It also means whoever holds the upgrade key can, in principle, change what that contract does at any time, which is exactly why word five matters so much."
+  },
+  {
+   "n": 44,
+   "role": "body",
+   "vo": "A mandatory delay, built directly into the contract itself, between when an upgrade is proposed and when it's actually allowed to take effect."
+  },
+  {
+   "n": 45,
+   "role": "body",
+   "vo": "That delay is what gives you, and everyone else watching, a real, actual window to notice a malicious or mistaken change, before it can ever take hold."
+  },
+  {
+   "n": 46,
+   "role": "body",
+   "vo": "A proxy without a timelock can change instantly, with zero warning at all."
+  },
+  {
+   "n": 47,
+   "role": "body",
+   "vo": "Here's all five words, tied together into one single, realistic position, so you can see exactly how they actually stack."
+  },
+  {
+   "n": 48,
+   "role": "body",
+   "vo": "You bridge an asset onto a layer two, to save on gas."
+  },
+  {
+   "n": 49,
+   "role": "body",
+   "vo": "You deposit it as collateral into a lending protocol there."
+  },
+  {
+   "n": 50,
+   "role": "body",
+   "vo": "And the lending protocol itself is a proxy contract, upgradeable by its own team, hopefully behind a genuine timelock."
+  },
+  {
+   "n": 51,
+   "role": "body",
+   "vo": "Every one of those links is a separate thing that has to hold, for your position to stay exactly as safe as you assume it is."
+  },
+  {
+   "n": 52,
+   "role": "body",
+   "vo": "What does a timelock actually give you, specifically?"
+  },
+  {
+   "n": 53,
+   "role": "body",
+   "vo": "The answer: a real window of time to notice a malicious, or simply mistaken, contract upgrade, before it's actually allowed to take effect."
+  },
+  {
+   "n": 54,
+   "role": "body",
+   "vo": "Here's what this module assumes you're already comfortable with, before diving in."
+  },
+  {
+   "n": 55,
+   "role": "body",
+   "vo": "Everything from Module zero: wallets, networks, and gas."
+  },
+  {
+   "n": 56,
+   "role": "body",
+   "vo": "And Module four's read on where yield genuinely comes from, and what risk it's paying for."
+  },
+  {
+   "n": 57,
+   "role": "body",
+   "vo": "Here's exactly what to do, before this module goes any deeper into specific infrastructure risks."
+  },
+  {
+   "n": 58,
+   "role": "body",
+   "vo": "Open its main contract directly on a block explorer."
+  },
+  {
+   "n": 59,
+   "role": "body",
+   "vo": "Check whether it's a proxy contract at all."
+  },
+  {
+   "n": 60,
+   "role": "body",
+   "vo": "If it is, check who's actually allowed to upgrade it."
+  },
+  {
+   "n": 61,
+   "role": "body",
+   "vo": "And check whether a timelock is genuinely in place, and how long its delay actually runs."
+  },
+  {
+   "n": 62,
+   "role": "body",
+   "vo": "Worth being precise about what to actually do if you find no timelock at all, or one with a genuinely short delay, since that's a real, specific finding, not just trivia."
+  },
+  {
+   "n": 63,
+   "role": "body",
+   "vo": "It doesn't automatically mean walk away; plenty of legitimate protocols are still early, or deliberately choose speed over that particular safeguard."
+  },
+  {
+   "n": 64,
+   "role": "body",
+   "vo": "It does mean you've just identified one real, specific risk, worth weighing directly against whatever that position is actually paying you."
+  },
+  {
+   "n": 65,
+   "role": "body",
+   "vo": "Worth doing this on a protocol you already genuinely hold something in, not a hypothetical one, since the entire skill this module builds is reading real infrastructure under real conditions."
+  },
+  {
+   "n": 66,
+   "role": "body",
+   "vo": "You may be surprised by what you find, in either direction: a well-protected upgrade path, or one with far less warning built in than you assumed."
+  },
+  {
+   "n": 67,
+   "role": "body",
+   "vo": "Here's the first two rungs on this module's ladder, side by side."
+  },
+  {
+   "n": 68,
+   "role": "body",
+   "vo": "At the beginner level, you simply know which chain, which bridge, and which oracle each of your own positions actually uses, the basic map."
+  },
+  {
+   "n": 69,
+   "role": "body",
+   "vo": "At the practitioner level, you go further: drawing the complete dependency map for a position, and actually reading its audits properly, rather than just checking that one exists."
+  },
+  {
+   "n": 70,
+   "role": "body",
+   "vo": "Here's what drawing a full dependency map, at practitioner level, actually looks like in practice, concretely."
+  },
+  {
+   "n": 71,
+   "role": "body",
+   "vo": "Start with the chain itself, and its own security model."
+  },
+  {
+   "n": 72,
+   "role": "body",
+   "vo": "Add the bridge, if the asset ever crossed one, and its own trust assumptions."
+  },
+  {
+   "n": 73,
+   "role": "body",
+   "vo": "Add the oracle pricing anything held as collateral."
+  },
+  {
+   "n": 74,
+   "role": "body",
+   "vo": "And add the contract itself, noting specifically whether it's a proxy, and whether a timelock actually protects it."
+  },
+  {
+   "n": 75,
+   "role": "body",
+   "vo": "And here's the top rung, master level, the one this module ultimately builds toward."
+  },
+  {
+   "n": 76,
+   "role": "body",
+   "vo": "At that level, you can operate confidently across both E.V.M."
+  },
+  {
+   "n": 77,
+   "role": "body",
+   "vo": "chains, with your bridge and wrapper exposure deliberately capped, on purpose, rather than simply accumulated as a byproduct of wherever opportunity happened to lead you."
+  },
+  {
+   "n": 78,
+   "role": "body",
+   "vo": "Here's how you'll actually know you've mastered this entire module, in one sentence."
+  },
+  {
+   "n": 79,
+   "role": "body",
+   "vo": "You can draw the complete dependency map of any position, for any protocol, and rate every single link in that chain, without needing to be told which parts matter, because you already recognise the pattern."
+  },
+  {
+   "n": 80,
+   "role": "body",
+   "vo": "Your position is only as safe as its weakest dependency, and most of DeFi's largest losses came from exactly that plumbing, not price moves."
+  },
+  {
+   "n": 81,
+   "role": "body",
+   "vo": "The five words: bridge, layer two, oracle, proxy, and timelock."
+  },
+  {
+   "n": 82,
+   "role": "body",
+   "vo": "Your first safe step is checking one real protocol's own contract, directly, on a block explorer."
+  },
+  {
+   "n": 83,
+   "role": "body",
+   "vo": "And you'll know you've mastered this module when you can draw, and rate, the complete dependency map of any position, on sight."
+  },
+  {
+   "n": 84,
+   "role": "body",
+   "vo": "Pick one protocol you already use, and check it directly on a block explorer today."
+  },
+  {
+   "n": 85,
+   "role": "body",
+   "vo": "Next up, Lesson five point one: bridges and trust assumptions."
+  },
+  {
+   "n": 86,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. It takes about 10 minutes and gets you from zero to ready for this module. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 87,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The 60-second version Your position is only as safe as the weakest thing it depends on: the bridge that moved your tokens, the oracle that prices your collateral, the admin key that can upgrade the contract. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 88,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Most big DeFi losses came from this plumbing. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 89,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. moves tokens between chains Layer 2. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 90,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. a cheaper network built on Ethereum Oracle. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 91,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. a contract whose logic can be upgraded Timelock. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 92,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. a delay before changes take effect Before you start [ ] Modules 0\u20134 Your first safe step On a block explorer, open a protocol you use: is it a proxy? It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 93,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Knows which chain, bridge and oracle each position uses Practitioner. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 94,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Draws a full dependency map and reads audits properly Master. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 95,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Operates across EVM and non-EVM chains with capped bridge and wrapper exposure You've mastered this module when\u2026 \u2026you can draw the complete dependency map of any position and rate each link. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 96,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Mastery Starter. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 97,
+   "role": "recap",
+   "vo": "Three lines to keep. It takes about 10 minutes and gets you from zero to ready for this module. The 60-second version Your position is only as safe as the weakest thing it depends on: the bridge that moved your tokens, the oracle that prices your collateral, the admin key that can upgrade the contract. Next is Lesson 5.1, Bridges and trust assumptions. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 98,
+   "role": "action",
+   "vo": "Your action for Mastery Starter: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 5.1, Bridges and trust assumptions."
+  },
+  {
+   "n": 99,
+   "role": "outro",
+   "vo": "Next is Lesson 5.1, Bridges and trust assumptions. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

@@ -1,0 +1,325 @@
+{
+ "id": "lesson-14-4",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-14-4.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 14.3, Operating procedures: multisig signing, change control, reviews. Run your bank with procedures that prevent single-point mistakes. Keep that page on the desk. This lesson adds one picture: Assemble your complete on-chain bank and have it assessed."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 14.4, Operator capstone and certification. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already have a playbook. Automation may watch it. Automation may not hold your keys."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Objective Assemble your complete on-chain bank and have it assessed."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Explanation \u2014 the operator capstone Submit one document (template in 07-program-operations.md) containing: 1."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Balance sheet with equity, LTV and runway (12.1) 2."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Custody policy and recovery-test log (12.2) 3."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Books template and letter of instruction location (12.6; never the seed) 7."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Income portfolio with risk-adjusted expected income (13.3) 8."
+  },
+  {
+   "n": 11,
+   "role": "body",
+   "vo": "Stress test, five scenarios, with fixes (11.4) 10."
+  },
+  {
+   "n": 12,
+   "role": "body",
+   "vo": "Incident playbook (11.5), alert sheet (14.1) and automation permissions (14.2) Certification levels (assessed against the rubric in 07-program-operations.md): Analyst: passed the analyst capstone (Modules 6\u20137) Operator: passed the operator capstone Operator with distinction: operator capstone scored \u2265 90%, plus one quarter of books kept to standard Checklist [ ] All ten sections complete [ ] Calculators used for every number [ ] Submitted (Live tier: booked for review) Quiz."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: All ten sections complete. If you cannot write it, the line is open."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Calculators used for every number. If you cannot write it, the line is open."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Submitted (Live tier: booked for review). If you cannot write it, the line is open."
+  },
+  {
+   "n": 16,
+   "role": "quiz",
+   "vo": "Check yourself. 1. What must never appear in the capstone? The answer: Seed phrases, private keys or anything that grants access."
+  },
+  {
+   "n": 17,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Which lesson's output shows income is sustainable? The answer: 13.4: the payout policy, based on risk-adjusted expected income."
+  },
+  {
+   "n": 18,
+   "role": "quiz",
+   "vo": "Check yourself. 3. What's needed for \"with distinction\"? The answer: \u2265 90% on the operator capstone plus a quarter of books kept to standard."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to assemble your complete on-chain bank and have it assessed."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "Submit one document (template in 07-program-operations.md) containing: Certification levels (assessed against the rubric in 07-program-operations.md): First, Balance sheet with equity, L.T.V."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "Next, Custody policy and recovery-test log (12.2)."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "Then, Credit policy with action levels (12.3)."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Also, Liquidity ladder T0 to T3 (12.4)."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "On top of that, Lending policy with risk assumptions (12.5)."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "And Books template and letter of instruction location (12.6; never the seed)."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "Plus, Income portfolio with risk-adjusted expected income (13.3)."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "One more: Stress test, five scenarios, with fixes (11.4)."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "One more: Incident playbook (11.5), alert sheet (14.1) and automation permissions (14.2)."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "One more: Analyst: passed the analyst capstone (Modules 6 to 7)."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "And finally, Operator with distinction: operator capstone scored at least 90%, plus one quarter of books kept to standard."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "And finally, Submitted (Live tier: booked for review)."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "The answer: Seed phrases, private keys or anything that grants access."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "The answer: 13.4: the payout policy, based on risk-adjusted expected income."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "The answer: at least 90% on the operator capstone plus a quarter of books kept to standard."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "Next up, lesson fourteen point five: Building your own tools: reading contracts, data and simple scripts."
+  },
+  {
+   "n": 37,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Objective Assemble your complete on-chain bank and have it assessed. It sits in Operator capstone and certification. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 38,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Explanation \u2014 the operator capstone Submit one document (template in 07-program-operations.md) containing: 1. It sits in Operator capstone and certification. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 39,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Balance sheet with equity, LTV and runway (12.1) 2. It sits in Operator capstone and certification. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Custody policy and recovery-test log (12.2) 3. It sits in Operator capstone and certification. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Credit policy with action levels (12.3) 4. It sits in Operator capstone and certification. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Liquidity ladder T0\u2013T3 (12.4) 5. It sits in Operator capstone and certification. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Lending policy with risk assumptions (12.5) 6. It sits in Operator capstone and certification. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Books template and letter of instruction location (12.6; never the seed) 7. It sits in Operator capstone and certification. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Income portfolio with risk-adjusted expected income (13.3) 8. It sits in Operator capstone and certification. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Stress test, five scenarios, with fixes (11.4) 10. It sits in Operator capstone and certification. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Incident playbook (11.5), alert sheet (14.1) and automation permissions (14.2) Certification levels (assessed against the rubric in 07-program-operations.md): Analyst: passed the analyst capstone (Modules 6\u20137) Operator: passed the operator capstone Operator with distinction: operator capstone scored \u2265 90%, plus one quarter of books kept to standard Checklist [ ] All ten sections complete [ ] Calculators used for every number [ ] Submitted (Live tier: booked for review) Quiz. It sits in Operator capstone and certification. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Assemble your complete on-chain bank and have it assessed. It sits in Operator capstone and certification. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. All ten sections complete. It sits in Operator capstone and certification. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Calculators used for every number. It sits in Operator capstone and certification. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Submitted (Live tier: booked for review). It sits in Operator capstone and certification. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Objective Assemble your complete on-chain bank and have it assessed. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Explanation \u2014 the operator capstone Submit one document (template in 07-program-operations.md) containing: 1. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 54,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Balance sheet with equity, LTV and runway (12.1) 2. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 55,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Custody policy and recovery-test log (12.2) 3. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 56,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Credit policy with action levels (12.3) 4. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 57,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Liquidity ladder T0\u2013T3 (12.4) 5. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 58,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Lending policy with risk assumptions (12.5) 6. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 59,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Books template and letter of instruction location (12.6; never the seed) 7. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 60,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Income portfolio with risk-adjusted expected income (13.3) 8. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 61,
+   "role": "recap",
+   "vo": "Three lines to keep. Objective Assemble your complete on-chain bank and have it assessed. Explanation \u2014 the operator capstone Submit one document (template in 07-program-operations.md) containing: 1. Next is Lesson 14.5, Building your own tools: reading contracts, data and simple scripts. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 62,
+   "role": "action",
+   "vo": "Your action for Operator capstone and certification: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 14.5, Building your own tools: reading contracts, data and simple scripts."
+  },
+  {
+   "n": 63,
+   "role": "outro",
+   "vo": "Next is Lesson 14.5, Building your own tools: reading contracts, data and simple scripts. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

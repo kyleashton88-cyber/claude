@@ -1,0 +1,360 @@
+{
+ "id": "lesson-08-7",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-08-7.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 8.6, Psychology and discipline. Recognise the behaviours that turn good strategies into losses, and build rules that stop them. Keep that page on the desk. This lesson adds one picture: Put numbers on portfolio risk and size positions from them."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 8.7, Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You can already pull a number off a chain. The operating system is what you do with it: a register, a journal, and a kill rule."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Daily \u03c3 \u2248 annual \u03c3 \u00f7 \u221a365 (crypto trades every day)."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Value at risk (VaR): a loss level you'd expect to exceed only rarely (e.g."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "It assumes normal returns; crypto has fat tails, so real losses exceed VaR more often."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Use it as a floor, plus stress tests (11.4)."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Max drawdown: the largest peak-to-trough fall."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Ask: could I live through it, and would my policies survive it?"
+  },
+  {
+   "n": 11,
+   "role": "body",
+   "vo": "Correlation: in crashes, correlations between crypto assets rise towards 1."
+  },
+  {
+   "n": 12,
+   "role": "body",
+   "vo": "Diversifying within crypto helps less when you need it most."
+  },
+  {
+   "n": 13,
+   "role": "body",
+   "vo": "Sizing: volatility targeting (size so each position contributes similar risk); the Kelly criterion gives a theoretical maximum bet size from edge and odds, but estimates are noisy, so professionals use a small fraction of it or skip it."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "Work the example on paper. $100,000 of ETH at 70% annual volatility: defi_calc.py var --position 100000 --vol 70 \u2192 daily \u03c3 \u2248 3.66%, 1-day 95% VaR \u2248 $6,046. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "Work the example on paper. Real single-day falls have been far larger (in March 2020, ETH fell by roughly 40% in a day). Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 16,
+   "role": "demo",
+   "vo": "Work the example on paper. So: VaR for day-to-day sizing, stress tests for survival. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 17,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Volatility and VaR computed for my largest positions. If you cannot write it, the line is open."
+  },
+  {
+   "n": 18,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Portfolio survives the worst historical drawdown of what it holds. If you cannot write it, the line is open."
+  },
+  {
+   "n": 19,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Correlation assumed to rise in stress. If you cannot write it, the line is open."
+  },
+  {
+   "n": 20,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Sizing rule written (e.g. volatility targeting). If you cannot write it, the line is open."
+  },
+  {
+   "n": 21,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Annual volatility 50%. Daily \u03c3? The answer: About 2.6% (50 \u00f7 \u221a365)."
+  },
+  {
+   "n": 22,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Why is VaR a floor, not a ceiling? The answer: It assumes normal returns; crypto's fat tails make big losses more common."
+  },
+  {
+   "n": 23,
+   "role": "quiz",
+   "vo": "Check yourself. 3. What happens to correlations in a crash? The answer: They tend to rise towards 1."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "Quantitative risk: volatility, value at risk, drawdown, correlation and sizing."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to put numbers on portfolio risk and size positions from them."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "First, Volatility (sigma): annualised standard deviation of returns."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Daily sigma about annual sigma divided by the square root of 365 (crypto trades every day)."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "Next, Value at risk (value at risk): a loss level you'd expect to exceed only rarely (for example 1 day in 20 at 95%)."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "Parametric 1-day value at risk about 1.65 times daily sigma times position."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "It assumes normal returns; crypto has fat tails, so real losses exceed value at risk more often."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "Then, Max drawdown: the largest peak-to-trough fall."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "Also, Correlation: in crashes, correlations between crypto assets rise towards 1."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "And finally, Sizing: volatility targeting (size so each position contributes similar risk); the Kelly criterion gives a theoretical maximum bet size from edge and odds, but estimates are noisy, so professionals use a small fraction of it or skip it."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "$100,000 of ETH at 70% annual volatility: the calculator gives daily sigma about 3.66%, 1-day 95% value at risk about $6,046."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "Real single-day falls have been far larger (in March 2020, ETH fell by roughly 40% in a day)."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "So: value at risk for day-to-day sizing, stress tests for survival."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "First, Volatility and value at risk computed for my largest positions."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "Next, Portfolio survives the worst historical drawdown of what it holds."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "And finally, Sizing rule written (for example volatility targeting)."
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "The answer: About 2.6% (50 divided by the square root of 365)."
+  },
+  {
+   "n": 41,
+   "role": "body",
+   "vo": "Why is value at risk a floor, not a ceiling?"
+  },
+  {
+   "n": 42,
+   "role": "body",
+   "vo": "The answer: It assumes normal returns; crypto's fat tails make big losses more common."
+  },
+  {
+   "n": 43,
+   "role": "body",
+   "vo": "The answer: They tend to rise towards 1."
+  },
+  {
+   "n": 44,
+   "role": "body",
+   "vo": "Value at risk (value at risk): a loss level you'd expect to exceed only rarely (for example 1 day in 20 at 95%)."
+  },
+  {
+   "n": 45,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 46,
+   "role": "body",
+   "vo": "Next up, lesson nine point zero: Mastery Starter."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Volatility (\u03c3): annualised standard deviation of returns. It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Daily \u03c3 \u2248 annual \u03c3 \u00f7 \u221a365 (crypto trades every day). It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Value at risk (VaR): a loss level you'd expect to exceed only rarely (e.g. It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. 1 day in 20 at 95%). It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Parametric 1-day VaR \u2248 1.65 \u00d7 daily \u03c3 \u00d7 position. It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. It assumes normal returns; crypto has fat tails, so real losses exceed VaR more often. It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Use it as a floor, plus stress tests (11.4). It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 54,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Max drawdown: the largest peak-to-trough fall. It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 55,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Ask: could I live through it, and would my policies survive it? It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 56,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Correlation: in crashes, correlations between crypto assets rise towards 1. It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 57,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Diversifying within crypto helps less when you need it most. It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 58,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Sizing: volatility targeting (size so each position contributes similar risk); the Kelly criterion gives a theoretical maximum bet size from edge and odds, but estimates are noisy, so professionals use a small fraction of it or skip it. It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 59,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. $100,000 of ETH at 70% annual volatility: defi_calc.py var --position 100000 --vol 70 \u2192 daily \u03c3 \u2248 3.66%, 1-day 95% VaR \u2248 $6,046. It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 60,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Real single-day falls have been far larger (in March 2020, ETH fell by roughly 40% in a day). It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 61,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. So: VaR for day-to-day sizing, stress tests for survival. It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 62,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Put numbers on portfolio risk and size positions from them. It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 63,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Volatility and VaR computed for my largest positions. It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 64,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Portfolio survives the worst historical drawdown of what it holds. It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 65,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Correlation assumed to rise in stress. It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 66,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Sizing rule written (e.g. volatility targeting). It sits in Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 67,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Volatility (\u03c3): annualised standard deviation of returns. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 68,
+   "role": "recap",
+   "vo": "Three lines to keep. Volatility (\u03c3): annualised standard deviation of returns. Daily \u03c3 \u2248 annual \u03c3 \u00f7 \u221a365 (crypto trades every day). This is the last lesson of the program. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 69,
+   "role": "action",
+   "vo": "Your action for Quantitative risk: volatility, VaR, drawdown, correlation and sizing: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Close the notebook. The program's lessons end here."
+  },
+  {
+   "n": 70,
+   "role": "outro",
+   "vo": "This is the last On-Chain Operator lesson. Say today's recap once, then close the notebook. Education only, not financial advice."
+  }
+ ]
+}

@@ -1,0 +1,270 @@
+{
+ "id": "lesson-11-2",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-11-2.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 11.1, Hedging price exposure with perps and options. Reduce price exposure deliberately, and know what each hedge costs. Keep that page on the desk. This lesson adds one picture: Evaluate on-chain cover products as insurance: what they pay, when, and what they don't."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 11.2, Depeg, protocol and smart-contract cover. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already know a health factor and a stop. A hedge is another written path. It is not a claim that the risk is gone."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Cover protocols sell protection against defined events (a protocol hack, a depeg beyond a threshold)."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Read: what's covered (exact wording), exclusions, claim process (who decides, how long), payout asset, and the cover provider's own solvency and contract risk."
+  },
+  {
+   "n": 7,
+   "role": "demo",
+   "vo": "Work the example on paper. Cover $50,000 in a lending protocol at 2.5%/yr = $1,250/yr. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 8,
+   "role": "demo",
+   "vo": "Work the example on paper. If your risk-adjusted yield there is 4.5%, cover takes more than half of it. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 9,
+   "role": "demo",
+   "vo": "Work the example on paper. Worth it for a large, concentrated position; often not for a small, diversified one. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 10,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Cover wording and exclusions read. If you cannot write it, the line is open."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Claim process and payout asset understood. If you cannot write it, the line is open."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Cost compared with the yield it protects. If you cannot write it, the line is open."
+  },
+  {
+   "n": 13,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Name two things to check in cover terms. The answer: Any two: covered events, exclusions, claim process, payout asset, provider solvency."
+  },
+  {
+   "n": 14,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Cover costs 3%/yr on a 5% yield. Net? The answer: About 2%."
+  },
+  {
+   "n": 15,
+   "role": "quiz",
+   "vo": "Check yourself. 3. Does cover remove all risk? The answer: No. The cover provider has its own claim, solvency and contract risks."
+  },
+  {
+   "n": 16,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to evaluate on-chain cover products as insurance: what they pay, when, and what they don't."
+  },
+  {
+   "n": 17,
+   "role": "body",
+   "vo": "Cover $50,000 in a lending protocol at 2.5% a year = $1,250 a year."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "If your risk-adjusted yield there is 4.5%, cover takes more than half of it."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "Worth it for a large, concentrated position; often not for a small, diversified one."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "And finally, Cost compared with the yield it protects."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "Name two things to check in cover terms."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "The answer: Any two: covered events, exclusions, claim process, payout asset, provider solvency."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Cover costs 3% a year on a 5% yield."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "The cover provider has its own claim, solvency and contract risks."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "Next up, lesson eleven point three: Liquidation protection: buffers, alerts and automated deleveraging."
+  },
+  {
+   "n": 27,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Cover protocols sell protection against defined events (a protocol hack, a depeg beyond a threshold). It sits in Depeg, protocol and smart-contract cover. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 28,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Read: what's covered (exact wording), exclusions, claim process (who decides, how long), payout asset, and the cover provider's own solvency and contract risk. It sits in Depeg, protocol and smart-contract cover. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 29,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Cover $50,000 in a lending protocol at 2.5%/yr = $1,250/yr. It sits in Depeg, protocol and smart-contract cover. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 30,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. If your risk-adjusted yield there is 4.5%, cover takes more than half of it. It sits in Depeg, protocol and smart-contract cover. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 31,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Worth it for a large, concentrated position; often not for a small, diversified one. It sits in Depeg, protocol and smart-contract cover. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 32,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Evaluate on-chain cover products as insurance: what they pay, when, and what they don't. It sits in Depeg, protocol and smart-contract cover. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 33,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Cover wording and exclusions read. It sits in Depeg, protocol and smart-contract cover. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 34,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Claim process and payout asset understood. It sits in Depeg, protocol and smart-contract cover. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 35,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Cost compared with the yield it protects. It sits in Depeg, protocol and smart-contract cover. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 36,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Cover protocols sell protection against defined events (a protocol hack, a depeg beyond a threshold). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 37,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Read: what's covered (exact wording), exclusions, claim process (who decides, how long), payout asset, and the cover provider's own solvency and contract risk. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 38,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Cover $50,000 in a lending protocol at 2.5%/yr = $1,250/yr. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 39,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. If your risk-adjusted yield there is 4.5%, cover takes more than half of it. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Worth it for a large, concentrated position; often not for a small, diversified one. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Evaluate on-chain cover products as insurance: what they pay, when, and what they don't. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Cover wording and exclusions read. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Claim process and payout asset understood. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Cost compared with the yield it protects. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Cover protocols sell protection against defined events (a protocol hack, a depeg beyond a threshold). One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Read: what's covered (exact wording), exclusions, claim process (who decides, how long), payout asset, and the cover provider's own solvency and contract risk. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Cover $50,000 in a lending protocol at 2.5%/yr = $1,250/yr. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. If your risk-adjusted yield there is 4.5%, cover takes more than half of it. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Worth it for a large, concentrated position; often not for a small, diversified one. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 50,
+   "role": "recap",
+   "vo": "Three lines to keep. Cover protocols sell protection against defined events (a protocol hack, a depeg beyond a threshold). Read: what's covered (exact wording), exclusions, claim process (who decides, how long), payout asset, and the cover provider's own solvency and contract risk. Next is Lesson 11.3, Liquidation protection: buffers, alerts and automated deleveraging. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 51,
+   "role": "action",
+   "vo": "Your action for Depeg, protocol and smart-contract cover: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 11.3, Liquidation protection: buffers, alerts and automated deleveraging."
+  },
+  {
+   "n": 52,
+   "role": "outro",
+   "vo": "Next is Lesson 11.3, Liquidation protection: buffers, alerts and automated deleveraging. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

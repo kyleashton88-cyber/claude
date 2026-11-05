@@ -1,0 +1,290 @@
+{
+ "id": "lesson-11-4",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-11-4.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 11.3, Liquidation protection: buffers, alerts and automated deleveraging. Make liquidation practically impossible with buffers, alerts and pre-computed repayment. Keep that page on the desk. This lesson adds one picture: Run standard shock scenarios on your book and fix what fails before markets test it."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 11.4, Stress-testing a portfolio. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already know a health factor and a stop. A hedge is another written path. It is not a claim that the risk is gone."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Scenarios every operator runs: crypto \u221250% in a day \u00b7 a stablecoin depegs 10% \u00b7 borrow rates spike to 20% \u00b7 your largest protocol is hacked \u00b7 your main L2 halts for 48h."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "For each: loss, liquidations, liquidity, and whether the payout policy survives."
+  },
+  {
+   "n": 7,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Five scenarios run on the current book. If you cannot write it, the line is open."
+  },
+  {
+   "n": 8,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Every \"fail\" has a fix (smaller cap, bigger buffer, move the reserve). If you cannot write it, the line is open."
+  },
+  {
+   "n": 9,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Re-run quarterly and after big changes. If you cannot write it, the line is open."
+  },
+  {
+   "n": 10,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Why did the collateral position survive \u221250%? The answer: It started at HF 4.0; halving the price took it to 2.0."
+  },
+  {
+   "n": 11,
+   "role": "quiz",
+   "vo": "Check yourself. 2. What does the L2-halt scenario test? The answer: Whether your liquidity depends on a single chain."
+  },
+  {
+   "n": 12,
+   "role": "quiz",
+   "vo": "Check yourself. 3. What's the output of a stress test? The answer: Fixes: smaller caps, bigger buffers, better-placed reserves."
+  },
+  {
+   "n": 13,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to run standard shock scenarios on your book and fix what fails before markets test it."
+  },
+  {
+   "n": 14,
+   "role": "body",
+   "vo": "Scenarios every operator runs: crypto minus 50% in a day times a stablecoin depegs 10% , borrow rates spike to 20% , your largest protocol is hacked times your main layer two halts for 48h."
+  },
+  {
+   "n": 15,
+   "role": "body",
+   "vo": "Holdings: ETH spot $60k times liquid staking token collateral $60k with $12k debt times stable lending $50k ($25k each in two protocols) , ETH/U.S.D.C."
+  },
+  {
+   "n": 16,
+   "role": "body",
+   "vo": "ETH minus 50%, Spot minus $30k; collateral minus $30k (health factor 4.0 to 2.0, no liquidation); L.P."
+  },
+  {
+   "n": 17,
+   "role": "body",
+   "vo": "$20k to $14.1k (minus $5.9k) to minus $65.9k (minus 32.9%), Survives, but the payout must fall."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "One stablecoin minus 10%, minus $2.5k on $25k, Yes."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "Borrow rate 20%, Interest on $12k rises from about $600 to $2,400 a year, Yes: covered by reserve."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "One lending protocol hacked (total loss), minus $25k (minus 12.5%), Survives; cap was 12.5%."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "layer two halted 48h, Positions frozen; the reserve on another chain covers needs, Yes, if the reserve isn't on the same layer two."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "First, Five scenarios run on the current book."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Next, every \"fail\" has a fix (smaller cap, bigger buffer, move the reserve)."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "And finally, Re-run quarterly and after big changes."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Why did the collateral position survive minus 50%?"
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "The answer: It started at health factor 4.0; halving the price took it to 2.0."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "What does the layer two-halt scenario test?"
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "The answer: Whether your liquidity depends on a single chain."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "The answer: Fixes: smaller caps, bigger buffers, better-placed reserves."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "Next up, lesson eleven point five: Incident response: the first 60 minutes."
+  },
+  {
+   "n": 32,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Scenarios every operator runs: crypto \u221250% in a day \u00b7 a stablecoin depegs 10% \u00b7 borrow rates spike to 20% \u00b7 your largest protocol is hacked \u00b7 your main L2 halts for 48h. It sits in Stress-testing a portfolio. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 33,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. For each: loss, liquidations, liquidity, and whether the payout policy survives. It sits in Stress-testing a portfolio. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 34,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Run standard shock scenarios on your book and fix what fails before markets test it. It sits in Stress-testing a portfolio. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 35,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Five scenarios run on the current book. It sits in Stress-testing a portfolio. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 36,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Every \"fail\" has a fix (smaller cap, bigger buffer, move the reserve). It sits in Stress-testing a portfolio. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 37,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Re-run quarterly and after big changes. It sits in Stress-testing a portfolio. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 38,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Scenarios every operator runs: crypto \u221250% in a day \u00b7 a stablecoin depegs 10% \u00b7 borrow rates spike to 20% \u00b7 your largest protocol is hacked \u00b7 your main L2 halts for 48h. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 39,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. For each: loss, liquidations, liquidity, and whether the payout policy survives. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Run standard shock scenarios on your book and fix what fails before markets test it. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Five scenarios run on the current book. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Every \"fail\" has a fix (smaller cap, bigger buffer, move the reserve). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Re-run quarterly and after big changes. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Scenarios every operator runs: crypto \u221250% in a day \u00b7 a stablecoin depegs 10% \u00b7 borrow rates spike to 20% \u00b7 your largest protocol is hacked \u00b7 your main L2 halts for 48h. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. For each: loss, liquidations, liquidity, and whether the payout policy survives. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Run standard shock scenarios on your book and fix what fails before markets test it. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Five scenarios run on the current book. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Every \"fail\" has a fix (smaller cap, bigger buffer, move the reserve). One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Re-run quarterly and after big changes. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Teach this line back, as if the previous minute had no sound. Scenarios every operator runs: crypto \u221250% in a day \u00b7 a stablecoin depegs 10% \u00b7 borrow rates spike to 20% \u00b7 your largest protocol is hacked \u00b7 your main L2 halts for 48h. Say it in one breath. Then say the reason in a second breath. A classmate should be able to point at your drawing and mark it right or wrong. If they cannot, the line is not finished. Stamp Example. This check is understanding, not a trade."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 2, still on the same lesson. Take this line slowly. Scenarios every operator runs: crypto \u221250% in a day \u00b7 a stablecoin depegs 10% \u00b7 borrow rates spike to 20% \u00b7 your largest protocol is hacked \u00b7 your main L2 halts for 48h. It sits in Stress-testing a portfolio. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent. Tie the line to the page you brought in from the previous lesson."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 2, still on the same lesson. Take this line slowly. For each: loss, liquidations, liquidity, and whether the payout policy survives. It sits in Stress-testing a portfolio. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent. Tie the line to the page you brought in from the previous lesson."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 2, still on the same lesson. Take this line slowly. Run standard shock scenarios on your book and fix what fails before markets test it. It sits in Stress-testing a portfolio. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent. Tie the line to the page you brought in from the previous lesson."
+  },
+  {
+   "n": 54,
+   "role": "recap",
+   "vo": "Three lines to keep. Scenarios every operator runs: crypto \u221250% in a day \u00b7 a stablecoin depegs 10% \u00b7 borrow rates spike to 20% \u00b7 your largest protocol is hacked \u00b7 your main L2 halts for 48h. For each: loss, liquidations, liquidity, and whether the payout policy survives. Next is Lesson 11.5, Incident response: the first 60 minutes. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 55,
+   "role": "action",
+   "vo": "Your action for Stress-testing a portfolio: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 11.5, Incident response: the first 60 minutes."
+  },
+  {
+   "n": 56,
+   "role": "outro",
+   "vo": "Next is Lesson 11.5, Incident response: the first 60 minutes. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

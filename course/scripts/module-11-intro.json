@@ -1,0 +1,169 @@
+{
+ "id": "module-11-intro",
+ "title": "Module 11 \u00b7 Hedging",
+ "course": "On-Chain Operator Program",
+ "palette": "navy-cyan",
+ "music": "course/music/komiku-ambiant-truth.ogg",
+ "next": "Lesson 11.0, Mastery Starter",
+ "wpm_assumption": 143,
+ "word_count": 438,
+ "estimated_minutes": 3.06,
+ "code_draws_visuals": false,
+ "overlays_only": [
+  "captions",
+  "lower thirds",
+  "intro title text",
+  "disclaimer line",
+  "Ken Burns"
+ ],
+ "beats": [
+  {
+   "n": 1,
+   "chapter": "Hook",
+   "role": "hook",
+   "vo": "You are leaving Lesson 10.9, Peg and redemption arbitrage. Understand the arbitrages that keep stablecoins and LSTs near their value, and when a retail operator can take part. Module 11, Hedging, asks something new. Hedge the risks you don't want, stress-test the portfolio, and have an incident plan ready.",
+   "cap": "You are leaving Lesson 10.9, Peg and redemption arbitrage. Understand the arbitrages that keep stablecoins.",
+   "concept": "hedge the risks you don't want, stress-test the portfolio, and have an incident plan ready",
+   "image": "course/images/module-11-intro/001.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 11 \u00b7 Hedging', beat 1, role hook. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Hook. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: hedge the risks you don't want, stress-test the portfolio, and have an incident plan ready; the problem visible in the first glance, before any logo. The picture must be understandable with the sound off. Teaching line: hedge the risks you don't want, stress-test the portfolio, and have an incident plan ready Use no words if a shape is clearer. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 2,
+   "chapter": "Disclaimer",
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot.",
+   "cap": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of.",
+   "concept": "Education only, not financial advice.",
+   "image": "course/images/module-11-intro/002.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 11 \u00b7 Hedging', beat 2, role legal. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Disclaimer. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Education only, not financial advice. The picture must be understandable with the sound off. Teaching line: Education only, not financial advice. Labels, spelled exactly: Education. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 3,
+   "chapter": "Title card",
+   "role": "intro",
+   "vo": "On-Chain Operator. Module 11 \u00b7 Hedging. Navy and cyan. This is the door, not the whole module. Education only.",
+   "cap": "On-Chain Operator. Module 11 \u00b7 Hedging. Navy and cyan. This is the door, not the whole module. Education only.",
+   "concept": "Module 11 \u00b7 Hedging",
+   "image": "course/images/module-11-intro/003.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 11 \u00b7 Hedging', beat 3, role intro. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Title card. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Module 11 \u00b7 Hedging. The picture must be understandable with the sound off. Teaching line: Module 11 \u00b7 Hedging Labels, spelled exactly: Module, Hedging. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 4,
+   "chapter": "Already on the desk",
+   "role": "body",
+   "vo": "You already know a health factor and a stop. A hedge is another written path. It is not a claim that the risk is gone.",
+   "cap": "You already know a health factor and a stop. A hedge is another written path. It is not a claim that the risk.",
+   "concept": "You already know a health factor and a stop. A hedge is another written path. It is not a claim that the risk is gone.",
+   "image": "course/images/module-11-intro/004.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 11 \u00b7 Hedging', beat 4, role body. A step-by-step illustrated form, generic and unbranded, with one field highlighted in cyan. Chapter context: Already on the desk. Show a dashed stop line below the band, and a price path that leaves the band and does not return; a balance diagram: a collateral bar, a shorter debt bar, and a health marker that drops when the debt bar grows. The picture must be understandable with the sound off. Teaching line: You already know a health factor and a stop. A hedge is another written path. It is not a claim that the risk is gone. Labels, spelled exactly: Example, You. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 5,
+   "chapter": "The outcome",
+   "role": "body",
+   "vo": "By the end of the module you will be able to do this: hedge the risks you don't want, stress-test the portfolio, and have an incident plan ready. Not before. The lessons earn it one page at a time.",
+   "cap": "By the end of the module you will be able to do this: hedge the risks you don't want, stress-test the.",
+   "concept": "hedge the risks you don't want, stress-test the portfolio, and have an incident plan ready",
+   "image": "course/images/module-11-intro/005.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 11 \u00b7 Hedging', beat 5, role body. One large diagram centered on an off-white panel, with thin cyan callout lines. Chapter context: The outcome. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: hedge the risks you don't want, stress-test the portfolio, and have an incident plan ready. The picture must be understandable with the sound off. Teaching line: hedge the risks you don't want, stress-test the portfolio, and have an incident plan ready Use no words if a shape is clearer. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 6,
+   "chapter": "The map",
+   "role": "map",
+   "vo": "The lessons, in order, are 11.0 Mastery Starter, 11.1 Hedging price exposure with perps and options, 11.2 Depeg, protocol and smart-contract cover, 11.3 Liquidation protection: buffers, alerts and automated deleveraging, 11.4 Stress-testing a portfolio, 11.5 Incident response: the first 60 minutes. You do not skip ahead. Each page is the input to the next.",
+   "cap": "The lessons, in order, are 11.0 Mastery Starter, 11.1 Hedging price exposure with perps and options, 11.2.",
+   "concept": "Lesson map for module 11",
+   "image": "course/images/module-11-intro/006.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 11 \u00b7 Hedging', beat 6, role map. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: The map. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Lesson map for module 11. The picture must be understandable with the sound off. Teaching line: Lesson map for module 11 Labels, spelled exactly: Lesson. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 7,
+   "chapter": "Lesson 11.0",
+   "role": "body",
+   "vo": "Lesson 11.0, Mastery Starter. Mastery Starter. You will write that down when you get there.",
+   "cap": "Lesson 11.0, Mastery Starter. Mastery Starter. You will write that down when you get there.",
+   "concept": "Lesson 11.0: Mastery Starter",
+   "image": "course/images/module-11-intro/007.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 11 \u00b7 Hedging', beat 7, role body. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Lesson 11.0. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Lesson 11.0: Mastery Starter. The picture must be understandable with the sound off. Teaching line: Lesson 11.0: Mastery Starter Labels, spelled exactly: Lesson, Mastery, Starter. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 8,
+   "chapter": "Lesson 11.1",
+   "role": "body",
+   "vo": "Lesson 11.1, Hedging price exposure with perps and options. Reduce price exposure deliberately, and know what each hedge costs. You will write that down when you get there.",
+   "cap": "Lesson 11.1, Hedging price exposure with perps and options. Reduce price exposure deliberately, and know what.",
+   "concept": "Lesson 11.1: Hedging price exposure with perps and options",
+   "image": "course/images/module-11-intro/008.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 11 \u00b7 Hedging', beat 8, role body. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Lesson 11.1. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Lesson 11.1: Hedging price exposure with perps and options. The picture must be understandable with the sound off. Teaching line: Lesson 11.1: Hedging price exposure with perps and options Labels, spelled exactly: Example, Lesson, Hedging. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 9,
+   "chapter": "Lesson 11.2",
+   "role": "body",
+   "vo": "Lesson 11.2, Depeg, protocol and smart-contract cover. Evaluate on-chain cover products as insurance: what they pay, when, and what they don't. You will write that down when you get there.",
+   "cap": "Lesson 11.2, Depeg, protocol and smart-contract cover. Evaluate on-chain cover products as insurance: what.",
+   "concept": "Lesson 11.2: Depeg, protocol and smart-contract cover",
+   "image": "course/images/module-11-intro/009.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 11 \u00b7 Hedging', beat 9, role body. A step-by-step illustrated form, generic and unbranded, with one field highlighted in cyan. Chapter context: Lesson 11.2. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Lesson 11.2: Depeg, protocol and smart-contract cover. The picture must be understandable with the sound off. Teaching line: Lesson 11.2: Depeg, protocol and smart-contract cover Labels, spelled exactly: Lesson, Depeg. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 10,
+   "chapter": "Lesson 11.3",
+   "role": "body",
+   "vo": "Lesson 11.3, Liquidation protection: buffers, alerts and automated deleveraging. Make liquidation practically impossible with buffers, alerts and pre-computed repayment. You will write that down when you get there.",
+   "cap": "Lesson 11.3, Liquidation protection: buffers, alerts and automated deleveraging. Make liquidation practically.",
+   "concept": "Lesson 11.3: Liquidation protection: buffers, alerts and automated deleveraging",
+   "image": "course/images/module-11-intro/010.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 11 \u00b7 Hedging', beat 10, role body. One large diagram centered on an off-white panel, with thin cyan callout lines. Chapter context: Lesson 11.3. Show two columns labelled Isolated and Cross: the first box holds only its own inventory, the second box has a line reaching into a neighbouring box; a price path leaving the band; a three-row review card: inside the band, inventory side, and the written stop, with a calendar chip. The picture must be understandable with the sound off. Teaching line: Lesson 11.3: Liquidation protection: buffers, alerts and automated deleveraging Labels, spelled exactly: Lesson, Liquidation. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 11,
+   "chapter": "Lesson 11.4",
+   "role": "body",
+   "vo": "Lesson 11.4, Stress-testing a portfolio. Run standard shock scenarios on your book and fix what fails before markets test it. You will write that down when you get there.",
+   "cap": "Lesson 11.4, Stress-testing a portfolio. Run standard shock scenarios on your book and fix what fails before.",
+   "concept": "Lesson 11.4: Stress-testing a portfolio",
+   "image": "course/images/module-11-intro/011.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 11 \u00b7 Hedging', beat 11, role body. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Lesson 11.4. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Lesson 11.4: Stress-testing a portfolio. The picture must be understandable with the sound off. Teaching line: Lesson 11.4: Stress-testing a portfolio Labels, spelled exactly: Lesson, Stress. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 12,
+   "chapter": "Lesson 11.5",
+   "role": "body",
+   "vo": "Lesson 11.5, Incident response: the first 60 minutes. Know exactly what to do when a protocol you use is exploited, a stablecoin depegs, or your wallet is compromised. You will write that down when you get there.",
+   "cap": "Lesson 11.5, Incident response: the first 60 minutes. Know exactly what to do when a protocol you use is.",
+   "concept": "Lesson 11.5: Incident response: the first 60 minutes",
+   "image": "course/images/module-11-intro/012.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 11 \u00b7 Hedging', beat 12, role body. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Lesson 11.5. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Lesson 11.5: Incident response: the first 60 minutes. The picture must be understandable with the sound off. Teaching line: Lesson 11.5: Incident response: the first 60 minutes Labels, spelled exactly: Lesson, Incident. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 13,
+   "chapter": "Outro",
+   "role": "outro",
+   "vo": "Next is Lesson 11.0, Mastery Starter. Bring nothing but the habit: one idea, one drawing, the word Example on any number. Education only, not financial advice.",
+   "cap": "Next is Lesson 11.0, Mastery Starter. Bring nothing but the habit: one idea, one drawing, the word Example on.",
+   "concept": "Next: Lesson 11.0, Mastery Starter",
+   "image": "course/images/module-11-intro/013.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 11 \u00b7 Hedging', beat 13, role outro. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Outro. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Next: Lesson 11.0, Mastery Starter; a quiet next-step card with a single arrow to a blank next title, no price and no button that buys anything. The picture must be understandable with the sound off. Teaching line: Next: Lesson 11.0, Mastery Starter Labels, spelled exactly: Next, Lesson, Mastery, Starter. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  }
+ ],
+ "prev": "Lesson 10.9, Peg and redemption arbitrage",
+ "prev_takeaway": "Understand the arbitrages that keep stablecoins and LSTs near their value, and when a retail operator can take part.",
+ "kind": "intro",
+ "module": 11,
+ "series_voice": "On-Chain Operator narrator, same disclaimer, same navy and cyan plate, same music bed."
+}

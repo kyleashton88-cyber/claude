@@ -1,0 +1,75 @@
+{
+ "id": "module-11-intro",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/module-11-intro.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "You are leaving Lesson 10.9, Peg and redemption arbitrage. Understand the arbitrages that keep stablecoins and LSTs near their value, and when a retail operator can take part. Module 11, Hedging, asks something new. Hedge the risks you don't want, stress-test the portfolio, and have an incident plan ready."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Module 11 \u00b7 Hedging. Navy and cyan. This is the door, not the whole module. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already know a health factor and a stop. A hedge is another written path. It is not a claim that the risk is gone."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "By the end of the module you will be able to do this: hedge the risks you don't want, stress-test the portfolio, and have an incident plan ready. Not before. The lessons earn it one page at a time."
+  },
+  {
+   "n": 6,
+   "role": "map",
+   "vo": "The lessons, in order, are 11.0 Mastery Starter, 11.1 Hedging price exposure with perps and options, 11.2 Depeg, protocol and smart-contract cover, 11.3 Liquidation protection: buffers, alerts and automated deleveraging, 11.4 Stress-testing a portfolio, 11.5 Incident response: the first 60 minutes. You do not skip ahead. Each page is the input to the next."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Lesson 11.0, Mastery Starter. Mastery Starter. You will write that down when you get there."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Lesson 11.1, Hedging price exposure with perps and options. Reduce price exposure deliberately, and know what each hedge costs. You will write that down when you get there."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Lesson 11.2, Depeg, protocol and smart-contract cover. Evaluate on-chain cover products as insurance: what they pay, when, and what they don't. You will write that down when you get there."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Lesson 11.3, Liquidation protection: buffers, alerts and automated deleveraging. Make liquidation practically impossible with buffers, alerts and pre-computed repayment. You will write that down when you get there."
+  },
+  {
+   "n": 11,
+   "role": "body",
+   "vo": "Lesson 11.4, Stress-testing a portfolio. Run standard shock scenarios on your book and fix what fails before markets test it. You will write that down when you get there."
+  },
+  {
+   "n": 12,
+   "role": "body",
+   "vo": "Lesson 11.5, Incident response: the first 60 minutes. Know exactly what to do when a protocol you use is exploited, a stablecoin depegs, or your wallet is compromised. You will write that down when you get there."
+  },
+  {
+   "n": 13,
+   "role": "outro",
+   "vo": "Next is Lesson 11.0, Mastery Starter. Bring nothing but the habit: one idea, one drawing, the word Example on any number. Education only, not financial advice."
+  }
+ ]
+}

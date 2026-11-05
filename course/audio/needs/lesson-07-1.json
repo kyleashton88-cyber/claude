@@ -1,0 +1,300 @@
+{
+ "id": "lesson-07-1",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-07-1.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 7.0, Mastery Starter. Mastery Starter. Keep that page on the desk. This lesson adds one picture: Avoid the classic misreads of on-chain data."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 7.1, On-chain data foundations. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You can already read a token's supply and a protocol's fees. Analytics is how you check those claims on the ledger itself."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Address \u2260 person: one person can have many addresses; one exchange address serves millions."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Transfer \u2260 trade: moving tokens isn't buying or selling."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Labels are probabilistic: providers guess who owns what; they can be wrong."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Active addresses can be inflated by bots or airdrop farming."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Data provenance: know chain coverage, indexing method and delay."
+  },
+  {
+   "n": 10,
+   "role": "demo",
+   "vo": "Work the example on paper. \"Whale moves $100M of BTC!\" It's an exchange shuffling between its own cold and hot wallets. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "Work the example on paper. Check labels, destination and history before reacting. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: I check what an address is before interpreting a move. If you cannot write it, the line is open."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: I note each metric's source and definition. If you cannot write it, the line is open."
+  },
+  {
+   "n": 14,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Does an address equal a person? The answer: No."
+  },
+  {
+   "n": 15,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Is a large transfer a sale? The answer: Not necessarily. It may be internal or custodial."
+  },
+  {
+   "n": 16,
+   "role": "quiz",
+   "vo": "Check yourself. 3. Why can active-address counts mislead? The answer: Bots and farming inflate them."
+  },
+  {
+   "n": 17,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to avoid the classic misreads of on-chain data."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "First, Address \u2260 person: one person can have many addresses; one exchange address serves millions."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "Next, Transfer \u2260 trade: moving tokens isn't buying or selling."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "Then, Labels are probabilistic: providers guess who owns what; they can be wrong."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "Also, Active addresses can be inflated by bots or airdrop farming."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "And finally, Data provenance: know chain coverage, indexing method and delay."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "\"Whale moves $100M of bitcoin!\" It's an exchange shuffling between its own cold and hot wallets."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "First, I check what an address is before interpreting a move."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "And finally, I note each metric's source and definition."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "Address \u2260 person: one person can have many addresses."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Labels are probabilistic: providers guess who owns what."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "Next up, lesson seven point two: Block explorer mastery."
+  },
+  {
+   "n": 30,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Address \u2260 person: one person can have many addresses; one exchange address serves millions. It sits in On-chain data foundations. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 31,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Transfer \u2260 trade: moving tokens isn't buying or selling. It sits in On-chain data foundations. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 32,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Labels are probabilistic: providers guess who owns what; they can be wrong. It sits in On-chain data foundations. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 33,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Active addresses can be inflated by bots or airdrop farming. It sits in On-chain data foundations. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 34,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Data provenance: know chain coverage, indexing method and delay. It sits in On-chain data foundations. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 35,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. \"Whale moves $100M of BTC!\" It's an exchange shuffling between its own cold and hot wallets. It sits in On-chain data foundations. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 36,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Check labels, destination and history before reacting. It sits in On-chain data foundations. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 37,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Avoid the classic misreads of on-chain data. It sits in On-chain data foundations. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 38,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. I check what an address is before interpreting a move. It sits in On-chain data foundations. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 39,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. I note each metric's source and definition. It sits in On-chain data foundations. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Address \u2260 person: one person can have many addresses; one exchange address serves millions. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Transfer \u2260 trade: moving tokens isn't buying or selling. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Labels are probabilistic: providers guess who owns what; they can be wrong. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Active addresses can be inflated by bots or airdrop farming. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Data provenance: know chain coverage, indexing method and delay. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. \"Whale moves $100M of BTC!\" It's an exchange shuffling between its own cold and hot wallets. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Check labels, destination and history before reacting. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Avoid the classic misreads of on-chain data. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. I check what an address is before interpreting a move. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. I note each metric's source and definition. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Address \u2260 person: one person can have many addresses; one exchange address serves millions. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Transfer \u2260 trade: moving tokens isn't buying or selling. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Labels are probabilistic: providers guess who owns what; they can be wrong. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Active addresses can be inflated by bots or airdrop farming. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 54,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Data provenance: know chain coverage, indexing method and delay. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 55,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. \"Whale moves $100M of BTC!\" It's an exchange shuffling between its own cold and hot wallets. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 56,
+   "role": "recap",
+   "vo": "Three lines to keep. Address \u2260 person: one person can have many addresses; one exchange address serves millions. Transfer \u2260 trade: moving tokens isn't buying or selling. Next is Lesson 7.2, Block explorer mastery. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 57,
+   "role": "action",
+   "vo": "Your action for On-chain data foundations: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 7.2, Block explorer mastery."
+  },
+  {
+   "n": 58,
+   "role": "outro",
+   "vo": "Next is Lesson 7.2, Block explorer mastery. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

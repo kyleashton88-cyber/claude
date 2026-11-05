@@ -1,0 +1,340 @@
+{
+ "id": "lesson-12-3",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-12-3.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 12.2, Custody architecture: vault, multisig and spending policies. Design custody so that no single lost device, stolen key or mistaken signature can drain the bank. Keep that page on the desk. This lesson adds one picture: Use your assets as collateral for liquidity without selling, under a written credit policy."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 12.3, The credit line: borrowing like a bank client. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already keep a journal and a kill rule. A balance sheet is that habit turned into accounts."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Wealthy clients rarely sell appreciating assets to raise cash; they borrow against them."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "DeFi money markets offer the same: deposit collateral, borrow stablecoins, repay when it suits you, with no credit check."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "The collateral is liquidated if you breach the threshold, and nobody calls first."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "A credit policy (write yours): Max LTV 25\u201330% on volatile collateral (liquidation is often near 80%+) Health factor floor 2.5; act at 2.0 Prefer collateral whose yield covers the interest (strategy #25) Consider fixed-rate borrowing when a rate spike would force a sale (strategy #22) Repayment source named before borrowing (income, reserve, maturing PT) Tax treatment of borrowing varies by country: check with a tax professional."
+  },
+  {
+   "n": 9,
+   "role": "demo",
+   "vo": "Work the example on paper. $200,000 of liquid-staked ETH earning 3.2% ($6,400/yr). Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 10,
+   "role": "demo",
+   "vo": "Work the example on paper. Borrow $40,000 stablecoins at 5% ($2,000/yr). Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "Work the example on paper. HF 4.0 at a 0.8 threshold. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "Work the example on paper. ETH would have to fall ~75% before liquidation (HF falls in proportion to price). Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "Work the example on paper. Defence plan: at HF 2.0, repay from reserve; at HF 1.7, sell part of the collateral deliberately rather than let a liquidator do it at a penalty. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Credit policy written: max LTV, HF floor, action levels. If you cannot write it, the line is open."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Repayment source named. If you cannot write it, the line is open."
+  },
+  {
+   "n": 16,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Alerts set at the action levels (Module 14.1). If you cannot write it, the line is open."
+  },
+  {
+   "n": 17,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Fixed vs variable decision made on purpose. If you cannot write it, the line is open."
+  },
+  {
+   "n": 18,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Why borrow against assets instead of selling them? The answer: You keep the asset and its upside (and in some jurisdictions avoid a taxable sale), at the cost of interest and liquidation risk."
+  },
+  {
+   "n": 19,
+   "role": "quiz",
+   "vo": "Check yourself. 2. HF is 4.0. Roughly how far can collateral fall before liquidation? The answer: About 75%, since HF scales with collateral price (HF 1.0 at a quarter of the current price)."
+  },
+  {
+   "n": 20,
+   "role": "quiz",
+   "vo": "Check yourself. 3. What should happen at your action level? The answer: Repay or add collateral per the written plan. Sell deliberately before a liquidator does it at a penalty."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "The credit line: borrowing like a bank client."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to use your assets as collateral for liquidity without selling, under a written credit policy."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "A credit policy (write yours): First, Max L.T.V."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "25 to 30% on volatile collateral (liquidation is often near 80%+)."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Next, Health factor floor 2.5; act at 2.0."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "Then, Prefer collateral whose yield covers the interest (strategy #25)."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Also, Consider fixed-rate borrowing when a rate spike would force a sale (strategy #22)."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "On top of that, Repayment source named before borrowing (income, reserve, maturing P.T.)."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "And finally, Tax treatment of borrowing varies by country: check with a tax professional."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "$200,000 of liquid-staked ETH earning 3.2% ($6,400 a year)."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "Borrow $40,000 stablecoins at 5% ($2,000 a year)."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "ETH would have to fall about 75% before liquidation (health factor falls in proportion to price)."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "Defence plan: at health factor 2.0, repay from reserve; at health factor 1.7, sell part of the collateral deliberately rather than let a liquidator do it at a penalty."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "First, Credit policy written: max L.T.V., health factor floor, action levels."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "Then, Alerts set at the action levels (Module 14.1)."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "And finally, Fixed versus variable decision made on purpose."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "Why borrow against assets instead of selling them?"
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "The answer: You keep the asset and its upside (and in some jurisdictions avoid a taxable sale), at the cost of interest and liquidation risk."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "Roughly how far can collateral fall before liquidation?"
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "The answer: About 75%, since health factor scales with collateral price (health factor 1.0 at a quarter of the current price)."
+  },
+  {
+   "n": 41,
+   "role": "body",
+   "vo": "The answer: Repay or add collateral per the written plan."
+  },
+  {
+   "n": 42,
+   "role": "body",
+   "vo": "Sell deliberately before a liquidator does it at a penalty."
+  },
+  {
+   "n": 43,
+   "role": "body",
+   "vo": "Prefer collateral whose yield covers the interest (strategy #25)."
+  },
+  {
+   "n": 44,
+   "role": "body",
+   "vo": "Consider fixed-rate borrowing when a rate spike would force a sale (strategy #22)."
+  },
+  {
+   "n": 45,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 46,
+   "role": "body",
+   "vo": "Next up, lesson twelve point four: Treasury and the liquidity ladder."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Wealthy clients rarely sell appreciating assets to raise cash; they borrow against them. It sits in The credit line: borrowing like a bank client. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. DeFi money markets offer the same: deposit collateral, borrow stablecoins, repay when it suits you, with no credit check. It sits in The credit line: borrowing like a bank client. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The collateral is liquidated if you breach the threshold, and nobody calls first. It sits in The credit line: borrowing like a bank client. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. A credit policy (write yours): Max LTV 25\u201330% on volatile collateral (liquidation is often near 80%+) Health factor floor 2.5; act at 2.0 Prefer collateral whose yield covers the interest (strategy #25) Consider fixed-rate borrowing when a rate spike would force a sale (strategy #22) Repayment source named before borrowing (income, reserve, maturing PT) Tax treatment of borrowing varies by country: check with a tax professional. It sits in The credit line: borrowing like a bank client. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. $200,000 of liquid-staked ETH earning 3.2% ($6,400/yr). It sits in The credit line: borrowing like a bank client. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Borrow $40,000 stablecoins at 5% ($2,000/yr). It sits in The credit line: borrowing like a bank client. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. HF 4.0 at a 0.8 threshold. It sits in The credit line: borrowing like a bank client. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 54,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. ETH would have to fall ~75% before liquidation (HF falls in proportion to price). It sits in The credit line: borrowing like a bank client. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 55,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Defence plan: at HF 2.0, repay from reserve; at HF 1.7, sell part of the collateral deliberately rather than let a liquidator do it at a penalty. It sits in The credit line: borrowing like a bank client. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 56,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Use your assets as collateral for liquidity without selling, under a written credit policy. It sits in The credit line: borrowing like a bank client. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 57,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Credit policy written: max LTV, HF floor, action levels. It sits in The credit line: borrowing like a bank client. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 58,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Repayment source named. It sits in The credit line: borrowing like a bank client. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 59,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Alerts set at the action levels (Module 14.1). It sits in The credit line: borrowing like a bank client. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 60,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Fixed vs variable decision made on purpose. It sits in The credit line: borrowing like a bank client. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 61,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Wealthy clients rarely sell appreciating assets to raise cash; they borrow against them. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 62,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. DeFi money markets offer the same: deposit collateral, borrow stablecoins, repay when it suits you, with no credit check. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 63,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. The collateral is liquidated if you breach the threshold, and nobody calls first. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 64,
+   "role": "recap",
+   "vo": "Three lines to keep. Wealthy clients rarely sell appreciating assets to raise cash; they borrow against them. DeFi money markets offer the same: deposit collateral, borrow stablecoins, repay when it suits you, with no credit check. Next is Lesson 12.4, Treasury and the liquidity ladder. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 65,
+   "role": "action",
+   "vo": "Your action for The credit line: borrowing like a bank client: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 12.4, Treasury and the liquidity ladder."
+  },
+  {
+   "n": 66,
+   "role": "outro",
+   "vo": "Next is Lesson 12.4, Treasury and the liquidity ladder. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}
