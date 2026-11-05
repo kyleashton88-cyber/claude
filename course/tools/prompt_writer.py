@@ -57,6 +57,8 @@ HARD_RULES = (
     "No flat off-white card, no soft mint wash, and no grey-blue fog. "
     "On el-10 and el-11 the headline is top-left, outside any card, bold condensed white, "
     "at the el-08 shot 28 anchor size. "
+    "Blueprint headlines are top-left, outside any card, bold condensed white, "
+    "sized like the main title on style-guide pages 04 and 09, not the Elite el-08 shot 28 anchor. "
     "Coin rims are plain silver, with no text and no gold. "
     "Blueprint and On-Chain Operator use the same glass and glow in cyan. "
     "If a robot appears, it has straight visor-bar eyes and no smile, matching the passed el-06 shot 28. "

@@ -54,6 +54,7 @@ Score 1-5 (pass needs 4+ average, no hard fail): headline crispness and accent k
 - Coins are BTC, ETH and USDT only, at most 3 per vault. No gold coins. Rims are plain, with no text. Never duplicate a coin type where the beat says single, lone or independent.
 - The background is one seamless pass. No paper blocks. Nothing in the top 80px or the bottom 80px.
 - Elite: teal glass cards and glow only, never flat navy or matte grey. Blueprint and OCO: the same glass and glow in cyan.
+- Blueprint headlines are top-left, outside any card, bold condensed white, sized like the main title on style-guide pages 04 and 09. Do not size them off the Elite el-08 shot 28 anchor.
 - The robot, when it appears, matches the passed el-06 shot 28: visor-bar eyes, no smile.
 - A toggle is OFF (knob left, track unlit) unless the label says otherwise.
 - The picture must match its labels.
