@@ -6770,7 +6770,7 @@
    "id": "bp-11-advanced-liquidation-009",
    "lesson": "bp-11-advanced-liquidation",
    "shot": "009",
-   "prompt": "DIFFERENT FROM bp-09-013. STYLE (GBB v3, Blueprint CYAN): Premium course still, 1536x1024. Near-black navy (#050A18 to #0A1630), faint grid, bokeh, frosted glass with glowing cyan borders (#00D4FF / #1E7BFF). No teal, no off-white paper card, no flat look. Charts go sideways or are left out. No rising chart and no dollar sign. LAYOUT BOX: All content inside y300 to y870 and x200 to x1340. Main elements in bright #00D4FF. No grey or steel-blue. Nothing cut off at the frame edge, and no partial panels. No upward spikes or rising imagery. Render the headline text \"NO TIMES\" exactly once, as a single line at top-left: left edge x50-70, top of capitals y110, cap ~159px, bold condensed sans, NO white, TIMES #00D4FF. Do not repeat, echo, shadow-duplicate, reflect or ghost the headline anywhere else. No other text except these labels: NONE, EXAMPLE. Leave the top 105px completely empty background; the first pixel of any letter is at y110 or lower; all non-headline content between y300-870 and x200-1340 with a 40px empty margin from every frame edge; nothing touches the frame edge; the space between the headline and y300 stays empty. SHOT: A times-number is scratched out of both columns, and each column reads NONE. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "prompt": "DIFFERENT FROM bp-11-011. STYLE (GBB v3, Blueprint CYAN): Premium course still, 1536x1024. Near-black navy (#050A18 to #0A1630), faint grid, bokeh, frosted glass with glowing cyan borders (#00D4FF / #1E7BFF). No teal, no off-white paper card, no flat look. Charts go sideways or are left out. No rising chart and no dollar sign. LAYOUT BOX: All content inside y300 to y870 and x200 to x1340. Main elements in bright #00D4FF. No grey or steel-blue. Nothing cut off at the frame edge, and no partial panels. No upward spikes or rising imagery. Render the headline text \"NO TIMES\" exactly once, as a single line at top-left: left edge x50-70, top of capitals y110, cap ~159px, bold condensed sans, NO white, TIMES #00D4FF. Do not repeat, echo, shadow-duplicate, reflect or ghost the headline anywhere else. No other text except these labels: NONE, EXAMPLE. Leave the top 105px completely empty background; the first pixel of any letter is at y110 or lower; all non-headline content between y300-870 and x200-1340 with a 40px empty margin from every frame edge; nothing touches the frame edge; the space between the headline and y300 stays empty. SHOT: Two columns. Each column is a circle with a diagonal stroke and no letters inside it. Under each circle the word NONE. The only readable labels are NONE and EXAMPLE. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
    "path": "course/images/bp-11-advanced-liquidation/009.png",
    "status": "awaiting_qa",
    "marker": "FALLBACK",
@@ -6779,12 +6779,12 @@
    "height": 1024,
    "style": "gbb-v3",
    "qa_ref": "IMAGE_REQUESTS.json",
-   "qa_reason": "Awaiting Creative Studio QA. Headline composited on the original grid and bokeh, 2026-11-05.",
+   "qa_reason": "Awaiting Creative Studio QA, round bp25. The readable 2X is replaced by a struck circle with no letters. Readable labels are NONE and EXAMPLE.",
    "format": "png",
    "source_batch": "IMAGE_REQUESTS.json",
-   "previous_status": null,
-   "md5": "8a7344614c18e121de34ab113e03f54e",
-   "previous_md5": null
+   "previous_status": "awaiting_qa",
+   "md5": "840c3bd3c24aad8cb2d3b2295cb3c5a6",
+   "previous_md5": "8a7344614c18e121de34ab113e03f54e"
   },
   {
    "id": "bp-11-advanced-liquidation-010",
@@ -6810,7 +6810,7 @@
    "id": "bp-11-advanced-liquidation-011",
    "lesson": "bp-11-advanced-liquidation",
    "shot": "011",
-   "prompt": "DIFFERENT FROM bp-11-009. STYLE (GBB v3, Blueprint CYAN): Premium course still, 1536x1024. Near-black navy (#050A18 to #0A1630), faint grid, bokeh, frosted glass with glowing cyan borders (#00D4FF / #1E7BFF). No teal, no off-white paper card, no flat look. Charts go sideways or are left out. No rising chart and no dollar sign. LAYOUT BOX: All content inside y300 to y870 and x200 to x1340. Main elements in bright #00D4FF. No grey or steel-blue. Nothing cut off at the frame edge, and no partial panels. No upward spikes or rising imagery. Render the headline text \"OLD NOTES\" exactly once, as a single line at top-left: left edge x50-70, top of capitals y110, cap ~159px, bold condensed sans, OLD white, NOTES #00D4FF. Do not repeat, echo, shadow-duplicate, reflect or ghost the headline anywhere else. No other text except these labels: NONE, EXAMPLE. Leave the top 105px completely empty background; the first pixel of any letter is at y110 or lower; all non-headline content between y300-870 and x200-1340 with a 40px empty margin from every frame edge; nothing touches the frame edge; the space between the headline and y300 stays empty. SHOT: A struck-through older card with a crossed times-number beside a current card reading NONE. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "prompt": "DIFFERENT FROM bp-11-009. STYLE (GBB v3, Blueprint CYAN): Premium course still, 1536x1024. Near-black navy (#050A18 to #0A1630), faint grid, bokeh, frosted glass with glowing cyan borders (#00D4FF / #1E7BFF). No teal, no off-white paper card, no flat look. Charts go sideways or are left out. No rising chart and no dollar sign. LAYOUT BOX: All content inside y300 to y870 and x200 to x1340. Main elements in bright #00D4FF. No grey or steel-blue. Nothing cut off at the frame edge, and no partial panels. No upward spikes or rising imagery. Render the headline text \"OLD NOTES\" exactly once, as a single line at top-left: left edge x50-70, top of capitals y110, cap ~159px, bold condensed sans, OLD white, NOTES #00D4FF. Do not repeat, echo, shadow-duplicate, reflect or ghost the headline anywhere else. No other text except these labels: NONE, EXAMPLE. Leave the top 105px completely empty background; the first pixel of any letter is at y110 or lower; all non-headline content between y300-870 and x200-1340 with a 40px empty margin from every frame edge; nothing touches the frame edge; the space between the headline and y300 stays empty. SHOT: A struck-through older card containing only a circle with a diagonal stroke and no letters. The current card reads NONE. The only readable labels are NONE and EXAMPLE. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
    "path": "course/images/bp-11-advanced-liquidation/011.png",
    "status": "awaiting_qa",
    "marker": "FALLBACK",
@@ -6819,12 +6819,12 @@
    "height": 1024,
    "style": "gbb-v3",
    "qa_ref": "IMAGE_REQUESTS.json",
-   "qa_reason": "Awaiting Creative Studio QA. Headline composited on the original grid and bokeh, 2026-11-05.",
+   "qa_reason": "Awaiting Creative Studio QA, round bp25. The readable 2X is replaced by a struck circle with no letters. Readable labels are NONE and EXAMPLE.",
    "format": "png",
    "source_batch": "IMAGE_REQUESTS.json",
-   "previous_status": null,
-   "md5": "bedf7c1be386f83e76910bab5a26b240",
-   "previous_md5": null
+   "previous_status": "awaiting_qa",
+   "md5": "ff66bc386cd7ca6542a34ce19dea60a3",
+   "previous_md5": "bedf7c1be386f83e76910bab5a26b240"
   },
   {
    "id": "bp-11-advanced-liquidation-012",
@@ -6870,7 +6870,7 @@
    "id": "bp-11-advanced-liquidation-014",
    "lesson": "bp-11-advanced-liquidation",
    "shot": "014",
-   "prompt": "DIFFERENT FROM bp-11-009. STYLE (GBB v3, Blueprint CYAN): Premium course still, 1536x1024. Near-black navy (#050A18 to #0A1630), faint grid, bokeh, frosted glass with glowing cyan borders (#00D4FF / #1E7BFF). No teal, no off-white paper card, no flat look. Charts go sideways or are left out. No rising chart and no dollar sign. LAYOUT BOX: All content inside y300 to y870 and x200 to x1340. Main elements in bright #00D4FF. No grey or steel-blue. Nothing cut off at the frame edge, and no partial panels. No upward spikes or rising imagery. Render the headline text \"TWO CHECKS\" exactly once, as a single line at top-left: left edge x50-70, top of capitals y110, cap ~159px, bold condensed sans, TWO white, CHECKS #00D4FF. Do not repeat, echo, shadow-duplicate, reflect or ghost the headline anywhere else. No other text except these labels: NO TIMES, LOSS FIRST, EXAMPLE. Leave the top 105px completely empty background; the first pixel of any letter is at y110 or lower; all non-headline content between y300-870 and x200-1340 with a 40px empty margin from every frame edge; nothing touches the frame edge; the space between the headline and y300 stays empty. SHOT: The sentence boxed as two unticked lines: NO TIMES and LOSS FIRST. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "prompt": "DIFFERENT FROM bp-11-009. STYLE (GBB v3, Blueprint CYAN): Premium course still, 1536x1024. Near-black navy (#050A18 to #0A1630), faint grid, bokeh, frosted glass with glowing cyan borders (#00D4FF / #1E7BFF). No teal, no off-white paper card, no flat look. Charts go sideways or are left out. No rising chart and no dollar sign. LAYOUT BOX: All content inside y300 to y870 and x200 to x1340. Main elements in bright #00D4FF. No grey or steel-blue. Nothing cut off at the frame edge, and no partial panels. No upward spikes or rising imagery. Render the headline text \"TWO CHECKS\" exactly once, as a single line at top-left: left edge x50-70, top of capitals y110, cap ~159px, bold condensed sans, TWO white, CHECKS #00D4FF. Do not repeat, echo, shadow-duplicate, reflect or ghost the headline anywhere else. No other text except these labels: NO TIMES, LOSS FIRST, EXAMPLE. Leave the top 105px completely empty background; the first pixel of any letter is at y110 or lower; all non-headline content between y300-870 and x200-1340 with a 40px empty margin from every frame edge; nothing touches the frame edge; the space between the headline and y300 stays empty. SHOT: The sentence boxed as two unticked lines. Line 1 reads NO TIMES. Line 2 reads LOSS FIRST. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
    "path": "course/images/bp-11-advanced-liquidation/014.png",
    "status": "awaiting_qa",
    "marker": "FALLBACK",
@@ -6879,12 +6879,12 @@
    "height": 1024,
    "style": "gbb-v3",
    "qa_ref": "IMAGE_REQUESTS.json",
-   "qa_reason": "Awaiting Creative Studio QA. Headline composited on the original grid and bokeh, 2026-11-05.",
+   "qa_reason": "Awaiting Creative Studio QA, round bp25. Line 2 reads LOSS FIRST. Regenerated so the line has no extra word before it.",
    "format": "png",
    "source_batch": "IMAGE_REQUESTS.json",
-   "previous_status": null,
-   "md5": "023ca8cde3361583313f40e303604b93",
-   "previous_md5": null
+   "previous_status": "awaiting_qa",
+   "md5": "e9c2ffacc5ed64fd7fc95aff2dd794af",
+   "previous_md5": "023ca8cde3361583313f40e303604b93"
   },
   {
    "id": "bp-11-advanced-liquidation-015",
