@@ -9,23 +9,19 @@ from __future__ import annotations
 import re
 
 STYLE = (
-    "Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. "
-    "Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, "
-    "electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. "
-    "Calm and technical, like a worksheet, not a poster. "
-    "The bottom fifth of the frame is empty dark navy so captions can sit there. "
+    "Premium course still, 16:9, 1536x1024. "
+    "Near-black navy background, faint cyan grid, glowing cyan glass cards with rim light and depth. "
+    "Not flat, not matte grey, not an off-white paper card. "
+    "The top 80 pixels and the bottom 80 pixels are empty background only. "
     "At most four short English labels, one to three words each, spelled exactly as given. "
-    "If a chart appears, stamp the word Example on it. "
-    "No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, "
-    "logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. "
-    "A generic illustrated panel is fine. A real app screenshot is not. "
-    "Image quality must not degrade at any stage: no compression artifacts, no loss of detail, "
-    "no colour shift, no softening of labels or text; full resolution preserved from generation "
-    "through to the final 1080p video frame."
+    "If a chart appears, it moves sideways and is stamped Example. "
+    "No coins other than BTC, ETH and USDT, no banknotes, no profit, no trophies, no rockets, "
+    "no brand logos, no exchange names, no logins, no seed phrases, no API keys, no photoreal faces. "
+    "A generic glass panel is fine. A real app screenshot is not."
 )
 
 LAYOUTS = (
-    "One large diagram centered on an off-white panel, with thin cyan callout lines.",
+    "One large diagram centered on a glowing glass card, with thin cyan callout lines.",
     "Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded.",
     "Three numbered steps across the panel, left to right, each step a simple shape.",
     "An annotated chart scene: a sideways price path, horizontal levels, and two callouts.",
@@ -33,24 +29,38 @@ LAYOUTS = (
 )
 
 STYLE_TEAL = (
-    "Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. "
-    "Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, "
-    "medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. "
-    "This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. "
-    "Calm and technical, like a worksheet, not a poster. "
-    "The bottom fifth of the frame is empty dark navy so captions can sit there. "
+    "Premium Grid Bot Elite still, 16:9, 1536x1024. "
+    "Near-black navy with teal glow, faint teal grid, frosted teal glass cards and rim light. "
+    "Not flat navy, not matte grey, not an off-white paper card. Never recolor the glow to cyan #00D4FF. "
+    "The top 80 pixels and the bottom 80 pixels are empty background only. "
     "At most four short English labels, one to three words each, spelled exactly as given. "
-    "If a chart appears, stamp the word Example on it. "
-    "No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, "
-    "logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. "
-    "A generic illustrated panel is fine. A real app screenshot is not. "
+    "If a chart appears, it moves sideways and is stamped Example. "
+    "Coins are BTC, ETH and USDT only. No banknotes, no profit, no trophies, no rockets, "
+    "no brand logos, no exchange names, no logins, no seed phrases, no API keys, no photoreal faces. "
+    "A glass panel is fine. A real app screenshot is not."
+)
+
+# Creative Studio v3b, 5 Nov 2026. These rules apply to every still.
+HARD_RULES = (
+    "Hard rules: no text beyond the named headline and labels. "
+    "No branding, no byline, no 'BY STEWART CROWN', no course headers, no logos, "
+    "no extra sub-labels, no sentences. "
+    "Charts go sideways or are left out. No rising charts or arrows, and no $ axes or $ text. "
+    "Coins are BTC, ETH and USDT only, at most 3 per vault, with plain faces and no micro-text. "
+    "The background is one seamless pass. No paper blocks. "
+    "Nothing in the top 80px or the bottom 80px. "
+    "Elite uses teal glass cards and glow only, never flat navy or matte grey. "
+    "Blueprint and On-Chain Operator use the same glass and glow in cyan. "
+    "If a robot appears, it has straight visor-bar eyes and no smile, matching the passed el-06 shot 28. "
+    "A toggle is OFF, knob left and track unlit, unless the label says otherwise. "
+    "The picture must match its labels. "
     "Image quality must not degrade at any stage: no compression artifacts, no loss of detail, "
     "no colour shift, no softening of labels or text; full resolution preserved from generation "
     "through to the final 1080p video frame."
 )
 
 LAYOUTS_TEAL = (
-    "One large diagram centered on an off-white panel, with thin teal callout lines.",
+    "One large diagram centered on a glowing teal glass card, with thin teal callout lines.",
     "Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded.",
     "Three numbered steps across the panel, left to right, each step a simple shape.",
     "An annotated chart scene: a sideways price path, horizontal levels, and two callouts.",
@@ -171,5 +181,5 @@ def write_prompt(concept: str, chapter: str, role: str, beat_n: int, lesson_titl
     return (
         f"Lesson '{lesson_title}', beat {beat_n}, role {role}. {layout} {scene} "
         f"The picture must be understandable with the sound off. Teaching line: {concept.strip()} "
-        f"{label_line} {style}"
+        f"{label_line} {style} {HARD_RULES}"
     )

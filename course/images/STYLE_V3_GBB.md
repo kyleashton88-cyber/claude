@@ -48,6 +48,17 @@ Score 1-5 (pass needs 4+ average, no hard fail): headline crispness and accent k
 - OCO: /workspace/oco-upload/IMAGE_BRIEF.md and IMAGE_QA_CHECKLIST.md updated (.bak = previous).
 
 
+## Hard rules for every still (Creative Studio v3b, 5 Nov 2026)
+- No text beyond the named headline and labels. No branding, no byline (no "BY STEWART CROWN"), no course headers, no logos, no extra sub-labels, no sentences.
+- Charts go sideways or are left out. No rising charts or arrows, and no $ axes or $ text.
+- Coins are BTC, ETH and USDT only, at most 3 per vault, plain faces, no micro-text on the rim.
+- The background is one seamless pass. No paper blocks. Nothing in the top 80px or the bottom 80px.
+- Elite: teal glass cards and glow only, never flat navy or matte grey. Blueprint and OCO: the same glass and glow in cyan.
+- The robot, when it appears, matches the passed el-06 shot 28: visor-bar eyes, no smile.
+- A toggle is OFF (knob left, track unlit) unless the label says otherwise.
+- The picture must match its labels.
+- Passed anchors to attach instead of the book pages: el-06 shots 28, 31, 32, 34, 38 and 39, and el-07 shot 14.
+
 ## No degradation (Stewart, 5 Nov 2026)
 Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.
 
