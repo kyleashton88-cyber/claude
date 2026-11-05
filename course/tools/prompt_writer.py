@@ -29,6 +29,28 @@ LAYOUTS = (
     "A step-by-step illustrated form, generic and unbranded, with one field highlighted in cyan.",
 )
 
+STYLE_TEAL = (
+    "Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. "
+    "Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, "
+    "medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. "
+    "This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. "
+    "Calm and technical, like a worksheet, not a poster. "
+    "The bottom fifth of the frame is empty dark navy so captions can sit there. "
+    "At most four short English labels, one to three words each, spelled exactly as given. "
+    "If a chart appears, stamp the word Example on it. "
+    "No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, "
+    "logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. "
+    "A generic illustrated panel is fine. A real app screenshot is not."
+)
+
+LAYOUTS_TEAL = (
+    "One large diagram centered on an off-white panel, with thin teal callout lines.",
+    "Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded.",
+    "Three numbered steps across the panel, left to right, each step a simple shape.",
+    "An annotated chart scene: a sideways price path, horizontal levels, and two callouts.",
+    "A step-by-step illustrated form, generic and unbranded, with one field highlighted in teal.",
+)
+
 
 def _labels(concept: str, extra: list[str] | None = None) -> list[str]:
     found = re.findall(r"\b([A-Z][A-Za-z]{2,12}|LTV|HF|AMM|DEX|MEV|TWAP)\b", concept)
@@ -50,7 +72,7 @@ def _scene(concept: str, chapter: str, role: str) -> str:
          "a cyan price path weaving through six horizontal levels, inside a band on the left and stepping out through the lower line on the right"),
         (("range", "band", "upper", "lower"),
          "a price band drawn as two horizontal cyan lines labelled Upper and Lower, with the word Range on a small tag"),
-        (("gap", "spacing", "order count", "nineteen", "grids"),
+        (("gap", "spacing", "order count", "nineteen"),
          "nineteen even gaps between twenty horizontal lines, the gaps marked, the lines only the edges of the gaps, a small note that counting lines is the miss"),
         (("stop", "invalidat", "leave"),
          "a dashed stop line below the band, and a price path that leaves the band and does not return"),
@@ -94,8 +116,16 @@ def _scene(concept: str, chapter: str, role: str) -> str:
          "a three-row review card: inside the band, inventory side, and the written stop, with a calendar chip"),
         (("mistake", "miss"),
          "a two-panel miss: a blank stop on the left, a clean written stop on the right"),
-        (("scale", "bucket", "second"),
+        (("scale", "bucket", "inventory bucket"),
          "two separate inventory buckets for two grids, with a warning when the buckets overlap on the same asset"),
+        (("correlation", "drawdown ceiling", "per-coin"),
+         "three checks on one card: a ceiling sentence, a per-coin cap, and two paths that travel together, stamped Example"),
+        (("circuit", "band edge", "pause"),
+         "a hand switch labelled Pause beside a band-edge mark, and a separate box labelled Venue close"),
+        (("counterparty", "second venue"),
+         "two venue boxes, the second one marked Halt, with separate inventory notes and no split ratio"),
+        (("paper plan",),
+         "an open notebook with five written rows: range, spacing, count, inventory, stop, and a line that says no deposit"),
     )
     for keys, picture in rules:
         if any(k in c for k in keys):
@@ -118,7 +148,7 @@ def _scene(concept: str, chapter: str, role: str) -> str:
 
 
 def write_prompt(concept: str, chapter: str, role: str, beat_n: int, lesson_title: str,
-                 labels: list[str] | None = None) -> str:
+                 labels: list[str] | None = None, palette: str = "navy-cyan") -> str:
     """One detailed prompt. The beat number is included so two similar beats cannot collapse."""
     labs = _labels(concept, labels)
     if role in {"demo", "diagram", "body"} and "Example" not in labs and any(
@@ -126,9 +156,14 @@ def write_prompt(concept: str, chapter: str, role: str, beat_n: int, lesson_titl
     ):
         labs = (["Example"] + labs)[:4]
     label_line = "Labels, spelled exactly: " + ", ".join(labs) + "." if labs else "Use no words if a shape is clearer."
-    layout = LAYOUTS[beat_n % len(LAYOUTS)]
+    teal = palette == "teal"
+    layout = (LAYOUTS_TEAL if teal else LAYOUTS)[beat_n % 5]
+    scene = _scene(concept, chapter, role)
+    if teal:
+        scene = scene.replace("cyan", "teal")
+    style = STYLE_TEAL if teal else STYLE
     return (
-        f"Lesson '{lesson_title}', beat {beat_n}, role {role}. {layout} {_scene(concept, chapter, role)} "
+        f"Lesson '{lesson_title}', beat {beat_n}, role {role}. {layout} {scene} "
         f"The picture must be understandable with the sound off. Teaching line: {concept.strip()} "
-        f"{label_line} {STYLE}"
+        f"{label_line} {style}"
     )

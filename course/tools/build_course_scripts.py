@@ -116,7 +116,7 @@ def assemble(slug: str, title: str, course: str, palette: str, music: str, beats
         b = dict(b)
         b["n"] = i
         b["image"] = f"course/images/{slug}/{i:03d}.png"
-        b["prompt"] = write_prompt(b["concept"], b["chapter"], b["role"], i, title)
+        b["prompt"] = write_prompt(b["concept"], b["chapter"], b["role"], i, title, palette=palette)
         fixed.append(b)
     total_words = sum(words(b["vo"]) for b in fixed)
     minutes = total_words / WPM
