@@ -489,7 +489,7 @@
    "shot": "25",
    "prompt": "STYLE (GBB v3, Elite TEAL): Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; leave the top ~80px and bottom ~80px free of text and key content (background only). Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh and glowing TEAL (#14E0C8 / #0FB5A5) neon accent light. Frosted glass cards with glowing teal borders, subtle reflections. Bold condensed all-caps headline in crisp white with ONE keyword in teal; a few short crisp labels only (no paragraphs). Circled teal line icons, numbered step badges, dashed level lines, glossy 3D detail. Rich, layered, premium; never flat or minimal. Education only: any price or level shown carries the word EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people or faces. Optional glossy G-badge robot mascot with visor-bar eyes only; no other face-like shapes.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no blue-dominant palette (teal replaces blue), no paragraphs, no misspelt or garbled text, no real exchange/app UI or logos, no people, no extra faces or face-like dot pairs, no money piles, rockets, trophies or upward profit arrows, no unlabelled prices, nothing important in the top or bottom 80px.\nSHOT: Headline at top-left inside the safe area: THE MANUAL \"OFF\" (teal) SWITCH. Hero visual: one large glossy 3D toggle switch on a glass panel, set to OFF, teal rim light; small G-badge robot standing idle beside it. Composition: hero centred. Labels (short, crisp): MANUAL, OFF. Keep it a hero visual with a few labels, not a full infographic page. All text and key content inside the centre 1536x864 safe area.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
    "path": "course/images/fallback/el-06-circuit-breakers/25.png",
-   "status": "fail",
+   "status": "awaiting_qa",
    "marker": "FALLBACK",
    "palette": "teal",
    "width": 1536,
@@ -498,10 +498,10 @@
    "format": "png",
    "source_batch": "batch-03.json",
    "qa_ref": "course/images/fallback-qa/2026-11-05_v3c/QA.md",
-   "qa_reason": "Creative Studio fail, 2026-11-05 v3h.",
+   "qa_reason": "Redraw. Knob is on the left. Track is grey. Hash changed.",
    "previous_status": "fail",
-   "md5": "e18ab99d8686fa28b43fc1dede2af239",
-   "previous_md5": "d5f065830d1d31ab2806291d34cad9fd"
+   "md5": "7bc879d1f0292b74266e3c9993c5f0e6",
+   "previous_md5": "e18ab99d8686fa28b43fc1dede2af239"
   },
   {
    "id": "el-06-circuit-breakers-26",
@@ -1132,19 +1132,19 @@
    "shot": "32",
    "prompt": "STYLE (GBB v3, Elite TEAL): Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; leave the top ~80px and bottom ~80px free of text and key content (background only). Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh and glowing TEAL (#14E0C8 / #0FB5A5) neon accent light. Frosted glass cards with glowing teal borders, subtle reflections. Bold condensed all-caps headline in crisp white with ONE keyword in teal; a few short crisp labels only (no paragraphs). Circled teal line icons, numbered step badges, dashed level lines, glossy 3D detail. Rich, layered, premium; never flat or minimal. Education only: any price or level shown carries the word EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people or faces. Optional glossy G-badge robot mascot with visor-bar eyes only; no other face-like shapes.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no blue-dominant palette (teal replaces blue), no paragraphs, no misspelt or garbled text, no real exchange/app UI or logos, no people, no extra faces or face-like dot pairs, no money piles, rockets, trophies or upward profit arrows, no unlabelled prices, nothing important in the top or bottom 80px.\nSHOT: Headline at top-left inside the safe area: PICK ONE \"LIMIT\" (teal). Hero visual: four glass bars in a row, three dimmed, one lit with a glowing teal border and check icon. Composition: key element lit in teal, the rest dimmed. Labels (short, crisp): YOUR LIMIT. Keep it a hero visual with a few labels, not a full infographic page. All text and key content inside the centre 1536x864 safe area.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
    "path": "course/images/fallback/el-07-advanced-liquidation/32.png",
-   "status": "fail",
+   "status": "awaiting_qa",
    "marker": "FALLBACK",
    "palette": "teal",
    "width": 1536,
    "height": 1024,
    "style": "gbb-v3",
    "qa_ref": "course/images/batch-web/v3/batch-10.json",
-   "qa_reason": "Creative Studio fail, 2026-11-05 v3h.",
+   "qa_reason": "Redraw. Three unpicked boxes are faint outlines. Hash changed.",
    "format": "png",
    "source_batch": "batch-10.json",
-   "previous_status": null,
-   "md5": "d4cc0fd6b7a3a39cddfb093504b7b2eb",
-   "previous_md5": null
+   "previous_status": "fail",
+   "md5": "12753cfb9cb371aa9049d38813626ea9",
+   "previous_md5": "d4cc0fd6b7a3a39cddfb093504b7b2eb"
   },
   {
    "id": "el-07-advanced-liquidation-33",
