@@ -25,6 +25,9 @@ SCRIPTS = ROOT / "course" / "scripts"
 AUDIO = ROOT / "course" / "audio"
 VOICE = "af_heart"
 SR = 24000
+# af_heart at speed 1 is near 195 wpm. 0.78 lands just under the 143 wpm picture track
+# so -shortest does not cut the outro.
+SPEED = 0.78
 
 
 def lesson_paths(shard: int, shards: int) -> list[Path]:
@@ -41,7 +44,7 @@ def speak(pipeline, script: dict, dest: Path) -> None:
     parts: list[np.ndarray] = []
     for beat in script["beats"]:
         chunks = []
-        for _gs, _ps, audio in pipeline(beat["vo"], voice=VOICE):
+        for _gs, _ps, audio in pipeline(beat["vo"], voice=VOICE, speed=SPEED):
             chunks.append(np.asarray(audio, dtype=np.float32))
         if chunks:
             parts.append(np.concatenate(chunks))
@@ -59,6 +62,7 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=0)
     args = parser.parse_args()
     from kokoro import KPipeline
+    print(f"kokoro voice {VOICE} speed {SPEED} shard {args.shard}/{args.shards}", flush=True)
     pipeline = KPipeline(lang_code="a")
     done = 0
     paths = lesson_paths(args.shard, args.shards)
