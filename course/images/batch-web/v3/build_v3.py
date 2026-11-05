@@ -61,7 +61,8 @@ VAR=[('base layout','VARIANT, base: hero centred.'),
 ('mirrored','DIFFERENT FROM the centred sibling: the hero layout is mirrored left-right.')]
 def hl(h): return re.sub(r'\[(.+?)\]',r'"\1" (teal)',h)
 def shot(head,hero,labels,var):
-    return (f"{var} SHOT: Headline below the top 80px, inside the safe area: {hl(head)}. Hero visual: {hero}. "
+    return (f"STYLE ANCHOR: course/images/_anchors/elite-teal-anchor.png. Navy and teal, frosted glass, bokeh and depth. No flat look and no grey-blue fog. Do not copy a pale card. "
+            f"{var} SHOT: Headline below the top 80px, inside the safe area: {hl(head)}. Hero visual: {hero}. "
             f"Labels (short, crisp): {', '.join(labels)}. Keep it a hero visual with a few labels, not a full infographic page. All text and key content inside the centre 1536x864 safe area. Do not redraw the sibling.")
 def varof(s):
     for k,v in VAR:

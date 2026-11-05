@@ -52,6 +52,8 @@ HARD_RULES = (
     "The background is one seamless pass. No paper blocks. "
     "Nothing in the top 80px or the bottom 80px. "
     "Elite uses teal glass cards and glow only, never flat navy or matte grey. "
+    "From el-08 onward, match course/images/_anchors/elite-teal-anchor.png for navy and teal: "
+    "frosted glass, bokeh and depth. No flat look and no grey-blue fog. Do not copy a pale card. "
     "Blueprint and On-Chain Operator use the same glass and glow in cyan. "
     "If a robot appears, it has straight visor-bar eyes and no smile, matching the passed el-06 shot 28. "
     "A toggle is OFF, knob left and track unlit, unless the label says otherwise. "
