@@ -717,7 +717,7 @@
    "shot": "37",
    "prompt": "STYLE (GBB v3, Elite TEAL): Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; leave the top ~80px and bottom ~80px free of text and key content (background only). Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh and glowing TEAL (#14E0C8 / #0FB5A5) neon accent light. Frosted glass cards with glowing teal borders, subtle reflections. Bold condensed all-caps headline in crisp white with ONE keyword in teal; a few short crisp labels only (no paragraphs). Circled teal line icons, numbered step badges, dashed level lines, glossy 3D detail. Rich, layered, premium; never flat or minimal. Education only: any price or level shown carries the word EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people or faces. Optional glossy G-badge robot mascot with visor-bar eyes only; no other face-like shapes.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no blue-dominant palette (teal replaces blue), no paragraphs, no misspelt or garbled text, no real exchange/app UI or logos, no people, no extra faces or face-like dot pairs, no money piles, rockets, trophies or upward profit arrows, no unlabelled prices, nothing important in the top or bottom 80px.\nSHOT: Headline at top-left inside the safe area: FIX THE \"RULE\" (teal). Hero visual: a glass worksheet card with three rule lines; the middle line struck through in red-orange and a corrected teal line glowing beneath it. Composition: key element drawn as glowing teal wireframe. Labels (short, crisp): OLD RULE, CORRECTED. Keep it a hero visual with a few labels, not a full infographic page. All text and key content inside the centre 1536x864 safe area.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
    "path": "course/images/fallback/el-06-circuit-breakers/37.png",
-   "status": "fail",
+   "status": "awaiting_qa",
    "marker": "FALLBACK",
    "palette": "teal",
    "width": 1536,
@@ -726,7 +726,10 @@
    "format": "png",
    "source_batch": "batch-05.json",
    "qa_ref": "course/images/fallback-qa/2026-11-05_v3b/QA.md",
-   "qa_reason": "Creative Studio fail, 2026-11-05 v3b. File was not replaced. Redo required."
+   "qa_reason": "Redraw. Three lines only. OLD RULE on the struck line. No extra RULE lines. Hash changed.",
+   "previous_status": "fail",
+   "md5": "e1f5a75850105ca1ba327afdbd58d747",
+   "previous_md5": "943a1514f0bc3b42842827dd6c2e1a77"
   },
   {
    "id": "el-06-circuit-breakers-38",
@@ -865,7 +868,7 @@
    "shot": "18",
    "prompt": "STYLE (GBB v3, Elite TEAL): Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; leave the top ~80px and bottom ~80px free of text and key content (background only). Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh and glowing TEAL (#14E0C8 / #0FB5A5) neon accent light. Frosted glass cards with glowing teal borders, subtle reflections. Bold condensed all-caps headline in crisp white with ONE keyword in teal; a few short crisp labels only (no paragraphs). Circled teal line icons, numbered step badges, dashed level lines, glossy 3D detail. Rich, layered, premium; never flat or minimal. Education only: any price or level shown carries the word EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people or faces. Optional glossy G-badge robot mascot with visor-bar eyes only; no other face-like shapes.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no blue-dominant palette (teal replaces blue), no paragraphs, no misspelt or garbled text, no real exchange/app UI or logos, no people, no extra faces or face-like dot pairs, no money piles, rockets, trophies or upward profit arrows, no unlabelled prices, nothing important in the top or bottom 80px.\nSHOT: Headline at top-left inside the safe area: \"ISOLATED\" (teal) VS CROSS. Hero visual: comparison: two separate glass vaults with a clear gap; left vault holds three teal 3D USDT coins, right vault three cyan 3D coins; a teal wall icon between them. Composition: hero left of centre at 80% scale, glow trail to the right. Labels (short, crisp): ISOLATED, SEPARATE RISK. Keep it a hero visual with a few labels, not a full infographic page. All text and key content inside the centre 1536x864 safe area.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
    "path": "course/images/fallback/el-07-advanced-liquidation/18.png",
-   "status": "fail",
+   "status": "awaiting_qa",
    "marker": "FALLBACK",
    "palette": "teal",
    "width": 1536,
@@ -874,7 +877,10 @@
    "format": "png",
    "source_batch": "batch-07.json",
    "qa_ref": "course/images/fallback-qa/2026-11-05_v3b/QA.md",
-   "qa_reason": "Creative Studio fail, 2026-11-05 v3b. File was not replaced. Redo required."
+   "qa_reason": "Redraw. Gap, brick wall, three cyan USDT coins on the right. Hash changed.",
+   "previous_status": "fail",
+   "md5": "1e113a9daaaa9200b6318b3cd3b49cc8",
+   "previous_md5": "961b4eb5f6048a9ef358a91ea5208f4f"
   },
   {
    "id": "el-07-advanced-liquidation-19",
@@ -882,7 +888,7 @@
    "shot": "19",
    "prompt": "STYLE (GBB v3, Elite TEAL): Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; leave the top ~80px and bottom ~80px free of text and key content (background only). Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh and glowing TEAL (#14E0C8 / #0FB5A5) neon accent light. Frosted glass cards with glowing teal borders, subtle reflections. Bold condensed all-caps headline in crisp white with ONE keyword in teal; a few short crisp labels only (no paragraphs). Circled teal line icons, numbered step badges, dashed level lines, glossy 3D detail. Rich, layered, premium; never flat or minimal. Education only: any price or level shown carries the word EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people or faces. Optional glossy G-badge robot mascot with visor-bar eyes only; no other face-like shapes.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no blue-dominant palette (teal replaces blue), no paragraphs, no misspelt or garbled text, no real exchange/app UI or logos, no people, no extra faces or face-like dot pairs, no money piles, rockets, trophies or upward profit arrows, no unlabelled prices, nothing important in the top or bottom 80px.\nSHOT: Headline at top-left inside the safe area: \"ISOLATED\" (teal) VS CROSS. Hero visual: comparison: two separate glass vaults with a clear gap; left vault holds three teal 3D USDT coins, right vault three cyan 3D coins; a teal wall icon between them. Composition: key element lit in teal, the rest dimmed. Labels (short, crisp): ISOLATED, SEPARATE RISK. Keep it a hero visual with a few labels, not a full infographic page. All text and key content inside the centre 1536x864 safe area.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
    "path": "course/images/fallback/el-07-advanced-liquidation/19.png",
-   "status": "fail",
+   "status": "awaiting_qa",
    "marker": "FALLBACK",
    "palette": "teal",
    "width": 1536,
@@ -891,7 +897,10 @@
    "format": "png",
    "source_batch": "batch-07.json",
    "qa_ref": "course/images/fallback-qa/2026-11-05_v3b/QA.md",
-   "qa_reason": "Creative Studio fail, 2026-11-05 v3b. File was not replaced. Redo required."
+   "qa_reason": "Redraw. Labels ISOLATED and SEPARATE RISK once each. Hash changed.",
+   "previous_status": "fail",
+   "md5": "c0f06dd39826ed6187c472866d4af61a",
+   "previous_md5": "3a635afeb6869d2f15fab69682732752"
   },
   {
    "id": "el-07-advanced-liquidation-20",
@@ -899,7 +908,7 @@
    "shot": "20",
    "prompt": "STYLE (GBB v3, Elite TEAL): Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; leave the top ~80px and bottom ~80px free of text and key content (background only). Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh and glowing TEAL (#14E0C8 / #0FB5A5) neon accent light. Frosted glass cards with glowing teal borders, subtle reflections. Bold condensed all-caps headline in crisp white with ONE keyword in teal; a few short crisp labels only (no paragraphs). Circled teal line icons, numbered step badges, dashed level lines, glossy 3D detail. Rich, layered, premium; never flat or minimal. Education only: any price or level shown carries the word EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people or faces. Optional glossy G-badge robot mascot with visor-bar eyes only; no other face-like shapes.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no blue-dominant palette (teal replaces blue), no paragraphs, no misspelt or garbled text, no real exchange/app UI or logos, no people, no extra faces or face-like dot pairs, no money piles, rockets, trophies or upward profit arrows, no unlabelled prices, nothing important in the top or bottom 80px.\nSHOT: Headline at top-left inside the safe area: \"ISOLATED\" (teal) VS CROSS. Hero visual: comparison: two separate glass vaults with a clear gap; left vault holds three teal 3D USDT coins, right vault three cyan 3D coins; a teal wall icon between them. Composition: key element drawn as glowing teal wireframe. Labels (short, crisp): ISOLATED, SEPARATE RISK. Keep it a hero visual with a few labels, not a full infographic page. All text and key content inside the centre 1536x864 safe area.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
    "path": "course/images/fallback/el-07-advanced-liquidation/20.png",
-   "status": "fail",
+   "status": "awaiting_qa",
    "marker": "FALLBACK",
    "palette": "teal",
    "width": 1536,
@@ -908,7 +917,10 @@
    "format": "png",
    "source_batch": "batch-07.json",
    "qa_ref": "course/images/fallback-qa/2026-11-05_v3b/QA.md",
-   "qa_reason": "Creative Studio fail, 2026-11-05 v3b. File was not replaced. Redo required."
+   "qa_reason": "Redraw. Wireframe vaults, three USDT coins each, brick wall. Hash changed.",
+   "previous_status": "fail",
+   "md5": "8787986e09ef41920b09fd71b467a4e5",
+   "previous_md5": "35c54d31dbe2d8f8727620abf7a19909"
   },
   {
    "id": "el-07-advanced-liquidation-21",
@@ -916,7 +928,7 @@
    "shot": "21",
    "prompt": "STYLE (GBB v3, Elite TEAL): Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; leave the top ~80px and bottom ~80px free of text and key content (background only). Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh and glowing TEAL (#14E0C8 / #0FB5A5) neon accent light. Frosted glass cards with glowing teal borders, subtle reflections. Bold condensed all-caps headline in crisp white with ONE keyword in teal; a few short crisp labels only (no paragraphs). Circled teal line icons, numbered step badges, dashed level lines, glossy 3D detail. Rich, layered, premium; never flat or minimal. Education only: any price or level shown carries the word EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people or faces. Optional glossy G-badge robot mascot with visor-bar eyes only; no other face-like shapes.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no blue-dominant palette (teal replaces blue), no paragraphs, no misspelt or garbled text, no real exchange/app UI or logos, no people, no extra faces or face-like dot pairs, no money piles, rockets, trophies or upward profit arrows, no unlabelled prices, nothing important in the top or bottom 80px.\nSHOT: Headline at top-left inside the safe area: \"ISOLATED\" (teal) VS CROSS. Hero visual: comparison: two separate glass vaults with a clear gap; left vault holds three teal 3D USDT coins, right vault three cyan 3D coins; a teal wall icon between them. Composition: hero at 60% scale with more atmospheric depth. Labels (short, crisp): ISOLATED, SEPARATE RISK. Keep it a hero visual with a few labels, not a full infographic page. All text and key content inside the centre 1536x864 safe area.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
    "path": "course/images/fallback/el-07-advanced-liquidation/21.png",
-   "status": "fail",
+   "status": "awaiting_qa",
    "marker": "FALLBACK",
    "palette": "teal",
    "width": 1536,
@@ -925,7 +937,10 @@
    "format": "png",
    "source_batch": "batch-08.json",
    "qa_ref": "course/images/fallback-qa/2026-11-05_v3c/QA.md",
-   "qa_reason": "Creative Studio fail, 2026-11-05 v3c."
+   "qa_reason": "Redraw. Headline inside the safe area, hero centred. Hash changed.",
+   "previous_status": "fail",
+   "md5": "3032364cfcb94862e697f01d9b453111",
+   "previous_md5": "22d17fe9803d46ee71e6376243823ae1"
   },
   {
    "id": "el-07-advanced-liquidation-22",
