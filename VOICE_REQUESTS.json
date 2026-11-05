@@ -17,8 +17,63 @@
   "do_not_synthesize_before_stills": true
  },
  "inline_count": 35,
- "needs_count": 91,
+ "needs_count": 102,
  "needs": [
+  {
+   "id": "el-01-welcome",
+   "spec": "course/audio/needs/el-01-welcome.json",
+   "wav": "course/audio/el-01-welcome.wav"
+  },
+  {
+   "id": "el-02-prerequisites",
+   "spec": "course/audio/needs/el-02-prerequisites.json",
+   "wav": "course/audio/el-02-prerequisites.wav"
+  },
+  {
+   "id": "el-03-multi-layer",
+   "spec": "course/audio/needs/el-03-multi-layer.json",
+   "wav": "course/audio/el-03-multi-layer.wav"
+  },
+  {
+   "id": "el-04-dynamic-spacing",
+   "spec": "course/audio/needs/el-04-dynamic-spacing.json",
+   "wav": "course/audio/el-04-dynamic-spacing.wav"
+  },
+  {
+   "id": "el-05-portfolio-risk",
+   "spec": "course/audio/needs/el-05-portfolio-risk.json",
+   "wav": "course/audio/el-05-portfolio-risk.wav"
+  },
+  {
+   "id": "el-06-circuit-breakers",
+   "spec": "course/audio/needs/el-06-circuit-breakers.json",
+   "wav": "course/audio/el-06-circuit-breakers.wav"
+  },
+  {
+   "id": "el-07-advanced-liquidation",
+   "spec": "course/audio/needs/el-07-advanced-liquidation.json",
+   "wav": "course/audio/el-07-advanced-liquidation.wav"
+  },
+  {
+   "id": "el-08-size-on-a-schedule",
+   "spec": "course/audio/needs/el-08-size-on-a-schedule.json",
+   "wav": "course/audio/el-08-size-on-a-schedule.wav"
+  },
+  {
+   "id": "el-09-multi-venue",
+   "spec": "course/audio/needs/el-09-multi-venue.json",
+   "wav": "course/audio/el-09-multi-venue.wav"
+  },
+  {
+   "id": "el-10-how-to-ask",
+   "spec": "course/audio/needs/el-10-how-to-ask.json",
+   "wav": "course/audio/el-10-how-to-ask.wav"
+  },
+  {
+   "id": "el-11-paper-plan",
+   "spec": "course/audio/needs/el-11-paper-plan.json",
+   "wav": "course/audio/el-11-paper-plan.wav"
+  },
   {
    "id": "lesson-04-3",
    "spec": "course/audio/needs/lesson-04-3.json",

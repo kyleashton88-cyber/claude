@@ -23,7 +23,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "course" / "render"))
 
-from render_tutorial import accent_for, beat_seconds, check, missing_images  # noqa: E402
+from render_tutorial import accent_for, beat_seconds, check, fallback_unpassed, missing_images  # noqa: E402
 
 SCRIPTS = ROOT / "course" / "scripts"
 AUDIO = ROOT / "course" / "audio"
@@ -243,9 +243,11 @@ def render_qa(script: dict, info: dict | None, script_problems: list[str]) -> li
     return problems
 
 
-def lesson_status(missing: list[str], voice_ok: bool, master: Path, qa_passed: bool) -> str:
+def lesson_status(missing: list[str], voice_ok: bool, master: Path, qa_passed: bool, fallback_blocked: bool = False) -> str:
     if missing:
         return "waiting on images"
+    if fallback_blocked:
+        return "fallback pending QA"
     if not voice_ok:
         return "waiting on voice"
     if master.is_file() and qa_passed:
@@ -356,6 +358,8 @@ def write_note(script: dict, row: dict) -> None:
         lines.append("None in the automated checklist. Creative Studio still watches the master before it ships.")
     elif row["status"] == "waiting on images":
         lines.append("Waiting on ChatGPT stills. Code will not draw a replacement and will not reuse another beat.")
+    elif row["status"] == "fallback pending QA":
+        lines.append("The stills are Cursor fallbacks. Creative Studio has not marked them pass in `course/images/FALLBACK_MANIFEST.json`, so this lesson is not rendered.")
     elif row["status"] == "waiting on voice":
         lines.append("Stills are complete. Waiting on `course/audio/" + script["id"] + ".wav` from VOICE_REQUESTS.json.")
     elif row["status"] == "ready to render":
@@ -391,6 +395,7 @@ def write_status(rows: list[dict], elite_rows: list[dict], check_text: str, rend
         f"- Voice files on disk: {sum(1 for r in rows if r['voice_short'] == 'yes')} of {len(rows)}",
         f"- Waiting on images: {counts.get('waiting on images', 0)}",
         f"- Waiting on voice: {counts.get('waiting on voice', 0)}",
+        f"- Fallback pending QA: {counts.get('fallback pending QA', 0)}",
         f"- Ready to render: {counts.get('ready to render', 0)}",
         f"- Rendered: {counts.get('rendered', 0)}",
         f"- QA passed: {counts.get('QA passed', 0)}",
@@ -477,7 +482,8 @@ def build_rows(scripts: list[dict]) -> tuple[list[dict], dict[str, dict]]:
         info = probe(master)
         render_problems = render_qa(script, info, problems)
         qa_passed = info is not None and not render_problems
-        status = lesson_status(missing, voice_ok, master, qa_passed)
+        held = fallback_unpassed(script)
+        status = lesson_status(missing, voice_ok, master, qa_passed, bool(held) and not missing)
         if problems and status == "QA passed":
             status = "rendered"
         timeline = sum(beat_seconds(b) for b in script["beats"])

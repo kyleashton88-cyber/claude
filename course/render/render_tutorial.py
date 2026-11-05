@@ -35,6 +35,16 @@ def load(path: Path) -> dict:
     return json.loads(path.read_text())
 
 
+MANIFEST = ROOT / "course" / "images" / "FALLBACK_MANIFEST.json"
+
+
+def manifest_images() -> dict:
+    if not MANIFEST.is_file():
+        return {}
+    data = json.loads(MANIFEST.read_text())
+    return data.get("images") or {}
+
+
 def missing_images(script: dict) -> list[str]:
     bad = []
     for beat in script["beats"]:
@@ -42,6 +52,20 @@ def missing_images(script: dict) -> list[str]:
         if not p.is_file() or p.stat().st_size < 1000:
             bad.append(beat["image"])
     return bad
+
+
+def fallback_unpassed(script: dict) -> list[str]:
+    """Fallback stills stay out of masters until Creative Studio sets qa to pass."""
+    images = manifest_images()
+    blocked = []
+    for beat in script["beats"]:
+        entry = images.get(beat["image"])
+        if not entry or entry.get("marker") != "FALLBACK":
+            continue
+        qa = str(entry.get("qa") or "pending").lower()
+        if qa not in {"pass", "passed"}:
+            blocked.append(beat["image"])
+    return blocked
 
 
 def check() -> int:
@@ -56,13 +80,15 @@ def check() -> int:
         total += len(script["beats"])
         job = jobs / f"{script['id']}.json"
         waiting = job.is_file()
-        if bad or (waiting and not voice.is_file()):
+        held = fallback_unpassed(script)
+        if bad or held or (waiting and not voice.is_file()):
             blocked += 1
             if waiting and not voice.is_file():
                 voice_blocked += 1
+            hold = f", fallback pending QA {len(held)}" if held else ""
             print(
                 f"BLOCKED {script['id']}: {len(bad)} of {len(script['beats'])} images missing, "
-                f"voice {'missing' if not voice.is_file() else 'ready'}, est {script['estimated_minutes']} min"
+                f"voice {'missing' if not voice.is_file() else 'ready'}, est {script['estimated_minutes']} min{hold}"
             )
         else:
             print(f"READY   {script['id']}: {len(script['beats'])} images")
@@ -93,6 +119,12 @@ def render_script(script: dict) -> Path:
     bad = missing_images(script)
     if bad:
         raise SystemExit(f"{script['id']} missing {len(bad)} images. Refusing to reuse or to draw replacements.")
+    held = fallback_unpassed(script)
+    if held:
+        raise SystemExit(
+            f"{script['id']} has {len(held)} fallback stills waiting on Creative Studio. "
+            "Refusing to render them into a master."
+        )
     accent = accent_for(script)
     work = ROOT / "course" / "render" / "work" / script["id"]
     if work.exists():

@@ -1,17 +1,18 @@
 # Asset status
 
-Generated 2026-11-05 01:32 UTC by `course/tools/watch_assets.py`. This file does not upload anything to Whop.
+Generated 2026-11-05 01:45 UTC by `course/tools/watch_assets.py`. This file does not upload anything to Whop.
 
 Pictures come only from ChatGPT, at the `out_path` values in `IMAGE_REQUESTS.json`. The watcher never draws a still. Elite stays teal and is not in that request file.
 
 ## Counts
 
-- Scripted lessons: 126
-- Elite lessons with no long-form script yet: 11
-- Beats with a still: 0 of 6785
-- Voice files on disk: 0 of 126
+- Scripted lessons: 137
+- Elite lessons with no long-form script yet: 0
+- Beats with a still: 0 of 7019
+- Voice files on disk: 0 of 137
 - Waiting on images: 137
 - Waiting on voice: 0
+- Fallback pending QA: 0
 - Ready to render: 0
 - Rendered: 0
 - QA passed: 0
@@ -25,6 +26,17 @@ None. A lesson is listed here only after its master exists and both the script c
 
 | Lesson | Course | Status | Images | Voice | Master |
 |---|---|---|---:|---|---|
+| `el-05-portfolio-risk` | Grid Bot Elite | waiting on images | 0/21 | no | no |
+| `el-06-circuit-breakers` | Grid Bot Elite | waiting on images | 0/21 | no | no |
+| `el-07-advanced-liquidation` | Grid Bot Elite | waiting on images | 0/22 | no | no |
+| `el-08-size-on-a-schedule` | Grid Bot Elite | waiting on images | 0/21 | no | no |
+| `el-09-multi-venue` | Grid Bot Elite | waiting on images | 0/22 | no | no |
+| `el-10-how-to-ask` | Grid Bot Elite | waiting on images | 0/22 | no | no |
+| `el-11-paper-plan` | Grid Bot Elite | waiting on images | 0/21 | no | no |
+| `el-01-welcome` | Grid Bot Elite | waiting on images | 0/20 | no | no |
+| `el-02-prerequisites` | Grid Bot Elite | waiting on images | 0/22 | no | no |
+| `el-03-multi-layer` | Grid Bot Elite | waiting on images | 0/22 | no | no |
+| `el-04-dynamic-spacing` | Grid Bot Elite | waiting on images | 0/20 | no | no |
 | `bp-01-introduction` | Grid Bot Blueprint | waiting on images | 0/18 | no | no |
 | `bp-02-what-you-need` | Grid Bot Blueprint | waiting on images | 0/21 | no | no |
 | `bp-03-what-is-a-grid-bot` | Grid Bot Blueprint | waiting on images | 0/19 | no | no |
@@ -160,17 +172,6 @@ Resume image generation at `el-05` and continue through `el-11` before `el-01` t
 
 | Lesson | Title | Status |
 |---|---|---|
-| `el-05-portfolio-risk` | Portfolio risk controls | waiting on images |
-| `el-06-circuit-breakers` | Circuit breakers done manually | waiting on images |
-| `el-07-advanced-liquidation` | Advanced: liquidation scenarios | waiting on images |
-| `el-08-size-on-a-schedule` | Size changes on a schedule | waiting on images |
-| `el-09-multi-venue` | Multi-venue counterparty risk | waiting on images |
-| `el-10-how-to-ask` | How to ask a general question | waiting on images |
-| `el-11-paper-plan` | Paper plan instead of a 30-day deploy | waiting on images |
-| `el-01-welcome` | Welcome and what Elite covers | waiting on images |
-| `el-02-prerequisites` | Prerequisites check | waiting on images |
-| `el-03-multi-layer` | Multi-layer grids as inventory buckets | waiting on images |
-| `el-04-dynamic-spacing` | Dynamic spacing when volatility rises | waiting on images |
 
 ## Voice
 
@@ -200,6 +201,17 @@ BLOCKED bp-08-managing-and-monitoring: 20 of 20 images missing, voice missing, e
 BLOCKED bp-09-common-mistakes: 21 of 21 images missing, voice missing, est 17.33 min
 BLOCKED bp-10-scaling-up: 21 of 21 images missing, voice missing, est 16.93 min
 BLOCKED bp-11-advanced-liquidation: 20 of 20 images missing, voice missing, est 17.21 min
+BLOCKED el-01-welcome: 20 of 20 images missing, voice missing, est 16.87 min
+BLOCKED el-02-prerequisites: 22 of 22 images missing, voice missing, est 17.26 min
+BLOCKED el-03-multi-layer: 22 of 22 images missing, voice missing, est 16.95 min
+BLOCKED el-04-dynamic-spacing: 20 of 20 images missing, voice missing, est 17.06 min
+BLOCKED el-05-portfolio-risk: 21 of 21 images missing, voice missing, est 17.04 min
+BLOCKED el-06-circuit-breakers: 21 of 21 images missing, voice missing, est 16.76 min
+BLOCKED el-07-advanced-liquidation: 22 of 22 images missing, voice missing, est 17.25 min
+BLOCKED el-08-size-on-a-schedule: 21 of 21 images missing, voice missing, est 16.64 min
+BLOCKED el-09-multi-venue: 22 of 22 images missing, voice missing, est 17.37 min
+BLOCKED el-10-how-to-ask: 22 of 22 images missing, voice missing, est 17.08 min
+BLOCKED el-11-paper-plan: 21 of 21 images missing, voice missing, est 17.03 min
 BLOCKED lesson-01-1: 45 of 45 images missing, voice missing, est 17.33 min
 BLOCKED lesson-01-2: 47 of 47 images missing, voice missing, est 17.15 min
 BLOCKED lesson-01-3: 45 of 45 images missing, voice missing, est 17.27 min
@@ -315,5 +327,5 @@ BLOCKED module-11-intro: 13 of 13 images missing, voice missing, est 3.06 min
 BLOCKED module-12-intro: 16 of 16 images missing, voice missing, est 4.29 min
 BLOCKED module-13-intro: 13 of 13 images missing, voice missing, est 3.09 min
 BLOCKED module-14-intro: 14 of 14 images missing, voice missing, est 3.27 min
-beats 6785 lessons_blocked 126 voice_blocked 91
+beats 7019 lessons_blocked 137 voice_blocked 91
 ```
