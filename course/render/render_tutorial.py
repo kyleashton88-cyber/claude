@@ -80,10 +80,20 @@ def beat_seconds(beat: dict) -> float:
     return max(floor, words / WPM * 60)
 
 
+def accent_for(script: dict) -> str:
+    """Chapter colour. Elite stays teal. Blueprint and On-Chain Operator stay cyan."""
+    course = (script.get("course") or "").lower()
+    palette = (script.get("palette") or "").lower()
+    if "elite" in course or palette == "teal":
+        return "0x2EE6A6"
+    return "0x00D4FF"
+
+
 def render_script(script: dict) -> Path:
     bad = missing_images(script)
     if bad:
         raise SystemExit(f"{script['id']} missing {len(bad)} images. Refusing to reuse or to draw replacements.")
+    accent = accent_for(script)
     work = ROOT / "course" / "render" / "work" / script["id"]
     if work.exists():
         shutil.rmtree(work)
@@ -104,7 +114,7 @@ def render_script(script: dict) -> Path:
             "crop=1920:1080",
             f"zoompan=z='min(1.0+0.04*on/{frames},1.05)':d={frames}:s=1920x1080:fps=30",
             f"drawtext=fontfile={FONT}:textfile={cap}:fontsize=36:fontcolor=white:box=1:boxcolor=0x050A12CC:boxborderw=16:x=(w-text_w)/2:y=h-160:line_spacing=8",
-            f"drawtext=fontfile={FONT}:textfile={chapter}:fontsize=28:fontcolor=0x00D4FF:x=80:y=64",
+            f"drawtext=fontfile={FONT}:textfile={chapter}:fontsize=28:fontcolor={accent}:x=80:y=64",
             f"drawtext=fontfile={FONT_REG}:textfile={foot}:fontsize=22:fontcolor=0xD0D7E2:x=w-text_w-48:y=h-48",
         ])
         run([
@@ -181,12 +191,15 @@ def main() -> None:
     if args.proof:
         print(proof())
         return
+    # --check reports the whole course. --id renders that lesson alone, even
+    # while other lessons are still missing stills. The lesson itself still
+    # refuses to draw or to reuse a picture.
     if args.check or not args.id:
         code = check()
         if not args.id:
             raise SystemExit(code)
-        if code:
-            raise SystemExit(code)
+    if not args.id:
+        return
     script = load(SCRIPTS / f"{args.id}.json")
     print(render_script(script))
 
