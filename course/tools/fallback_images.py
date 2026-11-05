@@ -84,19 +84,49 @@ def start_index(ordered: list[dict], progress: dict | None) -> int | None:
     return 0
 
 
+def image_entry(manifest: dict, out_path: str) -> dict:
+    images = manifest.get("images") or {}
+    if isinstance(images, dict):
+        return images.get(out_path) or {}
+    for entry in images:
+        if entry.get("path") == out_path or entry.get("out_path") == out_path:
+            return entry
+    return {}
+
+
 def web_claimed(item: dict, manifest: dict) -> bool:
     path = ROOT / item["out_path"]
     if not path.is_file() or path.stat().st_size < 1000:
         return False
-    entry = manifest["images"].get(item["out_path"])
+    entry = image_entry(manifest, item["out_path"])
     return not (entry and entry.get("marker") == "FALLBACK")
 
 
+V2_FALLBACK_MATCH = "One small off-white rounded card"
+
+
+def prompt_retired(text: str, manifest: dict | None = None) -> bool:
+    """The v2 flat worksheet prompt is retired and must not be sent again."""
+    if V2_FALLBACK_MATCH in (text or ""):
+        return True
+    retired = (manifest or {}).get("retired_prompts") or {}
+    for entry in retired.values():
+        if isinstance(entry, dict) and entry.get("status") == "retired":
+            match = entry.get("match") or ""
+            if match and match in (text or ""):
+                return True
+    return False
+
+
 def needs_fallback(item: dict, manifest: dict, retry_failed: bool) -> bool:
+    if prompt_retired(item.get("prompt") or "", manifest):
+        return False
     if web_claimed(item, manifest):
         return False
     path = ROOT / item["out_path"]
-    entry = manifest["images"].get(item["out_path"])
+    entry = image_entry(manifest, item["out_path"])
+    if entry.get("prompt_status") == "retired" or entry.get("reusable") is False:
+        return False
     exists = path.is_file() and path.stat().st_size >= 1000
     if not exists:
         return True
@@ -123,16 +153,22 @@ def queue(retry_failed: bool = False) -> tuple[list[dict], str]:
 def record(request_id: str) -> None:
     payload = json.loads(REQUESTS.read_text())
     item = next(row for row in payload["requests"] if row["id"] == request_id)
+    data = load_manifest()
+    if prompt_retired(item.get("prompt") or "", data):
+        raise SystemExit(f"refusing {request_id}: v2 fallback prompt is retired")
     path = ROOT / item["out_path"]
     if not path.is_file() or path.stat().st_size < 1000:
         raise SystemExit(f"missing png for {request_id}: {item['out_path']}")
-    data = load_manifest()
-    previous = data["images"].get(item["out_path"]) or {}
-    qa = previous.get("qa") or "pending"
+    if path.suffix.lower() != ".png":
+        raise SystemExit(f"refusing {request_id}: stills are lossless PNG, never JPEG")
+    previous = image_entry(data, item["out_path"])
+    if previous.get("prompt_status") == "retired" or previous.get("reusable") is False:
+        raise SystemExit(f"refusing {request_id}: this fallback prompt is retired")
+    qa = previous.get("qa") or previous.get("status") or "pending"
     if str(qa).lower() in {"pass", "passed"}:
         print(f"keep pass {item['out_path']}")
         return
-    data["images"][item["out_path"]] = {
+    entry = {
         "marker": "FALLBACK",
         "source": "cursor-fallback",
         "qa": "pending",
@@ -141,8 +177,20 @@ def record(request_id: str) -> None:
         "beat": item["beat"],
         "palette": item.get("palette"),
         "out_path": item["out_path"],
+        "path": item["out_path"],
     }
-    data["rule"] = "Creative Studio sets qa to pass or fail. Masters stay unrendered until qa is pass."
+    images = data.get("images")
+    if isinstance(images, dict):
+        images[item["out_path"]] = entry
+    elif isinstance(images, list):
+        images[:] = [row for row in images if row.get("path") != item["out_path"] and row.get("out_path") != item["out_path"]]
+        images.append(entry)
+    else:
+        data["images"] = [entry]
+    data["rule"] = (
+        "Creative Studio sets qa to pass or fail. Masters stay unrendered until qa is pass. "
+        "The v2 fallback prompt is retired and must not be reused."
+    )
     save_manifest(data)
     print(f"recorded FALLBACK {item['out_path']}")
 
@@ -171,6 +219,13 @@ def self_test() -> None:
         "bp-01-introduction-001",
         "lesson-01-1-001",
     ]
+    assert prompt_retired("card with One small off-white rounded card inside")
+    assert not prompt_retired("glass card, teal glow, headline")
+    assert needs_fallback(
+        {"out_path": "course/images/x.png", "prompt": "One small off-white rounded card"},
+        {"images": {}},
+        False,
+    ) is False
 
 
 def main() -> None:

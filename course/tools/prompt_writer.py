@@ -18,7 +18,10 @@ STYLE = (
     "If a chart appears, stamp the word Example on it. "
     "No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, "
     "logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. "
-    "A generic illustrated panel is fine. A real app screenshot is not."
+    "A generic illustrated panel is fine. A real app screenshot is not. "
+    "Image quality must not degrade at any stage: no compression artifacts, no loss of detail, "
+    "no colour shift, no softening of labels or text; full resolution preserved from generation "
+    "through to the final 1080p video frame."
 )
 
 LAYOUTS = (
@@ -40,7 +43,10 @@ STYLE_TEAL = (
     "If a chart appears, stamp the word Example on it. "
     "No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, "
     "logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. "
-    "A generic illustrated panel is fine. A real app screenshot is not."
+    "A generic illustrated panel is fine. A real app screenshot is not. "
+    "Image quality must not degrade at any stage: no compression artifacts, no loss of detail, "
+    "no colour shift, no softening of labels or text; full resolution preserved from generation "
+    "through to the final 1080p video frame."
 )
 
 LAYOUTS_TEAL = (

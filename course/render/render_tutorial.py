@@ -2,7 +2,12 @@
 
 The pictures must already exist at each beat's image path. This file never
 draws a diagram. It may add captions, a lower third, the disclaimer line,
-a slow zoom, and the music bed.
+and the music bed.
+
+Stills stay lossless PNG. Each still is scaled once, with Lanczos, from
+1536x1024 into the 1920x1080 frame. Colour stays BT.709. The picture encode
+is x264 CRF 16, preset slow. There is no second resample and no Ken Burns
+zoom, because that softens labels.
 
   python3 course/render/render_tutorial.py --check
   python3 course/render/render_tutorial.py --id bp-01-introduction
@@ -25,6 +30,19 @@ FONT = "/usr/share/fonts/truetype/macos/Inter-Bold.ttf"
 FONT_REG = "/usr/share/fonts/truetype/macos/Inter-Regular.ttf"
 WPM = 143
 DISCLAIMER = "Education only · Not financial advice · Examples do not indicate future results"
+# One Lanczos scale into 1920x1080. A 1536x1024 still covers the frame at
+# 1.25x (1920x1280) and the crop removes only the background bars, so the
+# centre 16:9 is not scaled a second time. No zoompan after this.
+FRAME_SCALE = ",".join([
+    "scale=1920:1080:force_original_aspect_ratio=increase:flags=lanczos:in_color_matrix=bt709:out_color_matrix=bt709",
+    "crop=1920:1080",
+    "format=yuv420p",
+    "setparams=range=tv:color_primaries=bt709:color_trc=bt709:colorspace=bt709",
+])
+X264 = [
+    "-c:v", "libx264", "-preset", "slow", "-crf", "16", "-pix_fmt", "yuv420p",
+    "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
+]
 
 
 def scripts() -> list[Path]:
@@ -54,6 +72,15 @@ def missing_images(script: dict) -> list[str]:
     return bad
 
 
+def lossy_stills(script: dict) -> list[str]:
+    """Stills must stay lossless PNG. JPEG is a retired path."""
+    bad = []
+    for beat in script["beats"]:
+        if Path(beat["image"]).suffix.lower() != ".png":
+            bad.append(beat["image"])
+    return bad
+
+
 def _manifest_by_path() -> dict:
     if not MANIFEST.is_file():
         return {}
@@ -73,6 +100,9 @@ def fallback_unpassed(script: dict) -> list[str]:
     for beat in script["beats"]:
         entry = by_path.get(beat["image"])
         if not entry:
+            continue
+        if entry.get("prompt_status") == "retired" or entry.get("reusable") is False:
+            blocked.append(beat["image"])
             continue
         status = str(entry.get("status") or entry.get("qa") or "awaiting_qa").lower()
         if status in {"pass", "passed"}:
@@ -132,6 +162,9 @@ def render_script(script: dict) -> Path:
     bad = missing_images(script)
     if bad:
         raise SystemExit(f"{script['id']} missing {len(bad)} images. Refusing to reuse or to draw replacements.")
+    lossy = lossy_stills(script)
+    if lossy:
+        raise SystemExit(f"{script['id']} has {len(lossy)} stills that are not lossless PNG. Refusing to encode them.")
     held = fallback_unpassed(script)
     if held:
         raise SystemExit(
@@ -155,16 +188,14 @@ def render_script(script: dict) -> Path:
         foot = work / f"{beat['n']:03d}-foot.txt"
         foot.write_text(DISCLAIMER)
         vf = ",".join([
-            "scale=1920:1080:force_original_aspect_ratio=increase",
-            "crop=1920:1080",
-            f"zoompan=z='min(1.0+0.04*on/{frames},1.05)':d={frames}:s=1920x1080:fps=30",
+            FRAME_SCALE,
             f"drawtext=fontfile={FONT}:textfile={cap}:fontsize=36:fontcolor=white:box=1:boxcolor=0x050A12CC:boxborderw=16:x=(w-text_w)/2:y=h-160:line_spacing=8",
             f"drawtext=fontfile={FONT}:textfile={chapter}:fontsize=28:fontcolor={accent}:x=80:y=64",
             f"drawtext=fontfile={FONT_REG}:textfile={foot}:fontsize=22:fontcolor=0xD0D7E2:x=w-text_w-48:y=h-48",
         ])
         run([
             "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(ROOT / beat["image"]),
-            "-vf", vf, "-frames:v", str(frames), "-c:v", "libx264", "-pix_fmt", "yuv420p", "-r", "30", str(clip),
+            "-vf", vf, "-frames:v", str(frames), *X264, "-r", "30", str(clip),
         ])
         clips.append(clip)
     lst = work / "list.txt"
@@ -211,9 +242,7 @@ def proof() -> Path:
     foot = dest_dir / "overlay-proof-foot.txt"
     foot.write_text(DISCLAIMER)
     vf = ",".join([
-        "scale=1920:1080:force_original_aspect_ratio=increase",
-        "crop=1920:1080",
-        "zoompan=z='min(1.0+0.001*on,1.04)':d=180:s=1920x1080:fps=30",
+        FRAME_SCALE,
         f"drawtext=fontfile={FONT}:textfile={cap}:fontsize=42:fontcolor=white:box=1:boxcolor=0x050A12CC:boxborderw=18:x=(w-text_w)/2:y=h-180",
         f"drawtext=fontfile={FONT}:textfile={chapter}:fontsize=28:fontcolor=0x00D4FF:x=80:y=64",
         f"drawtext=fontfile={FONT_REG}:textfile={foot}:fontsize=22:fontcolor=0xD0D7E2:x=w-text_w-48:y=h-48",
@@ -222,7 +251,7 @@ def proof() -> Path:
         "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(src), "-stream_loop", "-1", "-i", str(music),
         "-vf", vf, "-t", "6", "-map", "0:v", "-map", "1:a",
         "-af", "volume=0.35,afade=t=in:d=0.4,afade=t=out:st=5:d=1",
-        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-r", "30", "-c:a", "aac", "-shortest", str(dest),
+        *X264, "-r", "30", "-c:a", "aac", "-shortest", str(dest),
     ])
     return dest
 
