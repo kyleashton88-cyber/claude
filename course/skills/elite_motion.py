@@ -172,6 +172,56 @@ def write_frames(kind: str, dest: Path, frames: int = 24) -> tuple[int, int]:
     return 12, frames
 
 
+# 2.5s is under the 3.17s identical run Creative Studio flagged in el-02.
+MAX_HOLD = 2.5
+
+
+def segment_lengths(seconds: float, max_hold: float = MAX_HOLD) -> list[float]:
+    """Split a beat so every piece is at most max_hold seconds."""
+    if seconds <= 0:
+        return []
+    if seconds <= max_hold:
+        return [seconds]
+    count = int(seconds // max_hold)
+    if seconds - count * max_hold > 1e-6:
+        count += 1
+    count = max(count, 2)
+    step = seconds / count
+    parts = [step] * (count - 1)
+    parts.append(seconds - step * (count - 1))
+    return parts
+
+
+def picture_filter(index: int, seconds: float = 2.5) -> str:
+    """One Lanczos scale, then a horizontal crop that stays on the artwork.
+
+    A vertical pan slid off the diagram into empty navy and sat there. The crop
+    stays at the vertical centre. A teal tick crosses the frame during the piece
+    so the picture is still moving when the plate itself is a flat field.
+    """
+    dur = max(float(seconds), 0.1)
+    width = 2300 if index % 2 else 2100
+    span = "(in_w-1920-80)"
+    if index % 2 == 0:
+        x_expr = f"40+{span}*t/{dur:.3f}"
+    else:
+        x_expr = f"in_w-1920-40-{span}*t/{dur:.3f}"
+    y_expr = "(in_h-1080)/2"
+    tick = f"80+(w-200)*t/{dur:.3f}"
+    return ",".join([
+        f"scale={width}:-2:flags=lanczos:in_color_matrix=bt709:out_color_matrix=bt709",
+        f"crop=1920:1080:x='{x_expr}':y='{y_expr}'",
+        f"drawbox=x='{tick}':y=120:w=64:h=8:color=0x2EE6A6:t=fill",
+        "format=yuv420p",
+        "setparams=range=tv:color_primaries=bt709:color_trc=bt709:colorspace=bt709",
+    ])
+
+
+def example_png(kind: str) -> Path:
+    """ChatGPT still for a code-drawn kind. Missing file means do not draw a plate."""
+    return Path(__file__).resolve().parent.parent / "images" / "examples" / f"{kind}.png"
+
+
 def camera_and_callouts(callouts: bool = True) -> str:
     """Crop drift inside one Lanczos scale, plus a teal box that steps every 4 seconds.
 

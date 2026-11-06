@@ -43,6 +43,14 @@ X264 = [
     "-c:v", "libx264", "-preset", "slow", "-crf", "16", "-pix_fmt", "yuv420p",
     "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
 ]
+# Caption box stays 64px inside the frame and 16px above the footer at y=h-48.
+CAPTION_SIZE = 36
+CAPTION_BORDER = 16
+CAPTION_MARGIN = 64
+CAPTION_MAX_W = 1920 - 2 * CAPTION_MARGIN - 2 * CAPTION_BORDER
+CAPTION_LINE = 8
+FRAME_H = 1080
+FOOTER_Y = 48
 
 
 def scripts() -> list[Path]:
@@ -143,10 +151,52 @@ def run(cmd: list[str]) -> None:
     subprocess.check_call(cmd)
 
 
+def _caption_font():
+    from PIL import ImageFont
+    return ImageFont.truetype(FONT, CAPTION_SIZE)
+
+
+def caption_px(text: str) -> int:
+    box = _caption_font().getbbox(text)
+    return box[2] - box[0]
+
+
+def wrap_caption(text: str, max_width: int = CAPTION_MAX_W) -> list[str]:
+    """Break a caption into lines that fit the safe width, including the box border."""
+    words = (text or "").split()
+    if not words:
+        return [""]
+    lines: list[str] = []
+    current = words[0]
+    for word in words[1:]:
+        trial = f"{current} {word}"
+        if caption_px(trial) <= max_width:
+            current = trial
+        else:
+            lines.append(current)
+            current = word
+    lines.append(current)
+    return lines
+
+
+def caption_y_offset(line_count: int) -> int:
+    """Distance from the bottom of the frame to the top of the caption glyphs.
+
+    One and two lines stay at the existing 160px. More lines move up so the
+    box clears the footer and stays inside the frame.
+    """
+    text_h = line_count * CAPTION_SIZE + max(0, line_count - 1) * CAPTION_LINE
+    # box bottom = glyph top + text_h + border, and must sit 16px above the footer
+    limit = FOOTER_Y + 16 + text_h + CAPTION_BORDER
+    return max(160, limit)
+
+
 def beat_seconds(beat: dict) -> float:
     words = len((beat.get("vo") or "").split())
     floor = {"intro": 5.5, "outro": 8.0, "legal": 12.0}.get(beat["role"], 6.0)
-    return max(floor, words / WPM * 60)
+    # min_seconds keeps a short line on screen long enough for the spoken take.
+    # Kokoro at 0.78 can run slower than the 143 wpm picture estimate.
+    return max(floor, words / WPM * 60, float(beat.get("min_seconds") or 0))
 
 
 def accent_for(script: dict) -> str:
@@ -185,42 +235,44 @@ def render_script(script: dict) -> Path:
         secs = beat_seconds(beat)
         frames = int(round(secs * 30))
         clip = work / f"{beat['n']:03d}.mp4"
+        lines = wrap_caption(beat["cap"])
         cap = work / f"{beat['n']:03d}.txt"
-        cap.write_text(beat["cap"])
+        cap.write_text("\n".join(lines))
         chapter = work / f"{beat['n']:03d}-ch.txt"
         chapter.write_text(f"{beat['chapter']}")
         foot = work / f"{beat['n']:03d}-foot.txt"
         foot.write_text(DISCLAIMER)
+        cap_y = caption_y_offset(len(lines))
         overlays = ",".join([
-            f"drawtext=fontfile={FONT}:textfile={cap}:fontsize=36:fontcolor=white:box=1:boxcolor=0x050A12CC:boxborderw=16:x=(w-text_w)/2:y=h-160:line_spacing=8",
+            f"drawtext=fontfile={FONT}:textfile={cap}:fontsize={CAPTION_SIZE}:fontcolor=white:box=1:boxcolor=0x050A12CC:boxborderw={CAPTION_BORDER}:text_align=center:x=(w-text_w)/2:y=h-{cap_y}:line_spacing={CAPTION_LINE}",
             f"drawtext=fontfile={FONT}:textfile={chapter}:fontsize=28:fontcolor={accent}:x=80:y=64",
             f"drawtext=fontfile={FONT_REG}:textfile={foot}:fontsize=22:fontcolor=0xD0D7E2:x=w-text_w-48:y=h-48",
         ])
         kind = (beat.get("example") or {}).get("kind") if elite else None
         if kind:
-            frame_dir = work / f"frames-{beat['n']:03d}"
-            fps, count = elite_motion.write_frames(kind, frame_dir)
-            pad = max(0.0, secs - count / fps)
-            picture = elite_motion.camera_and_callouts(callouts=False)
-            vf = picture + f",tpad=stop_mode=clone:stop_duration={pad:.3f}," + overlays
-            run([
-                "ffmpeg", "-y", "-v", "error",
-                "-framerate", str(fps), "-i", str(frame_dir / "frame-%03d.png"),
-                "-vf", vf, "-frames:v", str(frames), *X264, "-r", "30", str(clip),
-            ])
-        elif elite:
-            vf = elite_motion.camera_and_callouts(callouts=True) + "," + overlays
-            run([
-                "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(ROOT / beat["image"]),
-                "-vf", vf, "-frames:v", str(frames), *X264, "-r", "30", str(clip),
-            ])
+            src = elite_motion.example_png(kind)
+            if not src.is_file():
+                raise SystemExit(f"{script['id']} beat {beat['n']} example {kind} has no still at {src}")
+        else:
+            src = ROOT / beat["image"]
+        if elite:
+            pieces = elite_motion.segment_lengths(secs)
+            for index, piece in enumerate(pieces):
+                piece_frames = max(1, int(round(piece * 30)))
+                piece_clip = work / f"{beat['n']:03d}-{index:02d}.mp4"
+                vf = elite_motion.picture_filter(index, piece) + "," + overlays
+                run([
+                    "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(src),
+                    "-vf", vf, "-frames:v", str(piece_frames), *X264, "-r", "30", str(piece_clip),
+                ])
+                clips.append(piece_clip)
         else:
             vf = FRAME_SCALE + "," + overlays
             run([
-                "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(ROOT / beat["image"]),
+                "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(src),
                 "-vf", vf, "-frames:v", str(frames), *X264, "-r", "30", str(clip),
             ])
-        clips.append(clip)
+            clips.append(clip)
     lst = work / "list.txt"
     lst.write_text("".join(f"file '{c}'\n" for c in clips))
     silent = work / "silent.mp4"
