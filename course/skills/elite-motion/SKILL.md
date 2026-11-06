@@ -2,7 +2,7 @@
 
 Code: `course/skills/elite_motion.py`. The renderer calls it for every Elite lesson.
 
-- Every Elite beat is cut into pieces of at most 7.5 seconds (`segment_lengths`). Inside a piece the crop travels across one Lanczos scale, and the next piece starts from the opposite side. The picture is moving while the line is spoken, and a hold cannot run past 7.5 seconds. Labels are not scaled a second time.
+- Every Elite beat is cut into pieces of at most 2.5 seconds (`segment_lengths`). The crop stays at the vertical centre and travels sideways, so it does not slide off the diagram into empty navy. A teal tick crosses the frame during the piece. The next piece starts from the opposite side. Labels are not scaled a second time.
 - Beats with `example.kind` use the ChatGPT still at `course/images/examples/<kind>.png`. Those plates are real charts or everyday analogies. The renderer does not draw them. They wait for Creative Studio and are not marked pass.
 - The previous masters stay in `course/masters/baseline/`. Do not delete them.
 

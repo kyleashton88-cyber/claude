@@ -9,7 +9,7 @@ Creative Studio has not reviewed these files. Do not mark them pass. The lesson 
 | File | What it teaches |
 |---|---|
 | chart-path.png | Public path, 8 Nov 2021 to 21 Nov 2022, a steep fall. About 76 percent lower. Example. |
-| chart-day.png | 12 and 13 June 2022. The second bar is the wide one. Close 16 percent under the day before. |
+| chart-day.png | 12 and 13 June 2022. The taller bar is 13 June. The 13 June close was 16 percent under the 12 June close, so the figure sits under 13 June. |
 | chart-two.png | Bitcoin and ether fell together. 0.89 is an example, not a rule. |
 | analogy-map.png | Paper map before a trip. |
 | analogy-list.png | Pre-flight list: range, space, stop. |

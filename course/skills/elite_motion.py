@@ -172,7 +172,8 @@ def write_frames(kind: str, dest: Path, frames: int = 24) -> tuple[int, int]:
     return 12, frames
 
 
-MAX_HOLD = 7.5
+# 2.5s is under the 3.17s identical run Creative Studio flagged in el-02.
+MAX_HOLD = 2.5
 
 
 def segment_lengths(seconds: float, max_hold: float = MAX_HOLD) -> list[float]:
@@ -191,30 +192,26 @@ def segment_lengths(seconds: float, max_hold: float = MAX_HOLD) -> list[float]:
     return parts
 
 
-def picture_filter(index: int, seconds: float = 7.5) -> str:
-    """One Lanczos scale, then a crop that travels across the plate for this piece.
+def picture_filter(index: int, seconds: float = 2.5) -> str:
+    """One Lanczos scale, then a horizontal crop that stays on the artwork.
 
-    The next piece starts from the opposite side, so the move resets before 7.5
-    seconds. Pixels are not scaled again while the crop moves.
+    A vertical pan slid off the diagram into empty navy and sat there. The crop
+    stays at the vertical centre. A teal tick crosses the frame during the piece
+    so the picture is still moving when the plate itself is a flat field.
     """
     dur = max(float(seconds), 0.1)
-    width = 2800 if index % 2 else 2560
-    slot = index % 4
-    if slot == 0:
-        x_expr = f"24+(in_w-1920-48)*t/{dur:.3f}"
-        y_expr = "(in_h-1080)/2"
-    elif slot == 1:
-        x_expr = f"in_w-1920-24-(in_w-1920-48)*t/{dur:.3f}"
-        y_expr = "(in_h-1080)/2"
-    elif slot == 2:
-        x_expr = "(in_w-1920)/2"
-        y_expr = f"16+(in_h-1080-32)*t/{dur:.3f}"
+    width = 2300 if index % 2 else 2100
+    span = "(in_w-1920-80)"
+    if index % 2 == 0:
+        x_expr = f"40+{span}*t/{dur:.3f}"
     else:
-        x_expr = "(in_w-1920)/2"
-        y_expr = f"in_h-1080-16-(in_h-1080-32)*t/{dur:.3f}"
+        x_expr = f"in_w-1920-40-{span}*t/{dur:.3f}"
+    y_expr = "(in_h-1080)/2"
+    tick = f"80+(w-200)*t/{dur:.3f}"
     return ",".join([
         f"scale={width}:-2:flags=lanczos:in_color_matrix=bt709:out_color_matrix=bt709",
         f"crop=1920:1080:x='{x_expr}':y='{y_expr}'",
+        f"drawbox=x='{tick}':y=120:w=64:h=8:color=0x2EE6A6:t=fill",
         "format=yuv420p",
         "setparams=range=tv:color_primaries=bt709:color_trc=bt709:colorspace=bt709",
     ])

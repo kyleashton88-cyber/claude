@@ -30,21 +30,21 @@ Wired stills are the pictures the script points at. Every wired still is in `FAL
 
 ## New masters
 
-Same picture size and codecs. The hold check samples 2 frames a second and the longest identical run in every lesson is 0.50 seconds. el-08 is 17.02 minutes, past the 16.7 minute floor, because of the spoken tail.
+Same picture size and codecs. el-03 and el-09 are the cut Creative Studio passed and were not re-encoded. The other nine were re-encoded with wrapped captions and a 2.5 second cut. A 2-frame-per-second scan found no quiet stretch of 3.17 seconds. The longest quiet stretch in those nine is 2.00 seconds. el-08 is 17.00 minutes, past the 16.7 minute floor.
 
-| Lesson | Master | Longest hold |
+| Lesson | Master | Notes |
 |---|---|---|
-| el-01 Welcome | 16.82 min | 0.50 s |
-| el-02 Prerequisites | 17.33 min | 0.50 s |
-| el-03 Multi-layer | 17.16 min | 0.50 s |
-| el-04 Dynamic spacing | 17.10 min | 0.50 s |
-| el-05 Portfolio risk | 17.08 min | 0.50 s |
-| el-06 Circuit breakers | 16.82 min | 0.50 s |
-| el-07 Liquidation | 18.05 min | 0.50 s |
-| el-08 Size on a schedule | 17.02 min | 0.50 s |
-| el-09 Multi-venue | 17.40 min | 0.50 s |
-| el-10 How to ask | 17.11 min | 0.50 s |
-| el-11 Paper plan | 16.93 min | 0.50 s |
+| el-01 Welcome | 16.81 min | captions rewrapped |
+| el-02 Prerequisites | 17.35 min | captions rewrapped, 09:31 hold removed |
+| el-03 Multi-layer | 17.16 min | passed, kept |
+| el-04 Dynamic spacing | 17.10 min | captions rewrapped, 13 June chart |
+| el-05 Portfolio risk | 17.07 min | captions rewrapped |
+| el-06 Circuit breakers | 16.85 min | captions rewrapped |
+| el-07 Liquidation | 18.04 min | captions rewrapped, 13 June chart |
+| el-08 Size on a schedule | 17.00 min | captions rewrapped |
+| el-09 Multi-venue | 17.40 min | passed, kept |
+| el-10 How to ask | 17.12 min | captions rewrapped |
+| el-11 Paper plan | 16.97 min | captions rewrapped |
 
 Music is `course/music/komiku-ambiant-truth.ogg`, ducked under the voice and loudnormed to about -16 LUFS. Voice is 24 kHz mono.
 
@@ -68,6 +68,12 @@ Exchange names were removed from every Elite script field. The spoken line is no
 Stewart's 6 November direction replaces the code-drawn plates. The key beats still teach through one real example, and the picture on those beats is now a ChatGPT still in `course/images/examples/`. The passed still stays the file the script points at, so the pass gate is unchanged. The renderer shows the example still while that line is spoken. Creative Studio has not reviewed the new stills. They are not marked pass.
 
 The crop travels across the plate for each piece of the beat, and the next piece starts from the opposite side. No piece is longer than 7.5 seconds, which keeps a hold inside the 8 second limit. One Lanczos scale, then the crop. Labels are not scaled again.
+
+Captions wrap to at most two lines. Inter Bold at 36px is measured, and each line stays inside a 64px margin once the box border is included. One and two lines keep the lower-third position. The footer stays below the box.
+
+The day chart puts 16 PERCENT under 13 June. The public index close on 13 June 2022 is 15.97 percent under the 12 June close, which the lesson says as 16 percent. The taller bar is 13 June.
+
+Pieces are at most 2.5 seconds and the crop stays at the vertical centre. That removes the empty-navy stretch Creative Studio measured as 3.17 seconds in el-02 at 09:31. el-03 and el-09 passed and are not re-encoded.
 
 The masters Creative Studio already reviewed are copied to `course/masters/baseline/` and are not deleted. el-08 adds a spoken tail after the outro so the picture runs past 16.7 minutes. The tail says November 2022 on the public path was a lower close, not a payment.
 

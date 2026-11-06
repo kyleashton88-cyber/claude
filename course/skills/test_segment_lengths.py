@@ -8,15 +8,16 @@ import elite_motion
 
 
 def test_short_beat_is_one_piece():
-    assert elite_motion.segment_lengths(6.0) == [6.0]
+    assert elite_motion.segment_lengths(2.0) == [2.0]
 
 
 def test_long_beat_has_no_piece_over_the_limit():
-    for seconds in (8.1, 15, 22.5, 71.9, 120):
+    for seconds in (3.17, 8.1, 15, 22.5, 45.31, 71.9, 120):
         parts = elite_motion.segment_lengths(seconds)
         assert parts, seconds
         assert abs(sum(parts) - seconds) < 1e-6
         assert max(parts) <= elite_motion.MAX_HOLD + 1e-6
+        assert max(parts) < 3.17
 
 
 def test_min_seconds_extends_a_short_line():
