@@ -61,10 +61,12 @@ def fit_wav(wav: np.ndarray, frames: int) -> np.ndarray:
     return wav[:target]
 
 
-def render(sid: str, proof: bool) -> Path:
+def render(sid: str, proof: bool, out_dir: Path | None = None, prepare_shots=None) -> Path:
     if sid.startswith("el-"):
         raise SystemExit(f"refusing Elite id {sid}")
     shots = lesson_scripts.build(sid)
+    if prepare_shots is not None:
+        shots = prepare_shots(shots)
     if proof:
         shots = shots[:4]
     for shot in shots:
@@ -137,7 +139,7 @@ def render(sid: str, proof: bool) -> Path:
     code = proc.wait()
     if code != 0:
         raise SystemExit(f"ffmpeg encode failed {code}")
-    dest = OUT / f"{sid}.mp4"
+    dest = (out_dir or OUT) / f"{sid}.mp4"
     if proof:
         dest = Path("/tmp/bp-motion-proof.mp4")
         # Proof keeps the picture and the voice so a frame can be checked.
