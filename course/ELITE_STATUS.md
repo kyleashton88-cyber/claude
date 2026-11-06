@@ -6,25 +6,27 @@ This file is the read of where Elite stood, then the list of changes made after 
 
 ## Where Elite is
 
-All 11 lessons have a script, a full set of passed stills, a voice track, and a 1080p master of at least 15 minutes. Those masters are the cut Creative Studio reviewed: 9 passed, and el-07 and el-09 failed because the voice and the burned-in caption named Bybit and Pionex. That cut is being replaced. The new cut speaks a generic US-persons line, teaches through a public price path and a set of analogies, and moves on screen. Creative Studio has not QA'd the new cut yet.
+All 11 lessons have a script, a full set of passed stills, a fresh voice track, and a new 1080p master of at least 15 minutes. Creative Studio's earlier video QA passed 9 of 11 and failed el-07 and el-09 because the voice and the caption named Bybit and Pionex. Those lines are gone. The new masters speak a generic US-persons line, teach through a public price path and a set of analogies, and move on screen. Creative Studio has not QA'd this new cut.
 
-## Per lesson, before this rework
+## Per lesson, this cut
+
+Voice times are the re-speak. Master times are the re-encode. Every master is 1920×1080, h264 and aac.
 
 Wired stills are the pictures the script points at. Every wired still is in `FALLBACK_MANIFEST.json` with status pass, palette teal, and the no-degradation clause. Each file on disk is a 1536×1024 PNG. Manifest rows above the beat count are older v3 stills that are not on the long script.
 
 | Lesson | Beats | Wired stills | Passed | Voice | Master |
 |---|---:|---:|---:|---|---|
-| el-01 Welcome | 20 | 20 local | 20 | 16.48 min, LFS | 16.81 min |
-| el-02 Prerequisites | 22 | 22 local | 22 | 17.30 min, was untracked | 17.24 min |
-| el-03 Multi-layer | 22 | 22 local | 22 | 16.84 min, was untracked | 16.94 min |
-| el-04 Dynamic spacing | 20 | 20 local | 20 | 17.08 min, was untracked | 16.96 min |
-| el-05 Portfolio risk | 21 | 17 local, 4 v3 | 21 | 16.88 min, LFS | 16.92 min |
-| el-06 Circuit breakers | 21 | 12 local, 9 v3 | 21 | 16.24 min, LFS | 16.66 min |
-| el-07 Liquidation | 22 | 13 local, 9 v3 | 22 | 17.70 min, LFS | 17.20 min |
-| el-08 Size on a schedule | 21 | 10 local, 11 v3 | 21 | 16.39 min, LFS | 16.59 min |
-| el-09 Multi-venue | 22 | 22 local | 22 | 17.19 min, LFS | 17.34 min |
-| el-10 How to ask | 22 | 11 local, 11 v3 | 22 | 17.03 min, LFS | 17.05 min |
-| el-11 Paper plan | 21 | 10 local, 11 v3 | 21 | 17.27 min, LFS | 16.87 min |
+| el-01 Welcome | 20 | 20 local | 20 | 16.46 min | 16.81 min |
+| el-02 Prerequisites | 22 | 22 local | 22 | 17.35 min | 17.33 min |
+| el-03 Multi-layer | 22 | 22 local | 22 | 16.97 min | 17.16 min |
+| el-04 Dynamic spacing | 20 | 20 local | 20 | 17.34 min | 17.09 min |
+| el-05 Portfolio risk | 21 | 17 local, 4 v3 | 21 | 17.11 min | 17.08 min |
+| el-06 Circuit breakers | 21 | 12 local, 9 v3 | 21 | 16.40 min | 16.82 min |
+| el-07 Liquidation | 22 | 13 local, 9 v3 | 22 | 18.90 min | 18.05 min |
+| el-08 Size on a schedule | 21 | 10 local, 11 v3 | 21 | 16.52 min | 16.69 min |
+| el-09 Multi-venue | 22 | 22 local | 22 | 17.24 min | 17.40 min |
+| el-10 How to ask | 22 | 11 local, 11 v3 | 22 | 17.06 min | 17.11 min |
+| el-11 Paper plan | 21 | 10 local, 11 v3 | 21 | 17.30 min | 16.92 min |
 
 Masters are 1920×1080, h264 and aac, under `course/masters/`. Voice is 24 kHz mono. Music is `course/music/komiku-ambiant-truth.ogg`, ducked under the voice and loudnormed to about -16 LUFS.
 
@@ -76,24 +78,22 @@ Not bought, and not run: ChatGPT image generation, ElevenLabs, HeyGen, Remotion,
 
 ## Done
 
-- Eleven scripts, eleven passed still sets, eleven masters of at least 15 minutes at 1080p in the previous cut.
 - Exchange names removed from Elite script voice, captions, concepts, and prompts.
-- Real examples written into the key beats and drawn as teal plates.
-- Motion path added for Elite.
+- Real examples written into the key beats and drawn as teal plates while those lines play.
+- All 11 lessons re-spoken with Kokoro and re-encoded at 1920×1080. Every new master is at least 16.69 minutes.
+- Motion path added for Elite. Blueprint renders are unchanged.
 
 ## In progress
 
-- Kokoro is re-speaking all 11 lessons from the new scripts, same voice (`af_heart`, speed 0.78).
-- Masters will be re-encoded after those wavs land. Until that encode finishes, `course/masters/el-07` and `el-09` are still the cut that failed video QA.
+Nothing is rendering. The re-speak and the re-encode of all 11 lessons have finished.
 
 ## Blocked
 
-- Creative Studio has not QA'd the new voice, the drawn plates, or the new masters. Do not treat the re-encode as passed.
-- PR #6 is not merged, on purpose. Masters are ordinary git files and several are over GitHub's 50 MB hint. el-02, el-03, and el-04 wavs were never committed; the re-speak will replace the copies on disk.
+- Creative Studio has not QA'd this cut. The drawn plates and the new masters are waiting on that review. Do not treat them as passed.
+- PR #6 is not merged, on purpose. Masters are ordinary git files and several are over GitHub's 50 MB hint.
 - No paid art was commissioned, so the new plates are drawings of public data and analogies, not photographs.
 
 ## Next
 
-- Finish the re-speak, re-encode el-01 through el-11, and commit the new masters.
-- Send the new masters to Creative Studio for video QA, especially el-07 around the old 05:06 mark and el-09 around the old 04:52 mark.
+- Send the new masters to Creative Studio for video QA. The lines that used to name Bybit and Pionex are now "United States: some venues' futures products are not available to US persons."
 - Leave PR #6 unmerged until Stewart says otherwise.
