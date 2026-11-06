@@ -4,10 +4,10 @@ The pictures must already exist at each beat's image path. This file never
 draws a diagram. It may add captions, a lower third, the disclaimer line,
 and the music bed.
 
-Stills stay lossless PNG. Each still is scaled once, with Lanczos, from
-1536x1024 into the 1920x1080 frame. Colour stays BT.709. The picture encode
-is x264 CRF 16, preset slow. There is no second resample and no Ken Burns
-zoom, because that softens labels.
+Stills stay lossless PNG. Each still is scaled once, with Lanczos, into the
+frame. Colour stays BT.709. The picture encode is x264 CRF 16, preset slow.
+Elite lessons then crop inside that scaled frame so the camera can drift
+without resampling labels on every frame. Blueprint stays a still hold.
 
   python3 course/render/render_tutorial.py --check
   python3 course/render/render_tutorial.py --id bp-01-introduction
@@ -172,6 +172,10 @@ def render_script(script: dict) -> Path:
             "Refusing to render them into a master."
         )
     accent = accent_for(script)
+    elite = accent == "0x2EE6A6"
+    if elite:
+        sys.path.insert(0, str(ROOT / "course" / "skills"))
+        import elite_motion
     work = ROOT / "course" / "render" / "work" / script["id"]
     if work.exists():
         shutil.rmtree(work)
@@ -187,16 +191,35 @@ def render_script(script: dict) -> Path:
         chapter.write_text(f"{beat['chapter']}")
         foot = work / f"{beat['n']:03d}-foot.txt"
         foot.write_text(DISCLAIMER)
-        vf = ",".join([
-            FRAME_SCALE,
+        overlays = ",".join([
             f"drawtext=fontfile={FONT}:textfile={cap}:fontsize=36:fontcolor=white:box=1:boxcolor=0x050A12CC:boxborderw=16:x=(w-text_w)/2:y=h-160:line_spacing=8",
             f"drawtext=fontfile={FONT}:textfile={chapter}:fontsize=28:fontcolor={accent}:x=80:y=64",
             f"drawtext=fontfile={FONT_REG}:textfile={foot}:fontsize=22:fontcolor=0xD0D7E2:x=w-text_w-48:y=h-48",
         ])
-        run([
-            "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(ROOT / beat["image"]),
-            "-vf", vf, "-frames:v", str(frames), *X264, "-r", "30", str(clip),
-        ])
+        kind = (beat.get("example") or {}).get("kind") if elite else None
+        if kind:
+            frame_dir = work / f"frames-{beat['n']:03d}"
+            fps, count = elite_motion.write_frames(kind, frame_dir)
+            pad = max(0.0, secs - count / fps)
+            picture = elite_motion.camera_and_callouts(callouts=False)
+            vf = picture + f",tpad=stop_mode=clone:stop_duration={pad:.3f}," + overlays
+            run([
+                "ffmpeg", "-y", "-v", "error",
+                "-framerate", str(fps), "-i", str(frame_dir / "frame-%03d.png"),
+                "-vf", vf, "-frames:v", str(frames), *X264, "-r", "30", str(clip),
+            ])
+        elif elite:
+            vf = elite_motion.camera_and_callouts(callouts=True) + "," + overlays
+            run([
+                "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(ROOT / beat["image"]),
+                "-vf", vf, "-frames:v", str(frames), *X264, "-r", "30", str(clip),
+            ])
+        else:
+            vf = FRAME_SCALE + "," + overlays
+            run([
+                "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(ROOT / beat["image"]),
+                "-vf", vf, "-frames:v", str(frames), *X264, "-r", "30", str(clip),
+            ])
         clips.append(clip)
     lst = work / "list.txt"
     lst.write_text("".join(f"file '{c}'\n" for c in clips))
