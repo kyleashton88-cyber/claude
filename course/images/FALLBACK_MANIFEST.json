@@ -135325,6 +135325,26 @@
    "previous_status": null,
    "md5": "e856508591d6a920f87e171db43196b9",
    "previous_md5": null
+  },
+  {
+   "id": "el-02-prerequisites-004",
+   "lesson": "el-02-prerequisites",
+   "shot": "004",
+   "prompt": "STYLE (GBB v3, Elite TEAL): Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; leave the top ~80px and bottom ~80px free of text and key content (background only). Near-black navy (#05080F to #0B1424), faint grid, bokeh, frosted glass with glowing teal borders (#14E0C8 / #0FB5A5). Not cyan #00D4FF. No off-white paper. No people, no exchange names, no dollar sign, no rising chart. Headline: COVER white, NOTES #14E0C8, once, top-left inside the safe area. No other text except these labels: RANGE, SPACING, STOP, EXAMPLE. SHOT: Three boxes labelled RANGE, SPACING, and STOP, each partly covered. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "path": "course/images/el-02-prerequisites/004.png",
+   "status": "awaiting_qa",
+   "marker": "FALLBACK",
+   "palette": "teal",
+   "width": 1536,
+   "height": 1024,
+   "style": "gbb-v3",
+   "qa_ref": "course/scripts/el-02-prerequisites.json",
+   "qa_reason": "Awaiting Creative Studio QA. Elite teal fallback, 2026-11-06.",
+   "format": "png",
+   "source_batch": "course/scripts/el-02-prerequisites.json",
+   "previous_status": null,
+   "md5": "8e7cf87c101d12190f46424871757a11",
+   "previous_md5": null
   }
  ],
  "retired_prompts": {
