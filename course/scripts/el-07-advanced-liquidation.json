@@ -25,7 +25,7 @@
    "cap": "The first picture is a position the venue can close. Last page you wrote a pause that you act, and a venue.",
    "concept": "The first picture is a position the venue can close.",
    "image": "course/images/el-07-advanced-liquidation/001.png",
-   "image_status": "awaiting_qa",
+   "image_status": "pass",
    "prompt": "The only readable words are CLOSE and EXAMPLE. A close square inside a frame. Headline VENUE white, CLOSE #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
   },
   {
@@ -36,7 +36,7 @@
    "cap": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of.",
    "concept": "Education only, not financial advice.",
    "image": "course/images/el-07-advanced-liquidation/002.png",
-   "image_status": "awaiting_qa",
+   "image_status": "pass",
    "prompt": "The only readable word is EXAMPLE. One card with a level bar. Headline STUDY white, ONLY #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
   },
   {
@@ -47,7 +47,7 @@
    "cap": "This is Grid Bot Elite. The lesson is Advanced: liquidation scenarios. Teal on the frame. Not the Blueprint.",
    "concept": "Advanced: liquidation scenarios",
    "image": "course/images/el-07-advanced-liquidation/003.png",
-   "image_status": "awaiting_qa",
+   "image_status": "pass",
    "prompt": "The only readable word is EXAMPLE. Three frames, the first holding a close square. Headline FIRST white, FRAME #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
   },
   {
@@ -58,7 +58,7 @@
    "cap": "This content is general education only, not financial advice. It does not consider your objectives, financial.",
    "concept": "This content is general education only, not financial advice.",
    "image": "course/images/el-07-advanced-liquidation/004.png",
-   "image_status": "awaiting_qa",
+   "image_status": "pass",
    "prompt": "The only readable word is EXAMPLE. A bookmark mark. Headline READ white, ONLY #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
   },
   {
@@ -69,7 +69,7 @@
    "cap": "The worked picture is a losing scenario, and it is hypothetical. You draw a path that leaves the band and a.",
    "concept": "The worked picture is a losing scenario, and it is hypothetical.",
    "image": "course/images/el-07-advanced-liquidation/005.png",
-   "image_status": "awaiting_qa",
+   "image_status": "pass",
    "prompt": "The only readable word is EXAMPLE. A level path that steps down. Headline LOSS white, PATH #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
   },
   {
@@ -80,7 +80,7 @@
    "cap": "The old multiples, and the frame that multiplied capital by ten, are deleted. A multiple invites a size. This.",
    "concept": "The old multiples, and the frame that multiplied capital by ten, are deleted.",
    "image": "course/images/el-07-advanced-liquidation/006.png",
-   "image_status": "awaiting_qa",
+   "image_status": "pass",
    "prompt": "The only readable characters are 10 and EXAMPLE. The digits 10 are struck through. Headline STRIKE white, TEN #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
   },
   {
@@ -91,7 +91,7 @@
    "cap": "United States: Bybit and Pionex futures are not for US persons. The sentence is a boundary on a product, not.",
    "concept": "United States: Bybit and Pionex futures are not for US persons.",
    "image": "course/images/el-07-advanced-liquidation/007.png",
-   "image_status": "awaiting_qa",
+   "image_status": "fail",
    "prompt": "The only readable words are BYBIT, PIONEX, and EXAMPLE. Both names are crossed. Headline NOT white, OPEN #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
   },
   {
@@ -113,7 +113,7 @@
    "cap": "Quick check. What picture is missing on purpose? The answer: a second picture that shows a gain. On the.",
    "concept": "Quick check. What picture is missing on purpose?",
    "image": "course/images/el-07-advanced-liquidation/009.png",
-   "image_status": "awaiting_qa",
+   "image_status": "pass",
    "prompt": "The only readable word is EXAMPLE. An empty frame with an X, the missing picture. Headline NO white, GAIN #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
   },
   {
@@ -135,7 +135,7 @@
    "cap": "Your turn, still inside Education first. Cover the notes and say this from memory: This content is general.",
    "concept": "Practice: This content is general education only, not financial advice.",
    "image": "course/images/el-07-advanced-liquidation/011.png",
-   "image_status": "awaiting_qa",
+   "image_status": "pass",
    "prompt": "The only readable word is EXAMPLE. A bar with a blank line under it. Headline WRITE white, ONLY #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
   },
   {
@@ -146,7 +146,7 @@
    "cap": "Your turn, still inside Losing scenario first. Cover the notes and say this from memory: The worked picture.",
    "concept": "Practice: The worked picture is a losing scenario, and it is hypothetical.",
    "image": "course/images/el-07-advanced-liquidation/012.png",
-   "image_status": "awaiting_qa",
+   "image_status": "pass",
    "prompt": "The only readable word is EXAMPLE. A path that steps down, with a blank line. Headline LOSS white, NOTE #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
   },
   {
@@ -157,7 +157,7 @@
    "cap": "Your turn, still inside Deleted multiples. Cover the notes and say this from memory: The old multiples, and.",
    "concept": "Practice: The old multiples, and the frame that multiplied capital by ten, are deleted.",
    "image": "course/images/el-07-advanced-liquidation/013.png",
-   "image_status": "awaiting_qa",
+   "image_status": "pass",
    "prompt": "The only readable characters are 10 and EXAMPLE. The digits 10 are struck, with a blank line. Headline CUT white, TEN #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
   },
   {
