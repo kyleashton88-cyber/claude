@@ -129,7 +129,8 @@ def _erase_top_block(image: Image.Image) -> Image.Image:
     glyph = (lum > 70) | ((green > red + 28) & (green > 90) & (blue > 70))
     counts = glyph[:500].sum(axis=1)
     start = next((int(y) for y, count in enumerate(counts) if count > 12), None)
-    if start is None or start > 400:
+    # A diagram that starts below the headline zone is content, not a title.
+    if start is None or start > 300:
         return rgb
     # A diagram is a wide bright band. A second headline line is narrower, so
     # it gets painted out with the first line instead of stopping the erase.
@@ -164,17 +165,20 @@ def _fit_content(image: Image.Image) -> Image.Image:
     width, height = rgb.size
     ys = []
     xs = []
-    for y in range(CONTENT_TOP, height):
+    # Start above the content window so a diagram that collides with the
+    # headline is moved down instead of being left underneath the type.
+    for y in range(200, height):
         for x in range(0, width, 3):
             r, g, b = pixels[x, y]
-            if r + g + b > 100 or (g > r + 16 and g > 34):
+            if r + g + b > 170 or (g > r + 24 and g > 80):
                 ys.append(y)
                 xs.append(x)
                 break
     if not ys:
         return rgb
     top, bottom = ys[0], ys[-1]
-    if top >= CONTENT_TOP and bottom <= CONTENT_MAX_Y:
+    # A few pixels of glow above the window is not a collision.
+    if top >= CONTENT_TOP - 16 and bottom <= CONTENT_MAX_Y:
         return rgb
     # Horizontal extent of the content, sampled.
     left, right = width, 0
