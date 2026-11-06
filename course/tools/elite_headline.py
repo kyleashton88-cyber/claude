@@ -78,26 +78,30 @@ def _text_layer(first: str, second: str) -> Image.Image:
 
 
 def measure(image: Image.Image) -> dict:
-    """Ink bounds of the whole frame. Headline top is the first bright row."""
-    rgb = image.convert("RGB")
-    pixels = rgb.load()
-    width, height = rgb.size
-    rows = []
-    for y in range(height):
-        hot = 0
-        for x in range(0, width, 2):
-            r, g, b = pixels[x, y]
-            if r + g + b > 120 or (g > r + 18 and g > 40):
-                hot += 1
-        rows.append(hot)
-    ys = [y for y, hot in enumerate(rows) if hot > 8]
+    """Ink bounds. A flat navy field is background, not a headline."""
+    import numpy as np
+
+    arr = np.asarray(image.convert("RGB"))
+    lum = arr.mean(axis=2)
+    samples = np.concatenate([
+        lum[:24, :24].ravel(),
+        lum[:24, -24:].ravel(),
+        lum[-24:, :24].ravel(),
+        lum[-24:, -24:].ravel(),
+    ])
+    corner = float(np.median(samples))
+    red = arr[:, :, 0].astype(np.int16)
+    green = arr[:, :, 1].astype(np.int16)
+    hot = (lum > max(corner + 24, 46)) | ((green > red + 22) & (green > max(corner + 24, 48)) & (green > 55))
+    counts = hot[:, ::2].sum(axis=1)
+    ys = [int(y) for y, count in enumerate(counts) if count > 6]
     if not ys:
         return {"headline_top": None, "cap": None, "content_bottom": None}
     top = ys[0]
     end = top
     quiet = 0
-    for y in range(top, min(height, top + 280)):
-        if rows[y] > 8:
+    for y in range(top, min(arr.shape[0], top + 280)):
+        if counts[y] > 6:
             end = y
             quiet = 0
         else:
