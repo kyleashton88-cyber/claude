@@ -602,12 +602,12 @@ def bp06() -> list[dict]:
         "The before sentence names a day still inside the band.",
         "Size waits until both sentences point at the chart.",
     ], "Recap.")
-    s.append(outro("Spot setup on paper"))
+    s.append(outro("Spot paper trading"))
     return s
 
 
 def bp07() -> list[dict]:
-    s = [ident("07", "Spot setup on paper")]
+    s = [ident("07", "Spot paper trading")]
     s.append(_shot(
         kind="analogy", analogy="list", chapter="Hook", reveal=1,
         vo=(
@@ -957,7 +957,7 @@ BUILDERS = {
     "bp-04-market-regimes": bp04,
     "bp-05-spacing-and-range": bp05,
     "bp-06-entry-and-exit": bp06,
-    "bp-07-bybit-spot-paper": bp07,
+    "bp-07-spot-paper-trading": bp07,
     "bp-08-managing-and-monitoring": bp08,
     "bp-09-common-mistakes": bp09,
     "bp-10-scaling-up": bp10,

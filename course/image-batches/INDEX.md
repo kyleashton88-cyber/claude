@@ -20,8 +20,8 @@ Sheets: 351. Prompts: 7019. Size: 20.
 - `batch-015.md`: bp-03-what-is-a-grid-bot-008 → bp-04-market-regimes-008
 - `batch-016.md`: bp-04-market-regimes-009 → bp-05-spacing-and-range-008
 - `batch-017.md`: bp-05-spacing-and-range-009 → bp-06-entry-and-exit-009
-- `batch-018.md`: bp-06-entry-and-exit-010 → bp-07-bybit-spot-paper-009
-- `batch-019.md`: bp-07-bybit-spot-paper-010 → bp-08-managing-and-monitoring-009
+- `batch-018.md`: bp-06-entry-and-exit-010 → bp-07-spot-paper-trading-009
+- `batch-019.md`: bp-07-spot-paper-trading-010 → bp-08-managing-and-monitoring-009
 - `batch-020.md`: bp-08-managing-and-monitoring-010 → bp-09-common-mistakes-009
 - `batch-021.md`: bp-09-common-mistakes-010 → bp-10-scaling-up-008
 - `batch-022.md`: bp-10-scaling-up-009 → bp-11-advanced-liquidation-007

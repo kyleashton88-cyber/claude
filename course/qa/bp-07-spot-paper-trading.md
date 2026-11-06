@@ -1,12 +1,12 @@
-# QA: bp-07-bybit-spot-paper
+# QA: bp-07-spot-paper-trading
 
 - Course: Grid Bot Blueprint
-- Title: Bybit spot setup on paper
+- Title: Spot paper trading
 - Status: waiting on images
 - Palette: navy-cyan (chapter accent 0x00D4FF)
 - Estimated speech: 17.29 min, 2473 words at 143 wpm
 - Picture timeline: 1036s
-- Images: 0/20 at `course/images/bp-07-bybit-spot-paper/`
+- Images: 0/20 at `course/images/bp-07-spot-paper-trading/`
 - Present beats: —
 - Missing beats: 1-20
 - Voice: missing
@@ -21,7 +21,7 @@
 
 ## Render checklist
 
-- Not rendered. The renderer refuses this lesson until every still exists and `course/audio/bp-07-bybit-spot-paper.wav` is committed.
+- Not rendered. The renderer refuses this lesson until every still exists and `course/audio/bp-07-spot-paper-trading.wav` is committed.
 
 ## Blocker
 

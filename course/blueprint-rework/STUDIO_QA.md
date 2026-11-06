@@ -7,3 +7,19 @@ Review `course/masters-stills/bp-01` through `bp-11`. The earlier motion cuts re
 Each stills file is 1920×1080 H.264, AAC 48 kHz stereo, about −16.2 LUFS, and at least 21 minutes. Analogy pictures are the ChatGPT fallback stills in `course/images/blueprint-analogies/` (ladder, fence, packing list, two buckets), navy and cyan, Lanczos-fit into the frame without upscaling. The price path is the public daily Bitcoin series in `course/data/public-prices/`. No venue name, logo, or balance is drawn.
 
 Look for: label pile-up on the rally chart, a still that covers the chart, a caption that is not a full phrase, and any day whose spoken close does not match the playhead.
+
+Motion pass: each stills master is scaled to 2048 wide and cropped back to 1920×1080 with a slow Ken Burns drift (24 px over 5 s, 18 px over 7 s). Audio is copied, so duration, loudness, and captions stay as reviewed. `freezedetect=n=0.003:d=7.5` is the check that no frame holds for 8 seconds. Lesson 07 is `bp-07-spot-paper-trading`, title Spot paper trading.
+
+| Lesson | Holds over 8s before | After |
+| --- | --- | --- |
+| bp-01 | 5 | 0 |
+| bp-02 | 4 | 0 |
+| bp-03 | 3 | 0 |
+| bp-04 | 3 | 0 |
+| bp-05 | 4 | 0 |
+| bp-06 | 1 | 0 |
+| bp-07 | 5 | 0 |
+| bp-08 | 3 | 0 |
+| bp-09 | 2 | 0 |
+| bp-10 | 4 | 0 |
+| bp-11 | 6 | 0 |

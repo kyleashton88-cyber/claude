@@ -34,7 +34,7 @@ Professional e-learning edits, applied to a 1080p online lesson, are:
 | `bp-04-market-regimes` | 17:00 | -16.4 | 2.6 LU | -1.2 dBFS | 96 kHz mono | 18 |
 | `bp-05-spacing-and-range` | 16:42 | -16.3 | 2.5 LU | -1.2 dBFS | 96 kHz mono | 17 |
 | `bp-06-entry-and-exit` | 16:42 | -16.4 | 2.6 LU | -1.2 dBFS | 96 kHz mono | 18 |
-| `bp-07-bybit-spot-paper` | 17:26 | -16.4 | 2.6 LU | -1.2 dBFS | 96 kHz mono | 18 |
+| `bp-07-spot-paper-trading` | 17:26 | -16.4 | 2.6 LU | -1.2 dBFS | 96 kHz mono | 18 |
 | `bp-08-managing-and-monitoring` | 16:39 | -16.4 | 2.6 LU | -1.2 dBFS | 96 kHz mono | 18 |
 | `bp-09-common-mistakes` | 17:16 | -16.4 | 2.5 LU | -1.2 dBFS | 96 kHz mono | 19 |
 | `bp-10-scaling-up` | 16:55 | -16.3 | 2.5 LU | -1.2 dBFS | 96 kHz mono | 19 |
@@ -229,7 +229,7 @@ Objectives card: missing. Branded outro: the last still is an outro role (16:33)
 
 ### bp-06-entry-and-exit
 
-Title: Entry and exit rules. Duration 16:42. Next on the script card: Bybit spot setup on paper.
+Title: Entry and exit rules. Duration 16:42. Next on the script card: Spot paper trading.
 Loudness -16.4 LUFS, range 2.6 LU, true peak -1.2 dBFS. Section-boundary sync versus the 143 wpm plan is 0.0 s wherever a cut exists. Video duration minus the scripted picture timeline is 0.0 s.
 
 - Dead air (gap at or over 1 s, floor below −36 dBFS, no music under it): 10:18 for 1.02 s.
@@ -258,13 +258,13 @@ Loudness -16.4 LUFS, range 2.6 LU, true peak -1.2 dBFS. Section-boundary sync ve
 | 13:57 | 14:42 | 45 s | 0.0 s | demo | Your turn | frozen 45 s |
 | 14:42 | 15:33 | 51 s | 0.0 s | demo | Your turn | frozen 51 s; caption cut: Your turn, still inside A finish sentence. Cover the notes and say ... |
 | 15:33 | 16:31 | 59 s | 0.0 s | demo | Audit | frozen 59 s; caption cut: Audit one page by asking: can a classmate point at the finish path ...; spoken pointing tail |
-| 16:31 | 16:42 | 10 s | 0.0 s | outro | Outro | caption cut: Next lesson: Bybit spot setup on paper. Bring the page you just wro...; Bybit on the burned-in caption; The burned-in caption names Bybit. |
+| 16:31 | 16:42 | 10 s | 0.0 s | outro | Outro | caption cut: Next lesson: Spot paper trading. Bring the page you just wro...; the venue on the burned-in caption; The burned-in caption names the venue. |
 
 Objectives card: missing. Branded outro: the last still is an outro role (16:31) but it is the same slideshow card, with the chapter word through the headline, and no music lift.
 
-### bp-07-bybit-spot-paper
+### bp-07-spot-paper-trading
 
-Title: Spot setup on paper. Duration 17:26. Next on the script card: Managing and monitoring.
+Title: Spot paper trading. Duration 17:26. Next on the script card: Managing and monitoring.
 Loudness -16.4 LUFS, range 2.6 LU, true peak -1.2 dBFS. Section-boundary sync versus the 143 wpm plan is 0.0 s wherever a cut exists. Video duration minus the scripted picture timeline is 0.0 s.
 
 - Dead air at or over 1 s: none. The shorter pauses below are still bare, with no bed under them.
@@ -276,8 +276,8 @@ Loudness -16.4 LUFS, range 2.6 LU, true peak -1.2 dBFS. Section-boundary sync ve
 |---:|---:|---:|---:|---|---|---|
 | 0:00 | 1:02 | 62 s | 0.0 s | hook | Hook | frozen 62 s; caption cut: This lesson walks fields on a paper or demo spot screen. It does no...; spoken pointing tail; opens on the hook still, not a branded ident |
 | 1:02 | 1:34 | 31 s | 0.0 s | legal | Disclaimer | frozen 31 s; caption cut: Education only, not financial advice. Crypto and DeFi carry signifi... |
-| 1:34 | 1:46 | 13 s | 0.0 s | intro | Title card | Bybit on the burned-in caption; The burned-in caption names Bybit. The illustration itself says SPOT PAPER.; title card is a content still; chapter label reads Title card |
-| 1:46 | 2:50 | 63 s | 0.0 s | body | Not affiliated | frozen 63 s; caption cut: Bybit is a name you may see on a venue. This course is not affiliat...; spoken pointing tail; Bybit on the burned-in caption; The burned-in caption names Bybit twice. |
+| 1:34 | 1:46 | 13 s | 0.0 s | intro | Title card | the venue on the burned-in caption; The burned-in caption names the venue. The illustration itself says SPOT PAPER.; title card is a content still; chapter label reads Title card |
+| 1:46 | 2:50 | 63 s | 0.0 s | body | Not affiliated | frozen 63 s; caption cut: the venue is a name you may see on a venue. This course is not affiliat...; spoken pointing tail; the venue on the burned-in caption; The burned-in caption names the venue twice. |
 | 2:50 | 3:55 | 66 s | 0.0 s | body | Fields from the page | frozen 66 s; caption cut: The fields you are allowed to copy are the ones you already wrote: ...; spoken pointing tail |
 | 3:55 | 4:58 | 62 s | 0.0 s | body | Spot, not a contract | frozen 62 s; caption cut: The path is spot. A contract with leverage is a different product a...; spoken pointing tail |
 | 4:58 | 5:55 | 58 s | 0.0 s | body | Keys | frozen 58 s; caption cut: You do not paste an API key, a seed phrase, or a password into a co...; spoken pointing tail |
@@ -289,9 +289,9 @@ Loudness -16.4 LUFS, range 2.6 LU, true peak -1.2 dBFS. Section-boundary sync ve
 | 10:58 | 11:58 | 60 s | 0.0 s | body | No order | frozen 60 s; spoken pointing tail |
 | 11:58 | 12:58 | 60 s | 0.0 s | action | The action | frozen 60 s; caption cut: On a paper or demo spot screen, match five fields to the page and s...; spoken pointing tail |
 | 12:58 | 13:49 | 51 s | 0.0 s | recap | Recap | frozen 51 s; caption cut: Recap: paper spot, page wins, translate the count, ignore defaults,...; spoken pointing tail |
-| 13:49 | 14:37 | 48 s | 0.0 s | demo | Your turn | frozen 48 s; caption cut: Your turn, still inside Not affiliated. Cover the notes and say thi...; Bybit on the burned-in caption; The first of the three Your turn stills puts Bybit in the burned-in caption. |
-| 14:37 | 15:27 | 50 s | 0.0 s | demo | Your turn | frozen 50 s; caption cut: Your turn, still inside Fields from the page. Cover the notes and s...; The first of the three Your turn stills puts Bybit in the burned-in caption. |
-| 15:27 | 16:15 | 48 s | 0.0 s | demo | Your turn | frozen 48 s; caption cut: Your turn, still inside Spot, not a contract. Cover the notes and s...; The first of the three Your turn stills puts Bybit in the burned-in caption. |
+| 13:49 | 14:37 | 48 s | 0.0 s | demo | Your turn | frozen 48 s; caption cut: Your turn, still inside Not affiliated. Cover the notes and say thi...; the venue on the burned-in caption; The first of the three Your turn stills puts the venue in the burned-in caption. |
+| 14:37 | 15:27 | 50 s | 0.0 s | demo | Your turn | frozen 50 s; caption cut: Your turn, still inside Fields from the page. Cover the notes and s...; The first of the three Your turn stills puts the venue in the burned-in caption. |
+| 15:27 | 16:15 | 48 s | 0.0 s | demo | Your turn | frozen 48 s; caption cut: Your turn, still inside Spot, not a contract. Cover the notes and s...; The first of the three Your turn stills puts the venue in the burned-in caption. |
 | 16:15 | 17:17 | 63 s | 0.0 s | body | If the screen differs | frozen 63 s; caption cut: Venue screens move. If a label differs, you translate it onto your ...; spoken pointing tail |
 | 17:17 | 17:26 | 9 s | 0.0 s | outro | Outro | caption cut: Next lesson: Managing and monitoring. Bring the page you just wrote... |
 
