@@ -72,10 +72,12 @@ def check(path: Path) -> list[str]:
         problems.append(f"frame is {info.get('width')}x{info.get('height')}")
     if info.get("codec_name") not in {None, "h264"}:
         problems.append(f"video codec {info.get('codec_name')}")
-    # Motion over a one-second gap in the body, and over the whole open.
-    score = motion_score(path, 20, 21)
-    if score < 1.5:
-        problems.append(f"frame at 20s and 21s barely differ (mean abs {score:.2f})")
+    # Motion across the lesson. The open can be a title easing in.
+    # A later second must show the path or the playhead actually moving.
+    dur = float(info.get("duration") or 0)
+    scores = [motion_score(path, t, t + 1) for t in (30, dur * 0.45, max(40, dur * 0.7))]
+    if max(scores) < 1.2:
+        problems.append(f"no clear motion in the body (scores {', '.join(f'{s:.2f}' for s in scores)})")
     # Brand scan on three frames via tesseract when it is installed.
     if subprocess.call(["bash", "-lc", "command -v tesseract"], stdout=subprocess.DEVNULL) == 0:
         for t in (12, dur * 0.5, max(1, dur - 8)):

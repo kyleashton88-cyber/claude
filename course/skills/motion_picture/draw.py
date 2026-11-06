@@ -93,7 +93,15 @@ def _path(series, reveal: float, box) -> list[tuple[float, float]]:
     return pts
 
 
-def _rule(draw: ImageDraw.ImageDraw, series, price: float, box, accent, label: str) -> None:
+def _label_ok(used_y: list[float], series, price: float, box) -> bool:
+    lo = min(float(r["low"]) for r in series)
+    hi = max(float(r["high"]) for r in series)
+    pad = (hi - lo) * 0.08
+    y = _map(0, len(series), price, lo - pad, hi + pad, box)[1]
+    return all(abs(y - prev) > 28 for prev in used_y)
+
+
+def _rule(draw: ImageDraw.ImageDraw, series, price: float, box, accent, label: str) -> float:
     if not series:
         return
     lo = min(float(r["low"]) for r in series)
@@ -104,9 +112,11 @@ def _rule(draw: ImageDraw.ImageDraw, series, price: float, box, accent, label: s
     b = _map(n - 1, n, price, lo - pad, hi + pad, box)
     for x in range(int(a[0]), int(b[0]), 16):
         draw.line([(x, a[1]), (min(x + 8, b[0]), a[1])], fill=accent, width=2)
-    font = _font(20, True)
-    tw = font.getlength(label)
-    draw.text((b[0] - tw, a[1] - 26), label, font=font, fill=accent)
+    if label:
+        font = _font(20, True)
+        tw = font.getlength(label)
+        draw.text((b[0] - tw, a[1] - 26), label, font=font, fill=accent)
+    return a[1]
 
 
 def paint(shot: dict, local: float, lesson_p: float, palette: str = "navy-cyan") -> np.ndarray:
@@ -290,9 +300,13 @@ def _chart(draw, shot, local, dur, accent, box=None) -> None:
     pts = _path(series, now, box)
     if len(pts) > 1:
         draw.line(pts, fill=accent, width=4)
+        # The playhead stays on the latest close. A second dot keeps walking
+        # the path so the frame cannot freeze while the sentence continues.
         hx, hy = pts[-1]
-        r = 7 + 3 * math.sin(local * 7)
+        r = 8 + 2 * math.sin(local * 6)
         draw.ellipse((hx - r, hy - r, hx + r, hy + r), fill=WHITE)
+        scan = pts[int((local * 0.35) * (len(pts) - 1)) % len(pts)]
+        draw.ellipse((scan[0] - 5, scan[1] - 5, scan[0] + 5, scan[1] + 5), fill=AMBER)
         # Callout travels with the playhead.
         row_i = max(0, min(len(series) - 1, int(now * (len(series) - 1))))
         row = series[row_i]
@@ -302,23 +316,29 @@ def _chart(draw, shot, local, dur, accent, box=None) -> None:
         ty = max(box[1] + 16, hy - 48)
         draw.rounded_rectangle([tx, ty, tx + tw, ty + 36], 8, fill=NAVY, outline=accent, width=2)
         draw.text((tx + 12, ty + 6), tag, font=_font(22, True), fill=WHITE)
-    # Only the real low, the real high, and the rung being spoken get labels.
-    # The other rungs stay as quiet ticks so the path can be read.
+    # Label the rails and the rung being spoken. Skip a label that would
+    # sit on top of one already drawn (the rally scale compresses the old band).
     if now > 0.15:
         levels = [float(p) for p in (shot.get("levels") or [])]
-        named = set()
+        named = []
         if levels:
-            named.add(min(levels))
-            named.add(max(levels))
+            named.extend([min(levels), max(levels)])
         focus = shot.get("focus_price")
-        if focus:
-            named.add(float(focus))
+        if focus is not None:
+            named.append(float(focus))
+        used_y: list[float] = []
         for price in levels:
-            label = f"{int(round(price)):,}" if price in named or any(abs(price - n) < 1 for n in named) else ""
-            _rule(draw, series, price, box, DIM, label)
+            show = any(abs(price - n) < 2 for n in named)
+            label = f"{int(round(price)):,}" if show else ""
+            y = _rule(draw, series, price, box, DIM, label if _label_ok(used_y, series, price, box) else "")
+            if label and y is not None:
+                used_y.append(y)
     focus = shot.get("focus_price")
     if focus and now > 0.4:
-        _rule(draw, series, float(focus), box, AMBER, shot.get("focus_label") or f"{int(round(float(focus))):,}")
+        _rule(
+            draw, series, float(focus), box, AMBER,
+            shot.get("focus_label") or f"{int(round(float(focus))):,}",
+        )
     draw.text((box[0] + 24, box[3] - 42), "EXAMPLE  ·  public daily closes", font=_font(18, True), fill=DIM)
     title = shot.get("chart_title") or ""
     if title:
