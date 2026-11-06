@@ -1,0 +1,928 @@
+{
+  "lesson": "lesson-08-3",
+  "title": "Strategy library",
+  "source": "kyleashton88-cyber/claude@cursor/course-video-qa-fix-7f90 course/scripts/lesson-08-3.json",
+  "standard": "STYLE_V3_GBB.md (Blueprint/OCO cyan)",
+  "beats": 53,
+  "items": [
+    {
+      "id": "m8-l3-b1",
+      "beat": 1,
+      "target_path": "course/images/lesson-08-3/001.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "READ THE STRATEGY \"CARD\"",
+      "labels": [
+        "ENGINE",
+        "KILL RULE",
+        "HOW IT LOSES"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: READ THE STRATEGY \"CARD\" (\"CARD\" in cyan). Hero visual: centred, a tall frosted glass STRATEGY CARD with glowing cyan border and seven short heading rows (ENGINE, MATHS, EXECUTE, MONITOR, KILL RULE, HOW IT LOSES, SIZE CAP), five rows (ENGINE, MATHS, MONITOR, KILL RULE, HOW IT LOSES) glowing brighter; G-badge robot (visor-bar eyes) beside it on the right with a gap, pointing at the card. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): ENGINE, KILL RULE, HOW IT LOSES. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b2",
+      "beat": 2,
+      "target_path": "course/images/lesson-08-3/002.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "EDUCATION \"ONLY\"",
+      "labels": [
+        "EDUCATION ONLY",
+        "NOT FINANCIAL ADVICE"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: EDUCATION \"ONLY\" (\"ONLY\" in cyan). Hero visual: centred glass shield card with a circled cyan info icon; faint grid and bokeh behind; Footer label on the card. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): EDUCATION ONLY, NOT FINANCIAL ADVICE. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b3",
+      "beat": 3,
+      "target_path": "course/images/lesson-08-3/003.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "STRATEGY \"LIBRARY\"",
+      "labels": [
+        "LESSON 8.3",
+        "30 CARDS (EXAMPLE)"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: STRATEGY \"LIBRARY\" (\"LIBRARY\" in cyan). Hero visual: centred 3D glass bookshelf of glowing cyan strategy cards fanned out, front card tilted toward viewer; small 'MODULE 8 \u00b7 LESSON 8.3' chip above. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): LESSON 8.3, 30 CARDS (EXAMPLE). Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b4",
+      "beat": 4,
+      "target_path": "course/images/lesson-08-3/004.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "FROM NUMBER TO \"SYSTEM\"",
+      "labels": [
+        "REGISTER",
+        "JOURNAL",
+        "KILL RULE"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: FROM NUMBER TO \"SYSTEM\" (\"SYSTEM\" in cyan). Hero visual: left: a single glowing data chip pulled from a chain of linked glass blocks; arrow flows right into three glass cards in a row: REGISTER, JOURNAL, KILL RULE, evenly spaced. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): REGISTER, JOURNAL, KILL RULE. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b5",
+      "beat": 5,
+      "target_path": "course/images/lesson-08-3/005.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "A \"MAP\", NOT A SHOPPING LIST",
+      "labels": [
+        "MAP",
+        "NOT A POSITION LIST"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: A \"MAP\", NOT A SHOPPING LIST (\"MAP\" in cyan). Hero visual: left: glowing cyan map of linked card nodes; right, beside it with a gap: a faded slate list with a hatched slate cross over it. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): MAP, NOT A POSITION LIST. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b6",
+      "beat": 6,
+      "target_path": "course/images/lesson-08-3/006.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "SAME \"HEADINGS\" EVERY TIME",
+      "labels": [
+        "7 HEADINGS",
+        "30 CARDS (EXAMPLE)"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: SAME \"HEADINGS\" EVERY TIME (\"HEADINGS\" in cyan). Hero visual: three identical glass strategy cards overlapping in a fan, each with the same seven heading rows lit in cyan; numbers 1-7 in circled cyan beside rows. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): 7 HEADINGS, 30 CARDS (EXAMPLE). Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b7",
+      "beat": 7,
+      "target_path": "course/images/lesson-08-3/007.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NAME THE \"ENGINE\"",
+      "labels": [
+        "BORROWER INTEREST",
+        "NETWORK REWARDS",
+        "TRADING FEES"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NAME THE \"ENGINE\" (\"ENGINE\" in cyan). Hero visual: central glowing cyan engine/turbine icon in a glass ring; three pipes feed it from three circled icons: borrower interest (vault icon), network rewards (node icon), trading fees (swap icon); 3D USDT and ETH coins near the sources. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): BORROWER INTEREST, NETWORK REWARDS, TRADING FEES. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b8",
+      "beat": 8,
+      "target_path": "course/images/lesson-08-3/008.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "RECOMPUTE THE \"MATHS\"",
+      "labels": [
+        "10% \u00d7 80% = 8% (EXAMPLE)",
+        "ON PAPER"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: RECOMPUTE THE \"MATHS\" (\"MATHS\" in cyan). Hero visual: large glass formula box: 'RATE = BORROW RATE \u00d7 UTILISATION' with a worked line underneath using example values, beside a pencil and paper-style glass pad. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): 10% \u00d7 80% = 8% (EXAMPLE), ON PAPER. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b9",
+      "beat": 9,
+      "target_path": "course/images/lesson-08-3/009.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "EXECUTE = A \"SEQUENCE\"",
+      "labels": [
+        "STEP 1-4",
+        "WRITTEN, NOT CLICKED"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: EXECUTE = A \"SEQUENCE\" (\"SEQUENCE\" in cyan). Hero visual: numbered step flow of four glass chips 1\u21922\u21923\u21924 with arrows, left to right, each chip a generic icon (wallet, check, lock, log); no app UI; small 'NO CLICKS SHOWN' tag. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): STEP 1-4, WRITTEN, NOT CLICKED. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b10",
+      "beat": 10,
+      "target_path": "course/images/lesson-08-3/010.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "WHAT TO \"MONITOR\"",
+      "labels": [
+        "UTILISATION",
+        "PEG",
+        "QUEUE",
+        "RANGE"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: WHAT TO \"MONITOR\" (\"MONITOR\" in cyan). Hero visual: four circled cyan gauges in a 2x2 glass panel: utilisation dial, peg dial, queue hourglass, range band. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): UTILISATION, PEG, QUEUE, RANGE. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b11",
+      "beat": 11,
+      "target_path": "course/images/lesson-08-3/011.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "KILL RULE \"FIRST\"",
+      "labels": [
+        "STOP LEVEL (EXAMPLE)",
+        "WRITTEN BEFORE SIZE"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: KILL RULE \"FIRST\" (\"FIRST\" in cyan). Hero visual: glass card with KILL RULE row glowing cyan at top and SIZE row greyed out below; a dashed cyan path line on a mini candlestick chart hits a labelled dashed STOP level. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): STOP LEVEL (EXAMPLE), WRITTEN BEFORE SIZE. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b12",
+      "beat": 12,
+      "target_path": "course/images/lesson-08-3/012.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "DRAW THE \"LOSING\" PATH",
+      "labels": [
+        "LOSING PATH FIRST",
+        "LEVEL (EXAMPLE)"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: DRAW THE \"LOSING\" PATH (\"LOSING\" in cyan). Hero visual: detailed candlestick chart: a bright cyan downward path drawn first, a faded tidy path behind it; slate hatched risk zone under the dashed level. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): LOSING PATH FIRST, LEVEL (EXAMPLE). Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b13",
+      "beat": 13,
+      "target_path": "course/images/lesson-08-3/013.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "LEAVE SIZE \"BLANK\"",
+      "labels": [
+        "SIZE: ____",
+        "TEACHING CEILING ONLY"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: LEAVE SIZE \"BLANK\" (\"BLANK\" in cyan). Hero visual: a tall frosted glass STRATEGY CARD with glowing cyan border and seven short heading rows (ENGINE, MATHS, EXECUTE, MONITOR, KILL RULE, HOW IT LOSES, SIZE CAP) with the SIZE CAP row as an empty dashed cyan slot and a small lock icon; G-badge robot (visor-bar eyes) beside it gesturing 'stop'. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): SIZE: ____, TEACHING CEILING ONLY. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b14",
+      "beat": 14,
+      "target_path": "course/images/lesson-08-3/014.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "WALKED IN \"STAGES\"",
+      "labels": [
+        "FOUNDATION",
+        "LIQUIDITY",
+        "LEVERAGE",
+        "EXPERT"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: WALKED IN \"STAGES\" (\"STAGES\" in cyan). Hero visual: eight stepped glass platforms rising left to right, each with a circled icon, no trophy at the top. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): FOUNDATION, LIQUIDITY, LEVERAGE, EXPERT. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b15",
+      "beat": 15,
+      "target_path": "course/images/lesson-08-3/015.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "\"FOUNDATION\" CARDS",
+      "labels": [
+        "LENDING",
+        "STAKING",
+        "ENGINE + KILL RULE"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: \"FOUNDATION\" CARDS (\"FOUNDATION\" in cyan). Hero visual: two glass cards side by side: left a 3D USDT coin in a vault (lending), right a 3D ETH coin on a staking node; both cards show ENGINE and KILL RULE rows lit. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): LENDING, STAKING, ENGINE + KILL RULE. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b16",
+      "beat": 16,
+      "target_path": "course/images/lesson-08-3/016.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "\"LIQUIDITY\" CARDS",
+      "labels": [
+        "POOL",
+        "IMPERMANENT LOSS",
+        "HOW IT LOSES"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: \"LIQUIDITY\" CARDS (\"LIQUIDITY\" in cyan). Hero visual: two-tone glass pool vessel holding 3D ETH and USDT coins, a cyan range rectangle above it; side glass card with HOW IT LOSES row highlighted and a small impermanent-loss curve. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): POOL, IMPERMANENT LOSS, HOW IT LOSES. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b17",
+      "beat": 17,
+      "target_path": "course/images/lesson-08-3/017.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "\"LEVERAGE\" CARDS",
+      "labels": [
+        "HEALTH FACTOR 1.4 (EXAMPLE)",
+        "LIQ. PRICE (EXAMPLE)"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: \"LEVERAGE\" CARDS (\"LEVERAGE\" in cyan). Hero visual: circular glass health-factor gauge with needle near a slate hatched zone; beside it a candlestick mini chart with dashed LIQUIDATION level labelled. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): HEALTH FACTOR 1.4 (EXAMPLE), LIQ. PRICE (EXAMPLE). Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b18",
+      "beat": 18,
+      "target_path": "course/images/lesson-08-3/018.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "THE \"BOTTOM\" LINE",
+      "labels": [
+        "NAME THE ENGINE",
+        "EXPLAIN THE UNWIND"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: THE \"BOTTOM\" LINE (\"BOTTOM\" in cyan). Hero visual: glass card zoomed to its bottom row glowing: two checkbox chips 'NAME THE ENGINE' and 'EXPLAIN THE UNWIND'; unwind shown as a reverse arrow loop. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): NAME THE ENGINE, EXPLAIN THE UNWIND. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b19",
+      "beat": 19,
+      "target_path": "course/images/lesson-08-3/019.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "PRACTICE STRATEGY \"CARD\"",
+      "labels": [
+        "EXAMPLE CARD",
+        "PEG BAND (EXAMPLE)"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: PRACTICE STRATEGY \"CARD\" (\"CARD\" in cyan). Hero visual: a tall frosted glass STRATEGY CARD with glowing cyan border and seven short heading rows (ENGINE, MATHS, EXECUTE, MONITOR, KILL RULE, HOW IT LOSES, SIZE CAP) watermarked EXAMPLE, ENGINE row filled 'BORROWER INTEREST', MONITOR row 'UTILISATION', KILL RULE row 'PEG LEAVES BAND' with a tiny peg band diagram. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): EXAMPLE CARD, PEG BAND (EXAMPLE). Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b20",
+      "beat": 20,
+      "target_path": "course/images/lesson-08-3/020.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "WHAT DOES THE BASE \"PAY\" FOR?",
+      "labels": [
+        "BASE RATE",
+        "NEW TOKENS",
+        "CAN IT BE SOLD?"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: WHAT DOES THE BASE \"PAY\" FOR? (\"PAY\" in cyan). Hero visual: stacked glass bar: thin cyan base layer and a tall slate hatched layer of new reward tokens; question mark chip and a 'CAN IT BE SOLD?' chip beside. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): BASE RATE, NEW TOKENS, CAN IT BE SOLD?. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b21",
+      "beat": 21,
+      "target_path": "course/images/lesson-08-3/021.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "SITS ON THE \"REGISTER\"",
+      "labels": [
+        "LIKELIHOOD",
+        "IMPACT",
+        "LESSON 8.2"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: SITS ON THE \"REGISTER\" (\"REGISTER\" in cyan). Hero visual: 5x5 glass risk-register grid (likelihood \u00d7 impact), a small strategy card snapping into one cell with a cyan glow. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): LIKELIHOOD, IMPACT, LESSON 8.2. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b22",
+      "beat": 22,
+      "target_path": "course/images/lesson-08-3/022.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "INPUT TO THE \"PLAYBOOK\"",
+      "labels": [
+        "DEPLOY",
+        "MONITOR",
+        "RESPOND",
+        "REVIEW"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: INPUT TO THE \"PLAYBOOK\" (\"PLAYBOOK\" in cyan). Hero visual: strategy card on the left feeding a circular four-step glass loop on the right: DEPLOY \u2192 MONITOR \u2192 RESPOND \u2192 REVIEW. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): DEPLOY, MONITOR, RESPOND, REVIEW. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b23",
+      "beat": 23,
+      "target_path": "course/images/lesson-08-3/023.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "CHECK: \"EVERY\" HEADING",
+      "labels": [
+        "FILLED",
+        "BLANK ON PURPOSE"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: CHECK: \"EVERY\" HEADING (\"EVERY\" in cyan). Hero visual: glass checklist panel with seven rows, each a cyan tick or a deliberate dashed 'BLANK' tag. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): FILLED, BLANK ON PURPOSE. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b24",
+      "beat": 24,
+      "target_path": "course/images/lesson-08-3/024.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "CHECK: KILL RULE NAMES A \"PATH\"",
+      "labels": [
+        "PATH NAMED",
+        "STOP (EXAMPLE)"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: CHECK: KILL RULE NAMES A \"PATH\" (\"PATH\" in cyan). Hero visual: glass checklist row ticked, beside a mini chart where a named dashed path leads to a labelled stop line. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): PATH NAMED, STOP (EXAMPLE). Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b25",
+      "beat": 25,
+      "target_path": "course/images/lesson-08-3/025.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "CHECK: SIZE STILL \"BLANK\"",
+      "labels": [
+        "SIZE: ____",
+        "STILL BLANK"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: CHECK: SIZE STILL \"BLANK\" (\"BLANK\" in cyan). Hero visual: glass checklist row ticked beside an empty dashed size slot with a lock icon. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): SIZE: ____, STILL BLANK. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b26",
+      "beat": 26,
+      "target_path": "course/images/lesson-08-3/026.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "CHECK: ON THE \"REGISTER\"",
+      "labels": [
+        "FITS REGISTER",
+        "LESSON 8.2"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: CHECK: ON THE \"REGISTER\" (\"REGISTER\" in cyan). Hero visual: glass checklist row ticked with a small risk-register grid icon and an arrow linking card to grid cell. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): FITS REGISTER, LESSON 8.2. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b27",
+      "beat": 27,
+      "target_path": "course/images/lesson-08-3/027.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "QUIZ: FIRST \"QUESTION\"?",
+      "labels": [
+        "MOSTLY NEW TOKENS",
+        "FIRST QUESTION?"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: QUIZ: FIRST \"QUESTION\"? (\"QUESTION\" in cyan). Hero visual: large glowing cyan question-mark glass tile beside a stacked bar of mostly new-reward tokens (slate hatched) over a thin base. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): MOSTLY NEW TOKENS, FIRST QUESTION?. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b28",
+      "beat": 28,
+      "target_path": "course/images/lesson-08-3/028.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "QUIZ: THE \"LAST\" LINE?",
+      "labels": [
+        "LAST LINE?",
+        "ENGINE + UNWIND"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: QUIZ: THE \"LAST\" LINE? (\"LAST\" in cyan). Hero visual: glass card with its bottom row blurred out and a cyan question-mark chip over it; G-badge robot (visor-bar eyes) holding up the card. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): LAST LINE?, ENGINE + UNWIND. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b29",
+      "beat": 29,
+      "target_path": "course/images/lesson-08-3/029.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: \"MAP\"",
+      "labels": [
+        "ROUND 1",
+        "MAP, NOT LIST"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: \"MAP\" (\"MAP\" in cyan). Hero visual: dark glass notebook spread, round 1 tab; left page sketch of linked card nodes as a map, right page crossed-out list. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): ROUND 1, MAP, NOT LIST. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b30",
+      "beat": 30,
+      "target_path": "course/images/lesson-08-3/030.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: SEVEN \"HEADINGS\"",
+      "labels": [
+        "7 HEADINGS",
+        "30 CARDS (EXAMPLE)"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: SEVEN \"HEADINGS\" (\"HEADINGS\" in cyan). Hero visual: glass notebook page with seven numbered heading lines in a column, cyan bullets, a stack icon marked 30. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): 7 HEADINGS, 30 CARDS (EXAMPLE). Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b31",
+      "beat": 31,
+      "target_path": "course/images/lesson-08-3/031.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: THE \"ENGINE\"",
+      "labels": [
+        "INTEREST",
+        "REWARDS",
+        "FEES"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: THE \"ENGINE\" (\"ENGINE\" in cyan). Hero visual: notebook page with three source icons wired to one circled engine icon, hand-drawn cyan style on dark glass. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): INTEREST, REWARDS, FEES. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b32",
+      "beat": 32,
+      "target_path": "course/images/lesson-08-3/032.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: \"MATHS\" ON PAPER",
+      "labels": [
+        "RECOMPUTE IT",
+        "8% (EXAMPLE)"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: \"MATHS\" ON PAPER (\"MATHS\" in cyan). Hero visual: notebook page with a formula box and worked example, a cyan pencil resting diagonally. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): RECOMPUTE IT, 8% (EXAMPLE). Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b33",
+      "beat": 33,
+      "target_path": "course/images/lesson-08-3/033.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: \"EXECUTE\"",
+      "labels": [
+        "WRITE THE STEPS",
+        "NO CLICKS"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: \"EXECUTE\" (\"EXECUTE\" in cyan). Hero visual: notebook page with a vertical numbered list 1-4 of blank lines and a crossed-out cursor icon. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): WRITE THE STEPS, NO CLICKS. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b34",
+      "beat": 34,
+      "target_path": "course/images/lesson-08-3/034.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: \"MONITOR\" LIST",
+      "labels": [
+        "4 FACTS",
+        "WATCH FOR CHANGE"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: \"MONITOR\" LIST (\"MONITOR\" in cyan). Hero visual: notebook page with four small sketched gauges in a row: utilisation, peg, queue, range. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): 4 FACTS, WATCH FOR CHANGE. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b35",
+      "beat": 35,
+      "target_path": "course/images/lesson-08-3/035.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: KILL RULE \"BEFORE\" SIZE",
+      "labels": [
+        "1. KILL RULE",
+        "2. SIZE"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: KILL RULE \"BEFORE\" SIZE (\"BEFORE\" in cyan). Hero visual: notebook page, two stacked boxes: top KILL RULE filled with a sketched path, bottom SIZE empty; an order arrow 1\u21922. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): 1. KILL RULE, 2. SIZE. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b36",
+      "beat": 36,
+      "target_path": "course/images/lesson-08-3/036.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: \"LOSING\" PATH",
+      "labels": [
+        "DRAW THIS FIRST",
+        "LEVEL (EXAMPLE)"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: \"LOSING\" PATH (\"LOSING\" in cyan). Hero visual: notebook page with a sketched chart: losing path inked in bold cyan, tidy path in faint pencil. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): DRAW THIS FIRST, LEVEL (EXAMPLE). Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b37",
+      "beat": 37,
+      "target_path": "course/images/lesson-08-3/037.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: SIZE \"BLANK\"",
+      "labels": [
+        "LEAVE BLANK",
+        "NOT ASSIGNED"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: SIZE \"BLANK\" (\"BLANK\" in cyan). Hero visual: notebook page with a large empty dashed box, a small lock, and a 'teaching ceiling' bracket line. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): LEAVE BLANK, NOT ASSIGNED. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b38",
+      "beat": 38,
+      "target_path": "course/images/lesson-08-3/038.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: \"STAGES\"",
+      "labels": [
+        "8 STAGES",
+        "NOT A PRIZE"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: \"STAGES\" (\"STAGES\" in cyan). Hero visual: notebook page with a sketched staircase of eight numbered steps, no prize at the top. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): 8 STAGES, NOT A PRIZE. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b39",
+      "beat": 39,
+      "target_path": "course/images/lesson-08-3/039.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: \"FOUNDATION\"",
+      "labels": [
+        "LENDING",
+        "STAKING"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: \"FOUNDATION\" (\"FOUNDATION\" in cyan). Hero visual: notebook page with two sketched mini cards: vault with USDT coin, node with ETH coin. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): LENDING, STAKING. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b40",
+      "beat": 40,
+      "target_path": "course/images/lesson-08-3/040.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: \"POOLS\"",
+      "labels": [
+        "POOL",
+        "HOW IT LOSES"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: \"POOLS\" (\"POOLS\" in cyan). Hero visual: notebook page with a sketched two-tone vessel and an impermanent-loss curve beside it. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): POOL, HOW IT LOSES. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b41",
+      "beat": 41,
+      "target_path": "course/images/lesson-08-3/041.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: \"HEALTH\" FACTOR",
+      "labels": [
+        "HF (EXAMPLE)",
+        "LIQ. PRICE (EXAMPLE)"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: \"HEALTH\" FACTOR (\"HEALTH\" in cyan). Hero visual: notebook page with a sketched semicircle gauge and a dashed liquidation line on a mini chart. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): HF (EXAMPLE), LIQ. PRICE (EXAMPLE). Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b42",
+      "beat": 42,
+      "target_path": "course/images/lesson-08-3/042.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: ENGINE + \"UNWIND\"",
+      "labels": [
+        "NAME THE ENGINE",
+        "EXPLAIN THE UNWIND"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: ENGINE + \"UNWIND\" (\"UNWIND\" in cyan). Hero visual: notebook page with two boxed lines joined by a plus sign; unwind drawn as a reverse loop arrow. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): NAME THE ENGINE, EXPLAIN THE UNWIND. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b43",
+      "beat": 43,
+      "target_path": "course/images/lesson-08-3/043.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: \"EXAMPLE\" CARD",
+      "labels": [
+        "BORROWER INTEREST",
+        "UTILISATION",
+        "PEG BAND"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: \"EXAMPLE\" CARD (\"EXAMPLE\" in cyan). Hero visual: notebook page stamped EXAMPLE with three filled lines and a small peg-band sketch. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): BORROWER INTEREST, UTILISATION, PEG BAND. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b44",
+      "beat": 44,
+      "target_path": "course/images/lesson-08-3/044.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: \"NEW\" TOKENS",
+      "labels": [
+        "WHAT DOES BASE PAY?",
+        "SELLABLE?"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: \"NEW\" TOKENS (\"NEW\" in cyan). Hero visual: notebook page with a sketched stacked bar (thin base, tall hatched new tokens) and two question chips. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): WHAT DOES BASE PAY?, SELLABLE?. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b45",
+      "beat": 45,
+      "target_path": "course/images/lesson-08-3/045.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: \"REGISTER\" FIT",
+      "labels": [
+        "LIKELIHOOD \u00d7 IMPACT",
+        "LESSON 8.2"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: \"REGISTER\" FIT (\"REGISTER\" in cyan). Hero visual: notebook page with a sketched likelihood \u00d7 impact grid and a card arrow into one cell. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): LIKELIHOOD \u00d7 IMPACT, LESSON 8.2. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b46",
+      "beat": 46,
+      "target_path": "course/images/lesson-08-3/046.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: \"PLAYBOOK\" NEXT",
+      "labels": [
+        "DEPLOY",
+        "REVIEW",
+        "LESSON 8.4"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: \"PLAYBOOK\" NEXT (\"PLAYBOOK\" in cyan). Hero visual: notebook page with a sketched four-step loop and a 'LESSON 8.4' tab on the page edge. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): DEPLOY, REVIEW, LESSON 8.4. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b47",
+      "beat": 47,
+      "target_path": "course/images/lesson-08-3/047.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: \"READ\" THE CARD",
+      "labels": [
+        "ENGINE",
+        "MATHS",
+        "MONITOR",
+        "KILL RULE"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: \"READ\" THE CARD (\"READ\" in cyan). Hero visual: notebook page with a sketched strategy card, five rows circled in cyan. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): ENGINE, MATHS, MONITOR, KILL RULE. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b48",
+      "beat": 48,
+      "target_path": "course/images/lesson-08-3/048.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: \"FILLED\" OR BLANK",
+      "labels": [
+        "FILLED",
+        "BLANK ON PURPOSE"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: \"FILLED\" OR BLANK (\"FILLED\" in cyan). Hero visual: notebook page with seven rows: ticks and deliberate dashed BLANK marks alternating. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): FILLED, BLANK ON PURPOSE. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b49",
+      "beat": 49,
+      "target_path": "course/images/lesson-08-3/049.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: PATH \"NAMED\"",
+      "labels": [
+        "PATH NAMED",
+        "STOP (EXAMPLE)"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: PATH \"NAMED\" (\"NAMED\" in cyan). Hero visual: notebook page with a single bold sketched path ending at a dashed stop line, tick beside. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): PATH NAMED, STOP (EXAMPLE). Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b50",
+      "beat": 50,
+      "target_path": "course/images/lesson-08-3/050.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NOTEBOOK: SIZE STILL \"EMPTY\"",
+      "labels": [
+        "SIZE: ____",
+        "CHECKED"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NOTEBOOK: SIZE STILL \"EMPTY\" (\"EMPTY\" in cyan). Hero visual: notebook page close-up of one empty dashed box with a tick and a lock. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): SIZE: ____, CHECKED. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b51",
+      "beat": 51,
+      "target_path": "course/images/lesson-08-3/051.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "RECAP: THE \"MAP\"",
+      "labels": [
+        "MAP OF THE LIBRARY",
+        "NOT POSITIONS"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: RECAP: THE \"MAP\" (\"MAP\" in cyan). Hero visual: glowing glass map of eight stage nodes connected by cyan lines, one strategy card floating at centre; G-badge robot (visor-bar eyes) beside. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): MAP OF THE LIBRARY, NOT POSITIONS. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b52",
+      "beat": 52,
+      "target_path": "course/images/lesson-08-3/052.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "PAPER \"ACTION\"",
+      "labels": [
+        "FILL ONE CARD",
+        "PAPER ONLY"
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: PAPER \"ACTION\" (\"ACTION\" in cyan). Hero visual: glass desk top-down: one blank strategy card watermarked EXAMPLE, a cyan pencil, a checklist chip; nothing on screen, paper-only. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): FILL ONE CARD, PAPER ONLY. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    },
+    {
+      "id": "m8-l3-b53",
+      "beat": 53,
+      "target_path": "course/images/lesson-08-3/053.png",
+      "size": "1536x1024",
+      "palette": "cyan",
+      "anchors": [
+        "01M6MSHVNHDS25DF52A243CTZG.png",
+        "01M6MSJZM9PRAVHGK3607P817A.png"
+      ],
+      "headline": "NEXT: THE \"PLAYBOOK\"",
+      "labels": [
+        "LESSON 8.4",
+        "EDUCATION ONLY. NOT FINANCIAL ADVICE."
+      ],
+      "prompt": "Match the attached reference images' style exactly (navy/cyan). Landscape 1536x1024; all text and key content inside the centre 1536x864 safe area, top and bottom ~80px background only. New subject below.\nSTYLE (GBB v3, Blueprint/OCO CYAN): same as above, but the accent is electric cyan-blue (#00D4FF / #1E7BFF) on navy (#050A18 to #0A1630), as in the refs. Glass cards with glowing cyan borders, and the headline keyword in cyan. Same safe-area, text and compliance rules. Base rules (recoloured to cyan):  Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside the centre 1536x864 band; the top ~80px and bottom ~80px are background only. Near-black navy background (#05080F to #0B1424) with depth: faint grid, soft bokeh, glowing CYAN (#00D4FF / #1E7BFF) neon accent light. Frosted glass cards with glowing cyan borders. Detailed candlestick charts with labelled dashed BUY/SELL grid lines and buy/sell fill markers. Circled cyan line icons, numbered step flows, formula boxes with worked examples, comparison tables. 3D BTC, ETH and USDT coins; glossy G-badge robot mascot with visor-bar eyes only. Bold condensed all-caps headline in crisp white with ONE keyword in cyan, plus a few short crisp labels. Rich and layered, never flat or minimal. Education only: every price or level is labelled EXAMPLE; no profit, return, win-rate or income claims; no exchange names or logos; no people.\nNEGATIVE: no flat or minimal look, no off-white paper cards, no paragraphs or garbled/misspelt text, no exchange names, logos or real app UI, no people or photos, no face-like shapes other than the G-badge robot (visor-bar eyes, no smile arcs), no money piles, rockets, trophies or profit arrows, no unlabelled prices or levels, no \"award-winning\", nothing important in the top or bottom 80px. Elite: no blue-dominant palette. Blueprint/OCO: no teal-dominant palette.\nSHOT: Headline at top-left inside the safe area: NEXT: THE \"PLAYBOOK\" (\"PLAYBOOK\" in cyan). Hero visual: glass next-lesson card with a four-step loop icon, arrow pointing right; small footer disclaimer chip. Composition: hero centred, elements spaced apart with clear gaps, nothing touching the frame edge, everything inside the 1536x864 safe band. Labels (short, crisp, spelled exactly): LESSON 8.4, EDUCATION ONLY. NOT FINANCIAL ADVICE.. Any number or level carries (EXAMPLE). Hero visual with a few labels, not a full infographic page.\nImage quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+    }
+  ]
+}

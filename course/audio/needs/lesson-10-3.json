@@ -1,0 +1,330 @@
+{
+ "id": "lesson-10-3",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-10-3.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 10.2, Cash-and-carry basis trades. Capture the premium of a dated future over spot without taking a view on price. Keep that page on the desk. This lesson adds one picture: Run a funding-carry position with proper sizing, venue limits and exit rules."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 10.3, Delta-neutral funding carry, done properly. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already split base yield from emissions. Advanced yield still starts with that split, then names a more particular engine."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Perpetual futures pay funding between longs and shorts to keep the perp near spot."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Long spot + short perp at the same size = no net price exposure, while collecting funding."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Exit rule: close when the 7-day average turns negative (you'd start paying)."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Margin buffer: the short leg's leverage decides how big a rally it survives."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Venue limits: split across venues; cap each one."
+  },
+  {
+   "n": 10,
+   "role": "demo",
+   "vo": "Work the example on paper. Funding +0.01% per 8h \u2248 10.95% APR on the hedged size. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "Work the example on paper. Short liquidates on a rally of roughly 1\u00d7. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "Work the example on paper. +33% defi_calc.py carry --rate-8h 0.01 --short-lev 3 Higher leverage improves return on capital a little and makes the position much more fragile. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "Work the example on paper. Most operators stay at 1\u20132\u00d7 and top up margin from reserve. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: 7- and 30-day funding averages checked. If you cannot write it, the line is open."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Exit rule written (e.g. 7-day average < 0). If you cannot write it, the line is open."
+  },
+  {
+   "n": 16,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Short-leg leverage \u2264 2\u00d7, top-up plan from reserve. If you cannot write it, the line is open."
+  },
+  {
+   "n": 17,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Per-venue cap set. If you cannot write it, the line is open."
+  },
+  {
+   "n": 18,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Funding is +0.005%/8h. APR on hedged size? The answer: \u2248 5.5%."
+  },
+  {
+   "n": 19,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Why not run the short at 5\u00d7? The answer: A ~20% rally would liquidate the short and leave you unhedged long."
+  },
+  {
+   "n": 20,
+   "role": "quiz",
+   "vo": "Check yourself. 3. What's the exit signal? The answer: Average funding turning negative, meaning shorts start paying."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to run a funding-carry position with proper sizing, venue limits and exit rules."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "Long spot + short perp at the same size equals no net price exposure, while collecting funding."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Professional rules: First, Measure funding over time, not today."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "Next, Exit rule: close when the 7-day average turns negative (you'd start paying)."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Then, Margin buffer: the short leg's leverage decides how big a rally it survives."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "And finally, Venue limits: split across venues; cap each one."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "the calculator Higher leverage improves return on capital a little and makes the position much more fragile."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "Most operators stay at 1 to 2 times and top up margin from reserve."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "Funding turning negative, short squeezes, and venue failure."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "First, 7- and 30-day funding averages checked."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "Next, Exit rule written (for example 7-day average < 0)."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "Then, Short-leg leverage at most 2 times , top-up plan from reserve."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "Question one. Funding is +0.005%/8h. A.P.R. on hedged size? The answer: about 5.5%."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "Why not run the short at 5 times ?"
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "The answer: A about 20% rally would liquidate the short and leave you unhedged long."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "The answer: Average funding turning negative, meaning shorts start paying."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "Next up, lesson ten point four: Options income: covered calls, cash-secured puts, options vaults."
+  },
+  {
+   "n": 39,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Perpetual futures pay funding between longs and shorts to keep the perp near spot. It sits in Delta-neutral funding carry, done properly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. In bullish markets longs usually pay shorts. It sits in Delta-neutral funding carry, done properly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Long spot + short perp at the same size = no net price exposure, while collecting funding. It sits in Delta-neutral funding carry, done properly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Measure funding over time, not today. It sits in Delta-neutral funding carry, done properly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Use a 7- and 30-day average. It sits in Delta-neutral funding carry, done properly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Exit rule: close when the 7-day average turns negative (you'd start paying). It sits in Delta-neutral funding carry, done properly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Margin buffer: the short leg's leverage decides how big a rally it survives. It sits in Delta-neutral funding carry, done properly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Venue limits: split across venues; cap each one. It sits in Delta-neutral funding carry, done properly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Funding +0.01% per 8h \u2248 10.95% APR on the hedged size. It sits in Delta-neutral funding carry, done properly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Short liquidates on a rally of roughly 1\u00d7. It sits in Delta-neutral funding carry, done properly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. +33% defi_calc.py carry --rate-8h 0.01 --short-lev 3 Higher leverage improves return on capital a little and makes the position much more fragile. It sits in Delta-neutral funding carry, done properly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Most operators stay at 1\u20132\u00d7 and top up margin from reserve. It sits in Delta-neutral funding carry, done properly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Run a funding-carry position with proper sizing, venue limits and exit rules. It sits in Delta-neutral funding carry, done properly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. 7- and 30-day funding averages checked. It sits in Delta-neutral funding carry, done properly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Exit rule written (e.g. 7-day average < 0). It sits in Delta-neutral funding carry, done properly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 54,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Short-leg leverage \u2264 2\u00d7, top-up plan from reserve. It sits in Delta-neutral funding carry, done properly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 55,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Per-venue cap set. It sits in Delta-neutral funding carry, done properly. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 56,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Perpetual futures pay funding between longs and shorts to keep the perp near spot. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 57,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. In bullish markets longs usually pay shorts. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 58,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Long spot + short perp at the same size = no net price exposure, while collecting funding. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 59,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Measure funding over time, not today. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 60,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Use a 7- and 30-day average. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 61,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Exit rule: close when the 7-day average turns negative (you'd start paying). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 62,
+   "role": "recap",
+   "vo": "Three lines to keep. Perpetual futures pay funding between longs and shorts to keep the perp near spot. In bullish markets longs usually pay shorts. Next is Lesson 10.4, Options income: covered calls, cash-secured puts, options vaults. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 63,
+   "role": "action",
+   "vo": "Your action for Delta-neutral funding carry, done properly: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 10.4, Options income: covered calls, cash-secured puts, options vaults."
+  },
+  {
+   "n": 64,
+   "role": "outro",
+   "vo": "Next is Lesson 10.4, Options income: covered calls, cash-secured puts, options vaults. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

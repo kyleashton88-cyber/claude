@@ -1,0 +1,270 @@
+{
+ "id": "lesson-09-0",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-09-0.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Module 9, DeFi and grid bots. choose the right tool for the market, and run both as one system. Keep that page on the desk. This lesson adds one picture: Mastery Starter."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 9.0, Mastery Starter. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already know a grid waits on rungs, and a pool prices a trade with a curve. This module keeps those as two machines."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "It takes about 10 minutes and gets you from zero to ready for this module."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "The 60-second version A grid bot on an exchange and a liquidity position on a DEX both buy as price falls and sell as it rises inside a range."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "This module shows when each is the better tool, and how to run both without doubling your risk."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "automated buy/sell orders at set price levels Range."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "the price band a strategy works in Concentrated liquidity."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "LP capital placed in a chosen range Correlation."
+  },
+  {
+   "n": 11,
+   "role": "body",
+   "vo": "the event that ends a range thesis Before you start [ ] Modules 0\u20138 (Grid Bot Builder helpful but not required) Your first safe step Take one asset and write the range you'd use for a grid bot and for an LP."
+  },
+  {
+   "n": 12,
+   "role": "body",
+   "vo": "Chooses the right tool by size, custody and pair Master."
+  },
+  {
+   "n": 13,
+   "role": "body",
+   "vo": "Runs grid bots and DeFi as one system with exposure counted by asset and range You've mastered this module when\u2026 \u2026your exposure is counted by underlying asset and range, not by number of positions."
+  },
+  {
+   "n": 14,
+   "role": "body",
+   "vo": "In about ten minutes, you'll go from zero to ready for this module."
+  },
+  {
+   "n": 15,
+   "role": "body",
+   "vo": "A grid bot on an exchange and a liquidity position on a decks both buy as price falls and sell as it rises inside a range."
+  },
+  {
+   "n": 16,
+   "role": "body",
+   "vo": "Grid bot: automated buy/sell orders at set price levels."
+  },
+  {
+   "n": 17,
+   "role": "body",
+   "vo": "Range: the price band a strategy works in."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "Invalidation: the event that ends a range thesis."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "Modules 0 to 8 (Grid Bot Builder helpful but not required)."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "Take one asset and write the range you'd use for a grid bot and for an L.P."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "Practitioner: Chooses the right tool by size, custody and pair."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "Master: Runs grid bots and DeFi as one system with exposure counted by asset and range."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "You've mastered this module when your exposure is counted by underlying asset and range, not by number of positions."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Next up, lesson nine point one: Same idea, different machine."
+  },
+  {
+   "n": 26,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. It takes about 10 minutes and gets you from zero to ready for this module. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 27,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The 60-second version A grid bot on an exchange and a liquidity position on a DEX both buy as price falls and sell as it rises inside a range. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 28,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. This module shows when each is the better tool, and how to run both without doubling your risk. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 29,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. automated buy/sell orders at set price levels Range. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 30,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. the price band a strategy works in Concentrated liquidity. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 31,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. LP capital placed in a chosen range Correlation. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 32,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. the event that ends a range thesis Before you start [ ] Modules 0\u20138 (Grid Bot Builder helpful but not required) Your first safe step Take one asset and write the range you'd use for a grid bot and for an LP. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 33,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Explains the grid\u2013LP similarity Practitioner. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 34,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Chooses the right tool by size, custody and pair Master. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 35,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Runs grid bots and DeFi as one system with exposure counted by asset and range You've mastered this module when\u2026 \u2026your exposure is counted by underlying asset and range, not by number of positions. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 36,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Mastery Starter. It sits in Mastery Starter. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 37,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. It takes about 10 minutes and gets you from zero to ready for this module. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 38,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. The 60-second version A grid bot on an exchange and a liquidity position on a DEX both buy as price falls and sell as it rises inside a range. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 39,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. This module shows when each is the better tool, and how to run both without doubling your risk. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. automated buy/sell orders at set price levels Range. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. the price band a strategy works in Concentrated liquidity. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. LP capital placed in a chosen range Correlation. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. the event that ends a range thesis Before you start [ ] Modules 0\u20138 (Grid Bot Builder helpful but not required) Your first safe step Take one asset and write the range you'd use for a grid bot and for an LP. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Explains the grid\u2013LP similarity Practitioner. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Chooses the right tool by size, custody and pair Master. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Runs grid bots and DeFi as one system with exposure counted by asset and range You've mastered this module when\u2026 \u2026your exposure is counted by underlying asset and range, not by number of positions. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Mastery Starter. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. It takes about 10 minutes and gets you from zero to ready for this module. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. The 60-second version A grid bot on an exchange and a liquidity position on a DEX both buy as price falls and sell as it rises inside a range. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 50,
+   "role": "recap",
+   "vo": "Three lines to keep. It takes about 10 minutes and gets you from zero to ready for this module. The 60-second version A grid bot on an exchange and a liquidity position on a DEX both buy as price falls and sell as it rises inside a range. Next is Lesson 9.1, Same idea, different machine. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 51,
+   "role": "action",
+   "vo": "Your action for Mastery Starter: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 9.1, Same idea, different machine."
+  },
+  {
+   "n": 52,
+   "role": "outro",
+   "vo": "Next is Lesson 9.1, Same idea, different machine. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

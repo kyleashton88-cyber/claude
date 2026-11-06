@@ -1,0 +1,95 @@
+{
+ "id": "module-10-intro",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/module-10-intro.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "You are leaving Lesson 9.3, Building a combined system. Design a portfolio that uses exchange grid bots and DeFi together without doubling up on the same risk. Module 10, Advanced yield, asks something new. Build fixed, hedged and structured yield, and know exactly what each position is short."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Module 10 \u00b7 Advanced yield. Navy and cyan. This is the door, not the whole module. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already split base yield from emissions. Advanced yield still starts with that split, then names a more particular engine."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "By the end of the module you will be able to do this: build fixed, hedged and structured yield, and know exactly what each position is short. Not before. The lessons earn it one page at a time."
+  },
+  {
+   "n": 6,
+   "role": "map",
+   "vo": "The lessons, in order, are 10.0 Mastery Starter, 10.1 Fixed-rate yield: principal and yield tokens, 10.2 Cash-and-carry basis trades, 10.3 Delta-neutral funding carry, done properly, 10.4 Options income: covered calls, cash-secured puts, options vaults, 10.5 Active concentrated-liquidity management, 10.6 Restaking and points: pricing speculative yield, 10.7 Being the house: perp-exchange liquidity vaults, 10.8 DeFi rates: term structure, fixed vs floating, 10.9 Peg and redemption arbitrage. You do not skip ahead. Each page is the input to the next."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Lesson 10.0, Mastery Starter. Mastery Starter. You will write that down when you get there."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Lesson 10.1, Fixed-rate yield: principal and yield tokens. Lock a fixed return using principal tokens, and price a yield token against its implied rate. You will write that down when you get there."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Lesson 10.2, Cash-and-carry basis trades. Capture the premium of a dated future over spot without taking a view on price. You will write that down when you get there."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Lesson 10.3, Delta-neutral funding carry, done properly. Run a funding-carry position with proper sizing, venue limits and exit rules. You will write that down when you get there."
+  },
+  {
+   "n": 11,
+   "role": "body",
+   "vo": "Lesson 10.4, Options income: covered calls, cash-secured puts, options vaults. Earn option premium on assets you'd hold or buy anyway, knowing exactly what you give up. You will write that down when you get there."
+  },
+  {
+   "n": 12,
+   "role": "body",
+   "vo": "Lesson 10.5, Active concentrated-liquidity management. Choose a range width and a rebalance rule that fee income can actually pay for. You will write that down when you get there."
+  },
+  {
+   "n": 13,
+   "role": "body",
+   "vo": "Lesson 10.6, Restaking and points: pricing speculative yield. Value restaking and points programmes without letting unknown rewards drive position size. You will write that down when you get there."
+  },
+  {
+   "n": 14,
+   "role": "body",
+   "vo": "Lesson 10.7, Being the house: perp-exchange liquidity vaults. Understand what you're really taking on when you provide liquidity to a perpetuals exchange. You will write that down when you get there."
+  },
+  {
+   "n": 15,
+   "role": "body",
+   "vo": "Lesson 10.8, DeFi rates: term structure, fixed vs floating. Read DeFi's interest-rate curve and position for fixed or floating rates deliberately. You will write that down when you get there."
+  },
+  {
+   "n": 16,
+   "role": "body",
+   "vo": "Lesson 10.9, Peg and redemption arbitrage. Understand the arbitrages that keep stablecoins and LSTs near their value, and when a retail operator can take part. You will write that down when you get there."
+  },
+  {
+   "n": 17,
+   "role": "outro",
+   "vo": "Next is Lesson 10.0, Mastery Starter. Bring nothing but the habit: one idea, one drawing, the word Example on any number. Education only, not financial advice."
+  }
+ ]
+}

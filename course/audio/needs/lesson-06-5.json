@@ -1,0 +1,320 @@
+{
+ "id": "lesson-06-5",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-06-5.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 6.4, The on-chain research workflow. Turn research into a written thesis with invalidation and monitoring. Keep that page on the desk. This lesson adds one picture: Learn the patterns behind major failures so you recognise them early."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 6.5, Case studies: how DeFi failures happened. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You can already see a bridge, an oracle, and an admin key. Research starts there. A rate comes after the mechanism."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Objective Learn the patterns behind major failures so you recognise them early."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Warning signs Black Thursday, March 2020 (Maker)."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "ETH crashed; congested network and failing keeper bots let some collateral auctions clear at 0 DAI bids (~$8M lost)."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Auctions relying on keepers during congestion; no minimum bid TerraUSD (UST), May 2022."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Yield (~20%) far above any real cash flow; peg defended by a sister token Ronin bridge, March 2022 (~$600M)."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Small signer set; keys concentrated Mango Markets, Oct 2022 (~$110M)."
+  },
+  {
+   "n": 11,
+   "role": "body",
+   "vo": "Collateral price pumped on thin markets, then borrowed against."
+  },
+  {
+   "n": 12,
+   "role": "body",
+   "vo": "Thin-market collateral valued at spot FTX, Nov 2022."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "Work the example on paper. Using the table: a new stablecoin offers 18% \"sustainable\" yield, backed by its own governance token. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "Work the example on paper. That's the UST pattern: reflexive collateral and yield with no matching cash flow. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: For every position, I've asked which failure pattern it resembles. If you cannot write it, the line is open."
+  },
+  {
+   "n": 16,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: My register (8.2) includes these seven patterns. If you cannot write it, the line is open."
+  },
+  {
+   "n": 17,
+   "role": "quiz",
+   "vo": "Check yourself. 1. What pattern did Mango Markets show? The answer: Oracle manipulation of thin-market collateral."
+  },
+  {
+   "n": 18,
+   "role": "quiz",
+   "vo": "Check yourself. 2. What did FTX show DeFi users? The answer: Custodial counterparty risk: \"not your keys, not your coins\"."
+  },
+  {
+   "n": 19,
+   "role": "quiz",
+   "vo": "Check yourself. 3. UST's main warning sign? The answer: High yield with no matching real cash flow, backed by a reflexive sister token."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to learn the patterns behind major failures so you recognise them early."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "Black Thursday, March 2020 (Maker), ETH crashed; congested network and failing keeper bots let some collateral auctions clear at 0 DAI bids (about $8M lost), Liquidation mechanism failure under stress, Auctions relying on keepers during congestion; no minimum bid."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "TerraUSD (UST), May 2022, Algorithmic stablecoin lost its peg and collapsed, Reflexive design: confidence was the collateral, Yield (about 20%) far above any real cash flow; peg defended by a sister token."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Ronin bridge, March 2022 (about $600M), Attackers got 5 of 9 validator keys, Weak bridge trust model, Small signer set; keys concentrated."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "Mango Markets, Oct 2022 (about $110M), Collateral price pumped on thin markets, then borrowed against, Oracle manipulation, Thin-market collateral valued at spot."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "FTX, Nov 2022, Exchange used customer funds, Custodial (CeFi) counterparty failure, Opaque reserves; \"not your keys\"."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "Euler Finance, March 2023 (about $197M, later largely returned), Logic flaw in a lending function, Contract bug missed by audits, Complex new function added after earlier audits."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Curve pools, July 2023, Reentrancy guard broken by a compiler bug, Toolchain risk, Rare."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "Using the table: a new stablecoin offers 18% \"sustainable\" yield, backed by its own governance token."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "That's the UST pattern: reflexive collateral and yield with no matching cash flow."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "First, for every position, I've asked which failure pattern it resembles."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "And finally, My register (8.2) includes these seven patterns."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "The answer: Oracle manipulation of thin-market collateral."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "The answer: Custodial counterparty risk: \"not your keys, not your coins\"."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "The answer: High yield with no matching real cash flow, backed by a reflexive sister token."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "Next up, lesson six point six: Vote-escrow tokenomics, bribes and governance markets."
+  },
+  {
+   "n": 37,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Objective Learn the patterns behind major failures so you recognise them early. It sits in Case studies: how DeFi failures happened. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 38,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Explanation \u2014 seven failures, seven patterns Case. It sits in Case studies: how DeFi failures happened. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 39,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Warning signs Black Thursday, March 2020 (Maker). It sits in Case studies: how DeFi failures happened. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. ETH crashed; congested network and failing keeper bots let some collateral auctions clear at 0 DAI bids (~$8M lost). It sits in Case studies: how DeFi failures happened. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Auctions relying on keepers during congestion; no minimum bid TerraUSD (UST), May 2022. It sits in Case studies: how DeFi failures happened. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Algorithmic stablecoin lost its peg and collapsed. It sits in Case studies: how DeFi failures happened. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Reflexive design: confidence was the collateral. It sits in Case studies: how DeFi failures happened. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Yield (~20%) far above any real cash flow; peg defended by a sister token Ronin bridge, March 2022 (~$600M). It sits in Case studies: how DeFi failures happened. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Attackers got 5 of 9 validator keys. It sits in Case studies: how DeFi failures happened. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Small signer set; keys concentrated Mango Markets, Oct 2022 (~$110M). It sits in Case studies: how DeFi failures happened. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Collateral price pumped on thin markets, then borrowed against. It sits in Case studies: how DeFi failures happened. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Thin-market collateral valued at spot FTX, Nov 2022. It sits in Case studies: how DeFi failures happened. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Using the table: a new stablecoin offers 18% \"sustainable\" yield, backed by its own governance token. It sits in Case studies: how DeFi failures happened. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. That's the UST pattern: reflexive collateral and yield with no matching cash flow. It sits in Case studies: how DeFi failures happened. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Learn the patterns behind major failures so you recognise them early. It sits in Case studies: how DeFi failures happened. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. For every position, I've asked which failure pattern it resembles. It sits in Case studies: how DeFi failures happened. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. My register (8.2) includes these seven patterns. It sits in Case studies: how DeFi failures happened. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 54,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Objective Learn the patterns behind major failures so you recognise them early. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 55,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Explanation \u2014 seven failures, seven patterns Case. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 56,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Warning signs Black Thursday, March 2020 (Maker). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 57,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. ETH crashed; congested network and failing keeper bots let some collateral auctions clear at 0 DAI bids (~$8M lost). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 58,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Auctions relying on keepers during congestion; no minimum bid TerraUSD (UST), May 2022. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 59,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Algorithmic stablecoin lost its peg and collapsed. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 60,
+   "role": "recap",
+   "vo": "Three lines to keep. Objective Learn the patterns behind major failures so you recognise them early. Explanation \u2014 seven failures, seven patterns Case. Next is Lesson 6.6, Vote-escrow tokenomics, bribes and governance markets. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 61,
+   "role": "action",
+   "vo": "Your action for Case studies: how DeFi failures happened: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 6.6, Vote-escrow tokenomics, bribes and governance markets."
+  },
+  {
+   "n": 62,
+   "role": "outro",
+   "vo": "Next is Lesson 6.6, Vote-escrow tokenomics, bribes and governance markets. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

@@ -1,0 +1,252 @@
+{
+ "id": "bp-02-what-you-need",
+ "title": "What you are going to need",
+ "course": "Grid Bot Blueprint",
+ "palette": "navy-cyan",
+ "music": "course/music/komiku-ambiant-obscur-technology.ogg",
+ "next": "What is a grid bot",
+ "wpm_assumption": 143,
+ "word_count": 2526,
+ "estimated_minutes": 17.66,
+ "code_draws_visuals": false,
+ "overlays_only": [
+  "captions",
+  "lower thirds",
+  "intro title text",
+  "disclaimer line",
+  "Ken Burns"
+ ],
+ "beats": [
+  {
+   "n": 1,
+   "chapter": "Hook",
+   "role": "hook",
+   "vo": "You need a page before you need a screen. People lose the lesson when they open a form while the notebook is still blank. On the diagram for this beat, look for a blank checklist beside a dimmed generic form. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Open a fresh page and write the lesson title at the top. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A screen cannot supply a fact you have not written. Say the opening line once more, and point at the part that belongs to Hook. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "You need a page before you need a screen. People lose the lesson when they open a form while the notebook is.",
+   "concept": "You need a page before you need a screen.",
+   "image": "course/images/bp-02-what-you-need/001.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 1, role hook. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Hook. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: You need a page before you need a screen; the problem visible in the first glance, before any logo. The picture must be understandable with the sound off. Teaching line: You need a page before you need a screen. Labels, spelled exactly: You. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 2,
+   "chapter": "Disclaimer",
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot.",
+   "cap": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of.",
+   "concept": "Education only, not financial advice.",
+   "image": "course/images/bp-02-what-you-need/002.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 2, role legal. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Disclaimer. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Education only, not financial advice. The picture must be understandable with the sound off. Teaching line: Education only, not financial advice. Labels, spelled exactly: Education. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 3,
+   "chapter": "Title card",
+   "role": "intro",
+   "vo": "This is the Grid Bot Blueprint. The lesson is What you are going to need. Navy and cyan on the frame. Education only. You will write on paper before any screen.",
+   "cap": "This is the Grid Bot Blueprint. The lesson is What you are going to need. Navy and cyan on the frame.",
+   "concept": "What you are going to need",
+   "image": "course/images/bp-02-what-you-need/003.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 3, role intro. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Title card. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: What you are going to need. The picture must be understandable with the sound off. Teaching line: What you are going to need Labels, spelled exactly: What. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 4,
+   "chapter": "Seven items",
+   "role": "body",
+   "vo": "The setup check has seven lines: notebook, the three words, pair name, paper or demo, no secrets, a written stop, and the word Example. Each line is a fact. A tick without the fact is decoration. On the diagram for this beat, look for a seven-row checklist with simple icons and one row highlighted. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write the seven labels down the page, leaving a blank answer line on each. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Seven ticks on an empty page is not a finished check. Say the opening line once more, and point at the part that belongs to Seven items. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "The setup check has seven lines: notebook, the three words, pair name, paper or demo, no secrets, a written.",
+   "concept": "The setup check has seven lines: notebook, the three words, pair name, paper or demo, no secrets, a written stop, and the word Example.",
+   "image": "course/images/bp-02-what-you-need/004.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 4, role body. A step-by-step illustrated form, generic and unbranded, with one field highlighted in cyan. Chapter context: Seven items. Show a dashed stop line below the band, and a price path that leaves the band and does not return; an open notebook page with a short checklist, one row highlighted, next to the diagram it describes. The picture must be understandable with the sound off. Teaching line: The setup check has seven lines: notebook, the three words, pair name, paper or demo, no secrets, a written stop, and the word Example. Labels, spelled exactly: The, Example. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 5,
+   "chapter": "The three words",
+   "role": "body",
+   "vo": "The three words are range, levels, and stop, carried forward from the introduction. The checklist asks for them so a later form has something true to copy. On the diagram for this beat, look for three labelled chips feeding one checklist row. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write a one-line definition under each word, in your own words. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. If the definition does not match the diagram, the diagram wins and you rewrite the line. Say the opening line once more, and point at the part that belongs to The three words. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "The three words are range, levels, and stop, carried forward from the introduction. The checklist asks for.",
+   "concept": "The three words are range, levels, and stop, carried forward from the introduction.",
+   "image": "course/images/bp-02-what-you-need/005.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 5, role body. One large diagram centered on an off-white panel, with thin cyan callout lines. Chapter context: The three words. Show a price band drawn as two horizontal cyan lines labelled Upper and Lower, with the word Range on a small tag; a dashed stop line below the band, and a price path that leaves the band and does not return. The picture must be understandable with the sound off. Teaching line: The three words are range, levels, and stop, carried forward from the introduction. Labels, spelled exactly: Example, The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 6,
+   "chapter": "Pair name",
+   "role": "body",
+   "vo": "A pair name is two assets written with a slash, such as the base and the quote. An empty pair slot is a missing fact. It is not a detail you will remember later. On the diagram for this beat, look for two empty tags joined by a slash, one tag circled. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write a practice pair and the word Example, so it cannot be read as a pick. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. This lesson does not choose a market for you. Say the opening line once more, and point at the part that belongs to Pair name. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "A pair name is two assets written with a slash, such as the base and the quote. An empty pair slot is a.",
+   "concept": "A pair name is two assets written with a slash, such as the base and the quote.",
+   "image": "course/images/bp-02-what-you-need/006.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 6, role body. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Pair name. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: A pair name is two assets written with a slash, such as the base and the quote. The picture must be understandable with the sound off. Teaching line: A pair name is two assets written with a slash, such as the base and the quote. Use no words if a shape is clearer. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 7,
+   "chapter": "Paper or demo",
+   "role": "body",
+   "vo": "The screen, when you reach it, is paper or demo. Paper lets you see the fields. It does not send an order, and this course never asks you to send one. On the diagram for this beat, look for a fence around a generic form labelled Paper. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write Paper or demo on the checklist, and leave the live box empty. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A live ticket is not the assignment. Say the opening line once more, and point at the part that belongs to Paper or demo. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "The screen, when you reach it, is paper or demo. Paper lets you see the fields. It does not send an order.",
+   "concept": "The screen, when you reach it, is paper or demo.",
+   "image": "course/images/bp-02-what-you-need/007.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 7, role body. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Paper or demo. Show an open notebook page with a short checklist, one row highlighted, next to the diagram it describes. The picture must be understandable with the sound off. Teaching line: The screen, when you reach it, is paper or demo. Labels, spelled exactly: The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 8,
+   "chapter": "No secrets",
+   "role": "body",
+   "vo": "You never type a seed phrase, a private key, or an API secret into a lesson, a chat, or a form. The course can teach the shape of a field. It cannot be trusted with a secret, and it will not ask. On the diagram for this beat, look for a key shape crossed out next to an empty form. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write this rule on the checklist in your own handwriting. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Anyone who asks for the phrase is outside this course. Say the opening line once more, and point at the part that belongs to No secrets. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "You never type a seed phrase, a private key, or an API secret into a lesson, a chat, or a form. The course.",
+   "concept": "You never type a seed phrase, a private key, or an API secret into a lesson, a chat, or a form.",
+   "image": "course/images/bp-02-what-you-need/008.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 8, role body. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: No secrets. Show a hardware key beside a crossed-out speech bubble, showing a secret that is never typed into a page. The picture must be understandable with the sound off. Teaching line: You never type a seed phrase, a private key, or an API secret into a lesson, a chat, or a form. Labels, spelled exactly: You, API. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 9,
+   "chapter": "Written stop",
+   "role": "body",
+   "vo": "The stop line on the checklist is a sentence, not a tick. The sentence says what path finishes the idea. A tick with no sentence is the common miss. On the diagram for this beat, look for a checklist row with a sentence line, and a faded tick that has no sentence. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Draft one stop sentence even if you revise it in a later lesson. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. You are not being told a price to use. Say the opening line once more, and point at the part that belongs to Written stop. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "The stop line on the checklist is a sentence, not a tick. The sentence says what path finishes the idea. A.",
+   "concept": "The stop line on the checklist is a sentence, not a tick.",
+   "image": "course/images/bp-02-what-you-need/009.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 9, role body. A step-by-step illustrated form, generic and unbranded, with one field highlighted in cyan. Chapter context: Written stop. Show a dashed stop line below the band, and a price path that leaves the band and does not return; an open notebook page with a short checklist, one row highlighted, next to the diagram it describes. The picture must be understandable with the sound off. Teaching line: The stop line on the checklist is a sentence, not a tick. Labels, spelled exactly: The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 10,
+   "chapter": "The word Example",
+   "role": "body",
+   "vo": "Every number and every pair on the page carries the word Example. That word is what keeps a teaching sketch from being read as a recommendation. On the diagram for this beat, look for a stamp that says Example on the corner of the page. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Add the stamp before you add any figure. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A page without that word is not ready to be copied onto a form. Say the opening line once more, and point at the part that belongs to The word Example. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Every number and every pair on the page carries the word Example. That word is what keeps a teaching sketch.",
+   "concept": "Every number and every pair on the page carries the word Example.",
+   "image": "course/images/bp-02-what-you-need/010.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 10, role body. One large diagram centered on an off-white panel, with thin cyan callout lines. Chapter context: The word Example. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Every number and every pair on the page carries the word Example. The picture must be understandable with the sound off. Teaching line: Every number and every pair on the page carries the word Example. Labels, spelled exactly: Every, Example. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 11,
+   "chapter": "Not on the list",
+   "role": "body",
+   "vo": "A profit target is not on the list. A leverage multiple is not on the list. Those lines would change the subject from setup to a result, and this lesson has no result. On the diagram for this beat, look for two crossed-out rows under the real seven. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. If you added either row, cross it out. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. The checklist is short on purpose. Say the opening line once more, and point at the part that belongs to Not on the list. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "A profit target is not on the list. A leverage multiple is not on the list. Those lines would change the.",
+   "concept": "A profit target is not on the list. A leverage multiple is not on the list.",
+   "image": "course/images/bp-02-what-you-need/011.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 11, role body. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Not on the list. Show two columns labelled Isolated and Cross: the first box holds only its own inventory, the second box has a line reaching into a neighbouring box; a price path leaving the band. The picture must be understandable with the sound off. Teaching line: A profit target is not on the list. A leverage multiple is not on the list. Use no words if a shape is clearer. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 12,
+   "chapter": "The form copies the page",
+   "role": "diagram",
+   "vo": "A later button, on paper, is only a copy of the page. If the page is blank, the form has nothing true to copy, and the button does not invent it. On the diagram for this beat, look for an arrow from a filled page to a matching generic form. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Draw the arrow, and write Copy under it. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. The button is not the source. Say the opening line once more, and point at the part that belongs to The form copies the page. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "A later button, on paper, is only a copy of the page. If the page is blank, the form has nothing true to.",
+   "concept": "A later button, on paper, is only a copy of the page.",
+   "image": "course/images/bp-02-what-you-need/012.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 12, role diagram. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: The form copies the page. Show an open notebook page with a short checklist, one row highlighted, next to the diagram it describes. The picture must be understandable with the sound off. Teaching line: A later button, on paper, is only a copy of the page. Use no words if a shape is clearer. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 13,
+   "chapter": "You are early",
+   "role": "map",
+   "vo": "You are early in the course. The definition, the regime, and the spacing are still ahead. Finishing the checklist does not mean the grid is designed. On the diagram for this beat, look for a progress path with the second step lit and the rest dim. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write the title of the next lesson under the checklist. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Do not treat a finished list as a finished design. Say the opening line once more, and point at the part that belongs to You are early. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "You are early in the course. The definition, the regime, and the spacing are still ahead. Finishing the.",
+   "concept": "You are early in the course. The definition, the regime, and the spacing are still ahead.",
+   "image": "course/images/bp-02-what-you-need/013.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 13, role map. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: You are early. Show nineteen even gaps between twenty horizontal lines, the gaps marked, the lines only the edges of the gaps, a small note that counting lines is the miss; three small charts in a row labelled Range, Trend, and Break, only the first one weaving inside a band. The picture must be understandable with the sound off. Teaching line: You are early in the course. The definition, the regime, and the spacing are still ahead. Labels, spelled exactly: You, The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 14,
+   "chapter": "Empty pair",
+   "role": "demo",
+   "vo": "Look at the pair row and imagine it empty on purpose. The rest of the list can be tidy and the page is still blocked, because the form would not know which market the drawing belongs to. On the diagram for this beat, look for six quiet rows and one circled empty pair row. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Leave the pair row blank for ten seconds, then fill it with an Example pair. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A missing row is the lesson, not a nuisance. Say the opening line once more, and point at the part that belongs to Empty pair. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Look at the pair row and imagine it empty on purpose. The rest of the list can be tidy and the page is still.",
+   "concept": "Look at the pair row and imagine it empty on purpose.",
+   "image": "course/images/bp-02-what-you-need/014.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 14, role demo. A step-by-step illustrated form, generic and unbranded, with one field highlighted in cyan. Chapter context: Empty pair. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Look at the pair row and imagine it empty on purpose; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Look at the pair row and imagine it empty on purpose. Labels, spelled exactly: Look. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 15,
+   "chapter": "Common miss",
+   "role": "body",
+   "vo": "The common miss is to skip the list and open the screen. The screen will ask for the same facts, and it will accept blanks that your page should have refused. On the diagram for this beat, look for a person-free arrow jumping over the checklist toward a form, crossed out. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write the miss in the margin so you recognise it later. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Speed here deletes the only record you have. Say the opening line once more, and point at the part that belongs to Common miss. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "The common miss is to skip the list and open the screen. The screen will ask for the same facts, and it will.",
+   "concept": "The common miss is to skip the list and open the screen.",
+   "image": "course/images/bp-02-what-you-need/015.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 15, role body. One large diagram centered on an off-white panel, with thin cyan callout lines. Chapter context: Common miss. Show a two-panel miss: a blank stop on the left, a clean written stop on the right. The picture must be understandable with the sound off. Teaching line: The common miss is to skip the list and open the screen. Labels, spelled exactly: The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 16,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Seven items. Cover the notes and say this from memory: The setup check has seven lines: notebook, the three words, pair name, paper or demo, no secrets, a written stop, and the word Example. Then uncover the diagram and check that you can still see a seven-row checklist with simple icons and one row highlighted. Write the seven labels down the page, leaving a blank answer line on each. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Seven items. Cover the notes and say this from memory: The setup check has seven.",
+   "concept": "Practice: The setup check has seven lines: notebook, the three words, pair name, paper or demo, no secrets, a written stop, and the word Example.",
+   "image": "course/images/bp-02-what-you-need/016.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 16, role demo. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Your turn. Show a dashed stop line below the band, and a price path that leaves the band and does not return; an open notebook page with a short checklist, one row highlighted, next to the diagram it describes; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: The setup check has seven lines: notebook, the three words, pair name, paper or demo, no secrets, a written stop, and the word Example. Labels, spelled exactly: Practice, The, Example. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 17,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside The three words. Cover the notes and say this from memory: The three words are range, levels, and stop, carried forward from the introduction. Then uncover the diagram and check that you can still see three labelled chips feeding one checklist row. Write a one-line definition under each word, in your own words. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside The three words. Cover the notes and say this from memory: The three words are range.",
+   "concept": "Practice: The three words are range, levels, and stop, carried forward from the introduction.",
+   "image": "course/images/bp-02-what-you-need/017.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 17, role demo. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Your turn. Show a price band drawn as two horizontal cyan lines labelled Upper and Lower, with the word Range on a small tag; a dashed stop line below the band, and a price path that leaves the band and does not return; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: The three words are range, levels, and stop, carried forward from the introduction. Labels, spelled exactly: Example, Practice, The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 18,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Pair name. Cover the notes and say this from memory: A pair name is two assets written with a slash, such as the base and the quote. Then uncover the diagram and check that you can still see two empty tags joined by a slash, one tag circled. Write a practice pair and the word Example, so it cannot be read as a pick. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Pair name. Cover the notes and say this from memory: A pair name is two assets.",
+   "concept": "Practice: A pair name is two assets written with a slash, such as the base and the quote.",
+   "image": "course/images/bp-02-what-you-need/018.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 18, role demo. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: A pair name is two assets written with a slash, such as the base and the quote; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: A pair name is two assets written with a slash, such as the base and the quote. Labels, spelled exactly: Practice. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 19,
+   "chapter": "Recap",
+   "role": "recap",
+   "vo": "Recap for What you are going to need. Say the hook in one line, name the diagram you drew, and name the line you wrote in the notebook. If one of those three is missing, the lesson is not finished. Stamp Example. Education only.",
+   "cap": "Recap for What you are going to need. Say the hook in one line, name the diagram you drew, and name the line.",
+   "concept": "What you are going to need recap",
+   "image": "course/images/bp-02-what-you-need/019.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 19, role recap. A step-by-step illustrated form, generic and unbranded, with one field highlighted in cyan. Chapter context: Recap. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: What you are going to need recap; three short recap rows, each row a tiny diagram plus a two-word label. The picture must be understandable with the sound off. Teaching line: What you are going to need recap Labels, spelled exactly: What. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 20,
+   "chapter": "Finish the seven",
+   "role": "action",
+   "vo": "The action is to complete the seven lines on paper today. Read each answer out loud. If a line has no answer, it is not done. On the diagram for this beat, look for a completed seven-row page with a pencil on the last row. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Sign the bottom with the date you will reread it, not a date you promise to trade. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. The next lesson defines the grid those lines are about. Say the opening line once more, and point at the part that belongs to Finish the seven. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "The action is to complete the seven lines on paper today. Read each answer out loud. If a line has no answer.",
+   "concept": "The action is to complete the seven lines on paper today.",
+   "image": "course/images/bp-02-what-you-need/020.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 20, role action. One large diagram centered on an off-white panel, with thin cyan callout lines. Chapter context: Finish the seven. Show an open notebook page with a short checklist, one row highlighted, next to the diagram it describes; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: The action is to complete the seven lines on paper today. Labels, spelled exactly: The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 21,
+   "chapter": "Outro",
+   "role": "outro",
+   "vo": "Next lesson: What is a grid bot. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
+   "cap": "Next lesson: What is a grid bot. Bring the page you just wrote. Leave every example marked Example. No order.",
+   "concept": "Next lesson: What is a grid bot. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
+   "image": "course/images/bp-02-what-you-need/021.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'What you are going to need', beat 21, role outro. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Outro. Show a dashed stop line below the band, and a price path that leaves the band and does not return; a quiet next-step card with a single arrow to a blank next title, no price and no button that buys anything. The picture must be understandable with the sound off. Teaching line: Next lesson: What is a grid bot. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons. Labels, spelled exactly: Next, What, Bring, Leave. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  }
+ ]
+}

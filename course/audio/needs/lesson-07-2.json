@@ -1,0 +1,285 @@
+{
+ "id": "lesson-07-2",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-07-2.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 7.1, On-chain data foundations. Avoid the classic misreads of on-chain data. Keep that page on the desk. This lesson adds one picture: Read any transaction on an explorer without using the app's interface."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 7.2, Block explorer mastery. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You can already read a token's supply and a protocol's fees. Analytics is how you check those claims on the ledger itself."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "For a transaction: status (success/fail), block, from/to, value, fee, method called, token transfers (events), internal calls, and logs."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "For a contract: read (state, parameters) and write (call functions directly, carefully) tabs; proxy info; verified source."
+  },
+  {
+   "n": 7,
+   "role": "demo",
+   "vo": "Work the example on paper. Your swap on an L2: status Success \u00b7 method swap \u00b7 token transfers: 100 USDC out, 0.0331 ETH in \u00b7 fee 0.00002 ETH. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 8,
+   "role": "demo",
+   "vo": "Work the example on paper. The event log confirms the router and pool. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 9,
+   "role": "demo",
+   "vo": "Work the example on paper. You've verified the trade without trusting the website. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 10,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: I can find status, fee, method and token transfers. If you cannot write it, the line is open."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: I can read a contract's parameters on the Read tab. If you cannot write it, the line is open."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: I can check and revoke approvals. If you cannot write it, the line is open."
+  },
+  {
+   "n": 13,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Where do you see tokens that actually moved? The answer: Token transfers (event logs)."
+  },
+  {
+   "n": 14,
+   "role": "quiz",
+   "vo": "Check yourself. 2. What does the Read tab show? The answer: A contract's public state and parameters."
+  },
+  {
+   "n": 15,
+   "role": "quiz",
+   "vo": "Check yourself. 3. Why verify on the explorer? The answer: It's the ground truth, independent of any website."
+  },
+  {
+   "n": 16,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to read any transaction on an explorer without using the app's interface."
+  },
+  {
+   "n": 17,
+   "role": "body",
+   "vo": "Your swap on an layer two: status Success times method swap times token transfers: 100 U.S.D.C."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "out, 0.0331 ETH in times fee 0.00002 ETH."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "The event log confirms the router and pool."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "You've verified the trade without trusting the website."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "First, I can find status, fee, method and token transfers."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "Next, I can read a contract's parameters on the Read tab."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "And finally, I can check and revoke approvals."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "Where do you see tokens that actually moved?"
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "The answer: A contract's public state and parameters."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "The answer: It's the ground truth, independent of any website."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "Next up, lesson seven point three: Exchange flows."
+  },
+  {
+   "n": 29,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. For a transaction: status (success/fail), block, from/to, value, fee, method called, token transfers (events), internal calls, and logs. It sits in Block explorer mastery. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 30,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. For a contract: read (state, parameters) and write (call functions directly, carefully) tabs; proxy info; verified source. It sits in Block explorer mastery. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 31,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Your swap on an L2: status Success \u00b7 method swap \u00b7 token transfers: 100 USDC out, 0.0331 ETH in \u00b7 fee 0.00002 ETH. It sits in Block explorer mastery. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 32,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The event log confirms the router and pool. It sits in Block explorer mastery. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 33,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. You've verified the trade without trusting the website. It sits in Block explorer mastery. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 34,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Read any transaction on an explorer without using the app's interface. It sits in Block explorer mastery. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 35,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. I can find status, fee, method and token transfers. It sits in Block explorer mastery. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 36,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. I can read a contract's parameters on the Read tab. It sits in Block explorer mastery. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 37,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. I can check and revoke approvals. It sits in Block explorer mastery. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 38,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. For a transaction: status (success/fail), block, from/to, value, fee, method called, token transfers (events), internal calls, and logs. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 39,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. For a contract: read (state, parameters) and write (call functions directly, carefully) tabs; proxy info; verified source. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Your swap on an L2: status Success \u00b7 method swap \u00b7 token transfers: 100 USDC out, 0.0331 ETH in \u00b7 fee 0.00002 ETH. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. The event log confirms the router and pool. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. You've verified the trade without trusting the website. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Read any transaction on an explorer without using the app's interface. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. I can find status, fee, method and token transfers. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. I can read a contract's parameters on the Read tab. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. I can check and revoke approvals. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. For a transaction: status (success/fail), block, from/to, value, fee, method called, token transfers (events), internal calls, and logs. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. For a contract: read (state, parameters) and write (call functions directly, carefully) tabs; proxy info; verified source. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Your swap on an L2: status Success \u00b7 method swap \u00b7 token transfers: 100 USDC out, 0.0331 ETH in \u00b7 fee 0.00002 ETH. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. The event log confirms the router and pool. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. You've verified the trade without trusting the website. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Read any transaction on an explorer without using the app's interface. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 53,
+   "role": "recap",
+   "vo": "Three lines to keep. For a transaction: status (success/fail), block, from/to, value, fee, method called, token transfers (events), internal calls, and logs. For a contract: read (state, parameters) and write (call functions directly, carefully) tabs; proxy info; verified source. Next is Lesson 7.3, Exchange flows. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 54,
+   "role": "action",
+   "vo": "Your action for Block explorer mastery: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 7.3, Exchange flows."
+  },
+  {
+   "n": 55,
+   "role": "outro",
+   "vo": "Next is Lesson 7.3, Exchange flows. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

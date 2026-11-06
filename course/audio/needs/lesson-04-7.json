@@ -1,0 +1,510 @@
+{
+ "id": "lesson-04-7",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-04-7.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 4.6, Airdrops & points: opportunity cost. Price airdrop and points farming as a bet, including its costs. Keep that page on the desk. This lesson adds one picture: Tell apart the different ways a stablecoin can pay yield, and the risk behind each."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 4.7, Stablecoin savings rates and yield-bearing stablecoins. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already have LTV, health factor, and liquidation from lending. A yield does not retire those numbers. It is payment for a risk you can name."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Yield on \"dollars\" on-chain comes from one of four places: 1."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Lending: you lend stablecoins to borrowers (Module 3)."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Savings rates: some stablecoin protocols pay a set rate to holders who deposit into a savings contract, funded by their own revenue."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Risk: the stablecoin's design and governance setting the rate."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Treasury-backed: the issuer holds short-term government debt and passes on part of the interest (Lesson 4.8)."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Synthetic / basis-backed: yield comes from a hedged derivatives position (spot long + perp short) earning funding."
+  },
+  {
+   "n": 11,
+   "role": "body",
+   "vo": "Risk: funding turns negative, exchange failure, and the design itself (Lesson 10.3)."
+  },
+  {
+   "n": 12,
+   "role": "body",
+   "vo": "Same \"4\u201310% on dollars\", four completely different risks."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "Work the example on paper. $10,000 in a yield-bearing stablecoin paying 4.5% earns ~$450/yr if the rate holds. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "Work the example on paper. Before buying, answer: where does the 4.5% come from (1\u20134 above)? Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "Work the example on paper. What happens to it in a bear market when funding goes negative? Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 16,
+   "role": "demo",
+   "vo": "Work the example on paper. Can you redeem for $1, and who can? Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 17,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Yield source identified (lending, savings rate, treasuries or basis). If you cannot write it, the line is open."
+  },
+  {
+   "n": 18,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Redemption path and who can redeem known. If you cannot write it, the line is open."
+  },
+  {
+   "n": 19,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Split across different yield sources, not just different tickers. If you cannot write it, the line is open."
+  },
+  {
+   "n": 20,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Name the four sources of stablecoin yield. The answer: Lending, protocol savings rates, treasury backing, and synthetic basis/funding positions."
+  },
+  {
+   "n": 21,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Why can a basis-backed stablecoin's yield fall to zero? The answer: Funding can turn negative in bear markets."
+  },
+  {
+   "n": 22,
+   "role": "quiz",
+   "vo": "Check yourself. 3. Two yield-bearing stablecoins both backed by basis trades: diversified? The answer: Not really. They share the same yield source and failure mode."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "By the end, you'll be able to tell apart four completely different ways a stablecoin can pay yield, and the specific risk behind each one."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "The four genuinely different places yield on stablecoins can actually come from."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "The specific risk that rides along with each one."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "A full worked example, pricing a real, advertised rate against three real questions you should ask first."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "And a checklist for identifying, and diversifying across, these sources correctly."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "Here are all four places yield on a dollar-pegged stablecoin can genuinely originate from."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "Lending, where you're lending stablecoins directly to borrowers, exactly the lending markets covered back in Module three."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "Savings rates, a set rate some stablecoin protocols pay directly to holders, funded by the protocol's own revenue."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "Treasury-backed, where the issuer holds real, short-term government debt, and passes on part of that interest."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "And synthetic, or basis-backed, where the yield comes from a hedged derivatives position, earning funding."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "Here's each of those four, paired directly with its own specific risk, since the risk is genuinely different every single time."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "Lending's risk is the protocol, the collateral backing it, and the oracles pricing that collateral."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "Savings rates carry the stablecoin's own design and governance risk, since governance is what actually sets that rate."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "Treasury-backed carries the issuer, the custodian holding those treasuries, and the redemption terms."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "And synthetic, basis-backed yield carries funding turning negative, and the exchange itself."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "Worth being precise about the actual lesson this comparison proves, since it's easy to see one number and assume one risk."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "The exact same headline rate, somewhere between four and ten percent, can be sitting on top of four entirely different foundations, each one able to fail in a completely different way, for a completely different reason."
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "Here's how to actually identify which of the four sources a specific stablecoin actually uses, rather than guessing from its marketing alone."
+  },
+  {
+   "n": 41,
+   "role": "body",
+   "vo": "Read its own documentation specifically for the words it uses to describe where the yield comes from, lending, a savings rate, treasuries, or a hedged position."
+  },
+  {
+   "n": 42,
+   "role": "body",
+   "vo": "Check whether it discloses what it's actually holding, or invested in, behind the token."
+  },
+  {
+   "n": 43,
+   "role": "body",
+   "vo": "And if none of that is genuinely disclosed anywhere, treat the yield source itself as unknown, and price that uncertainty as its own separate risk."
+  },
+  {
+   "n": 44,
+   "role": "body",
+   "vo": "Here's a rough, useful way to group these four, by how much their rate tends to actually move around."
+  },
+  {
+   "n": 45,
+   "role": "body",
+   "vo": "Lending and treasury-backed yields tend to move relatively slowly, tracking broader interest-rate conditions over time."
+  },
+  {
+   "n": 46,
+   "role": "body",
+   "vo": "Protocol savings rates and synthetic, funding-based yields can move considerably faster, since a governance vote or a sharp shift in market sentiment can change either one in a single day."
+  },
+  {
+   "n": 47,
+   "role": "body",
+   "vo": "The answer: lending, protocol savings rates, treasury backing, and synthetic basis, or funding, positions."
+  },
+  {
+   "n": 48,
+   "role": "body",
+   "vo": "Here's exactly how a synthetic, basis-backed yield actually gets generated, since it's the least intuitive of the four."
+  },
+  {
+   "n": 49,
+   "role": "body",
+   "vo": "The protocol holds a spot position, long the underlying asset, and simultaneously holds a perpetual future, short, against that same asset."
+  },
+  {
+   "n": 50,
+   "role": "body",
+   "vo": "Those two positions largely cancel each other's price risk out."
+  },
+  {
+   "n": 51,
+   "role": "body",
+   "vo": "The yield itself comes specifically from funding payments, paid between longs and shorts on the perpetual, a mechanism covered back in Lesson three point five."
+  },
+  {
+   "n": 52,
+   "role": "body",
+   "vo": "Worth being precise about why this specific yield source can genuinely fall all the way to zero, unlike the other three."
+  },
+  {
+   "n": 53,
+   "role": "body",
+   "vo": "Funding isn't fixed; it moves with market sentiment, and can turn negative during a bear market, meaning shorts pay longs instead of the other way around."
+  },
+  {
+   "n": 54,
+   "role": "body",
+   "vo": "When that happens, this yield source doesn't just shrink, it can disappear, or even turn into an active cost, entirely independent of what the underlying asset's own price does."
+  },
+  {
+   "n": 55,
+   "role": "body",
+   "vo": "Worth being precise about what the word hedged actually means here, since it's easy to hear it and assume the position is without a downside."
+  },
+  {
+   "n": 56,
+   "role": "body",
+   "vo": "Hedged specifically means the price risk of the underlying asset is largely cancelled out."
+  },
+  {
+   "n": 57,
+   "role": "body",
+   "vo": "It does not mean the exchange holding those positions can't fail, and it does not mean the funding payments themselves are certain to stay positive."
+  },
+  {
+   "n": 58,
+   "role": "body",
+   "vo": "Why can a basis-backed stablecoin's yield fall all the way to zero?"
+  },
+  {
+   "n": 59,
+   "role": "body",
+   "vo": "The answer: funding can turn negative during a bear market, meaning shorts pay longs instead, removing the yield entirely."
+  },
+  {
+   "n": 60,
+   "role": "body",
+   "vo": "Ten thousand dollars, deposited into a yield-bearing stablecoin paying four and a half percent, earns approximately four hundred fifty dollars a year."
+  },
+  {
+   "n": 61,
+   "role": "body",
+   "vo": "Everything that actually matters in this lesson comes right after it."
+  },
+  {
+   "n": 62,
+   "role": "body",
+   "vo": "Here are the three real questions to answer, before ever buying in, regardless of how attractive that four hundred fifty dollars looks."
+  },
+  {
+   "n": 63,
+   "role": "body",
+   "vo": "Where does the four and a half percent actually come from, which of the four sources from earlier in this lesson."
+  },
+  {
+   "n": 64,
+   "role": "body",
+   "vo": "What happens to that rate specifically in a bear market, if it's resting on synthetic funding."
+  },
+  {
+   "n": 65,
+   "role": "body",
+   "vo": "And can you genuinely redeem for one dollar, and specifically who is allowed to."
+  },
+  {
+   "n": 66,
+   "role": "body",
+   "vo": "Here's why that third question, about redemption, deserves just as much weight as the yield source itself."
+  },
+  {
+   "n": 67,
+   "role": "body",
+   "vo": "Some yield-bearing stablecoins let any holder redeem directly for a dollar, on demand."
+  },
+  {
+   "n": 68,
+   "role": "body",
+   "vo": "Others restrict redemption to specific, whitelisted institutional accounts only, leaving ordinary holders dependent entirely on secondary market liquidity to exit at all."
+  },
+  {
+   "n": 69,
+   "role": "body",
+   "vo": "Here's what's actually at stake in dollar terms, if this specific position turned out to be synthetic, basis-backed yield, and funding genuinely went negative for a stretch."
+  },
+  {
+   "n": 70,
+   "role": "body",
+   "vo": "The four hundred fifty dollars a year doesn't just shrink; in a genuinely negative funding environment, it can disappear entirely, or even flip into a real cost, on the exact same ten thousand dollars, with the underlying dollar peg itself potentially still holding throughout."
+  },
+  {
+   "n": 71,
+   "role": "body",
+   "vo": "Here's the one sentence this entire worked example exists to prove, worth holding onto more than the specific four hundred fifty dollar figure."
+  },
+  {
+   "n": 72,
+   "role": "body",
+   "vo": "That number is only real for as long as the rate itself holds, and whether it holds depends entirely on the answers to those three questions, not on how attractive four and a half percent happens to sound on its own."
+  },
+  {
+   "n": 73,
+   "role": "body",
+   "vo": "Worth separating even those two steadier sources from each other, since grouping them together earlier was only about how much the rate itself tends to move, not about sharing the same risk."
+  },
+  {
+   "n": 74,
+   "role": "body",
+   "vo": "Lending's risk lives entirely on-chain: the protocol's own code, its collateral, and its oracles."
+  },
+  {
+   "n": 75,
+   "role": "body",
+   "vo": "Treasury-backed risk lives largely off-chain instead: the issuer's own solvency, the custodian actually holding those treasuries, and the real-world redemption terms behind them."
+  },
+  {
+   "n": 76,
+   "role": "body",
+   "vo": "Do it before holding any yield-bearing stablecoin."
+  },
+  {
+   "n": 77,
+   "role": "body",
+   "vo": "Identify its actual yield source: lending, a protocol savings rate, treasury backing, or synthetic basis."
+  },
+  {
+   "n": 78,
+   "role": "body",
+   "vo": "Know its redemption path, and specifically who's actually allowed to use it."
+  },
+  {
+   "n": 79,
+   "role": "body",
+   "vo": "And split your own holdings across genuinely different yield sources, not just across different-sounding tickers that all rest on the same underlying source."
+  },
+  {
+   "n": 80,
+   "role": "body",
+   "vo": "Here's exactly why that last point matters so much, using two yield-bearing stablecoins both backed by the same kind of basis trade, as a concrete example."
+  },
+  {
+   "n": 81,
+   "role": "body",
+   "vo": "They might carry different names, different branding, and different tickers entirely."
+  },
+  {
+   "n": 82,
+   "role": "body",
+   "vo": "But underneath, they share the exact same yield source, and the exact same failure mode: negative funding, in the exact same kind of bear market, at the exact same time."
+  },
+  {
+   "n": 83,
+   "role": "body",
+   "vo": "Two yield-bearing stablecoins, both backed by basis trades."
+  },
+  {
+   "n": 84,
+   "role": "body",
+   "vo": "They share the exact same yield source, and the exact same failure mode."
+  },
+  {
+   "n": 85,
+   "role": "body",
+   "vo": "Stablecoin yield comes from one of four places: lending, a protocol savings rate, treasury backing, or a synthetic basis position."
+  },
+  {
+   "n": 86,
+   "role": "body",
+   "vo": "Each source carries its own distinct risk, even at the exact same headline rate."
+  },
+  {
+   "n": 87,
+   "role": "body",
+   "vo": "Ask where the rate comes from, what happens to it in a bear market, and who can actually redeem, before the number means anything."
+  },
+  {
+   "n": 88,
+   "role": "body",
+   "vo": "And real diversification means different sources, never just different tickers."
+  },
+  {
+   "n": 89,
+   "role": "body",
+   "vo": "Identify the actual yield source before buying, know the redemption path, and diversify across sources, not tickers."
+  },
+  {
+   "n": 90,
+   "role": "body",
+   "vo": "Next up, Lesson four point eight: tokenized treasuries and real-world assets."
+  },
+  {
+   "n": 91,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Yield on \"dollars\" on-chain comes from one of four places: 1. It sits in Stablecoin savings rates and yield-bearing stablecoins. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 92,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Lending: you lend stablecoins to borrowers (Module 3). It sits in Stablecoin savings rates and yield-bearing stablecoins. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 93,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Risk: the protocol, collateral and oracles. It sits in Stablecoin savings rates and yield-bearing stablecoins. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 94,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Savings rates: some stablecoin protocols pay a set rate to holders who deposit into a savings contract, funded by their own revenue. It sits in Stablecoin savings rates and yield-bearing stablecoins. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 95,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Risk: the stablecoin's design and governance setting the rate. It sits in Stablecoin savings rates and yield-bearing stablecoins. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 96,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Treasury-backed: the issuer holds short-term government debt and passes on part of the interest (Lesson 4.8). It sits in Stablecoin savings rates and yield-bearing stablecoins. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 97,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Risk: the issuer, custodian and redemption terms. It sits in Stablecoin savings rates and yield-bearing stablecoins. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 98,
+   "role": "recap",
+   "vo": "Three lines to keep. Yield on \"dollars\" on-chain comes from one of four places: 1. Lending: you lend stablecoins to borrowers (Module 3). Next is Lesson 4.8, Tokenized treasuries and real-world assets. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 99,
+   "role": "action",
+   "vo": "Your action for Stablecoin savings rates and yield-bearing stablecoins: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 4.8, Tokenized treasuries and real-world assets."
+  },
+  {
+   "n": 100,
+   "role": "outro",
+   "vo": "Next is Lesson 4.8, Tokenized treasuries and real-world assets. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "id": "module-05-intro",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/module-05-intro.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "You are leaving Lesson 4.8, Tokenized treasuries and real-world assets. Use tokenized real-world assets knowing what you actually own and who you're trusting. Module 5, Infrastructure risk, asks something new. Map every bridge, oracle, L2 and contract a position depends on."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Module 5 \u00b7 Infrastructure risk. Navy and cyan. This is the door, not the whole module. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You can already split base yield from emissions, and you can name an LST. This module asks what that position sits on: a bridge, a sequencer, an oracle, or a key."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "By the end of the module you will be able to do this: map every bridge, oracle, L2 and contract a position depends on. Not before. The lessons earn it one page at a time."
+  },
+  {
+   "n": 6,
+   "role": "map",
+   "vo": "The lessons, in order, are 5.0 Mastery Starter, 5.1 Bridges and trust assumptions, 5.2 Layer 2s, sequencers & withdrawal paths, 5.3 Oracles, TWAPs & manipulation, 5.4 Smart contracts: state, proxies, admin keys, 5.5 Smart-contract risk & what audits don't prove, 5.6 Beyond Ethereum: Solana, Bitcoin and other ecosystems, 5.7 Operating across chains: gas, routes and chain abstraction, 5.8 Reading smart-contract code: enough to verify claims. You do not skip ahead. Each page is the input to the next."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Lesson 5.0, Mastery Starter. Mastery Starter. You will write that down when you get there."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Lesson 5.1, Bridges and trust assumptions. Choose bridge routes by their trust model, and size bridge exposure accordingly. You will write that down when you get there."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Lesson 5.2, Layer 2s, sequencers & withdrawal paths. Understand how your L2 settles, who orders your transactions, and how you'd exit. You will write that down when you get there."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Lesson 5.3, Oracles, TWAPs & manipulation. Know which price feed secures each position, and how it can fail. You will write that down when you get there."
+  },
+  {
+   "n": 11,
+   "role": "body",
+   "vo": "Lesson 5.4, Smart contracts: state, proxies, admin keys. Read who controls a contract and whether its code can change after you deposit. You will write that down when you get there."
+  },
+  {
+   "n": 12,
+   "role": "body",
+   "vo": "Lesson 5.5, Smart-contract risk & what audits don't prove. Weigh contract risk honestly, and read an audit for what it actually covers. You will write that down when you get there."
+  },
+  {
+   "n": 13,
+   "role": "body",
+   "vo": "Lesson 5.6, Beyond Ethereum: Solana, Bitcoin and other ecosystems. Operate safely on non-EVM chains and understand how Bitcoin is used in DeFi. You will write that down when you get there."
+  },
+  {
+   "n": 14,
+   "role": "body",
+   "vo": "Lesson 5.7, Operating across chains: gas, routes and chain abstraction. Move value between chains cheaply and safely, without getting stranded without gas. You will write that down when you get there."
+  },
+  {
+   "n": 15,
+   "role": "body",
+   "vo": "Lesson 5.8, Reading smart-contract code: enough to verify claims. Read verified contract code well enough to check the claims a protocol makes about itself. You will write that down when you get there."
+  },
+  {
+   "n": 16,
+   "role": "outro",
+   "vo": "Next is Lesson 5.0, Mastery Starter. Bring nothing but the habit: one idea, one drawing, the word Example on any number. Education only, not financial advice."
+  }
+ ]
+}

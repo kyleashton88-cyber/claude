@@ -1,0 +1,485 @@
+{
+ "id": "lesson-05-1",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-05-1.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 5.0, Mastery Starter. Mastery Starter. Keep that page on the desk. This lesson adds one picture: Choose bridge routes by their trust model, and size bridge exposure accordingly."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 5.1, Bridges and trust assumptions. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You can already split base yield from emissions, and you can name an LST. This module asks what that position sits on: a bridge, a sequencer, an oracle, or a key."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Bridges move value between chains: Canonical bridges: the chain's official route (e.g."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Lock-and-mint: assets locked on chain A, a wrapped copy minted on chain B."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "The wrapped copy is only as good as the lock."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Liquidity networks: market makers pay you out on the other side."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Fast; you rely on their contracts and liquidity."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Trust model: who can approve a transfer: a multisig of a few keys, a validator set, a light client, or fraud/validity proofs?"
+  },
+  {
+   "n": 11,
+   "role": "body",
+   "vo": "Bridges hold large pools of value, which makes them prime targets."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "Work the example on paper. Moving $50,000 to a Layer 2: use the canonical route for the bulk (even if slower), a reputable fast bridge for a small, time-sensitive amount, and send a test first. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "Work the example on paper. Never leave large balances as a wrapped asset from a weak bridge. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Trust model of every bridge I use written down. If you cannot write it, the line is open."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Canonical route preferred for size. If you cannot write it, the line is open."
+  },
+  {
+   "n": 16,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Wrapped-asset exposure capped. If you cannot write it, the line is open."
+  },
+  {
+   "n": 17,
+   "role": "quiz",
+   "vo": "Check yourself. 1. What backs a lock-and-mint wrapped token? The answer: The locked assets on the source chain, and the bridge's security."
+  },
+  {
+   "n": 18,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Why are bridges frequent hack targets? The answer: They concentrate large amounts of value behind complex, cross-chain logic."
+  },
+  {
+   "n": 19,
+   "role": "quiz",
+   "vo": "Check yourself. 3. Fast bridge or canonical for $50k? The answer: Canonical for the bulk; fast only for small, urgent amounts."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "By the end, you'll be able to choose a bridge route by its actual trust model, and size your own exposure to it accordingly."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "The three genuinely different ways a bridge can actually move value between chains."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "What a trust model actually is, and exactly who gets to approve a transfer."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Why bridges specifically end up as such frequent hack targets."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "And a full worked example, routing a real amount of money across a real bridge decision."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Here are all three ways value actually moves between chains."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "A canonical bridge is a chain's own official route, like a rollup's native bridge, usually carrying the strongest security available, sometimes at the cost of being slower."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Lock-and-mint locks your asset on the source chain, and mints a wrapped copy on the destination chain, a copy that's only ever as good as whatever's actually backing that lock."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "And a liquidity network simply pays you out directly on the other side, fast, but specifically dependent on that network's own contracts and its own available liquidity."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "Here's the actual trade-off each of these three makes, side by side, since none of them is simply better than the others in every situation."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "Lock-and-mint: fast, but the wrapped copy's real value depends entirely on the lock behind it holding."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "Liquidity network: fastest of all three, but you're now trusting that network's own contracts and its own liquidity being genuinely available when you need it."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "Here's a practical way to match these three types to what you're actually trying to do, rather than defaulting to whichever one loads first."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "Moving a genuinely large amount, with no particular urgency, is exactly the canonical route's own strength."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "Moving a small amount, where speed actually matters more than squeezing out the very last bit of security, is exactly where a fast liquidity network earns its keep instead."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "What actually backs a lock-and-mint wrapped token?"
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "The answer: the assets locked on the source chain, and the bridge's own security actually holding that lock."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "Here's exactly what decides a bridge's real trust model, the single most important question to ask about any bridge before using it."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "Who's actually allowed to approve a transfer moving through it: a multisig held by just a handful of keys, a broader validator set, a light client verifying the source chain directly, or genuine fraud or validity proofs."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "Fewer, weaker signers means more risk, in a direct, almost mechanical relationship."
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "Worth being precise about why this specific question matters more than almost anything else about a bridge, including its own brand name or how long it's been operating."
+  },
+  {
+   "n": 41,
+   "role": "body",
+   "vo": "A bridge secured by a small multisig can be drained the moment enough of those keys are compromised, regardless of how much total value it's ever safely processed before that exact moment."
+  },
+  {
+   "n": 42,
+   "role": "body",
+   "vo": "Here's how to actually check a bridge's real trust model yourself, before ever routing meaningful value through it."
+  },
+  {
+   "n": 43,
+   "role": "body",
+   "vo": "Find its own documentation, specifically for how transfers actually get approved, not just its marketing description."
+  },
+  {
+   "n": 44,
+   "role": "body",
+   "vo": "Count how many signers, or validators, are genuinely required, and how independent they actually are from each other."
+  },
+  {
+   "n": 45,
+   "role": "body",
+   "vo": "And check whether it's ever published a real security audit covering that exact approval mechanism specifically."
+  },
+  {
+   "n": 46,
+   "role": "body",
+   "vo": "Worth making the multisig risk concrete, rather than leaving it abstract."
+  },
+  {
+   "n": 47,
+   "role": "body",
+   "vo": "If a bridge relies on a five-of-eight multisig, an attacker only needs to compromise five specific keys, out of eight, to move everything that bridge holds."
+  },
+  {
+   "n": 48,
+   "role": "body",
+   "vo": "That's a genuinely finite, achievable target, especially against keys held by individuals or small teams, not some enormous, near-impossible barrier."
+  },
+  {
+   "n": 49,
+   "role": "body",
+   "vo": "What's the actual relationship between the number of signers a bridge relies on, and its risk?"
+  },
+  {
+   "n": 50,
+   "role": "body",
+   "vo": "The answer: fewer, weaker signers means more risk, directly, since compromising a smaller group is genuinely easier."
+  },
+  {
+   "n": 51,
+   "role": "body",
+   "vo": "Worth being precise about the actual mechanism that makes bridges such attractive targets, since it isn't random or purely about weak code."
+  },
+  {
+   "n": 52,
+   "role": "body",
+   "vo": "Bridges hold large, concentrated pools of value, specifically because every single user crossing that bridge needs their assets to sit somewhere while the transfer completes."
+  },
+  {
+   "n": 53,
+   "role": "body",
+   "vo": "That concentration, combined with genuinely complex cross-chain logic, is exactly the combination an attacker is looking for: a lot to gain, in one place, through one mechanism."
+  },
+  {
+   "n": 54,
+   "role": "body",
+   "vo": "Worth also naming why this pattern has repeated itself so often across DeFi's own history, rather than being an occasional accident."
+  },
+  {
+   "n": 55,
+   "role": "body",
+   "vo": "Complex cross-chain logic is genuinely hard to get perfectly right, and a single flaw anywhere in that logic can expose the entire pool at once, not just one user's individual funds."
+  },
+  {
+   "n": 56,
+   "role": "body",
+   "vo": "That's structurally different from a bug in an ordinary single-chain contract, which usually only exposes its own smaller pool."
+  },
+  {
+   "n": 57,
+   "role": "body",
+   "vo": "Why are bridges such frequent hack targets, specifically?"
+  },
+  {
+   "n": 58,
+   "role": "body",
+   "vo": "The answer: they concentrate large amounts of value behind genuinely complex, cross-chain logic, all in one place."
+  },
+  {
+   "n": 59,
+   "role": "body",
+   "vo": "Here's exactly how to actually route this, step by step, applying everything from earlier in this lesson to a real amount."
+  },
+  {
+   "n": 60,
+   "role": "body",
+   "vo": "Use the canonical route for the bulk of the fifty thousand dollars, even if it's genuinely slower than the alternatives."
+  },
+  {
+   "n": 61,
+   "role": "body",
+   "vo": "Use a reputable, well-established fast bridge only for a small, specifically time-sensitive portion, if you actually need speed."
+  },
+  {
+   "n": 62,
+   "role": "body",
+   "vo": "And send a small test transaction first, on any route, before committing the full amount to it."
+  },
+  {
+   "n": 63,
+   "role": "body",
+   "vo": "Here's the actual reasoning behind splitting it this way, rather than simply picking whichever single route seems most convenient."
+  },
+  {
+   "n": 64,
+   "role": "body",
+   "vo": "The bulk of the value genuinely benefits from the canonical route's stronger security, since size is exactly what makes a position worth protecting most carefully."
+  },
+  {
+   "n": 65,
+   "role": "body",
+   "vo": "A small, urgent portion can reasonably accept a faster bridge's slightly different risk, specifically because the amount at stake, if something did go wrong, is deliberately kept small."
+  },
+  {
+   "n": 66,
+   "role": "body",
+   "vo": "Here's the one sentence this entire worked example exists to prove, worth holding onto more than the specific dollar figure involved."
+  },
+  {
+   "n": 67,
+   "role": "body",
+   "vo": "Never leave a large balance sitting as a wrapped asset from a weak bridge, for any longer than it genuinely has to, since that wrapped token's real value is only ever as good as the lock, or the trust model, actually standing behind it."
+  },
+  {
+   "n": 68,
+   "role": "body",
+   "vo": "For fifty thousand dollars, fast bridge, or canonical?"
+  },
+  {
+   "n": 69,
+   "role": "body",
+   "vo": "The answer: canonical for the bulk of it; a fast bridge only for a small, genuinely urgent amount."
+  },
+  {
+   "n": 70,
+   "role": "body",
+   "vo": "Here's why sending a small test transaction first is worth the extra few minutes it costs, on any bridge, even one you've used before."
+  },
+  {
+   "n": 71,
+   "role": "body",
+   "vo": "It catches a wrong destination address, an unexpected fee, or a genuinely broken route, all for the cost of a small amount, instead of discovering the exact same problem with your full balance already committed and in flight."
+  },
+  {
+   "n": 72,
+   "role": "body",
+   "vo": "Do it before bridging anything of real size."
+  },
+  {
+   "n": 73,
+   "role": "body",
+   "vo": "Write down the actual trust model of every bridge you use, explicitly, not just its name."
+  },
+  {
+   "n": 74,
+   "role": "body",
+   "vo": "Prefer the canonical route specifically for size, even when it's slower."
+  },
+  {
+   "n": 75,
+   "role": "body",
+   "vo": "And cap your own wrapped-asset exposure, deliberately, the same way you'd cap any other single point of failure."
+  },
+  {
+   "n": 76,
+   "role": "body",
+   "vo": "Three bridge types: canonical, lock-and-mint, and liquidity network, each making a genuinely different trade-off."
+  },
+  {
+   "n": 77,
+   "role": "body",
+   "vo": "A bridge's trust model, who can actually approve a transfer, is the single most important question, and fewer, weaker signers always means more risk."
+  },
+  {
+   "n": 78,
+   "role": "body",
+   "vo": "Bridges are frequent targets specifically because they concentrate large value behind complex logic."
+  },
+  {
+   "n": 79,
+   "role": "body",
+   "vo": "And for real size, use the canonical route, keep fast bridges for small, urgent amounts, and never leave a large balance wrapped from a weak bridge."
+  },
+  {
+   "n": 80,
+   "role": "body",
+   "vo": "Worth connecting this directly back to the dependency map from this module's own Mastery Starter."
+  },
+  {
+   "n": 81,
+   "role": "body",
+   "vo": "A bridge is exactly one specific link in that chain, and now you know exactly what to actually check on it: which of the three types it is, who's allowed to approve a transfer through it, and how much of your own balance you're willing to leave sitting on the wrapped side of it at any given moment."
+  },
+  {
+   "n": 82,
+   "role": "body",
+   "vo": "Write down every bridge's trust model, prefer canonical for size, and cap your wrapped-asset exposure."
+  },
+  {
+   "n": 83,
+   "role": "body",
+   "vo": "Next up, Lesson five point two: layer twos, sequencers, and withdrawal paths."
+  },
+  {
+   "n": 84,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Bridges move value between chains: Canonical bridges: the chain's official route (e.g. It sits in Bridges and trust assumptions. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 85,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Usually the strongest security, sometimes slower. It sits in Bridges and trust assumptions. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 86,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Lock-and-mint: assets locked on chain A, a wrapped copy minted on chain B. It sits in Bridges and trust assumptions. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 87,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The wrapped copy is only as good as the lock. It sits in Bridges and trust assumptions. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 88,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Liquidity networks: market makers pay you out on the other side. It sits in Bridges and trust assumptions. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 89,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Fast; you rely on their contracts and liquidity. It sits in Bridges and trust assumptions. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 90,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Trust model: who can approve a transfer: a multisig of a few keys, a validator set, a light client, or fraud/validity proofs? It sits in Bridges and trust assumptions. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 91,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Bridges hold large pools of value, which makes them prime targets. It sits in Bridges and trust assumptions. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 92,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Moving $50,000 to a Layer 2: use the canonical route for the bulk (even if slower), a reputable fast bridge for a small, time-sensitive amount, and send a test first. It sits in Bridges and trust assumptions. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 93,
+   "role": "recap",
+   "vo": "Three lines to keep. Bridges move value between chains: Canonical bridges: the chain's official route (e.g. Usually the strongest security, sometimes slower. Next is Lesson 5.2, Layer 2s, sequencers & withdrawal paths. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 94,
+   "role": "action",
+   "vo": "Your action for Bridges and trust assumptions: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 5.2, Layer 2s, sequencers & withdrawal paths."
+  },
+  {
+   "n": 95,
+   "role": "outro",
+   "vo": "Next is Lesson 5.2, Layer 2s, sequencers & withdrawal paths. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

@@ -1,0 +1,279 @@
+{
+ "id": "el-09-multi-venue",
+ "title": "Multi-venue counterparty risk",
+ "course": "Grid Bot Elite",
+ "palette": "teal",
+ "music": "course/music/komiku-ambiant-truth.ogg",
+ "next": "How to ask a general question",
+ "wpm_assumption": 143,
+ "word_count": 2488,
+ "estimated_minutes": 17.4,
+ "code_draws_visuals": false,
+ "overlays_only": [
+  "captions",
+  "lower thirds",
+  "intro title text",
+  "disclaimer line",
+  "Ken Burns"
+ ],
+ "beats": [
+  {
+   "n": 1,
+   "chapter": "Hook",
+   "role": "hook",
+   "vo": "A second venue is a second bridge, and a second bridge is a second way to be stuck, not a discount. Last page the calendar reread did not assume a gain. This lesson adds a second name only as a second way the plan can fail. On the diagram for this beat, look for two bridges, the second one crossed, stamped Example. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Draw two boxes and write failure on the second, not savings. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A second logo is not a hedge. Say the opening line once more, and point at the part that belongs to Hook. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "A second venue is a second bridge, and a second bridge is a second way to be stuck, not a discount. Last page the",
+   "concept": "A second venue is a second bridge, and a second bridge is a second way to be stuck, not a discount.",
+   "image": "course/images/el-09-multi-venue/001.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are HALT and EXAMPLE. Two boxes, the second crossed. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "analogy-bridges",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 2,
+   "chapter": "Disclaimer",
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot.",
+   "cap": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of.",
+   "concept": "Education only, not financial advice.",
+   "image": "course/images/el-09-multi-venue/002.png",
+   "image_status": "pass",
+   "prompt": "The only readable word is EXAMPLE. One card crossed out. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 3,
+   "chapter": "Title card",
+   "role": "intro",
+   "vo": "This is Grid Bot Elite. The lesson is Multi-venue counterparty risk. Teal on the frame. Not the Blueprint plate. Education only. You will write on paper before any screen.",
+   "cap": "This is Grid Bot Elite. The lesson is Multi-venue counterparty risk. Teal on the frame. Not the Blueprint.",
+   "concept": "Multi-venue counterparty risk",
+   "image": "course/images/el-09-multi-venue/003.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are VENUE and EXAMPLE. Two generic venue chips. No exchange names. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 4,
+   "chapter": "Name the risks",
+   "role": "body",
+   "vo": "By the end you can name counterparty risk: the venue can halt, the network can be wrong, and the account can be locked. Three failures, one breath. None of them is a discount for using more than one venue. On the diagram for this beat, look for three marks: Halt, Wrong network, Locked. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write the three marks under the venue box. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. If you can only name the fee, you skipped the risk. Say the opening line once more, and point at the part that belongs to Name the risks. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "By the end you can name counterparty risk: the venue can halt, the network can be wrong, and the account can be",
+   "concept": "By the end you can name counterparty risk: the venue can halt, the network can be wrong, and the account can be locked.",
+   "image": "course/images/el-09-multi-venue/004.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are HALT, NETWORK, LOCKED, and EXAMPLE. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "analogy-bridges",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 5,
+   "chapter": "One venue on the paper grid",
+   "role": "diagram",
+   "vo": "In this example one venue holds the paper grid. The grid's band, step, inventory, and stop live under that one name. A second name does not split the same inventory. On the diagram for this beat, look for one venue name above the band, stamped Example. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write one venue name, or write Venue A if you do not want a real name on the page. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. The example name is not a recommendation. Say the opening line once more, and point at the part that belongs to One venue on the paper grid. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "In this example one venue holds the paper grid. The grid's band, step, inventory, and stop live under that.",
+   "concept": "In this example one venue holds the paper grid.",
+   "image": "course/images/el-09-multi-venue/005.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are VENUE and EXAMPLE. One generic venue chip above a level band. No exchange names. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 6,
+   "chapter": "Not a split ratio",
+   "role": "body",
+   "vo": "A second venue is a separate inventory note, not a split ratio. You do not write half and half. You write a second note with its own band and its own stop, or you do not write it. On the diagram for this beat, look for two notes, separate, with no fraction between them. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. If you wrote 50/50, cross it out and start a second note or leave it blank. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A ratio pretends the inventory is one pile cut in two. Say the opening line once more, and point at the part that belongs to Not a split ratio. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "A second venue is a separate inventory note, not a split ratio. You do not write half and half. You write a.",
+   "concept": "A second venue is a separate inventory note, not a split ratio.",
+   "image": "course/images/el-09-multi-venue/006.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are NOTE and EXAMPLE. Two separate notes and no fraction. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 7,
+   "chapter": "The same boundary",
+   "role": "body",
+   "vo": "United States: some venues' futures products are not available to US persons. Say it again because a second venue is where that boundary gets forgotten. This video has no affiliate link. On the diagram for this beat, look for the boundary sentence, and a link line crossed out. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write: this video has no affiliate link. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. If a later page has an affiliate link, the page must say so beside the link. This lesson does not add one. Say the opening line once more, and point at the part that belongs to The same boundary. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "United States: some venues' futures products are not available to US persons. Say it again because a second venue is",
+   "concept": "United States: some venues' futures products are not available to US persons.",
+   "image": "course/images/el-09-multi-venue/007.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are VENUE and EXAMPLE. Two generic venue chips crossed, and a crossed link. No exchange names. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "analogy-bridges",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 8,
+   "chapter": "Where you are",
+   "role": "map",
+   "vo": "You are here: lesson 9 of 11. The calendar is behind you. Next you learn how to ask a process question. On the diagram for this beat, look for an eleven-step path with the ninth step lit. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write the next title: How to ask a general question. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. The venue lesson does not open an account. Say the opening line once more, and point at the part that belongs to Where you are. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "You are here: lesson 9 of 11. The calendar is behind you. Next you learn how to ask a process question. On.",
+   "concept": "You are here: lesson 9 of 11.",
+   "image": "course/images/el-09-multi-venue/008.png",
+   "image_status": "pass",
+   "prompt": "The only readable word is EXAMPLE and the only digit is 9. Eleven chips, the ninth filled. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 9,
+   "chapter": "Quiz",
+   "role": "quiz",
+   "vo": "Quick check. What is a second venue, in this lesson? The answer: a second failure point and a separate inventory note, not a discount and not a split ratio. On the diagram for this beat, look for the second box marked Halt, separate from the first note. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Say the answer, then point at the Halt mark. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Saying it is a discount is the miss. Say the opening line once more, and point at the part that belongs to Quiz. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Quick check. What is a second venue, in this lesson? The answer: a second failure point and a separate.",
+   "concept": "Quick check. What is a second venue, in this lesson?",
+   "image": "course/images/el-09-multi-venue/009.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are HALT and EXAMPLE. An empty box beside a HALT box with an X. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 10,
+   "chapter": "Recap",
+   "role": "recap",
+   "vo": "Recap: halt, wrong network, locked account, one venue on the paper grid, and no split ratio. Say them without looking. On the diagram for this beat, look for three recap rows. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Stamp Example. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Do not recap an affiliate link. Say the opening line once more, and point at the part that belongs to Recap. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Recap: halt, wrong network, locked account, one venue on the paper grid, and no split ratio. Say them without",
+   "concept": "Recap: halt, wrong network, locked account, one venue on the paper grid, and no split ratio.",
+   "image": "course/images/el-09-multi-venue/010.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are HALT, NETWORK, LOCKED, VENUE, NOTE, and EXAMPLE. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "analogy-bridges",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 11,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Name the risks. Cover the notes and say this from memory: By the end you can name counterparty risk: the venue can halt, the network can be wrong, and the account can be locked. Then uncover the diagram and check that you can still see three marks: Halt, Wrong network, Locked. Write the three marks under the venue box. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Name the risks. Cover the notes and say this from memory: By the end you can name.",
+   "concept": "Practice: By the end you can name counterparty risk: the venue can halt, the network can be wrong, and the account can be locked.",
+   "image": "course/images/el-09-multi-venue/011.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are HALT, NETWORK, LOCKED, and EXAMPLE. A blank line under the three words. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 12,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside One venue on the paper grid. Cover the notes and say this from memory: In this example one venue holds the paper grid. Then uncover the diagram and check that you can still see one venue name above the band, stamped Example. Write one venue name, or write Venue A if you do not want a real name on the page. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside One venue on the paper grid. Cover the notes and say this from memory: In this.",
+   "concept": "Practice: In this example one venue holds the paper grid.",
+   "image": "course/images/el-09-multi-venue/012.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are VENUE and EXAMPLE. One generic venue chip and a blank line. No exchange names. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 13,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Not a split ratio. Cover the notes and say this from memory: A second venue is a separate inventory note, not a split ratio. Then uncover the diagram and check that you can still see two notes, separate, with no fraction between them. If you wrote 50/50, cross it out and start a second note or leave it blank. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Not a split ratio. Cover the notes and say this from memory: A second venue is a.",
+   "concept": "Practice: A second venue is a separate inventory note, not a split ratio.",
+   "image": "course/images/el-09-multi-venue/013.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are NOTE and EXAMPLE. Two notes with a crossed gap and no digits. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 14,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside The same boundary. Cover the notes and say this from memory: United States: some venues' futures products are not available to US persons. Then uncover the diagram and check that you can still see the boundary sentence, and a link line crossed out. Write: this video has no affiliate link. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside The same boundary. Cover the notes and say this from memory: United States: some venues'",
+   "concept": "Practice: United States: some venues' futures products are not available to US persons.",
+   "image": "course/images/el-09-multi-venue/014.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are VENUE and EXAMPLE. A map pin and two generic venue chips, each crossed. No exchange names. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 15,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Name the risks. Cover the notes and say this from memory: By the end you can name counterparty risk: the venue can halt, the network can be wrong, and the account can be locked. Then uncover the diagram and check that you can still see three marks: Halt, Wrong network, Locked. Write the three marks under the venue box. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Name the risks. Cover the notes and say this from memory: By the end you can name.",
+   "concept": "Practice: By the end you can name counterparty risk: the venue can halt, the network can be wrong, and the account can be locked.",
+   "image": "course/images/el-09-multi-venue/015.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are HALT, NETWORK, LOCKED, and EXAMPLE. A cover bar across the middle word. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 16,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside One venue on the paper grid. Cover the notes and say this from memory: In this example one venue holds the paper grid. Then uncover the diagram and check that you can still see one venue name above the band, stamped Example. Write one venue name, or write Venue A if you do not want a real name on the page. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside One venue on the paper grid. Cover the notes and say this from memory: In this.",
+   "concept": "Practice: In this example one venue holds the paper grid.",
+   "image": "course/images/el-09-multi-venue/016.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are VENUE and EXAMPLE. One generic venue chip with a cover bar. No exchange names. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 17,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Not a split ratio. Cover the notes and say this from memory: A second venue is a separate inventory note, not a split ratio. Then uncover the diagram and check that you can still see two notes, separate, with no fraction between them. If you wrote 50/50, cross it out and start a second note or leave it blank. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Not a split ratio. Cover the notes and say this from memory: A second venue is a.",
+   "concept": "Practice: A second venue is a separate inventory note, not a split ratio.",
+   "image": "course/images/el-09-multi-venue/017.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are NOTE and EXAMPLE. Two notes and one blank underline. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 18,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside The same boundary. Cover the notes and say this from memory: United States: some venues' futures products are not available to US persons. Then uncover the diagram and check that you can still see the boundary sentence, and a link line crossed out. Write: this video has no affiliate link. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside The same boundary. Cover the notes and say this from memory: United States: some venues'",
+   "concept": "Practice: United States: some venues' futures products are not available to US persons.",
+   "image": "course/images/el-09-multi-venue/018.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are VENUE and EXAMPLE. A map pin and one crossed generic venue chip. No exchange names. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 19,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Name the risks. Cover the notes and say this from memory: By the end you can name counterparty risk: the venue can halt, the network can be wrong, and the account can be locked. Then uncover the diagram and check that you can still see three marks: Halt, Wrong network, Locked. Write the three marks under the venue box. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Name the risks. Cover the notes and say this from memory: By the end you can name.",
+   "concept": "Practice: By the end you can name counterparty risk: the venue can halt, the network can be wrong, and the account can be locked.",
+   "image": "course/images/el-09-multi-venue/019.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are HALT, NETWORK, LOCKED, and EXAMPLE. Three rows and a blank underline. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 20,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside One venue on the paper grid. Cover the notes and say this from memory: In this example one venue holds the paper grid. Then uncover the diagram and check that you can still see one venue name above the band, stamped Example. Write one venue name, or write Venue A if you do not want a real name on the page. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside One venue on the paper grid. Cover the notes and say this from memory: In this.",
+   "concept": "Practice: In this example one venue holds the paper grid.",
+   "image": "course/images/el-09-multi-venue/020.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are VENUE and EXAMPLE. One generic venue chip inside a page outline. No exchange names. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 21,
+   "chapter": "Action",
+   "role": "action",
+   "vo": "Your action: write one venue name for the paper plan, or write Venue A. No order is sent. No account is opened. On the diagram for this beat, look for the single name above the band. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Bring the name to the question lesson. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Do not add a second live venue from this page. Say the opening line once more, and point at the part that belongs to Action. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Your action: write one venue name for the paper plan, or write Venue A. No order is sent. No account is.",
+   "concept": "Your action: write one venue name for the paper plan, or write Venue A.",
+   "image": "course/images/el-09-multi-venue/021.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are VENUE and EXAMPLE. One generic venue chip and a blank underline. No exchange names. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 22,
+   "chapter": "Outro",
+   "role": "outro",
+   "vo": "Next lesson: How to ask a general question. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
+   "cap": "Next lesson: How to ask a general question. Bring the page you just wrote. Leave every example marked.",
+   "concept": "Next lesson: How to ask a general question. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
+   "image": "course/images/el-09-multi-venue/022.png",
+   "image_status": "pass",
+   "prompt": "The only readable word is EXAMPLE. An arrow pointing at an empty card. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  }
+ ]
+}

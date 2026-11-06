@@ -1,0 +1,65 @@
+{
+ "id": "module-09-intro",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/module-09-intro.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "You are leaving Lesson 8.7, Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Put numbers on portfolio risk and size positions from them. Module 9, DeFi and grid bots, asks something new. Choose the right tool for the market, and run both as one system."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Module 9 \u00b7 DeFi and grid bots. Navy and cyan. This is the door, not the whole module. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already know a grid waits on rungs, and a pool prices a trade with a curve. This module keeps those as two machines."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "By the end of the module you will be able to do this: choose the right tool for the market, and run both as one system. Not before. The lessons earn it one page at a time."
+  },
+  {
+   "n": 6,
+   "role": "map",
+   "vo": "The lessons, in order, are 9.0 Mastery Starter, 9.1 Same idea, different machine, 9.2 When each one wins, 9.3 Building a combined system. You do not skip ahead. Each page is the input to the next."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Lesson 9.0, Mastery Starter. Mastery Starter. You will write that down when you get there."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Lesson 9.1, Same idea, different machine. Explain why a concentrated liquidity position and a grid bot are economically close cousins, and where they differ. You will write that down when you get there."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Lesson 9.2, When each one wins. Pick grid bot, LP, both, or neither, for a given market and account. You will write that down when you get there."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Lesson 9.3, Building a combined system. Design a portfolio that uses exchange grid bots and DeFi together without doubling up on the same risk. You will write that down when you get there."
+  },
+  {
+   "n": 11,
+   "role": "outro",
+   "vo": "Next is Lesson 9.0, Mastery Starter. Bring nothing but the habit: one idea, one drawing, the word Example on any number. Education only, not financial advice."
+  }
+ ]
+}

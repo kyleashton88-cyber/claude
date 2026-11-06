@@ -1,0 +1,310 @@
+{
+ "id": "lesson-10-9",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-10-9.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 10.8, DeFi rates: term structure, fixed vs floating. Read DeFi's interest-rate curve and position for fixed or floating rates deliberately. Keep that page on the desk. This lesson adds one picture: Understand the arbitrages that keep stablecoins and LSTs near their value, and when a retail operator can take part."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 10.9, Peg and redemption arbitrage. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already split base yield from emissions. Advanced yield still starts with that split, then names a more particular engine."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Stablecoin peg arbitrage: if a stablecoin trades at 0.995 on a DEX and a PSM or issuer redeems it at 1.00 (minus a fee), buy-and-redeem closes the gap."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "It's competitive, needs fast execution, and is often limited to whoever can redeem."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "LST discount arbitrage: if an LST trades below its redemption value, buy it and queue a redemption."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Your return is the discount over the waiting time, with the risk that the discount reflects a real problem (slashing, a bug) or that the queue lengthens."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Who wins: professional searchers take most instant arbitrage (14.6)."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "What's left to patient operators is the slow kind: buying discounts and waiting, sized small."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "Work the example on paper. An LST trades at a 2% discount; the redemption queue is about 20 days. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "Work the example on paper. Return \u2248 2% over 20 days \u2248 36.5% annualised (simple), but only this once, only if redemption works as expected, and only if the discount wasn't pricing a real problem. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "Work the example on paper. Research why the discount exists first (Module 6); cap it in the speculative bucket. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Redemption path and eligibility confirmed. If you cannot write it, the line is open."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Reason for the discount researched. If you cannot write it, the line is open."
+  },
+  {
+   "n": 16,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Queue length and worst case written. If you cannot write it, the line is open."
+  },
+  {
+   "n": 17,
+   "role": "quiz",
+   "vo": "Check yourself. 1. What closes a stablecoin's discount? The answer: Arbitrageurs buying below peg and redeeming at 1.00 (e.g. via a PSM or issuer)."
+  },
+  {
+   "n": 18,
+   "role": "quiz",
+   "vo": "Check yourself. 2. 1% discount, 10-day redemption. Simple annualised return? The answer: About 36.5%."
+  },
+  {
+   "n": 19,
+   "role": "quiz",
+   "vo": "Check yourself. 3. Why might a discount be a warning, not an opportunity? The answer: It may reflect a real problem (slashing, exploit, insolvency)."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to understand the arbitrages that keep stablecoins and liquid staking token near their value, and when a retail operator can take part."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "First, Stablecoin peg arbitrage: if a stablecoin trades at 0.995 on a decks and a P.S.M."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "or issuer redeems it at 1.00 (minus a fee), buy-and-redeem closes the gap."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Next, liquid staking token discount arbitrage: if an liquid staking token trades below its redemption value, buy it and queue a redemption."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "And finally, who wins: professional searchers take most instant arbitrage (14.6)."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "An liquid staking token trades at a 2% discount; the redemption queue is about 20 days."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "Return about 2% over 20 days about 36.5% annualised (simple), but only this once, only if redemption works as expected, and only if the discount wasn't pricing a real problem."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Research why the discount exists first (Module 6); cap it in the speculative bucket."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "The reason the discount exists: an actual problem with the asset, or redemption delays."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "And finally, Queue length and worst case written."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "The answer: Arbitrageurs buying below peg and redeeming at 1.00 (for example via a P.S.M."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "Question two. 1% discount, 10-day redemption. Simple annualised return? The answer: About 36.5%."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "Why might a discount be a warning, not an opportunity?"
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "The answer: It may reflect a real problem (slashing, exploit, insolvency)."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "Stablecoin peg arbitrage: if a stablecoin trades at 0.995 on a decks and a P.S.M."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "liquid staking token discount arbitrage: if an liquid staking token trades below its redemption value, buy it and queue a redemption."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "Next up, lesson eleven point zero: Mastery Starter."
+  },
+  {
+   "n": 38,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Stablecoin peg arbitrage: if a stablecoin trades at 0.995 on a DEX and a PSM or issuer redeems it at 1.00 (minus a fee), buy-and-redeem closes the gap. It sits in Peg and redemption arbitrage. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 39,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. It's competitive, needs fast execution, and is often limited to whoever can redeem. It sits in Peg and redemption arbitrage. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. LST discount arbitrage: if an LST trades below its redemption value, buy it and queue a redemption. It sits in Peg and redemption arbitrage. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Your return is the discount over the waiting time, with the risk that the discount reflects a real problem (slashing, a bug) or that the queue lengthens. It sits in Peg and redemption arbitrage. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Who wins: professional searchers take most instant arbitrage (14.6). It sits in Peg and redemption arbitrage. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. What's left to patient operators is the slow kind: buying discounts and waiting, sized small. It sits in Peg and redemption arbitrage. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. An LST trades at a 2% discount; the redemption queue is about 20 days. It sits in Peg and redemption arbitrage. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Return \u2248 2% over 20 days \u2248 36.5% annualised (simple), but only this once, only if redemption works as expected, and only if the discount wasn't pricing a real problem. It sits in Peg and redemption arbitrage. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Research why the discount exists first (Module 6); cap it in the speculative bucket. It sits in Peg and redemption arbitrage. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Understand the arbitrages that keep stablecoins and LSTs near their value, and when a retail operator can take part. It sits in Peg and redemption arbitrage. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Redemption path and eligibility confirmed. It sits in Peg and redemption arbitrage. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Reason for the discount researched. It sits in Peg and redemption arbitrage. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Queue length and worst case written. It sits in Peg and redemption arbitrage. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Stablecoin peg arbitrage: if a stablecoin trades at 0.995 on a DEX and a PSM or issuer redeems it at 1.00 (minus a fee), buy-and-redeem closes the gap. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. It's competitive, needs fast execution, and is often limited to whoever can redeem. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. LST discount arbitrage: if an LST trades below its redemption value, buy it and queue a redemption. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 54,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Your return is the discount over the waiting time, with the risk that the discount reflects a real problem (slashing, a bug) or that the queue lengthens. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 55,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Who wins: professional searchers take most instant arbitrage (14.6). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 56,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. What's left to patient operators is the slow kind: buying discounts and waiting, sized small. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 57,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. An LST trades at a 2% discount; the redemption queue is about 20 days. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 58,
+   "role": "recap",
+   "vo": "Three lines to keep. Stablecoin peg arbitrage: if a stablecoin trades at 0.995 on a DEX and a PSM or issuer redeems it at 1.00 (minus a fee), buy-and-redeem closes the gap. It's competitive, needs fast execution, and is often limited to whoever can redeem. This is the last lesson of the program. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 59,
+   "role": "action",
+   "vo": "Your action for Peg and redemption arbitrage: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Close the notebook. The program's lessons end here."
+  },
+  {
+   "n": 60,
+   "role": "outro",
+   "vo": "This is the last On-Chain Operator lesson. Say today's recap once, then close the notebook. Education only, not financial advice."
+  }
+ ]
+}

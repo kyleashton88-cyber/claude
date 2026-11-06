@@ -1,0 +1,465 @@
+{
+ "id": "lesson-05-7",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-05-7.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 5.6, Beyond Ethereum: Solana, Bitcoin and other ecosystems. Operate safely on non-EVM chains and understand how Bitcoin is used in DeFi. Keep that page on the desk. This lesson adds one picture: Move value between chains cheaply and safely, without getting stranded without gas."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 5.7, Operating across chains: gas, routes and chain abstraction. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You can already split base yield from emissions, and you can name an LST. This module asks what that position sits on: a bridge, a sequencer, an oracle, or a key."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Gas stranding: tokens on a chain where you have no gas token can't move."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Keep a small gas float on every chain you use."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Route choice: canonical bridge (safest, sometimes slow), fast bridge/liquidity network, exchange deposit-withdraw (often simplest for large amounts, but custodial for a moment), or intent-based cross-chain swaps (solvers deliver on the other chain)."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Chain abstraction: wallets and apps increasingly hide chains (\"pay gas in USDC\", \"one balance across chains\") using smart accounts, paymasters and solvers."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "It's convenient, and every layer that hides complexity is also a dependency."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Always: check the destination network, send a test first, and record the route in your journal."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "Work the example on paper. Moving $30,000 USDC from Arbitrum to Base: compare a canonical route via Ethereum (two transactions, slower, higher gas), a reputable fast bridge ($5\u2013$15 fee, minutes), and an exchange (withdraw on Base; check the exchange supports USDC on both networks). Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "Work the example on paper. Send $50 first by the chosen route, keep ~$5 of ETH on Base for gas, then send the rest. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Gas float on every chain I use. If you cannot write it, the line is open."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Route chosen by trust model and size, not just speed. If you cannot write it, the line is open."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Test amount first; route recorded. If you cannot write it, the line is open."
+  },
+  {
+   "n": 16,
+   "role": "quiz",
+   "vo": "Check yourself. 1. What is gas stranding? The answer: Having tokens on a chain with no gas token to move them."
+  },
+  {
+   "n": 17,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Risk of chain abstraction? The answer: Each hidden layer (smart accounts, paymasters, solvers) is an extra dependency."
+  },
+  {
+   "n": 18,
+   "role": "quiz",
+   "vo": "Check yourself. 3. First step on any new route? The answer: Send a small test amount."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "Operating across chains: gas, routes, and chain abstraction."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "By the end, you'll be able to move value between chains cheaply and safely, without ever getting stranded somewhere you can't afford to transact."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "Gas stranding, exactly what it is, and why it's a genuinely simple problem to avoid entirely."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "The four real route choices for moving value between chains, and how they actually differ."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Chain abstraction, what it hides, and why every hidden layer is still a real dependency."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "And a full worked example, moving thirty thousand dollars, choosing the route deliberately."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Here's exactly what gas stranding actually is, and why it happens more often than you'd expect."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "You hold real, valuable tokens on a chain, but you hold none of that specific chain's own native gas token."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Without it, you genuinely cannot pay for a single transaction, meaning you can't move those tokens anywhere at all, no matter how much they're actually worth, until you somehow get that chain's gas token onto that same address."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "Worth being completely direct about the actual fix here, since it's genuinely simple, and entirely avoidable with almost no effort."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "Keep a small gas float, a modest amount of that chain's own native token, on every single chain you actually use, at all times, specifically before you ever need it, not after you've already discovered you're stuck."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "Here's how to actually recover, if you've already discovered you're genuinely stranded, rather than just prevented it in advance."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "Send a small amount of that specific chain's gas token, from an exchange, or another wallet you own, directly to the stranded address."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "Some bridges and faucets can also deliver a small amount of gas token alongside an incoming transfer, specifically for this exact situation."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "And once you've recovered, immediately add that chain to your own ongoing gas-float habit."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "The answer: having real tokens on a chain, but no gas token to actually pay for a transaction, meaning you genuinely can't move them."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "Here's all four ways to actually move value between chains, and what each one genuinely trades off."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "A canonical bridge, from Lesson five point one, is the safest, sometimes slower option."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "A fast bridge, or liquidity network, is quicker, relying on that network's own liquidity."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "An exchange deposit-and-withdraw is often the simplest choice for genuinely large amounts, but makes you briefly custodial, trusting that exchange for the moment your funds actually sit there."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "And intent-based cross-chain swaps let specialised solvers deliver your funds on the destination chain directly, on your behalf."
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "Worth being precise about why an exchange specifically deserves its own separate mention here, since it's easy to overlook as a genuine route at all."
+  },
+  {
+   "n": 41,
+   "role": "body",
+   "vo": "For genuinely large amounts, it's often the simplest, most liquid option available."
+  },
+  {
+   "n": 42,
+   "role": "body",
+   "vo": "But for the specific window your funds sit on that exchange, you're trusting it directly, exactly the same custodial trust question covered back in earlier lessons, just for a shorter, deliberate stretch of time."
+  },
+  {
+   "n": 43,
+   "role": "body",
+   "vo": "Here's a practical way to actually choose between these four, based specifically on size, echoing the same pattern from Lesson five point one's own bridge decision."
+  },
+  {
+   "n": 44,
+   "role": "body",
+   "vo": "A small, routine amount reasonably fits a fast bridge or an intent-based swap, where speed matters more than squeezing out the very last bit of security."
+  },
+  {
+   "n": 45,
+   "role": "body",
+   "vo": "A genuinely large amount deserves the canonical route, or a carefully-checked exchange, specifically because size is exactly what's worth protecting most carefully."
+  },
+  {
+   "n": 46,
+   "role": "body",
+   "vo": "What's the actual risk of chain abstraction, specifically?"
+  },
+  {
+   "n": 47,
+   "role": "body",
+   "vo": "The answer: each layer it hides, smart accounts, paymasters, solvers, is still a real, additional dependency, even though it's now invisible to you."
+  },
+  {
+   "n": 48,
+   "role": "body",
+   "vo": "Here's exactly what chain abstraction actually does, and the specific mechanisms doing the hiding underneath it."
+  },
+  {
+   "n": 49,
+   "role": "body",
+   "vo": "Wallets and apps increasingly hide which chain you're actually on entirely, letting you pay gas in a stablecoin instead of that chain's own native token, or presenting one single balance across several different chains at once."
+  },
+  {
+   "n": 50,
+   "role": "body",
+   "vo": "Underneath all of that, smart accounts, paymasters, and solvers are the actual mechanisms doing this work, quietly, on your behalf."
+  },
+  {
+   "n": 51,
+   "role": "body",
+   "vo": "Worth being precise about the actual question worth asking, before relying on any chain-abstracted app, rather than simply enjoying the convenience without a second thought."
+  },
+  {
+   "n": 52,
+   "role": "body",
+   "vo": "Ask specifically what's actually happening underneath that simplified interface, which of these mechanisms is involved, and whether you'd genuinely be comfortable with each one individually, on its own merits, if it weren't hidden from view at all."
+  },
+  {
+   "n": 53,
+   "role": "body",
+   "vo": "Worth being completely direct about the one sentence this entire topic reduces to, since convenience and safety aren't automatically the same thing here."
+  },
+  {
+   "n": 54,
+   "role": "body",
+   "vo": "It's genuinely convenient, and every single layer that hides that complexity from you is also a real dependency, exactly like a bridge, an oracle, or an admin key, whether you can actually see it happening or not."
+  },
+  {
+   "n": 55,
+   "role": "body",
+   "vo": "Here's the actual choice, laid out fully, for genuinely moving thirty thousand dollars of U.S.D.C."
+  },
+  {
+   "n": 56,
+   "role": "body",
+   "vo": "A canonical route, through Ethereum itself, takes two separate transactions, is genuinely slower, and costs more in gas."
+  },
+  {
+   "n": 57,
+   "role": "body",
+   "vo": "A reputable fast bridge instead costs somewhere between five and fifteen dollars, and takes just minutes."
+  },
+  {
+   "n": 58,
+   "role": "body",
+   "vo": "Worth naming the third option too, an exchange, since it's a genuinely real choice for this exact amount."
+  },
+  {
+   "n": 59,
+   "role": "body",
+   "vo": "Withdraw directly on Base, specifically checking first that your exchange actually supports U.S.D.C."
+  },
+  {
+   "n": 60,
+   "role": "body",
+   "vo": "on both of those networks, before you ever deposit a single dollar into it."
+  },
+  {
+   "n": 61,
+   "role": "body",
+   "vo": "Here's exactly how to actually execute this, step by step, regardless of which specific route you ultimately choose."
+  },
+  {
+   "n": 62,
+   "role": "body",
+   "vo": "Send fifty dollars first, by your chosen route, as a genuine test."
+  },
+  {
+   "n": 63,
+   "role": "body",
+   "vo": "on Base specifically for gas, before you send anything else at all."
+  },
+  {
+   "n": 64,
+   "role": "body",
+   "vo": "And only then send the remaining balance, once that small test has actually confirmed successfully."
+  },
+  {
+   "n": 65,
+   "role": "body",
+   "vo": "What's genuinely the first step, on any new route, regardless of the amount involved?"
+  },
+  {
+   "n": 66,
+   "role": "body",
+   "vo": "The answer: send a small test amount first, before committing the full balance to it."
+  },
+  {
+   "n": 67,
+   "role": "body",
+   "vo": "Worth being concrete about what recording the route actually looks like, in practice, rather than leaving it as a vague habit."
+  },
+  {
+   "n": 68,
+   "role": "body",
+   "vo": "A single line is genuinely enough: the date, the amount, the route you actually chose, and the fee and time it actually took."
+  },
+  {
+   "n": 69,
+   "role": "body",
+   "vo": "That real record is exactly what tells you, months later, which route genuinely worked well, and which one to actually avoid next time."
+  },
+  {
+   "n": 70,
+   "role": "body",
+   "vo": "Do it before moving real value between chains."
+  },
+  {
+   "n": 71,
+   "role": "body",
+   "vo": "Keep a genuine gas float on every chain you actually use, at all times."
+  },
+  {
+   "n": 72,
+   "role": "body",
+   "vo": "Choose your route by its actual trust model and the amount involved, never just by whichever one looks fastest."
+  },
+  {
+   "n": 73,
+   "role": "body",
+   "vo": "And send a real test amount first, every time, recording the route you actually used in your own journal."
+  },
+  {
+   "n": 74,
+   "role": "body",
+   "vo": "Gas stranding means holding tokens with no gas token to move them; a small float on every chain prevents it entirely."
+  },
+  {
+   "n": 75,
+   "role": "body",
+   "vo": "Four real routes exist: canonical, fast bridge, exchange, and intent-based, each with a genuinely different trade-off."
+  },
+  {
+   "n": 76,
+   "role": "body",
+   "vo": "Chain abstraction is genuinely convenient, but every layer it hides, smart accounts, paymasters, solvers, is still a real dependency."
+  },
+  {
+   "n": 77,
+   "role": "body",
+   "vo": "And on any real amount: a gas float first, a test transaction, then the rest, recorded in your own journal."
+  },
+  {
+   "n": 78,
+   "role": "body",
+   "vo": "Worth closing on how directly this lesson actually builds on two others already covered in this module."
+  },
+  {
+   "n": 79,
+   "role": "body",
+   "vo": "The route choice here is the exact same trust-model question from Lesson five point one's bridges, and operating on a new chain safely is the exact same habit from Lesson five point six's ecosystems, now simply applied together, in the same real decision."
+  },
+  {
+   "n": 80,
+   "role": "body",
+   "vo": "Keep a gas float everywhere, choose your route deliberately, and always send a test amount first."
+  },
+  {
+   "n": 81,
+   "role": "body",
+   "vo": "Next up, Lesson five point eight: reading smart-contract code, enough to verify claims."
+  },
+  {
+   "n": 82,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Gas stranding: tokens on a chain where you have no gas token can't move. It sits in Operating across chains: gas, routes and chain abstraction. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 83,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Keep a small gas float on every chain you use. It sits in Operating across chains: gas, routes and chain abstraction. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 84,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Route choice: canonical bridge (safest, sometimes slow), fast bridge/liquidity network, exchange deposit-withdraw (often simplest for large amounts, but custodial for a moment), or intent-based cross-chain swaps (solvers deliver on the other chain). It sits in Operating across chains: gas, routes and chain abstraction. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 85,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Chain abstraction: wallets and apps increasingly hide chains (\"pay gas in USDC\", \"one balance across chains\") using smart accounts, paymasters and solvers. It sits in Operating across chains: gas, routes and chain abstraction. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 86,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. It's convenient, and every layer that hides complexity is also a dependency. It sits in Operating across chains: gas, routes and chain abstraction. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 87,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Always: check the destination network, send a test first, and record the route in your journal. It sits in Operating across chains: gas, routes and chain abstraction. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 88,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Moving $30,000 USDC from Arbitrum to Base: compare a canonical route via Ethereum (two transactions, slower, higher gas), a reputable fast bridge ($5\u2013$15 fee, minutes), and an exchange (withdraw on Base; check the exchange supports USDC on both networks). It sits in Operating across chains: gas, routes and chain abstraction. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 89,
+   "role": "recap",
+   "vo": "Three lines to keep. Gas stranding: tokens on a chain where you have no gas token can't move. Keep a small gas float on every chain you use. Next is Lesson 5.8, Reading smart-contract code: enough to verify claims. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 90,
+   "role": "action",
+   "vo": "Your action for Operating across chains: gas, routes and chain abstraction: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 5.8, Reading smart-contract code: enough to verify claims."
+  },
+  {
+   "n": 91,
+   "role": "outro",
+   "vo": "Next is Lesson 5.8, Reading smart-contract code: enough to verify claims. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

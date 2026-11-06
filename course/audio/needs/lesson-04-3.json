@@ -1,0 +1,495 @@
+{
+ "id": "lesson-04-3",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-04-3.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 4.2, Native staking. Understand what staking pays for, and its lock-up and validator risks. Keep that page on the desk. This lesson adds one picture: Use liquid staking tokens knowing how they accrue value and how they can depeg."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 4.3, Liquid staking. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already have LTV, health factor, and liquidation from lending. A yield does not retire those numbers. It is payment for a risk you can name."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "A liquid staking token (LST) represents staked assets plus rewards, and can be traded or used as collateral."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Value accrues by rebasing (your balance grows) or an exchange rate that rises (each token is worth more of the underlying)."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "In stress, an LST can trade at a discount to what it redeems for."
+  },
+  {
+   "n": 8,
+   "role": "demo",
+   "vo": "Work the example on paper. An exchange-rate LST goes from 1.000 to 1.030 of the underlying over a year: 3%. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 9,
+   "role": "demo",
+   "vo": "Work the example on paper. In a panic it trades at 0.98 on the market. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 10,
+   "role": "demo",
+   "vo": "Work the example on paper. Holders who can wait for redemption (queue) recover 1.03; holders forced to sell take the 2% discount. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "Work the example on paper. Never borrow so close to the limit that an LST discount liquidates you. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Accrual method known (rebase vs exchange rate). If you cannot write it, the line is open."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Redemption path and queue length known. If you cannot write it, the line is open."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Discount alert set if used as collateral. If you cannot write it, the line is open."
+  },
+  {
+   "n": 15,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Two ways LSTs pass on rewards? The answer: Rebasing balances, or a rising exchange rate."
+  },
+  {
+   "n": 16,
+   "role": "quiz",
+   "vo": "Check yourself. 2. What is an LST discount? The answer: Its market price falling below its redemption value."
+  },
+  {
+   "n": 17,
+   "role": "quiz",
+   "vo": "Check yourself. 3. Who is hurt most by a discount? The answer: Forced sellers and leveraged holders who get liquidated."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "By the end, you'll know exactly how these tokens accrue value, and how they can trade at a discount, before you ever use one as collateral."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "actually represents, and the two different ways it can pass staking rewards on to you."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "How a discount can appear under stress, and exactly who it actually hurts."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "A full worked example, using the source material's own accrual and discount numbers."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "And a checklist for using L.S.T.s safely, especially as collateral."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Here's exactly what you're holding when you hold a liquid staking token."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "It represents your original staked assets, plus every reward that's accrued on them since, bundled into a single token you can still trade, transfer, or use as collateral elsewhere in DeFi, all without ever unstaking your underlying position."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "That's the entire point of the design: keeping your capital liquid and useful, while it keeps earning staking rewards in the background."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "can actually pass those accrued rewards on to you, since protocols genuinely differ on this."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "grows your token balance directly, over time, so you hold more tokens tomorrow than you do today, each still worth about the same."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "instead keeps your token balance fixed, but each token becomes redeemable for a growing amount of the underlying asset, as rewards accrue underneath it."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "Worth being precise about why this distinction actually matters in practice, beyond just being a technical detail."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "A rebasing token can complicate certain integrations, since some contracts don't expect a balance to change on its own without a transfer."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "An exchange-rate token avoids that specific problem, which is part of why it's become the more common design, but it does mean the token's price, not your balance, is what carries the growing value."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "Here's that same three percent annual rate, extended out across five years, so you can see what genuine compounding actually does to the redemption value."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "Starting at one point zero zero zero, year one closes at one point zero three."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "By year three, one point zero nine three."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "By year five, one point one five nine, meaning each token then redeems for nearly sixteen percent more of the underlying than it started with, entirely from staking rewards compounding on themselves."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "The answer: rebasing, where your token balance itself grows, or a rising exchange rate, where each token redeems for more of the underlying."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "Here's exactly how this gap opens up, since an L.S.T.'s market price and its redemption value aren't actually the same thing, mechanically."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "is genuinely worth, based on its accrued rewards, if you're willing to wait through the protocol's own unstaking queue to claim it."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "Market price is simply whatever someone else will pay for it, right now, on the open market."
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "In calm conditions, arbitrage keeps these two numbers close together."
+  },
+  {
+   "n": 41,
+   "role": "body",
+   "vo": "Under real stress, that arbitrage can break down, and a gap opens."
+  },
+  {
+   "n": 42,
+   "role": "body",
+   "vo": "Worth being precise about who actually has the power to close this gap, and who doesn't."
+  },
+  {
+   "n": 43,
+   "role": "body",
+   "vo": "Anyone willing, and able, to simply wait through the redemption queue can eventually claim the full redemption value, regardless of whatever the market price does in the meantime."
+  },
+  {
+   "n": 44,
+   "role": "body",
+   "vo": "The discount only becomes a real, permanent loss for whoever is forced to sell into the market immediately, unable to wait that queue out."
+  },
+  {
+   "n": 45,
+   "role": "body",
+   "vo": "Here's a distinction worth keeping clear, since an L.S.T."
+  },
+  {
+   "n": 46,
+   "role": "body",
+   "vo": "discount and a genuine protocol failure can look similar from a chart alone, but mean completely different things."
+  },
+  {
+   "n": 47,
+   "role": "body",
+   "vo": "A discount is a temporary market gap, fully backed the entire time, and fully recoverable simply by waiting out the queue."
+  },
+  {
+   "n": 48,
+   "role": "body",
+   "vo": "A genuine depeg, from an actual protocol failure, means the backing itself is impaired, and waiting doesn't necessarily fix anything at all."
+  },
+  {
+   "n": 49,
+   "role": "body",
+   "vo": "The answer: its market price falling below what it would actually redeem for, through the protocol's own unstaking queue."
+  },
+  {
+   "n": 50,
+   "role": "body",
+   "vo": "Here's the accrual side first, over an ordinary year, with no panic involved at all."
+  },
+  {
+   "n": 51,
+   "role": "body",
+   "vo": "starts the year redeemable for one point zero zero zero of the underlying asset, per token."
+  },
+  {
+   "n": 52,
+   "role": "body",
+   "vo": "Over that year, staking rewards accrue underneath it."
+  },
+  {
+   "n": 53,
+   "role": "body",
+   "vo": "By year's end, it's redeemable for one point zero three zero, a genuine three percent gain, entirely from staking rewards."
+  },
+  {
+   "n": 54,
+   "role": "body",
+   "vo": "Now here's what happens when a panic hits, right at that same one point zero three zero redemption value, and the market and redemption value split apart."
+  },
+  {
+   "n": 55,
+   "role": "body",
+   "vo": "Patient holders, willing to enter the protocol's own redemption queue and simply wait, still recover the full one point zero three zero they're genuinely owed."
+  },
+  {
+   "n": 56,
+   "role": "body",
+   "vo": "Forced sellers, who need to exit immediately on the open market, instead sell at a two percent discount to that same redemption value."
+  },
+  {
+   "n": 57,
+   "role": "body",
+   "vo": "Here's the one sentence this entire worked example exists to prove, worth holding onto more than the specific percentages involved."
+  },
+  {
+   "n": 58,
+   "role": "body",
+   "vo": "The exact same token, worth the exact same one point zero three zero underneath, delivers two completely different outcomes, purely based on whether its holder could afford to wait."
+  },
+  {
+   "n": 59,
+   "role": "body",
+   "vo": "That gap is never about the asset's real value; it's entirely about who was forced to sell, and when."
+  },
+  {
+   "n": 60,
+   "role": "body",
+   "vo": "The answer: forced sellers, who can't wait out the redemption queue, and leveraged holders who get liquidated directly into that discount."
+  },
+  {
+   "n": 61,
+   "role": "body",
+   "vo": "Here's exactly how this discount turns into forced liquidation, specifically for anyone using an L.S.T."
+  },
+  {
+   "n": 62,
+   "role": "body",
+   "vo": "A protocol's own oracle reads the L.S.T.'s current market price, discount included, not its underlying redemption value."
+  },
+  {
+   "n": 63,
+   "role": "body",
+   "vo": "If that discounted price crosses your collateral's own liquidation threshold, you're liquidated immediately, at exactly the wrong moment, even though the asset itself never actually lost any real value at all."
+  },
+  {
+   "n": 64,
+   "role": "body",
+   "vo": "Here's that exact same two percent discount, applied to two different borrowers against the same L.S.T."
+  },
+  {
+   "n": 65,
+   "role": "body",
+   "vo": "collateral, to make the rule concrete rather than abstract."
+  },
+  {
+   "n": 66,
+   "role": "body",
+   "vo": "A borrower with real room to spare simply absorbs that two percent inside their existing buffer, and nothing happens at all."
+  },
+  {
+   "n": 67,
+   "role": "body",
+   "vo": "A borrower already sitting right at their limit gets liquidated by that same two percent, purely because they left themselves no buffer for it in the first place."
+  },
+  {
+   "n": 68,
+   "role": "body",
+   "vo": "Here's the actual rule this entire chain of reasoning leads to, and it's worth remembering on its own, independent of everything else in this lesson."
+  },
+  {
+   "n": 69,
+   "role": "body",
+   "vo": "Never borrow so close to your limit that an L.S.T."
+  },
+  {
+   "n": 70,
+   "role": "body",
+   "vo": "discount alone, entirely temporary and entirely disconnected from the asset's real value, could be the thing that liquidates you."
+  },
+  {
+   "n": 71,
+   "role": "body",
+   "vo": "Here's how to actually check a redemption queue before you rely on being able to wait it out."
+  },
+  {
+   "n": 72,
+   "role": "body",
+   "vo": "Check the protocol's own documentation or dashboard for its current stated unbonding or redemption time."
+  },
+  {
+   "n": 73,
+   "role": "body",
+   "vo": "Check whether that time is fixed, or can extend under heavy demand, since a rush of withdrawals can lengthen it."
+  },
+  {
+   "n": 74,
+   "role": "body",
+   "vo": "And size your own discount tolerance around that real number, not around an assumption that you can always exit whenever you'd like."
+  },
+  {
+   "n": 75,
+   "role": "body",
+   "vo": "Do it before using any L.S.T., especially as collateral."
+  },
+  {
+   "n": 76,
+   "role": "body",
+   "vo": "Know its accrual method, rebasing or exchange rate, since that changes how it behaves in other contracts."
+  },
+  {
+   "n": 77,
+   "role": "body",
+   "vo": "Know its redemption path, and specifically how long that queue actually runs."
+  },
+  {
+   "n": 78,
+   "role": "body",
+   "vo": "And set a discount alert for yourself, if you're using it as collateral, so a widening gap never catches you by surprise."
+  },
+  {
+   "n": 79,
+   "role": "body",
+   "vo": "represents staked assets plus accrued rewards, still tradeable and usable as collateral."
+  },
+  {
+   "n": 80,
+   "role": "body",
+   "vo": "It accrues value either by rebasing your balance, or through a rising exchange rate."
+  },
+  {
+   "n": 81,
+   "role": "body",
+   "vo": "Under real stress, it can trade at a discount to its redemption value, a gap that only becomes a real loss for forced sellers."
+  },
+  {
+   "n": 82,
+   "role": "body",
+   "vo": "And the rule that follows from all of it: never borrow so close to the limit that a temporary discount alone can liquidate you."
+  },
+  {
+   "n": 83,
+   "role": "body",
+   "vo": "Know your LST's accrual method and redemption queue, and never borrow so close to the limit that a discount alone can liquidate you."
+  },
+  {
+   "n": 84,
+   "role": "body",
+   "vo": "Next up, Lesson four point four: restaking and shared security."
+  },
+  {
+   "n": 85,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. A liquid staking token (LST) represents staked assets plus rewards, and can be traded or used as collateral. It sits in Liquid staking. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 86,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Value accrues by rebasing (your balance grows) or an exchange rate that rises (each token is worth more of the underlying). It sits in Liquid staking. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 87,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. In stress, an LST can trade at a discount to what it redeems for. It sits in Liquid staking. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 88,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. An exchange-rate LST goes from 1.000 to 1.030 of the underlying over a year: 3%. It sits in Liquid staking. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 89,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. In a panic it trades at 0.98 on the market. It sits in Liquid staking. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 90,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Holders who can wait for redemption (queue) recover 1.03; holders forced to sell take the 2% discount. It sits in Liquid staking. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 91,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Never borrow so close to the limit that an LST discount liquidates you. It sits in Liquid staking. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 92,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Use liquid staking tokens knowing how they accrue value and how they can depeg. It sits in Liquid staking. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 93,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Accrual method known (rebase vs exchange rate). It sits in Liquid staking. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 94,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Redemption path and queue length known. It sits in Liquid staking. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 95,
+   "role": "recap",
+   "vo": "Three lines to keep. A liquid staking token (LST) represents staked assets plus rewards, and can be traded or used as collateral. Value accrues by rebasing (your balance grows) or an exchange rate that rises (each token is worth more of the underlying). Next is Lesson 4.4, Restaking & shared security. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 96,
+   "role": "action",
+   "vo": "Your action for Liquid staking: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 4.4, Restaking & shared security."
+  },
+  {
+   "n": 97,
+   "role": "outro",
+   "vo": "Next is Lesson 4.4, Restaking & shared security. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

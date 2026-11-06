@@ -1,0 +1,355 @@
+{
+ "id": "lesson-10-1",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-10-1.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 10.0, Mastery Starter. Mastery Starter. Keep that page on the desk. This lesson adds one picture: Lock a fixed return using principal tokens, and price a yield token against its implied rate."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 10.1, Fixed-rate yield: principal and yield tokens. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already split base yield from emissions. Advanced yield still starts with that split, then names a more particular engine."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Yield tokenization takes a yield-bearing asset (a staked asset, a lending receipt, a stablecoin savings token) and splits it into two tokens that mature on a set date: PT (principal token): redeems 1:1 for the underlying at maturity."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Buy the discount, hold to maturity, and your return is fixed."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "YT (yield token): receives all the variable yield (and often points) the underlying earns until maturity, then is worth zero."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "The PT price implies a fixed rate; the YT is a bet that realised yield beats it."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "fixed APY = (1 \u00f7 PT price)^(365 \u00f7 days) \u2212 1."
+  },
+  {
+   "n": 10,
+   "role": "demo",
+   "vo": "Work the example on paper. A stablecoin savings token has a PT maturing in 180 days, priced at 0.96. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "Work the example on paper. defi_calc.py pt --price 0.96 --days 180 \u2192 8.63% fixed APY if held to maturity. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "Work the example on paper. $100,000 buys ~104,167 PT \u2192 redeems for ~104,167 of the underlying at maturity. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "Work the example on paper. The YT costs ~0.04 per unit. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "Work the example on paper. It only profits if the underlying's realised yield (plus any points) averages above ~8.6% for the 180 days. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "Work the example on paper. Near maturity, small discounts are big rates: PT at 0.985 with 60 days left \u2192 9.63% APY. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 16,
+   "role": "demo",
+   "vo": "Work the example on paper. Check liquidity before chasing these; exiting early means selling into the pool. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 17,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: I'd hold the underlying asset anyway. If you cannot write it, the line is open."
+  },
+  {
+   "n": 18,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Maturity date matches when I'll need the money (Module 12.4 ladder). If you cannot write it, the line is open."
+  },
+  {
+   "n": 19,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Pool depth checked for an early exit. If you cannot write it, the line is open."
+  },
+  {
+   "n": 20,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: YT sized as speculation, not income. If you cannot write it, the line is open."
+  },
+  {
+   "n": 21,
+   "role": "quiz",
+   "vo": "Check yourself. 1. PT at 0.97, 120 days to maturity. Fixed APY? The answer: (1/0.97)^(365/120) \u2212 1 \u2248 9.7%."
+  },
+  {
+   "n": 22,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Does buying PT remove the underlying's risk? The answer: No. It fixes the rate. If the underlying depegs or is exploited, the PT redeems into a damaged asset."
+  },
+  {
+   "n": 23,
+   "role": "quiz",
+   "vo": "Check yourself. 3. What must happen for a YT to profit? The answer: Realised variable yield plus points must beat the implied rate priced into the PT."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "Fixed-rate yield: principal and yield tokens (P.T./Y.T.)."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to lock a fixed return using principal tokens, and price a yield token against its implied rate."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "the underlying earns until maturity, then is worth zero."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "is a bet that realised yield beats it."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "price)^(365 divided by days) minus 1 First, P.T."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "(principal token): redeems 1:1 for the underlying at maturity."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "(yield token): receives all the variable yield (and often points)."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "It's everything we've just said, in one picture."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "yield (plus any points) averages above about 8.6% for the 180 days."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "Near maturity, small discounts are big rates: P.T."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "at 0.985 with 60 days left to 9.63% A.P.Y."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "Check liquidity before chasing these; exiting early means selling into the pool."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "to redeems for about 104,167 of the underlying at maturity."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "You can check every number with the program's calculator."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "P.T.: the underlying's credit/depeg risk, and liquidity if you exit early."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "Y.T.: falling yields, and time (it decays to zero)."
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "Next, Maturity date matches when I'll need the money (Module 12.4 ladder)."
+  },
+  {
+   "n": 41,
+   "role": "body",
+   "vo": "Then, Pool depth checked for an early exit."
+  },
+  {
+   "n": 42,
+   "role": "body",
+   "vo": "The answer: (1 to 0.97)^(365 to 120) minus 1 about 9.7%."
+  },
+  {
+   "n": 43,
+   "role": "body",
+   "vo": "If the underlying depegs or is exploited, the P.T."
+  },
+  {
+   "n": 44,
+   "role": "body",
+   "vo": "The answer: Realised variable yield plus points must beat the implied rate priced into the P.T."
+  },
+  {
+   "n": 45,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 46,
+   "role": "body",
+   "vo": "Next up, lesson ten point two: Cash-and-carry basis trades."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Yield tokenization takes a yield-bearing asset (a staked asset, a lending receipt, a stablecoin savings token) and splits it into two tokens that mature on a set date: PT (principal token): redeems 1:1 for the underlying at maturity. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. It trades at a discount before then. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Buy the discount, hold to maturity, and your return is fixed. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. YT (yield token): receives all the variable yield (and often points) the underlying earns until maturity, then is worth zero. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. PT + YT = one unit of the underlying. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The PT price implies a fixed rate; the YT is a bet that realised yield beats it. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. fixed APY = (1 \u00f7 PT price)^(365 \u00f7 days) \u2212 1. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 54,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. A stablecoin savings token has a PT maturing in 180 days, priced at 0.96. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 55,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. defi_calc.py pt --price 0.96 --days 180 \u2192 8.63% fixed APY if held to maturity. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 56,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. $100,000 buys ~104,167 PT \u2192 redeems for ~104,167 of the underlying at maturity. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 57,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The YT costs ~0.04 per unit. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 58,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. It only profits if the underlying's realised yield (plus any points) averages above ~8.6% for the 180 days. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 59,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Near maturity, small discounts are big rates: PT at 0.985 with 60 days left \u2192 9.63% APY. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 60,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Check liquidity before chasing these; exiting early means selling into the pool. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 61,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Lock a fixed return using principal tokens, and price a yield token against its implied rate. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 62,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. I'd hold the underlying asset anyway. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 63,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Maturity date matches when I'll need the money (Module 12.4 ladder). It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 64,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Pool depth checked for an early exit. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 65,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. YT sized as speculation, not income. It sits in Fixed-rate yield: principal and yield tokens. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 66,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Yield tokenization takes a yield-bearing asset (a staked asset, a lending receipt, a stablecoin savings token) and splits it into two tokens that mature on a set date: PT (principal token): redeems 1:1 for the underlying at maturity. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 67,
+   "role": "recap",
+   "vo": "Three lines to keep. Yield tokenization takes a yield-bearing asset (a staked asset, a lending receipt, a stablecoin savings token) and splits it into two tokens that mature on a set date: PT (principal token): redeems 1:1 for the underlying at maturity. It trades at a discount before then. Next is Lesson 10.2, Cash-and-carry basis trades. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 68,
+   "role": "action",
+   "vo": "Your action for Fixed-rate yield: principal and yield tokens: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 10.2, Cash-and-carry basis trades."
+  },
+  {
+   "n": 69,
+   "role": "outro",
+   "vo": "Next is Lesson 10.2, Cash-and-carry basis trades. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

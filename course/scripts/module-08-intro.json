@@ -1,0 +1,191 @@
+{
+ "id": "module-08-intro",
+ "title": "Module 8 \u00b7 The operating system",
+ "course": "On-Chain Operator Program",
+ "palette": "navy-cyan",
+ "music": "course/music/komiku-ambiant-truth.ogg",
+ "next": "Lesson 8.0, Mastery Starter",
+ "wpm_assumption": 143,
+ "word_count": 461,
+ "estimated_minutes": 3.22,
+ "code_draws_visuals": false,
+ "overlays_only": [
+  "captions",
+  "lower thirds",
+  "intro title text",
+  "disclaimer line",
+  "Ken Burns"
+ ],
+ "beats": [
+  {
+   "n": 1,
+   "chapter": "Hook",
+   "role": "hook",
+   "vo": "You are leaving Lesson 7.9, Querying chain data yourself. Answer your own research questions with on-chain queries, instead of relying on someone else's dashboard. Module 8, The operating system, asks something new. A written portfolio plan with risk buckets, limits and an emergency plan.",
+   "cap": "You are leaving Lesson 7.9, Querying chain data yourself. Answer your own research questions with on-chain.",
+   "concept": "a written portfolio plan with risk buckets, limits and an emergency plan",
+   "image": "course/images/module-08-intro/001.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 8 \u00b7 The operating system', beat 1, role hook. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Hook. Show markers waiting on horizontal levels, and a second faded arrow that wrongly cuts straight through the levels; two separate inventory buckets for two grids, with a warning when the buckets overlap on the same asset; the problem visible in the first glance, before any logo. The picture must be understandable with the sound off. Teaching line: a written portfolio plan with risk buckets, limits and an emergency plan Use no words if a shape is clearer. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 2,
+   "chapter": "Disclaimer",
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot.",
+   "cap": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of.",
+   "concept": "Education only, not financial advice.",
+   "image": "course/images/module-08-intro/002.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 8 \u00b7 The operating system', beat 2, role legal. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Disclaimer. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Education only, not financial advice. The picture must be understandable with the sound off. Teaching line: Education only, not financial advice. Labels, spelled exactly: Education. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 3,
+   "chapter": "Title card",
+   "role": "intro",
+   "vo": "On-Chain Operator. Module 8 \u00b7 The operating system. Navy and cyan. This is the door, not the whole module. Education only.",
+   "cap": "On-Chain Operator. Module 8 \u00b7 The operating system. Navy and cyan. This is the door, not the whole module.",
+   "concept": "Module 8 \u00b7 The operating system",
+   "image": "course/images/module-08-intro/003.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 8 \u00b7 The operating system', beat 3, role intro. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Title card. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Module 8 \u00b7 The operating system. The picture must be understandable with the sound off. Teaching line: Module 8 \u00b7 The operating system Labels, spelled exactly: Module, The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 4,
+   "chapter": "Already on the desk",
+   "role": "body",
+   "vo": "You can already pull a number off a chain. The operating system is what you do with it: a register, a journal, and a kill rule.",
+   "cap": "You can already pull a number off a chain. The operating system is what you do with it: a register, a.",
+   "concept": "You can already pull a number off a chain. The operating system is what you do with it: a register, a journal, and a kill rule.",
+   "image": "course/images/module-08-intro/004.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 8 \u00b7 The operating system', beat 4, role body. A step-by-step illustrated form, generic and unbranded, with one field highlighted in cyan. Chapter context: Already on the desk. Show two chains with a bridge between them and a trust mark on the bridge, not a guaranteed arrival. The picture must be understandable with the sound off. Teaching line: You can already pull a number off a chain. The operating system is what you do with it: a register, a journal, and a kill rule. Labels, spelled exactly: You, The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 5,
+   "chapter": "The outcome",
+   "role": "body",
+   "vo": "By the end of the module you will be able to do this: a written portfolio plan with risk buckets, limits and an emergency plan. Not before. The lessons earn it one page at a time.",
+   "cap": "By the end of the module you will be able to do this: a written portfolio plan with risk buckets, limits and.",
+   "concept": "a written portfolio plan with risk buckets, limits and an emergency plan",
+   "image": "course/images/module-08-intro/005.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 8 \u00b7 The operating system', beat 5, role body. One large diagram centered on an off-white panel, with thin cyan callout lines. Chapter context: The outcome. Show markers waiting on horizontal levels, and a second faded arrow that wrongly cuts straight through the levels; two separate inventory buckets for two grids, with a warning when the buckets overlap on the same asset. The picture must be understandable with the sound off. Teaching line: a written portfolio plan with risk buckets, limits and an emergency plan Use no words if a shape is clearer. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 6,
+   "chapter": "The map",
+   "role": "map",
+   "vo": "The lessons, in order, are 8.0 Mastery Starter, 8.1 DeFi portfolio construction, 8.2 The DeFi risk framework, 8.3 Strategy library, 8.4 The operating playbook: deploy, monitor, respond, review, 8.5 Measuring performance honestly, 8.6 Psychology and discipline, 8.7 Quantitative risk: volatility, VaR, drawdown, correlation and sizing. You do not skip ahead. Each page is the input to the next.",
+   "cap": "The lessons, in order, are 8.0 Mastery Starter, 8.1 DeFi portfolio construction, 8.2 The DeFi risk framework.",
+   "concept": "Lesson map for module 8",
+   "image": "course/images/module-08-intro/006.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 8 \u00b7 The operating system', beat 6, role map. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: The map. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Lesson map for module 8. The picture must be understandable with the sound off. Teaching line: Lesson map for module 8 Labels, spelled exactly: Lesson. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 7,
+   "chapter": "Lesson 8.0",
+   "role": "body",
+   "vo": "Lesson 8.0, Mastery Starter. Mastery Starter. You will write that down when you get there.",
+   "cap": "Lesson 8.0, Mastery Starter. Mastery Starter. You will write that down when you get there.",
+   "concept": "Lesson 8.0: Mastery Starter",
+   "image": "course/images/module-08-intro/007.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 8 \u00b7 The operating system', beat 7, role body. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Lesson 8.0. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Lesson 8.0: Mastery Starter. The picture must be understandable with the sound off. Teaching line: Lesson 8.0: Mastery Starter Labels, spelled exactly: Lesson, Mastery, Starter. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 8,
+   "chapter": "Lesson 8.1",
+   "role": "body",
+   "vo": "Lesson 8.1, DeFi portfolio construction. Split capital into risk buckets with caps, so no single failure can sink the portfolio. You will write that down when you get there.",
+   "cap": "Lesson 8.1, DeFi portfolio construction. Split capital into risk buckets with caps, so no single failure can.",
+   "concept": "Lesson 8.1: DeFi portfolio construction",
+   "image": "course/images/module-08-intro/008.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 8 \u00b7 The operating system', beat 8, role body. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Lesson 8.1. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Lesson 8.1: DeFi portfolio construction. The picture must be understandable with the sound off. Teaching line: Lesson 8.1: DeFi portfolio construction Labels, spelled exactly: Lesson, DeFi. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 9,
+   "chapter": "Lesson 8.2",
+   "role": "body",
+   "vo": "Lesson 8.2, The DeFi risk framework. Keep a risk register that scores every position's risks and names the response. You will write that down when you get there.",
+   "cap": "Lesson 8.2, The DeFi risk framework. Keep a risk register that scores every position's risks and names the.",
+   "concept": "Lesson 8.2: The DeFi risk framework",
+   "image": "course/images/module-08-intro/009.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 8 \u00b7 The operating system', beat 9, role body. A step-by-step illustrated form, generic and unbranded, with one field highlighted in cyan. Chapter context: Lesson 8.2. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Lesson 8.2: The DeFi risk framework. The picture must be understandable with the sound off. Teaching line: Lesson 8.2: The DeFi risk framework Labels, spelled exactly: Lesson, The, DeFi. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 10,
+   "chapter": "Lesson 8.3",
+   "role": "body",
+   "vo": "Lesson 8.3, Strategy library. Strategy library. You will write that down when you get there.",
+   "cap": "Lesson 8.3, Strategy library. Strategy library. You will write that down when you get there.",
+   "concept": "Lesson 8.3: Strategy library",
+   "image": "course/images/module-08-intro/010.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 8 \u00b7 The operating system', beat 10, role body. One large diagram centered on an off-white panel, with thin cyan callout lines. Chapter context: Lesson 8.3. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Lesson 8.3: Strategy library. The picture must be understandable with the sound off. Teaching line: Lesson 8.3: Strategy library Labels, spelled exactly: Lesson, Strategy. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 11,
+   "chapter": "Lesson 8.4",
+   "role": "body",
+   "vo": "Lesson 8.4, The operating playbook: deploy, monitor, respond, review. Run every position through the same four-phase routine. You will write that down when you get there.",
+   "cap": "Lesson 8.4, The operating playbook: deploy, monitor, respond, review. Run every position through the same.",
+   "concept": "Lesson 8.4: The operating playbook: deploy, monitor, respond, review",
+   "image": "course/images/module-08-intro/011.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 8 \u00b7 The operating system', beat 11, role body. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Lesson 8.4. Show a three-row review card: inside the band, inventory side, and the written stop, with a calendar chip. The picture must be understandable with the sound off. Teaching line: Lesson 8.4: The operating playbook: deploy, monitor, respond, review Labels, spelled exactly: Lesson, The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 12,
+   "chapter": "Lesson 8.5",
+   "role": "body",
+   "vo": "Lesson 8.5, Measuring performance honestly. Measure your results so deposits, withdrawals and lucky markets don't fool you. You will write that down when you get there.",
+   "cap": "Lesson 8.5, Measuring performance honestly. Measure your results so deposits, withdrawals and lucky markets.",
+   "concept": "Lesson 8.5: Measuring performance honestly",
+   "image": "course/images/module-08-intro/012.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 8 \u00b7 The operating system', beat 12, role body. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Lesson 8.5. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Lesson 8.5: Measuring performance honestly. The picture must be understandable with the sound off. Teaching line: Lesson 8.5: Measuring performance honestly Labels, spelled exactly: Lesson, Measuring. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 13,
+   "chapter": "Lesson 8.6",
+   "role": "body",
+   "vo": "Lesson 8.6, Psychology and discipline. Recognise the behaviours that turn good strategies into losses, and build rules that stop them. You will write that down when you get there.",
+   "cap": "Lesson 8.6, Psychology and discipline. Recognise the behaviours that turn good strategies into losses, and.",
+   "concept": "Lesson 8.6: Psychology and discipline",
+   "image": "course/images/module-08-intro/013.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 8 \u00b7 The operating system', beat 13, role body. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Lesson 8.6. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Lesson 8.6: Psychology and discipline. The picture must be understandable with the sound off. Teaching line: Lesson 8.6: Psychology and discipline Labels, spelled exactly: Lesson, Psychology. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 14,
+   "chapter": "Lesson 8.7",
+   "role": "body",
+   "vo": "Lesson 8.7, Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Put numbers on portfolio risk and size positions from them. You will write that down when you get there.",
+   "cap": "Lesson 8.7, Quantitative risk: volatility, VaR, drawdown, correlation and sizing. Put numbers on portfolio.",
+   "concept": "Lesson 8.7: Quantitative risk: volatility, VaR, drawdown, correlation and sizing",
+   "image": "course/images/module-08-intro/014.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 8 \u00b7 The operating system', beat 14, role body. A step-by-step illustrated form, generic and unbranded, with one field highlighted in cyan. Chapter context: Lesson 8.7. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Lesson 8.7: Quantitative risk: volatility, VaR, drawdown, correlation and sizing. The picture must be understandable with the sound off. Teaching line: Lesson 8.7: Quantitative risk: volatility, VaR, drawdown, correlation and sizing Labels, spelled exactly: Lesson, Quantitative, VaR. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 15,
+   "chapter": "Outro",
+   "role": "outro",
+   "vo": "Next is Lesson 8.0, Mastery Starter. Bring nothing but the habit: one idea, one drawing, the word Example on any number. Education only, not financial advice.",
+   "cap": "Next is Lesson 8.0, Mastery Starter. Bring nothing but the habit: one idea, one drawing, the word Example on.",
+   "concept": "Next: Lesson 8.0, Mastery Starter",
+   "image": "course/images/module-08-intro/015.png",
+   "image_status": "needed",
+   "prompt": "Lesson 'Module 8 \u00b7 The operating system', beat 15, role outro. One large diagram centered on an off-white panel, with thin cyan callout lines. Chapter context: Outro. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Next: Lesson 8.0, Mastery Starter; a quiet next-step card with a single arrow to a blank next title, no price and no button that buys anything. The picture must be understandable with the sound off. Teaching line: Next: Lesson 8.0, Mastery Starter Labels, spelled exactly: Next, Lesson, Mastery, Starter. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint cyan grid, crisp cyan #00D4FF linework, electric blue #1E5EFF fills, off-white rounded panels, dark navy text on the panels. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  }
+ ],
+ "prev": "Lesson 7.9, Querying chain data yourself",
+ "prev_takeaway": "Answer your own research questions with on-chain queries, instead of relying on someone else's dashboard.",
+ "kind": "intro",
+ "module": 8,
+ "series_voice": "On-Chain Operator narrator, same disclaimer, same navy and cyan plate, same music bed."
+}
