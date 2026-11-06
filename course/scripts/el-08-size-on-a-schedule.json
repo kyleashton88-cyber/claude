@@ -6,8 +6,8 @@
  "music": "course/music/komiku-ambiant-truth.ogg",
  "next": "Multi-venue counterparty risk",
  "wpm_assumption": 143,
- "word_count": 2387,
- "estimated_minutes": 16.69,
+ "word_count": 2424,
+ "estimated_minutes": 16.95,
  "code_draws_visuals": false,
  "overlays_only": [
   "captions",
@@ -259,6 +259,22 @@
    "image": "course/images/fallback/el-08-size-on-a-schedule/21.png",
    "image_status": "pass",
    "prompt": "Lesson 'Size changes on a schedule', beat 21, role outro. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Outro. Show a dashed stop line below the band, and a price path that leaves the band and does not return; two venue boxes, the second one marked Halt, with separate inventory notes and no split ratio; a quiet next-step card with a single arrow to a blank next title, no price and no button that buys anything. The picture must be understandable with the sound off. Teaching line: Next lesson: Multi-venue counterparty risk. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons. Labels, spelled exactly: Next, Multi, Bring, Leave. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 22,
+   "chapter": "One more line",
+   "role": "body",
+   "vo": "One more line before you leave. November 2022 on the public path was a lower close, not a payment. Stamp it Example. No order is sent. Read it once more: a lower close is not a payment.",
+   "cap": "One more line before you leave. November 2022 on the public path was a lower close, not a payment.",
+   "concept": "November 2022 on the public path was a lower close, not a payment.",
+   "image": "course/images/el-08-size-on-a-schedule/001.png",
+   "image_status": "pass",
+   "prompt": "Passed still kept. The on-screen example is the ChatGPT chart plate, teal, no exchange name.",
+   "example": {
+    "kind": "chart-path",
+    "note": "Example, not a forecast."
+   },
+   "min_seconds": 18.8
   }
  ]
 }

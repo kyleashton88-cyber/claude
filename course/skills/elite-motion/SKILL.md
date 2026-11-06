@@ -2,10 +2,9 @@
 
 Code: `course/skills/elite_motion.py`. The renderer calls it for every Elite lesson.
 
-- The still or the example plate is scaled once with Lanczos.
-- A crop then drifts a few pixels inside the spare margin. That is the camera move. Labels are not resampled on every frame, which keeps the no-degradation rule.
-- A teal box steps every four seconds on ordinary beats, so the frame is not a static hold.
-- Beats with `example.kind` play a 24-frame drawing (a path, two paths, a wide day, or an analogy card) and then hold the last frame for the rest of the narration.
+- Every Elite beat is cut into pieces of at most 7.5 seconds (`segment_lengths`). Inside a piece the crop travels across one Lanczos scale, and the next piece starts from the opposite side. The picture is moving while the line is spoken, and a hold cannot run past 7.5 seconds. Labels are not scaled a second time.
+- Beats with `example.kind` use the ChatGPT still at `course/images/examples/<kind>.png`. Those plates are real charts or everyday analogies. The renderer does not draw them. They wait for Creative Studio and are not marked pass.
+- The previous masters stay in `course/masters/baseline/`. Do not delete them.
 
 Blueprint lessons do not take this path.
 

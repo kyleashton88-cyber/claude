@@ -172,6 +172,59 @@ def write_frames(kind: str, dest: Path, frames: int = 24) -> tuple[int, int]:
     return 12, frames
 
 
+MAX_HOLD = 7.5
+
+
+def segment_lengths(seconds: float, max_hold: float = MAX_HOLD) -> list[float]:
+    """Split a beat so every piece is at most max_hold seconds."""
+    if seconds <= 0:
+        return []
+    if seconds <= max_hold:
+        return [seconds]
+    count = int(seconds // max_hold)
+    if seconds - count * max_hold > 1e-6:
+        count += 1
+    count = max(count, 2)
+    step = seconds / count
+    parts = [step] * (count - 1)
+    parts.append(seconds - step * (count - 1))
+    return parts
+
+
+def picture_filter(index: int, seconds: float = 7.5) -> str:
+    """One Lanczos scale, then a crop that travels across the plate for this piece.
+
+    The next piece starts from the opposite side, so the move resets before 7.5
+    seconds. Pixels are not scaled again while the crop moves.
+    """
+    dur = max(float(seconds), 0.1)
+    width = 2800 if index % 2 else 2560
+    slot = index % 4
+    if slot == 0:
+        x_expr = f"24+(in_w-1920-48)*t/{dur:.3f}"
+        y_expr = "(in_h-1080)/2"
+    elif slot == 1:
+        x_expr = f"in_w-1920-24-(in_w-1920-48)*t/{dur:.3f}"
+        y_expr = "(in_h-1080)/2"
+    elif slot == 2:
+        x_expr = "(in_w-1920)/2"
+        y_expr = f"16+(in_h-1080-32)*t/{dur:.3f}"
+    else:
+        x_expr = "(in_w-1920)/2"
+        y_expr = f"in_h-1080-16-(in_h-1080-32)*t/{dur:.3f}"
+    return ",".join([
+        f"scale={width}:-2:flags=lanczos:in_color_matrix=bt709:out_color_matrix=bt709",
+        f"crop=1920:1080:x='{x_expr}':y='{y_expr}'",
+        "format=yuv420p",
+        "setparams=range=tv:color_primaries=bt709:color_trc=bt709:colorspace=bt709",
+    ])
+
+
+def example_png(kind: str) -> Path:
+    """ChatGPT still for a code-drawn kind. Missing file means do not draw a plate."""
+    return Path(__file__).resolve().parent.parent / "images" / "examples" / f"{kind}.png"
+
+
 def camera_and_callouts(callouts: bool = True) -> str:
     """Crop drift inside one Lanczos scale, plus a teal box that steps every 4 seconds.
 

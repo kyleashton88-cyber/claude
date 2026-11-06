@@ -8,9 +8,9 @@ This file is the read of where Elite stood, then the list of changes made after 
 
 All 11 lessons have a script, a full set of passed stills, a fresh voice track, and a new 1080p master of at least 15 minutes. Creative Studio's earlier video QA passed 9 of 11 and failed el-07 and el-09 because the voice and the caption named Bybit and Pionex. Those lines are gone. The new masters speak a generic US-persons line, teach through a public price path and a set of analogies, and move on screen. Creative Studio has not QA'd this new cut.
 
-## Per lesson, this cut
+## Per lesson, the baseline cut
 
-Voice times are the re-speak. Master times are the re-encode. Every master is 1920×1080, h264 and aac.
+The first table is the cut copied to `course/masters/baseline/`. Voice times are the re-speak. Master times are that encode. Every master is 1920×1080, h264 and aac. The second table is the travelling-crop encode that replaced `course/masters/el-*.mp4`.
 
 Wired stills are the pictures the script points at. Every wired still is in `FALLBACK_MANIFEST.json` with status pass, palette teal, and the no-degradation clause. Each file on disk is a 1536×1024 PNG. Manifest rows above the beat count are older v3 stills that are not on the long script.
 
@@ -28,7 +28,25 @@ Wired stills are the pictures the script points at. Every wired still is in `FAL
 | el-10 How to ask | 22 | 11 local, 11 v3 | 22 | 17.06 min | 17.11 min |
 | el-11 Paper plan | 21 | 10 local, 11 v3 | 21 | 17.30 min | 16.92 min |
 
-Masters are 1920×1080, h264 and aac, under `course/masters/`. Voice is 24 kHz mono. Music is `course/music/komiku-ambiant-truth.ogg`, ducked under the voice and loudnormed to about -16 LUFS.
+## New masters
+
+Same picture size and codecs. The hold check samples 2 frames a second and the longest identical run in every lesson is 0.50 seconds. el-08 is 17.02 minutes, past the 16.7 minute floor, because of the spoken tail.
+
+| Lesson | Master | Longest hold |
+|---|---|---|
+| el-01 Welcome | 16.82 min | 0.50 s |
+| el-02 Prerequisites | 17.33 min | 0.50 s |
+| el-03 Multi-layer | 17.16 min | 0.50 s |
+| el-04 Dynamic spacing | 17.10 min | 0.50 s |
+| el-05 Portfolio risk | 17.08 min | 0.50 s |
+| el-06 Circuit breakers | 16.82 min | 0.50 s |
+| el-07 Liquidation | 18.05 min | 0.50 s |
+| el-08 Size on a schedule | 17.02 min | 0.50 s |
+| el-09 Multi-venue | 17.40 min | 0.50 s |
+| el-10 How to ask | 17.11 min | 0.50 s |
+| el-11 Paper plan | 16.93 min | 0.50 s |
+
+Music is `course/music/komiku-ambiant-truth.ogg`, ducked under the voice and loudnormed to about -16 LUFS. Voice is 24 kHz mono.
 
 One manifest row has no no-degradation clause: `el-05-portfolio-risk-11` at `course/images/fallback/el-05-portfolio-risk/11.png`. It is not wired to a long-script beat. The other 312 Elite rows are teal and carry the clause. None of the 313 Elite rows is a fail.
 
@@ -47,7 +65,11 @@ Video QA after the masters: 9 of 11 passed. el-07 around 05:06 and el-09 around 
 
 Exchange names were removed from every Elite script field. The spoken line is now: "United States: some venues' futures products are not available to US persons." A search of `course/scripts/el-*.json` for Bybit, Pionex, Binance, OKX, KuCoin, Bitget, Coinbase, and Kraken returns nothing. Captions that had been cut off at "Bybit" were rebuilt from the new line. The four practice captions in el-07 beats 14 and 18 and el-09 beats 14 and 18 were in that set.
 
-Each lesson's key beats now teach through one real example. The picture is drawn at render time, in teal, and animated across about two seconds, then held. The passed still remains the file the script points at. Chart and analogy beats play the drawn plate instead, so the example is what the learner sees while the line is spoken.
+Stewart's 6 November direction replaces the code-drawn plates. The key beats still teach through one real example, and the picture on those beats is now a ChatGPT still in `course/images/examples/`. The passed still stays the file the script points at, so the pass gate is unchanged. The renderer shows the example still while that line is spoken. Creative Studio has not reviewed the new stills. They are not marked pass.
+
+The crop travels across the plate for each piece of the beat, and the next piece starts from the opposite side. No piece is longer than 7.5 seconds, which keeps a hold inside the 8 second limit. One Lanczos scale, then the crop. Labels are not scaled again.
+
+The masters Creative Studio already reviewed are copied to `course/masters/baseline/` and are not deleted. el-08 adds a spoken tail after the outro so the picture runs past 16.7 minutes. The tail says November 2022 on the public path was a lower close, not a payment.
 
 | Lesson | Example on screen |
 |---|---|
@@ -72,26 +94,26 @@ New shared skills, because `bc-b0e396a6` was not available to copy from:
 - `course/skills/real-market-charts/SKILL.md`
 - `course/skills/audio-mastering/SKILL.md`
 
-The renderer now uses that motion code for Elite only. Blueprint stays a still hold. The camera is a crop inside one Lanczos scale, so labels are not resampled on every frame.
+The renderer uses that motion code for Elite only. Blueprint stays a still hold.
 
-Not bought, and not run: ChatGPT image generation, ElevenLabs, HeyGen, Remotion, and Manim. Those last two are free software and are not installed. Stewart's yes comes before any of them.
+The ten example stills were generated on 6 November 2026 on the image path Stewart named, with the no-degradation clause in the prompt. ElevenLabs, HeyGen, Remotion, and Manim were not used. Remotion and Manim are free software and are not installed.
 
 ## Done
 
 - Exchange names removed from Elite script voice, captions, concepts, and prompts.
-- Real examples written into the key beats and drawn as teal plates while those lines play.
-- All 11 lessons re-spoken with Kokoro and re-encoded at 1920×1080. Every new master is at least 16.69 minutes.
-- Motion path added for Elite. Blueprint renders are unchanged.
+- Real examples written into the key beats. The on-screen plate for those beats is a ChatGPT still, not a code drawing.
+- The reviewed masters are kept under `course/masters/baseline/`.
+- el-08 has a spoken tail so the new picture clears 16.7 minutes.
+- Motion path added for Elite: a travelling crop, cut at 7.5 seconds. Blueprint renders are unchanged.
 
 ## In progress
 
-Nothing is rendering. The re-speak and the re-encode of all 11 lessons have finished.
+Nothing is rendering. The travelling-crop encode of all 11 lessons has finished. Creative Studio QA of the new stills and the new masters has not started.
 
 ## Blocked
 
-- Creative Studio has not QA'd this cut. The drawn plates and the new masters are waiting on that review. Do not treat them as passed.
-- PR #6 is not merged, on purpose. Masters are ordinary git files and several are over GitHub's 50 MB hint.
-- No paid art was commissioned, so the new plates are drawings of public data and analogies, not photographs.
+- Creative Studio has not QA'd the ChatGPT stills or the new masters. Do not mark the stills pass.
+- PR #6 is not merged, on purpose. This cut is a separate branch. Masters are ordinary git files and several are over GitHub's 50 MB hint.
 
 ## Next
 

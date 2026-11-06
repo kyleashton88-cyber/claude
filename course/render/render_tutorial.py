@@ -146,7 +146,9 @@ def run(cmd: list[str]) -> None:
 def beat_seconds(beat: dict) -> float:
     words = len((beat.get("vo") or "").split())
     floor = {"intro": 5.5, "outro": 8.0, "legal": 12.0}.get(beat["role"], 6.0)
-    return max(floor, words / WPM * 60)
+    # min_seconds keeps a short line on screen long enough for the spoken take.
+    # Kokoro at 0.78 can run slower than the 143 wpm picture estimate.
+    return max(floor, words / WPM * 60, float(beat.get("min_seconds") or 0))
 
 
 def accent_for(script: dict) -> str:
@@ -198,29 +200,29 @@ def render_script(script: dict) -> Path:
         ])
         kind = (beat.get("example") or {}).get("kind") if elite else None
         if kind:
-            frame_dir = work / f"frames-{beat['n']:03d}"
-            fps, count = elite_motion.write_frames(kind, frame_dir)
-            pad = max(0.0, secs - count / fps)
-            picture = elite_motion.camera_and_callouts(callouts=False)
-            vf = picture + f",tpad=stop_mode=clone:stop_duration={pad:.3f}," + overlays
-            run([
-                "ffmpeg", "-y", "-v", "error",
-                "-framerate", str(fps), "-i", str(frame_dir / "frame-%03d.png"),
-                "-vf", vf, "-frames:v", str(frames), *X264, "-r", "30", str(clip),
-            ])
-        elif elite:
-            vf = elite_motion.camera_and_callouts(callouts=True) + "," + overlays
-            run([
-                "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(ROOT / beat["image"]),
-                "-vf", vf, "-frames:v", str(frames), *X264, "-r", "30", str(clip),
-            ])
+            src = elite_motion.example_png(kind)
+            if not src.is_file():
+                raise SystemExit(f"{script['id']} beat {beat['n']} example {kind} has no still at {src}")
+        else:
+            src = ROOT / beat["image"]
+        if elite:
+            pieces = elite_motion.segment_lengths(secs)
+            for index, piece in enumerate(pieces):
+                piece_frames = max(1, int(round(piece * 30)))
+                piece_clip = work / f"{beat['n']:03d}-{index:02d}.mp4"
+                vf = elite_motion.picture_filter(index, piece) + "," + overlays
+                run([
+                    "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(src),
+                    "-vf", vf, "-frames:v", str(piece_frames), *X264, "-r", "30", str(piece_clip),
+                ])
+                clips.append(piece_clip)
         else:
             vf = FRAME_SCALE + "," + overlays
             run([
-                "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(ROOT / beat["image"]),
+                "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(src),
                 "-vf", vf, "-frames:v", str(frames), *X264, "-r", "30", str(clip),
             ])
-        clips.append(clip)
+            clips.append(clip)
     lst = work / "list.txt"
     lst.write_text("".join(f"file '{c}'\n" for c in clips))
     silent = work / "silent.mp4"
