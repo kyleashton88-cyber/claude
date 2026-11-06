@@ -141,7 +141,7 @@ def paint(shot: dict, local: float, lesson_p: float, palette: str = "navy-cyan")
     elif kind == "stack":
         _stack(draw, shot, local, accent)
     elif kind == "analogy":
-        _analogy(draw, shot, local, dur, accent)
+        _analogy(draw, shot, local, dur, accent, img)
     elif kind == "legal":
         _legal(draw, local, accent)
     elif kind == "outro":
@@ -227,24 +227,44 @@ def _worked(draw, shot, local, accent) -> None:
         y += 120
 
 
-def _analogy(draw, shot, local, dur, accent) -> None:
-    name = shot.get("analogy") or "ladder"
+def _paste_still(base: Image.Image, path: str, box, local: float) -> None:
+    """Lanczos downscale only. The still slides in. It is never enlarged."""
+    panel = Image.new("RGB", (box[2] - box[0], box[3] - box[1]), NAVY)
+    src = Image.open(path).convert("RGB")
+    scale = min(panel.width / src.width, panel.height / src.height)
+    if scale > 1:
+        scale = 1
+    nw, nh = max(1, int(src.width * scale)), max(1, int(src.height * scale))
+    fitted = src.resize((nw, nh), Image.Resampling.LANCZOS)
+    arrive = ease(min(1.0, local / 0.55))
+    xoff = int((1 - arrive) * 48)
+    x = (panel.width - nw) // 2 + xoff
+    y = (panel.height - nh) // 2
+    panel.paste(fitted, (x, y))
+    base.paste(panel, (box[0], box[1]))
+
+
+def _analogy(draw, shot, local, dur, accent, base: Image.Image | None = None) -> None:
     box = (140, 150, 980, 820)
-    draw.rounded_rectangle(box, 24, fill=GLASS, outline=accent, width=2)
-    draw.text((170, 175), "ANALOGY", font=_font(22, True), fill=accent)
-    t = ease(min(1.0, local / 0.8))
-    if name == "fence":
-        _fence(draw, t, accent)
-    elif name == "list":
-        _list(draw, t, accent)
-    elif name == "buckets":
-        _buckets(draw, t, accent)
+    still = shot.get("still")
+    if still and base is not None:
+        _paste_still(base, still, box, local)
+        draw.rounded_rectangle(box, 24, outline=accent, width=2)
+        draw.text((box[0] + 24, box[1] + 16), "ANALOGY", font=_font(22, True), fill=accent)
     else:
-        _ladder(draw, t, accent)
-    # The real path stays beside the analogy.
-    mini = dict(shot)
-    mini_box_shot = shot
-    _chart(draw, mini_box_shot, local, dur, accent, box=(1020, 150, 1800, 820))
+        draw.rounded_rectangle(box, 24, fill=GLASS, outline=accent, width=2)
+        draw.text((170, 175), "ANALOGY", font=_font(22, True), fill=accent)
+        t = ease(min(1.0, local / 0.8))
+        name = shot.get("analogy") or "ladder"
+        if name == "fence":
+            _fence(draw, t, accent)
+        elif name == "list":
+            _list(draw, t, accent)
+        elif name == "buckets":
+            _buckets(draw, t, accent)
+        else:
+            _ladder(draw, t, accent)
+    _chart(draw, shot, local, dur, accent, box=(1020, 150, 1800, 820))
 
 
 def _ladder(draw, t, accent) -> None:
