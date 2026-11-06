@@ -28,11 +28,22 @@ LAYOUTS = (
     "A step-by-step illustrated form, generic and unbranded, with one field highlighted in cyan.",
 )
 
+# Creative Studio, 6 Nov 2026, after el-01 shots 001-006 failed on placement.
+# Glyph top is y=110, capital height is about 159, and no mark sits below y=870.
+ELITE_HEADLINE = (
+    "Elite headline template: one line, top-left, outside any card. "
+    "Glyph top at y=110. Capital height about 159 pixels. "
+    "First word white, second word teal #14E0C8. "
+    "Rows 0 through 109 are background only. "
+    "Diagrams, labels and every other mark end at or above y=870. "
+    "Rows 871 through 1023 are background only."
+)
+
 STYLE_TEAL = (
     "Premium Grid Bot Elite still, 16:9, 1536x1024. "
     "Near-black navy with teal glow, faint teal grid, frosted teal glass cards and rim light. "
     "Not flat navy, not matte grey, not an off-white paper card. Never recolor the glow to cyan #00D4FF. "
-    "The top 80 pixels and the bottom 80 pixels are empty background only. "
+    + ELITE_HEADLINE + " "
     "At most four short English labels, one to three words each, spelled exactly as given. "
     "If a chart appears, it moves sideways and is stamped Example. "
     "Coins are BTC, ETH and USDT only. No banknotes, no profit, no trophies, no rockets, "
@@ -202,8 +213,14 @@ def write_prompt(concept: str, chapter: str, role: str, beat_n: int, lesson_titl
     if teal:
         scene = scene.replace("cyan", "teal")
     style = STYLE_TEAL if teal else STYLE
+    rules = HARD_RULES
+    if teal:
+        rules = rules.replace(
+            "Nothing in the top 80px or the bottom 80px. ",
+            "Elite placement overrides the 80px margin: " + ELITE_HEADLINE + " ",
+        )
     return (
         f"{variant} Lesson '{lesson_title}', beat {beat_n}, role {role}. {layout} {scene} "
         f"The picture must be understandable with the sound off. Teaching line: {concept.strip()} "
-        f"{label_line} {style} {HARD_RULES}"
+        f"{label_line} {style} {rules}"
     )
