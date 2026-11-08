@@ -15,11 +15,25 @@ def is_squeeze(width30, width180, width30_min=None, width180_ratio=None):
     """True when the 30-day range is under the floor or under 1/ratio of the 180-day range."""
     if width30_min is None: width30_min = SQUEEZE_WIDTH30_MIN
     if width180_ratio is None: width180_ratio = SQUEEZE_WIDTH180_RATIO
-    return width30 < width30_min or width30 < width180 / width180_ratio
+    return bool(width30 < width30_min or width30 < width180 / width180_ratio)
 
-def composite_score(mid, long, liq):
-    """Unchanged window blend: half the 30-day score, 0.4 of the 180-day score, plus liquidity."""
-    return 0.5*mid + 0.4*long + 10*liq
+# Review C. mid30 and long180 are the win() scores (the mid30 / long180 columns),
+# not prices. Strict on all three. A hit zeros the 0.4 long-window weight and
+# leaves the 0.5 mid weight and the liquidity term as they are — no renormalizing.
+DRIFT30_GUARD_MIN = 0.8
+ADX14_GUARD_MIN = 40
+LONG_MID_GAP_MIN = 15
+LONG_WINDOW_WEIGHT = 0.4
+
+def long_window_weight(drift30, adx14, long180, mid30):
+    if drift30 > DRIFT30_GUARD_MIN and adx14 > ADX14_GUARD_MIN and long180 > mid30 + LONG_MID_GAP_MIN:
+        return 0.0
+    return LONG_WINDOW_WEIGHT
+
+def composite_score(mid, long, liq, long_weight=None):
+    """Window blend: half the 30-day score, long_weight of the 180-day score, plus liquidity."""
+    if long_weight is None: long_weight = LONG_WINDOW_WEIGHT
+    return 0.5*mid + long_weight*long + 10*liq
 
 def kl(s,n=180):
     k=get(f"https://api.pionex.com/api/v1/market/klines?symbol={s}_USDT&interval=1D&limit={n}")["data"]["klines"]
@@ -59,7 +73,7 @@ def main():
         data[s]=d; m=win(d.tail(30)); L=win(d)
         liq=min(np.log10(max(vol,1))/10,1)  # $10B/day = 1
         if is_squeeze(m[2], L[2]): continue
-        score=composite_score(m[0], L[0], liq)
+        score=composite_score(m[0], L[0], liq, long_window_weight(m[3], m[4], L[0], m[0]))
         rows.append(dict(coin=s,name=name,score=round(score,1),mid30=round(m[0],1),long180=round(L[0],1),cross30=m[1],width30=round(m[2],3),drift30=round(m[3],2),adx14=round(m[4],1),cross180=L[1],width180=round(L[2],3),vol24h_usd=int(vol)))
     df=pd.DataFrame(rows).sort_values("score",ascending=False); df.to_csv("scores.csv",index=False)
     asof=dt.datetime.now(ZoneInfo("Australia/Sydney"))
