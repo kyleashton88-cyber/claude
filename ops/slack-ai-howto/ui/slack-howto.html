@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Slack how-to stills</title>
+<style>
+  :root {
+    --sidebar: #1a1d21;
+    --side-text: #e8e8e8;
+    --side-dim: #ababad;
+    --active: rgba(255,255,255,.14);
+    --line: #e6e6e6;
+    --text: #1d1c1d;
+    --muted: #616061;
+    --blue: #1264a3;
+    --teal: #0b7a75;
+    --pill: #f8f8f8;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; font-family: Inter, "Noto Sans", sans-serif; color: var(--text); background: #fff; }
+  .app { display: flex; width: 1920px; height: 1080px; }
+  .sidebar { width: 300px; background: var(--sidebar); color: var(--side-text); padding: 18px 12px; flex: none; }
+  .ws { font-weight: 700; font-size: 20px; padding: 8px 10px 16px; }
+  .ws small { display: block; font-weight: 500; color: var(--side-dim); font-size: 13px; margin-top: 2px; }
+  .label { font-size: 15px; font-weight: 700; color: var(--side-dim); padding: 10px 10px 6px; }
+  .label.hot { outline: 3px solid #36c5f0; outline-offset: 2px; border-radius: 8px; color: #fff; }
+  .chan, .dm { display: flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 8px; font-size: 16px; color: var(--side-text); }
+  .chan.active { background: var(--active); font-weight: 700; }
+  .hash { color: var(--side-dim); }
+  .main { flex: 1; display: flex; flex-direction: column; min-width: 0; background: #fff; position: relative; }
+  .top { height: 64px; border-bottom: 1px solid var(--line); display: flex; align-items: center; padding: 0 20px; gap: 10px; }
+  .top h1 { font-size: 20px; margin: 0; font-weight: 700; }
+  .top p { margin: 0; color: var(--muted); font-size: 13px; }
+  .top.hot { box-shadow: inset 0 0 0 3px #36c5f0; }
+  .stream { flex: 1; overflow: hidden; padding: 18px 22px 8px; }
+  .msg { display: flex; gap: 12px; padding: 8px 8px; border-radius: 8px; }
+  .msg.hot { box-shadow: inset 0 0 0 3px #36c5f0; background: #f3fbfe; }
+  .av { width: 40px; height: 40px; border-radius: 8px; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; flex: none; }
+  .who { font-weight: 700; font-size: 16px; }
+  .time { color: var(--muted); font-weight: 500; font-size: 13px; margin-left: 8px; }
+  .body { font-size: 16px; line-height: 1.45; margin-top: 2px; }
+  .body b { font-weight: 700; }
+  .mention { color: var(--blue); background: #e8f5fa; border-radius: 4px; padding: 0 3px; font-weight: 700; }
+  .replies { color: var(--blue); font-weight: 700; font-size: 14px; margin: 4px 0 0 52px; }
+  .replies.hot { outline: 3px solid #36c5f0; outline-offset: 3px; border-radius: 6px; display: inline-block; }
+  .file { margin-top: 8px; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; width: 420px; font-size: 14px; }
+  .composer-wrap { padding: 8px 18px 18px; }
+  .composer { border: 1px solid #c7c7c7; border-radius: 10px; min-height: 92px; padding: 10px 12px; font-size: 16px; }
+  .composer.hot { box-shadow: 0 0 0 3px #36c5f0; }
+  .placeholder { color: #8d8d8d; }
+  .send { margin-top: 8px; background: #007a5a; color: #fff; border: 0; border-radius: 6px; padding: 6px 12px; font-weight: 700; font-size: 14px; }
+  .send.ghost { background: #e8e8e8; color: #888; }
+  .picker { position: absolute; left: 340px; bottom: 150px; width: 440px; background: #fff; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 12px 32px rgba(0,0,0,.16); overflow: hidden; }
+  .picker .row { display: flex; gap: 10px; align-items: center; padding: 10px 12px; font-size: 16px; }
+  .picker .row.on { background: #1264a3; color: #fff; }
+  .picker .meta { font-size: 12px; opacity: .8; }
+  .thread { width: 460px; border-left: 1px solid var(--line); background: #fff; display: flex; flex-direction: column; flex: none; }
+  .thread header { height: 64px; border-bottom: 1px solid var(--line); display: flex; align-items: center; padding: 0 16px; font-weight: 700; font-size: 18px; }
+  .thread .stream { padding: 12px; }
+  .callout { position: absolute; z-index: 5; background: #102027; color: #fff; border-radius: 10px; padding: 10px 14px; font-size: 16px; font-weight: 650; max-width: 420px; box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+  .callout span { color: #7ee0d6; display: block; font-size: 12px; letter-spacing: .04em; font-weight: 700; margin-bottom: 2px; }
+  .cursor { position: absolute; z-index: 6; width: 18px; height: 18px; border-radius: 50%; border: 3px solid #fff; background: #e01e5a; box-shadow: 0 0 0 2px #e01e5a; }
+  .note { position: absolute; right: 24px; top: 78px; background: #fff8e6; border: 1px solid #f0d48a; color: #5c4813; border-radius: 8px; padding: 8px 10px; font-size: 14px; font-weight: 650; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+const channels = [
+  ["all-audience-asset-co", true],
+  ["staff-chat", false],
+  ["legal", false],
+  ["sales-floor", false],
+  ["video-creation", false],
+  ["customer-success", false],
+  ["disputes", false]
+];
+
+function esc(s) {
+  return s.replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+}
+
+function sidebar(hot) {
+  const chans = channels.map(([name, active]) =>
+    `<div class="chan ${active ? "active" : ""}"><span class="hash">#</span> ${name}</div>`).join("");
+  return `<aside class="sidebar">
+    <div class="ws">Audience Asset Co<small>Market Pros</small></div>
+    <div class="label ${hot === "channels" ? "hot" : ""}">Channels</div>
+    ${chans}
+    <div class="label">Direct messages</div>
+    <div class="dm">Stewart Crown</div>
+    <div class="dm">Jess</div>
+    <div class="dm">Orchestrator Bot</div>
+  </aside>`;
+}
+
+function msg(opts) {
+  return `<div class="msg ${opts.hot ? "hot" : ""}">
+    <div class="av" style="background:${opts.color}">${opts.initials}</div>
+    <div>
+      <div><span class="who">${esc(opts.who)}</span><span class="time">${esc(opts.time)}</span></div>
+      <div class="body">${opts.html}</div>
+      ${opts.file ? `<div class="file">PDF · ${esc(opts.file)}</div>` : ""}
+    </div>
+  </div>`;
+}
+
+const lea = msg({
+  who: "Jess", initials: "J", color: "#2eb67d", time: "9:22 PM",
+  html: `<b>For:</b> <span class="mention">@Orchestrator Bot</span> <span class="mention">@Stewart Crown</span><br><b>Task:</b> Who is booked to take Lea’s Power Session, Wed 11 Nov, 3:00pm? <b>By:</b> 9:00am Tue 10 Nov.`
+});
+const leaReply = msg({
+  who: "Stewart Crown", initials: "S", color: "#611f69", time: "9:24 PM",
+  html: `<b>Orchestrator Bot:</b> <span class="mention">@Jess</span> Lea is Stewart’s virtual assistant. <b>Stewart</b> is booked for the 20-minute Power Session, Wed 11 Nov 2026, 3:00–3:20pm AEDT, on Zoom.`
+});
+const ask = msg({
+  who: "Jess", initials: "J", color: "#2eb67d", time: "9:27 PM",
+  hot: false,
+  html: `<b>For:</b> <span class="mention">@Orchestrator Bot</span> <span class="mention">@Stewart Crown</span><br><b>What:</b> Give me the remaining tasks that I am due to complete by tomorrow.<br><b>By:</b> 9:59pm, Mon 9 Nov.`
+});
+const reply = msg({
+  who: "Stewart Crown", initials: "S", color: "#611f69", time: "9:30 PM",
+  html: `<b>Orchestrator Bot:</b> <span class="mention">@Jess</span> Two items were listed as due tomorrow, Tue 10 Nov (Sydney time).<br>1. Graham’s interview file — done on your side. No need to resend it.<br>2. Artie’s trade plan — still open. Re-attach it in the DM and your part is done. Stewart’s review is then on him.<br>Nothing else is due tomorrow. Sent using Cursor.`
+});
+const follow = msg({
+  who: "Jess", initials: "J", color: "#2eb67d", time: "9:33 PM",
+  html: `2. Attached please find <b>Artie’s trade plan</b> (due Tue 10 Nov).<br><span class="mention">@Stewart Crown</span> <span class="mention">@Orchestrator Bot</span>`,
+  file: "Arty_Pionex_Capital_First_Trade_Plan.pdf"
+});
+const confirm = msg({
+  who: "Stewart Crown", initials: "S", color: "#611f69", time: "9:34 PM",
+  html: `<b>Orchestrator Bot:</b> <span class="mention">@Jess</span> Got it. That PDF is Artie’s plan. Your Tuesday item is done on your side. Stewart’s review is now on him.`
+});
+
+const shots = {
+  S02: {
+    hotLabel: "channels",
+    caption: ["STEP 2", "Find Channels in the left sidebar"],
+    captionAt: [340, 700],
+    cursor: [92, 128],
+    thread: false,
+    messages: lea + leaReply + ask,
+    composer: `<span class="placeholder">Message #all-audience-asset-co</span>`,
+    composerHot: false
+  },
+  S03: {
+    hotTop: true,
+    caption: ["STEP 3", "Open #all-audience-asset-co for a company-wide ask"],
+    captionAt: [340, 700],
+    cursor: [380, 28],
+    thread: false,
+    messages: lea + leaReply + ask,
+    composer: `<span class="placeholder">Message #all-audience-asset-co</span>`
+  },
+  S04: {
+    caption: ["STEP 4", "Type @ and choose Orchestrator Bot"],
+    captionAt: [780, 560],
+    cursor: [390, 768],
+    thread: false,
+    messages: lea + leaReply,
+    composer: `<span class="mention">@</span>`,
+    composerHot: true,
+    picker: true
+  },
+  S05: {
+    caption: ["STEP 5", "One clear ask. This draft is not sent."],
+    captionAt: [340, 560],
+    cursor: [1180, 980],
+    thread: false,
+    messages: lea + leaReply,
+    composer: `<span class="mention">@Orchestrator Bot</span> <b>For:</b> Stewart. <b>What:</b> Summarise today’s open staff to-dos in this channel. <b>By:</b> 5:00pm today.`,
+    composerHot: true,
+    draftNote: true
+  },
+  S06: {
+    caption: ["STEP 6", "The ask is already in the channel for Stewart and the team"],
+    captionAt: [340, 700],
+    cursor: [170, 330],
+    thread: false,
+    highlightAsk: true,
+    messages: "ASK",
+    showReplies: true,
+    composer: `<span class="placeholder">Message #all-audience-asset-co</span>`
+  },
+  S07: {
+    caption: ["STEP 7", "Click Reply in thread. Keep follow-ups here."],
+    captionAt: [360, 640],
+    cursor: [175, 448],
+    thread: true,
+    highlightAsk: true,
+    repliesHot: true,
+    messages: "ASK",
+    threadMessages: ask + reply,
+    composer: `<span class="placeholder">Reply…</span>`
+  },
+  S08: {
+    caption: ["STEP 8", "Read the bot reply in that same thread"],
+    captionAt: [360, 680],
+    cursor: [1580, 280],
+    thread: true,
+    messages: "ASK",
+    threadMessages: ask + reply,
+    highlightThreadReply: true,
+    composer: `<span class="placeholder">Reply…</span>`
+  },
+  S08b: {
+    caption: ["STEP 8", "Missing a file? Reply in the thread. Do not start a new post."],
+    captionAt: [340, 680],
+    cursor: [1600, 620],
+    thread: true,
+    messages: "ASK",
+    threadMessages: ask + reply + follow + confirm,
+    composer: `<span class="placeholder">Reply…</span>`
+  }
+};
+
+function render(id) {
+  const s = shots[id];
+  let messages = s.messages === "ASK" ? lea + leaReply + ask : s.messages;
+  if (s.highlightAsk) messages = lea + leaReply + msg({
+    who: "Jess", initials: "J", color: "#2eb67d", time: "9:27 PM", hot: true,
+    html: `<b>For:</b> <span class="mention">@Orchestrator Bot</span> <span class="mention">@Stewart Crown</span><br><b>What:</b> Give me the remaining tasks that I am due to complete by tomorrow.<br><b>By:</b> 9:59pm, Mon 9 Nov.`
+  });
+  const replies = s.showReplies || s.repliesHot
+    ? `<div class="replies ${s.repliesHot ? "hot" : ""}">3 replies &nbsp; Last reply today at 9:34 PM</div>` : "";
+  let threadHtml = "";
+  if (s.thread) {
+    let body = s.threadMessages;
+    if (s.highlightThreadReply) {
+      body = ask + msg({
+        who: "Stewart Crown", initials: "S", color: "#611f69", time: "9:30 PM", hot: true,
+        html: `<b>Orchestrator Bot:</b> <span class="mention">@Jess</span> Two items were listed as due tomorrow, Tue 10 Nov (Sydney time).<br>1. Graham’s interview file — done on your side.<br>2. Artie’s trade plan — still open until you re-attach it.<br>Nothing else is due tomorrow.`
+      });
+    }
+    threadHtml = `<aside class="thread"><header>Thread</header><div class="stream">${body}</div></aside>`;
+  }
+  const picker = s.picker ? `<div class="picker">
+      <div class="row on"><div class="av" style="background:#0b7a75;width:32px;height:32px;font-size:12px">O</div><div>Orchestrator Bot<div class="meta">Routes work across desks</div></div></div>
+      <div class="row"><div class="av" style="background:#1264a3;width:32px;height:32px;font-size:12px">C</div><div>Creative Studio<div class="meta">When the job is clearly theirs</div></div></div>
+      <div class="row"><div class="av" style="background:#611f69;width:32px;height:32px;font-size:12px">G</div><div>ChatGPT<div class="meta">When the job is clearly theirs</div></div></div>
+    </div>` : "";
+  document.getElementById("root").innerHTML = `<div class="app">
+    ${sidebar(s.hotLabel)}
+    <section class="main">
+      <div class="top ${s.hotTop ? "hot" : ""}"><div><h1># all-audience-asset-co</h1><p>Company-wide asks · Market Pros staff</p></div></div>
+      <div class="stream">${messages}${replies}</div>
+      <div class="composer-wrap">
+        <div class="composer ${s.composerHot ? "hot" : ""}">${s.composer}</div>
+        <button class="send ${s.draftNote ? "ghost" : ""}">${s.draftNote ? "Draft only — do not send" : "Send"}</button>
+      </div>
+      ${s.draftNote ? `<div class="note">Draft stays in the box. Nothing is posted.</div>` : ""}
+      ${picker}
+      <div class="callout" style="left:${s.captionAt[0]}px;top:${s.captionAt[1]}px"><span>${s.caption[0]}</span>${s.caption[1]}</div>
+      <div class="cursor" style="left:${s.cursor[0]}px;top:${s.cursor[1]}px"></div>
+    </section>
+    ${threadHtml}
+  </div>`;
+}
+window.renderShot = render;
+render("S02");
+</script>
+</body>
+</html>
