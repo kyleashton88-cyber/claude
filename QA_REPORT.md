@@ -51,7 +51,7 @@ There is no `course/masters/` tree in this repository, and commit `bdbc357` is n
 | `bp-04-market-regimes` | 2:21 (141s) | no branded bumper; opens on the hook still | next-lesson card, text collides | yes | 46 | 47 | 15 | captions and cards only; pictures are stills | navy + cyan | fail |
 | `bp-05-spacing-and-range` | no mp4 in the repo | not probed | not probed | not probed | 48 | 49 | 19 | captions and cards only; pictures are stills | navy + cyan | fail |
 | `bp-06-entry-and-exit` | 2:11 (131s) | no branded bumper; opens on the hook still | next-lesson card, text collides | yes | 45 | 46 | 14 | captions and cards only; pictures are stills | navy + cyan | fail |
-| `bp-07-bybit-spot-paper` | no mp4 in the repo | not probed | not probed | not probed | 47 | 46 | 14 | captions and cards only; pictures are stills | navy + cyan | fail |
+| `bp-07-spot-paper-trading` | no mp4 in the repo | not probed | not probed | not probed | 47 | 46 | 14 | captions and cards only; pictures are stills | navy + cyan | fail |
 | `bp-08-managing-and-monitoring` | no mp4 in the repo | not probed | not probed | not probed | 43 | 45 | 13 | captions and cards only; pictures are stills | navy + cyan | fail |
 | `bp-09-common-mistakes` | no mp4 in the repo | not probed | not probed | not probed | 46 | 47 | 12 | captions and cards only; pictures are stills | navy + cyan | fail |
 | `bp-10-scaling-up` | no mp4 in the repo | not probed | not probed | not probed | 43 | 46 | 15 | captions and cards only; pictures are stills | navy + cyan | fail |

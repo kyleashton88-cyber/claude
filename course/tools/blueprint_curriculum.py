@@ -466,7 +466,7 @@ LESSONS = [
     {
         "slug": "bp-06-entry-and-exit",
         "title": "Entry and exit rules",
-        "next": "Bybit spot setup on paper",
+        "next": "Spot paper trading",
         "facts": [
             ("Hook", "hook",
              "Entry without an exit is a page that cannot finish.",
@@ -555,8 +555,8 @@ LESSONS = [
         ],
     },
     {
-        "slug": "bp-07-bybit-spot-paper",
-        "title": "Bybit spot setup on paper",
+        "slug": "bp-07-spot-paper-trading",
+        "title": "Spot paper trading",
         "next": "Managing and monitoring",
         "facts": [
             ("Hook", "hook",
@@ -566,8 +566,8 @@ LESSONS = [
              "Write Paper spot at the top of a new page.",
              "If you are on a live ticket, you are in the wrong assignment."),
             ("Not affiliated", "body",
-             "Bybit is a name you may see on a venue. This course is not affiliated with Bybit, and it does not speak for them.",
-             "Say the name as BY-bit if you hit it. The pictures here stay generic so the fields matter more than the logo.",
+             "A venue name may be printed on a real screen. This course is not affiliated with any venue, and it does not speak for one.",
+             "The pictures stay generic so the fields matter more than a logo.",
              "a generic form with the logo space deliberately blank",
              "Write Not affiliated in the margin.",
              "A matching logo is not part of the lesson."),

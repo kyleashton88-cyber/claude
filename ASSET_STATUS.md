@@ -43,7 +43,7 @@ None. A lesson is listed here only after its master exists and both the script c
 | `bp-04-market-regimes` | Grid Bot Blueprint | waiting on images | 0/20 | no | no |
 | `bp-05-spacing-and-range` | Grid Bot Blueprint | waiting on images | 0/19 | no | no |
 | `bp-06-entry-and-exit` | Grid Bot Blueprint | waiting on images | 0/20 | no | no |
-| `bp-07-bybit-spot-paper` | Grid Bot Blueprint | waiting on images | 0/20 | no | no |
+| `bp-07-spot-paper-trading` | Grid Bot Blueprint | waiting on images | 0/20 | no | no |
 | `bp-08-managing-and-monitoring` | Grid Bot Blueprint | waiting on images | 0/20 | no | no |
 | `bp-09-common-mistakes` | Grid Bot Blueprint | waiting on images | 0/21 | no | no |
 | `bp-10-scaling-up` | Grid Bot Blueprint | waiting on images | 0/21 | no | no |
@@ -196,7 +196,7 @@ BLOCKED bp-03-what-is-a-grid-bot: 19 of 19 images missing, voice missing, est 16
 BLOCKED bp-04-market-regimes: 20 of 20 images missing, voice missing, est 17.02 min
 BLOCKED bp-05-spacing-and-range: 19 of 19 images missing, voice missing, est 16.73 min
 BLOCKED bp-06-entry-and-exit: 20 of 20 images missing, voice missing, est 16.7 min
-BLOCKED bp-07-bybit-spot-paper: 20 of 20 images missing, voice missing, est 17.29 min
+BLOCKED bp-07-spot-paper-trading: 20 of 20 images missing, voice missing, est 17.29 min
 BLOCKED bp-08-managing-and-monitoring: 20 of 20 images missing, voice missing, est 16.67 min
 BLOCKED bp-09-common-mistakes: 21 of 21 images missing, voice missing, est 17.33 min
 BLOCKED bp-10-scaling-up: 21 of 21 images missing, voice missing, est 16.93 min
