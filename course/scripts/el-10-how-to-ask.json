@@ -6,8 +6,8 @@
  "music": "course/music/komiku-ambiant-truth.ogg",
  "next": "Paper plan instead of a 30-day deploy",
  "wpm_assumption": 143,
- "word_count": 2442,
- "estimated_minutes": 17.08,
+ "word_count": 2447,
+ "estimated_minutes": 17.11,
  "code_draws_visuals": false,
  "overlays_only": [
   "captions",
@@ -21,12 +21,16 @@
    "n": 1,
    "chapter": "Hook",
    "role": "hook",
-   "vo": "A useful question describes a process. Last page you wrote one venue name. This lesson is the support floor: how to ask, and where a question goes when the first ask is not enough. On the diagram for this beat, look for a question card that quotes a worksheet line, with the balance field crossed out. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Draft the card before you imagine sending it. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A question that asks what to buy is not a process question. Say the opening line once more, and point at the part that belongs to Hook. If you cannot point yet, do not move on. The point of the beat is the pointing.",
-   "cap": "A useful question describes a process. Last page you wrote one venue name. This lesson is the support floor:.",
-   "concept": "A useful question describes a process.",
+   "vo": "A useful question describes a process, the way you ask which line the stop is on instead of handing over a balance. Last page you wrote one venue name. This lesson is the support floor: how to ask, and where a question goes when the first ask is not enough. On the diagram for this beat, look for one worksheet line labelled stop, stamped Example. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Draft the card before you imagine sending it. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A question that asks what to buy is not a process question. Say the opening line once more, and point at the part that belongs to Hook. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "A useful question describes a process, the way you ask which line the stop is on instead of handing over a balance.",
+   "concept": "A useful question describes a process, the way you ask which line the stop is on instead of handing over a balance.",
    "image": "course/images/el-10-how-to-ask/001.png",
    "image_status": "pass",
-   "prompt": "The only readable word is EXAMPLE. One blank underline. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+   "prompt": "The only readable word is EXAMPLE. One blank underline. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "analogy-line",
+    "note": "Example, not a forecast."
+   }
   },
   {
    "n": 2,
@@ -88,11 +92,15 @@
    "chapter": "The sample question",
    "role": "diagram",
    "vo": "A sample process question is: which worksheet line is the stop? The question names a line on a page. It does not name a coin size, and it does not ask whether to continue. On the diagram for this beat, look for the question beside a notebook line labelled Stop. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Copy the sample, then write one of your own in the same shape. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A sample is a shape, not a script you must send. Say the opening line once more, and point at the part that belongs to The sample question. If you cannot point yet, do not move on. The point of the beat is the pointing.",
-   "cap": "A sample process question is: which worksheet line is the stop? The question names a line on a page. It does.",
+   "cap": "A sample process question is: which worksheet line is the stop? The question names a line on a page. It does not name",
    "concept": "A sample process question is: which worksheet line is the stop?",
    "image": "course/images/el-10-how-to-ask/007.png",
    "image_status": "pass",
-   "prompt": "The only readable words are STOP and EXAMPLE. Three worksheet lines, the middle one labelled STOP. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+   "prompt": "The only readable words are STOP and EXAMPLE. Three worksheet lines, the middle one labelled STOP. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "analogy-line",
+    "note": "Example, not a forecast."
+   }
   },
   {
    "n": 8,
@@ -121,11 +129,15 @@
    "chapter": "Recap",
    "role": "recap",
    "vo": "Recap: a process question quotes a line, it leaves out the account, and escalation is a reread. Say them without looking. On the diagram for this beat, look for three recap rows. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Stamp Example. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Do not recap a service level. Say the opening line once more, and point at the part that belongs to Recap. If you cannot point yet, do not move on. The point of the beat is the pointing.",
-   "cap": "Recap: a process question quotes a line, it leaves out the account, and escalation is a reread. Say them.",
+   "cap": "Recap: a process question quotes a line, it leaves out the account, and escalation is a reread. Say them without",
    "concept": "Recap: a process question quotes a line, it leaves out the account, and escalation is a reread.",
    "image": "course/images/el-10-how-to-ask/010.png",
    "image_status": "pass",
-   "prompt": "The only readable words are LINE, REREAD, and EXAMPLE. The third row is an empty box crossed out. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+   "prompt": "The only readable words are LINE, REREAD, and EXAMPLE. The third row is an empty box crossed out. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "analogy-line",
+    "note": "Example, not a forecast."
+   }
   },
   {
    "n": 11,

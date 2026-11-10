@@ -6,8 +6,8 @@
  "music": "course/music/komiku-ambiant-truth.ogg",
  "next": "Circuit breakers done manually",
  "wpm_assumption": 143,
- "word_count": 2437,
- "estimated_minutes": 17.04,
+ "word_count": 2442,
+ "estimated_minutes": 17.08,
  "code_draws_visuals": false,
  "overlays_only": [
   "captions",
@@ -21,12 +21,16 @@
    "n": 1,
    "chapter": "Hook",
    "role": "hook",
-   "vo": "Several grids can lose together if they share one coin theme. Last page you wrote a calm step and a wider step. This lesson asks whether two grids are really two risks, or one risk drawn twice. On the diagram for this beat, look for two grids with arrows into the same coin pile. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. List two example coins and draw a line between them if they usually travel together. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. This picture is not a promise that a cap will save the account. Say the opening line once more, and point at the part that belongs to Hook. If you cannot point yet, do not move on. The point of the beat is the pointing.",
-   "cap": "Several grids can lose together if they share one coin theme. Last page you wrote a calm step and a wider.",
-   "concept": "Several grids can lose together if they share one coin theme.",
+   "vo": "Several grids can lose together if they share one theme, the way bitcoin and ether fell together from November 2021 to November 2022. Last page you wrote a calm step and a wider step. This lesson asks whether two grids are really two risks, or one risk drawn twice. On the diagram for this beat, look for two falling paths, bitcoin and ether, stamped Example. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. List two example coins and draw a line between them if they usually travel together. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. This picture is not a promise that a cap will save the account. Say the opening line once more, and point at the part that belongs to Hook. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Several grids can lose together if they share one theme, the way bitcoin and ether fell together from November 2021",
+   "concept": "Several grids can lose together if they share one theme, the way bitcoin and ether fell together from November 2021 to November 2022.",
    "image": "course/images/el-05-portfolio-risk/001.png",
    "image_status": "pass",
-   "prompt": "Lesson 'Portfolio risk controls', beat 1, role hook. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Hook. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Several grids can lose together if they share one coin theme; the problem visible in the first glance, before any logo. The picture must be understandable with the sound off. Teaching line: Several grids can lose together if they share one coin theme. Labels, spelled exactly: Several. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+   "prompt": "Lesson 'Portfolio risk controls', beat 1, role hook. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Hook. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Several grids can lose together if they share one coin theme; the problem visible in the first glance, before any logo. The picture must be understandable with the sound off. Teaching line: Several grids can lose together if they share one theme, the way bitcoin and ether fell together from November 2021 to November 2022. Labels, spelled exactly: Several. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not.",
+   "example": {
+    "kind": "chart-two",
+    "note": "Example, not a forecast."
+   }
   },
   {
    "n": 2,
@@ -87,12 +91,16 @@
    "n": 7,
    "chapter": "Correlation",
    "role": "diagram",
-   "vo": "A correlation check asks whether two coins usually travel together. The number 0.8 is an example threshold from the old notes, labelled Example, not a rule for your account. On the diagram for this beat, look for two paths side by side, a tag that says 0.8 Example, and a note that the tag is not a rule. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write 0.8, then write Example, then write: not a rule for an account. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Treating 0.8 as a setting to copy is how an example becomes a superstition. Say the opening line once more, and point at the part that belongs to Correlation. If you cannot point yet, do not move on. The point of the beat is the pointing.",
-   "cap": "A correlation check asks whether two coins usually travel together. The number 0.8 is an example threshold.",
+   "vo": "A correlation check asks whether two coins usually travel together. The number 0.8 is an example threshold from the old notes, labelled Example, not a rule for your account. On the diagram for this beat, look for two paths and a 0.89 tag stamped Example, with a note that 0.89 and the old 0.8 tag are not a rule.8 Example, and a note that the tag is not a rule. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write 0.8, then write Example, then write: not a rule for an account. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Treating 0.8 as a setting to copy is how an example becomes a superstition. Say the opening line once more, and point at the part that belongs to Correlation. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "A correlation check asks whether two coins usually travel together. The number 0.8 is an example threshold from the",
    "concept": "A correlation check asks whether two coins usually travel together.",
    "image": "course/images/el-05-portfolio-risk/007.png",
    "image_status": "pass",
-   "prompt": "The only readable words are 0.8, EXAMPLE, and NOT RULE. Two level teal paths with a gap between them. Headline TWO white, PATHS #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+   "prompt": "The only readable words are 0.8, EXAMPLE, and NOT RULE. Two level teal paths with a gap between them. Headline TWO white, PATHS #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "chart-two",
+    "note": "Example, not a forecast."
+   }
   },
   {
    "n": 8,
@@ -132,11 +140,15 @@
    "chapter": "Recap",
    "role": "recap",
    "vo": "Recap: a ceiling sentence, a per-coin cap with the number blank, and a together-check marked Example. Say them without looking. Do not write a target. On the diagram for this beat, look for three recap rows. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Stamp Example. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A target return does not belong on this page. Say the opening line once more, and point at the part that belongs to Recap. If you cannot point yet, do not move on. The point of the beat is the pointing.",
-   "cap": "Recap: a ceiling sentence, a per-coin cap with the number blank, and a together-check marked Example. Say.",
+   "cap": "Recap: a ceiling sentence, a per-coin cap with the number blank, and a together-check marked Example. Say them",
    "concept": "Recap: a ceiling sentence, a per-coin cap with the number blank, and a together-check marked Example.",
    "image": "course/images/el-05-portfolio-risk/011.png",
    "image_status": "pass",
-   "prompt": "The only readable words are CEILING, CAP, TOGETHER, and EXAMPLE. Three recap rows. Headline THREE white, CHECKS #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+   "prompt": "The only readable words are CEILING, CAP, TOGETHER, and EXAMPLE. Three recap rows. Headline THREE white, CHECKS #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "chart-two",
+    "note": "Example, not a forecast."
+   }
   },
   {
    "n": 12,

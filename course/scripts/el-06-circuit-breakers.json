@@ -6,8 +6,8 @@
  "music": "course/music/komiku-ambiant-truth.ogg",
  "next": "Advanced: liquidation scenarios",
  "wpm_assumption": 143,
- "word_count": 2397,
- "estimated_minutes": 16.76,
+ "word_count": 2406,
+ "estimated_minutes": 16.83,
  "code_draws_visuals": false,
  "overlays_only": [
   "captions",
@@ -21,12 +21,16 @@
    "n": 1,
    "chapter": "Hook",
    "role": "hook",
-   "vo": "The bot will not stop itself because you hoped it would. Last page you wrote a ceiling, a cap, and a together-check. A hope is not a switch. This lesson builds one pause by hand. On the diagram for this beat, look for a hoped-for stop faded, and a hand on a switch labelled Pause. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Cross out the word hope and write Pause. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. This is not a claim that an alert will fire, or that a venue will obey it. Say the opening line once more, and point at the part that belongs to Hook. If you cannot point yet, do not move on. The point of the beat is the pointing.",
-   "cap": "The bot will not stop itself because you hoped it would. Last page you wrote a ceiling, a cap, and a.",
-   "concept": "The bot will not stop itself because you hoped it would.",
+   "vo": "The bot will not stop itself because you hoped it would. A breaker is a switch you flip by hand, the way US share trading paused on 9, 12, 16 and 18 March 2020. Last page you wrote a ceiling, a cap, and a together-check. A hope is not a switch. This lesson builds one pause by hand. On the diagram for this beat, look for a switch you flip by hand, and the March 2020 pauses, stamped Example. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Cross out the word hope and write Pause. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. This is not a claim that an alert will fire, or that a venue will obey it. Say the opening line once more, and point at the part that belongs to Hook. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "The bot will not stop itself because you hoped it would. A breaker is a switch you flip by hand, the way US share",
+   "concept": "The bot will not stop itself because you hoped it would. A breaker is a switch you flip by hand, the way US share trading paused on 9, 12, 16 and 18 March 2020.",
    "image": "course/images/el-06-circuit-breakers/001.png",
    "image_status": "pass",
-   "prompt": "The only readable word is HOPE. An open switch is not connected to a stop mark. Headline HOPE white, SWITCH #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+   "prompt": "The only readable word is HOPE. An open switch is not connected to a stop mark. Headline HOPE white, SWITCH #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "analogy-breaker",
+    "note": "Example, not a forecast."
+   }
   },
   {
    "n": 2,
@@ -77,11 +81,15 @@
    "chapter": "One alert by hand",
    "role": "diagram",
    "vo": "One approach is an alert at the band edge, drawn as a mark you would set yourself. No automation is installed in this lesson. The picture is a paper mark, not a live alert. On the diagram for this beat, look for a band with one mark at the edge, labelled Alert, and a note that says not installed. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Mark one edge on the example band and write: paper only. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Installing a live alert is not the assignment. Say the opening line once more, and point at the part that belongs to One alert by hand. If you cannot point yet, do not move on. The point of the beat is the pointing.",
-   "cap": "One approach is an alert at the band edge, drawn as a mark you would set yourself. No automation is installed.",
+   "cap": "One approach is an alert at the band edge, drawn as a mark you would set yourself. No automation is installed in this",
    "concept": "One approach is an alert at the band edge, drawn as a mark you would set yourself.",
    "image": "course/images/el-06-circuit-breakers/006.png",
    "image_status": "pass",
-   "prompt": "The only readable words are ALERT and EXAMPLE. A band with a mark at its edge. Headline BAND white, EDGE #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+   "prompt": "The only readable words are ALERT and EXAMPLE. A band with a mark at its edge. Headline BAND white, EDGE #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "analogy-breaker",
+    "note": "Example, not a forecast."
+   }
   },
   {
    "n": 7,
@@ -121,11 +129,15 @@
    "chapter": "Recap",
    "role": "recap",
    "vo": "Recap: hope is not a switch, a pause is not a venue close, and the alert in this lesson is paper. Say them without looking. On the diagram for this beat, look for three recap rows. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Stamp Example. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Do not recap an installed bot. Say the opening line once more, and point at the part that belongs to Recap. If you cannot point yet, do not move on. The point of the beat is the pointing.",
-   "cap": "Recap: hope is not a switch, a pause is not a venue close, and the alert in this lesson is paper. Say them.",
+   "cap": "Recap: hope is not a switch, a pause is not a venue close, and the alert in this lesson is paper. Say them without",
    "concept": "Recap: hope is not a switch, a pause is not a venue close, and the alert in this lesson is paper.",
    "image": "course/images/el-06-circuit-breakers/010.png",
    "image_status": "pass",
-   "prompt": "The only readable words are HOPE, PAUSE, ALERT, and EXAMPLE. Three recap rows. Headline THREE white, FACTS #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+   "prompt": "The only readable words are HOPE, PAUSE, ALERT, and EXAMPLE. Three recap rows. Headline THREE white, FACTS #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "analogy-breaker",
+    "note": "Example, not a forecast."
+   }
   },
   {
    "n": 11,

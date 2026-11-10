@@ -6,8 +6,8 @@
  "music": "course/music/komiku-ambiant-truth.ogg",
  "next": "Multi-venue counterparty risk",
  "wpm_assumption": 143,
- "word_count": 2379,
- "estimated_minutes": 16.64,
+ "word_count": 2424,
+ "estimated_minutes": 16.95,
  "code_draws_visuals": false,
  "overlays_only": [
   "captions",
@@ -21,12 +21,16 @@
    "n": 1,
    "chapter": "Hook",
    "role": "hook",
-   "vo": "A calendar date is not a claim that the month paid you. Last page you wrote that leverage is not part of the paper plan. This lesson puts a date on the reread, and it refuses to treat the date as a result. On the diagram for this beat, look for a calendar chip with a results box crossed out beside it. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Draw this month's box and cross out any result line inside it. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A date cannot prove that a grid paid you. Say the opening line once more, and point at the part that belongs to Hook. If you cannot point yet, do not move on. The point of the beat is the pointing.",
-   "cap": "A calendar date is not a claim that the month paid you. Last page you wrote that leverage is not part of the.",
-   "concept": "A calendar date is not a claim that the month paid you.",
+   "vo": "A calendar date is not a claim that the month paid you. November 2022 on the public path was a lower close, not a receipt. Last page you wrote that leverage is not part of the paper plan. This lesson puts a date on the reread, and it refuses to treat the date as a result. On the diagram for this beat, look for the public path with November 2022 marked, and no receipt, stamped Example. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Draw this month's box and cross out any result line inside it. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A date cannot prove that a grid paid you. Say the opening line once more, and point at the part that belongs to Hook. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "A calendar date is not a claim that the month paid you. November 2022 on the public path was a lower close, not a",
+   "concept": "A calendar date is not a claim that the month paid you. November 2022 on the public path was a lower close, not a receipt.",
    "image": "course/images/el-08-size-on-a-schedule/001.png",
    "image_status": "pass",
-   "prompt": "The only readable word is EXAMPLE. Seven empty chips and no number. Headline MONTH white, PAGE #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+   "prompt": "The only readable word is EXAMPLE. Seven empty chips and no number. Headline MONTH white, PAGE #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "chart-path",
+    "note": "Example, not a forecast."
+   }
   },
   {
    "n": 2,
@@ -66,11 +70,15 @@
    "chapter": "One approach",
    "role": "diagram",
    "vo": "One approach is a monthly read of the same page: band, spacing, inventory, and stop. You read what you wrote. You do not add a new line because the month turned. On the diagram for this beat, look for the same notebook opened on a new month, the four lines unchanged until a written change. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Copy last month's four lines, then decide if any word is now false. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A new month is not itself a reason to add size. Say the opening line once more, and point at the part that belongs to One approach. If you cannot point yet, do not move on. The point of the beat is the pointing.",
-   "cap": "One approach is a monthly read of the same page: band, spacing, inventory, and stop. You read what you wrote.",
+   "cap": "One approach is a monthly read of the same page: band, spacing, inventory, and stop. You read what you wrote. You do",
    "concept": "One approach is a monthly read of the same page: band, spacing, inventory, and stop.",
    "image": "course/images/el-08-size-on-a-schedule/005.png",
    "image_status": "pass",
-   "prompt": "The only readable words are BAND, SPACE, STOP, and EXAMPLE. Three labelled rows and one blank bar. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+   "prompt": "The only readable words are BAND, SPACE, STOP, and EXAMPLE. Three labelled rows and one blank bar. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "chart-path",
+    "note": "Example, not a forecast."
+   }
   },
   {
    "n": 6,
@@ -121,11 +129,15 @@
    "chapter": "Recap",
    "role": "recap",
    "vo": "Recap: a date is not a payment, the card has four words, and size changes only with a new written line. Say them without looking. On the diagram for this beat, look for three recap rows. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Stamp Example. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Do not recap a rate. Say the opening line once more, and point at the part that belongs to Recap. If you cannot point yet, do not move on. The point of the beat is the pointing.",
-   "cap": "Recap: a date is not a payment, the card has four words, and size changes only with a new written line. Say.",
+   "cap": "Recap: a date is not a payment, the card has four words, and size changes only with a new written line. Say them",
    "concept": "Recap: a date is not a payment, the card has four words, and size changes only with a new written line.",
    "image": "course/images/fallback/el-08-size-on-a-schedule/10.png",
    "image_status": "pass",
-   "prompt": "Lesson 'Size changes on a schedule', beat 10, role recap. One large diagram centered on an off-white panel, with thin teal callout lines. Chapter context: Recap. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Recap: a date is not a payment, the card has four words, and size changes only with a new written line; three short recap rows, each row a tiny diagram plus a two-word label. The picture must be understandable with the sound off. Teaching line: Recap: a date is not a payment, the card has four words, and size changes only with a new written line. Labels, spelled exactly: Recap. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+   "prompt": "Lesson 'Size changes on a schedule', beat 10, role recap. One large diagram centered on an off-white panel, with thin teal callout lines. Chapter context: Recap. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Recap: a date is not a payment, the card has four words, and size changes only with a new written line; three short recap rows, each row a tiny diagram plus a two-word label. The picture must be understandable with the sound off. Teaching line: Recap: a date is not a payment, the card has four words, and size changes only with a new written line. Labels, spelled exactly: Recap. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not.",
+   "example": {
+    "kind": "chart-path",
+    "note": "Example, not a forecast."
+   }
   },
   {
    "n": 11,
@@ -247,6 +259,22 @@
    "image": "course/images/fallback/el-08-size-on-a-schedule/21.png",
    "image_status": "pass",
    "prompt": "Lesson 'Size changes on a schedule', beat 21, role outro. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Outro. Show a dashed stop line below the band, and a price path that leaves the band and does not return; two venue boxes, the second one marked Halt, with separate inventory notes and no split ratio; a quiet next-step card with a single arrow to a blank next title, no price and no button that buys anything. The picture must be understandable with the sound off. Teaching line: Next lesson: Multi-venue counterparty risk. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons. Labels, spelled exactly: Next, Multi, Bring, Leave. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 22,
+   "chapter": "One more line",
+   "role": "body",
+   "vo": "One more line before you leave. November 2022 on the public path was a lower close, not a payment. Stamp it Example. No order is sent. Read it once more: a lower close is not a payment.",
+   "cap": "One more line before you leave. November 2022 on the public path was a lower close, not a payment.",
+   "concept": "November 2022 on the public path was a lower close, not a payment.",
+   "image": "course/images/el-08-size-on-a-schedule/001.png",
+   "image_status": "pass",
+   "prompt": "Passed still kept. The on-screen example is the ChatGPT chart plate, teal, no exchange name.",
+   "example": {
+    "kind": "chart-path",
+    "note": "Example, not a forecast."
+   },
+   "min_seconds": 18.8
   }
  ]
 }
