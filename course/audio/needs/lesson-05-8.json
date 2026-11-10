@@ -1,0 +1,515 @@
+{
+ "id": "lesson-05-8",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-05-8.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 5.7, Operating across chains: gas, routes and chain abstraction. Move value between chains cheaply and safely, without getting stranded without gas. Keep that page on the desk. This lesson adds one picture: Read verified contract code well enough to check the claims a protocol makes about itself."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 5.8, Reading smart-contract code: enough to verify claims. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You can already split base yield from emissions, and you can name an LST. This module asks what that position sits on: a bridge, a sequencer, an oracle, or a key."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "You don't need to be a developer to spot the things that matter."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "In verified Solidity code on an explorer, look for: Access control: onlyOwner, onlyRole(...), onlyGovernance."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Dangerous powers: mint, pause, upgradeTo, setOracle, setFee, withdraw/sweep/rescue functions that move user funds."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Upgradeability: proxy patterns (delegatecall, implementation, upgradeTo), and who the admin is (5.4)."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "External calls and state order: calling another contract before updating balances is the classic reentrancy pattern (5.5)."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Parameters with no limits: a fee that can be set to 100%, or an oracle address that can be swapped instantly."
+  },
+  {
+   "n": 11,
+   "role": "body",
+   "vo": "Events: what's logged tells you what you can monitor."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "Work the example on paper. A token claims \"fixed supply\". Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "Work the example on paper. In its code you find: `` function mint(address to, uint256 amount) external onlyOwner { _mint(to, amount); } ` The owner can mint unlimited tokens: the claim is false unless ownership is renounced or held by a timelocked governance contract. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "Work the example on paper. Check the owner()` value on the Read tab. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Searched the code for owner/role-guarded functions. If you cannot write it, the line is open."
+  },
+  {
+   "n": 16,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Listed every function that can mint, pause, upgrade, change fees/oracles or move funds. If you cannot write it, the line is open."
+  },
+  {
+   "n": 17,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Checked who holds those roles (Read tab) and behind what timelock. If you cannot write it, the line is open."
+  },
+  {
+   "n": 18,
+   "role": "quiz",
+   "vo": "Check yourself. 1. What does onlyOwner on a mint function mean? The answer: The owner can mint new tokens whenever they like."
+  },
+  {
+   "n": 19,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Why check parameter limits? The answer: An unlimited setter (fee, oracle) can be changed to harm users instantly."
+  },
+  {
+   "n": 20,
+   "role": "quiz",
+   "vo": "Check yourself. 3. What code pattern suggests reentrancy risk? The answer: An external call made before the contract updates its own state."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "Reading smart-contract code: enough to verify claims."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "By the end, you'll be able to check what a protocol actually says about itself, directly against its own verified code, without needing to be a developer."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Access control, the actual words to search for, and why they matter."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "Dangerous powers, the specific functions worth finding before you ever trust a claim."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Upgradeability, and external-call ordering, the reentrancy pattern from Lesson five point five, spotted directly in code."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "And a full worked example, checking a real fixed-supply claim against its own real code."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Here's exactly what to search for, directly in a contract's own verified Solidity code, on any block explorer."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "The words onlyOwner, onlyRole, followed by a specific role name, or onlyGovernance."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "Every one of these guards a specific function, meaning only whoever holds that exact role can actually call it."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "Search the code for these words directly, and you've found exactly who controls what, without reading a single other line."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "Worth being direct about why this single search is genuinely worth doing, even if you've never written a line of code in your life."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "These three words are simply text, searchable exactly like any other word on a page."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "Finding them tells you precisely which functions are restricted, and to whom, which is most of what actually matters about a contract's real power structure."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "Here's exactly how to actually run this search yourself, on any block explorer's own code viewer."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "Use your browser's own find function, Control F, or Command F, to search the full page."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "Search specifically for onlyOwner, onlyRole, and onlyGovernance, one at a time, and note every single function each one guards."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "What does onlyOwner on a mint function actually mean?"
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "The answer: the owner can mint new tokens whenever they genuinely like, with nothing else required."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "Here's exactly what each of these actually lets someone do, once you've found which role controls them."
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "UpgradeTo can swap the underlying logic, the pattern from Lesson five point four."
+  },
+  {
+   "n": 41,
+   "role": "body",
+   "vo": "SetOracle and setFee can change what price or cost the contract actually uses."
+  },
+  {
+   "n": 42,
+   "role": "body",
+   "vo": "And withdraw, sweep, or rescue functions can move user funds directly, sometimes for a genuinely legitimate reason, sometimes not."
+  },
+  {
+   "n": 43,
+   "role": "body",
+   "vo": "Worth being fair about that last category specifically, since the names alone can sound alarming even when the function is genuinely legitimate."
+  },
+  {
+   "n": 44,
+   "role": "body",
+   "vo": "A rescue function recovering accidentally-sent tokens is a real, common, reasonable feature."
+  },
+  {
+   "n": 45,
+   "role": "body",
+   "vo": "The actual question is never simply whether the function exists; it's who controls it, and whether it's restricted specifically to funds that genuinely don't belong to any user."
+  },
+  {
+   "n": 46,
+   "role": "body",
+   "vo": "Here's what actually separates a well-scoped rescue function from a dangerously broad one, in the code itself."
+  },
+  {
+   "n": 47,
+   "role": "body",
+   "vo": "A well-scoped one explicitly checks the token isn't the contract's own primary asset, restricting it specifically to funds that genuinely aren't a user's real deposit."
+  },
+  {
+   "n": 48,
+   "role": "body",
+   "vo": "A broad one simply lets the owner withdraw any token, or even the contract's own native balance, directly, with no such restriction written in at all."
+  },
+  {
+   "n": 49,
+   "role": "body",
+   "vo": "Here's exactly what to search for to spot a proxy directly, and who to check once you've found one."
+  },
+  {
+   "n": 50,
+   "role": "body",
+   "vo": "The words delegatecall, or implementation, or upgradeTo, appearing anywhere in the code, are your signal it's an upgradeable proxy."
+  },
+  {
+   "n": 51,
+   "role": "body",
+   "vo": "Once you've spotted it, go find the actual admin, exactly the check covered back in Lesson five point four, since that's who genuinely controls what this contract does tomorrow."
+  },
+  {
+   "n": 52,
+   "role": "body",
+   "vo": "Worth being precise about the classic reentrancy shape specifically, since it's genuinely recognisable even without deep expertise."
+  },
+  {
+   "n": 53,
+   "role": "body",
+   "vo": "Watch for a contract calling out to another, external contract, before it's actually finished updating its own internal state."
+  },
+  {
+   "n": 54,
+   "role": "body",
+   "vo": "That specific ordering, external call first, state update second, is exactly the pattern behind the reentrancy risk covered back in Lesson five point five."
+  },
+  {
+   "n": 55,
+   "role": "body",
+   "vo": "What code pattern specifically suggests a reentrancy risk?"
+  },
+  {
+   "n": 56,
+   "role": "body",
+   "vo": "The answer: an external call made before the contract actually finishes updating its own internal state."
+  },
+  {
+   "n": 57,
+   "role": "body",
+   "vo": "Here's the actual difference a limit makes, made concrete."
+  },
+  {
+   "n": 58,
+   "role": "body",
+   "vo": "A fee parameter with a genuine hard cap, say a maximum of one percent, written directly into the code, can never exceed that, regardless of who controls it."
+  },
+  {
+   "n": 59,
+   "role": "body",
+   "vo": "A fee parameter with no such limit at all can technically be set to one hundred percent, entirely at whoever's own discretion holds that role."
+  },
+  {
+   "n": 60,
+   "role": "body",
+   "vo": "Here's that same capped-versus-uncapped difference, expressed as actual numbers, purely illustrative, to make the real stakes concrete rather than abstract."
+  },
+  {
+   "n": 61,
+   "role": "body",
+   "vo": "A genuinely capped fee parameter might allow a maximum of one percent, written directly into the code as a hard limit."
+  },
+  {
+   "n": 62,
+   "role": "body",
+   "vo": "An uncapped one has no such ceiling at all, meaning it could technically be set as high as one hundred percent, entirely at the role-holder's own discretion."
+  },
+  {
+   "n": 63,
+   "role": "body",
+   "vo": "Worth naming events specifically too, since they're genuinely useful for exactly the kind of ongoing monitoring this whole module has been building toward."
+  },
+  {
+   "n": 64,
+   "role": "body",
+   "vo": "What a contract actually logs, as an event, is what you, or any monitoring tool, can actually watch after the fact."
+  },
+  {
+   "n": 65,
+   "role": "body",
+   "vo": "A contract logging every single admin action gives you real, ongoing visibility; one that logs almost nothing leaves you flying blind between checks."
+  },
+  {
+   "n": 66,
+   "role": "body",
+   "vo": "Why does it actually matter to check a parameter's own limits?"
+  },
+  {
+   "n": 67,
+   "role": "body",
+   "vo": "The answer: an unlimited setter, like a fee or an oracle address, can be changed instantly, to genuinely harm users, with nothing stopping it."
+  },
+  {
+   "n": 68,
+   "role": "body",
+   "vo": "Here's the actual line of code itself, exactly as the source material presents it, worth seeing in full rather than just described."
+  },
+  {
+   "n": 69,
+   "role": "body",
+   "vo": "Function mint, taking an address and an amount, marked external, guarded by onlyOwner, and its body simply calls the internal underscore-mint function directly."
+  },
+  {
+   "n": 70,
+   "role": "body",
+   "vo": "Four words matter most here: external, onlyOwner, and mint itself."
+  },
+  {
+   "n": 71,
+   "role": "body",
+   "vo": "Here's the claim, and exactly what its own code actually shows."
+  },
+  {
+   "n": 72,
+   "role": "body",
+   "vo": "A token's own marketing states plainly: fixed supply."
+  },
+  {
+   "n": 73,
+   "role": "body",
+   "vo": "Its verified code, on the explorer, contains a mint function, guarded specifically by onlyOwner."
+  },
+  {
+   "n": 74,
+   "role": "body",
+   "vo": "That single guarded function means the owner can genuinely create unlimited new tokens, entirely contradicting the fixed-supply claim, unless something else specifically prevents it."
+  },
+  {
+   "n": 75,
+   "role": "body",
+   "vo": "Worth being precise about the specific two conditions that would actually make this fixed-supply claim true, despite that mint function genuinely existing in the code."
+  },
+  {
+   "n": 76,
+   "role": "body",
+   "vo": "Either ownership has been fully renounced, meaning no address controls it at all anymore, or it's held specifically by a timelocked governance contract, giving real, public warning before any mint could ever actually happen."
+  },
+  {
+   "n": 77,
+   "role": "body",
+   "vo": "Here's exactly how to actually check which of those two is true, directly on the block explorer itself."
+  },
+  {
+   "n": 78,
+   "role": "body",
+   "vo": "Call it directly, and read the actual address it returns."
+  },
+  {
+   "n": 79,
+   "role": "body",
+   "vo": "If that address is the well-known zero address, ownership is genuinely renounced; if it's a timelocked governance contract, check that timelock's own real length."
+  },
+  {
+   "n": 80,
+   "role": "body",
+   "vo": "Do it for any contract whose claims you actually want to trust."
+  },
+  {
+   "n": 81,
+   "role": "body",
+   "vo": "Search the code for every owner or role-guarded function."
+  },
+  {
+   "n": 82,
+   "role": "body",
+   "vo": "List every single one that can mint, pause, upgrade, change fees or oracles, or move funds."
+  },
+  {
+   "n": 83,
+   "role": "body",
+   "vo": "And check exactly who holds those specific roles, on the Read tab, and behind what timelock, if any."
+  },
+  {
+   "n": 84,
+   "role": "body",
+   "vo": "Search verified code for onlyOwner, onlyRole, and onlyGovernance, to find who controls what."
+  },
+  {
+   "n": 85,
+   "role": "body",
+   "vo": "Find every mint, pause, upgradeTo, setFee, setOracle, and withdraw or rescue function specifically."
+  },
+  {
+   "n": 86,
+   "role": "body",
+   "vo": "Watch for an external call made before state updates, the reentrancy shape."
+  },
+  {
+   "n": 87,
+   "role": "body",
+   "vo": "And always verify a claim directly against the owner, on the Read tab, not against the marketing alone."
+  },
+  {
+   "n": 88,
+   "role": "body",
+   "vo": "Worth closing Module five on the actual point this entire module has been building toward, across all eight lessons."
+  },
+  {
+   "n": 89,
+   "role": "body",
+   "vo": "Every dependency, the chain, the bridge, the L2, the oracle, the contract, and now the code itself, is genuinely checkable, by you, directly, without needing anyone else's word for it."
+  },
+  {
+   "n": 90,
+   "role": "body",
+   "vo": "Search for the guard words, list every dangerous function, and verify claims against owner() directly."
+  },
+  {
+   "n": 91,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. You don't need to be a developer to spot the things that matter. It sits in Reading smart-contract code: enough to verify claims. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 92,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. In verified Solidity code on an explorer, look for: Access control: onlyOwner, onlyRole(...), onlyGovernance. It sits in Reading smart-contract code: enough to verify claims. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 93,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Search for functions guarded by them. It sits in Reading smart-contract code: enough to verify claims. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 94,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Dangerous powers: mint, pause, upgradeTo, setOracle, setFee, withdraw/sweep/rescue functions that move user funds. It sits in Reading smart-contract code: enough to verify claims. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 95,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Upgradeability: proxy patterns (delegatecall, implementation, upgradeTo), and who the admin is (5.4). It sits in Reading smart-contract code: enough to verify claims. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 96,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. External calls and state order: calling another contract before updating balances is the classic reentrancy pattern (5.5). It sits in Reading smart-contract code: enough to verify claims. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 97,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Parameters with no limits: a fee that can be set to 100%, or an oracle address that can be swapped instantly. It sits in Reading smart-contract code: enough to verify claims. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 98,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Events: what's logged tells you what you can monitor. It sits in Reading smart-contract code: enough to verify claims. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 99,
+   "role": "recap",
+   "vo": "Three lines to keep. You don't need to be a developer to spot the things that matter. In verified Solidity code on an explorer, look for: Access control: onlyOwner, onlyRole(...), onlyGovernance. This is the last lesson of the program. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 100,
+   "role": "action",
+   "vo": "Your action for Reading smart-contract code: enough to verify claims: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Close the notebook. The program's lessons end here."
+  },
+  {
+   "n": 101,
+   "role": "outro",
+   "vo": "This is the last On-Chain Operator lesson. Say today's recap once, then close the notebook. Education only, not financial advice."
+  }
+ ]
+}

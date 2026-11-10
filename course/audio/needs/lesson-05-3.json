@@ -1,0 +1,515 @@
+{
+ "id": "lesson-05-3",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-05-3.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 5.2, Layer 2s, sequencers & withdrawal paths. Understand how your L2 settles, who orders your transactions, and how you'd exit. Keep that page on the desk. This lesson adds one picture: Know which price feed secures each position, and how it can fail."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 5.3, Oracles, TWAPs & manipulation. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You can already split base yield from emissions, and you can name an LST. This module asks what that position sits on: a bridge, a sequencer, an oracle, or a key."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Smart contracts can't see market prices; oracles bring them in."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Lending markets liquidate based on the oracle price, not the price you see on screen."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Push oracles: a network updates prices on a schedule or when price moves past a deviation threshold."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Pull oracles: prices are fetched and verified when a transaction needs them."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "TWAP (time-weighted average price) smooths manipulation, but lags fast moves."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Failures: stale prices in outages, manipulation of thin markets, misconfigured feeds."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "Work the example on paper. Your collateral is priced by a 30-minute TWAP. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "Work the example on paper. The market drops 10% in 5 minutes. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "Work the example on paper. Your screen shows \u221210%; the oracle shows maybe \u22122%. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "Work the example on paper. You feel liquidated and aren't yet, but you also can't rely on the lag: it catches up. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "Work the example on paper. Conversely, a thinly traded collateral token can be pushed up and borrowed against by an attacker. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 16,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Oracle type and source known for each collateral. If you cannot write it, the line is open."
+  },
+  {
+   "n": 17,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Thin-market collateral avoided or capped. If you cannot write it, the line is open."
+  },
+  {
+   "n": 18,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Buffers sized for oracle catch-up. If you cannot write it, the line is open."
+  },
+  {
+   "n": 19,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Which price triggers a DeFi liquidation? The answer: The oracle price used by the protocol."
+  },
+  {
+   "n": 20,
+   "role": "quiz",
+   "vo": "Check yourself. 2. What's the trade-off of a TWAP? The answer: Harder to manipulate, but it lags fast moves."
+  },
+  {
+   "n": 21,
+   "role": "quiz",
+   "vo": "Check yourself. 3. Why is thin-market collateral dangerous for lenders? The answer: Its price can be manipulated to borrow more than it's really worth."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "By the end, you'll know exactly which price feed actually secures each of your positions, and precisely how each one can fail."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Push versus pull oracles, the two genuinely different ways a price actually gets into a contract."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "actually trades off, and exactly why it lags."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "The specific ways an oracle can fail: stale prices, thin-market manipulation, and misconfiguration."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "And a full worked example, using the source material's own thirty-minute T.W.A.P."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Here's the one fact this entire lesson builds from."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "A smart contract genuinely cannot see market prices on its own; an oracle is what brings that price in from the outside."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "And critically, a lending market liquidates you based specifically on that oracle's own price, not whatever number happens to be showing on your own screen, or on any exchange you personally happen to be watching at that exact moment."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "Here's the actual difference between the two ways that price gets delivered."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "A push oracle has a network updating prices on its own schedule, or specifically whenever price moves past a set deviation threshold, whichever comes first."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "A pull oracle instead fetches, and cryptographically verifies, a price only at the exact moment a transaction actually needs it, rather than continuously updating in the background."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "The answer: the oracle price the protocol itself uses, never the price you happen to be watching on your own screen."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "Here's exactly what a T.W.A.P., a time-weighted average price, is actually doing, and why it's deliberately built this way."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "Instead of reading one single, instantaneous price, it averages price out across a real window of time, say thirty minutes."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "That averaging is precisely what makes it genuinely harder to manipulate with one quick, isolated trade."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "But that exact same averaging is also what makes it lag behind a real, fast market move, on purpose."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "Worth being precise about why this specific trade-off exists at all, rather than simply reading the current spot price directly."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "A spot price can be manipulated in a single block, by one large, isolated trade, especially in a thin market."
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "makes that same manipulation require sustaining an artificial price across the entire averaging window, which is genuinely far more expensive to actually pull off."
+  },
+  {
+   "n": 41,
+   "role": "body",
+   "vo": "What's the actual trade-off of using a T.W.A.P.?"
+  },
+  {
+   "n": 42,
+   "role": "body",
+   "vo": "The answer: it's genuinely harder to manipulate than a spot price, but it lags behind fast, real market moves, by design."
+  },
+  {
+   "n": 43,
+   "role": "body",
+   "vo": "Here's each of these three, and exactly how each one actually happens."
+  },
+  {
+   "n": 44,
+   "role": "body",
+   "vo": "Stale prices happen specifically during an outage, when the feed simply stops updating, but the last known price is still what the contract keeps using."
+  },
+  {
+   "n": 45,
+   "role": "body",
+   "vo": "Thin-market manipulation happens when an attacker moves a low-liquidity asset's price artificially, specifically because it doesn't take much capital to move a thin market meaningfully."
+  },
+  {
+   "n": 46,
+   "role": "body",
+   "vo": "And misconfigured feeds happen when a protocol simply points at the wrong oracle, or the wrong specific parameters, entirely by human error."
+  },
+  {
+   "n": 47,
+   "role": "body",
+   "vo": "Worth being precise about why thin-market manipulation specifically threatens lenders, not just the manipulator themselves."
+  },
+  {
+   "n": 48,
+   "role": "body",
+   "vo": "An attacker can artificially push up a thinly traded token's price, deposit it as collateral at that inflated price, and borrow far more than the token is actually, genuinely worth, leaving the lending protocol holding collateral worth a fraction of the debt it's meant to cover."
+  },
+  {
+   "n": 49,
+   "role": "body",
+   "vo": "Worth being precise about the actual danger inside a stale price specifically, since it's the quietest of these three failures, right up until it isn't."
+  },
+  {
+   "n": 50,
+   "role": "body",
+   "vo": "During an outage, the contract keeps using the last price it ever received, treating it as current, with no warning built in that anything's actually wrong."
+  },
+  {
+   "n": 51,
+   "role": "body",
+   "vo": "A real market move happening during exactly that outage simply isn't reflected anywhere, until the feed eventually recovers."
+  },
+  {
+   "n": 52,
+   "role": "body",
+   "vo": "Why is thin-market collateral specifically dangerous for lenders?"
+  },
+  {
+   "n": 53,
+   "role": "body",
+   "vo": "The answer: its price can be artificially manipulated, letting someone borrow far more against it than it's actually, genuinely worth."
+  },
+  {
+   "n": 54,
+   "role": "body",
+   "vo": "Here's the scenario, exactly as the source material lays it out."
+  },
+  {
+   "n": 55,
+   "role": "body",
+   "vo": "Your collateral is priced by a thirty-minute T.W.A.P."
+  },
+  {
+   "n": 56,
+   "role": "body",
+   "vo": "The market itself drops ten percent, in just five minutes, a genuinely fast move."
+  },
+  {
+   "n": 57,
+   "role": "body",
+   "vo": "Your own screen shows that full ten percent drop, immediately."
+  },
+  {
+   "n": 58,
+   "role": "body",
+   "vo": "The oracle, still averaging across its thirty-minute window, might show something closer to just two percent, at that same exact moment."
+  },
+  {
+   "n": 59,
+   "role": "body",
+   "vo": "Worth being precise about the actual trap hiding inside this exact gap, since it cuts in both directions at once."
+  },
+  {
+   "n": 60,
+   "role": "body",
+   "vo": "You might genuinely feel liquidated, watching that ten percent drop on your own screen, when the oracle hasn't caught up yet, and you technically aren't."
+  },
+  {
+   "n": 61,
+   "role": "body",
+   "vo": "But you also can't rely on that same lag lasting: the T.W.A.P."
+  },
+  {
+   "n": 62,
+   "role": "body",
+   "vo": "keeps averaging, and it does eventually catch up to the real move, whether you've prepared for that or not."
+  },
+  {
+   "n": 63,
+   "role": "body",
+   "vo": "Here's what that catch-up actually looks like, plotted across the full thirty-minute window, in a simplified, illustrative model of how a rolling average genuinely converges."
+  },
+  {
+   "n": 64,
+   "role": "body",
+   "vo": "Right after the drop, at five minutes, the oracle's showing roughly negative two percent, matching the source material's own figure closely."
+  },
+  {
+   "n": 65,
+   "role": "body",
+   "vo": "And by the full thirty minutes, it's essentially caught all the way up to the real negative ten percent move."
+  },
+  {
+   "n": 66,
+   "role": "body",
+   "vo": "Notice that the oracle line never stops moving toward the real price; it just takes real time to get there."
+  },
+  {
+   "n": 67,
+   "role": "body",
+   "vo": "That's the entire lag, laid out visually: not a permanent gap, and not a loophole, just a delay that closes steadily, the whole way from the moment the real move happened."
+  },
+  {
+   "n": 68,
+   "role": "body",
+   "vo": "Here's how to actually find this out for a protocol you use, rather than assuming."
+  },
+  {
+   "n": 69,
+   "role": "body",
+   "vo": "Check its documentation specifically for which oracle it uses, and whether that oracle is push or pull."
+  },
+  {
+   "n": 70,
+   "role": "body",
+   "vo": "Find the actual TWAP window length, if one is used, in real minutes."
+  },
+  {
+   "n": 71,
+   "role": "body",
+   "vo": "And check whether that window is published clearly, or whether you'd have to dig through the contract itself to find it."
+  },
+  {
+   "n": 72,
+   "role": "body",
+   "vo": "Here's the exact same lag mechanism, but working in the opposite direction, against a thinly traded collateral token instead."
+  },
+  {
+   "n": 73,
+   "role": "body",
+   "vo": "An attacker pushes that token's price up artificially, on a thin market."
+  },
+  {
+   "n": 74,
+   "role": "body",
+   "vo": "If the protocol's oracle hasn't caught up yet, or if its window is short enough to reflect that push quickly, the attacker can deposit at the inflated price and borrow well beyond what the token is actually worth."
+  },
+  {
+   "n": 75,
+   "role": "body",
+   "vo": "Here's the one sentence this entire worked example exists to prove, worth holding onto more than the specific ten-percent and two-percent figures."
+  },
+  {
+   "n": 76,
+   "role": "body",
+   "vo": "Size your own buffers for the oracle's catch-up, never for the lag lasting forever, since a T.W.A.P."
+  },
+  {
+   "n": 77,
+   "role": "body",
+   "vo": "smooths manipulation, it doesn't erase the real move underneath it."
+  },
+  {
+   "n": 78,
+   "role": "body",
+   "vo": "Do it for every collateral type you actually use."
+  },
+  {
+   "n": 79,
+   "role": "body",
+   "vo": "Know the oracle type and its actual source, for each one, not just that an oracle exists at all."
+  },
+  {
+   "n": 80,
+   "role": "body",
+   "vo": "Avoid, or deliberately cap, thin-market collateral specifically."
+  },
+  {
+   "n": 81,
+   "role": "body",
+   "vo": "And size your own buffers assuming the oracle genuinely catches up, never assuming its lag will simply protect you indefinitely."
+  },
+  {
+   "n": 82,
+   "role": "body",
+   "vo": "A contract can't see market prices; an oracle brings them in, and it's the oracle price, not your screen, that actually triggers liquidation."
+  },
+  {
+   "n": 83,
+   "role": "body",
+   "vo": "Push oracles update on a schedule or threshold; pull oracles fetch and verify on demand."
+  },
+  {
+   "n": 84,
+   "role": "body",
+   "vo": "is harder to manipulate, but lags fast moves, on purpose."
+  },
+  {
+   "n": 85,
+   "role": "body",
+   "vo": "Oracles fail through stale prices, thin-market manipulation, and misconfiguration."
+  },
+  {
+   "n": 86,
+   "role": "body",
+   "vo": "And the real rule: size your buffers for the catch-up, never for the lag lasting."
+  },
+  {
+   "n": 87,
+   "role": "body",
+   "vo": "Worth connecting this back to the dependency map from this module's own Mastery Starter, one more time."
+  },
+  {
+   "n": 88,
+   "role": "body",
+   "vo": "The oracle pricing your collateral is another specific link in that same chain, and now you know exactly what to check on it: push or pull, its TWAP window if it has one, and how thin the market behind whatever it's pricing actually is."
+  },
+  {
+   "n": 89,
+   "role": "body",
+   "vo": "Know each collateral's oracle type and source, cap thin-market exposure, and size buffers for the catch-up, not the lag."
+  },
+  {
+   "n": 90,
+   "role": "body",
+   "vo": "Next up, Lesson five point four: smart contracts, state, proxies, and admin keys."
+  },
+  {
+   "n": 91,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Smart contracts can't see market prices; oracles bring them in. It sits in Oracles, TWAPs & manipulation. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 92,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Lending markets liquidate based on the oracle price, not the price you see on screen. It sits in Oracles, TWAPs & manipulation. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 93,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Push oracles: a network updates prices on a schedule or when price moves past a deviation threshold. It sits in Oracles, TWAPs & manipulation. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 94,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Pull oracles: prices are fetched and verified when a transaction needs them. It sits in Oracles, TWAPs & manipulation. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 95,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. TWAP (time-weighted average price) smooths manipulation, but lags fast moves. It sits in Oracles, TWAPs & manipulation. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 96,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Failures: stale prices in outages, manipulation of thin markets, misconfigured feeds. It sits in Oracles, TWAPs & manipulation. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 97,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Your collateral is priced by a 30-minute TWAP. It sits in Oracles, TWAPs & manipulation. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 98,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The market drops 10% in 5 minutes. It sits in Oracles, TWAPs & manipulation. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 99,
+   "role": "recap",
+   "vo": "Three lines to keep. Smart contracts can't see market prices; oracles bring them in. Lending markets liquidate based on the oracle price, not the price you see on screen. Next is Lesson 5.4, Smart contracts: state, proxies, admin keys. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 100,
+   "role": "action",
+   "vo": "Your action for Oracles, TWAPs & manipulation: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 5.4, Smart contracts: state, proxies, admin keys."
+  },
+  {
+   "n": 101,
+   "role": "outro",
+   "vo": "Next is Lesson 5.4, Smart contracts: state, proxies, admin keys. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

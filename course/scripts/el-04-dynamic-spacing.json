@@ -1,0 +1,257 @@
+{
+ "id": "el-04-dynamic-spacing",
+ "title": "Dynamic spacing when volatility rises",
+ "course": "Grid Bot Elite",
+ "palette": "teal",
+ "music": "course/music/komiku-ambiant-truth.ogg",
+ "next": "Portfolio risk controls",
+ "wpm_assumption": 143,
+ "word_count": 2444,
+ "estimated_minutes": 17.09,
+ "code_draws_visuals": false,
+ "overlays_only": [
+  "captions",
+  "lower thirds",
+  "intro title text",
+  "disclaimer line",
+  "Ken Burns"
+ ],
+ "beats": [
+  {
+   "n": 1,
+   "chapter": "Hook",
+   "role": "hook",
+   "vo": "A wider path, like the public ranges around 13 June 2022, is a reason to space orders further apart, not to load each line harder. Last page, two bands shared one inventory line. This lesson changes the step when the path gets wider, and it keeps inventory per level from rising. On the diagram for this beat, look for two bars, the second one much taller, stamped Example. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Sketch both weaves and mark which one has the wider step. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. This is not a claim that a wider step makes the next day safer. Say the opening line once more, and point at the part that belongs to Hook. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "A wider path, like the public ranges around 13 June 2022, is a reason to space orders further apart, not to load each",
+   "concept": "A wider path, like the public ranges around 13 June 2022, is a reason to space orders further apart, not to load each line harder.",
+   "image": "course/images/el-04-dynamic-spacing/001.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 1, role hook. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Hook. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: A wider path is a reason to space orders further apart, not to load each line harder; the problem visible in the first glance, before any logo. The picture must be understandable with the sound off. Teaching line: A wider path, like the public ranges around 13 June 2022, is a reason to space orders further apart, not to load each line harder. Use no words if a shape is clearer. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not.",
+   "example": {
+    "kind": "chart-day",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 2,
+   "chapter": "Disclaimer",
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot.",
+   "cap": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of.",
+   "concept": "Education only, not financial advice.",
+   "image": "course/images/el-04-dynamic-spacing/002.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 2, role legal. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Disclaimer. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Education only, not financial advice. The picture must be understandable with the sound off. Teaching line: Education only, not financial advice. Labels, spelled exactly: Education. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 3,
+   "chapter": "Title card",
+   "role": "intro",
+   "vo": "This is Grid Bot Elite. The lesson is Dynamic spacing when volatility rises. Teal on the frame. Not the Blueprint plate. Education only. You will write on paper before any screen.",
+   "cap": "This is Grid Bot Elite. The lesson is Dynamic spacing when volatility rises. Teal on the frame. Not the.",
+   "concept": "Dynamic spacing when volatility rises",
+   "image": "course/images/el-04-dynamic-spacing/003.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 3, role intro. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Title card. Show nineteen even gaps between twenty horizontal lines, the gaps marked, the lines only the edges of the gaps, a small note that counting lines is the miss. The picture must be understandable with the sound off. Teaching line: Dynamic spacing when volatility rises Labels, spelled exactly: Dynamic. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 4,
+   "chapter": "Re-space the example",
+   "role": "body",
+   "vo": "By the end you can re-space an example grid when the path gets wider, using 13 June 2022 as the worked picture. You change the step and the count on paper. You do not add size to each rung. On the diagram for this beat, look for the same band, second version with a wider step and fewer marks. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write calm and wide as two headings. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Adding size because the path is exciting is the miss. Say the opening line once more, and point at the part that belongs to Re-space the example. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "By the end you can re-space an example grid when the path gets wider, using 13 June 2022 as the worked picture. You",
+   "concept": "By the end you can re-space an example grid when the path gets wider, using 13 June 2022 as the worked picture.",
+   "image": "course/images/el-04-dynamic-spacing/004.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 4, role body. A step-by-step illustrated form, generic and unbranded, with one field highlighted in teal. Chapter context: Re-space the example. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: By the end you can re-space an example grid when the path gets wider, using 13 June 2022 as the worked picture. The picture must be understandable with the sound off. Teaching line: By the end you can re-space an example grid when the path gets wider, using 13 June 2022 as the worked picture. Use no words if a shape is clearer. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not.",
+   "example": {
+    "kind": "chart-day",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 5,
+   "chapter": "House span",
+   "role": "diagram",
+   "vo": "The house span is nine and a half percent, from nineteen gaps at a half of one percent. Twenty order lines make nineteen gaps. You multiply the step by the gaps, not by the lines. On the diagram for this beat, look for twenty lines with nineteen marked gaps, the span labelled nine and a half percent, stamped Example. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write 19 gaps, 0.5 percent step, 9.5 percent span, and the word Example. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Counting lines as gaps makes the band one step too tall. Say the opening line once more, and point at the part that belongs to House span. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "The house span is nine and a half percent, from nineteen gaps at a half of one percent. Twenty order lines.",
+   "concept": "The house span is nine and a half percent, from nineteen gaps at a half of one percent.",
+   "image": "course/images/el-04-dynamic-spacing/005.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 5, role diagram. One large diagram centered on an off-white panel, with thin teal callout lines. Chapter context: House span. Show nineteen even gaps between twenty horizontal lines, the gaps marked, the lines only the edges of the gaps, a small note that counting lines is the miss. The picture must be understandable with the sound off. Teaching line: The house span is nine and a half percent, from nineteen gaps at a half of one percent. Labels, spelled exactly: Example, The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 6,
+   "chapter": "Half the step",
+   "role": "body",
+   "vo": "If you cut the step to a quarter of one percent and keep that same span, the gap count is thirty-eight and the order count is thirty-nine. That arithmetic is the check. Forty orders would be a wider span, not the same span. On the diagram for this beat, look for the same band with finer gaps, the count 38 written on the gaps and 39 on the lines, stamped Example. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write 38 gaps and 39 lines, then write: this is a counting example. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. These figures are not levels to trade. Say the opening line once more, and point at the part that belongs to Half the step. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "If you cut the step to a quarter of one percent and keep that same span, the gap count is thirty-eight and.",
+   "concept": "If you cut the step to a quarter of one percent and keep that same span, the gap count is thirty-eight and the order count is thirty-nine.",
+   "image": "course/images/el-04-dynamic-spacing/006.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 6, role body. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Half the step. Show nineteen even gaps between twenty horizontal lines, the gaps marked, the lines only the edges of the gaps, a small note that counting lines is the miss. The picture must be understandable with the sound off. Teaching line: If you cut the step to a quarter of one percent and keep that same span, the gap count is thirty-eight and the order count is thirty-nine. Labels, spelled exactly: Example. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 7,
+   "chapter": "Widen and cut",
+   "role": "body",
+   "vo": "When the example path gets wider, one approach is to widen the step and to cut the count so inventory per level does not rise. The wide case holds the same or smaller inventory on each rung. It does not load the line harder. On the diagram for this beat, look for the wide bar for 13 June 2022, stamped Example. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Leave size per level the same or smaller in the wide case, and write that sentence. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A wider path is not an invitation to put more on every line. Say the opening line once more, and point at the part that belongs to Widen and cut. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "When the example path gets wider, one approach is to widen the step and to cut the count so inventory per level does",
+   "concept": "When the example path gets wider, one approach is to widen the step and to cut the count so inventory per level does not rise.",
+   "image": "course/images/el-04-dynamic-spacing/007.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 7, role body. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Widen and cut. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: When the example path gets wider, one approach is to widen the step and to cut the count so inventory per level does not rise. The picture must be understandable with the sound off. Teaching line: When the example path gets wider, one approach is to widen the step and to cut the count so inventory per level does not rise. Labels, spelled exactly: Example, When. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not.",
+   "example": {
+    "kind": "chart-day",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 8,
+   "chapter": "Where you are",
+   "role": "map",
+   "vo": "You are here: lesson 4 of 11. Buckets are behind you. The risk page is next. On the diagram for this beat, look for an eleven-step path with the fourth step lit. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write the next title: Portfolio risk controls. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Lesson 4 does not set your size. Say the opening line once more, and point at the part that belongs to Where you are. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "You are here: lesson 4 of 11. Buckets are behind you. The risk page is next. On the diagram for this beat.",
+   "concept": "You are here: lesson 4 of 11.",
+   "image": "course/images/el-04-dynamic-spacing/008.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 8, role map. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Where you are. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: You are here: lesson 4 of 11. The picture must be understandable with the sound off. Teaching line: You are here: lesson 4 of 11. Labels, spelled exactly: You. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 9,
+   "chapter": "Quiz",
+   "role": "quiz",
+   "vo": "Quick check. Twenty lines at a half percent: how many gaps, and what span? The answer: nineteen gaps, and a span of nine and a half percent. On the diagram for this beat, look for the nineteen gaps marked, the span tagged Example. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Say the answer while you point at a gap, not at a line. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Saying twenty gaps is the miss. Say the opening line once more, and point at the part that belongs to Quiz. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Quick check. Twenty lines at a half percent: how many gaps, and what span? The answer: nineteen gaps, and a.",
+   "concept": "Quick check. Twenty lines at a half percent: how many gaps, and what span?",
+   "image": "course/images/el-04-dynamic-spacing/009.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 9, role quiz. A step-by-step illustrated form, generic and unbranded, with one field highlighted in teal. Chapter context: Quiz. Show nineteen even gaps between twenty horizontal lines, the gaps marked, the lines only the edges of the gaps, a small note that counting lines is the miss. The picture must be understandable with the sound off. Teaching line: Quick check. Twenty lines at a half percent: how many gaps, and what span? Labels, spelled exactly: Quick, Twenty. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 10,
+   "chapter": "Recap",
+   "role": "recap",
+   "vo": "Recap: widen the step when the path widens, nineteen gaps in the house example, and do not load each line harder. Say them without looking. On the diagram for this beat, look for three recap rows. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Stamp Example. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. The house count is a teaching count, not a setting you must use. Say the opening line once more, and point at the part that belongs to Recap. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Recap: widen the step when the path widens, nineteen gaps in the house example, and do not load each line harder. Say",
+   "concept": "Recap: widen the step when the path widens, nineteen gaps in the house example, and do not load each line harder.",
+   "image": "course/images/el-04-dynamic-spacing/010.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 10, role recap. One large diagram centered on an off-white panel, with thin teal callout lines. Chapter context: Recap. Show nineteen even gaps between twenty horizontal lines, the gaps marked, the lines only the edges of the gaps, a small note that counting lines is the miss; three short recap rows, each row a tiny diagram plus a two-word label. The picture must be understandable with the sound off. Teaching line: Recap: widen the step when the path widens, nineteen gaps in the house example, and do not load each line harder. Labels, spelled exactly: Recap. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not.",
+   "example": {
+    "kind": "chart-day",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 11,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Re-space the example. Cover the notes and say this from memory: By the end you can re-space an example grid when the path gets wider, using 13 June 2022 as the worked picture. Then uncover the diagram and check that you can still see the same band, second version with a wider step and fewer marks. Write calm and wide as two headings. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Re-space the example. Cover the notes and say this from memory: By the end you can.",
+   "concept": "Practice: By the end you can re-space an example grid when the path gets wider, using 13 June 2022 as the worked picture.",
+   "image": "course/images/el-04-dynamic-spacing/011.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 11, role demo. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: By the end you can re-space an example grid when the path gets wider; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: By the end you can re-space an example grid when the path gets wider, using 13 June 2022 as the worked picture. Labels, spelled exactly: Practice. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 12,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside House span. Cover the notes and say this from memory: The house span is nine and a half percent, from nineteen gaps at a half of one percent. Then uncover the diagram and check that you can still see twenty lines with nineteen marked gaps, the span labelled nine and a half percent, stamped Example. Write 19 gaps, 0.5 percent step, 9.5 percent span, and the word Example. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside House span. Cover the notes and say this from memory: The house span is nine and a.",
+   "concept": "Practice: The house span is nine and a half percent, from nineteen gaps at a half of one percent.",
+   "image": "course/images/el-04-dynamic-spacing/012.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 12, role demo. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Your turn. Show nineteen even gaps between twenty horizontal lines, the gaps marked, the lines only the edges of the gaps, a small note that counting lines is the miss; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: The house span is nine and a half percent, from nineteen gaps at a half of one percent. Labels, spelled exactly: Example, Practice, The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 13,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Half the step. Cover the notes and say this from memory: If you cut the step to a quarter of one percent and keep that same span, the gap count is thirty-eight and the order count is thirty-nine. Then uncover the diagram and check that you can still see the same band with finer gaps, the count 38 written on the gaps and 39 on the lines, stamped Example. Write 38 gaps and 39 lines, then write: this is a counting example. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Half the step. Cover the notes and say this from memory: If you cut the step to a.",
+   "concept": "Practice: If you cut the step to a quarter of one percent and keep that same span, the gap count is thirty-eight and the order count is thirty-nine.",
+   "image": "course/images/el-04-dynamic-spacing/013.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 13, role demo. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Your turn. Show nineteen even gaps between twenty horizontal lines, the gaps marked, the lines only the edges of the gaps, a small note that counting lines is the miss; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: If you cut the step to a quarter of one percent and keep that same span, the gap count is thirty-eight and the order count is thirty-nine. Labels, spelled exactly: Example, Practice. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 14,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Widen and cut. Cover the notes and say this from memory: When the example path gets wider, one approach is to widen the step and to cut the count so inventory per level does not rise. Then uncover the diagram and check that you can still see two columns, calm and wide, the wide column with a longer gap and a smaller stack on each rung. Leave size per level the same or smaller in the wide case, and write that sentence. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Widen and cut. Cover the notes and say this from memory: When the example path gets.",
+   "concept": "Practice: When the example path gets wider, one approach is to widen the step and to cut the count so inventory per level does not rise.",
+   "image": "course/images/el-04-dynamic-spacing/014.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 14, role demo. A step-by-step illustrated form, generic and unbranded, with one field highlighted in teal. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: When the example path gets wider, one approach is to widen the step and to cut the count so inventory per level does not rise; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: When the example path gets wider, one approach is to widen the step and to cut the count so inventory per level does not rise. Labels, spelled exactly: Example, Practice, When. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 15,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Re-space the example. Cover the notes and say this from memory: By the end you can re-space an example grid when the path gets wider, using 13 June 2022 as the worked picture. Then uncover the diagram and check that you can still see the same band, second version with a wider step and fewer marks. Write calm and wide as two headings. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Re-space the example. Cover the notes and say this from memory: By the end you can.",
+   "concept": "Practice: By the end you can re-space an example grid when the path gets wider, using 13 June 2022 as the worked picture.",
+   "image": "course/images/el-04-dynamic-spacing/015.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 15, role demo. One large diagram centered on an off-white panel, with thin teal callout lines. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: By the end you can re-space an example grid when the path gets wider; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: By the end you can re-space an example grid when the path gets wider, using 13 June 2022 as the worked picture. Labels, spelled exactly: Practice. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 16,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside House span. Cover the notes and say this from memory: The house span is nine and a half percent, from nineteen gaps at a half of one percent. Then uncover the diagram and check that you can still see twenty lines with nineteen marked gaps, the span labelled nine and a half percent, stamped Example. Write 19 gaps, 0.5 percent step, 9.5 percent span, and the word Example. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside House span. Cover the notes and say this from memory: The house span is nine and a.",
+   "concept": "Practice: The house span is nine and a half percent, from nineteen gaps at a half of one percent.",
+   "image": "course/images/el-04-dynamic-spacing/016.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 16, role demo. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Your turn. Show nineteen even gaps between twenty horizontal lines, the gaps marked, the lines only the edges of the gaps, a small note that counting lines is the miss; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: The house span is nine and a half percent, from nineteen gaps at a half of one percent. Labels, spelled exactly: Example, Practice, The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 17,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Half the step. Cover the notes and say this from memory: If you cut the step to a quarter of one percent and keep that same span, the gap count is thirty-eight and the order count is thirty-nine. Then uncover the diagram and check that you can still see the same band with finer gaps, the count 38 written on the gaps and 39 on the lines, stamped Example. Write 38 gaps and 39 lines, then write: this is a counting example. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Half the step. Cover the notes and say this from memory: If you cut the step to a.",
+   "concept": "Practice: If you cut the step to a quarter of one percent and keep that same span, the gap count is thirty-eight and the order count is thirty-nine.",
+   "image": "course/images/el-04-dynamic-spacing/017.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 17, role demo. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Your turn. Show nineteen even gaps between twenty horizontal lines, the gaps marked, the lines only the edges of the gaps, a small note that counting lines is the miss; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: If you cut the step to a quarter of one percent and keep that same span, the gap count is thirty-eight and the order count is thirty-nine. Labels, spelled exactly: Example, Practice. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 18,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Widen and cut. Cover the notes and say this from memory: When the example path gets wider, one approach is to widen the step and to cut the count so inventory per level does not rise. Then uncover the diagram and check that you can still see two columns, calm and wide, the wide column with a longer gap and a smaller stack on each rung. Leave size per level the same or smaller in the wide case, and write that sentence. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Widen and cut. Cover the notes and say this from memory: When the example path gets.",
+   "concept": "Practice: When the example path gets wider, one approach is to widen the step and to cut the count so inventory per level does not rise.",
+   "image": "course/images/el-04-dynamic-spacing/018.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 18, role demo. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: When the example path gets wider, one approach is to widen the step and to cut the count so inventory per level does not rise; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: When the example path gets wider, one approach is to widen the step and to cut the count so inventory per level does not rise. Labels, spelled exactly: Example, Practice, When. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 19,
+   "chapter": "Action",
+   "role": "action",
+   "vo": "Your action: on paper, write two steps, the calm example at a half percent, and a wider example. Leave size per level the same or smaller in the wide case. No order is sent. On the diagram for this beat, look for two labelled steps on one page. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Bring both steps to the risk lesson. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Do not fill a live size. Say the opening line once more, and point at the part that belongs to Action. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Your action: on paper, write two steps, the calm example at a half percent, and a wider example. Leave size.",
+   "concept": "Your action: on paper, write two steps, the calm example at a half percent, and a wider example.",
+   "image": "course/images/el-04-dynamic-spacing/019.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 19, role action. A step-by-step illustrated form, generic and unbranded, with one field highlighted in teal. Chapter context: Action. Show an open notebook page with a short checklist, one row highlighted, next to the diagram it describes; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Your action: on paper, write two steps, the calm example at a half percent, and a wider example. Labels, spelled exactly: Your. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 20,
+   "chapter": "Outro",
+   "role": "outro",
+   "vo": "Next lesson: Portfolio risk controls. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
+   "cap": "Next lesson: Portfolio risk controls. Bring the page you just wrote. Leave every example marked Example. No.",
+   "concept": "Next lesson: Portfolio risk controls. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
+   "image": "course/images/el-04-dynamic-spacing/020.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Dynamic spacing when volatility rises', beat 20, role outro. One large diagram centered on an off-white panel, with thin teal callout lines. Chapter context: Outro. Show a dashed stop line below the band, and a price path that leaves the band and does not return; a quiet next-step card with a single arrow to a blank next title, no price and no button that buys anything. The picture must be understandable with the sound off. Teaching line: Next lesson: Portfolio risk controls. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons. Labels, spelled exactly: Next, Portfolio, Bring, Leave. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  }
+ ]
+}

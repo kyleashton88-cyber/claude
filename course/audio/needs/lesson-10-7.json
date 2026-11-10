@@ -1,0 +1,295 @@
+{
+ "id": "lesson-10-7",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-10-7.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 10.6, Restaking and points: pricing speculative yield. Value restaking and points programmes without letting unknown rewards drive position size. Keep that page on the desk. This lesson adds one picture: Understand what you're really taking on when you provide liquidity to a perpetuals exchange."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 10.7, Being the house: perp-exchange liquidity vaults. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already split base yield from emissions. Advanced yield still starts with that split, then names a more particular engine."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Many on-chain perp exchanges let you deposit into a liquidity vault that acts as the counterparty to traders (the \"house\")."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "The vault earns trading fees, borrowing/funding fees and part of liquidations, and loses when traders win."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Risks: a run of profitable traders (or a few very large ones), open interest concentrated on one side, oracle manipulation or latency, the market-making strategy of the vault (some vaults actively trade), and exchange contract risk."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Check: the vault's historical P&L split (fees vs trader P&L), its open-interest caps, how it prices assets (oracle), and withdrawal rules (cooldowns, fees)."
+  },
+  {
+   "n": 9,
+   "role": "demo",
+   "vo": "Work the example on paper. A vault shows 25% APR: 18% from fees, 7% from traders' net losses over the last 6 months. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 10,
+   "role": "demo",
+   "vo": "Work the example on paper. In a strong one-directional trend, traders who are long win, so the vault's \"trader P&L\" component can swing to \u221220% or worse, wiping out the fees. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "Work the example on paper. Size it as an active trading exposure, not as fixed income, and check whether withdrawals are delayed in stress. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Vault returns split into fees vs trader P&L, with history. If you cannot write it, the line is open."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Open-interest caps and oracle design reviewed. If you cannot write it, the line is open."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Withdrawal cooldowns and stress behaviour known. If you cannot write it, the line is open."
+  },
+  {
+   "n": 15,
+   "role": "quiz",
+   "vo": "Check yourself. 1. When does a perp liquidity vault lose money? The answer: When traders are net profitable, e.g. in strong trends."
+  },
+  {
+   "n": 16,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Why isn't it fixed income? The answer: Part of the return is traders' losses, which can reverse sharply."
+  },
+  {
+   "n": 17,
+   "role": "quiz",
+   "vo": "Check yourself. 3. Name two things to check before depositing. The answer: Any two: fee vs trader-P&L history, OI caps, oracle design, withdrawal rules, contract risk."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to understand what you're really taking on when you provide liquidity to a perpetuals exchange."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "First, Returns: fees + traders' losses minus traders' profits."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "Next, Risks: a run of profitable traders (or a few very large ones), open interest concentrated on one side, oracle manipulation or latency, the market-making strategy of the vault (some vaults actively trade), and exchange contract risk."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "And finally, Check: the vault's historical P and L split (fees versus trader P and L), its open-interest caps, how it prices assets (oracle), and withdrawal rules (cooldowns, fees)."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "A vault shows 25% A.P.R.: 18% from fees, 7% from traders' net losses over the last 6 months."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "In a strong one-directional trend, traders who are long win, so the vault's \"trader P and L\" component can swing to minus 20% or worse, wiping out the fees."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "Size it as an active trading exposure, not as fixed income, and check whether withdrawals are delayed in stress."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Trader skill and trending markets; oracle quality; the exchange's own risk controls."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "First, Vault returns split into fees versus trader P and L, with history."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Next, Open-interest caps and oracle design reviewed."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "And finally, Withdrawal cooldowns and stress behaviour known."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "When does a perp liquidity vault lose money?"
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "The answer: When traders are net profitable, for example in strong trends."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "The answer: Part of the return is traders' losses, which can reverse sharply."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "The answer: Any two: fee versus trader-P and L history, open interest caps, oracle design, withdrawal rules, contract risk."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "Risks: a run of profitable traders (or a few very large ones)."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "Check: the vault's historical P and L split (fees versus trader P and L), its open-interest caps."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "Next up, lesson ten point eight: DeFi rates: term structure, fixed versus floating."
+  },
+  {
+   "n": 37,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Many on-chain perp exchanges let you deposit into a liquidity vault that acts as the counterparty to traders (the \"house\"). It sits in Being the house: perp-exchange liquidity vaults. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 38,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The vault earns trading fees, borrowing/funding fees and part of liquidations, and loses when traders win. It sits in Being the house: perp-exchange liquidity vaults. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 39,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Returns: fees + traders' losses \u2212 traders' profits. It sits in Being the house: perp-exchange liquidity vaults. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Risks: a run of profitable traders (or a few very large ones), open interest concentrated on one side, oracle manipulation or latency, the market-making strategy of the vault (some vaults actively trade), and exchange contract risk. It sits in Being the house: perp-exchange liquidity vaults. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Check: the vault's historical P&L split (fees vs trader P&L), its open-interest caps, how it prices assets (oracle), and withdrawal rules (cooldowns, fees). It sits in Being the house: perp-exchange liquidity vaults. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. A vault shows 25% APR: 18% from fees, 7% from traders' net losses over the last 6 months. It sits in Being the house: perp-exchange liquidity vaults. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. In a strong one-directional trend, traders who are long win, so the vault's \"trader P&L\" component can swing to \u221220% or worse, wiping out the fees. It sits in Being the house: perp-exchange liquidity vaults. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Size it as an active trading exposure, not as fixed income, and check whether withdrawals are delayed in stress. It sits in Being the house: perp-exchange liquidity vaults. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Understand what you're really taking on when you provide liquidity to a perpetuals exchange. It sits in Being the house: perp-exchange liquidity vaults. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Vault returns split into fees vs trader P&L, with history. It sits in Being the house: perp-exchange liquidity vaults. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Open-interest caps and oracle design reviewed. It sits in Being the house: perp-exchange liquidity vaults. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Withdrawal cooldowns and stress behaviour known. It sits in Being the house: perp-exchange liquidity vaults. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Many on-chain perp exchanges let you deposit into a liquidity vault that acts as the counterparty to traders (the \"house\"). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. The vault earns trading fees, borrowing/funding fees and part of liquidations, and loses when traders win. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Returns: fees + traders' losses \u2212 traders' profits. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Risks: a run of profitable traders (or a few very large ones), open interest concentrated on one side, oracle manipulation or latency, the market-making strategy of the vault (some vaults actively trade), and exchange contract risk. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Check: the vault's historical P&L split (fees vs trader P&L), its open-interest caps, how it prices assets (oracle), and withdrawal rules (cooldowns, fees). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 54,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. A vault shows 25% APR: 18% from fees, 7% from traders' net losses over the last 6 months. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 55,
+   "role": "recap",
+   "vo": "Three lines to keep. Many on-chain perp exchanges let you deposit into a liquidity vault that acts as the counterparty to traders (the \"house\"). The vault earns trading fees, borrowing/funding fees and part of liquidations, and loses when traders win. Next is Lesson 10.8, DeFi rates: term structure, fixed vs floating. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 56,
+   "role": "action",
+   "vo": "Your action for Being the house: perp-exchange liquidity vaults: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 10.8, DeFi rates: term structure, fixed vs floating."
+  },
+  {
+   "n": 57,
+   "role": "outro",
+   "vo": "Next is Lesson 10.8, DeFi rates: term structure, fixed vs floating. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

@@ -1,0 +1,490 @@
+{
+ "id": "lesson-05-2",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-05-2.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 5.1, Bridges and trust assumptions. Choose bridge routes by their trust model, and size bridge exposure accordingly. Keep that page on the desk. This lesson adds one picture: Understand how your L2 settles, who orders your transactions, and how you'd exit."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 5.2, Layer 2s, sequencers & withdrawal paths. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You can already split base yield from emissions, and you can name an LST. This module asks what that position sits on: a bridge, a sequencer, an oracle, or a key."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Rollups execute transactions off Ethereum and post data or proofs back to it."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Optimistic rollups assume transactions are valid unless challenged."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Native withdrawals to Ethereum wait out a challenge window (about 7 days on major optimistic rollups)."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "ZK rollups post validity proofs, so native withdrawals can be faster."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Often a single operator today; if it goes down, the chain may pause."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Escape hatches: most rollups let you force a withdrawal via Ethereum if the sequencer censors you."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "Work the example on paper. You hold $20,000 on an optimistic rollup and need it on Ethereum. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "Work the example on paper. Fast bridge: minutes, for a fee, relying on its liquidity. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "Work the example on paper. Plan your liquidity ladder (Module 12.4) around the slow path. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Rollup type and withdrawal time known for each L2 I use. If you cannot write it, the line is open."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Sequencer setup and escape hatch known. If you cannot write it, the line is open."
+  },
+  {
+   "n": 16,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Liquidity plan assumes the slow path. If you cannot write it, the line is open."
+  },
+  {
+   "n": 17,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Why do optimistic rollup withdrawals take ~7 days? The answer: The challenge window lets anyone dispute an invalid state before it's final."
+  },
+  {
+   "n": 18,
+   "role": "quiz",
+   "vo": "Check yourself. 2. What happens if a single sequencer goes down? The answer: The L2 may pause transactions until it recovers."
+  },
+  {
+   "n": 19,
+   "role": "quiz",
+   "vo": "Check yourself. 3. What's an escape hatch? The answer: A way to force a transaction or withdrawal via the base chain if the sequencer censors you."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "By the end, you'll understand exactly how your L2 settles, who's actually ordering your transactions, and how you'd genuinely exit it if you needed to."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "How a rollup actually settles back to Ethereum, and the real difference between optimistic and Z.K."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "What a sequencer actually is, and what happens if it goes down."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Escape hatches, your genuine backup exit if a sequencer ever censors you."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "And a full worked example, planning a real withdrawal around the slow path, deliberately."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Here's what every rollup genuinely does, underneath its own branding."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "It executes your transactions off Ethereum, where it's cheaper and faster, then posts data or cryptographic proofs back to Ethereum itself, so the base chain can ultimately verify what actually happened."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "That posting-back step is exactly what lets a rollup inherit Ethereum's own underlying security, rather than needing to build an entirely separate security model of its own from scratch."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "Here's the actual difference between the two major rollup designs, and specifically why it changes how long a native withdrawal takes."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "Optimistic rollups assume every transaction is valid unless someone actively challenges it, which means a native withdrawal back to Ethereum has to wait out a challenge window, commonly around seven days on major optimistic rollups today."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "rollups instead post genuine validity proofs directly, so a native withdrawal can move considerably faster, since there's no challenge period to wait out at all."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "Here's all three withdrawal paths from this lesson, side by side, so the actual gap between them is concrete, not just described."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "An optimistic rollup's native withdrawal: roughly seven days."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "rollup's native withdrawal: considerably faster, often within hours, since there's no challenge window to wait out."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "A fast bridge, on either type: just minutes, for a fee, relying on that bridge's own liquidity instead."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "Worth being precise about why a rollup posting data back to Ethereum is what actually matters here, compared with a chain that simply doesn't."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "That posted data, or proof, is exactly what lets Ethereum itself verify the rollup's state independently."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "A chain that skips this step entirely is building its own separate security model from scratch, which is a genuinely different, and often weaker, kind of trust assumption."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "Why do optimistic rollup withdrawals typically take around seven days?"
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "The answer: the challenge window gives anyone the chance to dispute an invalid state, before it's actually allowed to become final."
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "Here's exactly what a sequencer actually does, and why its own reliability matters so directly to you."
+  },
+  {
+   "n": 41,
+   "role": "body",
+   "vo": "It's the operator that receives your transactions, and decides the specific order they actually get processed in, before eventually posting that data back to Ethereum."
+  },
+  {
+   "n": 42,
+   "role": "body",
+   "vo": "Today, on most major rollups, that's still a single operator, not a broad, decentralised set."
+  },
+  {
+   "n": 43,
+   "role": "body",
+   "vo": "If that one operator goes down, the entire chain can genuinely pause, until it recovers."
+  },
+  {
+   "n": 44,
+   "role": "body",
+   "vo": "Worth being precise about what a sequencer pause actually means for you directly, since it's a genuinely different kind of risk from a price move or a hack."
+  },
+  {
+   "n": 45,
+   "role": "body",
+   "vo": "Your funds aren't stolen, or even necessarily at risk of loss."
+  },
+  {
+   "n": 46,
+   "role": "body",
+   "vo": "You simply can't transact, potentially for some real stretch of time, at exactly whatever moment you might have most wanted to."
+  },
+  {
+   "n": 47,
+   "role": "body",
+   "vo": "Here's why the actual sequencer setup differs so much from one rollup to another, in exactly the way that matters most to you."
+  },
+  {
+   "n": 48,
+   "role": "body",
+   "vo": "A single-operator sequencer is simple to run, but pausing that one operator pauses the entire chain along with it."
+  },
+  {
+   "n": 49,
+   "role": "body",
+   "vo": "A shared, or decentralised, sequencer set spreads that same responsibility across multiple independent parties, so any one of them pausing doesn't necessarily pause the chain itself."
+  },
+  {
+   "n": 50,
+   "role": "body",
+   "vo": "What actually happens if a single sequencer goes down?"
+  },
+  {
+   "n": 51,
+   "role": "body",
+   "vo": "The answer: the L2 may pause transactions entirely, until that sequencer actually recovers."
+  },
+  {
+   "n": 52,
+   "role": "body",
+   "vo": "Here's exactly what an escape hatch actually is, and why it matters even if you never expect to need it."
+  },
+  {
+   "n": 53,
+   "role": "body",
+   "vo": "Most rollups let you force a withdrawal directly through Ethereum itself, entirely bypassing the sequencer, specifically if that sequencer is ever censoring you, or simply refusing to process your transaction."
+  },
+  {
+   "n": 54,
+   "role": "body",
+   "vo": "It's slower, and often more involved, than the ordinary path."
+  },
+  {
+   "n": 55,
+   "role": "body",
+   "vo": "But it's the genuine difference between funds that are merely delayed, and funds you're actually locked out of entirely."
+  },
+  {
+   "n": 56,
+   "role": "body",
+   "vo": "Worth being direct about the actual homework this creates for you, on every single rollup you use."
+  },
+  {
+   "n": 57,
+   "role": "body",
+   "vo": "Not every rollup has implemented a genuine escape hatch, and even among those that do, the actual process varies considerably."
+  },
+  {
+   "n": 58,
+   "role": "body",
+   "vo": "Know, specifically, whether yours has one, and roughly what using it would actually involve, before you're ever in a position where you'd need it."
+  },
+  {
+   "n": 59,
+   "role": "body",
+   "vo": "Here's how to actually check this for a rollup you already use, rather than assuming it works a particular way."
+  },
+  {
+   "n": 60,
+   "role": "body",
+   "vo": "Search its own documentation specifically for the words sequencer, decentralisation, or escape hatch, and read what it actually says."
+  },
+  {
+   "n": 61,
+   "role": "body",
+   "vo": "Check whether it's ever published a real incident report from a sequencer outage, and how that outage was actually handled."
+  },
+  {
+   "n": 62,
+   "role": "body",
+   "vo": "And if you genuinely can't find a clear answer either way, treat that itself as the finding."
+  },
+  {
+   "n": 63,
+   "role": "body",
+   "vo": "The answer: a way to force a transaction or withdrawal directly through the base chain, if the sequencer is censoring you."
+  },
+  {
+   "n": 64,
+   "role": "body",
+   "vo": "Here's the actual choice, laid out side by side, for genuinely moving twenty thousand dollars off an optimistic rollup, back onto Ethereum itself."
+  },
+  {
+   "n": 65,
+   "role": "body",
+   "vo": "The native bridge is the safest path available, but takes roughly seven days, waiting out that same challenge window from earlier in this lesson."
+  },
+  {
+   "n": 66,
+   "role": "body",
+   "vo": "A fast bridge instead takes just minutes, for a fee, specifically by relying on that fast bridge's own available liquidity, rather than the rollup's own native settlement."
+  },
+  {
+   "n": 67,
+   "role": "body",
+   "vo": "Here's the one sentence this entire worked example exists to prove, worth holding onto more than the specific seven-day figure."
+  },
+  {
+   "n": 68,
+   "role": "body",
+   "vo": "Plan your own liquidity ladder around the slow, native path, deliberately, treating the fast bridge as a genuine option for genuine emergencies, never as your actual, default plan for accessing this money at all."
+  },
+  {
+   "n": 69,
+   "role": "body",
+   "vo": "Here's how this actually connects to your own liquidity ladder, the framework covered properly back in Module twelve."
+  },
+  {
+   "n": 70,
+   "role": "body",
+   "vo": "Anything you might genuinely need within roughly seven days shouldn't be sitting on an optimistic rollup's native withdrawal path at all."
+  },
+  {
+   "n": 71,
+   "role": "body",
+   "vo": "Anything you're comfortable waiting a week for can sit there safely."
+  },
+  {
+   "n": 72,
+   "role": "body",
+   "vo": "And the fast bridge stays reserved specifically for the gap between those two, when real urgency and real cost both apply at once."
+  },
+  {
+   "n": 73,
+   "role": "body",
+   "vo": "Do it for every layer two you actually use."
+  },
+  {
+   "n": 74,
+   "role": "body",
+   "vo": "Know the rollup type, optimistic or Z.K., and the real native withdrawal time that comes with it."
+  },
+  {
+   "n": 75,
+   "role": "body",
+   "vo": "Know your sequencer's actual setup, and whether a genuine escape hatch exists if it ever censors you."
+  },
+  {
+   "n": 76,
+   "role": "body",
+   "vo": "And build your own liquidity plan assuming the slow path every time, never the fast one."
+  },
+  {
+   "n": 77,
+   "role": "body",
+   "vo": "A rollup executes off Ethereum, then settles back to it; optimistic rollups wait out a roughly seven-day challenge window for native withdrawals, Z.K."
+  },
+  {
+   "n": 78,
+   "role": "body",
+   "vo": "A sequencer orders your transactions, often as a single operator today; if it goes down, the chain may pause."
+  },
+  {
+   "n": 79,
+   "role": "body",
+   "vo": "An escape hatch is your backup exit through Ethereum itself, if you're ever censored."
+  },
+  {
+   "n": 80,
+   "role": "body",
+   "vo": "And the real plan is to build your liquidity ladder around the slow path, always, keeping the fast bridge as a genuine emergency option only."
+  },
+  {
+   "n": 81,
+   "role": "body",
+   "vo": "Worth connecting this back to the dependency map from this module's own Mastery Starter, one more time."
+  },
+  {
+   "n": 82,
+   "role": "body",
+   "vo": "Your layer two is another specific link in that same chain: its own rollup type, its own sequencer setup, and its own escape hatch, each one worth knowing before you ever need to rely on it under real pressure."
+  },
+  {
+   "n": 83,
+   "role": "body",
+   "vo": "Know your rollup type and withdrawal time, know your sequencer and escape hatch, and plan your liquidity around the slow path."
+  },
+  {
+   "n": 84,
+   "role": "body",
+   "vo": "Next up, Lesson five point three: oracles, T.W.A.P.s, and manipulation."
+  },
+  {
+   "n": 85,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Rollups execute transactions off Ethereum and post data or proofs back to it. It sits in Layer 2s, sequencers & withdrawal paths. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 86,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Optimistic rollups assume transactions are valid unless challenged. It sits in Layer 2s, sequencers & withdrawal paths. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 87,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Native withdrawals to Ethereum wait out a challenge window (about 7 days on major optimistic rollups). It sits in Layer 2s, sequencers & withdrawal paths. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 88,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. ZK rollups post validity proofs, so native withdrawals can be faster. It sits in Layer 2s, sequencers & withdrawal paths. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 89,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Sequencer: the operator that orders transactions. It sits in Layer 2s, sequencers & withdrawal paths. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 90,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Often a single operator today; if it goes down, the chain may pause. It sits in Layer 2s, sequencers & withdrawal paths. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 91,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Escape hatches: most rollups let you force a withdrawal via Ethereum if the sequencer censors you. It sits in Layer 2s, sequencers & withdrawal paths. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 92,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. You hold $20,000 on an optimistic rollup and need it on Ethereum. It sits in Layer 2s, sequencers & withdrawal paths. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 93,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Fast bridge: minutes, for a fee, relying on its liquidity. It sits in Layer 2s, sequencers & withdrawal paths. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 94,
+   "role": "recap",
+   "vo": "Three lines to keep. Rollups execute transactions off Ethereum and post data or proofs back to it. Optimistic rollups assume transactions are valid unless challenged. Next is Lesson 5.3, Oracles, TWAPs & manipulation. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 95,
+   "role": "action",
+   "vo": "Your action for Layer 2s, sequencers & withdrawal paths: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 5.3, Oracles, TWAPs & manipulation."
+  },
+  {
+   "n": 96,
+   "role": "outro",
+   "vo": "Next is Lesson 5.3, Oracles, TWAPs & manipulation. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

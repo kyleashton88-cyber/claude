@@ -1,0 +1,275 @@
+{
+ "id": "el-07-advanced-liquidation",
+ "title": "Advanced: liquidation scenarios",
+ "course": "Grid Bot Elite",
+ "palette": "teal",
+ "music": "course/music/komiku-ambiant-truth.ogg",
+ "next": "Size changes on a schedule",
+ "wpm_assumption": 143,
+ "word_count": 2581,
+ "estimated_minutes": 18.05,
+ "code_draws_visuals": false,
+ "overlays_only": [
+  "captions",
+  "lower thirds",
+  "intro title text",
+  "disclaimer line",
+  "Ken Burns"
+ ],
+ "beats": [
+  {
+   "n": 1,
+   "chapter": "Hook",
+   "role": "hook",
+   "vo": "The first picture is a position the venue can close. Last page you wrote a pause that you act, and a venue close that the venue acts. This lesson stays on the venue close, and it starts with a loss. On the diagram for this beat, look for one position box with a close mark, and no second panel. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Draw only the losing picture. Leave the other half of the page empty. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A second picture of a gain would teach the wrong lesson. Say the opening line once more, and point at the part that belongs to Hook. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "The first picture is a position the venue can close. Last page you wrote a pause that you act, and a venue close that",
+   "concept": "The first picture is a position the venue can close.",
+   "image": "course/images/el-07-advanced-liquidation/001.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are CLOSE and EXAMPLE. A close square inside a frame. Headline VENUE white, CLOSE #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 2,
+   "chapter": "Disclaimer",
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot. Leverage magnifies losses. A leveraged position can be liquidated, and you can lose all the money you commit.",
+   "cap": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of.",
+   "concept": "Education only, not financial advice.",
+   "image": "course/images/el-07-advanced-liquidation/002.png",
+   "image_status": "pass",
+   "prompt": "The only readable word is EXAMPLE. One card with a level bar. Headline STUDY white, ONLY #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 3,
+   "chapter": "Title card",
+   "role": "intro",
+   "vo": "This is Grid Bot Elite. The lesson is Advanced: liquidation scenarios. Teal on the frame. Not the Blueprint plate. Education only. You will write on paper before any screen.",
+   "cap": "This is Grid Bot Elite. The lesson is Advanced: liquidation scenarios. Teal on the frame. Not the Blueprint.",
+   "concept": "Advanced: liquidation scenarios",
+   "image": "course/images/el-07-advanced-liquidation/003.png",
+   "image_status": "pass",
+   "prompt": "The only readable word is EXAMPLE. Three frames, the first holding a close square. Headline FIRST white, FRAME #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 4,
+   "chapter": "Education first",
+   "role": "body",
+   "vo": "This content is general education only, not financial advice. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. On the diagram for this beat, look for the education line under the single position box. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Copy the education line onto the page before any number. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Skipping the line because the picture is familiar is the miss. Say the opening line once more, and point at the part that belongs to Education first. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "This content is general education only, not financial advice. It does not consider your objectives, financial.",
+   "concept": "This content is general education only, not financial advice.",
+   "image": "course/images/el-07-advanced-liquidation/004.png",
+   "image_status": "pass",
+   "prompt": "The only readable word is EXAMPLE. A bookmark mark. Headline READ white, ONLY #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 5,
+   "chapter": "Losing scenario first",
+   "role": "diagram",
+   "vo": "The worked picture is the public path from 8 November 2021 to 21 November 2022, about 76 percent lower, and it is an example. You draw a path that leaves the band and a venue that can close the position. You do not draw a gain beside it. On the diagram for this beat, look for the public path from 8 November 2021 down to 21 November 2022, stamped Example, with the gain panel absent. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write Hypothetical and Example on the page. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. No second picture shows a gain. Say the opening line once more, and point at the part that belongs to Losing scenario first. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "The worked picture is the public path from 8 November 2021 to 21 November 2022, about 76 percent lower, and it is an",
+   "concept": "The worked picture is the public path from 8 November 2021 to 21 November 2022, about 76 percent lower, and it is an example.",
+   "image": "course/images/el-07-advanced-liquidation/005.png",
+   "image_status": "pass",
+   "prompt": "The only readable word is EXAMPLE. A level path that steps down. Headline LOSS white, PATH #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "chart-path",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 6,
+   "chapter": "Deleted multiples",
+   "role": "body",
+   "vo": "The old multiples, and the frame that multiplied capital by ten, are deleted. The 13 June 2022 close was 16 percent under the day before, so the digits stay struck. A multiple invites a size. This lesson does not teach a multiple, and it does not fill a size. On the diagram for this beat, look for the 13 June 2022 bar, taller than the day before, with the digits struck and stamped Example. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. If a multiple is still on your old notes, cross it out. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Keeping the multiple because it looks precise is how the deleted frame returns. Say the opening line once more, and point at the part that belongs to Deleted multiples. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "The old multiples, and the frame that multiplied capital by ten, are deleted. The 13 June 2022 close was 16 percent",
+   "concept": "The old multiples, and the frame that multiplied capital by ten, are deleted. The 13 June 2022 close was 16 percent under the day before, so the digits stay struck.",
+   "image": "course/images/el-07-advanced-liquidation/006.png",
+   "image_status": "pass",
+   "prompt": "The only readable characters are 10 and EXAMPLE. The digits 10 are struck through. Headline STRIKE white, TEN #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "chart-day",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 7,
+   "chapter": "Not for US persons",
+   "role": "body",
+   "vo": "United States: some venues' futures products are not available to US persons. The sentence is a boundary on a product, not a recommendation to use a different product instead. On the diagram for this beat, look for a map mark and a futures box crossed out for that boundary. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write the sentence if it applies to the reader you are, and do not replace it with a substitute venue. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. The lesson does not help anyone route around that boundary. Say the opening line once more, and point at the part that belongs to Not for US persons. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "United States: some venues' futures products are not available to US persons. The sentence is a boundary on a",
+   "concept": "United States: some venues' futures products are not available to US persons.",
+   "image": "course/images/el-07-advanced-liquidation/007.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are VENUE and EXAMPLE. Two generic venue chips, each crossed. No exchange names. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 8,
+   "chapter": "Where you are",
+   "role": "map",
+   "vo": "You are here: lesson 7 of 11. The pause lesson is behind you. A calendar for size is next, and it does not assume a gain. On the diagram for this beat, look for an eleven-step path with the seventh step lit. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write the next title: Size changes on a schedule. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. You can leave this lesson with one sentence and never open a leveraged book. Say the opening line once more, and point at the part that belongs to Where you are. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "You are here: lesson 7 of 11. The pause lesson is behind you. A calendar for size is next, and it does not.",
+   "concept": "You are here: lesson 7 of 11.",
+   "image": "course/images/el-07-advanced-liquidation/008.png",
+   "image_status": "pass",
+   "prompt": "The only readable word is EXAMPLE and the only digit is 7. Eleven chips, the seventh filled. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 9,
+   "chapter": "Quiz",
+   "role": "quiz",
+   "vo": "Quick check. What picture is missing on purpose? The answer: a second picture that shows a gain. On the diagram for this beat, look for an empty right panel, labelled not drawn. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Point at the empty panel. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Filling the empty panel with a win is the miss. Say the opening line once more, and point at the part that belongs to Quiz. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Quick check. What picture is missing on purpose? The answer: a second picture that shows a gain. On the.",
+   "concept": "Quick check. What picture is missing on purpose?",
+   "image": "course/images/el-07-advanced-liquidation/009.png",
+   "image_status": "pass",
+   "prompt": "The only readable word is EXAMPLE. An empty frame with an X, the missing picture. Headline NO white, GAIN #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 10,
+   "chapter": "Recap",
+   "role": "recap",
+   "vo": "Recap: the public path falls, the gain panel stays off, and the old multiples are deleted. Say them without looking. On the diagram for this beat, look for three recap rows. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Stamp Example. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Do not recap a multiple. Say the opening line once more, and point at the part that belongs to Recap. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Recap: the public path falls, the gain panel stays off, and the old multiples are deleted. Say them without looking.",
+   "concept": "Recap: the public path falls, the gain panel stays off, and the old multiples are deleted.",
+   "image": "course/images/el-07-advanced-liquidation/010.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are CLOSE and EXAMPLE, and the only digits are a struck 10. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart, no exchange names, no brand names. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "chart-path",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 11,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Education first. Cover the notes and say this from memory: This content is general education only, not financial advice. Then uncover the diagram and check that you can still see the education line under the single position box. Copy the education line onto the page before any number. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Education first. Cover the notes and say this from memory: This content is general.",
+   "concept": "Practice: This content is general education only, not financial advice.",
+   "image": "course/images/el-07-advanced-liquidation/011.png",
+   "image_status": "pass",
+   "prompt": "The only readable word is EXAMPLE. A bar with a blank line under it. Headline WRITE white, ONLY #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 12,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Losing scenario first. Cover the notes and say this from memory: The worked picture is the public path from 8 November 2021 to 21 November 2022, about 76 percent lower, and it is an example. Then uncover the diagram and check that you can still see a path leaving the band and a close mark, stamped Example, with the gain panel absent. Write Hypothetical and Example on the page. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Losing scenario first. Cover the notes and say this from memory: The worked picture.",
+   "concept": "Practice: The worked picture is the public path from 8 November 2021 to 21 November 2022, about 76 percent lower, and it is an example.",
+   "image": "course/images/el-07-advanced-liquidation/012.png",
+   "image_status": "pass",
+   "prompt": "The only readable word is EXAMPLE. A path that steps down, with a blank line. Headline LOSS white, NOTE #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 13,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Deleted multiples. Cover the notes and say this from memory: The old multiples, and the frame that multiplied capital by ten, are deleted. The 13 June 2022 close was 16 percent under the day before, so the digits stay struck. Then uncover the diagram and check that you can still see a crossed-out times-ten mark beside the position box. If a multiple is still on your old notes, cross it out. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Deleted multiples. Cover the notes and say this from memory: The old multiples, and.",
+   "concept": "Practice: The old multiples, and the frame that multiplied capital by ten, are deleted. The 13 June 2022 close was 16 percent under the day before, so the digits stay struck.",
+   "image": "course/images/el-07-advanced-liquidation/013.png",
+   "image_status": "pass",
+   "prompt": "The only readable characters are 10 and EXAMPLE. The digits 10 are struck, with a blank line. Headline CUT white, TEN #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 14,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Not for US persons. Cover the notes and say this from memory: United States: some venues' futures products are not available to US persons. Then uncover the diagram and check that you can still see a map mark and a futures box crossed out for that boundary. Write the sentence if it applies to the reader you are, and do not replace it with a substitute venue. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Not for US persons. Cover the notes and say this from memory: United States: some venues'",
+   "concept": "Practice: United States: some venues' futures products are not available to US persons.",
+   "image": "course/images/fallback/el-07-advanced-liquidation/14.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Advanced: liquidation scenarios', beat 14, role demo. A step-by-step illustrated form, generic and unbranded, with one field highlighted in teal. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: United States: some venues' futures products are not available to US persons; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: United States: some venues' futures products are not available to US persons. Labels, spelled exactly: Practice, United, States. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 15,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Education first. Cover the notes and say this from memory: This content is general education only, not financial advice. Then uncover the diagram and check that you can still see the education line under the single position box. Copy the education line onto the page before any number. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Education first. Cover the notes and say this from memory: This content is general.",
+   "concept": "Practice: This content is general education only, not financial advice.",
+   "image": "course/images/fallback/el-07-advanced-liquidation/15.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Advanced: liquidation scenarios', beat 15, role demo. One large diagram centered on an off-white panel, with thin teal callout lines. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: This content is general education only, not financial advice; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: This content is general education only, not financial advice. Labels, spelled exactly: Practice, This. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 16,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Losing scenario first. Cover the notes and say this from memory: The worked picture is the public path from 8 November 2021 to 21 November 2022, about 76 percent lower, and it is an example. Then uncover the diagram and check that you can still see a path leaving the band and a close mark, stamped Example, with the gain panel absent. Write Hypothetical and Example on the page. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Losing scenario first. Cover the notes and say this from memory: The worked picture.",
+   "concept": "Practice: The worked picture is the public path from 8 November 2021 to 21 November 2022, about 76 percent lower, and it is an example.",
+   "image": "course/images/fallback/el-07-advanced-liquidation/16.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Advanced: liquidation scenarios', beat 16, role demo. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: The worked picture is a losing scenario, and it is hypothetical; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: The worked picture is the public path from 8 November 2021 to 21 November 2022, about 76 percent lower, and it is an example. Labels, spelled exactly: Practice, The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 17,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Deleted multiples. Cover the notes and say this from memory: The old multiples, and the frame that multiplied capital by ten, are deleted. The 13 June 2022 close was 16 percent under the day before, so the digits stay struck. Then uncover the diagram and check that you can still see a crossed-out times-ten mark beside the position box. If a multiple is still on your old notes, cross it out. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Deleted multiples. Cover the notes and say this from memory: The old multiples, and.",
+   "concept": "Practice: The old multiples, and the frame that multiplied capital by ten, are deleted. The 13 June 2022 close was 16 percent under the day before, so the digits stay struck.",
+   "image": "course/images/fallback/el-07-advanced-liquidation/17.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Advanced: liquidation scenarios', beat 17, role demo. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: The old multiples, and the frame that multiplied capital by ten, are deleted; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: The old multiples, and the frame that multiplied capital by ten, are deleted. The 13 June 2022 close was 16 percent under the day before, so the digits stay struck. Labels, spelled exactly: Practice, The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 18,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Not for US persons. Cover the notes and say this from memory: United States: some venues' futures products are not available to US persons. Then uncover the diagram and check that you can still see a map mark and a futures box crossed out for that boundary. Write the sentence if it applies to the reader you are, and do not replace it with a substitute venue. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Not for US persons. Cover the notes and say this from memory: United States: some venues'",
+   "concept": "Practice: United States: some venues' futures products are not available to US persons.",
+   "image": "course/images/fallback/el-07-advanced-liquidation/18.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Advanced: liquidation scenarios', beat 18, role demo. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: United States: some venues' futures products are not available to US persons; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: United States: some venues' futures products are not available to US persons. Labels, spelled exactly: Practice, United, States. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 19,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Education first. Cover the notes and say this from memory: This content is general education only, not financial advice. Then uncover the diagram and check that you can still see the education line under the single position box. Copy the education line onto the page before any number. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Education first. Cover the notes and say this from memory: This content is general.",
+   "concept": "Practice: This content is general education only, not financial advice.",
+   "image": "course/images/fallback/el-07-advanced-liquidation/19.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Advanced: liquidation scenarios', beat 19, role demo. A step-by-step illustrated form, generic and unbranded, with one field highlighted in teal. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: This content is general education only, not financial advice; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: This content is general education only, not financial advice. Labels, spelled exactly: Practice, This. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 20,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Losing scenario first. Cover the notes and say this from memory: The worked picture is the public path from 8 November 2021 to 21 November 2022, about 76 percent lower, and it is an example. Then uncover the diagram and check that you can still see a path leaving the band and a close mark, stamped Example, with the gain panel absent. Write Hypothetical and Example on the page. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Losing scenario first. Cover the notes and say this from memory: The worked picture.",
+   "concept": "Practice: The worked picture is the public path from 8 November 2021 to 21 November 2022, about 76 percent lower, and it is an example.",
+   "image": "course/images/fallback/el-07-advanced-liquidation/20.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Advanced: liquidation scenarios', beat 20, role demo. One large diagram centered on an off-white panel, with thin teal callout lines. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: The worked picture is a losing scenario, and it is hypothetical; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: The worked picture is the public path from 8 November 2021 to 21 November 2022, about 76 percent lower, and it is an example. Labels, spelled exactly: Practice, The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 21,
+   "chapter": "Action",
+   "role": "action",
+   "vo": "Your action: write this sentence, leverage is not part of my paper plan. No order is sent. No size is filled in. On the diagram for this beat, look for the sentence alone under the education line. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Bring the sentence forward. The later lessons do not need a multiple. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Do not add a leverage figure to make the sentence look complete. Say the opening line once more, and point at the part that belongs to Action. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Your action: write this sentence, leverage is not part of my paper plan. No order is sent. No size is filled.",
+   "concept": "Your action: write this sentence, leverage is not part of my paper plan.",
+   "image": "course/images/fallback/el-07-advanced-liquidation/21.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Advanced: liquidation scenarios', beat 21, role action. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Action. Show two columns labelled Isolated and Cross: the first box holds only its own inventory, the second box has a line reaching into a neighbouring box; a price path leaving the band; an open notebook page with a short checklist, one row highlighted, next to the diagram it describes; an open notebook with five written rows: range, spacing, count, inventory, stop, and a line that says no deposit. The picture must be understandable with the sound off. Teaching line: Your action: write this sentence, leverage is not part of my paper plan. Labels, spelled exactly: Your. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 22,
+   "chapter": "Outro",
+   "role": "outro",
+   "vo": "Next lesson: Size changes on a schedule. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
+   "cap": "Next lesson: Size changes on a schedule. Bring the page you just wrote. Leave every example marked Example.",
+   "concept": "Next lesson: Size changes on a schedule. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
+   "image": "course/images/fallback/el-07-advanced-liquidation/22.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Advanced: liquidation scenarios', beat 22, role outro. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Outro. Show a dashed stop line below the band, and a price path that leaves the band and does not return; a quiet next-step card with a single arrow to a blank next title, no price and no button that buys anything. The picture must be understandable with the sound off. Teaching line: Next lesson: Size changes on a schedule. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons. Labels, spelled exactly: Next, Size, Bring, Leave. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  }
+ ]
+}

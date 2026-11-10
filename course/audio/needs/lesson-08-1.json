@@ -1,0 +1,310 @@
+{
+ "id": "lesson-08-1",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-08-1.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 8.0, Mastery Starter. Mastery Starter. Keep that page on the desk. This lesson adds one picture: Split capital into risk buckets with caps, so no single failure can sink the portfolio."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 8.1, DeFi portfolio construction. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You can already pull a number off a chain. The operating system is what you do with it: a register, a journal, and a kill rule."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Buckets: liquidity reserve \u00b7 core (simple, durable) \u00b7 productive (LP, vaults, carry) \u00b7 speculative (new, points, experiments)."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Concentration caps: per protocol, per chain, per stablecoin issuer, per bridge."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Genuine diversification: two front ends on the same protocol, or two stablecoins with the same backing, are one risk, not two."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Rebalancing rules: thresholds that trigger moving money between buckets."
+  },
+  {
+   "n": 9,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Buckets and targets written. If you cannot write it, the line is open."
+  },
+  {
+   "n": 10,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Caps per protocol, chain, issuer, bridge written. If you cannot write it, the line is open."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Rebalancing rule written. If you cannot write it, the line is open."
+  },
+  {
+   "n": 12,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Two stablecoins backed by the same collateral: diversified? The answer: No. They share one failure point."
+  },
+  {
+   "n": 13,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Why keep a reserve bucket? The answer: To defend debt, meet needs and redeploy without forced selling."
+  },
+  {
+   "n": 14,
+   "role": "quiz",
+   "vo": "Check yourself. 3. When should you rebalance? The answer: When buckets drift past the threshold, or after an incident."
+  },
+  {
+   "n": 15,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to split capital into risk buckets with caps, so no single failure can sink the portfolio."
+  },
+  {
+   "n": 16,
+   "role": "body",
+   "vo": "First, Buckets: liquidity reserve times core (simple, durable) , productive (L.P., vaults, carry) , speculative (new, points, experiments)."
+  },
+  {
+   "n": 17,
+   "role": "body",
+   "vo": "Next, Concentration caps: per protocol, per chain, per stablecoin issuer, per bridge."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "Then, Genuine diversification: two front ends on the same protocol, or two stablecoins with the same backing, are one risk, not two."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "And finally, Rebalancing rules: thresholds that trigger moving money between buckets."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "Rebalance when any bucket drifts more than 5 points from target, or after any incident."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "Reserve, 15%, Stablecoins split across 2 issuers, instant access, n/a."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "Core, 45%, Blue-chip stable lending (2 protocols), ETH staking, 20%."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Productive, 30%, Wide concentrated L.P., a vault, a P.T., 10%."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "Speculative, at most 10%, Points, new protocols, 5%."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Next, Caps per protocol, chain, issuer, bridge written."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "Two stablecoins backed by the same collateral: diversified?"
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "The answer: To defend debt, meet needs and redeploy without forced selling."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "The answer: When buckets drift past the threshold, or after an incident."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "Buckets: liquidity reserve times core (simple, durable) , productive (L.P., vaults."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "Genuine diversification: two front ends on the same protocol."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "Next up, lesson eight point two: The DeFi risk framework."
+  },
+  {
+   "n": 33,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Buckets: liquidity reserve \u00b7 core (simple, durable) \u00b7 productive (LP, vaults, carry) \u00b7 speculative (new, points, experiments). It sits in DeFi portfolio construction. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 34,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Concentration caps: per protocol, per chain, per stablecoin issuer, per bridge. It sits in DeFi portfolio construction. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 35,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Genuine diversification: two front ends on the same protocol, or two stablecoins with the same backing, are one risk, not two. It sits in DeFi portfolio construction. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 36,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Rebalancing rules: thresholds that trigger moving money between buckets. It sits in DeFi portfolio construction. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 37,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Split capital into risk buckets with caps, so no single failure can sink the portfolio. It sits in DeFi portfolio construction. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 38,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Buckets and targets written. It sits in DeFi portfolio construction. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 39,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Caps per protocol, chain, issuer, bridge written. It sits in DeFi portfolio construction. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Rebalancing rule written. It sits in DeFi portfolio construction. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Buckets: liquidity reserve \u00b7 core (simple, durable) \u00b7 productive (LP, vaults, carry) \u00b7 speculative (new, points, experiments). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Concentration caps: per protocol, per chain, per stablecoin issuer, per bridge. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Genuine diversification: two front ends on the same protocol, or two stablecoins with the same backing, are one risk, not two. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Rebalancing rules: thresholds that trigger moving money between buckets. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Split capital into risk buckets with caps, so no single failure can sink the portfolio. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Buckets and targets written. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Caps per protocol, chain, issuer, bridge written. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Buckets: liquidity reserve \u00b7 core (simple, durable) \u00b7 productive (LP, vaults, carry) \u00b7 speculative (new, points, experiments). One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Concentration caps: per protocol, per chain, per stablecoin issuer, per bridge. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Genuine diversification: two front ends on the same protocol, or two stablecoins with the same backing, are one risk, not two. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Rebalancing rules: thresholds that trigger moving money between buckets. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Split capital into risk buckets with caps, so no single failure can sink the portfolio. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Buckets and targets written. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 54,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Caps per protocol, chain, issuer, bridge written. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 55,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Teach this line back, as if the previous minute had no sound. Buckets: liquidity reserve \u00b7 core (simple, durable) \u00b7 productive (LP, vaults, carry) \u00b7 speculative (new, points, experiments). Say it in one breath. Then say the reason in a second breath. A classmate should be able to point at your drawing and mark it right or wrong. If they cannot, the line is not finished. Stamp Example. This check is understanding, not a trade."
+  },
+  {
+   "n": 56,
+   "role": "demo",
+   "vo": "Practice round 2, still on the same lesson. Take this line slowly. Buckets: liquidity reserve \u00b7 core (simple, durable) \u00b7 productive (LP, vaults, carry) \u00b7 speculative (new, points, experiments). It sits in DeFi portfolio construction. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent. Tie the line to the page you brought in from the previous lesson."
+  },
+  {
+   "n": 57,
+   "role": "demo",
+   "vo": "Practice round 2, still on the same lesson. Take this line slowly. Concentration caps: per protocol, per chain, per stablecoin issuer, per bridge. It sits in DeFi portfolio construction. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent. Tie the line to the page you brought in from the previous lesson."
+  },
+  {
+   "n": 58,
+   "role": "recap",
+   "vo": "Three lines to keep. Buckets: liquidity reserve \u00b7 core (simple, durable) \u00b7 productive (LP, vaults, carry) \u00b7 speculative (new, points, experiments). Concentration caps: per protocol, per chain, per stablecoin issuer, per bridge. Next is Lesson 8.2, The DeFi risk framework. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 59,
+   "role": "action",
+   "vo": "Your action for DeFi portfolio construction: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 8.2, The DeFi risk framework."
+  },
+  {
+   "n": 60,
+   "role": "outro",
+   "vo": "Next is Lesson 8.2, The DeFi risk framework. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

@@ -1,0 +1,310 @@
+{
+ "id": "lesson-13-4",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-13-4.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 13.3, Building the income portfolio. Assemble an income portfolio and calculate its blended risk-adjusted yield and expected income. Keep that page on the desk. This lesson adds one picture: Set a payout you can sustain through bad years, and the rules that change it."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 13.4, The payout policy: how much you can take out. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already have a balance sheet. Income is only the part of it you can explain after losses."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "**Pay out a share of expected income, not headline (e.g."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Retain the rest as a loss buffer; it absorbs the losses you assumed in 13.2."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Pay from the T0/T1 ladder (Module 12.4), refilled by income, so payouts never depend on selling anything that day."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Review quarterly:** if realised income is below expected for two quarters, cut the payout to 70% of the new realised level."
+  },
+  {
+   "n": 9,
+   "role": "demo",
+   "vo": "Work the example on paper. Expected income $23,300/yr \u00d7 70% = $16,310/yr paid out ($1,359/month). Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 10,
+   "role": "demo",
+   "vo": "Work the example on paper. If a position fails as assumed, the buffer absorbs it and the payout continues. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Payout ratio written (\u2264 70\u201380% of expected income). If you cannot write it, the line is open."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Paid from the ladder, not from positions. If you cannot write it, the line is open."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Quarterly review rule written. If you cannot write it, the line is open."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: \"Never from principal\" rule written. If you cannot write it, the line is open."
+  },
+  {
+   "n": 15,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Expected income $40,000. Payout at 70%? The answer: $28,000/yr (~$2,333/month)."
+  },
+  {
+   "n": 16,
+   "role": "quiz",
+   "vo": "Check yourself. 2. What's the retained 30% for? The answer: Absorbing expected losses and bad years without cutting into principal."
+  },
+  {
+   "n": 17,
+   "role": "quiz",
+   "vo": "Check yourself. 3. Realised income lags expected for two quarters. What happens? The answer: Cut the payout to the policy share of the new realised level."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "The payout policy: how much you can take out."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to set a payout you can sustain through bad years, and the rules that change it."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "First, Pay out a share of expected income, not headline (for example 70%)."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "Next, Retain the rest as a loss buffer; it absorbs the losses you assumed in 13.2."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "Then, Pay from the T0/T1 ladder (Module 12.4), refilled by income, so payouts never depend on selling anything that day."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "And finally, Review quarterly: if realised income is below expected for two quarters, cut the payout to 70% of the new realised level."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "Expected income $23,300 a year times 70% = $16,310 a year paid out ($1,359 a month)."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "If a position fails as assumed, the buffer absorbs it and the payout continues."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "First, Payout ratio written (at most 70 to 80% of expected income)."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Next, Paid from the ladder, not from positions."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "The answer: $28,000 a year (about $2,333 a month)."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "The answer: Absorbing expected losses and bad years without cutting into principal."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "The answer: Cut the payout to the policy share of the new realised level."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "Pay out a share of expected income, not headline (for example 70%)."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "Pay from the T0/T1 ladder (Module 12.4), refilled by income."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "Never pay from principal: If income falls short, the payout falls."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "Next up, lesson thirteen point five: Scaling, compounding and the annual review."
+  },
+  {
+   "n": 36,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. **Pay out a share of expected income, not headline (e.g. It sits in The payout policy: how much you can take out. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 37,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Retain the rest as a loss buffer; it absorbs the losses you assumed in 13.2. It sits in The payout policy: how much you can take out. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 38,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Pay from the T0/T1 ladder (Module 12.4), refilled by income, so payouts never depend on selling anything that day. It sits in The payout policy: how much you can take out. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 39,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. If income falls short, the payout falls. It sits in The payout policy: how much you can take out. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Review quarterly:** if realised income is below expected for two quarters, cut the payout to 70% of the new realised level. It sits in The payout policy: how much you can take out. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Expected income $23,300/yr \u00d7 70% = $16,310/yr paid out ($1,359/month). It sits in The payout policy: how much you can take out. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. If a position fails as assumed, the buffer absorbs it and the payout continues. It sits in The payout policy: how much you can take out. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Set a payout you can sustain through bad years, and the rules that change it. It sits in The payout policy: how much you can take out. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Payout ratio written (\u2264 70\u201380% of expected income). It sits in The payout policy: how much you can take out. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Paid from the ladder, not from positions. It sits in The payout policy: how much you can take out. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Quarterly review rule written. It sits in The payout policy: how much you can take out. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. \"Never from principal\" rule written. It sits in The payout policy: how much you can take out. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. **Pay out a share of expected income, not headline (e.g. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Retain the rest as a loss buffer; it absorbs the losses you assumed in 13.2. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Pay from the T0/T1 ladder (Module 12.4), refilled by income, so payouts never depend on selling anything that day. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. If income falls short, the payout falls. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Review quarterly:** if realised income is below expected for two quarters, cut the payout to 70% of the new realised level. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Expected income $23,300/yr \u00d7 70% = $16,310/yr paid out ($1,359/month). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 54,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. If a position fails as assumed, the buffer absorbs it and the payout continues. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 55,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Set a payout you can sustain through bad years, and the rules that change it. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 56,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Payout ratio written (\u2264 70\u201380% of expected income). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 57,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Paid from the ladder, not from positions. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 58,
+   "role": "recap",
+   "vo": "Three lines to keep. **Pay out a share of expected income, not headline (e.g. Retain the rest as a loss buffer; it absorbs the losses you assumed in 13.2. Next is Lesson 13.5, Scaling, compounding and the annual review. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 59,
+   "role": "action",
+   "vo": "Your action for The payout policy: how much you can take out: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 13.5, Scaling, compounding and the annual review."
+  },
+  {
+   "n": 60,
+   "role": "outro",
+   "vo": "Next is Lesson 13.5, Scaling, compounding and the annual review. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

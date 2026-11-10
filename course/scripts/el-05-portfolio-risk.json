@@ -1,0 +1,264 @@
+{
+ "id": "el-05-portfolio-risk",
+ "title": "Portfolio risk controls",
+ "course": "Grid Bot Elite",
+ "palette": "teal",
+ "music": "course/music/komiku-ambiant-truth.ogg",
+ "next": "Circuit breakers done manually",
+ "wpm_assumption": 143,
+ "word_count": 2442,
+ "estimated_minutes": 17.08,
+ "code_draws_visuals": false,
+ "overlays_only": [
+  "captions",
+  "lower thirds",
+  "intro title text",
+  "disclaimer line",
+  "Ken Burns"
+ ],
+ "beats": [
+  {
+   "n": 1,
+   "chapter": "Hook",
+   "role": "hook",
+   "vo": "Several grids can lose together if they share one theme, the way bitcoin and ether fell together from November 2021 to November 2022. Last page you wrote a calm step and a wider step. This lesson asks whether two grids are really two risks, or one risk drawn twice. On the diagram for this beat, look for two falling paths, bitcoin and ether, stamped Example. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. List two example coins and draw a line between them if they usually travel together. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. This picture is not a promise that a cap will save the account. Say the opening line once more, and point at the part that belongs to Hook. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Several grids can lose together if they share one theme, the way bitcoin and ether fell together from November 2021",
+   "concept": "Several grids can lose together if they share one theme, the way bitcoin and ether fell together from November 2021 to November 2022.",
+   "image": "course/images/el-05-portfolio-risk/001.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Portfolio risk controls', beat 1, role hook. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Hook. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Several grids can lose together if they share one coin theme; the problem visible in the first glance, before any logo. The picture must be understandable with the sound off. Teaching line: Several grids can lose together if they share one theme, the way bitcoin and ether fell together from November 2021 to November 2022. Labels, spelled exactly: Several. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not.",
+   "example": {
+    "kind": "chart-two",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 2,
+   "chapter": "Disclaimer",
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot.",
+   "cap": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of.",
+   "concept": "Education only, not financial advice.",
+   "image": "course/images/el-05-portfolio-risk/002.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Portfolio risk controls', beat 2, role legal. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Disclaimer. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Education only, not financial advice. The picture must be understandable with the sound off. Teaching line: Education only, not financial advice. Labels, spelled exactly: Education. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 3,
+   "chapter": "Title card",
+   "role": "intro",
+   "vo": "This is Grid Bot Elite. The lesson is Portfolio risk controls. Teal on the frame. Not the Blueprint plate. Education only. You will write on paper before any screen.",
+   "cap": "This is Grid Bot Elite. The lesson is Portfolio risk controls. Teal on the frame. Not the Blueprint plate.",
+   "concept": "Portfolio risk controls",
+   "image": "course/images/el-05-portfolio-risk/003.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Portfolio risk controls', beat 3, role intro. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Title card. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Portfolio risk controls. The picture must be understandable with the sound off. Teaching line: Portfolio risk controls Labels, spelled exactly: Portfolio. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 4,
+   "chapter": "Three names",
+   "role": "body",
+   "vo": "By the end you can name a drawdown ceiling, a per-coin cap, and a correlation check. The ceiling is a sentence. The cap is a share of the page, not a target. The check asks whether two coins usually move together. On the diagram for this beat, look for three boxes labelled Ceiling, Cap, and Together. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write the three headings and leave a blank under each. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. If you can only name one, the page is not a risk page. Say the opening line once more, and point at the part that belongs to Three names. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "By the end you can name a drawdown ceiling, a per-coin cap, and a correlation check. The ceiling is a.",
+   "concept": "By the end you can name a drawdown ceiling, a per-coin cap, and a correlation check.",
+   "image": "course/images/el-05-portfolio-risk/004.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Portfolio risk controls', beat 4, role body. A step-by-step illustrated form, generic and unbranded, with one field highlighted in teal. Chapter context: Three names. Show three checks on one card: a ceiling sentence, a per-coin cap, and two paths that travel together, stamped Example. The picture must be understandable with the sound off. Teaching line: By the end you can name a drawdown ceiling, a per-coin cap, and a correlation check. Use no words if a shape is clearer. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 5,
+   "chapter": "The ceiling is a sentence",
+   "role": "body",
+   "vo": "In this example the ceiling is a sentence on the page, not a promise about future paths. The sentence names the loss of inventory you are unwilling to keep watching. It does not predict that the path will stop there. On the diagram for this beat, look for a written sentence under a band, with a results box crossed out. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write one ceiling sentence in plain words. Do not write a target. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A number with no sentence is not a ceiling. Say the opening line once more, and point at the part that belongs to The ceiling is a sentence. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "In this example the ceiling is a sentence on the page, not a promise about future paths. The sentence names.",
+   "concept": "In this example the ceiling is a sentence on the page, not a promise about future paths.",
+   "image": "course/images/el-05-portfolio-risk/005.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Portfolio risk controls', beat 5, role body. One large diagram centered on an off-white panel, with thin teal callout lines. Chapter context: The ceiling is a sentence. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: In this example the ceiling is a sentence on the page, not a promise about future paths. The picture must be understandable with the sound off. Teaching line: In this example the ceiling is a sentence on the page, not a promise about future paths. Use no words if a shape is clearer. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 6,
+   "chapter": "Per-coin cap",
+   "role": "body",
+   "vo": "A per-coin cap stops a second grid from quietly doubling the same coin. The cap is a share you write before the second bucket. It is marked Example. It is not a size this lesson fills in. On the diagram for this beat, look for one coin with a cap line, and a second bucket that stops at the line. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write the words per-coin cap, and leave the number blank. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Filling a size the lesson did not give you is the miss. Say the opening line once more, and point at the part that belongs to Per-coin cap. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "A per-coin cap stops a second grid from quietly doubling the same coin. The cap is a share you write before.",
+   "concept": "A per-coin cap stops a second grid from quietly doubling the same coin.",
+   "image": "course/images/el-05-portfolio-risk/006.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Portfolio risk controls', beat 6, role body. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Per-coin cap. Show a dashed stop line below the band, and a price path that leaves the band and does not return; three checks on one card: a ceiling sentence, a per-coin cap, and two paths that travel together, stamped Example. The picture must be understandable with the sound off. Teaching line: A per-coin cap stops a second grid from quietly doubling the same coin. Use no words if a shape is clearer. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 7,
+   "chapter": "Correlation",
+   "role": "diagram",
+   "vo": "A correlation check asks whether two coins usually travel together. The number 0.8 is an example threshold from the old notes, labelled Example, not a rule for your account. On the diagram for this beat, look for two paths and a 0.89 tag stamped Example, with a note that 0.89 and the old 0.8 tag are not a rule.8 Example, and a note that the tag is not a rule. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write 0.8, then write Example, then write: not a rule for an account. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Treating 0.8 as a setting to copy is how an example becomes a superstition. Say the opening line once more, and point at the part that belongs to Correlation. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "A correlation check asks whether two coins usually travel together. The number 0.8 is an example threshold from the",
+   "concept": "A correlation check asks whether two coins usually travel together.",
+   "image": "course/images/el-05-portfolio-risk/007.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are 0.8, EXAMPLE, and NOT RULE. Two level teal paths with a gap between them. Headline TWO white, PATHS #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "chart-two",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 8,
+   "chapter": "Weekly look",
+   "role": "body",
+   "vo": "A weekly look is a calendar habit. You open the same page: ceiling, cap, and the together-check. You do not open it because a week must have paid you. On the diagram for this beat, look for a seven-day chip beside the three boxes. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write the weekday you will reread the page. Write no target beside it. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A calendar date is not a claim that the week paid you. Say the opening line once more, and point at the part that belongs to Weekly look. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "A weekly look is a calendar habit. You open the same page: ceiling, cap, and the together-check. You do not.",
+   "concept": "A weekly look is a calendar habit.",
+   "image": "course/images/el-05-portfolio-risk/008.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are CEILING, CAP, TOGETHER, and EXAMPLE. Seven empty chips beside three boxes. Headline WEEKLY white, LOOK #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 9,
+   "chapter": "Where you are",
+   "role": "map",
+   "vo": "You are here: lesson 5 of 11. Spacing is behind you. A manual pause is next. On the diagram for this beat, look for an eleven-step path with the fifth step lit. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write the next title: Circuit breakers done manually. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. The risk page does not place an order. Say the opening line once more, and point at the part that belongs to Where you are. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "You are here: lesson 5 of 11. Spacing is behind you. A manual pause is next. On the diagram for this beat.",
+   "concept": "You are here: lesson 5 of 11.",
+   "image": "course/images/el-05-portfolio-risk/009.png",
+   "image_status": "pass",
+   "prompt": "The only readable word is EXAMPLE and the only digit is 5. Eleven chips, the fifth filled. Headline LESSON white, FIVE #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 10,
+   "chapter": "Quiz",
+   "role": "quiz",
+   "vo": "Quick check. What is the 0.8 figure? The answer: an example threshold, labelled Example, not a rule for your account. On the diagram for this beat, look for the 0.8 tag with Example stamped on it. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Say the answer before you uncover the tag. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Calling it your setting is the miss. Say the opening line once more, and point at the part that belongs to Quiz. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Quick check. What is the 0.8 figure? The answer: an example threshold, labelled Example, not a rule for your.",
+   "concept": "Quick check. What is the 0.8 figure?",
+   "image": "course/images/el-05-portfolio-risk/010.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are 0.8, EXAMPLE, and NOT RULE. A peeled card reveals the 0.8 tag. Headline WHAT white, FIGURE #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 11,
+   "chapter": "Recap",
+   "role": "recap",
+   "vo": "Recap: a ceiling sentence, a per-coin cap with the number blank, and a together-check marked Example. Say them without looking. Do not write a target. On the diagram for this beat, look for three recap rows. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Stamp Example. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A target return does not belong on this page. Say the opening line once more, and point at the part that belongs to Recap. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Recap: a ceiling sentence, a per-coin cap with the number blank, and a together-check marked Example. Say them",
+   "concept": "Recap: a ceiling sentence, a per-coin cap with the number blank, and a together-check marked Example.",
+   "image": "course/images/el-05-portfolio-risk/011.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are CEILING, CAP, TOGETHER, and EXAMPLE. Three recap rows. Headline THREE white, CHECKS #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
+   "example": {
+    "kind": "chart-two",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 12,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Three names. Cover the notes and say this from memory: By the end you can name a drawdown ceiling, a per-coin cap, and a correlation check. Then uncover the diagram and check that you can still see three boxes labelled Ceiling, Cap, and Together. Write the three headings and leave a blank under each. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Three names. Cover the notes and say this from memory: By the end you can name a.",
+   "concept": "Practice: By the end you can name a drawdown ceiling, a per-coin cap, and a correlation check.",
+   "image": "course/images/el-05-portfolio-risk/012.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are CEILING, CAP, TOGETHER, and EXAMPLE. Three boxes with a blank line under each. Headline YOUR white, TURN #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 13,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside The ceiling is a sentence. Cover the notes and say this from memory: In this example the ceiling is a sentence on the page, not a promise about future paths. Then uncover the diagram and check that you can still see a written sentence under a band, with a results box crossed out. Write one ceiling sentence in plain words. Do not write a target. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside The ceiling is a sentence. Cover the notes and say this from memory: In this example.",
+   "concept": "Practice: In this example the ceiling is a sentence on the page, not a promise about future paths.",
+   "image": "course/images/el-05-portfolio-risk/013.png",
+   "image_status": "pass",
+   "prompt": "The only readable word is EXAMPLE. A band, a blank line, and a crossed box. Headline ONE white, SENTENCE #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 14,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Per-coin cap. Cover the notes and say this from memory: A per-coin cap stops a second grid from quietly doubling the same coin. Then uncover the diagram and check that you can still see one coin with a cap line, and a second bucket that stops at the line. Write the words per-coin cap, and leave the number blank. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Per-coin cap. Cover the notes and say this from memory: A per-coin cap stops a second.",
+   "concept": "Practice: A per-coin cap stops a second grid from quietly doubling the same coin.",
+   "image": "course/images/el-05-portfolio-risk/014.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are CAP and EXAMPLE. The left stack crosses a line. The right stack stops at the line. Headline STOP white, LINE #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 15,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Correlation. Cover the notes and say this from memory: A correlation check asks whether two coins usually travel together. Then uncover the diagram and check that you can still see two paths side by side, a tag that says 0.8 Example, and a note that the tag is not a rule. Write 0.8, then write Example, then write: not a rule for an account. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Correlation. Cover the notes and say this from memory: A correlation check asks.",
+   "concept": "Practice: A correlation check asks whether two coins usually travel together.",
+   "image": "course/images/el-05-portfolio-risk/015.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are 0.8, EXAMPLE, and NOT RULE. Two level paths, the tag, and a blank line. Headline WRITE white, TAG #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 16,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Weekly look. Cover the notes and say this from memory: A weekly look is a calendar habit. Then uncover the diagram and check that you can still see a seven-day chip beside the three boxes. Write the weekday you will reread the page. Write no target beside it. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Weekly look. Cover the notes and say this from memory: A weekly look is a calendar.",
+   "concept": "Practice: A weekly look is a calendar habit.",
+   "image": "course/images/el-05-portfolio-risk/016.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are CEILING, CAP, and TOGETHER, plus EXAMPLE. Seven chips, the first filled, beside three boxes. Headline MARK white, DAY #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 17,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Three names. Cover the notes and say this from memory: By the end you can name a drawdown ceiling, a per-coin cap, and a correlation check. Then uncover the diagram and check that you can still see three boxes labelled Ceiling, Cap, and Together. Write the three headings and leave a blank under each. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Three names. Cover the notes and say this from memory: By the end you can name a.",
+   "concept": "Practice: By the end you can name a drawdown ceiling, a per-coin cap, and a correlation check.",
+   "image": "course/images/el-05-portfolio-risk/017.png",
+   "image_status": "pass",
+   "prompt": "The only readable words are CEILING, CAP, TOGETHER, and EXAMPLE. A cover sits over the three labels. Headline COVER white, NOTES #14E0C8. Elite headline template: glyph top at y=110, capital height about 159, first word white, second word #14E0C8. Content ends at or above y=870. Near-black navy, teal #14E0C8, no cyan #00D4FF, no off-white paper, no coins, no dollar sign, no rising chart. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame."
+  },
+  {
+   "n": 18,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside The ceiling is a sentence. Cover the notes and say this from memory: In this example the ceiling is a sentence on the page, not a promise about future paths. Then uncover the diagram and check that you can still see a written sentence under a band, with a results box crossed out. Write one ceiling sentence in plain words. Do not write a target. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside The ceiling is a sentence. Cover the notes and say this from memory: In this example.",
+   "concept": "Practice: In this example the ceiling is a sentence on the page, not a promise about future paths.",
+   "image": "course/images/fallback/el-05-portfolio-risk/18.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Portfolio risk controls', beat 18, role demo. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: In this example the ceiling is a sentence on the page, not a promise about future paths; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: In this example the ceiling is a sentence on the page, not a promise about future paths. Labels, spelled exactly: Practice. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 19,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Per-coin cap. Cover the notes and say this from memory: A per-coin cap stops a second grid from quietly doubling the same coin. Then uncover the diagram and check that you can still see one coin with a cap line, and a second bucket that stops at the line. Write the words per-coin cap, and leave the number blank. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Per-coin cap. Cover the notes and say this from memory: A per-coin cap stops a second.",
+   "concept": "Practice: A per-coin cap stops a second grid from quietly doubling the same coin.",
+   "image": "course/images/fallback/el-05-portfolio-risk/19.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Portfolio risk controls', beat 19, role demo. A step-by-step illustrated form, generic and unbranded, with one field highlighted in teal. Chapter context: Your turn. Show a dashed stop line below the band, and a price path that leaves the band and does not return; three checks on one card: a ceiling sentence, a per-coin cap, and two paths that travel together, stamped Example; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: A per-coin cap stops a second grid from quietly doubling the same coin. Labels, spelled exactly: Practice. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 20,
+   "chapter": "Action",
+   "role": "action",
+   "vo": "Your action: write the three headings, leave the cap number blank, and do not write a target. No order is sent. On the diagram for this beat, look for the three headings with a blank under Cap. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Bring the page to the pause lesson. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Do not invent a return to make the page look finished. Say the opening line once more, and point at the part that belongs to Action. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Your action: write the three headings, leave the cap number blank, and do not write a target. No order is.",
+   "concept": "Your action: write the three headings, leave the cap number blank, and do not write a target.",
+   "image": "course/images/fallback/el-05-portfolio-risk/20.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Portfolio risk controls', beat 20, role action. One large diagram centered on an off-white panel, with thin teal callout lines. Chapter context: Action. Show a dashed stop line below the band, and a price path that leaves the band and does not return; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Your action: write the three headings, leave the cap number blank, and do not write a target. Labels, spelled exactly: Your. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 21,
+   "chapter": "Outro",
+   "role": "outro",
+   "vo": "Next lesson: Circuit breakers done manually. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
+   "cap": "Next lesson: Circuit breakers done manually. Bring the page you just wrote. Leave every example marked.",
+   "concept": "Next lesson: Circuit breakers done manually. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
+   "image": "course/images/fallback/el-05-portfolio-risk/21.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Portfolio risk controls', beat 21, role outro. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Outro. Show a dashed stop line below the band, and a price path that leaves the band and does not return; a hand switch labelled Pause beside a band-edge mark, and a separate box labelled Venue close; a quiet next-step card with a single arrow to a blank next title, no price and no button that buys anything. The picture must be understandable with the sound off. Teaching line: Next lesson: Circuit breakers done manually. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons. Labels, spelled exactly: Next, Circuit, Bring, Leave. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  }
+ ]
+}

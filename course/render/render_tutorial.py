@@ -1,0 +1,357 @@
+"""Render a tutorial from ChatGPT stills plus overlays.
+
+The pictures must already exist at each beat's image path. This file never
+draws a diagram. It may add captions, a lower third, the disclaimer line,
+and the music bed.
+
+Stills stay lossless PNG. Each still is scaled once, with Lanczos, into the
+frame. Colour stays BT.709. The picture encode is x264 CRF 16, preset slow.
+Elite lessons then crop inside that scaled frame so the camera can drift
+without resampling labels on every frame. Blueprint stays a still hold.
+
+  python3 course/render/render_tutorial.py --check
+  python3 course/render/render_tutorial.py --id bp-01-introduction
+  python3 course/render/render_tutorial.py --proof
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+SCRIPTS = ROOT / "course" / "scripts"
+OUT = ROOT / "course" / "masters"
+FONT = "/usr/share/fonts/truetype/macos/Inter-Bold.ttf"
+FONT_REG = "/usr/share/fonts/truetype/macos/Inter-Regular.ttf"
+WPM = 143
+DISCLAIMER = "Education only · Not financial advice · Examples do not indicate future results"
+# One Lanczos scale into 1920x1080. A 1536x1024 still covers the frame at
+# 1.25x (1920x1280) and the crop removes only the background bars, so the
+# centre 16:9 is not scaled a second time. No zoompan after this.
+FRAME_SCALE = ",".join([
+    "scale=1920:1080:force_original_aspect_ratio=increase:flags=lanczos:in_color_matrix=bt709:out_color_matrix=bt709",
+    "crop=1920:1080",
+    "format=yuv420p",
+    "setparams=range=tv:color_primaries=bt709:color_trc=bt709:colorspace=bt709",
+])
+X264 = [
+    "-c:v", "libx264", "-preset", "slow", "-crf", "16", "-pix_fmt", "yuv420p",
+    "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
+]
+# Caption box stays 64px inside the frame and 16px above the footer at y=h-48.
+CAPTION_SIZE = 36
+CAPTION_BORDER = 16
+CAPTION_MARGIN = 64
+CAPTION_MAX_W = 1920 - 2 * CAPTION_MARGIN - 2 * CAPTION_BORDER
+CAPTION_LINE = 8
+FRAME_H = 1080
+FOOTER_Y = 48
+
+
+def scripts() -> list[Path]:
+    return sorted(SCRIPTS.glob("*.json"))
+
+
+def load(path: Path) -> dict:
+    return json.loads(path.read_text())
+
+
+MANIFEST = ROOT / "course" / "images" / "FALLBACK_MANIFEST.json"
+
+
+def manifest_images() -> dict:
+    if not MANIFEST.is_file():
+        return {}
+    data = json.loads(MANIFEST.read_text())
+    return data.get("images") or {}
+
+
+def missing_images(script: dict) -> list[str]:
+    bad = []
+    for beat in script["beats"]:
+        p = ROOT / beat["image"]
+        if not p.is_file() or p.stat().st_size < 1000:
+            bad.append(beat["image"])
+    return bad
+
+
+def lossy_stills(script: dict) -> list[str]:
+    """Stills must stay lossless PNG. JPEG is a retired path."""
+    bad = []
+    for beat in script["beats"]:
+        if Path(beat["image"]).suffix.lower() != ".png":
+            bad.append(beat["image"])
+    return bad
+
+
+def _manifest_by_path() -> dict:
+    if not MANIFEST.is_file():
+        return {}
+    data = json.loads(MANIFEST.read_text())
+    images = data.get("images")
+    if isinstance(images, dict):
+        return images
+    if isinstance(images, list):
+        return {entry.get("path"): entry for entry in images if entry.get("path")}
+    return {}
+
+
+def fallback_unpassed(script: dict) -> list[str]:
+    """Fallback stills stay out of masters until Creative Studio sets status to pass."""
+    by_path = _manifest_by_path()
+    blocked = []
+    for beat in script["beats"]:
+        entry = by_path.get(beat["image"])
+        if not entry:
+            continue
+        if entry.get("prompt_status") == "retired" or entry.get("reusable") is False:
+            blocked.append(beat["image"])
+            continue
+        status = str(entry.get("status") or entry.get("qa") or "awaiting_qa").lower()
+        if status in {"pass", "passed"}:
+            continue
+        blocked.append(beat["image"])
+    return blocked
+
+
+def check() -> int:
+    total = 0
+    blocked = 0
+    voice_blocked = 0
+    jobs = ROOT / "course" / "render" / "jobs"
+    for path in scripts():
+        script = load(path)
+        bad = missing_images(script)
+        voice = ROOT / "course" / "audio" / f"{script['id']}.wav"
+        total += len(script["beats"])
+        job = jobs / f"{script['id']}.json"
+        waiting = job.is_file()
+        held = fallback_unpassed(script)
+        if bad or held or (waiting and not voice.is_file()):
+            blocked += 1
+            if waiting and not voice.is_file():
+                voice_blocked += 1
+            hold = f", fallback pending QA {len(held)}" if held else ""
+            print(
+                f"BLOCKED {script['id']}: {len(bad)} of {len(script['beats'])} images missing, "
+                f"voice {'missing' if not voice.is_file() else 'ready'}, est {script['estimated_minutes']} min{hold}"
+            )
+        else:
+            print(f"READY   {script['id']}: {len(script['beats'])} images")
+    print(f"beats {total} lessons_blocked {blocked} voice_blocked {voice_blocked}")
+    return 2 if blocked else 0
+
+
+def run(cmd: list[str]) -> None:
+    subprocess.check_call(cmd)
+
+
+def _caption_font():
+    from PIL import ImageFont
+    return ImageFont.truetype(FONT, CAPTION_SIZE)
+
+
+def caption_px(text: str) -> int:
+    box = _caption_font().getbbox(text)
+    return box[2] - box[0]
+
+
+def wrap_caption(text: str, max_width: int = CAPTION_MAX_W) -> list[str]:
+    """Break a caption into lines that fit the safe width, including the box border."""
+    words = (text or "").split()
+    if not words:
+        return [""]
+    lines: list[str] = []
+    current = words[0]
+    for word in words[1:]:
+        trial = f"{current} {word}"
+        if caption_px(trial) <= max_width:
+            current = trial
+        else:
+            lines.append(current)
+            current = word
+    lines.append(current)
+    return lines
+
+
+def caption_y_offset(line_count: int) -> int:
+    """Distance from the bottom of the frame to the top of the caption glyphs.
+
+    One and two lines stay at the existing 160px. More lines move up so the
+    box clears the footer and stays inside the frame.
+    """
+    text_h = line_count * CAPTION_SIZE + max(0, line_count - 1) * CAPTION_LINE
+    # box bottom = glyph top + text_h + border, and must sit 16px above the footer
+    limit = FOOTER_Y + 16 + text_h + CAPTION_BORDER
+    return max(160, limit)
+
+
+def beat_seconds(beat: dict) -> float:
+    words = len((beat.get("vo") or "").split())
+    floor = {"intro": 5.5, "outro": 8.0, "legal": 12.0}.get(beat["role"], 6.0)
+    # min_seconds keeps a short line on screen long enough for the spoken take.
+    # Kokoro at 0.78 can run slower than the 143 wpm picture estimate.
+    return max(floor, words / WPM * 60, float(beat.get("min_seconds") or 0))
+
+
+def accent_for(script: dict) -> str:
+    """Chapter colour. Elite stays teal. Blueprint and On-Chain Operator stay cyan."""
+    course = (script.get("course") or "").lower()
+    palette = (script.get("palette") or "").lower()
+    if "elite" in course or palette == "teal":
+        return "0x2EE6A6"
+    return "0x00D4FF"
+
+
+def render_script(script: dict) -> Path:
+    bad = missing_images(script)
+    if bad:
+        raise SystemExit(f"{script['id']} missing {len(bad)} images. Refusing to reuse or to draw replacements.")
+    lossy = lossy_stills(script)
+    if lossy:
+        raise SystemExit(f"{script['id']} has {len(lossy)} stills that are not lossless PNG. Refusing to encode them.")
+    held = fallback_unpassed(script)
+    if held:
+        raise SystemExit(
+            f"{script['id']} has {len(held)} fallback stills waiting on Creative Studio. "
+            "Refusing to render them into a master."
+        )
+    accent = accent_for(script)
+    elite = accent == "0x2EE6A6"
+    if elite:
+        sys.path.insert(0, str(ROOT / "course" / "skills"))
+        import elite_motion
+    work = ROOT / "course" / "render" / "work" / script["id"]
+    if work.exists():
+        shutil.rmtree(work)
+    work.mkdir(parents=True)
+    clips = []
+    for beat in script["beats"]:
+        secs = beat_seconds(beat)
+        frames = int(round(secs * 30))
+        clip = work / f"{beat['n']:03d}.mp4"
+        lines = wrap_caption(beat["cap"])
+        cap = work / f"{beat['n']:03d}.txt"
+        cap.write_text("\n".join(lines))
+        chapter = work / f"{beat['n']:03d}-ch.txt"
+        chapter.write_text(f"{beat['chapter']}")
+        foot = work / f"{beat['n']:03d}-foot.txt"
+        foot.write_text(DISCLAIMER)
+        cap_y = caption_y_offset(len(lines))
+        overlays = ",".join([
+            f"drawtext=fontfile={FONT}:textfile={cap}:fontsize={CAPTION_SIZE}:fontcolor=white:box=1:boxcolor=0x050A12CC:boxborderw={CAPTION_BORDER}:text_align=center:x=(w-text_w)/2:y=h-{cap_y}:line_spacing={CAPTION_LINE}",
+            f"drawtext=fontfile={FONT}:textfile={chapter}:fontsize=28:fontcolor={accent}:x=80:y=64",
+            f"drawtext=fontfile={FONT_REG}:textfile={foot}:fontsize=22:fontcolor=0xD0D7E2:x=w-text_w-48:y=h-48",
+        ])
+        kind = (beat.get("example") or {}).get("kind") if elite else None
+        if kind:
+            src = elite_motion.example_png(kind)
+            if not src.is_file():
+                raise SystemExit(f"{script['id']} beat {beat['n']} example {kind} has no still at {src}")
+        else:
+            src = ROOT / beat["image"]
+        if elite:
+            pieces = elite_motion.segment_lengths(secs)
+            for index, piece in enumerate(pieces):
+                piece_frames = max(1, int(round(piece * 30)))
+                piece_clip = work / f"{beat['n']:03d}-{index:02d}.mp4"
+                vf = elite_motion.picture_filter(index, piece) + "," + overlays
+                run([
+                    "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(src),
+                    "-vf", vf, "-frames:v", str(piece_frames), *X264, "-r", "30", str(piece_clip),
+                ])
+                clips.append(piece_clip)
+        else:
+            vf = FRAME_SCALE + "," + overlays
+            run([
+                "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(src),
+                "-vf", vf, "-frames:v", str(frames), *X264, "-r", "30", str(clip),
+            ])
+            clips.append(clip)
+    lst = work / "list.txt"
+    lst.write_text("".join(f"file '{c}'\n" for c in clips))
+    silent = work / "silent.mp4"
+    run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy", str(silent)])
+    music = ROOT / script["music"]
+    OUT.mkdir(parents=True, exist_ok=True)
+    dest = OUT / f"{script['id']}.mp4"
+    # Voice is not synthesized here. The bed plays under a silent picture track
+    # only when --allow-silent is passed. The default render expects a voice wav
+    # at course/audio/<id>.wav, ducked under the pictures.
+    voice = ROOT / "course" / "audio" / f"{script['id']}.wav"
+    if not voice.is_file():
+        raise SystemExit(
+            f"{script['id']} pictures are ready but course/audio/{script['id']}.wav is missing. "
+            "Refusing a silent master."
+        )
+    run([
+        "ffmpeg", "-y", "-v", "error", "-i", str(silent), "-i", str(voice), "-i", str(music),
+        "-filter_complex",
+        "[1:a]aresample=48000,apad,asplit=2[vo][key];"
+        "[2:a]aresample=48000,volume=0.22,aloop=loop=-1:size=2e9[mus];"
+        "[mus][key]sidechaincompress=threshold=0.03:ratio=8:attack=40:release=400[duck];"
+        "[vo][duck]amix=inputs=2:normalize=0,loudnorm=I=-16:TP=-1.5:LRA=11[a]",
+        "-map", "0:v", "-map", "[a]", "-shortest", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", str(dest),
+    ])
+    return dest
+
+
+def proof() -> Path:
+    """Six-second overlay proof on one existing ChatGPT still. Not a lesson master."""
+    src = Path("/cursor/stores/bot/video-images/bp-01-introduction-hook.png")
+    if not src.is_file():
+        raise SystemExit(f"proof source missing: {src}")
+    dest_dir = Path("/opt/cursor/artifacts")
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    dest = dest_dir / "overlay-proof.mp4"
+    music = ROOT / "course" / "music" / "komiku-ambiant-obscur-technology.ogg"
+    cap = dest_dir / "overlay-proof-cap.txt"
+    cap.write_text("Price often chops sideways.")
+    chapter = dest_dir / "overlay-proof-ch.txt"
+    chapter.write_text("HOOK")
+    foot = dest_dir / "overlay-proof-foot.txt"
+    foot.write_text(DISCLAIMER)
+    vf = ",".join([
+        FRAME_SCALE,
+        f"drawtext=fontfile={FONT}:textfile={cap}:fontsize=42:fontcolor=white:box=1:boxcolor=0x050A12CC:boxborderw=18:x=(w-text_w)/2:y=h-180",
+        f"drawtext=fontfile={FONT}:textfile={chapter}:fontsize=28:fontcolor=0x00D4FF:x=80:y=64",
+        f"drawtext=fontfile={FONT_REG}:textfile={foot}:fontsize=22:fontcolor=0xD0D7E2:x=w-text_w-48:y=h-48",
+    ])
+    run([
+        "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(src), "-stream_loop", "-1", "-i", str(music),
+        "-vf", vf, "-t", "6", "-map", "0:v", "-map", "1:a",
+        "-af", "volume=0.35,afade=t=in:d=0.4,afade=t=out:st=5:d=1",
+        *X264, "-r", "30", "-c:a", "aac", "-shortest", str(dest),
+    ])
+    return dest
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--check", action="store_true")
+    ap.add_argument("--id")
+    ap.add_argument("--proof", action="store_true")
+    args = ap.parse_args()
+    if args.proof:
+        print(proof())
+        return
+    # --check reports the whole course. --id renders that lesson alone, even
+    # while other lessons are still missing stills. The lesson itself still
+    # refuses to draw or to reuse a picture.
+    if args.check or not args.id:
+        code = check()
+        if not args.id:
+            raise SystemExit(code)
+    if not args.id:
+        return
+    script = load(SCRIPTS / f"{args.id}.json")
+    print(render_script(script))
+
+
+if __name__ == "__main__":
+    main()

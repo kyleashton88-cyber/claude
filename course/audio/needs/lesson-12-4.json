@@ -1,0 +1,345 @@
+{
+ "id": "lesson-12-4",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-12-4.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 12.3, The credit line: borrowing like a bank client. Use your assets as collateral for liquidity without selling, under a written credit policy. Keep that page on the desk. This lesson adds one picture: Structure reserves so money is available when it's needed, earning a return at every tier."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 12.4, Treasury and the liquidity ladder. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already keep a journal and a kill rule. A balance sheet is that habit turned into accounts."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Banks match the timing of assets to the timing of what they owe."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Size (example: $5,000/month spend) T0 Instant."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Blue-chip stablecoin lending, split across 2 protocols."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "PTs maturing on dates you'll need the money (Lesson 10.1)."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Next 6\u201312 months of planned spending T3 Growth."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "The rest, within caps Refill downward on a schedule: T1 tops up T0 monthly; maturing PTs top up T1."
+  },
+  {
+   "n": 11,
+   "role": "body",
+   "vo": "Never fund a T0 need by selling a T3 position in a bad market."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "Work the example on paper. T0 $5,000 + T1 $25,000 = 6 months instantly available. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "Work the example on paper. T2 holds three PTs maturing in 3, 6 and 9 months, each sized for 3 months of spending. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "Work the example on paper. A \u221250% market day touches none of it. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: T0 + T1 \u2265 6 months of obligations. If you cannot write it, the line is open."
+  },
+  {
+   "n": 16,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: T2 maturities matched to planned spending. If you cannot write it, the line is open."
+  },
+  {
+   "n": 17,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Monthly refill schedule set. If you cannot write it, the line is open."
+  },
+  {
+   "n": 18,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: T3 never used for day-to-day needs. If you cannot write it, the line is open."
+  },
+  {
+   "n": 19,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Why hold T0 in plain stablecoins earning little? The answer: Instant, certain access. It's the tier that pays today's bills without selling anything."
+  },
+  {
+   "n": 20,
+   "role": "quiz",
+   "vo": "Check yourself. 2. What's T2 for? The answer: Known future spending, with maturities matched to when the money is needed and a fixed return locked in."
+  },
+  {
+   "n": 21,
+   "role": "quiz",
+   "vo": "Check yourself. 3. What does the ladder prevent? The answer: Forced selling of growth positions at bad prices to meet short-term needs."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to structure reserves so money is available when it's needed, earning a return at every tier."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Your ladder: Refill downward on a schedule: T1 tops up T0 monthly; maturing PTs top up T1."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "T0 Instant, Seconds, Stablecoins in the operating wallet, 1 month: $5,000."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "T1 Same day, Hours, Blue-chip stablecoin lending, split across 2 protocols, 5 months: $25,000."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "T2 Term, Scheduled, PTs maturing on dates you'll need the money (Lesson 10.1), Next 6 to 12 months of planned spending."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "T3 Growth, Days to weeks, Strategy positions, L.P.s, staking, The rest, within caps."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "Let's look at the diagram: The liquidity ladder."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "It's everything we've just said, in one picture."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "T0 $5,000 + T1 $25,000 equals 6 months instantly available."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "T2 holds three PTs maturing in 3, 6 and 9 months, each sized for 3 months of spending."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "A minus 50% market day touches none of it."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "First, T0 + T1 at least 6 months of obligations."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "And finally, T3 never used for day-to-day needs."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "Why hold T0 in plain stablecoins earning little?"
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "It's the tier that pays today's bills without selling anything."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "The answer: Known future spending, with maturities matched to when the money is needed and a fixed return locked in."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "The answer: Forced selling of growth positions at bad prices to meet short-term needs."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "Next up, lesson twelve point five: Being the lender: supplying, curating and pricing credit risk."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Banks match the timing of assets to the timing of what they owe. It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Size (example: $5,000/month spend) T0 Instant. It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. 1 month: $5,000 T1 Same day. It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Blue-chip stablecoin lending, split across 2 protocols. It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. 5 months: $25,000 T2 Term. It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. PTs maturing on dates you'll need the money (Lesson 10.1). It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Next 6\u201312 months of planned spending T3 Growth. It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The rest, within caps Refill downward on a schedule: T1 tops up T0 monthly; maturing PTs top up T1. It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Never fund a T0 need by selling a T3 position in a bad market. It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. That's what the ladder exists to prevent. It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 51,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. T0 $5,000 + T1 $25,000 = 6 months instantly available. It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 52,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. T2 holds three PTs maturing in 3, 6 and 9 months, each sized for 3 months of spending. It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 53,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. A \u221250% market day touches none of it. It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 54,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Structure reserves so money is available when it's needed, earning a return at every tier. It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 55,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. T0 + T1 \u2265 6 months of obligations. It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 56,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. T2 maturities matched to planned spending. It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 57,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Monthly refill schedule set. It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 58,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. T3 never used for day-to-day needs. It sits in Treasury and the liquidity ladder. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 59,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Banks match the timing of assets to the timing of what they owe. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 60,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Size (example: $5,000/month spend) T0 Instant. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 61,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. 1 month: $5,000 T1 Same day. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 62,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Blue-chip stablecoin lending, split across 2 protocols. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 63,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. 5 months: $25,000 T2 Term. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 64,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. PTs maturing on dates you'll need the money (Lesson 10.1). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 65,
+   "role": "recap",
+   "vo": "Three lines to keep. Banks match the timing of assets to the timing of what they owe. Size (example: $5,000/month spend) T0 Instant. Next is Lesson 12.5, Being the lender: supplying, curating and pricing credit risk. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 66,
+   "role": "action",
+   "vo": "Your action for Treasury and the liquidity ladder: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 12.5, Being the lender: supplying, curating and pricing credit risk."
+  },
+  {
+   "n": 67,
+   "role": "outro",
+   "vo": "Next is Lesson 12.5, Being the lender: supplying, curating and pricing credit risk. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

@@ -1,0 +1,275 @@
+{
+ "id": "lesson-07-3",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-07-3.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 7.2, Block explorer mastery. Read any transaction on an explorer without using the app's interface. Keep that page on the desk. This lesson adds one picture: Interpret exchange inflows and outflows with the right caveats."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 7.3, Exchange flows. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You can already read a token's supply and a protocol's fees. Analytics is how you check those claims on the ledger itself."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Inflows to exchanges may precede selling (or collateral posting, internal moves)."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Outflows may mean self-custody or DeFi use."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Exchange reserves on-chain aren't proof of solvency (liabilities aren't visible)."
+  },
+  {
+   "n": 8,
+   "role": "demo",
+   "vo": "Work the example on paper. Netflow +20,000 ETH in a day. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 9,
+   "role": "demo",
+   "vo": "Work the example on paper. Before concluding \"selling pressure\": check if it's one exchange reshuffling, whether derivatives open interest rose (collateral), and whether price and volume confirm. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 10,
+   "role": "demo",
+   "vo": "Work the example on paper. One metric is a hypothesis, not a signal. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Flows cross-checked with price, volume and derivatives. If you cannot write it, the line is open."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Internal exchange moves ruled out. If you cannot write it, the line is open."
+  },
+  {
+   "n": 13,
+   "role": "quiz",
+   "vo": "Check yourself. 1. What is netflow? The answer: Inflows minus outflows over a period."
+  },
+  {
+   "n": 14,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Do exchange reserves prove solvency? The answer: No. Liabilities aren't visible on-chain."
+  },
+  {
+   "n": 15,
+   "role": "quiz",
+   "vo": "Check yourself. 3. Is a large inflow always bearish? The answer: No. It can be collateral or an internal move."
+  },
+  {
+   "n": 16,
+   "role": "body",
+   "vo": "By the end of this lesson, you'll be able to interpret exchange inflows and outflows with the right caveats."
+  },
+  {
+   "n": 17,
+   "role": "body",
+   "vo": "Before concluding \"selling pressure\": check if it's one exchange reshuffling, whether derivatives open interest rose (collateral), and whether price and volume confirm."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "One metric is a hypothesis, not a signal."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "First, Flows cross-checked with price, volume and derivatives."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "The answer: Inflows minus outflows over a period."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "Question two. Do exchange reserves prove solvency? The answer: No. Liabilities aren't visible on-chain."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "It can be collateral or an internal move."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Do the checklist now, before you move on."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "Next up, lesson seven point four: Whale and entity analysis."
+  },
+  {
+   "n": 25,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Inflows to exchanges may precede selling (or collateral posting, internal moves). It sits in Exchange flows. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 26,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Outflows may mean self-custody or DeFi use. It sits in Exchange flows. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 27,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Exchange reserves on-chain aren't proof of solvency (liabilities aren't visible). It sits in Exchange flows. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 28,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Netflow +20,000 ETH in a day. It sits in Exchange flows. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 29,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Before concluding \"selling pressure\": check if it's one exchange reshuffling, whether derivatives open interest rose (collateral), and whether price and volume confirm. It sits in Exchange flows. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 30,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. One metric is a hypothesis, not a signal. It sits in Exchange flows. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 31,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Interpret exchange inflows and outflows with the right caveats. It sits in Exchange flows. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 32,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Flows cross-checked with price, volume and derivatives. It sits in Exchange flows. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 33,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Internal exchange moves ruled out. It sits in Exchange flows. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 34,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Inflows to exchanges may precede selling (or collateral posting, internal moves). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 35,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Outflows may mean self-custody or DeFi use. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 36,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Exchange reserves on-chain aren't proof of solvency (liabilities aren't visible). It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 37,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Netflow +20,000 ETH in a day. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 38,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Before concluding \"selling pressure\": check if it's one exchange reshuffling, whether derivatives open interest rose (collateral), and whether price and volume confirm. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 39,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. One metric is a hypothesis, not a signal. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Interpret exchange inflows and outflows with the right caveats. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Flows cross-checked with price, volume and derivatives. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Internal exchange moves ruled out. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Inflows to exchanges may precede selling (or collateral posting, internal moves). One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Outflows may mean self-custody or DeFi use. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Exchange reserves on-chain aren't proof of solvency (liabilities aren't visible). One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Netflow +20,000 ETH in a day. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Before concluding \"selling pressure\": check if it's one exchange reshuffling, whether derivatives open interest rose (collateral), and whether price and volume confirm. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. One metric is a hypothesis, not a signal. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Interpret exchange inflows and outflows with the right caveats. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Build the drawing for this line only. Flows cross-checked with price, volume and derivatives. One shape for the thing named, one callout, the word Example if you used a figure. Cover the caption and check that the shape still teaches the line. If the shape would fit a different lesson, redraw it. Then uncover the caption and say the line while you point."
+  },
+  {
+   "n": 51,
+   "role": "recap",
+   "vo": "Three lines to keep. Inflows to exchanges may precede selling (or collateral posting, internal moves). Outflows may mean self-custody or DeFi use. Next is Lesson 7.4, Whale & entity analysis. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 52,
+   "role": "action",
+   "vo": "Your action for Exchange flows: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 7.4, Whale & entity analysis."
+  },
+  {
+   "n": 53,
+   "role": "outro",
+   "vo": "Next is Lesson 7.4, Whale & entity analysis. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

@@ -1,0 +1,500 @@
+{
+ "id": "lesson-05-5",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-05-5.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 5.4, Smart contracts: state, proxies, admin keys. Read who controls a contract and whether its code can change after you deposit. Keep that page on the desk. This lesson adds one picture: Weigh contract risk honestly, and read an audit for what it actually covers."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 5.5, Smart-contract risk & what audits don't prove. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You can already split base yield from emissions, and you can name an LST. This module asks what that position sits on: a bridge, a sequencer, an oracle, or a key."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Common failure types: logic bugs, reentrancy (a contract is called back before it updates its state), broken access control, and economic exploits (correct code, exploitable incentives or oracles)."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Audits review specific code at a specific time."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Check the scope (which contracts), date (before later changes?), severity of findings and whether they were fixed."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Bug bounties pay hackers to report instead of exploit."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "A large, active bounty is a good sign."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Time and value at risk: code that has safely held large value for years has survived more real attacks."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "Work the example on paper. Protocol X: two audits, but the latest upgrade (last month) isn't in either scope; bounty $50k; TVL $400M. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "Work the example on paper. The newest code is unaudited and the bounty is small relative to the value. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Audit scope matches deployed code; date after last upgrade. If you cannot write it, the line is open."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Critical/high findings resolved. If you cannot write it, the line is open."
+  },
+  {
+   "n": 15,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Bug bounty size relative to TVL checked. If you cannot write it, the line is open."
+  },
+  {
+   "n": 16,
+   "role": "quiz",
+   "vo": "Check yourself. 1. What does an audit not prove? The answer: That the code (or later changes, or economic design) is safe."
+  },
+  {
+   "n": 17,
+   "role": "quiz",
+   "vo": "Check yourself. 2. What is reentrancy? The answer: A contract being called back before it finishes updating its state, letting an attacker repeat actions."
+  },
+  {
+   "n": 18,
+   "role": "quiz",
+   "vo": "Check yourself. 3. Why check audit dates? The answer: Code changed after the audit wasn't reviewed."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "Smart-contract risk, and what audits don't prove."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "By the end, you'll be able to weigh contract risk honestly, and read an audit for exactly what it actually covers, not what its own name implies."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "The four common failure types behind most real smart-contract losses."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "What an audit actually covers, and precisely what it doesn't."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Bug bounties, and why their size matters relative to the value at stake."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "And a full worked example, reading a real protocol's real audit and bounty numbers together."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Here are the four failure types behind most real smart-contract losses."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "Logic bugs, straightforward mistakes in how the code is actually written."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Reentrancy, where a contract gets called back into, before it's finished updating its own state, letting an attacker repeat an action it should only have allowed once."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "Broken access control, where a function that should be restricted simply isn't, properly."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "And economic exploits, where the code itself is technically correct, but the incentives, or the oracles, underneath it can be exploited anyway."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "Worth naming the other two failure types specifically too, since reentrancy and economic exploits tend to get most of the attention."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "A logic bug is simply a straightforward mistake in the code itself, an off-by-one error, a wrong comparison, a case the developer genuinely didn't account for."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "Broken access control means a function that should have been restricted to specific callers simply wasn't, letting anyone call it directly."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "Worth being precise about that fourth category specifically, since it's the one most likely to be missed by a purely code-focused review."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "An economic exploit doesn't require finding any bug in the code at all; the code can execute exactly as written, every single time, and still be drained, because the underlying incentives or price feeds it depends on were exploitable from the start."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "The answer: a contract being called back into before it's finished updating its own state, letting an attacker repeat an action it should only have allowed once."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "Here's exactly what to check on any audit, before trusting its name alone."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "Its scope: specifically which contracts it actually reviewed, not just the protocol's name in general."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "Its date: specifically whether it happened before or after any later code changes."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "And whether those specific findings were genuinely fixed afterward, not simply noted and left as-is."
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "Worth being completely direct about the actual limit of what any audit can honestly claim, since the word itself tends to imply far more certainty than it should."
+  },
+  {
+   "n": 41,
+   "role": "body",
+   "vo": "An audit reviews specific code, at one specific point in time."
+  },
+  {
+   "n": 42,
+   "role": "body",
+   "vo": "It says nothing at all about code deployed afterward, and it can genuinely miss an economic exploit entirely, if that exploit never required a code-level bug to begin with."
+  },
+  {
+   "n": 43,
+   "role": "body",
+   "vo": "The answer: that the code, any later changes to it, or the economic design underneath it, is genuinely safe."
+  },
+  {
+   "n": 44,
+   "role": "body",
+   "vo": "Worth being precise about what a bug bounty actually does, and why its size relative to the protocol's own value matters so directly."
+  },
+  {
+   "n": 45,
+   "role": "body",
+   "vo": "It pays hackers to responsibly report a vulnerability, instead of quietly exploiting it themselves."
+  },
+  {
+   "n": 46,
+   "role": "body",
+   "vo": "A large, genuinely active bounty is a good sign specifically because it makes responsible disclosure the more financially attractive choice, compared with an exploit."
+  },
+  {
+   "n": 47,
+   "role": "body",
+   "vo": "The same $50,000, at very different scales."
+  },
+  {
+   "n": 48,
+   "role": "body",
+   "vo": "Here's that exact same fifty thousand dollar bounty, held fixed, but measured against six genuinely different total-value-locked scales, purely illustrative, to show why the ratio matters far more than the raw dollar figure."
+  },
+  {
+   "n": 49,
+   "role": "body",
+   "vo": "Against one million dollars of T.V.L., fifty thousand dollars is five percent, a genuinely strong incentive."
+  },
+  {
+   "n": 50,
+   "role": "body",
+   "vo": "Against one hundred million, it's down to zero point zero five percent."
+  },
+  {
+   "n": 51,
+   "role": "body",
+   "vo": "And against the source material's own four hundred million, just zero point zero one two five percent, vanishingly small."
+  },
+  {
+   "n": 52,
+   "role": "body",
+   "vo": "Notice how quickly that ratio collapses, as the exact same bounty gets measured against genuinely larger protocols."
+  },
+  {
+   "n": 53,
+   "role": "body",
+   "vo": "A fifty thousand dollar bounty was never actually the fixed, meaningful number; it's only ever meaningful relative to what it's protecting, and it can look perfectly reasonable, or nearly irrelevant, depending entirely on that one ratio."
+  },
+  {
+   "n": 54,
+   "role": "body",
+   "vo": "Here's how to actually check an audit's scope and date yourself, rather than trusting a badge or a headline claim."
+  },
+  {
+   "n": 55,
+   "role": "body",
+   "vo": "Open the audit report itself, and read its stated scope section directly, for the exact contract addresses covered."
+  },
+  {
+   "n": 56,
+   "role": "body",
+   "vo": "Compare that report's own date against the protocol's own deployment history, for the currently live contracts."
+  },
+  {
+   "n": 57,
+   "role": "body",
+   "vo": "And if the two don't line up, treat the gap between them as genuinely unaudited, full stop."
+  },
+  {
+   "n": 58,
+   "role": "body",
+   "vo": "Here's why code that's safely held large value for a genuinely long time is itself a real, meaningful signal, separate from any audit."
+  },
+  {
+   "n": 59,
+   "role": "body",
+   "vo": "Every day that code sits there, holding real, significant value, is another day skilled, motivated attackers have genuinely had the opportunity to find a flaw in it, and haven't succeeded."
+  },
+  {
+   "n": 60,
+   "role": "body",
+   "vo": "That's not proof of safety either, but it's real, accumulated evidence, earned specifically by surviving real attempts."
+  },
+  {
+   "n": 61,
+   "role": "body",
+   "vo": "Worth being direct about how these three signals actually combine, since none of them alone is genuinely sufficient on its own."
+  },
+  {
+   "n": 62,
+   "role": "body",
+   "vo": "A recent, well-scoped audit, a meaningfully sized bounty relative to T.V.L., and real time safely holding real value together, are what actually build honest confidence."
+  },
+  {
+   "n": 63,
+   "role": "body",
+   "vo": "Any one of the three, missing or weak, is a real gap worth pricing in directly, not explaining away."
+  },
+  {
+   "n": 64,
+   "role": "body",
+   "vo": "Here's Protocol X, exactly as the source material lays it out."
+  },
+  {
+   "n": 65,
+   "role": "body",
+   "vo": "But its latest upgrade, deployed just last month, isn't actually covered in either audit's scope."
+  },
+  {
+   "n": 66,
+   "role": "body",
+   "vo": "Its bug bounty sits at fifty thousand dollars."
+  },
+  {
+   "n": 67,
+   "role": "body",
+   "vo": "Its total value locked sits at four hundred million dollars."
+  },
+  {
+   "n": 68,
+   "role": "body",
+   "vo": "Here's what that bounty-to-value ratio actually looks like, precisely, once you compute it directly."
+  },
+  {
+   "n": 69,
+   "role": "body",
+   "vo": "Fifty thousand dollars, against four hundred million dollars, comes to just zero point zero one two five percent of total value locked, an extremely small incentive relative to what's genuinely at stake if a real flaw exists in that unaudited upgrade."
+  },
+  {
+   "n": 70,
+   "role": "body",
+   "vo": "Here's the one sentence this entire worked example exists to prove, worth holding onto more than the specific numbers involved."
+  },
+  {
+   "n": 71,
+   "role": "body",
+   "vo": "The newest code, the part actually deployed most recently, is entirely unaudited, and the financial incentive to report a flaw in it responsibly is genuinely tiny, relative to what a successful exploit against four hundred million dollars could actually be worth."
+  },
+  {
+   "n": 72,
+   "role": "body",
+   "vo": "Worth being concrete about what size down, or wait actually means here, rather than leaving it as an abstract recommendation."
+  },
+  {
+   "n": 73,
+   "role": "body",
+   "vo": "Size down means genuinely reducing the position specifically in that unaudited upgrade, to an amount you'd be fully fine losing outright."
+  },
+  {
+   "n": 74,
+   "role": "body",
+   "vo": "Wait means holding off entirely, until a real audit actually covers that exact code, rather than assuming the earlier two audits somehow still apply."
+  },
+  {
+   "n": 75,
+   "role": "body",
+   "vo": "Why does it actually matter to check an audit's own date?"
+  },
+  {
+   "n": 76,
+   "role": "body",
+   "vo": "The answer: any code changed after that audit happened was never reviewed by it at all."
+  },
+  {
+   "n": 77,
+   "role": "body",
+   "vo": "Do it before trusting any contract's own audit claims."
+  },
+  {
+   "n": 78,
+   "role": "body",
+   "vo": "Confirm the audit's scope genuinely matches the currently deployed code, and its date comes after the last real upgrade."
+  },
+  {
+   "n": 79,
+   "role": "body",
+   "vo": "Confirm any critical or high-severity findings were actually resolved, not just noted."
+  },
+  {
+   "n": 80,
+   "role": "body",
+   "vo": "And check the bug bounty's actual size, specifically relative to the protocol's own total value locked."
+  },
+  {
+   "n": 81,
+   "role": "body",
+   "vo": "Four common failure types: logic bugs, reentrancy, broken access control, and economic exploits that need no code bug at all."
+  },
+  {
+   "n": 82,
+   "role": "body",
+   "vo": "An audit reviews specific code, at a specific time; check its scope, date, findings, and whether they were fixed."
+  },
+  {
+   "n": 83,
+   "role": "body",
+   "vo": "A bug bounty's size only matters relative to the value it's protecting."
+  },
+  {
+   "n": 84,
+   "role": "body",
+   "vo": "Time and value safely held is real evidence, though never proof."
+  },
+  {
+   "n": 85,
+   "role": "body",
+   "vo": "And Protocol X shows exactly why all of this matters together: two audits, but the newest code isn't in either one."
+  },
+  {
+   "n": 86,
+   "role": "body",
+   "vo": "Check the audit's scope and date, confirm findings were fixed, and check the bounty relative to TVL."
+  },
+  {
+   "n": 87,
+   "role": "body",
+   "vo": "Next up, Lesson five point six: beyond Ethereum, Solana, Bitcoin, and other ecosystems."
+  },
+  {
+   "n": 88,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Common failure types: logic bugs, reentrancy (a contract is called back before it updates its state), broken access control, and economic exploits (correct code, exploitable incentives or oracles). It sits in Smart-contract risk & what audits don't prove. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 89,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Audits review specific code at a specific time. It sits in Smart-contract risk & what audits don't prove. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 90,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Check the scope (which contracts), date (before later changes?), severity of findings and whether they were fixed. It sits in Smart-contract risk & what audits don't prove. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 91,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Bug bounties pay hackers to report instead of exploit. It sits in Smart-contract risk & what audits don't prove. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 92,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. A large, active bounty is a good sign. It sits in Smart-contract risk & what audits don't prove. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 93,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Time and value at risk: code that has safely held large value for years has survived more real attacks. It sits in Smart-contract risk & what audits don't prove. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 94,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Protocol X: two audits, but the latest upgrade (last month) isn't in either scope; bounty $50k; TVL $400M. It sits in Smart-contract risk & what audits don't prove. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 95,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The newest code is unaudited and the bounty is small relative to the value. It sits in Smart-contract risk & what audits don't prove. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 96,
+   "role": "recap",
+   "vo": "Three lines to keep. Common failure types: logic bugs, reentrancy (a contract is called back before it updates its state), broken access control, and economic exploits (correct code, exploitable incentives or oracles). Audits review specific code at a specific time. Next is Lesson 5.6, Beyond Ethereum: Solana, Bitcoin and other ecosystems. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 97,
+   "role": "action",
+   "vo": "Your action for Smart-contract risk & what audits don't prove: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 5.6, Beyond Ethereum: Solana, Bitcoin and other ecosystems."
+  },
+  {
+   "n": 98,
+   "role": "outro",
+   "vo": "Next is Lesson 5.6, Beyond Ethereum: Solana, Bitcoin and other ecosystems. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

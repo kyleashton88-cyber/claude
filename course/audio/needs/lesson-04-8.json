@@ -1,0 +1,500 @@
+{
+ "id": "lesson-04-8",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-04-8.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 4.7, Stablecoin savings rates and yield-bearing stablecoins. Tell apart the different ways a stablecoin can pay yield, and the risk behind each. Keep that page on the desk. This lesson adds one picture: Use tokenized real-world assets knowing what you actually own and who you're trusting."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 4.8, Tokenized treasuries and real-world assets. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already have LTV, health factor, and liquidation from lending. A yield does not retire those numbers. It is payment for a risk you can name."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "RWAs are tokens that represent off-chain assets: short-term government bills (the most common), money-market funds, credit, commodities, property."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Tokenized treasury products typically pay close to the short-term government rate minus a management fee."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "What you're trusting: the issuer (legal structure), the custodian holding the real assets, the redemption process, and the token's transfer rules."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Access limits: many RWA tokens are only for verified (KYC'd) or accredited/qualified investors, and not available in every country."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Check eligibility where you live; don't try to get around restrictions."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Composability: some RWA tokens can be used as collateral in DeFi; others are restricted to allowlisted wallets."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: I'm eligible in my country (and it's legal to hold). If you cannot write it, the line is open."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Issuer, custodian and redemption terms read. If you cannot write it, the line is open."
+  },
+  {
+   "n": 13,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Transfer restrictions and minimums known. If you cannot write it, the line is open."
+  },
+  {
+   "n": 14,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Sized within caps, like any other issuer risk. If you cannot write it, the line is open."
+  },
+  {
+   "n": 15,
+   "role": "quiz",
+   "vo": "Check yourself. 1. What does a tokenized treasury product's yield track? The answer: Short-term government rates, minus the product's fees."
+  },
+  {
+   "n": 16,
+   "role": "quiz",
+   "vo": "Check yourself. 2. Name two parties you trust with an RWA token. The answer: Any two: the issuer, the custodian, the redemption agent, the token's administrators."
+  },
+  {
+   "n": 17,
+   "role": "quiz",
+   "vo": "Check yourself. 3. Why check transfer restrictions? The answer: Some RWA tokens only move between allowlisted wallets, which limits exit and DeFi use."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "By the end, you'll know exactly what you actually own, and specifically who you're trusting, before ever holding one of these tokens."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "Exactly who you're trusting, across four separate parties."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "Access limits, and composability, the two practical constraints that decide how usable one actually is."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "And a full worked example, using the source material's own numbers for a tokenized treasury product."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "Here's what a real-world asset token genuinely is: a token that represents an asset that exists entirely off-chain."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Most commonly, that's short-term government bills, the single most common R.W.A."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "But it can also be a money-market fund, private credit, commodities, or even property."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "The token itself is a claim, a representation."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "The actual asset it represents sits, and is managed, entirely outside the blockchain."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "Worth being precise about how a tokenized treasury product's yield typically works, since it's a genuinely simple, transparent relationship."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "It tracks the short-term government rate directly, minus the product's own management fee."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "There's no separate mechanism, no hidden formula, and importantly, none of the emissions or funding-rate risk that some of the other stablecoin yield sources from last lesson carry."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "Worth connecting this directly back to the four stablecoin yield sources from last lesson, since a tokenized treasury is essentially that lesson's third source, treasury-backed, in its purest, most direct form."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "Its risk profile is genuinely different from the other three: no protocol code to worry about, no governance vote resetting a rate, and no funding payments that can silently turn negative."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "What does a tokenized treasury product's yield actually track?"
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "The answer: short-term government rates, minus whatever fee the product itself charges."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "Here's all four parties this actually runs through, since the token itself is only as good as every one of them."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "The issuer is the legal structure that actually created the token, and stands behind it."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "The custodian is who physically, or legally, holds the real off-chain assets backing it."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "The redemption process is how, and how quickly, you can actually convert the token back into real value."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "And transfer rules decide where, and to whom, the token is even allowed to move."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "Worth being precise about why all four have to hold up, not just any one or two of them, for this to actually work the way you'd expect."
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "A sound issuer with a weak custodian is still a real problem."
+  },
+  {
+   "n": 41,
+   "role": "body",
+   "vo": "A sound issuer and custodian with a redemption process that quietly stalls under stress is still a real problem."
+  },
+  {
+   "n": 42,
+   "role": "body",
+   "vo": "Each one is a genuinely separate point of trust, not a repeated version of the same risk."
+  },
+  {
+   "n": 43,
+   "role": "body",
+   "vo": "Here's how to actually verify these four parties yourself, rather than just taking a name on a website at face value."
+  },
+  {
+   "n": 44,
+   "role": "body",
+   "vo": "Find the issuer's actual legal structure and jurisdiction, documented, not just implied."
+  },
+  {
+   "n": 45,
+   "role": "body",
+   "vo": "Find independent evidence of what the custodian actually holds, ideally a real, regular attestation, not just a claim."
+  },
+  {
+   "n": 46,
+   "role": "body",
+   "vo": "And read the redemption terms directly, specifically for timing, minimums, and any conditions attached."
+  },
+  {
+   "n": 47,
+   "role": "body",
+   "vo": "Name two parties you're actually trusting with an R.W.A."
+  },
+  {
+   "n": 48,
+   "role": "body",
+   "vo": "The answer: any two of the issuer, the custodian, the redemption agent, or the token's administrators."
+  },
+  {
+   "n": 49,
+   "role": "body",
+   "vo": "Here's exactly what these two constraints each actually decide."
+  },
+  {
+   "n": 50,
+   "role": "body",
+   "vo": "Access limits decide who's even allowed to hold the token in the first place, often restricted specifically to verified, K.Y.C.'d holders, or to accredited or qualified investors only, and not available at all in every country."
+  },
+  {
+   "n": 51,
+   "role": "body",
+   "vo": "Composability decides what you can actually do with it once you hold it: some R.W.A."
+  },
+  {
+   "n": 52,
+   "role": "body",
+   "vo": "tokens can be used freely as collateral elsewhere in DeFi, while others are restricted entirely to a specific allowlist of approved wallets."
+  },
+  {
+   "n": 53,
+   "role": "body",
+   "vo": "Worth being completely direct about the actual rule here, since it's simple and non-negotiable."
+  },
+  {
+   "n": 54,
+   "role": "body",
+   "vo": "Check your own eligibility, in your own actual country, before ever touching one of these products."
+  },
+  {
+   "n": 55,
+   "role": "body",
+   "vo": "Never attempt to work around a restriction that specifically applies to you; that's a legal and structural risk entirely separate from anything about the underlying asset itself."
+  },
+  {
+   "n": 56,
+   "role": "body",
+   "vo": "Here's what that composability difference actually looks like in practice, concretely, between two R.W.A."
+  },
+  {
+   "n": 57,
+   "role": "body",
+   "vo": "tokens that might otherwise look identical on paper."
+  },
+  {
+   "n": 58,
+   "role": "body",
+   "vo": "One with open composability can be deposited directly as collateral in an ordinary lending market, exactly like any other DeFi asset."
+  },
+  {
+   "n": 59,
+   "role": "body",
+   "vo": "One restricted to an allowlist can only move between pre-approved wallets, meaning it can't be used in most DeFi protocols at all, however attractive its own underlying yield happens to be."
+  },
+  {
+   "n": 60,
+   "role": "body",
+   "vo": "Why does it actually matter to check an R.W.A."
+  },
+  {
+   "n": 61,
+   "role": "body",
+   "vo": "tokens only move between allowlisted wallets, which directly limits your ability to exit, or to use it elsewhere in DeFi."
+  },
+  {
+   "n": 62,
+   "role": "body",
+   "vo": "Here's the calculation, exactly as the source material lays it out, illustratively."
+  },
+  {
+   "n": 63,
+   "role": "body",
+   "vo": "Short-term government bills are yielding four point zero percent."
+  },
+  {
+   "n": 64,
+   "role": "body",
+   "vo": "The tokenized product charges a zero point one five percent management fee on top of holding them for you."
+  },
+  {
+   "n": 65,
+   "role": "body",
+   "vo": "Subtract that fee from the underlying rate, and you'd earn approximately three point eight five percent, before any additional on-chain costs of your own."
+  },
+  {
+   "n": 66,
+   "role": "body",
+   "vo": "Worth being precise about where this specific product could actually fit, using the own-bank ladder framework from Module twelve."
+  },
+  {
+   "n": 67,
+   "role": "body",
+   "vo": "It can genuinely suit the safer, near-term tiers of that ladder, but only, and specifically, if its redemption time actually matches when you'd genuinely need that money back."
+  },
+  {
+   "n": 68,
+   "role": "body",
+   "vo": "A product yielding an attractive rate is no use at all if your own redemption window doesn't line up with your own actual timeline."
+  },
+  {
+   "n": 69,
+   "role": "body",
+   "vo": "Here's that exact same point, made concrete, comparing a redemption time that matches your own need against one that doesn't."
+  },
+  {
+   "n": 70,
+   "role": "body",
+   "vo": "A redemption window shorter than, or equal to, when you'll actually need the money keeps this product genuinely usable for that purpose."
+  },
+  {
+   "n": 71,
+   "role": "body",
+   "vo": "A redemption window longer than your own timeline means you could be forced to sell into a secondary market instead, at whatever price that happens to offer, right when you needed the cash."
+  },
+  {
+   "n": 72,
+   "role": "body",
+   "vo": "Here's why this particular risk shape feels different from most of what this module has covered so far, worth naming explicitly before closing it out."
+  },
+  {
+   "n": 73,
+   "role": "body",
+   "vo": "A vault, a restaking stack, or a synthetic funding position all carry genuinely technical, on-chain risks, code, oracles, correlated failure, funding turning negative."
+  },
+  {
+   "n": 74,
+   "role": "body",
+   "vo": "token's risk is almost entirely off-chain and legal instead: who the issuer and custodian actually are, and whether they do what they say."
+  },
+  {
+   "n": 75,
+   "role": "body",
+   "vo": "Confirm you're actually eligible in your own country, and that holding it is genuinely legal for you."
+  },
+  {
+   "n": 76,
+   "role": "body",
+   "vo": "Read the issuer, the custodian, and the redemption terms, all three, not just whichever one is easiest to find."
+  },
+  {
+   "n": 77,
+   "role": "body",
+   "vo": "Know its transfer restrictions and any minimum holding amounts."
+  },
+  {
+   "n": 78,
+   "role": "body",
+   "vo": "And size the entire position within caps, the exact same way you'd size any other single-issuer risk."
+  },
+  {
+   "n": 79,
+   "role": "body",
+   "vo": "Here's the one skill this entire module has been building, across every lesson in it, from farming, through staking and restaking, to vaults, airdrops, stablecoins, and now real-world assets."
+  },
+  {
+   "n": 80,
+   "role": "body",
+   "vo": "Split any advertised yield into what it's genuinely earned from, and name the specific risk being paid for."
+  },
+  {
+   "n": 81,
+   "role": "body",
+   "vo": "That's the actual outcome this module set out to teach, back at its own Mastery Starter."
+  },
+  {
+   "n": 82,
+   "role": "body",
+   "vo": "token represents an off-chain asset, most commonly short-term government bills."
+  },
+  {
+   "n": 83,
+   "role": "body",
+   "vo": "You're trusting four separate parties: the issuer, the custodian, the redemption process, and its transfer rules."
+  },
+  {
+   "n": 84,
+   "role": "body",
+   "vo": "Access limits and composability decide who can hold it, and what you can actually do with it."
+  },
+  {
+   "n": 85,
+   "role": "body",
+   "vo": "And the source material's own example shows the math is simple, four percent minus a small fee; the real work is verifying the trust behind it, and matching its redemption time to your own actual needs."
+  },
+  {
+   "n": 86,
+   "role": "body",
+   "vo": "Confirm your own eligibility, read all three of issuer, custodian and redemption terms, and match redemption timing to your own needs."
+  },
+  {
+   "n": 87,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. RWAs are tokens that represent off-chain assets: short-term government bills (the most common), money-market funds, credit, commodities, property. It sits in Tokenized treasuries and real-world assets. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 88,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Tokenized treasury products typically pay close to the short-term government rate minus a management fee. It sits in Tokenized treasuries and real-world assets. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 89,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. What you're trusting: the issuer (legal structure), the custodian holding the real assets, the redemption process, and the token's transfer rules. It sits in Tokenized treasuries and real-world assets. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 90,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Access limits: many RWA tokens are only for verified (KYC'd) or accredited/qualified investors, and not available in every country. It sits in Tokenized treasuries and real-world assets. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 91,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Check eligibility where you live; don't try to get around restrictions. It sits in Tokenized treasuries and real-world assets. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 92,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Composability: some RWA tokens can be used as collateral in DeFi; others are restricted to allowlisted wallets. It sits in Tokenized treasuries and real-world assets. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 93,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Use tokenized real-world assets knowing what you actually own and who you're trusting. It sits in Tokenized treasuries and real-world assets. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 94,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. I'm eligible in my country (and it's legal to hold). It sits in Tokenized treasuries and real-world assets. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 95,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Issuer, custodian and redemption terms read. It sits in Tokenized treasuries and real-world assets. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 96,
+   "role": "recap",
+   "vo": "Three lines to keep. RWAs are tokens that represent off-chain assets: short-term government bills (the most common), money-market funds, credit, commodities, property. Tokenized treasury products typically pay close to the short-term government rate minus a management fee. This is the last lesson of the program. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 97,
+   "role": "action",
+   "vo": "Your action for Tokenized treasuries and real-world assets: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Close the notebook. The program's lessons end here."
+  },
+  {
+   "n": 98,
+   "role": "outro",
+   "vo": "This is the last On-Chain Operator lesson. Say today's recap once, then close the notebook. Education only, not financial advice."
+  }
+ ]
+}

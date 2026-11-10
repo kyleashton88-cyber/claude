@@ -1,0 +1,480 @@
+{
+ "id": "lesson-04-6",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-04-6.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 4.5, Vaults & yield optimisers. Decide when a vault's fees are worth paying compared with doing it yourself. Keep that page on the desk. This lesson adds one picture: Price airdrop and points farming as a bet, including its costs."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 4.6, Airdrops & points: opportunity cost. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You already have LTV, health factor, and liquidation from lending. A yield does not retire those numbers. It is payment for a risk you can name."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Protocols reward early users with tokens (airdrops), often tracked by points first."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "Eligibility rules, snapshots and sybil filters (removing people who split into many wallets) decide who gets what."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "Fake claim sites are one of the most common scams (Lesson 1.6)."
+  },
+  {
+   "n": 8,
+   "role": "demo",
+   "vo": "Work the example on paper. defi_calc.py airdrop --probability 0.3 --value 1500 --costs 200 \u2192 EV $250. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 9,
+   "role": "demo",
+   "vo": "Work the example on paper. If the same $10,000 could earn 5% ($500/yr) risk-light elsewhere, the farm must beat that plus its extra risk, or it's the worse choice. Stamp it Example. It is not a level to copy onto a live position."
+  },
+  {
+   "n": 10,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Only actions I'd take anyway, or a capped speculative budget. If you cannot write it, the line is open."
+  },
+  {
+   "n": 11,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Opportunity cost compared. If you cannot write it, the line is open."
+  },
+  {
+   "n": 12,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Claims only from verified official links. If you cannot write it, the line is open."
+  },
+  {
+   "n": 13,
+   "role": "quiz",
+   "vo": "Check yourself. 1. Are points a promise of tokens? The answer: No."
+  },
+  {
+   "n": 14,
+   "role": "quiz",
+   "vo": "Check yourself. 2. What's a sybil filter? The answer: Rules that exclude wallets believed to belong to the same person farming many times."
+  },
+  {
+   "n": 15,
+   "role": "quiz",
+   "vo": "Check yourself. 3. What's the airdrop EV formula? The answer: Probability \u00d7 value \u2212 costs."
+  },
+  {
+   "n": 16,
+   "role": "body",
+   "vo": "By the end, you'll be able to price farming for a future airdrop as exactly what it is: a bet, with real costs, not a certain reward."
+  },
+  {
+   "n": 17,
+   "role": "body",
+   "vo": "How airdrops and points actually work, and who decides who gets what."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "Why nothing here is ever promised, and the scam risk that follows directly from that fact."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "A full worked example, pricing a specific farm as an actual expected value."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "And a checklist for deciding whether farming for one is even worth your time and capital."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "A protocol wants to reward its earliest, genuine users, specifically with tokens, once it eventually launches one."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "Long before that token exists, it very often tracks your activity as points instead, a running, unofficial scoreboard."
+  },
+  {
+   "n": 23,
+   "role": "body",
+   "vo": "Eligibility rules, and a specific snapshot moment in time, decide who ultimately qualifies."
+  },
+  {
+   "n": 24,
+   "role": "body",
+   "vo": "And sybil filters are specifically designed to exclude anyone believed to have split into many wallets, purely to farm a larger share for themselves."
+  },
+  {
+   "n": 25,
+   "role": "body",
+   "vo": "Here's that same sequence, laid out as the actual stages it moves through."
+  },
+  {
+   "n": 26,
+   "role": "body",
+   "vo": "You take real actions, using a protocol, genuinely or otherwise."
+  },
+  {
+   "n": 27,
+   "role": "body",
+   "vo": "The protocol tracks that activity, often as points, well before any token exists."
+  },
+  {
+   "n": 28,
+   "role": "body",
+   "vo": "At some undisclosed snapshot moment, eligibility gets locked in."
+  },
+  {
+   "n": 29,
+   "role": "body",
+   "vo": "Sybil filters then attempt to exclude wallets believed to be farming unfairly."
+  },
+  {
+   "n": 30,
+   "role": "body",
+   "vo": "And only after all of that does an actual token, if one ever comes at all, finally get distributed."
+  },
+  {
+   "n": 31,
+   "role": "body",
+   "vo": "Worth being precise about what a sybil filter is actually trying to catch, since it directly shapes how these programs get designed."
+  },
+  {
+   "n": 32,
+   "role": "body",
+   "vo": "It's specifically trying to exclude wallets believed to belong to one person splitting themselves into many, purely to claim a disproportionately larger share."
+  },
+  {
+   "n": 33,
+   "role": "body",
+   "vo": "That's exactly why protocols keep both their eligibility rules and their snapshot timing deliberately vague, right up until the moment they're finally revealed."
+  },
+  {
+   "n": 34,
+   "role": "body",
+   "vo": "Worth being precise about why protocols actually run these programs at all, since it clarifies what they genuinely want from you."
+  },
+  {
+   "n": 35,
+   "role": "body",
+   "vo": "They're trying to reward genuine early users specifically, and distribute ownership more broadly, rather than concentrating a new token entirely among insiders and early investors."
+  },
+  {
+   "n": 36,
+   "role": "body",
+   "vo": "That underlying goal is exactly why sybil filters exist, and exactly why genuine, organic usage tends to be rewarded over obviously artificial, repetitive farming patterns."
+  },
+  {
+   "n": 37,
+   "role": "body",
+   "vo": "The answer: rules that exclude wallets believed to belong to the same person, farming the same program many times over through multiple wallets."
+  },
+  {
+   "n": 38,
+   "role": "body",
+   "vo": "Worth being completely precise about this, since it's the single most important fact in this entire lesson."
+  },
+  {
+   "n": 39,
+   "role": "body",
+   "vo": "Points are not a promise of a future token."
+  },
+  {
+   "n": 40,
+   "role": "body",
+   "vo": "There is no contract, no guarantee, and no obligation on the protocol's part to ever distribute anything at all, no matter how many points you've accumulated, or how confident the community narrative around it happens to sound."
+  },
+  {
+   "n": 41,
+   "role": "body",
+   "vo": "Here's exactly why that uncertainty becomes the scammer's opening, since it's a direct consequence of nothing being promised or officially confirmed in advance."
+  },
+  {
+   "n": 42,
+   "role": "body",
+   "vo": "Real anticipation, and real uncertainty about timing, builds up around a genuinely large, unconfirmed airdrop."
+  },
+  {
+   "n": 43,
+   "role": "body",
+   "vo": "A fake claim site then appears, closely mimicking the real protocol, right at the exact moment people are anxiously watching for the real announcement."
+  },
+  {
+   "n": 44,
+   "role": "body",
+   "vo": "And anyone who connects their wallet, or signs what looks like a routine claim transaction, can lose everything in that wallet instantly."
+  },
+  {
+   "n": 45,
+   "role": "body",
+   "vo": "Worth repeating the one rule that defeats this specific scam completely, since it's simple enough to actually follow every single time."
+  },
+  {
+   "n": 46,
+   "role": "body",
+   "vo": "Only ever claim from a link you've verified through the protocol's own official channel, directly, never from a link in a random message, a comment, or a search ad, no matter how urgent or time-limited it claims to be."
+  },
+  {
+   "n": 47,
+   "role": "body",
+   "vo": "Are points a promise of a future token?"
+  },
+  {
+   "n": 48,
+   "role": "body",
+   "vo": "Never treat a points balance as a promise, a receipt, or a guarantee of anything."
+  },
+  {
+   "n": 49,
+   "role": "body",
+   "vo": "Here's the expected-value formula first, using this program's own calculator."
+  },
+  {
+   "n": 50,
+   "role": "body",
+   "vo": "Probability of actually qualifying, times the airdrop's estimated value, minus your real costs of farming it, gas, time, and everything else you've spent."
+  },
+  {
+   "n": 51,
+   "role": "body",
+   "vo": "Plug in a thirty percent chance of qualifying, an estimated fifteen hundred dollar value, and two hundred dollars of real costs, and the expected value comes to exactly two hundred fifty dollars."
+  },
+  {
+   "n": 52,
+   "role": "body",
+   "vo": "Now here's the actual comparison this expected value has to survive, against what that same capital could have earned somewhere else entirely."
+  },
+  {
+   "n": 53,
+   "role": "body",
+   "vo": "If the ten thousand dollars tied up farming this airdrop could instead have earned a risk-light five percent elsewhere, that's five hundred dollars a year, in an ordinary, well-understood position."
+  },
+  {
+   "n": 54,
+   "role": "body",
+   "vo": "The farm's two hundred fifty dollar expected value has to beat that five hundred dollars, plus compensate you for its own extra risk, or it's simply the worse choice."
+  },
+  {
+   "n": 55,
+   "role": "body",
+   "vo": "How much does the guess for probability matter?"
+  },
+  {
+   "n": 56,
+   "role": "body",
+   "vo": "Here's that same fifteen hundred dollar value and two hundred dollar cost, run across five different guesses for your actual probability of qualifying, since that number is almost always the shakiest input in this entire formula."
+  },
+  {
+   "n": 57,
+   "role": "body",
+   "vo": "At ten percent, the expected value is actually negative, fifty dollars, meaning the farm loses money on average."
+  },
+  {
+   "n": 58,
+   "role": "body",
+   "vo": "At twenty percent, it turns positive, at one hundred dollars."
+  },
+  {
+   "n": 59,
+   "role": "body",
+   "vo": "At the source material's own thirty percent, two hundred fifty."
+  },
+  {
+   "n": 60,
+   "role": "body",
+   "vo": "Notice what that negative value at ten percent actually tells you, since it's easy to only picture the optimistic end of this range."
+  },
+  {
+   "n": 61,
+   "role": "body",
+   "vo": "If your real odds of qualifying are genuinely that low, the honest expected value of farming is a loss, on average, even before comparing it against anything else you could have done with that same capital instead."
+  },
+  {
+   "n": 62,
+   "role": "body",
+   "vo": "Here's how to actually estimate your own probability of qualifying, rather than just guessing optimistically."
+  },
+  {
+   "n": 63,
+   "role": "body",
+   "vo": "Read the protocol's own stated eligibility criteria closely, and check your own activity honestly against it."
+  },
+  {
+   "n": 64,
+   "role": "body",
+   "vo": "Look at how similar, comparable protocols have handled past airdrops, for a realistic sense of typical qualifying rates."
+  },
+  {
+   "n": 65,
+   "role": "body",
+   "vo": "And when genuinely unsure, run the math at a deliberately conservative guess, not a hopeful one."
+  },
+  {
+   "n": 66,
+   "role": "body",
+   "vo": "Here's the one sentence this entire worked example exists to prove, worth holding onto more than the specific dollar figures involved."
+  },
+  {
+   "n": 67,
+   "role": "body",
+   "vo": "In this exact scenario, the farm's expected value doesn't even clear the safer alternative's return, before its extra risk is even accounted for at all, which means the honest answer here is that farming is the worse choice."
+  },
+  {
+   "n": 68,
+   "role": "body",
+   "vo": "What's the actual formula for an airdrop's expected value?"
+  },
+  {
+   "n": 69,
+   "role": "body",
+   "vo": "The answer: probability of qualifying, times the airdrop's value, minus your real costs of farming it."
+  },
+  {
+   "n": 70,
+   "role": "body",
+   "vo": "Here's why the checklist's first item specifically distinguishes these two situations, since the real cost of farming differs enormously between them."
+  },
+  {
+   "n": 71,
+   "role": "body",
+   "vo": "Using a protocol you'd genuinely use anyway means the points are simply a bonus on top of activity you were already doing, at close to zero extra real cost."
+  },
+  {
+   "n": 72,
+   "role": "body",
+   "vo": "Taking on entirely new actions, purely to farm points, means every one of those costs, gas, time, and risk, is a real cost you're taking on solely for a speculative, unpromised outcome."
+  },
+  {
+   "n": 73,
+   "role": "body",
+   "vo": "Only take actions you'd genuinely take anyway, or set a strictly capped, specifically speculative budget for it, and nothing more."
+  },
+  {
+   "n": 74,
+   "role": "body",
+   "vo": "Compare its expected value against what that same capital could earn elsewhere, the way the worked example just did."
+  },
+  {
+   "n": 75,
+   "role": "body",
+   "vo": "And only ever claim through links you've verified from the protocol's own official channel."
+  },
+  {
+   "n": 76,
+   "role": "body",
+   "vo": "Airdrops reward early users, tracked first as points, decided by eligibility rules, a snapshot, and sybil filters."
+  },
+  {
+   "n": 77,
+   "role": "body",
+   "vo": "Nothing here is ever promised, which is exactly what fake claim sites exploit at the moment of peak anticipation."
+  },
+  {
+   "n": 78,
+   "role": "body",
+   "vo": "An airdrop farm has a real expected value, probability times value minus costs, and it has to beat what the same capital could earn safely elsewhere, plus its own extra risk."
+  },
+  {
+   "n": 79,
+   "role": "body",
+   "vo": "Price it as the bet it actually is."
+  },
+  {
+   "n": 80,
+   "role": "body",
+   "vo": "Only farm what you'd do anyway, or a capped speculative budget, compare the opportunity cost honestly, and claim only from verified official links."
+  },
+  {
+   "n": 81,
+   "role": "body",
+   "vo": "Next up, Lesson four point seven: stablecoin savings rates and yield-bearing stablecoins."
+  },
+  {
+   "n": 82,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Protocols reward early users with tokens (airdrops), often tracked by points first. It sits in Airdrops & points: opportunity cost. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 83,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Eligibility rules, snapshots and sybil filters (removing people who split into many wallets) decide who gets what. It sits in Airdrops & points: opportunity cost. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 84,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Fake claim sites are one of the most common scams (Lesson 1.6). It sits in Airdrops & points: opportunity cost. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 85,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. defi_calc.py airdrop --probability 0.3 --value 1500 --costs 200 \u2192 EV $250. It sits in Airdrops & points: opportunity cost. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 86,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. If the same $10,000 could earn 5% ($500/yr) risk-light elsewhere, the farm must beat that plus its extra risk, or it's the worse choice. It sits in Airdrops & points: opportunity cost. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 87,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Price airdrop and points farming as a bet, including its costs. It sits in Airdrops & points: opportunity cost. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 88,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Only actions I'd take anyway, or a capped speculative budget. It sits in Airdrops & points: opportunity cost. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 89,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Opportunity cost compared. It sits in Airdrops & points: opportunity cost. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 90,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Claims only from verified official links. It sits in Airdrops & points: opportunity cost. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 91,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Now ask what this line rules out. Protocols reward early users with tokens (airdrops), often tracked by points first. It rules out a story that skips the mechanism. It rules out treating a rate as a reason by itself. Write the ruled-out story in the margin and cross it out. The drawing should match the line that remains. A hope about price is not a ruled-out story. It is the wrong kind of note."
+  },
+  {
+   "n": 92,
+   "role": "recap",
+   "vo": "Three lines to keep. Protocols reward early users with tokens (airdrops), often tracked by points first. Eligibility rules, snapshots and sybil filters (removing people who split into many wallets) decide who gets what. Next is Lesson 4.7, Stablecoin savings rates and yield-bearing stablecoins. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 93,
+   "role": "action",
+   "vo": "Your action for Airdrops & points: opportunity cost: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 4.7, Stablecoin savings rates and yield-bearing stablecoins."
+  },
+  {
+   "n": 94,
+   "role": "outro",
+   "vo": "Next is Lesson 4.7, Stablecoin savings rates and yield-bearing stablecoins. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}

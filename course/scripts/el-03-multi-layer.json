@@ -1,0 +1,279 @@
+{
+ "id": "el-03-multi-layer",
+ "title": "Multi-layer grids as inventory buckets",
+ "course": "Grid Bot Elite",
+ "palette": "teal",
+ "music": "course/music/komiku-ambiant-truth.ogg",
+ "next": "Dynamic spacing when volatility rises",
+ "wpm_assumption": 143,
+ "word_count": 2454,
+ "estimated_minutes": 17.16,
+ "code_draws_visuals": false,
+ "overlays_only": [
+  "captions",
+  "lower thirds",
+  "intro title text",
+  "disclaimer line",
+  "Ken Burns"
+ ],
+ "beats": [
+  {
+   "n": 1,
+   "chapter": "Hook",
+   "role": "hook",
+   "vo": "Two grids on one coin can both try to hold the same inventory, the way two labels on one shelf fight over the same box. Last page you wrote range, spacing, and stop for one grid. A second band on the same coin does not create a second pile of inventory by magic. On the diagram for this beat, look for one shelf and one box, stamped Example. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Draw one coin name, then two bands, and circle the stack they both want. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. This picture is not a claim that two grids are safer than one. Say the opening line once more, and point at the part that belongs to Hook. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Two grids on one coin can both try to hold the same inventory, the way two labels on one shelf fight over the same",
+   "concept": "Two grids on one coin can both try to hold the same inventory, the way two labels on one shelf fight over the same box.",
+   "image": "course/images/el-03-multi-layer/001.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 1, role hook. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Hook. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Two grids on one coin can both try to hold the same inventory; the problem visible in the first glance, before any logo. The picture must be understandable with the sound off. Teaching line: Two grids on one coin can both try to hold the same inventory, the way two labels on one shelf fight over the same box. Labels, spelled exactly: Two. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not.",
+   "example": {
+    "kind": "analogy-shelf",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 2,
+   "chapter": "Disclaimer",
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot.",
+   "cap": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of.",
+   "concept": "Education only, not financial advice.",
+   "image": "course/images/el-03-multi-layer/002.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 2, role legal. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Disclaimer. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Education only, not financial advice. The picture must be understandable with the sound off. Teaching line: Education only, not financial advice. Labels, spelled exactly: Education. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 3,
+   "chapter": "Title card",
+   "role": "intro",
+   "vo": "This is Grid Bot Elite. The lesson is Multi-layer grids as inventory buckets. Teal on the frame. Not the Blueprint plate. Education only. You will write on paper before any screen.",
+   "cap": "This is Grid Bot Elite. The lesson is Multi-layer grids as inventory buckets. Teal on the frame. Not the.",
+   "concept": "Multi-layer grids as inventory buckets",
+   "image": "course/images/el-03-multi-layer/003.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 3, role intro. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Title card. Show two separate inventory buckets for two grids, with a warning when the buckets overlap on the same asset. The picture must be understandable with the sound off. Teaching line: Multi-layer grids as inventory buckets Labels, spelled exactly: Multi. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 4,
+   "chapter": "A layer is a bucket",
+   "role": "body",
+   "vo": "By the end you can treat a layer as a shelf in a cupboard, an inventory bucket of its own. A bucket has a name, a band, and a stop. If you cannot name the bucket, the layer is only a second set of lines. On the diagram for this beat, look for two buckets, each labelled with a band, under one coin name. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Name the buckets Core and Inner on the example page. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Naming them does not make them two piles of coins. Say the opening line once more, and point at the part that belongs to A layer is a bucket. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "By the end you can treat a layer as a shelf in a cupboard, an inventory bucket of its own. A bucket has a name, a",
+   "concept": "By the end you can treat a layer as a shelf in a cupboard, an inventory bucket of its own.",
+   "image": "course/images/el-03-multi-layer/004.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 4, role body. A step-by-step illustrated form, generic and unbranded, with one field highlighted in teal. Chapter context: A layer is a bucket. Show two separate inventory buckets for two grids, with a warning when the buckets overlap on the same asset. The picture must be understandable with the sound off. Teaching line: By the end you can treat a layer as a shelf in a cupboard, an inventory bucket of its own. Use no words if a shape is clearer. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not.",
+   "example": {
+    "kind": "analogy-shelf",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 5,
+   "chapter": "Core and inner",
+   "role": "diagram",
+   "vo": "In this example a core band is wide and a second band sits inside it. The inner band is a drawing inside the outer band. It is marked Example. It is not a pair of settings to copy. On the diagram for this beat, look for a wide band and a narrower band inside it, stamped Example. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Draw the outer lines first, then the inner lines, and write Example at the top. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Starting from the inner band and hoping an outer range appears is the miss. Say the opening line once more, and point at the part that belongs to Core and inner. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "In this example a core band is wide and a second band sits inside it. The inner band is a drawing inside the outer",
+   "concept": "In this example a core band is wide and a second band sits inside it.",
+   "image": "course/images/el-03-multi-layer/005.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 5, role diagram. One large diagram centered on an off-white panel, with thin teal callout lines. Chapter context: Core and inner. Show a price band drawn as two horizontal teal lines labelled Upper and Lower, with the word Range on a small tag. The picture must be understandable with the sound off. Teaching line: In this example a core band is wide and a second band sits inside it. Labels, spelled exactly: Example. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not.",
+   "example": {
+    "kind": "analogy-shelf",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 6,
+   "chapter": "Overlap",
+   "role": "body",
+   "vo": "That overlap is the risk in the picture. Where the bands share prices, both grids can try to hold the same inventory. The drawing should show one stack, not two. On the diagram for this beat, look for the shared prices hatched, with one inventory tag on the hatch. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Hatch the overlap and write one inventory line beside it. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Two tags on one hatch pretend you hold the inventory twice. Say the opening line once more, and point at the part that belongs to Overlap. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "That overlap is the risk in the picture. Where the bands share prices, both grids can try to hold the same.",
+   "concept": "That overlap is the risk in the picture.",
+   "image": "course/images/el-03-multi-layer/006.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 6, role body. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Overlap. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: That overlap is the risk in the picture. The picture must be understandable with the sound off. Teaching line: That overlap is the risk in the picture. Labels, spelled exactly: That. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 7,
+   "chapter": "Same coin",
+   "role": "body",
+   "vo": "The inner band can still fall with the first coin. A second band is not a second asset. If the coin leaves, both drawings leave with it. On the diagram for this beat, look for one coin falling through both bands together. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Write the coin name once, above both bands. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. A second band is not a hedge just because it is thinner. Say the opening line once more, and point at the part that belongs to Same coin. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "The inner band can still fall with the first coin. A second band is not a second asset. If the coin leaves.",
+   "concept": "The inner band can still fall with the first coin.",
+   "image": "course/images/el-03-multi-layer/007.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 7, role body. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Same coin. Show a price band drawn as two horizontal teal lines labelled Upper and Lower, with the word Range on a small tag. The picture must be understandable with the sound off. Teaching line: The inner band can still fall with the first coin. Labels, spelled exactly: Example, The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 8,
+   "chapter": "No results curve",
+   "role": "body",
+   "vo": "No curve of results is drawn. A results curve would pretend the example already happened. The example is a drawing of buckets. On the diagram for this beat, look for an empty results box crossed out beside the two bands. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. If you sketched a rising curve, cross it out. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Past or imagined results do not indicate future results. Say the opening line once more, and point at the part that belongs to No results curve. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "No curve of results is drawn. A results curve would pretend the example already happened. The example is a.",
+   "concept": "No curve of results is drawn.",
+   "image": "course/images/el-03-multi-layer/008.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 8, role body. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: No results curve. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: No curve of results is drawn. The picture must be understandable with the sound off. Teaching line: No curve of results is drawn. Use no words if a shape is clearer. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 9,
+   "chapter": "Quiz",
+   "role": "quiz",
+   "vo": "Quick check. When two bands overlap, how many inventory lines do you write? The answer: one inventory line, not two. On the diagram for this beat, look for one tag on the hatched overlap. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Point at the single tag. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Two tags are the miss. Say the opening line once more, and point at the part that belongs to Quiz. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Quick check. When two bands overlap, how many inventory lines do you write? The answer: one inventory line.",
+   "concept": "Quick check. When two bands overlap, how many inventory lines do you write?",
+   "image": "course/images/el-03-multi-layer/009.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 9, role quiz. A step-by-step illustrated form, generic and unbranded, with one field highlighted in teal. Chapter context: Quiz. Show a price band drawn as two horizontal teal lines labelled Upper and Lower, with the word Range on a small tag. The picture must be understandable with the sound off. Teaching line: Quick check. When two bands overlap, how many inventory lines do you write? Labels, spelled exactly: Quick, When. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 10,
+   "chapter": "Recap",
+   "role": "recap",
+   "vo": "Recap: a layer is a bucket, the inner band sits inside the core, and overlap gets one inventory line. Say them without looking. On the diagram for this beat, look for three recap rows. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Stamp Example. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Do not recap a profit figure. Say the opening line once more, and point at the part that belongs to Recap. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Recap: a layer is a bucket, the inner band sits inside the core, and overlap gets one inventory line. Say them",
+   "concept": "Recap: a layer is a bucket, the inner band sits inside the core, and overlap gets one inventory line.",
+   "image": "course/images/el-03-multi-layer/010.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 10, role recap. One large diagram centered on an off-white panel, with thin teal callout lines. Chapter context: Recap. Show a price band drawn as two horizontal teal lines labelled Upper and Lower, with the word Range on a small tag; two separate inventory buckets for two grids, with a warning when the buckets overlap on the same asset; three short recap rows, each row a tiny diagram plus a two-word label. The picture must be understandable with the sound off. Teaching line: Recap: a layer is a bucket, the inner band sits inside the core, and overlap gets one inventory line. Labels, spelled exactly: Recap. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not.",
+   "example": {
+    "kind": "analogy-shelf",
+    "note": "Example, not a forecast."
+   }
+  },
+  {
+   "n": 11,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside A layer is a bucket. Cover the notes and say this from memory: By the end you can treat a layer as a shelf in a cupboard, an inventory bucket of its own. Then uncover the diagram and check that you can still see two buckets, each labelled with a band, under one coin name. Name the buckets Core and Inner on the example page. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside A layer is a bucket. Cover the notes and say this from memory: By the end you can.",
+   "concept": "Practice: By the end you can treat a layer as a shelf in a cupboard, an inventory bucket of its own.",
+   "image": "course/images/el-03-multi-layer/011.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 11, role demo. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Your turn. Show two separate inventory buckets for two grids, with a warning when the buckets overlap on the same asset; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: By the end you can treat a layer as a shelf in a cupboard, an inventory bucket of its own. Labels, spelled exactly: Practice. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 12,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Core and inner. Cover the notes and say this from memory: In this example a core band is wide and a second band sits inside it. Then uncover the diagram and check that you can still see a wide band and a narrower band inside it, stamped Example. Draw the outer lines first, then the inner lines, and write Example at the top. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Core and inner. Cover the notes and say this from memory: In this example a core band.",
+   "concept": "Practice: In this example a core band is wide and a second band sits inside it.",
+   "image": "course/images/el-03-multi-layer/012.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 12, role demo. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Your turn. Show a price band drawn as two horizontal teal lines labelled Upper and Lower, with the word Range on a small tag; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: In this example a core band is wide and a second band sits inside it. Labels, spelled exactly: Example, Practice. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 13,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Overlap. Cover the notes and say this from memory: That overlap is the risk in the picture. Then uncover the diagram and check that you can still see the shared prices hatched, with one inventory tag on the hatch. Hatch the overlap and write one inventory line beside it. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Overlap. Cover the notes and say this from memory: That overlap is the risk in the.",
+   "concept": "Practice: That overlap is the risk in the picture.",
+   "image": "course/images/el-03-multi-layer/013.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 13, role demo. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: That overlap is the risk in the picture; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: That overlap is the risk in the picture. Labels, spelled exactly: Practice, That. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 14,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Same coin. Cover the notes and say this from memory: The inner band can still fall with the first coin. Then uncover the diagram and check that you can still see one coin falling through both bands together. Write the coin name once, above both bands. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Same coin. Cover the notes and say this from memory: The inner band can still fall.",
+   "concept": "Practice: The inner band can still fall with the first coin.",
+   "image": "course/images/el-03-multi-layer/014.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 14, role demo. A step-by-step illustrated form, generic and unbranded, with one field highlighted in teal. Chapter context: Your turn. Show a price band drawn as two horizontal teal lines labelled Upper and Lower, with the word Range on a small tag; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: The inner band can still fall with the first coin. Labels, spelled exactly: Example, Practice, The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 15,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside No results curve. Cover the notes and say this from memory: No curve of results is drawn. Then uncover the diagram and check that you can still see an empty results box crossed out beside the two bands. If you sketched a rising curve, cross it out. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside No results curve. Cover the notes and say this from memory: No curve of results is.",
+   "concept": "Practice: No curve of results is drawn.",
+   "image": "course/images/el-03-multi-layer/015.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 15, role demo. One large diagram centered on an off-white panel, with thin teal callout lines. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: No curve of results is drawn; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: No curve of results is drawn. Labels, spelled exactly: Practice. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 16,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside A layer is a bucket. Cover the notes and say this from memory: By the end you can treat a layer as a shelf in a cupboard, an inventory bucket of its own. Then uncover the diagram and check that you can still see two buckets, each labelled with a band, under one coin name. Name the buckets Core and Inner on the example page. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside A layer is a bucket. Cover the notes and say this from memory: By the end you can.",
+   "concept": "Practice: By the end you can treat a layer as a shelf in a cupboard, an inventory bucket of its own.",
+   "image": "course/images/el-03-multi-layer/016.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 16, role demo. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Your turn. Show two separate inventory buckets for two grids, with a warning when the buckets overlap on the same asset; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: By the end you can treat a layer as a shelf in a cupboard, an inventory bucket of its own. Labels, spelled exactly: Practice. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 17,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Core and inner. Cover the notes and say this from memory: In this example a core band is wide and a second band sits inside it. Then uncover the diagram and check that you can still see a wide band and a narrower band inside it, stamped Example. Draw the outer lines first, then the inner lines, and write Example at the top. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Core and inner. Cover the notes and say this from memory: In this example a core band.",
+   "concept": "Practice: In this example a core band is wide and a second band sits inside it.",
+   "image": "course/images/el-03-multi-layer/017.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 17, role demo. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Your turn. Show a price band drawn as two horizontal teal lines labelled Upper and Lower, with the word Range on a small tag; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: In this example a core band is wide and a second band sits inside it. Labels, spelled exactly: Example, Practice. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 18,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Overlap. Cover the notes and say this from memory: That overlap is the risk in the picture. Then uncover the diagram and check that you can still see the shared prices hatched, with one inventory tag on the hatch. Hatch the overlap and write one inventory line beside it. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Overlap. Cover the notes and say this from memory: That overlap is the risk in the.",
+   "concept": "Practice: That overlap is the risk in the picture.",
+   "image": "course/images/el-03-multi-layer/018.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 18, role demo. An annotated chart scene: a sideways price path, horizontal levels, and two callouts. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: That overlap is the risk in the picture; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: That overlap is the risk in the picture. Labels, spelled exactly: Practice, That. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 19,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside Same coin. Cover the notes and say this from memory: The inner band can still fall with the first coin. Then uncover the diagram and check that you can still see one coin falling through both bands together. Write the coin name once, above both bands. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside Same coin. Cover the notes and say this from memory: The inner band can still fall.",
+   "concept": "Practice: The inner band can still fall with the first coin.",
+   "image": "course/images/el-03-multi-layer/019.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 19, role demo. A step-by-step illustrated form, generic and unbranded, with one field highlighted in teal. Chapter context: Your turn. Show a price band drawn as two horizontal teal lines labelled Upper and Lower, with the word Range on a small tag; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: The inner band can still fall with the first coin. Labels, spelled exactly: Example, Practice, The. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 20,
+   "chapter": "Your turn",
+   "role": "demo",
+   "vo": "Your turn, still inside No results curve. Cover the notes and say this from memory: No curve of results is drawn. Then uncover the diagram and check that you can still see an empty results box crossed out beside the two bands. If you sketched a rising curve, cross it out. Write one check question a classmate could answer from the drawing alone, and write the answer under it. The answer has to name a shape on the page. An answer about what the market will do is the wrong kind of answer. This is practice on paper. No order is sent.",
+   "cap": "Your turn, still inside No results curve. Cover the notes and say this from memory: No curve of results is.",
+   "concept": "Practice: No curve of results is drawn.",
+   "image": "course/images/el-03-multi-layer/020.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 20, role demo. One large diagram centered on an off-white panel, with thin teal callout lines. Chapter context: Your turn. Show a labelled diagram whose shapes are the nouns in this exact line, not a generic document: Practice: No curve of results is drawn; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Practice: No curve of results is drawn. Labels, spelled exactly: Practice. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 21,
+   "chapter": "Action",
+   "role": "action",
+   "vo": "Your action: draw two bands on one example coin. If they overlap, write one inventory line, not two. No order is sent. No size is filled in. On the diagram for this beat, look for the two bands and the single inventory line. The shapes are the lesson. If a shape is only decoration, it does not belong on this frame. Bring the page to the spacing lesson. Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels. Do not open a second live grid from this page. Say the opening line once more, and point at the part that belongs to Action. If you cannot point yet, do not move on. The point of the beat is the pointing.",
+   "cap": "Your action: draw two bands on one example coin. If they overlap, write one inventory line, not two. No order.",
+   "concept": "Your action: draw two bands on one example coin. If they overlap, write one inventory line, not two.",
+   "image": "course/images/el-03-multi-layer/021.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 21, role action. Two panels side by side: the left panel is the idea done clearly, the right panel is the same idea done wrong and faded. Chapter context: Action. Show a price band drawn as two horizontal teal lines labelled Upper and Lower, with the word Range on a small tag; a pencil completing the matching line on a notebook beside the diagram. The picture must be understandable with the sound off. Teaching line: Your action: draw two bands on one example coin. If they overlap, write one inventory line, not two. Labels, spelled exactly: Your. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  },
+  {
+   "n": 22,
+   "chapter": "Outro",
+   "role": "outro",
+   "vo": "Next lesson: Dynamic spacing when volatility rises. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
+   "cap": "Next lesson: Dynamic spacing when volatility rises. Bring the page you just wrote. Leave every example marked.",
+   "concept": "Next lesson: Dynamic spacing when volatility rises. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
+   "image": "course/images/el-03-multi-layer/022.png",
+   "image_status": "pass",
+   "prompt": "Lesson 'Multi-layer grids as inventory buckets', beat 22, role outro. Three numbered steps across the panel, left to right, each step a simple shape. Chapter context: Outro. Show nineteen even gaps between twenty horizontal lines, the gaps marked, the lines only the edges of the gaps, a small note that counting lines is the miss; a dashed stop line below the band, and a price path that leaves the band and does not return; a quiet next-step card with a single arrow to a blank next title, no price and no button that buys anything. The picture must be understandable with the sound off. Teaching line: Next lesson: Dynamic spacing when volatility rises. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons. Labels, spelled exactly: Next, Dynamic, Bring, Leave. Flat educational vector illustration for a YouTube tutorial, 16:9, 1536x1024. Deep navy background from #050A12 to #0A1628, faint teal grid, crisp teal #2EE6A6 linework, medium blue #3E73B4 fills, off-white rounded panels, dark navy text on the panels. This is the Grid Bot Elite teal palette. Do not recolor the linework to cyan #00D4FF. Calm and technical, like a worksheet, not a poster. The bottom fifth of the frame is empty dark navy so captions can sit there. At most four short English labels, one to three words each, spelled exactly as given. If a chart appears, stamp the word Example on it. No coins, banknotes, profit, P&L, trophies, rockets, brand logos, exchange names, logins, seed phrases, API keys, photoreal faces, or a chart that only goes up. A generic illustrated panel is fine. A real app screenshot is not."
+  }
+ ]
+}

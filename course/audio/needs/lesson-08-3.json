@@ -1,0 +1,275 @@
+{
+ "id": "lesson-08-3",
+ "voice": "af_heart",
+ "wpm": 143,
+ "wav": "course/audio/lesson-08-3.wav",
+ "status": "needed",
+ "notes": "Same Kokoro narrator as the existing On-Chain Operator renders. Do not synthesize until the stills for this id exist.",
+ "beats": [
+  {
+   "n": 1,
+   "role": "hook",
+   "vo": "Last page, Lesson 8.2, The DeFi risk framework. Keep a risk register that scores every position's risks and names the response. Keep that page on the desk. This lesson adds one picture: Read a strategy card: engine, maths, monitor, kill rule, and how it loses."
+  },
+  {
+   "n": 2,
+   "role": "legal",
+   "vo": "Education only, not financial advice. Crypto and DeFi carry significant risk, including total loss of capital. This is general information. It does not consider your objectives, financial situation, or needs. Past or example results do not indicate future results. Consider independent advice. We do not sell or run a trading bot."
+  },
+  {
+   "n": 3,
+   "role": "intro",
+   "vo": "On-Chain Operator. Lesson 8.3, Strategy library. Navy and cyan. One idea at a time. You write it down. Education only."
+  },
+  {
+   "n": 4,
+   "role": "body",
+   "vo": "You can already pull a number off a chain. The operating system is what you do with it: a register, a journal, and a kill rule."
+  },
+  {
+   "n": 5,
+   "role": "body",
+   "vo": "Lesson 8.3 is the map of the strategy library. It is not a list of positions to open."
+  },
+  {
+   "n": 6,
+   "role": "body",
+   "vo": "The library holds thirty cards. Every card uses the same headings: profit engine, key maths, execute, monitor, kill rules, how it loses, and a size cap."
+  },
+  {
+   "n": 7,
+   "role": "body",
+   "vo": "A profit engine is the source of the payment. Borrower interest is one source. Network rewards are another. Trading fees are another. You name the source before you look at a rate."
+  },
+  {
+   "n": 8,
+   "role": "body",
+   "vo": "Key maths is a formula you can recompute on paper. If you cannot recompute it, the card is not yet yours."
+  },
+  {
+   "n": 9,
+   "role": "body",
+   "vo": "Execute is a sequence you could write down. This video does not turn that sequence into clicks."
+  },
+  {
+   "n": 10,
+   "role": "body",
+   "vo": "Monitor is the short list of facts that would tell you the idea has changed. Utilisation, a peg, a queue, a range."
+  },
+  {
+   "n": 11,
+   "role": "body",
+   "vo": "A kill rule is written before any size. It names a path, the same way a stop named a path in the lending lessons."
+  },
+  {
+   "n": 12,
+   "role": "body",
+   "vo": "How it loses is the first picture. Draw the losing path before you draw the tidy one."
+  },
+  {
+   "n": 13,
+   "role": "body",
+   "vo": "The size cap on a card is a teaching ceiling inside the library. This video does not assign you a size. Leave the size line blank."
+  },
+  {
+   "n": 14,
+   "role": "body",
+   "vo": "The library is walked in stages: foundation, liquidity, active, leverage, carry and hedging, operator, professional, and expert. A later card is not a prize for skipping an earlier stage."
+  },
+  {
+   "n": 15,
+   "role": "body",
+   "vo": "Foundation is stablecoin lending and staking. You already met both. The card just forces the engine and the kill rule onto one page."
+  },
+  {
+   "n": 16,
+   "role": "body",
+   "vo": "Liquidity cards are about pools. You already know impermanent loss. The card has to say how the position loses, not only what it might earn."
+  },
+  {
+   "n": 17,
+   "role": "body",
+   "vo": "Leverage cards meet the health factor again. A loop that cannot show its liquidation price is not a finished card."
+  },
+  {
+   "n": 18,
+   "role": "body",
+   "vo": "The line at the bottom of the library is the whole lesson. If you cannot name the profit engine and explain the unwind, you do not have a plan."
+  },
+  {
+   "n": 19,
+   "role": "body",
+   "vo": "Practice on a blank card marked Example. Write borrower interest as the engine. Write utilisation as a monitor. Write a peg that leaves its band as a kill rule. Name no protocol."
+  },
+  {
+   "n": 20,
+   "role": "body",
+   "vo": "A farm whose rate is mostly new tokens fails the first question. Ask what the base pays for, and whether the reward token can be sold. The answer is that question, not a purchase."
+  },
+  {
+   "n": 21,
+   "role": "body",
+   "vo": "Lesson 8.2 scored risks as likelihood times impact. A strategy card that cannot sit on that register is unfinished."
+  },
+  {
+   "n": 22,
+   "role": "body",
+   "vo": "Lesson 8.4 is the playbook: deploy, monitor, respond, review. The card is the input to that playbook."
+  },
+  {
+   "n": 23,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: Every heading on the card is filled or marked blank on purpose. If you cannot write it, the line is open."
+  },
+  {
+   "n": 24,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: The kill rule names a path. If you cannot write it, the line is open."
+  },
+  {
+   "n": 25,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: The size line is still blank. If you cannot write it, the line is open."
+  },
+  {
+   "n": 26,
+   "role": "demo",
+   "vo": "On the checklist, this line has to be true in writing: The card can sit on the risk register from Lesson 8.2. If you cannot write it, the line is open."
+  },
+  {
+   "n": 27,
+   "role": "quiz",
+   "vo": "Check yourself. What is the first question when a farm's rate is mostly new tokens? The answer: What the base pays for, and whether the reward token can be sold. The answer is that question, not a purchase."
+  },
+  {
+   "n": 28,
+   "role": "quiz",
+   "vo": "Check yourself. What does the library's last line require? The answer: You can name the profit engine and explain the unwind. Otherwise you do not have a plan."
+  },
+  {
+   "n": 29,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Lesson 8.3 is the map of the strategy library. It is not a list of positions to open. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 30,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The library holds thirty cards. Every card uses the same headings: profit engine, key maths, execute, monitor, kill rules, how it loses, and a size cap. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 31,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. A profit engine is the source of the payment. Borrower interest is one source. Network rewards are another. Trading fees are another. You name the source before you look at a rate. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 32,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Key maths is a formula you can recompute on paper. If you cannot recompute it, the card is not yet yours. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 33,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Execute is a sequence you could write down. This video does not turn that sequence into clicks. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 34,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Monitor is the short list of facts that would tell you the idea has changed. Utilisation, a peg, a queue, a range. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 35,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. A kill rule is written before any size. It names a path, the same way a stop named a path in the lending lessons. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 36,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. How it loses is the first picture. Draw the losing path before you draw the tidy one. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 37,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The size cap on a card is a teaching ceiling inside the library. This video does not assign you a size. Leave the size line blank. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 38,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The library is walked in stages: foundation, liquidity, active, leverage, carry and hedging, operator, professional, and expert. A later card is not a prize for skipping an earlier stage. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 39,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Foundation is stablecoin lending and staking. You already met both. The card just forces the engine and the kill rule onto one page. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 40,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Liquidity cards are about pools. You already know impermanent loss. The card has to say how the position loses, not only what it might earn. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 41,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Leverage cards meet the health factor again. A loop that cannot show its liquidation price is not a finished card. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 42,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The line at the bottom of the library is the whole lesson. If you cannot name the profit engine and explain the unwind, you do not have a plan. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 43,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Practice on a blank card marked Example. Write borrower interest as the engine. Write utilisation as a monitor. Write a peg that leaves its band as a kill rule. Name no protocol. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 44,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. A farm whose rate is mostly new tokens fails the first question. Ask what the base pays for, and whether the reward token can be sold. The answer is that question, not a purchase. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 45,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Lesson 8.2 scored risks as likelihood times impact. A strategy card that cannot sit on that register is unfinished. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 46,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Lesson 8.4 is the playbook: deploy, monitor, respond, review. The card is the input to that playbook. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 47,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Read a strategy card: engine, maths, monitor, kill rule, and how it loses. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 48,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. Every heading on the card is filled or marked blank on purpose. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 49,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The kill rule names a path. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 50,
+   "role": "demo",
+   "vo": "Practice round 1, still on the same lesson. Take this line slowly. The size line is still blank. It sits in Strategy library. Copy it under that heading. If a number is in the line, write Example next to it. Read it back from the page, not from memory, the first time. Education only. No order is sent."
+  },
+  {
+   "n": 51,
+   "role": "recap",
+   "vo": "Three lines to keep. Lesson 8.3 is the map of the strategy library. It is not a list of positions to open. The library holds thirty cards. Every card uses the same headings: profit engine, key maths, execute, monitor, kill rules, how it loses, and a size cap. Next is Lesson 8.4, The operating playbook: deploy, monitor, respond, review. You should be able to say these lines without the page, then check."
+  },
+  {
+   "n": 52,
+   "role": "action",
+   "vo": "Your action for Strategy library: open the notebook and copy today's three lines. Work one example and stamp it Example. Leave size blank unless you are only rehearsing a number you already marked as an example. Stop before any signature, any seed phrase, and any live ticket. Bring the page to Lesson 8.4, The operating playbook: deploy, monitor, respond, review."
+  },
+  {
+   "n": 53,
+   "role": "outro",
+   "vo": "Next is Lesson 8.4, The operating playbook: deploy, monitor, respond, review. The first line there assumes you can say today's recap. Education only, not financial advice."
+  }
+ ]
+}
