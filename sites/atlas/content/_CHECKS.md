@@ -73,3 +73,17 @@ glossary.json rows: 435
 --- problems ---
 PASS: no problems
 ```
+
+## Batch 4 — exchanges, security, fundamentals, Solana, questions — 2026-11-10
+
+AUSTRAC link used is the public Virtual Asset Service Provider Register (`online.apps.austrac.gov.au/vaspr`), which is the 2026 name for what had been discussed as the digital-currency-exchange register. Scamwatch and ReportCyber links are the official ones. Solana primer is about 150 words. Find-by-question has 62 question entries.
+
+```
+crypto-fundamentals.md: 1093 words
+exchanges.md: 1100 words
+find-by-question.md: 2756 words
+security.md: 1109 words
+solana-primer.md: 152 words
+--- problems ---
+PASS: no problems
+```
