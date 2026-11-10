@@ -60,3 +60,16 @@ glossary.json rows: 435
 --- problems ---
 PASS: no problems
 ```
+
+## Batch 3 — market structure, technical analysis, risk — 2026-11-10
+
+Formulas checked against the usual definitions: Wilder RSI, MACD as EMA(12) minus EMA(26) with a 9-period signal, population standard deviation for Bollinger Bands, true range and Wilder ATR, VWAP as price times volume over volume, expectancy as win fraction times average win minus loss fraction times average loss, and drawdown recovery as 1/(1-d)-1. Worked numbers are marked Hypothetical example.
+
+```
+market-structure.md: 1650 words
+technical-analysis.md: 2338 words
+risk-academy.md: 1732 words
+glossary.json rows: 435
+--- problems ---
+PASS: no problems
+```
