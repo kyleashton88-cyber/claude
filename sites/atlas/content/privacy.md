@@ -17,7 +17,7 @@ DRAFT — legal wording needs Stewart's sign-off; entity name to be confirmed by
 
 **Effective date:** [EFFECTIVE_DATE]
 
-This notice explains how **Market Pros Pty Ltd** (entity name to be confirmed by Stewart) handles personal information on the Atlas education site. It is written for readers, not as a substitute for legal advice to the company. ABN: [ABN]. Privacy contact: [PRIVACY_CONTACT]. General contact: [CONTACT_EMAIL].
+This notice explains how **Market Pros Pty Ltd** (entity name to be confirmed by Stewart) handles personal information on the Atlas education site. It is written for readers, not as a substitute for legal advice to the company. ABN: [ABN]. Privacy contact: [PRIVACY_CONTACT]. General contact: [CONTACT_EMAIL: contact@stewartcrowncrypto.com, pending Stewart's confirmation].
 
 ## The law we write to
 
@@ -35,7 +35,7 @@ Atlas is a reading library. The current build does not ask you to open a trading
 
 What may be collected, once Stewart confirms the live tools:
 
-- **Messages you send.** If you email [CONTACT_EMAIL] or [PRIVACY_CONTACT], we receive the address you write from, what you write, and any attachment you include. We use that to reply and to keep a record of the request.
+- **Messages you send.** If you email [CONTACT_EMAIL: contact@stewartcrowncrypto.com, pending Stewart's confirmation] or [PRIVACY_CONTACT], we receive the address you write from, what you write, and any attachment you include. We use that to reply and to keep a record of the request.
 - **Checklist requests.** If you ask for The Grid Bot Starter Checklist, we collect the details you submit so we can send the file. The public address of the checklist is [CHECKLIST LINK] until Stewart replaces it. The checklist is a learning document. Requesting it is not an application for advice.
 - **Technical logs.** A host typically logs an IP address, browser type, and the page requested, so the site can run and so abuse can be investigated. Stewart must name the host before publication. This draft does not invent a vendor.
 - **On-device progress.** Some lessons store a quiz score or a checklist tick in your browser’s local storage. That stays on your device unless a later version clearly says it is sent to a server. You can clear it in your browser.

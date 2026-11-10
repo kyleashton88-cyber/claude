@@ -21,3 +21,25 @@ PASS: no problems
 ```
 
 Word counts are body words after front matter. Footer line is one public sentence plus the required draft banner and the four placeholders.
+
+## Batch 1b — support email placeholder — 2026-11-10
+
+`[CONTACT_EMAIL]` is now `[CONTACT_EMAIL: contact@stewartcrowncrypto.com, pending Stewart's confirmation]` in terms, privacy, disclaimer, and the footer line. Stewart has not confirmed the address.
+
+```
+Root: /agent/repos/claude/sites/atlas/content
+Files: 5
+  - _CHECKS.md (876 bytes)
+  - disclaimer.md (3344 bytes)
+  - footer-line.md (531 bytes)
+  - privacy.md (6599 bytes)
+  - terms.md (5863 bytes)
+--- notes ---
+_CHECKS.md: 115 words
+disclaimer.md: 511 words
+footer-line.md: 46 words
+privacy.md: 1061 words
+terms.md: 932 words
+--- problems ---
+PASS: no problems
+```

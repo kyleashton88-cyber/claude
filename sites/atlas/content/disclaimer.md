@@ -17,7 +17,7 @@ DRAFT — legal wording needs Stewart's sign-off; entity name to be confirmed by
 
 **Effective date:** [EFFECTIVE_DATE]
 
-Atlas is an education library published by **Market Pros Pty Ltd** (entity name to be confirmed by Stewart). ABN: [ABN]. Contact: [CONTACT_EMAIL]. Privacy contact: [PRIVACY_CONTACT].
+Atlas is an education library published by **Market Pros Pty Ltd** (entity name to be confirmed by Stewart). ABN: [ABN]. Contact: [CONTACT_EMAIL: contact@stewartcrowncrypto.com, pending Stewart's confirmation]. Privacy contact: [PRIVACY_CONTACT].
 
 ## General information only
 
@@ -57,4 +57,4 @@ Nothing in this disclaimer excludes a right or guarantee under the Australian Co
 
 ## Contact
 
-Questions about this disclaimer: [CONTACT_EMAIL].
+Questions about this disclaimer: [CONTACT_EMAIL: contact@stewartcrowncrypto.com, pending Stewart's confirmation].

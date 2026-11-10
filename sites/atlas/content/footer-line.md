@@ -13,4 +13,4 @@ status: draft
 
 DRAFT — legal wording needs Stewart's sign-off; entity name to be confirmed by Stewart.
 
-General information only, published by Market Pros Pty Ltd ([ABN]). Not personal financial advice. Consider your own circumstances. Contact [CONTACT_EMAIL]. Privacy [PRIVACY_CONTACT]. Effective [EFFECTIVE_DATE].
+General information only, published by Market Pros Pty Ltd ([ABN]). Not personal financial advice. Consider your own circumstances. Contact [CONTACT_EMAIL: contact@stewartcrowncrypto.com, pending Stewart's confirmation]. Privacy [PRIVACY_CONTACT]. Effective [EFFECTIVE_DATE].

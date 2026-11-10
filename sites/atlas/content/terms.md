@@ -24,7 +24,7 @@ These terms cover the Atlas education site (“Atlas”, “the site”). They a
 The site is operated by **Market Pros Pty Ltd** (the entity name is still to be confirmed by Stewart).
 
 - ABN: [ABN]
-- General contact: [CONTACT_EMAIL]
+- General contact: [CONTACT_EMAIL: contact@stewartcrowncrypto.com, pending Stewart's confirmation]
 - Privacy contact: [PRIVACY_CONTACT]
 
 Until those placeholders are replaced, do not treat this page as ready to publish.
@@ -96,4 +96,4 @@ These terms are governed by the laws of Australia. Courts of Australia have juri
 
 ## Contact
 
-Questions about these terms: [CONTACT_EMAIL]. Privacy questions: [PRIVACY_CONTACT]. Please include the page address and the date you read it.
+Questions about these terms: [CONTACT_EMAIL: contact@stewartcrowncrypto.com, pending Stewart's confirmation]. Privacy questions: [PRIVACY_CONTACT]. Please include the page address and the date you read it.
