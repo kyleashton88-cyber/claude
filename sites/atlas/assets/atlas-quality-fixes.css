@@ -1,0 +1,8 @@
+/* The original atlas-quality-fixes.css was not in the upload.
+   This file loads after each page's own styles, so it only carries
+   fixes that have to win against those styles. */
+
+@media (max-width: 800px) {
+  #defiQuiz { grid-template-columns: minmax(0, 1fr) !important; }
+  #defiQuiz .quiz-card { min-width: 0; }
+}

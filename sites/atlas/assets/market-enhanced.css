@@ -1,0 +1,145 @@
+.market-shell {
+  width: min(1480px, calc(100% - 28px));
+  margin: 0 auto;
+  padding-bottom: 28px;
+}
+
+.market-hero,
+.market-integrated {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.market-hero { padding: 22px 0 8px; }
+
+.market-hero h1 {
+  font-family: "Space Grotesk", Inter, sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 0.95;
+  margin: 8px 0;
+}
+
+.market-crumb,
+.market-hero p,
+.chart-lib-note,
+.market-footer { color: #8eabc2; }
+
+.market-price-panel,
+.market-panel,
+.market-stat {
+  border: 1px solid #184568;
+  border-radius: 14px;
+  background: #071422;
+  padding: 14px;
+}
+
+.market-price {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 650;
+}
+
+.market-change { font-weight: 750; }
+
+.market-change.up { color: #55e7c1; }
+
+.market-change.down { color: #ff7180; }
+
+.market-live-status { color: #9fd8f5; font-size: 0.82rem; margin-top: 6px; }
+
+.market-workbench { margin-top: 8px; }
+
+.market-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.market-control {
+  min-height: 40px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #214965;
+  background: #071827;
+  color: #e7f4ff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.market-control.active,
+.market-control[aria-pressed="true"] {
+  border-color: #43cfff;
+  background: #0c314c;
+}
+
+.chart-stage { position: relative; }
+
+.chart-main,
+.rsi-chart {
+  width: 100%;
+  border: 1px solid #184568;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #071422;
+}
+
+.chart-main { height: 460px; }
+
+.rsi-wrap { display: none; margin-top: 8px; }
+
+.rsi-wrap.is-on { display: block; }
+
+.rsi-chart { height: 140px; }
+
+.chart-tooltip {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #d7ecf8;
+  font: 600 0.75rem/1.4 "IBM Plex Mono", ui-monospace, monospace;
+  pointer-events: none;
+}
+
+.market-stats {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.market-stat span { display: block; color: #8eabc2; font-size: 0.75rem; }
+
+.market-stat b { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+
+.market-edu-links { display: grid; gap: 8px; }
+
+.market-edu-links a { color: #9fd8f5; }
+
+.event-list { display: grid; gap: 8px; }
+
+.event-list a,
+.event-list p { color: #c5d9e8; }
+
+@media (max-width: 980px) {
+  .market-hero,
+  .market-integrated,
+  .market-stats { grid-template-columns: 1fr 1fr; }
+
+  .chart-main { height: 320px; }
+}
+
+@media (max-width: 640px) {
+  .market-shell { width: min(1480px, calc(100% - 20px)); }
+
+  .market-hero,
+  .market-integrated,
+  .market-stats { grid-template-columns: 1fr; }
+
+  .market-hero h1 { font-size: 2.2rem; }
+
+  .chart-main { height: 260px; }
+}

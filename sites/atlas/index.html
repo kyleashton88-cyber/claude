@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<title>ATLAS — The Universal Trading Library</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<meta content="ATLAS — The Universal Trading Library. Structured trading education, interactive tools, real market examples and specialist learning modules." name="description"/>
+<style>
+:root{--bg:#020713;--panel:#071425;--panel2:#091a2b;--line:#163b5c;--line2:#235f8f;--text:#edf8ff;--muted:#94afc7;--blue:#1499ff;--cyan:#52e4ff;--green:#57efb1;--amber:#f5bf5d;--shadow:0 20px 60px rgba(0,97,210,.22);--max:1536px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 55% -10%,#0b3250 0,#020713 34%,#01040b 100%);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(var(--max),100%);margin:auto;padding:0 34px}.sitebar{position:sticky;top:0;z-index:100;background:rgba(1,7,18,.9);border-bottom:1px solid rgba(64,180,255,.18);backdrop-filter:blur(18px)}.nav{height:72px;display:flex;align-items:center;gap:28px}.brand{display:flex;align-items:center;gap:13px;min-width:218px}.brandmark{font-weight:1000;font-size:2rem;letter-spacing:.18em;line-height:.8;background:linear-gradient(180deg,#fff,#94c9e9 58%,#2b8fcd);-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 0 12px rgba(42,157,255,.25))}.brand small{display:block;font-size:.54rem;letter-spacing:.18em;color:#8fc9ec;margin-top:7px}.navlinks{margin-left:auto;display:flex;align-items:center;gap:6px}.navlink{padding:10px 13px;border-radius:10px;color:#c8deee;font-size:.91rem;transition:.16s}.navlink:hover,.navlink:focus-visible,.navlink.active{background:#0a1d30;color:#fff;box-shadow:inset 0 -2px 0 #18a7ff}.searchbtn,.themetoggle{width:42px;height:42px;border:1px solid #1a4568;border-radius:12px;background:#061321;color:#dff5ff;cursor:pointer}.start{padding:12px 18px;border-radius:11px;background:linear-gradient(135deg,#0a7cff,#18c9ef);font-weight:900;box-shadow:0 10px 28px rgba(0,133,255,.28)}.menu{display:none;margin-left:auto}.hero{position:relative;overflow:hidden;border-bottom:1px solid rgba(64,180,255,.16)}.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(1,7,18,.96) 0%,rgba(1,7,18,.83) 38%,rgba(1,7,18,.18) 66%,rgba(1,7,18,.43) 100%),radial-gradient(circle at 72% 39%,rgba(0,226,255,.13),transparent 36%);z-index:1}.hero-bg{position:absolute;inset:0;background:radial-gradient(circle at 77% 30%,rgba(23,175,255,.19),transparent 28%),radial-gradient(circle at 63% 86%,rgba(12,91,159,.23),transparent 30%),linear-gradient(180deg,#061526 0%,#020713 68%,#01040a 100%);overflow:hidden}.hero-bg:before{content:"";position:absolute;inset:0;background:linear-gradient(155deg,transparent 0 45%,rgba(48,132,196,.08) 45.3% 46%,transparent 46.3%),linear-gradient(25deg,transparent 0 67%,rgba(56,128,180,.07) 67.3% 68%,transparent 68.3%);opacity:.75}.hero-bg:after{content:"";position:absolute;left:-5%;right:-5%;bottom:-1%;height:36%;background:linear-gradient(165deg,transparent 0 36%,#071426 36.4% 46%,transparent 46.4%),linear-gradient(18deg,transparent 0 44%,#09182a 44.4% 55%,transparent 55.4%);filter:drop-shadow(0 -10px 30px rgba(23,130,220,.08));opacity:.9}.hero-grid{position:relative;z-index:3;display:grid;grid-template-columns:1.04fr .96fr;min-height:575px;align-items:center;gap:20px;padding:42px 34px 34px}.hero-copy{max-width:690px}.pill{display:inline-flex;border:1px solid #21699e;border-radius:999px;padding:7px 12px;font-size:.73rem;font-weight:900;letter-spacing:.11em;color:#bceaff;background:rgba(4,23,41,.72)}.hero h1{font-size:clamp(4.8rem,8vw,8.7rem);line-height:.83;margin:18px 0 9px;letter-spacing:.03em;background:linear-gradient(180deg,#fff 5%,#d8e4ed 48%,#7890a4 100%);-webkit-background-clip:text;color:transparent;text-shadow:0 0 28px rgba(38,157,255,.12)}.hero .sub{font-size:clamp(1rem,1.9vw,1.46rem);letter-spacing:.25em;text-transform:uppercase;color:#d6edfb;font-weight:800}.hero h2{font-size:clamp(1.7rem,3vw,2.8rem);line-height:1.08;margin:22px 0 11px}.hero p{color:#bdd0df;font-size:1.05rem;max-width:660px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 22px;border-radius:12px;border:1px solid #2678b6;background:#061425;color:#fff;font-weight:900;transition:.18s;cursor:pointer}.btn.primary{border-color:transparent;background:linear-gradient(135deg,#087cff,#16c8ef);box-shadow:0 12px 32px rgba(0,129,255,.25)}.btn:hover,.card:hover,.quick a:hover,.feature:hover{transform:translateY(-2px);filter:brightness(1.07)}.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}.quick a{padding:12px 10px;border:1px solid transparent;border-radius:13px;transition:.16s}.quick a:hover{background:rgba(6,26,45,.72);border-color:#1b567d}.quick b{display:block;color:#fff}.quick span{font-size:.78rem;color:#94afc7}.hero-art{position:relative;height:100%;min-height:500px}.globe{position:absolute;inset:0 -2% 0 1%;background:radial-gradient(circle at 50% 42%, rgba(82,228,255,.45), rgba(20,90,150,.12) 28%, transparent 46%) center/cover no-repeat;filter:drop-shadow(0 18px 44px rgba(0,236,255,.24));animation:float 7s ease-in-out infinite}.candles{display:none}.candle{position:absolute;width:3px;background:#54e9d9;box-shadow:0 0 10px currentColor;animation:pulse 3s ease-in-out infinite}.candle.red{background:#ff6d79}.candle::before,.candle::after{content:"";position:absolute;left:1px;width:1px;background:currentColor;opacity:.8}.candle::before{bottom:100%;height:12px}.candle::after{top:100%;height:12px}@keyframes float{50%{transform:translateY(-8px)}}@keyframes pulse{50%{opacity:.62;filter:brightness(1.25)}}
+.benefits{background:#05111e;border-bottom:1px solid #123755}.benefit-grid{display:grid;grid-template-columns:repeat(5,1fr);min-height:60px;align-items:center}.benefit{display:flex;gap:10px;justify-content:center;align-items:center;padding:13px;border-right:1px solid #153a58;font-size:.76rem;font-weight:900;letter-spacing:.08em;color:#9fd9f5}.benefit:last-child{border-right:0}.marketbar{background:#061422;border-bottom:1px solid #153a58}.markets{display:grid;grid-template-columns:130px repeat(4,1fr) 150px;gap:10px;align-items:center;padding:10px 34px}.market-head{font-size:.74rem;font-weight:900;letter-spacing:.09em;color:#c7efff}.market-head small{display:block;font-size:.58rem;color:#54bff7}.dot{display:inline-block;width:8px;height:8px;background:#50efb3;border-radius:50%;box-shadow:0 0 12px #50efb3;margin-right:6px}.market{border:1px solid #164261;background:#071827;border-radius:10px;padding:9px 12px;display:flex;gap:7px;align-items:baseline;min-width:0}.market b{font-size:.78rem}.market .price{font-size:.78rem;font-weight:900}.market .change{font-size:.73rem;font-weight:900;color:#54efb1;margin-left:auto}.market .change.down{color:#ff7885}.viewmarkets{font-size:.78rem;text-align:center;border:1px solid #2783bf;border-radius:10px;padding:10px;font-weight:800}
+.section{padding:62px 34px 0}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:18px}.kicker{font-size:.74rem;letter-spacing:.19em;color:#61d9ff;text-transform:uppercase;font-weight:900}.section h2{font-size:clamp(2.1rem,4vw,3.65rem);line-height:1.05;margin:5px 0 0}.sectionhead p{max-width:670px;color:#91abc2}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{position:relative;min-height:330px;border:1px solid #184568;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#08192b,#05111e);padding:22px;transition:.2s}.card.live{border-color:#15a7ff;box-shadow:0 0 0 1px rgba(19,175,255,.28),0 0 28px rgba(0,132,255,.25)}.card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 40%,rgba(13,165,255,.12),transparent 38%);pointer-events:none}.card>*{position:relative}.num{font-size:.72rem;letter-spacing:.17em;color:#74d0ff;font-weight:900}.status{display:inline-block;margin-left:8px;border-radius:999px;padding:4px 9px;font-size:.65rem;font-weight:900;background:#0a3e34;color:#79f1c0}.status.soon{background:#382b12;color:#ffd06f}.card h3{font-size:1.5rem;margin:10px 0 2px}.meta{color:#5fdff0}.card p{color:#9eb6cb}.module-art{height:125px;margin:14px -2px 4px;border-radius:13px;position:relative;overflow:hidden;background:linear-gradient(145deg,#061322,#0a2740)}.module-art.candles::after{content:"";position:absolute;inset:18px;background:repeating-linear-gradient(90deg,transparent 0 18px,rgba(35,92,126,.17) 18px 19px),repeating-linear-gradient(0deg,transparent 0 24px,rgba(35,92,126,.15) 24px 25px)}.module-art.robot{background:radial-gradient(circle at 50% 45%,rgba(0,179,255,.28),transparent 35%),linear-gradient(145deg,#061322,#0a2740)}.robotface{position:absolute;width:70px;height:48px;border:2px solid #73dfff;border-radius:22px;left:50%;top:42%;transform:translate(-50%,-50%);box-shadow:0 0 24px rgba(0,190,255,.35)}.robotface::before,.robotface::after{content:"";position:absolute;top:14px;width:10px;height:10px;border-radius:50%;background:#49e7ff;box-shadow:0 0 14px #49e7ff}.robotface::before{left:17px}.robotface::after{right:17px}.card .btn{margin-top:8px;min-height:44px;padding:10px 16px}.cardfacts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:13px;color:#a7c1d6;font-size:.78rem}.how{padding:58px 34px 0}.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{border:1px solid #163c5b;background:#071625;border-radius:16px;padding:18px;min-height:150px;transition:.16s}.step:hover{border-color:#209fe8;transform:translateY(-2px)}.stepnum{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#0b3155;border:1px solid #208bd1;color:#80ddff;font-weight:900}.step h3{margin:12px 0 5px}.step p{margin:0;color:#93adc3;font-size:.85rem}.shortcuts{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:16px}.feature{border:1px solid #163b59;border-radius:15px;padding:17px;background:#071422;transition:.16s}.feature b{display:block}.feature span{font-size:.8rem;color:#91abc2}.journey{margin:28px 34px 0;border:1px solid #1a537a;border-radius:16px;padding:24px;display:flex;justify-content:center;align-items:center;gap:28px;background:linear-gradient(90deg,rgba(3,13,24,.88),rgba(4,25,42,.74))}.journey h3{font-size:1.45rem;margin:0}.journey p{margin:4px 0 0;color:#a6bfd3}.footer{margin-top:24px;border-top:1px solid #153855;padding:30px 34px 34px;display:flex;align-items:center;justify-content:space-between;gap:22px;color:#86a4bd;font-size:.82rem}.footer .brand{min-width:auto}.footer nav{display:flex;gap:18px;flex-wrap:wrap}.footer a:hover{color:#fff}.tour{position:fixed;inset:0;z-index:300;background:rgba(0,4,12,.88);display:none;place-items:center;padding:20px}.tour.open{display:grid}.tourcard{width:min(700px,100%);background:#061525;border:1px solid #2479ad;border-radius:18px;padding:26px;box-shadow:0 30px 90px #000c}.tourcard h2{font-size:2.2rem;margin:0 0 8px}.tourcard p{color:#a8c0d4}.touractions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+@media(max-width:1050px){.navlinks{display:none}.menu{display:block}.hero-grid{grid-template-columns:1fr;min-height:auto}.hero-art{min-height:430px}.grid3{grid-template-columns:1fr}.markets{grid-template-columns:120px repeat(2,1fr);}.viewmarkets{grid-column:2/4}.benefit-grid{grid-template-columns:repeat(2,1fr)}.benefit{border-bottom:1px solid #153a58}.steps,.shortcuts{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.wrap{padding:0 14px}.nav{height:62px}.brand{min-width:auto}.brandmark{font-size:1.55rem}.hero-grid,.section,.how,.footer{padding-left:14px;padding-right:14px}.hero h1{font-size:4.4rem}.quick{grid-template-columns:repeat(2,1fr)}.hero-art{min-height:330px}.benefit-grid{grid-template-columns:1fr}.markets{grid-template-columns:1fr 1fr;padding:10px 14px}.market-head{grid-column:1/3}.viewmarkets{grid-column:1/3}.steps,.shortcuts{grid-template-columns:1fr}.journey{margin-left:14px;margin-right:14px;flex-direction:column;text-align:center}.footer{flex-direction:column;align-items:flex-start}.sectionhead{display:block}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* v2 market snapshot refinement */
+.market-snapshot{padding-top:30px;padding-bottom:12px}
+.snapshot-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:12px}
+.snapshot-head h2{font-size:clamp(1.45rem,2.4vw,2.15rem);margin:3px 0 4px}
+.snapshot-head p{margin:0;color:#8faac0;font-size:.88rem;max-width:780px}
+.snapshot-status{display:flex;align-items:center;gap:8px;color:#91d7ef;font-size:.72rem;font-weight:800;white-space:nowrap}
+.snapshot-status i{width:8px;height:8px;border-radius:50%;background:#55efb1;box-shadow:0 0 12px #55efb1}
+.market-grid-live{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.market-live-card{display:block;background:linear-gradient(180deg,#071826,#05111d);border:1px solid #153f5f;border-radius:12px;padding:10px 11px 8px;min-height:168px;transition:.18s ease;overflow:hidden}
+.market-live-card:hover,.market-live-card:focus-visible{transform:translateY(-2px);border-color:#1d94d7;box-shadow:0 10px 26px rgba(0,100,190,.18);outline:none}
+.market-live-top{display:grid;grid-template-columns:1fr auto;grid-template-areas:"pair change" "price change";align-items:end;gap:1px 8px;margin-bottom:5px}
+.market-live-top b{grid-area:pair;font-size:.71rem;letter-spacing:.03em;color:#cce7f7}
+.market-live-top .livep{grid-area:price;font-size:.88rem;font-weight:900;color:#fff}
+.market-live-top .livec{grid-area:change;font-size:.73rem;font-weight:900;color:#55efb1;align-self:center}
+.market-live-top .livec.down{color:#ff7784}
+canvas.spark{display:block;width:100%;height:92px;border-radius:7px;background:linear-gradient(180deg,rgba(9,29,48,.65),rgba(4,15,27,.82))}
+.live-note{display:flex;justify-content:space-between;gap:6px;margin-top:6px;color:#6f96b2;font-size:.59rem}
+.market-live-card.fallback{border-style:dashed}
+.hero-art{min-height:485px}
+.globe{inset:0 -1% -1% 0;filter:drop-shadow(0 18px 48px rgba(0,220,255,.28));animation:float 7s ease-in-out infinite}
+@media(max-width:1050px){.market-grid-live{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-art{min-height:410px}.globe{background-size:min(96%,700px)}}
+@media(max-width:680px){.snapshot-head{display:block}.snapshot-status{margin-top:8px}.market-grid-live{grid-template-columns:1fr 1fr;gap:8px}.market-live-card{min-height:150px;padding:8px}.spark{height:80px!important}.hero-art{min-height:320px}}
+@media(max-width:460px){.market-grid-live{grid-template-columns:1fr}.market-live-card{min-height:145px}.spark{height:78px!important}}
+
+
+/* Cryptocurrency identity — homepage ticker pairs */
+.pair-label{display:inline-flex;align-items:center;gap:7px;min-width:0}
+.coin-logo{width:22px;height:22px;flex:0 0 22px;display:inline-block;vertical-align:middle;filter:drop-shadow(0 0 7px rgba(50,185,255,.16))}
+.market .pair-label{grid-column:1 / -1}
+.market-live-top .pair-label{grid-area:pair;font-size:.71rem;font-weight:800;letter-spacing:.03em;color:#cce7f7}
+.market-live-top .pair-label .coin-logo{width:25px;height:25px;flex-basis:25px}
+@media(max-width:680px){.coin-logo{width:20px;height:20px;flex-basis:20px}.market-live-top .pair-label .coin-logo{width:22px;height:22px;flex-basis:22px}}
+
+
+/* ===== ATLAS HOMEPAGE TYPOGRAPHY REFINEMENT v4 ===== */
+:root{--font-display:"Space Grotesk",Inter,Segoe UI,Arial,sans-serif;--font-body:Inter,Segoe UI,Arial,sans-serif;--font-data:"IBM Plex Mono",ui-monospace,SFMono-Regular,Consolas,monospace;--s1:8px;--s2:12px;--s3:16px;--s4:24px;--s5:32px;--s6:48px;--s7:64px}
+body{font-family:var(--font-body);line-height:1.58;letter-spacing:-.004em}
+.hero h1,.section h2,.card h3,.how h2,.journey h2,.footer-brand,.brandmark{font-family:var(--font-display)}
+.navlink,.start,.btn,.viewmarkets,.quick b,.benefit,.cardfacts,.step,.shortcut,.footer a{font-family:var(--font-body)}
+.market .price,.market .change,.market-live-top .livep,.market-live-top .livec,.live-note{font-family:var(--font-data);font-variant-numeric:tabular-nums slashed-zero}
+.brandmark{letter-spacing:.12em}.brand small{letter-spacing:.13em}
+.nav{gap:20px}.navlinks{gap:4px}.navlink{font-size:.86rem;font-weight:650;letter-spacing:-.012em;padding:10px 12px}.start{font-size:.87rem;font-weight:700;letter-spacing:-.012em}
+.hero h1{font-size:clamp(4.25rem,7vw,7.55rem);line-height:.86;letter-spacing:-.035em;margin:20px 0 12px}
+.hero .sub{font-family:var(--font-body);font-size:clamp(.92rem,1.6vw,1.28rem);letter-spacing:.18em;font-weight:700}
+.hero h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.72rem);letter-spacing:-.03em;line-height:1.08;margin:26px 0 12px;font-weight:650}
+.hero p{font-size:1rem;line-height:1.68}.pill{font-family:var(--font-body);font-size:.68rem;letter-spacing:.09em;font-weight:700}
+.actions{margin:24px 0 20px}.btn{font-size:.88rem;font-weight:700;letter-spacing:-.01em}
+.quick{gap:12px;margin-top:18px}.quick a{padding:13px 11px}.quick b{font-size:.88rem;font-weight:700}.quick span{font-size:.74rem;line-height:1.35}
+.benefit{font-size:.69rem;font-weight:700;letter-spacing:.065em}
+.market-head{font-family:var(--font-body);font-size:.69rem;font-weight:750;letter-spacing:.07em}.market-head small{font-family:var(--font-data);letter-spacing:0}
+.market b{font-size:.72rem}.market .price{font-size:.79rem;font-weight:600;letter-spacing:-.04em}.market .change{font-size:.7rem;font-weight:600;letter-spacing:-.04em}
+.section{padding-top:64px}.sectionhead{margin-bottom:24px}.kicker{font-family:var(--font-body);font-size:.68rem;letter-spacing:.14em;font-weight:750}.section h2{font-size:clamp(2rem,3.6vw,3.35rem);letter-spacing:-.035em;font-weight:650}
+.sectionhead p{line-height:1.58}.grid3{gap:20px}.card{padding:24px}.num{font-family:var(--font-body);font-size:.67rem;letter-spacing:.12em;font-weight:750}.status{font-family:var(--font-body);font-size:.62rem;letter-spacing:.035em;font-weight:750}.card h3{font-size:1.48rem;line-height:1.12;letter-spacing:-.025em;font-weight:650;margin:10px 0 4px}.meta{font-family:var(--font-body);font-size:.78rem;font-weight:650;letter-spacing:-.005em}.card p{font-size:.91rem;line-height:1.58}.cardfacts{font-size:.73rem;line-height:1.4}
+.how{padding-top:56px}.how h2{font-size:clamp(1.9rem,3.5vw,3rem);letter-spacing:-.03em}.steps{gap:16px}.step{padding:18px}.step b{font-family:var(--font-display);font-size:1rem;letter-spacing:-.015em}.step p{font-size:.78rem;line-height:1.5}
+.snapshot-head h2{font-family:var(--font-display);letter-spacing:-.03em;font-weight:650}.market-live-top .pair-label{font-family:var(--font-body);font-weight:700}.market-live-top .livep{font-size:.94rem;font-weight:600;letter-spacing:-.035em}.market-live-top .livec{font-weight:600;letter-spacing:-.03em}.live-note{font-size:.56rem;letter-spacing:-.01em}
+.journey h2{letter-spacing:-.025em}.footer-brand{letter-spacing:-.015em}
+@media(max-width:760px){.hero h1{font-size:4.1rem}.hero .sub{letter-spacing:.12em}.section{padding-top:48px}}
+
+
+.tour-progress{display:flex;gap:6px;margin:10px 0 18px}.tour-progress i{width:28px;height:4px;border-radius:999px;background:#163d5c}.tour-progress i.active{background:#48d6ff;box-shadow:0 0 12px #179dff66}.tour-step{min-height:150px}.tour-step h3{font-family:var(--font-display);font-size:1.45rem;margin:0 0 8px}.tour-step p{color:#a9c3d7;line-height:1.65}.tour-step .tourlinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.tour-step .tourlinks a{font-size:.82rem;color:#8fe6ff}
+.live-updated{font-family:var(--font-data);font-size:.62rem;color:#6f9db9;margin-left:8px}
+</style>
+<style>
+.home-market-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.home-market-card{display:block;text-decoration:none;border:1px solid #173f5b;border-radius:14px;background:linear-gradient(180deg,#071a2a,#04101b);padding:13px;min-width:0;transition:.18s ease}
+.home-market-card:hover{transform:translateY(-2px);border-color:#2c8fc2}
+.home-market-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.home-market-pair{display:flex;align-items:center;gap:7px;color:#fff;font:800 .76rem var(--font-body)}
+.home-market-logo{width:21px;height:21px;border-radius:50%;object-fit:contain}
+.home-market-change{font:700 .68rem var(--font-data)}
+.home-market-change.up{color:#55e7c1}.home-market-change.down{color:#ff7180}
+.home-market-price{font:700 1rem var(--font-data);color:#eaf9ff;margin-bottom:5px}
+.home-market-canvas{height:86px;width:100%;display:block}
+.home-market-foot{display:flex;justify-content:space-between;color:#668da7;font-size:.58rem;margin-top:5px}
+@media(max-width:900px){.home-market-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.home-market-grid{grid-template-columns:1fr}}
+
+/* Landing-page QA refinements */
+html,body{max-width:100%;overflow-x:clip}
+.skip-link{position:absolute!important;left:-10000px!important;top:auto!important;width:1px!important;height:1px!important;overflow:hidden!important;white-space:nowrap!important}
+.skip-link:focus{position:fixed!important;left:14px!important;top:14px!important;width:auto!important;height:auto!important;overflow:visible!important;z-index:9999;background:#0b2c47;color:#fff;border:1px solid #43cfff;border-radius:10px;padding:10px 14px;font-weight:800}
+.btn.secondary{background:#071827;border-color:#27698f;color:#eaf8ff;box-shadow:none}
+.btn.secondary:hover,.btn.secondary:focus-visible{border-color:#45cfff;background:#0a2137}
+.btn:focus-visible,.home-market-card:focus-visible,.card:focus-visible{outline:3px solid rgba(82,228,255,.5);outline-offset:3px}
+.status.complete{background:#0b3c50;color:#9cecff}
+.module-art.chain{display:grid;place-items:center}
+.module-art.chain::before{content:none!important}
+.chain-svg{width:min(230px,82%);height:92px;filter:drop-shadow(0 0 14px rgba(82,228,255,.28))}
+.fact-icon{display:inline-flex;align-items:center;gap:7px;min-width:0}.fact-icon svg{width:15px;height:15px;flex:0 0 15px;color:#58dfff}
+.home-market-svg{height:86px;width:100%;display:block;overflow:visible}
+.home-market-svg .gridline{stroke:rgba(68,132,173,.12);stroke-width:1}.home-market-svg .wick{stroke-width:1.4}.home-market-svg .body{rx:1.2}
+.snapshot-status[data-state="live"] i{background:#55efb1;box-shadow:0 0 12px #55efb1}.snapshot-status[data-state="fallback"] i{background:#f5bf5d;box-shadow:0 0 12px #f5bf5d}.snapshot-status[data-state="error"] i{background:#ff7180;box-shadow:0 0 12px #ff7180}
+.intro-modal{position:fixed;inset:0;z-index:400;display:none;place-items:center;padding:24px;background:rgba(0,4,12,.88);backdrop-filter:blur(10px)}.intro-modal.open{display:grid}.intro-dialog{width:min(820px,100%);max-height:min(760px,92vh);overflow:auto;background:linear-gradient(180deg,#071a2c,#04101c);border:1px solid #2479ad;border-radius:20px;box-shadow:0 30px 90px rgba(0,0,0,.65)}.intro-head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 20px;border-bottom:1px solid #173e5c}.intro-head h2{margin:0;font-size:1.2rem}.intro-close{width:42px;height:42px;border:1px solid #285e84;background:#061421;color:#fff;border-radius:10px;cursor:pointer}.intro-video{aspect-ratio:16/9;display:grid;place-items:center;margin:20px;border:1px solid #173f5f;border-radius:16px;background:radial-gradient(circle at 50% 45%,rgba(20,153,255,.18),transparent 35%),#020812;overflow:hidden}.intro-video svg{width:90px;height:90px;opacity:.95}.intro-copy{padding:0 20px 22px;color:#a9c1d2}.intro-copy strong{color:#fff}.intro-copy p{margin:.45rem 0}
+@media(max-width:760px){.wrap,.hero-grid,.section,.how,.footer{padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}.hero-grid{grid-template-columns:1fr;min-height:auto;padding-top:30px}.hero-art{min-height:320px}.quick{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3,.steps,.shortcuts{grid-template-columns:1fr}.sectionhead{align-items:flex-start;flex-direction:column}.actions .btn{width:100%}.journey{margin-left:18px;margin-right:18px;flex-direction:column;align-items:flex-start}.nav{padding-left:18px;padding-right:18px}.home-market-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.home-market-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(4rem,24vw,6rem)}.quick{grid-template-columns:1fr}.intro-modal{padding:12px}.intro-video{margin:12px}.intro-head,.intro-copy{padding-left:14px;padding-right:14px}}
+
+/* Final principal audit refinements */
+.home-market-price{transition:color .2s ease,background-color .2s ease;border-radius:6px;padding:2px 4px;margin-left:-4px;width:max-content;max-width:100%}
+.home-market-price.flash-up{color:#8dffd8;background:rgba(85,231,193,.12);animation:atlasPriceUp .65s ease}
+.home-market-price.flash-down{color:#ff9aa4;background:rgba(255,113,128,.12);animation:atlasPriceDown .65s ease}
+@keyframes atlasPriceUp{0%{box-shadow:0 0 0 0 rgba(85,231,193,.38)}100%{box-shadow:0 0 0 14px rgba(85,231,193,0)}}
+@keyframes atlasPriceDown{0%{box-shadow:0 0 0 0 rgba(255,113,128,.38)}100%{box-shadow:0 0 0 14px rgba(255,113,128,0)}}
+.intro-video{position:relative}.intro-video video{width:100%;height:100%;display:block;background:#020812}.intro-video-empty{position:absolute;inset:0;display:grid;place-items:center;align-content:center;gap:12px;text-align:center;color:#8fb1c8;padding:24px;background:radial-gradient(circle at 50% 45%,rgba(20,153,255,.18),transparent 35%),#020812}.intro-video-empty svg{width:82px;height:82px}.intro-video.has-source .intro-video-empty{display:none}
+@media (prefers-reduced-motion:reduce){.home-market-price.flash-up,.home-market-price.flash-down{animation:none}}
+</style><link href="/assets/atlas-shell.css" rel="stylesheet"/>  <link rel="stylesheet" href="/assets/atlas-production.css">
+  <link rel="stylesheet" href="/assets/atlas-completed.css">
+  <link rel="stylesheet" href="/assets/atlas-layout-hardening.css">
+  <link rel="stylesheet" href="/assets/atlas-deep-layout-fixes.css">
+  <link rel="stylesheet" href="/assets/atlas-quality-fixes.css">
+</head>
+<body class="atlas-unified home-page">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="atlas-unified-header" data-atlas-header>
+  <div class="atlas-unified-header__inner">
+    <a class="atlas-unified-brand" href="/" aria-label="ATLAS home">
+      <span class="atlas-unified-brand__mark">ATLAS</span>
+      <span class="atlas-unified-brand__descriptor">The Universal Trading Library</span>
+    </a>
+    <button class="atlas-mobile-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>☰</button>
+    <nav class="atlas-unified-nav" id="primary-navigation" aria-label="Primary navigation" data-primary-nav>
+      <ul class="atlas-unified-nav-list">
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="markets-menu">Markets</button>
+          <div class="atlas-unified-dropdown" id="markets-menu" hidden>
+            <a href="/#live-markets">Market Overview</a><a href="/macro-lab">Macro &amp; Intermarket</a><a href="/markets/btc">Bitcoin</a><a href="/markets/eth">Ethereum</a><a href="/markets/bnb">BNB</a><a href="/markets/sol">Solana</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="academy-menu">Academy</button>
+          <div class="atlas-unified-dropdown" id="academy-menu" hidden>
+            <a href="/academy">Academy Overview</a><a href="/academy/beginner">Crypto Fundamentals</a><a href="/futures-leverage">Futures &amp; Leverage</a><a href="/academy/ta">Technical Analysis</a><a href="/academy/structure">Market Structure</a><a href="/academy/risk">Risk Management</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="tools-menu">Tools</button>
+          <div class="atlas-unified-dropdown" id="tools-menu" hidden>
+            <a href="/tools">All Tools</a><a href="/tools/grid-bot">Grid Calculator</a><a href="/journal-lab">Journal Analyser</a><a href="/tools/risk-calc">Risk / Position Size</a><a href="/tools/replay-lab">Replay Lab</a><a href="/macro-lab">Macro &amp; Intermarket</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="library-menu">Library</button>
+          <div class="atlas-unified-dropdown" id="library-menu" hidden>
+            <a href="/library">Library Overview</a><a href="/library/module-1">Grid Bot Builder</a><a href="/library/module-2">Market Strategies</a><a href="/library/module-3">DeFi &amp; On-Chain</a>
+          </div>
+        </li>
+        <li><a href="/learning-path">Learning Path</a></li>
+        <li><a href="/community">Community</a></li>
+      </ul>
+      <div class="atlas-unified-actions">
+        <div class="atlas-global-progress" aria-label="Learning progress"><span>Progress</span><strong data-global-progress>0%</strong></div>
+        <a class="atlas-search-button" href="/search" aria-label="Search ATLAS">⌕</a>
+        <a class="atlas-start-learning" href="/learning-path">Start Learning</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<section class="hero">
+<div aria-hidden="true" class="hero-bg"></div>
+<div class="wrap hero-grid">
+<div class="hero-copy"><span class="pill">KNOWLEDGE BUILDS BETTER TRADES</span><h1>ATLAS</h1><h2>One Library. Every Market. A Smarter You.</h2><p>In-depth, step-by-step education, real market examples, interactive tools and proven strategies — designed to take you from beginner to advanced across any market.</p><div class="actions"><a class="btn primary" href="/library">Explore the Library →</a><button aria-controls="introModal" aria-haspopup="dialog" class="btn secondary" id="introOpen" type="button">▶ Watch Introduction · 2 min</button></div><div class="quick"><a href="/learning-path"><b>▣ Learn</b><span>Step-by-step education</span></a><a href="/library/01-grid-bot-builder"><b>▰ Apply</b><span>Real strategies and examples</span></a><a href="/tools"><b>⚙ Build</b><span>Interactive tools &amp; simulators</span></a><a href="/community"><b>◎ Grow</b><span>With a global community</span></a></div></div>
+<div aria-label="Glowing digital globe rising from an open trading knowledge book against a dark mountain market background" class="hero-art" role="img"><div class="globe"></div><div class="candles" id="heroCandles"></div></div>
+</div></section>
+<section class="wrap market-snapshot" id="live-markets"><div class="snapshot-head"><div><div class="kicker">Live market overview</div><h2>Markets in motion.</h2><p>Four live market snapshots track LINK, SUI, LTC and HBAR with continuously refreshed prices and one-hour candlesticks.</p></div><div aria-live="polite" class="snapshot-status" id="snapshotStatus" data-state="live"><i></i><span><span class="feed-state" data-feed-state="connecting" role="status" aria-live="polite"><span class="feed-state__dot" aria-hidden="true"></span><span data-feed-label>CONNECTING</span> <span data-feed-age></span></span></span></div></div><div class="home-market-grid" id="homeMarketGrid"></div></section>
+<main id="main-content"><section class="home-news-hub" id="homeMarketNews"><div class="home-news-head"><div><small>LIVE MARKET INTELLIGENCE</small><h2>News &amp; Volatility Impact</h2><p>Recent market-moving headlines connected to ATLAS impact analysis and live charts.</p></div><a href="/macro-lab">Open Macro &amp; News Radar →</a></div><div aria-live="polite" class="home-news-grid" id="homeNewsGrid"><div class="home-news-fallback"><span class="feed-state" data-feed-state="connecting" role="status" aria-live="polite"><span class="feed-state__dot" aria-hidden="true"></span><span data-feed-label>CONNECTING</span> <span data-feed-age></span></span></div></div></section>
+<section class="wrap section"><div class="sectionhead"><div><div class="kicker">Explore</div><h2>The ATLAS Library</h2></div><p>Specialist modules, structured learning and interactive tools — all in one place. Start with the live Grid Bot Builder module or preview the next libraries being added.</p></div><div class="grid3">
+<a class="card live" href="/library/01-grid-bot-builder"><span class="num">MODULE 01</span><span class="status">LIVE NOW</span><h3>Grid Bot Builder</h3><div class="meta">Automate · Trade · Grow</div><p>Complete grid trading education from foundations through advanced strategy, risk, calculators, monitoring and live-style market examples.</p><div class="module-art robot"><div class="robotface"></div></div><span class="btn primary">Enter Module →</span><div class="cardfacts"><span>▣ 37+ Lessons</span><span>▣ Quizzes</span><span>⚙ Interactive Tools</span><span>↗ Real Examples</span></div></a>
+<a class="card live" href="/library/02-market-strategies"><span class="num">MODULE 02</span><span class="status soon">Not in this build</span><h3>Market Strategies</h3><div class="meta">Spot · Futures · Swing · Long-Term</div><p>Advanced strategies, market structure, indicators, risk models and professional trade planning.</p><div class="module-art candles"></div><span class="btn primary">Enter Module →</span><div class="cardfacts"><span>↗ Trend &amp; Swing</span><span>▣ Market Structure</span><span>✓ Playbooks</span><span>✓ Strategy Logic</span></div></a>
+<a class="card" href="/library/03-defi-onchain"><span class="num">MODULE 03</span><span class="status complete">LIVE · COMPLETE</span><h3>DeFi &amp; On-Chain</h3><div class="meta">Liquidity · Yield · Protocols · Risk</div><p>DeFi and on-chain research, wallets, AMMs, lending, staking, smart contracts, security, tokenomics and protocol analytics.</p><div class="module-art chain"><svg aria-hidden="true" class="chain-svg" viewbox="0 0 240 100"><g fill="none" stroke="#58dfff" stroke-width="2"><path d="M34 22 54 10l20 12v24L54 58 34 46Z"></path><path d="M94 22 114 10l20 12v24l-20 12-20-12Z"></path><path d="M154 22 174 10l20 12v24l-20 12-20-12Z"></path><path d="M64 54 84 42l20 12v24L84 90 64 78Z"></path><path d="M124 54 144 42l20 12v24l-20 12-20-12Z"></path><path d="M74 34h20M134 34h20M104 62h20" opacity=".65"></path></g></svg></div><span class="btn secondary">Enter Module →</span><div class="cardfacts"><span class="fact-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7.5 4.5 3 7v5l4.5 2.5L12 12V7L7.5 4.5Zm9 0L12 7v5l4.5 2.5L21 12V7l-4.5-2.5ZM12 12l-4.5 2.5v5L12 22l4.5-2.5v-5L12 12Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg><span>Wallet Safety</span></span><span class="fact-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7.5 4.5 3 7v5l4.5 2.5L12 12V7L7.5 4.5Zm9 0L12 7v5l4.5 2.5L21 12V7l-4.5-2.5ZM12 12l-4.5 2.5v5L12 22l4.5-2.5v-5L12 12Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg><span>Liquidity &amp; Yield</span></span><span class="fact-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7.5 4.5 3 7v5l4.5 2.5L12 12V7L7.5 4.5Zm9 0L12 7v5l4.5 2.5L21 12V7l-4.5-2.5ZM12 12l-4.5 2.5v5L12 22l4.5-2.5v-5L12 12Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg><span>Protocols &amp; DEXs</span></span><span class="fact-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7.5 4.5 3 7v5l4.5 2.5L12 12V7L7.5 4.5Zm9 0L12 7v5l4.5 2.5L21 12V7l-4.5-2.5ZM12 12l-4.5 2.5v5L12 22l4.5-2.5v-5L12 12Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg><span>Risk Analysis</span></span></div></a>
+</div></section><section class="section atlas-learning-flow" id="unifiedJourney" aria-labelledby="learning-flow-title">
+  <div class="atlas-learning-flow__head">
+    <div>
+      <span class="eyebrow">ONE ATLAS · ONE LEARNING SYSTEM</span>
+      <h2 id="learning-flow-title">Learn it. Practise it. Test it. Apply it.</h2>
+      <p>Build understanding, recognise the setup, practise with the tools, then prove you can apply the concept.</p>
+    </div>
+    <a class="btn primary" href="/learning-path">Start the learning path →</a>
+  </div>
+  <div class="atlas-learning-grid">
+    <article class="atlas-learning-card">
+      <div class="atlas-learning-card__meta"><span class="atlas-learning-card__number">01</span><span class="atlas-learning-card__rule" aria-hidden="true"></span><span class="atlas-learning-card__label">LEARN</span></div>
+      <h3>Build the concept.</h3><p>Understand the mechanics, terminology and reasoning before attempting execution.</p>
+    </article>
+    <article class="atlas-learning-card">
+      <div class="atlas-learning-card__meta"><span class="atlas-learning-card__number">02</span><span class="atlas-learning-card__rule" aria-hidden="true"></span><span class="atlas-learning-card__label">RECOGNISE</span></div>
+      <h3>See it on a chart.</h3><p>Identify the structure, setup, confirmations and invalidation conditions in market data.</p>
+    </article>
+    <article class="atlas-learning-card">
+      <div class="atlas-learning-card__meta"><span class="atlas-learning-card__number">03</span><span class="atlas-learning-card__rule" aria-hidden="true"></span><span class="atlas-learning-card__label">PRACTISE</span></div>
+      <h3>Use the labs.</h3><p>Apply the concept through replay, calculators, simulations and structured examples.</p>
+    </article>
+    <article class="atlas-learning-card">
+      <div class="atlas-learning-card__meta"><span class="atlas-learning-card__number">04</span><span class="atlas-learning-card__rule" aria-hidden="true"></span><span class="atlas-learning-card__label">PROVE</span></div>
+      <h3>Test and review.</h3><p>Validate understanding through quizzes, checkpoints, journaling and review.</p>
+    </article>
+  </div>
+</section>
+<section class="wrap how"><div class="sectionhead"><div><div class="kicker">Get started</div><h2>How ATLAS Works</h2></div><p>Follow a clear path from understanding through practice, testing and real-world application.</p></div><div class="steps"><a class="step" href="/learning-path"><div class="stepnum">1</div><h3>Learn</h3><p>Build your foundation with easy-to-follow lessons.</p></a><a class="step" href="/tools"><div class="stepnum">2</div><h3>Practice</h3><p>Use interactive tools, charts and examples.</p></a><a class="step" href="/library/01-grid-bot-builder"><div class="stepnum">3</div><h3>Test</h3><p>Check your knowledge with built-in quizzes.</p></a><a class="step" href="/library/01-grid-bot-builder"><div class="stepnum">4</div><h3>Apply</h3><p>Use what you learn in realistic market scenarios.</p></a><a class="step" href="/community"><div class="stepnum">5</div><h3>Grow</h3><p>Continue into advanced topics and new modules.</p></a></div><div class="shortcuts"><a class="feature" href="/learning-path"><b>↗ Learning Path</b><span>Beginner to Advanced</span></a><a class="feature" href="/tools"><b>▣ Tools &amp; Calculators</b><span>Model, plan and simulate</span></a><a class="feature" href="/library/01-grid-bot-builder"><b>↗ Real Market Examples</b><span>Charts &amp; case studies</span></a><a class="feature" href="/community"><b>◎ Community</b><span>Learn together</span></a><a class="feature" href="/search"><b>⌕ Search the Library</b><span>Find any topic instantly</span></a></div></section>
+<section class="wrap journey"><div><h3>Your Trading Journey Starts Here.</h3><p>Knowledge. Tools. Community. A Better You.</p></div><a class="btn primary" href="/library">Explore the Library →</a></section>
+<section class="section" id="academy-preview"><div class="sectionhead"><div><span class="eyebrow">ATLAS TRADING ACADEMY</span><h2>18 Academy Modules. One Learning System.</h2><p>Move from beginner foundations into market structure, technical analysis, risk, strategies, futures, psychology, journaling, portfolio management, automation, quant and professional mastery.</p></div><a class="btn primary" href="/academy">Explore all modules →</a></div><div class="grid3"><a class="card" href="/market-structure"><h3>Market Structure</h3><p>Learn candles, swings, trends, ranges and liquidity.</p></a><a class="card" href="/risk-academy"><h3>Risk Academy</h3><p>Use position sizing, expectancy and Monte Carlo simulations.</p></a><a class="card" href="/replay-lab"><h3>Replay Lab</h3><p>Practise decisions candle by candle with simulated execution.</p></a></div></section></main>
+<section class="atlas-method" aria-labelledby="atlasMethodTitle">
+  <span class="eyebrow">THE ATLAS METHOD</span>
+  <h2 id="atlasMethodTitle">Learn it. Recognise it. Practise it. Prove it. Apply it. Review it.</h2>
+  <ol class="atlas-method__grid">
+    <li><span>01</span><strong>LEARN</strong><p>Understand the concept.</p></li>
+    <li><span>02</span><strong>RECOGNISE</strong><p>Identify it correctly in market data.</p></li>
+    <li><span>03</span><strong>PRACTISE</strong><p>Use replay, labs and simulations.</p></li>
+    <li><span>04</span><strong>PROVE</strong><p>Pass checkpoints and demonstrate understanding.</p></li>
+    <li><span>05</span><strong>APPLY</strong><p>Execute inside a structured framework.</p></li>
+    <li><span>06</span><strong>REVIEW</strong><p>Journal, analyse and improve.</p></li>
+  </ol>
+</section>
+<section class="resume-learning" data-resume-learning hidden>
+  <span class="eyebrow">CONTINUE LEARNING</span>
+  <h2 data-resume-title></h2>
+  <p data-resume-chapter></p>
+  <a class="atlas-start-learning" data-resume-link>Resume learning →</a>
+</section>
+<footer class="wrap footer"><a class="brand" href="/"><div><div class="brandmark">ATLAS</div><small>THE UNIVERSAL TRADING LIBRARY</small></div></a><nav><a href="/">Home</a><a href="/library">Library</a><a href="/learning-path">Learning Path</a><a href="/tools">Tools</a><a href="/community">Community</a><a href="/about">About</a></nav><div>Knowledge Builds Better Trades.</div><nav aria-label="Legal" class="legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav></footer>
+<div aria-hidden="true" aria-labelledby="introTitle" aria-modal="true" class="intro-modal" id="introModal" role="dialog"><div class="intro-dialog" role="document"><div class="intro-head"><h2 id="introTitle">ATLAS Introduction</h2><button aria-label="Close introduction" class="intro-close" id="introClose" type="button">✕</button></div><div class="intro-video"><video id="introVideo" controls playsinline preload="metadata" aria-label="ATLAS two-minute introduction"></video><div class="intro-video-empty" id="introVideoEmpty"><svg aria-hidden="true" viewBox="0 0 100 100"><circle cx="50" cy="50" fill="none" r="42" stroke="#52e4ff" stroke-width="2"></circle><path d="M42 33 70 50 42 67Z" fill="#52e4ff"></path></svg><span>ATLAS introduction</span></div></div><div class="intro-copy"><strong>Welcome to ATLAS.</strong><p></p></div></div></div>
+<button aria-label="Back to top" class="backtop" type="button">↑</button><script>
+(()=>{
+const markets=[
+ {s:'LINKUSDT',pair:'LINK / USDT',id:'chainlink',token:'LINK',page:'/markets/link'},
+ {s:'SUIUSDT',pair:'SUI / USDT',id:'sui',token:'SUI',page:'/markets/sui'},
+ {s:'LTCUSDT',pair:'LTC / USDT',id:'litecoin',token:'LTC',page:'/markets/ltc'},
+ {s:'HBARUSDT',pair:'HBAR / USDT',id:'hedera-hashgraph',token:'HBAR',page:'/markets/hbar'}
+];
+const statusEl=document.getElementById('snapshotStatus');
+let active=markets.slice(),candleResults=0,candleFallbacks=0;const lastPrices=new Map();
+function setStatus(state,text){if(!statusEl)return;statusEl.dataset.state=state;const label=statusEl.querySelector('[data-feed-label]');if(label)label.textContent=text;else{const span=statusEl.querySelector('span');if(span)span.textContent=text}}
+function logo(m){return `<span class="home-market-logo" aria-hidden="true" style="display:grid;place-items:center;background:#0b2a40;color:#66ddff;font:800 .55rem IBM Plex Mono,monospace">${m.token}</span>`}
+function render(){
+ const g=document.getElementById('homeMarketGrid');if(!g)return;
+ g.innerHTML=active.map((m,i)=>`<a class="home-market-card" href="${m.page}" aria-label="Open ${m.pair} dedicated market view">
+ <div class="home-market-top"><div class="home-market-pair">${logo(m)}<span>${m.pair}</span></div><span id="chg${i}" class="home-market-change">—</span></div>
+ <div id="px${i}" class="home-market-price">Loading…</div><svg id="mc${i}" class="home-market-svg" viewBox="0 0 320 86" preserveAspectRatio="none" role="img" aria-label="${m.pair} one hour candlestick sparkline"></svg>
+ <div class="home-market-foot"><span>1H candles</span><span id="src${i}">CONNECTING</span></div></a>`).join('');
+ setStatus('live','CONNECTING');
+ Promise.allSettled(active.map((m,i)=>loadCandles(m,i))).then(()=>updateAggregateStatus());
+ updatePrices();
+}
+function draw(svg,data){
+ if(!svg||!data.length)return;const w=320,h=86,p=5,hi=Math.max(...data.map(v=>v.h)),lo=Math.min(...data.map(v=>v.l)),rng=hi-lo||1,y=v=>p+(hi-v)/rng*(h-p*2),cw=(w-p*2)/data.length;
+ let out='<line class="gridline" x1="0" x2="320" y1="28" y2="28"/><line class="gridline" x1="0" x2="320" y1="57" y2="57"/>';
+ data.forEach((v,j)=>{const cx=p+cw*(j+.5),up=v.c>=v.o,col=up?'#55e7c1':'#ff7180',top=Math.min(y(v.o),y(v.c)),bot=Math.max(y(v.o),y(v.c)),bw=Math.max(2,cw*.5);out+=`<line class="wick" x1="${cx.toFixed(2)}" x2="${cx.toFixed(2)}" y1="${y(v.h).toFixed(2)}" y2="${y(v.l).toFixed(2)}" stroke="${col}"/><rect class="body" x="${(cx-bw/2).toFixed(2)}" y="${top.toFixed(2)}" width="${bw.toFixed(2)}" height="${Math.max(1,bot-top).toFixed(2)}" fill="${col}"/>`});
+ svg.innerHTML=out;
+}
+function fallback(m,i){
+ let seed=m.s.split('').reduce((a,c)=>a+c.charCodeAt(0),0)+Math.floor(Date.now()/3600000),p=100+(seed%40),a=[];
+ for(let j=0;j<32;j++){let o=p,c=o+Math.sin((j+seed)*.7)*1.1+Math.cos(j*.31)*.5,h=Math.max(o,c)+.6,l=Math.min(o,c)-.6;a.push({o,h,l,c});p=c}
+ draw(document.getElementById('mc'+i),a);const src=document.getElementById('src'+i);if(src)src.textContent='EDUCATIONAL FALLBACK';candleFallbacks++;
+}
+async function loadCandles(m,i){
+ try{const r=await fetch(`https://data-api.binance.vision/api/v3/klines?symbol=${m.s}&interval=1h&limit=32`,{cache:'no-store'});if(!r.ok)throw new Error('candle feed');const j=await r.json();draw(document.getElementById('mc'+i),j.map(v=>({o:+v[1],h:+v[2],l:+v[3],c:+v[4]})));const src=document.getElementById('src'+i);if(src)src.textContent='LIVE · BINANCE';candleResults++;}
+ catch(e){fallback(m,i)}
+}
+function updateAggregateStatus(){if(candleResults>0)setStatus('live',`Live data active · ${candleResults}/4 charts connected`);else if(candleFallbacks===4)setStatus('fallback','Live feed unavailable · educational charts active');else setStatus('error','Market data temporarily unavailable')}
+async function updatePrices(){
+ try{const ids=active.map(m=>m.id).join(',');const r=await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd&include_24hr_change=true`,{cache:'no-store'});if(!r.ok)throw new Error('price feed');const j=await r.json();let loaded=0;
+ active.forEach((m,i)=>{const q=j[m.id];if(!q||!Number.isFinite(q.usd))return;loaded++;const p=document.getElementById('px'+i),c=document.getElementById('chg'+i);const prev=lastPrices.get(m.id);p.textContent='$'+q.usd.toLocaleString(undefined,{maximumFractionDigits:q.usd<10?4:2});if(Number.isFinite(prev)&&prev!==q.usd){p.classList.remove('flash-up','flash-down');void p.offsetWidth;p.classList.add(q.usd>prev?'flash-up':'flash-down');setTimeout(()=>p.classList.remove('flash-up','flash-down'),650)}lastPrices.set(m.id,q.usd);const ch=Number(q.usd_24h_change)||0;c.textContent=(ch>=0?'+':'')+ch.toFixed(2)+'%';c.className='home-market-change '+(ch>=0?'up':'down')});
+ if(loaded===4)setStatus('live','Live data active · prices refreshed');else updateAggregateStatus();
+ }catch(e){updateAggregateStatus()}
+}
+render();setInterval(updatePrices,60000);
+})();
+
+(()=>{
+ const modal=document.getElementById('introModal'),open=document.getElementById('introOpen'),close=document.getElementById('introClose'),video=document.getElementById('introVideo'),videoWrap=modal?.querySelector('.intro-video');if(!modal||!open||!close)return;let lastFocus=null;const source=video?.querySelector('source');if(source?.getAttribute('src'))videoWrap?.classList.add('has-source');
+ const focusables=()=>[...modal.querySelectorAll('button,a[href],[tabindex]:not([tabindex="-1"])')].filter(el=>!el.disabled);
+ function show(){lastFocus=document.activeElement;modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus()}
+ function hide(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';video?.pause();if(lastFocus)lastFocus.focus()}
+ open.addEventListener('click',show);close.addEventListener('click',hide);modal.addEventListener('click',e=>{if(e.target===modal)hide()});
+ document.addEventListener('keydown',e=>{if(!modal.classList.contains('open'))return;if(e.key==='Escape'){hide();return}if(e.key==='Tab'){const f=focusables();if(!f.length)return;const first=f[0],last=f[f.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
+})();;
+</script><script defer="" src="/assets/atlas-shell.js"></script><script defer="" src="/assets/home-news.js"></script>  <script src="/assets/atlas-production.js"></script>
+  <script src="/assets/atlas-completed.js"></script>
+</body></html>

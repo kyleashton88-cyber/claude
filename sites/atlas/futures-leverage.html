@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Futures &amp; Leverage — ATLAS</title><meta content="Understand margin, notional exposure, leverage, funding and liquidation risk before using derivatives." name="description"/><link href="/assets/site.css" rel="stylesheet"/>  <link rel="stylesheet" href="/assets/atlas-production.css">
+  <link rel="stylesheet" href="/assets/atlas-completed.css">
+  <link rel="stylesheet" href="/assets/atlas-layout-hardening.css">
+  <link rel="stylesheet" href="/assets/atlas-deep-layout-fixes.css">
+  <link rel="stylesheet" href="/assets/atlas-quality-fixes.css">
+</head><body class="atlas-unified training-page">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="atlas-unified-header" data-atlas-header>
+  <div class="atlas-unified-header__inner">
+    <a class="atlas-unified-brand" href="/" aria-label="ATLAS home">
+      <span class="atlas-unified-brand__mark">ATLAS</span>
+      <span class="atlas-unified-brand__descriptor">The Universal Trading Library</span>
+    </a>
+    <button class="atlas-mobile-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>☰</button>
+    <nav class="atlas-unified-nav" id="primary-navigation" aria-label="Primary navigation" data-primary-nav>
+      <ul class="atlas-unified-nav-list">
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="markets-menu">Markets</button>
+          <div class="atlas-unified-dropdown" id="markets-menu" hidden>
+            <a href="/#live-markets">Market Overview</a><a href="/macro-lab">Macro &amp; Intermarket</a><a href="/markets/btc">Bitcoin</a><a href="/markets/eth">Ethereum</a><a href="/markets/bnb">BNB</a><a href="/markets/sol">Solana</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="academy-menu">Academy</button>
+          <div class="atlas-unified-dropdown" id="academy-menu" hidden>
+            <a href="/academy">Academy Overview</a><a href="/academy/beginner">Crypto Fundamentals</a><a href="/futures-leverage">Futures &amp; Leverage</a><a href="/academy/ta">Technical Analysis</a><a href="/academy/structure">Market Structure</a><a href="/academy/risk">Risk Management</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="tools-menu">Tools</button>
+          <div class="atlas-unified-dropdown" id="tools-menu" hidden>
+            <a href="/tools">All Tools</a><a href="/tools/grid-bot">Grid Calculator</a><a href="/journal-lab">Journal Analyser</a><a href="/tools/risk-calc">Risk / Position Size</a><a href="/tools/replay-lab">Replay Lab</a><a href="/macro-lab">Macro &amp; Intermarket</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="library-menu">Library</button>
+          <div class="atlas-unified-dropdown" id="library-menu" hidden>
+            <a href="/library">Library Overview</a><a href="/library/module-1">Grid Bot Builder</a><a href="/library/module-2">Market Strategies</a><a href="/library/module-3">DeFi &amp; On-Chain</a>
+          </div>
+        </li>
+        <li><a href="/learning-path">Learning Path</a></li>
+        <li><a href="/community">Community</a></li>
+      </ul>
+      <div class="atlas-unified-actions">
+        <div class="atlas-global-progress" aria-label="Learning progress"><span>Progress</span><strong data-global-progress>0%</strong></div>
+        <a class="atlas-search-button" href="/search" aria-label="Search ATLAS">⌕</a>
+        <a class="atlas-start-learning" href="/learning-path">Start Learning</a>
+      </div>
+    </nav>
+  </div>
+</header><div aria-hidden="true" class="reading-progress no-print"></div><div class="unified-breadcrumb no-print"><a href="/">ATLAS</a><span>›</span><a href="/academy">Academy</a><span>›</span><strong>Futures &amp; Leverage</strong></div><nav aria-label="Training shortcuts" class="page-context-strip no-print"><a href="/academy">Academy</a><a href="/learning-path">Learning Path</a><a href="/replay-lab">Replay Lab</a><a href="/tools">Tools</a></nav><main id="main-content"><div class="print-only"><div class="print-document-title">ATLAS — The Universal Trading Library</div><p>Educational training material · Printed/PDF copy</p><hr/></div><div aria-label="Training page tools" class="training-tools no-print"><div class="left"><span class="module-label">FUTURES &amp; LEVERAGE </span><a class="toolbtn" href="/academy">← Academy</a></div><div class="right"><button class="toolbtn" data-copy-link="" type="button">🔗 Copy link</button><button class="toolbtn" data-print-pdf="" type="button">🖨 Print / PDF</button></div></div><section aria-labelledby="page-title" class="pagehero"><div class="kicker">MODULE 09</div><h1 id="page-title">Futures &amp; Leverage</h1><p>Understand margin, notional exposure, leverage, funding and liquidation risk before using derivatives.</p></section><section class="section"><div class="grid3"><div class="card"><h3>Leverage changes exposure</h3><p>Leverage magnifies the notional exposure controlled by margin. It does not improve the quality of the underlying trade idea.</p></div><div class="card"><h3>Liquidation is exchange-specific</h3><p>Maintenance margin, fees, position mode and exchange rules affect liquidation. The simplified sandbox below is educational, not an exchange liquidation calculator.</p></div><div class="card"><h3>Funding matters</h3><p>Perpetual futures can transfer funding between long and short participants. Funding can change over time and should be included in planning.</p></div></div></section>
+<section class="section"><div class="card"><span class="eyebrow">Leverage sandbox</span><h2>Watch exposure change</h2><div class="calc-grid"><label>Capital / margin<input id="margin" type="number" value="1000"/></label><label>Leverage<input id="lev" max="50" min="1" type="range" value="5"/><b id="levOut">5×</b></label><label>Entry price<input id="fentry" type="number" value="60000"/></label><label>Stop price<input id="fstop" type="number" value="58800"/></label></div><div class="score-grid"><div class="score"><span>Notional exposure</span><b id="notional">—</b></div><div class="score"><span>Stop distance</span><b id="stopdist">—</b></div><div class="score"><span>Approx loss at stop*</span><b id="stoploss">—</b></div></div><p class="muted">*Simplified price-move estimate before fees, slippage, funding and exchange margin rules.</p></div></section></main><footer class="footer"><div><b>ATLAS — The Universal Trading Library</b><br/>Learn · Recognise · Apply · Prove</div><nav><a href="/academy">Academy</a><a href="/replay-lab">Replay Lab</a><a href="/tools">Tools</a><a href="/#live-markets">Markets</a></nav><nav class="legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav></footer><button aria-label="Back to top" class="backtop" type="button">↑</button><script src="/assets/site.js"></script><script>
+function calc(){let m=+margin.value||0,l=+lev.value||0,e=+fentry.value||0,s=+fstop.value||0,n=m*l,d=e?Math.abs(e-s)/e:0;if(!Number.isFinite(n))n=0;if(!Number.isFinite(d))d=0;levOut.textContent=l+'×';notional.textContent='$'+n.toLocaleString();stopdist.textContent=(d*100).toFixed(2)+'%';stoploss.textContent='$'+(n*d).toFixed(2)}[margin,lev,fentry,fstop].forEach(x=>x.oninput=calc);calc();
+</script>  <script src="/assets/atlas-production.js"></script>
+  <script src="/assets/atlas-completed.js"></script>
+</body></html>

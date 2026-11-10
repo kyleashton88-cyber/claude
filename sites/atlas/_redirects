@@ -1,0 +1,72 @@
+# ATLAS pretty URLs (Netlify). Destinations that were not in the upload
+# rewrite to /not-included.html instead of a missing file. See that page.
+/markets                     /index.html#live-markets   302
+/markets/btc                 /market-btc.html           200
+/markets/eth                 /market-eth.html           200
+/markets/sol                 /not-included.html         200
+/markets/bnb                 /market-bnb.html           200
+/markets/link                /not-included.html         200
+/markets/sui                 /not-included.html         200
+/markets/ltc                 /not-included.html         200
+/markets/hbar                /not-included.html         200
+/markets/news                /macro-lab.html            302
+
+/academy                     /academy.html              200
+/academy/beginner            /crypto-fundamentals.html  200
+/academy/ta                  /not-included.html         200
+/academy/structure           /not-included.html         200
+/academy/defi                /defi-onchain.html         200
+/academy/risk                /not-included.html         200
+
+/tools                       /not-included.html         200
+/tools/grid-bot              /grid-bot.html             200
+/tools/replay-lab            /not-included.html         200
+/tools/risk-calc             /not-included.html         200
+/tools/news-impact           /macro-lab.html            302
+
+/library                     /library.html              200
+/library/module-1            /grid-bot.html             200
+/library/module-2            /not-included.html         200
+/library/module-3            /defi-onchain.html         200
+/learning-path               /learning-path.html        200
+/community                   /community.html            200
+/search                      /not-included.html         200
+/privacy                     /not-included.html         200
+/terms                       /not-included.html         200
+
+/library/01-grid-bot-builder /grid-bot.html             200
+/library/02-market-strategies /not-included.html        200
+/library/03-defi-onchain     /defi-onchain.html         200
+/academy/01-crypto-fundamentals /crypto-fundamentals.html 200
+/academy/02-technical-analysis /not-included.html       200
+/academy/03-market-structure /not-included.html         200
+/academy/04-risk-management  /not-included.html         200
+
+/about                       /about.html                200
+/automation                  /automation.html           200
+/contact                     /contact.html              200
+/crypto-fundamentals         /crypto-fundamentals.html  200
+/defi-onchain                /defi-onchain.html         200
+/futures-leverage            /futures-leverage.html     200
+/grid-bot                    /grid-bot.html             200
+/journal-lab                 /journal-lab.html          200
+/macro-lab                   /macro-lab.html            200
+/market-bnb                  /market-bnb.html           200
+/market-btc                  /market-btc.html           200
+/market-eth                  /market-eth.html           200
+/market-hbar                 /not-included.html         200
+/market-link                 /not-included.html         200
+/market-ltc                  /not-included.html         200
+/market-news                 /macro-lab.html            302
+/market-sol                  /not-included.html         200
+/market-strategies           /not-included.html         200
+/market-structure            /not-included.html         200
+/market-sui                  /not-included.html         200
+/mastery                     /not-included.html         200
+/portfolio-lab               /not-included.html         200
+/psychology                  /not-included.html         200
+/quant-lab                   /not-included.html         200
+/replay-lab                  /not-included.html         200
+/risk-academy                /not-included.html         200
+/strategy-library            /not-included.html         200
+/technical-analysis          /not-included.html         200

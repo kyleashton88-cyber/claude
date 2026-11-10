@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Backtesting &amp; Journaling — ATLAS</title><meta content="Build evidence around a strategy and separate decision quality from the outcome of any single trade." name="description"/><link href="/assets/site.css" rel="stylesheet"/>  <link rel="stylesheet" href="/assets/atlas-production.css">
+  <link rel="stylesheet" href="/assets/atlas-completed.css">
+  <link rel="stylesheet" href="/assets/atlas-layout-hardening.css">
+  <link rel="stylesheet" href="/assets/atlas-deep-layout-fixes.css">
+  <link rel="stylesheet" href="/assets/atlas-quality-fixes.css">
+</head><body class="atlas-unified training-page">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="atlas-unified-header" data-atlas-header>
+  <div class="atlas-unified-header__inner">
+    <a class="atlas-unified-brand" href="/" aria-label="ATLAS home">
+      <span class="atlas-unified-brand__mark">ATLAS</span>
+      <span class="atlas-unified-brand__descriptor">The Universal Trading Library</span>
+    </a>
+    <button class="atlas-mobile-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>☰</button>
+    <nav class="atlas-unified-nav" id="primary-navigation" aria-label="Primary navigation" data-primary-nav>
+      <ul class="atlas-unified-nav-list">
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="markets-menu">Markets</button>
+          <div class="atlas-unified-dropdown" id="markets-menu" hidden>
+            <a href="/#live-markets">Market Overview</a><a href="/macro-lab">Macro &amp; Intermarket</a><a href="/markets/btc">Bitcoin</a><a href="/markets/eth">Ethereum</a><a href="/markets/bnb">BNB</a><a href="/markets/sol">Solana</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="academy-menu">Academy</button>
+          <div class="atlas-unified-dropdown" id="academy-menu" hidden>
+            <a href="/academy">Academy Overview</a><a href="/academy/beginner">Crypto Fundamentals</a><a href="/futures-leverage">Futures &amp; Leverage</a><a href="/academy/ta">Technical Analysis</a><a href="/academy/structure">Market Structure</a><a href="/academy/risk">Risk Management</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="tools-menu">Tools</button>
+          <div class="atlas-unified-dropdown" id="tools-menu" hidden>
+            <a href="/tools">All Tools</a><a href="/tools/grid-bot">Grid Calculator</a><a href="/journal-lab">Journal Analyser</a><a href="/tools/risk-calc">Risk / Position Size</a><a href="/tools/replay-lab">Replay Lab</a><a href="/macro-lab">Macro &amp; Intermarket</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="library-menu">Library</button>
+          <div class="atlas-unified-dropdown" id="library-menu" hidden>
+            <a href="/library">Library Overview</a><a href="/library/module-1">Grid Bot Builder</a><a href="/library/module-2">Market Strategies</a><a href="/library/module-3">DeFi &amp; On-Chain</a>
+          </div>
+        </li>
+        <li><a href="/learning-path">Learning Path</a></li>
+        <li><a href="/community">Community</a></li>
+      </ul>
+      <div class="atlas-unified-actions">
+        <div class="atlas-global-progress" aria-label="Learning progress"><span>Progress</span><strong data-global-progress>0%</strong></div>
+        <a class="atlas-search-button" href="/search" aria-label="Search ATLAS">⌕</a>
+        <a class="atlas-start-learning" href="/learning-path">Start Learning</a>
+      </div>
+    </nav>
+  </div>
+</header><div aria-hidden="true" class="reading-progress no-print"></div><div class="unified-breadcrumb no-print"><a href="/">ATLAS</a><span>›</span><a href="/academy">Academy</a><span>›</span><strong>Backtesting &amp; Journaling</strong></div><nav aria-label="Training shortcuts" class="page-context-strip no-print"><a href="/academy">Academy</a><a href="/learning-path">Learning Path</a><a href="/replay-lab">Replay Lab</a><a href="/tools">Tools</a></nav><main id="main-content"><div class="print-only"><div class="print-document-title">ATLAS — The Universal Trading Library</div><p>Educational training material · Printed/PDF copy</p><hr/></div><div aria-label="Training page tools" class="training-tools no-print"><div class="left"><span class="module-label">BACKTESTING &amp; JOURNALING </span><a class="toolbtn" href="/academy">← Academy</a></div><div class="right"><button class="toolbtn" data-copy-link="" type="button">🔗 Copy link</button><button class="toolbtn" data-print-pdf="" type="button">🖨 Print / PDF</button></div></div><section aria-labelledby="page-title" class="pagehero"><div class="kicker">MODULE 11</div><h1 id="page-title">Backtesting &amp; Journal Academy</h1><p>Build evidence around a strategy and separate decision quality from the outcome of any single trade.</p></section><section class="section"><div class="grid2"><div class="card"><h2>Journal the decision, not just the P&amp;L</h2><p>A useful journal records setup, risk, entry, invalidation, target, session, confirmations, rule compliance, screenshot and post-trade notes. Profit alone does not tell you whether the process was good.</p></div><div class="card"><h3>Core metrics</h3><p>Win rate · Average R · Expectancy · Profit factor · Maximum drawdown · Losing streak · MAE · MFE · Session performance · Rule compliance.</p></div></div></section>
+<section class="section"><div class="card"><span class="eyebrow">Mini journal analyser</span><h2>Paste R-multiples</h2><p>Example: <code>3,-1,-1,2.5,-1,1.8</code></p><textarea id="rvals" style="width:100%;min-height:100px;background:#04101b;border:1px solid #235879;color:#fff;border-radius:10px;padding:12px" aria-label="Journal return values">3,-1,-1,2.5,-1,1.8,3,-1,-1,-1,2.2</textarea><p><button class="btn primary" id="analyse" type="button">Analyse</button></p><div class="score-grid"><div class="score"><span>Win rate</span><b id="jwr">—</b></div><div class="score"><span>Expectancy</span><b id="jexp">—</b></div><div class="score"><span>Profit factor</span><b id="jpf">—</b></div></div></div></section></main><footer class="footer"><div><b>ATLAS — The Universal Trading Library</b><br/>Learn · Recognise · Apply · Prove</div><nav><a href="/academy">Academy</a><a href="/replay-lab">Replay Lab</a><a href="/tools">Tools</a><a href="/#live-markets">Markets</a></nav><nav class="legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></nav></footer><button aria-label="Back to top" class="backtop" type="button">↑</button><script src="/assets/site.js"></script><script>function go(){let a=rvals.value.split(/[\s,]+/).map(s=>s.trim()).filter(Boolean).map(Number).filter(Number.isFinite);if(!a.length){jwr.textContent="—";jexp.textContent="—";jpf.textContent="—";return}let wins=a.filter(x=>x>0),loss=a.filter(x=>x<0),gp=wins.reduce((a,b)=>a+b,0),gl=-loss.reduce((a,b)=>a+b,0);jwr.textContent=(wins.length/a.length*100).toFixed(1)+'%';jexp.textContent=(a.reduce((x,y)=>x+y,0)/a.length).toFixed(2)+'R';jpf.textContent=gl?(gp/gl).toFixed(2):'∞'}analyse.onclick=go;go();</script>  <script src="/assets/atlas-production.js"></script>
+  <script src="/assets/atlas-completed.js"></script>
+</body></html>

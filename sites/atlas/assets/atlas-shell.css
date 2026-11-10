@@ -1,0 +1,380 @@
+/* Shared ATLAS header, footer chrome, and small fixes for pages whose
+   original shell stylesheets were not in the upload. Scoped to shell
+   class names so it does not restyle lesson content. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+.atlas-unified-header,
+.atlas-header {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  background: rgba(1, 7, 18, 0.94);
+  border-bottom: 1px solid rgba(64, 180, 255, 0.18);
+  backdrop-filter: blur(16px);
+}
+
+.atlas-unified-header__inner,
+.atlas-header__inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 72px;
+  width: min(1536px, 100%);
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.atlas-unified-brand,
+.atlas-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  color: #edf8ff;
+  text-decoration: none;
+}
+
+.atlas-unified-brand__mark,
+.atlas-brand__mark {
+  font-family: "Space Grotesk", Inter, Segoe UI, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  font-size: 1.35rem;
+  line-height: 1;
+  background: linear-gradient(180deg, #fff, #8ec4e4 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.atlas-unified-brand__descriptor,
+.atlas-brand__name {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8fc9ec;
+}
+
+.atlas-unified-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  min-width: 0;
+}
+
+.atlas-unified-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.atlas-unified-nav-item { position: relative; }
+
+.atlas-unified-trigger,
+.atlas-unified-nav-list > li > a,
+.atlas-nav__list a {
+  background: transparent;
+  color: #c8deee;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font: 650 0.86rem/1.2 Inter, Segoe UI, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.atlas-unified-trigger:hover,
+.atlas-unified-trigger:focus-visible,
+.atlas-unified-nav-list > li > a:hover,
+.atlas-unified-nav-list > li > a:focus-visible,
+.atlas-unified-trigger[aria-expanded="true"] {
+  background: #0a1d30;
+  color: #fff;
+  outline: none;
+}
+
+.atlas-unified-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  padding: 8px;
+  background: #071422;
+  border: 1px solid #1a4568;
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.atlas-unified-dropdown[hidden] { display: none !important; }
+
+.atlas-unified-dropdown a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: #d5e9f6;
+  text-decoration: none;
+  font-size: 0.86rem;
+}
+
+.atlas-unified-dropdown a:hover,
+.atlas-unified-dropdown a:focus-visible {
+  background: #0c2840;
+  outline: none;
+}
+
+.atlas-unified-actions,
+.atlas-nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.atlas-global-progress,
+.atlas-progress {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #8fb4cc;
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.atlas-global-progress strong,
+.atlas-progress strong { color: #e8f7ff; }
+
+.atlas-search-button,
+.atlas-search,
+.atlas-mobile-toggle,
+.atlas-menu-toggle,
+.atlas-nav__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+  border: 1px solid #1a4568;
+  border-radius: 12px;
+  background: #061321;
+  color: #dff5ff;
+  text-decoration: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+.atlas-start-learning,
+.atlas-start {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 14px;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #0a7cff, #18c9ef);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.atlas-mobile-toggle,
+.atlas-menu-toggle,
+.atlas-nav__close { display: none; }
+
+.not-in-build {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #382b12;
+  color: #ffd06f;
+  font-size: 0.65rem;
+  font-weight: 750;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.atlas-search-button,
+.atlas-search { position: relative; }
+
+.atlas-search-button .not-in-build,
+.atlas-search .not-in-build {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 14px;
+  top: 14px;
+  z-index: 200;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  background: #0b2c47;
+  color: #fff;
+  border: 1px solid #43cfff;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* The uploaded homepage referenced assets/atlas-globe-book-v2.webp, which
+   was not included. This diagram stands in until that file is added. */
+.home-page .globe {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(82, 228, 255, 0.5), rgba(20, 90, 150, 0.18) 26%, transparent 42%),
+    radial-gradient(circle at 50% 78%, rgba(8, 40, 70, 0.9), transparent 40%);
+}
+
+.home-news-hub {
+  width: min(1536px, 100%);
+  margin: 0 auto;
+  padding: 28px 34px 8px;
+}
+
+.home-news-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: end;
+  margin-bottom: 14px;
+}
+
+.home-news-head h2 { margin: 4px 0; }
+
+.home-news-head p,
+.home-news-head small { color: #91abc2; }
+
+.home-news-head a { color: #8fe6ff; font-weight: 700; }
+
+.home-news-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.home-news-card,
+.home-news-fallback {
+  display: block;
+  min-height: 140px;
+  padding: 14px;
+  border: 1px solid #173f5b;
+  border-radius: 14px;
+  background: #071422;
+  color: #d5e7f4;
+}
+
+.home-news-card h3 { margin: 6px 0; font-size: 0.95rem; }
+
+.home-news-card p,
+.home-news-fallback p { color: #91abc2; font-size: 0.82rem; }
+
+.home-news-card small { color: #61d9ff; letter-spacing: 0.06em; }
+
+@media (max-width: 980px) {
+  .atlas-mobile-toggle,
+  .atlas-menu-toggle { display: inline-flex; margin-left: auto; }
+
+  .atlas-unified-nav,
+  .atlas-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 8px 12px 16px;
+    background: #06101c;
+    border-bottom: 1px solid #1a4568;
+    max-height: calc(100dvh - 64px);
+    overflow: auto;
+    flex-direction: column;
+    align-items: stretch;
+    z-index: 90;
+  }
+
+  .atlas-unified-nav.is-open,
+  .atlas-nav.is-open { display: flex; }
+
+  .atlas-unified-nav-list,
+  .atlas-nav__list {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .atlas-unified-dropdown {
+    position: static;
+    min-width: 0;
+    margin: 0 8px 8px;
+    box-shadow: none;
+  }
+
+  .atlas-unified-actions,
+  .atlas-nav__actions {
+    flex-wrap: wrap;
+    padding: 8px;
+  }
+
+  .atlas-nav__close { display: inline-flex; align-self: flex-end; }
+
+  .home-news-hub { padding-left: 18px; padding-right: 18px; }
+
+  .home-news-head { flex-direction: column; align-items: flex-start; }
+
+  .home-news-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .atlas-unified-header__inner,
+  .atlas-header__inner { min-height: 62px; padding: 0 14px; }
+
+  .atlas-unified-brand__descriptor,
+  .atlas-brand__name { display: none; }
+
+  .home-news-grid { grid-template-columns: 1fr; }
+
+  .atlas-global-progress,
+  .atlas-progress { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .globe { animation: none !important; }
+}
