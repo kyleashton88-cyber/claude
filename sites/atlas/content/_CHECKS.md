@@ -87,3 +87,26 @@ solana-primer.md: 152 words
 --- problems ---
 PASS: no problems
 ```
+
+## Batch 5 — chains, primers, futures, frameworks, journal, macro, tax, automation — 2026-11-10
+
+Primers sit near 150 words. Strategies stay at framework level. Tax page links the ATO crypto guide, ASIC INFO 225, Moneysmart, and the AUSTRAC VASP register, and it does not apply those rules to a reader. Futures worked figures are marked Hypothetical example.
+
+```
+automation.md: 626 words
+chains.md: 629 words
+futures.md: 904 words
+hbar-primer.md: 149 words
+journal.md: 567 words
+link-primer.md: 159 words
+ltc-primer.md: 161 words
+macro-etf-flows.md: 565 words
+market-strategies.md: 737 words
+psychology.md: 546 words
+sui-primer.md: 157 words
+tax-regulation-au.md: 601 words
+xrp-primer.md: 164 words
+glossary.json rows: 435
+--- problems ---
+PASS: no problems
+```
