@@ -24,10 +24,13 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "skills" / "video-production"))
+from lib.fonts import font_file  # noqa: E402
+
 SCRIPTS = ROOT / "course" / "scripts"
 OUT = ROOT / "course" / "masters"
-FONT = "/usr/share/fonts/truetype/macos/Inter-Bold.ttf"
-FONT_REG = "/usr/share/fonts/truetype/macos/Inter-Regular.ttf"
+FONT = str(font_file("Inter", "Bold"))
+FONT_REG = str(font_file("Inter", "Regular"))
 WPM = 143
 DISCLAIMER = "Education only · Not financial advice · Examples do not indicate future results"
 # One Lanczos scale into 1920x1080. A 1536x1024 still covers the frame at

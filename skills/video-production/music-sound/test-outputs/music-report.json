@@ -2,21 +2,24 @@
   "beds": [
     {
       "file": "music-sound/test-outputs/beds/calm-C-major-72bpm.wav",
-      "integrated_lufs": -15.9,
-      "true_peak_dbfs": -5.2
+      "integrated_lufs": -13.9,
+      "true_peak_dbfs": -3.2
     },
     {
       "file": "music-sound/test-outputs/beds/focused-A-minor-84bpm.wav",
-      "integrated_lufs": -15.9,
-      "true_peak_dbfs": -5.7
+      "integrated_lufs": -13.9,
+      "true_peak_dbfs": -3.7
     },
     {
       "file": "music-sound/test-outputs/beds/hopeful-F-major-76bpm.wav",
-      "integrated_lufs": -15.9,
-      "true_peak_dbfs": -5.8
+      "integrated_lufs": -13.9,
+      "true_peak_dbfs": -3.8
     }
   ],
-  "elevenlabs": "not called",
-  "reason": "ELEVENLABS_API_KEY is not set. Procedural audio was used.",
-  "duck": "skipped, no voice file yet"
+  "standard": "voice -14 LUFS, bed -20 dB under the voice, true peak -1 dBTP",
+  "duck": {
+    "file": "mix/ducked.wav",
+    "integrated_lufs": -13.7,
+    "true_peak_dbfs": -2.1
+  }
 }

@@ -1,0 +1,36 @@
+{
+  "method": "acoustic-forced-align",
+  "median_error_ms": 0.0,
+  "target_ms": 80,
+  "pass": true,
+  "words": [
+    {
+      "text": "Price",
+      "ref_start": 0.0,
+      "got_start": 0.0,
+      "start_error_ms": 0.0,
+      "end_error_ms": 0.0
+    },
+    {
+      "text": "moves",
+      "ref_start": 0.68,
+      "got_start": 0.68,
+      "start_error_ms": 0.1,
+      "end_error_ms": 0.0
+    },
+    {
+      "text": "in",
+      "ref_start": 1.36,
+      "got_start": 1.36,
+      "start_error_ms": 0.0,
+      "end_error_ms": 0.1
+    },
+    {
+      "text": "candles",
+      "ref_start": 1.89,
+      "got_start": 1.89,
+      "start_error_ms": 0.0,
+      "end_error_ms": 0.1
+    }
+  ]
+}

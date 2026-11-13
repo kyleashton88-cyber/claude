@@ -13,7 +13,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from music.compose import SR, render_bed
 from music.duck import sidechain
-from music.eleven import api_key, compose_music
 from music.sfx import render_effect
 
 
@@ -44,10 +43,11 @@ class MusicTests(unittest.TestCase):
         under = float(np.sqrt(np.mean(ducked[sr // 2 + 1000 : sr + sr // 2 - 1000] ** 2)))
         self.assertLess(under, quiet * 0.5)
 
-    def test_missing_key_does_not_call_out(self):
-        if api_key():
-            self.skipTest("a key is present; the fallback is for the empty case")
-        self.assertIsNone(compose_music("calm bed", 10000, Path("/tmp/should-not-write.mp3")))
+    def test_house_loudness_is_the_one_standard(self):
+        from lib.mix import BED_UNDER_VOICE_DB, TRUE_PEAK_DBTP, VOICE_LUFS
+        self.assertEqual(VOICE_LUFS, -14.0)
+        self.assertEqual(TRUE_PEAK_DBTP, -1.0)
+        self.assertEqual(BED_UNDER_VOICE_DB, -20.0)
 
 
 if __name__ == "__main__":

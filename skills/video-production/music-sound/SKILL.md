@@ -1,13 +1,13 @@
 ---
 name: music-sound
-description: Original music beds and sound design for teaching videos. Use when a lesson needs a calm instrumental bed at a set mood, key, BPM, and length, or whooshes, clicks, a riser, a UI tick, a short ident sting, ducking under voice, and loudness mastering to -16 LUFS and -1 dBTP. Procedural by default. If ELEVENLABS_API_KEY is set, an optional ElevenLabs Music and Sound Effects adapter can be used, and it falls back to the procedural render when the key is missing or the call fails.
+description: Original music beds and sound design for teaching videos. Use when a lesson needs a calm instrumental bed at a set mood, key, BPM, and length, or whooshes, clicks, a riser, a UI tick, a short ident sting, and ducking under voice. The house mix is voice at -14 LUFS, the bed 20 dB under that, true peak -1 dBTP.
 ---
 
 # Music and sound
 
 Beds and effects are synthesized in numpy. There is no sample library and no soundfont, so there is nothing third-party to license inside the audio. See `LICENSES.md`.
 
-The mix uses the same idea as the lesson renderer: sidechain the bed under the voice, limit, then loudness-master.
+The mix is `lib/mix.py` `duck_under_voice`. The bed is mastered to −14 LUFS, lowered 20 dB, then sidechain-ducked. The voice is already at −14 LUFS / −1 dBTP. The sum is peak-limited and not normalised again.
 
 ## When to use
 
@@ -39,18 +39,9 @@ Keys: `C C# Db D Eb E F F# Gb G Ab A Bb B`. Scales: `major`, `minor`. BPM 40–1
 
 ## Ducking and loudness
 
-`cli.py duck` runs ffmpeg `sidechaincompress` (threshold 0.02, ratio 8, attack 20 ms, release 320 ms), mixes the dry voice back on top, limits at 0.89, then two-pass `loudnorm` to **-16 LUFS** and **-1 dBTP**.
+See `skills/video-production/lib/mix.py`. One function, one target.
 
-`music/duck.py` also has a numpy sidechain with the same shape of curve. The unit test checks that the bed falls by more than half under a loud voice. The shipped mix is the ffmpeg path, so it matches the lesson chain.
-
-## ElevenLabs adapter
-
-`music/eleven.py` reads `ELEVENLABS_API_KEY`.
-
-- Music: `POST /v1/music` with `force_instrumental: true`, `music_length_ms` between 3000 and 600000, model `music_v1` unless you change it.
-- Effects: `POST /v1/sound-generation`.
-
-If the key is unset, both functions return `None` and the caller keeps the procedural file. If the key is set and the call fails, the demo records the error and still keeps the procedural file. The adapter does not upload audio and does not call a voice-clone endpoint.
+Beds and mixes longer than three seconds are 48 kHz stereo. A standalone bed is mastered to −14 LUFS so the ducker can drop it 20 dB from a known level. An effect shorter than three seconds is peak-normalised to −1 dBTP.
 
 ## Run
 
@@ -74,9 +65,8 @@ Beds and mixes longer than three seconds are written as 48 kHz stereo 16-bit WAV
 |---|---|---|
 | `unknown mood` / `unknown key` | The name is not in the tables. | Use a listed mood, key, and scale. |
 | `bpm must be between 40 and 140` | Tempo is outside the range the arrangement is written for. | Pick a tempo inside the range. |
-| Loudness is not -16 | The file was shorter than the meter can settle, or a later edit skipped loudnorm. | Re-run through `cli.py bed` or `cli.py duck`. Check with `ffmpeg -i file -af ebur128`. |
+| Loudness is not −14 | The file skipped `master_audio`, or it is shorter than three seconds and was only peak-limited. | Re-run `cli.py bed` or `cli.py duck`. |
 | Duck does nothing | The voice is silent, or it is far below the sidechain threshold. | Confirm the voice file has level. The numpy test uses a 0.4 tone against a 0.2 bed. |
-| ElevenLabs returns an error | Key, plan, or a length outside 3–600 seconds. | The procedural bed is the fallback. Read `music-report.json`. |
 | Bed feels busy under speech | Hats are on. | Use `calm`, which has no tick. |
 
 ## Test

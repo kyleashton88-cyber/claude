@@ -1,7 +1,8 @@
-"""One interface for Piper and ElevenLabs."""
+"""Kokoro or Piper, one call. Paid speech APIs are not part of this skill."""
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 
@@ -9,130 +10,136 @@ import numpy as np
 import soundfile as sf
 
 from lib.ffmpeg_util import loudnorm_wav
-from voice.markup import Word, cache_key, chunk_text, estimate, parse_segments, write_vtt
+from lib.mix import VOICE_LUFS, TRUE_PEAK_DBTP
+from voice.align import Word, align_templates, phoneme_fallback
+from voice.captions import write_srt, write_vtt, write_words
+from voice.markup import _sentences, parse_markup, section_breaks, written_text
+from voice.moods import DEFAULT_ENGINE, DEFAULT_MOOD, kokoro_speed, mood as mood_preset, piper_length_scale
+from voice.pronounce import apply_pronunciation
+
+CACHE = Path.home() / ".cache" / "video-production" / "voice"
 
 
-def _fade(audio: np.ndarray, sample_rate: int, ms: float = 6.0) -> np.ndarray:
-    n = min(len(audio) // 4, int(sample_rate * ms / 1000))
-    if n < 2:
+def _trim(audio: np.ndarray, sr: int) -> np.ndarray:
+    if len(audio) == 0:
         return audio
-    ramp = np.linspace(0.0, 1.0, n, dtype=np.float32)
-    audio = audio.copy()
-    audio[:n] *= ramp
-    audio[-n:] *= ramp[::-1]
-    return audio
+    thr = 10 ** (-42 / 20)
+    idx = np.where(np.abs(audio) > thr)[0]
+    if len(idx) == 0:
+        return audio
+    pad = int(0.03 * sr)
+    out = audio[max(0, int(idx[0]) - pad): min(len(audio), int(idx[-1]) + pad)].copy()
+    fade = min(len(out) // 4, int(0.01 * sr))
+    if fade > 1:
+        out[:fade] *= np.linspace(0, 1, fade, dtype=np.float32)
+        out[-fade:] *= np.linspace(1, 0, fade, dtype=np.float32)
+    return out
 
 
-def _load_cached(path: Path) -> tuple[np.ndarray, int, list[Word], str] | None:
-    meta_path = path.with_suffix(".json")
-    if not path.is_file() or not meta_path.is_file():
-        return None
-    meta = json.loads(meta_path.read_text())
-    audio, sample_rate = sf.read(str(path), dtype="float32", always_2d=False)
-    words = [Word(item["text"], item["start"], item["end"]) for item in meta["words"]]
-    return np.asarray(audio, dtype=np.float32), int(sample_rate), words, meta.get("method", "cache")
-
-
-def _store_cache(path: Path, audio: np.ndarray, sample_rate: int, words: list[Word], method: str) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    sf.write(str(path), audio, sample_rate)
-    path.with_suffix(".json").write_text(
-        json.dumps({"method": method, "words": [word.as_dict() for word in words]}, indent=2)
-    )
+def _pitch(audio: np.ndarray, semitones: float) -> np.ndarray:
+    if abs(semitones) < 0.05 or len(audio) < 8:
+        return audio
+    factor = 2 ** (semitones / 12.0)
+    stretched = np.interp(np.linspace(0, len(audio) - 1, int(len(audio) / factor)), np.arange(len(audio)), audio)
+    return np.interp(np.linspace(0, len(stretched) - 1, len(audio)), np.arange(len(stretched)), stretched).astype(np.float32)
 
 
 class Speaker:
-    def __init__(self, engine: str = "piper", voice: str = "lessac", model: str | None = None, cache_dir: Path | None = None, **kwargs):
+    def __init__(self, engine: str = DEFAULT_ENGINE, mood: str = DEFAULT_MOOD, cache: bool = True):
+        if engine not in ("kokoro", "piper"):
+            raise ValueError("engine must be kokoro or piper. There is no paid speech engine.")
         self.engine_name = engine
-        self.cache_dir = cache_dir
-        if engine == "piper":
+        self.mood_name = mood
+        self.preset = mood_preset(mood)
+        self.cache = cache
+        if engine == "kokoro":
+            from voice.kokoro_engine import KokoroEngine
+            self.engine = KokoroEngine(voice=self.preset["kokoro_voice"])
+        else:
             from voice.piper_engine import PiperEngine
+            self.engine = PiperEngine(voice=self.preset["piper_voice"])
 
-            if voice not in ("lessac", "en_US-lessac-medium"):
-                raise ValueError("the installed Piper stock voice is lessac. ElevenLabs stock names need --engine elevenlabs.")
-            self.engine = PiperEngine(**{k: v for k, v in kwargs.items() if k in ("length_scale", "noise_scale", "noise_w_scale", "model")})
-            self.model = self.engine.settings["model"]
-            self.voice = "lessac"
-        elif engine == "elevenlabs":
-            from voice.elevenlabs import ElevenLabsEngine
+    def _cache_key(self, text: str, rate: float) -> str:
+        blob = json.dumps({"e": self.engine_name, "m": self.mood_name, "r": round(rate, 3), "t": text}, sort_keys=True)
+        return hashlib.sha256(blob.encode()).hexdigest()[:24]
 
-            self.model = model or "eleven_multilingual_v2"
-            self.voice = voice or "Brian"
-            self.engine = ElevenLabsEngine(voice=self.voice, model=self.model, **kwargs)
+    def say(self, text: str, rate: float = 1.0) -> tuple[np.ndarray, int]:
+        spoken = apply_pronunciation(text)
+        key = self._cache_key(spoken, rate)
+        path = CACHE / f"{key}.npy"
+        meta = CACHE / f"{key}.json"
+        if self.cache and path.is_file() and meta.is_file():
+            info = json.loads(meta.read_text())
+            return np.load(path), int(info["sr"])
+        if self.engine_name == "kokoro":
+            audio, sr = self.engine.say(spoken, kokoro_speed(self.mood_name, rate))
         else:
-            raise ValueError("engine must be piper or elevenlabs")
-
-    def quote(self, text: str) -> dict:
-        return estimate(text, self.engine_name, self.model if self.engine_name == "elevenlabs" else None)
-
-    def synthesize_chunk(self, text: str, previous: str = "", following: str = "") -> tuple[np.ndarray, int, list[Word], str]:
-        settings = self.engine.settings
-        key = cache_key({"engine": self.engine_name, "settings": settings, "text": text, "previous": previous, "following": following})
-        if self.cache_dir:
-            cached = _load_cached(self.cache_dir / f"{key}.wav")
-            if cached:
-                return cached
-        if self.engine_name == "piper":
-            audio, sample_rate, words, method = self.engine.synthesize(text)
-        else:
-            audio, sample_rate, words, method = self.engine.synthesize(text, previous, following)
-        if self.cache_dir:
-            _store_cache(self.cache_dir / f"{key}.wav", audio, sample_rate, words, method)
-        return audio, sample_rate, words, method
+            audio, sr = self.engine.say(spoken, piper_length_scale(self.mood_name, rate))
+        audio = _trim(audio, sr)
+        audio = _pitch(audio, self.preset["pitch_semitones"] + (0.4 if rate < 1 else 0.0))
+        audio = (audio * self.preset["energy"]).astype(np.float32)
+        if self.cache:
+            CACHE.mkdir(parents=True, exist_ok=True)
+            np.save(path, audio)
+            meta.write_text(json.dumps({"sr": sr}))
+        return audio, sr
 
     def render(self, text: str) -> tuple[np.ndarray, int, list[Word], str]:
-        events: list[tuple] = []
-        sample_rate = None
-        method = ""
-        for kind, payload in parse_segments(text):
-            if kind == "pause":
-                events.append(("pause", float(payload)))
-                continue
-            chunks = chunk_text(str(payload))
-            for index, chunk in enumerate(chunks):
-                previous = chunks[index - 1] if index else ""
-                following = chunks[index + 1] if index + 1 < len(chunks) else ""
-                audio, rate, chunk_words, method = self.synthesize_chunk(chunk, previous, following)
-                if sample_rate is None:
-                    sample_rate = rate
-                if rate != sample_rate:
-                    raise RuntimeError("a chunk came back at a different sample rate")
-                events.append(("audio", _fade(np.asarray(audio, dtype=np.float32).reshape(-1), rate), chunk_words))
-        if sample_rate is None:
-            raise ValueError("nothing to speak")
         pieces: list[np.ndarray] = []
-        words: list[Word] = []
-        clock = 0.0
-        for event in events:
-            if event[0] == "pause":
-                pieces.append(np.zeros(int(event[1] * sample_rate), dtype=np.float32))
-                clock += event[1]
-            else:
-                audio, chunk_words = event[1], event[2]
-                for word in chunk_words:
-                    words.append(Word(word.text, word.start + clock, word.end + clock))
-                pieces.append(audio)
-                clock += len(audio) / sample_rate
-        return np.concatenate(pieces), sample_rate, words, method
+        sample_rate = None
+        blocks = section_breaks(text)
+        for index, block in enumerate(blocks):
+            for span in parse_markup(block):
+                if span.kind == "pause":
+                    if sample_rate is None:
+                        continue
+                    pieces.append(np.zeros(int(span.pause * self.preset["pause_scale"] * sample_rate), dtype=np.float32))
+                    continue
+                lines = _sentences(span.text)
+                for line_index, (line, pause) in enumerate(lines):
+                    if not line or not line.strip(".,!?;:…"):
+                        if sample_rate:
+                            pieces.append(np.zeros(int(max(pause, 0.12) * sample_rate), dtype=np.float32))
+                        continue
+                    audio, rate = self.say(line, span.rate)
+                    if sample_rate is None:
+                        sample_rate = rate
+                    if rate != sample_rate:
+                        raise RuntimeError("a line came back at a different sample rate")
+                    pieces.append(audio)
+                    gap = pause * self.preset["pause_scale"]
+                    if line_index < len(lines) - 1 or span.kind == "speech":
+                        pieces.append(np.zeros(int(gap * sample_rate), dtype=np.float32))
+            if index < len(blocks) - 1 and sample_rate:
+                pieces.append(np.zeros(int(self.preset["breath"] * sample_rate), dtype=np.float32))
+        if not pieces or sample_rate is None:
+            raise ValueError("nothing to speak")
+        utterance = np.concatenate(pieces)
+        words = written_text(text).split()
+        templates = []
+        for word in words:
+            template, rate = self.say(word.strip(".,!?;:"), 1.0)
+            if rate != sample_rate:
+                raise RuntimeError("template sample rate changed")
+            templates.append(template)
+        try:
+            aligned = align_templates(utterance, sample_rate, words, templates)
+            method = "acoustic-forced-align"
+        except Exception:
+            aligned = phoneme_fallback(words, len(utterance) / sample_rate)
+            method = "phoneme-weighted-fallback"
+        return utterance, sample_rate, aligned, method
 
 
 def render_to_file(text: str, dest: Path, speaker: Speaker) -> dict:
-    quote = speaker.quote(text)
     audio, sample_rate, words, method = speaker.render(text)
     dest.parent.mkdir(parents=True, exist_ok=True)
     raw = dest.with_suffix(".raw.wav")
     sf.write(str(raw), audio, sample_rate)
-    loudnorm_wav(raw, dest, integrated=-16.0, true_peak=-1.0)
+    loudnorm_wav(raw, dest, integrated=VOICE_LUFS, true_peak=TRUE_PEAK_DBTP)
     raw.unlink(missing_ok=True)
-    vtt = dest.with_suffix(".vtt")
-    write_vtt(words, vtt)
-    sidecar = dest.with_suffix(".json")
-    payload = {
-        "estimate": quote,
-        "alignment": method,
-        "words": [word.as_dict() for word in words],
-        "wav": dest.name,
-        "vtt": vtt.name,
-    }
-    sidecar.write_text(json.dumps(payload, indent=2) + "\n")
-    return payload
+    write_words(dest.with_suffix(".words.json"), words, engine=speaker.engine_name, mood=speaker.mood_name, method=method)
+    write_vtt(dest.with_suffix(".vtt"), words)
+    write_srt(dest.with_suffix(".srt"), words)
+    # Loudnorm keeps duration, so the word times still match the mastered file.
+    return {"method": method, "words": len(words), "wav": str(dest)}

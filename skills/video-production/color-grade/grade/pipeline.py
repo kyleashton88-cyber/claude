@@ -8,6 +8,7 @@ from pathlib import Path
 import numpy as np
 
 from lib.ffmpeg_util import ffmpeg_bin, run
+from lib.fonts import font_file
 
 
 def sample_frames(path: Path, count: int = 8, width: int = 160, height: int = 90) -> np.ndarray:
@@ -160,7 +161,7 @@ def signal_range(path: Path) -> dict[str, float]:
 
 def write_scopes(src: Path, wave: Path, vectors: Path) -> None:
     wave.parent.mkdir(parents=True, exist_ok=True)
-    font = "/usr/share/fonts/truetype/macos/Inter-Medium.ttf"
+    font = str(font_file("Inter", "Medium"))
     run(
         [
             ffmpeg_bin(), "-y", "-hide_banner", "-ss", "0.4", "-i", str(src),
@@ -183,7 +184,7 @@ def write_scopes(src: Path, wave: Path, vectors: Path) -> None:
 
 def write_split(before: Path, after: Path, dest: Path, label: str) -> None:
     dest.parent.mkdir(parents=True, exist_ok=True)
-    font = "/usr/share/fonts/truetype/macos/Inter-Bold.ttf"
+    font = str(font_file("Inter", "Bold"))
     filt = (
         f"[0:v]scale=960:1080:flags=lanczos,drawtext=fontfile={font}:text='BEFORE':"
         f"x=32:y=32:fontsize=40:fontcolor=white:box=1:boxcolor=0x00000099[a];"

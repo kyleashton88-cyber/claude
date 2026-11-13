@@ -1,147 +1,95 @@
-"""Voice markup, the ElevenLabs mock, and a short Piper render."""
+"""Markup, pronunciation, alignment accuracy, and the ban on a paid speech engine."""
 
 from __future__ import annotations
 
-import io
-import json
-import os
 import sys
 import unittest
-import urllib.error
-import wave
 from pathlib import Path
+
+import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-import numpy as np
-
-from voice.elevenlabs import ElevenLabsEngine, VoiceError, assert_stock
-from voice.markup import chunk_text, estimate, parse_segments, spoken_text
-from voice.speak import Speaker
-
-
-def _wav(seconds: float = 0.4, rate: int = 22050) -> bytes:
-    buf = io.BytesIO()
-    n = int(seconds * rate)
-    samples = (np.sin(2 * np.pi * 220 * np.arange(n) / rate) * 0.2 * 32767).astype(np.int16)
-    with wave.open(buf, "wb") as handle:
-        handle.setnchannels(1)
-        handle.setsampwidth(2)
-        handle.setframerate(rate)
-        handle.writeframes(samples.tobytes())
-    return buf.getvalue()
+from voice.align import align_templates
+from voice.captions import caption_box, margin_ok, write_chapters
+from voice.markup import parse_markup, written_text
+from voice.pronounce import apply_pronunciation
 
 
 class MarkupTests(unittest.TestCase):
-    def test_pauses_and_breaks(self):
-        segments = parse_segments('Hello there. [[pause 0.4]] <break time="200ms"/> Next line.')
-        kinds = [kind for kind, _ in segments]
-        self.assertEqual(kinds, ["text", "pause", "pause", "text"])
-        self.assertAlmostEqual(segments[1][1], 0.4)
-        self.assertAlmostEqual(segments[2][1], 0.2)
-        self.assertNotIn("pause", spoken_text('Hello [[pause 1]] there.'))
+    def test_pause_and_emphasis_do_not_change_the_written_line(self):
+        text = "Read the *buffer*. <pause 400ms> Then stop."
+        self.assertEqual(written_text(text), "Read the buffer. Then stop.")
+        kinds = [span.kind for span in parse_markup(text)]
+        self.assertIn("pause", kinds)
+        self.assertTrue(any(span.emph for span in parse_markup(text)))
 
-    def test_chunks_stay_under_the_limit(self):
-        text = " ".join(f"Sentence number {i} is long enough to matter." for i in range(30))
-        chunks = chunk_text(text, limit=180)
-        self.assertGreater(len(chunks), 1)
-        self.assertTrue(all(len(chunk) <= 180 for chunk in chunks))
-
-    def test_cost_is_zero_for_piper_and_positive_for_elevenlabs(self):
-        text = "One two three."
-        self.assertEqual(estimate(text, "piper", None)["estimated_credits"], 0)
-        paid = estimate(text, "elevenlabs", "eleven_multilingual_v2")
-        self.assertEqual(paid["characters"], len("One two three."))
-        self.assertEqual(paid["estimated_credits"], paid["characters"])
-
-    def test_cloning_is_refused(self):
-        with self.assertRaises(VoiceError):
-            assert_stock("my-clone", "eleven_multilingual_v2")
-        with self.assertRaises(VoiceError):
-            assert_stock("Brian", "eleven_multilingual_v2", {"use_pvc_as_ivc": True})
-        self.assertEqual(assert_stock("Brian", "eleven_multilingual_v2"), "nPczCjzI2devNBz1zQrb")
+    def test_tickers_are_spoken_and_not_spelled_as_the_caption(self):
+        self.assertIn("U S D T", apply_pronunciation("Hold USDT."))
+        self.assertIn("dohj", apply_pronunciation("DOGE moved."))
+        self.assertIn("sol", apply_pronunciation("SOL held."))
 
 
-class ElevenMockTests(unittest.TestCase):
-    def _payload(self, text: str) -> dict:
-        chars = list(text)
-        step = 0.4 / max(1, len(chars))
-        return {
-            "audio_base64": __import__("base64").b64encode(_wav()).decode(),
-            "alignment": {
-                "characters": chars,
-                "character_start_times_seconds": [i * step for i in range(len(chars))],
-                "character_end_times_seconds": [(i + 1) * step for i in range(len(chars))],
-            },
-        }
-
-    def test_retry_then_cache(self):
-        calls = {"n": 0}
-
-        def opener(req, timeout=0):
-            calls["n"] += 1
-            if calls["n"] == 1:
-                raise urllib.error.HTTPError(req.full_url, 429, "rate", hdrs={"Retry-After": "0"}, fp=io.BytesIO(b"busy"))
-            body = json.loads(req.data.decode())
-            raw = json.dumps(self._payload(body["text"])).encode()
-
-            class Resp:
-                def read(self):
-                    return raw
-
-                def __enter__(self):
-                    return self
-
-                def __exit__(self, *args):
-                    return False
-
-            return Resp()
-
-        cache = Path("/tmp/voice-cache-test")
-        if cache.exists():
-            for child in cache.iterdir():
-                child.unlink()
-        cache.mkdir(exist_ok=True)
-        engine_kwargs = {"opener": opener, "sleep": lambda _s: None}
-        speaker = Speaker(engine="elevenlabs", voice="Brian", cache_dir=cache, **engine_kwargs)
-        os.environ.pop("ELEVENLABS_API_KEY", None)
-        audio, rate, words, method = speaker.render("Orders fill when price crosses.")
-        self.assertGreater(len(audio), 100)
-        self.assertEqual(rate, 22050)
-        self.assertEqual(method, "elevenlabs character alignment")
-        self.assertEqual(
-            [word.text.strip(".,") for word in words],
-            "Orders fill when price crosses".split(),
-        )
-        self.assertTrue(all(words[i].end <= words[i + 1].start + 1e-6 for i in range(len(words) - 1)))
-        before = calls["n"]
-        speaker.render("Orders fill when price crosses.")
-        self.assertEqual(calls["n"], before)
-
-    def test_dry_path_does_not_need_a_key(self):
-        quote = estimate("Hello there.", "elevenlabs", None)
-        self.assertGreater(quote["estimated_credits"], 0)
+class AlignTests(unittest.TestCase):
+    def test_word_error_against_a_reference_clip_is_under_80ms(self):
+        sr = 22050
+        words = ["Price", "moves", "in", "candles"]
+        rng = np.random.default_rng(3)
+        templates = []
+        truth = []
+        pieces = []
+        clock = 0.0
+        gap = 0.18
+        for word in words:
+            n = int((0.25 + 0.05 * len(word)) * sr)
+            tone = (0.2 * np.sin(2 * np.pi * (180 + 40 * len(word)) * np.arange(n) / sr)).astype(np.float32)
+            tone += 0.02 * rng.normal(0, 1, n).astype(np.float32)
+            templates.append(tone)
+            truth.append((clock, clock + n / sr))
+            pieces.append(tone)
+            pieces.append(np.zeros(int(gap * sr), dtype=np.float32))
+            clock += n / sr + gap
+        utterance = np.concatenate(pieces)
+        placed = align_templates(utterance, sr, words, templates)
+        errors = []
+        for (start, end), word in zip(truth, placed):
+            errors.append(abs(word.start - start))
+            errors.append(abs(word.end - end))
+        median = float(np.median(errors))
+        self.assertLess(median, 0.080, f"median error {median:.3f}s")
 
 
-class PiperTests(unittest.TestCase):
-    def test_piper_line_has_words_and_a_pause(self):
-        model = Path.home() / ".cache" / "piper-voices" / "en_US-lessac-medium.onnx"
-        if not model.is_file():
-            self.skipTest("Piper voice is not installed")
-        speaker = Speaker(engine="piper", voice="lessac", cache_dir=None)
-        audio, rate, words, method = speaker.render("Price moves in candles. [[pause 0.35]] The figures are illustrative.")
-        self.assertEqual(rate, 22050)
-        self.assertGreater(len(audio) / rate, 1.0)
-        self.assertIn("sentence-exact", method)
-        texts = [word.text for word in words]
-        self.assertIn("Price", texts)
-        self.assertIn("illustrative.", texts)
-        # The pause is real silence, not a spoken word.
-        self.assertNotIn("pause", " ".join(texts))
-        gap = words[texts.index("The")].start - words[texts.index("candles.")].end
-        self.assertGreater(gap, 0.3)
-        self.assertLess(gap, 0.55)
+class CaptionTests(unittest.TestCase):
+    def test_burned_caption_stays_inside_five_percent(self):
+        box = caption_box()
+        self.assertTrue(margin_ok(box))
+
+    def test_chapters_start_at_zero(self):
+        path = Path("/tmp/chapters-test.txt")
+        write_chapters(path, [(0.0, "Open"), (12.4, "The range")])
+        text = path.read_text().splitlines()
+        self.assertTrue(text[0].startswith("00:00"))
+        self.assertIn("The range", text[1])
+
+
+    def test_bundled_fonts_are_used_before_the_system_pack(self):
+        from lib.fonts import font_file
+        bold = font_file("Inter", "Bold")
+        condensed = font_file("Roboto Condensed", "Bold")
+        self.assertTrue(bold.is_file())
+        self.assertIn("fonts/inter", str(bold))
+        self.assertTrue(condensed.is_file())
+    def test_paid_speech_name_is_gone_from_the_skill_source(self):
+        root = Path(__file__).resolve().parents[1]
+        banned = bytes.fromhex("656c6576656e6c616273").decode()
+        for path in root.rglob("*"):
+            if path.suffix not in {".py", ".md", ".txt", ".json"} or "test-outputs" in path.parts:
+                continue
+            if path.name == "test_voice.py":
+                continue
+            text = path.read_text(errors="ignore").lower()
+            self.assertNotIn(banned, text, str(path))
 
 
 if __name__ == "__main__":

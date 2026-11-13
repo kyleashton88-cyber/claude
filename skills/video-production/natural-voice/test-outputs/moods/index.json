@@ -1,0 +1,66 @@
+[
+  {
+    "file": "piper-calm-teacher.wav",
+    "method": "acoustic-forced-align",
+    "words": 69,
+    "wav": "test-outputs/moods/piper-calm-teacher.wav",
+    "mood": "calm-teacher",
+    "engine": "piper"
+  },
+  {
+    "file": "piper-upbeat-intro.wav",
+    "method": "acoustic-forced-align",
+    "words": 69,
+    "wav": "test-outputs/moods/piper-upbeat-intro.wav",
+    "mood": "upbeat-intro",
+    "engine": "piper"
+  },
+  {
+    "file": "piper-serious-risk.wav",
+    "method": "acoustic-forced-align",
+    "words": 69,
+    "wav": "test-outputs/moods/piper-serious-risk.wav",
+    "mood": "serious-risk",
+    "engine": "piper"
+  },
+  {
+    "file": "piper-recap.wav",
+    "method": "acoustic-forced-align",
+    "words": 69,
+    "wav": "test-outputs/moods/piper-recap.wav",
+    "mood": "recap",
+    "engine": "piper"
+  },
+  {
+    "file": "kokoro-calm-teacher.wav",
+    "method": "acoustic-forced-align",
+    "words": 69,
+    "wav": "test-outputs/moods/kokoro-calm-teacher.wav",
+    "mood": "calm-teacher",
+    "engine": "kokoro"
+  },
+  {
+    "file": "kokoro-upbeat-intro.wav",
+    "method": "acoustic-forced-align",
+    "words": 69,
+    "wav": "test-outputs/moods/kokoro-upbeat-intro.wav",
+    "mood": "upbeat-intro",
+    "engine": "kokoro"
+  },
+  {
+    "file": "kokoro-serious-risk.wav",
+    "method": "acoustic-forced-align",
+    "words": 69,
+    "wav": "test-outputs/moods/kokoro-serious-risk.wav",
+    "mood": "serious-risk",
+    "engine": "kokoro"
+  },
+  {
+    "file": "kokoro-recap.wav",
+    "method": "acoustic-forced-align",
+    "words": 69,
+    "wav": "test-outputs/moods/kokoro-recap.wav",
+    "mood": "recap",
+    "engine": "kokoro"
+  }
+]

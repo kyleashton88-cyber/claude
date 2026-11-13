@@ -126,7 +126,7 @@ def peak_normalize(src: Path, dest: Path, *, true_peak: float = -1.0) -> dict:
     return {"mode": "peak", "max_volume_db": max_volume, "gain_db": round(gain, 3)}
 
 
-def master_audio(src: Path, dest: Path, *, integrated: float = -16.0, true_peak: float = -1.0) -> dict:
+def master_audio(src: Path, dest: Path, *, integrated: float = -14.0, true_peak: float = -1.0) -> dict:
     """Loudness-master a bed or a mix. Peak-normalize anything shorter than 3 seconds."""
     info = probe(src)
     duration = float(info["format"]["duration"])
@@ -141,7 +141,7 @@ def loudnorm_wav(
     src: Path,
     dest: Path,
     *,
-    integrated: float = -16.0,
+    integrated: float = -14.0,
     true_peak: float = -1.0,
     lra: float = 11.0,
 ) -> dict:

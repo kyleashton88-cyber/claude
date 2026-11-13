@@ -12,9 +12,12 @@ from lib.brand import H, W
 from lib.ffmpeg_util import ffmpeg_bin
 
 
-def _font(size: int) -> ImageFont.FreeTypeFont:
-    path = "/usr/share/fonts/truetype/macos/Inter-Medium.ttf"
-    return ImageFont.truetype(path, size)
+from lib.fonts import font_file
+
+
+def _font(size: int):
+    from PIL import ImageFont
+    return ImageFont.truetype(str(font_file("Inter", "Medium")), size)
 
 
 def paint_card(t: float) -> Image.Image:

@@ -1,110 +1,70 @@
 ---
 name: natural-voice
-description: One voice interface for teaching narration, voice=piper or voice=elevenlabs. Use when a lesson needs speech with pauses, long-script chunking, a character-cost estimate before any paid call, per-line caching, retries, loudness-normalised wav, and word timings for captions. Piper is the free local voice. ElevenLabs is stock voices only. Never clone a voice, never upload a recording of a person, and never call a voice-creation endpoint.
+description: In-house narration for teaching videos. Kokoro af_heart is the default, Piper lessac is the other free voice. Use for mood presets, ticker pronunciation, emphasis markup, forced word timings, and SRT or VTT captions. There is no paid speech API.
 ---
 
 # Natural voice
 
-`voice=piper` and `voice=elevenlabs` share one call: `Speaker(...).render(text)` then `render_to_file`. Both return a WAV at -16 LUFS / -1 dBTP, a WebVTT, and a JSON sidecar of word times.
+One skill, two free engines, the same pauses, the same moods, and the same word times.
 
-## When to use
+Kokoro `af_heart` is the default because that is the voice on the existing masters. Piper `lessac` is the side-by-side alternative. Both are self-hosted. Models download into the home cache and are not committed.
 
-- A lesson needs narration and caption times.
-- You want the free Piper voice, or a paid ElevenLabs stock voice, without two different caption pipelines.
-- A script is long enough that one request would wander in pace. Chunking keeps one config on every piece.
+## Loudness
 
-## When not to use
+Voice tracks are mastered to **−14 LUFS** integrated and **−1 dBTP**. That is the single house target, shared with the music bed and the production pipeline. See `lib/mix.py` for the four older numbers this replaced.
 
-- Anything that needs a clone, an instant voice, a professional voice clone, or `use_pvc_as_ivc`. Those words are refused.
-- A voice that is not in the stock list, unless you pass a stock voice id from the account on purpose. The client still only calls text-to-speech.
+## Moods
 
-## Shared text
+| Mood | Words per minute | What changes |
+|---|---|---|
+| `calm-teacher` | 148 | The default lesson voice. |
+| `upbeat-intro` | 176 | Shorter pauses, a small pitch lift. |
+| `serious-risk` | 126 | Longer pauses, a little lower. |
+| `recap` | 152 | A slightly longer breath between sections. |
 
-Pauses, both of these, become exact silence. They are not sent to the engine (Piper would read `[[` as raw phonemes).
+Kokoro speed and Piper `length_scale` are both derived from that words-per-minute target. Measured bases: Kokoro speed 1.0 is about 197 wpm. Piper lessac at `length_scale` 1.0 is about 222 wpm.
+
+## Markup
 
 ```
-[[pause 0.4]]
-<break time="400ms"/>
-<break time="0.4s"/>
+A grid places *buy* orders below the price. <pause 400ms>
+<slow>Read the buffer.</slow>
 ```
 
-A pause must be between 0 and 10 seconds.
+`*word*` and `<emph>` are a little faster, louder, and higher. `<slow>` and `<fast>` change the rate of that span. `[[pause 0.4]]` and `<pause 400ms>` are exact silence. A blank line is a breath, and the mood sets how long it is. Stops, questions, and commas take the pauses from the lesson narrator.
 
-Spoken text is packed into chunks of at most 420 characters, on sentence boundaries, then on words. The same synthesis settings are used for every chunk. ElevenLabs also receives `previous_text` and `next_text` so the join stays in the same delivery. Piper has one `SynthesisConfig` for the whole script (`length_scale` 1.05, `noise_scale` 0.5, `noise_w_scale` 0.6).
+Tickers are in `voice/pronounce.py`. `USDT` is spoken as four letters. The caption still says `USDT`.
 
-## Engines
+## Word times
 
-| Engine | Voice | Alignment | Cost |
-|---|---|---|---|
-| `piper` | `lessac` only, the stock `en_US-lessac-medium` model | Sentence edges are exact, because each sentence is its own audio chunk. Words inside a sentence are weighted by phoneme count. | 0 |
-| `elevenlabs` | A name in `voice/markup.py` `STOCK_VOICES`, default `Brian` | Character times from `/with-timestamps`, grouped into words. | Estimated credits, printed first |
+`words.json` uses schema `video-production.words.v1`:
 
-ElevenLabs models and the estimate used before a call:
+```json
+{"schema": "video-production.words.v1", "engine": "kokoro", "mood": "calm-teacher", "method": "acoustic-forced-align", "words": [{"text": "A", "start": 0.0, "end": 0.12}]}
+```
 
-| Model | Credits per character (estimate) |
-|---|---|
-| `eleven_multilingual_v2` (default) | 1 |
-| `eleven_turbo_v2_5` | 0.5 |
-| `eleven_flash_v2_5` | 0.5 |
-
-The real bill follows the account plan. The estimate is there so a long script is priced before it runs.
+Each written word is spoken again with the same engine and found, left to right, in the utterance. If that placement fails, times fall back to phoneme weights. `.vtt` and `.srt` are written from the same words. A test checks median start and end error against a reference clip and requires it to be under 80 ms.
 
 ## Run
 
 ```bash
 cd skills/video-production/natural-voice
-python3 cli.py estimate --engine elevenlabs --text "Hello there."
-python3 cli.py say --engine piper --text 'Price moves. [[pause 0.4]] The figures are illustrative.' --out out.wav
-python3 cli.py say --engine elevenlabs --voice Brian --text "Hello there." --yes --out out.wav
+python3 cli.py say --engine kokoro --mood calm-teacher --text "A grid places buy orders." --out out.wav
+python3 cli.py samples --out test-outputs/moods
 ```
 
-`--yes` is required for ElevenLabs. Without it the CLI prints the estimate and does not call the API. Piper does not need `--yes`.
+`samples` renders one script, about twenty-five seconds at the calm pace, in all four moods, once with Piper and once with Kokoro.
 
-Set `PIPER_MODEL` to point at a different local `.onnx`. The default is `~/.cache/piper-voices/en_US-lessac-medium.onnx`. If it is missing, the engine downloads the stock Lessac medium model and its JSON from the Piper voices release. The model is not committed.
+## A custom voice, later
 
-Set `ELEVENLABS_API_KEY` for the paid path. This environment did not have the key, so the live sample was not rendered. The Piper sample in `test-outputs/` is the committed proof. The ElevenLabs path is covered by a mocked API test (retry, cache, alignment, clone refusal).
-
-## Outputs
-
-Next to the wav:
-
-- `.vtt` — caption cues, about eight words or 42 characters.
-- `.json` — the estimate, the alignment method, and every word with `start` and `end` in seconds.
-
-Audio is 48 kHz stereo after the loudness pass, even though Piper speaks at 22050 mono. Duration is unchanged, so the word times still match.
-
-Cache: `~/.cache/video-production/voice/<sha256>.wav` plus a JSON of the words. The key is the engine, the settings, the chunk text, and the previous/next chunk. A repeat does not call the engine again.
-
-## Retries
-
-ElevenLabs retries 429, 500, 502, 503, and 504, up to four attempts, waiting on `Retry-After` or else 1s, 2s, 4s. 401 and 403 are not retried.
+`custom_voice/TRAINING.md` is the guide. `prepare_dataset.py` builds a Piper dataset and refuses to run without a filled consent file. It does not train. No one's voice is in this repo.
 
 ## Failure modes
 
 | What you see | Why | What to do |
 |---|---|---|
-| `ELEVENLABS_API_KEY is not set` | Paid engine, no key. | Export the key and pass `--yes`, or use `--engine piper`. |
-| Dry run, no file | `--yes` was left off. | Read the estimate, then re-run with `--yes`. |
-| `Voice cloning is disabled` | The voice, model, or settings contained clone / ivc / pvc. | Pick a stock name. Do not retry with a recording. |
-| `unknown stock voice` | The name is not in `STOCK_VOICES`. | Use a listed name, or a stock voice id of 16+ letters. |
-| `the installed Piper stock voice is lessac` | Another Piper voice was requested and is not installed. | Stay on `lessac`, or set `PIPER_MODEL` and extend the allow-list on purpose. |
-| Piper download fails | The model host is blocked. | Copy the onnx and the `.onnx.json` to the cache path yourself. |
-| Word times look even inside a sentence | Piper's Lessac model does not emit phoneme durations. Times are phoneme-weighted inside a sentence. Sentence edges and pauses are exact. | Use ElevenLabs when you need character-accurate times. The method string in the JSON says which one you got. |
-| Loudness pass fails on a very short line | The meter needs a little audio. | Give the line a sentence, not a single syllable. |
-| A chunk returns a different sample rate | Two engines or two models were mixed in one render. | One `Speaker` per file. |
-
-## Test
-
-```bash
-python3 -m unittest tests/test_voice.py
-```
-
-Committed Piper proof: `test-outputs/piper-sample.wav`, `.vtt`, and `.json`.
-
-The live ElevenLabs sample is the gap. Render it with the key:
-
-```bash
-ELEVENLABS_API_KEY=... python3 cli.py say --engine elevenlabs --voice Brian \
-  --text 'Price moves in candles. [[pause 0.4]] The figures are illustrative.' \
-  --yes --out test-outputs/elevenlabs-sample.wav
-```
+| `Kokoro files are not in` | The onnx pack was not downloaded. | Run `setup.sh`. |
+| `engine must be kokoro or piper` | Another engine name was passed. | Stay on the two free engines. |
+| `unknown mood` | The name is not in the table. | Use one of the four moods. |
+| Alignment method says phoneme-weighted | A word template could not be placed. | Check the wav is not silent. The reference test still has to pass on a clean clip. |
+| Consent is rejected | The name is still `YOUR NAME`, or the statement dropped "I consent". | Fill `CONSENT.md` with the speaker's own words before preparing a dataset. |

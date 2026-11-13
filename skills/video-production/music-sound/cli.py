@@ -24,7 +24,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.ffmpeg_util import ebur128, master_audio  # noqa: E402
 from music.compose import render_bed  # noqa: E402
 from music.duck import ffmpeg_duck  # noqa: E402
-from music.eleven import api_key, compose_music  # noqa: E402
 from music.sfx import EFFECTS, render_effect  # noqa: E402
 
 
@@ -32,7 +31,7 @@ def _write(path: Path, audio: np.ndarray, sr: int) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
     raw = path.with_suffix(".raw.wav")
     sf.write(str(raw), audio, sr, subtype="PCM_16")
-    master_audio(raw, path, integrated=-16.0, true_peak=-1.0)
+    master_audio(raw, path)
     raw.unlink(missing_ok=True)
     return path
 
@@ -58,20 +57,7 @@ def demo(out: Path, voice: Path | None) -> None:
         dest = sfx_dir / f"{name}.wav"
         _write(dest, audio, sr)
         print(f"sfx {dest.name}")
-    note = {
-        "elevenlabs": "not called",
-        "reason": "ELEVENLABS_API_KEY is not set. Procedural audio was used.",
-    }
-    if api_key():
-        try:
-            path = compose_music(
-                "Calm instrumental bed for a teaching video, soft piano and pad, no vocals, 72 bpm",
-                15000,
-                out / "beds" / "elevenlabs-optional.mp3",
-            )
-            note = {"elevenlabs": "wrote", "file": str(path)}
-        except Exception as exc:  # fallback is the point of the adapter
-            note = {"elevenlabs": "failed-open", "error": str(exc)[:300], "fallback": "procedural beds above"}
+    note = {"standard": "voice -14 LUFS, bed -20 dB under the voice, true peak -1 dBTP"}
     if voice and voice.is_file():
         bed = out / "beds" / "calm-C-major-72bpm.wav"
         mix = out / "mix" / "ducked.wav"

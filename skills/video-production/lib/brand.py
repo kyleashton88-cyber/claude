@@ -7,6 +7,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from lib.fonts import font_file
+
 W, H = 1920, 1080
 FPS = 30
 
@@ -31,31 +33,12 @@ DISCLAIMER = "Educational content only  ·  Not financial advice  ·  Figures ar
 VP_ROOT = Path(__file__).resolve().parents[1]
 REPO_ROOT = VP_ROOT.parents[1]
 
-FONT_CANDIDATES = {
-    "bold": [
-        "/usr/share/fonts/truetype/macos/Inter-Bold.ttf",
-        "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
-        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-    ],
-    "regular": [
-        "/usr/share/fonts/truetype/macos/Inter-Regular.ttf",
-        "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
-        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
-    ],
-    "medium": [
-        "/usr/share/fonts/truetype/macos/Inter-Medium.ttf",
-        "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
-        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
-    ],
-    "mono": [
-        "/usr/share/fonts/truetype/macos/JetBrainsMono-Regular.ttf",
-        "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",
-    ],
-}
-
 
 def font_path(weight: str) -> str:
-    for path in FONT_CANDIDATES[weight]:
-        if Path(path).is_file():
-            return path
-    raise FileNotFoundError(f"no font for weight {weight}")
+    family = {
+        "bold": ("Inter", "Bold"),
+        "regular": ("Inter", "Regular"),
+        "medium": ("Inter", "Medium"),
+        "mono": ("JetBrains Mono", "Regular"),
+    }[weight]
+    return str(font_file(*family))
