@@ -107,7 +107,9 @@ class PipelineTests(unittest.TestCase):
             "caption": "What you are going to need",
         })
         self.assertEqual((kicker, label, cta), ("NEXT", "Lesson 2", "Up next: Lesson 2"))
-        self.assertIsNone(studio.cleared_mascot({"lesson_id": "bp-01-introduction"}))
+        mascot = studio.cleared_mascot({"lesson_id": "bp-01-introduction"})
+        self.assertIsNotNone(mascot)
+        self.assertEqual(mascot.size, (1024, 1024))
 
     def test_pinned_stop_matches_the_caption_row(self):
         shots = lesson_scripts.attach_series(lesson_scripts.walk(
@@ -156,7 +158,7 @@ class PipelineTests(unittest.TestCase):
         self.assertNotIn("el-06-circuit-breakers/28.png", source)
         for sid in ("bp-01-introduction", "bp-02-what-you-need", "bp-03-what-is-a-grid-bot"):
             paths = [row["path"] for row in image_gate.images_for_lesson(sid)]
-            self.assertNotIn(image_gate.MASCOT, paths)
+            self.assertIn(image_gate.MASCOT, paths)
             self.assertNotIn(image_gate.OLD_MASCOT, paths)
 
     def test_blob_mismatch_fails(self):

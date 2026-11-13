@@ -311,7 +311,7 @@ def _attach_lesson_stills(sid: str, shots: list[dict]) -> None:
             by_chapter.setdefault(str(beat.get("chapter") or "").strip().lower(), beat)
     used: set[str] = set()
     for shot in shots:
-        if shot.get("kind") in {"brand", "disclaimer", "outro", "chart"}:
+        if shot.get("kind") in {"brand", "disclaimer", "outro", "chart", "analogy"}:
             continue
         beat = by_chapter.get(str(shot.get("chapter") or "").strip().lower())
         if not beat:
@@ -774,27 +774,86 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
                 draw.line([(x, y_line), (min(x + 8, plot[2]), y_line)], fill=CYAN, width=3)
                 x += 18
             draw.text((gutter_x, y_line - 16), "27,630", font=font(28), fill=CYAN)
+        # A buy limit is filled when price falls to it. The limit-orders frame
+        # marks those downward crosses only. The hook keeps three spaced crosses.
+        downward = {
+            "2023-08-17", "2023-08-30", "2023-10-02", "2023-10-05", "2023-10-09",
+        }
         crossings = []
         for index in range(1, n):
             left, right = closes[index - 1], closes[index]
-            if (left - 27630) * (right - 27630) < 0:
-                crossings.append(index - 1 + (27630 - left) / (right - left))
+            if (left - 27630) * (right - 27630) >= 0:
+                continue
+            if chapter == "Limit orders wait":
+                if series[index]["date"] not in downward or not (left > 27630 > right):
+                    continue
+            frac = index - 1 + (27630 - left) / (right - left)
+            crossings.append(frac)
         picked = []
-        for spot in crossings:
-            if all(abs(spot - prev) > n * 0.12 for prev in picked):
-                picked.append(spot)
-            if len(picked) == 3:
-                break
+        if chapter == "Limit orders wait":
+            picked = crossings
+        else:
+            for spot in crossings:
+                if all(abs(spot - prev) > n * 0.12 for prev in picked):
+                    picked.append(spot)
+                if len(picked) == 3:
+                    break
         face_t = font(22)
         text = "BUY 27,630"
         twid = int(face_t.getlength(text)) + 16
+        ticket_h = 36
+        # Keep the date tag clear. Tickets were landing on it.
+        date_face = font(28)
+        date_w = int(date_face.getlength(tag)) + 20
+        date_h = 40
+        date_x = hx - 24 - 11 - date_w
+        date_y = hy - date_h / 2
+        if date_x < plot[0]:
+            date_x = min(hx + 24, plot[2] - date_w)
+        date_y = min(max(plot[1], date_y), plot[3] - date_h)
+        blocked: list[tuple[float, float, float, float]] = [
+            (date_x - 8, date_y - 8, date_x + date_w + 8, date_y + date_h + 8),
+        ]
+
+        def _hits(rect: tuple[float, float, float, float]) -> bool:
+            left, top, right, bottom = rect
+            for bx0, by0, bx1, by1 in blocked:
+                if not (right < bx0 or left > bx1 or bottom < by0 or top > by1):
+                    return True
+            return False
+
+        parked = 0
         for spot in picked:
             cx = plot[0] + (plot[2] - plot[0]) * (spot / max(1, n - 1))
             if cx > plot[2] - 80:
                 continue
-            left_x = cx - twid / 2
-            draw.rounded_rectangle([left_x, y_line - 18, left_x + twid, y_line + 18], 8, fill=TAG, outline=CYAN, width=2)
-            draw.text((left_x + 8, y_line - 14), text, font=face_t, fill=WHITE)
+            left_x = max(plot[0], min(cx - twid / 2, plot[2] - twid))
+            top = y_line - 40 - ticket_h
+            straight = (cx, top + ticket_h, cx, y_line)
+            # A vertical leader through the date tag is the fail. Park those tickets to its left.
+            through_tag = date_x - 6 <= cx <= date_x + date_w + 6 and top < date_y + date_h
+            if through_tag or _hits((left_x, top, left_x + twid, top + ticket_h)):
+                left_x = date_x - 28 - twid
+                top = y_line - 40 - ticket_h - parked * (ticket_h + 8)
+                parked += 1
+                while top >= plot[1] and _hits((left_x, top, left_x + twid, top + ticket_h)):
+                    top -= ticket_h + 8
+                # Drop on the clear side, then run under the line to the crossing.
+                lane_x = left_x - 12
+                elbow_y = y_line + 16 + (parked - 1) * 7
+                leader = [
+                    (left_x, top + ticket_h / 2),
+                    (lane_x, top + ticket_h / 2),
+                    (lane_x, elbow_y),
+                    (cx, elbow_y),
+                    (cx, y_line),
+                ]
+            else:
+                leader = [(left_x + twid / 2, top + ticket_h), (cx, y_line)]
+            draw.line(leader, fill=CYAN, width=2)
+            draw.rounded_rectangle([left_x, top, left_x + twid, top + ticket_h], 8, fill=TAG, outline=CYAN, width=2)
+            draw.text((left_x + 8, top + 6), text, font=face_t, fill=WHITE)
+            blocked.append((left_x - 4, top - 4, left_x + twid + 4, top + ticket_h + 4))
 
     if chapter == "The stop":
         for index, row in enumerate(series):
@@ -835,12 +894,8 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
     draw.line([(hx + (12 if tx >= hx else -12), hy), (anchor_x, ty + th / 2)], fill=CYAN, width=2)
     draw.rounded_rectangle([tx, ty, tx + tw, ty + th], 10, fill=TAG, outline=CYAN, width=2)
     draw.text((tx + 14, ty + 4), tag, font=face, fill=WHITE)
-    if shot.get("analogy") == "ladder" and rails:
-        edge = 936
-        for price in (min(rails), max(rails)):
-            yy = _map(0, n, float(price), lo_p, hi_p, plot)[1]
-            draw.line([(edge, yy), (plot[0], yy)], fill=CYAN, width=3)
-    elif shot.get("analogy") == "fence" and rails:
+    # The ladder still has five rungs. Connectors would make them look like the seven levels.
+    if shot.get("analogy") == "fence" and rails:
         marks = shot.get("rail_marks") or {}
         for price, key in ((max(rails), "top"), (min(rails), "bottom")):
             chart_y = _map(0, n, float(price), lo_p, hi_p, plot)[1]
@@ -848,7 +903,7 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
             draw.line([(marks.get("x", 900), rail_y), (plot[0], chart_y)], fill=CYAN, width=3)
 
 
-def _hero(base: Image.Image, box: tuple[int, int, int, int], mode: str) -> None:
+def _hero(base: Image.Image, box: tuple[int, int, int, int], mode: str, chip_dx: int = 0, chip_x: int | None = None) -> None:
     """Lesson visual. path and orders use the real summer closes, not a sawtooth."""
     draw = ImageDraw.Draw(base)
     draw.rounded_rectangle(box, 24, fill=GLASS, outline=CYAN, width=2)
@@ -880,11 +935,26 @@ def _hero(base: Image.Image, box: tuple[int, int, int, int], mode: str) -> None:
                 pts = [(px0 + (px1 - px0) * i / 6, mid + (12 if i % 2 else -12)) for i in range(7)]
                 draw.line(pts, fill=CYAN, width=3)
             elif label == "Trend":
-                draw.line([(px0, py1), (px1, py0)], fill=CYAN, width=3)
+                span_x, span_y = px1 - px0, (py1 - 16) - (py0 + 16)
+                knots = (0, 0.18, 0.34, 0.52, 0.68, 0.84, 1)
+                rise = (0, 0.28, 0.16, 0.52, 0.38, 0.78, 1)
+                pts = [(px0 + span_x * k, (py1 - 16) - span_y * r) for k, r in zip(knots, rise)]
+                draw.line(pts, fill=CYAN, width=3)
             else:
-                leave = py0 + 28
-                draw.line([(px0, leave), (px1, leave)], fill=AMBER, width=2)
-                draw.line([(px0, py1), ((px0 + px1) / 2, leave), (px1, py0)], fill=CYAN, width=3)
+                top = py0 + 16
+                bot = py1 - 16
+                draw.line([(px0, top), (px1, top)], fill=CYAN, width=2)
+                draw.line([(px0, bot), (px1, bot)], fill=CYAN, width=2)
+                span_x = px1 - px0
+                mid = (top + bot) / 2
+                pts = [
+                    (px0, mid + 10),
+                    (px0 + span_x * 0.28, mid - 8),
+                    (px0 + span_x * 0.48, mid + 12),
+                    (px0 + span_x * 0.62, top),
+                    (px1, py0 + 6),
+                ]
+                draw.line(pts, fill=CYAN, width=3)
         return
     series = lesson_scripts.PRICES["range_2023"]
     plot = (x0 + 28, y0 + 78, x1 - 28, y1 - 64)
@@ -913,7 +983,8 @@ def _hero(base: Image.Image, box: tuple[int, int, int, int], mode: str) -> None:
         face = font(28)
         text = "BUY 27,630"
         tw = int(face.getlength(text)) + 24
-        tx = plot[0] + 12
+        tx = plot[0] + 12 + chip_dx if chip_x is None else chip_x
+        tx = min(max(tx, x0 + 12), x1 - 12 - tw)
         ty = y_line - 20
         draw.rounded_rectangle([tx, ty, tx + tw, ty + 40], 8, fill=TAG, outline=CYAN, width=2)
         draw.text((tx + 12, ty + 4), text, font=face, fill=WHITE)
@@ -938,6 +1009,7 @@ def paint_brand(base: Image.Image, shot: dict, local: float) -> None:
             y += 70
     number = int(shot.get("lesson_no") or 1)
     _hero(base, (1040, 220, 1760, 820), {1: "path", 2: "lines", 3: "orders"}.get(number, "regimes"))
+    place_mascot(base, shot, (96, 660, 520, 970))
 
 
 def paint_disclaimer(base: Image.Image, shot: dict, local: float) -> None:
@@ -1111,6 +1183,64 @@ def _contain(src: Image.Image, pw: int, ph: int) -> tuple[Image.Image, int, int,
     return canvas, ox, oy, scale
 
 
+def _cover_label(draw: ImageDraw.ImageDraw, old: tuple[int, int, int, int], lines: list[str], bounds: tuple[int, int, int, int]) -> None:
+    """28px tag that hides a baked-in label and stays inside the panel."""
+    face = font(28)
+    pad_x, line_h, pad_y = 14, 34, 10
+    tw = max(int(face.getlength(line)) for line in lines) + pad_x * 2
+    th = pad_y * 2 + line_h * len(lines)
+    ox0, oy0, ox1, oy1 = old
+    bx0, by0, bx1, by1 = bounds
+    x0, y0 = ox0, oy0
+    x1, y1 = max(ox1, ox0 + tw), max(oy1, oy0 + th)
+    if x1 - x0 < tw:
+        x1 = x0 + tw
+    if y1 - y0 < th:
+        y1 = y0 + th
+    if x1 > bx1:
+        x0 -= x1 - bx1
+        x1 = bx1
+    if x0 < bx0:
+        x1 += bx0 - x0
+        x0 = bx0
+    if y1 > by1:
+        y0 -= y1 - by1
+        y1 = by1
+    if y0 < by0:
+        y1 += by0 - y0
+        y0 = by0
+    x0, y0 = min(x0, ox0), min(y0, oy0)
+    x1, y1 = max(x1, ox1, x0 + tw), max(y1, oy1, y0 + th)
+    draw.rounded_rectangle([x0, y0, x1, y1], 10, fill=TAG, outline=CYAN, width=2)
+    y = y0 + (y1 - y0 - line_h * len(lines)) / 2
+    for line in lines:
+        draw.text((x0 + pad_x, y), line, font=face, fill=WHITE)
+        y += line_h
+
+
+def _retouch_analogy(draw: ImageDraw.ImageDraw, kind: str, origin: tuple[int, int]) -> None:
+    """Replace baked tags that shrink below 28px. The still itself stays."""
+    x, y = origin
+    # Panel is 840 by 472, inset so labels stay off the rounded border.
+    bounds = (x + 12, y + 12, x + 840 - 12, y + 472 - 12)
+    if kind == "ladder":
+        # Stop the rung label at the ladder's glow (screen x ~394).
+        _cover_label(draw, (112, 400, 392, 444), ["Rung = one", "price step"], bounds)
+        _cover_label(draw, (668, 440, 848, 506), ["Gap = the", "distance"], bounds)
+        return
+    if kind == "fence":
+        _cover_label(draw, (710, 308, 900, 350), ["Top rail", "= top price"], bounds)
+        _cover_label(draw, (184, 574, 432, 620), ["Bottom rail", "= bottom price"], bounds)
+        # One line, same height as the baked tag, so it stays under the post.
+        _cover_label(draw, (620, 578, 900, 626), ["Bounces between"], bounds)
+        return
+    if kind == "list":
+        _cover_label(draw, (128, 272, 346, 318), ["Pair: what", "you trade"], bounds)
+        _cover_label(draw, (636, 272, 900, 318), ["Gaps: space", "between steps"], bounds)
+        _cover_label(draw, (128, 614, 392, 658), ["Band: top and", "bottom price"], bounds)
+        _cover_label(draw, (698, 614, 900, 658), ["Stop: when", "you quit"], bounds)
+
+
 def paint_analogy(base: Image.Image, shot: dict, local: float, dur: float) -> None:
     draw = ImageDraw.Draw(base)
     pw, ph = 840, 472
@@ -1149,6 +1279,14 @@ def paint_analogy(base: Image.Image, shot: dict, local: float, dur: float) -> No
                 "x": origin[0] + ox + panel.size[0] - ox - 36,
             }
             shot["rail_marks"]["x"] = origin[0] + pw - 28
+        _retouch_analogy(draw, kind, origin)
+        if kind == "ladder":
+            note = "Not to scale: the chart has 7 levels"
+            face = font(28)
+            tw = int(face.getlength(note)) + 28
+            nx, ny = origin[0], origin[1] + ph + 10
+            draw.rounded_rectangle([nx, ny, nx + tw, ny + 44], 10, fill=TAG, outline=CYAN, width=2)
+            draw.text((nx + 14, ny + 6), note, font=face, fill=WHITE)
     draw.rounded_rectangle([origin[0], origin[1], origin[0] + pw, origin[1] + ph], 18, outline=LINE, width=2)
     chart_card(base, shot, local, dur, chart_box)
 
@@ -1163,10 +1301,8 @@ def next_lesson_label(shot: dict) -> tuple[str, str, str]:
 
 
 def cleared_mascot(shot: dict) -> Image.Image | None:
-    """The new mascot only. It has to be on disk and a passing scored row."""
+    """The approved cut-out only, and only when its scored blob still matches."""
     if not MASCOT_SRC.is_file():
-        return None
-    if "el-06-circuit-breakers" in str(MASCOT_SRC):
         return None
     lesson = str(shot.get("lesson_id") or "")
     if not lesson:
@@ -1189,6 +1325,23 @@ def cleared_mascot(shot: dict) -> Image.Image | None:
     return None
 
 
+def place_mascot(base: Image.Image, shot: dict, box: tuple[int, int, int, int]) -> None:
+    """Fit the approved cut-out in a box. The sheet is never drawn."""
+    src = cleared_mascot(shot)
+    if src is None:
+        return
+    alpha = src.getchannel("A")
+    bounds = alpha.getbbox()
+    if not bounds:
+        return
+    cut = src.crop(bounds)
+    x0, y0, x1, y1 = box
+    scale = min((x1 - x0) / cut.width, (y1 - y0) / cut.height)
+    nw, nh = max(1, int(cut.width * scale)), max(1, int(cut.height * scale))
+    fitted = cut.resize((nw, nh), Image.Resampling.LANCZOS)
+    paste(base, fitted, (x0 + (x1 - x0 - nw) // 2, y0 + (y1 - y0 - nh) // 2))
+
+
 def paint_outro(base: Image.Image, shot: dict, local: float) -> None:
     """Wordmark, the next lesson, and a glass card. No subscribe line."""
     draw = ImageDraw.Draw(base)
@@ -1203,7 +1356,10 @@ def paint_outro(base: Image.Image, shot: dict, local: float) -> None:
         draw.text((MX, y), line, font=font(56), fill=WHITE)
         y += 68
     number = int(shot.get("lesson_no") or 1) + 1
-    _hero(base, (1120, 240, 1760, 800), {2: "lines", 3: "orders", 4: "regimes"}.get(number, "path"))
+    mode = {2: "lines", 3: "orders", 4: "regimes"}.get(number, "path")
+    # The orders chip at the plot's left edge covers the July drop.
+    _hero(base, (1120, 240, 1760, 800), mode, chip_dx=-40 if mode == "orders" else 0)
+    place_mascot(base, shot, (96, 560, 560, 960))
     foot = font(36, "reg")
     fw = foot.getlength(FOOT)
     draw.text(((W - fw) / 2, 980), FOOT, font=foot, fill=MUTED)
@@ -1244,7 +1400,14 @@ def paint_lesson_thumb(shot: dict, dest: Path) -> Path:
             draw.text((x, y), word, font=face, fill=CYAN if word.lower() == keyword else WHITE)
             x += int(face.getlength(word + " "))
         y += 130
-    _hero(image, (820, 120, 1230, 560), {1: "path", 2: "lines", 3: "orders"}.get(number, "regimes"))
+    # On the 1280 thumbnail the left-edge chip covers the July drop. Sit it to the right.
+    _hero(
+        image,
+        (820, 120, 1230, 560),
+        {1: "path", 2: "lines", 3: "orders"}.get(number, "regimes"),
+        chip_x=1060 if number == 3 else None,
+    )
+    place_mascot(image, shot, (560, 500, 800, 650))
     draw = ImageDraw.Draw(image)
     draw.text((48, 660), FOOT, font=font(28, "reg"), fill=MUTED)
     dest.parent.mkdir(parents=True, exist_ok=True)
