@@ -25,3 +25,5 @@ Motion pass: the picture is scaled to 2048 wide and cropped back to 1920×1080 w
 | bp-11 | 6 | 0 |
 
 Caption clips on a frame every 3 seconds, after the bar was pinned: bp-01 0, bp-02 0, bp-03 0, bp-04 0, bp-05 0, bp-06 0, bp-07 0, bp-08 0, bp-09 0, bp-10 0, bp-11 0. The drifting cut before this pin had 17, 17, 19, 28, 19, 24, 21, 18, 20, 15, and 28.
+
+Safe-margin pass: the 72 px pin is inside the frame and outside a 5% margin (96 px across, 54 px down), and the section title still rode the crop, so on some frames it left the top or the left edge. `repair_margins.py` redraws each section title at x=100, y=60, moves the caption and the disclaimer to x=100 with the disclaimer bottom at y=1023, and shifts the chart back inside the margin when its ink would cross it. A frame every 3 seconds, then a full-frame scan of bp-05, found no title or caption ink outside that margin. `freezedetect=n=0.003:d=7.5` found no hold over 8 seconds. Loudness stays about −16 LUFS. Lessons whose true peak was hotter than −1.5 dBTP got an audio-only gain with the picture copied.
