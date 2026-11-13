@@ -1,3 +1,5 @@
+> **Superseded** by `CODE_DRAWN_FIXES_e3d737e.md` (rescore at e3d737e, 13 Nov 6:44pm WITA).
+
 # Code-drawn stills @ 72e67cf: remaining fixes
 
 Scored against skills/image-quality-standard (f688829). A frame passes when every category scores at least 4 and there is no hard fail.
