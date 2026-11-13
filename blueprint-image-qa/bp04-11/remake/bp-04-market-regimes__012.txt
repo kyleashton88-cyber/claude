@@ -2,13 +2,14 @@ ATTACH FIRST: /workspace/blueprint-beginner/_anchors/anchor.png as the style ref
 FORMAT: one landscape image, 3:2, exactly 1536x1024 pixels.
 MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 80px inside the left and right edges and at least 90px inside the top and bottom edges. Nothing with text touches or approaches the frame edge. Words in the headline are separated by a clear full space.
 
-Headline: "BIG NEWS BREAKS THE CALM" (the word NEWS in cyan, the rest white).
-Scene: A glass chart with a calm wiggly line, then a sudden huge spike at a newspaper icon. An amber warning triangle beside the spike. EXAMPLE stamp.
+Headline: "NEWS AND THIN BOOKS ARE NOT CALM" (the words NOT CALM in cyan, the rest white).
+Scene: Two glass chart cards side by side. Left card: a calm small wiggly price line, then one sudden tall price bar beside a small newspaper icon. Right card: a short ladder of horizontal order lines with only two small order tickets resting far apart (most rungs empty), and the price line jumping straight across the empty rungs in one leap. An amber warning triangle in the corner of each card.
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
-- "Calm before": arrow tip touches the calm wiggly part on the left.
-- "Big news = sudden jump": arrow tip touches the top of the spike beside the newspaper icon.
+- "News bar": arrow tip touches the tall price bar beside the newspaper icon.
+- "Thin book: few resting orders": arrow tip touches the empty rungs on the right card.
+- "Price can jump": arrow tip touches the leap in the right card's price line.
 - "EXAMPLE": a small cyan outlined EXAMPLE stamp in the lower-right corner of the main card or chart, fully inside the card, no arrow.
-LABEL ARROWS: exactly 2 thin cyan label arrows, one for each label above that says "arrow tip touches", each with one clean arrowhead whose tip touches the named target. Labels that say "no arrow" have no arrow. Apart from any arrow the Scene itself describes, there are no other arrows; no doubled arrowheads, and no arrow crosses text.
+LABEL ARROWS: exactly 3 thin cyan label arrows, one for each label above that says "arrow tip touches", each with one clean arrowhead whose tip touches the named target. Labels that say "no arrow" have no arrow. Apart from any arrow the Scene itself describes, there are no other arrows; no doubled arrowheads, and no arrow crosses text.
 CHARACTER: no robot, mascot, person, hand-drawn face or character of any kind in this frame. (The only approved mascot is the GridBot Builder robot sheet: metallic white/silver robot, gloss-black face, electric-blue features; it is added separately and must never be redrawn.)
 BRAND: GridBot Builder course style only. No company, entity, ABN, Market Pros, exchange, venue or app names or logos; no coins, banknotes, currency signs or profit claims.
 Goal: a complete beginner understands this one idea in three seconds with the sound off: A path into a major news bar, or a thin book, is a poor place to pretend you have a calm range.

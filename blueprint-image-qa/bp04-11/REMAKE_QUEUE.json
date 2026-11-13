@@ -1,5 +1,5 @@
 {
- "note": "ChatGPT web, one at a time, in this order. Attach _anchors/anchor.png, paste the prompt file as one message, download, copy to target_gen, fit to target_out (1536x1024), re-score, then commit to repo_path. No lesson renders until all its rows pass.",
+ "note": "ChatGPT web, one at a time, in this order. Attach _anchors/anchor.png, paste the prompt file as one message, download, copy to target_gen, fit to target_out (1536x1024), re-score, then commit to repo_path. No lesson renders until all its rows pass. Prompts marked prompt_updated were revised on 14 Nov for the PR #17 (6df2536) smoothed narration; see PR17_PROMPT_UPDATES.md.",
  "length": 161,
  "queue": [
   {
@@ -30,7 +30,8 @@
    "reason": "Disclaimer reads 'STUDY ONLY / NOT ADVICE', not 'Education only. Not financial advice.'; generic document + magnifier icon.",
    "hard_fails": [
     "illegible label: 'NOT ADVICE' is tiny letter-spaced grey type"
-   ]
+   ],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
   },
   {
    "order": 3,
@@ -168,11 +169,12 @@
    "target_out": "out/course/images/bp-04-market-regimes/012.png",
    "repo_path": "course/images/bp-04-market-regimes/012.png",
    "size": "1536x1024",
-   "headline": "BIG NEWS BREAKS THE CALM",
+   "headline": "NEWS AND THIN BOOKS ARE NOT CALM",
    "reason": "Stack of identical lines with one vertical tick: no calm path, no news spike, no thin-book idea; meaning unreadable with sound off.",
    "hard_fails": [
     "illegible label: 'JUMPED' tag is tiny"
-   ]
+   ],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Narration now defines both \"news bar\" and \"thin book: few resting orders, so price can jump\"; old prompt showed only a news spike."
   },
   {
    "order": 13,
@@ -314,7 +316,8 @@
    "size": "1536x1024",
    "headline": "EDUCATION ONLY",
    "reason": "Disclaimer reads 'READ ONLY / NOT ADVICE' with a book icon, not 'Education only. Not financial advice.'.",
-   "hard_fails": []
+   "hard_fails": [],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
   },
   {
    "order": 23,
@@ -357,7 +360,7 @@
    "target_out": "out/course/images/bp-05-spacing-and-range/005.png",
    "repo_path": "course/images/bp-05-spacing-and-range/005.png",
    "size": "1536x1024",
-   "headline": "GAPS × STEP = TOTAL HEIGHT",
+   "headline": "GAPS \u00d7 STEP = TOTAL HEIGHT",
    "reason": "'HALF SPAN' headline mislabels the beat (the span from 19 gaps x 0.5%); no 0.5% or 9.5% shown; 'SPAN' bracket and '19 GAPS' tag float between two lines with no ladder.",
    "hard_fails": []
   },
@@ -404,7 +407,8 @@
    "size": "1536x1024",
    "headline": "FEES CAN EAT A SMALL GAP",
    "reason": "Two empty bars over blue bars labelled 'WIDE'/'THIN', one crossed: no cost-of-a-buy-and-sell shown against the gap; 'COST CHECK' not explained.",
-   "hard_fails": []
+   "hard_fails": [],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Narration now defines \"round trip\" and says flat or negative; old label \"Fees bigger than gap = loss\" overstated it and used a different term."
   },
   {
    "order": 29,
@@ -446,9 +450,10 @@
    "target_out": "out/course/images/bp-05-spacing-and-range/011.png",
    "repo_path": "course/images/bp-05-spacing-and-range/011.png",
    "size": "1536x1024",
-   "headline": "LEAVE ROOM FOR SPIKES",
+   "headline": "LEAVE ROOM FOR WICKS",
    "reason": "Dashed line with a tiny candle cluster and 'WICK'/'CLOSE' chips with no arrows: range needing room for wicks is not shown.",
-   "hard_fails": []
+   "hard_fails": [],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Narration now defines \"wick\" and \"close\"; old prompt called them \"spikes\" (\"quick jump that snaps back\"), which no longer matches."
   },
   {
    "order": 32,
@@ -590,7 +595,8 @@
    "size": "1536x1024",
    "headline": "EDUCATION ONLY",
    "reason": "Shield with 'EDUCATION' and a CPU chip reading 'RISK': chip icon is meaningless; does not read 'Education only. Not financial advice.'.",
-   "hard_fails": []
+   "hard_fails": [],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
   },
   {
    "order": 42,
@@ -702,9 +708,10 @@
    "target_out": "out/course/images/bp-06-entry-and-exit/010.png",
    "repo_path": "course/images/bp-06-entry-and-exit/010.png",
    "size": "1536x1024",
-   "headline": "THE 'I WAS WRONG' POINT",
+   "headline": "WHERE THE IDEA IS DONE",
    "reason": "Dashed arrow line through an 'INVALIDATION' chip: jargon chip with no picture of the finish path (price leaving the band).",
-   "hard_fails": []
+   "hard_fails": [],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Narration now says the finish path \"says the idea is done\"; old prompt framed it as \"I was wrong\" / \"idea is wrong here\"."
   },
   {
    "order": 50,
@@ -872,7 +879,8 @@
    "size": "1536x1024",
    "headline": "EDUCATION ONLY",
    "reason": "Single bar reading 'EDUCATION, RISK, EXAMPLE': word list, not 'Education only. Not financial advice.'.",
-   "hard_fails": []
+   "hard_fails": [],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
   },
   {
    "order": 62,
@@ -929,9 +937,10 @@
    "target_out": "out/course/images/bp-07-spot-paper-trading/006.png",
    "repo_path": "course/images/bp-07-spot-paper-trading/006.png",
    "size": "1536x1024",
-   "headline": "BUY THE COIN, NO BORROWING",
+   "headline": "SPOT: OWN THE ASSET, NO BORROWING",
    "reason": "'SPOT' tile vs crossed 'CONTRACT' tile: readable, but the X sits on top of the word, leverage is not mentioned, and the EXAMPLE stamp sits on a non-figure.",
-   "hard_fails": []
+   "hard_fails": [],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Narration now defines spot as \"the asset itself\" and leverage as \"borrowed size\" (a different product, \"not this walk\"); old headline said \"BUY THE COIN\" (coin wording is off-brief)."
   },
   {
    "order": 66,
@@ -943,9 +952,10 @@
    "target_out": "out/course/images/bp-07-spot-paper-trading/007.png",
    "repo_path": "course/images/bp-07-spot-paper-trading/007.png",
    "size": "1536x1024",
-   "headline": "NEVER PASTE SECRET KEYS",
+   "headline": "NEVER PASTE YOUR SECRETS",
    "reason": "Crossed key icon 'NO KEY': only covers API keys; seed phrase and password not shown; generic.",
-   "hard_fails": []
+   "hard_fails": [],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Narration now names and defines \"API key\" and \"seed phrase\"; old tags said \"App keys\" / \"Secret words\"."
   },
   {
    "order": 67,
@@ -1033,7 +1043,8 @@
    "size": "1536x1024",
    "headline": "STOP BEFORE CONFIRM",
    "reason": "CPU-style 'CONFIRM' chip wired to a 'STOP' tile: roughly the idea, but chip styling is confusing and 'STOP FIRST' is ambiguous.",
-   "hard_fails": []
+   "hard_fails": [],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Beat now ends \"The lesson stops in front of that control.\" (the old line about the bot confirming for you is gone); old label \"Never press confirm\" was a rule the narration no longer states."
   },
   {
    "order": 73,
@@ -1164,7 +1175,8 @@
    "size": "1536x1024",
    "headline": "EDUCATION ONLY",
    "reason": "Three small chips 'EDUCATION / RISK / EXAMPLE' in an empty frame: not 'Education only. Not financial advice.'; small text.",
-   "hard_fails": []
+   "hard_fails": [],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
   },
   {
    "order": 82,
@@ -1192,7 +1204,8 @@
    "size": "1536x1024",
    "headline": "THREE QUESTIONS",
    "reason": "Three-row card INSIDE / SIDE / SENTENCE with blank lines: the three questions are not written as questions; row labels small.",
-   "hard_fails": []
+   "hard_fails": [],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Narration now defines inventory (what piled up on one side) and the finish sentence; old row 3 said \"stop rule still fit\"."
   },
   {
    "order": 84,
@@ -1334,7 +1347,8 @@
    "size": "1536x1024",
    "headline": "MAKE YOUR CHECK CARD",
    "reason": "Clipboard with 'EXAMPLE' under 'CLIPPED ON': does not show building a three-row card or running it on a drawn path.",
-   "hard_fails": []
+   "hard_fails": [],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Beat now ends \"The homework is that card on the path you drew.\" (live-position warning removed); old label \"Test it on a sketch\"."
   },
   {
    "order": 94,
@@ -1362,7 +1376,8 @@
    "size": "1536x1024",
    "headline": "YOUR TURN: THREE QUESTIONS",
    "reason": "Card INSIDE / SIDE / SENTENCE with blank lines: duplicate of 004; small labels.",
-   "hard_fails": []
+   "hard_fails": [],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Kept consistent with the reworded beat 4 questions (finish sentence, side)."
   },
   {
    "order": 96,
@@ -1448,7 +1463,8 @@
    "size": "1536x1024",
    "headline": "EDUCATION ONLY",
    "reason": "Three chips 'EDUCATION / RISK / EXAMPLE': not 'Education only. Not financial advice.'.",
-   "hard_fails": []
+   "hard_fails": [],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
   },
   {
    "order": 102,
@@ -1518,7 +1534,7 @@
    "target_out": "out/course/images/bp-09-common-mistakes/007.png",
    "repo_path": "course/images/bp-09-common-mistakes/007.png",
    "size": "1536x1024",
-   "headline": "MISTAKE: LINES ≠ GAPS",
+   "headline": "MISTAKE: LINES \u2260 GAPS",
    "reason": "An oval of tick marks: 'counting lines as gaps' not shown at all.",
    "hard_fails": [
     "illegible label: tiny letter-spaced 'EXAMPLE' and unreadable tick marks"
@@ -1759,7 +1775,8 @@
    "size": "1536x1024",
    "headline": "EDUCATION ONLY",
    "reason": "Three hexagons 'EDUCATION / RISK / EXAMPLE': not 'Education only. Not financial advice.'.",
-   "hard_fails": []
+   "hard_fails": [],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
   },
   {
    "order": 123,
@@ -2057,7 +2074,8 @@
    "size": "1536x1024",
    "headline": "EDUCATION ONLY",
    "reason": "Three small chips 'EDUCATION / RISK / EXAMPLE' in a diagonal: not 'Education only. Not financial advice.'.",
-   "hard_fails": []
+   "hard_fails": [],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
   },
   {
    "order": 144,
@@ -2171,11 +2189,12 @@
    "target_out": "out/course/images/bp-11-advanced-liquidation/010.png",
    "repo_path": "course/images/bp-11-advanced-liquidation/010.png",
    "size": "1536x1024",
-   "headline": "FUNDING: A TIMED FEE",
+   "headline": "FUNDING: A TIMED PAYMENT",
    "reason": "Oval with a two-way arrow under 'NO RATE': a timed funding payment between sides is not shown.",
    "hard_fails": [
     "illegible label: tiny letter-spaced 'FUNDING'"
-   ]
+   ],
+   "prompt_updated": "PR #17 6df2536 smoothed narration: Narration now defines funding as \"a payment that moves between the two sides of a contract\", separate from the price move; old headline called it a \"fee\"."
   },
   {
    "order": 152,

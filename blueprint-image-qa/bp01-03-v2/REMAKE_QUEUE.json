@@ -1,6 +1,6 @@
 {
  "note": "ChatGPT web, one at a time, in this order. Attach _anchors/anchor.png (and course/images/mascot/blueprint-mascot.png only where needs_mascot_ref is true; none in this queue), paste the prompt file as one message, download, copy to target_gen, fit to target_out (1536x1024), re-score, then commit to repo_path. No lesson renders until all its rows pass.",
- "length": 21,
+ "length": 22,
  "needs_mascot_ref_count": 0,
  "superseded_prompts": [
   [
@@ -423,6 +423,261 @@
    "headline": "NEXT: MARKET REGIMES",
    "reason": "Outro says 'NEXT: MARKET SHAPES' and 'Next lesson: price shapes'; the next lesson is 'Market regimes' (two different wrong names on one frame).",
    "hard_fails": []
+  },
+  {
+   "order": 22,
+   "lesson": "bp-01-introduction",
+   "beat": null,
+   "path": "course/images/blueprint-analogies/analogy-fence.png",
+   "prompt": "specs/remake/blueprint-analogies__analogy-fence.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/blueprint-analogies/analogy-fence/web1.png",
+   "target_out": "out/course/images/blueprint-analogies/analogy-fence.png",
+   "repo_path": "course/images/blueprint-analogies/analogy-fence.png",
+   "size": "1536x1024",
+   "headline": "A FENCE = YOUR RANGE",
+   "reason": "Picture reads (top rail, bottom rail, price bouncing between), but the file is 1280x720 and is an older still with code-drawn PIL relabels (label.py), not a single 1536x1024 ChatGPT still.",
+   "hard_fails": [
+    "wrong size: 1280x720, not 1536x1024"
+   ],
+   "after_ingest": "CODE_FIXES.md CF-6: update the fence cover-label boxes in studio.py _retouch_analogy (tuned to the old 1280x720 still), or drop them if the new tags read at >=28px in the 840x472 panel."
+  }
+ ],
+ "code_fix_needed": [
+  {
+   "lesson": "bp-01-introduction",
+   "path": "code-drawn/bp-01-introduction/chart/range-2023/hook",
+   "kind": "code-drawn-chart",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer reads 'Educational content only. Not financial advice.' Otherwise clear: real 90-day window, band 24,930 to 30,331, '16 Oct 28,519' (all match btc-usd-windows.json range_2023)."
+  },
+  {
+   "lesson": "bp-01-introduction",
+   "path": "code-drawn/bp-01-introduction/chart/range-2023/a-ladder",
+   "kind": "code-drawn-chart",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. Otherwise fine: whole ladder still fitted, 28px tags, 'Not to scale: the chart has 7 levels', seven real levels 24,930 to 30,331."
+  },
+  {
+   "lesson": "bp-01-introduction",
+   "path": "code-drawn/bp-01-introduction/chart/range-2023/the-range",
+   "kind": "code-drawn-chart",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. Otherwise fine: real low 24,930 and high 30,331."
+  },
+  {
+   "lesson": "bp-01-introduction",
+   "path": "code-drawn/bp-01-introduction/chart/range-2023/the-levels",
+   "kind": "code-drawn-chart",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. Otherwise fine: seven levels, six gaps, 'one gap = about 900' (5,400.34 / 6 = 900.06)."
+  },
+  {
+   "lesson": "bp-01-introduction",
+   "path": "code-drawn/bp-01-introduction/chart/range-2023/the-fence",
+   "kind": "code-drawn-chart",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. Otherwise fine: whole fence still fitted, connectors end on the rails."
+  },
+  {
+   "lesson": "bp-01-introduction",
+   "path": "code-drawn/bp-01-introduction/chart/range-2023/walk-the-summer",
+   "kind": "code-drawn-chart",
+   "fixes": [
+    "CF-1",
+    "CF-2"
+   ],
+   "reason": "Footer not exact; the axis prints 30331/29431/... while the tag and every other frame print 30,331 style; the unwalked path is drawn so faint that the frame reads as an empty chart with one dot."
+  },
+  {
+   "lesson": "bp-01-introduction",
+   "path": "code-drawn/bp-01-introduction/chart/breakout-2023/the-stop",
+   "kind": "code-drawn-chart",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. Otherwise fine: '23 Oct: leaves 30,331' (first close above, 33,086) and '14 Mar 71,397' match breakout_2023."
+  },
+  {
+   "lesson": "bp-01-introduction",
+   "path": "code-drawn/bp-01-introduction/title-card",
+   "kind": "title-card",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. Shows 'Lesson 01 / Introduction' (the lesson title), wordmark and the approved mascot."
+  },
+  {
+   "lesson": "bp-01-introduction",
+   "path": "code-drawn/bp-01-introduction/end-card",
+   "kind": "end-card",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. Names the next lesson: 'Lesson 2 / What you are going to need'."
+  },
+  {
+   "lesson": "bp-01-introduction",
+   "path": "code-drawn/bp-01-introduction/thumbnail",
+   "kind": "thumbnail",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. 'Your first range' with the real band chart and EXAMPLE pill."
+  },
+  {
+   "lesson": "bp-02-what-you-need",
+   "path": "code-drawn/bp-02-what-you-need/chart/range-2023/hook",
+   "kind": "code-drawn-chart",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. Otherwise fine: list still fitted, its tags re-covered at 28px, Band 24,930 to 30,331 / Six gaps. About 900 / The close leaves 30,331."
+  },
+  {
+   "lesson": "bp-02-what-you-need",
+   "path": "code-drawn/bp-02-what-you-need/chart/range-2023/seven-lines",
+   "kind": "code-drawn-chart",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. Otherwise fine: the seven lines in order."
+  },
+  {
+   "lesson": "bp-02-what-you-need",
+   "path": "code-drawn/bp-02-what-you-need/chart/range-2023/the-three-words",
+   "kind": "code-drawn-chart",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. Otherwise fine: Range / Levels / Stop with real figures."
+  },
+  {
+   "lesson": "bp-02-what-you-need",
+   "path": "code-drawn/bp-02-what-you-need/chart/range-2023/no-secrets",
+   "kind": "code-drawn-chart",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. Otherwise fine: never vs allowed columns."
+  },
+  {
+   "lesson": "bp-02-what-you-need",
+   "path": "code-drawn/bp-02-what-you-need/chart/range-2023/copy-the-path",
+   "kind": "code-drawn-chart",
+   "fixes": [
+    "CF-1",
+    "CF-2"
+   ],
+   "reason": "Same walk-chart problems as bp-01 walk-the-summer."
+  },
+  {
+   "lesson": "bp-02-what-you-need",
+   "path": "code-drawn/bp-02-what-you-need/title-card",
+   "kind": "title-card",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. Shows 'Lesson 02 / What you are going to need' and the approved mascot."
+  },
+  {
+   "lesson": "bp-02-what-you-need",
+   "path": "code-drawn/bp-02-what-you-need/end-card",
+   "kind": "end-card",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. Names the next lesson: 'Lesson 3 / What is a grid bot'."
+  },
+  {
+   "lesson": "bp-02-what-you-need",
+   "path": "code-drawn/bp-02-what-you-need/thumbnail",
+   "kind": "thumbnail",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. Lesson title with the seven-line list."
+  },
+  {
+   "lesson": "bp-03-what-is-a-grid-bot",
+   "path": "code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/hook",
+   "kind": "code-drawn-chart",
+   "fixes": [
+    "CF-1",
+    "CF-3"
+   ],
+   "reason": "Footer not exact; ticket text too small. Counts are right (5 down-closes through 27,630: 17 Aug, 30 Aug + 3 in October)."
+  },
+  {
+   "lesson": "bp-03-what-is-a-grid-bot",
+   "path": "code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/limit-orders-wait",
+   "kind": "code-drawn-chart",
+   "fixes": [
+    "CF-1",
+    "CF-3",
+    "CF-4"
+   ],
+   "reason": "Footer not exact; 22px tickets; 'A cross is not a receipt' / 'That is not a receipt' is jargon a beginner cannot decode. The 10 crossings are right (5 down, 5 up), but only the 5 down-crosses are marked, so the frame shows 5 marks next to '10 times'."
+  },
+  {
+   "lesson": "bp-03-what-is-a-grid-bot",
+   "path": "code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/buys-and-sells",
+   "kind": "code-drawn-chart",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. Otherwise fine: sells above 27,630 in mint, buys below in blue."
+  },
+  {
+   "lesson": "bp-03-what-is-a-grid-bot",
+   "path": "code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/where-the-path-stood",
+   "kind": "code-drawn-chart",
+   "fixes": [
+    "CF-1",
+    "CF-2"
+   ],
+   "reason": "Same walk-chart problems as bp-01 walk-the-summer."
+  },
+  {
+   "lesson": "bp-03-what-is-a-grid-bot",
+   "path": "code-drawn/bp-03-what-is-a-grid-bot/title-card",
+   "kind": "title-card",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. Shows 'Lesson 03 / What is a grid bot' and the approved mascot."
+  },
+  {
+   "lesson": "bp-03-what-is-a-grid-bot",
+   "path": "code-drawn/bp-03-what-is-a-grid-bot/end-card",
+   "kind": "end-card",
+   "fixes": [
+    "CF-1",
+    "CF-5"
+   ],
+   "reason": "Footer not exact. Names 'Lesson 4 / Market regimes' correctly, but the 'Break' mini chart ends only ~10px above the top line, so it reads as touching the band, not leaving it."
+  },
+  {
+   "lesson": "bp-03-what-is-a-grid-bot",
+   "path": "code-drawn/bp-03-what-is-a-grid-bot/thumbnail",
+   "kind": "thumbnail",
+   "fixes": [
+    "CF-1"
+   ],
+   "reason": "Footer not exact. Lesson title with the band chart and 'BUY 27,630' level."
   }
  ]
 }

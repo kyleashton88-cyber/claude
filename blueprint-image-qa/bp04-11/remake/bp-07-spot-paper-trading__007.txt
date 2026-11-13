@@ -2,13 +2,13 @@ ATTACH FIRST: /workspace/blueprint-beginner/_anchors/anchor.png as the style ref
 FORMAT: one landscape image, 3:2, exactly 1536x1024 pixels.
 MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 80px inside the left and right edges and at least 90px inside the top and bottom edges. Nothing with text touches or approaches the frame edge. Words in the headline are separated by a clear full space.
 
-Headline: "NEVER PASTE SECRET KEYS" (the word SECRET in cyan, the rest white).
-Scene: A glass text box with a paste cursor; a key icon, a short row of hidden dots (secret words) and a password field with dots float toward it and are all blocked by amber X marks. No real words or characters in the hidden items.
+Headline: "NEVER PASTE YOUR SECRETS" (the word SECRETS in cyan, the rest white).
+Scene: A glass text box with a blinking paste cursor; three items float toward it and are each blocked by an amber X: a key icon with a small chip (API key), a short row of hidden dots on a word list card (seed phrase), and a password field with dots. No real words or characters inside the hidden items.
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
-- "App keys": arrow tip touches the key icon.
-- "Secret words": arrow tip touches the row of hidden dots.
-- "Passwords": arrow tip touches the password field.
-- "Never paste them": arrow tip touches the paste cursor in the text box.
+- "API key": arrow tip touches the key icon.
+- "Seed phrase": arrow tip touches the word list card.
+- "Password": arrow tip touches the password field.
+- "Never paste them in a course field or chat": arrow tip touches the paste cursor in the text box.
 LABEL ARROWS: exactly 4 thin cyan label arrows, one for each label above that says "arrow tip touches", each with one clean arrowhead whose tip touches the named target. Labels that say "no arrow" have no arrow. Apart from any arrow the Scene itself describes, there are no other arrows; no doubled arrowheads, and no arrow crosses text.
 CHARACTER: no robot, mascot, person, hand-drawn face or character of any kind in this frame. (The only approved mascot is the GridBot Builder robot sheet: metallic white/silver robot, gloss-black face, electric-blue features; it is added separately and must never be redrawn.)
 BRAND: GridBot Builder course style only. No company, entity, ABN, Market Pros, exchange, venue or app names or logos; no coins, banknotes, currency signs or profit claims.

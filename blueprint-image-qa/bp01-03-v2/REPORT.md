@@ -4,11 +4,11 @@ Scored by Creative Studio, 14 Nov 2026 (WITA). Same strict method as bp04-11. Im
 
 **Scope:** image fields of course/scripts/bp-01..bp-03 @ d1f6 `fbb3f9c` (58 stills); files scored from cursor/blueprint-beginner-images `2f8bac1`.
 
-**Result:** 37 pass / 21 fail of 58. Remake queue: 21 (needs_mascot_ref: 0).
+**Result:** lesson stills 37 pass / 21 fail of 58. Stage 2 (34 shared/code-drawn assets): 8 pass / 26 fail. Whole list: 45 pass / 47 fail of 92. Remake queue: 22 (needs_mascot_ref: 0). Code fixes: 25 frames, see CODE_FIXES.md.
 
 **Mismatches:** none. All 58 blobs are identical on d1f6 and beginner-images and match the v10 pass list's scored_blob. All 58 were 'pass' on v10; 21 are overturned here.
 
-**Out of scope / other findings:** 34 v10 rows (title art, mascot, analogy stills, code-drawn charts and cards) are not script image fields and were not re-scored. The numbers files (d1f6) set the on-screen disclaimer to 'Educational content only. Not financial advice.', which is not the exact line.
+**Other finding:** the numbers files (d1f6) set the on-screen disclaimer to 'Educational content only. Not financial advice.', which is not the exact line (CODE_FIXES.md CF-1).
 
 **Fix status:** every fail = `needs_remake`, prompt written (specs/remake/<lesson>__NNN.txt, copied to remake/), not regenerated. Old prompts moved to specs/remake/_superseded/: `bp-01-introduction__010.v1.txt`, `bp-02-what-you-need__004.v1.txt`, `bp-03-what-is-a-grid-bot__003.v1.txt`, `bp-03-what-is-a-grid-bot__010.v1.txt`.
 
@@ -85,3 +85,61 @@ Scored by Creative Studio, 14 Nov 2026 (WITA). Same strict method as bp04-11. Im
 | 017.png | 17 Your turn | PASS | Order waiting on a rung above the price, 'Price must reach it to fill'; matches the beat. | passed as is |
 | 018.png | 18 What the bot is not | PASS | Not a signal / not a fund / not a person watching; matches the beat. | passed as is |
 | 019.png | 19 Outro | FAIL | Outro says 'NEXT: MARKET SHAPES' and 'Next lesson: price shapes'; the next lesson is 'Market regimes' (two different wrong names on one frame). | needs remake, prompt `bp-03-what-is-a-grid-bot__019.txt` |
+
+## Stage 2: the 34 non-script assets the masters use (shared stills, mascot, code-drawn frames)
+
+Source: blueprint-smoke/BP01-03_IMAGE_USE.txt @fbb3f9c. **8 pass / 26 fail of 34.** ChatGPT assets 8/9 pass, code-drawn 0/25 pass. Whole list: 45 pass / 47 fail of 92.
+
+- **Mascot:** confirmed approved. `course/images/mascot/blueprint-mascot.png` blob 5d421ae3 = the approved cut-out, identical on d1f6, beginner-images and PR #17 head.
+- **Code-drawn frames** were scored from a fresh fbb3f9c render. The committed `blueprint-smoke/code-drawn` PNGs (61c4f97) are stale for 22 of 25. Every code-drawn fail is `code_fix_needed`; see CODE_FIXES.md.
+- **ChatGPT fail:** analogy-fence. Remake prompt `blueprint-analogies__analogy-fence.txt`, queue row 22.
+
+
+### bp-01-introduction: 14 total, 3 pass, 11 fail
+
+| Asset | Kind | Result | Reason | Fix status |
+|---|---|---|---|---|
+| style-ref/01M6MSHVNHX3WQH81XS8KQK1HT.png | title-art | PASS | Used only as the GRID BOT BUILDER wordmark crop (WORD_BOX 260,52,760,176 via studio.py wordmark()); the crop is clean logo art with no other text. The full cover must never be shown: it carries 'BY STEWART CROWN', coin logos and price art (studio.py refuses an uncropped draw). | passed as is |
+| mascot/blueprint-mascot.png | mascot | PASS | Approved mascot: blob 5d421ae3 equals the approved cut-out /workspace/image-gen-skills/character-sheet/blueprint-mascot.png, identical on d1f6, beginner-images and PR #17 head; matches mascot-sheet-v1 (white/silver body, gloss-black visor, blue eye bar, chest light and antenna ball). Clean alpha, no text. | passed as is |
+| blueprint-analogies/analogy-ladder.png | analogy-still | PASS | 'A LADDER = YOUR STEPS': rung = one price step, gap = distance between steps; 1536x1024, margins 68-77px. In the frame the baked tags are re-covered at 28px by code. | passed as is |
+| blueprint-analogies/analogy-fence.png | analogy-still | FAIL | Picture reads (top rail, bottom rail, price bouncing between), but the file is 1280x720 and is an older still with code-drawn PIL relabels (label.py), not a single 1536x1024 ChatGPT still. Hard fail: wrong size: 1280x720, not 1536x1024. | needs remake, prompt `blueprint-analogies__analogy-fence.txt` |
+| chart/range-2023/hook | code-drawn-chart | FAIL | Footer reads 'Educational content only. Not financial advice.' Otherwise clear: real 90-day window, band 24,930 to 30,331, '16 Oct 28,519' (all match btc-usd-windows.json range_2023). Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+| chart/range-2023/a-ladder | code-drawn-chart | FAIL | Footer not exact. Otherwise fine: whole ladder still fitted, 28px tags, 'Not to scale: the chart has 7 levels', seven real levels 24,930 to 30,331. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+| chart/range-2023/the-range | code-drawn-chart | FAIL | Footer not exact. Otherwise fine: real low 24,930 and high 30,331. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+| chart/range-2023/the-levels | code-drawn-chart | FAIL | Footer not exact. Otherwise fine: seven levels, six gaps, 'one gap = about 900' (5,400.34 / 6 = 900.06). Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+| chart/range-2023/the-fence | code-drawn-chart | FAIL | Footer not exact. Otherwise fine: whole fence still fitted, connectors end on the rails. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+| chart/range-2023/walk-the-summer | code-drawn-chart | FAIL | Footer not exact; the axis prints 30331/29431/... while the tag and every other frame print 30,331 style; the unwalked path is drawn so faint that the frame reads as an empty chart with one dot. Hard fail: disclaimer not exact; inconsistent figures: axis labels drawn without thousands separators (30331 ... 24930) beside the '19 Jul 29,914' tag. | code fix needed: CF-1, CF-2 |
+| chart/breakout-2023/the-stop | code-drawn-chart | FAIL | Footer not exact. Otherwise fine: '23 Oct: leaves 30,331' (first close above, 33,086) and '14 Mar 71,397' match breakout_2023. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+| title-card | title-card | FAIL | Footer not exact. Shows 'Lesson 01 / Introduction' (the lesson title), wordmark and the approved mascot. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+| end-card | end-card | FAIL | Footer not exact. Names the next lesson: 'Lesson 2 / What you are going to need'. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+| thumbnail | thumbnail | FAIL | Footer not exact. 'Your first range' with the real band chart and EXAMPLE pill. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+
+### bp-02-what-you-need: 11 total, 3 pass, 8 fail
+
+| Asset | Kind | Result | Reason | Fix status |
+|---|---|---|---|---|
+| style-ref/01M6MSHVNHX3WQH81XS8KQK1HT.png | title-art | PASS | Same wordmark crop as bp-01; clean. | passed as is |
+| mascot/blueprint-mascot.png | mascot | PASS | Same approved mascot file as bp-01. | passed as is |
+| blueprint-analogies/analogy-list.png | analogy-still | PASS | 'YOUR PLAN CHECKLIST' with Pair / Range / Gaps / Stop rows and plain tags; 1536x1024, margins 65-130px. In the bp-02 hook frame the tags are re-covered at 28px by code. | passed as is |
+| chart/range-2023/hook | code-drawn-chart | FAIL | Footer not exact. Otherwise fine: list still fitted, its tags re-covered at 28px, Band 24,930 to 30,331 / Six gaps. About 900 / The close leaves 30,331. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+| chart/range-2023/seven-lines | code-drawn-chart | FAIL | Footer not exact. Otherwise fine: the seven lines in order. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+| chart/range-2023/the-three-words | code-drawn-chart | FAIL | Footer not exact. Otherwise fine: Range / Levels / Stop with real figures. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+| chart/range-2023/no-secrets | code-drawn-chart | FAIL | Footer not exact. Otherwise fine: never vs allowed columns. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+| chart/range-2023/copy-the-path | code-drawn-chart | FAIL | Same walk-chart problems as bp-01 walk-the-summer. Hard fail: disclaimer not exact; inconsistent figures: axis labels without thousands separators beside '19 Jul 29,914'. | code fix needed: CF-1, CF-2 |
+| title-card | title-card | FAIL | Footer not exact. Shows 'Lesson 02 / What you are going to need' and the approved mascot. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+| end-card | end-card | FAIL | Footer not exact. Names the next lesson: 'Lesson 3 / What is a grid bot'. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+| thumbnail | thumbnail | FAIL | Footer not exact. Lesson title with the seven-line list. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+
+### bp-03-what-is-a-grid-bot: 9 total, 2 pass, 7 fail
+
+| Asset | Kind | Result | Reason | Fix status |
+|---|---|---|---|---|
+| style-ref/01M6MSHVNHX3WQH81XS8KQK1HT.png | title-art | PASS | Same wordmark crop as bp-01; clean. | passed as is |
+| mascot/blueprint-mascot.png | mascot | PASS | Same approved mascot file as bp-01. | passed as is |
+| chart/range-2023/hook | code-drawn-chart | FAIL | Footer not exact; ticket text too small. Counts are right (5 down-closes through 27,630: 17 Aug, 30 Aug + 3 in October). Hard fail: disclaimer not exact; illegible label: 'BUY 27,630' and '3 more in October' tickets are 22px at 1080p (28px minimum). | code fix needed: CF-1, CF-3 |
+| chart/range-2023/limit-orders-wait | code-drawn-chart | FAIL | Footer not exact; 22px tickets; 'A cross is not a receipt' / 'That is not a receipt' is jargon a beginner cannot decode. The 10 crossings are right (5 down, 5 up), but only the 5 down-crosses are marked, so the frame shows 5 marks next to '10 times'. Hard fail: disclaimer not exact; illegible label: 22px tickets. | code fix needed: CF-1, CF-3, CF-4 |
+| chart/range-2023/buys-and-sells | code-drawn-chart | FAIL | Footer not exact. Otherwise fine: sells above 27,630 in mint, buys below in blue. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+| chart/range-2023/where-the-path-stood | code-drawn-chart | FAIL | Same walk-chart problems as bp-01 walk-the-summer. Hard fail: disclaimer not exact; inconsistent figures: axis labels without thousands separators beside '19 Jul 29,914'. | code fix needed: CF-1, CF-2 |
+| title-card | title-card | FAIL | Footer not exact. Shows 'Lesson 03 / What is a grid bot' and the approved mascot. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
+| end-card | end-card | FAIL | Footer not exact. Names 'Lesson 4 / Market regimes' correctly, but the 'Break' mini chart ends only ~10px above the top line, so it reads as touching the band, not leaving it. Hard fail: disclaimer not exact. | code fix needed: CF-1, CF-5 |
+| thumbnail | thumbnail | FAIL | Footer not exact. Lesson title with the band chart and 'BUY 27,630' level. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
