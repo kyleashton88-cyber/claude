@@ -7,8 +7,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "b5b97bedd3890435c449841ea19d7f29",
-      "md5": "b5b97bedd3890435c449841ea19d7f29",
+      "checksum": "226ec231f9dfb00aac736608a65d8743",
+      "md5": "226ec231f9dfb00aac736608a65d8743",
       "renderer": "cairosvg",
       "alt": "Price often chops sideways, weaving through the same band instead of leaving.",
       "spec": {
@@ -42,14 +42,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 2 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 100"
+        "pass: frame \u2014 1536x1024, spread 101"
       ]
     },
     {
@@ -58,8 +60,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "06feeec61be314ac9dd275d0b10d06fc",
-      "md5": "06feeec61be314ac9dd275d0b10d06fc",
+      "checksum": "00f2becd87586a51b41f4d5282ec7e6a",
+      "md5": "00f2becd87586a51b41f4d5282ec7e6a",
       "renderer": "cairosvg",
       "alt": "Education only, not financial advice.",
       "spec": {
@@ -96,14 +98,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 3 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 A few numbered steps for one idea.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 97"
+        "pass: frame \u2014 1536x1024, spread 95"
       ]
     },
     {
@@ -112,8 +116,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "ec8b2ccd2ff096c677bd9dc4bcd08375",
-      "md5": "ec8b2ccd2ff096c677bd9dc4bcd08375",
+      "checksum": "c60f65c8e245691c1a868eb461d046c4",
+      "md5": "c60f65c8e245691c1a868eb461d046c4",
       "renderer": "cairosvg",
       "alt": "Introduction.",
       "spec": {
@@ -148,14 +152,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 2 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 A title card for the lesson, with no extra lockup.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 64"
+        "pass: frame \u2014 1536x1024, spread 71"
       ]
     },
     {
@@ -164,8 +170,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "33e24cfe04c78283efbce1ddc401faae",
-      "md5": "33e24cfe04c78283efbce1ddc401faae",
+      "checksum": "f63f64db3ed718c2c8a1082347ba8a81",
+      "md5": "f63f64db3ed718c2c8a1082347ba8a81",
       "renderer": "cairosvg",
       "alt": "A grid has three parts you can name: the range, the levels, and the stop.",
       "spec": {
@@ -202,14 +208,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 3 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 A few numbered steps for one idea.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 110"
+        "pass: frame \u2014 1536x1024, spread 92"
       ]
     },
     {
@@ -218,8 +226,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "6ff39a3647ad366c783138bbcffc7f76",
-      "md5": "6ff39a3647ad366c783138bbcffc7f76",
+      "checksum": "6062a47a15aba28cf58e3c2af8ff51da",
+      "md5": "6062a47a15aba28cf58e3c2af8ff51da",
       "renderer": "cairosvg",
       "alt": "The range is a top and a bottom you draw before any rung.",
       "spec": {
@@ -256,14 +264,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 3 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 109"
+        "pass: frame \u2014 1536x1024, spread 88"
       ]
     },
     {
@@ -272,8 +282,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "2c3da41f1ff2dad4376bf4d74750dd1b",
-      "md5": "2c3da41f1ff2dad4376bf4d74750dd1b",
+      "checksum": "0b6c159904c19963c7e079d9e7e17457",
+      "md5": "0b6c159904c19963c7e079d9e7e17457",
       "renderer": "cairosvg",
       "alt": "The levels are limit orders that wait on the rungs.",
       "spec": {
@@ -310,14 +320,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 3 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 Rungs are levels that wait. One rung is the next step.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 109"
+        "pass: frame \u2014 1536x1024, spread 88"
       ]
     },
     {
@@ -326,8 +338,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "b605f446556d925c976248ee886b2890",
-      "md5": "b605f446556d925c976248ee886b2890",
+      "checksum": "d591c6706dd5dbde01aa27011886e970",
+      "md5": "d591c6706dd5dbde01aa27011886e970",
       "renderer": "cairosvg",
       "alt": "One approach places buy orders below the mark and sell orders above it.",
       "spec": {
@@ -368,14 +380,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 3 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 a figure is on the plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 98"
+        "pass: frame \u2014 1536x1024, spread 92"
       ]
     },
     {
@@ -384,8 +398,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "66f7f874e474494ea214f964cf221102",
-      "md5": "66f7f874e474494ea214f964cf221102",
+      "checksum": "5949e6a9d50f83882a34d35baad2b23d",
+      "md5": "5949e6a9d50f83882a34d35baad2b23d",
       "renderer": "cairosvg",
       "alt": "The stop is a sentence you write, not a feeling that the trade is over.",
       "spec": {
@@ -424,14 +438,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 3 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 109"
+        "pass: frame \u2014 1536x1024, spread 88"
       ]
     },
     {
@@ -440,8 +456,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "cb3f3aed9d632fc9cff2b98918c34491",
-      "md5": "cb3f3aed9d632fc9cff2b98918c34491",
+      "checksum": "210b5a909af15dc541d1b6f4153116b8",
+      "md5": "210b5a909af15dc541d1b6f4153116b8",
       "renderer": "cairosvg",
       "alt": "We do not sell or run a trading bot. No order is sent from this lesson.",
       "spec": {
@@ -476,14 +492,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 2 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 The grid bot mascot in one pose, beside one prop.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 234"
+        "pass: frame \u2014 1536x1024, spread 241"
       ]
     },
     {
@@ -492,8 +510,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "79c9218aead1a42dd4fb6fc0cfb2d025",
-      "md5": "79c9218aead1a42dd4fb6fc0cfb2d025",
+      "checksum": "f1960a98fddf5bde6c068612a5700d1d",
+      "md5": "f1960a98fddf5bde6c068612a5700d1d",
       "renderer": "cairosvg",
       "alt": "The course is a map, and this introduction is only the first square.",
       "spec": {
@@ -530,14 +548,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 3 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 A short path of steps, read from left to right.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 109"
+        "pass: frame \u2014 1536x1024, spread 87"
       ]
     },
     {
@@ -546,8 +566,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "820f1ca64af01642280babd7f456521f",
-      "md5": "820f1ca64af01642280babd7f456521f",
+      "checksum": "bf50375b952c3d99acfb9a1298e98319",
+      "md5": "bf50375b952c3d99acfb9a1298e98319",
       "renderer": "cairosvg",
       "alt": "Draw a path that leaves the top of the band and does not return.",
       "spec": {
@@ -585,14 +605,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 3 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 107"
+        "pass: frame \u2014 1536x1024, spread 98"
       ]
     },
     {
@@ -601,8 +623,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "a0957796f26d963e4c1bd05df6d95f5e",
-      "md5": "a0957796f26d963e4c1bd05df6d95f5e",
+      "checksum": "06295096c73645c5632f9c13caf15a10",
+      "md5": "06295096c73645c5632f9c13caf15a10",
       "renderer": "cairosvg",
       "alt": "There is no result number in this lesson.",
       "spec": {
@@ -637,14 +659,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 2 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 Two ways to see the same idea, side by side.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 102"
+        "pass: frame \u2014 1536x1024, spread 94"
       ]
     },
     {
@@ -653,8 +677,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "28f32680816ed7c3faf760a3d5313735",
-      "md5": "28f32680816ed7c3faf760a3d5313735",
+      "checksum": "3b69cee061749efbcfe7031273c8f109",
+      "md5": "3b69cee061749efbcfe7031273c8f109",
       "renderer": "cairosvg",
       "alt": "A slow sketch uses eight even ticks inside the band, only as a way to see rungs.",
       "spec": {
@@ -695,14 +719,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 3 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 a figure is on the plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 99"
+        "pass: frame \u2014 1536x1024, spread 76"
       ]
     },
     {
@@ -711,8 +737,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "441ab5c1064c012dec20b5eea57b7931",
-      "md5": "441ab5c1064c012dec20b5eea57b7931",
+      "checksum": "e4096b2342d434ec47fab3bb55eebb8f",
+      "md5": "e4096b2342d434ec47fab3bb55eebb8f",
       "renderer": "cairosvg",
       "alt": "The next step is the setup checklist, on paper, before any screen.",
       "spec": {
@@ -750,14 +776,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 3 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 A short paper checklist, one row highlighted.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 110"
+        "pass: frame \u2014 1536x1024, spread 95"
       ]
     },
     {
@@ -766,8 +794,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "a6a3a2bf6915c93389373d84030026fc",
-      "md5": "a6a3a2bf6915c93389373d84030026fc",
+      "checksum": "a86d494e171350a0713389d3d9c72457",
+      "md5": "a86d494e171350a0713389d3d9c72457",
       "renderer": "cairosvg",
       "alt": "A paper or demo account is a fence around practice.",
       "spec": {
@@ -804,14 +832,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 3 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 A fence around practice: stay inside the rails.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 100"
+        "pass: frame \u2014 1536x1024, spread 90"
       ]
     },
     {
@@ -820,8 +850,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "f94146e10495fc68ace5b5f8a41e23a0",
-      "md5": "f94146e10495fc68ace5b5f8a41e23a0",
+      "checksum": "0eb117e7a4d10b8998e106892e7b4cf8",
+      "md5": "0eb117e7a4d10b8998e106892e7b4cf8",
       "renderer": "cairosvg",
       "alt": "Practice: A grid has three parts you can name: the range, the levels, and the stop.",
       "spec": {
@@ -858,14 +888,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 3 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 A few numbered steps for one idea.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 104"
+        "pass: frame \u2014 1536x1024, spread 94"
       ]
     },
     {
@@ -874,8 +906,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "a002eabda638aa31fbdc24911160a94c",
-      "md5": "a002eabda638aa31fbdc24911160a94c",
+      "checksum": "2d14ab3d353c0ba623796ecac336916d",
+      "md5": "2d14ab3d353c0ba623796ecac336916d",
       "renderer": "cairosvg",
       "alt": "If you keep one sentence, keep this: range, levels, and stop, drawn before any click.",
       "spec": {
@@ -915,14 +947,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 4 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 A few numbered steps for one idea.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 98"
+        "pass: frame \u2014 1536x1024, spread 93"
       ]
     },
     {
@@ -931,8 +965,8 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "904400f246fc15b1e43c9f44ba111ef6",
-      "md5": "904400f246fc15b1e43c9f44ba111ef6",
+      "checksum": "f638dbe439420ed2c553519b7e1bbf56",
+      "md5": "f638dbe439420ed2c553519b7e1bbf56",
       "renderer": "cairosvg",
       "alt": "Next lesson: What you are going to need. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
       "spec": {
@@ -967,14 +1001,16 @@
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
         "pass: label count \u2014 2 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
         "pass: one idea \u2014 A section divider with one word.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 167"
+        "pass: frame \u2014 1536x1024, spread 165"
       ]
     }
   ]

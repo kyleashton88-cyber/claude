@@ -22,13 +22,31 @@ class Svg:
         self._seq += 1
         return f"{prefix}{self._seq}"
 
-    def linear_gradient(self, gid: str, c0: str, c1: str) -> None:
-        self._defs.append(
-            f'<linearGradient id="{gid}" x1="0" y1="0" x2="0" y2="1">'
-            f'<stop offset="0%" stop-color="{c0}"/>'
-            f'<stop offset="100%" stop-color="{c1}"/>'
-            "</linearGradient>"
+    def linear_gradient(self, gid: str, stops: list[tuple[str, str]]) -> None:
+        parts = "".join(
+            f'<stop offset="{offset}" stop-color="{color}"/>' for offset, color in stops
         )
+        self._defs.append(
+            f'<linearGradient id="{gid}" x1="0" y1="0" x2="0" y2="1">{parts}</linearGradient>'
+        )
+
+    def radial_gradient(self, gid: str, inner: str, outer: str) -> None:
+        self._defs.append(
+            f'<radialGradient id="{gid}" cx="50%" cy="42%" r="72%">'
+            f'<stop offset="58%" stop-color="{inner}" stop-opacity="0"/>'
+            f'<stop offset="100%" stop-color="{outer}" stop-opacity="0.72"/>'
+            "</radialGradient>"
+        )
+
+    def ensure_glow(self, std: float) -> str:
+        gid = "softglow"
+        if not any(f'id="{gid}"' in item for item in self._defs):
+            self._defs.append(
+                f'<filter id="{gid}" x="-60%" y="-60%" width="220%" height="220%">'
+                f'<feGaussianBlur stdDeviation="{_num(std)}"/>'
+                "</filter>"
+            )
+        return gid
 
     def rect(self, x, y, w, h, fill="none", stroke="none", sw=0, rx=0, opacity=1, stroke_opacity=1) -> None:
         self._body.append(
@@ -49,19 +67,21 @@ class Svg:
             f'fill="{fill}" fill-opacity="{opacity}" stroke="{stroke}" stroke-width="{_num(sw)}"/>'
         )
 
-    def line(self, x1, y1, x2, y2, stroke, sw=2, dash=None, opacity=1) -> None:
+    def line(self, x1, y1, x2, y2, stroke, sw=2, dash=None, opacity=1, filt=None) -> None:
         dash_attr = f' stroke-dasharray="{dash}"' if dash else ""
+        filter_attr = f' filter="url(#{filt})"' if filt else ""
         self._body.append(
             f'<line x1="{_num(x1)}" y1="{_num(y1)}" x2="{_num(x2)}" y2="{_num(y2)}" '
             f'stroke="{stroke}" stroke-width="{_num(sw)}" stroke-linecap="round" '
-            f'stroke-opacity="{opacity}"{dash_attr}/>'
+            f'stroke-opacity="{opacity}"{dash_attr}{filter_attr}/>'
         )
 
-    def polyline(self, points: list[tuple[float, float]], stroke, sw=2, opacity=1) -> None:
+    def polyline(self, points: list[tuple[float, float]], stroke, sw=2, opacity=1, filt=None) -> None:
         pts = " ".join(f"{_num(x)},{_num(y)}" for x, y in points)
+        filter_attr = f' filter="url(#{filt})"' if filt else ""
         self._body.append(
             f'<polyline points="{pts}" fill="none" stroke="{stroke}" stroke-width="{_num(sw)}" '
-            f'stroke-linejoin="round" stroke-linecap="round" stroke-opacity="{opacity}"/>'
+            f'stroke-linejoin="round" stroke-linecap="round" stroke-opacity="{opacity}"{filter_attr}/>'
         )
 
     def polygon(self, points: list[tuple[float, float]], fill, stroke="none", sw=0, opacity=1) -> None:

@@ -28,8 +28,8 @@ def draw_liquidation(canvas, params: dict) -> None:
     band_top, band_bot = min(y_entry, y_liq), max(y_entry, y_liq)
     canvas.svg.rect(left, band_top, right - left, band_bot - band_top, fill=canvas.theme.danger, opacity=0.28, rx=8)
     t = canvas.theme
-    canvas.svg.line(left, y_entry, right, y_entry, t.accent, sw=2.5)
-    canvas.svg.line(left, y_liq, right, y_liq, t.danger, sw=2.5, dash="8 6")
+    canvas.glow_line(left, y_entry, right, y_entry, t.accent, sw=t.s(2.6))
+    canvas.glow_line(left, y_liq, right, y_liq, t.danger, sw=t.s(2.6), dash="8 6")
     canvas.svg.circle(left + (right - left) * 0.62, y_mark, 9, fill=t.ink)
     names = labels_or(params, ["ENTRY", "DANGER", "LIQUIDATION"])
     canvas.chip(names[0], x + 100, y_entry, anchor="end")

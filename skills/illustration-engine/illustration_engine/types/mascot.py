@@ -27,17 +27,19 @@ def draw_mascot(canvas, x: float, y: float, scale: float, pose: str) -> None:
     t = canvas.theme
     s = scale
     with canvas.svg.group(transform=f"translate({x:.1f} {y:.1f}) scale({s})"):
-        canvas.svg.ellipse(90, 268, 62, 10, fill=t.accent, opacity=0.18)
-        canvas.svg.rect(62, 214, 22, 52, fill=t.mascot, stroke=t.accent, sw=2, rx=8)
-        canvas.svg.rect(96, 214, 22, 52, fill=t.mascot, stroke=t.accent, sw=2, rx=8)
-        canvas.svg.rect(40, 112, 100, 112, fill=t.mascot, stroke=t.accent, sw=2.5, rx=32)
-        canvas.svg.circle(90, 168, 22, fill=t.visor, stroke=t.accent, sw=2)
-        _badge(canvas, 90, 168, 1, t.accent)
-        canvas.svg.rect(28, 8, 124, 112, fill=t.mascot, stroke=t.accent, sw=2.5, rx=56)
+        canvas.svg.ellipse(90, 268, 62, 10, fill=t.accent, opacity=0.16)
+        canvas.svg.rect(62, 214, 22, 52, fill=t.mascot, stroke=t.mascot_shade, sw=2, rx=8)
+        canvas.svg.rect(96, 214, 22, 52, fill=t.mascot_shade, stroke=t.mascot_shade, sw=2, rx=8)
+        canvas.svg.rect(40, 112, 100, 112, fill=t.mascot, stroke=t.rim, sw=2.5, rx=32)
+        canvas.svg.rect(92, 118, 44, 98, fill=t.mascot_shade, rx=18, opacity=0.55)
+        canvas.svg.circle(90, 168, 22, fill=t.visor, stroke=t.eye, sw=2)
+        _badge(canvas, 90, 168, 1, t.eye)
+        canvas.svg.rect(28, 8, 124, 112, fill=t.mascot, stroke=t.rim, sw=3, rx=56)
+        canvas.svg.path("M 46 36 A 58 52 0 0 1 132 22", fill="none", stroke="#F4F8FC", sw=3, opacity=0.7)
         canvas.svg.rect(50, 46, 80, 36, fill=t.visor, rx=14)
         # Two straight bars. Same vertical position, so they cannot read as a smile.
-        canvas.svg.rect(62, 60, 22, 6, fill=t.accent, rx=2)
-        canvas.svg.rect(96, 60, 22, 6, fill=t.accent, rx=2)
+        canvas.svg.rect(62, 60, 22, 6, fill=t.eye, rx=2)
+        canvas.svg.rect(96, 60, 22, 6, fill=t.eye, rx=2)
         # Arms sit in front of the body. Local coordinates, before the group scale.
         if pose == "pointing":
             canvas.svg.line(40, 150, 16, 168, t.mascot_shade, sw=14)

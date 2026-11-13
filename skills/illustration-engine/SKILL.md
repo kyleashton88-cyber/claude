@@ -16,7 +16,14 @@ cd skills/illustration-engine
 python3 -m illustration_engine render "grid ladder, range 90-110, 10 grids, price 100, label buy and sell" --preset house --out x.png
 ```
 
-Presets: `house`, `light`, `contrast`, `thumbnail`.
+Presets: `house` (1536×1024), `light`, `contrast`, `thumbnail`, and `elite`. `elite` repeats the house geometry in teal. It is provisional until Stewart confirms it.
+
+Supported still sizes, scaled from a 1280×720 baseline: 1536×1024, 1280×720, and 1920×1080.
+
+```bash
+python3 -m illustration_engine render "grid ladder, range 90-110, 10 grids, price 100, label buy and sell" --preset house --size 1920x1080 --out wide.png
+python3 -m illustration_engine render "grid ladder, range 90-110, 10 grids, price 100, label buy and sell" --preset elite --out elite.png
+```
 
 ```bash
 python3 -m illustration_engine render "fence analogy, practice inside" --preset contrast --out fence.png
@@ -39,6 +46,8 @@ python3 -m illustration_engine batch ../../IMAGE_REQUESTS.json --lesson bp-01-in
 ```
 
 File names follow the lesson list (`001.png`, …). Each folder gets `MANIFEST.json` (spec, checksum, preset), `ALT.txt`, `QA.md`, and `BEGINNER.md`.
+
+The side-by-side plates in `test-outputs/compare/` use the stills already in the lesson folder. Creative Studio measured those as fallback plates. A closer set of reference stills can replace them later. The engine does not write into `course/`.
 
 ## Python
 

@@ -11,7 +11,7 @@ def _candle(canvas, x, y_high, y_low, y_open, y_close, width):
     t = canvas.theme
     up = y_close <= y_open
     color = t.accent if up else t.blue
-    canvas.svg.line(x, y_high, x, y_low, color, sw=max(2, width * 0.12))
+    canvas.glow_line(x, y_high, x, y_low, color, sw=max(2, width * 0.14))
     top = min(y_open, y_close)
     height = max(6, abs(y_close - y_open))
     canvas.svg.rect(x - width / 2, top, width, height, fill=color, rx=3, opacity=0.95)

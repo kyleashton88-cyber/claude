@@ -456,3 +456,11 @@ Read each plate with the sound off.
 - Example stamp: yes
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
+
+### presets/elite.png
+- Idea: Buy orders wait below the mark and sell orders wait above it.
+- Headline: GRID LADDER
+- Labels (3): BUY, SELL, PRICE
+- Example stamp: yes
+- Automated: pass
+- Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?

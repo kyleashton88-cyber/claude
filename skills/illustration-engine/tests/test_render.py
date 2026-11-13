@@ -4,19 +4,20 @@ from pathlib import Path
 
 from illustration_engine.qa import contrast_ratio
 from illustration_engine.render import UnsafeOutput, render_prompt
-from illustration_engine.theme import PRESETS
+from illustration_engine.theme import PRESET_NAMES, get_theme
 
 
 class ThemeTests(unittest.TestCase):
     def test_text_pairs_clear_the_floor(self):
         pairs = {
-            "house": [("#FFFFFF", "#050A18"), ("#00D4FF", "#050A18"), ("#FFFFFF", "#0B1A30")],
-            "light": [("#0A1628", "#F7F9FC"), ("#083344", "#F7F9FC"), ("#0A1628", "#FFFFFF")],
+            "house": [("#F4F8FC", "#00081B"), ("#00D4FF", "#00081B"), ("#F4F8FC", "#060E1E")],
+            "light": [("#0A1628", "#F4F7FB"), ("#083344", "#F7F9FC"), ("#0A1628", "#FFFFFF")],
             "contrast": [("#FFFFFF", "#000000"), ("#FFE14A", "#000000")],
-            "thumbnail": [("#FFFFFF", "#050A18"), ("#00D4FF", "#050A18")],
+            "thumbnail": [("#F4F8FC", "#00081B"), ("#00D4FF", "#00081B")],
+            "elite": [("#F4F8FC", "#05080F"), ("#14E0C8", "#05080F"), ("#4FD1A5", "#05080F")],
         }
         for name, items in pairs.items():
-            self.assertIn(name, PRESETS)
+            self.assertIn(name, PRESET_NAMES)
             for fg, bg in items:
                 self.assertGreaterEqual(contrast_ratio(fg, bg), 4.5, f"{name} {fg} on {bg}")
 
@@ -36,6 +37,19 @@ class RenderTests(unittest.TestCase):
             self.assertGreater(dest.stat().st_size, 1000)
             self.assertTrue(dest.with_suffix(".svg").is_file())
             self.assertIn("EXAMPLE", dest.with_suffix(".svg").read_text(encoding="utf-8"))
+            self.assertTrue(all(mark["family"] == "Engine Condensed" for mark in result.meta["marks"] if mark["role"] == "headline"))
+            floor = 24 * result.theme.scale
+            labels = [mark for mark in result.meta["marks"] if mark["role"] == "label"]
+            self.assertTrue(labels)
+            self.assertTrue(all(mark["size"] + 0.1 >= floor for mark in labels))
+
+    def test_canvas_sizes_scale_type(self):
+        from illustration_engine.theme import get_theme
+        for width, height, headline in ((1280, 720, 64), (1536, 1024, 77), (1920, 1080, 96)):
+            theme = get_theme("house", (width, height))
+            self.assertEqual((theme.width, theme.height), (width, height))
+            self.assertEqual(theme.headline, headline)
+            self.assertGreaterEqual(theme.label, round(24 * width / 1280))
 
     def test_refuses_course_output(self):
         with self.assertRaises(UnsafeOutput):
@@ -43,7 +57,7 @@ class RenderTests(unittest.TestCase):
 
     def test_each_preset_renders(self):
         with tempfile.TemporaryDirectory() as tmp:
-            for name in PRESETS:
+            for name in PRESET_NAMES:
                 dest = Path(tmp) / f"{name}.png"
                 result = render_prompt(
                     "grid ladder, range 90-110, 10 grids, price 100, label buy and sell",

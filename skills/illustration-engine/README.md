@@ -22,7 +22,7 @@ Candle anatomy, candle series, candle pattern, grid ladder, liquidation, price r
 
 ## Presets
 
-`house` (navy and cyan, 1536×1024), `light` (print), `contrast` (high contrast), `thumbnail` (square social crop).
+`house` (navy and cyan, 1536×1024), `light`, `contrast`, `thumbnail`, and `elite` (teal, provisional until Stewart confirms it). Sizes scale from 1280×720. Supported still sizes are 1536×1024, 1280×720, and 1920×1080. Headlines are Roboto Condensed Bold. Labels are Inter Bold.
 
 ## Commands
 

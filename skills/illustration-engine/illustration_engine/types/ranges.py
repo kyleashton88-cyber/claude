@@ -40,12 +40,12 @@ def draw_range(canvas, params: dict) -> None:
         if stop_y > y + h - 24:
             stop_y = lower
             lower -= 36
-        canvas.svg.line(left, stop_y, right, stop_y, t.danger, sw=2.4, dash="9 7")
-    canvas.svg.line(left, upper, right, upper, t.accent, sw=2.2, dash="6 6")
-    canvas.svg.line(left, lower, right, lower, t.accent, sw=2.2, dash="6 6")
+        canvas.glow_line(left, stop_y, right, stop_y, t.danger, sw=t.s(2.6), dash="9 7")
+    canvas.glow_line(left, upper, right, upper, t.accent, sw=t.s(2.2), dash="6 6")
+    canvas.glow_line(left, lower, right, lower, t.accent, sw=t.s(2.2), dash="6 6")
     kind = "leave" if variant == "leave" else ("touch" if variant == "touch" else "inside")
     pts = _path(canvas, left + 10, right - 10, upper, lower, kind)
-    canvas.svg.polyline(pts, t.accent, sw=3)
+    canvas.glow_polyline(pts, t.accent, sw=t.s(3))
     names = labels_or(params, ["UPPER", "LOWER", "RANGE"] if not params.get("stop") else ["UPPER", "LOWER", "STOP"])
     canvas.chip(names[0], right - 20, upper - 28, anchor="end")
     if len(names) > 1:

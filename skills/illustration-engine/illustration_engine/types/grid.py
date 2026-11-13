@@ -26,9 +26,9 @@ def draw_grid(canvas, params: dict) -> None:
         ys.append(canvas.plot_y(value, low, high, top, bottom, pad=16))
     t = canvas.theme
     for gy in ys:
-        canvas.svg.line(left, gy, right, gy, t.accent, sw=1.4, opacity=0.85)
+        canvas.glow_line(left, gy, right, gy, t.accent, sw=t.s(1.7))
     price_y = canvas.plot_y(min(high, max(low, price)), low, high, top, bottom, pad=16)
-    canvas.svg.line(left - 16, price_y, right + 16, price_y, t.ink, sw=2.2, dash="7 7")
+    canvas.glow_line(left - 16, price_y, right + 16, price_y, t.blue, sw=t.s(2.8))
     buy_at = None
     sell_at = None
     fills = set(params.get("fills") or [])
@@ -39,7 +39,7 @@ def draw_grid(canvas, params: dict) -> None:
         if value < price - (high - low) / gaps * 0.15:
             canvas.svg.polygon(
                 [(buy_x, gy - 11), (buy_x - 9, gy + 7), (buy_x + 9, gy + 7)],
-                fill=t.accent,
+                fill=t.blue,
             )
             buy_at = (buy_x, gy)
             if i in fills:
@@ -47,7 +47,7 @@ def draw_grid(canvas, params: dict) -> None:
         elif value > price + (high - low) / gaps * 0.15:
             canvas.svg.polygon(
                 [(sell_x, gy + 11), (sell_x - 9, gy - 7), (sell_x + 9, gy - 7)],
-                fill="none", stroke=t.blue, sw=2.4,
+                fill=t.sell,
             )
             sell_at = (sell_x, gy)
             if i in fills:

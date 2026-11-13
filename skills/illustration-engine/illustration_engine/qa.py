@@ -7,6 +7,7 @@ from dataclasses import dataclass, field
 
 from PIL import Image
 
+from .fonts import HEADLINE_FAMILY
 from .theme import Theme
 
 
@@ -105,6 +106,20 @@ def check_scene(meta: dict, theme: Theme) -> QaReport:
         report.add("example stamp", bool(meta.get("example")), "a figure is on the plate" if meta.get("example") else "a figure is missing the EXAMPLE stamp")
     else:
         report.add("example stamp", True, "no figure on this plate")
+    headlines = [mark for mark in marks if mark["role"] == "headline"]
+    wrong_face = [mark["text"] for mark in headlines if mark.get("family") != HEADLINE_FAMILY]
+    report.add(
+        "headline face",
+        bool(headlines) and not wrong_face,
+        "condensed bold" if headlines and not wrong_face else "headline is missing the condensed bold face",
+    )
+    label_floor = 24 * theme.scale
+    small_labels = [mark["text"] for mark in labels if mark["size"] + 0.1 < label_floor]
+    report.add(
+        "label size",
+        not small_labels,
+        f"labels at least {label_floor:.0f}px" if not small_labels else "small labels: " + ", ".join(small_labels),
+    )
     report.add("one idea", bool(meta.get("idea")), meta.get("idea") or "missing idea")
     banned = ("profit", "guaranteed", "win-rate", "win rate", "@", "http")
     dirty = []

@@ -98,7 +98,7 @@ def build_gallery(out_dir: Path, requests: Path | None = None, lesson: str = "bp
         sheet_items.append((dest, f"{kind} {index}"))
         print(f"type {kind} {index}")
     preset_params = dict(PRESET_EXAMPLE["params"])
-    for name in ("house", "light", "contrast", "thumbnail"):
+    for name in ("house", "light", "contrast", "thumbnail", "elite"):
         spec = Spec(type="grid_ladder", params=dict(preset_params), preset=name)
         dest = out_dir / "presets" / f"{name}.png"
         result = render_spec(spec, dest, preset=name, strict=strict)

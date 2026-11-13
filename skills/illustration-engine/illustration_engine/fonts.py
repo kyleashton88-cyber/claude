@@ -1,8 +1,8 @@
-"""Open-licensed fonts embedded in every SVG.
+"""Fonts embedded in every SVG.
 
-Inter is shipped under the SIL Open Font License. The license text is
-OFL.txt beside the font files. Documents drawn with the fonts are not
-themselves under that license.
+Inter is SIL Open Font License (OFL.txt). Headlines use Roboto Condensed
+Bold, which is Apache 2.0 (LICENSE-Roboto.txt). Documents drawn with the
+fonts are not themselves under those licenses.
 """
 
 from __future__ import annotations
@@ -19,13 +19,17 @@ FILES = {
     "regular": "Inter-Regular.ttf",
     "semi": "Inter-SemiBold.ttf",
     "bold": "Inter-Bold.ttf",
+    "condensed": "RobotoCondensed-Bold.ttf",
 }
 
 FAMILIES = {
     "regular": "Engine Regular",
     "semi": "Engine Semi",
     "bold": "Engine Bold",
+    "condensed": "Engine Condensed",
 }
+
+HEADLINE_FAMILY = FAMILIES["condensed"]
 
 
 def font_path(weight: str) -> Path:

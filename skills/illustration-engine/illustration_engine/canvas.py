@@ -25,6 +25,7 @@ class Mark:
     size: int
     fill: str
     bg: str
+    family: str
     bbox: tuple[float, float, float, float]
 
     def as_dict(self) -> dict:
@@ -34,6 +35,7 @@ class Mark:
             "size": self.size,
             "fill": self.fill,
             "bg": self.bg,
+            "family": self.family,
             "bbox": [round(v, 1) for v in self.bbox],
         }
 
@@ -57,7 +59,11 @@ class Canvas:
         return self.theme.height
 
     def measure(self, text: str, size: int, weight: str = "semi") -> float:
-        return float(pil_font(weight, size).getlength(text))
+        width = float(pil_font(weight, size).getlength(text))
+        # Cairo draws Roboto Condensed a little wider than Pillow measures.
+        if weight == "condensed":
+            width *= 1.18
+        return width
 
     def ink_box(self, text: str, x: float, y: float, size: int, anchor: str, weight: str) -> tuple[float, float, float, float]:
         width = self.measure(text, size, weight)
@@ -77,9 +83,10 @@ class Canvas:
         if not content:
             return (x, y, x, y)
         box = self.ink_box(content, x, y, size, anchor, weight)
-        self.svg.text(content, x, y, size, fill, family(weight), anchor=anchor, opacity=opacity, rotate=rotate)
+        face = family(weight)
+        self.svg.text(content, x, y, size, fill, face, anchor=anchor, opacity=opacity, rotate=rotate)
         if role != "watermark":
-            self.marks.append(Mark(role, content, size, fill, bg or self.theme.bg0, box))
+            self.marks.append(Mark(role, content, size, fill, bg or self.theme.bg0, face, box))
         if role == "label" and content not in self.labels:
             self.labels.append(content)
         return box
@@ -87,10 +94,10 @@ class Canvas:
     def backdrop(self) -> None:
         t = self.theme
         gid = self.svg.uid("bg")
-        self.svg.linear_gradient(gid, t.bg0, t.bg1)
+        self.svg.linear_gradient(gid, [("0%", t.bg0), ("52%", t.bg_mid), ("100%", t.bg1)])
         self.svg.rect(0, 0, self.width, self.height, fill=f"url(#{gid})")
         if t.grid_alpha:
-            step = 64
+            step = max(8, t.grid_pitch)
             with self.svg.group(opacity=t.grid_alpha):
                 x = 0
                 while x <= self.width:
@@ -101,14 +108,12 @@ class Canvas:
                     self.svg.line(0, y, self.width, y, t.grid, sw=1)
                     y += step
         if t.bokeh:
-            spots = (
-                (0.12, 0.18, 150),
-                (0.88, 0.16, 180),
-                (0.82, 0.84, 160),
-                (0.16, 0.82, 120),
-            )
+            spots = ((0.86, 0.14, t.s(90)), (0.12, 0.88, t.s(70)))
             for fx, fy, radius in spots:
-                self.svg.circle(self.width * fx, self.height * fy, radius, fill=t.accent, opacity=0.07)
+                self.svg.circle(self.width * fx, self.height * fy, radius, fill=t.accent, opacity=0.045)
+        vig = self.svg.uid("vig")
+        self.svg.radial_gradient(vig, t.bg0, t.vignette)
+        self.svg.rect(0, 0, self.width, self.height, fill=f"url(#{vig})")
 
     def headline(self, text: str, keyword: str | None = None) -> None:
         t = self.theme
@@ -116,8 +121,13 @@ class Canvas:
         if not words:
             return
         size = t.headline
-        while size > t.min_font and self.measure(" ".join(words), size, "bold") > self.width - t.safe_x * 2:
-            size -= 4
+
+        def span(px: int) -> float:
+            gap = max(t.s(22), px * 0.28)
+            return sum(self.measure(word, px, "condensed") for word in words) + gap * (len(words) - 1)
+
+        while size > t.headline_floor and span(size) > self.width - t.safe_x * 2:
+            size -= 2
         skip = {"THE", "A", "AN", "OF", "AND"}
         if keyword and keyword.upper() in words:
             key = keyword.upper()
@@ -127,29 +137,33 @@ class Canvas:
                 key = content[1]
             else:
                 key = content[0]
-        baseline = t.safe_top + 8 + size * CAP
+        baseline = t.safe_top + t.s(8) + size * CAP
         x = float(t.safe_x)
+        gap = max(t.s(22), size * 0.28)
         for word in words:
             weight_fill = t.accent_ink if word == key else t.ink
-            chunk = word + " "
-            self.text(word, x, baseline, size, weight_fill, weight="bold", role="headline", bg=t.bg0)
-            x += self.measure(chunk, size, "bold")
+            self.text(word, x, baseline, size, weight_fill, weight="condensed", role="headline", bg=t.bg0)
+            x += self.measure(word, size, "condensed") + gap
         self.headline_text = " ".join(words)
 
     def content_rect(self) -> tuple[float, float, float, float]:
         t = self.theme
-        top = t.safe_top + t.headline + 52
+        top = t.safe_top + t.headline + t.s(36)
         left = float(t.safe_x)
         right = self.width - t.safe_x
         bottom = self.height - t.safe_bottom - 8
         return (left, top, right - left, bottom - top)
 
-    def glass(self, x, y, w, h, rx=28) -> None:
+    def glass(self, x, y, w, h, rx=None) -> None:
         t = self.theme
-        self.svg.rect(x - 6, y - 6, w + 12, h + 12, fill="none", stroke=t.accent, sw=t.stroke * 4, rx=rx + 4, stroke_opacity=0.16)
-        opacity = 0.94 if t.name == "light" else 0.82
-        self.svg.rect(x, y, w, h, fill=t.card, stroke=t.card_line, sw=t.stroke, rx=rx, opacity=opacity)
-        self.svg.line(x + rx, y + 1.5, x + w - rx, y + 1.5, "#FFFFFF", sw=1.25, opacity=0.18 if t.name != "light" else 0.7)
+        rx = t.s(22) if rx is None else rx
+        halo = t.s(10)
+        self.svg.rect(x - halo, y - halo, w + halo * 2, h + halo * 2, fill=t.halo, stroke="none", sw=0, rx=rx + halo, opacity=0.22)
+        self.svg.rect(x - t.s(3), y - t.s(3), w + t.s(6), h + t.s(6), fill="none", stroke=t.halo, sw=t.s(7), rx=rx + t.s(4), stroke_opacity=0.55)
+        fill_opacity = 0.94 if t.name == "light" else 0.90
+        self.svg.rect(x, y, w, h, fill=t.card, stroke=t.rim, sw=t.s(2.5), rx=rx, opacity=fill_opacity)
+        self.svg.rect(x + t.s(1.5), y + t.s(1.5), w - t.s(3), h - t.s(3), fill="none", stroke=t.card_line, sw=t.s(1.25), rx=max(0, rx - t.s(2)), stroke_opacity=0.95)
+        self.svg.line(x + rx, y + t.s(2), x + w - rx, y + t.s(2), "#F4F8FC", sw=t.s(1.4), opacity=0.28 if t.name != "light" else 0.65)
 
     def chip(self, text: str, x: float, y: float, anchor: str = "middle") -> tuple[float, float, float, float]:
         t = self.theme
@@ -157,10 +171,10 @@ class Canvas:
         if not label:
             return (x, y, x, y)
         size = t.label
-        width = self.measure(label, size, "semi")
+        width = self.measure(label, size, "bold")
         cap = size * CAP
         desc = size * DESC
-        pad_x, pad_y = 16, 9
+        pad_x, pad_y = t.s(16), t.s(8)
         box_w = width + pad_x * 2
         box_h = cap + desc + pad_y * 2
         if anchor == "middle":
@@ -171,9 +185,9 @@ class Canvas:
             left = x
         top = y - box_h / 2
         left, top = self._nudge(left, top, box_w, box_h)
-        self.svg.rect(left, top, box_w, box_h, fill=t.chip, stroke=t.accent, sw=1.75, rx=10, opacity=0.96)
+        self.svg.rect(left, top, box_w, box_h, fill=t.chip, stroke=t.accent, sw=t.s(2), rx=t.s(10), opacity=0.88 if t.name != "light" else 0.96)
         baseline = top + pad_y + cap
-        self.text(label, left + box_w / 2, baseline, size, t.chip_ink, weight="semi", anchor="middle", role="label", bg=t.chip)
+        self.text(label, left + box_w / 2, baseline, size, t.chip_ink, weight="bold", anchor="middle", role="label", bg=t.chip)
         return (left, top, left + box_w, top + box_h)
 
     def _nudge(self, left: float, top: float, w: float, h: float) -> tuple[float, float]:
@@ -186,14 +200,14 @@ class Canvas:
 
     def leader(self, x1, y1, x2, y2) -> None:
         t = self.theme
-        self.svg.line(x1, y1, x2, y2, t.accent, sw=1.6)
-        self.svg.circle(x2, y2, 4.5, fill=t.accent)
+        self.glow_line(x1, y1, x2, y2, t.accent, sw=t.arrow)
+        self.svg.circle(x2, y2, t.s(4.5), fill=t.accent)
 
     def arrow(self, x1, y1, x2, y2, color: str | None = None) -> None:
         color = color or self.theme.accent
-        self.svg.line(x1, y1, x2, y2, color, sw=self.theme.stroke + 0.5)
+        self.glow_line(x1, y1, x2, y2, color, sw=self.theme.arrow)
         angle = math.atan2(y2 - y1, x2 - x1)
-        length = 14
+        length = self.theme.s(14)
         spread = 0.42
         p1 = (x2 - length * math.cos(angle - spread), y2 - length * math.sin(angle - spread))
         p2 = (x2 - length * math.cos(angle + spread), y2 - length * math.sin(angle + spread))
@@ -204,23 +218,33 @@ class Canvas:
             return
         self.example = True
         t = self.theme
-        size = max(t.min_font, 22)
+        size = t.label
         label = "EXAMPLE"
         width = self.measure(label, size, "bold")
         cap = size * CAP
         desc = size * DESC
-        pad_x, pad_y = 14, 8
+        pad_x, pad_y = t.s(14), t.s(8)
         box_w = width + pad_x * 2
         box_h = cap + desc + pad_y * 2
         left = self.width - t.safe_x - box_w
-        top = self.height - t.safe_bottom - box_h - 16
-        self.svg.rect(left, top, box_w, box_h, fill=t.chip, stroke=t.accent, sw=2, rx=8, opacity=0.98)
+        top = self.height - t.safe_bottom - box_h - t.s(12)
+        self.svg.rect(left, top, box_w, box_h, fill=t.chip, stroke=t.accent, sw=t.s(2), rx=t.s(8), opacity=0.92)
         baseline = top + pad_y + cap
         self.text(label, left + box_w / 2, baseline, size, t.accent_ink, weight="bold", anchor="middle", role="badge", bg=t.chip)
 
     def watermark(self, cx: float, cy: float) -> None:
-        size = 96 if self.width >= 1400 else 72
-        self.svg.text("EXAMPLE", cx, cy, size, self.theme.muted, family("bold"), anchor="middle", opacity=0.16, rotate=-14)
+        size = self.theme.s(78)
+        self.svg.text("EXAMPLE", cx, cy, size, self.theme.muted, family("condensed"), anchor="middle", opacity=0.16, rotate=-14)
+
+    def glow_line(self, x1, y1, x2, y2, color, sw=2.5, dash=None) -> None:
+        filt = self.svg.ensure_glow(max(1.4, self.theme.s(2.2)))
+        self.svg.line(x1, y1, x2, y2, color, sw=sw * 2.8, dash=dash, opacity=0.95, filt=filt)
+        self.svg.line(x1, y1, x2, y2, color, sw=sw, dash=dash, opacity=1)
+
+    def glow_polyline(self, points, color, sw=3) -> None:
+        filt = self.svg.ensure_glow(max(1.4, self.theme.s(2.4)))
+        self.svg.polyline(points, color, sw=sw * 2.8, opacity=0.95, filt=filt)
+        self.svg.polyline(points, color, sw=sw, opacity=1)
 
     def plot_y(self, value: float, lo: float, hi: float, top: float, bottom: float, pad: float = 28) -> float:
         span = hi - lo
