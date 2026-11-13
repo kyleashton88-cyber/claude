@@ -8,6 +8,9 @@ from pathlib import Path
 from voice.align import Word
 
 SCHEMA = "video-production.words.v1"
+# Studio cap. The blueprint gate allows 20; cues are built to this stricter figure
+# and then re-measured with the gate's own timestamp parse.
+DISPLAY_CPS = 18.0
 
 
 def words_payload(words: list[Word], *, engine: str, mood: str, method: str) -> dict:
@@ -50,39 +53,202 @@ def cues(words: list[Word], max_words: int = 8, max_chars: int = 42) -> list[lis
 
 
 def _cue_end(cue: list[Word], following: float | None) -> float:
-    """Give a readable hold when alignment crushed several words into a few frames."""
+    """Hold a cue long enough to read, without running into the next cue."""
     start = cue[0].start
     end = cue[-1].end
     text = " ".join(word.text for word in cue)
-    need = max(0.8, len(text) / 17.0)
+    need = len(text) / DISPLAY_CPS
     if end - start < need:
         end = start + need
     if following is not None:
-        end = min(end, following)
+        end = min(end, max(following, start + 0.2))
     return max(end, start + 0.2)
 
 
-def write_vtt(path: Path, words: list[Word]) -> None:
+def collapse_repeated_tokens(words: list[Word]) -> list[Word]:
+    """Drop a second copy of a token that abuts the first.
+
+    Picture cuts used to emit the same aligned word twice, back to back.
+    The narration said it once. A real repeat, with a gap, stays.
+    """
+    kept: list[Word] = []
+    for word in words:
+        if kept and kept[-1].text == word.text and word.start <= kept[-1].end + 0.03:
+            prev = kept[-1]
+            kept[-1] = Word(prev.text, prev.start, max(prev.end, word.end))
+            continue
+        kept.append(Word(word.text, word.start, word.end))
+    return kept
+
+
+def readable_word_times(words: list[Word], limit: float = DISPLAY_CPS) -> list[Word]:
+    """Give every word enough display time, using slack from earlier words.
+
+    Alignment sometimes parks a long word on several seconds and then stacks
+    the rest of the sentence into 50ms slots. Those slots cannot be read.
+    Pull the stacked words back into the spare time. Do not move the first
+    word earlier than it was spoken, and do not let windows overlap.
+    """
+    if not words:
+        return []
+    timed = [Word(word.text, word.start, max(word.end, word.start + 0.05)) for word in words]
+    anchor = timed[0].start
+    for _ in range(len(timed) + 2):
+        changed = False
+        for index in range(len(timed) - 1, -1, -1):
+            word = timed[index]
+            need = (len(word.text) + 1) / limit
+            if word.end - word.start + 1e-9 >= need:
+                continue
+            timed[index] = Word(word.text, word.end - need, word.end)
+            changed = True
+            if index and timed[index - 1].end > timed[index].start:
+                prev = timed[index - 1]
+                timed[index - 1] = Word(prev.text, prev.start, timed[index].start)
+        if timed[0].start < anchor:
+            shift = anchor - timed[0].start
+            timed = [Word(word.text, word.start + shift, word.end + shift) for word in timed]
+            changed = True
+        for index in range(len(timed) - 1):
+            if timed[index].end <= timed[index + 1].start + 1e-9:
+                continue
+            nxt = timed[index + 1]
+            start = timed[index].end
+            need = (len(nxt.text) + 1) / limit
+            end = max(nxt.end, start + need)
+            timed[index + 1] = Word(nxt.text, start, end)
+            changed = True
+        if not changed:
+            break
+    return timed
+
+
+def _rounded(seconds: float) -> float:
+    """Match the gate: timestamps are whole milliseconds, then parsed back."""
+    return max(0, int(round(seconds * 1000))) / 1000.0
+
+
+def fitted_cues(words: list[Word], limit: float = DISPLAY_CPS) -> list[tuple[float, float, str]]:
+    """Cues that keep every word and stay at or under `limit` characters per second.
+
+    The speed uses the millisecond timestamps the caption file will actually
+    store, which is the span the quality gate measures.
+    """
+    paced = readable_word_times(collapse_repeated_tokens(words), limit)
+    grouped = cues(paced)
+    rows: list[list] = []
+    for group in grouped:
+        rows.append([
+            group[0].start,
+            group[-1].end,
+            " ".join(word.text for word in group),
+        ])
+    for index, row in enumerate(rows[:-1]):
+        row[1] = max(row[1], rows[index + 1][0])
+    _hold_for_speed(rows, limit)
+    return [(float(row[0]), float(row[1]), str(row[2])) for row in rows]
+
+
+def _hold_for_speed(rows: list[list], limit: float) -> None:
+    """Lengthen a fast cue, shifting the cues after it. Never drop a word."""
+    for _ in range(len(rows) * 4 + 8):
+        moved = False
+        for index, row in enumerate(rows):
+            start = _rounded(row[0])
+            end = _rounded(row[1])
+            if end <= start:
+                end = start + 0.001
+                row[1] = end
+            span = end - start
+            if span > 0 and len(row[2]) / span <= limit + 1e-9:
+                row[0], row[1] = start, end
+                continue
+            need = len(row[2]) / limit
+            new_end = start + need + 0.002
+            row[0], row[1] = start, new_end
+            if index + 1 < len(rows) and rows[index + 1][0] < new_end:
+                delta = new_end - rows[index + 1][0]
+                for later in rows[index + 1:]:
+                    later[0] += delta
+                    later[1] += delta
+            moved = True
+            break
+        if not moved:
+            return
+    raise RuntimeError("caption cues could not be held under the reading-speed cap")
+
+
+def render_vtt(words: list[Word], limit: float = DISPLAY_CPS) -> str:
     lines = ["WEBVTT", ""]
-    grouped = cues(words)
-    for index, cue in enumerate(grouped):
-        following = grouped[index + 1][0].start if index + 1 < len(grouped) else None
-        lines.append(f"{_stamp(cue[0].start)} --> {_stamp(_cue_end(cue, following))}")
-        lines.append(" ".join(word.text for word in cue))
+    for start, end, text in fitted_cues(words, limit):
+        lines.append(f"{_stamp(start)} --> {_stamp(end)}")
+        lines.append(text)
         lines.append("")
-    path.write_text("\n".join(lines))
+    return "\n".join(lines) + "\n"
+
+
+def render_srt(words: list[Word], limit: float = DISPLAY_CPS) -> str:
+    lines: list[str] = []
+    for index, (start, end, text) in enumerate(fitted_cues(words, limit), start=1):
+        lines.append(str(index))
+        lines.append(f"{_stamp(start, srt=True)} --> {_stamp(end, srt=True)}")
+        lines.append(text)
+        lines.append("")
+    return "\n".join(lines) + "\n"
+
+
+def write_vtt(path: Path, words: list[Word]) -> None:
+    path.write_text(render_vtt(words), encoding="utf-8")
 
 
 def write_srt(path: Path, words: list[Word]) -> None:
-    lines = []
-    grouped = cues(words)
-    for index, cue in enumerate(grouped, start=1):
-        following = grouped[index][0].start if index < len(grouped) else None
-        lines.append(str(index))
-        lines.append(f"{_stamp(cue[0].start, srt=True)} --> {_stamp(_cue_end(cue, following), srt=True)}")
-        lines.append(" ".join(word.text for word in cue))
+    path.write_text(render_srt(words), encoding="utf-8")
+
+
+def refit_vtt_text(text: str, limit: float = DISPLAY_CPS) -> str:
+    """Lengthen or merge cues that are still over the cap. Do not delete words.
+
+    Measurement uses the quality gate's parser, so a millisecond-rounded span
+    cannot slip past this cap and then fail the gate.
+    """
+    import sys
+
+    gate_root = Path(__file__).resolve().parents[2] / "quality-gate"
+    if str(gate_root) not in sys.path:
+        sys.path.insert(0, str(gate_root))
+    from gate.captions import parse_captions
+
+    parsed = parse_captions(text)
+    if not parsed:
+        return text if text.endswith("\n") else text + "\n"
+    rows = [[cue.start, cue.end, cue.text] for cue in parsed]
+    _hold_for_speed(rows, limit)
+    # A cue that is still one fast word, hard against the next cue, joins that neighbour.
+    merged: list[list] = []
+    for row in rows:
+        if not merged:
+            merged.append(row)
+            continue
+        start = _rounded(merged[-1][0])
+        end = _rounded(row[0])
+        span = end - start
+        combined = f"{merged[-1][2]} {row[2]}".strip()
+        own_span = _rounded(merged[-1][1]) - start
+        if own_span > 0 and len(merged[-1][2]) / own_span <= limit + 1e-9 and len(merged[-1][2]) <= 42:
+            merged.append(row)
+            continue
+        if len(combined) <= 42 and span > 0:
+            merged[-1][1] = max(merged[-1][1], row[1])
+            merged[-1][2] = combined
+        else:
+            merged.append(row)
+    _hold_for_speed(merged, limit)
+    lines = ["WEBVTT", ""]
+    for start, end, payload in merged:
+        lines.append(f"{_stamp(start)} --> {_stamp(end)}")
+        lines.append(payload)
         lines.append("")
-    path.write_text("\n".join(lines))
+    return "\n".join(lines) + "\n"
 
 
 def write_chapters(path: Path, sections: list[tuple[float, str]]) -> None:

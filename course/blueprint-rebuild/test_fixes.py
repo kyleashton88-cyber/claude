@@ -20,7 +20,8 @@ import studio  # noqa: E402
 lesson_scripts = studio.lesson_scripts
 from gate.profiles import PROFILES, length_ok  # noqa: E402
 from voice.align import Word  # noqa: E402
-from voice.captions import cues, write_chapters, write_vtt  # noqa: E402
+from voice.captions import cues, fitted_cues, refit_vtt_text, write_chapters, write_vtt  # noqa: E402
+from gate.captions import caption_problems, parse_captions  # noqa: E402
 from voice.moods import MOODS  # noqa: E402
 
 LEGAL = (
@@ -182,6 +183,44 @@ class PipelineTests(unittest.TestCase):
         chapters = folder / "chapters.txt"
         write_chapters(chapters, [(0.0, "Open"), (12.0, "Range")])
         self.assertTrue(chapters.read_text(encoding="utf-8").startswith("00:00 Open"))
+
+    def test_fast_cues_are_held_not_cut(self):
+        """A 0.35s one-word cue used to survive the cap because the cap stopped at one word."""
+        words = [
+            Word("drawing.", 122.042, 122.092),
+            Word("Seven", 122.092, 122.142),
+            Word("days", 122.142, 122.192),
+            Word("in", 122.192, 122.242),
+            Word("this", 122.242, 122.292),
+            Word("window", 122.292, 122.342),
+            Word("wicked", 122.342, 122.392),
+            Word("above", 122.392, 122.792),
+            Word("tidy", 122.792, 123.192),
+        ]
+        # The spare time is on the earlier word, the way the aligner actually behaves.
+        words = [Word("Round", 119.772, 122.042)] + words
+        folder = Path(tempfile.mkdtemp())
+        vtt = folder / "fast.vtt"
+        write_vtt(vtt, words)
+        text = vtt.read_text(encoding="utf-8")
+        self.assertIn("drawing.", text)
+        self.assertIn("wicked", text)
+        self.assertIn("tidy", text)
+        refit = refit_vtt_text(text)
+        parsed = parse_captions(refit)
+        spoken = " ".join(word.text for word in words)
+        self.assertEqual(" ".join(cue.text for cue in parsed), spoken)
+        problems = caption_problems(parsed, PROFILES["blueprint"])
+        self.assertEqual(problems, [])
+        for cue in parsed:
+            cps = len(cue.text) / (cue.end - cue.start)
+            self.assertLessEqual(cps, 18.0)
+            self.assertLessEqual(len(cue.text), 42)
+
+    def test_abutting_duplicate_token_is_one_caption_word(self):
+        words = [Word("public", 1.0, 1.4), Word("public", 1.4, 1.7), Word("low", 1.9, 2.3)]
+        text = " ".join(payload for _start, _end, payload in fitted_cues(words))
+        self.assertEqual(text, "public low")
 
     def test_old_mixer_cannot_encode(self):
         sys.path.insert(0, str(ROOT / "course/blueprint-rework"))

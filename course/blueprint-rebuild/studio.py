@@ -1634,16 +1634,14 @@ def synth_voice(shots: list[dict], dest: Path) -> tuple[float, list]:
         audio, words = _tighten_narration(audio, rate, words)
         chunks = _split_picture(shot, audio, rate)
         origin = clock
-        covered = 0.0
+        # Word times sit on the lesson clock. A picture cut must not clip a word
+        # onto both sides of the cut: that wrote the same token twice and left
+        # the second copy as a 50ms caption.
+        for word in words:
+            start = origin + word.start
+            timed.append(Word(word.text, start, origin + max(word.end, word.start + 0.05)))
         for chunk in chunks:
-            for word in words:
-                if word.end <= covered or word.start >= covered + chunk["duration"]:
-                    continue
-                start = origin + max(word.start, covered)
-                end = origin + min(word.end, covered + chunk["duration"])
-                timed.append(Word(word.text, start, max(end, start + 0.05)))
             clock += chunk["duration"]
-            covered += chunk["duration"]
             pieces.append(chunk.pop("_audio"))
             expanded.append(chunk)
         if (i + 1) % 4 == 0:
@@ -1901,26 +1899,32 @@ def render(
 
 
 def _cap_caption_speed(path: Path, limit: float = 18.0) -> None:
-    """Shorten a cue that the voice packed faster than the caption limit."""
+    """Hold every cue at or under the studio reading speed.
 
-    def seconds(token: str) -> float:
-        token = token.strip().split()[0]
-        hours, minutes, rest = token.split(":")
-        sec, ms = rest.split(".")
-        return int(hours) * 3600 + int(minutes) * 60 + int(sec) + int(ms) / 1000
+    The old cap deleted trailing words until one word remained, then stopped,
+    because a single word has no space left to cut. The gate counts that
+    leftover word (`len(cue text) / parsed span`), so a 0.35s cue stayed over
+    the limit. This pass uses the gate's parser and lengthens or merges the
+    cue. It does not delete words. Timestamp rounding is included, because the
+    gate measures the milliseconds written in the file, not the float that
+    was rounded away.
+    """
+    from voice.captions import refit_vtt_text
 
-    lines_out = ["WEBVTT", ""]
-    for block in path.read_text(encoding="utf-8").strip().split("\n\n"):
-        rows = [row for row in block.splitlines() if row.strip() and row.strip() != "WEBVTT"]
-        if not rows or "-->" not in rows[0]:
-            continue
-        left, right = rows[0].split("-->", 1)
-        span = max(0.2, seconds(right) - seconds(left))
-        text = " ".join(rows[1:])
-        while text and len(text) / span > limit and " " in text:
-            text = text.rsplit(" ", 1)[0]
-        lines_out.extend([rows[0], text, ""])
-    path.write_text("\n".join(lines_out) + "\n")
+    path.write_text(refit_vtt_text(path.read_text(encoding="utf-8"), limit=limit), encoding="utf-8")
+    gate_root = ROOT / "skills/video-production/quality-gate"
+    if str(gate_root) not in sys.path:
+        sys.path.insert(0, str(gate_root))
+    from gate.captions import parse_captions
+
+    for cue in parse_captions(path.read_text(encoding="utf-8")):
+        span = cue.end - cue.start
+        cps = len(cue.text) / span if span > 0 else float("inf")
+        if cps > limit:
+            raise SystemExit(
+                f"{path.name} {cue.start:.2f}s is {cps:.1f} characters per second "
+                f"after the {limit:.0f} cap"
+            )
 
 
 def _ts(sec: float) -> str:
