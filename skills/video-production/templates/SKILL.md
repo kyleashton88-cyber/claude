@@ -11,7 +11,7 @@ Six lesson files in `formats/`, in the same shape as a lesson.yaml. Each one has
 |---|---|
 | `formats/blueprint-lesson.yaml` | Blueprint, 4–10 min, 16:9 |
 | `formats/elite-lesson.yaml` | Elite, 8–20 min, 16:9 |
-| `formats/market-check.yaml` | Market Check, 2–8 min, 16:9 |
+| `formats/market-check.yaml` | Market Check, 60–90 s, 16:9 |
 | `formats/explainer.yaml` | Explainer, 3–8 min, 16:9 |
 | `formats/interview.yaml` | Interview, 8–25 min, 16:9 |
 | `formats/short.yaml` | Short, under 60 s, 9:16 |

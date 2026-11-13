@@ -101,6 +101,8 @@ def shift_vtt(text: str, start: float, end: float) -> str:
             continue
         new_start = max(cue_start, start) - start
         new_end = min(cue_end, end) - start
+        if new_end - new_start < 0.4:
+            continue
         payload = "\n".join(lines[1:])
         kept.append(f"{fmt(new_start)} --> {fmt(new_end)}\n{payload}\n")
     return "\n".join(kept).rstrip() + "\n"

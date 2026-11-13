@@ -49,8 +49,8 @@ PROFILES: dict[str, Profile] = {
     "market-check": Profile(
         "market-check",
         "Market Check",
-        min_seconds=2 * 60,
-        max_seconds=8 * 60,
+        min_seconds=60,
+        max_seconds=90,
         width=1920,
         height=1080,
     ),

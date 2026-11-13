@@ -36,6 +36,7 @@ def main(argv: list[str] | None = None) -> int:
     check.add_argument("--format", required=True, help=", ".join(sorted(PROFILES)))
     check.add_argument("--captions", type=Path)
     check.add_argument("--transcript", type=Path)
+    check.add_argument("--lesson", type=Path, help="lesson.yaml or script used for figure checks")
     check.add_argument("--out", type=Path, required=True)
     check.add_argument("--max-hold", type=float, default=None)
 
@@ -65,6 +66,7 @@ def main(argv: list[str] | None = None) -> int:
         profile,
         captions=args.captions,
         transcript=args.transcript,
+        lesson=args.lesson,
     )
     json_path, md_path = write_reports(payload, args.out)
     print(f"{payload['result'].upper()} {json_path}")

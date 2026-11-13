@@ -236,10 +236,37 @@ def build(lesson_path: Path, out: Path, hooks: dict | None = None) -> dict:
     if work.exists():
         shutil.rmtree(work)
     work.mkdir()
-    ctx = {"lesson": _load(lesson_path), "out": out, "work": work}
+    ctx = {"lesson": _load(lesson_path), "lesson_path": Path(lesson_path), "out": out, "work": work}
     for stage in STAGES:
         if hooks and stage in hooks:
             hooks[stage](ctx)
         else:
             RUNNERS[stage](ctx)
+    _quality_gate(ctx)
     return ctx["report"]
+
+
+def _quality_gate(ctx: dict) -> None:
+    """The only video QA entry. Runs when the lesson names a format."""
+    fmt = str(ctx["lesson"].get("format") or "").strip()
+    report = ctx.get("report") or {}
+    if not fmt:
+        report["quality_gate"] = "skipped; set format to run skills/video-production/quality-gate"
+        ctx["report"] = report
+        return
+    gate = Path(__file__).resolve().parents[2] / "video-production" / "quality-gate" / "cli.py"
+    dest = ctx["out"] / "gate"
+    cmd = [
+        sys.executable, str(gate), "check", str(ctx["out"] / "master.mp4"),
+        "--format", fmt,
+        "--captions", str(ctx["out"] / "captions.vtt"),
+        "--lesson", str(ctx["lesson_path"]),
+        "--out", str(dest),
+    ]
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    report["quality_gate"] = "pass" if proc.returncode == 0 else "fail"
+    report["quality_gate_log"] = (proc.stdout or proc.stderr or "")[-500:]
+    ctx["report"] = report
+    (ctx["out"] / "qa-report.json").write_text(json.dumps(report, indent=2) + "\n")
+    if proc.returncode != 0:
+        raise SystemExit(f"quality-gate failed for format {fmt}. See {dest / 'report.md'}")

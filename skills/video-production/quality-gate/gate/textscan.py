@@ -111,17 +111,19 @@ def read_frame(image: str) -> tuple[str, list[WordBox]]:
 
 
 def margin_hits(boxes: list[WordBox], width: int, height: int, profile: Profile) -> list[str]:
+    """Side and top margins. The bottom 18% is the caption and lower-third band."""
     inset_x = width * profile.margin_frac
-    inset_y = height * profile.margin_frac
+    inset_top = height * profile.margin_frac
+    caption_top = height * 0.82
     hits: list[str] = []
     for box in boxes:
         right = box.left + box.width
         bottom = box.top + box.height
-        if (
-            box.left < inset_x
-            or box.top < inset_y
-            or right > width - inset_x
-            or bottom > height - inset_y
-        ):
+        clipped = box.left < 0 or box.top < 0 or right > width or bottom > height
+        if box.top >= caption_top:
+            if clipped:
+                hits.append(f"{box.text!r} at ({box.left},{box.top})")
+            continue
+        if box.top < inset_top or box.left < inset_x or right > width - inset_x or bottom > height - inset_top:
             hits.append(f"{box.text!r} at ({box.left},{box.top})")
     return hits

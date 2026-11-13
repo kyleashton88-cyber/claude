@@ -23,7 +23,7 @@ jobs:
         working-directory: skills/video-production
         run: |
           set -eu
-          for dir in motion-graphics color-grade music-sound natural-voice quality-gate compliance scene-planner review-record templates; do
+          for dir in motion-graphics color-grade music-sound natural-voice quality-gate compliance scene-planner review-record templates market-check-clip screen-demo-kit; do
             echo "== $dir =="
             ( cd "$dir" && python -m unittest tests/test_*.py )
           done

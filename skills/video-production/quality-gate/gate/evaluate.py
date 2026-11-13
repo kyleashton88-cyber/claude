@@ -19,11 +19,12 @@ from .media import (
     technical_problems,
 )
 from .profiles import LOUDNESS_TARGET, LOUDNESS_TOLERANCE, TRUE_PEAK_MAX, Profile, length_ok
+from .numbers import number_problems
 from .textscan import find_brands, has_disclaimer, margin_hits, read_frame, tesseract_path
 
 SUPERSEDES = (
-    "course/skills/motion_picture/qa.py (15-minute minimum, loudness printed and not failed)",
-    "course/blueprint-rework/render_motion.py (exit when a lesson is under 15 minutes)",
+    "course/skills/motion_picture/qa.py now points here and does not apply a 15-minute floor",
+    "course/blueprint-rework/render_motion.py records length and does not exit on it",
 )
 
 
@@ -39,6 +40,7 @@ def evaluate(
     *,
     captions: Path | None = None,
     transcript: Path | None = None,
+    lesson: Path | None = None,
 ) -> dict:
     master = Path(master)
     checks: list[dict] = []
@@ -156,7 +158,7 @@ def evaluate(
             problems = [str(exc)]
         else:
             problems = caption_problems(cues, profile)
-        caption_text = raw
+        caption_text = "\n".join(cue.text for cue in cues) if cues else raw
         checks.append(
             _check(
                 "captions",
@@ -247,6 +249,16 @@ def evaluate(
                 "detail": "disclaimer not found in captions, transcript, or on-screen text. Expected education plus 'not financial advice'.",
             }
         )
+
+    figure_text = "\n".join([caption_text, transcript_text, ocr_text])
+    figure_problems = number_problems(figure_text, lesson)
+    checks.append(
+        _check(
+            "figures",
+            figure_problems,
+            ok_detail="on-screen figures match the lesson, and each one is labelled EXAMPLE",
+        )
+    )
     return _payload(master, profile, checks)
 
 

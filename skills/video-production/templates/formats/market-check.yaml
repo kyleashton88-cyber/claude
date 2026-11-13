@@ -2,7 +2,7 @@ lesson: mc-sample
 title: What changed this week
 format: market-check
 preset: house
-length_minutes: [2, 8]
+length_seconds: [60, 90]
 disclaimer_spoken: This is education, not financial advice.
 disclaimer_on_screen: Education, not financial advice.
 next:
@@ -10,7 +10,7 @@ next:
   title: The next check
 chapters:
   - {t: 0, title: What changed}
-  - {t: 80, title: What it is not}
+  - {t: 40, title: What it is not}
 beats:
   - id: changed
     chapter: What changed

@@ -36,7 +36,7 @@ def render_markdown(payload: dict) -> str:
         f"Target {payload.get('loudness_target_lufs')} LUFS ± {payload.get('loudness_tolerance_lu')}, "
         f"true peak at or below {payload.get('true_peak_max_dbtp')} dBTP.",
         "",
-        "This gate supersedes the 15-minute minimum. Those older files stay where they are:",
+        "This gate is the only duration rule. The older files now point here:",
         "",
     ]
     for item in payload.get("supersedes") or []:

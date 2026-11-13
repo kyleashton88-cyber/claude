@@ -14,6 +14,7 @@ sys.path.insert(0, str(VP))
 sys.path.insert(0, str(HERE))
 
 from gate.captions import caption_problems, parse_captions  # noqa: E402
+from gate.numbers import lesson_figures, number_problems  # noqa: E402
 from gate.evaluate import evaluate  # noqa: E402
 from gate.media import black_runs, gray_frames, judge_loudness, longest_static  # noqa: E402
 from gate.profiles import PROFILES, get_profile, length_ok  # noqa: E402
@@ -70,6 +71,39 @@ class CaptionTests(unittest.TestCase):
             "This caption line is deliberately longer than forty-two characters.\n"
         )
         self.assertTrue(any("characters" in item for item in caption_problems(long_line, profile)))
+
+
+class FigureTests(unittest.TestCase):
+    def test_unlabeled_figure_and_a_mismatch(self):
+        folder = Path(tempfile.mkdtemp())
+        try:
+            lesson = folder / "lesson.yaml"
+            lesson.write_text(
+                "sections:\n"
+                "  - narration: EXAMPLE the sketch marks 90 and 110.\n"
+                "    caption: The gap\n",
+                encoding="utf-8",
+            )
+            named, unlabeled = lesson_figures(lesson)
+            self.assertIn("90", named)
+            self.assertIn("110", named)
+            self.assertEqual(unlabeled, [])
+            problems = number_problems("EXAMPLE 90 and 110. Also 250 on the chart.", lesson)
+            self.assertTrue(any("250" in item for item in problems))
+            bare = number_problems("The account grew $5000 this year.", None)
+            self.assertTrue(bare)
+        finally:
+            shutil.rmtree(folder)
+
+    def test_old_duration_floors_are_not_the_rule(self):
+        root = Path(__file__).resolve().parents[4]
+        qa = (root / "course/skills/motion_picture/qa.py").read_text(encoding="utf-8")
+        motion = (root / "course/blueprint-rework/render_motion.py").read_text(encoding="utf-8")
+        ill = (root / ".cursor/skills/illustration-qa/SKILL.md").read_text(encoding="utf-8")
+        self.assertNotIn("15 * 60", qa)
+        self.assertNotIn("under 15 minutes", motion)
+        self.assertNotIn("900 seconds", ill)
+        self.assertIn("quality-gate", qa)
 
 
 class TextTests(unittest.TestCase):
