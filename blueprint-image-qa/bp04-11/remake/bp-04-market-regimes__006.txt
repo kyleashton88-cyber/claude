@@ -3,9 +3,9 @@ FORMAT: one landscape image, 3:2, exactly 1536x1024 pixels.
 MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 80px inside the left and right edges and at least 90px inside the top and bottom edges. Nothing with text touches or approaches the frame edge. Words in the headline are separated by a clear full space.
 
 Headline: "RANGE: WHERE GRIDS FIT" (the word FIT in cyan, the rest white).
-Scene: A glass chart with a ladder of evenly spaced lines. A cyan price line zig-zags up and down across the same lines several times; small dots light up at each crossing. EXAMPLE stamp.
+Scene: A glass chart with a ladder of exactly THREE evenly spaced horizontal lines (top, middle, bottom rung). A cyan price line starts inside the ladder near the left, then zig-zags up and down, turning just above the top rung and just below the bottom rung, so it crosses all three rungs again and again, four times across. QA FIX v2: a small glowing dot sits on EVERY point where the price line crosses a rung, and nowhere else; no crossing is left without a dot and no dot sits off a rung (the v1 image left the crossings on one rung undotted, which says those orders did not fill). The price line never leaves the ladder region by more than a short turn and does not start at the chart edge. EXAMPLE stamp.
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
-- "Price crosses the same lines again and again": arrow tip touches the zig-zag price line where it crosses the middle ladder line.
+- "Price crosses the same lines again and again": arrow tip touches the zig-zag price line where it crosses the middle rung (the second of the three lines), at a crossing that has a dot.
 - "Each dot = an order filling": arrow tip touches one glowing dot on a crossing.
 - "EXAMPLE": a small cyan outlined EXAMPLE stamp in the lower-right corner of the main card or chart, fully inside the card, no arrow.
 LABEL ARROWS: exactly 2 thin cyan label arrows, one for each label above that says "arrow tip touches", each with one clean arrowhead whose tip touches the named target. Labels that say "no arrow" have no arrow. Apart from any arrow the Scene itself describes, there are no other arrows; no doubled arrowheads, and no arrow crosses text.

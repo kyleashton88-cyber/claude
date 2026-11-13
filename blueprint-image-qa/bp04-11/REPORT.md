@@ -211,3 +211,24 @@ Scores are listed as clarity / composition / craft / brand / legibility / charac
 - Remake queue: `blueprint-image-qa/bp04-11/REMAKE_QUEUE.json` (161 items, in lesson order). Prompts are in `specs/remake/<lesson>__<NNN>.txt` on the box, with a copy in `blueprint-image-qa/bp04-11/remake/`.
 - Each prompt carries the 3:2 1536x1024 preamble, attaches `_anchors/anchor.png`, sets margins of at least 80px, spells out every label, pins each arrow to its target, and bans any robot or mascot (no BP-04..11 beat calls for the mascot). It stays exchange-neutral, stamps EXAMPLE on figures, and uses the lesson's real titles.
 - Figures come only from the lesson scripts' own house example (bp-05: 20 lines, 19 gaps, 0.5%, 9.5%, 38 not 40; bp-09 beat 10). No BP-04..11 beat uses market data, so `btc-usd-windows.json` isn't needed.
+
+## BP-04 remakes, round 1 (web1, scored against PR #17 6848d09)
+
+The 10 ChatGPT web renders at `gen/bp-04-market-regimes/001..010/web1.png` are all 1536x1024 RGB. Each was scored against the 6848d09 narration and the prompt at this commit, using the same strict standard: at least 4 in every category, no hard fails, and margins of at least 45px measured on bright pixels. None has an exchange name, mascot or entity branding.
+
+| Beat | Result | Reason |
+|---|---|---|
+| 001 | PASS | Same 5-line ladder on both cards: the weave crosses the rungs (check), the climb leaves the top (warning). Tags spelled right, EXAMPLE inside the card. Margins 81-177px. |
+| 002 | FAIL (re-run anyway) | Made from the superseded prompt: "Learn the idea" / "Not financial advice" tags and a crossed BUY button, not the exact "Education only. Not financial advice." |
+| 003 | FAIL | The trend line ends in a garbled cross/tick stub (AI artifact). The EXAMPLE stamp floats outside every card. Prompt is now v2. |
+| 004 | PASS | Range, Trend and Break cards with correct tags and an EXAMPLE stamp in each card. Margins 55px or more. |
+| 005 | FAIL | Step 2 ("Then set your steps") shows a price path breaking up out of the ladder, so it teaches a breakout, not setting steps. The bottom rung is slanted. Prompt is now v2. |
+| 006 | FAIL | Crossings on the second line have no dot, which contradicts "Each dot = an order filling". The narration asks for three rungs and the image has five. Prompt is now v2. |
+| 007 | PASS | Higher highs, small dips and the slope arrow each have one arrow, tips on target, 3 of 3. |
+| 008 | PASS | "Your box" tip is on the top dashed line, the exit tip is on the amber ring, 2 of 2. Price leaves and stays out. |
+| 009 | PASS | Dotted left-to-right arrow and an empty name tag, 2 of 2 tips on target. |
+| 010 | FAIL | Shows a two-way choice, but the beat says copy three arrows (Ladder, Pile, Stop). The right tag sits 40px from the edge (needs 45). Prompt is rewritten as v2. |
+
+The passes were saved to `out/course/images/bp-04-market-regimes/NNN.png` and committed at `course/images/bp-04-market-regimes/NNN.png`. They needed no navy fill because they were already 1536x1024. Their pass-list rows now carry the scores, `pass: true`, `source: chatgpt-web`, `scored_blob` and the previous blob. Fails keep the old committed still, carry a `remake_review` block, and stay in REMAKE_QUEUE (their target is now web2).
+
+**BP-04 running count: 5/20 pass.** BP-04..11 total: 5/161.

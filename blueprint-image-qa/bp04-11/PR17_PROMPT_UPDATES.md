@@ -34,3 +34,24 @@ Checked 14 Nov 2026 (WITA) by Creative Studio. Prompts only: no images generated
 
 **Checked and left unchanged** (57 of the 68; the new narration adds definitions the image already agrees with): bp-04 001, 003, 004, 005, 006, 007, 008, 015, 016, 017, 018; bp-05 001, 003, 004, 006, 016, 017; bp-06 001, 003, 016, 017, 018; bp-07 001, 003, 016, 017, 018; bp-08 001, 003, 008, 010, 011, 017, 018; bp-09 001, 003, 013, 016, 017, 018, 019; bp-10 001, 003, 004, 005, 013, 016, 017, 018, 019; bp-11 001, 003, 005, 013, 016, 017, 018.
 
+
+## Update 2: PR #17 head 6848d09 (final verified scripts)
+
+**Diff 6df2536 -> 6848d09:** all 8 BP-04..11 scripts changed (145 beats' vo; no other beat fields changed). BP-04..11 at 6848d09 equal 87ab754 except BP-04 (3 lines: beats 1, 4 and 6). Most edits put back the fbb3f9c wording: the "Mark the page Example, so a later reader cannot mistake the sketch..." line in every beat, the risk sentences, "We do not operate an alert service." (BP-08 011) and "We do not operate a venue and we are not affiliated with one." (BP-11 013). They also drop most of the 6df2536 add-on definitions and shorten a few others ("A thin book means few resting orders.", "Funding is that payment between the sides.").
+
+**Example / "We do not operate" wording in images:** no prompt puts either sentence on screen. The only on-image Example text is the `EXAMPLE` stamp, which matches the narration's "Mark the page Example". BP-08 011 and BP-11 013 show no disclaimer sentence, so nothing changes there.
+
+**Changed for 6848d09 narration: 4 prompts** (before copies on the box at bp04-11-qa/pr17c/before/):
+
+| Prompt | Why |
+|---|---|
+| bp-04-market-regimes__012.txt | 6848d09 shortens the line to "A thin book means few resting orders."; "so price can jump" is gone. I dropped the "Price can jump" label (arrows go from 3 to 2). The leap stays in the drawing. |
+| bp-06-entry-and-exit__010.txt | 6848d09 says "the finish path is the path where the idea you wrote is finished" (6df2536 said "done"). The headline is now WHERE THE IDEA IS FINISHED and the label reads "Finish path (invalidation): the idea is finished". |
+| bp-08-managing-and-monitoring__014.txt | 6848d09 puts back "run it once on a path you draw" and keeps "The homework is that card on the path you drew." The label now reads "Homework: run it once on the path you drew". |
+| bp-11-advanced-liquidation__010.txt | 6848d09 says "Funding is that payment between the sides." and drops "It is separate from the price move." The labels now read "Payment between the sides" and "Separate from the price path" (the beat concept's wording). |
+
+Re-checked with no change needed: the BP-04 beat 1, 4 and 6 edits (ladder of waiting orders = waiting limit orders inside a band; "Upper and lower are the band"; "A pullback is a small step back against that walk"; "Limit orders wait at a price") all agree with the 001/004/006 prompts. The other 6df2536 updates (BP-05 008/011, BP-07 006/007/013, BP-08 004/016, the 8 disclaimer cards) still match, because the definitions they rely on are still in the 6848d09 vo or beat concept.
+
+**Found while scoring web1 (not caused by a 6848d09 edit):** the bp-04 010 prompt never matched its beat. The narration (the same at fbb3f9c, 6df2536 and 6848d09) says "look for three arrows from the three shapes to Ladder, Pile, and Stop. Copy those three arrows.", but the prompt drew a two-way sideways/not-sideways sign. I rewrote it as v2 with three columns (Range->Ladder, Trend->Pile, Break->Stop).
+
+**bp-04 001..010 needing a re-run beyond 002 (because of the narration):** none. 010 needs one anyway, because its prompt didn't match the beat (above). 003, 005 and 006 need re-runs because their web1 renders failed QA (see REPORT.md); their prompts are now v2.

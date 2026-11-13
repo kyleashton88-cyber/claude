@@ -3,12 +3,12 @@ FORMAT: one landscape image, 3:2, exactly 1536x1024 pixels.
 MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 80px inside the left and right edges and at least 90px inside the top and bottom edges. Nothing with text touches or approaches the frame edge. Words in the headline are separated by a clear full space.
 
 Headline: "MARKET REGIMES" (the word REGIMES in cyan, the rest white).
-Scene: Three small glass chart cards in a row: left, a price line zig-zagging sideways between two flat lines; middle, a price line climbing in a staircase; right, a price line bouncing between two flat lines and then dropping through the bottom line and staying below it.
+Scene: Three small glass chart cards in a row: left, a price line zig-zagging sideways between two flat lines; middle, a price line climbing in a staircase; right, a price line bouncing between two flat lines and then dropping through the bottom line and staying below it. QA FIX v2: every price line is ONE clean continuous stroke that ends in a single clean end point: no stray tick, cross, plus sign, doubled stroke or scribble at either end (the v1 trend line ended in a garbled cross). The trend line climbs in clear steps and stops inside its card, at least 40px from the card border. All three cards are the same size, evenly spaced, and fill the middle of the frame; the label tags sit directly under their cards.
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
 - "Range": under: the left card, no arrow.
 - "Trend": under: the middle card, no arrow.
 - "Break": under: the right card, no arrow.
-- "EXAMPLE": a small cyan outlined EXAMPLE stamp in the lower-right corner of the main card or chart, fully inside the card, no arrow.
+- "EXAMPLE": a small cyan outlined EXAMPLE stamp in the lower-right corner INSIDE the right-hand (Break) card, fully inside that card, not floating in the empty background, no arrow.
 LABEL ARROWS: exactly 0 thin cyan label arrows, one for each label above that says "arrow tip touches", each with one clean arrowhead whose tip touches the named target. Labels that say "no arrow" have no arrow. Apart from any arrow the Scene itself describes, there are no other arrows; no doubled arrowheads, and no arrow crosses text.
 CHARACTER: no robot, mascot, person, hand-drawn face or character of any kind in this frame. (The only approved mascot is the GridBot Builder robot sheet: metallic white/silver robot, gloss-black face, electric-blue features; it is added separately and must never be redrawn.)
 BRAND: GridBot Builder course style only. No company, entity, ABN, Market Pros, exchange, venue or app names or logos; no coins, banknotes, currency signs or profit claims.
