@@ -774,35 +774,24 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
                 draw.line([(x, y_line), (min(x + 8, plot[2]), y_line)], fill=CYAN, width=3)
                 x += 18
             draw.text((gutter_x, y_line - 16), "27,630", font=font(28), fill=CYAN)
-        # A buy limit is filled when price falls to it. The limit-orders frame
-        # marks those downward crosses only. The hook keeps three spaced crosses.
+        # A buy is the day the close finishes below 27,630. The interpolated
+        # point sits on the day before, which is the 29 Aug peak.
         downward = {
             "2023-08-17", "2023-08-30", "2023-10-02", "2023-10-05", "2023-10-09",
         }
-        crossings = []
-        for index in range(1, n):
-            left, right = closes[index - 1], closes[index]
-            if (left - 27630) * (right - 27630) >= 0:
-                continue
-            if chapter == "Limit orders wait":
-                if series[index]["date"] not in downward or not (left > 27630 > right):
-                    continue
-            frac = index - 1 + (27630 - left) / (right - left)
-            crossings.append(frac)
-        picked = []
-        if chapter == "Limit orders wait":
-            picked = crossings
-        else:
-            for spot in crossings:
-                if all(abs(spot - prev) > n * 0.12 for prev in picked):
-                    picked.append(spot)
-                if len(picked) == 3:
-                    break
+        downs = [
+            index for index in range(1, n)
+            if series[index]["date"] in downward and closes[index - 1] > 27630 > closes[index]
+        ]
+        span = max(1, n - 1)
+
+        def x_of(index: int) -> float:
+            return plot[0] + (plot[2] - plot[0]) * (index / span)
+
         face_t = font(22)
-        text = "BUY 27,630"
-        twid = int(face_t.getlength(text)) + 16
+        buy = "BUY 27,630"
+        twid = int(face_t.getlength(buy)) + 16
         ticket_h = 36
-        # Keep the date tag clear. Tickets were landing on it.
         date_face = font(28)
         date_w = int(date_face.getlength(tag)) + 20
         date_h = 40
@@ -811,49 +800,37 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
         if date_x < plot[0]:
             date_x = min(hx + 24, plot[2] - date_w)
         date_y = min(max(plot[1], date_y), plot[3] - date_h)
-        blocked: list[tuple[float, float, float, float]] = [
-            (date_x - 8, date_y - 8, date_x + date_w + 8, date_y + date_h + 8),
-        ]
+        # 40px clear of the 16 Oct tag.
+        clear = (date_x - 40, date_y - 40, date_x + date_w + 40, date_y + date_h + 40)
 
-        def _hits(rect: tuple[float, float, float, float]) -> bool:
-            left, top, right, bottom = rect
-            for bx0, by0, bx1, by1 in blocked:
-                if not (right < bx0 or left > bx1 or bottom < by0 or top > by1):
-                    return True
-            return False
+        def draw_ticket(label: str, left: float, top: float, target: tuple[float, float] | None) -> None:
+            face = font(22)
+            width = int(face.getlength(label)) + 16
+            if target is not None:
+                draw.line([(left + width, top + ticket_h), target], fill=CYAN, width=2)
+            draw.rounded_rectangle([left, top, left + width, top + ticket_h], 8, fill=TAG, outline=CYAN, width=2)
+            draw.text((left + 8, top + 6), label, font=face, fill=WHITE)
 
-        parked = 0
-        for spot in picked:
-            cx = plot[0] + (plot[2] - plot[0]) * (spot / max(1, n - 1))
-            if cx > plot[2] - 80:
-                continue
-            left_x = max(plot[0], min(cx - twid / 2, plot[2] - twid))
+        if len(downs) >= 2:
+            # 17 Aug: sit left of the drop so the path can meet the line.
+            cx = x_of(downs[0])
+            draw_ticket(buy, max(plot[0], cx - 28 - twid), y_line - 40 - ticket_h, (cx, y_line))
+            # 30 Aug: the down-close itself, not the peak the day before.
+            cx = x_of(downs[1])
+            draw_ticket(buy, cx - twid / 2, y_line - 48 - ticket_h, (cx, y_line))
+        october = downs[2:]
+        for index in october:
+            cx = x_of(index)
+            draw.ellipse((cx - 5, y_line - 5, cx + 5, y_line + 5), fill=WHITE, outline=CYAN)
+        if october:
+            more = "3 more in October"
+            width = int(face_t.getlength(more)) + 16
+            left = min(x_of(october[0]) - 12 - width, clear[0] - 8 - width)
+            left = max(plot[0], left)
             top = y_line - 40 - ticket_h
-            straight = (cx, top + ticket_h, cx, y_line)
-            # A vertical leader through the date tag is the fail. Park those tickets to its left.
-            through_tag = date_x - 6 <= cx <= date_x + date_w + 6 and top < date_y + date_h
-            if through_tag or _hits((left_x, top, left_x + twid, top + ticket_h)):
-                left_x = date_x - 28 - twid
-                top = y_line - 40 - ticket_h - parked * (ticket_h + 8)
-                parked += 1
-                while top >= plot[1] and _hits((left_x, top, left_x + twid, top + ticket_h)):
-                    top -= ticket_h + 8
-                # Drop on the clear side, then run under the line to the crossing.
-                lane_x = left_x - 12
-                elbow_y = y_line + 16 + (parked - 1) * 7
-                leader = [
-                    (left_x, top + ticket_h / 2),
-                    (lane_x, top + ticket_h / 2),
-                    (lane_x, elbow_y),
-                    (cx, elbow_y),
-                    (cx, y_line),
-                ]
-            else:
-                leader = [(left_x + twid / 2, top + ticket_h), (cx, y_line)]
-            draw.line(leader, fill=CYAN, width=2)
-            draw.rounded_rectangle([left_x, top, left_x + twid, top + ticket_h], 8, fill=TAG, outline=CYAN, width=2)
-            draw.text((left_x + 8, top + 6), text, font=face_t, fill=WHITE)
-            blocked.append((left_x - 4, top - 4, left_x + twid + 4, top + ticket_h + 4))
+            if top < clear[3] and left + width > clear[0]:
+                top = clear[1] - 8 - ticket_h
+            draw_ticket(more, left, top, None)
 
     if chapter == "The stop":
         for index, row in enumerate(series):
@@ -903,7 +880,14 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
             draw.line([(marks.get("x", 900), rail_y), (plot[0], chart_y)], fill=CYAN, width=3)
 
 
-def _hero(base: Image.Image, box: tuple[int, int, int, int], mode: str, chip_dx: int = 0, chip_x: int | None = None) -> None:
+def _hero(
+    base: Image.Image,
+    box: tuple[int, int, int, int],
+    mode: str,
+    chip_dx: int = 0,
+    chip_x: int | None = None,
+    chip_beside: bool = False,
+) -> None:
     """Lesson visual. path and orders use the real summer closes, not a sawtooth."""
     draw = ImageDraw.Draw(base)
     draw.rounded_rectangle(box, 24, fill=GLASS, outline=CYAN, width=2)
@@ -983,9 +967,15 @@ def _hero(base: Image.Image, box: tuple[int, int, int, int], mode: str, chip_dx:
         face = font(28)
         text = "BUY 27,630"
         tw = int(face.getlength(text)) + 24
-        tx = plot[0] + 12 + chip_dx if chip_x is None else chip_x
-        tx = min(max(tx, x0 + 12), x1 - 12 - tw)
-        ty = y_line - 20
+        if chip_beside:
+            # Left of the card, on the clear side of the line, so it misses the path.
+            tx = min(560, x0 - 24 - tw)
+            ty = y_line - 20
+            draw.line([(tx + tw, ty + 20), (plot[0], y_line)], fill=CYAN, width=2)
+        else:
+            tx = plot[0] + 12 + chip_dx if chip_x is None else chip_x
+            tx = min(max(tx, x0 + 12), x1 - 12 - tw)
+            ty = y_line - 20
         draw.rounded_rectangle([tx, ty, tx + tw, ty + 40], 8, fill=TAG, outline=CYAN, width=2)
         draw.text((tx + 12, ty + 4), text, font=face, fill=WHITE)
 
@@ -1235,10 +1225,13 @@ def _retouch_analogy(draw: ImageDraw.ImageDraw, kind: str, origin: tuple[int, in
         _cover_label(draw, (620, 578, 900, 626), ["Bounces between"], bounds)
         return
     if kind == "list":
-        _cover_label(draw, (128, 272, 346, 318), ["Pair: what", "you trade"], bounds)
-        _cover_label(draw, (636, 272, 900, 318), ["Gaps: space", "between steps"], bounds)
-        _cover_label(draw, (128, 614, 392, 658), ["Band: top and", "bottom price"], bounds)
-        _cover_label(draw, (698, 614, 900, 658), ["Stop: when", "you quit"], bounds)
+        # The passing checklist shrinks its own tags to ~17px. Cover them at 28px,
+        # and stop before the binder rings (x ~400).
+        edge = (104, 248, 400, 700)
+        _cover_label(draw, (196, 360, 392, 404), ["Pair: what you trade"], edge)
+        _cover_label(draw, (196, 428, 392, 488), ["Range: the band"], edge)
+        _cover_label(draw, (196, 508, 380, 556), ["Gaps: step size"], edge)
+        _cover_label(draw, (196, 572, 392, 620), ["Stop: when you quit"], edge)
 
 
 def paint_analogy(base: Image.Image, shot: dict, local: float, dur: float) -> None:
@@ -1251,6 +1244,7 @@ def paint_analogy(base: Image.Image, shot: dict, local: float, dur: float) -> No
         if still:
             panel, _ox, _oy, _scale = _contain(load_picture(Path(still)).convert("RGB"), pw, ph)
             base.paste(panel, origin)
+            _retouch_analogy(draw, "list", origin)
         page = (origin[0] + pw + 24, 200, RIGHT, 760)
         draw.rounded_rectangle(page, 20, fill=GLASS, outline=CYAN, width=2)
         draw.text((page[0] + 28, page[1] + 28), "Write the page before any screen", font=font(32), fill=WHITE)
@@ -1400,14 +1394,14 @@ def paint_lesson_thumb(shot: dict, dest: Path) -> Path:
             draw.text((x, y), word, font=face, fill=CYAN if word.lower() == keyword else WHITE)
             x += int(face.getlength(word + " "))
         y += 130
-    # On the 1280 thumbnail the left-edge chip covers the July drop. Sit it to the right.
+    # The thumbnail mascot was a speck between the headline and the footer.
+    # The title and end cards already carry it.
     _hero(
         image,
         (820, 120, 1230, 560),
         {1: "path", 2: "lines", 3: "orders"}.get(number, "regimes"),
-        chip_x=1060 if number == 3 else None,
+        chip_beside=(number == 3),
     )
-    place_mascot(image, shot, (560, 500, 800, 650))
     draw = ImageDraw.Draw(image)
     draw.text((48, 660), FOOT, font=font(28, "reg"), fill=MUTED)
     dest.parent.mkdir(parents=True, exist_ok=True)
