@@ -1,21 +1,23 @@
 #!/usr/bin/env python3
 """Check BP-04..BP-11 narration smoothing against the pre-edit scripts.
 
-The baseline is commit fbb3f9c75981b80ac12ca1ba6b39f9d5bb676fed, the scripts
-before this pass. The checker requires:
+The baseline is commit fbb3f9c75981b80ac12ca1ba6b39f9d5bb676fed.
+Narration (`vo`) is the only field that may change. For each beat the
+checker requires:
 
-- valid JSON
-- the same beats, in the same order, with image, caption, concept, and chapter
-  left untouched
-- every number, written number, date, and ticker token from the original
-  narration still present (counts may only stay or grow)
-- the legal disclaimer byte-for-byte
-- none of the banned brand, entity, or bot-operation strings
+- the same number tokens, including written-out numbers, with the same counts
+- every original sentence that contains Example, not financial advice,
+  do not operate, not affiliated, risk, or recommendation, byte for byte,
+  except the two approved bot-line removals
+- no bot sentence
+- every field other than narration unchanged
 """
 
 from __future__ import annotations
 
 import argparse
+import copy
+import difflib
 import json
 import re
 import subprocess
@@ -60,42 +62,53 @@ WORD_NUMBER_RE = re.compile(
     r"quarter|first|second|third|twice)(?:-[a-z]+)?\b",
     re.I,
 )
-BANNED = re.compile(
-    r"market\s+pros|\bstewart\b|crown\s+crypto|\bconsultants\b|\bABN\b|\bACN\b|"
-    r"\bAFSL\b|do not run|don't run|do not sell|don't sell|sell or run|"
-    r"run the bot|run a trading bot|we do not run|we don't run|we do not sell|"
-    r"we don't sell|we do not operate|we don't operate",
+# Bot sentences only. "we do not operate" and a blanket "do not run" are not bans.
+BOT_SENTENCE = re.compile(
+    r"we do not run the bot|we don't run the bot|do not run the bot|don't run the bot|"
+    r"run a trading bot|run the bot|sell or run|"
+    r"do not run the card|don't run the card|"
+    r"we do not sell|we don't sell|do not sell|don't sell|"
+    r"market\s+pros|\bstewart\b|crown\s+crypto|\bABN\b|\bACN\b|\bAFSL\b",
     re.I,
 )
+PROTECTED = (
+    "example",
+    "not financial advice",
+    "do not operate",
+    "not affiliated",
+    "risk",
+    "recommendation",
+)
+APPROVED_REMOVALS = {
+    "We do not run the bot that would confirm for you.",
+    "Do not run the card on a live position as the homework.",
+}
+NOT_A_DEFINITION = APPROVED_REMOVALS | {
+    "The lesson stops in front of that control.",
+    "The homework is that card on the path you drew.",
+}
 SENTENCE_RE = re.compile(r".+?[.!?]+(?:\s+|$)", re.S)
 
 
 def load_baseline(rel: str) -> dict:
-    raw = subprocess.check_output(
-        ["git", "show", f"{BASE}:{rel}"], cwd=ROOT, text=True
-    )
+    raw = subprocess.check_output(["git", "show", f"{BASE}:{rel}"], cwd=ROOT, text=True)
     return json.loads(raw)
 
 
-def narrate(data: dict) -> str:
-    return "\n".join(beat["vo"] for beat in data["beats"])
-
-
-def tokens(text: str) -> Counter:
-    found: Counter = Counter()
-    found.update(f"num:{m}" for m in NUMBER_RE.findall(text))
-    found.update(f"date:{m.casefold()}" for m in DATE_RE.findall(text))
-    found.update(f"ticker:{m}" for m in TICKER_RE.findall(text))
-    found.update(f"word:{m.casefold()}" for m in WORD_NUMBER_RE.findall(text))
-    return found
-
-
 def sentences(text: str) -> list[str]:
-    parts = [m.group(0).strip() for m in SENTENCE_RE.finditer(text)]
+    parts = [match.group(0).strip() for match in SENTENCE_RE.finditer(text)]
     tail = SENTENCE_RE.sub("", text).strip()
     if tail:
         parts.append(tail)
     return parts
+
+
+def number_tokens(text: str) -> Counter:
+    found: Counter = Counter()
+    found.update(f"num:{token}" for token in NUMBER_RE.findall(text))
+    found.update(f"word:{token.casefold()}" for token in WORD_NUMBER_RE.findall(text))
+    found.update(f"date:{token.casefold()}" for token in DATE_RE.findall(text))
+    return found
 
 
 def check(rel: str) -> list[str]:
@@ -112,38 +125,62 @@ def check(rel: str) -> list[str]:
 
     if not isinstance(revised.get("beats"), list):
         return [f"{rel}: beats is not a list"]
-    if [b.get("n") for b in original["beats"]] != [b.get("n") for b in revised["beats"]]:
-        errors.append(f"{rel}: beat order changed")
     if len(original["beats"]) != len(revised["beats"]):
-        errors.append(f"{rel}: beat count changed")
-        return errors
+        return [f"{rel}: beat count changed"]
+
+    original_structure = copy.deepcopy(original)
+    revised_structure = copy.deepcopy(revised)
+    for old_beat, new_beat in zip(original_structure["beats"], revised_structure["beats"]):
+        old_beat.pop("vo", None)
+        new_beat.pop("vo", None)
+    if original_structure != revised_structure:
+        errors.append(f"{rel}: a non-narration field changed")
 
     for old, new in zip(original["beats"], revised["beats"]):
-        for key in ("n", "role", "chapter", "cap", "concept", "image", "image_status", "prompt"):
-            if old.get(key) != new.get(key):
-                errors.append(f"{rel} beat {old.get('n')}: {key} changed")
+        label = f"{rel} beat {old.get('n')}"
         if not isinstance(new.get("vo"), str) or not new["vo"].strip():
-            errors.append(f"{rel} beat {old.get('n')}: narration missing")
-        if old.get("role") == "legal" and new.get("vo") != old.get("vo"):
-            errors.append(f"{rel} beat {old.get('n')}: disclaimer narration changed")
-        if new.get("role") == "legal" and new.get("vo") != DISCLAIMER:
-            errors.append(f"{rel} beat {old.get('n')}: disclaimer is not the required text")
-
-    original_tokens = tokens(narrate(original))
-    revised_tokens = tokens(narrate(revised))
-    missing = original_tokens - revised_tokens
-    for token, count in sorted(missing.items()):
-        errors.append(f"{rel}: lost {count} x {token}")
-    for token in sorted(revised_tokens):
-        if token.startswith("word:"):
+            errors.append(f"{label}: narration missing")
             continue
-        if original_tokens[token] == 0:
-            errors.append(f"{rel}: new {token}")
+        if old.get("role") == "legal" and new.get("vo") != DISCLAIMER:
+            errors.append(f"{label}: disclaimer is not byte-for-byte")
+        old_numbers = number_tokens(old["vo"])
+        new_numbers = number_tokens(new["vo"])
+        if old_numbers != new_numbers:
+            lost = old_numbers - new_numbers
+            gained = new_numbers - old_numbers
+            for token, count in sorted(lost.items()):
+                errors.append(f"{label}: lost {count} x {token}")
+            for token, count in sorted(gained.items()):
+                errors.append(f"{label}: new count {count} x {token}")
+        old_tickers = Counter(TICKER_RE.findall(old["vo"]))
+        new_tickers = Counter(TICKER_RE.findall(new["vo"]))
+        for token, count in sorted((old_tickers - new_tickers).items()):
+            errors.append(f"{label}: lost ticker {token} x {count}")
+        for token in sorted(new_tickers):
+            if old_tickers[token] == 0:
+                errors.append(f"{label}: new ticker {token}")
+        for sentence in sentences(old["vo"]):
+            folded = sentence.casefold()
+            if sentence in APPROVED_REMOVALS:
+                continue
+            if any(trigger in folded for trigger in PROTECTED) and sentence not in new["vo"]:
+                errors.append(f"{label}: protected line changed: {sentence}")
 
-    banned = BANNED.search(path.read_text())
+    banned = BOT_SENTENCE.search(path.read_text())
     if banned:
-        errors.append(f"{rel}: banned string {banned.group(0)!r}")
+        errors.append(f"{rel}: bot sentence {banned.group(0)!r}")
     return errors
+
+
+def added_definitions(original: dict, revised: dict) -> list[tuple[int, str]]:
+    kept: list[tuple[int, str]] = []
+    for old, new in zip(original["beats"], revised["beats"]):
+        old_sentences = set(sentences(old["vo"]))
+        for sentence in sentences(new["vo"]):
+            if sentence in old_sentences or sentence in NOT_A_DEFINITION:
+                continue
+            kept.append((old["n"], sentence))
+    return kept
 
 
 def write_changes(dest: Path) -> None:
@@ -151,57 +188,71 @@ def write_changes(dest: Path) -> None:
         "# BP-04 to BP-11 narration changes",
         "",
         "Spoken narration only. Beat order, captions, concepts, image paths, numbers, "
-        "dates, tickers, and the disclaimer stay as written. Unchanged beats are omitted. "
+        "dates, tickers, and the disclaimer stay as written. The full Example risk "
+        "sentence stays wherever the original had it. Unchanged beats are omitted. "
         "Legal beats are the disclaimer and are unchanged.",
+        "",
+        "## Kept plain-meaning definitions",
+        "",
+        "Each line below only restates the lesson or a basic dictionary meaning. "
+        "Definitions that added a fact, a rule, or a recommendation were removed.",
         "",
     ]
     any_change = False
+    any_definition = False
     for rel in SCRIPTS:
+        if not (ROOT / rel).is_file():
+            continue
         original = load_baseline(rel)
         revised = json.loads((ROOT / rel).read_text())
-        changed = []
-        for old, new in zip(original["beats"], revised["beats"]):
-            if old["vo"] == new["vo"]:
-                continue
-            changed.append((old, new))
+        kept = added_definitions(original, revised)
+        if not kept:
+            continue
+        # Only list a lesson once its narration actually differs.
+        if all(old["vo"] == new["vo"] for old, new in zip(original["beats"], revised["beats"])):
+            continue
+        any_definition = True
+        lines.append(f"### {original['id']}")
+        lines.append("")
+        for number, sentence in kept:
+            lines.append(f"- Beat {number}: {sentence}")
+        lines.append("")
+    if not any_definition:
+        lines.append("None in the files changed so far.")
+        lines.append("")
+    for rel in SCRIPTS:
+        if not (ROOT / rel).is_file():
+            continue
+        original = load_baseline(rel)
+        revised = json.loads((ROOT / rel).read_text())
+        changed = [
+            (old, new)
+            for old, new in zip(original["beats"], revised["beats"])
+            if old["vo"] != new["vo"]
+        ]
         if not changed:
             continue
         any_change = True
         lines.append(f"## {original['id']}")
         lines.append("")
         for old, new in changed:
-            lines.append(
-                f"### Beat {old['n']} ({old['role']}, {old['chapter']})"
-            )
+            lines.append(f"### Beat {old['n']} ({old['role']}, {old['chapter']})")
             lines.append("")
-            old_s = sentences(old["vo"])
-            new_s = sentences(new["vo"])
-            if old_s == new_s:
-                lines.append("Before:")
-                lines.append("")
-                lines.append(f"> {old['vo']}")
-                lines.append("")
-                lines.append("After:")
-                lines.append("")
-                lines.append(f"> {new['vo']}")
-                lines.append("")
-                continue
-            # Pair sentences with a diff so each changed line is visible.
-            import difflib
-
-            matcher = difflib.SequenceMatcher(a=old_s, b=new_s)
-            n = 0
+            old_sentences = sentences(old["vo"])
+            new_sentences = sentences(new["vo"])
+            matcher = difflib.SequenceMatcher(a=old_sentences, b=new_sentences)
+            change_number = 0
             for tag, i1, i2, j1, j2 in matcher.get_opcodes():
                 if tag == "equal":
                     continue
-                n += 1
-                lines.append(f"Change {n}:")
+                change_number += 1
+                lines.append(f"Change {change_number}:")
                 lines.append("")
                 if tag in ("replace", "delete"):
-                    for sentence in old_s[i1:i2]:
+                    for sentence in old_sentences[i1:i2]:
                         lines.append(f"- Before: {sentence}")
                 if tag in ("replace", "insert"):
-                    for sentence in new_s[j1:j2]:
+                    for sentence in new_sentences[j1:j2]:
                         lines.append(f"- After: {sentence}")
                 lines.append("")
         lines.append("")
@@ -221,21 +272,30 @@ def main() -> int:
     )
     args = parser.parse_args()
     errors: list[str] = []
+    passed = 0
     for rel in SCRIPTS:
-        errors.extend(check(rel))
+        lesson_errors = check(rel)
+        if lesson_errors:
+            errors.extend(lesson_errors)
+            print(f"FAIL {rel}")
+            for err in lesson_errors:
+                print(f"- {err}")
+        else:
+            passed += 1
+            print(f"PASS {rel}")
     if args.write_changes:
-        write_changes(args.write_changes if args.write_changes.is_absolute() else ROOT / args.write_changes)
+        destination = args.write_changes if args.write_changes.is_absolute() else ROOT / args.write_changes
+        write_changes(destination)
+    print(f"baseline {BASE}")
+    print("JSON valid" if not any("invalid JSON" in err for err in errors) else "JSON invalid")
+    print(f"lessons passed: {passed} of {len(SCRIPTS)}")
     if errors:
         print(f"FAIL {len(errors)} check(s)")
-        for err in errors:
-            print(f"- {err}")
         return 1
-    print(f"PASS {len(SCRIPTS)} lessons")
-    print(f"baseline {BASE}")
-    print("JSON valid")
-    print("number, date, and ticker tokens preserved")
-    print("disclaimers match byte-for-byte")
-    print("banned strings: 0")
+    print("per-beat number and written-number counts match")
+    print("protected lines match byte-for-byte")
+    print("non-narration fields unchanged")
+    print("bot sentences: 0")
     return 0
 
 
