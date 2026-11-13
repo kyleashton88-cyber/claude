@@ -9,22 +9,22 @@
  "not_in_scope": "All 92 BP-01..03 rows are now scored here. Separate finding: course/blueprint-rebuild/numbers/bp-0{1,2,3}*.yaml (d1f6) set disclaimer_on_screen to 'Educational content only. Not financial advice.'; studio.py writes that string, so CODE_FIXES.md CF-1 fixes both.",
  "counts": {
   "total": 92,
-  "pass": 45,
-  "fail": 47,
+  "pass": 56,
+  "fail": 36,
   "lesson_stills": {
    "total": 58,
-   "pass": 37,
-   "fail": 21,
+   "pass": 48,
+   "fail": 10,
    "by_lesson": {
     "bp-01-introduction": {
      "total": 18,
-     "pass": 12,
-     "fail": 6
+     "pass": 16,
+     "fail": 2
     },
     "bp-02-what-you-need": {
      "total": 21,
-     "pass": 14,
-     "fail": 7
+     "pass": 21,
+     "fail": 0
     },
     "bp-03-what-is-a-grid-bot": {
      "total": 19,
@@ -73,43 +73,67 @@
    "beat": 1,
    "chapter": "Hook",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-01-introduction.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "295ac01fb41cbd4bd47387fe18c19e34d46fe9fb",
     "cursor/blueprint-beginner-images": "295ac01fb41cbd4bd47387fe18c19e34d46fe9fb"
    },
    "beat_concept": "Price often chops sideways, weaving through the same band instead of leaving.",
    "scores": {
-    "beginner_clarity": 4,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
-    "craft_polish": 3,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "artifact: stray double-headed arrow from the EXAMPLE stamp to the top dashed line"
-   ],
-   "status": "fail",
-   "action": "needs_remake",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-01-introduction__001.txt",
-   "notes": "Clear sideways band, but the EXAMPLE stamp has a stray double-headed arrow pointing at the top line, and the zig-zag peaks stop short of the top line, so the price never visibly 'bounces' off it.",
+   "notes": "Two dashed lines with a zig-zag whose every peak touches the top line and every trough the bottom line, never leaving the band. \"Top price\", \"Bottom price\", \"Price bouncing\" each have one arrow with the tip on its target (3 of 3). EXAMPLE stamp inside the card (slightly tilted), no stray arrow. Plain headline PRICE OFTEN GOES SIDEWAYS matches the beat.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 79,
-    "right": 120,
-    "top": 160,
-    "bottom": 222
+    "left": 83,
+    "right": 83,
+    "top": 91,
+    "bottom": 179
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-01-introduction/001.png",
-   "scored_blob": "295ac01fb41cbd4bd47387fe18c19e34d46fe9fb",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/001.png",
+   "scored_blob": "372a2558754004adf464e88ab73c8325f0c4cd27",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "source_detail": "ChatGPT web render gen/bp-01-introduction/001/web1.png (prompt specs/remake/bp-01-introduction__001.txt), saved via out/course/images/bp-01-introduction/001.png at 1536x1024 (already 3:2, no fill needed)",
+   "previous_committed_blob": "295ac01fb41cbd4bd47387fe18c19e34d46fe9fb",
+   "remake_review": {
+    "file": "gen/bp-01-introduction/001/web1.png",
+    "blob": "3282f0e75536f95562c5a09eb8418a7595ed8d7c",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 83,
+     "right": 83,
+     "top": 91,
+     "bottom": 179
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Two dashed lines with a zig-zag whose every peak touches the top line and every trough the bottom line, never leaving the band. \"Top price\", \"Bottom price\", \"Price bouncing\" each have one arrow with the tip on its target (3 of 3). EXAMPLE stamp inside the card (slightly tilted), no stray arrow. Plain headline PRICE OFTEN GOES SIDEWAYS matches the beat.",
+    "pass": true
+   }
   },
   {
    "path": "course/images/bp-01-introduction/002.png",
@@ -117,43 +141,67 @@
    "beat": 2,
    "chapter": "Disclaimer",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-01-introduction.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "07d6e9fd1033bfb669d7e9979d59a82ade21058e",
     "cursor/blueprint-beginner-images": "07d6e9fd1033bfb669d7e9979d59a82ade21058e"
    },
    "beat_concept": "Education only. Not financial advice.",
    "scores": {
-    "beginner_clarity": 3,
-    "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 5,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "needs_remake",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-01-introduction__002.txt",
-   "notes": "Disclaimer card does not show the exact line 'Education only. Not financial advice.': it reads 'EDUCATION ONLY' plus tags 'Learning' / 'Not money advice'.",
+   "notes": "Disclaimer card reads exactly \"Education only.\" / \"Not financial advice.\" beside an open book with a check. No buy button, no extra words, 0 arrows.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 72,
-    "right": 111,
-    "top": 197,
-    "bottom": 214
+    "left": 81,
+    "right": 87,
+    "top": 101,
+    "bottom": 235
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-01-introduction/002.png",
-   "scored_blob": "07d6e9fd1033bfb669d7e9979d59a82ade21058e",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/002.png",
+   "scored_blob": "c42262bf9dc9f8525cee7126adbdb673ec721352",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "source_detail": "ChatGPT web render gen/bp-01-introduction/002/web1.png (prompt specs/remake/bp-01-introduction__002.txt), saved via out/course/images/bp-01-introduction/002.png at 1536x1024 (already 3:2, no fill needed)",
+   "previous_committed_blob": "07d6e9fd1033bfb669d7e9979d59a82ade21058e",
+   "remake_review": {
+    "file": "gen/bp-01-introduction/002/web1.png",
+    "blob": "cce64d4bddbe2f98b00be0e11db4e8d64cc5dcd0",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 81,
+     "right": 87,
+     "top": 101,
+     "bottom": 235
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 5,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Disclaimer card reads exactly \"Education only.\" / \"Not financial advice.\" beside an open book with a check. No buy button, no extra words, 0 arrows.",
+    "pass": true
+   }
   },
   {
    "path": "course/images/bp-01-introduction/003.png",
@@ -348,7 +396,7 @@
    "status": "fail",
    "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-01-introduction__007.txt",
-   "notes": "Diagram is right (sells above in mint, buys below in blue, price-now line), but the headline 'BUY LOW, SELL HIGH' is a profit slogan, not the beat ('buy orders below the mark, sell orders above it'). Fails the no-pitch rule.",
+   "notes": "Committed still: Diagram is right (sells above in mint, buys below in blue, price-now line), but the headline 'BUY LOW, SELL HIGH' is a profit slogan, not the beat ('buy orders below the mark, sell orders above it'). Fails the no-pitch rule. | web1 remake: FAIL. The three mint and three blue rungs sit side by side at one height, so each side reads as three orders at the same price, not a ladder of levels. The narration says four buys below and four sells above. The \"Sell orders above\" tip stops below and left of the first mint rung instead of touching the middle one, and the \"Buy orders below\" arrow has a kink.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
@@ -363,7 +411,34 @@
    "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-01-introduction/007.png",
    "scored_blob": "adc62a84603dfc3b9a5fb5f6bf493cd101c9a135",
    "committed": true,
-   "pass": false
+   "pass": false,
+   "remake_review": {
+    "file": "gen/bp-01-introduction/007/web1.png",
+    "blob": "d518e5ce2e5598a249d787f38b60d39e2d4c50a1",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 67,
+     "right": 84,
+     "top": 91,
+     "bottom": 181
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 3,
+     "composition_hierarchy": 4,
+     "craft_polish": 3,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 3
+    },
+    "hard_fails": [
+     "wrong picture: orders side by side at one price",
+     "arrow misses target"
+    ],
+    "notes": "The three mint and three blue rungs sit side by side at one height, so each side reads as three orders at the same price, not a ladder of levels. The narration says four buys below and four sells above. The \"Sell orders above\" tip stops below and left of the first mint rung instead of touching the middle one, and the \"Buy orders below\" arrow has a kink.",
+    "pass": false
+   }
   },
   {
    "path": "course/images/bp-01-introduction/008.png",
@@ -455,43 +530,67 @@
    "beat": 10,
    "chapter": "The map",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-01-introduction.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "c2905476f50f3c51af10caa9768e07e882b0e02c",
     "cursor/blueprint-beginner-images": "c2905476f50f3c51af10caa9768e07e882b0e02c"
    },
    "beat_concept": "The course is a map, and this introduction is only the first square.",
    "scores": {
-    "beginner_clarity": 4,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "wrong number: 11 stones ahead of the 'You are here' stone but the label says '10 lessons ahead'"
-   ],
-   "status": "fail",
-   "action": "needs_remake",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-01-introduction__010.txt",
-   "notes": "Course map path has 12 stones (pin stone + 11 ahead), so it contradicts both '10 lessons ahead' and the 11-lesson course.",
+   "notes": "11 equal glass stones rising left to right; the first glows with a cyan pin. \"You are here\" tip on the pin, \"10 lessons ahead\" tip on the 11th stone (2 of 2). No numbers or icons on the stones. Matches \"this introduction is only the first square\".",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 74,
-    "right": 57,
-    "top": 98,
-    "bottom": 233
+    "left": 77,
+    "right": 59,
+    "top": 106,
+    "bottom": 269
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-01-introduction/010.png",
-   "scored_blob": "c2905476f50f3c51af10caa9768e07e882b0e02c",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/010.png",
+   "scored_blob": "dc5596135d35bc271f17b0b588f3b182893bad0c",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "source_detail": "ChatGPT web render gen/bp-01-introduction/010/web3.png (prompt specs/remake/bp-01-introduction__010.txt), saved via out/course/images/bp-01-introduction/010.png at 1536x1024 (already 3:2, no fill needed)",
+   "previous_committed_blob": "c2905476f50f3c51af10caa9768e07e882b0e02c",
+   "remake_review": {
+    "file": "gen/bp-01-introduction/010/web3.png",
+    "blob": "9d1f3366b8b6a03a0124946fada53f17f54a32dd",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 77,
+     "right": 59,
+     "top": 106,
+     "bottom": 269
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "11 equal glass stones rising left to right; the first glows with a cyan pin. \"You are here\" tip on the pin, \"10 lessons ahead\" tip on the 11th stone (2 of 2). No numbers or icons on the stones. Matches \"this introduction is only the first square\".",
+    "pass": true
+   }
   },
   {
    "path": "course/images/bp-01-introduction/011.png",
@@ -730,7 +829,7 @@
    "status": "fail",
    "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-01-introduction__016.txt",
-   "notes": "Content is right (Range / Levels / Stop on a notebook band), but the notebook base and pencil run to 37px from the bottom edge (under the 45px minimum).",
+   "notes": "Committed still: Content is right (Range / Levels / Stop on a notebook band), but the notebook base and pencil run to 37px from the bottom edge (under the 45px minimum). | web1 remake: FAIL. The rectangle has 4 inner lines where the prompt says 5. The \"Levels\" tip lands in the gap halfway between the 2nd and 3rd inner lines (measured 34px from each), touching no rung, so it doesn't show that the levels are the rungs. \"Range\" (top edge) and \"Stop\" (amber sign) are correct; \"Point at each one\" has no arrow, as specified.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
@@ -745,7 +844,34 @@
    "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-01-introduction/016.png",
    "scored_blob": "330ae5ca21d38f2948008939585ad75cd8aa16c3",
    "committed": true,
-   "pass": false
+   "pass": false,
+   "remake_review": {
+    "file": "gen/bp-01-introduction/016/web1.png",
+    "blob": "c618e5df9ee96c505b1d82b40d2f8d2433c9a414",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 74,
+     "right": 60,
+     "top": 68,
+     "bottom": 127
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 4,
+     "composition_hierarchy": 4,
+     "craft_polish": 4,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 3
+    },
+    "hard_fails": [
+     "arrow misses target",
+     "wrong count"
+    ],
+    "notes": "The rectangle has 4 inner lines where the prompt says 5. The \"Levels\" tip lands in the gap halfway between the 2nd and 3rd inner lines (measured 34px from each), touching no rung, so it doesn't show that the levels are the rungs. \"Range\" (top edge) and \"Stop\" (amber sign) are correct; \"Point at each one\" has no arrow, as specified.",
+    "pass": false
+   }
   },
   {
    "path": "course/images/bp-01-introduction/017.png",
@@ -795,41 +921,67 @@
    "beat": 18,
    "chapter": "Outro",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-01-introduction.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "2bb5faf0d29939961a936746e7a016e7fd24afb6",
     "cursor/blueprint-beginner-images": "2bb5faf0d29939961a936746e7a016e7fd24afb6"
    },
    "beat_concept": "Next lesson: What you are going to need. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
    "scores": {
-    "beginner_clarity": 4,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-01-introduction__018.txt",
-   "notes": "Outro names the next lesson only as 'WHAT YOU NEED' / 'what you need'; the next lesson's title is 'What you are going to need'.",
+   "notes": "Outro: headline NEXT: WHAT YOU ARE GOING TO NEED, tag \"Next lesson: What you are going to need\", which is the exact BP-02 title. Notebook card, then a thick arrow, then a clipboard with three empty boxes. \"Bring your notes\" tip on the notebook, next-lesson tip on the clipboard (2 of 2).",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 65,
-    "right": 104,
-    "top": 115,
-    "bottom": 182
+    "left": 85,
+    "right": 97,
+    "top": 101,
+    "bottom": 153
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-01-introduction/018.png",
-   "scored_blob": "2bb5faf0d29939961a936746e7a016e7fd24afb6",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/018.png",
+   "scored_blob": "53972034e39db10fe3c63e65fcba39b0ffcd1513",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "source_detail": "ChatGPT web render gen/bp-01-introduction/018/web1.png (prompt specs/remake/bp-01-introduction__018.txt), saved via out/course/images/bp-01-introduction/018.png at 1536x1024 (already 3:2, no fill needed)",
+   "previous_committed_blob": "2bb5faf0d29939961a936746e7a016e7fd24afb6",
+   "remake_review": {
+    "file": "gen/bp-01-introduction/018/web1.png",
+    "blob": "fc1d2586dad95c14b2bc3dabba1522897694e8d5",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 85,
+     "right": 97,
+     "top": 101,
+     "bottom": 153
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Outro: headline NEXT: WHAT YOU ARE GOING TO NEED, tag \"Next lesson: What you are going to need\", which is the exact BP-02 title. Notebook card, then a thick arrow, then a clipboard with three empty boxes. \"Bring your notes\" tip on the notebook, next-lesson tip on the clipboard (2 of 2).",
+    "pass": true
+   }
   },
   {
    "path": "course/images/bp-02-what-you-need/001.png",
@@ -879,43 +1031,67 @@
    "beat": 2,
    "chapter": "Disclaimer",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-02-what-you-need.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "f0ab44ee25481eeea6c1084b727869f4ada2be07",
     "cursor/blueprint-beginner-images": "f0ab44ee25481eeea6c1084b727869f4ada2be07"
    },
    "beat_concept": "Education only. Not financial advice.",
    "scores": {
-    "beginner_clarity": 3,
-    "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 5,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "needs_remake",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-02-what-you-need__002.txt",
-   "notes": "Disclaimer card does not show the exact line 'Education only. Not financial advice.': it reads 'EDUCATION ONLY' plus 'For learning' / 'Not advice on what to buy'.",
+   "notes": "Disclaimer card reads exactly \"Education only.\" / \"Not financial advice.\" beside an open book with a check. Nothing else on the card, 0 arrows.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 71,
-    "right": 63,
-    "top": 70,
-    "bottom": 135
+    "left": 77,
+    "right": 77,
+    "top": 93,
+    "bottom": 251
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-02-what-you-need/002.png",
-   "scored_blob": "f0ab44ee25481eeea6c1084b727869f4ada2be07",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-02-what-you-need/002.png",
+   "scored_blob": "cb0bc1a2690405e23f0ce1d3b9ae0e509923bc95",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "source_detail": "ChatGPT web render gen/bp-02-what-you-need/002/web1.png (prompt specs/remake/bp-02-what-you-need__002.txt), saved via out/course/images/bp-02-what-you-need/002.png at 1536x1024 (already 3:2, no fill needed)",
+   "previous_committed_blob": "f0ab44ee25481eeea6c1084b727869f4ada2be07",
+   "remake_review": {
+    "file": "gen/bp-02-what-you-need/002/web1.png",
+    "blob": "2abbc4fe01789faaedb8350539b3a423f40d34ef",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 77,
+     "right": 77,
+     "top": 93,
+     "bottom": 251
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 5,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Disclaimer card reads exactly \"Education only.\" / \"Not financial advice.\" beside an open book with a check. Nothing else on the card, 0 arrows.",
+    "pass": true
+   }
   },
   {
    "path": "course/images/bp-02-what-you-need/003.png",
@@ -923,43 +1099,67 @@
    "beat": 3,
    "chapter": "Title card",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-02-what-you-need.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "18f27646015afb662cc7ea4d781d48521f3af527",
     "cursor/blueprint-beginner-images": "18f27646015afb662cc7ea4d781d48521f3af527"
    },
    "beat_concept": "What you are going to need",
    "scores": {
-    "beginner_clarity": 4,
-    "composition_hierarchy": 3,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "cramped margin: the glass desk runs to 24px from the left and right edges"
-   ],
-   "status": "fail",
-   "action": "needs_remake",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-02-what-you-need__003.txt",
-   "notes": "Title card headline is 'WHAT YOU WILL NEED', not the lesson title 'What you are going to need'; the desk slab runs to 24px from both side edges.",
+   "notes": "Title card shows the exact lesson title WHAT YOU ARE GOING TO NEED. Desk with notebook, pencil and a laptop showing only a shield with a check (no app screen). \"Notebook\", \"Pencil\", \"Practice account\" tips on target (3 of 3). Desk edges are about 112px from the frame edges (the prompt asks 120, the standard 45).",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 24,
-    "right": 24,
-    "top": 70,
-    "bottom": 147
+    "left": 74,
+    "right": 114,
+    "top": 69,
+    "bottom": 131
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-02-what-you-need/003.png",
-   "scored_blob": "18f27646015afb662cc7ea4d781d48521f3af527",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-02-what-you-need/003.png",
+   "scored_blob": "2e9f7b7bb073c81b69341199588ac2b8732677a8",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "source_detail": "ChatGPT web render gen/bp-02-what-you-need/003/web1.png (prompt specs/remake/bp-02-what-you-need__003.txt), saved via out/course/images/bp-02-what-you-need/003.png at 1536x1024 (already 3:2, no fill needed)",
+   "previous_committed_blob": "18f27646015afb662cc7ea4d781d48521f3af527",
+   "remake_review": {
+    "file": "gen/bp-02-what-you-need/003/web1.png",
+    "blob": "a25d811e4ac6d94170a9fc86bc0ee966a8fcfcc2",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 74,
+     "right": 114,
+     "top": 69,
+     "bottom": 131
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Title card shows the exact lesson title WHAT YOU ARE GOING TO NEED. Desk with notebook, pencil and a laptop showing only a shield with a check (no app screen). \"Notebook\", \"Pencil\", \"Practice account\" tips on target (3 of 3). Desk edges are about 112px from the frame edges (the prompt asks 120, the standard 45).",
+    "pass": true
+   }
   },
   {
    "path": "course/images/bp-02-what-you-need/004.png",
@@ -967,43 +1167,67 @@
    "beat": 4,
    "chapter": "Seven items",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-02-what-you-need.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "46a7bfa283beac9b4f3e811e38346f08a580fba5",
     "cursor/blueprint-beginner-images": "46a7bfa283beac9b4f3e811e38346f08a580fba5"
    },
    "beat_concept": "The setup check has seven lines: notebook, the three words, pair name, paper or demo, no secrets, a written stop, and the word Example.",
    "scores": {
-    "beginner_clarity": 3,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 5,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "wrong count/content: rows are Notebook, Pair, Range, Levels, Stop, No secrets, EXAMPLE (missing 'paper or demo', three words split into two)"
-   ],
-   "status": "fail",
-   "action": "needs_remake",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-02-what-you-need__004.txt",
-   "notes": "Seven rows do not match the beat's seven lines (notebook, the three words, pair name, paper or demo, no secrets, a written stop, the word Example); 'EXAMPLE' appears as a stamp, a tag with an arrow to that stamp, and a checklist row.",
+   "notes": "Clipboard with exactly 7 rows spelled as specified (Notebook, The three words, Pair name, Paper or demo, No secrets, Written stop, The word EXAMPLE); row 4 is highlighted; no ticks. \"7 lines to check\" tip on the clipboard edge at row 1 (1 of 1). Matches the beat's seven lines word for word.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 54,
-    "right": 56,
-    "top": 52,
-    "bottom": 74
+    "left": 74,
+    "right": 434,
+    "top": 70,
+    "bottom": 110
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-02-what-you-need/004.png",
-   "scored_blob": "46a7bfa283beac9b4f3e811e38346f08a580fba5",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-02-what-you-need/004.png",
+   "scored_blob": "d5ac988057ee7596d057e86f2c13b8741fc28602",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "source_detail": "ChatGPT web render gen/bp-02-what-you-need/004/web3.png (prompt specs/remake/bp-02-what-you-need__004.txt), saved via out/course/images/bp-02-what-you-need/004.png at 1536x1024 (already 3:2, no fill needed)",
+   "previous_committed_blob": "46a7bfa283beac9b4f3e811e38346f08a580fba5",
+   "remake_review": {
+    "file": "gen/bp-02-what-you-need/004/web3.png",
+    "blob": "e9ada2a7cfde32967b6cca6eec4bc4cdd3177701",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 74,
+     "right": 434,
+     "top": 70,
+     "bottom": 110
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 5,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Clipboard with exactly 7 rows spelled as specified (Notebook, The three words, Pair name, Paper or demo, No secrets, Written stop, The word EXAMPLE); row 4 is highlighted; no ticks. \"7 lines to check\" tip on the clipboard edge at row 1 (1 of 1). Matches the beat's seven lines word for word.",
+    "pass": true
+   }
   },
   {
    "path": "course/images/bp-02-what-you-need/005.png",
@@ -1221,44 +1445,67 @@
    "beat": 10,
    "chapter": "The word Example",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-02-what-you-need.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "9c00e45e32cfcdee8786af713265b511faa45513",
     "cursor/blueprint-beginner-images": "9c00e45e32cfcdee8786af713265b511faa45513"
    },
    "beat_concept": "Every number and every pair on the page carries the word Example.",
    "scores": {
-    "beginner_clarity": 3,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "cramped margin: 'So nobody copies it as advice' tag sits ~43px from the left edge",
-    "pencil to 29px from the right edge"
-   ],
-   "status": "fail",
-   "action": "needs_remake",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-02-what-you-need__010.txt",
-   "notes": "Shows 'squiggle = EXAMPLE' rows, not a number or pair carrying the word Example, so a beginner cannot see what gets stamped; the left tag and pencil break the side margins.",
+   "notes": "Notebook rows: a sketched band, then a placeholder pair \"___ / ___\", each followed by an EXAMPLE stamp. \"Stamp it EXAMPLE\" tip on the first stamp (1 of 1); \"So nobody copies it as advice\" under the page with no arrow. Pencil fully in frame.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 43,
-    "right": 29,
-    "top": 66,
-    "bottom": 91
+    "left": 69,
+    "right": 62,
+    "top": 77,
+    "bottom": 94
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-02-what-you-need/010.png",
-   "scored_blob": "9c00e45e32cfcdee8786af713265b511faa45513",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-02-what-you-need/010.png",
+   "scored_blob": "60bd39841190b2538c59874a7040be8de479dc58",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "source_detail": "ChatGPT web render gen/bp-02-what-you-need/010/web1.png (prompt specs/remake/bp-02-what-you-need__010.txt), saved via out/course/images/bp-02-what-you-need/010.png at 1536x1024 (already 3:2, no fill needed)",
+   "previous_committed_blob": "9c00e45e32cfcdee8786af713265b511faa45513",
+   "remake_review": {
+    "file": "gen/bp-02-what-you-need/010/web1.png",
+    "blob": "1ebed092be0214880c2f7667e3e8138cae0864d8",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 69,
+     "right": 62,
+     "top": 77,
+     "bottom": 94
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Notebook rows: a sketched band, then a placeholder pair \"___ / ___\", each followed by an EXAMPLE stamp. \"Stamp it EXAMPLE\" tip on the first stamp (1 of 1); \"So nobody copies it as advice\" under the page with no arrow. Pencil fully in frame.",
+    "pass": true
+   }
   },
   {
    "path": "course/images/bp-02-what-you-need/011.png",
@@ -1476,43 +1723,67 @@
    "beat": 16,
    "chapter": "Your turn",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-02-what-you-need.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "505d3be0d1e52d2e2c791832ba93d6c282409cb6",
     "cursor/blueprint-beginner-images": "505d3be0d1e52d2e2c791832ba93d6c282409cb6"
    },
    "beat_concept": "Practice: The setup check has seven lines: notebook, the three words, pair name, paper or demo, no secrets, a written stop, and the word Example.",
    "scores": {
-    "beginner_clarity": 4,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
     "label_accuracy": 4
    },
-   "hard_fails": [
-    "cramped margin: 'Copy the 7 lines' tag ends ~43px from the right edge"
-   ],
-   "status": "fail",
-   "action": "needs_remake",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-02-what-you-need__016.txt",
-   "notes": "Seven tick boxes and right content, but the 'Copy the 7 lines' tag breaks the 45px right margin.",
+   "notes": "Notebook with exactly 7 tick-box rows; first box ticked with the pencil tip on it. \"Tick each one\" tip on the first box. \"Copy the 7 lines\" points at row 4, but its tip sits 16px above that line (measured): it clearly reads as row 4, so I scored it 4, not a miss. Tag is 230px inside the right edge.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 62,
-    "right": 43,
-    "top": 126,
-    "bottom": 90
+    "left": 75,
+    "right": 76,
+    "top": 80,
+    "bottom": 121
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-02-what-you-need/016.png",
-   "scored_blob": "505d3be0d1e52d2e2c791832ba93d6c282409cb6",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-02-what-you-need/016.png",
+   "scored_blob": "061ebe5d2e363c065d012b71e897504d6ef64d7f",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "source_detail": "ChatGPT web render gen/bp-02-what-you-need/016/web1.png (prompt specs/remake/bp-02-what-you-need__016.txt), saved via out/course/images/bp-02-what-you-need/016.png at 1536x1024 (already 3:2, no fill needed)",
+   "previous_committed_blob": "505d3be0d1e52d2e2c791832ba93d6c282409cb6",
+   "remake_review": {
+    "file": "gen/bp-02-what-you-need/016/web1.png",
+    "blob": "343ce22b76caab2666f83bebafe37c33e5511540",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 75,
+     "right": 76,
+     "top": 80,
+     "bottom": 121
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 4
+    },
+    "hard_fails": [],
+    "notes": "Notebook with exactly 7 tick-box rows; first box ticked with the pencil tip on it. \"Tick each one\" tip on the first box. \"Copy the 7 lines\" points at row 4, but its tip sits 16px above that line (measured): it clearly reads as row 4, so I scored it 4, not a miss. Tag is 230px inside the right edge.",
+    "pass": true
+   }
   },
   {
    "path": "course/images/bp-02-what-you-need/017.png",
@@ -1562,41 +1833,67 @@
    "beat": 18,
    "chapter": "Your turn",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-02-what-you-need.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "0626b4dc0201383f8cdf7c1a459952c6759d6fdd",
     "cursor/blueprint-beginner-images": "0626b4dc0201383f8cdf7c1a459952c6759d6fdd"
    },
    "beat_concept": "Practice: A pair name is two assets written with a slash, such as the base and the quote.",
    "scores": {
-    "beginner_clarity": 4,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
-    "craft_polish": 3,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-02-what-you-need__018.txt",
-   "notes": "Pair circles and slash on a notebook, but an extra 'EXAMPLE' tag points at the EXAMPLE stamp (the word twice, the tag labels a label).",
+   "notes": "Paper page with two empty circles joined by a slash and a blue EXAMPLE stamp under them; pencil beside it. \"Thing you buy\" tip on the left circle, \"What you pay with\" tip on the right circle (2 of 2). Matches the pair-name practice (two empty tags joined by a slash).",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 65,
-    "right": 77,
-    "top": 78,
-    "bottom": 63
+    "left": 102,
+    "right": 165,
+    "top": 102,
+    "bottom": 108
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-02-what-you-need/018.png",
-   "scored_blob": "0626b4dc0201383f8cdf7c1a459952c6759d6fdd",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-02-what-you-need/018.png",
+   "scored_blob": "0106dee7686d53d96403b9a35fdadd26d2a6fcae",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "source_detail": "ChatGPT web render gen/bp-02-what-you-need/018/web1.png (prompt specs/remake/bp-02-what-you-need__018.txt), saved via out/course/images/bp-02-what-you-need/018.png at 1536x1024 (already 3:2, no fill needed)",
+   "previous_committed_blob": "0626b4dc0201383f8cdf7c1a459952c6759d6fdd",
+   "remake_review": {
+    "file": "gen/bp-02-what-you-need/018/web1.png",
+    "blob": "e022e405b3bf1d81941285c0948bda872a5ba0e5",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 102,
+     "right": 165,
+     "top": 102,
+     "bottom": 108
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Paper page with two empty circles joined by a slash and a blue EXAMPLE stamp under them; pencil beside it. \"Thing you buy\" tip on the left circle, \"What you pay with\" tip on the right circle (2 of 2). Matches the pair-name practice (two empty tags joined by a slash).",
+    "pass": true
+   }
   },
   {
    "path": "course/images/bp-02-what-you-need/019.png",
@@ -1604,41 +1901,67 @@
    "beat": 19,
    "chapter": "Recap",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-02-what-you-need.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "eae0ba9653084ffd5c45e03b893bccc5da2aeb96",
     "cursor/blueprint-beginner-images": "eae0ba9653084ffd5c45e03b893bccc5da2aeb96"
    },
    "beat_concept": "What you are going to need recap",
    "scores": {
-    "beginner_clarity": 3,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-02-what-you-need__019.txt",
-   "notes": "Recap mislabels the range/levels/stop stack as 'Stop written down' and shows only four of the seven lines; does not show the recap the beat asks for (say the hook, name the diagram, name the line).",
+   "notes": "Recap: three cards (speech bubble, sketched band, written line with a check) with tags \"1 Say the hook\", \"2 Name your drawing\", \"3 Name your line\", 0 arrows. Matches \"say the hook, name the diagram you drew, name the line you wrote\".",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 77,
-    "right": 54,
-    "top": 101,
-    "bottom": 152
+    "left": 76,
+    "right": 73,
+    "top": 121,
+    "bottom": 215
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-02-what-you-need/019.png",
-   "scored_blob": "eae0ba9653084ffd5c45e03b893bccc5da2aeb96",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-02-what-you-need/019.png",
+   "scored_blob": "f8ce0e8f663db58c315be6041f12b0ec8fd08671",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "source_detail": "ChatGPT web render gen/bp-02-what-you-need/019/web1.png (prompt specs/remake/bp-02-what-you-need__019.txt), saved via out/course/images/bp-02-what-you-need/019.png at 1536x1024 (already 3:2, no fill needed)",
+   "previous_committed_blob": "eae0ba9653084ffd5c45e03b893bccc5da2aeb96",
+   "remake_review": {
+    "file": "gen/bp-02-what-you-need/019/web1.png",
+    "blob": "b5345721ff2e1f96ade2b838275c27545ed625f2",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 76,
+     "right": 73,
+     "top": 121,
+     "bottom": 215
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Recap: three cards (speech bubble, sketched band, written line with a check) with tags \"1 Say the hook\", \"2 Name your drawing\", \"3 Name your line\", 0 arrows. Matches \"say the hook, name the diagram you drew, name the line you wrote\".",
+    "pass": true
+   }
   },
   {
    "path": "course/images/bp-02-what-you-need/020.png",
@@ -3978,5 +4301,6 @@
    "pass": false
   }
  ],
- "note_code_drawn": "Code-drawn frames are scored from a fresh render of studio.py --frames at fbb3f9c (box: bp01-03-qa/assets/src/code-drawn). The committed blueprint-smoke/code-drawn PNGs on d1f6 are from 61c4f97 and are stale for 22 of 25 frames (3 thumbnails identical). Fails are not remade on ChatGPT: action code_fix_needed, code_fix lists the fix ids in CODE_FIXES.md."
+ "note_code_drawn": "Code-drawn frames are scored from a fresh render of studio.py --frames at fbb3f9c (box: bp01-03-qa/assets/src/code-drawn). The committed blueprint-smoke/code-drawn PNGs on d1f6 are from 61c4f97 and are stale for 22 of 25 frames (3 thumbnails identical). Fails are not remade on ChatGPT: action code_fix_needed, code_fix lists the fix ids in CODE_FIXES.md.",
+ "note_remakes": "Rows with source chatgpt-web are new ChatGPT web renders scored against the fbb3f9c narration; scored_blob is the file committed at course/images/<lesson>/NNN.png. Rows with remake_review.pass=false keep the old committed still and stay in REMAKE_QUEUE."
 }

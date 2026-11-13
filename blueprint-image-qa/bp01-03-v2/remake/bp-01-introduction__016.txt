@@ -3,10 +3,10 @@ FORMAT: one landscape image, 3:2, exactly 1536x1024 pixels.
 MARGIN RULE: the headline, every tag, label, stamp and key shape (cards, panels, desks, notebooks, pencils) sits at least 80px inside the left and right edges and at least 90px inside the top and bottom edges. Nothing touches or approaches the frame edge. Words in the headline are separated by a clear full space.
 
 Headline: "YOUR TURN: NAME THE PARTS" (the words YOUR TURN: in cyan, the rest white).
-Scene: A glass notebook page, upright and fully inside the frame with clear space below it, showing a sketched rectangle with five inner horizontal lines and a small amber stop sign with the word STOP just under the rectangle. A blue pencil lies beside the page, also fully inside the safe area (nothing within 90px of the bottom edge).
+Scene: A glass notebook page, upright and fully inside the frame with clear space below it, showing a sketched rectangle with EXACTLY five inner horizontal lines, evenly spaced (seven horizontal lines in all, counting the rectangle's top and bottom edges; the v1 image drew only four inner lines) and a small amber stop sign with the word STOP just under the rectangle. A blue pencil lies beside the page, also fully inside the safe area (nothing within 90px of the bottom edge).
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
-- "Range": left of the rectangle, arrow tip touches the top edge of the rectangle.
-- "Levels": right of the rectangle, arrow tip touches the third inner line.
+- "Range": left of the rectangle, above its top-left corner; arrow tip touches the middle of the top edge of the rectangle (not the corner).
+- "Levels": right of the rectangle, at exactly the same height as the third inner line; one short straight horizontal arrow whose tip lands ON the right end of the third inner line, touching the line itself, not the gap between two lines (the v1 tip stopped in the gap between the second and third lines).
 - "Stop": right of the stop sign, arrow tip touches the amber stop sign.
 - "Point at each one": top-right of the page, no arrow.
 LABEL ARROWS: exactly 3 thin cyan label arrows, one for each label above that says "arrow tip touches", each with one clean arrowhead whose tip touches the named target. Labels that say "no arrow" have no arrow. Apart from any arrow the Scene itself describes, there are no other arrows; no doubled arrowheads, and no arrow crosses text.
