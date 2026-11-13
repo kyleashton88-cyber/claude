@@ -1,0 +1,176 @@
+{
+  "source": "illustration-engine",
+  "mode": "normal",
+  "fallback_tier": false,
+  "rule": "In-house illustration engine. These files are not course stills. The engine does not write into course/. A router may copy an approved fallback plate into course/images/_fallback_quarantine/.",
+  "images": [
+    {
+      "file": "01.png",
+      "path": "01.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "0f65a8b87bfe2942550c5d934144ac8e",
+      "md5": "0f65a8b87bfe2942550c5d934144ac8e",
+      "renderer": "cairosvg",
+      "alt": "A few numbered steps for one idea. Labels: RANGE, LEVELS, STOP.",
+      "spec": {
+        "type": "steps",
+        "preset": "house",
+        "params": {
+          "headline": "THREE PARTS",
+          "labels": [
+            "RANGE",
+            "LEVELS",
+            "STOP"
+          ]
+        },
+        "headline": "THREE PARTS",
+        "labels": [
+          "RANGE",
+          "LEVELS",
+          "STOP"
+        ]
+      },
+      "idea": "A few numbered steps for one idea.",
+      "labels": [
+        "RANGE",
+        "LEVELS",
+        "STOP"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 A few numbered steps for one idea.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 146",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "02.png",
+      "path": "02.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "1f77ee7b0ba2bde640d9f4db63695dd1",
+      "md5": "1f77ee7b0ba2bde640d9f4db63695dd1",
+      "renderer": "cairosvg",
+      "alt": "A few numbered steps for one idea. Labels: WRITE, CHECK, WAIT.",
+      "spec": {
+        "type": "steps",
+        "preset": "house",
+        "params": {
+          "headline": "BEFORE A CLICK",
+          "labels": [
+            "WRITE",
+            "CHECK",
+            "WAIT"
+          ]
+        },
+        "headline": "BEFORE A CLICK",
+        "labels": [
+          "WRITE",
+          "CHECK",
+          "WAIT"
+        ]
+      },
+      "idea": "A few numbered steps for one idea.",
+      "labels": [
+        "WRITE",
+        "CHECK",
+        "WAIT"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 A few numbered steps for one idea.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 137",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "03.png",
+      "path": "03.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "799526132a00121cf5cbb3270137e1bb",
+      "md5": "799526132a00121cf5cbb3270137e1bb",
+      "renderer": "cairosvg",
+      "alt": "A few numbered steps for one idea. Labels: RANGE, LEVELS, STOP.",
+      "spec": {
+        "type": "steps",
+        "preset": "house",
+        "params": {
+          "headline": "THE RECAP",
+          "labels": [
+            "RANGE",
+            "LEVELS",
+            "STOP"
+          ]
+        },
+        "headline": "THE RECAP",
+        "labels": [
+          "RANGE",
+          "LEVELS",
+          "STOP"
+        ]
+      },
+      "idea": "A few numbered steps for one idea.",
+      "labels": [
+        "RANGE",
+        "LEVELS",
+        "STOP"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 A few numbered steps for one idea.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 156",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    }
+  ]
+}

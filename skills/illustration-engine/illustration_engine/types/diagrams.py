@@ -122,16 +122,16 @@ def draw_ladder(canvas, params: dict) -> None:
     top, bottom = y + 50, y + h - 50
     rail = 70
     t = canvas.theme
-    canvas.svg.line(cx - rail, top, cx - rail, bottom, t.accent, sw=6)
-    canvas.svg.line(cx + rail, top, cx + rail, bottom, t.accent, sw=6)
+    canvas.glow_line(cx - rail, top, cx - rail, bottom, t.accent, sw=t.s(5))
+    canvas.glow_line(cx + rail, top, cx + rail, bottom, t.accent, sw=t.s(5))
     rungs = 6
     highlight = int(params.get("highlight") or 3)
     highlight = max(0, min(rungs - 1, highlight))
     for i in range(rungs):
         gy = top + (bottom - top) * (i + 0.5) / rungs
-        sw = 6 if i == highlight else 3
+        sw = t.s(5) if i == highlight else t.s(3.2)
         color = t.ink if i == highlight else t.accent
-        canvas.svg.line(cx - rail, gy, cx + rail, gy, color, sw=sw)
+        canvas.glow_line(cx - rail, gy, cx + rail, gy, color, sw=sw)
         if i == highlight:
             canvas.leader(cx + rail + 10, gy, cx + 180, gy)
             canvas.chip(names[0], cx + 200, gy, anchor="start")

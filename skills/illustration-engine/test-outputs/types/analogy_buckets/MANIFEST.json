@@ -1,0 +1,179 @@
+{
+  "source": "illustration-engine",
+  "mode": "normal",
+  "fallback_tier": false,
+  "rule": "In-house illustration engine. These files are not course stills. The engine does not write into course/. A router may copy an approved fallback plate into course/images/_fallback_quarantine/.",
+  "images": [
+    {
+      "file": "01.png",
+      "path": "01.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "cea3750224603f6c67ae81dbfcbe215e",
+      "md5": "cea3750224603f6c67ae81dbfcbe215e",
+      "renderer": "cairosvg",
+      "alt": "Two separate buckets. Overlap is the thing to notice. Labels: APART, LEFT, RIGHT.",
+      "spec": {
+        "type": "analogy_buckets",
+        "preset": "house",
+        "params": {
+          "variant": "apart",
+          "headline": "TWO BUCKETS",
+          "labels": [
+            "APART",
+            "LEFT",
+            "RIGHT"
+          ]
+        },
+        "headline": "TWO BUCKETS",
+        "labels": [
+          "APART",
+          "LEFT",
+          "RIGHT"
+        ]
+      },
+      "idea": "Two separate buckets. Overlap is the thing to notice.",
+      "labels": [
+        "APART",
+        "LEFT",
+        "RIGHT"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 Two separate buckets. Overlap is the thing to notice.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 154",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "02.png",
+      "path": "02.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "f0ea5bd872547fba58ee816ab0e37b7f",
+      "md5": "f0ea5bd872547fba58ee816ab0e37b7f",
+      "renderer": "cairosvg",
+      "alt": "Two separate buckets. Overlap is the thing to notice. Labels: OVERLAP, LEFT, RIGHT.",
+      "spec": {
+        "type": "analogy_buckets",
+        "preset": "house",
+        "params": {
+          "variant": "overlap",
+          "headline": "OVERLAP",
+          "labels": [
+            "OVERLAP",
+            "LEFT",
+            "RIGHT"
+          ]
+        },
+        "headline": "OVERLAP",
+        "labels": [
+          "OVERLAP",
+          "LEFT",
+          "RIGHT"
+        ]
+      },
+      "idea": "Two separate buckets. Overlap is the thing to notice.",
+      "labels": [
+        "OVERLAP",
+        "LEFT",
+        "RIGHT"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 Two separate buckets. Overlap is the thing to notice.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 94",
+        "pass: word spacing \u2014 one headline word"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "03.png",
+      "path": "03.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "5582d64ba33c65ab79d9a4b2150eb92e",
+      "md5": "5582d64ba33c65ab79d9a4b2150eb92e",
+      "renderer": "cairosvg",
+      "alt": "Two separate buckets. Overlap is the thing to notice. Labels: LIGHT, FULL, BUCKET.",
+      "spec": {
+        "type": "analogy_buckets",
+        "preset": "house",
+        "params": {
+          "variant": "empty",
+          "headline": "ONE LIGHT",
+          "labels": [
+            "LIGHT",
+            "FULL",
+            "BUCKET"
+          ]
+        },
+        "headline": "ONE LIGHT",
+        "labels": [
+          "LIGHT",
+          "FULL",
+          "BUCKET"
+        ]
+      },
+      "idea": "Two separate buckets. Overlap is the thing to notice.",
+      "labels": [
+        "LIGHT",
+        "FULL",
+        "BUCKET"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 Two separate buckets. Overlap is the thing to notice.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 137",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    }
+  ]
+}

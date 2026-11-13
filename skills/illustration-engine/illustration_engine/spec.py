@@ -28,6 +28,23 @@ TYPES = (
     "section_divider",
 )
 
+# Diagrams the fallback router may request. Mascot and branded plates are not in this set.
+FALLBACK_TYPES = (
+    "candle_anatomy",
+    "candle_series",
+    "candle_pattern",
+    "grid_ladder",
+    "liquidation",
+    "price_range",
+    "flowchart",
+    "comparison",
+    "steps",
+    "analogy_fence",
+    "analogy_ladder",
+    "analogy_buckets",
+    "checklist",
+)
+
 
 @dataclass
 class Spec:

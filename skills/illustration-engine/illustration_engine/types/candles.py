@@ -11,10 +11,10 @@ def _candle(canvas, x, y_high, y_low, y_open, y_close, width):
     t = canvas.theme
     up = y_close <= y_open
     color = t.accent if up else t.blue
-    canvas.glow_line(x, y_high, x, y_low, color, sw=max(2, width * 0.14))
+    canvas.glow_line(x, y_high, x, y_low, color, sw=max(3, width * 0.18))
     top = min(y_open, y_close)
-    height = max(6, abs(y_close - y_open))
-    canvas.svg.rect(x - width / 2, top, width, height, fill=color, rx=3, opacity=0.95)
+    height = max(8, abs(y_close - y_open))
+    canvas.glow_rect(x - width / 2, top, width, height, color, rx=4)
 
 
 def _series(n: int, seed: int, start: float = 100.0) -> list[tuple[float, float, float, float]]:

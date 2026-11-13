@@ -1,8 +1,10 @@
 import json
+import os
 import unittest
 
-from illustration_engine.llm import SYSTEM, build_request, endpoint, spec_from_llm
+from illustration_engine.llm import LlmUnavailable, SYSTEM, build_request, endpoint, spec_from_llm
 from illustration_engine.parser import ParseError, classify, parse, spec_from_request
+from illustration_engine.policy import RefusedPrompt
 
 
 class ParserTests(unittest.TestCase):
@@ -34,9 +36,9 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(spec.params["pose"], "pointing")
         self.assertEqual(spec.params["headline"], "LOOK HERE")
 
-    def test_email_is_not_a_label(self):
-        spec = parse("grid ladder, range 90-110, 8 grids, price 100, label buy and person@example.com")
-        self.assertNotIn("@", " ".join(spec.params.get("labels") or []))
+    def test_email_is_refused(self):
+        with self.assertRaises(Exception):
+            parse("grid ladder, range 90-110, 8 grids, price 100, label buy and person@example.com")
 
     def test_lesson_rows_cover_the_introduction(self):
         rows = [
@@ -68,6 +70,7 @@ class ParserTests(unittest.TestCase):
 
 class LlmTests(unittest.TestCase):
     def test_endpoint_is_chat_not_images(self):
+        os.environ["ILLUSTRATION_LLM_HOSTS"] = "example.test"
         url = endpoint("https://example.test/v1")
         self.assertTrue(url.endswith("/chat/completions"))
         self.assertNotIn("/images", url)
@@ -78,7 +81,22 @@ class LlmTests(unittest.TestCase):
         self.assertEqual(body["messages"][0]["content"], SYSTEM)
         self.assertNotIn("image", body["messages"][0]["content"].split("image URLs")[0].lower())
 
+    def _enable_llm(self):
+        os.environ["ILLUSTRATION_LLM_ENABLE"] = "1"
+        os.environ["ILLUSTRATION_LLM_API_KEY"] = "test-key"
+        os.environ["ILLUSTRATION_LLM_HOSTS"] = "example.test"
+        os.environ["ILLUSTRATION_LLM_BASE_URL"] = "https://example.test/v1"
+
+    def test_openai_key_alone_does_not_enable_the_helper(self):
+        os.environ.pop("ILLUSTRATION_LLM_ENABLE", None)
+        os.environ.pop("ILLUSTRATION_LLM_API_KEY", None)
+        os.environ["OPENAI_API_KEY"] = "should-not-be-used"
+        with self.assertRaises(LlmUnavailable):
+            spec_from_llm("grid ladder", transport=lambda *args: {})
+
     def test_transport_result_is_a_spec_only(self):
+        self._enable_llm()
+
         def transport(url, payload, headers):
             self.assertIn("/chat/completions", url)
             self.assertNotIn("images/generations", url)
@@ -92,6 +110,8 @@ class LlmTests(unittest.TestCase):
         self.assertEqual(spec.params["grids"], 10)
 
     def test_rejects_image_payload(self):
+        self._enable_llm()
+
         def transport(url, payload, headers):
             return {"choices": [{"message": {"content": "data:image/png;base64,aaaa"}}]}
 

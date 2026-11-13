@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 
 from PIL import Image
 
-from .fonts import HEADLINE_FAMILY
+from .fonts import HEADLINE_FAMILY, bundled_match
 from .theme import Theme
 
 
@@ -120,6 +120,8 @@ def check_scene(meta: dict, theme: Theme) -> QaReport:
         not small_labels,
         f"labels at least {label_floor:.0f}px" if not small_labels else "small labels: " + ", ".join(small_labels),
     )
+    fonts_ok, fonts_detail = bundled_match()
+    report.add("bundled fonts", fonts_ok, fonts_detail)
     report.add("one idea", bool(meta.get("idea")), meta.get("idea") or "missing idea")
     banned = ("profit", "guaranteed", "win-rate", "win rate", "@", "http")
     dirty = []
@@ -129,6 +131,19 @@ def check_scene(meta: dict, theme: Theme) -> QaReport:
             dirty.append(mark["text"])
     report.add("no claims or contact details", not dirty, ", ".join(dirty) if dirty else "clean")
     return report
+
+
+def check_headline_gap(png: bytes, marks: list[dict]) -> tuple[bool, str]:
+    """Fail when two headline words are painted as one, with no space between them."""
+    words = sorted((mark for mark in marks if mark.get("role") == "headline"), key=lambda mark: mark["bbox"][0])
+    if len(words) < 2:
+        return True, "one headline word"
+    for left, right in zip(words, words[1:]):
+        x0 = int(left["bbox"][2])
+        x1 = int(right["bbox"][0])
+        if x1 - x0 < 6:
+            return False, f"{left['text']} runs into {right['text']}"
+    return True, "spaces hold between headline words"
 
 
 def beginner_lines(name: str, meta: dict, report: QaReport) -> list[str]:

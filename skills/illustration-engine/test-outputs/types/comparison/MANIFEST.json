@@ -1,0 +1,170 @@
+{
+  "source": "illustration-engine",
+  "mode": "normal",
+  "fallback_tier": false,
+  "rule": "In-house illustration engine. These files are not course stills. The engine does not write into course/. A router may copy an approved fallback plate into course/images/_fallback_quarantine/.",
+  "images": [
+    {
+      "file": "01.png",
+      "path": "01.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "8f892bd3c4152222af3f6ead8d995e1d",
+      "md5": "8f892bd3c4152222af3f6ead8d995e1d",
+      "renderer": "cairosvg",
+      "alt": "Two ways to see the same idea, side by side. Labels: CLEAR, MISS.",
+      "spec": {
+        "type": "comparison",
+        "preset": "house",
+        "params": {
+          "headline": "TWO WAYS",
+          "labels": [
+            "CLEAR",
+            "MISS"
+          ],
+          "variant": "shown"
+        },
+        "headline": "TWO WAYS",
+        "labels": [
+          "CLEAR",
+          "MISS"
+        ]
+      },
+      "idea": "Two ways to see the same idea, side by side.",
+      "labels": [
+        "CLEAR",
+        "MISS"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 Two ways to see the same idea, side by side.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 159",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "02.png",
+      "path": "02.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "1ce5411fe1ea5b7e34ec536b4c25bcd6",
+      "md5": "1ce5411fe1ea5b7e34ec536b4c25bcd6",
+      "renderer": "cairosvg",
+      "alt": "Two ways to see the same idea, side by side. Labels: INSIDE, OUTSIDE.",
+      "spec": {
+        "type": "comparison",
+        "preset": "house",
+        "params": {
+          "headline": "INSIDE OUTSIDE",
+          "labels": [
+            "INSIDE",
+            "OUTSIDE"
+          ],
+          "variant": "shown"
+        },
+        "headline": "INSIDE OUTSIDE",
+        "labels": [
+          "INSIDE",
+          "OUTSIDE"
+        ]
+      },
+      "idea": "Two ways to see the same idea, side by side.",
+      "labels": [
+        "INSIDE",
+        "OUTSIDE"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 Two ways to see the same idea, side by side.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 147",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "03.png",
+      "path": "03.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "b9872679a227dbc54435528f7465b043",
+      "md5": "b9872679a227dbc54435528f7465b043",
+      "renderer": "cairosvg",
+      "alt": "Two ways to see the same idea, side by side. Labels: NUMBER, SHAPE.",
+      "spec": {
+        "type": "comparison",
+        "preset": "house",
+        "params": {
+          "headline": "NO RESULT",
+          "labels": [
+            "NUMBER",
+            "SHAPE"
+          ],
+          "variant": "plain"
+        },
+        "headline": "NO RESULT",
+        "labels": [
+          "NUMBER",
+          "SHAPE"
+        ]
+      },
+      "idea": "Two ways to see the same idea, side by side.",
+      "labels": [
+        "NUMBER",
+        "SHAPE"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 Two ways to see the same idea, side by side.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 162",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    }
+  ]
+}

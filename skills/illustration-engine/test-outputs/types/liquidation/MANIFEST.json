@@ -1,0 +1,152 @@
+{
+  "source": "illustration-engine",
+  "mode": "normal",
+  "fallback_tier": false,
+  "rule": "In-house illustration engine. These files are not course stills. The engine does not write into course/. A router may copy an approved fallback plate into course/images/_fallback_quarantine/.",
+  "images": [
+    {
+      "file": "01.png",
+      "path": "01.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "3cc80c669e4ff8969510e2dd873469ee",
+      "md5": "3cc80c669e4ff8969510e2dd873469ee",
+      "renderer": "cairosvg",
+      "alt": "A danger band between the entry and the liquidation line. Labels: ENTRY, DANGER, LIQUIDATION.",
+      "spec": {
+        "type": "liquidation",
+        "preset": "house",
+        "params": {
+          "entry": 100,
+          "liquidation": 80,
+          "price": 88,
+          "leverage": 5
+        }
+      },
+      "idea": "A danger band between the entry and the liquidation line.",
+      "labels": [
+        "ENTRY",
+        "DANGER",
+        "LIQUIDATION"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 a figure is on the plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 A danger band between the entry and the liquidation line.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 165",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "02.png",
+      "path": "02.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "90850ede0ece7b13e40d50b8e552c938",
+      "md5": "90850ede0ece7b13e40d50b8e552c938",
+      "renderer": "cairosvg",
+      "alt": "A danger band between the entry and the liquidation line. Labels: ENTRY, DANGER, LIQUIDATION.",
+      "spec": {
+        "type": "liquidation",
+        "preset": "house",
+        "params": {
+          "entry": 100,
+          "liquidation": 92,
+          "price": 98,
+          "leverage": 10
+        }
+      },
+      "idea": "A danger band between the entry and the liquidation line.",
+      "labels": [
+        "ENTRY",
+        "DANGER",
+        "LIQUIDATION"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 a figure is on the plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 A danger band between the entry and the liquidation line.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 165",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "03.png",
+      "path": "03.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "4217e2c68a2afe52da97fa791cda3238",
+      "md5": "4217e2c68a2afe52da97fa791cda3238",
+      "renderer": "cairosvg",
+      "alt": "A danger band between the entry and the liquidation line. Labels: ENTRY, DANGER, LIQUIDATION.",
+      "spec": {
+        "type": "liquidation",
+        "preset": "house",
+        "params": {
+          "entry": 50,
+          "liquidation": 40,
+          "price": 41,
+          "leverage": 3
+        }
+      },
+      "idea": "A danger band between the entry and the liquidation line.",
+      "labels": [
+        "ENTRY",
+        "DANGER",
+        "LIQUIDATION"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 a figure is on the plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 A danger band between the entry and the liquidation line.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 165",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    }
+  ]
+}

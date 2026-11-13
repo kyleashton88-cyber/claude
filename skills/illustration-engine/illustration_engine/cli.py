@@ -8,7 +8,9 @@ import sys
 from pathlib import Path
 
 from .gallery import build_gallery
+from .llm import LlmUnavailable
 from .parser import ParseError
+from .policy import RefusedPrompt
 from .qa import check_pixels, check_scene
 from .render import UnsafeOutput, render_prompt
 from .spec import TYPES
@@ -25,10 +27,14 @@ def _render(args) -> int:
             seed=args.seed,
             use_llm=args.llm,
             strict=args.strict,
+            fallback=args.fallback,
+            allow_generic=args.allow_generic,
         )
-    except (ParseError, UnsafeOutput, RuntimeError, OSError) as exc:
+    except (ParseError, RefusedPrompt, LlmUnavailable, UnsafeOutput, RuntimeError, OSError) as exc:
         print(str(exc), file=sys.stderr)
         return 1
+    if result.notes:
+        print("rewrote: " + ", ".join(result.notes))
     print(result.png_path)
     print(f"renderer {result.renderer} checksum {result.checksum} qa {'pass' if result.qa.ok else 'fail'}")
     return 0 if result.qa.ok else 1
@@ -38,8 +44,11 @@ def _batch(args) -> int:
     from .batch import render_lesson
 
     try:
-        render_lesson(Path(args.source), Path(args.out), lesson=args.lesson, preset=args.preset, strict=args.strict)
-    except (ParseError, UnsafeOutput, RuntimeError, OSError) as exc:
+        render_lesson(
+            Path(args.source), Path(args.out), lesson=args.lesson, preset=args.preset,
+            strict=args.strict, fallback=args.fallback, allow_generic=args.allow_generic,
+        )
+    except (ParseError, RefusedPrompt, UnsafeOutput, RuntimeError, OSError) as exc:
         print(str(exc), file=sys.stderr)
         return 1
     return 0
@@ -99,6 +108,8 @@ def build_parser() -> argparse.ArgumentParser:
     render.add_argument("--size", default=None, help="WxH, for example 1536x1024")
     render.add_argument("--seed", type=int, default=None)
     render.add_argument("--llm", action="store_true", help="draft a JSON spec with a chat model, then draw locally")
+    render.add_argument("--fallback", action="store_true", help="diagram types only, for the fallback router")
+    render.add_argument("--allow-generic", action="store_true", help="rewrite an exchange name to the word exchange")
     render.add_argument("--strict", action=argparse.BooleanOptionalAction, default=True)
     render.set_defaults(func=_render)
 
@@ -107,6 +118,8 @@ def build_parser() -> argparse.ArgumentParser:
     batch.add_argument("--lesson", default=None)
     batch.add_argument("--preset", default="house", choices=PRESET_NAMES)
     batch.add_argument("--out", required=True)
+    batch.add_argument("--fallback", action="store_true", help="diagram types only, for the fallback router")
+    batch.add_argument("--allow-generic", action="store_true", help="rewrite an exchange name to the word exchange")
     batch.add_argument("--strict", action=argparse.BooleanOptionalAction, default=True)
     batch.set_defaults(func=_batch)
 

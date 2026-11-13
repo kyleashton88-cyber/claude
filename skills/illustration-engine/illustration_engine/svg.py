@@ -38,21 +38,26 @@ class Svg:
             "</radialGradient>"
         )
 
-    def ensure_glow(self, std: float) -> str:
-        gid = "softglow"
+    def ensure_glow(self, wide: float, tight: float) -> str:
+        gid = "bloom"
         if not any(f'id="{gid}"' in item for item in self._defs):
             self._defs.append(
-                f'<filter id="{gid}" x="-60%" y="-60%" width="220%" height="220%">'
-                f'<feGaussianBlur stdDeviation="{_num(std)}"/>'
-                "</filter>"
+                f'<filter id="{gid}" x="-80%" y="-80%" width="260%" height="260%" '
+                f'color-interpolation-filters="sRGB">'
+                f'<feGaussianBlur in="SourceGraphic" stdDeviation="{_num(wide)}" result="wide"/>'
+                f'<feGaussianBlur in="SourceGraphic" stdDeviation="{_num(tight)}" result="tight"/>'
+                f'<feComposite in="wide" in2="tight" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="add"/>'
+                f'<feMerge><feMergeNode in="add"/><feMergeNode in="SourceGraphic"/></feMerge>'
+                f"</filter>"
             )
         return gid
 
-    def rect(self, x, y, w, h, fill="none", stroke="none", sw=0, rx=0, opacity=1, stroke_opacity=1) -> None:
+    def rect(self, x, y, w, h, fill="none", stroke="none", sw=0, rx=0, opacity=1, stroke_opacity=1, filt=None) -> None:
+        filter_attr = f' filter="url(#{filt})"' if filt else ""
         self._body.append(
             f'<rect x="{_num(x)}" y="{_num(y)}" width="{_num(w)}" height="{_num(h)}" '
             f'rx="{_num(rx)}" ry="{_num(rx)}" fill="{fill}" fill-opacity="{opacity}" '
-            f'stroke="{stroke}" stroke-width="{_num(sw)}" stroke-opacity="{stroke_opacity}"/>'
+            f'stroke="{stroke}" stroke-width="{_num(sw)}" stroke-opacity="{stroke_opacity}"{filter_attr}/>'
         )
 
     def circle(self, cx, cy, r, fill="none", stroke="none", sw=0, opacity=1) -> None:
@@ -97,13 +102,16 @@ class Svg:
             f'stroke-width="{_num(sw)}" stroke-linecap="{cap}" stroke-linejoin="round"/>'
         )
 
-    def text(self, content, x, y, size, fill, family, anchor="start", opacity=1, rotate=None) -> None:
+    def text(self, content, x, y, size, fill, family, anchor="start", opacity=1, rotate=None,
+             weight="bold", filt=None) -> None:
         transform = ""
         if rotate is not None:
             transform = f' transform="rotate({_num(rotate)} {_num(x)} {_num(y)})"'
+        filter_attr = f' filter="url(#{filt})"' if filt else ""
         self._body.append(
             f'<text x="{_num(x)}" y="{_num(y)}" fill="{fill}" fill-opacity="{opacity}" '
-            f"font-family='{family}' font-size=\"{int(size)}\" text-anchor=\"{anchor}\"{transform}>"
+            f'font-family="{family}" font-weight="{weight}" font-size="{int(size)}" '
+            f'text-anchor="{anchor}"{transform}{filter_attr}>'
             f"{escape(content)}</text>"
         )
 

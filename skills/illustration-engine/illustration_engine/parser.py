@@ -11,7 +11,6 @@ import re
 
 import yaml
 
-from .clean import scrub
 from .spec import TYPES, Spec
 
 WORD_NUMBERS = {
@@ -170,7 +169,7 @@ def _headline(kind: str, concept: str, role: str, chapter: str, title: str) -> s
 
 def _params_for(kind: str, concept: str, role: str, chapter: str, title: str, beat: int) -> dict:
     low = concept.lower()
-    params: dict = {"seed": beat, "concept": scrub(concept), "headline": _headline(kind, concept, role, chapter, title)}
+    params: dict = {"seed": beat, "concept": concept, "headline": _headline(kind, concept, role, chapter, title)}
     phrases = _phrases_after_colon(concept)
     if kind == "grid_ladder":
         params.update({"low": 90, "high": 110, "grids": 8, "price": 100, "labels": ["BUY", "SELL", "PRICE"]})
@@ -248,8 +247,10 @@ def _params_for(kind: str, concept: str, role: str, chapter: str, title: str, be
     return params
 
 
-def spec_from_request(req: dict) -> Spec:
-    concept = str(req.get("concept") or "")
+def spec_from_request(req: dict, *, fallback: bool = False, allow_generic: bool = False) -> Spec:
+    from .policy import enforce_mode, screen
+
+    concept, notes = screen(str(req.get("concept") or ""), allow_generic=allow_generic)
     role = str(req.get("role") or "")
     chapter = str(req.get("chapter") or "")
     title = str(req.get("title") or "")
@@ -261,16 +262,19 @@ def spec_from_request(req: dict) -> Spec:
         file_name = str(req["out_path"]).replace("\\", "/").split("/")[-1]
     elif req.get("file"):
         file_name = str(req["file"])
-    return Spec(
+    if notes:
+        params["replaced_names"] = len(notes)
+    spec = Spec(
         type=kind,
         params=params,
-        preset=str(req.get("palette") or "house") if str(req.get("palette") or "") in {"house", "light", "contrast", "thumbnail"} else "house",
+        preset=str(req.get("palette") or "house") if str(req.get("palette") or "") in {"house", "light", "contrast", "thumbnail", "elite"} else "house",
         size=parse_size(req.get("size")) if req.get("size") else (1536, 1024),
         headline=params.get("headline"),
         labels=list(params.get("labels") or []),
         source_id=req.get("id"),
         file=file_name,
     )
+    return enforce_mode(spec, fallback=fallback)
 
 
 def spec_from_dict(data: dict) -> Spec:
@@ -302,24 +306,39 @@ def spec_from_dict(data: dict) -> Spec:
     )
 
 
-def parse(source: str) -> Spec:
+def parse(source: str, *, fallback: bool = False, allow_generic: bool = False) -> Spec:
     """Parse a prompt. JSON and YAML win when the text is a spec; otherwise use the rules."""
+    from .policy import enforce_mode, screen, screen_value
+
     text = (source or "").strip()
     if not text:
         raise ParseError("empty prompt")
     if text[0] == "{":
         try:
-            return spec_from_dict(json.loads(text))
+            loaded = json.loads(text)
         except json.JSONDecodeError as exc:
             raise ParseError(f"invalid JSON spec: {exc}") from exc
+        loaded, notes = screen_value(loaded, allow_generic=allow_generic)
+        spec = spec_from_dict(loaded)
+        if notes:
+            spec.params["replaced_names"] = len(notes)
+        return enforce_mode(spec, fallback=fallback)
     if text.startswith("type:") or text.startswith("---"):
         try:
             loaded = yaml.safe_load(text)
         except yaml.YAMLError as exc:
             raise ParseError(f"invalid YAML spec: {exc}") from exc
         if isinstance(loaded, dict) and loaded.get("type"):
-            return spec_from_dict(loaded)
-    return _parse_sentence(text)
+            loaded, notes = screen_value(loaded, allow_generic=allow_generic)
+            spec = spec_from_dict(loaded)
+            if notes:
+                spec.params["replaced_names"] = len(notes)
+            return enforce_mode(spec, fallback=fallback)
+    text, notes = screen(text, allow_generic=allow_generic)
+    spec = _parse_sentence(text)
+    if notes:
+        spec.params["replaced_names"] = len(notes)
+    return enforce_mode(spec, fallback=fallback)
 
 
 def _parse_sentence(text: str) -> Spec:

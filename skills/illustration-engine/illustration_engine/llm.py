@@ -10,6 +10,7 @@ import json
 import os
 import re
 import urllib.request
+from urllib.parse import urlparse
 
 from .parser import ParseError, spec_from_dict
 from .spec import TYPES, Spec
@@ -30,11 +31,21 @@ class LlmUnavailable(RuntimeError):
     pass
 
 
+def allowed_hosts() -> list[str]:
+    return [host.strip().lower() for host in os.environ.get("ILLUSTRATION_LLM_HOSTS", "").split(",") if host.strip()]
+
+
 def endpoint(base_url: str | None = None) -> str:
-    base = (base_url or os.environ.get("ILLUSTRATION_LLM_BASE_URL") or "https://api.openai.com/v1").rstrip("/")
+    base = (base_url or os.environ.get("ILLUSTRATION_LLM_BASE_URL") or "").rstrip("/")
+    if not base:
+        raise LlmUnavailable("ILLUSTRATION_LLM_BASE_URL is not set. The helper does not pick a host on its own.")
     url = base + "/chat/completions"
     if "/images" in url:
         raise LlmUnavailable("the helper URL must be a chat endpoint, not an image endpoint")
+    host = (urlparse(url).hostname or "").lower()
+    allowed = allowed_hosts()
+    if host not in allowed:
+        raise LlmUnavailable(f"host {host or 'unknown'} is not in ILLUSTRATION_LLM_HOSTS")
     return url
 
 
@@ -62,13 +73,15 @@ def _default_transport(url: str, payload: dict, headers: dict) -> dict:
 
 
 def spec_from_llm(prompt: str, transport=None, base_url: str | None = None) -> Spec:
-    """Ask for a JSON spec. The caller renders it with the local engine."""
-    key = os.environ.get("ILLUSTRATION_LLM_API_KEY") or os.environ.get("OPENAI_API_KEY")
-    if transport is None and not key:
-        raise LlmUnavailable(
-            "No ILLUSTRATION_LLM_API_KEY or OPENAI_API_KEY is set. "
-            "The rule-based parser does not need a key."
-        )
+    """Ask for a JSON spec. The caller renders it with the local engine.
+
+    Off unless ILLUSTRATION_LLM_ENABLE=1. OPENAI_API_KEY is never read.
+    """
+    if os.environ.get("ILLUSTRATION_LLM_ENABLE") != "1":
+        raise LlmUnavailable("ILLUSTRATION_LLM_ENABLE=1 is required. The chat helper is off.")
+    key = os.environ.get("ILLUSTRATION_LLM_API_KEY")
+    if not key:
+        raise LlmUnavailable("ILLUSTRATION_LLM_API_KEY is required. OPENAI_API_KEY is not used.")
     url = endpoint(base_url)
     payload = build_request(prompt)
     headers = {"Content-Type": "application/json"}

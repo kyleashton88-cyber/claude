@@ -1,0 +1,278 @@
+{
+  "source": "illustration-engine",
+  "mode": "normal",
+  "fallback_tier": false,
+  "rule": "In-house illustration engine. These files are not course stills. The engine does not write into course/. A router may copy an approved fallback plate into course/images/_fallback_quarantine/.",
+  "images": [
+    {
+      "file": "house.png",
+      "path": "house.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "68b8921eae6127ecc272d3731bde2366",
+      "md5": "68b8921eae6127ecc272d3731bde2366",
+      "renderer": "cairosvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: BUY, SELL, PRICE.",
+      "spec": {
+        "type": "grid_ladder",
+        "preset": "house",
+        "params": {
+          "low": 90,
+          "high": 110,
+          "grids": 10,
+          "price": 100,
+          "headline": "GRID LADDER",
+          "labels": [
+            "BUY",
+            "SELL",
+            "PRICE"
+          ]
+        }
+      },
+      "idea": "Buy orders wait below the mark and sell orders wait above it.",
+      "labels": [
+        "BUY",
+        "SELL",
+        "PRICE"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 a figure is on the plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 146",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "light.png",
+      "path": "light.png",
+      "preset": "light",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "c881af32b38bf642e55d999dbe2e14ad",
+      "md5": "c881af32b38bf642e55d999dbe2e14ad",
+      "renderer": "cairosvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: BUY, SELL, PRICE.",
+      "spec": {
+        "type": "grid_ladder",
+        "preset": "light",
+        "params": {
+          "low": 90,
+          "high": 110,
+          "grids": 10,
+          "price": 100,
+          "headline": "GRID LADDER",
+          "labels": [
+            "BUY",
+            "SELL",
+            "PRICE"
+          ]
+        }
+      },
+      "idea": "Buy orders wait below the mark and sell orders wait above it.",
+      "labels": [
+        "BUY",
+        "SELL",
+        "PRICE"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 a figure is on the plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 145",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "contrast.png",
+      "path": "contrast.png",
+      "preset": "contrast",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "db0a46bc32329ced6070877666187a80",
+      "md5": "db0a46bc32329ced6070877666187a80",
+      "renderer": "cairosvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: BUY, SELL, PRICE.",
+      "spec": {
+        "type": "grid_ladder",
+        "preset": "contrast",
+        "params": {
+          "low": 90,
+          "high": 110,
+          "grids": 10,
+          "price": 100,
+          "headline": "GRID LADDER",
+          "labels": [
+            "BUY",
+            "SELL",
+            "PRICE"
+          ]
+        }
+      },
+      "idea": "Buy orders wait below the mark and sell orders wait above it.",
+      "labels": [
+        "BUY",
+        "SELL",
+        "PRICE"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 a figure is on the plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 154",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "thumbnail.png",
+      "path": "thumbnail.png",
+      "preset": "thumbnail",
+      "width": 1080,
+      "height": 1080,
+      "checksum": "3ad386e17a6e86be7021282d4e34d80d",
+      "md5": "3ad386e17a6e86be7021282d4e34d80d",
+      "renderer": "cairosvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: BUY, SELL, PRICE.",
+      "spec": {
+        "type": "grid_ladder",
+        "preset": "thumbnail",
+        "params": {
+          "low": 90,
+          "high": 110,
+          "grids": 10,
+          "price": 100,
+          "headline": "GRID LADDER",
+          "labels": [
+            "BUY",
+            "SELL",
+            "PRICE"
+          ]
+        }
+      },
+      "idea": "Buy orders wait below the mark and sell orders wait above it.",
+      "labels": [
+        "BUY",
+        "SELL",
+        "PRICE"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 20px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 a figure is on the plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 20px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1080x1080, spread 111",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "elite.png",
+      "path": "elite.png",
+      "preset": "elite",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "d8d11070f7f72c67e591970c9284585a",
+      "md5": "d8d11070f7f72c67e591970c9284585a",
+      "renderer": "cairosvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: BUY, SELL, PRICE.",
+      "spec": {
+        "type": "grid_ladder",
+        "preset": "elite",
+        "params": {
+          "low": 90,
+          "high": 110,
+          "grids": 10,
+          "price": 100,
+          "headline": "GRID LADDER",
+          "labels": [
+            "BUY",
+            "SELL",
+            "PRICE"
+          ]
+        }
+      },
+      "idea": "Buy orders wait below the mark and sell orders wait above it.",
+      "labels": [
+        "BUY",
+        "SELL",
+        "PRICE"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 a figure is on the plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 146",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    }
+  ]
+}

@@ -36,7 +36,11 @@ A JSON or YAML spec works as the prompt too:
 python3 -m illustration_engine render '{"type":"checklist","headline":"ON PAPER","labels":["RANGE","LEVELS","STOP"]}' --preset house --out list.png
 ```
 
-`--llm` asks a chat model for that JSON only, then draws locally. It needs `ILLUSTRATION_LLM_API_KEY` or `OPENAI_API_KEY`. It does not request pixels. Without a key, the flag stops and the rule parser remains the default.
+`--llm` asks a chat model for that JSON only, then draws locally. It stays off unless `ILLUSTRATION_LLM_ENABLE=1`, `ILLUSTRATION_LLM_API_KEY`, `ILLUSTRATION_LLM_BASE_URL`, and `ILLUSTRATION_LLM_HOSTS` are set. `OPENAI_API_KEY` is not read.
+
+`--fallback` draws candles, grid ladders, liquidation, ranges, and beginner diagrams. Mascot, cover, and branded plates need the flag left off.
+
+`--allow-generic` rewrites an exchange or brand name to the word exchange and prints that. Without the flag the name is refused and nothing is drawn.
 
 ## A lesson
 
@@ -47,7 +51,7 @@ python3 -m illustration_engine batch ../../IMAGE_REQUESTS.json --lesson bp-01-in
 
 File names follow the lesson list (`001.png`, …). Each folder gets `MANIFEST.json` (spec, checksum, preset), `ALT.txt`, `QA.md`, and `BEGINNER.md`.
 
-The side-by-side plates in `test-outputs/compare/` use the stills already in the lesson folder. Creative Studio measured those as fallback plates. A closer set of reference stills can replace them later. The engine does not write into `course/`.
+The side-by-side plates in `test-outputs/compare/` use the stills already in the lesson folder. Creative Studio measured those as fallback plates. A closer set of reference stills can replace them later. The engine does not write into `course/`. A router may copy an approved fallback plate into `course/images/_fallback_quarantine/`.
 
 ## Python
 

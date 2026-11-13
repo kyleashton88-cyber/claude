@@ -1,0 +1,224 @@
+{
+  "source": "illustration-engine",
+  "mode": "normal",
+  "fallback_tier": false,
+  "rule": "In-house illustration engine. These files are not course stills. The engine does not write into course/. A router may copy an approved fallback plate into course/images/_fallback_quarantine/.",
+  "images": [
+    {
+      "file": "01.png",
+      "path": "01.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "b3d6c56c4bc8c44c56d391b53d4af003",
+      "md5": "b3d6c56c4bc8c44c56d391b53d4af003",
+      "renderer": "cairosvg",
+      "alt": "The grid bot mascot in one pose, beside one prop. Labels: POINT, RANGE.",
+      "spec": {
+        "type": "mascot_scene",
+        "preset": "house",
+        "params": {
+          "pose": "pointing",
+          "headline": "LOOK HERE",
+          "labels": [
+            "POINT",
+            "RANGE"
+          ]
+        },
+        "headline": "LOOK HERE",
+        "labels": [
+          "POINT",
+          "RANGE"
+        ]
+      },
+      "idea": "The grid bot mascot in one pose, beside one prop.",
+      "labels": [
+        "POINT",
+        "RANGE"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 The grid bot mascot in one pose, beside one prop.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 244",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "02.png",
+      "path": "02.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "69c2b63acd5d39d2a2f43542dbe09171",
+      "md5": "69c2b63acd5d39d2a2f43542dbe09171",
+      "renderer": "cairosvg",
+      "alt": "The grid bot mascot in one pose, beside one prop. Labels: THINK, CHECK.",
+      "spec": {
+        "type": "mascot_scene",
+        "preset": "house",
+        "params": {
+          "pose": "thinking",
+          "headline": "THINK FIRST",
+          "labels": [
+            "THINK",
+            "CHECK"
+          ]
+        },
+        "headline": "THINK FIRST",
+        "labels": [
+          "THINK",
+          "CHECK"
+        ]
+      },
+      "idea": "The grid bot mascot in one pose, beside one prop.",
+      "labels": [
+        "THINK",
+        "CHECK"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 The grid bot mascot in one pose, beside one prop.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 244",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "03.png",
+      "path": "03.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "127854f9076d694b6655a7acdc1e6d78",
+      "md5": "127854f9076d694b6655a7acdc1e6d78",
+      "renderer": "cairosvg",
+      "alt": "The grid bot mascot in one pose, beside one prop. Labels: WAIT, CHECK.",
+      "spec": {
+        "type": "mascot_scene",
+        "preset": "house",
+        "params": {
+          "pose": "warning",
+          "headline": "CHECK FIRST",
+          "labels": [
+            "WAIT",
+            "CHECK"
+          ]
+        },
+        "headline": "CHECK FIRST",
+        "labels": [
+          "WAIT",
+          "CHECK"
+        ]
+      },
+      "idea": "The grid bot mascot in one pose, beside one prop.",
+      "labels": [
+        "WAIT",
+        "CHECK"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 The grid bot mascot in one pose, beside one prop.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 242",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "04.png",
+      "path": "04.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "2460102c847fdc896fe79048d2649ccc",
+      "md5": "2460102c847fdc896fe79048d2649ccc",
+      "renderer": "cairosvg",
+      "alt": "The grid bot mascot in one pose, beside one prop. Labels: DONE, NEXT.",
+      "spec": {
+        "type": "mascot_scene",
+        "preset": "house",
+        "params": {
+          "pose": "celebrating",
+          "headline": "STEP DONE",
+          "labels": [
+            "DONE",
+            "NEXT"
+          ]
+        },
+        "headline": "STEP DONE",
+        "labels": [
+          "DONE",
+          "NEXT"
+        ]
+      },
+      "idea": "The grid bot mascot in one pose, beside one prop.",
+      "labels": [
+        "DONE",
+        "NEXT"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 The grid bot mascot in one pose, beside one prop.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 244",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    }
+  ]
+}

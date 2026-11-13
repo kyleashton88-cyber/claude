@@ -10,7 +10,7 @@ import math
 from dataclasses import dataclass
 
 from .clean import assert_drawable
-from .fonts import family, pil_font
+from .fonts import advance, css_weight, family
 from .svg import Svg
 from .theme import Theme
 
@@ -59,11 +59,7 @@ class Canvas:
         return self.theme.height
 
     def measure(self, text: str, size: int, weight: str = "semi") -> float:
-        width = float(pil_font(weight, size).getlength(text))
-        # Cairo draws Roboto Condensed a little wider than Pillow measures.
-        if weight == "condensed":
-            width *= 1.18
-        return width
+        return advance(weight, text, size)
 
     def ink_box(self, text: str, x: float, y: float, size: int, anchor: str, weight: str) -> tuple[float, float, float, float]:
         width = self.measure(text, size, weight)
@@ -84,7 +80,10 @@ class Canvas:
             return (x, y, x, y)
         box = self.ink_box(content, x, y, size, anchor, weight)
         face = family(weight)
-        self.svg.text(content, x, y, size, fill, face, anchor=anchor, opacity=opacity, rotate=rotate)
+        self.svg.text(
+            content, x, y, size, fill, face,
+            anchor=anchor, opacity=opacity, rotate=rotate, weight=css_weight(weight),
+        )
         if role != "watermark":
             self.marks.append(Mark(role, content, size, fill, bg or self.theme.bg0, face, box))
         if role == "label" and content not in self.labels:
@@ -123,8 +122,8 @@ class Canvas:
         size = t.headline
 
         def span(px: int) -> float:
-            gap = max(t.s(22), px * 0.28)
-            return sum(self.measure(word, px, "condensed") for word in words) + gap * (len(words) - 1)
+            space = max(self.measure(" ", px, "condensed"), t.s(8))
+            return sum(self.measure(word, px, "condensed") for word in words) + space * (len(words) - 1)
 
         while size > t.headline_floor and span(size) > self.width - t.safe_x * 2:
             size -= 2
@@ -139,11 +138,16 @@ class Canvas:
                 key = content[0]
         baseline = t.safe_top + t.s(8) + size * CAP
         x = float(t.safe_x)
-        gap = max(t.s(22), size * 0.28)
+        space = max(self.measure(" ", size, "condensed"), t.s(8))
+        bloom = self.svg.ensure_glow(t.s(5), t.s(1.6))
         for word in words:
             weight_fill = t.accent_ink if word == key else t.ink
+            self.svg.text(
+                word, x, baseline, size, t.accent, family("condensed"),
+                weight="bold", opacity=0.85, filt=bloom,
+            )
             self.text(word, x, baseline, size, weight_fill, weight="condensed", role="headline", bg=t.bg0)
-            x += self.measure(word, size, "condensed") + gap
+            x += self.measure(word, size, "condensed") + space
         self.headline_text = " ".join(words)
 
     def content_rect(self) -> tuple[float, float, float, float]:
@@ -234,17 +238,29 @@ class Canvas:
 
     def watermark(self, cx: float, cy: float) -> None:
         size = self.theme.s(78)
-        self.svg.text("EXAMPLE", cx, cy, size, self.theme.muted, family("condensed"), anchor="middle", opacity=0.16, rotate=-14)
+        self.svg.text(
+            "EXAMPLE", cx, cy, size, self.theme.muted, family("condensed"),
+            anchor="middle", opacity=0.16, rotate=-14, weight="bold",
+        )
+
+    def _bloom(self) -> str:
+        return self.svg.ensure_glow(self.theme.s(7), self.theme.s(2.4))
 
     def glow_line(self, x1, y1, x2, y2, color, sw=2.5, dash=None) -> None:
-        filt = self.svg.ensure_glow(max(1.4, self.theme.s(2.2)))
-        self.svg.line(x1, y1, x2, y2, color, sw=sw * 2.8, dash=dash, opacity=0.95, filt=filt)
-        self.svg.line(x1, y1, x2, y2, color, sw=sw, dash=dash, opacity=1)
+        filt = self._bloom()
+        self.svg.line(x1, y1, x2, y2, color, sw=sw * 3.4, dash=dash, opacity=0.95, filt=filt)
+        self.svg.line(x1, y1, x2, y2, color, sw=max(sw, self.theme.s(2.2)), dash=dash, opacity=1)
 
     def glow_polyline(self, points, color, sw=3) -> None:
-        filt = self.svg.ensure_glow(max(1.4, self.theme.s(2.4)))
-        self.svg.polyline(points, color, sw=sw * 2.8, opacity=0.95, filt=filt)
-        self.svg.polyline(points, color, sw=sw, opacity=1)
+        filt = self._bloom()
+        self.svg.polyline(points, color, sw=sw * 3.2, opacity=0.95, filt=filt)
+        self.svg.polyline(points, color, sw=max(sw, self.theme.s(2.4)), opacity=1)
+
+    def glow_rect(self, x, y, w, h, color, rx=4) -> None:
+        filt = self._bloom()
+        pad = self.theme.s(3)
+        self.svg.rect(x - pad, y - pad, w + pad * 2, h + pad * 2, fill=color, rx=rx + pad, opacity=0.9, filt=filt)
+        self.svg.rect(x, y, w, h, fill=color, rx=rx, opacity=1)
 
     def plot_y(self, value: float, lo: float, hi: float, top: float, bottom: float, pad: float = 28) -> float:
         span = hi - lo

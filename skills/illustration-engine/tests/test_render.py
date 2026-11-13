@@ -37,7 +37,7 @@ class RenderTests(unittest.TestCase):
             self.assertGreater(dest.stat().st_size, 1000)
             self.assertTrue(dest.with_suffix(".svg").is_file())
             self.assertIn("EXAMPLE", dest.with_suffix(".svg").read_text(encoding="utf-8"))
-            self.assertTrue(all(mark["family"] == "Engine Condensed" for mark in result.meta["marks"] if mark["role"] == "headline"))
+            self.assertTrue(all(mark["family"] == "Roboto Condensed" for mark in result.meta["marks"] if mark["role"] == "headline"))
             floor = 24 * result.theme.scale
             labels = [mark for mark in result.meta["marks"] if mark["role"] == "label"]
             self.assertTrue(labels)

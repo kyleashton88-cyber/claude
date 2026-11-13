@@ -1,0 +1,143 @@
+{
+  "source": "illustration-engine",
+  "mode": "normal",
+  "fallback_tier": false,
+  "rule": "In-house illustration engine. These files are not course stills. The engine does not write into course/. A router may copy an approved fallback plate into course/images/_fallback_quarantine/.",
+  "images": [
+    {
+      "file": "01.png",
+      "path": "01.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "a087601d7960aa083e60080d7125d689",
+      "md5": "a087601d7960aa083e60080d7125d689",
+      "renderer": "cairosvg",
+      "alt": "One named candle pattern, shown on its own. Labels: HAMMER, WICK, BODY.",
+      "spec": {
+        "type": "candle_pattern",
+        "preset": "house",
+        "params": {
+          "variant": "hammer"
+        }
+      },
+      "idea": "One named candle pattern, shown on its own.",
+      "labels": [
+        "HAMMER",
+        "WICK",
+        "BODY"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 One named candle pattern, shown on its own.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 149",
+        "pass: word spacing \u2014 one headline word"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "02.png",
+      "path": "02.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "943b5fd888a9d9c5f8a3d18b0895b03c",
+      "md5": "943b5fd888a9d9c5f8a3d18b0895b03c",
+      "renderer": "cairosvg",
+      "alt": "One named candle pattern, shown on its own. Labels: DOJI, OPEN, CLOSE.",
+      "spec": {
+        "type": "candle_pattern",
+        "preset": "house",
+        "params": {
+          "variant": "doji"
+        }
+      },
+      "idea": "One named candle pattern, shown on its own.",
+      "labels": [
+        "DOJI",
+        "OPEN",
+        "CLOSE"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 One named candle pattern, shown on its own.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 133",
+        "pass: word spacing \u2014 one headline word"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "03.png",
+      "path": "03.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "4e76b8bcc6ac8486c84d5aced07d579a",
+      "md5": "4e76b8bcc6ac8486c84d5aced07d579a",
+      "renderer": "cairosvg",
+      "alt": "One named candle pattern, shown on its own. Labels: ENGULF, FIRST, SECOND.",
+      "spec": {
+        "type": "candle_pattern",
+        "preset": "house",
+        "params": {
+          "variant": "engulfing"
+        }
+      },
+      "idea": "One named candle pattern, shown on its own.",
+      "labels": [
+        "ENGULF",
+        "FIRST",
+        "SECOND"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 One named candle pattern, shown on its own.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 148",
+        "pass: word spacing \u2014 one headline word"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    }
+  ]
+}

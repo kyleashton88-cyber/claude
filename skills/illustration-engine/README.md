@@ -1,6 +1,6 @@
 # Illustration engine
 
-In-house diagrams for course lessons. A sentence or a YAML spec becomes an SVG, then a PNG. Nothing here calls an image API, and nothing here writes into `course/`.
+In-house diagrams for course lessons. A sentence or a YAML spec becomes an SVG, then a PNG. Nothing here calls an image API, and nothing here writes into `course/`. A router may later copy an approved fallback plate into `course/images/_fallback_quarantine/`.
 
 The live stills path is unchanged. Use this engine when you want a plate drawn in the repo.
 

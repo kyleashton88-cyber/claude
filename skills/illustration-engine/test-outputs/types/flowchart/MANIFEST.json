@@ -1,0 +1,176 @@
+{
+  "source": "illustration-engine",
+  "mode": "normal",
+  "fallback_tier": false,
+  "rule": "In-house illustration engine. These files are not course stills. The engine does not write into course/. A router may copy an approved fallback plate into course/images/_fallback_quarantine/.",
+  "images": [
+    {
+      "file": "01.png",
+      "path": "01.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "296f16709ad024522022a83dee47c810",
+      "md5": "296f16709ad024522022a83dee47c810",
+      "renderer": "cairosvg",
+      "alt": "A short path of steps, read from left to right. Labels: RANGE, LEVELS, STOP.",
+      "spec": {
+        "type": "flowchart",
+        "preset": "house",
+        "params": {
+          "headline": "THE PATH",
+          "labels": [
+            "RANGE",
+            "LEVELS",
+            "STOP"
+          ]
+        },
+        "headline": "THE PATH",
+        "labels": [
+          "RANGE",
+          "LEVELS",
+          "STOP"
+        ]
+      },
+      "idea": "A short path of steps, read from left to right.",
+      "labels": [
+        "RANGE",
+        "LEVELS",
+        "STOP"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 A short path of steps, read from left to right.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 156",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "02.png",
+      "path": "02.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "14255b94f6be73381766b355ae0a6060",
+      "md5": "14255b94f6be73381766b355ae0a6060",
+      "renderer": "cairosvg",
+      "alt": "A short path of steps, read from left to right. Labels: LOOK, NOTE, DECIDE.",
+      "spec": {
+        "type": "flowchart",
+        "preset": "house",
+        "params": {
+          "headline": "A REVIEW",
+          "labels": [
+            "LOOK",
+            "NOTE",
+            "DECIDE"
+          ]
+        },
+        "headline": "A REVIEW",
+        "labels": [
+          "LOOK",
+          "NOTE",
+          "DECIDE"
+        ]
+      },
+      "idea": "A short path of steps, read from left to right.",
+      "labels": [
+        "LOOK",
+        "NOTE",
+        "DECIDE"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 A short path of steps, read from left to right.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 152",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "03.png",
+      "path": "03.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "e86fd44ebd6d5b60c480cea5043ab4a5",
+      "md5": "e86fd44ebd6d5b60c480cea5043ab4a5",
+      "renderer": "cairosvg",
+      "alt": "A short path of steps, read from left to right. Labels: WRITE, CHECK, WAIT.",
+      "spec": {
+        "type": "flowchart",
+        "preset": "house",
+        "params": {
+          "headline": "PAPER FIRST",
+          "labels": [
+            "WRITE",
+            "CHECK",
+            "WAIT"
+          ]
+        },
+        "headline": "PAPER FIRST",
+        "labels": [
+          "WRITE",
+          "CHECK",
+          "WAIT"
+        ]
+      },
+      "idea": "A short path of steps, read from left to right.",
+      "labels": [
+        "WRITE",
+        "CHECK",
+        "WAIT"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: one idea \u2014 A short path of steps, read from left to right.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 155",
+        "pass: word spacing \u2014 spaces hold between headline words"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    }
+  ]
+}
