@@ -1,548 +1,533 @@
 1
-00:00:00,030 --> 00:00:03,371
+00:00:00,332 --> 00:00:02,724
 Grid Bot Builder. Grid Bot Blueprint.
 
 2
-00:00:03,371 --> 00:00:08,330
+00:00:03,220 --> 00:00:07,406
 Lesson one. Introduction. Education only.
 
 3
-00:00:08,330 --> 00:00:15,823
+00:00:07,905 --> 00:00:10,667
 Not financial advice. This is general
 
 4
-00:00:15,823 --> 00:00:18,243
+00:00:10,667 --> 00:00:13,174
 information and doesn't consider your
 
 5
-00:00:18,243 --> 00:00:20,577
+00:00:13,174 --> 00:00:15,834
 objectives, financial situation or needs.
 
 6
-00:00:20,577 --> 00:00:22,799
+00:00:16,294 --> 00:00:18,989
 Crypto is high risk. You could lose all
 
 7
-00:00:22,799 --> 00:00:28,350
-the money you put in. From 19 July
+00:00:18,989 --> 00:00:22,941
+the money you put in. From 19 July 2023 to
 
 8
-00:00:28,350 --> 00:00:40,398
-2023 to 16 October 2023, the public daily
+00:00:22,941 --> 00:00:27,093
+16 October 2023, the public daily price of
 
 9
-00:00:40,398 --> 00:00:45,257
-price of bitcoin stayed in a band. The
+00:00:27,093 --> 00:00:31,589
+bitcoin stayed in a band. The lowest daily
 
 10
-00:00:45,257 --> 00:00:47,590
-lowest daily print was 24930. The highest
+00:00:31,652 --> 00:00:36,849
+print was 24930. The highest was 30331.
 
 11
-00:00:47,590 --> 00:00:49,924
-was 30331. Ninety days, and the path kept
+00:00:37,309 --> 00:00:39,533
+Ninety days, and the path kept returning
 
 12
-00:00:49,924 --> 00:00:52,090
-returning into the middle. A grid is a
+00:00:39,407 --> 00:00:41,906
+into the middle. A grid is a ladder of
 
 13
-00:00:52,090 --> 00:00:54,312
-ladder of limit orders built for a path
+00:00:41,906 --> 00:00:44,558
+limit orders built for a path that behaves
 
 14
-00:00:54,312 --> 00:00:56,646
-that behaves like that. It has nothing to
+00:00:44,558 --> 00:00:47,120
+like that. It has nothing to do once the
 
 15
-00:00:56,646 --> 00:00:59,355
-do once the path leaves and stays gone.
+00:00:47,120 --> 00:00:50,303
+path leaves and stays gone. By the end you
 
 16
-00:00:59,355 --> 00:01:03,898
-By the end you will be able to
+00:00:50,303 --> 00:00:53,075
+will be able to do three things. Name the
 
 17
-00:01:03,898 --> 00:01:05,954
-do three things. Name the range, the
+00:00:53,075 --> 00:00:55,855
+range, the levels, and the stop on this
 
 18
-00:01:05,954 --> 00:01:08,530
-levels, and the stop on this 2023 window.
+00:00:55,855 --> 00:01:05,197
+2023 window. Point to a day whose close is
 
 19
-00:01:08,530 --> 00:01:11,067
-Point to a day whose close is still
+00:01:05,197 --> 00:01:19,235
+still inside the band. Write the stop as
 
 20
-00:01:11,067 --> 00:01:15,845
-inside the band. Write the stop as the
+00:01:19,235 --> 00:01:22,693
+the day the path leaves 30331 and does not
 
 21
-00:01:15,845 --> 00:01:18,858
-day the path leaves 30331 and does not
-
-22
-00:01:18,858 --> 00:01:23,681
+00:01:22,693 --> 00:01:33,275
 return. Think of a ladder leaned on a
 
-23
-00:01:23,681 --> 00:01:25,848
+22
+00:01:33,275 --> 00:01:36,347
 wall. The rungs do not chase you. They
 
+23
+00:01:36,347 --> 00:01:38,776
+wait. On the right is the real path, not
+
 24
-00:01:25,848 --> 00:01:27,903
-wait. On the right is the real path,
+00:01:38,776 --> 00:01:42,012
+the ladder. The range is the top and the
 
 25
-00:01:27,903 --> 00:01:32,555
-not the ladder. The range is the top
+00:01:42,012 --> 00:01:44,375
+bottom you copy from the path, before you
 
 26
-00:01:32,555 --> 00:01:38,688
-and the bottom you copy from the path,
+00:01:44,375 --> 00:01:48,345
+invent a rung. Here the public low is
 
 27
-00:01:38,688 --> 00:01:45,645
-before you invent a rung. Here the public
+00:01:48,345 --> 00:01:53,339
+24930 and the public high is 30331. Round
 
 28
-00:01:45,645 --> 00:01:51,553
-low is 24930 and the public high is
+00:01:53,339 --> 00:01:55,452
+numbers that ignore those prints are a
 
 29
-00:01:51,553 --> 00:01:53,720
-30331. Round numbers that ignore those
+00:01:55,259 --> 00:01:57,890
+different drawing. Seven days in this
 
 30
-00:01:53,720 --> 00:01:56,109
-prints are a different drawing. Seven days
+00:01:57,890 --> 00:02:01,866
+window wicked above 30000. One day wicked
 
 31
-00:01:56,109 --> 00:01:58,498
-in this window wicked above 30000. One day
+00:02:01,868 --> 00:02:04,909
+under 25000. A tidy 25000 to 30000 box
 
 32
-00:01:58,498 --> 00:02:00,831
-wicked under 25000. A tidy 25000 to 30000
+00:02:04,909 --> 00:02:08,269
+would have been left behind on those days.
 
 33
-00:02:00,831 --> 00:02:03,109
-box would have been left behind on those
+00:02:09,289 --> 00:02:11,825
+Six equal gaps of about 900 dollars fit
 
 34
-00:02:03,109 --> 00:02:10,401
-days. Six equal gaps of about 900 dollars
+00:02:11,825 --> 00:02:17,342
+between those two prints. The rungs land
 
 35
-00:02:10,401 --> 00:02:16,769
-fit between those two prints. The rungs
+00:02:17,342 --> 00:02:24,976
+near 25830, 26730, 27630, 28531, and
 
 36
-00:02:16,769 --> 00:02:35,735
-land near 25830, 26730, 27630, 28531, and
+00:02:24,976 --> 00:02:34,275
+29431, with the ends at 24930 and 30331. A
 
 37
-00:02:35,735 --> 00:02:39,721
-29431, with the ends at 24930 and 30331.
+00:02:34,275 --> 00:02:36,879
+limit order sits on a rung. It does not
 
 38
-00:02:39,721 --> 00:02:41,554
-A limit order sits on a rung. It
+00:02:36,879 --> 00:02:39,852
+run after the price. The daily close
 
 39
-00:02:41,554 --> 00:02:43,776
-does not run after the price. The daily
+00:02:39,852 --> 00:02:43,420
+crossed 27630 ten times in this window.
 
 40
-00:02:43,776 --> 00:02:45,887
-close crossed 27630 ten times in this
+00:02:43,880 --> 00:02:45,993
+That is the path changing sides of one
 
 41
-00:02:45,887 --> 00:02:48,276
-window. That is the path changing sides of
+00:02:45,922 --> 00:02:48,089
+rung, not a promise that an order would
 
 42
-00:02:48,276 --> 00:02:50,387
-one rung, not a promise that an order
+00:02:47,964 --> 00:02:51,220
+have filled. A fence has a top rail and a
 
 43
-00:02:50,387 --> 00:02:55,782
-would have filled. A fence has a top
+00:02:51,220 --> 00:02:53,710
+bottom rail. Inside it, the path can
 
 44
-00:02:55,782 --> 00:03:03,234
-rail and a bottom rail. Inside it, the
+00:02:53,710 --> 00:02:56,166
+wander. The fence on the left is the
 
 45
-00:03:03,234 --> 00:03:05,548
-path can wander. The fence on the left
+00:02:56,166 --> 00:03:03,040
+analogy. The band on the right is 24930 to
 
 46
-00:03:05,548 --> 00:03:07,659
-is the analogy. The band on the right
+00:03:03,040 --> 00:03:05,902
+30331. The public path draws across this
 
 47
-00:03:07,659 --> 00:03:12,015
-is 24930 to 30331. The public path draws
+00:03:05,902 --> 00:03:08,594
+window. We stop on a handful of days, not
 
 48
-00:03:12,015 --> 00:03:16,563
-across this window. We stop on a handful
+00:03:08,594 --> 00:03:11,406
+on every print. Every close is an example.
 
 49
-00:03:16,563 --> 00:03:18,841
-of days, not on every print. Every close
+00:03:11,866 --> 00:03:13,701
+It is not a fill, and it is not a
 
 50
-00:03:18,841 --> 00:03:20,675
-is an example. It is not a fill,
+00:03:13,672 --> 00:03:20,370
+forecast. On 19 July 2023, the public
 
 51
-00:03:20,675 --> 00:03:24,823
-and it is not a forecast. On 19
+00:03:20,501 --> 00:03:24,433
+daily close was 29914. That day's low was
 
 52
-00:03:24,823 --> 00:03:32,423
-July 2023, the public daily close was
+00:03:24,482 --> 00:03:30,552
+29794 and the high was 30184. The close is
 
 53
-00:03:32,423 --> 00:03:44,290
-29914. That day's low was 29794 and the
+00:03:31,104 --> 00:03:37,564
+inside the band of 24930 to 30331. On 8
 
 54
-00:03:44,290 --> 00:03:46,513
-high was 30184. The close is inside the
+00:03:37,588 --> 00:03:42,954
+August 2023, the public daily close was
 
 55
-00:03:46,513 --> 00:03:50,956
-band of 24930 to 30331. On 8 August
+00:03:42,954 --> 00:03:48,924
+29765. That day's low was 29114 and the
 
 56
-00:03:50,956 --> 00:04:01,129
-2023, the public daily close was 29765.
+00:03:49,308 --> 00:03:53,515
+high was 30177. The close is inside the
 
 57
-00:04:01,129 --> 00:04:10,164
-That day's low was 29114 and the high
+00:03:53,847 --> 00:04:01,842
+band of 24930 to 30331. On 24 August 2023,
 
 58
-00:04:10,164 --> 00:04:12,386
-was 30177. The close is inside the band
-
-59
-00:04:12,386 --> 00:04:19,156
-of 24930 to 30331. On 24 August 2023,
-
-60
-00:04:19,156 --> 00:04:29,488
+00:04:02,101 --> 00:04:05,674
 the public daily close was 26162. That
 
-61
-00:04:29,488 --> 00:04:36,994
+59
+00:04:05,674 --> 00:04:11,031
 day's low was 25915 and the high was
 
-62
-00:04:36,994 --> 00:04:39,161
+60
+00:04:11,031 --> 00:04:16,934
 26555. The close is inside the band of
 
-63
-00:04:39,161 --> 00:04:47,321
+61
+00:04:16,934 --> 00:04:24,551
 24930 to 30331. On 13 September 2023, the
 
-64
-00:04:47,321 --> 00:04:55,936
+62
+00:04:24,558 --> 00:04:28,248
 public daily close was 26228. That day's
 
+63
+00:04:28,476 --> 00:04:35,029
+low was 25781 and the high was 26376. The
+
+64
+00:04:35,222 --> 00:04:41,173
+close is inside the band of 24930 to
+
 65
-00:04:55,936 --> 00:05:04,165
-low was 25781 and the high was 26376.
+00:04:41,173 --> 00:04:47,229
+30331. On 29 September 2023, the public
 
 66
-00:05:04,165 --> 00:05:06,276
-The close is inside the band of 24930
-
-67
-00:05:06,276 --> 00:05:15,590
-to 30331. On 29 September 2023, the public
-
-68
-00:05:15,590 --> 00:05:27,248
+00:04:47,459 --> 00:04:51,868
 daily close was 26912. That day's low was
 
+67
+00:04:51,868 --> 00:04:58,029
+26722 and the high was 27226. The close is
+
+68
+00:04:58,582 --> 00:05:05,422
+inside the band of 24930 to 30331. On 16
+
 69
-00:05:27,248 --> 00:05:31,217
-26722 and the high was 27226. The close
+00:05:05,450 --> 00:05:10,767
+October 2023, the public daily close was
 
 70
-00:05:31,217 --> 00:05:33,329
-is inside the band of 24930 to 30331.
+00:05:10,767 --> 00:05:17,685
+28519. That day's low was 27130 and the
 
 71
-00:05:33,329 --> 00:05:42,508
-On 16 October 2023, the public daily close
+00:05:17,685 --> 00:05:21,490
+high was 29448. The close is inside the
 
 72
-00:05:42,508 --> 00:05:55,572
-was 28519. That day's low was 27130 and
+00:05:21,822 --> 00:05:26,579
+band of 24930 to 30331. The stop is a
 
 73
-00:05:55,572 --> 00:05:57,794
-the high was 29448. The close is inside
+00:05:26,579 --> 00:05:30,911
+sentence about a path, not a mood. On 23
 
 74
-00:05:57,794 --> 00:06:01,246
-the band of 24930 to 30331. The stop
+00:05:31,137 --> 00:05:35,173
+October 2023 the public daily close was
 
 75
-00:06:01,246 --> 00:06:08,999
-is a sentence about a path, not a
+00:05:35,173 --> 00:05:41,388
+33086. That is above 30331. By 14 March
 
 76
-00:06:08,999 --> 00:06:17,933
-mood. On 23 October 2023 the public daily
+00:05:42,456 --> 00:05:46,180
+2024 the close was near 71397. The summer
 
 77
-00:06:17,933 --> 00:06:28,093
-close was 33086. That is above 30331. By
+00:05:46,180 --> 00:05:49,014
+band was behind it. Write this: if the
 
 78
-00:06:28,093 --> 00:06:30,315
-14 March 2024 the close was near 71397.
+00:05:49,014 --> 00:05:52,098
+daily close leaves 30331 and does not
 
 79
-00:06:30,315 --> 00:06:32,704
-The summer band was behind it. Write this:
+00:05:52,098 --> 00:05:55,639
+return, the summer idea is finished. The
 
 80
-00:06:32,704 --> 00:06:34,981
-if the daily close leaves 30331 and does
+00:05:55,639 --> 00:05:58,175
+chart now draws that leave. The old high
 
 81
-00:06:34,981 --> 00:06:37,259
-not return, the summer idea is finished.
+00:05:58,175 --> 00:06:00,399
+stays on the screen as the rail that was
 
 82
-00:06:37,259 --> 00:06:39,481
-The chart now draws that leave. The old
+00:06:00,224 --> 00:06:04,208
+crossed. Worked check, marked Example. The
 
 83
-00:06:39,481 --> 00:06:41,537
-high stays on the screen as the rail
+00:06:04,208 --> 00:06:09,678
+window is 19 July 2023 to 16 October 2023.
 
 84
-00:06:41,537 --> 00:06:44,592
-that was crossed. Worked check, marked
+00:06:10,232 --> 00:06:17,815
+Low 24930. High 30331. Recap, in three
 
 85
-00:06:44,592 --> 00:06:54,675
-Example. The window is 19 July 2023 to
+00:06:17,815 --> 00:06:22,326
+lines. The range was the real low and the
 
 86
-00:06:54,675 --> 00:07:00,502
-16 October 2023. Low 24930. High 30331.
+00:06:22,542 --> 00:06:32,243
+real high, 24930 and 30331. The levels
 
 87
-00:07:00,502 --> 00:07:06,816
-Recap, in three lines. The range was the
+00:06:32,243 --> 00:06:34,713
+were six gaps of about 900, and one rung
 
 88
-00:07:06,816 --> 00:07:12,245
-real low and the real high, 24930 and
+00:06:34,713 --> 00:06:47,934
+was crossed ten times. The stop was the
 
 89
-00:07:12,245 --> 00:07:16,443
-30331. The levels were six gaps of about
+00:06:47,934 --> 00:06:51,455
+October leave, when 30331 stayed behind
 
 90
-00:07:16,443 --> 00:07:18,731
-900, and one rung was crossed ten times.
+00:06:51,455 --> 00:07:03,324
+the path. A chart where the price line
 
 91
-00:07:18,731 --> 00:07:24,926
-The stop was the October leave, when 30331
+00:07:03,324 --> 00:07:05,770
+zig-zags up and down between a top line
 
 92
-00:07:24,926 --> 00:07:29,803
-stayed behind the path. A chart where the
+00:07:05,770 --> 00:07:11,059
+and a bottom line, marked Example. A price
 
 93
-00:07:29,803 --> 00:07:32,137
-price line zig-zags up and down between a
+00:07:11,059 --> 00:07:13,656
+line crossing a ladder of lines, with buy
 
 94
-00:07:32,137 --> 00:07:34,081
-top line and a bottom line, marked
+00:07:13,656 --> 00:07:16,174
+dots on the lower lines and sell dots on
 
 95
-00:07:34,081 --> 00:07:39,641
-Example. A price line crossing a ladder of
+00:07:16,174 --> 00:07:18,850
+the higher lines, introducing what a grid
 
 96
-00:07:39,641 --> 00:07:41,863
-lines, with buy dots on the lower lines
+00:07:18,850 --> 00:07:23,878
+bot is. Three cards: a box for the price
 
 97
-00:07:41,863 --> 00:07:43,807
-and sell dots on the higher lines,
+00:07:23,878 --> 00:07:26,274
+range, a ladder for the levels, and a stop
 
 98
-00:07:43,807 --> 00:07:46,870
-introducing what a grid bot is. Three
+00:07:26,274 --> 00:07:32,111
+sign for when you quit. A shaded band
 
 99
-00:07:46,870 --> 00:07:50,175
-cards: a box for the price range, a
+00:07:32,111 --> 00:07:34,181
+between a top line and a bottom line,
 
 100
-00:07:50,175 --> 00:07:52,341
-ladder for the levels, and a stop sign
+00:07:34,181 --> 00:07:39,925
+showing the price range you pick. A ladder
 
 101
-00:07:52,341 --> 00:07:56,208
-for when you quit. A shaded band between
+00:07:39,925 --> 00:07:42,110
+whose rungs are price steps, with small
 
 102
-00:07:56,208 --> 00:07:58,320
-a top line and a bottom line, showing
+00:07:42,110 --> 00:07:47,196
+order tickets waiting on some rungs. Buy
 
 103
-00:07:58,320 --> 00:08:01,807
-the price range you pick. A ladder whose
+00:07:47,196 --> 00:07:49,723
+orders sit on lines below today's price
 
 104
-00:08:01,807 --> 00:08:04,029
-rungs are price steps, with small order
+00:07:49,723 --> 00:07:54,855
+and sell orders sit on lines above it. A
 
 105
-00:08:04,029 --> 00:08:07,363
-tickets waiting on some rungs. Buy orders
+00:07:54,855 --> 00:07:57,038
+notebook with a written rule and a stop
 
 106
-00:08:07,363 --> 00:08:11,237
-sit on lines below today's price and sell
+00:07:57,038 --> 00:07:59,316
+sign: decide and write down when you will
 
 107
-00:08:11,237 --> 00:08:15,204
-orders sit on lines above it. A notebook
+00:07:59,291 --> 00:08:04,898
+quit before you start. A send button
 
 108
-00:08:15,204 --> 00:08:17,259
-with a written rule and a stop sign:
+00:08:04,898 --> 00:08:07,056
+crossed out next to a notebook with a
 
 109
-00:08:17,259 --> 00:08:19,537
-decide and write down when you will quit
+00:08:07,056 --> 00:08:09,214
+tick: this lesson never places a real
 
 110
-00:08:19,537 --> 00:08:23,744
-before you start. A send button crossed
+00:08:09,214 --> 00:08:14,619
+trade. A path of eleven stepping stones
 
 111
-00:08:23,744 --> 00:08:25,744
-out next to a notebook with a tick:
+00:08:14,619 --> 00:08:16,843
+with a pin on the first one, showing you
 
 112
-00:08:25,744 --> 00:08:28,805
-this lesson never places a real trade. A
+00:08:16,678 --> 00:08:22,875
+are at the start of the course. A price
 
 113
-00:08:28,805 --> 00:08:32,140
-path of eleven stepping stones with a pin
+00:08:22,875 --> 00:08:25,234
+line that bounces inside a band and then
 
 114
-00:08:32,140 --> 00:08:34,195
-on the first one, showing you are at
+00:08:25,234 --> 00:08:27,593
+leaves through the top and does not come
 
 115
-00:08:34,195 --> 00:08:37,937
-the start of the course. A price line
+00:08:27,593 --> 00:08:32,923
+back. A blank scoreboard crossed out
 
 116
-00:08:37,937 --> 00:08:40,326
-that bounces inside a band and then leaves
+00:08:32,923 --> 00:08:35,036
+beside a notebook: the lesson shows no
 
 117
-00:08:40,326 --> 00:08:42,740
-through the top and does not come back.
+00:08:35,017 --> 00:08:39,618
+results or profit numbers. A notebook
 
 118
-00:08:42,740 --> 00:08:46,342
-A blank scoreboard crossed out beside a
+00:08:39,618 --> 00:08:41,937
+sketch of a box with eight evenly spaced
 
 119
-00:08:46,342 --> 00:08:48,620
-notebook: the lesson shows no results or
+00:08:41,937 --> 00:08:44,395
+lines inside it, to practise drawing price
 
 120
-00:08:48,620 --> 00:08:53,242
-profit numbers. A notebook sketch of a box
+00:08:44,395 --> 00:08:49,318
+steps. A paper checklist comes first, then
 
 121
-00:08:53,242 --> 00:08:55,576
-with eight evenly spaced lines inside it,
+00:08:49,318 --> 00:08:54,239
+the laptop screen. A laptop inside a
 
 122
-00:08:55,576 --> 00:08:59,141
-to practise drawing price steps. A paper
+00:08:54,239 --> 00:08:56,943
+fenced practice area: a practice account
 
 123
-00:08:59,141 --> 00:09:01,308
-checklist comes first, then the laptop
+00:08:56,943 --> 00:08:59,488
+uses pretend money, kept apart from the
 
 124
-00:09:01,308 --> 00:09:06,423
-screen. A laptop inside a fenced practice
+00:08:59,488 --> 00:09:03,573
+real market. A notebook sketch of a box, a
 
 125
-00:09:06,423 --> 00:09:08,534
-area: a practice account uses pretend
+00:09:03,573 --> 00:09:06,006
+ladder of lines and a stop sign, for you
 
 126
-00:09:08,534 --> 00:09:12,034
-money, kept apart from the real market. A
+00:09:06,006 --> 00:09:12,334
+to point at and name. Three cards showing
 
 127
-00:09:12,034 --> 00:09:14,779
-notebook sketch of a box, a ladder of
-
-128
-00:09:14,779 --> 00:09:16,667
-lines and a stop sign, for you to
-
-129
-00:09:16,667 --> 00:09:20,631
-point at and name. Three cards showing
-
-130
-00:09:20,631 --> 00:09:22,798
+00:09:12,334 --> 00:09:14,447
 range, levels and stop: draw all three
 
-131
-00:09:22,798 --> 00:09:26,071
+128
+00:09:14,395 --> 00:09:19,153
 before you click anything. Your finished
 
-132
-00:09:26,071 --> 00:09:28,460
+129
+00:09:19,153 --> 00:09:21,488
 notebook with an arrow to the next lesson,
 
-133
-00:09:28,460 --> 00:09:32,308
+130
+00:09:21,325 --> 00:09:26,885
 a checklist of what you need. Next lesson:
 
-134
-00:09:32,308 --> 00:09:35,850
-What you are going to need. Bring the
+131
+00:09:26,885 --> 00:09:29,565
+What you are going to need. Bring the page
 
-135
-00:09:35,850 --> 00:09:37,961
-page with the band, the gaps, and the
+132
+00:09:29,565 --> 00:09:34,308
+with the band, the gaps, and the stop
+sentence. Leave every figure marked
 
-136
-00:09:37,961 --> 00:09:40,239
-stop sentence. Leave every figure marked
-
-137
-00:09:40,239 --> 00:09:42,628
+133
+00:09:34,308 --> 00:09:36,674
 Example. No order is sent between lessons.
 
