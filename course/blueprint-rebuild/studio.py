@@ -1583,7 +1583,7 @@ def synth_voice(shots: list[dict], dest: Path) -> tuple[float, list]:
     sample_rate = None
     for i, shot in enumerate(shots):
         mood = _mood(shot.get("kind") or "chart")
-        from voice.moods import mood_preset
+        from voice.moods import mood as mood_preset
         if mood_preset(mood).get("kokoro_voice") != "af_heart":
             raise SystemExit("Blueprint narration must be Kokoro af_heart")
         if mood not in speakers:
