@@ -53,6 +53,10 @@ class PipelineTests(unittest.TestCase):
         source = Path(studio.__file__).read_text(encoding="utf-8")
         self.assertNotIn("loudnorm", source)
         self.assertIn("duck_under_voice", source)
+        self.assertIn('"-aac_coder", "fast"', source)
+        from lib.mix import MIX_TRUE_PEAK_DBTP, true_peak_limiter
+        self.assertLessEqual(MIX_TRUE_PEAK_DBTP, -1.5)
+        self.assertIn("level=disabled", true_peak_limiter())
         mix = (ROOT / "skills/video-production/lib/mix.py").read_text(encoding="utf-8")
         self.assertIn("VOICE_LUFS = -14.0", mix)
 

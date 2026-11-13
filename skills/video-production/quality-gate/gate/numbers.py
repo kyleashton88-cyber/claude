@@ -51,9 +51,10 @@ _MONTH_ALIAS = {
     "dec": "December",
 }
 _MONTH_ALT = "|".join(sorted(_MONTH_ALIAS, key=len, reverse=True))
+# A day that continues ",ddd" is the start of a thousands group, not a date.
 _DATE = re.compile(
-    rf"\b(?P<d1>\d{{1,2}})\s+(?P<m1>{_MONTH_ALT})(?:\s+(?P<y1>\d{{4}}))?\b"
-    rf"|\b(?P<m2>{_MONTH_ALT})\s+(?P<d2>\d{{1,2}})(?:\s+(?P<y2>\d{{4}}))?\b",
+    rf"\b(?P<d1>\d{{1,2}})(?!,\d{{3}})\s+(?P<m1>{_MONTH_ALT})(?:\s+(?P<y1>\d{{4}}))?\b"
+    rf"|\b(?P<m2>{_MONTH_ALT})\s+(?P<d2>\d{{1,2}})(?!,\d{{3}})(?:\s+(?P<y2>\d{{4}}))?\b",
     re.I,
 )
 
@@ -84,11 +85,24 @@ def _parse_date(match: re.Match[str]) -> tuple[int, str, int | None]:
     return day, month, year
 
 
+def _iter_dates(text: str):
+    """Date matches that do not overlap a thousands-grouped number.
+
+    Grouped numbers are claimed first, so "Oct 28,519" is the price 28519
+    and not the date 28 October.
+    """
+    grouped = [(match.start(), match.end()) for match in _GROUPED.finditer(text or "")]
+    for match in _DATE.finditer(text or ""):
+        if _covered(grouped, match.start(), match.end()):
+            continue
+        yield match
+
+
 def find_dates(text: str) -> list[str]:
     """Dates in reading order. A day beside a month, with the year when it is written."""
     found: list[str] = []
     seen: set[str] = set()
-    for match in _DATE.finditer(text or ""):
+    for match in _iter_dates(text or ""):
         phrase = _date_phrase(*_parse_date(match))
         if phrase not in seen:
             seen.add(phrase)
@@ -146,7 +160,7 @@ def lesson_figures(path: Path) -> tuple[set[str], list[str]]:
             return
         blobs.append(text)
         for sentence in _sentences(text):
-            date_spans = [(match.start(), match.end()) for match in _DATE.finditer(sentence)]
+            date_spans = [(match.start(), match.end()) for match in _iter_dates(sentence)]
             for value in _figure_values(sentence, date_spans):
                 named.add(value)
                 if not LABEL_OK.search(sentence):
@@ -179,7 +193,7 @@ def lesson_date_keys(path: Path) -> set[tuple[int, str, int | None]]:
 
 
 def screen_figures(text: str) -> set[str]:
-    spans = [(match.start(), match.end()) for match in _DATE.finditer(text or "")]
+    spans = [(match.start(), match.end()) for match in _iter_dates(text or "")]
     return _figure_values(text or "", spans)
 
 
@@ -200,7 +214,7 @@ def number_problems(screen_text: str, lesson: Path | None) -> list[str]:
     problems.extend(unlabeled[:8])
     allowed = lesson_date_keys(Path(lesson))
     unknown_dates = []
-    for match in _DATE.finditer(screen_text or ""):
+    for match in _iter_dates(screen_text or ""):
         parsed = _parse_date(match)
         if _date_known(parsed, allowed):
             continue

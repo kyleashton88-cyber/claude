@@ -44,10 +44,14 @@ class MusicTests(unittest.TestCase):
         self.assertLess(under, quiet * 0.5)
 
     def test_house_loudness_is_the_one_standard(self):
-        from lib.mix import BED_UNDER_VOICE_DB, TRUE_PEAK_DBTP, VOICE_LUFS
+        from lib.mix import BED_UNDER_VOICE_DB, MIX_TRUE_PEAK_DBTP, TRUE_PEAK_DBTP, VOICE_LUFS, true_peak_limiter
         self.assertEqual(VOICE_LUFS, -14.0)
         self.assertEqual(TRUE_PEAK_DBTP, -1.0)
         self.assertEqual(BED_UNDER_VOICE_DB, -20.0)
+        self.assertLessEqual(MIX_TRUE_PEAK_DBTP, -1.5)
+        limiter = true_peak_limiter()
+        self.assertIn("level=disabled", limiter)
+        self.assertIn("aresample=192000", limiter)
 
 
 if __name__ == "__main__":

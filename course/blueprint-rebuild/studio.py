@@ -1851,7 +1851,9 @@ def render(
         "-c:v", "libx264", "-preset", preset, "-crf", "17", "-profile:v", "high",
         "-pix_fmt", "yuv420p",
         "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
-        "-c:a", "aac", "-b:a", "320k", "-ar", "48000", "-ac", "2",
+        # The native twoloop AAC coder wrote one sample to +1.9 dBFS in BP-03.
+        # The WAV under it was already -2.9 dBTP. The fast coder keeps that peak.
+        "-c:a", "aac", "-b:a", "320k", "-aac_coder", "fast", "-ar", "48000", "-ac", "2",
         "-shortest", "-movflags", "+faststart",
         str(final_path),
     ])

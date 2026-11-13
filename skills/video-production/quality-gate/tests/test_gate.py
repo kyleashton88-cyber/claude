@@ -14,7 +14,7 @@ sys.path.insert(0, str(VP))
 sys.path.insert(0, str(HERE))
 
 from gate.captions import caption_problems, parse_captions  # noqa: E402
-from gate.numbers import lesson_figures, number_problems  # noqa: E402
+from gate.numbers import find_dates, lesson_figures, number_problems, screen_figures  # noqa: E402
 from gate.evaluate import evaluate  # noqa: E402
 from gate.media import black_runs, gray_frames, judge_loudness, longest_static  # noqa: E402
 from gate.profiles import PROFILES, get_profile, length_ok  # noqa: E402
@@ -129,6 +129,37 @@ class FigureTests(unittest.TestCase):
                 number_problems("A stray 30 sits on the card.", lesson),
                 ["on-screen figures not in the lesson: 30"],
             )
+        finally:
+            shutil.rmtree(folder)
+
+    def test_grouped_price_is_not_read_as_a_date(self):
+        folder = Path(tempfile.mkdtemp())
+        try:
+            lesson = folder / "lesson.yaml"
+            lesson.write_text(
+                "dates:\n"
+                '  - "19 July 2023"\n'
+                "chart_labels:\n"
+                '  - "28519"\n',
+                encoding="utf-8",
+            )
+            self.assertEqual(find_dates("sell Oct 28,519"), [])
+            self.assertEqual(screen_figures("sell Oct 28,519"), {"28519"})
+            self.assertEqual(number_problems("sell Oct 28,519", lesson), [])
+            self.assertEqual(find_dates("On 28 October 2023 the close left."), ["28 October 2023"])
+            self.assertEqual(find_dates("On 28 Oct 2023 the close left."), ["28 October 2023"])
+            self.assertEqual(
+                number_problems("On 28 October 2023 the close left.", lesson),
+                ["on-screen date not in the lesson: 28 October 2023"],
+            )
+            lesson.write_text(
+                "dates:\n"
+                '  - "28 October 2023"\n'
+                "chart_labels:\n"
+                '  - "28519"\n',
+                encoding="utf-8",
+            )
+            self.assertEqual(number_problems("On 28 October 2023 the close left.", lesson), [])
         finally:
             shutil.rmtree(folder)
 

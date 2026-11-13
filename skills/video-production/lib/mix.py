@@ -24,7 +24,22 @@ from lib.ffmpeg_util import ffmpeg_bin, loudnorm_wav, probe, run
 
 VOICE_LUFS = -14.0
 TRUE_PEAK_DBTP = -1.0
+# Final ceiling after the stems are loudness-normalised. Lower than the gate's
+# -1 dBTP limit, so a later AAC encode has a little room. No makeup gain.
+MIX_TRUE_PEAK_DBTP = -1.5
 BED_UNDER_VOICE_DB = -20.0
+
+
+def true_peak_limiter(ceiling: float = MIX_TRUE_PEAK_DBTP) -> str:
+    """Oversampled limiter. `level` stays off so this stage cannot add gain."""
+    if ceiling > -1.5:
+        raise ValueError(f"mix ceiling {ceiling} is above -1.5 dBTP")
+    limit = 10 ** (ceiling / 20.0)
+    return (
+        "aresample=192000,"
+        f"alimiter=limit={limit:.5f}:attack=0.1:release=50:level=disabled:latency=true,"
+        "aresample=48000"
+    )
 
 
 def duck_under_voice(music: Path, voice: Path, dest: Path) -> Path:
@@ -37,7 +52,6 @@ def duck_under_voice(music: Path, voice: Path, dest: Path) -> Path:
     loudnorm_wav(voice, voice_m, integrated=VOICE_LUFS, true_peak=TRUE_PEAK_DBTP)
     loudnorm_wav(music, bed_m, integrated=VOICE_LUFS, true_peak=TRUE_PEAK_DBTP)
     seconds = float(probe(bed_m)["format"]["duration"])
-    limit = 10 ** (TRUE_PEAK_DBTP / 20.0)
     run(
         [
             ffmpeg_bin(), "-y", "-hide_banner",
@@ -46,7 +60,7 @@ def duck_under_voice(music: Path, voice: Path, dest: Path) -> Path:
             f"[0:a]volume={BED_UNDER_VOICE_DB}dB,aresample=48000,aformat=channel_layouts=stereo[mus];"
             f"[1:a]aresample=48000,aformat=channel_layouts=stereo,apad=whole_dur={seconds:.3f},asplit=2[vo][key];"
             "[mus][key]sidechaincompress=threshold=0.015:ratio=10:attack=20:release=320:makeup=1[duck];"
-            f"[vo][duck]amix=inputs=2:duration=longest:normalize=0,alimiter=limit={limit:.5f}[a]",
+            f"[vo][duck]amix=inputs=2:duration=longest:normalize=0,{true_peak_limiter()}[a]",
             "-map", "[a]",
             "-ar", "48000", "-ac", "2", "-c:a", "pcm_s16le",
             str(dest),
