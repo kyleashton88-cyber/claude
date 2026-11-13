@@ -1,0 +1,221 @@
+{
+  "source": "illustration-engine",
+  "mode": "normal",
+  "fallback_tier": false,
+  "rule": "In-house illustration engine. These files are not course stills. The engine does not write into course/. A router may copy an approved fallback plate into course/images/_fallback_quarantine/.",
+  "images": [
+    {
+      "file": "01.png",
+      "path": "01.png",
+      "job_id": "70774417-5047-49d4-a2e9-374b2b42164a",
+      "lesson": null,
+      "prompt_hash": "052fbb42c4a395954ae4ccf4a0edb042d165eb7f14c204ffd1611da37f9040b8",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal analogy_ladder",
+      "created_at": "2026-11-13T09:21:35+00:00",
+      "updated_at": "2026-11-13T09:21:35+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "b2240361eef9bc0ebced20fb26aec5d38b675ae199c54b9d6cf22d283d75a1d3",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "1eb3327795f408e0df8a61c8846d4a2e",
+      "md5": "1eb3327795f408e0df8a61c8846d4a2e",
+      "renderer": "resvg",
+      "alt": "Rungs are levels that wait. One rung is the next step. Labels: Rung, Level, Wait.",
+      "spec": {
+        "type": "analogy_ladder",
+        "preset": "house",
+        "params": {
+          "headline": "THE LADDER",
+          "labels": [
+            "RUNG",
+            "LEVEL",
+            "WAIT"
+          ],
+          "highlight": 2
+        },
+        "headline": "THE LADDER",
+        "labels": [
+          "RUNG",
+          "LEVEL",
+          "WAIT"
+        ]
+      },
+      "idea": "Rungs are levels that wait. One rung is the next step.",
+      "labels": [
+        "Rung",
+        "Level",
+        "Wait"
+      ],
+      "example": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 Rungs are levels that wait. One rung is the next step.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 174",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 38.1px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "02.png",
+      "path": "02.png",
+      "job_id": "2f03eb26-b339-41cf-8e52-fc7716e0a866",
+      "lesson": null,
+      "prompt_hash": "169edd185d93323f8f4fcb2cf564c05da3bf689e76aef10d31bba91c149b736b",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal analogy_ladder",
+      "created_at": "2026-11-13T09:21:37+00:00",
+      "updated_at": "2026-11-13T09:21:37+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "00fc96370d7d5b82c8e43f44706ecb0b4832a2bd01fed54f13b423003915b727",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "1005d445dd3a73b7793a07d84367c68e",
+      "md5": "1005d445dd3a73b7793a07d84367c68e",
+      "renderer": "resvg",
+      "alt": "Rungs are levels that wait. One rung is the next step. Labels: Next, Rung, Wait.",
+      "spec": {
+        "type": "analogy_ladder",
+        "preset": "house",
+        "params": {
+          "headline": "NEXT RUNG",
+          "labels": [
+            "NEXT",
+            "RUNG",
+            "WAIT"
+          ],
+          "highlight": 1
+        },
+        "headline": "NEXT RUNG",
+        "labels": [
+          "NEXT",
+          "RUNG",
+          "WAIT"
+        ]
+      },
+      "idea": "Rungs are levels that wait. One rung is the next step.",
+      "labels": [
+        "Next",
+        "Rung",
+        "Wait"
+      ],
+      "example": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 Rungs are levels that wait. One rung is the next step.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 192",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 32.7px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "03.png",
+      "path": "03.png",
+      "job_id": "0404963f-f121-41ec-9b8c-f508b59ab42d",
+      "lesson": null,
+      "prompt_hash": "3245406621a82cc465922cb9ca06c89c65926dcce4c7272271d5013fb672243b",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal analogy_ladder",
+      "created_at": "2026-11-13T09:21:39+00:00",
+      "updated_at": "2026-11-13T09:21:39+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "c06b1dacb9430c14388d341042b5c29e0a174635d3780dd42c592c25db0688c8",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "89f1b5c09d42242d4b8fd456d1a1e89b",
+      "md5": "89f1b5c09d42242d4b8fd456d1a1e89b",
+      "renderer": "resvg",
+      "alt": "Rungs are levels that wait. One rung is the next step. Labels: Even, Rung, Gap.",
+      "spec": {
+        "type": "analogy_ladder",
+        "preset": "house",
+        "params": {
+          "headline": "EVEN RUNGS",
+          "labels": [
+            "EVEN",
+            "RUNG",
+            "GAP"
+          ],
+          "highlight": 4
+        },
+        "headline": "EVEN RUNGS",
+        "labels": [
+          "EVEN",
+          "RUNG",
+          "GAP"
+        ]
+      },
+      "idea": "Rungs are levels that wait. One rung is the next step.",
+      "labels": [
+        "Even",
+        "Rung",
+        "Gap"
+      ],
+      "example": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 Rungs are levels that wait. One rung is the next step.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 193",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 32.7px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    }
+  ]
+}

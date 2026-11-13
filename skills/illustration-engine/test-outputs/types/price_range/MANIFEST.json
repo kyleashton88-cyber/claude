@@ -1,0 +1,221 @@
+{
+  "source": "illustration-engine",
+  "mode": "normal",
+  "fallback_tier": false,
+  "rule": "In-house illustration engine. These files are not course stills. The engine does not write into course/. A router may copy an approved fallback plate into course/images/_fallback_quarantine/.",
+  "images": [
+    {
+      "file": "01.png",
+      "path": "01.png",
+      "job_id": "5ba6cfe8-0efe-4091-b283-d737ebe60cfb",
+      "lesson": null,
+      "prompt_hash": "f16ec8b9e57da71a1ee8fadade56a42602fd22c50085d435aaf53c21347da9ed",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal price_range",
+      "created_at": "2026-11-13T09:21:06+00:00",
+      "updated_at": "2026-11-13T09:21:06+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "7dae8b3ed4fefadc5d0e65531bcbe5e5380758fc64e72b72f33608f080571bc5",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "244e4d408328a3984ce1cbbe71d45508",
+      "md5": "244e4d408328a3984ce1cbbe71d45508",
+      "renderer": "resvg",
+      "alt": "A top and a bottom, with price moving inside the band. Labels: Upper, Lower, Range.",
+      "spec": {
+        "type": "price_range",
+        "preset": "house",
+        "params": {
+          "variant": "inside",
+          "headline": "THE RANGE",
+          "labels": [
+            "UPPER",
+            "LOWER",
+            "RANGE"
+          ]
+        },
+        "headline": "THE RANGE",
+        "labels": [
+          "UPPER",
+          "LOWER",
+          "RANGE"
+        ]
+      },
+      "idea": "A top and a bottom, with price moving inside the band.",
+      "labels": [
+        "Upper",
+        "Lower",
+        "Range"
+      ],
+      "example": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 174",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 38.1px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "02.png",
+      "path": "02.png",
+      "job_id": "3741c791-9d41-43c6-980b-07a85d6f58cd",
+      "lesson": null,
+      "prompt_hash": "fe50183139c35006253f2a835a216d5bf08d3bf039b4cd72b57c091e18e9892f",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal price_range",
+      "created_at": "2026-11-13T09:21:09+00:00",
+      "updated_at": "2026-11-13T09:21:09+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "162d595db6f15549ddb1d67a76db094eed1ce6e351ee0028c8adf2d3ba45538c",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "5fd8ab1b405ddf29b0a262434620d583",
+      "md5": "5fd8ab1b405ddf29b0a262434620d583",
+      "renderer": "resvg",
+      "alt": "A top and a bottom, with price moving inside the band. Labels: Support, Range, Hold.",
+      "spec": {
+        "type": "price_range",
+        "preset": "house",
+        "params": {
+          "variant": "touch",
+          "headline": "TAG SUPPORT",
+          "labels": [
+            "SUPPORT",
+            "RANGE",
+            "HOLD"
+          ]
+        },
+        "headline": "TAG SUPPORT",
+        "labels": [
+          "SUPPORT",
+          "RANGE",
+          "HOLD"
+        ]
+      },
+      "idea": "A top and a bottom, with price moving inside the band.",
+      "labels": [
+        "Support",
+        "Range",
+        "Hold"
+      ],
+      "example": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 193",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 37.0px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "03.png",
+      "path": "03.png",
+      "job_id": "8aed00a6-d9a6-4b35-af09-7cf8c9308054",
+      "lesson": null,
+      "prompt_hash": "6e510b479b5574a7a261bf82d53c0fbfac7e21c10a8576abdfb6d7d0b0b6a89d",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal price_range",
+      "created_at": "2026-11-13T09:21:12+00:00",
+      "updated_at": "2026-11-13T09:21:12+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "de540a5b72717968754e264cbf4d4340de89512ec3c92eca60e31a6bca979d4d",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "08bb2f504cd592a4f7f9211ab3392e6b",
+      "md5": "08bb2f504cd592a4f7f9211ab3392e6b",
+      "renderer": "resvg",
+      "alt": "A top and a bottom, with price moving inside the band. Labels: Upper, Lower, Out.",
+      "spec": {
+        "type": "price_range",
+        "preset": "house",
+        "params": {
+          "variant": "leave",
+          "headline": "LEAVES THE BAND",
+          "labels": [
+            "UPPER",
+            "LOWER",
+            "OUT"
+          ]
+        },
+        "headline": "LEAVES THE BAND",
+        "labels": [
+          "UPPER",
+          "LOWER",
+          "OUT"
+        ]
+      },
+      "idea": "A top and a bottom, with price moving inside the band.",
+      "labels": [
+        "Upper",
+        "Lower",
+        "Out"
+      ],
+      "example": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 192",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 53% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 33.7px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    }
+  ]
+}

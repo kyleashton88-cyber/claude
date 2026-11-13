@@ -1,0 +1,93 @@
+{
+  "name": "image-quality-standard",
+  "version": 1,
+  "mirrors": "Creative Studio image-style-qa. That rubric lives as a box skill and is not in this repo. This file is the copy the repo scores against.",
+  "pass_bar": {
+    "min_score": 4,
+    "every_category": true,
+    "hard_fails_allowed": 0
+  },
+  "scale": "1 is unusable, 2 is amateur, 3 is competent but not shippable, 4 is professional, 5 is the reference still.",
+  "house_tokens": {
+    "background": ["#00081B", "#000F2A", "#000B21"],
+    "text": "#F4F8FC",
+    "cyan": "#00D4FF",
+    "blue": "#1E7BFF",
+    "mint": "#4FD1A5",
+    "amber": "#FFB020",
+    "muted": "#9AA8BC",
+    "peak": "#B8FFFF"
+  },
+  "categories": [
+    {
+      "id": "beginner_clarity",
+      "title": "Beginner clarity",
+      "judge": "human",
+      "required": true,
+      "question": "With the sound off, is this one idea a beginner can name?"
+    },
+    {
+      "id": "composition_hierarchy",
+      "title": "Composition and hierarchy",
+      "judge": "human",
+      "required": true,
+      "question": "Is there one subject, a clear headline, and quiet space, or is the frame a glowing box?"
+    },
+    {
+      "id": "craft_polish",
+      "title": "Craft and polish",
+      "judge": "human",
+      "required": true,
+      "question": "Would this sit next to a polished crypto explainer still without looking code-drawn?"
+    },
+    {
+      "id": "brand_fidelity",
+      "title": "Brand fidelity",
+      "judge": "human",
+      "required": true,
+      "question": "Navy, cyan, one keyword, mint only for sells, amber only for warnings?"
+    },
+    {
+      "id": "text_legibility",
+      "title": "Text legibility",
+      "judge": "human",
+      "required": true,
+      "question": "Can every word be read at a glance, with spaces, at the intended weight?"
+    },
+    {
+      "id": "character_consistency",
+      "title": "Character consistency",
+      "judge": "human",
+      "required": true,
+      "question": "If a character appears, is it the approved sheet in the locked box? A generated stand-in scores 1."
+    },
+    {
+      "id": "label_accuracy",
+      "title": "Accuracy of labels and numbers",
+      "judge": "human",
+      "required": true,
+      "question": "Do the words and figures match the lesson, with no invented result?"
+    }
+  ],
+  "hard_fails": [
+    "misspelling",
+    "off-brand colours",
+    "muddy or illegible label",
+    "cramped margin",
+    "wrong number",
+    "inconsistent mascot"
+  ],
+  "automated": {
+    "measures": ["contrast", "margins", "fill", "legibility", "palette", "spelling"],
+    "never_awards_a_category_score": true,
+    "human_required": [
+      "beginner_clarity",
+      "composition_hierarchy",
+      "craft_polish",
+      "brand_fidelity",
+      "text_legibility",
+      "character_consistency",
+      "label_accuracy"
+    ]
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "source": "illustration-engine",
+  "mode": "normal",
+  "fallback_tier": false,
+  "rule": "In-house illustration engine. These files are not course stills. The engine does not write into course/. A router may copy an approved fallback plate into course/images/_fallback_quarantine/.",
+  "images": [
+    {
+      "file": "01.png",
+      "path": "01.png",
+      "job_id": "e049ad83-7b44-4d60-a1de-968b771fbdbd",
+      "lesson": null,
+      "prompt_hash": "8a5d2662fb21b8c6b5b86ce3129d8d7ec1bc8f739196ec15dc5b6f67073a5647",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal comparison",
+      "created_at": "2026-11-13T09:21:18+00:00",
+      "updated_at": "2026-11-13T09:21:18+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "3c2f91a298a07022fd374bd145236b164a144444e5dcf7b69d88fd435f7c00b1",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "c7519c39c2f7f855dc67fb3a50f5e560",
+      "md5": "c7519c39c2f7f855dc67fb3a50f5e560",
+      "renderer": "resvg",
+      "alt": "Two ways to see the same idea, side by side. Labels: Clear, Miss.",
+      "spec": {
+        "type": "comparison",
+        "preset": "house",
+        "params": {
+          "headline": "TWO WAYS",
+          "labels": [
+            "CLEAR",
+            "MISS"
+          ],
+          "variant": "shown"
+        },
+        "headline": "TWO WAYS",
+        "labels": [
+          "CLEAR",
+          "MISS"
+        ]
+      },
+      "idea": "Two ways to see the same idea, side by side.",
+      "labels": [
+        "Clear",
+        "Miss"
+      ],
+      "example": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 Two ways to see the same idea, side by side.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 209",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 31% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 37.0px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "02.png",
+      "path": "02.png",
+      "job_id": "1aa315f6-aed1-45e7-b475-6e3e001f6a47",
+      "lesson": null,
+      "prompt_hash": "c6a0ce32a3d9ae570d58597f89fd9696f0e9820c697e44c62504424b6687976e",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal comparison",
+      "created_at": "2026-11-13T09:21:21+00:00",
+      "updated_at": "2026-11-13T09:21:21+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "e4136ffe247b6e208674d8434a023f6214bb97d232c24d918ae375894cde4ddc",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "202f84de14aebede88626a2efac78bb8",
+      "md5": "202f84de14aebede88626a2efac78bb8",
+      "renderer": "resvg",
+      "alt": "Two ways to see the same idea, side by side. Labels: Inside, Outside.",
+      "spec": {
+        "type": "comparison",
+        "preset": "house",
+        "params": {
+          "headline": "INSIDE OUTSIDE",
+          "labels": [
+            "INSIDE",
+            "OUTSIDE"
+          ],
+          "variant": "shown"
+        },
+        "headline": "INSIDE OUTSIDE",
+        "labels": [
+          "INSIDE",
+          "OUTSIDE"
+        ]
+      },
+      "idea": "Two ways to see the same idea, side by side.",
+      "labels": [
+        "Inside",
+        "Outside"
+      ],
+      "example": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 Two ways to see the same idea, side by side.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 169",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 32% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 12.9px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "03.png",
+      "path": "03.png",
+      "job_id": "941d191d-2457-456b-99c9-3fa2001ef36e",
+      "lesson": null,
+      "prompt_hash": "5fef147b1eda73c867c995fb3a07575f5a553a0a77433095af07c85f1cab1e42",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal comparison",
+      "created_at": "2026-11-13T09:21:23+00:00",
+      "updated_at": "2026-11-13T09:21:23+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "607044f7f54aa59e86c2392a006d9256c8928293d981194c314154f8868d44a0",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "a510c1dc323e5c00556108c61947388a",
+      "md5": "a510c1dc323e5c00556108c61947388a",
+      "renderer": "resvg",
+      "alt": "Two ways to see the same idea, side by side. Labels: Number, Shape.",
+      "spec": {
+        "type": "comparison",
+        "preset": "house",
+        "params": {
+          "headline": "NO RESULT",
+          "labels": [
+            "NUMBER",
+            "SHAPE"
+          ],
+          "variant": "plain"
+        },
+        "headline": "NO RESULT",
+        "labels": [
+          "NUMBER",
+          "SHAPE"
+        ]
+      },
+      "idea": "Two ways to see the same idea, side by side.",
+      "labels": [
+        "Number",
+        "Shape"
+      ],
+      "example": false,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 Two ways to see the same idea, side by side.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 193",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 31% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 32.7px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    }
+  ]
+}

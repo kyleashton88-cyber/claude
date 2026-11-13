@@ -1,0 +1,218 @@
+{
+  "source": "illustration-engine",
+  "mode": "normal",
+  "fallback_tier": false,
+  "rule": "In-house illustration engine. These files are not course stills. The engine does not write into course/. A router may copy an approved fallback plate into course/images/_fallback_quarantine/.",
+  "images": [
+    {
+      "file": "01.png",
+      "path": "01.png",
+      "job_id": "20a93693-ffe4-4f20-9722-5caaa38971e9",
+      "lesson": null,
+      "prompt_hash": "347982347650d3710dd0da0b8bde4236fee5cb7039545c2d1bdbb31c887a21cc",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal analogy_fence",
+      "created_at": "2026-11-13T09:21:29+00:00",
+      "updated_at": "2026-11-13T09:21:29+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "da94dd628305d5a00b29a51c5d4259d5f3221277d44fd78c9684b1a3b2343dec",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "27e6912814765193ff311e95f930896d",
+      "md5": "27e6912814765193ff311e95f930896d",
+      "renderer": "resvg",
+      "alt": "A fence around practice: stay inside the rails. Labels: Inside, Fence, Practice.",
+      "spec": {
+        "type": "analogy_fence",
+        "preset": "house",
+        "params": {
+          "headline": "THE FENCE",
+          "labels": [
+            "INSIDE",
+            "FENCE",
+            "PRACTICE"
+          ]
+        },
+        "headline": "THE FENCE",
+        "labels": [
+          "INSIDE",
+          "FENCE",
+          "PRACTICE"
+        ]
+      },
+      "idea": "A fence around practice: stay inside the rails.",
+      "labels": [
+        "Inside",
+        "Fence",
+        "Practice"
+      ],
+      "example": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A fence around practice: stay inside the rails.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 174",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 38.1px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "02.png",
+      "path": "02.png",
+      "job_id": "0cca387e-40b5-42d8-aef7-8a4aa1c9ebd5",
+      "lesson": null,
+      "prompt_hash": "07e3a095ee06d4ab85c797b3aa4b7a445ccfda560ead4835084376ff992a5c84",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal analogy_fence",
+      "created_at": "2026-11-13T09:21:31+00:00",
+      "updated_at": "2026-11-13T09:21:31+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "1734bbd704a714e9953a2e3284e7faf2b4e9a9a9f52480fa92a1403ad66734f3",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "8aacc7ba9b504655ac5533185213c663",
+      "md5": "8aacc7ba9b504655ac5533185213c663",
+      "renderer": "resvg",
+      "alt": "A fence around practice: stay inside the rails. Labels: Rail, Path, Inside.",
+      "spec": {
+        "type": "analogy_fence",
+        "preset": "house",
+        "params": {
+          "headline": "STAY INSIDE",
+          "labels": [
+            "RAIL",
+            "PATH",
+            "INSIDE"
+          ]
+        },
+        "headline": "STAY INSIDE",
+        "labels": [
+          "RAIL",
+          "PATH",
+          "INSIDE"
+        ]
+      },
+      "idea": "A fence around practice: stay inside the rails.",
+      "labels": [
+        "Rail",
+        "Path",
+        "Inside"
+      ],
+      "example": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A fence around practice: stay inside the rails.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 192",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 12.9px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "03.png",
+      "path": "03.png",
+      "job_id": "c1df2c4f-549b-4a43-9560-7652f04fb498",
+      "lesson": null,
+      "prompt_hash": "1ffc26456c969a1b6c294d02a90c0eed2bed45e76349cfdf8365b0a8ab9cd39a",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal analogy_fence",
+      "created_at": "2026-11-13T09:21:33+00:00",
+      "updated_at": "2026-11-13T09:21:33+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "cdb17e8a31eda4c7b1ab6eed0d045400cea767e48abca89a4ad72a2574ab9a29",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "da31a6dfce2c12fdfb2a7424d9c134ca",
+      "md5": "da31a6dfce2c12fdfb2a7424d9c134ca",
+      "renderer": "resvg",
+      "alt": "A fence around practice: stay inside the rails. Labels: Practice, Fence, Edge.",
+      "spec": {
+        "type": "analogy_fence",
+        "preset": "house",
+        "params": {
+          "headline": "PRACTICE FENCE",
+          "labels": [
+            "PRACTICE",
+            "FENCE",
+            "EDGE"
+          ]
+        },
+        "headline": "PRACTICE FENCE",
+        "labels": [
+          "PRACTICE",
+          "FENCE",
+          "EDGE"
+        ]
+      },
+      "idea": "A fence around practice: stay inside the rails.",
+      "labels": [
+        "Practice",
+        "Fence",
+        "Edge"
+      ],
+      "example": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A fence around practice: stay inside the rails.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 194",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 53% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 33.5px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    }
+  ]
+}

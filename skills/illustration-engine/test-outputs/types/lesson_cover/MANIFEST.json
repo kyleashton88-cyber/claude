@@ -1,0 +1,206 @@
+{
+  "source": "illustration-engine",
+  "mode": "normal",
+  "fallback_tier": false,
+  "rule": "In-house illustration engine. These files are not course stills. The engine does not write into course/. A router may copy an approved fallback plate into course/images/_fallback_quarantine/.",
+  "images": [
+    {
+      "file": "01.png",
+      "path": "01.png",
+      "job_id": "3e134846-2047-4b32-a2b9-3e4e33bbdf77",
+      "lesson": null,
+      "prompt_hash": "ee439459bc12b3d5765b12a56f6349c62d179876fa88657498899f0a75a1db46",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal lesson_cover",
+      "created_at": "2026-11-13T09:22:04+00:00",
+      "updated_at": "2026-11-13T09:22:04+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "b0a9d8a3c035bf1f3ffafe9b6d1f09d4ad6de1203d50efc4c826293eb384876e",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "ead3314e6ffa9acebc2917b907703263",
+      "md5": "ead3314e6ffa9acebc2917b907703263",
+      "renderer": "resvg",
+      "alt": "A lesson cover: a title and the mascot. Labels: Lesson, Start.",
+      "spec": {
+        "type": "lesson_cover",
+        "preset": "house",
+        "params": {
+          "title": "THE RANGE",
+          "labels": [
+            "LESSON",
+            "START"
+          ]
+        },
+        "labels": [
+          "LESSON",
+          "START"
+        ]
+      },
+      "idea": "A lesson cover: a title and the mascot.",
+      "labels": [
+        "Lesson",
+        "Start"
+      ],
+      "example": false,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A lesson cover: a title and the mascot.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 174",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 51% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 38.1px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "02.png",
+      "path": "02.png",
+      "job_id": "2ef3ec34-07c0-42ee-9673-4693beae4b72",
+      "lesson": null,
+      "prompt_hash": "4d200c128af009e6c2f870f4066ffc4bda29ab8af452b2ae7babb1362837fbaa",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal lesson_cover",
+      "created_at": "2026-11-13T09:22:06+00:00",
+      "updated_at": "2026-11-13T09:22:06+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "d7022c2c29b9e1ded0c154b21cf18beaa324198ef86972f878d2c86a3e18feba",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "105e75deeaea5b4ef7c4b4b61545e8d9",
+      "md5": "105e75deeaea5b4ef7c4b4b61545e8d9",
+      "renderer": "resvg",
+      "alt": "A lesson cover: a title and the mascot. Labels: Lesson, Rungs.",
+      "spec": {
+        "type": "lesson_cover",
+        "preset": "house",
+        "params": {
+          "title": "LEVELS",
+          "labels": [
+            "LESSON",
+            "RUNGS"
+          ]
+        },
+        "labels": [
+          "LESSON",
+          "RUNGS"
+        ]
+      },
+      "idea": "A lesson cover: a title and the mascot.",
+      "labels": [
+        "Lesson",
+        "Rungs"
+      ],
+      "example": false,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A lesson cover: a title and the mascot.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 109",
+        "pass: word spacing \u2014 one headline word",
+        "pass: ink coverage \u2014 50% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 10.3px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "03.png",
+      "path": "03.png",
+      "job_id": "7cdfc141-cd1d-47f8-a9c0-03e108f1872c",
+      "lesson": null,
+      "prompt_hash": "2ce6c406d99034be25641cb60fcb8d272d9ee38b4b18760210a1fd6e4b9b209e",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal lesson_cover",
+      "created_at": "2026-11-13T09:22:09+00:00",
+      "updated_at": "2026-11-13T09:22:09+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "48fa5a41017658ac25ce7fae350376ca482cf24161546f2e7fefa24dd572a95b",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "709aaee2ec2be7cc1f22d8d3105428b8",
+      "md5": "709aaee2ec2be7cc1f22d8d3105428b8",
+      "renderer": "resvg",
+      "alt": "A lesson cover: a title and the mascot. Labels: Lesson, Line.",
+      "spec": {
+        "type": "lesson_cover",
+        "preset": "house",
+        "params": {
+          "title": "A STOP",
+          "labels": [
+            "LESSON",
+            "LINE"
+          ]
+        },
+        "labels": [
+          "LESSON",
+          "LINE"
+        ]
+      },
+      "idea": "A lesson cover: a title and the mascot.",
+      "labels": [
+        "Lesson",
+        "Line"
+      ],
+      "example": false,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A lesson cover: a title and the mascot.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 188",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 15.1px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    }
+  ]
+}

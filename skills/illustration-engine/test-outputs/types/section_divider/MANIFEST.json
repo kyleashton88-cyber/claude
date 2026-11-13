@@ -1,0 +1,218 @@
+{
+  "source": "illustration-engine",
+  "mode": "normal",
+  "fallback_tier": false,
+  "rule": "In-house illustration engine. These files are not course stills. The engine does not write into course/. A router may copy an approved fallback plate into course/images/_fallback_quarantine/.",
+  "images": [
+    {
+      "file": "01.png",
+      "path": "01.png",
+      "job_id": "65bbd4b4-66b3-4fd9-a202-e1a80e339b83",
+      "lesson": null,
+      "prompt_hash": "99ebdb9d2a64eedfdaf50115654a6e797b865a83b2b0685d2d83977d1333069f",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal section_divider",
+      "created_at": "2026-11-13T09:22:11+00:00",
+      "updated_at": "2026-11-13T09:22:11+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "85fad550c16634d5d366135a286c52da395969436d2eadd017e6443cc25495ad",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "ebee69b42fe7c0229d11702cdd19f2af",
+      "md5": "ebee69b42fe7c0229d11702cdd19f2af",
+      "renderer": "resvg",
+      "alt": "A section divider with one word. Labels: Part, Next.",
+      "spec": {
+        "type": "section_divider",
+        "preset": "house",
+        "params": {
+          "title": "NEXT",
+          "labels": [
+            "PART",
+            "NEXT"
+          ]
+        },
+        "labels": [
+          "PART",
+          "NEXT"
+        ]
+      },
+      "idea": "A section divider with one word.",
+      "labels": [
+        "Part",
+        "Next"
+      ],
+      "example": false,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A section divider with one word.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 244",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 38% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 15.2px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "02.png",
+      "path": "02.png",
+      "job_id": "6c519b82-e757-4117-bbf3-a65aea39dae5",
+      "lesson": null,
+      "prompt_hash": "5d98bfcc300ef39751f8af657a22296d825f1cb12c9fa9b60e2ca40e9696c423",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal section_divider",
+      "created_at": "2026-11-13T09:22:13+00:00",
+      "updated_at": "2026-11-13T09:22:13+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "54a219790fe04b7aedcda91ee481bb261972e6e3e8dc656172b5d44f87817c6e",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "c6df4664eeaa63034525e9af838ed775",
+      "md5": "c6df4664eeaa63034525e9af838ed775",
+      "renderer": "resvg",
+      "alt": "A section divider with one word. Labels: Part, Range.",
+      "spec": {
+        "type": "section_divider",
+        "preset": "house",
+        "params": {
+          "title": "RANGE",
+          "labels": [
+            "PART",
+            "RANGE"
+          ]
+        },
+        "labels": [
+          "PART",
+          "RANGE"
+        ]
+      },
+      "idea": "A section divider with one word.",
+      "labels": [
+        "Part",
+        "Range"
+      ],
+      "example": false,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A section divider with one word.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 237",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 38% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 32.7px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "03.png",
+      "path": "03.png",
+      "job_id": "f8b861f6-6952-4ded-bbe5-5c42f0428126",
+      "lesson": null,
+      "prompt_hash": "99f8234928f18fc448ce2309a28f21271b92fc1c50d0f67bbd744baf5fa55360",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal section_divider",
+      "created_at": "2026-11-13T09:22:28+00:00",
+      "updated_at": "2026-11-13T09:22:28+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "622120ede2ec2c6d005aff649d66518c381f54bf5e5c37004634ed79eaab1479",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "d49c6853ebcd0cca05dd7af73dd5f206",
+      "md5": "d49c6853ebcd0cca05dd7af73dd5f206",
+      "renderer": "resvg",
+      "alt": "A section divider with one word. Labels: Part, Paper.",
+      "spec": {
+        "type": "section_divider",
+        "preset": "house",
+        "params": {
+          "title": "PRACTICE",
+          "labels": [
+            "PART",
+            "PAPER"
+          ]
+        },
+        "labels": [
+          "PART",
+          "PAPER"
+        ]
+      },
+      "idea": "A section divider with one word.",
+      "labels": [
+        "Part",
+        "Paper"
+      ],
+      "example": false,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A section divider with one word.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 233",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 39% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 33.5px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    }
+  ],
+  "rejected": [
+    {
+      "file": "03.png",
+      "prompt_hash": "99f8234928f18fc448ce2309a28f21271b92fc1c50d0f67bbd744baf5fa55360",
+      "qa_status": "fail",
+      "reviewer": "engine-preflight",
+      "sha256": "622120ede2ec2c6d005aff649d66518c381f54bf5e5c37004634ed79eaab1479",
+      "updated_at": "2026-11-13T09:22:15+00:00",
+      "reason": "QA failed; the previous good plate was removed",
+      "kept": ".failed/03.png"
+    }
+  ]
+}

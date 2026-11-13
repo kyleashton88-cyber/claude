@@ -5,7 +5,9 @@ description: Write a ChatGPT image prompt for one tutorial beat so the still sho
 
 # Beat-to-illustration prompts
 
-Every beat gets its own still. Code may add captions, lower thirds, the disclaimer line, and a slow zoom. Code does not draw the diagram, the chart, the checklist, or the character.
+Deprecated as an image-quality rubric. Prompt writing stays here. Whether a still is good enough to ship is `skills/image-quality-standard/` (pass bar 4 in every category, no hard fail). Lesson stills are still made in ChatGPT. This skill does not switch that path.
+
+Every beat gets its own still. Code may add captions, lower thirds, the disclaimer line, and a slow zoom. Code does not draw the diagram, the chart, the checklist, or the character for a live lesson.
 
 ## When to write one
 

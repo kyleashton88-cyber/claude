@@ -1,0 +1,206 @@
+{
+  "source": "illustration-engine",
+  "mode": "normal",
+  "fallback_tier": false,
+  "rule": "In-house illustration engine. These files are not course stills. The engine does not write into course/. A router may copy an approved fallback plate into course/images/_fallback_quarantine/.",
+  "images": [
+    {
+      "file": "01.png",
+      "path": "01.png",
+      "job_id": "6f981113-494c-48a7-8586-8f2ebba6181c",
+      "lesson": null,
+      "prompt_hash": "9e7af0e289a7211eba26a406e3d2d65de65ef33d2cba199dbcca9c5e0fdca777",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal title_card",
+      "created_at": "2026-11-13T09:21:57+00:00",
+      "updated_at": "2026-11-13T09:21:57+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "63dcecc6a984578f1da4ec26f942b247794487233779e3c758010d7afc63a696",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "44fe8d80b578f1d9668a6740d9848c44",
+      "md5": "44fe8d80b578f1d9668a6740d9848c44",
+      "renderer": "resvg",
+      "alt": "A title card for the lesson, with no extra lockup. Labels: Start, Here.",
+      "spec": {
+        "type": "title_card",
+        "preset": "house",
+        "params": {
+          "title": "INTRODUCTION",
+          "labels": [
+            "START",
+            "HERE"
+          ]
+        },
+        "labels": [
+          "START",
+          "HERE"
+        ]
+      },
+      "idea": "A title card for the lesson, with no extra lockup.",
+      "labels": [
+        "Start",
+        "Here"
+      ],
+      "example": false,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A title card for the lesson, with no extra lockup.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 131",
+        "pass: word spacing \u2014 one headline word",
+        "pass: ink coverage \u2014 48% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 10.3px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "02.png",
+      "path": "02.png",
+      "job_id": "eef7f95d-25ec-4b51-9129-cf81d903bff0",
+      "lesson": null,
+      "prompt_hash": "9f8b26e54d1c905e146d90708985dbc35f71eef62a20e4372f990360634faf88",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal title_card",
+      "created_at": "2026-11-13T09:21:59+00:00",
+      "updated_at": "2026-11-13T09:21:59+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "70d490fa48fb4bde4c5d3ff9a5fe203a739961f1a4640544e8e2ce1f1d4b1c6f",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "750fcb84a89404cdc044ca74afca8c65",
+      "md5": "750fcb84a89404cdc044ca74afca8c65",
+      "renderer": "resvg",
+      "alt": "A title card for the lesson, with no extra lockup. Labels: Top, Bottom.",
+      "spec": {
+        "type": "title_card",
+        "preset": "house",
+        "params": {
+          "title": "THE RANGE",
+          "labels": [
+            "TOP",
+            "BOTTOM"
+          ]
+        },
+        "labels": [
+          "TOP",
+          "BOTTOM"
+        ]
+      },
+      "idea": "A title card for the lesson, with no extra lockup.",
+      "labels": [
+        "Top",
+        "Bottom"
+      ],
+      "example": false,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A title card for the lesson, with no extra lockup.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 174",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 47% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 38.1px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "03.png",
+      "path": "03.png",
+      "job_id": "a31e67c1-66d6-421a-85c8-019dfe495212",
+      "lesson": null,
+      "prompt_hash": "d2be59506d2f40c586d280dab4ac977bf4aefb6f6109d2b0926021e695494f4c",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal title_card",
+      "created_at": "2026-11-13T09:22:01+00:00",
+      "updated_at": "2026-11-13T09:22:01+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "3954ca7e0fca6813e5980a0e4bbd57cea1414e4f1664912dca0a9c5f86dd81cd",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "0318dbf461f2c07166b2a119d3fdab1f",
+      "md5": "0318dbf461f2c07166b2a119d3fdab1f",
+      "renderer": "resvg",
+      "alt": "A title card for the lesson, with no extra lockup. Labels: Next, Page.",
+      "spec": {
+        "type": "title_card",
+        "preset": "house",
+        "params": {
+          "title": "NEXT STEP",
+          "labels": [
+            "NEXT",
+            "PAGE"
+          ]
+        },
+        "labels": [
+          "NEXT",
+          "PAGE"
+        ]
+      },
+      "idea": "A title card for the lesson, with no extra lockup.",
+      "labels": [
+        "Next",
+        "Page"
+      ],
+      "example": false,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A title card for the lesson, with no extra lockup.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 164",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 47% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 15.1px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    }
+  ]
+}

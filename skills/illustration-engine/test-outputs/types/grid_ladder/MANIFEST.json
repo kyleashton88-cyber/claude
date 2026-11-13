@@ -1,0 +1,224 @@
+{
+  "source": "illustration-engine",
+  "mode": "normal",
+  "fallback_tier": false,
+  "rule": "In-house illustration engine. These files are not course stills. The engine does not write into course/. A router may copy an approved fallback plate into course/images/_fallback_quarantine/.",
+  "images": [
+    {
+      "file": "01.png",
+      "path": "01.png",
+      "job_id": "eccfd6b0-baec-4ead-b91a-cd87fdda3de4",
+      "lesson": null,
+      "prompt_hash": "57f8e71695ae08600f50c023f0a0a7cad787a80613ea0233727ece0ef7afe3f9",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal grid_ladder",
+      "created_at": "2026-11-13T09:20:56+00:00",
+      "updated_at": "2026-11-13T09:20:56+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "bb7c394f689fcee9a87d22f54dd0940a40c14967376256782f7034c7a07551ee",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "8d52386d462a0b6a73f613f57985394a",
+      "md5": "8d52386d462a0b6a73f613f57985394a",
+      "renderer": "resvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: Buy, Sell, Price.",
+      "spec": {
+        "type": "grid_ladder",
+        "preset": "house",
+        "params": {
+          "low": 90,
+          "high": 110,
+          "grids": 10,
+          "price": 100,
+          "labels": [
+            "BUY",
+            "SELL",
+            "PRICE"
+          ]
+        },
+        "labels": [
+          "BUY",
+          "SELL",
+          "PRICE"
+        ]
+      },
+      "idea": "Buy orders wait below the mark and sell orders wait above it.",
+      "labels": [
+        "Buy",
+        "Sell",
+        "Price"
+      ],
+      "example": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 a figure is on the plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 176",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 6% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 12.9px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "02.png",
+      "path": "02.png",
+      "job_id": "c63c17bf-2914-4f52-ad03-00bd6e75c2cd",
+      "lesson": null,
+      "prompt_hash": "fb5ffbe9ad5e7dbbd7c72c89cb195d7e25136c7e19368bbea106b13d45d99e51",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal grid_ladder",
+      "created_at": "2026-11-13T09:20:57+00:00",
+      "updated_at": "2026-11-13T09:20:57+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "2312db1efa6803c52c88379c5055046302c5f2fd84e302b5c53ac16d37cc4550",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "2d16b6aae0353a671337408443790767",
+      "md5": "2d16b6aae0353a671337408443790767",
+      "renderer": "resvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: Buy, Sell, Fill.",
+      "spec": {
+        "type": "grid_ladder",
+        "preset": "house",
+        "params": {
+          "low": 80,
+          "high": 120,
+          "grids": 6,
+          "price": 95,
+          "labels": [
+            "BUY",
+            "SELL",
+            "FILL"
+          ]
+        },
+        "labels": [
+          "BUY",
+          "SELL",
+          "FILL"
+        ]
+      },
+      "idea": "Buy orders wait below the mark and sell orders wait above it.",
+      "labels": [
+        "Buy",
+        "Sell",
+        "Fill"
+      ],
+      "example": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 a figure is on the plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 176",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 5% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 12.9px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "03.png",
+      "path": "03.png",
+      "job_id": "51f9edc6-6c87-4569-8054-3668380922b6",
+      "lesson": null,
+      "prompt_hash": "cfe399063409c4c3349e1fc7ed2c2aa9a5db16cbe19543ca9f45742c8ea6eb49",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal grid_ladder",
+      "created_at": "2026-11-13T09:20:57+00:00",
+      "updated_at": "2026-11-13T09:20:57+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "ec1e25c14acbc68dcdb41c132e78856007bf0e7b62aba0f65996f7b491546783",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "633fef838d4f14b8fcab716506936ccb",
+      "md5": "633fef838d4f14b8fcab716506936ccb",
+      "renderer": "resvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: Buy, Sell, Price.",
+      "spec": {
+        "type": "grid_ladder",
+        "preset": "house",
+        "params": {
+          "low": 40,
+          "high": 70,
+          "grids": 8,
+          "price": 62,
+          "labels": [
+            "BUY",
+            "SELL",
+            "PRICE"
+          ]
+        },
+        "labels": [
+          "BUY",
+          "SELL",
+          "PRICE"
+        ]
+      },
+      "idea": "Buy orders wait below the mark and sell orders wait above it.",
+      "labels": [
+        "Buy",
+        "Sell",
+        "Price"
+      ],
+      "example": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 a figure is on the plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 176",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 6% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 12.9px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    }
+  ]
+}

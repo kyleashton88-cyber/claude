@@ -1,0 +1,23 @@
+[project]
+name = "illustration-engine"
+version = "1.0.0"
+description = "In-house SVG illustration engine for course diagrams."
+requires-python = ">=3.10"
+dependencies = [
+  "Pillow>=10",
+  "cairosvg>=2.7",
+  "PyYAML>=6",
+]
+
+[project.scripts]
+illustration-engine = "illustration_engine.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["illustration_engine*"]
+
+[tool.setuptools.package-data]
+illustration_engine = ["assets/fonts/*"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,222 @@
+{
+  "source": "illustration-engine",
+  "mode": "normal",
+  "fallback_tier": false,
+  "rule": "In-house illustration engine. These files are not course stills. The engine does not write into course/. A router may copy an approved fallback plate into course/images/_fallback_quarantine/.",
+  "images": [
+    {
+      "file": "01.png",
+      "path": "01.png",
+      "job_id": "3b627d8d-3037-4d22-980f-14f215ff51b2",
+      "lesson": null,
+      "prompt_hash": "382d6d258c25674ac0269600424995aef184087371a6aae675da4d05f893d7af",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal flowchart",
+      "created_at": "2026-11-13T09:21:14+00:00",
+      "updated_at": "2026-11-13T09:21:14+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "cd14846fb33e5d1642922c1447d9d86177113482a7936e3c6746ff77c015e12c",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "862b55808ea99804ed95cb377ace55bb",
+      "md5": "862b55808ea99804ed95cb377ace55bb",
+      "renderer": "resvg",
+      "alt": "A short path of steps, read from left to right. Labels: Range, Levels, Stop.",
+      "spec": {
+        "type": "flowchart",
+        "preset": "house",
+        "params": {
+          "headline": "THE PATH",
+          "labels": [
+            "RANGE",
+            "LEVELS",
+            "STOP"
+          ]
+        },
+        "headline": "THE PATH",
+        "labels": [
+          "RANGE",
+          "LEVELS",
+          "STOP"
+        ]
+      },
+      "idea": "A short path of steps, read from left to right.",
+      "labels": [
+        "Range",
+        "Levels",
+        "Stop"
+      ],
+      "example": false,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A short path of steps, read from left to right.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 174",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 28% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 38.1px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "02.png",
+      "path": "02.png",
+      "job_id": "1ca0c7b0-548f-46c5-bb46-efe96bc1002b",
+      "lesson": null,
+      "prompt_hash": "b92a7606950d79094537eec7dc91db2cc72698aa9d3623cfff9852f917e57d6a",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal flowchart",
+      "created_at": "2026-11-13T09:21:15+00:00",
+      "updated_at": "2026-11-13T09:21:15+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "daeafc8405563934273c837d892dec3d3c1aa1693d55c0103b6d4dce6ffc943e",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "e6d63e2c3835843a44e60bf6330239b1",
+      "md5": "e6d63e2c3835843a44e60bf6330239b1",
+      "renderer": "resvg",
+      "alt": "A short path of steps, read from left to right. Labels: Look, Note, Decide, Range, Levels.",
+      "spec": {
+        "type": "flowchart",
+        "preset": "house",
+        "params": {
+          "headline": "A REVIEW",
+          "labels": [
+            "LOOK",
+            "NOTE",
+            "DECIDE"
+          ]
+        },
+        "headline": "A REVIEW",
+        "labels": [
+          "LOOK",
+          "NOTE",
+          "DECIDE"
+        ]
+      },
+      "idea": "A short path of steps, read from left to right.",
+      "labels": [
+        "Look",
+        "Note",
+        "Decide",
+        "Range",
+        "Levels"
+      ],
+      "example": false,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 5 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A short path of steps, read from left to right.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 188",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 33% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 33.7px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "03.png",
+      "path": "03.png",
+      "job_id": "0fe0afcc-8975-4847-83af-cd804ed4c3d3",
+      "lesson": null,
+      "prompt_hash": "28db6f9b5e8f95bbbff197f21ef36fef75cfac668bbed0d34d67d169d8d6e5d8",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal flowchart",
+      "created_at": "2026-11-13T09:21:16+00:00",
+      "updated_at": "2026-11-13T09:21:16+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "16d93a470eaf04e71c2703960a528db6b395e0492ae7c9362a4bc3b622f1b6dc",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "625f39fb90713b0c1a31b310ae2622c8",
+      "md5": "625f39fb90713b0c1a31b310ae2622c8",
+      "renderer": "resvg",
+      "alt": "A short path of steps, read from left to right. Labels: Write, Check, Wait, Range, Levels.",
+      "spec": {
+        "type": "flowchart",
+        "preset": "house",
+        "params": {
+          "headline": "PAPER FIRST",
+          "labels": [
+            "WRITE",
+            "CHECK",
+            "WAIT"
+          ]
+        },
+        "headline": "PAPER FIRST",
+        "labels": [
+          "WRITE",
+          "CHECK",
+          "WAIT"
+        ]
+      },
+      "idea": "A short path of steps, read from left to right.",
+      "labels": [
+        "Write",
+        "Check",
+        "Wait",
+        "Range",
+        "Levels"
+      ],
+      "example": false,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 5 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A short path of steps, read from left to right.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 189",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 33% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 34.6px at a 55px cap. Font preflight only, not a craft score."
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    }
+  ]
+}
