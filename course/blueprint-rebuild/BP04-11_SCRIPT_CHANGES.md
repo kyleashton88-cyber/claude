@@ -40,60 +40,10 @@ Each line below only restates the lesson or a basic dictionary meaning. Definiti
 ### bp-07-spot-paper-trading
 
 - Beat 1: Spot means the asset itself.
-- Beat 1: Paper or demo means a practice screen, not a live order.
-- Beat 1: Point at the part that belongs to Hook.
-- Beat 1: If you cannot point yet, stay on this frame.
-- Beat 3: Spot means the asset itself, on a paper or demo screen.
-- Beat 4: Mark the page Example.
-- Beat 4: Point at the part that belongs to Not affiliated.
-- Beat 4: If you cannot point yet, stay on this frame.
-- Beat 5: Mark the page Example.
-- Beat 5: Point at the part that belongs to Fields from the page.
-- Beat 5: If you cannot point yet, stay on this frame.
-- Beat 6: Spot means you are on the asset itself.
 - Beat 6: Leverage is borrowed size.
-- Beat 6: A multiple is a times-number for that borrowed size.
-- Beat 6: Mark the page Example.
-- Beat 6: Point at the part that belongs to Spot, not a contract.
-- Beat 6: If you cannot point yet, stay on this frame.
-- Beat 7: An API key is a secret that lets software act on an account.
+- Beat 6: A multiple is a times-number.
+- Beat 7: An API key is a secret code.
 - Beat 7: A seed phrase is the word list that recovers a wallet.
-- Beat 7: Mark the page Example.
-- Beat 7: Point at the part that belongs to Keys.
-- Beat 7: If you cannot point yet, stay on this frame.
-- Beat 8: Mark the page Example.
-- Beat 8: Point at the part that belongs to Walk the pair.
-- Beat 8: If you cannot point yet, stay on this frame.
-- Beat 9: Mark the page Example.
-- Beat 9: Point at the part that belongs to Walk the band.
-- Beat 9: If you cannot point yet, stay on this frame.
-- Beat 10: Mark the page Example.
-- Beat 10: Point at the part that belongs to Walk the count.
-- Beat 10: If you cannot point yet, stay on this frame.
-- Beat 11: Mark the page Example.
-- Beat 11: Point at the part that belongs to Walk the sentences.
-- Beat 11: If you cannot point yet, stay on this frame.
-- Beat 12: Mark the page Example.
-- Beat 12: Point at the part that belongs to Common miss.
-- Beat 12: If you cannot point yet, stay on this frame.
-- Beat 13: Mark the page Example.
-- Beat 13: Point at the part that belongs to No order.
-- Beat 13: If you cannot point yet, stay on this frame.
-- Beat 14: Mark the page Example.
-- Beat 14: Point at the part that belongs to The action.
-- Beat 14: If you cannot point yet, stay on this frame.
-- Beat 15: Mark the page Example.
-- Beat 15: Point at the part that belongs to Recap.
-- Beat 15: If you cannot point yet, stay on this frame.
-- Beat 16: Cover the notes, and say this from memory: A venue name may be printed on a real screen.
-- Beat 16: The answer names a shape on the page.
-- Beat 17: Cover the notes, and say this from memory: The fields you are allowed to copy are the ones you already wrote: pair, upper, lower, gap count, and the two sentences.
-- Beat 17: The answer names a shape on the page.
-- Beat 18: Cover the notes, and say this from memory: The path is spot.
-- Beat 18: The answer names a shape on the page.
-- Beat 19: Mark the page Example.
-- Beat 19: Point at the part that belongs to If the screen differs.
-- Beat 19: If you cannot point yet, stay on this frame.
 
 ### bp-08-managing-and-monitoring
 
@@ -714,26 +664,11 @@ Change 1:
 Change 1:
 
 - After: Spot means the asset itself.
-- After: Paper or demo means a practice screen, not a live order.
 
 Change 2:
 
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Hook.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Hook.
-- After: If you cannot point yet, stay on this frame.
-
-### Beat 3 (intro, Title card)
-
-Change 1:
-
-- After: Spot means the asset itself, on a paper or demo screen.
 
 ### Beat 4 (body, Not affiliated)
 
@@ -742,19 +677,6 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Not affiliated.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Not affiliated.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 5 (body, Fields from the page)
 
 Change 1:
@@ -762,75 +684,32 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Fields from the page.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Fields from the page.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 6 (body, Spot, not a contract)
 
 Change 1:
 
-- After: Spot means you are on the asset itself.
+- After: Leverage is borrowed size.
 
 Change 2:
 
-- After: Leverage is borrowed size.
+- After: A multiple is a times-number.
 
 Change 3:
 
-- After: A multiple is a times-number for that borrowed size.
-
-Change 4:
-
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 5:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 6:
-
-- Before: Say the opening line once more, and point at the part that belongs to Spot, not a contract.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Spot, not a contract.
-- After: If you cannot point yet, stay on this frame.
 
 ### Beat 7 (body, Keys)
 
 Change 1:
 
-- After: An API key is a secret that lets software act on an account.
+- After: An API key is a secret code.
 - After: A seed phrase is the word list that recovers a wallet.
 
 Change 2:
 
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 3:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 4:
-
-- Before: Say the opening line once more, and point at the part that belongs to Keys.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Keys.
-- After: If you cannot point yet, stay on this frame.
 
 ### Beat 8 (demo, Walk the pair)
 
@@ -839,38 +718,12 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Walk the pair.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Walk the pair.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 9 (demo, Walk the band)
 
 Change 1:
 
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Walk the band.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Walk the band.
-- After: If you cannot point yet, stay on this frame.
 
 ### Beat 10 (demo, Walk the count)
 
@@ -879,19 +732,6 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Walk the count.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Walk the count.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 11 (demo, Walk the sentences)
 
 Change 1:
@@ -899,38 +739,12 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Walk the sentences.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Walk the sentences.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 12 (body, Common miss)
 
 Change 1:
 
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Common miss.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Common miss.
-- After: If you cannot point yet, stay on this frame.
 
 ### Beat 13 (body, No order)
 
@@ -941,15 +755,8 @@ Change 1:
 
 Change 2:
 
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
 - Before: We do not run the bot that would confirm for you.
-- Before: Say the opening line once more, and point at the part that belongs to No order.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Mark the page Example.
 - After: The lesson stops in front of that control.
-- After: Point at the part that belongs to No order.
-- After: If you cannot point yet, stay on this frame.
 
 ### Beat 14 (action, The action)
 
@@ -958,19 +765,6 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to The action.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to The action.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 15 (recap, Recap)
 
 Change 1:
@@ -978,74 +772,12 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Recap.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Recap.
-- After: If you cannot point yet, stay on this frame.
-
-### Beat 16 (demo, Your turn)
-
-Change 1:
-
-- Before: Cover the notes and say this from memory: A venue name may be printed on a real screen.
-- After: Cover the notes, and say this from memory: A venue name may be printed on a real screen.
-
-Change 2:
-
-- Before: The answer has to name a shape on the page.
-- After: The answer names a shape on the page.
-
-### Beat 17 (demo, Your turn)
-
-Change 1:
-
-- Before: Cover the notes and say this from memory: The fields you are allowed to copy are the ones you already wrote: pair, upper, lower, gap count, and the two sentences.
-- After: Cover the notes, and say this from memory: The fields you are allowed to copy are the ones you already wrote: pair, upper, lower, gap count, and the two sentences.
-
-Change 2:
-
-- Before: The answer has to name a shape on the page.
-- After: The answer names a shape on the page.
-
-### Beat 18 (demo, Your turn)
-
-Change 1:
-
-- Before: Cover the notes and say this from memory: The path is spot.
-- After: Cover the notes, and say this from memory: The path is spot.
-
-Change 2:
-
-- Before: The answer has to name a shape on the page.
-- After: The answer names a shape on the page.
-
 ### Beat 19 (body, If the screen differs)
 
 Change 1:
 
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to If the screen differs.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to If the screen differs.
-- After: If you cannot point yet, stay on this frame.
 
 
 ## bp-08-managing-and-monitoring
