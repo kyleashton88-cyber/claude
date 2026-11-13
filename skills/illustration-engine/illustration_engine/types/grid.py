@@ -16,8 +16,7 @@ def draw_grid(canvas, params: dict) -> None:
     gaps = max(2, min(16, inum(params, "grids", 10)))
     price = fnum(params, "price", (low + high) / 2)
     x, y, w, h = canvas.content_rect()
-    canvas.glass(x, y, w, h)
-    left, right = x + 150, x + w - 120
+    left, right = x + 120, x + w - 80
     top, bottom = y + 64, y + h - 48
     lines = gaps + 1
     ys = []

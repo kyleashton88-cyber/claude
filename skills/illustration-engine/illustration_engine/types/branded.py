@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 from .common import labels_or, take_headline
-from .mascot import draw_mascot
 from ..fonts import family
 
 
@@ -72,8 +71,8 @@ def draw_cover(canvas, params: dict) -> None:
     canvas.chip(names[0], x + t.s(48), top - t.s(28), anchor="start")
     if len(names) > 1:
         canvas.chip(names[1], x + t.s(48), bot + t.s(36), anchor="start")
-    scale = min((h * 0.9) / 280, (w * 0.36) / 180)
-    draw_mascot(canvas, x + w - 210 * scale, y + h - 280 * scale - t.s(8), scale, "pointing")
+    canvas.character = "withheld"
+    canvas.svg.comment("character: withheld; cover does not invent a mascot")
 
 
 def draw_divider(canvas, params: dict) -> None:

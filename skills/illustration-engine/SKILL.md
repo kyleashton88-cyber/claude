@@ -70,11 +70,11 @@ render_prompt("liquidation, entry 100, liquidation 80, leverage 5, price 90", "l
 - Headline in Roboto Condensed Bold (`font-weight: 700` on the face and the text). One word is cyan. A short headline is 89px at 1536 wide, which is a 63px cap.
 - Two to five labels, sentence case, 34px at 1536 wide. Each is at most three words, with a leader or an arrow.
 - EXAMPLE on any plate that shows a figure.
-- The mascot, when it appears, has one visor bar and no mouth. There is no celebrating pose.
+- The engine does not draw a mascot. An approved pose PNG can be placed from `illustration_engine/assets/character/poses/`. Until Stewart supplies that sheet, the character is withheld.
 
 ## QA
 
-A render fails closed when a label leaves the frame, sits in the outer margin, is under the preset's minimum size, fails the contrast floor, or the PNG is blank. It also fails when the painted headline stem is under 10px at a 55px cap (that is a Regular face, not Bold) or when the lit ink covers less than 30% or more than 55% of the frame. Re-check a folder with:
+Technical preflight fails closed when a label leaves the frame, sits in the outer margin, is under the preset's minimum size, fails the contrast floor, the PNG is blank, or the headline stem is under 10px at a 55px cap (a Regular face). That preflight is not the quality bar. Appeal, craft, and brand are scored in `skills/image-quality-standard/`. A plate needs at least 4 in every category there, and no hard fail, before it is treated as finished. Re-check the technical gate with:
 
 ```bash
 python3 -m illustration_engine qa test-outputs/batch/bp-01-introduction

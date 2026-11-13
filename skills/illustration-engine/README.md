@@ -1,8 +1,10 @@
 # Illustration engine
 
-In-house diagrams for course lessons. A sentence or a YAML spec becomes an SVG, then a PNG. Nothing here calls an image API, and nothing here writes into `course/`. A router may later copy an approved fallback plate into `course/images/_fallback_quarantine/`.
+In-house diagrams for course lessons. A sentence or a YAML spec becomes an SVG, then a PNG. Nothing here calls an image API, and nothing here writes into `course/`.
 
-The live stills path is unchanged. Use this engine when you want a plate drawn in the repo.
+This package does not implement the fallback router. It does not copy a plate into `course/images/_fallback_quarantine/`. That copy, if it is built, is a separate router outside this directory. The engine only refuses to write anywhere under `course/`.
+
+The live stills path is unchanged. ChatGPT on the web remains the lesson-image default. Use this engine when you want a plate drawn in the repo.
 
 ## Layout
 
@@ -34,3 +36,13 @@ python3 -m illustration_engine batch examples/lesson-demo.yaml --preset house --
 python3 -m illustration_engine gallery --out test-outputs
 python3 -m illustration_engine types
 ```
+
+## Tests
+
+From this directory:
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+`--fallback` draws only a named diagram. A prompt that does not name one, such as a scene with no chart words, exits non-zero and writes nothing. A repeated batch skips a plate when its prompt hash and sha256 still match the file. Two slots in one job that share a filename stop before anything is drawn.

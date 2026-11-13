@@ -1,4 +1,10 @@
-"""Automated checks, plus a beginner-check report a person can read."""
+"""Technical preflight only.
+
+Stem width, contrast, and margins do not decide whether a plate looks professional.
+Appeal, craft, and brand are scored by skills/image-quality-standard.
+This module is deprecated as a quality rubric. It stays as a render gate for
+broken output: overflow, a missing font file, a blank PNG, a Regular face.
+"""
 
 from __future__ import annotations
 
@@ -144,10 +150,14 @@ def stem_width(cap_px: int = 55) -> float:
 
 
 def headline_stem(png: bytes, marks: list[dict], cap_px: int = 55) -> float:
-    """Stem width of the headline actually painted on this plate."""
+    """Stem width of the headline painted on this plate.
+
+    A miss stays 0. It must not borrow the global font probe, or a thin
+    plate can pass on a number that was never measured here.
+    """
     words = [mark for mark in marks if mark.get("role") == "headline"]
     if not words:
-        return stem_width(cap_px)
+        return 0.0
     image = Image.open(io.BytesIO(png)).convert("RGB")
     found = []
     for mark in words:
@@ -158,10 +168,10 @@ def headline_stem(png: bytes, marks: list[dict], cap_px: int = 55) -> float:
         if x1 - x0 < 4 or y1 - y0 < 4:
             continue
         measured = _stem_on_mask(image.crop((x0, y0, x1, y1)), cap_px)
-        if 8 <= measured <= 18:
+        if measured > 0:
             found.append(measured)
     if not found:
-        return stem_width(cap_px)
+        return 0.0
     found.sort()
     return found[len(found) // 2]
 
@@ -284,11 +294,15 @@ def check_scene(meta: dict, theme: Theme) -> QaReport:
 
 
 def check_headline_gap(png: bytes, marks: list[dict]) -> tuple[bool, str]:
-    """Fail when two headline words are painted as one, with no space between them."""
-    words = sorted((mark for mark in marks if mark.get("role") == "headline"), key=lambda mark: mark["bbox"][0])
+    """Fail when two headline words on the same line are painted as one."""
+    words = [mark for mark in marks if mark.get("role") == "headline"]
     if len(words) < 2:
         return True, "one headline word"
+    words.sort(key=lambda mark: (mark["bbox"][1], mark["bbox"][0]))
     for left, right in zip(words, words[1:]):
+        # A second line of the same word is not a missing space.
+        if right["bbox"][1] >= left["bbox"][3] - 2:
+            continue
         x0 = int(left["bbox"][2])
         x1 = int(right["bbox"][0])
         if x1 - x0 < 6:

@@ -5,6 +5,8 @@ description: Check course video stills and renders against the tutorial bar. Use
 
 # Illustration QA checklist
 
+Deprecated as a scoring rubric. The pass bar for any still, including an engine plate, is `skills/image-quality-standard/`. This file stays as a lesson-script and render checklist. It does not score craft, and a plate can satisfy it while still looking unfinished.
+
 Run this on a script and, once the PNGs exist, on the frames. A fail blocks the render. Do not restyle Elite; this checklist's navy-and-cyan items apply to On-Chain Operator and Grid Bot Blueprint only.
 
 ## Script, before any image

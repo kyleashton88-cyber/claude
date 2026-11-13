@@ -49,6 +49,7 @@ class Canvas:
         self.idea = ""
         self.example = False
         self.headline_text = ""
+        self.character = "none"
 
     @property
     def width(self) -> int:
@@ -107,9 +108,15 @@ class Canvas:
                     self.svg.line(0, y, self.width, y, t.grid, sw=1)
                     y += step
         if t.bokeh:
-            spots = ((0.86, 0.14, t.s(90)), (0.12, 0.88, t.s(70)))
+            spots = (
+                (0.84, 0.16, t.s(46)),
+                (0.72, 0.28, t.s(18)),
+                (0.18, 0.74, t.s(34)),
+                (0.30, 0.86, t.s(14)),
+                (0.62, 0.78, t.s(22)),
+            )
             for fx, fy, radius in spots:
-                self.svg.circle(self.width * fx, self.height * fy, radius, fill=t.accent, opacity=0.045)
+                self.svg.circle(self.width * fx, self.height * fy, radius, fill=t.accent, opacity=0.05)
         vig = self.svg.uid("vig")
         self.svg.radial_gradient(vig, t.bg0, t.vignette)
         self.svg.rect(0, 0, self.width, self.height, fill=f"url(#{vig})")
@@ -152,41 +159,30 @@ class Canvas:
 
     def content_rect(self) -> tuple[float, float, float, float]:
         t = self.theme
-        top = t.safe_top + t.headline + t.s(36)
+        top = t.safe_top + t.headline + t.s(28)
         left = float(t.safe_x)
         right = self.width - t.safe_x
         bottom = self.height - t.safe_bottom - 8
-        avail_w = right - left
-        avail_h = bottom - top
-        # Wide enough for three cards of about 360px at 1536, short enough that
-        # the bloom stays inside the 30-55% coverage band.
-        width = min(avail_w, 3 * t.s(300) + 2 * t.s(28) + t.s(8))
-        height = min(avail_h, t.s(433) + t.s(20))
-        limit = 0.40 * self.width * self.height
-        if width * height > limit and width > 0:
-            height = min(height, limit / width)
-            if width * height > limit:
-                scale = (limit / (width * height)) ** 0.5
-                width *= scale
-                height *= scale
-        left += (avail_w - width) / 2
-        top += (avail_h - height) / 2
-        return (left, top, width, height)
+        return (left, top, right - left, bottom - top)
 
     def glass(self, x, y, w, h, rx=None) -> None:
+        """A glass panel: gradient fill, a tight rim, a hairline peak. Not a milk halo."""
         t = self.theme
-        rx = t.s(22) if rx is None else rx
+        rx = t.s(18) if rx is None else rx
         bloom = self.svg.ensure_glow(t.glow_std())
-        wash = t.wash_px()
         peak = self._peak(t.accent)
-        fill_opacity = 0.94 if t.name == "light" else 0.9
-        self.svg.rect(x, y, w, h, fill=t.card, stroke="none", sw=0, rx=rx, opacity=fill_opacity)
-        # 32px soft inner wash at 1536, blurred, then a near-white peak with no hard 4px stroke.
-        inner = 0.34 if t.name == "light" else (0.1 if t.name == "contrast" else 0.18)
-        self.svg.rect(x, y, w, h, fill=t.accent, stroke="none", sw=0, rx=rx, opacity=inner)
-        self.svg.rect(x, y, w, h, fill="none", stroke=t.accent, sw=wash, rx=rx, opacity=0.8, filt=bloom)
-        self.svg.rect(x, y, w, h, fill="none", stroke=peak, sw=wash, rx=rx, opacity=0.55, filt=bloom)
-        self.svg.rect(x, y, w, h, fill="none", stroke=peak, sw=max(1.6, t.s(1.7)), rx=rx, opacity=1)
+        gid = self.svg.uid("glass")
+        if t.name == "light":
+            stops = [("0%", "#FFFFFF"), ("100%", "#E6EEF6")]
+        elif t.name == "contrast":
+            stops = [("0%", "#141414"), ("100%", "#000000")]
+        else:
+            stops = [("0%", "#10283F"), ("100%", "#07101C")]
+        self.svg.linear_gradient(gid, stops)
+        self.svg.rect(x, y, w, h, fill="none", stroke=t.accent, sw=t.wash_px(), rx=rx, opacity=0.55, filt=bloom)
+        self.svg.rect(x, y, w, h, fill=f"url(#{gid})", stroke="none", sw=0, rx=rx, opacity=0.92)
+        self.svg.rect(x, y, w, h, fill="none", stroke=peak, sw=max(1.25, t.s(1.35)), rx=rx, opacity=0.95)
+        self.svg.line(x + rx, y + t.s(2), x + w - rx, y + t.s(2), "#F4F8FC", sw=t.s(1.2), opacity=0.35 if t.name != "light" else 0.7)
 
     def chip(self, text: str, x: float, y: float, anchor: str = "middle") -> tuple[float, float, float, float]:
         t = self.theme
@@ -209,11 +205,7 @@ class Canvas:
             left = x
         top = y - box_h / 2
         left, top = self._nudge(left, top, box_w, box_h)
-        bloom = self.svg.ensure_glow(t.glow_std())
-        peak = self._peak(t.accent)
-        self.svg.rect(left, top, box_w, box_h, fill="none", stroke=t.accent, sw=t.s(12), rx=t.s(10), opacity=0.85, filt=bloom)
-        self.svg.rect(left, top, box_w, box_h, fill=t.chip, stroke="none", sw=0, rx=t.s(10), opacity=0.92 if t.name != "light" else 0.96)
-        self.svg.rect(left, top, box_w, box_h, fill="none", stroke=peak, sw=max(1.4, t.s(1.4)), rx=t.s(10), opacity=1)
+        self.svg.rect(left, top, box_w, box_h, fill=t.chip, stroke=t.accent, sw=max(1.25, t.s(1.25)), rx=t.s(8), opacity=0.92)
         baseline = top + pad_y + cap
         self.text(label, left + box_w / 2, baseline, size, t.chip_ink, weight="bold", anchor="middle", role="label", bg=t.chip)
         return (left, top, left + box_w, top + box_h)
@@ -256,11 +248,7 @@ class Canvas:
         box_h = cap + desc + pad_y * 2
         left = self.width - t.safe_x - box_w
         top = self.height - t.safe_bottom - box_h - t.s(12)
-        bloom = self.svg.ensure_glow(t.glow_std())
-        peak = self._peak(t.accent)
-        self.svg.rect(left, top, box_w, box_h, fill="none", stroke=t.accent, sw=t.s(12), rx=t.s(8), opacity=0.85, filt=bloom)
-        self.svg.rect(left, top, box_w, box_h, fill=t.chip, stroke="none", sw=0, rx=t.s(8), opacity=0.92)
-        self.svg.rect(left, top, box_w, box_h, fill="none", stroke=peak, sw=max(1.4, t.s(1.4)), rx=t.s(8), opacity=1)
+        self.svg.rect(left, top, box_w, box_h, fill=t.chip, stroke=t.accent, sw=max(1.25, t.s(1.25)), rx=t.s(8), opacity=0.92)
         baseline = top + pad_y + cap
         self.text(label, left + box_w / 2, baseline, size, t.accent_ink, weight="bold", anchor="middle", role="badge", bg=t.chip)
 
@@ -288,15 +276,15 @@ class Canvas:
 
     def glow_line(self, x1, y1, x2, y2, color, sw=2.5, dash=None) -> None:
         filt = self._blur()
-        wash = max(self.theme.wash_px(), sw)
-        self.svg.line(x1, y1, x2, y2, color, sw=wash, dash=dash, opacity=0.85, filt=filt)
-        self.svg.line(x1, y1, x2, y2, self._peak(color), sw=max(1.6, self.theme.s(1.6)), dash=dash, opacity=1)
+        halo = max(self.theme.s(5), sw * 2.2)
+        self.svg.line(x1, y1, x2, y2, color, sw=halo, dash=dash, opacity=0.9, filt=filt)
+        self.svg.line(x1, y1, x2, y2, self._peak(color), sw=max(self.theme.s(2.1), sw), dash=dash, opacity=1)
 
     def glow_polyline(self, points, color, sw=3) -> None:
         filt = self._blur()
-        wash = max(self.theme.wash_px() * 0.75, sw)
-        self.svg.polyline(points, color, sw=wash, opacity=0.85, filt=filt)
-        self.svg.polyline(points, self._peak(color), sw=max(1.6, self.theme.s(1.6)), opacity=1)
+        halo = max(self.theme.s(5), sw * 2.2)
+        self.svg.polyline(points, color, sw=halo, opacity=0.9, filt=filt)
+        self.svg.polyline(points, self._peak(color), sw=max(self.theme.s(2.1), sw), opacity=1)
 
     def glow_rect(self, x, y, w, h, color, rx=4) -> None:
         filt = self._blur()
@@ -317,5 +305,6 @@ class Canvas:
             "headline": self.headline_text,
             "labels": list(self.labels),
             "example": self.example,
+            "character": self.character,
             "marks": [mark.as_dict() for mark in self.marks],
         }

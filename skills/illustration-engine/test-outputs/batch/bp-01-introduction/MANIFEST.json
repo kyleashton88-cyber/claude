@@ -7,11 +7,23 @@
     {
       "file": "001.png",
       "path": "001.png",
+      "job_id": "45ab4cef-3350-474e-bfc0-0ce553c07577",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "ce514ea7b0f03596a2aa654109ff8ce185c2311b499d45b775fa0d13bc3f42b7",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal price_range",
+      "created_at": "2026-11-13T09:22:36+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "6f677bb3e23dcab2b62aeceef906ea0a9ad7bd1bcbdde20ea28fc7cd52508e2f",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "a72fdc41d5184fb92be7287d09ff65de",
-      "md5": "a72fdc41d5184fb92be7287d09ff65de",
+      "checksum": "4aaca127bfcf5927b1a2aaeef49c47c4",
+      "md5": "4aaca127bfcf5927b1a2aaeef49c47c4",
       "renderer": "resvg",
       "alt": "Price often chops sideways, weaving through the same band instead of leaving.",
       "spec": {
@@ -25,6 +37,7 @@
             "RANGE",
             "BAND"
           ],
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -43,7 +56,6 @@
         "Upper"
       ],
       "example": true,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -58,10 +70,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: frame \u2014 1536x1024, spread 192",
         "pass: word spacing \u2014 spaces hold between headline words",
-        "pass: ink coverage \u2014 51% of the frame",
-        "pass: plate stem \u2014 12.9px at a 55px cap"
+        "pass: ink coverage \u2014 52% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 33.7px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -70,11 +82,23 @@
     {
       "file": "002.png",
       "path": "002.png",
+      "job_id": "5ab9d6ac-e4c3-4b04-88db-419c6044d76d",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "e1cad956234ecf5387606fb144d92a65b64c89496f659a97331dca850b0b2510",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal steps",
+      "created_at": "2026-11-13T09:22:37+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "79e0f5f9a723d107c6429153c3de5eb58322e0d7af8a26de8fc0a3bb691c4606",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "53e0c716f22a573860e8e6594bb1e78a",
-      "md5": "53e0c716f22a573860e8e6594bb1e78a",
+      "checksum": "2d487384a628ceab4aacfb73a99db4fd",
+      "md5": "2d487384a628ceab4aacfb73a99db4fd",
       "renderer": "resvg",
       "alt": "Education only, not financial advice.",
       "spec": {
@@ -89,6 +113,7 @@
             "NOTICE",
             "PAPER"
           ],
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -108,7 +133,6 @@
         "Paper"
       ],
       "example": false,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -123,10 +147,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A few numbered steps for one idea.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 211",
+        "pass: frame \u2014 1536x1024, spread 193",
         "pass: word spacing \u2014 spaces hold between headline words",
-        "pass: ink coverage \u2014 49% of the frame",
-        "pass: plate stem \u2014 12.9px at a 55px cap"
+        "pass: ink coverage \u2014 31% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 30.9px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -135,11 +159,23 @@
     {
       "file": "003.png",
       "path": "003.png",
+      "job_id": "94963b17-2776-4258-a9be-6e46eeaee65e",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "d27d39d5841d6c5c19008e31da6727087bff6e55c49ff931f6bf2c603e131094",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal title_card",
+      "created_at": "2026-11-13T09:22:39+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "63dcecc6a984578f1da4ec26f942b247794487233779e3c758010d7afc63a696",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "15ce8efb168dee5b194bf3c597d739a8",
-      "md5": "15ce8efb168dee5b194bf3c597d739a8",
+      "checksum": "44fe8d80b578f1d9668a6740d9848c44",
+      "md5": "44fe8d80b578f1d9668a6740d9848c44",
       "renderer": "resvg",
       "alt": "Introduction.",
       "spec": {
@@ -154,6 +190,7 @@
             "START",
             "HERE"
           ],
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -171,7 +208,6 @@
         "Here"
       ],
       "example": false,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -186,10 +222,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A title card for the lesson, with no extra lockup.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 207",
+        "pass: frame \u2014 1536x1024, spread 131",
         "pass: word spacing \u2014 one headline word",
-        "pass: ink coverage \u2014 45% of the frame",
-        "pass: plate stem \u2014 10.3px at a 55px cap"
+        "pass: ink coverage \u2014 48% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 10.3px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -198,11 +234,23 @@
     {
       "file": "004.png",
       "path": "004.png",
+      "job_id": "8558bec4-11a2-45dc-b338-678d9a35970b",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "9c735abadad5145f06fa53744d3cb0ca34b58b49aa8eff0a75bdc6189316bf1d",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal steps",
+      "created_at": "2026-11-13T09:22:41+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "8150d6641fbe50ddc3569685e421a2cb3ad3b76eabc2c225dcfea8159bd4a144",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "b449d2a67646e28483593f0d4997754f",
-      "md5": "b449d2a67646e28483593f0d4997754f",
+      "checksum": "d2f0ac978b9348c53991db9761793a47",
+      "md5": "d2f0ac978b9348c53991db9761793a47",
       "renderer": "resvg",
       "alt": "A grid has three parts you can name: the range, the levels, and the stop.",
       "spec": {
@@ -217,6 +265,7 @@
             "LEVELS",
             "STOP"
           ],
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -236,7 +285,6 @@
         "Stop"
       ],
       "example": false,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -251,10 +299,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A few numbered steps for one idea.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 211",
+        "pass: frame \u2014 1536x1024, spread 180",
         "pass: word spacing \u2014 spaces hold between headline words",
-        "pass: ink coverage \u2014 49% of the frame",
-        "pass: plate stem \u2014 10.8px at a 55px cap"
+        "pass: ink coverage \u2014 31% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 38.1px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -263,11 +311,23 @@
     {
       "file": "005.png",
       "path": "005.png",
+      "job_id": "9d2aa018-8e48-4432-b652-7cc51644eca1",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "c8b77073801f729473779c3552b510503cd63a0e3aa46de8c3c5442754b0901b",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal price_range",
+      "created_at": "2026-11-13T09:22:43+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "7dae8b3ed4fefadc5d0e65531bcbe5e5380758fc64e72b72f33608f080571bc5",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "dd79c77074abca2e2f2de0a74c4af18a",
-      "md5": "dd79c77074abca2e2f2de0a74c4af18a",
+      "checksum": "244e4d408328a3984ce1cbbe71d45508",
+      "md5": "244e4d408328a3984ce1cbbe71d45508",
       "renderer": "resvg",
       "alt": "The range is a top and a bottom you draw before any rung.",
       "spec": {
@@ -282,6 +342,7 @@
             "LOWER",
             "RANGE"
           ],
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -301,7 +362,6 @@
         "Range"
       ],
       "example": true,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -316,10 +376,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: frame \u2014 1536x1024, spread 174",
         "pass: word spacing \u2014 spaces hold between headline words",
-        "pass: ink coverage \u2014 50% of the frame",
-        "pass: plate stem \u2014 10.8px at a 55px cap"
+        "pass: ink coverage \u2014 52% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 38.1px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -328,11 +388,23 @@
     {
       "file": "006.png",
       "path": "006.png",
+      "job_id": "c7dc5b0f-1c5e-4e3e-bf8f-aa79b2351593",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "e50eb575bb6c199efb000ad88c59ff993b77b4cfeb5fa1b4849a2e21dcd43be1",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal analogy_ladder",
+      "created_at": "2026-11-13T09:22:45+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "6b2de90194436ca2fbf325b356956e659e475f2f56c56835b817b572f28a8d2b",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "c38948958e8f94dd2c5e05fb6b03701e",
-      "md5": "c38948958e8f94dd2c5e05fb6b03701e",
+      "checksum": "cf6c8605fe6a8ff1122657c8002220f0",
+      "md5": "cf6c8605fe6a8ff1122657c8002220f0",
       "renderer": "resvg",
       "alt": "The levels are limit orders that wait on the rungs.",
       "spec": {
@@ -347,6 +419,7 @@
             "LEVEL",
             "WAIT"
           ],
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -366,7 +439,6 @@
         "Wait"
       ],
       "example": true,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -381,10 +453,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Rungs are levels that wait. One rung is the next step.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: frame \u2014 1536x1024, spread 174",
         "pass: word spacing \u2014 spaces hold between headline words",
-        "pass: ink coverage \u2014 50% of the frame",
-        "pass: plate stem \u2014 10.3px at a 55px cap"
+        "pass: ink coverage \u2014 52% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 38.1px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -393,11 +465,23 @@
     {
       "file": "007.png",
       "path": "007.png",
+      "job_id": "38a78a81-440b-46ab-bd8f-0424f2ab8837",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "973bc13fad9566ade0a9de2ca83879a71341666b816231870acc880f2ceb4d8a",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal grid_ladder",
+      "created_at": "2026-11-13T09:22:46+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "d98733ff501c78b543fe1dc64aaf1c68a9188470ef24e9c52449430d0af45525",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "7e7432a12fbe4e0ee3c30829c4961f22",
-      "md5": "7e7432a12fbe4e0ee3c30829c4961f22",
+      "checksum": "0cba4f9da8184a621cbbb545f16371d6",
+      "md5": "0cba4f9da8184a621cbbb545f16371d6",
       "renderer": "resvg",
       "alt": "One approach places buy orders below the mark and sell orders above it.",
       "spec": {
@@ -416,6 +500,7 @@
             "SELL",
             "PRICE"
           ],
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -435,7 +520,6 @@
         "Price"
       ],
       "example": true,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -450,10 +534,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: frame \u2014 1536x1024, spread 189",
         "pass: word spacing \u2014 spaces hold between headline words",
-        "pass: ink coverage \u2014 51% of the frame",
-        "pass: plate stem \u2014 15.1px at a 55px cap"
+        "pass: ink coverage \u2014 6% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 15.1px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -462,11 +546,23 @@
     {
       "file": "008.png",
       "path": "008.png",
+      "job_id": "a526cc43-56f3-40ff-83fb-e881c42ab04b",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "70e824d15be9a38ac2b71b86232359eb039d9acc59ceaa1e1943b03025a15331",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal price_range",
+      "created_at": "2026-11-13T09:22:48+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "3f89b08eccc6225c881866d6c07858af9573d7bc87073df2dde4d071dfc24ee5",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "768f4926ba340621c762efe47aabad95",
-      "md5": "768f4926ba340621c762efe47aabad95",
+      "checksum": "3aae8b38c843a68ca42feecd1728909a",
+      "md5": "3aae8b38c843a68ca42feecd1728909a",
       "renderer": "resvg",
       "alt": "The stop is a sentence you write, not a feeling that the trade is over.",
       "spec": {
@@ -483,6 +579,7 @@
           ],
           "stop": true,
           "variant": "stop",
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -502,7 +599,6 @@
         "Stop"
       ],
       "example": true,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -517,10 +613,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: frame \u2014 1536x1024, spread 175",
         "pass: word spacing \u2014 spaces hold between headline words",
-        "pass: ink coverage \u2014 50% of the frame",
-        "pass: plate stem \u2014 12.0px at a 55px cap"
+        "pass: ink coverage \u2014 52% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 38.1px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -529,11 +625,23 @@
     {
       "file": "009.png",
       "path": "009.png",
+      "job_id": "88580e33-a4f6-45e1-ba23-b46446daaf42",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "74ee94a441fe50319474fa88481eb9b5312472869475fcdc3d872070bea22961",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal mascot_scene",
+      "created_at": "2026-11-13T09:22:49+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "1f51f851407058b0bbb227b11d894f21e647eb5e95779d60f98565b994ff50cf",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "6bc3cba7cac988381b37abf6f420c7f3",
-      "md5": "6bc3cba7cac988381b37abf6f420c7f3",
+      "checksum": "00bc9622b37fd3b3bf12490068b9092d",
+      "md5": "00bc9622b37fd3b3bf12490068b9092d",
       "renderer": "resvg",
       "alt": "We do not sell or run a trading bot. No order is sent from this lesson.",
       "spec": {
@@ -548,6 +656,7 @@
             "WAIT",
             "CHECK"
           ],
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -565,7 +674,6 @@
         "Check"
       ],
       "example": true,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -580,10 +688,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 The grid bot mascot in one pose, beside one prop.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 248",
+        "pass: frame \u2014 1536x1024, spread 185",
         "pass: word spacing \u2014 spaces hold between headline words",
-        "pass: ink coverage \u2014 50% of the frame",
-        "pass: plate stem \u2014 12.0px at a 55px cap"
+        "pass: ink coverage \u2014 5% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 29.2px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -592,11 +700,23 @@
     {
       "file": "010.png",
       "path": "010.png",
+      "job_id": "98e9aeee-3986-4569-86bd-f214f7180982",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "92099bff4391f7b8aab88d40dcdf3efcea1a33338d4639bccfb5b0f4cea09a6a",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal flowchart",
+      "created_at": "2026-11-13T09:22:50+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "ba6b3e315930c1cc9bc2973756181f454ccb7265291cd663fc303d2cc42e7039",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "8142b56de72284f497442276a68e6996",
-      "md5": "8142b56de72284f497442276a68e6996",
+      "checksum": "ae04480e4374bce0992c675d4898eecc",
+      "md5": "ae04480e4374bce0992c675d4898eecc",
       "renderer": "resvg",
       "alt": "The course is a map, and this introduction is only the first square.",
       "spec": {
@@ -611,6 +731,7 @@
             "MIDDLE",
             "NEXT"
           ],
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -632,7 +753,6 @@
         "Levels"
       ],
       "example": false,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -647,10 +767,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A short path of steps, read from left to right.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: frame \u2014 1536x1024, spread 174",
         "pass: word spacing \u2014 spaces hold between headline words",
-        "pass: ink coverage \u2014 44% of the frame",
-        "pass: plate stem \u2014 16.0px at a 55px cap"
+        "pass: ink coverage \u2014 33% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 38.1px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -659,11 +779,23 @@
     {
       "file": "011.png",
       "path": "011.png",
+      "job_id": "07c92033-152e-4ed4-855e-334e3ed4e8db",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "412853af381c1793acc7cecefcc0e6d78140b0f6b523e977c45aef340db48b41",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal price_range",
+      "created_at": "2026-11-13T09:22:54+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "53dd14abcda9d4eb7051425f441b169323c5ad173f2cbabea5fa5ebe9d3f163b",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "53599d45a172cb88d5487c9efc7f2d43",
-      "md5": "53599d45a172cb88d5487c9efc7f2d43",
+      "checksum": "5d66cedb042696bb201e6eabbb7ffbde",
+      "md5": "5d66cedb042696bb201e6eabbb7ffbde",
       "renderer": "resvg",
       "alt": "Draw a path that leaves the top of the band and does not return.",
       "spec": {
@@ -679,6 +811,7 @@
             "OUT"
           ],
           "variant": "leave",
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -698,7 +831,6 @@
         "Out"
       ],
       "example": true,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -713,10 +845,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 214",
+        "pass: frame \u2014 1536x1024, spread 211",
         "pass: word spacing \u2014 spaces hold between headline words",
-        "pass: ink coverage \u2014 53% of the frame",
-        "pass: plate stem \u2014 10.6px at a 55px cap"
+        "pass: ink coverage \u2014 54% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 30.1px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -725,11 +857,23 @@
     {
       "file": "012.png",
       "path": "012.png",
+      "job_id": "875c0275-d9df-4481-9b2e-35fffaf250d9",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "1faa60b03d62e10ca2e73ba9d8963c793abdf4a93e9d4cebef8423b5dc52ea3a",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal comparison",
+      "created_at": "2026-11-13T09:22:56+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "607044f7f54aa59e86c2392a006d9256c8928293d981194c314154f8868d44a0",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "6ebf74001c9757e493c29bd1620dd35d",
-      "md5": "6ebf74001c9757e493c29bd1620dd35d",
+      "checksum": "a510c1dc323e5c00556108c61947388a",
+      "md5": "a510c1dc323e5c00556108c61947388a",
       "renderer": "resvg",
       "alt": "There is no result number in this lesson.",
       "spec": {
@@ -744,6 +888,7 @@
             "NUMBER",
             "SHAPE"
           ],
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -761,7 +906,6 @@
         "Shape"
       ],
       "example": false,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -776,10 +920,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Two ways to see the same idea, side by side.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 202",
+        "pass: frame \u2014 1536x1024, spread 193",
         "pass: word spacing \u2014 spaces hold between headline words",
-        "pass: ink coverage \u2014 49% of the frame",
-        "pass: plate stem \u2014 14.6px at a 55px cap"
+        "pass: ink coverage \u2014 31% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 32.7px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -788,11 +932,23 @@
     {
       "file": "013.png",
       "path": "013.png",
+      "job_id": "e73c0ed5-5e47-48e0-b0a8-4febd438bc4a",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "49ee8f3d2310ad4c79fb448af95638a691b3bec007d43a868b9222ba8009461b",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal grid_ladder",
+      "created_at": "2026-11-13T09:22:57+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "aa0b05e9af4cf88b51912c481c2c4b3d650992bac1cc04aab9d2bc1bce44aaea",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "2854c51c4f7b103c4d9fa4941a0c26d0",
-      "md5": "2854c51c4f7b103c4d9fa4941a0c26d0",
+      "checksum": "36f2ef99425c9e0d36e331a699fc87f5",
+      "md5": "36f2ef99425c9e0d36e331a699fc87f5",
       "renderer": "resvg",
       "alt": "A slow sketch uses eight even ticks inside the band, only as a way to see rungs.",
       "spec": {
@@ -811,6 +967,7 @@
             "SELL",
             "PRICE"
           ],
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -830,7 +987,6 @@
         "Price"
       ],
       "example": true,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -845,10 +1001,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: frame \u2014 1536x1024, spread 175",
         "pass: word spacing \u2014 spaces hold between headline words",
-        "pass: ink coverage \u2014 50% of the frame",
-        "pass: plate stem \u2014 10.8px at a 55px cap"
+        "pass: ink coverage \u2014 6% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 37.0px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -857,11 +1013,23 @@
     {
       "file": "014.png",
       "path": "014.png",
+      "job_id": "0afc1514-b0d3-49d1-86e2-a5976587bfd3",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "844ec0e296ae45578dc6d018df9ae9f2d2ef6e921669370e2a3c94cc204eedc6",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal checklist",
+      "created_at": "2026-11-13T09:22:59+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "9882711a138a00555bc3f8f6372913a42823c37b8bda27455624881c40d0a612",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "7f8a20b0267ba3bc8428609113882204",
-      "md5": "7f8a20b0267ba3bc8428609113882204",
+      "checksum": "1cd900a945217e7f5fe4e0257bd03b56",
+      "md5": "1cd900a945217e7f5fe4e0257bd03b56",
       "renderer": "resvg",
       "alt": "The next step is the setup checklist, on paper, before any screen.",
       "spec": {
@@ -877,6 +1045,7 @@
             "STOP"
           ],
           "highlight": 0,
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -896,7 +1065,6 @@
         "Stop"
       ],
       "example": false,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -911,10 +1079,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A short paper checklist, one row highlighted.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 202",
+        "pass: frame \u2014 1536x1024, spread 198",
         "pass: word spacing \u2014 spaces hold between headline words",
-        "pass: ink coverage \u2014 52% of the frame",
-        "pass: plate stem \u2014 12.9px at a 55px cap"
+        "pass: ink coverage \u2014 53% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 14.2px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -923,11 +1091,23 @@
     {
       "file": "015.png",
       "path": "015.png",
+      "job_id": "5211d5c4-5644-4502-ad4a-7336db7d4b43",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "e4a3311ee351f2bb6132e34aa85b5ae2c38a7c2fe2635dc485022a3728b25b0f",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal analogy_fence",
+      "created_at": "2026-11-13T09:23:01+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "535c982fae38df75b5eed68cd8099511ec78ec0ad29c2d5afef9acb4a84cf53b",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "627d029a5c70a215f46d64b8fbf7a0f7",
-      "md5": "627d029a5c70a215f46d64b8fbf7a0f7",
+      "checksum": "0c4ca3874544b63c1046e23b9c5e0e9b",
+      "md5": "0c4ca3874544b63c1046e23b9c5e0e9b",
       "renderer": "resvg",
       "alt": "A paper or demo account is a fence around practice.",
       "spec": {
@@ -942,6 +1122,7 @@
             "FENCE",
             "PRACTICE"
           ],
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -961,7 +1142,6 @@
         "Practice"
       ],
       "example": true,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -976,10 +1156,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A fence around practice: stay inside the rails.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: frame \u2014 1536x1024, spread 189",
         "pass: word spacing \u2014 spaces hold between headline words",
-        "pass: ink coverage \u2014 50% of the frame",
-        "pass: plate stem \u2014 10.8px at a 55px cap"
+        "pass: ink coverage \u2014 52% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 34.6px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -988,11 +1168,23 @@
     {
       "file": "016.png",
       "path": "016.png",
+      "job_id": "b0fa407b-3c8c-40fc-85d2-baed6cdedf96",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "bc0219eccc7e939dab6405d5f7fb8705486d16b4a136d0467c7aff9937db56c5",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal steps",
+      "created_at": "2026-11-13T09:23:02+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "bd893385a2ff577415c165f154546fc668086d4f243d23a01257f28486dc6468",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "a8284ac34f112523ecbdae426022fc35",
-      "md5": "a8284ac34f112523ecbdae426022fc35",
+      "checksum": "743bff26beaf1860f003685f10b5d226",
+      "md5": "743bff26beaf1860f003685f10b5d226",
       "renderer": "resvg",
       "alt": "Practice: A grid has three parts you can name: the range, the levels, and the stop.",
       "spec": {
@@ -1007,6 +1199,7 @@
             "LEVELS",
             "STOP"
           ],
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -1026,7 +1219,6 @@
         "Stop"
       ],
       "example": false,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -1041,10 +1233,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A few numbered steps for one idea.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 210",
+        "pass: frame \u2014 1536x1024, spread 187",
         "pass: word spacing \u2014 spaces hold between headline words",
-        "pass: ink coverage \u2014 47% of the frame",
-        "pass: plate stem \u2014 11.2px at a 55px cap"
+        "pass: ink coverage \u2014 30% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 11.2px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1053,11 +1245,23 @@
     {
       "file": "017.png",
       "path": "017.png",
+      "job_id": "28e003a2-bb69-4db9-aee1-a8aed6a330c0",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "353f1a98d92bd45a5367cbff78602b47c949379f72cd9f316ddc4ed9dcd3aec9",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal steps",
+      "created_at": "2026-11-13T09:23:03+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "6fcedfa61c30023935022b15b6c6711e803bb9ea429e71d210f87ab5bb84f74d",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "e11d692a1dfd76f07d95b1479ea4e1be",
-      "md5": "e11d692a1dfd76f07d95b1479ea4e1be",
+      "checksum": "a8bb005e40e9e0d40a6fb977e5983026",
+      "md5": "a8bb005e40e9e0d40a6fb977e5983026",
       "renderer": "resvg",
       "alt": "If you keep one sentence, keep this: range, levels, and stop, drawn before any click.",
       "spec": {
@@ -1073,6 +1277,7 @@
             "STOP",
             "DRAWN CLICK"
           ],
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -1093,7 +1298,6 @@
         "Stop"
       ],
       "example": false,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -1108,10 +1312,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A few numbered steps for one idea.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 211",
+        "pass: frame \u2014 1536x1024, spread 195",
         "pass: word spacing \u2014 spaces hold between headline words",
-        "pass: ink coverage \u2014 50% of the frame",
-        "pass: plate stem \u2014 12.0px at a 55px cap"
+        "pass: ink coverage \u2014 32% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 13.8px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1120,11 +1324,23 @@
     {
       "file": "018.png",
       "path": "018.png",
+      "job_id": "8a4033c9-75bb-44e3-962d-55e3a1b21501",
+      "lesson": "bp-01-introduction",
+      "prompt_hash": "81dce48a4a48394743c2235521d82362da984da7f0c7b93b7636887cda81c156",
+      "provider": "illustration-engine",
+      "provider_version": "1.0.0",
+      "reason": "normal section_divider",
+      "created_at": "2026-11-13T09:23:05+00:00",
+      "updated_at": "2026-11-13T09:23:05+00:00",
+      "qa_status": "pass",
+      "qa_ok": true,
+      "reviewer": "engine-preflight",
+      "sha256": "85fad550c16634d5d366135a286c52da395969436d2eadd017e6443cc25495ad",
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "47dc4668b047b0bd298c6ed75bb01fbc",
-      "md5": "47dc4668b047b0bd298c6ed75bb01fbc",
+      "checksum": "ebee69b42fe7c0229d11702cdd19f2af",
+      "md5": "ebee69b42fe7c0229d11702cdd19f2af",
       "renderer": "resvg",
       "alt": "Next lesson: What you are going to need. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
       "spec": {
@@ -1139,6 +1355,7 @@
             "PART",
             "NEXT"
           ],
+          "lesson": "bp-01-introduction",
           "mode": "normal"
         },
         "size": "1536x1024",
@@ -1156,7 +1373,6 @@
         "Next"
       ],
       "example": false,
-      "qa_ok": true,
       "qa": [
         "pass: label overflow \u2014 0 marks outside the frame",
         "pass: safe margins \u2014 0 marks in the outer margin",
@@ -1171,10 +1387,10 @@
         "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A section divider with one word.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 245",
+        "pass: frame \u2014 1536x1024, spread 244",
         "pass: word spacing \u2014 spaces hold between headline words",
-        "pass: ink coverage \u2014 36% of the frame",
-        "pass: plate stem \u2014 15.2px at a 55px cap"
+        "pass: ink coverage \u2014 38% of the frame. Recorded only. Craft is scored by skills/image-quality-standard.",
+        "pass: plate stem \u2014 15.2px at a 55px cap. Font preflight only, not a craft score."
       ],
       "mode": "normal",
       "fallback_tier": false,

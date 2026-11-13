@@ -60,7 +60,7 @@ def draw_anatomy(canvas, params: dict) -> None:
     else:
         high, low, opened, closed = 86, 18, 30, 74
     y_of = _map([(opened, high, low, closed)], top, bottom)
-    _candle(canvas, cx, y_of(high), y_of(low), y_of(opened), y_of(closed), 54)
+    _candle(canvas, cx, y_of(high), y_of(low), y_of(opened), y_of(closed), max(96, w * 0.12))
     names = labels_or(params, ["HIGH", "LOW", "BODY", "WICK"])
     canvas.leader(x + 120, y + 90, cx, y_of(high))
     canvas.chip(names[0], x + 120, y + 90)

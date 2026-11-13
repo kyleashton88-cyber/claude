@@ -46,7 +46,16 @@ class RenderTests(unittest.TestCase):
             self.assertIn('font-weight: 700', svg)
             self.assertIn('font-weight="700"', svg)
             self.assertNotIn("1.18", svg)
-            self.assertIn("stdDeviation=\"10\"", svg)
+            self.assertIn('stdDeviation="4"', svg)
+
+    def test_generated_mascot_is_withheld(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            dest = Path(tmp) / "mascot.png"
+            result = render_prompt("mascot pointing", dest, preset="house")
+            svg = dest.with_suffix(".svg").read_text(encoding="utf-8")
+            self.assertIn("character: withheld", svg)
+            self.assertEqual(result.meta.get("character"), "withheld")
+            self.assertNotIn("character: placed", svg)
             stem = next(line for line in result.qa.checks if "stem width" in line)
             self.assertTrue(stem.startswith("pass"), stem)
 

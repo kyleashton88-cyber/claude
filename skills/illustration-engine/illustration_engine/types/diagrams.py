@@ -65,6 +65,28 @@ def draw_comparison(canvas, params: dict) -> None:
         canvas.example = False
 
 
+def _step_mark(canvas, cx, top, card_w, card_h, index: int) -> None:
+    t = canvas.theme
+    ix = cx + card_w * 0.22
+    iy = top + card_h * 0.16
+    iw = card_w * 0.56
+    ih = card_h * 0.2
+    if index == 0:
+        canvas.glow_line(ix, iy, ix + iw, iy, t.accent, sw=t.s(1.6), dash="6 5")
+        canvas.glow_line(ix, iy + ih, ix + iw, iy + ih, t.accent, sw=t.s(1.6), dash="6 5")
+        canvas.glow_polyline(
+            [(ix, iy + ih * 0.55), (ix + iw * 0.35, iy + ih * 0.15), (ix + iw * 0.62, iy + ih * 0.85), (ix + iw, iy + ih * 0.4)],
+            t.ink,
+            sw=t.s(2),
+        )
+    elif index == 1:
+        for rung in range(4):
+            gy = iy + ih * (rung + 0.5) / 4
+            canvas.glow_line(ix, gy, ix + iw, gy, t.accent, sw=t.s(1.8))
+    else:
+        canvas.glow_line(ix, iy + ih * 0.72, ix + iw, iy + ih * 0.72, t.danger, sw=t.s(2.2))
+
+
 def draw_steps(canvas, params: dict) -> None:
     take_headline(canvas, params, "THREE PARTS")
     names = labels_or(params, ["RANGE", "LEVELS", "STOP"])[:3]
@@ -80,9 +102,10 @@ def draw_steps(canvas, params: dict) -> None:
     for i, name in enumerate(names):
         cx = left + i * (card_w + gap)
         slots.append(cx)
-        canvas.glass(cx, top, card_w, card_h, rx=t.s(26))
-        canvas.text(str(i + 1), cx + card_w / 2, top + card_h * 0.38, t.s(84), t.accent_ink, weight="condensed", anchor="middle", role="step", bg=t.card)
-        canvas.text(name, cx + card_w / 2, top + card_h * 0.62, t.label, t.ink, weight="bold", anchor="middle", role="label", bg=t.card)
+        canvas.glass(cx, top, card_w, card_h, rx=t.s(22))
+        _step_mark(canvas, cx, top, card_w, card_h, i)
+        canvas.text(str(i + 1), cx + card_w / 2, top + card_h * 0.58, t.s(56), t.accent_ink, weight="condensed", anchor="middle", role="step", bg="#10283F")
+        canvas.text(name, cx + card_w / 2, top + card_h * 0.78, t.label, t.ink, weight="bold", anchor="middle", role="label", bg="#10283F")
     for i, cx in enumerate(slots):
         if i:
             canvas.arrow(cx - gap + t.s(4), top + card_h * 0.42, cx - t.s(6), top + card_h * 0.42)

@@ -83,7 +83,12 @@ def _phrases_after_colon(concept: str) -> list[str]:
     return out
 
 
-def classify(concept: str, role: str = "", chapter: str = "") -> str:
+def classify(concept: str, role: str = "", chapter: str = "", *, require_signal: bool = False) -> str:
+    """Name a diagram from the words in the prompt.
+
+    The last resort, when nothing matches, is a steps plate. --fallback must
+    not use that resort: a scene with no diagram words is refused.
+    """
     blob = f"{role} {chapter} {concept}".lower()
     role_l = role.lower()
     if role_l == "intro" or "title card" in blob:
@@ -132,6 +137,15 @@ def classify(concept: str, role: str = "", chapter: str = "") -> str:
         return "mascot_scene"
     if role_l in {"recap", "legal", "action"} or "three parts" in blob or "step" in blob:
         return "steps"
+    if require_signal:
+        from .policy import RefusedPrompt
+
+        raise RefusedPrompt(
+            "refusing: --fallback only draws a supported diagram "
+            "(candles, grid ladder, liquidation, range, flowchart, comparison, "
+            "steps, fence, ladder, buckets, checklist). "
+            "This prompt does not name one."
+        )
     return "steps"
 
 
@@ -252,13 +266,15 @@ def spec_from_request(req: dict, *, fallback: bool = False, allow_generic: bool 
     chapter = str(req.get("chapter") or "")
     title = str(req.get("title") or "")
     beat = int(req.get("beat") or 1)
-    kind = classify(concept, role, chapter)
+    kind = classify(concept, role, chapter, require_signal=fallback)
     params = _params_for(kind, concept, role, chapter, title, beat)
     file_name = None
     if req.get("out_path"):
         file_name = str(req["out_path"]).replace("\\", "/").split("/")[-1]
     elif req.get("file"):
         file_name = str(req["file"])
+    if req.get("lesson"):
+        params["lesson"] = str(req["lesson"])
     if notes:
         params["replaced_names"] = len(notes)
     spec = Spec(
@@ -332,13 +348,13 @@ def parse(source: str, *, fallback: bool = False, allow_generic: bool = False) -
                 spec.params["replaced_names"] = len(notes)
             return enforce_mode(spec, fallback=fallback)
     text, notes = screen(text, allow_generic=allow_generic)
-    spec = _parse_sentence(text)
+    spec = _parse_sentence(text, require_signal=fallback)
     if notes:
         spec.params["replaced_names"] = len(notes)
     return enforce_mode(spec, fallback=fallback)
 
 
-def _parse_sentence(text: str) -> Spec:
+def _parse_sentence(text: str, *, require_signal: bool = False) -> Spec:
     headline = None
     head = HEAD_RE.search(text)
     if head:
@@ -349,7 +365,7 @@ def _parse_sentence(text: str) -> Spec:
     if label_match:
         labels = _labels_from_clause(label_match.group(1))
         text = text[: label_match.start()]
-    kind = classify(text)
+    kind = classify(text, require_signal=require_signal)
     params: dict = {}
     if headline:
         params["headline"] = headline

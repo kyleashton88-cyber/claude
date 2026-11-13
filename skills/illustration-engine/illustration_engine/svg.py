@@ -18,6 +18,16 @@ class Svg:
         self._body: list[str] = []
         self._seq = 0
 
+    def comment(self, text: str) -> None:
+        safe = " ".join(text.replace("--", " ").split())
+        self._body.append(f"<!-- {safe} -->")
+
+    def image_data(self, encoded: str, mime: str, x, y, w, h) -> None:
+        href = f"data:{mime};base64,{encoded}"
+        self._body.append(
+            f'<image href="{href}" x="{_num(x)}" y="{_num(y)}" width="{_num(w)}" height="{_num(h)}"/>'
+        )
+
     def uid(self, prefix: str) -> str:
         self._seq += 1
         return f"{prefix}{self._seq}"

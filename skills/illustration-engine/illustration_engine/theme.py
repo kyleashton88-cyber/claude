@@ -65,12 +65,12 @@ class Theme:
         return px * self.scale
 
     def glow_std(self) -> float:
-        """Gaussian blur. About 10 at a 1536-wide frame."""
-        return 10 * self.width / 1536
+        """Tight rim light. About 4 at 1536. A 10px blur read as a milky halo."""
+        return 4 * self.width / 1536
 
     def wash_px(self) -> float:
-        """Soft wash. 32px at a 1536-wide frame."""
-        return 32 * self.width / 1536
+        """Soft edge. About 6 at 1536, not a 32px flood."""
+        return 6 * self.width / 1536
 
 
 def _s(scale: float, px: float) -> int:

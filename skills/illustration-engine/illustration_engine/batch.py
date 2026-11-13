@@ -9,7 +9,15 @@ import yaml
 
 from .parser import parse, spec_from_request
 from .qa import BEGINNER_INTRO, beginner_lines
-from .render import RenderResult, assert_safe_output, entry_from_result, render_spec, write_manifest_atomic, empty_manifest
+from .render import (
+    PlateCollision,
+    RenderResult,
+    assert_safe_output,
+    entry_from_result,
+    render_spec,
+    write_manifest_atomic,
+    empty_manifest,
+)
 from .spec import Spec
 
 
@@ -94,10 +102,21 @@ def render_lesson(source: Path, out_dir: Path, lesson: str | None = None, preset
     specs = load_slots(source, lesson, fallback=fallback, allow_generic=allow_generic)
     results: list[tuple[str, RenderResult]] = []
     rendered: list[RenderResult] = []
+    claimed: set[str] = set()
+    named: list[tuple[str, Spec]] = []
     for index, spec in enumerate(specs, start=1):
         name = spec.file or f"{index:03d}.png"
         if not name.endswith(".png"):
             name += ".png"
+        if name in claimed:
+            raise PlateCollision(
+                f"duplicate filename {name}: two slots in this job would overwrite each other"
+            )
+        claimed.add(name)
+        named.append((name, spec))
+    for name, spec in named:
+        if lesson and "lesson" not in spec.params:
+            spec.params["lesson"] = lesson
         spec.preset = preset or spec.preset
         result = render_spec(spec, out_dir / name, preset=spec.preset, strict=strict, mode=mode)
         results.append((name, result))

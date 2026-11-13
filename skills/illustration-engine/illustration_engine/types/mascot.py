@@ -1,111 +1,119 @@
-"""A vector grid-bot mascot drawn in code.
+"""Place an approved character sheet. Never invent one.
 
-The face is one visor bar. There is no mouth, no smile, and no celebrating pose.
-The chest mark is a geometric badge, not a wordmark.
+The generated robot (stacked rectangles, a visor pill, stick arms) is withdrawn.
+A pose PNG in assets/character/poses/ is placed in a locked box. If that file
+is missing, the plate is the diagram alone and the SVG says the character
+was withheld.
 """
 
 from __future__ import annotations
 
+import base64
+from pathlib import Path
+
 from .common import labels_or, take_headline
 
+POSES = {
+    "pointing": "point",
+    "point": "point",
+    "thinking": "think",
+    "think": "think",
+    "warning": "warn",
+    "warn": "warn",
+    "explain": "explain",
+    "thumbs": "thumbs",
+    "thumbs-up": "thumbs",
+}
 
-def _badge(canvas, cx, cy, s, accent) -> None:
-    """A geometric G, drawn as a path so it is not a text label."""
-    r = 11 * s
-    d = (
-        f"M {cx + r * 0.35:.1f} {cy - r * 0.75:.1f} "
-        f"A {r:.1f} {r:.1f} 0 1 0 {cx + r * 0.45:.1f} {cy + r * 0.55:.1f} "
-        f"L {cx - r * 0.15:.1f} {cy + r * 0.55:.1f} "
-        f"L {cx - r * 0.15:.1f} {cy + r * 0.05:.1f} "
-        f"L {cx + r * 0.7:.1f} {cy + r * 0.05:.1f}"
-    )
-    canvas.svg.path(d, fill="none", stroke=accent, sw=max(2, 3 * s))
+POSE_DIR = Path(__file__).resolve().parent.parent / "assets" / "character" / "poses"
 
 
-def draw_mascot(canvas, x: float, y: float, scale: float, pose: str) -> None:
-    """Draw the figure. (x, y) is the top-left of the unscaled 180 by 280 box."""
+def pose_file(pose: str) -> Path | None:
+    key = POSES.get(pose, "")
+    if not key:
+        return None
+    candidate = POSE_DIR / f"{key}.png"
+    if candidate.is_file() and candidate.stat().st_size > 64:
+        return candidate
+    return None
+
+
+def place_character(canvas, pose: str, x: float, y: float, height: float) -> bool:
+    """Place the approved pose. Returns False when no sheet has been supplied."""
+    path = pose_file(pose)
+    if path is None:
+        canvas.character = "withheld"
+        canvas.svg.comment("character: withheld; no approved sheet")
+        return False
+    encoded = base64.b64encode(path.read_bytes()).decode("ascii")
+    # Width follows the file. Height is the locked token.
+    try:
+        from PIL import Image
+
+        with Image.open(path) as image:
+            aspect = image.width / max(image.height, 1)
+    except OSError:
+        aspect = 0.62
+    width = height * aspect
+    canvas.svg.image_data(encoded, "image/png", x, y, width, height)
+    canvas.character = f"placed:{POSES.get(pose, pose)}"
+    canvas.svg.comment(f"character: {canvas.character}")
+    return True
+
+
+def _diagram(canvas, x, y, w, h, pose: str) -> None:
     t = canvas.theme
-    s = scale
-    with canvas.svg.group(transform=f"translate({x:.1f} {y:.1f}) scale({s})"):
-        canvas.svg.ellipse(90, 268, 62, 10, fill=t.accent, opacity=0.16)
-        canvas.svg.rect(62, 214, 22, 52, fill=t.mascot, stroke=t.mascot_shade, sw=2, rx=8)
-        canvas.svg.rect(96, 214, 22, 52, fill=t.mascot_shade, stroke=t.mascot_shade, sw=2, rx=8)
-        canvas.svg.rect(40, 112, 100, 112, fill=t.mascot, stroke=t.rim, sw=2.5, rx=32)
-        canvas.svg.rect(92, 118, 44, 98, fill=t.mascot_shade, rx=18, opacity=0.55)
-        canvas.svg.circle(90, 168, 22, fill=t.visor, stroke=t.eye, sw=2)
-        _badge(canvas, 90, 168, 1, t.eye)
-        canvas.svg.rect(28, 8, 124, 112, fill=t.mascot, stroke=t.rim, sw=3, rx=56)
-        canvas.svg.path("M 46 36 A 58 52 0 0 1 132 22", fill="none", stroke="#F4F8FC", sw=3, opacity=0.7)
-        canvas.svg.rect(50, 46, 80, 36, fill=t.visor, rx=14)
-        # One visor bar. Not two dots, and not a smile.
-        canvas.svg.rect(58, 60, 64, 7, fill=t.eye, rx=2)
-        # Arms sit in front of the body. Local coordinates, before the group scale.
-        if pose == "pointing":
-            canvas.svg.line(40, 150, 16, 168, t.mascot_shade, sw=14)
-            canvas.svg.line(140, 146, 210, 132, t.mascot, sw=14)
-            canvas.svg.circle(214, 130, 8, fill=t.mascot, stroke=t.accent, sw=2)
-        elif pose == "thinking":
-            canvas.svg.line(140, 150, 168, 176, t.mascot_shade, sw=14)
-            canvas.svg.line(40, 146, 28, 78, t.mascot, sw=14)
-            canvas.svg.circle(26, 70, 8, fill=t.mascot, stroke=t.accent, sw=2)
-        else:
-            # warning: one arm up, holding a small triangle sign
-            canvas.svg.line(40, 150, 12, 176, t.mascot_shade, sw=14)
-            canvas.svg.line(140, 140, 168, 70, t.mascot, sw=14)
-            canvas.svg.polygon([(196, 36), (176, 76), (216, 76)], fill=t.danger, stroke=t.ink, sw=2)
+    top = y + h * 0.34
+    bot = y + h * 0.68
+    canvas.glow_line(x + t.s(28), top, x + w - t.s(28), top, t.accent, sw=t.s(2), dash="7 7")
+    canvas.glow_line(x + t.s(28), bot, x + w - t.s(28), bot, t.accent, sw=t.s(2), dash="7 7")
+    canvas.glow_polyline(
+        [
+            (x + t.s(48), (top + bot) / 2),
+            (x + w * 0.28, top + t.s(16)),
+            (x + w * 0.48, bot - t.s(14)),
+            (x + w - t.s(48), (top + bot) / 2),
+        ],
+        t.accent,
+        sw=t.s(2.6),
+    )
+    if pose == "warning":
+        canvas.glow_line(x + t.s(36), bot + t.s(36), x + w - t.s(36), bot + t.s(36), t.danger, sw=t.s(2.4))
 
 
 def draw_mascot_scene(canvas, params: dict) -> None:
     pose = str(params.get("pose") or params.get("variant") or "pointing")
     if pose == "celebrating":
         pose = "pointing"
-    if pose not in {"pointing", "thinking", "warning"}:
+    if pose not in {"pointing", "thinking", "warning", "explain", "thumbs", "thumbs-up"}:
         pose = "pointing"
     titles = {
         "pointing": "LOOK HERE",
         "thinking": "THINK FIRST",
         "warning": "CHECK FIRST",
+        "explain": "ONE IDEA",
+        "thumbs": "STEP DONE",
+        "thumbs-up": "STEP DONE",
     }
-    take_headline(canvas, params, titles[pose])
+    take_headline(canvas, params, titles.get(pose, "LOOK HERE"))
     defaults = {
         "pointing": ["POINT", "RANGE"],
         "thinking": ["THINK", "CHECK"],
         "warning": ["WAIT", "CHECK"],
+        "explain": ["IDEA", "NEXT"],
+        "thumbs": ["DONE", "NEXT"],
+        "thumbs-up": ["DONE", "NEXT"],
     }
-    names = labels_or(params, defaults[pose])
+    names = labels_or(params, defaults.get(pose, ["POINT", "RANGE"]))
     x, y, w, h = canvas.content_rect()
-    canvas.glass(x, y, w, h)
     t = canvas.theme
-    card_x = x + w * 0.40
-    card_w = w * 0.56
-    if pose == "pointing":
-        top = y + h * 0.38
-        bot = y + h * 0.68
-        canvas.svg.line(card_x + 40, top, card_x + card_w - 40, top, t.accent, sw=2, dash="6 6")
-        canvas.svg.line(card_x + 40, bot, card_x + card_w - 40, bot, t.accent, sw=2, dash="6 6")
-        canvas.svg.polyline(
-            [(card_x + 50, (top + bot) / 2), (card_x + 140, top + 16), (card_x + 230, bot - 12), (card_x + card_w - 50, (top + bot) / 2)],
-            t.accent,
-            sw=3,
-        )
-    elif pose == "thinking":
-        for i in range(3):
-            yy = y + 90 + i * 70
-            canvas.svg.circle(card_x + 50, yy, 10, fill="none", stroke=t.accent, sw=2)
-            canvas.svg.line(card_x + 80, yy, card_x + card_w - 50, yy, t.muted, sw=2)
-    elif pose == "warning":
-        canvas.svg.rect(card_x + 40, y + h * 0.42, card_w - 80, h * 0.28, fill=t.danger, opacity=0.2, rx=12)
-        canvas.svg.line(card_x + 40, y + h * 0.42, card_x + card_w - 40, y + h * 0.42, t.danger, sw=3)
-    else:
-        canvas.svg.polyline(
-            [(card_x + 70, y + h * 0.62), (card_x + 100, y + h * 0.48), (card_x + 140, y + h * 0.66)],
-            t.accent,
-            sw=6,
-        )
-    canvas.chip(names[0], card_x + card_w * 0.3, y + 70)
+    height = t.s(433)
+    placed = place_character(canvas, pose, x, y + h - height, height)
+    diagram_x = x + (height * 0.7 if placed else 0)
+    diagram_w = w - (height * 0.7 if placed else 0)
+    _diagram(canvas, diagram_x, y, diagram_w, h, pose)
+    canvas.chip(names[0], diagram_x + diagram_w * 0.28, y + t.s(36))
     if len(names) > 1:
-        canvas.chip(names[1], card_x + card_w * 0.72, y + h - 50)
-    scale = min((h * 0.88) / 280, (w * 0.38) / 180)
-    draw_mascot(canvas, x + t.s(12), y + h - 280 * scale - t.s(8), scale, pose)
+        canvas.chip(names[1], diagram_x + diagram_w * 0.72, y + h - t.s(28))
     if pose == "warning":
         canvas.stamp_example()
