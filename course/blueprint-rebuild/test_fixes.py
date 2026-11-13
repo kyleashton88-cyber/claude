@@ -79,6 +79,36 @@ class PipelineTests(unittest.TestCase):
         with self.assertRaises(SystemExit):
             studio.load_picture(studio.COVER)
 
+    def test_date_tag_stays_off_the_level_lines(self):
+        shots = lesson_scripts.attach_series(lesson_scripts.walk(
+            lesson_scripts.SUMMER, "Walk the summer", 4, (24930, 30331), "Closes inside the summer window"
+        ))
+        shot = shots[0]
+        series = shot["series"]
+        plot = (120, 200, 1500, 700)
+        closes = [float(row["close"]) for row in series]
+        lo = min(float(row["low"]) for row in series)
+        hi = max(float(row["high"]) for row in series)
+        pad = (hi - lo) * 0.12
+        lo_p, hi_p = lo - pad, hi + pad
+        n = len(series)
+        full = [studio._map(i, n, closes[i], lo_p, hi_p, plot) for i in range(n)]
+        hx, hy = full[0]
+        level_ys = [studio._map(0, n, price, lo_p, hi_p, plot)[1] for price in (24930, 30331)]
+        tx, ty = studio.place_date_tag(hx, hy, 280, 44, plot, level_ys, full)
+        self.assertFalse(any(ty - 8 < level < ty + 44 + 8 for level in level_ys))
+        self.assertLess(abs((ty + 22) - hy), 180)
+        lane_ty = min(max(plot[1], hy - 22), plot[3] - 44)
+        self.assertLess(abs((lane_ty + 22) - hy), 4)
+
+    def test_end_card_names_the_next_lesson(self):
+        kicker, label, cta = studio.next_lesson_label({
+            "lesson_no": "01",
+            "caption": "What you are going to need",
+        })
+        self.assertEqual((kicker, label, cta), ("NEXT", "Lesson 2", "Watch the next lesson"))
+        self.assertIsNone(studio.cleared_mascot({"lesson_id": "bp-01-introduction"}))
+
     def test_pinned_stop_matches_the_caption_row(self):
         shots = lesson_scripts.attach_series(lesson_scripts.walk(
             lesson_scripts.SUMMER, "Walk the summer", 4, (24930, 30331), "Closes inside the summer window"

@@ -389,6 +389,7 @@ def plan(sid: str) -> list[dict]:
     _attach_lesson_stills(sid, shots)
     for shot in shots:
         shot["lesson_no"] = number
+        shot["lesson_id"] = sid
         shot["lesson_title"] = title
         shot["term"], shot["definition"] = thirds(shot)
         blob = " ".join(
@@ -541,6 +542,65 @@ def playhead_index(shot: dict, local: float, dur: float) -> int:
     return last - 1
 
 
+def _rect_hits_samples(rect: tuple[float, float, float, float], points: list[tuple[float, float]]) -> bool:
+    x0, y0, x1, y1 = rect
+    for index in range(len(points) - 1):
+        ax, ay = points[index]
+        bx, by = points[index + 1]
+        length = max(1.0, ((bx - ax) ** 2 + (by - ay) ** 2) ** 0.5)
+        steps = max(1, int(length / 6))
+        for step in range(steps + 1):
+            t = step / steps
+            x = ax + (bx - ax) * t
+            y = ay + (by - ay) * t
+            if x0 <= x <= x1 and y0 <= y <= y1:
+                return True
+    return False
+
+
+def place_date_tag(
+    hx: float,
+    hy: float,
+    tw: int,
+    th: int,
+    plot: tuple[float, float, float, float],
+    level_ys: list[float],
+    polyline: list[tuple[float, float]],
+) -> tuple[float, float]:
+    """Park the date tag beside its close, clear of every level line and the path."""
+    gap = 22
+    radius = 12
+    x0, y0, x1, y1 = plot
+
+    def ok(tx: float, ty: float) -> bool:
+        if tx < x0 or ty < y0 or tx + tw > x1 or ty + th > y1:
+            return False
+        if any(ty - 8 < level < ty + th + 8 for level in level_ys):
+            return False
+        rect = (tx - 4, ty - 4, tx + tw + 4, ty + th + 4)
+        if _rect_hits_samples(rect, polyline):
+            return False
+        if tx - 6 <= hx <= tx + tw + 6 and ty - 6 <= hy <= ty + th + 6:
+            return False
+        return True
+
+    shifts = [0]
+    for step in range(8, 180, 8):
+        shifts.extend((step, -step))
+    for side in (1, -1):
+        for dy in shifts:
+            if side > 0:
+                tx = hx + radius + gap
+            else:
+                tx = hx - radius - gap - tw
+            ty = hy - th / 2 + dy
+            if ok(tx, ty):
+                return tx, ty
+    ty = min(max(y0, hy + radius + 8), y1 - th)
+    tx = min(max(x0, hx + radius + gap), x1 - tw)
+    return tx, ty
+
+
 def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None) -> None:
     draw = ImageDraw.Draw(base)
     if box is None:
@@ -558,7 +618,16 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
         draw.text((box[0] + 36, box[1] + 96), "Example window", font=font(36), fill=DIM)
         return
     plot_top = box[1] + (108 if idea else 72)
-    plot = (box[0] + 28, plot_top, box[2] - 250, box[3] - 36)
+    months = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    pinned = playhead_index(shot, local, dur)
+    ymd = series[pinned]["date"].split("-")
+    tag = f"{int(ymd[2])} {months[int(ymd[1])]}  {int(round(series[pinned]['close'])):,}"
+    face = font(32)
+    tw = int(face.getlength(tag)) + 28
+    th = 44
+    # A stop near the left edge gets a lane, so the tag can sit at the close's own height.
+    lane = tw + 36 if pinned <= max(2, int(len(series) * 0.18)) else 0
+    plot = (box[0] + 28 + lane, plot_top, box[2] - 250, box[3] - 36)
     gutter_x = box[2] - 236
     closes = [float(r["close"]) for r in series]
     lo = min(float(r["low"]) for r in series)
@@ -566,7 +635,7 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
     pad = (hi - lo) * 0.12 or 1
     lo_p, hi_p = lo - pad, hi + pad
     n = len(series)
-    last = playhead_index(shot, local, dur) + 1
+    last = pinned + 1
     full = [_map(i, n, closes[i], lo_p, hi_p, plot) for i in range(n)]
     if len(full) > 1:
         draw.line(full, fill=(36, 78, 96), width=3)
@@ -574,30 +643,6 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
     if len(shown) > 1:
         draw.line(shown, fill=CYAN, width=5)
     hx, hy = shown[-1]
-    r = 8
-    draw.ellipse((hx - r - 3, hy - r - 3, hx + r + 3, hy + r + 3), outline=CYAN, width=3)
-    draw.ellipse((hx - r, hy - r, hx + r, hy + r), fill=WHITE)
-    row = series[last - 1]
-    tag = f"{row['date'][8:10]} {row['date'][5:7]}  {int(round(row['close'])):,}"
-    # Friendlier tag: day month via the series date ISO.
-    months = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-    y, m, d = row["date"].split("-")
-    tag = f"{int(d)} {months[int(m)]}  {int(round(row['close'])):,}"
-    face = font(36)
-    tw = int(face.getlength(tag)) + 28
-    if hx > (plot[0] + plot[2]) / 2:
-        tx = hx - tw - 14
-    else:
-        tx = hx + 16
-    tx = min(plot[2] - tw, max(plot[0], tx))
-    ty = hy - 56
-    if ty < plot[1]:
-        ty = hy + 18
-    if ty + 48 > plot[3]:
-        ty = plot[1]
-    draw.rounded_rectangle([tx, ty, tx + tw, ty + 48], 10, fill=NAVY, outline=CYAN, width=2)
-    draw.text((tx + 14, ty + 4), tag, font=face, fill=WHITE)
-
     levels = [float(p) for p in (shot.get("levels") or [])]
     focus = shot.get("focus_price")
     prices = list(levels) if levels else []
@@ -643,6 +688,23 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
         if gutter_x + lf.getlength(label) > box[2] - 12:
             continue
         draw.text((gutter_x, yy - 16), label, font=lf, fill=color)
+
+    if lane:
+        # The level lines start at the plot, so the lane can hold the tag at the close.
+        tx = plot[0] - 18 - tw
+        ty = min(max(plot[1], hy - th / 2), plot[3] - th)
+    else:
+        tx, ty = place_date_tag(hx, hy, tw, th, plot, used, full)
+    r = 8
+    draw.ellipse((hx - r - 3, hy - r - 3, hx + r + 3, hy + r + 3), outline=CYAN, width=3)
+    draw.ellipse((hx - r, hy - r, hx + r, hy + r), fill=WHITE)
+    if tx >= hx:
+        anchor = (tx, ty + th / 2)
+    else:
+        anchor = (tx + tw, ty + th / 2)
+    draw.line([(hx + (10 if tx >= hx else -10), hy), anchor], fill=CYAN, width=3)
+    draw.rounded_rectangle([tx, ty, tx + tw, ty + th], 10, fill=NAVY, outline=CYAN, width=2)
+    draw.text((tx + 14, ty + 4), tag, font=face, fill=WHITE)
 
 
 def paint_brand(base: Image.Image, shot: dict, local: float) -> None:
@@ -801,24 +863,92 @@ def paint_analogy(base: Image.Image, shot: dict, local: float, dur: float) -> No
     chart_card(base, shot, local, dur, right)
 
 
-def paint_outro(base: Image.Image, shot: dict, local: float) -> None:
-    """Template end card. The right side stays clear for an end screen."""
-    templates = ROOT / "skills/video-production/templates"
-    if str(templates) not in sys.path:
-        sys.path.insert(0, str(templates))
-    from pack.paint import paint_endcard
+def next_lesson_label(shot: dict) -> tuple[str, str, str]:
+    """Kicker, lesson label, and call to action for the end card."""
+    title = (shot.get("caption") or "End of the Blueprint").strip()
+    if title.rstrip(".") == "End of the Blueprint":
+        return "END", "The Blueprint", "That is the last lesson"
+    number = int(shot.get("lesson_no") or 1) + 1
+    return "NEXT", f"Lesson {number}", "Watch the next lesson"
 
-    card_path = Path("/tmp/bp-endcard.png")
-    next_title = shot.get("caption") or "End of the Blueprint"
-    paint_endcard(shot.get("lesson_title") or "Blueprint", next_title, card_path)
-    card = Image.open(card_path).convert("RGB")
-    if card.size != (W, H):
-        card = card.resize((W, H), Image.Resampling.LANCZOS)
-    base.paste(card, (0, 0))
-    bot = mascot()
+
+def cleared_mascot(shot: dict) -> Image.Image | None:
+    """The new mascot only. It has to be on disk and a passing scored row."""
+    if not MASCOT_SRC.is_file():
+        return None
+    if "el-06-circuit-breakers" in str(MASCOT_SRC):
+        return None
+    lesson = str(shot.get("lesson_id") or "")
+    if not lesson:
+        return None
+    here = str(ROOT / "course/blueprint-rebuild")
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    import image_gate
+
+    if not image_gate.DEFAULT_LIST.is_file():
+        return None
+    rel = "course/images/mascot/blueprint-mascot.png"
+    for row in image_gate.load_pass_list(image_gate.DEFAULT_LIST):
+        path = image_gate._norm(str(row.get("path") or ""))
+        if path != rel or str(row.get("lesson") or "") != lesson:
+            continue
+        if not image_gate._passed(row) or image_gate.blob_problem(rel, row):
+            return None
+        return Image.open(MASCOT_SRC).convert("RGBA")
+    return None
+
+
+def paint_outro(base: Image.Image, shot: dict, local: float) -> None:
+    """End card: wordmark crop, the next lesson, and one footer."""
+    draw = ImageDraw.Draw(base)
+    kicker, lesson_label, cta = next_lesson_label(shot)
+    title = (shot.get("caption") or "End of the Blueprint").strip().rstrip(".")
+    bot = cleared_mascot(shot)
+    text_left = MX + 72
+    text_right = RIGHT - 72
+    sprite = None
     if bot is not None:
-        sprite = scaled(bot, 360)
-        paste(base, sprite, (1240, 250))
+        sprite = scaled(bot, 460)
+        max_w = int((RIGHT - MX) * 0.34)
+        if sprite.width > max_w:
+            sprite = sprite.resize((max_w, max(1, int(sprite.height * max_w / sprite.width))), Image.Resampling.LANCZOS)
+        text_right = RIGHT - 96 - sprite.width
+    width = text_right - text_left
+    mark = scaled(wordmark(), 110)
+    title_size = fit_size(title, width, 64, 40)
+    title_lines = wrap(title, title_size, width)[:3]
+    cta_face = font(32)
+    cta_w = int(cta_face.getlength(cta)) + 64
+    block = 126 + 44 + 52 + len(title_lines) * (title_size + 12) + 36 + 64
+    card_h = block + 96
+    card_top = max(88, (900 - card_h) // 2)
+    card = (MX, card_top, RIGHT, card_top + card_h)
+    draw.rounded_rectangle(card, 28, fill=GLASS, outline=LINE, width=2)
+    if sprite is not None:
+        paste(base, sprite, (RIGHT - 56 - sprite.width, card[1] + (card_h - sprite.height) // 2))
+    y = card[1] + (card_h - block) // 2
+    paste(base, mark, (text_left + max(0, (width - mark.width) // 2), int(y)))
+    y += 126
+    kick = font(28)
+    kw = kick.getlength(kicker)
+    draw.text((text_left + (width - kw) / 2, y), kicker, font=kick, fill=CYAN)
+    y += 44
+    lab = font(36)
+    lw = lab.getlength(lesson_label)
+    draw.text((text_left + (width - lw) / 2, y), lesson_label, font=lab, fill=CYAN)
+    y += 56
+    for line in title_lines:
+        face = font(title_size)
+        draw.text((text_left + (width - face.getlength(line)) / 2, y), line, font=face, fill=WHITE)
+        y += title_size + 12
+    y += 28
+    pill_x = text_left + (width - cta_w) / 2
+    draw.rounded_rectangle([pill_x, y, pill_x + cta_w, y + 64], 32, fill=CYAN)
+    draw.text((pill_x + 32, y + 12), cta, font=cta_face, fill=NAVY)
+    foot = font(32, "reg")
+    fw = foot.getlength(FOOT)
+    draw.text(((W - fw) / 2, 948), FOOT, font=foot, fill=DIM)
     if local < 0.35:
         fade = Image.new("RGB", (W, H), NAVY)
         base.paste(Image.blend(fade, base, ease(local / 0.35)))
