@@ -55,7 +55,7 @@ python3 cli.py demo --out test-outputs --voice path/to/voice.wav
 
 ## Settings
 
-Beds and mixes longer than three seconds are written as 48 kHz stereo 16-bit WAV after two-pass loudnorm to −16 LUFS / −1 dBTP. An effect shorter than three seconds has no meaningful integrated loudness, so it is peak-normalised to −1 dBTP instead.
+Beds and mixes longer than three seconds are written as 48 kHz stereo 16-bit WAV. A bed is loudness-normalised to −14 LUFS / −1 dBTP so `lib/mix.py` can place it 20 dB under the voice. An effect shorter than three seconds has no meaningful integrated loudness, so it is peak-normalised to −1 dBTP instead.
 - Seed is fixed (`7` for beds, per-effect seeds for noise), so a re-run matches.
 - Fade in 1.6 s, fade out 2.4 s, before the loudness pass.
 

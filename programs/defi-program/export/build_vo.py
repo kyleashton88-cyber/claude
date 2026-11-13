@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Narration engine for every video: Kokoro TTS (offline), sentence by sentence.
+"""Narration engine for Operator videos: Kokoro TTS (offline), sentence by sentence.
+
+New teaching clips use skills/video-production/natural-voice, default Kokoro af_heart,
+and skills/video-production/lib/mix.py (−14 LUFS / −1 dBTP, music −20 dB).
+This file still feeds build_video.js. Do not point a new lesson here.
 
 Usage:
   python3 build_vo.py <scenes.json> <out_dir> [voice]     narration per scene

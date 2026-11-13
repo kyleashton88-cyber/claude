@@ -147,8 +147,13 @@ def render(sid: str, proof: bool, out_dir: Path | None = None, prepare_shots=Non
     build_bed(clock, lifts, bed)
     mix(silent, voice_path, bed, dest)
     print(f"WROTE {dest} {clock:.1f}s words {words}", flush=True)
-    if not proof and clock < 15 * 60:
-        raise SystemExit(f"{sid} is {clock:.1f}s, under 15 minutes")
+    # Duration is not judged here. The only rule is quality-gate profiles.py,
+    # so a 6:15 Blueprint master is not rejected after a successful render.
+    print(
+        f"Length {clock:.1f}s is recorded, not failed. "
+        "Judge it with skills/video-production/quality-gate --format blueprint.",
+        flush=True,
+    )
     return dest
 
 

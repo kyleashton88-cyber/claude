@@ -1,4 +1,8 @@
-"""Render a tutorial from ChatGPT stills plus overlays.
+"""Render a tutorial from stills plus overlays.
+
+Deprecated as the entry point for a new lesson. Use skills/production-pipeline,
+then skills/video-production/quality-gate. This renderer stays so a paused
+Blueprint rebuild can still call it. It does not judge duration.
 
 The pictures must already exist at each beat's image path. This file never
 draws a diagram. It may add captions, a lower third, the disclaimer line,

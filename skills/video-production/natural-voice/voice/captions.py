@@ -37,20 +37,37 @@ def cues(words: list[Word], max_words: int = 8, max_chars: int = 42) -> list[lis
     groups: list[list[Word]] = []
     current: list[Word] = []
     for word in words:
-        current.append(word)
-        text = " ".join(item.text for item in current)
-        if len(current) >= max_words or len(text) >= max_chars:
+        trial = current + [word]
+        text = " ".join(item.text for item in trial)
+        if current and (len(trial) > max_words or len(text) > max_chars):
             groups.append(current)
-            current = []
+            current = [word]
+        else:
+            current = trial
     if current:
         groups.append(current)
     return groups
 
 
+def _cue_end(cue: list[Word], following: float | None) -> float:
+    """Give a readable hold when alignment crushed several words into a few frames."""
+    start = cue[0].start
+    end = cue[-1].end
+    text = " ".join(word.text for word in cue)
+    need = max(0.8, len(text) / 17.0)
+    if end - start < need:
+        end = start + need
+    if following is not None:
+        end = min(end, following)
+    return max(end, start + 0.2)
+
+
 def write_vtt(path: Path, words: list[Word]) -> None:
     lines = ["WEBVTT", ""]
-    for cue in cues(words):
-        lines.append(f"{_stamp(cue[0].start)} --> {_stamp(cue[-1].end)}")
+    grouped = cues(words)
+    for index, cue in enumerate(grouped):
+        following = grouped[index + 1][0].start if index + 1 < len(grouped) else None
+        lines.append(f"{_stamp(cue[0].start)} --> {_stamp(_cue_end(cue, following))}")
         lines.append(" ".join(word.text for word in cue))
         lines.append("")
     path.write_text("\n".join(lines))
@@ -58,9 +75,11 @@ def write_vtt(path: Path, words: list[Word]) -> None:
 
 def write_srt(path: Path, words: list[Word]) -> None:
     lines = []
-    for index, cue in enumerate(cues(words), start=1):
+    grouped = cues(words)
+    for index, cue in enumerate(grouped, start=1):
+        following = grouped[index][0].start if index < len(grouped) else None
         lines.append(str(index))
-        lines.append(f"{_stamp(cue[0].start, srt=True)} --> {_stamp(cue[-1].end, srt=True)}")
+        lines.append(f"{_stamp(cue[0].start, srt=True)} --> {_stamp(_cue_end(cue, following), srt=True)}")
         lines.append(" ".join(word.text for word in cue))
         lines.append("")
     path.write_text("\n".join(lines))

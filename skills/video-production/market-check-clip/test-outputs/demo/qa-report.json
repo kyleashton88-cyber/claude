@@ -1,0 +1,14 @@
+{
+  "master": "/agent/repos/claude/skills/video-production/market-check-clip/test-outputs/demo/master.mp4",
+  "integrated_lufs": -13.5,
+  "true_peak_dbtp": -2.9,
+  "target_lufs": -14.0,
+  "target_true_peak": -1.0,
+  "loudness_pass": true,
+  "caption_margin_pass": true,
+  "illustration": "none",
+  "align_method": "acoustic-forced-align",
+  "font": "/agent/repos/claude/skills/video-production/fonts/inter/Inter-Bold.ttf",
+  "quality_gate": "pass",
+  "quality_gate_log": "PASS /agent/repos/claude/skills/video-production/market-check-clip/test-outputs/demo/gate/report.json\n/agent/repos/claude/skills/video-production/market-check-clip/test-outputs/demo/gate/report.md\n"
+}

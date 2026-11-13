@@ -1,0 +1,140 @@
+{
+  "tool": "compliance",
+  "source": "samples/risky-script.txt",
+  "status": "pending legal review",
+  "auto_clear": false,
+  "content_result": "fail",
+  "content_hash": "50d067069580348597fd7e4cb524a93c1821f4fc8bc1fa63b840aca87ec48207",
+  "flag_count": 14,
+  "flags": [
+    {
+      "severity": "fail",
+      "kind": "hype",
+      "term": "risk-free",
+      "line": 2,
+      "timestamp": "00:00:01.000",
+      "text": "This strategy is guaranteed and risk-free, so you can't lose.",
+      "suggestion": "Say that the position can lose money."
+    },
+    {
+      "severity": "fail",
+      "kind": "hype",
+      "term": "guaranteed",
+      "line": 2,
+      "timestamp": "00:00:01.000",
+      "text": "This strategy is guaranteed and risk-free, so you can't lose.",
+      "suggestion": "Say there is no guarantee, or describe the mechanism without a promise."
+    },
+    {
+      "severity": "fail",
+      "kind": "hype",
+      "term": "can't lose",
+      "line": 2,
+      "timestamp": "00:00:01.000",
+      "text": "This strategy is guaranteed and risk-free, so you can't lose.",
+      "suggestion": "Say you can lose some or all of the money."
+    },
+    {
+      "severity": "fail",
+      "kind": "hype",
+      "term": "like a pro",
+      "line": 3,
+      "timestamp": "00:00:04.000",
+      "text": "Trade like a pro.",
+      "suggestion": "Say \"with a written plan\"."
+    },
+    {
+      "severity": "fail",
+      "kind": "hype",
+      "term": "proven",
+      "line": 3,
+      "timestamp": "00:00:04.000",
+      "text": "Proven 12% returns.",
+      "suggestion": "Say what was observed, and that it can fail."
+    },
+    {
+      "severity": "fail",
+      "kind": "hype",
+      "term": "% returns",
+      "line": 3,
+      "timestamp": "00:00:04.000",
+      "text": "Proven 12% returns.",
+      "suggestion": "Drop the return claim. If the figure is a sketch, label it EXAMPLE and say it is not a forecast."
+    },
+    {
+      "severity": "fail",
+      "kind": "example-number",
+      "term": "12%",
+      "line": 3,
+      "timestamp": "00:00:04.000",
+      "text": "Proven 12% returns.",
+      "suggestion": "Label the figure EXAMPLE, for example \"EXAMPLE: 12%\"."
+    },
+    {
+      "severity": "fail",
+      "kind": "personal-advice",
+      "term": "personal advice",
+      "line": 4,
+      "timestamp": "00:00:08.000",
+      "text": "You should buy this on Binance.",
+      "suggestion": "Describe the mechanism. Do not tell the viewer to buy, sell, or invest."
+    },
+    {
+      "severity": "fail",
+      "kind": "brand",
+      "term": "Binance",
+      "line": 4,
+      "timestamp": "00:00:08.000",
+      "text": "You should buy this on Binance.",
+      "suggestion": "Remove the exchange or brand name. Describe the mechanism without naming a venue."
+    },
+    {
+      "severity": "fail",
+      "kind": "personal-advice",
+      "term": "personal advice",
+      "line": 4,
+      "timestamp": "00:00:08.000",
+      "text": "It is right for you.",
+      "suggestion": "Drop \"right for you\". The lesson is general."
+    },
+    {
+      "severity": "fail",
+      "kind": "example-number",
+      "term": "90",
+      "line": 5,
+      "timestamp": "00:00:12.000",
+      "text": "The range is 90 to 110.",
+      "suggestion": "Label the figure EXAMPLE, for example \"EXAMPLE: 90\"."
+    },
+    {
+      "severity": "fail",
+      "kind": "hype",
+      "term": "guaranteed",
+      "line": 8,
+      "timestamp": "00:00:01.000",
+      "text": "Guaranteed profits",
+      "suggestion": "Say there is no guarantee, or describe the mechanism without a promise."
+    },
+    {
+      "severity": "fail",
+      "kind": "disclaimer",
+      "term": "spoken disclaimer",
+      "line": 2,
+      "timestamp": "00:00:01.000",
+      "text": "This strategy is guaranteed and risk-free, so you can't lose. Trade like a pro. Proven 12% returns. You should buy this on Binance. It is right for you. The range is 90 to 110.",
+      "suggestion": "Add a spoken line: \"This is education, not financial advice.\""
+    },
+    {
+      "severity": "fail",
+      "kind": "disclaimer",
+      "term": "on-screen disclaimer",
+      "line": 8,
+      "timestamp": "00:00:01.000",
+      "text": "Guaranteed profits",
+      "suggestion": "Put \"Education, not financial advice.\" on screen as well as in the voice."
+    }
+  ],
+  "signoff": "A person records legal approval in the review record. This linter never writes that approval.",
+  "publishes": false,
+  "legal_recorded": false
+}
