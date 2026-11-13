@@ -1,0 +1,97 @@
+{
+  "tool": "quality-gate",
+  "result": "pass",
+  "master": "course/blueprint-rebuild/masters/bp-01-introduction.mp4",
+  "format": "blueprint",
+  "format_label": "Blueprint lesson",
+  "length_window_seconds": [
+    360,
+    600
+  ],
+  "loudness_target_lufs": -14.0,
+  "loudness_tolerance_lu": 1.0,
+  "true_peak_max_dbtp": -1.0,
+  "failed": [],
+  "checks": [
+    {
+      "id": "length",
+      "result": "pass",
+      "detail": "581.8s is inside Blueprint lesson (360s\u2013600s)"
+    },
+    {
+      "id": "loudness",
+      "result": "pass",
+      "detail": "integrated -13.4 LUFS, target -14 \u00b1 1"
+    },
+    {
+      "id": "true_peak",
+      "result": "pass",
+      "detail": "true peak -2.9 dBTP, limit -1 dBTP"
+    },
+    {
+      "id": "frozen",
+      "result": "pass",
+      "detail": "longest static run 7.5s, limit 8s"
+    },
+    {
+      "id": "black",
+      "result": "pass",
+      "detail": "no near-black run over 0.5s"
+    },
+    {
+      "id": "silence",
+      "result": "pass",
+      "detail": "no silence of 2s or more"
+    },
+    {
+      "id": "resolution",
+      "result": "pass",
+      "detail": "1920x1080"
+    },
+    {
+      "id": "fps",
+      "result": "pass",
+      "detail": "30.000 fps"
+    },
+    {
+      "id": "codec",
+      "result": "pass",
+      "detail": "video h264, audio aac, yuv420p"
+    },
+    {
+      "id": "captions",
+      "result": "pass",
+      "detail": "137 cues, at most 42 characters and 20 per second"
+    },
+    {
+      "id": "text_recognition",
+      "result": "pass",
+      "detail": "tesseract read the sampled frames"
+    },
+    {
+      "id": "brands",
+      "result": "pass",
+      "detail": "no exchange or banned brand name"
+    },
+    {
+      "id": "safe_margins",
+      "result": "pass",
+      "detail": "sampled words sit inside the 4% margin"
+    },
+    {
+      "id": "disclaimer",
+      "result": "pass",
+      "detail": "found an education line that says not financial advice"
+    },
+    {
+      "id": "figures",
+      "result": "pass",
+      "detail": "on-screen figures match the lesson, and each one is labelled EXAMPLE"
+    }
+  ],
+  "supersedes": [
+    "course/skills/motion_picture/qa.py now points here and does not apply a 15-minute floor",
+    "course/blueprint-rework/render_motion.py records length and does not exit on it"
+  ],
+  "publishes": false
+}
