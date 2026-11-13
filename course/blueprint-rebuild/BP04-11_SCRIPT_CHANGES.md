@@ -370,3 +370,339 @@ Change 3:
 - Before: The point of the beat is the pointing.
 - After: Point at the part that belongs to No score.
 - After: If you cannot point yet, stay on this frame.
+
+
+## bp-05-spacing-and-range
+
+### Beat 1 (hook, Hook)
+
+Change 1:
+
+- After: The band is the top and the bottom.
+- After: The weave is price moving back and forth.
+
+Change 2:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to Hook.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Hook.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 3 (intro, Title card)
+
+Change 1:
+
+- After: Spacing is the gap between order lines.
+- After: The range is the band those lines sit inside.
+
+### Beat 4 (body, Gaps and orders)
+
+Change 1:
+
+- Before: You multiply the step by the gaps, not by the lines.
+- After: You multiply the step, the distance from one line to the next, by the gaps, not by the lines.
+
+Change 2:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 3:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 4:
+
+- Before: Say the opening line once more, and point at the part that belongs to Gaps and orders.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Gaps and orders.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 5 (demo, The span)
+
+Change 1:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 2:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to The span.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to The span.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 6 (body, Half spacing)
+
+Change 1:
+
+- Before: Halving the step without recounting the gaps doubles the line count for the same span, and the new gap count is not the old line count.
+- After: Halving the step, without recounting the gaps, doubles the line count for the same span.
+- After: The new gap count is not the old line count.
+- After: Halving means the step is cut in half.
+- After: The span is the distance from the lower line to the upper line.
+
+Change 2:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 3:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 4:
+
+- Before: Say the opening line once more, and point at the part that belongs to Half spacing.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Half spacing.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 7 (body, Range first)
+
+Change 1:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 2:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to Range first.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Range first.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 8 (body, Fees)
+
+Change 1:
+
+- After: A round trip is the cost of a buy and a sell.
+
+Change 2:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 3:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 4:
+
+- Before: Say the opening line once more, and point at the part that belongs to Fees.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Fees.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 9 (body, Too many lines)
+
+Change 1:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 2:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to Too many lines.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Too many lines.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 10 (demo, Worked recount)
+
+Change 1:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 2:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to Worked recount.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Worked recount.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 11 (body, Wicks)
+
+Change 1:
+
+- After: A wick is the thin stretch of a price bar beyond where that bar finished.
+- After: The close is the price where the bar finished.
+
+Change 2:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 3:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 4:
+
+- Before: Say the opening line once more, and point at the part that belongs to Wicks.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Wicks.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 12 (body, Common miss)
+
+Change 1:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 2:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to Common miss.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Common miss.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 13 (action, What you write)
+
+Change 1:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 2:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to What you write.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to What you write.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 14 (body, Quiet page)
+
+Change 1:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 2:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to Quiet page.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Quiet page.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 15 (recap, Recap)
+
+Change 1:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 2:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to Recap.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Recap.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 16 (demo, Your turn)
+
+Change 1:
+
+- Before: Cover the notes and say this from memory: Twenty order lines make nineteen gaps.
+- After: Cover the notes, and say this from memory: Twenty order lines make nineteen gaps.
+
+Change 2:
+
+- Before: The answer has to name a shape on the page.
+- After: The answer names a shape on the page.
+
+### Beat 17 (demo, Your turn)
+
+Change 1:
+
+- Before: Cover the notes and say this from memory: Nineteen gaps times a half of one percent is a span of nine and a half percent from the lower line to the upper line.
+- After: Cover the notes, and say this from memory: Nineteen gaps times a half of one percent is a span of nine and a half percent from the lower line to the upper line.
+
+Change 2:
+
+- Before: The answer has to name a shape on the page.
+- After: The answer names a shape on the page.
+
+### Beat 18 (demo, Stay on paper)
+
+Change 1:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 2:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to Stay on paper.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Stay on paper.
+- After: If you cannot point yet, stay on this frame.
