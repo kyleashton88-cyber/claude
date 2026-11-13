@@ -1,0 +1,981 @@
+{
+  "rule": "In-house illustration engine. These files are test output and are not course stills.",
+  "images": [
+    {
+      "file": "001.png",
+      "path": "001.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "b5b97bedd3890435c449841ea19d7f29",
+      "md5": "b5b97bedd3890435c449841ea19d7f29",
+      "renderer": "cairosvg",
+      "alt": "Price often chops sideways, weaving through the same band instead of leaving.",
+      "spec": {
+        "type": "price_range",
+        "preset": "house",
+        "params": {
+          "seed": 1,
+          "concept": "Price often chops sideways, weaving through the same band instead of leaving.",
+          "headline": "SIDEWAYS BAND",
+          "labels": [
+            "RANGE",
+            "BAND"
+          ]
+        },
+        "size": "1536x1024",
+        "headline": "SIDEWAYS BAND",
+        "labels": [
+          "RANGE",
+          "BAND"
+        ],
+        "source_id": "bp-01-introduction-001",
+        "file": "001.png"
+      },
+      "idea": "A top and a bottom, with price moving inside the band.",
+      "labels": [
+        "RANGE",
+        "BAND"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 100"
+      ]
+    },
+    {
+      "file": "002.png",
+      "path": "002.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "06feeec61be314ac9dd275d0b10d06fc",
+      "md5": "06feeec61be314ac9dd275d0b10d06fc",
+      "renderer": "cairosvg",
+      "alt": "Education only, not financial advice.",
+      "spec": {
+        "type": "steps",
+        "preset": "house",
+        "params": {
+          "seed": 2,
+          "concept": "Education only, not financial advice.",
+          "headline": "EDUCATION ONLY",
+          "labels": [
+            "LEARN",
+            "NOTICE",
+            "PAPER"
+          ]
+        },
+        "size": "1536x1024",
+        "headline": "EDUCATION ONLY",
+        "labels": [
+          "LEARN",
+          "NOTICE",
+          "PAPER"
+        ],
+        "source_id": "bp-01-introduction-002",
+        "file": "002.png"
+      },
+      "idea": "A few numbered steps for one idea.",
+      "labels": [
+        "LEARN",
+        "NOTICE",
+        "PAPER"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: one idea \u2014 A few numbered steps for one idea.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 97"
+      ]
+    },
+    {
+      "file": "003.png",
+      "path": "003.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "ec8b2ccd2ff096c677bd9dc4bcd08375",
+      "md5": "ec8b2ccd2ff096c677bd9dc4bcd08375",
+      "renderer": "cairosvg",
+      "alt": "Introduction.",
+      "spec": {
+        "type": "title_card",
+        "preset": "house",
+        "params": {
+          "seed": 3,
+          "concept": "Introduction",
+          "headline": "INTRODUCTION",
+          "title": "Introduction",
+          "labels": [
+            "START",
+            "HERE"
+          ]
+        },
+        "size": "1536x1024",
+        "headline": "INTRODUCTION",
+        "labels": [
+          "START",
+          "HERE"
+        ],
+        "source_id": "bp-01-introduction-003",
+        "file": "003.png"
+      },
+      "idea": "A title card for the lesson, with no extra lockup.",
+      "labels": [
+        "START",
+        "HERE"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: one idea \u2014 A title card for the lesson, with no extra lockup.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 64"
+      ]
+    },
+    {
+      "file": "004.png",
+      "path": "004.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "33e24cfe04c78283efbce1ddc401faae",
+      "md5": "33e24cfe04c78283efbce1ddc401faae",
+      "renderer": "cairosvg",
+      "alt": "A grid has three parts you can name: the range, the levels, and the stop.",
+      "spec": {
+        "type": "steps",
+        "preset": "house",
+        "params": {
+          "seed": 4,
+          "concept": "A grid has three parts you can name: the range, the levels, and the stop.",
+          "headline": "THE THREE PARTS",
+          "labels": [
+            "RANGE",
+            "LEVELS",
+            "STOP"
+          ]
+        },
+        "size": "1536x1024",
+        "headline": "THE THREE PARTS",
+        "labels": [
+          "RANGE",
+          "LEVELS",
+          "STOP"
+        ],
+        "source_id": "bp-01-introduction-004",
+        "file": "004.png"
+      },
+      "idea": "A few numbered steps for one idea.",
+      "labels": [
+        "RANGE",
+        "LEVELS",
+        "STOP"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: one idea \u2014 A few numbered steps for one idea.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 110"
+      ]
+    },
+    {
+      "file": "005.png",
+      "path": "005.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "6ff39a3647ad366c783138bbcffc7f76",
+      "md5": "6ff39a3647ad366c783138bbcffc7f76",
+      "renderer": "cairosvg",
+      "alt": "The range is a top and a bottom you draw before any rung.",
+      "spec": {
+        "type": "price_range",
+        "preset": "house",
+        "params": {
+          "seed": 5,
+          "concept": "The range is a top and a bottom you draw before any rung.",
+          "headline": "THE RANGE",
+          "labels": [
+            "UPPER",
+            "LOWER",
+            "RANGE"
+          ]
+        },
+        "size": "1536x1024",
+        "headline": "THE RANGE",
+        "labels": [
+          "UPPER",
+          "LOWER",
+          "RANGE"
+        ],
+        "source_id": "bp-01-introduction-005",
+        "file": "005.png"
+      },
+      "idea": "A top and a bottom, with price moving inside the band.",
+      "labels": [
+        "UPPER",
+        "LOWER",
+        "RANGE"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 109"
+      ]
+    },
+    {
+      "file": "006.png",
+      "path": "006.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "2c3da41f1ff2dad4376bf4d74750dd1b",
+      "md5": "2c3da41f1ff2dad4376bf4d74750dd1b",
+      "renderer": "cairosvg",
+      "alt": "The levels are limit orders that wait on the rungs.",
+      "spec": {
+        "type": "analogy_ladder",
+        "preset": "house",
+        "params": {
+          "seed": 6,
+          "concept": "The levels are limit orders that wait on the rungs.",
+          "headline": "THE LEVELS",
+          "labels": [
+            "RUNG",
+            "LEVEL",
+            "WAIT"
+          ]
+        },
+        "size": "1536x1024",
+        "headline": "THE LEVELS",
+        "labels": [
+          "RUNG",
+          "LEVEL",
+          "WAIT"
+        ],
+        "source_id": "bp-01-introduction-006",
+        "file": "006.png"
+      },
+      "idea": "Rungs are levels that wait. One rung is the next step.",
+      "labels": [
+        "RUNG",
+        "LEVEL",
+        "WAIT"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: one idea \u2014 Rungs are levels that wait. One rung is the next step.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 109"
+      ]
+    },
+    {
+      "file": "007.png",
+      "path": "007.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "b605f446556d925c976248ee886b2890",
+      "md5": "b605f446556d925c976248ee886b2890",
+      "renderer": "cairosvg",
+      "alt": "One approach places buy orders below the mark and sell orders above it.",
+      "spec": {
+        "type": "grid_ladder",
+        "preset": "house",
+        "params": {
+          "seed": 7,
+          "concept": "One approach places buy orders below the mark and sell orders above it.",
+          "headline": "BUYS AND SELLS",
+          "low": 90,
+          "high": 110,
+          "grids": 8,
+          "price": 100,
+          "labels": [
+            "BUY",
+            "SELL",
+            "PRICE"
+          ]
+        },
+        "size": "1536x1024",
+        "headline": "BUYS AND SELLS",
+        "labels": [
+          "BUY",
+          "SELL",
+          "PRICE"
+        ],
+        "source_id": "bp-01-introduction-007",
+        "file": "007.png"
+      },
+      "idea": "Buy orders wait below the mark and sell orders wait above it.",
+      "labels": [
+        "BUY",
+        "SELL",
+        "PRICE"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 a figure is on the plate",
+        "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 98"
+      ]
+    },
+    {
+      "file": "008.png",
+      "path": "008.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "66f7f874e474494ea214f964cf221102",
+      "md5": "66f7f874e474494ea214f964cf221102",
+      "renderer": "cairosvg",
+      "alt": "The stop is a sentence you write, not a feeling that the trade is over.",
+      "spec": {
+        "type": "price_range",
+        "preset": "house",
+        "params": {
+          "seed": 8,
+          "concept": "The stop is a sentence you write, not a feeling that the trade is over.",
+          "headline": "THE STOP",
+          "labels": [
+            "UPPER",
+            "LOWER",
+            "STOP"
+          ],
+          "stop": true,
+          "variant": "stop"
+        },
+        "size": "1536x1024",
+        "headline": "THE STOP",
+        "labels": [
+          "UPPER",
+          "LOWER",
+          "STOP"
+        ],
+        "source_id": "bp-01-introduction-008",
+        "file": "008.png"
+      },
+      "idea": "A top and a bottom, with price moving inside the band.",
+      "labels": [
+        "UPPER",
+        "LOWER",
+        "STOP"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 109"
+      ]
+    },
+    {
+      "file": "009.png",
+      "path": "009.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "cb3f3aed9d632fc9cff2b98918c34491",
+      "md5": "cb3f3aed9d632fc9cff2b98918c34491",
+      "renderer": "cairosvg",
+      "alt": "We do not sell or run a trading bot. No order is sent from this lesson.",
+      "spec": {
+        "type": "mascot_scene",
+        "preset": "house",
+        "params": {
+          "seed": 9,
+          "concept": "We do not sell or run a trading bot. No order is sent from this lesson.",
+          "headline": "CHECK FIRST",
+          "pose": "warning",
+          "labels": [
+            "WAIT",
+            "CHECK"
+          ]
+        },
+        "size": "1536x1024",
+        "headline": "CHECK FIRST",
+        "labels": [
+          "WAIT",
+          "CHECK"
+        ],
+        "source_id": "bp-01-introduction-009",
+        "file": "009.png"
+      },
+      "idea": "The grid bot mascot in one pose, beside one prop.",
+      "labels": [
+        "WAIT",
+        "CHECK"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: one idea \u2014 The grid bot mascot in one pose, beside one prop.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 234"
+      ]
+    },
+    {
+      "file": "010.png",
+      "path": "010.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "79c9218aead1a42dd4fb6fc0cfb2d025",
+      "md5": "79c9218aead1a42dd4fb6fc0cfb2d025",
+      "renderer": "cairosvg",
+      "alt": "The course is a map, and this introduction is only the first square.",
+      "spec": {
+        "type": "flowchart",
+        "preset": "house",
+        "params": {
+          "seed": 10,
+          "concept": "The course is a map, and this introduction is only the first square.",
+          "headline": "THE MAP",
+          "labels": [
+            "START",
+            "MIDDLE",
+            "NEXT"
+          ]
+        },
+        "size": "1536x1024",
+        "headline": "THE MAP",
+        "labels": [
+          "START",
+          "MIDDLE",
+          "NEXT"
+        ],
+        "source_id": "bp-01-introduction-010",
+        "file": "010.png"
+      },
+      "idea": "A short path of steps, read from left to right.",
+      "labels": [
+        "START",
+        "MIDDLE",
+        "NEXT"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: one idea \u2014 A short path of steps, read from left to right.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 109"
+      ]
+    },
+    {
+      "file": "011.png",
+      "path": "011.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "820f1ca64af01642280babd7f456521f",
+      "md5": "820f1ca64af01642280babd7f456521f",
+      "renderer": "cairosvg",
+      "alt": "Draw a path that leaves the top of the band and does not return.",
+      "spec": {
+        "type": "price_range",
+        "preset": "house",
+        "params": {
+          "seed": 11,
+          "concept": "Draw a path that leaves the top of the band and does not return.",
+          "headline": "WHEN THE DRAWING FAILS",
+          "labels": [
+            "UPPER",
+            "LOWER",
+            "OUT"
+          ],
+          "variant": "leave"
+        },
+        "size": "1536x1024",
+        "headline": "WHEN THE DRAWING FAILS",
+        "labels": [
+          "UPPER",
+          "LOWER",
+          "OUT"
+        ],
+        "source_id": "bp-01-introduction-011",
+        "file": "011.png"
+      },
+      "idea": "A top and a bottom, with price moving inside the band.",
+      "labels": [
+        "UPPER",
+        "LOWER",
+        "OUT"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 107"
+      ]
+    },
+    {
+      "file": "012.png",
+      "path": "012.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "a0957796f26d963e4c1bd05df6d95f5e",
+      "md5": "a0957796f26d963e4c1bd05df6d95f5e",
+      "renderer": "cairosvg",
+      "alt": "There is no result number in this lesson.",
+      "spec": {
+        "type": "comparison",
+        "preset": "house",
+        "params": {
+          "seed": 12,
+          "concept": "There is no result number in this lesson.",
+          "headline": "NO RESULT",
+          "variant": "plain",
+          "labels": [
+            "NUMBER",
+            "SHAPE"
+          ]
+        },
+        "size": "1536x1024",
+        "headline": "NO RESULT",
+        "labels": [
+          "NUMBER",
+          "SHAPE"
+        ],
+        "source_id": "bp-01-introduction-012",
+        "file": "012.png"
+      },
+      "idea": "Two ways to see the same idea, side by side.",
+      "labels": [
+        "NUMBER",
+        "SHAPE"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: one idea \u2014 Two ways to see the same idea, side by side.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 102"
+      ]
+    },
+    {
+      "file": "013.png",
+      "path": "013.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "28f32680816ed7c3faf760a3d5313735",
+      "md5": "28f32680816ed7c3faf760a3d5313735",
+      "renderer": "cairosvg",
+      "alt": "A slow sketch uses eight even ticks inside the band, only as a way to see rungs.",
+      "spec": {
+        "type": "grid_ladder",
+        "preset": "house",
+        "params": {
+          "seed": 13,
+          "concept": "A slow sketch uses eight even ticks inside the band, only as a way to see rungs.",
+          "headline": "EIGHT TICKS",
+          "low": 90,
+          "high": 110,
+          "grids": 8,
+          "price": 100,
+          "labels": [
+            "BUY",
+            "SELL",
+            "PRICE"
+          ]
+        },
+        "size": "1536x1024",
+        "headline": "EIGHT TICKS",
+        "labels": [
+          "BUY",
+          "SELL",
+          "PRICE"
+        ],
+        "source_id": "bp-01-introduction-013",
+        "file": "013.png"
+      },
+      "idea": "Buy orders wait below the mark and sell orders wait above it.",
+      "labels": [
+        "BUY",
+        "SELL",
+        "PRICE"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 a figure is on the plate",
+        "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 99"
+      ]
+    },
+    {
+      "file": "014.png",
+      "path": "014.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "441ab5c1064c012dec20b5eea57b7931",
+      "md5": "441ab5c1064c012dec20b5eea57b7931",
+      "renderer": "cairosvg",
+      "alt": "The next step is the setup checklist, on paper, before any screen.",
+      "spec": {
+        "type": "checklist",
+        "preset": "house",
+        "params": {
+          "seed": 14,
+          "concept": "The next step is the setup checklist, on paper, before any screen.",
+          "headline": "THE CHECKLIST IS NEXT",
+          "labels": [
+            "RANGE",
+            "LEVELS",
+            "STOP"
+          ],
+          "highlight": 0
+        },
+        "size": "1536x1024",
+        "headline": "THE CHECKLIST IS NEXT",
+        "labels": [
+          "RANGE",
+          "LEVELS",
+          "STOP"
+        ],
+        "source_id": "bp-01-introduction-014",
+        "file": "014.png"
+      },
+      "idea": "A short paper checklist, one row highlighted.",
+      "labels": [
+        "RANGE",
+        "LEVELS",
+        "STOP"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: one idea \u2014 A short paper checklist, one row highlighted.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 110"
+      ]
+    },
+    {
+      "file": "015.png",
+      "path": "015.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "a6a3a2bf6915c93389373d84030026fc",
+      "md5": "a6a3a2bf6915c93389373d84030026fc",
+      "renderer": "cairosvg",
+      "alt": "A paper or demo account is a fence around practice.",
+      "spec": {
+        "type": "analogy_fence",
+        "preset": "house",
+        "params": {
+          "seed": 15,
+          "concept": "A paper or demo account is a fence around practice.",
+          "headline": "PAPER FIRST",
+          "labels": [
+            "INSIDE",
+            "FENCE",
+            "PRACTICE"
+          ]
+        },
+        "size": "1536x1024",
+        "headline": "PAPER FIRST",
+        "labels": [
+          "INSIDE",
+          "FENCE",
+          "PRACTICE"
+        ],
+        "source_id": "bp-01-introduction-015",
+        "file": "015.png"
+      },
+      "idea": "A fence around practice: stay inside the rails.",
+      "labels": [
+        "INSIDE",
+        "FENCE",
+        "PRACTICE"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: one idea \u2014 A fence around practice: stay inside the rails.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 100"
+      ]
+    },
+    {
+      "file": "016.png",
+      "path": "016.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "f94146e10495fc68ace5b5f8a41e23a0",
+      "md5": "f94146e10495fc68ace5b5f8a41e23a0",
+      "renderer": "cairosvg",
+      "alt": "Practice: A grid has three parts you can name: the range, the levels, and the stop.",
+      "spec": {
+        "type": "steps",
+        "preset": "house",
+        "params": {
+          "seed": 16,
+          "concept": "Practice: A grid has three parts you can name: the range, the levels, and the stop.",
+          "headline": "YOUR TURN",
+          "labels": [
+            "GRID HAS",
+            "LEVELS",
+            "STOP"
+          ]
+        },
+        "size": "1536x1024",
+        "headline": "YOUR TURN",
+        "labels": [
+          "GRID HAS",
+          "LEVELS",
+          "STOP"
+        ],
+        "source_id": "bp-01-introduction-016",
+        "file": "016.png"
+      },
+      "idea": "A few numbered steps for one idea.",
+      "labels": [
+        "GRID HAS",
+        "LEVELS",
+        "STOP"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: one idea \u2014 A few numbered steps for one idea.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 104"
+      ]
+    },
+    {
+      "file": "017.png",
+      "path": "017.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "a002eabda638aa31fbdc24911160a94c",
+      "md5": "a002eabda638aa31fbdc24911160a94c",
+      "renderer": "cairosvg",
+      "alt": "If you keep one sentence, keep this: range, levels, and stop, drawn before any click.",
+      "spec": {
+        "type": "steps",
+        "preset": "house",
+        "params": {
+          "seed": 17,
+          "concept": "If you keep one sentence, keep this: range, levels, and stop, drawn before any click.",
+          "headline": "ONE SENTENCE TO KEEP",
+          "labels": [
+            "RANGE",
+            "LEVELS",
+            "STOP",
+            "DRAWN CLICK"
+          ]
+        },
+        "size": "1536x1024",
+        "headline": "ONE SENTENCE TO KEEP",
+        "labels": [
+          "RANGE",
+          "LEVELS",
+          "STOP",
+          "DRAWN CLICK"
+        ],
+        "source_id": "bp-01-introduction-017",
+        "file": "017.png"
+      },
+      "idea": "A few numbered steps for one idea.",
+      "labels": [
+        "RANGE",
+        "LEVELS",
+        "STOP",
+        "DRAWN CLICK"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 4 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: one idea \u2014 A few numbered steps for one idea.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 98"
+      ]
+    },
+    {
+      "file": "018.png",
+      "path": "018.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "904400f246fc15b1e43c9f44ba111ef6",
+      "md5": "904400f246fc15b1e43c9f44ba111ef6",
+      "renderer": "cairosvg",
+      "alt": "Next lesson: What you are going to need. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
+      "spec": {
+        "type": "section_divider",
+        "preset": "house",
+        "params": {
+          "seed": 18,
+          "concept": "Next lesson: What you are going to need. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
+          "headline": "NEXT",
+          "title": "NEXT",
+          "labels": [
+            "PART",
+            "NEXT"
+          ]
+        },
+        "size": "1536x1024",
+        "headline": "NEXT",
+        "labels": [
+          "PART",
+          "NEXT"
+        ],
+        "source_id": "bp-01-introduction-018",
+        "file": "018.png"
+      },
+      "idea": "A section divider with one word.",
+      "labels": [
+        "PART",
+        "NEXT"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 22px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 2 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: one idea \u2014 A section divider with one word.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 167"
+      ]
+    }
+  ]
+}

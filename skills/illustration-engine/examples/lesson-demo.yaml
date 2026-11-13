@@ -1,0 +1,10 @@
+lesson: demo-range
+preset: house
+size: 1536x1024
+slots:
+  - file: 001.png
+    prompt: "price range, support and resistance, sideways"
+  - file: 002.png
+    prompt: "grid ladder, range 90-110, 10 grids, price 100, label buy and sell"
+  - file: 003.png
+    prompt: "fence analogy, practice inside"

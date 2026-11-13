@@ -3,3 +3,4 @@ course/masters/*.mp4 filter=lfs diff=lfs merge=lfs -text
 course/masters/baseline/*.mp4 filter=lfs diff=lfs merge=lfs -text
 course/masters-stills/*.mp4 filter=lfs diff=lfs merge=lfs -text
 course/masters-v2/*.mp4 filter=lfs diff=lfs merge=lfs -text
+skills/illustration-engine/test-outputs/**/*.png filter=lfs diff=lfs merge=lfs -text
