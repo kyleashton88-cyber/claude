@@ -325,7 +325,7 @@ def bp02() -> list[dict]:
         ),
         caption="No key. No balance. Public closes only.",
     ))
-    s += walk(SUMMER, "Copy the path", 4, (LOW, HIGH), "Figures you are allowed to copy")
+    s += walk(SUMMER, "Copy the path", 4, (LOW, HIGH), "One figure you are allowed to copy")
     s.append(_shot(
         kind="worked", chapter="Worked check",
         items=[

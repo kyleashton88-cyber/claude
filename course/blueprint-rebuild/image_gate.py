@@ -24,7 +24,6 @@ MASCOT = "course/images/mascot/blueprint-mascot.png"
 OLD_MASCOT = "course/images/fallback/el-06-circuit-breakers/28.png"
 BRAND = [
     (COVER, "title-art"),
-    (MASCOT, "mascot"),
 ]
 ANALOGY = {
     "ladder": "course/images/blueprint-analogies/analogy-ladder.png",
@@ -63,6 +62,8 @@ def images_for_lesson(sid: str) -> list[dict]:
 
     for path, kind in BRAND:
         add(path, kind)
+    if (ROOT / MASCOT).is_file():
+        add(MASCOT, "mascot")
     for shot in shots:
         still = shot.get("still")
         if still:
@@ -110,8 +111,12 @@ def _norm(path: str) -> str:
 
 
 def git_blob(rel: str) -> str | None:
-    """Blob id of the file on disk. A different id is a different image."""
-    path = ROOT / rel
+    """Blob id of the file on disk. Code-drawn rows live under blueprint-smoke/."""
+    rel = _norm(rel)
+    if rel.startswith("code-drawn/"):
+        path = ROOT / "blueprint-smoke" / f"{rel}.png"
+    else:
+        path = ROOT / rel
     if not path.is_file():
         return None
     proc = subprocess.run(
