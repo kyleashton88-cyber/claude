@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/assets/atlas-layout-hardening.css">
   <link rel="stylesheet" href="/assets/atlas-deep-layout-fixes.css">
   <link rel="stylesheet" href="/assets/atlas-quality-fixes.css">
+<link rel="stylesheet" href="/assets/atlas-library.css"/>
 </head><body class="atlas-unified training-page">
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="atlas-unified-header" data-atlas-header>
@@ -47,7 +48,7 @@
       </ul>
       <div class="atlas-unified-actions">
         <div class="atlas-global-progress" aria-label="Learning progress"><span>Progress</span><strong data-global-progress>0%</strong></div>
-        <a class="atlas-search-button" href="/search" aria-label="Search ATLAS">⌕</a>
+        <form class="atlas-header-search" action="/search" method="get" role="search"><label class="visually-hidden" for="atlasHeaderSearch8">Search the library</label><input id="atlasHeaderSearch8" name="q" type="search" placeholder="Search" autocomplete="off" data-atlas-search-input></form><a class="atlas-search-button" href="/search" aria-label="Search ATLAS">⌕</a>
         <a class="atlas-start-learning" href="/learning-path">Start Learning</a>
       </div>
     </nav>
@@ -57,4 +58,5 @@
 function calc(){let m=+margin.value||0,l=+lev.value||0,e=+fentry.value||0,s=+fstop.value||0,n=m*l,d=e?Math.abs(e-s)/e:0;if(!Number.isFinite(n))n=0;if(!Number.isFinite(d))d=0;levOut.textContent=l+'×';notional.textContent='$'+n.toLocaleString();stopdist.textContent=(d*100).toFixed(2)+'%';stoploss.textContent='$'+(n*d).toFixed(2)}[margin,lev,fentry,fstop].forEach(x=>x.oninput=calc);calc();
 </script>  <script src="/assets/atlas-production.js"></script>
   <script src="/assets/atlas-completed.js"></script>
+<script src="/assets/atlas-config.js"></script>
 </body></html>

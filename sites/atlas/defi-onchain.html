@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="/assets/atlas-layout-hardening.css">
   <link rel="stylesheet" href="/assets/atlas-deep-layout-fixes.css">
   <link rel="stylesheet" href="/assets/atlas-quality-fixes.css">
+<link rel="stylesheet" href="/assets/atlas-library.css"/>
 </head><body class="atlas-unified training-page">
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="atlas-unified-header" data-atlas-header>
@@ -64,7 +65,7 @@
       </ul>
       <div class="atlas-unified-actions">
         <div class="atlas-global-progress" aria-label="Learning progress"><span>Progress</span><strong data-global-progress>0%</strong></div>
-        <a class="atlas-search-button" href="/search" aria-label="Search ATLAS">⌕</a>
+        <form class="atlas-header-search" action="/search" method="get" role="search"><label class="visually-hidden" for="atlasHeaderSearch27">Search the library</label><input id="atlasHeaderSearch27" name="q" type="search" placeholder="Search" autocomplete="off" data-atlas-search-input></form><a class="atlas-search-button" href="/search" aria-label="Search ATLAS">⌕</a>
         <a class="atlas-start-learning" href="/learning-path">Start Learning</a>
       </div>
     </nav>
@@ -174,7 +175,7 @@
 <div class="knowledge-check"><b>ATLAS CHECKPOINT</b><span>Explain the mechanism, source of return or information, every dependency, primary failure mode, and what you would monitor after deployment.</span></div></section><section class="section defi-chapter" id="defi-09" data-chapter data-title="Chapter 16">
 <div class="chapter-title"><div><span class="eyebrow">CHAPTER 09</span><h2>Impermanent Loss & LP P&L</h2><p>Relative-value loss, fee offset, concentrated liquidity, divergence and benchmark comparison.</p></div>
 <div class="chapter-actions no-print"><button type="button" data-complete="09">Mark complete</button><button type="button" onclick="window.print()">Print / PDF</button></div></div>
-<div class="grid3"><article class="card"><h3>IL concept</h3><p>LP value can underperform simply holding the deposited assets when relative prices move.</p></article><article class="card"><h3>Benchmark</h3><p>Compare LP outcome with the same starting assets held outside the pool.</p></article><article class="card"><h3>Fee offset</h3><p>Fees may offset some divergence loss but are not guaranteed to exceed it.</p></article><article class="card"><h3>Concentration</h3><p>Tighter ranges can increase both fee efficiency and sensitivity to price movement.</p></article><article class="card"><h3>Realised outcome</h3><p>Withdrawal crystallises the current LP inventory/value; 'impermanent' does not mean harmless.</p></article><article class="card"><h3>Full P&L</h3><p>Include token price changes, fees, incentives, gas, rebalancing and opportunity cost.</p></article></div>
+<div class="grid3"><article class="card"><h3>IL concept</h3><p>LP value can underperform simply holding the deposited assets when relative prices move.</p></article><article class="card"><h3>Benchmark</h3><p>Compare LP outcome with the same starting assets held outside the pool.</p></article><article class="card"><h3>Fee offset</h3><p>Fees may offset some divergence loss. They do not have to exceed it.</p></article><article class="card"><h3>Concentration</h3><p>Tighter ranges can increase both fee efficiency and sensitivity to price movement.</p></article><article class="card"><h3>Realised outcome</h3><p>Withdrawal crystallises the current LP inventory/value; 'impermanent' does not mean harmless.</p></article><article class="card"><h3>Full P&L</h3><p>Include token price changes, fees, incentives, gas, rebalancing and opportunity cost.</p></article></div>
 <div class="knowledge-check"><b>ATLAS CHECKPOINT</b><span>Explain the mechanism, source of return or information, every dependency, primary failure mode, and what you would monitor after deployment.</span></div></section><section class="section defi-chapter" id="defi-10" data-chapter data-title="Chapter 17">
 <div class="chapter-title"><div><span class="eyebrow">CHAPTER 10</span><h2>Lending Markets</h2><p>Supply, borrow, utilisation, interest models, collateral factors, reserves and protocol liquidity.</p></div>
 <div class="chapter-actions no-print"><button type="button" data-complete="10">Mark complete</button><button type="button" onclick="window.print()">Print / PDF</button></div></div>
@@ -355,4 +356,5 @@ document.querySelectorAll('.flashcard').forEach(c=>c.addEventListener('click',()
 
 </script>  <script src="/assets/atlas-production.js"></script>
   <script src="/assets/atlas-completed.js"></script>
+<script src="/assets/atlas-config.js"></script>
 </body></html>

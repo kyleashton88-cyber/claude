@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Market structure — ATLAS</title>
+<meta name="description" content="Market structure is the map of swing highs and swing lows on a timeframe you name. This page is general information. It shows how to read candles, trends, ranges, breaks, and liqui"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/site.css" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/atlas-production.css"/>
+<link rel="stylesheet" href="/assets/atlas-completed.css"/>
+<link rel="stylesheet" href="/assets/atlas-layout-hardening.css"/>
+<link rel="stylesheet" href="/assets/atlas-deep-layout-fixes.css"/>
+<link rel="stylesheet" href="/assets/atlas-quality-fixes.css"/>
+<link rel="stylesheet" href="/assets/atlas-library.css"/>
+</head>
+<body class="atlas-unified">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="atlas-unified-header" data-atlas-header>
+  <div class="atlas-unified-header__inner">
+    <a class="atlas-unified-brand" href="/" aria-label="ATLAS home">
+      <span class="atlas-unified-brand__mark">ATLAS</span>
+      <span class="atlas-unified-brand__descriptor">The Universal Trading Library</span>
+    </a>
+    <button class="atlas-mobile-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>☰</button>
+    <nav class="atlas-unified-nav" id="primary-navigation" aria-label="Primary navigation" data-primary-nav>
+      <ul class="atlas-unified-nav-list">
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="markets-menu">Markets</button>
+          <div class="atlas-unified-dropdown" id="markets-menu" hidden>
+            <a href="/#live-markets">Market Overview</a><a href="/markets/btc">Bitcoin</a><a href="/markets/eth">Ethereum</a><a href="/markets/sol">Solana</a><a href="/markets/bnb">BNB</a><a href="/exchanges">Exchanges</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="academy-menu">Academy</button>
+          <div class="atlas-unified-dropdown" id="academy-menu" hidden>
+            <a href="/academy">Academy Overview</a><a href="/academy/beginner">Crypto Fundamentals</a><a href="/market-structure">Market Structure</a><a href="/technical-analysis">Technical Analysis</a><a href="/risk-academy">Risk Academy</a><a href="/futures-leverage">Futures &amp; Leverage</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="tools-menu">Tools</button>
+          <div class="atlas-unified-dropdown" id="tools-menu" hidden>
+            <a href="/tools">All Tools</a><a href="/tools/grid-bot">Grid Calculator</a><a href="/journal-lab">Journal Analyser</a><a href="/tools/risk-calc">Risk / Position Size</a><a href="/tools/replay-lab">Replay Lab</a><a href="/macro-lab">Macro &amp; Intermarket</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="library-menu">Library</button>
+          <div class="atlas-unified-dropdown" id="library-menu" hidden>
+            <a href="/library">Library Overview</a><a href="/library#by-topic">A–Z</a><a href="/library#by-level">By level</a><a href="/library#by-question">By question</a><a href="/glossary">Glossary</a>
+          </div>
+        </li>
+        <li><a href="/glossary">Glossary</a></li>
+        <li><a href="/learning-path">Learning Path</a></li>
+        <li><a href="/community">Community</a></li>
+      </ul>
+      <div class="atlas-unified-actions">
+        <div class="atlas-global-progress" aria-label="Learning progress"><span>Progress</span><strong data-global-progress>0%</strong></div>
+        <form class="atlas-header-search" action="/search" method="get" role="search">
+          <label class="visually-hidden" for="atlasHeaderSearch">Search the library</label>
+          <input id="atlasHeaderSearch" name="q" type="search" placeholder="Search" autocomplete="off" data-atlas-search-input>
+        </form>
+        <a class="atlas-search-button" href="/search" aria-label="Search ATLAS">⌕</a>
+        <a class="atlas-start-learning" href="/learning-path">Start Learning</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="unified-breadcrumb no-print"><a href="/">ATLAS</a><span>›</span><strong>Market structure</strong></div>
+<main id="main-content">
+<section class="pagehero"><div class="kicker">Academy 02 · 07 · 08</div><h1 id="page-title">Market structure</h1><p>Market structure is the map of swing highs and swing lows on a timeframe you name. This page is general information. It shows how to read candles, trends, ranges, breaks, and liquidity. It is not an instruction to enter a trade, and it does not set a price to aim at.</p></section>
+<div class="atlas-lesson"><nav class="atlas-toc" aria-label="On this page"><p>On this page</p><a href="#candles">Candles</a><a href="#swings">Swings</a><a href="#trend">Trend and range</a><a href="#bos-choch">Break of structure and change of character</a><a href="#liquidity">Liquidity</a><a href="#order-blocks">Order blocks and fair value gaps</a><a href="#premium-discount-and-the-dealing-range">Premium, discount, and the dealing range</a><a href="#multi-timeframe">Multi-timeframe work</a><a href="#a-small-routine">A small routine</a></nav><div class="atlas-lesson__body"><figure class="atlas-ph" data-asset="/assets/img/market-structure/hero.webp" data-alt="Hero still. Caption stays in the page."><div class="atlas-ph__box" role="img" aria-label="Image placeholder. Creative Studio has not landed /assets/img/market-structure/hero.webp."><strong>Image placeholder</strong><span>/assets/img/market-structure/hero.webp</span><span>Awaiting Creative Studio. This build does not invent the still.</span></div><figcaption>Hero still. Caption stays in the page.</figcaption></figure><p>Market structure is the map of swing highs and swing lows on a timeframe you name. This page is general information. It shows how to read candles, trends, ranges, breaks, and liquidity. It is not an instruction to enter a trade, and it does not set a price to aim at.</p>
+<p>The same words appear in the <a href="/glossary#market-structure">glossary</a>. Use this page when you want the sequence, and the glossary when you want one definition.</p>
+<section class="section" id="candles"><h2>Candles</h2>
+<p>A candlestick is one period. It has four prints:</p>
+<ul><li><strong>Open</strong> is the first price of the period.</li><li><strong>High</strong> is the highest price traded.</li><li><strong>Low</strong> is the lowest price traded.</li><li><strong>Close</strong> is the last price of the period.</li></ul>
+<p>The <strong>body</strong> is the distance from open to close. A candle that closes above its open is bullish. A candle that closes below its open is bearish. The <strong>wick</strong> (or shadow) is the line from the body out to the high or the low. A long wick means price traded there and did not finish there.</p>
+<p>Colour is a convention of the chart, not a fact of the market. Read the legend.</p>
+<p>How to read a single candle:</p>
+<ul><li>A large body means the period finished far from where it started.</li><li>A small body means the open and the close were close together.</li><li>A wick through a level, with the close back inside, is a rejection of that extreme for that one candle only.</li></ul>
+<p>Common mistakes:</p>
+<ul><li>Treating one candle as a complete story. The swings around it decide whether it mattered.</li><li>Calling every wick a reversal. A wick is a print inside one period.</li><li>Forgetting the timeframe. A large candle on a one-minute chart can be noise on a daily chart.</li></ul>
+<svg class="atlas-svg" viewBox="0 0 320 140" role="img" aria-label="Annotated candle. High, close, open, and low."><line x1="70" y1="16" x2="70" y2="120" stroke="#55e7c1"/><rect x="54" y="40" width="32" height="48" fill="#55e7c1"/><text x="100" y="24" fill="#9fdfff" font-size="14">High</text><text x="100" y="70" fill="#edf8ff" font-size="14">Open / close</text><text x="100" y="124" fill="#ffb4bc" font-size="14">Low</text></svg></section>
+<section class="section" id="swings"><h2>Swings</h2>
+<p>A <strong>swing high</strong> is a high with lower highs on both sides, under a left-and-right rule you keep constant. A <strong>swing low</strong> is a low with higher lows on both sides, under the same kind of rule. Those two posts are the structure. If you change how many candles must sit on each side, you change the map, so write the rule down.</p>
+<p>A single wick is not automatically a swing. It becomes a swing only when the candles after it confirm that the extreme held, under your rule.</p>
+<div data-atlas-chart data-symbol="BTCUSDT" data-tf="1h" data-overlays="ema20" data-pane="" data-markers="swings" data-controls></div></section>
+<section class="section" id="trend"><span id="ranges"></span><h2>Trend and range</h2>
+<p>On the timeframe you are mapping:</p>
+<ul><li>An <strong>uptrend</strong> is a sequence of higher highs and higher lows.</li><li>A <strong>downtrend</strong> is a sequence of lower highs and lower lows.</li><li>A <strong>sideways market</strong>, or trading range, is two-way trade between a ceiling and a floor, without that sustained sequence.</li></ul>
+<p>A trend on a small timeframe can be a pullback inside a larger timeframe&#x27;s range, or the other way around. Name the timeframe in the same sentence as the trend.</p>
+<p>A range is the usual study case for a neutral grid, because the bot is built to buy and sell inside a band. The range is a hypothesis. Price does not owe you the band.</p>
+<p>How to tell them apart in practice:</p>
+<ol><li>Mark the last few swing highs and swing lows.</li><li>Ask whether each new swing continued the sequence or broke it.</li><li>If you cannot mark the swings, you do not yet have a regime. Do not borrow a name from a headline.</li></ol>
+<p>Common mistakes:</p>
+<ul><li>Calling a market a trend because the last candle was large.</li><li>Drawing a range so wide that almost any path fits inside it.</li><li>Switching the definition after the fact so the label still matches what happened.</li></ul>
+</section>
+<section class="section" id="bos-choch"><h2>Break of structure and change of character</h2>
+<p>A <strong>break of structure</strong> (BOS) continues the swing direction you were already mapping. In an uptrend, that is a move beyond the most recent swing high. In a downtrend, it is a move beyond the most recent swing low.</p>
+<p>A <strong>change of character</strong> (CHoCH), sometimes called a market structure shift, is a break *against* that sequence. In an uptrend, the usual study point is a loss of the higher low that the trend needed. In a downtrend, it is a rally through the lower high that had been capping price.</p>
+<p>Teachers disagree on whether a wick is enough or whether the candle must close through the swing. Pick one rule and keep it. A wick rule will mark more breaks, including more failures. A close rule will mark fewer, later.</p>
+<p>A BOS or a CHoCH is a description of swings that have printed. It is not an order to take a position. The invalidation of the map is the swing your rule said must hold. If that swing fails, the map is the thing that changed.</p>
+<p>Common mistakes:</p>
+<ul><li>Labelling every small dip a change of character while the higher-timeframe sequence is intact.</li><li>Using a wick on one timeframe and a close on another without saying so.</li><li>Treating the break as a forecast of how far price will travel afterwards.</li></ul>
+</section>
+<section class="section" id="liquidity"><h2>Liquidity</h2>
+<p><strong>Liquidity</strong>, in the execution sense, is how much you can trade without moving the price much. <strong>Liquidity</strong>, in the structure sense, is the cluster of stops and resting orders that often sit beyond obvious highs and lows. This page uses the second sense. The <a href="/glossary#liquidity">glossary entry</a> records both.</p>
+<p>A <strong>liquidity pool</strong> on a chart is an inferred cluster, often just beyond <strong>equal highs</strong> or <strong>equal lows</strong>. You infer it because many people put stops there. You cannot see the private book. <strong>Buy-side liquidity</strong> is the cluster inferred above highs. <strong>Sell-side liquidity</strong> is the cluster inferred below lows. The words name a location. They do not tell you to buy or to sell.</p>
+<p>A <strong>liquidity sweep</strong> is a push through that location which then returns back inside. You can call it a sweep only after the return. Planning for the possibility is different from knowing it in advance.</p>
+<p><strong>Inducement</strong>, in this teaching, is a minor obvious swing sitting in front of a larger pool. The hypothesis is that price may trade the small swing before the larger one. It is a map of possible stops, not a timetable.</p>
+<p>Common mistakes:</p>
+<ul><li>Drawing pools on every high until the word means nothing.</li><li>Assuming a sweep must reverse. Some pushes through a high simply become the new trend.</li><li>Confusing this chart idea with an AMM pool, which is a contract holding token reserves. The <a href="/glossary#amm-pool">AMM pool entry</a> is the other object.</li></ul>
+</section>
+<section class="section" id="order-blocks"><span id="fvg"></span><h2>Order blocks and fair value gaps</h2>
+<p>An <strong>order block</strong> is a candle, or a small group of candles, at the origin of a strong move, which some methods mark as a place to study if price later returns. The label is a hypothesis about where trading clustered on the chart. It is not evidence that you can see a resting order from a named institution.</p>
+<p><strong>Displacement</strong> is the decisive push that leaves the prior area, often with large bodies and little overlap. Without displacement, a candle is just a candle. <strong>Mitigation</strong> is a later return into the marked area. The return is visible. What price does after the return is not included in the word.</p>
+<p>A <strong>breaker</strong> is an order-block area that failed and, in that method, swaps roles on a later retest. It is a labelling rule.</p>
+<p>A <strong>fair value gap</strong> (FVG) is a three-candle pattern. The wick of the candle before the middle candle and the wick of the candle after it do not overlap, so a price gap is left beside the middle candle. Traders study whether later trade returns into that gap. A gap is a description of prints. It is not an unfilled order you can audit on a venue.</p>
+<p>Common mistakes:</p>
+<ul><li>Marking every candle that touches a move as an order block.</li><li>Treating a gap fill as required. Many gaps are never fully traded again.</li><li>Stacking three names (block, gap, sweep) on the same candles and calling the pile confluence. Confluence needs independent questions, which the <a href="/technical-analysis#confluence">technical analysis page</a> covers.</li></ul>
+</section>
+<section class="section" id="premium-discount-and-the-dealing-range"><h2>Premium, discount, and the dealing range</h2>
+<p>Pick a swing high and a swing low. That distance is the <strong>dealing range</strong>. The midpoint is <strong>equilibrium</strong>. Above it is <strong>premium</strong>. Below it is <strong>discount</strong>.</p>
+<p>Some frameworks prefer to study rallies into premium and dips into discount, relative to the trend they have mapped. That is a location filter. Discount does not mean the asset is cheap in any fundamental sense. A different pair of swings produces a different midpoint.</p>
+</section>
+<section class="section" id="multi-timeframe"><h2>Multi-timeframe work</h2>
+<p>Use a higher timeframe for the larger swing map and a lower timeframe for the detail of the current push.</p>
+<p>A practical order:</p>
+<ol><li>Mark the higher-timeframe trend or range, and the swing that would invalidate it.</li><li>Drop one or two steps to see how the current push is built: impulse, correction, sweep, or compression.</li><li>Write whether the lower-timeframe idea agrees with the higher-timeframe sequence or fights it. A fight is allowed only if the plan says why.</li><li>Do not average the timeframes into a vote. They are nested maps, not ballots.</li></ol>
+<p>Common mistakes:</p>
+<ul><li>Letting a one-minute change of character cancel a daily uptrend without saying you have changed maps.</li><li>Hunting a lower-timeframe entry in the middle of a higher-timeframe range and calling it a trend trade.</li><li>Changing timeframe after a loss until a picture appears that excuses the loss.</li></ul>
+</section>
+<section class="section" id="a-small-routine"><h2>A small routine</h2>
+<p>Before you describe a market, you should be able to answer, in this order:</p>
+<ol><li>Which timeframe is the map?</li><li>What are the last swing high and swing low?</li><li>Is the sequence an uptrend, a downtrend, or a range?</li><li>What print would be a break of structure, and what print would be a change of character?</li><li>Where are the obvious equal highs or equal lows, if any?</li><li>What does the next higher timeframe say about the same swings?</li></ol>
+<p>If one of those answers is missing, the next step is to mark the chart, not to add an indicator. Indicators are on the <a href="/technical-analysis">technical analysis page</a>. The size of any position you might later take is on the <a href="/risk-academy">risk page</a>.</p>
+</section></div></div>
+</main>
+<footer class="footer"><div><b>ATLAS — The Universal Trading Library</b><br/>One library. Every market. A smarter you.</div>
+<nav><a href="/library">Library</a><a href="/glossary">Glossary</a><a href="/tools">Tools</a><a href="/academy">Academy</a></nav>
+<nav aria-label="Legal" class="legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/contact">Contact</a></nav>
+<p class="footer-legal-line">General information only, not financial product advice. It doesn't consider your objectives, financial situation or needs. Crypto and leveraged trading are high risk; you can lose all your money. Market Pros Proprietary Limited (ABN 19 679 270 387) does not hold an AFSL.</p></footer>
+<button aria-label="Back to top" class="backtop" type="button">↑</button>
+<script src="/assets/atlas-config.js"></script>
+<script src="/assets/site.js"></script>
+<script src="/assets/vendor/lightweight-charts.standalone.production.js"></script>
+<script src="/assets/atlas-livechart.js"></script>
+</body>
+</html>

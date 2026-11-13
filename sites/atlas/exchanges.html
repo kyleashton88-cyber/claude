@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Exchanges and orders — ATLAS</title>
+<meta name="description" content="This page is general information about how venues and orders work. It does not name a venue, it does not rank venues, and it is not a recommendation to open an account or to trade."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/site.css" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/atlas-production.css"/>
+<link rel="stylesheet" href="/assets/atlas-completed.css"/>
+<link rel="stylesheet" href="/assets/atlas-layout-hardening.css"/>
+<link rel="stylesheet" href="/assets/atlas-deep-layout-fixes.css"/>
+<link rel="stylesheet" href="/assets/atlas-quality-fixes.css"/>
+<link rel="stylesheet" href="/assets/atlas-library.css"/>
+</head>
+<body class="atlas-unified">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="atlas-unified-header" data-atlas-header>
+  <div class="atlas-unified-header__inner">
+    <a class="atlas-unified-brand" href="/" aria-label="ATLAS home">
+      <span class="atlas-unified-brand__mark">ATLAS</span>
+      <span class="atlas-unified-brand__descriptor">The Universal Trading Library</span>
+    </a>
+    <button class="atlas-mobile-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>☰</button>
+    <nav class="atlas-unified-nav" id="primary-navigation" aria-label="Primary navigation" data-primary-nav>
+      <ul class="atlas-unified-nav-list">
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="markets-menu">Markets</button>
+          <div class="atlas-unified-dropdown" id="markets-menu" hidden>
+            <a href="/#live-markets">Market Overview</a><a href="/markets/btc">Bitcoin</a><a href="/markets/eth">Ethereum</a><a href="/markets/sol">Solana</a><a href="/markets/bnb">BNB</a><a href="/exchanges">Exchanges</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="academy-menu">Academy</button>
+          <div class="atlas-unified-dropdown" id="academy-menu" hidden>
+            <a href="/academy">Academy Overview</a><a href="/academy/beginner">Crypto Fundamentals</a><a href="/market-structure">Market Structure</a><a href="/technical-analysis">Technical Analysis</a><a href="/risk-academy">Risk Academy</a><a href="/futures-leverage">Futures &amp; Leverage</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="tools-menu">Tools</button>
+          <div class="atlas-unified-dropdown" id="tools-menu" hidden>
+            <a href="/tools">All Tools</a><a href="/tools/grid-bot">Grid Calculator</a><a href="/journal-lab">Journal Analyser</a><a href="/tools/risk-calc">Risk / Position Size</a><a href="/tools/replay-lab">Replay Lab</a><a href="/macro-lab">Macro &amp; Intermarket</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="library-menu">Library</button>
+          <div class="atlas-unified-dropdown" id="library-menu" hidden>
+            <a href="/library">Library Overview</a><a href="/library#by-topic">A–Z</a><a href="/library#by-level">By level</a><a href="/library#by-question">By question</a><a href="/glossary">Glossary</a>
+          </div>
+        </li>
+        <li><a href="/glossary">Glossary</a></li>
+        <li><a href="/learning-path">Learning Path</a></li>
+        <li><a href="/community">Community</a></li>
+      </ul>
+      <div class="atlas-unified-actions">
+        <div class="atlas-global-progress" aria-label="Learning progress"><span>Progress</span><strong data-global-progress>0%</strong></div>
+        <form class="atlas-header-search" action="/search" method="get" role="search">
+          <label class="visually-hidden" for="atlasHeaderSearch">Search the library</label>
+          <input id="atlasHeaderSearch" name="q" type="search" placeholder="Search" autocomplete="off" data-atlas-search-input>
+        </form>
+        <a class="atlas-search-button" href="/search" aria-label="Search ATLAS">⌕</a>
+        <a class="atlas-start-learning" href="/learning-path">Start Learning</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="unified-breadcrumb no-print"><a href="/">ATLAS</a><span>›</span><strong>Exchanges and orders</strong></div>
+<main id="main-content">
+<section class="pagehero"><div class="kicker">Venues and orders</div><h1 id="page-title">Exchanges and orders</h1><p>This page is general information about how venues and orders work. It does not name a venue, it does not rank venues, and it is not a recommendation to open an account or to trade. Consider your own circumstances. Short definitions live in the glossary.</p></section>
+<div class="atlas-lesson"><nav class="atlas-toc" aria-label="On this page"><p>On this page</p><a href="#cex">Centralised and decentralised venues</a><a href="#order-book">The order book, the spread, and depth</a><a href="#maker-taker">Maker and taker</a><a href="#order-types">Order types</a><a href="#kyc-au">Registration in Australia, as general information</a></nav><div class="atlas-lesson__body"><figure class="atlas-ph" data-asset="/assets/img/exchanges/hero.webp" data-alt="Hero still. Caption stays in the page."><div class="atlas-ph__box" role="img" aria-label="Image placeholder. Creative Studio has not landed /assets/img/exchanges/hero.webp."><strong>Image placeholder</strong><span>/assets/img/exchanges/hero.webp</span><span>Awaiting Creative Studio. This build does not invent the still.</span></div><figcaption>Hero still. Caption stays in the page.</figcaption></figure><p>This page is general information about how venues and orders work. It does not name a venue, it does not rank venues, and it is not a recommendation to open an account or to trade. Consider your own circumstances. Short definitions live in the <a href="/glossary#order-book">glossary</a>.</p>
+<section class="section" id="cex"><span id="dex"></span><h2>Centralised and decentralised venues</h2>
+<p>A <strong>centralised exchange</strong> is a company that holds customer accounts, custodies assets, and matches orders on its own systems. Your balance there is a claim on that company. If the company fails, freezes withdrawals, or is compromised, the claim can fail even though the blockchain itself is fine.</p>
+<p>A <strong>decentralised exchange</strong> settles through contracts you sign from your own wallet. There is no account in the ordinary sense. The risks move: smart-contract bugs, a bad route, a thin pool, and a signature you did not intend. Keeping the keys does not remove those risks.</p>
+<p>Neither structure is &quot;the safe one&quot;. One concentrates custody in a firm. The other concentrates responsibility in the signature and the contract. Atlas explains the types. It does not send you to a named venue.</p>
+</section>
+<section class="section" id="order-book"><span id="spread-depth"></span><h2>The order book, the spread, and depth</h2>
+<p>An <strong>order book</strong> is the list of resting bids and asks. A <strong>bid</strong> is a price someone will pay. An <strong>ask</strong> is a price someone will sell at. The <strong>spread</strong> is the best ask minus the best bid. The <strong>mid</strong> is halfway between them, and it is a reference, not a price you can assume you will receive in size.</p>
+<p><strong>Depth</strong> is how much size sits at and near those prices. A market order walks that depth. The further it walks, the worse the average fill. That gap is <strong>price impact</strong>. A screenshot of depth is a moment. The size can disappear when your order arrives.</p>
+<div class="card" data-orderbook>
+<label>Symbol <select data-book-symbol><option>BTCUSDT</option><option>ETHUSDT</option><option>SOLUSDT</option></select></label>
+<p>Spread <strong data-book-spread>—</strong></p>
+<p data-book-status role="status">Loading public depth…</p>
+<div class="book"><div><h3>Bids</h3><ol data-book-bids></ol></div><div><h3>Asks</h3><ol data-book-asks></ol></div></div>
+</div></section>
+<section class="section" id="maker-taker"><h2>Maker and taker</h2>
+<p>A <strong>maker</strong> adds a resting order that someone else later trades against. A <strong>taker</strong> removes a resting order. Market orders are takers. A limit that is already marketable when it arrives is also a taker, whatever you hoped.</p>
+<p>Venues publish a fee schedule for each role. The schedule depends on the venue and often on a volume tier. A grid that fires many small cycles can hand a large share of each step to fees. Compare the planned step with the fee and with a realistic slippage allowance before you call the step viable. That comparison is arithmetic, not a promise that the cycles will occur.</p>
+</section>
+<section class="section" id="order-types"><h2>Order types</h2>
+<p>These are the common instructions. Names differ slightly by venue. Read the venue&#x27;s own specification before you rely on a label.</p>
+<ul><li><strong>Market.</strong> Take the best prices available now. You get speed. You give up a ceiling on the fill.</li><li><strong>Limit.</strong> Trade only at your price or better. The order may rest, or it may fill at once if the book is already through it. A limit that never trades has protected the price and has not made the trade.</li><li><strong>Stop.</strong> Wait until a trigger prints, then become a market order or a limit order, depending on the variant. The trigger is not the fill.</li><li><strong>Stop-limit.</strong> After the trigger, rest as a limit. In a fast move it can fail to fill. Use it only when a missed fill is more acceptable to the plan than an open-ended fill.</li><li><strong>Trailing stop.</strong> The trigger ratchets as price moves in your favour, by a distance or a rule you set. A tight trail exits on ordinary noise.</li><li><strong>Post-only.</strong> Rest as a maker, or cancel if the order would take liquidity. It is how a grid tries to stay on the maker schedule.</li><li><strong>Reduce-only.</strong> May only shrink an open position. It does not promise a fill. It only blocks an accidental increase.</li><li><strong>Iceberg.</strong> Shows a slice and reloads until a hidden total is done, on venues that offer it. The visible book then understates that order.</li><li><strong>Fill or kill.</strong> Fill the entire size immediately or cancel the whole order.</li><li><strong>Immediate or cancel.</strong> Fill what you can immediately and cancel the rest. A partial fill is allowed.</li><li><strong>Good till cancelled.</strong> Rest until a fill or a cancel, subject to the venue&#x27;s own expiry. Some venues expire orders anyway. Check the next day.</li><li><strong>One cancels the other.</strong> Two linked orders, often a take-profit and a stop. A fill on one cancels the other. Confirm what a partial fill does. The link is only as good as the venue&#x27;s implementation.</li><li><strong>Conditional.</strong> Held until a price, a time, or another event. It may live on the venue&#x27;s servers rather than in the public book. If that path fails, the condition may not fire.</li></ul>
+<p><strong>Time in force</strong> is the family name for fill-or-kill, immediate-or-cancel, and good-till-cancelled. <strong>Tick size</strong> is the smallest price step. <strong>Lot size</strong> is the smallest quantity step. A grid spaced inside the tick, or a size that is not a multiple of the lot, cannot be built as drawn.</p>
+</section>
+<section class="section" id="kyc-au"><span id="proof-of-reserves"></span><span id="withdrawals"></span><h2>Registration in Australia, as general information</h2>
+<p>AUSTRAC, the Australian Transaction Reports and Analysis Centre, supervises businesses that provide certain services with virtual assets. For years those businesses were discussed as digital currency exchange providers. AUSTRAC&#x27;s public material in 2026 uses the name <strong>virtual asset service provider</strong> (VASP) for the wider set of services, including exchanging virtual assets for money, exchanging virtual assets for other virtual assets, safekeeping, and passing on transfer instructions.</p>
+<p>AUSTRAC states that a business must be registered before it provides those services in Australia, and that providing them without registration is an offence. Registration is a legal status. It is not a safety rating, not a promise about solvency, and not an endorsement of any firm. A name on the register means the business is on the register. It does not mean the business is suitable for you.</p>
+<p>The public search is AUSTRAC&#x27;s Virtual Asset Service Provider Register: <a href="https://online.apps.austrac.gov.au/vaspr">https://online.apps.austrac.gov.au/vaspr</a>. AUSTRAC&#x27;s own overview of who is likely to be a VASP is here: <a href="https://www.austrac.gov.au/industry-and-business/your-industry/virtual-asset-service-providers/virtual-asset-service-providers-overview">https://www.austrac.gov.au/industry-and-business/your-industry/virtual-asset-service-providers/virtual-asset-service-providers-overview</a>.</p>
+<p>This paragraph is general information about that framework. It is not advice about whether any reader&#x27;s own activity must be registered. Atlas is an education library. It does not exchange assets, hold customer funds, or pass on transfer instructions, and it does not claim to be registered as a VASP.</p>
+<p>Know-your-customer checks and anti-money-laundering controls are the ordinary companions of a registered account. They identify the customer and create reporting duties for the business. They are not a product feature to shop for, and this page does not tell you how to avoid them.</p>
+</section></div></div>
+</main>
+<footer class="footer"><div><b>ATLAS — The Universal Trading Library</b><br/>One library. Every market. A smarter you.</div>
+<nav><a href="/library">Library</a><a href="/glossary">Glossary</a><a href="/tools">Tools</a><a href="/academy">Academy</a></nav>
+<nav aria-label="Legal" class="legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/contact">Contact</a></nav>
+<p class="footer-legal-line">General information only, not financial product advice. It doesn't consider your objectives, financial situation or needs. Crypto and leveraged trading are high risk; you can lose all your money. Market Pros Proprietary Limited (ABN 19 679 270 387) does not hold an AFSL.</p></footer>
+<button aria-label="Back to top" class="backtop" type="button">↑</button>
+<script src="/assets/atlas-config.js"></script>
+<script src="/assets/site.js"></script>
+<script src="/assets/atlas-orderbook.js"></script>
+</body>
+</html>

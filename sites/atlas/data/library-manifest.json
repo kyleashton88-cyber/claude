@@ -1,0 +1,414 @@
+{
+  "items": [
+    {
+      "title": "Grid Bot Builder",
+      "path": "/grid-bot",
+      "academy": "1",
+      "level": "Intermediate",
+      "status": "live",
+      "summary": "Range, spacing, maths, risk, and the command centre."
+    },
+    {
+      "title": "Market Structure",
+      "path": "/market-structure",
+      "academy": "2",
+      "level": "Beginner",
+      "status": "live",
+      "summary": "Candles, swings, trend, range, breaks, and liquidity."
+    },
+    {
+      "title": "Technical Analysis",
+      "path": "/technical-analysis",
+      "academy": "3",
+      "level": "Intermediate",
+      "status": "live",
+      "summary": "Support, averages, RSI, MACD, VWAP, bands, ATR, volume, and patterns."
+    },
+    {
+      "title": "Risk Academy",
+      "path": "/risk-academy",
+      "academy": "4",
+      "level": "Intermediate",
+      "status": "live",
+      "summary": "Size, R, stops, expectancy, drawdown, and a reshuffle."
+    },
+    {
+      "title": "DeFi and on-chain",
+      "path": "/defi-onchain",
+      "academy": "14",
+      "level": "Advanced",
+      "status": "live",
+      "summary": "Wallets, pools, lending, bridges, and on-chain research."
+    },
+    {
+      "title": "Crypto fundamentals",
+      "path": "/crypto-fundamentals",
+      "academy": "13",
+      "level": "Beginner",
+      "status": "live",
+      "summary": "Ledgers, consensus, coins and tokens, fees, and what a chart hides."
+    },
+    {
+      "title": "Exchanges and orders",
+      "path": "/exchanges",
+      "academy": "",
+      "level": "Beginner",
+      "status": "live",
+      "summary": "Books, spread, order types, and Australian registration as general information."
+    },
+    {
+      "title": "Wallets and scams",
+      "path": "/security",
+      "academy": "",
+      "level": "Beginner",
+      "status": "live",
+      "summary": "Keys, seed phrases, and the common cons."
+    },
+    {
+      "title": "Futures and leverage",
+      "path": "/futures-leverage",
+      "academy": "9",
+      "level": "Intermediate",
+      "status": "live",
+      "summary": "The existing leverage sandbox. The longer derivatives lesson is still to expand."
+    },
+    {
+      "title": "Journal",
+      "path": "/journal-lab",
+      "academy": "11",
+      "level": "Intermediate",
+      "status": "live",
+      "summary": "Paste R results. The longer journal lesson is still to expand."
+    },
+    {
+      "title": "Automation",
+      "path": "/automation",
+      "academy": "15",
+      "level": "Intermediate",
+      "status": "live",
+      "summary": "A short module. The longer automation lesson is still to expand."
+    },
+    {
+      "title": "Macro",
+      "path": "/macro-lab",
+      "academy": "17",
+      "level": "Advanced",
+      "status": "live",
+      "summary": "A short module. The longer macro lesson is still to expand."
+    },
+    {
+      "title": "Glossary",
+      "path": "/glossary",
+      "academy": "",
+      "level": "Beginner",
+      "status": "live",
+      "summary": "435 terms, A to Z."
+    },
+    {
+      "title": "Tools",
+      "path": "/tools",
+      "academy": "",
+      "level": "Beginner",
+      "status": "live",
+      "summary": "Calculators and labs that are in this build."
+    },
+    {
+      "title": "Learning path",
+      "path": "/learning-path",
+      "academy": "",
+      "level": "Beginner",
+      "status": "live",
+      "summary": "A route through the library."
+    },
+    {
+      "title": "Academy",
+      "path": "/academy",
+      "academy": "",
+      "level": "Beginner",
+      "status": "live",
+      "summary": "The 18-module map."
+    },
+    {
+      "title": "Bitcoin",
+      "path": "/markets/btc",
+      "academy": "",
+      "level": "Beginner",
+      "status": "live",
+      "summary": "Educational chart. Data may be delayed."
+    },
+    {
+      "title": "Ethereum",
+      "path": "/markets/eth",
+      "academy": "",
+      "level": "Beginner",
+      "status": "live",
+      "summary": "Educational chart. Data may be delayed."
+    },
+    {
+      "title": "BNB",
+      "path": "/markets/bnb",
+      "academy": "",
+      "level": "Beginner",
+      "status": "live",
+      "summary": "Educational chart. Data may be delayed."
+    },
+    {
+      "title": "Solana",
+      "path": "/markets/sol",
+      "academy": "",
+      "level": "Beginner",
+      "status": "live",
+      "summary": "Educational chart plus a short primer."
+    }
+  ],
+  "questions": [
+    {
+      "q": "I am new. Where do I start?",
+      "href": "/market-structure#candles"
+    },
+    {
+      "q": "What is Atlas?",
+      "href": "/disclaimer"
+    },
+    {
+      "q": "Is this personal advice?",
+      "href": "/footer-line"
+    },
+    {
+      "q": "Who publishes the site?",
+      "href": "/terms"
+    },
+    {
+      "q": "What is a grid?",
+      "href": "/glossary#grid"
+    },
+    {
+      "q": "What is the range for?",
+      "href": "/glossary#range"
+    },
+    {
+      "q": "What happens if I add more grid levels?",
+      "href": "/glossary#grid-count"
+    },
+    {
+      "q": "What is the difference between an arithmetic and a geometric grid?",
+      "href": "/glossary#arithmetic-grid"
+    },
+    {
+      "q": "Why can grid profit be positive while the account is down?",
+      "href": "/glossary#grid-profit"
+    },
+    {
+      "q": "What is a neutral grid?",
+      "href": "/glossary#neutral-grid"
+    },
+    {
+      "q": "When should I review a running grid?",
+      "href": "/glossary#invalidation"
+    },
+    {
+      "q": "What does a candlestick show?",
+      "href": "/market-structure#candles"
+    },
+    {
+      "q": "What is a swing high?",
+      "href": "/market-structure#swings"
+    },
+    {
+      "q": "How do I tell a trend from a range?",
+      "href": "/market-structure#trend"
+    },
+    {
+      "q": "What is a break of structure?",
+      "href": "/market-structure#bos-choch"
+    },
+    {
+      "q": "What is a change of character?",
+      "href": "/library"
+    },
+    {
+      "q": "What is a liquidity sweep?",
+      "href": "/market-structure#liquidity"
+    },
+    {
+      "q": "What is an order block?",
+      "href": "/market-structure#order-blocks"
+    },
+    {
+      "q": "What is a fair value gap?",
+      "href": "/library"
+    },
+    {
+      "q": "How do timeframes fit together?",
+      "href": "/market-structure#multi-timeframe"
+    },
+    {
+      "q": "What do premium and discount mean?",
+      "href": "/market-structure#premium-discount-and-the-dealing-range"
+    },
+    {
+      "q": "What is a moving average?",
+      "href": "/technical-analysis#simple-moving-average"
+    },
+    {
+      "q": "How is RSI calculated?",
+      "href": "/technical-analysis#rsi"
+    },
+    {
+      "q": "What is MACD?",
+      "href": "/technical-analysis#macd"
+    },
+    {
+      "q": "What is VWAP?",
+      "href": "/technical-analysis#vwap"
+    },
+    {
+      "q": "What do Bollinger Bands measure?",
+      "href": "/technical-analysis#bollinger-bands"
+    },
+    {
+      "q": "What is ATR for?",
+      "href": "/technical-analysis#atr"
+    },
+    {
+      "q": "What is divergence?",
+      "href": "/technical-analysis#divergence"
+    },
+    {
+      "q": "What counts as confluence?",
+      "href": "/technical-analysis#confluence"
+    },
+    {
+      "q": "Do chart patterns set a destination?",
+      "href": "/technical-analysis#patterns"
+    },
+    {
+      "q": "How do I turn a stop distance into a size?",
+      "href": "/risk-academy#position-sizing"
+    },
+    {
+      "q": "What is one R?",
+      "href": "/risk-academy#r-multiples"
+    },
+    {
+      "q": "What is expectancy?",
+      "href": "/risk-academy#expectancy"
+    },
+    {
+      "q": "Why is a high share of winners not enough?",
+      "href": "/library"
+    },
+    {
+      "q": "How much must equity rise to recover a drawdown?",
+      "href": "/risk-academy#drawdown-and-the-recovery-fraction"
+    },
+    {
+      "q": "What does a Monte Carlo study actually do?",
+      "href": "/risk-academy#monte-carlo"
+    },
+    {
+      "q": "What should be true before size is live?",
+      "href": "/risk-academy#a-pre-trade-check"
+    },
+    {
+      "q": "What is the spread?",
+      "href": "/exchanges#the-order-book-the-spread-and-depth"
+    },
+    {
+      "q": "What is the difference between a maker and a taker?",
+      "href": "/exchanges#maker-and-taker"
+    },
+    {
+      "q": "What is a stop-limit?",
+      "href": "/exchanges#order-types"
+    },
+    {
+      "q": "Does Atlas recommend an exchange?",
+      "href": "/library"
+    },
+    {
+      "q": "What is AUSTRAC registration?",
+      "href": "/exchanges#registration-in-australia-as-general-information"
+    },
+    {
+      "q": "What is a seed phrase?",
+      "href": "/security#seed-phrases-and-keys"
+    },
+    {
+      "q": "Will Atlas ever ask for my seed phrase?",
+      "href": "/security"
+    },
+    {
+      "q": "What is two-factor authentication?",
+      "href": "/library"
+    },
+    {
+      "q": "What is a wallet drainer?",
+      "href": "/security#a-short-encyclopedia-of-scams"
+    },
+    {
+      "q": "What is address poisoning?",
+      "href": "/library"
+    },
+    {
+      "q": "Where do I report a scam in Australia?",
+      "href": "/security#where-to-report"
+    },
+    {
+      "q": "Someone offered to recover my coins. What now?",
+      "href": "/library"
+    },
+    {
+      "q": "What is the difference between a coin and a token?",
+      "href": "/crypto-fundamentals#coins-tokens-and-categories"
+    },
+    {
+      "q": "What is finality?",
+      "href": "/crypto-fundamentals#transactions"
+    },
+    {
+      "q": "What is gas?",
+      "href": "/crypto-fundamentals#networks-fees-and-scaling"
+    },
+    {
+      "q": "What is a stablecoin depeg?",
+      "href": "/glossary#stablecoin"
+    },
+    {
+      "q": "What is impermanent loss?",
+      "href": "/glossary#impermanent-loss"
+    },
+    {
+      "q": "What is a health factor?",
+      "href": "/glossary#health-factor"
+    },
+    {
+      "q": "Where does a durable DeFi fee come from?",
+      "href": "/glossary#yield-farming"
+    },
+    {
+      "q": "What is MEV?",
+      "href": "/glossary#mev"
+    },
+    {
+      "q": "What is Solana?",
+      "href": "/solana-primer"
+    },
+    {
+      "q": "What belongs in a journal?",
+      "href": "/glossary#journal"
+    },
+    {
+      "q": "What is overfitting?",
+      "href": "/glossary#overfitting"
+    },
+    {
+      "q": "What is the difference between hot and cold storage?",
+      "href": "/security#wallets"
+    },
+    {
+      "q": "Can a calculator on Atlas tell me what to do?",
+      "href": "/risk-academy"
+    }
+  ]
+}

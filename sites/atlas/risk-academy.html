@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Risk academy — ATLAS</title>
+<meta name="description" content="Risk is the amount you can lose if the idea is wrong, sized before you act. This page is general information. The formulas describe arithmetic. They do not choose a size for you, t"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/site.css" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/atlas-production.css"/>
+<link rel="stylesheet" href="/assets/atlas-completed.css"/>
+<link rel="stylesheet" href="/assets/atlas-layout-hardening.css"/>
+<link rel="stylesheet" href="/assets/atlas-deep-layout-fixes.css"/>
+<link rel="stylesheet" href="/assets/atlas-quality-fixes.css"/>
+<link rel="stylesheet" href="/assets/atlas-library.css"/>
+</head>
+<body class="atlas-unified">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="atlas-unified-header" data-atlas-header>
+  <div class="atlas-unified-header__inner">
+    <a class="atlas-unified-brand" href="/" aria-label="ATLAS home">
+      <span class="atlas-unified-brand__mark">ATLAS</span>
+      <span class="atlas-unified-brand__descriptor">The Universal Trading Library</span>
+    </a>
+    <button class="atlas-mobile-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>☰</button>
+    <nav class="atlas-unified-nav" id="primary-navigation" aria-label="Primary navigation" data-primary-nav>
+      <ul class="atlas-unified-nav-list">
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="markets-menu">Markets</button>
+          <div class="atlas-unified-dropdown" id="markets-menu" hidden>
+            <a href="/#live-markets">Market Overview</a><a href="/markets/btc">Bitcoin</a><a href="/markets/eth">Ethereum</a><a href="/markets/sol">Solana</a><a href="/markets/bnb">BNB</a><a href="/exchanges">Exchanges</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="academy-menu">Academy</button>
+          <div class="atlas-unified-dropdown" id="academy-menu" hidden>
+            <a href="/academy">Academy Overview</a><a href="/academy/beginner">Crypto Fundamentals</a><a href="/market-structure">Market Structure</a><a href="/technical-analysis">Technical Analysis</a><a href="/risk-academy">Risk Academy</a><a href="/futures-leverage">Futures &amp; Leverage</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="tools-menu">Tools</button>
+          <div class="atlas-unified-dropdown" id="tools-menu" hidden>
+            <a href="/tools">All Tools</a><a href="/tools/grid-bot">Grid Calculator</a><a href="/journal-lab">Journal Analyser</a><a href="/tools/risk-calc">Risk / Position Size</a><a href="/tools/replay-lab">Replay Lab</a><a href="/macro-lab">Macro &amp; Intermarket</a>
+          </div>
+        </li>
+        <li class="atlas-unified-nav-item">
+          <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="library-menu">Library</button>
+          <div class="atlas-unified-dropdown" id="library-menu" hidden>
+            <a href="/library">Library Overview</a><a href="/library#by-topic">A–Z</a><a href="/library#by-level">By level</a><a href="/library#by-question">By question</a><a href="/glossary">Glossary</a>
+          </div>
+        </li>
+        <li><a href="/glossary">Glossary</a></li>
+        <li><a href="/learning-path">Learning Path</a></li>
+        <li><a href="/community">Community</a></li>
+      </ul>
+      <div class="atlas-unified-actions">
+        <div class="atlas-global-progress" aria-label="Learning progress"><span>Progress</span><strong data-global-progress>0%</strong></div>
+        <form class="atlas-header-search" action="/search" method="get" role="search">
+          <label class="visually-hidden" for="atlasHeaderSearch">Search the library</label>
+          <input id="atlasHeaderSearch" name="q" type="search" placeholder="Search" autocomplete="off" data-atlas-search-input>
+        </form>
+        <a class="atlas-search-button" href="/search" aria-label="Search ATLAS">⌕</a>
+        <a class="atlas-start-learning" href="/learning-path">Start Learning</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="unified-breadcrumb no-print"><a href="/">ATLAS</a><span>›</span><strong>Risk academy</strong></div>
+<main id="main-content">
+<section class="pagehero"><div class="kicker">Academy 04</div><h1 id="page-title">Risk academy</h1><p>Risk is the amount you can lose if the idea is wrong, sized before you act. This page is general information. The formulas describe arithmetic. They do not choose a size for you, they do not promise a result, and they are not personal advice. Consider your own circumstances.</p></section>
+<div class="atlas-lesson"><nav class="atlas-toc" aria-label="On this page"><p>On this page</p><a href="#position-sizing">Position sizing</a><a href="#r-multiple">R multiples</a><a href="#stop-placement">Stops</a><a href="#expectancy">Expectancy</a><a href="#drawdown">Drawdown and the recovery fraction</a><a href="#monte-carlo">Monte Carlo</a><a href="#pre-trade">A pre-trade check</a></nav><div class="atlas-lesson__body"><figure class="atlas-ph" data-asset="/assets/img/risk-academy/hero.webp" data-alt="Hero still. Caption stays in the page."><div class="atlas-ph__box" role="img" aria-label="Image placeholder. Creative Studio has not landed /assets/img/risk-academy/hero.webp."><strong>Image placeholder</strong><span>/assets/img/risk-academy/hero.webp</span><span>Awaiting Creative Studio. This build does not invent the still.</span></div><figcaption>Hero still. Caption stays in the page.</figcaption></figure><p>Risk is the amount you can lose if the idea is wrong, sized before you act. This page is general information. The formulas describe arithmetic. They do not choose a size for you, they do not promise a result, and they are not personal advice. Consider your own circumstances.</p>
+<p>Worked numbers below are invented so the arithmetic is visible. Each block is marked as a hypothetical example. None of them is a record of a live account.</p>
+<p>The map of swings is on the <a href="/market-structure">market structure page</a>. The measurements on price are on the <a href="/technical-analysis">technical analysis page</a>. Short definitions are in the <a href="/glossary#drawdown">glossary</a>.</p>
+<section class="section" id="position-sizing"><h2>Position sizing</h2>
+<p>Decide the cash you are willing to lose if the stop is hit. That is the risk per trade. Then divide by the stop distance, in price per unit.</p>
+<pre>cash at risk = equity * risk fraction
+units = cash at risk / stop distance</pre>
+<p>Stop distance is the gap between the entry and the invalidation, in price. A wider stop means fewer units for the same cash at risk. Fees and slippage make the real loss larger than this figure if the fill is worse than the stop price, so the cash at risk in the formula should already include an allowance you believe is realistic.</p>
+<p>The risk fraction is a ceiling you choose. This page cannot set it. A smaller fraction survives a longer run of losses and grows more slowly when the sample is favourable. Both halves of that sentence matter.</p>
+<p class="atlas-note">Hypothetical example. Equity is 10000 quote units. The plan risks 1 percent of equity, so cash at risk is 100 quote units. The invalidation is 2 quote units away from the entry. Units = 100 / 2 = 50. Illustrative example on hypothetical data. Not a recommendation to trade this asset or these levels.</p>
+<p>Common mistakes:</p>
+<ul><li>Sizing from a feeling about the asset, then placing the stop wherever that size happens to fit.</li><li>Ignoring the gap between the stop trigger and the fill.</li><li>Adding several positions that fall together, so the account risk is the sum, not the single-line figure. That sum is portfolio heat.</li></ul>
+</section>
+<section class="section" id="r-multiple"><h2>R multiples</h2>
+<p>One R is the cash you planned to lose if the stop was hit. A result stated in R is the money gained or lost, divided by that initial risk.</p>
+<pre>R multiple = result / initial risk</pre>
+<p>A gain of twice the planned risk is +2 R. A loss of the planned risk is -1 R. Stating results in R lets you compare trades with different prices and different sizes. It does not make a losing trade into a winning process.</p>
+<p class="atlas-note">Hypothetical example. Initial risk is 100 quote units. The closed result is a gain of 180 quote units. The R multiple is 180 / 100 = 1.8 R. A second trade loses the full 100, which is -1 R. Illustrative example on hypothetical data. Not a recommendation to trade this asset or these levels.</p>
+<p>Common mistakes:</p>
+<ul><li>Moving the stop wider and still calling the original risk &quot;one R&quot;. The R has changed.</li><li>Counting a paper gain as R before the position is closed.</li><li>Comparing R across a strategy that sometimes has no stop. If the loss was not defined, the multiple is not defined.</li></ul>
+</section>
+<section class="section" id="stop-placement"><h2>Stops</h2>
+<p>A stop is the invalidation made executable: a price, a close, or a time at which the idea is wrong or the loss has reached the plan.</p>
+<ul><li>A <strong>hard stop</strong> is an order resting at the venue.</li><li>A <strong>trailing stop</strong> moves in your favour under a rule written beforehand, such as a fixed distance or a multiple of ATR.</li><li>A <strong>time stop</strong> forces a review or an exit after a set number of candles if nothing has happened.</li></ul>
+<p>ATR, from the technical page, can scale a distance to recent movement. It does not know your account. A 2 ATR stop on a huge account and a 2 ATR stop on a small account are the same distance and a different fraction of equity. Run the position-size formula after you pick the distance.</p>
+<p>A stop can fill worse than its price in a fast market or a gap. The formula&#x27;s cash at risk is a plan, not a promise that the venue will complete the order at that print.</p>
+<p>Common mistakes:</p>
+<ul><li>Putting the stop inside ordinary noise so the idea is never allowed to work, then widening it only after you are in.</li><li>Using a mental stop and calling it equivalent to a hard stop. They fail in different ways.</li><li>Trailing so tightly that ordinary candles knock out a position the plan still called valid.</li></ul>
+</section>
+<section class="section" id="expectancy"><h2>Expectancy</h2>
+<p>Expectancy is the average result per trade in a sample you already have. With the average loss written as a positive number:</p>
+<pre>expectancy = (win fraction * average win) - (loss fraction * average loss)</pre>
+<p>The win fraction and the loss fraction are shares of the sample, and they add to one if every trade is either a win or a loss. In R units, use the average win and the average loss in R. A positive expectancy means the average of that sample was a gain. It is a description of those trades. It is not a forecast of the next trade, and it is not a promise about a future return.</p>
+<p>The payoff ratio is the average win divided by the average loss. Either figure alone is incomplete. A high share of winners still loses money if the losers are large enough. A low share of winners can still show a positive average if the winners are large enough. Quote them together, and quote the sample size.</p>
+<p class="atlas-note">Hypothetical example. In a made-up sample of ten closed trades, four are winners and six are losers. The average winner is 2 R and the average loser is 1 R. Expectancy = (0.4 * 2) - (0.6 * 1) = 0.2 R per trade. That sentence describes these ten invented results and no other account. Illustrative example on hypothetical data. Not a recommendation to trade this asset or these levels.</p>
+<p>Common mistakes:</p>
+<ul><li>Publishing the share of winners and hiding the size of the losers.</li><li>Computing expectancy on open trades, marked at a favourable moment.</li><li>Reshaping the rule after seeing the sample, then treating the new average as if it had been specified in advance. That is overfitting.</li></ul>
+</section>
+<section class="section" id="drawdown"><h2>Drawdown and the recovery fraction</h2>
+<p>Drawdown is the fall from an equity peak to a later trough, divided by the peak.</p>
+<pre>d = (peak - trough) / peak</pre>
+<p>Maximum drawdown is the deepest such fall in the sample. It is a fact about that path. A later path can be worse.</p>
+<p>The rise required to regain the peak, as a fraction of the equity you have left, is:</p>
+<pre>recovery = 1 / (1 - d) - 1</pre>
+<p>If d is one half, 1 - d is one half, and the recovery fraction is 1 / (1/2) - 1 = 1. The remaining equity must double. A deeper d demands a much larger rise than the decline itself, because you are compounding off a smaller base. The formula is arithmetic. It does not say the rise will happen.</p>
+<p class="atlas-note">Hypothetical example. A peak of 1000 quote units falls to 800. Then d = (1000 - 800) / 1000 = 0.2. Recovery = 1 / (1 - 0.2) - 1 = 0.25. The 800 must rise by a quarter of itself, which is 200, to see 1000 again. Illustrative example on hypothetical data. Not a recommendation to trade this asset or these levels.</p>
+<p class="atlas-note">Hypothetical example. The same peak falls to 500, so d = 0.5. Recovery = 1 / (1 - 0.5) - 1 = 1. The remaining 500 must double. The decline was one half of the peak. The repair, measured on what is left, is the whole of what is left. Illustrative example on hypothetical data. Not a recommendation to trade this asset or these levels.</p>
+<p>Common mistakes:</p>
+<ul><li>Comparing a decline of one tenth with a later rise of one tenth and calling the account restored. One tenth of the smaller number does not refill the peak. Use the formula.</li><li>Quoting a maximum drawdown from a short, smooth sample as if it were a cap.</li><li>Adding leverage so the same price path produces a deeper d. The recovery fraction then belongs to the leveraged equity, not to the unlevered story.</li></ul>
+<div data-drawdown-curve></div></section>
+<section class="section" id="monte-carlo"><h2>Monte Carlo</h2>
+<p>A Monte Carlo study takes a sample of trade results and builds many alternate paths. The usual simple version reshuffles the same results into a new order, thousands of times, and records the equity curve of each order. You then look at the spread: how deep the drawdowns were across paths, and how often a path touched a ruin level you defined.</p>
+<p>What it can show: path risk inside that sample. Two traders with the same trades in a different order live through different drawdowns. The average expectancy can match while the worst path does not.</p>
+<p>What it cannot show: a result the sample does not contain. If the historical trades had no fee, the reshuffle has no fee. If you tuned the rule on the same trades, the reshuffle repeats the tuning. New regimes, broken feeds, and a size that moves the market are not created by shuffling.</p>
+<p class="atlas-note">Hypothetical example. Five invented R results, -1, -1, +2, -1, +3, have the same average in every order. One order might take both losses first. Another might take the gains first. The ending sum of this list is the same. The deepest drop along the way is not. Illustrative example on hypothetical data. Not a recommendation to trade this asset or these levels.</p>
+<p>A practical study also states the ruin line in advance, for example equity down by a fraction you refuse to cross, and counts the share of reshuffled paths that touch it. That share is a property of the model and the sample. Change the size per trade and the share changes, which is the point of doing the exercise before size is live.</p>
+<p>Common mistakes:</p>
+<ul><li>Running the shuffle on a handful of trades and treating the pretty middle path as evidence.</li><li>Replacing losers with a hoped-for average before the shuffle, which hides the tail.</li><li>Confusing a Monte Carlo fan with a forecast of the next month.</li></ul>
+<div data-monte-carlo></div></section>
+<section class="section" id="pre-trade"><span id="correlation"></span><span id="leverage-risk"></span><h2>A pre-trade check</h2>
+<p>Before size is live, write four numbers and one sentence:</p>
+<ol><li>Cash at risk if the stop fills at the planned price, including a slippage allowance.</li><li>Stop distance, and the units that distance implies.</li><li>Portfolio heat if this idea is added to what is already open.</li><li>The invalidation, in a form someone else could check on a chart.</li><li>One sentence on why this idea is not the same bet as the positions you already hold.</li></ol>
+<p>If you cannot fill those in, the missing piece is the plan, not another indicator. The record of what you then do belongs in a journal, so expectancy is computed on trades you actually took.</p>
+</section></div></div>
+</main>
+<footer class="footer"><div><b>ATLAS — The Universal Trading Library</b><br/>One library. Every market. A smarter you.</div>
+<nav><a href="/library">Library</a><a href="/glossary">Glossary</a><a href="/tools">Tools</a><a href="/academy">Academy</a></nav>
+<nav aria-label="Legal" class="legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/contact">Contact</a></nav>
+<p class="footer-legal-line">General information only, not financial product advice. It doesn't consider your objectives, financial situation or needs. Crypto and leveraged trading are high risk; you can lose all your money. Market Pros Proprietary Limited (ABN 19 679 270 387) does not hold an AFSL.</p></footer>
+<button aria-label="Back to top" class="backtop" type="button">↑</button>
+<script src="/assets/atlas-config.js"></script>
+<script src="/assets/site.js"></script>
+<script src="/assets/atlas-riskcharts.js"></script>
+</body>
+</html>

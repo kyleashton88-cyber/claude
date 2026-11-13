@@ -1,13 +1,24 @@
 <!-- DRAFT: legal wording needs Stewart's sign-off. Entity name and ABN to be confirmed by Stewart against ASIC. contact@stewartcrowncrypto.com is pending Stewart's confirmation. Staged 10 Nov 2026 (Legal Ops review F1 footer line + Disclaimer link). Not for deployment. -->
 <!DOCTYPE html>
-
-<html lang="en"><head>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"/><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Crypto Fundamentals — ATLAS</title><meta content="Understand the market infrastructure underneath the chart: liquidity, custody, token categories, networks and crypto-specific risks." name="description"/><link href="/assets/site.css" rel="stylesheet"/>  <link rel="stylesheet" href="/assets/atlas-production.css">
-  <link rel="stylesheet" href="/assets/atlas-completed.css">
-  <link rel="stylesheet" href="/assets/atlas-layout-hardening.css">
-  <link rel="stylesheet" href="/assets/atlas-deep-layout-fixes.css">
-  <link rel="stylesheet" href="/assets/atlas-quality-fixes.css">
-</head><body class="atlas-unified training-page">
+<html lang="en">
+<head>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Crypto fundamentals — ATLAS</title>
+<meta name="description" content="This page is general information about how a public ledger works, and about the risks that sit underneath a chart. It matches the short module already on the Atlas site: liquidity,"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/site.css" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/atlas-production.css"/>
+<link rel="stylesheet" href="/assets/atlas-completed.css"/>
+<link rel="stylesheet" href="/assets/atlas-layout-hardening.css"/>
+<link rel="stylesheet" href="/assets/atlas-deep-layout-fixes.css"/>
+<link rel="stylesheet" href="/assets/atlas-quality-fixes.css"/>
+<link rel="stylesheet" href="/assets/atlas-library.css"/>
+</head>
+<body class="atlas-unified">
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="atlas-unified-header" data-atlas-header>
   <div class="atlas-unified-header__inner">
@@ -21,13 +32,13 @@
         <li class="atlas-unified-nav-item">
           <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="markets-menu">Markets</button>
           <div class="atlas-unified-dropdown" id="markets-menu" hidden>
-            <a href="/#live-markets">Market Overview</a><a href="/macro-lab">Macro &amp; Intermarket</a><a href="/markets/btc">Bitcoin</a><a href="/markets/eth">Ethereum</a><a href="/markets/bnb">BNB</a><a href="/markets/sol">Solana</a>
+            <a href="/#live-markets">Market Overview</a><a href="/markets/btc">Bitcoin</a><a href="/markets/eth">Ethereum</a><a href="/markets/sol">Solana</a><a href="/markets/bnb">BNB</a><a href="/exchanges">Exchanges</a>
           </div>
         </li>
         <li class="atlas-unified-nav-item">
           <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="academy-menu">Academy</button>
           <div class="atlas-unified-dropdown" id="academy-menu" hidden>
-            <a href="/academy">Academy Overview</a><a href="/academy/beginner">Crypto Fundamentals</a><a href="/futures-leverage">Futures &amp; Leverage</a><a href="/academy/ta">Technical Analysis</a><a href="/academy/structure">Market Structure</a><a href="/academy/risk">Risk Management</a>
+            <a href="/academy">Academy Overview</a><a href="/academy/beginner">Crypto Fundamentals</a><a href="/market-structure">Market Structure</a><a href="/technical-analysis">Technical Analysis</a><a href="/risk-academy">Risk Academy</a><a href="/futures-leverage">Futures &amp; Leverage</a>
           </div>
         </li>
         <li class="atlas-unified-nav-item">
@@ -39,19 +50,70 @@
         <li class="atlas-unified-nav-item">
           <button class="atlas-unified-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="library-menu">Library</button>
           <div class="atlas-unified-dropdown" id="library-menu" hidden>
-            <a href="/library">Library Overview</a><a href="/library/module-1">Grid Bot Builder</a><a href="/library/module-2">Market Strategies</a><a href="/library/module-3">DeFi &amp; On-Chain</a>
+            <a href="/library">Library Overview</a><a href="/library#by-topic">A–Z</a><a href="/library#by-level">By level</a><a href="/library#by-question">By question</a><a href="/glossary">Glossary</a>
           </div>
         </li>
+        <li><a href="/glossary">Glossary</a></li>
         <li><a href="/learning-path">Learning Path</a></li>
         <li><a href="/community">Community</a></li>
       </ul>
       <div class="atlas-unified-actions">
         <div class="atlas-global-progress" aria-label="Learning progress"><span>Progress</span><strong data-global-progress>0%</strong></div>
+        <form class="atlas-header-search" action="/search" method="get" role="search">
+          <label class="visually-hidden" for="atlasHeaderSearch">Search the library</label>
+          <input id="atlasHeaderSearch" name="q" type="search" placeholder="Search" autocomplete="off" data-atlas-search-input>
+        </form>
         <a class="atlas-search-button" href="/search" aria-label="Search ATLAS">⌕</a>
         <a class="atlas-start-learning" href="/learning-path">Start Learning</a>
       </div>
     </nav>
   </div>
-</header><div aria-hidden="true" class="reading-progress no-print"></div><div class="unified-breadcrumb no-print"><a href="/">ATLAS</a><span>›</span><a href="/academy">Academy</a><span>›</span><strong>Crypto Fundamentals</strong></div><nav aria-label="Training shortcuts" class="page-context-strip no-print"><a href="/academy">Academy</a><a href="/learning-path">Learning Path</a><a href="/replay-lab">Replay Lab</a><a href="/tools">Tools</a></nav><main id="main-content"><div class="print-only"><div class="print-document-title">ATLAS — The Universal Trading Library</div><p>Educational training material · Printed/PDF copy</p><hr/></div><div aria-label="Training page tools" class="training-tools no-print"><div class="left"><span class="module-label">CRYPTO FUNDAMENTALS </span><a class="toolbtn" href="/academy">← Academy</a></div><div class="right"><button class="toolbtn" data-copy-link="" type="button">🔗 Copy link</button><button class="toolbtn" data-print-pdf="" type="button">🖨 Print / PDF</button></div></div><section aria-labelledby="page-title" class="pagehero"><div class="kicker">MODULE 13</div><h1 id="page-title">Crypto Market Fundamentals</h1><p>Understand the market infrastructure underneath the chart: liquidity, custody, token categories, networks and crypto-specific risks.</p></section><section class="section"><div class="grid3"><div class="card"><h3>Market liquidity</h3><p>Depth and spread affect execution.</p></div><div class="card"><h3>Custody</h3><p>Exchange custody and self-custody have different operational risks.</p></div><div class="card"><h3>Token categories</h3><p>Payment, smart-contract, governance, stablecoin and utility designs behave differently.</p></div><div class="card"><h3>Networks</h3><p>Fees, finality and congestion affect transfers.</p></div><div class="card"><h3>Stablecoins</h3><p>Useful settlement assets with issuer, collateral and depeg risks.</p></div><div class="card"><h3>Scams &amp; operational risk</h3><p>Address verification and transaction checks matter because blockchain transfers may be irreversible.</p></div></div></section><section class="section"><div class="card"><h2>Learn → Recognise → Practise → Prove → Apply → Review</h2><p>Each topic is designed to connect explanation to chart recognition, a practical decision and a knowledge check. Use the Replay Lab to practise the concepts candle by candle.</p><a class="btn primary" href="/replay-lab">Open Replay Lab →</a></div></section></main><footer class="footer"><div><b>ATLAS — The Universal Trading Library</b><br/>Learn · Recognise · Apply · Prove</div><nav><a href="/academy">Academy</a><a href="/replay-lab">Replay Lab</a><a href="/tools">Tools</a><a href="/#live-markets">Markets</a></nav><p class="footer-legal-line">General information only, not financial product advice. It doesn't consider your objectives, financial situation or needs. Crypto and leveraged trading are high risk; you can lose all your money. Market Pros Proprietary Limited (ABN 19 679 270 387) does not hold an AFSL.</p><nav aria-label="Legal" class="legal"><a href="/terms">Terms</a> · <a href="/privacy">Privacy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="mailto:contact@stewartcrowncrypto.com">contact@stewartcrowncrypto.com</a></nav></footer><button aria-label="Back to top" class="backtop" type="button">↑</button><script src="/assets/site.js"></script><script></script>  <script src="/assets/atlas-production.js"></script>
-  <script src="/assets/atlas-completed.js"></script>
-</body></html>
+</header>
+<div class="unified-breadcrumb no-print"><a href="/">ATLAS</a><span>›</span><strong>Crypto fundamentals</strong></div>
+<main id="main-content">
+<section class="pagehero"><div class="kicker">Academy 13</div><h1 id="page-title">Crypto fundamentals</h1><p>This page is general information about how a public ledger works, and about the risks that sit underneath a chart. It matches the short module already on the Atlas site: liquidity, custody, token categories, networks, stablecoins, and scams. It is not a recommendation to hold any</p></section>
+<div class="atlas-lesson"><nav class="atlas-toc" aria-label="On this page"><p>On this page</p><a href="#what-is-blockchain">A shared ledger</a><a href="#transactions">Transactions</a><a href="#keys-briefly">Keys, briefly</a><a href="#consensus">Consensus</a><a href="#coins-vs-tokens">Coins, tokens, and categories</a><a href="#networks">Networks, fees, and scaling</a><a href="#liquidity">What the chart does not show</a></nav><div class="atlas-lesson__body"><figure class="atlas-ph" data-asset="/assets/img/crypto-fundamentals/hero.webp" data-alt="Hero still. Caption stays in the page."><div class="atlas-ph__box" role="img" aria-label="Image placeholder. Creative Studio has not landed /assets/img/crypto-fundamentals/hero.webp."><strong>Image placeholder</strong><span>/assets/img/crypto-fundamentals/hero.webp</span><span>Awaiting Creative Studio. This build does not invent the still.</span></div><figcaption>Hero still. Caption stays in the page.</figcaption></figure><p>This page is general information about how a public ledger works, and about the risks that sit underneath a chart. It matches the short module already on the Atlas site: liquidity, custody, token categories, networks, stablecoins, and scams. It is not a recommendation to hold any asset. Definitions in brief are in the <a href="/glossary#blockchain">glossary</a>. Keys and scams are on the <a href="/security">security page</a>.</p>
+<section class="section" id="what-is-blockchain"><span id="blocks"></span><h2>A shared ledger</h2>
+<p>A blockchain is a list of blocks. Each block points at the one before it by a <strong>hash</strong>, a fingerprint of the data. Change one old transaction and its hash changes, so every later block would have to be rebuilt. Participants agree on the next block through a <strong>consensus</strong> rule. Agreement among nodes is not the same thing as truth about the world outside the chain. An oracle, a headline, or a reserve attestation can still be wrong.</p>
+<p>A <strong>node</strong> stores the ledger and checks that new blocks follow the rules. Some nodes produce blocks. Many only verify. A wallet that trusts someone else&#x27;s node is trusting that operator&#x27;s picture of the chain.</p>
+</section>
+<section class="section" id="transactions"><span id="mempool"></span><h2>Transactions</h2>
+<p>A transaction is a signed instruction: move value, or call a contract. The life of one transaction is create, sign, broadcast, wait in a mempool, get included in a block, then gather confirmations or finality.</p>
+<p><strong>Finality</strong> is the point after which reversing the transaction is impractical or impossible under the rules. Some chains offer probabilistic finality that strengthens as more blocks are built on top. Some offer a deterministic checkpoint. A transfer that is final cannot be recalled by a support desk.</p>
+<p>A failed transaction can still cost a fee. The network did the work of rejecting it. On account-based chains a <strong>nonce</strong> orders an address&#x27;s transactions so they cannot be replayed. A stuck nonce blocks the ones behind it.</p>
+</section>
+<section class="section" id="keys-briefly"><h2>Keys, briefly</h2>
+<p>The private key signs. The address receives. The seed phrase recreates the keys. That is the whole custody model of self-custody, and the whole reason a seed does not belong in a message. The longer version is on the <a href="/security">security page</a>. Leaving coins on a venue is the other model: the venue holds the keys, and you hold a claim on the venue.</p>
+</section>
+<section class="section" id="consensus"><span id="pow-pos"></span><h2>Consensus</h2>
+<p><strong>Proof of work</strong> spends computation. Miners search for a hash below a target. Rewriting recent history means redoing that work. Bitcoin uses this family of rule. Finality is probabilistic: more confirmations make a rewrite more expensive. They do not make the newest block instantly irreversible.</p>
+<p><strong>Proof of stake</strong> locks the native coin. Validators propose or attest, and some designs slash stake for defined failures. Ethereum and many newer chains use variants. Rewards, penalties, and unbonding delays are chain-specific. Staking is a duty with a lockup, not a coupon detached from the coin&#x27;s price.</p>
+<p>A <strong>reorg</strong> is a switch of the recent canonical chain. Transactions in the dropped blocks may return to the mempool. Waiting for more confirmations is the ordinary defence against a shallow reorg. A <strong>hard fork</strong> is a rule change that old software will not accept. If the network splits, coins on one side are not the same asset as coins on the other.</p>
+</section>
+<section class="section" id="coins-vs-tokens"><span id="token-categories"></span><span id="market-cap"></span><h2>Coins, tokens, and categories</h2>
+<p>A <strong>coin</strong>, in this library, is the native unit of a chain, used for fees and often for mining or staking. A <strong>token</strong> is issued by a contract on top of a chain. The chain can halt or fork, and the token&#x27;s contract can be wrong, even when the idea on the website is simple.</p>
+<p>Categories behave differently because their designs differ:</p>
+<ul><li><strong>Payment coins</strong> are built to be transferred. Throughput, fees, and finality are the operational questions.</li><li><strong>Smart-contract platforms</strong> sell blockspace for programs. The native coin pays for gas, and the programs carry their own bugs.</li><li><strong>Governance tokens</strong> may vote on parameters. Holding one is not control if a treasury, a multisig, or a low turnout decides the outcome.</li><li><strong>Stablecoins</strong> aim at a reference value. The design is either a claim on an issuer&#x27;s reserves, collateral locked on-chain, or another mechanism. A depeg is the reference and the market price coming apart.</li><li><strong>Utility and receipt tokens</strong> record a right inside one protocol: a pool share, a deposit, a staked claim. The right is only as good as that protocol.</li></ul>
+<p><strong>Wrapped assets</strong> represent something held elsewhere. The wrapper can fail while the underlying asset is fine.</p>
+<p>Supply words are easy to mix. <strong>Circulating supply</strong> is a provider&#x27;s estimate of what is in the market. <strong>Total supply</strong> includes coins that exist but are locked. <strong>Max supply</strong> is a ceiling, if the rules have one and if those rules cannot be changed. <strong>Market capitalisation</strong> is price times circulating supply. It is not cash in a treasury, and it is not the cost of buying every coin. <strong>Fully diluted valuation</strong> multiplies price by a full supply, imagining today&#x27;s price still holds when locked coins can move. That is an assumption.</p>
+</section>
+<section class="section" id="networks"><h2>Networks, fees, and scaling</h2>
+<p>The <strong>network</strong> is which ledger you are talking to. An address you use on one network is not automatically a safe destination on another. Confirm the network in the wallet before you sign.</p>
+<p><strong>Gas</strong> measures work. The fee is that work times a price. Congestion raises the price of the same transfer. A complicated contract call costs more than a simple send.</p>
+<p>A <strong>layer 1</strong> settles under its own consensus. A <strong>layer 2</strong>, often a rollup, executes elsewhere and posts data or proofs back to a base chain. An optimistic rollup allows a dispute window. A validity-proof rollup attaches a proof instead. A <strong>sequencer</strong> orders layer-2 transactions and can halt or censor for a time even when the base chain is fine. A <strong>bridge</strong> moves assets or messages across that seam. Bridges gather value and have been a common point of large losses. The seam is part of the risk, not a footnote.</p>
+</section>
+<section class="section" id="liquidity"><span id="halving"></span><h2>What the chart does not show</h2>
+<p>Market liquidity is depth and spread. A thin book turns a small order into a large price move. Custody decides who can move the coins. Token category decides which failure matters: an issuer, a contract, a vote, or a peg. Network choice decides the fee, the finality, and whether a transfer is even on the ledger you think it is. Stablecoins are useful settlement units and they carry issuer, collateral, and depeg risk. Scams and bad signatures matter because a blockchain transfer is often irreversible.</p>
+<p>If you remember one operating rule, make it this: name the asset, the contract, the chain, and who holds the keys, before you talk about the price.</p>
+</section></div></div>
+</main>
+<footer class="footer"><div><b>ATLAS — The Universal Trading Library</b><br/>One library. Every market. A smarter you.</div>
+<nav><a href="/library">Library</a><a href="/glossary">Glossary</a><a href="/tools">Tools</a><a href="/academy">Academy</a></nav>
+<nav aria-label="Legal" class="legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/contact">Contact</a></nav>
+<p class="footer-legal-line">General information only, not financial product advice. It doesn't consider your objectives, financial situation or needs. Crypto and leveraged trading are high risk; you can lose all your money. Market Pros Proprietary Limited (ABN 19 679 270 387) does not hold an AFSL.</p></footer>
+<button aria-label="Back to top" class="backtop" type="button">↑</button>
+<script src="/assets/atlas-config.js"></script>
+<script src="/assets/site.js"></script>
+
+</body>
+</html>

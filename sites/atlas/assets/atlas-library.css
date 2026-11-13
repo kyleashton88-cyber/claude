@@ -1,0 +1,61 @@
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+#introOpen[hidden]{display:none !important}
+.atlas-header-search{display:flex;align-items:center}
+.atlas-header-search input{width:9.2rem;height:42px;border:1px solid #1a4568;border-radius:12px;background:#061321;color:#eaf7ff;padding:0 12px}
+.atlas-header-search input:focus{outline:2px solid #52e4ff;outline-offset:2px}
+.atlas-general-warning{flex-basis:100%;margin:12px 0 0;color:#9eb4c6;font-size:.78rem;line-height:1.55;max-width:78ch}
+.footer{flex-wrap:wrap}
+.atlas-lesson{width:min(1100px,calc(100% - 36px));margin:8px auto 0;display:grid;grid-template-columns:220px minmax(0,1fr);gap:22px;align-items:start}
+.atlas-toc{position:sticky;top:88px;max-height:calc(100vh - 110px);overflow:auto;border-left:2px solid #163b5c;padding-left:12px}
+.atlas-toc a{display:block;color:#c5dced;text-decoration:none;padding:4px 0;font-size:.86rem}
+.atlas-lesson__body .section{width:auto;margin:0;padding:8px 0 18px}
+.atlas-lesson__body p,.atlas-lesson__body li{color:#c5d7e6;line-height:1.65}
+.atlas-lesson__body p{max-width:72ch}
+.atlas-lesson__body a{color:#8fe6ff}
+.atlas-lesson__body pre{overflow:auto;background:#061321;border:1px solid #184568;border-radius:12px;padding:12px;color:#d7f4ff}
+.atlas-note,.draft-banner{border:1px dashed #8a6a22;background:#241c0d;color:#ffe3a3;border-radius:12px;padding:12px 14px;max-width:72ch}
+.atlas-ph{margin:12px 0}
+.atlas-ph__box{min-height:140px;display:grid;align-content:center;gap:6px;padding:18px;border:1px dashed #3d6f90;border-radius:16px;background:#071422;color:#9fd4ea}
+.atlas-filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}
+.atlas-filters input,.atlas-filters select,.atlas-calc input,.atlas-calc select,.atlas-chart__bar select,.atlas-chart__toggles button{background:#061321;color:#eaf7ff;border:1px solid #1a4568;border-radius:10px;min-height:36px;padding:4px 8px}
+.atlas-letters{display:flex;flex-wrap:wrap;gap:4px;margin:8px 0 12px}
+.atlas-letter{min-width:34px;min-height:34px;border-radius:8px;border:1px solid #1a4568;background:#061321;color:#dff5ff}
+.atlas-letter.is-on,.atlas-chart__toggles button[aria-pressed="true"]{border-color:#52e4ff;background:#0d3a55}
+.term{border-top:1px solid #163b5c;padding:14px 0}
+.term h2{margin:0 0 4px;font-size:1.3rem}
+.term .def{color:#fff;margin:0 0 6px}
+.term .meta{color:#7f9cb3;font-size:.78rem}
+.atlas-chart{margin:12px 0 18px}
+.atlas-chart__bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.atlas-chart__toggles{display:flex;flex-wrap:wrap;gap:6px}
+.atlas-chart__stage{height:360px;border:1px solid #184568;border-radius:16px;overflow:hidden}
+.atlas-chart__pane{height:140px;margin-top:8px;border:1px solid #184568;border-radius:16px;overflow:hidden}
+.atlas-chart__pane[hidden]{display:none}
+.atlas-chart__status{color:#8fb4cc;font-size:.78rem}
+.atlas-chart__status.is-sample{display:inline-block;padding:4px 8px;border-radius:999px;background:#382b12;color:#ffd06f}
+.atlas-svg{width:min(720px,100%);background:#071422;border:1px solid #184568;border-radius:16px;margin:12px 0}
+.book{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.book ol{list-style:none;margin:0;padding:0}
+.book li{display:grid;grid-template-columns:1fr auto;gap:8px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.78rem;padding:3px 0;border-bottom:1px solid #123044}
+.book .bid{color:#55e7c1}.book .ask{color:#ff8d98}
+.atlas-calc .fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.atlas-calc label{display:grid;gap:4px;color:#b7cde0;font-size:.82rem}
+.atlas-related{width:min(1100px,calc(100% - 36px));margin:8px auto 18px}
+.atlas-chips{display:flex;flex-wrap:wrap;gap:8px}
+.atlas-chips a{border:1px solid #1a4568;border-radius:999px;padding:6px 10px;text-decoration:none;color:#d7f4ff}
+.search-hit{display:block;padding:12px 0;border-top:1px solid #163b5c;color:inherit;text-decoration:none}
+.search-hit b{display:block;color:#fff}
+.search-hit span{color:#8fb4cc;font-size:.82rem}
+.q-list{display:grid;gap:8px}
+.q-list a{color:#d7f4ff;text-decoration:none}
+.intro-inline{max-width:640px}
+.intro-inline ul{color:#c5d7e6}
+.intro-poster{width:min(100%,640px);height:180px;border-radius:12px;background:radial-gradient(circle at 50% 42%,rgba(82,228,255,.55),rgba(20,90,150,.15) 28%,transparent 46%),linear-gradient(180deg,#0b3250,#020713)}
+.library-views{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+@media(max-width:980px){
+  .atlas-header-search,.atlas-header-search input{width:100%}
+  .atlas-lesson{grid-template-columns:1fr;width:min(1100px,calc(100% - 28px))}
+  .atlas-toc{position:static;max-height:none}
+  .atlas-calc .fields,.book{grid-template-columns:1fr}
+  .atlas-chart__stage{height:280px}
+}

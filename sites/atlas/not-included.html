@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
 <meta name="description" content="This ATLAS address is linked from the site, but the page was not included in this build."/>
 <link href="/assets/site.css" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/atlas-library.css"/>
 </head>
 <body class="atlas-unified">
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -52,7 +53,7 @@
       </ul>
       <div class="atlas-unified-actions">
         <div class="atlas-global-progress" aria-label="Learning progress"><span>Progress</span><strong data-global-progress>0%</strong></div>
-        <a class="atlas-search-button" href="/search" aria-label="Search ATLAS">⌕</a>
+        <form class="atlas-header-search" action="/search" method="get" role="search"><label class="visually-hidden" for="atlasHeaderSearch6">Search the library</label><input id="atlasHeaderSearch6" name="q" type="search" placeholder="Search" autocomplete="off" data-atlas-search-input></form><a class="atlas-search-button" href="/search" aria-label="Search ATLAS">⌕</a>
         <a class="atlas-start-learning" href="/learning-path">Start Learning</a>
       </div>
     </nav>
@@ -68,26 +69,14 @@
 <section class="section">
   <h2>Linked, and not included</h2>
   <ul class="notice-list">
-    <li><code>/markets/sol</code><span>Solana market page</span></li>
-<li><code>/markets/link</code><span>Chainlink market page</span></li>
+    <li><code>/markets/link</code><span>Chainlink market page</span></li>
 <li><code>/markets/sui</code><span>Sui market page</span></li>
 <li><code>/markets/ltc</code><span>Litecoin market page</span></li>
 <li><code>/markets/hbar</code><span>Hedera market page</span></li>
-<li><code>/academy/ta</code><span>Technical Analysis</span></li>
-<li><code>/technical-analysis</code><span>Technical Analysis</span></li>
-<li><code>/academy/structure</code><span>Market Structure</span></li>
-<li><code>/market-structure</code><span>Market Structure</span></li>
-<li><code>/academy/risk</code><span>Risk Management</span></li>
-<li><code>/risk-academy</code><span>Risk Academy</span></li>
 <li><code>/library/module-2</code><span>Market Strategies</span></li>
 <li><code>/market-strategies</code><span>Market Strategies</span></li>
-<li><code>/tools</code><span>Tools index</span></li>
-<li><code>/tools/risk-calc</code><span>Risk / position-size calculator</span></li>
 <li><code>/tools/replay-lab</code><span>Replay Lab</span></li>
 <li><code>/replay-lab</code><span>Replay Lab</span></li>
-<li><code>/search</code><span>Library search</span></li>
-<li><code>/privacy</code><span>Privacy policy</span></li>
-<li><code>/terms</code><span>Terms of use</span></li>
 <li><code>/psychology</code><span>Trading Psychology</span></li>
 <li><code>/portfolio-lab</code><span>Portfolio & Capital</span></li>
 <li><code>/quant-lab</code><span>Quant & Data Lab</span></li>
@@ -97,7 +86,7 @@
 </section>
 <section class="section" id="indicators">
   <h2>Indicators, candles, and liquidity</h2>
-  <p id="candles">Links to <code>/technical-analysis#indicators</code>, <code>/market-structure#candles</code>, and <code>/market-structure#liquidity</code> land here because those modules were not in the upload.</p>
+  <p>Market structure, technical analysis, and the risk academy now have their own pages. This list is only what is still not in the build.</p>
   <p id="liquidity">Bitcoin, Ethereum, and BNB have market pages. Grid Bot Builder and DeFi &amp; On-Chain are the long modules in this build.</p>
 </section>
 <section class="section">
@@ -125,5 +114,6 @@
 </main>
 <footer class="footer"><div><b>ATLAS — The Universal Trading Library</b><br/>Knowledge builds better trades.</div><nav><a href="/">Home</a><a href="/library">Library</a><a href="/academy">Academy</a><a href="/learning-path">Learning Path</a><a href="/grid-bot">Grid Bot Builder</a><a href="/about">About</a><a href="/contact">Contact</a></nav><p class="footer-legal-line">General information only, not financial product advice. It doesn't consider your objectives, financial situation or needs. Crypto and leveraged trading are high risk; you can lose all your money. Market Pros Proprietary Limited (ABN 19 679 270 387) does not hold an AFSL.</p><nav aria-label="Legal" class="legal"><a href="/terms">Terms</a> · <a href="/privacy">Privacy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="mailto:contact@stewartcrowncrypto.com">contact@stewartcrowncrypto.com</a></nav></footer>
 <script src="/assets/site.js"></script>
+<script src="/assets/atlas-config.js"></script>
 </body>
 </html>

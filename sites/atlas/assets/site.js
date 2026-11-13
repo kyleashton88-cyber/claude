@@ -5,32 +5,16 @@
   window.__atlasBoot = true;
 
   var MISSING = {
-    "/markets/sol": "Solana market page",
     "/markets/link": "Chainlink market page",
     "/markets/sui": "Sui market page",
     "/markets/ltc": "Litecoin market page",
     "/markets/hbar": "Hedera market page",
-    "/market-sol": "Solana market page",
     "/market-link": "Chainlink market page",
     "/market-sui": "Sui market page",
     "/market-ltc": "Litecoin market page",
     "/market-hbar": "Hedera market page",
-    "/academy/ta": "Technical Analysis module",
-    "/academy/structure": "Market Structure module",
-    "/academy/risk": "Risk Management module",
-    "/academy/02-technical-analysis": "Technical Analysis module",
-    "/academy/03-market-structure": "Market Structure module",
-    "/academy/04-risk-management": "Risk Management module",
-    "/technical-analysis": "Technical Analysis module",
-    "/market-structure": "Market Structure module",
-    "/risk-academy": "Risk Academy",
-    "/tools": "Tools index",
-    "/tools/risk-calc": "Risk / position-size calculator",
     "/tools/replay-lab": "Replay Lab",
     "/replay-lab": "Replay Lab",
-    "/search": "Library search",
-    "/privacy": "Privacy policy",
-    "/terms": "Terms of use",
     "/library/module-2": "Market Strategies module",
     "/library/02-market-strategies": "Market Strategies module",
     "/market-strategies": "Market Strategies module",
@@ -333,6 +317,24 @@
     draw();
   });
 
+  document.querySelectorAll("[data-atlas-email]").forEach(function (el) {
+    var email = window.ATLAS_SUPPORT_EMAIL || "";
+    if (!email || el.tagName !== "A") return;
+    el.href = "mailto:" + email;
+    var slot = el.querySelector("[data-atlas-email-text]");
+    if (slot) slot.textContent = email;
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "/" || e.ctrlKey || e.metaKey || e.altKey) return;
+    var tag = e.target && e.target.tagName ? e.target.tagName.toLowerCase() : "";
+    if (tag === "input" || tag === "textarea" || tag === "select" || (e.target && e.target.isContentEditable)) return;
+    var input = document.querySelector("[data-atlas-search-input]");
+    if (!input) return;
+    var nav = document.querySelector("[data-primary-nav], [data-grid-primary-nav]");
+    if (nav && window.matchMedia("(max-width: 980px)").matches) nav.classList.add("is-open");
+    e.preventDefault();
+    input.focus();
+  });
   var notice = document.getElementById("notice-current");
   if (notice) {
     var here = (location.pathname.replace(/\/$/, "") || "/");

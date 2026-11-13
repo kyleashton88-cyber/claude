@@ -129,6 +129,7 @@ html,body{max-width:100%;overflow-x:clip}
   <link rel="stylesheet" href="/assets/atlas-layout-hardening.css">
   <link rel="stylesheet" href="/assets/atlas-deep-layout-fixes.css">
   <link rel="stylesheet" href="/assets/atlas-quality-fixes.css">
+<link rel="stylesheet" href="/assets/atlas-library.css"/>
 </head>
 <body class="atlas-unified home-page">
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -170,7 +171,7 @@ html,body{max-width:100%;overflow-x:clip}
       </ul>
       <div class="atlas-unified-actions">
         <div class="atlas-global-progress" aria-label="Learning progress"><span>Progress</span><strong data-global-progress>0%</strong></div>
-        <a class="atlas-search-button" href="/search" aria-label="Search ATLAS">⌕</a>
+        <form class="atlas-header-search" action="/search" method="get" role="search"><label class="visually-hidden" for="atlasHeaderSearch19">Search the library</label><input id="atlasHeaderSearch19" name="q" type="search" placeholder="Search" autocomplete="off" data-atlas-search-input></form><a class="atlas-search-button" href="/search" aria-label="Search ATLAS">⌕</a>
         <a class="atlas-start-learning" href="/learning-path">Start Learning</a>
       </div>
     </nav>
@@ -179,7 +180,14 @@ html,body{max-width:100%;overflow-x:clip}
 <section class="hero">
 <div aria-hidden="true" class="hero-bg"></div>
 <div class="wrap hero-grid">
-<div class="hero-copy"><span class="pill">KNOWLEDGE BUILDS BETTER TRADES</span><h1>ATLAS</h1><h2>One Library. Every Market. A Smarter You.</h2><p>In-depth, step-by-step education, real market examples, interactive tools and clear strategy frameworks — designed to take you from beginner to advanced across any market.</p><div class="actions"><a class="btn primary" href="/library">Explore the Library →</a><button aria-controls="introModal" aria-haspopup="dialog" class="btn secondary" id="introOpen" type="button">▶ Watch Introduction · 2 min</button></div><div class="quick"><a href="/learning-path"><b>▣ Learn</b><span>Step-by-step education</span></a><a href="/library/01-grid-bot-builder"><b>▰ Apply</b><span>Real strategies and examples</span></a><a href="/tools"><b>⚙ Build</b><span>Interactive tools &amp; simulators</span></a><a href="/community"><b>◎ Grow</b><span>With a global community</span></a></div></div>
+<div class="hero-copy"><span class="pill">KNOWLEDGE BUILDS BETTER TRADES</span><h1>ATLAS</h1><h2>One Library. Every Market. A Smarter You.</h2><p>In-depth, step-by-step education, real market examples, interactive tools and clear strategy frameworks — designed to take you from beginner to advanced across any market.</p><div class="actions"><a class="btn primary" href="/library">Explore the Library →</a><button aria-controls="introModal" aria-haspopup="dialog" class="btn secondary" id="introOpen" type="button" hidden style="display:none">Watch introduction</button>
+<div class="intro-inline" id="introInline"><p><strong>A short orientation.</strong> The video file is not on this site yet.</p><ul>
+<li>ATLAS is one library for every market you study.</li>
+<li>Lessons move from what something is, to how to see it, to how to practise it.</li>
+<li>Charts here are for study. They are not orders.</li>
+<li>Worked numbers are hypothetical unless a public data feed is named.</li>
+<li>Stewart's line for the library: one library, every market, a smarter you.</li>
+</ul></div></div><div class="quick"><a href="/learning-path"><b>▣ Learn</b><span>Step-by-step education</span></a><a href="/library/01-grid-bot-builder"><b>▰ Apply</b><span>Real strategies and examples</span></a><a href="/tools"><b>⚙ Build</b><span>Interactive tools &amp; simulators</span></a><a href="/community"><b>◎ Grow</b><span>With a global community</span></a></div></div>
 <div aria-label="Glowing digital globe rising from an open trading knowledge book against a dark mountain market background" class="hero-art" role="img"><div class="globe"></div><div class="candles" id="heroCandles"></div></div>
 </div></section>
 <section class="wrap market-snapshot" id="live-markets"><div class="snapshot-head"><div><div class="kicker">Live market overview</div><h2>Markets in motion.</h2><p>Four live market snapshots track LINK, SUI, LTC and HBAR with continuously refreshed prices and one-hour candlesticks.</p></div><div aria-live="polite" class="snapshot-status" id="snapshotStatus" data-state="live"><i></i><span><span class="feed-state" data-feed-state="connecting" role="status" aria-live="polite"><span class="feed-state__dot" aria-hidden="true"></span><span data-feed-label>CONNECTING</span> <span data-feed-age></span></span></span></div></div><div class="home-market-grid" id="homeMarketGrid"></div></section>
@@ -238,7 +246,7 @@ html,body{max-width:100%;overflow-x:clip}
   <a class="atlas-start-learning" data-resume-link>Resume learning →</a>
 </section>
 <footer class="wrap footer"><a class="brand" href="/"><div><div class="brandmark">ATLAS</div><small>THE UNIVERSAL TRADING LIBRARY</small></div></a><nav><a href="/">Home</a><a href="/library">Library</a><a href="/learning-path">Learning Path</a><a href="/tools">Tools</a><a href="/community">Community</a><a href="/about">About</a></nav><div>Knowledge Builds Better Trades.</div><p class="footer-legal-line">General information only, not financial product advice. It doesn't consider your objectives, financial situation or needs. Crypto and leveraged trading are high risk; you can lose all your money. Market Pros Proprietary Limited (ABN 19 679 270 387) does not hold an AFSL.</p><nav aria-label="Legal" class="legal"><a href="/terms">Terms</a> · <a href="/privacy">Privacy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="mailto:contact@stewartcrowncrypto.com">contact@stewartcrowncrypto.com</a></nav></footer>
-<div aria-hidden="true" aria-labelledby="introTitle" aria-modal="true" class="intro-modal" id="introModal" role="dialog"><div class="intro-dialog" role="document"><div class="intro-head"><h2 id="introTitle">ATLAS Introduction</h2><button aria-label="Close introduction" class="intro-close" id="introClose" type="button">✕</button></div><div class="intro-video"><video id="introVideo" controls playsinline preload="metadata" aria-label="ATLAS two-minute introduction"></video><div class="intro-video-empty" id="introVideoEmpty"><svg aria-hidden="true" viewBox="0 0 100 100"><circle cx="50" cy="50" fill="none" r="42" stroke="#52e4ff" stroke-width="2"></circle><path d="M42 33 70 50 42 67Z" fill="#52e4ff"></path></svg><span>ATLAS introduction</span></div></div><div class="intro-copy"><strong>Welcome to ATLAS.</strong><p></p></div></div></div>
+<div aria-hidden="true" aria-labelledby="introTitle" aria-modal="true" class="intro-modal" id="introModal" role="dialog"><div class="intro-dialog" role="document"><div class="intro-head"><h2 id="introTitle">ATLAS Introduction</h2><button aria-label="Close introduction" class="intro-close" id="introClose" type="button">✕</button></div><div class="intro-video"><video id="introVideo" data-src="" controls playsinline preload="none" aria-label="ATLAS introduction"></video><div class="intro-video-empty" id="introVideoEmpty"><svg aria-hidden="true" viewBox="0 0 100 100"><circle cx="50" cy="50" fill="none" r="42" stroke="#52e4ff" stroke-width="2"></circle><path d="M42 33 70 50 42 67Z" fill="#52e4ff"></path></svg><span>ATLAS introduction</span></div></div><div class="intro-copy"><strong>Welcome to ATLAS.</strong><ul><li>One library, every market.</li><li>Learn the mechanism before the tool.</li><li>Charts are for study, not tickets.</li><li>Examples are hypothetical unless a feed is named.</li><li>A smarter you is the aim. A promised result is not.</li></ul></div></div></div>
 <button aria-label="Back to top" class="backtop" type="button">↑</button><script>
 (()=>{
 const markets=[
@@ -287,7 +295,10 @@ render();setInterval(updatePrices,60000);
 })();
 
 (()=>{
- const modal=document.getElementById('introModal'),open=document.getElementById('introOpen'),close=document.getElementById('introClose'),video=document.getElementById('introVideo'),videoWrap=modal?.querySelector('.intro-video');if(!modal||!open||!close)return;let lastFocus=null;const source=video?.querySelector('source');if(source?.getAttribute('src'))videoWrap?.classList.add('has-source');
+ const modal=document.getElementById('introModal'),open=document.getElementById('introOpen'),close=document.getElementById('introClose'),video=document.getElementById('introVideo'),videoWrap=modal?.querySelector('.intro-video');if(!modal||!open||!close)return;let lastFocus=null;const inline=document.getElementById('introInline');
+ const configured=(video?.getAttribute('data-src')||video?.getAttribute('src')||video?.querySelector('source')?.getAttribute('src')||'').trim();
+ if(configured){if(!video.getAttribute('src'))video.src=configured;videoWrap?.classList.add('has-source');open.hidden=false;open.style.display='';if(inline)inline.hidden=true;}
+ else{open.hidden=true;if(inline)inline.hidden=false;}
  const focusables=()=>[...modal.querySelectorAll('button,a[href],[tabindex]:not([tabindex="-1"])')].filter(el=>!el.disabled);
  function show(){lastFocus=document.activeElement;modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus()}
  function hide(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';video?.pause();if(lastFocus)lastFocus.focus()}
@@ -296,4 +307,5 @@ render();setInterval(updatePrices,60000);
 })();;
 </script><script defer="" src="/assets/atlas-shell.js"></script><script defer="" src="/assets/home-news.js"></script>  <script src="/assets/atlas-production.js"></script>
   <script src="/assets/atlas-completed.js"></script>
+<script src="/assets/atlas-config.js"></script>
 </body></html>
