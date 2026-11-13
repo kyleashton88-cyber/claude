@@ -68,63 +68,10 @@ Each line below only restates the lesson or a basic dictionary meaning. Definiti
 ### bp-11-advanced-liquidation
 
 - Beat 1: Opt-in means you choose to take it.
-- Beat 1: The spot lessons already stand without it.
-- Beat 1: Leveraged means borrowed size was added.
+- Beat 1: Leveraged means borrowed size.
 - Beat 1: Margin is the money set aside for that position.
-- Beat 1: The venue is the place that holds the position.
-- Beat 1: Point at the part that belongs to Hook.
-- Beat 1: If you cannot point yet, stay on this frame.
-- Beat 3: This one is opt-in.
-- Beat 3: Liquidation means the venue closes a leveraged position when the margin is gone.
-- Beat 4: Mark the page Example.
-- Beat 4: Point at the part that belongs to Spot is complete.
-- Beat 4: If you cannot point yet, stay on this frame.
-- Beat 5: It is not a fee you pay to stay in the position.
-- Beat 5: Mark the page Example.
-- Beat 5: Point at the part that belongs to What liquidation means.
-- Beat 5: If you cannot point yet, stay on this frame.
-- Beat 6: Mark the page Example.
-- Beat 6: Point at the part that belongs to Losing path.
-- Beat 6: If you cannot point yet, stay on this frame.
-- Beat 7: Mark the page Example.
-- Beat 7: Point at the part that belongs to Isolated.
-- Beat 7: If you cannot point yet, stay on this frame.
-- Beat 8: Mark the page Example.
-- Beat 8: Point at the part that belongs to Cross.
-- Beat 8: If you cannot point yet, stay on this frame.
-- Beat 9: Mark the page Example.
-- Beat 9: Point at the part that belongs to No multiple.
-- Beat 9: If you cannot point yet, stay on this frame.
-- Beat 10: Funding is a payment that moves between the two sides of a contract.
-- Beat 10: It is separate from the price move.
-- Beat 10: Mark the page Example.
-- Beat 10: Point at the part that belongs to Funding.
-- Beat 10: If you cannot point yet, stay on this frame.
-- Beat 11: Mark the page Example.
-- Beat 11: Point at the part that belongs to What was deleted.
-- Beat 11: If you cannot point yet, stay on this frame.
-- Beat 12: Mark the page Example.
-- Beat 12: Point at the part that belongs to Flags.
-- Beat 12: If you cannot point yet, stay on this frame.
-- Beat 13: Mark the page Example.
-- Beat 13: This lesson is not a venue, and it is not affiliated with one.
-- Beat 13: Point at the part that belongs to Not a venue guide.
-- Beat 13: If you cannot point yet, stay on this frame.
-- Beat 14: Mark the page Example.
-- Beat 14: Point at the part that belongs to The sentence.
-- Beat 14: If you cannot point yet, stay on this frame.
-- Beat 15: Mark the page Example.
-- Beat 15: Point at the part that belongs to Recap.
-- Beat 15: If you cannot point yet, stay on this frame.
-- Beat 16: Cover the notes, and say this from memory: The paper spot path is already complete without this lesson.
-- Beat 16: The answer names a shape on the page.
-- Beat 17: Cover the notes, and say this from memory: Liquidation here means the venue closes the position because the margin no longer covers the loss on the example.
-- Beat 17: The answer names a shape on the page.
-- Beat 18: Cover the notes, and say this from memory: Draw price leaving the band and not returning, and then draw the position closed.
-- Beat 18: The answer names a shape on the page.
-- Beat 19: Mark the page Example.
-- Beat 19: Point at the part that belongs to If you skip.
-- Beat 19: If you cannot point yet, stay on this frame.
+- Beat 1: The venue is the place where the position sits.
+- Beat 10: Funding is that payment between the sides.
 
 ## bp-04-market-regimes
 
@@ -972,33 +919,17 @@ Change 1:
 Change 1:
 
 - After: Opt-in means you choose to take it.
-- After: The spot lessons already stand without it.
 
 Change 2:
 
-- After: Leveraged means borrowed size was added.
+- After: Leveraged means borrowed size.
 - After: Margin is the money set aside for that position.
-- After: The venue is the place that holds the position.
+- After: The venue is the place where the position sits.
 
 Change 3:
 
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 4:
-
-- Before: Say the opening line once more, and point at the part that belongs to Hook.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Hook.
-- After: If you cannot point yet, stay on this frame.
-
-### Beat 3 (intro, Title card)
-
-Change 1:
-
-- After: This one is opt-in.
-- After: Liquidation means the venue closes a leveraged position when the margin is gone.
 
 ### Beat 4 (body, Spot is complete)
 
@@ -1007,43 +938,12 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Spot is complete.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Spot is complete.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 5 (body, What liquidation means)
 
 Change 1:
 
-- Before: It is not a fee you pay to stay.
-- After: It is not a fee you pay to stay in the position.
-
-Change 2:
-
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 3:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 4:
-
-- Before: Say the opening line once more, and point at the part that belongs to What liquidation means.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to What liquidation means.
-- After: If you cannot point yet, stay on this frame.
 
 ### Beat 6 (diagram, Losing path)
 
@@ -1052,38 +952,12 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Losing path.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Losing path.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 7 (body, Isolated)
 
 Change 1:
 
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Isolated.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Isolated.
-- After: If you cannot point yet, stay on this frame.
 
 ### Beat 8 (body, Cross)
 
@@ -1092,19 +966,6 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Cross.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Cross.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 9 (body, No multiple)
 
 Change 1:
@@ -1112,43 +973,16 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to No multiple.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to No multiple.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 10 (body, Funding)
 
 Change 1:
 
-- After: Funding is a payment that moves between the two sides of a contract.
-- After: It is separate from the price move.
+- After: Funding is that payment between the sides.
 
 Change 2:
 
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 3:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 4:
-
-- Before: Say the opening line once more, and point at the part that belongs to Funding.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Funding.
-- After: If you cannot point yet, stay on this frame.
 
 ### Beat 11 (body, What was deleted)
 
@@ -1157,38 +991,12 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to What was deleted.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to What was deleted.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 12 (body, Flags)
 
 Change 1:
 
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Flags.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Flags.
-- After: If you cannot point yet, stay on this frame.
 
 ### Beat 13 (body, Not a venue guide)
 
@@ -1197,37 +1005,12 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- Before: We do not operate a venue and we are not affiliated with one.
-- Before: Say the opening line once more, and point at the part that belongs to Not a venue guide.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Mark the page Example.
-- After: This lesson is not a venue, and it is not affiliated with one.
-- After: Point at the part that belongs to Not a venue guide.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 14 (action, The sentence)
 
 Change 1:
 
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to The sentence.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to The sentence.
-- After: If you cannot point yet, stay on this frame.
 
 ### Beat 15 (recap, Recap)
 
@@ -1236,71 +1019,9 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Recap.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Recap.
-- After: If you cannot point yet, stay on this frame.
-
-### Beat 16 (demo, Your turn)
-
-Change 1:
-
-- Before: Cover the notes and say this from memory: The paper spot path is already complete without this lesson.
-- After: Cover the notes, and say this from memory: The paper spot path is already complete without this lesson.
-
-Change 2:
-
-- Before: The answer has to name a shape on the page.
-- After: The answer names a shape on the page.
-
-### Beat 17 (demo, Your turn)
-
-Change 1:
-
-- Before: Cover the notes and say this from memory: Liquidation here means the venue closes the position because the margin no longer covers the loss on the example.
-- After: Cover the notes, and say this from memory: Liquidation here means the venue closes the position because the margin no longer covers the loss on the example.
-
-Change 2:
-
-- Before: The answer has to name a shape on the page.
-- After: The answer names a shape on the page.
-
-### Beat 18 (demo, Your turn)
-
-Change 1:
-
-- Before: Cover the notes and say this from memory: Draw price leaving the band and not returning, and then draw the position closed.
-- After: Cover the notes, and say this from memory: Draw price leaving the band and not returning, and then draw the position closed.
-
-Change 2:
-
-- Before: The answer has to name a shape on the page.
-- After: The answer names a shape on the page.
-
 ### Beat 19 (body, If you skip)
 
 Change 1:
 
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to If you skip.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to If you skip.
-- After: If you cannot point yet, stay on this frame.
