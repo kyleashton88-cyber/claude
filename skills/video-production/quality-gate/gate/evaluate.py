@@ -28,6 +28,12 @@ SUPERSEDES = (
 )
 
 
+def _length_window(profile: Profile) -> str:
+    if profile.max_seconds is None:
+        return f"{profile.min_seconds:.0f}s minimum, no upper limit"
+    return f"{profile.min_seconds:.0f}s–{profile.max_seconds:.0f}s"
+
+
 def _check(name: str, problems: list[str], *, ok_detail: str) -> dict:
     if problems:
         return {"id": name, "result": "fail", "detail": " ".join(problems)}
@@ -50,17 +56,14 @@ def evaluate(
 
     info = media_info(master)
     duration = float(info["duration"])
+    window = _length_window(profile)
     if length_ok(duration, profile):
-        length_detail = (
-            f"{duration:.1f}s is inside {profile.label} "
-            f"({profile.min_seconds:.0f}s–{profile.max_seconds:.0f}s)"
-        )
+        length_detail = f"{duration:.1f}s is inside {profile.label} ({window})"
         length_problems: list[str] = []
     else:
         length_detail = ""
         length_problems = [
-            f"{duration:.1f}s is outside {profile.label} "
-            f"({profile.min_seconds:.0f}s–{profile.max_seconds:.0f}s). "
+            f"{duration:.1f}s is outside {profile.label} ({window}). "
             "Length follows the format profile. There is no 15-minute floor."
         ]
     checks.append(_check("length", length_problems, ok_detail=length_detail))
@@ -271,6 +274,7 @@ def _payload(master: Path, profile: Profile, checks: list[dict]) -> dict:
         "format": profile.name,
         "format_label": profile.label,
         "length_window_seconds": [profile.min_seconds, profile.max_seconds],
+        "length_rule": _length_window(profile),
         "loudness_target_lufs": LOUDNESS_TARGET,
         "loudness_tolerance_lu": LOUDNESS_TOLERANCE,
         "true_peak_max_dbtp": TRUE_PEAK_MAX,

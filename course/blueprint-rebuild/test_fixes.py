@@ -39,13 +39,13 @@ DISCLAIMER = (
 
 
 class PipelineTests(unittest.TestCase):
-    def test_length_window_is_six_to_ten_minutes(self):
+    def test_length_window_is_six_minutes_and_up(self):
         profile = PROFILES["blueprint"]
         self.assertEqual(profile.min_seconds, 360)
-        self.assertEqual(profile.max_seconds, 600)
+        self.assertIsNone(profile.max_seconds)
         self.assertTrue(length_ok(6 * 60 + 15, profile))
+        self.assertTrue(length_ok(12 * 60, profile))
         self.assertFalse(length_ok(5 * 60, profile))
-        self.assertFalse(length_ok(11 * 60, profile))
 
     def test_fps_and_loudness_owner(self):
         self.assertEqual(studio.FPS, 30)

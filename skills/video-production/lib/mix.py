@@ -42,8 +42,23 @@ def true_peak_limiter(ceiling: float = MIX_TRUE_PEAK_DBTP) -> str:
     )
 
 
-def duck_under_voice(music: Path, voice: Path, dest: Path) -> Path:
-    """Place `music` about 20 dB under `voice`, then duck it while the voice speaks."""
+def duck_under_voice(
+    music: Path,
+    voice: Path,
+    dest: Path,
+    *,
+    bed_db: float = BED_UNDER_VOICE_DB,
+    attack_ms: float = 20,
+    release_ms: float = 320,
+    ratio: float = 10,
+    threshold: float = 0.015,
+) -> Path:
+    """Loudness-normalise both stems, then duck the bed under the voice.
+
+    The limiter is the last stage, after loudness normalisation, and it adds
+    no makeup gain. `bed_db` is the level in the gaps. Ducking only dips the
+    bed while the voice is speaking.
+    """
     dest.parent.mkdir(parents=True, exist_ok=True)
     work = dest.parent / "_duck"
     work.mkdir(parents=True, exist_ok=True)
@@ -57,9 +72,10 @@ def duck_under_voice(music: Path, voice: Path, dest: Path) -> Path:
             ffmpeg_bin(), "-y", "-hide_banner",
             "-i", str(bed_m), "-i", str(voice_m),
             "-filter_complex",
-            f"[0:a]volume={BED_UNDER_VOICE_DB}dB,aresample=48000,aformat=channel_layouts=stereo[mus];"
+            f"[0:a]volume={bed_db}dB,aresample=48000,aformat=channel_layouts=stereo[mus];"
             f"[1:a]aresample=48000,aformat=channel_layouts=stereo,apad=whole_dur={seconds:.3f},asplit=2[vo][key];"
-            "[mus][key]sidechaincompress=threshold=0.015:ratio=10:attack=20:release=320:makeup=1[duck];"
+            f"[mus][key]sidechaincompress=threshold={threshold}:ratio={ratio}:"
+            f"attack={attack_ms}:release={release_ms}:makeup=1[duck];"
             f"[vo][duck]amix=inputs=2:duration=longest:normalize=0,{true_peak_limiter()}[a]",
             "-map", "[a]",
             "-ar", "48000", "-ac", "2", "-c:a", "pcm_s16le",

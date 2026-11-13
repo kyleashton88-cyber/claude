@@ -29,7 +29,7 @@ def render_markdown(payload: dict) -> str:
         f"Result: **{payload['result'].upper()}**",
         "",
         f"Format: {payload.get('format_label')} (`{payload.get('format')}`), "
-        f"{_seconds(window[0])}–{_seconds(window[1])}.",
+        f"{payload.get('length_rule') or (_seconds(window[0]) + '–' + _seconds(window[1]))}.",
         f"Master: `{payload.get('master')}`",
         "",
         "Loudness fails the gate when it is outside the window. It is not only printed.",
@@ -44,7 +44,7 @@ def render_markdown(payload: dict) -> str:
     lines.extend(
         [
             "",
-            "A Blueprint lesson of 6:15 is inside the 4–10 minute window.",
+            "Blueprint lessons keep the 6-minute minimum. The 10-minute upper cap is removed.",
             "",
             "| Check | Result | Detail |",
             "|---|---|---|",

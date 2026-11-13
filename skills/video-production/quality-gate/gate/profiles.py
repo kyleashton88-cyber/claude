@@ -14,7 +14,7 @@ class Profile:
     name: str
     label: str
     min_seconds: float
-    max_seconds: float
+    max_seconds: float | None
     width: int
     height: int
     fps: float = 30.0
@@ -34,7 +34,7 @@ PROFILES: dict[str, Profile] = {
         "blueprint",
         "Blueprint lesson",
         min_seconds=6 * 60,
-        max_seconds=10 * 60,
+        max_seconds=None,
         width=1920,
         height=1080,
     ),
@@ -105,7 +105,12 @@ def get_profile(name: str, **overrides) -> Profile:
 
 
 def length_ok(duration: float, profile: Profile) -> bool:
-    return profile.min_seconds <= duration <= profile.max_seconds
+    if duration < profile.min_seconds:
+        return False
+    # None means the format has no upper length limit.
+    if profile.max_seconds is None:
+        return True
+    return duration <= profile.max_seconds
 
 
 # YouTube integrated-loudness target. The older music bed still aims at -16.

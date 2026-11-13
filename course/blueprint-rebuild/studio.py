@@ -412,7 +412,11 @@ def plan(sid: str) -> list[dict]:
 # The old estimate used 2.55 words/second and said BP-01 was 7.2 minutes.
 # Real Kokoro af_heart, with its sentence gaps, was 617.7s (101 words a minute).
 # After the gap tighten, the same words are 0.584s each at speed 1.0.
-SPEECH_RATE = 1.05
+# Kokoro af_heart speed 1.0 for every line. Moods no longer scale the pace.
+SPEECH_RATE = 1.0
+SENTENCE_GAP = 0.52
+BEAT_GAP = 1.05
+JOIN_FADE = 0.030
 SECONDS_PER_WORD = 610.085 / 1045
 
 
@@ -434,8 +438,8 @@ def background(local: float) -> Image.Image:
     base += glow[..., None] * np.array([14, 28, 48], np.float32)
     img = Image.fromarray(np.clip(base, 0, 255).astype(np.uint8), "RGB")
     draw = ImageDraw.Draw(img)
-    shift = int(local * 16) % 64
-    grid = (18, 36, 58)
+    shift = int(local * 40) % 64
+    grid = (32, 64, 96)
     for x in range(-64 + shift, W, 64):
         draw.line([(x, 0), (x, H)], fill=grid, width=1)
     for y in range(shift, H, 64):
@@ -659,9 +663,11 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
     pinned = playhead_index(shot, local, dur)
     ymd = series[pinned]["date"].split("-")
     tag = f"{int(ymd[2])} {months[int(ymd[1])]}  {int(round(series[pinned]['close'])):,}"
-    face = font(32)
+    # Walk charts put the close in a small tag. 46px keeps a 9 from being read as a 0.
+    tag_px = 46 if chapter in {"Walk the summer", "Copy the path", "Where the path stood"} else 32
+    face = font(tag_px)
     tw = int(face.getlength(tag)) + 28
-    th = 44
+    th = 64 if tag_px > 32 else 44
     plot = (box[0] + 28, plot_top, min(box[2] - 280, 1520), box[3] - 36)
     gutter_x = 1600
     closes = [float(r["close"]) for r in series]
@@ -728,7 +734,7 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
         if chapter == "The stop" and abs(price - 30331) < 2:
             continue
         elif chapter in {"Walk the summer", "Copy the path", "Where the path stood"}:
-            color, width, label = MUTED, 2, f"{rounded:,}"
+            color, width, label = MUTED, 2, str(rounded)
         elif shot.get("board") == "buys-sells":
             if price < 27629:
                 color, label = BLUE, f"{rounded:,} buy"
@@ -753,8 +759,8 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
                 continue
             draw.line([(x, yy), (x2, yy)], fill=color, width=width)
             x += step
-        lf = font(28)
-        draw.text((gutter_x, yy - 16), label, font=lf, fill=color)
+        lf = font(36)
+        draw.text((gutter_x, yy - 18), label, font=lf, fill=WHITE)
         if chapter == "The levels" and rounded == 26730:
             other = _map(0, n, 27630, lo_p, hi_p, plot)[1]
             bracket = plot[0] + 24
@@ -1522,6 +1528,28 @@ def measured_lufs(path: Path) -> tuple[float, float]:
     return float(integ[-1]), true_peak
 
 
+def _lesson_bed(duration: float, dest: Path) -> None:
+    """In-house calm bed. Synthesised in the repo, so there is nothing to license."""
+    music = ROOT / "skills/video-production/music-sound"
+    if str(music) not in sys.path:
+        sys.path.insert(0, str(music))
+    from music.compose import render_bed
+
+    need = max(2.0, float(duration))
+    if need <= 590:
+        audio, sr = render_bed(mood="calm", key="C", scale="major", bpm=72, seconds=need)
+    else:
+        audio = None
+        sr = 48000
+        left = need
+        while left > 1:
+            take = min(480.0, left)
+            piece, sr = render_bed(mood="calm", key="C", scale="major", bpm=72, seconds=take)
+            audio = piece if audio is None else _xfade(audio, piece, sr, fade=1.0)
+            left -= take
+    sf.write(str(dest), audio, sr)
+
+
 def compose_pad(duration: float, dest: Path) -> None:
     """Slow detuned pad. No melody, no rhythm, no bleeps. Original."""
     sr = 48000
@@ -1605,56 +1633,219 @@ def _tighten_narration(audio: np.ndarray, sr: int, words: list, gap: float = 0.3
     return new_audio, new_words
 
 
+def _lesson_sentences(text: str) -> list[str]:
+    """Split on sentence stops. Commas stay inside the sentence."""
+    cleaned = re.sub(r"\s+", " ", (text or "").strip())
+    cleaned = re.sub(r"(\d)\.(\d)", r"\1<dot>\2", cleaned)
+    parts = re.split(r"(?<=[.!?])\s+", cleaned)
+    out = []
+    for part in parts:
+        part = part.replace("<dot>", ".").strip()
+        if part:
+            out.append(part)
+    return out or ([cleaned] if cleaned else [])
+
+
+def _reading_time(shot: dict) -> float:
+    """At least 2s plus about 0.3s for each word of on-screen text."""
+    blobs = [
+        shot.get("caption") or "",
+        shot.get("chapter") or "",
+        " ".join(shot.get("items") or []),
+    ]
+    words = max((len(blob.split()) for blob in blobs), default=0)
+    return 2.0 + 0.3 * words
+
+
+def _xfade(left: np.ndarray, right: np.ndarray, sr: int, fade: float = JOIN_FADE) -> np.ndarray:
+    n = min(int(fade * sr), len(left) // 2, len(right) // 2)
+    if n < 2:
+        return np.concatenate([left, right])
+    out_r = np.linspace(1.0, 0.0, n, dtype=np.float32)
+    in_r = np.linspace(0.0, 1.0, n, dtype=np.float32)
+    mid = left[-n:] * out_r + right[:n] * in_r
+    return np.concatenate([left[:-n], mid, right[n:]])
+
+
+def _time_sentence(speaker, pace: float, text: str, audio: np.ndarray, sr: int, offset: float) -> list:
+    """Align inside one sentence. Fall back to letter spacing if the aligner bunches words."""
+    from voice.align import Word, align_templates
+
+    tokens = text.split()
+    if not tokens:
+        return []
+    templates = []
+    for token in tokens:
+        bare = token.strip(".,!?;:\"'") or token
+        spoken, rate = speaker.say(bare, pace)
+        if rate != sr:
+            return _pace_words(text, audio, sr, offset)
+        templates.append(np.asarray(spoken, dtype=np.float32))
+    try:
+        aligned = align_templates(audio, sr, tokens, templates)
+    except Exception:
+        aligned = None
+    if aligned:
+        bunched = sum(1 for word in aligned if word.end - word.start < 0.08)
+        if bunched <= max(1, int(len(aligned) * 0.25)):
+            return [Word(word.text, offset + word.start, offset + word.end) for word in aligned]
+    return _pace_words(text, audio, sr, offset)
+
+
+def _pace_words(text: str, audio: np.ndarray, sr: int, offset: float) -> list:
+    """Place words across the sentence that was just spoken. No time-stretch."""
+    from voice.align import Word
+
+    tokens = text.split()
+    if not tokens or len(audio) == 0:
+        return []
+    weights = [max(1, len(token.strip(".,!?;:\"'"))) for token in tokens]
+    total = float(sum(weights))
+    dur = len(audio) / sr
+    cursor = 0.0
+    placed = []
+    for token, weight in zip(tokens, weights):
+        span = dur * weight / total
+        placed.append(Word(token, offset + cursor, offset + cursor + span))
+        cursor += span
+    if placed:
+        last = placed[-1]
+        placed[-1] = Word(last.text, last.start, offset + dur)
+    return placed
+
+
+def _narrate_shot(speaker, shot: dict) -> tuple[np.ndarray, int, list]:
+    """One Kokoro speed for every sentence, then the pauses Stewart asked for."""
+    from voice.moods import KOKORO_BASE_WPM, mood as mood_preset
+
+    pace = KOKORO_BASE_WPM / mood_preset("calm-teacher")["wpm"]
+    sentences = _lesson_sentences(shot.get("vo") or "")
+    if not sentences:
+        sr = 24000
+        audio = np.zeros(int(BEAT_GAP * sr), dtype=np.float32)
+        return audio, sr, []
+    buf = None
+    timed = []
+    sr = None
+    for index, sentence in enumerate(sentences):
+        audio, rate = speaker.say(sentence, pace)
+        audio = np.asarray(audio, dtype=np.float32)
+        if sr is None:
+            sr = rate
+        elif rate != sr:
+            raise SystemExit("voice sample rate changed mid-lesson")
+        if buf is None:
+            offset = 0.0
+            buf = audio
+        else:
+            offset = max(0.0, len(buf) / sr - JOIN_FADE)
+            buf = _xfade(buf, audio, sr)
+        timed.extend(_time_sentence(speaker, pace, sentence, audio, sr, offset))
+        if index < len(sentences) - 1:
+            buf = _xfade(buf, np.zeros(int(SENTENCE_GAP * sr), dtype=np.float32), sr)
+    hold = max(0.0, _reading_time(shot) - len(buf) / sr)
+    tail = hold + BEAT_GAP
+    if tail > 0:
+        buf = _xfade(buf, np.zeros(int(tail * sr), dtype=np.float32), sr)
+    return buf, sr, timed
+
+
 def synth_voice(shots: list[dict], dest: Path) -> tuple[float, list]:
-    """Kokoro af_heart through natural-voice, with word times on the timeline."""
+    """Kokoro af_heart at natural speed 1.0, with the same pace on every beat."""
     _voice_stack()
     from voice.align import Word
+    from voice.moods import kokoro_speed, mood as mood_preset
     from voice.speak import Speaker
 
-    speakers: dict = {}
+    if mood_preset("calm-teacher").get("kokoro_voice") != "af_heart":
+        raise SystemExit("Blueprint narration must be Kokoro af_heart")
+    pace = 197.0 / mood_preset("calm-teacher")["wpm"]
+    if abs(kokoro_speed("calm-teacher", pace) - 1.0) > 1e-6:
+        raise SystemExit("natural pace did not land on Kokoro speed 1.0")
+    speaker = Speaker(engine="kokoro", mood="calm-teacher")
     pieces: list[np.ndarray] = []
     timed: list[Word] = []
     expanded: list[dict] = []
     clock = 0.0
     sample_rate = None
     for i, shot in enumerate(shots):
-        mood = _mood(shot.get("kind") or "chart")
-        from voice.moods import mood as mood_preset
-        if mood_preset(mood).get("kokoro_voice") != "af_heart":
-            raise SystemExit("Blueprint narration must be Kokoro af_heart")
-        if mood not in speakers:
-            speakers[mood] = Speaker(engine="kokoro", mood=mood)
-        audio, rate, words, _method = speakers[mood].render(shot["vo"], pace=SPEECH_RATE)
+        audio, rate, words = _narrate_shot(speaker, shot)
         if sample_rate is None:
             sample_rate = rate
         if rate != sample_rate:
             raise SystemExit("voice sample rate changed mid-lesson")
-        # Drop the old 4.5–7s holds. Keep a clear beat ending, and do not
-        # squeeze the gap between sentences below about 0.35s.
-        audio, words = _tighten_narration(audio, rate, words)
-        chunks = _split_picture(shot, audio, rate)
-        origin = clock
-        # Word times sit on the lesson clock. A picture cut must not clip a word
-        # onto both sides of the cut: that wrote the same token twice and left
-        # the second copy as a 50ms caption.
         for word in words:
-            start = origin + word.start
-            timed.append(Word(word.text, start, origin + max(word.end, word.start + 0.05)))
-        for chunk in chunks:
-            clock += chunk["duration"]
-            pieces.append(chunk.pop("_audio"))
-            expanded.append(chunk)
+            timed.append(Word(word.text, clock + word.start, clock + word.end))
+        shot = dict(shot)
+        shot["duration"] = len(audio) / rate
+        shot["_audio"] = audio
+        pieces.append(audio)
+        expanded.append(shot)
+        clock += shot["duration"]
         if (i + 1) % 4 == 0:
             print(f"  voice {i + 1}/{len(shots)} t={clock:.0f}s", flush=True)
     voice = np.concatenate(pieces) if pieces else np.zeros(1, dtype=np.float32)
     sf.write(str(dest), voice, sample_rate or 24000)
-    for shot in expanded:
-        if shot["duration"] > MAX_SHOT + 0.05:
-            raise SystemExit(
-                f"picture would hold {shot['duration']:.2f}s. "
-                "The scene-planner limit is 8 seconds, and a glow does not count."
-            )
     return clock, timed, expanded
+
+
+def _write_lesson_captions(vtt: Path, srt: Path, words: list) -> None:
+    """Cues start on the spoken word. A short line holds into the pause, not early."""
+    from voice.captions import _stamp
+
+    groups: list[list] = []
+    current: list = []
+    for word in words:
+        trial = current + [word]
+        text = " ".join(item.text for item in trial)
+        if current and len(text) > 42:
+            groups.append(current)
+            current = [word]
+        else:
+            current = trial
+    if current:
+        groups.append(current)
+    cues = []
+    for index, group in enumerate(groups):
+        text = " ".join(word.text for word in group)
+        start = group[0].start
+        spoken = group[-1].end
+        nxt = groups[index + 1][0].start if index + 1 < len(groups) else None
+        end = max(spoken, start + len(text) / 18.0)
+        # A cue may hold a fifth of a second into the next line so it stays readable.
+        if nxt is not None:
+            end = min(end, nxt + 0.20)
+        cues.append((start, max(end, start + 0.2), [text]))
+    vtt_lines = ["WEBVTT", ""]
+    srt_lines = []
+    for index, (start, end, lines) in enumerate(cues, start=1):
+        vtt_lines.append(f"{_stamp(start)} --> {_stamp(end)}")
+        vtt_lines.extend(lines)
+        vtt_lines.append("")
+        srt_lines.append(str(index))
+        srt_lines.append(f"{_stamp(start, srt=True)} --> {_stamp(end, srt=True)}")
+        srt_lines.extend(lines)
+        srt_lines.append("")
+    vtt.write_text("\n".join(vtt_lines) + "\n", encoding="utf-8")
+    srt.write_text("\n".join(srt_lines) + "\n", encoding="utf-8")
+
+
+def _wrap_caption(text: str) -> list[str]:
+    words = text.split()
+    lines: list[str] = []
+    current = ""
+    for word in words:
+        trial = f"{current} {word}".strip()
+        if current and len(trial) > 42 and len(lines) < 1:
+            lines.append(current)
+            current = word
+        else:
+            current = trial
+    if current:
+        lines.append(current)
+    if len(lines) > 2:
+        lines = [" ".join(lines[:-1]), lines[-1]]
+    return lines[:2]
 
 
 def _split_picture(shot: dict, audio: np.ndarray, rate: int) -> list[dict]:
@@ -1796,7 +1987,7 @@ def render(
     clock, timed, shots = synth_voice(shots, voice_path)
     print(f"  voice {clock:.1f}s", flush=True)
     bed = work / "bed.wav"
-    compose_pad(clock + 1.0, bed)
+    _lesson_bed(clock + 1.2, bed)
     silent = work / "silent.mp4"
     proc = subprocess.Popen(
         [
@@ -1837,10 +2028,14 @@ def render(
         raise SystemExit("picture encode failed")
     _voice_stack()
     from lib.mix import duck_under_voice
-    from voice.captions import write_chapters, write_srt, write_vtt, write_words
+    from voice.captions import write_chapters, write_words
 
     mixed = work / "mixed.wav"
-    duck_under_voice(bed, voice_path, mixed)
+    # Bed sits 20 dB under in the gaps. Gentle ducking holds it near 20 under the voice.
+    duck_under_voice(
+        bed, voice_path, mixed,
+        bed_db=-20.0, attack_ms=150, release_ms=600, ratio=1.4, threshold=0.02,
+    )
     final_path = dest or (OUT / f"{sid}.mp4")
     final_path.parent.mkdir(parents=True, exist_ok=True)
     preset = "veryfast" if excerpt_seconds else "medium"
@@ -1862,9 +2057,8 @@ def render(
         sidecar = ROOT / "blueprint-smoke" / sid
         sidecar.mkdir(parents=True, exist_ok=True)
     write_words(sidecar / "words.json", timed, engine="kokoro", mood="af_heart", method="acoustic-forced-align")
-    write_vtt(sidecar / f"{sid}.vtt", timed)
+    _write_lesson_captions(sidecar / f"{sid}.vtt", sidecar / f"{sid}.srt", timed)
     _cap_caption_speed(sidecar / f"{sid}.vtt")
-    write_srt(sidecar / f"{sid}.srt", timed)
     chapters = []
     cursor = 0.0
     for shot in shots:

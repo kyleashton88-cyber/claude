@@ -150,7 +150,7 @@ def fitted_cues(words: list[Word], limit: float = DISPLAY_CPS) -> list[tuple[flo
 
 
 def _hold_for_speed(rows: list[list], limit: float) -> None:
-    """Lengthen a fast cue, shifting the cues after it. Never drop a word."""
+    """Lengthen a fast cue without delaying the words after it."""
     for _ in range(len(rows) * 4 + 8):
         moved = False
         for index, row in enumerate(rows):
@@ -158,19 +158,26 @@ def _hold_for_speed(rows: list[list], limit: float) -> None:
             end = _rounded(row[1])
             if end <= start:
                 end = start + 0.001
-                row[1] = end
             span = end - start
             if span > 0 and len(row[2]) / span <= limit + 1e-9:
                 row[0], row[1] = start, end
                 continue
             need = len(row[2]) / limit
             new_end = start + need + 0.002
+            if index + 1 < len(rows):
+                new_end = min(new_end, rows[index + 1][0] + 0.20)
+            if new_end > end + 0.0005:
+                row[0], row[1] = start, new_end
+                moved = True
+                break
+            if index + 1 < len(rows):
+                nxt = rows[index + 1]
+                row[2] = f"{row[2]} {nxt[2]}".strip()
+                row[1] = max(new_end, nxt[1])
+                del rows[index + 1]
+                moved = True
+                break
             row[0], row[1] = start, new_end
-            if index + 1 < len(rows) and rows[index + 1][0] < new_end:
-                delta = new_end - rows[index + 1][0]
-                for later in rows[index + 1:]:
-                    later[0] += delta
-                    later[1] += delta
             moved = True
             break
         if not moved:
@@ -246,9 +253,28 @@ def refit_vtt_text(text: str, limit: float = DISPLAY_CPS) -> str:
     lines = ["WEBVTT", ""]
     for start, end, payload in merged:
         lines.append(f"{_stamp(start)} --> {_stamp(end)}")
-        lines.append(payload)
+        wrapped = _wrap_lines(payload)
+        if len(wrapped) > 2:
+            wrapped = [" ".join(wrapped[:-1]), wrapped[-1]]
+        lines.extend(wrapped)
         lines.append("")
     return "\n".join(lines) + "\n"
+
+
+def _wrap_lines(text: str, width: int = 42) -> list[str]:
+    words = text.split()
+    lines: list[str] = []
+    current = ""
+    for word in words:
+        trial = f"{current} {word}".strip()
+        if current and len(trial) > width:
+            lines.append(current)
+            current = word
+        else:
+            current = trial
+    if current:
+        lines.append(current)
+    return lines or [text]
 
 
 def write_chapters(path: Path, sections: list[tuple[float, str]]) -> None:

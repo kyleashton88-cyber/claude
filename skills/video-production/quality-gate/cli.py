@@ -47,7 +47,8 @@ def main(argv: list[str] | None = None) -> int:
         for profile in PROFILES.values():
             print(
                 f"{profile.name:14} {profile.label:18} "
-                f"{profile.min_seconds:7.0f}s–{profile.max_seconds:7.0f}s  "
+                f"{profile.min_seconds:7.0f}s–"
+                f"{'none' if profile.max_seconds is None else f'{profile.max_seconds:7.0f}s'}  "
                 f"{profile.width}x{profile.height}  hold {profile.max_hold_seconds:.0f}s"
             )
         return 0
