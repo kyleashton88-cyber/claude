@@ -1,0 +1,428 @@
+{
+ "note": "ChatGPT web, one at a time, in this order. Attach _anchors/anchor.png (and course/images/mascot/blueprint-mascot.png only where needs_mascot_ref is true; none in this queue), paste the prompt file as one message, download, copy to target_gen, fit to target_out (1536x1024), re-score, then commit to repo_path. No lesson renders until all its rows pass.",
+ "length": 21,
+ "needs_mascot_ref_count": 0,
+ "superseded_prompts": [
+  [
+   "specs/remake/bp-01-introduction__010.txt",
+   "specs/remake/_superseded/bp-01-introduction__010.v1.txt"
+  ],
+  [
+   "specs/remake/bp-02-what-you-need__004.txt",
+   "specs/remake/_superseded/bp-02-what-you-need__004.v1.txt"
+  ],
+  [
+   "specs/remake/bp-03-what-is-a-grid-bot__003.txt",
+   "specs/remake/_superseded/bp-03-what-is-a-grid-bot__003.v1.txt"
+  ],
+  [
+   "specs/remake/bp-03-what-is-a-grid-bot__010.txt",
+   "specs/remake/_superseded/bp-03-what-is-a-grid-bot__010.v1.txt"
+  ]
+ ],
+ "queue": [
+  {
+   "order": 1,
+   "lesson": "bp-01-introduction",
+   "beat": 1,
+   "path": "course/images/bp-01-introduction/001.png",
+   "prompt": "specs/remake/bp-01-introduction__001.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-01-introduction/001/web1.png",
+   "target_out": "out/course/images/bp-01-introduction/001.png",
+   "repo_path": "course/images/bp-01-introduction/001.png",
+   "size": "1536x1024",
+   "headline": "PRICE OFTEN GOES SIDEWAYS",
+   "reason": "Clear sideways band, but the EXAMPLE stamp has a stray double-headed arrow pointing at the top line, and the zig-zag peaks stop short of the top line, so the price never visibly 'bounces' off it.",
+   "hard_fails": [
+    "artifact: stray double-headed arrow from the EXAMPLE stamp to the top dashed line"
+   ]
+  },
+  {
+   "order": 2,
+   "lesson": "bp-01-introduction",
+   "beat": 2,
+   "path": "course/images/bp-01-introduction/002.png",
+   "prompt": "specs/remake/bp-01-introduction__002.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-01-introduction/002/web1.png",
+   "target_out": "out/course/images/bp-01-introduction/002.png",
+   "repo_path": "course/images/bp-01-introduction/002.png",
+   "size": "1536x1024",
+   "headline": "EDUCATION ONLY",
+   "reason": "Disclaimer card does not show the exact line 'Education only. Not financial advice.': it reads 'EDUCATION ONLY' plus tags 'Learning' / 'Not money advice'.",
+   "hard_fails": [
+    "disclaimer not exact"
+   ]
+  },
+  {
+   "order": 3,
+   "lesson": "bp-01-introduction",
+   "beat": 7,
+   "path": "course/images/bp-01-introduction/007.png",
+   "prompt": "specs/remake/bp-01-introduction__007.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-01-introduction/007/web1.png",
+   "target_out": "out/course/images/bp-01-introduction/007.png",
+   "repo_path": "course/images/bp-01-introduction/007.png",
+   "size": "1536x1024",
+   "headline": "BUY ORDERS BELOW, SELL ORDERS ABOVE",
+   "reason": "Diagram is right (sells above in mint, buys below in blue, price-now line), but the headline 'BUY LOW, SELL HIGH' is a profit slogan, not the beat ('buy orders below the mark, sell orders above it'). Fails the no-pitch rule.",
+   "hard_fails": []
+  },
+  {
+   "order": 4,
+   "lesson": "bp-01-introduction",
+   "beat": 10,
+   "path": "course/images/bp-01-introduction/010.png",
+   "prompt": "specs/remake/bp-01-introduction__010.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-01-introduction/010/web1.png",
+   "target_out": "out/course/images/bp-01-introduction/010.png",
+   "repo_path": "course/images/bp-01-introduction/010.png",
+   "size": "1536x1024",
+   "headline": "YOUR COURSE MAP",
+   "reason": "Course map path has 12 stones (pin stone + 11 ahead), so it contradicts both '10 lessons ahead' and the 11-lesson course.",
+   "hard_fails": [
+    "wrong number: 11 stones ahead of the 'You are here' stone but the label says '10 lessons ahead'"
+   ]
+  },
+  {
+   "order": 5,
+   "lesson": "bp-01-introduction",
+   "beat": 16,
+   "path": "course/images/bp-01-introduction/016.png",
+   "prompt": "specs/remake/bp-01-introduction__016.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-01-introduction/016/web1.png",
+   "target_out": "out/course/images/bp-01-introduction/016.png",
+   "repo_path": "course/images/bp-01-introduction/016.png",
+   "size": "1536x1024",
+   "headline": "YOUR TURN: NAME THE PARTS",
+   "reason": "Content is right (Range / Levels / Stop on a notebook band), but the notebook base and pencil run to 37px from the bottom edge (under the 45px minimum).",
+   "hard_fails": [
+    "cramped margin: notebook base and pencil come within 37px of the bottom edge"
+   ]
+  },
+  {
+   "order": 6,
+   "lesson": "bp-01-introduction",
+   "beat": 18,
+   "path": "course/images/bp-01-introduction/018.png",
+   "prompt": "specs/remake/bp-01-introduction__018.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-01-introduction/018/web1.png",
+   "target_out": "out/course/images/bp-01-introduction/018.png",
+   "repo_path": "course/images/bp-01-introduction/018.png",
+   "size": "1536x1024",
+   "headline": "NEXT: WHAT YOU ARE GOING TO NEED",
+   "reason": "Outro names the next lesson only as 'WHAT YOU NEED' / 'what you need'; the next lesson's title is 'What you are going to need'.",
+   "hard_fails": []
+  },
+  {
+   "order": 7,
+   "lesson": "bp-02-what-you-need",
+   "beat": 2,
+   "path": "course/images/bp-02-what-you-need/002.png",
+   "prompt": "specs/remake/bp-02-what-you-need__002.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-02-what-you-need/002/web1.png",
+   "target_out": "out/course/images/bp-02-what-you-need/002.png",
+   "repo_path": "course/images/bp-02-what-you-need/002.png",
+   "size": "1536x1024",
+   "headline": "EDUCATION ONLY",
+   "reason": "Disclaimer card does not show the exact line 'Education only. Not financial advice.': it reads 'EDUCATION ONLY' plus 'For learning' / 'Not advice on what to buy'.",
+   "hard_fails": [
+    "disclaimer not exact"
+   ]
+  },
+  {
+   "order": 8,
+   "lesson": "bp-02-what-you-need",
+   "beat": 3,
+   "path": "course/images/bp-02-what-you-need/003.png",
+   "prompt": "specs/remake/bp-02-what-you-need__003.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-02-what-you-need/003/web1.png",
+   "target_out": "out/course/images/bp-02-what-you-need/003.png",
+   "repo_path": "course/images/bp-02-what-you-need/003.png",
+   "size": "1536x1024",
+   "headline": "WHAT YOU ARE GOING TO NEED",
+   "reason": "Title card headline is 'WHAT YOU WILL NEED', not the lesson title 'What you are going to need'; the desk slab runs to 24px from both side edges.",
+   "hard_fails": [
+    "cramped margin: the glass desk runs to 24px from the left and right edges"
+   ]
+  },
+  {
+   "order": 9,
+   "lesson": "bp-02-what-you-need",
+   "beat": 4,
+   "path": "course/images/bp-02-what-you-need/004.png",
+   "prompt": "specs/remake/bp-02-what-you-need__004.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-02-what-you-need/004/web1.png",
+   "target_out": "out/course/images/bp-02-what-you-need/004.png",
+   "repo_path": "course/images/bp-02-what-you-need/004.png",
+   "size": "1536x1024",
+   "headline": "THE SEVEN-LINE CHECKLIST",
+   "reason": "Seven rows do not match the beat's seven lines (notebook, the three words, pair name, paper or demo, no secrets, a written stop, the word Example); 'EXAMPLE' appears as a stamp, a tag with an arrow to that stamp, and a checklist row.",
+   "hard_fails": [
+    "wrong count/content: rows are Notebook, Pair, Range, Levels, Stop, No secrets, EXAMPLE (missing 'paper or demo', three words split into two)"
+   ]
+  },
+  {
+   "order": 10,
+   "lesson": "bp-02-what-you-need",
+   "beat": 10,
+   "path": "course/images/bp-02-what-you-need/010.png",
+   "prompt": "specs/remake/bp-02-what-you-need__010.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-02-what-you-need/010/web1.png",
+   "target_out": "out/course/images/bp-02-what-you-need/010.png",
+   "repo_path": "course/images/bp-02-what-you-need/010.png",
+   "size": "1536x1024",
+   "headline": "MARK EVERY NUMBER EXAMPLE",
+   "reason": "Shows 'squiggle = EXAMPLE' rows, not a number or pair carrying the word Example, so a beginner cannot see what gets stamped; the left tag and pencil break the side margins.",
+   "hard_fails": [
+    "cramped margin: 'So nobody copies it as advice' tag sits ~43px from the left edge",
+    "pencil to 29px from the right edge"
+   ]
+  },
+  {
+   "order": 11,
+   "lesson": "bp-02-what-you-need",
+   "beat": 16,
+   "path": "course/images/bp-02-what-you-need/016.png",
+   "prompt": "specs/remake/bp-02-what-you-need__016.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-02-what-you-need/016/web1.png",
+   "target_out": "out/course/images/bp-02-what-you-need/016.png",
+   "repo_path": "course/images/bp-02-what-you-need/016.png",
+   "size": "1536x1024",
+   "headline": "YOUR TURN: TICK THE SEVEN",
+   "reason": "Seven tick boxes and right content, but the 'Copy the 7 lines' tag breaks the 45px right margin.",
+   "hard_fails": [
+    "cramped margin: 'Copy the 7 lines' tag ends ~43px from the right edge"
+   ]
+  },
+  {
+   "order": 12,
+   "lesson": "bp-02-what-you-need",
+   "beat": 18,
+   "path": "course/images/bp-02-what-you-need/018.png",
+   "prompt": "specs/remake/bp-02-what-you-need__018.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-02-what-you-need/018/web1.png",
+   "target_out": "out/course/images/bp-02-what-you-need/018.png",
+   "repo_path": "course/images/bp-02-what-you-need/018.png",
+   "size": "1536x1024",
+   "headline": "YOUR TURN: WRITE A PAIR",
+   "reason": "Pair circles and slash on a notebook, but an extra 'EXAMPLE' tag points at the EXAMPLE stamp (the word twice, the tag labels a label).",
+   "hard_fails": []
+  },
+  {
+   "order": 13,
+   "lesson": "bp-02-what-you-need",
+   "beat": 19,
+   "path": "course/images/bp-02-what-you-need/019.png",
+   "prompt": "specs/remake/bp-02-what-you-need__019.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-02-what-you-need/019/web1.png",
+   "target_out": "out/course/images/bp-02-what-you-need/019.png",
+   "repo_path": "course/images/bp-02-what-you-need/019.png",
+   "size": "1536x1024",
+   "headline": "RECAP: SAY THREE THINGS",
+   "reason": "Recap mislabels the range/levels/stop stack as 'Stop written down' and shows only four of the seven lines; does not show the recap the beat asks for (say the hook, name the diagram, name the line).",
+   "hard_fails": []
+  },
+  {
+   "order": 14,
+   "lesson": "bp-03-what-is-a-grid-bot",
+   "beat": 1,
+   "path": "course/images/bp-03-what-is-a-grid-bot/001.png",
+   "prompt": "specs/remake/bp-03-what-is-a-grid-bot__001.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-03-what-is-a-grid-bot/001/web1.png",
+   "target_out": "out/course/images/bp-03-what-is-a-grid-bot/001.png",
+   "repo_path": "course/images/bp-03-what-is-a-grid-bot/001.png",
+   "size": "1536x1024",
+   "headline": "A GRID BOT DOES NOT GUESS",
+   "reason": "Crossed crystal ball is clear, but the 'orders waiting' board alternates mint and blue tickets (sell, buy, sell, buy), so it teaches the opposite of the course rule: sells sit above, buys below.",
+   "hard_fails": []
+  },
+  {
+   "order": 15,
+   "lesson": "bp-03-what-is-a-grid-bot",
+   "beat": 2,
+   "path": "course/images/bp-03-what-is-a-grid-bot/002.png",
+   "prompt": "specs/remake/bp-03-what-is-a-grid-bot__002.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-03-what-is-a-grid-bot/002/web1.png",
+   "target_out": "out/course/images/bp-03-what-is-a-grid-bot/002.png",
+   "repo_path": "course/images/bp-03-what-is-a-grid-bot/002.png",
+   "size": "1536x1024",
+   "headline": "EDUCATION ONLY",
+   "reason": "Disclaimer card does not show the exact line 'Education only. Not financial advice.': it reads 'EDUCATION ONLY' plus 'Learning' / 'Not advice'.",
+   "hard_fails": [
+    "disclaimer not exact"
+   ]
+  },
+  {
+   "order": 16,
+   "lesson": "bp-03-what-is-a-grid-bot",
+   "beat": 3,
+   "path": "course/images/bp-03-what-is-a-grid-bot/003.png",
+   "prompt": "specs/remake/bp-03-what-is-a-grid-bot__003.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-03-what-is-a-grid-bot/003/web1.png",
+   "target_out": "out/course/images/bp-03-what-is-a-grid-bot/003.png",
+   "repo_path": "course/images/bp-03-what-is-a-grid-bot/003.png",
+   "size": "1536x1024",
+   "headline": "WHAT IS A GRID BOT?",
+   "reason": "Title card shows 'WHAT IS A GRID BOT?', but a gear tagged 'Robot that places orders for you' frames the bot as a helper doing the work for you (product-pitch tone; contradicts beat 18 'not a person watching for you'), and its curved arrow lands in the empty gap between sell and buy rows.",
+   "hard_fails": []
+  },
+  {
+   "order": 17,
+   "lesson": "bp-03-what-is-a-grid-bot",
+   "beat": 4,
+   "path": "course/images/bp-03-what-is-a-grid-bot/004.png",
+   "prompt": "specs/remake/bp-03-what-is-a-grid-bot__004.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-03-what-is-a-grid-bot/004/web1.png",
+   "target_out": "out/course/images/bp-03-what-is-a-grid-bot/004.png",
+   "repo_path": "course/images/bp-03-what-is-a-grid-bot/004.png",
+   "size": "1536x1024",
+   "headline": "FIVE WORDS TO KNOW",
+   "reason": "Tags read Top / Bottom / Price steps / What you hold / Stop, but the narration teaches the five words upper, lower, levels, side, stop; 'Price steps' tag has three arrowheads and breaks the right margin.",
+   "hard_fails": [
+    "cramped margin: 'Price steps' tag ends 35px from the right edge"
+   ]
+  },
+  {
+   "order": 18,
+   "lesson": "bp-03-what-is-a-grid-bot",
+   "beat": 8,
+   "path": "course/images/bp-03-what-is-a-grid-bot/008.png",
+   "prompt": "specs/remake/bp-03-what-is-a-grid-bot__008.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-03-what-is-a-grid-bot/008/web1.png",
+   "target_out": "out/course/images/bp-03-what-is-a-grid-bot/008.png",
+   "repo_path": "course/images/bp-03-what-is-a-grid-bot/008.png",
+   "size": "1536x1024",
+   "headline": "WHAT YOU HOLD CHANGES",
+   "reason": "Two jars of coins: 'more of the coin' / 'more cash' with tautological 'What you hold = your holdings'; does not show uneven fills (balanced inside the band vs one heavy side after an exit); uses coins, which the brief bans.",
+   "hard_fails": []
+  },
+  {
+   "order": 19,
+   "lesson": "bp-03-what-is-a-grid-bot",
+   "beat": 10,
+   "path": "course/images/bp-03-what-is-a-grid-bot/010.png",
+   "prompt": "specs/remake/bp-03-what-is-a-grid-bot__010.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-03-what-is-a-grid-bot/010/web1.png",
+   "target_out": "out/course/images/bp-03-what-is-a-grid-bot/010.png",
+   "repo_path": "course/images/bp-03-what-is-a-grid-bot/010.png",
+   "size": "1536x1024",
+   "headline": "POINT AND SAY THE FIVE",
+   "reason": "'Say the five' frame labels Top / Price steps / Bottom / What you hold / Stop, not the five words the learner is told to say (upper, lower, levels, side, stop); no highlighted 'often skipped' tag.",
+   "hard_fails": []
+  },
+  {
+   "order": 20,
+   "lesson": "bp-03-what-is-a-grid-bot",
+   "beat": 14,
+   "path": "course/images/bp-03-what-is-a-grid-bot/014.png",
+   "prompt": "specs/remake/bp-03-what-is-a-grid-bot__014.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-03-what-is-a-grid-bot/014/web1.png",
+   "target_out": "out/course/images/bp-03-what-is-a-grid-bot/014.png",
+   "repo_path": "course/images/bp-03-what-is-a-grid-bot/014.png",
+   "size": "1536x1024",
+   "headline": "GRID BOT IN ONE BREATH",
+   "reason": "Orders wait -> Inside your range -> Stop written -> Holdings change matches the one-breath definition, but the panel border breaks the 45px side margins.",
+   "hard_fails": [
+    "cramped margin: main panel border sits 40-41px from the left and right edges"
+   ]
+  },
+  {
+   "order": 21,
+   "lesson": "bp-03-what-is-a-grid-bot",
+   "beat": 19,
+   "path": "course/images/bp-03-what-is-a-grid-bot/019.png",
+   "prompt": "specs/remake/bp-03-what-is-a-grid-bot__019.txt",
+   "attach": [
+    "/workspace/blueprint-beginner/_anchors/anchor.png"
+   ],
+   "needs_mascot_ref": false,
+   "target_gen": "gen/bp-03-what-is-a-grid-bot/019/web1.png",
+   "target_out": "out/course/images/bp-03-what-is-a-grid-bot/019.png",
+   "repo_path": "course/images/bp-03-what-is-a-grid-bot/019.png",
+   "size": "1536x1024",
+   "headline": "NEXT: MARKET REGIMES",
+   "reason": "Outro says 'NEXT: MARKET SHAPES' and 'Next lesson: price shapes'; the next lesson is 'Market regimes' (two different wrong names on one frame).",
+   "hard_fails": []
+  }
+ ]
+}
