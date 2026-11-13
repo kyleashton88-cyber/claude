@@ -377,7 +377,7 @@ def bp03() -> list[dict]:
             "On this chart the middle rung is 27630. The daily close crossed it ten times. "
             "Each cross is the path changing sides. It is not a receipt."
         ),
-        caption="27630 was crossed 10 times. That is not a receipt.",
+        caption="27,630 was crossed 10 times. That is not a receipt.",
     ))
     s.append(_shot(
         chapter="Buys and sells", board="buys-sells", reveal=1, focus_price=27630, focus_label="Middle",

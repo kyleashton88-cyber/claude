@@ -758,7 +758,13 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
         lf = font(28)
         draw.text((gutter_x, yy - 16), label, font=lf, fill=color)
         if shot.get("board") == "buys-sells":
-            _ticket(draw, plot[0] + 36, yy, color)
+            words = label.split()
+            ticket_text = f"{words[-1]} {rounded:,}" if len(words) > 1 else f"{rounded:,}"
+            face_t = font(22)
+            twid = int(face_t.getlength(ticket_text)) + 20
+            tx0 = plot[0] + 300
+            draw.rounded_rectangle([tx0, yy - 18, tx0 + twid, yy + 18], 8, fill=TAG, outline=color, width=2)
+            draw.text((tx0 + 10, yy - 14), ticket_text, font=face_t, fill=WHITE)
         if chapter == "The levels" and rounded == 26730:
             other = _map(0, n, 27630, lo_p, hi_p, plot)[1]
             bracket = plot[0] + 24
@@ -769,18 +775,22 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
             draw.text((bracket + 16, mid - 16), note, font=font(28), fill=WHITE)
 
     if chapter == "Limit orders wait" or "waiting" in idea.lower():
-        level = 27630
-        hits = []
-        for index in range(1, n):
-            left, right = closes[index - 1], closes[index]
-            if (left - level) * (right - level) <= 0:
-                hits.append(index)
-        if not hits:
-            hits = [n // 5, 2 * n // 5, 3 * n // 5, 4 * n // 5]
-        picks = hits[:4] if len(hits) <= 4 else [hits[int(i * (len(hits) - 1) / 3)] for i in range(4)]
-        y_line = _map(0, n, level if chapter == "Limit orders wait" else (lo + hi) / 2, lo_p, hi_p, plot)[1]
-        for nth, index in enumerate(picks):
-            _ticket(draw, full[min(index, n - 1)][0] - 20, y_line, CYAN, "order waits" if nth == 0 else "")
+        y_line = _map(0, n, 27630, lo_p, hi_p, plot)[1]
+        if chapter == "Hook":
+            x = plot[0]
+            while x < plot[2]:
+                draw.line([(x, y_line), (min(x + 8, plot[2]), y_line)], fill=CYAN, width=3)
+                x += 18
+            draw.text((gutter_x, y_line - 16), "27,630", font=font(28), fill=CYAN)
+        face = font(22)
+        text = "BUY 27,630"
+        twid = int(face.getlength(text)) + 24
+        # Left of the path spikes, above the level, clear of the end tag.
+        for index, x in enumerate((plot[0] + 24, plot[0] + 210)):
+            top = y_line - 46
+            draw.rounded_rectangle([x, top, x + twid, top + 36], 8, fill=TAG, outline=CYAN, width=2)
+            draw.text((x + 12, top + 4), text, font=face, fill=WHITE)
+            draw.line([(x + 16, top + 36), (x + 16, y_line)], fill=CYAN, width=2)
 
     if chapter == "The stop":
         for index, row in enumerate(series):
@@ -817,40 +827,70 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
     draw.line([(hx + (12 if tx >= hx else -12), hy), (anchor_x, ty + th / 2)], fill=CYAN, width=2)
     draw.rounded_rectangle([tx, ty, tx + tw, ty + th], 10, fill=TAG, outline=CYAN, width=2)
     draw.text((tx + 14, ty + 4), tag, font=face, fill=WHITE)
-    if shot.get("analogy") in {"ladder", "fence"} and rails:
-        linked = [min(rails), max(rails)] if shot.get("analogy") == "fence" else rails
-        for price in linked:
+    if shot.get("analogy") == "ladder" and rails:
+        for price in rails:
             yy = _map(0, n, float(price), lo_p, hi_p, plot)[1]
-            draw.line([(936, yy), (plot[0], yy)], fill=CYAN, width=2)
+            if yy < 238 or yy > 694:
+                continue
+            draw.line([(700, yy), (930, yy)], fill=CYAN, width=6)
+            draw.line([(930, yy), (plot[0], yy)], fill=CYAN, width=3)
+    elif shot.get("analogy") == "fence" and rails:
+        for price in (min(rails), max(rails)):
+            yy = _map(0, n, float(price), lo_p, hi_p, plot)[1]
+            draw.line([(700, yy), (930, yy)], fill=CYAN, width=6)
+            draw.line([(930, yy), (plot[0], yy)], fill=CYAN, width=3)
 
 
-def _hero(base: Image.Image, shot: dict, box: tuple[int, int, int, int]) -> None:
-    """A band graphic for title cards and thumbnails. No mascot."""
+def _hero(base: Image.Image, box: tuple[int, int, int, int], mode: str) -> None:
+    """Lesson visual. path and orders use the real summer closes, not a sawtooth."""
     draw = ImageDraw.Draw(base)
     draw.rounded_rectangle(box, 24, fill=GLASS, outline=CYAN, width=2)
     x0, y0, x1, y1 = box
-    top, bot = y0 + 110, y1 - 80
-    _band(base, x0 + 36, x1 - 36, top, bot)
+    if mode == "lines":
+        rows = ("Notebook", "Range and levels", "The pair", "Paper or demo", "No secrets", "A written stop", "Example on every figure")
+        step = max(36, (y1 - y0 - 70) // len(rows))
+        y = y0 + 28
+        for index, row in enumerate(rows):
+            _row_icon(draw, x0 + 48, y + 16, ("book", "ladder", "coin", "paper", "lock", "stop", "stamp")[index])
+            draw.text((x0 + 84, y), row, font=font(28), fill=WHITE)
+            y += step
+        return
+    if mode == "regimes":
+        labels = ("Range", "Trend", "Break")
+        gap = (x1 - x0 - 48) // 3
+        for index, label in enumerate(labels):
+            left = x0 + 24 + index * gap
+            draw.rounded_rectangle([left, y0 + 80, left + gap - 16, y1 - 40], 16, outline=CYAN, width=2)
+            draw.text((left + 16, y0 + 100), label, font=font(32), fill=CYAN)
+        return
+    series = lesson_scripts.PRICES["range_2023"]
+    plot = (x0 + 28, y0 + 78, x1 - 28, y1 - 64)
+    closes = [float(row["close"]) for row in series]
+    lo = min(float(row["low"]) for row in series)
+    hi = max(float(row["high"]) for row in series)
+    pad = (hi - lo) * 0.12 or 1
+    lo_p, hi_p = lo - pad, hi + pad
+    n = len(closes)
+    points = [_map(i, n, closes[i], lo_p, hi_p, plot) for i in range(n)]
+    y_top = _map(0, n, 30331, lo_p, hi_p, plot)[1]
+    y_bot = _map(0, n, 24930, lo_p, hi_p, plot)[1]
+    _band(base, plot[0], plot[2], y_top, y_bot)
     draw = ImageDraw.Draw(base)
-    draw.line([(x0 + 36, top), (x1 - 36, top)], fill=CYAN, width=3)
-    draw.line([(x0 + 36, bot), (x1 - 36, bot)], fill=CYAN, width=3)
-    points = []
-    for index in range(16):
-        x = x0 + 48 + (x1 - x0 - 96) * index / 15
-        wave = (index % 4 - 1.5) * ((bot - top) * 0.18)
-        points.append((x, (top + bot) / 2 + wave))
-    _stroke(base, points, (0, 212, 255, 90), 8)
+    draw.line([(plot[0], y_top), (plot[2], y_top)], fill=CYAN, width=3)
+    draw.line([(plot[0], y_bot), (plot[2], y_bot)], fill=CYAN, width=3)
+    _stroke(base, points, (0, 212, 255, 80), 7)
     _stroke(base, points, (0, 212, 255, 255), 3)
     draw = ImageDraw.Draw(base)
-    draw.text((x1 - 150, top - 34), "30,331", font=font(28), fill=CYAN)
-    draw.text((x0 + 44, bot + 8), "24,930", font=font(28), fill=CYAN)
-    number = str(shot.get("lesson_no") or "01")
-    if number in {"02", "2"}:
-        draw.text((x0 + 44, y0 + 28), "Seven lines", font=font(28), fill=WHITE)
-    elif number in {"03", "3"}:
-        _ticket(draw, x0 + 48, (top + bot) / 2, CYAN, "order waits")
-    else:
-        draw.text((x0 + 44, y0 + 28), "The band", font=font(28), fill=WHITE)
+    draw.text((plot[2] - 110, y_top - 32), "30,331", font=font(28), fill=CYAN)
+    draw.text((plot[0], y_bot + 8), "24,930", font=font(28), fill=CYAN)
+    _example(draw, x0 + 16, y0 + 16)
+    if mode == "orders":
+        face = font(22)
+        text = "BUY 27,630"
+        tw = int(face.getlength(text)) + 24
+        tx, ty = x0 + 24, y1 - 52
+        draw.rounded_rectangle([tx, ty, tx + tw, ty + 36], 8, fill=TAG, outline=CYAN, width=2)
+        draw.text((tx + 12, ty + 4), text, font=face, fill=WHITE)
 
 
 def paint_brand(base: Image.Image, shot: dict, local: float) -> None:
@@ -870,7 +910,8 @@ def paint_brand(base: Image.Image, shot: dict, local: float) -> None:
         for line in lines:
             draw.text((MX, y), line, font=font(56), fill=WHITE)
             y += 70
-    _hero(base, shot, (1040, 220, 1760, 820))
+    number = int(shot.get("lesson_no") or 1)
+    _hero(base, (1040, 220, 1760, 820), {1: "path", 2: "lines", 3: "orders"}.get(number, "regimes"))
 
 
 def paint_disclaimer(base: Image.Image, shot: dict, local: float) -> None:
@@ -900,27 +941,30 @@ def paint_disclaimer(base: Image.Image, shot: dict, local: float) -> None:
 
 
 def _row_icon(draw: ImageDraw.ImageDraw, x: int, y: int, kind: str) -> None:
+    """40px-plus icons. Amber is only the stop sign."""
     if kind == "book":
-        draw.rounded_rectangle([x - 16, y - 12, x + 16, y + 12], 3, outline=CYAN, width=2)
-        draw.line([(x, y - 12), (x, y + 12)], fill=CYAN, width=2)
-    elif kind == "band":
-        draw.line([(x - 16, y - 8), (x + 16, y - 8)], fill=CYAN, width=3)
-        draw.line([(x - 16, y + 8), (x + 16, y + 8)], fill=CYAN, width=3)
-    elif kind == "pair":
-        draw.ellipse([x - 16, y - 10, x - 2, y + 10], outline=CYAN, width=2)
-        draw.ellipse([x + 2, y - 10, x + 16, y + 10], outline=CYAN, width=2)
-    elif kind == "paper":
-        draw.rectangle([x - 12, y - 14, x + 12, y + 14], outline=CYAN, width=2)
-    elif kind == "lock":
-        draw.rounded_rectangle([x - 12, y - 2, x + 12, y + 14], 3, outline=CYAN, width=2)
-        draw.arc([x - 8, y - 16, x + 8, y], 0, 180, fill=CYAN, width=2)
+        draw.rounded_rectangle([x - 18, y - 16, x + 18, y + 16], 3, outline=CYAN, width=3)
+        draw.line([(x, y - 16), (x, y + 16)], fill=CYAN, width=3)
     elif kind == "ladder":
-        draw.line([(x - 10, y - 16), (x - 10, y + 16)], fill=CYAN, width=2)
-        draw.line([(x + 10, y - 16), (x + 10, y + 16)], fill=CYAN, width=2)
-        for step in (-8, 0, 8):
-            draw.line([(x - 10, y + step), (x + 10, y + step)], fill=CYAN, width=2)
+        draw.line([(x - 14, y - 20), (x - 14, y + 20)], fill=CYAN, width=3)
+        draw.line([(x + 14, y - 20), (x + 14, y + 20)], fill=CYAN, width=3)
+        for step in (-12, 0, 12):
+            draw.line([(x - 14, y + step), (x + 14, y + step)], fill=CYAN, width=3)
+    elif kind == "coin":
+        draw.ellipse([x - 18, y - 18, x + 18, y + 18], outline=CYAN, width=3)
+        draw.text((x - 8, y - 14), "B", font=font(28), fill=CYAN)
+    elif kind == "paper":
+        draw.rectangle([x - 14, y - 18, x + 14, y + 18], outline=CYAN, width=3)
+        draw.line([(x - 8, y - 6), (x + 8, y - 6)], fill=CYAN, width=2)
+        draw.line([(x - 8, y + 4), (x + 8, y + 4)], fill=CYAN, width=2)
+    elif kind == "lock":
+        draw.rounded_rectangle([x - 14, y - 2, x + 14, y + 18], 3, outline=CYAN, width=3)
+        draw.arc([x - 10, y - 20, x + 10, y + 2], 180, 0, fill=CYAN, width=3)
+    elif kind == "stop":
+        draw.regular_polygon((x, y, 20), 8, outline=AMBER, width=3)
     else:
-        draw.regular_polygon((x, y, 16), 8, outline=AMBER, width=2)
+        draw.rounded_rectangle([x - 20, y - 16, x + 20, y + 16], 6, outline=CYAN, width=3)
+        draw.text((x - 12, y - 12), "EX", font=font(22), fill=CYAN)
 
 
 def paint_board(base: Image.Image, shot: dict) -> None:
@@ -938,7 +982,7 @@ def paint_board(base: Image.Image, shot: dict) -> None:
             "7. The word Example on every figure.",
         ]
         draw.text((MX + 80, 186), "These are the seven lines on the page.", font=font(32), fill=WHITE)
-        icons = ("book", "band", "pair", "paper", "lock", "stop", "stamp")
+        icons = ("book", "ladder", "coin", "paper", "lock", "stop", "stamp")
         y = 240
         for row, kind in zip(rows, icons):
             draw.rounded_rectangle([MX, y, RIGHT, y + 68], 12, fill=GLASS, outline=LINE, width=2)
@@ -976,11 +1020,19 @@ def paint_board(base: Image.Image, shot: dict) -> None:
         y = 200
         for title, body, kind in cards:
             draw.rounded_rectangle([MX, y, RIGHT, y + 150], 16, fill=GLASS, outline=CYAN, width=2)
-            _row_icon(draw, MX + 48, y + 75, kind)
-            draw.text((MX + 100, y + 52), title, font=font(40), fill=CYAN)
-            draw.text((MX + 420, y + 56), body, font=font(36), fill=WHITE)
+            _row_icon(draw, MX + 56, y + 75, kind)
+            draw.text((MX + 110, y + 54), title, font=font(40), fill=CYAN)
+            draw.text((MX + 360, y + 56), body, font=font(36), fill=WHITE)
+            pic = MX + 1080
+            if kind == "band":
+                draw.line([(pic, y + 48), (pic + 220, y + 48)], fill=CYAN, width=4)
+                draw.line([(pic, y + 100), (pic + 220, y + 100)], fill=CYAN, width=4)
+            elif kind == "ladder":
+                _row_icon(draw, pic + 110, y + 75, "ladder")
+            else:
+                _row_icon(draw, pic + 110, y + 75, "stop")
             y += 170
-        _example(draw, 1640, 196)
+        _example(draw, RIGHT - 230, 228)
         return
     raise SystemExit(f"unknown board {board}")
 
@@ -1017,29 +1069,77 @@ def paint_worked(base: Image.Image, shot: dict, local: float) -> None:
         y += 128
 
 
+def _panel(src: Image.Image, pw: int, ph: int, top_bias: float) -> Image.Image:
+    scale = max(pw / src.width, ph / src.height)
+    if top_bias:
+        scale *= 1.25
+    nw, nh = max(1, int(src.width * scale)), max(1, int(src.height * scale))
+    fitted = src.resize((nw, nh), Image.Resampling.LANCZOS)
+    extra_y = max(0, nh - ph)
+    top = int(extra_y * top_bias)
+    left = max(0, (nw - pw) // 2)
+    return fitted.crop((left, top, left + pw, top + ph))
+
+
 def paint_analogy(base: Image.Image, shot: dict, local: float, dur: float) -> None:
     draw = ImageDraw.Draw(base)
     pw, ph = 840, 472
     origin = (MX, 230)
-    still = shot.get("still")
-    panel = Image.new("RGB", (pw, ph), NAVY2)
-    if still:
-        src = load_picture(Path(still)).convert("RGB")
-        scale = max(pw / src.width, ph / src.height)
-        nw, nh = max(1, int(src.width * scale)), max(1, int(src.height * scale))
-        fitted = src.resize((nw, nh), Image.Resampling.LANCZOS)
-        left_crop = max(0, (nw - pw) // 2)
-        top_crop = max(0, (nh - ph) // 2)
-        panel = fitted.crop((left_crop, top_crop, left_crop + pw, top_crop + ph))
-    base.paste(panel, origin)
+    kind = shot.get("analogy") or ""
+    if kind == "list":
+        still = shot.get("still")
+        if still:
+            panel = _panel(load_picture(Path(still)).convert("RGB"), pw, ph, 0)
+            base.paste(panel, origin)
+        page = (origin[0] + pw + 24, 200, RIGHT, 760)
+        draw.rounded_rectangle(page, 20, fill=GLASS, outline=CYAN, width=2)
+        draw.text((page[0] + 28, page[1] + 28), "Write the page before any screen", font=font(32), fill=WHITE)
+        rows = (("Band", "24,930 to 30,331"), ("Levels", "Six gaps. About 900."), ("Stop", "The close leaves 30,331."))
+        y = page[1] + 110
+        band_y = y
+        for name, value in rows:
+            draw.text((page[0] + 36, y), name, font=font(36), fill=CYAN)
+            draw.text((page[0] + 240, y), value, font=font(36), fill=WHITE)
+            if name == "Band":
+                band_y = y + 18
+            y += 80
+        face = font(32)
+        tag = (origin[0] + 28, origin[1] + ph // 2 - 24)
+        draw.rounded_rectangle([tag[0], tag[1], tag[0] + int(face.getlength("Band")) + 24, tag[1] + 48], 8, fill=TAG, outline=CYAN, width=2)
+        draw.text((tag[0] + 12, tag[1] + 6), "Band", font=face, fill=WHITE)
+        draw.line([(tag[0] + int(face.getlength("Band")) + 24, tag[1] + 24), (page[0] + 28, band_y)], fill=CYAN, width=3)
+        _example(draw, page[2] - 210, page[1] + 24)
+        return
+    chart_box = (origin[0] + pw + 24, 180, RIGHT, 752)
+    if kind == "fence" and shot.get("series"):
+        series = shot["series"]
+        idea = chart_idea(shot)
+        plot_top = chart_box[1] + (108 if idea else 72)
+        plot = (chart_box[0] + 28, plot_top, min(chart_box[2] - 280, 1520), chart_box[3] - 36)
+        closes = [float(row["close"]) for row in series]
+        lo = min(float(row["low"]) for row in series)
+        hi = max(float(row["high"]) for row in series)
+        pad = (hi - lo) * 0.12 or 1
+        lo_p, hi_p = lo - pad, hi + pad
+        n = len(series)
+        y_top = _map(0, n, 30331, lo_p, hi_p, plot)[1]
+        y_bot = _map(0, n, 24930, lo_p, hi_p, plot)[1]
+        src = load_picture(STILLS["fence"]).convert("RGB")
+        rail_top, rail_bot = 264, 408
+        scale = (y_bot - y_top) / (rail_bot - rail_top)
+        fitted = src.resize((max(1, int(src.width * scale)), max(1, int(src.height * scale))), Image.Resampling.LANCZOS)
+        paste_y = int(y_top - rail_top * scale)
+        paste_x = origin[0] + (pw - fitted.width) // 2
+        panel = Image.new("RGB", (pw, ph), NAVY2)
+        panel.paste(fitted, (paste_x - origin[0], paste_y - origin[1]))
+        base.paste(panel, origin)
+    else:
+        still = shot.get("still")
+        if still:
+            bias = 1.0 if kind == "ladder" else 0.0
+            base.paste(_panel(load_picture(Path(still)).convert("RGB"), pw, ph, bias), origin)
     draw.rounded_rectangle([origin[0], origin[1], origin[0] + pw, origin[1] + ph], 18, outline=LINE, width=2)
-    names = {"ladder": "Rungs wait", "fence": "Two rails", "list": "The packing list"}
-    label = names.get(shot.get("analogy") or "", "")
-    if label:
-        face = font(28)
-        draw.rounded_rectangle([origin[0] + 16, origin[1] + ph - 52, origin[0] + 28 + int(face.getlength(label)), origin[1] + ph - 12], 8, fill=TAG, outline=CYAN, width=2)
-        draw.text((origin[0] + 22, origin[1] + ph - 48), label, font=face, fill=WHITE)
-    chart_card(base, shot, local, dur, (origin[0] + pw + 24, 180, RIGHT, 752))
+    chart_card(base, shot, local, dur, chart_box)
 
 
 def next_lesson_label(shot: dict) -> tuple[str, str, str]:
@@ -1091,12 +1191,8 @@ def paint_outro(base: Image.Image, shot: dict, local: float) -> None:
     for line in wrap(title, 56, 900)[:3]:
         draw.text((MX, y), line, font=font(56), fill=WHITE)
         y += 68
-    card = (1080, 220, RIGHT, 820)
-    draw.rounded_rectangle(card, 28, fill=GLASS, outline=CYAN, width=2)
-    _hero(base, shot, (1120, 260, 1760, 620))
-    face = font(36)
-    tw = face.getlength(cta)
-    draw.text((1120 + (640 - tw) / 2, 660), cta, font=face, fill=WHITE)
+    number = int(shot.get("lesson_no") or 1) + 1
+    _hero(base, (1120, 240, 1760, 800), {2: "lines", 3: "orders", 4: "regimes"}.get(number, "path"))
     foot = font(36, "reg")
     fw = foot.getlength(FOOT)
     draw.text(((W - fw) / 2, 980), FOOT, font=foot, fill=MUTED)
@@ -1113,7 +1209,9 @@ def paint_lesson_thumb(shot: dict, dest: Path) -> Path:
         draw.line([(x, 0), (x, 720)], fill=(18, 36, 58))
     for y in range(0, 720, 48):
         draw.line([(0, y), (1280, y)], fill=(18, 36, 58))
-    title = shot.get("lesson_title") or "Blueprint"
+    number = int(shot.get("lesson_no") or 1)
+    title = "Your first range" if number == 1 else (shot.get("lesson_title") or "Blueprint")
+    keyword = {1: "range", 2: "need", 3: "grid"}.get(number, title.split()[-1])
     words = title.split()
     face = font(120)
     lines: list[list[str]] = []
@@ -1127,17 +1225,17 @@ def paint_lesson_thumb(shot: dict, dest: Path) -> Path:
             current.append(word)
     if current:
         lines.append(current)
-    y = 140
-    keyword = words[-1]
+    draw.text((48, 70), f"Blueprint · Lesson {number:02d}", font=font(32), fill=MUTED)
+    y = 130
     for line in lines[:3]:
         x = 48
         for word in line:
-            draw.text((x, y), word, font=face, fill=CYAN if word == keyword else WHITE)
+            draw.text((x, y), word, font=face, fill=CYAN if word.lower() == keyword else WHITE)
             x += int(face.getlength(word + " "))
         y += 130
-    _hero(image, shot, (820, 90, 1230, 560))
+    _hero(image, (820, 120, 1230, 560), {1: "path", 2: "lines", 3: "orders"}.get(number, "regimes"))
     draw = ImageDraw.Draw(image)
-    draw.text((56, 660), FOOT, font=font(28, "reg"), fill=MUTED)
+    draw.text((48, 660), FOOT, font=font(28, "reg"), fill=MUTED)
     dest.parent.mkdir(parents=True, exist_ok=True)
     image.save(dest)
     return dest
