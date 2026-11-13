@@ -2,7 +2,7 @@
 
 Standard: `skills/image-quality-standard/` on `cursor/illustration-engine-3a63` (f688829). Pass = every category at least 4 and no hard fail.
 Scope: the 92 rows of `blueprint-smoke/BP01-03_IMAGE_USE.txt` on `cursor/blueprint-professional-rebuild-d1f6` @ 61c4f97 = **92 rows**. The mascot rows use `course/images/mascot/blueprint-mascot.png`; the old el-06 `28.png` rows were dropped at 0eb1dc6. Every row is listed under its exact path and lesson. Only `status: pass` rows have `pass: true`.
-Last update 13 Nov, 7:30pm WITA. Covers the code-drawn rescore at 61c4f97 (the 6 redrawn frames rescored; the other 19 verified byte-identical with git hash-object) on top of batch 4 (v3 remakes of bp-02 011 and bp-03 009, 015, 016).
+Last update 13 Nov, 7:25pm WITA (015 v4). Covers the code-drawn rescore at 61c4f97 (the 6 redrawn frames rescored; the other 19 verified byte-identical with git hash-object) on top of batch 4 (v3 remakes of bp-02 011 and bp-03 009, 015, 016).
 
 ## Counts (against 92)
 
@@ -17,11 +17,11 @@ Last update 13 Nov, 7:30pm WITA. Covers the code-drawn rescore at 61c4f97 (the 6
 Verified: 92 rows, 92 unique (lesson, path) identities, the same set as IMAGE_USE @61c4f97. Every row's `pass` and `status` agree with its scores (all >= 4, no hard fail). Every committed lesson still, analogy and mascot row's `scored_blob` equals the blob in the repo at its path. All 25 code-drawn blobs match `61c4f97:<scored_file>`. The 19 not redrawn were checked with git hash-object and are byte-identical to their scored blob.
 
 The 1 fail is:
-- bp-03 bp-03-what-is-a-grid-bot/015.png (ChatGPT v4 remake in progress; row left as scored in batch 4)
+- bp-03 bp-03-what-is-a-grid-bot/015.png (v4 candidate scored: label accuracy 3; v5 prompt written)
 
 All 25 code-drawn frames pass. bp-01 and bp-02 have no failing rows. bp-03 waits only on 015.
 
-Contact sheets: `contact_sheet_fails.jpg` and `contact_sheet_fails_stills.jpg` both show the one failing image: the scored bp-03 015 v3 candidate (blob 943969f, gen/.../015/web3.png). A newer web4 now sits in out/ (blob 82e8810), but it has not been scored here.
+Contact sheets: `contact_sheet_fails.jpg` and `contact_sheet_fails_stills.jpg` both show the one failing image, the scored bp-03 015 v4 candidate (blob 82e8810, gen/.../015/web4.png).
 
 ## Mascot
 
@@ -47,7 +47,7 @@ Contact sheets: `contact_sheet_fails.jpg` and `contact_sheet_fails_stills.jpg` b
 
 | path | candidate blob (scored, uncommitted) | blob actually at the path (HEAD) |
 |---|---|---|
-| `course/images/bp-03-what-is-a-grid-bot/015.png` | `943969fc4220` | `334f5e99624b` |
+| `course/images/bp-03-what-is-a-grid-bot/015.png` | `82e88107ceaa` | `334f5e99624b` |
 
 ### Committed ChatGPT images (scored blob = committed blob)
 
@@ -88,7 +88,7 @@ None: all 25 code-drawn frames pass at 61c4f97. `CODE_DRAWN_FIXES_0eb1dc6.md` (a
 
 | path | lesson | scores (cl/co/cr/br/le/ch/ac) | hard fails | remake prompt | notes |
 |---|---|---|---|---|---|
-| `course/images/bp-03-what-is-a-grid-bot/015.png` | bp-03 | 5/4/4/3/5/-/5 | off-brand colour | `specs/remake/bp-03-what-is-a-grid-bot__015.txt` | [remake_needed, ChatGPT web, candidate 943969f] Remake v3 fixes the arrows: "Label the 5 words" has one arrow to the top blank tag. The five blank tags each have one arrow to the top edge, the inner lines, the token pile, the stop line and the bottom edge. "Draw one step down" lands on the L-shaped step arrow, which drops from one inner line to the next without crossing a line. It also has three plain glass discs (no symbols) and a blue pen. Fail: the stop line under the box is lemon yellow (median RGB 250,225,42, hue ~53 deg), not amber #FFB020 (hue ~39 deg). The prompt says no yellow and amber only for the stop line. Off-brand colour; brand 3. Candidate not committed (scored_blob is the uncommitted candidate). v4 prompt written. |
+| `course/images/bp-03-what-is-a-grid-bot/015.png` | bp-03 | 4/4/4/5/5/-/3 | — | `specs/remake/bp-03-what-is-a-grid-bot__015.txt` | [remake_needed, ChatGPT web, candidate 82e8810] Remake v4 fixes the colour. The stop line is amber (warm pixels have a median hue of ~41 deg, p10-p90 35-44 deg; no yellow anywhere). The pen is blue, the tokens are three plain discs, the labels are exact, and the margins are fine (tags 125px from the left and 137px from the right). Fail on label accuracy 3: the arrows no longer land as in v3. The left and right blank tags point at the box sides, not the inner lines or the token pile. No tag points at the bottom edge; instead an untagged arrow runs from the stop line up to it. The token pile moved to the bottom-left. The "Draw one step down" arrow ends beside the L with a stray, doubled white arrowhead, not on it. Candidate not committed (scored_blob is the uncommitted candidate). v5 prompt written. |
 
 ## Passed
 
@@ -198,3 +198,4 @@ None: all 25 code-drawn frames pass at 61c4f97. `CODE_DRAWN_FIXES_0eb1dc6.md` (a
 - 0eb1dc6 code-drawn rescore (7:15pm WITA): 14 changed frames rescored. 8 pass (bp-01 a-ladder, the-fence, title-card, end-card; bp-02 title-card, end-card; bp-03 title-card, end-card). 6 fail (bp-02 hook: tags in the embedded list ~17-18px; bp-03 hook and limit-orders-wait: tickets cover or tangle with the crossings; all three thumbnails: the mascot is too small, and on bp-03 the chip covers the path). The other 11 code-drawn frames are byte-identical. Code-drawn total: 19 of 25 pass. The 3 el-06 28.png rows were dropped (they're gone from IMAGE_USE @0eb1dc6). Totals: 82 pass / 10 fail of 92.
 - Batch 4, v3 remakes (7:20pm WITA): bp-02 011, bp-03 009 and bp-03 016 pass and are committed. Their tags are now 107-117px from the side edges and 77px from the bottom on 016: short of the prompt's 120/100px targets, but not cramped by eye. bp-03 015 fails. Its arrows are now right, but the stop line is lemon yellow (hue ~53 deg), not amber #FFB020, which is an off-brand colour. The v4 prompt is in `specs/remake/` (v3 moved to `_superseded/`). Totals: 85 pass / 7 fail of 92.
 - 61c4f97 code-drawn rescore (7:30pm WITA): all 6 redrawn frames pass. bp-02 hook now has 28px checklist tags. On the bp-03 hook and limit-orders-wait, the tickets are clear of the drop, the leaders land on the 17 Aug and 30 Aug down-closes, and one "3 more in October" ticket has dots on 2, 5 and 9 Oct. The mascot was removed from the three thumbnails; bp-01 and bp-02 are pixel-identical to their passing e3d737e versions, and on bp-03 the chip sits beside the chart. The other 19 are byte-identical. Code-drawn total: 25 of 25 pass. Totals: 91 pass / 1 fail of 92 (only bp-03 015 left).
+- bp-03 015 v4 (7:25pm WITA): the stop line is now amber (median hue ~41 deg; v3 was ~53 deg lemon), and the margins are fine. It still fails on label accuracy 3: the side tags point at the box sides, no tag points at the bottom edge, an untagged arrow runs from the stop line to the box, the token pile moved, and the step-down tag's arrow ends beside the L with a stray arrowhead. The v5 prompt pins each arrow's target (v4 moved to `_superseded/`). Totals: 91 pass / 1 fail of 92.

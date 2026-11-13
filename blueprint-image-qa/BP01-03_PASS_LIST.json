@@ -2208,26 +2208,24 @@
    "status": "fail",
    "action": "remake_needed",
    "scores": {
-    "beginner_clarity": 5,
+    "beginner_clarity": 4,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 5
+    "label_accuracy": 3
    },
-   "hard_fails": [
-    "off-brand colour"
-   ],
+   "hard_fails": [],
    "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__015.txt",
-   "notes": "Remake v3 fixes the arrows: \"Label the 5 words\" has one arrow to the top blank tag. The five blank tags each have one arrow to the top edge, the inner lines, the token pile, the stop line and the bottom edge. \"Draw one step down\" lands on the L-shaped step arrow, which drops from one inner line to the next without crossing a line. It also has three plain glass discs (no symbols) and a blue pen. Fail: the stop line under the box is lemon yellow (median RGB 250,225,42, hue ~53 deg), not amber #FFB020 (hue ~39 deg). The prompt says no yellow and amber only for the stop line. Off-brand colour; brand 3. Candidate not committed (scored_blob is the uncommitted candidate). v4 prompt written.",
+   "notes": "Remake v4 fixes the colour. The stop line is amber (warm pixels have a median hue of ~41 deg, p10-p90 35-44 deg; no yellow anywhere). The pen is blue, the tokens are three plain discs, the labels are exact, and the margins are fine (tags 125px from the left and 137px from the right). Fail on label accuracy 3: the arrows no longer land as in v3. The left and right blank tags point at the box sides, not the inner lines or the token pile. No tag points at the bottom edge; instead an untagged arrow runs from the stop line up to it. The token pile moved to the bottom-left. The \"Draw one step down\" arrow ends beside the L with a stray, doubled white arrowhead, not on it. Candidate not committed (scored_blob is the uncommitted candidate). v5 prompt written.",
    "pass": false,
    "refit": null,
    "provisional_scores": null,
    "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/015.png",
-   "scored_blob": "943969fc4220ff4970bc165d77b918ad19b12215",
-   "gen_file": "/workspace/blueprint-beginner/gen/bp-03-what-is-a-grid-bot/015/web3.png",
-   "download": "Neon Blueprint Notebook Guide.png",
+   "scored_blob": "82e88107ceaa9a8fa14521d1fc9f15dc260eff26",
+   "gen_file": "/workspace/blueprint-beginner/gen/bp-03-what-is-a-grid-bot/015/web4.png",
+   "download": "Neon Blueprint Notebook Diagram.png",
    "committed": false
   },
   {
