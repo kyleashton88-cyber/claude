@@ -9,12 +9,12 @@ Each line below only restates the lesson or a basic dictionary meaning. Definiti
 ### bp-04-market-regimes
 
 - Beat 1: A regime is the shape price is making.
-- Beat 1: A ladder here is the grid, a stack of waiting orders.
+- Beat 1: A ladder of waiting orders is a set of waiting limit orders inside a band you chose. Source, BP-03 beat 1: "It is a set of waiting limit orders inside a band you chose." Also BP-03 beat 1: "On the diagram for this beat, look for a ladder of waiting orders with a question mark on a crystal-ball shape that is crossed out."
 - Beat 1: A weave is price moving back and forth.
-- Beat 1: A band is the top and the bottom you draw around it.
+- Beat 1: Upper and lower are the band. Source, BP-03 beat 4: "Upper and lower are the band."
+- Beat 5 removed: "Spacing is how far apart the rungs sit." BP-04 only says "choose a spacing" and "a spacing percent." BP-03 does not define spacing as a distance.
+- Beat 6: Limit orders wait at a price. Source, BP-03 beat 5: "Limit orders wait at a price."
 - Beat 4: A pullback is a small step back against that walk.
-- Beat 5: Spacing is how far apart the rungs sit.
-- Beat 6: A waiting order sits on a rung until price comes to it.
 - Beat 7: Higher highs means each peak sits above the peak before it.
 - Beat 7: Lower lows means each dip sits under the dip before it.
 - Beat 7: Inventory is what has piled up on that side.
@@ -80,12 +80,12 @@ Each line below only restates the lesson or a basic dictionary meaning. Definiti
 Change 1:
 
 - After: A regime is the shape price is making.
-- After: A ladder here is the grid, a stack of waiting orders.
+- After: A ladder of waiting orders is a set of waiting limit orders inside a band you chose. Source, BP-03 beat 1: "It is a set of waiting limit orders inside a band you chose." Also BP-03 beat 1: "On the diagram for this beat, look for a ladder of waiting orders with a question mark on a crystal-ball shape that is crossed out."
 
 Change 2:
 
 - After: A weave is price moving back and forth.
-- After: A band is the top and the bottom you draw around it.
+- After: Upper and lower are the band. Source, BP-03 beat 4: "Upper and lower are the band."
 
 Change 3:
 
@@ -107,18 +107,16 @@ Change 2:
 
 Change 1:
 
-- After: Spacing is how far apart the rungs sit.
-
-Change 2:
-
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
+
+Removed definition, not in BP-04 or BP-03: "Spacing is how far apart the rungs sit."
 
 ### Beat 6 (diagram, Range fit)
 
 Change 1:
 
-- After: A waiting order sits on a rung until price comes to it.
+- After: Limit orders wait at a price. Source, BP-03 beat 5: "Limit orders wait at a price."
 
 Change 2:
 
