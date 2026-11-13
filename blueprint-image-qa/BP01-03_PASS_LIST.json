@@ -6,8 +6,8 @@
  "note_blobs": "scored_blob is the git blob id of the exact file scored. For rows with committed:true it equals the blob committed at that path (lesson stills/analogies on cursor/blueprint-beginner-images; code-drawn PNGs on cursor/blueprint-professional-rebuild-d1f6 @0eb1dc6 under blueprint-smoke/). For rows with committed:false (failed ChatGPT candidates) it is the hash of the UNCOMMITTED candidate in out/; the repo path still holds an older, uncleared blob (named in notes). A gate must check the blob at the path equals scored_blob AND pass is true.",
  "counts": {
   "total": 92,
-  "pass": 82,
-  "fail": 10,
+  "pass": 85,
+  "fail": 7,
   "needs_render_to_score": 0,
   "pending": 0
  },
@@ -1332,21 +1332,19 @@
     "character_consistency": null,
     "label_accuracy": 5
    },
-   "hard_fails": [
-    "cramped margin"
-   ],
-   "action": "remake_needed",
-   "remake_prompt": "specs/remake/bp-02-what-you-need__011.txt",
-   "notes": "Remake v2 fixes the content (no coins or coin stack, no numbers; gauge with a curved borrow arrow; bullseye; amber X marks; labels exact), but the \"Borrowed money: not here\" tag border is about 26px from the right edge (text about 49px). Cramped margin. Candidate not committed (scored_blob is the uncommitted candidate); the repo path still holds blob 1d91845. v3 prompt written.",
+   "hard_fails": [],
+   "action": "remade",
+   "remake_prompt": null,
+   "notes": "Remake v3 passes: the v2 picture is kept (no coins, discs or numbers; glass gauge with the needle pushed right and a curved cyan borrow arrow looping in; bullseye; amber X marks), and both tags moved in. Measured tag borders sit 107px (\"Profit target: not here\") and 117px (\"Borrowed money:\" / \"not here\") from the right edge. That is short of the prompt's 120px target but far clear of the ~45px cramped bar, so not cramped by eye. Labels exact.",
    "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-02-what-you-need/011.png",
-   "scored_blob": "e94bd5b88952a8e15cc4715387ea3415d041da13",
-   "status": "fail",
-   "pass": false,
+   "scored_blob": "90a86da53ab2b2d37aaf7bcd8f592b36b38d7101",
+   "status": "pass",
+   "pass": true,
    "refit": null,
    "provisional_scores": null,
-   "gen_file": "/workspace/blueprint-beginner/gen/bp-02-what-you-need/011/web3.png",
-   "download": "Not on the List_ Neon Finance Guide.png",
-   "committed": false
+   "gen_file": "/workspace/blueprint-beginner/gen/bp-02-what-you-need/011/web4.png",
+   "download": "Not on the List_ Fintech Checklist.png",
+   "committed": true
   },
   {
    "path": "course/images/bp-02-what-you-need/012.png",
@@ -2041,8 +2039,8 @@
    "lesson": "bp-03-what-is-a-grid-bot",
    "kind": "lesson-still",
    "source": "ChatGPT web",
-   "status": "fail",
-   "action": "remake_needed",
+   "status": "pass",
+   "action": "remade",
    "scores": {
     "beginner_clarity": 5,
     "composition_hierarchy": 4,
@@ -2052,19 +2050,17 @@
     "character_consistency": null,
     "label_accuracy": 5
    },
-   "hard_fails": [
-    "cramped margin"
-   ],
-   "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__009.txt",
-   "notes": "Remake v2 fixes the robot (no character; a curved arrow sets the ticket on its rung; tickets on lines; labels exact; no token pile), but the \"At the prices you wrote\" tag border sits about 27px from the right edge (text about 49px). Cramped margin, the same bar that failed bp-01 004. Candidate not committed (scored_blob is the uncommitted candidate); the repo path still holds blob 50a030a. v3 prompt written.",
-   "pass": false,
+   "hard_fails": [],
+   "remake_prompt": null,
+   "notes": "Remake v3 passes: no robot or figure; a curved cyan arrow sets the blue ticket on its rung; mint tickets on the upper rungs, blue on the lower, each on its line; \"At the prices you wrote\" arrow ends on the blue ticket. Edge bar checked at full size: the \"At the prices you wrote\" border is 110px from the right edge and \"Bot's job: keep your orders waiting\" is 116px from the left. That is short of the 120px prompt target but well clear of ~45px, so not cramped. Labels exact.",
+   "pass": true,
    "refit": null,
    "provisional_scores": null,
    "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/009.png",
-   "scored_blob": "bcdc5dc6b74a9d765c9e3cdf6782d9737ca3ec01",
-   "gen_file": "/workspace/blueprint-beginner/gen/bp-03-what-is-a-grid-bot/009/web2.png",
-   "download": "Neon Bot Order Ladder.png",
-   "committed": false
+   "scored_blob": "a6786f508275cb303822f793e626e3a0e503b26d",
+   "gen_file": "/workspace/blueprint-beginner/gen/bp-03-what-is-a-grid-bot/009/web3.png",
+   "download": "Neon Bot Order Placement Infographic.png",
+   "committed": true
   },
   {
    "path": "course/images/bp-03-what-is-a-grid-bot/010.png",
@@ -2214,24 +2210,26 @@
    "status": "fail",
    "action": "remake_needed",
    "scores": {
-    "beginner_clarity": 4,
-    "composition_hierarchy": 3,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 4,
+    "brand_fidelity": 3,
     "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
-   "hard_fails": [],
+   "hard_fails": [
+    "off-brand colour"
+   ],
    "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__015.txt",
-   "notes": "Remake v2: box, five blank tags, plain-disc token pile, amber stop line and blue pen are all there, but \"Label the 5 words\" fans five crossing cyan arrows over the page. One ends on bare paper beside the box, and the two right-hand tags get none. Composition and accuracy 3. Candidate not committed (scored_blob is the uncommitted candidate); the repo path still holds blob 334f5e9. v3 prompt written.",
+   "notes": "Remake v3 fixes the arrows: \"Label the 5 words\" has one arrow to the top blank tag. The five blank tags each have one arrow to the top edge, the inner lines, the token pile, the stop line and the bottom edge. \"Draw one step down\" lands on the L-shaped step arrow, which drops from one inner line to the next without crossing a line. It also has three plain glass discs (no symbols) and a blue pen. Fail: the stop line under the box is lemon yellow (median RGB 250,225,42, hue ~53 deg), not amber #FFB020 (hue ~39 deg). The prompt says no yellow and amber only for the stop line. Off-brand colour; brand 3. Candidate not committed (scored_blob is the uncommitted candidate). v4 prompt written.",
    "pass": false,
    "refit": null,
    "provisional_scores": null,
    "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/015.png",
-   "scored_blob": "4e91acf403f29663d2f5ab6fe55a6c3ce1a62316",
-   "gen_file": "/workspace/blueprint-beginner/gen/bp-03-what-is-a-grid-bot/015/web2.png",
-   "download": "Blueprint Notebook_ Label and Step Down.png",
+   "scored_blob": "943969fc4220ff4970bc165d77b918ad19b12215",
+   "gen_file": "/workspace/blueprint-beginner/gen/bp-03-what-is-a-grid-bot/015/web3.png",
+   "download": "Neon Blueprint Notebook Guide.png",
    "committed": false
   },
   {
@@ -2239,8 +2237,8 @@
    "lesson": "bp-03-what-is-a-grid-bot",
    "kind": "lesson-still",
    "source": "ChatGPT web",
-   "status": "fail",
-   "action": "remake_needed",
+   "status": "pass",
+   "action": "remade",
    "scores": {
     "beginner_clarity": 5,
     "composition_hierarchy": 4,
@@ -2250,19 +2248,17 @@
     "character_consistency": null,
     "label_accuracy": 5
    },
-   "hard_fails": [
-    "cramped margin"
-   ],
-   "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__016.txt",
-   "notes": "Remake v2 fixes the pencil (blue pen, no yellow or pink), and the five empty tags are good, but the instruction tags moved to the top corners: \"Say them out loud\" border is about 38px from the right edge (text about 60px) and \"Fill in the 5 labels\" about 53px from the left. Cramped margin. Candidate not committed (scored_blob is the uncommitted candidate); the repo path still holds blob a280b51. v3 prompt written.",
-   "pass": false,
+   "hard_fails": [],
+   "remake_prompt": null,
+   "notes": "Remake v3 passes: \"Fill in the 5 labels\" and \"Say them out loud\" are centred side by side below the notebook (borders 322px from the left and 320px from the right). The five empty tags have dotted cyan arrows to the top edge, two inner lines, the bottom edge and the stop line. The pen is blue, and the stop line is amber (hue ~32 deg, in line with passed rows). The instruction tags sit 77px above the bottom edge, under the prompt's 100px target but not cramped by eye. Labels exact.",
+   "pass": true,
    "refit": null,
    "provisional_scores": null,
    "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/016.png",
-   "scored_blob": "dbbbf61d9d5e160131c974a6f79cf3ea2c391065",
-   "gen_file": "/workspace/blueprint-beginner/gen/bp-03-what-is-a-grid-bot/016/web2.png",
-   "download": "Neon Notebook Labeling Exercise.png",
-   "committed": false
+   "scored_blob": "4a370ab6cd0b281b43a80850c4dace3c3533c326",
+   "gen_file": "/workspace/blueprint-beginner/gen/bp-03-what-is-a-grid-bot/016/web3.png",
+   "download": "Neon Blueprint Box Labeling Worksheet.png",
+   "committed": true
   },
   {
    "path": "course/images/bp-03-what-is-a-grid-bot/017.png",
