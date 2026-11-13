@@ -17,7 +17,7 @@ DRAFT: legal wording needs Stewart's sign-off. Entity name and ABN to be confirm
 
 **Effective date:** [EFFECTIVE_DATE]
 
-Atlas is an education library published by **Market Pros Proprietary Limited (ABN 19 679 270 387)**. Contact: contact@stewartcrowncrypto.com. Privacy contact: contact@stewartcrowncrypto.com (subject line: Privacy).
+Atlas is a directory for grid bots, published as an education library by **Market Pros Proprietary Limited (ABN 19 679 270 387)**. Contact: contact@stewartcrowncrypto.com. Privacy contact: contact@stewartcrowncrypto.com (subject line: Privacy).
 
 ## General information only
 

@@ -39,9 +39,9 @@ We collect:
 - **Checklist requests.** If you ask for The Grid Bot Starter Checklist, we collect your name, email and country so we can send it. The public address of the file is [CHECKLIST LINK] until Stewart publishes it. If you tick the box on the form, we will also send you educational emails about grid bots and our programs. Every email identifies us and has an unsubscribe link, and we action opt-outs within 5 business days.
 - **Technical logs.** A host typically logs an IP address, browser type, and the page requested, so the site can run and so abuse can be investigated. Our host, [HOST, e.g. Netlify/Vercel/Cloudflare], keeps these logs.
 - **On-device progress.** Some lessons store a quiz score or a checklist tick in your browser’s local storage. That stays on your device unless a later version clearly says it is sent to a server. You can clear it in your browser.
-- **Cookies and third-party connections.** We don't use analytics or advertising cookies. When you load a page, your browser also connects to Google Fonts (to load fonts) and to Binance's public data service and CoinGecko (to show market prices). Those providers receive your IP address and browser details under their own privacy policies. If we add analytics later, we will update this policy first and, where needed, ask for your consent.
+- **Cookies and connections in this copy.** We don't use analytics or advertising cookies. This single-file copy embeds its fonts and its sample prices, so opening it does not call a font server or a market-data service. If a later hosted copy adds a connection, update this notice first and, where needed, ask for consent.
 
-[DRAFTING NOTE, remove before publishing: review item P3 says list only what the live build actually does. The current build has no checklist sign-up form (checked 10 Nov 2026 on cursor/atlas-library-buildout), so the “Checklist requests” bullet describes the planned form. Keep it only if the form ships with the notice in checklist-form-notice.md, or the checklist is claimed through Whop. Stewart also decides whether to keep Google Fonts and the Binance/CoinGecko browser calls or self-host/proxy them; if self-hosted/proxied, delete the third-party sentences in the last bullet.]
+[DRAFTING NOTE, remove before publishing: review item P3 says list only what the live build actually does. This single-file copy has no checklist sign-up form, so the “Checklist requests” bullet describes the planned form. Keep it only if the form ships with the notice in checklist-form-notice.md, or the checklist is claimed through Whop. This copy also does not call a font host or a market-data service. If a hosted copy adds either, name the provider in this notice before publishing.]
 
 We do not ask for government identifiers, health information, or payment card numbers to read the library. If a paid product is added later, this notice must be updated before any card data is collected, and card data should be handled by the payment provider rather than stored on the Atlas server.
 
@@ -60,7 +60,7 @@ We send marketing emails only if you opt in. You can unsubscribe at any time fro
 
 ## Overseas processing
 
-Some of our providers store or process information overseas. These include [HOST] ([COUNTRY]), our email and checklist platform [PLATFORM] ([COUNTRY, likely US]), Whop (US) if you claim the checklist through Whop, Google Fonts (US), Binance's data service ([COUNTRY]) and CoinGecko ([COUNTRY]). We take reasonable steps so these providers handle your information consistently with the APPs.
+Some of our providers store or process information overseas. These include [HOST] ([COUNTRY]), our email and checklist platform [PLATFORM] ([COUNTRY, likely US]), and Whop (US) if you claim the checklist through Whop. This single-file copy does not send the browser to a font host or a market-data service. We take reasonable steps so these providers handle your information consistently with the APPs.
 
 ## Security and retention
 

@@ -1,0 +1,228 @@
+<template id="home">
+<div class="hero">
+  <div>
+    <p class="purpose">Atlas is a directory for grid bots. Its job is to teach you how to use them, how they work, and how to look after them so they do the job you gave them.</p>
+    <p>Stewart publishes it for beginners through Market Pros Proprietary Limited. You follow one path. You learn what a grid bot is, how a cycle works, how to set one up, how to choose the range and the spacing, how to limit the loss, how to watch a running bot, and the mistakes that usually come first.</p>
+    <p>The glossary, the guides, the calculators, and the market studies sit beside that path. Each one tells you which step it belongs to. Nothing here places an order or tells you a setting is right for your money. Worked numbers are hypothetical. Chart samples are bundled for study. They are not live quotes.</p>
+  </div>
+  <figure class="hero-figure">
+    <img src="__MASCOT__" width="280" height="280" alt="White robot mascot with a blue G on its chest, smiling and giving a thumbs up">
+    <svg class="ladder" viewBox="0 0 320 220" role="img" aria-labelledby="gridTitle gridDesc">
+      <title id="gridTitle">A grid ladder</title>
+      <desc id="gridDesc">Horizontal lines show an upper boundary, sell levels, a weaving price, buy levels, and a lower boundary.</desc>
+      <rect x="8" y="8" width="304" height="204" rx="12" fill="#0c1c2a" stroke="#3d6484"></rect>
+      <path d="M24 150 C 70 150, 90 70, 140 90 S 210 160, 250 80 S 300 60, 300 48" fill="none" stroke="#b6f3d4" stroke-width="2.5"></path>
+      <g stroke="#8fb4cc" stroke-width="1">
+        <line x1="20" y1="36" x2="300" y2="36"></line>
+        <line x1="20" y1="64" x2="300" y2="64"></line>
+        <line x1="20" y1="92" x2="300" y2="92"></line>
+        <line x1="20" y1="128" x2="300" y2="128"></line>
+        <line x1="20" y1="160" x2="300" y2="160"></line>
+        <line x1="20" y1="188" x2="300" y2="188"></line>
+      </g>
+      <g fill="#d5e4f0" font-family="IBM Plex Mono, monospace" font-size="11">
+        <text x="24" y="30">Upper</text>
+        <text x="24" y="58">Sell</text>
+        <text x="24" y="122">Buy</text>
+        <text x="24" y="182">Lower</text>
+      </g>
+    </svg>
+    <figcaption>A grid is a ladder you design. Buys sit below the price. Sells sit above it. The bot repeats that cycle only inside the boundaries you set.</figcaption>
+  </figure>
+</div>
+<h2>Follow the path in order</h2>
+<ol class="path-list">
+  <li><a href="#/path/what">What a grid bot is</a>. A ladder of planned prices, not a prediction.</li>
+  <li><a href="#/path/how">How it works</a>. Buy, sell, and repeat while price stays in the box.</li>
+  <li><a href="#/path/setup">Setting one up</a>. Write the rules before anything runs.</li>
+  <li><a href="#/path/range">Choosing ranges and grids</a>. Width, spacing, and fees.</li>
+  <li><a href="#/path/risk">Managing risk</a>. What you can lose if price leaves.</li>
+  <li><a href="#/path/monitor">Monitoring and adjusting</a>. Check the plan, not every fill.</li>
+  <li><a href="#/path/mistakes">Common mistakes</a>. The errors that come from forcing more activity.</li>
+</ol>
+<p>When you need a word, open the <a href="#/glossary">glossary</a>. When you need a longer explanation of candles, venues, or leverage, open the <a href="#/guides">guides</a>. When you want to see the arithmetic, open the <a href="#/tools">tools</a>.</p>
+</template>
+
+<template id="path/what">
+<p>A grid bot is a program that places buy and sell orders at prices you chose in advance, inside a high and a low you also chose. It does not look at the news and decide that a coin is good. It follows the ladder you gave it.</p>
+<p>Picture a ladder on a price chart. The top rung is the upper boundary. The bottom rung is the lower boundary. Between them are the grid levels. Rungs below the current price are buys. Rungs above it are sells. When price falls through a buy and later rises through the paired sell, that round trip is one cycle. The difference between those two prices, before fees, is the gross step.</p>
+<figure class="shot">
+  <img src="__MASCOT__" width="200" height="200" alt="White robot mascot with a blue G on its chest, smiling and giving a thumbs up">
+  <figcaption>The mascot is a teacher, not a signal. A finished cycle is a buy and a later sell. It is not a promise that the next cycle happens.</figcaption>
+</figure>
+<h2>What the bot is for</h2>
+<p>The job is repetition inside a range. If price wanders up and down through the same area, the ladder can complete cycles. If price runs away and does not come back, the ladder mostly collects inventory: coins you bought and have not sold. That inventory can fall in price. Grid profit on the finished cycles can be positive while the account is still down, because unsold coins are a separate result.</p>
+<h2>A hypothetical cycle</h2>
+<p>Hypothetical example. A buy fills at 100 and the paired sell fills at 102. The gross difference is 2 per coin, before fees, spread, and slippage. If the fee on the round trip is larger than 2, the cycle did not pay for itself. The <a href="#/tools">grid calculator</a> is where you compare a step with a fee. The numbers are illustrations. They are not a record of anyone's results.</p>
+<h2>What it is not</h2>
+<ul>
+  <li>It is not a forecast of the next candle.</li>
+  <li>It is not a machine you can leave without a written reason to turn it off.</li>
+  <li>It is not safer because it is automatic. Automation repeats your rules, including a bad range.</li>
+</ul>
+<p class="practice"><strong>Try this.</strong> In your own words, finish the sentence: a grid bot repeats buys and sells inside a box, and it stops being the plan I wrote when… You will answer that properly in the range lesson. For now, notice that the sentence needs an ending.</p>
+<p>The short definitions are under <a href="#/glossary/grid">grid</a>, <a href="#/glossary/grid-level">grid level</a>, and <a href="#/glossary/range">range</a>.</p>
+</template>
+
+<template id="path/how">
+<p>Once the rules are set, the bot does not get bored, frightened, or greedy. That is the useful part. It is also the dangerous part, because it will keep following a plan after the plan has stopped fitting the market.</p>
+<figure class="shot">
+  <img src="__MASCOT_ALT__" width="220" height="220" alt="The same robot mascot giving a thumbs up, with the words Automate, Trade, Grow above a chart">
+  <figcaption>The picture says automate, trade, grow. Here, automate means the bot repeats your rules. It does not mean the account grows.</figcaption>
+</figure>
+<h2>One cycle, in order</h2>
+<ol>
+  <li>You set the upper and lower prices. That is the workplace.</li>
+  <li>You split the workplace into levels.</li>
+  <li>Price falls and a buy fills.</li>
+  <li>Price rises and the bot sells at the next level up.</li>
+  <li>The gap between that buy and that sell is realised grid profit, before costs.</li>
+  <li>The bot replaces the orders and waits for price to cross again.</li>
+</ol>
+<p>If price never crosses a level, nothing completes. A market that sits still can be quiet for a long time. If price leaves the box and stays away, the original setup has to be reviewed. The bot will not notice that your reason has expired unless you wrote a check for it.</p>
+<h2>Spot and futures use the same cycle</h2>
+<p>The buy-then-sell idea is the same on spot and on a futures contract. What changes is ownership, margin, funding, and liquidation. Those differences belong in <a href="#/path/setup">setting one up</a> and in the <a href="#/guides/futures-leverage">futures guide</a>. Start from the cycle before you add leverage.</p>
+<p>A longer look at how orders sit in a book is in the <a href="#/guides/exchanges">venues guide</a>. A longer look at letting software follow rules is in the <a href="#/guides/automation">automation guide</a>.</p>
+</template>
+
+<template id="path/setup">
+<p>Setting a grid up is mostly writing. You decide the market, the box, the number of gaps, the cash, the fee you will assume, and the sentence that means "this plan is finished". The bot cannot supply those decisions.</p>
+<h2>Spot before leverage</h2>
+<p>On a spot grid you are buying and selling the coin with cash you put in. You can end up holding more of the coin if price falls through the buys. You do not get liquidated by a funding payment, because there is no leverage. On a futures grid the same ladder can be built with borrowed exposure. Losses can then exceed the cash you think of as the bot's budget, and a liquidation price can close the position for you.</p>
+<div class="table-scroll">
+<table>
+  <caption>The same ladder, two different contracts. General information, not a recommendation.</caption>
+  <thead><tr><th>Question</th><th>Spot grid</th><th>Futures grid</th></tr></thead>
+  <tbody>
+    <tr><td>What do you hold?</td><td>The coin and the quote cash</td><td>A contract, plus margin</td></tr>
+    <tr><td>Can the venue close you?</td><td>Not by liquidation of a loan</td><td>Yes, if margin is not enough</td></tr>
+    <tr><td>Extra cost to model</td><td>Fees, spread, slippage</td><td>Those, plus funding</td></tr>
+    <tr><td>Beginner default in this directory</td><td>Learn here first</td><td>Only after you can explain the liquidation price</td></tr>
+  </tbody>
+</table>
+</div>
+<h2>Where the coins live</h2>
+<p>A grid holds inventory. If that inventory is on a venue, the account security matters as much as the range. If you ever move coins yourself, the seed phrase rules in the <a href="#/guides/security">security guide</a> apply. Atlas never asks for a seed phrase, a password, or a withdrawal key. A message that does is not from Market Pros.</p>
+<p>Order types, the book, and the spread are in the <a href="#/guides/exchanges">venues guide</a>. Fees on a chain, if the grid is on-chain, are in the <a href="#/guides/chains">chains guide</a>.</p>
+<h2>A study checklist, stored on this device</h2>
+<p>These boxes are a study list. They stay in this browser. They are not The Grid Bot Starter Checklist. The public address of that file is [CHECKLIST LINK] until Stewart publishes it. Ticking a box does not mean a bot is suitable for you.</p>
+<ul class="check-list">
+  <li><label><input type="checkbox" data-save="wrote-box"> I can write the upper price and the lower price.</label></li>
+  <li><label><input type="checkbox" data-save="wrote-stop"> I can write the condition that means the range is no longer the plan.</label></li>
+  <li><label><input type="checkbox" data-save="fees"> I have compared one gap with a round-trip fee.</label></li>
+  <li><label><input type="checkbox" data-save="cash"> I know how much cash is for this bot, and I am not using rent money in the example.</label></li>
+  <li><label><input type="checkbox" data-save="spot-first"> If I cannot explain liquidation, I am staying with the spot explanation.</label></li>
+</ul>
+<p>The wording Stewart would put on a real sign-up form is in the <a href="#/guides/checklist-form-notice">checklist notice</a>. This file does not send that form anywhere.</p>
+</template>
+
+<template id="path/range">
+<p>The range is the bot's workplace. Too narrow, and ordinary noise carries price outside it. Too wide, and the same cash is spread so thin that each level is small and cycles are rare. You are balancing room to survive against chances to complete a cycle. You are not predicting the high and the low of the year.</p>
+<h2>A way to sketch the box</h2>
+<ol>
+  <li>Mark the support and resistance you can actually see on the timeframe you care about. The <a href="#/guides/market-structure">market structure guide</a> is the lesson for swings, ranges, and breaks.</li>
+  <li>Measure a few recent swings. That is the size of ordinary movement, not a target.</li>
+  <li>Look one timeframe higher and ask whether price is already trending hard. A grid is a mean-reversion style of plan. A strong one-way move fights it.</li>
+  <li>Leave room so a normal wick does not end the plan on the first candle.</li>
+  <li>Write the invalidation in a sentence. "If the daily close is beyond the box, I review" is a sentence. "I will see" is not.</li>
+</ol>
+<p>The chart studies under <a href="#/markets">markets</a> are bundled samples. Use them to practise the question. They are not a signal to run a bot on that asset.</p>
+<h2>Spacing</h2>
+<p>Arithmetic spacing keeps the same price gap, such as 2 units, all the way up the ladder. The percentage gap gets smaller as price rises. Geometric spacing keeps the same percentage gap, so the price gap grows as price rises. Neither one is the correct setting. The question is whether the smallest gap still clears fees.</p>
+<p>More gaps inside a fixed box means a smaller step. If the step does not clear the fee and the slippage you assume, extra trades do not repair it. They repeat a loss.</p>
+<h2>Hypothetical calculator</h2>
+<p>Hypothetical example, matching the form below. Lower 100, upper 110, five gaps, arithmetic spacing. The gap is 2. A 10 basis point fee on each side is 0.20 per unit at a price of 100, which is smaller than 2. Change the fee to 150 basis points and the note should warn you. That warning is the lesson. It is not an instruction to use 100 and 110 on any market.</p>
+<div data-mount="grid"></div>
+<p>Indicators that people use when they draw a box, such as a moving average or ATR, are explained in the <a href="#/guides/technical-analysis">technical analysis guide</a>. They are descriptions of past prices. They are not the bot's permission to run.</p>
+</template>
+
+<template id="path/risk">
+<p>A bot removes hesitation from the clicks. It does not remove the loss if price does the opposite of the story you told. Risk, in this directory, means writing that loss down before you care about the cycles.</p>
+<p>A beginner-sized version of the question is: how much cash am I willing to lose if the invalidation is hit, and how far away is that price? Size is that cash divided by the distance. If the stop is very close, the same cash becomes a large position. Close stops are not automatically safer.</p>
+<h2>The calculator</h2>
+<p>The form uses the figures you type. Fees and slippage are basis points on the notional, counted on the way in and the way out. On spot, if the notional is larger than the account, the position needs more cash than the account figure. On futures, if the implied leverage is above the cap you typed, the size does not fit the cap. A venue's real margin ladder is not in this form.</p>
+<div data-mount="risk"></div>
+<p>Hypothetical reading of the starting numbers. Account 10,000, risk 1 percent, entry 100, stop 95. The cash at risk before fees is 100. The distance is 5, so the quantity is 20 and the notional is 2,000. That is 0.20 times the account, not a recommendation to buy 20 of anything.</p>
+<h2>Several bots are still one account</h2>
+<p>Five grids that all hold the same coin are one bet that the coin stays in those boxes. A reserve that is not locked in a grid is what you use when a plan ends and you still have to pay fees or meet a margin call. The longer lesson on expectancy, R, and drawdown is the <a href="#/guides/risk-academy">risk guide</a>. Leverage and funding are in the <a href="#/guides/futures-leverage">futures guide</a>.</p>
+<p class="practice"><strong>Try this.</strong> Move the stop closer to the entry and watch the quantity rise. Then move it further away and watch the quantity fall. The cash at risk stays the same until you change the percent. That is the whole idea of the formula.</p>
+</template>
+
+<template id="path/monitor">
+<p>Monitoring is not staring at every fill. It is a check that the reason you wrote is still true. Price still lives in the box, or you have a rule for when it does not. The gap still clears the fees you are actually paying. Nothing about the market you relied on, such as a scheduled event, has made the box obsolete.</p>
+<h2>A small routine</h2>
+<ul>
+  <li><strong>When you look.</strong> Is price inside the box? If it is outside, do you review, or were you waiting for a close beyond the box?</li>
+  <li><strong>On the fills.</strong> Are you counting finished cycles and unsold coins separately? Grid profit can be up while the coins you still hold are down.</li>
+  <li><strong>On the costs.</strong> Have fees, spread, or funding changed enough that the step no longer clears them?</li>
+  <li><strong>On the week.</strong> Which bot only accumulated inventory? That one needs the invalidation sentence, not a narrower grid to "make it work".</li>
+</ul>
+<p>Adjusting means returning to the written plan. It does not mean dragging the box every hour so that the bot is always inside the latest price. A box you move constantly is no longer a plan you can review.</p>
+<h2>A practice journal</h2>
+<p>Paste hypothetical results in R, one per line. Expectancy here is the average R per row. The deepest drop is how far the running sum fell from its high. The <a href="#/guides/journal-lab">journal guide</a> explains the columns a real log needs. The rows below are a made-up sample so the arithmetic is visible.</p>
+<div data-mount="journal"></div>
+<p>Events and the wider backdrop, as general context rather than a trade idea, are in the <a href="#/guides/macro-lab">macro guide</a>. Records you may need because many fills create many transactions are in the <a href="#/guides/tax-regulation">tax guide</a>. That page does not tell you what you owe.</p>
+</template>
+
+<template id="path/mistakes">
+<p>Most early grid trouble is a configuration you can name, not a mysterious candle. The usual push is to force more activity: more leverage, more bots, a tighter box, or a coin that jumps around, without a sentence for when the plan is over.</p>
+<h2>Mistakes and the fix that is actually a rewrite</h2>
+<ul>
+  <li><strong>Leverage you cannot explain.</strong> A small move becomes a large account move. The fix is to stay with the spot explanation until liquidation is clear.</li>
+  <li><strong>A box that does not match ordinary swings.</strong> Price either never travels the ladder, or it leaves immediately. Rebuild from structure and recent swing size, not from a profit target.</li>
+  <li><strong>So many levels that the gap is smaller than the fee.</strong> Model the fee first. Adding levels does not create a larger gap.</li>
+  <li><strong>A box so wide that cycles almost never finish.</strong> You have room, and very little repetition. Width and step are a pair.</li>
+  <li><strong>Using a range plan in a one-way market.</strong> Check the higher timeframe before you call the market sideways.</li>
+  <li><strong>No invalidation.</strong> Drawdown continues after the original idea is already false. Write the failure condition first.</li>
+  <li><strong>A thin market.</strong> Spread and slippage can eat the step you calculated on a mid price. The <a href="#/guides/exchanges">venues guide</a> is the lesson on the book and the spread.</li>
+</ul>
+<h2>Times the careful choice is no grid</h2>
+<p>High-impact news, a parabolic run, a crash, and a thin book can all break the assumption that price will wander back through the ladder. Sometimes the finished plan is to wait. Waiting is a decision. It is allowed.</p>
+<p>Feelings that show up while a bot is running, and a way to write them down without turning them into a signal, are in the <a href="#/guides/psychology">psychology guide</a>.</p>
+<form class="js-quiz quiz">
+  <fieldset data-answer="yes">
+    <legend>Finished cycles are up, and you still hold coins that are now cheaper. Can the account be down?</legend>
+    <label><input type="radio" name="q1" value="yes"> Yes. Grid profit does not include unsold coins.</label>
+    <label><input type="radio" name="q1" value="no"> No. Positive grid profit means the account is up.</label>
+  </fieldset>
+  <fieldset data-answer="fees">
+    <legend>You double the number of gaps inside the same box. What happens to each gap?</legend>
+    <label><input type="radio" name="q2" value="fees"> Each gap gets smaller, so fees matter more.</label>
+    <label><input type="radio" name="q2" value="bigger"> Each gap gets larger, so fees matter less.</label>
+  </fieldset>
+  <fieldset data-answer="wait">
+    <legend>Price is trending hard and your plan was a range. What fits this directory?</legend>
+    <label><input type="radio" name="q3" value="tighter"> Tighten the box so more orders fill.</label>
+    <label><input type="radio" name="q3" value="wait"> Treat that as a reason to review or wait, not as a reason to force fills.</label>
+  </fieldset>
+  <button class="js-quiz-check" type="button">Check this reading</button>
+  <p class="quiz-result" role="status"></p>
+</form>
+</template>
+
+<template id="tools">
+<p>These three tools run in the browser from the numbers you type or paste. They do not call a venue, they do not use a network, and they do not know a live fee. Change an input and the result changes. That is the lesson.</p>
+<h2 id="grid">Grid spacing</h2>
+<p>Use this while you are on <a href="#/path/range">choosing ranges and grids</a>. Gaps mean the spaces between the lower price and the upper price. Five gaps produce six prices.</p>
+<div data-mount="grid"></div>
+<h2 id="risk">Risk and position size</h2>
+<p>Use this while you are on <a href="#/path/risk">managing risk</a>. Cash at risk divided by the distance to the stop.</p>
+<div data-mount="risk"></div>
+<h2 id="journal">Journal totals</h2>
+<p>Use this while you are on <a href="#/path/monitor">monitoring and adjusting</a>. One R result per line. The column list for a real log is in the <a href="#/guides/journal-lab">journal guide</a>.</p>
+<div data-mount="journal"></div>
+</template>
+
+<template id="about">
+<p>Stewart Crown publishes Atlas through Market Pros Proprietary Limited, ABN 19 679 270 387. The contact address on these pages is contact@stewartcrowncrypto.com.</p>
+<p>Atlas is a directory for grid bots. The path is the course. The glossary, guides, tools, and market studies are the shelves. They exist so a beginner can look up a word or a chart idea and then go back to the step that uses it.</p>
+<p>This copy is one HTML file. The fonts, the two mascot pictures, the glossary, and the sample candles are inside the file. Opening it does not need a network. Uploading it to a host is Stewart's choice. The legal pages are still drafts until the items in <a href="#/notes">NOTES</a> are real.</p>
+<p>Market Pros Proprietary Limited does not hold an Australian financial services licence. The directory is general information. It is not personal advice, and it does not place orders or hold customer funds.</p>
+</template>
+
+<template id="contact">
+<p>Write to <a href="mailto:contact@stewartcrowncrypto.com">contact@stewartcrowncrypto.com</a>. For a privacy question, put Privacy in the subject line. For a complaint about personal information, put Privacy complaint in the subject line.</p>
+<p>Say which lesson you were on and the date you read it. Do not send a seed phrase, a password, a withdrawal key, or a screenshot that shows one. Atlas will not ask for those. If a message does, it is not from Market Pros.</p>
+<p>There is no form on this file, because a form would need a server. The mailto link opens your own email program if you have one. The page itself still works with no network.</p>
+<p>Postal mail, once Stewart sets it, goes to the address marked [POSTAL_ADDRESS] on the <a href="#/privacy">privacy page</a>.</p>
+</template>

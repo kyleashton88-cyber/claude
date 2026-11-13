@@ -29,11 +29,11 @@ The site is operated by **Market Pros Proprietary Limited (ABN 19 679 270 387)**
 
 ## What Atlas is
 
-Atlas is a dictionary and directory of crypto and trading ideas. The public line is “one library, every market, a smarter you”. Pages explain how markets, tools, and on-chain systems work. Calculators and labs show how a number is built from the assumptions you type in.
+Atlas is a directory for grid bots, and a path that teaches a beginner how a grid bot works, how to set one up, and how to watch it. The public line is “a directory for grid bots”. Guides, the glossary, calculators, and market studies exist to support that path. Calculators show how a number is built from the assumptions you type in.
 
 Atlas is general information only, not financial product advice. It does not take into account your objectives, financial situation or needs. It is not a recommendation to acquire, dispose of, or hold any cryptoasset or other asset. It does not place orders, hold customer funds, or manage money for you.
 
-Market prices shown on Atlas come from third-party data feeds. They may be delayed or wrong and are shown for study only.
+Price charts in this copy are bundled sample series for study. They are not live quotes, they are not a historical claim, and they may not match any real trading day. They are not an instruction to run a bot on that market.
 
 ## No licence is held
 

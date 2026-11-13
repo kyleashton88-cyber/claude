@@ -18,10 +18,10 @@ Ask the question you actually have. Each answer is general information, two to f
 ## Getting started
 
 **I am new. Where do I start?**
-Start with words, not with a bot. Read what a [candle](market-structure.md#candles) is, then what a [trend and a range](market-structure.md#trend-and-range) are. When those are clear, the [glossary](glossary.md) is the place to look up the next word you meet.
+Start with what a grid bot is, then how a cycle works. When a word is new, open the [glossary](glossary.md). When you need to see a range on a chart, read what a [candle](market-structure.md#candles) is, then what a [trend and a range](market-structure.md#trend-and-range) are.
 
 **What is Atlas?**
-Atlas is one library for crypto and trading ideas: a dictionary and a set of lessons, published as general information. It does not hold your funds and it does not place orders. The scope is in the [disclaimer](disclaimer.md).
+Atlas is a directory for grid bots. It teaches what a grid bot is, how it works, how to set one up, how to choose a range, how to size risk, how to monitor a bot, and the mistakes that usually come first. It does not hold your funds and it does not place orders. The scope is in the [disclaimer](disclaimer.md).
 
 **Is this personal advice?**
 No. The library is general information and does not take your circumstances into account. If you need advice about you, ask someone who is allowed to give it. The [footer line](footer-line.md) says the same thing in one sentence.
