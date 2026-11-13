@@ -11,9 +11,13 @@ from __future__ import annotations
 import importlib.util
 import json
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "skills/video-production/quality-gate"))
+from gate.numbers import find_dates  # noqa: E402
+
 PRICES = json.loads((ROOT / "course/data/public-prices/btc-usd-windows.json").read_text())
 OUT = Path(__file__).resolve().parent / "numbers"
 LESSONS = (
@@ -86,14 +90,20 @@ def main() -> None:
         labels = sorted(valid, key=lambda item: int(item))
         # Lesson numbers are on the title card. They are not prices.
         labels.append(sid.split("-")[1])
+        spoken_blob = "\n".join(
+            f"{shot.get('vo') or ''}\n{shot.get('caption') or ''}" for shot in shots
+        )
+        dates = find_dates(spoken_blob)
         text = [
             f"id: {sid}",
             "format: blueprint",
             "source: course/data/public-prices/btc-usd-windows.json",
             f"disclaimer_spoken: {json.dumps(studio.DISCLAIMER)}",
             'disclaimer_on_screen: "Educational content only. Not financial advice."',
-            "chart_labels:",
+            "dates:",
         ]
+        text.extend(f"  - {json.dumps(phrase)}" for phrase in dates)
+        text.append("chart_labels:")
         text.extend(f"  - {json.dumps(label)}" for label in labels)
         text.append("")
         dest = OUT / f"{sid}.yaml"

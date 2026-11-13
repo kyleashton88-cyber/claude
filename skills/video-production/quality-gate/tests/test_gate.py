@@ -98,6 +98,40 @@ class FigureTests(unittest.TestCase):
         finally:
             shutil.rmtree(folder)
 
+    def test_grouped_prices_and_dates_keep_the_gate_strict(self):
+        folder = Path(tempfile.mkdtemp())
+        try:
+            lesson = folder / "lesson.yaml"
+            lesson.write_text(
+                "dates:\n"
+                '  - "19 July 2023"\n'
+                '  - "16 October 2023"\n'
+                "chart_labels:\n"
+                '  - "30331"\n'
+                '  - "27630"\n',
+                encoding="utf-8",
+            )
+            ok = number_problems(
+                "EXAMPLE 19 July 2023 to 16 October, and July 19 again. "
+                "The rail is 30,331 and the rung is 27,630.",
+                lesson,
+            )
+            self.assertEqual(ok, [])
+            self.assertEqual(
+                number_problems("The rail is 30,332.", lesson),
+                ["on-screen figures not in the lesson: 30332"],
+            )
+            self.assertEqual(
+                number_problems("On 20 July 2023 the close left.", lesson),
+                ["on-screen date not in the lesson: 20 July 2023"],
+            )
+            self.assertEqual(
+                number_problems("A stray 30 sits on the card.", lesson),
+                ["on-screen figures not in the lesson: 30"],
+            )
+        finally:
+            shutil.rmtree(folder)
+
     def test_old_duration_floors_are_not_the_rule(self):
         root = Path(__file__).resolve().parents[4]
         qa = (root / "course/skills/motion_picture/qa.py").read_text(encoding="utf-8")
