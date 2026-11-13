@@ -1381,3 +1381,351 @@ Change 3:
 - Before: The point of the beat is the pointing.
 - After: Point at the part that belongs to If the screen differs.
 - After: If you cannot point yet, stay on this frame.
+
+
+## bp-08-managing-and-monitoring
+
+### Beat 1 (hook, Hook)
+
+Change 1:
+
+- After: A vigil would be watching with no end.
+
+Change 2:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to Hook.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Hook.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 3 (intro, Title card)
+
+Change 1:
+
+- After: Monitoring here is three questions you can finish, not a vigil.
+
+### Beat 4 (body, Three questions)
+
+Change 1:
+
+- After: Inventory is what has piled up on one side.
+- After: The finish sentence is the written line that says the idea is finished.
+
+Change 2:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 3:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 4:
+
+- Before: Say the opening line once more, and point at the part that belongs to Three questions.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Three questions.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 5 (diagram, Inside the band)
+
+Change 1:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 2:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to Inside the band.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Inside the band.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 6 (body, Which side)
+
+Change 1:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 2:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to Which side.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Which side.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 7 (body, The sentence)
+
+Change 1:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 2:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to The sentence.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to The sentence.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 8 (body, Cadence)
+
+Change 1:
+
+- After: Cadence just means which day you come back.
+
+Change 2:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 3:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 4:
+
+- Before: Say the opening line once more, and point at the part that belongs to Cadence.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Cadence.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 9 (body, What you do not open)
+
+Change 1:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 2:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to What you do not open.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to What you do not open.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 10 (demo, Worked check)
+
+Change 1:
+
+- Before: Run the three rows on a hypothetical path that starts inside and ends outside.
+- After: Read the three rows on a hypothetical path that starts inside and ends outside.
+- After: Hypothetical means you drew the path.
+- After: It is not a live price.
+
+Change 2:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 3:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 4:
+
+- Before: Say the opening line once more, and point at the part that belongs to Worked check.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Worked check.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 11 (body, Alerts)
+
+Change 1:
+
+- After: A nudge is a tap that says come look.
+- After: It does not finish the idea for you.
+
+Change 2:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 3:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- Before: We do not operate an alert service.
+- Before: Say the opening line once more, and point at the part that belongs to Alerts.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Mark the page Example.
+- After: An alert service is outside this lesson.
+- After: Point at the part that belongs to Alerts.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 12 (body, Common miss)
+
+Change 1:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 2:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to Common miss.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Common miss.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 13 (body, After the check)
+
+Change 1:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 2:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to After the check.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to After the check.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 14 (action, The action)
+
+Change 1:
+
+- Before: Build the three-row card on paper and run it once on a path you draw.
+- After: Build the three-row card on paper and use it once on a path you draw.
+
+Change 2:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 3:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- Before: Do not run the card on a live position as the homework.
+- Before: Say the opening line once more, and point at the part that belongs to The action.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Mark the page Example.
+- After: The homework is that card on the path you drew.
+- After: Point at the part that belongs to The action.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 15 (recap, Recap)
+
+Change 1:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 2:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to Recap.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Recap.
+- After: If you cannot point yet, stay on this frame.
+
+### Beat 16 (demo, Your turn)
+
+Change 1:
+
+- Before: Cover the notes and say this from memory: The questions are: is the example path inside the band, which side is the inventory, and does the finish sentence still match.
+- After: Cover the notes, and say this from memory: The questions are: is the example path inside the band, which side is the inventory, and does the finish sentence still match.
+
+Change 2:
+
+- Before: The answer has to name a shape on the page.
+- After: The answer names a shape on the page.
+
+### Beat 17 (demo, Your turn)
+
+Change 1:
+
+- Before: Cover the notes and say this from memory: Inside means the path you are looking at still crosses the band you drew.
+- After: Cover the notes, and say this from memory: Inside means the path you are looking at still crosses the band you drew.
+
+Change 2:
+
+- Before: The answer has to name a shape on the page.
+- After: The answer names a shape on the page.
+
+### Beat 18 (demo, Your turn)
+
+Change 1:
+
+- Before: Cover the notes and say this from memory: Side means which asset you hold more of after the example fills.
+- After: Cover the notes, and say this from memory: Side means which asset you hold more of after the example fills.
+
+Change 2:
+
+- Before: The answer has to name a shape on the page.
+- After: The answer names a shape on the page.
+
+### Beat 19 (body, Paper screen optional)
+
+Change 1:
+
+- Before: The shapes are the lesson.
+- Before: If a shape is only decoration, it does not belong on this frame.
+
+Change 2:
+
+- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
+- After: Mark the page Example.
+
+Change 3:
+
+- Before: Say the opening line once more, and point at the part that belongs to Paper screen optional.
+- Before: If you cannot point yet, do not move on.
+- Before: The point of the beat is the pointing.
+- After: Point at the part that belongs to Paper screen optional.
+- After: If you cannot point yet, stay on this frame.
