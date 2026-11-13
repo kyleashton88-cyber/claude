@@ -1,0 +1,462 @@
+[
+  {
+    "file": "atlas-start-01.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Start here",
+    "module": "Start here",
+    "lesson": "Start here",
+    "alt": "Four stages in a row: Beginner, Intermediate, Advanced, and Professional, with an arrow moving to the right.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Four boxes in a row labelled Beginner, Intermediate, Advanced, Professional. A cyan arrow runs left to right. No numbers."
+  },
+  {
+    "file": "atlas-foundations-01.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Beginner",
+    "module": "Foundations",
+    "lesson": "Markets",
+    "alt": "Buyers on the left and sellers on the right meet at a price of 105.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Left box Buyers, right box Sellers, middle label Price 105. Arrows from both boxes to the middle. Also label Buyer idea 100 and Seller idea 110."
+  },
+  {
+    "file": "atlas-foundations-02.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Beginner",
+    "module": "Foundations",
+    "lesson": "Candles",
+    "alt": "One candlestick. High 108, close 104, open 100, low 97.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. A single cyan candlestick. Arrows label High 108, Close 104, Open 100, and Low 97."
+  },
+  {
+    "file": "atlas-foundations-03.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Beginner",
+    "module": "Foundations",
+    "lesson": "Candles",
+    "alt": "Two candles. The left has a wide body. The right has a long wick.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Two candlesticks. Arrow to the wide body labelled Wide body. Arrow to the long upper wick labelled Long wick."
+  },
+  {
+    "file": "atlas-foundations-04.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Beginner",
+    "module": "Foundations",
+    "lesson": "Order types",
+    "alt": "A small book. The ask is 101, the bid is 99, a limit rests at 99, and a market buy pays 101.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Two horizontal prices, Ask 101 above Bid 99. An arrow up labelled Market buy. A resting box labelled Limit 99."
+  },
+  {
+    "file": "atlas-foundations-05.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Beginner",
+    "module": "Foundations",
+    "lesson": "Wallets and venues",
+    "alt": "Two balances. Your wallet holds 200 and the key. A venue balance holds 800 and the key stays there.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Two stacks. Left label Your wallet 200 and You hold the key. Right label Venue balance 800. No logos."
+  },
+  {
+    "file": "atlas-foundations-06.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Beginner",
+    "module": "Foundations",
+    "lesson": "Risk basics",
+    "alt": "An account bar of 10000 with a small slice of 100, which is 1 percent. The stop is 5 away, so the size is 20.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. A long bar labelled Account 10000, a small slice labelled 1 percent is 100, and a note Distance 5 gives size 20."
+  },
+  {
+    "file": "atlas-structure-01.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Beginner",
+    "module": "Trading structure",
+    "lesson": "Trend",
+    "alt": "A rising path with higher lows at 90, 100, and 110.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. A rising polyline. Three labels on the lows: Higher low 90, Higher low 100, Higher low 110."
+  },
+  {
+    "file": "atlas-structure-02.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Beginner",
+    "module": "Trading structure",
+    "lesson": "Swing highs and lows",
+    "alt": "A peak at 120 with 110 on both sides. That peak is a swing high.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. A peak. Label the top Swing high 120. Label both shoulders 110."
+  },
+  {
+    "file": "atlas-structure-03.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Beginner",
+    "module": "Trading structure",
+    "lesson": "Support and resistance",
+    "alt": "A lower line at 100 called support and an upper line at 130 called resistance.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Two horizontal lines. Lower label Support 100. Upper label Resistance 130. A small bounce off the lower line."
+  },
+  {
+    "file": "atlas-structure-04.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Beginner",
+    "module": "Trading structure",
+    "lesson": "Market structure",
+    "alt": "Higher highs and higher lows. Marks at 110, 130, 120, and 150.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. A rising swing path. Labels HL 110, HH 130, HL 120, HH 150."
+  },
+  {
+    "file": "atlas-structure-05.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Beginner",
+    "module": "Trading structure",
+    "lesson": "Break of structure",
+    "alt": "A prior high at 130 and a later close at 134 beyond that high.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. A horizontal line Prior high 130. A candle close beyond it labelled Close 134. Arrow through the line."
+  },
+  {
+    "file": "atlas-structure-06.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Beginner",
+    "module": "Trading structure",
+    "lesson": "Change of character",
+    "alt": "An uptrend higher low at 110, then a close at 106 under that low.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Mark Higher low 110. Show a later close under it labelled Close 106."
+  },
+  {
+    "file": "atlas-smart-money-01.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Intermediate",
+    "module": "Smart money concepts",
+    "lesson": "Liquidity",
+    "alt": "Two equal highs near 130, with a label that stops often sit just above them.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Two peaks at the same height. Label Equal highs 130. Label Stops above."
+  },
+  {
+    "file": "atlas-smart-money-02.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Intermediate",
+    "module": "Smart money concepts",
+    "lesson": "Liquidity",
+    "alt": "A wick pushes to 133 and the close returns to 128.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. A line at 130, a wick through it to 133, and a close back at 128. Labels Sweep 133 and Close back 128."
+  },
+  {
+    "file": "atlas-smart-money-03.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Intermediate",
+    "module": "Smart money concepts",
+    "lesson": "Order blocks",
+    "alt": "A small down candle from 102 to 98, then a rise to 120. The small candle is the marked zone.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. A small red candle, then a strong rise. Bracket the small candle and label Marked zone 98 to 102. Label Rise to 120."
+  },
+  {
+    "file": "atlas-smart-money-04.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Intermediate",
+    "module": "Smart money concepts",
+    "lesson": "Fair value gaps",
+    "alt": "Three candles. Candle 1 high is 100. Candle 3 low is 106. The gap between them is the fair value gap.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Three candlesticks. The middle one is large. Arrows label Candle 1 high 100, Candle 3 low 106, and Gap."
+  },
+  {
+    "file": "atlas-smart-money-05.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Intermediate",
+    "module": "Smart money concepts",
+    "lesson": "Premium and discount",
+    "alt": "A dealing range from 100 to 140. The middle is 120. 110 is discount. 130 is premium.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. A vertical range. Bottom 100, mid 120, top 140. Label Discount 110 below the mid and Premium 130 above the mid."
+  },
+  {
+    "file": "atlas-smart-money-06.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Intermediate",
+    "module": "Smart money concepts",
+    "lesson": "Inducement",
+    "alt": "A small high at 125 sits under a larger high at 140.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Two peaks. The smaller one labelled Small high 125. The larger one labelled Main high 140."
+  },
+  {
+    "file": "atlas-grid-bots-01.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Intermediate",
+    "module": "Grid bots",
+    "lesson": "What a grid bot is",
+    "alt": "A ladder. Sells sit above the price at 102 and 104. Buys sit below at 98 and 96. The price is 100.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Horizontal rungs. Label Sell 104, Sell 102, Price 100, Buy 98, Buy 96."
+  },
+  {
+    "file": "atlas-grid-bots-02.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Intermediate",
+    "module": "Grid bots",
+    "lesson": "How a grid works",
+    "alt": "A buy fills at 98 and a later sell fills at 100. The gap is 2 before fees.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Two prices, Buy 98 and Sell 100, with an arrow up between them labelled Gap 2."
+  },
+  {
+    "file": "atlas-grid-bots-03.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Intermediate",
+    "module": "Grid bots",
+    "lesson": "Setting one up",
+    "alt": "Four setup facts: upper 110, lower 90, 10 gaps, and a review rule.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Four boxes: Upper 110, Lower 90, Gaps 10, Review on a close outside."
+  },
+  {
+    "file": "atlas-grid-bots-04.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Intermediate",
+    "module": "Grid bots",
+    "lesson": "Range and grid count",
+    "alt": "Three ranges. A tight box from 100 to 105, a middle box from 90 to 110, and a very wide box from 50 to 150.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Three columns labelled Too tight, Room to repeat, and Too thin, with the ranges 100 to 105, 90 to 110, and 50 to 150."
+  },
+  {
+    "file": "atlas-grid-bots-05.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Intermediate",
+    "module": "Grid bots",
+    "lesson": "Range and grid count",
+    "alt": "A step of 2 beside a round-trip fee of 0.20. The step is larger than the fee in this example.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Two bars. Tall bar Step 2. Short bar Fee 0.20. Caption that the step clears the fee in this example."
+  },
+  {
+    "file": "atlas-grid-bots-06.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Intermediate",
+    "module": "Grid bots",
+    "lesson": "Range and grid count",
+    "alt": "Two ladders. The left has equal price gaps. The right has gaps that grow as price rises.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Left ladder labelled Equal price gaps. Right ladder labelled Equal percent gaps, with spaces getting taller."
+  },
+  {
+    "file": "atlas-grid-bots-07.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Intermediate",
+    "module": "Grid bots",
+    "lesson": "Grid risk",
+    "alt": "Finished cycles show plus 20. Unsold coins bought near 94 are now priced at 80.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Two cards. Left: Cycle result plus 20. Right: Unsold coins from 94 to 80. An arrow noting they are separate."
+  },
+  {
+    "file": "atlas-grid-bots-08.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Intermediate",
+    "module": "Grid bots",
+    "lesson": "Monitoring and adjusting",
+    "alt": "The box top is 110 and a later close is 112, which starts a review.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Horizontal line Box top 110. A mark above it labelled Close 112 and Review."
+  },
+  {
+    "file": "atlas-grid-bots-09.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Intermediate",
+    "module": "Grid bots",
+    "lesson": "Common grid mistakes",
+    "alt": "Forty gaps inside 100 to 110 make a step of 0.25, next to a fee of 0.20.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Many thin rungs. Labels 40 gaps, Step 0.25, Fee 0.20."
+  },
+  {
+    "file": "atlas-leverage-01.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Advanced",
+    "module": "Leverage trading",
+    "lesson": "Margin",
+    "alt": "A notional of 10000 posted with 2000 of margin at 5 times.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. A large block Notional 10000 and a smaller block Margin 2000. Label 5 times."
+  },
+  {
+    "file": "atlas-leverage-02.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Advanced",
+    "module": "Leverage trading",
+    "lesson": "Leverage",
+    "alt": "The price falls 10 percent. On 5 times leverage the margin result is about minus 50 percent.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Two arrows down. Short arrow Price minus 10. Long arrow Margin minus 50."
+  },
+  {
+    "file": "atlas-leverage-03.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Advanced",
+    "module": "Leverage trading",
+    "lesson": "Liquidation",
+    "alt": "Entry at 100 and an example long liquidation near 90.5 at 10 times with a 0.5 percent maintenance rate.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Two horizontal lines. Entry 100 above. Example liquidation 90.5 below. Label 10 times and maintenance 0.5 percent."
+  },
+  {
+    "file": "atlas-leverage-04.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Advanced",
+    "module": "Leverage trading",
+    "lesson": "Position sizing",
+    "alt": "Cash at risk 100 divided by a distance of 5 gives a size of 20.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Three boxes in a chain: Cash at risk 100, Distance 5, Size 20. Arrows left to right."
+  },
+  {
+    "file": "atlas-futures-01.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Advanced",
+    "module": "Futures",
+    "lesson": "Perpetuals and dated contracts",
+    "alt": "Two contracts. One has no end date. The other ends in 30 days.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Two cards. Left: No end date. Right: Ends in 30 days. No venue names."
+  },
+  {
+    "file": "atlas-futures-02.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Advanced",
+    "module": "Futures",
+    "lesson": "Funding rates",
+    "alt": "A positive funding example of 0.01 percent. On 10000 of notional that is about 1, paid from longs to shorts in this example.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. An arrow from a Long box to a Short box. Labels Rate 0.01 percent and About 1 on 10000."
+  },
+  {
+    "file": "atlas-futures-03.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Advanced",
+    "module": "Futures",
+    "lesson": "Long and short",
+    "alt": "Price rises by 10. The long result is plus 10 per unit. The short result is minus 10 per unit, before fees.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. An up arrow labelled Price plus 10. A card Long plus 10. A card Short minus 10."
+  },
+  {
+    "file": "atlas-futures-04.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Advanced",
+    "module": "Futures",
+    "lesson": "Hedging",
+    "alt": "Two coins fall by 10 each, a loss of 20. A short of one coin gains about 10. The net loss is smaller.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Card Coins lose 20. Card Short gains 10. Note that the hedge does not erase the whole loss."
+  },
+  {
+    "file": "atlas-derivatives-01.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Advanced",
+    "module": "Derivatives",
+    "lesson": "Options basics",
+    "alt": "You pay a premium of 5 for a right. You do not have to use the right. The most you lose in this example is 5.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. A small stack labelled Premium 5 and a box labelled Right, not a duty."
+  },
+  {
+    "file": "atlas-derivatives-02.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Advanced",
+    "module": "Derivatives",
+    "lesson": "Calls and puts",
+    "alt": "A call with strike 100 and premium 5. At a price of 110 the example profit is 5.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. A call payoff line that is flat then rises after strike 100. Labels Strike 100, Premium 5, Profit 5 at price 110."
+  },
+  {
+    "file": "atlas-derivatives-03.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Advanced",
+    "module": "Derivatives",
+    "lesson": "Calls and puts",
+    "alt": "A put with strike 100 and premium 5. At a price of 90 the example profit is 5.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. A put payoff line that falls as price rises, then goes flat after strike 100. Labels Strike 100, Premium 5, Profit 5 at price 90."
+  },
+  {
+    "file": "atlas-derivatives-04.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Advanced",
+    "module": "Derivatives",
+    "lesson": "Greeks in plain words",
+    "alt": "Four plain meanings. Delta 0.50, gamma is the change in delta, theta 0.20 a day, vega 0.10.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Four cards labelled Delta 0.50, Gamma, Theta 0.20, Vega 0.10. No formulas crowded on the picture."
+  },
+  {
+    "file": "atlas-derivatives-05.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Advanced",
+    "module": "Derivatives",
+    "lesson": "Basis",
+    "alt": "Spot at 100 and a futures price at 103. The basis is 3.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Two horizontal lines. Spot 100 and Futures 103. A bracket labelled Basis 3."
+  },
+  {
+    "file": "atlas-professional-01.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Professional",
+    "module": "Professional practice",
+    "lesson": "Trade plans",
+    "alt": "A plan card with entry 100, stop 95, cash risk 100, and target 110.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. One card with four lines: Entry 100, Stop 95, Risk 100, Target 110."
+  },
+  {
+    "file": "atlas-professional-02.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Professional",
+    "module": "Professional practice",
+    "lesson": "Journaling",
+    "alt": "Ten example results. Six are wins. Expectancy in this sample is 0.5 R.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. A small table sketch. Label 6 wins of 10. Label Expectancy 0.5 R."
+  },
+  {
+    "file": "atlas-professional-03.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Professional",
+    "module": "Professional practice",
+    "lesson": "Risk of ruin",
+    "alt": "Ten losses at 1 percent leave about 90 percent of the account. Ten losses at 10 percent leave about 35 percent.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Two falling paths. Gentle path labelled 1 percent risk. Steep path labelled 10 percent risk."
+  },
+  {
+    "file": "atlas-professional-04.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Professional",
+    "module": "Professional practice",
+    "lesson": "Psychology",
+    "alt": "The written plan stays at 1 percent. The urge after two losses wants a bigger size. The urge is not a new plan.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Two boxes. Plan stays 1 percent. Urge to double. A note that the urge is not a new plan."
+  },
+  {
+    "file": "atlas-professional-05.png",
+    "width": 1600,
+    "height": 900,
+    "level": "Professional",
+    "module": "Professional practice",
+    "lesson": "Building a system",
+    "alt": "Four parts of a small system: one market, one setup, one risk rule, and one review day.",
+    "prompt": "Flat educational diagram on a navy background (#071422) with cyan lines (#8fe7ff) and pale text. Amber rounded badge in the corner that reads EXAMPLE. No people, no faces, no logos, no brand names, no exchange names. One idea only. Short labels with arrows. Four boxes in a row labelled Market, Setup, Risk rule, Review day. Arrows between them."
+  }
+]
