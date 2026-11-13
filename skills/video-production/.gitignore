@@ -1,3 +1,4 @@
-skills/video-production/**/test-outputs/_work/
-skills/video-production/**/.raw.wav
-skills/video-production/**/voice-cache/
+**/test-outputs/_work/
+**/voice-cache/
+**/*.raw.wav
+**/*.pre-loudnorm.wav

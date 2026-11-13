@@ -1,0 +1,50 @@
+{
+  "shots": [
+    {
+      "kind": "title",
+      "lines": [
+        "A grid,",
+        "in one picture"
+      ],
+      "sub": "Illustrative prices. Not a forecast.",
+      "caption": "A worked picture. The prices are illustrative.",
+      "lower_third": {
+        "kicker": "Worked picture",
+        "line": "Orders, a range, a buffer"
+      },
+      "vo": "Here is a grid, drawn as a picture. Nothing here is a forecast. The prices are illustrative. Watch the orders, then the buffer."
+    },
+    {
+      "kind": "candles",
+      "title": "Price, as candles",
+      "caption": "Open, high, low, and close. That is the whole candle.",
+      "vo": "Each candle shows four facts. The open, the high, the low, and the close. That is the whole candle."
+    },
+    {
+      "kind": "ladder",
+      "title": "Orders on a ladder",
+      "caption": "Buys below. Sells above. A cross fills the order.",
+      "vo": "Buy orders sit below the price. Sell orders sit above it. When the price crosses a line, that order fills. A fill is not a promise. It is the price touching a level that was already placed."
+    },
+    {
+      "kind": "risk",
+      "title": "Range, and the line past it",
+      "caption": "The buffer is the gap between price and the liquidation line.",
+      "vo": "The shaded band is the range chosen before the start. The dashed line past it is liquidation. The gap between them is the buffer. When the buffer shrinks, the plan is under stress."
+    },
+    {
+      "kind": "still",
+      "title": "An existing plate, set in motion",
+      "caption": "Count the fills. Read the buffer. Keep the picture.",
+      "image": "programs/defi-program/assets/diagrams/liquidity-ladder.png",
+      "fills": 6,
+      "lower_third": {
+        "kicker": "Existing still",
+        "line": "Moved in layers. Not regenerated."
+      },
+      "vo": "Count the fills. Read the buffer. Keep those two numbers, and let the rest of the noise go."
+    }
+  ],
+  "lead": 0.5,
+  "tail": 1.05
+}

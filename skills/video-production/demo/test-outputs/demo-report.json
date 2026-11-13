@@ -1,0 +1,29 @@
+{
+  "file": "demo/test-outputs/grid-picture.mp4",
+  "duration": 45.087,
+  "loudness": {
+    "integrated_lufs": -15.9,
+    "true_peak_dbfs": -3.3
+  },
+  "streams": [
+    {
+      "index": 0,
+      "codec_name": "h264",
+      "codec_type": "video",
+      "width": 1920,
+      "height": 1080,
+      "avg_frame_rate": "30/1",
+      "bit_rate": "466319"
+    },
+    {
+      "index": 1,
+      "codec_name": "aac",
+      "codec_type": "audio",
+      "sample_rate": "48000",
+      "channels": 2,
+      "avg_frame_rate": "0/0",
+      "bit_rate": "307794"
+    }
+  ],
+  "alignment": "sentence-exact, phoneme-weighted inside the sentence"
+}

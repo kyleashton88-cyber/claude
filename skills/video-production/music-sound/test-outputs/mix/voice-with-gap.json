@@ -1,0 +1,69 @@
+{
+  "estimate": {
+    "engine": "piper",
+    "model": "piper-lessac-medium",
+    "characters": 57,
+    "estimated_credits": 0.0,
+    "note": "ElevenLabs credits follow the account plan. Piper is local and costs nothing."
+  },
+  "alignment": "sentence-exact, phoneme-weighted inside the sentence",
+  "words": [
+    {
+      "text": "Buy",
+      "start": 0.0,
+      "end": 0.298
+    },
+    {
+      "text": "orders",
+      "start": 0.298,
+      "end": 0.746
+    },
+    {
+      "text": "sit",
+      "start": 0.746,
+      "end": 0.969
+    },
+    {
+      "text": "below",
+      "start": 0.969,
+      "end": 1.342
+    },
+    {
+      "text": "the",
+      "start": 1.342,
+      "end": 1.491
+    },
+    {
+      "text": "price.",
+      "start": 1.491,
+      "end": 1.939
+    },
+    {
+      "text": "Sell",
+      "start": 3.339,
+      "end": 3.553
+    },
+    {
+      "text": "orders",
+      "start": 3.553,
+      "end": 3.982
+    },
+    {
+      "text": "sit",
+      "start": 3.982,
+      "end": 4.197
+    },
+    {
+      "text": "above",
+      "start": 4.197,
+      "end": 4.483
+    },
+    {
+      "text": "it.",
+      "start": 4.483,
+      "end": 4.697
+    }
+  ],
+  "wav": "voice-with-gap.wav",
+  "vtt": "voice-with-gap.vtt"
+}
