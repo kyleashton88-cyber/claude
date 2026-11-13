@@ -1,0 +1,54 @@
+{
+  "estimate": {
+    "engine": "piper",
+    "model": "piper-lessac-medium",
+    "characters": 53,
+    "estimated_credits": 0.0,
+    "note": "Local Piper voice. No paid speech API."
+  },
+  "alignment": "sentence-exact, phoneme-weighted inside the sentence",
+  "words": [
+    {
+      "text": "Price",
+      "start": 0.0,
+      "end": 0.383
+    },
+    {
+      "text": "moves",
+      "start": 0.383,
+      "end": 0.766
+    },
+    {
+      "text": "in",
+      "start": 0.766,
+      "end": 0.92
+    },
+    {
+      "text": "candles.",
+      "start": 0.92,
+      "end": 1.533
+    },
+    {
+      "text": "The",
+      "start": 1.933,
+      "end": 2.072
+    },
+    {
+      "text": "figures",
+      "start": 2.072,
+      "end": 2.49
+    },
+    {
+      "text": "are",
+      "start": 2.49,
+      "end": 2.699
+    },
+    {
+      "text": "illustrative.",
+      "start": 2.699,
+      "end": 3.466
+    }
+  ],
+  "wav": "piper-sample.wav",
+  "vtt": "piper-sample.vtt"
+}

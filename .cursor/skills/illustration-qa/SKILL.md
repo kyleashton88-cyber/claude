@@ -9,7 +9,7 @@ Run this on a script and, once the PNGs exist, on the frames. A fail blocks the 
 
 ## Script, before any image
 
-- Duration estimate is 15 to 20 minutes at 143 words a minute.
+- Duration comes from `skills/video-production/quality-gate` profiles. Blueprint is about 4 to 10 minutes. This checklist does not apply a separate minute floor.
 - Roles present: hook, legal, intro, demo, recap, action, outro.
 - One image path per beat. No path is repeated.
 - Each prompt names the shapes for that beat's sentence and is longer than a caption.
@@ -28,7 +28,7 @@ Run this on a script and, once the PNGs exist, on the frames. A fail blocks the 
 
 ## Render
 
-- `ffprobe` duration is at least 900 seconds and at most 1,200 seconds.
+- `ffprobe` duration is checked by the quality gate for that lesson's format. This checklist does not use a 900 to 1,200 second window.
 - The first frames are the hook, not a logo sting. A branded intro follows the hook.
 - The last frames are the outro, with the next lesson or "last lesson", and the disclaimer is readable.
 - A music bed is present. It is not the only thing you hear once a voice track exists.

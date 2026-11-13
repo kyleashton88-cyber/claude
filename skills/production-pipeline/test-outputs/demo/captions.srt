@@ -1,0 +1,23 @@
+1
+00:00:00,507 --> 00:00:06,228
+A grid places buy orders below the price
+
+2
+00:00:06,478 --> 00:00:08,546
+and sell orders above it. When price crosses
+
+3
+00:00:08,546 --> 00:00:12,825
+a line, that order fills. A liquidation line
+
+4
+00:00:13,300 --> 00:00:17,795
+sits beyond the range. The gap is the
+
+5
+00:00:17,795 --> 00:00:18,270
+buffer. If the buffer shrinks, the plan is
+
+6
+00:00:18,270 --> 00:00:18,370
+under stress.
