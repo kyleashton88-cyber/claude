@@ -1,6 +1,441 @@
 # BP-04 to BP-11 narration changes
 
-Spoken narration only. Beat order, captions, concepts, image paths, numbers, dates, tickers, and the disclaimer stay as written. Unchanged beats are omitted. Legal beats are the disclaimer and are unchanged.
+Spoken narration only. Beat order, captions, concepts, image paths, numbers, dates, tickers, and the disclaimer stay as written. The full Example risk sentence stays wherever the original had it. Unchanged beats are omitted. Legal beats are the disclaimer and are unchanged.
+
+## Kept plain-meaning definitions
+
+Each line below only restates the lesson or a basic dictionary meaning. Definitions that added a fact, a rule, or a recommendation were removed.
+
+### bp-04-market-regimes
+
+- Beat 1: A regime is the shape price is making.
+- Beat 1: A ladder here is the grid, a stack of waiting orders.
+- Beat 1: A weave is price moving back and forth.
+- Beat 1: A band is the top and the bottom you draw around it.
+- Beat 4: A pullback is a small step back against that walk.
+- Beat 5: Spacing is how far apart the rungs sit.
+- Beat 6: A waiting order sits on a rung until price comes to it.
+- Beat 7: Higher highs means each peak sits above the peak before it.
+- Beat 7: Lower lows means each dip sits under the dip before it.
+- Beat 7: Inventory is what has piled up on that side.
+- Beat 12: A news bar is a price bar around a major headline.
+- Beat 12: A thin book means few resting orders.
+
+### bp-05-spacing-and-range
+
+- Beat 1: The band is the top and the bottom.
+- Beat 1: The weave is price moving back and forth.
+- Beat 1: Point at the part that belongs to Hook.
+- Beat 1: If you cannot point yet, stay on this frame.
+- Beat 3: Spacing is the gap between order lines.
+- Beat 3: The range is the band those lines sit inside.
+- Beat 4: You multiply the step, the distance from one line to the next, by the gaps, not by the lines.
+- Beat 4: Mark the page Example.
+- Beat 4: Point at the part that belongs to Gaps and orders.
+- Beat 4: If you cannot point yet, stay on this frame.
+- Beat 5: Mark the page Example.
+- Beat 5: Point at the part that belongs to The span.
+- Beat 5: If you cannot point yet, stay on this frame.
+- Beat 6: Halving the step, without recounting the gaps, doubles the line count for the same span.
+- Beat 6: The new gap count is not the old line count.
+- Beat 6: Halving means the step is cut in half.
+- Beat 6: The span is the distance from the lower line to the upper line.
+- Beat 6: Mark the page Example.
+- Beat 6: Point at the part that belongs to Half spacing.
+- Beat 6: If you cannot point yet, stay on this frame.
+- Beat 7: Mark the page Example.
+- Beat 7: Point at the part that belongs to Range first.
+- Beat 7: If you cannot point yet, stay on this frame.
+- Beat 8: A round trip is the cost of a buy and a sell.
+- Beat 8: Mark the page Example.
+- Beat 8: Point at the part that belongs to Fees.
+- Beat 8: If you cannot point yet, stay on this frame.
+- Beat 9: Mark the page Example.
+- Beat 9: Point at the part that belongs to Too many lines.
+- Beat 9: If you cannot point yet, stay on this frame.
+- Beat 10: Mark the page Example.
+- Beat 10: Point at the part that belongs to Worked recount.
+- Beat 10: If you cannot point yet, stay on this frame.
+- Beat 11: A wick is the thin stretch of a price bar beyond where that bar finished.
+- Beat 11: The close is the price where the bar finished.
+- Beat 11: Mark the page Example.
+- Beat 11: Point at the part that belongs to Wicks.
+- Beat 11: If you cannot point yet, stay on this frame.
+- Beat 12: Mark the page Example.
+- Beat 12: Point at the part that belongs to Common miss.
+- Beat 12: If you cannot point yet, stay on this frame.
+- Beat 13: Mark the page Example.
+- Beat 13: Point at the part that belongs to What you write.
+- Beat 13: If you cannot point yet, stay on this frame.
+- Beat 14: Mark the page Example.
+- Beat 14: Point at the part that belongs to Quiet page.
+- Beat 14: If you cannot point yet, stay on this frame.
+- Beat 15: Mark the page Example.
+- Beat 15: Point at the part that belongs to Recap.
+- Beat 15: If you cannot point yet, stay on this frame.
+- Beat 16: Cover the notes, and say this from memory: Twenty order lines make nineteen gaps.
+- Beat 16: The answer names a shape on the page.
+- Beat 17: Cover the notes, and say this from memory: Nineteen gaps times a half of one percent is a span of nine and a half percent from the lower line to the upper line.
+- Beat 17: The answer names a shape on the page.
+- Beat 18: Mark the page Example.
+- Beat 18: Point at the part that belongs to Stay on paper.
+- Beat 18: If you cannot point yet, stay on this frame.
+
+### bp-06-entry-and-exit
+
+- Beat 1: The entry is the start.
+- Beat 1: The exit is how the idea ends.
+- Beat 1: A stop sentence is the written line that finishes the idea.
+- Beat 1: Point at the part that belongs to Hook.
+- Beat 1: If you cannot point yet, stay on this frame.
+- Beat 3: The entry is what must be true before a start.
+- Beat 3: The exit is the sentence that finishes the idea.
+- Beat 4: Mark the page Example.
+- Beat 4: Point at the part that belongs to Two columns.
+- Beat 4: If you cannot point yet, stay on this frame.
+- Beat 5: Mark the page Example.
+- Beat 5: Point at the part that belongs to Stop first.
+- Beat 5: If you cannot point yet, stay on this frame.
+- Beat 6: Mark the page Example.
+- Beat 6: Point at the part that belongs to A finish sentence.
+- Beat 6: If you cannot point yet, stay on this frame.
+- Beat 7: Mark the page Example.
+- Beat 7: Point at the part that belongs to A before sentence.
+- Beat 7: If you cannot point yet, stay on this frame.
+- Beat 8: Mark the page Example.
+- Beat 8: Point at the part that belongs to Worked columns.
+- Beat 8: If you cannot point yet, stay on this frame.
+- Beat 9: Mark the page Example.
+- Beat 9: Point at the part that belongs to What hope is not.
+- Beat 9: If you cannot point yet, stay on this frame.
+- Beat 10: In plain words, the finish path is the path that says the idea is done.
+- Beat 10: Mark the page Example.
+- Beat 10: Point at the part that belongs to Invalidation.
+- Beat 10: If you cannot point yet, stay on this frame.
+- Beat 11: Mark the page Example.
+- Beat 11: Point at the part that belongs to Common miss.
+- Beat 11: If you cannot point yet, stay on this frame.
+- Beat 12: Mark the page Example.
+- Beat 12: Point at the part that belongs to Copy order.
+- Beat 12: If you cannot point yet, stay on this frame.
+- Beat 13: Mark the page Example.
+- Beat 13: Point at the part that belongs to No size yet.
+- Beat 13: If you cannot point yet, stay on this frame.
+- Beat 14: Mark the page Example.
+- Beat 14: Point at the part that belongs to The action.
+- Beat 14: If you cannot point yet, stay on this frame.
+- Beat 15: Mark the page Example.
+- Beat 15: Point at the part that belongs to Recap.
+- Beat 15: If you cannot point yet, stay on this frame.
+- Beat 16: Cover the notes, and say this from memory: The page has two columns: what must be true before you would start, and what finishes the idea.
+- Beat 16: The answer names a shape on the page.
+- Beat 17: Cover the notes, and say this from memory: Write the finish column first.
+- Beat 17: The answer names a shape on the page.
+- Beat 18: Cover the notes, and say this from memory: A finish sentence names a path: price leaves the band and does not return on the next check.
+- Beat 18: The answer names a shape on the page.
+- Beat 19: Mark the page Example.
+- Beat 19: Point at the part that belongs to Audit.
+- Beat 19: If you cannot point yet, stay on this frame.
+
+### bp-07-spot-paper-trading
+
+- Beat 1: Spot means the asset itself.
+- Beat 1: Paper or demo means a practice screen, not a live order.
+- Beat 1: Point at the part that belongs to Hook.
+- Beat 1: If you cannot point yet, stay on this frame.
+- Beat 3: Spot means the asset itself, on a paper or demo screen.
+- Beat 4: Mark the page Example.
+- Beat 4: Point at the part that belongs to Not affiliated.
+- Beat 4: If you cannot point yet, stay on this frame.
+- Beat 5: Mark the page Example.
+- Beat 5: Point at the part that belongs to Fields from the page.
+- Beat 5: If you cannot point yet, stay on this frame.
+- Beat 6: Spot means you are on the asset itself.
+- Beat 6: Leverage is borrowed size.
+- Beat 6: A multiple is a times-number for that borrowed size.
+- Beat 6: Mark the page Example.
+- Beat 6: Point at the part that belongs to Spot, not a contract.
+- Beat 6: If you cannot point yet, stay on this frame.
+- Beat 7: An API key is a secret that lets software act on an account.
+- Beat 7: A seed phrase is the word list that recovers a wallet.
+- Beat 7: Mark the page Example.
+- Beat 7: Point at the part that belongs to Keys.
+- Beat 7: If you cannot point yet, stay on this frame.
+- Beat 8: Mark the page Example.
+- Beat 8: Point at the part that belongs to Walk the pair.
+- Beat 8: If you cannot point yet, stay on this frame.
+- Beat 9: Mark the page Example.
+- Beat 9: Point at the part that belongs to Walk the band.
+- Beat 9: If you cannot point yet, stay on this frame.
+- Beat 10: Mark the page Example.
+- Beat 10: Point at the part that belongs to Walk the count.
+- Beat 10: If you cannot point yet, stay on this frame.
+- Beat 11: Mark the page Example.
+- Beat 11: Point at the part that belongs to Walk the sentences.
+- Beat 11: If you cannot point yet, stay on this frame.
+- Beat 12: Mark the page Example.
+- Beat 12: Point at the part that belongs to Common miss.
+- Beat 12: If you cannot point yet, stay on this frame.
+- Beat 13: Mark the page Example.
+- Beat 13: Point at the part that belongs to No order.
+- Beat 13: If you cannot point yet, stay on this frame.
+- Beat 14: Mark the page Example.
+- Beat 14: Point at the part that belongs to The action.
+- Beat 14: If you cannot point yet, stay on this frame.
+- Beat 15: Mark the page Example.
+- Beat 15: Point at the part that belongs to Recap.
+- Beat 15: If you cannot point yet, stay on this frame.
+- Beat 16: Cover the notes, and say this from memory: A venue name may be printed on a real screen.
+- Beat 16: The answer names a shape on the page.
+- Beat 17: Cover the notes, and say this from memory: The fields you are allowed to copy are the ones you already wrote: pair, upper, lower, gap count, and the two sentences.
+- Beat 17: The answer names a shape on the page.
+- Beat 18: Cover the notes, and say this from memory: The path is spot.
+- Beat 18: The answer names a shape on the page.
+- Beat 19: Mark the page Example.
+- Beat 19: Point at the part that belongs to If the screen differs.
+- Beat 19: If you cannot point yet, stay on this frame.
+
+### bp-08-managing-and-monitoring
+
+- Beat 1: A vigil would be watching with no end.
+- Beat 1: Point at the part that belongs to Hook.
+- Beat 1: If you cannot point yet, stay on this frame.
+- Beat 3: Monitoring here is three questions you can finish, not a vigil.
+- Beat 4: Inventory is what has piled up on one side.
+- Beat 4: The finish sentence is the written line that says the idea is finished.
+- Beat 4: Mark the page Example.
+- Beat 4: Point at the part that belongs to Three questions.
+- Beat 4: If you cannot point yet, stay on this frame.
+- Beat 5: Mark the page Example.
+- Beat 5: Point at the part that belongs to Inside the band.
+- Beat 5: If you cannot point yet, stay on this frame.
+- Beat 6: Mark the page Example.
+- Beat 6: Point at the part that belongs to Which side.
+- Beat 6: If you cannot point yet, stay on this frame.
+- Beat 7: Mark the page Example.
+- Beat 7: Point at the part that belongs to The sentence.
+- Beat 7: If you cannot point yet, stay on this frame.
+- Beat 8: Cadence just means which day you come back.
+- Beat 8: Mark the page Example.
+- Beat 8: Point at the part that belongs to Cadence.
+- Beat 8: If you cannot point yet, stay on this frame.
+- Beat 9: Mark the page Example.
+- Beat 9: Point at the part that belongs to What you do not open.
+- Beat 9: If you cannot point yet, stay on this frame.
+- Beat 10: Read the three rows on a hypothetical path that starts inside and ends outside.
+- Beat 10: Hypothetical means you drew the path.
+- Beat 10: It is not a live price.
+- Beat 10: Mark the page Example.
+- Beat 10: Point at the part that belongs to Worked check.
+- Beat 10: If you cannot point yet, stay on this frame.
+- Beat 11: A nudge is a tap that says come look.
+- Beat 11: It does not finish the idea for you.
+- Beat 11: Mark the page Example.
+- Beat 11: An alert service is outside this lesson.
+- Beat 11: Point at the part that belongs to Alerts.
+- Beat 11: If you cannot point yet, stay on this frame.
+- Beat 12: Mark the page Example.
+- Beat 12: Point at the part that belongs to Common miss.
+- Beat 12: If you cannot point yet, stay on this frame.
+- Beat 13: Mark the page Example.
+- Beat 13: Point at the part that belongs to After the check.
+- Beat 13: If you cannot point yet, stay on this frame.
+- Beat 14: Build the three-row card on paper and use it once on a path you draw.
+- Beat 14: Mark the page Example.
+- Beat 14: Point at the part that belongs to The action.
+- Beat 14: If you cannot point yet, stay on this frame.
+- Beat 15: Mark the page Example.
+- Beat 15: Point at the part that belongs to Recap.
+- Beat 15: If you cannot point yet, stay on this frame.
+- Beat 16: Cover the notes, and say this from memory: The questions are: is the example path inside the band, which side is the inventory, and does the finish sentence still match.
+- Beat 16: The answer names a shape on the page.
+- Beat 17: Cover the notes, and say this from memory: Inside means the path you are looking at still crosses the band you drew.
+- Beat 17: The answer names a shape on the page.
+- Beat 18: Cover the notes, and say this from memory: Side means which asset you hold more of after the example fills.
+- Beat 18: The answer names a shape on the page.
+- Beat 19: Mark the page Example.
+- Beat 19: Point at the part that belongs to Paper screen optional.
+- Beat 19: If you cannot point yet, stay on this frame.
+
+### bp-09-common-mistakes
+
+- Beat 1: You are looking at what was written, not at the person who wrote it.
+- Beat 1: A blank stop means the finish line was left empty.
+- Beat 1: A weave is price moving back and forth.
+- Beat 1: Point at the part that belongs to Hook.
+- Beat 1: If you cannot point yet, stay on this frame.
+- Beat 3: A mistake here is something you can see on a page, such as an empty finish line or a band thinner than the weave.
+- Beat 4: Mark the page Example.
+- Beat 4: Point at the part that belongs to Blank stop.
+- Beat 4: If you cannot point yet, stay on this frame.
+- Beat 5: Mark the page Example.
+- Beat 5: Point at the part that belongs to Tight band.
+- Beat 5: If you cannot point yet, stay on this frame.
+- Beat 6: Mark the page Example.
+- Beat 6: Point at the part that belongs to Ending early.
+- Beat 6: If you cannot point yet, stay on this frame.
+- Beat 7: Mark the page Example.
+- Beat 7: Point at the part that belongs to Counting lines.
+- Beat 7: If you cannot point yet, stay on this frame.
+- Beat 8: Mark the page Example.
+- Beat 8: Point at the part that belongs to Default size.
+- Beat 8: If you cannot point yet, stay on this frame.
+- Beat 9: Mark the page Example.
+- Beat 9: Point at the part that belongs to Result language.
+- Beat 9: If you cannot point yet, stay on this frame.
+- Beat 10: Mark the page Example.
+- Beat 10: Point at the part that belongs to Worked audit.
+- Beat 10: If you cannot point yet, stay on this frame.
+- Beat 11: Mark the page Example.
+- Beat 11: Point at the part that belongs to One fix at a time.
+- Beat 11: If you cannot point yet, stay on this frame.
+- Beat 12: Mark the page Example.
+- Beat 12: Point at the part that belongs to Not a score.
+- Beat 12: If you cannot point yet, stay on this frame.
+- Beat 13: A leverage multiple is a times-number.
+- Beat 13: Spot, in this course, means no borrowed size.
+- Beat 13: Mark the page Example.
+- Beat 13: Point at the part that belongs to Leverage mention.
+- Beat 13: If you cannot point yet, stay on this frame.
+- Beat 14: Mark the page Example.
+- Beat 14: Point at the part that belongs to The action.
+- Beat 14: If you cannot point yet, stay on this frame.
+- Beat 15: Mark the page Example.
+- Beat 15: Point at the part that belongs to Recap.
+- Beat 15: If you cannot point yet, stay on this frame.
+- Beat 16: Cover the notes, and say this from memory: A blank stop means the finish column was skipped.
+- Beat 16: The answer names a shape on the page.
+- Beat 17: Cover the notes, and say this from memory: A tight band is a band shorter than the weave you drew for an ordinary path.
+- Beat 17: The answer names a shape on the page.
+- Beat 18: Cover the notes, and say this from memory: Ending the course at the mistakes page skips scaling and the opt-in liquidation lesson.
+- Beat 18: The answer names a shape on the page.
+- Beat 19: Cover the notes, and say this from memory: Counting lines as gaps is the spacing miss, and it shows up again here because it survives copy-paste.
+- Beat 19: The answer names a shape on the page.
+- Beat 20: Mark the page Example.
+- Beat 20: Point at the part that belongs to Keep the pages.
+- Beat 20: If you cannot point yet, stay on this frame.
+
+### bp-10-scaling-up
+
+- Beat 1: The second page has to carry its own sentences.
+- Beat 1: Point at the part that belongs to Hook.
+- Beat 1: If you cannot point yet, stay on this frame.
+- Beat 3: Scaling means a second written page that passes the same checks, not a bigger number.
+- Beat 4: A gate is a check the page has to pass.
+- Beat 4: A regime is the shape of the path.
+- Beat 4: The finish sentence is the written line that says the idea is finished.
+- Beat 4: Mark the page Example.
+- Beat 4: Point at the part that belongs to A second page.
+- Beat 4: If you cannot point yet, stay on this frame.
+- Beat 5: A grid is one ladder of waiting orders.
+- Beat 5: Inventory is what has piled up for that page.
+- Beat 5: Mark the page Example.
+- Beat 5: Point at the part that belongs to Buckets.
+- Beat 5: If you cannot point yet, stay on this frame.
+- Beat 6: Mark the page Example.
+- Beat 6: Point at the part that belongs to Same size is allowed.
+- Beat 6: If you cannot point yet, stay on this frame.
+- Beat 7: Mark the page Example.
+- Beat 7: Point at the part that belongs to One change.
+- Beat 7: If you cannot point yet, stay on this frame.
+- Beat 8: Mark the page Example.
+- Beat 8: Point at the part that belongs to Worked pair.
+- Beat 8: If you cannot point yet, stay on this frame.
+- Beat 9: Mark the page Example.
+- Beat 9: Point at the part that belongs to Not the end.
+- Beat 9: If you cannot point yet, stay on this frame.
+- Beat 10: Mark the page Example.
+- Beat 10: Point at the part that belongs to Spot only.
+- Beat 10: If you cannot point yet, stay on this frame.
+- Beat 11: Mark the page Example.
+- Beat 11: Point at the part that belongs to Capital is not a target.
+- Beat 11: If you cannot point yet, stay on this frame.
+- Beat 12: Mark the page Example.
+- Beat 12: Point at the part that belongs to Common miss.
+- Beat 12: If you cannot point yet, stay on this frame.
+- Beat 13: A pair is the two assets named in one market.
+- Beat 13: A fill is an order that gets completed.
+- Beat 13: Mark the page Example.
+- Beat 13: Point at the part that belongs to Correlation.
+- Beat 13: If you cannot point yet, stay on this frame.
+- Beat 14: Mark the page Example.
+- Beat 14: Point at the part that belongs to The line.
+- Beat 14: If you cannot point yet, stay on this frame.
+- Beat 15: Mark the page Example.
+- Beat 15: Point at the part that belongs to Recap.
+- Beat 15: If you cannot point yet, stay on this frame.
+- Beat 16: Cover the notes, and say this from memory: The second page repeats the gates: regime sort, range, gaps, finish sentence, paper.
+- Beat 16: The answer names a shape on the page.
+- Beat 17: Cover the notes, and say this from memory: Two grids on one asset can fight if they share inventory.
+- Beat 17: The answer names a shape on the page.
+- Beat 18: Cover the notes, and say this from memory: A review that keeps the size the same is a complete review.
+- Beat 18: The answer names a shape on the page.
+- Beat 19: Cover the notes, and say this from memory: Change one thing between page one and page two.
+- Beat 19: The answer names a shape on the page.
+- Beat 20: Mark the page Example.
+- Beat 20: Point at the part that belongs to File them.
+- Beat 20: If you cannot point yet, stay on this frame.
+
+### bp-11-advanced-liquidation
+
+- Beat 1: Opt-in means you choose to take it.
+- Beat 1: The spot lessons already stand without it.
+- Beat 1: Leveraged means borrowed size was added.
+- Beat 1: Margin is the money set aside for that position.
+- Beat 1: The venue is the place that holds the position.
+- Beat 1: Point at the part that belongs to Hook.
+- Beat 1: If you cannot point yet, stay on this frame.
+- Beat 3: This one is opt-in.
+- Beat 3: Liquidation means the venue closes a leveraged position when the margin is gone.
+- Beat 4: Mark the page Example.
+- Beat 4: Point at the part that belongs to Spot is complete.
+- Beat 4: If you cannot point yet, stay on this frame.
+- Beat 5: It is not a fee you pay to stay in the position.
+- Beat 5: Mark the page Example.
+- Beat 5: Point at the part that belongs to What liquidation means.
+- Beat 5: If you cannot point yet, stay on this frame.
+- Beat 6: Mark the page Example.
+- Beat 6: Point at the part that belongs to Losing path.
+- Beat 6: If you cannot point yet, stay on this frame.
+- Beat 7: Mark the page Example.
+- Beat 7: Point at the part that belongs to Isolated.
+- Beat 7: If you cannot point yet, stay on this frame.
+- Beat 8: Mark the page Example.
+- Beat 8: Point at the part that belongs to Cross.
+- Beat 8: If you cannot point yet, stay on this frame.
+- Beat 9: Mark the page Example.
+- Beat 9: Point at the part that belongs to No multiple.
+- Beat 9: If you cannot point yet, stay on this frame.
+- Beat 10: Funding is a payment that moves between the two sides of a contract.
+- Beat 10: It is separate from the price move.
+- Beat 10: Mark the page Example.
+- Beat 10: Point at the part that belongs to Funding.
+- Beat 10: If you cannot point yet, stay on this frame.
+- Beat 11: Mark the page Example.
+- Beat 11: Point at the part that belongs to What was deleted.
+- Beat 11: If you cannot point yet, stay on this frame.
+- Beat 12: Mark the page Example.
+- Beat 12: Point at the part that belongs to Flags.
+- Beat 12: If you cannot point yet, stay on this frame.
+- Beat 13: Mark the page Example.
+- Beat 13: This lesson is not a venue, and it is not affiliated with one.
+- Beat 13: Point at the part that belongs to Not a venue guide.
+- Beat 13: If you cannot point yet, stay on this frame.
+- Beat 14: Mark the page Example.
+- Beat 14: Point at the part that belongs to The sentence.
+- Beat 14: If you cannot point yet, stay on this frame.
+- Beat 15: Mark the page Example.
+- Beat 15: Point at the part that belongs to Recap.
+- Beat 15: If you cannot point yet, stay on this frame.
+- Beat 16: Cover the notes, and say this from memory: The paper spot path is already complete without this lesson.
+- Beat 16: The answer names a shape on the page.
+- Beat 17: Cover the notes, and say this from memory: Liquidation here means the venue closes the position because the margin no longer covers the loss on the example.
+- Beat 17: The answer names a shape on the page.
+- Beat 18: Cover the notes, and say this from memory: Draw price leaving the band and not returning, and then draw the position closed.
+- Beat 18: The answer names a shape on the page.
+- Beat 19: Mark the page Example.
+- Beat 19: Point at the part that belongs to If you skip.
+- Beat 19: If you cannot point yet, stay on this frame.
 
 ## bp-04-market-regimes
 
@@ -13,56 +448,24 @@ Change 1:
 
 Change 2:
 
-- Before: A one-way run is the picture that leaves it behind.
 - After: A weave is price moving back and forth.
 - After: A band is the top and the bottom you draw around it.
-- After: A one-way run, price leaving and not coming back, is the picture that leaves it behind.
 
 Change 3:
 
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 4:
-
-- Before: Say the opening line once more, and point at the part that belongs to Hook.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Hook.
-- After: If you cannot point yet, stay on this frame.
-
-### Beat 3 (intro, Title card)
-
-Change 1:
-
-- After: A regime is the shape price is making: a back-and-forth weave, a one-way walk, or a break that leaves a band.
 
 ### Beat 4 (body, Three shapes)
 
 Change 1:
 
-- Before: Range weaves.
-- Before: Trend walks one way with pullbacks.
-- After: Range weaves, which means price moves back and forth.
-- After: Trend walks one way with pullbacks, small steps back against that walk.
+- After: A pullback is a small step back against that walk.
 
 Change 2:
 
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 3:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 4:
-
-- Before: Say the opening line once more, and point at the part that belongs to Three shapes.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Three shapes.
-- After: If you cannot point yet, stay on this frame.
 
 ### Beat 5 (body, Sort first)
 
@@ -75,19 +478,6 @@ Change 2:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 3:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 4:
-
-- Before: Say the opening line once more, and point at the part that belongs to Sort first.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Sort first.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 6 (diagram, Range fit)
 
 Change 1:
@@ -98,19 +488,6 @@ Change 2:
 
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 3:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 4:
-
-- Before: Say the opening line once more, and point at the part that belongs to Range fit.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Range fit.
-- After: If you cannot point yet, stay on this frame.
 
 ### Beat 7 (body, Trend)
 
@@ -128,43 +505,12 @@ Change 3:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 4:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 5:
-
-- Before: Say the opening line once more, and point at the part that belongs to Trend.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Trend.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 8 (body, Break)
 
 Change 1:
 
-- Before: The stop sentence is the tool you already wrote for this picture.
-- After: The stop sentence, the written line that says the idea is finished, is the tool you already wrote for this picture.
-
-Change 2:
-
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 3:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 4:
-
-- Before: Say the opening line once more, and point at the part that belongs to Break.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Break.
-- After: If you cannot point yet, stay on this frame.
 
 ### Beat 9 (demo, Worked sort)
 
@@ -173,38 +519,12 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Worked sort.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Worked sort.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 10 (body, What you do with the label)
 
 Change 1:
 
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to What you do with the label.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to What you do with the label.
-- After: If you cannot point yet, stay on this frame.
 
 ### Beat 11 (body, Ordinary day)
 
@@ -213,43 +533,17 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Ordinary day.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Ordinary day.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 12 (body, News and thin books)
 
 Change 1:
 
 - After: A news bar is a price bar around a major headline.
-- After: A thin book means few resting orders, so price can jump.
+- After: A thin book means few resting orders.
 
 Change 2:
 
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 3:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 4:
-
-- Before: Say the opening line once more, and point at the part that belongs to News and thin books.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to News and thin books.
-- After: If you cannot point yet, stay on this frame.
 
 ### Beat 13 (body, Common miss)
 
@@ -258,19 +552,6 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to Common miss.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Common miss.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 14 (recap, One sentence)
 
 Change 1:
@@ -278,78 +559,12 @@ Change 1:
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
 
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to One sentence.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to One sentence.
-- After: If you cannot point yet, stay on this frame.
-
 ### Beat 15 (action, Paper sort)
 
 Change 1:
 
-- After: A hypothetical path is one you invent on paper.
-
-Change 2:
-
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 3:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 4:
-
-- Before: Say the opening line once more, and point at the part that belongs to Paper sort.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to Paper sort.
-- After: If you cannot point yet, stay on this frame.
-
-### Beat 16 (demo, Your turn)
-
-Change 1:
-
-- Before: Cover the notes and say this from memory: Three shapes are enough for this lesson: range, trend, and break.
-- After: Cover the notes, and say this from memory: Three shapes are enough for this lesson: range, trend, and break.
-
-Change 2:
-
-- Before: The answer has to name a shape on the page.
-- After: The answer names a shape on the page.
-
-### Beat 17 (demo, Your turn)
-
-Change 1:
-
-- Before: Cover the notes and say this from memory: You sort the path before you choose a spacing.
-- After: Cover the notes, and say this from memory: You sort the path before you choose a spacing.
-
-Change 2:
-
-- Before: The answer has to name a shape on the page.
-- After: The answer names a shape on the page.
-
-### Beat 18 (demo, Your turn)
-
-Change 1:
-
-- Before: Cover the notes and say this from memory: A range is the shape where a grid's waiting orders can be crossed more than once on the sketch.
-- After: Cover the notes, and say this from memory: A range is the shape where a grid's waiting orders can be crossed more than once on the sketch.
-
-Change 2:
-
-- Before: The answer has to name a shape on the page.
-- After: The answer names a shape on the page.
 
 ### Beat 19 (body, No score)
 
@@ -357,19 +572,6 @@ Change 1:
 
 - Before: The shapes are the lesson.
 - Before: If a shape is only decoration, it does not belong on this frame.
-
-Change 2:
-
-- Before: Mark the page Example, so a later reader cannot mistake the sketch for a recommendation to trade an asset or these levels.
-- After: Mark the page Example.
-
-Change 3:
-
-- Before: Say the opening line once more, and point at the part that belongs to No score.
-- Before: If you cannot point yet, do not move on.
-- Before: The point of the beat is the pointing.
-- After: Point at the part that belongs to No score.
-- After: If you cannot point yet, stay on this frame.
 
 
 ## bp-05-spacing-and-range
