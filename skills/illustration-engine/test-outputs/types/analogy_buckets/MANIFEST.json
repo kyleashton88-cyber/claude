@@ -10,10 +10,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "cea3750224603f6c67ae81dbfcbe215e",
-      "md5": "cea3750224603f6c67ae81dbfcbe215e",
-      "renderer": "cairosvg",
-      "alt": "Two separate buckets. Overlap is the thing to notice. Labels: APART, LEFT, RIGHT.",
+      "checksum": "3f7610260c1f3456d3fdd2f3cadec0a9",
+      "md5": "3f7610260c1f3456d3fdd2f3cadec0a9",
+      "renderer": "resvg",
+      "alt": "Two separate buckets. Overlap is the thing to notice. Labels: Apart, Left, Right.",
       "spec": {
         "type": "analogy_buckets",
         "preset": "house",
@@ -35,9 +35,9 @@
       },
       "idea": "Two separate buckets. Overlap is the thing to notice.",
       "labels": [
-        "APART",
-        "LEFT",
-        "RIGHT"
+        "Apart",
+        "Left",
+        "Right"
       ],
       "example": true,
       "qa_ok": true,
@@ -52,10 +52,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Two separate buckets. Overlap is the thing to notice.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 154",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 44% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -67,10 +70,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "f0ea5bd872547fba58ee816ab0e37b7f",
-      "md5": "f0ea5bd872547fba58ee816ab0e37b7f",
-      "renderer": "cairosvg",
-      "alt": "Two separate buckets. Overlap is the thing to notice. Labels: OVERLAP, LEFT, RIGHT.",
+      "checksum": "09fa969a9bd1a2ee53179869b78f6009",
+      "md5": "09fa969a9bd1a2ee53179869b78f6009",
+      "renderer": "resvg",
+      "alt": "Two separate buckets. Overlap is the thing to notice. Labels: Overlap, Left, Right.",
       "spec": {
         "type": "analogy_buckets",
         "preset": "house",
@@ -92,9 +95,9 @@
       },
       "idea": "Two separate buckets. Overlap is the thing to notice.",
       "labels": [
-        "OVERLAP",
-        "LEFT",
-        "RIGHT"
+        "Overlap",
+        "Left",
+        "Right"
       ],
       "example": true,
       "qa_ok": true,
@@ -109,10 +112,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Two separate buckets. Overlap is the thing to notice.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 94",
-        "pass: word spacing \u2014 one headline word"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 one headline word",
+        "pass: ink coverage \u2014 43% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -124,10 +130,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "5582d64ba33c65ab79d9a4b2150eb92e",
-      "md5": "5582d64ba33c65ab79d9a4b2150eb92e",
-      "renderer": "cairosvg",
-      "alt": "Two separate buckets. Overlap is the thing to notice. Labels: LIGHT, FULL, BUCKET.",
+      "checksum": "a304d4d260464794f0572e5989d77dda",
+      "md5": "a304d4d260464794f0572e5989d77dda",
+      "renderer": "resvg",
+      "alt": "Two separate buckets. Overlap is the thing to notice. Labels: Light, Full, Bucket.",
       "spec": {
         "type": "analogy_buckets",
         "preset": "house",
@@ -149,9 +155,9 @@
       },
       "idea": "Two separate buckets. Overlap is the thing to notice.",
       "labels": [
-        "LIGHT",
-        "FULL",
-        "BUCKET"
+        "Light",
+        "Full",
+        "Bucket"
       ],
       "example": true,
       "qa_ok": true,
@@ -166,10 +172,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Two separate buckets. Overlap is the thing to notice.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 137",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 42% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,

@@ -5,23 +5,26 @@ from __future__ import annotations
 from .common import labels_or, take_headline
 
 
-def _node(canvas, cx, cy, text, w=250, h=110) -> None:
-    t = canvas.theme
-    canvas.svg.rect(cx - w / 2, cy - h / 2, w, h, fill=t.card, stroke=t.card_line, sw=t.stroke, rx=22, opacity=0.94)
-    canvas.text(text, cx, cy + t.label * 0.25, t.label, t.chip_ink, weight="bold", anchor="middle", role="label", bg=t.card)
-
-
 def draw_flowchart(canvas, params: dict) -> None:
     take_headline(canvas, params, "THE PATH")
     names = labels_or(params, ["RANGE", "LEVELS", "STOP"])
     x, y, w, h = canvas.content_rect()
-    cy = y + h * 0.48
-    gap = w / (len(names) + 0.4)
-    centers = [x + gap * (i + 0.7) for i in range(len(names))]
+    t = canvas.theme
+    gap = t.s(36)
+    card_w = min(t.s(300), (w - gap * (len(names) - 1)) / len(names))
+    card_h = min(t.s(400), h - t.s(8))
+    row_w = card_w * len(names) + gap * (len(names) - 1)
+    left = x + (w - row_w) / 2
+    top = y + max(0, (h - card_h) / 2)
+    slots = []
     for i, name in enumerate(names):
+        cx = left + i * (card_w + gap)
+        slots.append(cx)
+        canvas.glass(cx, top, card_w, card_h, rx=t.s(26))
+        canvas.text(name, cx + card_w / 2, top + card_h * 0.5, t.label, t.ink, weight="bold", anchor="middle", role="label", bg=t.card)
+    for i, cx in enumerate(slots):
         if i:
-            canvas.arrow(centers[i - 1] + 130, cy, centers[i] - 140, cy)
-        _node(canvas, centers[i], cy, name)
+            canvas.arrow(cx - gap + t.s(6), top + card_h * 0.46, cx - t.s(8), top + card_h * 0.46)
     if params.get("example"):
         canvas.stamp_example()
 
@@ -54,7 +57,7 @@ def draw_comparison(canvas, params: dict) -> None:
     band(x)
     with canvas.svg.group(opacity=0.55):
         band(x + box_w + gap)
-        canvas.svg.line(x + box_w + gap + 50, y + h * 0.32, x + w - 50, y + h * 0.78, t.danger, sw=4)
+        canvas.glow_line(x + box_w + gap + 50, y + h * 0.32, x + w - 50, y + h * 0.78, t.danger, sw=t.s(3))
     if params.get("variant") != "plain":
         canvas.stamp_example()
     if params.get("variant") == "plain":
@@ -64,18 +67,25 @@ def draw_comparison(canvas, params: dict) -> None:
 
 def draw_steps(canvas, params: dict) -> None:
     take_headline(canvas, params, "THREE PARTS")
-    names = labels_or(params, ["RANGE", "LEVELS", "STOP"])
+    names = labels_or(params, ["RANGE", "LEVELS", "STOP"])[:3]
     x, y, w, h = canvas.content_rect()
     t = canvas.theme
-    cy = y + h * 0.55
-    step_w = w / len(names)
+    gap = t.s(28)
+    card_w = min(t.s(300), (w - gap * (len(names) - 1)) / len(names))
+    card_h = min(t.s(433), h - t.s(8))
+    row_w = card_w * len(names) + gap * (len(names) - 1)
+    left = x + (w - row_w) / 2
+    top = y + max(0, (h - card_h) / 2)
+    slots = []
     for i, name in enumerate(names):
-        cx = x + step_w * (i + 0.5)
+        cx = left + i * (card_w + gap)
+        slots.append(cx)
+        canvas.glass(cx, top, card_w, card_h, rx=t.s(26))
+        canvas.text(str(i + 1), cx + card_w / 2, top + card_h * 0.38, t.s(84), t.accent_ink, weight="condensed", anchor="middle", role="step", bg=t.card)
+        canvas.text(name, cx + card_w / 2, top + card_h * 0.62, t.label, t.ink, weight="bold", anchor="middle", role="label", bg=t.card)
+    for i, cx in enumerate(slots):
         if i:
-            canvas.arrow(cx - step_w + 70, cy - 70, cx - 70, cy - 70)
-        canvas.svg.circle(cx, cy - 70, 32, fill=t.card, stroke=t.accent, sw=t.stroke)
-        canvas.text(str(i + 1), cx, cy - 70 + t.label * 0.28, t.label, t.accent_ink, weight="bold", anchor="middle", role="step", bg=t.card)
-        canvas.text(name, cx, cy + 20, t.label, t.ink, weight="bold", anchor="middle", role="label", bg=t.bg0)
+            canvas.arrow(cx - gap + t.s(4), top + card_h * 0.42, cx - t.s(6), top + card_h * 0.42)
 
 
 def draw_fence(canvas, params: dict) -> None:
@@ -90,9 +100,9 @@ def draw_fence(canvas, params: dict) -> None:
     posts = 6
     for i in range(posts):
         px = left + (right - left) * i / (posts - 1)
-        canvas.svg.line(px, rail_top - 16, px, rail_bot + 16, t.accent, sw=4, opacity=0.85)
-    canvas.svg.line(left, rail_top, right, rail_top, t.accent, sw=3)
-    canvas.svg.line(left, rail_bot, right, rail_bot, t.accent, sw=3)
+        canvas.glow_line(px, rail_top - 16, px, rail_bot + 16, t.accent, sw=t.s(3))
+    canvas.glow_line(left, rail_top, right, rail_top, t.accent, sw=t.s(2.4))
+    canvas.glow_line(left, rail_bot, right, rail_bot, t.accent, sw=t.s(2.4))
     mid = (rail_top + rail_bot) / 2
     canvas.svg.polyline(
         [
@@ -157,8 +167,10 @@ def draw_buckets(canvas, params: dict) -> None:
     take_headline(canvas, params, "TWO BUCKETS")
     names = labels_or(params, ["APART", "OVERLAP", "BUCKET"])
     variant = params.get("variant", "apart")
+    t = canvas.theme
     x, y, w, h = canvas.content_rect()
-    bw, bh = min(280, w * 0.28), h * 0.55
+    canvas.glass(x, y, w, h)
+    bw, bh = min(t.s(280), w * 0.34), h * 0.62
     yb = y + h * 0.22
     gap = w * 0.18
     left = x + w * 0.5 - gap / 2 - bw
@@ -180,7 +192,7 @@ def draw_checklist(canvas, params: dict) -> None:
     take_headline(canvas, params, "ON PAPER")
     names = labels_or(params, ["RANGE", "LEVELS", "STOP"])
     x, y, w, h = canvas.content_rect()
-    canvas.glass(x + w * 0.18, y, w * 0.64, h)
+    canvas.glass(x, y, w, h)
     t = canvas.theme
     highlight = int(params.get("highlight") or 0)
     highlight = max(0, min(len(names) - 1, highlight))

@@ -217,8 +217,6 @@ def _params_for(kind: str, concept: str, role: str, chapter: str, title: str, be
     elif kind == "mascot_scene":
         if "think" in low:
             pose = "thinking"
-        elif "celebrat" in low:
-            pose = "celebrating"
         elif "point" in low:
             pose = "pointing"
         else:
@@ -227,7 +225,6 @@ def _params_for(kind: str, concept: str, role: str, chapter: str, title: str, be
             "pointing": ("LOOK HERE", ["POINT", "RANGE"]),
             "thinking": ("THINK FIRST", ["THINK", "CHECK"]),
             "warning": ("CHECK FIRST", ["WAIT", "CHECK"]),
-            "celebrating": ("STEP DONE", ["DONE", "NEXT"]),
         }
         headline, pose_labels = poses[pose]
         params["pose"] = pose
@@ -393,8 +390,6 @@ def _parse_sentence(text: str) -> Spec:
         params["pose"] = "pointing"
     elif "thinking" in low:
         params["pose"] = "thinking"
-    elif "celebrat" in low:
-        params["pose"] = "celebrating"
     elif "warning" in low:
         params["pose"] = "warning"
     if "leave" in low or "does not return" in low:

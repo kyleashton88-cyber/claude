@@ -10,10 +10,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "3a89a90e965ed452ff586c5b461d26c0",
-      "md5": "3a89a90e965ed452ff586c5b461d26c0",
-      "renderer": "cairosvg",
-      "alt": "A title card for the lesson, with no extra lockup. Labels: START, HERE.",
+      "checksum": "15ce8efb168dee5b194bf3c597d739a8",
+      "md5": "15ce8efb168dee5b194bf3c597d739a8",
+      "renderer": "resvg",
+      "alt": "A title card for the lesson, with no extra lockup. Labels: Start, Here.",
       "spec": {
         "type": "title_card",
         "preset": "house",
@@ -31,8 +31,8 @@
       },
       "idea": "A title card for the lesson, with no extra lockup.",
       "labels": [
-        "START",
-        "HERE"
+        "Start",
+        "Here"
       ],
       "example": false,
       "qa_ok": true,
@@ -47,10 +47,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A title card for the lesson, with no extra lockup.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 100",
-        "pass: word spacing \u2014 one headline word"
+        "pass: frame \u2014 1536x1024, spread 207",
+        "pass: word spacing \u2014 one headline word",
+        "pass: ink coverage \u2014 45% of the frame",
+        "pass: plate stem \u2014 10.3px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -62,10 +65,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "73a96dd52e9c7f4e4da734c8cd52342f",
-      "md5": "73a96dd52e9c7f4e4da734c8cd52342f",
-      "renderer": "cairosvg",
-      "alt": "A title card for the lesson, with no extra lockup. Labels: TOP, BOTTOM.",
+      "checksum": "94be6405652011df9f9d7fcd43b4d349",
+      "md5": "94be6405652011df9f9d7fcd43b4d349",
+      "renderer": "resvg",
+      "alt": "A title card for the lesson, with no extra lockup. Labels: Top, Bottom.",
       "spec": {
         "type": "title_card",
         "preset": "house",
@@ -83,8 +86,8 @@
       },
       "idea": "A title card for the lesson, with no extra lockup.",
       "labels": [
-        "TOP",
-        "BOTTOM"
+        "Top",
+        "Bottom"
       ],
       "example": false,
       "qa_ok": true,
@@ -99,10 +102,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A title card for the lesson, with no extra lockup.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 156",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 206",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 44% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -114,10 +120,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "d5a0b233a2c789fcc9a1d88fa945d9d1",
-      "md5": "d5a0b233a2c789fcc9a1d88fa945d9d1",
-      "renderer": "cairosvg",
-      "alt": "A title card for the lesson, with no extra lockup. Labels: NEXT, PAGE.",
+      "checksum": "e71d665528614636b51ec32f1083d2d1",
+      "md5": "e71d665528614636b51ec32f1083d2d1",
+      "renderer": "resvg",
+      "alt": "A title card for the lesson, with no extra lockup. Labels: Next, Page.",
       "spec": {
         "type": "title_card",
         "preset": "house",
@@ -135,8 +141,8 @@
       },
       "idea": "A title card for the lesson, with no extra lockup.",
       "labels": [
-        "NEXT",
-        "PAGE"
+        "Next",
+        "Page"
       ],
       "example": false,
       "qa_ok": true,
@@ -151,10 +157,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A title card for the lesson, with no extra lockup.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 128",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 207",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 44% of the frame",
+        "pass: plate stem \u2014 15.1px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,

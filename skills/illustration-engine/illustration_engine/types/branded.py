@@ -23,7 +23,7 @@ def draw_title(canvas, params: dict) -> None:
     x, y, w, h = canvas.content_rect()
     t = canvas.theme
     _subtitle(canvas, str(params.get("subtitle") or "ONE IDEA"), x, y + t.s(28))
-    canvas.glass(x, y + t.s(56), w * 0.62, h - t.s(70))
+    canvas.glass(x, y + t.s(48), w, h - t.s(56))
     top = y + h * 0.42
     bot = y + h * 0.72
     canvas.glow_line(x + t.s(36), top, x + w * 0.56, top, t.accent, sw=t.s(2.4), dash="7 7")
@@ -72,7 +72,7 @@ def draw_cover(canvas, params: dict) -> None:
     canvas.chip(names[0], x + t.s(48), top - t.s(28), anchor="start")
     if len(names) > 1:
         canvas.chip(names[1], x + t.s(48), bot + t.s(36), anchor="start")
-    scale = min((h * 0.82) / 280, (w * 0.34) / 180)
+    scale = min((h * 0.9) / 280, (w * 0.36) / 180)
     draw_mascot(canvas, x + w - 210 * scale, y + h - 280 * scale - t.s(8), scale, "pointing")
 
 
@@ -85,11 +85,12 @@ def draw_divider(canvas, params: dict) -> None:
     names = labels_or(params, ["PART", "NEXT"])
     x, y, w, h = canvas.content_rect()
     t = canvas.theme
-    size = min(160, int(w / max(4, len(word))))
-    bloom = canvas.svg.ensure_glow(t.s(5), t.s(1.6))
+    canvas.glass(x + w * 0.08, y, w * 0.84, h * 0.86)
+    size = min(int(t.s(150)), int(w / max(4, len(word))))
+    bloom = canvas.svg.ensure_glow(t.glow_std())
     while size > t.min_font and canvas.measure(word, size, "condensed") > w - 40:
         size -= 6
-    canvas.svg.text(word, x + w / 2, y + h * 0.48, size, t.accent, family("condensed"), anchor="middle", weight="bold", opacity=0.8, filt=bloom)
+    canvas.svg.text(word, x + w / 2, y + h * 0.48, size, t.accent, family("condensed"), anchor="middle", weight="700", opacity=0.9, filt=bloom)
     canvas.text(word, x + w / 2, y + h * 0.48, size, t.ink, weight="condensed", anchor="middle", role="headline", bg=t.bg0)
     canvas.glow_line(x + w * 0.22, y + h * 0.62, x + w * 0.78, y + h * 0.62, t.accent, sw=t.s(3))
     canvas.chip(names[0], x + w * 0.32, y + h * 0.74, anchor="middle")

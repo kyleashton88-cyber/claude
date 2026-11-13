@@ -42,13 +42,25 @@ class RenderTests(unittest.TestCase):
             labels = [mark for mark in result.meta["marks"] if mark["role"] == "label"]
             self.assertTrue(labels)
             self.assertTrue(all(mark["size"] + 0.1 >= floor for mark in labels))
+            svg = dest.with_suffix(".svg").read_text(encoding="utf-8")
+            self.assertIn('font-weight: 700', svg)
+            self.assertIn('font-weight="700"', svg)
+            self.assertNotIn("1.18", svg)
+            self.assertIn("stdDeviation=\"10\"", svg)
+            stem = next(line for line in result.qa.checks if "stem width" in line)
+            self.assertTrue(stem.startswith("pass"), stem)
 
     def test_canvas_sizes_scale_type(self):
         from illustration_engine.theme import get_theme
-        for width, height, headline in ((1280, 720, 64), (1536, 1024, 77), (1920, 1080, 96)):
+        for width, height, headline, label in (
+            (1280, 720, 74, 28),
+            (1536, 1024, 89, 34),
+            (1920, 1080, 111, 42),
+        ):
             theme = get_theme("house", (width, height))
             self.assertEqual((theme.width, theme.height), (width, height))
             self.assertEqual(theme.headline, headline)
+            self.assertEqual(theme.label, label)
             self.assertGreaterEqual(theme.label, round(24 * width / 1280))
 
     def test_refuses_course_output(self):

@@ -64,6 +64,14 @@ class Theme:
         """Scale a 1280-wide pixel value to this canvas."""
         return px * self.scale
 
+    def glow_std(self) -> float:
+        """Gaussian blur. About 10 at a 1536-wide frame."""
+        return 10 * self.width / 1536
+
+    def wash_px(self) -> float:
+        """Soft wash. 32px at a 1536-wide frame."""
+        return 32 * self.width / 1536
+
 
 def _s(scale: float, px: float) -> int:
     return max(1, int(round(px * scale)))
@@ -77,10 +85,12 @@ def _theme(name: str, width: int, height: int, **colors) -> Theme:
         width=width,
         height=height,
         scale=scale,
-        headline=_s(scale, 64),
-        label=_s(scale, 28),
+        # 74px at 1280 is 89px at 1536. Roboto Condensed cap-height is 0.71em,
+        # so that size paints a 63px cap, inside the 62-64px target.
+        headline=_s(scale, 74),
+        label=_s(scale, 34 * BASE_W / 1536),
         min_font=_s(scale, 24),
-        headline_floor=_s(scale, 48),
+        headline_floor=_s(scale, 58),
         safe_top=_s(scale, 56),
         safe_bottom=_s(scale, 56),
         safe_x=_s(scale, 48),

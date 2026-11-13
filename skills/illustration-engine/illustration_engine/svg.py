@@ -38,16 +38,14 @@ class Svg:
             "</radialGradient>"
         )
 
-    def ensure_glow(self, wide: float, tight: float) -> str:
+    def ensure_glow(self, std_dev: float) -> str:
+        """Soft bloom only. The crisp peak is drawn afterwards, not inside the filter."""
         gid = "bloom"
         if not any(f'id="{gid}"' in item for item in self._defs):
             self._defs.append(
-                f'<filter id="{gid}" x="-80%" y="-80%" width="260%" height="260%" '
+                f'<filter id="{gid}" x="-150%" y="-150%" width="400%" height="400%" '
                 f'color-interpolation-filters="sRGB">'
-                f'<feGaussianBlur in="SourceGraphic" stdDeviation="{_num(wide)}" result="wide"/>'
-                f'<feGaussianBlur in="SourceGraphic" stdDeviation="{_num(tight)}" result="tight"/>'
-                f'<feComposite in="wide" in2="tight" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="add"/>'
-                f'<feMerge><feMergeNode in="add"/><feMergeNode in="SourceGraphic"/></feMerge>'
+                f'<feGaussianBlur in="SourceGraphic" stdDeviation="{_num(std_dev)}"/>'
                 f"</filter>"
             )
         return gid
@@ -103,14 +101,15 @@ class Svg:
         )
 
     def text(self, content, x, y, size, fill, family, anchor="start", opacity=1, rotate=None,
-             weight="bold", filt=None) -> None:
+             weight="700", filt=None) -> None:
         transform = ""
         if rotate is not None:
             transform = f' transform="rotate({_num(rotate)} {_num(x)} {_num(y)})"'
         filter_attr = f' filter="url(#{filt})"' if filt else ""
+        numeric = {"bold": "700", "semi": "600", "normal": "400"}.get(str(weight), str(weight))
         self._body.append(
             f'<text x="{_num(x)}" y="{_num(y)}" fill="{fill}" fill-opacity="{opacity}" '
-            f'font-family="{family}" font-weight="{weight}" font-size="{int(size)}" '
+            f'font-family="{family}" font-weight="{numeric}" font-size="{int(size)}" '
             f'text-anchor="{anchor}"{transform}{filter_attr}>'
             f"{escape(content)}</text>"
         )

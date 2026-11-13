@@ -55,7 +55,12 @@ def family(weight: str) -> str:
 
 
 def css_weight(weight: str) -> str:
-    return "bold" if weight in {"bold", "semi", "condensed"} else "normal"
+    """Numeric weight. 700 is the bundled Bold file. 400 is Regular."""
+    if weight in {"bold", "condensed"}:
+        return "700"
+    if weight == "semi":
+        return "600"
+    return "400"
 
 
 def file_uri(path: Path) -> str:
@@ -116,23 +121,9 @@ def bundled_match() -> tuple[bool, str]:
     return ok, "; ".join(lines)
 
 
-@lru_cache(maxsize=4)
-def _context():
-    install()
-    import cairocffi as cairo
-
-    surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, 8, 8)
-    return cairo, cairo.Context(surface)
-
-
 def advance(weight: str, text: str, size: int) -> float:
-    """Width Cairo will paint, so a second word cannot land on the first."""
-    cairo, ctx = _context()
-    slant = cairo.FONT_SLANT_NORMAL
-    face_weight = cairo.FONT_WEIGHT_BOLD if css_weight(weight) == "bold" else cairo.FONT_WEIGHT_NORMAL
-    ctx.select_font_face(family(weight), slant, face_weight)
-    ctx.set_font_size(int(size))
-    return float(ctx.text_extents(text)[4])
+    """Advance width of the bundled file. There is no width multiplier."""
+    return float(pil_font(weight, int(size)).getlength(text))
 
 
 @lru_cache(maxsize=64)

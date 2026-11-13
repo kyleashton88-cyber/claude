@@ -10,10 +10,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "b3dfb2d655c018fef922d0fb12cd7397",
-      "md5": "b3dfb2d655c018fef922d0fb12cd7397",
-      "renderer": "cairosvg",
-      "alt": "A lesson cover: a title and the mascot. Labels: LESSON, START.",
+      "checksum": "5c1770e428111d23a65927b4d588de57",
+      "md5": "5c1770e428111d23a65927b4d588de57",
+      "renderer": "resvg",
+      "alt": "A lesson cover: a title and the mascot. Labels: Lesson, Start.",
       "spec": {
         "type": "lesson_cover",
         "preset": "house",
@@ -31,8 +31,8 @@
       },
       "idea": "A lesson cover: a title and the mascot.",
       "labels": [
-        "LESSON",
-        "START"
+        "Lesson",
+        "Start"
       ],
       "example": false,
       "qa_ok": true,
@@ -47,10 +47,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A lesson cover: a title and the mascot.",
         "pass: no claims or contact details \u2014 clean",
         "pass: frame \u2014 1536x1024, spread 248",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 47% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -62,10 +65,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "463d37caff59737653542b50aa717799",
-      "md5": "463d37caff59737653542b50aa717799",
-      "renderer": "cairosvg",
-      "alt": "A lesson cover: a title and the mascot. Labels: LESSON, RUNGS.",
+      "checksum": "5f8d0d177e55f86a5f243af18fce9ab1",
+      "md5": "5f8d0d177e55f86a5f243af18fce9ab1",
+      "renderer": "resvg",
+      "alt": "A lesson cover: a title and the mascot. Labels: Lesson, Rungs.",
       "spec": {
         "type": "lesson_cover",
         "preset": "house",
@@ -83,8 +86,8 @@
       },
       "idea": "A lesson cover: a title and the mascot.",
       "labels": [
-        "LESSON",
-        "RUNGS"
+        "Lesson",
+        "Rungs"
       ],
       "example": false,
       "qa_ok": true,
@@ -99,10 +102,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A lesson cover: a title and the mascot.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 248",
-        "pass: word spacing \u2014 one headline word"
+        "pass: frame \u2014 1536x1024, spread 249",
+        "pass: word spacing \u2014 one headline word",
+        "pass: ink coverage \u2014 46% of the frame",
+        "pass: plate stem \u2014 10.3px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -114,10 +120,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "9fea8561c732b3a0984ca13f8a7ddde6",
-      "md5": "9fea8561c732b3a0984ca13f8a7ddde6",
-      "renderer": "cairosvg",
-      "alt": "A lesson cover: a title and the mascot. Labels: LESSON, LINE.",
+      "checksum": "8b09ce538aab9ce3751ff182b218e4d6",
+      "md5": "8b09ce538aab9ce3751ff182b218e4d6",
+      "renderer": "resvg",
+      "alt": "A lesson cover: a title and the mascot. Labels: Lesson, Line.",
       "spec": {
         "type": "lesson_cover",
         "preset": "house",
@@ -135,8 +141,8 @@
       },
       "idea": "A lesson cover: a title and the mascot.",
       "labels": [
-        "LESSON",
-        "LINE"
+        "Lesson",
+        "Line"
       ],
       "example": false,
       "qa_ok": true,
@@ -151,10 +157,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A lesson cover: a title and the mascot.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 248",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 249",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 46% of the frame",
+        "pass: plate stem \u2014 15.1px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,

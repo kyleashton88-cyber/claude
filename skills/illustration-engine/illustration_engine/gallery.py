@@ -5,7 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from .batch import render_lesson, write_reports
-from .contact import contact_sheet, side_by_side
+from .contact import before_after, contact_sheet, side_by_side
 from .render import RenderResult, render_spec
 from .spec import Spec
 
@@ -53,7 +53,6 @@ GALLERY: list[tuple[str, dict]] = [
     ("mascot_scene", {"pose": "pointing", "headline": "LOOK HERE", "labels": ["POINT", "RANGE"]}),
     ("mascot_scene", {"pose": "thinking", "headline": "THINK FIRST", "labels": ["THINK", "CHECK"]}),
     ("mascot_scene", {"pose": "warning", "headline": "CHECK FIRST", "labels": ["WAIT", "CHECK"]}),
-    ("mascot_scene", {"pose": "celebrating", "headline": "STEP DONE", "labels": ["DONE", "NEXT"]}),
     ("title_card", {"title": "INTRODUCTION", "labels": ["START", "HERE"]}),
     ("title_card", {"title": "THE RANGE", "labels": ["TOP", "BOTTOM"]}),
     ("title_card", {"title": "NEXT STEP", "labels": ["NEXT", "PAGE"]}),
@@ -105,6 +104,18 @@ def build_gallery(out_dir: Path, requests: Path | None = None, lesson: str = "bp
         flat.append((f"presets/{name}.png", result))
         sheet_items.append((dest, f"preset {name}"))
         print(f"preset {name}")
+    for width, height in ((1280, 720), (1536, 1024), (1920, 1080)):
+        label = f"{width}x{height}"
+        for kind, params in (
+            ("grid_ladder", {"low": 90, "high": 110, "grids": 10, "price": 100, "headline": "GRID LADDER", "labels": ["BUY", "SELL", "PRICE"]}),
+            ("steps", {"headline": "THREE PARTS", "labels": ["RANGE", "LEVELS", "STOP"]}),
+        ):
+            spec = Spec(type=kind, params=dict(params), preset="house", size=(width, height))
+            dest = out_dir / "sizes" / f"{label}-{kind}.png"
+            result = render_spec(spec, dest, preset="house", strict=strict)
+            flat.append((f"sizes/{label}-{kind}.png", result))
+            sheet_items.append((dest, f"{label} {kind}"))
+            print(f"size {label} {kind}")
     root = repo_root()
     request_path = requests or (root / "IMAGE_REQUESTS.json" if root else None)
     if request_path and request_path.is_file():
@@ -121,4 +132,52 @@ def build_gallery(out_dir: Path, requests: Path | None = None, lesson: str = "bp
                     print(f"compare {png.name}")
     contact_sheet(sheet_items, out_dir / "contact-sheet.png", columns=4)
     write_reports(out_dir, flat)
+    _write_stem_report(out_dir, flat)
+    _write_before_after(out_dir)
     print(f"contact {out_dir / 'contact-sheet.png'}")
+
+
+def _write_stem_report(out_dir: Path, flat: list[tuple[str, RenderResult]]) -> None:
+    grouped: dict[str, list[str]] = {}
+    for name, result in flat:
+        kind = name.split("/")[1] if name.startswith("types/") else name.split("/")[0]
+        plate = next((line for line in result.qa.checks if "plate stem" in line), "")
+        pipe = next((line for line in result.qa.checks if line.endswith("px at a 55px cap") and "stem width" in line), "")
+        grouped.setdefault(kind, []).append(f"{name}: {plate} | {pipe}")
+    lines = [
+        "# Stem width",
+        "",
+        "Each line is the headline stem on that plate, scaled to a 55px cap.",
+        "Bold is at least 10px. The pipeline probe uses the same rasterizer and font-weight 700.",
+        "",
+    ]
+    for kind, rows in grouped.items():
+        lines.append(f"## {kind}")
+        lines.extend(f"- {row}" for row in rows)
+        lines.append("")
+    (out_dir / "STEM.md").write_text("\n".join(lines), encoding="utf-8")
+    print(f"stem {out_dir / 'STEM.md'}")
+
+
+def _write_before_after(out_dir: Path) -> None:
+    before = out_dir / "before"
+    if not before.is_dir():
+        return
+    pairs = {
+        "steps.png": out_dir / "types" / "steps" / "01.png",
+        "grid.png": out_dir / "types" / "grid_ladder" / "01.png",
+        "candle.png": out_dir / "types" / "candle_anatomy" / "01.png",
+        "cover.png": out_dir / "types" / "lesson_cover" / "01.png",
+        "mascot.png": out_dir / "types" / "mascot_scene" / "01.png",
+        "flowchart.png": out_dir / "types" / "flowchart" / "01.png",
+        "checklist.png": out_dir / "types" / "checklist" / "01.png",
+        "liquidation.png": out_dir / "types" / "liquidation" / "01.png",
+        "elite.png": out_dir / "presets" / "elite.png",
+        "batch-001.png": out_dir / "batch" / "bp-01-introduction" / "001.png",
+    }
+    dest_dir = out_dir / "before-after"
+    for name, after in pairs.items():
+        source = before / name
+        if source.is_file() and after.is_file():
+            before_after(source, after, dest_dir / name)
+            print(f"before-after {name}")

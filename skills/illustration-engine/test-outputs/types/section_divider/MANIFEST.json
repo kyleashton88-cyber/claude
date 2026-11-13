@@ -10,10 +10,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "3edc04d70b6f5186307faaac386af943",
-      "md5": "3edc04d70b6f5186307faaac386af943",
-      "renderer": "cairosvg",
-      "alt": "A section divider with one word. Labels: PART, NEXT.",
+      "checksum": "47dc4668b047b0bd298c6ed75bb01fbc",
+      "md5": "47dc4668b047b0bd298c6ed75bb01fbc",
+      "renderer": "resvg",
+      "alt": "A section divider with one word. Labels: Part, Next.",
       "spec": {
         "type": "section_divider",
         "preset": "house",
@@ -31,8 +31,8 @@
       },
       "idea": "A section divider with one word.",
       "labels": [
-        "PART",
-        "NEXT"
+        "Part",
+        "Next"
       ],
       "example": false,
       "qa_ok": true,
@@ -47,10 +47,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A section divider with one word.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 225",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 245",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 36% of the frame",
+        "pass: plate stem \u2014 15.2px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -62,10 +65,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "e3bc4a7af16b5dbc8f1889720de416a7",
-      "md5": "e3bc4a7af16b5dbc8f1889720de416a7",
-      "renderer": "cairosvg",
-      "alt": "A section divider with one word. Labels: PART, RANGE.",
+      "checksum": "56376588cbdf2e03876fc0d3f0e93538",
+      "md5": "56376588cbdf2e03876fc0d3f0e93538",
+      "renderer": "resvg",
+      "alt": "A section divider with one word. Labels: Part, Range.",
       "spec": {
         "type": "section_divider",
         "preset": "house",
@@ -83,8 +86,8 @@
       },
       "idea": "A section divider with one word.",
       "labels": [
-        "PART",
-        "RANGE"
+        "Part",
+        "Range"
       ],
       "example": false,
       "qa_ok": true,
@@ -99,10 +102,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A section divider with one word.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 204",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 230",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 36% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -114,10 +120,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "daad29e756807b0268770c7bf2cc67d1",
-      "md5": "daad29e756807b0268770c7bf2cc67d1",
-      "renderer": "cairosvg",
-      "alt": "A section divider with one word. Labels: PART, PAPER.",
+      "checksum": "c68b1f5413ea527ccfb4e39033ab57b5",
+      "md5": "c68b1f5413ea527ccfb4e39033ab57b5",
+      "renderer": "resvg",
+      "alt": "A section divider with one word. Labels: Part, Paper.",
       "spec": {
         "type": "section_divider",
         "preset": "house",
@@ -135,8 +141,8 @@
       },
       "idea": "A section divider with one word.",
       "labels": [
-        "PART",
-        "PAPER"
+        "Part",
+        "Paper"
       ],
       "example": false,
       "qa_ok": true,
@@ -151,10 +157,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A section divider with one word.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 210",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 215",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 37% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,

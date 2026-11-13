@@ -17,7 +17,7 @@ from pathlib import Path
 from .fonts import FONT_DIR, css_for, install
 from .parser import parse
 from .policy import RefusedPrompt
-from .qa import QaReport, check_headline_gap, check_pixels, check_scene
+from .qa import QaReport, check_headline_gap, check_pixels, check_scene, headline_stem, ink_coverage
 from .spec import Spec
 from .theme import Theme, get_theme
 from .types import draw
@@ -197,6 +197,10 @@ def render_spec(spec: Spec, out: Path, preset: str | None = None, strict: bool =
     scene.add("frame", pixels_ok, pixel_detail)
     gap_ok, gap_detail = check_headline_gap(png, meta.get("marks") or [])
     scene.add("word spacing", gap_ok, gap_detail)
+    cover = ink_coverage(png)
+    scene.add("ink coverage", 0.30 <= cover <= 0.55, f"{cover:.0%} of the frame")
+    plate_stem = headline_stem(png, meta.get("marks") or [])
+    scene.add("plate stem", plate_stem >= 10, f"{plate_stem:.1f}px at a 55px cap")
     digest = hashlib.md5(png).hexdigest()
     result = RenderResult(
         png=png,

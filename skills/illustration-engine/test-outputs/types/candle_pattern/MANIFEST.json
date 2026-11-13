@@ -10,10 +10,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "a087601d7960aa083e60080d7125d689",
-      "md5": "a087601d7960aa083e60080d7125d689",
-      "renderer": "cairosvg",
-      "alt": "One named candle pattern, shown on its own. Labels: HAMMER, WICK, BODY.",
+      "checksum": "799f42c1684c74d2081ce27f1ca68970",
+      "md5": "799f42c1684c74d2081ce27f1ca68970",
+      "renderer": "resvg",
+      "alt": "One named candle pattern, shown on its own. Labels: Hammer, Wick, Body.",
       "spec": {
         "type": "candle_pattern",
         "preset": "house",
@@ -23,9 +23,9 @@
       },
       "idea": "One named candle pattern, shown on its own.",
       "labels": [
-        "HAMMER",
-        "WICK",
-        "BODY"
+        "Hammer",
+        "Wick",
+        "Body"
       ],
       "example": true,
       "qa_ok": true,
@@ -40,10 +40,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 One named candle pattern, shown on its own.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 149",
-        "pass: word spacing \u2014 one headline word"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 one headline word",
+        "pass: ink coverage \u2014 49% of the frame",
+        "pass: plate stem \u2014 10.6px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -55,10 +58,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "943b5fd888a9d9c5f8a3d18b0895b03c",
-      "md5": "943b5fd888a9d9c5f8a3d18b0895b03c",
-      "renderer": "cairosvg",
-      "alt": "One named candle pattern, shown on its own. Labels: DOJI, OPEN, CLOSE.",
+      "checksum": "ef377bdfc0e867cde000153292c3d3b2",
+      "md5": "ef377bdfc0e867cde000153292c3d3b2",
+      "renderer": "resvg",
+      "alt": "One named candle pattern, shown on its own. Labels: Doji, Open, Close.",
       "spec": {
         "type": "candle_pattern",
         "preset": "house",
@@ -68,9 +71,9 @@
       },
       "idea": "One named candle pattern, shown on its own.",
       "labels": [
-        "DOJI",
-        "OPEN",
-        "CLOSE"
+        "Doji",
+        "Open",
+        "Close"
       ],
       "example": true,
       "qa_ok": true,
@@ -85,10 +88,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 One named candle pattern, shown on its own.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 133",
-        "pass: word spacing \u2014 one headline word"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 one headline word",
+        "pass: ink coverage \u2014 49% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -100,10 +106,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "4e76b8bcc6ac8486c84d5aced07d579a",
-      "md5": "4e76b8bcc6ac8486c84d5aced07d579a",
-      "renderer": "cairosvg",
-      "alt": "One named candle pattern, shown on its own. Labels: ENGULF, FIRST, SECOND.",
+      "checksum": "605210161e1f76a57a4af7ee36308975",
+      "md5": "605210161e1f76a57a4af7ee36308975",
+      "renderer": "resvg",
+      "alt": "One named candle pattern, shown on its own. Labels: Engulf, First, Second.",
       "spec": {
         "type": "candle_pattern",
         "preset": "house",
@@ -113,9 +119,9 @@
       },
       "idea": "One named candle pattern, shown on its own.",
       "labels": [
-        "ENGULF",
-        "FIRST",
-        "SECOND"
+        "Engulf",
+        "First",
+        "Second"
       ],
       "example": true,
       "qa_ok": true,
@@ -130,10 +136,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 One named candle pattern, shown on its own.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 148",
-        "pass: word spacing \u2014 one headline word"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 one headline word",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,

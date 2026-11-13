@@ -10,10 +10,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "8f892bd3c4152222af3f6ead8d995e1d",
-      "md5": "8f892bd3c4152222af3f6ead8d995e1d",
-      "renderer": "cairosvg",
-      "alt": "Two ways to see the same idea, side by side. Labels: CLEAR, MISS.",
+      "checksum": "a58fefd2013c0c4f7a413e95bfa48923",
+      "md5": "a58fefd2013c0c4f7a413e95bfa48923",
+      "renderer": "resvg",
+      "alt": "Two ways to see the same idea, side by side. Labels: Clear, Miss.",
       "spec": {
         "type": "comparison",
         "preset": "house",
@@ -33,8 +33,8 @@
       },
       "idea": "Two ways to see the same idea, side by side.",
       "labels": [
-        "CLEAR",
-        "MISS"
+        "Clear",
+        "Miss"
       ],
       "example": true,
       "qa_ok": true,
@@ -49,10 +49,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Two ways to see the same idea, side by side.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 159",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 212",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 10.3px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -64,10 +67,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "1ce5411fe1ea5b7e34ec536b4c25bcd6",
-      "md5": "1ce5411fe1ea5b7e34ec536b4c25bcd6",
-      "renderer": "cairosvg",
-      "alt": "Two ways to see the same idea, side by side. Labels: INSIDE, OUTSIDE.",
+      "checksum": "17b79560dfad9e38add01fcdb8687aac",
+      "md5": "17b79560dfad9e38add01fcdb8687aac",
+      "renderer": "resvg",
+      "alt": "Two ways to see the same idea, side by side. Labels: Inside, Outside.",
       "spec": {
         "type": "comparison",
         "preset": "house",
@@ -87,8 +90,8 @@
       },
       "idea": "Two ways to see the same idea, side by side.",
       "labels": [
-        "INSIDE",
-        "OUTSIDE"
+        "Inside",
+        "Outside"
       ],
       "example": true,
       "qa_ok": true,
@@ -103,10 +106,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Two ways to see the same idea, side by side.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 147",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 202",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 51% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -118,10 +124,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "b9872679a227dbc54435528f7465b043",
-      "md5": "b9872679a227dbc54435528f7465b043",
-      "renderer": "cairosvg",
-      "alt": "Two ways to see the same idea, side by side. Labels: NUMBER, SHAPE.",
+      "checksum": "6ebf74001c9757e493c29bd1620dd35d",
+      "md5": "6ebf74001c9757e493c29bd1620dd35d",
+      "renderer": "resvg",
+      "alt": "Two ways to see the same idea, side by side. Labels: Number, Shape.",
       "spec": {
         "type": "comparison",
         "preset": "house",
@@ -141,8 +147,8 @@
       },
       "idea": "Two ways to see the same idea, side by side.",
       "labels": [
-        "NUMBER",
-        "SHAPE"
+        "Number",
+        "Shape"
       ],
       "example": false,
       "qa_ok": true,
@@ -157,10 +163,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Two ways to see the same idea, side by side.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 162",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 202",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 49% of the frame",
+        "pass: plate stem \u2014 14.6px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,

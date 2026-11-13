@@ -10,10 +10,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "1ab3cccb93033d44345b561d569457d9",
-      "md5": "1ab3cccb93033d44345b561d569457d9",
-      "renderer": "cairosvg",
-      "alt": "One candle, with the body and the wick called out. Labels: HIGH, LOW, BODY, WICK.",
+      "checksum": "820c46d9918244be1af719bd53f6bd8c",
+      "md5": "820c46d9918244be1af719bd53f6bd8c",
+      "renderer": "resvg",
+      "alt": "One candle, with the body and the wick called out. Labels: High, Low, Body, Wick.",
       "spec": {
         "type": "candle_anatomy",
         "preset": "house",
@@ -23,10 +23,10 @@
       },
       "idea": "One candle, with the body and the wick called out.",
       "labels": [
-        "HIGH",
-        "LOW",
-        "BODY",
-        "WICK"
+        "High",
+        "Low",
+        "Body",
+        "Wick"
       ],
       "example": true,
       "qa_ok": true,
@@ -41,10 +41,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 One candle, with the body and the wick called out.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 150",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 51% of the frame",
+        "pass: plate stem \u2014 12.0px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -56,10 +59,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "9aedcf04aab3c6c99bfa362b05ac0986",
-      "md5": "9aedcf04aab3c6c99bfa362b05ac0986",
-      "renderer": "cairosvg",
-      "alt": "One candle, with the body and the wick called out. Labels: HIGH, LOW, BODY, WICK.",
+      "checksum": "206e13168a05ed2e95961f72517339b1",
+      "md5": "206e13168a05ed2e95961f72517339b1",
+      "renderer": "resvg",
+      "alt": "One candle, with the body and the wick called out. Labels: High, Low, Body, Wick.",
       "spec": {
         "type": "candle_anatomy",
         "preset": "house",
@@ -69,10 +72,10 @@
       },
       "idea": "One candle, with the body and the wick called out.",
       "labels": [
-        "HIGH",
-        "LOW",
-        "BODY",
-        "WICK"
+        "High",
+        "Low",
+        "Body",
+        "Wick"
       ],
       "example": true,
       "qa_ok": true,
@@ -87,10 +90,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 One candle, with the body and the wick called out.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 150",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 51% of the frame",
+        "pass: plate stem \u2014 12.0px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -102,10 +108,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "9ac23250ad207d6d2e53f4351c70e432",
-      "md5": "9ac23250ad207d6d2e53f4351c70e432",
-      "renderer": "cairosvg",
-      "alt": "One candle, with the body and the wick called out. Labels: HIGH, LOW, BODY, WICK.",
+      "checksum": "4a938a06f8597fdbf744522db4e3ea9a",
+      "md5": "4a938a06f8597fdbf744522db4e3ea9a",
+      "renderer": "resvg",
+      "alt": "One candle, with the body and the wick called out. Labels: High, Low, Body, Wick.",
       "spec": {
         "type": "candle_anatomy",
         "preset": "house",
@@ -115,10 +121,10 @@
       },
       "idea": "One candle, with the body and the wick called out.",
       "labels": [
-        "HIGH",
-        "LOW",
-        "BODY",
-        "WICK"
+        "High",
+        "Low",
+        "Body",
+        "Wick"
       ],
       "example": true,
       "qa_ok": true,
@@ -133,10 +139,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 One candle, with the body and the wick called out.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 150",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 51% of the frame",
+        "pass: plate stem \u2014 12.0px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -148,10 +157,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "4fbaa74cb2dc30faf13250e23fdc8699",
-      "md5": "4fbaa74cb2dc30faf13250e23fdc8699",
-      "renderer": "cairosvg",
-      "alt": "A sideways run of candles, marked as an example. Labels: UP, DOWN, WICK.",
+      "checksum": "f010bf4f95f06da0ccb73d2d64172fdb",
+      "md5": "f010bf4f95f06da0ccb73d2d64172fdb",
+      "renderer": "resvg",
+      "alt": "A sideways run of candles, marked as an example. Labels: Up, Down, Wick.",
       "spec": {
         "type": "candle_series",
         "preset": "house",
@@ -162,9 +171,9 @@
       },
       "idea": "A sideways run of candles, marked as an example.",
       "labels": [
-        "UP",
-        "DOWN",
-        "WICK"
+        "Up",
+        "Down",
+        "Wick"
       ],
       "example": true,
       "qa_ok": true,
@@ -179,10 +188,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A sideways run of candles, marked as an example.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 160",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -194,10 +206,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "1d1fe375c6ec50933d70e75263a7dcf0",
-      "md5": "1d1fe375c6ec50933d70e75263a7dcf0",
-      "renderer": "cairosvg",
-      "alt": "A sideways run of candles, marked as an example. Labels: UP, DOWN, WICK.",
+      "checksum": "3360aa9d0bfa92dc73d93e017009cc46",
+      "md5": "3360aa9d0bfa92dc73d93e017009cc46",
+      "renderer": "resvg",
+      "alt": "A sideways run of candles, marked as an example. Labels: Up, Down, Wick.",
       "spec": {
         "type": "candle_series",
         "preset": "house",
@@ -208,9 +220,9 @@
       },
       "idea": "A sideways run of candles, marked as an example.",
       "labels": [
-        "UP",
-        "DOWN",
-        "WICK"
+        "Up",
+        "Down",
+        "Wick"
       ],
       "example": true,
       "qa_ok": true,
@@ -225,10 +237,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A sideways run of candles, marked as an example.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 160",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -240,10 +255,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "f624fd84688712e8075ebc13397732cd",
-      "md5": "f624fd84688712e8075ebc13397732cd",
-      "renderer": "cairosvg",
-      "alt": "A sideways run of candles, marked as an example. Labels: UP, DOWN, WICK.",
+      "checksum": "6851477664c67eb9f0b67b9e225a760e",
+      "md5": "6851477664c67eb9f0b67b9e225a760e",
+      "renderer": "resvg",
+      "alt": "A sideways run of candles, marked as an example. Labels: Up, Down, Wick.",
       "spec": {
         "type": "candle_series",
         "preset": "house",
@@ -254,9 +269,9 @@
       },
       "idea": "A sideways run of candles, marked as an example.",
       "labels": [
-        "UP",
-        "DOWN",
-        "WICK"
+        "Up",
+        "Down",
+        "Wick"
       ],
       "example": true,
       "qa_ok": true,
@@ -271,10 +286,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A sideways run of candles, marked as an example.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 160",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -286,10 +304,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "a087601d7960aa083e60080d7125d689",
-      "md5": "a087601d7960aa083e60080d7125d689",
-      "renderer": "cairosvg",
-      "alt": "One named candle pattern, shown on its own. Labels: HAMMER, WICK, BODY.",
+      "checksum": "799f42c1684c74d2081ce27f1ca68970",
+      "md5": "799f42c1684c74d2081ce27f1ca68970",
+      "renderer": "resvg",
+      "alt": "One named candle pattern, shown on its own. Labels: Hammer, Wick, Body.",
       "spec": {
         "type": "candle_pattern",
         "preset": "house",
@@ -299,9 +317,9 @@
       },
       "idea": "One named candle pattern, shown on its own.",
       "labels": [
-        "HAMMER",
-        "WICK",
-        "BODY"
+        "Hammer",
+        "Wick",
+        "Body"
       ],
       "example": true,
       "qa_ok": true,
@@ -316,10 +334,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 One named candle pattern, shown on its own.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 149",
-        "pass: word spacing \u2014 one headline word"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 one headline word",
+        "pass: ink coverage \u2014 49% of the frame",
+        "pass: plate stem \u2014 10.6px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -331,10 +352,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "943b5fd888a9d9c5f8a3d18b0895b03c",
-      "md5": "943b5fd888a9d9c5f8a3d18b0895b03c",
-      "renderer": "cairosvg",
-      "alt": "One named candle pattern, shown on its own. Labels: DOJI, OPEN, CLOSE.",
+      "checksum": "ef377bdfc0e867cde000153292c3d3b2",
+      "md5": "ef377bdfc0e867cde000153292c3d3b2",
+      "renderer": "resvg",
+      "alt": "One named candle pattern, shown on its own. Labels: Doji, Open, Close.",
       "spec": {
         "type": "candle_pattern",
         "preset": "house",
@@ -344,9 +365,9 @@
       },
       "idea": "One named candle pattern, shown on its own.",
       "labels": [
-        "DOJI",
-        "OPEN",
-        "CLOSE"
+        "Doji",
+        "Open",
+        "Close"
       ],
       "example": true,
       "qa_ok": true,
@@ -361,10 +382,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 One named candle pattern, shown on its own.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 133",
-        "pass: word spacing \u2014 one headline word"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 one headline word",
+        "pass: ink coverage \u2014 49% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -376,10 +400,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "4e76b8bcc6ac8486c84d5aced07d579a",
-      "md5": "4e76b8bcc6ac8486c84d5aced07d579a",
-      "renderer": "cairosvg",
-      "alt": "One named candle pattern, shown on its own. Labels: ENGULF, FIRST, SECOND.",
+      "checksum": "605210161e1f76a57a4af7ee36308975",
+      "md5": "605210161e1f76a57a4af7ee36308975",
+      "renderer": "resvg",
+      "alt": "One named candle pattern, shown on its own. Labels: Engulf, First, Second.",
       "spec": {
         "type": "candle_pattern",
         "preset": "house",
@@ -389,9 +413,9 @@
       },
       "idea": "One named candle pattern, shown on its own.",
       "labels": [
-        "ENGULF",
-        "FIRST",
-        "SECOND"
+        "Engulf",
+        "First",
+        "Second"
       ],
       "example": true,
       "qa_ok": true,
@@ -406,10 +430,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 One named candle pattern, shown on its own.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 148",
-        "pass: word spacing \u2014 one headline word"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 one headline word",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -421,10 +448,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "68b8921eae6127ecc272d3731bde2366",
-      "md5": "68b8921eae6127ecc272d3731bde2366",
-      "renderer": "cairosvg",
-      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: BUY, SELL, PRICE.",
+      "checksum": "0ec1e3cd1f371139cfa7a1db090e28f2",
+      "md5": "0ec1e3cd1f371139cfa7a1db090e28f2",
+      "renderer": "resvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: Buy, Sell, Price.",
       "spec": {
         "type": "grid_ladder",
         "preset": "house",
@@ -447,9 +474,9 @@
       },
       "idea": "Buy orders wait below the mark and sell orders wait above it.",
       "labels": [
-        "BUY",
-        "SELL",
-        "PRICE"
+        "Buy",
+        "Sell",
+        "Price"
       ],
       "example": true,
       "qa_ok": true,
@@ -464,10 +491,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 146",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -479,10 +509,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "aa2afbd24b7efded8e7a06e50d0eeeba",
-      "md5": "aa2afbd24b7efded8e7a06e50d0eeeba",
-      "renderer": "cairosvg",
-      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: BUY, SELL, FILL.",
+      "checksum": "4f160302a803551c3054416550a5230b",
+      "md5": "4f160302a803551c3054416550a5230b",
+      "renderer": "resvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: Buy, Sell, Fill.",
       "spec": {
         "type": "grid_ladder",
         "preset": "house",
@@ -505,9 +535,9 @@
       },
       "idea": "Buy orders wait below the mark and sell orders wait above it.",
       "labels": [
-        "BUY",
-        "SELL",
-        "FILL"
+        "Buy",
+        "Sell",
+        "Fill"
       ],
       "example": true,
       "qa_ok": true,
@@ -522,10 +552,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 146",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -537,10 +570,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "fe6f3dce5d0cd53c5ffc6ebd0651dea9",
-      "md5": "fe6f3dce5d0cd53c5ffc6ebd0651dea9",
-      "renderer": "cairosvg",
-      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: BUY, SELL, PRICE.",
+      "checksum": "b0c023584509ef9f7c32e0d58e7f5308",
+      "md5": "b0c023584509ef9f7c32e0d58e7f5308",
+      "renderer": "resvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: Buy, Sell, Price.",
       "spec": {
         "type": "grid_ladder",
         "preset": "house",
@@ -563,9 +596,9 @@
       },
       "idea": "Buy orders wait below the mark and sell orders wait above it.",
       "labels": [
-        "BUY",
-        "SELL",
-        "PRICE"
+        "Buy",
+        "Sell",
+        "Price"
       ],
       "example": true,
       "qa_ok": true,
@@ -580,10 +613,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 146",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -595,10 +631,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "3cc80c669e4ff8969510e2dd873469ee",
-      "md5": "3cc80c669e4ff8969510e2dd873469ee",
-      "renderer": "cairosvg",
-      "alt": "A danger band between the entry and the liquidation line. Labels: ENTRY, DANGER, LIQUIDATION.",
+      "checksum": "9bb466506a0f5660941964625212ad18",
+      "md5": "9bb466506a0f5660941964625212ad18",
+      "renderer": "resvg",
+      "alt": "A danger band between the entry and the liquidation line. Labels: Entry, Danger, Liquidation.",
       "spec": {
         "type": "liquidation",
         "preset": "house",
@@ -611,9 +647,9 @@
       },
       "idea": "A danger band between the entry and the liquidation line.",
       "labels": [
-        "ENTRY",
-        "DANGER",
-        "LIQUIDATION"
+        "Entry",
+        "Danger",
+        "Liquidation"
       ],
       "example": true,
       "qa_ok": true,
@@ -628,10 +664,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A danger band between the entry and the liquidation line.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 165",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame",
+        "pass: plate stem \u2014 10.6px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -643,10 +682,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "90850ede0ece7b13e40d50b8e552c938",
-      "md5": "90850ede0ece7b13e40d50b8e552c938",
-      "renderer": "cairosvg",
-      "alt": "A danger band between the entry and the liquidation line. Labels: ENTRY, DANGER, LIQUIDATION.",
+      "checksum": "89fb7f7b4af48cce920efed04c11c032",
+      "md5": "89fb7f7b4af48cce920efed04c11c032",
+      "renderer": "resvg",
+      "alt": "A danger band between the entry and the liquidation line. Labels: Entry, Danger, Liquidation.",
       "spec": {
         "type": "liquidation",
         "preset": "house",
@@ -659,9 +698,9 @@
       },
       "idea": "A danger band between the entry and the liquidation line.",
       "labels": [
-        "ENTRY",
-        "DANGER",
-        "LIQUIDATION"
+        "Entry",
+        "Danger",
+        "Liquidation"
       ],
       "example": true,
       "qa_ok": true,
@@ -676,10 +715,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A danger band between the entry and the liquidation line.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 165",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame",
+        "pass: plate stem \u2014 10.6px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -691,10 +733,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "4217e2c68a2afe52da97fa791cda3238",
-      "md5": "4217e2c68a2afe52da97fa791cda3238",
-      "renderer": "cairosvg",
-      "alt": "A danger band between the entry and the liquidation line. Labels: ENTRY, DANGER, LIQUIDATION.",
+      "checksum": "3ccb46bee9510360b6d127de6dd212f4",
+      "md5": "3ccb46bee9510360b6d127de6dd212f4",
+      "renderer": "resvg",
+      "alt": "A danger band between the entry and the liquidation line. Labels: Entry, Danger, Liquidation.",
       "spec": {
         "type": "liquidation",
         "preset": "house",
@@ -707,9 +749,9 @@
       },
       "idea": "A danger band between the entry and the liquidation line.",
       "labels": [
-        "ENTRY",
-        "DANGER",
-        "LIQUIDATION"
+        "Entry",
+        "Danger",
+        "Liquidation"
       ],
       "example": true,
       "qa_ok": true,
@@ -724,10 +766,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A danger band between the entry and the liquidation line.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 165",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame",
+        "pass: plate stem \u2014 10.6px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -739,10 +784,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "50ff5071b67440841f2c5be27b1bf206",
-      "md5": "50ff5071b67440841f2c5be27b1bf206",
-      "renderer": "cairosvg",
-      "alt": "A top and a bottom, with price moving inside the band. Labels: UPPER, LOWER, RANGE.",
+      "checksum": "dd79c77074abca2e2f2de0a74c4af18a",
+      "md5": "dd79c77074abca2e2f2de0a74c4af18a",
+      "renderer": "resvg",
+      "alt": "A top and a bottom, with price moving inside the band. Labels: Upper, Lower, Range.",
       "spec": {
         "type": "price_range",
         "preset": "house",
@@ -764,9 +809,9 @@
       },
       "idea": "A top and a bottom, with price moving inside the band.",
       "labels": [
-        "UPPER",
-        "LOWER",
-        "RANGE"
+        "Upper",
+        "Lower",
+        "Range"
       ],
       "example": true,
       "qa_ok": true,
@@ -781,10 +826,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 156",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -796,10 +844,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "ae12f9c754e98ef721a56f325458cf3c",
-      "md5": "ae12f9c754e98ef721a56f325458cf3c",
-      "renderer": "cairosvg",
-      "alt": "A top and a bottom, with price moving inside the band. Labels: SUPPORT, RANGE, HOLD.",
+      "checksum": "cb4364838f40c3ed85bec68918163845",
+      "md5": "cb4364838f40c3ed85bec68918163845",
+      "renderer": "resvg",
+      "alt": "A top and a bottom, with price moving inside the band. Labels: Support, Range, Hold.",
       "spec": {
         "type": "price_range",
         "preset": "house",
@@ -821,9 +869,9 @@
       },
       "idea": "A top and a bottom, with price moving inside the band.",
       "labels": [
-        "SUPPORT",
-        "RANGE",
-        "HOLD"
+        "Support",
+        "Range",
+        "Hold"
       ],
       "example": true,
       "qa_ok": true,
@@ -838,10 +886,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 153",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -853,10 +904,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "e71d98b8d4554cd281a5ee979f8b771b",
-      "md5": "e71d98b8d4554cd281a5ee979f8b771b",
-      "renderer": "cairosvg",
-      "alt": "A top and a bottom, with price moving inside the band. Labels: UPPER, LOWER, OUT.",
+      "checksum": "1db3c1a01813f4004f6fc4db1615c944",
+      "md5": "1db3c1a01813f4004f6fc4db1615c944",
+      "renderer": "resvg",
+      "alt": "A top and a bottom, with price moving inside the band. Labels: Upper, Lower, Out.",
       "spec": {
         "type": "price_range",
         "preset": "house",
@@ -878,9 +929,9 @@
       },
       "idea": "A top and a bottom, with price moving inside the band.",
       "labels": [
-        "UPPER",
-        "LOWER",
-        "OUT"
+        "Upper",
+        "Lower",
+        "Out"
       ],
       "example": true,
       "qa_ok": true,
@@ -895,10 +946,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A top and a bottom, with price moving inside the band.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 160",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame",
+        "pass: plate stem \u2014 10.3px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -910,10 +964,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "296f16709ad024522022a83dee47c810",
-      "md5": "296f16709ad024522022a83dee47c810",
-      "renderer": "cairosvg",
-      "alt": "A short path of steps, read from left to right. Labels: RANGE, LEVELS, STOP.",
+      "checksum": "3c0fb53002bdbb74b48b1043428d389e",
+      "md5": "3c0fb53002bdbb74b48b1043428d389e",
+      "renderer": "resvg",
+      "alt": "A short path of steps, read from left to right. Labels: Range, Levels, Stop.",
       "spec": {
         "type": "flowchart",
         "preset": "house",
@@ -934,9 +988,9 @@
       },
       "idea": "A short path of steps, read from left to right.",
       "labels": [
-        "RANGE",
-        "LEVELS",
-        "STOP"
+        "Range",
+        "Levels",
+        "Stop"
       ],
       "example": false,
       "qa_ok": true,
@@ -951,10 +1005,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A short path of steps, read from left to right.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 156",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 44% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -966,10 +1023,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "14255b94f6be73381766b355ae0a6060",
-      "md5": "14255b94f6be73381766b355ae0a6060",
-      "renderer": "cairosvg",
-      "alt": "A short path of steps, read from left to right. Labels: LOOK, NOTE, DECIDE.",
+      "checksum": "1abe0aeacf5bc9117baabea86378912b",
+      "md5": "1abe0aeacf5bc9117baabea86378912b",
+      "renderer": "resvg",
+      "alt": "A short path of steps, read from left to right. Labels: Look, Note, Decide, Range, Levels.",
       "spec": {
         "type": "flowchart",
         "preset": "house",
@@ -990,9 +1047,11 @@
       },
       "idea": "A short path of steps, read from left to right.",
       "labels": [
-        "LOOK",
-        "NOTE",
-        "DECIDE"
+        "Look",
+        "Note",
+        "Decide",
+        "Range",
+        "Levels"
       ],
       "example": false,
       "qa_ok": true,
@@ -1001,16 +1060,19 @@
         "pass: safe margins \u2014 0 marks in the outer margin",
         "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
-        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: label count \u2014 5 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A short path of steps, read from left to right.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 152",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 202",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 44% of the frame",
+        "pass: plate stem \u2014 15.1px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1022,10 +1084,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "e86fd44ebd6d5b60c480cea5043ab4a5",
-      "md5": "e86fd44ebd6d5b60c480cea5043ab4a5",
-      "renderer": "cairosvg",
-      "alt": "A short path of steps, read from left to right. Labels: WRITE, CHECK, WAIT.",
+      "checksum": "4a227bcc9128f97d2be2bc546203415d",
+      "md5": "4a227bcc9128f97d2be2bc546203415d",
+      "renderer": "resvg",
+      "alt": "A short path of steps, read from left to right. Labels: Write, Check, Wait, Range, Levels.",
       "spec": {
         "type": "flowchart",
         "preset": "house",
@@ -1046,9 +1108,11 @@
       },
       "idea": "A short path of steps, read from left to right.",
       "labels": [
-        "WRITE",
-        "CHECK",
-        "WAIT"
+        "Write",
+        "Check",
+        "Wait",
+        "Range",
+        "Levels"
       ],
       "example": false,
       "qa_ok": true,
@@ -1057,16 +1121,19 @@
         "pass: safe margins \u2014 0 marks in the outer margin",
         "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
-        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: label count \u2014 5 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A short path of steps, read from left to right.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 155",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 202",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 45% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1078,10 +1145,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "8f892bd3c4152222af3f6ead8d995e1d",
-      "md5": "8f892bd3c4152222af3f6ead8d995e1d",
-      "renderer": "cairosvg",
-      "alt": "Two ways to see the same idea, side by side. Labels: CLEAR, MISS.",
+      "checksum": "a58fefd2013c0c4f7a413e95bfa48923",
+      "md5": "a58fefd2013c0c4f7a413e95bfa48923",
+      "renderer": "resvg",
+      "alt": "Two ways to see the same idea, side by side. Labels: Clear, Miss.",
       "spec": {
         "type": "comparison",
         "preset": "house",
@@ -1101,8 +1168,8 @@
       },
       "idea": "Two ways to see the same idea, side by side.",
       "labels": [
-        "CLEAR",
-        "MISS"
+        "Clear",
+        "Miss"
       ],
       "example": true,
       "qa_ok": true,
@@ -1117,10 +1184,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Two ways to see the same idea, side by side.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 159",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 212",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 10.3px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1132,10 +1202,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "1ce5411fe1ea5b7e34ec536b4c25bcd6",
-      "md5": "1ce5411fe1ea5b7e34ec536b4c25bcd6",
-      "renderer": "cairosvg",
-      "alt": "Two ways to see the same idea, side by side. Labels: INSIDE, OUTSIDE.",
+      "checksum": "17b79560dfad9e38add01fcdb8687aac",
+      "md5": "17b79560dfad9e38add01fcdb8687aac",
+      "renderer": "resvg",
+      "alt": "Two ways to see the same idea, side by side. Labels: Inside, Outside.",
       "spec": {
         "type": "comparison",
         "preset": "house",
@@ -1155,8 +1225,8 @@
       },
       "idea": "Two ways to see the same idea, side by side.",
       "labels": [
-        "INSIDE",
-        "OUTSIDE"
+        "Inside",
+        "Outside"
       ],
       "example": true,
       "qa_ok": true,
@@ -1171,10 +1241,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Two ways to see the same idea, side by side.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 147",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 202",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 51% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1186,10 +1259,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "b9872679a227dbc54435528f7465b043",
-      "md5": "b9872679a227dbc54435528f7465b043",
-      "renderer": "cairosvg",
-      "alt": "Two ways to see the same idea, side by side. Labels: NUMBER, SHAPE.",
+      "checksum": "6ebf74001c9757e493c29bd1620dd35d",
+      "md5": "6ebf74001c9757e493c29bd1620dd35d",
+      "renderer": "resvg",
+      "alt": "Two ways to see the same idea, side by side. Labels: Number, Shape.",
       "spec": {
         "type": "comparison",
         "preset": "house",
@@ -1209,8 +1282,8 @@
       },
       "idea": "Two ways to see the same idea, side by side.",
       "labels": [
-        "NUMBER",
-        "SHAPE"
+        "Number",
+        "Shape"
       ],
       "example": false,
       "qa_ok": true,
@@ -1225,10 +1298,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Two ways to see the same idea, side by side.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 162",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 202",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 49% of the frame",
+        "pass: plate stem \u2014 14.6px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1240,10 +1316,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "0f65a8b87bfe2942550c5d934144ac8e",
-      "md5": "0f65a8b87bfe2942550c5d934144ac8e",
-      "renderer": "cairosvg",
-      "alt": "A few numbered steps for one idea. Labels: RANGE, LEVELS, STOP.",
+      "checksum": "2d2d389041ef7730c6f29032c0166816",
+      "md5": "2d2d389041ef7730c6f29032c0166816",
+      "renderer": "resvg",
+      "alt": "A few numbered steps for one idea. Labels: Range, Levels, Stop.",
       "spec": {
         "type": "steps",
         "preset": "house",
@@ -1264,9 +1340,9 @@
       },
       "idea": "A few numbered steps for one idea.",
       "labels": [
-        "RANGE",
-        "LEVELS",
-        "STOP"
+        "Range",
+        "Levels",
+        "Stop"
       ],
       "example": false,
       "qa_ok": true,
@@ -1281,10 +1357,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A few numbered steps for one idea.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 146",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 211",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 48% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1296,10 +1375,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "1f77ee7b0ba2bde640d9f4db63695dd1",
-      "md5": "1f77ee7b0ba2bde640d9f4db63695dd1",
-      "renderer": "cairosvg",
-      "alt": "A few numbered steps for one idea. Labels: WRITE, CHECK, WAIT.",
+      "checksum": "262f6406c6ca1d47f08c7c5c7f5f20ea",
+      "md5": "262f6406c6ca1d47f08c7c5c7f5f20ea",
+      "renderer": "resvg",
+      "alt": "A few numbered steps for one idea. Labels: Write, Check, Wait.",
       "spec": {
         "type": "steps",
         "preset": "house",
@@ -1320,9 +1399,9 @@
       },
       "idea": "A few numbered steps for one idea.",
       "labels": [
-        "WRITE",
-        "CHECK",
-        "WAIT"
+        "Write",
+        "Check",
+        "Wait"
       ],
       "example": false,
       "qa_ok": true,
@@ -1337,10 +1416,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A few numbered steps for one idea.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 137",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 211",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 48% of the frame",
+        "pass: plate stem \u2014 15.1px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1352,10 +1434,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "799526132a00121cf5cbb3270137e1bb",
-      "md5": "799526132a00121cf5cbb3270137e1bb",
-      "renderer": "cairosvg",
-      "alt": "A few numbered steps for one idea. Labels: RANGE, LEVELS, STOP.",
+      "checksum": "3c6f2a8a0f5df9a22c2f1bec8136053a",
+      "md5": "3c6f2a8a0f5df9a22c2f1bec8136053a",
+      "renderer": "resvg",
+      "alt": "A few numbered steps for one idea. Labels: Range, Levels, Stop.",
       "spec": {
         "type": "steps",
         "preset": "house",
@@ -1376,9 +1458,9 @@
       },
       "idea": "A few numbered steps for one idea.",
       "labels": [
-        "RANGE",
-        "LEVELS",
-        "STOP"
+        "Range",
+        "Levels",
+        "Stop"
       ],
       "example": false,
       "qa_ok": true,
@@ -1393,10 +1475,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A few numbered steps for one idea.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 156",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 210",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 47% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1408,10 +1493,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "4157babc2391463c7bfe4935161689aa",
-      "md5": "4157babc2391463c7bfe4935161689aa",
-      "renderer": "cairosvg",
-      "alt": "A fence around practice: stay inside the rails. Labels: INSIDE, FENCE, PRACTICE.",
+      "checksum": "f31815d63970ed9cac7eb01de2f4d32d",
+      "md5": "f31815d63970ed9cac7eb01de2f4d32d",
+      "renderer": "resvg",
+      "alt": "A fence around practice: stay inside the rails. Labels: Inside, Fence, Practice.",
       "spec": {
         "type": "analogy_fence",
         "preset": "house",
@@ -1432,9 +1517,9 @@
       },
       "idea": "A fence around practice: stay inside the rails.",
       "labels": [
-        "INSIDE",
-        "FENCE",
-        "PRACTICE"
+        "Inside",
+        "Fence",
+        "Practice"
       ],
       "example": true,
       "qa_ok": true,
@@ -1449,10 +1534,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A fence around practice: stay inside the rails.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 156",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1464,10 +1552,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "3a2600bc177c215c0d0a69a289bfa315",
-      "md5": "3a2600bc177c215c0d0a69a289bfa315",
-      "renderer": "cairosvg",
-      "alt": "A fence around practice: stay inside the rails. Labels: RAIL, PATH, INSIDE.",
+      "checksum": "dbbdea78a3c57bb878f997c74d80c6eb",
+      "md5": "dbbdea78a3c57bb878f997c74d80c6eb",
+      "renderer": "resvg",
+      "alt": "A fence around practice: stay inside the rails. Labels: Rail, Path, Inside.",
       "spec": {
         "type": "analogy_fence",
         "preset": "house",
@@ -1488,9 +1576,9 @@
       },
       "idea": "A fence around practice: stay inside the rails.",
       "labels": [
-        "RAIL",
-        "PATH",
-        "INSIDE"
+        "Rail",
+        "Path",
+        "Inside"
       ],
       "example": true,
       "qa_ok": true,
@@ -1505,10 +1593,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A fence around practice: stay inside the rails.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 150",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1520,10 +1611,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "a0984197794987984d3d9322ee72b6fb",
-      "md5": "a0984197794987984d3d9322ee72b6fb",
-      "renderer": "cairosvg",
-      "alt": "A fence around practice: stay inside the rails. Labels: PRACTICE, FENCE, EDGE.",
+      "checksum": "996f156a1aad6ae457aec118c73c3f5d",
+      "md5": "996f156a1aad6ae457aec118c73c3f5d",
+      "renderer": "resvg",
+      "alt": "A fence around practice: stay inside the rails. Labels: Practice, Fence, Edge.",
       "spec": {
         "type": "analogy_fence",
         "preset": "house",
@@ -1544,9 +1635,9 @@
       },
       "idea": "A fence around practice: stay inside the rails.",
       "labels": [
-        "PRACTICE",
-        "FENCE",
-        "EDGE"
+        "Practice",
+        "Fence",
+        "Edge"
       ],
       "example": true,
       "qa_ok": true,
@@ -1561,10 +1652,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A fence around practice: stay inside the rails.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 158",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 51% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1576,10 +1670,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "a8d75c703e167a6facf83b5e72320e08",
-      "md5": "a8d75c703e167a6facf83b5e72320e08",
-      "renderer": "cairosvg",
-      "alt": "Rungs are levels that wait. One rung is the next step. Labels: RUNG, LEVEL, WAIT.",
+      "checksum": "09d10a038a41571b9dc20c3a15e462bf",
+      "md5": "09d10a038a41571b9dc20c3a15e462bf",
+      "renderer": "resvg",
+      "alt": "Rungs are levels that wait. One rung is the next step. Labels: Rung, Level, Wait.",
       "spec": {
         "type": "analogy_ladder",
         "preset": "house",
@@ -1601,9 +1695,9 @@
       },
       "idea": "Rungs are levels that wait. One rung is the next step.",
       "labels": [
-        "RUNG",
-        "LEVEL",
-        "WAIT"
+        "Rung",
+        "Level",
+        "Wait"
       ],
       "example": true,
       "qa_ok": true,
@@ -1618,10 +1712,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Rungs are levels that wait. One rung is the next step.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 156",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 10.6px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1633,10 +1730,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "ef2662c5f4eaf9dda35e704bcfb95d77",
-      "md5": "ef2662c5f4eaf9dda35e704bcfb95d77",
-      "renderer": "cairosvg",
-      "alt": "Rungs are levels that wait. One rung is the next step. Labels: NEXT, RUNG, WAIT.",
+      "checksum": "a402e78c2254efe5a291dd34e154781b",
+      "md5": "a402e78c2254efe5a291dd34e154781b",
+      "renderer": "resvg",
+      "alt": "Rungs are levels that wait. One rung is the next step. Labels: Next, Rung, Wait.",
       "spec": {
         "type": "analogy_ladder",
         "preset": "house",
@@ -1658,9 +1755,9 @@
       },
       "idea": "Rungs are levels that wait. One rung is the next step.",
       "labels": [
-        "NEXT",
-        "RUNG",
-        "WAIT"
+        "Next",
+        "Rung",
+        "Wait"
       ],
       "example": true,
       "qa_ok": true,
@@ -1675,10 +1772,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Rungs are levels that wait. One rung is the next step.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 165",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 15.1px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1690,10 +1790,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "aa0ed11af2b522643a1d5b4081106afd",
-      "md5": "aa0ed11af2b522643a1d5b4081106afd",
-      "renderer": "cairosvg",
-      "alt": "Rungs are levels that wait. One rung is the next step. Labels: EVEN, RUNG, GAP.",
+      "checksum": "aad5b2a417bb5323a9a313a92df61aaa",
+      "md5": "aad5b2a417bb5323a9a313a92df61aaa",
+      "renderer": "resvg",
+      "alt": "Rungs are levels that wait. One rung is the next step. Labels: Even, Rung, Gap.",
       "spec": {
         "type": "analogy_ladder",
         "preset": "house",
@@ -1715,9 +1815,9 @@
       },
       "idea": "Rungs are levels that wait. One rung is the next step.",
       "labels": [
-        "EVEN",
-        "RUNG",
-        "GAP"
+        "Even",
+        "Rung",
+        "Gap"
       ],
       "example": true,
       "qa_ok": true,
@@ -1732,10 +1832,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Rungs are levels that wait. One rung is the next step.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 157",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1747,10 +1850,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "cea3750224603f6c67ae81dbfcbe215e",
-      "md5": "cea3750224603f6c67ae81dbfcbe215e",
-      "renderer": "cairosvg",
-      "alt": "Two separate buckets. Overlap is the thing to notice. Labels: APART, LEFT, RIGHT.",
+      "checksum": "3f7610260c1f3456d3fdd2f3cadec0a9",
+      "md5": "3f7610260c1f3456d3fdd2f3cadec0a9",
+      "renderer": "resvg",
+      "alt": "Two separate buckets. Overlap is the thing to notice. Labels: Apart, Left, Right.",
       "spec": {
         "type": "analogy_buckets",
         "preset": "house",
@@ -1772,9 +1875,9 @@
       },
       "idea": "Two separate buckets. Overlap is the thing to notice.",
       "labels": [
-        "APART",
-        "LEFT",
-        "RIGHT"
+        "Apart",
+        "Left",
+        "Right"
       ],
       "example": true,
       "qa_ok": true,
@@ -1789,10 +1892,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Two separate buckets. Overlap is the thing to notice.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 154",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 44% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1804,10 +1910,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "f0ea5bd872547fba58ee816ab0e37b7f",
-      "md5": "f0ea5bd872547fba58ee816ab0e37b7f",
-      "renderer": "cairosvg",
-      "alt": "Two separate buckets. Overlap is the thing to notice. Labels: OVERLAP, LEFT, RIGHT.",
+      "checksum": "09fa969a9bd1a2ee53179869b78f6009",
+      "md5": "09fa969a9bd1a2ee53179869b78f6009",
+      "renderer": "resvg",
+      "alt": "Two separate buckets. Overlap is the thing to notice. Labels: Overlap, Left, Right.",
       "spec": {
         "type": "analogy_buckets",
         "preset": "house",
@@ -1829,9 +1935,9 @@
       },
       "idea": "Two separate buckets. Overlap is the thing to notice.",
       "labels": [
-        "OVERLAP",
-        "LEFT",
-        "RIGHT"
+        "Overlap",
+        "Left",
+        "Right"
       ],
       "example": true,
       "qa_ok": true,
@@ -1846,10 +1952,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Two separate buckets. Overlap is the thing to notice.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 94",
-        "pass: word spacing \u2014 one headline word"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 one headline word",
+        "pass: ink coverage \u2014 43% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1861,10 +1970,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "5582d64ba33c65ab79d9a4b2150eb92e",
-      "md5": "5582d64ba33c65ab79d9a4b2150eb92e",
-      "renderer": "cairosvg",
-      "alt": "Two separate buckets. Overlap is the thing to notice. Labels: LIGHT, FULL, BUCKET.",
+      "checksum": "a304d4d260464794f0572e5989d77dda",
+      "md5": "a304d4d260464794f0572e5989d77dda",
+      "renderer": "resvg",
+      "alt": "Two separate buckets. Overlap is the thing to notice. Labels: Light, Full, Bucket.",
       "spec": {
         "type": "analogy_buckets",
         "preset": "house",
@@ -1886,9 +1995,9 @@
       },
       "idea": "Two separate buckets. Overlap is the thing to notice.",
       "labels": [
-        "LIGHT",
-        "FULL",
-        "BUCKET"
+        "Light",
+        "Full",
+        "Bucket"
       ],
       "example": true,
       "qa_ok": true,
@@ -1903,10 +2012,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Two separate buckets. Overlap is the thing to notice.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 137",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 42% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1918,10 +2030,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "46e8c7b0f7434f636f4750c2bfe96e41",
-      "md5": "46e8c7b0f7434f636f4750c2bfe96e41",
-      "renderer": "cairosvg",
-      "alt": "A short paper checklist, one row highlighted. Labels: RANGE, LEVELS, STOP.",
+      "checksum": "2c7d4819c4aee6a13138ab1d099bcc10",
+      "md5": "2c7d4819c4aee6a13138ab1d099bcc10",
+      "renderer": "resvg",
+      "alt": "A short paper checklist, one row highlighted. Labels: Range, Levels, Stop.",
       "spec": {
         "type": "checklist",
         "preset": "house",
@@ -1943,9 +2055,9 @@
       },
       "idea": "A short paper checklist, one row highlighted.",
       "labels": [
-        "RANGE",
-        "LEVELS",
-        "STOP"
+        "Range",
+        "Levels",
+        "Stop"
       ],
       "example": false,
       "qa_ok": true,
@@ -1960,10 +2072,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A short paper checklist, one row highlighted.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 151",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -1975,10 +2090,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "9d106e3a83f3c76a2fc64830a5f4323d",
-      "md5": "9d106e3a83f3c76a2fc64830a5f4323d",
-      "renderer": "cairosvg",
-      "alt": "A short paper checklist, one row highlighted. Labels: WRITE, CHECK, WAIT.",
+      "checksum": "ec78879fb8bb3b0cd100275c4e485fdf",
+      "md5": "ec78879fb8bb3b0cd100275c4e485fdf",
+      "renderer": "resvg",
+      "alt": "A short paper checklist, one row highlighted. Labels: Write, Check, Wait, Range, Levels.",
       "spec": {
         "type": "checklist",
         "preset": "house",
@@ -2000,9 +2115,11 @@
       },
       "idea": "A short paper checklist, one row highlighted.",
       "labels": [
-        "WRITE",
-        "CHECK",
-        "WAIT"
+        "Write",
+        "Check",
+        "Wait",
+        "Range",
+        "Levels"
       ],
       "example": false,
       "qa_ok": true,
@@ -2011,16 +2128,19 @@
         "pass: safe margins \u2014 0 marks in the outer margin",
         "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
-        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: label count \u2014 5 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A short paper checklist, one row highlighted.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 156",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 200",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 49% of the frame",
+        "pass: plate stem \u2014 10.3px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2032,10 +2152,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "63f93e0bf821db82ce42bad3f375148b",
-      "md5": "63f93e0bf821db82ce42bad3f375148b",
-      "renderer": "cairosvg",
-      "alt": "A short paper checklist, one row highlighted. Labels: PAPER, PLAN, PAUSE.",
+      "checksum": "4452cbcddc260c6431db7fefc45207cb",
+      "md5": "4452cbcddc260c6431db7fefc45207cb",
+      "renderer": "resvg",
+      "alt": "A short paper checklist, one row highlighted. Labels: Paper, Plan, Pause, Range, Levels.",
       "spec": {
         "type": "checklist",
         "preset": "house",
@@ -2057,9 +2177,11 @@
       },
       "idea": "A short paper checklist, one row highlighted.",
       "labels": [
-        "PAPER",
-        "PLAN",
-        "PAUSE"
+        "Paper",
+        "Plan",
+        "Pause",
+        "Range",
+        "Levels"
       ],
       "example": false,
       "qa_ok": true,
@@ -2068,16 +2190,19 @@
         "pass: safe margins \u2014 0 marks in the outer margin",
         "pass: minimum font size \u2014 0 marks under 29px",
         "pass: contrast \u2014 0 marks below the contrast floor",
-        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: label count \u2014 5 labels (want 2 to 5)",
         "pass: plain labels \u2014 each label is at most three words",
         "pass: example stamp \u2014 no figure on this plate",
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A short paper checklist, one row highlighted.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 155",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 206",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 51% of the frame",
+        "pass: plate stem \u2014 12.0px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2089,10 +2214,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "b3d6c56c4bc8c44c56d391b53d4af003",
-      "md5": "b3d6c56c4bc8c44c56d391b53d4af003",
-      "renderer": "cairosvg",
-      "alt": "The grid bot mascot in one pose, beside one prop. Labels: POINT, RANGE.",
+      "checksum": "9ef543777778e0b5655d06138796936a",
+      "md5": "9ef543777778e0b5655d06138796936a",
+      "renderer": "resvg",
+      "alt": "The grid bot mascot in one pose, beside one prop. Labels: Point, Range.",
       "spec": {
         "type": "mascot_scene",
         "preset": "house",
@@ -2112,8 +2237,8 @@
       },
       "idea": "The grid bot mascot in one pose, beside one prop.",
       "labels": [
-        "POINT",
-        "RANGE"
+        "Point",
+        "Range"
       ],
       "example": false,
       "qa_ok": true,
@@ -2128,10 +2253,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 The grid bot mascot in one pose, beside one prop.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 244",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 248",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 49% of the frame",
+        "pass: plate stem \u2014 10.6px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2143,10 +2271,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "69c2b63acd5d39d2a2f43542dbe09171",
-      "md5": "69c2b63acd5d39d2a2f43542dbe09171",
-      "renderer": "cairosvg",
-      "alt": "The grid bot mascot in one pose, beside one prop. Labels: THINK, CHECK.",
+      "checksum": "9b22134658f81fea967ae0f4e90752bb",
+      "md5": "9b22134658f81fea967ae0f4e90752bb",
+      "renderer": "resvg",
+      "alt": "The grid bot mascot in one pose, beside one prop. Labels: Think, Check.",
       "spec": {
         "type": "mascot_scene",
         "preset": "house",
@@ -2166,8 +2294,8 @@
       },
       "idea": "The grid bot mascot in one pose, beside one prop.",
       "labels": [
-        "THINK",
-        "CHECK"
+        "Think",
+        "Check"
       ],
       "example": false,
       "qa_ok": true,
@@ -2182,10 +2310,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 The grid bot mascot in one pose, beside one prop.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 244",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 247",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 49% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2197,10 +2328,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "127854f9076d694b6655a7acdc1e6d78",
-      "md5": "127854f9076d694b6655a7acdc1e6d78",
-      "renderer": "cairosvg",
-      "alt": "The grid bot mascot in one pose, beside one prop. Labels: WAIT, CHECK.",
+      "checksum": "6bc3cba7cac988381b37abf6f420c7f3",
+      "md5": "6bc3cba7cac988381b37abf6f420c7f3",
+      "renderer": "resvg",
+      "alt": "The grid bot mascot in one pose, beside one prop. Labels: Wait, Check.",
       "spec": {
         "type": "mascot_scene",
         "preset": "house",
@@ -2220,8 +2351,8 @@
       },
       "idea": "The grid bot mascot in one pose, beside one prop.",
       "labels": [
-        "WAIT",
-        "CHECK"
+        "Wait",
+        "Check"
       ],
       "example": true,
       "qa_ok": true,
@@ -2236,64 +2367,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 The grid bot mascot in one pose, beside one prop.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 242",
-        "pass: word spacing \u2014 spaces hold between headline words"
-      ],
-      "mode": "normal",
-      "fallback_tier": false,
-      "source": "illustration-engine"
-    },
-    {
-      "file": "types/mascot_scene/04.png",
-      "path": "types/mascot_scene/04.png",
-      "preset": "house",
-      "width": 1536,
-      "height": 1024,
-      "checksum": "2460102c847fdc896fe79048d2649ccc",
-      "md5": "2460102c847fdc896fe79048d2649ccc",
-      "renderer": "cairosvg",
-      "alt": "The grid bot mascot in one pose, beside one prop. Labels: DONE, NEXT.",
-      "spec": {
-        "type": "mascot_scene",
-        "preset": "house",
-        "params": {
-          "pose": "celebrating",
-          "headline": "STEP DONE",
-          "labels": [
-            "DONE",
-            "NEXT"
-          ]
-        },
-        "headline": "STEP DONE",
-        "labels": [
-          "DONE",
-          "NEXT"
-        ]
-      },
-      "idea": "The grid bot mascot in one pose, beside one prop.",
-      "labels": [
-        "DONE",
-        "NEXT"
-      ],
-      "example": false,
-      "qa_ok": true,
-      "qa": [
-        "pass: label overflow \u2014 0 marks outside the frame",
-        "pass: safe margins \u2014 0 marks in the outer margin",
-        "pass: minimum font size \u2014 0 marks under 29px",
-        "pass: contrast \u2014 0 marks below the contrast floor",
-        "pass: label count \u2014 2 labels (want 2 to 5)",
-        "pass: plain labels \u2014 each label is at most three words",
-        "pass: example stamp \u2014 no figure on this plate",
-        "pass: headline face \u2014 condensed bold",
-        "pass: label size \u2014 labels at least 29px",
-        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
-        "pass: one idea \u2014 The grid bot mascot in one pose, beside one prop.",
-        "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 244",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 248",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 12.0px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2305,10 +2385,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "3a89a90e965ed452ff586c5b461d26c0",
-      "md5": "3a89a90e965ed452ff586c5b461d26c0",
-      "renderer": "cairosvg",
-      "alt": "A title card for the lesson, with no extra lockup. Labels: START, HERE.",
+      "checksum": "15ce8efb168dee5b194bf3c597d739a8",
+      "md5": "15ce8efb168dee5b194bf3c597d739a8",
+      "renderer": "resvg",
+      "alt": "A title card for the lesson, with no extra lockup. Labels: Start, Here.",
       "spec": {
         "type": "title_card",
         "preset": "house",
@@ -2326,8 +2406,8 @@
       },
       "idea": "A title card for the lesson, with no extra lockup.",
       "labels": [
-        "START",
-        "HERE"
+        "Start",
+        "Here"
       ],
       "example": false,
       "qa_ok": true,
@@ -2342,10 +2422,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A title card for the lesson, with no extra lockup.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 100",
-        "pass: word spacing \u2014 one headline word"
+        "pass: frame \u2014 1536x1024, spread 207",
+        "pass: word spacing \u2014 one headline word",
+        "pass: ink coverage \u2014 45% of the frame",
+        "pass: plate stem \u2014 10.3px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2357,10 +2440,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "73a96dd52e9c7f4e4da734c8cd52342f",
-      "md5": "73a96dd52e9c7f4e4da734c8cd52342f",
-      "renderer": "cairosvg",
-      "alt": "A title card for the lesson, with no extra lockup. Labels: TOP, BOTTOM.",
+      "checksum": "94be6405652011df9f9d7fcd43b4d349",
+      "md5": "94be6405652011df9f9d7fcd43b4d349",
+      "renderer": "resvg",
+      "alt": "A title card for the lesson, with no extra lockup. Labels: Top, Bottom.",
       "spec": {
         "type": "title_card",
         "preset": "house",
@@ -2378,8 +2461,8 @@
       },
       "idea": "A title card for the lesson, with no extra lockup.",
       "labels": [
-        "TOP",
-        "BOTTOM"
+        "Top",
+        "Bottom"
       ],
       "example": false,
       "qa_ok": true,
@@ -2394,10 +2477,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A title card for the lesson, with no extra lockup.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 156",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 206",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 44% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2409,10 +2495,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "d5a0b233a2c789fcc9a1d88fa945d9d1",
-      "md5": "d5a0b233a2c789fcc9a1d88fa945d9d1",
-      "renderer": "cairosvg",
-      "alt": "A title card for the lesson, with no extra lockup. Labels: NEXT, PAGE.",
+      "checksum": "e71d665528614636b51ec32f1083d2d1",
+      "md5": "e71d665528614636b51ec32f1083d2d1",
+      "renderer": "resvg",
+      "alt": "A title card for the lesson, with no extra lockup. Labels: Next, Page.",
       "spec": {
         "type": "title_card",
         "preset": "house",
@@ -2430,8 +2516,8 @@
       },
       "idea": "A title card for the lesson, with no extra lockup.",
       "labels": [
-        "NEXT",
-        "PAGE"
+        "Next",
+        "Page"
       ],
       "example": false,
       "qa_ok": true,
@@ -2446,10 +2532,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A title card for the lesson, with no extra lockup.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 128",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 207",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 44% of the frame",
+        "pass: plate stem \u2014 15.1px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2461,10 +2550,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "b3dfb2d655c018fef922d0fb12cd7397",
-      "md5": "b3dfb2d655c018fef922d0fb12cd7397",
-      "renderer": "cairosvg",
-      "alt": "A lesson cover: a title and the mascot. Labels: LESSON, START.",
+      "checksum": "5c1770e428111d23a65927b4d588de57",
+      "md5": "5c1770e428111d23a65927b4d588de57",
+      "renderer": "resvg",
+      "alt": "A lesson cover: a title and the mascot. Labels: Lesson, Start.",
       "spec": {
         "type": "lesson_cover",
         "preset": "house",
@@ -2482,8 +2571,8 @@
       },
       "idea": "A lesson cover: a title and the mascot.",
       "labels": [
-        "LESSON",
-        "START"
+        "Lesson",
+        "Start"
       ],
       "example": false,
       "qa_ok": true,
@@ -2498,10 +2587,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A lesson cover: a title and the mascot.",
         "pass: no claims or contact details \u2014 clean",
         "pass: frame \u2014 1536x1024, spread 248",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 47% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2513,10 +2605,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "463d37caff59737653542b50aa717799",
-      "md5": "463d37caff59737653542b50aa717799",
-      "renderer": "cairosvg",
-      "alt": "A lesson cover: a title and the mascot. Labels: LESSON, RUNGS.",
+      "checksum": "5f8d0d177e55f86a5f243af18fce9ab1",
+      "md5": "5f8d0d177e55f86a5f243af18fce9ab1",
+      "renderer": "resvg",
+      "alt": "A lesson cover: a title and the mascot. Labels: Lesson, Rungs.",
       "spec": {
         "type": "lesson_cover",
         "preset": "house",
@@ -2534,8 +2626,8 @@
       },
       "idea": "A lesson cover: a title and the mascot.",
       "labels": [
-        "LESSON",
-        "RUNGS"
+        "Lesson",
+        "Rungs"
       ],
       "example": false,
       "qa_ok": true,
@@ -2550,10 +2642,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A lesson cover: a title and the mascot.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 248",
-        "pass: word spacing \u2014 one headline word"
+        "pass: frame \u2014 1536x1024, spread 249",
+        "pass: word spacing \u2014 one headline word",
+        "pass: ink coverage \u2014 46% of the frame",
+        "pass: plate stem \u2014 10.3px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2565,10 +2660,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "9fea8561c732b3a0984ca13f8a7ddde6",
-      "md5": "9fea8561c732b3a0984ca13f8a7ddde6",
-      "renderer": "cairosvg",
-      "alt": "A lesson cover: a title and the mascot. Labels: LESSON, LINE.",
+      "checksum": "8b09ce538aab9ce3751ff182b218e4d6",
+      "md5": "8b09ce538aab9ce3751ff182b218e4d6",
+      "renderer": "resvg",
+      "alt": "A lesson cover: a title and the mascot. Labels: Lesson, Line.",
       "spec": {
         "type": "lesson_cover",
         "preset": "house",
@@ -2586,8 +2681,8 @@
       },
       "idea": "A lesson cover: a title and the mascot.",
       "labels": [
-        "LESSON",
-        "LINE"
+        "Lesson",
+        "Line"
       ],
       "example": false,
       "qa_ok": true,
@@ -2602,10 +2697,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A lesson cover: a title and the mascot.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 248",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 249",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 46% of the frame",
+        "pass: plate stem \u2014 15.1px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2617,10 +2715,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "3edc04d70b6f5186307faaac386af943",
-      "md5": "3edc04d70b6f5186307faaac386af943",
-      "renderer": "cairosvg",
-      "alt": "A section divider with one word. Labels: PART, NEXT.",
+      "checksum": "47dc4668b047b0bd298c6ed75bb01fbc",
+      "md5": "47dc4668b047b0bd298c6ed75bb01fbc",
+      "renderer": "resvg",
+      "alt": "A section divider with one word. Labels: Part, Next.",
       "spec": {
         "type": "section_divider",
         "preset": "house",
@@ -2638,8 +2736,8 @@
       },
       "idea": "A section divider with one word.",
       "labels": [
-        "PART",
-        "NEXT"
+        "Part",
+        "Next"
       ],
       "example": false,
       "qa_ok": true,
@@ -2654,10 +2752,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A section divider with one word.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 225",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 245",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 36% of the frame",
+        "pass: plate stem \u2014 15.2px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2669,10 +2770,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "e3bc4a7af16b5dbc8f1889720de416a7",
-      "md5": "e3bc4a7af16b5dbc8f1889720de416a7",
-      "renderer": "cairosvg",
-      "alt": "A section divider with one word. Labels: PART, RANGE.",
+      "checksum": "56376588cbdf2e03876fc0d3f0e93538",
+      "md5": "56376588cbdf2e03876fc0d3f0e93538",
+      "renderer": "resvg",
+      "alt": "A section divider with one word. Labels: Part, Range.",
       "spec": {
         "type": "section_divider",
         "preset": "house",
@@ -2690,8 +2791,8 @@
       },
       "idea": "A section divider with one word.",
       "labels": [
-        "PART",
-        "RANGE"
+        "Part",
+        "Range"
       ],
       "example": false,
       "qa_ok": true,
@@ -2706,10 +2807,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A section divider with one word.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 204",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 230",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 36% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2721,10 +2825,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "daad29e756807b0268770c7bf2cc67d1",
-      "md5": "daad29e756807b0268770c7bf2cc67d1",
-      "renderer": "cairosvg",
-      "alt": "A section divider with one word. Labels: PART, PAPER.",
+      "checksum": "c68b1f5413ea527ccfb4e39033ab57b5",
+      "md5": "c68b1f5413ea527ccfb4e39033ab57b5",
+      "renderer": "resvg",
+      "alt": "A section divider with one word. Labels: Part, Paper.",
       "spec": {
         "type": "section_divider",
         "preset": "house",
@@ -2742,8 +2846,8 @@
       },
       "idea": "A section divider with one word.",
       "labels": [
-        "PART",
-        "PAPER"
+        "Part",
+        "Paper"
       ],
       "example": false,
       "qa_ok": true,
@@ -2758,10 +2862,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A section divider with one word.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 210",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 215",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 37% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2773,10 +2880,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "68b8921eae6127ecc272d3731bde2366",
-      "md5": "68b8921eae6127ecc272d3731bde2366",
-      "renderer": "cairosvg",
-      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: BUY, SELL, PRICE.",
+      "checksum": "0ec1e3cd1f371139cfa7a1db090e28f2",
+      "md5": "0ec1e3cd1f371139cfa7a1db090e28f2",
+      "renderer": "resvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: Buy, Sell, Price.",
       "spec": {
         "type": "grid_ladder",
         "preset": "house",
@@ -2795,9 +2902,9 @@
       },
       "idea": "Buy orders wait below the mark and sell orders wait above it.",
       "labels": [
-        "BUY",
-        "SELL",
-        "PRICE"
+        "Buy",
+        "Sell",
+        "Price"
       ],
       "example": true,
       "qa_ok": true,
@@ -2812,10 +2919,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 146",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2827,10 +2937,10 @@
       "preset": "light",
       "width": 1536,
       "height": 1024,
-      "checksum": "c881af32b38bf642e55d999dbe2e14ad",
-      "md5": "c881af32b38bf642e55d999dbe2e14ad",
-      "renderer": "cairosvg",
-      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: BUY, SELL, PRICE.",
+      "checksum": "fc985c8a5b9fcafcc857865913860474",
+      "md5": "fc985c8a5b9fcafcc857865913860474",
+      "renderer": "resvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: Buy, Sell, Price.",
       "spec": {
         "type": "grid_ladder",
         "preset": "light",
@@ -2849,9 +2959,9 @@
       },
       "idea": "Buy orders wait below the mark and sell orders wait above it.",
       "labels": [
-        "BUY",
-        "SELL",
-        "PRICE"
+        "Buy",
+        "Sell",
+        "Price"
       ],
       "example": true,
       "qa_ok": true,
@@ -2866,10 +2976,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 145",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 179",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2881,10 +2994,10 @@
       "preset": "contrast",
       "width": 1536,
       "height": 1024,
-      "checksum": "db0a46bc32329ced6070877666187a80",
-      "md5": "db0a46bc32329ced6070877666187a80",
-      "renderer": "cairosvg",
-      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: BUY, SELL, PRICE.",
+      "checksum": "dfc0a0f00f66079f335c46f65528f29e",
+      "md5": "dfc0a0f00f66079f335c46f65528f29e",
+      "renderer": "resvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: Buy, Sell, Price.",
       "spec": {
         "type": "grid_ladder",
         "preset": "contrast",
@@ -2903,9 +3016,9 @@
       },
       "idea": "Buy orders wait below the mark and sell orders wait above it.",
       "labels": [
-        "BUY",
-        "SELL",
-        "PRICE"
+        "Buy",
+        "Sell",
+        "Price"
       ],
       "example": true,
       "qa_ok": true,
@@ -2920,10 +3033,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 154",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 205",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 54% of the frame",
+        "pass: plate stem \u2014 10.6px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2935,10 +3051,10 @@
       "preset": "thumbnail",
       "width": 1080,
       "height": 1080,
-      "checksum": "3ad386e17a6e86be7021282d4e34d80d",
-      "md5": "3ad386e17a6e86be7021282d4e34d80d",
-      "renderer": "cairosvg",
-      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: BUY, SELL, PRICE.",
+      "checksum": "ead96939386e5c38bddcb2fbd6adff02",
+      "md5": "ead96939386e5c38bddcb2fbd6adff02",
+      "renderer": "resvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: Buy, Sell, Price.",
       "spec": {
         "type": "grid_ladder",
         "preset": "thumbnail",
@@ -2957,9 +3073,9 @@
       },
       "idea": "Buy orders wait below the mark and sell orders wait above it.",
       "labels": [
-        "BUY",
-        "SELL",
-        "PRICE"
+        "Buy",
+        "Sell",
+        "Price"
       ],
       "example": true,
       "qa_ok": true,
@@ -2974,10 +3090,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 20px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1080x1080, spread 111",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1080x1080, spread 188",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 34% of the frame",
+        "pass: plate stem \u2014 13.4px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -2989,10 +3108,10 @@
       "preset": "elite",
       "width": 1536,
       "height": 1024,
-      "checksum": "d8d11070f7f72c67e591970c9284585a",
-      "md5": "d8d11070f7f72c67e591970c9284585a",
-      "renderer": "cairosvg",
-      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: BUY, SELL, PRICE.",
+      "checksum": "993efbb3c9c9d536a1a8a24875b0a53c",
+      "md5": "993efbb3c9c9d536a1a8a24875b0a53c",
+      "renderer": "resvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: Buy, Sell, Price.",
       "spec": {
         "type": "grid_ladder",
         "preset": "elite",
@@ -3011,9 +3130,9 @@
       },
       "idea": "Buy orders wait below the mark and sell orders wait above it.",
       "labels": [
-        "BUY",
-        "SELL",
-        "PRICE"
+        "Buy",
+        "Sell",
+        "Price"
       ],
       "example": true,
       "qa_ok": true,
@@ -3028,10 +3147,349 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 146",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 202",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 51% of the frame",
+        "pass: plate stem \u2014 10.6px at a 55px cap"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "sizes/1280x720-grid_ladder.png",
+      "path": "sizes/1280x720-grid_ladder.png",
+      "preset": "house",
+      "width": 1280,
+      "height": 720,
+      "checksum": "072eac2ecbd5507162c0d3abad017cf9",
+      "md5": "072eac2ecbd5507162c0d3abad017cf9",
+      "renderer": "resvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: Buy, Sell, Price.",
+      "spec": {
+        "type": "grid_ladder",
+        "preset": "house",
+        "params": {
+          "low": 90,
+          "high": 110,
+          "grids": 10,
+          "price": 100,
+          "headline": "GRID LADDER",
+          "labels": [
+            "BUY",
+            "SELL",
+            "PRICE"
+          ]
+        },
+        "size": "1280x720"
+      },
+      "idea": "Buy orders wait below the mark and sell orders wait above it.",
+      "labels": [
+        "Buy",
+        "Sell",
+        "Price"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 24px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 a figure is on the plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 24px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1280x720, spread 213",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame",
+        "pass: plate stem \u2014 14.3px at a 55px cap"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "sizes/1280x720-steps.png",
+      "path": "sizes/1280x720-steps.png",
+      "preset": "house",
+      "width": 1280,
+      "height": 720,
+      "checksum": "36acc1b21785ad1fe103e4291f918856",
+      "md5": "36acc1b21785ad1fe103e4291f918856",
+      "renderer": "resvg",
+      "alt": "A few numbered steps for one idea. Labels: Range, Levels, Stop.",
+      "spec": {
+        "type": "steps",
+        "preset": "house",
+        "params": {
+          "headline": "THREE PARTS",
+          "labels": [
+            "RANGE",
+            "LEVELS",
+            "STOP"
+          ]
+        },
+        "size": "1280x720"
+      },
+      "idea": "A few numbered steps for one idea.",
+      "labels": [
+        "Range",
+        "Levels",
+        "Stop"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 24px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 24px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A few numbered steps for one idea.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1280x720, spread 210",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 10.6px at a 55px cap"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "sizes/1536x1024-grid_ladder.png",
+      "path": "sizes/1536x1024-grid_ladder.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "0ec1e3cd1f371139cfa7a1db090e28f2",
+      "md5": "0ec1e3cd1f371139cfa7a1db090e28f2",
+      "renderer": "resvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: Buy, Sell, Price.",
+      "spec": {
+        "type": "grid_ladder",
+        "preset": "house",
+        "params": {
+          "low": 90,
+          "high": 110,
+          "grids": 10,
+          "price": 100,
+          "headline": "GRID LADDER",
+          "labels": [
+            "BUY",
+            "SELL",
+            "PRICE"
+          ]
+        },
+        "size": "1536x1024"
+      },
+      "idea": "Buy orders wait below the mark and sell orders wait above it.",
+      "labels": [
+        "Buy",
+        "Sell",
+        "Price"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 a figure is on the plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "sizes/1536x1024-steps.png",
+      "path": "sizes/1536x1024-steps.png",
+      "preset": "house",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "2d2d389041ef7730c6f29032c0166816",
+      "md5": "2d2d389041ef7730c6f29032c0166816",
+      "renderer": "resvg",
+      "alt": "A few numbered steps for one idea. Labels: Range, Levels, Stop.",
+      "spec": {
+        "type": "steps",
+        "preset": "house",
+        "params": {
+          "headline": "THREE PARTS",
+          "labels": [
+            "RANGE",
+            "LEVELS",
+            "STOP"
+          ]
+        },
+        "size": "1536x1024"
+      },
+      "idea": "A few numbered steps for one idea.",
+      "labels": [
+        "Range",
+        "Levels",
+        "Stop"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 29px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 29px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A few numbered steps for one idea.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1536x1024, spread 211",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 48% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "sizes/1920x1080-grid_ladder.png",
+      "path": "sizes/1920x1080-grid_ladder.png",
+      "preset": "house",
+      "width": 1920,
+      "height": 1080,
+      "checksum": "486d7fbc811e130c1d73fe36b5c87546",
+      "md5": "486d7fbc811e130c1d73fe36b5c87546",
+      "renderer": "resvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: Buy, Sell, Price.",
+      "spec": {
+        "type": "grid_ladder",
+        "preset": "house",
+        "params": {
+          "low": 90,
+          "high": 110,
+          "grids": 10,
+          "price": 100,
+          "headline": "GRID LADDER",
+          "labels": [
+            "BUY",
+            "SELL",
+            "PRICE"
+          ]
+        },
+        "size": "1920x1080"
+      },
+      "idea": "Buy orders wait below the mark and sell orders wait above it.",
+      "labels": [
+        "Buy",
+        "Sell",
+        "Price"
+      ],
+      "example": true,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 36px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 a figure is on the plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 36px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1920x1080, spread 212",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame",
+        "pass: plate stem \u2014 11.1px at a 55px cap"
+      ],
+      "mode": "normal",
+      "fallback_tier": false,
+      "source": "illustration-engine"
+    },
+    {
+      "file": "sizes/1920x1080-steps.png",
+      "path": "sizes/1920x1080-steps.png",
+      "preset": "house",
+      "width": 1920,
+      "height": 1080,
+      "checksum": "6bf8a938a67a2534d0c873377530861e",
+      "md5": "6bf8a938a67a2534d0c873377530861e",
+      "renderer": "resvg",
+      "alt": "A few numbered steps for one idea. Labels: Range, Levels, Stop.",
+      "spec": {
+        "type": "steps",
+        "preset": "house",
+        "params": {
+          "headline": "THREE PARTS",
+          "labels": [
+            "RANGE",
+            "LEVELS",
+            "STOP"
+          ]
+        },
+        "size": "1920x1080"
+      },
+      "idea": "A few numbered steps for one idea.",
+      "labels": [
+        "Range",
+        "Levels",
+        "Stop"
+      ],
+      "example": false,
+      "qa_ok": true,
+      "qa": [
+        "pass: label overflow \u2014 0 marks outside the frame",
+        "pass: safe margins \u2014 0 marks in the outer margin",
+        "pass: minimum font size \u2014 0 marks under 36px",
+        "pass: contrast \u2014 0 marks below the contrast floor",
+        "pass: label count \u2014 3 labels (want 2 to 5)",
+        "pass: plain labels \u2014 each label is at most three words",
+        "pass: example stamp \u2014 no figure on this plate",
+        "pass: headline face \u2014 condensed bold",
+        "pass: label size \u2014 labels at least 36px",
+        "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
+        "pass: one idea \u2014 A few numbered steps for one idea.",
+        "pass: no claims or contact details \u2014 clean",
+        "pass: frame \u2014 1920x1080, spread 211",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,

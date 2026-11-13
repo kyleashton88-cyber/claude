@@ -10,10 +10,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "1ab3cccb93033d44345b561d569457d9",
-      "md5": "1ab3cccb93033d44345b561d569457d9",
-      "renderer": "cairosvg",
-      "alt": "One candle, with the body and the wick called out. Labels: HIGH, LOW, BODY, WICK.",
+      "checksum": "820c46d9918244be1af719bd53f6bd8c",
+      "md5": "820c46d9918244be1af719bd53f6bd8c",
+      "renderer": "resvg",
+      "alt": "One candle, with the body and the wick called out. Labels: High, Low, Body, Wick.",
       "spec": {
         "type": "candle_anatomy",
         "preset": "house",
@@ -23,10 +23,10 @@
       },
       "idea": "One candle, with the body and the wick called out.",
       "labels": [
-        "HIGH",
-        "LOW",
-        "BODY",
-        "WICK"
+        "High",
+        "Low",
+        "Body",
+        "Wick"
       ],
       "example": true,
       "qa_ok": true,
@@ -41,10 +41,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 One candle, with the body and the wick called out.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 150",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 51% of the frame",
+        "pass: plate stem \u2014 12.0px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -56,10 +59,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "9aedcf04aab3c6c99bfa362b05ac0986",
-      "md5": "9aedcf04aab3c6c99bfa362b05ac0986",
-      "renderer": "cairosvg",
-      "alt": "One candle, with the body and the wick called out. Labels: HIGH, LOW, BODY, WICK.",
+      "checksum": "206e13168a05ed2e95961f72517339b1",
+      "md5": "206e13168a05ed2e95961f72517339b1",
+      "renderer": "resvg",
+      "alt": "One candle, with the body and the wick called out. Labels: High, Low, Body, Wick.",
       "spec": {
         "type": "candle_anatomy",
         "preset": "house",
@@ -69,10 +72,10 @@
       },
       "idea": "One candle, with the body and the wick called out.",
       "labels": [
-        "HIGH",
-        "LOW",
-        "BODY",
-        "WICK"
+        "High",
+        "Low",
+        "Body",
+        "Wick"
       ],
       "example": true,
       "qa_ok": true,
@@ -87,10 +90,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 One candle, with the body and the wick called out.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 150",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 51% of the frame",
+        "pass: plate stem \u2014 12.0px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -102,10 +108,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "9ac23250ad207d6d2e53f4351c70e432",
-      "md5": "9ac23250ad207d6d2e53f4351c70e432",
-      "renderer": "cairosvg",
-      "alt": "One candle, with the body and the wick called out. Labels: HIGH, LOW, BODY, WICK.",
+      "checksum": "4a938a06f8597fdbf744522db4e3ea9a",
+      "md5": "4a938a06f8597fdbf744522db4e3ea9a",
+      "renderer": "resvg",
+      "alt": "One candle, with the body and the wick called out. Labels: High, Low, Body, Wick.",
       "spec": {
         "type": "candle_anatomy",
         "preset": "house",
@@ -115,10 +121,10 @@
       },
       "idea": "One candle, with the body and the wick called out.",
       "labels": [
-        "HIGH",
-        "LOW",
-        "BODY",
-        "WICK"
+        "High",
+        "Low",
+        "Body",
+        "Wick"
       ],
       "example": true,
       "qa_ok": true,
@@ -133,10 +139,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 One candle, with the body and the wick called out.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 150",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 51% of the frame",
+        "pass: plate stem \u2014 12.0px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,

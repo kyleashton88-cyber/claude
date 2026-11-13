@@ -10,10 +10,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "0f65a8b87bfe2942550c5d934144ac8e",
-      "md5": "0f65a8b87bfe2942550c5d934144ac8e",
-      "renderer": "cairosvg",
-      "alt": "A few numbered steps for one idea. Labels: RANGE, LEVELS, STOP.",
+      "checksum": "2d2d389041ef7730c6f29032c0166816",
+      "md5": "2d2d389041ef7730c6f29032c0166816",
+      "renderer": "resvg",
+      "alt": "A few numbered steps for one idea. Labels: Range, Levels, Stop.",
       "spec": {
         "type": "steps",
         "preset": "house",
@@ -34,9 +34,9 @@
       },
       "idea": "A few numbered steps for one idea.",
       "labels": [
-        "RANGE",
-        "LEVELS",
-        "STOP"
+        "Range",
+        "Levels",
+        "Stop"
       ],
       "example": false,
       "qa_ok": true,
@@ -51,10 +51,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A few numbered steps for one idea.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 146",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 211",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 48% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -66,10 +69,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "1f77ee7b0ba2bde640d9f4db63695dd1",
-      "md5": "1f77ee7b0ba2bde640d9f4db63695dd1",
-      "renderer": "cairosvg",
-      "alt": "A few numbered steps for one idea. Labels: WRITE, CHECK, WAIT.",
+      "checksum": "262f6406c6ca1d47f08c7c5c7f5f20ea",
+      "md5": "262f6406c6ca1d47f08c7c5c7f5f20ea",
+      "renderer": "resvg",
+      "alt": "A few numbered steps for one idea. Labels: Write, Check, Wait.",
       "spec": {
         "type": "steps",
         "preset": "house",
@@ -90,9 +93,9 @@
       },
       "idea": "A few numbered steps for one idea.",
       "labels": [
-        "WRITE",
-        "CHECK",
-        "WAIT"
+        "Write",
+        "Check",
+        "Wait"
       ],
       "example": false,
       "qa_ok": true,
@@ -107,10 +110,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A few numbered steps for one idea.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 137",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 211",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 48% of the frame",
+        "pass: plate stem \u2014 15.1px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -122,10 +128,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "799526132a00121cf5cbb3270137e1bb",
-      "md5": "799526132a00121cf5cbb3270137e1bb",
-      "renderer": "cairosvg",
-      "alt": "A few numbered steps for one idea. Labels: RANGE, LEVELS, STOP.",
+      "checksum": "3c6f2a8a0f5df9a22c2f1bec8136053a",
+      "md5": "3c6f2a8a0f5df9a22c2f1bec8136053a",
+      "renderer": "resvg",
+      "alt": "A few numbered steps for one idea. Labels: Range, Levels, Stop.",
       "spec": {
         "type": "steps",
         "preset": "house",
@@ -146,9 +152,9 @@
       },
       "idea": "A few numbered steps for one idea.",
       "labels": [
-        "RANGE",
-        "LEVELS",
-        "STOP"
+        "Range",
+        "Levels",
+        "Stop"
       ],
       "example": false,
       "qa_ok": true,
@@ -163,10 +169,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A few numbered steps for one idea.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 156",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 210",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 47% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,

@@ -10,10 +10,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "4fbaa74cb2dc30faf13250e23fdc8699",
-      "md5": "4fbaa74cb2dc30faf13250e23fdc8699",
-      "renderer": "cairosvg",
-      "alt": "A sideways run of candles, marked as an example. Labels: UP, DOWN, WICK.",
+      "checksum": "f010bf4f95f06da0ccb73d2d64172fdb",
+      "md5": "f010bf4f95f06da0ccb73d2d64172fdb",
+      "renderer": "resvg",
+      "alt": "A sideways run of candles, marked as an example. Labels: Up, Down, Wick.",
       "spec": {
         "type": "candle_series",
         "preset": "house",
@@ -24,9 +24,9 @@
       },
       "idea": "A sideways run of candles, marked as an example.",
       "labels": [
-        "UP",
-        "DOWN",
-        "WICK"
+        "Up",
+        "Down",
+        "Wick"
       ],
       "example": true,
       "qa_ok": true,
@@ -41,10 +41,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A sideways run of candles, marked as an example.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 160",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -56,10 +59,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "1d1fe375c6ec50933d70e75263a7dcf0",
-      "md5": "1d1fe375c6ec50933d70e75263a7dcf0",
-      "renderer": "cairosvg",
-      "alt": "A sideways run of candles, marked as an example. Labels: UP, DOWN, WICK.",
+      "checksum": "3360aa9d0bfa92dc73d93e017009cc46",
+      "md5": "3360aa9d0bfa92dc73d93e017009cc46",
+      "renderer": "resvg",
+      "alt": "A sideways run of candles, marked as an example. Labels: Up, Down, Wick.",
       "spec": {
         "type": "candle_series",
         "preset": "house",
@@ -70,9 +73,9 @@
       },
       "idea": "A sideways run of candles, marked as an example.",
       "labels": [
-        "UP",
-        "DOWN",
-        "WICK"
+        "Up",
+        "Down",
+        "Wick"
       ],
       "example": true,
       "qa_ok": true,
@@ -87,10 +90,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A sideways run of candles, marked as an example.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 160",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -102,10 +108,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "f624fd84688712e8075ebc13397732cd",
-      "md5": "f624fd84688712e8075ebc13397732cd",
-      "renderer": "cairosvg",
-      "alt": "A sideways run of candles, marked as an example. Labels: UP, DOWN, WICK.",
+      "checksum": "6851477664c67eb9f0b67b9e225a760e",
+      "md5": "6851477664c67eb9f0b67b9e225a760e",
+      "renderer": "resvg",
+      "alt": "A sideways run of candles, marked as an example. Labels: Up, Down, Wick.",
       "spec": {
         "type": "candle_series",
         "preset": "house",
@@ -116,9 +122,9 @@
       },
       "idea": "A sideways run of candles, marked as an example.",
       "labels": [
-        "UP",
-        "DOWN",
-        "WICK"
+        "Up",
+        "Down",
+        "Wick"
       ],
       "example": true,
       "qa_ok": true,
@@ -133,10 +139,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A sideways run of candles, marked as an example.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 160",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 52% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,

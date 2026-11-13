@@ -10,10 +10,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "68b8921eae6127ecc272d3731bde2366",
-      "md5": "68b8921eae6127ecc272d3731bde2366",
-      "renderer": "cairosvg",
-      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: BUY, SELL, PRICE.",
+      "checksum": "0ec1e3cd1f371139cfa7a1db090e28f2",
+      "md5": "0ec1e3cd1f371139cfa7a1db090e28f2",
+      "renderer": "resvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: Buy, Sell, Price.",
       "spec": {
         "type": "grid_ladder",
         "preset": "house",
@@ -36,9 +36,9 @@
       },
       "idea": "Buy orders wait below the mark and sell orders wait above it.",
       "labels": [
-        "BUY",
-        "SELL",
-        "PRICE"
+        "Buy",
+        "Sell",
+        "Price"
       ],
       "example": true,
       "qa_ok": true,
@@ -53,10 +53,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 146",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -68,10 +71,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "aa2afbd24b7efded8e7a06e50d0eeeba",
-      "md5": "aa2afbd24b7efded8e7a06e50d0eeeba",
-      "renderer": "cairosvg",
-      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: BUY, SELL, FILL.",
+      "checksum": "4f160302a803551c3054416550a5230b",
+      "md5": "4f160302a803551c3054416550a5230b",
+      "renderer": "resvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: Buy, Sell, Fill.",
       "spec": {
         "type": "grid_ladder",
         "preset": "house",
@@ -94,9 +97,9 @@
       },
       "idea": "Buy orders wait below the mark and sell orders wait above it.",
       "labels": [
-        "BUY",
-        "SELL",
-        "FILL"
+        "Buy",
+        "Sell",
+        "Fill"
       ],
       "example": true,
       "qa_ok": true,
@@ -111,10 +114,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 146",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -126,10 +132,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "fe6f3dce5d0cd53c5ffc6ebd0651dea9",
-      "md5": "fe6f3dce5d0cd53c5ffc6ebd0651dea9",
-      "renderer": "cairosvg",
-      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: BUY, SELL, PRICE.",
+      "checksum": "b0c023584509ef9f7c32e0d58e7f5308",
+      "md5": "b0c023584509ef9f7c32e0d58e7f5308",
+      "renderer": "resvg",
+      "alt": "Buy orders wait below the mark and sell orders wait above it. Labels: Buy, Sell, Price.",
       "spec": {
         "type": "grid_ladder",
         "preset": "house",
@@ -152,9 +158,9 @@
       },
       "idea": "Buy orders wait below the mark and sell orders wait above it.",
       "labels": [
-        "BUY",
-        "SELL",
-        "PRICE"
+        "Buy",
+        "Sell",
+        "Price"
       ],
       "example": true,
       "qa_ok": true,
@@ -169,10 +175,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 Buy orders wait below the mark and sell orders wait above it.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 146",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,

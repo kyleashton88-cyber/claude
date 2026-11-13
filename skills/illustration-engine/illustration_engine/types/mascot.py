@@ -1,6 +1,6 @@
 """A vector grid-bot mascot drawn in code.
 
-The face is a visor with two straight bars. There is no mouth and no smile.
+The face is one visor bar. There is no mouth, no smile, and no celebrating pose.
 The chest mark is a geometric badge, not a wordmark.
 """
 
@@ -37,9 +37,8 @@ def draw_mascot(canvas, x: float, y: float, scale: float, pose: str) -> None:
         canvas.svg.rect(28, 8, 124, 112, fill=t.mascot, stroke=t.rim, sw=3, rx=56)
         canvas.svg.path("M 46 36 A 58 52 0 0 1 132 22", fill="none", stroke="#F4F8FC", sw=3, opacity=0.7)
         canvas.svg.rect(50, 46, 80, 36, fill=t.visor, rx=14)
-        # Two straight bars. Same vertical position, so they cannot read as a smile.
-        canvas.svg.rect(62, 60, 22, 6, fill=t.eye, rx=2)
-        canvas.svg.rect(96, 60, 22, 6, fill=t.eye, rx=2)
+        # One visor bar. Not two dots, and not a smile.
+        canvas.svg.rect(58, 60, 64, 7, fill=t.eye, rx=2)
         # Arms sit in front of the body. Local coordinates, before the group scale.
         if pose == "pointing":
             canvas.svg.line(40, 150, 16, 168, t.mascot_shade, sw=14)
@@ -49,11 +48,6 @@ def draw_mascot(canvas, x: float, y: float, scale: float, pose: str) -> None:
             canvas.svg.line(140, 150, 168, 176, t.mascot_shade, sw=14)
             canvas.svg.line(40, 146, 28, 78, t.mascot, sw=14)
             canvas.svg.circle(26, 70, 8, fill=t.mascot, stroke=t.accent, sw=2)
-        elif pose == "celebrating":
-            canvas.svg.line(42, 140, 8, 78, t.mascot, sw=14)
-            canvas.svg.line(138, 140, 176, 74, t.mascot, sw=14)
-            canvas.svg.circle(4, 72, 8, fill=t.mascot, stroke=t.accent, sw=2)
-            canvas.svg.circle(182, 68, 8, fill=t.mascot, stroke=t.accent, sw=2)
         else:
             # warning: one arm up, holding a small triangle sign
             canvas.svg.line(40, 150, 12, 176, t.mascot_shade, sw=14)
@@ -63,28 +57,27 @@ def draw_mascot(canvas, x: float, y: float, scale: float, pose: str) -> None:
 
 def draw_mascot_scene(canvas, params: dict) -> None:
     pose = str(params.get("pose") or params.get("variant") or "pointing")
-    if pose not in {"pointing", "thinking", "warning", "celebrating"}:
+    if pose == "celebrating":
+        pose = "pointing"
+    if pose not in {"pointing", "thinking", "warning"}:
         pose = "pointing"
     titles = {
         "pointing": "LOOK HERE",
         "thinking": "THINK FIRST",
         "warning": "CHECK FIRST",
-        "celebrating": "STEP DONE",
     }
     take_headline(canvas, params, titles[pose])
     defaults = {
         "pointing": ["POINT", "RANGE"],
         "thinking": ["THINK", "CHECK"],
         "warning": ["WAIT", "CHECK"],
-        "celebrating": ["DONE", "NEXT"],
     }
     names = labels_or(params, defaults[pose])
     x, y, w, h = canvas.content_rect()
-    canvas.glass(x + w * 0.34, y + 20, w * 0.58, h - 30)
-    # A single prop inside the card, matching the pose.
+    canvas.glass(x, y, w, h)
     t = canvas.theme
-    card_x = x + w * 0.34
-    card_w = w * 0.58
+    card_x = x + w * 0.40
+    card_w = w * 0.56
     if pose == "pointing":
         top = y + h * 0.38
         bot = y + h * 0.68
@@ -112,7 +105,7 @@ def draw_mascot_scene(canvas, params: dict) -> None:
     canvas.chip(names[0], card_x + card_w * 0.3, y + 70)
     if len(names) > 1:
         canvas.chip(names[1], card_x + card_w * 0.72, y + h - 50)
-    scale = min(1.15, (h - 10) / 280)
-    draw_mascot(canvas, x + 10, y + h - 280 * scale - 8, scale, pose)
+    scale = min((h * 0.88) / 280, (w * 0.38) / 180)
+    draw_mascot(canvas, x + t.s(12), y + h - 280 * scale - t.s(8), scale, pose)
     if pose == "warning":
         canvas.stamp_example()

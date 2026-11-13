@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import io
 from dataclasses import dataclass, field
+from functools import lru_cache
 
 from PIL import Image
 
@@ -48,6 +49,153 @@ class QaReport:
         if not passed:
             self.failures.append(line)
             self.ok = False
+
+
+def _luma(red: int, green: int, blue: int) -> float:
+    return 0.2126 * red + 0.7152 * green + 0.0722 * blue
+
+
+def _core_mask(image: Image.Image) -> Image.Image:
+    """Keep the crisp glyph and drop the bloom around it."""
+    rgb = image.convert("RGB")
+    width, height = rgb.size
+    raw = rgb.tobytes()
+    mask = Image.new("L", (width, height), 0)
+    pix = mask.load()
+    samples = []
+    for y in range(0, height, 3):
+        row = y * width * 3
+        for x in range(0, width, 3):
+            index = row + x * 3
+            samples.append(_luma(raw[index], raw[index + 1], raw[index + 2]))
+    paper = sorted(samples)[len(samples) // 2] if samples else 0
+    dark_plate = paper > 170
+    for y in range(height):
+        row = y * width * 3
+        for x in range(width):
+            index = row + x * 3
+            red, green, blue = raw[index], raw[index + 1], raw[index + 2]
+            if dark_plate:
+                if max(red, green, blue) < 95:
+                    pix[x, y] = 255
+            elif min(red, green, blue) > 214 or (blue > 235 and green > 190 and red < 70):
+                pix[x, y] = 255
+    return mask
+
+
+def _stem_on_mask(image: Image.Image, cap_px: int = 55) -> float:
+    """Left-stem width of a glyph, scaled so the cap height is cap_px."""
+    gray = _core_mask(image)
+    width, height = gray.size
+    rows = [y for y in range(height) if any(gray.getpixel((x, y)) > 200 for x in range(width))]
+    if len(rows) < 4:
+        return 0.0
+    cap = rows[-1] - rows[0] + 1
+    # Above the crossbar, so the sample is one vertical stem.
+    row = rows[0] + max(2, int(cap * 0.16))
+    run = 0
+    best = 0
+    started = False
+    for x in range(width):
+        if gray.getpixel((x, row)) > 200:
+            run += 1
+            started = True
+        elif started:
+            best = run
+            break
+    stem = float(best or run)
+    if cap <= 0 or stem <= 0:
+        return 0.0
+    return stem * cap_px / cap
+
+
+@lru_cache(maxsize=1)
+def stem_width(cap_px: int = 55) -> float:
+    """Stem of H painted by the production rasterizer at font-weight 700.
+
+    Real Roboto Condensed Bold is about 10-11px at a 55px cap. A regular
+    face falls to about 6-7px. This probe uses the same SVG weight and the
+    same rasterizer as a plate, so a font-name check cannot pass it.
+    """
+    import tempfile
+    from pathlib import Path
+
+    from .fonts import css_for, family
+    from .render import rasterize
+
+    with tempfile.TemporaryDirectory() as tmp:
+        folder = Path(tmp)
+        svg = folder / "stem.svg"
+        png = folder / "stem.png"
+        svg.write_text(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<svg xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280">\n'
+            "<defs><style><![CDATA[\n"
+            f"{css_for(svg)}\n"
+            "]]></style></defs>\n"
+            '<rect width="480" height="280" fill="#000000"/>\n'
+            f'<text x="36" y="190" fill="#F4F8FC" font-family="{family("condensed")}" '
+            'font-weight="700" font-size="80">H</text>\n'
+            "</svg>\n",
+            encoding="utf-8",
+        )
+        rasterize(svg, png, 480, 280)
+        return _stem_on_mask(Image.open(png), cap_px)
+
+
+def headline_stem(png: bytes, marks: list[dict], cap_px: int = 55) -> float:
+    """Stem width of the headline actually painted on this plate."""
+    words = [mark for mark in marks if mark.get("role") == "headline"]
+    if not words:
+        return stem_width(cap_px)
+    image = Image.open(io.BytesIO(png)).convert("RGB")
+    found = []
+    for mark in words:
+        x0 = max(0, int(mark["bbox"][0]) - 4)
+        y0 = max(0, int(mark["bbox"][1]) - 4)
+        x1 = min(image.width, int(mark["bbox"][2]) + 4)
+        y1 = min(image.height, int(mark["bbox"][3]) + 4)
+        if x1 - x0 < 4 or y1 - y0 < 4:
+            continue
+        measured = _stem_on_mask(image.crop((x0, y0, x1, y1)), cap_px)
+        if 8 <= measured <= 18:
+            found.append(measured)
+    if not found:
+        return stem_width(cap_px)
+    found.sort()
+    return found[len(found) // 2]
+
+
+def ink_coverage(png: bytes) -> float:
+    """Share of the frame that is visibly off the background."""
+    image = Image.open(io.BytesIO(png)).convert("RGB")
+    width, height = image.size
+    raw = image.tobytes()
+
+    def luma_at(x: int, y: int) -> float:
+        index = (y * width + x) * 3
+        return _luma(raw[index], raw[index + 1], raw[index + 2])
+
+    border = []
+    for x in range(0, width, 6):
+        border.append(luma_at(x, 1))
+        border.append(luma_at(x, height - 2))
+    for y in range(0, height, 6):
+        border.append(luma_at(1, y))
+        border.append(luma_at(width - 2, y))
+    border.sort()
+    base = border[len(border) // 2]
+    ink = 0
+    total = 0
+    step = 2
+    for y in range(0, height, step):
+        row = y * width * 3
+        for x in range(0, width, step):
+            index = row + x * 3
+            total += 1
+            if abs(_luma(raw[index], raw[index + 1], raw[index + 2]) - base) > 14:
+                ink += 1
+    return ink / max(total, 1)
 
 
 def check_pixels(png: bytes, theme: Theme) -> tuple[bool, str]:
@@ -122,6 +270,8 @@ def check_scene(meta: dict, theme: Theme) -> QaReport:
     )
     fonts_ok, fonts_detail = bundled_match()
     report.add("bundled fonts", fonts_ok, fonts_detail)
+    stem = stem_width(55)
+    report.add("stem width", stem >= 10, f"{stem:.1f}px at a 55px cap")
     report.add("one idea", bool(meta.get("idea")), meta.get("idea") or "missing idea")
     banned = ("profit", "guaranteed", "win-rate", "win rate", "@", "http")
     dirty = []

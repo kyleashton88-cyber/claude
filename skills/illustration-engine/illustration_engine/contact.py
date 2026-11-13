@@ -39,6 +39,31 @@ def contact_sheet(items: list[tuple[Path, str]], dest: Path, columns: int = 4, t
     return dest
 
 
+def before_after(before: Path, after: Path, dest: Path) -> Path:
+    dest = assert_safe_output(dest)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    left = Image.open(before).convert("RGB")
+    right = Image.open(after).convert("RGB")
+    height = 512
+
+    def fit(image: Image.Image) -> Image.Image:
+        width = max(1, int(image.width * height / image.height))
+        return image.resize((width, height), Image.Resampling.LANCZOS)
+
+    left, right = fit(left), fit(right)
+    gap = 20
+    cap = 40
+    sheet = Image.new("RGB", (left.width + right.width + gap, height + cap), (5, 10, 18))
+    sheet.paste(left, (0, cap))
+    sheet.paste(right, (left.width + gap, cap))
+    draw = ImageDraw.Draw(sheet)
+    font = pil_font("bold", 22)
+    draw.text((16, 8), "Before", fill=(154, 168, 188), font=font)
+    draw.text((left.width + gap + 16, 8), "After", fill=(184, 255, 255), font=font)
+    sheet.save(dest, "PNG", optimize=True)
+    return dest
+
+
 def side_by_side(original: Path, rendered: Path, dest: Path) -> Path:
     dest = assert_safe_output(dest)
     dest.parent.mkdir(parents=True, exist_ok=True)

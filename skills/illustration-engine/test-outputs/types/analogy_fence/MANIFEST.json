@@ -10,10 +10,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "4157babc2391463c7bfe4935161689aa",
-      "md5": "4157babc2391463c7bfe4935161689aa",
-      "renderer": "cairosvg",
-      "alt": "A fence around practice: stay inside the rails. Labels: INSIDE, FENCE, PRACTICE.",
+      "checksum": "f31815d63970ed9cac7eb01de2f4d32d",
+      "md5": "f31815d63970ed9cac7eb01de2f4d32d",
+      "renderer": "resvg",
+      "alt": "A fence around practice: stay inside the rails. Labels: Inside, Fence, Practice.",
       "spec": {
         "type": "analogy_fence",
         "preset": "house",
@@ -34,9 +34,9 @@
       },
       "idea": "A fence around practice: stay inside the rails.",
       "labels": [
-        "INSIDE",
-        "FENCE",
-        "PRACTICE"
+        "Inside",
+        "Fence",
+        "Practice"
       ],
       "example": true,
       "qa_ok": true,
@@ -51,10 +51,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A fence around practice: stay inside the rails.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 156",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -66,10 +69,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "3a2600bc177c215c0d0a69a289bfa315",
-      "md5": "3a2600bc177c215c0d0a69a289bfa315",
-      "renderer": "cairosvg",
-      "alt": "A fence around practice: stay inside the rails. Labels: RAIL, PATH, INSIDE.",
+      "checksum": "dbbdea78a3c57bb878f997c74d80c6eb",
+      "md5": "dbbdea78a3c57bb878f997c74d80c6eb",
+      "renderer": "resvg",
+      "alt": "A fence around practice: stay inside the rails. Labels: Rail, Path, Inside.",
       "spec": {
         "type": "analogy_fence",
         "preset": "house",
@@ -90,9 +93,9 @@
       },
       "idea": "A fence around practice: stay inside the rails.",
       "labels": [
-        "RAIL",
-        "PATH",
-        "INSIDE"
+        "Rail",
+        "Path",
+        "Inside"
       ],
       "example": true,
       "qa_ok": true,
@@ -107,10 +110,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A fence around practice: stay inside the rails.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 150",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 50% of the frame",
+        "pass: plate stem \u2014 12.9px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,
@@ -122,10 +128,10 @@
       "preset": "house",
       "width": 1536,
       "height": 1024,
-      "checksum": "a0984197794987984d3d9322ee72b6fb",
-      "md5": "a0984197794987984d3d9322ee72b6fb",
-      "renderer": "cairosvg",
-      "alt": "A fence around practice: stay inside the rails. Labels: PRACTICE, FENCE, EDGE.",
+      "checksum": "996f156a1aad6ae457aec118c73c3f5d",
+      "md5": "996f156a1aad6ae457aec118c73c3f5d",
+      "renderer": "resvg",
+      "alt": "A fence around practice: stay inside the rails. Labels: Practice, Fence, Edge.",
       "spec": {
         "type": "analogy_fence",
         "preset": "house",
@@ -146,9 +152,9 @@
       },
       "idea": "A fence around practice: stay inside the rails.",
       "labels": [
-        "PRACTICE",
-        "FENCE",
-        "EDGE"
+        "Practice",
+        "Fence",
+        "Edge"
       ],
       "example": true,
       "qa_ok": true,
@@ -163,10 +169,13 @@
         "pass: headline face \u2014 condensed bold",
         "pass: label size \u2014 labels at least 29px",
         "pass: bundled fonts \u2014 Roboto Condensed:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/RobotoCondensed-Bold.ttf; Inter:weight=bold -> /agent/repos/claude/skills/illustration-engine/illustration_engine/assets/fonts/Inter-Bold.ttf",
+        "pass: stem width \u2014 10.8px at a 55px cap",
         "pass: one idea \u2014 A fence around practice: stay inside the rails.",
         "pass: no claims or contact details \u2014 clean",
-        "pass: frame \u2014 1536x1024, spread 158",
-        "pass: word spacing \u2014 spaces hold between headline words"
+        "pass: frame \u2014 1536x1024, spread 201",
+        "pass: word spacing \u2014 spaces hold between headline words",
+        "pass: ink coverage \u2014 51% of the frame",
+        "pass: plate stem \u2014 10.8px at a 55px cap"
       ],
       "mode": "normal",
       "fallback_tier": false,

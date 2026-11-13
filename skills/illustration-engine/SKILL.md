@@ -67,14 +67,14 @@ render_prompt("liquidation, entry 100, liquidation 80, leverage 5, price 90", "l
 
 - One visual type. The list is `python3 -m illustration_engine types`.
 - House frame 1536×1024, with the top and bottom 80px kept clear of labels.
-- Headline in bold type. One word is cyan.
-- Two to five labels, each at most three words, with a leader or an arrow.
+- Headline in Roboto Condensed Bold (`font-weight: 700` on the face and the text). One word is cyan. A short headline is 89px at 1536 wide, which is a 63px cap.
+- Two to five labels, sentence case, 34px at 1536 wide. Each is at most three words, with a leader or an arrow.
 - EXAMPLE on any plate that shows a figure.
-- The mascot, when it appears, has a visor of two straight bars and no mouth.
+- The mascot, when it appears, has one visor bar and no mouth. There is no celebrating pose.
 
 ## QA
 
-A render fails closed when a label leaves the frame, sits in the outer margin, is under the preset's minimum size, fails the contrast floor, or the PNG is blank. Re-check a folder with:
+A render fails closed when a label leaves the frame, sits in the outer margin, is under the preset's minimum size, fails the contrast floor, or the PNG is blank. It also fails when the painted headline stem is under 10px at a 55px cap (that is a Regular face, not Bold) or when the lit ink covers less than 30% or more than 55% of the frame. Re-check a folder with:
 
 ```bash
 python3 -m illustration_engine qa test-outputs/batch/bp-01-introduction

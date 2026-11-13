@@ -12,7 +12,7 @@ Read each plate with the sound off.
 ### 001.png
 - Idea: A top and a bottom, with price moving inside the band.
 - Headline: SIDEWAYS BAND
-- Labels (2): RANGE, BAND
+- Labels (3): Range, Band, Upper
 - Example stamp: yes
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
@@ -20,7 +20,7 @@ Read each plate with the sound off.
 ### 002.png
 - Idea: A few numbered steps for one idea.
 - Headline: EDUCATION ONLY
-- Labels (3): LEARN, NOTICE, PAPER
+- Labels (3): Learn, Notice, Paper
 - Example stamp: no
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
@@ -28,7 +28,7 @@ Read each plate with the sound off.
 ### 003.png
 - Idea: A title card for the lesson, with no extra lockup.
 - Headline: INTRODUCTION
-- Labels (2): START, HERE
+- Labels (2): Start, Here
 - Example stamp: no
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
@@ -36,7 +36,7 @@ Read each plate with the sound off.
 ### 004.png
 - Idea: A few numbered steps for one idea.
 - Headline: THE THREE PARTS
-- Labels (3): RANGE, LEVELS, STOP
+- Labels (3): Range, Levels, Stop
 - Example stamp: no
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
@@ -44,7 +44,7 @@ Read each plate with the sound off.
 ### 005.png
 - Idea: A top and a bottom, with price moving inside the band.
 - Headline: THE RANGE
-- Labels (3): UPPER, LOWER, RANGE
+- Labels (3): Upper, Lower, Range
 - Example stamp: yes
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
@@ -52,7 +52,7 @@ Read each plate with the sound off.
 ### 006.png
 - Idea: Rungs are levels that wait. One rung is the next step.
 - Headline: THE LEVELS
-- Labels (3): RUNG, LEVEL, WAIT
+- Labels (3): Rung, Level, Wait
 - Example stamp: yes
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
@@ -60,7 +60,7 @@ Read each plate with the sound off.
 ### 007.png
 - Idea: Buy orders wait below the mark and sell orders wait above it.
 - Headline: BUYS AND SELLS
-- Labels (3): BUY, SELL, PRICE
+- Labels (3): Buy, Sell, Price
 - Example stamp: yes
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
@@ -68,7 +68,7 @@ Read each plate with the sound off.
 ### 008.png
 - Idea: A top and a bottom, with price moving inside the band.
 - Headline: THE STOP
-- Labels (3): UPPER, LOWER, STOP
+- Labels (3): Upper, Lower, Stop
 - Example stamp: yes
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
@@ -76,7 +76,7 @@ Read each plate with the sound off.
 ### 009.png
 - Idea: The grid bot mascot in one pose, beside one prop.
 - Headline: CHECK FIRST
-- Labels (2): WAIT, CHECK
+- Labels (2): Wait, Check
 - Example stamp: yes
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
@@ -84,7 +84,7 @@ Read each plate with the sound off.
 ### 010.png
 - Idea: A short path of steps, read from left to right.
 - Headline: THE MAP
-- Labels (3): START, MIDDLE, NEXT
+- Labels (5): Start, Middle, Next, Range, Levels
 - Example stamp: no
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
@@ -92,7 +92,7 @@ Read each plate with the sound off.
 ### 011.png
 - Idea: A top and a bottom, with price moving inside the band.
 - Headline: WHEN THE DRAWING FAILS
-- Labels (3): UPPER, LOWER, OUT
+- Labels (3): Upper, Lower, Out
 - Example stamp: yes
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
@@ -100,7 +100,7 @@ Read each plate with the sound off.
 ### 012.png
 - Idea: Two ways to see the same idea, side by side.
 - Headline: NO RESULT
-- Labels (2): NUMBER, SHAPE
+- Labels (2): Number, Shape
 - Example stamp: no
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
@@ -108,7 +108,7 @@ Read each plate with the sound off.
 ### 013.png
 - Idea: Buy orders wait below the mark and sell orders wait above it.
 - Headline: EIGHT TICKS
-- Labels (3): BUY, SELL, PRICE
+- Labels (3): Buy, Sell, Price
 - Example stamp: yes
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
@@ -116,7 +116,7 @@ Read each plate with the sound off.
 ### 014.png
 - Idea: A short paper checklist, one row highlighted.
 - Headline: THE CHECKLIST IS NEXT
-- Labels (3): RANGE, LEVELS, STOP
+- Labels (3): Range, Levels, Stop
 - Example stamp: no
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
@@ -124,7 +124,7 @@ Read each plate with the sound off.
 ### 015.png
 - Idea: A fence around practice: stay inside the rails.
 - Headline: PAPER FIRST
-- Labels (3): INSIDE, FENCE, PRACTICE
+- Labels (3): Inside, Fence, Practice
 - Example stamp: yes
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
@@ -132,7 +132,7 @@ Read each plate with the sound off.
 ### 016.png
 - Idea: A few numbered steps for one idea.
 - Headline: YOUR TURN
-- Labels (3): GRID HAS, LEVELS, STOP
+- Labels (3): Grid Has, Levels, Stop
 - Example stamp: no
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
@@ -140,7 +140,7 @@ Read each plate with the sound off.
 ### 017.png
 - Idea: A few numbered steps for one idea.
 - Headline: ONE SENTENCE TO KEEP
-- Labels (4): RANGE, LEVELS, STOP, DRAWN CLICK
+- Labels (3): Range, Levels, Stop
 - Example stamp: no
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
@@ -148,7 +148,7 @@ Read each plate with the sound off.
 ### 018.png
 - Idea: A section divider with one word.
 - Headline: NEXT
-- Labels (2): PART, NEXT
+- Labels (2): Part, Next
 - Example stamp: no
 - Automated: pass
 - Human check: with the sound off, is this one idea, in plain words, and obvious to a beginner?
