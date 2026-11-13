@@ -1,5 +1,7 @@
 # Code-drawn stills @ d7125bc: remaining fixes
 
+> **Superseded** by `CODE_DRAWN_FIXES_72e67cf.md` (rescore of the 17 frames redrawn at 72e67cf). Kept for history.
+
 Scored against skills/image-quality-standard (f688829). Pass = every category at least 4 and no hard fail.
 Result: **8 of 25 pass.** Coordinates are at 1920x1080 (thumbnails are 1280x720; their coordinates are scaled the same way).
 Figures re-verified against course/data/public-prices/btc-usd-windows.json @d7125bc; no wrong numbers anywhere.
