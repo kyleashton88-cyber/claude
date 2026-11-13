@@ -6,8 +6,9 @@
   "format_label": "Blueprint lesson",
   "length_window_seconds": [
     360,
-    600
+    null
   ],
+  "length_rule": "360s minimum, no upper limit",
   "loudness_target_lufs": -14.0,
   "loudness_tolerance_lu": 1.0,
   "true_peak_max_dbtp": -1.0,
@@ -16,7 +17,7 @@
     {
       "id": "length",
       "result": "pass",
-      "detail": "486.0s is inside Blueprint lesson (360s\u2013600s)"
+      "detail": "489.4s is inside Blueprint lesson (360s minimum, no upper limit)"
     },
     {
       "id": "loudness",
@@ -26,12 +27,12 @@
     {
       "id": "true_peak",
       "result": "pass",
-      "detail": "true peak -3.9 dBTP, limit -1 dBTP"
+      "detail": "true peak -3.7 dBTP, limit -1 dBTP"
     },
     {
       "id": "frozen",
       "result": "pass",
-      "detail": "longest static run 8.0s, limit 8s"
+      "detail": "longest static run 0.5s, limit 8s"
     },
     {
       "id": "black",
@@ -61,7 +62,7 @@
     {
       "id": "captions",
       "result": "pass",
-      "detail": "116 cues, at most 42 characters and 20 per second"
+      "detail": "113 cues, at most 42 characters and 20 per second"
     },
     {
       "id": "text_recognition",
