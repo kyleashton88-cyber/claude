@@ -1,0 +1,44 @@
+lesson: sample-grid
+title: A grid in one picture
+format: blueprint
+beats:
+  - id: candles
+    chapter: Candles
+    vo: Each candle shows four facts.
+    on_screen: Four facts
+    labels: [Open, High, Low, Close]
+    words:
+      - {text: Each, start: 0.0, end: 0.4}
+      - {text: candle, start: 0.4, end: 1.0}
+      - {text: shows, start: 1.0, end: 1.5}
+      - {text: four, start: 1.5, end: 2.0}
+      - {text: facts, start: 2.0, end: 3.0}
+  - id: ladder
+    chapter: The ladder
+    vo: Buy orders sit below the price and sell orders sit above it while the picture keeps moving so a still frame never holds.
+    on_screen: Orders on a ladder
+    labels: [Buys below, Sells above]
+    words:
+      - {text: Buy, start: 0.0, end: 0.4}
+      - {text: orders, start: 0.4, end: 1.0}
+      - {text: sit, start: 1.0, end: 1.6}
+      - {text: below, start: 1.6, end: 2.4}
+      - {text: the, start: 2.4, end: 2.7}
+      - {text: price, start: 2.7, end: 3.4}
+      - {text: and, start: 3.4, end: 4.0}
+      - {text: sell, start: 4.0, end: 4.8}
+      - {text: orders, start: 4.8, end: 5.6}
+      - {text: sit, start: 5.6, end: 6.4}
+      - {text: above, start: 6.4, end: 7.2}
+      - {text: it, start: 7.2, end: 8.2}
+      - {text: while, start: 8.2, end: 9.0}
+      - {text: the, start: 9.0, end: 9.4}
+      - {text: picture, start: 9.4, end: 10.2}
+      - {text: keeps, start: 10.2, end: 11.0}
+      - {text: moving, start: 11.0, end: 12.0}
+      - {text: so, start: 12.0, end: 12.6}
+      - {text: a, start: 12.6, end: 13.0}
+      - {text: still, start: 13.0, end: 14.0}
+      - {text: frame, start: 14.0, end: 15.0}
+      - {text: never, start: 15.0, end: 16.2}
+      - {text: holds, start: 16.2, end: 17.4}
