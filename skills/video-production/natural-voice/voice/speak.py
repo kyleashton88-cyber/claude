@@ -84,7 +84,7 @@ class Speaker:
             meta.write_text(json.dumps({"sr": sr}))
         return audio, sr
 
-    def render(self, text: str) -> tuple[np.ndarray, int, list[Word], str]:
+    def render(self, text: str, pace: float = 1.0) -> tuple[np.ndarray, int, list[Word], str]:
         pieces: list[np.ndarray] = []
         sample_rate = None
         blocks = section_breaks(text)
@@ -101,7 +101,7 @@ class Speaker:
                         if sample_rate:
                             pieces.append(np.zeros(int(max(pause, 0.12) * sample_rate), dtype=np.float32))
                         continue
-                    audio, rate = self.say(line, span.rate)
+                    audio, rate = self.say(line, span.rate * pace)
                     if sample_rate is None:
                         sample_rate = rate
                     if rate != sample_rate:
@@ -118,7 +118,7 @@ class Speaker:
         words = written_text(text).split()
         templates = []
         for word in words:
-            template, rate = self.say(word.strip(".,!?;:"), 1.0)
+            template, rate = self.say(word.strip(".,!?;:"), pace)
             if rate != sample_rate:
                 raise RuntimeError("template sample rate changed")
             templates.append(template)

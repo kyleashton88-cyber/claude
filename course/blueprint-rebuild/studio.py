@@ -409,19 +409,17 @@ def plan(sid: str) -> list[dict]:
     return shots
 
 
+# The old estimate used 2.55 words/second and said BP-01 was 7.2 minutes.
+# Real Kokoro af_heart, with its sentence gaps, was 617.7s (101 words a minute).
+# After the gap tighten, the same words are 0.584s each at speed 1.0.
+SPEECH_RATE = 1.05
+SECONDS_PER_WORD = 610.085 / 1045
+
+
 def estimate(shot: dict) -> float:
+    """Rough length. The render go/no-go uses the real Kokoro file, not this."""
     words = max(1, len((shot.get("vo") or "").split()))
-    sec = words / 2.55 + 0.45
-    kind = shot.get("kind")
-    if kind == "brand":
-        sec = max(sec, 8.5)
-    elif kind == "disclaimer":
-        sec = max(sec, 7.0)
-    elif kind == "outro":
-        sec = max(sec, 6.5)
-    else:
-        sec = max(sec, 5.0)
-    return sec
+    return words * SECONDS_PER_WORD / max(SPEECH_RATE, 0.5)
 
 
 def background(local: float) -> Image.Image:
@@ -1569,6 +1567,44 @@ def _mood(kind: str) -> str:
     return {"brand": "upbeat-intro", "disclaimer": "serious-risk", "outro": "recap"}.get(kind, "calm-teacher")
 
 
+def _tighten_narration(audio: np.ndarray, sr: int, words: list, gap: float = 0.35, tail: float = 0.45):
+    """Shorten silence. Sentence gaps stay about 0.35s. A beat can end a little longer."""
+    if len(audio) == 0:
+        return audio, words
+    thr = 10 ** (-42 / 20)
+    hop = max(1, int(0.01 * sr))
+    quiet = [float(np.max(np.abs(audio[i:i + hop]))) < thr for i in range(0, len(audio), hop)]
+    keep = np.ones(len(audio), dtype=bool)
+    i = 0
+    while i < len(quiet):
+        if not quiet[i]:
+            i += 1
+            continue
+        j = i
+        while j < len(quiet) and quiet[j]:
+            j += 1
+        start = i * hop
+        end = min(len(audio), j * hop)
+        dur = (end - start) / sr
+        limit = tail if j >= len(quiet) else gap
+        if dur > limit + 0.02:
+            keep[start + int(limit * sr):end] = False
+        i = j
+    new_audio = audio[keep]
+    mapping = np.cumsum(keep) - 1
+    new_words = []
+    last = len(audio) - 1
+    for word in words:
+        start = min(last, int(word.start * sr))
+        end = min(last, max(start + 1, int(word.end * sr)))
+        new_words.append(type(word)(
+            word.text,
+            float(mapping[start] / sr),
+            float(max(mapping[end] / sr, mapping[start] / sr + 0.05)),
+        ))
+    return new_audio, new_words
+
+
 def synth_voice(shots: list[dict], dest: Path) -> tuple[float, list]:
     """Kokoro af_heart through natural-voice, with word times on the timeline."""
     _voice_stack()
@@ -1588,24 +1624,14 @@ def synth_voice(shots: list[dict], dest: Path) -> tuple[float, list]:
             raise SystemExit("Blueprint narration must be Kokoro af_heart")
         if mood not in speakers:
             speakers[mood] = Speaker(engine="kokoro", mood=mood)
-        audio, rate, words, _method = speakers[mood].render(shot["vo"])
+        audio, rate, words, _method = speakers[mood].render(shot["vo"], pace=SPEECH_RATE)
         if sample_rate is None:
             sample_rate = rate
         if rate != sample_rate:
             raise SystemExit("voice sample rate changed mid-lesson")
-        min_sec = 0.0
-        if shot["kind"] == "brand":
-            min_sec = 6.5
-        elif shot["kind"] == "disclaimer":
-            min_sec = 7.0
-        elif shot["kind"] == "outro":
-            min_sec = 5.5
-        elif shot["kind"] != "chart":
-            min_sec = 4.5
-        min_sec = min(min_sec, MAX_SHOT - 0.05)
-        pad = max(0, int(min_sec * rate) - len(audio))
-        if pad:
-            audio = np.concatenate([audio, np.zeros(pad, dtype=np.float32)])
+        # Drop the old 4.5–7s holds. Keep a clear beat ending, and do not
+        # squeeze the gap between sentences below about 0.35s.
+        audio, words = _tighten_narration(audio, rate, words)
         chunks = _split_picture(shot, audio, rate)
         origin = clock
         covered = 0.0
