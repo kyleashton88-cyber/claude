@@ -1,5 +1,7 @@
 # Code-drawn stills @ 0eb1dc6: remaining fixes
 
+> **Superseded** at 61c4f97: all six frames below were redrawn and pass. See REPORT.md.
+
 Standard: skills/image-quality-standard (f688829). A frame passes when every category scores at least 4 and there is no hard fail.
 **19 of 25 code-drawn frames pass.** The 11 earlier passes not touched in 0eb1dc6 are byte-identical (git blob at 0eb1dc6 = scored_blob). Of the 14 changed frames, 8 pass: bp-01 a-ladder, the-fence, title-card, end-card; bp-02 title-card, end-card; bp-03 title-card, end-card.
 Figures re-verified against course/data/public-prices/btc-usd-windows.json @0eb1dc6; none is wrong. Coordinates are at 1920x1080; thumbnails are 1280x720.
