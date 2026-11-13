@@ -1,0 +1,24 @@
+lesson: mc-sample
+title: What changed this week
+format: market-check
+preset: house
+length_seconds: [60, 90]
+disclaimer_spoken: This is education, not financial advice.
+disclaimer_on_screen: Education, not financial advice.
+next:
+  id: mc-sample-02
+  title: The next check
+chapters:
+  - {t: 0, title: What changed}
+  - {t: 40, title: What it is not}
+beats:
+  - id: changed
+    chapter: What changed
+    vo: Price spent the week inside a range. That is a description of the path, not an instruction.
+    on_screen: Inside a range
+    labels: [Inside a range, A description]
+  - id: not
+    chapter: What it is not
+    vo: A market check is not a call to buy or sell. EXAMPLE the sketch marks the week's high and low.
+    on_screen: EXAMPLE high and low
+    labels: [Not a call, EXAMPLE]

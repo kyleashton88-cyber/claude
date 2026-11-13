@@ -1,0 +1,28 @@
+id: grid-picture
+title: A grid, in one picture
+engine: piper
+mood: calm-teacher
+sections:
+  - id: orders
+    chapter: Orders
+    narration: >
+      A grid places buy orders below the price and sell orders above it.
+      When price crosses a line, that order fills.
+    visual:
+      kind: ladder
+      title: Orders on a ladder
+      caption: Buys below. Sells above. A cross fills the order.
+    illustration: "grid ladder, range 90 to 110, price 100, label buy and sell"
+  - id: buffer
+    chapter: The buffer
+    narration: >
+      A liquidation line sits beyond the range. The gap is the buffer.
+      If the buffer shrinks, the plan is under stress.
+    visual:
+      kind: risk
+      title: Range, and the line past it
+      caption: The buffer is the gap to the line.
+    illustration: "liquidation line below a price range"
+end_card:
+  kicker: Education only
+  line: Not financial advice. Figures are illustrative.
