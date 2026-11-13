@@ -1,17 +1,22 @@
 #!/usr/bin/env python3
 """Rebuild one Grid Bot Blueprint lesson as a 1080p teaching film.
 
-Original pad bed (no third-party melody). No mail, no SMTP, no notifications.
-Pictures reuse the committed wordmark, mascot, and analogy stills.
+Narration is natural-voice, Kokoro af_heart. The mix is lib/mix.py
+(voice -14 LUFS / -1 dBTP, music 20 dB under, then one sidechain).
+Word-timed captions, chapters, and the template end card are written
+with the picture. The quality gate (format blueprint) runs last and a
+fail stops the build. No image is drawn unless the pass list marks it
+pass. No mail, no SMTP, no paid speech API.
 
-  python3 course/blueprint-rebuild/studio.py --id bp-01-introduction --stills
   python3 course/blueprint-rebuild/studio.py --id bp-01-introduction
+  python3 course/blueprint-rebuild/studio.py --id bp-01-introduction --excerpt 32 --pass-list fixture.json
 """
 
 from __future__ import annotations
 
 import argparse
 import importlib.util
+import json
 import re
 import subprocess
 import sys
@@ -26,7 +31,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "course/skills"))
 
 W, H = 1920, 1080
-FPS = 24
+FPS = 30
 NAVY = (7, 12, 22)
 NAVY2 = (12, 22, 40)
 CYAN = (0, 212, 255)
@@ -611,18 +616,23 @@ def paint_analogy(base: Image.Image, shot: dict, local: float, dur: float) -> No
 
 
 def paint_outro(base: Image.Image, shot: dict, local: float) -> None:
+    """Template end card. The right side stays clear for an end screen."""
+    templates = ROOT / "skills/video-production/templates"
+    if str(templates) not in sys.path:
+        sys.path.insert(0, str(templates))
+    from pack.paint import paint_endcard
+
+    card_path = Path("/tmp/bp-endcard.png")
+    next_title = shot.get("caption") or "End of the Blueprint"
+    paint_endcard(shot.get("lesson_title") or "Blueprint", next_title, card_path)
+    card = Image.open(card_path).convert("RGB")
+    if card.size != (W, H):
+        card = card.resize((W, H), Image.Resampling.LANCZOS)
+    base.paste(card, (0, 0))
+    if local < 0.35:
+        fade = Image.new("RGB", (W, H), NAVY)
+        base.paste(Image.blend(fade, base, ease(local / 0.35)))
     draw = ImageDraw.Draw(base)
-    mark = scaled(wordmark(), 84)
-    paste(base, mark, (MX, 200))
-    draw.text((MX, 320), "Next", font=font(40), fill=CYAN)
-    if local > 0.35:
-        lines = wrap(shot.get("caption") or "End of the Blueprint", 56, 1400)[:2]
-        y = 400
-        for line in lines:
-            draw.text((MX, y), line, font=font(56), fill=WHITE)
-            y += 72
-    sprite = scaled(mascot(), 420)
-    paste(base, sprite, (W - MX - sprite.width, 360))
     draw.text((MX, 990), FOOT, font=font(36, "reg"), fill=DIM)
 
 
@@ -753,17 +763,38 @@ def compose_pad(duration: float, dest: Path) -> None:
     ])
 
 
-def synth_voice(shots: list[dict], dest: Path) -> float:
-    from kokoro import KPipeline
+def _voice_stack() -> None:
+    root = ROOT / "skills/video-production"
+    for folder in (root, root / "natural-voice"):
+        text = str(folder)
+        if text not in sys.path:
+            sys.path.insert(0, text)
 
-    pipe = KPipeline(lang_code="a", repo_id="hexgrad/Kokoro-82M")
-    pieces = []
+
+def _mood(kind: str) -> str:
+    return {"brand": "upbeat-intro", "disclaimer": "serious-risk", "outro": "recap"}.get(kind, "calm-teacher")
+
+
+def synth_voice(shots: list[dict], dest: Path) -> tuple[float, list]:
+    """Kokoro af_heart through natural-voice, with word times on the timeline."""
+    _voice_stack()
+    from voice.align import Word
+    from voice.speak import Speaker
+
+    speakers: dict = {}
+    pieces: list[np.ndarray] = []
+    timed: list[Word] = []
     clock = 0.0
-    speed = 0.92
+    sample_rate = None
     for i, shot in enumerate(shots):
-        wav = speech.synth(pipe, shot["vo"], speed)
-        tail = int(0.28 * speech.SR)
-        wav = np.concatenate([wav, np.zeros(tail, dtype=np.float32)])
+        mood = _mood(shot.get("kind") or "chart")
+        if mood not in speakers:
+            speakers[mood] = Speaker(engine="kokoro", mood=mood)
+        audio, rate, words, _method = speakers[mood].render(shot["vo"])
+        if sample_rate is None:
+            sample_rate = rate
+        if rate != sample_rate:
+            raise SystemExit("voice sample rate changed mid-lesson")
         min_sec = 0.0
         if shot["kind"] == "brand":
             min_sec = 8.5
@@ -773,36 +804,135 @@ def synth_voice(shots: list[dict], dest: Path) -> float:
             min_sec = 6.5
         elif shot["kind"] != "chart":
             min_sec = 5.0
-        need = int(min_sec * speech.SR)
-        if len(wav) < need:
-            wav = np.concatenate([wav, np.zeros(need - len(wav), dtype=np.float32)])
-        # Click-free edges.
-        ramp = int(0.02 * speech.SR)
-        wav[:ramp] *= np.linspace(0, 1, ramp, dtype=np.float32)
-        wav[-ramp:] *= np.linspace(1, 0, ramp, dtype=np.float32)
-        shot["duration"] = len(wav) / speech.SR
+        pad = max(0, int(min_sec * rate) - len(audio))
+        if pad:
+            audio = np.concatenate([audio, np.zeros(pad, dtype=np.float32)])
+        shot["duration"] = len(audio) / rate
+        for word in words:
+            timed.append(Word(word.text, word.start + clock, word.end + clock))
         clock += shot["duration"]
-        pieces.append(wav)
-        if (i + 1) % 6 == 0:
+        pieces.append(audio)
+        if (i + 1) % 4 == 0:
             print(f"  voice {i + 1}/{len(shots)} t={clock:.0f}s", flush=True)
-    voice = np.concatenate(pieces)
-    sf.write(str(dest), voice, speech.SR)
-    return clock
+    voice = np.concatenate(pieces) if pieces else np.zeros(1, dtype=np.float32)
+    sf.write(str(dest), voice, sample_rate or 24000)
+    return clock, timed
 
 
-def render(sid: str) -> Path:
+def _excerpt(shots: list[dict], seconds: float) -> list[dict]:
+    kept = []
+    total = 0.0
+    for shot in shots:
+        guess = estimate(shot)
+        if kept and total + guess > max(seconds, 24):
+            break
+        kept.append(shot)
+        total += guess
+        if total >= min(seconds, 22):
+            break
+    if kept and kept[-1].get("kind") not in {"brand", "disclaimer"}:
+        kept[-1]["vo"] = clip_vo(kept[-1]["vo"], 1, 22)
+    if not any(shot.get("kind") == "outro" for shot in kept):
+        kept.append({
+            "kind": "outro",
+            "chapter": "Next",
+            "vo": "Next. The page stays marked example. No order is sent.",
+            "caption": "What you are going to need",
+            "lesson_no": shots[0].get("lesson_no", "01"),
+            "lesson_title": shots[0].get("lesson_title", "Blueprint"),
+            "term": "Next",
+            "definition": "Educational content only. Not financial advice.",
+            "example": False,
+            "series": [],
+        })
+    return kept
+
+
+def _lesson_yaml(sid: str, shots: list[dict], dest: Path) -> None:
+    """Figures in the yaml carry the word EXAMPLE, matching the on-screen badge."""
+    beats = []
+    for shot in shots:
+        vo = shot.get("vo") or ""
+        caption = shot.get("caption") or ""
+        if re.search(r"\d", vo) and "example" not in vo.lower():
+            vo = vo.rstrip(".") + ", marked EXAMPLE."
+        if re.search(r"\d", caption) and "example" not in caption.lower():
+            caption = caption.rstrip(".") + ", marked EXAMPLE."
+        beats.append({
+            "id": _slug(str(shot.get("chapter") or shot.get("kind"))),
+            "chapter": shot.get("chapter") or shot.get("kind"),
+            "vo": vo,
+            "caption": caption,
+        })
+    payload = {
+        "id": sid,
+        "format": "blueprint",
+        "disclaimer_spoken": DISCLAIMER,
+        "disclaimer_on_screen": "Educational content only. Not financial advice.",
+        "beats": beats,
+        "chart_labels": sorted({
+            token.replace(",", "")
+            for shot in shots
+            for token in re.findall(r"\d[\d,]*", f"{shot.get('caption') or ''} {shot.get('vo') or ''}")
+            if len(token.replace(",", "")) >= 2
+        }),
+    }
+    dest.write_text(
+        "id: " + sid + "\n"
+        "format: blueprint\n"
+        "disclaimer_spoken: " + json_quote(DISCLAIMER) + "\n"
+        "disclaimer_on_screen: \"Educational content only. Not financial advice.\"\n"
+        "beats:\n" + "".join(
+            "  - id: " + beat["id"] + "\n"
+            "    chapter: " + json_quote(str(beat["chapter"])) + "\n"
+            "    vo: " + json_quote(beat["vo"]) + "\n"
+            "    caption: " + json_quote(beat["caption"]) + "\n"
+            for beat in payload["beats"]
+        )
+        + "chart_labels:\n"
+        + "".join(f"  - {json_quote(label)}\n" for label in payload["chart_labels"])
+    )
+
+
+def json_quote(text: str) -> str:
+    return json.dumps(text, ensure_ascii=False)
+
+
+def _slug(text: str) -> str:
+    keep = "".join(ch.lower() if ch.isalnum() else "-" for ch in text)
+    return "-".join(part for part in keep.split("-") if part) or "shot"
+
+
+def render(
+    sid: str,
+    *,
+    excerpt_seconds: float | None = None,
+    pass_list: Path | None = None,
+    dest: Path | None = None,
+) -> Path:
     if sid.startswith("el-"):
         raise SystemExit("refusing Elite id")
+    here = str(ROOT / "course/blueprint-rebuild")
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    import image_gate
+    image_gate.require(sid, pass_list)
     shots = plan(sid)
+    if excerpt_seconds:
+        shots = _excerpt(shots, excerpt_seconds)
     words = sum(len(s["vo"].split()) for s in shots)
     print(f"{sid} shots {len(shots)} words {words}", flush=True)
     work = Path(f"/tmp/bp-rebuild/{sid}")
+    if work.exists():
+        for child in work.iterdir():
+            if child.is_file():
+                child.unlink()
     work.mkdir(parents=True, exist_ok=True)
     voice_path = work / "voice.wav"
-    clock = synth_voice(shots, voice_path)
+    clock, timed = synth_voice(shots, voice_path)
     print(f"  voice {clock:.1f}s", flush=True)
     bed = work / "bed.wav"
-    compose_pad(clock, bed)
+    compose_pad(clock + 1.0, bed)
     silent = work / "silent.mp4"
     proc = subprocess.Popen(
         [
@@ -841,55 +971,84 @@ def render(sid: str) -> Path:
     proc.stdin.close()
     if proc.wait() != 0:
         raise SystemExit("picture encode failed")
-    v_i, _ = measured_lufs(voice_path)
-    b_i, _ = measured_lufs(bed)
-    # Voice to -16. Bed stays near -29 so it sits 13 LU under the voice.
-    v_gain = -16.0 - v_i
-    # Sidechain takes about 2 dB off the bed, so the bed lands near -29 under the voice.
-    b_gain = -27.0 - b_i
+    _voice_stack()
+    from lib.mix import duck_under_voice
+    from voice.captions import write_chapters, write_srt, write_vtt, write_words
+
     mixed = work / "mixed.wav"
-    run([
-        "ffmpeg", "-y", "-v", "error",
-        "-i", str(voice_path), "-i", str(bed),
-        "-filter_complex",
-        f"[0:a]aresample=48000,aformat=channel_layouts=stereo,volume={v_gain:.2f}dB,asplit=2[vo][key];"
-        f"[1:a]aresample=48000,aformat=channel_layouts=stereo,volume={b_gain:.2f}dB[mus];"
-        "[mus][key]sidechaincompress=threshold=0.08:ratio=1.6:attack=80:release=600:makeup=1[duck];"
-        "[vo][duck]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.84:level=false[a]",
-        "-map", "[a]", str(mixed),
-    ])
-    m_i, m_tp = measured_lufs(mixed)
-    trim = -16.0 - m_i
-    # Do not trim upward into the peak ceiling.
-    if m_tp + trim > -1.05:
-        trim = min(trim, -1.05 - m_tp)
-    OUT.mkdir(parents=True, exist_ok=True)
-    dest = OUT / f"{sid}.mp4"
+    duck_under_voice(bed, voice_path, mixed)
+    final_path = dest or (OUT / f"{sid}.mp4")
+    final_path.parent.mkdir(parents=True, exist_ok=True)
+    preset = "veryfast" if excerpt_seconds else "medium"
     run([
         "ffmpeg", "-y", "-v", "error",
         "-i", str(silent), "-i", str(mixed),
-        "-filter_complex", f"[1:a]volume={trim:.2f}dB[a]",
-        "-map", "0:v", "-map", "[a]",
-        "-c:v", "copy",
+        "-map", "0:v", "-map", "1:a",
+        "-c:v", "libx264", "-preset", preset, "-crf", "17", "-profile:v", "high",
+        "-pix_fmt", "yuv420p",
+        "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
         "-c:a", "aac", "-b:a", "320k", "-ar", "48000", "-ac", "2",
-        "-movflags", "+faststart",
-        str(dest),
+        "-shortest", "-movflags", "+faststart",
+        str(final_path),
     ])
-    final_i, final_tp = measured_lufs(dest)
-    vtt = ROOT / "course/blueprint-rebuild/captions" / f"{sid}.vtt"
-    vtt.parent.mkdir(parents=True, exist_ok=True)
-    t = 0.0
-    lines = ["WEBVTT", ""]
-    for idx, shot in enumerate(shots, start=1):
-        a, b = t, t + shot["duration"]
-        lines.append(str(idx))
-        lines.append(f"{_ts(a)} --> {_ts(b)}")
-        lines.append(shot.get("caption") or shot.get("definition") or "")
-        lines.append("")
-        t = b
-    vtt.write_text("\n".join(lines))
-    print(f"WROTE {dest} {clock:.1f}s lufs {final_i:.1f} peak {final_tp:.1f}")
-    return dest
+    sidecar = final_path.parent
+    if "course" in sidecar.resolve().parts:
+        sidecar = ROOT / "blueprint-smoke" / sid
+        sidecar.mkdir(parents=True, exist_ok=True)
+    write_words(sidecar / "words.json", timed, engine="kokoro", mood="af_heart", method="acoustic-forced-align")
+    write_vtt(sidecar / f"{sid}.vtt", timed)
+    _cap_caption_speed(sidecar / f"{sid}.vtt")
+    write_srt(sidecar / f"{sid}.srt", timed)
+    chapters = []
+    cursor = 0.0
+    for shot in shots:
+        chapters.append((cursor, shot.get("chapter") or shot.get("kind") or "Section"))
+        cursor += float(shot["duration"])
+    if chapters:
+        chapters[0] = (0.0, chapters[0][1])
+    write_chapters(sidecar / "chapters.txt", chapters)
+    lesson_yaml = sidecar / f"{sid}.yaml"
+    _lesson_yaml(sid, shots, lesson_yaml)
+    report_dir = sidecar / "gate"
+    code = subprocess.call([
+        sys.executable,
+        str(ROOT / "skills/video-production/quality-gate/cli.py"),
+        "check", str(final_path),
+        "--format", "blueprint",
+        "--captions", str(sidecar / f"{sid}.vtt"),
+        "--transcript", str(lesson_yaml),
+        "--lesson", str(lesson_yaml),
+        "--out", str(report_dir),
+    ])
+    final_i, final_tp = measured_lufs(final_path)
+    print(f"WROTE {final_path} {clock:.1f}s lufs {final_i:.1f} peak {final_tp:.1f}")
+    print(f"GATE {report_dir / 'report.md'}")
+    if code != 0:
+        raise SystemExit(f"quality gate failed for {sid}. The build stops.")
+    return final_path
+
+
+def _cap_caption_speed(path: Path, limit: float = 18.0) -> None:
+    """Shorten a cue that the voice packed faster than the caption limit."""
+
+    def seconds(token: str) -> float:
+        token = token.strip().split()[0]
+        hours, minutes, rest = token.split(":")
+        sec, ms = rest.split(".")
+        return int(hours) * 3600 + int(minutes) * 60 + int(sec) + int(ms) / 1000
+
+    lines_out = ["WEBVTT", ""]
+    for block in path.read_text(encoding="utf-8").strip().split("\n\n"):
+        rows = [row for row in block.splitlines() if row.strip() and row.strip() != "WEBVTT"]
+        if not rows or "-->" not in rows[0]:
+            continue
+        left, right = rows[0].split("-->", 1)
+        span = max(0.2, seconds(right) - seconds(left))
+        text = " ".join(rows[1:])
+        while text and len(text) / span > limit and " " in text:
+            text = text.rsplit(" ", 1)[0]
+        lines_out.extend([rows[0], text, ""])
+    path.write_text("\n".join(lines_out) + "\n")
 
 
 def _ts(sec: float) -> str:
@@ -904,11 +1063,20 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--id", required=True)
     ap.add_argument("--stills", action="store_true")
+    ap.add_argument("--check-images", action="store_true")
+    ap.add_argument("--excerpt", type=float, default=None, help="stop after about this many seconds")
+    ap.add_argument("--pass-list", type=Path, default=None)
+    ap.add_argument("--dest", type=Path, default=None)
     args = ap.parse_args()
+    if args.check_images:
+        import image_gate
+        image_gate.require(args.id, args.pass_list)
+        print(f"image gate pass {args.id}")
+        return
     if args.stills:
         write_stills(args.id)
         return
-    render(args.id)
+    render(args.id, excerpt_seconds=args.excerpt, pass_list=args.pass_list, dest=args.dest)
 
 
 if __name__ == "__main__":

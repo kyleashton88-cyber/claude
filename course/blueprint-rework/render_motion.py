@@ -158,11 +158,18 @@ def render(sid: str, proof: bool, out_dir: Path | None = None, prepare_shots=Non
 
 
 def main() -> None:
+    """The Blueprint master path is studio.py, not this older mixer."""
     ap = argparse.ArgumentParser()
     ap.add_argument("--id", required=True)
     ap.add_argument("--proof", action="store_true")
+    ap.add_argument("--pass-list", default=None)
     args = ap.parse_args()
-    render(args.id, args.proof)
+    studio = _load("blueprint_studio_entry", ROOT / "course/blueprint-rebuild/studio.py")
+    studio.render(
+        args.id,
+        excerpt_seconds=32 if args.proof else None,
+        pass_list=Path(args.pass_list) if args.pass_list else None,
+    )
 
 
 if __name__ == "__main__":
