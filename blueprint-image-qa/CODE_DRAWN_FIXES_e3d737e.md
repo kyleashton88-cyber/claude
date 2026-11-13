@@ -1,5 +1,7 @@
 # Code-drawn stills @ e3d737e: remaining fixes
 
+> **Superseded** by `CODE_DRAWN_FIXES_0eb1dc6.md` (rescore at 0eb1dc6).
+
 Standard: skills/image-quality-standard (f688829). A frame passes when every category scores at least 4 and there is no hard fail.
 **17 of 25 code-drawn frames pass.** The 13 earlier passes are byte-identical (blob at e3d737e = scored blob); 4 of the 12 redrawn frames now pass: bp-02 the-three-words and thumbnail, bp-03 buys-and-sells and title-card.
 Figures re-verified against course/data/public-prices/btc-usd-windows.json @e3d737e; none is wrong. Coordinates are at 1920x1080; thumbnails are 1280x720.
