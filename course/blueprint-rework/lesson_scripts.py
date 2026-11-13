@@ -94,6 +94,8 @@ def walk(chart: str, chapter: str, every: int, band: tuple[float, float] | None,
             levels=LEVELS if chart in {SUMMER, RALLY, LATER} else [],
             focus_price=nearest,
             focus_label=f"{nearest:,}",
+            pin_date=row["date"],
+            pin_close=close,
         ))
         prev = reveal
     return shots
@@ -105,11 +107,12 @@ def legal(chapter: str = "Disclaimer") -> dict:
         chapter=chapter,
         vo=(
             "Education only, not financial advice. Crypto carries a risk of total loss. "
-            "This is general information. It does not consider your objectives or your needs. "
-            "The prices are public daily closes, marked Example. They do not indicate future results. "
-            "We do not sell or run a trading bot. No order is sent from this lesson."
+            "This is general information. It doesn't consider your objectives, financial situation or needs. "
+            "The prices are public historical daily closes, marked Example. "
+            "Past performance is not a reliable indicator of future results. "
+            "No order is sent from this lesson."
         ),
-        caption="Education only. The chart is a public example.",
+        caption="Education only. Not financial advice. Chart: historical BTC prices, EXAMPLE.",
         chart=SUMMER,
     )
 
@@ -173,6 +176,7 @@ def bp01() -> list[dict]:
             "It has nothing to do once the path leaves and stays gone."
         ),
         caption="90 days between 24,930 and 30,331.",
+        levels=[LOW, HIGH],
     ))
     s += stack("Objectives", [
         "Name the range, the levels, and the stop on this 2023 window.",
@@ -202,6 +206,7 @@ def bp01() -> list[dict]:
             "A tidy 25000 to 30000 box would have been left behind on those days."
         ),
         caption="Use the real low and the real high.",
+        levels=[LOW, HIGH],
     ))
     s.append(_shot(
         chapter="The levels",
@@ -287,6 +292,7 @@ def bp02() -> list[dict]:
     s.append(legal())
     s.append(_shot(
         chapter="Seven lines",
+        board="seven-lines",
         reveal=1,
         vo=(
             "The seven lines are: notebook, the three words range levels and stop, the pair name, "
@@ -298,6 +304,7 @@ def bp02() -> list[dict]:
     ))
     s.append(_shot(
         chapter="The three words",
+        board="three-words",
         reveal=1,
         vo=(
             "Carry the three words forward. Range: 24930 to 30331. "
@@ -309,7 +316,8 @@ def bp02() -> list[dict]:
     ))
     s.append(_shot(
         chapter="No secrets",
-        reveal=0.4,
+        board="no-secrets",
+        reveal=1,
         vo=(
             "You never type a seed phrase, a private key, or an A P I secret onto this page. "
             "The chart has no balance on it. A public close is not your account. "
@@ -347,6 +355,7 @@ def bp03() -> list[dict]:
     s = [ident("03", "What is a grid bot")]
     s.append(_shot(
         chapter="Hook", reveal=1,
+        levels=[LOW, HIGH],
         vo=(
             "A grid bot, in this lesson, is not a guess about next month. "
             "It is a set of limit orders waiting on rungs inside a band you already measured. "
@@ -371,7 +380,7 @@ def bp03() -> list[dict]:
         caption="27630 was crossed 10 times. That is not a receipt.",
     ))
     s.append(_shot(
-        chapter="Buys and sells", reveal=1, focus_price=27630, focus_label="Middle",
+        chapter="Buys and sells", board="buys-sells", reveal=1, focus_price=27630, focus_label="Middle",
         vo=(
             "One teaching picture places buy orders below the middle and sell orders above it. "
             "Below 27630: 26730, 25830, 24930. Above it: 28531, 29431, 30331. "

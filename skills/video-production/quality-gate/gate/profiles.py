@@ -33,7 +33,7 @@ PROFILES: dict[str, Profile] = {
     "blueprint": Profile(
         "blueprint",
         "Blueprint lesson",
-        min_seconds=4 * 60,
+        min_seconds=6 * 60,
         max_seconds=10 * 60,
         width=1920,
         height=1080,

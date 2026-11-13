@@ -89,15 +89,10 @@ def paint_endcard(title: str, next_title: str, dest: Path) -> dict:
         draw.text((96, y), line, fill=TEXT, font=headline)
         y += 78
     draw.text((96, y + 24), title, fill=CYAN, font=label_font)
+    # The right third stays clear for a YouTube end screen. Nothing is drawn there:
+    # an outlined box labelled "End screen" read as an empty placeholder.
     slot = {"x": 1180, "y": 220, "w": 620, "h": 620}
-    draw.rounded_rectangle(
-        (slot["x"], slot["y"], slot["x"] + slot["w"], slot["y"] + slot["h"]),
-        radius=24,
-        outline=CYAN,
-        width=2,
-    )
-    draw.text((slot["x"] + 36, slot["y"] + 36), "End screen", fill=CYAN, font=label_font)
-    draw.text((96, 980), "Education, not financial advice.", fill=TEXT, font=small)
+    draw.text((96, 980), "Educational content only. Not financial advice.", fill=TEXT, font=small)
     dest.parent.mkdir(parents=True, exist_ok=True)
     image.save(dest)
     return {

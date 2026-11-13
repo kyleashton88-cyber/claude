@@ -24,10 +24,13 @@ from gate.textscan import find_brands, has_disclaimer, tesseract_path  # noqa: E
 
 class ProfileTests(unittest.TestCase):
     def test_approved_bp01_length_fits_blueprint(self):
-        """BP-01 is 6:15. The blueprint window is 4 to 10 minutes."""
+        """BP-01 is 6:15. The blueprint window is 6 to 10 minutes."""
         six_fifteen = 6 * 60 + 15
         self.assertTrue(length_ok(six_fifteen, PROFILES["blueprint"]))
-        self.assertEqual(PROFILES["blueprint"].min_seconds, 4 * 60)
+        self.assertEqual(PROFILES["blueprint"].min_seconds, 6 * 60)
+        self.assertEqual(PROFILES["blueprint"].max_seconds, 10 * 60)
+        self.assertFalse(length_ok(5 * 60 + 59, PROFILES["blueprint"]))
+        self.assertFalse(length_ok(10 * 60 + 1, PROFILES["blueprint"]))
         self.assertLess(six_fifteen, 15 * 60)
 
     def test_short_is_under_one_minute(self):

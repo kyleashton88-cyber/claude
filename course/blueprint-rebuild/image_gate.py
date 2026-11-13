@@ -12,15 +12,19 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import json
+import subprocess
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_LIST = ROOT / "blueprint-image-qa" / "BP01-03_PASS_LIST.json"
 
+COVER = "course/images/style-ref/01M6MSHVNHX3WQH81XS8KQK1HT.png"
+MASCOT = "course/images/mascot/blueprint-mascot.png"
+OLD_MASCOT = "course/images/fallback/el-06-circuit-breakers/28.png"
 BRAND = [
-    ("course/images/style-ref/01M6MSHVNHX3WQH81XS8KQK1HT.png", "title-art"),
-    ("course/images/fallback/el-06-circuit-breakers/28.png", "mascot"),
+    (COVER, "title-art"),
+    (MASCOT, "mascot"),
 ]
 ANALOGY = {
     "ladder": "course/images/blueprint-analogies/analogy-ladder.png",
@@ -105,6 +109,35 @@ def _norm(path: str) -> str:
     return path.replace("\\", "/").lstrip("./")
 
 
+def git_blob(rel: str) -> str | None:
+    """Blob id of the file on disk. A different id is a different image."""
+    path = ROOT / rel
+    if not path.is_file():
+        return None
+    proc = subprocess.run(
+        ["git", "hash-object", "--", str(path)],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
+    if proc.returncode != 0:
+        return None
+    return proc.stdout.strip().lower()
+
+
+def blob_problem(rel: str, row: dict) -> str | None:
+    """A path match with a different scored_blob is a fail."""
+    expected = str(row.get("scored_blob") or "").strip().lower()
+    if not expected:
+        return None
+    actual = git_blob(rel)
+    if actual is None:
+        return f"scored_blob set but file missing: {rel}"
+    if actual != expected and not actual.startswith(expected):
+        return f"blob mismatch: {rel} is {actual} not scored_blob {expected}"
+    return None
+
+
 def problems_for(sid: str, pass_list: Path) -> list[str]:
     if not pass_list.is_file():
         return [f"pass list not found: {pass_list}"]
@@ -117,11 +150,23 @@ def problems_for(sid: str, pass_list: Path) -> list[str]:
             indexed[(path, lesson)] = row
     problems = []
     for item in images_for_lesson(sid):
-        row = indexed.get((item["path"], sid))
+        path = item["path"]
+        if path == OLD_MASCOT or path.endswith("el-06-circuit-breakers/28.png"):
+            problems.append(f"old mascot is not allowed: {path}")
+            continue
+        if path == COVER and item["kind"] != "title-art":
+            problems.append(f"title art may only be the wordmark crop: {path}")
+            continue
+        row = indexed.get((path, sid))
         if row is None:
-            problems.append(f"missing from pass list: {item['path']} ({item['kind']})")
-        elif not _passed(row):
-            problems.append(f"marked fail: {item['path']} ({item['kind']})")
+            problems.append(f"missing from pass list: {path} ({item['kind']})")
+            continue
+        if not _passed(row):
+            status = str(row.get("status") or "fail")
+            problems.append(f"not a pass ({status}): {path} ({item['kind']})")
+        found = blob_problem(path, row)
+        if found:
+            problems.append(found)
     return problems
 
 

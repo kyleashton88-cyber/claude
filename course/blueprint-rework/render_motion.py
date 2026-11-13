@@ -62,6 +62,15 @@ def fit_wav(wav: np.ndarray, frames: int) -> np.ndarray:
 
 
 def render(sid: str, proof: bool, out_dir: Path | None = None, prepare_shots=None) -> Path:
+    raise SystemExit(
+        "The old Blueprint mixer cannot run. "
+        "course/blueprint-rebuild/studio.py is the only picture path."
+    )
+    """Unreachable encoder. Masters go through studio.py, which has no length floor."""
+    raise SystemExit(
+        "course/blueprint-rework/render_motion.py does not encode. "
+        "Use course/blueprint-rebuild/studio.py. There is no length floor on that path."
+    )
     if sid.startswith("el-"):
         raise SystemExit(f"refusing Elite id {sid}")
     shots = lesson_scripts.build(sid)
