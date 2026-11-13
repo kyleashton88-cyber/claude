@@ -56,7 +56,7 @@ The pattern under every item is the same. Someone creates urgency, imitates a br
 - **Dusting bait.** A tiny unknown token appears. Ignoring it is safer than interacting with its contract in the hope of selling it.
 - **Fake support.** A reply asks you to install remote-access software or to "verify" a seed. Hang up. Real support for this library will not ask for that.
 
-We never ask for seed phrases, passwords or withdrawal-enabled keys. A message that does is not from Market Pros Pty Ltd and not from Stewart.
+We never ask for seed phrases, passwords or withdrawal-enabled keys. A message that does is not from Market Pros Proprietary Limited and not from Stewart.
 
 ## Where to report
 

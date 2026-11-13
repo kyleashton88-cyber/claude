@@ -27,7 +27,7 @@ Atlas is one library for crypto and trading ideas: a dictionary and a set of les
 No. The library is general information and does not take your circumstances into account. If you need advice about you, ask someone who is allowed to give it. The [footer line](footer-line.md) says the same thing in one sentence.
 
 **Who publishes the site?**
-The draft legal pages name Market Pros Pty Ltd, and they say Stewart still needs to confirm that entity. Contact details are still placeholders. Read the [terms](terms.md) before you treat any address as final.
+The draft legal pages name Market Pros Proprietary Limited, ABN 19 679 270 387, and contact@stewartcrowncrypto.com. Stewart has confirmed those three. The effective date is still [EFFECTIVE_DATE], and the checklist link is still [CHECKLIST LINK]. Read the [terms](terms.md) before you treat the pages as final.
 
 ## Grids
 
@@ -159,7 +159,7 @@ AUSTRAC registers businesses that provide certain virtual-asset services in Aust
 The word list that recreates a wallet's private keys. Anyone who has the words has the wallet. There is no ordinary reset. Read [seed phrases and keys](security.md#seed-phrases-and-keys).
 
 **Will Atlas ever ask for my seed phrase?**
-No. We never ask for seed phrases, passwords or withdrawal-enabled keys. A message that asks for any of those is not from Atlas, not from Market Pros Pty Ltd, and not from Stewart. The [security page](security.md) repeats the rule because it matters.
+No. We never ask for seed phrases, passwords or withdrawal-enabled keys. A message that asks for any of those is not from Atlas, not from Market Pros Proprietary Limited, and not from Stewart. The [security page](security.md) repeats the rule because it matters.
 
 **What is two-factor authentication?**
 A second check beyond the password, such as an app code or a hardware key. Text-message codes are weaker because a SIM swap can move the number. It does not help if you approve a prompt you did not start.
@@ -208,7 +208,7 @@ A public layer-1 chain whose native coin is SOL, built around short block times 
 ## Process
 
 **What belongs in a journal?**
-The setup, the size, the stop, the result in R, and whether you followed the plan. Without that record, expectancy is a feeling. See [journal](glossary.md#journal).
+The setup, the size, the stop, the result in R, and whether you followed the plan. Without that record, expectancy is a feeling. See the [journal lab](journal-lab.md) and the glossary entry [journal](glossary.md#journal).
 
 **What is overfitting?**
 A rule tuned until it memorises one sample, including the accidents. A forward test on data you did not use for tuning is the basic check. See [overfitting](glossary.md#overfitting).

@@ -24,7 +24,7 @@ PASS: no problems
 
 ## Batch 1b — support email placeholder — 2026-11-10
 
-`[CONTACT_EMAIL]` is now `[CONTACT_EMAIL: contact@stewartcrowncrypto.com, pending Stewart's confirmation]` in terms, privacy, disclaimer, and the footer line. Stewart has not confirmed the address.
+`[CONTACT_EMAIL]` was written as `[CONTACT_EMAIL: contact@stewartcrowncrypto.com, pending Stewart's confirmation]` in terms, privacy, disclaimer, and the footer line. At that commit Stewart had not confirmed the address.
 
 ```
 disclaimer.md: 511 words
@@ -106,6 +106,30 @@ psychology.md: 546 words
 sui-primer.md: 157 words
 tax-regulation-au.md: 601 words
 xrp-primer.md: 164 words
+glossary.json rows: 435
+--- problems ---
+PASS: no problems
+```
+
+## Staged replacement — 2026-11-13
+
+Replaced the short batch 5 pages with the Content Marketing / Legal Ops staged copies and the plan slugs. Deleted `futures.md`, `journal.md`, `macro-etf-flows.md`, and `tax-regulation-au.md`. Legal drafts are the reviewed versions. Stewart's confirmed facts are in the legal body: Market Pros Proprietary Limited, ABN 19 679 270 387, contact@stewartcrowncrypto.com. Draft banners, `[EFFECTIVE_DATE]`, and `[CHECKLIST LINK]` stay. `legal-CHANGELOG.md` is the review log and is not scanned as a library page. Privacy names Binance only as the public market-data connection. Glossary `see_also` did not point at the deleted slugs. The journal answer in `find-by-question.md` now links to `journal-lab.md`.
+
+```
+automation.md: 1679 words
+chains.md: 1757 words
+checklist-form-notice.md: 551 words
+disclaimer.md: 631 words
+footer-line.md: 119 words
+futures-leverage.md: 1774 words
+journal-lab.md: 1535 words
+macro-lab.md: 1566 words
+market-strategies.md: 1698 words
+privacy.md: 1160 words
+psychology.md: 1434 words
+tax-regulation.md: 1906 words
+terms.md: 1125 words
+find-by-question.md: 2775 words
 glossary.json rows: 435
 --- problems ---
 PASS: no problems

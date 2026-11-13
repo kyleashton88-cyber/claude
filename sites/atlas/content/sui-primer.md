@@ -4,15 +4,15 @@ slug: sui-primer
 level: beginner
 category: crypto
 related:
-  - crypto-fundamentals
   - chains
-  - glossary
+  - crypto-fundamentals
+  - security
 last_reviewed: 2026-11-10
 status: draft
 ---
 
 # Sui primer
 
-Sui is a public layer-1 blockchain that uses proof of stake. Its native coin is SUI, which pays fees and is used in staking. The data model is object-based: assets are objects with owners and versions, rather than only balances on accounts. This page is general information. It is not a view on the price and not a recommendation to hold SUI.
+Sui is a public layer-1 blockchain. Its native coin is SUI, which pays gas and is staked to validators under a delegated proof-of-stake design. The published maximum supply is ten billion SUI. Contracts are written in Move, a language built around assets that cannot be copied or dropped by accident. This page is general information. It is not a view on the price and not a recommendation to hold SUI.
 
-That object model is why parallel execution is part of the design story. Two transactions that touch different objects need not wait for each other, under the protocol's rules. The details of finality, fees, and validator duties are chain-specific and belong in Sui's own documentation if you need to go past a primer. A transfer is still a signature. Seed-phrase rules on the [security page](security.md) apply on every chain. The directory line is on [chains](chains.md), and the glossary entries are [Sui](glossary.md#sui) and [SUI](glossary.md#sui-token).
+Sui stores state as objects, each with an owner and a version. Transactions that touch unrelated objects can run in parallel, which is how the design aims at high throughput. The consensus engine is a DAG-based protocol, documented by the project as Mysticeti. A young chain carries young-chain questions: validator concentration, unlock schedules, and contract maturity. Keys follow the rules on the [security page](security.md), the directory card is on [chains](chains.md), and the glossary entry is [Sui](glossary.md#sui).

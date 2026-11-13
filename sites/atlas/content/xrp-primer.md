@@ -4,15 +4,15 @@ slug: xrp-primer
 level: beginner
 category: crypto
 related:
-  - crypto-fundamentals
   - chains
-  - glossary
+  - crypto-fundamentals
+  - security
 last_reviewed: 2026-11-10
 status: draft
 ---
 
 # XRP primer
 
-XRP is the native asset of the XRP Ledger, a public ledger designed for payments. Fees are paid in XRP, and the protocol destroys a small amount of XRP as the fee rather than paying it to a miner. Consensus is among validators, not proof of work. This page is general information. It is not a view on the price, not a comment on any court case, and not a recommendation to hold XRP.
+The XRP Ledger is a public blockchain that has run since 2012. Its native asset is XRP. All 100 billion XRP were created when the ledger launched. There is no mining, and new units are not issued. Each transaction burns a small amount of XRP as its fee, so the supply slowly falls. This page is general information. It is not a view on the price and not a recommendation to hold XRP.
 
-The ledger can carry its own order book at the protocol layer. That is a mechanism, not a venue Atlas is pointing you toward, and it is not a firm this library names or ranks. Public regulatory disputes have surrounded the asset. This primer does not summarise them. Use primary documents if you need that history. Definitions are at [XRP](glossary.md#xrp) and [XRP Ledger](glossary.md#xrp-ledger). The [chain directory](chains.md) holds the neighbouring networks, and key handling is on the [security page](security.md).
+Validators agree on each new ledger version through the XRP Ledger consensus protocol. Every server lists the validators it trusts, called a Unique Node List, and a new version usually closes in a few seconds. Ripple, the company, is a separate business from the open ledger, and it holds a large XRP balance. The ledger can also hold issued tokens and orders natively. Keys follow the [security page](security.md), the directory card is on [chains](chains.md), and the glossary entry is [XRP Ledger](glossary.md#xrp-ledger).
