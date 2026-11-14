@@ -8,12 +8,12 @@
  "not_in_scope": "course/images/_held/*.png (10 files: bp-06 014/017, bp-07 012/017/020, bp-08 003/006/007/009/011) are not referenced by any lesson script and were not scored. Shared title-art/mascot assets are already on BP01-03_PASS_LIST.json.",
  "counts": {
   "total": 161,
-  "fail": 156,
+  "fail": 144,
   "by_lesson": {
    "bp-04-market-regimes": {
     "total": 20,
-    "fail": 15,
-    "pass": 5
+    "fail": 3,
+    "pass": 17
    },
    "bp-05-spacing-and-range": {
     "total": 19,
@@ -51,7 +51,7 @@
     "pass": 0
    }
   },
-  "pass": 5
+  "pass": 17
  },
  "images": [
   {
@@ -126,67 +126,93 @@
    "beat": 2,
    "chapter": "Disclaimer",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "0b9b3488b0b6c14d0e0e5b55fe34e45a91541366",
     "cursor/blueprint-beginner-images": "0b9b3488b0b6c14d0e0e5b55fe34e45a91541366"
    },
    "beat_concept": "Education only. Not financial advice.",
    "scores": {
-    "beginner_clarity": 3,
-    "composition_hierarchy": 3,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 2,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 5,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "illegible label: 'NOT ADVICE' is tiny letter-spaced grey type"
-   ],
-   "status": "fail",
-   "action": "needs_remake",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-04-market-regimes__002.txt",
-   "notes": "Committed still: Disclaimer reads 'STUDY ONLY / NOT ADVICE', not 'Education only. Not financial advice.'; generic document + magnifier icon. | web1 remake: FAIL. Made from the superseded prompt: headline EDUCATION ONLY with tags \"Learn the idea\" / \"Not financial advice\" and a crossed-out BUY button. It does not show the exact \"Education only. Not financial advice.\" sentence, and the BUY button is off-brief. Needs a re-run on the current prompt regardless (prompt changed at 6df2536).",
+   "notes": "Disclaimer card on the current prompt: exactly \"Education only.\" / \"Not financial advice.\" in two large white lines, notebook with pencil and check on the left, no buy button or extra icons. Headline EDUCATION ONLY. 0 arrows. Matches 6848d09 beat 2.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 236,
-    "right": 478,
-    "top": 110,
-    "bottom": 267
+    "left": 75,
+    "right": 78,
+    "top": 74,
+    "bottom": 236
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/002.png",
-   "scored_blob": "0b9b3488b0b6c14d0e0e5b55fe34e45a91541366",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/002.png",
+   "scored_blob": "e65267cfafac020e8806093f682b03d0d36bbb6d",
    "committed": true,
-   "pass": false,
+   "pass": true,
    "remake_review": {
-    "file": "gen/bp-04-market-regimes/002/web1.png",
-    "blob": "8b1c17f470852cd1025debc3211124f49467e98f",
+    "file": "gen/bp-04-market-regimes/002/web2.png",
+    "blob": "e65267cfafac020e8806093f682b03d0d36bbb6d",
     "size": "1536x1024",
     "margins_px": {
-     "left": 83,
-     "right": 77,
-     "top": 128,
-     "bottom": 210
+     "left": 75,
+     "right": 78,
+     "top": 74,
+     "bottom": 236
     },
-    "scored_against": "6848d09 narration + prompt at this commit (002: superseded prompt)",
+    "scored_against": "6848d09 narration + prompt at this commit",
     "scores": {
-     "beginner_clarity": 2,
-     "composition_hierarchy": 4,
-     "craft_polish": 4,
-     "brand_fidelity": 4,
-     "text_legibility": 4,
+     "beginner_clarity": 5,
+     "composition_hierarchy": 5,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
      "character_consistency": null,
-     "label_accuracy": 2
+     "label_accuracy": 5
     },
-    "hard_fails": [
-     "wrong disclaimer text"
-    ],
-    "notes": "Made from the superseded prompt: headline EDUCATION ONLY with tags \"Learn the idea\" / \"Not financial advice\" and a crossed-out BUY button. It does not show the exact \"Education only. Not financial advice.\" sentence, and the BUY button is off-brief. Needs a re-run on the current prompt regardless (prompt changed at 6df2536).",
-    "pass": false
-   }
+    "hard_fails": [],
+    "notes": "Disclaimer card on the current prompt: exactly \"Education only.\" / \"Not financial advice.\" in two large white lines, notebook with pencil and check on the left, no buy button or extra icons. Headline EDUCATION ONLY. 0 arrows. Matches 6848d09 beat 2.",
+    "pass": true
+   },
+   "previous_remake_reviews": [
+    {
+     "file": "gen/bp-04-market-regimes/002/web1.png",
+     "blob": "8b1c17f470852cd1025debc3211124f49467e98f",
+     "size": "1536x1024",
+     "margins_px": {
+      "left": 83,
+      "right": 77,
+      "top": 128,
+      "bottom": 210
+     },
+     "scored_against": "6848d09 narration + prompt at this commit (002: superseded prompt)",
+     "scores": {
+      "beginner_clarity": 2,
+      "composition_hierarchy": 4,
+      "craft_polish": 4,
+      "brand_fidelity": 4,
+      "text_legibility": 4,
+      "character_consistency": null,
+      "label_accuracy": 2
+     },
+     "hard_fails": [
+      "wrong disclaimer text"
+     ],
+     "notes": "Made from the superseded prompt: headline EDUCATION ONLY with tags \"Learn the idea\" / \"Not financial advice\" and a crossed-out BUY button. It does not show the exact \"Education only. Not financial advice.\" sentence, and the BUY button is off-brief. Needs a re-run on the current prompt regardless (prompt changed at 6df2536).",
+     "pass": false
+    }
+   ],
+   "previous_fbb3f9c_blob": "0b9b3488b0b6c14d0e0e5b55fe34e45a91541366",
+   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/002/web2.png (prompt specs/remake/bp-04-market-regimes__002.txt), saved via out/course/images/bp-04-market-regimes/002.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-04-market-regimes/003.png",
@@ -194,65 +220,93 @@
    "beat": 3,
    "chapter": "Title card",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "93328d7975cb5f1357bf208989e7513e30584ea6",
     "cursor/blueprint-beginner-images": "93328d7975cb5f1357bf208989e7513e30584ea6"
    },
    "beat_concept": "Market regimes",
    "scores": {
-    "beginner_clarity": 1,
-    "composition_hierarchy": 2,
-    "craft_polish": 3,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-04-market-regimes__003.txt",
-   "notes": "Committed still: Title card is a glowing rectangle of blank bars with a 'LESSON' chip: no subject (rubric: a glowing rectangle is not a composition); no range/trend/break shapes. | web1 remake: FAIL. Title card reads MARKET REGIMES with Range/Trend/Break cards, but the trend line ends in a garbled cross/tick stub (AI artifact, visible at video size), and the EXAMPLE stamp floats in empty background instead of sitting inside a card. Lower third of the frame is empty.",
+   "notes": "Title card MARKET REGIMES with three equal cards: zig-zag between two lines (Range), clean staircase ending inside its card with no stray stub (Trend), bounce then drop through the bottom line staying below (Break). Tags under each card, no arrows; EXAMPLE stamp inside the Break card. v1 artifact fixed.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 199,
-    "right": 301,
-    "top": 110,
-    "bottom": 280
+    "left": 70,
+    "right": 69,
+    "top": 111,
+    "bottom": 238
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/003.png",
-   "scored_blob": "93328d7975cb5f1357bf208989e7513e30584ea6",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/003.png",
+   "scored_blob": "7dcc16074b3f2f3992baa174676eea3a0a973b83",
    "committed": true,
-   "pass": false,
+   "pass": true,
    "remake_review": {
-    "file": "gen/bp-04-market-regimes/003/web1.png",
-    "blob": "ac1b743352b4e37fd4fc27e10021b0bc004e9ed1",
+    "file": "gen/bp-04-market-regimes/003/web2.png",
+    "blob": "7dcc16074b3f2f3992baa174676eea3a0a973b83",
     "size": "1536x1024",
     "margins_px": {
-     "left": 63,
-     "right": 59,
-     "top": 134,
-     "bottom": 135
+     "left": 70,
+     "right": 69,
+     "top": 111,
+     "bottom": 238
     },
-    "scored_against": "6848d09 narration + prompt at this commit (002: superseded prompt)",
+    "scored_against": "6848d09 narration + prompt at this commit",
     "scores": {
-     "beginner_clarity": 4,
+     "beginner_clarity": 5,
      "composition_hierarchy": 4,
-     "craft_polish": 3,
+     "craft_polish": 5,
      "brand_fidelity": 5,
      "text_legibility": 5,
      "character_consistency": null,
-     "label_accuracy": 4
+     "label_accuracy": 5
     },
-    "hard_fails": [
-     "AI artifact"
-    ],
-    "notes": "Title card reads MARKET REGIMES with Range/Trend/Break cards, but the trend line ends in a garbled cross/tick stub (AI artifact, visible at video size), and the EXAMPLE stamp floats in empty background instead of sitting inside a card. Lower third of the frame is empty.",
-    "pass": false
-   }
+    "hard_fails": [],
+    "notes": "Title card MARKET REGIMES with three equal cards: zig-zag between two lines (Range), clean staircase ending inside its card with no stray stub (Trend), bounce then drop through the bottom line staying below (Break). Tags under each card, no arrows; EXAMPLE stamp inside the Break card. v1 artifact fixed.",
+    "pass": true
+   },
+   "previous_remake_reviews": [
+    {
+     "file": "gen/bp-04-market-regimes/003/web1.png",
+     "blob": "ac1b743352b4e37fd4fc27e10021b0bc004e9ed1",
+     "size": "1536x1024",
+     "margins_px": {
+      "left": 63,
+      "right": 59,
+      "top": 134,
+      "bottom": 135
+     },
+     "scored_against": "6848d09 narration + prompt at this commit (002: superseded prompt)",
+     "scores": {
+      "beginner_clarity": 4,
+      "composition_hierarchy": 4,
+      "craft_polish": 3,
+      "brand_fidelity": 5,
+      "text_legibility": 5,
+      "character_consistency": null,
+      "label_accuracy": 4
+     },
+     "hard_fails": [
+      "AI artifact"
+     ],
+     "notes": "Title card reads MARKET REGIMES with Range/Trend/Break cards, but the trend line ends in a garbled cross/tick stub (AI artifact, visible at video size), and the EXAMPLE stamp floats in empty background instead of sitting inside a card. Lower third of the frame is empty.",
+     "pass": false
+    }
+   ],
+   "previous_fbb3f9c_blob": "93328d7975cb5f1357bf208989e7513e30584ea6",
+   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/003/web2.png (prompt specs/remake/bp-04-market-regimes__003.txt), saved via out/course/images/bp-04-market-regimes/003.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-04-market-regimes/004.png",
@@ -326,65 +380,93 @@
    "beat": 5,
    "chapter": "Sort first",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "9e6e4dca47459884a81d0a6012e7925664dc80e2",
     "cursor/blueprint-beginner-images": "9e6e4dca47459884a81d0a6012e7925664dc80e2"
    },
    "beat_concept": "You sort the path before you choose a spacing.",
    "scores": {
-    "beginner_clarity": 2,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
-    "brand_fidelity": 4,
-    "text_legibility": 3,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 5,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-04-market-regimes__005.txt",
-   "notes": "Committed still: Abstract 'SORT' glass slab and faint 'SPACING' chip on a wavy line: does not show sorting a price path; 'SPACING' chip is low-contrast. | web1 remake: FAIL. Step 2 (\"2 Then set your steps\") shows the pencil drawing a price path that weaves and then breaks up out of the ladder, so it reads as \"then price breaks out\", not \"then set your steps\"; the bottom rung is slanted, not parallel. EXAMPLE stamp is tilted. Step 1 (magnifier over a weave) is fine.",
+   "notes": "Step 1: magnifier over a zig-zag between two lines; cyan arrow to step 2: four parallel even cyan lines with a blue pencil drawing the fifth. No price path or breakout in step 2. Tags \"1 Look at the shape\" / \"2 Then set your steps\" spelled right; straight EXAMPLE stamp inside the step 1 card. v1 fault fixed.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 63,
-    "right": 803,
-    "top": 110,
-    "bottom": 223
+    "left": 69,
+    "right": 72,
+    "top": 104,
+    "bottom": 166
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/005.png",
-   "scored_blob": "9e6e4dca47459884a81d0a6012e7925664dc80e2",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/005.png",
+   "scored_blob": "a54454ea867eadcb91eb9942bb2d1d77052ce479",
    "committed": true,
-   "pass": false,
+   "pass": true,
    "remake_review": {
-    "file": "gen/bp-04-market-regimes/005/web1.png",
-    "blob": "8e37c0a3e9072375b3271a9d76d338a18d8949e3",
+    "file": "gen/bp-04-market-regimes/005/web2.png",
+    "blob": "a54454ea867eadcb91eb9942bb2d1d77052ce479",
     "size": "1536x1024",
     "margins_px": {
-     "left": 71,
-     "right": 82,
-     "top": 93,
-     "bottom": 186
+     "left": 69,
+     "right": 72,
+     "top": 104,
+     "bottom": 166
     },
-    "scored_against": "6848d09 narration + prompt at this commit (002: superseded prompt)",
+    "scored_against": "6848d09 narration + prompt at this commit",
     "scores": {
-     "beginner_clarity": 3,
-     "composition_hierarchy": 4,
-     "craft_polish": 3,
+     "beginner_clarity": 5,
+     "composition_hierarchy": 5,
+     "craft_polish": 5,
      "brand_fidelity": 5,
      "text_legibility": 5,
      "character_consistency": null,
-     "label_accuracy": 3
+     "label_accuracy": 5
     },
-    "hard_fails": [
-     "teaches the wrong picture"
-    ],
-    "notes": "Step 2 (\"2 Then set your steps\") shows the pencil drawing a price path that weaves and then breaks up out of the ladder, so it reads as \"then price breaks out\", not \"then set your steps\"; the bottom rung is slanted, not parallel. EXAMPLE stamp is tilted. Step 1 (magnifier over a weave) is fine.",
-    "pass": false
-   }
+    "hard_fails": [],
+    "notes": "Step 1: magnifier over a zig-zag between two lines; cyan arrow to step 2: four parallel even cyan lines with a blue pencil drawing the fifth. No price path or breakout in step 2. Tags \"1 Look at the shape\" / \"2 Then set your steps\" spelled right; straight EXAMPLE stamp inside the step 1 card. v1 fault fixed.",
+    "pass": true
+   },
+   "previous_remake_reviews": [
+    {
+     "file": "gen/bp-04-market-regimes/005/web1.png",
+     "blob": "8e37c0a3e9072375b3271a9d76d338a18d8949e3",
+     "size": "1536x1024",
+     "margins_px": {
+      "left": 71,
+      "right": 82,
+      "top": 93,
+      "bottom": 186
+     },
+     "scored_against": "6848d09 narration + prompt at this commit (002: superseded prompt)",
+     "scores": {
+      "beginner_clarity": 3,
+      "composition_hierarchy": 4,
+      "craft_polish": 3,
+      "brand_fidelity": 5,
+      "text_legibility": 5,
+      "character_consistency": null,
+      "label_accuracy": 3
+     },
+     "hard_fails": [
+      "teaches the wrong picture"
+     ],
+     "notes": "Step 2 (\"2 Then set your steps\") shows the pencil drawing a price path that weaves and then breaks up out of the ladder, so it reads as \"then price breaks out\", not \"then set your steps\"; the bottom rung is slanted, not parallel. EXAMPLE stamp is tilted. Step 1 (magnifier over a weave) is fine.",
+     "pass": false
+    }
+   ],
+   "previous_fbb3f9c_blob": "9e6e4dca47459884a81d0a6012e7925664dc80e2",
+   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/005/web2.png (prompt specs/remake/bp-04-market-regimes__005.txt), saved via out/course/images/bp-04-market-regimes/005.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-04-market-regimes/006.png",
@@ -411,7 +493,7 @@
    "status": "fail",
    "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-04-market-regimes__006.txt",
-   "notes": "Committed still: Rungs drawn as pill bars, one bump circled; floating 'RUNG' and 'EXAMPLE' tags with no arrows; does not show price crossing the same lines again and again; 'EXAMPLE' used as a side label, not a stamp. | web1 remake: FAIL. \"Each dot = an order filling\", but the zig-zag crosses the second ladder line repeatedly with no dot there, so the picture says those orders did not fill; the path also starts with a long diagonal from the bottom-left chart corner. Narration asks for a weave crossing the same three rungs; the image has five lines. Arrow targets are right (middle-line crossing; a dot).",
+   "notes": "Committed still: Rungs drawn as pill bars, one bump circled; floating 'RUNG' and 'EXAMPLE' tags with no arrows; does not show price crossing the same lines again and again; 'EXAMPLE' used as a side label, not a stamp. | web1 remake: FAIL. \"Each dot = an order filling\", but the zig-zag crosses the second ladder line repeatedly with no dot there, so the picture says those orders did not fill; the path also starts with a long diagonal from the bottom-left chart corner. Narration asks for a weave crossing the same three rungs; the image has five lines. Arrow targets are right (middle-line crossing; a dot). | web2 remake: FAIL. Three rungs and four peaks, both arrow tips on dotted crossings, EXAMPLE inside the card, spelling right. But after the fourth peak the line comes down, crosses the middle rung with no dot and fades out in a stub below it, so one crossing is undotted (the exact fault the v2 prompt banned) and the path has no clean end.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
@@ -426,31 +508,60 @@
    "committed": true,
    "pass": false,
    "remake_review": {
-    "file": "gen/bp-04-market-regimes/006/web1.png",
-    "blob": "26ce3aca88f7a179d7a1b921b8dc783b5f1e1736",
+    "file": "gen/bp-04-market-regimes/006/web2.png",
+    "blob": "af6a230546a4e65e60516453b1d61061d021d627",
     "size": "1536x1024",
     "margins_px": {
-     "left": 73,
-     "right": 111,
-     "top": 57,
-     "bottom": 126
+     "left": 74,
+     "right": 77,
+     "top": 78,
+     "bottom": 163
     },
-    "scored_against": "6848d09 narration + prompt at this commit (002: superseded prompt)",
+    "scored_against": "6848d09 narration + prompt at this commit",
     "scores": {
-     "beginner_clarity": 3,
+     "beginner_clarity": 4,
      "composition_hierarchy": 4,
-     "craft_polish": 4,
+     "craft_polish": 3,
      "brand_fidelity": 5,
      "text_legibility": 5,
      "character_consistency": null,
      "label_accuracy": 3
     },
     "hard_fails": [
-     "dots contradict the label"
+     "label/count mismatch: the last down-stroke crosses the middle rung with no dot, contradicting \"Each dot = an order filling\"",
+     "AI artifact: price line runs past its last dot and fades out in a stub below the middle rung"
     ],
-    "notes": "\"Each dot = an order filling\", but the zig-zag crosses the second ladder line repeatedly with no dot there, so the picture says those orders did not fill; the path also starts with a long diagonal from the bottom-left chart corner. Narration asks for a weave crossing the same three rungs; the image has five lines. Arrow targets are right (middle-line crossing; a dot).",
+    "notes": "Three rungs and four peaks, both arrow tips on dotted crossings, EXAMPLE inside the card, spelling right. But after the fourth peak the line comes down, crosses the middle rung with no dot and fades out in a stub below it, so one crossing is undotted (the exact fault the v2 prompt banned) and the path has no clean end.",
     "pass": false
-   }
+   },
+   "previous_remake_reviews": [
+    {
+     "file": "gen/bp-04-market-regimes/006/web1.png",
+     "blob": "26ce3aca88f7a179d7a1b921b8dc783b5f1e1736",
+     "size": "1536x1024",
+     "margins_px": {
+      "left": 73,
+      "right": 111,
+      "top": 57,
+      "bottom": 126
+     },
+     "scored_against": "6848d09 narration + prompt at this commit (002: superseded prompt)",
+     "scores": {
+      "beginner_clarity": 3,
+      "composition_hierarchy": 4,
+      "craft_polish": 4,
+      "brand_fidelity": 5,
+      "text_legibility": 5,
+      "character_consistency": null,
+      "label_accuracy": 3
+     },
+     "hard_fails": [
+      "dots contradict the label"
+     ],
+     "notes": "\"Each dot = an order filling\", but the zig-zag crosses the second ladder line repeatedly with no dot there, so the picture says those orders did not fill; the path also starts with a long diagonal from the bottom-left chart corner. Narration asks for a weave crossing the same three rungs; the image has five lines. Arrow targets are right (middle-line crossing; a dot).",
+     "pass": false
+    }
+   ]
   },
   {
    "path": "course/images/bp-04-market-regimes/007.png",
@@ -656,66 +767,94 @@
    "beat": 10,
    "chapter": "What you do with the label",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "100ad3151b6585af8056000afa1de82cc615cb63",
     "cursor/blueprint-beginner-images": "100ad3151b6585af8056000afa1de82cc615cb63"
    },
    "beat_concept": "The label decides whether the ladder is even the tool on the page.",
    "scores": {
-    "beginner_clarity": 2,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 4,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-04-market-regimes__010.txt",
-   "notes": "Committed still: Text-only map RANGE->LADDER, TREND->PILE, BREAK->STOP: 'PILE'/'STOP' unexplained jargon, no picture, no decision shown. | web1 remake: FAIL. Shows a two-way choice (Sideways: use a grid / Not sideways: leave it, ladder vs closed toolbox), but the 6848d09 beat says \"three arrows from the three shapes to Ladder, Pile, and Stop. Copy those three arrows.\" The viewer cannot copy three arrows from this image, and \"leave it\" replaces \"draw the pile\" / \"go to the stop sentence\". Right tag sits 40px from the frame edge (needs 45). This was a prompt mismatch (the beat-10 narration is the same at fbb3f9c, 6df2536 and 6848d09; I missed it in the earlier checks), so the prompt is rewritten.",
+   "notes": "Three chart cards (Range weave, Trend staircase, Break drop) with tags under each, three thick down arrows to Ladder, Pile (three plain glass discs) and Stop (amber line with a note card). EXAMPLE inside the Break card. Exactly three arrows; side margins 78/110px; tags well inside 100px. Matches 6848d09 beat 10 \"three arrows from the three shapes to Ladder, Pile, and Stop\". Small kink in the Range weave, not distracting.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 174,
-    "right": 399,
-    "top": 109,
-    "bottom": 321
+    "left": 78,
+    "right": 110,
+    "top": 68,
+    "bottom": 121
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/010.png",
-   "scored_blob": "100ad3151b6585af8056000afa1de82cc615cb63",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/010.png",
+   "scored_blob": "387e1016e1b7b81b49b93dc4eff7a613a4908312",
    "committed": true,
-   "pass": false,
+   "pass": true,
    "remake_review": {
-    "file": "gen/bp-04-market-regimes/010/web1.png",
-    "blob": "2f7de0448056bdeef32b9254c2708cac5966297f",
+    "file": "gen/bp-04-market-regimes/010/web2.png",
+    "blob": "387e1016e1b7b81b49b93dc4eff7a613a4908312",
     "size": "1536x1024",
     "margins_px": {
-     "left": 52,
-     "right": 40,
-     "top": 70,
-     "bottom": 94
+     "left": 78,
+     "right": 110,
+     "top": 68,
+     "bottom": 121
     },
-    "scored_against": "6848d09 narration + prompt at this commit (002: superseded prompt)",
+    "scored_against": "6848d09 narration + prompt at this commit",
     "scores": {
-     "beginner_clarity": 3,
+     "beginner_clarity": 5,
      "composition_hierarchy": 4,
      "craft_polish": 4,
      "brand_fidelity": 5,
      "text_legibility": 5,
      "character_consistency": null,
-     "label_accuracy": 3
+     "label_accuracy": 5
     },
-    "hard_fails": [
-     "margin under 45px",
-     "does not match narration"
-    ],
-    "notes": "Shows a two-way choice (Sideways: use a grid / Not sideways: leave it, ladder vs closed toolbox), but the 6848d09 beat says \"three arrows from the three shapes to Ladder, Pile, and Stop. Copy those three arrows.\" The viewer cannot copy three arrows from this image, and \"leave it\" replaces \"draw the pile\" / \"go to the stop sentence\". Right tag sits 40px from the frame edge (needs 45). This was a prompt mismatch (the beat-10 narration is the same at fbb3f9c, 6df2536 and 6848d09; I missed it in the earlier checks), so the prompt is rewritten.",
-    "pass": false
-   }
+    "hard_fails": [],
+    "notes": "Three chart cards (Range weave, Trend staircase, Break drop) with tags under each, three thick down arrows to Ladder, Pile (three plain glass discs) and Stop (amber line with a note card). EXAMPLE inside the Break card. Exactly three arrows; side margins 78/110px; tags well inside 100px. Matches 6848d09 beat 10 \"three arrows from the three shapes to Ladder, Pile, and Stop\". Small kink in the Range weave, not distracting.",
+    "pass": true
+   },
+   "previous_remake_reviews": [
+    {
+     "file": "gen/bp-04-market-regimes/010/web1.png",
+     "blob": "2f7de0448056bdeef32b9254c2708cac5966297f",
+     "size": "1536x1024",
+     "margins_px": {
+      "left": 52,
+      "right": 40,
+      "top": 70,
+      "bottom": 94
+     },
+     "scored_against": "6848d09 narration + prompt at this commit (002: superseded prompt)",
+     "scores": {
+      "beginner_clarity": 3,
+      "composition_hierarchy": 4,
+      "craft_polish": 4,
+      "brand_fidelity": 5,
+      "text_legibility": 5,
+      "character_consistency": null,
+      "label_accuracy": 3
+     },
+     "hard_fails": [
+      "margin under 45px",
+      "does not match narration"
+     ],
+     "notes": "Shows a two-way choice (Sideways: use a grid / Not sideways: leave it, ladder vs closed toolbox), but the 6848d09 beat says \"three arrows from the three shapes to Ladder, Pile, and Stop. Copy those three arrows.\" The viewer cannot copy three arrows from this image, and \"leave it\" replaces \"draw the pile\" / \"go to the stop sentence\". Right tag sits 40px from the frame edge (needs 45). This was a prompt mismatch (the beat-10 narration is the same at fbb3f9c, 6df2536 and 6848d09; I missed it in the earlier checks), so the prompt is rewritten.",
+     "pass": false
+    }
+   ],
+   "previous_fbb3f9c_blob": "100ad3151b6585af8056000afa1de82cc615cb63",
+   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/010/web2.png (prompt specs/remake/bp-04-market-regimes__010.txt), saved via out/course/images/bp-04-market-regimes/010.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-04-market-regimes/011.png",
@@ -723,39 +862,65 @@
    "beat": 11,
    "chapter": "Ordinary day",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "60cb8039ff1cbbc74ef0ab08c1492f9b103663a1",
     "cursor/blueprint-beginner-images": "60cb8039ff1cbbc74ef0ab08c1492f9b103663a1"
    },
    "beat_concept": "An ordinary day on this page means the size of weave you already drew, not a promise about tomorrow.",
    "scores": {
-    "beginner_clarity": 2,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "beginner_clarity": 4,
+    "composition_hierarchy": 4,
+    "craft_polish": 4,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 4
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-04-market-regimes__011.txt",
-   "notes": "Big sine wave far outside a thin dashed band with 'BAND'/'WEAVE' bracket; headline 'TOO WIDE' contradicts the beat (ordinary day = the usual wiggle size); no EXAMPLE on chart.",
+   "notes": "Glass chart with a small even wiggle and a bracket measuring its height; \"Usual up-and-down size\" arrow points at the bracket (tip about 12px right of the bracket spine, single unambiguous target); \"Not a promise about tomorrow\" in the card, no arrow; EXAMPLE stamp inside the card. Matches the current prompt and the \"not a promise about tomorrow\" line of 6848d09 beat 11.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 55,
-    "right": 181,
-    "top": 110,
-    "bottom": 185
+    "left": 71,
+    "right": 114,
+    "top": 78,
+    "bottom": 182
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/011.png",
-   "scored_blob": "60cb8039ff1cbbc74ef0ab08c1492f9b103663a1",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/011.png",
+   "scored_blob": "00b38443affcad6868b484f53dbfe42e0bec6e2d",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "remake_review": {
+    "file": "gen/bp-04-market-regimes/011/web1.png",
+    "blob": "00b38443affcad6868b484f53dbfe42e0bec6e2d",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 71,
+     "right": 114,
+     "top": 78,
+     "bottom": 182
+    },
+    "scored_against": "6848d09 narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 4,
+     "composition_hierarchy": 4,
+     "craft_polish": 4,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 4
+    },
+    "hard_fails": [],
+    "notes": "Glass chart with a small even wiggle and a bracket measuring its height; \"Usual up-and-down size\" arrow points at the bracket (tip about 12px right of the bracket spine, single unambiguous target); \"Not a promise about tomorrow\" in the card, no arrow; EXAMPLE stamp inside the card. Matches the current prompt and the \"not a promise about tomorrow\" line of 6848d09 beat 11.",
+    "pass": true
+   },
+   "previous_fbb3f9c_blob": "60cb8039ff1cbbc74ef0ab08c1492f9b103663a1",
+   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/011/web1.png (prompt specs/remake/bp-04-market-regimes__011.txt), saved via out/course/images/bp-04-market-regimes/011.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-04-market-regimes/012.png",
@@ -784,7 +949,7 @@
    "status": "fail",
    "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-04-market-regimes__012.txt",
-   "notes": "Stack of identical lines with one vertical tick: no calm path, no news spike, no thin-book idea; meaning unreadable with sound off.",
+   "notes": "Stack of identical lines with one vertical tick: no calm path, no news spike, no thin-book idea; meaning unreadable with sound off. | web1 remake: FAIL. Left card: calm wiggle, tall news bar beside a newspaper icon, amber warning, \"News bar\" tip on the bar. Right card: five rungs, two tickets far apart, price leaps across the empty rungs, amber warning, EXAMPLE stamp. But the \"Thin book: few resting orders\" arrow ends in the gap between the 2nd and 3rd rungs (about 15px above the 3rd), touching no rung, so it does not point at the empty rungs it names.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
@@ -797,7 +962,33 @@
    "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/012.png",
    "scored_blob": "d91f16a9eccd3d545c518073666781f894c2fa1f",
    "committed": true,
-   "pass": false
+   "pass": false,
+   "remake_review": {
+    "file": "gen/bp-04-market-regimes/012/web1.png",
+    "blob": "52d46988da45c3c23d06f7330d6f2eb2480314d4",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 53,
+     "right": 51,
+     "top": 87,
+     "bottom": 185
+    },
+    "scored_against": "6848d09 narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 4,
+     "composition_hierarchy": 4,
+     "craft_polish": 4,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 3
+    },
+    "hard_fails": [
+     "label arrow misses its target: \"Thin book: few resting orders\" tip stops in the empty space between two rungs"
+    ],
+    "notes": "Left card: calm wiggle, tall news bar beside a newspaper icon, amber warning, \"News bar\" tip on the bar. Right card: five rungs, two tickets far apart, price leaps across the empty rungs, amber warning, EXAMPLE stamp. But the \"Thin book: few resting orders\" arrow ends in the gap between the 2nd and 3rd rungs (about 15px above the 3rd), touching no rung, so it does not point at the empty rungs it names.",
+    "pass": false
+   }
   },
   {
    "path": "course/images/bp-04-market-regimes/013.png",
@@ -805,39 +996,65 @@
    "beat": 13,
    "chapter": "Common miss",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "15fa1ada4a4249be6bf4e341a732f74af5d578b3",
     "cursor/blueprint-beginner-images": "15fa1ada4a4249be6bf4e341a732f74af5d578b3"
    },
    "beat_concept": "The common miss is to pick the grid first and the regime second.",
    "scores": {
-    "beginner_clarity": 3,
-    "composition_hierarchy": 4,
-    "craft_polish": 3,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 5,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-04-market-regimes__013.txt",
-   "notes": "Ladder fits Range, crossed out on Trend/Break: but headline 'GRID FIRST' reads as an instruction when the beat says grid-first is the mistake; no wrong/right framing.",
+   "notes": "Two rows: \"Wrong: grid first\" with an amber X, ladder then chart; \"Right: look at the shape first\" with a check, chart then ladder. Small arrows show the order. Headline SHAPE FIRST, GRID SECOND. Matches the current prompt and 6848d09 beat 13 (the miss is grid first, regime second).",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 206,
-    "right": 327,
-    "top": 110,
-    "bottom": 318
+    "left": 62,
+    "right": 62,
+    "top": 123,
+    "bottom": 182
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/013.png",
-   "scored_blob": "15fa1ada4a4249be6bf4e341a732f74af5d578b3",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/013.png",
+   "scored_blob": "2a2f3e50cbcd617378591cac29d4fb7e034be2d0",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "remake_review": {
+    "file": "gen/bp-04-market-regimes/013/web1.png",
+    "blob": "2a2f3e50cbcd617378591cac29d4fb7e034be2d0",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 62,
+     "right": 62,
+     "top": 123,
+     "bottom": 182
+    },
+    "scored_against": "6848d09 narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 5,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Two rows: \"Wrong: grid first\" with an amber X, ladder then chart; \"Right: look at the shape first\" with a check, chart then ladder. Small arrows show the order. Headline SHAPE FIRST, GRID SECOND. Matches the current prompt and 6848d09 beat 13 (the miss is grid first, regime second).",
+    "pass": true
+   },
+   "previous_fbb3f9c_blob": "15fa1ada4a4249be6bf4e341a732f74af5d578b3",
+   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/013/web1.png (prompt specs/remake/bp-04-market-regimes__013.txt), saved via out/course/images/bp-04-market-regimes/013.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-04-market-regimes/014.png",
@@ -845,39 +1062,65 @@
    "beat": 14,
    "chapter": "One sentence",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "c6cc343690e2e9b9e5c81fa84ddd1e9eef9969e8",
     "cursor/blueprint-beginner-images": "c6cc343690e2e9b9e5c81fa84ddd1e9eef9969e8"
    },
    "beat_concept": "The sentence to keep: name the shape, then decide whether a ladder belongs on it.",
    "scores": {
-    "beginner_clarity": 2,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "beginner_clarity": 4,
+    "composition_hierarchy": 4,
+    "craft_polish": 4,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-04-market-regimes__014.txt",
-   "notes": "Four floating chips (RANGE/TREND/BREAK/LADDER) with no picture or sequence: 'name it, then decide' not shown.",
+   "notes": "Small chart in a card with a blank name tag beside it (the place to write the name), arrow to a ladder with a question mark. \"Name the shape\" tip on the name tag, \"Then decide if a grid fits\" tip on the ladder icon (2 of 2). Reads left to right: name it, then decide.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 175,
-    "right": 397,
-    "top": 109,
-    "bottom": 318
+    "left": 65,
+    "right": 69,
+    "top": 98,
+    "bottom": 234
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/014.png",
-   "scored_blob": "c6cc343690e2e9b9e5c81fa84ddd1e9eef9969e8",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/014.png",
+   "scored_blob": "78c70d998a539ea9afd86e21d3f7e40a284881ae",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "remake_review": {
+    "file": "gen/bp-04-market-regimes/014/web1.png",
+    "blob": "78c70d998a539ea9afd86e21d3f7e40a284881ae",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 65,
+     "right": 69,
+     "top": 98,
+     "bottom": 234
+    },
+    "scored_against": "6848d09 narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 4,
+     "composition_hierarchy": 4,
+     "craft_polish": 4,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Small chart in a card with a blank name tag beside it (the place to write the name), arrow to a ladder with a question mark. \"Name the shape\" tip on the name tag, \"Then decide if a grid fits\" tip on the ladder icon (2 of 2). Reads left to right: name it, then decide.",
+    "pass": true
+   },
+   "previous_fbb3f9c_blob": "c6cc343690e2e9b9e5c81fa84ddd1e9eef9969e8",
+   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/014/web1.png (prompt specs/remake/bp-04-market-regimes__014.txt), saved via out/course/images/bp-04-market-regimes/014.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-04-market-regimes/015.png",
@@ -885,39 +1128,65 @@
    "beat": 15,
    "chapter": "Paper sort",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "49e8f4fe840d098631cd7451069cb734cebd038a",
     "cursor/blueprint-beginner-images": "49e8f4fe840d098631cd7451069cb734cebd038a"
    },
    "beat_concept": "Sort one hypothetical path on paper into range, trend, or break, and write one reason.",
    "scores": {
-    "beginner_clarity": 2,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
-    "brand_fidelity": 4,
-    "text_legibility": 3,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 4,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 4
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-04-market-regimes__015.txt",
-   "notes": "CPU-style 'RANGE' chip and rubber stamp on a dotted wave: does not show sorting a sketched path into one of three boxes or writing a reason; small chip text.",
+   "notes": "Notebook page: sketched zig-zag between dashed lines, three tick boxes with tiny range/staircase/drop icons, the range box ticked by a pencil; \"Pick one shape\" tip on the ticked box; \"Write one reason why\" arrow points at the blank reason line (tip about 13px short, single unambiguous target); EXAMPLE stamp. Matches 6848d09 beat 15 (sort one path, write one reason).",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 180,
-    "right": 179,
-    "top": 109,
-    "bottom": 187
+    "left": 98,
+    "right": 198,
+    "top": 107,
+    "bottom": 179
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/015.png",
-   "scored_blob": "49e8f4fe840d098631cd7451069cb734cebd038a",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/015.png",
+   "scored_blob": "0f300740622ef2024c797ec2e24448413cfd24ca",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "remake_review": {
+    "file": "gen/bp-04-market-regimes/015/web1.png",
+    "blob": "0f300740622ef2024c797ec2e24448413cfd24ca",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 98,
+     "right": 198,
+     "top": 107,
+     "bottom": 179
+    },
+    "scored_against": "6848d09 narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 4,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 4
+    },
+    "hard_fails": [],
+    "notes": "Notebook page: sketched zig-zag between dashed lines, three tick boxes with tiny range/staircase/drop icons, the range box ticked by a pencil; \"Pick one shape\" tip on the ticked box; \"Write one reason why\" arrow points at the blank reason line (tip about 13px short, single unambiguous target); EXAMPLE stamp. Matches 6848d09 beat 15 (sort one path, write one reason).",
+    "pass": true
+   },
+   "previous_fbb3f9c_blob": "49e8f4fe840d098631cd7451069cb734cebd038a",
+   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/015/web1.png (prompt specs/remake/bp-04-market-regimes__015.txt), saved via out/course/images/bp-04-market-regimes/015.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-04-market-regimes/016.png",
@@ -925,41 +1194,65 @@
    "beat": 16,
    "chapter": "Your turn",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "1239c3f3385a53e2b9fb510e33652bd956bf418f",
     "cursor/blueprint-beginner-images": "1239c3f3385a53e2b9fb510e33652bd956bf418f"
    },
    "beat_concept": "Practice: Three shapes are enough for this lesson: range, trend, and break.",
    "scores": {
-    "beginner_clarity": 2,
-    "composition_hierarchy": 2,
-    "craft_polish": 2,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 5,
     "brand_fidelity": 4,
-    "text_legibility": 4,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "artifact: stray dark vertical bars at left of the chart area and a skewed glass slab overlapping the charts"
-   ],
-   "status": "fail",
-   "action": "needs_remake",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-04-market-regimes__016.txt",
-   "notes": "'COVER THREE' cryptic; slanted panel cuts across the three mini charts; no EXAMPLE.",
+   "notes": "Frosted pale-blue notebook page with three pencil sketches: zig-zag in a box, staircase, line breaking out of the bottom of its box. \"Range\", \"Trend\", \"Break\" tips each on their sketch (3 of 3). Matches 6848d09 beat 16 (three panels labelled Range, Trend, Break). Paler page than the glass cards, still navy/cyan framed.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 86,
-    "right": 215,
-    "top": 110,
-    "bottom": 181
+    "left": 101,
+    "right": 237,
+    "top": 95,
+    "bottom": 147
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/016.png",
-   "scored_blob": "1239c3f3385a53e2b9fb510e33652bd956bf418f",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/016.png",
+   "scored_blob": "f44bc0328ad82f6bc5fbfca948afa73a3088eaf3",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "remake_review": {
+    "file": "gen/bp-04-market-regimes/016/web1.png",
+    "blob": "f44bc0328ad82f6bc5fbfca948afa73a3088eaf3",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 101,
+     "right": 237,
+     "top": 95,
+     "bottom": 147
+    },
+    "scored_against": "6848d09 narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 5,
+     "brand_fidelity": 4,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Frosted pale-blue notebook page with three pencil sketches: zig-zag in a box, staircase, line breaking out of the bottom of its box. \"Range\", \"Trend\", \"Break\" tips each on their sketch (3 of 3). Matches 6848d09 beat 16 (three panels labelled Range, Trend, Break). Paler page than the glass cards, still navy/cyan framed.",
+    "pass": true
+   },
+   "previous_fbb3f9c_blob": "1239c3f3385a53e2b9fb510e33652bd956bf418f",
+   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/016/web1.png (prompt specs/remake/bp-04-market-regimes__016.txt), saved via out/course/images/bp-04-market-regimes/016.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-04-market-regimes/017.png",
@@ -967,39 +1260,65 @@
    "beat": 17,
    "chapter": "Your turn",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "19b85ca550c1cd58228bf2a503c304d7a577d97f",
     "cursor/blueprint-beginner-images": "19b85ca550c1cd58228bf2a503c304d7a577d97f"
    },
    "beat_concept": "Practice: You sort the path before you choose a spacing.",
    "scores": {
-    "beginner_clarity": 2,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 5,
     "brand_fidelity": 4,
-    "text_legibility": 4,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-04-market-regimes__017.txt",
-   "notes": "Left margin only 48px (headline/RANGE chip), under the 80px target. 'SAY SORT' cryptic; chips plus a locked 'SPACING' chip; no path.",
+   "notes": "Notebook page: (1) a circled chart sketch, (2) a sketched ladder of five lines, pencil below; tags \"1 Name the shape\" and \"2 Then draw steps\" under each, no arrows. Shape before steps is clear. Margins 76px or more.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 48,
-    "right": 687,
-    "top": 110,
-    "bottom": 319
+    "left": 78,
+    "right": 195,
+    "top": 76,
+    "bottom": 119
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/017.png",
-   "scored_blob": "19b85ca550c1cd58228bf2a503c304d7a577d97f",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/017.png",
+   "scored_blob": "a0f57b69e3d4e6e2e80f380b4370793e47914e15",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "remake_review": {
+    "file": "gen/bp-04-market-regimes/017/web1.png",
+    "blob": "a0f57b69e3d4e6e2e80f380b4370793e47914e15",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 78,
+     "right": 195,
+     "top": 76,
+     "bottom": 119
+    },
+    "scored_against": "6848d09 narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 5,
+     "brand_fidelity": 4,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Notebook page: (1) a circled chart sketch, (2) a sketched ladder of five lines, pencil below; tags \"1 Name the shape\" and \"2 Then draw steps\" under each, no arrows. Shape before steps is clear. Margins 76px or more.",
+    "pass": true
+   },
+   "previous_fbb3f9c_blob": "19b85ca550c1cd58228bf2a503c304d7a577d97f",
+   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/017/web1.png (prompt specs/remake/bp-04-market-regimes__017.txt), saved via out/course/images/bp-04-market-regimes/017.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-04-market-regimes/018.png",
@@ -1026,7 +1345,7 @@
    "status": "fail",
    "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-04-market-regimes__018.txt",
-   "notes": "A single line with two dips numbered 1 and 2 and a 'TWICE' tag: no grid lines to cross, so the crossings are not shown.",
+   "notes": "A single line with two dips numbered 1 and 2 and a 'TWICE' tag: no grid lines to cross, so the crossings are not shown. | web1 remake: FAIL. Zig-zag across three lines with circles on most crossings, \"Circle each crossing\" tip on a circle, \"More crossings = better fit\" under the sketch, EXAMPLE stamp. But the line keeps climbing after its last circle and crosses the top line at the right with no circle, and the pencil sits off the page edge (not circling anything) with its eraser 43px from the right frame edge.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
@@ -1039,7 +1358,34 @@
    "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/018.png",
    "scored_blob": "146605b610c55ef671a5ff0bc8d5bf50b469376c",
    "committed": true,
-   "pass": false
+   "pass": false,
+   "remake_review": {
+    "file": "gen/bp-04-market-regimes/018/web1.png",
+    "blob": "f205492f1c8e9035ad503bb73da862577c69e410",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 65,
+     "right": 43,
+     "top": 73,
+     "bottom": 94
+    },
+    "scored_against": "6848d09 narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 4,
+     "composition_hierarchy": 3,
+     "craft_polish": 4,
+     "brand_fidelity": 4,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 3
+    },
+    "hard_fails": [
+     "label/count mismatch: the zig-zag crosses the top line at the right end with no circle, contradicting \"Circle each crossing\"",
+     "cramped margin: pencil eraser 43px from the right edge"
+    ],
+    "notes": "Zig-zag across three lines with circles on most crossings, \"Circle each crossing\" tip on a circle, \"More crossings = better fit\" under the sketch, EXAMPLE stamp. But the line keeps climbing after its last circle and crosses the top line at the right with no circle, and the pencil sits off the page edge (not circling anything) with its eraser 43px from the right frame edge.",
+    "pass": false
+   }
   },
   {
    "path": "course/images/bp-04-market-regimes/019.png",
@@ -1047,39 +1393,65 @@
    "beat": 19,
    "chapter": "No score",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "00a85578016fc062417ab58fcfa70ef90e276177",
     "cursor/blueprint-beginner-images": "00a85578016fc062417ab58fcfa70ef90e276177"
    },
    "beat_concept": "This lesson does not give you a score that says go.",
    "scores": {
-    "beginner_clarity": 3,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-04-market-regimes__019.txt",
-   "notes": "Dial with amber X and a Range/Trend/Break list where only Range has an amber dot: reads as 'Range is wrong' - confusing; no 'no go signal / you decide' message.",
+   "notes": "Traffic light with every lamp dark and an amber X over it, beside a notebook with a check. \"No 'go' signal\" tip on the light, \"You decide on paper\" tip on the notebook (2 of 2). Matches the prompt and the 6848d09 beat 19 idea (no score or signal that says go).",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 63,
-    "right": 806,
-    "top": 109,
-    "bottom": 379
+    "left": 59,
+    "right": 54,
+    "top": 74,
+    "bottom": 112
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/019.png",
-   "scored_blob": "00a85578016fc062417ab58fcfa70ef90e276177",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/019.png",
+   "scored_blob": "5e21e32542501eda15ae4f3b890bfb5545848bfa",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "remake_review": {
+    "file": "gen/bp-04-market-regimes/019/web1.png",
+    "blob": "5e21e32542501eda15ae4f3b890bfb5545848bfa",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 59,
+     "right": 54,
+     "top": 74,
+     "bottom": 112
+    },
+    "scored_against": "6848d09 narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Traffic light with every lamp dark and an amber X over it, beside a notebook with a check. \"No 'go' signal\" tip on the light, \"You decide on paper\" tip on the notebook (2 of 2). Matches the prompt and the 6848d09 beat 19 idea (no score or signal that says go).",
+    "pass": true
+   },
+   "previous_fbb3f9c_blob": "00a85578016fc062417ab58fcfa70ef90e276177",
+   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/019/web1.png (prompt specs/remake/bp-04-market-regimes__019.txt), saved via out/course/images/bp-04-market-regimes/019.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-04-market-regimes/020.png",
@@ -1087,39 +1459,65 @@
    "beat": 20,
    "chapter": "Outro",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "ee788c8d17716ccdfdfce20487075b278c8e6559",
     "cursor/blueprint-beginner-images": "ee788c8d17716ccdfdfce20487075b278c8e6559"
    },
    "beat_concept": "Next lesson: Choosing grid spacing and range. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
    "scores": {
-    "beginner_clarity": 3,
-    "composition_hierarchy": 3,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 5,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-04-market-regimes__020.txt",
-   "notes": "Icons PAGE / GAPS / EXAMPLE stamp: next lesson ('Choosing grid spacing and range') not named; 'GAPS' unexplained.",
+   "notes": "Outro: finished notebook with a check, glowing arrow to a card with an evenly lined box and a ruler. \"Bring your notes\" tip on the notebook; \"Next lesson: Choosing grid spacing and range\" under the card, the exact next lesson title in 6848d09 beat 20.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 176,
-    "right": 375,
-    "top": 110,
-    "bottom": 365
+    "left": 75,
+    "right": 74,
+    "top": 103,
+    "bottom": 193
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/020.png",
-   "scored_blob": "ee788c8d17716ccdfdfce20487075b278c8e6559",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/020.png",
+   "scored_blob": "5cf95d3bf9501b5205db252ba4ccfc1b24b94364",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "remake_review": {
+    "file": "gen/bp-04-market-regimes/020/web1.png",
+    "blob": "5cf95d3bf9501b5205db252ba4ccfc1b24b94364",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 75,
+     "right": 74,
+     "top": 103,
+     "bottom": 193
+    },
+    "scored_against": "6848d09 narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 5,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Outro: finished notebook with a check, glowing arrow to a card with an evenly lined box and a ruler. \"Bring your notes\" tip on the notebook; \"Next lesson: Choosing grid spacing and range\" under the card, the exact next lesson title in 6848d09 beat 20.",
+    "pass": true
+   },
+   "previous_fbb3f9c_blob": "ee788c8d17716ccdfdfce20487075b278c8e6559",
+   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/020/web1.png (prompt specs/remake/bp-04-market-regimes__020.txt), saved via out/course/images/bp-04-market-regimes/020.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-05-spacing-and-range/001.png",
@@ -6823,5 +7221,5 @@
    "pass": false
   }
  ],
- "note_remakes": "Rows with source chatgpt-web are new ChatGPT web renders scored against PR #17 head 6848d09; their scored_blob is the file committed at course/images/<lesson>/NNN.png. Rows with remake_review.pass=false keep the old committed still (still failing) and stay in REMAKE_QUEUE."
+ "note_remakes": "Rows with source chatgpt-web are new ChatGPT web renders scored against PR #17 head 6848d09; their scored_blob is the file committed at course/images/<lesson>/NNN.png. Rows with remake_review.pass=false keep the old committed still (still failing) and stay in REMAKE_QUEUE. Round 2 (14 Nov): bp-04 002/003/005/010 (web2) and 011/013/014/015/016/017/019/020 (web1) passed; 006 web2, 012 web1 and 018 web1 failed and stay in REMAKE_QUEUE (006 on v3, 012 and 018 on v2). Earlier remake reviews are kept in previous_remake_reviews."
 }

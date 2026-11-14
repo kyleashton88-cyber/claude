@@ -4,7 +4,7 @@ Scored by Creative Studio, 14 Nov 2026 (WITA). Same strict method as bp04-11. Im
 
 **Scope:** image fields of course/scripts/bp-01..bp-03 @ d1f6 `fbb3f9c` (58 stills); files scored from cursor/blueprint-beginner-images `2f8bac1`.
 
-**Result (current, 14 Nov after remake round 2 and the e0b84d5 code-drawn re-score):** lesson stills 55 pass / 3 fail of 58. Shared + code-drawn: 33 pass / 1 fail of 34. Whole list: **88 pass / 4 fail of 92**. Remake queue: 3 (needs_mascot_ref: 0). Code fix needed: 1 frame (CF-7), plus CF-6 to apply with the new fence still. See CODE_FIXES.md. (History: first scoring 45/47; after round 1 56/36.)
+**Result (current, 14 Nov after remake round 3):** lesson stills 56 pass / 2 fail of 58. Shared + code-drawn: 33 pass / 1 fail of 34. Whole list: **89 pass / 3 fail of 92**. Remake queue: 2 (needs_mascot_ref: 0). Code fix needed: 1 frame (CF-7), plus CF-6 to apply with the new fence still. See CODE_FIXES.md. (History: first scoring 45/47; after round 1 56/36.)
 
 **Mismatches:** none. All 58 blobs are identical on d1f6 and beginner-images and match the v10 pass list's scored_blob. All 58 were 'pass' on v10; 21 are overturned here.
 
@@ -13,7 +13,7 @@ Scored by Creative Studio, 14 Nov 2026 (WITA). Same strict method as bp04-11. Im
 **Fix status:** every fail = `needs_remake`, prompt written (specs/remake/<lesson>__NNN.txt, copied to remake/), not regenerated. Old prompts moved to specs/remake/_superseded/: `bp-01-introduction__010.v1.txt`, `bp-02-what-you-need__004.v1.txt`, `bp-03-what-is-a-grid-bot__003.v1.txt`, `bp-03-what-is-a-grid-bot__010.v1.txt`.
 
 
-## bp-01-introduction (Introduction): 18 total, 16 pass, 2 fail (after remake round 1; table below is the first scoring of the committed stills)
+## bp-01-introduction (Introduction): 18 total, 17 pass, 1 fail (after remake round 3; table below is the first scoring of the committed stills)
 
 | File | Beat | Result | Reason | Fix status |
 |---|---|---|---|---|
@@ -229,3 +229,21 @@ Disclaimer string sweep at e0b84d5: Blueprint code and yaml no longer contain "E
 | bp-02-what-you-need | 21/21 | 11/11 | 32/32 | none: 100% |
 | bp-03-what-is-a-grid-bot | 18/19 | 8/9 | 26/28 | 010.png (ChatGPT, v3 prompt) and code-drawn chart/range-2023/limit-orders-wait (CF-7) |
 | **All** | 55/58 | 33/34 | **88/92** | 4 |
+
+## Remake round 3: bp-01 007 and 016 web2 (scored 14 Nov against the fbb3f9c narration and the v2 prompts)
+
+| File | Result | Margins | Reason |
+|---|---|---|---|
+| gen/bp-01-introduction/007/web2.png | FAIL | 76/77/69/141 | Ladder is now right: four mint rungs above and four blue rungs below the dashed "Price now" line, evenly spaced, one dot each; headline and tags spelled right; EXAMPLE inside the card; 3 arrows. But the "Buy orders below" arrow ends in the empty gap between the 2nd and 3rd blue rungs (about 32px from each), touching no rung, while "Sell orders above" lands on its rung end. Same miss class as v1/016 v1. Hard fail: label arrow misses its target: "Buy orders below" tip stops in the empty gap between the 2nd and 3rd blue rungs. Next: web3.png on the v3 prompt (old prompt in specs/remake/_superseded/bp-01-introduction__007.v2.txt). |
+| gen/bp-01-introduction/016/web2.png | PASS | 64/60/69/124 | Notebook rectangle has exactly 5 inner lines (7 counting top and bottom). "Range" tip on the middle of the top edge, "Levels" tip on the right end of the 3rd inner line, "Stop" tip on the amber STOP sign, "Point at each one" has no arrow (3 of 3). Pencil and notebook fully inside, bottom margin 124px. Matches fbb3f9c beat 16 (Range / Levels / Stop). |
+
+016 was saved to `out/course/images/bp-01-introduction/016.png` and committed at `course/images/bp-01-introduction/016.png` (row: `source: chatgpt-web`, new `scored_blob`, web1 review kept in `previous_remake_reviews`). 007 keeps the old committed still and stays in the queue with target web3 on the v3 prompt (v2 moved to `specs/remake/_superseded/bp-01-introduction__007.v2.txt`).
+
+### Running counts after round 3
+
+| Lesson | Script stills | Shared + code-drawn | All rows | Rows left |
+|---|---|---|---|---|
+| bp-01-introduction | 17/18 | 14/14 | 31/32 | 007.png (ChatGPT, v3 prompt, web3) |
+| bp-02-what-you-need | 21/21 | 11/11 | 32/32 | none: 100% |
+| bp-03-what-is-a-grid-bot | 18/19 | 8/9 | 26/28 | 010.png (ChatGPT, v3 prompt, web3) and code-drawn chart/range-2023/limit-orders-wait (CF-7) |
+| **All** | 56/58 | 33/34 | **89/92** | 3 |

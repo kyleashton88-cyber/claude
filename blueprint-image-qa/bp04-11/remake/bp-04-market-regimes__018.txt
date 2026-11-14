@@ -3,7 +3,7 @@ FORMAT: one landscape image, 3:2, exactly 1536x1024 pixels.
 MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 80px inside the left and right edges and at least 90px inside the top and bottom edges. Nothing with text touches or approaches the frame edge. Words in the headline are separated by a clear full space.
 
 Headline: "YOUR TURN: SPOT THE CROSSINGS" (the words YOUR TURN in cyan, the rest white).
-Scene: A notebook sketch of a zig-zag line crossing three horizontal lines repeatedly, with a pencil circling the crossings.
+Scene: A notebook sketch of a zig-zag line crossing three horizontal lines repeatedly, with a pencil circling the crossings. QA FIX v2: the zig-zag starts ON the bottom line at the left and ENDS on a circled point on the bottom line at the right; it never runs past the top line or out of the three-line area (the v1 line kept climbing after its last circle and crossed the top line with no circle). EVERY point where the zig-zag meets any of the three lines has one pencil circle, and there are no circles anywhere else. The pencil lies ON the page with its tip touching the last circle it drew (it is drawing that circle), fully inside the notebook page, and the whole pencil, eraser included, stays at least 120px from every frame edge (the v1 eraser came within 43px of the right edge and the pencil sat off the page edge, not circling anything).
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
 - "Circle each crossing": arrow tip touches one pencil circle on a crossing.
 - "More crossings = better fit": under: the notebook sketch, no arrow.

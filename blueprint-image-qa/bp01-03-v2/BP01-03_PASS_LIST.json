@@ -9,17 +9,17 @@
  "not_in_scope": "All 92 BP-01..03 rows are now scored here. Separate finding: course/blueprint-rebuild/numbers/bp-0{1,2,3}*.yaml (d1f6) set disclaimer_on_screen to 'Educational content only. Not financial advice.'; studio.py writes that string, so CODE_FIXES.md CF-1 fixes both.",
  "counts": {
   "total": 92,
-  "pass": 88,
-  "fail": 4,
+  "pass": 89,
+  "fail": 3,
   "lesson_stills": {
    "total": 58,
-   "pass": 55,
-   "fail": 3,
+   "pass": 56,
+   "fail": 2,
    "by_lesson": {
     "bp-01-introduction": {
      "total": 18,
-     "pass": 16,
-     "fail": 2
+     "pass": 17,
+     "fail": 1
     },
     "bp-02-what-you-need": {
      "total": 21,
@@ -68,8 +68,8 @@
   "by_lesson_all_rows": {
    "bp-01-introduction": {
     "total": 32,
-    "pass": 30,
-    "fail": 2
+    "pass": 31,
+    "fail": 1
    },
    "bp-02-what-you-need": {
     "total": 32,
@@ -413,7 +413,7 @@
    "status": "fail",
    "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-01-introduction__007.txt",
-   "notes": "Committed still: Diagram is right (sells above in mint, buys below in blue, price-now line), but the headline 'BUY LOW, SELL HIGH' is a profit slogan, not the beat ('buy orders below the mark, sell orders above it'). Fails the no-pitch rule. | web1 remake: FAIL. The three mint and three blue rungs sit side by side at one height, so each side reads as three orders at the same price, not a ladder of levels. The narration says four buys below and four sells above. The \"Sell orders above\" tip stops below and left of the first mint rung instead of touching the middle one, and the \"Buy orders below\" arrow has a kink.",
+   "notes": "Committed still: Diagram is right (sells above in mint, buys below in blue, price-now line), but the headline 'BUY LOW, SELL HIGH' is a profit slogan, not the beat ('buy orders below the mark, sell orders above it'). Fails the no-pitch rule. | web1 remake: FAIL. The three mint and three blue rungs sit side by side at one height, so each side reads as three orders at the same price, not a ladder of levels. The narration says four buys below and four sells above. The \"Sell orders above\" tip stops below and left of the first mint rung instead of touching the middle one, and the \"Buy orders below\" arrow has a kink. | web2 remake: FAIL. Ladder is now right: four mint rungs above and four blue rungs below the dashed \"Price now\" line, evenly spaced, one dot each; headline and tags spelled right; EXAMPLE inside the card; 3 arrows. But the \"Buy orders below\" arrow ends in the empty gap between the 2nd and 3rd blue rungs (about 32px from each), touching no rung, while \"Sell orders above\" lands on its rung end. Same miss class as v1/016 v1.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
@@ -430,32 +430,60 @@
    "committed": true,
    "pass": false,
    "remake_review": {
-    "file": "gen/bp-01-introduction/007/web1.png",
-    "blob": "d518e5ce2e5598a249d787f38b60d39e2d4c50a1",
+    "file": "gen/bp-01-introduction/007/web2.png",
+    "blob": "a18f7c9f8b7623205bf2bf1a5c8f4682a3ab713c",
     "size": "1536x1024",
     "margins_px": {
-     "left": 67,
-     "right": 84,
-     "top": 91,
-     "bottom": 181
+     "left": 76,
+     "right": 77,
+     "top": 69,
+     "bottom": 141
     },
     "scored_against": "fbb3f9c narration + prompt at this commit",
     "scores": {
-     "beginner_clarity": 3,
+     "beginner_clarity": 4,
      "composition_hierarchy": 4,
-     "craft_polish": 3,
+     "craft_polish": 4,
      "brand_fidelity": 5,
      "text_legibility": 5,
      "character_consistency": null,
      "label_accuracy": 3
     },
     "hard_fails": [
-     "wrong picture: orders side by side at one price",
-     "arrow misses target"
+     "label arrow misses its target: \"Buy orders below\" tip stops in the empty gap between the 2nd and 3rd blue rungs"
     ],
-    "notes": "The three mint and three blue rungs sit side by side at one height, so each side reads as three orders at the same price, not a ladder of levels. The narration says four buys below and four sells above. The \"Sell orders above\" tip stops below and left of the first mint rung instead of touching the middle one, and the \"Buy orders below\" arrow has a kink.",
+    "notes": "Ladder is now right: four mint rungs above and four blue rungs below the dashed \"Price now\" line, evenly spaced, one dot each; headline and tags spelled right; EXAMPLE inside the card; 3 arrows. But the \"Buy orders below\" arrow ends in the empty gap between the 2nd and 3rd blue rungs (about 32px from each), touching no rung, while \"Sell orders above\" lands on its rung end. Same miss class as v1/016 v1.",
     "pass": false
-   }
+   },
+   "previous_remake_reviews": [
+    {
+     "file": "gen/bp-01-introduction/007/web1.png",
+     "blob": "d518e5ce2e5598a249d787f38b60d39e2d4c50a1",
+     "size": "1536x1024",
+     "margins_px": {
+      "left": 67,
+      "right": 84,
+      "top": 91,
+      "bottom": 181
+     },
+     "scored_against": "fbb3f9c narration + prompt at this commit",
+     "scores": {
+      "beginner_clarity": 3,
+      "composition_hierarchy": 4,
+      "craft_polish": 3,
+      "brand_fidelity": 5,
+      "text_legibility": 5,
+      "character_consistency": null,
+      "label_accuracy": 3
+     },
+     "hard_fails": [
+      "wrong picture: orders side by side at one price",
+      "arrow misses target"
+     ],
+     "notes": "The three mint and three blue rungs sit side by side at one height, so each side reads as three orders at the same price, not a ladder of levels. The narration says four buys below and four sells above. The \"Sell orders above\" tip stops below and left of the first mint rung instead of touching the middle one, and the \"Buy orders below\" arrow has a kink.",
+     "pass": false
+    }
+   ]
   },
   {
    "path": "course/images/bp-01-introduction/008.png",
@@ -825,70 +853,96 @@
    "beat": 16,
    "chapter": "Your turn",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-01-introduction.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "330ae5ca21d38f2948008939585ad75cd8aa16c3",
     "cursor/blueprint-beginner-images": "330ae5ca21d38f2948008939585ad75cd8aa16c3"
    },
    "beat_concept": "Practice: A grid has three parts you can name: the range, the levels, and the stop.",
    "scores": {
-    "beginner_clarity": 4,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "cramped margin: notebook base and pencil come within 37px of the bottom edge"
-   ],
-   "status": "fail",
-   "action": "needs_remake",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-01-introduction__016.txt",
-   "notes": "Committed still: Content is right (Range / Levels / Stop on a notebook band), but the notebook base and pencil run to 37px from the bottom edge (under the 45px minimum). | web1 remake: FAIL. The rectangle has 4 inner lines where the prompt says 5. The \"Levels\" tip lands in the gap halfway between the 2nd and 3rd inner lines (measured 34px from each), touching no rung, so it doesn't show that the levels are the rungs. \"Range\" (top edge) and \"Stop\" (amber sign) are correct; \"Point at each one\" has no arrow, as specified.",
+   "notes": "Notebook rectangle has exactly 5 inner lines (7 counting top and bottom). \"Range\" tip on the middle of the top edge, \"Levels\" tip on the right end of the 3rd inner line, \"Stop\" tip on the amber STOP sign, \"Point at each one\" has no arrow (3 of 3). Pencil and notebook fully inside, bottom margin 124px. Matches fbb3f9c beat 16 (Range / Levels / Stop).",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 71,
-    "right": 75,
-    "top": 65,
-    "bottom": 37
+    "left": 64,
+    "right": 60,
+    "top": 69,
+    "bottom": 124
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-01-introduction/016.png",
-   "scored_blob": "330ae5ca21d38f2948008939585ad75cd8aa16c3",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/016.png",
+   "scored_blob": "d65e2d7e6007a316f037881bfb412a7bf67deac1",
    "committed": true,
-   "pass": false,
+   "pass": true,
    "remake_review": {
-    "file": "gen/bp-01-introduction/016/web1.png",
-    "blob": "c618e5df9ee96c505b1d82b40d2f8d2433c9a414",
+    "file": "gen/bp-01-introduction/016/web2.png",
+    "blob": "d65e2d7e6007a316f037881bfb412a7bf67deac1",
     "size": "1536x1024",
     "margins_px": {
-     "left": 74,
+     "left": 64,
      "right": 60,
-     "top": 68,
-     "bottom": 127
+     "top": 69,
+     "bottom": 124
     },
     "scored_against": "fbb3f9c narration + prompt at this commit",
     "scores": {
-     "beginner_clarity": 4,
+     "beginner_clarity": 5,
      "composition_hierarchy": 4,
-     "craft_polish": 4,
+     "craft_polish": 5,
      "brand_fidelity": 5,
      "text_legibility": 5,
      "character_consistency": null,
-     "label_accuracy": 3
+     "label_accuracy": 5
     },
-    "hard_fails": [
-     "arrow misses target",
-     "wrong count"
-    ],
-    "notes": "The rectangle has 4 inner lines where the prompt says 5. The \"Levels\" tip lands in the gap halfway between the 2nd and 3rd inner lines (measured 34px from each), touching no rung, so it doesn't show that the levels are the rungs. \"Range\" (top edge) and \"Stop\" (amber sign) are correct; \"Point at each one\" has no arrow, as specified.",
-    "pass": false
-   }
+    "hard_fails": [],
+    "notes": "Notebook rectangle has exactly 5 inner lines (7 counting top and bottom). \"Range\" tip on the middle of the top edge, \"Levels\" tip on the right end of the 3rd inner line, \"Stop\" tip on the amber STOP sign, \"Point at each one\" has no arrow (3 of 3). Pencil and notebook fully inside, bottom margin 124px. Matches fbb3f9c beat 16 (Range / Levels / Stop).",
+    "pass": true
+   },
+   "previous_remake_reviews": [
+    {
+     "file": "gen/bp-01-introduction/016/web1.png",
+     "blob": "c618e5df9ee96c505b1d82b40d2f8d2433c9a414",
+     "size": "1536x1024",
+     "margins_px": {
+      "left": 74,
+      "right": 60,
+      "top": 68,
+      "bottom": 127
+     },
+     "scored_against": "fbb3f9c narration + prompt at this commit",
+     "scores": {
+      "beginner_clarity": 4,
+      "composition_hierarchy": 4,
+      "craft_polish": 4,
+      "brand_fidelity": 5,
+      "text_legibility": 5,
+      "character_consistency": null,
+      "label_accuracy": 3
+     },
+     "hard_fails": [
+      "arrow misses target",
+      "wrong count"
+     ],
+     "notes": "The rectangle has 4 inner lines where the prompt says 5. The \"Levels\" tip lands in the gap halfway between the 2nd and 3rd inner lines (measured 34px from each), touching no rung, so it doesn't show that the levels are the rungs. \"Range\" (top edge) and \"Stop\" (amber sign) are correct; \"Point at each one\" has no arrow, as specified.",
+     "pass": false
+    }
+   ],
+   "previous_committed_blob": "330ae5ca21d38f2948008939585ad75cd8aa16c3",
+   "source_detail": "ChatGPT web render gen/bp-01-introduction/016/web2.png (prompt specs/remake/bp-01-introduction__016.txt), saved via out/course/images/bp-01-introduction/016.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-01-introduction/017.png",
@@ -4473,5 +4527,5 @@
   }
  ],
  "note_code_drawn": "Code-drawn frames are scored from a fresh render of studio.py --frames at fbb3f9c (box: bp01-03-qa/assets/src/code-drawn). The committed blueprint-smoke/code-drawn PNGs on d1f6 are from 61c4f97 and are stale for 22 of 25 frames (3 thumbnails identical). Fails are not remade on ChatGPT: action code_fix_needed, code_fix lists the fix ids in CODE_FIXES.md. Re-scored 14 Nov at PR #17 head e0b84d5 (CF-1..CF-5 applied): rows carry source code-drawn@e0b84d5 and scored_blob = the committed blueprint-smoke PNG blob at e0b84d5. 24 of 25 pass; bp-03 limit-orders-wait needs CF-7. CF-6 (fence relabel) not applied yet.",
- "note_remakes": "Rows with source chatgpt-web are new ChatGPT web renders scored against the fbb3f9c narration; scored_blob is the file committed at course/images/<lesson>/NNN.png. Rows with remake_review.pass=false keep the old committed still and stay in REMAKE_QUEUE. Round 2 (14 Nov): BP-03 001/002/003/004/008/014/019 and analogy-fence web1 passed; BP-03 010 failed (v3 prompt)."
+ "note_remakes": "Rows with source chatgpt-web are new ChatGPT web renders scored against the fbb3f9c narration; scored_blob is the file committed at course/images/<lesson>/NNN.png. Rows with remake_review.pass=false keep the old committed still and stay in REMAKE_QUEUE. Round 2 (14 Nov): BP-03 001/002/003/004/008/014/019 and analogy-fence web1 passed; BP-03 010 failed (v3 prompt). Round 3 (14 Nov): bp-01 016 web2 passed (chatgpt-web); bp-01 007 web2 failed (Buy arrow tip in the gap between rungs) and is on a v3 prompt."
 }
