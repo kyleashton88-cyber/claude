@@ -419,11 +419,11 @@ def bp02_014() -> None:
     draw.text((px(720), px(328)), "Pair", font=font(FONT_SEMI, 32), fill=WHITE)
     tag(img, (100, 280, 620, 370), ["Pair box empty: not ready"], face)
     tag(img, (100, 460, 500, 550), ["Fill it in first"], face)
-    arrow(img, (620, 325), (980, 350))
+    arrow(img, (620, 325), (982, 350))
     arrow(img, (500, 505), (1160, 396))
     stamp(img, 200, 800)
     final = save(img, "course/images/bp-02-what-you-need/014.png")
-    assert_tip(final, (980, 350), (986, 350), "empty")
+    assert_tip(final, (982, 350), (986, 350), "empty")
     assert_tip(final, (1160, 396), (1160, 399), "fill")
     record([{
         "path": "course/images/bp-02-what-you-need/014.png",
