@@ -326,6 +326,9 @@ def _attach_lesson_stills(sid: str, shots: list[dict]) -> None:
         image = beat.get("image")
         if not image or image in used or beat.get("role") == "legal":
             continue
+        # The opening card already names the lesson. A second title card arrives after the pictures.
+        if sid == "bp-01-introduction" and beat.get("role") == "intro":
+            continue
         alt = (beat.get("alt") or beat.get("concept") or "Look at the picture.").strip()
         extras.append({
             "kind": "lesson-still",
