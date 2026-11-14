@@ -272,3 +272,30 @@ Not covered: arrows between two panels (sequence arrows such as notebook -> next
 | bp-02-what-you-need | 20/21 | 11/11 | 31/32 | 016.png (web2, v2) |
 | bp-03-what-is-a-grid-bot | 18/19 | 8/9 | 26/28 | 010.png (web3, v3) and code-drawn chart/range-2023/limit-orders-wait (CF-7) |
 | **All** | 53/58 | 33/34 | **86/92** | 6 |
+
+---
+
+## Update — code-drawn arrow sweep re-scored at 29b7444 (CF-6 + CF-7 landed on d1f6)
+
+CF-6 and CF-7 landed on `cursor/blueprint-professional-rebuild-d1f6` at `29b74447505ee5f10e9fbd88ee912b0f98348edc`. Used `29b7444` as the code-drawn source for the whole arrow sweep. Of the 25 code-drawn frames, only the two CF frames changed blob vs e0b84d5; the other 23 are byte-identical, so their e0b84d5 scores stand (source tag updated to `code-drawn@29b7444`).
+
+**the-fence** (bp-01) — re-scored at 29b7444, `scored_blob a18534c2`, source `code-drawn@29b7444`. CF-6 applied: re-rendered fence still with retuned labels. Arrow sweep (4–8x): "Top rail = top price" tip touches the top rail; "Price bounces between" tip touches a zigzag peak; "Bottom rail = bottom price" tip touches the bottom rail — no gaps. Disclaimer exact "Education only. Not financial advice." EXAMPLE present. Numbers match btc-usd-windows.json. 1920×1080 (normal for a code frame). **PASS.**
+
+**limit-orders-wait** (bp-03) — re-scored at 29b7444, `scored_blob 0e4767e7`, source `code-drawn@29b7444`. CF-7 applied: frame now marks all 10 crosses (5 down + 5 up as rings), caption "10 crosses: 5 down, 5 up (rings)". Count now matches "Daily closes crossed 27,630 10 times". BUY-27,630 leader touches its ring; ring markers sit on the 27,630 line. Disclaimer exact. EXAMPLE present. **PASS — flipped from the e0b84d5 fail** (which failed on wrong count + no CF for it). No new CF item needed; CF-7 resolves it.
+
+All 25 code-drawn frames now pass.
+
+### d1f6 / beginner-images drift check (files at 29b7444 vs beginner-images pass-list blob)
+5 rows differed; 2 are the CF frames resolved by this update (now scored at 29b7444). The remaining **3 genuine drifts** are BP-01 stills that the beginner-images pass list has flipped/replaced but d1f6 has not yet reconciled:
+
+- `course/images/bp-01-introduction/001.png` — beginner-images `295ac01f` (old still restored after arrow-rule fail), d1f6@29b7444 `372a2558` (the arrow-failing remake). d1f6 still carries the remake this pass list rejected.
+- `course/images/bp-01-introduction/010.png` — beginner-images `c2905476` (old still restored), d1f6@29b7444 `dc559613` (arrow-failing remake). Same situation.
+- `course/images/bp-01-introduction/016.png` — beginner-images `d65e2d7e` (passing web2 remake, PASS), d1f6@29b7444 `330ae5ca` (different/older blob). d1f6 has not picked up the passing 016 remake.
+
+Orchestrator should reconcile d1f6 to match the beginner-images pass list for these 3 rows.
+
+### Counts after this update
+- BP-01: **29/32** — NOT 100% (fail: 001, 007, 010)
+- BP-02: **31/32** — NOT 100% (fail: 016)
+- BP-03: **27/28** — NOT 100% (fail: 010)
+- TOTAL: **87/92**

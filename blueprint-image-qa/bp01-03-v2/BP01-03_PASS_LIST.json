@@ -3552,9 +3552,9 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "b4e95df5938620c4baf7903dc910e4c633e8dc7f"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "b4e95df5938620c4baf7903dc910e4c633e8dc7f"
    },
    "beat_concept": null,
    "scores": {
@@ -3592,9 +3592,9 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "3b898d0c53b369925c8b01c6a8d3ffd854027e11"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "3b898d0c53b369925c8b01c6a8d3ffd854027e11"
    },
    "beat_concept": null,
    "scores": {
@@ -3632,9 +3632,9 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "059b77f2da2a0e6db6452ba09e05230c8881147f"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "059b77f2da2a0e6db6452ba09e05230c8881147f"
    },
    "beat_concept": null,
    "scores": {
@@ -3672,9 +3672,9 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "794f7c1c547480c089e8aecaba959321f11bc4b9"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "794f7c1c547480c089e8aecaba959321f11bc4b9"
    },
    "beat_concept": null,
    "scores": {
@@ -3712,9 +3712,9 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "c71451efcd0653e1de660473239534afccd62ce2"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG)": "a18534c25aeb01c0673d212e52c6ae4a2f313773"
    },
    "beat_concept": null,
    "scores": {
@@ -3730,10 +3730,8 @@
    "status": "pass",
    "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-6 (pending the new fence still)"
-   ],
-   "notes": "CF-1 footer exact; connectors end on the rails. This frame still embeds the OLD 1280x720 fence still (the only one on d1f6 at e0b84d5) and its CF-6 cover boxes are still tuned to it, so it is correct as committed. CF-6 is NOT applied yet: once the new 1536x1024 fence still lands on d1f6, apply CF-6 and re-render and re-score this frame.",
+   "code_fix": [],
+   "notes": "Re-scored at 29b7444 (CF-6 applied). All three callout arrows touch their rail/zigzag targets. No gaps.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
@@ -3741,12 +3739,13 @@
    "mascot_in_frame": false,
    "previous_v10_pass": true,
    "committed_png_stale": false,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/the-fence.png",
-   "scored_blob": "c71451efcd0653e1de660473239534afccd62ce2",
+   "scored_file": "/tmp/cd29/the-fence.png",
+   "scored_blob": "a18534c25aeb01c0673d212e52c6ae4a2f313773",
    "committed": true,
    "pass": true,
-   "previous_scored_blob": "d3bdcc9ae2990e41e7abb786ce22b60b2ba6afa0",
-   "source_detail": "Committed blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/the-fence.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
+   "previous_scored_blob": "c71451efcd0653e1de660473239534afccd62ce2",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/the-fence.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale.",
+   "note_cf6": "CF-6 landed on d1f6 at 29b7444: new 1536-source fence still embedded with retuned labels. Re-scored this re-rendered frame under the strict arrow rule at 29b7444 (1920x1080 code frame). Arrow sweep: \"Top rail = top price\" tip touches the top rail; \"Price bounces between\" tip touches a zigzag peak; \"Bottom rail = bottom price\" tip touches the bottom rail. Disclaimer exact \"Education only. Not financial advice.\" EXAMPLE present. Numbers match btc-usd-windows.json. PASS."
   },
   {
    "path": "code-drawn/bp-01-introduction/chart/range-2023/walk-the-summer",
@@ -3754,9 +3753,9 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "1806202965fc1de3d2a8f667169e20d8d0595aa4"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "1806202965fc1de3d2a8f667169e20d8d0595aa4"
    },
    "beat_concept": null,
    "scores": {
@@ -3794,9 +3793,9 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "e6bcfcb901c6edda46e4cb67f51a3b553242f7bb"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "e6bcfcb901c6edda46e4cb67f51a3b553242f7bb"
    },
    "beat_concept": null,
    "scores": {
@@ -3834,9 +3833,9 @@
    "beat": null,
    "chapter": null,
    "kind": "title-card",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "1739895a98db2667e1f0a9e9d6fb1a7fae3acebf"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "1739895a98db2667e1f0a9e9d6fb1a7fae3acebf"
    },
    "beat_concept": null,
    "scores": {
@@ -3874,9 +3873,9 @@
    "beat": null,
    "chapter": null,
    "kind": "end-card",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "af3c7d4237615e4f6ef289528745afcc33be1538"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "af3c7d4237615e4f6ef289528745afcc33be1538"
    },
    "beat_concept": null,
    "scores": {
@@ -3914,9 +3913,9 @@
    "beat": null,
    "chapter": null,
    "kind": "thumbnail",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "85e178f39d65a5365d0746083340f9b13f4ed97b"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "85e178f39d65a5365d0746083340f9b13f4ed97b"
    },
    "beat_concept": null,
    "scores": {
@@ -3954,9 +3953,9 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "be842a3421502ebcd6d291ab1dd90d2f75f1424c"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "be842a3421502ebcd6d291ab1dd90d2f75f1424c"
    },
    "beat_concept": null,
    "scores": {
@@ -3994,9 +3993,9 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "cac82c11b24bf7f696cad03eddda8757d6836e1c"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "cac82c11b24bf7f696cad03eddda8757d6836e1c"
    },
    "beat_concept": null,
    "scores": {
@@ -4034,9 +4033,9 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "782c5cb65b8a3129dc57aa842bf7f4851646144e"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "782c5cb65b8a3129dc57aa842bf7f4851646144e"
    },
    "beat_concept": null,
    "scores": {
@@ -4074,9 +4073,9 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "e0963d17eb4683603c0a84b1f2715f5e5001c674"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "e0963d17eb4683603c0a84b1f2715f5e5001c674"
    },
    "beat_concept": null,
    "scores": {
@@ -4114,9 +4113,9 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "7771b0a4ec78e1dc1ef45bfb5aa58dd8de2d0f41"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "7771b0a4ec78e1dc1ef45bfb5aa58dd8de2d0f41"
    },
    "beat_concept": null,
    "scores": {
@@ -4154,9 +4153,9 @@
    "beat": null,
    "chapter": null,
    "kind": "title-card",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "e97603e388dc0ecc93d0d4328dd869ff56083f0a"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "e97603e388dc0ecc93d0d4328dd869ff56083f0a"
    },
    "beat_concept": null,
    "scores": {
@@ -4194,9 +4193,9 @@
    "beat": null,
    "chapter": null,
    "kind": "end-card",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "8c2687c8935252686b48cc0c2f9661b45a12616a"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "8c2687c8935252686b48cc0c2f9661b45a12616a"
    },
    "beat_concept": null,
    "scores": {
@@ -4234,9 +4233,9 @@
    "beat": null,
    "chapter": null,
    "kind": "thumbnail",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "6cd42e185bd443ae01e7f5e3e3de414b3b824ccd"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "6cd42e185bd443ae01e7f5e3e3de414b3b824ccd"
    },
    "beat_concept": null,
    "scores": {
@@ -4274,9 +4273,9 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "4994b009675b0b742a6dcf44e12d21ce05a41fe9"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "4994b009675b0b742a6dcf44e12d21ce05a41fe9"
    },
    "beat_concept": null,
    "scores": {
@@ -4314,9 +4313,9 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "e13d58eb2158f12eba4922fcc5dad8d5a6335b79"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG)": "0e4767e7ab270435e6ccb4f4546fd4f49b4f1147"
    },
    "beat_concept": null,
    "scores": {
@@ -4326,18 +4325,14 @@
     "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "wrong count: 5 crossings marked next to \"10 times\""
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-7"
-   ],
-   "notes": "CF-1 footer exact. CF-3 verified (28px tickets). CF-4 verified: subtitle \"A buy order waits at 27,630. A cross is not a filled order.\" and caption \"Daily closes crossed 27,630 10 times. A cross is not a filled order.\" No jargon left. Still failing on count: the caption (and VO) say 10 crosses, which is right (5 down: 17 Aug, 30 Aug, 2/5/9 Oct; 5 up: 29 Aug, 1/4/6/16 Oct), but the frame marks only the 5 down-crosses (2 BUY tickets + \"3 more in October\" dots). A beginner counts 5 marks next to \"10 times\". Stage 2 noted this but CODE_FIXES had no fix for it; now CF-7.",
+   "code_fix": [],
+   "notes": "Re-scored at 29b7444 (CF-7 applied). 10 crosses now marked; count matches caption. BUY leader touches ring. No arrow gaps.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
@@ -4345,12 +4340,14 @@
    "mascot_in_frame": false,
    "previous_v10_pass": true,
    "committed_png_stale": false,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/limit-orders-wait.png",
-   "scored_blob": "e13d58eb2158f12eba4922fcc5dad8d5a6335b79",
+   "scored_file": "/tmp/cd29/limit-orders-wait.png",
+   "scored_blob": "0e4767e7ab270435e6ccb4f4546fd4f49b4f1147",
    "committed": true,
-   "pass": false,
-   "previous_scored_blob": "095f62d63cb4bf259230937d52b5f239ecb0345f",
-   "source_detail": "Committed blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/limit-orders-wait.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
+   "pass": true,
+   "previous_scored_blob": "e13d58eb2158f12eba4922fcc5dad8d5a6335b79",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/limit-orders-wait.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale.",
+   "note_cf7": "CF-7 landed on d1f6 at 29b7444: frame now marks all 10 crosses (5 down + 5 up as rings) with caption \"10 crosses: 5 down, 5 up (rings)\". Re-scored at 29b7444 under the strict arrow rule: BUY-27,630 leader touches its ring on the path; 10 ring markers sit on the 27,630 line. Count now matches \"10 times\". Disclaimer exact. EXAMPLE present. PASS (flipped from fail).",
+   "flipped_from_pass": false
   },
   {
    "path": "code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/buys-and-sells",
@@ -4358,9 +4355,9 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "f56fafd39b2df68a8c5f5a9352aba1ede18673ed"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "f56fafd39b2df68a8c5f5a9352aba1ede18673ed"
    },
    "beat_concept": null,
    "scores": {
@@ -4398,9 +4395,9 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "94729025c7fd9f6c8dd39294b0ae488cbdfab1ce"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "94729025c7fd9f6c8dd39294b0ae488cbdfab1ce"
    },
    "beat_concept": null,
    "scores": {
@@ -4438,9 +4435,9 @@
    "beat": null,
    "chapter": null,
    "kind": "title-card",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "e0aa669ca949ec15438324d0fed87bcce5805741"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "e0aa669ca949ec15438324d0fed87bcce5805741"
    },
    "beat_concept": null,
    "scores": {
@@ -4478,9 +4475,9 @@
    "beat": null,
    "chapter": null,
    "kind": "end-card",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "bd34c1700cc5003171d09b30910f6a76cb09d668"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "bd34c1700cc5003171d09b30910f6a76cb09d668"
    },
    "beat_concept": null,
    "scores": {
@@ -4518,9 +4515,9 @@
    "beat": null,
    "chapter": null,
    "kind": "thumbnail",
-   "source": "code-drawn@e0b84d5",
+   "source": "code-drawn@29b7444",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "c14e44960dccb48cc4d56dc6a846ae4ed8744954"
+    "cursor/blueprint-professional-rebuild-d1f6 @29b7444 (committed PNG; byte-identical to e0b84d5)": "c14e44960dccb48cc4d56dc6a846ae4ed8744954"
    },
    "beat_concept": null,
    "scores": {
