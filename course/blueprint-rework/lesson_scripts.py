@@ -170,7 +170,7 @@ def bp01() -> list[dict]:
     s = [ident("01", "Introduction")]
     s += stack("The idea", [
         "A grid bot places waiting buy orders on lines below the price and sell orders on lines above it, inside a top and a bottom you choose. The space between your top and your bottom is called the band.",
-        "A limit order is an order that waits at a price you choose. It does not chase the price.",
+        "A limit order is an order that waits at a price you choose. It does not chase the price. Chasing the price would mean moving the order to follow wherever the price has gone.",
             "The sells above need some coin, so a grid starts with part cash and part coin, and that is a description, not advice about what to hold. Cash is money you can spend. Coin is the crypto.",
         "A stop is a rule you write down before you start, saying what you will do if the price leaves the band and does not come back.",
         "When a chart says Example, it means a real past price used as an example, not a forecast.",
@@ -196,10 +196,10 @@ def bp01() -> list[dict]:
         reveal=1,
         focus_price=HIGH, focus_label="High",
         vo=(
-            "The range is the top line and the bottom line, copied from the path. "
+            "The range is the top line and the bottom line, taken from the path. "
             "Every close in this window stayed between those two lines."
         ),
-        caption="The bottom line is 24,930. The top line is 30,331.",
+        caption="The top line and the bottom line, taken from the path. Bottom 24,930. Top 30,331.",
         levels=[LOW, HIGH],
     ))
     s.append(_shot(
@@ -207,6 +207,7 @@ def bp01() -> list[dict]:
         reveal=1,
         vo=(
             "Six equal gaps of about 900 dollars sit between the bottom line and the top line. "
+            "The about 900 dollar gap is the step from one line to the next, worked out as the top line minus the bottom line divided by the six gaps, not the whole band. "
             "Seven lines make those six gaps. A limit order waits on a level. It does not run after the price."
         ),
         caption="Seven lines. Six gaps of about 900.",
@@ -226,10 +227,8 @@ def bp01() -> list[dict]:
         candle={"high": 30184, "low": 29794, "close": 29914, "date": "19 July 2023"},
         vo=(
             "The daily close is the last price of the day. Crypto trades all day, so the day is cut at a set time. "
-            "This shape is a candle: one day of price. "
-            "This candle is 19 July 2023. The high, the low, and the close are labelled. "
-            "A wick is the thin line that reaches up to the high or down to the low. "
-            "The wick shows price went there briefly, then came back before the day closed."
+            "This is a simple candle that shows the day's high, low and close. "
+            "This candle is 19 July 2023. The high, the low, and the close are labelled."
         ),
         caption="19 July 2023. Close 29,914. Low 29,794. High 30,184.",
     ))
@@ -295,7 +294,7 @@ def bp01() -> list[dict]:
     s[-1]["vo"] = (
         "Next lesson: What you are going to need. "
         "The pair is the two things you swap, like Bitcoin and US dollars. "
-        "Bring your notes: the top and bottom of the band, the gaps between the lines, and your stop rule. "
+        "Bring your notes: the top and bottom of the band, the gaps between the lines, your stop rule, and no secrets. "
         "Leave every figure marked EXAMPLE, and no order is sent between lessons."
     )
     return s

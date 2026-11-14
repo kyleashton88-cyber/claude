@@ -267,6 +267,8 @@ def thirds(shot: dict) -> tuple[str, str]:
             text = defin or cap
             if key == "secret" and re.search(r"\bAPI\b", shot.get("vo") or ""):
                 text = "A seed, a key, or an API secret. None of those go on the page."
+            if key == "range" and "taken from the path" in (shot.get("vo") or ""):
+                text = "The top line and the bottom line, taken from the path."
             if text and not text.endswith("."):
                 text += "."
             return term, text
@@ -437,14 +439,17 @@ def _beat_teaching(beat: dict) -> str | None:
 
 
 def _still_shot(beat: dict, line: str) -> dict:
-    caption = line if line.endswith((".", "!", "?")) else line + "."
+    spoken = line if line.endswith((".", "!", "?")) else line + "."
+    caption = spoken
+    if str(beat.get("chapter") or "").strip().lower() == "the map":
+        caption = "The course in 11 steps. This lesson is step 1."
     return {
         "kind": "lesson-still",
         "chapter": beat.get("chapter") or "Picture",
-        "vo": caption,
+        "vo": spoken,
         "caption": caption,
         "lesson_still": str((ROOT / beat["image"]).resolve()),
-        "alt": caption,
+        "alt": spoken,
         "chart": "",
         "series": [],
         "example": False,
@@ -1741,7 +1746,7 @@ def _big_still_tags(
 
 
 def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
-    """Sells fill on the way up, buys on the way down, in time with the sentence."""
+    """The climb leaves the band holding cash. The fall leaves it holding coin."""
     draw = ImageDraw.Draw(base)
     box = (MX, 190, 1280, 750)
     draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=3)
@@ -1767,16 +1772,16 @@ def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
         fall = 1.0 if local > 0.8 else 0.0
     if fall > 0:
         climb = 0.0
-    sells = (250, 320, 390)
-    buys = (550, 620, 690)
-    mid = 470
-    top_y = 210
-    bot_y = 730
+    sells = (370, 430, 490)
+    buys = (570, 630, 690)
+    mid = 530
+    escape_top = 292
+    escape_bot = 734
     if fall > 0:
-        # The fall begins on the middle line, so the dot does not recross the sells.
-        price_y = mid + (bot_y - mid) * fall
+        # A second picture: price starts in the middle, then leaves below the buys.
+        price_y = mid + (escape_bot - mid) * fall
     elif climb > 0:
-        price_y = mid + (top_y - mid) * climb
+        price_y = mid + (escape_top - mid) * climb
     else:
         price_y = mid
 
@@ -1787,32 +1792,34 @@ def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
                 return float(start)
         return float("inf")
 
-    cash_on = fall == 0 and local >= said("cash")
-    coin_on = local >= said("coin")
+    cash_at = said("cash")
+    coin_at = said("coin")
+    cash_on = cash_at <= local < coin_at
+    coin_on = local >= coin_at
 
-    face_mark = font(30)
+    face_mark = font(36)
     face_label = font(30)
 
     def coin_icon(cx: int, cy: int) -> None:
-        draw.ellipse([cx - 22, cy - 22, cx + 22, cy + 22], fill=NAVY, outline=CYAN, width=3)
+        draw.ellipse([cx - 30, cy - 30, cx + 30, cy + 30], fill=NAVY, outline=CYAN, width=4)
         tw = int(face_mark.getlength("C"))
-        draw.text((cx - tw // 2, cy - 18), "C", font=face_mark, fill=CYAN)
+        draw.text((cx - tw // 2, cy - 22), "C", font=face_mark, fill=CYAN)
 
     def note_icon(cx: int, cy: int) -> None:
-        draw.rounded_rectangle([cx - 26, cy - 16, cx + 26, cy + 16], 4, fill=NAVY, outline=MINT, width=3)
+        draw.rounded_rectangle([cx - 36, cy - 22, cx + 36, cy + 22], 6, fill=NAVY, outline=MINT, width=4)
         tw = int(face_mark.getlength("$"))
-        draw.text((cx - tw // 2, cy - 18), "$", font=face_mark, fill=MINT)
+        draw.text((cx - tw // 2, cy - 22), "$", font=face_mark, fill=MINT)
 
     labels = (
         ("Sell orders", sells[1], MINT),
-        ("Price now", mid, WHITE),
+        ("Start price", mid, WHITE),
         ("Buy orders", buys[1], BLUE),
     )
     label_w = max(int(face_label.getlength(text)) for text, _yy, _color in labels)
     label_x = box[0] + 24
     line_x0 = label_x + label_w + 18
-    icon_x = box[2] - 56
-    line_x1 = icon_x - 26 - 14
+    icon_x = box[2] - 64
+    line_x1 = icon_x - 36 - 16
     for text, yy, color in labels:
         draw.text((label_x, yy - 18), text, font=face_label, fill=color)
     for yy in sells:
@@ -1832,13 +1839,20 @@ def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
             coin_icon(icon_x, yy)
         else:
             note_icon(icon_x, yy)
+    left_out = fall == 0 and price_y < sells[0]
+    right_out = fall > 0 and price_y > buys[-1]
+    face_fail = font(28)
+    if left_out or right_out:
+        second = "all cash, nothing left to sell" if left_out else "all coin, nothing left to buy"
+        draw.text((line_x0, 206), "Price left the band:", font=face_fail, fill=AMBER)
+        draw.text((line_x0, 238), second, font=face_fail, fill=AMBER)
     dot_x = (line_x0 + line_x1) // 2
     draw.ellipse([dot_x - 14, price_y - 14, dot_x + 14, price_y + 14], fill=CYAN)
     side = (1360, 220, RIGHT, 750)
     draw.rounded_rectangle(side, 22, fill=GLASS, outline=CYAN, width=3)
     draw.text((side[0] + 36, side[1] + 28), "What you hold", font=font(36), fill=CYAN)
-    cash_box = [side[0] + 36, side[1] + 120, side[2] - 36, side[1] + 210]
-    coin_box = [side[0] + 36, side[1] + 280, side[2] - 36, side[1] + 370]
+    cash_box = [side[0] + 36, side[1] + 110, side[2] - 36, side[1] + 200]
+    coin_box = [side[0] + 36, side[1] + 230, side[2] - 36, side[1] + 320]
     draw.rounded_rectangle(
         cash_box, 14,
         fill=(16, 48, 40) if cash_on else GLASS,
@@ -1853,6 +1867,8 @@ def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
         width=6 if coin_on else 3,
     )
     draw.text((coin_box[0] + 24, coin_box[1] + 22), "Coin", font=font(48), fill=BLUE)
+    draw.text((side[0] + 36, side[1] + 370), "$ = sold for cash", font=font(28), fill=MINT)
+    draw.text((side[0] + 36, side[1] + 412), "coin = bought coin", font=font(28), fill=CYAN)
 
 
 def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) -> None:
@@ -1883,10 +1899,16 @@ def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) 
                 (0.09, 0.64, "Buy orders below"),
             ),
         )
-        # The baked tag is wider than the new one, so cover what sticks out, then redraw.
+        # The baked tag is wider than the new one. Cover it with the card colour, then redraw.
+        samples = []
+        for fy in (0.22, 0.40, 0.72):
+            for fx in (0.62, 0.78):
+                samples.append(crop.getpixel((min(view_w - 1, int(view_w * fx)), min(view_h - 1, int(view_h * fy))))[:3])
+        dark = [pixel for pixel in samples if pixel[1] < 80 and pixel[2] < 120]
+        card = dark[len(dark) // 2] if dark else samples[0]
         d.rectangle(
             [x + int(view_w * 0.09), y + int(view_h * 0.47), x + int(view_w * 0.44), y + int(view_h * 0.60)],
-            fill=NAVY,
+            fill=card,
         )
         _big_still_tags(d, x, y, view_w, view_h, ((0.09, 0.485, "Price now"),))
         cy = y + int(view_h * 0.537)
@@ -1917,9 +1939,12 @@ def paint_candle(base: Image.Image, shot: dict) -> None:
         return int(top + (high - price) / span * (bot - top))
 
     y_high, y_low, y_close = y_of(high), y_of(low), y_of(close)
-    draw.line([(cx, y_high), (cx, y_low)], fill=CYAN, width=6)
-    body_top = min(y_close, y_close - 36)
-    draw.rounded_rectangle([cx - 36, body_top, cx + 36, y_close + 8], 8, fill=CYAN)
+    note = "A simple candle: the day's high, low and close."
+    draw.text((box[0] + 36, box[1] + 72), note, font=font(32), fill=CYAN)
+    draw.line([(cx, y_high), (cx, y_low)], fill=CYAN, width=4)
+    draw.line([(cx - 28, y_high), (cx + 28, y_high)], fill=CYAN, width=4)
+    draw.line([(cx - 28, y_low), (cx + 28, y_low)], fill=CYAN, width=4)
+    draw.rounded_rectangle([cx - 46, y_close - 10, cx + 46, y_close + 10], 6, fill=CYAN)
     labels = (
         (y_high, f"High {high:,}", -280),
         (y_close, f"Close {close:,}", 80),
@@ -1933,17 +1958,17 @@ def paint_course_map(base: Image.Image, shot: dict, local: float) -> None:
     """Steps 1–6, then 7–11, each while that part of the sentence is spoken."""
     draw = ImageDraw.Draw(base)
     steps = (
-        ("1", "Introduction", "What a grid is"),
-        ("2", "Checklist", "What you write before any screen"),
-        ("3", "Definition", "Buys below the price, sells above it"),
-        ("4", "Market shape", "Calm or trending markets"),
-        ("5", "Spacing", "How far apart the lines are"),
-        ("6", "Entry and exit", "Write the finish rule first"),
-        ("7", "Paper", "Copy the page onto a practice form"),
-        ("8", "Monitoring", "Three questions, then stop"),
-        ("9", "Mistakes", "A blank stop, a tight band, a bad count"),
-        ("10", "Scaling", "A second page in its own bucket"),
-        ("11", "Liquidation", "When borrowed money forces your position closed"),
+        ("1", "Introduction"),
+        ("2", "Checklist"),
+        ("3", "Definition"),
+        ("4", "Market shape"),
+        ("5", "Spacing"),
+        ("6", "Entry and exit"),
+        ("7", "Paper"),
+        ("8", "Monitoring"),
+        ("9", "Mistakes"),
+        ("10", "Scaling"),
+        ("11", "Liquidation"),
     )
     slide = 1
     words = shot.get("word_times") or []
@@ -1955,15 +1980,13 @@ def paint_course_map(base: Image.Image, shot: dict, local: float) -> None:
     if not words and local >= float(shot.get("duration") or 12) * 0.62:
         slide = 2
     shown = steps[:6] if slide == 1 else steps[6:]
-    y = 200
-    for number, name, gloss in shown:
+    y = 210
+    for number, name in shown:
         draw.rounded_rectangle([MX, y, MX + 72, y + 64], 12, fill=TAG, outline=CYAN, width=2)
         num_x = MX + 22 if len(number) == 1 else MX + 8
         draw.text((num_x, y + 12), number, font=font(36), fill=CYAN)
-        draw.text((MX + 96, y + 2), name, font=font(40), fill=CYAN)
-        gloss_size = fit_size(gloss, 1500, 36, 32)
-        draw.text((MX + 96, y + 46), gloss, font=font(gloss_size), fill=WHITE)
-        y += 90
+        draw.text((MX + 96, y + 10), name, font=font(40), fill=CYAN)
+        y += 88
 
 
 def paint(shot: dict, local: float, progress: float) -> np.ndarray:
@@ -2302,7 +2325,7 @@ def _narrate_shot(speaker, shot: dict) -> tuple[np.ndarray, int, list]:
                 and (shot.get("chapter") or "") == "The map"
                 and len(sentences) > 2
             ):
-                gap = 0.40
+                gap = 0.70
             buf = _xfade(buf, np.zeros(int(gap * sr), dtype=np.float32), sr)
     hold = max(0.0, _reading_time(shot) - len(buf) / sr)
     revealing = shot.get("kind") in {"chart", "analogy"} and not shot.get("board") and not shot.get("candle")
@@ -2354,35 +2377,71 @@ def synth_voice(shots: list[dict], dest: Path) -> tuple[float, list]:
     return clock, timed, expanded
 
 
-def _write_lesson_captions(vtt: Path, srt: Path, words: list) -> None:
-    """Cues start on the spoken word. A short line holds into the pause, not early."""
-    from voice.captions import _stamp
+def _caption_sentences(words: list) -> list[list]:
+    """One group per spoken sentence. A stop is . ? or ! on the last word."""
+    sentences: list[list] = []
+    current: list = []
+    for word in words:
+        current.append(word)
+        if str(word.text).rstrip().endswith((".", "?", "!")):
+            sentences.append(current)
+            current = []
+    if current:
+        sentences.append(current)
+    return sentences
 
-    groups: list[list] = []
+
+def _pack_caption_line(words: list, width: int) -> list[list]:
+    lines: list[list] = []
     current: list = []
     for word in words:
         trial = current + [word]
         text = " ".join(item.text for item in trial)
-        span = max(0.05, trial[-1].end - trial[0].start)
-        too_fast = len(trial) > 1 and len(text) / span > 18.0
-        if current and (len(text) > 42 or too_fast):
-            groups.append(current)
+        if current and len(text) > width:
+            lines.append(current)
             current = [word]
         else:
             current = trial
     if current:
-        groups.append(current)
+        lines.append(current)
+    return lines
+
+
+def _balanced_caption_lines(words: list, width: int = 42) -> list[list]:
+    """Fewest lines that fit, then the split whose longest line is as short as possible."""
+    if not words:
+        return []
+    longest = max(len(str(word.text)) for word in words)
+    cap = max(width, longest)
+    fewest = _pack_caption_line(words, cap)
+    best = fewest
+    lo, hi = longest, cap
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        trial = _pack_caption_line(words, mid)
+        if len(trial) <= len(fewest):
+            best = trial
+            hi = mid - 1
+        else:
+            lo = mid + 1
+    return best
+
+
+def _write_lesson_captions(vtt: Path, srt: Path, words: list) -> None:
+    """One sentence at a time. A line holds long enough to read, and does not cross a stop."""
+    from voice.captions import _stamp
+
+    width = 42
+    limit = 17.9
     cues = []
-    for index, group in enumerate(groups):
-        text = " ".join(word.text for word in group)
-        start = group[0].start
-        spoken = group[-1].end
-        nxt = groups[index + 1][0].start if index + 1 < len(groups) else None
-        end = max(spoken, start + len(text) / 18.0)
-        # A cue ends when the next one starts, so two lines are never on screen together.
-        if nxt is not None:
-            end = min(end, nxt)
-        cues.append((start, max(end, start + 0.001), [text]))
+    previous_end = 0.0
+    for sentence in _caption_sentences(words):
+        for group in _balanced_caption_lines(sentence, width):
+            text = " ".join(word.text for word in group)
+            start = max(group[0].start, previous_end)
+            end = max(group[-1].end, start + len(text) / limit)
+            cues.append((start, end, [text]))
+            previous_end = end
     vtt_lines = ["WEBVTT", ""]
     srt_lines = []
     for index, (start, end, lines) in enumerate(cues, start=1):
@@ -2705,10 +2764,7 @@ def _cap_caption_speed(path: Path, limit: float = 18.0) -> None:
     gate measures the milliseconds written in the file, not the float that
     was rounded away.
     """
-    from voice.captions import refit_vtt_text
-
-    fitted = refit_vtt_text(path.read_text(encoding="utf-8"), limit=limit)
-    path.write_text(_clamp_cue_ends(fitted), encoding="utf-8")
+    path.read_text(encoding="utf-8")
     gate_root = ROOT / "skills/video-production/quality-gate"
     if str(gate_root) not in sys.path:
         sys.path.insert(0, str(gate_root))
@@ -2727,6 +2783,15 @@ def _cap_caption_speed(path: Path, limit: float = 18.0) -> None:
                 f"{path.name} {cue.start:.2f}s is {cps:.1f} characters per second "
                 f"after the {limit:.0f} cap"
             )
+        if span < 0.7:
+            raise SystemExit(
+                f"{path.name} {cue.start:.2f}s is only {span:.2f}s. A caption needs 0.7s"
+            )
+        body = cue.text.rstrip()
+        if any(mark in body[:-1] for mark in ".?!"):
+            raise SystemExit(
+                f"{path.name} {cue.start:.2f}s crosses a sentence end: {cue.text}"
+            )
 
 
 def _srt_from_capped_vtt(vtt: Path, srt: Path) -> None:
@@ -2738,16 +2803,11 @@ def _srt_from_capped_vtt(vtt: Path, srt: Path) -> None:
         sys.path.insert(0, str(gate_root))
     from gate.captions import parse_captions
 
-    clamped = _clamp_cue_ends(vtt.read_text(encoding="utf-8"))
-    vtt.write_text(clamped, encoding="utf-8")
     lines: list[str] = []
-    parsed = list(parse_captions(clamped))
+    parsed = list(parse_captions(vtt.read_text(encoding="utf-8")))
     for index, cue in enumerate(parsed):
-        end = cue.end
-        if index + 1 < len(parsed):
-            end = min(end, parsed[index + 1].start)
         lines.append(str(index + 1))
-        lines.append(f"{_stamp(cue.start, srt=True)} --> {_stamp(end, srt=True)}")
+        lines.append(f"{_stamp(cue.start, srt=True)} --> {_stamp(cue.end, srt=True)}")
         lines.append(cue.text)
         lines.append("")
     srt.write_text("\n".join(lines) + "\n", encoding="utf-8")
