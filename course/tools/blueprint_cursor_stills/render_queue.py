@@ -434,6 +434,88 @@ def bp02_014() -> None:
     }])
 
 
+def bp04_015() -> None:
+    img = canvas()
+    head(img, "SORT ONE CHART", "SORT", size=52)
+    card(img, (160, 220, 1380, 920))
+    # Handmade path: a sideways weave, no words on it.
+    hline(img, 240, 700, 300, (90, 160, 190), 4)
+    hline(img, 240, 700, 460, (90, 160, 190), 4)
+    solid(img, [(260, 380), (360, 300), (460, 460), (560, 300), (660, 420)])
+    # Three shape boxes. The first is ticked. Icons only, no extra words.
+    boxes = [(760, 270, 940, 450), (980, 270, 1160, 450), (1200, 270, 1340, 450)]
+    for i, (x0, y0, x1, y1) in enumerate(boxes):
+        card(img, (x0, y0, x1, y1))
+    # Icons: weave, staircase, drop.
+    solid(img, [(790, 370), (840, 320), (890, 400), (920, 340)], width=4)
+    solid(img, [(1010, 400), (1050, 330), (1090, 380), (1130, 320)], width=4)
+    solid(img, [(1230, 320), (1270, 320), (1310, 410)], width=4)
+    # Tick on the first box, drawn inside so it is not an arrow.
+    solid(img, [(790, 400), (810, 420), (850, 360)], MINT, 5)
+    face = font(FONT_SEMI, 32)
+    tag(img, (170, 500, 520, 590), ["Pick one shape"], face)
+    # Ticked box left stroke is x=780. Tip sits 2px inside that stroke.
+    solid(img, [(762, 300), (762, 420)], CYAN, 10)
+    arrow(img, (520, 545), (762, 360))
+    # Blank reason line. The arrow is horizontal and overlaps its left end.
+    hline(img, 620, 1280, 760, WHITE, 8)
+    tag(img, (120, 715, 560, 805), ["Write one reason why"], face)
+    arrow(img, (560, 760), (624, 760))
+    stamp(img, 1240, 860)
+    final = save(img, "course/images/bp-04-market-regimes/015.png")
+    assert_tip(final, (762, 360), (766, 360), "shape")
+    assert_tip(final, (624, 760), (630, 760), "reason")
+    record([{
+        "path": "course/images/bp-04-market-regimes/015.png",
+        "lesson": "bp-04-market-regimes",
+        "shows": "A handmade path, three shape boxes with the first one ticked, and a blank line for one reason.",
+        "alt": "Sort one chart on paper: pick one shape, then write one reason why.",
+        "batch": "cursor-bp04-015",
+    }])
+
+
+def bp05_006() -> None:
+    img = canvas()
+    head(img, "HALF THE GAP, DOUBLE THE LINES", "DOUBLE", size=40)
+    # Equal-height boxes. Interior lines only: 6 on the left, 12 on the right.
+    card(img, (120, 300, 700, 780))
+    card(img, (836, 300, 1416, 780))
+    left_ys = [360 + i * 64 for i in range(6)]
+    right_ys = [360 + i * (320 / 11) for i in range(12)]
+    for y in left_ys:
+        hline(img, 180, 640, y, CYAN, 5)
+    for y in right_ys:
+        hline(img, 896, 1356, y, CYAN, 5)
+    # Dashed line joining the tops, with a dash at the left end.
+    layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    x = 250
+    while x < 1280:
+        d.line([(px(x), px(268)), (px(min(x + 28, 1280)), px(268))], fill=WHITE + (255,), width=px(6))
+        x += 48
+    paste_layer(img, layer)
+    face = font(FONT_SEMI, 30)
+    tag(img, (120, 190, 470, 250), ["Same height"], face)
+    arrow(img, (300, 250), (264, 268))
+    tag(img, (836, 800, 1416, 880), ["Smaller gaps need more lines"], face)
+    # Right box bottom stroke is y=780. Tip sits 2px inside it.
+    arrow(img, (1120, 800), (1120, 776))
+    tag(img, (120, 820, 700, 910), ["Recount: 38 gaps, not 40"], face)
+    stamp(img, 1280, 200)
+    final = save(img, "course/images/bp-05-spacing-and-range/006.png")
+    assert_tip(final, (264, 268), (270, 268), "height")
+    assert_tip(final, (1120, 776), (1120, 780), "lines")
+    if len(left_ys) != 6 or len(right_ys) != 12:
+        raise SystemExit("line count")
+    record([{
+        "path": "course/images/bp-05-spacing-and-range/006.png",
+        "lesson": "bp-05-spacing-and-range",
+        "shows": "Two boxes of the same height. The left has 6 lines and the right has 12. The recount is 38 gaps, not 40.",
+        "alt": "Halving the gap doubles the lines in the same height. Recount: 38 gaps, not 40.",
+        "batch": "cursor-bp05-006",
+    }])
+
+
 def plain(rel, lesson, title, cyan, lines, shows, alt, batch, size=34) -> None:
     img = canvas()
     head(img, title, cyan, size=40 if len(title) < 36 else 34)
