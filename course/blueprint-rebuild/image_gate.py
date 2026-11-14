@@ -71,6 +71,9 @@ def images_for_lesson(sid: str) -> list[dict]:
             add(rel, "analogy-still")
         elif shot.get("analogy"):
             add(ANALOGY[shot["analogy"]], "analogy-still")
+        if shot.get("lesson_still"):
+            rel = str(Path(shot["lesson_still"]).resolve().relative_to(ROOT)).replace("\\", "/")
+            add(rel, "lesson-still")
         if shot.get("kind") in {"chart", "analogy"}:
             chapter = _slug(str(shot.get("chapter") or "chart"))
             chart = _slug(str(shot.get("chart") or "chart"))
@@ -78,10 +81,6 @@ def images_for_lesson(sid: str) -> list[dict]:
     add(f"code-drawn/{sid}/title-card", "title-card")
     add(f"code-drawn/{sid}/end-card", "end-card")
     add(f"code-drawn/{sid}/thumbnail", "thumbnail")
-    folder = ROOT / "course/images" / sid
-    if folder.is_dir():
-        for png in sorted(folder.glob("*.png")):
-            add(str(png.relative_to(ROOT)).replace("\\", "/"), "lesson-still")
     return rows
 
 
