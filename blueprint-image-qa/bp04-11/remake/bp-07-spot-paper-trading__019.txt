@@ -4,6 +4,7 @@ MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 8
 
 Headline: "SCREENS CHANGE" (the word CHANGE in cyan, the rest white).
 Scene: Two generic glass forms side by side with the same rows in a different order, cyan arrows matching rows across.
+ARROW AND LAYOUT FIX (critical, QA FIX v2): in v1 the four scene-matching connector arrows stopped short of the right-hand form, leaving visible navy gaps at the points. Every connector tip must physically touch — overlapping the left edge of — its matching row on the right form, with ZERO gap. 'Match them to your five' must point at a connector (or its tip) without leaving that connector short of the form. Also fix the forms themselves: both sides must show the same five rows (Pair, Top price, Bottom price, Number of gaps, Your rules). v1 drew 4 rows on the left and 5 on the right, and the rows were not visibly in a different order. Shuffle the right-hand order so the matchers have to cross. Keep 'Labels may move' on the right-hand form.
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
 - "Labels may move": arrow tip touches the right-hand form, whose rows are in a different order.
 - "Match them to your five": arrow tip touches one cyan matching arrow between the forms.

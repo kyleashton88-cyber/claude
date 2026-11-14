@@ -8,17 +8,17 @@
   "not_in_scope": "course/images/_held/*.png (10 files: bp-06 014/017, bp-07 012/017/020, bp-08 003/006/007/009/011) are not referenced by any lesson script and were not scored. Shared title-art/mascot assets are already on BP01-03_PASS_LIST.json.",
   "counts": {
     "total": 161,
-    "fail": 120,
+    "fail": 101,
     "by_lesson": {
       "bp-04-market-regimes": {
         "total": 20,
-        "pass": 15,
-        "fail": 5
+        "pass": 16,
+        "fail": 4
       },
       "bp-05-spacing-and-range": {
         "total": 19,
-        "pass": 14,
-        "fail": 5
+        "pass": 16,
+        "fail": 3
       },
       "bp-06-entry-and-exit": {
         "total": 20,
@@ -27,8 +27,8 @@
       },
       "bp-07-spot-paper-trading": {
         "total": 20,
-        "pass": 0,
-        "fail": 20
+        "pass": 16,
+        "fail": 4
       },
       "bp-08-managing-and-monitoring": {
         "total": 20,
@@ -51,7 +51,7 @@
         "fail": 20
       }
     },
-    "pass": 41
+    "pass": 60
   },
   "images": [
     {
@@ -861,63 +861,61 @@
       "beat": 10,
       "chapter": "What you do with the label",
       "kind": "lesson-still",
-      "source": "committed still (restored original; was chatgpt-web web2 pass, flipped under the panel-connector arrow rule); d1f6 and beginner-images blob 100ad315",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "100ad3151b6585af8056000afa1de82cc615cb63",
-        "cursor/blueprint-beginner-images": "100ad3151b6585af8056000afa1de82cc615cb63"
+        "cursor/blueprint-professional-rebuild-d1f6": "9ad06527943e4ebb5169b1b44645beac82b2c98f",
+        "cursor/blueprint-beginner-images": "9ad06527943e4ebb5169b1b44645beac82b2c98f"
       },
       "beat_concept": "The label decides whether the ladder is even the tool on the page.",
       "scores": {
         "beginner_clarity": 5,
         "composition_hierarchy": 4,
-        "craft_polish": 4,
+        "craft_polish": 5,
         "brand_fidelity": 5,
         "text_legibility": 5,
         "character_consistency": null,
         "label_accuracy": 5
       },
-      "hard_fails": [
-        "panel-connector arrows: all three column arrowheads (Range->Ladder, Trend->Pile, Break->Stop) stop 20-40px above their icons and float in empty space; tips do not touch their targets"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-04-market-regimes__010.txt",
-      "notes": "Flipped under the strict panel-connector arrow rule: the three thick cyan column arrows end well above the Ladder/Pile/Stop icons (measured 20-40px gaps). Restored the original committed still (100ad315); out/ copy absent. v3 prompt pins each arrowhead to touch its icon.",
+      "notes": "web3 PASS. All three column arrows now touch their targets: Range->Ladder tip on the top rung, Trend->Pile tip on the top disc, Break->Stop tip on the amber stop line. Headline 'DOES A GRID EVEN FIT?' is properly spaced. EXAMPLE stamp on the Break card. Labels sit under the items with no extra arrows. Margins 80/98/78/97. Placed at out/ and course/images/bp-04-market-regimes/010.png.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 78,
-        "right": 110,
-        "top": 68,
-        "bottom": 121
+        "left": 80,
+        "right": 98,
+        "top": 78,
+        "bottom": 97
       },
-      "scored_file": null,
-      "scored_blob": "100ad3151b6585af8056000afa1de82cc615cb63",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/010.png",
+      "scored_blob": "9ad06527943e4ebb5169b1b44645beac82b2c98f",
       "committed": true,
-      "pass": false,
+      "pass": true,
       "remake_review": {
-        "file": "gen/bp-04-market-regimes/010/web2.png",
-        "blob": "387e1016e1b7b81b49b93dc4eff7a613a4908312",
+        "file": "gen/bp-04-market-regimes/010/web3.png",
+        "blob": "9ad06527943e4ebb5169b1b44645beac82b2c98f",
         "size": "1536x1024",
         "margins_px": {
-          "left": 78,
-          "right": 110,
-          "top": 68,
-          "bottom": 121
+          "left": 80,
+          "right": 98,
+          "top": 78,
+          "bottom": 97
         },
-        "scored_against": "6848d09 narration + prompt at this commit",
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
         "scores": {
           "beginner_clarity": 5,
           "composition_hierarchy": 4,
-          "craft_polish": 4,
+          "craft_polish": 5,
           "brand_fidelity": 5,
           "text_legibility": 5,
           "character_consistency": null,
           "label_accuracy": 5
         },
         "hard_fails": [],
-        "notes": "Three chart cards (Range weave, Trend staircase, Break drop) with tags under each, three thick down arrows to Ladder, Pile (three plain glass discs) and Stop (amber line with a note card). EXAMPLE inside the Break card. Exactly three arrows; side margins 78/110px; tags well inside 100px. Matches 6848d09 beat 10 \"three arrows from the three shapes to Ladder, Pile, and Stop\". Small kink in the Range weave, not distracting.",
+        "notes": "web3 PASS. All three column arrows now touch their targets: Range->Ladder tip on the top rung, Trend->Pile tip on the top disc, Break->Stop tip on the amber stop line. Headline 'DOES A GRID EVEN FIT?' is properly spaced. EXAMPLE stamp on the Break card. Labels sit under the items with no extra arrows. Margins 80/98/78/97. Placed at out/ and course/images/bp-04-market-regimes/010.png.",
         "pass": true
       },
       "previous_remake_reviews": [
@@ -1906,41 +1904,63 @@
       "beat": 5,
       "chapter": "The span",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "ddcdc9013affec15352dd94600415b3eb1891c03",
-        "cursor/blueprint-beginner-images": "ddcdc9013affec15352dd94600415b3eb1891c03"
+        "cursor/blueprint-professional-rebuild-d1f6": "ff2a27d9f6331b3b57fb421a56be3e9a69b5271e",
+        "cursor/blueprint-beginner-images": "ff2a27d9f6331b3b57fb421a56be3e9a69b5271e"
       },
       "beat_concept": "Nineteen gaps times a half of one percent is a span of nine and a half percent from the lower line to the upper line.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "MISSPELLING: the label reads 'Eacn gap: 0.5%' (should be 'Each gap: 0.5%') - verified at 4-8x. Hard fail on spelling, even though the 0.5%/9.5%/19-gaps values are correct."
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-05-spacing-and-range__005.txt",
-      "notes": "web1 remake FAIL. MISSPELLING: the label reads 'Eacn gap: 0.5%' (should be 'Each gap: 0.5%') - verified at 4-8x. Hard fail on spelling, even though the 0.5%/9.5%/19-gaps values are correct. v2 prompt written (v1 superseded).",
+      "notes": "web2 PASS. 'Each gap: 0.5%' is spelled correctly (v1 was 'Eacn gap'). Stack shows 19 bars; labels 0.5%, 9.5%, and 19 are correct. All three tips touch (small gap block, stack, and the bracket spine). EXAMPLE present. Margins 82/82/81/170. Placed at out/ and course/images/bp-05-spacing-and-range/005.png.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 48,
-        "right": 212,
-        "top": 109,
-        "bottom": 283
+        "left": 82,
+        "right": 82,
+        "top": 81,
+        "bottom": 170
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/005.png",
-      "scored_blob": "ddcdc9013affec15352dd94600415b3eb1891c03",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/005.png",
+      "scored_blob": "ff2a27d9f6331b3b57fb421a56be3e9a69b5271e",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-05-spacing-and-range/005/web2.png",
+        "blob": "ff2a27d9f6331b3b57fb421a56be3e9a69b5271e",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 82,
+          "right": 82,
+          "top": 81,
+          "bottom": 170
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web2 PASS. 'Each gap: 0.5%' is spelled correctly (v1 was 'Eacn gap'). Stack shows 19 bars; labels 0.5%, 9.5%, and 19 are correct. All three tips touch (small gap block, stack, and the bracket spine). EXAMPLE present. Margins 82/82/81/170. Placed at out/ and course/images/bp-05-spacing-and-range/005.png.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-05-spacing-and-range/006.png",
@@ -1969,7 +1989,7 @@
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-05-spacing-and-range__006.txt",
-      "notes": "web1 remake FAIL. Two big unexplained numerals '5' and '9' are drawn inside the boxes; they don't illustrate 'DOUBLE THE LINES' (9 is not double 5) and confuse a beginner. 'Recount: 38 gaps, not 40' is correct but the 5/9 digits are a label-accuracy/clarity fail. v2 prompt written (v1 superseded).",
+      "notes": "web1 remake FAIL. Two big unexplained numerals '5' and '9' are drawn inside the boxes; they don't illustrate 'DOUBLE THE LINES' (9 is not double 5) and confuse a beginner. 'Recount: 38 gaps, not 40' is correct but the 5/9 digits are a label-accuracy/clarity fail. v2 prompt written (v1 superseded). | web2 remake FAIL. Left box has exactly 6 interior lines, but the right box has 11, not the required 12 (twice 6), so it does not illustrate DOUBLE THE LINES. The house-example caption 'Recount: 38 gaps, not 40' cannot stand in for the missing line. Both label arrows touch (dashed same-height line; a line in the right box). Unexplained 5/9 numerals from the prior fail are gone. Margins 80/58/73/77. Next: web3.png on the v3 prompt.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -1982,7 +2002,34 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/006.png",
       "scored_blob": "d31a2af4cf4d0b4ac729ef703620c0c8cc0d9315",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "previous_remake_reviews": [],
+      "remake_review": {
+        "file": "gen/bp-05-spacing-and-range/006/web2.png",
+        "blob": "858acf34b0185014bd5a33bea62ffcad4a088703",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 80,
+          "right": 58,
+          "top": 73,
+          "bottom": 77
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 4,
+          "brand_fidelity": 5,
+          "text_legibility": 4,
+          "character_consistency": null,
+          "label_accuracy": 2
+        },
+        "hard_fails": [
+          "wrong number: right box has 11 interior grid lines, not the required 12 (double the left box's 6), so the still does not illustrate DOUBLE THE LINES"
+        ],
+        "notes": "web2 remake FAIL. Left box has exactly 6 interior lines, but the right box has 11, not the required 12 (twice 6), so it does not illustrate DOUBLE THE LINES. The house-example caption 'Recount: 38 gaps, not 40' cannot stand in for the missing line. Both label arrows touch (dashed same-height line; a line in the right box). Unexplained 5/9 numerals from the prior fail are gone. Margins 80/58/73/77. Next: web3.png on the v3 prompt.",
+        "pass": false
+      }
     },
     {
       "path": "course/images/bp-05-spacing-and-range/007.png",
@@ -2331,7 +2378,7 @@
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-05-spacing-and-range__015.txt",
-      "notes": "web1 remake FAIL. Only FOUR recap chips (Box first / Count gaps / Check fees / One change at a time); beat 15 calls for FIVE recap chips (missing the '19 gaps = 9.5%' house-example chip). v2 prompt written (v1 superseded).",
+      "notes": "web1 remake FAIL. Only FOUR recap chips (Box first / Count gaps / Check fees / One change at a time); beat 15 calls for FIVE recap chips (missing the '19 gaps = 9.5%' house-example chip). v2 prompt written (v1 superseded). | web2 remake FAIL. All five recap chips are present, including the previously missing '19 gaps = 9.5%'. No arrows. Content is otherwise excellent. Hard fail is the cramped right margin: the 'One change at a time' tag's bright teal reaches x=1496, leaving only 39px (luma>110). Margins 75/39/116/320. Next: web3.png on the v3 prompt.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -2344,7 +2391,34 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/015.png",
       "scored_blob": "e582d8d62f5d9d646b8173a19613b526f9bbf9a4",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "previous_remake_reviews": [],
+      "remake_review": {
+        "file": "gen/bp-05-spacing-and-range/015/web2.png",
+        "blob": "18daf2df4484bc9d680c4a69d9b4b7da1da1e80e",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 75,
+          "right": 39,
+          "top": 116,
+          "bottom": 320
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 3,
+          "craft_polish": 2,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [
+          "cramped margin: right margin 39px (luma>110 bbox) on the 'One change at a time' tag, which reaches x=1496 on a 1536-wide frame; hard fail if any side is under 45px"
+        ],
+        "notes": "web2 remake FAIL. All five recap chips are present, including the previously missing '19 gaps = 9.5%'. No arrows. Content is otherwise excellent. Hard fail is the cramped right margin: the 'One change at a time' tag's bright teal reaches x=1496, leaving only 39px (luma>110). Margins 75/39/116/320. Next: web3.png on the v3 prompt.",
+        "pass": false
+      }
     },
     {
       "path": "course/images/bp-05-spacing-and-range/016.png",
@@ -2352,41 +2426,63 @@
       "beat": 16,
       "chapter": "Your turn",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "ea3ff8e8dced49c8956a99429db0a63b12c622ea",
-        "cursor/blueprint-beginner-images": "ea3ff8e8dced49c8956a99429db0a63b12c622ea"
+        "cursor/blueprint-professional-rebuild-d1f6": "616de7eae6a164f4f8c4c2b739e54979b7c913fd",
+        "cursor/blueprint-beginner-images": "616de7eae6a164f4f8c4c2b739e54979b7c913fd"
       },
       "beat_concept": "Practice: Twenty order lines make nineteen gaps.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "Shows only ~12 ladder lines, not the TWENTY lines / nineteen gaps the beat requires ('a sketch of twenty lines', count the gaps one to nineteen). Count mismatch."
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-05-spacing-and-range__016.txt",
-      "notes": "web1 remake FAIL. Shows only ~12 ladder lines, not the TWENTY lines / nineteen gaps the beat requires ('a sketch of twenty lines', count the gaps one to nineteen). Count mismatch. v2 prompt written (v1 superseded).",
+      "notes": "web2 PASS. Worksheet shows 20 dark grid lines and 19 green gap ticks. 'Count the lines' tip sits on the left end of the top line; 'Gaps = lines minus 1' tip sits on a green check. EXAMPLE present. Pencil inside the page. Margins 76/70/70/93. Placed at out/ and course/images/bp-05-spacing-and-range/016.png.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 89,
-        "right": 516,
-        "top": 102,
-        "bottom": 334
+        "left": 76,
+        "right": 70,
+        "top": 70,
+        "bottom": 93
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/016.png",
-      "scored_blob": "ea3ff8e8dced49c8956a99429db0a63b12c622ea",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/016.png",
+      "scored_blob": "616de7eae6a164f4f8c4c2b739e54979b7c913fd",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-05-spacing-and-range/016/web2.png",
+        "blob": "616de7eae6a164f4f8c4c2b739e54979b7c913fd",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 76,
+          "right": 70,
+          "top": 70,
+          "bottom": 93
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web2 PASS. Worksheet shows 20 dark grid lines and 19 green gap ticks. 'Count the lines' tip sits on the left end of the top line; 'Gaps = lines minus 1' tip sits on a green check. EXAMPLE present. Pencil inside the page. Margins 76/70/70/93. Placed at out/ and course/images/bp-05-spacing-and-range/016.png.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-05-spacing-and-range/017.png",
@@ -2495,7 +2591,7 @@
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-05-spacing-and-range__019.txt",
-      "notes": "web1 remake FAIL. Panel-connector fail: the next->card transition arrowhead stops ~25px short of the glass card left border (tip x=761, card border x=786) and floats in the gap; tip does not touch its target. Outro text 'Entry and exit rules' is correct. v2 prompt written (v1 superseded).",
+      "notes": "web1 remake FAIL. Panel-connector fail: the next->card transition arrowhead stops ~25px short of the glass card left border (tip x=761, card border x=786) and floats in the gap; tip does not touch its target. Outro text 'Entry and exit rules' is correct. v2 prompt written (v1 superseded). | web2 remake FAIL under the strict panel-connector arrow rule. Outro title is exact: 'Next lesson: Entry and exit rules.' 'Bring your notes' tip sits on the notebook face. But the scene-transition arrow still stops short of the glass card (visible gap; v1 was about 25px short and this remake did not close it). Margins 85/95/97/213. Next: web3.png on the v3 prompt.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -2508,7 +2604,34 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/019.png",
       "scored_blob": "3c803728aec2455ab88e87333c3ca005e491b2b9",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "previous_remake_reviews": [],
+      "remake_review": {
+        "file": "gen/bp-05-spacing-and-range/019/web2.png",
+        "blob": "50ca10a5e21678e6600b5d83c389277c890c0797",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 85,
+          "right": 95,
+          "top": 97,
+          "bottom": 213
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 4,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 3
+        },
+        "hard_fails": [
+          "arrow tip stops short of target: scene-transition / panel-connector arrow tip stops short of the glass \"ENTRY AND EXIT RULES\" card (visible navy gap at the point)"
+        ],
+        "notes": "web2 remake FAIL under the strict panel-connector arrow rule. Outro title is exact: 'Next lesson: Entry and exit rules.' 'Bring your notes' tip sits on the notebook face. But the scene-transition arrow still stops short of the glass card (visible gap; v1 was about 25px short and this remake did not close it). Margins 85/95/97/213. Next: web3.png on the v3 prompt.",
+        "pass": false
+      }
     },
     {
       "path": "course/images/bp-06-entry-and-exit/001.png",
@@ -3828,39 +3951,63 @@
       "beat": 1,
       "chapter": "Hook",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "e2184bef4663c375d8c91a48a36d0144db020839",
-        "cursor/blueprint-beginner-images": "e2184bef4663c375d8c91a48a36d0144db020839"
+        "cursor/blueprint-professional-rebuild-d1f6": "549b01ee4db85de9a2dfb6d36b1a41f78aeab7c9",
+        "cursor/blueprint-beginner-images": "549b01ee4db85de9a2dfb6d36b1a41f78aeab7c9"
       },
       "beat_concept": "This lesson walks fields on a paper or demo spot screen. It does not place an order.",
       "scores": {
-        "beginner_clarity": 3,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__001.txt",
-      "notes": "Notebook -> blank form with a stamp: 'walk fields on a paper or demo screen, no order placed' only implied; 'PAPER SPOT' headline is jargon.",
+      "notes": "web1 PASS (first scoring). Doorway-and-form walk-through with five empty rows and a greyed, locked confirm button. EXAMPLE present. 'Practice form' tip sits on the form's top edge; 'We stop before confirm' tip sits on the confirm button. Margins 68/106/70/112.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 71,
-        "right": 280,
-        "top": 110,
-        "bottom": 204
+        "left": 68,
+        "right": 106,
+        "top": 70,
+        "bottom": 112
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/001.png",
-      "scored_blob": "e2184bef4663c375d8c91a48a36d0144db020839",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/001.png",
+      "scored_blob": "549b01ee4db85de9a2dfb6d36b1a41f78aeab7c9",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/001/web.png",
+        "blob": "549b01ee4db85de9a2dfb6d36b1a41f78aeab7c9",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 68,
+          "right": 106,
+          "top": 70,
+          "bottom": 112
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web1 PASS (first scoring). Doorway-and-form walk-through with five empty rows and a greyed, locked confirm button. EXAMPLE present. 'Practice form' tip sits on the form's top edge; 'We stop before confirm' tip sits on the confirm button. Margins 68/106/70/112.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/002.png",
@@ -3868,39 +4015,63 @@
       "beat": 2,
       "chapter": "Disclaimer",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "61218fc21d13d94ff3d02f6e1f5e8793f29c1048",
-        "cursor/blueprint-beginner-images": "61218fc21d13d94ff3d02f6e1f5e8793f29c1048"
+        "cursor/blueprint-professional-rebuild-d1f6": "296cdd285aa5059025a6e74004a9ca737fb2a3e1",
+        "cursor/blueprint-beginner-images": "296cdd285aa5059025a6e74004a9ca737fb2a3e1"
       },
       "beat_concept": "Education only. Not financial advice.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__002.txt",
-      "notes": "Single bar reading 'EDUCATION, RISK, EXAMPLE': word list, not 'Education only. Not financial advice.'.",
+      "notes": "web1 PASS (first scoring). Disclaimer is exact: 'Education only. Not financial advice.' Headline EDUCATION ONLY. No arrows. Margins 84/85/69/261.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 271,
-        "top": 110,
-        "bottom": 289
+        "left": 84,
+        "right": 85,
+        "top": 69,
+        "bottom": 261
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/002.png",
-      "scored_blob": "61218fc21d13d94ff3d02f6e1f5e8793f29c1048",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/002.png",
+      "scored_blob": "296cdd285aa5059025a6e74004a9ca737fb2a3e1",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/002/web.png",
+        "blob": "296cdd285aa5059025a6e74004a9ca737fb2a3e1",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 84,
+          "right": 85,
+          "top": 69,
+          "bottom": 261
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web1 PASS (first scoring). Disclaimer is exact: 'Education only. Not financial advice.' Headline EDUCATION ONLY. No arrows. Margins 84/85/69/261.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/003.png",
@@ -3908,7 +4079,7 @@
       "beat": 3,
       "chapter": "Title card",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "6ef270186a82aa0c5e8a1f4167cd241e5330ab54",
         "cursor/blueprint-beginner-images": "6ef270186a82aa0c5e8a1f4167cd241e5330ab54"
@@ -3923,11 +4094,13 @@
         "character_consistency": null,
         "label_accuracy": 3
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "arrow tip stops short of target: scene-transition arrow tip floats short of the form (clear navy gap); \"Spot = you own what you buy\" tip stops short of the notebook's top edge"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__003.txt",
-      "notes": "Title card: an open book in a glass frame with a stamp; headline word order 'SPOT PAPER' differs from the title 'Spot paper trading'.",
+      "notes": "web1 FAIL (first scoring) under the strict arrow rule. Headline 'SPOT PAPER TRADING' is exact and properly spaced. 'Paper = pretend money' tip sits on the form's top glow. Two arrow fails: the scene-transition arrow floats short of the form (clear navy gap), and the 'Spot = you own what you buy' tip stops short of the notebook's top edge. Margins 85/111/82/147. Next: web2.png on the v2 prompt.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -3940,7 +4113,33 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/003.png",
       "scored_blob": "6ef270186a82aa0c5e8a1f4167cd241e5330ab54",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/003/web.png",
+        "blob": "e7a2c1b24ed76c8e1fdc7a8d63b87f931f71232b",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 85,
+          "right": 111,
+          "top": 82,
+          "bottom": 147
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 4,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 3
+        },
+        "hard_fails": [
+          "arrow tip stops short of target: scene-transition arrow tip floats short of the form (clear navy gap); \"Spot = you own what you buy\" tip stops short of the notebook's top edge"
+        ],
+        "notes": "web1 FAIL (first scoring) under the strict arrow rule. Headline 'SPOT PAPER TRADING' is exact and properly spaced. 'Paper = pretend money' tip sits on the form's top glow. Two arrow fails: the scene-transition arrow floats short of the form (clear navy gap), and the 'Spot = you own what you buy' tip stops short of the notebook's top edge. Margins 85/111/82/147. Next: web2.png on the v2 prompt.",
+        "pass": false
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/004.png",
@@ -3948,39 +4147,63 @@
       "beat": 4,
       "chapter": "Not affiliated",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "04923927774db1fd2a349a1043d616ec1ffecb9c",
-        "cursor/blueprint-beginner-images": "04923927774db1fd2a349a1043d616ec1ffecb9c"
+        "cursor/blueprint-professional-rebuild-d1f6": "8f0704cb3706a7faf10ab92fcce9f6c2fbd09a6c",
+        "cursor/blueprint-beginner-images": "8f0704cb3706a7faf10ab92fcce9f6c2fbd09a6c"
       },
       "beat_concept": "A venue name may be printed on a real screen. This course is not affiliated with any venue, and it does not speak for one.",
       "scores": {
-        "beginner_clarity": 1,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__004.txt",
-      "notes": "'BLANK MARK' with a blank glass key-cap: does not say or show 'not affiliated with any venue'; meaning unrecoverable.",
+      "notes": "web1 PASS (first scoring). Headline 'NOT LINKED TO ANY APP' is properly spaced. Blank logo plate and a broken chain. 'App name may show' tip sits on the blank plate; 'Course is not linked to it' tip sits in the break of the chain (treated as touching the broken link). Margins 73/97/70/167.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 70,
-        "right": 326,
-        "top": 110,
-        "bottom": 187
+        "left": 73,
+        "right": 97,
+        "top": 70,
+        "bottom": 167
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/004.png",
-      "scored_blob": "04923927774db1fd2a349a1043d616ec1ffecb9c",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/004.png",
+      "scored_blob": "8f0704cb3706a7faf10ab92fcce9f6c2fbd09a6c",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/004/web.png",
+        "blob": "8f0704cb3706a7faf10ab92fcce9f6c2fbd09a6c",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 73,
+          "right": 97,
+          "top": 70,
+          "bottom": 167
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web1 PASS (first scoring). Headline 'NOT LINKED TO ANY APP' is properly spaced. Blank logo plate and a broken chain. 'App name may show' tip sits on the blank plate; 'Course is not linked to it' tip sits in the break of the chain (treated as touching the broken link). Margins 73/97/70/167.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/005.png",
@@ -3988,7 +4211,7 @@
       "beat": 5,
       "chapter": "Fields from the page",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "f415cb40ec97f9764e30e1bf596f0f0cdd7c331d",
         "cursor/blueprint-beginner-images": "f415cb40ec97f9764e30e1bf596f0f0cdd7c331d"
@@ -4004,13 +4227,12 @@
         "label_accuracy": 1
       },
       "hard_fails": [
-        "wrong label: the five field chips read PAIR / UPPER / LOWER / GAPS / LINES",
-        "the lesson's five are pair, upper, lower, gap count and the two sentences (LINES is the exact confusion the lesson warns against)"
+        "arrow tip stops short of target: all five label tips (Pair, Top price, Bottom price, Number of gaps, Your rules) stop short of the left ends of their form rows (visible gap in the form's left padding)"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__005.txt",
-      "notes": "Tiny chip text inside a mostly empty card.",
+      "notes": "web1 FAIL (first scoring) under the strict arrow rule. The five field labels are correct (Pair / Top price / Bottom price / Number of gaps / Your rules — LINES is gone) and EXAMPLE is present. But all five label tips stop short of the form-row left ends, leaving a visible gap in the form's left padding. Margins 75/69/87/108. Next: web2.png on the v2 prompt.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -4023,7 +4245,33 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/005.png",
       "scored_blob": "f415cb40ec97f9764e30e1bf596f0f0cdd7c331d",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/005/web.png",
+        "blob": "35d592089e8dc5971c4b6fa2cc1cb287f892e446",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 75,
+          "right": 69,
+          "top": 87,
+          "bottom": 108
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 4,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 3
+        },
+        "hard_fails": [
+          "arrow tip stops short of target: all five label tips (Pair, Top price, Bottom price, Number of gaps, Your rules) stop short of the left ends of their form rows (visible gap in the form's left padding)"
+        ],
+        "notes": "web1 FAIL (first scoring) under the strict arrow rule. The five field labels are correct (Pair / Top price / Bottom price / Number of gaps / Your rules — LINES is gone) and EXAMPLE is present. But all five label tips stop short of the form-row left ends, leaving a visible gap in the form's left padding. Margins 75/69/87/108. Next: web2.png on the v2 prompt.",
+        "pass": false
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/006.png",
@@ -4031,39 +4279,63 @@
       "beat": 6,
       "chapter": "Spot, not a contract",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "5deb5b1ad9e22a949d2af95bd638037d115c5346",
-        "cursor/blueprint-beginner-images": "5deb5b1ad9e22a949d2af95bd638037d115c5346"
+        "cursor/blueprint-professional-rebuild-d1f6": "65736090c823e0a76e234322152cf01f3f804d3f",
+        "cursor/blueprint-beginner-images": "65736090c823e0a76e234322152cf01f3f804d3f"
       },
       "beat_concept": "The path is spot. A contract with leverage is a different product and not this walk.",
       "scores": {
-        "beginner_clarity": 3,
+        "beginner_clarity": 5,
         "composition_hierarchy": 4,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__006.txt",
-      "notes": "'SPOT' tile vs crossed 'CONTRACT' tile: readable, but the X sits on top of the word, leverage is not mentioned, and the EXAMPLE stamp sits on a non-figure.",
+      "notes": "web1 PASS (first scoring). Spot vs leverage/borrowing contrast with a check and an X. Labels sit under the figures; no arrows. Headline 'SPOT: OWN THE ASSET, NO BORROWING' is properly spaced. Margins 80/81/96/141.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 71,
-        "right": 475,
-        "top": 110,
-        "bottom": 186
+        "left": 80,
+        "right": 81,
+        "top": 96,
+        "bottom": 141
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/006.png",
-      "scored_blob": "5deb5b1ad9e22a949d2af95bd638037d115c5346",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/006.png",
+      "scored_blob": "65736090c823e0a76e234322152cf01f3f804d3f",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/006/web.png",
+        "blob": "65736090c823e0a76e234322152cf01f3f804d3f",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 80,
+          "right": 81,
+          "top": 96,
+          "bottom": 141
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web1 PASS (first scoring). Spot vs leverage/borrowing contrast with a check and an X. Labels sit under the figures; no arrows. Headline 'SPOT: OWN THE ASSET, NO BORROWING' is properly spaced. Margins 80/81/96/141.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/007.png",
@@ -4071,39 +4343,63 @@
       "beat": 7,
       "chapter": "Keys",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "591c709fae6f41d83d55a90c4709889472bcc63b",
-        "cursor/blueprint-beginner-images": "591c709fae6f41d83d55a90c4709889472bcc63b"
+        "cursor/blueprint-professional-rebuild-d1f6": "0ea25de6e275549599c2be073d49edec7f9430aa",
+        "cursor/blueprint-beginner-images": "0ea25de6e275549599c2be073d49edec7f9430aa"
       },
       "beat_concept": "You do not paste an API key, a seed phrase, or a password into a course field or a chat.",
       "scores": {
-        "beginner_clarity": 3,
+        "beginner_clarity": 5,
         "composition_hierarchy": 4,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__007.txt",
-      "notes": "Crossed key icon 'NO KEY': only covers API keys; seed phrase and password not shown; generic.",
+      "notes": "web1 PASS (first scoring). API key, Seed phrase, and Password each shown with an X. Copy 'Never paste them in a course field or chat.' is present. API-key tip sits on the key; seed tip sits on the card top; password tip sits on the field top; 'Never paste' tip lands on the left of the input/cursor. Scene curves touch the box top. Margins 73/127/69/98.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 71,
-        "right": 301,
-        "top": 111,
-        "bottom": 189
+        "left": 73,
+        "right": 127,
+        "top": 69,
+        "bottom": 98
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/007.png",
-      "scored_blob": "591c709fae6f41d83d55a90c4709889472bcc63b",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/007.png",
+      "scored_blob": "0ea25de6e275549599c2be073d49edec7f9430aa",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/007/web.png",
+        "blob": "0ea25de6e275549599c2be073d49edec7f9430aa",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 73,
+          "right": 127,
+          "top": 69,
+          "bottom": 98
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web1 PASS (first scoring). API key, Seed phrase, and Password each shown with an X. Copy 'Never paste them in a course field or chat.' is present. API-key tip sits on the key; seed tip sits on the card top; password tip sits on the field top; 'Never paste' tip lands on the left of the input/cursor. Scene curves touch the box top. Margins 73/127/69/98.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/008.png",
@@ -4111,39 +4407,63 @@
       "beat": 8,
       "chapter": "Walk the pair",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "a09ba5f03a6673819c21948ae82684c14d75db1f",
-        "cursor/blueprint-beginner-images": "a09ba5f03a6673819c21948ae82684c14d75db1f"
+        "cursor/blueprint-professional-rebuild-d1f6": "f04bcdd688a06d48a47972328482b03689edc1ed",
+        "cursor/blueprint-beginner-images": "f04bcdd688a06d48a47972328482b03689edc1ed"
       },
       "beat_concept": "Walk the pair field first. Read your Example pair aloud and point at the form field.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__008.txt",
-      "notes": "Empty 'PAIR' field with a large stamp: no example pair written, nothing pointing from page to field.",
+      "notes": "web1 PASS (first scoring). 'Read it from your notes' tip sits on the highlighted notebook pair line; 'Pair box first' tip sits on the highlighted form pair row (inside the bar, treated as touching the box). EXAMPLE present. Margins 67/97/79/127.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 70,
-        "right": 217,
-        "top": 110,
-        "bottom": 186
+        "left": 67,
+        "right": 97,
+        "top": 79,
+        "bottom": 127
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/008.png",
-      "scored_blob": "a09ba5f03a6673819c21948ae82684c14d75db1f",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/008.png",
+      "scored_blob": "f04bcdd688a06d48a47972328482b03689edc1ed",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/008/web.png",
+        "blob": "f04bcdd688a06d48a47972328482b03689edc1ed",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 67,
+          "right": 97,
+          "top": 79,
+          "bottom": 127
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web1 PASS (first scoring). 'Read it from your notes' tip sits on the highlighted notebook pair line; 'Pair box first' tip sits on the highlighted form pair row (inside the bar, treated as touching the box). EXAMPLE present. Margins 67/97/79/127.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/009.png",
@@ -4151,41 +4471,63 @@
       "beat": 9,
       "chapter": "Walk the band",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "2d40e7b024f95e54d63c315d346370c01560badd",
-        "cursor/blueprint-beginner-images": "2d40e7b024f95e54d63c315d346370c01560badd"
+        "cursor/blueprint-professional-rebuild-d1f6": "70d179191dc4df41ed39f59fff54cf05a6e91d6a",
+        "cursor/blueprint-beginner-images": "70d179191dc4df41ed39f59fff54cf05a6e91d6a"
       },
       "beat_concept": "Walk upper, then lower. Read the numbers from the page, including the word Example.",
       "scores": {
-        "beginner_clarity": 3,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 2,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "illegible label: 'UPPER'/'LOWER' field captions are tiny"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__009.txt",
-      "notes": "Two empty fields: no numbers read from the page.",
+      "notes": "web1 PASS (first scoring). 'Top price' and 'Bottom price' tips sit on the right ends of the two highlighted fields. EXAMPLE present. Margins 81/97/94/130.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 70,
-        "right": 464,
-        "top": 111,
-        "bottom": 195
+        "left": 81,
+        "right": 97,
+        "top": 94,
+        "bottom": 130
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/009.png",
-      "scored_blob": "2d40e7b024f95e54d63c315d346370c01560badd",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/009.png",
+      "scored_blob": "70d179191dc4df41ed39f59fff54cf05a6e91d6a",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/009/web.png",
+        "blob": "70d179191dc4df41ed39f59fff54cf05a6e91d6a",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 81,
+          "right": 97,
+          "top": 94,
+          "bottom": 130
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web1 PASS (first scoring). 'Top price' and 'Bottom price' tips sit on the right ends of the two highlighted fields. EXAMPLE present. Margins 81/97/94/130.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/010.png",
@@ -4193,41 +4535,63 @@
       "beat": 10,
       "chapter": "Walk the count",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "dbd6a094d5faa4b47f6e03d888c8094e771d19e1",
-        "cursor/blueprint-beginner-images": "dbd6a094d5faa4b47f6e03d888c8094e771d19e1"
+        "cursor/blueprint-professional-rebuild-d1f6": "2a74762ac119d38c2bd37aa5f7378f41182fc308",
+        "cursor/blueprint-beginner-images": "2a74762ac119d38c2bd37aa5f7378f41182fc308"
       },
       "beat_concept": "Walk the gap count, not the line count, if the form's word is ambiguous.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "wrong label: cards 'GRIDS' and 'LINES' (and a blank third card) - the beat says walk the GAP count, not the line count"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__010.txt",
-      "notes": "Headline 'LINE COUNT' teaches the opposite of the beat.",
+      "notes": "web1 PASS (first scoring). 'Number of gaps' tip sits in the green gap between rungs (the named gap itself). 'Not number of lines' tip lands on the amber X on a rung. EXAMPLE present. Margins 69/65/84/144.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 71,
-        "right": 217,
-        "top": 111,
-        "bottom": 202
+        "left": 69,
+        "right": 65,
+        "top": 84,
+        "bottom": 144
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/010.png",
-      "scored_blob": "dbd6a094d5faa4b47f6e03d888c8094e771d19e1",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/010.png",
+      "scored_blob": "2a74762ac119d38c2bd37aa5f7378f41182fc308",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/010/web.png",
+        "blob": "2a74762ac119d38c2bd37aa5f7378f41182fc308",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 69,
+          "right": 65,
+          "top": 84,
+          "bottom": 144
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web1 PASS (first scoring). 'Number of gaps' tip sits in the green gap between rungs (the named gap itself). 'Not number of lines' tip lands on the amber X on a rung. EXAMPLE present. Margins 69/65/84/144.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/011.png",
@@ -4235,39 +4599,63 @@
       "beat": 11,
       "chapter": "Walk the sentences",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "648667c29bd50b38f42de863d2d92353fcf60a6d",
-        "cursor/blueprint-beginner-images": "648667c29bd50b38f42de863d2d92353fcf60a6d"
+        "cursor/blueprint-professional-rebuild-d1f6": "08c9f66f8313e7e29a156eb615bb27780d21e655",
+        "cursor/blueprint-beginner-images": "08c9f66f8313e7e29a156eb615bb27780d21e655"
       },
       "beat_concept": "There may be no field for your finish sentence. You still read it before you leave the screen.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__011.txt",
-      "notes": "CPU-chip tile 'FINISH' beside an empty dashed box with an X: 'read your finish sentence before leaving' is not shown.",
+      "notes": "web1 PASS (first scoring). 'No box for it' tip crosses the form's bottom border and sits inside the form (treated as touching the form). 'Read it out anyway' tip sits on the speech bubble. Headline 'READ YOUR STOP RULE ANYWAY' is properly spaced. Margins 86/129/96/151.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 70,
-        "right": 341,
-        "top": 110,
-        "bottom": 222
+        "left": 86,
+        "right": 129,
+        "top": 96,
+        "bottom": 151
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/011.png",
-      "scored_blob": "648667c29bd50b38f42de863d2d92353fcf60a6d",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/011.png",
+      "scored_blob": "08c9f66f8313e7e29a156eb615bb27780d21e655",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/011/web.png",
+        "blob": "08c9f66f8313e7e29a156eb615bb27780d21e655",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 86,
+          "right": 129,
+          "top": 96,
+          "bottom": 151
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web1 PASS (first scoring). 'No box for it' tip crosses the form's bottom border and sits inside the form (treated as touching the form). 'Read it out anyway' tip sits on the speech bubble. Headline 'READ YOUR STOP RULE ANYWAY' is properly spaced. Margins 86/129/96/151.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/012.png",
@@ -4275,39 +4663,63 @@
       "beat": 12,
       "chapter": "Common miss",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "fb2bedcd987ed4de7900ace8759e5a6f2060761c",
-        "cursor/blueprint-beginner-images": "fb2bedcd987ed4de7900ace8759e5a6f2060761c"
+        "cursor/blueprint-professional-rebuild-d1f6": "c1b92a5ee84f1dd4807b1c0fbcee6ab8a145cdbc",
+        "cursor/blueprint-beginner-images": "c1b92a5ee84f1dd4807b1c0fbcee6ab8a145cdbc"
       },
       "beat_concept": "The common miss is to treat a default the form already filled as if you had chosen it.",
       "scores": {
-        "beginner_clarity": 1,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__012.txt",
-      "notes": "Open blueprint book tagged 'THEIRS' under headline 'THEIRS': the 'default the form already filled' idea is not shown at all.",
+      "notes": "web1 PASS (first scoring). 'Filled in by the app' tip sits on the pre-filled squiggle inside the amber oval. 'Not your choice: check it' sits under the form with no arrow. Margins 97/70/81/92.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 61,
-        "right": 375,
-        "top": 110,
-        "bottom": 243
+        "left": 97,
+        "right": 70,
+        "top": 81,
+        "bottom": 92
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/012.png",
-      "scored_blob": "fb2bedcd987ed4de7900ace8759e5a6f2060761c",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/012.png",
+      "scored_blob": "c1b92a5ee84f1dd4807b1c0fbcee6ab8a145cdbc",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/012/web.png",
+        "blob": "c1b92a5ee84f1dd4807b1c0fbcee6ab8a145cdbc",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 97,
+          "right": 70,
+          "top": 81,
+          "bottom": 92
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web1 PASS (first scoring). 'Filled in by the app' tip sits on the pre-filled squiggle inside the amber oval. 'Not your choice: check it' sits under the form with no arrow. Margins 97/70/81/92.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/013.png",
@@ -4315,39 +4727,63 @@
       "beat": 13,
       "chapter": "No order",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "ca360e5ff97c9b88d679de93771eb037277c9603",
-        "cursor/blueprint-beginner-images": "ca360e5ff97c9b88d679de93771eb037277c9603"
+        "cursor/blueprint-professional-rebuild-d1f6": "eb9d26ea2b3bcb24c9f0f86ee757cab8684696cf",
+        "cursor/blueprint-beginner-images": "eb9d26ea2b3bcb24c9f0f86ee757cab8684696cf"
       },
       "beat_concept": "The walk ends before any confirm control.",
       "scores": {
-        "beginner_clarity": 3,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__013.txt",
-      "notes": "CPU-style 'CONFIRM' chip wired to a 'STOP' tile: roughly the idea, but chip styling is confusing and 'STOP FIRST' is ambiguous.",
+      "notes": "web1 PASS (first scoring). 'The lesson stops here' tip sits on the amber stop-hand; 'Confirm button' tip sits on the confirm bar. Margins 77/263/68/112.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 70,
-        "right": 458,
-        "top": 111,
-        "bottom": 187
+        "left": 77,
+        "right": 263,
+        "top": 68,
+        "bottom": 112
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/013.png",
-      "scored_blob": "ca360e5ff97c9b88d679de93771eb037277c9603",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/013.png",
+      "scored_blob": "eb9d26ea2b3bcb24c9f0f86ee757cab8684696cf",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/013/web.png",
+        "blob": "eb9d26ea2b3bcb24c9f0f86ee757cab8684696cf",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 77,
+          "right": 263,
+          "top": 68,
+          "bottom": 112
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web1 PASS (first scoring). 'The lesson stops here' tip sits on the amber stop-hand; 'Confirm button' tip sits on the confirm bar. Margins 77/263/68/112.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/014.png",
@@ -4355,39 +4791,63 @@
       "beat": 14,
       "chapter": "The action",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "b8242aabc35e02fc68749867a9a5435f8799c3e0",
-        "cursor/blueprint-beginner-images": "b8242aabc35e02fc68749867a9a5435f8799c3e0"
+        "cursor/blueprint-professional-rebuild-d1f6": "54158a9e2cf06ec0eb8fda572aaec7fd21662bc8",
+        "cursor/blueprint-beginner-images": "54158a9e2cf06ec0eb8fda572aaec7fd21662bc8"
       },
       "beat_concept": "On a paper or demo spot screen, match five fields to the page and stop before confirm.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__014.txt",
-      "notes": "Five ticks leading into a 'CONFIRM' button: reads as 'tick five then press confirm', the opposite of 'stop before confirm'.",
+      "notes": "web1 PASS (first scoring). Five cyan ticks on the form; confirm stays greyed. EXAMPLE present. '5 boxes match your notes' tip sits on a tick; 'Confirm stays untouched' tip sits on the confirm bar. Margins 83/226/88/144.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 71,
-        "right": 222,
-        "top": 109,
-        "bottom": 258
+        "left": 83,
+        "right": 226,
+        "top": 88,
+        "bottom": 144
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/014.png",
-      "scored_blob": "b8242aabc35e02fc68749867a9a5435f8799c3e0",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/014.png",
+      "scored_blob": "54158a9e2cf06ec0eb8fda572aaec7fd21662bc8",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/014/web.png",
+        "blob": "54158a9e2cf06ec0eb8fda572aaec7fd21662bc8",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 83,
+          "right": 226,
+          "top": 88,
+          "bottom": 144
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web1 PASS (first scoring). Five cyan ticks on the form; confirm stays greyed. EXAMPLE present. '5 boxes match your notes' tip sits on a tick; 'Confirm stays untouched' tip sits on the confirm bar. Margins 83/226/88/144.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/015.png",
@@ -4395,39 +4855,63 @@
       "beat": 15,
       "chapter": "Recap",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "a27796ef9d5f476af3ea15baf25fdd8e837ec2f5",
-        "cursor/blueprint-beginner-images": "a27796ef9d5f476af3ea15baf25fdd8e837ec2f5"
+        "cursor/blueprint-professional-rebuild-d1f6": "701523a0b083d35558491db62381ecea7747c2dc",
+        "cursor/blueprint-beginner-images": "701523a0b083d35558491db62381ecea7747c2dc"
       },
       "beat_concept": "Recap: paper spot, page wins, translate the count, ignore defaults, stop before confirm, no secrets.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__015.txt",
-      "notes": "Six word chips 'PAPER / PAGE / COUNT / DEFAULT / STOP / SECRET': cryptic recap; no picture.",
+      "notes": "web1 PASS (first scoring). Exactly the four specified recap chips/icons (Your notes win / Gaps, not lines / Check pre-filled boxes / Stop before confirm), no arrows. The VO recap lists six ideas; the remake prompt itself only asked for these four, so the two unrequested chips are not a fail. Margins 88/73/126/287.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 71,
-        "right": 221,
-        "top": 110,
-        "bottom": 286
+        "left": 88,
+        "right": 73,
+        "top": 126,
+        "bottom": 287
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/015.png",
-      "scored_blob": "a27796ef9d5f476af3ea15baf25fdd8e837ec2f5",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/015.png",
+      "scored_blob": "701523a0b083d35558491db62381ecea7747c2dc",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/015/web.png",
+        "blob": "701523a0b083d35558491db62381ecea7747c2dc",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 88,
+          "right": 73,
+          "top": 126,
+          "bottom": 287
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web1 PASS (first scoring). Exactly the four specified recap chips/icons (Your notes win / Gaps, not lines / Check pre-filled boxes / Stop before confirm), no arrows. The VO recap lists six ideas; the remake prompt itself only asked for these four, so the two unrequested chips are not a fail. Margins 88/73/126/287.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/016.png",
@@ -4435,39 +4919,63 @@
       "beat": 16,
       "chapter": "Your turn",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "bd841c2ffc0d2fc320c96fb9e34da326f0b9dcaa",
-        "cursor/blueprint-beginner-images": "bd841c2ffc0d2fc320c96fb9e34da326f0b9dcaa"
+        "cursor/blueprint-professional-rebuild-d1f6": "95c1c3ed5cd6e04ee7d1599557c80981cd068eb1",
+        "cursor/blueprint-beginner-images": "95c1c3ed5cd6e04ee7d1599557c80981cd068eb1"
       },
       "beat_concept": "Practice: A venue name may be printed on a real screen. This course is not affiliated with any venue, and it does not speak for one.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__016.txt",
-      "notes": "Card with chips 'PRACTICE' and 'NOT AFFILIATED': text card; CPU icon meaningless.",
+      "notes": "web1 PASS (first scoring). 'Draw the broken link' tip sits in the break of the sketched chain (treated as touching the broken link). 'Course ≠ app' sits under the figure with no arrow. Pencil inside the page. Margins 77/87/108/125.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 71,
-        "right": 329,
-        "top": 110,
-        "bottom": 185
+        "left": 77,
+        "right": 87,
+        "top": 108,
+        "bottom": 125
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/016.png",
-      "scored_blob": "bd841c2ffc0d2fc320c96fb9e34da326f0b9dcaa",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/016.png",
+      "scored_blob": "95c1c3ed5cd6e04ee7d1599557c80981cd068eb1",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/016/web.png",
+        "blob": "95c1c3ed5cd6e04ee7d1599557c80981cd068eb1",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 77,
+          "right": 87,
+          "top": 108,
+          "bottom": 125
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web1 PASS (first scoring). 'Draw the broken link' tip sits in the break of the sketched chain (treated as touching the broken link). 'Course ≠ app' sits under the figure with no arrow. Pencil inside the page. Margins 77/87/108/125.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/017.png",
@@ -4475,41 +4983,63 @@
       "beat": 17,
       "chapter": "Your turn",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "fa3f878ed4c3229e661854e6f94f433d8c1930a6",
-        "cursor/blueprint-beginner-images": "fa3f878ed4c3229e661854e6f94f433d8c1930a6"
+        "cursor/blueprint-professional-rebuild-d1f6": "5ed5fb3fb26d856c4b0eea53049995db46fb88f6",
+        "cursor/blueprint-beginner-images": "5ed5fb3fb26d856c4b0eea53049995db46fb88f6"
       },
       "beat_concept": "Practice: The fields you are allowed to copy are the ones you already wrote: pair, upper, lower, gap count, and the two sentences.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "wrong label: field chips again read ...GAPS / LINES instead of gap count + the two sentences"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__017.txt",
-      "notes": "Duplicate of 005 with a 'PRACTICE' chip.",
+      "notes": "web1 PASS (first scoring). All five tips land on the left ends of the five empty boxes (Pair / Top / Bottom / Gaps / Rules). Pencil inside the page. No digits on the labels, so no EXAMPLE required. Margins 70/82/93/99.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 243,
-        "top": 110,
-        "bottom": 161
+        "left": 70,
+        "right": 82,
+        "top": 93,
+        "bottom": 99
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/017.png",
-      "scored_blob": "fa3f878ed4c3229e661854e6f94f433d8c1930a6",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/017.png",
+      "scored_blob": "5ed5fb3fb26d856c4b0eea53049995db46fb88f6",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/017/web.png",
+        "blob": "5ed5fb3fb26d856c4b0eea53049995db46fb88f6",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 70,
+          "right": 82,
+          "top": 93,
+          "bottom": 99
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web1 PASS (first scoring). All five tips land on the left ends of the five empty boxes (Pair / Top / Bottom / Gaps / Rules). Pencil inside the page. No digits on the labels, so no EXAMPLE required. Margins 70/82/93/99.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/018.png",
@@ -4517,39 +5047,63 @@
       "beat": 18,
       "chapter": "Your turn",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "0ece9aeeab609daab9b48ffac5ba2edf877eafd4",
-        "cursor/blueprint-beginner-images": "0ece9aeeab609daab9b48ffac5ba2edf877eafd4"
+        "cursor/blueprint-professional-rebuild-d1f6": "7257ecfc3d1ed87a44258642cc4e2eb61bfcf617",
+        "cursor/blueprint-beginner-images": "7257ecfc3d1ed87a44258642cc4e2eb61bfcf617"
       },
       "beat_concept": "Practice: The path is spot. A contract with leverage is a different product and not this walk.",
       "scores": {
-        "beginner_clarity": 3,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__018.txt",
-      "notes": "'SPOT' tile linked to crossed 'CONTRACT' and 'PRACTICE': near-duplicate of 006; leverage not mentioned.",
+      "notes": "web1 PASS (first scoring). 'Own it: yes' / 'Borrowed money: no,' no arrows, pencil inside the page, no coins. Margins 72/95/98/146.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 71,
-        "right": 226,
-        "top": 110,
-        "bottom": 186
+        "left": 72,
+        "right": 95,
+        "top": 98,
+        "bottom": 146
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/018.png",
-      "scored_blob": "0ece9aeeab609daab9b48ffac5ba2edf877eafd4",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/018.png",
+      "scored_blob": "7257ecfc3d1ed87a44258642cc4e2eb61bfcf617",
       "committed": true,
-      "pass": false
+      "pass": true,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/018/web.png",
+        "blob": "7257ecfc3d1ed87a44258642cc4e2eb61bfcf617",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 72,
+          "right": 95,
+          "top": 98,
+          "bottom": 146
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "web1 PASS (first scoring). 'Own it: yes' / 'Borrowed money: no,' no arrows, pencil inside the page, no coins. Margins 72/95/98/146.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/019.png",
@@ -4557,7 +5111,7 @@
       "beat": 19,
       "chapter": "If the screen differs",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "23e197092d463ec22b38d3a5b168a0afbb5ad04a",
         "cursor/blueprint-beginner-images": "23e197092d463ec22b38d3a5b168a0afbb5ad04a"
@@ -4573,13 +5127,12 @@
         "label_accuracy": 1
       },
       "hard_fails": [
-        "illegible label: tiny field labels",
-        "wrong label: list again includes LINES"
+        "arrow tip stops short of target: the four scene-matching connector arrows stop short of the right-hand form (visible gaps at the points)"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__019.txt",
-      "notes": "'FIVE LINES' headline does not match the beat (if a label differs, translate it or stop).",
+      "notes": "web1 FAIL (first scoring) under the strict panel-connector arrow rule. 'Labels may move' tip sits inside the top right-hand field (touch of that form). But the four scene-matching connectors are clearly short of the right form (visible gaps). The left form also shows 4 rows vs the right's 5, and the rows are not visibly in a different order (prompt: same rows in a different order). Margins 95/136/85/73. Next: web2.png on the v2 prompt.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -4592,7 +5145,33 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/019.png",
       "scored_blob": "23e197092d463ec22b38d3a5b168a0afbb5ad04a",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/019/web.png",
+        "blob": "5861f5ec20bc7a3472ad6de095603ea72f9f5d46",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 95,
+          "right": 136,
+          "top": 85,
+          "bottom": 73
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 3,
+          "composition_hierarchy": 3,
+          "craft_polish": 3,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 3
+        },
+        "hard_fails": [
+          "arrow tip stops short of target: the four scene-matching connector arrows stop short of the right-hand form (visible gaps at the points)"
+        ],
+        "notes": "web1 FAIL (first scoring) under the strict panel-connector arrow rule. 'Labels may move' tip sits inside the top right-hand field (touch of that form). But the four scene-matching connectors are clearly short of the right form (visible gaps). The left form also shows 4 rows vs the right's 5, and the rows are not visibly in a different order (prompt: same rows in a different order). Margins 95/136/85/73. Next: web2.png on the v2 prompt.",
+        "pass": false
+      }
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/020.png",
@@ -4600,7 +5179,7 @@
       "beat": 20,
       "chapter": "Outro",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "9ef38e929a2c4306a840b878e571830c735f16a8",
         "cursor/blueprint-beginner-images": "9ef38e929a2c4306a840b878e571830c735f16a8"
@@ -4615,11 +5194,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "arrow tip stops short of target: notebook-to-card panel-connector floats well short of the laptop/card (large visible gap); \"Bring your notes\" tip also stops short of the notebook's top edge"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__020.txt",
-      "notes": "Arrow into an empty card with a stamp: next lesson ('Managing and monitoring') not named.",
+      "notes": "web1 FAIL (first scoring) under the strict panel-connector arrow rule. Outro title is exact: 'Next lesson: Managing and monitoring.' But the notebook-to-card scene-transition arrow floats well short of the laptop/card (large visible gap), and the 'Bring your notes' tip stops short of the notebook's top edge (gap above the cover). Margins 78/92/91/195. Next: web2.png on the v2 prompt.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -4632,7 +5213,33 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/020.png",
       "scored_blob": "9ef38e929a2c4306a840b878e571830c735f16a8",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "remake_review": {
+        "file": "gen/bp-07-spot-paper-trading/020/web.png",
+        "blob": "b96a9e3960c8b1486989c0ec1568b8ad648257c2",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 78,
+          "right": 92,
+          "top": 91,
+          "bottom": 195
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 4,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 3
+        },
+        "hard_fails": [
+          "arrow tip stops short of target: notebook-to-card panel-connector floats well short of the laptop/card (large visible gap); \"Bring your notes\" tip also stops short of the notebook's top edge"
+        ],
+        "notes": "web1 FAIL (first scoring) under the strict panel-connector arrow rule. Outro title is exact: 'Next lesson: Managing and monitoring.' But the notebook-to-card scene-transition arrow floats well short of the laptop/card (large visible gap), and the 'Bring your notes' tip stops short of the notebook's top edge (gap above the cover). Margins 78/92/91/195. Next: web2.png on the v2 prompt.",
+        "pass": false
+      }
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/001.png",

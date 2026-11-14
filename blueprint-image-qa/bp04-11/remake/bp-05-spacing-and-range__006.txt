@@ -4,6 +4,7 @@ MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 8
 
 Headline: "HALF THE GAP, DOUBLE THE LINES" (the word DOUBLE in cyan, the rest white).
 Scene: Two glass boxes of exactly equal height side by side. Left box: exactly 6 evenly spaced horizontal lines. Right box: exactly 12 evenly spaced horizontal lines (twice as many as the left box), so the gaps are half as big. QA FIX v2: do NOT print any large standalone numeral (no big "5", "9", or any digit) inside either box; show only the horizontal lines. The right box must contain visibly double the number of lines of the left box. EXAMPLE stamp.
+COUNT FIX (critical, QA FIX v3): the v2 right-hand box had 11 interior grid lines, not 12. The left box must show exactly 6 interior horizontal lines and the right box must show exactly 12 (double). Count the interior rungs only — do not count the box's top or bottom border as a line. 11 is not double and does not illustrate DOUBLE THE LINES. Draw 12 clearly separated interior lines in the right box. Keep the left box at exactly 6. Keep the 'Recount: 38 gaps, not 40' house-example caption if you use it, but the drawn boxes themselves must be 6 and 12. Keep both label arrows touching their targets.
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
 - "Same height": arrow tip touches a dashed line joining the tops of the two boxes.
 - "Smaller gaps need more lines": arrow tip touches the right box (the one with twice as many lines).

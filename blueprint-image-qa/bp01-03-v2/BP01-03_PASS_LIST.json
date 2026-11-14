@@ -2236,7 +2236,7 @@
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-02-what-you-need__021.txt",
-      "notes": "Flipped under the strict panel-connector arrow rule (doubt=fail). Measured the next->grid transition arrow at full resolution: arrowhead tip x=745, grid card left border x=761 -> 17px gap. Committed still is unchanged (never remade); first remake prompt written pinning the arrow to touch the card.",
+      "notes": "Flipped under the strict panel-connector arrow rule (doubt=fail). Measured the next->grid transition arrow at full resolution: arrowhead tip x=745, grid card left border x=761 -> 17px gap. Committed still is unchanged (never remade); first remake prompt written pinning the arrow to touch the card. | web1 remake FAIL under the strict panel-connector arrow rule. Headline 'NEXT: WHAT IS A GRID BOT' and outro title 'Next lesson: what a grid bot is' are exact. 'Bring your notes' tip sits on the notebook face; 'Next lesson: what a grid bot is' tip sits inside the card. But the scene-transition arrow still stops short of the grid card (visible navy gap, about 20-24px at the point). Previous v1 was also short; this v2 remake did not close the gap. Next: web2.png on the v3 prompt.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -2253,7 +2253,34 @@
       "committed": true,
       "pass": false,
       "flipped_from_pass": null,
-      "previous_committed_blob": null
+      "previous_committed_blob": null,
+      "previous_remake_reviews": [],
+      "remake_review": {
+        "file": "gen/bp-02-what-you-need/021/web1.png",
+        "blob": "3915d92d016b42bc9454a8ee53be963938dc1a20",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 79,
+          "right": 90,
+          "top": 88,
+          "bottom": 183
+        },
+        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 4,
+          "craft_polish": 4,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 3
+        },
+        "hard_fails": [
+          "arrow tip stops short of target: panel-connector / transition arrow tip stops short of the \"WHAT A GRID BOT IS\" grid card (visible navy gap, about 20-24px at the point)"
+        ],
+        "notes": "web1 remake FAIL under the strict panel-connector arrow rule. Headline 'NEXT: WHAT IS A GRID BOT' and outro title 'Next lesson: what a grid bot is' are exact. 'Bring your notes' tip sits on the notebook face; 'Next lesson: what a grid bot is' tip sits inside the card. But the scene-transition arrow still stops short of the grid card (visible navy gap, about 20-24px at the point). Previous v1 was also short; this v2 remake did not close the gap. Next: web2.png on the v3 prompt.",
+        "pass": false
+      }
     },
     {
       "path": "course/images/bp-03-what-is-a-grid-bot/001.png",

@@ -1,0 +1,19 @@
+ATTACH FIRST: /workspace/blueprint-beginner/_anchors/anchor.png as the style reference. Match its look exactly: near-black navy ground with a faint grid, glowing cyan glass linework, bold condensed ALL-CAPS headline top-left with one cyan keyword, small dark glass label tags with thin cyan arrows. Do not copy its fence or its words.
+FORMAT: one landscape image, 3:2, exactly 1536x1024 pixels.
+MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 80px inside the left and right edges and at least 90px inside the top and bottom edges. Nothing with text touches or approaches the frame edge. Words in the headline are separated by a clear full space.
+
+Headline: "RECAP: SPACING" (the word RECAP in cyan, the rest white).
+Scene: Exactly FIVE glass icons in an evenly spaced row (QA FIX v2: five, not four): a box; a gap bracket; a short band labelled with the house example; an amber fee bar under a gap; a single dial. Each icon gets one chip label below it, so there are five chips in total.
+Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
+- "Box first": under: the box icon, no arrow.
+- "Count gaps": under: the gap bracket icon, no arrow.
+- "19 gaps = 9.5%": under: the short band icon (the third icon), no arrow.
+- "Check fees": under: the fee bar icon, no arrow.
+- "One change at a time": under: the single dial icon, no arrow.
+LABEL ARROWS: exactly 0 thin cyan label arrows, one for each label above that says "arrow tip touches", each with one clean arrowhead whose tip touches the named target. Labels that say "no arrow" have no arrow. Apart from any arrow the Scene itself describes, there are no other arrows; no doubled arrowheads, and no arrow crosses text.
+CHARACTER: no robot, mascot, person, hand-drawn face or character of any kind in this frame. (The only approved mascot is the GridBot Builder robot sheet: metallic white/silver robot, gloss-black face, electric-blue features; it is added separately and must never be redrawn.)
+BRAND: GridBot Builder course style only. No company, entity, ABN, Market Pros, exchange, venue or app names or logos; no coins, banknotes, currency signs or profit claims.
+Goal: a complete beginner understands this one idea in three seconds with the sound off: Recap: range first, gaps not lines, nineteen gaps in the house example, cost beside the gap, one change at a time.
+
+STYLE (GBB v3, Blueprint navy/cyan, beginner-clear): Premium fintech course still for a YouTube lesson, landscape 1536x1024. SAFE AREA: the headline, every label and all key content sit inside the centre band; the top 90px and bottom 90px are plain background only. Near-black navy background (#050A18 to #0A1630) with soft depth: faint grid, light bokeh, glowing electric cyan (#00D4FF) and blue (#1E7BFF) accents. Frosted glass cards with glowing cyan borders, crisp 3px lines, gentle 3D depth. Mint green (#4FD1A5) only for "sell" marks, warm amber (#FFB020) only for warnings or mistakes. Headline top-left, outside any card: bold condensed ALL-CAPS, crisp white with ONE keyword in cyan. Labels are short plain-English words in clean bold sans-serif, white or cyan on small dark glass tags, each placed exactly as listed in Labels (arrow only where it says so). One idea, one clear focal point filling the middle of the frame, generous empty space, no clutter.
+TEXT: only the exact headline, the quoted labels and any short sum written in the scene, spelled exactly; nothing else (no extra words, numbers or captions). AVOID: exchange names, logos, real app screens, watermarks, people or faces, coins, money, rockets, trophies, profit claims, indicator clutter, paragraphs, garbled letters, teal-dominant colour.

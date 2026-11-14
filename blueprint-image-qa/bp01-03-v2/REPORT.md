@@ -335,3 +335,23 @@ Same perfect-run rules (every category at least 4/5, no hard fails; every arrow 
 - **BP-03: 28/28 — YES, 100%.**
 - **92-row total: 88/92.**
 - ChatGPT queue (BP-01..03): 4 — bp-01-introduction/001 (gen/bp-01-introduction/001/web3.png), bp-01-introduction/007 (gen/bp-01-introduction/007/web4.png), bp-02-what-you-need/016 (gen/bp-02-what-you-need/016/web3.png), bp-02-what-you-need/021 (gen/bp-02-what-you-need/021/web1.png).
+
+
+---
+
+## Run on top of 4bfe3e6 — 14 Nov 2026 (WITA): remake scoring for BP-02 021
+
+Same perfect-run rules (every category at least 4/5, no hard fails; every arrow tip, panel connectors included, must visibly touch its target; doubt = fail). These renders used the prompts current when the batch started and were scored on their own merits against the beat. Mismatch check: the image depicts its own prompt and beat (no tab-order swap).
+
+| File | Result | Margins (l/r/t/b) | Reason |
+|---|---|---|---|
+| gen/bp-02-what-you-need/021/web1.png | FAIL | 79/90/88/183 | Headline and outro title are exact, and the two label arrows touch, but the scene-transition arrow still stops short of the grid card (visible navy gap, about 20-24px). Next: web2.png on the v3 prompt (v2 moved to specs/remake/_superseded/bp-02-what-you-need__021.v2.txt). |
+
+001, 007 and 016 were not in this batch and stay queued.
+
+### Updated counts (92-row list)
+- **BP-01: 30/32 — NOT 100%.** Rows left: 001 (web3, v3), 007 (web4, v4).
+- **BP-02: 30/32 — NOT 100%.** Rows left: 016 (web3, v3), 021 (web2, v3).
+- **BP-03: 28/28 — YES, 100%.**
+- **92-row total: 88/92.**
+- ChatGPT queue (BP-01..03): 4 — bp-01-introduction/001 (gen/bp-01-introduction/001/web3.png), bp-01-introduction/007 (gen/bp-01-introduction/007/web4.png), bp-02-what-you-need/016 (gen/bp-02-what-you-need/016/web3.png), bp-02-what-you-need/021 (gen/bp-02-what-you-need/021/web2.png).

@@ -4,6 +4,7 @@ MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 8
 
 Headline: "NEXT: ENTRY AND EXIT RULES" (the word NEXT in cyan, the rest white).
 Scene: Left: a finished notebook with a cyan check. One thick horizontal cyan transition arrow points right from the notebook to a glass card showing a start flag and an amber stop sign. QA FIX v2: the arrow's head MUST physically touch — its point overlapping the left edge of — the glass card, with ZERO gap; the v1 arrow stopped about 25px short and floated in the gap. Lengthen the arrow so its point lands ON the card border.
+ARROW CONTACT (critical, QA FIX v3): the v2 scene-transition / panel-connector arrow still stopped short of the glass 'ENTRY AND EXIT RULES' card (visible navy gap at the point; v1 was about 25px short). The arrowhead point must physically touch — overlapping the left edge of — that card, with ZERO gap, no hover, and no dark sliver between the tip and the card border. Lengthen the shaft until the point lands ON the card frame. Keep 'Bring your notes' on the notebook face. Do not change the exact outro title 'Next lesson: Entry and exit rules.'
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
 - "Bring your notes": arrow tip touches the finished notebook.
 - "Next lesson: Entry and exit rules": under: the glass card on the right, no arrow.

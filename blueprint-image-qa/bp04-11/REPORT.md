@@ -352,3 +352,51 @@ Per-image:
 **BP-06: 12/20 — NOT 100%.** Rows left: 006 (gen/bp-06-entry-and-exit/006/web2.png), 010 (gen/bp-06-entry-and-exit/010/web2.png), 012 (gen/bp-06-entry-and-exit/012/web2.png), 014 (gen/bp-06-entry-and-exit/014/web2.png), 016 (gen/bp-06-entry-and-exit/016/web2.png), 018 (gen/bp-06-entry-and-exit/018/web2.png), 019 (gen/bp-06-entry-and-exit/019/web2.png), 020 (gen/bp-06-entry-and-exit/020/web2.png).
 
 Updated ChatGPT queue (BP-04..11): 120 items.
+
+
+---
+
+## Run on top of 4bfe3e6 — 14 Nov 2026 (WITA): remake scoring for BP-04 010, BP-05 005/006/015/016/019, and first scoring of all 20 BP-07 stills
+
+Same perfect-run rules (every category at least 4/5, no hard fails; every arrow tip, panel connectors included, must visibly touch its target; doubt = fail). These renders used the prompts current when the batch started and were scored on their own merits against the beat. Mismatch check: every image in this batch depicts its own prompt and beat (no tab-order swaps).
+
+### BP-04 010 / BP-05 remakes
+
+| File | Result | Margins (l/r/t/b) | Reason |
+|---|---|---|---|
+| gen/bp-04-market-regimes/010/web3.png | PASS | 80/98/78/97 | All three column arrows now touch (Range->Ladder on the top rung, Trend->Pile on the top disc, Break->Stop on the amber line). Headline spaced; EXAMPLE on the Break card. Placed at out/ and course/images/bp-04-market-regimes/010.png (`source: chatgpt-web`, scored_blob 9ad06527943e4ebb5169b1b44645beac82b2c98f). Removed from the queue. |
+| gen/bp-05-spacing-and-range/005/web2.png | PASS | 82/82/81/170 | 'Each gap: 0.5%' spelled correctly (v1 was 'Eacn gap'). 19 bars; 0.5% / 9.5% / 19 correct; all three tips touch; EXAMPLE present. Placed (`scored_blob` ff2a27d9f6331b3b57fb421a56be3e9a69b5271e). Removed from the queue. |
+| gen/bp-05-spacing-and-range/006/web2.png | FAIL | 80/58/73/77 | Left box has 6 interior lines, but the right box has 11, not the required 12 (double). Does not illustrate DOUBLE THE LINES. Both label arrows touch; unexplained 5/9 numerals are gone. Next: web3.png on the v3 prompt (v2 superseded). |
+| gen/bp-05-spacing-and-range/015/web2.png | FAIL | 75/39/116/320 | All five recap chips are present, including the previously missing '19 gaps = 9.5%'. Hard fail: cramped right margin 39px on the 'One change at a time' tag (x=1496). Next: web3.png on the v3 prompt (v2 superseded). |
+| gen/bp-05-spacing-and-range/016/web2.png | PASS | 76/70/70/93 | 20 dark lines and 19 green gap ticks. 'Count the lines' tip on the top line; 'Gaps = lines minus 1' tip on a green check. EXAMPLE present. Placed (`scored_blob` 616de7eae6a164f4f8c4c2b739e54979b7c913fd). Removed from the queue. |
+| gen/bp-05-spacing-and-range/019/web2.png | FAIL | 85/95/97/213 | Outro title exact ('Next lesson: Entry and exit rules.'); 'Bring your notes' touches the notebook. But the scene-transition arrow still stops short of the glass card (visible gap). Next: web3.png on the v3 prompt (v2 superseded). |
+
+### BP-07 first scoring (web.png; queue had listed web1.png)
+
+- **001 PASS** — doorway-and-form walk-through, 5 empty rows, greyed locked confirm, EXAMPLE. Both tips touch (form top; confirm button).
+- **002 PASS** — disclaimer exact: "Education only. Not financial advice." No arrows.
+- **003 FAIL** — scene-transition arrow short of the form (clear navy gap); "Spot = you own what you buy" tip short of the notebook. "Paper = pretend money" touches the form. Next: web2/v2.
+- **004 PASS** — blank logo plate and broken chain. "App name may show" on the plate; "Course is not linked to it" in the break of the chain.
+- **005 FAIL** — five correct field labels and EXAMPLE, but all five label tips stop short of the form-row left ends (gap in the left padding). Next: web2/v2.
+- **006 PASS** — Spot vs leverage/borrowing, check vs X, labels under, 0 arrows.
+- **007 PASS** — API key / Seed phrase / Password each with an X; "Never paste them in a course field or chat." Tips land on the key, card, field, and input.
+- **008 PASS** — "Read it from your notes" on the highlighted notebook pair line; "Pair box first" on the highlighted form pair row. EXAMPLE.
+- **009 PASS** — "Top price" and "Bottom price" tips on the right ends of the two highlighted fields. EXAMPLE.
+- **010 PASS** — "Number of gaps" tip in the green gap; "Not number of lines" tip on the amber X on a rung. EXAMPLE.
+- **011 PASS** — "No box for it" tip inside the form (past the bottom border); "Read it out anyway" on the speech bubble.
+- **012 PASS** — "Filled in by the app" tip on the pre-filled squiggle; "Not your choice: check it" under the form, no arrow.
+- **013 PASS** — "The lesson stops here" on the amber stop-hand; "Confirm button" on the confirm bar.
+- **014 PASS** — five cyan ticks, confirm greyed, EXAMPLE. Tips on a tick and on the confirm bar.
+- **015 PASS** — exactly the four specified recap chips, 0 arrows. (VO lists six ideas; the remake prompt only asked for these four.)
+- **016 PASS** — "Draw the broken link" tip in the break of the sketched chain; pencil inside the page.
+- **017 PASS** — all five tips on the left ends of the five empty boxes. Pencil inside. No EXAMPLE required (no digits).
+- **018 PASS** — "Own it: yes" / "Borrowed money: no," 0 arrows, pencil inside, no coins.
+- **019 FAIL** — four scene-matching connectors short of the right form (visible gaps). Left form also shows 4 rows vs the right's 5, and the rows are not visibly in a different order. Next: web2/v2.
+- **020 FAIL** — notebook-to-card panel-connector floats well short of the laptop/card (large gap); "Bring your notes" tip short of the notebook. Outro title exact: "Next lesson: Managing and monitoring." Next: web2/v2.
+
+**BP-04: 16/20 — NOT 100%.** Rows left: 006 (gen/bp-04-market-regimes/006/web4.png), 007 (gen/bp-04-market-regimes/007/web3.png), 011 (gen/bp-04-market-regimes/011/web3.png), 015 (gen/bp-04-market-regimes/015/web3.png).
+**BP-05: 16/19 — NOT 100%.** Rows left: 006 (gen/bp-05-spacing-and-range/006/web3.png), 015 (gen/bp-05-spacing-and-range/015/web3.png), 019 (gen/bp-05-spacing-and-range/019/web3.png).
+**BP-06: 12/20 — NOT 100%.** Rows left: 006 (gen/bp-06-entry-and-exit/006/web2.png), 010 (gen/bp-06-entry-and-exit/010/web2.png), 012 (gen/bp-06-entry-and-exit/012/web2.png), 014 (gen/bp-06-entry-and-exit/014/web2.png), 016 (gen/bp-06-entry-and-exit/016/web2.png), 018 (gen/bp-06-entry-and-exit/018/web2.png), 019 (gen/bp-06-entry-and-exit/019/web2.png), 020 (gen/bp-06-entry-and-exit/020/web2.png).
+**BP-07: 16/20 — NOT 100%.** Rows left: 003 (gen/bp-07-spot-paper-trading/003/web2.png), 005 (gen/bp-07-spot-paper-trading/005/web2.png), 019 (gen/bp-07-spot-paper-trading/019/web2.png), 020 (gen/bp-07-spot-paper-trading/020/web2.png).
+
+Updated ChatGPT queue (BP-04..11): 101 items.

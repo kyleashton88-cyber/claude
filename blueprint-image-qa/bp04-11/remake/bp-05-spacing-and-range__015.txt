@@ -1,6 +1,7 @@
 ATTACH FIRST: /workspace/blueprint-beginner/_anchors/anchor.png as the style reference. Match its look exactly: near-black navy ground with a faint grid, glowing cyan glass linework, bold condensed ALL-CAPS headline top-left with one cyan keyword, small dark glass label tags with thin cyan arrows. Do not copy its fence or its words.
 FORMAT: one landscape image, 3:2, exactly 1536x1024 pixels.
 MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 80px inside the left and right edges and at least 90px inside the top and bottom edges. Nothing with text touches or approaches the frame edge. Words in the headline are separated by a clear full space.
+QA FIX v3 MARGIN: the v2 'One change at a time' tag ran to x=1496 on the 1536-wide frame, leaving only a 39px right margin (luma>110). Any side under 45px is a hard fail. Pull that tag (and any other right-edge chip or icon) in so the brightest content stays at least 80px from the right edge, matching this prompt's 80/90 rule. Keep all five recap chips, including '19 gaps = 9.5%'. No arrows.
 
 Headline: "RECAP: SPACING" (the word RECAP in cyan, the rest white).
 Scene: Exactly FIVE glass icons in an evenly spaced row (QA FIX v2: five, not four): a box; a gap bracket; a short band labelled with the house example; an amber fee bar under a gap; a single dial. Each icon gets one chip label below it, so there are five chips in total.
