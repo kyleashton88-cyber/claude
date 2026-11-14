@@ -525,3 +525,22 @@ Fetched the authentic 1536×1024 RGB files from `kyleashton88-cyber/claude` via 
 - **BP-03 used stills: 14/14.** Ledger denominator still 19/19 lesson-stills, 28/28 all-rows.
 - **90-row total (BP-01..03): 90/90.**
 - Queue (BP-01..03): 0.
+
+---
+
+## Run on top of 1c09726 — 14 Nov 2026 (WITA): BP-02 008 cursor2 at 622ac66
+
+Fetched the authentic 1536×1024 RGB file from `kyleashton88-cyber/claude@622ac66800f68ce366ecbf0e56d432ccb149daa9` via the public GitHub Contents API (base64). Saved as `gen/bp-02-what-you-need/008/cursor2.png`. Git blob matches the API sha: `12dcc0c395b83e3b47a134d9ec07d86952573d6a` (100789 bytes). Remade because cursor1's 'Never write down or type a secret' conflicted with the usual advice to keep a seed phrase backed up on paper. Scored against the planned narration and the full rubric (arrow tips must touch, margins ≥45px luma>110, standing label/arithmetic check).
+
+The latest d1f6 BP-02 script (head `6ccab6d4e099711a7bd2769fd7fbabe9ce86ab1c`, 'Match the BP-02 and BP-03 still lines to the remade pictures') is **not updated yet**. Beat 8 still says: 'Never write down or type a secret. A secret is a seed phrase, a private key, or an API secret.' and 'look for one lock and the words never write down or type a secret.' The image was scored against the planned line anyway: 'Never type a secret into a lesson, a chat, or a form, and never write one on this page. A secret is a seed phrase, a private key, or an API secret.'
+
+| File | Result | Margins (l/r/t/b) | Scores | Blob |
+|---|---|---|---|---|
+| gen/bp-02-what-you-need/008/cursor2.png | PASS | 103/296/109/144 | 5/5/5/5/5/—/5 | `12dcc0c395b83e3b47a134d9ec07d86952573d6a` |
+
+Headline 'NEVER TYPE OR SHARE A SECRET' exact (SECRET in cyan). One lock, no pen or paper. Sub-label 'Seed phrase · Private key · API secret' exact. Arrow tip sits in the lock's bottom stroke. Matches the planned narration (type/share; do not write a secret on this page) without forbidding a paper backup of a seed. Consistent with BP-02 012 ('Write it on paper' is the plan/page, not a secret) and with BP-07 beat 7 (do not paste an API key, a seed phrase, or a password into a course field or a chat). No lesson asks the viewer to type an API key into a form. Placed, source cursor.
+
+### Updated counts
+- **BP-02 used stills: 15/15.** Ledger denominator still 20/20 lesson-stills, 31/31 all-rows.
+- **90-row total (BP-01..03): 90/90.**
+- Queue (BP-01..03): 0.

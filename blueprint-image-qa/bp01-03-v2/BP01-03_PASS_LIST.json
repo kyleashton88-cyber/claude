@@ -1609,8 +1609,8 @@
       "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "fb4bb3e385c9d461e33179eaf0fa166534a00a04",
-        "cursor/blueprint-beginner-images": "4aec81d55f41cd1c2eb561557c32baab33b24c77",
-        "cursor/blueprint-cursor-images": "4aec81d55f41cd1c2eb561557c32baab33b24c77"
+        "cursor/blueprint-beginner-images": "12dcc0c395b83e3b47a134d9ec07d86952573d6a",
+        "cursor/blueprint-cursor-images": "12dcc0c395b83e3b47a134d9ec07d86952573d6a"
       },
       "beat_concept": "You never type a seed phrase, a private key, or an API secret into a lesson, a chat, or a form.",
       "scores": {
@@ -1626,35 +1626,35 @@
       "status": "pass",
       "action": "none",
       "remake_prompt": null,
-      "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@92d4f8ada798579a4beb48c945cfd3014d8bc633, blob 4aec81d55f41cd1c2eb561557c32baab33b24c77, 1536x1024, 103195 bytes; identical at a7594f9). One lock. Headline 'NEVER WRITE DOWN OR TYPE A SECRET' exact and spaced (SECRET in cyan). Line 'Seed phrase, private key, API secret' exact (API spelled correctly). The label's upward arrow tip sits in the lock's bottom stroke (continuous cyan at x=768\u2013772, y=688\u2013700 into the shaft; no navy gap). Does not contradict BP-02 012: 008 names the secrets and says not to write or type them; 012's headline is 'THE FORM COPIES YOUR PAGE' and is about the plan/page, not a secret. No lesson in the d1f6 scripts at 5f392b0 asks the viewer to type an API key into a form (BP-07 beat 7 says you do not paste one). Opening teaching line of beat 8 at 5f392b0 matches. No mascot. GridBot Builder style only. Margins 102/296/108/144. In the e03191f used set (script beat 8, No secrets). Placed at out/ and course/images/bp-02-what-you-need/008.png (`source: cursor`).",
+      "notes": "cursor cursor2.png PASS (kyleashton88-cyber/claude@622ac66800f68ce366ecbf0e56d432ccb149daa9, blob 12dcc0c395b83e3b47a134d9ec07d86952573d6a, 1536x1024, 100789 bytes). Headline 'NEVER TYPE OR SHARE A SECRET' exact and spaced (SECRET in cyan). One lock, no pen or paper. Sub-label 'Seed phrase \u00b7 Private key \u00b7 API secret' exact (API spelled correctly). The upward arrow tip sits in the lock's bottom stroke (continuous cyan at x=770 from y=688 through the stroke into the shaft and label box; no navy gap). Matches the planned narration: 'Never type a secret into a lesson, a chat, or a form, and never write one on this page. A secret is a seed phrase, a private key, or an API secret.' The latest d1f6 BP-02 script at 6ccab6d is not updated yet: beat 8 still says 'Never write down or type a secret' and 'look for one lock and the words never write down or type a secret' \u2014 the wording this remake was made to leave behind. Consistent with BP-02 012 ('Write it on paper' / 'Copy it into the form later' is about the plan/page, not a secret). Consistent with BP-07 beat 7, which says you do not paste an API key, a seed phrase, or a password into a course field or a chat. No lesson asks the viewer to type an API key into a form. No mascot. GridBot Builder style only. Margins 103/296/109/144. In the e03191f used set (script beat 8, No secrets). Placed at out/ and course/images/bp-02-what-you-need/008.png (`source: cursor`).",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 102,
+        "left": 103,
         "right": 296,
-        "top": 108,
+        "top": 109,
         "bottom": 144
       },
       "mascot_in_frame": false,
       "previous_v10_pass": true,
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-02-what-you-need/008.png",
-      "scored_blob": "4aec81d55f41cd1c2eb561557c32baab33b24c77",
+      "scored_blob": "12dcc0c395b83e3b47a134d9ec07d86952573d6a",
       "committed": true,
       "pass": true,
-      "previous_committed_blob": "fb4bb3e385c9d461e33179eaf0fa166534a00a04",
+      "previous_committed_blob": "4aec81d55f41cd1c2eb561557c32baab33b24c77",
       "remake_review": {
-        "file": "gen/bp-02-what-you-need/008/cursor1.png",
-        "blob": "4aec81d55f41cd1c2eb561557c32baab33b24c77",
+        "file": "gen/bp-02-what-you-need/008/cursor2.png",
+        "blob": "12dcc0c395b83e3b47a134d9ec07d86952573d6a",
         "size": "1536x1024",
         "margins_px": {
-          "left": 102,
+          "left": 103,
           "right": 296,
-          "top": 108,
+          "top": 109,
           "bottom": 144
         },
-        "scored_against": "latest d1f6 scripts at 5f392b0 + remake brief + strict rubric including arrow contact, EXAMPLE on figures, standing arithmetic/label check",
-        "source_commit": "92d4f8ada798579a4beb48c945cfd3014d8bc633",
+        "scored_against": "planned narration (type/share, never write a secret on this page) + remake brief + full rubric; d1f6 script at 6ccab6d is not yet updated",
+        "source_commit": "622ac66800f68ce366ecbf0e56d432ccb149daa9",
         "source_repo": "kyleashton88-cyber/claude",
         "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
@@ -1667,10 +1667,42 @@
           "label_accuracy": 5
         },
         "hard_fails": [],
-        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@92d4f8ada798579a4beb48c945cfd3014d8bc633, blob 4aec81d55f41cd1c2eb561557c32baab33b24c77, 1536x1024, 103195 bytes; identical at a7594f9). One lock. Headline 'NEVER WRITE DOWN OR TYPE A SECRET' exact and spaced (SECRET in cyan). Line 'Seed phrase, private key, API secret' exact (API spelled correctly). The label's upward arrow tip sits in the lock's bottom stroke (continuous cyan at x=768\u2013772, y=688\u2013700 into the shaft; no navy gap). Does not contradict BP-02 012: 008 names the secrets and says not to write or type them; 012's headline is 'THE FORM COPIES YOUR PAGE' and is about the plan/page, not a secret. No lesson in the d1f6 scripts at 5f392b0 asks the viewer to type an API key into a form (BP-07 beat 7 says you do not paste one). Opening teaching line of beat 8 at 5f392b0 matches. No mascot. GridBot Builder style only. Margins 102/296/108/144. In the e03191f used set (script beat 8, No secrets). Placed at out/ and course/images/bp-02-what-you-need/008.png (`source: cursor`).",
+        "notes": "cursor cursor2.png PASS (kyleashton88-cyber/claude@622ac66800f68ce366ecbf0e56d432ccb149daa9, blob 12dcc0c395b83e3b47a134d9ec07d86952573d6a, 1536x1024, 100789 bytes). Headline 'NEVER TYPE OR SHARE A SECRET' exact and spaced (SECRET in cyan). One lock, no pen or paper. Sub-label 'Seed phrase \u00b7 Private key \u00b7 API secret' exact (API spelled correctly). The upward arrow tip sits in the lock's bottom stroke (continuous cyan at x=770 from y=688 through the stroke into the shaft and label box; no navy gap). Matches the planned narration: 'Never type a secret into a lesson, a chat, or a form, and never write one on this page. A secret is a seed phrase, a private key, or an API secret.' The latest d1f6 BP-02 script at 6ccab6d is not updated yet: beat 8 still says 'Never write down or type a secret' and 'look for one lock and the words never write down or type a secret' \u2014 the wording this remake was made to leave behind. Consistent with BP-02 012 ('Write it on paper' / 'Copy it into the form later' is about the plan/page, not a secret). Consistent with BP-07 beat 7, which says you do not paste an API key, a seed phrase, or a password into a course field or a chat. No lesson asks the viewer to type an API key into a form. No mascot. GridBot Builder style only. Margins 103/296/109/144. In the e03191f used set (script beat 8, No secrets). Placed at out/ and course/images/bp-02-what-you-need/008.png (`source: cursor`).",
         "pass": true,
-        "used_in_e03191f": true
-      }
+        "used_in_e03191f": true,
+        "d1f6_script_updated": false,
+        "d1f6_script_sha": "6ccab6d4e099711a7bd2769fd7fbabe9ce86ab1c"
+      },
+      "previous_remake_reviews": [
+        {
+          "file": "gen/bp-02-what-you-need/008/cursor1.png",
+          "blob": "4aec81d55f41cd1c2eb561557c32baab33b24c77",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 102,
+            "right": 296,
+            "top": 108,
+            "bottom": 144
+          },
+          "scored_against": "latest d1f6 scripts at 5f392b0 + remake brief + strict rubric including arrow contact, EXAMPLE on figures, standing arithmetic/label check",
+          "source_commit": "92d4f8ada798579a4beb48c945cfd3014d8bc633",
+          "source_repo": "kyleashton88-cyber/claude",
+          "source_branch": "cursor/blueprint-cursor-images",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 5,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 5
+          },
+          "hard_fails": [],
+          "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@92d4f8ada798579a4beb48c945cfd3014d8bc633, blob 4aec81d55f41cd1c2eb561557c32baab33b24c77, 1536x1024, 103195 bytes; identical at a7594f9). One lock. Headline 'NEVER WRITE DOWN OR TYPE A SECRET' exact and spaced (SECRET in cyan). Line 'Seed phrase, private key, API secret' exact (API spelled correctly). The label's upward arrow tip sits in the lock's bottom stroke (continuous cyan at x=768\u2013772, y=688\u2013700 into the shaft; no navy gap). Does not contradict BP-02 012: 008 names the secrets and says not to write or type them; 012's headline is 'THE FORM COPIES YOUR PAGE' and is about the plan/page, not a secret. No lesson in the d1f6 scripts at 5f392b0 asks the viewer to type an API key into a form (BP-07 beat 7 says you do not paste one). Opening teaching line of beat 8 at 5f392b0 matches. No mascot. GridBot Builder style only. Margins 102/296/108/144. In the e03191f used set (script beat 8, No secrets). Placed at out/ and course/images/bp-02-what-you-need/008.png (`source: cursor`).",
+          "pass": true,
+          "used_in_e03191f": true
+        }
+      ]
     },
     {
       "path": "course/images/bp-02-what-you-need/009.png",
