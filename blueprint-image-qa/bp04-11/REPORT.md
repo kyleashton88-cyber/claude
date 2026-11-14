@@ -754,3 +754,20 @@ No used still in BP-01..03 now fails the check.
 - **BP-03 015** holds: 'Label the 5 words' — five blank tags around the figure (plus 'Draw one step down').
 
 Other used stills were OCR'd; they have no countable line/gap/item claim that could fail this check.
+
+---
+
+## Cursor-agent remake at a7594f9: BP-05 004 (cursor1)
+
+Fetched the authentic 1536×1024 RGB file from `kyleashton88-cyber/claude@a7594f95947d42c23ed338dd4cd818e068c16cd0` via the public GitHub Contents API (base64). Saved as `gen/bp-05-spacing-and-range/004/cursor1.png`. Git blob matches the API sha: `3647d7e0e75156d0cb6ebe32dbcf6fb870aa592b` (103049 bytes). Scored against the standing arithmetic-vs-drawing check and the full rubric (arrow tips must touch, EXAMPLE, margins ≥45px luma>110). The line count was measured, not taken from Cursor's claim.
+
+| File | Result | Margins (l/r/t/b) | Scores | Blob |
+|---|---|---|---|---|
+| gen/bp-05-spacing-and-range/004/cursor1.png | PASS | 100/100/111/104 | 5/5/5/5/5/—/5 | `3647d7e0e75156d0cb6ebe32dbcf6fb870aa592b` |
+
+Exactly 20 interior cyan grid lines (RGB 0,228,255, 3px wide) with midpoints y=279, 309, …, 849 at a 30px pitch; 19 gaps; 849−279=570=30×19. Cursor's 'y=280–850' is that same band rounded to the line centres. The card frame is a thicker blue rounded stroke (RGB ~32–42,132,255), visually distinct from the grid lines, and is not counted. Headline '20 LINES MAKE 19 GAPS' and labels '20 lines' / '19 gaps between them' are exact. EXAMPLE kept. Both arrow tips touch (the '20 lines' tip merges with the top grid line; the '19 gaps' tip sits on the white brace). Placed, source cursor.
+
+### Updated counts
+- **BP-05: 14/14 — 100%.**
+- **BP-04..11 overall: 112/112** pass, 0 fail, 49 dropped (excluded).
+- Queue of used remakes: empty.

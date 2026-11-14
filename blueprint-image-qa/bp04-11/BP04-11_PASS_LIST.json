@@ -8,8 +8,8 @@
   "not_in_scope": "course/images/_held/*.png (10 files: bp-06 014/017, bp-07 012/017/020, bp-08 003/006/007/009/011) are not referenced by any lesson script and were not scored. Shared title-art/mascot assets are already on BP01-03_PASS_LIST.json.",
   "counts": {
     "total": 112,
-    "pass": 111,
-    "fail": 1,
+    "pass": 112,
+    "fail": 0,
     "by_lesson": {
       "bp-04-market-regimes": {
         "total": 14,
@@ -18,8 +18,8 @@
       },
       "bp-05-spacing-and-range": {
         "total": 14,
-        "pass": 13,
-        "fail": 1
+        "pass": 14,
+        "fail": 0
       },
       "bp-06-entry-and-exit": {
         "total": 14,
@@ -2037,70 +2037,98 @@
       "beat": 4,
       "chapter": "Gaps and orders",
       "kind": "lesson-still",
-      "source": "chatgpt-web",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "b615dabcbfd40b25667f34d4b34d9a21eed40b7d",
-        "cursor/blueprint-beginner-images": "b615dabcbfd40b25667f34d4b34d9a21eed40b7d"
+        "cursor/blueprint-beginner-images": "3647d7e0e75156d0cb6ebe32dbcf6fb870aa592b",
+        "cursor/blueprint-cursor-images": "3647d7e0e75156d0cb6ebe32dbcf6fb870aa592b"
       },
       "beat_concept": "Twenty order lines make nineteen gaps.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 4,
-        "craft_polish": 4,
-        "brand_fidelity": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
         "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "count does not match the drawing: headline and labels claim 20 lines / 19 gaps, but only 19 interior lines (18 gaps) are drawn; the card frame (full-width strokes at y=185 and y=901) is not a grid line"
-      ],
-      "status": "fail",
-      "action": "remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-05-spacing-and-range__004.txt",
-      "notes": "FLIP (standing arithmetic-vs-drawing check, 14 Nov 2026 WITA): FAIL. Headline '20 LINES MAKE 19 GAPS' and labels '20 lines' / '19 gaps between them', but only 19 interior lines (y=243\u2013854, 18 gaps) are drawn; the outer card frame (y=185 and y=901) is not a grid line, consistent with BP-05 015. The earlier pass note ('verified EXACTLY 20 lines / 19 gaps (peak count 20)') counted a frame stroke. Placed file left in place (blob 52918482981ac1b8c92798e4bcabfd1bd8c7b08d, chatgpt-web web1.png). Queued for cursor1.png. Fix note for Cursor: draw exactly 20 interior lines (19 equal gaps) inside the frame, keep the headline and labels, keep the frame visually distinct from the grid lines, and keep EXAMPLE, the margins and the arrow rule. Prior notes: Beat 4: verified EXACTLY 20 lines / 19 gaps (peak count 20, even spacing). '20 lines' and '19 gaps between them' arrows touch. EXAMPLE. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
+      "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@a7594f95947d42c23ed338dd4cd818e068c16cd0, blob 3647d7e0e75156d0cb6ebe32dbcf6fb870aa592b, 1536x1024, 103049 bytes). Counted 20 interior cyan grid lines (RGB 0,228,255, 3px), midpoints y=279,309,\u2026,849 at a 30px pitch; 19 gaps; 849\u2212279=570=30\u00d719. Cursor's y=280\u2013850 is the same band rounded to the line centres. The card frame is a thicker blue rounded stroke (RGB ~32\u201342,132,255, ~6px at the top), visually distinct from the grid lines, and is not counted. Headline '20 LINES MAKE 19 GAPS' and labels '20 lines' / '19 gaps between them' exact and spaced. EXAMPLE kept. '20 lines' arrow merges with the top grid line (continuous cyan at y=279 from x=358 through the tip into the stack). '19 gaps between them' arrow tip sits on the white brace (cyan at x=1010 adjacent to white x=1008\u20131012 at y=518\u2013522; no navy gap at the mid-head). No mascot. GridBot Builder style only. Margins 100/100/111/104. Placed at out/ and course/images/bp-05-spacing-and-range/004.png (`source: cursor`).",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 85,
-        "right": 87,
-        "top": 71,
-        "bottom": 118
+        "left": 100,
+        "right": 100,
+        "top": 111,
+        "bottom": 104
       },
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/004.png",
-      "scored_blob": "52918482981ac1b8c92798e4bcabfd1bd8c7b08d",
+      "scored_blob": "3647d7e0e75156d0cb6ebe32dbcf6fb870aa592b",
       "committed": true,
-      "pass": false,
+      "pass": true,
       "previous_committed_blob": "52918482981ac1b8c92798e4bcabfd1bd8c7b08d",
       "remake_review": {
-        "file": "gen/bp-05-spacing-and-range/004/web1.png",
-        "blob": "52918482981ac1b8c92798e4bcabfd1bd8c7b08d",
+        "file": "gen/bp-05-spacing-and-range/004/cursor1.png",
+        "blob": "3647d7e0e75156d0cb6ebe32dbcf6fb870aa592b",
         "size": "1536x1024",
         "margins_px": {
-          "left": 85,
-          "right": 87,
-          "top": 71,
-          "bottom": 118
+          "left": 100,
+          "right": 100,
+          "top": 111,
+          "bottom": 104
         },
-        "scored_against": "standing arithmetic-vs-drawing check: card or box borders are not grid lines",
+        "scored_against": "standing arithmetic-vs-drawing check + full rubric (arrow contact, EXAMPLE, margins \u226545px)",
+        "source_commit": "a7594f95947d42c23ed338dd4cd818e068c16cd0",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
-          "beginner_clarity": 2,
-          "composition_hierarchy": 4,
-          "craft_polish": 4,
-          "brand_fidelity": 4,
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
           "text_legibility": 5,
           "character_consistency": null,
-          "label_accuracy": 1
+          "label_accuracy": 5
         },
-        "hard_fails": [
-          "count does not match the drawing: headline and labels claim 20 lines / 19 gaps, but only 19 interior lines (18 gaps) are drawn; the card frame (full-width strokes at y=185 and y=901) is not a grid line"
-        ],
-        "notes": "CORRECTION: previously passed web1 (blob 52918482981ac1b8c92798e4bcabfd1bd8c7b08d) claimed 20 lines / 19 gaps, but the stack has only 19 interior lines and 18 gaps. The card frame is not a grid line. Recorded as FAIL. Ledger only; placed file left in place. Next: cursor1.png.",
-        "pass": false,
-        "fix_note": "Draw exactly 20 interior lines (19 equal gaps) inside the frame, keep the headline and labels, keep the frame visually distinct from the grid lines, and keep EXAMPLE, the margins and the arrow rule. Next: cursor1.png.",
-        "correction_of": "476271f2e7e77fa0b19260fd13fe9a88587f3c61"
-      }
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@a7594f95947d42c23ed338dd4cd818e068c16cd0, blob 3647d7e0e75156d0cb6ebe32dbcf6fb870aa592b, 1536x1024, 103049 bytes). Counted 20 interior cyan grid lines (RGB 0,228,255, 3px), midpoints y=279,309,\u2026,849 at a 30px pitch; 19 gaps; 849\u2212279=570=30\u00d719. Cursor's y=280\u2013850 is the same band rounded to the line centres. The card frame is a thicker blue rounded stroke (RGB ~32\u201342,132,255, ~6px at the top), visually distinct from the grid lines, and is not counted. Headline '20 LINES MAKE 19 GAPS' and labels '20 lines' / '19 gaps between them' exact and spaced. EXAMPLE kept. '20 lines' arrow merges with the top grid line (continuous cyan at y=279 from x=358 through the tip into the stack). '19 gaps between them' arrow tip sits on the white brace (cyan at x=1010 adjacent to white x=1008\u20131012 at y=518\u2013522; no navy gap at the mid-head). No mascot. GridBot Builder style only. Margins 100/100/111/104. Placed at out/ and course/images/bp-05-spacing-and-range/004.png (`source: cursor`).",
+        "pass": true
+      },
+      "previous_remake_reviews": [
+        {
+          "file": "gen/bp-05-spacing-and-range/004/web1.png",
+          "blob": "52918482981ac1b8c92798e4bcabfd1bd8c7b08d",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 85,
+            "right": 87,
+            "top": 71,
+            "bottom": 118
+          },
+          "scored_against": "standing arithmetic-vs-drawing check: card or box borders are not grid lines",
+          "scores": {
+            "beginner_clarity": 2,
+            "composition_hierarchy": 4,
+            "craft_polish": 4,
+            "brand_fidelity": 4,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 1
+          },
+          "hard_fails": [
+            "count does not match the drawing: headline and labels claim 20 lines / 19 gaps, but only 19 interior lines (18 gaps) are drawn; the card frame (full-width strokes at y=185 and y=901) is not a grid line"
+          ],
+          "notes": "CORRECTION: previously passed web1 (blob 52918482981ac1b8c92798e4bcabfd1bd8c7b08d) claimed 20 lines / 19 gaps, but the stack has only 19 interior lines and 18 gaps. The card frame is not a grid line. Recorded as FAIL. Ledger only; placed file left in place. Next: cursor1.png.",
+          "pass": false,
+          "fix_note": "Draw exactly 20 interior lines (19 equal gaps) inside the frame, keep the headline and labels, keep the frame visually distinct from the grid lines, and keep EXAMPLE, the margins and the arrow rule. Next: cursor1.png.",
+          "correction_of": "476271f2e7e77fa0b19260fd13fe9a88587f3c61"
+        }
+      ]
     },
     {
       "path": "course/images/bp-05-spacing-and-range/005.png",
