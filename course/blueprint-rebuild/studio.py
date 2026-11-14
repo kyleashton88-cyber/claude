@@ -513,7 +513,7 @@ def chart_idea(shot: dict) -> str:
             return "Waiting orders inside a band you measured."
         return "This path stayed inside the band."
     if chapter == "Limit orders wait":
-        return "A buy order waits at 27,630. A cross is not a filled order."
+        return "A cross is the price touching 27,630. A fill is an order trading. These marks are crosses."
     return ""
 
 
@@ -815,25 +815,38 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
             draw.rounded_rectangle([left, top, left + width, top + ticket_h], 8, fill=TAG, outline=CYAN, width=2)
             draw.text((left + 8, top + 6), label, font=face, fill=WHITE)
 
-        if len(downs) >= 2:
+        if chapter == "Limit orders wait":
+            # Rings mark crosses: the price line touched 27,630. A fill is a different mark.
+            ups = [index for index in range(1, n) if closes[index - 1] < 27630 < closes[index]]
+            for index in list(downs) + list(ups):
+                cx = x_of(index)
+                draw.ellipse((cx - 7, y_line - 7, cx + 7, y_line + 7), outline=WHITE, width=3)
+            draw_ticket("Cross: price touched the rung", plot[0] + 16, plot[1] + 12, None)
+            fill_label = "Fill: an order trades"
+            fill_w = int(face_t.getlength(fill_label)) + 16
+            fill_left = plot[2] - fill_w - 8
+            fill_top = plot[3] - 16 - ticket_h
+            draw.rectangle(
+                (fill_left - 22, fill_top + 12, fill_left - 8, fill_top + 26),
+                fill=WHITE,
+            )
+            draw_ticket(fill_label, fill_left, fill_top, None)
+            count = f"{len(downs) + len(ups)} crosses: {len(downs)} down, {len(ups)} up"
+            draw_ticket(count, plot[0] + 16, plot[3] - 16 - ticket_h, None)
+        elif len(downs) >= 2:
             # 17 Aug: sit left of the drop so the path can meet the line.
             cx = x_of(downs[0])
             draw_ticket(buy, max(plot[0], cx - 28 - twid), y_line - 40 - ticket_h, (cx, y_line))
             # 30 Aug: the down-close itself, not the peak the day before.
             cx = x_of(downs[1])
             draw_ticket(buy, cx - twid / 2, y_line - 48 - ticket_h, (cx, y_line))
-        october = downs[2:]
-        for index in october:
-            cx = x_of(index)
-            draw.ellipse((cx - 5, y_line - 5, cx + 5, y_line + 5), fill=WHITE, outline=CYAN)
-        if chapter == "Limit orders wait":
-            # The caption says 10 crosses: mark the 5 up-crosses too, as rings.
-            ups = [index for index in range(1, n) if closes[index - 1] < 27630 < closes[index]]
-            for index in ups:
+        if chapter != "Limit orders wait":
+            october = downs[2:]
+            for index in october:
                 cx = x_of(index)
-                draw.ellipse((cx - 7, y_line - 7, cx + 7, y_line + 7), outline=WHITE, width=3)
-            key = f"{len(downs) + len(ups)} crosses: {len(downs)} down, {len(ups)} up (rings)"
-            draw_ticket(key, plot[0] + 16, plot[3] - 16 - ticket_h, None)
+                draw.ellipse((cx - 5, y_line - 5, cx + 5, y_line + 5), fill=WHITE, outline=CYAN)
+        else:
+            october = []
         if october:
             more = "3 more in October"
             width = int(face_t.getlength(more)) + 16

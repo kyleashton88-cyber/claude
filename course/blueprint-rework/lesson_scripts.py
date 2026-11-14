@@ -360,24 +360,29 @@ def bp03() -> list[dict]:
             "A grid bot, in this lesson, is not a guess about next month. "
             "It is a set of limit orders waiting on rungs inside a band you already measured. "
             "The band is the summer of 2023. The path is already on the chart. "
-            "We are naming the mechanism, not claiming a fill."
+            "We are naming how it works. We are not saying an order traded."
         ),
         caption="Waiting orders inside a band you measured.",
     ))
     s += stack("Objectives", [
         "Define a grid as limit orders waiting inside 24930 to 30331.",
         "Say which side of 27630 is the buy side in this picture.",
-        "Refuse a sentence that calls the ten crosses a result.",
+        "Say, in plain words, that the ten crosses are not a result.",
     ], "By the end you will be able to do three things.")
     s.append(legal())
     s.append(_shot(
         chapter="Limit orders wait", reveal=1, focus_price=27630, focus_label="27630",
         vo=(
-            "A limit order waits at a price. A market order cuts through the book. They are different tools. "
+            "Imagine a line that only touches a rung. Touching the rung's price is a cross. "
+            "An order actually trading is a fill. Those are two different things. "
+            "A limit order waits at a price you chose. A market order does not wait. "
+            "It trades straight away, at the prices people are already offering. "
+            "That list of waiting prices is called the book. "
             "On this chart the middle rung is 27630. The daily close crossed it ten times. "
-            "Each cross is the path changing sides. It is not a receipt."
+            "A cross is the price line touching that rung. A fill is an order actually trading. "
+            "These ten marks are crosses, not fills."
         ),
-        caption="Daily closes crossed 27,630 10 times. A cross is not a filled order.",
+        caption="A cross is the price touching 27,630. A fill is an order trading. These ten marks are crosses.",
     ))
     s.append(_shot(
         chapter="Buys and sells", board="buys-sells", reveal=1, focus_price=27630, focus_label="Middle",
@@ -386,26 +391,37 @@ def bp03() -> list[dict]:
             "Below 27630: 26730, 25830, 24930. Above it: 28531, 29431, 30331. "
             "When the path stepped down toward 26050 on 18 August 2023, it was on the lower side of that picture. "
             "When it later printed 27969 on 7 October, it was back through the middle. "
-            "If the path leaves, one side can be left holding inventory. The October leave did that to any band that ended at 30331."
+            "If the path leaves, one side can be left holding inventory. "
+            "When the path left in October, that is what happened to a band that ended at 30331."
         ),
         caption="Buys below 27,630. Sells above it. Example only.",
     ))
-    s += walk(SUMMER, "Where the path stood", 4, (LOW, HIGH), "The path, not a forecast")
+    s.append(_shot(
+        chapter="Where the path stood",
+        reveal=1,
+        levels=[LOW, HIGH, 27630],
+        vo=(
+            "Here is the shape, without reading out every day. "
+            "From 19 July 2023 to 16 October 2023 the path stayed between 24930 and 30331, "
+            "and the close crossed 27630 ten times. "
+            "That is the path relative to the band. It is marked Example. It is not a forecast."
+        ),
+        caption="The path stayed between 24,930 and 30,331, and crossed 27,630 ten times.",
+    ))
     s.append(_shot(
         kind="worked", chapter="Worked check",
         items=[
             "Middle rung: 27,630.",
-            "18 August close: about 26,050. Lower side.",
-            "7 October close: 27,969. Through the middle.",
-            "Ten crosses are not a result.",
+            "18 August: 26,050 is below 27,630.",
+            "7 October: 27,969 is above 27,630.",
+            "The ten crosses are not a gain.",
         ],
         vo=(
-            "Worked check. Point at 27630. "
-            "Say whether 26050 on 18 August is below it. It is. "
-            "Say whether 27969 on 7 October is above it. It is. "
-            "Then say the sentence you must not say: that the ten crosses were a gain. Do not say that. They were crosses."
+            "Worked check. The middle rung is 27,630. "
+            "26,050 on 18 August is below 27,630, and 27,969 on 7 October is above 27,630. "
+            "The ten crosses are not a gain."
         ),
-        caption="Below, then above. Crosses are not a gain.",
+        caption="Worked check. The middle rung is 27,630. 26,050 on 18 August is below 27,630, and 27,969 on 7 October is above 27,630. The ten crosses are not a gain.",
     ))
     s += stack("Recap", [
         "A grid here means limit orders waiting inside the measured band.",
