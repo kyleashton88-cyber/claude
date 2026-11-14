@@ -50,11 +50,29 @@ def bars(base, x, y, w, h, color) -> None:
     paste_layer(base, layer)
 
 
+def center_lines(base, box, lines, face) -> None:
+    draw = ImageDraw.Draw(base)
+    left, top, right, bottom = [px(v) for v in box]
+    heights = [text_size(face, line)[1] for line in lines]
+    gap = px(6)
+    block = sum(heights) + gap * (len(lines) - 1)
+    ty = (top + bottom) // 2 - block // 2
+    for line, h in zip(lines, heights):
+        bb = face.getbbox(line)
+        tw = bb[2] - bb[0]
+        if tw > (right - left - px(24)):
+            raise SystemExit(f"008 text overflow {line!r} {tw}")
+        tx = left + (right - left - tw) // 2 - bb[0]
+        draw.text((tx, ty - bb[1]), line, font=face, fill=WHITE)
+        ty += h + gap
+
+
 def render_008() -> Image.Image:
     img = new_canvas()
     draw_grid(img)
     draw_bokeh(img)
-    cards = [(96, 230, 740, 910), (796, 230, 1440, 910)]
+    # Full-width boxes so the two sentences can sit on two large lines.
+    cards = [(120, 210, 1416, 530), (120, 570, 1416, 900)]
     for box in cards:
         rounded_glow(
             img,
@@ -69,44 +87,52 @@ def render_008() -> Image.Image:
     def band_and_path(x0, x1, top, bot, pts):
         hline(img, x0, x1, top, CYAN, 6)
         hline(img, x0, x1, bot, CYAN, 6)
-        # Solid, so every peak and trough sits on a band line.
         layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
         d = ImageDraw.Draw(layer)
         d.line([(px(x), px(y)) for x, y in pts], fill=CYAN + (255,), width=px(6))
         paste_layer(img, layer)
 
-    # Left: price bounces between the lines. Peaks and troughs land on them.
+    # Left of each box: the picture. Right: the sentence, large.
     band_and_path(
-        150,
-        680,
-        340,
-        500,
-        [(180, 420), (270, 340), (380, 500), (490, 340), (600, 500), (680, 420)],
+        170,
+        520,
+        270,
+        390,
+        [(190, 330), (260, 270), (340, 390), (420, 270), (500, 330)],
     )
-    bars(img, 180, 560, 220, 90, BLUE)
-    bars(img, 430, 560, 220, 90, MINT)
+    bars(img, 190, 420, 140, 50, BLUE)
+    bars(img, 360, 420, 140, 50, MINT)
 
-    # Right: price leaves through the bottom and stays below, clear of the piles.
     band_and_path(
-        850,
-        1380,
-        340,
-        500,
-        [(880, 420), (980, 340), (1080, 500), (1180, 360), (1260, 500), (1340, 600)],
+        170,
+        520,
+        630,
+        750,
+        [(190, 690), (270, 630), (350, 750), (430, 660), (500, 820)],
     )
-    bars(img, 880, 580, 180, 150, BLUE)
-    bars(img, 1120, 694, 180, 36, MINT)
+    bars(img, 190, 790, 120, 70, BLUE)
+    bars(img, 360, 836, 120, 24, MINT)
 
-    face = font(FONT_SEMI, 32)
-    tag(img, (130, 760, 706, 880), ["Price bounces: coin and cash", "swap back and forth"], face)
-    tag(img, (830, 760, 1406, 880), ["Price leaves: mostly coin", "or mostly cash"], face)
-    stamp(img, 1320, 275)
+    face = font(FONT_SEMI, 48)
+    center_lines(
+        img,
+        (560, 250, 1360, 490),
+        ["Price bounces: coin and cash", "swap back and forth"],
+        face,
+    )
+    center_lines(
+        img,
+        (560, 610, 1360, 860),
+        ["Price leaves: mostly coin", "or mostly cash"],
+        face,
+    )
+    stamp(img, 1320, 160)
     headline(
         img,
         108,
-        108,
+        96,
         [("WHAT YOU ", WHITE), ("HOLD", CYAN), (" CHANGES", WHITE)],
-        font(FONT_BOLD, 52),
+        font(FONT_BOLD, 44),
     )
     final = finish(img)
     m = margins(final)

@@ -362,177 +362,49 @@ def render_011() -> Image.Image:
     return final
 
 
-def icon_tickets(base, cx, cy) -> None:
-    layer = Image.new("RGBA", base.size, (0, 0, 0, 0))
-    d = ImageDraw.Draw(layer)
-
-    def ticket(x, y, color):
-        d.rounded_rectangle(
-            [px(x), px(y), px(x + 86), px(y + 54)],
-            radius=px(10),
-            fill=color + (255,),
-            outline=WHITE + (180,),
-            width=px(2),
-        )
-        # check
-        d.line(
-            [(px(x + 28), px(y + 28)), (px(x + 40), px(y + 40)), (px(x + 58), px(y + 16))],
-            fill=(6, 16, 28, 255),
-            width=px(5),
-        )
-
-    ticket(cx - 58, cy - 48, MINT)
-    ticket(cx - 28, cy - 10, BLUE)
-    paste_layer(base, layer)
-
-
-def icon_range(base, cx, cy) -> None:
-    hline(base, cx - 70, cx + 70, cy - 36, WHITE, 8)
-    hline(base, cx - 70, cx + 70, cy + 36, WHITE, 14)
-    # End cap so the arrow from the previous icon has a solid target.
-    layer = Image.new("RGBA", base.size, (0, 0, 0, 0))
-    d = ImageDraw.Draw(layer)
-    d.line([(px(cx - 70), px(cy - 36)), (px(cx - 70), px(cy + 36))], fill=WHITE + (255,), width=px(8))
-    paste_layer(base, layer)
-    dashed_polyline(
-        base,
-        [(cx - 60, cy + 8), (cx - 30, cy - 20), (cx, cy + 16), (cx + 30, cy - 18), (cx + 60, cy + 10)],
-        CYAN,
-        5,
-        10,
-        7,
-    )
-
-
-def icon_sentence(base, cx, cy) -> None:
-    layer = Image.new("RGBA", base.size, (0, 0, 0, 0))
-    d = ImageDraw.Draw(layer)
-    d.rounded_rectangle(
-        [px(cx - 78), px(cy - 48), px(cx + 78), px(cy + 48)],
-        radius=px(12),
-        fill=(120, 68, 16, 235),
-        outline=AMBER + (255,),
-        width=px(4),
-    )
-    for i, w in enumerate((110, 96, 72)):
-        yy = cy - 22 + i * 22
-        d.line([(px(cx - 58), px(yy)), (px(cx - 58 + w), px(yy))], fill=AMBER + (255,), width=px(5))
-    paste_layer(base, layer)
-
-
-def icon_jars(base, cx, cy) -> None:
-    layer = Image.new("RGBA", base.size, (0, 0, 0, 0))
-    d = ImageDraw.Draw(layer)
-
-    def jar(x, blocks, color):
-        d.rounded_rectangle(
-            [px(x), px(cy - 36), px(x + 58), px(cy + 50)],
-            radius=px(18),
-            outline=CYAN + (255,),
-            width=px(6),
-        )
-        for i in range(blocks):
-            yy = cy + 28 - i * 20
-            d.rounded_rectangle(
-                [px(x + 12), px(yy), px(x + 46), px(yy + 14)],
-                radius=px(3),
-                fill=color + (255,),
-            )
-
-    jar(cx - 64, 3, BLUE)
-    jar(cx + 8, 2, MINT)
-    paste_layer(base, layer)
-
-
 def render_014() -> Image.Image:
     img = new_canvas()
     draw_grid(img)
     draw_bokeh(img)
-    rounded_glow(
-        img,
-        [px(90), px(200), px(1446), px(920)],
-        radius=px(28),
-        fill=(7, 16, 34, 230),
-        outline=CYAN + (255,),
-        glow=(0, 180, 230, 110),
-        width=px(4),
-    )
-
-    face = font(FONT_SEMI, 36)
+    face = font(FONT_SEMI, 44)
     labels = [
-        ["Orders wait"],
-        ["Inside your range"],
-        ["Stop: your rule", "if price leaves"],
-        ["What you hold", "changes"],
+        "Orders wait",
+        "Inside your range",
+        "Stop: your rule if price leaves",
+        "What you hold changes",
     ]
-    widths = []
-    for lines in labels:
-        widths.append(max(text_size(face, line)[0] for line in lines) / S + 36)
-    gap = 18
-    total = sum(widths) + gap * 3
-    left0 = (1536 - total) / 2
-    boxes = []
-    x = left0
-    # Two-line labels sit a little higher so the larger type stays inside the card.
-    tops = [730, 730, 690, 690]
-    heights = [78, 78, 128, 128]
-    for w, top, h in zip(widths, tops, heights):
-        boxes.append((x, top, x + w, top + h))
-        x += w + gap
-    print("014 tag boxes", [(round(a), round(b), round(c), round(d)) for a, b, c, d in boxes])
-
-    centers = [((b[0] + b[2]) / 2) for b in boxes]
-    icon_cy = 430
-    icon_draw = [icon_tickets, icon_range, icon_sentence, icon_jars]
-    # Each label arrow ends on a solid part of its icon.
-    label_tips = [
-        (centers[0], icon_cy + 36),
-        (centers[1], icon_cy + 34),
-        (centers[2], icon_cy + 40),
-        (centers[3] - 36, icon_cy + 40),
-    ]
-    # Sequence arrows end on a solid edge of the next icon.
-    seq_tips = [
-        (centers[1] - 73, icon_cy),
-        (centers[2] - 70, icon_cy),
-        (centers[3] - 46, icon_cy),
-    ]
-    seq_starts = [
-        (centers[0] + 62, icon_cy),
-        (centers[1] + 78, icon_cy),
-        (centers[2] + 86, icon_cy),
-    ]
-
-    for cx, draw_icon in zip(centers, icon_draw):
-        draw_icon(img, cx, icon_cy)
-
-    for start, tip in zip(seq_starts, seq_tips):
-        arrow(img, start, tip)
-
-    for box, lines in zip(boxes, labels):
-        tag(img, box, lines, face)
-
-    for box, tip in zip(boxes, label_tips):
-        arrow(img, ((box[0] + box[2]) / 2, box[1]), tip)
-
-    stamp(img, 220, 268)
+    tops = [210, 380, 550, 720]
+    for text, top in zip(labels, tops):
+        rounded_glow(
+            img,
+            [px(140), px(top), px(1396), px(top + 140)],
+            radius=px(22),
+            fill=(7, 16, 34, 230),
+            outline=CYAN + (255,),
+            glow=(0, 180, 230, 90),
+            width=px(4),
+        )
+        tw = text_size(face, text)[0]
+        if tw > px(1200):
+            raise SystemExit(f"014 text overflow {text!r} {tw}")
+        draw = ImageDraw.Draw(img)
+        bb = face.getbbox(text)
+        tx = px(768) - (bb[2] - bb[0]) // 2 - bb[0]
+        ty = px(top + 70) - (bb[3] - bb[1]) // 2 - bb[1]
+        draw.text((tx, ty), text, font=face, fill=WHITE)
+    stamp(img, 1320, 150)
     headline(
         img,
         108,
-        100,
+        96,
         [("THE WHOLE IDEA IN ", WHITE), ("ONE", CYAN), (" BREATH", WHITE)],
-        font(FONT_BOLD, 42),
+        font(FONT_BOLD, 40),
     )
     final = finish(img)
     m = margins(final)
     print("014 margins L/R/T/B", m)
     if m[0] < 80 or m[1] < 80 or m[2] < 90 or m[3] < 90:
         raise SystemExit(f"014 margin fail {m}")
-    names = ["orders", "range", "stop", "holdings"]
-    for name, tip in zip(names, label_tips):
-        assert_tip(final, (int(round(tip[0])), int(round(tip[1]))), (tip[0], icon_cy), name)
-    for i, tip in enumerate(seq_tips):
-        assert_tip(final, (int(round(tip[0])), int(round(tip[1]))), (tip[0] + 14, icon_cy), f"seq {i}")
     return final
 
 

@@ -394,43 +394,188 @@ def lesson_bp05() -> None:
     bp05_015()
 
 
-def bp02_014() -> None:
-    img = canvas()
-    head(img, "AN EMPTY PAIR BLOCKS THE PAGE", "EMPTY", size=40)
-    card(img, (640, 230, 1420, 900))
-    face = font(FONT_SEMI, 32)
-    # Tidy rows under an empty pair box.
-    rows_y = [470, 610, 750]
-    names = ["Range", "Levels", "Stop"]
-    for y, name in zip(rows_y, names):
-        tag(img, (700, y, 1340, y + 90), [name], face)
-        block(img, 1240, y + 28, 36, 36, MINT)
-    # Empty pair box, drawn after the card so its stroke is a clear target.
+def center_lines(img, box, lines, face, fill=WHITE) -> None:
+    draw = ImageDraw.Draw(img)
+    left, top, right, bottom = [px(v) for v in box]
+    heights = [font_box(face, line)[1] for line in lines]
+    gap = px(8)
+    block_h = sum(heights) + gap * (len(lines) - 1)
+    ty = (top + bottom) // 2 - block_h // 2
+    for line, h in zip(lines, heights):
+        bb = face.getbbox(line)
+        tw = bb[2] - bb[0]
+        if tw > right - left - px(20):
+            raise SystemExit(f"text overflow {line!r}")
+        tx = left + (right - left - tw) // 2 - bb[0]
+        draw.text((tx, ty - bb[1]), line, font=face, fill=fill)
+        ty += h + gap
+
+
+def font_box(face, line):
+    bb = face.getbbox(line)
+    return bb[2] - bb[0], bb[3] - bb[1]
+
+
+def outline_box(img, box, width=8) -> None:
     layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
     d = ImageDraw.Draw(layer)
     d.rounded_rectangle(
-        [px(980), px(300), px(1340), px(400)],
-        radius=px(14),
+        [px(v) for v in box],
+        radius=px(16),
+        outline=CYAN + (255,),
+        width=px(width),
+    )
+    paste_layer(img, layer)
+
+
+def draw_lock(img, box) -> None:
+    x0, y0, x1, y1 = box
+    layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    d.rounded_rectangle(
+        [px(x0), px(y0), px(x1), px(y1)],
+        radius=px(22),
+        fill=(7, 16, 34, 255),
+        outline=CYAN + (255,),
+        width=px(12),
+    )
+    inset = (x1 - x0) * 0.22
+    # The arc's ends sit on the top stroke, so the shackle is part of the lock.
+    mid = y0 + 8
+    d.arc(
+        [px(x0 + inset), px(mid - 180), px(x1 - inset), px(mid + 180)],
+        180,
+        360,
+        fill=CYAN + (255,),
+        width=px(14),
+    )
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2 + 16
+    d.ellipse(
+        [px(cx - 16), px(cy - 22), px(cx + 16), px(cy + 10)],
         outline=CYAN + (255,),
         width=px(8),
     )
+    d.rounded_rectangle(
+        [px(cx - 7), px(cy - 2), px(cx + 7), px(cy + 36)],
+        radius=px(4),
+        fill=CYAN + (255,),
+    )
     paste_layer(img, layer)
+
+
+def bp02_008() -> None:
+    img = canvas()
+    head(img, "NEVER WRITE DOWN OR TYPE A SECRET", "SECRET", size=34)
+    # One lock. The rule is the headline. The line under it names the three.
+    draw_lock(img, (640, 400, 900, 700))
+    face = font(FONT_SEMI, 32)
+    tag(img, (300, 780, 1240, 880), ["Seed phrase, private key, API secret"], face)
+    arrow(img, (770, 780), (770, 694))
+    final = save(img, "course/images/bp-02-what-you-need/008.png")
+    assert_tip(final, (770, 694), (770, 700), "lock")
+    record([{
+        "path": "course/images/bp-02-what-you-need/008.png",
+        "lesson": "bp-02-what-you-need",
+        "shows": "One lock. The rule is never write down or type a secret. A line names the seed phrase, the private key, and the API secret.",
+        "alt": "Never write down or type a secret: a seed phrase, a private key, or an API secret.",
+        "batch": "cursor-bp02-008",
+    }])
+
+
+def bp02_012() -> None:
+    img = canvas()
+    head(img, "THE FORM COPIES YOUR PAGE", "COPIES", size=44)
+    card(img, (120, 280, 700, 780))
+    card(img, (836, 280, 1416, 780))
+    face = font(FONT_SEMI, 44)
+    center_lines(img, (150, 360, 670, 700), ["1. Write it", "on paper"], face)
+    center_lines(img, (866, 360, 1386, 700), ["2. Copy it into", "the form later"], face)
+    # Right card left stroke is x=836. Tip sits 4px inside it.
+    arrow(img, (700, 530), (840, 530))
+    final = save(img, "course/images/bp-02-what-you-need/012.png")
+    assert_tip(final, (840, 530), (836, 530), "form")
+    record([{
+        "path": "course/images/bp-02-what-you-need/012.png",
+        "lesson": "bp-02-what-you-need",
+        "shows": "Two plain cards and one arrow. Write it on paper, then copy it into the form later.",
+        "alt": "Write it on paper first. Copy it into the form later.",
+        "batch": "cursor-bp02-012",
+    }])
+
+
+def bp02_014() -> None:
+    img = canvas()
+    head(img, "AN EMPTY PAIR BLOCKS THE PAGE", "EMPTY", size=40)
+    face = font(FONT_SEMI, 48)
     draw = ImageDraw.Draw(img)
-    draw.text((px(720), px(328)), "Pair", font=font(FONT_SEMI, 32), fill=WHITE)
-    tag(img, (100, 280, 620, 370), ["Pair box empty: not ready"], face)
-    tag(img, (100, 460, 500, 550), ["Fill it in first"], face)
-    arrow(img, (620, 325), (982, 350))
-    arrow(img, (500, 505), (1160, 396))
-    stamp(img, 200, 800)
+    label = "Pair"
+    bb = face.getbbox(label)
+    draw.text((px(180), px(470) - bb[1]), label, font=face, fill=WHITE)
+    # One blank row. Not a form.
+    outline_box(img, (420, 420, 1320, 580), width=10)
+    tag(img, (420, 680, 980, 800), ["Fill this in first"], font(FONT_SEMI, 40))
+    # Blank row bottom stroke is y=580. Tip sits 4px inside it.
+    arrow(img, (700, 680), (700, 576))
+    stamp(img, 220, 860)
     final = save(img, "course/images/bp-02-what-you-need/014.png")
-    assert_tip(final, (982, 350), (986, 350), "empty")
-    assert_tip(final, (1160, 396), (1160, 399), "fill")
+    assert_tip(final, (700, 576), (700, 580), "pair")
     record([{
         "path": "course/images/bp-02-what-you-need/014.png",
         "lesson": "bp-02-what-you-need",
-        "shows": "The pair box is empty while Range, Levels, and Stop are already filled. The empty pair blocks the page.",
-        "alt": "An empty pair box blocks the page. Fill the pair in first, even if the rest of the list is tidy.",
+        "shows": "One blank row labelled Pair. The arrow says to fill this in first.",
+        "alt": "The pair row is blank. Fill this in first.",
         "batch": "cursor-bp02-014",
+    }])
+
+
+def bp03_009() -> None:
+    img = canvas()
+    head(img, "A FILL, THEN THE NEXT LINE", "NEXT LINE", size=42)
+    ys = [360, 530, 700]
+    for y in ys:
+        hline(img, 160, 640, y, CYAN, 6)
+    # A filled order on the middle line. A waiting order on the next line.
+    block(img, 360, 490, 80, 80, CYAN)
+    outline_box(img, (340, 660, 460, 740), width=8)
+    face = font(FONT_SEMI, 40)
+    center_lines(img, (720, 470, 1420, 590), ["An order fills"], face)
+    center_lines(img, (720, 640, 1420, 800), ["A new order waits", "on the next line"], face)
+    # Waiting box top stroke is y=660. Tip sits 4px inside it. One arrow, straight down.
+    arrow(img, (400, 570), (400, 664))
+    final = save(img, "course/images/bp-03-what-is-a-grid-bot/009.png")
+    assert_tip(final, (400, 664), (400, 660), "next")
+    record([{
+        "path": "course/images/bp-03-what-is-a-grid-bot/009.png",
+        "lesson": "bp-03-what-is-a-grid-bot",
+        "shows": "One straight arrow. An order fills, then a new waiting order sits on the next line.",
+        "alt": "An order fills, and a new order waits on the next line.",
+        "batch": "cursor-bp03-009",
+    }])
+
+
+def beginner_six() -> None:
+    bp02_008()
+    bp02_012()
+    bp02_014()
+    bp03_009()
+    from render_bp03_008_010 import OUT_008, render_008
+    from render_bp03_011_014 import OUT_014, render_014
+
+    render_008().save(OUT_008, "PNG")
+    record([{
+        "path": "course/images/bp-03-what-is-a-grid-bot/008.png",
+        "lesson": "bp-03-what-is-a-grid-bot",
+        "shows": "Two large boxes. Price bounces: coin and cash swap back and forth. Price leaves: mostly coin or mostly cash.",
+        "alt": "When price bounces, coin and cash swap back and forth. When price leaves, you hold mostly coin or mostly cash.",
+        "batch": "cursor-bp03-008",
+    }])
+    render_014().save(OUT_014, "PNG")
+    record([{
+        "path": "course/images/bp-03-what-is-a-grid-bot/014.png",
+        "lesson": "bp-03-what-is-a-grid-bot",
+        "shows": "Four large word labels: orders wait, inside your range, the stop is your rule if price leaves, and what you hold changes.",
+        "alt": "Orders wait, inside your range, with a stop if price leaves, and what you hold changes.",
+        "batch": "cursor-bp03-014",
     }])
 
 
@@ -824,6 +969,7 @@ def bp11() -> None:
 
 LESSONS = {
     "bp02": bp02_014,
+    "six": beginner_six,
     "bp04": lesson_bp04,
     "bp05": lesson_bp05,
     "bp06": bp06,
