@@ -24,4 +24,8 @@ python3 -m pip install --user --break-system-packages --no-warn-script-location 
 sudo mkdir -p /opt/pw-browsers/chromium-1194/chrome-linux
 sudo ln -sf /usr/bin/google-chrome-stable /opt/pw-browsers/chromium-1194/chrome-linux/chrome
 
+# 4. Voice and picture fonts. Kokoro, Piper, and the bundled faces.
+#    Models land in the home cache. No paid speech API.
+bash skills/video-production/natural-voice/setup.sh
+
 echo "Environment bootstrap complete."

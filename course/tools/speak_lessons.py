@@ -1,5 +1,8 @@
 """Write course/audio/<id>.wav with Kokoro af_heart.
 
+New narration goes through skills/video-production/natural-voice (Kokoro af_heart).
+This script remains so an existing course render can still fill course/audio.
+
 Skips a wav that is already at least 100 KB. One lesson at a time.
   python3 course/tools/speak_lessons.py
   python3 course/tools/speak_lessons.py --shard 0 --shards 2

@@ -1,0 +1,480 @@
+1
+00:00:00,332 --> 00:00:02,724
+Grid Bot Builder. Grid Bot Blueprint.
+
+2
+00:00:03,234 --> 00:00:05,612
+Lesson three. What is a grid bot.
+
+3
+00:00:06,671 --> 00:00:10,394
+Education only. Not financial advice. This
+
+4
+00:00:10,394 --> 00:00:12,673
+is general information and doesn't
+
+5
+00:00:12,673 --> 00:00:15,029
+consider your objectives, financial
+
+6
+00:00:15,029 --> 00:00:18,023
+situation or needs. Crypto is high risk.
+
+7
+00:00:18,483 --> 00:00:20,705
+You could lose all the money you put in.
+
+8
+00:00:21,398 --> 00:00:26,704
+Crypto carries a risk of total loss. The
+
+9
+00:00:26,704 --> 00:00:29,347
+prices are public historical daily closes,
+
+10
+00:00:29,347 --> 00:00:34,768
+marked Example. Past performance is not a
+
+11
+00:00:34,768 --> 00:00:40,088
+reliable indicator of future results. A
+
+12
+00:00:40,088 --> 00:00:42,500
+grid bot places orders that wait inside a
+
+13
+00:00:42,500 --> 00:00:45,230
+top and a bottom you already measured. A
+
+14
+00:00:45,230 --> 00:00:47,434
+limit order is an order that waits at a
+
+15
+00:00:47,434 --> 00:00:50,188
+price you choose. A market order does not
+
+16
+00:00:50,188 --> 00:00:52,783
+wait. It buys or sells straight away, at
+
+17
+00:00:52,783 --> 00:00:56,144
+the prices people are already offering. A
+
+18
+00:00:56,144 --> 00:00:58,911
+grid bot doesn't predict the price. It
+
+19
+00:00:58,911 --> 00:01:03,481
+waits. By the end you will know what a
+
+20
+00:01:03,481 --> 00:01:08,410
+grid bot is. You will know which side of
+
+21
+00:01:08,410 --> 00:01:13,388
+the middle buys and which side sells. You
+
+22
+00:01:13,388 --> 00:01:15,721
+will know why the price touching a line is
+
+23
+00:01:15,611 --> 00:01:20,877
+not the same as making money. The exchange
+
+24
+00:01:20,877 --> 00:01:23,325
+is the app or website where people buy and
+
+25
+00:01:23,325 --> 00:01:25,990
+sell crypto. The book is that exchange's
+
+26
+00:01:25,990 --> 00:01:28,747
+list of everyone's waiting orders. A cross
+
+27
+00:01:28,747 --> 00:01:31,482
+is the price line touching a rung. A fill
+
+28
+00:01:31,482 --> 00:01:34,809
+is an order that actually trades. Limit
+
+29
+00:01:34,809 --> 00:01:37,329
+orders wait at a price. They wait their
+
+30
+00:01:37,329 --> 00:01:39,737
+turn at that price. A market order does
+
+31
+00:01:39,737 --> 00:01:44,619
+not wait. The daily close is the last
+
+32
+00:01:44,619 --> 00:01:47,843
+price of each day. The middle rung on this
+
+33
+00:01:47,843 --> 00:01:50,550
+chart is 27630, and the daily close
+
+34
+00:01:50,550 --> 00:01:53,830
+crossed it ten times. These ten marks are
+
+35
+00:01:53,830 --> 00:01:56,203
+crosses, not fills. They are marked
+
+36
+00:01:56,203 --> 00:01:58,480
+Example, and they are not money you made.
+
+37
+00:01:59,218 --> 00:02:01,551
+There are three buy rungs below the middle
+
+38
+00:02:01,411 --> 00:02:03,994
+and three sell rungs above it. They sit
+
+39
+00:02:03,994 --> 00:02:07,600
+about 900 apart. On 18 August 2023 the
+
+40
+00:02:07,600 --> 00:02:11,476
+close was 26050, below the middle, so that
+
+41
+00:02:11,476 --> 00:02:18,729
+day was on the buy side. From 19 July 2023
+
+42
+00:02:18,772 --> 00:02:24,903
+to 16 October 2023 the price stayed
+
+43
+00:02:25,306 --> 00:02:27,637
+between 24930 and 30331. The daily close
+
+44
+00:02:27,637 --> 00:02:30,147
+crossed the middle rung ten times. That is
+
+45
+00:02:30,147 --> 00:02:32,634
+the path next to the band. It is marked
+
+46
+00:02:32,634 --> 00:02:36,114
+Example, and it is not a forecast. Worked
+
+47
+00:02:36,114 --> 00:02:38,681
+check. Three buy rungs sit below the
+
+48
+00:02:38,681 --> 00:02:41,216
+middle and three sell rungs sit above it,
+
+49
+00:02:41,216 --> 00:02:44,886
+about 900 apart. On 18 August 2023 the
+
+50
+00:02:44,886 --> 00:02:49,288
+close was 26050, below the middle. The ten
+
+51
+00:02:49,288 --> 00:02:52,587
+crosses are not a gain. Here is one step,
+
+52
+00:02:52,587 --> 00:02:55,125
+slowly. Price falls through a buy rung,
+
+53
+00:02:55,125 --> 00:02:57,531
+and the waiting buy can fill. You then
+
+54
+00:02:57,531 --> 00:02:59,796
+hold a little more coin, and a sell can be
+
+55
+00:02:59,596 --> 00:03:02,210
+written one rung higher. If price rises
+
+56
+00:03:02,210 --> 00:03:04,377
+through that sell, it can fill, and you
+
+57
+00:03:04,367 --> 00:03:06,983
+hold a little more cash. A cross is only
+
+58
+00:03:06,983 --> 00:03:09,645
+the price touching the line. A fill is the
+
+59
+00:03:09,645 --> 00:03:12,220
+order actually trading. This is how the
+
+60
+00:03:12,220 --> 00:03:14,668
+picture works. It is not a promise that
+
+61
+00:03:14,668 --> 00:03:19,284
+you make money. This example ended in
+
+62
+00:03:19,284 --> 00:03:25,593
+October 2023. On 23 October 2023 the daily
+
+63
+00:03:26,086 --> 00:03:29,637
+close was 33086, above 30331. The price
+
+64
+00:03:29,637 --> 00:03:31,899
+did not come back, so the waiting orders
+
+65
+00:03:31,899 --> 00:03:34,302
+inside the old band no longer matched the
+
+66
+00:03:34,302 --> 00:03:36,471
+path. That is why you write the stop
+
+67
+00:03:36,471 --> 00:03:40,092
+before you start. Your turn. Draw a top
+
+68
+00:03:40,092 --> 00:03:42,574
+and a bottom. Put three buys below the
+
+69
+00:03:42,574 --> 00:03:45,170
+middle and three sells above it. Write one
+
+70
+00:03:45,170 --> 00:03:47,392
+stop sentence for when the price leaves.
+
+71
+00:03:49,743 --> 00:03:52,190
+Five labels cover the picture: upper,
+
+72
+00:03:52,190 --> 00:03:54,821
+lower, levels, side, and stop. On the
+
+73
+00:03:54,821 --> 00:03:57,155
+card, Upper is the top edge, Lower is the
+
+74
+00:03:57,155 --> 00:03:59,639
+bottom edge, Levels are the rungs, Side is
+
+75
+00:03:59,639 --> 00:04:04,427
+what you hold, and Stop is your rule. When
+
+76
+00:04:04,427 --> 00:04:06,538
+price steps down through a rung, a buy
+
+77
+00:04:06,403 --> 00:04:09,099
+limit that was waiting there can fill. You
+
+78
+00:04:09,099 --> 00:04:11,300
+then hold a little more coin, and a sell
+
+79
+00:04:11,100 --> 00:04:13,470
+can be written one rung higher. That
+
+80
+00:04:13,470 --> 00:04:15,615
+change in what you hold is how a grid
+
+81
+00:04:15,615 --> 00:04:20,803
+works, and it is not a profit. When price
+
+82
+00:04:20,803 --> 00:04:23,136
+steps up through a rung, a sell limit that
+
+83
+00:04:22,963 --> 00:04:25,490
+was waiting there can fill. You can hold
+
+84
+00:04:25,490 --> 00:04:27,994
+less coin and more cash. This is only an
+
+85
+00:04:27,994 --> 00:04:33,532
+example. What you hold changes. Price
+
+86
+00:04:33,532 --> 00:04:35,712
+bounces: coin and cash swap back and
+
+87
+00:04:35,712 --> 00:04:38,985
+forth. Price leaves: mostly coin or mostly
+
+88
+00:04:38,985 --> 00:04:42,432
+cash. After an order fills, the bot puts a
+
+89
+00:04:42,432 --> 00:04:47,750
+new waiting order on the next line. Point
+
+90
+00:04:47,750 --> 00:04:49,986
+and say the five: Top, Bottom, Levels,
+
+91
+00:04:49,986 --> 00:04:55,157
+What you hold, and Stop. The path on the
+
+92
+00:04:55,157 --> 00:04:57,449
+diagram is a made-up path, drawn so you
+
+93
+00:04:57,449 --> 00:05:00,118
+can see crossings. It is not a chart of a
+
+94
+00:05:00,118 --> 00:05:02,285
+day that happened, and it is not a path
+
+95
+00:05:02,182 --> 00:05:04,808
+you should expect. A cross is the price
+
+96
+00:05:04,808 --> 00:05:10,068
+line touching a rung. A common miss is to
+
+97
+00:05:10,068 --> 00:05:12,452
+describe the bot as earning while price
+
+98
+00:05:12,452 --> 00:05:14,903
+chops. The mechanism is fills and
+
+99
+00:05:14,903 --> 00:05:17,843
+inventory. A result would require a future
+
+100
+00:05:17,843 --> 00:05:21,977
+that this page does not have. This course
+
+101
+00:05:21,977 --> 00:05:27,304
+is not connected to any exchange. Orders
+
+102
+00:05:27,304 --> 00:05:30,370
+wait. Inside your range. Stop: your rule
+
+103
+00:05:30,370 --> 00:05:32,968
+if price leaves. What you hold changes.
+
+104
+00:05:34,244 --> 00:05:36,555
+Your turn: draw a band, label the five
+
+105
+00:05:36,555 --> 00:05:41,967
+words, and draw one step down. It is not a
+
+106
+00:05:41,967 --> 00:05:44,025
+signal, not a fund, and not a person
+
+107
+00:05:44,025 --> 00:05:47,020
+watching the market for you. If a sentence
+
+108
+00:05:47,020 --> 00:05:49,292
+needs one of those, delete the sentence
+
+109
+00:05:49,292 --> 00:05:54,582
+and return to the five labels. A grid here
+
+110
+00:05:54,582 --> 00:05:57,043
+means limit orders waiting inside the band
+
+111
+00:05:57,043 --> 00:06:02,095
+you measured. Three buy rungs sit below
+
+112
+00:06:02,095 --> 00:06:04,615
+the middle. Three sell rungs sit above it.
+
+113
+00:06:07,585 --> 00:06:09,807
+When the price left the band in October,
+
+114
+00:06:09,680 --> 00:06:14,881
+that picture no longer applied. Next
+
+115
+00:06:14,931 --> 00:06:17,864
+lesson: market regimes. A market regime is
+
+116
+00:06:17,864 --> 00:06:20,330
+the kind of market you are in, for example
+
+117
+00:06:20,330 --> 00:06:23,222
+sideways or trending. Bring the page with
+
+118
+00:06:23,222 --> 00:06:25,277
+the band and the stop rule, and leave
+
+119
+00:06:25,191 --> 00:06:27,900
+every figure marked Example. No order is
+
+120
+00:06:27,900 --> 00:06:29,136
+sent between lessons.
+
