@@ -610,3 +610,41 @@ Scored from `3a1137a197ca9d295a229b829a46526637b49e86` (identical at tip 3a1137a
 
 ### Updated counts
 - **BP-11: 14/20 — not 100%.** Unused title / your-turn / outro rows remain in the queue and were not in this Cursor batch.
+
+---
+
+## Ledger update — 14 Nov 2026 (WITA): e03191f render plan unused drops
+Re-ran `studio.plan(sid)` myself from `e03191f74c352b0fadf68a91dad11d86f5b89a3b` (d1f6) for BP-01 through BP-11. Nothing rendered, nothing pushed. Used = a `lesson-still` shot whose `lesson_still` is `course/images/<lesson>/NNN.png`. Confirmed against `/workspace/bp-script-check-0249f40/USED-STILLS-e03191f.md` and `planE.json`: the BP-04..11 used/unused sets and shot counts in that file match this run exactly. Orchestrator's claim that every lesson shows 14 stills is true for BP-03..11, but not for BP-01 (13 used) or BP-02 (15 used). The USED-STILLS table itself only lists BP-04..11.
+Dropped every BP-04..11 still outside those used sets, including already-passing unused title / disclaimer / your-turn / outro rows on BP-04..07 (needed so each lesson denominator is the 14 used stills). Reason on each row: `not in e03191f render plan`. Placed files left in place. Excluded from denominators. BP-04 015 (Paper sort) and BP-05 006 (Half spacing) stay used and queued. Did not change BP-01..03 drops: the file does not clearly list those lessons' unused sets (it only notes that BP-02 014 is used again).
+
+### Dropped (49 stills)
+- **BP-04:** 002 (was_pass), 003 (was_pass), 016 (was_pass), 017 (was_pass), 018 (was_pass), 020 (was_pass)
+- **BP-05:** 002 (was_pass), 003 (was_pass), 016 (was_pass), 017 (was_pass), 019 (was_fail)
+- **BP-06:** 002 (was_pass), 003 (was_pass), 016 (was_fail), 017 (was_pass), 018 (was_fail), 020 (was_fail)
+- **BP-07:** 002 (was_pass), 003 (was_fail), 016 (was_pass), 017 (was_pass), 018 (was_pass), 020 (was_fail)
+- **BP-08:** 002 (was_fail), 003 (was_fail), 016 (was_fail), 017 (was_fail), 018 (was_fail), 020 (was_fail)
+- **BP-09:** 002 (was_fail), 003 (was_fail), 016 (was_fail), 017 (was_fail), 018 (was_fail), 019 (was_fail), 021 (was_fail)
+- **BP-10:** 002 (was_fail), 003 (was_fail), 016 (was_fail), 017 (was_fail), 018 (was_fail), 019 (was_fail), 021 (was_fail)
+- **BP-11:** 002 (was_fail), 003 (was_fail), 016 (was_fail), 017 (was_fail), 018 (was_fail), 020 (was_fail)
+
+### Used-still counts after the drop (denominators = e03191f used set)
+| Lesson | Used stills | Pass | Fail | Remaining queued |
+|---|---:|---:|---:|---|
+| BP-04 | 14 | 13 | 1 | 015 Paper sort — 13/14, not 100% |
+| BP-05 | 14 | 13 | 1 | 006 Half spacing — 13/14, not 100% |
+| BP-06 | 14 | 14 | 0 | — — 14/14, 100% |
+| BP-07 | 14 | 14 | 0 | — — 14/14, 100% |
+| BP-08 | 14 | 14 | 0 | — — 14/14, 100% |
+| BP-09 | 14 | 14 | 0 | — — 14/14, 100% |
+| BP-10 | 14 | 14 | 0 | — — 14/14, 100% |
+| BP-11 | 14 | 14 | 0 | — — 14/14, 100% |
+
+Overall BP-04..11: **110/112** pass, 2 fail, 49 dropped (excluded).
+
+Used stills that are not a current pass (only these two): BP-04 015 and BP-05 006. No other used still in BP-01..11 is short of a pass.
+
+### BP-01..03 (no ledger change)
+Verified with the same `studio.plan()` run. USED-STILLS-e03191f.md does not table these lessons, so existing drops were left as they are.
+- **BP-01** used 13: 001, 004–012, 014, 015, 017. All 13 are current passes (13/13 on the used set). Ledger denominator is still 31/31 all-rows / 17/17 lesson-stills (unused 002, 003, 016, 018 remain as passes in the denominator; 013 is already dropped and is unused in this plan too).
+- **BP-02** used 15: 001, 004–015, 019, 020, including 014 (Empty pair), which is a current pass. 15/15 on the used set. Ledger denominator is still 31/31 all-rows / 20/20 lesson-stills (unused 002, 003, 016, 017, 018 remain as passes; 021 is already dropped and is unused in this plan too).
+- **BP-03** used 14: 001, 004–015, 018. All 14 are current passes (14/14 on the used set). Ledger denominator is still 28/28 all-rows / 19/19 lesson-stills (unused 002, 003, 016, 017, 019 remain as passes; no existing drops).

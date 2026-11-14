@@ -7,52 +7,52 @@
   "note_margins": "margins_px = measured bright-content bounding box distance from each edge (text and linework). All 161 are >=45px except bp-05 009 (40px left).",
   "not_in_scope": "course/images/_held/*.png (10 files: bp-06 014/017, bp-07 012/017/020, bp-08 003/006/007/009/011) are not referenced by any lesson script and were not scored. Shared title-art/mascot assets are already on BP01-03_PASS_LIST.json.",
   "counts": {
-    "total": 161,
-    "pass": 127,
-    "fail": 34,
+    "total": 112,
+    "pass": 110,
+    "fail": 2,
     "by_lesson": {
       "bp-04-market-regimes": {
-        "total": 20,
-        "pass": 19,
+        "total": 14,
+        "pass": 13,
         "fail": 1
       },
       "bp-05-spacing-and-range": {
-        "total": 19,
-        "pass": 17,
-        "fail": 2
+        "total": 14,
+        "pass": 13,
+        "fail": 1
       },
       "bp-06-entry-and-exit": {
-        "total": 20,
-        "pass": 17,
-        "fail": 3
+        "total": 14,
+        "pass": 14,
+        "fail": 0
       },
       "bp-07-spot-paper-trading": {
-        "total": 20,
-        "pass": 18,
-        "fail": 2
+        "total": 14,
+        "pass": 14,
+        "fail": 0
       },
       "bp-08-managing-and-monitoring": {
-        "total": 20,
+        "total": 14,
         "pass": 14,
-        "fail": 6
+        "fail": 0
       },
       "bp-09-common-mistakes": {
-        "total": 21,
+        "total": 14,
         "pass": 14,
-        "fail": 7
+        "fail": 0
       },
       "bp-10-scaling-up": {
-        "total": 21,
+        "total": 14,
         "pass": 14,
-        "fail": 7
+        "fail": 0
       },
       "bp-11-advanced-liquidation": {
-        "total": 20,
+        "total": 14,
         "pass": 14,
-        "fail": 6
+        "fail": 0
       }
     },
-    "dropped": 0
+    "dropped": 49
   },
   "images": [
     {
@@ -143,10 +143,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-04-market-regimes__002.txt",
-      "notes": "Disclaimer card on the current prompt: exactly \"Education only.\" / \"Not financial advice.\" in two large white lines, notebook with pencil and check on the left, no buy button or extra icons. Headline EDUCATION ONLY. 0 arrows. Matches 6848d09 beat 2.",
+      "notes": "Disclaimer card on the current prompt: exactly \"Education only.\" / \"Not financial advice.\" in two large white lines, notebook with pencil and check on the left, no buy button or extra icons. Headline EDUCATION ONLY. 0 arrows. Matches 6848d09 beat 2. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -159,7 +159,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/002.png",
       "scored_blob": "e65267cfafac020e8806093f682b03d0d36bbb6d",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-04-market-regimes/002/web2.png",
         "blob": "e65267cfafac020e8806093f682b03d0d36bbb6d",
@@ -213,7 +213,8 @@
         }
       ],
       "previous_fbb3f9c_blob": "0b9b3488b0b6c14d0e0e5b55fe34e45a91541366",
-      "source_detail": "ChatGPT web render gen/bp-04-market-regimes/002/web2.png (prompt specs/remake/bp-04-market-regimes__002.txt), saved via out/course/images/bp-04-market-regimes/002.png at 1536x1024 (already 3:2, no fill needed)"
+      "source_detail": "ChatGPT web render gen/bp-04-market-regimes/002/web2.png (prompt specs/remake/bp-04-market-regimes__002.txt), saved via out/course/images/bp-04-market-regimes/002.png at 1536x1024 (already 3:2, no fill needed)",
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-04-market-regimes/003.png",
@@ -237,10 +238,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-04-market-regimes__003.txt",
-      "notes": "Title card MARKET REGIMES with three equal cards: zig-zag between two lines (Range), clean staircase ending inside its card with no stray stub (Trend), bounce then drop through the bottom line staying below (Break). Tags under each card, no arrows; EXAMPLE stamp inside the Break card. v1 artifact fixed.",
+      "notes": "Title card MARKET REGIMES with three equal cards: zig-zag between two lines (Range), clean staircase ending inside its card with no stray stub (Trend), bounce then drop through the bottom line staying below (Break). Tags under each card, no arrows; EXAMPLE stamp inside the Break card. v1 artifact fixed. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -253,7 +254,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/003.png",
       "scored_blob": "7dcc16074b3f2f3992baa174676eea3a0a973b83",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-04-market-regimes/003/web2.png",
         "blob": "7dcc16074b3f2f3992baa174676eea3a0a973b83",
@@ -307,7 +308,8 @@
         }
       ],
       "previous_fbb3f9c_blob": "93328d7975cb5f1357bf208989e7513e30584ea6",
-      "source_detail": "ChatGPT web render gen/bp-04-market-regimes/003/web2.png (prompt specs/remake/bp-04-market-regimes__003.txt), saved via out/course/images/bp-04-market-regimes/003.png at 1536x1024 (already 3:2, no fill needed)"
+      "source_detail": "ChatGPT web render gen/bp-04-market-regimes/003/web2.png (prompt specs/remake/bp-04-market-regimes__003.txt), saved via out/course/images/bp-04-market-regimes/003.png at 1536x1024 (already 3:2, no fill needed)",
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-04-market-regimes/004.png",
@@ -1539,10 +1541,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-04-market-regimes__016.txt",
-      "notes": "Frosted pale-blue notebook page with three pencil sketches: zig-zag in a box, staircase, line breaking out of the bottom of its box. \"Range\", \"Trend\", \"Break\" tips each on their sketch (3 of 3). Matches 6848d09 beat 16 (three panels labelled Range, Trend, Break). Paler page than the glass cards, still navy/cyan framed.",
+      "notes": "Frosted pale-blue notebook page with three pencil sketches: zig-zag in a box, staircase, line breaking out of the bottom of its box. \"Range\", \"Trend\", \"Break\" tips each on their sketch (3 of 3). Matches 6848d09 beat 16 (three panels labelled Range, Trend, Break). Paler page than the glass cards, still navy/cyan framed. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -1555,7 +1557,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/016.png",
       "scored_blob": "f44bc0328ad82f6bc5fbfca948afa73a3088eaf3",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-04-market-regimes/016/web1.png",
         "blob": "f44bc0328ad82f6bc5fbfca948afa73a3088eaf3",
@@ -1581,7 +1583,8 @@
         "pass": true
       },
       "previous_fbb3f9c_blob": "1239c3f3385a53e2b9fb510e33652bd956bf418f",
-      "source_detail": "ChatGPT web render gen/bp-04-market-regimes/016/web1.png (prompt specs/remake/bp-04-market-regimes__016.txt), saved via out/course/images/bp-04-market-regimes/016.png at 1536x1024 (already 3:2, no fill needed)"
+      "source_detail": "ChatGPT web render gen/bp-04-market-regimes/016/web1.png (prompt specs/remake/bp-04-market-regimes__016.txt), saved via out/course/images/bp-04-market-regimes/016.png at 1536x1024 (already 3:2, no fill needed)",
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-04-market-regimes/017.png",
@@ -1605,10 +1608,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-04-market-regimes__017.txt",
-      "notes": "Notebook page: (1) a circled chart sketch, (2) a sketched ladder of five lines, pencil below; tags \"1 Name the shape\" and \"2 Then draw steps\" under each, no arrows. Shape before steps is clear. Margins 76px or more.",
+      "notes": "Notebook page: (1) a circled chart sketch, (2) a sketched ladder of five lines, pencil below; tags \"1 Name the shape\" and \"2 Then draw steps\" under each, no arrows. Shape before steps is clear. Margins 76px or more. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -1621,7 +1624,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/017.png",
       "scored_blob": "a0f57b69e3d4e6e2e80f380b4370793e47914e15",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-04-market-regimes/017/web1.png",
         "blob": "a0f57b69e3d4e6e2e80f380b4370793e47914e15",
@@ -1647,7 +1650,8 @@
         "pass": true
       },
       "previous_fbb3f9c_blob": "19b85ca550c1cd58228bf2a503c304d7a577d97f",
-      "source_detail": "ChatGPT web render gen/bp-04-market-regimes/017/web1.png (prompt specs/remake/bp-04-market-regimes__017.txt), saved via out/course/images/bp-04-market-regimes/017.png at 1536x1024 (already 3:2, no fill needed)"
+      "source_detail": "ChatGPT web render gen/bp-04-market-regimes/017/web1.png (prompt specs/remake/bp-04-market-regimes__017.txt), saved via out/course/images/bp-04-market-regimes/017.png at 1536x1024 (already 3:2, no fill needed)",
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-04-market-regimes/018.png",
@@ -1671,10 +1675,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-04-market-regimes__018.txt",
-      "notes": "web2 remake PASS. Every crossing is circled; the path starts and ends on the bottom line; the pencil sits fully inside the frame. \"Circle each crossing\" tip sits on a circle. Margins 92/130/90/152. The previous uncircled-right-crossing and 43px-pencil faults look fixed. Teaches the crossing-count drill on its own.",
+      "notes": "web2 remake PASS. Every crossing is circled; the path starts and ends on the bottom line; the pencil sits fully inside the frame. \"Circle each crossing\" tip sits on a circle. Margins 92/130/90/152. The previous uncircled-right-crossing and 43px-pencil faults look fixed. Teaches the crossing-count drill on its own. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -1687,7 +1691,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/018.png",
       "scored_blob": "679d748ba746407525af38bd22bdc427463ba462",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-04-market-regimes/018/web2.png",
         "blob": "679d748ba746407525af38bd22bdc427463ba462",
@@ -1740,7 +1744,8 @@
           "notes": "Zig-zag across three lines with circles on most crossings, \"Circle each crossing\" tip on a circle, \"More crossings = better fit\" under the sketch, EXAMPLE stamp. But the line keeps climbing after its last circle and crosses the top line at the right with no circle, and the pencil sits off the page edge (not circling anything) with its eraser 43px from the right frame edge.",
           "pass": false
         }
-      ]
+      ],
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-04-market-regimes/019.png",
@@ -1830,10 +1835,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-04-market-regimes__020.txt",
-      "notes": "Outro: finished notebook with a check, glowing arrow to a card with an evenly lined box and a ruler. \"Bring your notes\" tip on the notebook; \"Next lesson: Choosing grid spacing and range\" under the card, the exact next lesson title in 6848d09 beat 20.",
+      "notes": "Outro: finished notebook with a check, glowing arrow to a card with an evenly lined box and a ruler. \"Bring your notes\" tip on the notebook; \"Next lesson: Choosing grid spacing and range\" under the card, the exact next lesson title in 6848d09 beat 20. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -1846,7 +1851,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/020.png",
       "scored_blob": "5cf95d3bf9501b5205db252ba4ccfc1b24b94364",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-04-market-regimes/020/web1.png",
         "blob": "5cf95d3bf9501b5205db252ba4ccfc1b24b94364",
@@ -1872,7 +1877,8 @@
         "pass": true
       },
       "previous_fbb3f9c_blob": "ee788c8d17716ccdfdfce20487075b278c8e6559",
-      "source_detail": "ChatGPT web render gen/bp-04-market-regimes/020/web1.png (prompt specs/remake/bp-04-market-regimes__020.txt), saved via out/course/images/bp-04-market-regimes/020.png at 1536x1024 (already 3:2, no fill needed)"
+      "source_detail": "ChatGPT web render gen/bp-04-market-regimes/020/web1.png (prompt specs/remake/bp-04-market-regimes__020.txt), saved via out/course/images/bp-04-market-regimes/020.png at 1536x1024 (already 3:2, no fill needed)",
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-05-spacing-and-range/001.png",
@@ -1936,10 +1942,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-05-spacing-and-range__002.txt",
-      "notes": "Beat 2 disclaimer card: exact text 'Education only. Not financial advice.' Book+ruler+check icon. Clean. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
+      "notes": "Beat 2 disclaimer card: exact text 'Education only. Not financial advice.' Book+ruler+check icon. Clean. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -1952,7 +1958,8 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/002.png",
       "scored_blob": "3e722101e7aa63638c44fdbd85667cd7ec755799",
       "committed": true,
-      "pass": true
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-05-spacing-and-range/003.png",
@@ -1976,10 +1983,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-05-spacing-and-range__003.txt",
-      "notes": "Beat 3 title card: 'CHOOSING SPACING AND RANGE'. Spacing=gap and Range=whole box labelled, both arrows touch. EXAMPLE. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
+      "notes": "Beat 3 title card: 'CHOOSING SPACING AND RANGE'. Spacing=gap and Range=whole box labelled, both arrows touch. EXAMPLE. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -1992,7 +1999,8 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/003.png",
       "scored_blob": "21292b9fff87b8dec8bd58b1662981b8d1daf537",
       "committed": true,
-      "pass": true
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-05-spacing-and-range/004.png",
@@ -2606,10 +2614,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-05-spacing-and-range__016.txt",
-      "notes": "web2 PASS. Worksheet shows 20 dark grid lines and 19 green gap ticks. 'Count the lines' tip sits on the left end of the top line; 'Gaps = lines minus 1' tip sits on a green check. EXAMPLE present. Pencil inside the page. Margins 76/70/70/93. Placed at out/ and course/images/bp-05-spacing-and-range/016.png.",
+      "notes": "web2 PASS. Worksheet shows 20 dark grid lines and 19 green gap ticks. 'Count the lines' tip sits on the left end of the top line; 'Gaps = lines minus 1' tip sits on a green check. EXAMPLE present. Pencil inside the page. Margins 76/70/70/93. Placed at out/ and course/images/bp-05-spacing-and-range/016.png. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -2622,7 +2630,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/016.png",
       "scored_blob": "616de7eae6a164f4f8c4c2b739e54979b7c913fd",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-05-spacing-and-range/016/web2.png",
         "blob": "616de7eae6a164f4f8c4c2b739e54979b7c913fd",
@@ -2646,7 +2654,8 @@
         "hard_fails": [],
         "notes": "web2 PASS. Worksheet shows 20 dark grid lines and 19 green gap ticks. 'Count the lines' tip sits on the left end of the top line; 'Gaps = lines minus 1' tip sits on a green check. EXAMPLE present. Pencil inside the page. Margins 76/70/70/93. Placed at out/ and course/images/bp-05-spacing-and-range/016.png.",
         "pass": true
-      }
+      },
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-05-spacing-and-range/017.png",
@@ -2670,10 +2679,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-05-spacing-and-range__017.txt",
-      "notes": "Beat 17: '19 gaps x 0.5%' arrow touches the gap stack; '= 9.5% total' arrow touches the handwritten equation '19 gaps x 0.5% = 9.5% total'. Numbers correct. EXAMPLE. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
+      "notes": "Beat 17: '19 gaps x 0.5%' arrow touches the gap stack; '= 9.5% total' arrow touches the handwritten equation '19 gaps x 0.5% = 9.5% total'. Numbers correct. EXAMPLE. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -2686,7 +2695,8 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/017.png",
       "scored_blob": "878c0a46bb9aa9d748eef9ecf8c49da221793ee6",
       "committed": true,
-      "pass": true
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-05-spacing-and-range/018.png",
@@ -2752,10 +2762,10 @@
       "hard_fails": [
         "Panel-connector fail: the next->card transition arrowhead stops ~25px short of the glass card left border (tip x=761, card border x=786) and floats in the gap; tip does not touch its target. Outro text 'Entry and exit rules' is correct."
       ],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-05-spacing-and-range__019.txt",
-      "notes": "web1 remake FAIL. Panel-connector fail: the next->card transition arrowhead stops ~25px short of the glass card left border (tip x=761, card border x=786) and floats in the gap; tip does not touch its target. Outro text 'Entry and exit rules' is correct. v2 prompt written (v1 superseded). | web2 remake FAIL under the strict panel-connector arrow rule. Outro title is exact: 'Next lesson: Entry and exit rules.' 'Bring your notes' tip sits on the notebook face. But the scene-transition arrow still stops short of the glass card (visible gap; v1 was about 25px short and this remake did not close it). Margins 85/95/97/213. Next: web3.png on the v3 prompt.",
+      "notes": "web1 remake FAIL. Panel-connector fail: the next->card transition arrowhead stops ~25px short of the glass card left border (tip x=761, card border x=786) and floats in the gap; tip does not touch its target. Outro text 'Entry and exit rules' is correct. v2 prompt written (v1 superseded). | web2 remake FAIL under the strict panel-connector arrow rule. Outro title is exact: 'Next lesson: Entry and exit rules.' 'Bring your notes' tip sits on the notebook face. But the scene-transition arrow still stops short of the glass card (visible gap; v1 was about 25px short and this remake did not close it). Margins 85/95/97/213. Next: web3.png on the v3 prompt. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -2795,7 +2805,8 @@
         ],
         "notes": "web2 remake FAIL under the strict panel-connector arrow rule. Outro title is exact: 'Next lesson: Entry and exit rules.' 'Bring your notes' tip sits on the notebook face. But the scene-transition arrow still stops short of the glass card (visible gap; v1 was about 25px short and this remake did not close it). Margins 85/95/97/213. Next: web3.png on the v3 prompt.",
         "pass": false
-      }
+      },
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-06-entry-and-exit/001.png",
@@ -2883,10 +2894,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-06-entry-and-exit__002.txt",
-      "notes": "web1 PASS. Disclaimer card shows the exact line \"Education only. Not financial advice.\" (two lines). Headline EDUCATION ONLY. Clipboard motif. 0 arrows. Margins 73/83/85/246.",
+      "notes": "web1 PASS. Disclaimer card shows the exact line \"Education only. Not financial advice.\" (two lines). Headline EDUCATION ONLY. Clipboard motif. 0 arrows. Margins 73/83/85/246. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -2899,7 +2910,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-06-entry-and-exit/002.png",
       "scored_blob": "a0919f1167bb7b831cc960c412c2f43fd46d6e19",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-06-entry-and-exit/002/web.png",
         "blob": "a0919f1167bb7b831cc960c412c2f43fd46d6e19",
@@ -2923,7 +2934,8 @@
         "hard_fails": [],
         "notes": "web1 PASS. Disclaimer card shows the exact line \"Education only. Not financial advice.\" (two lines). Headline EDUCATION ONLY. Clipboard motif. 0 arrows. Margins 73/83/85/246.",
         "pass": true
-      }
+      },
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-06-entry-and-exit/003.png",
@@ -2947,10 +2959,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-06-entry-and-exit__003.txt",
-      "notes": "web1 PASS. Title card reads ENTRY AND EXIT RULES with a start flag and a stop sign, labels under the icons, no arrows. Teaches the lesson title on its own.",
+      "notes": "web1 PASS. Title card reads ENTRY AND EXIT RULES with a start flag and a stop sign, labels under the icons, no arrows. Teaches the lesson title on its own. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -2963,7 +2975,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-06-entry-and-exit/003.png",
       "scored_blob": "0e85cec60a1d9c0cdb5deec1b0c86877f9ae5f47",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-06-entry-and-exit/003/web.png",
         "blob": "0e85cec60a1d9c0cdb5deec1b0c86877f9ae5f47",
@@ -2987,7 +2999,8 @@
         "hard_fails": [],
         "notes": "web1 PASS. Title card reads ENTRY AND EXIT RULES with a start flag and a stop sign, labels under the icons, no arrows. Teaches the lesson title on its own.",
         "pass": true
-      }
+      },
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-06-entry-and-exit/004.png",
@@ -3913,10 +3926,10 @@
       "hard_fails": [
         "arrow tip stops short of target: \"Before I start\" tip stops short of the flagpole (clear gap of about 8-15px)"
       ],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-06-entry-and-exit__016.txt",
-      "notes": "web1 FAIL under the strict arrow rule. \"What ends it\" appears to touch the stop icon. But \"Before I start\" tip stops short of the flagpole (a clear gap of about 8-15px). Next: web2.png on the v2 prompt.",
+      "notes": "web1 FAIL under the strict arrow rule. \"What ends it\" appears to touch the stop icon. But \"Before I start\" tip stops short of the flagpole (a clear gap of about 8-15px). Next: web2.png on the v2 prompt. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -3955,7 +3968,8 @@
         ],
         "notes": "web1 FAIL under the strict arrow rule. \"What ends it\" appears to touch the stop icon. But \"Before I start\" tip stops short of the flagpole (a clear gap of about 8-15px). Next: web2.png on the v2 prompt.",
         "pass": false
-      }
+      },
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-06-entry-and-exit/017.png",
@@ -3979,10 +3993,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-06-entry-and-exit__017.txt",
-      "notes": "web1 PASS. \"Write this side first\" tip sits inside the highlighted right (stop-rule) column, on the panel it names. Pencil writing in the stop column. No digits, so no EXAMPLE required. Margins 70/67/82/106. Teaches writing the stop side first.",
+      "notes": "web1 PASS. \"Write this side first\" tip sits inside the highlighted right (stop-rule) column, on the panel it names. Pencil writing in the stop column. No digits, so no EXAMPLE required. Margins 70/67/82/106. Teaches writing the stop side first. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -3995,7 +4009,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-06-entry-and-exit/017.png",
       "scored_blob": "b5d969b04b3599fca172e7785a6c644f3a9b3fa5",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-06-entry-and-exit/017/web.png",
         "blob": "b5d969b04b3599fca172e7785a6c644f3a9b3fa5",
@@ -4019,7 +4033,8 @@
         "hard_fails": [],
         "notes": "web1 PASS. \"Write this side first\" tip sits inside the highlighted right (stop-rule) column, on the panel it names. Pencil writing in the stop column. No digits, so no EXAMPLE required. Margins 70/67/82/106. Teaches writing the stop side first.",
         "pass": true
-      }
+      },
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-06-entry-and-exit/018.png",
@@ -4045,10 +4060,10 @@
       "hard_fails": [
         "arrow tip stops short of target: \"Doesn't come back\" tip stops about 4-8px short of the far right end of the line"
       ],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-06-entry-and-exit__018.txt",
-      "notes": "web1 FAIL under the strict arrow rule. \"Price leaves\" tip sits on the box-exit crossing. But \"Doesn't come back\" tip stops about 4-8px short of the far right end of the line (still below the box). Next: web2.png on the v2 prompt.",
+      "notes": "web1 FAIL under the strict arrow rule. \"Price leaves\" tip sits on the box-exit crossing. But \"Doesn't come back\" tip stops about 4-8px short of the far right end of the line (still below the box). Next: web2.png on the v2 prompt. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -4087,7 +4102,8 @@
         ],
         "notes": "web1 FAIL under the strict arrow rule. \"Price leaves\" tip sits on the box-exit crossing. But \"Doesn't come back\" tip stops about 4-8px short of the far right end of the line (still below the box). Next: web2.png on the v2 prompt.",
         "pass": false
-      }
+      },
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-06-entry-and-exit/019.png",
@@ -4210,10 +4226,10 @@
       "hard_fails": [
         "arrow tip stops short of target: the notebook-to-laptop panel-connector arrow floats well short of the laptop (a large visible gap)"
       ],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-06-entry-and-exit__020.txt",
-      "notes": "web1 FAIL under the strict panel-connector arrow rule. Outro title is exact: \"Next lesson: Spot paper trading\". Examples are marked Example. \"Bring your notes\" tip sits on the notebook top. But the glowing transition arrow clearly does not touch the laptop (a large gap, same miss class as bp-02 021 / bp-05 019). Next: web2.png on the v2 prompt.",
+      "notes": "web1 FAIL under the strict panel-connector arrow rule. Outro title is exact: \"Next lesson: Spot paper trading\". Examples are marked Example. \"Bring your notes\" tip sits on the notebook top. But the glowing transition arrow clearly does not touch the laptop (a large gap, same miss class as bp-02 021 / bp-05 019). Next: web2.png on the v2 prompt. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -4252,7 +4268,8 @@
         ],
         "notes": "web1 FAIL under the strict panel-connector arrow rule. Outro title is exact: \"Next lesson: Spot paper trading\". Examples are marked Example. \"Bring your notes\" tip sits on the notebook top. But the glowing transition arrow clearly does not touch the laptop (a large gap, same miss class as bp-02 021 / bp-05 019). Next: web2.png on the v2 prompt.",
         "pass": false
-      }
+      },
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/001.png",
@@ -4340,10 +4357,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__002.txt",
-      "notes": "web1 PASS (first scoring). Disclaimer is exact: 'Education only. Not financial advice.' Headline EDUCATION ONLY. No arrows. Margins 84/85/69/261.",
+      "notes": "web1 PASS (first scoring). Disclaimer is exact: 'Education only. Not financial advice.' Headline EDUCATION ONLY. No arrows. Margins 84/85/69/261. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -4356,7 +4373,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/002.png",
       "scored_blob": "296cdd285aa5059025a6e74004a9ca737fb2a3e1",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-07-spot-paper-trading/002/web.png",
         "blob": "296cdd285aa5059025a6e74004a9ca737fb2a3e1",
@@ -4380,7 +4397,8 @@
         "hard_fails": [],
         "notes": "web1 PASS (first scoring). Disclaimer is exact: 'Education only. Not financial advice.' Headline EDUCATION ONLY. No arrows. Margins 84/85/69/261.",
         "pass": true
-      }
+      },
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/003.png",
@@ -4406,10 +4424,10 @@
       "hard_fails": [
         "arrow tip stops short of target: scene-transition arrow tip floats short of the form (clear navy gap); \"Spot = you own what you buy\" tip stops short of the notebook's top edge"
       ],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__003.txt",
-      "notes": "web1 FAIL (first scoring) under the strict arrow rule. Headline 'SPOT PAPER TRADING' is exact and properly spaced. 'Paper = pretend money' tip sits on the form's top glow. Two arrow fails: the scene-transition arrow floats short of the form (clear navy gap), and the 'Spot = you own what you buy' tip stops short of the notebook's top edge. Margins 85/111/82/147. Next: web2.png on the v2 prompt.",
+      "notes": "web1 FAIL (first scoring) under the strict arrow rule. Headline 'SPOT PAPER TRADING' is exact and properly spaced. 'Paper = pretend money' tip sits on the form's top glow. Two arrow fails: the scene-transition arrow floats short of the form (clear navy gap), and the 'Spot = you own what you buy' tip stops short of the notebook's top edge. Margins 85/111/82/147. Next: web2.png on the v2 prompt. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -4448,7 +4466,8 @@
         ],
         "notes": "web1 FAIL (first scoring) under the strict arrow rule. Headline 'SPOT PAPER TRADING' is exact and properly spaced. 'Paper = pretend money' tip sits on the form's top glow. Two arrow fails: the scene-transition arrow floats short of the form (clear navy gap), and the 'Spot = you own what you buy' tip stops short of the notebook's top edge. Margins 85/111/82/147. Next: web2.png on the v2 prompt.",
         "pass": false
-      }
+      },
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/004.png",
@@ -5273,10 +5292,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__016.txt",
-      "notes": "web1 PASS (first scoring). 'Draw the broken link' tip sits in the break of the sketched chain (treated as touching the broken link). 'Course \u2260 app' sits under the figure with no arrow. Pencil inside the page. Margins 77/87/108/125.",
+      "notes": "web1 PASS (first scoring). 'Draw the broken link' tip sits in the break of the sketched chain (treated as touching the broken link). 'Course \u2260 app' sits under the figure with no arrow. Pencil inside the page. Margins 77/87/108/125. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5289,7 +5308,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/016.png",
       "scored_blob": "95c1c3ed5cd6e04ee7d1599557c80981cd068eb1",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-07-spot-paper-trading/016/web.png",
         "blob": "95c1c3ed5cd6e04ee7d1599557c80981cd068eb1",
@@ -5313,7 +5332,8 @@
         "hard_fails": [],
         "notes": "web1 PASS (first scoring). 'Draw the broken link' tip sits in the break of the sketched chain (treated as touching the broken link). 'Course \u2260 app' sits under the figure with no arrow. Pencil inside the page. Margins 77/87/108/125.",
         "pass": true
-      }
+      },
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/017.png",
@@ -5337,10 +5357,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__017.txt",
-      "notes": "web1 PASS (first scoring). All five tips land on the left ends of the five empty boxes (Pair / Top / Bottom / Gaps / Rules). Pencil inside the page. No digits on the labels, so no EXAMPLE required. Margins 70/82/93/99.",
+      "notes": "web1 PASS (first scoring). All five tips land on the left ends of the five empty boxes (Pair / Top / Bottom / Gaps / Rules). Pencil inside the page. No digits on the labels, so no EXAMPLE required. Margins 70/82/93/99. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5353,7 +5373,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/017.png",
       "scored_blob": "5ed5fb3fb26d856c4b0eea53049995db46fb88f6",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-07-spot-paper-trading/017/web.png",
         "blob": "5ed5fb3fb26d856c4b0eea53049995db46fb88f6",
@@ -5377,7 +5397,8 @@
         "hard_fails": [],
         "notes": "web1 PASS (first scoring). All five tips land on the left ends of the five empty boxes (Pair / Top / Bottom / Gaps / Rules). Pencil inside the page. No digits on the labels, so no EXAMPLE required. Margins 70/82/93/99.",
         "pass": true
-      }
+      },
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/018.png",
@@ -5401,10 +5422,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__018.txt",
-      "notes": "web1 PASS (first scoring). 'Own it: yes' / 'Borrowed money: no,' no arrows, pencil inside the page, no coins. Margins 72/95/98/146.",
+      "notes": "web1 PASS (first scoring). 'Own it: yes' / 'Borrowed money: no,' no arrows, pencil inside the page, no coins. Margins 72/95/98/146. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5417,7 +5438,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/018.png",
       "scored_blob": "7257ecfc3d1ed87a44258642cc4e2eb61bfcf617",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-07-spot-paper-trading/018/web.png",
         "blob": "7257ecfc3d1ed87a44258642cc4e2eb61bfcf617",
@@ -5441,7 +5462,8 @@
         "hard_fails": [],
         "notes": "web1 PASS (first scoring). 'Own it: yes' / 'Borrowed money: no,' no arrows, pencil inside the page, no coins. Margins 72/95/98/146.",
         "pass": true
-      }
+      },
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/019.png",
@@ -5564,10 +5586,10 @@
       "hard_fails": [
         "arrow tip stops short of target: notebook-to-card panel-connector floats well short of the laptop/card (large visible gap); \"Bring your notes\" tip also stops short of the notebook's top edge"
       ],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__020.txt",
-      "notes": "web1 FAIL (first scoring) under the strict panel-connector arrow rule. Outro title is exact: 'Next lesson: Managing and monitoring.' But the notebook-to-card scene-transition arrow floats well short of the laptop/card (large visible gap), and the 'Bring your notes' tip stops short of the notebook's top edge (gap above the cover). Margins 78/92/91/195. Next: web2.png on the v2 prompt.",
+      "notes": "web1 FAIL (first scoring) under the strict panel-connector arrow rule. Outro title is exact: 'Next lesson: Managing and monitoring.' But the notebook-to-card scene-transition arrow floats well short of the laptop/card (large visible gap), and the 'Bring your notes' tip stops short of the notebook's top edge (gap above the cover). Margins 78/92/91/195. Next: web2.png on the v2 prompt. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5606,7 +5628,8 @@
         ],
         "notes": "web1 FAIL (first scoring) under the strict panel-connector arrow rule. Outro title is exact: 'Next lesson: Managing and monitoring.' But the notebook-to-card scene-transition arrow floats well short of the laptop/card (large visible gap), and the 'Bring your notes' tip stops short of the notebook's top edge (gap above the cover). Margins 78/92/91/195. Next: web2.png on the v2 prompt.",
         "pass": false
-      }
+      },
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/001.png",
@@ -5699,10 +5722,10 @@
         "label_accuracy": 2
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__002.txt",
-      "notes": "Three small chips 'EDUCATION / RISK / EXAMPLE' in an empty frame: not 'Education only. Not financial advice.'; small text.",
+      "notes": "Three small chips 'EDUCATION / RISK / EXAMPLE' in an empty frame: not 'Education only. Not financial advice.'; small text. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5715,7 +5738,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/002.png",
       "scored_blob": "5644e7f38ee29ee31118bdd3ccd1346bfa27f387",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/003.png",
@@ -5739,10 +5763,10 @@
         "label_accuracy": 3
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__003.txt",
-      "notes": "Title card: empty glass card with one dash; headline 'MANAGINGMONITORING' drops 'and' and the words run together.",
+      "notes": "Title card: empty glass card with one dash; headline 'MANAGINGMONITORING' drops 'and' and the words run together. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5755,7 +5779,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/003.png",
       "scored_blob": "03c26ec18f0a38be827bcdd5dd2fb49136603f32",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/004.png",
@@ -6607,10 +6632,10 @@
         "label_accuracy": 3
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__016.txt",
-      "notes": "Card INSIDE / SIDE / SENTENCE with blank lines: duplicate of 004; small labels.",
+      "notes": "Card INSIDE / SIDE / SENTENCE with blank lines: duplicate of 004; small labels. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6623,7 +6648,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/016.png",
       "scored_blob": "acf01df7444873b719139e41a68492e6d6e08c81",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/017.png",
@@ -6647,10 +6673,10 @@
         "label_accuracy": 3
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__017.txt",
-      "notes": "Path leaving a two-line band with 'INSIDE'/'OUTSIDE': right idea, but the band is two unlabelled lines, 'INSIDE' sits above the band (outside it), seam under headline strip.",
+      "notes": "Path leaving a two-line band with 'INSIDE'/'OUTSIDE': right idea, but the band is two unlabelled lines, 'INSIDE' sits above the band (outside it), seam under headline strip. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6663,7 +6689,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/017.png",
       "scored_blob": "e8075c64e12908e6b7c6b723e1a6067ebaaf5a9b",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/018.png",
@@ -6687,10 +6714,10 @@
         "label_accuracy": 2
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__018.txt",
-      "notes": "'HEAVY / LIGHT' boxes under 'HEAVY BOX': which asset you hold more of is not shown; jargon.",
+      "notes": "'HEAVY / LIGHT' boxes under 'HEAVY BOX': which asset you hold more of is not shown; jargon. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6703,7 +6730,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/018.png",
       "scored_blob": "dd96f2a23d1d9b239ed2a422486e097901f7ce4f",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/019.png",
@@ -6796,10 +6824,10 @@
         "label_accuracy": 3
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__020.txt",
-      "notes": "Arrow to 'MISTAKES' tile: next lesson title should read 'Common mistakes'.",
+      "notes": "Arrow to 'MISTAKES' tile: next lesson title should read 'Common mistakes'. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6812,7 +6840,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/020.png",
       "scored_blob": "7dbe959eb55b2f578361e254bb7080f852b2f362",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-09-common-mistakes/001.png",
@@ -6905,10 +6934,10 @@
         "label_accuracy": 2
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__002.txt",
-      "notes": "Three chips 'EDUCATION / RISK / EXAMPLE': not 'Education only. Not financial advice.'.",
+      "notes": "Three chips 'EDUCATION / RISK / EXAMPLE': not 'Education only. Not financial advice.'. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6921,7 +6950,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/002.png",
       "scored_blob": "55cae0496b8c079ecf99892ca3c37ada06a4b2e5",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-09-common-mistakes/003.png",
@@ -6945,10 +6975,10 @@
         "label_accuracy": 3
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__003.txt",
-      "notes": "Title card: empty glass card with one dash: glowing rectangle, no subject.",
+      "notes": "Title card: empty glass card with one dash: glowing rectangle, no subject. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6961,7 +6991,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/003.png",
       "scored_blob": "191b564d5fbacea79f150c9170931103aaca8cbb",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-09-common-mistakes/004.png",
@@ -7815,10 +7846,10 @@
       "hard_fails": [
         "illegible label: faint 'BLANK' text on a white card band"
       ],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__016.txt",
-      "notes": "'COVER NOTES' with a half-white card: does not show 'a blank stop means the finish column was skipped'.",
+      "notes": "'COVER NOTES' with a half-white card: does not show 'a blank stop means the finish column was skipped'. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7831,7 +7862,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/016.png",
       "scored_blob": "4b554bac445700381e877ca17e1a4d73a15585dd",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-09-common-mistakes/017.png",
@@ -7857,10 +7889,10 @@
       "hard_fails": [
         "illegible label: 'SHORT'/'TALL' captions are tiny"
       ],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__017.txt",
-      "notes": "Two bracket shapes: weave not drawn, so 'band shorter than the weave' is not shown.",
+      "notes": "Two bracket shapes: weave not drawn, so 'band shorter than the weave' is not shown. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7873,7 +7905,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/017.png",
       "scored_blob": "d9ae3b2579153040ec9ccae1ed395185db2d4141",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-09-common-mistakes/018.png",
@@ -7897,10 +7930,10 @@
         "label_accuracy": 2
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__018.txt",
-      "notes": "Crossed 'EARLY' -> 'MORE' with a stamp: skipping scaling and the opt-in liquidation lesson is not shown.",
+      "notes": "Crossed 'EARLY' -> 'MORE' with a stamp: skipping scaling and the opt-in liquidation lesson is not shown. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7913,7 +7946,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/018.png",
       "scored_blob": "9d350333c4c43c0382e9eeca858441c7fba0e511",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-09-common-mistakes/019.png",
@@ -7939,10 +7973,10 @@
       "hard_fails": [
         "illegible label: tiny 'ORDERS' and 'EXAMPLE'"
       ],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__019.txt",
-      "notes": "A row of tick marks with one circled: lines vs gaps not labelled.",
+      "notes": "A row of tick marks with one circled: lines vs gaps not labelled. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7955,7 +7989,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/019.png",
       "scored_blob": "90178f672ec4762d61d4506253c7650d99e949bd",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-09-common-mistakes/020.png",
@@ -8048,10 +8083,10 @@
         "label_accuracy": 3
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__021.txt",
-      "notes": "Arrow to 'SCALE' tile: next lesson title is 'Scaling up on spot'; 'SCALE' alone is vague.",
+      "notes": "Arrow to 'SCALE' tile: next lesson title is 'Scaling up on spot'; 'SCALE' alone is vague. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -8064,7 +8099,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/021.png",
       "scored_blob": "bf16764404c01a02283779326d0bdd7f7ffba0b1",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-10-scaling-up/001.png",
@@ -8157,10 +8193,10 @@
         "label_accuracy": 2
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-10-scaling-up__002.txt",
-      "notes": "Three hexagons 'EDUCATION / RISK / EXAMPLE': not 'Education only. Not financial advice.'.",
+      "notes": "Three hexagons 'EDUCATION / RISK / EXAMPLE': not 'Education only. Not financial advice.'. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -8173,7 +8209,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/002.png",
       "scored_blob": "b4302cd47b8e418e8b72df73f2a0745965231245",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-10-scaling-up/003.png",
@@ -8197,10 +8234,10 @@
         "label_accuracy": 3
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-10-scaling-up__003.txt",
-      "notes": "Title card: empty glass card with a faint dash; headline 'SCALING UP' drops 'on spot'.",
+      "notes": "Title card: empty glass card with a faint dash; headline 'SCALING UP' drops 'on spot'. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -8213,7 +8250,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/003.png",
       "scored_blob": "ca7e27c8feac8bc309aec9ae4b750b8269831f6a",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-10-scaling-up/004.png",
@@ -9065,10 +9103,10 @@
         "label_accuracy": 1
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-10-scaling-up__016.txt",
-      "notes": "Row DONE DONE OPEN DONE DONE under 'ONE OPEN': the five gates are not named; meaning unrecoverable.",
+      "notes": "Row DONE DONE OPEN DONE DONE under 'ONE OPEN': the five gates are not named; meaning unrecoverable. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -9081,7 +9119,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/016.png",
       "scored_blob": "d4a6fe0662abefb80eb3274d0d95769675451773",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-10-scaling-up/017.png",
@@ -9105,10 +9144,10 @@
         "label_accuracy": 2
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-10-scaling-up__017.txt",
-      "notes": "Two stacked cups with a 'BOTH' coin token: 'two grids on one asset can fight if they share inventory' not readable; coin-like token.",
+      "notes": "Two stacked cups with a 'BOTH' coin token: 'two grids on one asset can fight if they share inventory' not readable; coin-like token. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -9121,7 +9160,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/017.png",
       "scored_blob": "dccc4f8e8659480bbc4e9b2a989dc91168f67315",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-10-scaling-up/018.png",
@@ -9147,10 +9187,10 @@
       "hard_fails": [
         "illegible label: tiny 'KEPT' in a tall empty card"
       ],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-10-scaling-up__018.txt",
-      "notes": "'SIZE KEPT': nothing shows a review keeping size the same.",
+      "notes": "'SIZE KEPT': nothing shows a review keeping size the same. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -9163,7 +9203,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/018.png",
       "scored_blob": "d0e4cf8f88015a45465d21b92d23aed01ee27a7b",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-10-scaling-up/019.png",
@@ -9187,10 +9228,10 @@
         "label_accuracy": 2
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-10-scaling-up__019.txt",
-      "notes": "Two cards with lines, one tagged 'ONE': duplicate of 007; headline 'ONE WORD' mislabels the beat (one change).",
+      "notes": "Two cards with lines, one tagged 'ONE': duplicate of 007; headline 'ONE WORD' mislabels the beat (one change). | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -9203,7 +9244,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/019.png",
       "scored_blob": "bc10a80b8f10f0344e83bb58e7c6bb7775349eee",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-10-scaling-up/020.png",
@@ -9296,10 +9338,10 @@
         "label_accuracy": 2
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-10-scaling-up__021.txt",
-      "notes": "Empty card with an arrow 'OPTIONAL' under 'CAN SKIP': next lesson ('Advanced: liquidation scenarios') not named.",
+      "notes": "Empty card with an arrow 'OPTIONAL' under 'CAN SKIP': next lesson ('Advanced: liquidation scenarios') not named. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -9312,7 +9354,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/021.png",
       "scored_blob": "df28d928876d609ec5e622dc2acdbdbce161a630",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/001.png",
@@ -9405,10 +9448,10 @@
         "label_accuracy": 2
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__002.txt",
-      "notes": "Three small chips 'EDUCATION / RISK / EXAMPLE' in a diagonal: not 'Education only. Not financial advice.'.",
+      "notes": "Three small chips 'EDUCATION / RISK / EXAMPLE' in a diagonal: not 'Education only. Not financial advice.'. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -9421,7 +9464,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/002.png",
       "scored_blob": "b55c1b9241c46576ca26a8cdd8f8881d273cc588",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/003.png",
@@ -9445,10 +9489,10 @@
         "label_accuracy": 3
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__003.txt",
-      "notes": "Title card: empty glass card with a dash and a dot; headline 'LIQUIDATION SCENES' misnames the lesson ('Advanced: liquidation scenarios').",
+      "notes": "Title card: empty glass card with a dash and a dot; headline 'LIQUIDATION SCENES' misnames the lesson ('Advanced: liquidation scenarios'). | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -9461,7 +9505,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/003.png",
       "scored_blob": "97da63eea8bf378fbab5ef75d7c520862d153582",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/004.png",
@@ -10313,10 +10358,10 @@
         "label_accuracy": 2
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__016.txt",
-      "notes": "Book 'SPOT' and door 'SIDE' under 'BOOK DONE': near-duplicate of 004; 'spot path complete' only implied.",
+      "notes": "Book 'SPOT' and door 'SIDE' under 'BOOK DONE': near-duplicate of 004; 'spot path complete' only implied. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -10329,7 +10374,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/016.png",
       "scored_blob": "c79b7316fac5d0227e295506cb9aa3f932ac63e8",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/017.png",
@@ -10353,10 +10399,10 @@
         "label_accuracy": 2
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__017.txt",
-      "notes": "Boxes 'CLOSED' lid and 'MARGIN' under 'LID DOWN': duplicate metaphor of 005; liquidation not shown.",
+      "notes": "Boxes 'CLOSED' lid and 'MARGIN' under 'LID DOWN': duplicate metaphor of 005; liquidation not shown. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -10369,7 +10415,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/017.png",
       "scored_blob": "6416d235b65a53930dd511e9029e17916f3ba2b8",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/018.png",
@@ -10395,10 +10442,10 @@
       "hard_fails": [
         "illegible label: tiny '1'/'2' numbers in line-art panels"
       ],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__018.txt",
-      "notes": "Duplicate of 006: band, price leaving it and position closed not drawn.",
+      "notes": "Duplicate of 006: band, price leaving it and position closed not drawn. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -10411,7 +10458,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/018.png",
       "scored_blob": "69f6419461efa37243675d082043f6acea5c290c",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/019.png",
@@ -10504,10 +10552,10 @@
         "label_accuracy": 3
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__020.txt",
-      "notes": "Three 'SPOT' dots and an 'OPT IN' tile under 'SPOT STANDS': readable-ish; last-lesson / keep-the-pages message missing; tiny dot labels.",
+      "notes": "Three 'SPOT' dots and an 'OPT IN' tile under 'SPOT STANDS': readable-ish; last-lesson / keep-the-pages message missing; tiny dot labels. | DROPPED (e03191f render plan): unused in studio.plan() at e03191f74c352b0fadf68a91dad11d86f5b89a3b (d1f6). Reason: not in e03191f render plan. Script JSON still has the image field, but no plan shot uses this still. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -10520,7 +10568,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/020.png",
       "scored_blob": "4c759acf8cd666e110ace8376b043c72e64c88f4",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "not in e03191f render plan"
     }
   ],
   "note_remakes": "Rows with source chatgpt-web are new ChatGPT web renders scored against PR #17 head 6848d09; their scored_blob is the file committed at course/images/<lesson>/NNN.png. Rows with remake_review.pass=false keep the old committed still (still failing) and stay in REMAKE_QUEUE. Round 2 (14 Nov): bp-04 002/003/005/010 (web2) and 011/013/014/015/016/017/019/020 (web1) passed; 006 web2, 012 web1 and 018 web1 failed and stay in REMAKE_QUEUE (006 on v3, 012 and 018 on v2). Earlier remake reviews are kept in previous_remake_reviews. Strict arrow rule (14 Nov, Stewart: a tip must touch its target, no gaps): bp-04 007, 009, 011 and 015 flipped back to fail (\"arrow tip stops short of target\"); old committed stills restored at course/images, out/ files removed; back in the queue on v2 prompts."
