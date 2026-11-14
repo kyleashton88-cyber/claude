@@ -8,8 +8,8 @@
   "not_in_scope": "course/images/_held/*.png (10 files: bp-06 014/017, bp-07 012/017/020, bp-08 003/006/007/009/011) are not referenced by any lesson script and were not scored. Shared title-art/mascot assets are already on BP01-03_PASS_LIST.json.",
   "counts": {
     "total": 161,
-    "pass": 85,
-    "fail": 76,
+    "pass": 99,
+    "fail": 62,
     "by_lesson": {
       "bp-04-market-regimes": {
         "total": 20,
@@ -38,8 +38,8 @@
       },
       "bp-09-common-mistakes": {
         "total": 21,
-        "pass": 0,
-        "fail": 21
+        "pass": 14,
+        "fail": 7
       },
       "bp-10-scaling-up": {
         "total": 21,
@@ -6820,44 +6820,68 @@
       "beat": 1,
       "chapter": "Hook",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "6515ca4d79beff6e2f516c45a457569a78da28ae",
-        "cursor/blueprint-beginner-images": "6515ca4d79beff6e2f516c45a457569a78da28ae"
+        "cursor/blueprint-beginner-images": "f8573cb93bf837f4f608bb334413b2ac5120398a",
+        "cursor/blueprint-cursor-images": "f8573cb93bf837f4f608bb334413b2ac5120398a"
       },
       "beat_concept": "The mistakes in this lesson are pages, not personalities.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 2,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 2,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "illegible label: 'BLANK / THIN / EARLY' sit on three tiny cards that fill under 5% of the frame"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__001.txt",
-      "notes": "'THREE PAGES' headline; 'pages, not personalities' not shown; headline words run together. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "'THREE PAGES' headline; 'pages, not personalities' not shown; headline words run together. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/001.png, blob f8573cb93bf837f4f608bb334413b2ac5120398a, 1536x1024, 100127 bytes). On-image text: MISTAKES ARE ON THE PAGE | Look at the page | Not at the person | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 463,
-        "top": 110,
-        "bottom": 353
+        "left": 103,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/001.png",
-      "scored_blob": "6515ca4d79beff6e2f516c45a457569a78da28ae",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-09-common-mistakes/001.png",
+      "scored_blob": "f8573cb93bf837f4f608bb334413b2ac5120398a",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+      "pass": true,
+      "previous_committed_blob": "6515ca4d79beff6e2f516c45a457569a78da28ae",
+      "remake_review": {
+        "file": "gen/bp-09-common-mistakes/001/cursor1.png",
+        "blob": "f8573cb93bf837f4f608bb334413b2ac5120398a",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/001.png, blob f8573cb93bf837f4f608bb334413b2ac5120398a, 1536x1024, 100127 bytes). On-image text: MISTAKES ARE ON THE PAGE | Look at the page | Not at the person | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-09-common-mistakes/002.png",
@@ -6945,43 +6969,68 @@
       "beat": 4,
       "chapter": "Blank stop",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "688e2a975f55778df4d300f0f5eb00f6913045e0",
-        "cursor/blueprint-beginner-images": "688e2a975f55778df4d300f0f5eb00f6913045e0"
+        "cursor/blueprint-beginner-images": "6d621941449562781b4412646053ba08b26179dd",
+        "cursor/blueprint-cursor-images": "6d621941449562781b4412646053ba08b26179dd"
       },
       "beat_concept": "A blank stop means the finish column was skipped.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__004.txt",
-      "notes": "Small card with an empty oval and a 'FIX' chip: a finish column left blank is not shown; tiny EXAMPLE. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Small card with an empty oval and a 'FIX' chip: a finish column left blank is not shown; tiny EXAMPLE. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/004.png, blob 6d621941449562781b4412646053ba08b26179dd, 1536x1024, 108581 bytes). On-image text: ABLANK STOP WAS SKIPPED | The finish column is empty | That means it was skipped | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 513,
-        "top": 110,
-        "bottom": 165
+        "left": 101,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/004.png",
-      "scored_blob": "688e2a975f55778df4d300f0f5eb00f6913045e0",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-09-common-mistakes/004.png",
+      "scored_blob": "6d621941449562781b4412646053ba08b26179dd",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+      "pass": true,
+      "previous_committed_blob": "688e2a975f55778df4d300f0f5eb00f6913045e0",
+      "remake_review": {
+        "file": "gen/bp-09-common-mistakes/004/cursor1.png",
+        "blob": "6d621941449562781b4412646053ba08b26179dd",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 101,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/004.png, blob 6d621941449562781b4412646053ba08b26179dd, 1536x1024, 108581 bytes). On-image text: ABLANK STOP WAS SKIPPED | The finish column is empty | That means it was skipped | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-09-common-mistakes/005.png",
@@ -6989,43 +7038,68 @@
       "beat": 5,
       "chapter": "Tight band",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "e36bb531d016e0fe43345c1043b3bdc72f8c8092",
-        "cursor/blueprint-beginner-images": "e36bb531d016e0fe43345c1043b3bdc72f8c8092"
+        "cursor/blueprint-beginner-images": "b862823eb7074e01e14057bd3bc2439829d6f98f",
+        "cursor/blueprint-cursor-images": "b862823eb7074e01e14057bd3bc2439829d6f98f"
       },
       "beat_concept": "A tight band is a band shorter than the weave you drew for an ordinary path.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 2,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__005.txt",
-      "notes": "Tiny 'SHORT -> WIDEN -> WEAVE' net shape in the middle of an empty frame: band vs weave height not shown; small labels. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Tiny 'SHORT -> WIDEN -> WEAVE' net shape in the middle of an empty frame: band vs weave height not shown; small labels. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/005.png, blob b862823eb7074e01e14057bd3bc2439829d6f98f, 1536x1024, 98621 bytes). On-image text: THE BANDIS TOO SHORT | Your band | Shorter than a normal day's move | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 544,
-        "top": 110,
-        "bottom": 317
+        "left": 101,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/005.png",
-      "scored_blob": "e36bb531d016e0fe43345c1043b3bdc72f8c8092",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-09-common-mistakes/005.png",
+      "scored_blob": "b862823eb7074e01e14057bd3bc2439829d6f98f",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+      "pass": true,
+      "previous_committed_blob": "e36bb531d016e0fe43345c1043b3bdc72f8c8092",
+      "remake_review": {
+        "file": "gen/bp-09-common-mistakes/005/cursor1.png",
+        "blob": "b862823eb7074e01e14057bd3bc2439829d6f98f",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 101,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/005.png, blob b862823eb7074e01e14057bd3bc2439829d6f98f, 1536x1024, 98621 bytes). On-image text: THE BANDIS TOO SHORT | Your band | Shorter than a normal day's move | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-09-common-mistakes/006.png",
@@ -7033,44 +7107,68 @@
       "beat": 6,
       "chapter": "Ending early",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "603c990760efe9d09c2b67a5bef2b7139553658a",
-        "cursor/blueprint-beginner-images": "603c990760efe9d09c2b67a5bef2b7139553658a"
+        "cursor/blueprint-beginner-images": "2684ad87c41e2ec293b112c3f5685d626c40d0c7",
+        "cursor/blueprint-cursor-images": "2684ad87c41e2ec293b112c3f5685d626c40d0c7"
       },
       "beat_concept": "Ending the course at the mistakes page skips scaling and the opt-in liquidation lesson.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 2,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "wrong label: 'LIQUID' is a truncated 'liquidation'"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__006.txt",
-      "notes": "Tiny crossed 'EARLY' node on a line to 'SCALE'/'LIQUID' chips: skipping the last two lessons is not readable; mostly empty frame. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Tiny crossed 'EARLY' node on a line to 'SCALE'/'LIQUID' chips: skipping the last two lessons is not readable; mostly empty frame. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/006.png, blob 2684ad87c41e2ec293b112c3f5685d626c40d0c7, 1536x1024, 109448 bytes). On-image text: DO NOT STOP THE COURSE HERE | Scaling up is still ahead | The liquidation lesson is still ahead | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 505,
-        "top": 111,
-        "bottom": 336
+        "left": 103,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/006.png",
-      "scored_blob": "603c990760efe9d09c2b67a5bef2b7139553658a",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-09-common-mistakes/006.png",
+      "scored_blob": "2684ad87c41e2ec293b112c3f5685d626c40d0c7",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+      "pass": true,
+      "previous_committed_blob": "603c990760efe9d09c2b67a5bef2b7139553658a",
+      "remake_review": {
+        "file": "gen/bp-09-common-mistakes/006/cursor1.png",
+        "blob": "2684ad87c41e2ec293b112c3f5685d626c40d0c7",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/006.png, blob 2684ad87c41e2ec293b112c3f5685d626c40d0c7, 1536x1024, 109448 bytes). On-image text: DO NOT STOP THE COURSE HERE | Scaling up is still ahead | The liquidation lesson is still ahead | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-09-common-mistakes/007.png",
@@ -7078,44 +7176,68 @@
       "beat": 7,
       "chapter": "Counting lines",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "7c95382583935d09b5619b09a395274dd2d71c0a",
-        "cursor/blueprint-beginner-images": "7c95382583935d09b5619b09a395274dd2d71c0a"
+        "cursor/blueprint-beginner-images": "cdef486897d99dfd10cc571ac821f1d056cede88",
+        "cursor/blueprint-cursor-images": "cdef486897d99dfd10cc571ac821f1d056cede88"
       },
       "beat_concept": "Counting lines as gaps is the spacing miss, and it shows up again here because it survives copy-paste.",
       "scores": {
-        "beginner_clarity": 1,
-        "composition_hierarchy": 2,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 2,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "illegible label: tiny letter-spaced 'EXAMPLE' and unreadable tick marks"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__007.txt",
-      "notes": "An oval of tick marks: 'counting lines as gaps' not shown at all. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "An oval of tick marks: 'counting lines as gaps' not shown at all. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/007.png, blob cdef486897d99dfd10cc571ac821f1d056cede88, 1536x1024, 81951 bytes). On-image text: 7 LINES = 6 GAPS | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/356/112/124. Left card has exactly 7 interior lines and 6 gaps, matching '7 LINES = 6 GAPS'. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 479,
-        "top": 110,
-        "bottom": 373
+        "left": 102,
+        "right": 356,
+        "top": 112,
+        "bottom": 124
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/007.png",
-      "scored_blob": "7c95382583935d09b5619b09a395274dd2d71c0a",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-09-common-mistakes/007.png",
+      "scored_blob": "cdef486897d99dfd10cc571ac821f1d056cede88",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+      "pass": true,
+      "previous_committed_blob": "7c95382583935d09b5619b09a395274dd2d71c0a",
+      "remake_review": {
+        "file": "gen/bp-09-common-mistakes/007/cursor1.png",
+        "blob": "cdef486897d99dfd10cc571ac821f1d056cede88",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 102,
+          "right": 356,
+          "top": 112,
+          "bottom": 124
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/007.png, blob cdef486897d99dfd10cc571ac821f1d056cede88, 1536x1024, 81951 bytes). On-image text: 7 LINES = 6 GAPS | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/356/112/124. Left card has exactly 7 interior lines and 6 gaps, matching '7 LINES = 6 GAPS'. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-09-common-mistakes/008.png",
@@ -7123,45 +7245,68 @@
       "beat": 8,
       "chapter": "Default size",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "25cce537dd0066a2a26c0d63f80aa6f06a341562",
-        "cursor/blueprint-beginner-images": "25cce537dd0066a2a26c0d63f80aa6f06a341562"
+        "cursor/blueprint-beginner-images": "ffb8b90408dde2a5a7f57c5b97fa6f6ba35d2354",
+        "cursor/blueprint-cursor-images": "ffb8b90408dde2a5a7f57c5b97fa6f6ba35d2354"
       },
       "beat_concept": "A default size on a form is the form's idea.",
       "scores": {
-        "beginner_clarity": 1,
-        "composition_hierarchy": 2,
-        "craft_polish": 2,
-        "brand_fidelity": 4,
-        "text_legibility": 2,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "artifact: smudged white blur inside the SIZE card where a value should be",
-        "illegible label: tiny 'SIZE', 'CLEARED', 'EXAMPLE'"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__008.txt",
-      "notes": "'CLEAR SIZE' headline; 'a default size is the form's idea' not shown. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "'CLEAR SIZE' headline; 'a default size is the form's idea' not shown. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/008.png, blob ffb8b90408dde2a5a7f57c5b97fa6f6ba35d2354, 1536x1024, 104656 bytes). On-image text: A FILLED-IN SIZEIS NOT YOURS | The form filled in a size | That was not your choice | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 487,
-        "top": 110,
-        "bottom": 389
+        "left": 101,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/008.png",
-      "scored_blob": "25cce537dd0066a2a26c0d63f80aa6f06a341562",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-09-common-mistakes/008.png",
+      "scored_blob": "ffb8b90408dde2a5a7f57c5b97fa6f6ba35d2354",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+      "pass": true,
+      "previous_committed_blob": "25cce537dd0066a2a26c0d63f80aa6f06a341562",
+      "remake_review": {
+        "file": "gen/bp-09-common-mistakes/008/cursor1.png",
+        "blob": "ffb8b90408dde2a5a7f57c5b97fa6f6ba35d2354",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 101,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/008.png, blob ffb8b90408dde2a5a7f57c5b97fa6f6ba35d2354, 1536x1024, 104656 bytes). On-image text: A FILLED-IN SIZEIS NOT YOURS | The form filled in a size | That was not your choice | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-09-common-mistakes/009.png",
@@ -7169,43 +7314,68 @@
       "beat": 9,
       "chapter": "Result language",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "2e9e3e6e72efe7133eeeaf74fedb75c4af197c98",
-        "cursor/blueprint-beginner-images": "2e9e3e6e72efe7133eeeaf74fedb75c4af197c98"
+        "cursor/blueprint-beginner-images": "d7fb787318ff1d5d2b1c643961cc37acac0d3d1c",
+        "cursor/blueprint-cursor-images": "d7fb787318ff1d5d2b1c643961cc37acac0d3d1c"
       },
       "beat_concept": "A promise of income, or a claim that a result cannot fail, is a mistake on a teaching page.",
       "scores": {
-        "beginner_clarity": 3,
-        "composition_hierarchy": 2,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__009.txt",
-      "notes": "Crossed 'GAIN / SURE / WIN' vs 'WAITS / FILLS / STOCK / LEAVES': chips are small in an empty frame; 'STOCK' is unexplained; promise-of-income idea only implied. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Crossed 'GAIN / SURE / WIN' vs 'WAITS / FILLS / STOCK / LEAVES': chips are small in an empty frame; 'STOCK' is unexplained; promise-of-income idea only implied. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/009.png, blob d7fb787318ff1d5d2b1c643961cc37acac0d3d1c, 1536x1024, 98879 bytes). On-image text: NOPROMISE OFINCOME | Do not promise income | A result can fail | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 313,
-        "top": 110,
-        "bottom": 360
+        "left": 103,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/009.png",
-      "scored_blob": "2e9e3e6e72efe7133eeeaf74fedb75c4af197c98",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-09-common-mistakes/009.png",
+      "scored_blob": "d7fb787318ff1d5d2b1c643961cc37acac0d3d1c",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+      "pass": true,
+      "previous_committed_blob": "2e9e3e6e72efe7133eeeaf74fedb75c4af197c98",
+      "remake_review": {
+        "file": "gen/bp-09-common-mistakes/009/cursor1.png",
+        "blob": "d7fb787318ff1d5d2b1c643961cc37acac0d3d1c",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/009.png, blob d7fb787318ff1d5d2b1c643961cc37acac0d3d1c, 1536x1024, 98879 bytes). On-image text: NOPROMISE OFINCOME | Do not promise income | A result can fail | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-09-common-mistakes/010.png",
@@ -7213,43 +7383,68 @@
       "beat": 10,
       "chapter": "Worked audit",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "7ada213f9f0c29834cd2ddcb6e09b9fdcd9d1623",
-        "cursor/blueprint-beginner-images": "7ada213f9f0c29834cd2ddcb6e09b9fdcd9d1623"
+        "cursor/blueprint-beginner-images": "d63e326f0ad9b750a2c24b756b0e2af600769031",
+        "cursor/blueprint-cursor-images": "d63e326f0ad9b750a2c24b756b0e2af600769031"
       },
       "beat_concept": "Audit a sample page that has a blank stop and a ten percent span on twenty lines.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__010.txt",
-      "notes": "Two circles 'BLANK' and 'GAPS': the worked audit page (blank stop, 10% span on 20 lines) is not shown; no numbers. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Two circles 'BLANK' and 'GAPS': the worked audit page (blank stop, 10% span on 20 lines) is not shown; no numbers. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/010.png, blob d63e326f0ad9b750a2c24b756b0e2af600769031, 1536x1024, 125428 bytes). On-image text: SEVENLINES AND SIX GAPS | EXAMPLE | Blank stop | That column was skipped | 7 lines, 6 gaps. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/136/109/124. Left card has exactly 7 interior lines and 6 gaps. Also shows the blank-stop miss. Not the old false 19-gap claim. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 593,
-        "top": 110,
-        "bottom": 243
+        "left": 102,
+        "right": 136,
+        "top": 109,
+        "bottom": 124
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/010.png",
-      "scored_blob": "7ada213f9f0c29834cd2ddcb6e09b9fdcd9d1623",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-09-common-mistakes/010.png",
+      "scored_blob": "d63e326f0ad9b750a2c24b756b0e2af600769031",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+      "pass": true,
+      "previous_committed_blob": "7ada213f9f0c29834cd2ddcb6e09b9fdcd9d1623",
+      "remake_review": {
+        "file": "gen/bp-09-common-mistakes/010/cursor1.png",
+        "blob": "d63e326f0ad9b750a2c24b756b0e2af600769031",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 102,
+          "right": 136,
+          "top": 109,
+          "bottom": 124
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/010.png, blob d63e326f0ad9b750a2c24b756b0e2af600769031, 1536x1024, 125428 bytes). On-image text: SEVENLINES AND SIX GAPS | EXAMPLE | Blank stop | That column was skipped | 7 lines, 6 gaps. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/136/109/124. Left card has exactly 7 interior lines and 6 gaps. Also shows the blank-stop miss. Not the old false 19-gap claim. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-09-common-mistakes/011.png",
@@ -7257,43 +7452,68 @@
       "beat": 11,
       "chapter": "One fix at a time",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "989c4ec2cda76afda3b466d70f62bbd22ff782a0",
-        "cursor/blueprint-beginner-images": "989c4ec2cda76afda3b466d70f62bbd22ff782a0"
+        "cursor/blueprint-beginner-images": "9d130670c26dcef31593d7eb9809169502020c91",
+        "cursor/blueprint-cursor-images": "9d130670c26dcef31593d7eb9809169502020c91"
       },
       "beat_concept": "Fix one miss, then reread, then fix the next.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__011.txt",
-      "notes": "Two cards with an 'O' and 'ONE'/'TWO': 'fix one, reread, fix the next' not shown; tiny captions. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Two cards with an 'O' and 'ONE'/'TWO': 'fix one, reread, fix the next' not shown; tiny captions. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/011.png, blob 9d130670c26dcef31593d7eb9809169502020c91, 1536x1024, 107342 bytes). On-image text: FIX ONE, THEN THE NEXT | 1 Fix one mistake | 2 Read the page again | 3 Fix the next one | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/110/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 485,
+        "left": 103,
+        "right": 120,
         "top": 110,
-        "bottom": 311
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/011.png",
-      "scored_blob": "989c4ec2cda76afda3b466d70f62bbd22ff782a0",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-09-common-mistakes/011.png",
+      "scored_blob": "9d130670c26dcef31593d7eb9809169502020c91",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+      "pass": true,
+      "previous_committed_blob": "989c4ec2cda76afda3b466d70f62bbd22ff782a0",
+      "remake_review": {
+        "file": "gen/bp-09-common-mistakes/011/cursor1.png",
+        "blob": "9d130670c26dcef31593d7eb9809169502020c91",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 110,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/011.png, blob 9d130670c26dcef31593d7eb9809169502020c91, 1536x1024, 107342 bytes). On-image text: FIX ONE, THEN THE NEXT | 1 Fix one mistake | 2 Read the page again | 3 Fix the next one | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/110/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-09-common-mistakes/012.png",
@@ -7301,43 +7521,68 @@
       "beat": 12,
       "chapter": "Not a score",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "9cffa2d9e9a62528faf592b1e7b1b54992160dc9",
-        "cursor/blueprint-beginner-images": "9cffa2d9e9a62528faf592b1e7b1b54992160dc9"
+        "cursor/blueprint-beginner-images": "3856331becafbc1ff26427ae1ebae14a0f3363a9",
+        "cursor/blueprint-cursor-images": "3856331becafbc1ff26427ae1ebae14a0f3363a9"
       },
       "beat_concept": "The audit does not produce a grade you can trade.",
       "scores": {
-        "beginner_clarity": 1,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__012.txt",
-      "notes": "Card 'PAGE / LINE / STOP' under 'NOT SCORE': no relation to 'the audit does not produce a grade'. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Card 'PAGE / LINE / STOP' under 'NOT SCORE': no relation to 'the audit does not produce a grade'. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/012.png, blob 3856331becafbc1ff26427ae1ebae14a0f3363a9, 1536x1024, 106096 bytes). On-image text: THISIS NOT A SCORE | The audit finds mistakes | It does not give you a grade | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 623,
-        "top": 110,
-        "bottom": 271
+        "left": 101,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/012.png",
-      "scored_blob": "9cffa2d9e9a62528faf592b1e7b1b54992160dc9",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-09-common-mistakes/012.png",
+      "scored_blob": "3856331becafbc1ff26427ae1ebae14a0f3363a9",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+      "pass": true,
+      "previous_committed_blob": "9cffa2d9e9a62528faf592b1e7b1b54992160dc9",
+      "remake_review": {
+        "file": "gen/bp-09-common-mistakes/012/cursor1.png",
+        "blob": "3856331becafbc1ff26427ae1ebae14a0f3363a9",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 101,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/012.png, blob 3856331becafbc1ff26427ae1ebae14a0f3363a9, 1536x1024, 106096 bytes). On-image text: THISIS NOT A SCORE | The audit finds mistakes | It does not give you a grade | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-09-common-mistakes/013.png",
@@ -7345,43 +7590,68 @@
       "beat": 13,
       "chapter": "Leverage mention",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "80a94e9186f3cd9d999d5f39b53e0884512e33b9",
-        "cursor/blueprint-beginner-images": "80a94e9186f3cd9d999d5f39b53e0884512e33b9"
+        "cursor/blueprint-beginner-images": "266064d0266f6d3792524743138ea30cd036ad91",
+        "cursor/blueprint-cursor-images": "266064d0266f6d3792524743138ea30cd036ad91"
       },
       "beat_concept": "If a page has picked up a leverage multiple, that multiple is a mistake in this course's spot path.",
       "scores": {
-        "beginner_clarity": 3,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__013.txt",
-      "notes": "Glass card 'SPOT' with a crossed '2X': leverage-multiple idea roughly readable; headline 'NO TIMES' is unclear English. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Glass card 'SPOT' with a crossed '2X': leverage-multiple idea roughly readable; headline 'NO TIMES' is unclear English. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/013.png, blob 266064d0266f6d3792524743138ea30cd036ad91, 1536x1024, 102245 bytes). On-image text: CROSS OUT A TIMES-NUMBER | 5x does not belong here | This path is spot | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 671,
-        "top": 110,
-        "bottom": 214
+        "left": 102,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/013.png",
-      "scored_blob": "80a94e9186f3cd9d999d5f39b53e0884512e33b9",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-09-common-mistakes/013.png",
+      "scored_blob": "266064d0266f6d3792524743138ea30cd036ad91",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+      "pass": true,
+      "previous_committed_blob": "80a94e9186f3cd9d999d5f39b53e0884512e33b9",
+      "remake_review": {
+        "file": "gen/bp-09-common-mistakes/013/cursor1.png",
+        "blob": "266064d0266f6d3792524743138ea30cd036ad91",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 102,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/013.png, blob 266064d0266f6d3792524743138ea30cd036ad91, 1536x1024, 102245 bytes). On-image text: CROSS OUT A TIMES-NUMBER | 5x does not belong here | This path is spot | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-09-common-mistakes/014.png",
@@ -7389,44 +7659,68 @@
       "beat": 14,
       "chapter": "The action",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "902544d75431f690495b13099e464f670d288119",
-        "cursor/blueprint-beginner-images": "902544d75431f690495b13099e464f670d288119"
+        "cursor/blueprint-beginner-images": "337ef77a55ad4f05f52d072e62812007a5b8072c",
+        "cursor/blueprint-cursor-images": "337ef77a55ad4f05f52d072e62812007a5b8072c"
       },
       "beat_concept": "Audit your own notebook for a blank stop, a tight band, and a missing gaps word.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 2,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 2,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "illegible label: 'NONE' chip and three bullet lines are tiny"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__014.txt",
-      "notes": "'THREE LINES' card: blank stop / tight band / missing 'gaps' word are not named. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "'THREE LINES' card: blank stop / tight band / missing 'gaps' word are not named. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/014.png, blob 337ef77a55ad4f05f52d072e62812007a5b8072c, 1536x1024, 121708 bytes). On-image text: CHECK YOUR OWN PAGE | Is the stop blank? | Is the band too short? | Is the word gaps missing? | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 526,
-        "top": 110,
-        "bottom": 356
+        "left": 102,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/014.png",
-      "scored_blob": "902544d75431f690495b13099e464f670d288119",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-09-common-mistakes/014.png",
+      "scored_blob": "337ef77a55ad4f05f52d072e62812007a5b8072c",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+      "pass": true,
+      "previous_committed_blob": "902544d75431f690495b13099e464f670d288119",
+      "remake_review": {
+        "file": "gen/bp-09-common-mistakes/014/cursor1.png",
+        "blob": "337ef77a55ad4f05f52d072e62812007a5b8072c",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 102,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/014.png, blob 337ef77a55ad4f05f52d072e62812007a5b8072c, 1536x1024, 121708 bytes). On-image text: CHECK YOUR OWN PAGE | Is the stop blank? | Is the band too short? | Is the word gaps missing? | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-09-common-mistakes/015.png",
@@ -7434,43 +7728,68 @@
       "beat": 15,
       "chapter": "Recap",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "c15f28ddb7d8d8f55ab3a510b2cee836f65c6ca0",
-        "cursor/blueprint-beginner-images": "c15f28ddb7d8d8f55ab3a510b2cee836f65c6ca0"
+        "cursor/blueprint-beginner-images": "870f8e2e8a739e9a7ae8274b972d4db3a52decb2",
+        "cursor/blueprint-cursor-images": "870f8e2e8a739e9a7ae8274b972d4db3a52decb2"
       },
       "beat_concept": "Recap: blank stop, tight band, early ending, line-count mixup, default size, result words.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 2,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__015.txt",
-      "notes": "Six small chips BLANK / BAND / EARLY / LINES / SIZE / WORDS: cryptic recap, small type. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Six small chips BLANK / BAND / EARLY / LINES / SIZE / WORDS: cryptic recap, small type. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/015.png, blob 870f8e2e8a739e9a7ae8274b972d4db3a52decb2, 1536x1024, 134126 bytes). On-image text: RECAP | Blank stop | Band too short | Stopping the course early | Counting lines, not gaps | A size you did not choose | A promise of income | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/110/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 550,
+        "left": 103,
+        "right": 120,
         "top": 110,
-        "bottom": 356
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/015.png",
-      "scored_blob": "c15f28ddb7d8d8f55ab3a510b2cee836f65c6ca0",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-09-common-mistakes/015.png",
+      "scored_blob": "870f8e2e8a739e9a7ae8274b972d4db3a52decb2",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+      "pass": true,
+      "previous_committed_blob": "c15f28ddb7d8d8f55ab3a510b2cee836f65c6ca0",
+      "remake_review": {
+        "file": "gen/bp-09-common-mistakes/015/cursor1.png",
+        "blob": "870f8e2e8a739e9a7ae8274b972d4db3a52decb2",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 110,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/015.png, blob 870f8e2e8a739e9a7ae8274b972d4db3a52decb2, 1536x1024, 134126 bytes). On-image text: RECAP | Blank stop | Band too short | Stopping the course early | Counting lines, not gaps | A size you did not choose | A promise of income | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/110/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-09-common-mistakes/016.png",
@@ -7644,43 +7963,68 @@
       "beat": 20,
       "chapter": "Keep the pages",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "54c40b09cf93e0f2750fa0d2829f2525168ff038",
-        "cursor/blueprint-beginner-images": "54c40b09cf93e0f2750fa0d2829f2525168ff038"
+        "cursor/blueprint-beginner-images": "ee64e0fd4eebfe819ef22e4e6792ce456067f5bd",
+        "cursor/blueprint-cursor-images": "ee64e0fd4eebfe819ef22e4e6792ce456067f5bd"
       },
       "beat_concept": "Keep the marked-up pages. The marks are the lesson.",
       "scores": {
-        "beginner_clarity": 3,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__020.txt",
-      "notes": "'KEPT' vs faded 'FADED' pages: idea readable; marked-up pages not shown; small captions. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "'KEPT' vs faded 'FADED' pages: idea readable; marked-up pages not shown; small captions. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/020.png, blob ee64e0fd4eebfe819ef22e4e6792ce456067f5bd, 1536x1024, 104675 bytes). On-image text: KEEP THE MARKED PAGES | The marks stay on the page | The marks are the lesson | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 576,
-        "top": 110,
-        "bottom": 248
+        "left": 103,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/020.png",
-      "scored_blob": "54c40b09cf93e0f2750fa0d2829f2525168ff038",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-09-common-mistakes/020.png",
+      "scored_blob": "ee64e0fd4eebfe819ef22e4e6792ce456067f5bd",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+      "pass": true,
+      "previous_committed_blob": "54c40b09cf93e0f2750fa0d2829f2525168ff038",
+      "remake_review": {
+        "file": "gen/bp-09-common-mistakes/020/cursor1.png",
+        "blob": "ee64e0fd4eebfe819ef22e4e6792ce456067f5bd",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8, identical at tip 3a1137a, course/images/bp-09-common-mistakes/020.png, blob ee64e0fd4eebfe819ef22e4e6792ce456067f5bd, 1536x1024, 104675 bytes). On-image text: KEEP THE MARKED PAGES | The marks stay on the page | The marks are the lesson | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-09-common-mistakes/021.png",

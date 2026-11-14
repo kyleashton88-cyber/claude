@@ -532,3 +532,29 @@ Scored from `36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7` (010 from `8cb7a75539553b
 
 ### Updated counts
 - **BP-08: 14/20 — not 100%.** Unused title / your-turn / outro rows remain in the queue and were not in this Cursor batch.
+
+---
+
+## Cursor-agent remakes for bp-09-common-mistakes used stills
+
+Scored from `c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8` (identical at tip 3a1137a). All 14 used stills PASS, placed, source cursor.
+
+| File | Result | Margins (l/r/t/b) | Scores | Blob |
+|---|---|---|---|---|
+| gen/bp-09-common-mistakes/001/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `f8573cb93bf837f4f608bb334413b2ac5120398a` |
+| gen/bp-09-common-mistakes/004/cursor1.png | PASS | 101/120/109/95 | 5/5/5/5/5/—/5 | `6d621941449562781b4412646053ba08b26179dd` |
+| gen/bp-09-common-mistakes/005/cursor1.png | PASS | 101/120/109/95 | 5/5/5/5/5/—/5 | `b862823eb7074e01e14057bd3bc2439829d6f98f` |
+| gen/bp-09-common-mistakes/006/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `2684ad87c41e2ec293b112c3f5685d626c40d0c7` |
+| gen/bp-09-common-mistakes/007/cursor1.png | PASS | 102/356/112/124 | 5/5/5/5/5/—/5 | `cdef486897d99dfd10cc571ac821f1d056cede88` |
+| gen/bp-09-common-mistakes/008/cursor1.png | PASS | 101/120/109/95 | 5/5/5/5/5/—/5 | `ffb8b90408dde2a5a7f57c5b97fa6f6ba35d2354` |
+| gen/bp-09-common-mistakes/009/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `d7fb787318ff1d5d2b1c643961cc37acac0d3d1c` |
+| gen/bp-09-common-mistakes/010/cursor1.png | PASS | 102/136/109/124 | 5/5/5/5/5/—/5 | `d63e326f0ad9b750a2c24b756b0e2af600769031` |
+| gen/bp-09-common-mistakes/011/cursor1.png | PASS | 103/120/110/95 | 5/5/5/5/5/—/5 | `9d130670c26dcef31593d7eb9809169502020c91` |
+| gen/bp-09-common-mistakes/012/cursor1.png | PASS | 101/120/109/95 | 5/5/5/5/5/—/5 | `3856331becafbc1ff26427ae1ebae14a0f3363a9` |
+| gen/bp-09-common-mistakes/013/cursor1.png | PASS | 102/120/109/95 | 5/5/5/5/5/—/5 | `266064d0266f6d3792524743138ea30cd036ad91` |
+| gen/bp-09-common-mistakes/014/cursor1.png | PASS | 102/120/109/95 | 5/5/5/5/5/—/5 | `337ef77a55ad4f05f52d072e62812007a5b8072c` |
+| gen/bp-09-common-mistakes/015/cursor1.png | PASS | 103/120/110/95 | 5/5/5/5/5/—/5 | `870f8e2e8a739e9a7ae8274b972d4db3a52decb2` |
+| gen/bp-09-common-mistakes/020/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `ee64e0fd4eebfe819ef22e4e6792ce456067f5bd` |
+
+### Updated counts
+- **BP-09: 14/21 — not 100%.** Unused title / your-turn / outro rows remain in the queue and were not in this Cursor batch.
