@@ -1418,9 +1418,9 @@ def paint_worked(base: Image.Image, shot: dict, local: float) -> None:
     rows = shot.get("items") or []
     if not rows:
         return
-    dur = float(shot.get("duration") or max(6.0, len(rows) * 2.8))
-    step = max(2.4, dur / max(1, len(rows)))
-    shown = min(len(rows), 1 + int(local / step))
+    dur = float(shot.get("duration") or max(8.0, len(rows) * 3.2))
+    step = dur / max(1, len(rows))
+    shown = min(len(rows), 1 + int(local / step)) if step else len(rows)
     y = 190
     for text in rows[:shown]:
         draw.rounded_rectangle([MX, y, RIGHT, y + 110], 16, fill=GLASS, outline=CYAN, width=2)
@@ -1546,11 +1546,11 @@ def paint_analogy(base: Image.Image, shot: dict, local: float, dur: float) -> No
         _retouch_analogy(draw, kind, origin)
         if kind == "ladder":
             note = "Not to scale: the chart has 7 levels"
-            face = font(28)
-            tw = int(face.getlength(note)) + 28
-            nx, ny = origin[0], origin[1] + ph + 10
-            draw.rounded_rectangle([nx, ny, nx + tw, ny + 44], 10, fill=TAG, outline=CYAN, width=2)
-            draw.text((nx + 14, ny + 6), note, font=face, fill=WHITE)
+            face = font(40)
+            tw = int(face.getlength(note)) + 36
+            nx, ny = origin[0], origin[1] + ph + 8
+            draw.rounded_rectangle([nx, ny, nx + tw, ny + 56], 12, fill=TAG, outline=CYAN, width=3)
+            draw.text((nx + 18, ny + 8), note, font=face, fill=WHITE)
     draw.rounded_rectangle([origin[0], origin[1], origin[0] + pw, origin[1] + ph], 18, outline=LINE, width=2)
     chart_card(base, shot, local, dur, chart_box)
 
@@ -1679,6 +1679,91 @@ def paint_lesson_thumb(shot: dict, dest: Path) -> Path:
     return dest
 
 
+def _big_still_tags(
+    draw: ImageDraw.ImageDraw,
+    x: int,
+    y: int,
+    view_w: int,
+    view_h: int,
+    tags: tuple[tuple[float, float, str], ...],
+) -> None:
+    """Cover a small baked tag with a readable one. The still file is not edited."""
+    face = font(40)
+    for fx, fy, text in tags:
+        tw = int(face.getlength(text)) + 36
+        th = 56
+        tx = x + int(view_w * fx)
+        ty = y + int(view_h * fy)
+        draw.rounded_rectangle([tx - 16, ty - 18, tx + tw + 16, ty + th + 22], 12, fill=NAVY)
+        draw.rounded_rectangle([tx, ty, tx + tw, ty + th], 12, fill=TAG, outline=CYAN, width=3)
+        draw.text((tx + 18, ty + 8), text, font=face, fill=WHITE)
+
+
+def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
+    """Sells fill on the way up, buys on the way down, in time with the sentence."""
+    draw = ImageDraw.Draw(base)
+    box = (MX, 190, 1280, 750)
+    draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=3)
+    sentences = _lesson_sentences(shot.get("vo") or "")
+    spans = list(shot.get("sentence_spans") or [])
+
+    def progress(word: str) -> float | None:
+        for text, span in zip(sentences, spans):
+            if word in text.lower():
+                start, end = span
+                if local < start:
+                    return 0.0
+                if local >= end:
+                    return 1.0
+                return (local - start) / max(0.05, end - start)
+        return None
+
+    climb = progress("climbs")
+    fall = progress("falls")
+    if climb is None:
+        climb = 1.0 if local > 0.55 else 0.0
+    if fall is None:
+        fall = 1.0 if local > 0.8 else 0.0
+    sells = (220, 300, 380)
+    buys = (560, 640, 720)
+    mid = 470
+    for index, yy in enumerate(sells):
+        lit = climb >= (index + 1) / 3
+        color = MINT if lit else MUTED
+        draw.line([(box[0] + 80, yy), (box[2] - 80, yy)], fill=color, width=8)
+        if lit:
+            draw.ellipse([box[2] - 120, yy - 16, box[2] - 88, yy + 16], fill=MINT)
+    draw.line([(box[0] + 80, mid), (box[2] - 80, mid)], fill=WHITE, width=3)
+    for index, yy in enumerate(buys):
+        lit = fall >= (index + 1) / 3
+        color = BLUE if lit else MUTED
+        draw.line([(box[0] + 80, yy), (box[2] - 80, yy)], fill=color, width=8)
+        if lit:
+            draw.ellipse([box[2] - 120, yy - 16, box[2] - 88, yy + 16], fill=BLUE)
+    if fall > 0:
+        price_y = mid + (buys[-1] - mid) * fall
+    elif climb > 0:
+        price_y = mid + (sells[0] - mid) * climb
+    else:
+        price_y = mid
+    draw.ellipse([180, price_y - 14, 208, price_y + 14], fill=CYAN)
+    side = (1360, 220, RIGHT, 750)
+    draw.rounded_rectangle(side, 22, fill=GLASS, outline=CYAN, width=3)
+    draw.text((side[0] + 36, side[1] + 28), "What you hold", font=font(36), fill=CYAN)
+    draw.rounded_rectangle([side[0] + 36, side[1] + 110, side[2] - 36, side[1] + 190], 14, outline=MINT, width=3)
+    draw.text((side[0] + 56, side[1] + 128), "Cash", font=font(40), fill=MINT)
+    draw.rounded_rectangle([side[0] + 36, side[1] + 360, side[2] - 36, side[1] + 440], 14, outline=BLUE, width=3)
+    draw.text((side[0] + 56, side[1] + 378), "Coin", font=font(40), fill=BLUE)
+    if fall > 0:
+        mark_y = side[1] + 128 + (250 * fall)
+    elif climb > 0:
+        mark_y = side[1] + 250 - (120 * climb)
+    else:
+        mark_y = side[1] + 250
+    draw.rounded_rectangle([side[0] + 48, mark_y, side[2] - 48, mark_y + 64], 12, fill=TAG, outline=WHITE, width=3)
+    draw.text((side[0] + 68, mark_y + 12), "Holdings", font=font(36), fill=WHITE)
+
+
 def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) -> None:
     """Fit a 1536x1024 still in the stage. A short pan is the only move. No upscale."""
     src = load_picture(Path(shot["lesson_still"])).convert("RGB")
@@ -1695,6 +1780,16 @@ def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) 
     x = box[0] + (pw - view_w) // 2
     y = box[1] + (ph - view_h) // 2
     base.paste(crop, (x, y))
+    still = str(shot.get("lesson_still") or "").replace("\\", "/")
+    if still.endswith("bp-01-introduction/007.png"):
+        _big_still_tags(
+            ImageDraw.Draw(base),
+            x, y, view_w, view_h,
+            (
+                (0.08, 0.30, "Sell orders above"),
+                (0.08, 0.64, "Buy orders below"),
+            ),
+        )
 
 
 def paint_candle(base: Image.Image, shot: dict) -> None:
@@ -1786,6 +1881,15 @@ def paint(shot: dict, local: float, progress: float) -> np.ndarray:
             paint_lesson_still(img, shot, local, dur)
         else:
             paint_analogy(img, shot, local, dur)
+        lower_third(ImageDraw.Draw(img), shot)
+        draw_footer(ImageDraw.Draw(img))
+    elif (
+        kind == "lesson-still"
+        and shot.get("lesson_id") == "bp-01-introduction"
+        and (shot.get("chapter") or "") == "When the drawing fails"
+    ):
+        title_bar(img, shot, progress)
+        paint_leave(img, shot, local)
         lower_third(ImageDraw.Draw(img), shot)
         draw_footer(ImageDraw.Draw(img))
     elif kind == "lesson-still" and (shot.get("chapter") or "") == "The map":
@@ -2061,6 +2165,7 @@ def _narrate_shot(speaker, shot: dict) -> tuple[np.ndarray, int, list]:
         return audio, sr, []
     buf = None
     timed = []
+    spans: list[tuple[float, float]] = []
     sr = None
     for index, sentence in enumerate(sentences):
         audio, rate = speaker.say(sentence, pace)
@@ -2075,6 +2180,7 @@ def _narrate_shot(speaker, shot: dict) -> tuple[np.ndarray, int, list]:
         else:
             offset = max(0.0, len(buf) / sr - JOIN_FADE)
             buf = _xfade(buf, audio, sr)
+        spans.append((offset, len(buf) / sr))
         timed.extend(_time_sentence(speaker, pace, sentence, audio, sr, offset))
         if index < len(sentences) - 1:
             buf = _xfade(buf, np.zeros(int(SENTENCE_GAP * sr), dtype=np.float32), sr)
@@ -2084,6 +2190,7 @@ def _narrate_shot(speaker, shot: dict) -> tuple[np.ndarray, int, list]:
     tail = min(cap, hold + BEAT_GAP)
     if tail > 0:
         buf = _xfade(buf, np.zeros(int(tail * sr), dtype=np.float32), sr)
+    shot["sentence_spans"] = spans
     return buf, sr, timed
 
 
