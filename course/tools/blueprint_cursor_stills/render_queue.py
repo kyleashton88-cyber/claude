@@ -619,6 +619,68 @@ def bp04_015() -> None:
     }])
 
 
+def bp05_004() -> None:
+    img = canvas()
+    head(img, "20 LINES MAKE 19 GAPS", "19 GAPS", size=46)
+    # Blue rounded card, thicker than the cyan lines, so the frame is not a grid line.
+    rounded_glow(
+        img,
+        [px(v) for v in (100, 210, 1436, 920)],
+        radius=px(28),
+        fill=(7, 16, 34, 230),
+        outline=BLUE + (255,),
+        glow=(20, 70, 160, 70),
+        width=px(10),
+    )
+    ys = [280 + i * 30 for i in range(20)]
+    layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    for y in ys:
+        d.line([(px(400), px(y)), (px(960), px(y))], fill=CYAN + (255,), width=px(4))
+    # White rail beside the line ends, marking the gaps rather than adding a line.
+    d.line([(px(1010), px(ys[0])), (px(1010), px(ys[-1]))], fill=WHITE + (255,), width=px(6))
+    paste_layer(img, layer)
+    face = font(FONT_SEMI, 32)
+    tag(img, (120, 246, 360, 314), ["20 lines"], face)
+    arrow(img, (360, 280), (404, 280))
+    tag(img, (1060, 470, 1400, 570), ["19 gaps between them"], face)
+    arrow(img, (1060, 520), (1006, 520))
+    stamp(img, 1260, 820)
+    final = save(img, "course/images/bp-05-spacing-and-range/004.png")
+    assert_tip(final, (404, 280), (408, 280), "lines")
+    assert_tip(final, (1006, 520), (1010, 520), "gaps")
+    runs = _cyan_runs(final, 680, 200, 980)
+    centers = [(a + b) // 2 for a, b in runs]
+    gaps = [b - a for a, b in zip(centers, centers[1:])]
+    print("004 lines", len(runs), "gaps", gaps)
+    if len(runs) != 20 or len(gaps) != 19 or any(g != gaps[0] for g in gaps):
+        raise SystemExit(f"004 count {len(runs)} gaps {gaps}")
+    record([{
+        "path": "course/images/bp-05-spacing-and-range/004.png",
+        "lesson": "bp-05-spacing-and-range",
+        "shows": "A blue rounded frame with exactly 20 cyan lines and 19 equal gaps. The frame is not one of the lines.",
+        "alt": "Twenty lines make nineteen gaps. The frame around them is not a line.",
+        "batch": "cursor-bp05-004",
+    }])
+
+
+def _cyan_runs(im: Image.Image, x: int, y0: int, y1: int) -> list[tuple[int, int]]:
+    pxls = im.load()
+    runs = []
+    start = None
+    for y in range(y0, y1 + 1):
+        p = pxls[x, y]
+        cyan = p[2] > 180 and p[1] > 160 and p[0] < 40
+        if cyan and start is None:
+            start = y
+        elif not cyan and start is not None:
+            runs.append((start, y - 1))
+            start = None
+    if start is not None:
+        runs.append((start, y1))
+    return runs
+
+
 def bp05_006() -> None:
     img = canvas()
     head(img, "HALF THE GAP, DOUBLE THE GAPS", "DOUBLE THE GAPS", size=40)
