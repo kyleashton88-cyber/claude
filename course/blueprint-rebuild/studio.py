@@ -416,6 +416,8 @@ def plan(sid: str) -> list[dict]:
 SPEECH_RATE = 1.0
 SENTENCE_GAP = 0.52
 BEAT_GAP = 1.05
+# A short reveal used to wait out the whole card. The next line starts within about 3s.
+LINE_GAP_CAP = 3.0
 JOIN_FADE = 0.030
 SECONDS_PER_WORD = 610.085 / 1045
 
@@ -500,7 +502,7 @@ def chart_idea(shot: dict) -> str:
     board = shot.get("board") or ""
     chapter = shot.get("chapter") or ""
     if board == "buys-sells" or chapter == "Buys and sells":
-        return "Buys sit below 27,630. Sells sit above it."
+        return "Three buy rungs below the middle. Three sell rungs above it."
     if chapter == "The levels":
         return "Seven lines. Six gaps. About 900 dollars."
     if chapter == "The range":
@@ -508,12 +510,9 @@ def chart_idea(shot: dict) -> str:
     if chapter == "The stop":
         return "Stop: the close leaves 30,331 and does not return."
     if chapter == "Hook":
-        caption = shot.get("caption") or ""
-        if "waiting" in caption.lower():
-            return "Waiting orders inside a band you measured."
-        return "This path stayed inside the band."
+        return "Orders that wait inside a measured band."
     if chapter == "Limit orders wait":
-        return "A cross is the price touching 27,630. A fill is an order trading. These marks are crosses."
+        return "A cross touches a rung. A fill is an order that trades."
     return ""
 
 
@@ -650,9 +649,9 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
         size = fit_size(title, box[2] - box[0] - 80, 32, 28)
         draw.text((box[0] + 28, box[1] + 16), title, font=font(size), fill=WHITE)
     chapter = shot.get("chapter") or ""
-    idea_color = AMBER if chapter == "The stop" else MUTED
+    idea_color = AMBER if chapter == "The stop" else WHITE
     if idea:
-        draw.text((box[0] + 28, box[1] + 52), idea, font=font(28), fill=idea_color)
+        draw.text((box[0] + 28, box[1] + 56), idea, font=font(36), fill=idea_color)
     if shot.get("example") or chapter:
         _example(draw)
     if not series:
@@ -664,7 +663,7 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
     ymd = series[pinned]["date"].split("-")
     tag = f"{int(ymd[2])} {months[int(ymd[1])]}  {int(round(series[pinned]['close'])):,}"
     # Walk charts put the close in a small tag. 46px keeps a 9 from being read as a 0.
-    tag_px = 46 if chapter in {"Walk the summer", "Copy the path", "Where the path stood"} else 32
+    tag_px = 46 if chapter in {"Walk the summer", "Copy the path", "Where the price stayed"} else 32
     face = font(tag_px)
     tw = int(face.getlength(tag)) + 28
     th = 64 if tag_px > 32 else 44
@@ -685,7 +684,7 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
         _band(base, plot[0], plot[2], min(y_hi, y_lo), max(y_hi, y_lo))
         draw = ImageDraw.Draw(base)
     shown = full[:last]
-    if chapter in {"Walk the summer", "Copy the path", "Where the path stood"}:
+    if chapter in {"Walk the summer", "Copy the path", "Where the price stayed"}:
         rest = full[max(0, last - 1):]
         _stroke(base, rest, (0, 212, 255, 150), 2)
         _stroke(base, shown, (0, 212, 255, 90), 9)
@@ -696,7 +695,7 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
         _stroke(base, shown, (0, 212, 255, 255), 3)
     draw = ImageDraw.Draw(base)
     hx, hy = shown[-1]
-    dated = chapter in {"Walk the summer", "Copy the path", "Where the path stood"}
+    dated = chapter in {"Walk the summer", "Copy the path", "Where the price stayed"}
     if dated:
         y_inner = _map(0, n, 29431, lo_p, hi_p, plot)[1]
         tx, ty = 150, max(hy + 18, y_inner + 14)
@@ -733,7 +732,7 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
             label = f"{rounded:,}"
         if chapter == "The stop" and abs(price - 30331) < 2:
             continue
-        elif chapter in {"Walk the summer", "Copy the path", "Where the path stood"}:
+        elif chapter in {"Walk the summer", "Copy the path", "Where the price stayed"}:
             color, width, label = MUTED, 2, f"{rounded:,}"
         elif shot.get("board") == "buys-sells":
             if price < 27629:
@@ -1774,7 +1773,7 @@ def _narrate_shot(speaker, shot: dict) -> tuple[np.ndarray, int, list]:
         if index < len(sentences) - 1:
             buf = _xfade(buf, np.zeros(int(SENTENCE_GAP * sr), dtype=np.float32), sr)
     hold = max(0.0, _reading_time(shot) - len(buf) / sr)
-    tail = hold + BEAT_GAP
+    tail = min(LINE_GAP_CAP, hold + BEAT_GAP)
     if tail > 0:
         buf = _xfade(buf, np.zeros(int(tail * sr), dtype=np.float32), sr)
     return buf, sr, timed

@@ -143,15 +143,18 @@ def outro(next_title: str | None) -> dict:
 
 
 def stack(chapter: str, items: list[str], lead: str) -> list[dict]:
+    lines = list(items)
+    if lead:
+        lines[0] = f"{lead} {items[0]}".strip()
     shots = []
-    for i, item in enumerate(items):
-        vo = lead + " " + item if i == 0 else item
+    for i, line in enumerate(lines):
+        # The card and the voice are the same sentence.
         shots.append(_shot(
             kind="stack",
             chapter=chapter,
-            vo=vo,
-            caption=item,
-            items=items,
+            vo=line,
+            caption=line,
+            items=lines,
             index=i,
         ))
     return shots
@@ -357,78 +360,89 @@ def bp03() -> list[dict]:
         chapter="Hook", reveal=1,
         levels=[LOW, HIGH],
         vo=(
-            "A grid bot, in this lesson, is not a guess about next month. "
-            "It is a set of limit orders waiting on rungs inside a band you already measured. "
-            "The band is the summer of 2023. The path is already on the chart. "
-            "We are naming how it works. We are not saying an order traded."
+            "A grid bot places orders that wait inside a top and a bottom you already measured. "
+            "A limit order is an order that waits at a price you choose. "
+            "A market order does not wait. It buys or sells straight away, at the prices people are already offering."
         ),
-        caption="Waiting orders inside a band you measured.",
+        caption="Orders that wait inside a measured band.",
     ))
     s += stack("Objectives", [
-        "Define a grid as limit orders waiting inside 24930 to 30331.",
-        "Say which side of 27630 is the buy side in this picture.",
-        "Say, in plain words, that the ten crosses are not a result.",
-    ], "By the end you will be able to do three things.")
+        "By the end you will know what a grid bot is.",
+        "You will know which side of the middle buys and which side sells.",
+        "You will know why the price touching a line is not the same as making money.",
+    ], "")
     s.append(legal())
     s.append(_shot(
         chapter="Limit orders wait", reveal=1, focus_price=27630, focus_label="27630",
         vo=(
-            "Imagine a line that only touches a rung. Touching the rung's price is a cross. "
-            "An order actually trading is a fill. Those are two different things. "
-            "A limit order waits at a price you chose. A market order does not wait. "
-            "It trades straight away, at the prices people are already offering. "
-            "That list of waiting prices is called the book. "
-            "On this chart the middle rung is 27630. The daily close crossed it ten times. "
-            "A cross is the price line touching that rung. A fill is an order actually trading. "
-            "These ten marks are crosses, not fills."
+            "The exchange is the app or website where people buy and sell crypto. "
+            "The book is that exchange's list of everyone's waiting orders. "
+            "A cross is the price line touching a rung. A fill is an order that actually trades."
         ),
-        caption="A cross is the price touching 27,630. A fill is an order trading. These ten marks are crosses.",
+        caption="A cross touches a rung. A fill is an order that trades.",
+    ))
+    s.append(_shot(
+        chapter="Limit orders wait", reveal=1, focus_price=27630, focus_label="27630",
+        vo=(
+            "The daily close is the last price of each day. "
+            "The middle rung on this chart is 27630, and the daily close crossed it ten times. "
+            "These ten marks are crosses, not fills. They are marked Example, and they are not money you made."
+        ),
+        caption="The daily close crossed 27,630 ten times. Those marks are crosses, not fills.",
     ))
     s.append(_shot(
         chapter="Buys and sells", board="buys-sells", reveal=1, focus_price=27630, focus_label="Middle",
         vo=(
-            "One teaching picture places buy orders below the middle and sell orders above it. "
-            "Below 27630: 26730, 25830, 24930. Above it: 28531, 29431, 30331. "
-            "When the path stepped down toward 26050 on 18 August 2023, it was on the lower side of that picture. "
-            "When it later printed 27969 on 7 October, it was back through the middle. "
-            "If the path leaves, one side can be left holding inventory. "
-            "When the path left in October, that is what happened to a band that ended at 30331."
+            "There are three buy rungs below the middle and three sell rungs above it. "
+            "They sit about 900 apart. "
+            "On 18 August 2023 the close was 26050, below the middle, so that day was on the buy side."
         ),
-        caption="Buys below 27,630. Sells above it. Example only.",
+        caption="Three buy rungs below the middle. Three sell rungs above it.",
     ))
     s.append(_shot(
-        chapter="Where the path stood",
+        chapter="Where the price stayed",
         reveal=1,
         levels=[LOW, HIGH, 27630],
         vo=(
-            "Here is the shape, without reading out every day. "
-            "From 19 July 2023 to 16 October 2023 the path stayed between 24930 and 30331, "
-            "and the close crossed 27630 ten times. "
-            "That is the path relative to the band. It is marked Example. It is not a forecast."
+            "From 19 July 2023 to 16 October 2023 the price stayed between 24930 and 30331. "
+            "The daily close crossed the middle rung ten times. "
+            "That is the path next to the band. It is marked Example, and it is not a forecast."
         ),
-        caption="The path stayed between 24,930 and 30,331, and crossed 27,630 ten times.",
+        caption="The price stayed between 24,930 and 30,331.",
     ))
+    worked = (
+        "Worked check. Three buy rungs sit below the middle and three sell rungs sit above it, about 900 apart. "
+        "On 18 August 2023 the close was 26050, below the middle. "
+        "The ten crosses are not a gain."
+    )
     s.append(_shot(
         kind="worked", chapter="Worked check",
         items=[
-            "Middle rung: 27,630.",
-            "18 August: 26,050 is below 27,630.",
-            "7 October: 27,969 is above 27,630.",
+            "Three buy rungs below the middle. Three sell rungs above it.",
+            "The rungs are about 900 apart.",
+            "18 August 2023: the close was 26,050, below the middle.",
             "The ten crosses are not a gain.",
         ],
-        vo=(
-            "Worked check. The middle rung is 27,630. "
-            "26,050 on 18 August is below 27,630, and 27,969 on 7 October is above 27,630. "
-            "The ten crosses are not a gain."
-        ),
-        caption="Worked check. The middle rung is 27,630. 26,050 on 18 August is below 27,630, and 27,969 on 7 October is above 27,630. The ten crosses are not a gain.",
+        vo=worked,
+        caption=worked,
     ))
     s += stack("Recap", [
-        "A grid here means limit orders waiting inside the measured band.",
-        "Buys sit below 27630 in the picture. Sells sit above it.",
-        "When the path left the band in October, that picture no longer applied.",
-    ], "Recap.")
-    s.append(outro("Market regimes"))
+        "A grid here means limit orders waiting inside the band you measured.",
+        "Three buy rungs sit below the middle. Three sell rungs sit above it.",
+        "When the price left the band in October, that picture no longer applied.",
+    ], "")
+    s.append(_shot(
+        kind="outro",
+        chapter="Next",
+        vo=(
+            "Next lesson: market regimes. "
+            "A market regime is the kind of market you are in, for example sideways or trending. "
+            "Bring the page with the band and the stop rule, and leave every figure marked Example. "
+            "No order is sent between lessons."
+        ),
+        caption="Market regimes",
+        reveal=1,
+    ))
     return s
 
 
