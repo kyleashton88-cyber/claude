@@ -258,7 +258,7 @@ def bp01() -> list[dict]:
         caption="23 October 2023. The close leaves 30,331.",
     ))
     worked = (
-        "Worked check. The window is 19 July 2023 to 16 October 2023. "
+        "Worked check for 19 July 2023 to 16 October 2023. "
         "The low was 24930 and the high was 30331, with six levels about 900 apart. "
         "The stop rule is: if the daily close leaves 30331 and does not come back, the idea is finished. "
         "Nothing in that list is an order."
@@ -290,9 +290,9 @@ def bp02() -> list[dict]:
         reveal=1,
         vo=(
             "A packing list is written before the trip, not during the scramble at the door. "
-            "The list on the left is the analogy. The chart is the trip we already took in public prices. "
-            "You need the page before you need a screen. People lose this lesson when they open a form "
-            "and hope the summer band will type itself."
+            "The list is the analogy, and the chart is the public prices we already have. "
+            "You need the page before you need a screen. "
+            "People lose this lesson when they open a form and hope the summer band will type itself."
         ),
         caption="Write the page before any screen.",
     ))
@@ -356,8 +356,7 @@ def bp02() -> list[dict]:
             "Stop sentence: written. Example: written.",
         ],
         vo=(
-            "Worked check. Read the seven ideas against the page. "
-            "Pair, band, gaps, stop, Example. "
+            "Worked check: pair, band, gaps, stop, and Example. "
             "If the stop line is only a tick with no sentence, the page fails the check. "
             "The sentence has to name 30331 and a path that does not return."
         ),
@@ -633,10 +632,9 @@ def bp05() -> list[dict]:
             "900 is wider than 55. The thin gap is the one you reject.",
         ],
         vo=(
-            "Worked recount. Say seven lines, six gaps. "
-            "Say about 900 against about 55. "
-            "Keep the wider one in the example. Cross the idea of a gap that cannot clear the cost. "
-            "This is a recount of a public window, not a fee from a venue."
+            "Worked recount: seven lines, six gaps, about 900 against an example cost of about 55. "
+            "Keep the wider one, and cross out a gap that cannot clear the cost. "
+            "This is a recount of a public window, not a fee from an app."
         ),
         caption="900 against about 55. Example cost, not a venue fee.",
     ))
@@ -768,9 +766,9 @@ def bp07() -> list[dict]:
     s.append(_shot(
         kind="analogy", analogy="list", chapter="Hook", reveal=1,
         vo=(
-            "This lesson walks fields on a paper or demo spot page. It does not place an order. "
-            "The list is the analogy of the form. The chart is the source of the figures. "
-            "The page wins. If the form disagrees with 24930 and 30331, the form is wrong for this example."
+            "This lesson walks fields on a paper or demo spot page, and it does not place an order. "
+            "The list is the analogy of the form, and the chart is the source of the figures. "
+            "If the form disagrees with 24930 and 30331, the form is wrong for this example."
         ),
         caption="The page wins. The form is a copy.",
     ))
@@ -826,9 +824,9 @@ def bp07() -> list[dict]:
             "You leave. Nothing is sent.",
         ],
         vo=(
-            "Worked check. The form says seven and your page says six gaps. "
-            "Seven was the line count. Six is the gap count. "
-            "You keep six. You close the page. No order."
+            "Worked check: the form says seven and your page says six gaps. "
+            "Seven was the line count, and six is the gap count. "
+            "You keep six, you close the page, and no order is sent."
         ),
         caption="Seven lines are not six gaps.",
     ))
@@ -1019,8 +1017,7 @@ def bp09() -> list[dict]:
             "Do not grade the page. List the rewrites.",
         ],
         vo=(
-            "Worked audit. Two passes. "
-            "First the missing sentence. Then the rail that ignored 30331. "
+            "Worked audit, two passes: first the missing stop rule, then the rail that ignored 30331. "
             "A result word does not belong on either pass."
         ),
         caption="One fix, then the next. No grade.",
@@ -1070,10 +1067,8 @@ def bp10() -> list[dict]:
         reveal=1, levels=[],
         vo=(
             "Scaling on this page means a second written page, not a bigger feeling. "
-            "Two buckets. Page one is the summer of 2023. "
-            "Page two is a later public window, 27 March 2024 to 24 June 2024, "
-            "with a low of 56555 and a high of 72715. "
-            "Same gates. One change: the band."
+            "Page one is the summer of 2023, and page two is 27 March 2024 to 24 June 2024, low 56555 and high 72715. "
+            "The checks stay the same, and the one change is the band."
         ),
         caption="Page two: 56,555 to 72,715. One change.",
     ))
@@ -1123,8 +1118,8 @@ def bp10() -> list[dict]:
             "Buckets stay separate.",
         ],
         vo=(
-            "Worked pair. Say the summer band. Say the later band. "
-            "Say the one change. If both numbers moved and the product changed too, you changed more than one thing."
+            "Worked pair: say the summer band, say the later band, and say the one change. "
+            "If both numbers moved and the product changed too, you changed more than one thing."
         ),
         caption="Two bands. One change. Two buckets.",
     ))
@@ -1210,11 +1205,9 @@ def bp11() -> list[dict]:
         kind="analogy", analogy="buckets", chart=CRASH, chart_title="Two boxes, one path",
         reveal=1, levels=[], chapter="Isolated and cross",
         vo=(
-            "Isolated, in this analogy, means one bucket. A loss stays in that bucket. "
+            "Isolated means one bucket, and a loss stays in that bucket. "
             "Cross means a line from that bucket into the next one. "
-            "The chart on the right is still March 2020. The buckets are not a balance. "
-            "They are the picture of whether a second box can be pulled in. "
-            "No times-number is written on either bucket."
+            "The buckets are not a balance. They only show whether a second box can be pulled in, and no multiple is written on either one."
         ),
         caption="One box, or a reach into the next. No multiple.",
     ))
@@ -1238,9 +1231,9 @@ def bp11() -> list[dict]:
             "If you stay on spot, write Skip.",
         ],
         vo=(
-            "Worked path. Say the close, then the low. "
-            "Say that a spot page does not get liquidated by that drop. "
-            "Say that a contract might. Then choose. The summer page does not require the contract."
+            "Worked path: say the close, then the low. "
+            "A spot page does not get closed by that drop, and a contract might. "
+            "Then choose. The summer page does not require the contract."
         ),
         caption="Close, then low. Then choose spot or skip.",
     ))
