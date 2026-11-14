@@ -648,3 +648,22 @@ Verified with the same `studio.plan()` run. USED-STILLS-e03191f.md does not tabl
 - **BP-01** used 13: 001, 004–012, 014, 015, 017. All 13 are current passes (13/13 on the used set). Ledger denominator is still 31/31 all-rows / 17/17 lesson-stills (unused 002, 003, 016, 018 remain as passes in the denominator; 013 is already dropped and is unused in this plan too).
 - **BP-02** used 15: 001, 004–015, 019, 020, including 014 (Empty pair), which is a current pass. 15/15 on the used set. Ledger denominator is still 31/31 all-rows / 20/20 lesson-stills (unused 002, 003, 016, 017, 018 remain as passes; 021 is already dropped and is unused in this plan too).
 - **BP-03** used 14: 001, 004–015, 018. All 14 are current passes (14/14 on the used set). Ledger denominator is still 28/28 all-rows / 19/19 lesson-stills (unused 002, 003, 016, 017, 019 remain as passes; no existing drops).
+
+
+---
+
+## Cursor-agent remakes at 5a65ffa: BP-04 015 and BP-05 006
+
+Fetched authentic 1536×1024 RGB files from `kyleashton88-cyber/claude@5a65ffaab019c6e1713ee631cbd4dbd33e510b52` via the public GitHub Contents API (base64). Saved as `gen/bp-04-market-regimes/015/cursor1.png` and `gen/bp-05-spacing-and-range/006/cursor1.png`. Git blobs match the API shas: `f0a69cc87a3cfb89d3b100ec5c6027ecf8c428c1` (015, 131299 bytes) and `85bd40ad13227c80b25336f2a118c01a13737c3a` (006, 134431 bytes). Scored against the d1f6 narration at `863261b6` plus REPORT-b608319, on the same strict rubric (every category at least 4/5, no hard fails; every arrow tip must visibly touch its target; doubt = fail; margins at least 45px luma>110).
+
+| File | Result | Margins (l/r/t/b) | Scores | Blob |
+|---|---|---|---|---|
+| gen/bp-04-market-regimes/015/cursor1.png | PASS | 102/156/112/104 | 5/5/5/5/5/—/5 | `f0a69cc87a3cfb89d3b100ec5c6027ecf8c428c1` |
+| gen/bp-05-spacing-and-range/006/cursor1.png | FAIL | 103/120/109/114 | 2/5/5/5/5/—/2 | `85bd40ad13227c80b25336f2a118c01a13737c3a` |
+
+- **BP-04 015 Paper sort — PASS.** Headline 'SORT ONE CHART', labels 'Pick one shape' / 'Write one reason why', EXAMPLE. Both tips touch. Placed, source cursor.
+- **BP-05 006 Half spacing — FAIL.** Headline 'HALF THE GAP, DOUBLE THE LINES' is exact. Left box has 6 interior lines (5 gaps); right box has 12 (11 gaps). Both arrows touch. The caption 'Recount: 38 gaps, not 40' matches the 863261b house-example narration — VO: 'If the span stays nine and a half percent and the step becomes a quarter of one percent, the gap count is thirty-eight, not forty' (alt: 'thirty-eight gaps, which is thirty-nine lines, not forty'); 9.5% / 0.25% = 38 gaps = 39 lines, not 40 — but those numbers are not what the 6-line / 12-line figure shows, and the caption sits under the 6-line box, which confuses lines vs gaps. That is inconsistent with BP-05 015 ('Count gaps, not lines' / '7 lines, 6 gaps'). Ledger only; placed file left in place. Next: cursor2.png.
+
+### Updated counts
+- **BP-04: 14/14 — 100%.**
+- **BP-05: 13/14 — not 100%.** 006 remains queued.

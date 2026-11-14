@@ -8,13 +8,13 @@
   "not_in_scope": "course/images/_held/*.png (10 files: bp-06 014/017, bp-07 012/017/020, bp-08 003/006/007/009/011) are not referenced by any lesson script and were not scored. Shared title-art/mascot assets are already on BP01-03_PASS_LIST.json.",
   "counts": {
     "total": 112,
-    "pass": 110,
-    "fail": 2,
+    "pass": 111,
+    "fail": 1,
     "by_lesson": {
       "bp-04-market-regimes": {
         "total": 14,
-        "pass": 13,
-        "fail": 1
+        "pass": 14,
+        "fail": 0
       },
       "bp-05-spacing-and-range": {
         "total": 14,
@@ -1424,64 +1424,66 @@
       "beat": 15,
       "chapter": "Paper sort",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "49e8f4fe840d098631cd7451069cb734cebd038a",
-        "cursor/blueprint-beginner-images": "49e8f4fe840d098631cd7451069cb734cebd038a"
+        "cursor/blueprint-beginner-images": "f0a69cc87a3cfb89d3b100ec5c6027ecf8c428c1",
+        "cursor/blueprint-cursor-images": "f0a69cc87a3cfb89d3b100ec5c6027ecf8c428c1"
       },
       "beat_concept": "Sort one hypothetical path on paper into range, trend, or break, and write one reason.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-04-market-regimes__015.txt",
-      "notes": "CPU-style 'RANGE' chip and rubber stamp on a dotted wave: does not show sorting a sketched path into one of three boxes or writing a reason; small chip text. | web1 remake: passed, then FAIL under the strict arrow rule (14 Nov): arrow tip stops short of target: \"Write one reason why\" tip stops about 13px short of (and above) the blank reason line. | web2 remake FAIL under the strict arrow rule. \"Pick one shape\" tip touches the ticked box. Teaching is otherwise good. But \"Write one reason why\" tip stops about 8-15px short of the blank pencil line. Next: web3.png on the v3 prompt.",
+      "notes": "CPU-style 'RANGE' chip and rubber stamp on a dotted wave: does not show sorting a sketched path into one of three boxes or writing a reason; small chip text. | web1 remake: passed, then FAIL under the strict arrow rule (14 Nov): arrow tip stops short of target: \"Write one reason why\" tip stops about 13px short of (and above) the blank reason line. | web2 remake FAIL under the strict arrow rule. \"Pick one shape\" tip touches the ticked box. Teaching is otherwise good. But \"Write one reason why\" tip stops about 8-15px short of the blank pencil line. Next: web3.png on the v3 prompt. | cursor cursor1.png PASS (kyleashton88-cyber/claude@5a65ffaab019c6e1713ee631cbd4dbd33e510b52, course/images/bp-04-market-regimes/015.png, blob f0a69cc87a3cfb89d3b100ec5c6027ecf8c428c1, 1536x1024, 131299 bytes). On-image text: SORT ONE CHART | Pick one shape | Write one reason why | EXAMPLE. Matches the required Paper sort wording and the e03191f / 863261b narration (sort a handmade path into range, trend, or break, and write one reason). EXAMPLE present. No mascot. Margins 102/156/112/104. 'Pick one shape' tip sits on the bottom-left stroke of the ticked range box; 'Write one reason why' tip sits on the blank reason line (mid-head continuous cyan into the white stroke, about 2px in; no navy gap at contact). Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 180,
-        "right": 179,
-        "top": 109,
-        "bottom": 187
+        "left": 102,
+        "right": 156,
+        "top": 112,
+        "bottom": 104
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/015.png",
-      "scored_blob": "49e8f4fe840d098631cd7451069cb734cebd038a",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/015.png",
+      "scored_blob": "f0a69cc87a3cfb89d3b100ec5c6027ecf8c428c1",
       "committed": true,
-      "pass": false,
+      "pass": true,
       "remake_review": {
-        "file": "gen/bp-04-market-regimes/015/web2.png",
-        "blob": "9ba99b4275d512863de8217526098eed3aa98d29",
+        "file": "gen/bp-04-market-regimes/015/cursor1.png",
+        "blob": "f0a69cc87a3cfb89d3b100ec5c6027ecf8c428c1",
         "size": "1536x1024",
         "margins_px": {
-          "left": 86,
-          "right": 199,
-          "top": 77,
-          "bottom": 125
+          "left": 102,
+          "right": 156,
+          "top": 112,
+          "bottom": 104
         },
-        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scored_against": "863261b / e03191f narration + REPORT-b608319 + strict rubric including arrow contact",
+        "source_commit": "5a65ffaab019c6e1713ee631cbd4dbd33e510b52",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
           "beginner_clarity": 5,
-          "composition_hierarchy": 4,
+          "composition_hierarchy": 5,
           "craft_polish": 5,
           "brand_fidelity": 5,
           "text_legibility": 5,
           "character_consistency": null,
-          "label_accuracy": 3
+          "label_accuracy": 5
         },
-        "hard_fails": [
-          "arrow tip stops short of target: \"Write one reason why\" tip stops about 8-15px short of the blank pencil line"
-        ],
-        "notes": "web2 remake FAIL under the strict arrow rule. \"Pick one shape\" tip touches the ticked box. Teaching is otherwise good. But \"Write one reason why\" tip stops about 8-15px short of the blank pencil line. Next: web3.png on the v3 prompt.",
-        "pass": false
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@5a65ffaab019c6e1713ee631cbd4dbd33e510b52, course/images/bp-04-market-regimes/015.png, blob f0a69cc87a3cfb89d3b100ec5c6027ecf8c428c1, 1536x1024, 131299 bytes). On-image text: SORT ONE CHART | Pick one shape | Write one reason why | EXAMPLE. Matches the required Paper sort wording and the e03191f / 863261b narration (sort a handmade path into range, trend, or break, and write one reason). EXAMPLE present. No mascot. Margins 102/156/112/104. 'Pick one shape' tip sits on the bottom-left stroke of the ticked range box; 'Write one reason why' tip sits on the blank reason line (mid-head continuous cyan into the white stroke, about 2px in; no navy gap at contact). Placed, source cursor.",
+        "pass": true
       },
       "flipped_from_pass": {
         "blob": "0f300740622ef2024c797ec2e24448413cfd24ca",
@@ -1516,8 +1518,35 @@
           "notes": "Notebook page: sketched zig-zag between dashed lines, three tick boxes with tiny range/staircase/drop icons, the range box ticked by a pencil; \"Pick one shape\" tip on the ticked box; \"Write one reason why\" arrow points at the blank reason line (tip about 13px short, single unambiguous target); EXAMPLE stamp. Matches 6848d09 beat 15 (sort one path, write one reason). RE-SCORED 14 Nov under the strict arrow rule (a tip must touch its target): FAIL, arrow tip stops short of target: \"Write one reason why\" tip stops about 13px short of (and above) the blank reason line.",
           "pass": false,
           "rescored": "strict arrow rule, 14 Nov"
+        },
+        {
+          "file": "gen/bp-04-market-regimes/015/web2.png",
+          "blob": "9ba99b4275d512863de8217526098eed3aa98d29",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 86,
+            "right": 199,
+            "top": 77,
+            "bottom": 125
+          },
+          "scored_against": "beat + prompt current when this batch started (score on merits)",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 4,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 3
+          },
+          "hard_fails": [
+            "arrow tip stops short of target: \"Write one reason why\" tip stops about 8-15px short of the blank pencil line"
+          ],
+          "notes": "web2 remake FAIL under the strict arrow rule. \"Pick one shape\" tip touches the ticked box. Teaching is otherwise good. But \"Write one reason why\" tip stops about 8-15px short of the blank pencil line. Next: web3.png on the v3 prompt.",
+          "pass": false
         }
-      ]
+      ],
+      "previous_committed_blob": "49e8f4fe840d098631cd7451069cb734cebd038a"
     },
     {
       "path": "course/images/bp-04-market-regimes/016.png",
@@ -2112,68 +2141,102 @@
       "beat": 6,
       "chapter": "Half spacing",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "d31a2af4cf4d0b4ac729ef703620c0c8cc0d9315",
-        "cursor/blueprint-beginner-images": "d31a2af4cf4d0b4ac729ef703620c0c8cc0d9315"
+        "cursor/blueprint-beginner-images": "d31a2af4cf4d0b4ac729ef703620c0c8cc0d9315",
+        "cursor/blueprint-cursor-images": "85bd40ad13227c80b25336f2a118c01a13737c3a"
       },
       "beat_concept": "Halving the step without recounting the gaps doubles the line count for the same span, and the new gap count is not the old line count.",
       "scores": {
         "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 2
       },
       "hard_fails": [
-        "Two big unexplained numerals '5' and '9' are drawn inside the boxes; they don't illustrate 'DOUBLE THE LINES' (9 is not double 5) and confuse a beginner. 'Recount: 38 gaps, not 40' is correct but the 5/9 digits are a label-accuracy/clarity fail."
+        "caption numbers are not supported by the drawing and confuse lines vs gaps: 'Recount: 38 gaps, not 40' sits under a 6-line box (5 gaps) beside a 12-line box (11 gaps). Neither count is 38 or 40."
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-05-spacing-and-range__006.txt",
-      "notes": "web1 remake FAIL. Two big unexplained numerals '5' and '9' are drawn inside the boxes; they don't illustrate 'DOUBLE THE LINES' (9 is not double 5) and confuse a beginner. 'Recount: 38 gaps, not 40' is correct but the 5/9 digits are a label-accuracy/clarity fail. v2 prompt written (v1 superseded). | web2 remake FAIL. Left box has exactly 6 interior lines, but the right box has 11, not the required 12 (twice 6), so it does not illustrate DOUBLE THE LINES. The house-example caption 'Recount: 38 gaps, not 40' cannot stand in for the missing line. Both label arrows touch (dashed same-height line; a line in the right box). Unexplained 5/9 numerals from the prior fail are gone. Margins 80/58/73/77. Next: web3.png on the v3 prompt.",
+      "notes": "web1 remake FAIL. Two big unexplained numerals '5' and '9' are drawn inside the boxes; they don't illustrate 'DOUBLE THE LINES' (9 is not double 5) and confuse a beginner. 'Recount: 38 gaps, not 40' is correct but the 5/9 digits are a label-accuracy/clarity fail. v2 prompt written (v1 superseded). | web2 remake FAIL. Left box has exactly 6 interior lines, but the right box has 11, not the required 12 (twice 6), so it does not illustrate DOUBLE THE LINES. The house-example caption 'Recount: 38 gaps, not 40' cannot stand in for the missing line. Both label arrows touch (dashed same-height line; a line in the right box). Unexplained 5/9 numerals from the prior fail are gone. Margins 80/58/73/77. Next: web3.png on the v3 prompt. | cursor cursor1.png FAIL (kyleashton88-cyber/claude@5a65ffaab019c6e1713ee631cbd4dbd33e510b52, blob 85bd40ad13227c80b25336f2a118c01a13737c3a, 1536x1024, 134431 bytes). On-image text: HALF THE GAP, DOUBLE THE LINES | Same height | EXAMPLE | Smaller gaps need more lines | Recount: 38 gaps, not 40. Headline and 6-vs-12 line counts are right (left box 6 interior lines = 5 gaps; right box 12 interior lines = 11 gaps; card borders excluded). 'Same height' tip sits on the first white dash; 'Smaller gaps need more lines' tip sits on the right box bottom stroke. EXAMPLE present. Margins 103/120/109/114. FAIL: the caption 'Recount: 38 gaps, not 40' is true of the spoken house example but is not supported by the drawing. At d1f6 863261b the VO says: 'If the span stays nine and a half percent and the step becomes a quarter of one percent, the gap count is thirty-eight, not forty.' (alt: 'thirty-eight gaps, which is thirty-nine lines, not forty'). 9.5% / 0.25% = 38 gaps = 39 lines, not 40. The still instead draws 6 and 12 lines (5 and 11 gaps) and parks '38 gaps, not 40' under the 6-line box, which can make a beginner think that box has 38 gaps and mixes up lines vs gaps. That fights BP-05 015, which labels its own figure '7 lines, 6 gaps' and teaches 'Count gaps, not lines'. Ledger only; placed file left in place. Next: cursor2.png.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 51,
-        "right": 165,
-        "top": 110,
-        "bottom": 478
+        "left": 103,
+        "right": 120,
+        "top": 109,
+        "bottom": 114
       },
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/006.png",
-      "scored_blob": "d31a2af4cf4d0b4ac729ef703620c0c8cc0d9315",
+      "scored_blob": "85bd40ad13227c80b25336f2a118c01a13737c3a",
       "committed": true,
       "pass": false,
-      "previous_remake_reviews": [],
+      "previous_remake_reviews": [
+        {
+          "file": "gen/bp-05-spacing-and-range/006/web2.png",
+          "blob": "858acf34b0185014bd5a33bea62ffcad4a088703",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 80,
+            "right": 58,
+            "top": 73,
+            "bottom": 77
+          },
+          "scored_against": "beat + prompt current when this batch started (score on merits)",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 4,
+            "craft_polish": 4,
+            "brand_fidelity": 5,
+            "text_legibility": 4,
+            "character_consistency": null,
+            "label_accuracy": 2
+          },
+          "hard_fails": [
+            "wrong number: right box has 11 interior grid lines, not the required 12 (double the left box's 6), so the still does not illustrate DOUBLE THE LINES"
+          ],
+          "notes": "web2 remake FAIL. Left box has exactly 6 interior lines, but the right box has 11, not the required 12 (twice 6), so it does not illustrate DOUBLE THE LINES. The house-example caption 'Recount: 38 gaps, not 40' cannot stand in for the missing line. Both label arrows touch (dashed same-height line; a line in the right box). Unexplained 5/9 numerals from the prior fail are gone. Margins 80/58/73/77. Next: web3.png on the v3 prompt.",
+          "pass": false
+        }
+      ],
       "remake_review": {
-        "file": "gen/bp-05-spacing-and-range/006/web2.png",
-        "blob": "858acf34b0185014bd5a33bea62ffcad4a088703",
+        "file": "gen/bp-05-spacing-and-range/006/cursor1.png",
+        "blob": "85bd40ad13227c80b25336f2a118c01a13737c3a",
         "size": "1536x1024",
         "margins_px": {
-          "left": 80,
-          "right": 58,
-          "top": 73,
-          "bottom": 77
+          "left": 103,
+          "right": 120,
+          "top": 109,
+          "bottom": 114
         },
-        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scored_against": "863261b narration (d1f6) + e03191f used set + REPORT-b608319 + BP-05 015 consistency + strict rubric",
+        "source_commit": "5a65ffaab019c6e1713ee631cbd4dbd33e510b52",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
-          "beginner_clarity": 5,
-          "composition_hierarchy": 4,
-          "craft_polish": 4,
+          "beginner_clarity": 2,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
           "brand_fidelity": 5,
-          "text_legibility": 4,
+          "text_legibility": 5,
           "character_consistency": null,
           "label_accuracy": 2
         },
         "hard_fails": [
-          "wrong number: right box has 11 interior grid lines, not the required 12 (double the left box's 6), so the still does not illustrate DOUBLE THE LINES"
+          "caption numbers are not supported by the drawing and confuse lines vs gaps: 'Recount: 38 gaps, not 40' sits under a 6-line box (5 gaps) beside a 12-line box (11 gaps). Neither count is 38 or 40."
         ],
-        "notes": "web2 remake FAIL. Left box has exactly 6 interior lines, but the right box has 11, not the required 12 (twice 6), so it does not illustrate DOUBLE THE LINES. The house-example caption 'Recount: 38 gaps, not 40' cannot stand in for the missing line. Both label arrows touch (dashed same-height line; a line in the right box). Unexplained 5/9 numerals from the prior fail are gone. Margins 80/58/73/77. Next: web3.png on the v3 prompt.",
-        "pass": false
-      }
+        "notes": "cursor cursor1.png FAIL (kyleashton88-cyber/claude@5a65ffaab019c6e1713ee631cbd4dbd33e510b52, blob 85bd40ad13227c80b25336f2a118c01a13737c3a, 1536x1024, 134431 bytes). On-image text: HALF THE GAP, DOUBLE THE LINES | Same height | EXAMPLE | Smaller gaps need more lines | Recount: 38 gaps, not 40. Headline and 6-vs-12 line counts are right (left box 6 interior lines = 5 gaps; right box 12 interior lines = 11 gaps; card borders excluded). 'Same height' tip sits on the first white dash; 'Smaller gaps need more lines' tip sits on the right box bottom stroke. EXAMPLE present. Margins 103/120/109/114. FAIL: the caption 'Recount: 38 gaps, not 40' is true of the spoken house example but is not supported by the drawing. At d1f6 863261b the VO says: 'If the span stays nine and a half percent and the step becomes a quarter of one percent, the gap count is thirty-eight, not forty.' (alt: 'thirty-eight gaps, which is thirty-nine lines, not forty'). 9.5% / 0.25% = 38 gaps = 39 lines, not 40. The still instead draws 6 and 12 lines (5 and 11 gaps) and parks '38 gaps, not 40' under the 6-line box, which can make a beginner think that box has 38 gaps and mixes up lines vs gaps. That fights BP-05 015, which labels its own figure '7 lines, 6 gaps' and teaches 'Count gaps, not lines'. Ledger only; placed file left in place. Next: cursor2.png.",
+        "pass": false,
+        "fix_note": "Keep the 6-line / 12-line schematic (that correctly shows double the lines: 6 lines = 5 gaps, 12 lines = 11 gaps). Do not put 'Recount: 38 gaps, not 40' as if it counts that figure. Either caption the boxes with the counts they actually show (5 gaps / 11 gaps, or 6 lines / 12 lines), and if the house-example 38/40 recount stays on the page, set it clearly apart as the 9.5% span at a 0.25% step (38 gaps = 39 lines, not 40); or redraw the house example so the caption matches the picture. A beginner must be able to count gaps on the drawing without mixing them up with lines, consistent with BP-05 015 ('Count gaps, not lines' / '7 lines, 6 gaps'). Next: cursor2.png."
+      },
+      "previous_committed_blob": "d31a2af4cf4d0b4ac729ef703620c0c8cc0d9315",
+      "fix_note": "Keep the 6-line / 12-line schematic (that correctly shows double the lines: 6 lines = 5 gaps, 12 lines = 11 gaps). Do not put 'Recount: 38 gaps, not 40' as if it counts that figure. Either caption the boxes with the counts they actually show (5 gaps / 11 gaps, or 6 lines / 12 lines), and if the house-example 38/40 recount stays on the page, set it clearly apart as the 9.5% span at a 0.25% step (38 gaps = 39 lines, not 40); or redraw the house example so the caption matches the picture. A beginner must be able to count gaps on the drawing without mixing them up with lines, consistent with BP-05 015 ('Count gaps, not lines' / '7 lines, 6 gaps'). Next: cursor2.png."
     },
     {
       "path": "course/images/bp-05-spacing-and-range/007.png",
