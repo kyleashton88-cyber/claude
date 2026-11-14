@@ -9,12 +9,12 @@
  "not_in_scope": "All 92 BP-01..03 rows are now scored here. Separate finding: course/blueprint-rebuild/numbers/bp-0{1,2,3}*.yaml (d1f6) set disclaimer_on_screen to 'Educational content only. Not financial advice.'; studio.py writes that string, so CODE_FIXES.md CF-1 fixes both.",
  "counts": {
   "total": 92,
-  "pass": 56,
-  "fail": 36,
+  "pass": 88,
+  "fail": 4,
   "lesson_stills": {
    "total": 58,
-   "pass": 48,
-   "fail": 10,
+   "pass": 55,
+   "fail": 3,
    "by_lesson": {
     "bp-01-introduction": {
      "total": 18,
@@ -28,41 +28,58 @@
     },
     "bp-03-what-is-a-grid-bot": {
      "total": 19,
-     "pass": 11,
-     "fail": 8
+     "pass": 18,
+     "fail": 1
     }
    }
   },
   "shared_and_code_drawn": {
    "total": 34,
-   "pass": 8,
-   "fail": 26,
+   "pass": 33,
+   "fail": 1,
    "chatgpt_assets": {
     "total": 9,
-    "pass": 8,
-    "fail": 1
+    "pass": 9,
+    "fail": 0
    },
    "code_drawn": {
     "total": 25,
-    "pass": 0,
-    "fail": 25
+    "pass": 24,
+    "fail": 1
    },
    "by_lesson": {
     "bp-01-introduction": {
      "total": 14,
-     "pass": 3,
-     "fail": 11
+     "pass": 14,
+     "fail": 0
     },
     "bp-02-what-you-need": {
      "total": 11,
-     "pass": 3,
-     "fail": 8
+     "pass": 11,
+     "fail": 0
     },
     "bp-03-what-is-a-grid-bot": {
      "total": 9,
-     "pass": 2,
-     "fail": 7
+     "pass": 8,
+     "fail": 1
     }
+   }
+  },
+  "by_lesson_all_rows": {
+   "bp-01-introduction": {
+    "total": 32,
+    "pass": 30,
+    "fail": 2
+   },
+   "bp-02-what-you-need": {
+    "total": 32,
+    "pass": 32,
+    "fail": 0
+   },
+   "bp-03-what-is-a-grid-bot": {
+    "total": 28,
+    "pass": 26,
+    "fail": 2
    }
   }
  },
@@ -2053,41 +2070,67 @@
    "beat": 1,
    "chapter": "Hook",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-03-what-is-a-grid-bot.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "da1a66d2441a2d6027e2a7e309b724fb940be285",
     "cursor/blueprint-beginner-images": "da1a66d2441a2d6027e2a7e309b724fb940be285"
    },
    "beat_concept": "A grid bot is not a machine that predicts price. It is a set of waiting limit orders inside a band you chose.",
    "scores": {
-    "beginner_clarity": 3,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__001.txt",
-   "notes": "Crossed crystal ball is clear, but the 'orders waiting' board alternates mint and blue tickets (sell, buy, sell, buy), so it teaches the opposite of the course rule: sells sit above, buys below.",
+   "notes": "Crossed crystal ball (amber X) beside one card with a four-rung ladder: two mint tickets on the top two rungs, two blue on the bottom two, dashed price line between rung 2 and 3, so sells sit only above and buys only below. \"Not a fortune teller\" tip touches the top of the ball; \"Orders waiting at set prices\" tip touches the top mint ticket (2 of 2). EXAMPLE stamp inside the card. Headline A GRID BOT DOES NOT GUESS is plain and puts no thinking in the bot. Spelling clean.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 79,
-    "right": 45,
-    "top": 89,
-    "bottom": 150
+    "left": 80,
+    "right": 107,
+    "top": 71,
+    "bottom": 172
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-03-what-is-a-grid-bot/001.png",
-   "scored_blob": "da1a66d2441a2d6027e2a7e309b724fb940be285",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/001.png",
+   "scored_blob": "93dd60c4ae429907b396d0a1b09f40d909a4002f",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "remake_review": {
+    "file": "gen/bp-03-what-is-a-grid-bot/001/web1.png",
+    "blob": "93dd60c4ae429907b396d0a1b09f40d909a4002f",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 80,
+     "right": 107,
+     "top": 71,
+     "bottom": 172
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Crossed crystal ball (amber X) beside one card with a four-rung ladder: two mint tickets on the top two rungs, two blue on the bottom two, dashed price line between rung 2 and 3, so sells sit only above and buys only below. \"Not a fortune teller\" tip touches the top of the ball; \"Orders waiting at set prices\" tip touches the top mint ticket (2 of 2). EXAMPLE stamp inside the card. Headline A GRID BOT DOES NOT GUESS is plain and puts no thinking in the bot. Spelling clean.",
+    "pass": true
+   },
+   "previous_committed_blob": "da1a66d2441a2d6027e2a7e309b724fb940be285",
+   "source_detail": "ChatGPT web render gen/bp-03-what-is-a-grid-bot/001/web1.png (prompt specs/remake/bp-03-what-is-a-grid-bot__001.txt), saved via out/course/images/bp-03-what-is-a-grid-bot/001.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-03-what-is-a-grid-bot/002.png",
@@ -2095,43 +2138,67 @@
    "beat": 2,
    "chapter": "Disclaimer",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-03-what-is-a-grid-bot.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "3db0adcd67131343218b8856ad809f05dab8a014",
     "cursor/blueprint-beginner-images": "3db0adcd67131343218b8856ad809f05dab8a014"
    },
    "beat_concept": "Education only. Not financial advice.",
    "scores": {
-    "beginner_clarity": 3,
-    "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 5,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "needs_remake",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__002.txt",
-   "notes": "Disclaimer card does not show the exact line 'Education only. Not financial advice.': it reads 'EDUCATION ONLY' plus 'Learning' / 'Not advice'.",
+   "notes": "Disclaimer card reads exactly \"Education only.\" / \"Not financial advice.\" in two large lines, open book with a check, nothing else on the card. Headline EDUCATION ONLY. Spelling clean.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 77,
-    "right": 86,
-    "top": 89,
-    "bottom": 177
+    "left": 84,
+    "right": 85,
+    "top": 86,
+    "bottom": 267
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-03-what-is-a-grid-bot/002.png",
-   "scored_blob": "3db0adcd67131343218b8856ad809f05dab8a014",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/002.png",
+   "scored_blob": "55ae0f32a7b4e389380c79ea70c00c5b3779d867",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "remake_review": {
+    "file": "gen/bp-03-what-is-a-grid-bot/002/web1.png",
+    "blob": "55ae0f32a7b4e389380c79ea70c00c5b3779d867",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 84,
+     "right": 85,
+     "top": 86,
+     "bottom": 267
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 5,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Disclaimer card reads exactly \"Education only.\" / \"Not financial advice.\" in two large lines, open book with a check, nothing else on the card. Headline EDUCATION ONLY. Spelling clean.",
+    "pass": true
+   },
+   "previous_committed_blob": "3db0adcd67131343218b8856ad809f05dab8a014",
+   "source_detail": "ChatGPT web render gen/bp-03-what-is-a-grid-bot/002/web1.png (prompt specs/remake/bp-03-what-is-a-grid-bot__002.txt), saved via out/course/images/bp-03-what-is-a-grid-bot/002.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-03-what-is-a-grid-bot/003.png",
@@ -2139,41 +2206,67 @@
    "beat": 3,
    "chapter": "Title card",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-03-what-is-a-grid-bot.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "16d6f7853abc49911ea164e33d31022ea166c127",
     "cursor/blueprint-beginner-images": "16d6f7853abc49911ea164e33d31022ea166c127"
    },
    "beat_concept": "What is a grid bot",
    "scores": {
-    "beginner_clarity": 3,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 3,
-    "text_legibility": 4,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__003.txt",
-   "notes": "Title card shows 'WHAT IS A GRID BOT?', but a gear tagged 'Robot that places orders for you' frames the bot as a helper doing the work for you (product-pitch tone; contradicts beat 18 'not a person watching for you'), and its curved arrow lands in the empty gap between sell and buy rows.",
+   "notes": "Title card: headline WHAT IS A GRID BOT? matches the lesson title \"What is a grid bot\". Six-rung ladder: three mint tickets above the dashed line, three blue below. \"Sell orders above\" tip on the middle mint ticket, \"Buy orders below\" tip on the middle blue ticket (2 of 2); \"Orders wait at prices you chose\" has no arrow (sits along the bottom inside the card rather than under it, clear of the rails). EXAMPLE stamp inside the card. Headline top edge 50px (>=45).",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 59,
-    "right": 65,
-    "top": 49,
-    "bottom": 108
+    "left": 76,
+    "right": 141,
+    "top": 50,
+    "bottom": 112
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-03-what-is-a-grid-bot/003.png",
-   "scored_blob": "16d6f7853abc49911ea164e33d31022ea166c127",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/003.png",
+   "scored_blob": "03d652a87e3a3cabb65c22839330ea05b624747b",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "remake_review": {
+    "file": "gen/bp-03-what-is-a-grid-bot/003/web1.png",
+    "blob": "03d652a87e3a3cabb65c22839330ea05b624747b",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 76,
+     "right": 141,
+     "top": 50,
+     "bottom": 112
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Title card: headline WHAT IS A GRID BOT? matches the lesson title \"What is a grid bot\". Six-rung ladder: three mint tickets above the dashed line, three blue below. \"Sell orders above\" tip on the middle mint ticket, \"Buy orders below\" tip on the middle blue ticket (2 of 2); \"Orders wait at prices you chose\" has no arrow (sits along the bottom inside the card rather than under it, clear of the rails). EXAMPLE stamp inside the card. Headline top edge 50px (>=45).",
+    "pass": true
+   },
+   "previous_committed_blob": "16d6f7853abc49911ea164e33d31022ea166c127",
+   "source_detail": "ChatGPT web render gen/bp-03-what-is-a-grid-bot/003/web1.png (prompt specs/remake/bp-03-what-is-a-grid-bot__003.txt), saved via out/course/images/bp-03-what-is-a-grid-bot/003.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-03-what-is-a-grid-bot/004.png",
@@ -2181,43 +2274,67 @@
    "beat": 4,
    "chapter": "Five labels",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-03-what-is-a-grid-bot.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "f33caeb22aaec008bcede15ea949571e607f0a86",
     "cursor/blueprint-beginner-images": "f33caeb22aaec008bcede15ea949571e607f0a86"
    },
    "beat_concept": "Five labels cover the picture: upper, lower, levels, side, and stop.",
    "scores": {
-    "beginner_clarity": 3,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 4
    },
-   "hard_fails": [
-    "cramped margin: 'Price steps' tag ends 35px from the right edge"
-   ],
-   "status": "fail",
-   "action": "needs_remake",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__004.txt",
-   "notes": "Tags read Top / Bottom / Price steps / What you hold / Stop, but the narration teaches the five words upper, lower, levels, side, stop; 'Price steps' tag has three arrowheads and breaks the right margin.",
+   "notes": "Box with a top edge, bottom edge and three inner lines; three-disc pile left; amber line under the box. All 5 arrows land: Upper on the middle of the top edge, Levels on the second inner line, Lower on the bottom edge (at its right-hand corner, hence 4), Side: what you hold on the disc pile, Stop on the amber line. Each tag touches the part it names, as the beat says. Spelling clean.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 66,
-    "right": 35,
-    "top": 71,
-    "bottom": 126
+    "left": 70,
+    "right": 83,
+    "top": 87,
+    "bottom": 160
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-03-what-is-a-grid-bot/004.png",
-   "scored_blob": "f33caeb22aaec008bcede15ea949571e607f0a86",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/004.png",
+   "scored_blob": "30004d39f471d9ab66c3d7da7ac6b89d69292ebc",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "remake_review": {
+    "file": "gen/bp-03-what-is-a-grid-bot/004/web1.png",
+    "blob": "30004d39f471d9ab66c3d7da7ac6b89d69292ebc",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 70,
+     "right": 83,
+     "top": 87,
+     "bottom": 160
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 4
+    },
+    "hard_fails": [],
+    "notes": "Box with a top edge, bottom edge and three inner lines; three-disc pile left; amber line under the box. All 5 arrows land: Upper on the middle of the top edge, Levels on the second inner line, Lower on the bottom edge (at its right-hand corner, hence 4), Side: what you hold on the disc pile, Stop on the amber line. Each tag touches the part it names, as the beat says. Spelling clean.",
+    "pass": true
+   },
+   "previous_committed_blob": "f33caeb22aaec008bcede15ea949571e607f0a86",
+   "source_detail": "ChatGPT web render gen/bp-03-what-is-a-grid-bot/004/web1.png (prompt specs/remake/bp-03-what-is-a-grid-bot__004.txt), saved via out/course/images/bp-03-what-is-a-grid-bot/004.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-03-what-is-a-grid-bot/005.png",
@@ -2351,41 +2468,67 @@
    "beat": 8,
    "chapter": "Inventory",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-03-what-is-a-grid-bot.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "852452ee56f4cb5150f69471a1a37f27b41e74fd",
     "cursor/blueprint-beginner-images": "852452ee56f4cb5150f69471a1a37f27b41e74fd"
    },
    "beat_concept": "Inventory is what you hold when the fills are uneven.",
    "scores": {
-    "beginner_clarity": 3,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__008.txt",
-   "notes": "Two jars of coins: 'more of the coin' / 'more cash' with tautological 'What you hold = your holdings'; does not show uneven fills (balanced inside the band vs one heavy side after an exit); uses coins, which the brief bans.",
+   "notes": "Left card: price weaves inside the band, blue and mint boxes the same height. Right card: price drops out through the bottom line and stays below; one tall blue box and a nearly empty mint box. Captions \"Inside the band: balanced\" and \"Price left: one side piles up\" with no arrows, as specified. EXAMPLE stamp inside the right card. No coins or currency.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 65,
-    "right": 103,
-    "top": 67,
-    "bottom": 108
+    "left": 79,
+    "right": 79,
+    "top": 81,
+    "bottom": 158
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-03-what-is-a-grid-bot/008.png",
-   "scored_blob": "852452ee56f4cb5150f69471a1a37f27b41e74fd",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/008.png",
+   "scored_blob": "cbaf79a4090ba71a726ae774813bbaf126369685",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "remake_review": {
+    "file": "gen/bp-03-what-is-a-grid-bot/008/web1.png",
+    "blob": "cbaf79a4090ba71a726ae774813bbaf126369685",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 79,
+     "right": 79,
+     "top": 81,
+     "bottom": 158
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Left card: price weaves inside the band, blue and mint boxes the same height. Right card: price drops out through the bottom line and stays below; one tall blue box and a nearly empty mint box. Captions \"Inside the band: balanced\" and \"Price left: one side piles up\" with no arrows, as specified. EXAMPLE stamp inside the right card. No coins or currency.",
+    "pass": true
+   },
+   "previous_committed_blob": "852452ee56f4cb5150f69471a1a37f27b41e74fd",
+   "source_detail": "ChatGPT web render gen/bp-03-what-is-a-grid-bot/008/web1.png (prompt specs/remake/bp-03-what-is-a-grid-bot__008.txt), saved via out/course/images/bp-03-what-is-a-grid-bot/008.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-03-what-is-a-grid-bot/009.png",
@@ -2469,7 +2612,34 @@
    "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-03-what-is-a-grid-bot/010.png",
    "scored_blob": "7c494c8244df51eae8d085d6138ab64d86cb54e0",
    "committed": true,
-   "pass": false
+   "pass": false,
+   "remake_review": {
+    "file": "gen/bp-03-what-is-a-grid-bot/010/web1.png",
+    "blob": "201dcbc4615ba497c0a50d9ec928eaaadeb697e1",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 0,
+     "right": 110,
+     "top": 136,
+     "bottom": 60
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 4,
+     "composition_hierarchy": 3,
+     "craft_polish": 3,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [
+     "cramped margin: pencil runs off the left and bottom frame edges (0px)",
+     "AI artifact: light streak from the pencil tip into the \"Upper\" tile"
+    ],
+    "notes": "Five tiles spelled right, Levels highlighted, \"The one people skip\" arrow lands on the third tile. But the pencil runs off the frame at the bottom-left (0px margin, the prompt asks 80px for pencils) and its tip pokes into the \"Upper\" tile, with a thin glow streak rising from the tip into the letter p. The pencil does not lie under the row as asked.",
+    "pass": false
+   }
   },
   {
    "path": "course/images/bp-03-what-is-a-grid-bot/011.png",
@@ -2603,43 +2773,67 @@
    "beat": 14,
    "chapter": "One-breath definition",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-03-what-is-a-grid-bot.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "4e46857c12e6326a1bfad6df8655bc645803c171",
     "cursor/blueprint-beginner-images": "4e46857c12e6326a1bfad6df8655bc645803c171"
    },
    "beat_concept": "In one breath: waiting limit orders, inside a band, with a written stop, and inventory that changes as rungs fill.",
    "scores": {
-    "beginner_clarity": 4,
-    "composition_hierarchy": 3,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "cramped margin: main panel border sits 40-41px from the left and right edges"
-   ],
-   "status": "fail",
-   "action": "needs_remake",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__014.txt",
-   "notes": "Orders wait -> Inside your range -> Stop written -> Holdings change matches the one-breath definition, but the panel border breaks the 45px side margins.",
+   "notes": "Four icons in one panel joined by three short arrows: two checked tickets, a zig-zag between dashed lines, an amber stop sign, blue and mint jars. Captions \"Orders wait\", \"Inside your range\", \"Stop written\", \"Holdings change\" match the one-breath definition. Panel glow sits 48px/49px from the left/right edges: inside the 45px standard but short of the prompt's 120px ask, hence composition 4.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 41,
-    "right": 40,
-    "top": 129,
-    "bottom": 241
+    "left": 48,
+    "right": 49,
+    "top": 126,
+    "bottom": 252
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-03-what-is-a-grid-bot/014.png",
-   "scored_blob": "4e46857c12e6326a1bfad6df8655bc645803c171",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/014.png",
+   "scored_blob": "56cc2b8246ac3a64da3be2d2bc02c676d23e193d",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "remake_review": {
+    "file": "gen/bp-03-what-is-a-grid-bot/014/web1.png",
+    "blob": "56cc2b8246ac3a64da3be2d2bc02c676d23e193d",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 48,
+     "right": 49,
+     "top": 126,
+     "bottom": 252
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Four icons in one panel joined by three short arrows: two checked tickets, a zig-zag between dashed lines, an amber stop sign, blue and mint jars. Captions \"Orders wait\", \"Inside your range\", \"Stop written\", \"Holdings change\" match the one-breath definition. Panel glow sits 48px/49px from the left/right edges: inside the 45px standard but short of the prompt's 120px ask, hence composition 4.",
+    "pass": true
+   },
+   "previous_committed_blob": "4e46857c12e6326a1bfad6df8655bc645803c171",
+   "source_detail": "ChatGPT web render gen/bp-03-what-is-a-grid-bot/014/web1.png (prompt specs/remake/bp-03-what-is-a-grid-bot__014.txt), saved via out/course/images/bp-03-what-is-a-grid-bot/014.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/bp-03-what-is-a-grid-bot/015.png",
@@ -2815,41 +3009,67 @@
    "beat": 19,
    "chapter": "Outro",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-03-what-is-a-grid-bot.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "cb2d07216444257c3215071145e92741fec89fdd",
     "cursor/blueprint-beginner-images": "cb2d07216444257c3215071145e92741fec89fdd"
    },
    "beat_concept": "Next lesson: Market regimes. Bring the page you just wrote. Leave every example marked Example. No order is sent between lessons.",
    "scores": {
-    "beginner_clarity": 4,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "craft_polish": 5,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__019.txt",
-   "notes": "Outro says 'NEXT: MARKET SHAPES' and 'Next lesson: price shapes'; the next lesson is 'Market regimes' (two different wrong names on one frame).",
+   "notes": "Outro: headline NEXT: MARKET REGIMES and tag \"Next lesson: Market regimes\" name the next lesson's exact title. \"Bring your notes\" tip on the notebook, \"Next lesson\" tip on the right card (2 of 2). Three panels: sideways zig-zag between two lines, steady climb, bounce then break out above the top line and stay above. One thick arrow between the cards.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
     "left": 78,
-    "right": 54,
-    "top": 93,
-    "bottom": 177
+    "right": 65,
+    "top": 101,
+    "bottom": 212
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-03-what-is-a-grid-bot/019.png",
-   "scored_blob": "cb2d07216444257c3215071145e92741fec89fdd",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/019.png",
+   "scored_blob": "44c3c90a60536ea6129e46b04bafc3ef3f2ef732",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "remake_review": {
+    "file": "gen/bp-03-what-is-a-grid-bot/019/web1.png",
+    "blob": "44c3c90a60536ea6129e46b04bafc3ef3f2ef732",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 78,
+     "right": 65,
+     "top": 101,
+     "bottom": 212
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 5,
+     "brand_fidelity": 5,
+     "text_legibility": 5,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Outro: headline NEXT: MARKET REGIMES and tag \"Next lesson: Market regimes\" name the next lesson's exact title. \"Bring your notes\" tip on the notebook, \"Next lesson\" tip on the right card (2 of 2). Three panels: sideways zig-zag between two lines, steady climb, bounce then break out above the top line and stay above. One thick arrow between the cards.",
+    "pass": true
+   },
+   "previous_committed_blob": "cb2d07216444257c3215071145e92741fec89fdd",
+   "source_detail": "ChatGPT web render gen/bp-03-what-is-a-grid-bot/019/web1.png (prompt specs/remake/bp-03-what-is-a-grid-bot__019.txt), saved via out/course/images/bp-03-what-is-a-grid-bot/019.png at 1536x1024 (already 3:2, no fill needed)"
   },
   {
    "path": "course/images/style-ref/01M6MSHVNHX3WQH81XS8KQK1HT.png",
@@ -3137,7 +3357,7 @@
    "beat": null,
    "chapter": null,
    "kind": "analogy-still",
-   "source": "committed still; identical blob on d1f6@fbb3f9c, beginner-images@ecf7b37 and PR #17 head 6df2536",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "4df2bdf136c1c9b0b06943c0ac5c98e7aea5e336",
     "cursor/blueprint-beginner-images": "4df2bdf136c1c9b0b06943c0ac5c98e7aea5e336",
@@ -3145,33 +3365,65 @@
    },
    "beat_concept": null,
    "scores": {
-    "beginner_clarity": 4,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
-    "craft_polish": 3,
-    "brand_fidelity": 4,
+    "craft_polish": 4,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "wrong size: 1280x720, not 1536x1024"
-   ],
-   "status": "fail",
-   "action": "needs_remake",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/blueprint-analogies__analogy-fence.txt",
-   "code_fix": null,
-   "notes": "Picture reads (top rail, bottom rail, price bouncing between), but the file is 1280x720 and is an older still with code-drawn PIL relabels (label.py), not a single 1536x1024 ChatGPT still.",
-   "size": "1280x720",
-   "size_ok": false,
+   "code_fix": [
+    "CF-6"
+   ],
+   "notes": "Two posts, exactly two rails, cyan zig-zag whose every peak touches the underside of the top rail and every trough the top of the bottom rail, never crossing a rail. 3 of 3 arrows land: \"Top rail = top price\" on the top rail, \"Bottom rail = bottom price\" on the bottom rail, \"Price bounces between\" on the zig-zag midway. No digits, no mascot, no branding. Teaches on its own without code labels: yes. Posts have a wood-grain texture (craft 4). Label lettering is about 35px cap height (about 42px with descenders), short of the prompt's 52px: in the masters' 840x472 panel (scale 0.461) that is about 16px, below the 28px floor, so the CF-6 cover labels must stay and be retuned (text legibility 4).",
+   "size": "1536x1024",
+   "size_ok": true,
    "filename_ok": true,
-   "margins_px": null,
+   "margins_px": {
+    "left": 74,
+    "right": 66,
+    "top": 104,
+    "bottom": 190
+   },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
    "committed_png_stale": null,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/analogy-fence.png",
-   "scored_blob": "4df2bdf136c1c9b0b06943c0ac5c98e7aea5e336",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/blueprint-analogies/analogy-fence.png",
+   "scored_blob": "a8b3633db778fd93fa72cad20044da2a4fa762dc",
    "committed": true,
-   "pass": false
+   "pass": true,
+   "remake_review": {
+    "file": "gen/blueprint-analogies/analogy-fence/web1.png",
+    "blob": "a8b3633db778fd93fa72cad20044da2a4fa762dc",
+    "size": "1536x1024",
+    "margins_px": {
+     "left": 74,
+     "right": 66,
+     "top": 104,
+     "bottom": 190
+    },
+    "scored_against": "fbb3f9c narration + prompt at this commit",
+    "scores": {
+     "beginner_clarity": 5,
+     "composition_hierarchy": 4,
+     "craft_polish": 4,
+     "brand_fidelity": 5,
+     "text_legibility": 4,
+     "character_consistency": null,
+     "label_accuracy": 5
+    },
+    "hard_fails": [],
+    "notes": "Two posts, exactly two rails, cyan zig-zag whose every peak touches the underside of the top rail and every trough the top of the bottom rail, never crossing a rail. 3 of 3 arrows land: \"Top rail = top price\" on the top rail, \"Bottom rail = bottom price\" on the bottom rail, \"Price bounces between\" on the zig-zag midway. No digits, no mascot, no branding. Teaches on its own without code labels: yes. Posts have a wood-grain texture (craft 4). Label lettering is about 35px cap height (about 42px with descenders), short of the prompt's 52px: in the masters' 840x472 panel (scale 0.461) that is about 16px, below the 28px floor, so the CF-6 cover labels must stay and be retuned (text legibility 4).",
+    "pass": true
+   },
+   "previous_committed_blob": "4df2bdf136c1c9b0b06943c0ac5c98e7aea5e336",
+   "source_detail": "ChatGPT web render gen/blueprint-analogies/analogy-fence/web1.png (prompt specs/remake/blueprint-analogies__analogy-fence.txt), saved via out/course/images/blueprint-analogies/analogy-fence.png at 1536x1024 (already 3:2, no fill needed)",
+   "note_cf6": "Still passes on its own. The masters still need CF-6 (studio.py _retouch_analogy fence boxes and rail_marks retuned to this 1536x1024 still); not applied at e0b84d5. See CODE_FIXES.md."
   },
   {
    "path": "course/images/blueprint-analogies/analogy-list.png",
@@ -3219,42 +3471,39 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/hook.png on d1f6 was rendered at 61c4f97 and differs (blob ce76f5ae): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "ce76f5ae2668f67fe8bb0e19a616c224d069eee2",
-    "re-render @fbb3f9c": "e35830ba11c7fce0229a08f22de9e178b3b0c798"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "b4e95df5938620c4baf7903dc910e4c633e8dc7f"
    },
    "beat_concept": null,
    "scores": {
     "beginner_clarity": 4,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer reads 'Educational content only. Not financial advice.' Otherwise clear: real 90-day window, band 24,930 to 30,331, '16 Oct 28,519' (all match btc-usd-windows.json range_2023).",
+   "code_fix": null,
+   "notes": "Footer now exactly \"Education only. Not financial advice.\" (CF-1). Real 90-day window 19 July to 16 October 2023, band 24,930 to 30,331 (min low 24,930.30, max high 30,330.64), \"16 Oct 28,519\" (close 28,519.47), all from btc-usd-windows.json range_2023.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-01-introduction/chart/range-2023/hook.png",
-   "scored_blob": "e35830ba11c7fce0229a08f22de9e178b3b0c798",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/hook.png",
+   "scored_blob": "b4e95df5938620c4baf7903dc910e4c633e8dc7f",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "e35830ba11c7fce0229a08f22de9e178b3b0c798",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/hook.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-01-introduction/chart/range-2023/a-ladder",
@@ -3262,42 +3511,39 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/a-ladder.png on d1f6 was rendered at 61c4f97 and differs (blob 3370050b): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "3370050b7700458770b64665d8355dd96909bd8a",
-    "re-render @fbb3f9c": "ba8fb4f019520663980ce2f07f818afc6c071c03"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "3b898d0c53b369925c8b01c6a8d3ffd854027e11"
    },
    "beat_concept": null,
    "scores": {
     "beginner_clarity": 4,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer not exact. Otherwise fine: whole ladder still fitted, 28px tags, 'Not to scale: the chart has 7 levels', seven real levels 24,930 to 30,331.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. Ladder still fitted whole, 28px cover tags, \"Not to scale: the chart has 7 levels\", seven real levels 24,930 to 30,331 (step 900.06).",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-01-introduction/chart/range-2023/a-ladder.png",
-   "scored_blob": "ba8fb4f019520663980ce2f07f818afc6c071c03",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/a-ladder.png",
+   "scored_blob": "3b898d0c53b369925c8b01c6a8d3ffd854027e11",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "ba8fb4f019520663980ce2f07f818afc6c071c03",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/a-ladder.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-01-introduction/chart/range-2023/the-range",
@@ -3305,42 +3551,39 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/the-range.png on d1f6 was rendered at 61c4f97 and differs (blob c8d9fb9e): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "c8d9fb9ebe2024d4ae2df6ee23582e2bfe3233f1",
-    "re-render @fbb3f9c": "e204573f73f5bf5b73e418bdcf9c47e966e100e4"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "059b77f2da2a0e6db6452ba09e05230c8881147f"
    },
    "beat_concept": null,
    "scores": {
     "beginner_clarity": 4,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer not exact. Otherwise fine: real low 24,930 and high 30,331.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. Real low 24,930 and high 30,331, 16 Oct 28,519.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-01-introduction/chart/range-2023/the-range.png",
-   "scored_blob": "e204573f73f5bf5b73e418bdcf9c47e966e100e4",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/the-range.png",
+   "scored_blob": "059b77f2da2a0e6db6452ba09e05230c8881147f",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "e204573f73f5bf5b73e418bdcf9c47e966e100e4",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/the-range.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-01-introduction/chart/range-2023/the-levels",
@@ -3348,42 +3591,39 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/the-levels.png on d1f6 was rendered at 61c4f97 and differs (blob a1eb0eaf): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "a1eb0eafa64678b756fdf888f60a98f476a633cb",
-    "re-render @fbb3f9c": "a808cc20d7061f86606813dac29568899263f210"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "794f7c1c547480c089e8aecaba959321f11bc4b9"
    },
    "beat_concept": null,
    "scores": {
     "beginner_clarity": 4,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer not exact. Otherwise fine: seven levels, six gaps, 'one gap = about 900' (5,400.34 / 6 = 900.06).",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. Seven lines 24,930 / 25,830 / 26,730 / 27,630 / 28,531 / 29,431 / 30,331, \"one gap = about 900\" (5,400.34 / 6 = 900.06).",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-01-introduction/chart/range-2023/the-levels.png",
-   "scored_blob": "a808cc20d7061f86606813dac29568899263f210",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/the-levels.png",
+   "scored_blob": "794f7c1c547480c089e8aecaba959321f11bc4b9",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "a808cc20d7061f86606813dac29568899263f210",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/the-levels.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-01-introduction/chart/range-2023/the-fence",
@@ -3391,42 +3631,41 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/the-fence.png on d1f6 was rendered at 61c4f97 and differs (blob aa484dcd): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "aa484dcd3611f559286e90fbd6fd97ddfeecc188",
-    "re-render @fbb3f9c": "d3bdcc9ae2990e41e7abb786ce22b60b2ba6afa0"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "c71451efcd0653e1de660473239534afccd62ce2"
    },
    "beat_concept": null,
    "scores": {
     "beginner_clarity": 4,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
    "code_fix": [
-    "CF-1"
+    "CF-6 (pending the new fence still)"
    ],
-   "notes": "Footer not exact. Otherwise fine: whole fence still fitted, connectors end on the rails.",
+   "notes": "CF-1 footer exact; connectors end on the rails. This frame still embeds the OLD 1280x720 fence still (the only one on d1f6 at e0b84d5) and its CF-6 cover boxes are still tuned to it, so it is correct as committed. CF-6 is NOT applied yet: once the new 1536x1024 fence still lands on d1f6, apply CF-6 and re-render and re-score this frame.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-01-introduction/chart/range-2023/the-fence.png",
-   "scored_blob": "d3bdcc9ae2990e41e7abb786ce22b60b2ba6afa0",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/the-fence.png",
+   "scored_blob": "c71451efcd0653e1de660473239534afccd62ce2",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "d3bdcc9ae2990e41e7abb786ce22b60b2ba6afa0",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/the-fence.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-01-introduction/chart/range-2023/walk-the-summer",
@@ -3434,44 +3673,39 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/walk-the-summer.png on d1f6 was rendered at 61c4f97 and differs (blob 6c0332f6): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "6c0332f601dd24e13073de1ecb64ce467447e275",
-    "re-render @fbb3f9c": "3ed22a869f0b0291da114eda549aa58e8523f11e"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "1806202965fc1de3d2a8f667169e20d8d0595aa4"
    },
    "beat_concept": null,
    "scores": {
-    "beginner_clarity": 3,
+    "beginner_clarity": 4,
     "composition_hierarchy": 4,
-    "craft_polish": 3,
-    "brand_fidelity": 3,
+    "craft_polish": 4,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact",
-    "inconsistent figures: axis labels drawn without thousands separators (30331 ... 24930) beside the '19 Jul 29,914' tag"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1",
-    "CF-2"
-   ],
-   "notes": "Footer not exact; the axis prints 30331/29431/... while the tag and every other frame print 30,331 style; the unwalked path is drawn so faint that the frame reads as an empty chart with one dot.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. CF-2 verified: the axis now reads 30,331 / 29,431 / 28,531 / 27,630 / 26,730 / 25,830 / 24,930 with commas, and the unwalked path is drawn at alpha 150, width 2, so the whole summer path is visible. \"19 Jul 29,914\" = close 29,913.92.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-01-introduction/chart/range-2023/walk-the-summer.png",
-   "scored_blob": "3ed22a869f0b0291da114eda549aa58e8523f11e",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/walk-the-summer.png",
+   "scored_blob": "1806202965fc1de3d2a8f667169e20d8d0595aa4",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "3ed22a869f0b0291da114eda549aa58e8523f11e",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/walk-the-summer.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-01-introduction/chart/breakout-2023/the-stop",
@@ -3479,42 +3713,39 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-01-introduction/chart/breakout-2023/the-stop.png on d1f6 was rendered at 61c4f97 and differs (blob b44a15aa): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "b44a15aa3eb73e16058d644bb8020aa9e08b291d",
-    "re-render @fbb3f9c": "feaa1616016ca704d5b772d431a9982217759710"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "e6bcfcb901c6edda46e4cb67f51a3b553242f7bb"
    },
    "beat_concept": null,
    "scores": {
     "beginner_clarity": 4,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer not exact. Otherwise fine: '23 Oct: leaves 30,331' (first close above, 33,086) and '14 Mar 71,397' match breakout_2023.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. \"23 Oct: leaves 30,331\" (first close above, 33,086.23) and \"14 Mar 71,397\" (close 71,396.59) match breakout_2023.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-01-introduction/chart/breakout-2023/the-stop.png",
-   "scored_blob": "feaa1616016ca704d5b772d431a9982217759710",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-01-introduction/chart/breakout-2023/the-stop.png",
+   "scored_blob": "e6bcfcb901c6edda46e4cb67f51a3b553242f7bb",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "feaa1616016ca704d5b772d431a9982217759710",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-01-introduction/chart/breakout-2023/the-stop.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-01-introduction/title-card",
@@ -3522,42 +3753,39 @@
    "beat": null,
    "chapter": null,
    "kind": "title-card",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-01-introduction/title-card.png on d1f6 was rendered at 61c4f97 and differs (blob 7eae164e): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "7eae164eb20eb0b077a7a6ed686fa09edb75c627",
-    "re-render @fbb3f9c": "22f7909e76ac07d77bdd5b7e1bc59d482c5dd442"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "1739895a98db2667e1f0a9e9d6fb1a7fae3acebf"
    },
    "beat_concept": null,
    "scores": {
-    "beginner_clarity": 4,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": 5,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer not exact. Shows 'Lesson 01 / Introduction' (the lesson title), wordmark and the approved mascot.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. \"Lesson 01 / Introduction\" = lesson title; wordmark; approved mascot (course/images/mascot/blueprint-mascot.png blob 5d421ae3, unchanged); band chart with EXAMPLE pill.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": true,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-01-introduction/title-card.png",
-   "scored_blob": "22f7909e76ac07d77bdd5b7e1bc59d482c5dd442",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-01-introduction/title-card.png",
+   "scored_blob": "1739895a98db2667e1f0a9e9d6fb1a7fae3acebf",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "22f7909e76ac07d77bdd5b7e1bc59d482c5dd442",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-01-introduction/title-card.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-01-introduction/end-card",
@@ -3565,42 +3793,39 @@
    "beat": null,
    "chapter": null,
    "kind": "end-card",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-01-introduction/end-card.png on d1f6 was rendered at 61c4f97 and differs (blob 5e0587de): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "5e0587defa31e2f03a30360204e8608967008616",
-    "re-render @fbb3f9c": "0049a8a578d17a3a0835596b8c12cc69f20c7994"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "af3c7d4237615e4f6ef289528745afcc33be1538"
    },
    "beat_concept": null,
    "scores": {
-    "beginner_clarity": 4,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": 5,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer not exact. Names the next lesson: 'Lesson 2 / What you are going to need'.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. Names the next lesson exactly: \"Lesson 2 / What you are going to need\"; approved mascot.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": true,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-01-introduction/end-card.png",
-   "scored_blob": "0049a8a578d17a3a0835596b8c12cc69f20c7994",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-01-introduction/end-card.png",
+   "scored_blob": "af3c7d4237615e4f6ef289528745afcc33be1538",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "0049a8a578d17a3a0835596b8c12cc69f20c7994",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-01-introduction/end-card.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-01-introduction/thumbnail",
@@ -3608,31 +3833,26 @@
    "beat": null,
    "chapter": null,
    "kind": "thumbnail",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-01-introduction/thumbnail.png on d1f6 was rendered at 61c4f97 and differs (blob 5f6c89b2): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "5f6c89b2546d3541a8f644a9a81c4ed0a7475cc2",
-    "re-render @fbb3f9c": "5f6c89b2546d3541a8f644a9a81c4ed0a7475cc2"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "85e178f39d65a5365d0746083340f9b13f4ed97b"
    },
    "beat_concept": null,
    "scores": {
-    "beginner_clarity": 4,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer not exact. 'Your first range' with the real band chart and EXAMPLE pill.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact (paint.py thumbnail template). \"Your first range\" with the real band and EXAMPLE pill.",
    "size": "1280x720",
    "size_ok": true,
    "filename_ok": true,
@@ -3640,10 +3860,12 @@
    "mascot_in_frame": false,
    "previous_v10_pass": true,
    "committed_png_stale": false,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-01-introduction/thumbnail.png",
-   "scored_blob": "5f6c89b2546d3541a8f644a9a81c4ed0a7475cc2",
-   "committed": false,
-   "pass": false
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-01-introduction/thumbnail.png",
+   "scored_blob": "85e178f39d65a5365d0746083340f9b13f4ed97b",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "5f6c89b2546d3541a8f644a9a81c4ed0a7475cc2",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-01-introduction/thumbnail.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-02-what-you-need/chart/range-2023/hook",
@@ -3651,42 +3873,39 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-02-what-you-need/chart/range-2023/hook.png on d1f6 was rendered at 61c4f97 and differs (blob 42f77649): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "42f77649b5666069145d7832a67772cf3b37854e",
-    "re-render @fbb3f9c": "62d03179f3689bde07b507e6086ecc655ff24b32"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "be842a3421502ebcd6d291ab1dd90d2f75f1424c"
    },
    "beat_concept": null,
    "scores": {
     "beginner_clarity": 4,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer not exact. Otherwise fine: list still fitted, its tags re-covered at 28px, Band 24,930 to 30,331 / Six gaps. About 900 / The close leaves 30,331.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. List still fitted, its tags re-covered at 28px; Band 24,930 to 30,331 / Six gaps. About 900. / The close leaves 30,331. with EXAMPLE.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-02-what-you-need/chart/range-2023/hook.png",
-   "scored_blob": "62d03179f3689bde07b507e6086ecc655ff24b32",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-02-what-you-need/chart/range-2023/hook.png",
+   "scored_blob": "be842a3421502ebcd6d291ab1dd90d2f75f1424c",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "62d03179f3689bde07b507e6086ecc655ff24b32",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-02-what-you-need/chart/range-2023/hook.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-02-what-you-need/chart/range-2023/seven-lines",
@@ -3694,42 +3913,39 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-02-what-you-need/chart/range-2023/seven-lines.png on d1f6 was rendered at 61c4f97 and differs (blob ef1a2505): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "ef1a2505f28b1f60f3a583544191074b389067cd",
-    "re-render @fbb3f9c": "be395481e2c71d19dd4dc7cf956beccb59871c0d"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "cac82c11b24bf7f696cad03eddda8757d6836e1c"
    },
    "beat_concept": null,
    "scores": {
     "beginner_clarity": 4,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer not exact. Otherwise fine: the seven lines in order.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. The seven lines in order, plain words.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-02-what-you-need/chart/range-2023/seven-lines.png",
-   "scored_blob": "be395481e2c71d19dd4dc7cf956beccb59871c0d",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-02-what-you-need/chart/range-2023/seven-lines.png",
+   "scored_blob": "cac82c11b24bf7f696cad03eddda8757d6836e1c",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "be395481e2c71d19dd4dc7cf956beccb59871c0d",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-02-what-you-need/chart/range-2023/seven-lines.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-02-what-you-need/chart/range-2023/the-three-words",
@@ -3737,42 +3953,39 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-02-what-you-need/chart/range-2023/the-three-words.png on d1f6 was rendered at 61c4f97 and differs (blob a3396f30): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "a3396f30f8fea149cadf88ed3e6bb4e887833a59",
-    "re-render @fbb3f9c": "da0c850f147df142810036e78ee13fbcbc94a4f4"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "782c5cb65b8a3129dc57aa842bf7f4851646144e"
    },
    "beat_concept": null,
    "scores": {
     "beginner_clarity": 4,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer not exact. Otherwise fine: Range / Levels / Stop with real figures.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. Range 24,930 to 30,331 / Levels six gaps about 900 / Stop leaves 30,331, EXAMPLE pill.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-02-what-you-need/chart/range-2023/the-three-words.png",
-   "scored_blob": "da0c850f147df142810036e78ee13fbcbc94a4f4",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-02-what-you-need/chart/range-2023/the-three-words.png",
+   "scored_blob": "782c5cb65b8a3129dc57aa842bf7f4851646144e",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "da0c850f147df142810036e78ee13fbcbc94a4f4",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-02-what-you-need/chart/range-2023/the-three-words.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-02-what-you-need/chart/range-2023/no-secrets",
@@ -3780,42 +3993,39 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-02-what-you-need/chart/range-2023/no-secrets.png on d1f6 was rendered at 61c4f97 and differs (blob 7876222e): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "7876222e6d92f3f80b95f1cec7ae9ad9b9419a4d",
-    "re-render @fbb3f9c": "61e71c2316643cfbb41c766d26c152a6adf8e16b"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "e0963d17eb4683603c0a84b1f2715f5e5001c674"
    },
    "beat_concept": null,
    "scores": {
     "beginner_clarity": 4,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer not exact. Otherwise fine: never vs allowed columns.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. Never (seed phrase, private key, API secret, account balance) vs allowed columns.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-02-what-you-need/chart/range-2023/no-secrets.png",
-   "scored_blob": "61e71c2316643cfbb41c766d26c152a6adf8e16b",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-02-what-you-need/chart/range-2023/no-secrets.png",
+   "scored_blob": "e0963d17eb4683603c0a84b1f2715f5e5001c674",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "61e71c2316643cfbb41c766d26c152a6adf8e16b",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-02-what-you-need/chart/range-2023/no-secrets.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-02-what-you-need/chart/range-2023/copy-the-path",
@@ -3823,44 +4033,39 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-02-what-you-need/chart/range-2023/copy-the-path.png on d1f6 was rendered at 61c4f97 and differs (blob 08dcd2ea): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "08dcd2ea92bb6fcd10aafb19deaa0411f05a055a",
-    "re-render @fbb3f9c": "f91c58bfb50440ab61ab2fbe531f58ef82c41ead"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "7771b0a4ec78e1dc1ef45bfb5aa58dd8de2d0f41"
    },
    "beat_concept": null,
    "scores": {
-    "beginner_clarity": 3,
+    "beginner_clarity": 4,
     "composition_hierarchy": 4,
-    "craft_polish": 3,
-    "brand_fidelity": 3,
+    "craft_polish": 4,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact",
-    "inconsistent figures: axis labels without thousands separators beside '19 Jul 29,914'"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1",
-    "CF-2"
-   ],
-   "notes": "Same walk-chart problems as bp-01 walk-the-summer.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. CF-2 verified: comma axis labels and the visible unwalked path; 19 Jul 29,914.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-02-what-you-need/chart/range-2023/copy-the-path.png",
-   "scored_blob": "f91c58bfb50440ab61ab2fbe531f58ef82c41ead",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-02-what-you-need/chart/range-2023/copy-the-path.png",
+   "scored_blob": "7771b0a4ec78e1dc1ef45bfb5aa58dd8de2d0f41",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "f91c58bfb50440ab61ab2fbe531f58ef82c41ead",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-02-what-you-need/chart/range-2023/copy-the-path.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-02-what-you-need/title-card",
@@ -3868,42 +4073,39 @@
    "beat": null,
    "chapter": null,
    "kind": "title-card",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-02-what-you-need/title-card.png on d1f6 was rendered at 61c4f97 and differs (blob d0082e1d): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "d0082e1da7ccf7a688bdcbc77dd3bacc8a3a58de",
-    "re-render @fbb3f9c": "6648ded27520e4fdc270628986a44b2e73059cff"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "e97603e388dc0ecc93d0d4328dd869ff56083f0a"
    },
    "beat_concept": null,
    "scores": {
-    "beginner_clarity": 4,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": 5,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer not exact. Shows 'Lesson 02 / What you are going to need' and the approved mascot.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. \"Lesson 02 / What you are going to need\" = lesson title; approved mascot.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": true,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-02-what-you-need/title-card.png",
-   "scored_blob": "6648ded27520e4fdc270628986a44b2e73059cff",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-02-what-you-need/title-card.png",
+   "scored_blob": "e97603e388dc0ecc93d0d4328dd869ff56083f0a",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "6648ded27520e4fdc270628986a44b2e73059cff",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-02-what-you-need/title-card.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-02-what-you-need/end-card",
@@ -3911,42 +4113,39 @@
    "beat": null,
    "chapter": null,
    "kind": "end-card",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-02-what-you-need/end-card.png on d1f6 was rendered at 61c4f97 and differs (blob 9dd66a95): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "9dd66a9554eed349862815a17a51cb46c47f70b3",
-    "re-render @fbb3f9c": "dd7a1656766ba82ff61fb39b90e663b05be9a792"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "8c2687c8935252686b48cc0c2f9661b45a12616a"
    },
    "beat_concept": null,
    "scores": {
-    "beginner_clarity": 4,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": 5,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer not exact. Names the next lesson: 'Lesson 3 / What is a grid bot'.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. Names the next lesson exactly: \"Lesson 3 / What is a grid bot\"; BUY 27,630 band chart with EXAMPLE; approved mascot.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": true,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-02-what-you-need/end-card.png",
-   "scored_blob": "dd7a1656766ba82ff61fb39b90e663b05be9a792",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-02-what-you-need/end-card.png",
+   "scored_blob": "8c2687c8935252686b48cc0c2f9661b45a12616a",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "dd7a1656766ba82ff61fb39b90e663b05be9a792",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-02-what-you-need/end-card.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-02-what-you-need/thumbnail",
@@ -3954,31 +4153,26 @@
    "beat": null,
    "chapter": null,
    "kind": "thumbnail",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-02-what-you-need/thumbnail.png on d1f6 was rendered at 61c4f97 and differs (blob c3971d14): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "c3971d14708b58093256dd6ddb633eacb30b3c7b",
-    "re-render @fbb3f9c": "c3971d14708b58093256dd6ddb633eacb30b3c7b"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "6cd42e185bd443ae01e7f5e3e3de414b3b824ccd"
    },
    "beat_concept": null,
    "scores": {
-    "beginner_clarity": 4,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer not exact. Lesson title with the seven-line list.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. Lesson title with the seven-line list.",
    "size": "1280x720",
    "size_ok": true,
    "filename_ok": true,
@@ -3986,10 +4180,12 @@
    "mascot_in_frame": false,
    "previous_v10_pass": true,
    "committed_png_stale": false,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-02-what-you-need/thumbnail.png",
-   "scored_blob": "c3971d14708b58093256dd6ddb633eacb30b3c7b",
-   "committed": false,
-   "pass": false
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-02-what-you-need/thumbnail.png",
+   "scored_blob": "6cd42e185bd443ae01e7f5e3e3de414b3b824ccd",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "c3971d14708b58093256dd6ddb633eacb30b3c7b",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-02-what-you-need/thumbnail.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/hook",
@@ -3997,44 +4193,39 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/hook.png on d1f6 was rendered at 61c4f97 and differs (blob 6a2651ed): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "6a2651ed40794e03371ba1bf626cc11cc31c0bf1",
-    "re-render @fbb3f9c": "e4761d81d6ce70f4b13add61647dc50f73765e3a"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "4994b009675b0b742a6dcf44e12d21ce05a41fe9"
    },
    "beat_concept": null,
    "scores": {
     "beginner_clarity": 4,
     "composition_hierarchy": 4,
-    "craft_polish": 3,
-    "brand_fidelity": 3,
-    "text_legibility": 3,
+    "craft_polish": 4,
+    "brand_fidelity": 5,
+    "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact",
-    "illegible label: 'BUY 27,630' and '3 more in October' tickets are 22px at 1080p (28px minimum)"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1",
-    "CF-3"
-   ],
-   "notes": "Footer not exact; ticket text too small. Counts are right (5 down-closes through 27,630: 17 Aug, 30 Aug + 3 in October).",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. CF-3 verified: tickets drawn at 28px on 42px tags. Two BUY 27,630 tickets (17 Aug, 30 Aug) plus \"3 more in October\" with 3 dots = the 5 down-closes through 27,630 (17 Aug, 30 Aug, 2/5/9 Oct). Caption makes no count claim.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/hook.png",
-   "scored_blob": "e4761d81d6ce70f4b13add61647dc50f73765e3a",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/hook.png",
+   "scored_blob": "4994b009675b0b742a6dcf44e12d21ce05a41fe9",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "e4761d81d6ce70f4b13add61647dc50f73765e3a",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/hook.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/limit-orders-wait",
@@ -4042,45 +4233,43 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/limit-orders-wait.png on d1f6 was rendered at 61c4f97 and differs (blob 840a0546): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "840a05461376e0724161ed0073823a34f489b8b5",
-    "re-render @fbb3f9c": "095f62d63cb4bf259230937d52b5f239ecb0345f"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "e13d58eb2158f12eba4922fcc5dad8d5a6335b79"
    },
    "beat_concept": null,
    "scores": {
-    "beginner_clarity": 3,
+    "beginner_clarity": 4,
     "composition_hierarchy": 4,
-    "craft_polish": 3,
-    "brand_fidelity": 3,
-    "text_legibility": 3,
+    "craft_polish": 4,
+    "brand_fidelity": 5,
+    "text_legibility": 4,
     "character_consistency": null,
     "label_accuracy": 3
    },
    "hard_fails": [
-    "disclaimer not exact",
-    "illegible label: 22px tickets"
+    "wrong count: 5 crossings marked next to \"10 times\""
    ],
    "status": "fail",
    "action": "code_fix_needed",
    "remake_prompt": null,
    "code_fix": [
-    "CF-1",
-    "CF-3",
-    "CF-4"
+    "CF-7"
    ],
-   "notes": "Footer not exact; 22px tickets; 'A cross is not a receipt' / 'That is not a receipt' is jargon a beginner cannot decode. The 10 crossings are right (5 down, 5 up), but only the 5 down-crosses are marked, so the frame shows 5 marks next to '10 times'.",
+   "notes": "CF-1 footer exact. CF-3 verified (28px tickets). CF-4 verified: subtitle \"A buy order waits at 27,630. A cross is not a filled order.\" and caption \"Daily closes crossed 27,630 10 times. A cross is not a filled order.\" No jargon left. Still failing on count: the caption (and VO) say 10 crosses, which is right (5 down: 17 Aug, 30 Aug, 2/5/9 Oct; 5 up: 29 Aug, 1/4/6/16 Oct), but the frame marks only the 5 down-crosses (2 BUY tickets + \"3 more in October\" dots). A beginner counts 5 marks next to \"10 times\". Stage 2 noted this but CODE_FIXES had no fix for it; now CF-7.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/limit-orders-wait.png",
-   "scored_blob": "095f62d63cb4bf259230937d52b5f239ecb0345f",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/limit-orders-wait.png",
+   "scored_blob": "e13d58eb2158f12eba4922fcc5dad8d5a6335b79",
+   "committed": true,
+   "pass": false,
+   "previous_scored_blob": "095f62d63cb4bf259230937d52b5f239ecb0345f",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/limit-orders-wait.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/buys-and-sells",
@@ -4088,42 +4277,39 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/buys-and-sells.png on d1f6 was rendered at 61c4f97 and differs (blob 1cc97e45): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "1cc97e456b4c0410e7c581a3ac58239d3e74f5a2",
-    "re-render @fbb3f9c": "10d48e1c1c1910260c4a55d07e23f8e36d0edde4"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "f56fafd39b2df68a8c5f5a9352aba1ede18673ed"
    },
    "beat_concept": null,
    "scores": {
     "beginner_clarity": 4,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer not exact. Otherwise fine: sells above 27,630 in mint, buys below in blue.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. 30,331/29,431/28,531 sell, 27,630 middle, 26,730/25,830/24,930 buy; sells above in mint, buys below in blue.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/buys-and-sells.png",
-   "scored_blob": "10d48e1c1c1910260c4a55d07e23f8e36d0edde4",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/buys-and-sells.png",
+   "scored_blob": "f56fafd39b2df68a8c5f5a9352aba1ede18673ed",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "10d48e1c1c1910260c4a55d07e23f8e36d0edde4",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/buys-and-sells.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/where-the-path-stood",
@@ -4131,44 +4317,39 @@
    "beat": null,
    "chapter": null,
    "kind": "code-drawn-chart",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/where-the-path-stood.png on d1f6 was rendered at 61c4f97 and differs (blob cc7a0d9b): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "cc7a0d9bf2b69616525a602ed35d4c5875809720",
-    "re-render @fbb3f9c": "f14fe4d1ed6ea4535812b805eacde88826e8d83b"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "94729025c7fd9f6c8dd39294b0ae488cbdfab1ce"
    },
    "beat_concept": null,
    "scores": {
-    "beginner_clarity": 3,
+    "beginner_clarity": 4,
     "composition_hierarchy": 4,
-    "craft_polish": 3,
-    "brand_fidelity": 3,
+    "craft_polish": 4,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact",
-    "inconsistent figures: axis labels without thousands separators beside '19 Jul 29,914'"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1",
-    "CF-2"
-   ],
-   "notes": "Same walk-chart problems as bp-01 walk-the-summer.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. CF-2 verified: comma axis labels, visible unwalked path; 19 Jul 29,914.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/where-the-path-stood.png",
-   "scored_blob": "f14fe4d1ed6ea4535812b805eacde88826e8d83b",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/where-the-path-stood.png",
+   "scored_blob": "94729025c7fd9f6c8dd39294b0ae488cbdfab1ce",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "f14fe4d1ed6ea4535812b805eacde88826e8d83b",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/chart/range-2023/where-the-path-stood.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-03-what-is-a-grid-bot/title-card",
@@ -4176,42 +4357,39 @@
    "beat": null,
    "chapter": null,
    "kind": "title-card",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/title-card.png on d1f6 was rendered at 61c4f97 and differs (blob e9a4106d): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "e9a4106d32eddc5cbcf8e3634aa5b0133f127b3d",
-    "re-render @fbb3f9c": "f194f727e2574dcc9ba5782ef6e7a8ed5580be11"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "e0aa669ca949ec15438324d0fed87bcce5805741"
    },
    "beat_concept": null,
    "scores": {
-    "beginner_clarity": 4,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": 5,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer not exact. Shows 'Lesson 03 / What is a grid bot' and the approved mascot.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. \"Lesson 03 / What is a grid bot\" = lesson title; approved mascot; BUY 27,630 band chart with EXAMPLE.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": true,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-03-what-is-a-grid-bot/title-card.png",
-   "scored_blob": "f194f727e2574dcc9ba5782ef6e7a8ed5580be11",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/title-card.png",
+   "scored_blob": "e0aa669ca949ec15438324d0fed87bcce5805741",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "f194f727e2574dcc9ba5782ef6e7a8ed5580be11",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/title-card.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-03-what-is-a-grid-bot/end-card",
@@ -4219,43 +4397,39 @@
    "beat": null,
    "chapter": null,
    "kind": "end-card",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/end-card.png on d1f6 was rendered at 61c4f97 and differs (blob f7fdb4d2): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "f7fdb4d2586ee84903d926d7c80703e320b2ffaa",
-    "re-render @fbb3f9c": "0f24acee77de30e24913984ff82bd1c49a548387"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "bd34c1700cc5003171d09b30910f6a76cb09d668"
    },
    "beat_concept": null,
    "scores": {
-    "beginner_clarity": 3,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": 5,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1",
-    "CF-5"
-   ],
-   "notes": "Footer not exact. Names 'Lesson 4 / Market regimes' correctly, but the 'Break' mini chart ends only ~10px above the top line, so it reads as touching the band, not leaving it.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. Names \"Lesson 4 / Market regimes\" exactly. CF-5 verified: the Break panel path cuts through the top line and finishes about 80px above it, so it clearly leaves the band.",
    "size": "1920x1080",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": null,
    "mascot_in_frame": true,
    "previous_v10_pass": true,
-   "committed_png_stale": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-03-what-is-a-grid-bot/end-card.png",
-   "scored_blob": "0f24acee77de30e24913984ff82bd1c49a548387",
-   "committed": false,
-   "pass": false
+   "committed_png_stale": false,
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/end-card.png",
+   "scored_blob": "bd34c1700cc5003171d09b30910f6a76cb09d668",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "0f24acee77de30e24913984ff82bd1c49a548387",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/end-card.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   },
   {
    "path": "code-drawn/bp-03-what-is-a-grid-bot/thumbnail",
@@ -4263,31 +4437,26 @@
    "beat": null,
    "chapter": null,
    "kind": "thumbnail",
-   "source": "code-drawn: re-rendered from course/blueprint-rebuild/studio.py --frames at d1f6 fbb3f9c (what the fbb3f9c masters draw). Committed blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/thumbnail.png on d1f6 was rendered at 61c4f97 and differs (blob 519d38a9): stale since 61c4f97 changed grid colours, axis label size and the walk-chart number format; thumbnails are byte-identical.",
+   "source": "code-drawn@e0b84d5",
    "source_branches": {
-    "cursor/blueprint-professional-rebuild-d1f6 (committed PNG @61c4f97)": "519d38a95c9af8e919624a091fb95560505c09de",
-    "re-render @fbb3f9c": "519d38a95c9af8e919624a091fb95560505c09de"
+    "cursor/blueprint-professional-rebuild-d1f6 @e0b84d5 (committed PNG)": "c14e44960dccb48cc4d56dc6a846ae4ed8744954"
    },
    "beat_concept": null,
    "scores": {
-    "beginner_clarity": 4,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
     "craft_polish": 4,
-    "brand_fidelity": 3,
+    "brand_fidelity": 5,
     "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "disclaimer not exact"
-   ],
-   "status": "fail",
-   "action": "code_fix_needed",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": null,
-   "code_fix": [
-    "CF-1"
-   ],
-   "notes": "Footer not exact. Lesson title with the band chart and 'BUY 27,630' level.",
+   "code_fix": null,
+   "notes": "CF-1 footer exact. \"What is a grid bot\" with the band chart and BUY 27,630 level.",
    "size": "1280x720",
    "size_ok": true,
    "filename_ok": true,
@@ -4295,12 +4464,14 @@
    "mascot_in_frame": false,
    "previous_v10_pass": true,
    "committed_png_stale": false,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/assets/src/code-drawn/bp-03-what-is-a-grid-bot/thumbnail.png",
-   "scored_blob": "519d38a95c9af8e919624a091fb95560505c09de",
-   "committed": false,
-   "pass": false
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/e0b84d5/blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/thumbnail.png",
+   "scored_blob": "c14e44960dccb48cc4d56dc6a846ae4ed8744954",
+   "committed": true,
+   "pass": true,
+   "previous_scored_blob": "519d38a95c9af8e919624a091fb95560505c09de",
+   "source_detail": "Committed blueprint-smoke/code-drawn/bp-03-what-is-a-grid-bot/thumbnail.png at PR #17 head e0b84d5. A scratch re-export with studio.py --frames at e0b84d5 is pixel-identical for all charts and thumbnails; title and end cards differ only in the mascot box (the mascot is gated on the pass list, absent from the scratch export), so the committed PNGs are not stale."
   }
  ],
- "note_code_drawn": "Code-drawn frames are scored from a fresh render of studio.py --frames at fbb3f9c (box: bp01-03-qa/assets/src/code-drawn). The committed blueprint-smoke/code-drawn PNGs on d1f6 are from 61c4f97 and are stale for 22 of 25 frames (3 thumbnails identical). Fails are not remade on ChatGPT: action code_fix_needed, code_fix lists the fix ids in CODE_FIXES.md.",
- "note_remakes": "Rows with source chatgpt-web are new ChatGPT web renders scored against the fbb3f9c narration; scored_blob is the file committed at course/images/<lesson>/NNN.png. Rows with remake_review.pass=false keep the old committed still and stay in REMAKE_QUEUE."
+ "note_code_drawn": "Code-drawn frames are scored from a fresh render of studio.py --frames at fbb3f9c (box: bp01-03-qa/assets/src/code-drawn). The committed blueprint-smoke/code-drawn PNGs on d1f6 are from 61c4f97 and are stale for 22 of 25 frames (3 thumbnails identical). Fails are not remade on ChatGPT: action code_fix_needed, code_fix lists the fix ids in CODE_FIXES.md. Re-scored 14 Nov at PR #17 head e0b84d5 (CF-1..CF-5 applied): rows carry source code-drawn@e0b84d5 and scored_blob = the committed blueprint-smoke PNG blob at e0b84d5. 24 of 25 pass; bp-03 limit-orders-wait needs CF-7. CF-6 (fence relabel) not applied yet.",
+ "note_remakes": "Rows with source chatgpt-web are new ChatGPT web renders scored against the fbb3f9c narration; scored_blob is the file committed at course/images/<lesson>/NNN.png. Rows with remake_review.pass=false keep the old committed still and stay in REMAKE_QUEUE. Round 2 (14 Nov): BP-03 001/002/003/004/008/014/019 and analogy-fence web1 passed; BP-03 010 failed (v3 prompt)."
 }

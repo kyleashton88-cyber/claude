@@ -4,7 +4,7 @@ Scored by Creative Studio, 14 Nov 2026 (WITA). Same strict method as bp04-11. Im
 
 **Scope:** image fields of course/scripts/bp-01..bp-03 @ d1f6 `fbb3f9c` (58 stills); files scored from cursor/blueprint-beginner-images `2f8bac1`.
 
-**Result:** lesson stills 48 pass / 10 fail of 58. Stage 2 (34 shared/code-drawn assets): 8 pass / 26 fail. Whole list: 56 pass / 36 fail of 92. Remake queue: 11 (needs_mascot_ref: 0). Code fixes: 25 frames, see CODE_FIXES.md. (Updated 14 Nov after the BP-01/02 remake round below; first scoring was 37/21 stills, 45/47 overall.)
+**Result (current, 14 Nov after remake round 2 and the e0b84d5 code-drawn re-score):** lesson stills 55 pass / 3 fail of 58. Shared + code-drawn: 33 pass / 1 fail of 34. Whole list: **88 pass / 4 fail of 92**. Remake queue: 3 (needs_mascot_ref: 0). Code fix needed: 1 frame (CF-7), plus CF-6 to apply with the new fence still. See CODE_FIXES.md. (History: first scoring 45/47; after round 1 56/36.)
 
 **Mismatches:** none. All 58 blobs are identical on d1f6 and beginner-images and match the v10 pass list's scored_blob. All 58 were 'pass' on v10; 21 are overturned here.
 
@@ -62,7 +62,7 @@ Scored by Creative Studio, 14 Nov 2026 (WITA). Same strict method as bp04-11. Im
 | 020.png | 20 Finish the seven | PASS | Clipboard with 7 ticks + calendar 'Do it today'; matches 'complete the seven lines today'. | passed as is |
 | 021.png | 21 Outro | PASS | Outro names the next lesson exactly: 'NEXT: WHAT IS A GRID BOT'. | passed as is |
 
-## bp-03-what-is-a-grid-bot (What is a grid bot): 19 total, 11 pass, 8 fail
+## bp-03-what-is-a-grid-bot (What is a grid bot): 19 total, 18 pass, 1 fail (after remake round 2; table below is the first scoring of the committed stills)
 
 | File | Beat | Result | Reason | Fix status |
 |---|---|---|---|---|
@@ -95,7 +95,7 @@ Source: blueprint-smoke/BP01-03_IMAGE_USE.txt @fbb3f9c. **8 pass / 26 fail of 34
 - **ChatGPT fail:** analogy-fence. Remake prompt `blueprint-analogies__analogy-fence.txt`, queue row 22.
 
 
-### bp-01-introduction: 14 total, 3 pass, 11 fail
+### bp-01-introduction: 14 total, 14 pass, 0 fail (after round 2 + e0b84d5; table below is the first scoring)
 
 | Asset | Kind | Result | Reason | Fix status |
 |---|---|---|---|---|
@@ -114,7 +114,7 @@ Source: blueprint-smoke/BP01-03_IMAGE_USE.txt @fbb3f9c. **8 pass / 26 fail of 34
 | end-card | end-card | FAIL | Footer not exact. Names the next lesson: 'Lesson 2 / What you are going to need'. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
 | thumbnail | thumbnail | FAIL | Footer not exact. 'Your first range' with the real band chart and EXAMPLE pill. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
 
-### bp-02-what-you-need: 11 total, 3 pass, 8 fail
+### bp-02-what-you-need: 11 total, 11 pass, 0 fail (after e0b84d5; table below is the first scoring)
 
 | Asset | Kind | Result | Reason | Fix status |
 |---|---|---|---|---|
@@ -130,7 +130,7 @@ Source: blueprint-smoke/BP01-03_IMAGE_USE.txt @fbb3f9c. **8 pass / 26 fail of 34
 | end-card | end-card | FAIL | Footer not exact. Names the next lesson: 'Lesson 3 / What is a grid bot'. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
 | thumbnail | thumbnail | FAIL | Footer not exact. Lesson title with the seven-line list. Hard fail: disclaimer not exact. | code fix needed: CF-1 |
 
-### bp-03-what-is-a-grid-bot: 9 total, 2 pass, 7 fail
+### bp-03-what-is-a-grid-bot: 9 total, 8 pass, 1 fail (after e0b84d5; table below is the first scoring)
 
 | Asset | Kind | Result | Reason | Fix status |
 |---|---|---|---|---|
@@ -168,3 +168,64 @@ Same strict standard: at least 4 in every category, no hard fails, margins of at
 Passes were saved to `out/course/images/<lesson>/NNN.png` (already 1536x1024, so no fill was needed) and committed at `course/images/<lesson>/NNN.png`. Their rows carry the scores, `pass: true`, `source: chatgpt-web`, `scored_blob` and `previous_committed_blob`. The two fails keep the old still and a `remake_review` block.
 
 **Running counts (script stills):** BP-01 16/18, BP-02 21/21, BP-03 11/19. Whole 92-row list: 56/92.
+
+## Remake round 2: 8 BP-03 ChatGPT web renders + analogy-fence (scored 14 Nov against the fbb3f9c narration and the current prompts)
+
+Each file is 1536x1024. The margin is measured on bright pixels (at least 45px required).
+
+| File | Result | Margins L/R/T/B | Reason | Status |
+|---|---|---|---|---|
+| gen/bp-03-what-is-a-grid-bot/001/web1.png | PASS | 80/107/71/172 | Crossed crystal ball (amber X) beside one card with a four-rung ladder: two mint tickets on the top two rungs, two blue on the bottom two, dashed price line between rung 2 and 3, so sells sit only above and buys only below. "Not a fortune teller" tip touches the top of the ball; "Orders waiting at set prices" tip touches the top mint ticket (2 of 2). EXAMPLE stamp inside the card. Headline A GRID BOT DOES NOT GUESS is plain and puts no thinking in the bot. Spelling clean. | placed at course/images/bp-03-what-is-a-grid-bot/001.png (blob 93dd60c4) |
+| gen/bp-03-what-is-a-grid-bot/002/web1.png | PASS | 84/85/86/267 | Disclaimer card reads exactly "Education only." / "Not financial advice." in two large lines, open book with a check, nothing else on the card. Headline EDUCATION ONLY. Spelling clean. | placed at course/images/bp-03-what-is-a-grid-bot/002.png (blob 55ae0f32) |
+| gen/bp-03-what-is-a-grid-bot/003/web1.png | PASS | 76/141/50/112 | Title card: headline WHAT IS A GRID BOT? matches the lesson title "What is a grid bot". Six-rung ladder: three mint tickets above the dashed line, three blue below. "Sell orders above" tip on the middle mint ticket, "Buy orders below" tip on the middle blue ticket (2 of 2); "Orders wait at prices you chose" has no arrow (sits along the bottom inside the card rather than under it, clear of the rails). EXAMPLE stamp inside the card. Headline top edge 50px (>=45). | placed at course/images/bp-03-what-is-a-grid-bot/003.png (blob 03d652a8) |
+| gen/bp-03-what-is-a-grid-bot/004/web1.png | PASS | 70/83/87/160 | Box with a top edge, bottom edge and three inner lines; three-disc pile left; amber line under the box. All 5 arrows land: Upper on the middle of the top edge, Levels on the second inner line, Lower on the bottom edge (at its right-hand corner, hence 4), Side: what you hold on the disc pile, Stop on the amber line. Each tag touches the part it names, as the beat says. Spelling clean. | placed at course/images/bp-03-what-is-a-grid-bot/004.png (blob 30004d39) |
+| gen/bp-03-what-is-a-grid-bot/008/web1.png | PASS | 79/79/81/158 | Left card: price weaves inside the band, blue and mint boxes the same height. Right card: price drops out through the bottom line and stays below; one tall blue box and a nearly empty mint box. Captions "Inside the band: balanced" and "Price left: one side piles up" with no arrows, as specified. EXAMPLE stamp inside the right card. No coins or currency. | placed at course/images/bp-03-what-is-a-grid-bot/008.png (blob cbaf79a4) |
+| gen/bp-03-what-is-a-grid-bot/010/web1.png | FAIL | 0/110/136/60 | Five tiles spelled right, Levels highlighted, "The one people skip" arrow lands on the third tile. But the pencil runs off the frame at the bottom-left (0px margin, the prompt asks 80px for pencils) and its tip pokes into the "Upper" tile, with a thin glow streak rising from the tip into the letter p. The pencil does not lie under the row as asked. Hard fail: cramped margin: pencil runs off the left and bottom frame edges (0px); AI artifact: light streak from the pencil tip into the "Upper" tile. | stays in queue; v3 prompt `bp-03-what-is-a-grid-bot__010.txt` (v2 moved to `_superseded/`), target web3.png |
+| gen/bp-03-what-is-a-grid-bot/014/web1.png | PASS | 48/49/126/252 | Four icons in one panel joined by three short arrows: two checked tickets, a zig-zag between dashed lines, an amber stop sign, blue and mint jars. Captions "Orders wait", "Inside your range", "Stop written", "Holdings change" match the one-breath definition. Panel glow sits 48px/49px from the left/right edges: inside the 45px standard but short of the prompt's 120px ask, hence composition 4. | placed at course/images/bp-03-what-is-a-grid-bot/014.png (blob 56cc2b82) |
+| gen/bp-03-what-is-a-grid-bot/019/web1.png | PASS | 78/65/101/212 | Outro: headline NEXT: MARKET REGIMES and tag "Next lesson: Market regimes" name the next lesson's exact title. "Bring your notes" tip on the notebook, "Next lesson" tip on the right card (2 of 2). Three panels: sideways zig-zag between two lines, steady climb, bounce then break out above the top line and stay above. One thick arrow between the cards. | placed at course/images/bp-03-what-is-a-grid-bot/019.png (blob 44c3c90a) |
+| gen/blueprint-analogies/analogy-fence/web1.png | PASS | 74/66/104/190 | Two posts, exactly two rails, cyan zig-zag whose every peak touches the underside of the top rail and every trough the top of the bottom rail, never crossing a rail. 3 of 3 arrows land: "Top rail = top price" on the top rail, "Bottom rail = bottom price" on the bottom rail, "Price bounces between" on the zig-zag midway. No digits, no mascot, no branding. Teaches on its own without code labels: yes. Posts have a wood-grain texture (craft 4). Label lettering is about 35px cap height (about 42px with descenders), short of the prompt's 52px: in the masters' 840x472 panel (scale 0.461) that is about 16px, below the 28px floor, so the CF-6 cover labels must stay and be retuned (text legibility 4). | placed at course/images/blueprint-analogies/analogy-fence.png (blob a8b3633d); CF-6 relabel still to apply in studio.py |
+
+The 010 web1 is the first image of a 2-image ChatGPT series, and it was judged on its own. The web2.png in that folder was not scored.
+
+## Code-drawn frames re-scored at PR #17 head e0b84d5 (CF-1..CF-5 applied)
+
+These are the committed PNGs under blueprint-smoke/code-drawn/ at e0b84d5, and scored_blob is the committed blob. A scratch `--frames` export at e0b84d5 matches pixel for pixel, except the mascot box, which is gated on the pass list. Numbers were checked against course/data/public-prices/btc-usd-windows.json: band low 24,930.30, high 30,330.64, step 900.06; 19 Jul 29,913.92; 16 Oct 28,519.47; 23 Oct 33,086.23 (the first close above 30,331); 14 Mar 71,396.59; 27,630 crossed 10 times (5 down, 5 up).
+
+| Frame | Result | Reason | Fix |
+|---|---|---|---|
+| bp-01-introduction/chart/range-2023/hook | PASS | Footer now exactly "Education only. Not financial advice." (CF-1). Real 90-day window 19 July to 16 October 2023, band 24,930 to 30,331 (min low 24,930.30, max high 30,330.64), "16 Oct 28,519" (close 28,519.47), all from btc-usd-windows.json range_2023. | none |
+| bp-01-introduction/chart/range-2023/a-ladder | PASS | CF-1 footer exact. Ladder still fitted whole, 28px cover tags, "Not to scale: the chart has 7 levels", seven real levels 24,930 to 30,331 (step 900.06). | none |
+| bp-01-introduction/chart/range-2023/the-range | PASS | CF-1 footer exact. Real low 24,930 and high 30,331, 16 Oct 28,519. | none |
+| bp-01-introduction/chart/range-2023/the-levels | PASS | CF-1 footer exact. Seven lines 24,930 / 25,830 / 26,730 / 27,630 / 28,531 / 29,431 / 30,331, "one gap = about 900" (5,400.34 / 6 = 900.06). | none |
+| bp-01-introduction/chart/range-2023/the-fence | PASS | CF-1 footer exact; connectors end on the rails. This frame still embeds the OLD 1280x720 fence still (the only one on d1f6 at e0b84d5) and its CF-6 cover boxes are still tuned to it, so it is correct as committed. CF-6 is NOT applied yet: once the new 1536x1024 fence still lands on d1f6, apply CF-6 and re-render and re-score this frame. | CF-6 (pending the new fence still) |
+| bp-01-introduction/chart/range-2023/walk-the-summer | PASS | CF-1 footer exact. CF-2 verified: the axis now reads 30,331 / 29,431 / 28,531 / 27,630 / 26,730 / 25,830 / 24,930 with commas, and the unwalked path is drawn at alpha 150, width 2, so the whole summer path is visible. "19 Jul 29,914" = close 29,913.92. | none |
+| bp-01-introduction/chart/breakout-2023/the-stop | PASS | CF-1 footer exact. "23 Oct: leaves 30,331" (first close above, 33,086.23) and "14 Mar 71,397" (close 71,396.59) match breakout_2023. | none |
+| bp-01-introduction/title-card | PASS | CF-1 footer exact. "Lesson 01 / Introduction" = lesson title; wordmark; approved mascot (course/images/mascot/blueprint-mascot.png blob 5d421ae3, unchanged); band chart with EXAMPLE pill. | none |
+| bp-01-introduction/end-card | PASS | CF-1 footer exact. Names the next lesson exactly: "Lesson 2 / What you are going to need"; approved mascot. | none |
+| bp-01-introduction/thumbnail | PASS | CF-1 footer exact (paint.py thumbnail template). "Your first range" with the real band and EXAMPLE pill. | none |
+| bp-02-what-you-need/chart/range-2023/hook | PASS | CF-1 footer exact. List still fitted, its tags re-covered at 28px; Band 24,930 to 30,331 / Six gaps. About 900. / The close leaves 30,331. with EXAMPLE. | none |
+| bp-02-what-you-need/chart/range-2023/seven-lines | PASS | CF-1 footer exact. The seven lines in order, plain words. | none |
+| bp-02-what-you-need/chart/range-2023/the-three-words | PASS | CF-1 footer exact. Range 24,930 to 30,331 / Levels six gaps about 900 / Stop leaves 30,331, EXAMPLE pill. | none |
+| bp-02-what-you-need/chart/range-2023/no-secrets | PASS | CF-1 footer exact. Never (seed phrase, private key, API secret, account balance) vs allowed columns. | none |
+| bp-02-what-you-need/chart/range-2023/copy-the-path | PASS | CF-1 footer exact. CF-2 verified: comma axis labels and the visible unwalked path; 19 Jul 29,914. | none |
+| bp-02-what-you-need/title-card | PASS | CF-1 footer exact. "Lesson 02 / What you are going to need" = lesson title; approved mascot. | none |
+| bp-02-what-you-need/end-card | PASS | CF-1 footer exact. Names the next lesson exactly: "Lesson 3 / What is a grid bot"; BUY 27,630 band chart with EXAMPLE; approved mascot. | none |
+| bp-02-what-you-need/thumbnail | PASS | CF-1 footer exact. Lesson title with the seven-line list. | none |
+| bp-03-what-is-a-grid-bot/chart/range-2023/hook | PASS | CF-1 footer exact. CF-3 verified: tickets drawn at 28px on 42px tags. Two BUY 27,630 tickets (17 Aug, 30 Aug) plus "3 more in October" with 3 dots = the 5 down-closes through 27,630 (17 Aug, 30 Aug, 2/5/9 Oct). Caption makes no count claim. | none |
+| bp-03-what-is-a-grid-bot/chart/range-2023/limit-orders-wait | FAIL | CF-1 footer exact. CF-3 verified (28px tickets). CF-4 verified: subtitle "A buy order waits at 27,630. A cross is not a filled order." and caption "Daily closes crossed 27,630 10 times. A cross is not a filled order." No jargon left. Still failing on count: the caption (and VO) say 10 crosses, which is right (5 down: 17 Aug, 30 Aug, 2/5/9 Oct; 5 up: 29 Aug, 1/4/6/16 Oct), but the frame marks only the 5 down-crosses (2 BUY tickets + "3 more in October" dots). A beginner counts 5 marks next to "10 times". Stage 2 noted this but CODE_FIXES had no fix for it; now CF-7. | CF-7 |
+| bp-03-what-is-a-grid-bot/chart/range-2023/buys-and-sells | PASS | CF-1 footer exact. 30,331/29,431/28,531 sell, 27,630 middle, 26,730/25,830/24,930 buy; sells above in mint, buys below in blue. | none |
+| bp-03-what-is-a-grid-bot/chart/range-2023/where-the-path-stood | PASS | CF-1 footer exact. CF-2 verified: comma axis labels, visible unwalked path; 19 Jul 29,914. | none |
+| bp-03-what-is-a-grid-bot/title-card | PASS | CF-1 footer exact. "Lesson 03 / What is a grid bot" = lesson title; approved mascot; BUY 27,630 band chart with EXAMPLE. | none |
+| bp-03-what-is-a-grid-bot/end-card | PASS | CF-1 footer exact. Names "Lesson 4 / Market regimes" exactly. CF-5 verified: the Break panel path cuts through the top line and finishes about 80px above it, so it clearly leaves the band. | none |
+| bp-03-what-is-a-grid-bot/thumbnail | PASS | CF-1 footer exact. "What is a grid bot" with the band chart and BUY 27,630 level. | none |
+
+Disclaimer string sweep at e0b84d5: Blueprint code and yaml no longer contain "Educational content only" (studio.py, build_numbers.py, numbers/*.yaml, captions, lesson_scripts.py, pack/paint.py). It is still in two old committed smoke outputs, `blueprint-smoke/bp-01-introduction.yaml` and `bp-01-wrong-number.yaml`, which no frame reads, and in non-Blueprint files (brand.py, video-qa-review skill, production-pipeline, defi-program).
+
+### Running counts after round 2 and e0b84d5
+
+| Lesson | Script stills | Shared + code-drawn | All rows | Rows left |
+|---|---|---|---|---|
+| bp-01-introduction | 16/18 | 14/14 | 30/32 | 007.png and 016.png (ChatGPT, v2 prompts) |
+| bp-02-what-you-need | 21/21 | 11/11 | 32/32 | none: 100% |
+| bp-03-what-is-a-grid-bot | 18/19 | 8/9 | 26/28 | 010.png (ChatGPT, v3 prompt) and code-drawn chart/range-2023/limit-orders-wait (CF-7) |
+| **All** | 55/58 | 33/34 | **88/92** | 4 |

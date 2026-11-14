@@ -1,0 +1,43 @@
+--- a/course/blueprint-rebuild/studio.py
++++ b/course/blueprint-rebuild/studio.py
+@@ -826,6 +826,14 @@
+         for index in october:
+             cx = x_of(index)
+             draw.ellipse((cx - 5, y_line - 5, cx + 5, y_line + 5), fill=WHITE, outline=CYAN)
++        if chapter == "Limit orders wait":
++            # The caption says 10 crosses: mark the 5 up-crosses too, as rings.
++            ups = [index for index in range(1, n) if closes[index - 1] < 27630 < closes[index]]
++            for index in ups:
++                cx = x_of(index)
++                draw.ellipse((cx - 7, y_line - 7, cx + 7, y_line + 7), outline=WHITE, width=3)
++            key = f"{len(downs) + len(ups)} crosses: {len(downs)} down, {len(ups)} up (rings)"
++            draw_ticket(key, plot[0] + 16, plot[3] - 16 - ticket_h, None)
+         if october:
+             more = "3 more in October"
+             width = int(face_t.getlength(more)) + 16
+@@ -1223,10 +1231,10 @@
+         _cover_label(draw, (668, 440, 848, 506), ["Gap = the", "distance"], bounds)
+         return
+     if kind == "fence":
+-        _cover_label(draw, (710, 308, 900, 350), ["Top rail", "= top price"], bounds)
+-        _cover_label(draw, (184, 574, 432, 620), ["Bottom rail", "= bottom price"], bounds)
+-        # One line, same height as the baked tag, so it stays under the post.
+-        _cover_label(draw, (620, 578, 900, 626), ["Bounces between"], bounds)
++        # Tuned to the 1536x1024 fence still (contain scale 0.461, x offset 66).
++        _cover_label(draw, (625, 316, 843, 368), ["Top rail = top price"], bounds)
++        _cover_label(draw, (197, 568, 506, 622), ["Bottom rail", "= bottom price"], bounds)
++        _cover_label(draw, (565, 568, 844, 622), ["Price bounces between"], bounds)
+         return
+     if kind == "list":
+         # The passing checklist shrinks its own tags to ~17px. Cover them at 28px,
+@@ -1269,8 +1277,8 @@
+         base.paste(panel, origin)
+         if kind == "fence":
+             src_h = load_picture(Path(still)).size[1]
+-            rail_top = int(264 * src_h / 720)
+-            rail_bot = int(408 * src_h / 720)
++            rail_top = int(413 * src_h / 1024)
++            rail_bot = int(611 * src_h / 1024)
+             shot["rail_marks"] = {
+                 "top": origin[1] + oy + rail_top * scale,
+                 "bottom": origin[1] + oy + rail_bot * scale,
