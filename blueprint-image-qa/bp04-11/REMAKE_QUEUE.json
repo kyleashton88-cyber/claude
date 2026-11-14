@@ -1,53 +1,7 @@
 {
-  "note": "ChatGPT web, one at a time, in this order. Attach _anchors/anchor.png, paste the prompt file as one message, download, copy to target_gen, fit to target_out (1536x1024), re-score, then commit to repo_path. No lesson renders until all its rows pass. Prompts marked prompt_updated were revised on 14 Nov for the PR #17 (6df2536) smoothed narration; see PR17_PROMPT_UPDATES.md. Updated for PR #17 head 6848d09: bp-04 001/004/007/008/009 passed as ChatGPT web renders and left the queue; bp-04 002/003/005/006/010 failed web1 and stay (003/005/006/010 now on v2 prompts). Round 2 (14 Nov): bp-04 002/003/005/010 (web2) and 011/013/014/015/016/017/019/020 (web1) passed and left the queue; bp-04 006 (web2, now v3 prompt, target web3), 012 and 018 (web1, now v2 prompts, target web2) failed and stay. Strict arrow rule (14 Nov): bp-04 007, 009, 011, 015 re-added (web2, v2 prompts) after their passed renders were failed for arrow tips that stop short of target. Round on top of 57e0aeb (14 Nov, WITA): scored bp-04 006/web3, 007/009/011/012/015/018 web2, and first scoring of all 20 bp-06 web.png. Passed and removed: bp-04 009, 012, 018; bp-06 001, 002, 003, 004, 005, 007, 008, 009, 011, 013, 015, 017. Failed (next prompt): bp-04 006 (web4/v4), 007/011/015 (web3/v3); bp-06 006, 010, 012, 014, 016, 018, 019, 020 (web2/v2). Untouched this run: bp-04 010, all bp-05, all bp-07+. Round on top of 4bfe3e6 (14 Nov, WITA): scored bp-04 010/web3, bp-05 005/006/015/016/019 web2, and first scoring of all 20 bp-07 web.png. Passed and removed: bp-04 010; bp-05 005, 016; bp-07 001, 002, 004, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018. Failed (next prompt): bp-05 006/015/019 (web3/v3); bp-07 003, 005, 019, 020 (web2/v2). Untouched this run: bp-04 006, 007, 011, 015; all remaining bp-06 fails; all bp-08+. Round on top of 0cc141a (14 Nov, WITA): scored bp-04 006/web4 PASS (removed from queue). Untouched this run: bp-04 007, 011, 015; all remaining bp-05/06/07 fails; all bp-08+. Ledger update 14 Nov 2026 WITA (script rewrite b608319 / REPORT-b608319.md): Reopened or updated for on-image text: BP-04 006/007/011; BP-05 015; BP-06 006/010/012/014/019; BP-07 005/019; and every still used by BP-08..11 in the b608319 plan (14 each). BP-10 008 is still used in the plan, so it was not dropped; remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed files left in place. Exact replacement text is in each row's fix_note. Prior unlisted fails stay in the queue after the script-rewrite items. Round on top of c3d1daa (14 Nov, WITA): scored Cursor remakes for BP-04 006 (cfa2179 / tip 3a1137a cursor1.png, blob b8e740a5) and 007/011 (8cb7a75 cursor2.png, blobs 662f3d07 / b77ca178). All three PASS, placed, source cursor. Dequeued. BP-04 19/20 (015 still queued). Round: scored BP-05 015 cursor1.png from 29de595, blob ea3082e7, PASS, placed. BP-05 17/19. Round: scored BP-06 006/010/012/019 from cc73f31 and 014 from 8cb7a75. All five PASS, placed. BP-06 17/20. ",
-  "length": 92,
+  "note": "ChatGPT web, one at a time, in this order. Attach _anchors/anchor.png, paste the prompt file as one message, download, copy to target_gen, fit to target_out (1536x1024), re-score, then commit to repo_path. No lesson renders until all its rows pass. Prompts marked prompt_updated were revised on 14 Nov for the PR #17 (6df2536) smoothed narration; see PR17_PROMPT_UPDATES.md. Updated for PR #17 head 6848d09: bp-04 001/004/007/008/009 passed as ChatGPT web renders and left the queue; bp-04 002/003/005/006/010 failed web1 and stay (003/005/006/010 now on v2 prompts). Round 2 (14 Nov): bp-04 002/003/005/010 (web2) and 011/013/014/015/016/017/019/020 (web1) passed and left the queue; bp-04 006 (web2, now v3 prompt, target web3), 012 and 018 (web1, now v2 prompts, target web2) failed and stay. Strict arrow rule (14 Nov): bp-04 007, 009, 011, 015 re-added (web2, v2 prompts) after their passed renders were failed for arrow tips that stop short of target. Round on top of 57e0aeb (14 Nov, WITA): scored bp-04 006/web3, 007/009/011/012/015/018 web2, and first scoring of all 20 bp-06 web.png. Passed and removed: bp-04 009, 012, 018; bp-06 001, 002, 003, 004, 005, 007, 008, 009, 011, 013, 015, 017. Failed (next prompt): bp-04 006 (web4/v4), 007/011/015 (web3/v3); bp-06 006, 010, 012, 014, 016, 018, 019, 020 (web2/v2). Untouched this run: bp-04 010, all bp-05, all bp-07+. Round on top of 4bfe3e6 (14 Nov, WITA): scored bp-04 010/web3, bp-05 005/006/015/016/019 web2, and first scoring of all 20 bp-07 web.png. Passed and removed: bp-04 010; bp-05 005, 016; bp-07 001, 002, 004, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018. Failed (next prompt): bp-05 006/015/019 (web3/v3); bp-07 003, 005, 019, 020 (web2/v2). Untouched this run: bp-04 006, 007, 011, 015; all remaining bp-06 fails; all bp-08+. Round on top of 0cc141a (14 Nov, WITA): scored bp-04 006/web4 PASS (removed from queue). Untouched this run: bp-04 007, 011, 015; all remaining bp-05/06/07 fails; all bp-08+. Ledger update 14 Nov 2026 WITA (script rewrite b608319 / REPORT-b608319.md): Reopened or updated for on-image text: BP-04 006/007/011; BP-05 015; BP-06 006/010/012/014/019; BP-07 005/019; and every still used by BP-08..11 in the b608319 plan (14 each). BP-10 008 is still used in the plan, so it was not dropped; remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed files left in place. Exact replacement text is in each row's fix_note. Prior unlisted fails stay in the queue after the script-rewrite items. Round on top of c3d1daa (14 Nov, WITA): scored Cursor remakes for BP-04 006 (cfa2179 / tip 3a1137a cursor1.png, blob b8e740a5) and 007/011 (8cb7a75 cursor2.png, blobs 662f3d07 / b77ca178). All three PASS, placed, source cursor. Dequeued. BP-04 19/20 (015 still queued). Round: scored BP-05 015 cursor1.png from 29de595, blob ea3082e7, PASS, placed. BP-05 17/19. Round: scored BP-06 006/010/012/019 from cc73f31 and 014 from 8cb7a75. All five PASS, placed. BP-06 17/20. Round: scored BP-07 005 and 019 from d62988f, both PASS, placed. BP-07 18/20. ",
+  "length": 90,
   "queue": [
-    {
-      "order": 10,
-      "lesson": "bp-07-spot-paper-trading",
-      "beat": 5,
-      "path": "course/images/bp-07-spot-paper-trading/005.png",
-      "prompt": "specs/remake/bp-07-spot-paper-trading__005.txt",
-      "target_gen": "gen/bp-07-spot-paper-trading/005/cursor1.png",
-      "target_out": "out/course/images/bp-07-spot-paper-trading/005.png",
-      "repo_path": "course/images/bp-07-spot-paper-trading/005.png",
-      "size": "1536x1024",
-      "headline": "Pair / Top / Bottom / Gap count / Your two rules",
-      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: \"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "arrow tip stops short of target: all five label tips (Pair, Top price, Bottom price, Number of gaps, Your rules) stop short of the left ends of their form rows (visible gap in the form's left padding)"
-      ],
-      "previous_attempts": [
-        "gen/bp-07-spot-paper-trading/005/web.png"
-      ],
-      "prompt_version": "v2",
-      "superseded_prompt": "specs/remake/_superseded/bp-07-spot-paper-trading__005.v1.txt",
-      "fix_note": "\"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\"."
-    },
-    {
-      "order": 11,
-      "lesson": "bp-07-spot-paper-trading",
-      "beat": 19,
-      "path": "course/images/bp-07-spot-paper-trading/019.png",
-      "prompt": "specs/remake/bp-07-spot-paper-trading__019.txt",
-      "target_gen": "gen/bp-07-spot-paper-trading/019/cursor1.png",
-      "target_out": "out/course/images/bp-07-spot-paper-trading/019.png",
-      "repo_path": "course/images/bp-07-spot-paper-trading/019.png",
-      "size": "1536x1024",
-      "headline": "Pair / Top / Bottom / Gap count / Your two rules",
-      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: \"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "arrow tip stops short of target: the four scene-matching connector arrows stop short of the right-hand form (visible gaps at the points)"
-      ],
-      "previous_attempts": [
-        "gen/bp-07-spot-paper-trading/019/web.png"
-      ],
-      "prompt_version": "v2",
-      "superseded_prompt": "specs/remake/_superseded/bp-07-spot-paper-trading__019.v1.txt",
-      "fix_note": "\"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\"."
-    },
     {
       "order": 12,
       "lesson": "bp-08-managing-and-monitoring",

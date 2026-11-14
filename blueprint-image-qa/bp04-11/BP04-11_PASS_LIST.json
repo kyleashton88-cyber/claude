@@ -8,8 +8,8 @@
   "not_in_scope": "course/images/_held/*.png (10 files: bp-06 014/017, bp-07 012/017/020, bp-08 003/006/007/009/011) are not referenced by any lesson script and were not scored. Shared title-art/mascot assets are already on BP01-03_PASS_LIST.json.",
   "counts": {
     "total": 161,
-    "pass": 69,
-    "fail": 92,
+    "pass": 71,
+    "fail": 90,
     "by_lesson": {
       "bp-04-market-regimes": {
         "total": 20,
@@ -28,8 +28,8 @@
       },
       "bp-07-spot-paper-trading": {
         "total": 20,
-        "pass": 16,
-        "fail": 4
+        "pass": 18,
+        "fail": 2
       },
       "bp-08-managing-and-monitoring": {
         "total": 20,
@@ -4520,70 +4520,96 @@
       "beat": 5,
       "chapter": "Fields from the page",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "f415cb40ec97f9764e30e1bf596f0f0cdd7c331d",
-        "cursor/blueprint-beginner-images": "f415cb40ec97f9764e30e1bf596f0f0cdd7c331d"
+        "cursor/blueprint-beginner-images": "3b621dcea5e76e897eab32ade7e36395d8968e18",
+        "cursor/blueprint-cursor-images": "3b621dcea5e76e897eab32ade7e36395d8968e18"
       },
       "beat_concept": "The fields you are allowed to copy are the ones you already wrote: pair, upper, lower, gap count, and the two sentences.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "arrow tip stops short of target: all five label tips (Pair, Top price, Bottom price, Number of gaps, Your rules) stop short of the left ends of their form rows (visible gap in the form's left padding)"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__005.txt",
-      "notes": "web1 FAIL (first scoring) under the strict arrow rule. The five field labels are correct (Pair / Top price / Bottom price / Number of gaps / Your rules \u2014 LINES is gone) and EXAMPLE is present. But all five label tips stop short of the form-row left ends, leaving a visible gap in the form's left padding. Margins 75/69/87/108. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "web1 FAIL (first scoring) under the strict arrow rule. The five field labels are correct (Pair / Top price / Bottom price / Number of gaps / Your rules \u2014 LINES is gone) and EXAMPLE is present. But all five label tips stop short of the form-row left ends, leaving a visible gap in the form's left padding. Margins 75/69/87/108. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@d62988f6, identical at tip 3a1137a, blob 3b621dcea5e76e897eab32ade7e36395d8968e18, 1536x1024, 112883 bytes). Headline 'FIVE BOXES TO COPY'. Five fields exactly: Pair / Top / Bottom / Gap count / Your two rules. No 'LINES' field (does not contradict 'gaps, not lines'). No arrows. EXAMPLE present. Matches the narration. No mascot. Margins 103/176/111/254. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 70,
-        "right": 371,
-        "top": 109,
-        "bottom": 251
+        "left": 103,
+        "right": 176,
+        "top": 111,
+        "bottom": 254
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/005.png",
-      "scored_blob": "f415cb40ec97f9764e30e1bf596f0f0cdd7c331d",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/005.png",
+      "scored_blob": "3b621dcea5e76e897eab32ade7e36395d8968e18",
       "committed": true,
-      "pass": false,
+      "pass": true,
       "remake_review": {
-        "file": "gen/bp-07-spot-paper-trading/005/web.png",
-        "blob": "35d592089e8dc5971c4b6fa2cc1cb287f892e446",
+        "file": "gen/bp-07-spot-paper-trading/005/cursor1.png",
+        "blob": "3b621dcea5e76e897eab32ade7e36395d8968e18",
         "size": "1536x1024",
         "margins_px": {
-          "left": 75,
-          "right": 69,
-          "top": 87,
-          "bottom": 108
+          "left": 103,
+          "right": 176,
+          "top": 111,
+          "bottom": 254
         },
-        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric",
+        "source_commit": "d62988f6c93856cadc5410b04219ec8b2382a6ca",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
           "beginner_clarity": 5,
-          "composition_hierarchy": 4,
-          "craft_polish": 4,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
           "brand_fidelity": 5,
           "text_legibility": 5,
           "character_consistency": null,
-          "label_accuracy": 3
+          "label_accuracy": 5
         },
-        "hard_fails": [
-          "arrow tip stops short of target: all five label tips (Pair, Top price, Bottom price, Number of gaps, Your rules) stop short of the left ends of their form rows (visible gap in the form's left padding)"
-        ],
-        "notes": "web1 FAIL (first scoring) under the strict arrow rule. The five field labels are correct (Pair / Top price / Bottom price / Number of gaps / Your rules \u2014 LINES is gone) and EXAMPLE is present. But all five label tips stop short of the form-row left ends, leaving a visible gap in the form's left padding. Margins 75/69/87/108. Next: web2.png on the v2 prompt.",
-        "pass": false
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@d62988f6, identical at tip 3a1137a, blob 3b621dcea5e76e897eab32ade7e36395d8968e18, 1536x1024, 112883 bytes). Headline 'FIVE BOXES TO COPY'. Five fields exactly: Pair / Top / Bottom / Gap count / Your two rules. No 'LINES' field (does not contradict 'gaps, not lines'). No arrows. EXAMPLE present. Matches the narration. No mascot. Margins 103/176/111/254. Placed, source cursor.",
+        "pass": true
       },
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "\"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\"."
+      "previous_remake_reviews": [
+        {
+          "file": "gen/bp-07-spot-paper-trading/005/web.png",
+          "blob": "35d592089e8dc5971c4b6fa2cc1cb287f892e446",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 75,
+            "right": 69,
+            "top": 87,
+            "bottom": 108
+          },
+          "scored_against": "beat + prompt current when this batch started (score on merits)",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 4,
+            "craft_polish": 4,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 3
+          },
+          "hard_fails": [
+            "arrow tip stops short of target: all five label tips (Pair, Top price, Bottom price, Number of gaps, Your rules) stop short of the left ends of their form rows (visible gap in the form's left padding)"
+          ],
+          "notes": "web1 FAIL (first scoring) under the strict arrow rule. The five field labels are correct (Pair / Top price / Bottom price / Number of gaps / Your rules \u2014 LINES is gone) and EXAMPLE is present. But all five label tips stop short of the form-row left ends, leaving a visible gap in the form's left padding. Margins 75/69/87/108. Next: web2.png on the v2 prompt.",
+          "pass": false
+        }
+      ],
+      "previous_committed_blob": "f415cb40ec97f9764e30e1bf596f0f0cdd7c331d"
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/006.png",
@@ -5423,70 +5449,96 @@
       "beat": 19,
       "chapter": "If the screen differs",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "23e197092d463ec22b38d3a5b168a0afbb5ad04a",
-        "cursor/blueprint-beginner-images": "23e197092d463ec22b38d3a5b168a0afbb5ad04a"
+        "cursor/blueprint-beginner-images": "0ba89c2a924230dd301cb007a3068ef05f7cd8f0",
+        "cursor/blueprint-cursor-images": "0ba89c2a924230dd301cb007a3068ef05f7cd8f0"
       },
       "beat_concept": "Venue screens move. If a label differs, you translate it onto your five fields or you stop.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 2,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "arrow tip stops short of target: the four scene-matching connector arrows stop short of the right-hand form (visible gaps at the points)"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__019.txt",
-      "notes": "web1 FAIL (first scoring) under the strict panel-connector arrow rule. 'Labels may move' tip sits inside the top right-hand field (touch of that form). But the four scene-matching connectors are clearly short of the right form (visible gaps). The left form also shows 4 rows vs the right's 5, and the rows are not visibly in a different order (prompt: same rows in a different order). Margins 95/136/85/73. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "web1 FAIL (first scoring) under the strict panel-connector arrow rule. 'Labels may move' tip sits inside the top right-hand field (touch of that form). But the four scene-matching connectors are clearly short of the right form (visible gaps). The left form also shows 4 rows vs the right's 5, and the rows are not visibly in a different order (prompt: same rows in a different order). Margins 95/136/85/73. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@d62988f6, identical at tip 3a1137a, blob 0ba89c2a924230dd301cb007a3068ef05f7cd8f0, 1536x1024, 112909 bytes). Headline 'IF A LABEL DIFFERS, USE THESE'. Same five fields: Pair / Top / Bottom / Gap count / Your two rules. No 'LINES' field. No arrows. EXAMPLE present. Matches the narration. No mascot. Margins 103/176/109/254. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 70,
-        "right": 345,
-        "top": 110,
-        "bottom": 193
+        "left": 103,
+        "right": 176,
+        "top": 109,
+        "bottom": 254
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-07-spot-paper-trading/019.png",
-      "scored_blob": "23e197092d463ec22b38d3a5b168a0afbb5ad04a",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-07-spot-paper-trading/019.png",
+      "scored_blob": "0ba89c2a924230dd301cb007a3068ef05f7cd8f0",
       "committed": true,
-      "pass": false,
+      "pass": true,
       "remake_review": {
-        "file": "gen/bp-07-spot-paper-trading/019/web.png",
-        "blob": "5861f5ec20bc7a3472ad6de095603ea72f9f5d46",
+        "file": "gen/bp-07-spot-paper-trading/019/cursor1.png",
+        "blob": "0ba89c2a924230dd301cb007a3068ef05f7cd8f0",
         "size": "1536x1024",
         "margins_px": {
-          "left": 95,
-          "right": 136,
-          "top": 85,
-          "bottom": 73
+          "left": 103,
+          "right": 176,
+          "top": 109,
+          "bottom": 254
         },
-        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric",
+        "source_commit": "d62988f6c93856cadc5410b04219ec8b2382a6ca",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
-          "beginner_clarity": 3,
-          "composition_hierarchy": 3,
-          "craft_polish": 3,
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
           "brand_fidelity": 5,
           "text_legibility": 5,
           "character_consistency": null,
-          "label_accuracy": 3
+          "label_accuracy": 5
         },
-        "hard_fails": [
-          "arrow tip stops short of target: the four scene-matching connector arrows stop short of the right-hand form (visible gaps at the points)"
-        ],
-        "notes": "web1 FAIL (first scoring) under the strict panel-connector arrow rule. 'Labels may move' tip sits inside the top right-hand field (touch of that form). But the four scene-matching connectors are clearly short of the right form (visible gaps). The left form also shows 4 rows vs the right's 5, and the rows are not visibly in a different order (prompt: same rows in a different order). Margins 95/136/85/73. Next: web2.png on the v2 prompt.",
-        "pass": false
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@d62988f6, identical at tip 3a1137a, blob 0ba89c2a924230dd301cb007a3068ef05f7cd8f0, 1536x1024, 112909 bytes). Headline 'IF A LABEL DIFFERS, USE THESE'. Same five fields: Pair / Top / Bottom / Gap count / Your two rules. No 'LINES' field. No arrows. EXAMPLE present. Matches the narration. No mascot. Margins 103/176/109/254. Placed, source cursor.",
+        "pass": true
       },
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "\"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\"."
+      "previous_remake_reviews": [
+        {
+          "file": "gen/bp-07-spot-paper-trading/019/web.png",
+          "blob": "5861f5ec20bc7a3472ad6de095603ea72f9f5d46",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 95,
+            "right": 136,
+            "top": 85,
+            "bottom": 73
+          },
+          "scored_against": "beat + prompt current when this batch started (score on merits)",
+          "scores": {
+            "beginner_clarity": 3,
+            "composition_hierarchy": 3,
+            "craft_polish": 3,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 3
+          },
+          "hard_fails": [
+            "arrow tip stops short of target: the four scene-matching connector arrows stop short of the right-hand form (visible gaps at the points)"
+          ],
+          "notes": "web1 FAIL (first scoring) under the strict panel-connector arrow rule. 'Labels may move' tip sits inside the top right-hand field (touch of that form). But the four scene-matching connectors are clearly short of the right form (visible gaps). The left form also shows 4 rows vs the right's 5, and the rows are not visibly in a different order (prompt: same rows in a different order). Margins 95/136/85/73. Next: web2.png on the v2 prompt.",
+          "pass": false
+        }
+      ],
+      "previous_committed_blob": "23e197092d463ec22b38d3a5b168a0afbb5ad04a"
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/020.png",

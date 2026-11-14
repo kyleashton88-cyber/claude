@@ -490,3 +490,19 @@ All required headlines are exact; arrow tips touch.
 
 ### Updated counts
 - **BP-06: 17/20 — not 100%.** Other queued rows (not in this Cursor batch) remain.
+
+---
+
+## Cursor-agent remakes for BP-07 005 and 019
+
+Both from `d62988f6c93856cadc5410b04219ec8b2382a6ca` (identical at tip 3a1137a).
+
+| File | Result | Margins (l/r/t/b) | Scores | Blob |
+|---|---|---|---|---|
+| gen/bp-07-spot-paper-trading/005/cursor1.png | PASS | 103/176/111/254 | 5/5/5/5/5/—/5 | 3b621dcea5e76e897eab32ade7e36395d8968e18 |
+| gen/bp-07-spot-paper-trading/019/cursor1.png | PASS | 103/176/109/254 | 5/5/5/5/5/—/5 | 0ba89c2a924230dd301cb007a3068ef05f7cd8f0 |
+
+Five fields are Pair / Top / Bottom / Gap count / Your two rules. No 'LINES' field.
+
+### Updated counts
+- **BP-07: 18/20 — not 100%.** Other queued rows (not in this Cursor batch) remain.
