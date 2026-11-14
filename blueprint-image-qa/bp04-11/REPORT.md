@@ -558,3 +558,29 @@ Scored from `c6cfb35131b48a7a4dd5f613dac374f76dc4c0d8` (identical at tip 3a1137a
 
 ### Updated counts
 - **BP-09: 14/21 — not 100%.** Unused title / your-turn / outro rows remain in the queue and were not in this Cursor batch.
+
+---
+
+## Cursor-agent remakes for bp-10-scaling-up used stills
+
+Scored from `2203da82b2cf2cc81d4ce06b45ecbe10c8587635` (identical at tip 3a1137a). All 14 used stills PASS, placed, source cursor.
+
+| File | Result | Margins (l/r/t/b) | Scores | Blob |
+|---|---|---|---|---|
+| gen/bp-10-scaling-up/001/cursor1.png | PASS | 101/120/109/95 | 5/5/5/5/5/—/5 | `9fcfff72ad2ad1943156570b8d2698a8510a4861` |
+| gen/bp-10-scaling-up/004/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `9edc11a9b20d811466e41cc16bdd431dc12b68e6` |
+| gen/bp-10-scaling-up/005/cursor1.png | PASS | 101/120/109/95 | 5/5/5/5/5/—/5 | `0d69f63412478da17fad453f103f1199b1764e5e` |
+| gen/bp-10-scaling-up/006/cursor1.png | PASS | 101/120/109/95 | 5/5/5/5/5/—/5 | `809d021a7a557bd28dbe7c5e4a473f66aa51dbf0` |
+| gen/bp-10-scaling-up/007/cursor1.png | PASS | 102/120/109/95 | 5/5/5/5/5/—/5 | `5e478df7c903ad3fa85816bf2bc96ae5f5807e2b` |
+| gen/bp-10-scaling-up/008/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `953eb68bad1091e72f4ad560978bd0c3ed560c6a` |
+| gen/bp-10-scaling-up/009/cursor1.png | PASS | 101/120/109/95 | 5/5/5/5/5/—/5 | `a0ee852d00ed0d5ec6ed2add4f1b603a767c9b2e` |
+| gen/bp-10-scaling-up/010/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `494d2d549571857d89a2b2b6098cc415384e39fa` |
+| gen/bp-10-scaling-up/011/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `7068607b78a4a713eed4bf3f9fcd71a7565fbfe8` |
+| gen/bp-10-scaling-up/012/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `45547a82833a9744c5f5672c6783a29ab803eb72` |
+| gen/bp-10-scaling-up/013/cursor1.png | PASS | 101/120/109/95 | 5/5/5/5/5/—/5 | `3f8614e9d61467e62bf1ccf1283d5588920e59aa` |
+| gen/bp-10-scaling-up/014/cursor1.png | PASS | 102/120/109/95 | 5/5/5/5/5/—/5 | `0e671249f5f93faeb8ad34a77f53d138af264b1c` |
+| gen/bp-10-scaling-up/015/cursor1.png | PASS | 103/120/110/95 | 5/5/5/5/5/—/5 | `25c6357eaf918b048ec109a0487c83ce2eeb6f25` |
+| gen/bp-10-scaling-up/020/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `8b58946bf76bedfda5c3fc3373733f1e4391672a` |
+
+### Updated counts
+- **BP-10: 14/21 — not 100%.** Unused title / your-turn / outro rows remain in the queue and were not in this Cursor batch.
