@@ -313,3 +313,25 @@ Orchestrator should reconcile d1f6 to match the beginner-images pass list for th
 - **BP-02: 30/32 — NOT 100%.** Rows left: 016 (back to old still, queued), 021 (flipped this run).
 - **BP-03: 28/28 — YES, 100%.**
 - **92-row total: 87/92.**
+
+---
+
+## Run on top of 57e0aeb — 14 Nov 2026 (WITA): remake scoring for BP-01 001/007/010 and BP-02 016
+
+Same perfect-run rules (every category at least 4/5, no hard fails; every arrow tip, panel connectors included, must visibly touch its target; doubt = fail). These renders used the prompts current when the batch started and were scored on their own merits against the beat.
+
+| File | Result | Margins (l/r/t/b) | Reason |
+|---|---|---|---|
+| gen/bp-01-introduction/001/web2.png | FAIL | 78/80/86/162 | Teaching and EXAMPLE otherwise good, but "Top price" tip stops short of the top dashed line and "Price bouncing" tip stops short of the zig-zag (clear dark gaps). Next: web3.png on the v3 prompt (v2 moved to specs/remake/_superseded/bp-01-introduction__001.v2.txt). |
+| gen/bp-01-introduction/007/web3.png | FAIL | 67/95/79/126 | Ladder is now right (4 mint above, 4 blue below, Buy aligned to the 2nd blue rung), but all 3 arrow tips stop short of their targets (sell ~8-9px, price-now ~11px, buy the same class). Next: web4.png on the v4 prompt (v3 superseded). |
+| gen/bp-01-introduction/010/web4.png | PASS | 66/61/117/263 | 11 stones (pin + 10). "You are here" tip on the pin; "10 lessons ahead" tip on the last stone. Headline spaced; no EXAMPLE required. Placed at out/ and course/images/bp-01-introduction/010.png (`source: chatgpt-web`, scored_blob 4a3146c57f1ef4a8a2e624adb3f25af075d80155). Removed from the queue. |
+| gen/bp-02-what-you-need/016/web2.png | FAIL | 81/58/77/99 | Seven boxes/lines are present, but "Tick each one" tip stops short of the checkbox and "Copy the 7 lines" tip ends in the paper margin / gap, touching no row line. Next: web3.png on the v3 prompt (v2 superseded). |
+
+021 was not in this batch and stays queued at web1 (another job is writing it).
+
+### Updated counts (92-row list)
+- **BP-01: 30/32 — NOT 100%.** Rows left: 001 (web3, v3), 007 (web4, v4).
+- **BP-02: 30/32 — NOT 100%.** Rows left: 016 (web3, v3), 021 (web1, untouched this run).
+- **BP-03: 28/28 — YES, 100%.**
+- **92-row total: 88/92.**
+- ChatGPT queue (BP-01..03): 4 — bp-01-introduction/001 (gen/bp-01-introduction/001/web3.png), bp-01-introduction/007 (gen/bp-01-introduction/007/web4.png), bp-02-what-you-need/016 (gen/bp-02-what-you-need/016/web3.png), bp-02-what-you-need/021 (gen/bp-02-what-you-need/021/web1.png).

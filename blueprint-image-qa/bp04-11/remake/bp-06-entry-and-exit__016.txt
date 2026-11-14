@@ -5,9 +5,10 @@ MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 8
 Headline: "YOUR TURN: DRAW TWO COLUMNS" (the words YOUR TURN in cyan, the rest white).
 Scene: A notebook with a pencil drawing a vertical line to split the page, flag icon on left and stop icon on right.
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
-- "Before I start": arrow tip touches the flag icon on the left column.
+- "Before I start": arrow tip touches the flag icon on the left column. QA FIX v2: the v1 tip stopped about 8-15px short of the flagpole, with a clear gap; now the arrowhead point lands ON the flag icon or its pole, overlapping the stroke, with no background visible between the tip and the flag.
 - "What ends it": arrow tip touches the stop icon on the right column.
 LABEL ARROWS: exactly 2 thin cyan label arrows, one for each label above that says "arrow tip touches", each with one clean arrowhead whose tip touches the named target. Labels that say "no arrow" have no arrow. Apart from any arrow the Scene itself describes, there are no other arrows; no doubled arrowheads, and no arrow crosses text.
+QA FIX v2 TIP CONTACT: every label arrow's arrowhead point physically touches its named target with NO strip of background visible, not even a few pixels. The v1 "Before I start" tip stopped short of the flagpole. Lengthen that arrow so the point sits ON the flag.
 CHARACTER: no robot, mascot, person, hand-drawn face or character of any kind in this frame. (The only approved mascot is the GridBot Builder robot sheet: metallic white/silver robot, gloss-black face, electric-blue features; it is added separately and must never be redrawn.)
 BRAND: GridBot Builder course style only. No company, entity, ABN, Market Pros, exchange, venue or app names or logos; no coins, banknotes, currency signs or profit claims.
 Goal: a complete beginner understands this one idea in three seconds with the sound off: Practice: The page has two columns: what must be true before you would start, and what finishes the idea.

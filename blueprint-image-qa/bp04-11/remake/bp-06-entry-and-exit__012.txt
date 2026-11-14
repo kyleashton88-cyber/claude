@@ -4,11 +4,13 @@ MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 8
 
 Headline: "COPY THE STOP FIRST" (the words STOP FIRST in cyan, the rest white).
 Scene: A notebook page and a glass form side by side; a cyan arrow numbered 1 goes from the stop column to the form, arrow 2 from the start column.
+ARROW CONTACT (critical, QA FIX v2): the scene arrow numbered 1 must physically touch the stop column at one end AND the matching stop row on the form at the other end, with ZERO gap. The scene arrow numbered 2 must physically touch the start column at one end AND the matching start row on the form at the other end, with ZERO gap. The v1 connectors floated short of their rows.
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
-- "1 Copy stop rule": arrow tip touches the cyan arrow numbered 1.
-- "2 Then start rule": arrow tip touches the cyan arrow numbered 2.
+- "1 Copy stop rule": arrow tip touches the cyan arrow numbered 1. QA FIX v2: the arrowhead point must land ON the cyan arrow numbered 1 (or its numeral), overlapping it, with no background visible between the tip and the numbered connector.
+- "2 Then start rule": arrow tip touches the cyan arrow numbered 2. QA FIX v2: the v1 tip stopped short of the circled 2; now the arrowhead point lands ON the cyan arrow numbered 2 (or the circled 2), overlapping it, with no background visible between the tip and the numbered connector.
 - "EXAMPLE": a small cyan outlined EXAMPLE stamp in the lower-right corner of the main card or chart, fully inside the card, no arrow.
 LABEL ARROWS: exactly 2 thin cyan label arrows, one for each label above that says "arrow tip touches", each with one clean arrowhead whose tip touches the named target. Labels that say "no arrow" have no arrow. Apart from any arrow the Scene itself describes, there are no other arrows; no doubled arrowheads, and no arrow crosses text.
+QA FIX v2 TIP CONTACT: every label arrow's arrowhead point, and every scene / panel-connector arrow tip, must physically touch its named target with NO strip of background visible, not even a few pixels. Doubt counts as a fail.
 CHARACTER: no robot, mascot, person, hand-drawn face or character of any kind in this frame. (The only approved mascot is the GridBot Builder robot sheet: metallic white/silver robot, gloss-black face, electric-blue features; it is added separately and must never be redrawn.)
 BRAND: GridBot Builder course style only. No company, entity, ABN, Market Pros, exchange, venue or app names or logos; no coins, banknotes, currency signs or profit claims.
 FIGURES: the only numbers allowed in the frame are 1, 2, exactly as written above. Source: course/scripts/bp-06-entry-and-exit.json. No other digits, prices, axis values or percentages anywhere. Every card that shows a figure carries the EXAMPLE stamp.

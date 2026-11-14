@@ -296,3 +296,59 @@ FAIL (v2 prompt written, v1 superseded, queued at web2):
 - **019** — next->card transition arrowhead stops ~25px short of the card (tip x=761, card border x=786); panel-connector fail. Outro text "Entry and exit rules" correct.
 
 **BP-05: 14/19 — NOT 100%.** Rows left: 005, 006, 015, 016, 019.
+
+---
+
+## Run on top of 57e0aeb — 14 Nov 2026 (WITA): BP-04 remakes + BP-06 first scoring
+
+Same perfect-run rules (every category at least 4/5, no hard fails; every arrow tip, including panel connectors, must visibly touch its target; doubt = fail). BP-04 renders used the prompts current when the batch started and were scored on merits. BP-06 is first scoring of the 20 web.png stills (beats inventoried from course/scripts/bp-06-entry-and-exit.json). Did not touch gen/bp-04-*/010, gen/bp-05-*, or gen/bp-07-*.
+
+### BP-04 market-regimes remakes
+
+| File | Result | Margins (l/r/t/b) | Reason |
+|---|---|---|---|
+| gen/bp-04-market-regimes/006/web3.png | FAIL | 79/80/79/161 | Crossing-count / stub faults from v2 look fixed, but "Each dot = an order filling" tip stops clearly short of the glowing dot. Next: web4.png on the v4 prompt. |
+| gen/bp-04-market-regimes/007/web2.png | FAIL | 77/76/70/143 | "Higher highs" and "Small dips" appear to touch, but "Keeps going one way" tip has a visible sliver of navy under the dashed slope arrow. Next: web3.png on the v3 prompt. |
+| gen/bp-04-market-regimes/009/web2.png | PASS | 80/82/117/154 | "Give it one name" tip on the empty tag-box edge; "Follow the line left to right" tip against the white dotted arrow. EXAMPLE present. Placed. |
+| gen/bp-04-market-regimes/011/web2.png | FAIL | 84/89/99/189 | Teaching and EXAMPLE otherwise excellent, but "Usual up-and-down size" tip stops about 4-8px short of the bracket's top cap. Next: web3.png on the v3 prompt. |
+| gen/bp-04-market-regimes/012/web2.png | PASS | 59/57/93/110 | "News bar" tip on the tall bar; "Thin book…" tip ON an empty rung (v1 gap-between-rungs fixed). EXAMPLE present. Placed. |
+| gen/bp-04-market-regimes/015/web2.png | FAIL | 86/199/77/125 | "Pick one shape" touches the ticked box, but "Write one reason why" tip stops about 8-15px short of the blank pencil line. Next: web3.png on the v3 prompt. |
+| gen/bp-04-market-regimes/018/web2.png | PASS | 92/130/90/152 | Every crossing circled; path starts and ends on the bottom line; pencil fully inside; "Circle each crossing" tip on a circle. Previous uncircled-right-crossing and 43px-pencil faults look fixed. Placed. |
+
+010 was not in this batch and stays queued at web3 (another job is writing it).
+
+**BP-04: 15/20 — NOT 100%.** Rows left: 006 (gen/bp-04-market-regimes/006/web4.png), 007 (gen/bp-04-market-regimes/007/web3.png), 011 (gen/bp-04-market-regimes/011/web3.png), 015 (gen/bp-04-market-regimes/015/web3.png), 010 (gen/bp-04-market-regimes/010/web3.png).
+
+### BP-05 spacing-and-range — unchanged this run
+**BP-05: 14/19 — NOT 100%.** Rows left: 005 (gen/bp-05-spacing-and-range/005/web2.png), 006 (gen/bp-05-spacing-and-range/006/web2.png), 015 (gen/bp-05-spacing-and-range/015/web2.png), 016 (gen/bp-05-spacing-and-range/016/web2.png), 019 (gen/bp-05-spacing-and-range/019/web2.png).
+
+### BP-06 entry-and-exit — first scoring of web.png (20 beats)
+
+PASS (placed, chatgpt-web): 001, 002, 003, 004, 005, 007, 008, 009, 011, 013, 015, 017.
+FAIL (v2 prompt written, v1 superseded, queued at web2): 006, 010, 012, 014, 016, 018, 019, 020.
+
+Per-image:
+- **001 PASS** — doorway / X metaphor; "Way in" on the entrance-arrow shaft; "No way out…" on the amber X.
+- **002 PASS** — exact disclaimer "Education only. Not financial advice."; headline EDUCATION ONLY.
+- **003 PASS** — title ENTRY AND EXIT RULES; flag and stop; labels under, no arrows.
+- **004 PASS** — two columns "Before I start" / "What ends it"; 0 arrows; no digits.
+- **005 PASS** — stop column is 1 (pencil), start is 2; EXAMPLE present. Left-to-right shows 2 then 1, but the numbers make the order clear (clarity 4).
+- **006 FAIL** — both "Price leaves the box" and "Still out at next check = stop" tips stop short of their targets. Path/EXAMPLE otherwise good.
+- **007 PASS** — three checks; sideways, counts, and gap-bracket tips all touch. The "000" mark is a counter icon (prompt has no FIGURES/EXAMPLE line).
+- **008 PASS** — "Read the rule" on the sentence line; "Point at the matching drawing" on the exit stroke at the box crossing.
+- **009 PASS** — hope star with an X vs a written rule; 0 arrows.
+- **010 FAIL** — "Finish path (invalidation)…" tip stops about 6-8px short of the dashed amber line. "Price leaves the box" touches.
+- **011 PASS** — "I'LL JUST KNOW ISN'T A STOP" with space; feeling vs written rule; 0 arrows.
+- **012 FAIL** — numbered scene connector 1 stops short of the stop row; connector 2 stops short of the start row; "2 Then start rule" tip stops short of the circled 2.
+- **013 PASS** — amount box empty ("Not part of this lesson."); tip sits inside the dashed box (treated as touching the box).
+- **014 FAIL** — cramped right margin 43px on the "Read them aloud" tag (x=1492). The three arrows themselves looked like they touched.
+- **015 PASS** — four recap icons; EXAMPLE with the "1"; 0 arrows.
+- **016 FAIL** — "Before I start" tip stops short of the flagpole (~8-15px). "What ends it" appears to touch the stop icon.
+- **017 PASS** — "Write this side first" tip sits inside the highlighted right (stop-rule) column.
+- **018 FAIL** — "Doesn't come back" tip stops about 4-8px short of the far right end of the line. "Price leaves" sits on the box-exit crossing.
+- **019 FAIL** — cramped left margin 8px (left sleeve/cuff glow at x=8). Two outline hands are allowed by the prompt; not a character fail.
+- **020 FAIL** — notebook-to-laptop panel-connector arrow floats well short of the laptop (large gap). "Bring your notes" touches the notebook. Outro title is exact: "Next lesson: Spot paper trading". Examples marked Example.
+
+**BP-06: 12/20 — NOT 100%.** Rows left: 006 (gen/bp-06-entry-and-exit/006/web2.png), 010 (gen/bp-06-entry-and-exit/010/web2.png), 012 (gen/bp-06-entry-and-exit/012/web2.png), 014 (gen/bp-06-entry-and-exit/014/web2.png), 016 (gen/bp-06-entry-and-exit/016/web2.png), 018 (gen/bp-06-entry-and-exit/018/web2.png), 019 (gen/bp-06-entry-and-exit/019/web2.png), 020 (gen/bp-06-entry-and-exit/020/web2.png).
+
+Updated ChatGPT queue (BP-04..11): 120 items.

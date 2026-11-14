@@ -6,9 +6,10 @@ Headline: "WHERE THE IDEA IS FINISHED" (the word FINISHED in cyan, the rest whit
 Scene: A glass chart: price weaves inside a shaded box, then leaves it downward and stays out; a dashed amber line just below the box marks the finish path.
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
 - "Price leaves the box": arrow tip touches the price line just below the box.
-- "Finish path (invalidation): the idea is finished": arrow tip touches the dashed amber line.
+- "Finish path (invalidation): the idea is finished": arrow tip touches the dashed amber line. QA FIX v2: the v1 tip stopped about 6-8px short of the dashed amber line, with a clear strip of navy between the cyan tip and the amber dashes. The arrowhead point must land ON one of the amber dashes, overlapping it, with no background visible between the tip and the dashed line.
 - "EXAMPLE": a small cyan outlined EXAMPLE stamp in the lower-right corner of the main card or chart, fully inside the card, no arrow.
 LABEL ARROWS: exactly 2 thin cyan label arrows, one for each label above that says "arrow tip touches", each with one clean arrowhead whose tip touches the named target. Labels that say "no arrow" have no arrow. Apart from any arrow the Scene itself describes, there are no other arrows; no doubled arrowheads, and no arrow crosses text.
+QA FIX v2 TIP CONTACT: every label arrow's arrowhead point physically touches its named target with NO strip of background visible, not even a few pixels. The v1 "Finish path (invalidation)" tip stopped 6-8px short of the amber dashes. Lengthen that arrow so the point sits ON the dashed amber line.
 CHARACTER: no robot, mascot, person, hand-drawn face or character of any kind in this frame. (The only approved mascot is the GridBot Builder robot sheet: metallic white/silver robot, gloss-black face, electric-blue features; it is added separately and must never be redrawn.)
 BRAND: GridBot Builder course style only. No company, entity, ABN, Market Pros, exchange, venue or app names or logos; no coins, banknotes, currency signs or profit claims.
 Goal: a complete beginner understands this one idea in three seconds with the sound off: Invalidation is the name for the finish path.

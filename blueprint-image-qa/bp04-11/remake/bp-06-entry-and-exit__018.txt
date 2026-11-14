@@ -6,9 +6,10 @@ Headline: "YOUR TURN: DRAW THE EXIT" (the words YOUR TURN in cyan, the rest whit
 Scene: A notebook sketch of a box with a line leaving the bottom and staying out, with a pencil. EXAMPLE stamp.
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
 - "Price leaves": arrow tip touches the point where the line crosses the bottom of the box.
-- "Doesn't come back": arrow tip touches the far right end of the line, still below the box.
+- "Doesn't come back": arrow tip touches the far right end of the line, still below the box. QA FIX v2: the v1 tip stopped about 4-8px short of the far right end of the line; now the arrowhead point lands ON the far right end of the line (still below the box), overlapping the stroke, with no background visible between the tip and the line end.
 - "EXAMPLE": a small cyan outlined EXAMPLE stamp in the lower-right corner of the main card or chart, fully inside the card, no arrow.
 LABEL ARROWS: exactly 2 thin cyan label arrows, one for each label above that says "arrow tip touches", each with one clean arrowhead whose tip touches the named target. Labels that say "no arrow" have no arrow. Apart from any arrow the Scene itself describes, there are no other arrows; no doubled arrowheads, and no arrow crosses text.
+QA FIX v2 TIP CONTACT: every label arrow's arrowhead point physically touches its named target with NO strip of background visible, not even a few pixels. The v1 "Doesn't come back" tip stopped 4-8px short of the line end. Lengthen that arrow so the point sits ON the end of the line.
 CHARACTER: no robot, mascot, person, hand-drawn face or character of any kind in this frame. (The only approved mascot is the GridBot Builder robot sheet: metallic white/silver robot, gloss-black face, electric-blue features; it is added separately and must never be redrawn.)
 BRAND: GridBot Builder course style only. No company, entity, ABN, Market Pros, exchange, venue or app names or logos; no coins, banknotes, currency signs or profit claims.
 Goal: a complete beginner understands this one idea in three seconds with the sound off: Practice: A finish sentence names a path: price leaves the band and does not return on the next check.

@@ -1,6 +1,7 @@
 ATTACH FIRST: /workspace/blueprint-beginner/_anchors/anchor.png as the style reference. Match its look exactly: near-black navy ground with a faint grid, glowing cyan glass linework, bold condensed ALL-CAPS headline top-left with one cyan keyword, small dark glass label tags with thin cyan arrows. Do not copy its fence or its words.
 FORMAT: one landscape image, 3:2, exactly 1536x1024 pixels.
 MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 80px inside the left and right edges and at least 90px inside the top and bottom edges. Nothing with text touches or approaches the frame edge. Words in the headline are separated by a clear full space.
+QA FIX v2 MARGIN: the v1 "Read them aloud" tag's right edge sat at x=1492, only 43px from the right edge of the 1536px frame, which fails the 45px minimum (and this prompt's 80px rule). Pull that tag, the speech-bubble icon and every other tag, label and key shape at least 80px inside the left and right edges and at least 90px inside the top and bottom edges. Nothing with text may approach the frame edge.
 
 Headline: "WRITE BOTH RULES TODAY" (the word TODAY in cyan, the rest white).
 Scene: A notebook with two filled columns (pencil squiggles, no readable words) and a pencil, plus a small speech-bubble icon beside it.
