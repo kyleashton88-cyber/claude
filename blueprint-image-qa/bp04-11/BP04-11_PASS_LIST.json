@@ -8,8 +8,8 @@
   "not_in_scope": "course/images/_held/*.png (10 files: bp-06 014/017, bp-07 012/017/020, bp-08 003/006/007/009/011) are not referenced by any lesson script and were not scored. Shared title-art/mascot assets are already on BP01-03_PASS_LIST.json.",
   "counts": {
     "total": 161,
-    "pass": 63,
-    "fail": 98,
+    "pass": 64,
+    "fail": 97,
     "by_lesson": {
       "bp-04-market-regimes": {
         "total": 20,
@@ -18,8 +18,8 @@
       },
       "bp-05-spacing-and-range": {
         "total": 19,
-        "pass": 16,
-        "fail": 3
+        "pass": 17,
+        "fail": 2
       },
       "bp-06-entry-and-exit": {
         "total": 20,
@@ -2493,71 +2493,96 @@
       "beat": 15,
       "chapter": "Recap",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "e582d8d62f5d9d646b8173a19613b526f9bbf9a4",
-        "cursor/blueprint-beginner-images": "e582d8d62f5d9d646b8173a19613b526f9bbf9a4"
+        "cursor/blueprint-beginner-images": "ea3082e7c76c8a10f3ff996a85149ebb6475b21c",
+        "cursor/blueprint-cursor-images": "ea3082e7c76c8a10f3ff996a85149ebb6475b21c"
       },
       "beat_concept": "Recap: range first, gaps not lines, nineteen gaps in the house example, cost beside the gap, one change at a time.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "Only FOUR recap chips (Box first / Count gaps / Check fees / One change at a time); beat 15 calls for FIVE recap chips (missing the '19 gaps = 9.5%' house-example chip)."
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-05-spacing-and-range__015.txt",
-      "notes": "web1 remake FAIL. Only FOUR recap chips (Box first / Count gaps / Check fees / One change at a time); beat 15 calls for FIVE recap chips (missing the '19 gaps = 9.5%' house-example chip). v2 prompt written (v1 superseded). | web2 remake FAIL. All five recap chips are present, including the previously missing '19 gaps = 9.5%'. No arrows. Content is otherwise excellent. Hard fail is the cramped right margin: the 'One change at a time' tag's bright teal reaches x=1496, leaving only 39px (luma>110). Margins 75/39/116/320. Next: web3.png on the v3 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"RECAP\": \"Range first\" / \"Count gaps, not lines\" / \"Gap vs fee\" / \"One change at a time\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "web1 remake FAIL. Only FOUR recap chips (Box first / Count gaps / Check fees / One change at a time); beat 15 calls for FIVE recap chips (missing the '19 gaps = 9.5%' house-example chip). v2 prompt written (v1 superseded). | web2 remake FAIL. All five recap chips are present, including the previously missing '19 gaps = 9.5%'. No arrows. Content is otherwise excellent. Hard fail is the cramped right margin: the 'One change at a time' tag's bright teal reaches x=1496, leaving only 39px (luma>110). Margins 75/39/116/320. Next: web3.png on the v3 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"RECAP\": \"Range first\" / \"Count gaps, not lines\" / \"Gap vs fee\" / \"One change at a time\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@29de59507d9c31a296671b026df83d3b4c080a0c, identical at tip 3a1137a, course/images/bp-05-spacing-and-range/015.png, blob ea3082e7c76c8a10f3ff996a85149ebb6475b21c, 1536x1024, 123306 bytes). Headline 'RECAP'. Four required marks: 'Range first' / 'Count gaps, not lines' / 'Gap vs fee' / 'One change at a time'. Left card shows exactly 7 lines and 6 gaps, captioned '7 lines, 6 gaps' (house example; not the old false 19-gap claim). No arrows. EXAMPLE present. Matches the b608319 recap narration. No mascot. Margins 100/116/112/115. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 50,
-        "right": 111,
-        "top": 110,
-        "bottom": 223
+        "left": 100,
+        "right": 116,
+        "top": 112,
+        "bottom": 115
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/015.png",
-      "scored_blob": "e582d8d62f5d9d646b8173a19613b526f9bbf9a4",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/015.png",
+      "scored_blob": "ea3082e7c76c8a10f3ff996a85149ebb6475b21c",
       "committed": true,
-      "pass": false,
-      "previous_remake_reviews": [],
+      "pass": true,
+      "previous_remake_reviews": [
+        {
+          "file": "gen/bp-05-spacing-and-range/015/web2.png",
+          "blob": "18daf2df4484bc9d680c4a69d9b4b7da1da1e80e",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 75,
+            "right": 39,
+            "top": 116,
+            "bottom": 320
+          },
+          "scored_against": "beat + prompt current when this batch started (score on merits)",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 3,
+            "craft_polish": 2,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 5
+          },
+          "hard_fails": [
+            "cramped margin: right margin 39px (luma>110 bbox) on the 'One change at a time' tag, which reaches x=1496 on a 1536-wide frame; hard fail if any side is under 45px"
+          ],
+          "notes": "web2 remake FAIL. All five recap chips are present, including the previously missing '19 gaps = 9.5%'. No arrows. Content is otherwise excellent. Hard fail is the cramped right margin: the 'One change at a time' tag's bright teal reaches x=1496, leaving only 39px (luma>110). Margins 75/39/116/320. Next: web3.png on the v3 prompt.",
+          "pass": false
+        }
+      ],
       "remake_review": {
-        "file": "gen/bp-05-spacing-and-range/015/web2.png",
-        "blob": "18daf2df4484bc9d680c4a69d9b4b7da1da1e80e",
+        "file": "gen/bp-05-spacing-and-range/015/cursor1.png",
+        "blob": "ea3082e7c76c8a10f3ff996a85149ebb6475b21c",
         "size": "1536x1024",
         "margins_px": {
-          "left": 75,
-          "right": 39,
-          "top": 116,
-          "bottom": 320
+          "left": 100,
+          "right": 116,
+          "top": 112,
+          "bottom": 115
         },
-        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact",
+        "source_commit": "29de59507d9c31a296671b026df83d3b4c080a0c",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
           "beginner_clarity": 5,
-          "composition_hierarchy": 3,
-          "craft_polish": 2,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
           "brand_fidelity": 5,
           "text_legibility": 5,
           "character_consistency": null,
           "label_accuracy": 5
         },
-        "hard_fails": [
-          "cramped margin: right margin 39px (luma>110 bbox) on the 'One change at a time' tag, which reaches x=1496 on a 1536-wide frame; hard fail if any side is under 45px"
-        ],
-        "notes": "web2 remake FAIL. All five recap chips are present, including the previously missing '19 gaps = 9.5%'. No arrows. Content is otherwise excellent. Hard fail is the cramped right margin: the 'One change at a time' tag's bright teal reaches x=1496, leaving only 39px (luma>110). Margins 75/39/116/320. Next: web3.png on the v3 prompt.",
-        "pass": false
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@29de59507d9c31a296671b026df83d3b4c080a0c, identical at tip 3a1137a, course/images/bp-05-spacing-and-range/015.png, blob ea3082e7c76c8a10f3ff996a85149ebb6475b21c, 1536x1024, 123306 bytes). Headline 'RECAP'. Four required marks: 'Range first' / 'Count gaps, not lines' / 'Gap vs fee' / 'One change at a time'. Left card shows exactly 7 lines and 6 gaps, captioned '7 lines, 6 gaps' (house example; not the old false 19-gap claim). No arrows. EXAMPLE present. Matches the b608319 recap narration. No mascot. Margins 100/116/112/115. Placed, source cursor.",
+        "pass": true
       },
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "\"RECAP\": \"Range first\" / \"Count gaps, not lines\" / \"Gap vs fee\" / \"One change at a time\"."
+      "previous_committed_blob": "e582d8d62f5d9d646b8173a19613b526f9bbf9a4"
     },
     {
       "path": "course/images/bp-05-spacing-and-range/016.png",

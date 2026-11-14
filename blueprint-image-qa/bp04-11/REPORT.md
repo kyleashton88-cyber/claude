@@ -458,3 +458,16 @@ Authentic 1536×1024 files fetched via the GitHub Contents API (base64) and chec
 
 ### Updated counts
 - **BP-04: 19/20 — not 100%.** Still queued: 015 (not in this Cursor batch).
+
+---
+
+## Cursor-agent remake for BP-05 015 (on top of the BP-04 commit)
+
+Authentic 1536×1024 file from `29de59507d9c31a296671b026df83d3b4c080a0c` (identical at tip 3a1137a), blob `ea3082e7c76c8a10f3ff996a85149ebb6475b21c`.
+
+| File | Result | Margins (l/r/t/b) | Scores | Notes |
+|---|---|---|---|---|
+| gen/bp-05-spacing-and-range/015/cursor1.png | PASS | 100/116/112/115 | 5/5/5/5/5/—/5 | 'RECAP' with the four required marks and a 7-line / 6-gap house example. |
+
+### Updated counts
+- **BP-05: 17/19 — not 100%.** Still queued: 006, 019 (not in this Cursor batch).
