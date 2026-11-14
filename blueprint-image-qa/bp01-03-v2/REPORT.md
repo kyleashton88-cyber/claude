@@ -444,3 +444,22 @@ The report does **not** require remaking any other BP-01 or BP-02 still. BP-03 0
 - **BP-03: 25/28 — NOT 100%.** Rows left: 008, 010, 014.
 - **90-row total (BP-01..03, dropped excluded): 86/90.**
 - Queue (BP-01..03): 4 — bp-03 008, 010, 014 (priority), then bp-02 014.
+
+---
+
+## Run on top of ad5111a — 14 Nov 2026 (WITA): Cursor-agent remakes for BP-03 008, 010 and 014
+
+Fetched authentic 1536×1024 files from `kyleashton88-cyber/claude@733943d899af3f00b23c174ee6bbaa2690d44130` via the public GitHub Contents API (base64). Saved as `gen/bp-03-what-is-a-grid-bot/{008,010,014}/cursor2.png`. Git blobs match the API shas: `dfb2682bd28b0aac13407a5204128a76cc4a125b` (008, 156933 bytes), `9155889b7ce745ba48b567941245c120b792c86b` (010, 136813 bytes), `b9c4ad09e80cf670bc3eb332da1f4f64334421e8` (014, 152329 bytes). Scored against the d1f6 narration at 7a0430a plus the replacement text in REPORT-b608319.md, on the same strict rubric (every category at least 4/5, no hard fails; every arrow tip must visibly touch its target; doubt = fail; margins at least 45px luma>110).
+
+| File | Result | Margins (l/r/t/b) | Scores | Reason |
+|---|---|---|---|---|
+| gen/bp-03-what-is-a-grid-bot/008/cursor2.png | PASS | 96/96/120/114 | 5/5/5/5/5/—/5 | Required wording is on the image: 'WHAT YOU HOLD CHANGES'; 'Price bounces: coin and cash swap back and forth'; 'Price leaves: mostly coin or mostly cash'. No 'balanced'. Left path stays in the band with even piles; right path leaves with one tall pile. EXAMPLE present. No arrows. Placed (`source: cursor`, scored_blob dfb2682bd28b0aac13407a5204128a76cc4a125b). |
+| gen/bp-03-what-is-a-grid-bot/010/cursor2.png | PASS | 108/108/119/146 | 5/5/5/5/5/—/5 | Exactly five labels, no others: Top, Bottom, Levels, What you hold, Stop. All five tips touch (Top and Bottom on the box borders; Levels on a rung; Stop on the amber bar; What you hold on the middle blue jar). Headline 'POINT AND SAY THE FIVE'. EXAMPLE present. Placed (`source: cursor`, scored_blob 9155889b7ce745ba48b567941245c120b792c86b). |
+| gen/bp-03-what-is-a-grid-bot/014/cursor2.png | PASS | 90/90/109/104 | 5/5/5/5/5/—/5 | Large labels are 'Orders wait' / 'Inside your range' / 'Stop: your rule if price leaves' / 'What you hold changes'. All seven tips touch. Headline 'THE WHOLE IDEA IN ONE BREATH'. EXAMPLE present. Placed (`source: cursor`, scored_blob b9c4ad09e80cf670bc3eb332da1f4f64334421e8). |
+
+### Updated counts (dropped rows excluded)
+- **BP-01: 31/31 — YES, 100%.**
+- **BP-02: 30/31 — NOT 100%.** Rows left: 014 (still used in the b608319 plan; remake pending).
+- **BP-03: 28/28 — YES, 100%.**
+- **90-row total (BP-01..03): 89/90.**
+- Queue (BP-01..03): 1 — bp-02-what-you-need/014 (gen/bp-02-what-you-need/014/cursor1.png).
