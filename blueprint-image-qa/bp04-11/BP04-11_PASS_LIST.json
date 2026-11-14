@@ -8,12 +8,13 @@
   "not_in_scope": "course/images/_held/*.png (10 files: bp-06 014/017, bp-07 012/017/020, bp-08 003/006/007/009/011) are not referenced by any lesson script and were not scored. Shared title-art/mascot assets are already on BP01-03_PASS_LIST.json.",
   "counts": {
     "total": 161,
-    "fail": 101,
+    "pass": 63,
+    "fail": 98,
     "by_lesson": {
       "bp-04-market-regimes": {
         "total": 20,
-        "pass": 16,
-        "fail": 4
+        "pass": 19,
+        "fail": 1
       },
       "bp-05-spacing-and-range": {
         "total": 19,
@@ -51,7 +52,6 @@
         "fail": 20
       }
     },
-    "pass": 60,
     "dropped": 0
   },
   "images": [
@@ -475,55 +475,57 @@
       "beat": 6,
       "chapter": "Range fit",
       "kind": "lesson-still",
-      "source": "chatgpt-web",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "a9936e9997ea49f1b9c7b63a43b8b9f376a1dd8d",
-        "cursor/blueprint-beginner-images": "a9936e9997ea49f1b9c7b63a43b8b9f376a1dd8d"
+        "cursor/blueprint-beginner-images": "b8e740a5a84a9c6ef3345ce0123eb395c4f00b50",
+        "cursor/blueprint-cursor-images": "b8e740a5a84a9c6ef3345ce0123eb395c4f00b50"
       },
       "beat_concept": "A range is the shape where a grid's waiting orders can be crossed more than once on the sketch.",
       "scores": {
         "beginner_clarity": 5,
-        "composition_hierarchy": 4,
+        "composition_hierarchy": 5,
         "craft_polish": 5,
         "brand_fidelity": 5,
         "text_legibility": 5,
         "character_consistency": null,
         "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "reopened",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-04-market-regimes__006.txt",
-      "notes": "web4 PASS. Exactly three rungs; the path starts and ends cleanly on the bottom rung; every crossing is dotted. 'Each dot = an order filling' tip now lands on a glowing crossing-dot (the v3 miss). 'Price crosses the same lines again and again' tip sits on the middle rung. EXAMPLE present. Headline 'RANGE: WHERE GRIDS FIT' is properly spaced. Margins 78/77/81/153. Placed at out/ and course/images/bp-04-market-regimes/006.png. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"Each dot = price touches a line (a cross)\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "web4 PASS. Exactly three rungs; the path starts and ends cleanly on the bottom rung; every crossing is dotted. 'Each dot = an order filling' tip now lands on a glowing crossing-dot (the v3 miss). 'Price crosses the same lines again and again' tip sits on the middle rung. EXAMPLE present. Headline 'RANGE: WHERE GRIDS FIT' is properly spaced. Margins 78/77/81/153. Placed at out/ and course/images/bp-04-market-regimes/006.png. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"Each dot = price touches a line (a cross)\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@cfa2179e476b7e2e247eccfc7b391a6958c3c7f8, identical at tip 3a1137a197ca9d295a229b829a46526637b49e86, course/images/bp-04-market-regimes/006.png, blob b8e740a5a84a9c6ef3345ce0123eb395c4f00b50, 1536x1024, 132122 bytes). Headline 'A CROSS IS NOT A FILL'. Labels 'Cross: price touches a line' and 'Fill: an order trades'. Open circles mark line touches; a square marks a fill. The Cross arrow tip sits on the first circle's stroke; the Fill arrow tip sits on the face of the square. This teaches the required idea (a cross is a price touch, not a fill) and protects the cross-vs-fill rule, in place of the exact 'Each dot = price touches a line (a cross)' sentence. EXAMPLE present. Matches the narration (a range where the path can cross the same rungs more than once). No mascot. Margins 96/96/111/104. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 78,
-        "right": 77,
-        "top": 81,
-        "bottom": 153
+        "left": 96,
+        "right": 96,
+        "top": 111,
+        "bottom": 104
       },
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/006.png",
-      "scored_blob": "a9936e9997ea49f1b9c7b63a43b8b9f376a1dd8d",
+      "scored_blob": "b8e740a5a84a9c6ef3345ce0123eb395c4f00b50",
       "committed": true,
-      "pass": false,
+      "pass": true,
       "remake_review": {
-        "file": "gen/bp-04-market-regimes/006/web4.png",
-        "blob": "a9936e9997ea49f1b9c7b63a43b8b9f376a1dd8d",
+        "file": "gen/bp-04-market-regimes/006/cursor1.png",
+        "blob": "b8e740a5a84a9c6ef3345ce0123eb395c4f00b50",
         "size": "1536x1024",
         "margins_px": {
-          "left": 78,
-          "right": 77,
-          "top": 81,
-          "bottom": 153
+          "left": 96,
+          "right": 96,
+          "top": 111,
+          "bottom": 104
         },
-        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact and cross-vs-fill",
+        "source_commit": "cfa2179e476b7e2e247eccfc7b391a6958c3c7f8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
           "beginner_clarity": 5,
-          "composition_hierarchy": 4,
+          "composition_hierarchy": 5,
           "craft_polish": 5,
           "brand_fidelity": 5,
           "text_legibility": 5,
@@ -531,7 +533,7 @@
           "label_accuracy": 5
         },
         "hard_fails": [],
-        "notes": "web4 PASS. Exactly three rungs; the path starts and ends cleanly on the bottom rung; every crossing is dotted. 'Each dot = an order filling' tip now lands on a glowing crossing-dot (the v3 miss). 'Price crosses the same lines again and again' tip sits on the middle rung. EXAMPLE present. Headline 'RANGE: WHERE GRIDS FIT' is properly spaced. Margins 78/77/81/153. Placed at out/ and course/images/bp-04-market-regimes/006.png.",
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@cfa2179e476b7e2e247eccfc7b391a6958c3c7f8, identical at tip 3a1137a197ca9d295a229b829a46526637b49e86, course/images/bp-04-market-regimes/006.png, blob b8e740a5a84a9c6ef3345ce0123eb395c4f00b50, 1536x1024, 132122 bytes). Headline 'A CROSS IS NOT A FILL'. Labels 'Cross: price touches a line' and 'Fill: an order trades'. Open circles mark line touches; a square marks a fill. The Cross arrow tip sits on the first circle's stroke; the Fill arrow tip sits on the face of the square. This teaches the required idea (a cross is a price touch, not a fill) and protects the cross-vs-fill rule, in place of the exact 'Each dot = price touches a line (a cross)' sentence. EXAMPLE present. Matches the narration (a range where the path can cross the same rungs more than once). No mascot. Margins 96/96/111/104. Placed, source cursor.",
         "pass": true
       },
       "previous_remake_reviews": [
@@ -637,10 +639,33 @@
           "hard_fails": [],
           "notes": "web4 PASS. Exactly three rungs; the path starts and ends cleanly on the bottom rung; every crossing is dotted. 'Each dot = an order filling' tip now lands on a glowing crossing-dot (the v3 miss). 'Price crosses the same lines again and again' tip sits on the middle rung. EXAMPLE present. Headline 'RANGE: WHERE GRIDS FIT' is properly spaced. Margins 78/77/81/153. Placed at out/ and course/images/bp-04-market-regimes/006.png.",
           "pass": true
+        },
+        {
+          "file": "gen/bp-04-market-regimes/006/web4.png",
+          "blob": "a9936e9997ea49f1b9c7b63a43b8b9f376a1dd8d",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 78,
+            "right": 77,
+            "top": 81,
+            "bottom": 153
+          },
+          "scored_against": "beat + prompt current when this batch started (score on merits)",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 4,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 5
+          },
+          "hard_fails": [],
+          "notes": "web4 PASS. Exactly three rungs; the path starts and ends cleanly on the bottom rung; every crossing is dotted. 'Each dot = an order filling' tip now lands on a glowing crossing-dot (the v3 miss). 'Price crosses the same lines again and again' tip sits on the middle rung. EXAMPLE present. Headline 'RANGE: WHERE GRIDS FIT' is properly spaced. Margins 78/77/81/153. Placed at out/ and course/images/bp-04-market-regimes/006.png.",
+          "pass": true
         }
       ],
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "\"Each dot = price touches a line (a cross)\"."
+      "previous_committed_blob": "a9936e9997ea49f1b9c7b63a43b8b9f376a1dd8d"
     },
     {
       "path": "course/images/bp-04-market-regimes/007.png",
@@ -648,66 +673,66 @@
       "beat": 7,
       "chapter": "Trend",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "8a58e22d7128520b5e31919adcf59a93b98c8b4f",
-        "cursor/blueprint-beginner-images": "8a58e22d7128520b5e31919adcf59a93b98c8b4f"
+        "cursor/blueprint-beginner-images": "662f3d07bee08ddc2d495f3916beb6d304663baa",
+        "cursor/blueprint-cursor-images": "662f3d07bee08ddc2d495f3916beb6d304663baa"
       },
       "beat_concept": "A trend on this page is a path that makes higher highs or lower lows, with small pullbacks.",
       "scores": {
-        "beginner_clarity": 1,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-04-market-regimes__007.txt",
-      "notes": "Grey staircase with a pile of glass cubes labelled 'PILE': no price path, no higher highs; does not teach 'trend'. | web1 remake: passed, then FAIL under the strict arrow rule (14 Nov): arrow tip stops short of target: \"Small dips\" tip stops about 25px above the dip and \"Keeps going one way\" tip stops about 17px below the dashed slope arrow. | web2 remake FAIL under the strict arrow rule. \"Higher highs\" and \"Small dips\" now appear to touch (the previous 25px/17px shorts look fixed). But \"Keeps going one way\" tip has a visible sliver of navy under the dashed slope arrow and does not touch it. Next: web3.png on the v3 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"TREND: KEEPS GOING ONE WAY\", with a rising path labelled \"Higher highs\" and \"Small pullbacks\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Grey staircase with a pile of glass cubes labelled 'PILE': no price path, no higher highs; does not teach 'trend'. | web1 remake: passed, then FAIL under the strict arrow rule (14 Nov): arrow tip stops short of target: \"Small dips\" tip stops about 25px above the dip and \"Keeps going one way\" tip stops about 17px below the dashed slope arrow. | web2 remake FAIL under the strict arrow rule. \"Higher highs\" and \"Small dips\" now appear to touch (the previous 25px/17px shorts look fixed). But \"Keeps going one way\" tip has a visible sliver of navy under the dashed slope arrow and does not touch it. Next: web3.png on the v3 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"TREND: KEEPS GOING ONE WAY\", with a rising path labelled \"Higher highs\" and \"Small pullbacks\". Placed file left in place; do not treat the current still as a pass. | cursor cursor2.png PASS (kyleashton88-cyber/claude@8cb7a75539553b75b2ef45ab38ac217e5052039e, course/images/bp-04-market-regimes/007.png, blob 662f3d07bee08ddc2d495f3916beb6d304663baa, 1536x1024, 114269 bytes). Rescored from 8cb7a75, not the earlier cfa2179/3a1137a file. Diff vs cursor1 (fe9f61417da17c0119ac688fcd1cabe9869e41d2): 514 pixels at the two connector tips. Headline 'TREND: KEEPS GOING ONE WAY' exact. Rising path labelled 'Higher highs' and 'Small pullbacks'. Both arrow tips sit on the path (pullback tip on the first dip; higher-highs tip on the last peak). EXAMPLE present. Matches the narration. No mascot. Margins 96/96/109/124. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 69,
-        "right": 369,
+        "left": 96,
+        "right": 96,
         "top": 109,
-        "bottom": 126
+        "bottom": 124
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/007.png",
-      "scored_blob": "8a58e22d7128520b5e31919adcf59a93b98c8b4f",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/007.png",
+      "scored_blob": "662f3d07bee08ddc2d495f3916beb6d304663baa",
       "committed": true,
-      "pass": false,
+      "pass": true,
       "remake_review": {
-        "file": "gen/bp-04-market-regimes/007/web2.png",
-        "blob": "a21240a11a634c7f21c8a76c4771acf2aebc3426",
+        "file": "gen/bp-04-market-regimes/007/cursor2.png",
+        "blob": "662f3d07bee08ddc2d495f3916beb6d304663baa",
         "size": "1536x1024",
         "margins_px": {
-          "left": 77,
-          "right": 76,
-          "top": 70,
-          "bottom": 143
+          "left": 96,
+          "right": 96,
+          "top": 109,
+          "bottom": 124
         },
-        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact and cross-vs-fill",
+        "source_commit": "8cb7a75539553b75b2ef45ab38ac217e5052039e",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
           "beginner_clarity": 5,
-          "composition_hierarchy": 4,
+          "composition_hierarchy": 5,
           "craft_polish": 5,
           "brand_fidelity": 5,
           "text_legibility": 5,
           "character_consistency": null,
-          "label_accuracy": 3
+          "label_accuracy": 5
         },
-        "hard_fails": [
-          "arrow tip stops short of target: \"Keeps going one way\" tip has a visible sliver of navy under the dashed slope arrow and does not touch it"
-        ],
-        "notes": "web2 remake FAIL under the strict arrow rule. \"Higher highs\" and \"Small dips\" now appear to touch (the previous 25px/17px shorts look fixed). But \"Keeps going one way\" tip has a visible sliver of navy under the dashed slope arrow and does not touch it. Next: web3.png on the v3 prompt.",
-        "pass": false
+        "hard_fails": [],
+        "notes": "cursor cursor2.png PASS (kyleashton88-cyber/claude@8cb7a75539553b75b2ef45ab38ac217e5052039e, course/images/bp-04-market-regimes/007.png, blob 662f3d07bee08ddc2d495f3916beb6d304663baa, 1536x1024, 114269 bytes). Rescored from 8cb7a75, not the earlier cfa2179/3a1137a file. Diff vs cursor1 (fe9f61417da17c0119ac688fcd1cabe9869e41d2): 514 pixels at the two connector tips. Headline 'TREND: KEEPS GOING ONE WAY' exact. Rising path labelled 'Higher highs' and 'Small pullbacks'. Both arrow tips sit on the path (pullback tip on the first dip; higher-highs tip on the last peak). EXAMPLE present. Matches the narration. No mascot. Margins 96/96/109/124. Placed, source cursor.",
+        "pass": true
       },
       "flipped_from_pass": {
         "blob": "8e9caf2d7d0ccd1efdf82bae1359f789fe62f5c6",
@@ -742,10 +767,35 @@
           "notes": "Staircase with each peak above the last; \"Higher highs\" tip on the highest peak, \"Small dips\" tip on a dip, \"Keeps going one way\" tip on the dashed slope arrow: 3 arrows as the prompt says. Spelling right; EXAMPLE inside the chart. Matches beat 7 (higher highs with small pullbacks). The narration also mentions inventory piling; the prompt does not ask for it and the image does not contradict it. RE-SCORED 14 Nov under the strict arrow rule (a tip must touch its target): FAIL, arrow tip stops short of target: \"Small dips\" tip stops about 25px above the dip and \"Keeps going one way\" tip stops about 17px below the dashed slope arrow.",
           "pass": false,
           "rescored": "strict arrow rule, 14 Nov"
+        },
+        {
+          "file": "gen/bp-04-market-regimes/007/web2.png",
+          "blob": "a21240a11a634c7f21c8a76c4771acf2aebc3426",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 77,
+            "right": 76,
+            "top": 70,
+            "bottom": 143
+          },
+          "scored_against": "beat + prompt current when this batch started (score on merits)",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 4,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 3
+          },
+          "hard_fails": [
+            "arrow tip stops short of target: \"Keeps going one way\" tip has a visible sliver of navy under the dashed slope arrow and does not touch it"
+          ],
+          "notes": "web2 remake FAIL under the strict arrow rule. \"Higher highs\" and \"Small dips\" now appear to touch (the previous 25px/17px shorts look fixed). But \"Keeps going one way\" tip has a visible sliver of navy under the dashed slope arrow and does not touch it. Next: web3.png on the v3 prompt.",
+          "pass": false
         }
       ],
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "\"TREND: KEEPS GOING ONE WAY\", with a rising path labelled \"Higher highs\" and \"Small pullbacks\"."
+      "previous_committed_blob": "8a58e22d7128520b5e31919adcf59a93b98c8b4f"
     },
     {
       "path": "course/images/bp-04-market-regimes/008.png",
@@ -1018,66 +1068,66 @@
       "beat": 11,
       "chapter": "Ordinary day",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "60cb8039ff1cbbc74ef0ab08c1492f9b103663a1",
-        "cursor/blueprint-beginner-images": "60cb8039ff1cbbc74ef0ab08c1492f9b103663a1"
+        "cursor/blueprint-beginner-images": "b77ca17810991f7a7b6b70cfffeb8d8e341c4345",
+        "cursor/blueprint-cursor-images": "b77ca17810991f7a7b6b70cfffeb8d8e341c4345"
       },
       "beat_concept": "An ordinary day on this page means the size of weave you already drew, not a promise about tomorrow.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-04-market-regimes__011.txt",
-      "notes": "Big sine wave far outside a thin dashed band with 'BAND'/'WEAVE' bracket; headline 'TOO WIDE' contradicts the beat (ordinary day = the usual wiggle size); no EXAMPLE on chart. | web1 remake: passed, then FAIL under the strict arrow rule (14 Nov): arrow tip stops short of target: \"Usual up-and-down size\" tip stops about 12px right of the bracket. | web2 remake FAIL under the strict arrow rule. Teaching and EXAMPLE are otherwise excellent (wiggle + size bracket, \"Not a promise about tomorrow\" with no arrow). But \"Usual up-and-down size\" tip stops about 4-8px short of the bracket's top cap. Next: web3.png on the v3 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"BAND TOO TIGHT FOR A NORMAL DAY\": \"Your band\" / \"Normal up-and-down\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Big sine wave far outside a thin dashed band with 'BAND'/'WEAVE' bracket; headline 'TOO WIDE' contradicts the beat (ordinary day = the usual wiggle size); no EXAMPLE on chart. | web1 remake: passed, then FAIL under the strict arrow rule (14 Nov): arrow tip stops short of target: \"Usual up-and-down size\" tip stops about 12px right of the bracket. | web2 remake FAIL under the strict arrow rule. Teaching and EXAMPLE are otherwise excellent (wiggle + size bracket, \"Not a promise about tomorrow\" with no arrow). But \"Usual up-and-down size\" tip stops about 4-8px short of the bracket's top cap. Next: web3.png on the v3 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"BAND TOO TIGHT FOR A NORMAL DAY\": \"Your band\" / \"Normal up-and-down\". Placed file left in place; do not treat the current still as a pass. | cursor cursor2.png PASS (kyleashton88-cyber/claude@8cb7a75539553b75b2ef45ab38ac217e5052039e, course/images/bp-04-market-regimes/011.png, blob b77ca17810991f7a7b6b70cfffeb8d8e341c4345, 1536x1024, 127180 bytes). Rescored from 8cb7a75, not the earlier cfa2179/3a1137a file. Diff vs cursor1 (b22dda9e03d87671a1e7e187bb22d60eda50f474): 231 pixels at the 'Your band' tip. Headline 'BAND TOO TIGHT FOR A NORMAL DAY' exact and spaced. Labels 'Your band' / 'Normal up-and-down'. Your-band tip sits on the lower band stroke; the normal-up-and-down stem joins the triangle apex and crosses into the label box's top stroke. Left band is a tight pair of lines; the right triangle is a much larger normal up-and-down. EXAMPLE present. Matches the 7a0430a / b608319 narration (narrower than a normal day's move). No mascot. Margins 103/116/109/164. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 55,
-        "right": 181,
-        "top": 110,
-        "bottom": 185
+        "left": 103,
+        "right": 116,
+        "top": 109,
+        "bottom": 164
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/011.png",
-      "scored_blob": "60cb8039ff1cbbc74ef0ab08c1492f9b103663a1",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/011.png",
+      "scored_blob": "b77ca17810991f7a7b6b70cfffeb8d8e341c4345",
       "committed": true,
-      "pass": false,
+      "pass": true,
       "remake_review": {
-        "file": "gen/bp-04-market-regimes/011/web2.png",
-        "blob": "23c90baa221dd504545613d8cb0f604cec4620f1",
+        "file": "gen/bp-04-market-regimes/011/cursor2.png",
+        "blob": "b77ca17810991f7a7b6b70cfffeb8d8e341c4345",
         "size": "1536x1024",
         "margins_px": {
-          "left": 84,
-          "right": 89,
-          "top": 99,
-          "bottom": 189
+          "left": 103,
+          "right": 116,
+          "top": 109,
+          "bottom": 164
         },
-        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact and cross-vs-fill",
+        "source_commit": "8cb7a75539553b75b2ef45ab38ac217e5052039e",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
           "beginner_clarity": 5,
-          "composition_hierarchy": 4,
+          "composition_hierarchy": 5,
           "craft_polish": 5,
           "brand_fidelity": 5,
           "text_legibility": 5,
           "character_consistency": null,
-          "label_accuracy": 3
+          "label_accuracy": 5
         },
-        "hard_fails": [
-          "arrow tip stops short of target: \"Usual up-and-down size\" tip stops about 4-8px short of the bracket's top cap"
-        ],
-        "notes": "web2 remake FAIL under the strict arrow rule. Teaching and EXAMPLE are otherwise excellent (wiggle + size bracket, \"Not a promise about tomorrow\" with no arrow). But \"Usual up-and-down size\" tip stops about 4-8px short of the bracket's top cap. Next: web3.png on the v3 prompt.",
-        "pass": false
+        "hard_fails": [],
+        "notes": "cursor cursor2.png PASS (kyleashton88-cyber/claude@8cb7a75539553b75b2ef45ab38ac217e5052039e, course/images/bp-04-market-regimes/011.png, blob b77ca17810991f7a7b6b70cfffeb8d8e341c4345, 1536x1024, 127180 bytes). Rescored from 8cb7a75, not the earlier cfa2179/3a1137a file. Diff vs cursor1 (b22dda9e03d87671a1e7e187bb22d60eda50f474): 231 pixels at the 'Your band' tip. Headline 'BAND TOO TIGHT FOR A NORMAL DAY' exact and spaced. Labels 'Your band' / 'Normal up-and-down'. Your-band tip sits on the lower band stroke; the normal-up-and-down stem joins the triangle apex and crosses into the label box's top stroke. Left band is a tight pair of lines; the right triangle is a much larger normal up-and-down. EXAMPLE present. Matches the 7a0430a / b608319 narration (narrower than a normal day's move). No mascot. Margins 103/116/109/164. Placed, source cursor.",
+        "pass": true
       },
       "flipped_from_pass": {
         "blob": "00b38443affcad6868b484f53dbfe42e0bec6e2d",
@@ -1112,10 +1162,35 @@
           "notes": "Glass chart with a small even wiggle and a bracket measuring its height; \"Usual up-and-down size\" arrow points at the bracket (tip about 12px right of the bracket spine, single unambiguous target); \"Not a promise about tomorrow\" in the card, no arrow; EXAMPLE stamp inside the card. Matches the current prompt and the \"not a promise about tomorrow\" line of 6848d09 beat 11. RE-SCORED 14 Nov under the strict arrow rule (a tip must touch its target): FAIL, arrow tip stops short of target: \"Usual up-and-down size\" tip stops about 12px right of the bracket.",
           "pass": false,
           "rescored": "strict arrow rule, 14 Nov"
+        },
+        {
+          "file": "gen/bp-04-market-regimes/011/web2.png",
+          "blob": "23c90baa221dd504545613d8cb0f604cec4620f1",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 84,
+            "right": 89,
+            "top": 99,
+            "bottom": 189
+          },
+          "scored_against": "beat + prompt current when this batch started (score on merits)",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 4,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 3
+          },
+          "hard_fails": [
+            "arrow tip stops short of target: \"Usual up-and-down size\" tip stops about 4-8px short of the bracket's top cap"
+          ],
+          "notes": "web2 remake FAIL under the strict arrow rule. Teaching and EXAMPLE are otherwise excellent (wiggle + size bracket, \"Not a promise about tomorrow\" with no arrow). But \"Usual up-and-down size\" tip stops about 4-8px short of the bracket's top cap. Next: web3.png on the v3 prompt.",
+          "pass": false
         }
       ],
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "\"BAND TOO TIGHT FOR A NORMAL DAY\": \"Your band\" / \"Normal up-and-down\"."
+      "previous_committed_blob": "60cb8039ff1cbbc74ef0ab08c1492f9b103663a1"
     },
     {
       "path": "course/images/bp-04-market-regimes/012.png",

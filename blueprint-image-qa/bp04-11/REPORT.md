@@ -443,3 +443,18 @@ Orchestrator ledger update against verifier report `/workspace/bp-script-check-0
 - **BP-10: 0/21 — NOT 100%.**
 - **BP-11: 0/20 — NOT 100%.**
 - Queue (BP-04..11): 101 items. Script-rewrite stills are first, then remaining prior fails.
+
+---
+
+## Run on top of c3d1daa — 14 Nov 2026 (WITA): Cursor-agent remakes for BP-04 006, 007, 011
+
+Authentic 1536×1024 files fetched via the GitHub Contents API (base64) and checked against git hash-object. 006 is identical at lesson commit cfa2179 and tip 3a1137a (`cursor1.png`). 007 and 011 were rescored from `8cb7a75539553b75b2ef45ab38ac217e5052039e` (`cursor2.png`), not the earlier cfa2179 files. Scored against 7a0430a / b608319 narration and REPORT-b608319 replacement text, on the same strict rubric (every category at least 4/5, no hard fails; every arrow tip must visibly touch its target; doubt = fail; margins at least 45px luma>110; EXAMPLE; approved mascot only; beginner standalone; no contradiction of earlier lessons on cross vs fill).
+
+| File | Result | Margins (l/r/t/b) | Scores | Notes |
+|---|---|---|---|---|
+| gen/bp-04-market-regimes/006/cursor1.png | PASS | 96/96/111/104 | 5/5/5/5/5/—/5 | blob b8e740a5a84a9c6ef3345ce0123eb395c4f00b50. 'A CROSS IS NOT A FILL'; 'Cross: price touches a line' / 'Fill: an order trades'. Both tips touch. Teaches the required cross-vs-fill idea. |
+| gen/bp-04-market-regimes/007/cursor2.png | PASS | 96/96/109/124 | 5/5/5/5/5/—/5 | blob 662f3d07bee08ddc2d495f3916beb6d304663baa @ 8cb7a75. 'TREND: KEEPS GOING ONE WAY'; 'Higher highs' / 'Small pullbacks'. Both tips sit on the path. |
+| gen/bp-04-market-regimes/011/cursor2.png | PASS | 103/116/109/164 | 5/5/5/5/5/—/5 | blob b77ca17810991f7a7b6b70cfffeb8d8e341c4345 @ 8cb7a75. 'BAND TOO TIGHT FOR A NORMAL DAY'; 'Your band' / 'Normal up-and-down'. All contacts touch. |
+
+### Updated counts
+- **BP-04: 19/20 — not 100%.** Still queued: 015 (not in this Cursor batch).
