@@ -397,3 +397,23 @@ BP-03 011 and 014 were reopened in the pass list (`status: reopened`, reason: be
 - **BP-03: 26/28 — NOT 100%.** Rows left: 011, 014 (reopened; Cursor remake pending).
 - **92-row total: 89/92.**
 - Queue (BP-01..03): 3 — bp-02-what-you-need/021 (gen/bp-02-what-you-need/021/web2.png), bp-03-what-is-a-grid-bot/011 (gen/bp-03-what-is-a-grid-bot/011/cursor1.png), bp-03-what-is-a-grid-bot/014 (gen/bp-03-what-is-a-grid-bot/014/cursor1.png).
+
+---
+
+## Run on top of 198e0fd — 14 Nov 2026 (WITA): Cursor-agent remakes for BP-03 011 and 014
+
+Image source is the Cursor agent on `cursor/blueprint-cursor-images` in `kyleashton88-cyber/claude`. Fetched `course/images/bp-03-what-is-a-grid-bot/011.png` and `014.png` at commit `5bc8ab05c493a1f649f32b8bb20d4b0f9503896c` via the public GitHub Contents API (same method as 007). Box copies at `/workspace/bp03-remakes/011.png` and `014.png` did **not** match those commit blobs: they are exact 0.75-scale resizes (1152×768; blobs `03c02faf7d30324aa4f490031e3f43fc778f86cf` and `5e553e00937d27dbbe0b69823eb7221dc157557e`). Scored and placed the authentic 1536×1024 commit files (git blobs `a08e768d4d6023cbf4b4d5540f54f317217a1681` and `60636bd1e4407db467fa059bc3f4e1e5903cb39d`), saved as `gen/bp-03-what-is-a-grid-bot/011/cursor1.png` and `014/cursor1.png`. Same strict rubric (every category at least 4/5, no hard fails; every arrow tip must visibly touch its target; doubt = fail; margins at least 45px luma>110), plus the beginner-watch checks that reopened these two rows.
+
+| File | Result | Margins (l/r/t/b) | Reason |
+|---|---|---|---|
+| gen/bp-03-what-is-a-grid-bot/011/cursor1.png | PASS | 96/96/120/106 | Rings mean only 'Cross: price touched a rung'; a square means 'Fill: an order trades'. Nowhere says or implies that dots or rings are fills. Legend matches the drawing: three rings, each on a crossing (top peak on the top rung; mid and right rings on the middle rung); one square on the bottom rung where the path arrives and turns up (a fill that makes sense). Cross tip on the top of the left ring; Fill tip on the top of the square. Headline 'THIS CHART IS MADE UP' exact and spaced. EXAMPLE present. Beginner-clear on its own. No mascot. GridBot Builder style. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/011.png (`source: cursor`, scored_blob a08e768d4d6023cbf4b4d5540f54f317217a1681). Removed from the queue. |
+| gen/bp-03-what-is-a-grid-bot/014/cursor1.png | PASS | 90/90/111/104 | Stop label is 'Stop: the sentence for when the path leaves the band' (two lines; no bare 'Stop written'). All seven arrow tips touch: Orders wait on the bottom of the blue ticket; Inside your range on the bottom white border of the range box; Stop on the bottom gold border of the amber sentence card; Holdings change on the bottom cyan frame of the left jar (continuous cyan, no dark valley); scene tickets→range on the left white border of the range box; scene range→stop on the left gold border of the amber card; scene stop→jars on the face of the left jar (tip inside the left frame). Headline 'GRID BOT IN ONE BREATH' exact and spaced. EXAMPLE present. Four icons teach the one-breath definition (checked tickets; zig-zag in a band; amber sentence card, not a stop sign; blue and mint jars). No mascot. GridBot Builder style. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/014.png (`source: cursor`, scored_blob 60636bd1e4407db467fa059bc3f4e1e5903cb39d). Removed from the queue. |
+
+021 was not in this batch and stays queued at web2/v3.
+
+### Updated counts (92-row list)
+- **BP-01: 32/32 — YES, 100%.**
+- **BP-02: 31/32 — NOT 100%.** Rows left: 021 (web2, v3).
+- **BP-03: 28/28 — YES, 100%.**
+- **92-row total: 91/92.**
+- Queue (BP-01..03): 1 — bp-02-what-you-need/021 (gen/bp-02-what-you-need/021/web2.png).

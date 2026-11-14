@@ -9,12 +9,12 @@
   "not_in_scope": "All 92 BP-01..03 rows are now scored here. Separate finding: course/blueprint-rebuild/numbers/bp-0{1,2,3}*.yaml (d1f6) set disclaimer_on_screen to 'Educational content only. Not financial advice.'; studio.py writes that string, so CODE_FIXES.md CF-1 fixes both.",
   "counts": {
     "total": 92,
-    "pass": 89,
-    "fail": 3,
+    "pass": 91,
+    "fail": 1,
     "lesson_stills": {
       "total": 58,
-      "pass": 55,
-      "fail": 3,
+      "pass": 57,
+      "fail": 1,
       "by_lesson": {
         "bp-01-introduction": {
           "total": 18,
@@ -28,8 +28,8 @@
         },
         "bp-03-what-is-a-grid-bot": {
           "total": 19,
-          "pass": 17,
-          "fail": 2
+          "pass": 19,
+          "fail": 0
         }
       }
     },
@@ -78,8 +78,8 @@
       },
       "bp-03-what-is-a-grid-bot": {
         "total": 28,
-        "pass": 26,
-        "fail": 2
+        "pass": 28,
+        "fail": 0
       }
     }
   },
@@ -590,7 +590,7 @@
             "label_accuracy": 3
           },
           "hard_fails": [
-            "arrow tip stops short of target: all 3 tips short — \"Sell orders above\" ~8-9px from its rung, \"Price now\" ~11px from the dashed line, \"Buy orders below\" the same class"
+            "arrow tip stops short of target: all 3 tips short \u2014 \"Sell orders above\" ~8-9px from its rung, \"Price now\" ~11px from the dashed line, \"Buy orders below\" the same class"
           ],
           "notes": "web3 remake FAIL under the strict arrow rule. Ladder itself is now correct: four mint rungs above and four blue rungs below the dashed Price-now line, evenly spaced, one dot each; Buy tag aligned to the second blue rung; headline and EXAMPLE good. But all three arrow tips stop short of their targets (sell ~8-9px, price-now ~11px, buy visually the same). Next: web4.png on the v4 prompt.",
           "pass": false
@@ -2962,42 +2962,69 @@
       "beat": 11,
       "chapter": "Hypothetical path",
       "kind": "lesson-still",
-      "source": "committed still; image field of course/scripts/bp-03-what-is-a-grid-bot.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+      "source": "cursor",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "c9dbab772073416c1369452678f2575549c8d149",
-        "cursor/blueprint-beginner-images": "c9dbab772073416c1369452678f2575549c8d149"
+        "cursor/blueprint-cursor-images": "a08e768d4d6023cbf4b4d5540f54f317217a1681",
+        "cursor/blueprint-beginner-images": "a08e768d4d6023cbf4b4d5540f54f317217a1681"
       },
       "beat_concept": "The path on the diagram is hypothetical noise, drawn so you can see crossings.",
       "scores": {
-        "beginner_clarity": 4,
-        "composition_hierarchy": 4,
-        "craft_polish": 4,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 4
+        "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "reopened",
-      "action": "cursor_remake_pending",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": null,
-      "notes": "'This chart is made up', pretend path with fill dots, EXAMPLE stamp; matches 'hypothetical path'. | REOPENED: beginner-watch failure, Cursor remake pending. Placed file left in place.",
+      "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@5bc8ab05c493a1f649f32b8bb20d4b0f9503896c, course/images/bp-03-what-is-a-grid-bot/011.png, blob a08e768d4d6023cbf4b4d5540f54f317217a1681, 1536x1024, 141676 bytes). Rings mean only 'Cross: price touched a rung'; a square means 'Fill: an order trades'. Nowhere says or implies that dots or rings are fills. Legend matches the drawing: three rings, each on a crossing (top peak on the top rung; mid and right rings on the middle rung where the path crosses); one square on the bottom rung where the path arrives and turns up (a fill that makes sense). Cross tip on the top of the left ring; Fill tip on the top of the square. Headline 'THIS CHART IS MADE UP' exact and spaced. EXAMPLE present. Beginner-clear on its own. No mascot. GridBot Builder style only. Margins 96/96/120/106. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/011.png (`source: cursor`).",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 78,
-        "right": 128,
-        "top": 74,
-        "bottom": 153
+        "left": 96,
+        "right": 96,
+        "top": 120,
+        "bottom": 106
       },
       "mascot_in_frame": false,
       "previous_v10_pass": true,
-      "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-03-what-is-a-grid-bot/011.png",
-      "scored_blob": "c9dbab772073416c1369452678f2575549c8d149",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/011.png",
+      "scored_blob": "a08e768d4d6023cbf4b4d5540f54f317217a1681",
       "committed": true,
-      "pass": false,
-      "reason": "beginner-watch failure, Cursor remake pending"
+      "pass": true,
+      "previous_committed_blob": "c9dbab772073416c1369452678f2575549c8d149",
+      "remake_review": {
+        "file": "gen/bp-03-what-is-a-grid-bot/011/cursor1.png",
+        "blob": "a08e768d4d6023cbf4b4d5540f54f317217a1681",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 96,
+          "right": 96,
+          "top": 120,
+          "bottom": 106
+        },
+        "scored_against": "beat + strict rubric (arrow contact, cross/fill legend vs marks, EXAMPLE, headline, margins, brand, beginner-watch clarity)",
+        "source_commit": "5bc8ab05c493a1f649f32b8bb20d4b0f9503896c",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@5bc8ab05c493a1f649f32b8bb20d4b0f9503896c, course/images/bp-03-what-is-a-grid-bot/011.png, blob a08e768d4d6023cbf4b4d5540f54f317217a1681, 1536x1024, 141676 bytes). Rings mean only 'Cross: price touched a rung'; a square means 'Fill: an order trades'. Nowhere says or implies that dots or rings are fills. Legend matches the drawing: three rings, each on a crossing (top peak on the top rung; mid and right rings on the middle rung where the path crosses); one square on the bottom rung where the path arrives and turns up (a fill that makes sense). Cross tip on the top of the left ring; Fill tip on the top of the square. Headline 'THIS CHART IS MADE UP' exact and spaced. EXAMPLE present. Beginner-clear on its own. No mascot. GridBot Builder style only. Margins 96/96/120/106. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/011.png (`source: cursor`).",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-03-what-is-a-grid-bot/012.png",
@@ -3089,15 +3116,15 @@
       "beat": 14,
       "chapter": "One-breath definition",
       "kind": "lesson-still",
-      "source": "chatgpt-web",
+      "source": "cursor",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "4e46857c12e6326a1bfad6df8655bc645803c171",
-        "cursor/blueprint-beginner-images": "4e46857c12e6326a1bfad6df8655bc645803c171"
+        "cursor/blueprint-cursor-images": "60636bd1e4407db467fa059bc3f4e1e5903cb39d",
+        "cursor/blueprint-beginner-images": "60636bd1e4407db467fa059bc3f4e1e5903cb39d"
       },
       "beat_concept": "In one breath: waiting limit orders, inside a band, with a written stop, and inventory that changes as rungs fill.",
       "scores": {
         "beginner_clarity": 5,
-        "composition_hierarchy": 4,
+        "composition_hierarchy": 5,
         "craft_polish": 5,
         "brand_fidelity": 5,
         "text_legibility": 5,
@@ -3105,39 +3132,42 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "reopened",
-      "action": "cursor_remake_pending",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__014.txt",
-      "notes": "Four icons in one panel joined by three short arrows: two checked tickets, a zig-zag between dashed lines, an amber stop sign, blue and mint jars. Captions \"Orders wait\", \"Inside your range\", \"Stop written\", \"Holdings change\" match the one-breath definition. Panel glow sits 48px/49px from the left/right edges: inside the 45px standard but short of the prompt's 120px ask, hence composition 4. | REOPENED: beginner-watch failure, Cursor remake pending. Placed file left in place.",
+      "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@5bc8ab05c493a1f649f32b8bb20d4b0f9503896c, course/images/bp-03-what-is-a-grid-bot/014.png, blob 60636bd1e4407db467fa059bc3f4e1e5903cb39d, 1536x1024, 147550 bytes). Stop label is 'Stop: the sentence for when the path leaves the band' (two lines; no bare 'Stop written'). All seven arrow tips touch: 'Orders wait' on the bottom of the blue ticket; 'Inside your range' on the bottom white border of the range box; 'Stop' on the bottom gold border of the amber sentence card; 'Holdings change' on the bottom cyan frame of the left jar (continuous cyan, no dark valley); scene tickets\u2192range on the left white border of the range box; scene range\u2192stop on the left gold border of the amber card; scene stop\u2192jars on the face of the left jar (tip inside the left frame). Headline 'GRID BOT IN ONE BREATH' exact and spaced. EXAMPLE present. Four icons teach the one-breath definition (checked tickets; zig-zag in a band; amber sentence card, not a stop sign; blue and mint jars). No mascot. GridBot Builder style only. Margins 90/90/111/104. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/014.png (`source: cursor`).",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 48,
-        "right": 49,
-        "top": 126,
-        "bottom": 252
+        "left": 90,
+        "right": 90,
+        "top": 111,
+        "bottom": 104
       },
       "mascot_in_frame": false,
       "previous_v10_pass": true,
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/014.png",
-      "scored_blob": "56cc2b8246ac3a64da3be2d2bc02c676d23e193d",
+      "scored_blob": "60636bd1e4407db467fa059bc3f4e1e5903cb39d",
       "committed": true,
-      "pass": false,
+      "pass": true,
       "remake_review": {
-        "file": "gen/bp-03-what-is-a-grid-bot/014/web1.png",
-        "blob": "56cc2b8246ac3a64da3be2d2bc02c676d23e193d",
+        "file": "gen/bp-03-what-is-a-grid-bot/014/cursor1.png",
+        "blob": "60636bd1e4407db467fa059bc3f4e1e5903cb39d",
         "size": "1536x1024",
         "margins_px": {
-          "left": 48,
-          "right": 49,
-          "top": 126,
-          "bottom": 252
+          "left": 90,
+          "right": 90,
+          "top": 111,
+          "bottom": 104
         },
-        "scored_against": "fbb3f9c narration + prompt at this commit",
+        "scored_against": "beat + strict rubric (arrow contact, stop-label wording, EXAMPLE, headline, margins, brand, beginner-watch clarity)",
+        "source_commit": "5bc8ab05c493a1f649f32b8bb20d4b0f9503896c",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
           "beginner_clarity": 5,
-          "composition_hierarchy": 4,
+          "composition_hierarchy": 5,
           "craft_polish": 5,
           "brand_fidelity": 5,
           "text_legibility": 5,
@@ -3145,12 +3175,36 @@
           "label_accuracy": 5
         },
         "hard_fails": [],
-        "notes": "Four icons in one panel joined by three short arrows: two checked tickets, a zig-zag between dashed lines, an amber stop sign, blue and mint jars. Captions \"Orders wait\", \"Inside your range\", \"Stop written\", \"Holdings change\" match the one-breath definition. Panel glow sits 48px/49px from the left/right edges: inside the 45px standard but short of the prompt's 120px ask, hence composition 4.",
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@5bc8ab05c493a1f649f32b8bb20d4b0f9503896c, course/images/bp-03-what-is-a-grid-bot/014.png, blob 60636bd1e4407db467fa059bc3f4e1e5903cb39d, 1536x1024, 147550 bytes). Stop label is 'Stop: the sentence for when the path leaves the band' (two lines; no bare 'Stop written'). All seven arrow tips touch: 'Orders wait' on the bottom of the blue ticket; 'Inside your range' on the bottom white border of the range box; 'Stop' on the bottom gold border of the amber sentence card; 'Holdings change' on the bottom cyan frame of the left jar (continuous cyan, no dark valley); scene tickets\u2192range on the left white border of the range box; scene range\u2192stop on the left gold border of the amber card; scene stop\u2192jars on the face of the left jar (tip inside the left frame). Headline 'GRID BOT IN ONE BREATH' exact and spaced. EXAMPLE present. Four icons teach the one-breath definition (checked tickets; zig-zag in a band; amber sentence card, not a stop sign; blue and mint jars). No mascot. GridBot Builder style only. Margins 90/90/111/104. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/014.png (`source: cursor`).",
         "pass": true
       },
       "previous_committed_blob": "4e46857c12e6326a1bfad6df8655bc645803c171",
-      "source_detail": "ChatGPT web render gen/bp-03-what-is-a-grid-bot/014/web1.png (prompt specs/remake/bp-03-what-is-a-grid-bot__014.txt), saved via out/course/images/bp-03-what-is-a-grid-bot/014.png at 1536x1024 (already 3:2, no fill needed)",
-      "reason": "beginner-watch failure, Cursor remake pending"
+      "previous_remake_reviews": [
+        {
+          "file": "gen/bp-03-what-is-a-grid-bot/014/web1.png",
+          "blob": "56cc2b8246ac3a64da3be2d2bc02c676d23e193d",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 48,
+            "right": 49,
+            "top": 126,
+            "bottom": 252
+          },
+          "scored_against": "fbb3f9c narration + prompt at this commit",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 4,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 5
+          },
+          "hard_fails": [],
+          "notes": "Four icons in one panel joined by three short arrows: two checked tickets, a zig-zag between dashed lines, an amber stop sign, blue and mint jars. Captions \"Orders wait\", \"Inside your range\", \"Stop written\", \"Holdings change\" match the one-breath definition. Panel glow sits 48px/49px from the left/right edges: inside the 45px standard but short of the prompt's 120px ask, hence composition 4.",
+          "pass": true
+        }
+      ]
     },
     {
       "path": "course/images/bp-03-what-is-a-grid-bot/015.png",
