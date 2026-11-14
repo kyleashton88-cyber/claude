@@ -394,11 +394,354 @@ def lesson_bp05() -> None:
     bp05_015()
 
 
+def bp02_014() -> None:
+    img = canvas()
+    head(img, "AN EMPTY PAIR BLOCKS THE PAGE", "EMPTY", size=40)
+    card(img, (640, 230, 1420, 900))
+    face = font(FONT_SEMI, 32)
+    # Tidy rows under an empty pair box.
+    rows_y = [470, 610, 750]
+    names = ["Range", "Levels", "Stop"]
+    for y, name in zip(rows_y, names):
+        tag(img, (700, y, 1340, y + 90), [name], face)
+        block(img, 1240, y + 28, 36, 36, MINT)
+    # Empty pair box, drawn after the card so its stroke is a clear target.
+    layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    d.rounded_rectangle(
+        [px(980), px(300), px(1340), px(400)],
+        radius=px(14),
+        outline=CYAN + (255,),
+        width=px(8),
+    )
+    paste_layer(img, layer)
+    draw = ImageDraw.Draw(img)
+    draw.text((px(720), px(328)), "Pair", font=font(FONT_SEMI, 32), fill=WHITE)
+    tag(img, (100, 280, 620, 370), ["Pair box empty: not ready"], face)
+    tag(img, (100, 460, 500, 550), ["Fill it in first"], face)
+    arrow(img, (620, 325), (980, 350))
+    arrow(img, (500, 505), (1160, 396))
+    stamp(img, 200, 800)
+    final = save(img, "course/images/bp-02-what-you-need/014.png")
+    assert_tip(final, (980, 350), (986, 350), "empty")
+    assert_tip(final, (1160, 396), (1160, 399), "fill")
+    record([{
+        "path": "course/images/bp-02-what-you-need/014.png",
+        "lesson": "bp-02-what-you-need",
+        "shows": "The pair box is empty while Range, Levels, and Stop are already filled. The empty pair blocks the page.",
+        "alt": "An empty pair box blocks the page. Fill the pair in first, even if the rest of the list is tidy.",
+        "batch": "cursor-bp02-014",
+    }])
+
+
+def plain(rel, lesson, title, cyan, lines, shows, alt, batch, size=34) -> None:
+    img = canvas()
+    head(img, title, cyan, size=40 if len(title) < 36 else 34)
+    rows(img, lines, y0=240, size=size)
+    stamp(img, 1320, 900)
+    save(img, rel)
+    record([{
+        "path": rel,
+        "lesson": lesson,
+        "shows": shows,
+        "alt": alt,
+        "batch": batch,
+    }])
+
+
+def bp08() -> None:
+    L = "bp-08-managing-and-monitoring"
+    B = "cursor-bp08"
+    base = "course/images/bp-08-managing-and-monitoring"
+    plain(f"{base}/001.png", L, "A SHORT LIST, THEN YOU STOP", "SHORT LIST",
+          ["Inside the band?", "Above or below the middle?", "Does your stop rule hold?", "Then you stop"],
+          "Monitoring is a short list of three questions, then you stop.",
+          "A short list you can finish: inside the band, above or below the middle, and whether your stop rule holds.", B)
+    plain(f"{base}/004.png", L, "THREE QUESTIONS", "THREE",
+          ["1  Inside the band?", "2  Above or below the middle?", "3  Does your stop rule hold?"],
+          "The three questions are inside the band, above or below the middle, and whether the stop rule holds.",
+          "Three questions: is the close inside the band, is it above or below the middle, and does your stop rule hold?", B)
+    img = canvas()
+    head(img, "THE CLOSE IS STILL INSIDE", "INSIDE")
+    card(img, (200, 260, 1330, 860))
+    hline(img, 280, 1240, 400, CYAN, 6)
+    hline(img, 280, 1240, 680, CYAN, 6)
+    solid(img, [(340, 540), (520, 420), (700, 640), (880, 460), (1060, 600), (1200, 500)])
+    tag(img, (420, 740, 1100, 820), ["Still between top and bottom"], font(FONT_SEMI, 32))
+    stamp(img, 1180, 320)
+    save(img, f"{base}/005.png")
+    record([{"path": f"{base}/005.png", "lesson": L, "shows": "A price path that stays between the top and bottom lines.", "alt": "Inside means the close is still between the top and the bottom.", "batch": B}])
+    img = canvas()
+    head(img, "ABOVE OR BELOW THE MIDDLE", "MIDDLE", size=40)
+    card(img, (180, 250, 1360, 880))
+    hline(img, 280, 1100, 540, WHITE, 6)
+    block(img, 480, 400, 28, 28, CYAN)
+    block(img, 820, 640, 28, 28, CYAN)
+    tag(img, (300, 300, 700, 380), ["Above"], font(FONT_SEMI, 34))
+    tag(img, (760, 740, 1160, 820), ["Below"], font(FONT_SEMI, 34))
+    tag(img, (860, 480, 1280, 580), ["Middle 27630"], font(FONT_SEMI, 32))
+    arrow(img, (500, 380), (494, 408))
+    arrow(img, (960, 740), (834, 668))
+    stamp(img, 1240, 320)
+    final = save(img, f"{base}/006.png")
+    assert_tip(final, (494, 408), (494, 430), "above")
+    record([{"path": f"{base}/006.png", "lesson": L, "shows": "The middle line is 27630. One close is above it and one close is below it.", "alt": "Above or below means which side of the middle line, 27630, the close is on.", "batch": B}])
+    plain(f"{base}/007.png", L, "REREAD THE SAME SENTENCE", "SAME",
+          ["Do not write a new sentence", "Read the finish rule again"],
+          "The third check is rereading the finish sentence you already wrote.",
+          "Reread the same finish sentence. Do not invent a new one while you look.", B)
+    plain(f"{base}/008.png", L, "PICK A DAY TO REREAD", "A DAY",
+          ["Choose one day", "Read the same three rows", "Then stop"],
+          "A cadence is one day you choose to reread the same three rows.",
+          "Pick a day, reread the same three rows, then stop.", B)
+    plain(f"{base}/009.png", L, "DO NOT OPEN THESE", "NOT",
+          ["Not a result chart", "Not a ranking", "Not a leverage control"],
+          "The check does not open a result chart, a ranking, or a leverage control.",
+          "Do not open a result chart, a ranking, or a leverage control.", B, size=36)
+    img = canvas()
+    head(img, "STARTS INSIDE, ENDS OUTSIDE", "OUTSIDE", size=40)
+    card(img, (160, 250, 1360, 880))
+    hline(img, 240, 1280, 400, CYAN, 5)
+    hline(img, 240, 1280, 620, CYAN, 5)
+    solid(img, [(280, 500), (460, 430), (640, 560), (820, 620), (1100, 760)])
+    tag(img, (240, 680, 560, 760), ["Inside"], font(FONT_SEMI, 34))
+    tag(img, (860, 700, 1240, 800), ["Outside"], font(FONT_SEMI, 34))
+    arrow(img, (400, 680), (460, 438))
+    arrow(img, (1050, 700), (1100, 760))
+    stamp(img, 1240, 300)
+    save(img, f"{base}/010.png")
+    record([{"path": f"{base}/010.png", "lesson": L, "shows": "A path that starts inside the band and ends outside it.", "alt": "Run the check on a path that starts inside the band and ends outside it.", "batch": B}])
+    plain(f"{base}/011.png", L, "AN ALERT IS ONLY A NUDGE", "NUDGE",
+          ["It does not decide for you", "Come read the three rows"],
+          "An alert is only a nudge to come read the same three rows.",
+          "An alert only nudges you to come read the three rows.", B)
+    plain(f"{base}/012.png", L, "DO NOT ADD A RESULT ROW", "NOT",
+          ["Inside the band?", "Above or below the middle?", "Does your stop rule hold?", "No result row"],
+          "The common miss is adding a result row. The card stays at three questions.",
+          "Do not add a result row to the three questions.", B)
+    plain(f"{base}/013.png", L, "THEN YOU STOP", "STOP",
+          ["Answer the three questions", "Stop, or write an edit", "Do not keep watching"],
+          "After the three answers you stop or you write an edit. You do not keep watching.",
+          "After the check, stop or write an edit. Do not keep watching.", B)
+    plain(f"{base}/014.png", L, "WRITE THE THREE ROWS", "THREE",
+          ["Inside the band?", "Above or below the middle?", "Does your stop rule hold?"],
+          "Build the three-row card on paper and run it once.",
+          "Write the three questions on paper and run them once.", B)
+    plain(f"{base}/015.png", L, "RECAP", "RECAP",
+          ["Inside the band?", "Above or below the middle?", "Does the stop rule hold?", "A day you chose", "No result row", "Then stop"],
+          "Recap of the check: inside, above or below, the rule, a chosen day, no result row, then stop.",
+          "Recap: inside, above or below the middle, the stop rule, a day you chose, no result row, then stop.", B, size=30)
+    plain(f"{base}/019.png", L, "POINT AT THE PAPER SCREEN", "PAPER",
+          ["Same three rows", "On the paper, not a live order"],
+          "If you finished the paper walk, point the three rows at that paper screen.",
+          "Point the three rows at the paper screen. It is not a live order.", B)
+
+
+def bp09() -> None:
+    L = "bp-09-common-mistakes"
+    B = "cursor-bp09"
+    base = "course/images/bp-09-common-mistakes"
+    plain(f"{base}/001.png", L, "MISTAKES ARE ON THE PAGE", "PAGE",
+          ["Look at the page", "Not at the person"],
+          "The mistakes in this lesson are on the page, not about the person.",
+          "These mistakes are pages, not personalities.", B)
+    plain(f"{base}/004.png", L, "A BLANK STOP WAS SKIPPED", "BLANK",
+          ["The finish column is empty", "That means it was skipped"],
+          "A blank stop means the finish column was skipped.",
+          "A blank stop means the finish column was skipped.", B)
+    plain(f"{base}/005.png", L, "THE BAND IS TOO SHORT", "TOO SHORT",
+          ["Your band", "Shorter than a normal day's move"],
+          "A tight band is shorter than the normal up-and-down of the path.",
+          "The band is too short for a normal day's move.", B)
+    plain(f"{base}/006.png", L, "DO NOT STOP THE COURSE HERE", "NOT",
+          ["Scaling up is still ahead", "The liquidation lesson is still ahead"],
+          "Ending at the mistakes page skips scaling and the opt-in liquidation lesson.",
+          "Do not end the course on the mistakes page. Scaling and the liquidation lesson are still ahead.", B)
+    img = canvas()
+    head(img, "7 LINES = 6 GAPS", "6 GAPS", size=52)
+    card(img, (360, 240, 1180, 900))
+    ladder(img, 480, 300, 70, 7, 520)
+    stamp(img, 1000, 320)
+    save(img, f"{base}/007.png")
+    record([{"path": f"{base}/007.png", "lesson": L, "shows": "Seven lines with six gaps between them. Counting the lines is not the same as counting the gaps.", "alt": "Seven lines make six gaps. Count the gaps, not the lines.", "batch": B}])
+    plain(f"{base}/008.png", L, "A FILLED-IN SIZE IS NOT YOURS", "NOT YOURS",
+          ["The form filled in a size", "That was not your choice"],
+          "A size the form filled in for you is not your choice.",
+          "A size the form filled in is not your choice.", B)
+    plain(f"{base}/009.png", L, "NO PROMISE OF INCOME", "NO PROMISE",
+          ["Do not promise income", "A result can fail"],
+          "A promise of income, or a claim that a result cannot fail, does not belong on a teaching page.",
+          "Do not promise income, and do not claim a result cannot fail.", B)
+    img = canvas()
+    head(img, "SEVEN LINES AND SIX GAPS", "SIX GAPS", size=42)
+    card(img, (120, 240, 700, 900))
+    ladder(img, 220, 320, 64, 7, 360)
+    tag(img, (160, 790, 660, 870), ["7 lines, 6 gaps"], font(FONT_SEMI, 32))
+    tag(img, (760, 360, 1400, 520), ["Blank stop"], font(FONT_SEMI, 36))
+    tag(img, (760, 580, 1400, 740), ["That column was skipped"], font(FONT_SEMI, 32))
+    stamp(img, 1240, 280)
+    save(img, f"{base}/010.png")
+    record([{"path": f"{base}/010.png", "lesson": L, "shows": "The house example has seven lines and six gaps, and a blank stop means the finish column was skipped.", "alt": "In the example there are seven lines and six gaps. A blank stop means the finish column was skipped.", "batch": B}])
+    plain(f"{base}/011.png", L, "FIX ONE, THEN THE NEXT", "ONE",
+          ["1  Fix one mistake", "2  Read the page again", "3  Fix the next one"],
+          "Fix one miss, reread, then fix the next.",
+          "Fix one mistake, read the page again, then fix the next.", B)
+    plain(f"{base}/012.png", L, "THIS IS NOT A SCORE", "NOT",
+          ["The audit finds mistakes", "It does not give you a grade"],
+          "The audit does not produce a grade.",
+          "Checking the page finds mistakes. It does not give you a score.", B)
+    plain(f"{base}/013.png", L, "CROSS OUT A TIMES-NUMBER", "CROSS OUT",
+          ["5x does not belong here", "This path is spot"],
+          "A leverage multiple does not belong on the spot path.",
+          "Cross out a times-number such as 5x. This path is spot.", B)
+    plain(f"{base}/014.png", L, "CHECK YOUR OWN PAGE", "CHECK",
+          ["Is the stop blank?", "Is the band too short?", "Is the word gaps missing?"],
+          "Audit the notebook for a blank stop, a tight band, and a missing gaps word.",
+          "Check your page for a blank stop, a band that is too short, and a missing gaps word.", B)
+    plain(f"{base}/015.png", L, "RECAP", "RECAP",
+          ["Blank stop", "Band too short", "Stopping the course early", "Counting lines, not gaps", "A size you did not choose", "A promise of income"],
+          "Recap of the mistakes: blank stop, tight band, early ending, counting lines, a default size, and result words.",
+          "Recap: blank stop, band too short, ending early, counting lines instead of gaps, a size you did not choose, and a promise of income.", B, size=30)
+    plain(f"{base}/020.png", L, "KEEP THE MARKED PAGES", "KEEP",
+          ["The marks stay on the page", "The marks are the lesson"],
+          "Keep the marked-up pages. The marks are the lesson.",
+          "Keep the marked pages. The marks are the lesson.", B)
+
+
+def bp10() -> None:
+    L = "bp-10-scaling-up"
+    B = "cursor-bp10"
+    base = "course/images/bp-10-scaling-up"
+    plain(f"{base}/001.png", L, "A SECOND PAGE, NOT A BIGGER NUMBER", "SECOND PAGE",
+          ["Page two is another written page", "It is not a bigger number"],
+          "Scaling here means a second written page, not a bigger number.",
+          "A second page, not a bigger number.", B)
+    plain(f"{base}/004.png", L, "PAGE TWO REPEATS THE CHECKS", "CHECKS",
+          ["Sort the shape", "Range", "Gaps", "Finish sentence", "Paper"],
+          "The second page repeats the same checks: shape, range, gaps, finish sentence, and paper.",
+          "Page two repeats the checks: the shape, the range, the gaps, the finish sentence, and paper.", B, size=32)
+    plain(f"{base}/005.png", L, "TWO GRIDS CAN FIGHT", "FIGHT",
+          ["Two grids, one coin", "They share what you hold"],
+          "Two grids on one asset can fight if they share what you hold.",
+          "Two grids on the same coin can fight if they share what you hold.", B)
+    plain(f"{base}/006.png", L, "THE SAME SIZE IS ALLOWED", "SAME SIZE",
+          ["You do not have to change the size", "That is a complete review"],
+          "A review that keeps the size the same is a complete review.",
+          "Keeping the same size is a complete review.", B)
+    plain(f"{base}/008.png", L, "PAGE TWO: SAME PAIR, NEW BAND", "NEW BAND",
+          ["Same pair", "Same spot", "Only the band changes"],
+          "Page two keeps the same pair and spot, and changes only the band.",
+          "Page two keeps the same pair and changes only the band.", B)
+    plain(f"{base}/007.png", L, "CHANGE ONE THING", "ONE",
+          ["Page one", "Page two changes one thing only"],
+          "Change one thing between page one and page two.",
+          "Change only one thing between page one and page two.", B)
+    plain(f"{base}/009.png", L, "THIS IS NOT THE LAST LESSON", "NOT",
+          ["Scaling is not the end", "One more lesson is optional"],
+          "Scaling is not the end of the course.",
+          "Scaling up is not the last lesson.", B)
+    plain(f"{base}/010.png", L, "PAGE TWO IS STILL SPOT", "SPOT",
+          ["You still hold the coin", "Not a contract"],
+          "The second page is still spot. You hold the coin, not a contract.",
+          "Page two is still spot. You hold the coin, not a contract.", B)
+    plain(f"{base}/011.png", L, "NO MONEY AMOUNT ON THIS PAGE", "NO MONEY",
+          ["The page does not say how much", "Leave that box empty"],
+          "The page does not tell you how much money to assign.",
+          "This page does not tell you how much money to use.", B)
+    plain(f"{base}/012.png", L, "DO NOT DOUBLE THE COUNT", "NOT",
+          ["The first page felt fine", "That is not a reason to double"],
+          "The common miss is doubling a count because the first page felt fine.",
+          "Do not double the count just because the first page felt fine.", B)
+    plain(f"{base}/013.png", L, "THEY CAN FILL AT THE SAME TIME", "SAME TIME",
+          ["Two pairs that move together", "Both can fill together"],
+          "Two pairs that move together can fill the same way at the same time.",
+          "Two pairs that move together can fill at the same time.", B)
+    plain(f"{base}/014.png", L, "SAME CHECKS, OR NOT YET", "SAME CHECKS",
+          ["Page two passes the same checks", "Or it does not exist yet"],
+          "Page two passes the same checks, or it does not exist yet.",
+          "Page two passes the same checks, or it does not exist yet.", B)
+    plain(f"{base}/015.png", L, "RECAP", "RECAP",
+          ["A second page", "The same checks", "They can share what you hold", "Change one thing", "Still spot", "No money amount"],
+          "Recap: a second page, the same checks, shared holdings, one change, still spot, and no money amount.",
+          "Recap: second page, same checks, shared holdings, one change, still spot, and no amount of money.", B, size=30)
+    plain(f"{base}/020.png", L, "FILE BOTH ONLY IF BOTH PASSED", "BOTH",
+          ["Page one passed", "Page two passed", "Then file them together"],
+          "File page one and page two together only if both passed.",
+          "File both pages together only if both passed.", B)
+
+
+def bp11() -> None:
+    L = "bp-11-advanced-liquidation"
+    B = "cursor-bp11"
+    base = "course/images/bp-11-advanced-liquidation"
+    plain(f"{base}/001.png", L, "OPTIONAL. THE LOSS COMES FIRST", "LOSS",
+          ["You can skip this lesson", "If you stay, draw the losing path first"],
+          "This lesson is opt-in. The losing path comes first.",
+          "This lesson is optional. If you stay, the losing path comes first.", B)
+    plain(f"{base}/004.png", L, "THE SPOT PATH IS ALREADY DONE", "ALREADY DONE",
+          ["The spot page stands on its own", "You do not need this lesson"],
+          "The paper spot path is already complete without this lesson.",
+          "The spot path is already complete without this lesson.", B)
+    plain(f"{base}/005.png", L, "THE EXCHANGE CLOSES THE TRADE", "CLOSES",
+          ["The margin no longer covers the loss", "The exchange closes the trade"],
+          "Liquidation means the exchange closes the trade when the margin no longer covers the loss.",
+          "Liquidation means the exchange closes the trade when the margin runs out.", B)
+    plain(f"{base}/006.png", L, "PRICE LEAVES, THEN THE TRADE CLOSES", "THEN",
+          ["1  Price leaves and does not come back", "2  The trade is closed"],
+          "Draw the price leaving the band and not returning, then draw the trade closed.",
+          "First the price leaves and does not come back. Then the trade is closed.", B)
+    plain(f"{base}/007.png", L, "ISOLATED: THE LOSS STAYS IN ONE BOX", "ONE BOX",
+          ["One box", "A loss in that box stays there"],
+          "Isolated margin means the exchange looks only at what was assigned to that trade.",
+          "Isolated means a loss in that one box stays in that box.", B)
+    plain(f"{base}/008.png", L, "CROSS MARGIN CAN USE OTHER BALANCES", "OTHER BALANCES",
+          ["The exchange may look past that box", "It may use other balances"],
+          "Cross margin means the exchange may look at other balances in the same account.",
+          "Cross margin means the exchange may use other balances in the account.", B)
+    plain(f"{base}/009.png", L, "DO NOT WRITE A TIMES-NUMBER", "DO NOT",
+          ["No 5x in the isolated box", "No 5x in the cross-margin box"],
+          "Do not write a times-number in either box.",
+          "Do not write a times-number in the isolated box or the cross-margin box.", B)
+    plain(f"{base}/010.png", L, "FUNDING IS A SEPARATE PAYMENT", "SEPARATE",
+          ["A payment between the two sides", "It is not the price path"],
+          "A funding payment between sides is separate from the price path.",
+          "Funding is a separate payment between the two sides, not the price path.", B)
+    plain(f"{base}/011.png", L, "CROSS OUT 5x ON OLD NOTES", "CROSS OUT",
+          ["Old notes may show 5x", "Cross that out"],
+          "If old notes show a multiple like 5x, cross it out.",
+          "If old notes show 5x, cross it out.", B)
+    plain(f"{base}/012.png", L, "TWO WARNINGS", "TWO",
+          ["This can be liquidated", "You can lose all you put in"],
+          "Two warnings: the trade can be liquidated, and you can lose all the money you put in.",
+          "Two warnings: this can be liquidated, and you can lose all the money you put in.", B, size=36)
+    plain(f"{base}/013.png", L, "NOT A LIVE EXCHANGE SCREEN", "NOT",
+          ["No login", "No live contract screen"],
+          "The lesson does not walk a live contract screen.",
+          "This is not a guide to a live exchange screen.", B)
+    plain(f"{base}/014.png", L, "EXPLAIN IT WITHOUT A TIMES-NUMBER", "WITHOUT",
+          ["Isolated: the loss stays in one box", "Cross margin: other balances can be used", "No times-number"],
+          "The sentence to write: explain isolated and cross margin without a times-number, and draw the loss first.",
+          "Explain isolated and cross margin without a times-number.", B, size=30)
+    plain(f"{base}/015.png", L, "RECAP", "RECAP",
+          ["Optional", "Loss first", "Isolated: one box", "Cross margin: other balances", "No times-number", "The spot page still stands"],
+          "Recap: optional, loss first, isolated, cross margin, no times-number, and the spot page still stands.",
+          "Recap: the lesson is optional, the loss comes first, isolated stays in one box, cross margin can use other balances, there is no times-number, and the spot page still stands.", B, size=28)
+    plain(f"{base}/019.png", L, "SKIPPED ON PURPOSE", "SKIPPED",
+          ["Write this on the spot notebook", "Skipped on purpose"],
+          "If you skip this lesson, write Skipped on purpose on the spot notebook.",
+          "If you skip this lesson, write Skipped on purpose on the spot notebook.", B)
+
+
 LESSONS = {
+    "bp02": bp02_014,
     "bp04": lesson_bp04,
     "bp05": lesson_bp05,
     "bp06": bp06,
     "bp07": bp07,
+    "bp08": bp08,
+    "bp09": bp09,
+    "bp10": bp10,
+    "bp11": bp11,
 }
 
 
