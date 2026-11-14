@@ -326,6 +326,13 @@ def _beat_teaching(beat: dict) -> str | None:
         "course/images/bp-03-what-is-a-grid-bot/015.png": "Your turn: draw a band, label the five words, and draw one step down.",
         "course/images/bp-03-what-is-a-grid-bot/017.png": "Your turn: draw one buy order waiting below the price.",
         "course/images/bp-01-introduction/007.png": "Buy orders sit on lines below the price and sell orders sit on lines above it. The sells need some coin, so a grid starts with part cash and part coin, and that is a description, not advice.",
+        "course/images/bp-01-introduction/010.png": (
+            "The course is a map, and this introduction is only the first square. "
+            "Next is a checklist. Then the definition. Then calm or trending markets. "
+            "Then spacing and range. Then entry and exit. Then a paper screen. "
+            "Then monitoring. Then mistakes. Then scaling. "
+            "Then an opt-in lesson on liquidation."
+        ),
         "course/images/bp-01-introduction/008.png": "Write your stop rule down before you start. On the card it says: Stop = when you quit.",
         "course/images/bp-03-what-is-a-grid-bot/004.png": "Five labels cover the picture: upper, lower, levels, side, and stop. On the card, Upper is the top edge, Lower is the bottom edge, Levels are the rungs, Side is what you hold, and Stop is your rule.",
         "course/images/bp-03-what-is-a-grid-bot/008.png": "What you hold changes. Price bounces: coin and cash swap back and forth. Price leaves: mostly coin or mostly cash.",
@@ -973,12 +980,8 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
             color, width, label = AMBER, 3, f"{rounded:,}"
         else:
             color, width = (CYAN, 3) if rounded in edges else (MUTED, 2)
-            # BP-01's levels chart shows the top, the bottom, and the gap, not every rung price.
-            if (
-                chapter == "The levels"
-                and shot.get("lesson_id") == "bp-01-introduction"
-                and rounded not in edges
-            ):
+            # Every BP-01 chart keeps the top and the bottom. The other rungs stay unlabelled.
+            if shot.get("lesson_id") == "bp-01-introduction" and rounded not in edges:
                 label = ""
             else:
                 label = f"{rounded:,}"
@@ -1142,10 +1145,7 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
     r = 8
     draw.ellipse((hx - r - 3, hy - r - 3, hx + r + 3, hy + r + 3), outline=CYAN, width=3)
     draw.ellipse((hx - r, hy - r, hx + r, hy + r), fill=WHITE)
-    hide_node_price = (
-        shot.get("lesson_id") == "bp-01-introduction"
-        and chapter in {"The range", "The levels"}
-    )
+    hide_node_price = shot.get("lesson_id") == "bp-01-introduction"
     if not hide_node_price:
         anchor_x = tx if tx >= hx else tx + tw
         draw.line([(hx + (12 if tx >= hx else -12), hy), (anchor_x, ty + th / 2)], fill=CYAN, width=2)
@@ -1767,53 +1767,91 @@ def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
         fall = 1.0 if local > 0.8 else 0.0
     if fall > 0:
         climb = 0.0
-    sells = (220, 300, 380)
-    buys = (560, 640, 720)
+    sells = (250, 320, 390)
+    buys = (550, 620, 690)
     mid = 470
-    top_y = sells[0] - 40
-    bot_y = buys[-1] + 40
+    top_y = 210
+    bot_y = 730
     if fall > 0:
-        price_y = top_y + (bot_y - top_y) * fall
+        # The fall begins on the middle line, so the dot does not recross the sells.
+        price_y = mid + (bot_y - mid) * fall
     elif climb > 0:
         price_y = mid + (top_y - mid) * climb
     else:
         price_y = mid
 
+    def said(word: str) -> float:
+        for text, start, _end in shot.get("word_times") or []:
+            token = str(text).lower().strip(".,;:!?")
+            if token == word or token.startswith(word):
+                return float(start)
+        return float("inf")
+
+    cash_on = fall == 0 and local >= said("cash")
+    coin_on = local >= said("coin")
+
+    face_mark = font(30)
+    face_label = font(30)
+
     def coin_icon(cx: int, cy: int) -> None:
-        draw.ellipse([cx - 16, cy - 16, cx + 16, cy + 16], outline=CYAN, width=3)
-        draw.text((cx - 8, cy - 14), "C", font=font(24), fill=CYAN)
+        draw.ellipse([cx - 22, cy - 22, cx + 22, cy + 22], fill=NAVY, outline=CYAN, width=3)
+        tw = int(face_mark.getlength("C"))
+        draw.text((cx - tw // 2, cy - 18), "C", font=face_mark, fill=CYAN)
 
     def note_icon(cx: int, cy: int) -> None:
-        draw.rounded_rectangle([cx - 18, cy - 12, cx + 18, cy + 12], 3, outline=MINT, width=3)
-        draw.text((cx - 8, cy - 14), "$", font=font(24), fill=MINT)
+        draw.rounded_rectangle([cx - 26, cy - 16, cx + 26, cy + 16], 4, fill=NAVY, outline=MINT, width=3)
+        tw = int(face_mark.getlength("$"))
+        draw.text((cx - tw // 2, cy - 18), "$", font=face_mark, fill=MINT)
 
-    icon_x = box[2] - 150
+    labels = (
+        ("Sell orders", sells[1], MINT),
+        ("Price now", mid, WHITE),
+        ("Buy orders", buys[1], BLUE),
+    )
+    label_w = max(int(face_label.getlength(text)) for text, _yy, _color in labels)
+    label_x = box[0] + 24
+    line_x0 = label_x + label_w + 18
+    icon_x = box[2] - 56
+    line_x1 = icon_x - 26 - 14
+    for text, yy, color in labels:
+        draw.text((label_x, yy - 18), text, font=face_label, fill=color)
     for yy in sells:
         crossed = climb > 0 and price_y <= yy
         color = MINT if crossed else MUTED
-        draw.line([(box[0] + 80, yy), (box[2] - 80, yy)], fill=color, width=8)
+        draw.line([(line_x0, yy), (line_x1, yy)], fill=color, width=8)
         if crossed:
             note_icon(icon_x, yy)
         else:
             coin_icon(icon_x, yy)
-    draw.line([(box[0] + 80, mid), (box[2] - 80, mid)], fill=WHITE, width=3)
+    draw.line([(line_x0, mid), (line_x1, mid)], fill=WHITE, width=3)
     for yy in buys:
         crossed = fall > 0 and price_y >= yy
         color = BLUE if crossed else MUTED
-        draw.line([(box[0] + 80, yy), (box[2] - 80, yy)], fill=color, width=8)
+        draw.line([(line_x0, yy), (line_x1, yy)], fill=color, width=8)
         if crossed:
             coin_icon(icon_x, yy)
         else:
             note_icon(icon_x, yy)
-    draw.ellipse([180, price_y - 14, 208, price_y + 14], fill=CYAN)
+    dot_x = (line_x0 + line_x1) // 2
+    draw.ellipse([dot_x - 14, price_y - 14, dot_x + 14, price_y + 14], fill=CYAN)
     side = (1360, 220, RIGHT, 750)
     draw.rounded_rectangle(side, 22, fill=GLASS, outline=CYAN, width=3)
     draw.text((side[0] + 36, side[1] + 28), "What you hold", font=font(36), fill=CYAN)
     cash_box = [side[0] + 36, side[1] + 120, side[2] - 36, side[1] + 210]
     coin_box = [side[0] + 36, side[1] + 280, side[2] - 36, side[1] + 370]
-    draw.rounded_rectangle(cash_box, 14, fill=(16, 48, 40) if climb > 0 else GLASS, outline=MINT, width=6 if climb > 0 else 3)
+    draw.rounded_rectangle(
+        cash_box, 14,
+        fill=(16, 48, 40) if cash_on else GLASS,
+        outline=MINT,
+        width=6 if cash_on else 3,
+    )
     draw.text((cash_box[0] + 24, cash_box[1] + 22), "Cash", font=font(48), fill=MINT)
-    draw.rounded_rectangle(coin_box, 14, fill=(16, 32, 64) if fall > 0 else GLASS, outline=BLUE, width=6 if fall > 0 else 3)
+    draw.rounded_rectangle(
+        coin_box, 14,
+        fill=(16, 32, 64) if coin_on else GLASS,
+        outline=BLUE,
+        width=6 if coin_on else 3,
+    )
     draw.text((coin_box[0] + 24, coin_box[1] + 22), "Coin", font=font(48), fill=BLUE)
 
 
@@ -1835,14 +1873,27 @@ def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) 
     base.paste(crop, (x, y))
     still = str(shot.get("lesson_still") or "").replace("\\", "/")
     if still.endswith("bp-01-introduction/007.png"):
+        d = ImageDraw.Draw(base)
         _big_still_tags(
-            ImageDraw.Draw(base),
+            d,
             x, y, view_w, view_h,
             (
                 (0.09, 0.30, "Sell orders above"),
-                (0.09, 0.46, "Price now"),
+                (0.09, 0.485, "Price now"),
                 (0.09, 0.64, "Buy orders below"),
             ),
+        )
+        # The baked tag is wider than the new one, so cover what sticks out, then redraw.
+        d.rectangle(
+            [x + int(view_w * 0.09), y + int(view_h * 0.47), x + int(view_w * 0.44), y + int(view_h * 0.60)],
+            fill=NAVY,
+        )
+        _big_still_tags(d, x, y, view_w, view_h, ((0.09, 0.485, "Price now"),))
+        cy = y + int(view_h * 0.537)
+        d.line(
+            [(x + int(view_w * 0.09) + int(font(40).getlength("Price now")) + 36, cy), (x + int(view_w * 0.455), cy)],
+            fill=CYAN,
+            width=3,
         )
 
 
@@ -2244,7 +2295,15 @@ def _narrate_shot(speaker, shot: dict) -> tuple[np.ndarray, int, list]:
         spans.append((offset, len(buf) / sr))
         timed.extend(_time_sentence(speaker, pace, sentence, audio, sr, offset))
         if index < len(sentences) - 1:
-            buf = _xfade(buf, np.zeros(int(SENTENCE_GAP * sr), dtype=np.float32), sr)
+            # The course map reads eleven steps. A short pause keeps them from running together.
+            gap = SENTENCE_GAP
+            if (
+                shot.get("lesson_id") == "bp-01-introduction"
+                and (shot.get("chapter") or "") == "The map"
+                and len(sentences) > 2
+            ):
+                gap = 0.40
+            buf = _xfade(buf, np.zeros(int(gap * sr), dtype=np.float32), sr)
     hold = max(0.0, _reading_time(shot) - len(buf) / sr)
     revealing = shot.get("kind") in {"chart", "analogy"} and not shot.get("board") and not shot.get("candle")
     cap = REVEAL_GAP_CAP if revealing else LINE_GAP_CAP
@@ -2304,7 +2363,9 @@ def _write_lesson_captions(vtt: Path, srt: Path, words: list) -> None:
     for word in words:
         trial = current + [word]
         text = " ".join(item.text for item in trial)
-        if current and len(text) > 42:
+        span = max(0.05, trial[-1].end - trial[0].start)
+        too_fast = len(trial) > 1 and len(text) / span > 18.0
+        if current and (len(text) > 42 or too_fast):
             groups.append(current)
             current = [word]
         else:
@@ -2318,10 +2379,10 @@ def _write_lesson_captions(vtt: Path, srt: Path, words: list) -> None:
         spoken = group[-1].end
         nxt = groups[index + 1][0].start if index + 1 < len(groups) else None
         end = max(spoken, start + len(text) / 18.0)
-        # A cue may hold a fifth of a second into the next line so it stays readable.
+        # A cue ends when the next one starts, so two lines are never on screen together.
         if nxt is not None:
-            end = min(end, nxt + 0.20)
-        cues.append((start, max(end, start + 0.2), [text]))
+            end = min(end, nxt)
+        cues.append((start, max(end, start + 0.001), [text]))
     vtt_lines = ["WEBVTT", ""]
     srt_lines = []
     for index, (start, end, lines) in enumerate(cues, start=1):
@@ -2597,6 +2658,42 @@ def render(
     return final_path
 
 
+def _clamp_cue_ends(text: str) -> str:
+    """End each cue when the next cue starts, so two cues are never on screen together."""
+    from voice.captions import _stamp
+
+    gate_root = ROOT / "skills/video-production/quality-gate"
+    if str(gate_root) not in sys.path:
+        sys.path.insert(0, str(gate_root))
+    from gate.captions import parse_captions
+
+    cues = list(parse_captions(text))
+    if not cues:
+        return text if text.endswith("\n") else text + "\n"
+    rows = [[cue.start, cue.end, cue.text] for cue in cues]
+    for index, row in enumerate(rows[:-1]):
+        row[1] = min(row[1], rows[index + 1][0])
+        if row[1] <= row[0]:
+            row[1] = row[0] + 0.001
+    # A clamp can shorten a cue. Pull the start back into the gap before it
+    # when that gap is free, so the line still fits the 18 character cap.
+    for index, row in enumerate(rows):
+        span = row[1] - row[0]
+        if span > 0 and len(row[2]) / span <= 18.0 + 1e-9:
+            continue
+        need = len(row[2]) / 18.0
+        earliest = rows[index - 1][1] if index else row[0]
+        row[0] = max(earliest, row[1] - need)
+        if row[0] >= row[1]:
+            row[0] = max(earliest, row[1] - 0.001)
+    lines = ["WEBVTT", ""]
+    for start, end, payload in rows:
+        lines.append(f"{_stamp(start)} --> {_stamp(end)}")
+        lines.append(payload)
+        lines.append("")
+    return "\n".join(lines) + "\n"
+
+
 def _cap_caption_speed(path: Path, limit: float = 18.0) -> None:
     """Hold every cue at or under the studio reading speed.
 
@@ -2610,16 +2707,22 @@ def _cap_caption_speed(path: Path, limit: float = 18.0) -> None:
     """
     from voice.captions import refit_vtt_text
 
-    path.write_text(refit_vtt_text(path.read_text(encoding="utf-8"), limit=limit), encoding="utf-8")
+    fitted = refit_vtt_text(path.read_text(encoding="utf-8"), limit=limit)
+    path.write_text(_clamp_cue_ends(fitted), encoding="utf-8")
     gate_root = ROOT / "skills/video-production/quality-gate"
     if str(gate_root) not in sys.path:
         sys.path.insert(0, str(gate_root))
     from gate.captions import parse_captions
 
-    for cue in parse_captions(path.read_text(encoding="utf-8")):
+    parsed = list(parse_captions(path.read_text(encoding="utf-8")))
+    for index, cue in enumerate(parsed):
+        if index + 1 < len(parsed) and cue.end > parsed[index + 1].start + 0.0005:
+            raise SystemExit(
+                f"{path.name} {cue.start:.2f}s still overlaps the next caption"
+            )
         span = cue.end - cue.start
         cps = len(cue.text) / span if span > 0 else float("inf")
-        if cps > limit:
+        if cps > limit or len(cue.text) > 42:
             raise SystemExit(
                 f"{path.name} {cue.start:.2f}s is {cps:.1f} characters per second "
                 f"after the {limit:.0f} cap"
@@ -2635,10 +2738,16 @@ def _srt_from_capped_vtt(vtt: Path, srt: Path) -> None:
         sys.path.insert(0, str(gate_root))
     from gate.captions import parse_captions
 
+    clamped = _clamp_cue_ends(vtt.read_text(encoding="utf-8"))
+    vtt.write_text(clamped, encoding="utf-8")
     lines: list[str] = []
-    for index, cue in enumerate(parse_captions(vtt.read_text(encoding="utf-8")), start=1):
-        lines.append(str(index))
-        lines.append(f"{_stamp(cue.start, srt=True)} --> {_stamp(cue.end, srt=True)}")
+    parsed = list(parse_captions(clamped))
+    for index, cue in enumerate(parsed):
+        end = cue.end
+        if index + 1 < len(parsed):
+            end = min(end, parsed[index + 1].start)
+        lines.append(str(index + 1))
+        lines.append(f"{_stamp(cue.start, srt=True)} --> {_stamp(end, srt=True)}")
         lines.append(cue.text)
         lines.append("")
     srt.write_text("\n".join(lines) + "\n", encoding="utf-8")

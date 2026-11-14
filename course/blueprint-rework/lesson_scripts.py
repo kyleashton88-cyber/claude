@@ -197,8 +197,7 @@ def bp01() -> list[dict]:
         focus_price=HIGH, focus_label="High",
         vo=(
             "The range is the top line and the bottom line, copied from the path. "
-            "Every close in this window stayed between those two lines. "
-            "A neat round box would have sat inside the real lines, so it does not match the path."
+            "Every close in this window stayed between those two lines."
         ),
         caption="The bottom line is 24,930. The top line is 30,331.",
         levels=[LOW, HIGH],

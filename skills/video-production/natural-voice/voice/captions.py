@@ -165,7 +165,7 @@ def _hold_for_speed(rows: list[list], limit: float) -> None:
             need = len(row[2]) / limit
             new_end = start + need + 0.002
             if index + 1 < len(rows):
-                new_end = min(new_end, rows[index + 1][0] + 0.20)
+                new_end = min(new_end, rows[index + 1][0])
             if new_end > end + 0.0005:
                 row[0], row[1] = start, new_end
                 moved = True
