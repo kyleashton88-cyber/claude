@@ -465,19 +465,19 @@ def draw_lock(img, box) -> None:
 
 def bp02_008() -> None:
     img = canvas()
-    head(img, "NEVER WRITE DOWN OR TYPE A SECRET", "SECRET", size=34)
+    head(img, "NEVER TYPE OR SHARE A SECRET", "SECRET", size=40)
     # One lock. The rule is the headline. The line under it names the three.
     draw_lock(img, (640, 400, 900, 700))
     face = font(FONT_SEMI, 32)
-    tag(img, (300, 780, 1240, 880), ["Seed phrase, private key, API secret"], face)
+    tag(img, (300, 780, 1240, 880), ["Seed phrase · Private key · API secret"], face)
     arrow(img, (770, 780), (770, 694))
     final = save(img, "course/images/bp-02-what-you-need/008.png")
     assert_tip(final, (770, 694), (770, 700), "lock")
     record([{
         "path": "course/images/bp-02-what-you-need/008.png",
         "lesson": "bp-02-what-you-need",
-        "shows": "One lock. The rule is never write down or type a secret. A line names the seed phrase, the private key, and the API secret.",
-        "alt": "Never write down or type a secret: a seed phrase, a private key, or an API secret.",
+        "shows": "One lock. The rule is never type or share a secret. A line names the seed phrase, the private key, and the API secret.",
+        "alt": "Never type or share a secret: a seed phrase, a private key, or an API secret.",
         "batch": "cursor-bp02-008",
     }])
 
