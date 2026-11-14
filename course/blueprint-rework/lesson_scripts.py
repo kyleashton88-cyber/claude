@@ -195,10 +195,9 @@ def bp01() -> list[dict]:
         reveal=1,
         focus_price=HIGH, focus_label="High",
         vo=(
-            "The range is the top and the bottom copied from the path. "
-            "A print is a recorded price. Here the lowest print was 24930 and the highest was 30331. "
-            "A wick is the price poking past a line during the day but not closing there. "
-            "Seven days wicked above 30000, and one day wicked under 25000, so a neat round box would have missed them."
+            "The range is the top line and the bottom line, copied from the path. "
+            "Every close in this window stayed between those two lines. "
+            "A neat round box would have sat inside the real lines, so it does not match the path."
         ),
         caption="The real low was 24,930. The real high was 30,331.",
         levels=[LOW, HIGH],
@@ -224,12 +223,11 @@ def bp01() -> list[dict]:
     s.append(_shot(
         chapter="One day",
         chart_title="One day inside the band",
-        reveal=0.02,
-        pin_date="2023-07-19",
-        pin_close=29914,
+        candle={"high": 30184, "low": 29794, "close": 29914, "date": "19 July 2023"},
         vo=(
             "The daily close is the last price of the day. Crypto trades all day, so the day is cut at a set time. "
-            "On 19 July 2023 the daily close was 29914. That day's low was 29794 and the high was 30184."
+            "This candle is 19 July 2023. The high, the low, and the close are labelled. "
+            "A wick is the thin line from the close out to the high or the low. It is not the close."
         ),
         caption="19 July 2023. Close 29,914. Low 29,794. High 30,184.",
     ))
@@ -253,15 +251,15 @@ def bp01() -> list[dict]:
         focus_price=HIGH, focus_label="Left behind",
         vo=(
             "A stop is a rule you write down before you start, saying what you will do if the price leaves the band and does not come back. "
-            "On 23 October 2023 the daily close was 33086, which is above 30331. "
+            "On 23 October 2023 the close finished above the top line. "
             "The price did not come back, so this example was finished."
         ),
         caption="23 October 2023. The close leaves 30,331.",
     ))
     worked = (
         "Worked check for 19 July 2023 to 16 October 2023. "
-        "The low was 24930 and the high was 30331, with seven lines and six gaps of about 900. "
-        "The stop rule is: if the daily close leaves 30331 and does not come back, the idea is finished. "
+        "The bottom line and the top line are on the card, with seven lines and six gaps of about 900. "
+        "The stop rule is: if the daily close leaves the top line and does not come back, the idea is finished. "
         "Nothing in that list is an order."
     )
     s.append(_shot(
@@ -531,9 +529,9 @@ def bp04() -> list[dict]:
     s.append(_shot(
         chapter="Range", chart=SUMMER, reveal=1,
         vo=(
-            "A range, on this page, is a path that keeps returning inside a high and a low. "
-            "From 19 July to 16 October 2023 the prints stayed between 24930 and 30331, "
-            "with the close swinging back through 27630 again and again. "
+            "A range, on this page, is a path that keeps returning inside the top line and the bottom line. "
+            "From 19 July to 16 October 2023 every close stayed between those two lines, "
+            "with the close swinging back through the middle line again and again. "
             "That is the kind of market a grid is built for."
         ),
         caption="Summer 2023: the path keeps returning.",
@@ -555,8 +553,8 @@ def bp04() -> list[dict]:
         vo=(
             "A break is a path that jumps out of the prices around it. "
             "On 11 March 2020 the public close was 7911. "
-            "On 13 March the public daily low was 4107. "
-            "That is a drop of about 48 percent from that close to that low. "
+            "Over the next two days the path fell about 48 percent. "
+            "The exact low is on the card, marked Example. "
             "You do not sort those three days as a quiet range, and you do not lay a summer-style ladder across them."
         ),
         caption="13 March 2020. Low 4,107.",
@@ -613,18 +611,16 @@ def bp05() -> list[dict]:
     s.append(_shot(
         chapter="Hook", reveal=1, focus_price=30000, focus_label="30000",
         vo=(
-            "A wick is the price poking past a line during the day but not closing there. "
-            "A band that ignores the real wick is too tight, even when it looks neat. "
-            "A box from 25000 to 30000 would have missed seven days that wicked above 30000 "
-            "in the summer window, and one day that wicked under 25000. "
-            "The public high was 30331. The public low was 24930. Start there."
+            "A band that ignores the real high and the real low is too tight, even when it looks neat. "
+            "A round box would have missed days whose close, or the extreme of the day, sat outside it. "
+            "Start from the real top line and the real bottom line. They are on the chart, marked Example."
         ),
         caption="A neat round box missed real wicks.",
     ))
     s += stack("Objectives", [
         "By the end you will count the gaps, not the lines that bound them.",
         "You will compare a gap of about 900 with an example cost of about 55.",
-        "You will widen a band that the real wick already left.",
+        "You will widen a band that the real top line already left.",
     ], "")
     s.append(legal())
     s.append(_shot(
@@ -641,9 +637,9 @@ def bp05() -> list[dict]:
     s.append(_shot(
         chapter="Wicks", reveal=1, focus_price=30000, focus_label="Too tight",
         vo=(
-            "The range has to hold the wicks you already have, not only the closes you liked. "
-            "If your top is 30000 and the window printed 30331, a 30000 top doesn't match the real high. "
-            "Move the rail to the print, then recount the gaps. Do not change the step and the rail in one silent edit."
+            "The range has to hold the real high and the real low, not only the closes you liked. "
+            "If your top is a round number and the window's high is above it, that top doesn't match. "
+            "Move the rail to the real high, then recount the gaps. Do not change the step and the rail in one silent edit."
         ),
         caption="The high was 30,331. A 30,000 top misses the real high.",
     ))
@@ -676,7 +672,7 @@ def bp05() -> list[dict]:
         chapter="Why the gap matters",
         reveal=1,
         vo=(
-            "A print is a recorded price. The rails have to use the real prints, 24930 and 30331, not a round number you prefer. "
+            "A recorded price is a close, a high, or a low that was actually printed for that day. The rails have to use the real top line and the real bottom line, not a round number you prefer. "
             "A gap is the space between two levels. This window has seven prices and six gaps. "
             "The step is about 900. An example cost of about 55 is much smaller, so this step can clear that cost. "
             "A gap thinner than the cost is the one you cross out. "
@@ -688,7 +684,7 @@ def bp05() -> list[dict]:
         caption="Use the real prints. Count gaps. Cross out a gap that cannot clear the cost.",
     ))
     s += stack("Recap", [
-        "Rails come from the prints: 24930 and 30331.",
+        "Rails come from the real top line and the real bottom line.",
         "Count the gaps. Six, not seven.",
         "A gap that cannot clear the example cost is rejected.",
     ], "")
@@ -1008,12 +1004,12 @@ def bp09() -> list[dict]:
         caption="Three mistakes you can point at.",
         vo=(
             "The mistakes in this lesson are pages, not personalities. "
-            "A blank stop. A band tighter than the wicks. A line count used as a gap count. "
+            "A blank stop. A band tighter than the real top line. A line count used as a gap count. "
             "Each one can be pointed at on the summer chart."
         ),
     ))
     s += stack("Objectives", [
-        "By the end you will find a missing stop, a band tighter than the wicks, and a line counted as a gap.",
+        "By the end you will find a missing stop, a band tighter than the real top line, and a line counted as a gap.",
         "You will fix one, reread, then fix the next.",
         "You will keep result language off the page.",
     ], "")
@@ -1031,10 +1027,9 @@ def bp09() -> list[dict]:
     s.append(_shot(
         chapter="Tight band", reveal=1, focus_price=30000, focus_label="Tight",
         vo=(
-            "A tight band here is 25000 to 30000. It looks round. "
-            "A wick is the price poking past a line during the day but not closing there. "
-            "The window's high was 30331 and seven days wicked over 30000. "
-            "The fix is to move the rail to the print, then recount six gaps. "
+            "A tight band here is a round box. It looks tidy. "
+            "The real top line sits above that box. "
+            "The fix is to move the rail up to the top line, then recount six gaps. "
             "You do not fix the rail and the count in one scribble."
         ),
         caption="Round numbers lost the wick at 30,331.",
@@ -1077,12 +1072,12 @@ def bp09() -> list[dict]:
         vo=(
             "Fix one miss, then read the page again, then fix the next. "
             "First write the stop rule for 23 October 2023, when the close left 30331 and did not come back. "
-            "Then move a round top of 30000 up to the real high, 30331, because a wick had already gone past 30000. "
+            "Then move a round top up to the real top line, because the path had already gone past the round number. "
             "Then recount. Seven marks on the ladder are six gaps, not seven. "
             "A result word does not belong on any of those passes. The page is an example, not a grade. "
             "After each fix, read the three words again: range, levels, and the stop rule. "
             "If one of them is still blank, that is the next fix. "
-            "A tight band is one the wick already left. A missing stop is a page that cannot finish. A line count is not a gap count. "
+            "A tight band is one the real top line already left. A missing stop is a page that cannot finish. A line count is not a gap count. "
             "Fix those three, in that order, and the page matches the summer path."
         ),
         caption="One fix, then the next. No result word.",
@@ -1092,7 +1087,7 @@ def bp09() -> list[dict]:
         reveal=1,
         vo=(
             "Read the corrected page back once. "
-            "Range: 24930 to 30331, including the wick that went past 30000. "
+            "Range: the real bottom line to the real top line, past a round box. "
             "Levels: six gaps of about 900, not seven lines. "
             "Stop: the close leaves 30331 and does not come back, which this path did on 23 October 2023. "
             "If those three are on the page, the misses in this lesson are fixed."
@@ -1101,7 +1096,7 @@ def bp09() -> list[dict]:
     ))
     s += stack("Recap", [
         "A missing finish rule is the first miss.",
-        "A band tighter than the real wicks is the second.",
+        "A band tighter than the real top line is the second.",
         "A line count standing in for a gap count is the third.",
     ], "")
     s.append(outro("Scaling up on spot"))
@@ -1226,8 +1221,7 @@ def bp11() -> list[dict]:
         reveal_from=0, reveal=1, levels=[],
         vo=(
             "This lesson is opt-in. The spot page is already complete without it. "
-            "The losing path comes first. On 13 March 2020 the public daily low was 4107. "
-            "The close on 11 March had been 7911. "
+            "The losing path comes first. The card has the 11 March close and the 13 March low, marked Example. "
             "A contract can be closed by the venue when the margin is gone. A spot holding of coins is not that mechanism."
         ),
     ))
@@ -1255,8 +1249,8 @@ def bp11() -> list[dict]:
             "A contract here is a trade on the price made with borrowed money. You never hold the coin. A position is that open trade. "
             "Liquidation, in plain words, means a venue closes a contract because the margin cannot carry it. "
             "The chart is not a venue screen. It is the public path those days followed. "
-            "From the 11 March close at 7911 to the 13 March low at 4107 is about 48 percent. "
-            "Draw that drop before you draw any recovery. The low comes first in the story."
+            "From that close down to that low is about 48 percent. "
+            "Draw that drop before you draw any recovery. The low on the card comes first in the story."
         ),
         caption="About 48 percent, from 7,911 to the low at 4,107.",
     ))
@@ -1275,7 +1269,7 @@ def bp11() -> list[dict]:
         chart_title="February and March 2020",
         reveal=1, levels=[],
         vo=(
-            "You already have the two prices that matter: the 11 March close at 7911 and the 13 March low at 4107. "
+            "You already have the two prices that matter, and both are on the card, marked Example. "
             "You do not read every day of the drop. "
             "The summer spot page is a different picture, and this drop does not replace it."
         ),

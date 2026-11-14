@@ -253,9 +253,9 @@ def refit_vtt_text(text: str, limit: float = DISPLAY_CPS) -> str:
     lines = ["WEBVTT", ""]
     for start, end, payload in merged:
         wrapped = _wrap_lines(payload)
-        # Two lines of 42 characters. A third line used to be glued back on
-        # and the gate then saw one line past the limit.
-        groups = [wrapped[i:i + 2] for i in range(0, len(wrapped), 2)] or [[payload]]
+        # One line of at most 42 characters per cue. Joining the wrapped
+        # lines used to push a single caption line past the gate.
+        groups = [[line] for line in wrapped] or [[payload]]
         weights = [max(1, sum(len(line) for line in group)) for group in groups]
         total = float(sum(weights))
         cursor = start

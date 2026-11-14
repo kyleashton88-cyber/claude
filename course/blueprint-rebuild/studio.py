@@ -372,7 +372,7 @@ def _beat_teaching(beat: dict) -> str | None:
         ("Without a top and a bottom, a spacing percent is a number floating in the margin.", "Without a top and a bottom, you can't place the lines."),
         ("Price often chops sideways, weaving through the same band instead of leaving.", "Price often moves sideways, bouncing between the same top and bottom instead of leaving."),
         ("built for that weave", "built for that bouncing"),
-        ("the weave they were built for is gone. Inventory can sit on one side.", "the bouncing they were built for is gone. You may end up holding mostly coin or mostly cash."),
+        ("the weave they were built for is gone. Inventory can sit on one side.", "the bouncing they were built for is gone. You may end up holding mostly coin or mostly cash, because on the way out, every buy below or every sell above has already filled."),
         ("The weave is the job.", "Bouncing inside the band is what a grid is built for."),
         ("such as the base and the quote", "the coin you buy and the money you pay with"),
         ("The setup check has seven lines", "The setup check has seven items"),
@@ -572,7 +572,45 @@ def plan(sid: str) -> list[dict]:
         )
         guard(blob)
         shot["example"] = bool(re.search(r"\d", blob))
+        shot["vo"] = _speak_round(shot.get("vo") or "")
     return shots
+
+
+def _speak_round(text: str) -> str:
+    """Exact five-digit prices stay on the card. Speech uses the line or a round amount."""
+    swaps = (
+        ("24,930", "the bottom line"),
+        ("24930", "the bottom line"),
+        ("30,331", "the top line"),
+        ("30331", "the top line"),
+        ("27,630", "the middle line"),
+        ("27630", "the middle line"),
+        ("33,086", "about 33 thousand"),
+        ("33086", "about 33 thousand"),
+        ("29,914", "about 30 thousand"),
+        ("29914", "about 30 thousand"),
+        ("29,794", "about 30 thousand"),
+        ("29794", "about 30 thousand"),
+        ("30,184", "about 30 thousand"),
+        ("30184", "about 30 thousand"),
+        ("26,050", "about 26 thousand"),
+        ("26050", "about 26 thousand"),
+        ("27,969", "about 28 thousand"),
+        ("27969", "about 28 thousand"),
+        ("71,397", "about 71 thousand"),
+        ("71397", "about 71 thousand"),
+        ("56,555", "about 57 thousand"),
+        ("56555", "about 57 thousand"),
+        ("72,715", "about 73 thousand"),
+        ("72715", "about 73 thousand"),
+        ("30,000", "about 30 thousand"),
+        ("30000", "about 30 thousand"),
+        ("25,000", "about 25 thousand"),
+        ("25000", "about 25 thousand"),
+    )
+    for old, new in swaps:
+        text = text.replace(old, new)
+    return text
 
 
 # The old estimate used 2.55 words/second and said BP-01 was 7.2 minutes.
@@ -582,8 +620,10 @@ def plan(sid: str) -> list[dict]:
 SPEECH_RATE = 1.0
 SENTENCE_GAP = 0.52
 BEAT_GAP = 1.05
-# A short reveal used to wait out the whole card. The next line starts within about 3s.
-LINE_GAP_CAP = 3.0
+# A short card used to sit in silence for up to 3s. A chart may still hold
+# while its line is revealing. Every other gap stays within about 1.2s.
+LINE_GAP_CAP = 1.2
+REVEAL_GAP_CAP = 3.0
 JOIN_FADE = 0.030
 SECONDS_PER_WORD = 610.085 / 1045
 
@@ -832,7 +872,7 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
     ymd = series[pinned]["date"].split("-")
     tag = f"{int(ymd[2])} {months[int(ymd[1])]}  {int(round(series[pinned]['close'])):,}"
     # Walk charts put the close in a small tag. 46px keeps a 9 from being read as a 0.
-    tag_px = 46 if chapter in {"Walk the summer", "Copy the path", "Where the price stayed"} else 32
+    tag_px = 46 if chapter in {"Walk the summer", "Copy the path", "Where the price stayed"} else 36
     face = font(tag_px)
     tw = int(face.getlength(tag)) + 28
     th = 64 if tag_px > 32 else 44
@@ -1100,8 +1140,8 @@ def _hero(
             rows[-1] = "EXAMPLE on figures"
         step = max(36, (y1 - y0 - 70) // len(rows))
         y = y0 + 28
-        for index, row in enumerate(rows):
-            _row_icon(draw, x0 + 36, y + 16, ("book", "ladder", "coin", "paper", "lock", "stop", "stamp")[index])
+        for row in rows:
+            _tick(draw, x0 + 36, y + 16)
             draw.text((x0 + 68, y), row, font=font(28), fill=WHITE)
             y += step
         return
@@ -1230,6 +1270,11 @@ def paint_disclaimer(base: Image.Image, shot: dict, local: float) -> None:
         y += 58
 
 
+def _tick(draw: ImageDraw.ImageDraw, x: int, y: int) -> None:
+    """A plain tick. The old checklist used letter marks such as B and EX."""
+    draw.line([(x - 14, y), (x - 4, y + 12), (x + 16, y - 14)], fill=MINT, width=4)
+
+
 def _row_icon(draw: ImageDraw.ImageDraw, x: int, y: int, kind: str) -> None:
     """40px-plus icons. Amber is only the stop sign."""
     if kind == "book":
@@ -1275,11 +1320,10 @@ def paint_board(base: Image.Image, shot: dict) -> None:
             "7. The word Example on every figure.",
         ]
         draw.text((MX + 80, 186), "These are the seven lines on the page.", font=font(32), fill=WHITE)
-        icons = ("book", "ladder", "coin", "paper", "lock", "stop", "stamp")
         y = 240
-        for row, kind in zip(rows, icons):
+        for row in rows:
             draw.rounded_rectangle([MX, y, RIGHT, y + 68], 12, fill=GLASS, outline=LINE, width=2)
-            _row_icon(draw, 130, y + 34, kind)
+            _tick(draw, 130, y + 34)
             draw.text((188, y + 16), row, font=font(32), fill=WHITE)
             draw.ellipse([1760, y + 16, 1796, y + 52], outline=MINT, width=3)
             draw.line([(1768, y + 34), (1778, y + 44), (1790, y + 24)], fill=MINT, width=3)
@@ -1356,7 +1400,7 @@ def paint_worked(base: Image.Image, shot: dict, local: float) -> None:
     y = 190
     for text in rows[:shown]:
         draw.rounded_rectangle([MX, y, RIGHT, y + 110], 16, fill=GLASS, outline=CYAN, width=2)
-        size = 40 if font(40).getlength(text) < (W - 2 * MX - 80) else 36
+        size = 48 if font(48).getlength(text) < (W - 2 * MX - 80) else 44
         yy = y + 28
         for line in wrap(text, size, W - 2 * MX - 80)[:2]:
             draw.text((MX + 32, yy), line, font=font(size), fill=WHITE)
@@ -1629,6 +1673,67 @@ def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) 
     base.paste(crop, (x, y))
 
 
+def paint_candle(base: Image.Image, shot: dict) -> None:
+    """One day, large enough to see the high, the low, and the close."""
+    draw = ImageDraw.Draw(base)
+    box = (MX, 190, RIGHT, 760)
+    draw.rounded_rectangle(box, 22, fill=GLASS, outline=LINE, width=2)
+    candle = shot.get("candle") or {}
+    high = int(candle.get("high") or 0)
+    low = int(candle.get("low") or 0)
+    close = int(candle.get("close") or 0)
+    title = candle.get("date") or shot.get("chart_title") or "One day"
+    draw.text((box[0] + 36, box[1] + 24), title, font=font(36), fill=WHITE)
+    _example(draw, box[2] - 220, box[1] + 24)
+    span = max(1, high - low)
+    top, bot = box[1] + 140, box[3] - 80
+    cx = (box[0] + box[2]) // 2
+
+    def y_of(price: int) -> int:
+        return int(top + (high - price) / span * (bot - top))
+
+    y_high, y_low, y_close = y_of(high), y_of(low), y_of(close)
+    draw.line([(cx, y_high), (cx, y_low)], fill=CYAN, width=6)
+    body_top = min(y_close, y_close - 36)
+    draw.rounded_rectangle([cx - 36, body_top, cx + 36, y_close + 8], 8, fill=CYAN)
+    labels = (
+        (y_high, f"High {high:,}", -280),
+        (y_close, f"Close {close:,}", 80),
+        (y_low, f"Low {low:,}", -280),
+    )
+    for y, label, dx in labels:
+        draw.text((cx + dx, y - 18), label, font=font(36), fill=WHITE)
+
+
+def paint_course_map(base: Image.Image) -> None:
+    """Labelled steps, with a plain line under each lesson name."""
+    draw = ImageDraw.Draw(base)
+    steps = (
+        ("1", "Introduction", "What a grid is"),
+        ("2", "Checklist", "What you write before any screen"),
+        ("3", "Definition", "Buys below the price, sells above it"),
+        ("4", "Regimes", "Is the market trending or going sideways?"),
+        ("5", "Spacing", "How far apart the lines are"),
+        ("6", "Entry and exit", "Write the finish rule first"),
+        ("7", "Paper", "Copy the page onto a practice form"),
+        ("8", "Monitoring", "Three questions, then stop"),
+        ("9", "Mistakes", "A blank stop, a tight band, a bad count"),
+        ("10", "Scaling", "A second page in its own bucket"),
+        ("11", "Liquidation", "When borrowed money forces your position closed"),
+    )
+    left = steps[:6]
+    right = steps[6:]
+    for column, x in ((left, MX), (right, 1000)):
+        y = 196
+        for number, name, gloss in column:
+            draw.rounded_rectangle([x, y, x + 56, y + 48], 10, fill=TAG, outline=CYAN, width=2)
+            num_x = x + 16 if len(number) == 1 else x + 6
+            draw.text((num_x, y + 6), number, font=font(28), fill=CYAN)
+            draw.text((x + 72, y - 2), name, font=font(32), fill=CYAN)
+            draw.text((x + 72, y + 36), gloss, font=font(28), fill=WHITE)
+            y += 92
+
+
 def paint(shot: dict, local: float, progress: float) -> np.ndarray:
     dur = float(shot.get("duration") or estimate(shot))
     img = background(local)
@@ -1658,6 +1763,11 @@ def paint(shot: dict, local: float, progress: float) -> np.ndarray:
             paint_analogy(img, shot, local, dur)
         lower_third(ImageDraw.Draw(img), shot)
         draw_footer(ImageDraw.Draw(img))
+    elif kind == "lesson-still" and (shot.get("chapter") or "") == "The map":
+        title_bar(img, shot, progress)
+        paint_course_map(img)
+        lower_third(ImageDraw.Draw(img), shot)
+        draw_footer(ImageDraw.Draw(img))
     elif kind == "lesson-still":
         title_bar(img, shot, progress)
         paint_lesson_still(img, shot, local, dur)
@@ -1667,6 +1777,8 @@ def paint(shot: dict, local: float, progress: float) -> np.ndarray:
         title_bar(img, shot, progress)
         if shot.get("board") in {"seven-lines", "no-secrets", "three-words"}:
             paint_board(img, shot)
+        elif shot.get("candle"):
+            paint_candle(img, shot)
         else:
             chart_card(img, shot, local, dur)
         lower_third(ImageDraw.Draw(img), shot)
@@ -1942,7 +2054,8 @@ def _narrate_shot(speaker, shot: dict) -> tuple[np.ndarray, int, list]:
         if index < len(sentences) - 1:
             buf = _xfade(buf, np.zeros(int(SENTENCE_GAP * sr), dtype=np.float32), sr)
     hold = max(0.0, _reading_time(shot) - len(buf) / sr)
-    tail = min(LINE_GAP_CAP, hold + BEAT_GAP)
+    cap = REVEAL_GAP_CAP if shot.get("kind") in {"chart", "analogy"} else LINE_GAP_CAP
+    tail = min(cap, hold + BEAT_GAP)
     if tail > 0:
         buf = _xfade(buf, np.zeros(int(tail * sr), dtype=np.float32), sr)
     return buf, sr, timed
