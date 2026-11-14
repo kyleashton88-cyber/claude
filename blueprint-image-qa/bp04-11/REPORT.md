@@ -2,6 +2,8 @@
 
 Scored by Creative Studio, 14 Nov 2026 WITA. Standard: `skills/image-quality-standard` (7 categories, pass = every category >= 4 and no hard fail) plus Stewart's beginner-clear checks, applied strictly.
 
+**Standing check (14 Nov 2026 WITA):** For every still from now on, recount the drawn lines and gaps on the same band, and check every number, count and headline claim against the arithmetic and the narration, not just against the labels. A label that merely matches a wrong drawing is still a fail. Card or box borders are not grid lines, consistent with how BP-05 015 counts '7 lines, 6 gaps' (the seven interior strokes only). Over the same band, halving the step doubles the gaps, not the lines: *n* lines / *n*−1 gaps become 2(*n*−1)+1 lines / 2(*n*−1) gaps (so 6 lines / 5 gaps become 11 lines / 10 gaps, not 12 lines / 11 gaps).
+
 **Result (stage 1): 0 pass / 161 fail of 161. Current after BP-04 remake round 2 and the strict arrow re-check: 13/161 pass, BP-04 13/20.** No BP-04..BP-11 lesson is passing. Every image needs a remake.**
 
 - Scope: every beat image in `course/scripts/bp-04..bp-11*.json` @ `cursor/blueprint-professional-rebuild-d1f6` fbb3f9c. `course/blueprint-rebuild/BP04-11_IMAGE_MANIFEST.json` was not on the branch yet (404), so scope comes from the scripts. Re-check against the manifest when it lands.
@@ -683,3 +685,34 @@ Headline remains 'HALF THE GAP, DOUBLE THE LINES' over the 6 vs 12 schematic. Dr
 
 ### Updated counts
 - **BP-05: 14/14 — 100%.**
+
+
+---
+
+## Correction of BP-05 006 cursor2, standing check, and cursor3 at 92a39e9
+
+The PASS of BP-05 006 at f184f25 (`gen/bp-05-spacing-and-range/006/cursor2.png`, commit 51f1823) was wrong. The labels '6 lines, 5 gaps' and '12 lines, 11 gaps' matched the drawing, but they were never checked against the arithmetic. Over the same band, halving the step doubles the gaps, not the lines: 5 gaps / 6 lines become 10 gaps / 11 lines. '12 lines, 11 gaps' and the headline 'HALF THE GAP, DOUBLE THE LINES' are false. Cursor2 is recorded as a FAIL with that reason.
+
+The standing check above is now part of the rubric: recount drawn lines and gaps for the same band, and check every number, count and headline claim against the arithmetic and the narration, not just the labels.
+
+Fetched the authentic 1536×1024 RGB remake from `kyleashton88-cyber/claude@92a39e9feebc476db4693878fa47cb15b5a1ff1d` via the public GitHub Contents API (base64). Saved as `gen/bp-05-spacing-and-range/006/cursor3.png`. Git blob matches the API sha: `eeeb31b43a36b9cccb8f01bb3e6c9a9b73e7f2dd` (159262 bytes).
+
+| File | Result | Margins (l/r/t/b) | Scores | Blob |
+|---|---|---|---|---|
+| gen/bp-05-spacing-and-range/006/cursor2.png | FAIL (correction) | 103/120/109/104 | 2/5/5/5/5/—/1 | `e9ae1f2148e2043acb73731843c6ec4d30fb6c5d` |
+| gen/bp-05-spacing-and-range/006/cursor3.png | PASS | 103/120/109/104 | 5/5/5/5/5/—/5 | `eeeb31b43a36b9cccb8f01bb3e6c9a9b73e7f2dd` |
+
+Cursor3: headline 'HALF THE GAP, DOUBLE THE GAPS'. Borders not counted (same method as BP-05 015). Left box 6 interior lines / 5 gaps of 60px; right box 11 interior lines / 10 gaps of 30px; same band height; right gaps exactly half. 9.5/0.25 = 38 gaps = 39 lines, not 40, on a detached pill that names gaps, not lines. Both arrow tips touch. Placed, source cursor.
+
+### Updated counts
+- **BP-05: 14/14 — 100%.** (Cursor2 fail is on the record; cursor3 is the placed pass.)
+
+### Recheck of other passed BP-04..11 stills with a numeric count or arithmetic claim
+The new standing check was applied to the other passed stills that show a count or arithmetic claim. Verdicts were **not** changed in this commit.
+
+- **BP-05 004 would now FAIL.** Headline '20 LINES MAKE 19 GAPS' with labels '20 lines' / '19 gaps between them'. The outer card frame (y=185 and y=901, full-width strokes) is not a grid line. The stack itself has 19 interior lines (y=243–854) and 18 gaps, not 20 lines / 19 gaps.
+- BP-05 005 holds: 20 drawn rungs = 19 gaps; '19 gaps' and '19 × 0.5% = 9.5%' are correct.
+- BP-05 010, 013, 014, 018 hold: typography only; 20×0.5%=10% marked wrong, 19×0.5%=9.5% marked right; 013's '0.5% · 19 gaps · 20 orders' is consistent (20 lines / 19 gaps).
+- BP-05 015 holds: 7 interior lines / 6 gaps, card borders excluded.
+- BP-09 007 and 010 hold: each left/main card has 7 interior lines / 6 gaps, card borders excluded, matching the headlines and the 010 caption.
+- BP-07 005 ('FIVE BOXES TO COPY' / five fields), BP-08 006 ('Middle 27630', the house mid-level), BP-10 012 ('DO NOT DOUBLE THE COUNT'), and the BP-09/BP-11 '5x' / 'times-number' stills hold: their claims match the page and the narration; they do not show a miscounted grid.

@@ -2144,8 +2144,8 @@
       "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "d31a2af4cf4d0b4ac729ef703620c0c8cc0d9315",
-        "cursor/blueprint-beginner-images": "e9ae1f2148e2043acb73731843c6ec4d30fb6c5d",
-        "cursor/blueprint-cursor-images": "e9ae1f2148e2043acb73731843c6ec4d30fb6c5d"
+        "cursor/blueprint-beginner-images": "eeeb31b43a36b9cccb8f01bb3e6c9a9b73e7f2dd",
+        "cursor/blueprint-cursor-images": "eeeb31b43a36b9cccb8f01bb3e6c9a9b73e7f2dd"
       },
       "beat_concept": "Halving the step without recounting the gaps doubles the line count for the same span, and the new gap count is not the old line count.",
       "scores": {
@@ -2161,7 +2161,7 @@
       "status": "pass",
       "action": "none",
       "remake_prompt": "specs/remake/bp-05-spacing-and-range__006.txt",
-      "notes": "web1 remake FAIL. Two big unexplained numerals '5' and '9' are drawn inside the boxes; they don't illustrate 'DOUBLE THE LINES' (9 is not double 5) and confuse a beginner. 'Recount: 38 gaps, not 40' is correct but the 5/9 digits are a label-accuracy/clarity fail. v2 prompt written (v1 superseded). | web2 remake FAIL. Left box has exactly 6 interior lines, but the right box has 11, not the required 12 (twice 6), so it does not illustrate DOUBLE THE LINES. The house-example caption 'Recount: 38 gaps, not 40' cannot stand in for the missing line. Both label arrows touch (dashed same-height line; a line in the right box). Unexplained 5/9 numerals from the prior fail are gone. Margins 80/58/73/77. Next: web3.png on the v3 prompt. | cursor cursor1.png FAIL (kyleashton88-cyber/claude@5a65ffaab019c6e1713ee631cbd4dbd33e510b52, blob 85bd40ad13227c80b25336f2a118c01a13737c3a, 1536x1024, 134431 bytes). On-image text: HALF THE GAP, DOUBLE THE LINES | Same height | EXAMPLE | Smaller gaps need more lines | Recount: 38 gaps, not 40. Headline and 6-vs-12 line counts are right (left box 6 interior lines = 5 gaps; right box 12 interior lines = 11 gaps; card borders excluded). 'Same height' tip sits on the first white dash; 'Smaller gaps need more lines' tip sits on the right box bottom stroke. EXAMPLE present. Margins 103/120/109/114. FAIL: the caption 'Recount: 38 gaps, not 40' is true of the spoken house example but is not supported by the drawing. At d1f6 863261b the VO says: 'If the span stays nine and a half percent and the step becomes a quarter of one percent, the gap count is thirty-eight, not forty.' (alt: 'thirty-eight gaps, which is thirty-nine lines, not forty'). 9.5% / 0.25% = 38 gaps = 39 lines, not 40. The still instead draws 6 and 12 lines (5 and 11 gaps) and parks '38 gaps, not 40' under the 6-line box, which can make a beginner think that box has 38 gaps and mixes up lines vs gaps. That fights BP-05 015, which labels its own figure '7 lines, 6 gaps' and teaches 'Count gaps, not lines'. Ledger only; placed file left in place. Next: cursor2.png. | cursor cursor2.png PASS (kyleashton88-cyber/claude@f184f252d1c6ebd3f96e5d2234ef9a697440c7c8, course/images/bp-05-spacing-and-range/006.png, blob e9ae1f2148e2043acb73731843c6ec4d30fb6c5d, 1536x1024, 159115 bytes). On-image text: HALF THE GAP, DOUBLE THE LINES | Same height | Smaller gaps need more lines | 6 lines, 5 gaps | 12 lines, 11 gaps | 9.5% range \u00f7 0.25% step = 38 gaps, not 40 | EXAMPLE. Headline unchanged over the 6 vs 12 schematic. Left box has 6 interior lines = 5 gaps; right box has 12 interior lines = 11 gaps (card borders excluded); both labels match the drawn counts. The recount is its own pill, visually detached from either box (labels end at y=799, recount pill starts at y=840): '9.5% range \u00f7 0.25% step = 38 gaps, not 40', matching the 863261b house-example narration (9.5% span at a 0.25% step = 38 gaps, not 40). A beginner can count gaps on the drawing without mixing them with the house recount, consistent with BP-05 015 ('Count gaps, not lines' / '7 lines, 6 gaps'). 'Same height' tip sits on the first white dash; 'Smaller gaps need more lines' tip sits on the right box top stroke (continuous cyan, no navy gap). EXAMPLE present. No mascot. Margins 103/120/109/104. Placed, source cursor.",
+      "notes": "web1 remake FAIL. Two big unexplained numerals '5' and '9' are drawn inside the boxes; they don't illustrate 'DOUBLE THE LINES' (9 is not double 5) and confuse a beginner. 'Recount: 38 gaps, not 40' is correct but the 5/9 digits are a label-accuracy/clarity fail. v2 prompt written (v1 superseded). | web2 remake FAIL. Left box has exactly 6 interior lines, but the right box has 11, not the required 12 (twice 6), so it does not illustrate DOUBLE THE LINES. The house-example caption 'Recount: 38 gaps, not 40' cannot stand in for the missing line. Both label arrows touch (dashed same-height line; a line in the right box). Unexplained 5/9 numerals from the prior fail are gone. Margins 80/58/73/77. Next: web3.png on the v3 prompt. | cursor cursor1.png FAIL (kyleashton88-cyber/claude@5a65ffaab019c6e1713ee631cbd4dbd33e510b52, blob 85bd40ad13227c80b25336f2a118c01a13737c3a, 1536x1024, 134431 bytes). On-image text: HALF THE GAP, DOUBLE THE LINES | Same height | EXAMPLE | Smaller gaps need more lines | Recount: 38 gaps, not 40. Headline and 6-vs-12 line counts are right (left box 6 interior lines = 5 gaps; right box 12 interior lines = 11 gaps; card borders excluded). 'Same height' tip sits on the first white dash; 'Smaller gaps need more lines' tip sits on the right box bottom stroke. EXAMPLE present. Margins 103/120/109/114. FAIL: the caption 'Recount: 38 gaps, not 40' is true of the spoken house example but is not supported by the drawing. At d1f6 863261b the VO says: 'If the span stays nine and a half percent and the step becomes a quarter of one percent, the gap count is thirty-eight, not forty.' (alt: 'thirty-eight gaps, which is thirty-nine lines, not forty'). 9.5% / 0.25% = 38 gaps = 39 lines, not 40. The still instead draws 6 and 12 lines (5 and 11 gaps) and parks '38 gaps, not 40' under the 6-line box, which can make a beginner think that box has 38 gaps and mixes up lines vs gaps. That fights BP-05 015, which labels its own figure '7 lines, 6 gaps' and teaches 'Count gaps, not lines'. Ledger only; placed file left in place. Next: cursor2.png. | cursor cursor2.png PASS (kyleashton88-cyber/claude@f184f252d1c6ebd3f96e5d2234ef9a697440c7c8, course/images/bp-05-spacing-and-range/006.png, blob e9ae1f2148e2043acb73731843c6ec4d30fb6c5d, 1536x1024, 159115 bytes). On-image text: HALF THE GAP, DOUBLE THE LINES | Same height | Smaller gaps need more lines | 6 lines, 5 gaps | 12 lines, 11 gaps | 9.5% range \u00f7 0.25% step = 38 gaps, not 40 | EXAMPLE. Headline unchanged over the 6 vs 12 schematic. Left box has 6 interior lines = 5 gaps; right box has 12 interior lines = 11 gaps (card borders excluded); both labels match the drawn counts. The recount is its own pill, visually detached from either box (labels end at y=799, recount pill starts at y=840): '9.5% range \u00f7 0.25% step = 38 gaps, not 40', matching the 863261b house-example narration (9.5% span at a 0.25% step = 38 gaps, not 40). A beginner can count gaps on the drawing without mixing them with the house recount, consistent with BP-05 015 ('Count gaps, not lines' / '7 lines, 6 gaps'). 'Same height' tip sits on the first white dash; 'Smaller gaps need more lines' tip sits on the right box top stroke (continuous cyan, no navy gap). EXAMPLE present. No mascot. Margins 103/120/109/104. Placed, source cursor. | CORRECTION: cursor2.png at f184f252d1c6ebd3f96e5d2234ef9a697440c7c8 (blob e9ae1f2148e2043acb73731843c6ec4d30fb6c5d) was wrongly passed in 51f1823. The labels '6 lines, 5 gaps' and '12 lines, 11 gaps' matched the drawing, but they were not checked against the arithmetic. Over the same band, halving the step doubles the gaps, not the lines: 5 gaps / 6 lines become 10 gaps / 11 lines. '12 lines, 11 gaps' and the headline 'HALF THE GAP, DOUBLE THE LINES' are false. Recorded as FAIL. | cursor cursor3.png PASS (kyleashton88-cyber/claude@92a39e9feebc476db4693878fa47cb15b5a1ff1d, course/images/bp-05-spacing-and-range/006.png, blob eeeb31b43a36b9cccb8f01bb3e6c9a9b73e7f2dd, 1536x1024, 159262 bytes). On-image text: HALF THE GAP, DOUBLE THE GAPS | Same height | Smaller gaps need more lines | 6 lines, 5 gaps | 11 lines, 10 gaps | 9.5% range \u00f7 0.25% step = 38 gaps, not 40 | EXAMPLE. Card/box borders are not counted as grid lines, consistent with BP-05 015 ('7 lines, 6 gaps' counts the 7 interior strokes only). Left box: 6 interior lines, 5 gaps of 60px. Right box: 11 interior lines, 10 gaps of 30px. Same band height (first/last interiors both y=340\u2013640; frames both y=281\u2013698). Right-box gaps are exactly half the left-box gaps. Headline 'HALF THE GAP, DOUBLE THE GAPS' matches that arithmetic (5\u00d72=10 gaps, 6 lines become 11). The recount is its own pill, visually detached (labels end y=799, pill starts y=840): '9.5% range \u00f7 0.25% step = 38 gaps, not 40'. 9.5/0.25 = 38 gaps = 39 lines, not 40; the line states gaps, not lines, so it does not mix the two. Matches 863261b. Consistent with BP-05 015 ('Count gaps, not lines' / '7 lines, 6 gaps'). 'Same height' tip sits on the first white dash; 'Smaller gaps need more lines' tip sits on the right box top stroke (continuous cyan, no navy gap). EXAMPLE present. No mascot. Margins 103/120/109/104. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -2172,7 +2172,7 @@
         "bottom": 104
       },
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/006.png",
-      "scored_blob": "e9ae1f2148e2043acb73731843c6ec4d30fb6c5d",
+      "scored_blob": "eeeb31b43a36b9cccb8f01bb3e6c9a9b73e7f2dd",
       "committed": true,
       "pass": true,
       "previous_remake_reviews": [
@@ -2231,11 +2231,68 @@
           "notes": "cursor cursor1.png FAIL (kyleashton88-cyber/claude@5a65ffaab019c6e1713ee631cbd4dbd33e510b52, blob 85bd40ad13227c80b25336f2a118c01a13737c3a, 1536x1024, 134431 bytes). On-image text: HALF THE GAP, DOUBLE THE LINES | Same height | EXAMPLE | Smaller gaps need more lines | Recount: 38 gaps, not 40. Headline and 6-vs-12 line counts are right (left box 6 interior lines = 5 gaps; right box 12 interior lines = 11 gaps; card borders excluded). 'Same height' tip sits on the first white dash; 'Smaller gaps need more lines' tip sits on the right box bottom stroke. EXAMPLE present. Margins 103/120/109/114. FAIL: the caption 'Recount: 38 gaps, not 40' is true of the spoken house example but is not supported by the drawing. At d1f6 863261b the VO says: 'If the span stays nine and a half percent and the step becomes a quarter of one percent, the gap count is thirty-eight, not forty.' (alt: 'thirty-eight gaps, which is thirty-nine lines, not forty'). 9.5% / 0.25% = 38 gaps = 39 lines, not 40. The still instead draws 6 and 12 lines (5 and 11 gaps) and parks '38 gaps, not 40' under the 6-line box, which can make a beginner think that box has 38 gaps and mixes up lines vs gaps. That fights BP-05 015, which labels its own figure '7 lines, 6 gaps' and teaches 'Count gaps, not lines'. Ledger only; placed file left in place. Next: cursor2.png.",
           "pass": false,
           "fix_note": "Keep the 6-line / 12-line schematic (that correctly shows double the lines: 6 lines = 5 gaps, 12 lines = 11 gaps). Do not put 'Recount: 38 gaps, not 40' as if it counts that figure. Either caption the boxes with the counts they actually show (5 gaps / 11 gaps, or 6 lines / 12 lines), and if the house-example 38/40 recount stays on the page, set it clearly apart as the 9.5% span at a 0.25% step (38 gaps = 39 lines, not 40); or redraw the house example so the caption matches the picture. A beginner must be able to count gaps on the drawing without mixing them up with lines, consistent with BP-05 015 ('Count gaps, not lines' / '7 lines, 6 gaps'). Next: cursor2.png."
+        },
+        {
+          "file": "gen/bp-05-spacing-and-range/006/cursor2.png",
+          "blob": "e9ae1f2148e2043acb73731843c6ec4d30fb6c5d",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 103,
+            "right": 120,
+            "top": 109,
+            "bottom": 104
+          },
+          "scored_against": "863261b narration (d1f6) + REPORT-b608319 + BP-05 015 consistency + strict rubric including arrow contact and lines-vs-gaps",
+          "source_commit": "f184f252d1c6ebd3f96e5d2234ef9a697440c7c8",
+          "source_repo": "kyleashton88-cyber/claude",
+          "source_branch": "cursor/blueprint-cursor-images",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 5,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 5
+          },
+          "hard_fails": [],
+          "notes": "cursor cursor2.png PASS (kyleashton88-cyber/claude@f184f252d1c6ebd3f96e5d2234ef9a697440c7c8, course/images/bp-05-spacing-and-range/006.png, blob e9ae1f2148e2043acb73731843c6ec4d30fb6c5d, 1536x1024, 159115 bytes). On-image text: HALF THE GAP, DOUBLE THE LINES | Same height | Smaller gaps need more lines | 6 lines, 5 gaps | 12 lines, 11 gaps | 9.5% range \u00f7 0.25% step = 38 gaps, not 40 | EXAMPLE. Headline unchanged over the 6 vs 12 schematic. Left box has 6 interior lines = 5 gaps; right box has 12 interior lines = 11 gaps (card borders excluded); both labels match the drawn counts. The recount is its own pill, visually detached from either box (labels end at y=799, recount pill starts at y=840): '9.5% range \u00f7 0.25% step = 38 gaps, not 40', matching the 863261b house-example narration (9.5% span at a 0.25% step = 38 gaps, not 40). A beginner can count gaps on the drawing without mixing them with the house recount, consistent with BP-05 015 ('Count gaps, not lines' / '7 lines, 6 gaps'). 'Same height' tip sits on the first white dash; 'Smaller gaps need more lines' tip sits on the right box top stroke (continuous cyan, no navy gap). EXAMPLE present. No mascot. Margins 103/120/109/104. Placed, source cursor.",
+          "pass": true
+        },
+        {
+          "file": "gen/bp-05-spacing-and-range/006/cursor2.png",
+          "blob": "e9ae1f2148e2043acb73731843c6ec4d30fb6c5d",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 103,
+            "right": 120,
+            "top": 109,
+            "bottom": 104
+          },
+          "scored_against": "corrected after 51f1823: arithmetic / narration, not just labels",
+          "source_commit": "f184f252d1c6ebd3f96e5d2234ef9a697440c7c8",
+          "source_repo": "kyleashton88-cyber/claude",
+          "source_branch": "cursor/blueprint-cursor-images",
+          "scores": {
+            "beginner_clarity": 2,
+            "composition_hierarchy": 5,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 1
+          },
+          "hard_fails": [
+            "wrong arithmetic: over the same band, halving the step doubles the gaps (5 gaps / 6 lines become 10 gaps / 11 lines), so '12 lines, 11 gaps' and 'DOUBLE THE LINES' are false"
+          ],
+          "notes": "CORRECTION: cursor2.png at f184f252d1c6ebd3f96e5d2234ef9a697440c7c8 (blob e9ae1f2148e2043acb73731843c6ec4d30fb6c5d) was wrongly passed in 51f1823. The labels '6 lines, 5 gaps' and '12 lines, 11 gaps' matched the drawing, but they were not checked against the arithmetic. Over the same band, halving the step doubles the gaps, not the lines: 5 gaps / 6 lines become 10 gaps / 11 lines. '12 lines, 11 gaps' and the headline 'HALF THE GAP, DOUBLE THE LINES' are false. Recorded as FAIL.",
+          "pass": false,
+          "correction_of": "51f18234125349e042cb23a33e4d8ca2f6d4527f"
         }
       ],
       "remake_review": {
-        "file": "gen/bp-05-spacing-and-range/006/cursor2.png",
-        "blob": "e9ae1f2148e2043acb73731843c6ec4d30fb6c5d",
+        "file": "gen/bp-05-spacing-and-range/006/cursor3.png",
+        "blob": "eeeb31b43a36b9cccb8f01bb3e6c9a9b73e7f2dd",
         "size": "1536x1024",
         "margins_px": {
           "left": 103,
@@ -2243,8 +2300,8 @@
           "top": 109,
           "bottom": 104
         },
-        "scored_against": "863261b narration (d1f6) + REPORT-b608319 + BP-05 015 consistency + strict rubric including arrow contact and lines-vs-gaps",
-        "source_commit": "f184f252d1c6ebd3f96e5d2234ef9a697440c7c8",
+        "scored_against": "863261b narration + REPORT-b608319 + BP-05 015 count method + new standing arithmetic check + strict rubric",
+        "source_commit": "92a39e9feebc476db4693878fa47cb15b5a1ff1d",
         "source_repo": "kyleashton88-cyber/claude",
         "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
@@ -2257,7 +2314,7 @@
           "label_accuracy": 5
         },
         "hard_fails": [],
-        "notes": "cursor cursor2.png PASS (kyleashton88-cyber/claude@f184f252d1c6ebd3f96e5d2234ef9a697440c7c8, course/images/bp-05-spacing-and-range/006.png, blob e9ae1f2148e2043acb73731843c6ec4d30fb6c5d, 1536x1024, 159115 bytes). On-image text: HALF THE GAP, DOUBLE THE LINES | Same height | Smaller gaps need more lines | 6 lines, 5 gaps | 12 lines, 11 gaps | 9.5% range \u00f7 0.25% step = 38 gaps, not 40 | EXAMPLE. Headline unchanged over the 6 vs 12 schematic. Left box has 6 interior lines = 5 gaps; right box has 12 interior lines = 11 gaps (card borders excluded); both labels match the drawn counts. The recount is its own pill, visually detached from either box (labels end at y=799, recount pill starts at y=840): '9.5% range \u00f7 0.25% step = 38 gaps, not 40', matching the 863261b house-example narration (9.5% span at a 0.25% step = 38 gaps, not 40). A beginner can count gaps on the drawing without mixing them with the house recount, consistent with BP-05 015 ('Count gaps, not lines' / '7 lines, 6 gaps'). 'Same height' tip sits on the first white dash; 'Smaller gaps need more lines' tip sits on the right box top stroke (continuous cyan, no navy gap). EXAMPLE present. No mascot. Margins 103/120/109/104. Placed, source cursor.",
+        "notes": "cursor cursor3.png PASS (kyleashton88-cyber/claude@92a39e9feebc476db4693878fa47cb15b5a1ff1d, course/images/bp-05-spacing-and-range/006.png, blob eeeb31b43a36b9cccb8f01bb3e6c9a9b73e7f2dd, 1536x1024, 159262 bytes). On-image text: HALF THE GAP, DOUBLE THE GAPS | Same height | Smaller gaps need more lines | 6 lines, 5 gaps | 11 lines, 10 gaps | 9.5% range \u00f7 0.25% step = 38 gaps, not 40 | EXAMPLE. Card/box borders are not counted as grid lines, consistent with BP-05 015 ('7 lines, 6 gaps' counts the 7 interior strokes only). Left box: 6 interior lines, 5 gaps of 60px. Right box: 11 interior lines, 10 gaps of 30px. Same band height (first/last interiors both y=340\u2013640; frames both y=281\u2013698). Right-box gaps are exactly half the left-box gaps. Headline 'HALF THE GAP, DOUBLE THE GAPS' matches that arithmetic (5\u00d72=10 gaps, 6 lines become 11). The recount is its own pill, visually detached (labels end y=799, pill starts y=840): '9.5% range \u00f7 0.25% step = 38 gaps, not 40'. 9.5/0.25 = 38 gaps = 39 lines, not 40; the line states gaps, not lines, so it does not mix the two. Matches 863261b. Consistent with BP-05 015 ('Count gaps, not lines' / '7 lines, 6 gaps'). 'Same height' tip sits on the first white dash; 'Smaller gaps need more lines' tip sits on the right box top stroke (continuous cyan, no navy gap). EXAMPLE present. No mascot. Margins 103/120/109/104. Placed, source cursor.",
         "pass": true
       },
       "previous_committed_blob": "d31a2af4cf4d0b4ac729ef703620c0c8cc0d9315"
