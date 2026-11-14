@@ -207,7 +207,7 @@ def bp01() -> list[dict]:
         reveal=1,
         vo=(
             "Six equal gaps of about 900 dollars sit between the bottom line and the top line. "
-            "The about 900 dollar gap is the step from one line to the next, worked out as the top line minus the bottom line divided by the six gaps, not the whole band. "
+            "Each gap is about 900 dollars: the top line minus the bottom line, divided by six. It is one step between lines, not the whole band. "
             "Seven lines make those six gaps. A limit order waits on a level. It does not run after the price."
         ),
         caption="Seven lines. Six gaps of about 900.",
@@ -228,6 +228,7 @@ def bp01() -> list[dict]:
         vo=(
             "The daily close is the last price of the day. Crypto trades all day, so the day is cut at a set time. "
             "This is a simple candle that shows the day's high, low and close. "
+            "Traders call it a candle because the full version has a thick body and a thin wick, like a candle. Here we only need the high, the low and the close. "
             "This candle is 19 July 2023. The high, the low, and the close are labelled."
         ),
         caption="19 July 2023. Close 29,914. Low 29,794. High 30,184.",
@@ -294,7 +295,7 @@ def bp01() -> list[dict]:
     s[-1]["vo"] = (
         "Next lesson: What you are going to need. "
         "The pair is the two things you swap, like Bitcoin and US dollars. "
-        "Bring your notes: the top and bottom of the band, the gaps between the lines, your stop rule, and no secrets. "
+        "Bring a notebook, the top and bottom of the band, the gaps between the lines, paper or demo, your stop rule, and no secrets: no seed phrase, private key or API secret. "
         "Leave every figure marked EXAMPLE, and no order is sent between lessons."
     )
     return s

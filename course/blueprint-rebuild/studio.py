@@ -327,7 +327,8 @@ def _beat_teaching(beat: dict) -> str | None:
         "course/images/bp-03-what-is-a-grid-bot/014.png": "Orders wait. Inside your range. Stop: your rule if price leaves. What you hold changes.",
         "course/images/bp-03-what-is-a-grid-bot/015.png": "Your turn: draw a band, label the five words, and draw one step down.",
         "course/images/bp-03-what-is-a-grid-bot/017.png": "Your turn: draw one buy order waiting below the price.",
-        "course/images/bp-01-introduction/007.png": "Buy orders sit on lines below the price and sell orders sit on lines above it. The sells need some coin, so a grid starts with part cash and part coin, and that is a description, not advice.",
+        "course/images/bp-01-introduction/007.png": "Buy orders sit on lines below the price and sell orders sit on lines above it. An order fills when the price reaches its line and the trade happens. The sells need some coin, so a grid starts with part cash and part coin, and that is a description, not advice.",
+        "course/images/bp-01-introduction/011.png": "A fill is that trade at the line. As price climbs, each sell order fills. So you end up holding cash. As price falls, each buy order fills. So you end up holding coin.",
         "course/images/bp-01-introduction/010.png": (
             "The course is a map, and this introduction is only the first square. "
             "Next is a checklist. Then the definition. Then calm or trending markets. "
@@ -740,6 +741,8 @@ def chart_idea(shot: dict) -> str:
     if chapter == "The levels":
         return "Seven lines. Six gaps. About 900 dollars."
     if chapter == "The range":
+        if shot.get("lesson_id") == "bp-01-introduction":
+            return "The top line and the bottom line, taken from the path."
         return "The range is the real low and the real high."
     if chapter == "The stop":
         return "Stop: the close leaves 30,331 and does not return."
@@ -1156,25 +1159,6 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
         draw.line([(hx + (12 if tx >= hx else -12), hy), (anchor_x, ty + th / 2)], fill=CYAN, width=2)
         draw.rounded_rectangle([tx, ty, tx + tw, ty + th], 10, fill=TAG, outline=CYAN, width=2)
         draw.text((tx + 14, ty + 4), tag, font=face, fill=WHITE)
-    if shot.get("lesson_id") == "bp-01-introduction" and chapter == "The range":
-        y_a = _map(0, n, 26730, lo_p, hi_p, plot)[1]
-        y_b = _map(0, n, 27630, lo_p, hi_p, plot)[1]
-        for yy in (y_a, y_b):
-            x = plot[0]
-            while x < plot[2]:
-                draw.line([(x, yy), (min(x + 8, plot[2]), yy)], fill=MUTED, width=2)
-                x += 18
-        bracket = plot[0] + 24
-        draw.line([(bracket, y_a), (bracket, y_b)], fill=CYAN, width=4)
-        mid = (y_a + y_b) / 2
-        gap_note = "about $900 gap"
-        face_gap = font(36)
-        gap_w = int(face_gap.getlength(gap_note)) + 28
-        draw.rounded_rectangle(
-            [bracket + 10, mid - 24, bracket + 10 + gap_w, mid + 24],
-            10, fill=TAG, outline=CYAN, width=3,
-        )
-        draw.text((bracket + 24, mid - 20), gap_note, font=face_gap, fill=WHITE)
     # The ladder still has five rungs. Connectors would make them look like the seven levels.
     if shot.get("analogy") == "fence" and rails:
         marks = shot.get("rail_marks") or {}
@@ -1197,13 +1181,23 @@ def _hero(
     draw.rounded_rectangle(box, 24, fill=GLASS, outline=CYAN, width=2)
     x0, y0, x1, y1 = box
     if mode == "lines":
-        rows = ["Notebook", "Range and levels", "The pair", "Paper or demo", "No secrets", "A written stop", "Leave every figure marked EXAMPLE"]
-        step = max(36, (y1 - y0 - 70) // len(rows))
-        y = y0 + 28
+        rows = [
+            "Notebook",
+            "Range and levels",
+            "The pair",
+            "Paper or demo",
+            "No secrets: no seed phrase, private key or API secret",
+            "A written stop",
+            "Leave every figure marked EXAMPLE",
+        ]
+        y = y0 + 24
         for row in rows:
-            _tick(draw, x0 + 36, y + 16)
-            draw.text((x0 + 68, y), row, font=font(28), fill=WHITE)
-            y += step
+            lines = wrap(row, 24, x1 - x0 - 100)[:2]
+            _tick(draw, x0 + 36, y + 14)
+            for line in lines:
+                draw.text((x0 + 68, y), line, font=font(24), fill=WHITE)
+                y += 28
+            y += 10
         return
     if mode == "regimes":
         labels = ("Range", "Trend", "Break")
@@ -1732,6 +1726,7 @@ def _big_still_tags(
     view_w: int,
     view_h: int,
     tags: tuple[tuple[float, float, str], ...],
+    pad_fill: tuple[int, int, int] = NAVY,
 ) -> None:
     """Cover a small baked tag with a readable one. The still file is not edited."""
     face = font(40)
@@ -1740,7 +1735,7 @@ def _big_still_tags(
         th = 56
         tx = x + int(view_w * fx)
         ty = y + int(view_h * fy)
-        draw.rounded_rectangle([tx - 6, ty - 8, tx + tw + 6, ty + th + 8], 12, fill=NAVY)
+        draw.rounded_rectangle([tx - 6, ty - 8, tx + tw + 6, ty + th + 8], 12, fill=pad_fill)
         draw.rounded_rectangle([tx, ty, tx + tw, ty + th], 12, fill=TAG, outline=CYAN, width=3)
         draw.text((tx + 18, ty + 8), text, font=face, fill=WHITE)
 
@@ -1776,7 +1771,7 @@ def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
     buys = (570, 630, 690)
     mid = 530
     escape_top = 292
-    escape_bot = 734
+    escape_bot = 716
     if fall > 0:
         # A second picture: price starts in the middle, then leaves below the buys.
         price_y = mid + (escape_bot - mid) * fall
@@ -1842,10 +1837,11 @@ def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
     left_out = fall == 0 and price_y < sells[0]
     right_out = fall > 0 and price_y > buys[-1]
     face_fail = font(28)
-    if left_out or right_out:
-        second = "all cash, nothing left to sell" if left_out else "all coin, nothing left to buy"
+    if left_out:
         draw.text((line_x0, 206), "Price left the band:", font=face_fail, fill=AMBER)
-        draw.text((line_x0, 238), second, font=face_fail, fill=AMBER)
+        draw.text((line_x0, 238), "all cash, nothing left to sell", font=face_fail, fill=AMBER)
+    if right_out:
+        draw.text((line_x0, buys[-1] + 8), "all coin, nothing left to buy", font=face_fail, fill=AMBER)
     dot_x = (line_x0 + line_x1) // 2
     draw.ellipse([dot_x - 14, price_y - 14, dot_x + 14, price_y + 14], fill=CYAN)
     side = (1360, 220, RIGHT, 750)
@@ -1867,8 +1863,9 @@ def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
         width=6 if coin_on else 3,
     )
     draw.text((coin_box[0] + 24, coin_box[1] + 22), "Coin", font=font(48), fill=BLUE)
-    draw.text((side[0] + 36, side[1] + 370), "$ = sold for cash", font=font(28), fill=MINT)
-    draw.text((side[0] + 36, side[1] + 412), "coin = bought coin", font=font(28), fill=CYAN)
+    draw.text((side[0] + 36, side[1] + 370), "$ = cash on that line", font=font(28), fill=MINT)
+    draw.text((side[0] + 36, side[1] + 412), "C = coin on that line", font=font(28), fill=CYAN)
+    draw.text((side[0] + 36, side[1] + 454), "Bright line = filled", font=font(28), fill=WHITE)
 
 
 def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) -> None:
@@ -1890,27 +1887,24 @@ def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) 
     still = str(shot.get("lesson_still") or "").replace("\\", "/")
     if still.endswith("bp-01-introduction/007.png"):
         d = ImageDraw.Draw(base)
-        _big_still_tags(
-            d,
-            x, y, view_w, view_h,
-            (
-                (0.09, 0.30, "Sell orders above"),
-                (0.09, 0.485, "Price now"),
-                (0.09, 0.64, "Buy orders below"),
-            ),
-        )
-        # The baked tag is wider than the new one. Cover it with the card colour, then redraw.
         samples = []
         for fy in (0.22, 0.40, 0.72):
             for fx in (0.62, 0.78):
                 samples.append(crop.getpixel((min(view_w - 1, int(view_w * fx)), min(view_h - 1, int(view_h * fy))))[:3])
         dark = [pixel for pixel in samples if pixel[1] < 80 and pixel[2] < 120]
         card = dark[len(dark) // 2] if dark else samples[0]
+        tags = (
+            (0.09, 0.30, "Sell orders above"),
+            (0.09, 0.485, "Price now"),
+            (0.09, 0.64, "Buy orders below"),
+        )
+        _big_still_tags(d, x, y, view_w, view_h, tags, pad_fill=card)
+        # The baked Price now tag is wider than the new one. Cover it, then redraw.
         d.rectangle(
             [x + int(view_w * 0.09), y + int(view_h * 0.47), x + int(view_w * 0.44), y + int(view_h * 0.60)],
             fill=card,
         )
-        _big_still_tags(d, x, y, view_w, view_h, ((0.09, 0.485, "Price now"),))
+        _big_still_tags(d, x, y, view_w, view_h, ((0.09, 0.485, "Price now"),), pad_fill=card)
         cy = y + int(view_h * 0.537)
         d.line(
             [(x + int(view_w * 0.09) + int(font(40).getlength("Price now")) + 36, cy), (x + int(view_w * 0.455), cy)],
@@ -1932,15 +1926,21 @@ def paint_candle(base: Image.Image, shot: dict) -> None:
     draw.text((box[0] + 36, box[1] + 24), title, font=font(36), fill=WHITE)
     _example(draw, box[2] - 220, box[1] + 24)
     span = max(1, high - low)
-    top, bot = box[1] + 140, box[3] - 80
+    top, bot = box[1] + 210, box[3] - 70
     cx = (box[0] + box[2]) // 2
 
     def y_of(price: int) -> int:
         return int(top + (high - price) / span * (bot - top))
 
     y_high, y_low, y_close = y_of(high), y_of(low), y_of(close)
-    note = "A simple candle: the day's high, low and close."
-    draw.text((box[0] + 36, box[1] + 72), note, font=font(32), fill=CYAN)
+    note = (
+        "Traders call it a candle because the full version has a thick body and a thin wick, like a candle. "
+        "Here we only need the high, the low and the close."
+    )
+    ny = box[1] + 68
+    for line in wrap(note, 28, box[2] - box[0] - 80)[:3]:
+        draw.text((box[0] + 36, ny), line, font=font(28), fill=CYAN)
+        ny += 34
     draw.line([(cx, y_high), (cx, y_low)], fill=CYAN, width=4)
     draw.line([(cx - 28, y_high), (cx + 28, y_high)], fill=CYAN, width=4)
     draw.line([(cx - 28, y_low), (cx + 28, y_low)], fill=CYAN, width=4)
@@ -2326,11 +2326,20 @@ def _narrate_shot(speaker, shot: dict) -> tuple[np.ndarray, int, list]:
                 and len(sentences) > 2
             ):
                 gap = 0.70
+            # Kokoro was leaving a dead hole after "fills," inside one take.
+            # A short pad between the two clean sentences replaces that join.
+            if sentence.rstrip().endswith("fills."):
+                gap = 0.20
             buf = _xfade(buf, np.zeros(int(gap * sr), dtype=np.float32), sr)
     hold = max(0.0, _reading_time(shot) - len(buf) / sr)
     revealing = shot.get("kind") in {"chart", "analogy"} and not shot.get("board") and not shot.get("candle")
     cap = REVEAL_GAP_CAP if revealing else LINE_GAP_CAP
     tail = min(cap, hold + BEAT_GAP)
+    if (
+        shot.get("lesson_id") == "bp-01-introduction"
+        and (shot.get("chapter") or "") == "When the drawing fails"
+    ):
+        tail += 1.0
     if tail > 0:
         buf = _xfade(buf, np.zeros(int(tail * sr), dtype=np.float32), sr)
     shot["sentence_spans"] = spans
