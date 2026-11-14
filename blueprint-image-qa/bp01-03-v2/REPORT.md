@@ -377,3 +377,23 @@ Same perfect-run rules (every category at least 4/5, no hard fails; every arrow 
 - **BP-03: 28/28 — YES, 100%.**
 - **92-row total: 90/92.**
 - ChatGPT queue (BP-01..03): 2 — bp-01-introduction/007 (gen/bp-01-introduction/007/web5.png), bp-02-what-you-need/021 (gen/bp-02-what-you-need/021/web2.png).
+
+
+---
+
+## Run on top of 9b79567 — 14 Nov 2026 (WITA): Cursor-agent still for BP-01 007, and BP-03 011/014 reopened
+
+Image source is now the Cursor agent on `cursor/blueprint-cursor-images` in `kyleashton88-cyber/claude`, not ChatGPT. Fetched `course/images/bp-01-introduction/007.png` at commit `5988875b23967a21a821e038cd49c6ac384b580d` (git blob `59687210ee5623ec6584d56220dbef0aeeace311`), saved as `gen/bp-01-introduction/007/cursor1.png`. Real PNG, 1536x1024 RGB, 161477 bytes. Scored on the same strict rubric (every category at least 4/5, no hard fails; every arrow tip must visibly touch its target; doubt = fail; margins at least 45px luma>110).
+
+| File | Result | Margins (l/r/t/b) | Reason |
+|---|---|---|---|
+| gen/bp-01-introduction/007/cursor1.png | PASS | 108/108/114/106 | All three tips touch: 'Sell orders above' on the left cap of the second mint rung, 'Price now' on the left end of the dashed price line, 'Buy orders below' on the left cap of the second blue rung. 4 mint rungs above and 4 blue below, one dot each. Headline 'BUY ORDERS BELOW, SELL ORDERS ABOVE' exact and spaced. EXAMPLE present. No mascot. GridBot Builder style. Beginner-clear against the beat (buy orders below the mark, sell orders above it). Placed at out/ and course/images/bp-01-introduction/007.png (`source: cursor`, scored_blob 59687210ee5623ec6584d56220dbef0aeeace311). Removed from the queue. |
+
+BP-03 011 and 014 were reopened in the pass list (`status: reopened`, reason: beginner-watch failure, Cursor remake pending). Their placed files were left in place. They are added to the ChatGPT/Cursor remake queue as `cursor1.png` targets.
+
+### Updated counts (92-row list)
+- **BP-01: 32/32 — YES, 100%.**
+- **BP-02: 31/32 — NOT 100%.** Rows left: 021 (web2, v3).
+- **BP-03: 26/28 — NOT 100%.** Rows left: 011, 014 (reopened; Cursor remake pending).
+- **92-row total: 89/92.**
+- Queue (BP-01..03): 3 — bp-02-what-you-need/021 (gen/bp-02-what-you-need/021/web2.png), bp-03-what-is-a-grid-bot/011 (gen/bp-03-what-is-a-grid-bot/011/cursor1.png), bp-03-what-is-a-grid-bot/014 (gen/bp-03-what-is-a-grid-bot/014/cursor1.png).

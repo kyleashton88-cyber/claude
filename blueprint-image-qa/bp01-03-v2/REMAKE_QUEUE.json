@@ -1,6 +1,6 @@
 {
-  "note": "ChatGPT web, one at a time, in this order. Attach _anchors/anchor.png (and course/images/mascot/blueprint-mascot.png only where needs_mascot_ref is true; none in this queue), paste the prompt file as one message, download, copy to target_gen, fit to target_out (1536x1024), re-score, then commit to repo_path. No lesson renders until all its rows pass. Round 1 remakes (14 Nov): 11 of 13 BP-01/02 ChatGPT web renders passed and left the queue; bp-01 007 and 016 failed and are on v2 prompts. Round 2 (14 Nov): BP-03 001/002/003/004/008/014/019 and analogy-fence passed and left the queue; BP-03 010 failed and is on a v3 prompt. Round 3 (14 Nov): bp-01 016 web2 passed and left the queue; bp-01 007 web2 failed (Buy arrow tip in the gap between rungs) and is on a v3 prompt (target web3). Strict arrow rule (14 Nov): bp-01 001 (web2, v2), bp-01 010 (web4, v3) and bp-02 016 (web2, v2) re-added after their passed renders were failed for arrow tips that stop short of target. Round on top of 57e0aeb (14 Nov, WITA): scored bp-01 001/web2, 007/web3, 010/web4 and bp-02 016/web2. 010 web4 PASS (removed from queue). 001, 007 and 016 failed the strict arrow rule again and are queued on the next prompt (web3/v3, web4/v4, web3/v3). 021 unchanged (web1). Round on top of 4bfe3e6 (14 Nov, WITA): scored bp-02 021/web1. 021 web1 FAIL — the scene-transition arrow still stops short of the grid card (~20-24px). Queued on web2/v3. 001, 007 and 016 were not in this batch and stay queued. Round on top of 0cc141a (14 Nov, WITA): scored bp-01 001/web3, 007/web4 and bp-02 016/web3. 001 web3 PASS and 016 web3 PASS (removed from queue). 007 web4 FAIL — 'Sell orders above' tip still short of the second mint rung (visible navy gap, ~4-8px); queued on web5/v5. 021 was not in this batch and stays queued at web2/v3.",
-  "length": 2,
+  "note": "ChatGPT web, one at a time, in this order. Attach _anchors/anchor.png (and course/images/mascot/blueprint-mascot.png only where needs_mascot_ref is true; none in this queue), paste the prompt file as one message, download, copy to target_gen, fit to target_out (1536x1024), re-score, then commit to repo_path. No lesson renders until all its rows pass. Round 1 remakes (14 Nov): 11 of 13 BP-01/02 ChatGPT web renders passed and left the queue; bp-01 007 and 016 failed and are on v2 prompts. Round 2 (14 Nov): BP-03 001/002/003/004/008/014/019 and analogy-fence passed and left the queue; BP-03 010 failed and is on a v3 prompt. Round 3 (14 Nov): bp-01 016 web2 passed and left the queue; bp-01 007 web2 failed (Buy arrow tip in the gap between rungs) and is on a v3 prompt (target web3). Strict arrow rule (14 Nov): bp-01 001 (web2, v2), bp-01 010 (web4, v3) and bp-02 016 (web2, v2) re-added after their passed renders were failed for arrow tips that stop short of target. Round on top of 57e0aeb (14 Nov, WITA): scored bp-01 001/web2, 007/web3, 010/web4 and bp-02 016/web2. 010 web4 PASS (removed from queue). 001, 007 and 016 failed the strict arrow rule again and are queued on the next prompt (web3/v3, web4/v4, web3/v3). 021 unchanged (web1). Round on top of 4bfe3e6 (14 Nov, WITA): scored bp-02 021/web1. 021 web1 FAIL — the scene-transition arrow still stops short of the grid card (~20-24px). Queued on web2/v3. 001, 007 and 016 were not in this batch and stay queued. Round on top of 0cc141a (14 Nov, WITA): scored bp-01 001/web3, 007/web4 and bp-02 016/web3. 001 web3 PASS and 016 web3 PASS (removed from queue). 007 web4 FAIL — 'Sell orders above' tip still short of the second mint rung (visible navy gap, ~4-8px); queued on web5/v5. 021 was not in this batch and stays queued at web2/v3. Round on top of 9b79567 (14 Nov, WITA): scored bp-01 007/cursor1.png from kyleashton88-cyber/claude@5988875 (branch cursor/blueprint-cursor-images). 007 PASS — all three tips touch; 4+4 ladder, EXAMPLE, headline and margins good. Removed from the queue and placed. BP-03 011 and 014 reopened (beginner-watch failure, Cursor remake pending); placed files left in place and added to this queue. 021 stays queued at web2/v3.",
+  "length": 3,
   "needs_mascot_ref_count": 0,
   "superseded_prompts": [
     [
@@ -55,33 +55,6 @@
   "queue": [
     {
       "order": 1,
-      "lesson": "bp-01-introduction",
-      "beat": 7,
-      "path": "course/images/bp-01-introduction/007.png",
-      "prompt": "specs/remake/bp-01-introduction__007.txt",
-      "attach": [
-        "/workspace/blueprint-beginner/_anchors/anchor.png"
-      ],
-      "needs_mascot_ref": false,
-      "target_gen": "gen/bp-01-introduction/007/web5.png",
-      "target_out": "out/course/images/bp-01-introduction/007.png",
-      "repo_path": "course/images/bp-01-introduction/007.png",
-      "size": "1536x1024",
-      "headline": "BUY ORDERS BELOW, SELL ORDERS ABOVE",
-      "reason": "web4 remake FAIL under the strict arrow rule. Ladder itself is correct: four mint rungs above and four blue rungs below the dashed Price-now line, evenly spaced, one dot each; Sell tag level with the second mint rung; Buy tag level with the second blue rung; headline and EXAMPLE good. 'Price now' tip lands on the left end of the dashed line; 'Buy orders below' tip lands on the left cap of the second blue rung. But 'Sell orders above' still stops short of the left end of the second mint rung (visible navy gap, about 4-8px). Next: web5.png on the v5 prompt.",
-      "hard_fails": [
-        "arrow tip stops short of target: \"Sell orders above\" tip stops short of the left end of the second mint rung (visible navy gap, about 4-8px between the point and the mint cap)"
-      ],
-      "previous_attempts": [
-        "gen/bp-01-introduction/007/web1.png",
-        "gen/bp-01-introduction/007/web2.png",
-        "gen/bp-01-introduction/007/web4.png"
-      ],
-      "prompt_version": "v5",
-      "superseded_prompt": "specs/remake/_superseded/bp-01-introduction__007.v4.txt"
-    },
-    {
-      "order": 2,
       "lesson": "bp-02-what-you-need",
       "beat": 21,
       "path": "course/images/bp-02-what-you-need/021.png",
@@ -104,6 +77,48 @@
       ],
       "prompt_version": "v3",
       "superseded_prompt": "specs/remake/_superseded/bp-02-what-you-need__021.v2.txt"
+    },
+    {
+      "order": 2,
+      "lesson": "bp-03-what-is-a-grid-bot",
+      "beat": 11,
+      "path": "course/images/bp-03-what-is-a-grid-bot/011.png",
+      "prompt": null,
+      "needs_mascot_ref": false,
+      "target_gen": "gen/bp-03-what-is-a-grid-bot/011/cursor1.png",
+      "target_out": "out/course/images/bp-03-what-is-a-grid-bot/011.png",
+      "repo_path": "course/images/bp-03-what-is-a-grid-bot/011.png",
+      "size": "1536x1024",
+      "headline": "THIS CHART IS MADE UP",
+      "reason": "beginner-watch failure, Cursor remake pending. Placed file left in place; do not treat the current still as a pass.",
+      "hard_fails": [
+        "beginner-watch failure"
+      ],
+      "status": "reopened",
+      "previous_attempts": [],
+      "prompt_version": null,
+      "superseded_prompt": null
+    },
+    {
+      "order": 3,
+      "lesson": "bp-03-what-is-a-grid-bot",
+      "beat": 14,
+      "path": "course/images/bp-03-what-is-a-grid-bot/014.png",
+      "prompt": "specs/remake/bp-03-what-is-a-grid-bot__014.txt",
+      "needs_mascot_ref": false,
+      "target_gen": "gen/bp-03-what-is-a-grid-bot/014/cursor1.png",
+      "target_out": "out/course/images/bp-03-what-is-a-grid-bot/014.png",
+      "repo_path": "course/images/bp-03-what-is-a-grid-bot/014.png",
+      "size": "1536x1024",
+      "headline": "GRID BOT IN ONE BREATH",
+      "reason": "beginner-watch failure, Cursor remake pending. Placed file left in place; do not treat the current still as a pass.",
+      "hard_fails": [
+        "beginner-watch failure"
+      ],
+      "status": "reopened",
+      "previous_attempts": [],
+      "prompt_version": null,
+      "superseded_prompt": null
     }
   ],
   "code_fix_needed": [

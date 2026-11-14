@@ -9,17 +9,17 @@
   "not_in_scope": "All 92 BP-01..03 rows are now scored here. Separate finding: course/blueprint-rebuild/numbers/bp-0{1,2,3}*.yaml (d1f6) set disclaimer_on_screen to 'Educational content only. Not financial advice.'; studio.py writes that string, so CODE_FIXES.md CF-1 fixes both.",
   "counts": {
     "total": 92,
-    "pass": 90,
-    "fail": 2,
+    "pass": 89,
+    "fail": 3,
     "lesson_stills": {
       "total": 58,
-      "pass": 56,
-      "fail": 2,
+      "pass": 55,
+      "fail": 3,
       "by_lesson": {
         "bp-01-introduction": {
           "total": 18,
-          "pass": 17,
-          "fail": 1
+          "pass": 18,
+          "fail": 0
         },
         "bp-02-what-you-need": {
           "total": 21,
@@ -28,8 +28,8 @@
         },
         "bp-03-what-is-a-grid-bot": {
           "total": 19,
-          "pass": 19,
-          "fail": 0
+          "pass": 17,
+          "fail": 2
         }
       }
     },
@@ -68,8 +68,8 @@
     "by_lesson_all_rows": {
       "bp-01-introduction": {
         "total": 32,
-        "pass": 31,
-        "fail": 1
+        "pass": 32,
+        "fail": 0
       },
       "bp-02-what-you-need": {
         "total": 32,
@@ -78,8 +78,8 @@
       },
       "bp-03-what-is-a-grid-bot": {
         "total": 28,
-        "pass": 28,
-        "fail": 0
+        "pass": 26,
+        "fail": 2
       }
     }
   },
@@ -453,66 +453,67 @@
       "beat": 7,
       "chapter": "Buys and sells",
       "kind": "lesson-still",
-      "source": "committed still; image field of course/scripts/bp-01-introduction.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+      "source": "cursor",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "adc62a84603dfc3b9a5fb5f6bf493cd101c9a135",
-        "cursor/blueprint-beginner-images": "adc62a84603dfc3b9a5fb5f6bf493cd101c9a135"
+        "cursor/blueprint-cursor-images": "59687210ee5623ec6584d56220dbef0aeeace311",
+        "cursor/blueprint-beginner-images": "59687210ee5623ec6584d56220dbef0aeeace311"
       },
       "beat_concept": "One approach places buy orders below the mark and sell orders above it.",
       "scores": {
-        "beginner_clarity": 4,
-        "composition_hierarchy": 4,
-        "craft_polish": 4,
-        "brand_fidelity": 3,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-01-introduction__007.txt",
-      "notes": "Committed still: Diagram is right (sells above in mint, buys below in blue, price-now line), but the headline 'BUY LOW, SELL HIGH' is a profit slogan, not the beat ('buy orders below the mark, sell orders above it'). Fails the no-pitch rule. | web1 remake: FAIL. The three mint and three blue rungs sit side by side at one height, so each side reads as three orders at the same price, not a ladder of levels. The narration says four buys below and four sells above. The \"Sell orders above\" tip stops below and left of the first mint rung instead of touching the middle one, and the \"Buy orders below\" arrow has a kink. | web2 remake: FAIL. Ladder is now right: four mint rungs above and four blue rungs below the dashed \"Price now\" line, evenly spaced, one dot each; headline and tags spelled right; EXAMPLE inside the card; 3 arrows. But the \"Buy orders below\" arrow ends in the empty gap between the 2nd and 3rd blue rungs (about 32px from each), touching no rung, while \"Sell orders above\" lands on its rung end. Same miss class as v1/016 v1. | web3 remake FAIL under the strict arrow rule. Ladder itself is now correct: four mint rungs above and four blue rungs below the dashed Price-now line, evenly spaced, one dot each; Buy tag aligned to the second blue rung; headline and EXAMPLE good. But all three arrow tips stop short of their targets (sell ~8-9px, price-now ~11px, buy visually the same). Next: web4.png on the v4 prompt. | web4 remake FAIL under the strict arrow rule. Ladder itself is correct: four mint rungs above and four blue rungs below the dashed Price-now line, evenly spaced, one dot each; Sell tag level with the second mint rung; Buy tag level with the second blue rung; headline and EXAMPLE good. 'Price now' tip lands on the left end of the dashed line; 'Buy orders below' tip lands on the left cap of the second blue rung. But 'Sell orders above' still stops short of the left end of the second mint rung (visible navy gap, about 4-8px). Next: web5.png on the v5 prompt.",
+      "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@5988875b23967a21a821e038cd49c6ac384b580d, course/images/bp-01-introduction/007.png, blob 59687210ee5623ec6584d56220dbef0aeeace311, 1536x1024, 161477 bytes). All three tips visibly touch their targets: 'Sell orders above' on the left cap of the second mint rung, 'Price now' on the left end of the dashed price line, and 'Buy orders below' on the left cap of the second blue rung. Ladder is correct (4 mint above, 4 blue below, one dot each). Headline 'BUY ORDERS BELOW, SELL ORDERS ABOVE' is exact and properly spaced. EXAMPLE present. No mascot. GridBot Builder style only. Margins 108/108/114/106. Placed at out/ and course/images/bp-01-introduction/007.png (`source: cursor`).",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 69,
-        "right": 68,
-        "top": 90,
-        "bottom": 144
+        "left": 108,
+        "right": 108,
+        "top": 114,
+        "bottom": 106
       },
       "mascot_in_frame": false,
       "previous_v10_pass": true,
-      "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-01-introduction/007.png",
-      "scored_blob": "adc62a84603dfc3b9a5fb5f6bf493cd101c9a135",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/007.png",
+      "scored_blob": "59687210ee5623ec6584d56220dbef0aeeace311",
       "committed": true,
-      "pass": false,
+      "pass": true,
       "remake_review": {
-        "file": "gen/bp-01-introduction/007/web4.png",
-        "blob": "6eabe0b1c636048d184ca2169419c583a29fe3a7",
+        "file": "gen/bp-01-introduction/007/cursor1.png",
+        "blob": "59687210ee5623ec6584d56220dbef0aeeace311",
         "size": "1536x1024",
         "margins_px": {
-          "left": 79,
-          "right": 94,
-          "top": 69,
-          "bottom": 137
+          "left": 108,
+          "right": 108,
+          "top": 114,
+          "bottom": 106
         },
-        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scored_against": "beat + strict rubric (arrow contact, 4+4 ladder, EXAMPLE, headline, margins, brand, beginner clarity)",
+        "source_commit": "5988875b23967a21a821e038cd49c6ac384b580d",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
           "beginner_clarity": 5,
-          "composition_hierarchy": 4,
-          "craft_polish": 4,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
           "brand_fidelity": 5,
           "text_legibility": 5,
           "character_consistency": null,
-          "label_accuracy": 3
+          "label_accuracy": 5
         },
-        "hard_fails": [
-          "arrow tip stops short of target: \"Sell orders above\" tip stops short of the left end of the second mint rung (visible navy gap, about 4-8px between the point and the mint cap)"
-        ],
-        "notes": "web4 remake FAIL under the strict arrow rule. Ladder itself is correct: four mint rungs above and four blue rungs below the dashed Price-now line, evenly spaced, one dot each; Sell tag level with the second mint rung; Buy tag level with the second blue rung; headline and EXAMPLE good. 'Price now' tip lands on the left end of the dashed line; 'Buy orders below' tip lands on the left cap of the second blue rung. But 'Sell orders above' still stops short of the left end of the second mint rung (visible navy gap, about 4-8px). Next: web5.png on the v5 prompt.",
-        "pass": false
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@5988875b23967a21a821e038cd49c6ac384b580d, course/images/bp-01-introduction/007.png, blob 59687210ee5623ec6584d56220dbef0aeeace311, 1536x1024, 161477 bytes). All three tips visibly touch their targets: 'Sell orders above' on the left cap of the second mint rung, 'Price now' on the left end of the dashed price line, and 'Buy orders below' on the left cap of the second blue rung. Ladder is correct (4 mint above, 4 blue below, one dot each). Headline 'BUY ORDERS BELOW, SELL ORDERS ABOVE' is exact and properly spaced. EXAMPLE present. No mascot. GridBot Builder style only. Margins 108/108/114/106. Placed at out/ and course/images/bp-01-introduction/007.png (`source: cursor`).",
+        "pass": true
       },
       "previous_remake_reviews": [
         {
@@ -592,6 +593,32 @@
             "arrow tip stops short of target: all 3 tips short — \"Sell orders above\" ~8-9px from its rung, \"Price now\" ~11px from the dashed line, \"Buy orders below\" the same class"
           ],
           "notes": "web3 remake FAIL under the strict arrow rule. Ladder itself is now correct: four mint rungs above and four blue rungs below the dashed Price-now line, evenly spaced, one dot each; Buy tag aligned to the second blue rung; headline and EXAMPLE good. But all three arrow tips stop short of their targets (sell ~8-9px, price-now ~11px, buy visually the same). Next: web4.png on the v4 prompt.",
+          "pass": false
+        },
+        {
+          "file": "gen/bp-01-introduction/007/web4.png",
+          "blob": "6eabe0b1c636048d184ca2169419c583a29fe3a7",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 79,
+            "right": 94,
+            "top": 69,
+            "bottom": 137
+          },
+          "scored_against": "beat + prompt current when this batch started (score on merits)",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 4,
+            "craft_polish": 4,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 3
+          },
+          "hard_fails": [
+            "arrow tip stops short of target: \"Sell orders above\" tip stops short of the left end of the second mint rung (visible navy gap, about 4-8px between the point and the mint cap)"
+          ],
+          "notes": "web4 remake FAIL under the strict arrow rule. Ladder itself is correct: four mint rungs above and four blue rungs below the dashed Price-now line, evenly spaced, one dot each; Sell tag level with the second mint rung; Buy tag level with the second blue rung; headline and EXAMPLE good. 'Price now' tip lands on the left end of the dashed line; 'Buy orders below' tip lands on the left cap of the second blue rung. But 'Sell orders above' still stops short of the left end of the second mint rung (visible navy gap, about 4-8px). Next: web5.png on the v5 prompt.",
           "pass": false
         }
       ]
@@ -2951,10 +2978,10 @@
         "label_accuracy": 4
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "passed_as_is",
+      "status": "reopened",
+      "action": "cursor_remake_pending",
       "remake_prompt": null,
-      "notes": "'This chart is made up', pretend path with fill dots, EXAMPLE stamp; matches 'hypothetical path'.",
+      "notes": "'This chart is made up', pretend path with fill dots, EXAMPLE stamp; matches 'hypothetical path'. | REOPENED: beginner-watch failure, Cursor remake pending. Placed file left in place.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -2969,7 +2996,8 @@
       "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-03-what-is-a-grid-bot/011.png",
       "scored_blob": "c9dbab772073416c1369452678f2575549c8d149",
       "committed": true,
-      "pass": true
+      "pass": false,
+      "reason": "beginner-watch failure, Cursor remake pending"
     },
     {
       "path": "course/images/bp-03-what-is-a-grid-bot/012.png",
@@ -3077,10 +3105,10 @@
         "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "status": "reopened",
+      "action": "cursor_remake_pending",
       "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__014.txt",
-      "notes": "Four icons in one panel joined by three short arrows: two checked tickets, a zig-zag between dashed lines, an amber stop sign, blue and mint jars. Captions \"Orders wait\", \"Inside your range\", \"Stop written\", \"Holdings change\" match the one-breath definition. Panel glow sits 48px/49px from the left/right edges: inside the 45px standard but short of the prompt's 120px ask, hence composition 4.",
+      "notes": "Four icons in one panel joined by three short arrows: two checked tickets, a zig-zag between dashed lines, an amber stop sign, blue and mint jars. Captions \"Orders wait\", \"Inside your range\", \"Stop written\", \"Holdings change\" match the one-breath definition. Panel glow sits 48px/49px from the left/right edges: inside the 45px standard but short of the prompt's 120px ask, hence composition 4. | REOPENED: beginner-watch failure, Cursor remake pending. Placed file left in place.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -3095,7 +3123,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/014.png",
       "scored_blob": "56cc2b8246ac3a64da3be2d2bc02c676d23e193d",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-03-what-is-a-grid-bot/014/web1.png",
         "blob": "56cc2b8246ac3a64da3be2d2bc02c676d23e193d",
@@ -3121,7 +3149,8 @@
         "pass": true
       },
       "previous_committed_blob": "4e46857c12e6326a1bfad6df8655bc645803c171",
-      "source_detail": "ChatGPT web render gen/bp-03-what-is-a-grid-bot/014/web1.png (prompt specs/remake/bp-03-what-is-a-grid-bot__014.txt), saved via out/course/images/bp-03-what-is-a-grid-bot/014.png at 1536x1024 (already 3:2, no fill needed)"
+      "source_detail": "ChatGPT web render gen/bp-03-what-is-a-grid-bot/014/web1.png (prompt specs/remake/bp-03-what-is-a-grid-bot__014.txt), saved via out/course/images/bp-03-what-is-a-grid-bot/014.png at 1536x1024 (already 3:2, no fill needed)",
+      "reason": "beginner-watch failure, Cursor remake pending"
     },
     {
       "path": "course/images/bp-03-what-is-a-grid-bot/015.png",
