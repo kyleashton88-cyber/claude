@@ -476,12 +476,12 @@ def bp04_015() -> None:
 
 def bp05_006() -> None:
     img = canvas()
-    head(img, "HALF THE GAP, DOUBLE THE LINES", "DOUBLE", size=40)
-    # Equal-height boxes. Interior lines only: 6 on the left, 12 on the right.
+    head(img, "HALF THE GAP, DOUBLE THE GAPS", "DOUBLE THE GAPS", size=40)
+    # Same band height. Halving the step doubles the gaps: 5 gaps become 10, so 6 lines become 11.
     card(img, (120, 280, 700, 700))
     card(img, (836, 280, 1416, 700))
     left_ys = [340 + i * 60 for i in range(6)]
-    right_ys = [340 + i * (300 / 11) for i in range(12)]
+    right_ys = [340 + i * 30 for i in range(11)]
     for y in left_ys:
         hline(img, 180, 640, y, CYAN, 5)
     for y in right_ys:
@@ -502,19 +502,21 @@ def bp05_006() -> None:
     arrow(img, (1120, 250), (1120, 284))
     # Counts match the lines actually drawn. The house recount is its own line.
     tag(img, (120, 720, 700, 800), ["6 lines, 5 gaps"], face)
-    tag(img, (836, 720, 1416, 800), ["12 lines, 11 gaps"], face)
+    tag(img, (836, 720, 1416, 800), ["11 lines, 10 gaps"], face)
     tag(img, (140, 840, 1180, 920), ["9.5% range ÷ 0.25% step = 38 gaps, not 40"], face)
     stamp(img, 1320, 880)
     final = save(img, "course/images/bp-05-spacing-and-range/006.png")
     assert_tip(final, (264, 248), (270, 248), "height")
     assert_tip(final, (1120, 284), (1120, 280), "lines")
-    if len(left_ys) != 6 or len(right_ys) != 12:
+    if len(left_ys) != 6 or len(right_ys) != 11:
         raise SystemExit("line count")
+    if abs((left_ys[-1] - left_ys[0]) - (right_ys[-1] - right_ys[0])) > 0.5:
+        raise SystemExit("band height")
     record([{
         "path": "course/images/bp-05-spacing-and-range/006.png",
         "lesson": "bp-05-spacing-and-range",
-        "shows": "Two boxes of the same height. The left is labelled 6 lines, 5 gaps. The right is labelled 12 lines, 11 gaps. A separate line gives the house recount: a 9.5% range divided by a 0.25% step is 38 gaps, not 40.",
-        "alt": "Half the gap doubles the lines. The left box is 6 lines and 5 gaps. The right box is 12 lines and 11 gaps. A 9.5% range divided by a 0.25% step is 38 gaps, not 40.",
+        "shows": "Two boxes of the same height. The left is labelled 6 lines, 5 gaps. The right is labelled 11 lines, 10 gaps. A separate line gives the house recount: a 9.5% range divided by a 0.25% step is 38 gaps, not 40.",
+        "alt": "Half the gap doubles the gaps. The left box is 6 lines and 5 gaps. The right box is 11 lines and 10 gaps. A 9.5% range divided by a 0.25% step is 38 gaps, not 40.",
         "batch": "cursor-bp05-006",
     }])
 

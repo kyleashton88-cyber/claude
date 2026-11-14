@@ -4320,8 +4320,8 @@
    "id": "bp-05-spacing-and-range-006",
    "lesson": "bp-05-spacing-and-range",
    "source": "cursor",
-   "shows": "Two boxes of the same height. The left is labelled 6 lines, 5 gaps. The right is labelled 12 lines, 11 gaps. A separate line gives the house recount: a 9.5% range divided by a 0.25% step is 38 gaps, not 40.",
-   "alt": "Half the gap doubles the lines. The left box is 6 lines and 5 gaps. The right box is 12 lines and 11 gaps. A 9.5% range divided by a 0.25% step is 38 gaps, not 40.",
+   "shows": "Two boxes of the same height. The left is labelled 6 lines, 5 gaps. The right is labelled 11 lines, 10 gaps. A separate line gives the house recount: a 9.5% range divided by a 0.25% step is 38 gaps, not 40.",
+   "alt": "Half the gap doubles the gaps. The left box is 6 lines and 5 gaps. The right box is 11 lines and 10 gaps. A 9.5% range divided by a 0.25% step is 38 gaps, not 40.",
    "shot": "006",
    "prompt": "DIFFERENT FROM bp-05-spacing-and-range-004. STYLE (GBB v3, Blueprint CYAN): Premium course still, 1536x1024. SAFE AREA: keep the headline, every label and all key content inside y 80-944. Near-black navy (#050A18 to #0A1630), faint grid, bokeh, frosted glass with glowing cyan borders (#00D4FF / #1E7BFF). Headline top-left, outside any card, bold condensed white, sized like the main title on style-guide pages 04 and 09, about the bp-01-007 cap height. One keyword in cyan. No teal, no off-white paper card, no flat look. Charts go sideways or are left out. No rising chart and no dollar sign. SHOT: Headline top-left, outside any card, bold condensed white, sized like the main title on style-guide pages 04 and 09: \"NOT FORTY\" with only NOT in cyan, cap height about 159 pixels. A chip 40 is crossed out. A chip 39 is lit with a cyan glow. Left edge about 50 pixels from the left, top of the capitals about 110 pixels from the top, cap height about 159 pixels like bp-01-007, not 195 pixels. Image quality must not degrade at any stage: no compression artifacts, no loss of detail, no colour shift, no softening of labels or text; full resolution preserved from generation through to the final 1080p video frame.",
    "path": "course/images/bp-05-spacing-and-range/006.png",
@@ -4336,8 +4336,8 @@
    "format": "png",
    "source_batch": "cursor-bp05-006",
    "previous_status": "awaiting_qa",
-   "md5": "a9c21f1f25f852f6f78f057ee107313a",
-   "previous_md5": "cf9aa0b754c6e06c3c381b3b3c306afc"
+   "md5": "1df8ebd4287e78ca114251241884ff06",
+   "previous_md5": "a9c21f1f25f852f6f78f057ee107313a"
   },
   {
    "id": "bp-05-spacing-and-range-007",
