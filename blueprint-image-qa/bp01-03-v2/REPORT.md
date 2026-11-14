@@ -4,7 +4,7 @@ Scored by Creative Studio, 14 Nov 2026 (WITA). Same strict method as bp04-11. Im
 
 **Scope:** image fields of course/scripts/bp-01..bp-03 @ d1f6 `fbb3f9c` (58 stills); files scored from cursor/blueprint-beginner-images `2f8bac1`.
 
-**Result (current, 14 Nov after remake round 3):** lesson stills 56 pass / 2 fail of 58. Shared + code-drawn: 33 pass / 1 fail of 34. Whole list: **89 pass / 3 fail of 92**. Remake queue: 2 (needs_mascot_ref: 0). Code fix needed: 1 frame (CF-7), plus CF-6 to apply with the new fence still. See CODE_FIXES.md. (History: first scoring 45/47; after round 1 56/36.)
+**Result (current, 14 Nov after remake round 3 and the strict arrow re-check):** lesson stills 53 pass / 5 fail of 58. Shared + code-drawn: 33 pass / 1 fail of 34. Whole list: **86 pass / 6 fail of 92**. Remake queue: 5 (needs_mascot_ref: 0). Code fix needed: 1 frame (CF-7), plus CF-6 to apply with the new fence still. See CODE_FIXES.md. (History: first scoring 45/47; after round 1 56/36.)
 
 **Mismatches:** none. All 58 blobs are identical on d1f6 and beginner-images and match the v10 pass list's scored_blob. All 58 were 'pass' on v10; 21 are overturned here.
 
@@ -13,7 +13,7 @@ Scored by Creative Studio, 14 Nov 2026 (WITA). Same strict method as bp04-11. Im
 **Fix status:** every fail = `needs_remake`, prompt written (specs/remake/<lesson>__NNN.txt, copied to remake/), not regenerated. Old prompts moved to specs/remake/_superseded/: `bp-01-introduction__010.v1.txt`, `bp-02-what-you-need__004.v1.txt`, `bp-03-what-is-a-grid-bot__003.v1.txt`, `bp-03-what-is-a-grid-bot__010.v1.txt`.
 
 
-## bp-01-introduction (Introduction): 18 total, 17 pass, 1 fail (after remake round 3; table below is the first scoring of the committed stills)
+## bp-01-introduction (Introduction): 18 total, 15 pass, 3 fail (after round 3 + strict arrow re-check; table below is the first scoring of the committed stills)
 
 | File | Beat | Result | Reason | Fix status |
 |---|---|---|---|---|
@@ -36,7 +36,7 @@ Scored by Creative Studio, 14 Nov 2026 (WITA). Same strict method as bp04-11. Im
 | 017.png | 17 One sentence to keep | PASS | Range / Levels / Stop icons with 'Draw all three before any click'; matches the beat. | passed as is |
 | 018.png | 18 Outro | FAIL | Outro names the next lesson only as 'WHAT YOU NEED' / 'what you need'; the next lesson's title is 'What you are going to need'. | needs remake, prompt `bp-01-introduction__018.txt` |
 
-## bp-02-what-you-need (What you are going to need): 21 total, 21 pass, 0 fail (after remake round 1; table below is the first scoring of the committed stills)
+## bp-02-what-you-need (What you are going to need): 21 total, 20 pass, 1 fail (after strict arrow re-check; table below is the first scoring of the committed stills)
 
 | File | Beat | Result | Reason | Fix status |
 |---|---|---|---|---|
@@ -247,3 +247,28 @@ Disclaimer string sweep at e0b84d5: Blueprint code and yaml no longer contain "E
 | bp-02-what-you-need | 21/21 | 11/11 | 32/32 | none: 100% |
 | bp-03-what-is-a-grid-bot | 18/19 | 8/9 | 26/28 | 010.png (ChatGPT, v3 prompt, web3) and code-drawn chart/range-2023/limit-orders-wait (CF-7) |
 | **All** | 56/58 | 33/34 | **89/92** | 3 |
+
+## Strict arrow re-check (14 Nov): a tip must touch its target
+
+Stewart's rule for the perfect run: every label arrow's point must touch the thing it names. A gap of a few pixels fails ("arrow tip stops short of target"). I zoomed (4-8x) into every label-arrow tip on every passed ChatGPT-web remake: bp-01 001/002/010/016/018, bp-02 002/003/004/010/016/018/019, bp-03 001/002/003/004/008/014/019 and analogy-fence. Rows whose prompt has 0 label arrows had nothing to check.
+
+Flipped back to fail. The old committed still is restored at `course/images/` and `out/`, the passed render is kept in `remake_review` / `flipped_from_pass`, and the row is back in the queue on a new prompt that pins the tip:
+
+| Row | Arrow that misses | Next |
+|---|---|---|
+| bp-01-introduction/001.png | "Price bouncing" tip stops about 9px short of the zig-zag line | web2, v2 prompt |
+| bp-01-introduction/010.png | "You are here" tip stops about 6px above the location pin | web4, v3 prompt |
+| bp-02-what-you-need/016.png | "Copy the 7 lines" tip ends in the gap above a row line, touching none (prompt: the fourth row line) | web2, v2 prompt |
+
+Checked and touching: bp-01 001 Top/Bottom price, 010 "10 lessons ahead", 016 Range/Levels/Stop, 018 both; bp-02 003 all 3, 004, 010, 016 "Tick each one", 018 both circles; bp-03 001 both, 003 both, 004 all 5 (Stop tip enters the amber line's glow), 019 both; analogy-fence all 3 (the "Price bounces between" arrowhead overlaps the zig-zag stroke).
+
+Not covered: arrows between two panels (sequence arrows such as notebook -> next card) connect panels and have no single target, so they are not treated as label arrows. Committed stills that passed at first scoring and were never remade, and the code-drawn frames, were outside this re-check.
+
+### Running counts after the strict arrow re-check
+
+| Lesson | Script stills | Shared + code-drawn | All rows | Rows left |
+|---|---|---|---|---|
+| bp-01-introduction | 15/18 | 14/14 | 29/32 | 001.png (web2, v2), 007.png (web3, v3), 010.png (web4, v3) |
+| bp-02-what-you-need | 20/21 | 11/11 | 31/32 | 016.png (web2, v2) |
+| bp-03-what-is-a-grid-bot | 18/19 | 8/9 | 26/28 | 010.png (web3, v3) and code-drawn chart/range-2023/limit-orders-wait (CF-7) |
+| **All** | 53/58 | 33/34 | **86/92** | 6 |

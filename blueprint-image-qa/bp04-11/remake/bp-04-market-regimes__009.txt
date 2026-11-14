@@ -5,10 +5,11 @@ MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 8
 Headline: "READ LEFT TO RIGHT" (the words LEFT TO RIGHT in cyan, the rest white).
 Scene: A wide glass chart with a pretend price line. A glowing magnifier moves along it from left to right with a dotted arrow. At the end, one empty tag box waits. EXAMPLE stamp.
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
-- "Follow the line left to right": arrow tip touches the dotted arrow under the price line.
+- "Follow the line left to right": arrow tip touches the dotted arrow under the price line. QA FIX v2: the v1 tip stopped about 12px below the dotted arrow; now the arrowhead point touches the dotted arrow itself.
 - "Give it one name": arrow tip touches the empty tag box at the right end of the line.
 - "EXAMPLE": a small cyan outlined EXAMPLE stamp in the lower-right corner of the main card or chart, fully inside the card, no arrow.
 LABEL ARROWS: exactly 2 thin cyan label arrows, one for each label above that says "arrow tip touches", each with one clean arrowhead whose tip touches the named target. Labels that say "no arrow" have no arrow. Apart from any arrow the Scene itself describes, there are no other arrows; no doubled arrowheads, and no arrow crosses text.
+QA FIX v2 TIP CONTACT: every label arrow's arrowhead point physically touches its named target: the point overlaps the target's line, edge or glow, with NO strip of background visible between the arrowhead and the target, not even a few pixels. If the target is a thin line, the arrowhead point sits on that line. Arrows that stop short of their target are the reason the v1 image failed.
 CHARACTER: no robot, mascot, person, hand-drawn face or character of any kind in this frame. (The only approved mascot is the GridBot Builder robot sheet: metallic white/silver robot, gloss-black face, electric-blue features; it is added separately and must never be redrawn.)
 BRAND: GridBot Builder course style only. No company, entity, ABN, Market Pros, exchange, venue or app names or logos; no coins, banknotes, currency signs or profit claims.
 Goal: a complete beginner understands this one idea in three seconds with the sound off: Work one example path from left to right and give it one label.

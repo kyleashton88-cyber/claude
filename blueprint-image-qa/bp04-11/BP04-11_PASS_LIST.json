@@ -8,12 +8,12 @@
  "not_in_scope": "course/images/_held/*.png (10 files: bp-06 014/017, bp-07 012/017/020, bp-08 003/006/007/009/011) are not referenced by any lesson script and were not scored. Shared title-art/mascot assets are already on BP01-03_PASS_LIST.json.",
  "counts": {
   "total": 161,
-  "fail": 144,
+  "fail": 148,
   "by_lesson": {
    "bp-04-market-regimes": {
     "total": 20,
-    "fail": 3,
-    "pass": 17
+    "fail": 7,
+    "pass": 13
    },
    "bp-05-spacing-and-range": {
     "total": 19,
@@ -51,7 +51,7 @@
     "pass": 0
    }
   },
-  "pass": 17
+  "pass": 13
  },
  "images": [
   {
@@ -569,41 +569,39 @@
    "beat": 7,
    "chapter": "Trend",
    "kind": "lesson-still",
-   "source": "chatgpt-web",
+   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "8a58e22d7128520b5e31919adcf59a93b98c8b4f",
     "cursor/blueprint-beginner-images": "8a58e22d7128520b5e31919adcf59a93b98c8b4f"
    },
    "beat_concept": "A trend on this page is a path that makes higher highs or lower lows, with small pullbacks.",
    "scores": {
-    "beginner_clarity": 5,
-    "composition_hierarchy": 4,
-    "craft_polish": 5,
-    "brand_fidelity": 5,
-    "text_legibility": 5,
+    "beginner_clarity": 1,
+    "composition_hierarchy": 3,
+    "craft_polish": 3,
+    "brand_fidelity": 4,
+    "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 5
+    "label_accuracy": 1
    },
    "hard_fails": [],
-   "status": "pass",
-   "action": "none",
+   "status": "fail",
+   "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-04-market-regimes__007.txt",
-   "notes": "Staircase with each peak above the last; \"Higher highs\" tip on the highest peak, \"Small dips\" tip on a dip, \"Keeps going one way\" tip on the dashed slope arrow: 3 arrows as the prompt says. Spelling right; EXAMPLE inside the chart. Matches beat 7 (higher highs with small pullbacks). The narration also mentions inventory piling; the prompt does not ask for it and the image does not contradict it.",
+   "notes": "Grey staircase with a pile of glass cubes labelled 'PILE': no price path, no higher highs; does not teach 'trend'. | web1 remake: passed, then FAIL under the strict arrow rule (14 Nov): arrow tip stops short of target: \"Small dips\" tip stops about 25px above the dip and \"Keeps going one way\" tip stops about 17px below the dashed slope arrow.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 72,
-    "right": 97,
-    "top": 74,
-    "bottom": 146
+    "left": 69,
+    "right": 369,
+    "top": 109,
+    "bottom": 126
    },
-   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/007.png",
-   "scored_blob": "8e9caf2d7d0ccd1efdf82bae1359f789fe62f5c6",
+   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/007.png",
+   "scored_blob": "8a58e22d7128520b5e31919adcf59a93b98c8b4f",
    "committed": true,
-   "pass": true,
-   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/007/web1.png (prompt specs/remake/bp-04-market-regimes__007.txt), saved via out/course/images/bp-04-market-regimes/007.png at 1536x1024 (no padding needed)",
-   "previous_fbb3f9c_blob": "8a58e22d7128520b5e31919adcf59a93b98c8b4f",
+   "pass": false,
    "remake_review": {
     "file": "gen/bp-04-market-regimes/007/web1.png",
     "blob": "ec7edc6170dbb1508af70eaaf3f8ac7bf546f65e",
@@ -622,11 +620,20 @@
      "brand_fidelity": 5,
      "text_legibility": 5,
      "character_consistency": null,
-     "label_accuracy": 5
+     "label_accuracy": 3
     },
-    "hard_fails": [],
-    "notes": "Staircase with each peak above the last; \"Higher highs\" tip on the highest peak, \"Small dips\" tip on a dip, \"Keeps going one way\" tip on the dashed slope arrow: 3 arrows as the prompt says. Spelling right; EXAMPLE inside the chart. Matches beat 7 (higher highs with small pullbacks). The narration also mentions inventory piling; the prompt does not ask for it and the image does not contradict it.",
-    "pass": true
+    "hard_fails": [
+     "arrow tip stops short of target: \"Small dips\" tip stops about 25px above the dip and \"Keeps going one way\" tip stops about 17px below the dashed slope arrow"
+    ],
+    "notes": "Staircase with each peak above the last; \"Higher highs\" tip on the highest peak, \"Small dips\" tip on a dip, \"Keeps going one way\" tip on the dashed slope arrow: 3 arrows as the prompt says. Spelling right; EXAMPLE inside the chart. Matches beat 7 (higher highs with small pullbacks). The narration also mentions inventory piling; the prompt does not ask for it and the image does not contradict it. RE-SCORED 14 Nov under the strict arrow rule (a tip must touch its target): FAIL, arrow tip stops short of target: \"Small dips\" tip stops about 25px above the dip and \"Keeps going one way\" tip stops about 17px below the dashed slope arrow.",
+    "pass": false,
+    "rescored": "strict arrow rule, 14 Nov"
+   },
+   "flipped_from_pass": {
+    "blob": "8e9caf2d7d0ccd1efdf82bae1359f789fe62f5c6",
+    "source": "chatgpt-web",
+    "file": "gen/bp-04-market-regimes/007/web1.png",
+    "reason": "arrow tip stops short of target"
    }
   },
   {
@@ -701,41 +708,39 @@
    "beat": 9,
    "chapter": "Worked sort",
    "kind": "lesson-still",
-   "source": "chatgpt-web",
+   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "cad4d872b0c4ea85065f7b4c143eb55d1b66e088",
     "cursor/blueprint-beginner-images": "cad4d872b0c4ea85065f7b4c143eb55d1b66e088"
    },
    "beat_concept": "Work one example path from left to right and give it one label.",
    "scores": {
-    "beginner_clarity": 5,
-    "composition_hierarchy": 4,
-    "craft_polish": 5,
-    "brand_fidelity": 5,
-    "text_legibility": 5,
+    "beginner_clarity": 2,
+    "composition_hierarchy": 2,
+    "craft_polish": 3,
+    "brand_fidelity": 4,
+    "text_legibility": 3,
     "character_consistency": null,
-    "label_accuracy": 5
+    "label_accuracy": 2
    },
    "hard_fails": [],
-   "status": "pass",
-   "action": "none",
+   "status": "fail",
+   "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-04-market-regimes__009.txt",
-   "notes": "Magnifier at the left of a pretend price line, dotted arrow running left to right under it, empty tag box at the right end. \"Follow the line left to right\" tip on the dotted arrow, \"Give it one name\" tip on the empty tag box: 2 arrows as prompted. Spelling right; EXAMPLE (slightly tilted) inside the card.",
+   "notes": "Mostly empty card with one flat line, a tiny 'RANGE' pill and an EXAMPLE stamp: no example path to read left to right. | web1 remake: passed, then FAIL under the strict arrow rule (14 Nov): arrow tip stops short of target: \"Follow the line left to right\" tip stops about 12px below the dotted arrow.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 87,
-    "right": 90,
-    "top": 99,
-    "bottom": 141
+    "left": 82,
+    "right": 192,
+    "top": 109,
+    "bottom": 178
    },
-   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/009.png",
-   "scored_blob": "e39f522de17c60f293bd34b124e42b9ee0f1d973",
+   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/009.png",
+   "scored_blob": "cad4d872b0c4ea85065f7b4c143eb55d1b66e088",
    "committed": true,
-   "pass": true,
-   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/009/web1.png (prompt specs/remake/bp-04-market-regimes__009.txt), saved via out/course/images/bp-04-market-regimes/009.png at 1536x1024 (no padding needed)",
-   "previous_fbb3f9c_blob": "cad4d872b0c4ea85065f7b4c143eb55d1b66e088",
+   "pass": false,
    "remake_review": {
     "file": "gen/bp-04-market-regimes/009/web1.png",
     "blob": "90c8afa75633768d0eda101e040df76ddb3809a7",
@@ -754,11 +759,20 @@
      "brand_fidelity": 5,
      "text_legibility": 5,
      "character_consistency": null,
-     "label_accuracy": 5
+     "label_accuracy": 3
     },
-    "hard_fails": [],
-    "notes": "Magnifier at the left of a pretend price line, dotted arrow running left to right under it, empty tag box at the right end. \"Follow the line left to right\" tip on the dotted arrow, \"Give it one name\" tip on the empty tag box: 2 arrows as prompted. Spelling right; EXAMPLE (slightly tilted) inside the card.",
-    "pass": true
+    "hard_fails": [
+     "arrow tip stops short of target: \"Follow the line left to right\" tip stops about 12px below the dotted arrow"
+    ],
+    "notes": "Magnifier at the left of a pretend price line, dotted arrow running left to right under it, empty tag box at the right end. \"Follow the line left to right\" tip on the dotted arrow, \"Give it one name\" tip on the empty tag box: 2 arrows as prompted. Spelling right; EXAMPLE (slightly tilted) inside the card. RE-SCORED 14 Nov under the strict arrow rule (a tip must touch its target): FAIL, arrow tip stops short of target: \"Follow the line left to right\" tip stops about 12px below the dotted arrow.",
+    "pass": false,
+    "rescored": "strict arrow rule, 14 Nov"
+   },
+   "flipped_from_pass": {
+    "blob": "e39f522de17c60f293bd34b124e42b9ee0f1d973",
+    "source": "chatgpt-web",
+    "file": "gen/bp-04-market-regimes/009/web1.png",
+    "reason": "arrow tip stops short of target"
    }
   },
   {
@@ -862,39 +876,39 @@
    "beat": 11,
    "chapter": "Ordinary day",
    "kind": "lesson-still",
-   "source": "chatgpt-web",
+   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "60cb8039ff1cbbc74ef0ab08c1492f9b103663a1",
     "cursor/blueprint-beginner-images": "60cb8039ff1cbbc74ef0ab08c1492f9b103663a1"
    },
    "beat_concept": "An ordinary day on this page means the size of weave you already drew, not a promise about tomorrow.",
    "scores": {
-    "beginner_clarity": 4,
-    "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 5,
-    "text_legibility": 5,
+    "beginner_clarity": 2,
+    "composition_hierarchy": 3,
+    "craft_polish": 3,
+    "brand_fidelity": 4,
+    "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 2
    },
    "hard_fails": [],
-   "status": "pass",
-   "action": "none",
+   "status": "fail",
+   "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-04-market-regimes__011.txt",
-   "notes": "Glass chart with a small even wiggle and a bracket measuring its height; \"Usual up-and-down size\" arrow points at the bracket (tip about 12px right of the bracket spine, single unambiguous target); \"Not a promise about tomorrow\" in the card, no arrow; EXAMPLE stamp inside the card. Matches the current prompt and the \"not a promise about tomorrow\" line of 6848d09 beat 11.",
+   "notes": "Big sine wave far outside a thin dashed band with 'BAND'/'WEAVE' bracket; headline 'TOO WIDE' contradicts the beat (ordinary day = the usual wiggle size); no EXAMPLE on chart. | web1 remake: passed, then FAIL under the strict arrow rule (14 Nov): arrow tip stops short of target: \"Usual up-and-down size\" tip stops about 12px right of the bracket.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 71,
-    "right": 114,
-    "top": 78,
-    "bottom": 182
+    "left": 55,
+    "right": 181,
+    "top": 110,
+    "bottom": 185
    },
-   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/011.png",
-   "scored_blob": "00b38443affcad6868b484f53dbfe42e0bec6e2d",
+   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/011.png",
+   "scored_blob": "60cb8039ff1cbbc74ef0ab08c1492f9b103663a1",
    "committed": true,
-   "pass": true,
+   "pass": false,
    "remake_review": {
     "file": "gen/bp-04-market-regimes/011/web1.png",
     "blob": "00b38443affcad6868b484f53dbfe42e0bec6e2d",
@@ -913,14 +927,21 @@
      "brand_fidelity": 5,
      "text_legibility": 5,
      "character_consistency": null,
-     "label_accuracy": 4
+     "label_accuracy": 3
     },
-    "hard_fails": [],
-    "notes": "Glass chart with a small even wiggle and a bracket measuring its height; \"Usual up-and-down size\" arrow points at the bracket (tip about 12px right of the bracket spine, single unambiguous target); \"Not a promise about tomorrow\" in the card, no arrow; EXAMPLE stamp inside the card. Matches the current prompt and the \"not a promise about tomorrow\" line of 6848d09 beat 11.",
-    "pass": true
+    "hard_fails": [
+     "arrow tip stops short of target: \"Usual up-and-down size\" tip stops about 12px right of the bracket"
+    ],
+    "notes": "Glass chart with a small even wiggle and a bracket measuring its height; \"Usual up-and-down size\" arrow points at the bracket (tip about 12px right of the bracket spine, single unambiguous target); \"Not a promise about tomorrow\" in the card, no arrow; EXAMPLE stamp inside the card. Matches the current prompt and the \"not a promise about tomorrow\" line of 6848d09 beat 11. RE-SCORED 14 Nov under the strict arrow rule (a tip must touch its target): FAIL, arrow tip stops short of target: \"Usual up-and-down size\" tip stops about 12px right of the bracket.",
+    "pass": false,
+    "rescored": "strict arrow rule, 14 Nov"
    },
-   "previous_fbb3f9c_blob": "60cb8039ff1cbbc74ef0ab08c1492f9b103663a1",
-   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/011/web1.png (prompt specs/remake/bp-04-market-regimes__011.txt), saved via out/course/images/bp-04-market-regimes/011.png at 1536x1024 (already 3:2, no fill needed)"
+   "flipped_from_pass": {
+    "blob": "00b38443affcad6868b484f53dbfe42e0bec6e2d",
+    "source": "chatgpt-web",
+    "file": "gen/bp-04-market-regimes/011/web1.png",
+    "reason": "arrow tip stops short of target"
+   }
   },
   {
    "path": "course/images/bp-04-market-regimes/012.png",
@@ -1128,39 +1149,39 @@
    "beat": 15,
    "chapter": "Paper sort",
    "kind": "lesson-still",
-   "source": "chatgpt-web",
+   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "49e8f4fe840d098631cd7451069cb734cebd038a",
     "cursor/blueprint-beginner-images": "49e8f4fe840d098631cd7451069cb734cebd038a"
    },
    "beat_concept": "Sort one hypothetical path on paper into range, trend, or break, and write one reason.",
    "scores": {
-    "beginner_clarity": 5,
-    "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 5,
-    "text_legibility": 5,
+    "beginner_clarity": 2,
+    "composition_hierarchy": 3,
+    "craft_polish": 3,
+    "brand_fidelity": 4,
+    "text_legibility": 3,
     "character_consistency": null,
-    "label_accuracy": 4
+    "label_accuracy": 2
    },
    "hard_fails": [],
-   "status": "pass",
-   "action": "none",
+   "status": "fail",
+   "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-04-market-regimes__015.txt",
-   "notes": "Notebook page: sketched zig-zag between dashed lines, three tick boxes with tiny range/staircase/drop icons, the range box ticked by a pencil; \"Pick one shape\" tip on the ticked box; \"Write one reason why\" arrow points at the blank reason line (tip about 13px short, single unambiguous target); EXAMPLE stamp. Matches 6848d09 beat 15 (sort one path, write one reason).",
+   "notes": "CPU-style 'RANGE' chip and rubber stamp on a dotted wave: does not show sorting a sketched path into one of three boxes or writing a reason; small chip text. | web1 remake: passed, then FAIL under the strict arrow rule (14 Nov): arrow tip stops short of target: \"Write one reason why\" tip stops about 13px short of (and above) the blank reason line.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 98,
-    "right": 198,
-    "top": 107,
-    "bottom": 179
+    "left": 180,
+    "right": 179,
+    "top": 109,
+    "bottom": 187
    },
-   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/015.png",
-   "scored_blob": "0f300740622ef2024c797ec2e24448413cfd24ca",
+   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/015.png",
+   "scored_blob": "49e8f4fe840d098631cd7451069cb734cebd038a",
    "committed": true,
-   "pass": true,
+   "pass": false,
    "remake_review": {
     "file": "gen/bp-04-market-regimes/015/web1.png",
     "blob": "0f300740622ef2024c797ec2e24448413cfd24ca",
@@ -1179,14 +1200,21 @@
      "brand_fidelity": 5,
      "text_legibility": 5,
      "character_consistency": null,
-     "label_accuracy": 4
+     "label_accuracy": 3
     },
-    "hard_fails": [],
-    "notes": "Notebook page: sketched zig-zag between dashed lines, three tick boxes with tiny range/staircase/drop icons, the range box ticked by a pencil; \"Pick one shape\" tip on the ticked box; \"Write one reason why\" arrow points at the blank reason line (tip about 13px short, single unambiguous target); EXAMPLE stamp. Matches 6848d09 beat 15 (sort one path, write one reason).",
-    "pass": true
+    "hard_fails": [
+     "arrow tip stops short of target: \"Write one reason why\" tip stops about 13px short of (and above) the blank reason line"
+    ],
+    "notes": "Notebook page: sketched zig-zag between dashed lines, three tick boxes with tiny range/staircase/drop icons, the range box ticked by a pencil; \"Pick one shape\" tip on the ticked box; \"Write one reason why\" arrow points at the blank reason line (tip about 13px short, single unambiguous target); EXAMPLE stamp. Matches 6848d09 beat 15 (sort one path, write one reason). RE-SCORED 14 Nov under the strict arrow rule (a tip must touch its target): FAIL, arrow tip stops short of target: \"Write one reason why\" tip stops about 13px short of (and above) the blank reason line.",
+    "pass": false,
+    "rescored": "strict arrow rule, 14 Nov"
    },
-   "previous_fbb3f9c_blob": "49e8f4fe840d098631cd7451069cb734cebd038a",
-   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/015/web1.png (prompt specs/remake/bp-04-market-regimes__015.txt), saved via out/course/images/bp-04-market-regimes/015.png at 1536x1024 (already 3:2, no fill needed)"
+   "flipped_from_pass": {
+    "blob": "0f300740622ef2024c797ec2e24448413cfd24ca",
+    "source": "chatgpt-web",
+    "file": "gen/bp-04-market-regimes/015/web1.png",
+    "reason": "arrow tip stops short of target"
+   }
   },
   {
    "path": "course/images/bp-04-market-regimes/016.png",
@@ -7221,5 +7249,5 @@
    "pass": false
   }
  ],
- "note_remakes": "Rows with source chatgpt-web are new ChatGPT web renders scored against PR #17 head 6848d09; their scored_blob is the file committed at course/images/<lesson>/NNN.png. Rows with remake_review.pass=false keep the old committed still (still failing) and stay in REMAKE_QUEUE. Round 2 (14 Nov): bp-04 002/003/005/010 (web2) and 011/013/014/015/016/017/019/020 (web1) passed; 006 web2, 012 web1 and 018 web1 failed and stay in REMAKE_QUEUE (006 on v3, 012 and 018 on v2). Earlier remake reviews are kept in previous_remake_reviews."
+ "note_remakes": "Rows with source chatgpt-web are new ChatGPT web renders scored against PR #17 head 6848d09; their scored_blob is the file committed at course/images/<lesson>/NNN.png. Rows with remake_review.pass=false keep the old committed still (still failing) and stay in REMAKE_QUEUE. Round 2 (14 Nov): bp-04 002/003/005/010 (web2) and 011/013/014/015/016/017/019/020 (web1) passed; 006 web2, 012 web1 and 018 web1 failed and stay in REMAKE_QUEUE (006 on v3, 012 and 018 on v2). Earlier remake reviews are kept in previous_remake_reviews. Strict arrow rule (14 Nov, Stewart: a tip must touch its target, no gaps): bp-04 007, 009, 011 and 015 flipped back to fail (\"arrow tip stops short of target\"); old committed stills restored at course/images, out/ files removed; back in the queue on v2 prompts."
 }

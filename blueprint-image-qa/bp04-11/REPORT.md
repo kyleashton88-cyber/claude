@@ -2,7 +2,7 @@
 
 Scored by Creative Studio, 14 Nov 2026 WITA. Standard: `skills/image-quality-standard` (7 categories, pass = every category >= 4 and no hard fail) plus Stewart's beginner-clear checks, applied strictly.
 
-**Result (stage 1): 0 pass / 161 fail of 161. Current after BP-04 remake round 2: 17/161 pass, BP-04 17/20.** No BP-04..BP-11 lesson is passing. Every image needs a remake.**
+**Result (stage 1): 0 pass / 161 fail of 161. Current after BP-04 remake round 2 and the strict arrow re-check: 13/161 pass, BP-04 13/20.** No BP-04..BP-11 lesson is passing. Every image needs a remake.**
 
 - Scope: every beat image in `course/scripts/bp-04..bp-11*.json` @ `cursor/blueprint-professional-rebuild-d1f6` fbb3f9c. `course/blueprint-rebuild/BP04-11_IMAGE_MANIFEST.json` was not on the branch yet (404), so scope comes from the scripts. Re-check against the manifest when it lands.
 - Sources: all 161 files are byte-identical on both branches (d1f6 @ fbb3f9c and beginner-images @ adc3524). They are the old gbb-v3 fallback batch, which `FALLBACK_MANIFEST.json` lists as `pass`. That status is superseded.
@@ -260,3 +260,20 @@ Arrow rule used: a tip that lands on its target, or points at a single unambiguo
 Passes were saved to `out/course/images/bp-04-market-regimes/NNN.png` (already 1536x1024, no navy fill needed) and committed at `course/images/bp-04-market-regimes/NNN.png`; their rows carry `source: chatgpt-web`, scores, `scored_blob` and the previous blob, with the earlier web1 review kept in `previous_remake_reviews`. Fails keep the old committed still and stay in REMAKE_QUEUE: 006 -> web3 (v3 prompt), 012 -> web2 (v2), 018 -> web2 (v2). Old prompts are in `specs/remake/_superseded/` and `remake/_superseded/`.
 
 **BP-04 running count: 17/20 pass. Not 100%: 006, 012 and 018 are left.** BP-04..11 total: 17/161. Queue: 144.
+
+## Strict arrow re-check (14 Nov): a tip must touch its target
+
+Stewart's rule for the perfect run is that every label arrow's point must touch the thing it names. A gap of a few pixels fails with "arrow tip stops short of target". This replaces the round-2 tolerance above (small gap allowed when the target is unambiguous). I zoomed (4-8x) into every label-arrow tip on all 17 passed BP-04 rows: 001-005, 010, 013 and 017 have no label arrows. The 010 column arrows and the 005/014/020 between-panel arrows are sequence connectors, not label arrows.
+
+Flipped back to fail. The previous committed still is restored at `course/images/bp-04-market-regimes/NNN.png`, the `out/` file is removed (BP-04 convention: failing rows have no `out/` file), the passed render is kept in `remake_review` / `flipped_from_pass`, and the row is back in REMAKE_QUEUE on a v2 prompt that pins each tip (v1 moved to `_superseded/`):
+
+| Row | Arrow that misses | Next |
+|---|---|---|
+| 007 | "Small dips" tip stops about 25px above the dip; "Keeps going one way" tip stops about 17px below the dashed slope arrow | web2, v2 |
+| 009 | "Follow the line left to right" tip stops about 12px below the dotted arrow | web2, v2 |
+| 011 | "Usual up-and-down size" tip stops about 12px right of the bracket | web2, v2 |
+| 015 | "Write one reason why" tip stops about 13px short of (and above) the blank reason line | web2, v2 |
+
+Checked and touching: 007 "Higher highs", 008 both, 009 "Give it one name", 014 both, 016 Range/Trend/Break, 019 both, 020 "Bring your notes".
+
+**BP-04 running count: 13/20 pass. Not 100%. Left: 006 (web3, v3), 007, 009, 011, 012, 015, 018 (web2, v2).** BP-04..11 total: 13/161. Queue: 148.

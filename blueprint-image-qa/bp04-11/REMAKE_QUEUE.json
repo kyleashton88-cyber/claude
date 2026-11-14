@@ -1,6 +1,6 @@
 {
- "note": "ChatGPT web, one at a time, in this order. Attach _anchors/anchor.png, paste the prompt file as one message, download, copy to target_gen, fit to target_out (1536x1024), re-score, then commit to repo_path. No lesson renders until all its rows pass. Prompts marked prompt_updated were revised on 14 Nov for the PR #17 (6df2536) smoothed narration; see PR17_PROMPT_UPDATES.md. Updated for PR #17 head 6848d09: bp-04 001/004/007/008/009 passed as ChatGPT web renders and left the queue; bp-04 002/003/005/006/010 failed web1 and stay (003/005/006/010 now on v2 prompts). Round 2 (14 Nov): bp-04 002/003/005/010 (web2) and 011/013/014/015/016/017/019/020 (web1) passed and left the queue; bp-04 006 (web2, now v3 prompt, target web3), 012 and 018 (web1, now v2 prompts, target web2) failed and stay.",
- "length": 144,
+ "note": "ChatGPT web, one at a time, in this order. Attach _anchors/anchor.png, paste the prompt file as one message, download, copy to target_gen, fit to target_out (1536x1024), re-score, then commit to repo_path. No lesson renders until all its rows pass. Prompts marked prompt_updated were revised on 14 Nov for the PR #17 (6df2536) smoothed narration; see PR17_PROMPT_UPDATES.md. Updated for PR #17 head 6848d09: bp-04 001/004/007/008/009 passed as ChatGPT web renders and left the queue; bp-04 002/003/005/006/010 failed web1 and stay (003/005/006/010 now on v2 prompts). Round 2 (14 Nov): bp-04 002/003/005/010 (web2) and 011/013/014/015/016/017/019/020 (web1) passed and left the queue; bp-04 006 (web2, now v3 prompt, target web3), 012 and 018 (web1, now v2 prompts, target web2) failed and stay. Strict arrow rule (14 Nov): bp-04 007, 009, 011, 015 re-added (web2, v2 prompts) after their passed renders were failed for arrow tips that stop short of target.",
+ "length": 148,
  "queue": [
   {
    "order": 1,
@@ -28,6 +28,69 @@
   {
    "order": 2,
    "lesson": "bp-04-market-regimes",
+   "beat": 7,
+   "path": "course/images/bp-04-market-regimes/007.png",
+   "prompt": "specs/remake/bp-04-market-regimes__007.txt",
+   "target_gen": "gen/bp-04-market-regimes/007/web2.png",
+   "target_out": "out/course/images/bp-04-market-regimes/007.png",
+   "repo_path": "course/images/bp-04-market-regimes/007.png",
+   "size": "1536x1024",
+   "headline": "TREND: ONE DIRECTION",
+   "reason": "web1 remake passed, then failed under the strict arrow rule: arrow tip stops short of target: \"Small dips\" tip stops about 25px above the dip and \"Keeps going one way\" tip stops about 17px below the dashed slope arrow.",
+   "hard_fails": [
+    "arrow tip stops short of target: \"Small dips\" tip stops about 25px above the dip and \"Keeps going one way\" tip stops about 17px below the dashed slope arrow"
+   ],
+   "previous_attempts": [
+    "gen/bp-04-market-regimes/007/web1.png"
+   ],
+   "prompt_version": "v2",
+   "superseded_prompt": "specs/remake/_superseded/bp-04-market-regimes__007.v1.txt"
+  },
+  {
+   "order": 3,
+   "lesson": "bp-04-market-regimes",
+   "beat": 9,
+   "path": "course/images/bp-04-market-regimes/009.png",
+   "prompt": "specs/remake/bp-04-market-regimes__009.txt",
+   "target_gen": "gen/bp-04-market-regimes/009/web2.png",
+   "target_out": "out/course/images/bp-04-market-regimes/009.png",
+   "repo_path": "course/images/bp-04-market-regimes/009.png",
+   "size": "1536x1024",
+   "headline": "READ LEFT TO RIGHT",
+   "reason": "web1 remake passed, then failed under the strict arrow rule: arrow tip stops short of target: \"Follow the line left to right\" tip stops about 12px below the dotted arrow.",
+   "hard_fails": [
+    "arrow tip stops short of target: \"Follow the line left to right\" tip stops about 12px below the dotted arrow"
+   ],
+   "previous_attempts": [
+    "gen/bp-04-market-regimes/009/web1.png"
+   ],
+   "prompt_version": "v2",
+   "superseded_prompt": "specs/remake/_superseded/bp-04-market-regimes__009.v1.txt"
+  },
+  {
+   "order": 4,
+   "lesson": "bp-04-market-regimes",
+   "beat": 11,
+   "path": "course/images/bp-04-market-regimes/011.png",
+   "prompt": "specs/remake/bp-04-market-regimes__011.txt",
+   "target_gen": "gen/bp-04-market-regimes/011/web2.png",
+   "target_out": "out/course/images/bp-04-market-regimes/011.png",
+   "repo_path": "course/images/bp-04-market-regimes/011.png",
+   "size": "1536x1024",
+   "headline": "A NORMAL DAY'S WIGGLE",
+   "reason": "web1 remake passed, then failed under the strict arrow rule: arrow tip stops short of target: \"Usual up-and-down size\" tip stops about 12px right of the bracket.",
+   "hard_fails": [
+    "arrow tip stops short of target: \"Usual up-and-down size\" tip stops about 12px right of the bracket"
+   ],
+   "previous_attempts": [
+    "gen/bp-04-market-regimes/011/web1.png"
+   ],
+   "prompt_version": "v2",
+   "superseded_prompt": "specs/remake/_superseded/bp-04-market-regimes__011.v1.txt"
+  },
+  {
+   "order": 5,
+   "lesson": "bp-04-market-regimes",
    "beat": 12,
    "path": "course/images/bp-04-market-regimes/012.png",
    "prompt": "specs/remake/bp-04-market-regimes__012.txt",
@@ -48,7 +111,28 @@
    "superseded_prompt": "specs/remake/_superseded/bp-04-market-regimes__012.v1.txt"
   },
   {
-   "order": 3,
+   "order": 6,
+   "lesson": "bp-04-market-regimes",
+   "beat": 15,
+   "path": "course/images/bp-04-market-regimes/015.png",
+   "prompt": "specs/remake/bp-04-market-regimes__015.txt",
+   "target_gen": "gen/bp-04-market-regimes/015/web2.png",
+   "target_out": "out/course/images/bp-04-market-regimes/015.png",
+   "repo_path": "course/images/bp-04-market-regimes/015.png",
+   "size": "1536x1024",
+   "headline": "SORT ONE CHART",
+   "reason": "web1 remake passed, then failed under the strict arrow rule: arrow tip stops short of target: \"Write one reason why\" tip stops about 13px short of (and above) the blank reason line.",
+   "hard_fails": [
+    "arrow tip stops short of target: \"Write one reason why\" tip stops about 13px short of (and above) the blank reason line"
+   ],
+   "previous_attempts": [
+    "gen/bp-04-market-regimes/015/web1.png"
+   ],
+   "prompt_version": "v2",
+   "superseded_prompt": "specs/remake/_superseded/bp-04-market-regimes__015.v1.txt"
+  },
+  {
+   "order": 7,
    "lesson": "bp-04-market-regimes",
    "beat": 18,
    "path": "course/images/bp-04-market-regimes/018.png",
@@ -70,7 +154,7 @@
    "superseded_prompt": "specs/remake/_superseded/bp-04-market-regimes__018.v1.txt"
   },
   {
-   "order": 4,
+   "order": 8,
    "lesson": "bp-05-spacing-and-range",
    "beat": 1,
    "path": "course/images/bp-05-spacing-and-range/001.png",
@@ -84,7 +168,7 @@
    "hard_fails": []
   },
   {
-   "order": 5,
+   "order": 9,
    "lesson": "bp-05-spacing-and-range",
    "beat": 2,
    "path": "course/images/bp-05-spacing-and-range/002.png",
@@ -99,7 +183,7 @@
    "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
   },
   {
-   "order": 6,
+   "order": 10,
    "lesson": "bp-05-spacing-and-range",
    "beat": 3,
    "path": "course/images/bp-05-spacing-and-range/003.png",
@@ -113,7 +197,7 @@
    "hard_fails": []
   },
   {
-   "order": 7,
+   "order": 11,
    "lesson": "bp-05-spacing-and-range",
    "beat": 4,
    "path": "course/images/bp-05-spacing-and-range/004.png",
@@ -130,7 +214,7 @@
    ]
   },
   {
-   "order": 8,
+   "order": 12,
    "lesson": "bp-05-spacing-and-range",
    "beat": 5,
    "path": "course/images/bp-05-spacing-and-range/005.png",
@@ -144,7 +228,7 @@
    "hard_fails": []
   },
   {
-   "order": 9,
+   "order": 13,
    "lesson": "bp-05-spacing-and-range",
    "beat": 6,
    "path": "course/images/bp-05-spacing-and-range/006.png",
@@ -161,7 +245,7 @@
    ]
   },
   {
-   "order": 10,
+   "order": 14,
    "lesson": "bp-05-spacing-and-range",
    "beat": 7,
    "path": "course/images/bp-05-spacing-and-range/007.png",
@@ -175,7 +259,7 @@
    "hard_fails": []
   },
   {
-   "order": 11,
+   "order": 15,
    "lesson": "bp-05-spacing-and-range",
    "beat": 8,
    "path": "course/images/bp-05-spacing-and-range/008.png",
@@ -190,7 +274,7 @@
    "prompt_updated": "PR #17 6df2536 smoothed narration: Narration now defines \"round trip\" and says flat or negative; old label \"Fees bigger than gap = loss\" overstated it and used a different term."
   },
   {
-   "order": 12,
+   "order": 16,
    "lesson": "bp-05-spacing-and-range",
    "beat": 9,
    "path": "course/images/bp-05-spacing-and-range/009.png",
@@ -206,7 +290,7 @@
    ]
   },
   {
-   "order": 13,
+   "order": 17,
    "lesson": "bp-05-spacing-and-range",
    "beat": 10,
    "path": "course/images/bp-05-spacing-and-range/010.png",
@@ -220,7 +304,7 @@
    "hard_fails": []
   },
   {
-   "order": 14,
+   "order": 18,
    "lesson": "bp-05-spacing-and-range",
    "beat": 11,
    "path": "course/images/bp-05-spacing-and-range/011.png",
@@ -235,7 +319,7 @@
    "prompt_updated": "PR #17 6df2536 smoothed narration: Narration now defines \"wick\" and \"close\"; old prompt called them \"spikes\" (\"quick jump that snaps back\"), which no longer matches."
   },
   {
-   "order": 15,
+   "order": 19,
    "lesson": "bp-05-spacing-and-range",
    "beat": 12,
    "path": "course/images/bp-05-spacing-and-range/012.png",
@@ -249,7 +333,7 @@
    "hard_fails": []
   },
   {
-   "order": 16,
+   "order": 20,
    "lesson": "bp-05-spacing-and-range",
    "beat": 13,
    "path": "course/images/bp-05-spacing-and-range/013.png",
@@ -263,7 +347,7 @@
    "hard_fails": []
   },
   {
-   "order": 17,
+   "order": 21,
    "lesson": "bp-05-spacing-and-range",
    "beat": 14,
    "path": "course/images/bp-05-spacing-and-range/014.png",
@@ -277,7 +361,7 @@
    "hard_fails": []
   },
   {
-   "order": 18,
+   "order": 22,
    "lesson": "bp-05-spacing-and-range",
    "beat": 15,
    "path": "course/images/bp-05-spacing-and-range/015.png",
@@ -293,7 +377,7 @@
    ]
   },
   {
-   "order": 19,
+   "order": 23,
    "lesson": "bp-05-spacing-and-range",
    "beat": 16,
    "path": "course/images/bp-05-spacing-and-range/016.png",
@@ -307,7 +391,7 @@
    "hard_fails": []
   },
   {
-   "order": 20,
+   "order": 24,
    "lesson": "bp-05-spacing-and-range",
    "beat": 17,
    "path": "course/images/bp-05-spacing-and-range/017.png",
@@ -321,7 +405,7 @@
    "hard_fails": []
   },
   {
-   "order": 21,
+   "order": 25,
    "lesson": "bp-05-spacing-and-range",
    "beat": 18,
    "path": "course/images/bp-05-spacing-and-range/018.png",
@@ -335,7 +419,7 @@
    "hard_fails": []
   },
   {
-   "order": 22,
+   "order": 26,
    "lesson": "bp-05-spacing-and-range",
    "beat": 19,
    "path": "course/images/bp-05-spacing-and-range/019.png",
@@ -349,7 +433,7 @@
    "hard_fails": []
   },
   {
-   "order": 23,
+   "order": 27,
    "lesson": "bp-06-entry-and-exit",
    "beat": 1,
    "path": "course/images/bp-06-entry-and-exit/001.png",
@@ -363,7 +447,7 @@
    "hard_fails": []
   },
   {
-   "order": 24,
+   "order": 28,
    "lesson": "bp-06-entry-and-exit",
    "beat": 2,
    "path": "course/images/bp-06-entry-and-exit/002.png",
@@ -378,7 +462,7 @@
    "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
   },
   {
-   "order": 25,
+   "order": 29,
    "lesson": "bp-06-entry-and-exit",
    "beat": 3,
    "path": "course/images/bp-06-entry-and-exit/003.png",
@@ -392,7 +476,7 @@
    "hard_fails": []
   },
   {
-   "order": 26,
+   "order": 30,
    "lesson": "bp-06-entry-and-exit",
    "beat": 4,
    "path": "course/images/bp-06-entry-and-exit/004.png",
@@ -406,7 +490,7 @@
    "hard_fails": []
   },
   {
-   "order": 27,
+   "order": 31,
    "lesson": "bp-06-entry-and-exit",
    "beat": 5,
    "path": "course/images/bp-06-entry-and-exit/005.png",
@@ -420,7 +504,7 @@
    "hard_fails": []
   },
   {
-   "order": 28,
+   "order": 32,
    "lesson": "bp-06-entry-and-exit",
    "beat": 6,
    "path": "course/images/bp-06-entry-and-exit/006.png",
@@ -434,7 +518,7 @@
    "hard_fails": []
   },
   {
-   "order": 29,
+   "order": 33,
    "lesson": "bp-06-entry-and-exit",
    "beat": 7,
    "path": "course/images/bp-06-entry-and-exit/007.png",
@@ -448,7 +532,7 @@
    "hard_fails": []
   },
   {
-   "order": 30,
+   "order": 34,
    "lesson": "bp-06-entry-and-exit",
    "beat": 8,
    "path": "course/images/bp-06-entry-and-exit/008.png",
@@ -464,7 +548,7 @@
    ]
   },
   {
-   "order": 31,
+   "order": 35,
    "lesson": "bp-06-entry-and-exit",
    "beat": 9,
    "path": "course/images/bp-06-entry-and-exit/009.png",
@@ -478,7 +562,7 @@
    "hard_fails": []
   },
   {
-   "order": 32,
+   "order": 36,
    "lesson": "bp-06-entry-and-exit",
    "beat": 10,
    "path": "course/images/bp-06-entry-and-exit/010.png",
@@ -493,7 +577,7 @@
    "prompt_updated": "6848d09 (see PR17_PROMPT_UPDATES.md)"
   },
   {
-   "order": 33,
+   "order": 37,
    "lesson": "bp-06-entry-and-exit",
    "beat": 11,
    "path": "course/images/bp-06-entry-and-exit/011.png",
@@ -507,7 +591,7 @@
    "hard_fails": []
   },
   {
-   "order": 34,
+   "order": 38,
    "lesson": "bp-06-entry-and-exit",
    "beat": 12,
    "path": "course/images/bp-06-entry-and-exit/012.png",
@@ -521,7 +605,7 @@
    "hard_fails": []
   },
   {
-   "order": 35,
+   "order": 39,
    "lesson": "bp-06-entry-and-exit",
    "beat": 13,
    "path": "course/images/bp-06-entry-and-exit/013.png",
@@ -535,7 +619,7 @@
    "hard_fails": []
   },
   {
-   "order": 36,
+   "order": 40,
    "lesson": "bp-06-entry-and-exit",
    "beat": 14,
    "path": "course/images/bp-06-entry-and-exit/014.png",
@@ -549,7 +633,7 @@
    "hard_fails": []
   },
   {
-   "order": 37,
+   "order": 41,
    "lesson": "bp-06-entry-and-exit",
    "beat": 15,
    "path": "course/images/bp-06-entry-and-exit/015.png",
@@ -563,7 +647,7 @@
    "hard_fails": []
   },
   {
-   "order": 38,
+   "order": 42,
    "lesson": "bp-06-entry-and-exit",
    "beat": 16,
    "path": "course/images/bp-06-entry-and-exit/016.png",
@@ -577,7 +661,7 @@
    "hard_fails": []
   },
   {
-   "order": 39,
+   "order": 43,
    "lesson": "bp-06-entry-and-exit",
    "beat": 17,
    "path": "course/images/bp-06-entry-and-exit/017.png",
@@ -591,7 +675,7 @@
    "hard_fails": []
   },
   {
-   "order": 40,
+   "order": 44,
    "lesson": "bp-06-entry-and-exit",
    "beat": 18,
    "path": "course/images/bp-06-entry-and-exit/018.png",
@@ -605,7 +689,7 @@
    "hard_fails": []
   },
   {
-   "order": 41,
+   "order": 45,
    "lesson": "bp-06-entry-and-exit",
    "beat": 19,
    "path": "course/images/bp-06-entry-and-exit/019.png",
@@ -619,7 +703,7 @@
    "hard_fails": []
   },
   {
-   "order": 42,
+   "order": 46,
    "lesson": "bp-06-entry-and-exit",
    "beat": 20,
    "path": "course/images/bp-06-entry-and-exit/020.png",
@@ -633,7 +717,7 @@
    "hard_fails": []
   },
   {
-   "order": 43,
+   "order": 47,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 1,
    "path": "course/images/bp-07-spot-paper-trading/001.png",
@@ -647,7 +731,7 @@
    "hard_fails": []
   },
   {
-   "order": 44,
+   "order": 48,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 2,
    "path": "course/images/bp-07-spot-paper-trading/002.png",
@@ -662,7 +746,7 @@
    "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
   },
   {
-   "order": 45,
+   "order": 49,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 3,
    "path": "course/images/bp-07-spot-paper-trading/003.png",
@@ -676,7 +760,7 @@
    "hard_fails": []
   },
   {
-   "order": 46,
+   "order": 50,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 4,
    "path": "course/images/bp-07-spot-paper-trading/004.png",
@@ -690,7 +774,7 @@
    "hard_fails": []
   },
   {
-   "order": 47,
+   "order": 51,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 5,
    "path": "course/images/bp-07-spot-paper-trading/005.png",
@@ -707,7 +791,7 @@
    ]
   },
   {
-   "order": 48,
+   "order": 52,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 6,
    "path": "course/images/bp-07-spot-paper-trading/006.png",
@@ -722,7 +806,7 @@
    "prompt_updated": "PR #17 6df2536 smoothed narration: Narration now defines spot as \"the asset itself\" and leverage as \"borrowed size\" (a different product, \"not this walk\"); old headline said \"BUY THE COIN\" (coin wording is off-brief)."
   },
   {
-   "order": 49,
+   "order": 53,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 7,
    "path": "course/images/bp-07-spot-paper-trading/007.png",
@@ -737,7 +821,7 @@
    "prompt_updated": "PR #17 6df2536 smoothed narration: Narration now names and defines \"API key\" and \"seed phrase\"; old tags said \"App keys\" / \"Secret words\"."
   },
   {
-   "order": 50,
+   "order": 54,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 8,
    "path": "course/images/bp-07-spot-paper-trading/008.png",
@@ -751,7 +835,7 @@
    "hard_fails": []
   },
   {
-   "order": 51,
+   "order": 55,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 9,
    "path": "course/images/bp-07-spot-paper-trading/009.png",
@@ -767,7 +851,7 @@
    ]
   },
   {
-   "order": 52,
+   "order": 56,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 10,
    "path": "course/images/bp-07-spot-paper-trading/010.png",
@@ -783,7 +867,7 @@
    ]
   },
   {
-   "order": 53,
+   "order": 57,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 11,
    "path": "course/images/bp-07-spot-paper-trading/011.png",
@@ -797,7 +881,7 @@
    "hard_fails": []
   },
   {
-   "order": 54,
+   "order": 58,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 12,
    "path": "course/images/bp-07-spot-paper-trading/012.png",
@@ -811,7 +895,7 @@
    "hard_fails": []
   },
   {
-   "order": 55,
+   "order": 59,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 13,
    "path": "course/images/bp-07-spot-paper-trading/013.png",
@@ -826,7 +910,7 @@
    "prompt_updated": "PR #17 6df2536 smoothed narration: Beat now ends \"The lesson stops in front of that control.\" (the old line about the bot confirming for you is gone); old label \"Never press confirm\" was a rule the narration no longer states."
   },
   {
-   "order": 56,
+   "order": 60,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 14,
    "path": "course/images/bp-07-spot-paper-trading/014.png",
@@ -840,7 +924,7 @@
    "hard_fails": []
   },
   {
-   "order": 57,
+   "order": 61,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 15,
    "path": "course/images/bp-07-spot-paper-trading/015.png",
@@ -854,7 +938,7 @@
    "hard_fails": []
   },
   {
-   "order": 58,
+   "order": 62,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 16,
    "path": "course/images/bp-07-spot-paper-trading/016.png",
@@ -868,7 +952,7 @@
    "hard_fails": []
   },
   {
-   "order": 59,
+   "order": 63,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 17,
    "path": "course/images/bp-07-spot-paper-trading/017.png",
@@ -884,7 +968,7 @@
    ]
   },
   {
-   "order": 60,
+   "order": 64,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 18,
    "path": "course/images/bp-07-spot-paper-trading/018.png",
@@ -898,7 +982,7 @@
    "hard_fails": []
   },
   {
-   "order": 61,
+   "order": 65,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 19,
    "path": "course/images/bp-07-spot-paper-trading/019.png",
@@ -915,7 +999,7 @@
    ]
   },
   {
-   "order": 62,
+   "order": 66,
    "lesson": "bp-07-spot-paper-trading",
    "beat": 20,
    "path": "course/images/bp-07-spot-paper-trading/020.png",
@@ -929,7 +1013,7 @@
    "hard_fails": []
   },
   {
-   "order": 63,
+   "order": 67,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 1,
    "path": "course/images/bp-08-managing-and-monitoring/001.png",
@@ -943,7 +1027,7 @@
    "hard_fails": []
   },
   {
-   "order": 64,
+   "order": 68,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 2,
    "path": "course/images/bp-08-managing-and-monitoring/002.png",
@@ -958,7 +1042,7 @@
    "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
   },
   {
-   "order": 65,
+   "order": 69,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 3,
    "path": "course/images/bp-08-managing-and-monitoring/003.png",
@@ -972,7 +1056,7 @@
    "hard_fails": []
   },
   {
-   "order": 66,
+   "order": 70,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 4,
    "path": "course/images/bp-08-managing-and-monitoring/004.png",
@@ -987,7 +1071,7 @@
    "prompt_updated": "PR #17 6df2536 smoothed narration: Narration now defines inventory (what piled up on one side) and the finish sentence; old row 3 said \"stop rule still fit\"."
   },
   {
-   "order": 67,
+   "order": 71,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 5,
    "path": "course/images/bp-08-managing-and-monitoring/005.png",
@@ -1001,7 +1085,7 @@
    "hard_fails": []
   },
   {
-   "order": 68,
+   "order": 72,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 6,
    "path": "course/images/bp-08-managing-and-monitoring/006.png",
@@ -1017,7 +1101,7 @@
    ]
   },
   {
-   "order": 69,
+   "order": 73,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 7,
    "path": "course/images/bp-08-managing-and-monitoring/007.png",
@@ -1031,7 +1115,7 @@
    "hard_fails": []
   },
   {
-   "order": 70,
+   "order": 74,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 8,
    "path": "course/images/bp-08-managing-and-monitoring/008.png",
@@ -1045,7 +1129,7 @@
    "hard_fails": []
   },
   {
-   "order": 71,
+   "order": 75,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 9,
    "path": "course/images/bp-08-managing-and-monitoring/009.png",
@@ -1059,7 +1143,7 @@
    "hard_fails": []
   },
   {
-   "order": 72,
+   "order": 76,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 10,
    "path": "course/images/bp-08-managing-and-monitoring/010.png",
@@ -1073,7 +1157,7 @@
    "hard_fails": []
   },
   {
-   "order": 73,
+   "order": 77,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 11,
    "path": "course/images/bp-08-managing-and-monitoring/011.png",
@@ -1087,7 +1171,7 @@
    "hard_fails": []
   },
   {
-   "order": 74,
+   "order": 78,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 12,
    "path": "course/images/bp-08-managing-and-monitoring/012.png",
@@ -1101,7 +1185,7 @@
    "hard_fails": []
   },
   {
-   "order": 75,
+   "order": 79,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 13,
    "path": "course/images/bp-08-managing-and-monitoring/013.png",
@@ -1115,7 +1199,7 @@
    "hard_fails": []
   },
   {
-   "order": 76,
+   "order": 80,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 14,
    "path": "course/images/bp-08-managing-and-monitoring/014.png",
@@ -1130,7 +1214,7 @@
    "prompt_updated": "6848d09 (see PR17_PROMPT_UPDATES.md)"
   },
   {
-   "order": 77,
+   "order": 81,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 15,
    "path": "course/images/bp-08-managing-and-monitoring/015.png",
@@ -1144,7 +1228,7 @@
    "hard_fails": []
   },
   {
-   "order": 78,
+   "order": 82,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 16,
    "path": "course/images/bp-08-managing-and-monitoring/016.png",
@@ -1159,7 +1243,7 @@
    "prompt_updated": "PR #17 6df2536 smoothed narration: Kept consistent with the reworded beat 4 questions (finish sentence, side)."
   },
   {
-   "order": 79,
+   "order": 83,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 17,
    "path": "course/images/bp-08-managing-and-monitoring/017.png",
@@ -1173,7 +1257,7 @@
    "hard_fails": []
   },
   {
-   "order": 80,
+   "order": 84,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 18,
    "path": "course/images/bp-08-managing-and-monitoring/018.png",
@@ -1187,7 +1271,7 @@
    "hard_fails": []
   },
   {
-   "order": 81,
+   "order": 85,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 19,
    "path": "course/images/bp-08-managing-and-monitoring/019.png",
@@ -1201,7 +1285,7 @@
    "hard_fails": []
   },
   {
-   "order": 82,
+   "order": 86,
    "lesson": "bp-08-managing-and-monitoring",
    "beat": 20,
    "path": "course/images/bp-08-managing-and-monitoring/020.png",
@@ -1215,7 +1299,7 @@
    "hard_fails": []
   },
   {
-   "order": 83,
+   "order": 87,
    "lesson": "bp-09-common-mistakes",
    "beat": 1,
    "path": "course/images/bp-09-common-mistakes/001.png",
@@ -1231,7 +1315,7 @@
    ]
   },
   {
-   "order": 84,
+   "order": 88,
    "lesson": "bp-09-common-mistakes",
    "beat": 2,
    "path": "course/images/bp-09-common-mistakes/002.png",
@@ -1246,7 +1330,7 @@
    "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
   },
   {
-   "order": 85,
+   "order": 89,
    "lesson": "bp-09-common-mistakes",
    "beat": 3,
    "path": "course/images/bp-09-common-mistakes/003.png",
@@ -1260,7 +1344,7 @@
    "hard_fails": []
   },
   {
-   "order": 86,
+   "order": 90,
    "lesson": "bp-09-common-mistakes",
    "beat": 4,
    "path": "course/images/bp-09-common-mistakes/004.png",
@@ -1274,7 +1358,7 @@
    "hard_fails": []
   },
   {
-   "order": 87,
+   "order": 91,
    "lesson": "bp-09-common-mistakes",
    "beat": 5,
    "path": "course/images/bp-09-common-mistakes/005.png",
@@ -1288,7 +1372,7 @@
    "hard_fails": []
   },
   {
-   "order": 88,
+   "order": 92,
    "lesson": "bp-09-common-mistakes",
    "beat": 6,
    "path": "course/images/bp-09-common-mistakes/006.png",
@@ -1304,7 +1388,7 @@
    ]
   },
   {
-   "order": 89,
+   "order": 93,
    "lesson": "bp-09-common-mistakes",
    "beat": 7,
    "path": "course/images/bp-09-common-mistakes/007.png",
@@ -1320,7 +1404,7 @@
    ]
   },
   {
-   "order": 90,
+   "order": 94,
    "lesson": "bp-09-common-mistakes",
    "beat": 8,
    "path": "course/images/bp-09-common-mistakes/008.png",
@@ -1337,7 +1421,7 @@
    ]
   },
   {
-   "order": 91,
+   "order": 95,
    "lesson": "bp-09-common-mistakes",
    "beat": 9,
    "path": "course/images/bp-09-common-mistakes/009.png",
@@ -1351,7 +1435,7 @@
    "hard_fails": []
   },
   {
-   "order": 92,
+   "order": 96,
    "lesson": "bp-09-common-mistakes",
    "beat": 10,
    "path": "course/images/bp-09-common-mistakes/010.png",
@@ -1365,7 +1449,7 @@
    "hard_fails": []
   },
   {
-   "order": 93,
+   "order": 97,
    "lesson": "bp-09-common-mistakes",
    "beat": 11,
    "path": "course/images/bp-09-common-mistakes/011.png",
@@ -1379,7 +1463,7 @@
    "hard_fails": []
   },
   {
-   "order": 94,
+   "order": 98,
    "lesson": "bp-09-common-mistakes",
    "beat": 12,
    "path": "course/images/bp-09-common-mistakes/012.png",
@@ -1393,7 +1477,7 @@
    "hard_fails": []
   },
   {
-   "order": 95,
+   "order": 99,
    "lesson": "bp-09-common-mistakes",
    "beat": 13,
    "path": "course/images/bp-09-common-mistakes/013.png",
@@ -1407,7 +1491,7 @@
    "hard_fails": []
   },
   {
-   "order": 96,
+   "order": 100,
    "lesson": "bp-09-common-mistakes",
    "beat": 14,
    "path": "course/images/bp-09-common-mistakes/014.png",
@@ -1423,7 +1507,7 @@
    ]
   },
   {
-   "order": 97,
+   "order": 101,
    "lesson": "bp-09-common-mistakes",
    "beat": 15,
    "path": "course/images/bp-09-common-mistakes/015.png",
@@ -1437,7 +1521,7 @@
    "hard_fails": []
   },
   {
-   "order": 98,
+   "order": 102,
    "lesson": "bp-09-common-mistakes",
    "beat": 16,
    "path": "course/images/bp-09-common-mistakes/016.png",
@@ -1453,7 +1537,7 @@
    ]
   },
   {
-   "order": 99,
+   "order": 103,
    "lesson": "bp-09-common-mistakes",
    "beat": 17,
    "path": "course/images/bp-09-common-mistakes/017.png",
@@ -1469,7 +1553,7 @@
    ]
   },
   {
-   "order": 100,
+   "order": 104,
    "lesson": "bp-09-common-mistakes",
    "beat": 18,
    "path": "course/images/bp-09-common-mistakes/018.png",
@@ -1483,7 +1567,7 @@
    "hard_fails": []
   },
   {
-   "order": 101,
+   "order": 105,
    "lesson": "bp-09-common-mistakes",
    "beat": 19,
    "path": "course/images/bp-09-common-mistakes/019.png",
@@ -1499,7 +1583,7 @@
    ]
   },
   {
-   "order": 102,
+   "order": 106,
    "lesson": "bp-09-common-mistakes",
    "beat": 20,
    "path": "course/images/bp-09-common-mistakes/020.png",
@@ -1513,7 +1597,7 @@
    "hard_fails": []
   },
   {
-   "order": 103,
+   "order": 107,
    "lesson": "bp-09-common-mistakes",
    "beat": 21,
    "path": "course/images/bp-09-common-mistakes/021.png",
@@ -1527,7 +1611,7 @@
    "hard_fails": []
   },
   {
-   "order": 104,
+   "order": 108,
    "lesson": "bp-10-scaling-up",
    "beat": 1,
    "path": "course/images/bp-10-scaling-up/001.png",
@@ -1543,7 +1627,7 @@
    ]
   },
   {
-   "order": 105,
+   "order": 109,
    "lesson": "bp-10-scaling-up",
    "beat": 2,
    "path": "course/images/bp-10-scaling-up/002.png",
@@ -1558,7 +1642,7 @@
    "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
   },
   {
-   "order": 106,
+   "order": 110,
    "lesson": "bp-10-scaling-up",
    "beat": 3,
    "path": "course/images/bp-10-scaling-up/003.png",
@@ -1572,7 +1656,7 @@
    "hard_fails": []
   },
   {
-   "order": 107,
+   "order": 111,
    "lesson": "bp-10-scaling-up",
    "beat": 4,
    "path": "course/images/bp-10-scaling-up/004.png",
@@ -1586,7 +1670,7 @@
    "hard_fails": []
   },
   {
-   "order": 108,
+   "order": 112,
    "lesson": "bp-10-scaling-up",
    "beat": 5,
    "path": "course/images/bp-10-scaling-up/005.png",
@@ -1600,7 +1684,7 @@
    "hard_fails": []
   },
   {
-   "order": 109,
+   "order": 113,
    "lesson": "bp-10-scaling-up",
    "beat": 6,
    "path": "course/images/bp-10-scaling-up/006.png",
@@ -1614,7 +1698,7 @@
    "hard_fails": []
   },
   {
-   "order": 110,
+   "order": 114,
    "lesson": "bp-10-scaling-up",
    "beat": 7,
    "path": "course/images/bp-10-scaling-up/007.png",
@@ -1628,7 +1712,7 @@
    "hard_fails": []
   },
   {
-   "order": 111,
+   "order": 115,
    "lesson": "bp-10-scaling-up",
    "beat": 8,
    "path": "course/images/bp-10-scaling-up/008.png",
@@ -1642,7 +1726,7 @@
    "hard_fails": []
   },
   {
-   "order": 112,
+   "order": 116,
    "lesson": "bp-10-scaling-up",
    "beat": 9,
    "path": "course/images/bp-10-scaling-up/009.png",
@@ -1656,7 +1740,7 @@
    "hard_fails": []
   },
   {
-   "order": 113,
+   "order": 117,
    "lesson": "bp-10-scaling-up",
    "beat": 10,
    "path": "course/images/bp-10-scaling-up/010.png",
@@ -1670,7 +1754,7 @@
    "hard_fails": []
   },
   {
-   "order": 114,
+   "order": 118,
    "lesson": "bp-10-scaling-up",
    "beat": 11,
    "path": "course/images/bp-10-scaling-up/011.png",
@@ -1686,7 +1770,7 @@
    ]
   },
   {
-   "order": 115,
+   "order": 119,
    "lesson": "bp-10-scaling-up",
    "beat": 12,
    "path": "course/images/bp-10-scaling-up/012.png",
@@ -1700,7 +1784,7 @@
    "hard_fails": []
   },
   {
-   "order": 116,
+   "order": 120,
    "lesson": "bp-10-scaling-up",
    "beat": 13,
    "path": "course/images/bp-10-scaling-up/013.png",
@@ -1714,7 +1798,7 @@
    "hard_fails": []
   },
   {
-   "order": 117,
+   "order": 121,
    "lesson": "bp-10-scaling-up",
    "beat": 14,
    "path": "course/images/bp-10-scaling-up/014.png",
@@ -1728,7 +1812,7 @@
    "hard_fails": []
   },
   {
-   "order": 118,
+   "order": 122,
    "lesson": "bp-10-scaling-up",
    "beat": 15,
    "path": "course/images/bp-10-scaling-up/015.png",
@@ -1742,7 +1826,7 @@
    "hard_fails": []
   },
   {
-   "order": 119,
+   "order": 123,
    "lesson": "bp-10-scaling-up",
    "beat": 16,
    "path": "course/images/bp-10-scaling-up/016.png",
@@ -1756,7 +1840,7 @@
    "hard_fails": []
   },
   {
-   "order": 120,
+   "order": 124,
    "lesson": "bp-10-scaling-up",
    "beat": 17,
    "path": "course/images/bp-10-scaling-up/017.png",
@@ -1770,7 +1854,7 @@
    "hard_fails": []
   },
   {
-   "order": 121,
+   "order": 125,
    "lesson": "bp-10-scaling-up",
    "beat": 18,
    "path": "course/images/bp-10-scaling-up/018.png",
@@ -1786,7 +1870,7 @@
    ]
   },
   {
-   "order": 122,
+   "order": 126,
    "lesson": "bp-10-scaling-up",
    "beat": 19,
    "path": "course/images/bp-10-scaling-up/019.png",
@@ -1800,7 +1884,7 @@
    "hard_fails": []
   },
   {
-   "order": 123,
+   "order": 127,
    "lesson": "bp-10-scaling-up",
    "beat": 20,
    "path": "course/images/bp-10-scaling-up/020.png",
@@ -1814,7 +1898,7 @@
    "hard_fails": []
   },
   {
-   "order": 124,
+   "order": 128,
    "lesson": "bp-10-scaling-up",
    "beat": 21,
    "path": "course/images/bp-10-scaling-up/021.png",
@@ -1828,7 +1912,7 @@
    "hard_fails": []
   },
   {
-   "order": 125,
+   "order": 129,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 1,
    "path": "course/images/bp-11-advanced-liquidation/001.png",
@@ -1842,7 +1926,7 @@
    "hard_fails": []
   },
   {
-   "order": 126,
+   "order": 130,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 2,
    "path": "course/images/bp-11-advanced-liquidation/002.png",
@@ -1857,7 +1941,7 @@
    "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
   },
   {
-   "order": 127,
+   "order": 131,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 3,
    "path": "course/images/bp-11-advanced-liquidation/003.png",
@@ -1871,7 +1955,7 @@
    "hard_fails": []
   },
   {
-   "order": 128,
+   "order": 132,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 4,
    "path": "course/images/bp-11-advanced-liquidation/004.png",
@@ -1885,7 +1969,7 @@
    "hard_fails": []
   },
   {
-   "order": 129,
+   "order": 133,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 5,
    "path": "course/images/bp-11-advanced-liquidation/005.png",
@@ -1899,7 +1983,7 @@
    "hard_fails": []
   },
   {
-   "order": 130,
+   "order": 134,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 6,
    "path": "course/images/bp-11-advanced-liquidation/006.png",
@@ -1915,7 +1999,7 @@
    ]
   },
   {
-   "order": 131,
+   "order": 135,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 7,
    "path": "course/images/bp-11-advanced-liquidation/007.png",
@@ -1931,7 +2015,7 @@
    ]
   },
   {
-   "order": 132,
+   "order": 136,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 8,
    "path": "course/images/bp-11-advanced-liquidation/008.png",
@@ -1945,7 +2029,7 @@
    "hard_fails": []
   },
   {
-   "order": 133,
+   "order": 137,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 9,
    "path": "course/images/bp-11-advanced-liquidation/009.png",
@@ -1959,7 +2043,7 @@
    "hard_fails": []
   },
   {
-   "order": 134,
+   "order": 138,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 10,
    "path": "course/images/bp-11-advanced-liquidation/010.png",
@@ -1976,7 +2060,7 @@
    "prompt_updated": "6848d09 (see PR17_PROMPT_UPDATES.md)"
   },
   {
-   "order": 135,
+   "order": 139,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 11,
    "path": "course/images/bp-11-advanced-liquidation/011.png",
@@ -1990,7 +2074,7 @@
    "hard_fails": []
   },
   {
-   "order": 136,
+   "order": 140,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 12,
    "path": "course/images/bp-11-advanced-liquidation/012.png",
@@ -2006,7 +2090,7 @@
    ]
   },
   {
-   "order": 137,
+   "order": 141,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 13,
    "path": "course/images/bp-11-advanced-liquidation/013.png",
@@ -2020,7 +2104,7 @@
    "hard_fails": []
   },
   {
-   "order": 138,
+   "order": 142,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 14,
    "path": "course/images/bp-11-advanced-liquidation/014.png",
@@ -2034,7 +2118,7 @@
    "hard_fails": []
   },
   {
-   "order": 139,
+   "order": 143,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 15,
    "path": "course/images/bp-11-advanced-liquidation/015.png",
@@ -2050,7 +2134,7 @@
    ]
   },
   {
-   "order": 140,
+   "order": 144,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 16,
    "path": "course/images/bp-11-advanced-liquidation/016.png",
@@ -2064,7 +2148,7 @@
    "hard_fails": []
   },
   {
-   "order": 141,
+   "order": 145,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 17,
    "path": "course/images/bp-11-advanced-liquidation/017.png",
@@ -2078,7 +2162,7 @@
    "hard_fails": []
   },
   {
-   "order": 142,
+   "order": 146,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 18,
    "path": "course/images/bp-11-advanced-liquidation/018.png",
@@ -2094,7 +2178,7 @@
    ]
   },
   {
-   "order": 143,
+   "order": 147,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 19,
    "path": "course/images/bp-11-advanced-liquidation/019.png",
@@ -2108,7 +2192,7 @@
    "hard_fails": []
   },
   {
-   "order": 144,
+   "order": 148,
    "lesson": "bp-11-advanced-liquidation",
    "beat": 20,
    "path": "course/images/bp-11-advanced-liquidation/020.png",

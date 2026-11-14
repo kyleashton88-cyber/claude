@@ -9,22 +9,22 @@
  "not_in_scope": "All 92 BP-01..03 rows are now scored here. Separate finding: course/blueprint-rebuild/numbers/bp-0{1,2,3}*.yaml (d1f6) set disclaimer_on_screen to 'Educational content only. Not financial advice.'; studio.py writes that string, so CODE_FIXES.md CF-1 fixes both.",
  "counts": {
   "total": 92,
-  "pass": 89,
-  "fail": 3,
+  "pass": 86,
+  "fail": 6,
   "lesson_stills": {
    "total": 58,
-   "pass": 56,
-   "fail": 2,
+   "pass": 53,
+   "fail": 5,
    "by_lesson": {
     "bp-01-introduction": {
      "total": 18,
-     "pass": 17,
-     "fail": 1
+     "pass": 15,
+     "fail": 3
     },
     "bp-02-what-you-need": {
      "total": 21,
-     "pass": 21,
-     "fail": 0
+     "pass": 20,
+     "fail": 1
     },
     "bp-03-what-is-a-grid-bot": {
      "total": 19,
@@ -68,13 +68,13 @@
   "by_lesson_all_rows": {
    "bp-01-introduction": {
     "total": 32,
-    "pass": 31,
-    "fail": 1
+    "pass": 29,
+    "fail": 3
    },
    "bp-02-what-you-need": {
     "total": 32,
-    "pass": 32,
-    "fail": 0
+    "pass": 31,
+    "fail": 1
    },
    "bp-03-what-is-a-grid-bot": {
     "total": 28,
@@ -90,43 +90,43 @@
    "beat": 1,
    "chapter": "Hook",
    "kind": "lesson-still",
-   "source": "chatgpt-web",
+   "source": "committed still; image field of course/scripts/bp-01-introduction.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "295ac01fb41cbd4bd47387fe18c19e34d46fe9fb",
     "cursor/blueprint-beginner-images": "295ac01fb41cbd4bd47387fe18c19e34d46fe9fb"
    },
    "beat_concept": "Price often chops sideways, weaving through the same band instead of leaving.",
    "scores": {
-    "beginner_clarity": 5,
+    "beginner_clarity": 4,
     "composition_hierarchy": 4,
-    "craft_polish": 5,
-    "brand_fidelity": 5,
-    "text_legibility": 5,
+    "craft_polish": 3,
+    "brand_fidelity": 4,
+    "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 5
+    "label_accuracy": 3
    },
-   "hard_fails": [],
-   "status": "pass",
-   "action": "none",
+   "hard_fails": [
+    "artifact: stray double-headed arrow from the EXAMPLE stamp to the top dashed line"
+   ],
+   "status": "fail",
+   "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-01-introduction__001.txt",
-   "notes": "Two dashed lines with a zig-zag whose every peak touches the top line and every trough the bottom line, never leaving the band. \"Top price\", \"Bottom price\", \"Price bouncing\" each have one arrow with the tip on its target (3 of 3). EXAMPLE stamp inside the card (slightly tilted), no stray arrow. Plain headline PRICE OFTEN GOES SIDEWAYS matches the beat.",
+   "notes": "Clear sideways band, but the EXAMPLE stamp has a stray double-headed arrow pointing at the top line, and the zig-zag peaks stop short of the top line, so the price never visibly 'bounces' off it. | web1 remake: passed, then FAIL under the strict arrow rule (14 Nov): arrow tip stops short of target: \"Price bouncing\" tip stops about 9px short of the zig-zag line.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 83,
-    "right": 83,
-    "top": 91,
-    "bottom": 179
+    "left": 79,
+    "right": 120,
+    "top": 160,
+    "bottom": 222
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/001.png",
-   "scored_blob": "372a2558754004adf464e88ab73c8325f0c4cd27",
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-01-introduction/001.png",
+   "scored_blob": "295ac01fb41cbd4bd47387fe18c19e34d46fe9fb",
    "committed": true,
-   "pass": true,
-   "source_detail": "ChatGPT web render gen/bp-01-introduction/001/web1.png (prompt specs/remake/bp-01-introduction__001.txt), saved via out/course/images/bp-01-introduction/001.png at 1536x1024 (already 3:2, no fill needed)",
-   "previous_committed_blob": "295ac01fb41cbd4bd47387fe18c19e34d46fe9fb",
+   "pass": false,
    "remake_review": {
     "file": "gen/bp-01-introduction/001/web1.png",
     "blob": "3282f0e75536f95562c5a09eb8418a7595ed8d7c",
@@ -145,11 +145,20 @@
      "brand_fidelity": 5,
      "text_legibility": 5,
      "character_consistency": null,
-     "label_accuracy": 5
+     "label_accuracy": 3
     },
-    "hard_fails": [],
-    "notes": "Two dashed lines with a zig-zag whose every peak touches the top line and every trough the bottom line, never leaving the band. \"Top price\", \"Bottom price\", \"Price bouncing\" each have one arrow with the tip on its target (3 of 3). EXAMPLE stamp inside the card (slightly tilted), no stray arrow. Plain headline PRICE OFTEN GOES SIDEWAYS matches the beat.",
-    "pass": true
+    "hard_fails": [
+     "arrow tip stops short of target: \"Price bouncing\" tip stops about 9px short of the zig-zag line"
+    ],
+    "notes": "Two dashed lines with a zig-zag whose every peak touches the top line and every trough the bottom line, never leaving the band. \"Top price\", \"Bottom price\", \"Price bouncing\" each have one arrow with the tip on its target (3 of 3). EXAMPLE stamp inside the card (slightly tilted), no stray arrow. Plain headline PRICE OFTEN GOES SIDEWAYS matches the beat. RE-SCORED 14 Nov under the strict arrow rule (a tip must touch its target): FAIL, arrow tip stops short of target: \"Price bouncing\" tip stops about 9px short of the zig-zag line.",
+    "pass": false,
+    "rescored": "strict arrow rule, 14 Nov"
+   },
+   "flipped_from_pass": {
+    "blob": "372a2558754004adf464e88ab73c8325f0c4cd27",
+    "source": "chatgpt-web",
+    "file": "gen/bp-01-introduction/001/web1.png",
+    "reason": "arrow tip stops short of target"
    }
   },
   {
@@ -575,43 +584,43 @@
    "beat": 10,
    "chapter": "The map",
    "kind": "lesson-still",
-   "source": "chatgpt-web",
+   "source": "committed still; image field of course/scripts/bp-01-introduction.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "c2905476f50f3c51af10caa9768e07e882b0e02c",
     "cursor/blueprint-beginner-images": "c2905476f50f3c51af10caa9768e07e882b0e02c"
    },
    "beat_concept": "The course is a map, and this introduction is only the first square.",
    "scores": {
-    "beginner_clarity": 5,
+    "beginner_clarity": 4,
     "composition_hierarchy": 4,
-    "craft_polish": 5,
-    "brand_fidelity": 5,
-    "text_legibility": 5,
+    "craft_polish": 4,
+    "brand_fidelity": 4,
+    "text_legibility": 4,
     "character_consistency": null,
-    "label_accuracy": 5
+    "label_accuracy": 2
    },
-   "hard_fails": [],
-   "status": "pass",
-   "action": "none",
+   "hard_fails": [
+    "wrong number: 11 stones ahead of the 'You are here' stone but the label says '10 lessons ahead'"
+   ],
+   "status": "fail",
+   "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-01-introduction__010.txt",
-   "notes": "11 equal glass stones rising left to right; the first glows with a cyan pin. \"You are here\" tip on the pin, \"10 lessons ahead\" tip on the 11th stone (2 of 2). No numbers or icons on the stones. Matches \"this introduction is only the first square\".",
+   "notes": "Course map path has 12 stones (pin stone + 11 ahead), so it contradicts both '10 lessons ahead' and the 11-lesson course. | web3 remake: passed, then FAIL under the strict arrow rule (14 Nov): arrow tip stops short of target: \"You are here\" tip stops about 6px above the location pin.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 77,
-    "right": 59,
-    "top": 106,
-    "bottom": 269
+    "left": 74,
+    "right": 57,
+    "top": 98,
+    "bottom": 233
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/010.png",
-   "scored_blob": "dc5596135d35bc271f17b0b588f3b182893bad0c",
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-01-introduction/010.png",
+   "scored_blob": "c2905476f50f3c51af10caa9768e07e882b0e02c",
    "committed": true,
-   "pass": true,
-   "source_detail": "ChatGPT web render gen/bp-01-introduction/010/web3.png (prompt specs/remake/bp-01-introduction__010.txt), saved via out/course/images/bp-01-introduction/010.png at 1536x1024 (already 3:2, no fill needed)",
-   "previous_committed_blob": "c2905476f50f3c51af10caa9768e07e882b0e02c",
+   "pass": false,
    "remake_review": {
     "file": "gen/bp-01-introduction/010/web3.png",
     "blob": "9d1f3366b8b6a03a0124946fada53f17f54a32dd",
@@ -630,11 +639,20 @@
      "brand_fidelity": 5,
      "text_legibility": 5,
      "character_consistency": null,
-     "label_accuracy": 5
+     "label_accuracy": 3
     },
-    "hard_fails": [],
-    "notes": "11 equal glass stones rising left to right; the first glows with a cyan pin. \"You are here\" tip on the pin, \"10 lessons ahead\" tip on the 11th stone (2 of 2). No numbers or icons on the stones. Matches \"this introduction is only the first square\".",
-    "pass": true
+    "hard_fails": [
+     "arrow tip stops short of target: \"You are here\" tip stops about 6px above the location pin"
+    ],
+    "notes": "11 equal glass stones rising left to right; the first glows with a cyan pin. \"You are here\" tip on the pin, \"10 lessons ahead\" tip on the 11th stone (2 of 2). No numbers or icons on the stones. Matches \"this introduction is only the first square\". RE-SCORED 14 Nov under the strict arrow rule (a tip must touch its target): FAIL, arrow tip stops short of target: \"You are here\" tip stops about 6px above the location pin.",
+    "pass": false,
+    "rescored": "strict arrow rule, 14 Nov"
+   },
+   "flipped_from_pass": {
+    "blob": "dc5596135d35bc271f17b0b588f3b182893bad0c",
+    "source": "chatgpt-web",
+    "file": "gen/bp-01-introduction/010/web3.png",
+    "reason": "arrow tip stops short of target"
    }
   },
   {
@@ -1794,43 +1812,43 @@
    "beat": 16,
    "chapter": "Your turn",
    "kind": "lesson-still",
-   "source": "chatgpt-web",
+   "source": "committed still; image field of course/scripts/bp-02-what-you-need.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "505d3be0d1e52d2e2c791832ba93d6c282409cb6",
     "cursor/blueprint-beginner-images": "505d3be0d1e52d2e2c791832ba93d6c282409cb6"
    },
    "beat_concept": "Practice: The setup check has seven lines: notebook, the three words, pair name, paper or demo, no secrets, a written stop, and the word Example.",
    "scores": {
-    "beginner_clarity": 5,
+    "beginner_clarity": 4,
     "composition_hierarchy": 4,
-    "craft_polish": 5,
-    "brand_fidelity": 5,
-    "text_legibility": 5,
+    "craft_polish": 4,
+    "brand_fidelity": 4,
+    "text_legibility": 4,
     "character_consistency": null,
     "label_accuracy": 4
    },
-   "hard_fails": [],
-   "status": "pass",
-   "action": "none",
+   "hard_fails": [
+    "cramped margin: 'Copy the 7 lines' tag ends ~43px from the right edge"
+   ],
+   "status": "fail",
+   "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-02-what-you-need__016.txt",
-   "notes": "Notebook with exactly 7 tick-box rows; first box ticked with the pencil tip on it. \"Tick each one\" tip on the first box. \"Copy the 7 lines\" points at row 4, but its tip sits 16px above that line (measured): it clearly reads as row 4, so I scored it 4, not a miss. Tag is 230px inside the right edge.",
+   "notes": "Seven tick boxes and right content, but the 'Copy the 7 lines' tag breaks the 45px right margin. | web1 remake: passed, then FAIL under the strict arrow rule (14 Nov): arrow tip stops short of target: \"Copy the 7 lines\" tip ends in the gap above a row line and touches no line (prompt: the fourth row line).",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 75,
-    "right": 76,
-    "top": 80,
-    "bottom": 121
+    "left": 62,
+    "right": 43,
+    "top": 126,
+    "bottom": 90
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-02-what-you-need/016.png",
-   "scored_blob": "061ebe5d2e363c065d012b71e897504d6ef64d7f",
+   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-02-what-you-need/016.png",
+   "scored_blob": "505d3be0d1e52d2e2c791832ba93d6c282409cb6",
    "committed": true,
-   "pass": true,
-   "source_detail": "ChatGPT web render gen/bp-02-what-you-need/016/web1.png (prompt specs/remake/bp-02-what-you-need__016.txt), saved via out/course/images/bp-02-what-you-need/016.png at 1536x1024 (already 3:2, no fill needed)",
-   "previous_committed_blob": "505d3be0d1e52d2e2c791832ba93d6c282409cb6",
+   "pass": false,
    "remake_review": {
     "file": "gen/bp-02-what-you-need/016/web1.png",
     "blob": "343ce22b76caab2666f83bebafe37c33e5511540",
@@ -1849,11 +1867,20 @@
      "brand_fidelity": 5,
      "text_legibility": 5,
      "character_consistency": null,
-     "label_accuracy": 4
+     "label_accuracy": 3
     },
-    "hard_fails": [],
-    "notes": "Notebook with exactly 7 tick-box rows; first box ticked with the pencil tip on it. \"Tick each one\" tip on the first box. \"Copy the 7 lines\" points at row 4, but its tip sits 16px above that line (measured): it clearly reads as row 4, so I scored it 4, not a miss. Tag is 230px inside the right edge.",
-    "pass": true
+    "hard_fails": [
+     "arrow tip stops short of target: \"Copy the 7 lines\" tip ends in the gap above a row line and touches no line (prompt: the fourth row line)"
+    ],
+    "notes": "Notebook with exactly 7 tick-box rows; first box ticked with the pencil tip on it. \"Tick each one\" tip on the first box. \"Copy the 7 lines\" points at row 4, but its tip sits 16px above that line (measured): it clearly reads as row 4, so I scored it 4, not a miss. Tag is 230px inside the right edge. RE-SCORED 14 Nov under the strict arrow rule (a tip must touch its target): FAIL, arrow tip stops short of target: \"Copy the 7 lines\" tip ends in the gap above a row line and touches no line (prompt: the fourth row line).",
+    "pass": false,
+    "rescored": "strict arrow rule, 14 Nov"
+   },
+   "flipped_from_pass": {
+    "blob": "061ebe5d2e363c065d012b71e897504d6ef64d7f",
+    "source": "chatgpt-web",
+    "file": "gen/bp-02-what-you-need/016/web1.png",
+    "reason": "arrow tip stops short of target"
    }
   },
   {
@@ -4527,5 +4554,5 @@
   }
  ],
  "note_code_drawn": "Code-drawn frames are scored from a fresh render of studio.py --frames at fbb3f9c (box: bp01-03-qa/assets/src/code-drawn). The committed blueprint-smoke/code-drawn PNGs on d1f6 are from 61c4f97 and are stale for 22 of 25 frames (3 thumbnails identical). Fails are not remade on ChatGPT: action code_fix_needed, code_fix lists the fix ids in CODE_FIXES.md. Re-scored 14 Nov at PR #17 head e0b84d5 (CF-1..CF-5 applied): rows carry source code-drawn@e0b84d5 and scored_blob = the committed blueprint-smoke PNG blob at e0b84d5. 24 of 25 pass; bp-03 limit-orders-wait needs CF-7. CF-6 (fence relabel) not applied yet.",
- "note_remakes": "Rows with source chatgpt-web are new ChatGPT web renders scored against the fbb3f9c narration; scored_blob is the file committed at course/images/<lesson>/NNN.png. Rows with remake_review.pass=false keep the old committed still and stay in REMAKE_QUEUE. Round 2 (14 Nov): BP-03 001/002/003/004/008/014/019 and analogy-fence web1 passed; BP-03 010 failed (v3 prompt). Round 3 (14 Nov): bp-01 016 web2 passed (chatgpt-web); bp-01 007 web2 failed (Buy arrow tip in the gap between rungs) and is on a v3 prompt."
+ "note_remakes": "Rows with source chatgpt-web are new ChatGPT web renders scored against the fbb3f9c narration; scored_blob is the file committed at course/images/<lesson>/NNN.png. Rows with remake_review.pass=false keep the old committed still and stay in REMAKE_QUEUE. Round 2 (14 Nov): BP-03 001/002/003/004/008/014/019 and analogy-fence web1 passed; BP-03 010 failed (v3 prompt). Round 3 (14 Nov): bp-01 016 web2 passed (chatgpt-web); bp-01 007 web2 failed (Buy arrow tip in the gap between rungs) and is on a v3 prompt. Strict arrow rule (14 Nov, Stewart: a tip must touch its target, no gaps): bp-01 001, bp-01 010 and bp-02 016 flipped back to fail (\"arrow tip stops short of target\"); old committed stills restored; back in the queue on new prompts."
 }
