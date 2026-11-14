@@ -471,3 +471,22 @@ Authentic 1536×1024 file from `29de59507d9c31a296671b026df83d3b4c080a0c` (ident
 
 ### Updated counts
 - **BP-05: 17/19 — not 100%.** Still queued: 006, 019 (not in this Cursor batch).
+
+---
+
+## Cursor-agent remakes for BP-06 006, 010, 012, 014, 019
+
+006, 010, 012 and 019 from `cc73f31c02a4df10778a3565dc1373f976d1fcb8` (identical at tip 3a1137a). 014 rescored from `8cb7a75539553b75b2ef45ab38ac217e5052039e` (`cursor2.png`).
+
+| File | Result | Margins (l/r/t/b) | Scores | Blob |
+|---|---|---|---|---|
+| gen/bp-06-entry-and-exit/006/cursor1.png | PASS | 102/166/107/164 | 5/5/5/5/5/—/5 | 70ef875cf1dfd6ba92b2ecfe9a7ab71b848bab3f |
+| gen/bp-06-entry-and-exit/010/cursor1.png | PASS | 102/166/107/164 | 5/5/5/5/5/—/5 | cc7d4af5e7b588efbc460df174c5c341652e66f7 |
+| gen/bp-06-entry-and-exit/012/cursor1.png | PASS | 102/166/108/235 | 5/5/5/5/5/—/5 | c2198d1b59768e10f9a59aa8048577b1b45f2146 |
+| gen/bp-06-entry-and-exit/014/cursor2.png | PASS | 101/136/108/235 | 5/5/5/5/5/—/5 | bd6862e5adeb61215a9b515937d738569e3408be @ 8cb7a75 |
+| gen/bp-06-entry-and-exit/019/cursor1.png | PASS | 101/166/107/164 | 5/5/5/5/5/—/5 | b95a3d59564d50bd90e1dc83a39d9ea7be49db2b |
+
+All required headlines are exact; arrow tips touch. 
+
+### Updated counts
+- **BP-06: 17/20 — not 100%.** Other queued rows (not in this Cursor batch) remain.

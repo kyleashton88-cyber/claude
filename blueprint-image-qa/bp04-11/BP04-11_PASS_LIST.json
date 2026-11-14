@@ -8,8 +8,8 @@
   "not_in_scope": "course/images/_held/*.png (10 files: bp-06 014/017, bp-07 012/017/020, bp-08 003/006/007/009/011) are not referenced by any lesson script and were not scored. Shared title-art/mascot assets are already on BP01-03_PASS_LIST.json.",
   "counts": {
     "total": 161,
-    "pass": 64,
-    "fail": 97,
+    "pass": 69,
+    "fail": 92,
     "by_lesson": {
       "bp-04-market-regimes": {
         "total": 20,
@@ -23,8 +23,8 @@
       },
       "bp-06-entry-and-exit": {
         "total": 20,
-        "pass": 12,
-        "fail": 8
+        "pass": 17,
+        "fail": 3
       },
       "bp-07-spot-paper-trading": {
         "total": 20,
@@ -3123,70 +3123,96 @@
       "beat": 6,
       "chapter": "A finish sentence",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "96ec6c2ed8330f3230ae68bd777b4c31be82dc6d",
-        "cursor/blueprint-beginner-images": "96ec6c2ed8330f3230ae68bd777b4c31be82dc6d"
+        "cursor/blueprint-beginner-images": "70ef875cf1dfd6ba92b2ecfe9a7ab71b848bab3f",
+        "cursor/blueprint-cursor-images": "70ef875cf1dfd6ba92b2ecfe9a7ab71b848bab3f"
       },
       "beat_concept": "A finish sentence names a path: price leaves the band and does not return on the next check.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "arrow tip stops short of target: both \"Price leaves the box\" and \"Still out at next check = stop\" tips stop short of their targets"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-06-entry-and-exit__006.txt",
-      "notes": "web1 FAIL under the strict arrow rule. Path and EXAMPLE are otherwise good (price leaves the box and stays out at the next check). Both label arrows stop short of their targets. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"FINISH RULE: PRICE LEAVES AND DOESN'T COME BACK\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "web1 FAIL under the strict arrow rule. Path and EXAMPLE are otherwise good (price leaves the box and stays out at the next check). Both label arrows stop short of their targets. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"FINISH RULE: PRICE LEAVES AND DOESN'T COME BACK\" Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@cc73f31c, identical at tip 3a1137a, blob 70ef875cf1dfd6ba92b2ecfe9a7ab71b848bab3f, 1536x1024, 120425 bytes). Headline 'FINISH RULE: PRICE LEAVES AND DOESN'T COME BACK' exact. Labels 'Price leaves' and 'Doesn't come back'. Both arrow tips sit on the path (leave tip on the lower-band crossing; 'doesn't come back' tip on the departing path). EXAMPLE present. Matches the narration. No mascot. Margins 102/166/107/164. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 84,
-        "right": 195,
-        "top": 110,
-        "bottom": 261
+        "left": 102,
+        "right": 166,
+        "top": 107,
+        "bottom": 164
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-06-entry-and-exit/006.png",
-      "scored_blob": "96ec6c2ed8330f3230ae68bd777b4c31be82dc6d",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-06-entry-and-exit/006.png",
+      "scored_blob": "70ef875cf1dfd6ba92b2ecfe9a7ab71b848bab3f",
       "committed": true,
-      "pass": false,
+      "pass": true,
       "remake_review": {
-        "file": "gen/bp-06-entry-and-exit/006/web.png",
-        "blob": "2bb0021cc53d7b4551031ec6b62d347c5d781c98",
+        "file": "gen/bp-06-entry-and-exit/006/cursor1.png",
+        "blob": "70ef875cf1dfd6ba92b2ecfe9a7ab71b848bab3f",
         "size": "1536x1024",
         "margins_px": {
-          "left": 73,
-          "right": 69,
-          "top": 80,
-          "bottom": 163
+          "left": 102,
+          "right": 166,
+          "top": 107,
+          "bottom": 164
         },
-        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact",
+        "source_commit": "cc73f31c02a4df10778a3565dc1373f976d1fcb8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
           "beginner_clarity": 5,
-          "composition_hierarchy": 4,
+          "composition_hierarchy": 5,
           "craft_polish": 5,
           "brand_fidelity": 5,
           "text_legibility": 5,
           "character_consistency": null,
-          "label_accuracy": 3
+          "label_accuracy": 5
         },
-        "hard_fails": [
-          "arrow tip stops short of target: both \"Price leaves the box\" and \"Still out at next check = stop\" tips stop short of their targets"
-        ],
-        "notes": "web1 FAIL under the strict arrow rule. Path and EXAMPLE are otherwise good (price leaves the box and stays out at the next check). Both label arrows stop short of their targets. Next: web2.png on the v2 prompt.",
-        "pass": false
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@cc73f31c, identical at tip 3a1137a, blob 70ef875cf1dfd6ba92b2ecfe9a7ab71b848bab3f, 1536x1024, 120425 bytes). Headline 'FINISH RULE: PRICE LEAVES AND DOESN'T COME BACK' exact. Labels 'Price leaves' and 'Doesn't come back'. Both arrow tips sit on the path (leave tip on the lower-band crossing; 'doesn't come back' tip on the departing path). EXAMPLE present. Matches the narration. No mascot. Margins 102/166/107/164. Placed, source cursor.",
+        "pass": true
       },
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "\"FINISH RULE: PRICE LEAVES AND DOESN'T COME BACK\""
+      "previous_remake_reviews": [
+        {
+          "file": "gen/bp-06-entry-and-exit/006/web.png",
+          "blob": "2bb0021cc53d7b4551031ec6b62d347c5d781c98",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 73,
+            "right": 69,
+            "top": 80,
+            "bottom": 163
+          },
+          "scored_against": "beat + prompt current when this batch started (score on merits)",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 4,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 3
+          },
+          "hard_fails": [
+            "arrow tip stops short of target: both \"Price leaves the box\" and \"Still out at next check = stop\" tips stop short of their targets"
+          ],
+          "notes": "web1 FAIL under the strict arrow rule. Path and EXAMPLE are otherwise good (price leaves the box and stays out at the next check). Both label arrows stop short of their targets. Next: web2.png on the v2 prompt.",
+          "pass": false
+        }
+      ],
+      "previous_committed_blob": "96ec6c2ed8330f3230ae68bd777b4c31be82dc6d"
     },
     {
       "path": "course/images/bp-06-entry-and-exit/007.png",
@@ -3386,70 +3412,96 @@
       "beat": 10,
       "chapter": "Invalidation",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "42d69b088b866921aaf578586d3b4f468ee37ce3",
-        "cursor/blueprint-beginner-images": "42d69b088b866921aaf578586d3b4f468ee37ce3"
+        "cursor/blueprint-beginner-images": "cc7d4af5e7b588efbc460df174c5c341652e66f7",
+        "cursor/blueprint-cursor-images": "cc7d4af5e7b588efbc460df174c5c341652e66f7"
       },
       "beat_concept": "Invalidation is the name for the finish path.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "arrow tip stops short of target: \"Finish path (invalidation): the idea is finished\" tip stops about 6-8px short of the dashed amber line"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-06-entry-and-exit__010.txt",
-      "notes": "web1 FAIL under the strict arrow rule. \"Price leaves the box\" tip touches the line just below the box. But \"Finish path (invalidation): the idea is finished\" tip stops about 6-8px short of the dashed amber line (clear navy between the cyan tip and the amber dashes). Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"INVALIDATION = WHERE YOUR IDEA IS PROVEN WRONG\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "web1 FAIL under the strict arrow rule. \"Price leaves the box\" tip touches the line just below the box. But \"Finish path (invalidation): the idea is finished\" tip stops about 6-8px short of the dashed amber line (clear navy between the cyan tip and the amber dashes). Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"INVALIDATION = WHERE YOUR IDEA IS PROVEN WRONG\" Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@cc73f31c, identical at tip 3a1137a, blob cc7d4af5e7b588efbc460df174c5c341652e66f7, 1536x1024, 119668 bytes). Headline 'INVALIDATION = WHERE YOUR IDEA IS PROVEN WRONG' exact. Pointer from the leave-point on the path lands on the top stroke of the 'Your idea is proven wrong' box (adjacent cyan, no navy gap). EXAMPLE present. Matches the narration. No mascot. Margins 102/166/107/164. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 70,
-        "right": 218,
-        "top": 110,
-        "bottom": 192
+        "left": 102,
+        "right": 166,
+        "top": 107,
+        "bottom": 164
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-06-entry-and-exit/010.png",
-      "scored_blob": "42d69b088b866921aaf578586d3b4f468ee37ce3",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-06-entry-and-exit/010.png",
+      "scored_blob": "cc7d4af5e7b588efbc460df174c5c341652e66f7",
       "committed": true,
-      "pass": false,
+      "pass": true,
       "remake_review": {
-        "file": "gen/bp-06-entry-and-exit/010/web.png",
-        "blob": "3376e12a9e1dbc959efca1486d4f1bb6d265f1b9",
+        "file": "gen/bp-06-entry-and-exit/010/cursor1.png",
+        "blob": "cc7d4af5e7b588efbc460df174c5c341652e66f7",
         "size": "1536x1024",
         "margins_px": {
-          "left": 93,
-          "right": 93,
-          "top": 103,
-          "bottom": 149
+          "left": 102,
+          "right": 166,
+          "top": 107,
+          "bottom": 164
         },
-        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact",
+        "source_commit": "cc73f31c02a4df10778a3565dc1373f976d1fcb8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
           "beginner_clarity": 5,
-          "composition_hierarchy": 4,
+          "composition_hierarchy": 5,
           "craft_polish": 5,
           "brand_fidelity": 5,
           "text_legibility": 5,
           "character_consistency": null,
-          "label_accuracy": 3
+          "label_accuracy": 5
         },
-        "hard_fails": [
-          "arrow tip stops short of target: \"Finish path (invalidation): the idea is finished\" tip stops about 6-8px short of the dashed amber line"
-        ],
-        "notes": "web1 FAIL under the strict arrow rule. \"Price leaves the box\" tip touches the line just below the box. But \"Finish path (invalidation): the idea is finished\" tip stops about 6-8px short of the dashed amber line (clear navy between the cyan tip and the amber dashes). Next: web2.png on the v2 prompt.",
-        "pass": false
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@cc73f31c, identical at tip 3a1137a, blob cc7d4af5e7b588efbc460df174c5c341652e66f7, 1536x1024, 119668 bytes). Headline 'INVALIDATION = WHERE YOUR IDEA IS PROVEN WRONG' exact. Pointer from the leave-point on the path lands on the top stroke of the 'Your idea is proven wrong' box (adjacent cyan, no navy gap). EXAMPLE present. Matches the narration. No mascot. Margins 102/166/107/164. Placed, source cursor.",
+        "pass": true
       },
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "\"INVALIDATION = WHERE YOUR IDEA IS PROVEN WRONG\""
+      "previous_remake_reviews": [
+        {
+          "file": "gen/bp-06-entry-and-exit/010/web.png",
+          "blob": "3376e12a9e1dbc959efca1486d4f1bb6d265f1b9",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 93,
+            "right": 93,
+            "top": 103,
+            "bottom": 149
+          },
+          "scored_against": "beat + prompt current when this batch started (score on merits)",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 4,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 3
+          },
+          "hard_fails": [
+            "arrow tip stops short of target: \"Finish path (invalidation): the idea is finished\" tip stops about 6-8px short of the dashed amber line"
+          ],
+          "notes": "web1 FAIL under the strict arrow rule. \"Price leaves the box\" tip touches the line just below the box. But \"Finish path (invalidation): the idea is finished\" tip stops about 6-8px short of the dashed amber line (clear navy between the cyan tip and the amber dashes). Next: web2.png on the v2 prompt.",
+          "pass": false
+        }
+      ],
+      "previous_committed_blob": "42d69b088b866921aaf578586d3b4f468ee37ce3"
     },
     {
       "path": "course/images/bp-06-entry-and-exit/011.png",
@@ -3521,70 +3573,96 @@
       "beat": 12,
       "chapter": "Copy order",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "1dc95ea34ac7c69014703c612c63b1c377c56f58",
-        "cursor/blueprint-beginner-images": "1dc95ea34ac7c69014703c612c63b1c377c56f58"
+        "cursor/blueprint-beginner-images": "c2198d1b59768e10f9a59aa8048577b1b45f2146",
+        "cursor/blueprint-cursor-images": "c2198d1b59768e10f9a59aa8048577b1b45f2146"
       },
       "beat_concept": "If a paper form comes later, you copy the finish sentence before the start sentence.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "arrow tip stops short of target: scene connector 1 stops short of the stop row, connector 2 stops short of the start row, and the \"2 Then start rule\" label tip stops short of the circled 2"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-06-entry-and-exit__012.txt",
-      "notes": "web1 FAIL under the strict arrow rule (panel connectors included). Numbered scene arrow 1 stops short of the stop row; numbered scene arrow 2 stops short of the start row; the \"2 Then start rule\" label tip stops short of the circled 2. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"COPY THE FINISH RULE FIRST\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "web1 FAIL under the strict arrow rule (panel connectors included). Numbered scene arrow 1 stops short of the stop row; numbered scene arrow 2 stops short of the start row; the \"2 Then start rule\" label tip stops short of the circled 2. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"COPY THE FINISH RULE FIRST\" Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@cc73f31c, identical at tip 3a1137a, blob c2198d1b59768e10f9a59aa8048577b1b45f2146, 1536x1024, 90114 bytes). Headline 'COPY THE FINISH RULE FIRST' exact. Two stacked boxes: '1 Finish rule' then '2 Start rule'. No arrows. EXAMPLE present. Matches the narration. No mascot. Margins 102/166/108/235. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 239,
-        "top": 110,
-        "bottom": 187
+        "left": 102,
+        "right": 166,
+        "top": 108,
+        "bottom": 235
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-06-entry-and-exit/012.png",
-      "scored_blob": "1dc95ea34ac7c69014703c612c63b1c377c56f58",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-06-entry-and-exit/012.png",
+      "scored_blob": "c2198d1b59768e10f9a59aa8048577b1b45f2146",
       "committed": true,
-      "pass": false,
+      "pass": true,
       "remake_review": {
-        "file": "gen/bp-06-entry-and-exit/012/web.png",
-        "blob": "0363adfef3392a57e428c3d1b31c2dfa2a4811a2",
+        "file": "gen/bp-06-entry-and-exit/012/cursor1.png",
+        "blob": "c2198d1b59768e10f9a59aa8048577b1b45f2146",
         "size": "1536x1024",
         "margins_px": {
-          "left": 69,
-          "right": 111,
-          "top": 72,
-          "bottom": 121
+          "left": 102,
+          "right": 166,
+          "top": 108,
+          "bottom": 235
         },
-        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact",
+        "source_commit": "cc73f31c02a4df10778a3565dc1373f976d1fcb8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
           "beginner_clarity": 5,
-          "composition_hierarchy": 4,
+          "composition_hierarchy": 5,
           "craft_polish": 5,
           "brand_fidelity": 5,
           "text_legibility": 5,
           "character_consistency": null,
-          "label_accuracy": 3
+          "label_accuracy": 5
         },
-        "hard_fails": [
-          "arrow tip stops short of target: scene connector 1 stops short of the stop row, connector 2 stops short of the start row, and the \"2 Then start rule\" label tip stops short of the circled 2"
-        ],
-        "notes": "web1 FAIL under the strict arrow rule (panel connectors included). Numbered scene arrow 1 stops short of the stop row; numbered scene arrow 2 stops short of the start row; the \"2 Then start rule\" label tip stops short of the circled 2. Next: web2.png on the v2 prompt.",
-        "pass": false
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@cc73f31c, identical at tip 3a1137a, blob c2198d1b59768e10f9a59aa8048577b1b45f2146, 1536x1024, 90114 bytes). Headline 'COPY THE FINISH RULE FIRST' exact. Two stacked boxes: '1 Finish rule' then '2 Start rule'. No arrows. EXAMPLE present. Matches the narration. No mascot. Margins 102/166/108/235. Placed, source cursor.",
+        "pass": true
       },
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "\"COPY THE FINISH RULE FIRST\""
+      "previous_remake_reviews": [
+        {
+          "file": "gen/bp-06-entry-and-exit/012/web.png",
+          "blob": "0363adfef3392a57e428c3d1b31c2dfa2a4811a2",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 69,
+            "right": 111,
+            "top": 72,
+            "bottom": 121
+          },
+          "scored_against": "beat + prompt current when this batch started (score on merits)",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 4,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 3
+          },
+          "hard_fails": [
+            "arrow tip stops short of target: scene connector 1 stops short of the stop row, connector 2 stops short of the start row, and the \"2 Then start rule\" label tip stops short of the circled 2"
+          ],
+          "notes": "web1 FAIL under the strict arrow rule (panel connectors included). Numbered scene arrow 1 stops short of the stop row; numbered scene arrow 2 stops short of the start row; the \"2 Then start rule\" label tip stops short of the circled 2. Next: web2.png on the v2 prompt.",
+          "pass": false
+        }
+      ],
+      "previous_committed_blob": "1dc95ea34ac7c69014703c612c63b1c377c56f58"
     },
     {
       "path": "course/images/bp-06-entry-and-exit/013.png",
@@ -3656,70 +3734,96 @@
       "beat": 14,
       "chapter": "The action",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "805d080c5ff9ca820ddd5fd8d72d9bd145ae73d0",
-        "cursor/blueprint-beginner-images": "805d080c5ff9ca820ddd5fd8d72d9bd145ae73d0"
+        "cursor/blueprint-beginner-images": "bd6862e5adeb61215a9b515937d738569e3408be",
+        "cursor/blueprint-cursor-images": "bd6862e5adeb61215a9b515937d738569e3408be"
       },
       "beat_concept": "Write both sentences today, finish first, and read them to the drawing.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "cramped margin: the \"Read them aloud\" tag's right edge is at x=1492, only 43px from the 1536px right edge (minimum 45px)"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-06-entry-and-exit__014.txt",
-      "notes": "web1 FAIL. Hard fail: cramped right margin 43px on the \"Read them aloud\" tag (bright cyan edge at x=1492). The three label arrows themselves looked like they touched their targets. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"WRITE BOTH RULES TODAY, FINISH FIRST\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "web1 FAIL. Hard fail: cramped right margin 43px on the \"Read them aloud\" tag (bright cyan edge at x=1492). The three label arrows themselves looked like they touched their targets. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"WRITE BOTH RULES TODAY, FINISH FIRST\" Placed file left in place; do not treat the current still as a pass. | cursor cursor2.png PASS (kyleashton88-cyber/claude@8cb7a75539553b75b2ef45ab38ac217e5052039e, blob bd6862e5adeb61215a9b515937d738569e3408be, 1536x1024, 124547 bytes). Rescored from 8cb7a75, not the earlier cc73f31 file. Diff vs cursor1 (352afbf2): 1950 pixels on the connector. Headline 'WRITE BOTH RULES TODAY, FINISH FIRST' exact. 'Finish rule / Write this first' connects to 'Start rule / Write this second'; the tip sits on the Start box's top-left corner, and the shaft is attached to the Finish box's right stroke. EXAMPLE present. Matches the narration. No mascot. Margins 101/136/108/235. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 299,
-        "top": 110,
-        "bottom": 230
+        "left": 101,
+        "right": 136,
+        "top": 108,
+        "bottom": 235
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-06-entry-and-exit/014.png",
-      "scored_blob": "805d080c5ff9ca820ddd5fd8d72d9bd145ae73d0",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-06-entry-and-exit/014.png",
+      "scored_blob": "bd6862e5adeb61215a9b515937d738569e3408be",
       "committed": true,
-      "pass": false,
+      "pass": true,
       "remake_review": {
-        "file": "gen/bp-06-entry-and-exit/014/web.png",
-        "blob": "8df302f27639fb97b74471063ea0dee2dd626b58",
+        "file": "gen/bp-06-entry-and-exit/014/cursor2.png",
+        "blob": "bd6862e5adeb61215a9b515937d738569e3408be",
         "size": "1536x1024",
         "margins_px": {
-          "left": 72,
-          "right": 43,
-          "top": 97,
-          "bottom": 148
+          "left": 101,
+          "right": 136,
+          "top": 108,
+          "bottom": 235
         },
-        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact",
+        "source_commit": "8cb7a75539553b75b2ef45ab38ac217e5052039e",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
           "beginner_clarity": 5,
-          "composition_hierarchy": 4,
-          "craft_polish": 3,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
           "brand_fidelity": 5,
           "text_legibility": 5,
           "character_consistency": null,
           "label_accuracy": 5
         },
-        "hard_fails": [
-          "cramped margin: the \"Read them aloud\" tag's right edge is at x=1492, only 43px from the 1536px right edge (minimum 45px)"
-        ],
-        "notes": "web1 FAIL. Hard fail: cramped right margin 43px on the \"Read them aloud\" tag (bright cyan edge at x=1492). The three label arrows themselves looked like they touched their targets. Next: web2.png on the v2 prompt.",
-        "pass": false
+        "hard_fails": [],
+        "notes": "cursor cursor2.png PASS (kyleashton88-cyber/claude@8cb7a75539553b75b2ef45ab38ac217e5052039e, blob bd6862e5adeb61215a9b515937d738569e3408be, 1536x1024, 124547 bytes). Rescored from 8cb7a75, not the earlier cc73f31 file. Diff vs cursor1 (352afbf2): 1950 pixels on the connector. Headline 'WRITE BOTH RULES TODAY, FINISH FIRST' exact. 'Finish rule / Write this first' connects to 'Start rule / Write this second'; the tip sits on the Start box's top-left corner, and the shaft is attached to the Finish box's right stroke. EXAMPLE present. Matches the narration. No mascot. Margins 101/136/108/235. Placed, source cursor.",
+        "pass": true
       },
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "\"WRITE BOTH RULES TODAY, FINISH FIRST\""
+      "previous_remake_reviews": [
+        {
+          "file": "gen/bp-06-entry-and-exit/014/web.png",
+          "blob": "8df302f27639fb97b74471063ea0dee2dd626b58",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 72,
+            "right": 43,
+            "top": 97,
+            "bottom": 148
+          },
+          "scored_against": "beat + prompt current when this batch started (score on merits)",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 4,
+            "craft_polish": 3,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 5
+          },
+          "hard_fails": [
+            "cramped margin: the \"Read them aloud\" tag's right edge is at x=1492, only 43px from the 1536px right edge (minimum 45px)"
+          ],
+          "notes": "web1 FAIL. Hard fail: cramped right margin 43px on the \"Read them aloud\" tag (bright cyan edge at x=1492). The three label arrows themselves looked like they touched their targets. Next: web2.png on the v2 prompt.",
+          "pass": false
+        }
+      ],
+      "previous_committed_blob": "805d080c5ff9ca820ddd5fd8d72d9bd145ae73d0"
     },
     {
       "path": "course/images/bp-06-entry-and-exit/015.png",
@@ -3991,70 +4095,96 @@
       "beat": 19,
       "chapter": "Audit",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "d10ebe3fc6be7fb08932afffc9b7a21daaf41a18",
-        "cursor/blueprint-beginner-images": "d10ebe3fc6be7fb08932afffc9b7a21daaf41a18"
+        "cursor/blueprint-beginner-images": "b95a3d59564d50bd90e1dc83a39d9ea7be49db2b",
+        "cursor/blueprint-cursor-images": "b95a3d59564d50bd90e1dc83a39d9ea7be49db2b"
       },
       "beat_concept": "Audit one page by asking: can a classmate point at the finish path from the sentence alone?",
       "scores": {
-        "beginner_clarity": 3,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "cramped margin: the left sleeve/cuff glow reaches x=8, only 8px from the left edge (minimum 45px)"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-06-entry-and-exit__019.txt",
-      "notes": "web1 FAIL. Hard fail: cramped left margin 8px \u2014 the left sleeve/cuff cyan highlight is at x=8 (luma>110). Two simple outline hands are allowed by the prompt and are not a character fail. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"CAN A CLASSMATE POINT AT YOUR FINISH RULE?\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "web1 FAIL. Hard fail: cramped left margin 8px \u2014 the left sleeve/cuff cyan highlight is at x=8 (luma>110). Two simple outline hands are allowed by the prompt and are not a character fail. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"CAN A CLASSMATE POINT AT YOUR FINISH RULE?\" Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@cc73f31c, identical at tip 3a1137a, blob b95a3d59564d50bd90e1dc83a39d9ea7be49db2b, 1536x1024, 113157 bytes). Headline 'CAN A CLASSMATE POINT AT YOUR FINISH RULE?' exact. Pointer from the leaving path lands on the top stroke of the 'Point at this leaving path' box. EXAMPLE present. Matches the narration. No mascot. Margins 101/166/107/164. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 71,
-        "right": 246,
-        "top": 110,
-        "bottom": 188
+        "left": 101,
+        "right": 166,
+        "top": 107,
+        "bottom": 164
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-06-entry-and-exit/019.png",
-      "scored_blob": "d10ebe3fc6be7fb08932afffc9b7a21daaf41a18",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-06-entry-and-exit/019.png",
+      "scored_blob": "b95a3d59564d50bd90e1dc83a39d9ea7be49db2b",
       "committed": true,
-      "pass": false,
+      "pass": true,
       "remake_review": {
-        "file": "gen/bp-06-entry-and-exit/019/web.png",
-        "blob": "c589cc62eb9d71045a830ca704398b3154f4c18a",
+        "file": "gen/bp-06-entry-and-exit/019/cursor1.png",
+        "blob": "b95a3d59564d50bd90e1dc83a39d9ea7be49db2b",
         "size": "1536x1024",
         "margins_px": {
-          "left": 8,
-          "right": 102,
-          "top": 95,
-          "bottom": 107
+          "left": 101,
+          "right": 166,
+          "top": 107,
+          "bottom": 164
         },
-        "scored_against": "beat + prompt current when this batch started (score on merits)",
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact",
+        "source_commit": "cc73f31c02a4df10778a3565dc1373f976d1fcb8",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
           "beginner_clarity": 5,
-          "composition_hierarchy": 4,
-          "craft_polish": 3,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
           "brand_fidelity": 5,
           "text_legibility": 5,
           "character_consistency": null,
-          "label_accuracy": 4
+          "label_accuracy": 5
         },
-        "hard_fails": [
-          "cramped margin: the left sleeve/cuff glow reaches x=8, only 8px from the left edge (minimum 45px)"
-        ],
-        "notes": "web1 FAIL. Hard fail: cramped left margin 8px \u2014 the left sleeve/cuff cyan highlight is at x=8 (luma>110). Two simple outline hands are allowed by the prompt and are not a character fail. Next: web2.png on the v2 prompt.",
-        "pass": false
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@cc73f31c, identical at tip 3a1137a, blob b95a3d59564d50bd90e1dc83a39d9ea7be49db2b, 1536x1024, 113157 bytes). Headline 'CAN A CLASSMATE POINT AT YOUR FINISH RULE?' exact. Pointer from the leaving path lands on the top stroke of the 'Point at this leaving path' box. EXAMPLE present. Matches the narration. No mascot. Margins 101/166/107/164. Placed, source cursor.",
+        "pass": true
       },
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "\"CAN A CLASSMATE POINT AT YOUR FINISH RULE?\""
+      "previous_remake_reviews": [
+        {
+          "file": "gen/bp-06-entry-and-exit/019/web.png",
+          "blob": "c589cc62eb9d71045a830ca704398b3154f4c18a",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 8,
+            "right": 102,
+            "top": 95,
+            "bottom": 107
+          },
+          "scored_against": "beat + prompt current when this batch started (score on merits)",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 4,
+            "craft_polish": 3,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 4
+          },
+          "hard_fails": [
+            "cramped margin: the left sleeve/cuff glow reaches x=8, only 8px from the left edge (minimum 45px)"
+          ],
+          "notes": "web1 FAIL. Hard fail: cramped left margin 8px \u2014 the left sleeve/cuff cyan highlight is at x=8 (luma>110). Two simple outline hands are allowed by the prompt and are not a character fail. Next: web2.png on the v2 prompt.",
+          "pass": false
+        }
+      ],
+      "previous_committed_blob": "d10ebe3fc6be7fb08932afffc9b7a21daaf41a18"
     },
     {
       "path": "course/images/bp-06-entry-and-exit/020.png",
