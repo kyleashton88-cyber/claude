@@ -8,8 +8,8 @@
   "not_in_scope": "course/images/_held/*.png (10 files: bp-06 014/017, bp-07 012/017/020, bp-08 003/006/007/009/011) are not referenced by any lesson script and were not scored. Shared title-art/mascot assets are already on BP01-03_PASS_LIST.json.",
   "counts": {
     "total": 161,
-    "pass": 113,
-    "fail": 48,
+    "pass": 127,
+    "fail": 34,
     "by_lesson": {
       "bp-04-market-regimes": {
         "total": 20,
@@ -48,8 +48,8 @@
       },
       "bp-11-advanced-liquidation": {
         "total": 20,
-        "pass": 0,
-        "fail": 20
+        "pass": 14,
+        "fail": 6
       }
     },
     "dropped": 0
@@ -9320,43 +9320,68 @@
       "beat": 1,
       "chapter": "Hook",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "34c975c1920bb0d91c2a7220df69c93d895ac1ec",
-        "cursor/blueprint-beginner-images": "34c975c1920bb0d91c2a7220df69c93d895ac1ec"
+        "cursor/blueprint-beginner-images": "e3ce6f3b8f836afb488ba512fdea57d1c49a50be",
+        "cursor/blueprint-cursor-images": "e3ce6f3b8f836afb488ba512fdea57d1c49a50be"
       },
       "beat_concept": "This lesson is opt-in. The losing path comes first.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__001.txt",
-      "notes": "'OPT IN -> CLOSED' chips under 'LOSS FIRST': no losing path drawn; 'this lesson is opt-in, the losing path comes first' not readable; tiny EXAMPLE. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "'OPT IN -> CLOSED' chips under 'LOSS FIRST': no losing path drawn; 'this lesson is opt-in, the losing path comes first' not readable; tiny EXAMPLE. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/001.png, blob e3ce6f3b8f836afb488ba512fdea57d1c49a50be, 1536x1024, 117477 bytes). On-image text: OPTIONAL.THE LOSS COMES FIRST | You can skip this lesson | If you stay, draw the losing path first | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 428,
-        "top": 110,
-        "bottom": 363
+        "left": 102,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/001.png",
-      "scored_blob": "34c975c1920bb0d91c2a7220df69c93d895ac1ec",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-11-advanced-liquidation/001.png",
+      "scored_blob": "e3ce6f3b8f836afb488ba512fdea57d1c49a50be",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+      "pass": true,
+      "previous_committed_blob": "34c975c1920bb0d91c2a7220df69c93d895ac1ec",
+      "remake_review": {
+        "file": "gen/bp-11-advanced-liquidation/001/cursor1.png",
+        "blob": "e3ce6f3b8f836afb488ba512fdea57d1c49a50be",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 102,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "3a1137a197ca9d295a229b829a46526637b49e86",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/001.png, blob e3ce6f3b8f836afb488ba512fdea57d1c49a50be, 1536x1024, 117477 bytes). On-image text: OPTIONAL.THE LOSS COMES FIRST | You can skip this lesson | If you stay, draw the losing path first | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/002.png",
@@ -9444,43 +9469,68 @@
       "beat": 4,
       "chapter": "Spot is complete",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "7c6c79ffc4619f48ff889ee1469fc3de07feaba7",
-        "cursor/blueprint-beginner-images": "7c6c79ffc4619f48ff889ee1469fc3de07feaba7"
+        "cursor/blueprint-beginner-images": "d3a9442b2404141f0fcd21d3b4ca3cf0b00d6b47",
+        "cursor/blueprint-cursor-images": "d3a9442b2404141f0fcd21d3b4ca3cf0b00d6b47"
       },
       "beat_concept": "The paper spot path is already complete without this lesson.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__004.txt",
-      "notes": "Stack of pages 'SPOT' and a door 'SIDE' under 'SIDE DOOR': 'the spot path is already complete without this lesson' not readable. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Stack of pages 'SPOT' and a door 'SIDE' under 'SIDE DOOR': 'the spot path is already complete without this lesson' not readable. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/004.png, blob d3a9442b2404141f0fcd21d3b4ca3cf0b00d6b47, 1536x1024, 109482 bytes). On-image text: THE SPOT PATHIS ALREADYDONE | The spot page stands on its own | You do not need this lesson | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 607,
-        "top": 110,
-        "bottom": 246
+        "left": 101,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/004.png",
-      "scored_blob": "7c6c79ffc4619f48ff889ee1469fc3de07feaba7",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-11-advanced-liquidation/004.png",
+      "scored_blob": "d3a9442b2404141f0fcd21d3b4ca3cf0b00d6b47",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+      "pass": true,
+      "previous_committed_blob": "7c6c79ffc4619f48ff889ee1469fc3de07feaba7",
+      "remake_review": {
+        "file": "gen/bp-11-advanced-liquidation/004/cursor1.png",
+        "blob": "d3a9442b2404141f0fcd21d3b4ca3cf0b00d6b47",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 101,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "3a1137a197ca9d295a229b829a46526637b49e86",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/004.png, blob d3a9442b2404141f0fcd21d3b4ca3cf0b00d6b47, 1536x1024, 109482 bytes). On-image text: THE SPOT PATHIS ALREADYDONE | The spot page stands on its own | You do not need this lesson | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/005.png",
@@ -9488,43 +9538,68 @@
       "beat": 5,
       "chapter": "What liquidation means",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "2ba2396e4a6b4f92ccd914fa8afdf9f3a6760116",
-        "cursor/blueprint-beginner-images": "2ba2396e4a6b4f92ccd914fa8afdf9f3a6760116"
+        "cursor/blueprint-beginner-images": "840cfabd55be475780e53388458601068483a58f",
+        "cursor/blueprint-cursor-images": "840cfabd55be475780e53388458601068483a58f"
       },
       "beat_concept": "Liquidation here means the venue closes the position because the margin no longer covers the loss on the example.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__005.txt",
-      "notes": "Closed box 'CLOSED' and open box 'MARGIN' under 'MARGIN GONE': liquidation (margin no longer covers the loss, position closed) is not shown; no loss, no price. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Closed box 'CLOSED' and open box 'MARGIN' under 'MARGIN GONE': liquidation (margin no longer covers the loss, position closed) is not shown; no loss, no price. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/005.png, blob 840cfabd55be475780e53388458601068483a58f, 1536x1024, 116564 bytes). On-image text: THE EXCHANGE CLOSES THE TRADE | The margin no longer covers the loss | The exchange closes the trade | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Teaches liquidation as the exchange closing the trade when the margin no longer covers the loss. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 392,
-        "top": 110,
-        "bottom": 245
+        "left": 101,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/005.png",
-      "scored_blob": "2ba2396e4a6b4f92ccd914fa8afdf9f3a6760116",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-11-advanced-liquidation/005.png",
+      "scored_blob": "840cfabd55be475780e53388458601068483a58f",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+      "pass": true,
+      "previous_committed_blob": "2ba2396e4a6b4f92ccd914fa8afdf9f3a6760116",
+      "remake_review": {
+        "file": "gen/bp-11-advanced-liquidation/005/cursor1.png",
+        "blob": "840cfabd55be475780e53388458601068483a58f",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 101,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "3a1137a197ca9d295a229b829a46526637b49e86",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/005.png, blob 840cfabd55be475780e53388458601068483a58f, 1536x1024, 116564 bytes). On-image text: THE EXCHANGE CLOSES THE TRADE | The margin no longer covers the loss | The exchange closes the trade | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Teaches liquidation as the exchange closing the trade when the margin no longer covers the loss. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/006.png",
@@ -9532,44 +9607,68 @@
       "beat": 6,
       "chapter": "Losing path",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "e1431683524dd1f033c957940a5dfdae489d1877",
-        "cursor/blueprint-beginner-images": "e1431683524dd1f033c957940a5dfdae489d1877"
+        "cursor/blueprint-beginner-images": "1b6d814dc20a4f639831c1c007ce7bf3c16f2ba0",
+        "cursor/blueprint-cursor-images": "1b6d814dc20a4f639831c1c007ce7bf3c16f2ba0"
       },
       "beat_concept": "Draw price leaving the band and not returning, and then draw the position closed.",
       "scores": {
-        "beginner_clarity": 1,
-        "composition_hierarchy": 2,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 2,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "illegible label: tiny '1'/'2' panel numbers"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__006.txt",
-      "notes": "Three tiny line-art panels (line, rectangle, X) under 'PATH ORDER': price leaving the band and the position closing are not drawn. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Three tiny line-art panels (line, rectangle, X) under 'PATH ORDER': price leaving the band and the position closing are not drawn. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/006.png, blob 1b6d814dc20a4f639831c1c007ce7bf3c16f2ba0, 1536x1024, 114910 bytes). On-image text: PRICE LEAVES, THEN THE TRADE CLOSES | 1 Price leaves and does not come back | 2 The trade is closed | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 497,
-        "top": 110,
-        "bottom": 357
+        "left": 103,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/006.png",
-      "scored_blob": "e1431683524dd1f033c957940a5dfdae489d1877",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-11-advanced-liquidation/006.png",
+      "scored_blob": "1b6d814dc20a4f639831c1c007ce7bf3c16f2ba0",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+      "pass": true,
+      "previous_committed_blob": "e1431683524dd1f033c957940a5dfdae489d1877",
+      "remake_review": {
+        "file": "gen/bp-11-advanced-liquidation/006/cursor1.png",
+        "blob": "1b6d814dc20a4f639831c1c007ce7bf3c16f2ba0",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "3a1137a197ca9d295a229b829a46526637b49e86",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/006.png, blob 1b6d814dc20a4f639831c1c007ce7bf3c16f2ba0, 1536x1024, 114910 bytes). On-image text: PRICE LEAVES, THEN THE TRADE CLOSES | 1 Price leaves and does not come back | 2 The trade is closed | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/007.png",
@@ -9577,44 +9676,68 @@
       "beat": 7,
       "chapter": "Isolated",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "9f4b0728d9ebf992ac638fcab63f89e410788d60",
-        "cursor/blueprint-beginner-images": "9f4b0728d9ebf992ac638fcab63f89e410788d60"
+        "cursor/blueprint-beginner-images": "8fd6e21cbc474541ad86664e88ba828acefe99ae",
+        "cursor/blueprint-cursor-images": "8fd6e21cbc474541ad86664e88ba828acefe99ae"
       },
       "beat_concept": "Isolated margin, in plain words, means the venue looks at the inventory assigned to that position.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 2,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 2,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "illegible label: tiny 'ISOLATED' and 'ASSIGNED' captions"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__007.txt",
-      "notes": "Dashed box around one of three squares: isolated margin readable only by an expert; frame mostly empty. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Dashed box around one of three squares: isolated margin readable only by an expert; frame mostly empty. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/007.png, blob 8fd6e21cbc474541ad86664e88ba828acefe99ae, 1536x1024, 108098 bytes). On-image text: ISOLATED: THE LOSS STAYS IN ONE BOX | One box | A loss in that box stays there | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 492,
-        "top": 110,
-        "bottom": 326
+        "left": 103,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/007.png",
-      "scored_blob": "9f4b0728d9ebf992ac638fcab63f89e410788d60",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-11-advanced-liquidation/007.png",
+      "scored_blob": "8fd6e21cbc474541ad86664e88ba828acefe99ae",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+      "pass": true,
+      "previous_committed_blob": "9f4b0728d9ebf992ac638fcab63f89e410788d60",
+      "remake_review": {
+        "file": "gen/bp-11-advanced-liquidation/007/cursor1.png",
+        "blob": "8fd6e21cbc474541ad86664e88ba828acefe99ae",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "3a1137a197ca9d295a229b829a46526637b49e86",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/007.png, blob 8fd6e21cbc474541ad86664e88ba828acefe99ae, 1536x1024, 108098 bytes). On-image text: ISOLATED: THE LOSS STAYS IN ONE BOX | One box | A loss in that box stays there | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/008.png",
@@ -9622,43 +9745,68 @@
       "beat": 8,
       "chapter": "Cross",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "509c1312714b89370b587505621ff29d21abf517",
-        "cursor/blueprint-beginner-images": "509c1312714b89370b587505621ff29d21abf517"
+        "cursor/blueprint-beginner-images": "ac5511a22a53231fec81860f0b493be6729186c1",
+        "cursor/blueprint-cursor-images": "ac5511a22a53231fec81860f0b493be6729186c1"
       },
       "beat_concept": "Cross margin, in plain words, means the venue may look at other balances in the same account on the sketch.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__008.txt",
-      "notes": "'MARGIN -> PULL' boxes under 'CAN PULL': cross margin (venue may look at other balances in the account) not shown; no other balances drawn. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "'MARGIN -> PULL' boxes under 'CAN PULL': cross margin (venue may look at other balances in the account) not shown; no other balances drawn. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/008.png, blob ac5511a22a53231fec81860f0b493be6729186c1, 1536x1024, 129431 bytes). On-image text: CROSS MARGIN CANUSE OTHERBALANCES | The exchange may look past that box | It may use other balances | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 470,
-        "top": 110,
-        "bottom": 342
+        "left": 102,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/008.png",
-      "scored_blob": "509c1312714b89370b587505621ff29d21abf517",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-11-advanced-liquidation/008.png",
+      "scored_blob": "ac5511a22a53231fec81860f0b493be6729186c1",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+      "pass": true,
+      "previous_committed_blob": "509c1312714b89370b587505621ff29d21abf517",
+      "remake_review": {
+        "file": "gen/bp-11-advanced-liquidation/008/cursor1.png",
+        "blob": "ac5511a22a53231fec81860f0b493be6729186c1",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 102,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "3a1137a197ca9d295a229b829a46526637b49e86",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/008.png, blob ac5511a22a53231fec81860f0b493be6729186c1, 1536x1024, 129431 bytes). On-image text: CROSS MARGIN CANUSE OTHERBALANCES | The exchange may look past that box | It may use other balances | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/009.png",
@@ -9666,43 +9814,68 @@
       "beat": 9,
       "chapter": "No multiple",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "2e413cd46ae8a57228a8893ac9ea38044c8df1d6",
-        "cursor/blueprint-beginner-images": "2e413cd46ae8a57228a8893ac9ea38044c8df1d6"
+        "cursor/blueprint-beginner-images": "80e1e0f6bc9e31b3127489f46f16a56baf5ed525",
+        "cursor/blueprint-cursor-images": "80e1e0f6bc9e31b3127489f46f16a56baf5ed525"
       },
       "beat_concept": "Do not write a times-number in either box.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__009.txt",
-      "notes": "Two 'no' symbols 'NONE / NONE' under 'NO TIMES': the two boxes (isolated, cross) are not named; 'NO TIMES' is unclear English for 'no leverage multiple'. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Two 'no' symbols 'NONE / NONE' under 'NO TIMES': the two boxes (isolated, cross) are not named; 'NO TIMES' is unclear English for 'no leverage multiple'. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/009.png, blob 80e1e0f6bc9e31b3127489f46f16a56baf5ed525, 1536x1024, 111937 bytes). On-image text: DO NOT WRITE A TIMES-NUMBER | No 5x in the isolated box | No 5x in the cross-margin box | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 576,
-        "top": 110,
-        "bottom": 296
+        "left": 103,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/009.png",
-      "scored_blob": "2e413cd46ae8a57228a8893ac9ea38044c8df1d6",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-11-advanced-liquidation/009.png",
+      "scored_blob": "80e1e0f6bc9e31b3127489f46f16a56baf5ed525",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+      "pass": true,
+      "previous_committed_blob": "2e413cd46ae8a57228a8893ac9ea38044c8df1d6",
+      "remake_review": {
+        "file": "gen/bp-11-advanced-liquidation/009/cursor1.png",
+        "blob": "80e1e0f6bc9e31b3127489f46f16a56baf5ed525",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "3a1137a197ca9d295a229b829a46526637b49e86",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/009.png, blob 80e1e0f6bc9e31b3127489f46f16a56baf5ed525, 1536x1024, 111937 bytes). On-image text: DO NOT WRITE A TIMES-NUMBER | No 5x in the isolated box | No 5x in the cross-margin box | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/010.png",
@@ -9710,44 +9883,68 @@
       "beat": 10,
       "chapter": "Funding",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "27bd2631f68fbed49e63fd23ebfb8749f5684a9d",
-        "cursor/blueprint-beginner-images": "27bd2631f68fbed49e63fd23ebfb8749f5684a9d"
+        "cursor/blueprint-beginner-images": "df536ec9158e70a6cde4c937b0223739aef4c726",
+        "cursor/blueprint-cursor-images": "df536ec9158e70a6cde4c937b0223739aef4c726"
       },
       "beat_concept": "Contracts can also carry a funding payment between sides, on a timer, separate from the price path.",
       "scores": {
-        "beginner_clarity": 1,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 2,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "illegible label: tiny letter-spaced 'FUNDING'"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__010.txt",
-      "notes": "Oval with a two-way arrow under 'NO RATE': a timed funding payment between sides is not shown. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Oval with a two-way arrow under 'NO RATE': a timed funding payment between sides is not shown. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/010.png, blob df536ec9158e70a6cde4c937b0223739aef4c726, 1536x1024, 114336 bytes). On-image text: FUNDINGIS A SEPARATE PAYMENT | A payment between the two sides | It is not the price path | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 618,
-        "top": 110,
-        "bottom": 309
+        "left": 103,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/010.png",
-      "scored_blob": "27bd2631f68fbed49e63fd23ebfb8749f5684a9d",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-11-advanced-liquidation/010.png",
+      "scored_blob": "df536ec9158e70a6cde4c937b0223739aef4c726",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+      "pass": true,
+      "previous_committed_blob": "27bd2631f68fbed49e63fd23ebfb8749f5684a9d",
+      "remake_review": {
+        "file": "gen/bp-11-advanced-liquidation/010/cursor1.png",
+        "blob": "df536ec9158e70a6cde4c937b0223739aef4c726",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "3a1137a197ca9d295a229b829a46526637b49e86",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/010.png, blob df536ec9158e70a6cde4c937b0223739aef4c726, 1536x1024, 114336 bytes). On-image text: FUNDINGIS A SEPARATE PAYMENT | A payment between the two sides | It is not the price path | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/011.png",
@@ -9755,43 +9952,68 @@
       "beat": 11,
       "chapter": "What was deleted",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "9f62b5d2be5fc690919b2a467d5d1d00f0d610ce",
-        "cursor/blueprint-beginner-images": "9f62b5d2be5fc690919b2a467d5d1d00f0d610ce"
+        "cursor/blueprint-beginner-images": "f7a28dfe73eedb78719025791495e049a81c33af",
+        "cursor/blueprint-cursor-images": "f7a28dfe73eedb78719025791495e049a81c33af"
       },
       "beat_concept": "Older drafts of this lesson that gave a leverage multiple, or a multiple of capital, are deleted.",
       "scores": {
-        "beginner_clarity": 1,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__011.txt",
-      "notes": "Crossed symbol and a 'NONE' tile under 'OLD NOTES': deleted older drafts with leverage multiples are not shown. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Crossed symbol and a 'NONE' tile under 'OLD NOTES': deleted older drafts with leverage multiples are not shown. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/011.png, blob f7a28dfe73eedb78719025791495e049a81c33af, 1536x1024, 106923 bytes). On-image text: CROSS OUT 5XON OLD NOTES | Old notes may show 5x | Cross that out | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 453,
-        "top": 110,
-        "bottom": 283
+        "left": 102,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/011.png",
-      "scored_blob": "9f62b5d2be5fc690919b2a467d5d1d00f0d610ce",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-11-advanced-liquidation/011.png",
+      "scored_blob": "f7a28dfe73eedb78719025791495e049a81c33af",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+      "pass": true,
+      "previous_committed_blob": "9f62b5d2be5fc690919b2a467d5d1d00f0d610ce",
+      "remake_review": {
+        "file": "gen/bp-11-advanced-liquidation/011/cursor1.png",
+        "blob": "f7a28dfe73eedb78719025791495e049a81c33af",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 102,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "3a1137a197ca9d295a229b829a46526637b49e86",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/011.png, blob f7a28dfe73eedb78719025791495e049a81c33af, 1536x1024, 106923 bytes). On-image text: CROSS OUT 5XON OLD NOTES | Old notes may show 5x | Cross that out | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/012.png",
@@ -9799,44 +10021,68 @@
       "beat": 12,
       "chapter": "Flags",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "c0beb46acf134ae118e46bcf34b55560dd29205d",
-        "cursor/blueprint-beginner-images": "c0beb46acf134ae118e46bcf34b55560dd29205d"
+        "cursor/blueprint-beginner-images": "ce65ee9940785297ec5395a6086c0345bc5ac309",
+        "cursor/blueprint-cursor-images": "ce65ee9940785297ec5395a6086c0345bc5ac309"
       },
       "beat_concept": "Two flags belong in the margin: this can liquidate, and you can lose all the money assigned on the sketch.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "wrong count: headline 'TWO FLAGS' over three flags (LOSS / ALL / crossed GAIN)"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__012.txt",
-      "notes": "The two flags ('this can liquidate', 'you can lose all the money assigned') are not written. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "The two flags ('this can liquidate', 'you can lose all the money assigned') are not written. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/012.png, blob ce65ee9940785297ec5395a6086c0345bc5ac309, 1536x1024, 102174 bytes). On-image text: TWOI | WARNINGS | This can be liquidated | You can lose all you put in | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/120/109/95. 'TWO WARNINGS': 'This can be liquidated' / 'You can lose all you put in'. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 498,
-        "top": 110,
-        "bottom": 348
+        "left": 102,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/012.png",
-      "scored_blob": "c0beb46acf134ae118e46bcf34b55560dd29205d",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-11-advanced-liquidation/012.png",
+      "scored_blob": "ce65ee9940785297ec5395a6086c0345bc5ac309",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+      "pass": true,
+      "previous_committed_blob": "c0beb46acf134ae118e46bcf34b55560dd29205d",
+      "remake_review": {
+        "file": "gen/bp-11-advanced-liquidation/012/cursor1.png",
+        "blob": "ce65ee9940785297ec5395a6086c0345bc5ac309",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 102,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "3a1137a197ca9d295a229b829a46526637b49e86",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/012.png, blob ce65ee9940785297ec5395a6086c0345bc5ac309, 1536x1024, 102174 bytes). On-image text: TWOI | WARNINGS | This can be liquidated | You can lose all you put in | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/120/109/95. 'TWO WARNINGS': 'This can be liquidated' / 'You can lose all you put in'. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/013.png",
@@ -9844,43 +10090,68 @@
       "beat": 13,
       "chapter": "Not a venue guide",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "e37fb39e40dbc9c1e6ffd61dff94f646cd023782",
-        "cursor/blueprint-beginner-images": "e37fb39e40dbc9c1e6ffd61dff94f646cd023782"
+        "cursor/blueprint-beginner-images": "d0af8eecd50f5a89cc174c92a45c0bbff48fe647",
+        "cursor/blueprint-cursor-images": "d0af8eecd50f5a89cc174c92a45c0bbff48fe647"
       },
       "beat_concept": "The lesson does not walk a live contract screen.",
       "scores": {
-        "beginner_clarity": 3,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__013.txt",
-      "notes": "Crossed monitor 'NO SCREEN' under 'PAPER ONLY': close to 'not a venue guide / no live contract screen'; small caption. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Crossed monitor 'NO SCREEN' under 'PAPER ONLY': close to 'not a venue guide / no live contract screen'; small caption. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/013.png, blob d0af8eecd50f5a89cc174c92a45c0bbff48fe647, 1536x1024, 97311 bytes). On-image text: NOT A LIVE EXCHANGE SCREEN | No login | No live contract screen | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 549,
-        "top": 110,
-        "bottom": 245
+        "left": 103,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/013.png",
-      "scored_blob": "e37fb39e40dbc9c1e6ffd61dff94f646cd023782",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-11-advanced-liquidation/013.png",
+      "scored_blob": "d0af8eecd50f5a89cc174c92a45c0bbff48fe647",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+      "pass": true,
+      "previous_committed_blob": "e37fb39e40dbc9c1e6ffd61dff94f646cd023782",
+      "remake_review": {
+        "file": "gen/bp-11-advanced-liquidation/013/cursor1.png",
+        "blob": "d0af8eecd50f5a89cc174c92a45c0bbff48fe647",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "3a1137a197ca9d295a229b829a46526637b49e86",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/013.png, blob d0af8eecd50f5a89cc174c92a45c0bbff48fe647, 1536x1024, 97311 bytes). On-image text: NOT A LIVE EXCHANGE SCREEN | No login | No live contract screen | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/014.png",
@@ -9888,43 +10159,68 @@
       "beat": 14,
       "chapter": "The sentence",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "7a546c10cd46fe4065b8dd45368eb16181e175a5",
-        "cursor/blueprint-beginner-images": "7a546c10cd46fe4065b8dd45368eb16181e175a5"
+        "cursor/blueprint-beginner-images": "8b41a28cbbeef8cfc0e1df2e55719c848168a179",
+        "cursor/blueprint-cursor-images": "8b41a28cbbeef8cfc0e1df2e55719c848168a179"
       },
       "beat_concept": "The sentence to write: I can explain isolated and cross without using a multiple, and I drew the loss first.",
       "scores": {
-        "beginner_clarity": 3,
-        "composition_hierarchy": 4,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__014.txt",
-      "notes": "Checklist 'NO TIMES / LOSS FIRST' under 'TWO CHECKS': close to the sentence, but 'NO TIMES' is unclear English and 'explain isolated and cross' is missing. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Checklist 'NO TIMES / LOSS FIRST' under 'TWO CHECKS': close to the sentence, but 'NO TIMES' is unclear English and 'explain isolated and cross' is missing. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/014.png, blob 8b41a28cbbeef8cfc0e1df2e55719c848168a179, 1536x1024, 125904 bytes). On-image text: EXPLAINIT WITHOUT A TIMES-NUMBER | Isolated: the loss stays in one box | Cross margin: other balances can be used | No times-number | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 460,
-        "top": 110,
-        "bottom": 309
+        "left": 103,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/014.png",
-      "scored_blob": "7a546c10cd46fe4065b8dd45368eb16181e175a5",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-11-advanced-liquidation/014.png",
+      "scored_blob": "8b41a28cbbeef8cfc0e1df2e55719c848168a179",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+      "pass": true,
+      "previous_committed_blob": "7a546c10cd46fe4065b8dd45368eb16181e175a5",
+      "remake_review": {
+        "file": "gen/bp-11-advanced-liquidation/014/cursor1.png",
+        "blob": "8b41a28cbbeef8cfc0e1df2e55719c848168a179",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "3a1137a197ca9d295a229b829a46526637b49e86",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/014.png, blob 8b41a28cbbeef8cfc0e1df2e55719c848168a179, 1536x1024, 125904 bytes). On-image text: EXPLAINIT WITHOUT A TIMES-NUMBER | Isolated: the loss stays in one box | Cross margin: other balances can be used | No times-number | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/015.png",
@@ -9932,44 +10228,68 @@
       "beat": 15,
       "chapter": "Recap",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "8bbc5db3ede2b134a4db725d07f847f8b542cc28",
-        "cursor/blueprint-beginner-images": "8bbc5db3ede2b134a4db725d07f847f8b542cc28"
+        "cursor/blueprint-beginner-images": "65ec7a0d3696d9143f06085706b39d458fb483c5",
+        "cursor/blueprint-cursor-images": "65ec7a0d3696d9143f06085706b39d458fb483c5"
       },
       "beat_concept": "Recap: opt-in, loss first, isolated fence, cross can pull, no multiple, funding without a rate, spot path unchanged.",
       "scores": {
-        "beginner_clarity": 1,
-        "composition_hierarchy": 2,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 1,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "illegible label: eight tiny chips (OPT / LOSS / FENCE / PULL / NONE / RATE / SPOT / LAST) across a thin strip"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__015.txt",
-      "notes": "Recap unreadable at lesson size. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Recap unreadable at lesson size. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/015.png, blob 65ec7a0d3696d9143f06085706b39d458fb483c5, 1536x1024, 125536 bytes). On-image text: RECAP | Optional | Loss first | Isolated: one box | Cross margin: other balances | No times-number | The spot page still stands | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/110/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 304,
+        "left": 103,
+        "right": 120,
         "top": 110,
-        "bottom": 412
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/015.png",
-      "scored_blob": "8bbc5db3ede2b134a4db725d07f847f8b542cc28",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-11-advanced-liquidation/015.png",
+      "scored_blob": "65ec7a0d3696d9143f06085706b39d458fb483c5",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+      "pass": true,
+      "previous_committed_blob": "8bbc5db3ede2b134a4db725d07f847f8b542cc28",
+      "remake_review": {
+        "file": "gen/bp-11-advanced-liquidation/015/cursor1.png",
+        "blob": "65ec7a0d3696d9143f06085706b39d458fb483c5",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 110,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "3a1137a197ca9d295a229b829a46526637b49e86",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/015.png, blob 65ec7a0d3696d9143f06085706b39d458fb483c5, 1536x1024, 125536 bytes). On-image text: RECAP | Optional | Loss first | Isolated: one box | Cross margin: other balances | No times-number | The spot page still stands | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/110/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/016.png",
@@ -10099,43 +10419,68 @@
       "beat": 19,
       "chapter": "If you skip",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "02c84ece3aca38aa0d6a8dfab1499279593b55cf",
-        "cursor/blueprint-beginner-images": "02c84ece3aca38aa0d6a8dfab1499279593b55cf"
+        "cursor/blueprint-beginner-images": "8e26bcccdd0883ac2194649a136568cc3e18daf4",
+        "cursor/blueprint-cursor-images": "8e26bcccdd0883ac2194649a136568cc3e18daf4"
       },
       "beat_concept": "If you skip this lesson, write Skipped on purpose on the spot notebook.",
       "scores": {
-        "beginner_clarity": 3,
-        "composition_hierarchy": 4,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__019.txt",
-      "notes": "Card 'OPT IN' with a 'SKIPPED' stamp: close, but the instruction is to write 'Skipped on purpose' on the spot notebook; headline 'SKIPPED ON' is a truncated phrase. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Card 'OPT IN' with a 'SKIPPED' stamp: close, but the instruction is to write 'Skipped on purpose' on the spot notebook; headline 'SKIPPED ON' is a truncated phrase. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/019.png, blob 8e26bcccdd0883ac2194649a136568cc3e18daf4, 1536x1024, 104732 bytes). On-image text: SKIPPEDONPURPOSE | Write this on the spot notebook | Skipped on purpose | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 61,
-        "right": 486,
-        "top": 110,
-        "bottom": 207
+        "left": 102,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/019.png",
-      "scored_blob": "02c84ece3aca38aa0d6a8dfab1499279593b55cf",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-11-advanced-liquidation/019.png",
+      "scored_blob": "8e26bcccdd0883ac2194649a136568cc3e18daf4",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+      "pass": true,
+      "previous_committed_blob": "02c84ece3aca38aa0d6a8dfab1499279593b55cf",
+      "remake_review": {
+        "file": "gen/bp-11-advanced-liquidation/019/cursor1.png",
+        "blob": "8e26bcccdd0883ac2194649a136568cc3e18daf4",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 102,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "3a1137a197ca9d295a229b829a46526637b49e86",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@3a1137a197ca9d295a229b829a46526637b49e86, identical at tip 3a1137a, course/images/bp-11-advanced-liquidation/019.png, blob 8e26bcccdd0883ac2194649a136568cc3e18daf4, 1536x1024, 104732 bytes). On-image text: SKIPPEDONPURPOSE | Write this on the spot notebook | Skipped on purpose | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/020.png",

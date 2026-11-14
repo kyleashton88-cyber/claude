@@ -584,3 +584,29 @@ Scored from `2203da82b2cf2cc81d4ce06b45ecbe10c8587635` (identical at tip 3a1137a
 
 ### Updated counts
 - **BP-10: 14/21 — not 100%.** Unused title / your-turn / outro rows remain in the queue and were not in this Cursor batch.
+
+---
+
+## Cursor-agent remakes for bp-11-advanced-liquidation used stills
+
+Scored from `3a1137a197ca9d295a229b829a46526637b49e86` (identical at tip 3a1137a). All 14 used stills PASS, placed, source cursor.
+
+| File | Result | Margins (l/r/t/b) | Scores | Blob |
+|---|---|---|---|---|
+| gen/bp-11-advanced-liquidation/001/cursor1.png | PASS | 102/120/109/95 | 5/5/5/5/5/—/5 | `e3ce6f3b8f836afb488ba512fdea57d1c49a50be` |
+| gen/bp-11-advanced-liquidation/004/cursor1.png | PASS | 101/120/109/95 | 5/5/5/5/5/—/5 | `d3a9442b2404141f0fcd21d3b4ca3cf0b00d6b47` |
+| gen/bp-11-advanced-liquidation/005/cursor1.png | PASS | 101/120/109/95 | 5/5/5/5/5/—/5 | `840cfabd55be475780e53388458601068483a58f` |
+| gen/bp-11-advanced-liquidation/006/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `1b6d814dc20a4f639831c1c007ce7bf3c16f2ba0` |
+| gen/bp-11-advanced-liquidation/007/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `8fd6e21cbc474541ad86664e88ba828acefe99ae` |
+| gen/bp-11-advanced-liquidation/008/cursor1.png | PASS | 102/120/109/95 | 5/5/5/5/5/—/5 | `ac5511a22a53231fec81860f0b493be6729186c1` |
+| gen/bp-11-advanced-liquidation/009/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `80e1e0f6bc9e31b3127489f46f16a56baf5ed525` |
+| gen/bp-11-advanced-liquidation/010/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `df536ec9158e70a6cde4c937b0223739aef4c726` |
+| gen/bp-11-advanced-liquidation/011/cursor1.png | PASS | 102/120/109/95 | 5/5/5/5/5/—/5 | `f7a28dfe73eedb78719025791495e049a81c33af` |
+| gen/bp-11-advanced-liquidation/012/cursor1.png | PASS | 102/120/109/95 | 5/5/5/5/5/—/5 | `ce65ee9940785297ec5395a6086c0345bc5ac309` |
+| gen/bp-11-advanced-liquidation/013/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `d0af8eecd50f5a89cc174c92a45c0bbff48fe647` |
+| gen/bp-11-advanced-liquidation/014/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `8b41a28cbbeef8cfc0e1df2e55719c848168a179` |
+| gen/bp-11-advanced-liquidation/015/cursor1.png | PASS | 103/120/110/95 | 5/5/5/5/5/—/5 | `65ec7a0d3696d9143f06085706b39d458fb483c5` |
+| gen/bp-11-advanced-liquidation/019/cursor1.png | PASS | 102/120/109/95 | 5/5/5/5/5/—/5 | `8e26bcccdd0883ac2194649a136568cc3e18daf4` |
+
+### Updated counts
+- **BP-11: 14/20 — not 100%.** Unused title / your-turn / outro rows remain in the queue and were not in this Cursor batch.
