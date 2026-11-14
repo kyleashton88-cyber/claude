@@ -458,13 +458,12 @@ def render_014() -> Image.Image:
         width=px(4),
     )
 
-    face = font(FONT_SEMI, 30)
-    stop_lines = ["Stop: the sentence for when", "the path leaves the band"]
+    face = font(FONT_SEMI, 36)
     labels = [
         ["Orders wait"],
         ["Inside your range"],
-        stop_lines,
-        ["Holdings change"],
+        ["Stop: your rule", "if price leaves"],
+        ["What you hold", "changes"],
     ]
     widths = []
     for lines in labels:
@@ -474,8 +473,9 @@ def render_014() -> Image.Image:
     left0 = (1536 - total) / 2
     boxes = []
     x = left0
-    tops = [748, 748, 712, 748]
-    heights = [62, 62, 108, 62]
+    # Two-line labels sit a little higher so the larger type stays inside the card.
+    tops = [730, 730, 690, 690]
+    heights = [78, 78, 128, 128]
     for w, top, h in zip(widths, tops, heights):
         boxes.append((x, top, x + w, top + h))
         x += w + gap
@@ -520,8 +520,8 @@ def render_014() -> Image.Image:
         img,
         108,
         100,
-        [("GRID BOT IN ", WHITE), ("ONE", CYAN), (" BREATH", WHITE)],
-        font(FONT_BOLD, 48),
+        [("THE WHOLE IDEA IN ", WHITE), ("ONE", CYAN), (" BREATH", WHITE)],
+        font(FONT_BOLD, 42),
     )
     final = finish(img)
     m = margins(final)
