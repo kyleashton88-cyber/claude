@@ -331,8 +331,8 @@ def bp02() -> list[dict]:
         board="no-secrets",
         reveal=1,
         vo=(
-            "A seed phrase is the list of words that unlocks a crypto wallet. A private key or an A P I secret is a password that can move your money. "
-            "You never type a seed phrase, a private key, or an A P I secret onto this page. "
+            "A seed phrase is the list of words that unlocks a crypto wallet. A private key or an API secret is a password that can move your money. "
+            "You never type a seed phrase, a private key, or an API secret onto this page. "
             "The chart has no balance on it. A public close is not your account. "
             "If a form asks for a secret, that form is not this lesson."
         ),
@@ -369,7 +369,7 @@ def bp02() -> list[dict]:
         vo=(
             "Say the page once, in your own words, and do not read the chart again. "
             "Name the pair, the band, the gaps, and the stop rule, then stop. "
-            "A secret is a seed phrase, a private key, or an A P I secret. None of those go on this page. "
+            "A secret is a seed phrase, a private key, or an API secret. None of those go on this page. "
             "You write Example on your own notebook so a practice sketch is never later mistaken for a live plan."
         ),
         caption="Say the page once. No secrets. Example is not an order.",
