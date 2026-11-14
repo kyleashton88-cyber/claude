@@ -320,7 +320,7 @@ def _beat_teaching(beat: dict) -> str | None:
     overrides = {
         "course/images/bp-03-what-is-a-grid-bot/001.png": "A grid bot doesn't predict the price. It waits.",
         "course/images/bp-03-what-is-a-grid-bot/003.png": "A grid bot is a tool that keeps buy orders below the price and sell orders above it.",
-        "course/images/bp-03-what-is-a-grid-bot/009.png": "After an order fills, the bot puts a new waiting order on the next line.",
+        "course/images/bp-03-what-is-a-grid-bot/009.png": "An order fills. A new order waits on the next line. That is the bot's job.",
         "course/images/bp-03-what-is-a-grid-bot/013.png": "This course is not connected to any exchange.",
         "course/images/bp-03-what-is-a-grid-bot/014.png": "Orders wait. Inside your range. Stop: your rule if price leaves. What you hold changes.",
         "course/images/bp-03-what-is-a-grid-bot/015.png": "Your turn: draw a band, label the five words, and draw one step down.",
