@@ -235,5 +235,173 @@ def lesson_bp04() -> None:
     bp04_011()
 
 
+def ladder(img, x, y0, gap, n, length=280) -> None:
+    for i in range(n):
+        hline(img, x, x + length, y0 + i * gap, CYAN, 5)
+
+
+def bp05_015() -> None:
+    img = canvas()
+    head(img, "RECAP", "RECAP", size=52)
+    card(img, (96, 220, 560, 900))
+    ladder(img, 160, 280, 70, 7, 280)
+    face = font(FONT_SEMI, 32)
+    tag(img, (150, 780, 500, 860), ["7 lines, 6 gaps"], face)
+    rows(img, ["Range first", "Count gaps, not lines", "Gap vs fee", "One change at a time"], y0=250, size=32)
+    # rows() draws full width and would cover the ladder. Draw the phrases on the right instead.
+    # The call above already painted full-width rows over the ladder. Redo is cleaner.
+    final_unused = img
+    del final_unused
+    img = canvas()
+    head(img, "RECAP", "RECAP", size=52)
+    card(img, (100, 230, 520, 900))
+    ladder(img, 160, 300, 62, 7, 260)
+    tag(img, (140, 760, 480, 850), ["7 lines, 6 gaps"], font(FONT_SEMI, 32))
+    phrases = ["Range first", "Count gaps, not lines", "Gap vs fee", "One change at a time"]
+    face = font(FONT_SEMI, 32)
+    for i, line in enumerate(phrases):
+        top = 250 + i * 150
+        tag(img, (580, top, 1420, top + 110), [line], face)
+    stamp(img, 1200, 880)
+    save(img, "course/images/bp-05-spacing-and-range/015.png")
+    record([{
+        "path": "course/images/bp-05-spacing-and-range/015.png",
+        "lesson": "bp-05-spacing-and-range",
+        "shows": "A recap beside the house example: 7 lines and 6 gaps. The four lines are range first, count gaps not lines, gap versus fee, and one change at a time.",
+        "alt": "Recap: range first, count gaps not lines, check the gap against the fee, and change one thing at a time. The example has 7 lines and 6 gaps.",
+        "batch": "cursor-bp05",
+    }])
+
+
+def lesson_bp05() -> None:
+    bp05_015()
+
+
+def leave_picture(img, box) -> None:
+    x0, y0, x1, y1 = box
+    card(img, box)
+    top = y0 + 80
+    bot = y0 + 200
+    hline(img, x0 + 40, x1 - 40, top, CYAN, 5)
+    hline(img, x0 + 40, x1 - 40, bot, CYAN, 5)
+    solid(img, [
+        (x0 + 70, (top + bot) // 2),
+        (x0 + 160, top),
+        (x0 + 250, bot),
+        (x0 + 340, bot + 90),
+        (x1 - 50, bot + 110),
+    ])
+
+
+def bp06() -> None:
+    specs = [
+        ("006", "FINISH RULE: PRICE LEAVES AND DOESN'T COME BACK", "DOESN'T COME BACK",
+         "Price leaves the band and stays outside.",
+         "The finish rule: price leaves the band and does not come back."),
+        ("010", "INVALIDATION = WHERE YOUR IDEA IS PROVEN WRONG", "PROVEN WRONG",
+         "The point where the idea you wrote is proven wrong.",
+         "Invalidation means the point where your idea is proven wrong."),
+        ("012", "COPY THE FINISH RULE FIRST", "FINISH RULE",
+         "Write the finish rule before the start rule.",
+         "Copy the finish rule first, before the start rule."),
+        ("014", "WRITE BOTH RULES TODAY, FINISH FIRST", "FINISH FIRST",
+         "Write the finish rule and the start rule today. Finish comes first.",
+         "Write both rules today, and write the finish rule first."),
+        ("019", "CAN A CLASSMATE POINT AT YOUR FINISH RULE?", "FINISH RULE",
+         "The finish rule is clear enough for someone else to point at it.",
+         "Can a classmate point at your finish rule?"),
+    ]
+    for num, title, cyan, shows, alt in specs:
+        img = canvas()
+        size = 36 if len(title) < 42 else 32
+        head(img, title, cyan, size=size)
+        if num in {"006", "010", "019"}:
+            leave_picture(img, (160, 280, 1370, 860))
+            face = font(FONT_SEMI, 32)
+            if num == "006":
+                tag(img, (220, 700, 720, 800), ["Price leaves"], face)
+                tag(img, (780, 700, 1300, 800), ["Doesn't come back"], face)
+                arrow(img, (470, 700), (410, 480))
+                arrow(img, (1040, 700), (1000, 582))
+            elif num == "010":
+                tag(img, (360, 700, 1160, 800), ["Your idea is proven wrong"], face)
+                arrow(img, (760, 700), (410, 480))
+            else:
+                tag(img, (300, 700, 1220, 800), ["Point at this leaving path"], face)
+                arrow(img, (760, 700), (410, 480))
+            stamp(img, 1240, 340)
+        elif num == "012":
+            face = font(FONT_SEMI, 34)
+            tag(img, (160, 300, 1370, 460), ["1  Finish rule"], face)
+            tag(img, (160, 520, 1370, 680), ["2  Start rule"], face)
+            stamp(img, 1240, 760)
+        else:
+            face = font(FONT_SEMI, 34)
+            tag(img, (160, 280, 760, 480), ["Finish rule", "Write this first"], face)
+            tag(img, (800, 520, 1400, 720), ["Start rule", "Write this second"], face)
+            arrow(img, (760, 380), (800, 560))
+            stamp(img, 280, 760)
+        rel = f"course/images/bp-06-entry-and-exit/{num}.png"
+        final = save(img, rel)
+        if num == "006":
+            assert_tip(final, (410, 480), (410, 450), "leaves")
+            assert_tip(final, (1000, 582), (1100, 584), "stays")
+        record([{
+            "path": rel,
+            "lesson": "bp-06-entry-and-exit",
+            "shows": shows,
+            "alt": alt,
+            "batch": "cursor-bp06",
+        }])
+
+
+def form_fields(img, x, y, w) -> None:
+    face = font(FONT_SEMI, 34)
+    labels = ["Pair", "Top", "Bottom", "Gap count", "Your two rules"]
+    for i, line in enumerate(labels):
+        top = y + i * 110
+        tag(img, (x, top, x + w, top + 90), [line], face)
+
+
+def bp07() -> None:
+    img = canvas()
+    head(img, "FIVE BOXES TO COPY", "FIVE", size=48)
+    form_fields(img, 280, 240, 980)
+    stamp(img, 1280, 200)
+    save(img, "course/images/bp-07-spot-paper-trading/005.png")
+    record([{
+        "path": "course/images/bp-07-spot-paper-trading/005.png",
+        "lesson": "bp-07-spot-paper-trading",
+        "shows": "Five boxes to copy: pair, top, bottom, gap count, and your two rules. The word lines is not a field.",
+        "alt": "Copy five fields: pair, top, bottom, gap count, and your two rules.",
+        "batch": "cursor-bp07",
+    }])
+    img = canvas()
+    head(img, "IF A LABEL DIFFERS, USE THESE", "THESE", size=42)
+    form_fields(img, 280, 240, 980)
+    stamp(img, 1280, 200)
+    save(img, "course/images/bp-07-spot-paper-trading/019.png")
+    record([{
+        "path": "course/images/bp-07-spot-paper-trading/019.png",
+        "lesson": "bp-07-spot-paper-trading",
+        "shows": "If a screen label differs, use these five: pair, top, bottom, gap count, and your two rules.",
+        "alt": "If a label on the screen differs, translate it to pair, top, bottom, gap count, and your two rules.",
+        "batch": "cursor-bp07",
+    }])
+
+
+def lesson_bp05() -> None:
+    bp05_015()
+
+
+LESSONS = {
+    "bp04": lesson_bp04,
+    "bp05": lesson_bp05,
+    "bp06": bp06,
+    "bp07": bp07,
+}
+
+
 if __name__ == "__main__":
-    lesson_bp04()
+    name = sys.argv[1] if len(sys.argv) > 1 else "bp04"
+    LESSONS[name]()
