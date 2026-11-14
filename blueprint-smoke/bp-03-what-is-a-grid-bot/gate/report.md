@@ -3,7 +3,7 @@
 Result: **PASS**
 
 Format: Blueprint lesson (`blueprint`), 360s minimum, no upper limit.
-Master: `course/blueprint-rebuild/masters/bp-03-what-is-a-grid-bot.mp4`
+Master: `/agent/repos/claude/course/blueprint-rebuild/masters/bp-03-what-is-a-grid-bot.mp4`
 
 Loudness fails the gate when it is outside the window. It is not only printed.
 Target -14.0 LUFS ± 1.0, true peak at or below -1.0 dBTP.
