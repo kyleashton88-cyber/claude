@@ -299,3 +299,17 @@ Orchestrator should reconcile d1f6 to match the beginner-images pass list for th
 - BP-02: **31/32** — NOT 100% (fail: 016)
 - BP-03: **27/28** — NOT 100% (fail: 010)
 - TOTAL: **87/92**
+
+---
+
+## Run on top of 8f21533 — close gaps + bp-03 010 v3
+
+**bp-02 021 flipped to FAIL (panel-connector arrow rule).** Measured the next->grid transition arrow at full resolution: arrowhead tip x=745, grid-card left border x=761 -> 17px gap. Doubt=fail for a perfect run. Committed still unchanged (never remade); first remake prompt written (`specs/remake/bp-02-what-you-need__021.txt`) pinning the transition arrow and both label arrows to touch their targets; queued at web1.
+
+**bp-03 010 web3 (v3) PASS.** Five word tiles spelled exactly Upper / Lower / Levels / Side / Stop (matches beat 10 "upper, lower, levels, side, stop"); third tile (Levels) highlighted; "The one people skip" arrow tip touches the top edge of the Levels tile (verified 4-8x). No digits, on-brand, pencil whole-in-frame with no glow streak. Placed; removed from queue. **This completes BP-03: 28/28 = 100%.**
+
+### Updated counts (92-row list)
+- **BP-01: 29/32 — NOT 100%.** Rows left: 001, 007, 010 (the three genuine d1f6/beginner-images drifts flagged for Orchestrator reconciliation + the tip-pinned remakes).
+- **BP-02: 30/32 — NOT 100%.** Rows left: 016 (back to old still, queued), 021 (flipped this run).
+- **BP-03: 28/28 — YES, 100%.**
+- **92-row total: 87/92.**

@@ -3,10 +3,10 @@ FORMAT: one landscape image, 3:2, exactly 1536x1024 pixels.
 MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 80px inside the left and right edges and at least 90px inside the top and bottom edges. Nothing with text touches or approaches the frame edge. Words in the headline are separated by a clear full space.
 
 Headline: "HALF THE GAP, DOUBLE THE LINES" (the word DOUBLE in cyan, the rest white).
-Scene: Two glass boxes of equal height side by side. Left box: 5 evenly spaced lines. Right box: 9 evenly spaced lines, gaps half as big. EXAMPLE stamp.
+Scene: Two glass boxes of exactly equal height side by side. Left box: exactly 6 evenly spaced horizontal lines. Right box: exactly 12 evenly spaced horizontal lines (twice as many as the left box), so the gaps are half as big. QA FIX v2: do NOT print any large standalone numeral (no big "5", "9", or any digit) inside either box; show only the horizontal lines. The right box must contain visibly double the number of lines of the left box. EXAMPLE stamp.
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
 - "Same height": arrow tip touches a dashed line joining the tops of the two boxes.
-- "Smaller gaps need more lines": arrow tip touches the right box with 9 lines.
+- "Smaller gaps need more lines": arrow tip touches the right box (the one with twice as many lines).
 - "Recount: 38 gaps, not 40": under: the right box, no arrow.
 - "EXAMPLE": a small cyan outlined EXAMPLE stamp in the lower-right corner of the main card or chart, fully inside the card, no arrow.
 LABEL ARROWS: exactly 2 thin cyan label arrows, one for each label above that says "arrow tip touches", each with one clean arrowhead whose tip touches the named target. Labels that say "no arrow" have no arrow. Apart from any arrow the Scene itself describes, there are no other arrows; no doubled arrowheads, and no arrow crosses text.

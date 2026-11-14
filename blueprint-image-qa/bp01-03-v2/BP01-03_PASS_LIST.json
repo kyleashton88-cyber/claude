@@ -2124,11 +2124,13 @@
     "character_consistency": null,
     "label_accuracy": 4
    },
-   "hard_fails": [],
-   "status": "pass",
-   "action": "passed_as_is",
-   "remake_prompt": null,
-   "notes": "Outro names the next lesson exactly: 'NEXT: WHAT IS A GRID BOT'.",
+   "hard_fails": [
+    "panel-connector arrow: the next->grid transition arrowhead stops ~17px short of the grid card left border (measured: tip x=745, panel border x=761) and floats in the gap; tip does not touch its target"
+   ],
+   "status": "fail",
+   "action": "needs_remake",
+   "remake_prompt": "specs/remake/bp-02-what-you-need__021.txt",
+   "notes": "Flipped under the strict panel-connector arrow rule (doubt=fail). Measured the next->grid transition arrow at full resolution: arrowhead tip x=745, grid card left border x=761 -> 17px gap. Committed still is unchanged (never remade); first remake prompt written pinning the arrow to touch the card.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
@@ -2143,7 +2145,9 @@
    "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-02-what-you-need/021.png",
    "scored_blob": "4618469b84cecf2f42f39c50e0d944173acfb466",
    "committed": true,
-   "pass": true
+   "pass": false,
+   "flipped_from_pass": null,
+   "previous_committed_blob": null
   },
   {
    "path": "course/images/bp-03-what-is-a-grid-bot/001.png",
@@ -2659,41 +2663,41 @@
    "beat": 10,
    "chapter": "Say the five",
    "kind": "lesson-still",
-   "source": "committed still; image field of course/scripts/bp-03-what-is-a-grid-bot.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "7c494c8244df51eae8d085d6138ab64d86cb54e0",
     "cursor/blueprint-beginner-images": "7c494c8244df51eae8d085d6138ab64d86cb54e0"
    },
    "beat_concept": "Say the five labels while you point: upper, lower, levels, side, stop.",
    "scores": {
-    "beginner_clarity": 3,
-    "composition_hierarchy": 4,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 5,
     "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
+    "brand_fidelity": 5,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__010.txt",
-   "notes": "'Say the five' frame labels Top / Price steps / Bottom / What you hold / Stop, not the five words the learner is told to say (upper, lower, levels, side, stop); no highlighted 'often skipped' tag.",
+   "notes": "web3 (v3 prompt) PASS. Five tiles spelled exactly Upper/Lower/Levels/Side/Stop (matches beat 10 'upper, lower, levels, side, stop'); third tile Levels highlighted. 'The one people skip' arrow tip touches the top edge of the Levels tile (verified 4-8x). No digits. Pencil whole-in-frame under the row, no glow streak into tiles. Left margin 68px (headline) > 45px standard.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 70,
-    "right": 66,
-    "top": 51,
-    "bottom": 112
+    "left": 68,
+    "right": 81,
+    "top": 81,
+    "bottom": 258
    },
    "mascot_in_frame": false,
    "previous_v10_pass": true,
-   "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-03-what-is-a-grid-bot/010.png",
-   "scored_blob": "7c494c8244df51eae8d085d6138ab64d86cb54e0",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/010.png",
+   "scored_blob": "a0d07e989e76bd562826e362f7395b9631d0d0c2",
    "committed": true,
-   "pass": false,
+   "pass": true,
    "remake_review": {
     "file": "gen/bp-03-what-is-a-grid-bot/010/web1.png",
     "blob": "201dcbc4615ba497c0a50d9ec928eaaadeb697e1",

@@ -3,10 +3,11 @@ FORMAT: one landscape image, 3:2, exactly 1536x1024 pixels.
 MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 80px inside the left and right edges and at least 90px inside the top and bottom edges. Nothing with text touches or approaches the frame edge. Words in the headline are separated by a clear full space.
 
 Headline: "RECAP: SPACING" (the word RECAP in cyan, the rest white).
-Scene: Four glass icons in a row: a box, a gap bracket, an amber fee bar under a gap, a single dial.
+Scene: Exactly FIVE glass icons in an evenly spaced row (QA FIX v2: five, not four): a box; a gap bracket; a short band labelled with the house example; an amber fee bar under a gap; a single dial. Each icon gets one chip label below it, so there are five chips in total.
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
 - "Box first": under: the box icon, no arrow.
 - "Count gaps": under: the gap bracket icon, no arrow.
+- "19 gaps = 9.5%": under: the short band icon (the third icon), no arrow.
 - "Check fees": under: the fee bar icon, no arrow.
 - "One change at a time": under: the single dial icon, no arrow.
 LABEL ARROWS: exactly 0 thin cyan label arrows, one for each label above that says "arrow tip touches", each with one clean arrowhead whose tip touches the named target. Labels that say "no arrow" have no arrow. Apart from any arrow the Scene itself describes, there are no other arrows; no doubled arrowheads, and no arrow crosses text.

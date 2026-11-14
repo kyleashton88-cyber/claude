@@ -277,3 +277,22 @@ Flipped back to fail. The previous committed still is restored at `course/images
 Checked and touching: 007 "Higher highs", 008 both, 009 "Give it one name", 014 both, 016 Range/Trend/Break, 019 both, 020 "Bring your notes".
 
 **BP-04 running count: 13/20 pass. Not 100%. Left: 006 (web3, v3), 007, 009, 011, 012, 015, 018 (web2, v2).** BP-04..11 total: 13/161. Queue: 148.
+
+---
+
+## Run on top of 8f21533 — BP-04 010 flip + BP-05 web1 scoring
+
+**BP-04 010 flipped to FAIL (panel-connector arrow rule).** The three column arrows (Range->Ladder, Trend->Pile, Break->Stop) stop 20-40px above their icons and float. Restored the original committed still (blob 100ad315); out/ copy absent; v3 prompt pins each arrowhead to touch its icon; queued at web3. **BP-04: 12/20 — NOT 100%.** Rows left: 006, 007, 009, 010, 011, 012, 015, 018.
+
+### BP-05 spacing-and-range — web1 renders scored (14 pass / 5 fail)
+PASS (placed, chatgpt-web): 001, 002, 003, 004, 007, 008, 009, 010, 011, 012, 013, 014, 017, 018.
+- Number checks verified: 004 = 20 lines / 19 gaps (peak count 20); 010 = "20 lines x 0.5% = 10%" (wrong, X) vs "19 gaps x 0.5% = 9.5%" (right, check); 013/014/017/018 all show 19 gaps / 0.5% / 9.5% correctly. All arrow tips (incl. panel connectors) verified to touch.
+
+FAIL (v2 prompt written, v1 superseded, queued at web2):
+- **005** — misspelling "Eacn gap" (should be "Each gap"); 0.5%/9.5%/19 values were otherwise correct.
+- **006** — unexplained big numerals "5" and "9" inside the boxes; 9 is not double 5, so it doesn't illustrate "DOUBLE THE LINES" (beginner-confusing). "Recount: 38 gaps, not 40" was correct.
+- **015** — only FOUR recap chips; beat 15 calls for FIVE (missing the "19 gaps = 9.5%" house-example chip).
+- **016** — only ~12 ladder lines, not the TWENTY lines / nineteen gaps the beat requires.
+- **019** — next->card transition arrowhead stops ~25px short of the card (tip x=761, card border x=786); panel-connector fail. Outro text "Entry and exit rules" correct.
+
+**BP-05: 14/19 — NOT 100%.** Rows left: 005, 006, 015, 016, 019.

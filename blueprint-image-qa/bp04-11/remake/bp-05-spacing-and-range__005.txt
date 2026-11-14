@@ -5,7 +5,7 @@ MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 8
 Headline: "GAPS × STEP = TOTAL HEIGHT" (the word TOTAL in cyan, the rest white).
 Scene: A glass formula card: a small gap block, a times sign, a stack of 19 gap blocks forming a tall bar. EXAMPLE stamp.
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
-- "Each gap: 0.5%": arrow tip touches the single small gap block on the left.
+- "Each gap: 0.5%": arrow tip touches the single small gap block on the left. QA FIX v2: spell the first word exactly E-A-C-H ("Each"), not "Eacn" or "Eoch"; the v1 render misspelled it "Eacn gap". Render all label text crisply with correct spelling.
 - "19 gaps": arrow tip touches the stack of 19 gap blocks.
 - "Total: 9.5% top to bottom": arrow tip touches a bracket spanning the full height of the stack.
 - "EXAMPLE": a small cyan outlined EXAMPLE stamp in the lower-right corner of the main card or chart, fully inside the card, no arrow.

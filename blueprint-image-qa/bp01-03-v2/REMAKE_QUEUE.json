@@ -136,30 +136,26 @@
   },
   {
    "order": 5,
-   "lesson": "bp-03-what-is-a-grid-bot",
-   "beat": 10,
-   "path": "course/images/bp-03-what-is-a-grid-bot/010.png",
-   "prompt": "specs/remake/bp-03-what-is-a-grid-bot__010.txt",
+   "lesson": "bp-02-what-you-need",
+   "beat": 21,
+   "path": "course/images/bp-02-what-you-need/021.png",
+   "prompt": "specs/remake/bp-02-what-you-need__021.txt",
    "attach": [
     "/workspace/blueprint-beginner/_anchors/anchor.png"
    ],
    "needs_mascot_ref": false,
-   "target_gen": "gen/bp-03-what-is-a-grid-bot/010/web3.png",
-   "target_out": "out/course/images/bp-03-what-is-a-grid-bot/010.png",
-   "repo_path": "course/images/bp-03-what-is-a-grid-bot/010.png",
+   "target_gen": "gen/bp-02-what-you-need/021/web1.png",
+   "target_out": "out/course/images/bp-02-what-you-need/021.png",
+   "repo_path": "course/images/bp-02-what-you-need/021.png",
    "size": "1536x1024",
-   "headline": "POINT AND SAY THE FIVE",
-   "reason": "web1 remake failed: Five tiles spelled right, Levels highlighted, \"The one people skip\" arrow lands on the third tile. But the pencil runs off the frame at the bottom-left (0px margin, the prompt asks 80px for pencils) and its tip pokes into the \"Upper\" tile, with a thin glow streak rising from the tip into the letter p. The pencil does not lie under the row as asked.",
+   "headline": "NEXT: WHAT IS A GRID BOT",
+   "reason": "committed still passed first scoring, then failed under the strict panel-connector arrow rule: the next->grid transition arrowhead stops ~17px short of the grid card (tip x=745, card border x=761) and floats in the gap.",
    "hard_fails": [
-    "cramped margin: pencil runs off the left and bottom frame edges (0px)",
-    "AI artifact: light streak from the pencil tip into the \"Upper\" tile"
+    "next->grid transition arrow tip floats 17px short of the grid card"
    ],
-   "previous_attempts": [
-    "gen/bp-03-what-is-a-grid-bot/010/web1.png"
-   ],
-   "note_target": "web2.png already exists in that folder (second image of the ChatGPT series, unscored); write the new render to web3.png.",
-   "prompt_version": "v3",
-   "superseded_prompt": "specs/remake/_superseded/bp-03-what-is-a-grid-bot__010.v2.txt"
+   "previous_attempts": [],
+   "prompt_version": "v1 (first remake)",
+   "superseded_prompt": null
   }
  ],
  "code_fix_needed": [

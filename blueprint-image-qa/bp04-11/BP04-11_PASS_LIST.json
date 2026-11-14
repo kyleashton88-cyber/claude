@@ -781,7 +781,7 @@
    "beat": 10,
    "chapter": "What you do with the label",
    "kind": "lesson-still",
-   "source": "chatgpt-web",
+   "source": "committed still (restored original; was chatgpt-web web2 pass, flipped under the panel-connector arrow rule); d1f6 and beginner-images blob 100ad315",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "100ad3151b6585af8056000afa1de82cc615cb63",
     "cursor/blueprint-beginner-images": "100ad3151b6585af8056000afa1de82cc615cb63"
@@ -796,11 +796,13 @@
     "character_consistency": null,
     "label_accuracy": 5
    },
-   "hard_fails": [],
-   "status": "pass",
-   "action": "none",
+   "hard_fails": [
+    "panel-connector arrows: all three column arrowheads (Range->Ladder, Trend->Pile, Break->Stop) stop 20-40px above their icons and float in empty space; tips do not touch their targets"
+   ],
+   "status": "fail",
+   "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-04-market-regimes__010.txt",
-   "notes": "Three chart cards (Range weave, Trend staircase, Break drop) with tags under each, three thick down arrows to Ladder, Pile (three plain glass discs) and Stop (amber line with a note card). EXAMPLE inside the Break card. Exactly three arrows; side margins 78/110px; tags well inside 100px. Matches 6848d09 beat 10 \"three arrows from the three shapes to Ladder, Pile, and Stop\". Small kink in the Range weave, not distracting.",
+   "notes": "Flipped under the strict panel-connector arrow rule: the three thick cyan column arrows end well above the Ladder/Pile/Stop icons (measured 20-40px gaps). Restored the original committed still (100ad315); out/ copy absent. v3 prompt pins each arrowhead to touch its icon.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
@@ -810,10 +812,10 @@
     "top": 68,
     "bottom": 121
    },
-   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/010.png",
-   "scored_blob": "387e1016e1b7b81b49b93dc4eff7a613a4908312",
+   "scored_file": null,
+   "scored_blob": "100ad3151b6585af8056000afa1de82cc615cb63",
    "committed": true,
-   "pass": true,
+   "pass": false,
    "remake_review": {
     "file": "gen/bp-04-market-regimes/010/web2.png",
     "blob": "387e1016e1b7b81b49b93dc4eff7a613a4908312",
@@ -868,7 +870,12 @@
     }
    ],
    "previous_fbb3f9c_blob": "100ad3151b6585af8056000afa1de82cc615cb63",
-   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/010/web2.png (prompt specs/remake/bp-04-market-regimes__010.txt), saved via out/course/images/bp-04-market-regimes/010.png at 1536x1024 (already 3:2, no fill needed)"
+   "source_detail": "ChatGPT web render gen/bp-04-market-regimes/010/web2.png (prompt specs/remake/bp-04-market-regimes__010.txt), saved via out/course/images/bp-04-market-regimes/010.png at 1536x1024 (already 3:2, no fill needed)",
+   "flipped_from_pass": {
+    "blob": "387e1016e1b7b81b49b93dc4eff7a613a4908312",
+    "source": "chatgpt-web",
+    "file": "gen/bp-04-market-regimes/010/web2.png"
+   }
   },
   {
    "path": "course/images/bp-04-market-regimes/011.png",
@@ -1553,39 +1560,39 @@
    "beat": 1,
    "chapter": "Hook",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "165ed10b0f0d5d0348638a0ee9cb96807086abcc",
     "cursor/blueprint-beginner-images": "165ed10b0f0d5d0348638a0ee9cb96807086abcc"
    },
    "beat_concept": "A band that is too tight can break on an ordinary weave you already drew.",
    "scores": {
-    "beginner_clarity": 2,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 4,
     "brand_fidelity": 4,
-    "text_legibility": 4,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__001.txt",
-   "notes": "Light streaks into a glowing 'EXIT' block: no band, no weave, no 'too tight' comparison; 'TIGHT BAND' headline alone does not teach the idea.",
+   "notes": "Beat 1: tight band with a weave; two escape points circled ('Normal wiggle escapes'), 'Box too narrow' arrow touches the band line. EXAMPLE. No digits. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 74,
-    "right": 405,
-    "top": 98,
-    "bottom": 404
+    "left": 81,
+    "right": 81,
+    "top": 96,
+    "bottom": 6
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/001.png",
-   "scored_blob": "165ed10b0f0d5d0348638a0ee9cb96807086abcc",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/001.png",
+   "scored_blob": "2afa2c3c21651b65ee85a7aaa250861ae3abbb77",
    "committed": true,
-   "pass": false
+   "pass": true
   },
   {
    "path": "course/images/bp-05-spacing-and-range/002.png",
@@ -1593,39 +1600,39 @@
    "beat": 2,
    "chapter": "Disclaimer",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "0143ef5f53a06cdbe6a32b294b37a86e7fda8818",
     "cursor/blueprint-beginner-images": "0143ef5f53a06cdbe6a32b294b37a86e7fda8818"
    },
    "beat_concept": "Education only. Not financial advice.",
    "scores": {
-    "beginner_clarity": 3,
-    "composition_hierarchy": 3,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
     "craft_polish": 4,
     "brand_fidelity": 4,
-    "text_legibility": 4,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__002.txt",
-   "notes": "Disclaimer reads 'READ ONLY / NOT ADVICE' with a book icon, not 'Education only. Not financial advice.'.",
+   "notes": "Beat 2 disclaimer card: exact text 'Education only. Not financial advice.' Book+ruler+check icon. Clean. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 50,
-    "right": 429,
-    "top": 110,
-    "bottom": 176
+    "left": 22,
+    "right": 62,
+    "top": 75,
+    "bottom": 104
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/002.png",
-   "scored_blob": "0143ef5f53a06cdbe6a32b294b37a86e7fda8818",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/002.png",
+   "scored_blob": "3e722101e7aa63638c44fdbd85667cd7ec755799",
    "committed": true,
-   "pass": false
+   "pass": true
   },
   {
    "path": "course/images/bp-05-spacing-and-range/003.png",
@@ -1633,39 +1640,39 @@
    "beat": 3,
    "chapter": "Title card",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "861429c47385b8d37645f0b4b10763a5e1d8dcc0",
     "cursor/blueprint-beginner-images": "861429c47385b8d37645f0b4b10763a5e1d8dcc0"
    },
    "beat_concept": "Choosing grid spacing and range",
    "scores": {
-    "beginner_clarity": 1,
-    "composition_hierarchy": 2,
-    "craft_polish": 3,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 4,
     "brand_fidelity": 4,
-    "text_legibility": 4,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__003.txt",
-   "notes": "Title card is an empty glass card with two bracket lines and a 'LESSON' chip: glowing rectangle, no subject.",
+   "notes": "Beat 3 title card: 'CHOOSING SPACING AND RANGE'. Spacing=gap and Range=whole box labelled, both arrows touch. EXAMPLE. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 56,
-    "right": 219,
-    "top": 110,
-    "bottom": 213
+    "left": 74,
+    "right": 60,
+    "top": 41,
+    "bottom": 125
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/003.png",
-   "scored_blob": "861429c47385b8d37645f0b4b10763a5e1d8dcc0",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/003.png",
+   "scored_blob": "21292b9fff87b8dec8bd58b1662981b8d1daf537",
    "committed": true,
-   "pass": false
+   "pass": true
   },
   {
    "path": "course/images/bp-05-spacing-and-range/004.png",
@@ -1673,42 +1680,39 @@
    "beat": 4,
    "chapter": "Gaps and orders",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "b615dabcbfd40b25667f34d4b34d9a21eed40b7d",
     "cursor/blueprint-beginner-images": "b615dabcbfd40b25667f34d4b34d9a21eed40b7d"
    },
    "beat_concept": "Twenty order lines make nineteen gaps.",
    "scores": {
-    "beginner_clarity": 2,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 4,
     "brand_fidelity": 4,
-    "text_legibility": 3,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 1
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "wrong number: badge says '19 GAPS' but only 13 lines (12 gaps) are drawn",
-    "artifact: rows of dotted pseudo-text along the lines"
-   ],
-   "status": "fail",
-   "action": "needs_remake",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__004.txt",
-   "notes": "Lines are not labelled as orders, gaps are not marked, '20 order lines' is not shown.",
+   "notes": "Beat 4: verified EXACTLY 20 lines / 19 gaps (peak count 20, even spacing). '20 lines' and '19 gaps between them' arrows touch. EXAMPLE. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 50,
-    "right": 218,
-    "top": 109,
-    "bottom": 385
+    "left": 85,
+    "right": 87,
+    "top": 71,
+    "bottom": 118
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/004.png",
-   "scored_blob": "b615dabcbfd40b25667f34d4b34d9a21eed40b7d",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/004.png",
+   "scored_blob": "52918482981ac1b8c92798e4bcabfd1bd8c7b08d",
    "committed": true,
-   "pass": false
+   "pass": true
   },
   {
    "path": "course/images/bp-05-spacing-and-range/005.png",
@@ -1716,7 +1720,7 @@
    "beat": 5,
    "chapter": "The span",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "ddcdc9013affec15352dd94600415b3eb1891c03",
     "cursor/blueprint-beginner-images": "ddcdc9013affec15352dd94600415b3eb1891c03"
@@ -1731,11 +1735,13 @@
     "character_consistency": null,
     "label_accuracy": 2
    },
-   "hard_fails": [],
+   "hard_fails": [
+    "MISSPELLING: the label reads 'Eacn gap: 0.5%' (should be 'Each gap: 0.5%') - verified at 4-8x. Hard fail on spelling, even though the 0.5%/9.5%/19-gaps values are correct."
+   ],
    "status": "fail",
    "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__005.txt",
-   "notes": "'HALF SPAN' headline mislabels the beat (the span from 19 gaps x 0.5%); no 0.5% or 9.5% shown; 'SPAN' bracket and '19 GAPS' tag float between two lines with no ladder.",
+   "notes": "web1 remake FAIL. MISSPELLING: the label reads 'Eacn gap: 0.5%' (should be 'Each gap: 0.5%') - verified at 4-8x. Hard fail on spelling, even though the 0.5%/9.5%/19-gaps values are correct. v2 prompt written (v1 superseded).",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
@@ -1756,7 +1762,7 @@
    "beat": 6,
    "chapter": "Half spacing",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "d31a2af4cf4d0b4ac729ef703620c0c8cc0d9315",
     "cursor/blueprint-beginner-images": "d31a2af4cf4d0b4ac729ef703620c0c8cc0d9315"
@@ -1772,13 +1778,12 @@
     "label_accuracy": 1
    },
    "hard_fails": [
-    "wrong number: a crossed 40 beside a glowing unlabelled '39' reads as '39 gaps, not 40'",
-    "the lesson (beat 6) says 38 gaps, not 40 (39 is only right as a line count, and nothing says lines)"
+    "Two big unexplained numerals '5' and '9' are drawn inside the boxes; they don't illustrate 'DOUBLE THE LINES' (9 is not double 5) and confuse a beginner. 'Recount: 38 gaps, not 40' is correct but the 5/9 digits are a label-accuracy/clarity fail."
    ],
    "status": "fail",
    "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__006.txt",
-   "notes": "'NOT FORTY' on a stack of slabs: no before/after ladder, no labels, no EXAMPLE.",
+   "notes": "web1 remake FAIL. Two big unexplained numerals '5' and '9' are drawn inside the boxes; they don't illustrate 'DOUBLE THE LINES' (9 is not double 5) and confuse a beginner. 'Recount: 38 gaps, not 40' is correct but the 5/9 digits are a label-accuracy/clarity fail. v2 prompt written (v1 superseded).",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
@@ -1799,39 +1804,39 @@
    "beat": 7,
    "chapter": "Range first",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "66cb46ca2d79401813a3afa6fd2e312574039f5c",
     "cursor/blueprint-beginner-images": "66cb46ca2d79401813a3afa6fd2e312574039f5c"
    },
    "beat_concept": "A spacing percent without a range is a number in the margin.",
    "scores": {
-    "beginner_clarity": 3,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 4,
     "brand_fidelity": 4,
-    "text_legibility": 3,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__007.txt",
-   "notes": "Cyan 'RANGE' bracket beside faint grey ticks labelled 'SPACING' (low contrast): the idea 'range first, then spacing' is only implied.",
+   "notes": "Beat 7: 'A step size needs a box' - lone % tag crossed out vs % tag inside a box with a weave+check. Both label arrows touch. Clear. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 50,
-    "right": 883,
-    "top": 110,
-    "bottom": 222
+    "left": 80,
+    "right": 78,
+    "top": 104,
+    "bottom": 235
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/007.png",
-   "scored_blob": "66cb46ca2d79401813a3afa6fd2e312574039f5c",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/007.png",
+   "scored_blob": "d9f7caa668bca515b202ca747367756184eb4115",
    "committed": true,
-   "pass": false
+   "pass": true
   },
   {
    "path": "course/images/bp-05-spacing-and-range/008.png",
@@ -1839,39 +1844,39 @@
    "beat": 8,
    "chapter": "Fees",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "2f088c46385723678c9053a83aba90ff2e0c70f3",
     "cursor/blueprint-beginner-images": "2f088c46385723678c9053a83aba90ff2e0c70f3"
    },
    "beat_concept": "A gap smaller than the cost of a buy and a sell can be flat or negative before price does anything else.",
    "scores": {
-    "beginner_clarity": 2,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 4,
     "brand_fidelity": 4,
-    "text_legibility": 4,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__008.txt",
-   "notes": "Two empty bars over blue bars labelled 'WIDE'/'THIN', one crossed: no cost-of-a-buy-and-sell shown against the gap; 'COST CHECK' not explained.",
+   "notes": "Beat 8: gap bar shorter than the amber round-trip cost bar; 'Gap smaller than cost = flat or negative'. Both arrows touch. EXAMPLE. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 54,
-    "right": 382,
-    "top": 110,
-    "bottom": 217
+    "left": 53,
+    "right": 53,
+    "top": 84,
+    "bottom": 52
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/008.png",
-   "scored_blob": "2f088c46385723678c9053a83aba90ff2e0c70f3",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/008.png",
+   "scored_blob": "9e4b84f5d3568315712757f4240b20b4e9691959",
    "committed": true,
-   "pass": false
+   "pass": true
   },
   {
    "path": "course/images/bp-05-spacing-and-range/009.png",
@@ -1879,41 +1884,39 @@
    "beat": 9,
    "chapter": "Too many lines",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "1d5f36860259d09cf54fc6d0950a808be77e0cb6",
     "cursor/blueprint-beginner-images": "1d5f36860259d09cf54fc6d0950a808be77e0cb6"
    },
    "beat_concept": "More lines are not more thorough if each gap fails the cost check.",
    "scores": {
-    "beginner_clarity": 3,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 4,
     "brand_fidelity": 4,
-    "text_legibility": 4,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
-   "hard_fails": [
-    "cramped margin: headline starts 40px from the left edge"
-   ],
-   "status": "fail",
-   "action": "needs_remake",
+   "hard_fails": [],
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__009.txt",
-   "notes": "Dense vs sparse ladder with 'CROWD'/'CLEAR'/'COST' tags: 'COST' tag points at nothing; cost check against gap size not shown.",
+   "notes": "Beat 9: 'More lines isn't better' - fewer wider gaps (check) vs many tiny gaps lose to fees (X). Stands alone (first of the 2-image series). web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 40,
-    "right": 336,
-    "top": 111,
-    "bottom": 166
+    "left": 51,
+    "right": 103,
+    "top": 78,
+    "bottom": 49
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/009.png",
-   "scored_blob": "1d5f36860259d09cf54fc6d0950a808be77e0cb6",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/009.png",
+   "scored_blob": "19cc8236413dc9c0f3b4f5c757cd8dd5fd9e9f7e",
    "committed": true,
-   "pass": false
+   "pass": true
   },
   {
    "path": "course/images/bp-05-spacing-and-range/010.png",
@@ -1921,39 +1924,39 @@
    "beat": 10,
    "chapter": "Worked recount",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "10dff9a2fed8ecd64d7fc3fcd8456e2f01bb384c",
     "cursor/blueprint-beginner-images": "10dff9a2fed8ecd64d7fc3fcd8456e2f01bb384c"
    },
    "beat_concept": "Recount once from a wrong page: the wrong page says twenty times a half percent equals ten percent.",
    "scores": {
-    "beginner_clarity": 3,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
-    "craft_polish": 3,
+    "craft_polish": 4,
     "brand_fidelity": 4,
-    "text_legibility": 4,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__010.txt",
-   "notes": "Crossed '20 WRONG' vs '19 GAPS': numbers unlabelled as a sum ('20 x 0.5% = 10%' wrong vs '19 x 0.5% = 9.5%' right is the beat); no EXAMPLE.",
+   "notes": "Beat 10: verified numbers - Wrong 20 lines x 0.5% = 10% (X); Right 19 gaps x 0.5% = 9.5% (check). Exact match to narration. EXAMPLE. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 50,
-    "right": 410,
+    "left": 43,
+    "right": 53,
     "top": 110,
-    "bottom": 204
+    "bottom": 195
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/010.png",
-   "scored_blob": "10dff9a2fed8ecd64d7fc3fcd8456e2f01bb384c",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/010.png",
+   "scored_blob": "1e953ae0afa612cc38b8e9a86fd6e38b3668970b",
    "committed": true,
-   "pass": false
+   "pass": true
   },
   {
    "path": "course/images/bp-05-spacing-and-range/011.png",
@@ -1961,39 +1964,39 @@
    "beat": 11,
    "chapter": "Wicks",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "fec55fdbd5f715844042dcf3818d5c5dbcfb7137",
     "cursor/blueprint-beginner-images": "fec55fdbd5f715844042dcf3818d5c5dbcfb7137"
    },
    "beat_concept": "A range needs room for the wicks you drew, not only for the closes.",
    "scores": {
-    "beginner_clarity": 2,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 4,
     "brand_fidelity": 4,
-    "text_legibility": 4,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__011.txt",
-   "notes": "Dashed line with a tiny candle cluster and 'WICK'/'CLOSE' chips with no arrows: range needing room for wicks is not shown.",
+   "notes": "Beat 11: candlesticks in a box; 'Box covers the wicks too', 'Wick...', 'Close...' all three arrows touch their targets. EXAMPLE. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 56,
-    "right": 91,
-    "top": 110,
-    "bottom": 280
+    "left": 87,
+    "right": 84,
+    "top": 80,
+    "bottom": 138
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/011.png",
-   "scored_blob": "fec55fdbd5f715844042dcf3818d5c5dbcfb7137",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/011.png",
+   "scored_blob": "9bd4b8f2a03b88dabe116f817beb7e716ed0444f",
    "committed": true,
-   "pass": false
+   "pass": true
   },
   {
    "path": "course/images/bp-05-spacing-and-range/012.png",
@@ -2001,39 +2004,39 @@
    "beat": 12,
    "chapter": "Common miss",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "f8ff89ac677adf948d1d47cdfee815af0f030305",
     "cursor/blueprint-beginner-images": "f8ff89ac677adf948d1d47cdfee815af0f030305"
    },
    "beat_concept": "The common miss is to change the step and the range in the same edit.",
    "scores": {
-    "beginner_clarity": 3,
+    "beginner_clarity": 5,
     "composition_hierarchy": 4,
     "craft_polish": 4,
     "brand_fidelity": 4,
-    "text_legibility": 4,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__012.txt",
-   "notes": "Two knobs crossed 'BOTH' vs one knob 'ONE': knobs are not named (step, range), so 'one change at a time' is only half-readable.",
+   "notes": "Beat 12: 'Change one thing at a time' - one knob turned (check) vs both knobs turned (X). Clear, no wrong numbers. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 50,
-    "right": 334,
-    "top": 110,
-    "bottom": 158
+    "left": 80,
+    "right": 80,
+    "top": 92,
+    "bottom": 43
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/012.png",
-   "scored_blob": "f8ff89ac677adf948d1d47cdfee815af0f030305",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/012.png",
+   "scored_blob": "049da71782abf38b53cb0a9dc94de175206ced61",
    "committed": true,
-   "pass": false
+   "pass": true
   },
   {
    "path": "course/images/bp-05-spacing-and-range/013.png",
@@ -2041,39 +2044,39 @@
    "beat": 13,
    "chapter": "What you write",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "a85ed40b8eeee64bda9fed1d82425837376fb10c",
     "cursor/blueprint-beginner-images": "a85ed40b8eeee64bda9fed1d82425837376fb10c"
    },
    "beat_concept": "The line you keep contains a percent, the word gaps, and the word orders.",
    "scores": {
-    "beginner_clarity": 3,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 4,
     "brand_fidelity": 4,
-    "text_legibility": 4,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__013.txt",
-   "notes": "Three word chips 'PERCENT / GAPS / ORDERS' in an empty bar: not a written line, no example sentence; mostly empty frame.",
+   "notes": "Beat 13: one-line note '0.5% . 19 gaps . 20 orders' with Gap size %/Number of gaps/Number of orders arrows into the highlighted words. Numbers correct. EXAMPLE. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 50,
-    "right": 383,
-    "top": 109,
-    "bottom": 310
+    "left": 71,
+    "right": 69,
+    "top": 82,
+    "bottom": 50
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/013.png",
-   "scored_blob": "a85ed40b8eeee64bda9fed1d82425837376fb10c",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/013.png",
+   "scored_blob": "a1d1205c8a9f184d2d81d433019cce225cddbdfd",
    "committed": true,
-   "pass": false
+   "pass": true
   },
   {
    "path": "course/images/bp-05-spacing-and-range/014.png",
@@ -2081,39 +2084,39 @@
    "beat": 14,
    "chapter": "Quiet page",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "2633ade060dd7279b0764725a65d8f2a08ad9413",
     "cursor/blueprint-beginner-images": "2633ade060dd7279b0764725a65d8f2a08ad9413"
    },
    "beat_concept": "A quiet page shows the band, the gap count, and the cost check, and nothing that looks like a result.",
    "scores": {
-    "beginner_clarity": 3,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 4,
     "brand_fidelity": 4,
-    "text_legibility": 4,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 3
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__014.txt",
-   "notes": "Small glass card listing BAND / GAPS / COST with an EXAMPLE stamp: list, not a picture of a quiet page with a band, gap count and cost check.",
+   "notes": "Beat 14: calm page - Your box / Gap count (19 gaps) / Fee check (check), three arrows touch. EXAMPLE. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 68,
-    "right": 531,
-    "top": 110,
-    "bottom": 173
+    "left": 42,
+    "right": 33,
+    "top": 40,
+    "bottom": 33
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/014.png",
-   "scored_blob": "2633ade060dd7279b0764725a65d8f2a08ad9413",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/014.png",
+   "scored_blob": "42459d9d2826152e1df379a04889579583271e60",
    "committed": true,
-   "pass": false
+   "pass": true
   },
   {
    "path": "course/images/bp-05-spacing-and-range/015.png",
@@ -2121,7 +2124,7 @@
    "beat": 15,
    "chapter": "Recap",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "e582d8d62f5d9d646b8173a19613b526f9bbf9a4",
     "cursor/blueprint-beginner-images": "e582d8d62f5d9d646b8173a19613b526f9bbf9a4"
@@ -2137,12 +2140,12 @@
     "label_accuracy": 2
    },
    "hard_fails": [
-    "artifact: dark compositing patch visible behind the right of the headline"
+    "Only FOUR recap chips (Box first / Count gaps / Check fees / One change at a time); beat 15 calls for FIVE recap chips (missing the '19 gaps = 9.5%' house-example chip)."
    ],
    "status": "fail",
    "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__015.txt",
-   "notes": "Five chips 'RANGE / GAPS / 19 / COST / ONE': recap as bare words, no picture; '19' and 'ONE' meaningless without context.",
+   "notes": "web1 remake FAIL. Only FOUR recap chips (Box first / Count gaps / Check fees / One change at a time); beat 15 calls for FIVE recap chips (missing the '19 gaps = 9.5%' house-example chip). v2 prompt written (v1 superseded).",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
@@ -2163,7 +2166,7 @@
    "beat": 16,
    "chapter": "Your turn",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "ea3ff8e8dced49c8956a99429db0a63b12c622ea",
     "cursor/blueprint-beginner-images": "ea3ff8e8dced49c8956a99429db0a63b12c622ea"
@@ -2178,11 +2181,13 @@
     "character_consistency": null,
     "label_accuracy": 2
    },
-   "hard_fails": [],
+   "hard_fails": [
+    "Shows only ~12 ladder lines, not the TWENTY lines / nineteen gaps the beat requires ('a sketch of twenty lines', count the gaps one to nineteen). Count mismatch."
+   ],
    "status": "fail",
    "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__016.txt",
-   "notes": "Card with a mini list icon, '19' and 'PRACTICE': 20 lines -> 19 gaps not shown.",
+   "notes": "web1 remake FAIL. Shows only ~12 ladder lines, not the TWENTY lines / nineteen gaps the beat requires ('a sketch of twenty lines', count the gaps one to nineteen). Count mismatch. v2 prompt written (v1 superseded).",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
@@ -2203,39 +2208,39 @@
    "beat": 17,
    "chapter": "Your turn",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "6f10c265994e27d6e1f7ebe7871c04fe743eef28",
     "cursor/blueprint-beginner-images": "6f10c265994e27d6e1f7ebe7871c04fe743eef28"
    },
    "beat_concept": "Practice: Nineteen gaps times a half of one percent is a span of nine and a half percent from the lower line to the upper line.",
    "scores": {
-    "beginner_clarity": 2,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 4,
     "brand_fidelity": 4,
-    "text_legibility": 4,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__017.txt",
-   "notes": "Bar with '19' and 'HALF' chips and a 'PRACTICE' tag: '19 gaps x 0.5% = 9.5%' not shown; 'HALF' ambiguous.",
+   "notes": "Beat 17: '19 gaps x 0.5%' arrow touches the gap stack; '= 9.5% total' arrow touches the handwritten equation '19 gaps x 0.5% = 9.5% total'. Numbers correct. EXAMPLE. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
     "left": 50,
-    "right": 252,
-    "top": 110,
-    "bottom": 354
+    "right": 52,
+    "top": 101,
+    "bottom": 3
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/017.png",
-   "scored_blob": "6f10c265994e27d6e1f7ebe7871c04fe743eef28",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/017.png",
+   "scored_blob": "878c0a46bb9aa9d748eef9ecf8c49da221793ee6",
    "committed": true,
-   "pass": false
+   "pass": true
   },
   {
    "path": "course/images/bp-05-spacing-and-range/018.png",
@@ -2243,39 +2248,39 @@
    "beat": 18,
    "chapter": "Stay on paper",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "chatgpt-web",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "cfae5a07c7199303c00dcb3cdd5c8f574fddc8b6",
     "cursor/blueprint-beginner-images": "cfae5a07c7199303c00dcb3cdd5c8f574fddc8b6"
    },
    "beat_concept": "Leave the recount on paper. Do not type it into a live ticket.",
    "scores": {
-    "beginner_clarity": 2,
-    "composition_hierarchy": 3,
-    "craft_polish": 3,
+    "beginner_clarity": 5,
+    "composition_hierarchy": 4,
+    "craft_polish": 4,
     "brand_fidelity": 4,
-    "text_legibility": 4,
+    "text_legibility": 5,
     "character_consistency": null,
-    "label_accuracy": 2
+    "label_accuracy": 5
    },
    "hard_fails": [],
-   "status": "fail",
-   "action": "needs_remake",
+   "status": "pass",
+   "action": "none",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__018.txt",
-   "notes": "Two blank glass tablets, one tagged 'BLANK': does not show 'recount on paper, not in a live ticket'.",
+   "notes": "Beat 18: 'Keep it on paper' - notebook '19 gaps x 0.5% = 9.5%' (check) vs live form with X. Both arrows touch. Numbers correct. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,
    "margins_px": {
-    "left": 89,
-    "right": 377,
-    "top": 109,
-    "bottom": 193
+    "left": 45,
+    "right": 51,
+    "top": 44,
+    "bottom": 23
    },
-   "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-05-spacing-and-range/018.png",
-   "scored_blob": "cfae5a07c7199303c00dcb3cdd5c8f574fddc8b6",
+   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/018.png",
+   "scored_blob": "5b01469a01494f65303e96123f19460cd32eda56",
    "committed": true,
-   "pass": false
+   "pass": true
   },
   {
    "path": "course/images/bp-05-spacing-and-range/019.png",
@@ -2283,7 +2288,7 @@
    "beat": 19,
    "chapter": "Outro",
    "kind": "lesson-still",
-   "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+   "source": "committed still (gbb-v3 fallback); web1 remake scored and rejected",
    "source_branches": {
     "cursor/blueprint-professional-rebuild-d1f6": "3c803728aec2455ab88e87333c3ca005e491b2b9",
     "cursor/blueprint-beginner-images": "3c803728aec2455ab88e87333c3ca005e491b2b9"
@@ -2298,11 +2303,13 @@
     "character_consistency": null,
     "label_accuracy": 3
    },
-   "hard_fails": [],
+   "hard_fails": [
+    "Panel-connector fail: the next->card transition arrowhead stops ~25px short of the glass card left border (tip x=761, card border x=786) and floats in the gap; tip does not touch its target. Outro text 'Entry and exit rules' is correct."
+   ],
    "status": "fail",
    "action": "needs_remake",
    "remake_prompt": "specs/remake/bp-05-spacing-and-range__019.txt",
-   "notes": "Glass page with a big EXAMPLE stamp and a 'NEXT' button: next lesson ('Entry and exit rules') not named.",
+   "notes": "web1 remake FAIL. Panel-connector fail: the next->card transition arrowhead stops ~25px short of the glass card left border (tip x=761, card border x=786) and floats in the gap; tip does not touch its target. Outro text 'Entry and exit rules' is correct. v2 prompt written (v1 superseded).",
    "size": "1536x1024",
    "size_ok": true,
    "filename_ok": true,

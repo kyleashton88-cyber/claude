@@ -3,7 +3,7 @@ FORMAT: one landscape image, 3:2, exactly 1536x1024 pixels.
 MARGIN RULE: the headline, every tag, label, stamp and key shape sits at least 80px inside the left and right edges and at least 90px inside the top and bottom edges. Nothing with text touches or approaches the frame edge. Words in the headline are separated by a clear full space.
 
 Headline: "YOUR TURN: COUNT THE GAPS" (the words YOUR TURN in cyan, the rest white).
-Scene: A notebook with a pencil-drawn ladder of lines and a pencil marking the gaps with small ticks.
+Scene: A notebook with a pencil-drawn ladder of EXACTLY TWENTY evenly spaced horizontal lines, and a pencil marking EXACTLY NINETEEN small ticks, one in each gap between adjacent lines. QA FIX v2: it must read as twenty lines and nineteen gap ticks (the v1 render showed only about twelve lines); count carefully so a viewer can count the gaps from one to nineteen.
 Labels (sentence case, spelled exactly, each on its own small dark glass tag, large enough to read at phone size; no other words):
 - "Count the lines": arrow tip touches the top pencil line of the ladder.
 - "Gaps = lines minus 1": arrow tip touches one pencil tick in a gap.
