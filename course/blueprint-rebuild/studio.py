@@ -1005,11 +1005,20 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
         if chapter == "The levels" and rounded == 26730:
             other = _map(0, n, 27630, lo_p, hi_p, plot)[1]
             bracket = plot[0] + 24
-            draw.line([(bracket, yy), (bracket, other)], fill=CYAN, width=2)
+            draw.line([(bracket, yy), (bracket, other)], fill=CYAN, width=4)
             mid = (yy + other) / 2
-            note = "one gap = about 900"
-            draw.rounded_rectangle([bracket + 10, mid - 18, bracket + 16 + font(28).getlength(note), mid + 18], 8, fill=TAG)
-            draw.text((bracket + 16, mid - 16), note, font=font(28), fill=WHITE)
+            note = (
+                "about $900 gap"
+                if shot.get("lesson_id") == "bp-01-introduction"
+                else "one gap = about 900"
+            )
+            face_gap = font(36 if shot.get("lesson_id") == "bp-01-introduction" else 28)
+            gap_w = int(face_gap.getlength(note)) + 28
+            draw.rounded_rectangle(
+                [bracket + 10, mid - 24, bracket + 10 + gap_w, mid + 24],
+                10, fill=TAG, outline=CYAN, width=3,
+            )
+            draw.text((bracket + 24, mid - 20), note, font=face_gap, fill=WHITE)
 
     if chapter == "Limit orders wait" or "waiting" in idea.lower():
         y_line = _map(0, n, 27630, lo_p, hi_p, plot)[1]
@@ -1133,10 +1142,34 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
     r = 8
     draw.ellipse((hx - r - 3, hy - r - 3, hx + r + 3, hy + r + 3), outline=CYAN, width=3)
     draw.ellipse((hx - r, hy - r, hx + r, hy + r), fill=WHITE)
-    anchor_x = tx if tx >= hx else tx + tw
-    draw.line([(hx + (12 if tx >= hx else -12), hy), (anchor_x, ty + th / 2)], fill=CYAN, width=2)
-    draw.rounded_rectangle([tx, ty, tx + tw, ty + th], 10, fill=TAG, outline=CYAN, width=2)
-    draw.text((tx + 14, ty + 4), tag, font=face, fill=WHITE)
+    hide_node_price = (
+        shot.get("lesson_id") == "bp-01-introduction"
+        and chapter in {"The range", "The levels"}
+    )
+    if not hide_node_price:
+        anchor_x = tx if tx >= hx else tx + tw
+        draw.line([(hx + (12 if tx >= hx else -12), hy), (anchor_x, ty + th / 2)], fill=CYAN, width=2)
+        draw.rounded_rectangle([tx, ty, tx + tw, ty + th], 10, fill=TAG, outline=CYAN, width=2)
+        draw.text((tx + 14, ty + 4), tag, font=face, fill=WHITE)
+    if shot.get("lesson_id") == "bp-01-introduction" and chapter == "The range":
+        y_a = _map(0, n, 26730, lo_p, hi_p, plot)[1]
+        y_b = _map(0, n, 27630, lo_p, hi_p, plot)[1]
+        for yy in (y_a, y_b):
+            x = plot[0]
+            while x < plot[2]:
+                draw.line([(x, yy), (min(x + 8, plot[2]), yy)], fill=MUTED, width=2)
+                x += 18
+        bracket = plot[0] + 24
+        draw.line([(bracket, y_a), (bracket, y_b)], fill=CYAN, width=4)
+        mid = (y_a + y_b) / 2
+        gap_note = "about $900 gap"
+        face_gap = font(36)
+        gap_w = int(face_gap.getlength(gap_note)) + 28
+        draw.rounded_rectangle(
+            [bracket + 10, mid - 24, bracket + 10 + gap_w, mid + 24],
+            10, fill=TAG, outline=CYAN, width=3,
+        )
+        draw.text((bracket + 24, mid - 20), gap_note, font=face_gap, fill=WHITE)
     # The ladder still has five rungs. Connectors would make them look like the seven levels.
     if shot.get("analogy") == "fence" and rails:
         marks = shot.get("rail_marks") or {}
@@ -1418,9 +1451,17 @@ def paint_worked(base: Image.Image, shot: dict, local: float) -> None:
     rows = shot.get("items") or []
     if not rows:
         return
-    dur = float(shot.get("duration") or max(8.0, len(rows) * 3.2))
-    step = dur / max(1, len(rows))
-    shown = min(len(rows), 1 + int(local / step)) if step else len(rows)
+    spans = list(shot.get("sentence_spans") or [])
+    shown = 1
+    if spans:
+        shown = 1
+        for index, (start, _end) in enumerate(spans[: len(rows)]):
+            if local >= start:
+                shown = index + 1
+    else:
+        dur = float(shot.get("duration") or max(8.0, len(rows) * 3.2))
+        step = dur / max(1, len(rows))
+        shown = min(len(rows), 1 + int(local / step)) if step else len(rows)
     y = 190
     for text in rows[:shown]:
         draw.rounded_rectangle([MX, y, RIGHT, y + 110], 16, fill=GLASS, outline=CYAN, width=2)
@@ -1545,7 +1586,7 @@ def paint_analogy(base: Image.Image, shot: dict, local: float, dur: float) -> No
             shot["rail_marks"]["x"] = origin[0] + pw - 28
         _retouch_analogy(draw, kind, origin)
         if kind == "ladder":
-            note = "Not to scale: the chart has 7 levels"
+            note = "Not to scale: the real path is beside it"
             face = font(40)
             tw = int(face.getlength(note)) + 36
             nx, ny = origin[0], origin[1] + ph + 8
@@ -1694,7 +1735,7 @@ def _big_still_tags(
         th = 56
         tx = x + int(view_w * fx)
         ty = y + int(view_h * fy)
-        draw.rounded_rectangle([tx - 16, ty - 18, tx + tw + 16, ty + th + 22], 12, fill=NAVY)
+        draw.rounded_rectangle([tx - 6, ty - 8, tx + tw + 6, ty + th + 8], 12, fill=NAVY)
         draw.rounded_rectangle([tx, ty, tx + tw, ty + th], 12, fill=TAG, outline=CYAN, width=3)
         draw.text((tx + 18, ty + 8), text, font=face, fill=WHITE)
 
@@ -1724,44 +1765,56 @@ def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
         climb = 1.0 if local > 0.55 else 0.0
     if fall is None:
         fall = 1.0 if local > 0.8 else 0.0
+    if fall > 0:
+        climb = 0.0
     sells = (220, 300, 380)
     buys = (560, 640, 720)
     mid = 470
-    for index, yy in enumerate(sells):
-        lit = climb >= (index + 1) / 3
-        color = MINT if lit else MUTED
-        draw.line([(box[0] + 80, yy), (box[2] - 80, yy)], fill=color, width=8)
-        if lit:
-            draw.ellipse([box[2] - 120, yy - 16, box[2] - 88, yy + 16], fill=MINT)
-    draw.line([(box[0] + 80, mid), (box[2] - 80, mid)], fill=WHITE, width=3)
-    for index, yy in enumerate(buys):
-        lit = fall >= (index + 1) / 3
-        color = BLUE if lit else MUTED
-        draw.line([(box[0] + 80, yy), (box[2] - 80, yy)], fill=color, width=8)
-        if lit:
-            draw.ellipse([box[2] - 120, yy - 16, box[2] - 88, yy + 16], fill=BLUE)
+    top_y = sells[0] - 40
+    bot_y = buys[-1] + 40
     if fall > 0:
-        price_y = mid + (buys[-1] - mid) * fall
+        price_y = top_y + (bot_y - top_y) * fall
     elif climb > 0:
-        price_y = mid + (sells[0] - mid) * climb
+        price_y = mid + (top_y - mid) * climb
     else:
         price_y = mid
+
+    def coin_icon(cx: int, cy: int) -> None:
+        draw.ellipse([cx - 16, cy - 16, cx + 16, cy + 16], outline=CYAN, width=3)
+        draw.text((cx - 8, cy - 14), "C", font=font(24), fill=CYAN)
+
+    def note_icon(cx: int, cy: int) -> None:
+        draw.rounded_rectangle([cx - 18, cy - 12, cx + 18, cy + 12], 3, outline=MINT, width=3)
+        draw.text((cx - 8, cy - 14), "$", font=font(24), fill=MINT)
+
+    icon_x = box[2] - 150
+    for yy in sells:
+        crossed = climb > 0 and price_y <= yy
+        color = MINT if crossed else MUTED
+        draw.line([(box[0] + 80, yy), (box[2] - 80, yy)], fill=color, width=8)
+        if crossed:
+            note_icon(icon_x, yy)
+        else:
+            coin_icon(icon_x, yy)
+    draw.line([(box[0] + 80, mid), (box[2] - 80, mid)], fill=WHITE, width=3)
+    for yy in buys:
+        crossed = fall > 0 and price_y >= yy
+        color = BLUE if crossed else MUTED
+        draw.line([(box[0] + 80, yy), (box[2] - 80, yy)], fill=color, width=8)
+        if crossed:
+            coin_icon(icon_x, yy)
+        else:
+            note_icon(icon_x, yy)
     draw.ellipse([180, price_y - 14, 208, price_y + 14], fill=CYAN)
     side = (1360, 220, RIGHT, 750)
     draw.rounded_rectangle(side, 22, fill=GLASS, outline=CYAN, width=3)
     draw.text((side[0] + 36, side[1] + 28), "What you hold", font=font(36), fill=CYAN)
-    draw.rounded_rectangle([side[0] + 36, side[1] + 110, side[2] - 36, side[1] + 190], 14, outline=MINT, width=3)
-    draw.text((side[0] + 56, side[1] + 128), "Cash", font=font(40), fill=MINT)
-    draw.rounded_rectangle([side[0] + 36, side[1] + 360, side[2] - 36, side[1] + 440], 14, outline=BLUE, width=3)
-    draw.text((side[0] + 56, side[1] + 378), "Coin", font=font(40), fill=BLUE)
-    if fall > 0:
-        mark_y = side[1] + 128 + (250 * fall)
-    elif climb > 0:
-        mark_y = side[1] + 250 - (120 * climb)
-    else:
-        mark_y = side[1] + 250
-    draw.rounded_rectangle([side[0] + 48, mark_y, side[2] - 48, mark_y + 64], 12, fill=TAG, outline=WHITE, width=3)
-    draw.text((side[0] + 68, mark_y + 12), "Holdings", font=font(36), fill=WHITE)
+    cash_box = [side[0] + 36, side[1] + 120, side[2] - 36, side[1] + 210]
+    coin_box = [side[0] + 36, side[1] + 280, side[2] - 36, side[1] + 370]
+    draw.rounded_rectangle(cash_box, 14, fill=(16, 48, 40) if climb > 0 else GLASS, outline=MINT, width=6 if climb > 0 else 3)
+    draw.text((cash_box[0] + 24, cash_box[1] + 22), "Cash", font=font(48), fill=MINT)
+    draw.rounded_rectangle(coin_box, 14, fill=(16, 32, 64) if fall > 0 else GLASS, outline=BLUE, width=6 if fall > 0 else 3)
+    draw.text((coin_box[0] + 24, coin_box[1] + 22), "Coin", font=font(48), fill=BLUE)
 
 
 def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) -> None:
@@ -1786,8 +1839,9 @@ def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) 
             ImageDraw.Draw(base),
             x, y, view_w, view_h,
             (
-                (0.08, 0.30, "Sell orders above"),
-                (0.08, 0.64, "Buy orders below"),
+                (0.09, 0.30, "Sell orders above"),
+                (0.09, 0.46, "Price now"),
+                (0.09, 0.64, "Buy orders below"),
             ),
         )
 
@@ -1824,8 +1878,8 @@ def paint_candle(base: Image.Image, shot: dict) -> None:
         draw.text((cx + dx, y - 18), label, font=font(36), fill=WHITE)
 
 
-def paint_course_map(base: Image.Image) -> None:
-    """Labelled steps, with a plain line under each lesson name."""
+def paint_course_map(base: Image.Image, shot: dict, local: float) -> None:
+    """Steps 1–6, then 7–11, each while that part of the sentence is spoken."""
     draw = ImageDraw.Draw(base)
     steps = (
         ("1", "Introduction", "What a grid is"),
@@ -1840,18 +1894,25 @@ def paint_course_map(base: Image.Image) -> None:
         ("10", "Scaling", "A second page in its own bucket"),
         ("11", "Liquidation", "When borrowed money forces your position closed"),
     )
-    left = steps[:6]
-    right = steps[6:]
-    for column, x in ((left, MX), (right, 1000)):
-        y = 196
-        for number, name, gloss in column:
-            draw.rounded_rectangle([x, y, x + 56, y + 48], 10, fill=TAG, outline=CYAN, width=2)
-            num_x = x + 16 if len(number) == 1 else x + 6
-            draw.text((num_x, y + 6), number, font=font(28), fill=CYAN)
-            draw.text((x + 72, y - 2), name, font=font(34), fill=CYAN)
-            gloss_size = fit_size(gloss, 820 if x == MX else 760, 36, 32)
-            draw.text((x + 72, y + 40), gloss, font=font(gloss_size), fill=WHITE)
-            y += 96
+    slide = 1
+    words = shot.get("word_times") or []
+    for text, start, _end in words:
+        if str(text).lower().startswith("paper"):
+            if local >= start:
+                slide = 2
+            break
+    if not words and local >= float(shot.get("duration") or 12) * 0.62:
+        slide = 2
+    shown = steps[:6] if slide == 1 else steps[6:]
+    y = 200
+    for number, name, gloss in shown:
+        draw.rounded_rectangle([MX, y, MX + 72, y + 64], 12, fill=TAG, outline=CYAN, width=2)
+        num_x = MX + 22 if len(number) == 1 else MX + 8
+        draw.text((num_x, y + 12), number, font=font(36), fill=CYAN)
+        draw.text((MX + 96, y + 2), name, font=font(40), fill=CYAN)
+        gloss_size = fit_size(gloss, 1500, 36, 32)
+        draw.text((MX + 96, y + 46), gloss, font=font(gloss_size), fill=WHITE)
+        y += 90
 
 
 def paint(shot: dict, local: float, progress: float) -> np.ndarray:
@@ -1894,7 +1955,7 @@ def paint(shot: dict, local: float, progress: float) -> np.ndarray:
         draw_footer(ImageDraw.Draw(img))
     elif kind == "lesson-still" and (shot.get("chapter") or "") == "The map":
         title_bar(img, shot, progress)
-        paint_course_map(img)
+        paint_course_map(img, shot, local)
         lower_third(ImageDraw.Draw(img), shot)
         draw_footer(ImageDraw.Draw(img))
     elif kind == "lesson-still":
@@ -2191,6 +2252,7 @@ def _narrate_shot(speaker, shot: dict) -> tuple[np.ndarray, int, list]:
     if tail > 0:
         buf = _xfade(buf, np.zeros(int(tail * sr), dtype=np.float32), sr)
     shot["sentence_spans"] = spans
+    shot["word_times"] = [(word.text, word.start, word.end) for word in timed]
     return buf, sr, timed
 
 

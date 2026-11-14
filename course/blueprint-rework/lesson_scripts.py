@@ -227,7 +227,7 @@ def bp01() -> list[dict]:
         candle={"high": 30184, "low": 29794, "close": 29914, "date": "19 July 2023"},
         vo=(
             "The daily close is the last price of the day. Crypto trades all day, so the day is cut at a set time. "
-            "Each of these shapes is a candle: one day of price. "
+            "This shape is a candle: one day of price. "
             "This candle is 19 July 2023. The high, the low, and the close are labelled. "
             "A wick is the thin line that reaches up to the high or down to the low. "
             "The wick shows price went there briefly, then came back before the day closed."
