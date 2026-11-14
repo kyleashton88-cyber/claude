@@ -325,7 +325,7 @@ def _beat_teaching(beat: dict) -> str | None:
         "course/images/bp-03-what-is-a-grid-bot/014.png": "Orders wait. Inside your range. Stop: your rule if price leaves. What you hold changes.",
         "course/images/bp-03-what-is-a-grid-bot/015.png": "Your turn: draw a band, label the five words, and draw one step down.",
         "course/images/bp-03-what-is-a-grid-bot/017.png": "Your turn: draw one buy order waiting below the price.",
-        "course/images/bp-01-introduction/007.png": "Buy orders sit on lines below the price and sell orders sit on lines above it. The sells need some coin, so a grid starts with part cash and part coin. That is a description, not advice.",
+        "course/images/bp-01-introduction/007.png": "Buy orders sit on lines below the price and sell orders sit on lines above it. The sells need some coin, so a grid starts with part cash and part coin, and that is a description, not advice.",
         "course/images/bp-01-introduction/008.png": "Write your stop rule down before you start. On the card it says: Stop = when you quit.",
         "course/images/bp-03-what-is-a-grid-bot/004.png": "Five labels cover the picture: upper, lower, levels, side, and stop. On the card, Upper is the top edge, Lower is the bottom edge, Levels are the rungs, Side is what you hold, and Stop is your rule.",
         "course/images/bp-03-what-is-a-grid-bot/008.png": "What you hold changes. Price bounces: coin and cash swap back and forth. Price leaves: mostly coin or mostly cash.",
@@ -374,7 +374,7 @@ def _beat_teaching(beat: dict) -> str | None:
         ("Without a top and a bottom, a spacing percent is a number floating in the margin.", "Without a top and a bottom, you can't place the lines."),
         ("Price often chops sideways, weaving through the same band instead of leaving.", "Price often moves sideways, bouncing between the same top and bottom instead of leaving."),
         ("built for that weave", "built for that bouncing"),
-        ("the weave they were built for is gone. Inventory can sit on one side.", "the bouncing they were built for is gone. Leave through the top and every sell has filled, so you hold mostly cash, and leave through the bottom and every buy has filled, so you hold mostly coin."),
+        ("the weave they were built for is gone. Inventory can sit on one side.", "the bouncing they were built for is gone. As price climbs, each sell order fills, so you end up holding cash. As price falls, each buy order fills, so you end up holding coin."),
         ("The weave is the job.", "Bouncing inside the band is what a grid is built for."),
         ("such as the base and the quote", "the coin you buy and the money you pay with"),
         ("The setup check has seven lines", "The setup check has seven items"),
@@ -520,19 +520,21 @@ def plan(sid: str) -> list[dict]:
         "The prices are public historical daily closes, marked Example.",
         "Past performance is not a reliable indicator of future results.",
     ]
-    risk_shots = [
-        {
+    risk_shots = []
+    for index, line in enumerate(risk_lines):
+        spoken = line
+        if sid == "bp-01-introduction" and line.startswith("The prices are public historical daily closes"):
+            spoken = line + " A close is the last price of the day."
+        risk_shots.append({
             "kind": "stack",
             "chapter": "Risk",
-            "vo": line,
+            "vo": spoken,
             "caption": line,
             "items": risk_lines,
             "index": index,
             "chart": "",
             "series": [],
-        }
-        for index, line in enumerate(risk_lines)
-    ]
+        })
     shots: list[dict] = [brand, disc, *risk_shots]
     seq = [s for s in raw if s.get("kind") not in {"ident", "legal"}]
     i = 0
@@ -616,8 +618,7 @@ def _speak_round(text: str) -> str:
 
 
 # The old estimate used 2.55 words/second and said BP-01 was 7.2 minutes.
-# Real Kokoro af_heart, with its sentence gaps, was 617.7s (101 words a minute).
-# After the gap tighten, the same words are 0.584s each at speed 1.0.
+# Measured on BP-01: 0.294s per spoken word (394s for 1097 words).
 # Kokoro af_heart speed 1.0 for every line. Moods no longer scale the pace.
 SPEECH_RATE = 1.0
 SENTENCE_GAP = 0.52
@@ -626,7 +627,9 @@ BEAT_GAP = 1.05
 # while its line is revealing. Every other gap stays within about 1.2s.
 LINE_GAP_CAP = 1.2
 REVEAL_GAP_CAP = 3.0
-JOIN_FADE = 0.030
+# Sentence audio is concatenated. A crossfade was stitching the end of one
+# take onto the start of the next, including inside a single thought.
+JOIN_FADE = 0.0
 SECONDS_PER_WORD = 610.085 / 1045
 
 
@@ -686,11 +689,22 @@ def lower_third(draw: ImageDraw.ImageDraw, shot: dict) -> None:
     defin = shot.get("definition") or ""
     t_size = fit_size(term, W - 2 * MX, 40, 36)
     draw.text((MX, 806), term, font=font(t_size), fill=CYAN)
-    lines = wrap(defin, 36, W - 2 * MX, "reg")[:2]
-    y = 858
+    width = W - 2 * MX
+    lines = wrap(defin, 36, width, "reg")
+    size = 36
+    if len(lines) > 2:
+        size = 30
+        lines = wrap(defin, size, width, "reg")[:3]
+    else:
+        lines = lines[:2]
+    # Footer text starts at y=990. Three 30px lines still finish above it.
+    y = 852
+    step = size + 10
     for line in lines:
-        draw.text((MX, y), line, font=font(36, "reg"), fill=WHITE)
-        y += 44
+        if y + size > 978:
+            break
+        draw.text((MX, y), line, font=font(size, "reg"), fill=WHITE)
+        y += step
 
 
 def _series(shot: dict) -> list[dict]:
@@ -959,7 +973,15 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
             color, width, label = AMBER, 3, f"{rounded:,}"
         else:
             color, width = (CYAN, 3) if rounded in edges else (MUTED, 2)
-            label = f"{rounded:,}"
+            # BP-01's levels chart shows the top, the bottom, and the gap, not every rung price.
+            if (
+                chapter == "The levels"
+                and shot.get("lesson_id") == "bp-01-introduction"
+                and rounded not in edges
+            ):
+                label = ""
+            else:
+                label = f"{rounded:,}"
         step = 18
         x = plot[0]
         while x < plot[2]:
@@ -978,7 +1000,7 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
             role = font(28)
             role_x = gutter_x + lf.getlength(price) + 12
             draw.text((role_x, yy - 12), "middle", font=role, fill=WHITE)
-        else:
+        elif label:
             draw.text((gutter_x, yy - 18), label, font=lf, fill=WHITE)
         if chapter == "The levels" and rounded == 26730:
             other = _map(0, n, 27630, lo_p, hi_p, plot)[1]
@@ -1137,9 +1159,7 @@ def _hero(
     draw.rounded_rectangle(box, 24, fill=GLASS, outline=CYAN, width=2)
     x0, y0, x1, y1 = box
     if mode == "lines":
-        rows = ["Notebook", "Range and levels", "The pair", "Paper or demo", "No secrets", "A written stop", "Example on every figure"]
-        if x1 - x0 < 520:
-            rows[-1] = "EXAMPLE on figures"
+        rows = ["Notebook", "Range and levels", "The pair", "Paper or demo", "No secrets", "A written stop", "Leave every figure marked EXAMPLE"]
         step = max(36, (y1 - y0 - 70) // len(rows))
         y = y0 + 28
         for row in rows:
@@ -1398,7 +1418,9 @@ def paint_worked(base: Image.Image, shot: dict, local: float) -> None:
     rows = shot.get("items") or []
     if not rows:
         return
-    shown = 1 + int(ease(min(1.0, local / max(0.8, len(rows) * 0.35))) * (len(rows) - 1))
+    dur = float(shot.get("duration") or max(6.0, len(rows) * 2.8))
+    step = max(2.4, dur / max(1, len(rows)))
+    shown = min(len(rows), 1 + int(local / step))
     y = 190
     for text in rows[:shown]:
         draw.rounded_rectangle([MX, y, RIGHT, y + 110], 16, fill=GLASS, outline=CYAN, width=2)
@@ -1714,7 +1736,7 @@ def paint_course_map(base: Image.Image) -> None:
         ("1", "Introduction", "What a grid is"),
         ("2", "Checklist", "What you write before any screen"),
         ("3", "Definition", "Buys below the price, sells above it"),
-        ("4", "Regimes", "Is the market trending or going sideways?"),
+        ("4", "Market shape", "Calm or trending markets"),
         ("5", "Spacing", "How far apart the lines are"),
         ("6", "Entry and exit", "Write the finish rule first"),
         ("7", "Paper", "Copy the page onto a practice form"),
@@ -1731,9 +1753,10 @@ def paint_course_map(base: Image.Image) -> None:
             draw.rounded_rectangle([x, y, x + 56, y + 48], 10, fill=TAG, outline=CYAN, width=2)
             num_x = x + 16 if len(number) == 1 else x + 6
             draw.text((num_x, y + 6), number, font=font(28), fill=CYAN)
-            draw.text((x + 72, y - 2), name, font=font(32), fill=CYAN)
-            draw.text((x + 72, y + 36), gloss, font=font(28), fill=WHITE)
-            y += 92
+            draw.text((x + 72, y - 2), name, font=font(34), fill=CYAN)
+            gloss_size = fit_size(gloss, 820 if x == MX else 760, 36, 32)
+            draw.text((x + 72, y + 40), gloss, font=font(gloss_size), fill=WHITE)
+            y += 96
 
 
 def paint(shot: dict, local: float, progress: float) -> np.ndarray:
@@ -2319,20 +2342,14 @@ def render(
     total = sum(int(round(s["duration"] * FPS)) for s in shots)
     drawn = 0
     lesson_t = 0.0
-    prev = None
-    fade_n = 8
     for shot in shots:
         frames = max(1, int(round(shot["duration"] * FPS)))
         shot["frames"] = frames
         for n in range(frames):
             local = n / FPS
+            # A hard cut. Blending the previous frame left its words on top of the new card.
             frame = paint(shot, local, lesson_t / clock)
-            if prev is not None and n < fade_n:
-                w = (n + 1) / fade_n
-                frame = (prev * (1 - w) + frame * w).astype(np.uint8)
             proc.stdin.write(frame.tobytes())
-            if n == frames - 1:
-                prev = frame
             lesson_t += 1 / FPS
             drawn += 1
             if drawn % (FPS * 20) == 0:
@@ -2371,8 +2388,11 @@ def render(
         sidecar = ROOT / "blueprint-smoke" / sid
         sidecar.mkdir(parents=True, exist_ok=True)
     write_words(sidecar / "words.json", timed, engine="kokoro", mood="af_heart", method="acoustic-forced-align")
-    _write_lesson_captions(sidecar / f"{sid}.vtt", sidecar / f"{sid}.srt", timed)
-    _cap_caption_speed(sidecar / f"{sid}.vtt")
+    vtt_path = sidecar / f"{sid}.vtt"
+    srt_path = sidecar / f"{sid}.srt"
+    _write_lesson_captions(vtt_path, srt_path, timed)
+    _cap_caption_speed(vtt_path)
+    _srt_from_capped_vtt(vtt_path, srt_path)
     chapters = []
     cursor = 0.0
     for shot in shots:
@@ -2435,6 +2455,24 @@ def _cap_caption_speed(path: Path, limit: float = 18.0) -> None:
                 f"{path.name} {cue.start:.2f}s is {cps:.1f} characters per second "
                 f"after the {limit:.0f} cap"
             )
+
+
+def _srt_from_capped_vtt(vtt: Path, srt: Path) -> None:
+    """The SRT is a copy of the capped VTT, so both files share the 18 cps limit."""
+    from voice.captions import _stamp
+
+    gate_root = ROOT / "skills/video-production/quality-gate"
+    if str(gate_root) not in sys.path:
+        sys.path.insert(0, str(gate_root))
+    from gate.captions import parse_captions
+
+    lines: list[str] = []
+    for index, cue in enumerate(parse_captions(vtt.read_text(encoding="utf-8")), start=1):
+        lines.append(str(index))
+        lines.append(f"{_stamp(cue.start, srt=True)} --> {_stamp(cue.end, srt=True)}")
+        lines.append(cue.text)
+        lines.append("")
+    srt.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def _ts(sec: float) -> str:

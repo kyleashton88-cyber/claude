@@ -171,7 +171,7 @@ def bp01() -> list[dict]:
     s += stack("The idea", [
         "A grid bot places waiting buy orders on lines below the price and sell orders on lines above it, inside a top and a bottom you choose. The space between your top and your bottom is called the band.",
         "A limit order is an order that waits at a price you choose. It does not chase the price.",
-        "The sells above need some coin, so a grid starts with part cash and part coin. Cash is money you can spend. Coin is the crypto. That is a description, not advice about what to hold.",
+            "The sells above need some coin, so a grid starts with part cash and part coin, and that is a description, not advice about what to hold. Cash is money you can spend. Coin is the crypto.",
         "A stop is a rule you write down before you start, saying what you will do if the price leaves the band and does not come back.",
         "When a chart says Example, it means a real past price used as an example, not a forecast.",
     ], "")
@@ -206,8 +206,8 @@ def bp01() -> list[dict]:
         chapter="The levels",
         reveal=1,
         vo=(
-            "Seven price lines sit between that bottom and that top, with six gaps of about 900 dollars between them. "
-            "The screen shows each price. A limit order waits on a level. It does not run after the price."
+            "Six equal gaps of about 900 dollars sit between the bottom line and the top line. "
+            "Seven lines make those six gaps. A limit order waits on a level. It does not run after the price."
         ),
         caption="Seven lines. Six gaps of about 900.",
     ))
@@ -227,7 +227,8 @@ def bp01() -> list[dict]:
         vo=(
             "The daily close is the last price of the day. Crypto trades all day, so the day is cut at a set time. "
             "This candle is 19 July 2023. The high, the low, and the close are labelled. "
-            "A wick is the thin line from the close out to the high or the low. It is not the close."
+            "A wick is the thin line from the close out to the high or the low. "
+            "The wick shows price went there briefly, then came back before the day closed."
         ),
         caption="19 July 2023. Close 29,914. Low 29,794. High 30,184.",
     ))
@@ -256,29 +257,43 @@ def bp01() -> list[dict]:
         ),
         caption="23 October 2023. The close leaves 30,331.",
     ))
-    worked = (
-        "Worked check for 19 July 2023 to 16 October 2023. "
-        "The bottom line and the top line are on the card, with seven lines and six gaps of about 900. "
-        "The stop rule is: if the daily close leaves the top line and does not come back, the idea is finished. "
-        "Nothing in that list is an order."
-    )
     s.append(_shot(
         kind="worked", chapter="Worked check",
         items=[
             "Window: 19 July 2023 to 16 October 2023.",
+            "Six equal gaps of about 900 dollars.",
             "Low 24,930. High 30,331.",
-            "Seven lines, six gaps, about 900 apart.",
-            "Stop: the close leaves 30,331 and does not come back.",
         ],
-        vo=worked,
-        caption=worked,
+        vo=(
+            "Worked check for 19 July 2023 to 16 October 2023. "
+            "Six equal gaps of about 900 dollars sit between the bottom line and the top line."
+        ),
+        caption="Six equal gaps of about 900 dollars.",
+    ))
+    s.append(_shot(
+        kind="worked", chapter="Worked check",
+        items=[
+            "Stop: the close leaves the top line and does not come back.",
+            "Nothing on this card is an order.",
+        ],
+        vo=(
+            "The stop rule is: if the daily close leaves the top line and does not come back, the idea is finished. "
+            "Nothing in that list is an order."
+        ),
+        caption="The stop rule finishes the idea. Nothing here is an order.",
     ))
     s += stack("Recap", [
         "A grid bot places waiting buys below the price and waiting sells above it.",
-        "This 2023 path stayed between 24930 and 30331, with six gaps of about 900 between the lines.",
+        "This 2023 path stayed between 24,930 and 30,331, with six gaps of about 900 between the lines.",
         "The stop rule says what you will do if the price leaves and does not come back.",
     ], "")
     s.append(outro("What you are going to need"))
+    s[-1]["vo"] = (
+        "Next lesson: What you are going to need. "
+        "The pair is the two things you swap, like Bitcoin and US dollars. "
+        "Bring your notes: the top and bottom of the band, the gaps between the lines, and your stop rule. "
+        "Leave every figure marked EXAMPLE, and no order is sent between lessons."
+    )
     return s
 
 
