@@ -252,12 +252,23 @@ def refit_vtt_text(text: str, limit: float = DISPLAY_CPS) -> str:
     _hold_for_speed(merged, limit)
     lines = ["WEBVTT", ""]
     for start, end, payload in merged:
-        lines.append(f"{_stamp(start)} --> {_stamp(end)}")
         wrapped = _wrap_lines(payload)
-        if len(wrapped) > 2:
-            wrapped = [" ".join(wrapped[:-1]), wrapped[-1]]
-        lines.extend(wrapped)
-        lines.append("")
+        # Two lines of 42 characters. A third line used to be glued back on
+        # and the gate then saw one line past the limit.
+        groups = [wrapped[i:i + 2] for i in range(0, len(wrapped), 2)] or [[payload]]
+        weights = [max(1, sum(len(line) for line in group)) for group in groups]
+        total = float(sum(weights))
+        cursor = start
+        span = max(0.0, end - start)
+        for index, group in enumerate(groups):
+            if index == len(groups) - 1:
+                stop = end
+            else:
+                stop = cursor + span * weights[index] / total
+            lines.append(f"{_stamp(cursor)} --> {_stamp(stop)}")
+            lines.extend(group)
+            lines.append("")
+            cursor = stop
     return "\n".join(lines) + "\n"
 
 

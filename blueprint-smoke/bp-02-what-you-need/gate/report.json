@@ -1,7 +1,7 @@
 {
   "tool": "quality-gate",
   "result": "pass",
-  "master": "/agent/repos/claude/course/blueprint-rebuild/masters/bp-02-what-you-need.mp4",
+  "master": "course/blueprint-rebuild/masters/bp-02-what-you-need.mp4",
   "format": "blueprint",
   "format_label": "Blueprint lesson",
   "length_window_seconds": [
@@ -17,7 +17,7 @@
     {
       "id": "length",
       "result": "pass",
-      "detail": "475.9s is inside Blueprint lesson (360s minimum, no upper limit)"
+      "detail": "443.2s is inside Blueprint lesson (360s minimum, no upper limit)"
     },
     {
       "id": "loudness",
@@ -62,7 +62,7 @@
     {
       "id": "captions",
       "result": "pass",
-      "detail": "114 cues, at most 42 characters and 20 per second"
+      "detail": "140 cues, at most 42 characters and 20 per second"
     },
     {
       "id": "text_recognition",
