@@ -760,7 +760,16 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
             draw.line([(x, yy), (x2, yy)], fill=color, width=width)
             x += step
         lf = font(36)
-        draw.text((gutter_x, yy - 18), label, font=lf, fill=WHITE)
+        if shot.get("board") == "buys-sells" and label.endswith(" middle"):
+            # The full 36px tag ends past the 4% margin. Shifting it left makes
+            # OCR read 27,630 as 927630, so the price stays put and the word shrinks.
+            price = label[: -len(" middle")]
+            draw.text((gutter_x, yy - 18), price, font=lf, fill=WHITE)
+            role = font(28)
+            role_x = gutter_x + lf.getlength(price) + 12
+            draw.text((role_x, yy - 12), "middle", font=role, fill=WHITE)
+        else:
+            draw.text((gutter_x, yy - 18), label, font=lf, fill=WHITE)
         if chapter == "The levels" and rounded == 26730:
             other = _map(0, n, 27630, lo_p, hi_p, plot)[1]
             bracket = plot[0] + 24
