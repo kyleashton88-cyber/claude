@@ -9,12 +9,12 @@
   "not_in_scope": "All 92 BP-01..03 rows are now scored here. Separate finding: course/blueprint-rebuild/numbers/bp-0{1,2,3}*.yaml (d1f6) set disclaimer_on_screen to 'Educational content only. Not financial advice.'; studio.py writes that string, so CODE_FIXES.md CF-1 fixes both.",
   "counts": {
     "total": 90,
-    "pass": 89,
-    "fail": 1,
+    "pass": 90,
+    "fail": 0,
     "lesson_stills": {
       "total": 56,
-      "pass": 55,
-      "fail": 1,
+      "pass": 56,
+      "fail": 0,
       "by_lesson": {
         "bp-01-introduction": {
           "total": 17,
@@ -23,8 +23,8 @@
         },
         "bp-02-what-you-need": {
           "total": 20,
-          "pass": 19,
-          "fail": 1
+          "pass": 20,
+          "fail": 0
         },
         "bp-03-what-is-a-grid-bot": {
           "total": 19,
@@ -73,8 +73,8 @@
       },
       "bp-02-what-you-need": {
         "total": 31,
-        "pass": 30,
-        "fail": 1
+        "pass": 31,
+        "fail": 0
       },
       "bp-03-what-is-a-grid-bot": {
         "total": 28,
@@ -1884,48 +1884,45 @@
       "beat": 14,
       "chapter": "Empty pair",
       "kind": "lesson-still",
-      "source": "committed still; image field of course/scripts/bp-02-what-you-need.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "b1eb723cd8ce520677d7628e35103a3bf6182c50",
-        "cursor/blueprint-beginner-images": "b1eb723cd8ce520677d7628e35103a3bf6182c50"
+        "cursor/blueprint-beginner-images": "70df3eddefb863a2ca26a15909506eb1ccc28991",
+        "cursor/blueprint-cursor-images": "70df3eddefb863a2ca26a15909506eb1ccc28991"
       },
       "beat_concept": "Look at the pair row and imagine it empty on purpose.",
       "scores": {
-        "beginner_clarity": 4,
-        "composition_hierarchy": 4,
-        "craft_polish": 4,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 4
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "reopened",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": null,
-      "notes": "Form with the pair row empty and a pencil, 'Fill it later'; matches the beat. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"AN EMPTY PAIR BLOCKS THE PAGE\": \"Pair box empty: not ready\" / \"Fill it in first\". Placed file left in place; do not treat the current still as a pass. | cursor cursor2.png FAIL (kyleashton88-cyber/claude@279cca96c54bbcffd4d7a9590d03130cd842a59d, course/images/bp-02-what-you-need/014.png, blob 765a72fc647a3ef7c0ce1959bcdc156a4a3c2d60, 1536x1024, 139415 bytes). Headline 'AN EMPTY PAIR BLOCKS THE PAGE' is exact and spaced. Required labels 'Pair box empty: not ready' and 'Fill it in first' are present. The Pair box is empty; Range, Levels and Stop are tidy and ticked; EXAMPLE present. Matches the narration (an empty pair blocks the page even if the rest of the list is tidy). No 'LEAVE THE PAIR BLANK' / 'Fill it later'. No mascot. Margins 100/116/109/124. But 'Pair box empty: not ready' tip stops short of the left cyan stroke of the empty Pair box (visible navy gap, about 3px). 'Fill it in first' tip already touches the bottom stroke of the same box. Placed file left in place. Next: cursor3.png. Fix: Lengthen the 'Pair box empty: not ready' arrow so its tip lands ON the left cyan stroke of the empty Pair box, overlapping the stroke, with no navy gap between the point and the box (it currently stops about 3px short). Keep the 'Fill it in first' tip on the bottom stroke of the same box \u2014 that tip already touches. Keep the headline 'AN EMPTY PAIR BLOCKS THE PAGE' and the labels 'Pair box empty: not ready' and 'Fill it in first', the empty Pair box with Range / Levels / Stop tidy and ticked, and EXAMPLE.",
+      "notes": "Form with the pair row empty and a pencil, 'Fill it later'; matches the beat. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"AN EMPTY PAIR BLOCKS THE PAGE\": \"Pair box empty: not ready\" / \"Fill it in first\". Placed file left in place; do not treat the current still as a pass. | cursor cursor2.png FAIL (kyleashton88-cyber/claude@279cca96c54bbcffd4d7a9590d03130cd842a59d, course/images/bp-02-what-you-need/014.png, blob 765a72fc647a3ef7c0ce1959bcdc156a4a3c2d60, 1536x1024, 139415 bytes). Headline 'AN EMPTY PAIR BLOCKS THE PAGE' is exact and spaced. Required labels 'Pair box empty: not ready' and 'Fill it in first' are present. The Pair box is empty; Range, Levels and Stop are tidy and ticked; EXAMPLE present. Matches the narration (an empty pair blocks the page even if the rest of the list is tidy). No 'LEAVE THE PAIR BLANK' / 'Fill it later'. No mascot. Margins 100/116/109/124. But 'Pair box empty: not ready' tip stops short of the left cyan stroke of the empty Pair box (visible navy gap, about 3px). 'Fill it in first' tip already touches the bottom stroke of the same box. Placed file left in place. Next: cursor3.png. Fix: Lengthen the 'Pair box empty: not ready' arrow so its tip lands ON the left cyan stroke of the empty Pair box, overlapping the stroke, with no navy gap between the point and the box (it currently stops about 3px short). Keep the 'Fill it in first' tip on the bottom stroke of the same box \u2014 that tip already touches. Keep the headline 'AN EMPTY PAIR BLOCKS THE PAGE' and the labels 'Pair box empty: not ready' and 'Fill it in first', the empty Pair box with Range / Levels / Stop tidy and ticked, and EXAMPLE. | cursor cursor3.png PASS (kyleashton88-cyber/claude@885ce9ee877bc3ebb2b6b77f4b7f0294748c3221, course/images/bp-02-what-you-need/014.png, blob 70df3eddefb863a2ca26a15909506eb1ccc28991, 1536x1024, 139351 bytes). Diff vs cursor2 (765a72fc647a3ef7c0ce1959bcdc156a4a3c2d60): 1997 pixels changed, all in the 'Pair box empty: not ready' arrow (x=631\u2013982, y=323\u2013357); the tip now sits on and about 2px into the left cyan stroke of the empty Pair box (mid-head rows y=349\u2013350 are continuous cyan from the shaft through x=980\u2013982 into the stroke; no navy gap at the contact). The 'Fill it in first' tip is unchanged and still sits on the bottom stroke. Headline 'AN EMPTY PAIR BLOCKS THE PAGE' exact and spaced. Labels 'Pair box empty: not ready' and 'Fill it in first' exact. Pair box empty; Range, Levels and Stop tidy and ticked; EXAMPLE present. Matches the b608319/7a0430a narration (an empty pair blocks the page even if the rest of the list is tidy). No mascot. GridBot Builder style only. Margins 100/116/109/124. Placed at out/ and course/images/bp-02-what-you-need/014.png (`source: cursor`).",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 52,
-        "right": 46,
-        "top": 105,
-        "bottom": 169
+        "left": 100,
+        "right": 116,
+        "top": 109,
+        "bottom": 124
       },
       "mascot_in_frame": false,
       "previous_v10_pass": true,
-      "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-02-what-you-need/014.png",
-      "scored_blob": "b1eb723cd8ce520677d7628e35103a3bf6182c50",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-02-what-you-need/014.png",
+      "scored_blob": "70df3eddefb863a2ca26a15909506eb1ccc28991",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration; cursor2 remake failed (arrow tip short of the empty Pair box)",
-      "fix_note": "Lengthen the 'Pair box empty: not ready' arrow so its tip lands ON the left cyan stroke of the empty Pair box, overlapping the stroke, with no navy gap between the point and the box (it currently stops about 3px short). Keep the 'Fill it in first' tip on the bottom stroke of the same box \u2014 that tip already touches. Keep the headline 'AN EMPTY PAIR BLOCKS THE PAGE' and the labels 'Pair box empty: not ready' and 'Fill it in first', the empty Pair box with Range / Levels / Stop tidy and ticked, and EXAMPLE.",
+      "pass": true,
       "remake_review": {
-        "file": "gen/bp-02-what-you-need/014/cursor2.png",
-        "blob": "765a72fc647a3ef7c0ce1959bcdc156a4a3c2d60",
+        "file": "gen/bp-02-what-you-need/014/cursor3.png",
+        "blob": "70df3eddefb863a2ca26a15909506eb1ccc28991",
         "size": "1536x1024",
         "margins_px": {
           "left": 100,
@@ -1934,24 +1931,54 @@
           "bottom": 124
         },
         "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact",
-        "source_commit": "279cca96c54bbcffd4d7a9590d03130cd842a59d",
+        "source_commit": "885ce9ee877bc3ebb2b6b77f4b7f0294748c3221",
         "source_repo": "kyleashton88-cyber/claude",
         "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
           "beginner_clarity": 5,
           "composition_hierarchy": 5,
-          "craft_polish": 2,
+          "craft_polish": 5,
           "brand_fidelity": 5,
           "text_legibility": 5,
           "character_consistency": null,
           "label_accuracy": 5
         },
-        "hard_fails": [
-          "arrow tip stops short of target: 'Pair box empty: not ready' tip stops short of the left edge of the empty Pair box (visible navy gap, about 3px)"
-        ],
-        "notes": "cursor cursor2.png FAIL (kyleashton88-cyber/claude@279cca96c54bbcffd4d7a9590d03130cd842a59d, course/images/bp-02-what-you-need/014.png, blob 765a72fc647a3ef7c0ce1959bcdc156a4a3c2d60, 1536x1024, 139415 bytes). Headline 'AN EMPTY PAIR BLOCKS THE PAGE' is exact and spaced. Required labels 'Pair box empty: not ready' and 'Fill it in first' are present. The Pair box is empty; Range, Levels and Stop are tidy and ticked; EXAMPLE present. Matches the narration (an empty pair blocks the page even if the rest of the list is tidy). No 'LEAVE THE PAIR BLANK' / 'Fill it later'. No mascot. Margins 100/116/109/124. But 'Pair box empty: not ready' tip stops short of the left cyan stroke of the empty Pair box (visible navy gap, about 3px). 'Fill it in first' tip already touches the bottom stroke of the same box. Placed file left in place. Next: cursor3.png. Fix: Lengthen the 'Pair box empty: not ready' arrow so its tip lands ON the left cyan stroke of the empty Pair box, overlapping the stroke, with no navy gap between the point and the box (it currently stops about 3px short). Keep the 'Fill it in first' tip on the bottom stroke of the same box \u2014 that tip already touches. Keep the headline 'AN EMPTY PAIR BLOCKS THE PAGE' and the labels 'Pair box empty: not ready' and 'Fill it in first', the empty Pair box with Range / Levels / Stop tidy and ticked, and EXAMPLE.",
-        "pass": false
-      }
+        "hard_fails": [],
+        "notes": "cursor cursor3.png PASS (kyleashton88-cyber/claude@885ce9ee877bc3ebb2b6b77f4b7f0294748c3221, course/images/bp-02-what-you-need/014.png, blob 70df3eddefb863a2ca26a15909506eb1ccc28991, 1536x1024, 139351 bytes). Diff vs cursor2 (765a72fc647a3ef7c0ce1959bcdc156a4a3c2d60): 1997 pixels changed, all in the 'Pair box empty: not ready' arrow (x=631\u2013982, y=323\u2013357); the tip now sits on and about 2px into the left cyan stroke of the empty Pair box (mid-head rows y=349\u2013350 are continuous cyan from the shaft through x=980\u2013982 into the stroke; no navy gap at the contact). The 'Fill it in first' tip is unchanged and still sits on the bottom stroke. Headline 'AN EMPTY PAIR BLOCKS THE PAGE' exact and spaced. Labels 'Pair box empty: not ready' and 'Fill it in first' exact. Pair box empty; Range, Levels and Stop tidy and ticked; EXAMPLE present. Matches the b608319/7a0430a narration (an empty pair blocks the page even if the rest of the list is tidy). No mascot. GridBot Builder style only. Margins 100/116/109/124. Placed at out/ and course/images/bp-02-what-you-need/014.png (`source: cursor`).",
+        "pass": true
+      },
+      "previous_remake_reviews": [
+        {
+          "file": "gen/bp-02-what-you-need/014/cursor2.png",
+          "blob": "765a72fc647a3ef7c0ce1959bcdc156a4a3c2d60",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 100,
+            "right": 116,
+            "top": 109,
+            "bottom": 124
+          },
+          "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact",
+          "source_commit": "279cca96c54bbcffd4d7a9590d03130cd842a59d",
+          "source_repo": "kyleashton88-cyber/claude",
+          "source_branch": "cursor/blueprint-cursor-images",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 5,
+            "craft_polish": 2,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 5
+          },
+          "hard_fails": [
+            "arrow tip stops short of target: 'Pair box empty: not ready' tip stops short of the left edge of the empty Pair box (visible navy gap, about 3px)"
+          ],
+          "notes": "cursor cursor2.png FAIL (kyleashton88-cyber/claude@279cca96c54bbcffd4d7a9590d03130cd842a59d, course/images/bp-02-what-you-need/014.png, blob 765a72fc647a3ef7c0ce1959bcdc156a4a3c2d60, 1536x1024, 139415 bytes). Headline 'AN EMPTY PAIR BLOCKS THE PAGE' is exact and spaced. Required labels 'Pair box empty: not ready' and 'Fill it in first' are present. The Pair box is empty; Range, Levels and Stop are tidy and ticked; EXAMPLE present. Matches the narration (an empty pair blocks the page even if the rest of the list is tidy). No 'LEAVE THE PAIR BLANK' / 'Fill it later'. No mascot. Margins 100/116/109/124. But 'Pair box empty: not ready' tip stops short of the left cyan stroke of the empty Pair box (visible navy gap, about 3px). 'Fill it in first' tip already touches the bottom stroke of the same box. Placed file left in place. Next: cursor3.png. Fix: Lengthen the 'Pair box empty: not ready' arrow so its tip lands ON the left cyan stroke of the empty Pair box, overlapping the stroke, with no navy gap between the point and the box (it currently stops about 3px short). Keep the 'Fill it in first' tip on the bottom stroke of the same box \u2014 that tip already touches. Keep the headline 'AN EMPTY PAIR BLOCKS THE PAGE' and the labels 'Pair box empty: not ready' and 'Fill it in first', the empty Pair box with Range / Levels / Stop tidy and ticked, and EXAMPLE.",
+          "pass": false
+        }
+      ],
+      "previous_committed_blob": "b1eb723cd8ce520677d7628e35103a3bf6182c50"
     },
     {
       "path": "course/images/bp-02-what-you-need/015.png",

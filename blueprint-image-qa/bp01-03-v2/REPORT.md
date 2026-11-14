@@ -480,3 +480,20 @@ Verified `a9d62740e64ba7b2acba552e361ffdc31bf48b8d` is the remote tip of `cursor
 - **BP-03: 28/28 — YES, 100%.**
 - **90-row total (BP-01..03): 89/90.**
 - Queue (BP-01..03): 1 — bp-02-what-you-need/014 (gen/bp-02-what-you-need/014/cursor3.png).
+
+---
+
+## Run on top of 3569a59 — 14 Nov 2026 (WITA): Cursor-agent remake for BP-02 014 (cursor3.png)
+
+Fetched the authentic 1536×1024 file from `kyleashton88-cyber/claude@885ce9ee877bc3ebb2b6b77f4b7f0294748c3221` via the public GitHub Contents API (base64). Saved as `gen/bp-02-what-you-need/014/cursor3.png`. Git blob matches the API sha: `70df3eddefb863a2ca26a15909506eb1ccc28991` (139351 bytes, RGB PNG). Diff vs cursor2 (`765a72fc647a3ef7c0ce1959bcdc156a4a3c2d60`): 1997 pixels changed, all in the 'Pair box empty: not ready' arrow (x=631–982, y=323–357); the fill tip is unchanged. The previously short tip now sits on and about 2px into the left cyan stroke of the empty Pair box (mid-head rows y=349–350 are continuous cyan into the stroke; no navy gap at the contact). Scored against the d1f6 narration at 7a0430a / b608319 plus the replacement text in REPORT-b608319.md, on the same strict rubric.
+
+| File | Result | Margins (l/r/t/b) | Scores | Reason |
+|---|---|---|---|---|
+| gen/bp-02-what-you-need/014/cursor3.png | PASS | 100/116/109/124 | 5/5/5/5/5/—/5 | Headline 'AN EMPTY PAIR BLOCKS THE PAGE' exact. Labels 'Pair box empty: not ready' and 'Fill it in first' exact. Pair box empty; Range, Levels and Stop tidy and ticked; EXAMPLE present. Both arrow tips touch. Matches the narration. Placed, source cursor. |
+
+### Updated counts (dropped rows excluded)
+- **BP-01: 31/31 — YES, 100%.**
+- **BP-02: 31/31 — YES, 100%.**
+- **BP-03: 28/28 — YES, 100%.**
+- **90-row total (BP-01..03): 90/90.**
+- Queue (BP-01..03): 0.
