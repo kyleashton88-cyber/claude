@@ -325,7 +325,7 @@ def _beat_teaching(beat: dict) -> str | None:
         "course/images/bp-03-what-is-a-grid-bot/017.png": "Your turn: draw one buy order waiting below the price.",
         "course/images/bp-01-introduction/007.png": "Buy orders sit on lines below the price and sell orders sit on lines above it. The sells need some coin, so a grid starts with part cash and part coin. That is a description, not advice.",
         "course/images/bp-01-introduction/008.png": "Write your stop rule down before you start. On the card it says: Stop = when you quit.",
-        "course/images/bp-03-what-is-a-grid-bot/004.png": "Five labels cover the picture: upper, lower, levels, side, and stop. On the card, Upper is the top edge, Lower is the bottom edge, Levels are the rungs, Side: what you hold is the side, and Stop is your rule.",
+        "course/images/bp-03-what-is-a-grid-bot/004.png": "Five labels cover the picture: upper, lower, levels, side, and stop. On the card, Upper is the top edge, Lower is the bottom edge, Levels are the rungs, Side is what you hold, and Stop is your rule.",
         "course/images/bp-03-what-is-a-grid-bot/008.png": "What you hold changes. Price bounces: coin and cash swap back and forth. Price leaves: mostly coin or mostly cash.",
         "course/images/bp-03-what-is-a-grid-bot/010.png": "Point and say the five: Top, Bottom, Levels, What you hold, and Stop.",
         "course/images/bp-05-spacing-and-range/010.png": "Now a second, made-up example: twenty lines, with each gap half of one percent. Recount once from a wrong page: the wrong page says twenty times a half percent equals ten percent. Correct it in writing: nineteen times a half percent equals nine and a half percent.",
