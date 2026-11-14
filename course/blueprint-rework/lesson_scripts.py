@@ -291,7 +291,7 @@ def bp02() -> list[dict]:
             "Crypto is a digital coin, such as bitcoin, and a daily close is the last price of that day. "
             "A band, also called the range, is the top and the bottom, a gap is the space between two lines, and the step is how wide that gap is. "
             "A stop is the rule for what you will do if the price leaves the band. "
-            "A packing list is written before the trip, not during the scramble at the door, because you need the page before you need a screen."
+            "Like a packing list before a trip, your page comes before any screen."
         ),
         caption="Write the page before any screen.",
     ))
@@ -580,7 +580,7 @@ def bp04() -> list[dict]:
         ],
         vo=(
             "Worked sort. Three labels, three windows, no score that tells you to trade. "
-            "Range, trend, break. If you give the March 2020 break the label range, the sort is wrong."
+            "Range, trend, break. If you label the March 2020 drop a range, the sort is wrong."
         ),
         caption="Three windows. Three labels. No score.",
     ))

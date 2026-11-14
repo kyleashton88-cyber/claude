@@ -265,6 +265,8 @@ def thirds(shot: dict) -> tuple[str, str]:
     for key, term, defin in table:
         if key in low:
             text = defin or cap
+            if key == "secret" and re.search(r"\bAPI\b", shot.get("vo") or ""):
+                text = "A seed, a key, or an API secret. None of those go on the page."
             if text and not text.endswith("."):
                 text += "."
             return term, text
