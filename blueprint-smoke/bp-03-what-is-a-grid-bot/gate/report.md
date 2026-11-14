@@ -3,7 +3,7 @@
 Result: **PASS**
 
 Format: Blueprint lesson (`blueprint`), 360s minimum, no upper limit.
-Master: `/agent/repos/claude/course/blueprint-rebuild/masters/bp-03-what-is-a-grid-bot.mp4`
+Master: `course/blueprint-rebuild/masters/bp-03-what-is-a-grid-bot.mp4`
 
 Loudness fails the gate when it is outside the window. It is not only printed.
 Target -14.0 LUFS ± 1.0, true peak at or below -1.0 dBTP.
@@ -17,16 +17,16 @@ Blueprint lessons keep the 6-minute minimum. The 10-minute upper cap is removed.
 
 | Check | Result | Detail |
 |---|---|---|
-| length | PASS | 417.1s is inside Blueprint lesson (360s minimum, no upper limit) |
+| length | PASS | 390.3s is inside Blueprint lesson (360s minimum, no upper limit) |
 | loudness | PASS | integrated -14.4 LUFS, target -14 ± 1 |
-| true_peak | PASS | true peak -3.7 dBTP, limit -1 dBTP |
+| true_peak | PASS | true peak -3.5 dBTP, limit -1 dBTP |
 | frozen | PASS | longest static run 0.5s, limit 8s |
 | black | PASS | no near-black run over 0.5s |
 | silence | PASS | no silence of 2s or more |
 | resolution | PASS | 1920x1080 |
 | fps | PASS | 30.000 fps |
 | codec | PASS | video h264, audio aac, yuv420p |
-| captions | PASS | 105 cues, at most 42 characters and 20 per second |
+| captions | PASS | 118 cues, at most 42 characters and 20 per second |
 | text_recognition | PASS | tesseract read the sampled frames |
 | brands | PASS | no exchange or banned brand name |
 | safe_margins | PASS | sampled words sit inside the 4% margin |
