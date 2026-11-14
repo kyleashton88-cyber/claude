@@ -199,7 +199,7 @@ def bp01() -> list[dict]:
             "Every close in this window stayed between those two lines. "
             "A neat round box would have sat inside the real lines, so it does not match the path."
         ),
-        caption="The real low was 24,930. The real high was 30,331.",
+        caption="The bottom line is 24,930. The top line is 30,331.",
         levels=[LOW, HIGH],
     ))
     s.append(_shot(
@@ -288,15 +288,15 @@ def bp02() -> list[dict]:
         kind="analogy", analogy="list", chapter="Hook",
         reveal=1,
         vo=(
+            "Crypto is a digital coin, such as bitcoin, and a daily close is the last price of that day. "
+            "A band, also called the range, is the top and the bottom, a gap is the space between two lines, and the step is how wide that gap is. "
             "A packing list is written before the trip, not during the scramble at the door. "
-            "The list is the analogy, and the chart is the public prices we already have. "
-            "You need the page before you need a screen. "
-            "Beginners go wrong when they open a trading screen before their plan is written down."
+            "You need the page before you need a screen."
         ),
         caption="Write the page before any screen.",
     ))
     s += stack("Objectives", [
-        "By the end you will fill in a seven-item checklist from the July to October 2023 example, on paper.",
+        "By the end you will fill in a seven-item checklist on paper. An order is an instruction to buy or sell.",
         "You will keep every secret off that page.",
         "You will mark the page Example so nobody can read it as an order.",
     ], "")
@@ -319,10 +319,10 @@ def bp02() -> list[dict]:
         board="three-words",
         reveal=1,
         vo=(
-            "Carry the three words forward from the July to October 2023 example in lesson 1. Range: 24930 to 30331. "
-            "Levels: six gaps of about 900. "
-            "Stop: a rule you write before you start, for when the close leaves 30331 and does not come back, as it did on 23 October 2023. "
-            "If you can only say one of the three words, the page is missing a part."
+            "Three words, before any number. Range is the top line and the bottom line. "
+            "Levels are the rungs, and a gap is the space between two rungs. "
+            "A stop is the rule for what you will do if the price leaves the band and does not come back. "
+            "The figures from lesson 1 are on the card, marked Example. If you can only say one of the three words, the page is missing a part."
         ),
         caption="Range, levels, stop. All three from the same window.",
     ))
@@ -342,7 +342,7 @@ def bp02() -> list[dict]:
         reveal=1,
         vo=(
             "You copy the band onto the page, not every day's prices. "
-            "The low was 24930 and the high was 30331, with six gaps of about 900. "
+            "Copy the bottom line and the top line, with six gaps of about 900. "
             "Every close in that window stayed inside the band. Mark each figure Example."
         ),
         caption="Copy the band. Every close stayed inside it.",
@@ -366,18 +366,16 @@ def bp02() -> list[dict]:
         chapter="Say the page",
         reveal=1,
         vo=(
-            "Say the page once, in your own words. "
-            "The pair is bitcoin, and a daily close is the last price of the day. "
-            "The band is 24930 to 30331, with six gaps of about 900. "
-            "The stop rule says what you will do if the close leaves 30331 and does not come back. "
+            "Say the page once, in your own words, and do not read the chart again. "
+            "Name the pair, the band, the gaps, and the stop rule, then stop. "
             "A secret is a seed phrase, a private key, or an API secret. A seed phrase is the list of words that unlocks a crypto wallet. A private key or an API secret is a password that can move your money. None of those go on this page. "
-            "Example on a figure means a real past price, not a forecast, and not an order."
+            "You write Example on your own notebook so a practice sketch is never later mistaken for a live plan."
         ),
         caption="Say the page once. No secrets. Example is not an order.",
     ))
     s += stack("Recap", [
         "The page comes before the screen.",
-        "The figures are the summer low, the summer high, and six gaps.",
+        "The figures are the bottom line, the top line, and six gaps.",
         "Secrets stay off the page. Example stays on it.",
     ], "")
     s.append(outro("What is a grid bot"))
@@ -405,6 +403,8 @@ def bp03() -> list[dict]:
     s.append(_shot(
         chapter="Limit orders wait", reveal=1, focus_price=27630, focus_label="27630",
         vo=(
+            "A rung is one price line where an order waits. "
+            "A ring on the chart means the price touched that rung. A white square means an order actually traded. "
             "The exchange is the app or website where people buy and sell crypto. "
             "The book is that exchange's list of everyone's waiting orders. "
             "A cross is the price line touching a rung. A fill is an order that actually trades."
@@ -460,6 +460,7 @@ def bp03() -> list[dict]:
         chapter="One step down, one step up",
         reveal=1,
         vo=(
+            "Coin is the crypto. Cash is the money you can spend. "
             "Here is one step, slowly. Price falls through a buy rung, and the waiting buy can fill. "
             "You then hold a little more coin, and a sell can be written one rung higher. "
             "If price rises through that sell, it can fill, and you hold a little more cash. "
@@ -476,7 +477,7 @@ def bp03() -> list[dict]:
             "This example ended in October 2023. "
             "On 23 October 2023 the daily close was 33086, above 30331. "
             "The price did not come back, so the waiting orders inside the old band no longer matched the path. "
-            "That is why you write the stop before you start."
+            "A stop is your rule for what you will do if the price leaves the band. You write that rule before you start, so you already know the exit."
         ),
         caption="23 October 2023. Close 33,086. The old band was finished.",
     ))
@@ -541,23 +542,22 @@ def bp04() -> list[dict]:
         reveal_from=0, reveal=1, levels=LEVELS, focus_price=HIGH, focus_label="Old high",
         vo=(
             "A trend on this page is a path that leaves and keeps making ground in one direction. "
-            "After 23 October 2023 the close went from 33086 to about 71397 by 14 March 2024. "
+            "After 23 October 2023 the close went from 33086 to 71397 by 14 March 2024. "
             "There were pauses. The old band did not contain them. "
-            "A ladder drawn at 24930 to 30331 was finished when that trend held."
+            "A ladder drawn from the bottom line to the top line was finished when that trend held."
         ),
         caption="The trend ran from about 33,086 to about 71,397.",
     ))
     s.append(_shot(
-        chapter="Break", chart=CRASH, chart_title="20 February 2020 to 23 March 2020",
-        reveal_from=0, reveal=1, levels=[],
+        chapter="Break",
+        candle={"high": 5838, "low": 4107, "close": 5564, "date": "13 March 2020"},
         vo=(
             "A break is a path that jumps out of the prices around it. "
-            "On 11 March 2020 the public close was 7911. "
-            "Over the next two days the path fell about 48 percent. "
-            "The exact low is on the card, marked Example. "
-            "You do not sort those three days as a quiet range, and you do not lay a summer-style ladder across them."
+            "This candle is 13 March 2020. The high, the low, and the close are labelled. "
+            "From the close two days earlier, about 8 thousand, down to the low on this candle, is about 48 percent. "
+            "You do not sort those days as a quiet range, and you do not lay a summer-style ladder across them."
         ),
-        caption="13 March 2020. Low 4,107.",
+        caption="13 March 2020. High 5,838. Low 4,107. Close 5,564.",
     ))
     s.append(_shot(
         chart=RALLY, chapter="After the leave",
@@ -566,7 +566,7 @@ def bp04() -> list[dict]:
         vo=(
             "After 23 October 2023 the price stayed outside the old band. "
             "You can see that from the shape. You do not read every day. "
-            "The old top, 30331, is behind the price. That shape is a trend, not a range."
+            "The old top line is behind the price. That shape is a trend, not a range."
         ),
         caption="The price left 30,331 and did not come back.",
     ))
@@ -611,11 +611,10 @@ def bp05() -> list[dict]:
     s.append(_shot(
         chapter="Hook", reveal=1, focus_price=30000, focus_label="30000",
         vo=(
-            "A band that ignores the real high and the real low is too tight, even when it looks neat. "
-            "A round box would have missed days whose close, or the extreme of the day, sat outside it. "
-            "Start from the real top line and the real bottom line. They are on the chart, marked Example."
+            "A band narrower than the real top line and bottom line is too tight, even when it looks neat. "
+            "A round box would have missed days that went outside it."
         ),
-        caption="A neat round box missed real wicks.",
+        caption="A neat round box missed the real lines.",
     ))
     s += stack("Objectives", [
         "By the end you will count the gaps, not the lines that bound them.",
@@ -628,20 +627,20 @@ def bp05() -> list[dict]:
         vo=(
             "There are seven prices on the ladder and six gaps between them. "
             "Counting the lines and calling them gaps is the miss. "
-            "The step is about 900 dollars. On a middle near 27630, that step is about 3 percent. "
+            "The step is about 900 dollars. Near 27630, that step is about 3 percent. "
             "Say the example fee for one buy plus one sell is two tenths of one percent. On 27630 that is about 55 dollars. "
             "The gap is wider than that example cost. A gap thinner than the cost is the one you cross out."
         ),
         caption="Seven lines. Six gaps. About 900 dollars.",
     ))
     s.append(_shot(
-        chapter="Wicks", reveal=1, focus_price=30000, focus_label="Too tight",
+        chapter="Real lines", reveal=1, focus_price=30000, focus_label="Too tight",
         vo=(
-            "The range has to hold the real high and the real low, not only the closes you liked. "
-            "If your top is a round number and the window's high is above it, that top doesn't match. "
-            "Move the rail to the real high, then recount the gaps. Do not change the step and the rail in one silent edit."
+            "The range has to hold the real top line and bottom line, not only the closes you liked. "
+            "If your top is a round number below the real top line, it doesn't match. "
+            "Move the rail up to the top line, then recount the gaps. Do not change the step and the rail in one silent edit."
         ),
-        caption="The high was 30,331. A 30,000 top misses the real high.",
+        caption="The top line is 30,331. A round top misses it.",
     ))
     s.append(_shot(
         chapter="Recount against the path",
@@ -649,9 +648,9 @@ def bp05() -> list[dict]:
         vo=(
             "Check the rails against the path once, not day by day. "
             "Every close from 19 July 2023 to 16 October 2023 stayed between 24930 and 30331. "
-            "If your top is below the real high, move the rail, then count the gaps again."
+            "If your top is below the top line, move the rail, then count the gaps again."
         ),
-        caption="Every close stayed between the real low and the real high.",
+        caption="Every close stayed between the bottom line and the top line.",
     ))
     s.append(_shot(
         kind="worked", chapter="Worked recount",
@@ -672,16 +671,16 @@ def bp05() -> list[dict]:
         chapter="Why the gap matters",
         reveal=1,
         vo=(
-            "A recorded price is a close, a high, or a low that was actually printed for that day. The rails have to use the real top line and the real bottom line, not a round number you prefer. "
+            "The rails come from the real recorded prices of that window. "
             "A gap is the space between two levels. This window has seven prices and six gaps. "
             "The step is about 900. An example cost of about 55 is much smaller, so this step can clear that cost. "
             "A gap thinner than the cost is the one you cross out. "
             "None of this is a fee from an app. It is a recount of a public window, marked Example. "
-            "If you remember only one thing, remember to count the spaces between the lines, and to set the rails on the real high and the real low. "
+            "If you remember only one thing, remember to count the spaces between the lines, and to set the rails on the top line and the bottom line. "
             "Point at the top rail, the bottom rail, and one gap. Say the gap is about 900. Say the rails are 24930 and 30331. That is the recount. "
             "Then stop. You do not need a second pass through the days."
         ),
-        caption="Use the real prints. Count gaps. Cross out a gap that cannot clear the cost.",
+        caption="Use the real prices.",
     ))
     s += stack("Recap", [
         "Rails come from the real top line and the real bottom line.",
@@ -701,7 +700,7 @@ def bp06() -> list[dict]:
         vo=(
             "Entry without an exit is a page that cannot finish. "
             "The exit is a path you can point at. On this chart it is already drawn. "
-            "23 October 2023, close 33086, above the summer high, and the path did not go back inside 30331."
+            "23 October 2023, close 33086, above the top line, and the path did not go back inside 30331."
         ),
     ))
     s += stack("Objectives", [
@@ -826,7 +825,7 @@ def bp07() -> list[dict]:
         chapter="Fields", reveal=1,
         vo=(
             "The fields you may copy are the ones on the page. "
-            "Pair: bitcoin, public daily closes. Upper: 30331. Lower: 24930. Gaps: six. "
+            "Pair: bitcoin, public daily closes. Upper: the top-line figure on your card. Lower: the bottom-line figure. Gaps: six. "
             "Finish sentence and before sentence, even if the form has no box for a sentence. "
             "You still read them before you stand up."
         ),
@@ -846,7 +845,7 @@ def bp07() -> list[dict]:
         chapter="Read the figures",
         reveal=1,
         vo=(
-            "Read the page once: bitcoin, public daily closes, upper 30331, lower 24930, six gaps. "
+            "Read the page once: bitcoin, public daily closes, upper the top-line figure on your card, lower the bottom-line figure, six gaps. "
             "A daily close is the last price of the day. "
             "You point at those figures. You do not read every day, and you do not send an order."
         ),
@@ -898,7 +897,7 @@ def bp08() -> list[dict]:
         vo=(
             "Monitoring is three questions you can finish, not something you watch all day. "
             "Inside means the close is still between the top and the bottom. "
-            "Which side means whether the close is above or below the middle line, 27630. "
+            "Which side means whether the close is above or below the middle line. "
             "We will ask the questions on 7 October 2023, then on 23 October 2023, so you can see the answers change."
         ),
     ))
@@ -912,7 +911,7 @@ def bp08() -> list[dict]:
         chapter="7 October", reveal=0.7, focus_price=27969, focus_label="27969",
         vo=(
             "7 October 2023. The public close was 27969. "
-            "Inside the band? Yes. 27969 sits between 24930 and 30331. "
+            "Inside the band? Yes. That close sits between 24930 and 30331. "
             "Which side of 27630? Above it, by a little. "
             "Does the finish sentence still hold? The path has not left 30331 yet, so the stop has not triggered. "
             "Three answers. Then you stop."
@@ -1032,7 +1031,7 @@ def bp09() -> list[dict]:
             "The fix is to move the rail up to the top line, then recount six gaps. "
             "You do not fix the rail and the count in one scribble."
         ),
-        caption="Round numbers lost the wick at 30,331.",
+        caption="The round box missed the top line, 30,331.",
     ))
     s.append(_shot(
         chapter="Counting lines", reveal=1,
@@ -1111,7 +1110,7 @@ def bp10() -> list[dict]:
         reveal=1, levels=[],
         vo=(
             "Scaling on this page means a second written page, not a bigger feeling. "
-            "Page one is the summer of 2023, and page two is 27 March 2024 to 24 June 2024, low 56555 and high 72715. "
+            "Page one is the summer of 2023, and page two is 27 March 2024 to 24 June 2024. The closes run from about 58 thousand to about 72 thousand. "
             "The checks stay the same, and the one change is the band."
         ),
         caption="Page two: 56,555 to 72,715. One change.",
@@ -1128,7 +1127,7 @@ def bp10() -> list[dict]:
         vo=(
             "Page two still has to pass the sort, the rails, the gap count, and a finish sentence. "
             "The later window is not automatically a range just because you want a second page. "
-            "Look at it. The low is 56555 and the high is 72715. "
+            "Look at it. The closes run from about 58 thousand to about 72 thousand. "
             "That span is wider than the summer span. You measure it. You do not copy 900 dollars across."
         ),
         caption="Do not copy the 900 dollar step onto a new window.",
@@ -1149,7 +1148,7 @@ def bp10() -> list[dict]:
         chart_title="27 March 2024 to 24 June 2024",
         reveal=1, levels=[],
         vo=(
-            "Measure page two once. The low was 56555 and the high was 72715. "
+            "Measure page two once. The closes run from about 58 thousand to about 72 thousand. "
             "Do not read every day, and do not copy the summer step of about 900 onto this window. "
             "The two pages stay in separate buckets."
         ),
@@ -1216,12 +1215,12 @@ def bp10() -> list[dict]:
 def bp11() -> list[dict]:
     s = [ident("11", "Liquidation, as a public path")]
     s.append(_shot(
-        chart=CRASH, chapter="Hook", chart_title="February and March 2020",
-        caption="The losing path comes first.",
-        reveal_from=0, reveal=1, levels=[],
+        chapter="Hook",
+        caption="13 March 2020. High 5,838. Low 4,107. Close 5,564.",
+        candle={"high": 5838, "low": 4107, "close": 5564, "date": "13 March 2020"},
         vo=(
             "This lesson is opt-in. The spot page is already complete without it. "
-            "The losing path comes first. The card has the 11 March close and the 13 March low, marked Example. "
+            "The losing path comes first. This candle is 13 March 2020. The high, the low, and the close are labelled. "
             "A contract can be closed by the venue when the margin is gone. A spot holding of coins is not that mechanism."
         ),
     ))
@@ -1235,7 +1234,7 @@ def bp11() -> list[dict]:
         chart=SUMMER, chapter="Spot is complete", reveal=1,
         vo=(
             "The summer page does not need this lesson. "
-            "24930 to 30331, six gaps, a stop on 23 October 2023. "
+            "It has the bottom line, the top line, six gaps, and a stop on 23 October 2023. "
             "That page has no multiple on it. Leaving this lesson is a complete choice. "
             "Write Skipped on purpose if you stop here, and keep the spot page."
         ),
@@ -1249,10 +1248,10 @@ def bp11() -> list[dict]:
             "A contract here is a trade on the price made with borrowed money. You never hold the coin. A position is that open trade. "
             "Liquidation, in plain words, means a venue closes a contract because the margin cannot carry it. "
             "The chart is not a venue screen. It is the public path those days followed. "
-            "From that close down to that low is about 48 percent. "
-            "Draw that drop before you draw any recovery. The low on the card comes first in the story."
+            "On this line of closes, 11 March closed at 7911 and 12 March closed at 4971. That is about 37 percent. "
+            "Draw that drop before you draw any recovery. The day's extreme is on the candle, not on this line of closes."
         ),
-        caption="About 48 percent, from 7,911 to the low at 4,107.",
+        caption="Closes: 7,911 on 11 March to 4,971 on 12 March. About 37 percent.",
     ))
     s.append(_shot(
         kind="analogy", analogy="buckets", chart=CRASH, chart_title="Two boxes, one path",
@@ -1299,7 +1298,7 @@ def bp11() -> list[dict]:
             "Isolated means one box: a loss stays in that box. Cross means a line from that box into the next one. "
             "The summer page, 24930 to 30331 with a stop on 23 October 2023, has no multiple on it. "
             "You can write Skip and keep that page. This lesson does not require a contract. "
-            "Draw the losing path first. A recovery drawn before the low would tell the story backwards. "
+            "Draw the losing path first. A recovery drawn before that drop would tell the story backwards. "
             "The summer spot page does not use this chart, and you can leave it closed."
         ),
         caption="Spot is coins you hold. A contract can be closed for you. You can skip.",

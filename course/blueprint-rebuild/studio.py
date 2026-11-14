@@ -238,7 +238,7 @@ def thirds(shot: dict) -> tuple[str, str]:
         ("recap", "Recap", "A line to keep."),
         ("stop", "Stop", "A rule you write before you start: what you will do if the price leaves the band and does not come back."),
         ("finish", "Finish", "The exit, written before the entry, and pointed at a real date."),
-        ("range", "Range", "The real lowest and highest prices in the window."),
+        ("range", "Range", "The bottom line and the top line of the window."),
         ("level", "Level", "A price where a limit order waits. It does not chase the market."),
         ("gap", "Gap", "The space between two rungs. Count gaps, not the lines that bound them."),
         ("wick", "Wick", "The price poking past a line during the day but not closing there."),
@@ -360,7 +360,7 @@ def _beat_teaching(beat: dict) -> str | None:
         ("The list is the analogy of the form.", "Think of the form as a copy of your notes."),
         ("passes the same gates", "passes the same checks"),
         ("same gates", "same checks"),
-        ("Side means which asset you hold more of after the example fills.", "Which side means whether the close is above or below the middle line, 27630."),
+        ("Side means which asset you hold more of after the example fills.", "Which side means whether the close is above or below the middle line."),
         ("Inside means the path you are looking at still crosses the band you drew.", "Inside means the close is still between the top and the bottom."),
         ("not a vigil", "not something you watch all day"),
         ("A vigil is watching with no end. A vigil pretends that watching harder changes the path.", "Watching all day does not change the path."),
@@ -372,7 +372,7 @@ def _beat_teaching(beat: dict) -> str | None:
         ("Without a top and a bottom, a spacing percent is a number floating in the margin.", "Without a top and a bottom, you can't place the lines."),
         ("Price often chops sideways, weaving through the same band instead of leaving.", "Price often moves sideways, bouncing between the same top and bottom instead of leaving."),
         ("built for that weave", "built for that bouncing"),
-        ("the weave they were built for is gone. Inventory can sit on one side.", "the bouncing they were built for is gone. You may end up holding mostly coin or mostly cash, because on the way out, every buy below or every sell above has already filled."),
+        ("the weave they were built for is gone. Inventory can sit on one side.", "the bouncing they were built for is gone. Leave through the top and every sell has filled, so you hold mostly cash, and leave through the bottom and every buy has filled, so you hold mostly coin."),
         ("The weave is the job.", "Bouncing inside the band is what a grid is built for."),
         ("such as the base and the quote", "the coin you buy and the money you pay with"),
         ("The setup check has seven lines", "The setup check has seven items"),
@@ -1358,8 +1358,8 @@ def paint_board(base: Image.Image, shot: dict) -> None:
         for title, body, kind in cards:
             draw.rounded_rectangle([MX, y, RIGHT, y + 150], 16, fill=GLASS, outline=CYAN, width=2)
             _row_icon(draw, MX + 56, y + 75, kind)
-            draw.text((MX + 110, y + 54), title, font=font(40), fill=CYAN)
-            draw.text((MX + 340, y + 56), body, font=font(32), fill=WHITE)
+            draw.text((MX + 110, y + 40), title, font=font(52), fill=CYAN)
+            draw.text((MX + 420, y + 48), body, font=font(44), fill=WHITE)
             pic = 1540
             if kind == "band":
                 draw.line([(pic, y + 52), (pic + 180, y + 52)], fill=CYAN, width=4)
@@ -2054,7 +2054,8 @@ def _narrate_shot(speaker, shot: dict) -> tuple[np.ndarray, int, list]:
         if index < len(sentences) - 1:
             buf = _xfade(buf, np.zeros(int(SENTENCE_GAP * sr), dtype=np.float32), sr)
     hold = max(0.0, _reading_time(shot) - len(buf) / sr)
-    cap = REVEAL_GAP_CAP if shot.get("kind") in {"chart", "analogy"} else LINE_GAP_CAP
+    revealing = shot.get("kind") in {"chart", "analogy"} and not shot.get("board") and not shot.get("candle")
+    cap = REVEAL_GAP_CAP if revealing else LINE_GAP_CAP
     tail = min(cap, hold + BEAT_GAP)
     if tail > 0:
         buf = _xfade(buf, np.zeros(int(tail * sr), dtype=np.float32), sr)
