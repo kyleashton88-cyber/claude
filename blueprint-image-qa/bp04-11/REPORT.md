@@ -667,3 +667,19 @@ Fetched authentic 1536×1024 RGB files from `kyleashton88-cyber/claude@5a65ffaab
 ### Updated counts
 - **BP-04: 14/14 — 100%.**
 - **BP-05: 13/14 — not 100%.** 006 remains queued.
+
+
+---
+
+## Cursor-agent remake at f184f25: BP-05 006 (cursor2)
+
+Fetched the authentic 1536×1024 RGB file from `kyleashton88-cyber/claude@f184f252d1c6ebd3f96e5d2234ef9a697440c7c8` via the public GitHub Contents API (base64). Saved as `gen/bp-05-spacing-and-range/006/cursor2.png`. Git blob matches the API sha: `e9ae1f2148e2043acb73731843c6ec4d30fb6c5d` (159115 bytes). Scored against the d1f6 narration at `863261b6`, REPORT-b608319, and BP-05 015, on the same strict rubric.
+
+| File | Result | Margins (l/r/t/b) | Scores | Blob |
+|---|---|---|---|---|
+| gen/bp-05-spacing-and-range/006/cursor2.png | PASS | 103/120/109/104 | 5/5/5/5/5/—/5 | `e9ae1f2148e2043acb73731843c6ec4d30fb6c5d` |
+
+Headline remains 'HALF THE GAP, DOUBLE THE LINES' over the 6 vs 12 schematic. Drawn counts match the new labels: left box 6 interior lines / 5 gaps, right box 12 interior lines / 11 gaps (card borders excluded). The house recount is its own pill, visually detached from either box: '9.5% range ÷ 0.25% step = 38 gaps, not 40', which matches the 863261b narration. Both arrow tips touch. EXAMPLE present. Consistent with BP-05 015 ('Count gaps, not lines' / '7 lines, 6 gaps'). Placed, source cursor.
+
+### Updated counts
+- **BP-05: 14/14 — 100%.**
