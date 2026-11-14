@@ -463,3 +463,20 @@ Fetched authentic 1536×1024 files from `kyleashton88-cyber/claude@733943d899af3
 - **BP-03: 28/28 — YES, 100%.**
 - **90-row total (BP-01..03): 89/90.**
 - Queue (BP-01..03): 1 — bp-02-what-you-need/014 (gen/bp-02-what-you-need/014/cursor1.png).
+
+---
+
+## Run on top of a9d6274 — 14 Nov 2026 (WITA): Cursor-agent remake for BP-02 014
+
+Verified `a9d62740e64ba7b2acba552e361ffdc31bf48b8d` is the remote tip of `cursor/blueprint-beginner-images` (git ls-remote and the GitHub API). Fetched the authentic 1536×1024 file from `kyleashton88-cyber/claude@279cca96c54bbcffd4d7a9590d03130cd842a59d` via the public GitHub Contents API (base64). Saved as `gen/bp-02-what-you-need/014/cursor2.png`. Git blob matches the API sha: `765a72fc647a3ef7c0ce1959bcdc156a4a3c2d60` (139415 bytes, RGB PNG). Scored against the d1f6 narration at 7a0430a / b608319 plus the replacement text in REPORT-b608319.md, on the same strict rubric (every category at least 4/5, no hard fails; every arrow tip must visibly touch its target; doubt = fail; margins at least 45px luma>110).
+
+| File | Result | Margins (l/r/t/b) | Scores | Reason |
+|---|---|---|---|---|
+| gen/bp-02-what-you-need/014/cursor2.png | FAIL | 100/116/109/124 | 5/5/2/5/5/—/5 | Headline 'AN EMPTY PAIR BLOCKS THE PAGE' exact and spaced. Labels 'Pair box empty: not ready' and 'Fill it in first' present. Pair box empty; Range, Levels and Stop tidy and ticked; EXAMPLE present. Matches the narration. But 'Pair box empty: not ready' tip stops short of the left cyan stroke of the empty Pair box (visible navy gap, about 3px). 'Fill it in first' tip already touches the bottom stroke. Placed file left in place. Next: cursor3.png. |
+
+### Updated counts (dropped rows excluded)
+- **BP-01: 31/31 — YES, 100%.**
+- **BP-02: 30/31 — NOT 100%.** Rows left: 014 (cursor3; lengthen the 'Pair box empty: not ready' arrow).
+- **BP-03: 28/28 — YES, 100%.**
+- **90-row total (BP-01..03): 89/90.**
+- Queue (BP-01..03): 1 — bp-02-what-you-need/014 (gen/bp-02-what-you-need/014/cursor3.png).
