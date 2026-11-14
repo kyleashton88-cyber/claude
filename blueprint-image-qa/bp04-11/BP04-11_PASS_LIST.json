@@ -8,12 +8,12 @@
   "not_in_scope": "course/images/_held/*.png (10 files: bp-06 014/017, bp-07 012/017/020, bp-08 003/006/007/009/011) are not referenced by any lesson script and were not scored. Shared title-art/mascot assets are already on BP01-03_PASS_LIST.json.",
   "counts": {
     "total": 161,
-    "fail": 100,
+    "fail": 101,
     "by_lesson": {
       "bp-04-market-regimes": {
         "total": 20,
-        "pass": 17,
-        "fail": 3
+        "pass": 16,
+        "fail": 4
       },
       "bp-05-spacing-and-range": {
         "total": 19,
@@ -51,7 +51,8 @@
         "fail": 20
       }
     },
-    "pass": 61
+    "pass": 60,
+    "dropped": 0
   },
   "images": [
     {
@@ -489,11 +490,13 @@
         "character_consistency": null,
         "label_accuracy": 5
       },
-      "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "status": "reopened",
+      "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-04-market-regimes__006.txt",
-      "notes": "web4 PASS. Exactly three rungs; the path starts and ends cleanly on the bottom rung; every crossing is dotted. 'Each dot = an order filling' tip now lands on a glowing crossing-dot (the v3 miss). 'Price crosses the same lines again and again' tip sits on the middle rung. EXAMPLE present. Headline 'RANGE: WHERE GRIDS FIT' is properly spaced. Margins 78/77/81/153. Placed at out/ and course/images/bp-04-market-regimes/006.png.",
+      "notes": "web4 PASS. Exactly three rungs; the path starts and ends cleanly on the bottom rung; every crossing is dotted. 'Each dot = an order filling' tip now lands on a glowing crossing-dot (the v3 miss). 'Price crosses the same lines again and again' tip sits on the middle rung. EXAMPLE present. Headline 'RANGE: WHERE GRIDS FIT' is properly spaced. Margins 78/77/81/153. Placed at out/ and course/images/bp-04-market-regimes/006.png. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"Each dot = price touches a line (a cross)\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -506,7 +509,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/006.png",
       "scored_blob": "a9936e9997ea49f1b9c7b63a43b8b9f376a1dd8d",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-04-market-regimes/006/web4.png",
         "blob": "a9936e9997ea49f1b9c7b63a43b8b9f376a1dd8d",
@@ -610,8 +613,34 @@
           ],
           "notes": "web3 remake FAIL under the strict arrow rule. Crossing-count and stub faults from v2 look fixed (every crossing is dotted; the path has a clean start and end). \"Price crosses the same lines again and again\" looked like a touch. But \"Each dot = an order filling\" tip stops clearly short of the glowing dot. Next: web4.png on the v4 prompt.",
           "pass": false
+        },
+        {
+          "file": "gen/bp-04-market-regimes/006/web4.png",
+          "blob": "a9936e9997ea49f1b9c7b63a43b8b9f376a1dd8d",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 78,
+            "right": 77,
+            "top": 81,
+            "bottom": 153
+          },
+          "scored_against": "beat + prompt current when this batch started (score on merits)",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 4,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 5
+          },
+          "hard_fails": [],
+          "notes": "web4 PASS. Exactly three rungs; the path starts and ends cleanly on the bottom rung; every crossing is dotted. 'Each dot = an order filling' tip now lands on a glowing crossing-dot (the v3 miss). 'Price crosses the same lines again and again' tip sits on the middle rung. EXAMPLE present. Headline 'RANGE: WHERE GRIDS FIT' is properly spaced. Margins 78/77/81/153. Placed at out/ and course/images/bp-04-market-regimes/006.png.",
+          "pass": true
         }
-      ]
+      ],
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "\"Each dot = price touches a line (a cross)\"."
     },
     {
       "path": "course/images/bp-04-market-regimes/007.png",
@@ -634,11 +663,13 @@
         "character_consistency": null,
         "label_accuracy": 1
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-04-market-regimes__007.txt",
-      "notes": "Grey staircase with a pile of glass cubes labelled 'PILE': no price path, no higher highs; does not teach 'trend'. | web1 remake: passed, then FAIL under the strict arrow rule (14 Nov): arrow tip stops short of target: \"Small dips\" tip stops about 25px above the dip and \"Keeps going one way\" tip stops about 17px below the dashed slope arrow. | web2 remake FAIL under the strict arrow rule. \"Higher highs\" and \"Small dips\" now appear to touch (the previous 25px/17px shorts look fixed). But \"Keeps going one way\" tip has a visible sliver of navy under the dashed slope arrow and does not touch it. Next: web3.png on the v3 prompt.",
+      "notes": "Grey staircase with a pile of glass cubes labelled 'PILE': no price path, no higher highs; does not teach 'trend'. | web1 remake: passed, then FAIL under the strict arrow rule (14 Nov): arrow tip stops short of target: \"Small dips\" tip stops about 25px above the dip and \"Keeps going one way\" tip stops about 17px below the dashed slope arrow. | web2 remake FAIL under the strict arrow rule. \"Higher highs\" and \"Small dips\" now appear to touch (the previous 25px/17px shorts look fixed). But \"Keeps going one way\" tip has a visible sliver of navy under the dashed slope arrow and does not touch it. Next: web3.png on the v3 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"TREND: KEEPS GOING ONE WAY\", with a rising path labelled \"Higher highs\" and \"Small pullbacks\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -712,7 +743,9 @@
           "pass": false,
           "rescored": "strict arrow rule, 14 Nov"
         }
-      ]
+      ],
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "\"TREND: KEEPS GOING ONE WAY\", with a rising path labelled \"Higher highs\" and \"Small pullbacks\"."
     },
     {
       "path": "course/images/bp-04-market-regimes/008.png",
@@ -1000,11 +1033,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-04-market-regimes__011.txt",
-      "notes": "Big sine wave far outside a thin dashed band with 'BAND'/'WEAVE' bracket; headline 'TOO WIDE' contradicts the beat (ordinary day = the usual wiggle size); no EXAMPLE on chart. | web1 remake: passed, then FAIL under the strict arrow rule (14 Nov): arrow tip stops short of target: \"Usual up-and-down size\" tip stops about 12px right of the bracket. | web2 remake FAIL under the strict arrow rule. Teaching and EXAMPLE are otherwise excellent (wiggle + size bracket, \"Not a promise about tomorrow\" with no arrow). But \"Usual up-and-down size\" tip stops about 4-8px short of the bracket's top cap. Next: web3.png on the v3 prompt.",
+      "notes": "Big sine wave far outside a thin dashed band with 'BAND'/'WEAVE' bracket; headline 'TOO WIDE' contradicts the beat (ordinary day = the usual wiggle size); no EXAMPLE on chart. | web1 remake: passed, then FAIL under the strict arrow rule (14 Nov): arrow tip stops short of target: \"Usual up-and-down size\" tip stops about 12px right of the bracket. | web2 remake FAIL under the strict arrow rule. Teaching and EXAMPLE are otherwise excellent (wiggle + size bracket, \"Not a promise about tomorrow\" with no arrow). But \"Usual up-and-down size\" tip stops about 4-8px short of the bracket's top cap. Next: web3.png on the v3 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"BAND TOO TIGHT FOR A NORMAL DAY\": \"Your band\" / \"Normal up-and-down\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -1078,7 +1113,9 @@
           "pass": false,
           "rescored": "strict arrow rule, 14 Nov"
         }
-      ]
+      ],
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "\"BAND TOO TIGHT FOR A NORMAL DAY\": \"Your band\" / \"Normal up-and-down\"."
     },
     {
       "path": "course/images/bp-04-market-regimes/012.png",
@@ -1105,7 +1142,7 @@
       "status": "pass",
       "action": "none",
       "remake_prompt": "specs/remake/bp-04-market-regimes__012.txt",
-      "notes": "web2 remake PASS. \"News bar\" tip sits on the tall bar; \"Thin book…\" tip sits ON an empty rung (the v1 gap-between-rungs miss is fixed). EXAMPLE present; margins 59/57/93/110. Teaches a news shock vs a thin book on its own.",
+      "notes": "web2 remake PASS. \"News bar\" tip sits on the tall bar; \"Thin book\u2026\" tip sits ON an empty rung (the v1 gap-between-rungs miss is fixed). EXAMPLE present; margins 59/57/93/110. Teaches a news shock vs a thin book on its own.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -1140,7 +1177,7 @@
           "label_accuracy": 5
         },
         "hard_fails": [],
-        "notes": "web2 remake PASS. \"News bar\" tip sits on the tall bar; \"Thin book…\" tip sits ON an empty rung (the v1 gap-between-rungs miss is fixed). EXAMPLE present; margins 59/57/93/110. Teaches a news shock vs a thin book on its own.",
+        "notes": "web2 remake PASS. \"News bar\" tip sits on the tall bar; \"Thin book\u2026\" tip sits ON an empty rung (the v1 gap-between-rungs miss is fixed). EXAMPLE present; margins 59/57/93/110. Teaches a news shock vs a thin book on its own.",
         "pass": true
       },
       "previous_remake_reviews": [
@@ -2397,12 +2434,13 @@
         "label_accuracy": 2
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "Only FOUR recap chips (Box first / Count gaps / Check fees / One change at a time); beat 15 calls for FIVE recap chips (missing the '19 gaps = 9.5%' house-example chip)."
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-05-spacing-and-range__015.txt",
-      "notes": "web1 remake FAIL. Only FOUR recap chips (Box first / Count gaps / Check fees / One change at a time); beat 15 calls for FIVE recap chips (missing the '19 gaps = 9.5%' house-example chip). v2 prompt written (v1 superseded). | web2 remake FAIL. All five recap chips are present, including the previously missing '19 gaps = 9.5%'. No arrows. Content is otherwise excellent. Hard fail is the cramped right margin: the 'One change at a time' tag's bright teal reaches x=1496, leaving only 39px (luma>110). Margins 75/39/116/320. Next: web3.png on the v3 prompt.",
+      "notes": "web1 remake FAIL. Only FOUR recap chips (Box first / Count gaps / Check fees / One change at a time); beat 15 calls for FIVE recap chips (missing the '19 gaps = 9.5%' house-example chip). v2 prompt written (v1 superseded). | web2 remake FAIL. All five recap chips are present, including the previously missing '19 gaps = 9.5%'. No arrows. Content is otherwise excellent. Hard fail is the cramped right margin: the 'One change at a time' tag's bright teal reaches x=1496, leaving only 39px (luma>110). Margins 75/39/116/320. Next: web3.png on the v3 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"RECAP\": \"Range first\" / \"Count gaps, not lines\" / \"Gap vs fee\" / \"One change at a time\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -2442,7 +2480,9 @@
         ],
         "notes": "web2 remake FAIL. All five recap chips are present, including the previously missing '19 gaps = 9.5%'. No arrows. Content is otherwise excellent. Hard fail is the cramped right margin: the 'One change at a time' tag's bright teal reaches x=1496, leaving only 39px (luma>110). Margins 75/39/116/320. Next: web3.png on the v3 prompt.",
         "pass": false
-      }
+      },
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "\"RECAP\": \"Range first\" / \"Count gaps, not lines\" / \"Gap vs fee\" / \"One change at a time\"."
     },
     {
       "path": "course/images/bp-05-spacing-and-range/016.png",
@@ -2682,7 +2722,7 @@
       "status": "pass",
       "action": "none",
       "remake_prompt": "specs/remake/bp-06-entry-and-exit__001.txt",
-      "notes": "web1 PASS. Doorway with a clear way-in and an amber X blocking the way out. \"Way in\" tip sits on the entrance-arrow shaft; \"No way out…\" tip sits on the amber X. No figures required. Margins 68/61/85/125. Teaches entry-without-exit on its own.",
+      "notes": "web1 PASS. Doorway with a clear way-in and an amber X blocking the way out. \"Way in\" tip sits on the entrance-arrow shaft; \"No way out\u2026\" tip sits on the amber X. No figures required. Margins 68/61/85/125. Teaches entry-without-exit on its own.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -2717,7 +2757,7 @@
           "label_accuracy": 5
         },
         "hard_fails": [],
-        "notes": "web1 PASS. Doorway with a clear way-in and an amber X blocking the way out. \"Way in\" tip sits on the entrance-arrow shaft; \"No way out…\" tip sits on the amber X. No figures required. Margins 68/61/85/125. Teaches entry-without-exit on its own.",
+        "notes": "web1 PASS. Doorway with a clear way-in and an amber X blocking the way out. \"Way in\" tip sits on the entrance-arrow shaft; \"No way out\u2026\" tip sits on the amber X. No figures required. Margins 68/61/85/125. Teaches entry-without-exit on its own.",
         "pass": true
       }
     },
@@ -2999,12 +3039,13 @@
         "label_accuracy": 2
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "arrow tip stops short of target: both \"Price leaves the box\" and \"Still out at next check = stop\" tips stop short of their targets"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-06-entry-and-exit__006.txt",
-      "notes": "web1 FAIL under the strict arrow rule. Path and EXAMPLE are otherwise good (price leaves the box and stays out at the next check). Both label arrows stop short of their targets. Next: web2.png on the v2 prompt.",
+      "notes": "web1 FAIL under the strict arrow rule. Path and EXAMPLE are otherwise good (price leaves the box and stays out at the next check). Both label arrows stop short of their targets. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"FINISH RULE: PRICE LEAVES AND DOESN'T COME BACK\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -3043,7 +3084,9 @@
         ],
         "notes": "web1 FAIL under the strict arrow rule. Path and EXAMPLE are otherwise good (price leaves the box and stays out at the next check). Both label arrows stop short of their targets. Next: web2.png on the v2 prompt.",
         "pass": false
-      }
+      },
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "\"FINISH RULE: PRICE LEAVES AND DOESN'T COME BACK\""
     },
     {
       "path": "course/images/bp-06-entry-and-exit/007.png",
@@ -3259,12 +3302,13 @@
         "label_accuracy": 2
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "arrow tip stops short of target: \"Finish path (invalidation): the idea is finished\" tip stops about 6-8px short of the dashed amber line"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-06-entry-and-exit__010.txt",
-      "notes": "web1 FAIL under the strict arrow rule. \"Price leaves the box\" tip touches the line just below the box. But \"Finish path (invalidation): the idea is finished\" tip stops about 6-8px short of the dashed amber line (clear navy between the cyan tip and the amber dashes). Next: web2.png on the v2 prompt.",
+      "notes": "web1 FAIL under the strict arrow rule. \"Price leaves the box\" tip touches the line just below the box. But \"Finish path (invalidation): the idea is finished\" tip stops about 6-8px short of the dashed amber line (clear navy between the cyan tip and the amber dashes). Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"INVALIDATION = WHERE YOUR IDEA IS PROVEN WRONG\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -3303,7 +3347,9 @@
         ],
         "notes": "web1 FAIL under the strict arrow rule. \"Price leaves the box\" tip touches the line just below the box. But \"Finish path (invalidation): the idea is finished\" tip stops about 6-8px short of the dashed amber line (clear navy between the cyan tip and the amber dashes). Next: web2.png on the v2 prompt.",
         "pass": false
-      }
+      },
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "\"INVALIDATION = WHERE YOUR IDEA IS PROVEN WRONG\""
     },
     {
       "path": "course/images/bp-06-entry-and-exit/011.png",
@@ -3391,12 +3437,13 @@
         "label_accuracy": 2
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "arrow tip stops short of target: scene connector 1 stops short of the stop row, connector 2 stops short of the start row, and the \"2 Then start rule\" label tip stops short of the circled 2"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-06-entry-and-exit__012.txt",
-      "notes": "web1 FAIL under the strict arrow rule (panel connectors included). Numbered scene arrow 1 stops short of the stop row; numbered scene arrow 2 stops short of the start row; the \"2 Then start rule\" label tip stops short of the circled 2. Next: web2.png on the v2 prompt.",
+      "notes": "web1 FAIL under the strict arrow rule (panel connectors included). Numbered scene arrow 1 stops short of the stop row; numbered scene arrow 2 stops short of the start row; the \"2 Then start rule\" label tip stops short of the circled 2. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"COPY THE FINISH RULE FIRST\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -3435,7 +3482,9 @@
         ],
         "notes": "web1 FAIL under the strict arrow rule (panel connectors included). Numbered scene arrow 1 stops short of the stop row; numbered scene arrow 2 stops short of the start row; the \"2 Then start rule\" label tip stops short of the circled 2. Next: web2.png on the v2 prompt.",
         "pass": false
-      }
+      },
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "\"COPY THE FINISH RULE FIRST\""
     },
     {
       "path": "course/images/bp-06-entry-and-exit/013.png",
@@ -3523,12 +3572,13 @@
         "label_accuracy": 2
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "cramped margin: the \"Read them aloud\" tag's right edge is at x=1492, only 43px from the 1536px right edge (minimum 45px)"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-06-entry-and-exit__014.txt",
-      "notes": "web1 FAIL. Hard fail: cramped right margin 43px on the \"Read them aloud\" tag (bright cyan edge at x=1492). The three label arrows themselves looked like they touched their targets. Next: web2.png on the v2 prompt.",
+      "notes": "web1 FAIL. Hard fail: cramped right margin 43px on the \"Read them aloud\" tag (bright cyan edge at x=1492). The three label arrows themselves looked like they touched their targets. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"WRITE BOTH RULES TODAY, FINISH FIRST\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -3567,7 +3617,9 @@
         ],
         "notes": "web1 FAIL. Hard fail: cramped right margin 43px on the \"Read them aloud\" tag (bright cyan edge at x=1492). The three label arrows themselves looked like they touched their targets. Next: web2.png on the v2 prompt.",
         "pass": false
-      }
+      },
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "\"WRITE BOTH RULES TODAY, FINISH FIRST\""
     },
     {
       "path": "course/images/bp-06-entry-and-exit/015.png",
@@ -3855,12 +3907,13 @@
         "label_accuracy": 3
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "cramped margin: the left sleeve/cuff glow reaches x=8, only 8px from the left edge (minimum 45px)"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-06-entry-and-exit__019.txt",
-      "notes": "web1 FAIL. Hard fail: cramped left margin 8px — the left sleeve/cuff cyan highlight is at x=8 (luma>110). Two simple outline hands are allowed by the prompt and are not a character fail. Next: web2.png on the v2 prompt.",
+      "notes": "web1 FAIL. Hard fail: cramped left margin 8px \u2014 the left sleeve/cuff cyan highlight is at x=8 (luma>110). Two simple outline hands are allowed by the prompt and are not a character fail. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"CAN A CLASSMATE POINT AT YOUR FINISH RULE?\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -3897,9 +3950,11 @@
         "hard_fails": [
           "cramped margin: the left sleeve/cuff glow reaches x=8, only 8px from the left edge (minimum 45px)"
         ],
-        "notes": "web1 FAIL. Hard fail: cramped left margin 8px — the left sleeve/cuff cyan highlight is at x=8 (luma>110). Two simple outline hands are allowed by the prompt and are not a character fail. Next: web2.png on the v2 prompt.",
+        "notes": "web1 FAIL. Hard fail: cramped left margin 8px \u2014 the left sleeve/cuff cyan highlight is at x=8 (luma>110). Two simple outline hands are allowed by the prompt and are not a character fail. Next: web2.png on the v2 prompt.",
         "pass": false
-      }
+      },
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "\"CAN A CLASSMATE POINT AT YOUR FINISH RULE?\""
     },
     {
       "path": "course/images/bp-06-entry-and-exit/020.png",
@@ -4251,12 +4306,13 @@
         "label_accuracy": 1
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "arrow tip stops short of target: all five label tips (Pair, Top price, Bottom price, Number of gaps, Your rules) stop short of the left ends of their form rows (visible gap in the form's left padding)"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__005.txt",
-      "notes": "web1 FAIL (first scoring) under the strict arrow rule. The five field labels are correct (Pair / Top price / Bottom price / Number of gaps / Your rules — LINES is gone) and EXAMPLE is present. But all five label tips stop short of the form-row left ends, leaving a visible gap in the form's left padding. Margins 75/69/87/108. Next: web2.png on the v2 prompt.",
+      "notes": "web1 FAIL (first scoring) under the strict arrow rule. The five field labels are correct (Pair / Top price / Bottom price / Number of gaps / Your rules \u2014 LINES is gone) and EXAMPLE is present. But all five label tips stop short of the form-row left ends, leaving a visible gap in the form's left padding. Margins 75/69/87/108. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -4293,9 +4349,11 @@
         "hard_fails": [
           "arrow tip stops short of target: all five label tips (Pair, Top price, Bottom price, Number of gaps, Your rules) stop short of the left ends of their form rows (visible gap in the form's left padding)"
         ],
-        "notes": "web1 FAIL (first scoring) under the strict arrow rule. The five field labels are correct (Pair / Top price / Bottom price / Number of gaps / Your rules — LINES is gone) and EXAMPLE is present. But all five label tips stop short of the form-row left ends, leaving a visible gap in the form's left padding. Margins 75/69/87/108. Next: web2.png on the v2 prompt.",
+        "notes": "web1 FAIL (first scoring) under the strict arrow rule. The five field labels are correct (Pair / Top price / Bottom price / Number of gaps / Your rules \u2014 LINES is gone) and EXAMPLE is present. But all five label tips stop short of the form-row left ends, leaving a visible gap in the form's left padding. Margins 75/69/87/108. Next: web2.png on the v2 prompt.",
         "pass": false
-      }
+      },
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "\"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\"."
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/006.png",
@@ -4962,7 +5020,7 @@
       "status": "pass",
       "action": "none",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__016.txt",
-      "notes": "web1 PASS (first scoring). 'Draw the broken link' tip sits in the break of the sketched chain (treated as touching the broken link). 'Course ≠ app' sits under the figure with no arrow. Pencil inside the page. Margins 77/87/108/125.",
+      "notes": "web1 PASS (first scoring). 'Draw the broken link' tip sits in the break of the sketched chain (treated as touching the broken link). 'Course \u2260 app' sits under the figure with no arrow. Pencil inside the page. Margins 77/87/108/125.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -4997,7 +5055,7 @@
           "label_accuracy": 5
         },
         "hard_fails": [],
-        "notes": "web1 PASS (first scoring). 'Draw the broken link' tip sits in the break of the sketched chain (treated as touching the broken link). 'Course ≠ app' sits under the figure with no arrow. Pencil inside the page. Margins 77/87/108/125.",
+        "notes": "web1 PASS (first scoring). 'Draw the broken link' tip sits in the break of the sketched chain (treated as touching the broken link). 'Course \u2260 app' sits under the figure with no arrow. Pencil inside the page. Margins 77/87/108/125.",
         "pass": true
       }
     },
@@ -5151,12 +5209,13 @@
         "label_accuracy": 1
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "arrow tip stops short of target: the four scene-matching connector arrows stop short of the right-hand form (visible gaps at the points)"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-07-spot-paper-trading__019.txt",
-      "notes": "web1 FAIL (first scoring) under the strict panel-connector arrow rule. 'Labels may move' tip sits inside the top right-hand field (touch of that form). But the four scene-matching connectors are clearly short of the right form (visible gaps). The left form also shows 4 rows vs the right's 5, and the rows are not visibly in a different order (prompt: same rows in a different order). Margins 95/136/85/73. Next: web2.png on the v2 prompt.",
+      "notes": "web1 FAIL (first scoring) under the strict panel-connector arrow rule. 'Labels may move' tip sits inside the top right-hand field (touch of that form). But the four scene-matching connectors are clearly short of the right form (visible gaps). The left form also shows 4 rows vs the right's 5, and the rows are not visibly in a different order (prompt: same rows in a different order). Margins 95/136/85/73. Next: web2.png on the v2 prompt. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5195,7 +5254,9 @@
         ],
         "notes": "web1 FAIL (first scoring) under the strict panel-connector arrow rule. 'Labels may move' tip sits inside the top right-hand field (touch of that form). But the four scene-matching connectors are clearly short of the right form (visible gaps). The left form also shows 4 rows vs the right's 5, and the rows are not visibly in a different order (prompt: same rows in a different order). Margins 95/136/85/73. Next: web2.png on the v2 prompt.",
         "pass": false
-      }
+      },
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "\"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\"."
     },
     {
       "path": "course/images/bp-07-spot-paper-trading/020.png",
@@ -5286,11 +5347,13 @@
         "character_consistency": null,
         "label_accuracy": 3
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__001.txt",
-      "notes": "Card listing INSIDE / SIDE / SENTENCE with a clock and stamp: closest to the beat, but 'SIDE' and 'SENTENCE' are unexplained single words; 'short list you can finish, not a vigil' only implied.",
+      "notes": "Card listing INSIDE / SIDE / SENTENCE with a clock and stamp: closest to the beat, but 'SIDE' and 'SENTENCE' are unexplained single words; 'short list you can finish, not a vigil' only implied. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5303,7 +5366,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/001.png",
       "scored_blob": "8f52dbb13445f0400aab44d99ec6ed1985519a6b",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/002.png",
@@ -5406,11 +5471,13 @@
         "character_consistency": null,
         "label_accuracy": 3
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__004.txt",
-      "notes": "Three-row card INSIDE / SIDE / SENTENCE with blank lines: the three questions are not written as questions; row labels small.",
+      "notes": "Three-row card INSIDE / SIDE / SENTENCE with blank lines: the three questions are not written as questions; row labels small. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5423,7 +5490,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/004.png",
       "scored_blob": "ada4d1a6e62c0237413764b12f8823805329a0c9",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/005.png",
@@ -5446,11 +5515,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__005.txt",
-      "notes": "'INSIDE OUT' card with a line crossing it and tiny letter-spaced 'INSIDE'/'OUTSIDE': no band and no path, so 'still crosses the band' is not shown.",
+      "notes": "'INSIDE OUT' card with a line crossing it and tiny letter-spaced 'INSIDE'/'OUTSIDE': no band and no path, so 'still crosses the band' is not shown. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5463,7 +5534,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/005.png",
       "scored_blob": "e804e99620c37e3f54761139dc8bee543163b37d",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/006.png",
@@ -5487,12 +5560,13 @@
         "label_accuracy": 1
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "artifact: smudged, half-erased pseudo-text above and below 'HEAVY' and 'EXAMPLE' in both cards"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__006.txt",
-      "notes": "'WHICH SIDE' with a 'HEAVY' card: which asset you hold more of is not shown; headline words run together.",
+      "notes": "'WHICH SIDE' with a 'HEAVY' card: which asset you hold more of is not shown; headline words run together. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5505,7 +5579,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/006.png",
       "scored_blob": "0177cc4ba4f98cdf7cec76857af3ea71dc8ccd02",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/007.png",
@@ -5528,11 +5604,13 @@
         "character_consistency": null,
         "label_accuracy": 1
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__007.txt",
-      "notes": "'PIN / EDIT' tiles: the beat is 'reread the same finish sentence, don't invent one'; tiles do not show that. Visible seam under the composited headline strip.",
+      "notes": "'PIN / EDIT' tiles: the beat is 'reread the same finish sentence, don't invent one'; tiles do not show that. Visible seam under the composited headline strip. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5545,7 +5623,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/007.png",
       "scored_blob": "ddbc294f773cf201aa78d270c53ea4467f1fd574",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/008.png",
@@ -5568,11 +5648,13 @@
         "character_consistency": null,
         "label_accuracy": 3
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__008.txt",
-      "notes": "Calendar grid with one highlighted day and 'MONDAY'/'EXAMPLE' tags: readable, but tags float with no arrows and 'reread the same three rows' is not shown.",
+      "notes": "Calendar grid with one highlighted day and 'MONDAY'/'EXAMPLE' tags: readable, but tags float with no arrows and 'reread the same three rows' is not shown. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5585,7 +5667,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/008.png",
       "scored_blob": "5c47a07fc8c5bcbc8b5798cfb08887ff3f519eab",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/009.png",
@@ -5608,11 +5692,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__009.txt",
-      "notes": "Three tiny X boxes over 'NOT THIS': the three things not opened (result chart, ranking, leverage control) are not shown or named; seam under headline strip.",
+      "notes": "Three tiny X boxes over 'NOT THIS': the three things not opened (result chart, ranking, leverage control) are not shown or named; seam under headline strip. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5625,7 +5711,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/009.png",
       "scored_blob": "90d2c66e76b1d0fcf73c0db29bc3f46048db6909",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/010.png",
@@ -5648,11 +5736,13 @@
         "character_consistency": null,
         "label_accuracy": 1
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__010.txt",
-      "notes": "Tile reading 'IN / BASE / SAME' under 'WORKED CHECK': cryptic; no path that starts inside and ends outside; seam under headline strip.",
+      "notes": "Tile reading 'IN / BASE / SAME' under 'WORKED CHECK': cryptic; no path that starts inside and ends outside; seam under headline strip. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5665,7 +5755,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/010.png",
       "scored_blob": "6f722beba2956bb5a3f4c0d1af266e685100252d",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/011.png",
@@ -5688,11 +5780,13 @@
         "character_consistency": null,
         "label_accuracy": 3
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__011.txt",
-      "notes": "Bell with an EXAMPLE card: an alert as a nudge to reread the three rows is not shown; tiny card text.",
+      "notes": "Bell with an EXAMPLE card: an alert as a nudge to reread the three rows is not shown; tiny card text. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5705,7 +5799,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/011.png",
       "scored_blob": "1004211cd89ac070870020a14ae2843b61af919f",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/012.png",
@@ -5728,11 +5824,13 @@
         "character_consistency": null,
         "label_accuracy": 3
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__012.txt",
-      "notes": "Card INSIDE / SIDE / SENTENCE with a crossed 'EXTRA' fourth row: close; but the beat names a RESULT row, and the stamp overlaps the rows; headline words run together ('FOURTHROW').",
+      "notes": "Card INSIDE / SIDE / SENTENCE with a crossed 'EXTRA' fourth row: close; but the beat names a RESULT row, and the stamp overlaps the rows; headline words run together ('FOURTHROW'). | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5745,7 +5843,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/012.png",
       "scored_blob": "8ab1d3f9710d1c4303ada75a4aeecb9c09ddb9c7",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/013.png",
@@ -5768,11 +5868,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__013.txt",
-      "notes": "'DONE' tile with a pencil and tiny EXAMPLE: 'stop or write an edit, don't hover' not shown; seam under headline strip.",
+      "notes": "'DONE' tile with a pencil and tiny EXAMPLE: 'stop or write an edit, don't hover' not shown; seam under headline strip. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5785,7 +5887,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/013.png",
       "scored_blob": "5410164f4f9ad15643eb76f8d00a15668bc3207f",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/014.png",
@@ -5808,11 +5912,13 @@
         "character_consistency": null,
         "label_accuracy": 1
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__014.txt",
-      "notes": "Clipboard with 'EXAMPLE' under 'CLIPPED ON': does not show building a three-row card or running it on a drawn path.",
+      "notes": "Clipboard with 'EXAMPLE' under 'CLIPPED ON': does not show building a three-row card or running it on a drawn path. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5825,7 +5931,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/014.png",
       "scored_blob": "4fd970c9ee4b6afc8692c1cef420993b07353899",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/015.png",
@@ -5848,11 +5956,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__015.txt",
-      "notes": "Six small chips INSIDE / SIDE / SENTENCE / CADENCE / NO RESULT / STOP: word list recap, small type; seam under headline strip.",
+      "notes": "Six small chips INSIDE / SIDE / SENTENCE / CADENCE / NO RESULT / STOP: word list recap, small type; seam under headline strip. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -5865,7 +5975,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/015.png",
       "scored_blob": "2cf525eef6f6870415dfa3784f85c41cdcd98b23",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/016.png",
@@ -6008,11 +6120,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__019.txt",
-      "notes": "'DRAW / crossed LIVE / PAPER' icons under 'TWO SOURCES': the X sits on top of the word 'LIVE' (overlap); paper-screen idea unclear.",
+      "notes": "'DRAW / crossed LIVE / PAPER' icons under 'TWO SOURCES': the X sits on top of the word 'LIVE' (overlap); paper-screen idea unclear. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6025,7 +6139,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/019.png",
       "scored_blob": "fe4dd13cd809a6bd5b838d119dcd1f2e687f9076",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/020.png",
@@ -6089,12 +6205,13 @@
         "label_accuracy": 2
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "illegible label: 'BLANK / THIN / EARLY' sit on three tiny cards that fill under 5% of the frame"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__001.txt",
-      "notes": "'THREE PAGES' headline; 'pages, not personalities' not shown; headline words run together.",
+      "notes": "'THREE PAGES' headline; 'pages, not personalities' not shown; headline words run together. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6107,7 +6224,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/001.png",
       "scored_blob": "6515ca4d79beff6e2f516c45a457569a78da28ae",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
     },
     {
       "path": "course/images/bp-09-common-mistakes/002.png",
@@ -6210,11 +6329,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__004.txt",
-      "notes": "Small card with an empty oval and a 'FIX' chip: a finish column left blank is not shown; tiny EXAMPLE.",
+      "notes": "Small card with an empty oval and a 'FIX' chip: a finish column left blank is not shown; tiny EXAMPLE. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6227,7 +6348,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/004.png",
       "scored_blob": "688e2a975f55778df4d300f0f5eb00f6913045e0",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
     },
     {
       "path": "course/images/bp-09-common-mistakes/005.png",
@@ -6250,11 +6373,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__005.txt",
-      "notes": "Tiny 'SHORT -> WIDEN -> WEAVE' net shape in the middle of an empty frame: band vs weave height not shown; small labels.",
+      "notes": "Tiny 'SHORT -> WIDEN -> WEAVE' net shape in the middle of an empty frame: band vs weave height not shown; small labels. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6267,7 +6392,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/005.png",
       "scored_blob": "e36bb531d016e0fe43345c1043b3bdc72f8c8092",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
     },
     {
       "path": "course/images/bp-09-common-mistakes/006.png",
@@ -6291,12 +6418,13 @@
         "label_accuracy": 1
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "wrong label: 'LIQUID' is a truncated 'liquidation'"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__006.txt",
-      "notes": "Tiny crossed 'EARLY' node on a line to 'SCALE'/'LIQUID' chips: skipping the last two lessons is not readable; mostly empty frame.",
+      "notes": "Tiny crossed 'EARLY' node on a line to 'SCALE'/'LIQUID' chips: skipping the last two lessons is not readable; mostly empty frame. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6309,7 +6437,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/006.png",
       "scored_blob": "603c990760efe9d09c2b67a5bef2b7139553658a",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
     },
     {
       "path": "course/images/bp-09-common-mistakes/007.png",
@@ -6333,12 +6463,13 @@
         "label_accuracy": 1
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "illegible label: tiny letter-spaced 'EXAMPLE' and unreadable tick marks"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__007.txt",
-      "notes": "An oval of tick marks: 'counting lines as gaps' not shown at all.",
+      "notes": "An oval of tick marks: 'counting lines as gaps' not shown at all. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6351,7 +6482,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/007.png",
       "scored_blob": "7c95382583935d09b5619b09a395274dd2d71c0a",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
     },
     {
       "path": "course/images/bp-09-common-mistakes/008.png",
@@ -6375,13 +6508,14 @@
         "label_accuracy": 1
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "artifact: smudged white blur inside the SIZE card where a value should be",
         "illegible label: tiny 'SIZE', 'CLEARED', 'EXAMPLE'"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__008.txt",
-      "notes": "'CLEAR SIZE' headline; 'a default size is the form's idea' not shown.",
+      "notes": "'CLEAR SIZE' headline; 'a default size is the form's idea' not shown. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6394,7 +6528,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/008.png",
       "scored_blob": "25cce537dd0066a2a26c0d63f80aa6f06a341562",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
     },
     {
       "path": "course/images/bp-09-common-mistakes/009.png",
@@ -6417,11 +6553,13 @@
         "character_consistency": null,
         "label_accuracy": 3
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__009.txt",
-      "notes": "Crossed 'GAIN / SURE / WIN' vs 'WAITS / FILLS / STOCK / LEAVES': chips are small in an empty frame; 'STOCK' is unexplained; promise-of-income idea only implied.",
+      "notes": "Crossed 'GAIN / SURE / WIN' vs 'WAITS / FILLS / STOCK / LEAVES': chips are small in an empty frame; 'STOCK' is unexplained; promise-of-income idea only implied. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6434,7 +6572,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/009.png",
       "scored_blob": "2e9e3e6e72efe7133eeeaf74fedb75c4af197c98",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
     },
     {
       "path": "course/images/bp-09-common-mistakes/010.png",
@@ -6457,11 +6597,13 @@
         "character_consistency": null,
         "label_accuracy": 1
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__010.txt",
-      "notes": "Two circles 'BLANK' and 'GAPS': the worked audit page (blank stop, 10% span on 20 lines) is not shown; no numbers.",
+      "notes": "Two circles 'BLANK' and 'GAPS': the worked audit page (blank stop, 10% span on 20 lines) is not shown; no numbers. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6474,7 +6616,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/010.png",
       "scored_blob": "7ada213f9f0c29834cd2ddcb6e09b9fdcd9d1623",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
     },
     {
       "path": "course/images/bp-09-common-mistakes/011.png",
@@ -6497,11 +6641,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__011.txt",
-      "notes": "Two cards with an 'O' and 'ONE'/'TWO': 'fix one, reread, fix the next' not shown; tiny captions.",
+      "notes": "Two cards with an 'O' and 'ONE'/'TWO': 'fix one, reread, fix the next' not shown; tiny captions. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6514,7 +6660,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/011.png",
       "scored_blob": "989c4ec2cda76afda3b466d70f62bbd22ff782a0",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
     },
     {
       "path": "course/images/bp-09-common-mistakes/012.png",
@@ -6537,11 +6685,13 @@
         "character_consistency": null,
         "label_accuracy": 1
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__012.txt",
-      "notes": "Card 'PAGE / LINE / STOP' under 'NOT SCORE': no relation to 'the audit does not produce a grade'.",
+      "notes": "Card 'PAGE / LINE / STOP' under 'NOT SCORE': no relation to 'the audit does not produce a grade'. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6554,7 +6704,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/012.png",
       "scored_blob": "9cffa2d9e9a62528faf592b1e7b1b54992160dc9",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
     },
     {
       "path": "course/images/bp-09-common-mistakes/013.png",
@@ -6577,11 +6729,13 @@
         "character_consistency": null,
         "label_accuracy": 3
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__013.txt",
-      "notes": "Glass card 'SPOT' with a crossed '2X': leverage-multiple idea roughly readable; headline 'NO TIMES' is unclear English.",
+      "notes": "Glass card 'SPOT' with a crossed '2X': leverage-multiple idea roughly readable; headline 'NO TIMES' is unclear English. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6594,7 +6748,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/013.png",
       "scored_blob": "80a94e9186f3cd9d999d5f39b53e0884512e33b9",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
     },
     {
       "path": "course/images/bp-09-common-mistakes/014.png",
@@ -6618,12 +6774,13 @@
         "label_accuracy": 2
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "illegible label: 'NONE' chip and three bullet lines are tiny"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__014.txt",
-      "notes": "'THREE LINES' card: blank stop / tight band / missing 'gaps' word are not named.",
+      "notes": "'THREE LINES' card: blank stop / tight band / missing 'gaps' word are not named. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6636,7 +6793,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/014.png",
       "scored_blob": "902544d75431f690495b13099e464f670d288119",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
     },
     {
       "path": "course/images/bp-09-common-mistakes/015.png",
@@ -6659,11 +6818,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__015.txt",
-      "notes": "Six small chips BLANK / BAND / EARLY / LINES / SIZE / WORDS: cryptic recap, small type.",
+      "notes": "Six small chips BLANK / BAND / EARLY / LINES / SIZE / WORDS: cryptic recap, small type. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6676,7 +6837,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/015.png",
       "scored_blob": "c15f28ddb7d8d8f55ab3a510b2cee836f65c6ca0",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
     },
     {
       "path": "course/images/bp-09-common-mistakes/016.png",
@@ -6865,11 +7028,13 @@
         "character_consistency": null,
         "label_accuracy": 3
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-09-common-mistakes__020.txt",
-      "notes": "'KEPT' vs faded 'FADED' pages: idea readable; marked-up pages not shown; small captions.",
+      "notes": "'KEPT' vs faded 'FADED' pages: idea readable; marked-up pages not shown; small captions. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6882,7 +7047,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-09-common-mistakes/020.png",
       "scored_blob": "54c40b09cf93e0f2750fa0d2829f2525168ff038",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
     },
     {
       "path": "course/images/bp-09-common-mistakes/021.png",
@@ -6946,12 +7113,13 @@
         "label_accuracy": 3
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "illegible label: tiny 'ONE'/'TWO' captions on small page outlines"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-10-scaling-up__001.txt",
-      "notes": "Two small page outlines: 'a second written page, not a bigger number' only half shown; frame mostly empty.",
+      "notes": "Two small page outlines: 'a second written page, not a bigger number' only half shown; frame mostly empty. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -6964,7 +7132,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/001.png",
       "scored_blob": "494961c2db9d8cb15141aa8a98d28a16578f3766",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
     },
     {
       "path": "course/images/bp-10-scaling-up/002.png",
@@ -7067,11 +7237,13 @@
         "character_consistency": null,
         "label_accuracy": 1
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-10-scaling-up__004.txt",
-      "notes": "'ONE GATE' with a tile 'DONE / OPEN / DONE': the beat says the second page repeats FIVE gates (regime sort, range, gaps, finish sentence, paper); headline contradicts it.",
+      "notes": "'ONE GATE' with a tile 'DONE / OPEN / DONE': the beat says the second page repeats FIVE gates (regime sort, range, gaps, finish sentence, paper); headline contradicts it. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7084,7 +7256,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/004.png",
       "scored_blob": "b0b39e911fc3239c558ed03b6b03c76674906cf7",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
     },
     {
       "path": "course/images/bp-10-scaling-up/005.png",
@@ -7107,11 +7281,13 @@
         "character_consistency": null,
         "label_accuracy": 3
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-10-scaling-up__005.txt",
-      "notes": "Two overlapping cups 'LEFT/RIGHT' sharing a silver coin-like 'BOTH' token: nearest to the idea, but the silver coin reads as money (coins are banned) and inventory/fighting is not labelled.",
+      "notes": "Two overlapping cups 'LEFT/RIGHT' sharing a silver coin-like 'BOTH' token: nearest to the idea, but the silver coin reads as money (coins are banned) and inventory/fighting is not labelled. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7124,7 +7300,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/005.png",
       "scored_blob": "e7a83c9507e9d4ddd50fecdda0f0555e66583cb8",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
     },
     {
       "path": "course/images/bp-10-scaling-up/006.png",
@@ -7147,11 +7325,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-10-scaling-up__006.txt",
-      "notes": "Word 'KEPT' between two lines with a tiny EXAMPLE: 'keeping the same size is a complete review' not shown.",
+      "notes": "Word 'KEPT' between two lines with a tiny EXAMPLE: 'keeping the same size is a complete review' not shown. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7164,7 +7344,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/006.png",
       "scored_blob": "205c07cf2e145d0644fe528cb71d447eabdb00cf",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
     },
     {
       "path": "course/images/bp-10-scaling-up/007.png",
@@ -7187,11 +7369,13 @@
         "character_consistency": null,
         "label_accuracy": 3
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-10-scaling-up__007.txt",
-      "notes": "Two lists of four lines with one line tagged 'ONE': idea implied; pages not labelled page one / page two; tiny tag.",
+      "notes": "Two lists of four lines with one line tagged 'ONE': idea implied; pages not labelled page one / page two; tiny tag. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7204,7 +7388,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/007.png",
       "scored_blob": "3fcf84efb09c5f3012954819d3ed9b15d44ad272",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
     },
     {
       "path": "course/images/bp-10-scaling-up/008.png",
@@ -7227,11 +7413,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-10-scaling-up__008.txt",
-      "notes": "Two cards 'A'/'B' over two cylinders: same band + different pair label not shown; no band drawn.",
+      "notes": "Two cards 'A'/'B' over two cylinders: same band + different pair label not shown; no band drawn. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7244,7 +7432,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/008.png",
       "scored_blob": "f3eb0f819c4e2e466e9b1957c920c06873802638",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
     },
     {
       "path": "course/images/bp-10-scaling-up/009.png",
@@ -7267,11 +7457,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-10-scaling-up__009.txt",
-      "notes": "'SCALE -> OPTIONAL' chips under 'ONE MORE': 'scaling is not the end of the course' only implied; small chips.",
+      "notes": "'SCALE -> OPTIONAL' chips under 'ONE MORE': 'scaling is not the end of the course' only implied; small chips. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7284,7 +7476,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/009.png",
       "scored_blob": "4e43fd0ab5c282cddcbaf4565576116765dfd0df",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
     },
     {
       "path": "course/images/bp-10-scaling-up/010.png",
@@ -7307,11 +7501,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-10-scaling-up__010.txt",
-      "notes": "Card 'SPOT' with an X button under it: reads as 'no spot', the opposite of 'the second page is still spot'.",
+      "notes": "Card 'SPOT' with an X button under it: reads as 'no spot', the opposite of 'the second page is still spot'. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7324,7 +7520,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/010.png",
       "scored_blob": "6d339d88c5ffecca749980a34edfd38d8a22fb53",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
     },
     {
       "path": "course/images/bp-10-scaling-up/011.png",
@@ -7348,12 +7546,13 @@
         "label_accuracy": 2
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "illegible label: tiny 'NOT THIS' in a near-empty card"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-10-scaling-up__011.txt",
-      "notes": "'LEFT OPEN': 'the page does not tell you how much money to assign' not shown.",
+      "notes": "'LEFT OPEN': 'the page does not tell you how much money to assign' not shown. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7366,7 +7565,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/011.png",
       "scored_blob": "c571cf4114b1c1036a0d0967788974d9911d1499",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
     },
     {
       "path": "course/images/bp-10-scaling-up/012.png",
@@ -7389,11 +7590,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-10-scaling-up__012.txt",
-      "notes": "'TWO TWO' chips over a crossed 'FELT': doubling a count because it felt fine is not readable.",
+      "notes": "'TWO TWO' chips over a crossed 'FELT': doubling a count because it felt fine is not readable. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7406,7 +7609,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/012.png",
       "scored_blob": "e4d18cb81fe773efa8cbf77762f344c4394bbc02",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
     },
     {
       "path": "course/images/bp-10-scaling-up/013.png",
@@ -7429,11 +7634,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-10-scaling-up__013.txt",
-      "notes": "Two identical dotted lines labelled 'SAME' under 'SAME PATH': correlated pairs filling at the same time not shown (no prices, no fills).",
+      "notes": "Two identical dotted lines labelled 'SAME' under 'SAME PATH': correlated pairs filling at the same time not shown (no prices, no fills). | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7446,7 +7653,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/013.png",
       "scored_blob": "740a93c9f606963a77abdca2a28439201011a92c",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
     },
     {
       "path": "course/images/bp-10-scaling-up/014.png",
@@ -7469,11 +7678,13 @@
         "character_consistency": null,
         "label_accuracy": 4
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-10-scaling-up__014.txt",
-      "notes": "Card reads 'PAGE TWO, SAME GATES, OR NONE.': text-only card (no picture), but accurate; still a word card, not a diagram.",
+      "notes": "Card reads 'PAGE TWO, SAME GATES, OR NONE.': text-only card (no picture), but accurate; still a word card, not a diagram. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7486,7 +7697,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/014.png",
       "scored_blob": "f69a07670df255e07143441429d105fbbcc4e14e",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
     },
     {
       "path": "course/images/bp-10-scaling-up/015.png",
@@ -7509,11 +7722,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-10-scaling-up__015.txt",
-      "notes": "Six small hexagons PAGE / GATES / BUCKETS / CHANGE / SPOT / SIZE plus an 'OPTIONAL' arrow: cryptic recap, small type.",
+      "notes": "Six small hexagons PAGE / GATES / BUCKETS / CHANGE / SPOT / SIZE plus an 'OPTIONAL' arrow: cryptic recap, small type. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7526,7 +7741,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/015.png",
       "scored_blob": "f28a31dd965c66d0e058775e0ae332049a639d3a",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
     },
     {
       "path": "course/images/bp-10-scaling-up/016.png",
@@ -7711,11 +7928,13 @@
         "character_consistency": null,
         "label_accuracy": 3
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-10-scaling-up__020.txt",
-      "notes": "Folders 'READY' and 'NOT READY': close to 'file both only if both passed', but it shows one ready and one not, the opposite of filing them together.",
+      "notes": "Folders 'READY' and 'NOT READY': close to 'file both only if both passed', but it shows one ready and one not, the opposite of filing them together. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7728,7 +7947,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-10-scaling-up/020.png",
       "scored_blob": "63599baf3f215264ce47fb1fa0b969a51fbb6f35",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
     },
     {
       "path": "course/images/bp-10-scaling-up/021.png",
@@ -7791,11 +8012,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__001.txt",
-      "notes": "'OPT IN -> CLOSED' chips under 'LOSS FIRST': no losing path drawn; 'this lesson is opt-in, the losing path comes first' not readable; tiny EXAMPLE.",
+      "notes": "'OPT IN -> CLOSED' chips under 'LOSS FIRST': no losing path drawn; 'this lesson is opt-in, the losing path comes first' not readable; tiny EXAMPLE. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7808,7 +8031,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/001.png",
       "scored_blob": "34c975c1920bb0d91c2a7220df69c93d895ac1ec",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/002.png",
@@ -7911,11 +8136,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__004.txt",
-      "notes": "Stack of pages 'SPOT' and a door 'SIDE' under 'SIDE DOOR': 'the spot path is already complete without this lesson' not readable.",
+      "notes": "Stack of pages 'SPOT' and a door 'SIDE' under 'SIDE DOOR': 'the spot path is already complete without this lesson' not readable. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7928,7 +8155,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/004.png",
       "scored_blob": "7c6c79ffc4619f48ff889ee1469fc3de07feaba7",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/005.png",
@@ -7951,11 +8180,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__005.txt",
-      "notes": "Closed box 'CLOSED' and open box 'MARGIN' under 'MARGIN GONE': liquidation (margin no longer covers the loss, position closed) is not shown; no loss, no price.",
+      "notes": "Closed box 'CLOSED' and open box 'MARGIN' under 'MARGIN GONE': liquidation (margin no longer covers the loss, position closed) is not shown; no loss, no price. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -7968,7 +8199,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/005.png",
       "scored_blob": "2ba2396e4a6b4f92ccd914fa8afdf9f3a6760116",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/006.png",
@@ -7992,12 +8225,13 @@
         "label_accuracy": 1
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "illegible label: tiny '1'/'2' panel numbers"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__006.txt",
-      "notes": "Three tiny line-art panels (line, rectangle, X) under 'PATH ORDER': price leaving the band and the position closing are not drawn.",
+      "notes": "Three tiny line-art panels (line, rectangle, X) under 'PATH ORDER': price leaving the band and the position closing are not drawn. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -8010,7 +8244,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/006.png",
       "scored_blob": "e1431683524dd1f033c957940a5dfdae489d1877",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/007.png",
@@ -8034,12 +8270,13 @@
         "label_accuracy": 2
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "illegible label: tiny 'ISOLATED' and 'ASSIGNED' captions"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__007.txt",
-      "notes": "Dashed box around one of three squares: isolated margin readable only by an expert; frame mostly empty.",
+      "notes": "Dashed box around one of three squares: isolated margin readable only by an expert; frame mostly empty. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -8052,7 +8289,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/007.png",
       "scored_blob": "9f4b0728d9ebf992ac638fcab63f89e410788d60",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/008.png",
@@ -8075,11 +8314,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__008.txt",
-      "notes": "'MARGIN -> PULL' boxes under 'CAN PULL': cross margin (venue may look at other balances in the account) not shown; no other balances drawn.",
+      "notes": "'MARGIN -> PULL' boxes under 'CAN PULL': cross margin (venue may look at other balances in the account) not shown; no other balances drawn. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -8092,7 +8333,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/008.png",
       "scored_blob": "509c1312714b89370b587505621ff29d21abf517",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/009.png",
@@ -8115,11 +8358,13 @@
         "character_consistency": null,
         "label_accuracy": 2
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__009.txt",
-      "notes": "Two 'no' symbols 'NONE / NONE' under 'NO TIMES': the two boxes (isolated, cross) are not named; 'NO TIMES' is unclear English for 'no leverage multiple'.",
+      "notes": "Two 'no' symbols 'NONE / NONE' under 'NO TIMES': the two boxes (isolated, cross) are not named; 'NO TIMES' is unclear English for 'no leverage multiple'. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -8132,7 +8377,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/009.png",
       "scored_blob": "2e413cd46ae8a57228a8893ac9ea38044c8df1d6",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/010.png",
@@ -8156,12 +8403,13 @@
         "label_accuracy": 1
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "illegible label: tiny letter-spaced 'FUNDING'"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__010.txt",
-      "notes": "Oval with a two-way arrow under 'NO RATE': a timed funding payment between sides is not shown.",
+      "notes": "Oval with a two-way arrow under 'NO RATE': a timed funding payment between sides is not shown. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -8174,7 +8422,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/010.png",
       "scored_blob": "27bd2631f68fbed49e63fd23ebfb8749f5684a9d",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/011.png",
@@ -8197,11 +8447,13 @@
         "character_consistency": null,
         "label_accuracy": 1
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__011.txt",
-      "notes": "Crossed symbol and a 'NONE' tile under 'OLD NOTES': deleted older drafts with leverage multiples are not shown.",
+      "notes": "Crossed symbol and a 'NONE' tile under 'OLD NOTES': deleted older drafts with leverage multiples are not shown. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -8214,7 +8466,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/011.png",
       "scored_blob": "9f62b5d2be5fc690919b2a467d5d1d00f0d610ce",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/012.png",
@@ -8238,12 +8492,13 @@
         "label_accuracy": 1
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "wrong count: headline 'TWO FLAGS' over three flags (LOSS / ALL / crossed GAIN)"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__012.txt",
-      "notes": "The two flags ('this can liquidate', 'you can lose all the money assigned') are not written.",
+      "notes": "The two flags ('this can liquidate', 'you can lose all the money assigned') are not written. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -8256,7 +8511,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/012.png",
       "scored_blob": "c0beb46acf134ae118e46bcf34b55560dd29205d",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/013.png",
@@ -8279,11 +8536,13 @@
         "character_consistency": null,
         "label_accuracy": 3
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__013.txt",
-      "notes": "Crossed monitor 'NO SCREEN' under 'PAPER ONLY': close to 'not a venue guide / no live contract screen'; small caption.",
+      "notes": "Crossed monitor 'NO SCREEN' under 'PAPER ONLY': close to 'not a venue guide / no live contract screen'; small caption. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -8296,7 +8555,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/013.png",
       "scored_blob": "e37fb39e40dbc9c1e6ffd61dff94f646cd023782",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/014.png",
@@ -8319,11 +8580,13 @@
         "character_consistency": null,
         "label_accuracy": 3
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__014.txt",
-      "notes": "Checklist 'NO TIMES / LOSS FIRST' under 'TWO CHECKS': close to the sentence, but 'NO TIMES' is unclear English and 'explain isolated and cross' is missing.",
+      "notes": "Checklist 'NO TIMES / LOSS FIRST' under 'TWO CHECKS': close to the sentence, but 'NO TIMES' is unclear English and 'explain isolated and cross' is missing. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -8336,7 +8599,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/014.png",
       "scored_blob": "7a546c10cd46fe4065b8dd45368eb16181e175a5",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/015.png",
@@ -8360,12 +8625,13 @@
         "label_accuracy": 2
       },
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "illegible label: eight tiny chips (OPT / LOSS / FENCE / PULL / NONE / RATE / SPOT / LAST) across a thin strip"
       ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__015.txt",
-      "notes": "Recap unreadable at lesson size.",
+      "notes": "Recap unreadable at lesson size. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -8378,7 +8644,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/015.png",
       "scored_blob": "8bbc5db3ede2b134a4db725d07f847f8b542cc28",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/016.png",
@@ -8523,11 +8791,13 @@
         "character_consistency": null,
         "label_accuracy": 3
       },
-      "hard_fails": [],
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
       "status": "fail",
       "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-11-advanced-liquidation__019.txt",
-      "notes": "Card 'OPT IN' with a 'SKIPPED' stamp: close, but the instruction is to write 'Skipped on purpose' on the spot notebook; headline 'SKIPPED ON' is a truncated phrase.",
+      "notes": "Card 'OPT IN' with a 'SKIPPED' stamp: close, but the instruction is to write 'Skipped on purpose' on the spot notebook; headline 'SKIPPED ON' is a truncated phrase. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -8540,7 +8810,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-11-advanced-liquidation/019.png",
       "scored_blob": "02c84ece3aca38aa0d6a8dfab1499279593b55cf",
       "committed": true,
-      "pass": false
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
     },
     {
       "path": "course/images/bp-11-advanced-liquidation/020.png",

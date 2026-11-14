@@ -418,3 +418,28 @@ Same perfect-run rules (every category at least 4/5, no hard fails; every arrow 
 **BP-07: 16/20 — NOT 100%.** Rows left: 003 (gen/bp-07-spot-paper-trading/003/web2.png), 005 (gen/bp-07-spot-paper-trading/005/web2.png), 019 (gen/bp-07-spot-paper-trading/019/web2.png), 020 (gen/bp-07-spot-paper-trading/020/web2.png).
 
 Updated ChatGPT queue (BP-04..11): 100 items.
+
+---
+
+## Ledger update — 14 Nov 2026 (WITA): script rewrite b608319
+
+Orchestrator ledger update against verifier report `/workspace/bp-script-check-0249f40/REPORT-b608319.md` and the rewrite at `b608319e26e72e0ef0957c7fc83ff5669ed1e8cc`. Placed files were left in `course/images`. No images were generated. Rows reopened or updated as not-current so nothing renders off the old stills. Exact replacement text is in each row's `fix_note`.
+
+### Reopened / updated
+- BP-04 006, 007, 011 (006 was a pass and is newly reopened; 007 and 011 were already fails and now carry the new narration text).
+- BP-05 015 (already a fail; now carries the recap replacement text). 006 stays an existing fail (report: acceptable after the narration fix; nice to remake, not required). 019 stays an existing outro fail.
+- BP-06 006, 010, 012, 014, 019 (already fails; now carry the new headlines). 016, 018, 020 stay as prior unlisted fails.
+- BP-07 005, 019 (already fails; "LINES" as a field contradicts "gaps, not lines"). 003 and 020 stay as prior unlisted fails.
+- BP-08..11: every still they **use** in the b608319 plan (14 per lesson) marked not-current for remake to the current beginner standard. Unused title-card / Your-turn / outro stills were already fails and stay in the denominator (not on the drop list).
+- **BP-10 008 was not dropped** — it is still used in the plan. Remake it as "PAGE TWO: SAME PAIR, NEW BAND".
+
+### Updated counts (dropped rows excluded; none dropped in this ledger)
+- **BP-04: 16/20 — NOT 100%.**
+- **BP-05: 16/19 — NOT 100%.**
+- **BP-06: 12/20 — NOT 100%.**
+- **BP-07: 16/20 — NOT 100%.**
+- **BP-08: 0/20 — NOT 100%.**
+- **BP-09: 0/21 — NOT 100%.**
+- **BP-10: 0/21 — NOT 100%.**
+- **BP-11: 0/20 — NOT 100%.**
+- Queue (BP-04..11): 101 items. Script-rewrite stills are first, then remaining prior fails.

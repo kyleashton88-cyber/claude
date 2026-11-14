@@ -1,51 +1,1202 @@
 {
-  "note": "ChatGPT web, one at a time, in this order. Attach _anchors/anchor.png, paste the prompt file as one message, download, copy to target_gen, fit to target_out (1536x1024), re-score, then commit to repo_path. No lesson renders until all its rows pass. Prompts marked prompt_updated were revised on 14 Nov for the PR #17 (6df2536) smoothed narration; see PR17_PROMPT_UPDATES.md. Updated for PR #17 head 6848d09: bp-04 001/004/007/008/009 passed as ChatGPT web renders and left the queue; bp-04 002/003/005/006/010 failed web1 and stay (003/005/006/010 now on v2 prompts). Round 2 (14 Nov): bp-04 002/003/005/010 (web2) and 011/013/014/015/016/017/019/020 (web1) passed and left the queue; bp-04 006 (web2, now v3 prompt, target web3), 012 and 018 (web1, now v2 prompts, target web2) failed and stay. Strict arrow rule (14 Nov): bp-04 007, 009, 011, 015 re-added (web2, v2 prompts) after their passed renders were failed for arrow tips that stop short of target. Round on top of 57e0aeb (14 Nov, WITA): scored bp-04 006/web3, 007/009/011/012/015/018 web2, and first scoring of all 20 bp-06 web.png. Passed and removed: bp-04 009, 012, 018; bp-06 001, 002, 003, 004, 005, 007, 008, 009, 011, 013, 015, 017. Failed (next prompt): bp-04 006 (web4/v4), 007/011/015 (web3/v3); bp-06 006, 010, 012, 014, 016, 018, 019, 020 (web2/v2). Untouched this run: bp-04 010, all bp-05, all bp-07+. Round on top of 4bfe3e6 (14 Nov, WITA): scored bp-04 010/web3, bp-05 005/006/015/016/019 web2, and first scoring of all 20 bp-07 web.png. Passed and removed: bp-04 010; bp-05 005, 016; bp-07 001, 002, 004, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018. Failed (next prompt): bp-05 006/015/019 (web3/v3); bp-07 003, 005, 019, 020 (web2/v2). Untouched this run: bp-04 006, 007, 011, 015; all remaining bp-06 fails; all bp-08+. Round on top of 0cc141a (14 Nov, WITA): scored bp-04 006/web4 PASS (removed from queue). Untouched this run: bp-04 007, 011, 015; all remaining bp-05/06/07 fails; all bp-08+.",
-  "length": 100,
+  "note": "ChatGPT web, one at a time, in this order. Attach _anchors/anchor.png, paste the prompt file as one message, download, copy to target_gen, fit to target_out (1536x1024), re-score, then commit to repo_path. No lesson renders until all its rows pass. Prompts marked prompt_updated were revised on 14 Nov for the PR #17 (6df2536) smoothed narration; see PR17_PROMPT_UPDATES.md. Updated for PR #17 head 6848d09: bp-04 001/004/007/008/009 passed as ChatGPT web renders and left the queue; bp-04 002/003/005/006/010 failed web1 and stay (003/005/006/010 now on v2 prompts). Round 2 (14 Nov): bp-04 002/003/005/010 (web2) and 011/013/014/015/016/017/019/020 (web1) passed and left the queue; bp-04 006 (web2, now v3 prompt, target web3), 012 and 018 (web1, now v2 prompts, target web2) failed and stay. Strict arrow rule (14 Nov): bp-04 007, 009, 011, 015 re-added (web2, v2 prompts) after their passed renders were failed for arrow tips that stop short of target. Round on top of 57e0aeb (14 Nov, WITA): scored bp-04 006/web3, 007/009/011/012/015/018 web2, and first scoring of all 20 bp-06 web.png. Passed and removed: bp-04 009, 012, 018; bp-06 001, 002, 003, 004, 005, 007, 008, 009, 011, 013, 015, 017. Failed (next prompt): bp-04 006 (web4/v4), 007/011/015 (web3/v3); bp-06 006, 010, 012, 014, 016, 018, 019, 020 (web2/v2). Untouched this run: bp-04 010, all bp-05, all bp-07+. Round on top of 4bfe3e6 (14 Nov, WITA): scored bp-04 010/web3, bp-05 005/006/015/016/019 web2, and first scoring of all 20 bp-07 web.png. Passed and removed: bp-04 010; bp-05 005, 016; bp-07 001, 002, 004, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018. Failed (next prompt): bp-05 006/015/019 (web3/v3); bp-07 003, 005, 019, 020 (web2/v2). Untouched this run: bp-04 006, 007, 011, 015; all remaining bp-06 fails; all bp-08+. Round on top of 0cc141a (14 Nov, WITA): scored bp-04 006/web4 PASS (removed from queue). Untouched this run: bp-04 007, 011, 015; all remaining bp-05/06/07 fails; all bp-08+. Ledger update 14 Nov 2026 WITA (script rewrite b608319 / REPORT-b608319.md): Reopened or updated for on-image text: BP-04 006/007/011; BP-05 015; BP-06 006/010/012/014/019; BP-07 005/019; and every still used by BP-08..11 in the b608319 plan (14 each). BP-10 008 is still used in the plan, so it was not dropped; remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed files left in place. Exact replacement text is in each row's fix_note. Prior unlisted fails stay in the queue after the script-rewrite items.",
+  "length": 101,
   "queue": [
     {
       "order": 1,
       "lesson": "bp-04-market-regimes",
+      "beat": 6,
+      "path": "course/images/bp-04-market-regimes/006.png",
+      "prompt": "specs/remake/bp-04-market-regimes__006.txt",
+      "target_gen": "gen/bp-04-market-regimes/006/cursor1.png",
+      "target_out": "out/course/images/bp-04-market-regimes/006.png",
+      "repo_path": "course/images/bp-04-market-regimes/006.png",
+      "size": "1536x1024",
+      "headline": "Each dot = price touches a line (a cross)",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: \"Each dot = price touches a line (a cross)\". Placed file left in place.",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "\"Each dot = price touches a line (a cross)\"."
+    },
+    {
+      "order": 2,
+      "lesson": "bp-04-market-regimes",
       "beat": 7,
       "path": "course/images/bp-04-market-regimes/007.png",
       "prompt": "specs/remake/bp-04-market-regimes__007.txt",
-      "target_gen": "gen/bp-04-market-regimes/007/web3.png",
+      "target_gen": "gen/bp-04-market-regimes/007/cursor1.png",
       "target_out": "out/course/images/bp-04-market-regimes/007.png",
       "repo_path": "course/images/bp-04-market-regimes/007.png",
       "size": "1536x1024",
-      "headline": "TREND: ONE DIRECTION",
-      "reason": "web2 remake FAIL under the strict arrow rule. \"Higher highs\" and \"Small dips\" now appear to touch (the previous 25px/17px shorts look fixed). But \"Keeps going one way\" tip has a visible sliver of navy under the dashed slope arrow and does not touch it. Next: web3.png on the v3 prompt.",
+      "headline": "TREND: KEEPS GOING ONE WAY",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: \"TREND: KEEPS GOING ONE WAY\", with a rising path labelled \"Higher highs\" and \"Small pullbacks\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "arrow tip stops short of target: \"Keeps going one way\" tip has a visible sliver of navy under the dashed slope arrow and does not touch it"
       ],
       "previous_attempts": [
         "gen/bp-04-market-regimes/007/web1.png"
       ],
       "prompt_version": "v2",
-      "superseded_prompt": "specs/remake/_superseded/bp-04-market-regimes__007.v1.txt"
+      "superseded_prompt": "specs/remake/_superseded/bp-04-market-regimes__007.v1.txt",
+      "fix_note": "\"TREND: KEEPS GOING ONE WAY\", with a rising path labelled \"Higher highs\" and \"Small pullbacks\"."
     },
     {
-      "order": 2,
+      "order": 3,
       "lesson": "bp-04-market-regimes",
       "beat": 11,
       "path": "course/images/bp-04-market-regimes/011.png",
       "prompt": "specs/remake/bp-04-market-regimes__011.txt",
-      "target_gen": "gen/bp-04-market-regimes/011/web3.png",
+      "target_gen": "gen/bp-04-market-regimes/011/cursor1.png",
       "target_out": "out/course/images/bp-04-market-regimes/011.png",
       "repo_path": "course/images/bp-04-market-regimes/011.png",
       "size": "1536x1024",
-      "headline": "A NORMAL DAY'S WIGGLE",
-      "reason": "web2 remake FAIL under the strict arrow rule. Teaching and EXAMPLE are otherwise excellent (wiggle + size bracket, \"Not a promise about tomorrow\" with no arrow). But \"Usual up-and-down size\" tip stops about 4-8px short of the bracket's top cap. Next: web3.png on the v3 prompt.",
+      "headline": "BAND TOO TIGHT FOR A NORMAL DAY",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: \"BAND TOO TIGHT FOR A NORMAL DAY\": \"Your band\" / \"Normal up-and-down\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
       "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
         "arrow tip stops short of target: \"Usual up-and-down size\" tip stops about 4-8px short of the bracket's top cap"
       ],
       "previous_attempts": [
         "gen/bp-04-market-regimes/011/web1.png"
       ],
       "prompt_version": "v2",
-      "superseded_prompt": "specs/remake/_superseded/bp-04-market-regimes__011.v1.txt"
+      "superseded_prompt": "specs/remake/_superseded/bp-04-market-regimes__011.v1.txt",
+      "fix_note": "\"BAND TOO TIGHT FOR A NORMAL DAY\": \"Your band\" / \"Normal up-and-down\"."
     },
     {
-      "order": 3,
+      "order": 4,
+      "lesson": "bp-05-spacing-and-range",
+      "beat": 15,
+      "path": "course/images/bp-05-spacing-and-range/015.png",
+      "prompt": "specs/remake/bp-05-spacing-and-range__015.txt",
+      "target_gen": "gen/bp-05-spacing-and-range/015/cursor1.png",
+      "target_out": "out/course/images/bp-05-spacing-and-range/015.png",
+      "repo_path": "course/images/bp-05-spacing-and-range/015.png",
+      "size": "1536x1024",
+      "headline": "RECAP",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: \"RECAP\": \"Range first\" / \"Count gaps, not lines\" / \"Gap vs fee\" / \"One change at a time\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "cramped margin: right margin 39px (luma>110 bbox) on the 'One change at a time' tag, which reaches x=1496 on a 1536-wide frame; hard fail if any side is under 45px"
+      ],
+      "prompt_version": "v3",
+      "superseded_prompt": "specs/remake/_superseded/bp-05-spacing-and-range__015.v2.txt",
+      "previous_attempts": [
+        "gen/bp-05-spacing-and-range/015/web1.png",
+        "gen/bp-05-spacing-and-range/015/web2.png"
+      ],
+      "fix_note": "\"RECAP\": \"Range first\" / \"Count gaps, not lines\" / \"Gap vs fee\" / \"One change at a time\"."
+    },
+    {
+      "order": 5,
+      "lesson": "bp-06-entry-and-exit",
+      "beat": 6,
+      "path": "course/images/bp-06-entry-and-exit/006.png",
+      "prompt": "specs/remake/bp-06-entry-and-exit__006.txt",
+      "target_gen": "gen/bp-06-entry-and-exit/006/cursor1.png",
+      "target_out": "out/course/images/bp-06-entry-and-exit/006.png",
+      "repo_path": "course/images/bp-06-entry-and-exit/006.png",
+      "size": "1536x1024",
+      "headline": "FINISH RULE: PRICE LEAVES AND DOESN'T COME BACK",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: \"FINISH RULE: PRICE LEAVES AND DOESN'T COME BACK\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "arrow tip stops short of target: both \"Price leaves the box\" and \"Still out at next check = stop\" tips stop short of their targets"
+      ],
+      "fix_note": "\"FINISH RULE: PRICE LEAVES AND DOESN'T COME BACK\""
+    },
+    {
+      "order": 6,
+      "lesson": "bp-06-entry-and-exit",
+      "beat": 10,
+      "path": "course/images/bp-06-entry-and-exit/010.png",
+      "prompt": "specs/remake/bp-06-entry-and-exit__010.txt",
+      "target_gen": "gen/bp-06-entry-and-exit/010/cursor1.png",
+      "target_out": "out/course/images/bp-06-entry-and-exit/010.png",
+      "repo_path": "course/images/bp-06-entry-and-exit/010.png",
+      "size": "1536x1024",
+      "headline": "INVALIDATION = WHERE YOUR IDEA IS PROVEN WRONG",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: \"INVALIDATION = WHERE YOUR IDEA IS PROVEN WRONG\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "arrow tip stops short of target: \"Finish path (invalidation): the idea is finished\" tip stops about 6-8px short of the dashed amber line"
+      ],
+      "prompt_updated": "6848d09 (see PR17_PROMPT_UPDATES.md)",
+      "fix_note": "\"INVALIDATION = WHERE YOUR IDEA IS PROVEN WRONG\""
+    },
+    {
+      "order": 7,
+      "lesson": "bp-06-entry-and-exit",
+      "beat": 12,
+      "path": "course/images/bp-06-entry-and-exit/012.png",
+      "prompt": "specs/remake/bp-06-entry-and-exit__012.txt",
+      "target_gen": "gen/bp-06-entry-and-exit/012/cursor1.png",
+      "target_out": "out/course/images/bp-06-entry-and-exit/012.png",
+      "repo_path": "course/images/bp-06-entry-and-exit/012.png",
+      "size": "1536x1024",
+      "headline": "COPY THE FINISH RULE FIRST",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: \"COPY THE FINISH RULE FIRST\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "arrow tip stops short of target: scene connector 1 stops short of the stop row, connector 2 stops short of the start row, and the \"2 Then start rule\" label tip stops short of the circled 2"
+      ],
+      "fix_note": "\"COPY THE FINISH RULE FIRST\""
+    },
+    {
+      "order": 8,
+      "lesson": "bp-06-entry-and-exit",
+      "beat": 14,
+      "path": "course/images/bp-06-entry-and-exit/014.png",
+      "prompt": "specs/remake/bp-06-entry-and-exit__014.txt",
+      "target_gen": "gen/bp-06-entry-and-exit/014/cursor1.png",
+      "target_out": "out/course/images/bp-06-entry-and-exit/014.png",
+      "repo_path": "course/images/bp-06-entry-and-exit/014.png",
+      "size": "1536x1024",
+      "headline": "WRITE BOTH RULES TODAY, FINISH FIRST",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: \"WRITE BOTH RULES TODAY, FINISH FIRST\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "cramped margin: the \"Read them aloud\" tag's right edge is at x=1492, only 43px from the 1536px right edge (minimum 45px)"
+      ],
+      "fix_note": "\"WRITE BOTH RULES TODAY, FINISH FIRST\""
+    },
+    {
+      "order": 9,
+      "lesson": "bp-06-entry-and-exit",
+      "beat": 19,
+      "path": "course/images/bp-06-entry-and-exit/019.png",
+      "prompt": "specs/remake/bp-06-entry-and-exit__019.txt",
+      "target_gen": "gen/bp-06-entry-and-exit/019/cursor1.png",
+      "target_out": "out/course/images/bp-06-entry-and-exit/019.png",
+      "repo_path": "course/images/bp-06-entry-and-exit/019.png",
+      "size": "1536x1024",
+      "headline": "CAN A CLASSMATE POINT AT YOUR FINISH RULE?",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: \"CAN A CLASSMATE POINT AT YOUR FINISH RULE?\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "cramped margin: the left sleeve/cuff glow reaches x=8, only 8px from the left edge (minimum 45px)"
+      ],
+      "fix_note": "\"CAN A CLASSMATE POINT AT YOUR FINISH RULE?\""
+    },
+    {
+      "order": 10,
+      "lesson": "bp-07-spot-paper-trading",
+      "beat": 5,
+      "path": "course/images/bp-07-spot-paper-trading/005.png",
+      "prompt": "specs/remake/bp-07-spot-paper-trading__005.txt",
+      "target_gen": "gen/bp-07-spot-paper-trading/005/cursor1.png",
+      "target_out": "out/course/images/bp-07-spot-paper-trading/005.png",
+      "repo_path": "course/images/bp-07-spot-paper-trading/005.png",
+      "size": "1536x1024",
+      "headline": "Pair / Top / Bottom / Gap count / Your two rules",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: \"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "arrow tip stops short of target: all five label tips (Pair, Top price, Bottom price, Number of gaps, Your rules) stop short of the left ends of their form rows (visible gap in the form's left padding)"
+      ],
+      "previous_attempts": [
+        "gen/bp-07-spot-paper-trading/005/web.png"
+      ],
+      "prompt_version": "v2",
+      "superseded_prompt": "specs/remake/_superseded/bp-07-spot-paper-trading__005.v1.txt",
+      "fix_note": "\"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\"."
+    },
+    {
+      "order": 11,
+      "lesson": "bp-07-spot-paper-trading",
+      "beat": 19,
+      "path": "course/images/bp-07-spot-paper-trading/019.png",
+      "prompt": "specs/remake/bp-07-spot-paper-trading__019.txt",
+      "target_gen": "gen/bp-07-spot-paper-trading/019/cursor1.png",
+      "target_out": "out/course/images/bp-07-spot-paper-trading/019.png",
+      "repo_path": "course/images/bp-07-spot-paper-trading/019.png",
+      "size": "1536x1024",
+      "headline": "Pair / Top / Bottom / Gap count / Your two rules",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: \"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "arrow tip stops short of target: the four scene-matching connector arrows stop short of the right-hand form (visible gaps at the points)"
+      ],
+      "previous_attempts": [
+        "gen/bp-07-spot-paper-trading/019/web.png"
+      ],
+      "prompt_version": "v2",
+      "superseded_prompt": "specs/remake/_superseded/bp-07-spot-paper-trading__019.v1.txt",
+      "fix_note": "\"Pair / Top / Bottom / Gap count / Your two rules\". \"LINES\" as a field contradicts \"gaps, not lines\"."
+    },
+    {
+      "order": 12,
+      "lesson": "bp-08-managing-and-monitoring",
+      "beat": 1,
+      "path": "course/images/bp-08-managing-and-monitoring/001.png",
+      "prompt": "specs/remake/bp-08-managing-and-monitoring__001.txt",
+      "target_gen": "gen/bp-08-managing-and-monitoring/001/cursor1.png",
+      "target_out": "out/course/images/bp-08-managing-and-monitoring/001.png",
+      "repo_path": "course/images/bp-08-managing-and-monitoring/001.png",
+      "size": "1536x1024",
+      "headline": "A SHORT CHECK, NOT A VIGIL",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+    },
+    {
+      "order": 13,
+      "lesson": "bp-08-managing-and-monitoring",
+      "beat": 4,
+      "path": "course/images/bp-08-managing-and-monitoring/004.png",
+      "prompt": "specs/remake/bp-08-managing-and-monitoring__004.txt",
+      "target_gen": "gen/bp-08-managing-and-monitoring/004/cursor1.png",
+      "target_out": "out/course/images/bp-08-managing-and-monitoring/004.png",
+      "repo_path": "course/images/bp-08-managing-and-monitoring/004.png",
+      "size": "1536x1024",
+      "headline": "THREE QUESTIONS",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "prompt_updated": "PR #17 6df2536 smoothed narration: Narration now defines inventory (what piled up on one side) and the finish sentence; old row 3 said \"stop rule still fit\".",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+    },
+    {
+      "order": 14,
+      "lesson": "bp-08-managing-and-monitoring",
+      "beat": 5,
+      "path": "course/images/bp-08-managing-and-monitoring/005.png",
+      "prompt": "specs/remake/bp-08-managing-and-monitoring__005.txt",
+      "target_gen": "gen/bp-08-managing-and-monitoring/005/cursor1.png",
+      "target_out": "out/course/images/bp-08-managing-and-monitoring/005.png",
+      "repo_path": "course/images/bp-08-managing-and-monitoring/005.png",
+      "size": "1536x1024",
+      "headline": "STILL INSIDE THE BOX?",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+    },
+    {
+      "order": 15,
+      "lesson": "bp-08-managing-and-monitoring",
+      "beat": 6,
+      "path": "course/images/bp-08-managing-and-monitoring/006.png",
+      "prompt": "specs/remake/bp-08-managing-and-monitoring__006.txt",
+      "target_gen": "gen/bp-08-managing-and-monitoring/006/cursor1.png",
+      "target_out": "out/course/images/bp-08-managing-and-monitoring/006.png",
+      "repo_path": "course/images/bp-08-managing-and-monitoring/006.png",
+      "size": "1536x1024",
+      "headline": "WHAT DO YOU HOLD MORE OF?",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "artifact: smudged, half-erased pseudo-text above and below 'HEAVY' and 'EXAMPLE' in both cards"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+    },
+    {
+      "order": 16,
+      "lesson": "bp-08-managing-and-monitoring",
+      "beat": 7,
+      "path": "course/images/bp-08-managing-and-monitoring/007.png",
+      "prompt": "specs/remake/bp-08-managing-and-monitoring__007.txt",
+      "target_gen": "gen/bp-08-managing-and-monitoring/007/cursor1.png",
+      "target_out": "out/course/images/bp-08-managing-and-monitoring/007.png",
+      "repo_path": "course/images/bp-08-managing-and-monitoring/007.png",
+      "size": "1536x1024",
+      "headline": "REREAD YOUR STOP RULE",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+    },
+    {
+      "order": 17,
+      "lesson": "bp-08-managing-and-monitoring",
+      "beat": 8,
+      "path": "course/images/bp-08-managing-and-monitoring/008.png",
+      "prompt": "specs/remake/bp-08-managing-and-monitoring__008.txt",
+      "target_gen": "gen/bp-08-managing-and-monitoring/008/cursor1.png",
+      "target_out": "out/course/images/bp-08-managing-and-monitoring/008.png",
+      "repo_path": "course/images/bp-08-managing-and-monitoring/008.png",
+      "size": "1536x1024",
+      "headline": "PICK YOUR CHECK DAYS",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+    },
+    {
+      "order": 18,
+      "lesson": "bp-08-managing-and-monitoring",
+      "beat": 9,
+      "path": "course/images/bp-08-managing-and-monitoring/009.png",
+      "prompt": "specs/remake/bp-08-managing-and-monitoring__009.txt",
+      "target_gen": "gen/bp-08-managing-and-monitoring/009/cursor1.png",
+      "target_out": "out/course/images/bp-08-managing-and-monitoring/009.png",
+      "repo_path": "course/images/bp-08-managing-and-monitoring/009.png",
+      "size": "1536x1024",
+      "headline": "DON'T OPEN THESE",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+    },
+    {
+      "order": 19,
+      "lesson": "bp-08-managing-and-monitoring",
+      "beat": 10,
+      "path": "course/images/bp-08-managing-and-monitoring/010.png",
+      "prompt": "specs/remake/bp-08-managing-and-monitoring__010.txt",
+      "target_gen": "gen/bp-08-managing-and-monitoring/010/cursor1.png",
+      "target_out": "out/course/images/bp-08-managing-and-monitoring/010.png",
+      "repo_path": "course/images/bp-08-managing-and-monitoring/010.png",
+      "size": "1536x1024",
+      "headline": "PRACTISE THE CHECK",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+    },
+    {
+      "order": 20,
+      "lesson": "bp-08-managing-and-monitoring",
+      "beat": 11,
+      "path": "course/images/bp-08-managing-and-monitoring/011.png",
+      "prompt": "specs/remake/bp-08-managing-and-monitoring__011.txt",
+      "target_gen": "gen/bp-08-managing-and-monitoring/011/cursor1.png",
+      "target_out": "out/course/images/bp-08-managing-and-monitoring/011.png",
+      "repo_path": "course/images/bp-08-managing-and-monitoring/011.png",
+      "size": "1536x1024",
+      "headline": "AN ALERT IS A NUDGE",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+    },
+    {
+      "order": 21,
+      "lesson": "bp-08-managing-and-monitoring",
+      "beat": 12,
+      "path": "course/images/bp-08-managing-and-monitoring/012.png",
+      "prompt": "specs/remake/bp-08-managing-and-monitoring__012.txt",
+      "target_gen": "gen/bp-08-managing-and-monitoring/012/cursor1.png",
+      "target_out": "out/course/images/bp-08-managing-and-monitoring/012.png",
+      "repo_path": "course/images/bp-08-managing-and-monitoring/012.png",
+      "size": "1536x1024",
+      "headline": "NO RESULTS ROW",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+    },
+    {
+      "order": 22,
+      "lesson": "bp-08-managing-and-monitoring",
+      "beat": 13,
+      "path": "course/images/bp-08-managing-and-monitoring/013.png",
+      "prompt": "specs/remake/bp-08-managing-and-monitoring__013.txt",
+      "target_gen": "gen/bp-08-managing-and-monitoring/013/cursor1.png",
+      "target_out": "out/course/images/bp-08-managing-and-monitoring/013.png",
+      "repo_path": "course/images/bp-08-managing-and-monitoring/013.png",
+      "size": "1536x1024",
+      "headline": "ANSWER, THEN WALK AWAY",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+    },
+    {
+      "order": 23,
+      "lesson": "bp-08-managing-and-monitoring",
+      "beat": 14,
+      "path": "course/images/bp-08-managing-and-monitoring/014.png",
+      "prompt": "specs/remake/bp-08-managing-and-monitoring__014.txt",
+      "target_gen": "gen/bp-08-managing-and-monitoring/014/cursor1.png",
+      "target_out": "out/course/images/bp-08-managing-and-monitoring/014.png",
+      "repo_path": "course/images/bp-08-managing-and-monitoring/014.png",
+      "size": "1536x1024",
+      "headline": "MAKE YOUR CHECK CARD",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "prompt_updated": "6848d09 (see PR17_PROMPT_UPDATES.md)",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+    },
+    {
+      "order": 24,
+      "lesson": "bp-08-managing-and-monitoring",
+      "beat": 15,
+      "path": "course/images/bp-08-managing-and-monitoring/015.png",
+      "prompt": "specs/remake/bp-08-managing-and-monitoring__015.txt",
+      "target_gen": "gen/bp-08-managing-and-monitoring/015/cursor1.png",
+      "target_out": "out/course/images/bp-08-managing-and-monitoring/015.png",
+      "repo_path": "course/images/bp-08-managing-and-monitoring/015.png",
+      "size": "1536x1024",
+      "headline": "RECAP: CHECKING IN",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+    },
+    {
+      "order": 25,
+      "lesson": "bp-08-managing-and-monitoring",
+      "beat": 19,
+      "path": "course/images/bp-08-managing-and-monitoring/019.png",
+      "prompt": "specs/remake/bp-08-managing-and-monitoring__019.txt",
+      "target_gen": "gen/bp-08-managing-and-monitoring/019/cursor1.png",
+      "target_out": "out/course/images/bp-08-managing-and-monitoring/019.png",
+      "repo_path": "course/images/bp-08-managing-and-monitoring/019.png",
+      "size": "1536x1024",
+      "headline": "USE IT ON YOUR PRACTICE SCREEN",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+    },
+    {
+      "order": 26,
+      "lesson": "bp-09-common-mistakes",
+      "beat": 1,
+      "path": "course/images/bp-09-common-mistakes/001.png",
+      "prompt": "specs/remake/bp-09-common-mistakes__001.txt",
+      "target_gen": "gen/bp-09-common-mistakes/001/cursor1.png",
+      "target_out": "out/course/images/bp-09-common-mistakes/001.png",
+      "repo_path": "course/images/bp-09-common-mistakes/001.png",
+      "size": "1536x1024",
+      "headline": "MISTAKES ARE ON THE PAGE",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "illegible label: 'BLANK / THIN / EARLY' sit on three tiny cards that fill under 5% of the frame"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+    },
+    {
+      "order": 27,
+      "lesson": "bp-09-common-mistakes",
+      "beat": 4,
+      "path": "course/images/bp-09-common-mistakes/004.png",
+      "prompt": "specs/remake/bp-09-common-mistakes__004.txt",
+      "target_gen": "gen/bp-09-common-mistakes/004/cursor1.png",
+      "target_out": "out/course/images/bp-09-common-mistakes/004.png",
+      "repo_path": "course/images/bp-09-common-mistakes/004.png",
+      "size": "1536x1024",
+      "headline": "MISTAKE: NO STOP WRITTEN",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+    },
+    {
+      "order": 28,
+      "lesson": "bp-09-common-mistakes",
+      "beat": 5,
+      "path": "course/images/bp-09-common-mistakes/005.png",
+      "prompt": "specs/remake/bp-09-common-mistakes__005.txt",
+      "target_gen": "gen/bp-09-common-mistakes/005/cursor1.png",
+      "target_out": "out/course/images/bp-09-common-mistakes/005.png",
+      "repo_path": "course/images/bp-09-common-mistakes/005.png",
+      "size": "1536x1024",
+      "headline": "MISTAKE: BOX TOO NARROW",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+    },
+    {
+      "order": 29,
+      "lesson": "bp-09-common-mistakes",
+      "beat": 6,
+      "path": "course/images/bp-09-common-mistakes/006.png",
+      "prompt": "specs/remake/bp-09-common-mistakes__006.txt",
+      "target_gen": "gen/bp-09-common-mistakes/006/cursor1.png",
+      "target_out": "out/course/images/bp-09-common-mistakes/006.png",
+      "repo_path": "course/images/bp-09-common-mistakes/006.png",
+      "size": "1536x1024",
+      "headline": "MISTAKE: QUITTING EARLY",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "wrong label: 'LIQUID' is a truncated 'liquidation'"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+    },
+    {
+      "order": 30,
+      "lesson": "bp-09-common-mistakes",
+      "beat": 7,
+      "path": "course/images/bp-09-common-mistakes/007.png",
+      "prompt": "specs/remake/bp-09-common-mistakes__007.txt",
+      "target_gen": "gen/bp-09-common-mistakes/007/cursor1.png",
+      "target_out": "out/course/images/bp-09-common-mistakes/007.png",
+      "repo_path": "course/images/bp-09-common-mistakes/007.png",
+      "size": "1536x1024",
+      "headline": "MISTAKE: LINES \u2260 GAPS",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "illegible label: tiny letter-spaced 'EXAMPLE' and unreadable tick marks"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+    },
+    {
+      "order": 31,
+      "lesson": "bp-09-common-mistakes",
+      "beat": 8,
+      "path": "course/images/bp-09-common-mistakes/008.png",
+      "prompt": "specs/remake/bp-09-common-mistakes__008.txt",
+      "target_gen": "gen/bp-09-common-mistakes/008/cursor1.png",
+      "target_out": "out/course/images/bp-09-common-mistakes/008.png",
+      "repo_path": "course/images/bp-09-common-mistakes/008.png",
+      "size": "1536x1024",
+      "headline": "MISTAKE: TRUSTING THE DEFAULT",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "artifact: smudged white blur inside the SIZE card where a value should be",
+        "illegible label: tiny 'SIZE', 'CLEARED', 'EXAMPLE'"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+    },
+    {
+      "order": 32,
+      "lesson": "bp-09-common-mistakes",
+      "beat": 9,
+      "path": "course/images/bp-09-common-mistakes/009.png",
+      "prompt": "specs/remake/bp-09-common-mistakes__009.txt",
+      "target_gen": "gen/bp-09-common-mistakes/009/cursor1.png",
+      "target_out": "out/course/images/bp-09-common-mistakes/009.png",
+      "repo_path": "course/images/bp-09-common-mistakes/009.png",
+      "size": "1536x1024",
+      "headline": "MISTAKE: PROMISING PROFIT",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+    },
+    {
+      "order": 33,
+      "lesson": "bp-09-common-mistakes",
+      "beat": 10,
+      "path": "course/images/bp-09-common-mistakes/010.png",
+      "prompt": "specs/remake/bp-09-common-mistakes__010.txt",
+      "target_gen": "gen/bp-09-common-mistakes/010/cursor1.png",
+      "target_out": "out/course/images/bp-09-common-mistakes/010.png",
+      "repo_path": "course/images/bp-09-common-mistakes/010.png",
+      "size": "1536x1024",
+      "headline": "CHECK A SAMPLE PAGE",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+    },
+    {
+      "order": 34,
+      "lesson": "bp-09-common-mistakes",
+      "beat": 11,
+      "path": "course/images/bp-09-common-mistakes/011.png",
+      "prompt": "specs/remake/bp-09-common-mistakes__011.txt",
+      "target_gen": "gen/bp-09-common-mistakes/011/cursor1.png",
+      "target_out": "out/course/images/bp-09-common-mistakes/011.png",
+      "repo_path": "course/images/bp-09-common-mistakes/011.png",
+      "size": "1536x1024",
+      "headline": "FIX ONE, THEN THE NEXT",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+    },
+    {
+      "order": 35,
+      "lesson": "bp-09-common-mistakes",
+      "beat": 12,
+      "path": "course/images/bp-09-common-mistakes/012.png",
+      "prompt": "specs/remake/bp-09-common-mistakes__012.txt",
+      "target_gen": "gen/bp-09-common-mistakes/012/cursor1.png",
+      "target_out": "out/course/images/bp-09-common-mistakes/012.png",
+      "repo_path": "course/images/bp-09-common-mistakes/012.png",
+      "size": "1536x1024",
+      "headline": "NO SCORE TO TRADE ON",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+    },
+    {
+      "order": 36,
+      "lesson": "bp-09-common-mistakes",
+      "beat": 13,
+      "path": "course/images/bp-09-common-mistakes/013.png",
+      "prompt": "specs/remake/bp-09-common-mistakes__013.txt",
+      "target_gen": "gen/bp-09-common-mistakes/013/cursor1.png",
+      "target_out": "out/course/images/bp-09-common-mistakes/013.png",
+      "repo_path": "course/images/bp-09-common-mistakes/013.png",
+      "size": "1536x1024",
+      "headline": "MISTAKE: BORROWED MONEY",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+    },
+    {
+      "order": 37,
+      "lesson": "bp-09-common-mistakes",
+      "beat": 14,
+      "path": "course/images/bp-09-common-mistakes/014.png",
+      "prompt": "specs/remake/bp-09-common-mistakes__014.txt",
+      "target_gen": "gen/bp-09-common-mistakes/014/cursor1.png",
+      "target_out": "out/course/images/bp-09-common-mistakes/014.png",
+      "repo_path": "course/images/bp-09-common-mistakes/014.png",
+      "size": "1536x1024",
+      "headline": "CHECK YOUR OWN NOTEBOOK",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "illegible label: 'NONE' chip and three bullet lines are tiny"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+    },
+    {
+      "order": 38,
+      "lesson": "bp-09-common-mistakes",
+      "beat": 15,
+      "path": "course/images/bp-09-common-mistakes/015.png",
+      "prompt": "specs/remake/bp-09-common-mistakes__015.txt",
+      "target_gen": "gen/bp-09-common-mistakes/015/cursor1.png",
+      "target_out": "out/course/images/bp-09-common-mistakes/015.png",
+      "repo_path": "course/images/bp-09-common-mistakes/015.png",
+      "size": "1536x1024",
+      "headline": "RECAP: SIX MISTAKES",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+    },
+    {
+      "order": 39,
+      "lesson": "bp-09-common-mistakes",
+      "beat": 20,
+      "path": "course/images/bp-09-common-mistakes/020.png",
+      "prompt": "specs/remake/bp-09-common-mistakes__020.txt",
+      "target_gen": "gen/bp-09-common-mistakes/020/cursor1.png",
+      "target_out": "out/course/images/bp-09-common-mistakes/020.png",
+      "repo_path": "course/images/bp-09-common-mistakes/020.png",
+      "size": "1536x1024",
+      "headline": "KEEP YOUR MARKED PAGES",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 007 \"COUNT GAPS, NOT LINES: 7 lines = 6 gaps\"; 010 \"TWO MISTAKES: blank stop, lines counted as gaps\"."
+    },
+    {
+      "order": 40,
+      "lesson": "bp-10-scaling-up",
+      "beat": 1,
+      "path": "course/images/bp-10-scaling-up/001.png",
+      "prompt": "specs/remake/bp-10-scaling-up__001.txt",
+      "target_gen": "gen/bp-10-scaling-up/001/cursor1.png",
+      "target_out": "out/course/images/bp-10-scaling-up/001.png",
+      "repo_path": "course/images/bp-10-scaling-up/001.png",
+      "size": "1536x1024",
+      "headline": "GROWING = A SECOND PLAN",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "illegible label: tiny 'ONE'/'TWO' captions on small page outlines"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
+    },
+    {
+      "order": 41,
+      "lesson": "bp-10-scaling-up",
+      "beat": 4,
+      "path": "course/images/bp-10-scaling-up/004.png",
+      "prompt": "specs/remake/bp-10-scaling-up__004.txt",
+      "target_gen": "gen/bp-10-scaling-up/004/cursor1.png",
+      "target_out": "out/course/images/bp-10-scaling-up/004.png",
+      "repo_path": "course/images/bp-10-scaling-up/004.png",
+      "size": "1536x1024",
+      "headline": "PLAN 2 PASSES THE SAME CHECKS",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
+    },
+    {
+      "order": 42,
+      "lesson": "bp-10-scaling-up",
+      "beat": 5,
+      "path": "course/images/bp-10-scaling-up/005.png",
+      "prompt": "specs/remake/bp-10-scaling-up__005.txt",
+      "target_gen": "gen/bp-10-scaling-up/005/cursor1.png",
+      "target_out": "out/course/images/bp-10-scaling-up/005.png",
+      "repo_path": "course/images/bp-10-scaling-up/005.png",
+      "size": "1536x1024",
+      "headline": "TWO PLANS, ONE ASSET = CLASH",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
+    },
+    {
+      "order": 43,
+      "lesson": "bp-10-scaling-up",
+      "beat": 6,
+      "path": "course/images/bp-10-scaling-up/006.png",
+      "prompt": "specs/remake/bp-10-scaling-up__006.txt",
+      "target_gen": "gen/bp-10-scaling-up/006/cursor1.png",
+      "target_out": "out/course/images/bp-10-scaling-up/006.png",
+      "repo_path": "course/images/bp-10-scaling-up/006.png",
+      "size": "1536x1024",
+      "headline": "SAME SIZE IS FINE",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
+    },
+    {
+      "order": 44,
+      "lesson": "bp-10-scaling-up",
+      "beat": 7,
+      "path": "course/images/bp-10-scaling-up/007.png",
+      "prompt": "specs/remake/bp-10-scaling-up__007.txt",
+      "target_gen": "gen/bp-10-scaling-up/007/cursor1.png",
+      "target_out": "out/course/images/bp-10-scaling-up/007.png",
+      "repo_path": "course/images/bp-10-scaling-up/007.png",
+      "size": "1536x1024",
+      "headline": "CHANGE ONLY ONE THING",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
+    },
+    {
+      "order": 45,
+      "lesson": "bp-10-scaling-up",
+      "beat": 8,
+      "path": "course/images/bp-10-scaling-up/008.png",
+      "prompt": "specs/remake/bp-10-scaling-up__008.txt",
+      "target_gen": "gen/bp-10-scaling-up/008/cursor1.png",
+      "target_out": "out/course/images/bp-10-scaling-up/008.png",
+      "repo_path": "course/images/bp-10-scaling-up/008.png",
+      "size": "1536x1024",
+      "headline": "SAME BOX, NEW PAIR",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
+    },
+    {
+      "order": 46,
+      "lesson": "bp-10-scaling-up",
+      "beat": 9,
+      "path": "course/images/bp-10-scaling-up/009.png",
+      "prompt": "specs/remake/bp-10-scaling-up__009.txt",
+      "target_gen": "gen/bp-10-scaling-up/009/cursor1.png",
+      "target_out": "out/course/images/bp-10-scaling-up/009.png",
+      "repo_path": "course/images/bp-10-scaling-up/009.png",
+      "size": "1536x1024",
+      "headline": "THIS ISN'T THE END",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
+    },
+    {
+      "order": 47,
+      "lesson": "bp-10-scaling-up",
+      "beat": 10,
+      "path": "course/images/bp-10-scaling-up/010.png",
+      "prompt": "specs/remake/bp-10-scaling-up__010.txt",
+      "target_gen": "gen/bp-10-scaling-up/010/cursor1.png",
+      "target_out": "out/course/images/bp-10-scaling-up/010.png",
+      "repo_path": "course/images/bp-10-scaling-up/010.png",
+      "size": "1536x1024",
+      "headline": "PLAN 2 IS STILL SPOT",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
+    },
+    {
+      "order": 48,
+      "lesson": "bp-10-scaling-up",
+      "beat": 11,
+      "path": "course/images/bp-10-scaling-up/011.png",
+      "prompt": "specs/remake/bp-10-scaling-up__011.txt",
+      "target_gen": "gen/bp-10-scaling-up/011/cursor1.png",
+      "target_out": "out/course/images/bp-10-scaling-up/011.png",
+      "repo_path": "course/images/bp-10-scaling-up/011.png",
+      "size": "1536x1024",
+      "headline": "HOW MUCH? YOUR CALL",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "illegible label: tiny 'NOT THIS' in a near-empty card"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
+    },
+    {
+      "order": 49,
+      "lesson": "bp-10-scaling-up",
+      "beat": 12,
+      "path": "course/images/bp-10-scaling-up/012.png",
+      "prompt": "specs/remake/bp-10-scaling-up__012.txt",
+      "target_gen": "gen/bp-10-scaling-up/012/cursor1.png",
+      "target_out": "out/course/images/bp-10-scaling-up/012.png",
+      "repo_path": "course/images/bp-10-scaling-up/012.png",
+      "size": "1536x1024",
+      "headline": "DON'T DOUBLE ON A HUNCH",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
+    },
+    {
+      "order": 50,
+      "lesson": "bp-10-scaling-up",
+      "beat": 13,
+      "path": "course/images/bp-10-scaling-up/013.png",
+      "prompt": "specs/remake/bp-10-scaling-up__013.txt",
+      "target_gen": "gen/bp-10-scaling-up/013/cursor1.png",
+      "target_out": "out/course/images/bp-10-scaling-up/013.png",
+      "repo_path": "course/images/bp-10-scaling-up/013.png",
+      "size": "1536x1024",
+      "headline": "SOME PAIRS MOVE TOGETHER",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
+    },
+    {
+      "order": 51,
+      "lesson": "bp-10-scaling-up",
+      "beat": 14,
+      "path": "course/images/bp-10-scaling-up/014.png",
+      "prompt": "specs/remake/bp-10-scaling-up__014.txt",
+      "target_gen": "gen/bp-10-scaling-up/014/cursor1.png",
+      "target_out": "out/course/images/bp-10-scaling-up/014.png",
+      "repo_path": "course/images/bp-10-scaling-up/014.png",
+      "size": "1536x1024",
+      "headline": "PASS THE CHECKS OR WAIT",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
+    },
+    {
+      "order": 52,
+      "lesson": "bp-10-scaling-up",
+      "beat": 15,
+      "path": "course/images/bp-10-scaling-up/015.png",
+      "prompt": "specs/remake/bp-10-scaling-up__015.txt",
+      "target_gen": "gen/bp-10-scaling-up/015/cursor1.png",
+      "target_out": "out/course/images/bp-10-scaling-up/015.png",
+      "repo_path": "course/images/bp-10-scaling-up/015.png",
+      "size": "1536x1024",
+      "headline": "RECAP: GROWING",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
+    },
+    {
+      "order": 53,
+      "lesson": "bp-10-scaling-up",
+      "beat": 20,
+      "path": "course/images/bp-10-scaling-up/020.png",
+      "prompt": "specs/remake/bp-10-scaling-up__020.txt",
+      "target_gen": "gen/bp-10-scaling-up/020/cursor1.png",
+      "target_out": "out/course/images/bp-10-scaling-up/020.png",
+      "repo_path": "course/images/bp-10-scaling-up/020.png",
+      "size": "1536x1024",
+      "headline": "FILE BOTH TOGETHER",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration. 008 is still used in the b608319 plan (not dropped); remake it as \"PAGE TWO: SAME PAIR, NEW BAND\"."
+    },
+    {
+      "order": 54,
+      "lesson": "bp-11-advanced-liquidation",
+      "beat": 1,
+      "path": "course/images/bp-11-advanced-liquidation/001.png",
+      "prompt": "specs/remake/bp-11-advanced-liquidation__001.txt",
+      "target_gen": "gen/bp-11-advanced-liquidation/001/cursor1.png",
+      "target_out": "out/course/images/bp-11-advanced-liquidation/001.png",
+      "repo_path": "course/images/bp-11-advanced-liquidation/001.png",
+      "size": "1536x1024",
+      "headline": "OPTIONAL: HOW YOU CAN LOSE IT ALL",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+    },
+    {
+      "order": 55,
+      "lesson": "bp-11-advanced-liquidation",
+      "beat": 4,
+      "path": "course/images/bp-11-advanced-liquidation/004.png",
+      "prompt": "specs/remake/bp-11-advanced-liquidation__004.txt",
+      "target_gen": "gen/bp-11-advanced-liquidation/004/cursor1.png",
+      "target_out": "out/course/images/bp-11-advanced-liquidation/004.png",
+      "repo_path": "course/images/bp-11-advanced-liquidation/004.png",
+      "size": "1536x1024",
+      "headline": "YOU CAN SKIP THIS",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+    },
+    {
+      "order": 56,
+      "lesson": "bp-11-advanced-liquidation",
+      "beat": 5,
+      "path": "course/images/bp-11-advanced-liquidation/005.png",
+      "prompt": "specs/remake/bp-11-advanced-liquidation__005.txt",
+      "target_gen": "gen/bp-11-advanced-liquidation/005/cursor1.png",
+      "target_out": "out/course/images/bp-11-advanced-liquidation/005.png",
+      "repo_path": "course/images/bp-11-advanced-liquidation/005.png",
+      "size": "1536x1024",
+      "headline": "FORCED CLOSE (LIQUIDATION)",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+    },
+    {
+      "order": 57,
+      "lesson": "bp-11-advanced-liquidation",
+      "beat": 6,
+      "path": "course/images/bp-11-advanced-liquidation/006.png",
+      "prompt": "specs/remake/bp-11-advanced-liquidation__006.txt",
+      "target_gen": "gen/bp-11-advanced-liquidation/006/cursor1.png",
+      "target_out": "out/course/images/bp-11-advanced-liquidation/006.png",
+      "repo_path": "course/images/bp-11-advanced-liquidation/006.png",
+      "size": "1536x1024",
+      "headline": "DRAW THE LOSS FIRST",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "illegible label: tiny '1'/'2' panel numbers"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+    },
+    {
+      "order": 58,
+      "lesson": "bp-11-advanced-liquidation",
+      "beat": 7,
+      "path": "course/images/bp-11-advanced-liquidation/007.png",
+      "prompt": "specs/remake/bp-11-advanced-liquidation__007.txt",
+      "target_gen": "gen/bp-11-advanced-liquidation/007/cursor1.png",
+      "target_out": "out/course/images/bp-11-advanced-liquidation/007.png",
+      "repo_path": "course/images/bp-11-advanced-liquidation/007.png",
+      "size": "1536x1024",
+      "headline": "ISOLATED: ONE FENCED POT",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "illegible label: tiny 'ISOLATED' and 'ASSIGNED' captions"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+    },
+    {
+      "order": 59,
+      "lesson": "bp-11-advanced-liquidation",
+      "beat": 8,
+      "path": "course/images/bp-11-advanced-liquidation/008.png",
+      "prompt": "specs/remake/bp-11-advanced-liquidation__008.txt",
+      "target_gen": "gen/bp-11-advanced-liquidation/008/cursor1.png",
+      "target_out": "out/course/images/bp-11-advanced-liquidation/008.png",
+      "repo_path": "course/images/bp-11-advanced-liquidation/008.png",
+      "size": "1536x1024",
+      "headline": "CROSS: ALL POTS SHARED",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+    },
+    {
+      "order": 60,
+      "lesson": "bp-11-advanced-liquidation",
+      "beat": 9,
+      "path": "course/images/bp-11-advanced-liquidation/009.png",
+      "prompt": "specs/remake/bp-11-advanced-liquidation__009.txt",
+      "target_gen": "gen/bp-11-advanced-liquidation/009/cursor1.png",
+      "target_out": "out/course/images/bp-11-advanced-liquidation/009.png",
+      "repo_path": "course/images/bp-11-advanced-liquidation/009.png",
+      "size": "1536x1024",
+      "headline": "NO MULTIPLIER NUMBER",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+    },
+    {
+      "order": 61,
+      "lesson": "bp-11-advanced-liquidation",
+      "beat": 10,
+      "path": "course/images/bp-11-advanced-liquidation/010.png",
+      "prompt": "specs/remake/bp-11-advanced-liquidation__010.txt",
+      "target_gen": "gen/bp-11-advanced-liquidation/010/cursor1.png",
+      "target_out": "out/course/images/bp-11-advanced-liquidation/010.png",
+      "repo_path": "course/images/bp-11-advanced-liquidation/010.png",
+      "size": "1536x1024",
+      "headline": "FUNDING: A TIMED PAYMENT",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "illegible label: tiny letter-spaced 'FUNDING'"
+      ],
+      "prompt_updated": "6848d09 (see PR17_PROMPT_UPDATES.md)",
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+    },
+    {
+      "order": 62,
+      "lesson": "bp-11-advanced-liquidation",
+      "beat": 11,
+      "path": "course/images/bp-11-advanced-liquidation/011.png",
+      "prompt": "specs/remake/bp-11-advanced-liquidation__011.txt",
+      "target_gen": "gen/bp-11-advanced-liquidation/011/cursor1.png",
+      "target_out": "out/course/images/bp-11-advanced-liquidation/011.png",
+      "repo_path": "course/images/bp-11-advanced-liquidation/011.png",
+      "size": "1536x1024",
+      "headline": "OLD RISKY ADVICE DELETED",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+    },
+    {
+      "order": 63,
+      "lesson": "bp-11-advanced-liquidation",
+      "beat": 12,
+      "path": "course/images/bp-11-advanced-liquidation/012.png",
+      "prompt": "specs/remake/bp-11-advanced-liquidation__012.txt",
+      "target_gen": "gen/bp-11-advanced-liquidation/012/cursor1.png",
+      "target_out": "out/course/images/bp-11-advanced-liquidation/012.png",
+      "repo_path": "course/images/bp-11-advanced-liquidation/012.png",
+      "size": "1536x1024",
+      "headline": "TWO WARNING FLAGS",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "wrong count: headline 'TWO FLAGS' over three flags (LOSS / ALL / crossed GAIN)"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+    },
+    {
+      "order": 64,
+      "lesson": "bp-11-advanced-liquidation",
+      "beat": 13,
+      "path": "course/images/bp-11-advanced-liquidation/013.png",
+      "prompt": "specs/remake/bp-11-advanced-liquidation__013.txt",
+      "target_gen": "gen/bp-11-advanced-liquidation/013/cursor1.png",
+      "target_out": "out/course/images/bp-11-advanced-liquidation/013.png",
+      "repo_path": "course/images/bp-11-advanced-liquidation/013.png",
+      "size": "1536x1024",
+      "headline": "NOT A HOW-TO FOR APPS",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+    },
+    {
+      "order": 65,
+      "lesson": "bp-11-advanced-liquidation",
+      "beat": 14,
+      "path": "course/images/bp-11-advanced-liquidation/014.png",
+      "prompt": "specs/remake/bp-11-advanced-liquidation__014.txt",
+      "target_gen": "gen/bp-11-advanced-liquidation/014/cursor1.png",
+      "target_out": "out/course/images/bp-11-advanced-liquidation/014.png",
+      "repo_path": "course/images/bp-11-advanced-liquidation/014.png",
+      "size": "1536x1024",
+      "headline": "YOUR SENTENCE",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+    },
+    {
+      "order": 66,
+      "lesson": "bp-11-advanced-liquidation",
+      "beat": 15,
+      "path": "course/images/bp-11-advanced-liquidation/015.png",
+      "prompt": "specs/remake/bp-11-advanced-liquidation__015.txt",
+      "target_gen": "gen/bp-11-advanced-liquidation/015/cursor1.png",
+      "target_out": "out/course/images/bp-11-advanced-liquidation/015.png",
+      "repo_path": "course/images/bp-11-advanced-liquidation/015.png",
+      "size": "1536x1024",
+      "headline": "RECAP: BORROWED MONEY",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration",
+        "illegible label: eight tiny chips (OPT / LOSS / FENCE / PULL / NONE / RATE / SPOT / LAST) across a thin strip"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+    },
+    {
+      "order": 67,
+      "lesson": "bp-11-advanced-liquidation",
+      "beat": 19,
+      "path": "course/images/bp-11-advanced-liquidation/019.png",
+      "prompt": "specs/remake/bp-11-advanced-liquidation__019.txt",
+      "target_gen": "gen/bp-11-advanced-liquidation/019/cursor1.png",
+      "target_out": "out/course/images/bp-11-advanced-liquidation/019.png",
+      "repo_path": "course/images/bp-11-advanced-liquidation/019.png",
+      "size": "1536x1024",
+      "headline": "SKIPPING? WRITE IT DOWN",
+      "reason": "script rewrite b608319: on-image text must match the new narration. Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\". Placed file left in place. (Prior remake reason retained in ledger notes; on-image text must now match the new narration.)",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 005 \"LIQUIDATION: THE EXCHANGE CLOSES THE TRADE WHEN YOUR MARGIN RUNS OUT\"; 012 \"TWO WARNINGS: can be liquidated / can lose all you put in\"."
+    },
+    {
+      "order": 68,
       "lesson": "bp-04-market-regimes",
       "beat": 15,
       "path": "course/images/bp-04-market-regimes/015.png",
@@ -66,7 +1217,7 @@
       "superseded_prompt": "specs/remake/_superseded/bp-04-market-regimes__015.v1.txt"
     },
     {
-      "order": 4,
+      "order": 69,
       "lesson": "bp-05-spacing-and-range",
       "beat": 6,
       "path": "course/images/bp-05-spacing-and-range/006.png",
@@ -88,29 +1239,7 @@
       ]
     },
     {
-      "order": 5,
-      "lesson": "bp-05-spacing-and-range",
-      "beat": 15,
-      "path": "course/images/bp-05-spacing-and-range/015.png",
-      "prompt": "specs/remake/bp-05-spacing-and-range__015.txt",
-      "target_gen": "gen/bp-05-spacing-and-range/015/web3.png",
-      "target_out": "out/course/images/bp-05-spacing-and-range/015.png",
-      "repo_path": "course/images/bp-05-spacing-and-range/015.png",
-      "size": "1536x1024",
-      "headline": "RECAP: SPACING",
-      "reason": "web2 remake FAIL. All five recap chips are present, including the previously missing '19 gaps = 9.5%'. No arrows. Content is otherwise excellent. Hard fail is the cramped right margin: the 'One change at a time' tag's bright teal reaches x=1496, leaving only 39px (luma>110). Margins 75/39/116/320. Next: web3.png on the v3 prompt.",
-      "hard_fails": [
-        "cramped margin: right margin 39px (luma>110 bbox) on the 'One change at a time' tag, which reaches x=1496 on a 1536-wide frame; hard fail if any side is under 45px"
-      ],
-      "prompt_version": "v3",
-      "superseded_prompt": "specs/remake/_superseded/bp-05-spacing-and-range__015.v2.txt",
-      "previous_attempts": [
-        "gen/bp-05-spacing-and-range/015/web1.png",
-        "gen/bp-05-spacing-and-range/015/web2.png"
-      ]
-    },
-    {
-      "order": 6,
+      "order": 70,
       "lesson": "bp-05-spacing-and-range",
       "beat": 19,
       "path": "course/images/bp-05-spacing-and-range/019.png",
@@ -132,72 +1261,7 @@
       ]
     },
     {
-      "order": 7,
-      "lesson": "bp-06-entry-and-exit",
-      "beat": 6,
-      "path": "course/images/bp-06-entry-and-exit/006.png",
-      "prompt": "specs/remake/bp-06-entry-and-exit__006.txt",
-      "target_gen": "gen/bp-06-entry-and-exit/006/web2.png",
-      "target_out": "out/course/images/bp-06-entry-and-exit/006.png",
-      "repo_path": "course/images/bp-06-entry-and-exit/006.png",
-      "size": "1536x1024",
-      "headline": "A STOP RULE NAMES A PRICE MOVE",
-      "reason": "web1 FAIL under the strict arrow rule. Path and EXAMPLE are otherwise good (price leaves the box and stays out at the next check). Both label arrows stop short of their targets. Next: web2.png on the v2 prompt.",
-      "hard_fails": [
-        "arrow tip stops short of target: both \"Price leaves the box\" and \"Still out at next check = stop\" tips stop short of their targets"
-      ]
-    },
-    {
-      "order": 8,
-      "lesson": "bp-06-entry-and-exit",
-      "beat": 10,
-      "path": "course/images/bp-06-entry-and-exit/010.png",
-      "prompt": "specs/remake/bp-06-entry-and-exit__010.txt",
-      "target_gen": "gen/bp-06-entry-and-exit/010/web2.png",
-      "target_out": "out/course/images/bp-06-entry-and-exit/010.png",
-      "repo_path": "course/images/bp-06-entry-and-exit/010.png",
-      "size": "1536x1024",
-      "headline": "WHERE THE IDEA IS FINISHED",
-      "reason": "web1 FAIL under the strict arrow rule. \"Price leaves the box\" tip touches the line just below the box. But \"Finish path (invalidation): the idea is finished\" tip stops about 6-8px short of the dashed amber line (clear navy between the cyan tip and the amber dashes). Next: web2.png on the v2 prompt.",
-      "hard_fails": [
-        "arrow tip stops short of target: \"Finish path (invalidation): the idea is finished\" tip stops about 6-8px short of the dashed amber line"
-      ],
-      "prompt_updated": "6848d09 (see PR17_PROMPT_UPDATES.md)"
-    },
-    {
-      "order": 9,
-      "lesson": "bp-06-entry-and-exit",
-      "beat": 12,
-      "path": "course/images/bp-06-entry-and-exit/012.png",
-      "prompt": "specs/remake/bp-06-entry-and-exit__012.txt",
-      "target_gen": "gen/bp-06-entry-and-exit/012/web2.png",
-      "target_out": "out/course/images/bp-06-entry-and-exit/012.png",
-      "repo_path": "course/images/bp-06-entry-and-exit/012.png",
-      "size": "1536x1024",
-      "headline": "COPY THE STOP FIRST",
-      "reason": "web1 FAIL under the strict arrow rule (panel connectors included). Numbered scene arrow 1 stops short of the stop row; numbered scene arrow 2 stops short of the start row; the \"2 Then start rule\" label tip stops short of the circled 2. Next: web2.png on the v2 prompt.",
-      "hard_fails": [
-        "arrow tip stops short of target: scene connector 1 stops short of the stop row, connector 2 stops short of the start row, and the \"2 Then start rule\" label tip stops short of the circled 2"
-      ]
-    },
-    {
-      "order": 10,
-      "lesson": "bp-06-entry-and-exit",
-      "beat": 14,
-      "path": "course/images/bp-06-entry-and-exit/014.png",
-      "prompt": "specs/remake/bp-06-entry-and-exit__014.txt",
-      "target_gen": "gen/bp-06-entry-and-exit/014/web2.png",
-      "target_out": "out/course/images/bp-06-entry-and-exit/014.png",
-      "repo_path": "course/images/bp-06-entry-and-exit/014.png",
-      "size": "1536x1024",
-      "headline": "WRITE BOTH RULES TODAY",
-      "reason": "web1 FAIL. Hard fail: cramped right margin 43px on the \"Read them aloud\" tag (bright cyan edge at x=1492). The three label arrows themselves looked like they touched their targets. Next: web2.png on the v2 prompt.",
-      "hard_fails": [
-        "cramped margin: the \"Read them aloud\" tag's right edge is at x=1492, only 43px from the 1536px right edge (minimum 45px)"
-      ]
-    },
-    {
-      "order": 11,
+      "order": 71,
       "lesson": "bp-06-entry-and-exit",
       "beat": 16,
       "path": "course/images/bp-06-entry-and-exit/016.png",
@@ -213,7 +1277,7 @@
       ]
     },
     {
-      "order": 12,
+      "order": 72,
       "lesson": "bp-06-entry-and-exit",
       "beat": 18,
       "path": "course/images/bp-06-entry-and-exit/018.png",
@@ -229,23 +1293,7 @@
       ]
     },
     {
-      "order": 13,
-      "lesson": "bp-06-entry-and-exit",
-      "beat": 19,
-      "path": "course/images/bp-06-entry-and-exit/019.png",
-      "prompt": "specs/remake/bp-06-entry-and-exit__019.txt",
-      "target_gen": "gen/bp-06-entry-and-exit/019/web2.png",
-      "target_out": "out/course/images/bp-06-entry-and-exit/019.png",
-      "repo_path": "course/images/bp-06-entry-and-exit/019.png",
-      "size": "1536x1024",
-      "headline": "CAN A FRIEND POINT TO IT?",
-      "reason": "web1 FAIL. Hard fail: cramped left margin 8px — the left sleeve/cuff cyan highlight is at x=8 (luma>110). Two simple outline hands are allowed by the prompt and are not a character fail. Next: web2.png on the v2 prompt.",
-      "hard_fails": [
-        "cramped margin: the left sleeve/cuff glow reaches x=8, only 8px from the left edge (minimum 45px)"
-      ]
-    },
-    {
-      "order": 14,
+      "order": 73,
       "lesson": "bp-06-entry-and-exit",
       "beat": 20,
       "path": "course/images/bp-06-entry-and-exit/020.png",
@@ -261,7 +1309,7 @@
       ]
     },
     {
-      "order": 15,
+      "order": 74,
       "lesson": "bp-07-spot-paper-trading",
       "beat": 3,
       "path": "course/images/bp-07-spot-paper-trading/003.png",
@@ -282,49 +1330,7 @@
       "superseded_prompt": "specs/remake/_superseded/bp-07-spot-paper-trading__003.v1.txt"
     },
     {
-      "order": 16,
-      "lesson": "bp-07-spot-paper-trading",
-      "beat": 5,
-      "path": "course/images/bp-07-spot-paper-trading/005.png",
-      "prompt": "specs/remake/bp-07-spot-paper-trading__005.txt",
-      "target_gen": "gen/bp-07-spot-paper-trading/005/web2.png",
-      "target_out": "out/course/images/bp-07-spot-paper-trading/005.png",
-      "repo_path": "course/images/bp-07-spot-paper-trading/005.png",
-      "size": "1536x1024",
-      "headline": "ONLY COPY YOUR OWN NOTES",
-      "reason": "web1 FAIL (first scoring) under the strict arrow rule. The five field labels are correct (Pair / Top price / Bottom price / Number of gaps / Your rules — LINES is gone) and EXAMPLE is present. But all five label tips stop short of the form-row left ends, leaving a visible gap in the form's left padding. Margins 75/69/87/108. Next: web2.png on the v2 prompt.",
-      "hard_fails": [
-        "arrow tip stops short of target: all five label tips (Pair, Top price, Bottom price, Number of gaps, Your rules) stop short of the left ends of their form rows (visible gap in the form's left padding)"
-      ],
-      "previous_attempts": [
-        "gen/bp-07-spot-paper-trading/005/web.png"
-      ],
-      "prompt_version": "v2",
-      "superseded_prompt": "specs/remake/_superseded/bp-07-spot-paper-trading__005.v1.txt"
-    },
-    {
-      "order": 17,
-      "lesson": "bp-07-spot-paper-trading",
-      "beat": 19,
-      "path": "course/images/bp-07-spot-paper-trading/019.png",
-      "prompt": "specs/remake/bp-07-spot-paper-trading__019.txt",
-      "target_gen": "gen/bp-07-spot-paper-trading/019/web2.png",
-      "target_out": "out/course/images/bp-07-spot-paper-trading/019.png",
-      "repo_path": "course/images/bp-07-spot-paper-trading/019.png",
-      "size": "1536x1024",
-      "headline": "SCREENS CHANGE",
-      "reason": "web1 FAIL (first scoring) under the strict panel-connector arrow rule. 'Labels may move' tip sits inside the top right-hand field (touch of that form). But the four scene-matching connectors are clearly short of the right form (visible gaps). The left form also shows 4 rows vs the right's 5, and the rows are not visibly in a different order (prompt: same rows in a different order). Margins 95/136/85/73. Next: web2.png on the v2 prompt.",
-      "hard_fails": [
-        "arrow tip stops short of target: the four scene-matching connector arrows stop short of the right-hand form (visible gaps at the points)"
-      ],
-      "previous_attempts": [
-        "gen/bp-07-spot-paper-trading/019/web.png"
-      ],
-      "prompt_version": "v2",
-      "superseded_prompt": "specs/remake/_superseded/bp-07-spot-paper-trading__019.v1.txt"
-    },
-    {
-      "order": 18,
+      "order": 75,
       "lesson": "bp-07-spot-paper-trading",
       "beat": 20,
       "path": "course/images/bp-07-spot-paper-trading/020.png",
@@ -345,21 +1351,7 @@
       "superseded_prompt": "specs/remake/_superseded/bp-07-spot-paper-trading__020.v1.txt"
     },
     {
-      "order": 19,
-      "lesson": "bp-08-managing-and-monitoring",
-      "beat": 1,
-      "path": "course/images/bp-08-managing-and-monitoring/001.png",
-      "prompt": "specs/remake/bp-08-managing-and-monitoring__001.txt",
-      "target_gen": "gen/bp-08-managing-and-monitoring/001/web1.png",
-      "target_out": "out/course/images/bp-08-managing-and-monitoring/001.png",
-      "repo_path": "course/images/bp-08-managing-and-monitoring/001.png",
-      "size": "1536x1024",
-      "headline": "A SHORT CHECK, NOT A VIGIL",
-      "reason": "Card listing INSIDE / SIDE / SENTENCE with a clock and stamp: closest to the beat, but 'SIDE' and 'SENTENCE' are unexplained single words; 'short list you can finish, not a vigil' only implied.",
-      "hard_fails": []
-    },
-    {
-      "order": 20,
+      "order": 76,
       "lesson": "bp-08-managing-and-monitoring",
       "beat": 2,
       "path": "course/images/bp-08-managing-and-monitoring/002.png",
@@ -374,7 +1366,7 @@
       "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
     },
     {
-      "order": 21,
+      "order": 77,
       "lesson": "bp-08-managing-and-monitoring",
       "beat": 3,
       "path": "course/images/bp-08-managing-and-monitoring/003.png",
@@ -388,179 +1380,7 @@
       "hard_fails": []
     },
     {
-      "order": 22,
-      "lesson": "bp-08-managing-and-monitoring",
-      "beat": 4,
-      "path": "course/images/bp-08-managing-and-monitoring/004.png",
-      "prompt": "specs/remake/bp-08-managing-and-monitoring__004.txt",
-      "target_gen": "gen/bp-08-managing-and-monitoring/004/web1.png",
-      "target_out": "out/course/images/bp-08-managing-and-monitoring/004.png",
-      "repo_path": "course/images/bp-08-managing-and-monitoring/004.png",
-      "size": "1536x1024",
-      "headline": "THREE QUESTIONS",
-      "reason": "Three-row card INSIDE / SIDE / SENTENCE with blank lines: the three questions are not written as questions; row labels small.",
-      "hard_fails": [],
-      "prompt_updated": "PR #17 6df2536 smoothed narration: Narration now defines inventory (what piled up on one side) and the finish sentence; old row 3 said \"stop rule still fit\"."
-    },
-    {
-      "order": 23,
-      "lesson": "bp-08-managing-and-monitoring",
-      "beat": 5,
-      "path": "course/images/bp-08-managing-and-monitoring/005.png",
-      "prompt": "specs/remake/bp-08-managing-and-monitoring__005.txt",
-      "target_gen": "gen/bp-08-managing-and-monitoring/005/web1.png",
-      "target_out": "out/course/images/bp-08-managing-and-monitoring/005.png",
-      "repo_path": "course/images/bp-08-managing-and-monitoring/005.png",
-      "size": "1536x1024",
-      "headline": "STILL INSIDE THE BOX?",
-      "reason": "'INSIDE OUT' card with a line crossing it and tiny letter-spaced 'INSIDE'/'OUTSIDE': no band and no path, so 'still crosses the band' is not shown.",
-      "hard_fails": []
-    },
-    {
-      "order": 24,
-      "lesson": "bp-08-managing-and-monitoring",
-      "beat": 6,
-      "path": "course/images/bp-08-managing-and-monitoring/006.png",
-      "prompt": "specs/remake/bp-08-managing-and-monitoring__006.txt",
-      "target_gen": "gen/bp-08-managing-and-monitoring/006/web1.png",
-      "target_out": "out/course/images/bp-08-managing-and-monitoring/006.png",
-      "repo_path": "course/images/bp-08-managing-and-monitoring/006.png",
-      "size": "1536x1024",
-      "headline": "WHAT DO YOU HOLD MORE OF?",
-      "reason": "'WHICH SIDE' with a 'HEAVY' card: which asset you hold more of is not shown; headline words run together.",
-      "hard_fails": [
-        "artifact: smudged, half-erased pseudo-text above and below 'HEAVY' and 'EXAMPLE' in both cards"
-      ]
-    },
-    {
-      "order": 25,
-      "lesson": "bp-08-managing-and-monitoring",
-      "beat": 7,
-      "path": "course/images/bp-08-managing-and-monitoring/007.png",
-      "prompt": "specs/remake/bp-08-managing-and-monitoring__007.txt",
-      "target_gen": "gen/bp-08-managing-and-monitoring/007/web1.png",
-      "target_out": "out/course/images/bp-08-managing-and-monitoring/007.png",
-      "repo_path": "course/images/bp-08-managing-and-monitoring/007.png",
-      "size": "1536x1024",
-      "headline": "REREAD YOUR STOP RULE",
-      "reason": "'PIN / EDIT' tiles: the beat is 'reread the same finish sentence, don't invent one'; tiles do not show that. Visible seam under the composited headline strip.",
-      "hard_fails": []
-    },
-    {
-      "order": 26,
-      "lesson": "bp-08-managing-and-monitoring",
-      "beat": 8,
-      "path": "course/images/bp-08-managing-and-monitoring/008.png",
-      "prompt": "specs/remake/bp-08-managing-and-monitoring__008.txt",
-      "target_gen": "gen/bp-08-managing-and-monitoring/008/web1.png",
-      "target_out": "out/course/images/bp-08-managing-and-monitoring/008.png",
-      "repo_path": "course/images/bp-08-managing-and-monitoring/008.png",
-      "size": "1536x1024",
-      "headline": "PICK YOUR CHECK DAYS",
-      "reason": "Calendar grid with one highlighted day and 'MONDAY'/'EXAMPLE' tags: readable, but tags float with no arrows and 'reread the same three rows' is not shown.",
-      "hard_fails": []
-    },
-    {
-      "order": 27,
-      "lesson": "bp-08-managing-and-monitoring",
-      "beat": 9,
-      "path": "course/images/bp-08-managing-and-monitoring/009.png",
-      "prompt": "specs/remake/bp-08-managing-and-monitoring__009.txt",
-      "target_gen": "gen/bp-08-managing-and-monitoring/009/web1.png",
-      "target_out": "out/course/images/bp-08-managing-and-monitoring/009.png",
-      "repo_path": "course/images/bp-08-managing-and-monitoring/009.png",
-      "size": "1536x1024",
-      "headline": "DON'T OPEN THESE",
-      "reason": "Three tiny X boxes over 'NOT THIS': the three things not opened (result chart, ranking, leverage control) are not shown or named; seam under headline strip.",
-      "hard_fails": []
-    },
-    {
-      "order": 28,
-      "lesson": "bp-08-managing-and-monitoring",
-      "beat": 10,
-      "path": "course/images/bp-08-managing-and-monitoring/010.png",
-      "prompt": "specs/remake/bp-08-managing-and-monitoring__010.txt",
-      "target_gen": "gen/bp-08-managing-and-monitoring/010/web1.png",
-      "target_out": "out/course/images/bp-08-managing-and-monitoring/010.png",
-      "repo_path": "course/images/bp-08-managing-and-monitoring/010.png",
-      "size": "1536x1024",
-      "headline": "PRACTISE THE CHECK",
-      "reason": "Tile reading 'IN / BASE / SAME' under 'WORKED CHECK': cryptic; no path that starts inside and ends outside; seam under headline strip.",
-      "hard_fails": []
-    },
-    {
-      "order": 29,
-      "lesson": "bp-08-managing-and-monitoring",
-      "beat": 11,
-      "path": "course/images/bp-08-managing-and-monitoring/011.png",
-      "prompt": "specs/remake/bp-08-managing-and-monitoring__011.txt",
-      "target_gen": "gen/bp-08-managing-and-monitoring/011/web1.png",
-      "target_out": "out/course/images/bp-08-managing-and-monitoring/011.png",
-      "repo_path": "course/images/bp-08-managing-and-monitoring/011.png",
-      "size": "1536x1024",
-      "headline": "AN ALERT IS A NUDGE",
-      "reason": "Bell with an EXAMPLE card: an alert as a nudge to reread the three rows is not shown; tiny card text.",
-      "hard_fails": []
-    },
-    {
-      "order": 30,
-      "lesson": "bp-08-managing-and-monitoring",
-      "beat": 12,
-      "path": "course/images/bp-08-managing-and-monitoring/012.png",
-      "prompt": "specs/remake/bp-08-managing-and-monitoring__012.txt",
-      "target_gen": "gen/bp-08-managing-and-monitoring/012/web1.png",
-      "target_out": "out/course/images/bp-08-managing-and-monitoring/012.png",
-      "repo_path": "course/images/bp-08-managing-and-monitoring/012.png",
-      "size": "1536x1024",
-      "headline": "NO RESULTS ROW",
-      "reason": "Card INSIDE / SIDE / SENTENCE with a crossed 'EXTRA' fourth row: close; but the beat names a RESULT row, and the stamp overlaps the rows; headline words run together ('FOURTHROW').",
-      "hard_fails": []
-    },
-    {
-      "order": 31,
-      "lesson": "bp-08-managing-and-monitoring",
-      "beat": 13,
-      "path": "course/images/bp-08-managing-and-monitoring/013.png",
-      "prompt": "specs/remake/bp-08-managing-and-monitoring__013.txt",
-      "target_gen": "gen/bp-08-managing-and-monitoring/013/web1.png",
-      "target_out": "out/course/images/bp-08-managing-and-monitoring/013.png",
-      "repo_path": "course/images/bp-08-managing-and-monitoring/013.png",
-      "size": "1536x1024",
-      "headline": "ANSWER, THEN WALK AWAY",
-      "reason": "'DONE' tile with a pencil and tiny EXAMPLE: 'stop or write an edit, don't hover' not shown; seam under headline strip.",
-      "hard_fails": []
-    },
-    {
-      "order": 32,
-      "lesson": "bp-08-managing-and-monitoring",
-      "beat": 14,
-      "path": "course/images/bp-08-managing-and-monitoring/014.png",
-      "prompt": "specs/remake/bp-08-managing-and-monitoring__014.txt",
-      "target_gen": "gen/bp-08-managing-and-monitoring/014/web1.png",
-      "target_out": "out/course/images/bp-08-managing-and-monitoring/014.png",
-      "repo_path": "course/images/bp-08-managing-and-monitoring/014.png",
-      "size": "1536x1024",
-      "headline": "MAKE YOUR CHECK CARD",
-      "reason": "Clipboard with 'EXAMPLE' under 'CLIPPED ON': does not show building a three-row card or running it on a drawn path.",
-      "hard_fails": [],
-      "prompt_updated": "6848d09 (see PR17_PROMPT_UPDATES.md)"
-    },
-    {
-      "order": 33,
-      "lesson": "bp-08-managing-and-monitoring",
-      "beat": 15,
-      "path": "course/images/bp-08-managing-and-monitoring/015.png",
-      "prompt": "specs/remake/bp-08-managing-and-monitoring__015.txt",
-      "target_gen": "gen/bp-08-managing-and-monitoring/015/web1.png",
-      "target_out": "out/course/images/bp-08-managing-and-monitoring/015.png",
-      "repo_path": "course/images/bp-08-managing-and-monitoring/015.png",
-      "size": "1536x1024",
-      "headline": "RECAP: CHECKING IN",
-      "reason": "Six small chips INSIDE / SIDE / SENTENCE / CADENCE / NO RESULT / STOP: word list recap, small type; seam under headline strip.",
-      "hard_fails": []
-    },
-    {
-      "order": 34,
+      "order": 78,
       "lesson": "bp-08-managing-and-monitoring",
       "beat": 16,
       "path": "course/images/bp-08-managing-and-monitoring/016.png",
@@ -575,7 +1395,7 @@
       "prompt_updated": "PR #17 6df2536 smoothed narration: Kept consistent with the reworded beat 4 questions (finish sentence, side)."
     },
     {
-      "order": 35,
+      "order": 79,
       "lesson": "bp-08-managing-and-monitoring",
       "beat": 17,
       "path": "course/images/bp-08-managing-and-monitoring/017.png",
@@ -589,7 +1409,7 @@
       "hard_fails": []
     },
     {
-      "order": 36,
+      "order": 80,
       "lesson": "bp-08-managing-and-monitoring",
       "beat": 18,
       "path": "course/images/bp-08-managing-and-monitoring/018.png",
@@ -603,21 +1423,7 @@
       "hard_fails": []
     },
     {
-      "order": 37,
-      "lesson": "bp-08-managing-and-monitoring",
-      "beat": 19,
-      "path": "course/images/bp-08-managing-and-monitoring/019.png",
-      "prompt": "specs/remake/bp-08-managing-and-monitoring__019.txt",
-      "target_gen": "gen/bp-08-managing-and-monitoring/019/web1.png",
-      "target_out": "out/course/images/bp-08-managing-and-monitoring/019.png",
-      "repo_path": "course/images/bp-08-managing-and-monitoring/019.png",
-      "size": "1536x1024",
-      "headline": "USE IT ON YOUR PRACTICE SCREEN",
-      "reason": "'DRAW / crossed LIVE / PAPER' icons under 'TWO SOURCES': the X sits on top of the word 'LIVE' (overlap); paper-screen idea unclear.",
-      "hard_fails": []
-    },
-    {
-      "order": 38,
+      "order": 81,
       "lesson": "bp-08-managing-and-monitoring",
       "beat": 20,
       "path": "course/images/bp-08-managing-and-monitoring/020.png",
@@ -631,23 +1437,7 @@
       "hard_fails": []
     },
     {
-      "order": 39,
-      "lesson": "bp-09-common-mistakes",
-      "beat": 1,
-      "path": "course/images/bp-09-common-mistakes/001.png",
-      "prompt": "specs/remake/bp-09-common-mistakes__001.txt",
-      "target_gen": "gen/bp-09-common-mistakes/001/web1.png",
-      "target_out": "out/course/images/bp-09-common-mistakes/001.png",
-      "repo_path": "course/images/bp-09-common-mistakes/001.png",
-      "size": "1536x1024",
-      "headline": "MISTAKES ARE ON THE PAGE",
-      "reason": "'THREE PAGES' headline; 'pages, not personalities' not shown; headline words run together.",
-      "hard_fails": [
-        "illegible label: 'BLANK / THIN / EARLY' sit on three tiny cards that fill under 5% of the frame"
-      ]
-    },
-    {
-      "order": 40,
+      "order": 82,
       "lesson": "bp-09-common-mistakes",
       "beat": 2,
       "path": "course/images/bp-09-common-mistakes/002.png",
@@ -662,7 +1452,7 @@
       "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
     },
     {
-      "order": 41,
+      "order": 83,
       "lesson": "bp-09-common-mistakes",
       "beat": 3,
       "path": "course/images/bp-09-common-mistakes/003.png",
@@ -676,184 +1466,7 @@
       "hard_fails": []
     },
     {
-      "order": 42,
-      "lesson": "bp-09-common-mistakes",
-      "beat": 4,
-      "path": "course/images/bp-09-common-mistakes/004.png",
-      "prompt": "specs/remake/bp-09-common-mistakes__004.txt",
-      "target_gen": "gen/bp-09-common-mistakes/004/web1.png",
-      "target_out": "out/course/images/bp-09-common-mistakes/004.png",
-      "repo_path": "course/images/bp-09-common-mistakes/004.png",
-      "size": "1536x1024",
-      "headline": "MISTAKE: NO STOP WRITTEN",
-      "reason": "Small card with an empty oval and a 'FIX' chip: a finish column left blank is not shown; tiny EXAMPLE.",
-      "hard_fails": []
-    },
-    {
-      "order": 43,
-      "lesson": "bp-09-common-mistakes",
-      "beat": 5,
-      "path": "course/images/bp-09-common-mistakes/005.png",
-      "prompt": "specs/remake/bp-09-common-mistakes__005.txt",
-      "target_gen": "gen/bp-09-common-mistakes/005/web1.png",
-      "target_out": "out/course/images/bp-09-common-mistakes/005.png",
-      "repo_path": "course/images/bp-09-common-mistakes/005.png",
-      "size": "1536x1024",
-      "headline": "MISTAKE: BOX TOO NARROW",
-      "reason": "Tiny 'SHORT -> WIDEN -> WEAVE' net shape in the middle of an empty frame: band vs weave height not shown; small labels.",
-      "hard_fails": []
-    },
-    {
-      "order": 44,
-      "lesson": "bp-09-common-mistakes",
-      "beat": 6,
-      "path": "course/images/bp-09-common-mistakes/006.png",
-      "prompt": "specs/remake/bp-09-common-mistakes__006.txt",
-      "target_gen": "gen/bp-09-common-mistakes/006/web1.png",
-      "target_out": "out/course/images/bp-09-common-mistakes/006.png",
-      "repo_path": "course/images/bp-09-common-mistakes/006.png",
-      "size": "1536x1024",
-      "headline": "MISTAKE: QUITTING EARLY",
-      "reason": "Tiny crossed 'EARLY' node on a line to 'SCALE'/'LIQUID' chips: skipping the last two lessons is not readable; mostly empty frame.",
-      "hard_fails": [
-        "wrong label: 'LIQUID' is a truncated 'liquidation'"
-      ]
-    },
-    {
-      "order": 45,
-      "lesson": "bp-09-common-mistakes",
-      "beat": 7,
-      "path": "course/images/bp-09-common-mistakes/007.png",
-      "prompt": "specs/remake/bp-09-common-mistakes__007.txt",
-      "target_gen": "gen/bp-09-common-mistakes/007/web1.png",
-      "target_out": "out/course/images/bp-09-common-mistakes/007.png",
-      "repo_path": "course/images/bp-09-common-mistakes/007.png",
-      "size": "1536x1024",
-      "headline": "MISTAKE: LINES ≠ GAPS",
-      "reason": "An oval of tick marks: 'counting lines as gaps' not shown at all.",
-      "hard_fails": [
-        "illegible label: tiny letter-spaced 'EXAMPLE' and unreadable tick marks"
-      ]
-    },
-    {
-      "order": 46,
-      "lesson": "bp-09-common-mistakes",
-      "beat": 8,
-      "path": "course/images/bp-09-common-mistakes/008.png",
-      "prompt": "specs/remake/bp-09-common-mistakes__008.txt",
-      "target_gen": "gen/bp-09-common-mistakes/008/web1.png",
-      "target_out": "out/course/images/bp-09-common-mistakes/008.png",
-      "repo_path": "course/images/bp-09-common-mistakes/008.png",
-      "size": "1536x1024",
-      "headline": "MISTAKE: TRUSTING THE DEFAULT",
-      "reason": "'CLEAR SIZE' headline; 'a default size is the form's idea' not shown.",
-      "hard_fails": [
-        "artifact: smudged white blur inside the SIZE card where a value should be",
-        "illegible label: tiny 'SIZE', 'CLEARED', 'EXAMPLE'"
-      ]
-    },
-    {
-      "order": 47,
-      "lesson": "bp-09-common-mistakes",
-      "beat": 9,
-      "path": "course/images/bp-09-common-mistakes/009.png",
-      "prompt": "specs/remake/bp-09-common-mistakes__009.txt",
-      "target_gen": "gen/bp-09-common-mistakes/009/web1.png",
-      "target_out": "out/course/images/bp-09-common-mistakes/009.png",
-      "repo_path": "course/images/bp-09-common-mistakes/009.png",
-      "size": "1536x1024",
-      "headline": "MISTAKE: PROMISING PROFIT",
-      "reason": "Crossed 'GAIN / SURE / WIN' vs 'WAITS / FILLS / STOCK / LEAVES': chips are small in an empty frame; 'STOCK' is unexplained; promise-of-income idea only implied.",
-      "hard_fails": []
-    },
-    {
-      "order": 48,
-      "lesson": "bp-09-common-mistakes",
-      "beat": 10,
-      "path": "course/images/bp-09-common-mistakes/010.png",
-      "prompt": "specs/remake/bp-09-common-mistakes__010.txt",
-      "target_gen": "gen/bp-09-common-mistakes/010/web1.png",
-      "target_out": "out/course/images/bp-09-common-mistakes/010.png",
-      "repo_path": "course/images/bp-09-common-mistakes/010.png",
-      "size": "1536x1024",
-      "headline": "CHECK A SAMPLE PAGE",
-      "reason": "Two circles 'BLANK' and 'GAPS': the worked audit page (blank stop, 10% span on 20 lines) is not shown; no numbers.",
-      "hard_fails": []
-    },
-    {
-      "order": 49,
-      "lesson": "bp-09-common-mistakes",
-      "beat": 11,
-      "path": "course/images/bp-09-common-mistakes/011.png",
-      "prompt": "specs/remake/bp-09-common-mistakes__011.txt",
-      "target_gen": "gen/bp-09-common-mistakes/011/web1.png",
-      "target_out": "out/course/images/bp-09-common-mistakes/011.png",
-      "repo_path": "course/images/bp-09-common-mistakes/011.png",
-      "size": "1536x1024",
-      "headline": "FIX ONE, THEN THE NEXT",
-      "reason": "Two cards with an 'O' and 'ONE'/'TWO': 'fix one, reread, fix the next' not shown; tiny captions.",
-      "hard_fails": []
-    },
-    {
-      "order": 50,
-      "lesson": "bp-09-common-mistakes",
-      "beat": 12,
-      "path": "course/images/bp-09-common-mistakes/012.png",
-      "prompt": "specs/remake/bp-09-common-mistakes__012.txt",
-      "target_gen": "gen/bp-09-common-mistakes/012/web1.png",
-      "target_out": "out/course/images/bp-09-common-mistakes/012.png",
-      "repo_path": "course/images/bp-09-common-mistakes/012.png",
-      "size": "1536x1024",
-      "headline": "NO SCORE TO TRADE ON",
-      "reason": "Card 'PAGE / LINE / STOP' under 'NOT SCORE': no relation to 'the audit does not produce a grade'.",
-      "hard_fails": []
-    },
-    {
-      "order": 51,
-      "lesson": "bp-09-common-mistakes",
-      "beat": 13,
-      "path": "course/images/bp-09-common-mistakes/013.png",
-      "prompt": "specs/remake/bp-09-common-mistakes__013.txt",
-      "target_gen": "gen/bp-09-common-mistakes/013/web1.png",
-      "target_out": "out/course/images/bp-09-common-mistakes/013.png",
-      "repo_path": "course/images/bp-09-common-mistakes/013.png",
-      "size": "1536x1024",
-      "headline": "MISTAKE: BORROWED MONEY",
-      "reason": "Glass card 'SPOT' with a crossed '2X': leverage-multiple idea roughly readable; headline 'NO TIMES' is unclear English.",
-      "hard_fails": []
-    },
-    {
-      "order": 52,
-      "lesson": "bp-09-common-mistakes",
-      "beat": 14,
-      "path": "course/images/bp-09-common-mistakes/014.png",
-      "prompt": "specs/remake/bp-09-common-mistakes__014.txt",
-      "target_gen": "gen/bp-09-common-mistakes/014/web1.png",
-      "target_out": "out/course/images/bp-09-common-mistakes/014.png",
-      "repo_path": "course/images/bp-09-common-mistakes/014.png",
-      "size": "1536x1024",
-      "headline": "CHECK YOUR OWN NOTEBOOK",
-      "reason": "'THREE LINES' card: blank stop / tight band / missing 'gaps' word are not named.",
-      "hard_fails": [
-        "illegible label: 'NONE' chip and three bullet lines are tiny"
-      ]
-    },
-    {
-      "order": 53,
-      "lesson": "bp-09-common-mistakes",
-      "beat": 15,
-      "path": "course/images/bp-09-common-mistakes/015.png",
-      "prompt": "specs/remake/bp-09-common-mistakes__015.txt",
-      "target_gen": "gen/bp-09-common-mistakes/015/web1.png",
-      "target_out": "out/course/images/bp-09-common-mistakes/015.png",
-      "repo_path": "course/images/bp-09-common-mistakes/015.png",
-      "size": "1536x1024",
-      "headline": "RECAP: SIX MISTAKES",
-      "reason": "Six small chips BLANK / BAND / EARLY / LINES / SIZE / WORDS: cryptic recap, small type.",
-      "hard_fails": []
-    },
-    {
-      "order": 54,
+      "order": 84,
       "lesson": "bp-09-common-mistakes",
       "beat": 16,
       "path": "course/images/bp-09-common-mistakes/016.png",
@@ -869,7 +1482,7 @@
       ]
     },
     {
-      "order": 55,
+      "order": 85,
       "lesson": "bp-09-common-mistakes",
       "beat": 17,
       "path": "course/images/bp-09-common-mistakes/017.png",
@@ -885,7 +1498,7 @@
       ]
     },
     {
-      "order": 56,
+      "order": 86,
       "lesson": "bp-09-common-mistakes",
       "beat": 18,
       "path": "course/images/bp-09-common-mistakes/018.png",
@@ -899,7 +1512,7 @@
       "hard_fails": []
     },
     {
-      "order": 57,
+      "order": 87,
       "lesson": "bp-09-common-mistakes",
       "beat": 19,
       "path": "course/images/bp-09-common-mistakes/019.png",
@@ -915,21 +1528,7 @@
       ]
     },
     {
-      "order": 58,
-      "lesson": "bp-09-common-mistakes",
-      "beat": 20,
-      "path": "course/images/bp-09-common-mistakes/020.png",
-      "prompt": "specs/remake/bp-09-common-mistakes__020.txt",
-      "target_gen": "gen/bp-09-common-mistakes/020/web1.png",
-      "target_out": "out/course/images/bp-09-common-mistakes/020.png",
-      "repo_path": "course/images/bp-09-common-mistakes/020.png",
-      "size": "1536x1024",
-      "headline": "KEEP YOUR MARKED PAGES",
-      "reason": "'KEPT' vs faded 'FADED' pages: idea readable; marked-up pages not shown; small captions.",
-      "hard_fails": []
-    },
-    {
-      "order": 59,
+      "order": 88,
       "lesson": "bp-09-common-mistakes",
       "beat": 21,
       "path": "course/images/bp-09-common-mistakes/021.png",
@@ -943,23 +1542,7 @@
       "hard_fails": []
     },
     {
-      "order": 60,
-      "lesson": "bp-10-scaling-up",
-      "beat": 1,
-      "path": "course/images/bp-10-scaling-up/001.png",
-      "prompt": "specs/remake/bp-10-scaling-up__001.txt",
-      "target_gen": "gen/bp-10-scaling-up/001/web1.png",
-      "target_out": "out/course/images/bp-10-scaling-up/001.png",
-      "repo_path": "course/images/bp-10-scaling-up/001.png",
-      "size": "1536x1024",
-      "headline": "GROWING = A SECOND PLAN",
-      "reason": "Two small page outlines: 'a second written page, not a bigger number' only half shown; frame mostly empty.",
-      "hard_fails": [
-        "illegible label: tiny 'ONE'/'TWO' captions on small page outlines"
-      ]
-    },
-    {
-      "order": 61,
+      "order": 89,
       "lesson": "bp-10-scaling-up",
       "beat": 2,
       "path": "course/images/bp-10-scaling-up/002.png",
@@ -974,7 +1557,7 @@
       "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
     },
     {
-      "order": 62,
+      "order": 90,
       "lesson": "bp-10-scaling-up",
       "beat": 3,
       "path": "course/images/bp-10-scaling-up/003.png",
@@ -988,177 +1571,7 @@
       "hard_fails": []
     },
     {
-      "order": 63,
-      "lesson": "bp-10-scaling-up",
-      "beat": 4,
-      "path": "course/images/bp-10-scaling-up/004.png",
-      "prompt": "specs/remake/bp-10-scaling-up__004.txt",
-      "target_gen": "gen/bp-10-scaling-up/004/web1.png",
-      "target_out": "out/course/images/bp-10-scaling-up/004.png",
-      "repo_path": "course/images/bp-10-scaling-up/004.png",
-      "size": "1536x1024",
-      "headline": "PLAN 2 PASSES THE SAME CHECKS",
-      "reason": "'ONE GATE' with a tile 'DONE / OPEN / DONE': the beat says the second page repeats FIVE gates (regime sort, range, gaps, finish sentence, paper); headline contradicts it.",
-      "hard_fails": []
-    },
-    {
-      "order": 64,
-      "lesson": "bp-10-scaling-up",
-      "beat": 5,
-      "path": "course/images/bp-10-scaling-up/005.png",
-      "prompt": "specs/remake/bp-10-scaling-up__005.txt",
-      "target_gen": "gen/bp-10-scaling-up/005/web1.png",
-      "target_out": "out/course/images/bp-10-scaling-up/005.png",
-      "repo_path": "course/images/bp-10-scaling-up/005.png",
-      "size": "1536x1024",
-      "headline": "TWO PLANS, ONE ASSET = CLASH",
-      "reason": "Two overlapping cups 'LEFT/RIGHT' sharing a silver coin-like 'BOTH' token: nearest to the idea, but the silver coin reads as money (coins are banned) and inventory/fighting is not labelled.",
-      "hard_fails": []
-    },
-    {
-      "order": 65,
-      "lesson": "bp-10-scaling-up",
-      "beat": 6,
-      "path": "course/images/bp-10-scaling-up/006.png",
-      "prompt": "specs/remake/bp-10-scaling-up__006.txt",
-      "target_gen": "gen/bp-10-scaling-up/006/web1.png",
-      "target_out": "out/course/images/bp-10-scaling-up/006.png",
-      "repo_path": "course/images/bp-10-scaling-up/006.png",
-      "size": "1536x1024",
-      "headline": "SAME SIZE IS FINE",
-      "reason": "Word 'KEPT' between two lines with a tiny EXAMPLE: 'keeping the same size is a complete review' not shown.",
-      "hard_fails": []
-    },
-    {
-      "order": 66,
-      "lesson": "bp-10-scaling-up",
-      "beat": 7,
-      "path": "course/images/bp-10-scaling-up/007.png",
-      "prompt": "specs/remake/bp-10-scaling-up__007.txt",
-      "target_gen": "gen/bp-10-scaling-up/007/web1.png",
-      "target_out": "out/course/images/bp-10-scaling-up/007.png",
-      "repo_path": "course/images/bp-10-scaling-up/007.png",
-      "size": "1536x1024",
-      "headline": "CHANGE ONLY ONE THING",
-      "reason": "Two lists of four lines with one line tagged 'ONE': idea implied; pages not labelled page one / page two; tiny tag.",
-      "hard_fails": []
-    },
-    {
-      "order": 67,
-      "lesson": "bp-10-scaling-up",
-      "beat": 8,
-      "path": "course/images/bp-10-scaling-up/008.png",
-      "prompt": "specs/remake/bp-10-scaling-up__008.txt",
-      "target_gen": "gen/bp-10-scaling-up/008/web1.png",
-      "target_out": "out/course/images/bp-10-scaling-up/008.png",
-      "repo_path": "course/images/bp-10-scaling-up/008.png",
-      "size": "1536x1024",
-      "headline": "SAME BOX, NEW PAIR",
-      "reason": "Two cards 'A'/'B' over two cylinders: same band + different pair label not shown; no band drawn.",
-      "hard_fails": []
-    },
-    {
-      "order": 68,
-      "lesson": "bp-10-scaling-up",
-      "beat": 9,
-      "path": "course/images/bp-10-scaling-up/009.png",
-      "prompt": "specs/remake/bp-10-scaling-up__009.txt",
-      "target_gen": "gen/bp-10-scaling-up/009/web1.png",
-      "target_out": "out/course/images/bp-10-scaling-up/009.png",
-      "repo_path": "course/images/bp-10-scaling-up/009.png",
-      "size": "1536x1024",
-      "headline": "THIS ISN'T THE END",
-      "reason": "'SCALE -> OPTIONAL' chips under 'ONE MORE': 'scaling is not the end of the course' only implied; small chips.",
-      "hard_fails": []
-    },
-    {
-      "order": 69,
-      "lesson": "bp-10-scaling-up",
-      "beat": 10,
-      "path": "course/images/bp-10-scaling-up/010.png",
-      "prompt": "specs/remake/bp-10-scaling-up__010.txt",
-      "target_gen": "gen/bp-10-scaling-up/010/web1.png",
-      "target_out": "out/course/images/bp-10-scaling-up/010.png",
-      "repo_path": "course/images/bp-10-scaling-up/010.png",
-      "size": "1536x1024",
-      "headline": "PLAN 2 IS STILL SPOT",
-      "reason": "Card 'SPOT' with an X button under it: reads as 'no spot', the opposite of 'the second page is still spot'.",
-      "hard_fails": []
-    },
-    {
-      "order": 70,
-      "lesson": "bp-10-scaling-up",
-      "beat": 11,
-      "path": "course/images/bp-10-scaling-up/011.png",
-      "prompt": "specs/remake/bp-10-scaling-up__011.txt",
-      "target_gen": "gen/bp-10-scaling-up/011/web1.png",
-      "target_out": "out/course/images/bp-10-scaling-up/011.png",
-      "repo_path": "course/images/bp-10-scaling-up/011.png",
-      "size": "1536x1024",
-      "headline": "HOW MUCH? YOUR CALL",
-      "reason": "'LEFT OPEN': 'the page does not tell you how much money to assign' not shown.",
-      "hard_fails": [
-        "illegible label: tiny 'NOT THIS' in a near-empty card"
-      ]
-    },
-    {
-      "order": 71,
-      "lesson": "bp-10-scaling-up",
-      "beat": 12,
-      "path": "course/images/bp-10-scaling-up/012.png",
-      "prompt": "specs/remake/bp-10-scaling-up__012.txt",
-      "target_gen": "gen/bp-10-scaling-up/012/web1.png",
-      "target_out": "out/course/images/bp-10-scaling-up/012.png",
-      "repo_path": "course/images/bp-10-scaling-up/012.png",
-      "size": "1536x1024",
-      "headline": "DON'T DOUBLE ON A HUNCH",
-      "reason": "'TWO TWO' chips over a crossed 'FELT': doubling a count because it felt fine is not readable.",
-      "hard_fails": []
-    },
-    {
-      "order": 72,
-      "lesson": "bp-10-scaling-up",
-      "beat": 13,
-      "path": "course/images/bp-10-scaling-up/013.png",
-      "prompt": "specs/remake/bp-10-scaling-up__013.txt",
-      "target_gen": "gen/bp-10-scaling-up/013/web1.png",
-      "target_out": "out/course/images/bp-10-scaling-up/013.png",
-      "repo_path": "course/images/bp-10-scaling-up/013.png",
-      "size": "1536x1024",
-      "headline": "SOME PAIRS MOVE TOGETHER",
-      "reason": "Two identical dotted lines labelled 'SAME' under 'SAME PATH': correlated pairs filling at the same time not shown (no prices, no fills).",
-      "hard_fails": []
-    },
-    {
-      "order": 73,
-      "lesson": "bp-10-scaling-up",
-      "beat": 14,
-      "path": "course/images/bp-10-scaling-up/014.png",
-      "prompt": "specs/remake/bp-10-scaling-up__014.txt",
-      "target_gen": "gen/bp-10-scaling-up/014/web1.png",
-      "target_out": "out/course/images/bp-10-scaling-up/014.png",
-      "repo_path": "course/images/bp-10-scaling-up/014.png",
-      "size": "1536x1024",
-      "headline": "PASS THE CHECKS OR WAIT",
-      "reason": "Card reads 'PAGE TWO, SAME GATES, OR NONE.': text-only card (no picture), but accurate; still a word card, not a diagram.",
-      "hard_fails": []
-    },
-    {
-      "order": 74,
-      "lesson": "bp-10-scaling-up",
-      "beat": 15,
-      "path": "course/images/bp-10-scaling-up/015.png",
-      "prompt": "specs/remake/bp-10-scaling-up__015.txt",
-      "target_gen": "gen/bp-10-scaling-up/015/web1.png",
-      "target_out": "out/course/images/bp-10-scaling-up/015.png",
-      "repo_path": "course/images/bp-10-scaling-up/015.png",
-      "size": "1536x1024",
-      "headline": "RECAP: GROWING",
-      "reason": "Six small hexagons PAGE / GATES / BUCKETS / CHANGE / SPOT / SIZE plus an 'OPTIONAL' arrow: cryptic recap, small type.",
-      "hard_fails": []
-    },
-    {
-      "order": 75,
+      "order": 91,
       "lesson": "bp-10-scaling-up",
       "beat": 16,
       "path": "course/images/bp-10-scaling-up/016.png",
@@ -1172,7 +1585,7 @@
       "hard_fails": []
     },
     {
-      "order": 76,
+      "order": 92,
       "lesson": "bp-10-scaling-up",
       "beat": 17,
       "path": "course/images/bp-10-scaling-up/017.png",
@@ -1186,7 +1599,7 @@
       "hard_fails": []
     },
     {
-      "order": 77,
+      "order": 93,
       "lesson": "bp-10-scaling-up",
       "beat": 18,
       "path": "course/images/bp-10-scaling-up/018.png",
@@ -1202,7 +1615,7 @@
       ]
     },
     {
-      "order": 78,
+      "order": 94,
       "lesson": "bp-10-scaling-up",
       "beat": 19,
       "path": "course/images/bp-10-scaling-up/019.png",
@@ -1216,21 +1629,7 @@
       "hard_fails": []
     },
     {
-      "order": 79,
-      "lesson": "bp-10-scaling-up",
-      "beat": 20,
-      "path": "course/images/bp-10-scaling-up/020.png",
-      "prompt": "specs/remake/bp-10-scaling-up__020.txt",
-      "target_gen": "gen/bp-10-scaling-up/020/web1.png",
-      "target_out": "out/course/images/bp-10-scaling-up/020.png",
-      "repo_path": "course/images/bp-10-scaling-up/020.png",
-      "size": "1536x1024",
-      "headline": "FILE BOTH TOGETHER",
-      "reason": "Folders 'READY' and 'NOT READY': close to 'file both only if both passed', but it shows one ready and one not, the opposite of filing them together.",
-      "hard_fails": []
-    },
-    {
-      "order": 80,
+      "order": 95,
       "lesson": "bp-10-scaling-up",
       "beat": 21,
       "path": "course/images/bp-10-scaling-up/021.png",
@@ -1244,21 +1643,7 @@
       "hard_fails": []
     },
     {
-      "order": 81,
-      "lesson": "bp-11-advanced-liquidation",
-      "beat": 1,
-      "path": "course/images/bp-11-advanced-liquidation/001.png",
-      "prompt": "specs/remake/bp-11-advanced-liquidation__001.txt",
-      "target_gen": "gen/bp-11-advanced-liquidation/001/web1.png",
-      "target_out": "out/course/images/bp-11-advanced-liquidation/001.png",
-      "repo_path": "course/images/bp-11-advanced-liquidation/001.png",
-      "size": "1536x1024",
-      "headline": "OPTIONAL: HOW YOU CAN LOSE IT ALL",
-      "reason": "'OPT IN -> CLOSED' chips under 'LOSS FIRST': no losing path drawn; 'this lesson is opt-in, the losing path comes first' not readable; tiny EXAMPLE.",
-      "hard_fails": []
-    },
-    {
-      "order": 82,
+      "order": 96,
       "lesson": "bp-11-advanced-liquidation",
       "beat": 2,
       "path": "course/images/bp-11-advanced-liquidation/002.png",
@@ -1273,7 +1658,7 @@
       "prompt_updated": "PR #17 6df2536 smoothed narration: Disclaimer card must show exactly \"Education only. Not financial advice.\" (old prompt had tags \"Learn the idea\" / \"Not financial advice\" and a crossed buy button)."
     },
     {
-      "order": 83,
+      "order": 97,
       "lesson": "bp-11-advanced-liquidation",
       "beat": 3,
       "path": "course/images/bp-11-advanced-liquidation/003.png",
@@ -1287,186 +1672,7 @@
       "hard_fails": []
     },
     {
-      "order": 84,
-      "lesson": "bp-11-advanced-liquidation",
-      "beat": 4,
-      "path": "course/images/bp-11-advanced-liquidation/004.png",
-      "prompt": "specs/remake/bp-11-advanced-liquidation__004.txt",
-      "target_gen": "gen/bp-11-advanced-liquidation/004/web1.png",
-      "target_out": "out/course/images/bp-11-advanced-liquidation/004.png",
-      "repo_path": "course/images/bp-11-advanced-liquidation/004.png",
-      "size": "1536x1024",
-      "headline": "YOU CAN SKIP THIS",
-      "reason": "Stack of pages 'SPOT' and a door 'SIDE' under 'SIDE DOOR': 'the spot path is already complete without this lesson' not readable.",
-      "hard_fails": []
-    },
-    {
-      "order": 85,
-      "lesson": "bp-11-advanced-liquidation",
-      "beat": 5,
-      "path": "course/images/bp-11-advanced-liquidation/005.png",
-      "prompt": "specs/remake/bp-11-advanced-liquidation__005.txt",
-      "target_gen": "gen/bp-11-advanced-liquidation/005/web1.png",
-      "target_out": "out/course/images/bp-11-advanced-liquidation/005.png",
-      "repo_path": "course/images/bp-11-advanced-liquidation/005.png",
-      "size": "1536x1024",
-      "headline": "FORCED CLOSE (LIQUIDATION)",
-      "reason": "Closed box 'CLOSED' and open box 'MARGIN' under 'MARGIN GONE': liquidation (margin no longer covers the loss, position closed) is not shown; no loss, no price.",
-      "hard_fails": []
-    },
-    {
-      "order": 86,
-      "lesson": "bp-11-advanced-liquidation",
-      "beat": 6,
-      "path": "course/images/bp-11-advanced-liquidation/006.png",
-      "prompt": "specs/remake/bp-11-advanced-liquidation__006.txt",
-      "target_gen": "gen/bp-11-advanced-liquidation/006/web1.png",
-      "target_out": "out/course/images/bp-11-advanced-liquidation/006.png",
-      "repo_path": "course/images/bp-11-advanced-liquidation/006.png",
-      "size": "1536x1024",
-      "headline": "DRAW THE LOSS FIRST",
-      "reason": "Three tiny line-art panels (line, rectangle, X) under 'PATH ORDER': price leaving the band and the position closing are not drawn.",
-      "hard_fails": [
-        "illegible label: tiny '1'/'2' panel numbers"
-      ]
-    },
-    {
-      "order": 87,
-      "lesson": "bp-11-advanced-liquidation",
-      "beat": 7,
-      "path": "course/images/bp-11-advanced-liquidation/007.png",
-      "prompt": "specs/remake/bp-11-advanced-liquidation__007.txt",
-      "target_gen": "gen/bp-11-advanced-liquidation/007/web1.png",
-      "target_out": "out/course/images/bp-11-advanced-liquidation/007.png",
-      "repo_path": "course/images/bp-11-advanced-liquidation/007.png",
-      "size": "1536x1024",
-      "headline": "ISOLATED: ONE FENCED POT",
-      "reason": "Dashed box around one of three squares: isolated margin readable only by an expert; frame mostly empty.",
-      "hard_fails": [
-        "illegible label: tiny 'ISOLATED' and 'ASSIGNED' captions"
-      ]
-    },
-    {
-      "order": 88,
-      "lesson": "bp-11-advanced-liquidation",
-      "beat": 8,
-      "path": "course/images/bp-11-advanced-liquidation/008.png",
-      "prompt": "specs/remake/bp-11-advanced-liquidation__008.txt",
-      "target_gen": "gen/bp-11-advanced-liquidation/008/web1.png",
-      "target_out": "out/course/images/bp-11-advanced-liquidation/008.png",
-      "repo_path": "course/images/bp-11-advanced-liquidation/008.png",
-      "size": "1536x1024",
-      "headline": "CROSS: ALL POTS SHARED",
-      "reason": "'MARGIN -> PULL' boxes under 'CAN PULL': cross margin (venue may look at other balances in the account) not shown; no other balances drawn.",
-      "hard_fails": []
-    },
-    {
-      "order": 89,
-      "lesson": "bp-11-advanced-liquidation",
-      "beat": 9,
-      "path": "course/images/bp-11-advanced-liquidation/009.png",
-      "prompt": "specs/remake/bp-11-advanced-liquidation__009.txt",
-      "target_gen": "gen/bp-11-advanced-liquidation/009/web1.png",
-      "target_out": "out/course/images/bp-11-advanced-liquidation/009.png",
-      "repo_path": "course/images/bp-11-advanced-liquidation/009.png",
-      "size": "1536x1024",
-      "headline": "NO MULTIPLIER NUMBER",
-      "reason": "Two 'no' symbols 'NONE / NONE' under 'NO TIMES': the two boxes (isolated, cross) are not named; 'NO TIMES' is unclear English for 'no leverage multiple'.",
-      "hard_fails": []
-    },
-    {
-      "order": 90,
-      "lesson": "bp-11-advanced-liquidation",
-      "beat": 10,
-      "path": "course/images/bp-11-advanced-liquidation/010.png",
-      "prompt": "specs/remake/bp-11-advanced-liquidation__010.txt",
-      "target_gen": "gen/bp-11-advanced-liquidation/010/web1.png",
-      "target_out": "out/course/images/bp-11-advanced-liquidation/010.png",
-      "repo_path": "course/images/bp-11-advanced-liquidation/010.png",
-      "size": "1536x1024",
-      "headline": "FUNDING: A TIMED PAYMENT",
-      "reason": "Oval with a two-way arrow under 'NO RATE': a timed funding payment between sides is not shown.",
-      "hard_fails": [
-        "illegible label: tiny letter-spaced 'FUNDING'"
-      ],
-      "prompt_updated": "6848d09 (see PR17_PROMPT_UPDATES.md)"
-    },
-    {
-      "order": 91,
-      "lesson": "bp-11-advanced-liquidation",
-      "beat": 11,
-      "path": "course/images/bp-11-advanced-liquidation/011.png",
-      "prompt": "specs/remake/bp-11-advanced-liquidation__011.txt",
-      "target_gen": "gen/bp-11-advanced-liquidation/011/web1.png",
-      "target_out": "out/course/images/bp-11-advanced-liquidation/011.png",
-      "repo_path": "course/images/bp-11-advanced-liquidation/011.png",
-      "size": "1536x1024",
-      "headline": "OLD RISKY ADVICE DELETED",
-      "reason": "Crossed symbol and a 'NONE' tile under 'OLD NOTES': deleted older drafts with leverage multiples are not shown.",
-      "hard_fails": []
-    },
-    {
-      "order": 92,
-      "lesson": "bp-11-advanced-liquidation",
-      "beat": 12,
-      "path": "course/images/bp-11-advanced-liquidation/012.png",
-      "prompt": "specs/remake/bp-11-advanced-liquidation__012.txt",
-      "target_gen": "gen/bp-11-advanced-liquidation/012/web1.png",
-      "target_out": "out/course/images/bp-11-advanced-liquidation/012.png",
-      "repo_path": "course/images/bp-11-advanced-liquidation/012.png",
-      "size": "1536x1024",
-      "headline": "TWO WARNING FLAGS",
-      "reason": "The two flags ('this can liquidate', 'you can lose all the money assigned') are not written.",
-      "hard_fails": [
-        "wrong count: headline 'TWO FLAGS' over three flags (LOSS / ALL / crossed GAIN)"
-      ]
-    },
-    {
-      "order": 93,
-      "lesson": "bp-11-advanced-liquidation",
-      "beat": 13,
-      "path": "course/images/bp-11-advanced-liquidation/013.png",
-      "prompt": "specs/remake/bp-11-advanced-liquidation__013.txt",
-      "target_gen": "gen/bp-11-advanced-liquidation/013/web1.png",
-      "target_out": "out/course/images/bp-11-advanced-liquidation/013.png",
-      "repo_path": "course/images/bp-11-advanced-liquidation/013.png",
-      "size": "1536x1024",
-      "headline": "NOT A HOW-TO FOR APPS",
-      "reason": "Crossed monitor 'NO SCREEN' under 'PAPER ONLY': close to 'not a venue guide / no live contract screen'; small caption.",
-      "hard_fails": []
-    },
-    {
-      "order": 94,
-      "lesson": "bp-11-advanced-liquidation",
-      "beat": 14,
-      "path": "course/images/bp-11-advanced-liquidation/014.png",
-      "prompt": "specs/remake/bp-11-advanced-liquidation__014.txt",
-      "target_gen": "gen/bp-11-advanced-liquidation/014/web1.png",
-      "target_out": "out/course/images/bp-11-advanced-liquidation/014.png",
-      "repo_path": "course/images/bp-11-advanced-liquidation/014.png",
-      "size": "1536x1024",
-      "headline": "YOUR SENTENCE",
-      "reason": "Checklist 'NO TIMES / LOSS FIRST' under 'TWO CHECKS': close to the sentence, but 'NO TIMES' is unclear English and 'explain isolated and cross' is missing.",
-      "hard_fails": []
-    },
-    {
-      "order": 95,
-      "lesson": "bp-11-advanced-liquidation",
-      "beat": 15,
-      "path": "course/images/bp-11-advanced-liquidation/015.png",
-      "prompt": "specs/remake/bp-11-advanced-liquidation__015.txt",
-      "target_gen": "gen/bp-11-advanced-liquidation/015/web1.png",
-      "target_out": "out/course/images/bp-11-advanced-liquidation/015.png",
-      "repo_path": "course/images/bp-11-advanced-liquidation/015.png",
-      "size": "1536x1024",
-      "headline": "RECAP: BORROWED MONEY",
-      "reason": "Recap unreadable at lesson size.",
-      "hard_fails": [
-        "illegible label: eight tiny chips (OPT / LOSS / FENCE / PULL / NONE / RATE / SPOT / LAST) across a thin strip"
-      ]
-    },
-    {
-      "order": 96,
+      "order": 98,
       "lesson": "bp-11-advanced-liquidation",
       "beat": 16,
       "path": "course/images/bp-11-advanced-liquidation/016.png",
@@ -1480,7 +1686,7 @@
       "hard_fails": []
     },
     {
-      "order": 97,
+      "order": 99,
       "lesson": "bp-11-advanced-liquidation",
       "beat": 17,
       "path": "course/images/bp-11-advanced-liquidation/017.png",
@@ -1494,7 +1700,7 @@
       "hard_fails": []
     },
     {
-      "order": 98,
+      "order": 100,
       "lesson": "bp-11-advanced-liquidation",
       "beat": 18,
       "path": "course/images/bp-11-advanced-liquidation/018.png",
@@ -1510,21 +1716,7 @@
       ]
     },
     {
-      "order": 99,
-      "lesson": "bp-11-advanced-liquidation",
-      "beat": 19,
-      "path": "course/images/bp-11-advanced-liquidation/019.png",
-      "prompt": "specs/remake/bp-11-advanced-liquidation__019.txt",
-      "target_gen": "gen/bp-11-advanced-liquidation/019/web1.png",
-      "target_out": "out/course/images/bp-11-advanced-liquidation/019.png",
-      "repo_path": "course/images/bp-11-advanced-liquidation/019.png",
-      "size": "1536x1024",
-      "headline": "SKIPPING? WRITE IT DOWN",
-      "reason": "Card 'OPT IN' with a 'SKIPPED' stamp: close, but the instruction is to write 'Skipped on purpose' on the spot notebook; headline 'SKIPPED ON' is a truncated phrase.",
-      "hard_fails": []
-    },
-    {
-      "order": 100,
+      "order": 101,
       "lesson": "bp-11-advanced-liquidation",
       "beat": 20,
       "path": "course/images/bp-11-advanced-liquidation/020.png",

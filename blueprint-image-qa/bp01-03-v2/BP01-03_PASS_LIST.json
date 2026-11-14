@@ -8,28 +8,28 @@
   "note_mascot": "Approved mascot confirmed: course/images/mascot/blueprint-mascot.png blob 5d421ae3 = the approved cut-out /workspace/image-gen-skills/character-sheet/blueprint-mascot.png, identical on d1f6, beginner-images and PR #17 head; title cards and end cards draw only that file. None of the 58 lesson stills contains the mascot; no remake prompt redraws it, so no queue row needs_mascot_ref.",
   "not_in_scope": "All 92 BP-01..03 rows are now scored here. Separate finding: course/blueprint-rebuild/numbers/bp-0{1,2,3}*.yaml (d1f6) set disclaimer_on_screen to 'Educational content only. Not financial advice.'; studio.py writes that string, so CODE_FIXES.md CF-1 fixes both.",
   "counts": {
-    "total": 92,
-    "pass": 91,
-    "fail": 1,
+    "total": 90,
+    "pass": 86,
+    "fail": 4,
     "lesson_stills": {
-      "total": 58,
-      "pass": 57,
-      "fail": 1,
+      "total": 56,
+      "pass": 52,
+      "fail": 4,
       "by_lesson": {
         "bp-01-introduction": {
-          "total": 18,
-          "pass": 18,
+          "total": 17,
+          "pass": 17,
           "fail": 0
         },
         "bp-02-what-you-need": {
-          "total": 21,
-          "pass": 20,
+          "total": 20,
+          "pass": 19,
           "fail": 1
         },
         "bp-03-what-is-a-grid-bot": {
           "total": 19,
-          "pass": 19,
-          "fail": 0
+          "pass": 16,
+          "fail": 3
         }
       }
     },
@@ -67,21 +67,22 @@
     },
     "by_lesson_all_rows": {
       "bp-01-introduction": {
-        "total": 32,
-        "pass": 32,
+        "total": 31,
+        "pass": 31,
         "fail": 0
       },
       "bp-02-what-you-need": {
-        "total": 32,
-        "pass": 31,
+        "total": 31,
+        "pass": 30,
         "fail": 1
       },
       "bp-03-what-is-a-grid-bot": {
         "total": 28,
-        "pass": 28,
-        "fail": 0
+        "pass": 25,
+        "fail": 3
       }
-    }
+    },
+    "dropped": 2
   },
   "images": [
     {
@@ -914,10 +915,10 @@
         "label_accuracy": 4
       },
       "hard_fails": [],
-      "status": "pass",
-      "action": "passed_as_is",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": null,
-      "notes": "Notebook band with 9 lines = 8 roughly even steps, EXAMPLE stamp; matches 'eight even ticks'. Minor: hand-drawn box is slightly skewed.",
+      "notes": "Notebook band with 9 lines = 8 roughly even steps, EXAMPLE stamp; matches 'eight even ticks'. Minor: hand-drawn box is slightly skewed. | DROPPED (script rewrite b608319): unused in the lesson plan at b608319e26e72e0ef0957c7fc83ff5669ed1e8cc. Unused in the b608319 render plan (planB). Script JSON still has beats[12].image, but no plan shot uses 013.png. Report: fine to drop, no remake needed. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -932,7 +933,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-01-introduction/013.png",
       "scored_blob": "4345d1e7d6cd2e13509c70ea98fa262b447f2a2c",
       "committed": true,
-      "pass": true
+      "pass": false,
+      "reason": "script rewrite b608319: dropped from the lesson plan. Unused in the b608319 render plan (planB). Script JSON still has beats[12].image, but no plan shot uses 013.png. Report: fine to drop, no remake needed.",
+      "fix_note": "No remake needed. Unused in the b608319 plan. Placed file left in place."
     },
     {
       "path": "course/images/bp-01-introduction/014.png",
@@ -1896,11 +1899,13 @@
         "character_consistency": null,
         "label_accuracy": 4
       },
-      "hard_fails": [],
-      "status": "pass",
-      "action": "passed_as_is",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "status": "reopened",
+      "action": "needs_remake",
       "remake_prompt": null,
-      "notes": "Form with the pair row empty and a pencil, 'Fill it later'; matches the beat.",
+      "notes": "Form with the pair row empty and a pencil, 'Fill it later'; matches the beat. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"AN EMPTY PAIR BLOCKS THE PAGE\": \"Pair box empty: not ready\" / \"Fill it in first\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -1915,7 +1920,9 @@
       "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-02-what-you-need/014.png",
       "scored_blob": "b1eb723cd8ce520677d7628e35103a3bf6182c50",
       "committed": true,
-      "pass": true
+      "pass": false,
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "\"AN EMPTY PAIR BLOCKS THE PAGE\": \"Pair box empty: not ready\" / \"Fill it in first\"."
     },
     {
       "path": "course/images/bp-02-what-you-need/015.png",
@@ -2330,10 +2337,10 @@
       "hard_fails": [
         "panel-connector arrow: the next->grid transition arrowhead stops ~17px short of the grid card left border (measured: tip x=745, panel border x=761) and floats in the gap; tip does not touch its target"
       ],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "dropped",
+      "action": "dropped",
       "remake_prompt": "specs/remake/bp-02-what-you-need__021.txt",
-      "notes": "Flipped under the strict panel-connector arrow rule (doubt=fail). Measured the next->grid transition arrow at full resolution: arrowhead tip x=745, grid card left border x=761 -> 17px gap. Committed still is unchanged (never remade); first remake prompt written pinning the arrow to touch the card. | web1 remake FAIL under the strict panel-connector arrow rule. Headline 'NEXT: WHAT IS A GRID BOT' and outro title 'Next lesson: what a grid bot is' are exact. 'Bring your notes' tip sits on the notebook face; 'Next lesson: what a grid bot is' tip sits inside the card. But the scene-transition arrow still stops short of the grid card (visible navy gap, about 20-24px at the point). Previous v1 was also short; this v2 remake did not close the gap. Next: web2.png on the v3 prompt.",
+      "notes": "Flipped under the strict panel-connector arrow rule (doubt=fail). Measured the next->grid transition arrow at full resolution: arrowhead tip x=745, grid card left border x=761 -> 17px gap. Committed still is unchanged (never remade); first remake prompt written pinning the arrow to touch the card. | web1 remake FAIL under the strict panel-connector arrow rule. Headline 'NEXT: WHAT IS A GRID BOT' and outro title 'Next lesson: what a grid bot is' are exact. 'Bring your notes' tip sits on the notebook face; 'Next lesson: what a grid bot is' tip sits inside the card. But the scene-transition arrow still stops short of the grid card (visible navy gap, about 20-24px at the point). Previous v1 was also short; this v2 remake did not close the gap. Next: web2.png on the v3 prompt. | DROPPED (script rewrite b608319): unused in the lesson plan at b608319e26e72e0ef0957c7fc83ff5669ed1e8cc. Unused in the b608319 render plan (planB). The outro still is no longer scheduled. Script JSON still has beats[20].image, but no plan shot uses 021.png. Placed file left in place. Excluded from denominators; no score needed.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -2377,7 +2384,9 @@
         ],
         "notes": "web1 remake FAIL under the strict panel-connector arrow rule. Headline 'NEXT: WHAT IS A GRID BOT' and outro title 'Next lesson: what a grid bot is' are exact. 'Bring your notes' tip sits on the notebook face; 'Next lesson: what a grid bot is' tip sits inside the card. But the scene-transition arrow still stops short of the grid card (visible navy gap, about 20-24px at the point). Previous v1 was also short; this v2 remake did not close the gap. Next: web2.png on the v3 prompt.",
         "pass": false
-      }
+      },
+      "reason": "script rewrite b608319: dropped from the lesson plan. Unused in the b608319 render plan (planB). The outro still is no longer scheduled. Script JSON still has beats[20].image, but no plan shot uses 021.png.",
+      "fix_note": "No remake needed. Unused in the b608319 plan. Placed file left in place."
     },
     {
       "path": "course/images/bp-03-what-is-a-grid-bot/001.png",
@@ -2798,11 +2807,13 @@
         "character_consistency": null,
         "label_accuracy": 5
       },
-      "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "status": "reopened",
+      "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__008.txt",
-      "notes": "Left card: price weaves inside the band, blue and mint boxes the same height. Right card: price drops out through the bottom line and stays below; one tall blue box and a nearly empty mint box. Captions \"Inside the band: balanced\" and \"Price left: one side piles up\" with no arrows, as specified. EXAMPLE stamp inside the right card. No coins or currency.",
+      "notes": "Left card: price weaves inside the band, blue and mint boxes the same height. Right card: price drops out through the bottom line and stays below; one tall blue box and a nearly empty mint box. Captions \"Inside the band: balanced\" and \"Price left: one side piles up\" with no arrows, as specified. EXAMPLE stamp inside the right card. No coins or currency. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: headline \"WHAT YOU HOLD CHANGES\"; left panel \"Price bounces: coin and cash swap back and forth\"; right panel \"Price leaves: mostly coin or mostly cash\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -2817,7 +2828,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/008.png",
       "scored_blob": "cbaf79a4090ba71a726ae774813bbaf126369685",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-03-what-is-a-grid-bot/008/web1.png",
         "blob": "cbaf79a4090ba71a726ae774813bbaf126369685",
@@ -2843,7 +2854,35 @@
         "pass": true
       },
       "previous_committed_blob": "852452ee56f4cb5150f69471a1a37f27b41e74fd",
-      "source_detail": "ChatGPT web render gen/bp-03-what-is-a-grid-bot/008/web1.png (prompt specs/remake/bp-03-what-is-a-grid-bot__008.txt), saved via out/course/images/bp-03-what-is-a-grid-bot/008.png at 1536x1024 (already 3:2, no fill needed)"
+      "source_detail": "ChatGPT web render gen/bp-03-what-is-a-grid-bot/008/web1.png (prompt specs/remake/bp-03-what-is-a-grid-bot__008.txt), saved via out/course/images/bp-03-what-is-a-grid-bot/008.png at 1536x1024 (already 3:2, no fill needed)",
+      "previous_remake_reviews": [
+        {
+          "file": "gen/bp-03-what-is-a-grid-bot/008/web1.png",
+          "blob": "cbaf79a4090ba71a726ae774813bbaf126369685",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 79,
+            "right": 79,
+            "top": 81,
+            "bottom": 158
+          },
+          "scored_against": "fbb3f9c narration + prompt at this commit",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 4,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 5
+          },
+          "hard_fails": [],
+          "notes": "Left card: price weaves inside the band, blue and mint boxes the same height. Right card: price drops out through the bottom line and stays below; one tall blue box and a nearly empty mint box. Captions \"Inside the band: balanced\" and \"Price left: one side piles up\" with no arrows, as specified. EXAMPLE stamp inside the right card. No coins or currency.",
+          "pass": true
+        }
+      ],
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "headline \"WHAT YOU HOLD CHANGES\"; left panel \"Price bounces: coin and cash swap back and forth\"; right panel \"Price leaves: mostly coin or mostly cash\"."
     },
     {
       "path": "course/images/bp-03-what-is-a-grid-bot/009.png",
@@ -2908,11 +2947,13 @@
         "character_consistency": null,
         "label_accuracy": 5
       },
-      "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "status": "reopened",
+      "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__010.txt",
-      "notes": "web3 (v3 prompt) PASS. Five tiles spelled exactly Upper/Lower/Levels/Side/Stop (matches beat 10 'upper, lower, levels, side, stop'); third tile Levels highlighted. 'The one people skip' arrow tip touches the top edge of the Levels tile (verified 4-8x). No digits. Pencil whole-in-frame under the row, no glow streak into tiles. Left margin 68px (headline) > 45px standard.",
+      "notes": "web3 (v3 prompt) PASS. Five tiles spelled exactly Upper/Lower/Levels/Side/Stop (matches beat 10 'upper, lower, levels, side, stop'); third tile Levels highlighted. 'The one people skip' arrow tip touches the top edge of the Levels tile (verified 4-8x). No digits. Pencil whole-in-frame under the row, no glow streak into tiles. Left margin 68px (headline) > 45px standard. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"POINT AND SAY THE FIVE\": Top, Bottom, Levels, What you hold, Stop. Drop \"The one people skip\". Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -2927,7 +2968,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/010.png",
       "scored_blob": "a0d07e989e76bd562826e362f7395b9631d0d0c2",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-03-what-is-a-grid-bot/010/web1.png",
         "blob": "201dcbc4615ba497c0a50d9ec928eaaadeb697e1",
@@ -2954,7 +2995,38 @@
         ],
         "notes": "Five tiles spelled right, Levels highlighted, \"The one people skip\" arrow lands on the third tile. But the pencil runs off the frame at the bottom-left (0px margin, the prompt asks 80px for pencils) and its tip pokes into the \"Upper\" tile, with a thin glow streak rising from the tip into the letter p. The pencil does not lie under the row as asked.",
         "pass": false
-      }
+      },
+      "previous_remake_reviews": [
+        {
+          "file": "gen/bp-03-what-is-a-grid-bot/010/web1.png",
+          "blob": "201dcbc4615ba497c0a50d9ec928eaaadeb697e1",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 0,
+            "right": 110,
+            "top": 136,
+            "bottom": 60
+          },
+          "scored_against": "fbb3f9c narration + prompt at this commit",
+          "scores": {
+            "beginner_clarity": 4,
+            "composition_hierarchy": 3,
+            "craft_polish": 3,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 5
+          },
+          "hard_fails": [
+            "cramped margin: pencil runs off the left and bottom frame edges (0px)",
+            "AI artifact: light streak from the pencil tip into the \"Upper\" tile"
+          ],
+          "notes": "Five tiles spelled right, Levels highlighted, \"The one people skip\" arrow lands on the third tile. But the pencil runs off the frame at the bottom-left (0px margin, the prompt asks 80px for pencils) and its tip pokes into the \"Upper\" tile, with a thin glow streak rising from the tip into the letter p. The pencil does not lie under the row as asked.",
+          "pass": false
+        }
+      ],
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "\"POINT AND SAY THE FIVE\": Top, Bottom, Levels, What you hold, Stop. Drop \"The one people skip\"."
     },
     {
       "path": "course/images/bp-03-what-is-a-grid-bot/011.png",
@@ -3131,11 +3203,13 @@
         "character_consistency": null,
         "label_accuracy": 5
       },
-      "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "hard_fails": [
+        "script rewrite b608319: on-image text must match the new narration"
+      ],
+      "status": "reopened",
+      "action": "needs_remake",
       "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__014.txt",
-      "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@5bc8ab05c493a1f649f32b8bb20d4b0f9503896c, course/images/bp-03-what-is-a-grid-bot/014.png, blob 60636bd1e4407db467fa059bc3f4e1e5903cb39d, 1536x1024, 147550 bytes). Stop label is 'Stop: the sentence for when the path leaves the band' (two lines; no bare 'Stop written'). All seven arrow tips touch: 'Orders wait' on the bottom of the blue ticket; 'Inside your range' on the bottom white border of the range box; 'Stop' on the bottom gold border of the amber sentence card; 'Holdings change' on the bottom cyan frame of the left jar (continuous cyan, no dark valley); scene tickets\u2192range on the left white border of the range box; scene range\u2192stop on the left gold border of the amber card; scene stop\u2192jars on the face of the left jar (tip inside the left frame). Headline 'GRID BOT IN ONE BREATH' exact and spaced. EXAMPLE present. Four icons teach the one-breath definition (checked tickets; zig-zag in a band; amber sentence card, not a stop sign; blue and mint jars). No mascot. GridBot Builder style only. Margins 90/90/111/104. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/014.png (`source: cursor`).",
+      "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@5bc8ab05c493a1f649f32b8bb20d4b0f9503896c, course/images/bp-03-what-is-a-grid-bot/014.png, blob 60636bd1e4407db467fa059bc3f4e1e5903cb39d, 1536x1024, 147550 bytes). Stop label is 'Stop: the sentence for when the path leaves the band' (two lines; no bare 'Stop written'). All seven arrow tips touch: 'Orders wait' on the bottom of the blue ticket; 'Inside your range' on the bottom white border of the range box; 'Stop' on the bottom gold border of the amber sentence card; 'Holdings change' on the bottom cyan frame of the left jar (continuous cyan, no dark valley); scene tickets\u2192range on the left white border of the range box; scene range\u2192stop on the left gold border of the amber card; scene stop\u2192jars on the face of the left jar (tip inside the left frame). Headline 'GRID BOT IN ONE BREATH' exact and spaced. EXAMPLE present. Four icons teach the one-breath definition (checked tickets; zig-zag in a band; amber sentence card, not a stop sign; blue and mint jars). No mascot. GridBot Builder style only. Margins 90/90/111/104. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/014.png (`source: cursor`). | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"THE WHOLE IDEA IN ONE BREATH\": \"Orders wait\" / \"Inside your range\" / \"Stop: your rule if price leaves\" / \"What you hold changes\", with large labels. Placed file left in place; do not treat the current still as a pass.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -3150,7 +3224,7 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/014.png",
       "scored_blob": "60636bd1e4407db467fa059bc3f4e1e5903cb39d",
       "committed": true,
-      "pass": true,
+      "pass": false,
       "remake_review": {
         "file": "gen/bp-03-what-is-a-grid-bot/014/cursor1.png",
         "blob": "60636bd1e4407db467fa059bc3f4e1e5903cb39d",
@@ -3203,8 +3277,37 @@
           "hard_fails": [],
           "notes": "Four icons in one panel joined by three short arrows: two checked tickets, a zig-zag between dashed lines, an amber stop sign, blue and mint jars. Captions \"Orders wait\", \"Inside your range\", \"Stop written\", \"Holdings change\" match the one-breath definition. Panel glow sits 48px/49px from the left/right edges: inside the 45px standard but short of the prompt's 120px ask, hence composition 4.",
           "pass": true
+        },
+        {
+          "file": "gen/bp-03-what-is-a-grid-bot/014/cursor1.png",
+          "blob": "60636bd1e4407db467fa059bc3f4e1e5903cb39d",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 90,
+            "right": 90,
+            "top": 111,
+            "bottom": 104
+          },
+          "scored_against": "beat + strict rubric (arrow contact, stop-label wording, EXAMPLE, headline, margins, brand, beginner-watch clarity)",
+          "source_commit": "5bc8ab05c493a1f649f32b8bb20d4b0f9503896c",
+          "source_repo": "kyleashton88-cyber/claude",
+          "source_branch": "cursor/blueprint-cursor-images",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 5,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 5
+          },
+          "hard_fails": [],
+          "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@5bc8ab05c493a1f649f32b8bb20d4b0f9503896c, course/images/bp-03-what-is-a-grid-bot/014.png, blob 60636bd1e4407db467fa059bc3f4e1e5903cb39d, 1536x1024, 147550 bytes). Stop label is 'Stop: the sentence for when the path leaves the band' (two lines; no bare 'Stop written'). All seven arrow tips touch: 'Orders wait' on the bottom of the blue ticket; 'Inside your range' on the bottom white border of the range box; 'Stop' on the bottom gold border of the amber sentence card; 'Holdings change' on the bottom cyan frame of the left jar (continuous cyan, no dark valley); scene tickets\u2192range on the left white border of the range box; scene range\u2192stop on the left gold border of the amber card; scene stop\u2192jars on the face of the left jar (tip inside the left frame). Headline 'GRID BOT IN ONE BREATH' exact and spaced. EXAMPLE present. Four icons teach the one-breath definition (checked tickets; zig-zag in a band; amber sentence card, not a stop sign; blue and mint jars). No mascot. GridBot Builder style only. Margins 90/90/111/104. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/014.png (`source: cursor`).",
+          "pass": true
         }
-      ]
+      ],
+      "reason": "script rewrite b608319: on-image text must match the new narration",
+      "fix_note": "\"THE WHOLE IDEA IN ONE BREATH\": \"Orders wait\" / \"Inside your range\" / \"Stop: your rule if price leaves\" / \"What you hold changes\", with large labels."
     },
     {
       "path": "course/images/bp-03-what-is-a-grid-bot/015.png",

@@ -417,3 +417,30 @@ Image source is the Cursor agent on `cursor/blueprint-cursor-images` in `kyleash
 - **BP-03: 28/28 — YES, 100%.**
 - **92-row total: 91/92.**
 - Queue (BP-01..03): 1 — bp-02-what-you-need/021 (gen/bp-02-what-you-need/021/web2.png).
+
+---
+
+## Ledger update — 14 Nov 2026 (WITA): script rewrite b608319
+
+Orchestrator ledger update against verifier report `/workspace/bp-script-check-0249f40/REPORT-b608319.md` and the rewrite at `b608319e26e72e0ef0957c7fc83ff5669ed1e8cc`. Used-still check is against planB built from that commit (scripts still list image fields on skipped disclaimer / title-card / Your turn / outro beats, but those beats are not scheduled). Placed files were left in `course/images`. No images were generated.
+
+### Drops (excluded from denominators; no remake)
+- **BP-01 013 — confirmed unused.** Not in the b608319 plan. Report: fine to drop, no remake needed.
+- **BP-02 021 — confirmed unused.** The outro still is no longer scheduled.
+- **BP-02 014 — still used** (plan shot "Empty pair"). Not dropped. Reopened for remake instead. Report said remake or drop; the image still contradicts the narration ("LEAVE THE PAIR BLANK / Fill it later").
+- **BP-10 008 — still used** (plan shot "Worked pair"). Not dropped. It stays in the BP-10 remake set as "PAGE TWO: SAME PAIR, NEW BAND".
+
+Title cards, Your-turn / Practice repeats, and outros are also unused in planB across the 11 lessons, but they were not on the drop list, so they stay in the denominators.
+
+### Reopened as fails (reason: script rewrite b608319: on-image text must match the new narration)
+- BP-03 008, 010, 014 (priority; they block the render). Exact replacement text is in each row's `fix_note`.
+- BP-02 014 (see above).
+
+The report does **not** require remaking any other BP-01 or BP-02 still. BP-03 004 stays a pass (Orchestrator list and expected 25/28). Note: 004's image still says Upper / Lower / Side, and the 7a0430a / b608319 still VO does not include the mapping sentence the report offered as the alternative to a remake. Flagged as a discrepancy; not reopened.
+
+### Updated counts (dropped rows excluded)
+- **BP-01: 31/31 — YES, 100%.**
+- **BP-02: 30/31 — NOT 100%.** Rows left: 014 (reopened; still used in the plan). Orchestrator's 30/30 assumed 014 was dropped; corrected because 014 is still referenced.
+- **BP-03: 25/28 — NOT 100%.** Rows left: 008, 010, 014.
+- **90-row total (BP-01..03, dropped excluded): 86/90.**
+- Queue (BP-01..03): 4 — bp-03 008, 010, 014 (priority), then bp-02 014.
