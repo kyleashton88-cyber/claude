@@ -8,8 +8,8 @@
   "not_in_scope": "course/images/_held/*.png (10 files: bp-06 014/017, bp-07 012/017/020, bp-08 003/006/007/009/011) are not referenced by any lesson script and were not scored. Shared title-art/mascot assets are already on BP01-03_PASS_LIST.json.",
   "counts": {
     "total": 161,
-    "pass": 71,
-    "fail": 90,
+    "pass": 85,
+    "fail": 76,
     "by_lesson": {
       "bp-04-market-regimes": {
         "total": 20,
@@ -33,8 +33,8 @@
       },
       "bp-08-managing-and-monitoring": {
         "total": 20,
-        "pass": 0,
-        "fail": 20
+        "pass": 14,
+        "fail": 6
       },
       "bp-09-common-mistakes": {
         "total": 21,
@@ -5614,43 +5614,68 @@
       "beat": 1,
       "chapter": "Hook",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "8f52dbb13445f0400aab44d99ec6ed1985519a6b",
-        "cursor/blueprint-beginner-images": "8f52dbb13445f0400aab44d99ec6ed1985519a6b"
+        "cursor/blueprint-beginner-images": "d8a2886cce33fa7aee0ea6b70e409c5e236420f1",
+        "cursor/blueprint-cursor-images": "d8a2886cce33fa7aee0ea6b70e409c5e236420f1"
       },
       "beat_concept": "Monitoring is a short list you can finish, not a vigil.",
       "scores": {
-        "beginner_clarity": 3,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__001.txt",
-      "notes": "Card listing INSIDE / SIDE / SENTENCE with a clock and stamp: closest to the beat, but 'SIDE' and 'SENTENCE' are unexplained single words; 'short list you can finish, not a vigil' only implied. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Card listing INSIDE / SIDE / SENTENCE with a clock and stamp: closest to the beat, but 'SIDE' and 'SENTENCE' are unexplained single words; 'short list you can finish, not a vigil' only implied. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/001.png, blob d8a2886cce33fa7aee0ea6b70e409c5e236420f1, 1536x1024, 131885 bytes). On-image text: A SHORT LIST, THEN YOU STOP | Inside the band? | Above or below the middle? | Does your stop rule hold? | Then you stop | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 61,
-        "right": 417,
-        "top": 110,
-        "bottom": 266
+        "left": 101,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/001.png",
-      "scored_blob": "8f52dbb13445f0400aab44d99ec6ed1985519a6b",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-08-managing-and-monitoring/001.png",
+      "scored_blob": "d8a2886cce33fa7aee0ea6b70e409c5e236420f1",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+      "pass": true,
+      "previous_committed_blob": "8f52dbb13445f0400aab44d99ec6ed1985519a6b",
+      "remake_review": {
+        "file": "gen/bp-08-managing-and-monitoring/001/cursor1.png",
+        "blob": "d8a2886cce33fa7aee0ea6b70e409c5e236420f1",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 101,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/001.png, blob d8a2886cce33fa7aee0ea6b70e409c5e236420f1, 1536x1024, 131885 bytes). On-image text: A SHORT LIST, THEN YOU STOP | Inside the band? | Above or below the middle? | Does your stop rule hold? | Then you stop | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/002.png",
@@ -5738,43 +5763,68 @@
       "beat": 4,
       "chapter": "Three questions",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "ada4d1a6e62c0237413764b12f8823805329a0c9",
-        "cursor/blueprint-beginner-images": "ada4d1a6e62c0237413764b12f8823805329a0c9"
+        "cursor/blueprint-beginner-images": "63e47dd3bb825f5eadd18f2c6fe542081f3a8d83",
+        "cursor/blueprint-cursor-images": "63e47dd3bb825f5eadd18f2c6fe542081f3a8d83"
       },
       "beat_concept": "The questions are: is the example path inside the band, which side is the inventory, and does the finish sentence still match.",
       "scores": {
-        "beginner_clarity": 3,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__004.txt",
-      "notes": "Three-row card INSIDE / SIDE / SENTENCE with blank lines: the three questions are not written as questions; row labels small. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Three-row card INSIDE / SIDE / SENTENCE with blank lines: the three questions are not written as questions; row labels small. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/004.png, blob 63e47dd3bb825f5eadd18f2c6fe542081f3a8d83, 1536x1024, 118807 bytes). On-image text: THREE | EQUESTIONS | 1 Inside the band? | 2 Above or below the middle? | 3 Does your stop rule hold? | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 71,
-        "right": 245,
-        "top": 111,
-        "bottom": 187
+        "left": 102,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/004.png",
-      "scored_blob": "ada4d1a6e62c0237413764b12f8823805329a0c9",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-08-managing-and-monitoring/004.png",
+      "scored_blob": "63e47dd3bb825f5eadd18f2c6fe542081f3a8d83",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+      "pass": true,
+      "previous_committed_blob": "ada4d1a6e62c0237413764b12f8823805329a0c9",
+      "remake_review": {
+        "file": "gen/bp-08-managing-and-monitoring/004/cursor1.png",
+        "blob": "63e47dd3bb825f5eadd18f2c6fe542081f3a8d83",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 102,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/004.png, blob 63e47dd3bb825f5eadd18f2c6fe542081f3a8d83, 1536x1024, 118807 bytes). On-image text: THREE | EQUESTIONS | 1 Inside the band? | 2 Above or below the middle? | 3 Does your stop rule hold? | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/005.png",
@@ -5782,43 +5832,68 @@
       "beat": 5,
       "chapter": "Inside the band",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "e804e99620c37e3f54761139dc8bee543163b37d",
-        "cursor/blueprint-beginner-images": "e804e99620c37e3f54761139dc8bee543163b37d"
+        "cursor/blueprint-beginner-images": "51dfe88ce3c6e18bc05a8f9b0848900879d203f7",
+        "cursor/blueprint-cursor-images": "51dfe88ce3c6e18bc05a8f9b0848900879d203f7"
       },
       "beat_concept": "Inside means the path you are looking at still crosses the band you drew.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__005.txt",
-      "notes": "'INSIDE OUT' card with a line crossing it and tiny letter-spaced 'INSIDE'/'OUTSIDE': no band and no path, so 'still crosses the band' is not shown. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "'INSIDE OUT' card with a line crossing it and tiny letter-spaced 'INSIDE'/'OUTSIDE': no band and no path, so 'still crosses the band' is not shown. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/005.png, blob 51dfe88ce3c6e18bc05a8f9b0848900879d203f7, 1536x1024, 105753 bytes). On-image text: THE CLOSE IS STILL INSIDE | EXAMPLE | Still between top and bottom. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/206/111/164. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 67,
-        "right": 220,
-        "top": 110,
-        "bottom": 158
+        "left": 102,
+        "right": 206,
+        "top": 111,
+        "bottom": 164
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/005.png",
-      "scored_blob": "e804e99620c37e3f54761139dc8bee543163b37d",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-08-managing-and-monitoring/005.png",
+      "scored_blob": "51dfe88ce3c6e18bc05a8f9b0848900879d203f7",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+      "pass": true,
+      "previous_committed_blob": "e804e99620c37e3f54761139dc8bee543163b37d",
+      "remake_review": {
+        "file": "gen/bp-08-managing-and-monitoring/005/cursor1.png",
+        "blob": "51dfe88ce3c6e18bc05a8f9b0848900879d203f7",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 102,
+          "right": 206,
+          "top": 111,
+          "bottom": 164
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/005.png, blob 51dfe88ce3c6e18bc05a8f9b0848900879d203f7, 1536x1024, 105753 bytes). On-image text: THE CLOSE IS STILL INSIDE | EXAMPLE | Still between top and bottom. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/206/111/164. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/006.png",
@@ -5826,44 +5901,68 @@
       "beat": 6,
       "chapter": "Which side",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "0177cc4ba4f98cdf7cec76857af3ea71dc8ccd02",
-        "cursor/blueprint-beginner-images": "0177cc4ba4f98cdf7cec76857af3ea71dc8ccd02"
+        "cursor/blueprint-beginner-images": "79a45bf55552254af086005bf535a88cf1c0d2dc",
+        "cursor/blueprint-cursor-images": "79a45bf55552254af086005bf535a88cf1c0d2dc"
       },
       "beat_concept": "Side means which asset you hold more of after the example fills.",
       "scores": {
-        "beginner_clarity": 1,
-        "composition_hierarchy": 3,
-        "craft_polish": 2,
-        "brand_fidelity": 4,
-        "text_legibility": 2,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration",
-        "artifact: smudged, half-erased pseudo-text above and below 'HEAVY' and 'EXAMPLE' in both cards"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__006.txt",
-      "notes": "'WHICH SIDE' with a 'HEAVY' card: which asset you hold more of is not shown; headline words run together. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "'WHICH SIDE' with a 'HEAVY' card: which asset you hold more of is not shown; headline words run together. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/006.png, blob 79a45bf55552254af086005bf535a88cf1c0d2dc, 1536x1024, 107482 bytes). On-image text: ABOVE OR BELOW THE MIDDLE | Above | Middle 27630 | EXAMPLE | Below. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/156/109/124. 'Above' / 'Middle 27630' / 'Below' show side as above or below the middle line, not as what you hold. All three connectors touch. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 61,
-        "right": 242,
-        "top": 110,
-        "bottom": 271
+        "left": 101,
+        "right": 156,
+        "top": 109,
+        "bottom": 124
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/006.png",
-      "scored_blob": "0177cc4ba4f98cdf7cec76857af3ea71dc8ccd02",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-08-managing-and-monitoring/006.png",
+      "scored_blob": "79a45bf55552254af086005bf535a88cf1c0d2dc",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+      "pass": true,
+      "previous_committed_blob": "0177cc4ba4f98cdf7cec76857af3ea71dc8ccd02",
+      "remake_review": {
+        "file": "gen/bp-08-managing-and-monitoring/006/cursor1.png",
+        "blob": "79a45bf55552254af086005bf535a88cf1c0d2dc",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 101,
+          "right": 156,
+          "top": 109,
+          "bottom": 124
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/006.png, blob 79a45bf55552254af086005bf535a88cf1c0d2dc, 1536x1024, 107482 bytes). On-image text: ABOVE OR BELOW THE MIDDLE | Above | Middle 27630 | EXAMPLE | Below. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/156/109/124. 'Above' / 'Middle 27630' / 'Below' show side as above or below the middle line, not as what you hold. All three connectors touch. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/007.png",
@@ -5871,43 +5970,68 @@
       "beat": 7,
       "chapter": "The sentence",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "ddbc294f773cf201aa78d270c53ea4467f1fd574",
-        "cursor/blueprint-beginner-images": "ddbc294f773cf201aa78d270c53ea4467f1fd574"
+        "cursor/blueprint-beginner-images": "bf6cb9faf399916e13cb35a28b036772c6c15ec1",
+        "cursor/blueprint-cursor-images": "bf6cb9faf399916e13cb35a28b036772c6c15ec1"
       },
       "beat_concept": "The third row is a reread of the finish sentence, not a new sentence invented while you look.",
       "scores": {
-        "beginner_clarity": 1,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__007.txt",
-      "notes": "'PIN / EDIT' tiles: the beat is 'reread the same finish sentence, don't invent one'; tiles do not show that. Visible seam under the composited headline strip. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "'PIN / EDIT' tiles: the beat is 'reread the same finish sentence, don't invent one'; tiles do not show that. Visible seam under the composited headline strip. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/007.png, blob bf6cb9faf399916e13cb35a28b036772c6c15ec1, 1536x1024, 105664 bytes). On-image text: REREAD THE SAME SENTENCE | Do not write a new sentence | Read the finish rule again | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 709,
-        "top": 111,
-        "bottom": 221
+        "left": 103,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/007.png",
-      "scored_blob": "ddbc294f773cf201aa78d270c53ea4467f1fd574",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-08-managing-and-monitoring/007.png",
+      "scored_blob": "bf6cb9faf399916e13cb35a28b036772c6c15ec1",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+      "pass": true,
+      "previous_committed_blob": "ddbc294f773cf201aa78d270c53ea4467f1fd574",
+      "remake_review": {
+        "file": "gen/bp-08-managing-and-monitoring/007/cursor1.png",
+        "blob": "bf6cb9faf399916e13cb35a28b036772c6c15ec1",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/007.png, blob bf6cb9faf399916e13cb35a28b036772c6c15ec1, 1536x1024, 105664 bytes). On-image text: REREAD THE SAME SENTENCE | Do not write a new sentence | Read the finish rule again | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/008.png",
@@ -5915,43 +6039,68 @@
       "beat": 8,
       "chapter": "Cadence",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "5c47a07fc8c5bcbc8b5798cfb08887ff3f519eab",
-        "cursor/blueprint-beginner-images": "5c47a07fc8c5bcbc8b5798cfb08887ff3f519eab"
+        "cursor/blueprint-beginner-images": "768469a2f381791a548037054b63c72619697232",
+        "cursor/blueprint-cursor-images": "768469a2f381791a548037054b63c72619697232"
       },
       "beat_concept": "A cadence is a day you choose to reread the same three rows.",
       "scores": {
-        "beginner_clarity": 3,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__008.txt",
-      "notes": "Calendar grid with one highlighted day and 'MONDAY'/'EXAMPLE' tags: readable, but tags float with no arrows and 'reread the same three rows' is not shown. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Calendar grid with one highlighted day and 'MONDAY'/'EXAMPLE' tags: readable, but tags float with no arrows and 'reread the same three rows' is not shown. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/008.png, blob 768469a2f381791a548037054b63c72619697232, 1536x1024, 109628 bytes). On-image text: PICK ADAYTO REREAD | Choose one day | Read the same three rows | Then stop | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 71,
-        "right": 216,
-        "top": 110,
-        "bottom": 213
+        "left": 103,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/008.png",
-      "scored_blob": "5c47a07fc8c5bcbc8b5798cfb08887ff3f519eab",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-08-managing-and-monitoring/008.png",
+      "scored_blob": "768469a2f381791a548037054b63c72619697232",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+      "pass": true,
+      "previous_committed_blob": "5c47a07fc8c5bcbc8b5798cfb08887ff3f519eab",
+      "remake_review": {
+        "file": "gen/bp-08-managing-and-monitoring/008/cursor1.png",
+        "blob": "768469a2f381791a548037054b63c72619697232",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/008.png, blob 768469a2f381791a548037054b63c72619697232, 1536x1024, 109628 bytes). On-image text: PICK ADAYTO REREAD | Choose one day | Read the same three rows | Then stop | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/009.png",
@@ -5959,43 +6108,68 @@
       "beat": 9,
       "chapter": "What you do not open",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "90d2c66e76b1d0fcf73c0db29bc3f46048db6909",
-        "cursor/blueprint-beginner-images": "90d2c66e76b1d0fcf73c0db29bc3f46048db6909"
+        "cursor/blueprint-beginner-images": "a90f9745c04551c6beabbcc87781dc8b6b2f8c8a",
+        "cursor/blueprint-cursor-images": "a90f9745c04551c6beabbcc87781dc8b6b2f8c8a"
       },
       "beat_concept": "You do not open a result chart, a ranking, or a leverage control as part of this list.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 2,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__009.txt",
-      "notes": "Three tiny X boxes over 'NOT THIS': the three things not opened (result chart, ranking, leverage control) are not shown or named; seam under headline strip. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Three tiny X boxes over 'NOT THIS': the three things not opened (result chart, ranking, leverage control) are not shown or named; seam under headline strip. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/009.png, blob a90f9745c04551c6beabbcc87781dc8b6b2f8c8a, 1536x1024, 108919 bytes). On-image text: DO NOT OPEN THESE | Not a result chart | Not a ranking | Not a leverage control | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 604,
-        "top": 110,
-        "bottom": 329
+        "left": 103,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/009.png",
-      "scored_blob": "90d2c66e76b1d0fcf73c0db29bc3f46048db6909",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-08-managing-and-monitoring/009.png",
+      "scored_blob": "a90f9745c04551c6beabbcc87781dc8b6b2f8c8a",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+      "pass": true,
+      "previous_committed_blob": "90d2c66e76b1d0fcf73c0db29bc3f46048db6909",
+      "remake_review": {
+        "file": "gen/bp-08-managing-and-monitoring/009/cursor1.png",
+        "blob": "a90f9745c04551c6beabbcc87781dc8b6b2f8c8a",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/009.png, blob a90f9745c04551c6beabbcc87781dc8b6b2f8c8a, 1536x1024, 108919 bytes). On-image text: DO NOT OPEN THESE | Not a result chart | Not a ranking | Not a leverage control | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/010.png",
@@ -6003,43 +6177,68 @@
       "beat": 10,
       "chapter": "Worked check",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "6f722beba2956bb5a3f4c0d1af266e685100252d",
-        "cursor/blueprint-beginner-images": "6f722beba2956bb5a3f4c0d1af266e685100252d"
+        "cursor/blueprint-beginner-images": "6057bfeea6ef20a6a38cc8b86963c8844ef400a1",
+        "cursor/blueprint-cursor-images": "6057bfeea6ef20a6a38cc8b86963c8844ef400a1"
       },
       "beat_concept": "Run the three rows on a hypothetical path that starts inside and ends outside.",
       "scores": {
-        "beginner_clarity": 1,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__010.txt",
-      "notes": "Tile reading 'IN / BASE / SAME' under 'WORKED CHECK': cryptic; no path that starts inside and ends outside; seam under headline strip. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Tile reading 'IN / BASE / SAME' under 'WORKED CHECK': cryptic; no path that starts inside and ends outside; seam under headline strip. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass. | cursor cursor2.png PASS (kyleashton88-cyber/claude@8cb7a75539553b75b2ef45ab38ac217e5052039e, course/images/bp-08-managing-and-monitoring/010.png, blob 6057bfeea6ef20a6a38cc8b86963c8844ef400a1, 1536x1024, 110480 bytes). On-image text: STARTS INSIDE,ENDS OUTSIDE | EXAMPLE | Inside | Outside. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/176/109/144. Rescored from 8cb7a75, not the earlier 36ceecf file. 'Inside' tip sits on the first peak; 'Outside' tip sits on the departing path. Does not picture side as what you hold. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 61,
-        "right": 240,
-        "top": 110,
-        "bottom": 293
+        "left": 102,
+        "right": 176,
+        "top": 109,
+        "bottom": 144
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/010.png",
-      "scored_blob": "6f722beba2956bb5a3f4c0d1af266e685100252d",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-08-managing-and-monitoring/010.png",
+      "scored_blob": "6057bfeea6ef20a6a38cc8b86963c8844ef400a1",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+      "pass": true,
+      "previous_committed_blob": "6f722beba2956bb5a3f4c0d1af266e685100252d",
+      "remake_review": {
+        "file": "gen/bp-08-managing-and-monitoring/010/cursor2.png",
+        "blob": "6057bfeea6ef20a6a38cc8b86963c8844ef400a1",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 102,
+          "right": 176,
+          "top": 109,
+          "bottom": 144
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "8cb7a75539553b75b2ef45ab38ac217e5052039e",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor2.png PASS (kyleashton88-cyber/claude@8cb7a75539553b75b2ef45ab38ac217e5052039e, course/images/bp-08-managing-and-monitoring/010.png, blob 6057bfeea6ef20a6a38cc8b86963c8844ef400a1, 1536x1024, 110480 bytes). On-image text: STARTS INSIDE,ENDS OUTSIDE | EXAMPLE | Inside | Outside. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 102/176/109/144. Rescored from 8cb7a75, not the earlier 36ceecf file. 'Inside' tip sits on the first peak; 'Outside' tip sits on the departing path. Does not picture side as what you hold. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/011.png",
@@ -6047,43 +6246,68 @@
       "beat": 11,
       "chapter": "Alerts",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "1004211cd89ac070870020a14ae2843b61af919f",
-        "cursor/blueprint-beginner-images": "1004211cd89ac070870020a14ae2843b61af919f"
+        "cursor/blueprint-beginner-images": "0b8cddc5dc8894ca127d784ffb4a5923e9eb8cf8",
+        "cursor/blueprint-cursor-images": "0b8cddc5dc8894ca127d784ffb4a5923e9eb8cf8"
       },
       "beat_concept": "An alert, if you ever set one, is a nudge to come read the three rows.",
       "scores": {
-        "beginner_clarity": 3,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__011.txt",
-      "notes": "Bell with an EXAMPLE card: an alert as a nudge to reread the three rows is not shown; tiny card text. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Bell with an EXAMPLE card: an alert as a nudge to reread the three rows is not shown; tiny card text. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/011.png, blob 0b8cddc5dc8894ca127d784ffb4a5923e9eb8cf8, 1536x1024, 106727 bytes). On-image text: AN ALERT IS ONLY ANUDGE | It does not decide for you | Come read the three rows | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 553,
-        "top": 110,
-        "bottom": 386
+        "left": 101,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/011.png",
-      "scored_blob": "1004211cd89ac070870020a14ae2843b61af919f",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-08-managing-and-monitoring/011.png",
+      "scored_blob": "0b8cddc5dc8894ca127d784ffb4a5923e9eb8cf8",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+      "pass": true,
+      "previous_committed_blob": "1004211cd89ac070870020a14ae2843b61af919f",
+      "remake_review": {
+        "file": "gen/bp-08-managing-and-monitoring/011/cursor1.png",
+        "blob": "0b8cddc5dc8894ca127d784ffb4a5923e9eb8cf8",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 101,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/011.png, blob 0b8cddc5dc8894ca127d784ffb4a5923e9eb8cf8, 1536x1024, 106727 bytes). On-image text: AN ALERT IS ONLY ANUDGE | It does not decide for you | Come read the three rows | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/012.png",
@@ -6091,43 +6315,68 @@
       "beat": 12,
       "chapter": "Common miss",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "8ab1d3f9710d1c4303ada75a4aeecb9c09ddb9c7",
-        "cursor/blueprint-beginner-images": "8ab1d3f9710d1c4303ada75a4aeecb9c09ddb9c7"
+        "cursor/blueprint-beginner-images": "67f3aeea0e847aca2005a4f33f9bcb465c69916a",
+        "cursor/blueprint-cursor-images": "67f3aeea0e847aca2005a4f33f9bcb465c69916a"
       },
       "beat_concept": "The common miss is to add a result row to the card.",
       "scores": {
-        "beginner_clarity": 3,
-        "composition_hierarchy": 4,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 3
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__012.txt",
-      "notes": "Card INSIDE / SIDE / SENTENCE with a crossed 'EXTRA' fourth row: close; but the beat names a RESULT row, and the stamp overlaps the rows; headline words run together ('FOURTHROW'). | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Card INSIDE / SIDE / SENTENCE with a crossed 'EXTRA' fourth row: close; but the beat names a RESULT row, and the stamp overlaps the rows; headline words run together ('FOURTHROW'). | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/012.png, blob 67f3aeea0e847aca2005a4f33f9bcb465c69916a, 1536x1024, 130491 bytes). On-image text: DO NOT ADD A RESULT ROW | Inside the band? | Above or below the middle? | Does your stop rule hold? | No result row | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 374,
-        "top": 110,
-        "bottom": 229
+        "left": 103,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/012.png",
-      "scored_blob": "8ab1d3f9710d1c4303ada75a4aeecb9c09ddb9c7",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-08-managing-and-monitoring/012.png",
+      "scored_blob": "67f3aeea0e847aca2005a4f33f9bcb465c69916a",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+      "pass": true,
+      "previous_committed_blob": "8ab1d3f9710d1c4303ada75a4aeecb9c09ddb9c7",
+      "remake_review": {
+        "file": "gen/bp-08-managing-and-monitoring/012/cursor1.png",
+        "blob": "67f3aeea0e847aca2005a4f33f9bcb465c69916a",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/012.png, blob 67f3aeea0e847aca2005a4f33f9bcb465c69916a, 1536x1024, 130491 bytes). On-image text: DO NOT ADD A RESULT ROW | Inside the band? | Above or below the middle? | Does your stop rule hold? | No result row | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/013.png",
@@ -6135,43 +6384,68 @@
       "beat": 13,
       "chapter": "After the check",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "5410164f4f9ad15643eb76f8d00a15668bc3207f",
-        "cursor/blueprint-beginner-images": "5410164f4f9ad15643eb76f8d00a15668bc3207f"
+        "cursor/blueprint-beginner-images": "421f09975fddcd90c6fde3b003d4d8a5f357de08",
+        "cursor/blueprint-cursor-images": "421f09975fddcd90c6fde3b003d4d8a5f357de08"
       },
       "beat_concept": "After the three answers, you stop or you write an edit. You do not hover.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__013.txt",
-      "notes": "'DONE' tile with a pencil and tiny EXAMPLE: 'stop or write an edit, don't hover' not shown; seam under headline strip. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "'DONE' tile with a pencil and tiny EXAMPLE: 'stop or write an edit, don't hover' not shown; seam under headline strip. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/013.png, blob 421f09975fddcd90c6fde3b003d4d8a5f357de08, 1536x1024, 114061 bytes). On-image text: THENYOU STOP | Answer the three questions | Stop, or write an edit | Do not keep watching | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 61,
-        "right": 412,
-        "top": 110,
-        "bottom": 275
+        "left": 101,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/013.png",
-      "scored_blob": "5410164f4f9ad15643eb76f8d00a15668bc3207f",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-08-managing-and-monitoring/013.png",
+      "scored_blob": "421f09975fddcd90c6fde3b003d4d8a5f357de08",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+      "pass": true,
+      "previous_committed_blob": "5410164f4f9ad15643eb76f8d00a15668bc3207f",
+      "remake_review": {
+        "file": "gen/bp-08-managing-and-monitoring/013/cursor1.png",
+        "blob": "421f09975fddcd90c6fde3b003d4d8a5f357de08",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 101,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/013.png, blob 421f09975fddcd90c6fde3b003d4d8a5f357de08, 1536x1024, 114061 bytes). On-image text: THENYOU STOP | Answer the three questions | Stop, or write an edit | Do not keep watching | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/014.png",
@@ -6179,43 +6453,68 @@
       "beat": 14,
       "chapter": "The action",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "4fd970c9ee4b6afc8692c1cef420993b07353899",
-        "cursor/blueprint-beginner-images": "4fd970c9ee4b6afc8692c1cef420993b07353899"
+        "cursor/blueprint-beginner-images": "12bfe709501756bfdec796850bcce1d1a1b5842e",
+        "cursor/blueprint-cursor-images": "12bfe709501756bfdec796850bcce1d1a1b5842e"
       },
       "beat_concept": "Build the three-row card on paper and run it once on a path you draw.",
       "scores": {
-        "beginner_clarity": 1,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 1
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__014.txt",
-      "notes": "Clipboard with 'EXAMPLE' under 'CLIPPED ON': does not show building a three-row card or running it on a drawn path. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Clipboard with 'EXAMPLE' under 'CLIPPED ON': does not show building a three-row card or running it on a drawn path. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/014.png, blob 12bfe709501756bfdec796850bcce1d1a1b5842e, 1536x1024, 115255 bytes). On-image text: WRITE THE THREE ROWS | Inside the band? | Above or below the middle? | Does your stop rule hold? | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 600,
-        "top": 110,
-        "bottom": 219
+        "left": 101,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/014.png",
-      "scored_blob": "4fd970c9ee4b6afc8692c1cef420993b07353899",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-08-managing-and-monitoring/014.png",
+      "scored_blob": "12bfe709501756bfdec796850bcce1d1a1b5842e",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+      "pass": true,
+      "previous_committed_blob": "4fd970c9ee4b6afc8692c1cef420993b07353899",
+      "remake_review": {
+        "file": "gen/bp-08-managing-and-monitoring/014/cursor1.png",
+        "blob": "12bfe709501756bfdec796850bcce1d1a1b5842e",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 101,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/014.png, blob 12bfe709501756bfdec796850bcce1d1a1b5842e, 1536x1024, 115255 bytes). On-image text: WRITE THE THREE ROWS | Inside the band? | Above or below the middle? | Does your stop rule hold? | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 101/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/015.png",
@@ -6223,43 +6522,68 @@
       "beat": 15,
       "chapter": "Recap",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "2cf525eef6f6870415dfa3784f85c41cdcd98b23",
-        "cursor/blueprint-beginner-images": "2cf525eef6f6870415dfa3784f85c41cdcd98b23"
+        "cursor/blueprint-beginner-images": "567b3f1ff9303e5279a46902b67425ef87f4ee91",
+        "cursor/blueprint-cursor-images": "567b3f1ff9303e5279a46902b67425ef87f4ee91"
       },
       "beat_concept": "Recap: inside, side, sentence, a cadence you chose, no result row, then stop.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__015.txt",
-      "notes": "Six small chips INSIDE / SIDE / SENTENCE / CADENCE / NO RESULT / STOP: word list recap, small type; seam under headline strip. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "Six small chips INSIDE / SIDE / SENTENCE / CADENCE / NO RESULT / STOP: word list recap, small type; seam under headline strip. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/015.png, blob 567b3f1ff9303e5279a46902b67425ef87f4ee91, 1536x1024, 129208 bytes). On-image text: RECAP | Inside the band? | Above or below the middle? | Does the stop rule hold? | A day you chose | No result row | Then stop | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/110/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 61,
-        "right": 483,
+        "left": 103,
+        "right": 120,
         "top": 110,
-        "bottom": 343
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/015.png",
-      "scored_blob": "2cf525eef6f6870415dfa3784f85c41cdcd98b23",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-08-managing-and-monitoring/015.png",
+      "scored_blob": "567b3f1ff9303e5279a46902b67425ef87f4ee91",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+      "pass": true,
+      "previous_committed_blob": "2cf525eef6f6870415dfa3784f85c41cdcd98b23",
+      "remake_review": {
+        "file": "gen/bp-08-managing-and-monitoring/015/cursor1.png",
+        "blob": "567b3f1ff9303e5279a46902b67425ef87f4ee91",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 110,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/015.png, blob 567b3f1ff9303e5279a46902b67425ef87f4ee91, 1536x1024, 129208 bytes). On-image text: RECAP | Inside the band? | Above or below the middle? | Does the stop rule hold? | A day you chose | No result row | Then stop | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/110/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/016.png",
@@ -6387,43 +6711,68 @@
       "beat": 19,
       "chapter": "Paper screen optional",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "fe4dd13cd809a6bd5b838d119dcd1f2e687f9076",
-        "cursor/blueprint-beginner-images": "fe4dd13cd809a6bd5b838d119dcd1f2e687f9076"
+        "cursor/blueprint-beginner-images": "b0b586c53a0d4170d48a89173c3e0f954ea95081",
+        "cursor/blueprint-cursor-images": "b0b586c53a0d4170d48a89173c3e0f954ea95081"
       },
       "beat_concept": "If you completed the paper walk, you may point the three rows at that paper screen.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
-      "hard_fails": [
-        "script rewrite b608319: on-image text must match the new narration"
-      ],
-      "status": "fail",
-      "action": "needs_remake",
+      "hard_fails": [],
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-08-managing-and-monitoring__019.txt",
-      "notes": "'DRAW / crossed LIVE / PAPER' icons under 'TWO SOURCES': the X sits on top of the word 'LIVE' (overlap); paper-screen idea unclear. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass.",
+      "notes": "'DRAW / crossed LIVE / PAPER' icons under 'TWO SOURCES': the X sits on top of the word 'LIVE' (overlap); paper-screen idea unclear. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\" Placed file left in place; do not treat the current still as a pass. | cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/019.png, blob b0b586c53a0d4170d48a89173c3e0f954ea95081, 1536x1024, 103704 bytes). On-image text: POINT AT THE PAPER SCREEN | Same three rows | On the paper, not a live order | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 60,
-        "right": 365,
-        "top": 110,
-        "bottom": 225
+        "left": 103,
+        "right": 120,
+        "top": 109,
+        "bottom": 95
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-08-managing-and-monitoring/019.png",
-      "scored_blob": "fe4dd13cd809a6bd5b838d119dcd1f2e687f9076",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-08-managing-and-monitoring/019.png",
+      "scored_blob": "b0b586c53a0d4170d48a89173c3e0f954ea95081",
       "committed": true,
-      "pass": false,
-      "reason": "script rewrite b608319: on-image text must match the new narration",
-      "fix_note": "Remake the set to the current beginner standard. Fails the no-cryptic-headline and no-tiny-label rules. Text should match each beat's narration, for example 004 \"THREE QUESTIONS: Inside the band? Above or below the middle? Does your stop rule hold?\""
+      "pass": true,
+      "previous_committed_blob": "fe4dd13cd809a6bd5b838d119dcd1f2e687f9076",
+      "remake_review": {
+        "file": "gen/bp-08-managing-and-monitoring/019/cursor1.png",
+        "blob": "b0b586c53a0d4170d48a89173c3e0f954ea95081",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 103,
+          "right": 120,
+          "top": 109,
+          "bottom": 95
+        },
+        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact, cross vs fill, and stop explained",
+        "source_commit": "36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7, identical at tip 3a1137a, course/images/bp-08-managing-and-monitoring/019.png, blob b0b586c53a0d4170d48a89173c3e0f954ea95081, 1536x1024, 103704 bytes). On-image text: POINT AT THE PAPER SCREEN | Same three rows | On the paper, not a live order | EXAMPLE. Matches the b608319/7a0430a narration and REPORT-b608319 replacement text. EXAMPLE present. No mascot. Margins 103/120/109/95. Placed, source cursor.",
+        "pass": true
+      }
     },
     {
       "path": "course/images/bp-08-managing-and-monitoring/020.png",

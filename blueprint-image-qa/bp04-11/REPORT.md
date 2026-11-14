@@ -506,3 +506,29 @@ Five fields are Pair / Top / Bottom / Gap count / Your two rules. No 'LINES' fie
 
 ### Updated counts
 - **BP-07: 18/20 — not 100%.** Other queued rows (not in this Cursor batch) remain.
+
+---
+
+## Cursor-agent remakes for bp-08-managing-and-monitoring used stills
+
+Scored from `36ceecfef79bc2f7066f1d2fe5b96c73dacaa4d7` (010 from `8cb7a75539553b75b2ef45ab38ac217e5052039e`). All 14 used stills PASS, placed, source cursor.
+
+| File | Result | Margins (l/r/t/b) | Scores | Blob |
+|---|---|---|---|---|
+| gen/bp-08-managing-and-monitoring/001/cursor1.png | PASS | 101/120/109/95 | 5/5/5/5/5/—/5 | `d8a2886cce33fa7aee0ea6b70e409c5e236420f1` |
+| gen/bp-08-managing-and-monitoring/004/cursor1.png | PASS | 102/120/109/95 | 5/5/5/5/5/—/5 | `63e47dd3bb825f5eadd18f2c6fe542081f3a8d83` |
+| gen/bp-08-managing-and-monitoring/005/cursor1.png | PASS | 102/206/111/164 | 5/5/5/5/5/—/5 | `51dfe88ce3c6e18bc05a8f9b0848900879d203f7` |
+| gen/bp-08-managing-and-monitoring/006/cursor1.png | PASS | 101/156/109/124 | 5/5/5/5/5/—/5 | `79a45bf55552254af086005bf535a88cf1c0d2dc` |
+| gen/bp-08-managing-and-monitoring/007/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `bf6cb9faf399916e13cb35a28b036772c6c15ec1` |
+| gen/bp-08-managing-and-monitoring/008/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `768469a2f381791a548037054b63c72619697232` |
+| gen/bp-08-managing-and-monitoring/009/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `a90f9745c04551c6beabbcc87781dc8b6b2f8c8a` |
+| gen/bp-08-managing-and-monitoring/010/cursor2.png | PASS | 102/176/109/144 | 5/5/5/5/5/—/5 | `6057bfeea6ef20a6a38cc8b86963c8844ef400a1` |
+| gen/bp-08-managing-and-monitoring/011/cursor1.png | PASS | 101/120/109/95 | 5/5/5/5/5/—/5 | `0b8cddc5dc8894ca127d784ffb4a5923e9eb8cf8` |
+| gen/bp-08-managing-and-monitoring/012/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `67f3aeea0e847aca2005a4f33f9bcb465c69916a` |
+| gen/bp-08-managing-and-monitoring/013/cursor1.png | PASS | 101/120/109/95 | 5/5/5/5/5/—/5 | `421f09975fddcd90c6fde3b003d4d8a5f357de08` |
+| gen/bp-08-managing-and-monitoring/014/cursor1.png | PASS | 101/120/109/95 | 5/5/5/5/5/—/5 | `12bfe709501756bfdec796850bcce1d1a1b5842e` |
+| gen/bp-08-managing-and-monitoring/015/cursor1.png | PASS | 103/120/110/95 | 5/5/5/5/5/—/5 | `567b3f1ff9303e5279a46902b67425ef87f4ee91` |
+| gen/bp-08-managing-and-monitoring/019/cursor1.png | PASS | 103/120/109/95 | 5/5/5/5/5/—/5 | `b0b586c53a0d4170d48a89173c3e0f954ea95081` |
+
+### Updated counts
+- **BP-08: 14/20 — not 100%.** Unused title / your-turn / outro rows remain in the queue and were not in this Cursor batch.
