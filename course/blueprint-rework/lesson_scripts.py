@@ -426,7 +426,7 @@ def bp03() -> list[dict]:
     s += stack("Recap", [
         "A grid here means limit orders waiting inside the measured band.",
         "Buys sit below 27630 in the picture. Sells sit above it.",
-        "The October leave left that picture behind.",
+        "When the path left the band in October, that picture no longer applied.",
     ], "Recap.")
     s.append(outro("Market regimes"))
     return s
