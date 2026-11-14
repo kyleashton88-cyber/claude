@@ -497,3 +497,31 @@ Fetched the authentic 1536×1024 file from `kyleashton88-cyber/claude@885ce9ee87
 - **BP-03: 28/28 — YES, 100%.**
 - **90-row total (BP-01..03): 90/90.**
 - Queue (BP-01..03): 0.
+
+---
+
+## Run on top of 98e520e — 14 Nov 2026 (WITA): six beginner-clarity remakes at 92d4f8a
+
+Fetched the authentic 1536×1024 RGB files from `kyleashton88-cyber/claude` via the public GitHub Contents API (base64). The six stills at `92d4f8ada798579a4beb48c945cfd3014d8bc633` are byte-identical at head `a7594f95947d42c23ed338dd4cd818e068c16cd0`. Git blobs match the API shas. Scored against the latest d1f6 scripts at `5f392b0d82031ab94ebf1ff90f8a5649e46b7d61`, the remake brief, and the full rubric (arrow tips must touch, EXAMPLE on figures, margins ≥45px luma>110, approved mascot only, beginner standalone test, standing arithmetic/label check). Script beat numbers (not the watch-list numbers): BP-02 8 / 12 / 14 and BP-03 8 / 9 / 14. All six are in the e03191f used set; BP-03 009 is used (001, 004–015, 018).
+
+| File | Result | Margins (l/r/t/b) | Scores | Blob |
+|---|---|---|---|---|
+| gen/bp-02-what-you-need/008/cursor1.png | PASS | 102/296/108/144 | 5/5/5/5/5/—/5 | `4aec81d55f41cd1c2eb561557c32baab33b24c77` |
+| gen/bp-02-what-you-need/012/cursor1.png | PASS | 101/120/110/244 | 5/5/5/5/5/—/5 | `7942b735948737624ce74f1382c45b79932ef44e` |
+| gen/bp-02-what-you-need/014/cursor4.png | PASS | 101/216/109/135 | 5/5/5/5/5/—/5 | `5c3e3829283056e2687328eee178be2395f021c4` |
+| gen/bp-03-what-is-a-grid-bot/008/cursor3.png | PASS | 109/120/106/124 | 5/5/5/5/5/—/5 | `a812c3b450c95d05201ab142d46cc15b186e9041` |
+| gen/bp-03-what-is-a-grid-bot/009/cursor1.png | PASS | 101/294/110/269 | 5/5/5/5/5/—/5 | `e059874c66945f2b24581b44a4c62eef2f1eac2f` |
+| gen/bp-03-what-is-a-grid-bot/014/cursor3.png | PASS | 109/136/105/164 | 5/5/5/5/5/—/5 | `8d1048a13e432b87d2e71b4bae8569a16058a00c` |
+
+- **BP-02 008 No secrets — PASS.** One lock; 'NEVER WRITE DOWN OR TYPE A SECRET'; 'Seed phrase, private key, API secret'. Arrow tip touches the lock. Does not contradict 012 (012 is about YOUR PAGE / the form, not a secret). No d1f6 lesson asks the viewer to type an API key into a form (BP-07 beat 7 says not to paste one).
+- **BP-02 012 The form copies the page — PASS.** '1. Write it on paper' / '2. Copy it into the form later', one arrow, tip touches. Clearly the plan/page.
+- **BP-02 014 Empty pair — PASS.** Single blank 'Pair' row, 'Fill this in first', EXAMPLE, tip touches.
+- **BP-03 008 Inventory — PASS.** Two large-type boxes (bounce vs leave). EXAMPLE. Cross vs fill and stop rules intact.
+- **BP-03 009 The bot's job — PASS (and used).** One straight arrow, fill then a new waiting order (fill is a solid square, not a cross). Tip touches. Matches the ALT / remake brief.
+- **BP-03 014 One-breath definition — PASS.** Four large word labels including 'Stop: your rule if price leaves'. EXAMPLE. Stop rule intact.
+
+### Updated counts
+- **BP-02 used stills: 15/15.** Ledger denominator still 20/20 lesson-stills, 31/31 all-rows.
+- **BP-03 used stills: 14/14.** Ledger denominator still 19/19 lesson-stills, 28/28 all-rows.
+- **90-row total (BP-01..03): 90/90.**
+- Queue (BP-01..03): 0.

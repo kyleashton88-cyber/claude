@@ -1606,41 +1606,71 @@
       "beat": 8,
       "chapter": "No secrets",
       "kind": "lesson-still",
-      "source": "committed still; image field of course/scripts/bp-02-what-you-need.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "fb4bb3e385c9d461e33179eaf0fa166534a00a04",
-        "cursor/blueprint-beginner-images": "fb4bb3e385c9d461e33179eaf0fa166534a00a04"
+        "cursor/blueprint-beginner-images": "4aec81d55f41cd1c2eb561557c32baab33b24c77",
+        "cursor/blueprint-cursor-images": "4aec81d55f41cd1c2eb561557c32baab33b24c77"
       },
       "beat_concept": "You never type a seed phrase, a private key, or an API secret into a lesson, a chat, or a form.",
       "scores": {
-        "beginner_clarity": 4,
-        "composition_hierarchy": 4,
-        "craft_polish": 4,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 4
+        "label_accuracy": 5
       },
       "hard_fails": [],
       "status": "pass",
-      "action": "passed_as_is",
+      "action": "none",
       "remake_prompt": null,
-      "notes": "Keys / Secret words / Passwords crossed off from a chat bubble, 'Never type them in a chat or form'; matches the beat.",
+      "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@92d4f8ada798579a4beb48c945cfd3014d8bc633, blob 4aec81d55f41cd1c2eb561557c32baab33b24c77, 1536x1024, 103195 bytes; identical at a7594f9). One lock. Headline 'NEVER WRITE DOWN OR TYPE A SECRET' exact and spaced (SECRET in cyan). Line 'Seed phrase, private key, API secret' exact (API spelled correctly). The label's upward arrow tip sits in the lock's bottom stroke (continuous cyan at x=768\u2013772, y=688\u2013700 into the shaft; no navy gap). Does not contradict BP-02 012: 008 names the secrets and says not to write or type them; 012's headline is 'THE FORM COPIES YOUR PAGE' and is about the plan/page, not a secret. No lesson in the d1f6 scripts at 5f392b0 asks the viewer to type an API key into a form (BP-07 beat 7 says you do not paste one). Opening teaching line of beat 8 at 5f392b0 matches. No mascot. GridBot Builder style only. Margins 102/296/108/144. In the e03191f used set (script beat 8, No secrets). Placed at out/ and course/images/bp-02-what-you-need/008.png (`source: cursor`).",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 71,
-        "right": 87,
-        "top": 60,
-        "bottom": 54
+        "left": 102,
+        "right": 296,
+        "top": 108,
+        "bottom": 144
       },
       "mascot_in_frame": false,
       "previous_v10_pass": true,
-      "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-02-what-you-need/008.png",
-      "scored_blob": "fb4bb3e385c9d461e33179eaf0fa166534a00a04",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-02-what-you-need/008.png",
+      "scored_blob": "4aec81d55f41cd1c2eb561557c32baab33b24c77",
       "committed": true,
-      "pass": true
+      "pass": true,
+      "previous_committed_blob": "fb4bb3e385c9d461e33179eaf0fa166534a00a04",
+      "remake_review": {
+        "file": "gen/bp-02-what-you-need/008/cursor1.png",
+        "blob": "4aec81d55f41cd1c2eb561557c32baab33b24c77",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 102,
+          "right": 296,
+          "top": 108,
+          "bottom": 144
+        },
+        "scored_against": "latest d1f6 scripts at 5f392b0 + remake brief + strict rubric including arrow contact, EXAMPLE on figures, standing arithmetic/label check",
+        "source_commit": "92d4f8ada798579a4beb48c945cfd3014d8bc633",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@92d4f8ada798579a4beb48c945cfd3014d8bc633, blob 4aec81d55f41cd1c2eb561557c32baab33b24c77, 1536x1024, 103195 bytes; identical at a7594f9). One lock. Headline 'NEVER WRITE DOWN OR TYPE A SECRET' exact and spaced (SECRET in cyan). Line 'Seed phrase, private key, API secret' exact (API spelled correctly). The label's upward arrow tip sits in the lock's bottom stroke (continuous cyan at x=768\u2013772, y=688\u2013700 into the shaft; no navy gap). Does not contradict BP-02 012: 008 names the secrets and says not to write or type them; 012's headline is 'THE FORM COPIES YOUR PAGE' and is about the plan/page, not a secret. No lesson in the d1f6 scripts at 5f392b0 asks the viewer to type an API key into a form (BP-07 beat 7 says you do not paste one). Opening teaching line of beat 8 at 5f392b0 matches. No mascot. GridBot Builder style only. Margins 102/296/108/144. In the e03191f used set (script beat 8, No secrets). Placed at out/ and course/images/bp-02-what-you-need/008.png (`source: cursor`).",
+        "pass": true,
+        "used_in_e03191f": true
+      }
     },
     {
       "path": "course/images/bp-02-what-you-need/009.png",
@@ -1800,41 +1830,71 @@
       "beat": 12,
       "chapter": "The form copies the page",
       "kind": "lesson-still",
-      "source": "committed still; image field of course/scripts/bp-02-what-you-need.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "7447d542631f63274d30e81459cb61327e38e284",
-        "cursor/blueprint-beginner-images": "7447d542631f63274d30e81459cb61327e38e284"
+        "cursor/blueprint-beginner-images": "7942b735948737624ce74f1382c45b79932ef44e",
+        "cursor/blueprint-cursor-images": "7942b735948737624ce74f1382c45b79932ef44e"
       },
       "beat_concept": "A later button, on paper, is only a copy of the page.",
       "scores": {
         "beginner_clarity": 5,
-        "composition_hierarchy": 4,
-        "craft_polish": 4,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 4
+        "label_accuracy": 5
       },
       "hard_fails": [],
       "status": "pass",
-      "action": "passed_as_is",
+      "action": "none",
       "remake_prompt": null,
-      "notes": "Notebook page copied row-by-row into a form; matches 'the form copies the page'.",
+      "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@92d4f8ada798579a4beb48c945cfd3014d8bc633, blob 7942b735948737624ce74f1382c45b79932ef44e, 1536x1024, 115101 bytes; identical at a7594f9). Headline 'THE FORM COPIES YOUR PAGE' exact and spaced (COPIES in cyan). One arrow. Labels '1. Write it on paper' / '2. Copy it into the form later'. The arrow tip sits on the right box's left stroke (tip x=836\u2013839 overlaps the stroke at x=836; no navy gap at contact). Clearly about the pair/plan, not a secret: the headline names YOUR PAGE and THE FORM. Consistent with 008. Matches the beat-12 opening line that the form is only a copy of the page. No mascot. GridBot Builder style only. Margins 101/120/110/244. In the e03191f used set (script beat 12). Placed at out/ and course/images/bp-02-what-you-need/012.png (`source: cursor`).",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 62,
-        "right": 113,
-        "top": 76,
-        "bottom": 73
+        "left": 101,
+        "right": 120,
+        "top": 110,
+        "bottom": 244
       },
       "mascot_in_frame": false,
       "previous_v10_pass": true,
-      "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-02-what-you-need/012.png",
-      "scored_blob": "7447d542631f63274d30e81459cb61327e38e284",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-02-what-you-need/012.png",
+      "scored_blob": "7942b735948737624ce74f1382c45b79932ef44e",
       "committed": true,
-      "pass": true
+      "pass": true,
+      "previous_committed_blob": "7447d542631f63274d30e81459cb61327e38e284",
+      "remake_review": {
+        "file": "gen/bp-02-what-you-need/012/cursor1.png",
+        "blob": "7942b735948737624ce74f1382c45b79932ef44e",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 101,
+          "right": 120,
+          "top": 110,
+          "bottom": 244
+        },
+        "scored_against": "latest d1f6 scripts at 5f392b0 + remake brief + strict rubric including arrow contact, EXAMPLE on figures, standing arithmetic/label check",
+        "source_commit": "92d4f8ada798579a4beb48c945cfd3014d8bc633",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@92d4f8ada798579a4beb48c945cfd3014d8bc633, blob 7942b735948737624ce74f1382c45b79932ef44e, 1536x1024, 115101 bytes; identical at a7594f9). Headline 'THE FORM COPIES YOUR PAGE' exact and spaced (COPIES in cyan). One arrow. Labels '1. Write it on paper' / '2. Copy it into the form later'. The arrow tip sits on the right box's left stroke (tip x=836\u2013839 overlaps the stroke at x=836; no navy gap at contact). Clearly about the pair/plan, not a secret: the headline names YOUR PAGE and THE FORM. Consistent with 008. Matches the beat-12 opening line that the form is only a copy of the page. No mascot. GridBot Builder style only. Margins 101/120/110/244. In the e03191f used set (script beat 12). Placed at out/ and course/images/bp-02-what-you-need/012.png (`source: cursor`).",
+        "pass": true,
+        "used_in_e03191f": true
+      }
     },
     {
       "path": "course/images/bp-02-what-you-need/013.png",
@@ -1887,8 +1947,8 @@
       "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "b1eb723cd8ce520677d7628e35103a3bf6182c50",
-        "cursor/blueprint-beginner-images": "70df3eddefb863a2ca26a15909506eb1ccc28991",
-        "cursor/blueprint-cursor-images": "70df3eddefb863a2ca26a15909506eb1ccc28991"
+        "cursor/blueprint-beginner-images": "5c3e3829283056e2687328eee178be2395f021c4",
+        "cursor/blueprint-cursor-images": "5c3e3829283056e2687328eee178be2395f021c4"
       },
       "beat_concept": "Look at the pair row and imagine it empty on purpose.",
       "scores": {
@@ -1904,34 +1964,34 @@
       "status": "pass",
       "action": "none",
       "remake_prompt": null,
-      "notes": "Form with the pair row empty and a pencil, 'Fill it later'; matches the beat. | REOPENED (script rewrite b608319: on-image text must match the new narration). Fix: \"AN EMPTY PAIR BLOCKS THE PAGE\": \"Pair box empty: not ready\" / \"Fill it in first\". Placed file left in place; do not treat the current still as a pass. | cursor cursor2.png FAIL (kyleashton88-cyber/claude@279cca96c54bbcffd4d7a9590d03130cd842a59d, course/images/bp-02-what-you-need/014.png, blob 765a72fc647a3ef7c0ce1959bcdc156a4a3c2d60, 1536x1024, 139415 bytes). Headline 'AN EMPTY PAIR BLOCKS THE PAGE' is exact and spaced. Required labels 'Pair box empty: not ready' and 'Fill it in first' are present. The Pair box is empty; Range, Levels and Stop are tidy and ticked; EXAMPLE present. Matches the narration (an empty pair blocks the page even if the rest of the list is tidy). No 'LEAVE THE PAIR BLANK' / 'Fill it later'. No mascot. Margins 100/116/109/124. But 'Pair box empty: not ready' tip stops short of the left cyan stroke of the empty Pair box (visible navy gap, about 3px). 'Fill it in first' tip already touches the bottom stroke of the same box. Placed file left in place. Next: cursor3.png. Fix: Lengthen the 'Pair box empty: not ready' arrow so its tip lands ON the left cyan stroke of the empty Pair box, overlapping the stroke, with no navy gap between the point and the box (it currently stops about 3px short). Keep the 'Fill it in first' tip on the bottom stroke of the same box \u2014 that tip already touches. Keep the headline 'AN EMPTY PAIR BLOCKS THE PAGE' and the labels 'Pair box empty: not ready' and 'Fill it in first', the empty Pair box with Range / Levels / Stop tidy and ticked, and EXAMPLE. | cursor cursor3.png PASS (kyleashton88-cyber/claude@885ce9ee877bc3ebb2b6b77f4b7f0294748c3221, course/images/bp-02-what-you-need/014.png, blob 70df3eddefb863a2ca26a15909506eb1ccc28991, 1536x1024, 139351 bytes). Diff vs cursor2 (765a72fc647a3ef7c0ce1959bcdc156a4a3c2d60): 1997 pixels changed, all in the 'Pair box empty: not ready' arrow (x=631\u2013982, y=323\u2013357); the tip now sits on and about 2px into the left cyan stroke of the empty Pair box (mid-head rows y=349\u2013350 are continuous cyan from the shaft through x=980\u2013982 into the stroke; no navy gap at the contact). The 'Fill it in first' tip is unchanged and still sits on the bottom stroke. Headline 'AN EMPTY PAIR BLOCKS THE PAGE' exact and spaced. Labels 'Pair box empty: not ready' and 'Fill it in first' exact. Pair box empty; Range, Levels and Stop tidy and ticked; EXAMPLE present. Matches the b608319/7a0430a narration (an empty pair blocks the page even if the rest of the list is tidy). No mascot. GridBot Builder style only. Margins 100/116/109/124. Placed at out/ and course/images/bp-02-what-you-need/014.png (`source: cursor`).",
+      "notes": "cursor cursor4.png PASS (kyleashton88-cyber/claude@92d4f8ada798579a4beb48c945cfd3014d8bc633, blob 5c3e3829283056e2687328eee178be2395f021c4, 1536x1024, 101130 bytes; identical at a7594f9). Headline 'AN EMPTY PAIR BLOCKS THE PAGE' exact and spaced (EMPTY in cyan). A single blank row labelled 'Pair', with 'Fill this in first'. EXAMPLE present. The upward arrow tip sits in the pair-row bottom stroke (continuous cyan at x=700 from y=571 through the stroke into the shaft; no navy gap). Matches the remake brief and the beat-14 opening line (look at the pair row empty on purpose). The 5f392b0 VO still says 'look for six quiet rows and one circled empty pair row'; this beginner remake is the single empty row only. The blocking idea is still clear. No mascot. GridBot Builder style only. Margins 101/216/109/135. In the e03191f used set (script beat 14, Empty pair). Placed at out/ and course/images/bp-02-what-you-need/014.png (`source: cursor`).",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 100,
-        "right": 116,
+        "left": 101,
+        "right": 216,
         "top": 109,
-        "bottom": 124
+        "bottom": 135
       },
       "mascot_in_frame": false,
       "previous_v10_pass": true,
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-02-what-you-need/014.png",
-      "scored_blob": "70df3eddefb863a2ca26a15909506eb1ccc28991",
+      "scored_blob": "5c3e3829283056e2687328eee178be2395f021c4",
       "committed": true,
       "pass": true,
       "remake_review": {
-        "file": "gen/bp-02-what-you-need/014/cursor3.png",
-        "blob": "70df3eddefb863a2ca26a15909506eb1ccc28991",
+        "file": "gen/bp-02-what-you-need/014/cursor4.png",
+        "blob": "5c3e3829283056e2687328eee178be2395f021c4",
         "size": "1536x1024",
         "margins_px": {
-          "left": 100,
-          "right": 116,
+          "left": 101,
+          "right": 216,
           "top": 109,
-          "bottom": 124
+          "bottom": 135
         },
-        "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact",
-        "source_commit": "885ce9ee877bc3ebb2b6b77f4b7f0294748c3221",
+        "scored_against": "latest d1f6 scripts at 5f392b0 + remake brief + strict rubric including arrow contact, EXAMPLE on figures, standing arithmetic/label check",
+        "source_commit": "92d4f8ada798579a4beb48c945cfd3014d8bc633",
         "source_repo": "kyleashton88-cyber/claude",
         "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
@@ -1944,8 +2004,9 @@
           "label_accuracy": 5
         },
         "hard_fails": [],
-        "notes": "cursor cursor3.png PASS (kyleashton88-cyber/claude@885ce9ee877bc3ebb2b6b77f4b7f0294748c3221, course/images/bp-02-what-you-need/014.png, blob 70df3eddefb863a2ca26a15909506eb1ccc28991, 1536x1024, 139351 bytes). Diff vs cursor2 (765a72fc647a3ef7c0ce1959bcdc156a4a3c2d60): 1997 pixels changed, all in the 'Pair box empty: not ready' arrow (x=631\u2013982, y=323\u2013357); the tip now sits on and about 2px into the left cyan stroke of the empty Pair box (mid-head rows y=349\u2013350 are continuous cyan from the shaft through x=980\u2013982 into the stroke; no navy gap at the contact). The 'Fill it in first' tip is unchanged and still sits on the bottom stroke. Headline 'AN EMPTY PAIR BLOCKS THE PAGE' exact and spaced. Labels 'Pair box empty: not ready' and 'Fill it in first' exact. Pair box empty; Range, Levels and Stop tidy and ticked; EXAMPLE present. Matches the b608319/7a0430a narration (an empty pair blocks the page even if the rest of the list is tidy). No mascot. GridBot Builder style only. Margins 100/116/109/124. Placed at out/ and course/images/bp-02-what-you-need/014.png (`source: cursor`).",
-        "pass": true
+        "notes": "cursor cursor4.png PASS (kyleashton88-cyber/claude@92d4f8ada798579a4beb48c945cfd3014d8bc633, blob 5c3e3829283056e2687328eee178be2395f021c4, 1536x1024, 101130 bytes; identical at a7594f9). Headline 'AN EMPTY PAIR BLOCKS THE PAGE' exact and spaced (EMPTY in cyan). A single blank row labelled 'Pair', with 'Fill this in first'. EXAMPLE present. The upward arrow tip sits in the pair-row bottom stroke (continuous cyan at x=700 from y=571 through the stroke into the shaft; no navy gap). Matches the remake brief and the beat-14 opening line (look at the pair row empty on purpose). The 5f392b0 VO still says 'look for six quiet rows and one circled empty pair row'; this beginner remake is the single empty row only. The blocking idea is still clear. No mascot. GridBot Builder style only. Margins 101/216/109/135. In the e03191f used set (script beat 14, Empty pair). Placed at out/ and course/images/bp-02-what-you-need/014.png (`source: cursor`).",
+        "pass": true,
+        "used_in_e03191f": true
       },
       "previous_remake_reviews": [
         {
@@ -1976,9 +2037,36 @@
           ],
           "notes": "cursor cursor2.png FAIL (kyleashton88-cyber/claude@279cca96c54bbcffd4d7a9590d03130cd842a59d, course/images/bp-02-what-you-need/014.png, blob 765a72fc647a3ef7c0ce1959bcdc156a4a3c2d60, 1536x1024, 139415 bytes). Headline 'AN EMPTY PAIR BLOCKS THE PAGE' is exact and spaced. Required labels 'Pair box empty: not ready' and 'Fill it in first' are present. The Pair box is empty; Range, Levels and Stop are tidy and ticked; EXAMPLE present. Matches the narration (an empty pair blocks the page even if the rest of the list is tidy). No 'LEAVE THE PAIR BLANK' / 'Fill it later'. No mascot. Margins 100/116/109/124. But 'Pair box empty: not ready' tip stops short of the left cyan stroke of the empty Pair box (visible navy gap, about 3px). 'Fill it in first' tip already touches the bottom stroke of the same box. Placed file left in place. Next: cursor3.png. Fix: Lengthen the 'Pair box empty: not ready' arrow so its tip lands ON the left cyan stroke of the empty Pair box, overlapping the stroke, with no navy gap between the point and the box (it currently stops about 3px short). Keep the 'Fill it in first' tip on the bottom stroke of the same box \u2014 that tip already touches. Keep the headline 'AN EMPTY PAIR BLOCKS THE PAGE' and the labels 'Pair box empty: not ready' and 'Fill it in first', the empty Pair box with Range / Levels / Stop tidy and ticked, and EXAMPLE.",
           "pass": false
+        },
+        {
+          "file": "gen/bp-02-what-you-need/014/cursor3.png",
+          "blob": "70df3eddefb863a2ca26a15909506eb1ccc28991",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 100,
+            "right": 116,
+            "top": 109,
+            "bottom": 124
+          },
+          "scored_against": "7a0430a / b608319 narration + REPORT-b608319 replacement text + strict rubric including arrow contact",
+          "source_commit": "885ce9ee877bc3ebb2b6b77f4b7f0294748c3221",
+          "source_repo": "kyleashton88-cyber/claude",
+          "source_branch": "cursor/blueprint-cursor-images",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 5,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 5
+          },
+          "hard_fails": [],
+          "notes": "cursor cursor3.png PASS (kyleashton88-cyber/claude@885ce9ee877bc3ebb2b6b77f4b7f0294748c3221, course/images/bp-02-what-you-need/014.png, blob 70df3eddefb863a2ca26a15909506eb1ccc28991, 1536x1024, 139351 bytes). Diff vs cursor2 (765a72fc647a3ef7c0ce1959bcdc156a4a3c2d60): 1997 pixels changed, all in the 'Pair box empty: not ready' arrow (x=631\u2013982, y=323\u2013357); the tip now sits on and about 2px into the left cyan stroke of the empty Pair box (mid-head rows y=349\u2013350 are continuous cyan from the shaft through x=980\u2013982 into the stroke; no navy gap at the contact). The 'Fill it in first' tip is unchanged and still sits on the bottom stroke. Headline 'AN EMPTY PAIR BLOCKS THE PAGE' exact and spaced. Labels 'Pair box empty: not ready' and 'Fill it in first' exact. Pair box empty; Range, Levels and Stop tidy and ticked; EXAMPLE present. Matches the b608319/7a0430a narration (an empty pair blocks the page even if the rest of the list is tidy). No mascot. GridBot Builder style only. Margins 100/116/109/124. Placed at out/ and course/images/bp-02-what-you-need/014.png (`source: cursor`).",
+          "pass": true
         }
       ],
-      "previous_committed_blob": "b1eb723cd8ce520677d7628e35103a3bf6182c50"
+      "previous_committed_blob": "70df3eddefb863a2ca26a15909506eb1ccc28991"
     },
     {
       "path": "course/images/bp-02-what-you-need/015.png",
@@ -2850,8 +2938,8 @@
       "kind": "lesson-still",
       "source": "cursor",
       "source_branches": {
-        "cursor/blueprint-cursor-images": "dfb2682bd28b0aac13407a5204128a76cc4a125b",
-        "cursor/blueprint-beginner-images": "dfb2682bd28b0aac13407a5204128a76cc4a125b"
+        "cursor/blueprint-cursor-images": "a812c3b450c95d05201ab142d46cc15b186e9041",
+        "cursor/blueprint-beginner-images": "a812c3b450c95d05201ab142d46cc15b186e9041"
       },
       "beat_concept": "Inventory is what you hold when the fills are uneven.",
       "scores": {
@@ -2867,34 +2955,34 @@
       "status": "pass",
       "action": "none",
       "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__008.txt",
-      "notes": "cursor cursor2.png PASS (kyleashton88-cyber/claude@733943d899af3f00b23c174ee6bbaa2690d44130, course/images/bp-03-what-is-a-grid-bot/008.png, blob dfb2682bd28b0aac13407a5204128a76cc4a125b, 1536x1024, 156933 bytes). On-image text is exactly the required wording: headline 'WHAT YOU HOLD CHANGES'; left 'Price bounces: coin and cash swap back and forth'; right 'Price leaves: mostly coin or mostly cash'. The word 'balanced' does not appear. Left panel shows a path staying inside the band with even blue and mint piles; right panel shows the path leaving the band with one tall pile and one short pile. EXAMPLE present. No arrows. No mascot. GridBot Builder style only. Margins 96/96/120/114. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/008.png (`source: cursor`).",
+      "notes": "cursor cursor3.png PASS (kyleashton88-cyber/claude@92d4f8ada798579a4beb48c945cfd3014d8bc633, blob a812c3b450c95d05201ab142d46cc15b186e9041, 1536x1024, 175887 bytes; identical at a7594f9). Headline 'WHAT YOU HOLD CHANGES' exact and spaced (HOLD in cyan). Two large-type boxes. Top: 'Price bounces: coin and cash swap back and forth' with a path staying in the band and even blue/mint bars. Bottom: 'Price leaves: mostly coin or mostly cash' with the path leaving the band and one heavy bar / one thin bar. EXAMPLE present. No arrows. Cross vs fill and stop rules intact (inventory mix, not profits; leaving the band is not labelled as a fill or a stop). Matches the remake brief, the ALT, and the beat-8 teaching that holdings change when price bounces vs leaves. No mascot. GridBot Builder style only. Margins 109/120/106/124. In the e03191f used set (script beat 8, Inventory). Placed at out/ and course/images/bp-03-what-is-a-grid-bot/008.png (`source: cursor`).",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 96,
-        "right": 96,
-        "top": 120,
-        "bottom": 114
+        "left": 109,
+        "right": 120,
+        "top": 106,
+        "bottom": 124
       },
       "mascot_in_frame": false,
       "previous_v10_pass": true,
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/008.png",
-      "scored_blob": "dfb2682bd28b0aac13407a5204128a76cc4a125b",
+      "scored_blob": "a812c3b450c95d05201ab142d46cc15b186e9041",
       "committed": true,
       "pass": true,
       "remake_review": {
-        "file": "gen/bp-03-what-is-a-grid-bot/008/cursor2.png",
-        "blob": "dfb2682bd28b0aac13407a5204128a76cc4a125b",
+        "file": "gen/bp-03-what-is-a-grid-bot/008/cursor3.png",
+        "blob": "a812c3b450c95d05201ab142d46cc15b186e9041",
         "size": "1536x1024",
         "margins_px": {
-          "left": 96,
-          "right": 96,
-          "top": 120,
-          "bottom": 114
+          "left": 109,
+          "right": 120,
+          "top": 106,
+          "bottom": 124
         },
-        "scored_against": "7a0430a narration + REPORT-b608319 replacement text (hold-changes wording, no 'balanced') + strict rubric",
-        "source_commit": "733943d899af3f00b23c174ee6bbaa2690d44130",
+        "scored_against": "latest d1f6 scripts at 5f392b0 + remake brief + strict rubric including arrow contact, EXAMPLE on figures, standing arithmetic/label check",
+        "source_commit": "92d4f8ada798579a4beb48c945cfd3014d8bc633",
         "source_repo": "kyleashton88-cyber/claude",
         "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
@@ -2907,10 +2995,11 @@
           "label_accuracy": 5
         },
         "hard_fails": [],
-        "notes": "cursor cursor2.png PASS (kyleashton88-cyber/claude@733943d899af3f00b23c174ee6bbaa2690d44130, course/images/bp-03-what-is-a-grid-bot/008.png, blob dfb2682bd28b0aac13407a5204128a76cc4a125b, 1536x1024, 156933 bytes). On-image text is exactly the required wording: headline 'WHAT YOU HOLD CHANGES'; left 'Price bounces: coin and cash swap back and forth'; right 'Price leaves: mostly coin or mostly cash'. The word 'balanced' does not appear. Left panel shows a path staying inside the band with even blue and mint piles; right panel shows the path leaving the band with one tall pile and one short pile. EXAMPLE present. No arrows. No mascot. GridBot Builder style only. Margins 96/96/120/114. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/008.png (`source: cursor`).",
-        "pass": true
+        "notes": "cursor cursor3.png PASS (kyleashton88-cyber/claude@92d4f8ada798579a4beb48c945cfd3014d8bc633, blob a812c3b450c95d05201ab142d46cc15b186e9041, 1536x1024, 175887 bytes; identical at a7594f9). Headline 'WHAT YOU HOLD CHANGES' exact and spaced (HOLD in cyan). Two large-type boxes. Top: 'Price bounces: coin and cash swap back and forth' with a path staying in the band and even blue/mint bars. Bottom: 'Price leaves: mostly coin or mostly cash' with the path leaving the band and one heavy bar / one thin bar. EXAMPLE present. No arrows. Cross vs fill and stop rules intact (inventory mix, not profits; leaving the band is not labelled as a fill or a stop). Matches the remake brief, the ALT, and the beat-8 teaching that holdings change when price bounces vs leaves. No mascot. GridBot Builder style only. Margins 109/120/106/124. In the e03191f used set (script beat 8, Inventory). Placed at out/ and course/images/bp-03-what-is-a-grid-bot/008.png (`source: cursor`).",
+        "pass": true,
+        "used_in_e03191f": true
       },
-      "previous_committed_blob": "852452ee56f4cb5150f69471a1a37f27b41e74fd",
+      "previous_committed_blob": "dfb2682bd28b0aac13407a5204128a76cc4a125b",
       "source_detail": "ChatGPT web render gen/bp-03-what-is-a-grid-bot/008/web1.png (prompt specs/remake/bp-03-what-is-a-grid-bot__008.txt), saved via out/course/images/bp-03-what-is-a-grid-bot/008.png at 1536x1024 (already 3:2, no fill needed)",
       "previous_remake_reviews": [
         {
@@ -2960,6 +3049,33 @@
           "hard_fails": [],
           "notes": "Left card: price weaves inside the band, blue and mint boxes the same height. Right card: price drops out through the bottom line and stays below; one tall blue box and a nearly empty mint box. Captions \"Inside the band: balanced\" and \"Price left: one side piles up\" with no arrows, as specified. EXAMPLE stamp inside the right card. No coins or currency.",
           "pass": true
+        },
+        {
+          "file": "gen/bp-03-what-is-a-grid-bot/008/cursor2.png",
+          "blob": "dfb2682bd28b0aac13407a5204128a76cc4a125b",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 96,
+            "right": 96,
+            "top": 120,
+            "bottom": 114
+          },
+          "scored_against": "7a0430a narration + REPORT-b608319 replacement text (hold-changes wording, no 'balanced') + strict rubric",
+          "source_commit": "733943d899af3f00b23c174ee6bbaa2690d44130",
+          "source_repo": "kyleashton88-cyber/claude",
+          "source_branch": "cursor/blueprint-cursor-images",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 5,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 5
+          },
+          "hard_fails": [],
+          "notes": "cursor cursor2.png PASS (kyleashton88-cyber/claude@733943d899af3f00b23c174ee6bbaa2690d44130, course/images/bp-03-what-is-a-grid-bot/008.png, blob dfb2682bd28b0aac13407a5204128a76cc4a125b, 1536x1024, 156933 bytes). On-image text is exactly the required wording: headline 'WHAT YOU HOLD CHANGES'; left 'Price bounces: coin and cash swap back and forth'; right 'Price leaves: mostly coin or mostly cash'. The word 'balanced' does not appear. Left panel shows a path staying inside the band with even blue and mint piles; right panel shows the path leaving the band with one tall pile and one short pile. EXAMPLE present. No arrows. No mascot. GridBot Builder style only. Margins 96/96/120/114. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/008.png (`source: cursor`).",
+          "pass": true
         }
       ]
     },
@@ -2969,41 +3085,71 @@
       "beat": 9,
       "chapter": "The bot's job",
       "kind": "lesson-still",
-      "source": "committed still; image field of course/scripts/bp-03-what-is-a-grid-bot.json @ cursor/blueprint-professional-rebuild-d1f6 fbb3f9c; identical blob on d1f6@fbb3f9c and cursor/blueprint-beginner-images@2f8bac1",
+      "source": "cursor",
       "source_branches": {
         "cursor/blueprint-professional-rebuild-d1f6": "a6786f508275cb303822f793e626e3a0e503b26d",
-        "cursor/blueprint-beginner-images": "a6786f508275cb303822f793e626e3a0e503b26d"
+        "cursor/blueprint-beginner-images": "e059874c66945f2b24581b44a4c62eef2f1eac2f",
+        "cursor/blueprint-cursor-images": "e059874c66945f2b24581b44a4c62eef2f1eac2f"
       },
       "beat_concept": "The bot's job, if you use one, is to keep the written rungs in the market.",
       "scores": {
-        "beginner_clarity": 4,
-        "composition_hierarchy": 4,
-        "craft_polish": 4,
-        "brand_fidelity": 4,
-        "text_legibility": 4,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 5,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 4
+        "label_accuracy": 5
       },
       "hard_fails": [],
       "status": "pass",
-      "action": "passed_as_is",
+      "action": "none",
       "remake_prompt": null,
-      "notes": "Rungs with mint sells above and blue buys below, 'Bot's job: keep your orders waiting' / 'At the prices you wrote'; matches the clerical job in the beat.",
+      "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@92d4f8ada798579a4beb48c945cfd3014d8bc633, blob e059874c66945f2b24581b44a4c62eef2f1eac2f, 1536x1024, 101243 bytes; identical at a7594f9). Headline 'A FILL, THEN THE NEXT LINE' exact and spaced (NEXT LINE in cyan). One straight downward arrow. A solid square (a fill, not a cross) sits on a line; an empty rounded waiting-order sits on the next line. Labels 'An order fills' / 'A new order waits on the next line'. The arrow tip sits in the waiting-order top stroke (continuous cyan at x=399\u2013400 from the fill through y=667 into the box top; no navy gap). Cross vs fill and stop rules intact. Matches the remake brief and the 5f392b0 ALT ('After an order fills, the bot puts a new waiting order on the next line'). The VO still has leftover 'Mine and Clerical' pointing language; the picture teaches the fill-then-next-line job, which is how the bot keeps rungs in the market. No EXAMPLE stamp (the current passed 009 also has none). No mascot. GridBot Builder style only. Margins 101/294/110/269. In the e03191f used set (script beat 9, The bot's job) \u2014 confirmed used. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/009.png (`source: cursor`).",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 85,
-        "right": 110,
-        "top": 98,
-        "bottom": 117
+        "left": 101,
+        "right": 294,
+        "top": 110,
+        "bottom": 269
       },
       "mascot_in_frame": false,
       "previous_v10_pass": true,
-      "scored_file": "/workspace/blueprint-beginner/bp01-03-qa/src/bp-03-what-is-a-grid-bot/009.png",
-      "scored_blob": "a6786f508275cb303822f793e626e3a0e503b26d",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/009.png",
+      "scored_blob": "e059874c66945f2b24581b44a4c62eef2f1eac2f",
       "committed": true,
-      "pass": true
+      "pass": true,
+      "previous_committed_blob": "a6786f508275cb303822f793e626e3a0e503b26d",
+      "remake_review": {
+        "file": "gen/bp-03-what-is-a-grid-bot/009/cursor1.png",
+        "blob": "e059874c66945f2b24581b44a4c62eef2f1eac2f",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 101,
+          "right": 294,
+          "top": 110,
+          "bottom": 269
+        },
+        "scored_against": "latest d1f6 scripts at 5f392b0 + remake brief + strict rubric including arrow contact, EXAMPLE on figures, standing arithmetic/label check",
+        "source_commit": "92d4f8ada798579a4beb48c945cfd3014d8bc633",
+        "source_repo": "kyleashton88-cyber/claude",
+        "source_branch": "cursor/blueprint-cursor-images",
+        "scores": {
+          "beginner_clarity": 5,
+          "composition_hierarchy": 5,
+          "craft_polish": 5,
+          "brand_fidelity": 5,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 5
+        },
+        "hard_fails": [],
+        "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@92d4f8ada798579a4beb48c945cfd3014d8bc633, blob e059874c66945f2b24581b44a4c62eef2f1eac2f, 1536x1024, 101243 bytes; identical at a7594f9). Headline 'A FILL, THEN THE NEXT LINE' exact and spaced (NEXT LINE in cyan). One straight downward arrow. A solid square (a fill, not a cross) sits on a line; an empty rounded waiting-order sits on the next line. Labels 'An order fills' / 'A new order waits on the next line'. The arrow tip sits in the waiting-order top stroke (continuous cyan at x=399\u2013400 from the fill through y=667 into the box top; no navy gap). Cross vs fill and stop rules intact. Matches the remake brief and the 5f392b0 ALT ('After an order fills, the bot puts a new waiting order on the next line'). The VO still has leftover 'Mine and Clerical' pointing language; the picture teaches the fill-then-next-line job, which is how the bot keeps rungs in the market. No EXAMPLE stamp (the current passed 009 also has none). No mascot. GridBot Builder style only. Margins 101/294/110/269. In the e03191f used set (script beat 9, The bot's job) \u2014 confirmed used. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/009.png (`source: cursor`).",
+        "pass": true,
+        "used_in_e03191f": true
+      }
     },
     {
       "path": "course/images/bp-03-what-is-a-grid-bot/010.png",
@@ -3293,8 +3439,8 @@
       "kind": "lesson-still",
       "source": "cursor",
       "source_branches": {
-        "cursor/blueprint-cursor-images": "b9c4ad09e80cf670bc3eb332da1f4f64334421e8",
-        "cursor/blueprint-beginner-images": "b9c4ad09e80cf670bc3eb332da1f4f64334421e8"
+        "cursor/blueprint-cursor-images": "8d1048a13e432b87d2e71b4bae8569a16058a00c",
+        "cursor/blueprint-beginner-images": "8d1048a13e432b87d2e71b4bae8569a16058a00c"
       },
       "beat_concept": "In one breath: waiting limit orders, inside a band, with a written stop, and inventory that changes as rungs fill.",
       "scores": {
@@ -3310,34 +3456,34 @@
       "status": "pass",
       "action": "none",
       "remake_prompt": "specs/remake/bp-03-what-is-a-grid-bot__014.txt",
-      "notes": "cursor cursor2.png PASS (kyleashton88-cyber/claude@733943d899af3f00b23c174ee6bbaa2690d44130, course/images/bp-03-what-is-a-grid-bot/014.png, blob b9c4ad09e80cf670bc3eb332da1f4f64334421e8, 1536x1024, 152329 bytes). Large labels are exactly the required wording: 'Orders wait' / 'Inside your range' / 'Stop: your rule if price leaves' / 'What you hold changes'. All seven arrow tips touch: Orders wait on the bottom border of the blue ticket; Inside your range on the bottom white border of the range box; Stop on the bottom gold border of the amber sentence card; What you hold changes on the bottom cyan frame of the left jar (continuous cyan, no dark valley); scene tickets\u2192range on the left white border of the range box; scene range\u2192stop on the left gold border of the amber card; scene stop\u2192jars on the face of the left jar. Headline 'THE WHOLE IDEA IN ONE BREATH' exact and spaced. EXAMPLE present. No mascot. GridBot Builder style only. Margins 90/90/109/104. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/014.png (`source: cursor`).",
+      "notes": "cursor cursor3.png PASS (kyleashton88-cyber/claude@92d4f8ada798579a4beb48c945cfd3014d8bc633, blob 8d1048a13e432b87d2e71b4bae8569a16058a00c, 1536x1024, 159464 bytes; identical at a7594f9). Headline 'THE WHOLE IDEA IN ONE BREATH' exact and spaced (ONE in cyan). Four large word labels: 'Orders wait'; 'Inside your range'; 'Stop: your rule if price leaves'; 'What you hold changes'. Stop rule intact. No cross/fill confusion. EXAMPLE present. No arrows (the words are the figure). Matches the remake brief, the ALT, and the beat-14 one-breath definition (waiting orders, inside a band, a stop if price leaves, holdings change). No mascot. GridBot Builder style only. Margins 109/136/105/164. In the e03191f used set (script beat 14, One-breath definition). Placed at out/ and course/images/bp-03-what-is-a-grid-bot/014.png (`source: cursor`).",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 90,
-        "right": 90,
-        "top": 109,
-        "bottom": 104
+        "left": 109,
+        "right": 136,
+        "top": 105,
+        "bottom": 164
       },
       "mascot_in_frame": false,
       "previous_v10_pass": true,
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-03-what-is-a-grid-bot/014.png",
-      "scored_blob": "b9c4ad09e80cf670bc3eb332da1f4f64334421e8",
+      "scored_blob": "8d1048a13e432b87d2e71b4bae8569a16058a00c",
       "committed": true,
       "pass": true,
       "remake_review": {
-        "file": "gen/bp-03-what-is-a-grid-bot/014/cursor2.png",
-        "blob": "b9c4ad09e80cf670bc3eb332da1f4f64334421e8",
+        "file": "gen/bp-03-what-is-a-grid-bot/014/cursor3.png",
+        "blob": "8d1048a13e432b87d2e71b4bae8569a16058a00c",
         "size": "1536x1024",
         "margins_px": {
-          "left": 90,
-          "right": 90,
-          "top": 109,
-          "bottom": 104
+          "left": 109,
+          "right": 136,
+          "top": 105,
+          "bottom": 164
         },
-        "scored_against": "7a0430a narration + REPORT-b608319 replacement text (large one-breath labels) + strict rubric including arrow contact",
-        "source_commit": "733943d899af3f00b23c174ee6bbaa2690d44130",
+        "scored_against": "latest d1f6 scripts at 5f392b0 + remake brief + strict rubric including arrow contact, EXAMPLE on figures, standing arithmetic/label check",
+        "source_commit": "92d4f8ada798579a4beb48c945cfd3014d8bc633",
         "source_repo": "kyleashton88-cyber/claude",
         "source_branch": "cursor/blueprint-cursor-images",
         "scores": {
@@ -3350,10 +3496,11 @@
           "label_accuracy": 5
         },
         "hard_fails": [],
-        "notes": "cursor cursor2.png PASS (kyleashton88-cyber/claude@733943d899af3f00b23c174ee6bbaa2690d44130, course/images/bp-03-what-is-a-grid-bot/014.png, blob b9c4ad09e80cf670bc3eb332da1f4f64334421e8, 1536x1024, 152329 bytes). Large labels are exactly the required wording: 'Orders wait' / 'Inside your range' / 'Stop: your rule if price leaves' / 'What you hold changes'. All seven arrow tips touch: Orders wait on the bottom border of the blue ticket; Inside your range on the bottom white border of the range box; Stop on the bottom gold border of the amber sentence card; What you hold changes on the bottom cyan frame of the left jar (continuous cyan, no dark valley); scene tickets\u2192range on the left white border of the range box; scene range\u2192stop on the left gold border of the amber card; scene stop\u2192jars on the face of the left jar. Headline 'THE WHOLE IDEA IN ONE BREATH' exact and spaced. EXAMPLE present. No mascot. GridBot Builder style only. Margins 90/90/109/104. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/014.png (`source: cursor`).",
-        "pass": true
+        "notes": "cursor cursor3.png PASS (kyleashton88-cyber/claude@92d4f8ada798579a4beb48c945cfd3014d8bc633, blob 8d1048a13e432b87d2e71b4bae8569a16058a00c, 1536x1024, 159464 bytes; identical at a7594f9). Headline 'THE WHOLE IDEA IN ONE BREATH' exact and spaced (ONE in cyan). Four large word labels: 'Orders wait'; 'Inside your range'; 'Stop: your rule if price leaves'; 'What you hold changes'. Stop rule intact. No cross/fill confusion. EXAMPLE present. No arrows (the words are the figure). Matches the remake brief, the ALT, and the beat-14 one-breath definition (waiting orders, inside a band, a stop if price leaves, holdings change). No mascot. GridBot Builder style only. Margins 109/136/105/164. In the e03191f used set (script beat 14, One-breath definition). Placed at out/ and course/images/bp-03-what-is-a-grid-bot/014.png (`source: cursor`).",
+        "pass": true,
+        "used_in_e03191f": true
       },
-      "previous_committed_blob": "4e46857c12e6326a1bfad6df8655bc645803c171",
+      "previous_committed_blob": "b9c4ad09e80cf670bc3eb332da1f4f64334421e8",
       "previous_remake_reviews": [
         {
           "file": "gen/bp-03-what-is-a-grid-bot/014/web1.png",
@@ -3431,6 +3578,33 @@
           },
           "hard_fails": [],
           "notes": "cursor cursor1.png PASS (kyleashton88-cyber/claude@5bc8ab05c493a1f649f32b8bb20d4b0f9503896c, course/images/bp-03-what-is-a-grid-bot/014.png, blob 60636bd1e4407db467fa059bc3f4e1e5903cb39d, 1536x1024, 147550 bytes). Stop label is 'Stop: the sentence for when the path leaves the band' (two lines; no bare 'Stop written'). All seven arrow tips touch: 'Orders wait' on the bottom of the blue ticket; 'Inside your range' on the bottom white border of the range box; 'Stop' on the bottom gold border of the amber sentence card; 'Holdings change' on the bottom cyan frame of the left jar (continuous cyan, no dark valley); scene tickets\u2192range on the left white border of the range box; scene range\u2192stop on the left gold border of the amber card; scene stop\u2192jars on the face of the left jar (tip inside the left frame). Headline 'GRID BOT IN ONE BREATH' exact and spaced. EXAMPLE present. Four icons teach the one-breath definition (checked tickets; zig-zag in a band; amber sentence card, not a stop sign; blue and mint jars). No mascot. GridBot Builder style only. Margins 90/90/111/104. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/014.png (`source: cursor`).",
+          "pass": true
+        },
+        {
+          "file": "gen/bp-03-what-is-a-grid-bot/014/cursor2.png",
+          "blob": "b9c4ad09e80cf670bc3eb332da1f4f64334421e8",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 90,
+            "right": 90,
+            "top": 109,
+            "bottom": 104
+          },
+          "scored_against": "7a0430a narration + REPORT-b608319 replacement text (large one-breath labels) + strict rubric including arrow contact",
+          "source_commit": "733943d899af3f00b23c174ee6bbaa2690d44130",
+          "source_repo": "kyleashton88-cyber/claude",
+          "source_branch": "cursor/blueprint-cursor-images",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 5,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 5
+          },
+          "hard_fails": [],
+          "notes": "cursor cursor2.png PASS (kyleashton88-cyber/claude@733943d899af3f00b23c174ee6bbaa2690d44130, course/images/bp-03-what-is-a-grid-bot/014.png, blob b9c4ad09e80cf670bc3eb332da1f4f64334421e8, 1536x1024, 152329 bytes). Large labels are exactly the required wording: 'Orders wait' / 'Inside your range' / 'Stop: your rule if price leaves' / 'What you hold changes'. All seven arrow tips touch: Orders wait on the bottom border of the blue ticket; Inside your range on the bottom white border of the range box; Stop on the bottom gold border of the amber sentence card; What you hold changes on the bottom cyan frame of the left jar (continuous cyan, no dark valley); scene tickets\u2192range on the left white border of the range box; scene range\u2192stop on the left gold border of the amber card; scene stop\u2192jars on the face of the left jar. Headline 'THE WHOLE IDEA IN ONE BREATH' exact and spaced. EXAMPLE present. No mascot. GridBot Builder style only. Margins 90/90/109/104. Placed at out/ and course/images/bp-03-what-is-a-grid-bot/014.png (`source: cursor`).",
           "pass": true
         }
       ]
