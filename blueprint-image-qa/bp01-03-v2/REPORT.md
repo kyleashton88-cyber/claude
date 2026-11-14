@@ -355,3 +355,25 @@ Same perfect-run rules (every category at least 4/5, no hard fails; every arrow 
 - **BP-03: 28/28 — YES, 100%.**
 - **92-row total: 88/92.**
 - ChatGPT queue (BP-01..03): 4 — bp-01-introduction/001 (gen/bp-01-introduction/001/web3.png), bp-01-introduction/007 (gen/bp-01-introduction/007/web4.png), bp-02-what-you-need/016 (gen/bp-02-what-you-need/016/web3.png), bp-02-what-you-need/021 (gen/bp-02-what-you-need/021/web2.png).
+
+
+---
+
+## Run on top of 0cc141a — 14 Nov 2026 (WITA): remake scoring for BP-01 001/007 and BP-02 016
+
+Same perfect-run rules (every category at least 4/5, no hard fails; every arrow tip, panel connectors included, must visibly touch its target; doubt = fail). These renders used the prompts current when the batch started and were scored on their own merits against the beat. Headlines match their jobs; no mismatches.
+
+| File | Result | Margins (l/r/t/b) | Reason |
+|---|---|---|---|
+| gen/bp-01-introduction/001/web3.png | PASS | 72/97/89/178 | All three tips now touch (Top price on the top dashed line, Bottom price on the bottom dashed line, Price bouncing on a rising zig-zag stroke). Peaks and troughs meet the dashed lines. Headline spaced; EXAMPLE present. Placed at out/ and course/images/bp-01-introduction/001.png (`source: chatgpt-web`, scored_blob 13c35d1ceb928a1ee7e4cf884583e1d45d91c480). Removed from the queue. |
+| gen/bp-01-introduction/007/web4.png | FAIL | 79/94/69/137 | Ladder is correct (4 mint above, 4 blue below, one dot each; tags at the right heights). 'Price now' and 'Buy orders below' tips now touch. But 'Sell orders above' still stops short of the left end of the second mint rung (visible navy gap, about 4-8px). Next: web5.png on the v5 prompt (v4 moved to specs/remake/_superseded/bp-01-introduction__007.v4.txt). |
+| gen/bp-02-what-you-need/016/web3.png | PASS | 68/53/67/114 | Seven boxes and seven lines; first box ticked; pencil on the page. 'Tick each one' tip on the first tick box; 'Copy the 7 lines' tip on the fourth row line. Headline spaced. Placed (`scored_blob` 7849a509812a57a068bf066370625c7d7ded397c). Removed from the queue. |
+
+021 was not in this batch and stays queued at web2/v3.
+
+### Updated counts (92-row list)
+- **BP-01: 31/32 — NOT 100%.** Rows left: 007 (web5, v5).
+- **BP-02: 31/32 — NOT 100%.** Rows left: 021 (web2, v3).
+- **BP-03: 28/28 — YES, 100%.**
+- **92-row total: 90/92.**
+- ChatGPT queue (BP-01..03): 2 — bp-01-introduction/007 (gen/bp-01-introduction/007/web5.png), bp-02-what-you-need/021 (gen/bp-02-what-you-need/021/web2.png).

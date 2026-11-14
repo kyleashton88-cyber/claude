@@ -400,3 +400,21 @@ Same perfect-run rules (every category at least 4/5, no hard fails; every arrow 
 **BP-07: 16/20 — NOT 100%.** Rows left: 003 (gen/bp-07-spot-paper-trading/003/web2.png), 005 (gen/bp-07-spot-paper-trading/005/web2.png), 019 (gen/bp-07-spot-paper-trading/019/web2.png), 020 (gen/bp-07-spot-paper-trading/020/web2.png).
 
 Updated ChatGPT queue (BP-04..11): 101 items.
+
+
+---
+
+## Run on top of 0cc141a — 14 Nov 2026 (WITA): remake scoring for BP-04 006
+
+Same perfect-run rules (every category at least 4/5, no hard fails; every arrow tip, panel connectors included, must visibly touch its target; doubt = fail). The render used the prompt current when the batch started and was scored on its own merits against the beat. Headline matches its job; no mismatch.
+
+| File | Result | Margins (l/r/t/b) | Reason |
+|---|---|---|---|
+| gen/bp-04-market-regimes/006/web4.png | PASS | 78/77/81/153 | Three rungs; clean start and end; every crossing dotted. 'Each dot = an order filling' tip now lands on a glowing crossing-dot (the v3 miss). 'Price crosses the same lines again and again' tip sits on the middle rung. EXAMPLE present. Placed at out/ and course/images/bp-04-market-regimes/006.png (`source: chatgpt-web`, scored_blob a9936e9997ea49f1b9c7b63a43b8b9f376a1dd8d). Removed from the queue. |
+
+**BP-04: 17/20 — NOT 100%.** Rows left: 007 (gen/bp-04-market-regimes/007/web3.png), 011 (gen/bp-04-market-regimes/011/web3.png), 015 (gen/bp-04-market-regimes/015/web3.png).
+**BP-05: 16/19 — NOT 100%.** Rows left: 006 (gen/bp-05-spacing-and-range/006/web3.png), 015 (gen/bp-05-spacing-and-range/015/web3.png), 019 (gen/bp-05-spacing-and-range/019/web3.png).
+**BP-06: 12/20 — NOT 100%.** Rows left: 006 (gen/bp-06-entry-and-exit/006/web2.png), 010 (gen/bp-06-entry-and-exit/010/web2.png), 012 (gen/bp-06-entry-and-exit/012/web2.png), 014 (gen/bp-06-entry-and-exit/014/web2.png), 016 (gen/bp-06-entry-and-exit/016/web2.png), 018 (gen/bp-06-entry-and-exit/018/web2.png), 019 (gen/bp-06-entry-and-exit/019/web2.png), 020 (gen/bp-06-entry-and-exit/020/web2.png).
+**BP-07: 16/20 — NOT 100%.** Rows left: 003 (gen/bp-07-spot-paper-trading/003/web2.png), 005 (gen/bp-07-spot-paper-trading/005/web2.png), 019 (gen/bp-07-spot-paper-trading/019/web2.png), 020 (gen/bp-07-spot-paper-trading/020/web2.png).
+
+Updated ChatGPT queue (BP-04..11): 100 items.

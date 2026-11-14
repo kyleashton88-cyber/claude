@@ -8,12 +8,12 @@
   "not_in_scope": "course/images/_held/*.png (10 files: bp-06 014/017, bp-07 012/017/020, bp-08 003/006/007/009/011) are not referenced by any lesson script and were not scored. Shared title-art/mascot assets are already on BP01-03_PASS_LIST.json.",
   "counts": {
     "total": 161,
-    "fail": 101,
+    "fail": 100,
     "by_lesson": {
       "bp-04-market-regimes": {
         "total": 20,
-        "pass": 16,
-        "fail": 4
+        "pass": 17,
+        "fail": 3
       },
       "bp-05-spacing-and-range": {
         "total": 19,
@@ -51,7 +51,7 @@
         "fail": 20
       }
     },
-    "pass": 60
+    "pass": 61
   },
   "images": [
     {
@@ -474,48 +474,48 @@
       "beat": 6,
       "chapter": "Range fit",
       "kind": "lesson-still",
-      "source": "committed still (gbb-v3 fallback batch, FALLBACK_MANIFEST source_batch=IMAGE_REQUESTS.json, old status 'pass'); identical blob on cursor/blueprint-professional-rebuild-d1f6@fbb3f9c and cursor/blueprint-beginner-images@adc3524",
+      "source": "chatgpt-web",
       "source_branches": {
-        "cursor/blueprint-professional-rebuild-d1f6": "cb743942edc9ac5c02277e82766ff3462098b908",
-        "cursor/blueprint-beginner-images": "cb743942edc9ac5c02277e82766ff3462098b908"
+        "cursor/blueprint-professional-rebuild-d1f6": "a9936e9997ea49f1b9c7b63a43b8b9f376a1dd8d",
+        "cursor/blueprint-beginner-images": "a9936e9997ea49f1b9c7b63a43b8b9f376a1dd8d"
       },
       "beat_concept": "A range is the shape where a grid's waiting orders can be crossed more than once on the sketch.",
       "scores": {
-        "beginner_clarity": 2,
-        "composition_hierarchy": 3,
-        "craft_polish": 3,
-        "brand_fidelity": 4,
-        "text_legibility": 3,
+        "beginner_clarity": 5,
+        "composition_hierarchy": 4,
+        "craft_polish": 5,
+        "brand_fidelity": 5,
+        "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 2
+        "label_accuracy": 5
       },
       "hard_fails": [],
-      "status": "fail",
-      "action": "needs_remake",
+      "status": "pass",
+      "action": "none",
       "remake_prompt": "specs/remake/bp-04-market-regimes__006.txt",
-      "notes": "Committed still: Rungs drawn as pill bars, one bump circled; floating 'RUNG' and 'EXAMPLE' tags with no arrows; does not show price crossing the same lines again and again; 'EXAMPLE' used as a side label, not a stamp. | web1 remake: FAIL. \"Each dot = an order filling\", but the zig-zag crosses the second ladder line repeatedly with no dot there, so the picture says those orders did not fill; the path also starts with a long diagonal from the bottom-left chart corner. Narration asks for a weave crossing the same three rungs; the image has five lines. Arrow targets are right (middle-line crossing; a dot). | web2 remake: FAIL. Three rungs and four peaks, both arrow tips on dotted crossings, EXAMPLE inside the card, spelling right. But after the fourth peak the line comes down, crosses the middle rung with no dot and fades out in a stub below it, so one crossing is undotted (the exact fault the v2 prompt banned) and the path has no clean end. | web3 remake FAIL under the strict arrow rule. Crossing-count and stub faults from v2 look fixed (every crossing is dotted; the path has a clean start and end). \"Price crosses the same lines again and again\" looked like a touch. But \"Each dot = an order filling\" tip stops clearly short of the glowing dot. Next: web4.png on the v4 prompt.",
+      "notes": "web4 PASS. Exactly three rungs; the path starts and ends cleanly on the bottom rung; every crossing is dotted. 'Each dot = an order filling' tip now lands on a glowing crossing-dot (the v3 miss). 'Price crosses the same lines again and again' tip sits on the middle rung. EXAMPLE present. Headline 'RANGE: WHERE GRIDS FIT' is properly spaced. Margins 78/77/81/153. Placed at out/ and course/images/bp-04-market-regimes/006.png.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
       "margins_px": {
-        "left": 210,
-        "right": 411,
-        "top": 109,
-        "bottom": 407
+        "left": 78,
+        "right": 77,
+        "top": 81,
+        "bottom": 153
       },
-      "scored_file": "/workspace/blueprint-beginner/bp04-11-qa/src/bp-04-market-regimes/006.png",
-      "scored_blob": "cb743942edc9ac5c02277e82766ff3462098b908",
+      "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-04-market-regimes/006.png",
+      "scored_blob": "a9936e9997ea49f1b9c7b63a43b8b9f376a1dd8d",
       "committed": true,
-      "pass": false,
+      "pass": true,
       "remake_review": {
-        "file": "gen/bp-04-market-regimes/006/web3.png",
-        "blob": "df0dfcefa426398c7d2c9457470d81a0b7eef3ab",
+        "file": "gen/bp-04-market-regimes/006/web4.png",
+        "blob": "a9936e9997ea49f1b9c7b63a43b8b9f376a1dd8d",
         "size": "1536x1024",
         "margins_px": {
-          "left": 79,
-          "right": 80,
-          "top": 79,
-          "bottom": 161
+          "left": 78,
+          "right": 77,
+          "top": 81,
+          "bottom": 153
         },
         "scored_against": "beat + prompt current when this batch started (score on merits)",
         "scores": {
@@ -525,13 +525,11 @@
           "brand_fidelity": 5,
           "text_legibility": 5,
           "character_consistency": null,
-          "label_accuracy": 3
+          "label_accuracy": 5
         },
-        "hard_fails": [
-          "arrow tip stops short of target: \"Each dot = an order filling\" tip stops clearly short of the glowing dot"
-        ],
-        "notes": "web3 remake FAIL under the strict arrow rule. Crossing-count and stub faults from v2 look fixed (every crossing is dotted; the path has a clean start and end). \"Price crosses the same lines again and again\" looked like a touch. But \"Each dot = an order filling\" tip stops clearly short of the glowing dot. Next: web4.png on the v4 prompt.",
-        "pass": false
+        "hard_fails": [],
+        "notes": "web4 PASS. Exactly three rungs; the path starts and ends cleanly on the bottom rung; every crossing is dotted. 'Each dot = an order filling' tip now lands on a glowing crossing-dot (the v3 miss). 'Price crosses the same lines again and again' tip sits on the middle rung. EXAMPLE present. Headline 'RANGE: WHERE GRIDS FIT' is properly spaced. Margins 78/77/81/153. Placed at out/ and course/images/bp-04-market-regimes/006.png.",
+        "pass": true
       },
       "previous_remake_reviews": [
         {
@@ -585,6 +583,32 @@
             "AI artifact: price line runs past its last dot and fades out in a stub below the middle rung"
           ],
           "notes": "Three rungs and four peaks, both arrow tips on dotted crossings, EXAMPLE inside the card, spelling right. But after the fourth peak the line comes down, crosses the middle rung with no dot and fades out in a stub below it, so one crossing is undotted (the exact fault the v2 prompt banned) and the path has no clean end.",
+          "pass": false
+        },
+        {
+          "file": "gen/bp-04-market-regimes/006/web3.png",
+          "blob": "df0dfcefa426398c7d2c9457470d81a0b7eef3ab",
+          "size": "1536x1024",
+          "margins_px": {
+            "left": 79,
+            "right": 80,
+            "top": 79,
+            "bottom": 161
+          },
+          "scored_against": "beat + prompt current when this batch started (score on merits)",
+          "scores": {
+            "beginner_clarity": 5,
+            "composition_hierarchy": 4,
+            "craft_polish": 5,
+            "brand_fidelity": 5,
+            "text_legibility": 5,
+            "character_consistency": null,
+            "label_accuracy": 3
+          },
+          "hard_fails": [
+            "arrow tip stops short of target: \"Each dot = an order filling\" tip stops clearly short of the glowing dot"
+          ],
+          "notes": "web3 remake FAIL under the strict arrow rule. Crossing-count and stub faults from v2 look fixed (every crossing is dotted; the path has a clean start and end). \"Price crosses the same lines again and again\" looked like a touch. But \"Each dot = an order filling\" tip stops clearly short of the glowing dot. Next: web4.png on the v4 prompt.",
           "pass": false
         }
       ]
