@@ -255,7 +255,7 @@ def thirds(shot: dict) -> tuple[str, str]:
         ("mistake", "Miss", "A blank stop, a band tighter than the wicks, or a line counted as a gap."),
         ("regime", "Regime", "The shape of the path: a range, a leave, or a break."),
         ("break", "Break", "A path that jumps out of the prices around it. Not a quiet range."),
-        ("trend", "Leave", "A path that exits the band and keeps making ground one way."),
+        ("trend", "Trend", "A price that leaves the band and keeps moving one way."),
         ("worked", "Worked example", "Figures you can point at. Marked Example. Not an order."),
         ("monitor", "Check", "Three questions on a date you chose, then you stop."),
         ("field", "Field", "A box on the page. Copy only what the page already says."),
@@ -310,19 +310,29 @@ def _beat_teaching(beat: dict) -> str | None:
         return None
     if concept.lower().startswith("practice:"):
         return None
-    if image.endswith("/013.png") and "bp-01-introduction" in image:
+    if image in {
+        "course/images/bp-01-introduction/013.png",
+        "course/images/bp-02-what-you-need/014.png",
+        "course/images/bp-02-what-you-need/021.png",
+        "course/images/bp-10-scaling-up/008.png",
+    }:
         return None
     overrides = {
         "course/images/bp-03-what-is-a-grid-bot/001.png": "A grid bot doesn't predict the price. It waits.",
         "course/images/bp-03-what-is-a-grid-bot/003.png": "A grid bot is a tool that keeps buy orders below the price and sell orders above it.",
         "course/images/bp-03-what-is-a-grid-bot/009.png": "After an order fills, the bot puts a new waiting order on the next line.",
         "course/images/bp-03-what-is-a-grid-bot/013.png": "This course is not connected to any exchange.",
-        "course/images/bp-03-what-is-a-grid-bot/014.png": "Here is the whole idea in one breath. Orders wait inside your range. A stop is the rule you wrote for when the price leaves the range. And what you hold changes as orders fill.",
+        "course/images/bp-03-what-is-a-grid-bot/014.png": "Orders wait. Inside your range. Stop: your rule if price leaves. What you hold changes.",
         "course/images/bp-03-what-is-a-grid-bot/015.png": "Your turn: draw a band, label the five words, and draw one step down.",
         "course/images/bp-03-what-is-a-grid-bot/017.png": "Your turn: draw one buy order waiting below the price.",
         "course/images/bp-01-introduction/007.png": "Buy orders sit on lines below the price and sell orders sit on lines above it. The sells need some coin, so a grid starts with part cash and part coin. That is a description, not advice.",
-        "course/images/bp-01-introduction/008.png": "A stop is a rule you write down before you start, saying what you will do if the price leaves the band and does not come back.",
-        "course/images/bp-03-what-is-a-grid-bot/008.png": "As orders fill, your mix of coin and cash changes. Coin is the crypto. Cash is the money you can spend. That mix is what you hold.",
+        "course/images/bp-01-introduction/008.png": "Write your stop rule down before you start. On the card it says: Stop = when you quit.",
+        "course/images/bp-03-what-is-a-grid-bot/004.png": "On the card: upper is the top, lower is the bottom, levels are the rungs, side is what you hold, and stop is your rule.",
+        "course/images/bp-03-what-is-a-grid-bot/008.png": "What you hold changes. Price bounces: coin and cash swap back and forth. Price leaves: mostly coin or mostly cash.",
+        "course/images/bp-03-what-is-a-grid-bot/010.png": "Point and say the five: Top, Bottom, Levels, What you hold, and Stop.",
+        "course/images/bp-05-spacing-and-range/015.png": "Recap: range first, count gaps not lines, check the gap against the fee, change one thing at a time.",
+        "course/images/bp-06-entry-and-exit/010.png": "Traders call this an invalidation: the point where your idea is proven wrong.",
+        "course/images/bp-09-common-mistakes/010.png": "In our example there are seven lines and six gaps.",
     }
     if image in overrides:
         return overrides[image]
@@ -360,6 +370,32 @@ def _beat_teaching(beat: dict) -> str | None:
         ("upper, lower, levels, side, and stop", "top, bottom, levels, what you hold, and stop"),
         ("upper, lower, levels, side, stop", "top, bottom, levels, what you hold, and stop"),
         ("Upper and lower are the band. Levels are the rungs.", "The top and the bottom are the band. Levels are the rungs where orders wait."),
+        ("Without a top and a bottom, a spacing percent is a number floating in the margin.", "Without a top and a bottom, you can't place the lines."),
+        ("Price often chops sideways, weaving through the same band instead of leaving.", "Price often moves sideways, bouncing between the same top and bottom instead of leaving."),
+        ("built for that weave", "built for that bouncing"),
+        ("the weave they were built for is gone. Inventory can sit on one side.", "the bouncing they were built for is gone. You may end up holding mostly coin or mostly cash."),
+        ("The weave is the job.", "Bouncing inside the band is what a grid is built for."),
+        ("such as the base and the quote", "the coin you buy and the money you pay with"),
+        ("The setup check has seven lines", "The setup check has seven items"),
+        ("complete the seven lines on paper", "complete the seven items on paper"),
+        ("That is the weave, told as inventory, not as a result.", "That change in what you hold is how a grid works, and it is not a profit."),
+        ("They do not jump the queue.", "They wait their turn at that price."),
+        ("hypothetical noise", "a made-up path"),
+        ("the path leaves by construction", "a normal day will push the price out of it"),
+        ("Trend makes you draw the inventory pile before you go on.", "A trend means drawing what you'd end up holding."),
+        ("a live chart's implication", "a live chart"),
+        ("Twenty order lines make nineteen gaps.", "Now a second, made-up example: twenty lines, with each gap half of one percent. Twenty order lines make nineteen gaps."),
+        ("the gap count is thirty-eight, not forty", "there are thirty-eight gaps, which is thirty-nine lines, not forty"),
+        ("A wish that the weave continues", "A wish that the price keeps bouncing"),
+        ("which side is the inventory, and does the finish sentence still match", "which side of the middle line the close is on, and does the finish sentence still match"),
+        ("Inventory is what has piled up. ", ""),
+        ("Row two names the side the exits would have piled.", "Row two says whether the close is above or below the middle line."),
+        ("not to add a new indicator", "not to add another chart tool"),
+        ("The span in the house example is nine and a half percent for nineteen gaps.", "In our example there are seven lines and six gaps."),
+        ("If you have notes from those drafts, the multiple is the part you cross out.", "If old notes show a multiple like 5x, cross it out."),
+        ("Two flags belong in the margin:", "Write two warnings beside your drawing:"),
+        ("this can liquidate, and you can lose all the money assigned on the sketch.", "this can be liquidated, and you can lose all the money you put in."),
+        ("The venue name is incidental. The field order is the lesson.", "The exchange name doesn't matter. Copying the right five fields does."),
         ("a little more of the base asset", "a little more coin"),
         ("Inventory of the base can fall, and the quote asset can rise, inside the example.", "You can hold less coin and more cash. This is only an example."),
         ("the top, the bottom, the price steps, what you hold, and a stop", "top, bottom, levels, what you hold, and stop"),
@@ -476,17 +512,25 @@ def plan(sid: str) -> list[dict]:
         "chart": "",
         "series": [],
     }
-    risk = {
-        "kind": "stack",
-        "chapter": "Risk",
-        "vo": "Crypto carries a risk of total loss.",
-        "caption": "Crypto carries a risk of total loss.",
-        "items": ["Crypto carries a risk of total loss."],
-        "index": 0,
-        "chart": "",
-        "series": [],
-    }
-    shots: list[dict] = [brand, disc, risk]
+    risk_lines = [
+        "Crypto carries a risk of total loss.",
+        "The prices are public historical daily closes, marked Example.",
+        "Past performance is not a reliable indicator of future results.",
+    ]
+    risk_shots = [
+        {
+            "kind": "stack",
+            "chapter": "Risk",
+            "vo": line,
+            "caption": line,
+            "items": risk_lines,
+            "index": index,
+            "chart": "",
+            "series": [],
+        }
+        for index, line in enumerate(risk_lines)
+    ]
+    shots: list[dict] = [brand, disc, *risk_shots]
     seq = [s for s in raw if s.get("kind") not in {"ident", "legal"}]
     i = 0
     while i < len(seq):

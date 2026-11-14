@@ -475,7 +475,7 @@ def bp03() -> list[dict]:
         chart_title="October 2023 to March 2024",
         reveal=1, levels=LEVELS, focus_price=HIGH, focus_label="Left behind",
         vo=(
-            "The recap mentions October because that is when this example ended. "
+            "This example ended in October 2023. "
             "On 23 October 2023 the daily close was 33086, above 30331. "
             "The price did not come back, so the waiting orders inside the old band no longer matched the path. "
             "That is why you write the stop before you start."
@@ -645,7 +645,7 @@ def bp05() -> list[dict]:
             "If your top is 30000 and the window printed 30331, a 30000 top doesn't match the real high. "
             "Move the rail to the print, then recount the gaps. Do not change the step and the rail in one silent edit."
         ),
-        caption="The high was 30,331. A 30,000 top is a story.",
+        caption="The high was 30,331. A 30,000 top misses the real high.",
     ))
     s.append(_shot(
         chapter="Recount against the path",
@@ -805,7 +805,7 @@ def bp07() -> list[dict]:
         kind="analogy", analogy="list", chapter="Hook", reveal=1,
         vo=(
             "This lesson walks fields on a paper or demo spot page, and it does not place an order. "
-            "The list is the analogy of the form, and the chart is the source of the figures. "
+            "Think of the form as a copy of your notes. The chart is the source of the figures. "
             "If the form disagrees with 24930 and 30331, the form is wrong for this example."
         ),
         caption="The page wins. The form is a copy.",
@@ -978,7 +978,7 @@ def bp08() -> list[dict]:
         chapter="A check you can finish",
         reveal=1,
         vo=(
-            "A check you cannot finish is not monitoring. It is a vigil. "
+            "A check you cannot finish is not monitoring. It is just watching. "
             "These two dates are the whole practice: 7 October inside, 23 October outside. "
             "Write the three answers, and do not open a fourth row for a result. "
             "The rule you wrote before you started is the only action the second date can call for."
