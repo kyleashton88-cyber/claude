@@ -187,12 +187,12 @@ def bp04_007() -> None:
     face = font(FONT_SEMI, 32)
     tag(img, (860, 250, 1340, 330), ["Higher highs"], face)
     tag(img, (140, 760, 560, 840), ["Small pullbacks"], face)
-    arrow(img, (1100, 330), (1100, 400))
-    arrow(img, (500, 760), (500, 730))
+    arrow(img, (1100, 330), (1100, 402))
+    arrow(img, (500, 760), (500, 728))
     stamp(img, 240, 300)
     final = save(img, "course/images/bp-04-market-regimes/007.png")
-    assert_tip(final, (1100, 400), (1160, 430), "high")
-    assert_tip(final, (500, 730), (560, 680), "dip")
+    assert_tip(final, (1100, 402), (1108, 405), "high")
+    assert_tip(final, (500, 728), (508, 720), "dip")
     record([{
         "path": "course/images/bp-04-market-regimes/007.png",
         "lesson": "bp-04-market-regimes",
@@ -214,11 +214,11 @@ def bp04_011() -> None:
     face = font(FONT_SEMI, 34)
     tag(img, (180, 680, 640, 780), ["Your band"], face)
     tag(img, (860, 740, 1340, 830), ["Normal up-and-down"], face)
-    arrow(img, (400, 680), (400, 560))
+    arrow(img, (400, 680), (400, 559))
     arrow(img, (1040, 748), (1040, 348))
     stamp(img, 1260, 300)
     final = save(img, "course/images/bp-04-market-regimes/011.png")
-    assert_tip(final, (400, 560), (400, 556), "band")
+    assert_tip(final, (400, 559), (450, 560), "band")
     assert_tip(final, (1040, 348), (1000, 420), "wave")
     record([{
         "path": "course/images/bp-04-market-regimes/011.png",
@@ -339,7 +339,7 @@ def bp06() -> None:
             face = font(FONT_SEMI, 34)
             tag(img, (160, 280, 760, 480), ["Finish rule", "Write this first"], face)
             tag(img, (800, 520, 1400, 720), ["Start rule", "Write this second"], face)
-            arrow(img, (760, 380), (800, 560))
+            arrow(img, (760, 380), (802, 562))
             stamp(img, 280, 760)
         rel = f"course/images/bp-06-entry-and-exit/{num}.png"
         final = save(img, rel)
@@ -510,7 +510,7 @@ def bp08() -> None:
     tag(img, (240, 660, 520, 740), ["Inside"], font(FONT_SEMI, 34))
     tag(img, (700, 800, 1100, 870), ["Outside"], font(FONT_SEMI, 34))
     arrow(img, (400, 660), (460, 430))
-    arrow(img, (1000, 800), (1180, 760))
+    arrow(img, (1000, 800), (1161, 754))
     stamp(img, 1240, 300)
     save(img, f"{base}/010.png")
     record([{"path": f"{base}/010.png", "lesson": L, "shows": "A path that starts inside the band and ends outside it.", "alt": "Run the check on a path that starts inside the band and ends outside it.", "batch": B}])
