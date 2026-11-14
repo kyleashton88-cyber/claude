@@ -229,15 +229,19 @@ def thirds(shot: dict) -> tuple[str, str]:
     chapter = (shot.get("chapter") or "").strip()
     cap = (shot.get("caption") or "").strip()
     low = chapter.lower()
+    # These headings only share a word with another definition. Show their own caption.
+    if low in {"finish the seven", "not on the list", "a check you can finish"}:
+        text = cap if cap.endswith(".") else (cap + "." if cap else chapter + ".")
+        return chapter, text
     table = [
         ("objective", "Objective", "One skill this lesson is building. Say it in your own words."),
-        ("recap", "Recap", "A line to keep. Three lines, then the next lesson."),
-        ("stop", "Stop", "A sentence that ends the idea when the close leaves the band and stays gone."),
+        ("recap", "Recap", "A line to keep."),
+        ("stop", "Stop", "A rule you write before you start: what you will do if the price leaves the band and does not come back."),
         ("finish", "Finish", "The exit, written before the entry, and pointed at a real date."),
-        ("range", "Range", "The top and the bottom copied from the prints, before any rung is drawn."),
+        ("range", "Range", "The real lowest and highest prices in the window."),
         ("level", "Level", "A price where a limit order waits. It does not chase the market."),
         ("gap", "Gap", "The space between two rungs. Count gaps, not the lines that bound them."),
-        ("wick", "Wick", "The high or low that a neat round number can miss."),
+        ("wick", "Wick", "The price poking past a line during the day but not closing there."),
         ("grid", "Grid", "Limit orders waiting inside a band you have already measured."),
         ("hook", "The idea", cap if cap.endswith(".") else (cap + "." if cap else "One picture, one point.")),
         ("ladder", "Rung", "A step that waits. The chart beside it is the real path."),
@@ -296,55 +300,159 @@ def key_stops(run: list[dict]) -> list[dict]:
     return [overview] + picked
 
 
-def _attach_lesson_stills(sid: str, shots: list[dict]) -> None:
-    """Numbered ChatGPT stills go on the beats whose script names that file.
+def _beat_teaching(beat: dict) -> str | None:
+    """The line spoken while a still is on screen. Picture descriptions are not spoken."""
+    role = (beat.get("role") or "").lower()
+    chapter = (beat.get("chapter") or "").strip().lower()
+    concept = (beat.get("concept") or "").strip()
+    image = (beat.get("image") or "").replace("\\", "/")
+    if role in {"legal", "intro"} or chapter in {"title card", "outro", "disclaimer", "eight ticks"}:
+        return None
+    if concept.lower().startswith("practice:"):
+        return None
+    if image.endswith("/013.png") and "bp-01-introduction" in image:
+        return None
+    overrides = {
+        "course/images/bp-03-what-is-a-grid-bot/001.png": "A grid bot doesn't predict the price. It waits.",
+        "course/images/bp-03-what-is-a-grid-bot/003.png": "A grid bot is a tool that keeps buy orders below the price and sell orders above it.",
+        "course/images/bp-03-what-is-a-grid-bot/009.png": "After an order fills, the bot puts a new waiting order on the next line.",
+        "course/images/bp-03-what-is-a-grid-bot/013.png": "This course is not connected to any exchange.",
+        "course/images/bp-03-what-is-a-grid-bot/014.png": "Here is the whole idea in one breath. Orders wait inside your range. A stop is the rule you wrote for when the price leaves the range. And what you hold changes as orders fill.",
+        "course/images/bp-03-what-is-a-grid-bot/015.png": "Your turn: draw a band, label the five words, and draw one step down.",
+        "course/images/bp-03-what-is-a-grid-bot/017.png": "Your turn: draw one buy order waiting below the price.",
+        "course/images/bp-01-introduction/007.png": "Buy orders sit on lines below the price and sell orders sit on lines above it. The sells need some coin, so a grid starts with part cash and part coin. That is a description, not advice.",
+        "course/images/bp-01-introduction/008.png": "A stop is a rule you write down before you start, saying what you will do if the price leaves the band and does not come back.",
+        "course/images/bp-03-what-is-a-grid-bot/008.png": "As orders fill, your mix of coin and cash changes. Coin is the crypto. Cash is the money you can spend. That mix is what you hold.",
+    }
+    if image in overrides:
+        return overrides[image]
+    vo = (beat.get("vo") or "").strip()
+    for marker in (
+        "On the diagram for this beat",
+        "Say the opening line",
+        "Your turn, still inside",
+        "Mark the page Example",
+    ):
+        if marker in vo:
+            vo = vo.split(marker)[0].strip()
+    swaps = (
+        ("the size of weave you already drew", "the normal up-and-down you already measured"),
+        ("a major news bar, or a thin book", "a big news event, or a market with few waiting orders"),
+        ("A path into a major news bar, or a thin book,", "A path into a big news event, or a market with few waiting orders,"),
+        ("the top is a story, not the data", "a 30000 top doesn't match the real high"),
+        ("an ordinary weave you already drew", "a normal up-and-down move"),
+        ("a live ticket", "a real order form"),
+        ("not to add a second indicator", "not to add another chart tool"),
+        ("A default size on a form is the form's idea.", "A size the form filled in for you is not your choice."),
+        ("a grade you can trade", "a score"),
+        ("Calling it a seven-grid because you counted marks is the spacing miss, come back again.", "Calling it a seven-grid because you counted seven lines is the same counting mistake from lesson 5."),
+        ("Older drafts of this lesson that gave a leverage multiple, or a multiple of capital, are deleted.", ""),
+        ("Venue screens move.", "Exchange screens change over time."),
+        ("The list is the analogy of the form.", "Think of the form as a copy of your notes."),
+        ("passes the same gates", "passes the same checks"),
+        ("same gates", "same checks"),
+        ("Side means which asset you hold more of after the example fills.", "Which side means whether the close is above or below the middle line, 27630."),
+        ("Inside means the path you are looking at still crosses the band you drew.", "Inside means the close is still between the top and the bottom."),
+        ("not a vigil", "not something you watch all day"),
+        ("A vigil is watching with no end. A vigil pretends that watching harder changes the path.", "Watching all day does not change the path."),
+        ("No exchange is a partner in this definition.", "This course is not connected to any exchange."),
+        ("Inside the band, what you hold stays balanced: some of the coin and some cash.", "As orders fill, your mix of coin and cash changes."),
+        ("upper, lower, levels, side, and stop", "top, bottom, levels, what you hold, and stop"),
+        ("upper, lower, levels, side, stop", "top, bottom, levels, what you hold, and stop"),
+        ("Upper and lower are the band. Levels are the rungs.", "The top and the bottom are the band. Levels are the rungs where orders wait."),
+        ("a little more of the base asset", "a little more coin"),
+        ("Inventory of the base can fall, and the quote asset can rise, inside the example.", "You can hold less coin and more cash. This is only an example."),
+        ("the top, the bottom, the price steps, what you hold, and a stop", "top, bottom, levels, what you hold, and stop"),
+    )
+    for old, new in swaps:
+        vo = vo.replace(old, new)
+    vo = re.sub(r"\s+", " ", vo).strip(" .")
+    if not vo:
+        vo = (beat.get("alt") or concept).strip()
+    if not vo or vo.lower().startswith("practice:"):
+        return None
+    if vo.lower().startswith(("a notebook sketch", "a crystal ball", "a simple robot", "a robot putting", "two tokens joined")):
+        return None
+    parts = re.split(r"(?<=[.!?])\s+", vo)
+    keep: list[str] = []
+    words = 0
+    for part in parts:
+        part = part.strip()
+        if not part:
+            continue
+        n = len(part.split())
+        if keep and words + n > 80:
+            break
+        keep.append(part if part.endswith((".", "!", "?")) else part + ".")
+        words += n
+        if len(keep) >= 3:
+            break
+    return " ".join(keep).strip()
 
-    A shot the teaching script marks as a chart stays a chart.
+
+def _still_shot(beat: dict, line: str) -> dict:
+    caption = line if line.endswith((".", "!", "?")) else line + "."
+    return {
+        "kind": "lesson-still",
+        "chapter": beat.get("chapter") or "Picture",
+        "vo": caption,
+        "caption": caption,
+        "lesson_still": str((ROOT / beat["image"]).resolve()),
+        "alt": caption,
+        "chart": "",
+        "series": [],
+        "example": False,
+    }
+
+
+def _attach_lesson_stills(sid: str, shots: list[dict]) -> None:
+    """Put each still on the beat it illustrates, with a teaching line, not a picture description.
+
+    Title cards, practice repeats, and the duplicate next-lesson card are not spoken.
+    A code-drawn chart stays a chart. Its still is the next shot.
     """
     path = ROOT / "course/scripts" / f"{sid}.json"
     if not path.is_file():
         return
     beats = json.loads(path.read_text(encoding="utf-8")).get("beats") or []
-    by_chapter: dict[str, dict] = {}
+    pending: list[tuple[dict, str]] = []
     for beat in beats:
-        if beat.get("image"):
-            by_chapter.setdefault(str(beat.get("chapter") or "").strip().lower(), beat)
+        if not beat.get("image"):
+            continue
+        line = _beat_teaching(beat)
+        if line:
+            pending.append((beat, line))
     used: set[str] = set()
-    for shot in shots:
-        if shot.get("kind") in {"brand", "disclaimer", "outro", "chart", "analogy"}:
+    i = 0
+    while i < len(shots):
+        chapter = str(shots[i].get("chapter") or "").strip().lower()
+        kind = shots[i].get("kind")
+        if kind in {"brand", "disclaimer", "outro"} or not chapter:
+            i += 1
             continue
-        beat = by_chapter.get(str(shot.get("chapter") or "").strip().lower())
-        if not beat:
+        match = next(
+            (
+                pair for pair in pending
+                if pair[0]["image"] not in used
+                and str(pair[0].get("chapter") or "").strip().lower() == chapter
+            ),
+            None,
+        )
+        if match is None:
+            i += 1
             continue
-        shot["lesson_still"] = str((ROOT / beat["image"]).resolve())
-        shot["alt"] = beat.get("alt") or ""
-        if shot.get("kind") not in {"worked", "stack"}:
-            shot["kind"] = "lesson-still"
+        beat, line = match
         used.add(beat["image"])
-    extras = []
-    for beat in beats:
-        image = beat.get("image")
-        if not image or image in used or beat.get("role") == "legal":
-            continue
-        # The opening card already names the lesson. A second title card arrives after the pictures.
-        if sid == "bp-01-introduction" and beat.get("role") == "intro":
-            continue
-        alt = (beat.get("alt") or beat.get("concept") or "Look at the picture.").strip()
-        extras.append({
-            "kind": "lesson-still",
-            "chapter": beat.get("chapter") or "Picture",
-            "vo": alt,
-            "caption": alt.rstrip(".") + ".",
-            "lesson_still": str((ROOT / image).resolve()),
-            "alt": alt,
-            "chart": "",
-            "series": [],
-            "example": False,
-        })
-    if not extras:
+        shots.insert(i + 1, _still_shot(beat, line))
+        i += 2
+    rest = [_still_shot(beat, line) for beat, line in pending if beat["image"] not in used]
+    if not rest:
         return
-    outro_at = next((i for i, shot in enumerate(shots) if shot.get("kind") == "outro"), len(shots))
-    shots[outro_at:outro_at] = extras
+    at = next(
+        (i for i, shot in enumerate(shots) if str(shot.get("chapter") or "").strip().lower() == "recap"),
+        next((i for i, shot in enumerate(shots) if shot.get("kind") == "outro"), len(shots)),
+    )
+    shots[at:at] = rest
 
 
 def plan(sid: str) -> list[dict]:
@@ -368,7 +476,17 @@ def plan(sid: str) -> list[dict]:
         "chart": "",
         "series": [],
     }
-    shots: list[dict] = [brand, disc]
+    risk = {
+        "kind": "stack",
+        "chapter": "Risk",
+        "vo": "Crypto carries a risk of total loss.",
+        "caption": "Crypto carries a risk of total loss.",
+        "items": ["Crypto carries a risk of total loss."],
+        "index": 0,
+        "chart": "",
+        "series": [],
+    }
+    shots: list[dict] = [brand, disc, risk]
     seq = [s for s in raw if s.get("kind") not in {"ident", "legal"}]
     i = 0
     while i < len(seq):
@@ -513,7 +631,10 @@ def chart_idea(shot: dict) -> str:
     if chapter == "The stop":
         return "Stop: the close leaves 30,331 and does not return."
     if chapter == "Hook":
-        return "Orders that wait inside a measured band."
+        if (shot.get("lesson_id") or "") == "bp-03-what-is-a-grid-bot":
+            return "Orders that wait inside a measured band."
+        caption = (shot.get("caption") or "").strip()
+        return caption.rstrip(".") if caption else ""
     if chapter == "Limit orders wait":
         return "A cross touches a rung. A fill is an order that trades."
     return ""
