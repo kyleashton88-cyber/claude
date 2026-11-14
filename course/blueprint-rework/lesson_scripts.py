@@ -290,8 +290,8 @@ def bp02() -> list[dict]:
         vo=(
             "Crypto is a digital coin, such as bitcoin, and a daily close is the last price of that day. "
             "A band, also called the range, is the top and the bottom, a gap is the space between two lines, and the step is how wide that gap is. "
-            "A packing list is written before the trip, not during the scramble at the door. "
-            "You need the page before you need a screen."
+            "A stop is the rule for what you will do if the price leaves the band. "
+            "A packing list is written before the trip, not during the scramble at the door, because you need the page before you need a screen."
         ),
         caption="Write the page before any screen.",
     ))
@@ -306,7 +306,7 @@ def bp02() -> list[dict]:
         board="seven-lines",
         reveal=1,
         vo=(
-            "The seven items are: a notebook, the three words range levels and stop, the pair, "
+            "The seven items are: a notebook, the three words, range, levels and stop, which come next, the pair, "
             "paper or a demo account, no secrets, a written stop, and the word Example on every figure. "
             "A pair is what you buy and what you pay with. For this course the pair is bitcoin priced in US dollars. "
             "A demo account uses pretend money. "
@@ -320,7 +320,7 @@ def bp02() -> list[dict]:
         reveal=1,
         vo=(
             "Three words, before any number. Range is the top line and the bottom line. "
-            "Levels are the rungs, and a gap is the space between two rungs. "
+            "Levels are the price lines where orders wait, like the rungs of a ladder, and a gap is the space between two of them. "
             "A stop is the rule for what you will do if the price leaves the band and does not come back. "
             "The figures from lesson 1 are on the card, marked Example. If you can only say one of the three words, the page is missing a part."
         ),
@@ -331,6 +331,7 @@ def bp02() -> list[dict]:
         board="no-secrets",
         reveal=1,
         vo=(
+            "A seed phrase is the list of words that unlocks a crypto wallet. A private key or an A P I secret is a password that can move your money. "
             "You never type a seed phrase, a private key, or an A P I secret onto this page. "
             "The chart has no balance on it. A public close is not your account. "
             "If a form asks for a secret, that form is not this lesson."
@@ -368,7 +369,7 @@ def bp02() -> list[dict]:
         vo=(
             "Say the page once, in your own words, and do not read the chart again. "
             "Name the pair, the band, the gaps, and the stop rule, then stop. "
-            "A secret is a seed phrase, a private key, or an API secret. A seed phrase is the list of words that unlocks a crypto wallet. A private key or an API secret is a password that can move your money. None of those go on this page. "
+            "A secret is a seed phrase, a private key, or an A P I secret. None of those go on this page. "
             "You write Example on your own notebook so a practice sketch is never later mistaken for a live plan."
         ),
         caption="Say the page once. No secrets. Example is not an order.",
@@ -579,7 +580,7 @@ def bp04() -> list[dict]:
         ],
         vo=(
             "Worked sort. Three labels, three windows, no score that tells you to trade. "
-            "Range, trend, break. If you give the March 2020 low the label range, the sort is wrong."
+            "Range, trend, break. If you give the March 2020 break the label range, the sort is wrong."
         ),
         caption="Three windows. Three labels. No score.",
     ))
@@ -836,7 +837,7 @@ def bp07() -> list[dict]:
         vo=(
             "Spot means you buy the coin itself. A contract is a trade on the price, often with borrowed money. "
             "A multiple, like 5x, means borrowed size. "
-            "Nothing in the summer window asks you to multiply the position. "
+            "Nothing in the summer window asks you to multiply your size. "
             "If a default size is already filled in, clear it. The page did not write that size."
         ),
         caption="Spot. Clear a size the page did not write.",
@@ -872,7 +873,7 @@ def bp07() -> list[dict]:
             "A venue is an app or a website where people buy and sell. This course is not affiliated with one, and the page has no logo and no balance. "
             "You copy five fields: pair, top, bottom, gap count, and your two sentences. The band is 24930 to 30331, and the gap count is six. "
             "If a form says seven grids, that counted lines. Your page counted gaps, and the answer is six. "
-            "Spot means coins you hold. It is not a contract, and nothing here asks you to multiply a position. "
+            "Spot means coins you hold. It is not a contract, and nothing here asks you to multiply your size. "
             "Then you close the page. No order is sent. "
             "A default size already filled in is not your page. Clear it. The summer example did not write a size. "
             "Read the two sentences aloud before you stand up, even if the form has no box for a sentence. "
@@ -1110,15 +1111,15 @@ def bp10() -> list[dict]:
         reveal=1, levels=[],
         vo=(
             "Scaling on this page means a second written page, not a bigger feeling. "
-            "Page one is the summer of 2023, and page two is 27 March 2024 to 24 June 2024. The closes run from about 58 thousand to about 72 thousand. "
+            "Page one is the summer of 2023, and page two is 27 March 2024 to 24 June 2024. Its band on the card runs from about 57 thousand to about 73 thousand. "
             "The checks stay the same, and the one change is the band."
         ),
-        caption="Page two: 56,555 to 72,715. One change.",
+        caption="Page two band: 56,555 to 72,715.",
     ))
     s += stack("Objectives", [
         "By the end you will open a second page only after the first page has a stop rule.",
         "You will change the band and nothing else.",
-        "You will keep the two pages in separate buckets.",
+        "You will keep each page in its own bucket, meaning its own box with its own band and stop.",
     ], "")
     s.append(legal())
     s.append(_shot(
@@ -1127,7 +1128,7 @@ def bp10() -> list[dict]:
         vo=(
             "Page two still has to pass the sort, the rails, the gap count, and a finish sentence. "
             "The later window is not automatically a range just because you want a second page. "
-            "Look at it. The closes run from about 58 thousand to about 72 thousand. "
+            "Look at it. The band runs from about 57 thousand to about 73 thousand, and every close stayed inside it. "
             "That span is wider than the summer span. You measure it. You do not copy 900 dollars across."
         ),
         caption="Do not copy the 900 dollar step onto a new window.",
@@ -1148,11 +1149,11 @@ def bp10() -> list[dict]:
         chart_title="27 March 2024 to 24 June 2024",
         reveal=1, levels=[],
         vo=(
-            "Measure page two once. The closes run from about 58 thousand to about 72 thousand. "
+            "Measure page two once: a band from about 57 thousand to about 73 thousand. "
             "Do not read every day, and do not copy the summer step of about 900 onto this window. "
-            "The two pages stay in separate buckets."
+            "Each page stays in its own bucket, meaning its own box with its own band and stop."
         ),
-        caption="Measure 56,555 to 72,715 once. Do not copy 900.",
+        caption="Measure the band once: 56,555 to 72,715. Do not copy 900.",
     ))
     s.append(_shot(
         kind="worked", chapter="Worked pair",
@@ -1205,7 +1206,7 @@ def bp10() -> list[dict]:
     ))
     s += stack("Recap", [
         "Page two uses the same checks as page one.",
-        "The later window is 56555 to 72715, not a copy of 900.",
+        "The later window is 56,555 to 72,715, not a copy of 900.",
         "Spot stays spot. Size is still not a target.",
     ], "")
     s.append(outro("Advanced: liquidation scenarios"))
@@ -1221,7 +1222,7 @@ def bp11() -> list[dict]:
         vo=(
             "This lesson is opt-in. The spot page is already complete without it. "
             "The losing path comes first. This candle is 13 March 2020. The high, the low, and the close are labelled. "
-            "A contract can be closed by the venue when the margin is gone. A spot holding of coins is not that mechanism."
+            "A trade made with borrowed money can be closed by the venue when the money you put up is used up. A spot holding of coins is not that mechanism."
         ),
     ))
     s += stack("Objectives", [
@@ -1278,16 +1279,16 @@ def bp11() -> list[dict]:
         kind="worked", chapter="Worked path",
         items=[
             "11 March 2020 close: 7,911.",
-            "13 March 2020 low: 4,107.",
+            "12 March 2020 close: 4,971.",
             "Spot page: not this mechanism.",
             "If you stay on spot, write Skip.",
         ],
         vo=(
-            "Worked path: say the close, then the low. "
+            "Worked path: say the 11 March close, then the 12 March close. "
             "A spot page does not get closed by that drop, and a contract might. "
             "Then choose. The summer page does not require the contract."
         ),
-        caption="Close, then low. Then choose spot or skip.",
+        caption="One close, then the next. Then choose spot or skip.",
     ))
     s.append(_shot(
         chapter="Spot or a contract",
