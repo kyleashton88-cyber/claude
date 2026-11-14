@@ -716,3 +716,41 @@ The new standing check was applied to the other passed stills that show a count 
 - BP-05 015 holds: 7 interior lines / 6 gaps, card borders excluded.
 - BP-09 007 and 010 hold: each left/main card has 7 interior lines / 6 gaps, card borders excluded, matching the headlines and the 010 caption.
 - BP-07 005 ('FIVE BOXES TO COPY' / five fields), BP-08 006 ('Middle 27630', the house mid-level), BP-10 012 ('DO NOT DOUBLE THE COUNT'), and the BP-09/BP-11 '5x' / 'times-number' stills hold: their claims match the page and the narration; they do not show a miscounted grid.
+
+---
+
+## Flip of BP-05 004 (20 lines / 19 gaps) and BP-01..03 arithmetic recheck
+
+Applied the standing arithmetic-vs-drawing check and flipped **BP-05 004** to FAIL in the ledger. Placed file left in place (chatgpt-web `web1.png`, blob `52918482981ac1b8c92798e4bcabfd1bd8c7b08d`). Queued for `cursor1.png`.
+
+| File | Result | Margins (l/r/t/b) | Scores | Blob |
+|---|---|---|---|---|
+| gen/bp-05-spacing-and-range/004/web1.png | FAIL (correction) | 85/87/71/118 | 2/4/4/4/5/—/1 | `52918482981ac1b8c92798e4bcabfd1bd8c7b08d` |
+
+Headline '20 LINES MAKE 19 GAPS' and labels '20 lines' / '19 gaps between them', but only 19 interior lines (y=243–854, 18 gaps) are drawn. The outer card frame (full-width strokes at y=185 and y=901) is not a grid line, consistent with how BP-05 015 counts '7 lines, 6 gaps'. The earlier pass note ('verified EXACTLY 20 lines / 19 gaps (peak count 20)') had counted a frame stroke.
+
+Fix note for Cursor: draw exactly 20 interior lines (19 equal gaps) inside the frame, keep the headline and labels, keep the frame visually distinct from the grid lines, and keep EXAMPLE, the margins and the arrow rule.
+
+### Updated counts
+- **BP-05: 13/14 — not 100%.** 004 is queued. 006 remains a pass (cursor3).
+- **BP-04..11 overall: 111/112** pass, 1 fail, 49 dropped (excluded).
+
+### Recheck of passed BP-01..03 used stills with a count or number claim
+The same standing check was applied to every used still in BP-01, BP-02 and BP-03 that shows a count or number claim. Verdicts were **not** changed in this commit. Used sets: BP-01 `001, 004–012, 014, 015, 017`; BP-02 `001, 004–015, 019, 020`; BP-03 `001, 004–015, 018`.
+
+No used still in BP-01..03 now fails the check.
+
+- **BP-01 004** holds: headline 'A GRID HAS THREE PARTS' with three numbered cards (range / levels / stop).
+- **BP-01 010** holds: '10 lessons ahead' — the pin pad plus ten stepping stones ahead (11 stones in total); the label points at the last stone.
+- **BP-01 014** holds: two numbered steps ('1 Paper checklist' / '2 Then the screen').
+- **BP-01 017** holds: 'REMEMBER THESE THREE' with Range, Levels and Stop.
+- **BP-02 001** holds: two numbered steps ('1 Plan on paper' / '2 Screen comes later').
+- **BP-02 004** holds: 'THE SEVEN-LINE CHECKLIST' / '7 lines to check' — exactly seven clipboard rows (Notebook, The three words, Pair name, Paper or demo, No secrets, Written stop, The word EXAMPLE).
+- **BP-02 005** holds: 'THE THREE WORDS' with Range, Levels and Stop on three blocks.
+- **BP-02 019** holds: 'SAY THREE THINGS' with three numbered cards.
+- **BP-02 020** holds: 'All 7 ticked' — seven ticks on seven lines.
+- **BP-03 004** holds: 'FIVE WORDS TO KNOW' — Upper, Levels, Lower, Side: what you hold, Stop.
+- **BP-03 010** holds: 'POINT AND SAY THE FIVE' — Top, Levels, Bottom, Stop, What you hold.
+- **BP-03 015** holds: 'Label the 5 words' — five blank tags around the figure (plus 'Draw one step down').
+
+Other used stills were OCR'd; they have no countable line/gap/item claim that could fail this check.

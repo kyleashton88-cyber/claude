@@ -8,8 +8,8 @@
   "not_in_scope": "course/images/_held/*.png (10 files: bp-06 014/017, bp-07 012/017/020, bp-08 003/006/007/009/011) are not referenced by any lesson script and were not scored. Shared title-art/mascot assets are already on BP01-03_PASS_LIST.json.",
   "counts": {
     "total": 112,
-    "pass": 112,
-    "fail": 0,
+    "pass": 111,
+    "fail": 1,
     "by_lesson": {
       "bp-04-market-regimes": {
         "total": 14,
@@ -18,8 +18,8 @@
       },
       "bp-05-spacing-and-range": {
         "total": 14,
-        "pass": 14,
-        "fail": 0
+        "pass": 13,
+        "fail": 1
       },
       "bp-06-entry-and-exit": {
         "total": 14,
@@ -2044,19 +2044,21 @@
       },
       "beat_concept": "Twenty order lines make nineteen gaps.",
       "scores": {
-        "beginner_clarity": 5,
+        "beginner_clarity": 2,
         "composition_hierarchy": 4,
         "craft_polish": 4,
         "brand_fidelity": 4,
         "text_legibility": 5,
         "character_consistency": null,
-        "label_accuracy": 5
+        "label_accuracy": 1
       },
-      "hard_fails": [],
-      "status": "pass",
-      "action": "none",
+      "hard_fails": [
+        "count does not match the drawing: headline and labels claim 20 lines / 19 gaps, but only 19 interior lines (18 gaps) are drawn; the card frame (full-width strokes at y=185 and y=901) is not a grid line"
+      ],
+      "status": "fail",
+      "action": "remake",
       "remake_prompt": "specs/remake/bp-05-spacing-and-range__004.txt",
-      "notes": "Beat 4: verified EXACTLY 20 lines / 19 gaps (peak count 20, even spacing). '20 lines' and '19 gaps between them' arrows touch. EXAMPLE. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
+      "notes": "FLIP (standing arithmetic-vs-drawing check, 14 Nov 2026 WITA): FAIL. Headline '20 LINES MAKE 19 GAPS' and labels '20 lines' / '19 gaps between them', but only 19 interior lines (y=243\u2013854, 18 gaps) are drawn; the outer card frame (y=185 and y=901) is not a grid line, consistent with BP-05 015. The earlier pass note ('verified EXACTLY 20 lines / 19 gaps (peak count 20)') counted a frame stroke. Placed file left in place (blob 52918482981ac1b8c92798e4bcabfd1bd8c7b08d, chatgpt-web web1.png). Queued for cursor1.png. Fix note for Cursor: draw exactly 20 interior lines (19 equal gaps) inside the frame, keep the headline and labels, keep the frame visually distinct from the grid lines, and keep EXAMPLE, the margins and the arrow rule. Prior notes: Beat 4: verified EXACTLY 20 lines / 19 gaps (peak count 20, even spacing). '20 lines' and '19 gaps between them' arrows touch. EXAMPLE. web1 (v1 remake). Margins reflect full-bleed panel glow; all text/labels sit inside the safe area.",
       "size": "1536x1024",
       "size_ok": true,
       "filename_ok": true,
@@ -2069,7 +2071,36 @@
       "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-05-spacing-and-range/004.png",
       "scored_blob": "52918482981ac1b8c92798e4bcabfd1bd8c7b08d",
       "committed": true,
-      "pass": true
+      "pass": false,
+      "previous_committed_blob": "52918482981ac1b8c92798e4bcabfd1bd8c7b08d",
+      "remake_review": {
+        "file": "gen/bp-05-spacing-and-range/004/web1.png",
+        "blob": "52918482981ac1b8c92798e4bcabfd1bd8c7b08d",
+        "size": "1536x1024",
+        "margins_px": {
+          "left": 85,
+          "right": 87,
+          "top": 71,
+          "bottom": 118
+        },
+        "scored_against": "standing arithmetic-vs-drawing check: card or box borders are not grid lines",
+        "scores": {
+          "beginner_clarity": 2,
+          "composition_hierarchy": 4,
+          "craft_polish": 4,
+          "brand_fidelity": 4,
+          "text_legibility": 5,
+          "character_consistency": null,
+          "label_accuracy": 1
+        },
+        "hard_fails": [
+          "count does not match the drawing: headline and labels claim 20 lines / 19 gaps, but only 19 interior lines (18 gaps) are drawn; the card frame (full-width strokes at y=185 and y=901) is not a grid line"
+        ],
+        "notes": "CORRECTION: previously passed web1 (blob 52918482981ac1b8c92798e4bcabfd1bd8c7b08d) claimed 20 lines / 19 gaps, but the stack has only 19 interior lines and 18 gaps. The card frame is not a grid line. Recorded as FAIL. Ledger only; placed file left in place. Next: cursor1.png.",
+        "pass": false,
+        "fix_note": "Draw exactly 20 interior lines (19 equal gaps) inside the frame, keep the headline and labels, keep the frame visually distinct from the grid lines, and keep EXAMPLE, the margins and the arrow rule. Next: cursor1.png.",
+        "correction_of": "476271f2e7e77fa0b19260fd13fe9a88587f3c61"
+      }
     },
     {
       "path": "course/images/bp-05-spacing-and-range/005.png",
