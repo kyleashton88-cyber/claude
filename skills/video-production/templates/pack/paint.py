@@ -92,7 +92,7 @@ def paint_endcard(title: str, next_title: str, dest: Path) -> dict:
     # The right third stays clear for a YouTube end screen. Nothing is drawn there:
     # an outlined box labelled "End screen" read as an empty placeholder.
     slot = {"x": 1180, "y": 220, "w": 620, "h": 620}
-    draw.text((96, 980), "Educational content only. Not financial advice.", fill=TEXT, font=small)
+    draw.text((96, 980), "Education only. Not financial advice.", fill=TEXT, font=small)
     dest.parent.mkdir(parents=True, exist_ok=True)
     image.save(dest)
     return {

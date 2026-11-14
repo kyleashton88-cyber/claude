@@ -60,7 +60,7 @@ DISCLAIMER_LINES = (
     "This is general information and doesn't consider your objectives, financial situation or needs.",
     "Crypto is high risk. You could lose all the money you put in.",
 )
-FOOT = "Educational content only. Not financial advice."
+FOOT = "Education only. Not financial advice."
 COVER = ROOT / "course/images/style-ref/01M6MSHVNHX3WQH81XS8KQK1HT.png"
 # Drop-in sheet. No crop. Replace the file to change the character.
 MASCOT_SRC = ROOT / "course/images/mascot/blueprint-mascot.png"
@@ -513,7 +513,7 @@ def chart_idea(shot: dict) -> str:
             return "Waiting orders inside a band you measured."
         return "This path stayed inside the band."
     if chapter == "Limit orders wait":
-        return "A limit order waits at 27,630. A cross is not a receipt."
+        return "A buy order waits at 27,630. A cross is not a filled order."
     return ""
 
 
@@ -687,7 +687,7 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
     shown = full[:last]
     if chapter in {"Walk the summer", "Copy the path", "Where the path stood"}:
         rest = full[max(0, last - 1):]
-        _stroke(base, rest, (0, 212, 255, 89), 1)
+        _stroke(base, rest, (0, 212, 255, 150), 2)
         _stroke(base, shown, (0, 212, 255, 90), 9)
         _stroke(base, shown, (0, 212, 255, 255), 3)
     else:
@@ -734,7 +734,7 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
         if chapter == "The stop" and abs(price - 30331) < 2:
             continue
         elif chapter in {"Walk the summer", "Copy the path", "Where the path stood"}:
-            color, width, label = MUTED, 2, str(rounded)
+            color, width, label = MUTED, 2, f"{rounded:,}"
         elif shot.get("board") == "buys-sells":
             if price < 27629:
                 color, label = BLUE, f"{rounded:,} buy"
@@ -792,10 +792,10 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
         def x_of(index: int) -> float:
             return plot[0] + (plot[2] - plot[0]) * (index / span)
 
-        face_t = font(22)
+        face_t = font(28)
         buy = "BUY 27,630"
         twid = int(face_t.getlength(buy)) + 16
-        ticket_h = 36
+        ticket_h = 42
         date_face = font(28)
         date_w = int(date_face.getlength(tag)) + 20
         date_h = 40
@@ -808,7 +808,7 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
         clear = (date_x - 40, date_y - 40, date_x + date_w + 40, date_y + date_h + 40)
 
         def draw_ticket(label: str, left: float, top: float, target: tuple[float, float] | None) -> None:
-            face = font(22)
+            face = font(28)
             width = int(face.getlength(label)) + 16
             if target is not None:
                 draw.line([(left + width, top + ticket_h), target], fill=CYAN, width=2)
@@ -929,7 +929,7 @@ def _hero(
                 pts = [(px0 + span_x * k, (py1 - 16) - span_y * r) for k, r in zip(knots, rise)]
                 draw.line(pts, fill=CYAN, width=3)
             else:
-                top = py0 + 16
+                top = py0 + 90
                 bot = py1 - 16
                 draw.line([(px0, top), (px1, top)], fill=CYAN, width=2)
                 draw.line([(px0, bot), (px1, bot)], fill=CYAN, width=2)
@@ -1896,7 +1896,7 @@ def _excerpt(shots: list[dict], seconds: float) -> list[dict]:
         "lesson_no": shots[0].get("lesson_no", "01"),
         "lesson_title": shots[0].get("lesson_title", "Blueprint"),
         "term": "Next",
-        "definition": "Educational content only. Not financial advice.",
+        "definition": "Education only. Not financial advice.",
         "example": False,
         "series": [],
     })
@@ -1923,7 +1923,7 @@ def _lesson_yaml(sid: str, shots: list[dict], dest: Path) -> None:
         "id": sid,
         "format": "blueprint",
         "disclaimer_spoken": DISCLAIMER,
-        "disclaimer_on_screen": "Educational content only. Not financial advice.",
+        "disclaimer_on_screen": "Education only. Not financial advice.",
         "beats": beats,
         "chart_labels": sorted({
             token.replace(",", "")
@@ -1936,7 +1936,7 @@ def _lesson_yaml(sid: str, shots: list[dict], dest: Path) -> None:
         "id: " + sid + "\n"
         "format: blueprint\n"
         "disclaimer_spoken: " + json_quote(DISCLAIMER) + "\n"
-        "disclaimer_on_screen: \"Educational content only. Not financial advice.\"\n"
+        "disclaimer_on_screen: \"Education only. Not financial advice.\"\n"
         "beats:\n" + "".join(
             "  - id: " + beat["id"] + "\n"
             "    chapter: " + json_quote(str(beat["chapter"])) + "\n"

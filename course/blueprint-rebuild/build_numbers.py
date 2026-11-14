@@ -99,7 +99,7 @@ def main() -> None:
             "format: blueprint",
             "source: course/data/public-prices/btc-usd-windows.json",
             f"disclaimer_spoken: {json.dumps(studio.DISCLAIMER)}",
-            'disclaimer_on_screen: "Educational content only. Not financial advice."',
+            'disclaimer_on_screen: "Education only. Not financial advice."',
             "dates:",
         ]
         text.extend(f"  - {json.dumps(phrase)}" for phrase in dates)

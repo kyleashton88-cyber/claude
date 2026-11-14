@@ -42,7 +42,7 @@ Bar for the rebuild: every area at least 8 before the final encode.
 ## Checklist for the rebuild
 
 - [ ] Open on the Grid Bot Builder wordmark and the visor mascot, with lesson number and title
-- [ ] Disclaimer card, full sentence, on screen at least 5 seconds, read aloud: "Educational content only. Not financial advice. Trading involves risk; you can lose money."
+- [ ] Disclaimer card, full sentence, on screen at least 5 seconds, read aloud: "Education only. Not financial advice. Trading involves risk; you can lose money."
 - [ ] No company name, company number, email, or sign-off on screen or in the narration
 - [ ] Original pad bed, faded in and out, about −28 to −30 LUFS under the voice
 - [ ] Master about −16 LUFS integrated, true peak at or under −1 dBTP, AAC 320 kbps, 48 kHz
