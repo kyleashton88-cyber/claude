@@ -295,7 +295,7 @@ def bp01() -> list[dict]:
     s[-1]["vo"] = (
         "Next lesson: What you are going to need. "
         "The pair is the two things you swap, like Bitcoin and US dollars. "
-        "Bring a notebook, the top and bottom of the band, the gaps between the lines, paper or demo, your stop rule, and no secrets: no seed phrase, private key or API secret. "
+        "Bring a notebook, the top and bottom of the band, the gaps between the lines, paper or demo, your stop rule, and no secrets: no seed phrase, private key or API secret, the secret words or keys that unlock a wallet or account. "
         "Leave every figure marked EXAMPLE, and no order is sent between lessons."
     )
     return s

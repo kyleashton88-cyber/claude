@@ -1175,6 +1175,7 @@ def _hero(
     chip_dx: int = 0,
     chip_x: int | None = None,
     chip_beside: bool = False,
+    secrets_line: str | None = None,
 ) -> None:
     """Lesson visual. path and orders use the real summer closes, not a sawtooth."""
     draw = ImageDraw.Draw(base)
@@ -1186,13 +1187,13 @@ def _hero(
             "Range and levels",
             "The pair",
             "Paper or demo",
-            "No secrets: no seed phrase, private key or API secret",
+            secrets_line or "No secrets: no seed phrase, private key or API secret",
             "A written stop",
             "Leave every figure marked EXAMPLE",
         ]
         y = y0 + 24
         for row in rows:
-            lines = wrap(row, 24, x1 - x0 - 100)[:2]
+            lines = wrap(row, 24, x1 - x0 - 100)[:3]
             _tick(draw, x0 + 36, y + 14)
             for line in lines:
                 draw.text((x0 + 68, y), line, font=font(24), fill=WHITE)
@@ -1662,7 +1663,17 @@ def paint_outro(base: Image.Image, shot: dict, local: float) -> None:
     number = int(shot.get("lesson_no") or 1) + 1
     mode = {2: "lines", 3: "orders", 4: "regimes"}.get(number, "path")
     # The orders chip at the plot's left edge covers the July drop.
-    _hero(base, (1120, 240, 1760, 800), mode, chip_dx=-40 if mode == "orders" else 0)
+    secrets_line = None
+    if shot.get("lesson_id") == "bp-01-introduction" and mode == "lines":
+        secrets_line = (
+            "No secrets: no seed phrase, private key or API secret, "
+            "the secret words or keys that unlock a wallet or account"
+        )
+    _hero(
+        base, (1120, 240, 1760, 800), mode,
+        chip_dx=-40 if mode == "orders" else 0,
+        secrets_line=secrets_line,
+    )
     place_mascot(base, shot, (96, 560, 560, 960))
     foot = font(36, "reg")
     fw = foot.getlength(FOOT)
@@ -2021,7 +2032,7 @@ def paint(shot: dict, local: float, progress: float) -> np.ndarray:
     elif (
         kind == "lesson-still"
         and shot.get("lesson_id") == "bp-01-introduction"
-        and (shot.get("chapter") or "") == "When the drawing fails"
+        and (shot.get("chapter") or "") == "When price leaves the band"
     ):
         title_bar(img, shot, progress)
         paint_leave(img, shot, local)
@@ -2337,7 +2348,7 @@ def _narrate_shot(speaker, shot: dict) -> tuple[np.ndarray, int, list]:
     tail = min(cap, hold + BEAT_GAP)
     if (
         shot.get("lesson_id") == "bp-01-introduction"
-        and (shot.get("chapter") or "") == "When the drawing fails"
+        and (shot.get("chapter") or "") == "When price leaves the band"
     ):
         tail += 1.0
     if tail > 0:
