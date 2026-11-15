@@ -1,5 +1,7 @@
 # Market Check scores before and after review A and C
 
+On 15 Nov 2026 Stewart approved A and replaced C. The tables below are the earlier A+C experiment. The screen no longer zeros the long-window weight. See the 15 Nov gate and the frozen levels in `select.py`.
+
 Provisional only. The hard drop in `select.py` is the reading this unmerged PR uses so it can be reviewed. It is not a production change, and it is not a decision to drop rather than penalise.
 
 `compare_scores.py` produced the tables below. HISTORICAL rows use the saved screen output in the review bundle (24 Oct `selection-2026-10-24`, and the 1 Nov screen under `2026-11-01-am/screen`). LIVE is a fresh universe pull. No candle file was invented.
