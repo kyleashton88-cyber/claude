@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Arty — four-week Pionex operating plan</title>
+<style>
+  @font-face {
+    font-family: "Atkinson";
+    src: url("fonts/AtkinsonHyperlegible-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Atkinson";
+    src: url("fonts/AtkinsonHyperlegible-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Newsreader";
+    src: url("fonts/Newsreader.ttf") format("truetype");
+    font-weight: 200 800;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Newsreader";
+    src: url("fonts/Newsreader-Italic.ttf") format("truetype");
+    font-weight: 200 800;
+    font-style: italic;
+  }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Atkinson", "Liberation Sans", sans-serif;
+    color: #172033;
+    font-size: 10pt;
+    line-height: 1.34;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    background: #f3f6f8;
+    page-break-after: always;
+    break-after: page;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  .run {
+    height: 11mm;
+    background: #1e3a5f;
+    color: #f4f7f8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 13mm;
+    font-size: 9.5pt;
+  }
+  .run span:last-child { font-variant-numeric: tabular-nums; }
+  .body {
+    height: 271mm;
+    padding: 6.5mm 13mm 2mm;
+    overflow: hidden;
+  }
+  .foot {
+    position: absolute;
+    left: 13mm;
+    right: 13mm;
+    bottom: 3.2mm;
+    font-size: 7pt;
+    line-height: 1.28;
+    color: #3e5164;
+  }
+  h2 {
+    font-family: "Newsreader", "Liberation Serif", serif;
+    font-weight: 560;
+    font-size: 20.5pt;
+    line-height: 1.05;
+    color: #1e3a5f;
+    margin: 0 0 2.4mm;
+  }
+  h3 {
+    font-family: "Atkinson", sans-serif;
+    font-size: 11pt;
+    font-weight: 700;
+    color: #1e3a5f;
+    margin: 3.2mm 0 1mm;
+  }
+  p { margin: 0 0 2mm; }
+  strong { font-weight: 700; }
+  ol, ul { margin: 0 0 2mm; padding-left: 4.6mm; }
+  li { margin: 0 0 0.7mm; }
+  .tight li { margin: 0 0 0.35mm; }
+  table { width: 100%; border-collapse: collapse; margin: 1mm 0 2.4mm; }
+  th {
+    text-align: left;
+    font-weight: 700;
+    font-size: 8.4pt;
+    color: #1e3a5f;
+    border-bottom: 1.25pt solid #1e3a5f;
+    padding: 1mm 1.6mm;
+    vertical-align: bottom;
+  }
+  td {
+    font-size: 8.6pt;
+    line-height: 1.28;
+    border-bottom: 0.35pt solid #d3dde4;
+    padding: 1.05mm 1.6mm;
+    vertical-align: top;
+  }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  figure { margin: 1.5mm 0 2mm; }
+  figcaption { font-size: 8pt; color: #3e5164; margin-top: 0.8mm; }
+  img { width: 100%; height: auto; display: block; }
+  .rule {
+    border-left: 2.4pt solid #f0b429;
+    padding: 0.4mm 0 0.4mm 3.2mm;
+    margin: 1.6mm 0 2.2mm;
+  }
+  .stop {
+    border-left-color: #8e2f3a;
+  }
+  .glossary { column-count: 2; column-gap: 7mm; }
+  .glossary p { break-inside: avoid; margin: 0 0 1.8mm; font-size: 8.7pt; }
+  .glossary em { font-family: "Newsreader", serif; font-style: italic; font-weight: 560; }
+  .note {
+    background: #fff;
+    border-top: 0.4pt solid #d3dde4;
+    border-bottom: 0.4pt solid #d3dde4;
+    padding: 1.6mm 0;
+    margin: 1.5mm 0 2mm;
+    font-size: 9pt;
+  }
+  .cover {
+    background: #1e3a5f;
+    color: #f4f7f8;
+  }
+  .cover-rail {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 7mm;
+    background: #f0b429;
+  }
+  .cover-inner { padding: 16mm 14mm 12mm 16mm; height: 297mm; }
+  .cover-kicker { font-size: 11pt; margin: 0 0 8mm; color: #d5e0ea; }
+  .cover h1 {
+    font-family: "Newsreader", serif;
+    font-weight: 560;
+    font-size: 68pt;
+    line-height: 0.86;
+    margin: 0 0 4mm;
+    color: #f7f5ef;
+  }
+  .cover-sub { font-size: 14pt; line-height: 1.25; margin: 0 0 7mm; max-width: 150mm; }
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm 8mm; margin: 0 0 6mm; }
+  .facts div { border-top: 0.5pt solid rgba(244, 247, 248, 0.35); padding-top: 1.8mm; }
+  .facts span { display: block; font-size: 8.5pt; color: #c5d4e0; margin-bottom: 0.6mm; }
+  .facts strong { display: block; font-size: 12pt; font-weight: 700; color: #fff; }
+  .cover figure { background: #fff; padding: 2mm 2mm 1mm; margin: 0 0 4mm; }
+  .contents { margin: 0 0 4mm; }
+  .contents p { margin: 0 0 1.2mm; font-size: 9pt; color: #c5d4e0; }
+  .contents ol {
+    margin: 0;
+    padding: 0;
+    column-count: 2;
+    column-gap: 8mm;
+    list-style: none;
+    counter-reset: item 1;
+  }
+  .contents li {
+    counter-increment: item;
+    break-inside: avoid;
+    font-size: 8.6pt;
+    line-height: 1.3;
+    margin: 0 0 1mm;
+    color: #f4f7f8;
+  }
+  .contents li::before {
+    content: counter(item) "  ";
+    color: #f0b429;
+    font-weight: 700;
+  }
+  .cover-warn {
+    background: #f0b429;
+    color: #172033;
+    font-weight: 700;
+    font-size: 13pt;
+    padding: 3mm 4mm;
+    margin: 0 0 4mm;
+  }
+  .cover-disc { font-size: 8pt; line-height: 1.35; color: #d5e0ea; margin: 0; }
+  .small { font-size: 8.7pt; }
+  .check { font-size: 8.5pt; line-height: 1.28; }
+  .check li { margin: 0 0 0.55mm; }
+  .blank { color: #5c6d7e; }
+</style>
+</head>
+<body>
+
+<section class="page cover">
+  <div class="cover-rail"></div>
+  <div class="cover-inner">
+    <p class="cover-kicker">Prepared for Arty, reviewed with Stewart</p>
+    <h1>Arty</h1>
+    <p class="cover-sub">A four-week operating plan for a first Pionex futures grid. Some notes say Artie. This plan says Arty.</p>
+    <div class="facts">
+      <div><span>Starting account</span><strong>[[equity]] USDT</strong></div>
+      <div><span>Weeks 1 and 2</span><strong>ETH/USDT, one bot</strong></div>
+      <div><span>Leverage</span><strong>3× unless a review allows 5×</strong></div>
+      <div><span>Grid</span><strong>Neutral futures, arithmetic</strong></div>
+    </div>
+    <figure>
+      <img src="charts/cover_range.png" alt="Example chart of a fictional price path inside a range">
+    </figure>
+    <div class="contents">
+      <p>Inside</p>
+      <ol>
+        <li>How to read the percents, and a glossary</li>
+        <li>Pairs, the DOGE ticker, and the six rules</li>
+        <li>The loss ladder, at 500 and after a deposit</li>
+        <li>How much money goes into one bot</li>
+        <li>Leverage, liquidation, and the 5× gate</li>
+        <li>How to build a range from the chart</li>
+        <li>Fees, spacing, and one worked grid</li>
+        <li>An example picture of the lines</li>
+        <li>The 22-point launch checklist</li>
+        <li>When to close a bot that is already open</li>
+        <li>The journal and the daily check</li>
+        <li>The weekly review with Stewart</li>
+        <li>The four weeks, and the separate deposit decision</li>
+        <li>Sign-off, and what to read on the Pionex screen</li>
+      </ol>
+    </div>
+    <p class="cover-warn">One failed check means no bot.</p>
+    <p class="cover-disc">[[disclaimer]]</p>
+  </div>
+</section>
+
+<section class="page">
+  <header class="run"><span>How to use this plan</span><span>2</span></header>
+  <div class="body">
+    <h2>Read this before the first bot</h2>
+    <p>This plan keeps your pairs, your [[equity]] USDT, and a neutral futures grid. It replaces the earlier weekly account goal with things you can tick off: checks, journal rows, and reviews.</p>
+    <p class="rule">Arty marks the chart, runs every check, and presses every button. Stewart does the weekly review. Stewart does not log in, and does not launch, edit, or close a bot.</p>
+    <p>If a label on the Pionex screen is unclear, screenshot it and wait. Do not guess. Do not put an account number, a password, or an API key in the journal or in a message.</p>
+    <h3>Three different percents</h3>
+    <p>Most mix-ups in the old draft came from treating every percent as a move in the coin. They are not.</p>
+    <table>
+      <thead>
+        <tr><th>Figure</th><th>Percent of what</th><th class="num">At [[equity]] USDT</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>−8% close</td><td>The money inside that one bot</td><td class="num">[[stop_usd]] on a [[margin]] bot</td></tr>
+        <tr><td>+4.8% close</td><td>The money inside that one bot</td><td class="num">[[tp_usd]] on a [[margin]] bot</td></tr>
+        <tr><td>10% cap</td><td>The whole account</td><td class="num">[[margin]] in the bot</td></tr>
+        <tr><td>−3% week</td><td>Equity at Monday 00:00</td><td class="num">[[weekly]]</td></tr>
+        <tr><td>−6% window</td><td>Equity at the start of the four weeks</td><td class="num">[[window]]</td></tr>
+        <tr><td>−10% and −15%</td><td>The baseline, measured on the trading result</td><td class="num">[[soft]] and [[hard]]</td></tr>
+      </tbody>
+    </table>
+    <p>The +4.8% close is smaller than the −8% close. One stop ([[stop_usd]]) is larger than one +4.8% close ([[tp_usd]]). Do not open extra bots to make the difference back.</p>
+    <h3>Words this plan uses</h3>
+    <div class="glossary">
+      <p><em>Grid.</em> A set of buy and sell orders placed at fixed steps inside a price range.</p>
+      <p><em>Interval.</em> The gap between two neighbouring orders. Ten intervals means eleven prices.</p>
+      <p><em>Arithmetic.</em> Every interval is the same number of USDT, not the same percent.</p>
+      <p><em>Neutral futures grid.</em> Orders on both sides. It still holds a coin position as price moves, and that position can be liquidated.</p>
+      <p><em>Margin.</em> The USDT you assign to one bot. It is not the whole account.</p>
+      <p><em>Equity.</em> The futures account value, including the open bot’s result.</p>
+      <p><em>Trading result.</em> Equity now, minus net cash you have put in. It starts at 0.00, not at 500.</p>
+      <p><em>Baseline.</em> The account size the halt lines use. It starts at [[equity]] USDT.</p>
+      <p><em>Liquidation.</em> The exchange closes the position because the loss used up the margin. You do not choose the moment.</p>
+      <p><em>Funding.</em> A fee between longs and shorts, usually every 8 hours. It is not the trading fee.</p>
+      <p><em>ATR.</em> Average true range. Here it means ATR(14): a 14-period measure of how far candles typically stretch.</p>
+      <p><em>Round trip.</em> One buy fill and a later sell fill, or the other way around. Fees are charged on both sides.</p>
+      <p><em>Isolated margin.</em> Only the money in that bot backs the position. Cross margin can reach the rest of the account.</p>
+    </div>
+    <div class="note">[[disclaimer]]</div>
+  </div>
+  <footer class="foot">[[footer]]</footer>
+</section>
+
+<section class="page">
+  <header class="run"><span>Rules, pairs and tickers</span><span>3</span></header>
+  <div class="body">
+    <h2>What you are allowed to trade</h2>
+    <ol class="tight">
+      <li>A week with no bot is a pass, if the checks were done and the skips were written down.</li>
+      <li>Every launch needs every check on page 10. One failed check, no bot.</li>
+      <li>Do not add money to a bot whose result is below zero. Do not move the −8% close. Do not remove it. Do not move the +4.8% close.</li>
+      <li>One bot in weeks 1 and 2. Two bots only after the weekly card says so, and only on two different pairs.</li>
+      <li>After a close, wait 24 hours before the same pair, then build a new range. Do not reuse the old prices. Two stops in a row: wait 48 hours and write a review note first.</li>
+      <li>Change at most one process note per week. During these four weeks, do not raise the 10% margin cap, the −8% close, the +4.8% close, or the ladder on page 4.</li>
+    </ol>
+    <h3>Watchlist</h3>
+    <p>These six bases only, each against USDT. ETH/USDT is the only pair in weeks 1 and 2. That is a process rule for a first month. It is not a claim that ETH is the most liquid coin, and it is not a ranking.</p>
+    <table>
+      <thead><tr><th>Base</th><th>Quote</th><th>When</th></tr></thead>
+      <tbody>
+        <tr><td>ETH</td><td>USDT</td><td>Weeks 1 and 2. Later only if it still passes the checks.</td></tr>
+        <tr><td>SOL</td><td>USDT</td><td>Week 3 or 4, and only if that week’s card names it.</td></tr>
+        <tr><td>DOGE</td><td>USDT</td><td>Week 3 or 4, and only if that week’s card names it.</td></tr>
+        <tr><td>XRP</td><td>USDT</td><td>Week 3 or 4, and only if that week’s card names it.</td></tr>
+        <tr><td>ZEC</td><td>USDT</td><td>Week 3 or 4, and only if that week’s card names it.</td></tr>
+        <tr><td>NEAR</td><td>USDT</td><td>Week 3 or 4, and only if that week’s card names it.</td></tr>
+      </tbody>
+    </table>
+    <p class="rule stop">The old note “DODG” means DOGE, Dogecoin. If the screen does not show DOGE against USDT, skip it. Do not search for DODG. Do not pick a coin with a similar name.</p>
+    <h3>Confirm the ticker, in this order</h3>
+    <ol class="tight">
+      <li>Search the base asset on Pionex.</li>
+      <li>Read the quote. It must be USDT.</li>
+      <li>Open the neutral futures grid. Not a spot grid. Not a leveraged token. Not a wrapped coin on another chain.</li>
+      <li>Copy the symbol string from the screen into the journal. Do not retype it from memory.</li>
+      <li>If that exact market is missing, skip it. Do not substitute another asset.</li>
+    </ol>
+    <p>Two bots can lose on the same day, because these coins often move together. Two stop-closes in a row still start the 48-hour pause, even if they happen hours apart. A stop-close is a −8% close, a liquidation, or a manual close with a negative result.</p>
+  </div>
+  <footer class="foot">[[footer]]</footer>
+</section>
+
+<section class="page">
+  <header class="run"><span>The loss ladder</span><span>4</span></header>
+  <div class="body">
+    <h2>When you stop opening bots</h2>
+    <p>Write your timezone on the sign-off page. Monday means 00:00 in that timezone. A “48-hour” wait means 48 clock hours.</p>
+    <p><strong>Trading result</strong> = equity now − net cash in. Net cash in starts at [[equity]] and rises when you deposit. A deposit does not repair a loss. Equity [[equity]] and no deposit means the trading result is 0.00.</p>
+    <figure>
+      <img src="charts/limits.png" alt="Bar chart of loss limits at 500 USDT and at an example 5000 USDT">
+      <figcaption>Example. The gold bars assume [[deposit]] USDT is added to an unchanged [[equity]], so equity is [[equity_after]]. They are not a forecast. If your screen shows another equity, recompute. Do not copy [[equity_after]].</figcaption>
+    </figure>
+    <table>
+      <thead>
+        <tr><th>Rung</th><th>Rule</th><th class="num">At [[equity]]</th><th class="num">Example at [[equity_after]]</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Week, −3%</td><td>No new bot until next Monday. An open bot stays only if no close rule is true.</td><td class="num">[[weekly]]</td><td class="num">[[after_weekly]]</td></tr>
+        <tr><td>Window, −6%</td><td>The next four-week window uses a 5% margin cap. Today’s bot is not closed for this line alone.</td><td class="num">[[window]]</td><td class="num">[[after_window]]</td></tr>
+        <tr><td>Soft halt, −10%</td><td>No new baseline. Margin cap becomes 5% now. Do not use new cash for a bot.</td><td class="num">[[soft]]</td><td class="num">[[after_soft]]</td></tr>
+        <tr><td>Hard halt, −15%</td><td>Close every bot today. No new bot until a review writes a restart. Deposit stays unused.</td><td class="num">[[hard]]</td><td class="num">[[after_hard]]</td></tr>
+      </tbody>
+    </table>
+    <p>Week loss = Monday equity − equity now − deposits this week + withdrawals this week. If that number is negative, the week is up: use zero in the launch test on page 5.</p>
+    <p>Half means 5% instead of 10%. Do not halve twice. A soft halt and a next-window half and a deposit phase-in all mean the same 5% cap, not 2.5%.</p>
+    <p>Use the strongest rung that is on. A hard halt overrides everything else.</p>
+  </div>
+  <footer class="foot">[[footer]]</footer>
+</section>
+
+<section class="page">
+  <header class="run"><span>How much goes into one bot</span><span>5</span></header>
+  <div class="body">
+    <h2>Size comes from the account, not from a feeling</h2>
+    <p>Margin = baseline × the cap. The cap is 10%, unless a phase-in or a halt has set it to 5%. Planned loss if the −8% close fills = margin × 0.08. That planned loss must stay at or under 1% of the baseline.</p>
+    <p>Check: 10% × 8% = [[stop_share]] of the account, and [[stop_share]] is under 1%. On [[equity]] USDT the 1% line is [[risk_cap]] USDT, and the planned stop is [[stop_usd]].</p>
+    <figure>
+      <img src="charts/sizing.png" alt="Bars comparing bot margin, the stop close, and the deposit-case limits">
+      <figcaption>Example arithmetic for this plan’s caps. The right-hand panel is the unchanged-[[equity]] deposit case, not a forecast of your balance.</figcaption>
+    </figure>
+    <table>
+      <thead>
+        <tr><th>Step</th><th class="num">Starter account</th><th class="num">Deposit case</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Equity used for the example</td><td class="num">[[equity]]</td><td class="num">[[equity_after]]</td></tr>
+        <tr><td>Margin at 10%</td><td class="num">[[margin]]</td><td class="num">[[full_margin]]</td></tr>
+        <tr><td>Margin at the 5% cap</td><td class="num">25.00</td><td class="num">[[phase_margin]]</td></tr>
+        <tr><td>Planned stop at 10% margin</td><td class="num">[[stop_usd]] ([[stop_share]])</td><td class="num">[[full_stop]] ([[full_share]])</td></tr>
+        <tr><td>Planned stop at 5% margin</td><td class="num">2.00</td><td class="num">[[phase_stop]] ([[phase_share]])</td></tr>
+        <tr><td>+4.8% close, 10% margin</td><td class="num">[[tp_usd]] ([[tp_share]])</td><td class="num">24.00</td></tr>
+      </tbody>
+    </table>
+    <p>Before you launch, add three numbers. Use zero for the week loss if the week is up.</p>
+    <ol class="tight">
+      <li>Week loss so far.</li>
+      <li>8% of the margin of every bot already open. Count the full 8% even if the bot is up.</li>
+      <li>8% of the new bot’s margin.</li>
+    </ol>
+    <p>If the sum is over the weekly limit, do not launch. Worked case at [[equity]]: three stops already booked are [[stops_three]], which is inside the [[weekly]] limit. A fourth planned stop makes [[stops_four]], which is over [[weekly]], so it is not opened. Two open bots reserve [[two_bots]] together, which is [[two_bots_share]] of [[equity]]. Weeks 1 and 2 still allow only one bot.</p>
+    <p class="rule stop">Suppose the screen’s minimum is [[min_example]] USDT. [[min_example]] × 0.08 = [[min_fail]]. That is over the [[risk_cap]] USDT cap on a [[equity]] account, so you skip. Do not round a minimum down. If your screen shows a different minimum, multiply that minimum by 0.08 and compare it with 1% of the baseline.</p>
+    <p>Fees and funding are not a reason to raise the margin. The planned loss ignores any grid fills you hope to see. Read the live minimum, the live fee, and the live funding rate anyway. They are checks on pages 8 and 10, not a reason to size up.</p>
+  </div>
+  <footer class="foot">[[footer]]</footer>
+</section>
+
+<section class="page">
+  <header class="run"><span>Leverage and liquidation</span><span>6</span></header>
+  <div class="body">
+    <h2>3× is the setting. 5× has a gate.</h2>
+    <p>Leverage does not change the planned USDT loss if the −8% close fills, because that close is a percent of margin. Leverage changes how small a price move reaches that close, and how close liquidation is. A fast move can jump past the close. That is why the buffer below is mandatory.</p>
+    <figure>
+      <img src="charts/leverage.png" alt="Bar chart of liquidation distance at 2x, 3x, 4x, 5x and 10x">
+      <figcaption>Example distances for a fully built isolated position, using a [[mmr]] maintenance-margin assumption. Replace [[mmr]] with the live figure. 10× is not used.</figcaption>
+    </figure>
+    <p>Planning formulas, for a position that is already fully built. A grid builds in steps, so the preview can differ. If they differ, trust the preview, and still require the buffer.</p>
+    <ul class="tight">
+      <li>Distance ≈ 1 ÷ leverage − maintenance margin. At 3× with a [[mmr]] assumption: [[dist3]]. At 5×: [[dist5]].</li>
+      <li>Long liquidation ≈ price × (1 − 1 ÷ leverage + maintenance). Short liquidation ≈ price × (1 + 1 ÷ leverage − maintenance).</li>
+      <li>Price move that loses 8% of margin if the position is already full ≈ 8% ÷ leverage. At 3× that is [[move3]] ([[move3_usd]] USDT when the example price is [[mid]]). At 5× it is [[move5]] ([[move5_usd]] USDT).</li>
+    </ul>
+    <p>Example only, at a fictional price of [[mid]], not a quote: 3× liquidation [[liq3_long]] and [[liq3_short]]. 5× liquidation [[liq5_long]] and [[liq5_short]]. The −8% move at 3× is [[mid]] − [[move3_usd]] = 2,920 and [[mid]] + [[move3_usd]] = 3,080. Both sit inside the example range of [[lower]] to [[upper]]. The −8% close is not the edge of the range.</p>
+    <h3>Buffer test, from the preview</h3>
+    <p>Long liquidation must be at or below lower × 0.97. Short liquidation must be at or above upper × 1.03. On the example bounds that is [[buf_low]] and [[buf_high]]. Both 3× and 5× pass <em>this particular</em> 11% example. Passing it does not allow 5× by itself. If the preview shows no liquidation price, do not launch.</p>
+    <h3>5× is allowed only when every line is yes</h3>
+    <ol class="tight">
+      <li>It is not week 1 or week 2.</li>
+      <li>The weekly card says “5× allowed this week,” in Stewart’s note.</li>
+      <li>1H ATR(14) ÷ price is at or under 1.00%.</li>
+      <li>The buffer test passes on the preview.</li>
+      <li>This is the only bot.</li>
+      <li>You do not raise the margin cap to “use” the leverage.</li>
+    </ol>
+    <p>Stay at 3× for the month unless that whole list is yes. A good week is not one of the lines.</p>
+  </div>
+  <footer class="foot">[[footer]]</footer>
+</section>
+
+<section class="page">
+  <header class="run"><span>Building the range</span><span>7</span></header>
+  <div class="body">
+    <h2>The range comes from the chart, not from a preset</h2>
+    <p>Do these steps on the daily chart first, then check the 4H and the 1H. Do not type the example prices into Pionex. They exist so the arithmetic can be checked.</p>
+    <ol class="check">
+      <li>Mark the latest swing low and swing high that price has moved between. You need at least 13 daily candles since the earlier swing, and daily closes on both sides of the midpoint.</li>
+      <li>Read daily ATR(14). Lower = swing low − 0.5 × daily ATR. Upper = swing high + 0.5 × daily ATR.</li>
+      <li>Mid = (lower + upper) ÷ 2. Width % = (upper − lower) ÷ mid × 100. Daily ATR % = daily ATR ÷ last price × 100.</li>
+      <li>ETH minimum width is the larger of 11% and 4 × daily ATR %. Any other pair: the larger of 8% and 4 × daily ATR %. Do not copy 11% onto SOL, DOGE, XRP, ZEC, or NEAR.</li>
+      <li>Maximum width is 8 × daily ATR %. If the maximum is below the minimum, skip. Do not stretch a quiet market out to 11%, and do not squeeze a trend into a grid.</li>
+      <li>Middle third runs from lower + (upper − lower) ÷ 3 to upper − (upper − lower) ÷ 3. The last price must be inside it.</li>
+      <li>Each of the last six 4H candles must have high − low at or under 1.5 × 4H ATR(14). The last 24 hourly closes must sit inside the middle half of the range: from lower + 0.25 × span to upper − 0.25 × span.</li>
+    </ol>
+    <figure>
+      <img src="charts/range_build.png" alt="Example daily candles with swing marks, ATR buffers and a shaded middle third">
+      <figcaption>Example, not a month of ETH. Swing [[swing_low]] and [[swing_high]], daily ATR [[atr]] USDT. Half of that ATR is 30, so the bounds are [[lower]] and [[upper]].</figcaption>
+    </figure>
+    <p>In that example, daily ATR % is [[atr_pct]]. Four times that is [[atr_4x]], which is under 11%, so the ETH floor of 11% is the minimum. Eight times is [[atr_8x]], and the 11% width is under that maximum, so the width test passes. A larger ATR could fail the same picture. Middle third: [[third_low]] to [[third_high]].</p>
+    <p>Also skip the launch if any of the last five daily volumes is over 2 × the 20-day average volume. That is a climax filter. It is not a reason to prefer high volume.</p>
+  </div>
+  <footer class="foot">[[footer]]</footer>
+</section>
+
+<section class="page">
+  <header class="run"><span>Fees and one completed grid</span><span>8</span></header>
+  <div class="body">
+    <h2>Spacing has to clear the fee</h2>
+    <p>Use 10, 11, or 12 intervals. Price step = (upper − lower) ÷ intervals. Gross step % on a band = price step ÷ the lower price of that band × 100. On an arithmetic grid the smallest percent is the top band. Call that the worst gross step.</p>
+    <p>Round-trip cost % = 2 × the live fee per side + the live spread. Net = worst gross − round-trip cost. Launch only if the worst gross step is at least 0.50% and the net is at least 0.30%. If you cannot select arithmetic spacing, do not launch.</p>
+    <p>The pictures below use a planning assumption you must replace: fee [[fee_side]] each side, spread [[spread_assumed]], so the round trip is [[round_trip]]. If the live fee is higher, the 0.30% net floor can be the test that fails first.</p>
+    <figure>
+      <img src="charts/fees.png" alt="Line chart of USDT left after fees as spacing gets wider">
+      <figcaption>Example only. USDT left on one [[notional]] order after the planning-assumption round trip. The shaded region fails the 0.50% gross floor. This is a cost drawing, not an expectation.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Example line, fictional [[lower]] to [[upper]], 12 intervals</th><th class="num">Figure</th></tr></thead>
+      <tbody>
+        <tr><td>Price step, [[span]] ÷ 12</td><td class="num">[[step]] USDT</td></tr>
+        <tr><td>Worst gross step, top band, [[step]] ÷ 3,137.50</td><td class="num">[[worst_gross]]</td></tr>
+        <tr><td>Planning round trip</td><td class="num">[[round_trip]]</td></tr>
+        <tr><td>Net step</td><td class="num">[[net_step]]</td></tr>
+        <tr><td>One grid order, [[margin]] × 3 ÷ 12</td><td class="num">[[notional]] USDT</td></tr>
+        <tr><td>Gross on that order at the worst step</td><td class="num">[[gross_grid]] USDT</td></tr>
+        <tr><td>Fee plus spread on that order</td><td class="num">[[cost_grid]] USDT</td></tr>
+        <tr><td>Left after those costs</td><td class="num">[[net_grid]] USDT</td></tr>
+      </tbody>
+    </table>
+    <p>[[net_grid]] USDT is what this fictional order keeps after the example costs. It is under one tenth of one USDT. It is not a goal for the account. If the bot screen shows a different order size, rerun the last three lines with that size. The book check wants at least [[depth]] USDT on the best bid and on the best ask, because that is 20 × [[notional]]. At a price of [[mid]], a 0.08% spread is [[spread_px]] USDT. Wider than 0.08%, and you skip.</p>
+  </div>
+  <footer class="foot">[[footer]]</footer>
+</section>
+
+<section class="page">
+  <header class="run"><span>The example picture</span><span>9</span></header>
+  <div class="body">
+    <h2>How to read the lines</h2>
+    <p>The path is invented. It is drawn to stay inside the range so it cannot be mistaken for a result. Your chart will not look like this. Use it to learn which line does which job.</p>
+    <figure>
+      <img src="charts/price_grid.png" alt="Fictional price path with grid lines, and a full-scale liquidation strip">
+      <figcaption>Example. Green band is the middle third, [[third_low]] to [[third_high]]. Pale band is the range, [[lower]] to [[upper]]. Liquidation marks use the [[mmr]] maintenance assumption at a fictional price of [[mid]].</figcaption>
+    </figure>
+    <ul class="tight">
+      <li>Grid lines are every [[step]] USDT. There are 12 intervals and 13 prices.</li>
+      <li>You may launch only while price is in the green band, and only if page 10 is all yes.</li>
+      <li>A 4H candle that <em>closes</em> outside [[lower]] or [[upper]] ends the bot. A wick alone does not.</li>
+      <li>The −8% and +4.8% closes are results on the bot’s money. They are not extra lines you draw on the chart. At [[mid]] and 3×, a fully built position reaches an 8% margin loss after [[move3_usd]] USDT (2,920 or 3,080). That is inside the range.</li>
+      <li>The lower strip is why you still read the liquidation preview. On this example, 3× sits at [[liq3_long]] and [[liq3_short]], beyond the 3% buffer of [[buf_low]] and [[buf_high]].</li>
+    </ul>
+  </div>
+  <footer class="foot">[[footer]]</footer>
+</section>
+
+<section class="page">
+  <header class="run"><span>The launch checklist</span><span>10</span></header>
+  <div class="body">
+    <h2>All 22 must be yes</h2>
+    <figure>
+      <img src="charts/launch_flow.png" alt="Flow from six check groups to launch, with every no leading to do not launch">
+      <figcaption>Any single no on the list below is a no on this gate. Log the check number. A skip is a completed decision.</figcaption>
+    </figure>
+    <ol class="check">
+      <li>The symbol is copied from the screen, the quote is USDT, and the product is a neutral futures grid.</li>
+      <li>Weeks 1–2: the pair is ETH/USDT. Later: the pair is on the watchlist and this week’s card allows it.</li>
+      <li>After this launch you still have at most one bot in weeks 1–2, and at most two bots later.</li>
+      <li>A second bot is a different pair from the one already open.</li>
+      <li>Margin is at or under today’s cap: 10%, or 5% if a phase-in or a soft halt is on.</li>
+      <li>Week loss + 8% of every open bot + 8% of this bot is at or under the weekly limit. Use zero if the week is up.</li>
+      <li>The soft halt and the hard halt are off. The 24-hour pair wait and the 48-hour two-stop pause are over.</li>
+      <li>Leverage is 3×, or 5× only when every gate on page 6 is yes.</li>
+      <li>Spacing is arithmetic. Intervals are 10, 11, or 12. If the screen cannot do arithmetic, stop.</li>
+      <li>Lower and upper come from the page 7 steps, written as prices.</li>
+      <li>Width sits between that pair’s minimum and maximum. If the minimum is above the maximum, stop.</li>
+      <li>Last price is inside the middle third.</li>
+      <li>At least 13 daily candles have passed since the earlier swing, with closes on both sides of the midpoint.</li>
+      <li>Each of the last six 4H candles has high − low at or under 1.5 × 4H ATR(14). The last 24 hourly closes are inside the middle half.</li>
+      <li>No CPI, NFP, FOMC, or event written on this week’s card falls inside the next 48 hours.</li>
+      <li>Worst gross step is at least 0.50%, and worst gross minus the live round-trip cost is at least 0.30%.</li>
+      <li>Spread is at or under 0.08% of price. Best bid and best ask each show at least 20 × one grid order.</li>
+      <li>The screen’s minimum investment is at or under today’s margin. If it is higher, stop.</li>
+      <li>The close fields are percents of bot money: −8% and +4.8%. If a field is a price move, do not type 8 or 4.8.</li>
+      <li>Preview liquidation prices pass the 3% buffer. Choose isolated if it is offered. If the bot is cross only, this is the only bot.</li>
+      <li>The journal row, with a screenshot of the preview, is filled before you press launch.</li>
+      <li>Every skip this week has a check number. This row has no blank check.</li>
+    </ol>
+  </div>
+  <footer class="foot">[[footer]]</footer>
+</section>
+
+<section class="page">
+  <header class="run"><span>While a bot is open</span><span>11</span></header>
+  <div class="body">
+    <h2>Leave it alone, unless a close rule is true</h2>
+    <p>For the first 24 to 48 hours, do not change the range, the interval count, the leverage, or the margin, unless a row below says close. “Leave it alone” does not mean skip the daily check.</p>
+    <figure>
+      <img src="charts/pause_tree.png" alt="Decision list of conditions that close an open bot">
+      <figcaption>Check from the top. The first yes closes the bot. Funding, the 2.5% ATR test, and the 7-day and 14-day tests are defined under the picture.</figcaption>
+    </figure>
+    <h3>The rows, in numbers</h3>
+    <ul class="tight small">
+      <li><strong>News.</strong> Close at least 2 hours before CPI, NFP, FOMC, or any event on the weekly card. Do not launch again until 2 hours after that clock time. Do not launch at all if the event is inside 48 hours.</li>
+      <li><strong>Funding.</strong> Do not launch if the funding rate is at or beyond 0.050% per 8 hours, in either direction. If you are already in and it reaches that, close before the next funding time. Also close if funding you have paid on this bot is greater than the larger of 1.00 USDT and 20% of the realised grid result. If that result is negative, use zero, so the test is 1.00 USDT. The 0.050% funding test is a rate on the position. The [[fee_side]] fee assumption is a charge on a fill. Same sort of figure, different job.</li>
+      <li><strong>Volatility.</strong> Do not launch if 1H ATR(14) ÷ price is over 2.50%. If a bot is open and one 1H candle’s high − low is over 3% of its open, close it.</li>
+      <li><strong>Time.</strong> A round trip is one buy fill and a later sell fill, or the reverse, on this bot. Close at 7 days if you have fewer than 3 round trips. Close at 14 days no matter what. No bot in this month runs longer than 14 days.</li>
+      <li><strong>Wicks and the outer band.</strong> One wick outside, with the 4H candle closing back inside, is only a journal note. Two such wicks inside 24 hours: close. Also close on a 4H close in the outer 10% of the range if that candle’s volume is at least 2 × the 20-candle 4H average. Outer low = lower + 0.1 × span. Outer high = upper − 0.1 × span. On the example range those prices are [[outer_low]] and [[outer_high]].</li>
+      <li><strong>The page.</strong> If the bot numbers do not refresh for 15 minutes, or Pionex posts an outage, do not launch. If a bot is open, close it when the page accepts the close. Do not add margin while the page is failing.</li>
+    </ul>
+    <p>The −8% and +4.8% closes are set at launch and left there. When either fills, the bot is finished. Do not widen, shift, or top up.</p>
+  </div>
+  <footer class="foot">[[footer]]</footer>
+</section>
+
+<section class="page">
+  <header class="run"><span>The journal and the daily check</span><span>12</span></header>
+  <div class="body">
+    <h2>Write it down the same way every time</h2>
+    <p>One row per bot, started before launch and finished the day it closes. One daily line even when the action is “no change.” Keep the screenshot of the preview with the row.</p>
+    <h3>Daily check, at the clock time on the sign-off page</h3>
+    <ol class="tight">
+      <li>Equity, including the open bot’s result, and the trading result.</li>
+      <li>Week loss against Monday’s limit. Drawdown against the −10% and −15% lines.</li>
+      <li>For each open bot: result, whether the last 4H candle closed inside, funding rate, next funding time.</li>
+      <li>Spread, and whether any listed event is inside 48 hours.</li>
+      <li>If any close rule is true, close before you finish the check. Do not wait for the weekly review.</li>
+    </ol>
+    <table>
+      <thead><tr><th>Bot row field</th><th>What you write</th></tr></thead>
+      <tbody>
+        <tr><td>Opened, timezone</td><td>Date and time. Use the sign-off timezone.</td></tr>
+        <tr><td>Symbol and product</td><td>Copied from the screen. Isolated or cross.</td></tr>
+        <tr><td>Equity just before launch</td><td>USDT, including other open results.</td></tr>
+        <tr><td>Margin and cap</td><td>USDT, and whether the cap was 10% or 5%.</td></tr>
+        <tr><td>Leverage</td><td>3 or 5. If 5, the page 6 gates are all yes.</td></tr>
+        <tr><td>Lower, upper, mid, width</td><td>Prices and the width percent.</td></tr>
+        <tr><td>Daily ATR</td><td>USDT and percent of price.</td></tr>
+        <tr><td>Intervals and step</td><td>Count, USDT step, worst gross %, live fee %, spread %, net %.</td></tr>
+        <tr><td>Closes</td><td>−8% and +4.8% of bot money. Note the field label you saw.</td></tr>
+        <tr><td>Liquidation</td><td>Long price, short price, buffer yes or no.</td></tr>
+        <tr><td>Context</td><td>24h price change, next event and hours away, checklist 22/22.</td></tr>
+        <tr><td>Closed</td><td>Date and time. Exit: +4.8, −8, 4H, 8% candle, funding, news, time, wick, outer band, manual, exchange, liquidation.</td></tr>
+        <tr><td>Money</td><td>Result on the bot, fees, funding, and the result after fees and funding, all in USDT.</td></tr>
+        <tr><td>Rule</td><td>Yes, or the check number that broke. One sentence, or “no change.”</td></tr>
+      </tbody>
+    </table>
+    <p class="small">A scratch, for the weekly count only, is a result after fees and funding between −0.50% and +0.50% of that bot’s margin. On a [[margin]] bot that is −0.25 to +0.25 USDT. A scratch is not a win, and it is not a stop. It still has the 24-hour wait on that pair.</p>
+  </div>
+  <footer class="foot">[[footer]]</footer>
+</section>
+
+<section class="page">
+  <header class="run"><span>The weekly review</span><span>13</span></header>
+  <div class="body">
+    <h2>Once a week, with the journal open</h2>
+    <p>Book the review before week 1 starts. Bring the journal and the Pionex history. Read fills, fees, and funding. Do not review from the bot headline alone. The review is finished only when this card is filled and both of you have initialled it.</p>
+    <table>
+      <thead><tr><th style="width:14mm">Tick</th><th>Bring this to Stewart</th></tr></thead>
+      <tbody>
+        <tr><td class="blank">____</td><td>Week dates, and daily checks done: ____ / 7</td></tr>
+        <tr><td class="blank">____</td><td>Bots opened: ____ &nbsp;&nbsp; Bots skipped: ____ &nbsp;&nbsp; Each skip has a check number</td></tr>
+        <tr><td class="blank">____</td><td>Rule breaks, by check number, or “none”</td></tr>
+        <tr><td class="blank">____</td><td>Monday equity ________ &nbsp; Equity now ________ &nbsp; Deposits this week ________</td></tr>
+        <tr><td class="blank">____</td><td>Trading result ________ &nbsp; Strongest ladder rung touched: none / week / window / soft / hard</td></tr>
+        <tr><td class="blank">____</td><td>Fees ________ &nbsp; Funding ________ &nbsp; both taken from history</td></tr>
+        <tr><td class="blank">____</td><td>Pairs allowed next week. ETH stays first until the card names one other pair.</td></tr>
+        <tr><td class="blank">____</td><td>Max bots ____ &nbsp; Margin cap ____% &nbsp; Leverage ____ &nbsp; “5× allowed” only if page 6 is yes</td></tr>
+        <tr><td class="blank">____</td><td>Event dates and clock times for the next seven days</td></tr>
+        <tr><td class="blank">____</td><td>One process note to try, or “none.” Do not change a risk number.</td></tr>
+        <tr><td class="blank">____</td><td>Arty initials ________ &nbsp; Stewart initials ________ &nbsp; Date ________</td></tr>
+      </tbody>
+    </table>
+    <h3>What the review may not do</h3>
+    <ul class="tight">
+      <li>Do not add a pair in weeks 1 or 2.</li>
+      <li>In week 3 or 4, one extra watchlist pair is allowed only if the card names it, and only if ETH checks kept failing for a reason you can point to (spread, book, or the range test), or ETH bots were closed with the rules followed.</li>
+      <li>Do not change size or leverage from a count of winners until you have 20 closed bots. Until then the count is too small. Skips count as data.</li>
+      <li>Do not raise risk because a week was quiet, and do not raise risk because a week was down.</li>
+    </ul>
+    <h3>End of week 4, before any transfer</h3>
+    <p>Count the four cards and the daily checks. List every rule break. Write the trading result and the halt state. Then, and only then, choose one line: transfer, transfer but do not use, or do not transfer. The deposit page is that decision. It is not a reward for a result.</p>
+  </div>
+  <footer class="foot">[[footer]]</footer>
+</section>
+
+<section class="page">
+  <header class="run"><span>Four weeks and the deposit</span><span>14</span></header>
+  <div class="body">
+    <h2>A calendar, not a balance to chase</h2>
+    <figure>
+      <img src="charts/roadmap.png" alt="Four week blocks from ETH only through a separate deposit decision">
+      <figcaption>Process for the four weeks. No balance is a goal. A quiet week that followed the checks is a completed week.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Week</th><th>Done means</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>The review is already booked. Daily check 7 days. ETH/USDT only. One bot at most. Every skip has a check number. Zero launches that miss a check.</td></tr>
+        <tr><td>2</td><td>Same limits. The journal has the live fee, the live spread, and a one-line note on the book. No second pair.</td></tr>
+        <tr><td>3</td><td>The card is filled before any second pair. Two bots only if the card says so. Same size maths.</td></tr>
+        <tr><td>4</td><td>The four-week review is finished before any transfer. The deposit line is written: transfer, transfer but do not use, or do not transfer.</td></tr>
+      </tbody>
+    </table>
+    <h3>The [[deposit]] USDT decision</h3>
+    <ol class="tight">
+      <li>The week-4 card is finished, and the hard halt is not on.</li>
+      <li>No bot is open. No bot has a result below zero. The new money goes to account equity only. It does not go into a bot.</li>
+      <li>Arty writes and signs: “I can lose this [[deposit]] USDT without borrowing.”</li>
+      <li>If a soft halt or a hard halt is on, the new money stays unused and the old dollar table stays in force.</li>
+      <li>If no halt is on, the new baseline is the equity on the screen after the deposit arrives. Write the new ladder dollars before any new bot.</li>
+      <li>No new bot on the deposit day, and none for the rest of that week.</li>
+      <li>From the next Monday, for 7 days, the margin cap is 5%, not 10%.</li>
+    </ol>
+    <p>Adopting the new table does widen the halt, from [[soft]] USDT to [[after_soft]] USDT in the example below. That is a real increase in what you can lose. It is allowed only through the list above. It does not erase the old trading result.</p>
+    <p class="small">Worked case, only if the [[equity]] is still intact and the trading result is zero. Equity becomes [[equity_after]]. Next Monday the week limit is [[after_weekly]]. The new window limit is [[after_window]]. Soft halt −[[after_soft]]. Hard halt −[[after_hard]]. Phase-in margin [[phase_margin]], planned stop [[phase_stop]] ([[phase_share]]). After the 7 days, margin [[full_margin]], planned stop [[full_stop]] ([[full_share]]). If the screen is not [[equity_after]], throw these dollars out and multiply the equity you see by 0.03, 0.06, 0.10, 0.15, 0.05, and 0.10. Then multiply the margin by 0.08.</p>
+  </div>
+  <footer class="foot">[[footer]]</footer>
+</section>
+
+<section class="page">
+  <header class="run"><span>Sign-off</span><span>15</span></header>
+  <div class="body">
+    <h2>Before the first session</h2>
+    <table>
+      <tbody>
+        <tr><td>Daily check time</td><td class="blank">____________________</td><td>Timezone</td><td class="blank">____________________</td></tr>
+        <tr><td>Quote asset is USDT</td><td class="blank">Yes ____</td><td>Baseline at the start</td><td>[[equity]] USDT</td></tr>
+        <tr><td>Week 1 review booked</td><td class="blank">Date ____________</td><td>Arty places every order</td><td>Yes</td></tr>
+      </tbody>
+    </table>
+    <p>Arty confirms that every bot is set by Arty on Pionex. Stewart supports the weekly review and does not place, edit, or close a bot. If a screen label is unclear, Arty sends a screenshot and does not launch.</p>
+    <table>
+      <thead><tr><th>Arty, trader</th><th>Stewart, weekly review</th></tr></thead>
+      <tbody>
+        <tr><td class="blank">Signature ___________________________</td><td class="blank">Signature ___________________________</td></tr>
+        <tr><td class="blank">Date ________________________________</td><td class="blank">Date ________________________________</td></tr>
+      </tbody>
+    </table>
+    <h3>Read these on Pionex the day you launch</h3>
+    <p class="small">Symbol string. Bot type name. Minimum investment. Fee per side. Funding rate, and the next funding time. Isolated or cross. Liquidation prices. Whether the −8% field is a result on bot money or a price move. Spread. Size on the best bid and best ask. The order size the bot will actually use. If any of these cannot be read, do not launch.</p>
+    <h3>What this plan will not do</h3>
+    <ul class="tight">
+      <li>It will not choose the moment for you. The checklist does that, including the choice to skip.</li>
+      <li>It will not move a close, add to a losing bot, or raise the cap after a bad week.</li>
+      <li>It does not set a result for the account. Example prices, including [[lower]], [[mid]] and [[upper]], are not orders.</li>
+      <li>It asks for no secret. Do not write a key, a password, or an account number in the journal.</li>
+    </ul>
+    <p class="note">[[disclaimer]]</p>
+  </div>
+  <footer class="foot">[[footer]]</footer>
+</section>
+
+</body>
+</html>
