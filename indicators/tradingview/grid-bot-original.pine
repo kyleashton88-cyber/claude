@@ -1,0 +1,355 @@
+//// This Pine Script® code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/ MPL-2.0
+//@version=6
+strategy("Crypto Grid Bot Master Strategy & Alert System", overlay = true, pyramiding = 50,
+     initial_capital = 1000000, default_qty_type = strategy.fixed, default_qty_value = 1,
+     commission_type = strategy.commission.percent, commission_value = 0.1, slippage = 1,
+     process_orders_on_close = true, max_lines_count = 500, max_labels_count = 100)
+
+// --- Constants ---
+int MAX_GRID_LEVELS = 50
+string GROUP_GRID = "Grid Setup"
+string GROUP_AUTO = "Auto-Range Parameters"
+string GROUP_RISK = "Risk & Execution"
+string GROUP_TREND = "Trend Filter"
+string GROUP_ALERT = "Alert Formatting"
+string GROUP_STYLE = "Dashboard Style"
+
+// --- Inputs: Grid Setup ---
+gridModeInput = input.string("Arithmetic", "Grid Calculation", options = ["Arithmetic", "Geometric"], group = GROUP_GRID, tooltip = "Arithmetic uses equal price spacing. Geometric uses equal percentage spacing.")
+manualUpperInput = input.float(0.0, "Upper Grid Limit (0 = Dynamic)", minval = 0.0, group = GROUP_GRID, tooltip = "Manual upper boundary. Zero automatically uses the current close plus the configured manual band percentage.")
+manualLowerInput = input.float(0.0, "Lower Grid Limit (0 = Dynamic)", minval = 0.0, group = GROUP_GRID, tooltip = "Manual lower boundary. Zero automatically uses the current close minus the configured manual band percentage.")
+manualBandPercentInput = input.float(10.0, "Dynamic Manual Band %", minval = 1.0, maxval = 90.0, step = 0.5, group = GROUP_GRID, tooltip = "Percentage band around the current close used when either manual limit is zero.")
+gridLevelsInput = input.int(8, "Number of Grid Levels", minval = 2, maxval = MAX_GRID_LEVELS, group = GROUP_GRID, tooltip = "Reduced default level count creates wider, less fee-sensitive grid steps.")
+autoGridInput = input.bool(true, "Auto-Grid Mode", group = GROUP_GRID, tooltip = "Enabled by default so the strategy starts with a symbol-adaptive ATR or Bollinger Band range.")
+minSpacingPercentInput = input.float(1.25, "Minimum Grid Spacing %", minval = 0.05, step = 0.05, group = GROUP_GRID, tooltip = "Minimum percentage distance between grid levels. The wider default reduces commission drag and overtrading.")
+minSpacingAtrInput = input.float(1.00, "Minimum Grid Spacing ATR", minval = 0.0, step = 0.05, group = GROUP_GRID, tooltip = "Additional minimum spacing floor expressed as a multiple of ATR.")
+
+// --- Inputs: Auto-Range Parameters ---
+autoRangeMethodInput = input.string("ATR", "Auto-Range Method", options = ["ATR", "Bollinger Bands"], group = GROUP_AUTO, tooltip = "Volatility model used when Auto-Grid Mode is enabled.")
+autoLengthInput = input.int(50, "Auto-Range Basis Length", minval = 1, group = GROUP_AUTO, tooltip = "EMA basis length for ATR ranges and the fallback basis for the automatic range.")
+atrLengthInput = input.int(14, "ATR Length", minval = 1, group = GROUP_AUTO, tooltip = "ATR lookback used by the ATR auto-range model.")
+atrMultiplierInput = input.float(2.0, "ATR Multiplier", minval = 0.1, step = 0.1, group = GROUP_AUTO, tooltip = "Distance from the EMA basis to each ATR boundary.")
+bbLengthInput = input.int(20, "Bollinger Length", minval = 1, group = GROUP_AUTO, tooltip = "Lookback used by the Bollinger Band auto-range model.")
+bbMultiplierInput = input.float(2.0, "Bollinger Multiplier", minval = 0.1, step = 0.1, group = GROUP_AUTO, tooltip = "Standard-deviation multiplier for the automatic Bollinger range.")
+autoMaxDistanceInput = input.float(25.0, "Maximum Auto-Range Distance %", minval = 5.0, maxval = 90.0, step = 1.0, group = GROUP_AUTO, tooltip = "Clamps automatic boundaries around the current close so early-history or extreme ATR values cannot create unusable ranges.")
+trailingGridInput = input.bool(false, "Trailing Grid", group = GROUP_AUTO, tooltip = "When price trends above the active upper boundary, shift the complete grid upward while preserving its structure.")
+trendLengthInput = input.int(5, "Trailing Trend Bars", minval = 2, group = GROUP_AUTO, tooltip = "Confirmed rising bars required before an upward grid shift is made.")
+
+// --- Inputs: Risk & Execution ---
+orderQtyInput = input.float(1.0, "Preferred Order Quantity", minval = 0.00000001, group = GROUP_RISK, tooltip = "Preferred quantity for each grid buy. The actual quantity is reduced by the account-risk and position-size caps.")
+riskPercentInput = input.float(1.0, "Maximum Account Risk %", minval = 0.1, maxval = 10.0, step = 0.1, group = GROUP_RISK, tooltip = "Maximum modeled loss between the current entry price and the hard stop, as a percentage of strategy equity.")
+maxPositionQtyInput = input.float(10.0, "Absolute Maximum Grid Position", minval = 0.00000001, group = GROUP_RISK, tooltip = "Hard cap on total open grid quantity, regardless of pyramiding or account-risk calculations.")
+maxGridEntriesInput = input.int(6, "Maximum Open Grid Entries", minval = 1, maxval = 50, group = GROUP_RISK, tooltip = "Maximum number of accumulated grid entries. This is enforced in addition to the dynamic account-risk cap.")
+stopModeInput = input.string("Percent", "Hard Stop Loss Mode", options = ["Percent", "Price"], group = GROUP_RISK, tooltip = "The hard stop is always active. Price mode is constrained to remain below the active lower grid limit.")
+stopPercentInput = input.float(0.75, "Hard Stop % Below Lower", minval = 0.1, step = 0.05, group = GROUP_RISK, tooltip = "Tighter hard stop distance below the active lower grid boundary to cap trend losses.")
+stopPriceInput = input.float(0.0, "Hard Stop Price", minval = 0.0, group = GROUP_RISK, tooltip = "Absolute hard stop. A zero or invalid value falls back to the percentage stop.")
+takeProfitModeInput = input.string("Percent", "Hard Take Profit Mode", options = ["Percent", "Price"], group = GROUP_RISK, tooltip = "The hard take-profit is always active. Price mode is constrained to remain above the active upper grid limit.")
+takeProfitPercentInput = input.float(2.0, "Hard Take Profit % Above Upper", minval = 0.1, step = 0.1, group = GROUP_RISK, tooltip = "Hard take-profit distance above the active upper grid boundary.")
+takeProfitPriceInput = input.float(0.0, "Hard Take Profit Price", minval = 0.0, group = GROUP_RISK, tooltip = "Absolute hard take-profit. A zero or invalid value falls back to the percentage target.")
+
+// --- Inputs: Trend Filter ---
+useTrendFilterInput = input.bool(true, "Pause Buys In Strong Trends", group = GROUP_TREND, tooltip = "Prevents new grid buys while ADX or moving-average deviation indicates directional conditions.")
+adxLengthInput = input.int(14, "ADX DI Length", minval = 1, group = GROUP_TREND, tooltip = "Directional movement lookback used by the ADX trend filter.")
+adxSmoothingInput = input.int(14, "ADX Smoothing", minval = 1, group = GROUP_TREND, tooltip = "ADX smoothing length.")
+adxThresholdInput = input.float(20.0, "ADX Trend Threshold", minval = 5.0, step = 0.5, group = GROUP_TREND, tooltip = "Buys are paused earlier when ADX is at or above this threshold.")
+trendMaLengthInput = input.int(100, "Trend EMA Length", minval = 2, group = GROUP_TREND, tooltip = "Longer-term EMA used to detect price displacement from the range regime.")
+maxMaDeviationInput = input.float(3.0, "Maximum EMA Deviation %", minval = 0.5, step = 0.5, group = GROUP_TREND, tooltip = "Buys are paused earlier when price is farther than this percentage from the trend EMA.")
+rangeRecoveryBarsInput = input.int(4, "Range Recovery Confirmation Bars", minval = 1, maxval = 20, group = GROUP_TREND, tooltip = "After a trend pause, buys remain disabled until the market has confirmed this many consecutive in-range bars without a strong trend signal.")
+
+// --- Inputs: Alert Formatting ---
+alertsEnabledInput = input.bool(true, "Enable Webhook Alerts", group = GROUP_ALERT, tooltip = "Allows confirmed strategy events to call dynamic webhook alerts.")
+alertFormatInput = input.string("JSON", "Webhook Format", options = ["JSON", "Text"], group = GROUP_ALERT, tooltip = "JSON is compatible with most webhook automation services.")
+alertPrefixInput = input.string("CRYPTO_GRID", "Alert Prefix", group = GROUP_ALERT, tooltip = "Short identifier included in text and JSON alert payloads.")
+webhookSecretInput = input.string("CHANGE_ME", "Webhook Secret", group = GROUP_ALERT, tooltip = "Optional shared secret for validating webhook requests on your automation server.")
+regridBarsInput = input.int(3, "Rebalance After Outside Bars", minval = 1, group = GROUP_ALERT, tooltip = "Number of confirmed bars outside the range before the grid is automatically rebuilt around price.")
+enableBuyAlertInput = input.bool(true, "Buy Level Alerts", group = GROUP_ALERT, tooltip = "Alert when an actionable buy grid crossing occurs.")
+enableSellAlertInput = input.bool(true, "Sell Level Alerts", group = GROUP_ALERT, tooltip = "Alert when price crosses up through a sell grid level.")
+enableBoundaryAlertInput = input.bool(true, "Boundary Alerts", group = GROUP_ALERT, tooltip = "Alert on confirmed upper breakouts and lower breakdowns.")
+enableRebalanceAlertInput = input.bool(true, "Rebalance Alerts", group = GROUP_ALERT, tooltip = "Alert after the grid is automatically rebuilt around the market.")
+enableRiskAlertInput = input.bool(true, "Risk Alerts", group = GROUP_ALERT, tooltip = "Alert separately when the hard stop or hard take-profit is reached.")
+
+// --- Inputs: Dashboard Style ---
+showDashboardInput = input.bool(true, "Show Dashboard", group = GROUP_STYLE, tooltip = "Displays the active grid, state, spacing, trend filter, and net estimated grid profit.")
+supportColorInput = input.color(#089981, "Support / Buy Color", group = GROUP_STYLE, tooltip = "Color for grid levels below the current market price.")
+resistanceColorInput = input.color(#f23645, "Resistance / Sell Color", group = GROUP_STYLE, tooltip = "Color for grid levels above the current market price.")
+activeColorInput = input.color(#ff9800, "Active Level Color", group = GROUP_STYLE, tooltip = "Highlight color for the currently active grid zone.")
+dashboardColorInput = input.color(#1e293b, "Dashboard Background", group = GROUP_STYLE, tooltip = "Dashboard cell background color.")
+dashboardTextColorInput = input.color(color.white, "Dashboard Text", group = GROUP_STYLE, tooltip = "Dashboard text color.")
+
+// --- User-defined functions ---
+f_gridPrice(int _index, float _lower, float _upper, int _levels, string _mode) =>
+    float fraction = _index / float(_levels - 1)
+    _mode == "Geometric" ? _lower * math.pow(_upper / _lower, fraction) : _lower + (_upper - _lower) * fraction
+
+f_alertMessage(string _event, float _level, string _action, float _lower, float _upper, float _orderSize, float _orderPercent) =>
+    string safeLevel = str.tostring(nz(_level, 0.0), format.mintick)
+    string safeLower = str.tostring(nz(_lower, 0.0), format.mintick)
+    string safeUpper = str.tostring(nz(_upper, 0.0), format.mintick)
+    string safeOrderSize = str.tostring(nz(_orderSize, 0.0), format.mintick)
+    string safeOrderPercent = str.tostring(nz(_orderPercent, 0.0), "#.##")
+    string signalId = alertPrefixInput + "_" + _event + "_" + str.tostring(time) + "_" + str.tostring(bar_index)
+    string jsonMessage = "{\"secret\":\"" + webhookSecretInput + "\",\"source\":\"" + alertPrefixInput + "\",\"event\":\"" + _event + "\",\"bot_signal_id\":\"" + signalId + "\",\"ticker\":\"{{ticker}}\",\"time\":\"{{time}}\",\"price\":\"{{close}}\",\"action\":\"{{strategy.order.action}}\",\"signal_action\":\"" + _action + "\",\"order_size\":\"" + safeOrderSize + "\",\"order_percent\":\"" + safeOrderPercent + "\",\"grid_level\":\"" + safeLevel + "\",\"lower\":\"" + safeLower + "\",\"upper\":\"" + safeUpper + "\"}"
+    string textMessage = alertPrefixInput + "|event=" + _event + "|bot_signal_id=" + signalId + "|ticker={{ticker}}|time={{time}}|price={{close}}|action={{strategy.order.action}}|signal_action=" + _action + "|order_size=" + safeOrderSize + "|order_percent=" + safeOrderPercent + "|grid_level=" + safeLevel + "|lower=" + safeLower + "|upper=" + safeUpper
+    alertFormatInput == "JSON" ? jsonMessage : textMessage
+
+// --- Volatility and raw range calculation ---
+float emaBasis = ta.ema(close, autoLengthInput)
+float atrValue = ta.atr(atrLengthInput)
+[bbBasis, bbUpper, bbLower] = ta.bb(close, bbLengthInput, bbMultiplierInput)
+float safeBasis = nz(emaBasis, close)
+float atrRangeLower = safeBasis - nz(atrValue, 0.0) * atrMultiplierInput
+float atrRangeUpper = safeBasis + nz(atrValue, 0.0) * atrMultiplierInput
+float selectedAutoLower = autoRangeMethodInput == "Bollinger Bands" ? nz(bbLower, atrRangeLower) : atrRangeLower
+float selectedAutoUpper = autoRangeMethodInput == "Bollinger Bands" ? nz(bbUpper, atrRangeUpper) : atrRangeUpper
+float autoLowerFloor = math.max(syminfo.mintick, close * (1.0 - autoMaxDistanceInput / 100.0))
+float autoUpperCeiling = math.max(close + syminfo.mintick, close * (1.0 + autoMaxDistanceInput / 100.0))
+float autoLowerCandidate = math.max(syminfo.mintick, math.max(autoLowerFloor, selectedAutoLower))
+float safeAutoLower = math.min(math.max(syminfo.mintick, close - syminfo.mintick), autoLowerCandidate)
+float autoUpperCandidate = math.max(safeAutoLower + syminfo.mintick, selectedAutoUpper)
+float safeAutoUpper = math.max(close + syminfo.mintick, math.min(autoUpperCeiling, autoUpperCandidate))
+float manualLowerCandidate = manualLowerInput > 0.0 ? manualLowerInput : close * (1.0 - manualBandPercentInput / 100.0)
+float manualUpperCandidate = manualUpperInput > 0.0 ? manualUpperInput : close * (1.0 + manualBandPercentInput / 100.0)
+float manualLower = math.min(math.max(syminfo.mintick, manualLowerCandidate), manualUpperCandidate - syminfo.mintick)
+float manualUpper = math.max(math.max(syminfo.mintick, manualUpperCandidate), manualLowerCandidate + syminfo.mintick)
+float rawLower = autoGridInput ? safeAutoLower : math.max(syminfo.mintick, manualLower)
+float rawUpper = autoGridInput ? safeAutoUpper : math.max(rawLower + syminfo.mintick, manualUpper)
+float atrSpacingPercent = rawLower > 0.0 ? nz(atrValue, 0.0) * minSpacingAtrInput / rawLower * 100.0 : 0.0
+float requiredSpacingPercent = math.max(minSpacingPercentInput, atrSpacingPercent)
+float spacingExpandedUpper = gridModeInput == "Geometric" ? math.max(rawUpper, rawLower * math.pow(1.0 + requiredSpacingPercent / 100.0, gridLevelsInput - 1)) : math.max(rawUpper, rawLower + math.max(syminfo.mintick, rawLower * requiredSpacingPercent / 100.0) * (gridLevelsInput - 1))
+float effectiveUpper = autoGridInput ? math.max(rawLower + syminfo.mintick, math.min(autoUpperCeiling, spacingExpandedUpper)) : spacingExpandedUpper
+
+// --- Active grid boundaries, trailing shift, and automatic rebuilding ---
+var float activeLower = na
+var float activeUpper = na
+var float rebuiltLower = na
+var float rebuiltUpper = na
+if na(activeLower)
+    activeLower := rawLower
+    activeUpper := effectiveUpper
+else if not autoGridInput and not na(rebuiltLower) and not trailingGridInput
+    activeLower := rebuiltLower
+    activeUpper := rebuiltUpper
+else if trailingGridInput
+    bool strongUptrend = close > activeUpper and ta.rising(close, trendLengthInput)
+    if barstate.isconfirmed and strongUptrend
+        float upwardShift = close - activeUpper
+        activeLower += upwardShift
+        activeUpper += upwardShift
+else
+    activeLower := rawLower
+    activeUpper := effectiveUpper
+
+// --- Boundary state before a possible rebuild ---
+float boundaryLowerBeforeRebuild = activeLower
+float boundaryUpperBeforeRebuild = activeUpper
+bool outsideRangeBeforeRebuild = close > boundaryUpperBeforeRebuild or close < boundaryLowerBeforeRebuild
+var int outsideBars = 0
+if barstate.isconfirmed
+    outsideBars := outsideRangeBeforeRebuild ? outsideBars + 1 : 0
+bool upperBreakout = barstate.isconfirmed and close > boundaryUpperBeforeRebuild and close[1] <= boundaryUpperBeforeRebuild[1]
+bool lowerBreakdown = barstate.isconfirmed and close < boundaryLowerBeforeRebuild and close[1] >= boundaryLowerBeforeRebuild[1]
+bool rebalanceTriggered = barstate.isconfirmed and outsideBars >= regridBarsInput and nz(outsideBars[1]) < regridBarsInput
+if rebalanceTriggered
+    float rebuildWidth = math.max(boundaryUpperBeforeRebuild - boundaryLowerBeforeRebuild, syminfo.mintick)
+    float rebuiltCenter = close
+    float candidateLower = math.max(syminfo.mintick, rebuiltCenter - rebuildWidth * 0.5)
+    float candidateUpper = math.max(candidateLower + syminfo.mintick, rebuiltCenter + rebuildWidth * 0.5)
+    activeLower := candidateLower
+    activeUpper := candidateUpper
+    rebuiltLower := candidateLower
+    rebuiltUpper := candidateUpper
+    outsideBars := 0
+
+// --- Trend regime filter ---
+[diPlus, diMinus, adxValue] = ta.dmi(adxLengthInput, adxSmoothingInput)
+float trendEma = ta.ema(close, trendMaLengthInput)
+float maDeviationPercent = not na(trendEma) and trendEma != 0.0 ? math.abs(close / trendEma - 1.0) * 100.0 : 0.0
+bool strongDirectionalTrend = nz(adxValue, 0.0) >= adxThresholdInput or maDeviationPercent >= maxMaDeviationInput
+var bool buysPaused = false
+var int rangeBoundBars = 0
+if barstate.isconfirmed
+    if strongDirectionalTrend
+        buysPaused := true
+        rangeBoundBars := 0
+    else
+        bool currentlyInRange = close >= activeLower and close <= activeUpper
+        rangeBoundBars := currentlyInRange ? rangeBoundBars + 1 : 0
+        if buysPaused and rangeBoundBars >= rangeRecoveryBarsInput
+            buysPaused := false
+bool trendBlocked = useTrendFilterInput and (strongDirectionalTrend or buysPaused)
+bool trendExitTriggered = useTrendFilterInput and strongDirectionalTrend and not strongDirectionalTrend[1] and strategy.position_size > 0.0
+bool rangeEligibleForBuy = close >= activeLower and close <= activeUpper and not trendBlocked
+
+// --- Grid metrics ---
+float geometricFactor = math.pow(activeUpper / activeLower, 1.0 / (gridLevelsInput - 1))
+float arithmeticStep = (activeUpper - activeLower) / (gridLevelsInput - 1)
+float spacingPercent = gridModeInput == "Geometric" ? (geometricFactor - 1.0) * 100.0 : arithmeticStep / activeLower * 100.0
+float gridPosition = gridModeInput == "Geometric" ? math.log(close / activeLower) / math.log(activeUpper / activeLower) : (close - activeLower) / (activeUpper - activeLower)
+int calculatedIndex = int(math.floor(gridPosition * (gridLevelsInput - 1)))
+int activeIndex = math.max(0, math.min(gridLevelsInput - 1, calculatedIndex))
+float activeLevel = f_gridPrice(activeIndex, activeLower, activeUpper, gridLevelsInput, gridModeInput)
+float nextLevel = activeIndex < gridLevelsInput - 1 ? f_gridPrice(activeIndex + 1, activeLower, activeUpper, gridLevelsInput, gridModeInput) : activeLevel
+float previousLevel = activeIndex > 0 ? f_gridPrice(activeIndex - 1, activeLower, activeUpper, gridLevelsInput, gridModeInput) : activeLevel
+float estimatedGridStep = activeIndex < gridLevelsInput - 1 ? nextLevel - activeLevel : activeLevel - previousLevel
+float feeRate = 0.001
+float grossProfitPerGrid = estimatedGridStep * orderQtyInput
+float estimatedFeesPerGrid = (activeLevel + (activeLevel + estimatedGridStep)) * orderQtyInput * feeRate
+float estimatedNetProfitPerGrid = grossProfitPerGrid - estimatedFeesPerGrid
+
+// --- Hard risk levels: always active and constrained beyond the grid ---
+float percentStopLevel = activeLower * (1.0 - stopPercentInput / 100.0)
+float selectedStopLevel = stopModeInput == "Price" and stopPriceInput > 0.0 ? stopPriceInput : percentStopLevel
+float stopLevel = math.min(activeLower - syminfo.mintick, selectedStopLevel)
+float percentTakeProfitLevel = activeUpper * (1.0 + takeProfitPercentInput / 100.0)
+float selectedTakeProfitLevel = takeProfitModeInput == "Price" and takeProfitPriceInput > activeUpper ? takeProfitPriceInput : percentTakeProfitLevel
+float takeProfitLevel = math.max(activeUpper + syminfo.mintick, selectedTakeProfitLevel)
+
+// --- Dynamic position and pyramiding risk cap ---
+float riskCapital = math.max(strategy.equity, 0.0) * riskPercentInput / 100.0
+float riskPerUnit = math.max(close - stopLevel, syminfo.mintick)
+float riskBasedMaxQty = riskCapital / riskPerUnit
+float maxOpenGridQty = math.min(maxPositionQtyInput, riskBasedMaxQty)
+int riskEntryCap = orderQtyInput > 0.0 ? int(math.floor(maxOpenGridQty / orderQtyInput)) : 0
+int allowedEntryCap = math.min(maxGridEntriesInput, riskEntryCap)
+int currentEntryCount = orderQtyInput > 0.0 ? int(math.floor(math.max(strategy.position_size, 0.0) / orderQtyInput + 0.000001)) : 0
+float remainingRiskQty = math.max(0.0, maxOpenGridQty - math.max(strategy.position_size, 0.0))
+float buyOrderQty = math.min(orderQtyInput, remainingRiskQty)
+float buyOrderPercent = maxOpenGridQty > 0.0 ? buyOrderQty / maxOpenGridQty * 100.0 : 0.0
+
+// --- Confirmed grid-crossing signals ---
+bool buyTriggered = false
+bool sellTriggered = false
+float buyTriggerLevel = na
+float sellTriggerLevel = na
+if barstate.isconfirmed and not na(close[1]) and not na(activeLower[1]) and not na(activeUpper[1])
+    for i = 0 to MAX_GRID_LEVELS - 1
+        if i < gridLevelsInput
+            float currentGridLevel = f_gridPrice(i, activeLower, activeUpper, gridLevelsInput, gridModeInput)
+            float priorGridLevel = f_gridPrice(i, activeLower[1], activeUpper[1], gridLevelsInput, gridModeInput)
+            bool crossedDown = close < currentGridLevel and close[1] >= priorGridLevel
+            bool crossedUp = close > currentGridLevel and close[1] <= priorGridLevel
+            if crossedDown and i < gridLevelsInput - 1
+                buyTriggered := true
+                buyTriggerLevel := currentGridLevel
+            if crossedUp and i > 0
+                sellTriggered := true
+                sellTriggerLevel := currentGridLevel
+
+// --- Confirmed hard risk signals ---
+bool stopTriggered = barstate.isconfirmed and close <= stopLevel and close[1] > stopLevel[1]
+bool takeProfitTriggered = barstate.isconfirmed and close >= takeProfitLevel and close[1] < takeProfitLevel[1]
+bool buyActionTriggered = buyTriggered and rangeEligibleForBuy and not stopTriggered and not takeProfitTriggered and currentEntryCount < allowedEntryCap and buyOrderQty > 0.0
+
+// --- Strategy execution ---
+string buyMessage = f_alertMessage("BUY_LEVEL_TRIGGERED", buyTriggerLevel, "buy", activeLower, activeUpper, buyOrderQty, buyOrderPercent)
+string sellMessage = f_alertMessage("SELL_LEVEL_TRIGGERED", sellTriggerLevel, "close", activeLower, activeUpper, math.max(strategy.position_size, 0.0), strategy.position_size > 0.0 ? 100.0 : 0.0)
+string stopMessage = f_alertMessage("STOP_LOSS_HIT", stopLevel, "close", activeLower, activeUpper, math.max(strategy.position_size, 0.0), 100.0)
+string takeProfitMessage = f_alertMessage("TAKE_PROFIT_HIT", takeProfitLevel, "close", activeLower, activeUpper, math.max(strategy.position_size, 0.0), 100.0)
+string trendExitMessage = f_alertMessage("TREND_EXIT", close, "close", activeLower, activeUpper, math.max(strategy.position_size, 0.0), 100.0)
+string hardRiskOrderMessage = f_alertMessage("HARD_RISK_EXIT", close, "close", activeLower, activeUpper, math.max(strategy.position_size, 0.0), 100.0)
+
+// Actual resting stop and limit orders provide intrabar protection; confirmed close_all calls provide distinct event messages.
+if strategy.position_size > 0.0
+    strategy.exit("Grid Hard Risk", from_entry = "Grid Buy", stop = stopLevel, limit = takeProfitLevel, alert_message = hardRiskOrderMessage)
+if trendExitTriggered
+    strategy.close_all(comment = "Grid Trend Exit", alert_message = trendExitMessage)
+if buyActionTriggered
+    strategy.entry("Grid Buy", strategy.long, qty = buyOrderQty, comment = "Grid Buy", alert_message = buyMessage)
+if sellTriggered and strategy.position_size > 0.0
+    strategy.close_all(comment = "Grid Sell", alert_message = sellMessage)
+if stopTriggered and strategy.position_size != 0.0
+    strategy.close_all(comment = "Grid Stop", alert_message = stopMessage)
+if takeProfitTriggered and strategy.position_size != 0.0
+    strategy.close_all(comment = "Grid Take Profit", alert_message = takeProfitMessage)
+
+// --- Dynamic JSON webhook alerts ---
+if alertsEnabledInput and barstate.isconfirmed
+    if buyActionTriggered and enableBuyAlertInput
+        alert(buyMessage, alert.freq_once_per_bar_close)
+    if sellTriggered and enableSellAlertInput
+        alert(sellMessage, alert.freq_once_per_bar_close)
+    if upperBreakout and enableBoundaryAlertInput
+        alert(f_alertMessage("UPPER_BOUNDARY_BREAKOUT", boundaryUpperBeforeRebuild, "warning", activeLower, activeUpper, 0.0, 0.0), alert.freq_once_per_bar_close)
+    if lowerBreakdown and enableBoundaryAlertInput
+        alert(f_alertMessage("LOWER_BOUNDARY_BREAKDOWN", boundaryLowerBeforeRebuild, "warning", activeLower, activeUpper, 0.0, 0.0), alert.freq_once_per_bar_close)
+    if rebalanceTriggered and enableRebalanceAlertInput
+        alert(f_alertMessage("GRID_RANGE_REBUILT", close, "rebalance", activeLower, activeUpper, 0.0, 0.0), alert.freq_once_per_bar_close)
+    if stopTriggered and enableRiskAlertInput
+        alert(stopMessage, alert.freq_once_per_bar_close)
+    if takeProfitTriggered and enableRiskAlertInput
+        alert(takeProfitMessage, alert.freq_once_per_bar_close)
+
+// --- Valid JSON static alert conditions for manual TradingView alert creation ---
+string buyConditionMessage = "{\"source\":\"CRYPTO_GRID\",\"event\":\"BUY_LEVEL_TRIGGERED\",\"bot_signal_id\":\"CRYPTO_GRID_BUY_{{ticker}}_{{time}}\",\"ticker\":\"{{ticker}}\",\"time\":\"{{time}}\",\"price\":\"{{close}}\",\"action\":\"{{strategy.order.action}}\",\"order_size\":\"{{strategy.order.contracts}}\",\"order_percent\":\"100\"}"
+string sellConditionMessage = "{\"source\":\"CRYPTO_GRID\",\"event\":\"SELL_LEVEL_TRIGGERED\",\"bot_signal_id\":\"CRYPTO_GRID_SELL_{{ticker}}_{{time}}\",\"ticker\":\"{{ticker}}\",\"time\":\"{{time}}\",\"price\":\"{{close}}\",\"action\":\"{{strategy.order.action}}\",\"order_size\":\"{{strategy.order.contracts}}\",\"order_percent\":\"100\"}"
+string stopConditionMessage = "{\"source\":\"CRYPTO_GRID\",\"event\":\"STOP_LOSS_HIT\",\"bot_signal_id\":\"CRYPTO_GRID_STOP_{{ticker}}_{{time}}\",\"ticker\":\"{{ticker}}\",\"time\":\"{{time}}\",\"price\":\"{{close}}\",\"action\":\"{{strategy.order.action}}\",\"order_size\":\"{{strategy.order.contracts}}\",\"order_percent\":\"100\"}"
+string takeProfitConditionMessage = "{\"source\":\"CRYPTO_GRID\",\"event\":\"TAKE_PROFIT_HIT\",\"bot_signal_id\":\"CRYPTO_GRID_TP_{{ticker}}_{{time}}\",\"ticker\":\"{{ticker}}\",\"time\":\"{{time}}\",\"price\":\"{{close}}\",\"action\":\"{{strategy.order.action}}\",\"order_size\":\"{{strategy.order.contracts}}\",\"order_percent\":\"100\"}"
+alertcondition(buyActionTriggered, "Buy Level Triggered", buyConditionMessage)
+alertcondition(sellTriggered, "Sell Level Triggered", sellConditionMessage)
+alertcondition(upperBreakout, "Upper Boundary Breakout", "{\"source\":\"CRYPTO_GRID\",\"event\":\"UPPER_BOUNDARY_BREAKOUT\",\"bot_signal_id\":\"CRYPTO_GRID_UPPER_{{ticker}}_{{time}}\",\"ticker\":\"{{ticker}}\",\"time\":\"{{time}}\",\"price\":\"{{close}}\",\"action\":\"{{strategy.order.action}}\",\"order_size\":\"0\",\"order_percent\":\"0\"}")
+alertcondition(lowerBreakdown, "Lower Boundary Breakdown", "{\"source\":\"CRYPTO_GRID\",\"event\":\"LOWER_BOUNDARY_BREAKDOWN\",\"bot_signal_id\":\"CRYPTO_GRID_LOWER_{{ticker}}_{{time}}\",\"ticker\":\"{{ticker}}\",\"time\":\"{{time}}\",\"price\":\"{{close}}\",\"action\":\"{{strategy.order.action}}\",\"order_size\":\"0\",\"order_percent\":\"0\"}")
+alertcondition(rebalanceTriggered, "Grid Range Rebuilt", "{\"source\":\"CRYPTO_GRID\",\"event\":\"GRID_RANGE_REBUILT\",\"bot_signal_id\":\"CRYPTO_GRID_REBUILD_{{ticker}}_{{time}}\",\"ticker\":\"{{ticker}}\",\"time\":\"{{time}}\",\"price\":\"{{close}}\",\"action\":\"{{strategy.order.action}}\",\"order_size\":\"0\",\"order_percent\":\"0\"}")
+alertcondition(stopTriggered, "Stop Loss Hit", stopConditionMessage)
+alertcondition(takeProfitTriggered, "Take Profit Hit", takeProfitConditionMessage)
+
+// --- Grid line rendering ---
+var array<line> gridLinesArray = array.new_line()
+if barstate.isfirst
+    for i = 0 to MAX_GRID_LEVELS - 1
+        array.push(gridLinesArray, line.new(bar_index, close, bar_index + 1, close, extend = extend.right))
+for i = 0 to MAX_GRID_LEVELS - 1
+    line gridLine = array.get(gridLinesArray, i)
+    if i < gridLevelsInput
+        float linePrice = f_gridPrice(i, activeLower, activeUpper, gridLevelsInput, gridModeInput)
+        color levelColor = i == activeIndex ? activeColorInput : linePrice <= close ? supportColorInput : resistanceColorInput
+        line.set_xy1(gridLine, bar_index - 1, linePrice)
+        line.set_xy2(gridLine, bar_index, linePrice)
+        line.set_color(gridLine, levelColor)
+        line.set_width(gridLine, i == 0 or i == gridLevelsInput - 1 ? 2 : 1)
+        line.set_style(gridLine, i == activeIndex ? line.style_solid : line.style_dotted)
+    else
+        line.set_color(gridLine, na)
+
+// --- Boundary, trend, and risk plots ---
+plot(activeUpper, "Upper Grid Limit", color = resistanceColorInput, linewidth = 2)
+plot(activeLower, "Lower Grid Limit", color = supportColorInput, linewidth = 2)
+plot(stopLevel, "Hard Stop Loss", color = color.new(#f23645, 10), linewidth = 2, style = plot.style_linebr)
+plot(takeProfitLevel, "Hard Take Profit", color = color.new(#089981, 10), linewidth = 2, style = plot.style_linebr)
+plotshape(upperBreakout, "Upper Breakout", shape.triangledown, location.abovebar, color = resistanceColorInput, text = "GRID↑", textcolor = color.white, size = size.tiny)
+plotshape(lowerBreakdown, "Lower Breakdown", shape.triangleup, location.belowbar, color = supportColorInput, text = "GRID↓", textcolor = color.white, size = size.tiny)
+plotshape(trendBlocked, "Trend Filter Active", shape.circle, location.top, color = color.new(#ff9800, 0), text = "PAUSE", textcolor = color.white, size = size.tiny)
+
+// --- Dashboard ---
+var table dashboardTable = table.new(position.top_right, 2, 9, bgcolor = dashboardColorInput, frame_color = color.new(dashboardTextColorInput, 60), frame_width = 1, border_color = color.new(dashboardTextColorInput, 80), border_width = 1)
+string marketState = close > activeUpper ? "Out of Range Upper" : close < activeLower ? "Out of Range Lower" : "In Range"
+string rangeText = str.tostring(activeLower, format.mintick) + " - " + str.tostring(activeUpper, format.mintick)
+string activeText = str.tostring(activeIndex + 1) + "/" + str.tostring(gridLevelsInput) + " @ " + str.tostring(activeLevel, format.mintick)
+string spacingText = str.tostring(spacingPercent, "#.##") + "%"
+string netProfitText = str.tostring(estimatedNetProfitPerGrid, format.mintick)
+string trendText = trendBlocked ? "BUYS PAUSED" : "RANGE MODE"
+string riskText = str.tostring(maxOpenGridQty, format.mintick) + " max qty"
+if barstate.islast
+    if showDashboardInput
+        table.set_bgcolor(dashboardTable, dashboardColorInput)
+        table.cell(dashboardTable, 0, 0, "CRYPTO GRID BOT", text_color = dashboardTextColorInput, bgcolor = activeColorInput, text_size = size.small)
+        table.cell(dashboardTable, 1, 0, autoGridInput ? "AUTO" : "MANUAL", text_color = dashboardTextColorInput, bgcolor = activeColorInput, text_size = size.small)
+        table.cell(dashboardTable, 0, 1, "Current Grid Range", text_color = dashboardTextColorInput, bgcolor = dashboardColorInput, text_size = size.tiny)
+        table.cell(dashboardTable, 1, 1, rangeText, text_color = dashboardTextColorInput, bgcolor = dashboardColorInput, text_size = size.tiny)
+        table.cell(dashboardTable, 0, 2, "Spacing %", text_color = dashboardTextColorInput, bgcolor = dashboardColorInput, text_size = size.tiny)
+        table.cell(dashboardTable, 1, 2, spacingText, text_color = dashboardTextColorInput, bgcolor = dashboardColorInput, text_size = size.tiny)
+        table.cell(dashboardTable, 0, 3, "Active Grid Level", text_color = dashboardTextColorInput, bgcolor = dashboardColorInput, text_size = size.tiny)
+        table.cell(dashboardTable, 1, 3, activeText, text_color = dashboardTextColorInput, bgcolor = dashboardColorInput, text_size = size.tiny)
+        table.cell(dashboardTable, 0, 4, "Market State", text_color = dashboardTextColorInput, bgcolor = dashboardColorInput, text_size = size.tiny)
+        table.cell(dashboardTable, 1, 4, marketState, text_color = marketState == "In Range" ? dashboardTextColorInput : resistanceColorInput, bgcolor = dashboardColorInput, text_size = size.tiny)
+        table.cell(dashboardTable, 0, 5, "Net Profit / Grid", text_color = dashboardTextColorInput, bgcolor = dashboardColorInput, text_size = size.tiny)
+        table.cell(dashboardTable, 1, 5, netProfitText, text_color = estimatedNetProfitPerGrid > 0 ? supportColorInput : resistanceColorInput, bgcolor = dashboardColorInput, text_size = size.tiny)
+        table.cell(dashboardTable, 0, 6, "Trend Filter", text_color = dashboardTextColorInput, bgcolor = dashboardColorInput, text_size = size.tiny)
+        table.cell(dashboardTable, 1, 6, trendText, text_color = trendBlocked ? resistanceColorInput : supportColorInput, bgcolor = dashboardColorInput, text_size = size.tiny)
+        table.cell(dashboardTable, 0, 7, "Risk-Capped Position", text_color = dashboardTextColorInput, bgcolor = dashboardColorInput, text_size = size.tiny)
+        table.cell(dashboardTable, 1, 7, riskText, text_color = dashboardTextColorInput, bgcolor = dashboardColorInput, text_size = size.tiny)
+        table.cell(dashboardTable, 0, 8, "Outside Bars", text_color = dashboardTextColorInput, bgcolor = dashboardColorInput, text_size = size.tiny)
+        table.cell(dashboardTable, 1, 8, str.tostring(outsideBars) + " / " + str.tostring(regridBarsInput), text_color = dashboardTextColorInput, bgcolor = dashboardColorInput, text_size = size.tiny)
+    else
+        for row = 0 to 8
+            table.cell(dashboardTable, 0, row, "", bgcolor = color.new(color.black, 100))
+            table.cell(dashboardTable, 1, row, "", bgcolor = color.new(color.black, 100))
