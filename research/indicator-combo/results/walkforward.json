@@ -1,0 +1,542 @@
+[
+  {
+    "fold": 1,
+    "test_start": "2024-11-16",
+    "test_end": "2025-05-16",
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.5232456140350877,
+    "net": -0.007155091869608138,
+    "max_dd": 0.008599131408512985,
+    "deployments": 121
+  },
+  {
+    "fold": 1,
+    "test_start": "2024-11-16",
+    "test_end": "2025-05-16",
+    "mode": "Arithmetic",
+    "family": "anchor",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.4116185897435898,
+    "net": -0.008814807693041132,
+    "max_dd": 0.009849866190825179,
+    "deployments": 168
+  },
+  {
+    "fold": 1,
+    "test_start": "2024-11-16",
+    "test_end": "2025-05-16",
+    "mode": "Arithmetic",
+    "family": "anchor_drift",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.38613131188627303,
+    "net": -0.008264746828391789,
+    "max_dd": 0.009390527790957802,
+    "deployments": 140
+  },
+  {
+    "fold": 1,
+    "test_start": "2024-11-16",
+    "test_end": "2025-05-16",
+    "mode": "Arithmetic",
+    "family": "anchor_vol",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.40654761904761905,
+    "net": -0.009203561170800595,
+    "max_dd": 0.010012762420576115,
+    "deployments": 158
+  },
+  {
+    "fold": 1,
+    "test_start": "2024-11-16",
+    "test_end": "2025-05-16",
+    "mode": "Arithmetic",
+    "family": "per_level",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.38865131578947365,
+    "net": -0.004792500315116438,
+    "max_dd": 0.009816721096375599,
+    "deployments": 102
+  },
+  {
+    "fold": 1,
+    "test_start": "2024-11-16",
+    "test_end": "2025-05-16",
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.5484649122807017,
+    "net": -0.007073624115511934,
+    "max_dd": 0.008508243224764137,
+    "deployments": 123
+  },
+  {
+    "fold": 1,
+    "test_start": "2024-11-16",
+    "test_end": "2025-05-16",
+    "mode": "Geometric",
+    "family": "anchor",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.43613174775146607,
+    "net": -0.010261435578462569,
+    "max_dd": 0.011114048980171043,
+    "deployments": 172
+  },
+  {
+    "fold": 1,
+    "test_start": "2024-11-16",
+    "test_end": "2025-05-16",
+    "mode": "Geometric",
+    "family": "anchor_drift",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.4162346390168971,
+    "net": -0.009636687493994184,
+    "max_dd": 0.01056381920196567,
+    "deployments": 144
+  },
+  {
+    "fold": 1,
+    "test_start": "2024-11-16",
+    "test_end": "2025-05-16",
+    "mode": "Geometric",
+    "family": "anchor_vol",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.42590305226174796,
+    "net": -0.010726054596470164,
+    "max_dd": 0.01130278592687492,
+    "deployments": 161
+  },
+  {
+    "fold": 1,
+    "test_start": "2024-11-16",
+    "test_end": "2025-05-16",
+    "mode": "Geometric",
+    "family": "per_level",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.39664855072463767,
+    "net": -0.005103390211446068,
+    "max_dd": 0.009344191083068124,
+    "deployments": 103
+  },
+  {
+    "fold": 2,
+    "test_start": "2025-05-16",
+    "test_end": "2025-11-16",
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.6667123538011696,
+    "net": 0.0010196401045589887,
+    "max_dd": 0.005443001942688007,
+    "deployments": 81
+  },
+  {
+    "fold": 2,
+    "test_start": "2025-05-16",
+    "test_end": "2025-11-16",
+    "mode": "Arithmetic",
+    "family": "anchor",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.5651392273327241,
+    "net": -0.002015880160605721,
+    "max_dd": 0.0052861887142216365,
+    "deployments": 147
+  },
+  {
+    "fold": 2,
+    "test_start": "2025-05-16",
+    "test_end": "2025-11-16",
+    "mode": "Arithmetic",
+    "family": "anchor_drift",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.5647333708427107,
+    "net": -0.0017209381963642634,
+    "max_dd": 0.005029483398458551,
+    "deployments": 136
+  },
+  {
+    "fold": 2,
+    "test_start": "2025-05-16",
+    "test_end": "2025-11-16",
+    "mode": "Arithmetic",
+    "family": "anchor_vol",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.5453303527074018,
+    "net": -0.002467501236883579,
+    "max_dd": 0.004992649132598108,
+    "deployments": 135
+  },
+  {
+    "fold": 2,
+    "test_start": "2025-05-16",
+    "test_end": "2025-11-16",
+    "mode": "Arithmetic",
+    "family": "per_level",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.5363005050505051,
+    "net": 0.004765246629469311,
+    "max_dd": 0.004067144734114292,
+    "deployments": 83
+  },
+  {
+    "fold": 2,
+    "test_start": "2025-05-16",
+    "test_end": "2025-11-16",
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.6667123538011696,
+    "net": 0.000886240498776808,
+    "max_dd": 0.005443001942687956,
+    "deployments": 81
+  },
+  {
+    "fold": 2,
+    "test_start": "2025-05-16",
+    "test_end": "2025-11-16",
+    "mode": "Geometric",
+    "family": "anchor",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.5254015172225259,
+    "net": -0.0029736207975357976,
+    "max_dd": 0.0060054394598785775,
+    "deployments": 152
+  },
+  {
+    "fold": 2,
+    "test_start": "2025-05-16",
+    "test_end": "2025-11-16",
+    "mode": "Geometric",
+    "family": "anchor_drift",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.5258223684210526,
+    "net": -0.0028802116038146586,
+    "max_dd": 0.005948396610922719,
+    "deployments": 138
+  },
+  {
+    "fold": 2,
+    "test_start": "2025-05-16",
+    "test_end": "2025-11-16",
+    "mode": "Geometric",
+    "family": "anchor_vol",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.5146182216905901,
+    "net": -0.003604375315731295,
+    "max_dd": 0.006011949786924913,
+    "deployments": 143
+  },
+  {
+    "fold": 2,
+    "test_start": "2025-05-16",
+    "test_end": "2025-11-16",
+    "mode": "Geometric",
+    "family": "per_level",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.5313492063492062,
+    "net": 0.003904150003142648,
+    "max_dd": 0.004210321010514441,
+    "deployments": 96
+  },
+  {
+    "fold": 3,
+    "test_start": "2025-11-16",
+    "test_end": "2026-05-16",
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.6239035087719298,
+    "net": -0.0026692162788997387,
+    "max_dd": 0.007189794122135371,
+    "deployments": 98
+  },
+  {
+    "fold": 3,
+    "test_start": "2025-11-16",
+    "test_end": "2026-05-16",
+    "mode": "Arithmetic",
+    "family": "anchor",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.5230412429653417,
+    "net": -0.006914442480970534,
+    "max_dd": 0.0077511727952974604,
+    "deployments": 162
+  },
+  {
+    "fold": 3,
+    "test_start": "2025-11-16",
+    "test_end": "2026-05-16",
+    "mode": "Arithmetic",
+    "family": "anchor_drift",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.5222347913524384,
+    "net": -0.0070044984943228306,
+    "max_dd": 0.00784107597397688,
+    "deployments": 160
+  },
+  {
+    "fold": 3,
+    "test_start": "2025-11-16",
+    "test_end": "2026-05-16",
+    "mode": "Arithmetic",
+    "family": "anchor_vol",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.5020102339181286,
+    "net": -0.00684082356240065,
+    "max_dd": 0.0073774509036835575,
+    "deployments": 148
+  },
+  {
+    "fold": 3,
+    "test_start": "2025-11-16",
+    "test_end": "2026-05-16",
+    "mode": "Arithmetic",
+    "family": "per_level",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.534119475295946,
+    "net": 0.0022490959152620393,
+    "max_dd": 0.00646980113156149,
+    "deployments": 89
+  },
+  {
+    "fold": 3,
+    "test_start": "2025-11-16",
+    "test_end": "2026-05-16",
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.6258940620782726,
+    "net": -0.0027408623411654676,
+    "max_dd": 0.00743542905329997,
+    "deployments": 97
+  },
+  {
+    "fold": 3,
+    "test_start": "2025-11-16",
+    "test_end": "2026-05-16",
+    "mode": "Geometric",
+    "family": "anchor",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.5021724709784411,
+    "net": -0.00557469100275626,
+    "max_dd": 0.0072174807879520075,
+    "deployments": 150
+  },
+  {
+    "fold": 3,
+    "test_start": "2025-11-16",
+    "test_end": "2026-05-16",
+    "mode": "Geometric",
+    "family": "anchor_drift",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.5021724709784411,
+    "net": -0.00557469100275626,
+    "max_dd": 0.0072174807879520075,
+    "deployments": 150
+  },
+  {
+    "fold": 3,
+    "test_start": "2025-11-16",
+    "test_end": "2026-05-16",
+    "mode": "Geometric",
+    "family": "anchor_vol",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.4895179395941882,
+    "net": -0.005873718925277632,
+    "max_dd": 0.0069377616873288455,
+    "deployments": 137
+  },
+  {
+    "fold": 3,
+    "test_start": "2025-11-16",
+    "test_end": "2026-05-16",
+    "mode": "Geometric",
+    "family": "per_level",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "win": 0.46394362342638207,
+    "net": 0.0018464721150444896,
+    "max_dd": 0.006229434216559386,
+    "deployments": 75
+  }
+]
