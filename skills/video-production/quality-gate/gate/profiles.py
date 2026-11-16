@@ -1,7 +1,7 @@
 """Length and frame rules per format.
 
-The old 15-minute floor rejected the approved Blueprint lesson BP-01 (6:15).
-Length now comes from the profile for the format.
+Blueprint lessons are 10 to 15 minutes (Stewart, 16 Nov 2026).
+The old 6-minute floor is retired. Length still comes from this profile.
 """
 
 from __future__ import annotations
@@ -33,10 +33,11 @@ PROFILES: dict[str, Profile] = {
     "blueprint": Profile(
         "blueprint",
         "Blueprint lesson",
-        min_seconds=6 * 60,
-        max_seconds=None,
+        min_seconds=10 * 60,
+        max_seconds=15 * 60,
         width=1920,
         height=1080,
+        margin_frac=0.05,
     ),
     "elite": Profile(
         "elite",

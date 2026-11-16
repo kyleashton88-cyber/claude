@@ -138660,6 +138660,27 @@
    "previous_status": "awaiting_qa",
    "md5": "ba71685b71b8b8848376e0aef0c0e8ab",
    "previous_md5": null
+  },
+  {
+   "id": "recolour-16nov-bp01",
+   "status": "pending-rescore",
+   "scored_by": "pending Creative Studio",
+   "note": "16 Nov 2026. Amber, mint, teal and off-cyan blue pixels in the BP-01 stills and the shared analogies were moved to white or cyan. The file list is in course/CHANGES-16NOV.md.",
+   "paths": [
+    "course/images/bp-01-introduction",
+    "course/images/blueprint-analogies"
+   ]
+  },
+  {
+   "id": "bp01-curriculum-stills-16nov",
+   "status": "awaiting_qa",
+   "scored_by": "pending Creative Studio",
+   "note": "16 Nov 2026 Cursor image path. BP-01 V01, V02 and V07. Not in the current cut: the encode had started, and V07's notebook is off-white so it needs a recolour before use. V01 is missing the Sell order label.",
+   "paths": [
+    "course/images/blueprint-curriculum/bp01-v01-cash-coin.jpg",
+    "course/images/blueprint-curriculum/bp01-v02-exchange.jpg",
+    "course/images/blueprint-curriculum/bp01-v07-lplates.jpg"
+   ]
   }
  ],
  "retired_prompts": {

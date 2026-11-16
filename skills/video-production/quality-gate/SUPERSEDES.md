@@ -9,4 +9,4 @@ The 15-minute minimum is still in the tree. It is not the gate to use.
 
 There is no `course/tools/qa.py`. The check lives in `course/skills/motion_picture/qa.py`.
 
-BP-01 at 6:15 fails that old floor and passes the Blueprint profile (4–10 minutes). Loudness on this gate is −14 LUFS ± 1 and true peak at or below −1 dBTP, and either miss is a fail.
+Blueprint lessons pass only between 10 and 15 minutes. Loudness on this gate is −14 LUFS ± 1 and true peak at or below −1 dBTP, and either miss is a fail. Captions on a Blueprint master sit inside a 5% margin, and the picture stays navy, cyan and white.

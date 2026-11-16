@@ -32,19 +32,19 @@ def main() -> None:
     from cli import main as cli_main
 
     code = cli_main(["check", str(master), "--format", "short", "--captions", str(captions), "--out", str(out / "pass")])
-    six_fifteen = 6 * 60 + 15
+    twelve = 12 * 60
     note = out / "blueprint-length.md"
     note.write_text(
         "\n".join(
             [
                 "# Blueprint length",
                 "",
-                f"6:15 ({six_fifteen}s) is inside the Blueprint window "
+                f"12:00 ({twelve}s) is inside the Blueprint window "
                 f"({PROFILES['blueprint'].min_seconds:.0f}s–{PROFILES['blueprint'].max_seconds:.0f}s): "
-                f"{length_ok(six_fifteen, PROFILES['blueprint'])}.",
+                f"{length_ok(twelve, PROFILES['blueprint'])}.",
                 "",
-                "The older 15-minute floor is 900 seconds. 6:15 is shorter than that floor.",
-                "The files that still apply the floor are listed in SUPERSEDES.md. This gate does not.",
+                "The window is 10 to 15 minutes. A 6:15 cut is short of that window.",
+                "The files that still apply an older floor are listed in SUPERSEDES.md. This gate does not.",
                 "",
             ]
         ),

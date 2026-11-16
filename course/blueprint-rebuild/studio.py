@@ -37,10 +37,11 @@ NAVY2 = (12, 22, 40)
 CYAN = (0, 212, 255)
 WHITE = (236, 241, 247)
 DIM = (176, 196, 214)
-AMBER = (255, 176, 32)
+# Navy, cyan and white only. The old amber, mint and blue are not painted.
+AMBER = WHITE
 MUTED = (154, 168, 188)
-BLUE = (30, 123, 255)
-MINT = (79, 209, 165)
+BLUE = CYAN
+MINT = CYAN
 TAG = (10, 20, 40)
 GLASS = (9, 22, 40)
 LINE = (28, 64, 88)
@@ -50,16 +51,13 @@ FONT_MED = FONT_DIR / "Inter-Medium.ttf"
 FONT_REG = FONT_DIR / "Inter-Regular.ttf"
 MX, MY = 96, 64
 RIGHT = W - MX - 16
-DISCLAIMER = (
-    "Education only. Not financial advice. "
-    "This is general information and doesn't consider your objectives, financial situation or needs. "
-    "Crypto is high risk. You could lose all the money you put in."
-)
 DISCLAIMER_LINES = (
     "Education only. Not financial advice.",
     "This is general information and doesn't consider your objectives, financial situation or needs.",
-    "Crypto is high risk. You could lose all the money you put in.",
+    "Crypto is high risk; you could lose all the money you put in.",
+    "Past performance is not a reliable indicator of future results.",
 )
+DISCLAIMER = " ".join(DISCLAIMER_LINES)
 FOOT = "Education only. Not financial advice."
 COVER = ROOT / "course/images/style-ref/01M6MSHVNHX3WQH81XS8KQK1HT.png"
 # Drop-in sheet. No crop. Replace the file to change the character.
@@ -226,10 +224,17 @@ def parse_ident(shot: dict) -> tuple[str, str]:
 
 
 def thirds(shot: dict) -> tuple[str, str]:
+    if shot.get("term_text"):
+        defin = shot.get("definition_text") or ""
+        if defin and not defin.endswith("."):
+            defin += "."
+        return shot["term_text"], defin
     chapter = (shot.get("chapter") or "").strip()
     cap = (shot.get("caption") or "").strip()
     low = chapter.lower()
     # These headings only share a word with another definition. Show their own caption.
+    if low == "one pair":
+        return "Finished buy and sell", "Buy at the lower line and sell at the higher line. Fees come out of the gap. Marked Example."
     if low in {"finish the seven", "not on the list", "a check you can finish"}:
         text = cap if cap.endswith(".") else (cap + "." if cap else chapter + ".")
         return chapter, text
@@ -316,6 +321,7 @@ def _beat_teaching(beat: dict) -> str | None:
         return None
     if image in {
         "course/images/bp-01-introduction/013.png",
+        "course/images/bp-01-introduction/015.png",
         "course/images/bp-02-what-you-need/021.png",
     }:
         return None
@@ -330,13 +336,13 @@ def _beat_teaching(beat: dict) -> str | None:
         "course/images/bp-01-introduction/007.png": "Buy orders sit on lines below the price and sell orders sit on lines above it. An order fills when the price reaches its line and the trade happens. The sells need some coin, so a grid starts with part cash and part coin, and that is a description, not advice.",
         "course/images/bp-01-introduction/011.png": "A fill is that trade at the line. As price climbs, each sell order fills. So you end up holding cash. As price falls, each buy order fills. So you end up holding coin.",
         "course/images/bp-01-introduction/010.png": (
-            "The course is a map, and this introduction is only the first square. "
-            "Next is a checklist. Then the definition. Then calm or trending markets. "
-            "Then spacing and range. Then entry and exit. Then a paper screen. "
-            "Then monitoring. Then mistakes. Then scaling. "
-            "Then an opt-in lesson on liquidation."
+            "This introduction is step one. Then what you need. Then exactly what a grid bot does, order by order. "
+            "Then market regimes, spacing and range, and entry and exit. Then a paper test, weekly checks, and common mistakes. "
+            "Then scaling up under written rules, and an opt-in lesson on liquidation with your complete plan."
         ),
-        "course/images/bp-01-introduction/008.png": "Write your stop rule down before you start. On the card it says: Stop = when you quit.",
+        "course/images/bp-01-introduction/008.png": "The stop is your written rule for when you stop the bot.",
+        "course/images/bp-01-introduction/012.png": "There is no promise of results in this lesson. Numbers marked Example are teaching numbers, not advice.",
+        "course/images/bp-01-introduction/015.png": "Paper or demo trading is like driving with L-plates. You practise with pretend money before anything is real.",
         "course/images/bp-03-what-is-a-grid-bot/004.png": "Five labels cover the picture: upper, lower, levels, side, and stop. On the card, Upper is the top edge, Lower is the bottom edge, Levels are the rungs, Side is what you hold, and Stop is your rule.",
         "course/images/bp-03-what-is-a-grid-bot/008.png": "What you hold changes. Price bounces: coin and cash swap back and forth. Price leaves: mostly coin or mostly cash.",
         "course/images/bp-03-what-is-a-grid-bot/010.png": "Point and say the five: Top, Bottom, Levels, What you hold, and Stop.",
@@ -404,7 +410,7 @@ def _beat_teaching(beat: dict) -> str | None:
         ("Row two names the side the exits would have piled.", "Row two says whether the close is above or below the middle line."),
         ("not to add a new indicator", "not to add another chart tool"),
         ("The span in the house example is nine and a half percent for nineteen gaps.", "In our example there are seven lines and six gaps."),
-        ("If you have notes from those drafts, the multiple is the part you cross out.", "If old notes show a multiple like 5x, cross it out."),
+        ("If you have notes from those drafts, the multiple is the part you cross out.", "If old notes show a multiple, such as five times, cross it out."),
         ("The flags are the lesson's voice. A flag that says opportunity is the wrong flag.", "These two warnings are the lesson's voice. A note that calls this an opportunity is the wrong note."),
         ("Two flags belong in the margin:", "Write two warnings beside your drawing:"),
         ("this can liquidate, and you can lose all the money assigned on the sketch.", "this can be liquidated, and you can lose all the money you put in."),
@@ -515,7 +521,7 @@ def plan(sid: str) -> list[dict]:
     brand = {
         "kind": "brand",
         "chapter": "Open",
-        "vo": f"Grid Bot Builder. Grid Bot Blueprint. Lesson {spoken}. {title}.",
+        "vo": f"GridBot Builder. GridBot Blueprint. Lesson {spoken}. {title}.",
         "caption": f"Lesson {number}. {title}.",
         "chart": "",
         "series": [],
@@ -529,9 +535,8 @@ def plan(sid: str) -> list[dict]:
         "series": [],
     }
     risk_lines = [
-        "Crypto carries a risk of total loss.",
         "The prices are public historical daily closes, marked Example.",
-        "Past performance is not a reliable indicator of future results.",
+        "No order is sent from this lesson.",
     ]
     risk_shots = []
     for index, line in enumerate(risk_lines):
@@ -569,7 +574,8 @@ def plan(sid: str) -> list[dict]:
         nxt = dict(shot)
         if nxt.get("kind") == "analogy":
             nxt["still"] = str(STILLS[nxt.get("analogy") or "ladder"])
-        nxt["vo"] = clip_vo(nxt["vo"], 4, 80)
+        if not nxt.get("visual"):
+            nxt["vo"] = clip_vo(nxt["vo"], 4, 80)
         shots.append(nxt)
         i += 1
     _attach_lesson_stills(sid, shots)
@@ -680,14 +686,15 @@ def draw_footer(draw: ImageDraw.ImageDraw) -> None:
 
 def title_bar(base: Image.Image, shot: dict, progress: float) -> None:
     draw = ImageDraw.Draw(base)
-    mark = scaled(wordmark(), 84)
-    paste(base, mark, (MX, 64))
+    brand = "GridBot Builder"
+    draw.text((MX, 68), brand, font=font(32), fill=WHITE)
     chapter = shot.get("heading") or shot.get("chapter") or ""
     if chapter == "Hook":
         chapter = "Opening"
+    brand_w = int(font(32).getlength(brand))
     size = fit_size(chapter, 900, 40, 36)
     if shot.get("analogy") not in {"ladder", "fence"}:
-        draw.text((MX + mark.width + 28, 78), chapter, font=font(size), fill=WHITE)
+        draw.text((MX + brand_w + 28, 72), chapter, font=font(size), fill=WHITE)
     y = 160
     draw.rectangle([MX, y, RIGHT, y + 4], fill=(20, 40, 58))
     span = (RIGHT - MX) * max(0.02, min(1.0, progress))
@@ -1279,9 +1286,7 @@ def _hero(
 
 def paint_brand(base: Image.Image, shot: dict, local: float) -> None:
     draw = ImageDraw.Draw(base)
-    mark = scaled(wordmark(), 128)
-    # Keep the lockup left of the mascot.
-    paste(base, mark, (MX, 150))
+    draw.text((MX, 150), "GridBot Builder", font=font(48), fill=WHITE)
     a = ease(min(1.0, max(0.0, local - 0.3) / 0.6))
     if a > 0:
         draw.text((MX, 310), "Blueprint", font=font(40), fill=CYAN)
@@ -1444,6 +1449,43 @@ def paint_stack(base: Image.Image, shot: dict, local: float) -> None:
     for line in lines:
         draw.text((MX + 36, y), line, font=font(44), fill=WHITE)
         y += 58
+
+
+def paint_pair(base: Image.Image, shot: dict, local: float) -> None:
+    """One marked example: buy lower, sell higher, and the fees come out of the gap."""
+    draw = ImageDraw.Draw(base)
+    spans = list(shot.get("sentence_spans") or [])
+    shown = 4
+    if spans:
+        shown = 1
+        for index, (start, _end) in enumerate(spans[:4]):
+            if local >= start:
+                shown = index + 1
+    box = (MX, 190, MX + 860, 740)
+    draw.rounded_rectangle(box, 20, fill=GLASS, outline=CYAN, width=3)
+    _example(draw, box[0] + 28, box[1] + 24)
+    draw.text((box[0] + 28, box[1] + 80), "One coin. One buy. One sell.", font=font(32), fill=WHITE)
+    sell_y, buy_y = 400, 600
+    x0, x1 = box[0] + 72, box[2] - 96
+    if shown >= 1:
+        draw.line([(x0, buy_y), (x1, buy_y)], fill=CYAN, width=6)
+        draw.text((x0, buy_y + 16), "Buy  27,630", font=font(40), fill=CYAN)
+    if shown >= 2:
+        draw.line([(x0, sell_y), (x1, sell_y)], fill=MINT, width=6)
+        draw.text((x0, sell_y - 52), "Sell  28,531", font=font(40), fill=MINT)
+        draw.line([(x1 + 16, sell_y), (x1 + 16, buy_y)], fill=WHITE, width=3)
+        draw.text((x0, 488), "Gap about 900", font=font(36), fill=WHITE)
+    side = (box[2] + 24, 190, RIGHT, 740)
+    draw.rounded_rectangle(side, 20, fill=GLASS, outline=CYAN, width=3)
+    draw.text((side[0] + 32, side[1] + 28), "EXAMPLE fees", font=font(36), fill=CYAN)
+    if shown >= 3:
+        draw.text((side[0] + 32, side[1] + 110), "Buy fee  10", font=font(44), fill=WHITE)
+        draw.text((side[0] + 32, side[1] + 180), "Sell fee  10", font=font(44), fill=WHITE)
+        draw.text((side[0] + 32, side[1] + 260), "Together  20", font=font(44), fill=WHITE)
+    if shown >= 4:
+        draw.text((side[0] + 32, side[1] + 360), "Not money you made.", font=font(36), fill=AMBER)
+        draw.text((side[0] + 32, side[1] + 420), "The gap is larger", font=font(36), fill=WHITE)
+        draw.text((side[0] + 32, side[1] + 468), "than these fees.", font=font(36), fill=WHITE)
 
 
 def paint_worked(base: Image.Image, shot: dict, local: float) -> None:
@@ -1652,8 +1694,7 @@ def paint_outro(base: Image.Image, shot: dict, local: float) -> None:
     draw = ImageDraw.Draw(base)
     _kicker, lesson_label, cta = next_lesson_label(shot)
     title = (shot.get("caption") or "End of the Blueprint").strip().rstrip(".")
-    mark = scaled(wordmark(), 110)
-    paste(base, mark, (MX, 72))
+    draw.text((MX, 72), "GridBot Builder", font=font(40), fill=WHITE)
     draw.text((MX, 220), "NEXT", font=font(28), fill=CYAN)
     draw.text((MX, 268), lesson_label, font=font(40), fill=CYAN)
     y = 340
@@ -1922,6 +1963,22 @@ def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) 
             fill=CYAN,
             width=3,
         )
+    if still.endswith("bp-01-introduction/003.png"):
+        d = ImageDraw.Draw(base)
+        d.rounded_rectangle(
+            [x + int(view_w * 0.28), y + int(view_h * 0.20), x + int(view_w * 0.72), y + int(view_h * 0.36)],
+            12, fill=NAVY, outline=CYAN, width=2,
+        )
+        d.text((x + int(view_w * 0.30), y + int(view_h * 0.24)), "Sell orders above", font=font(32), fill=WHITE)
+        d.rounded_rectangle(
+            [x + int(view_w * 0.08), y + int(view_h * 0.52), x + int(view_w * 0.48), y + int(view_h * 0.68)],
+            12, fill=NAVY, outline=CYAN, width=2,
+        )
+        d.text((x + int(view_w * 0.10), y + int(view_h * 0.56)), "Buy orders below", font=font(32), fill=CYAN)
+    if still.endswith("bp-01-introduction/012.png"):
+        d = ImageDraw.Draw(base)
+        d.rectangle([x, y, x + view_w, y + int(view_h * 0.18)], fill=NAVY)
+        d.text((x + 24, y + 28), "NO PROMISE OF RESULTS", font=font(40), fill=WHITE)
 
 
 def paint_candle(base: Image.Image, shot: dict) -> None:
@@ -1978,8 +2035,8 @@ def paint_course_map(base: Image.Image, shot: dict, local: float) -> None:
         ("7", "Paper"),
         ("8", "Monitoring"),
         ("9", "Mistakes"),
-        ("10", "Scaling"),
-        ("11", "Liquidation"),
+        ("10", "Scaling up"),
+        ("11", "Your complete plan"),
     )
     slide = 1
     words = shot.get("word_times") or []
@@ -2011,9 +2068,20 @@ def paint(shot: dict, local: float, progress: float) -> np.ndarray:
         paint_disclaimer(img, shot, local)
     elif kind == "outro":
         paint_outro(img, shot, local)
+    elif shot.get("visual"):
+        import motions
+        title_bar(img, shot, progress)
+        motions.paint_visual(img, shot, local, sys.modules[__name__])
+        lower_third(ImageDraw.Draw(img), shot)
+        draw_footer(ImageDraw.Draw(img))
     elif kind == "stack":
         title_bar(img, shot, progress)
         paint_stack(img, shot, local)
+        lower_third(ImageDraw.Draw(img), shot)
+        draw_footer(ImageDraw.Draw(img))
+    elif kind == "worked" and (shot.get("chapter") or "") == "One pair":
+        title_bar(img, shot, progress)
+        paint_pair(img, shot, local)
         lower_third(ImageDraw.Draw(img), shot)
         draw_footer(ImageDraw.Draw(img))
     elif kind == "worked":
@@ -2248,7 +2316,8 @@ def _xfade(left: np.ndarray, right: np.ndarray, sr: int, fade: float = JOIN_FADE
         return np.concatenate([left, right])
     out_r = np.linspace(1.0, 0.0, n, dtype=np.float32)
     in_r = np.linspace(0.0, 1.0, n, dtype=np.float32)
-    mid = left[-n:] * out_r + right[:n] * in_r
+    shape = (n,) + (1,) * (left.ndim - 1)
+    mid = left[-n:] * out_r.reshape(shape) + right[:n] * in_r.reshape(shape)
     return np.concatenate([left[:-n], mid, right[n:]])
 
 
@@ -2457,11 +2526,22 @@ def _write_lesson_captions(vtt: Path, srt: Path, words: list) -> None:
     previous_end = 0.0
     for sentence in _caption_sentences(words):
         for group in _balanced_caption_lines(sentence, width):
-            text = " ".join(word.text for word in group)
+            text = " ".join(word.text for word in group).replace("Grid Bot Builder", "GridBot Builder").replace("Grid Bot Blueprint", "GridBot Blueprint")
             start = max(group[0].start, previous_end)
             end = max(group[-1].end, start + len(text) / limit)
             cues.append((start, end, [text]))
             previous_end = end
+    # A short sentence can be spoken in under 0.7s. Hold the cue in the
+    # silent gap around it so the line still meets the caption minimum.
+    for index, (start, end, lines) in enumerate(cues):
+        if end - start >= 0.7:
+            continue
+        nxt = cues[index + 1][0] if index + 1 < len(cues) else end + 1.0
+        prev = cues[index - 1][1] if index else 0.0
+        end = min(start + 0.75, nxt - 0.001)
+        if end - start < 0.75:
+            start = max(prev, end - 0.75)
+        cues[index] = (start, max(end, start + 0.001), lines)
     vtt_lines = ["WEBVTT", ""]
     srt_lines = []
     for index, (start, end, lines) in enumerate(cues, start=1):
@@ -2623,6 +2703,15 @@ def render(
         shots = _excerpt(shots, excerpt_seconds)
     words = sum(len(s["vo"].split()) for s in shots)
     print(f"{sid} shots {len(shots)} words {words}", flush=True)
+    if not excerpt_seconds:
+        if words < 1600 or words > 2400:
+            raise SystemExit(
+                f"{sid} spoken words {words} are outside 1,600–2,400 (10–15 min at 160 wpm)"
+            )
+        spoken = " ".join(s["vo"] for s in shots)
+        for banned in ("Market Pros", "Binance", "ABN", "AFSL", "DeFi"):
+            if banned.lower() in spoken.lower():
+                raise SystemExit(f"{sid} speaks a banned phrase: {banned}")
     work = Path(f"/tmp/bp-rebuild/{sid}")
     if work.exists():
         for child in work.iterdir():

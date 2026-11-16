@@ -25,27 +25,29 @@ from gate.captions import caption_problems, parse_captions  # noqa: E402
 from voice.moods import MOODS  # noqa: E402
 
 LEGAL = (
-    "Education only, not financial advice. Crypto carries a risk of total loss. "
-    "This is general information. It doesn't consider your objectives, financial situation or needs. "
-    "The prices are public historical daily closes, marked Example. "
+    "Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. "
+    "Crypto is high risk; you could lose all the money you put in. "
     "Past performance is not a reliable indicator of future results. "
+    "The prices are public historical daily closes, marked Example. "
     "No order is sent from this lesson."
 )
 DISCLAIMER = (
     "Education only. Not financial advice. "
     "This is general information and doesn't consider your objectives, financial situation or needs. "
-    "Crypto is high risk. You could lose all the money you put in."
+    "Crypto is high risk; you could lose all the money you put in. "
+    "Past performance is not a reliable indicator of future results."
 )
 
 
 class PipelineTests(unittest.TestCase):
-    def test_length_window_is_six_minutes_and_up(self):
+    def test_length_window_is_ten_to_fifteen_minutes(self):
         profile = PROFILES["blueprint"]
-        self.assertEqual(profile.min_seconds, 360)
-        self.assertIsNone(profile.max_seconds)
-        self.assertTrue(length_ok(6 * 60 + 15, profile))
+        self.assertEqual(profile.min_seconds, 600)
+        self.assertEqual(profile.max_seconds, 900)
+        self.assertFalse(length_ok(6 * 60 + 15, profile))
         self.assertTrue(length_ok(12 * 60, profile))
         self.assertFalse(length_ok(5 * 60, profile))
+        self.assertFalse(length_ok(16 * 60, profile))
 
     def test_fps_and_loudness_owner(self):
         self.assertEqual(studio.FPS, 30)

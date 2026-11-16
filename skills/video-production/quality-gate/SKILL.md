@@ -11,13 +11,13 @@ One pass/fail for a master. The report is `report.json` and `report.md`. A failu
 
 `course/skills/motion_picture/qa.py` still prints loudness and fails a master under 15 minutes. `course/blueprint-rework/render_motion.py` still exits when a render is under 15 minutes. Those files stay. This gate is the one to run.
 
-The approved Blueprint lesson BP-01 is 6:15. That length is inside the Blueprint window (4–10 minutes). The old 15-minute floor rejects it. Do not put that floor back.
+Blueprint lessons run from 10 to 15 minutes. The old 6-minute floor and the old 15-minute floor are both retired.
 
 ## Formats
 
 | Format | Length | Frame | Longest still picture |
 |---|---|---|---|
-| `blueprint` | 4–10 min | 1920×1080 | 8 s |
+| `blueprint` | 10–15 min | 1920×1080 | 8 s |
 | `elite` | 8–20 min | 1920×1080 | 8 s |
 | `market-check` | 2–8 min | 1920×1080 | 8 s |
 | `explainer` | 3–8 min | 1920×1080 | 8 s |
@@ -42,7 +42,8 @@ Every check is pass or fail. A missing measurement is a fail.
 | Captions | No caption file, a line over 42 characters, more than 2 lines, or faster than 20 characters per second. |
 | Text recognition | `tesseract` is missing or a frame fails to read. Brand and margin checks fail with it. They are not skipped. |
 | Brands | An exchange or banned brand name is in the captions, the transcript, or the picture. |
-| Safe margins | A recognised word sits in the outer 4% of the frame. |
+| Safe margins | A recognised word sits in the outer 5% of a Blueprint frame, or the outer 4% of any other format. |
+| Palette | A Blueprint frame uses a colour other than navy, cyan or white. |
 | Disclaimer | Neither the captions, the transcript, nor the picture contains an education line that says not financial advice. |
 
 ## Run

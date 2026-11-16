@@ -12,7 +12,7 @@ Paid speech APIs are not part of this set.
 | `skills/video-production/quality-gate` | The only video QA entry, including length and figure checks. |
 | `skills/video-production/music-sound` | Beds and effects. Ducking calls `lib/mix.py`. The skill text uses −14, not −16. |
 | `.claude/skills/course-video-director` | Deprecated as the entry point. The Operator gold steps in that file are still readable. |
-| `studio.py` | Not in this branch. There is nothing to call. |
+| `course/blueprint-rebuild/studio.py` | The one builder for Blueprint lessons BP-01 to BP-11. |
 | `course/render/render_tutorial.py` | Still renders a stills lesson for the paused Blueprint rebuild. It does not judge duration. New lessons use the pipeline. |
 | `course/skills/motion_picture/qa.py` | Deprecated. It no longer applies a 15-minute floor. The message points at the quality gate. |
 | `course/blueprint-rework/render_motion.py` | Still renders. It records length and does not exit when a lesson is under 15 minutes. |
@@ -28,4 +28,4 @@ Paid speech APIs are not part of this set.
 | `skills/video-production/review-record` | Append-only ledger. Nothing here publishes. |
 | `skills/video-production/templates` | Format files, thumbnail, vertical cut, chapters, end card. |
 
-A 6:15 Blueprint master is inside the Blueprint window (4–10 minutes). No other file may reject it for being under 15 minutes.
+A Blueprint master must run from 10 to 15 minutes. No other file may reject it for being under an older 15-minute floor, and a cut under 10 minutes no longer passes.

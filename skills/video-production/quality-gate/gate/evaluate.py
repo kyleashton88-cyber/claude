@@ -28,6 +28,28 @@ SUPERSEDES = (
 )
 
 
+def _palette_problems(path: Path) -> str:
+    """Navy, cyan and white only. Amber, mint, teal and off-cyan blue fail."""
+    import numpy as np
+    from PIL import Image
+
+    frame = np.asarray(Image.open(path).convert("RGB"))
+    red = frame[:, :, 0].astype(np.int16)
+    green = frame[:, :, 1].astype(np.int16)
+    blue = frame[:, :, 2].astype(np.int16)
+    peak = np.maximum(np.maximum(red, green), blue)
+    floor = np.minimum(np.minimum(red, green), blue)
+    sat = peak - floor
+    amber = (sat > 70) & (red > 160) & (red > green + 20) & (blue < 100)
+    # Mint and teal have more green than blue. Cyan keeps blue ahead, including on a soft edge.
+    teal = (sat > 60) & (green > 150) & (blue > 90) & (red < 160) & (green > blue + 18)
+    off_blue = (sat > 90) & (blue > 190) & (green * 100 < blue * 62) & (red < 90)
+    count = int(amber.sum() + teal.sum() + off_blue.sum())
+    if count > 800:
+        return f"{count} pixels outside navy, cyan and white"
+    return ""
+
+
 def _length_window(profile: Profile) -> str:
     if profile.max_seconds is None:
         return f"{profile.min_seconds:.0f}s minimum, no upper limit"
@@ -179,6 +201,7 @@ def evaluate(
 
     ocr_text = ""
     margin_problems: list[str] = []
+    palette_problems: list[str] = []
     ocr_error = None
     if tesseract_path() is None:
         ocr_error = (
@@ -202,6 +225,10 @@ def evaluate(
                 hits = margin_hits(boxes, width, height, profile) if width and height else []
                 if hits:
                     margin_problems.append(f"at {second:.1f}s: " + ", ".join(hits[:6]))
+                if profile.name == "blueprint":
+                    colour = _palette_problems(png)
+                    if colour:
+                        palette_problems.append(f"at {second:.1f}s: {colour}")
 
     if ocr_error:
         checks.append({"id": "text_recognition", "result": "fail", "detail": ocr_error})
@@ -234,6 +261,14 @@ def evaluate(
                 ok_detail=f"sampled words sit inside the {profile.margin_frac:.0%} margin",
             )
         )
+        if profile.name == "blueprint":
+            checks.append(
+                _check(
+                    "palette",
+                    palette_problems,
+                    ok_detail="sampled frames stay navy, cyan and white",
+                )
+            )
 
     disclaimer_blob = "\n".join([caption_text, transcript_text, ocr_text])
     if has_disclaimer(disclaimer_blob):

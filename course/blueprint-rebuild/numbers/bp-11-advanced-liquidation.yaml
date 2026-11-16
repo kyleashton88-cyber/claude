@@ -1,0 +1,20 @@
+id: bp-11-advanced-liquidation
+format: blueprint
+source: course/data/public-prices/btc-usd-windows.json
+disclaimer_spoken: "Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk. You could lose all the money you put in."
+disclaimer_on_screen: "Education only. Not financial advice."
+dates:
+  - "13 March 2020"
+  - "23 October 2023"
+  - "11 March"
+  - "12 March"
+  - "11 March 2020"
+  - "12 March 2020"
+chart_labels:
+  - "11"
+  - "37"
+  - "4107"
+  - "4971"
+  - "5564"
+  - "5838"
+  - "7911"

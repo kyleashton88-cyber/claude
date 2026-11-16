@@ -77,7 +77,7 @@ Loudness -16.3 LUFS, range 2.5 LU, true peak -1.2 dBFS. Section-boundary sync ve
 | 6:06 | 7:13 | 66 s | 0.0 s | body | The stop | frozen 66 s; caption cut: The stop is a sentence you write, not a feeling that the trade is o...; spoken pointing tail |
 | 7:13 | 8:24 | 71 s | 0.0 s | body | We do not run it | frozen 71 s; caption cut: We do not sell or run a trading bot. No order is sent from this les...; spoken pointing tail; Narration tells the viewer to look for a notebook and a blank form. The still is a crossed send icon reading NO ORDER / NOT SENT. The caption covers NOT SENT. |
 | 8:24 | 9:33 | 69 s | 0.0 s | map | The map | frozen 69 s; caption cut: The course is a map, and this introduction is only the first square...; spoken pointing tail |
-| 9:33 | 10:40 | 68 s | 0.0 s | body | When the drawing fails | frozen 68 s; caption cut: Draw a path that leaves the top of the band and does not return. Th...; spoken pointing tail |
+| 9:33 | 10:40 | 68 s | 0.0 s | body | When price leaves the band | frozen 68 s; caption cut: Draw a path that leaves the top of the band and does not return. Th...; spoken pointing tail |
 | 10:40 | 11:39 | 58 s | 0.0 s | body | No result number | frozen 58 s; caption cut: There is no result number in this lesson. A result number would pre...; spoken pointing tail |
 | 11:39 | 12:45 | 66 s | 0.0 s | demo | Eight ticks | frozen 66 s; caption cut: A slow sketch uses eight even ticks inside the band, only as a way ...; spoken pointing tail |
 | 12:45 | 13:44 | 59 s | 0.0 s | action | The checklist is next | frozen 59 s; caption cut: The next step is the setup checklist, on paper, before any screen. ...; spoken pointing tail |

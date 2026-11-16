@@ -1,10 +1,12 @@
 id: bp-01-introduction
 format: blueprint
 source: course/data/public-prices/btc-usd-windows.json
-disclaimer_spoken: "Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk. You could lose all the money you put in."
+disclaimer_spoken: "Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results."
 disclaimer_on_screen: "Education only. Not financial advice."
 dates:
   - "19 July 2023"
+  - "17 August 2023"
+  - "29 August 2023"
   - "16 October 2023"
   - "23 July 2023"
   - "27 July 2023"
@@ -29,8 +31,23 @@ dates:
   - "11 October 2023"
   - "15 October 2023"
   - "23 October 2023"
+  - "24 October 2023"
   - "14 March 2024"
 chart_labels:
+  - "0.01"
+  - "0.1"
+  - "0.56"
+  - "8.46"
+  - "9.00"
+  - "0.54"
+  - "267.30"
+  - "276.30"
+  - "10"
+  - "11"
+  - "20"
+  - "28"
+  - "276.30"
+  - "285.31"
   - "107"
   - "112"
   - "113"

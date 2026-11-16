@@ -1,14 +1,14 @@
 {
   "tool": "quality-gate",
   "result": "pass",
-  "master": "/agent/repos/claude/course/blueprint-rebuild/masters/bp-01-introduction.mp4",
+  "master": "course/blueprint-rebuild/masters/bp-01-introduction.mp4",
   "format": "blueprint",
   "format_label": "Blueprint lesson",
   "length_window_seconds": [
-    360,
-    null
+    600,
+    900
   ],
-  "length_rule": "360s minimum, no upper limit",
+  "length_rule": "600s\u2013900s",
   "loudness_target_lufs": -14.0,
   "loudness_tolerance_lu": 1.0,
   "true_peak_max_dbtp": -1.0,
@@ -17,7 +17,7 @@
     {
       "id": "length",
       "result": "pass",
-      "detail": "438.8s is inside Blueprint lesson (360s minimum, no upper limit)"
+      "detail": "754.2s is inside Blueprint lesson (600s\u2013900s)"
     },
     {
       "id": "loudness",
@@ -62,7 +62,7 @@
     {
       "id": "captions",
       "result": "pass",
-      "detail": "199 cues, at most 42 characters and 20 per second"
+      "detail": "352 cues, at most 42 characters and 20 per second"
     },
     {
       "id": "text_recognition",
@@ -77,7 +77,12 @@
     {
       "id": "safe_margins",
       "result": "pass",
-      "detail": "sampled words sit inside the 4% margin"
+      "detail": "sampled words sit inside the 5% margin"
+    },
+    {
+      "id": "palette",
+      "result": "pass",
+      "detail": "sampled frames stay navy, cyan and white"
     },
     {
       "id": "disclaimer",
