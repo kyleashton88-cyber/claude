@@ -1,5 +1,9 @@
 # Changes, 16 November 2026
 
+## Warm-pixel clean, not rendered
+
+Stills 004, 008 and 017 no longer carry a gold stop rim. Still 004's third label is "The stop is your written rule." The candle cards follow the voice: cut time, then the close, then the labelled high, low and close. Removed stills 003, 010 and 015, and the fence files, are out of the lesson JSON, the fallback manifest and the pass list.
+
 ## v9 non-wording fixes, not rendered
 
 The spoken lines are unchanged. `clip_vo` no longer shortens a shot that has no visual key. Shots it would have cut are listed in `course/blueprint-rebuild/CLIP_LOG.md`. Lesson stills no longer speak the JSON script. The candle picture changes at 16s and 32s. The whole-window chart marks the 28 crossings. Captions burn in on the next render, and the sidecar VTT now has line and position cues inside the 5% margin.

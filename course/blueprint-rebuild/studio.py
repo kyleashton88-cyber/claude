@@ -2048,7 +2048,9 @@ def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) 
 def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
     """One day. The picture changes before a hold can pass 20 seconds."""
     draw = ImageDraw.Draw(base)
-    if local >= 32:
+    # The voice says the cut time first, then the close, then the labelled candle.
+    # Each card stays up for 16 seconds. The labelled candle is the last one.
+    if local < 16:
         box = (MX, 220, RIGHT, 760)
         draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
         draw.text((box[0] + 48, box[1] + 48), "When the day is cut", font=font(40), fill=CYAN)
@@ -2057,7 +2059,7 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
         draw.text((box[0] + 48, box[1] + 340), "10am AEST", font=font(64), fill=WHITE)
         draw.text((box[0] + 48, box[1] + 430), "outside daylight saving", font=font(36), fill=WHITE)
         return
-    if local >= 16:
+    if local < 32:
         box = (MX, 220, RIGHT, 760)
         draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
         candle = shot.get("candle") or {}
@@ -2067,6 +2069,7 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
         draw.text((box[0] + 48, box[1] + 250), f"{close:,}", font=font(72), fill=CYAN)
         draw.text((box[0] + 48, box[1] + 360), "The last price of that day. Marked Example.", font=font(36), fill=WHITE)
         return
+    # From 32s: the voice is on the labelled high, low and close.
     box = (MX, 190, RIGHT, 760)
     draw.rounded_rectangle(box, 22, fill=GLASS, outline=LINE, width=2)
     candle = shot.get("candle") or {}

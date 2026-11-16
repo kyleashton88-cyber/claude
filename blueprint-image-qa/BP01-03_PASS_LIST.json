@@ -5,8 +5,8 @@
  "note_cramped": "check.py \"cramped\" flag ignored as a background-grid false positive; margins judged by eye. Brand off_brand_flag from check.py also over-fires on ChatGPT glow; brand judged by eye.",
  "note_blobs": "scored_blob is the git blob id of the exact file scored. For rows with committed:true it equals the blob committed at that path (lesson stills/analogies on cursor/blueprint-beginner-images; code-drawn PNGs on cursor/blueprint-professional-rebuild-d1f6 @0eb1dc6 under blueprint-smoke/). For rows with committed:false (failed ChatGPT candidates) it is the hash of the UNCOMMITTED candidate in out/; the repo path still holds an older, uncleared blob (named in notes). A gate must check the blob at the path equals scored_blob AND pass is true.",
  "counts": {
-  "total": 94,
-  "pass": 94,
+  "total": 89,
+  "pass": 89,
   "fail": 0,
   "needs_render_to_score": 0,
   "pending": 0
@@ -192,55 +192,6 @@
    "committed": true
   },
   {
-   "path": "course/images/blueprint-analogies/analogy-fence.png",
-   "lesson": "bp-01-introduction",
-   "kind": "analogy-still",
-   "source": "earlier still + PIL relabel (label.py)",
-   "scores": {
-    "beginner_clarity": 5,
-    "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
-    "character_consistency": null,
-    "label_accuracy": 5
-   },
-   "hard_fails": [],
-   "status": "pass",
-   "action": "passed_as_is",
-   "remake_prompt": null,
-   "notes": "a5b61b5 version (this is the ChatGPT style anchor). Zig-zag added by code but clean. Note: the PR17 branch blob (ce78c66) is the older RAILS-only version without the zig-zag or labels; that version would fail (clarity 2, accuracy 3). Blob refreshed 16 Nov 2026 to the file on this branch. Pass status unchanged.",
-   "scored_file": "/workspace/blueprint-beginner/out/course/images/blueprint-analogies/analogy-fence.png",
-   "scored_blob": "a8b3633db778fd93fa72cad20044da2a4fa762dc",
-   "pass": true
-  },
-  {
-   "path": "code-drawn/bp-01-introduction/chart/range-2023/the-fence",
-   "lesson": "bp-01-introduction",
-   "kind": "code-drawn-chart",
-   "source": "code-drawn @61c4f97",
-   "scores": {
-    "beginner_clarity": 4,
-    "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 4,
-    "character_consistency": null,
-    "label_accuracy": 5
-   },
-   "hard_fails": [],
-   "status": "pass",
-   "action": "passed_as_is",
-   "remake_prompt": null,
-   "notes": "Fixed: tags are code tags at ~28px; the connectors leave the rails (y~400 and y~495) and land on 30,331 and 24,930. Minor: the \"Top rail = top price\" tag covers the top of the right post. Figures re-verified against course/data/public-prices/btc-usd-windows.json @0eb1dc6: range_2023 = 19 Jul-16 Oct 2023 (90 days), low 24,930.30, high 30,330.64, levels 24,930/25,830/26,730/27,630/28,531/29,431/30,331 (gap 900.06); daily closes cross 27,630 10 times (5 down: 16-17 Aug, 29-30 Aug, 1-2 Oct, 4-5 Oct, 8-9 Oct); 16 Oct close 28,519.47. Coordinates are at 1920x1080 (thumbnails at 1280x720). Byte-identical at 61c4f97 (blob aa484dc, same as the scored blob); scores carried over. Blob refreshed 16 Nov 2026 to the file on this branch. Pass status unchanged.",
-   "scored_file": "blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/the-fence.png",
-   "scored_blob": "a9166330f7ffd6daffa2e57c80de28a89ecd094a",
-   "pass": true,
-   "scored_at_commit": "61c4f97",
-   "scored_file_repo": "cursor/blueprint-professional-rebuild-d1f6@61c4f97:blueprint-smoke/code-drawn/bp-01-introduction/chart/range-2023/the-fence.png",
-   "committed": true
-  },
-  {
    "path": "code-drawn/bp-01-introduction/chart/range-2023/walk-the-summer",
    "lesson": "bp-01-introduction",
    "kind": "code-drawn-chart",
@@ -389,10 +340,11 @@
    "remake_prompt": null,
    "notes": "Refit removed the blurred letterbox bands; no seam or smudge left, grid fades softly into the navy fill. Labels and margins unchanged and checked by eye. Blob refreshed 16 Nov 2026 to the file on this branch. Pass status unchanged. Blob set 16 Nov 2026 to the recoloured navy/cyan/white file. Creative Studio rescore pending.",
    "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/001.png",
-   "scored_blob": "4803742ba2457192b4e4346bf8a298ef82c5e168",
+   "scored_blob": "6f21c619ef039e7291fbfa69198979c9e3cda2ca",
    "status": "pass",
    "pass": true,
-   "refit": "refit.py: newest gen web.png (1672x941) scaled to 1536x864, centred on a solid edge-matched navy fill (top/bottom median colour, ~#000D24-#00102A), 32px feathered join, no blur. Centre crop to 3:2 rejected: content starts 60-85px from the left/right edges and a crop removes 130px each side. Backup: NNN.bak.png."
+   "refit": "refit.py: newest gen web.png (1672x941) scaled to 1536x864, centred on a solid edge-matched navy fill (top/bottom median colour, ~#000D24-#00102A), 32px feathered join, no blur. Centre crop to 3:2 rejected: content starts 60-85px from the left/right edges and a crop removes 130px each side. Backup: NNN.bak.png.",
+   "rescore": "pending Creative Studio after the warm-pixel clean"
   },
   {
    "path": "course/images/bp-01-introduction/002.png",
@@ -413,34 +365,11 @@
    "remake_prompt": null,
    "notes": "Refit removed the blurred letterbox bands; no seam or smudge left, grid fades softly into the navy fill. Labels and margins unchanged and checked by eye.",
    "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/002.png",
-   "scored_blob": "07d6e9fd1033bfb669d7e9979d59a82ade21058e",
+   "scored_blob": "e9674dfca671cefcf2fb3a0fd0616c6f467e3441",
    "status": "pass",
    "pass": true,
-   "refit": "refit.py: newest gen web.png (1672x941) scaled to 1536x864, centred on a solid edge-matched navy fill (top/bottom median colour, ~#000D24-#00102A), 32px feathered join, no blur. Centre crop to 3:2 rejected: content starts 60-85px from the left/right edges and a crop removes 130px each side. Backup: NNN.bak.png."
-  },
-  {
-   "path": "course/images/bp-01-introduction/003.png",
-   "lesson": "bp-01-introduction",
-   "kind": "lesson-still",
-   "source": "ChatGPT web",
-   "scores": {
-    "beginner_clarity": 4,
-    "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 5,
-    "text_legibility": 4,
-    "character_consistency": null,
-    "label_accuracy": 5
-   },
-   "hard_fails": [],
-   "action": "refit",
-   "remake_prompt": null,
-   "notes": "Refit removed the blurred letterbox bands; no seam or smudge left, grid fades softly into the navy fill. Labels and margins unchanged and checked by eye.",
-   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/003.png",
-   "scored_blob": "83973aa202d54ed6f4467c625bddf53ff17c7029",
-   "status": "pass",
-   "pass": true,
-   "refit": "refit.py: newest gen web.png (1672x941) scaled to 1536x864, centred on a solid edge-matched navy fill (top/bottom median colour, ~#000D24-#00102A), 32px feathered join, no blur. Centre crop to 3:2 rejected: content starts 60-85px from the left/right edges and a crop removes 130px each side. Backup: NNN.bak.png."
+   "refit": "refit.py: newest gen web.png (1672x941) scaled to 1536x864, centred on a solid edge-matched navy fill (top/bottom median colour, ~#000D24-#00102A), 32px feathered join, no blur. Centre crop to 3:2 rejected: content starts 60-85px from the left/right edges and a crop removes 130px each side. Backup: NNN.bak.png.",
+   "rescore": "pending Creative Studio after the warm-pixel clean"
   },
   {
    "path": "course/images/bp-01-introduction/004.png",
@@ -461,7 +390,7 @@
    "remake_prompt": null,
    "notes": "Remake v2 passes: amber octagon with a white !, no red; cards and tags about 115-125px inside the left and right edges (the prompt asked 150px; no longer cramped); the zig-zag sits fully inside card 1. Labels exact, wrapped onto two lines. Blob set 16 Nov 2026 to the recoloured navy/cyan/white file. Creative Studio rescore pending.",
    "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/004.png",
-   "scored_blob": "e565af84b616288352b8b83e90b8307fb1654f64",
+   "scored_blob": "d8dd6763b7f6532fd3246898a1b6c5200c7b7d84",
    "status": "pass",
    "pass": true,
    "refit": null,
@@ -469,7 +398,7 @@
    "gen_file": "/workspace/blueprint-beginner/gen/bp-01-introduction/004/web3.png",
    "download": "Neon Grid_ Three Key Parts.png",
    "committed": true,
-   "rescore": "pending Creative Studio after the v9 palette edit"
+   "rescore": "pending Creative Studio after the warm-pixel clean"
   },
   {
    "path": "course/images/bp-01-introduction/005.png",
@@ -560,10 +489,10 @@
    "remake_prompt": null,
    "notes": "Light paper notebook; acceptable. Scored the a5b61b5 image; the PR17 branch (6940897) still holds the OLD blob at this path. Blob set 16 Nov 2026 to the recoloured navy/cyan/white file. Creative Studio rescore pending.",
    "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/008.png",
-   "scored_blob": "6a0178c5a402f19aaaabd947a92e38bdc6534b06",
+   "scored_blob": "1cc71bf1ac8ffb34057f19749da270310200c8e4",
    "status": "pass",
    "pass": true,
-   "rescore": "pending Creative Studio after the v9 palette edit"
+   "rescore": "pending Creative Studio after the warm-pixel clean"
   },
   {
    "path": "course/images/bp-01-introduction/009.png",
@@ -584,38 +513,10 @@
    "remake_prompt": null,
    "notes": "Extra word SEND on the crossed-out button; reads correctly. Scored the a5b61b5 image; the PR17 branch (6940897) still holds the OLD blob at this path. Blob set 16 Nov 2026 to the recoloured navy/cyan/white file. Creative Studio rescore pending.",
    "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/009.png",
-   "scored_blob": "c89d219caec893f3acab7a0da3e28f25e9460618",
+   "scored_blob": "303118830b53f075555e1cd52bf2fa4a9754d32f",
    "status": "pass",
    "pass": true,
-   "rescore": "pending Creative Studio after the v9 palette edit"
-  },
-  {
-   "path": "course/images/bp-01-introduction/010.png",
-   "lesson": "bp-01-introduction",
-   "kind": "lesson-still",
-   "source": "ChatGPT web",
-   "scores": {
-    "beginner_clarity": 5,
-    "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 5,
-    "text_legibility": 5,
-    "character_consistency": null,
-    "label_accuracy": 5
-   },
-   "hard_fails": [],
-   "action": "remade",
-   "remake_prompt": null,
-   "notes": "Remake: counted 11 tiles (pin tile + 10), label reads \"10 lessons ahead\". Blob refreshed 16 Nov 2026 to the file on this branch. Pass status unchanged. Blob set 16 Nov 2026 to the recoloured navy/cyan/white file. Creative Studio rescore pending.",
-   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/010.png",
-   "scored_blob": "348ea83edb2ab7dd4227179581f28391e5ddd18e",
-   "status": "pass",
-   "pass": true,
-   "refit": null,
-   "provisional_scores": null,
-   "gen_file": "/workspace/blueprint-beginner/gen/bp-01-introduction/010/web2.png",
-   "download": "Your Course Map_ 10 Lessons Ahead.png",
-   "committed": true
+   "rescore": "pending Creative Studio after the warm-pixel clean"
   },
   {
    "path": "course/images/bp-01-introduction/011.png",
@@ -636,9 +537,10 @@
    "remake_prompt": null,
    "notes": "Scored the a5b61b5 image; the PR17 branch (6940897) still holds the OLD blob at this path. Blob set 16 Nov 2026 to the recoloured navy/cyan/white file. Creative Studio rescore pending.",
    "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/011.png",
-   "scored_blob": "7c8837a2398d7aa62ca86f049748fab2345ec7c6",
+   "scored_blob": "06a147f6a8ab0b590ef47ca997b65fd73b85749d",
    "status": "pass",
-   "pass": true
+   "pass": true,
+   "rescore": "pending Creative Studio after the warm-pixel clean"
   },
   {
    "path": "course/images/bp-01-introduction/012.png",
@@ -659,10 +561,10 @@
    "remake_prompt": null,
    "notes": "Scored the a5b61b5 image; the PR17 branch (6940897) still holds the OLD blob at this path. Blob set 16 Nov 2026 to the recoloured navy/cyan/white file. Creative Studio rescore pending.",
    "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/012.png",
-   "scored_blob": "a9be76001448c76101bf2960ee45381aae420ea3",
+   "scored_blob": "2ac8897f5f66524e15ef955bed4af777747a9ade",
    "status": "pass",
    "pass": true,
-   "rescore": "pending Creative Studio after the v9 palette edit"
+   "rescore": "pending Creative Studio after the warm-pixel clean"
   },
   {
    "path": "course/images/bp-01-introduction/013.png",
@@ -683,9 +585,10 @@
    "remake_prompt": null,
    "notes": "Counted 9 lines = 8 even steps; matches headline. Scored the a5b61b5 image; the PR17 branch (6940897) still holds the OLD blob at this path.",
    "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/013.png",
-   "scored_blob": "4345d1e7d6cd2e13509c70ea98fa262b447f2a2c",
+   "scored_blob": "8f3a3da5530cdfa46fd0ee8d04007d3544da6bc0",
    "status": "pass",
-   "pass": true
+   "pass": true,
+   "rescore": "pending Creative Studio after the warm-pixel clean"
   },
   {
    "path": "course/images/bp-01-introduction/014.png",
@@ -711,29 +614,6 @@
    "pass": true
   },
   {
-   "path": "course/images/bp-01-introduction/015.png",
-   "lesson": "bp-01-introduction",
-   "kind": "lesson-still",
-   "source": "ChatGPT web",
-   "scores": {
-    "beginner_clarity": 4,
-    "composition_hierarchy": 4,
-    "craft_polish": 4,
-    "brand_fidelity": 4,
-    "text_legibility": 5,
-    "character_consistency": null,
-    "label_accuracy": 4
-   },
-   "hard_fails": [],
-   "action": "passed_as_is",
-   "remake_prompt": null,
-   "notes": "Laptop shows a small candle chart (generic, no app or exchange); acceptable. Scored the a5b61b5 image; the PR17 branch (6940897) still holds the OLD blob at this path.",
-   "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/015.png",
-   "scored_blob": "9693656c0e498ef0db13b7dd304fa5b3eb9ff122",
-   "status": "pass",
-   "pass": true
-  },
-  {
    "path": "course/images/bp-01-introduction/016.png",
    "lesson": "bp-01-introduction",
    "kind": "lesson-still",
@@ -752,9 +632,10 @@
    "remake_prompt": null,
    "notes": "Scored the a5b61b5 image; the PR17 branch (6940897) still holds the OLD blob at this path.",
    "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/016.png",
-   "scored_blob": "330ae5ca21d38f2948008939585ad75cd8aa16c3",
+   "scored_blob": "8610a37dbd22d6cc35feb87366c810b97a57aabf",
    "status": "pass",
-   "pass": true
+   "pass": true,
+   "rescore": "pending Creative Studio after the warm-pixel clean"
   },
   {
    "path": "course/images/bp-01-introduction/017.png",
@@ -775,10 +656,10 @@
    "remake_prompt": null,
    "notes": "Scored the a5b61b5 image; the PR17 branch (6940897) still holds the OLD blob at this path. Blob set 16 Nov 2026 to the recoloured navy/cyan/white file. Creative Studio rescore pending.",
    "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/017.png",
-   "scored_blob": "d65c47baae6da8f4e267635084eb485ff99e453e",
+   "scored_blob": "0bae204d6363b02db5b01c910d3205a7dde40e20",
    "status": "pass",
    "pass": true,
-   "rescore": "pending Creative Studio after the v9 palette edit"
+   "rescore": "pending Creative Studio after the warm-pixel clean"
   },
   {
    "path": "course/images/bp-01-introduction/018.png",
@@ -799,9 +680,10 @@
    "remake_prompt": null,
    "notes": "Scored the a5b61b5 image; the PR17 branch (6940897) still holds the OLD blob at this path.",
    "scored_file": "/workspace/blueprint-beginner/out/course/images/bp-01-introduction/018.png",
-   "scored_blob": "2bb5faf0d29939961a936746e7a016e7fd24afb6",
+   "scored_blob": "567afc855a391175206447c12d6a93e9e6030a51",
    "status": "pass",
-   "pass": true
+   "pass": true,
+   "rescore": "pending Creative Studio after the warm-pixel clean"
   },
   {
    "path": "course/images/style-ref/01M6MSHVNHX3WQH81XS8KQK1HT.png",
