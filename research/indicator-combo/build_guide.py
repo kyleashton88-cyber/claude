@@ -204,6 +204,8 @@ def header_footer(canvas, doc):
 
 
 def build():
+    from pdf_gate import assert_pdf_allowed
+    assert_pdf_allowed()
     data = load()
     summary = data["summary"]
     deep = summary["deep"]

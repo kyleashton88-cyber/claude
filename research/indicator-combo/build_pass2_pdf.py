@@ -183,6 +183,8 @@ def table(rows, widths):
 
 
 def build():
+    from pdf_gate import assert_pdf_allowed
+    assert_pdf_allowed()
     data = load()
     s = data["summary"]
     charts = [chart_equity(data["equity"]), chart_wins(data["oos"])]
