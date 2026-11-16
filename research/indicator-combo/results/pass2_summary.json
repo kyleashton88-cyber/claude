@@ -1,0 +1,77 @@
+{
+  "disclaimer": "Hypothetical backtest, not a forecast. Past performance is not a reliable indicator of future results. Education only. Not financial advice.",
+  "bot_capital": 10000.0,
+  "sizing": "Fixed 10,000 bot budget. 100% is reserved for the buy levels below the launch price, equal notional, fees included. Return is pnl divided by 10,000.",
+  "split": {
+    "is": [
+      "2021-01-01",
+      "2026-05-15"
+    ],
+    "oos": [
+      "2026-05-16",
+      "2026-11-15"
+    ]
+  },
+  "variants_logged": 74,
+  "setting_grid": 24,
+  "chosen_settings": {
+    "Arithmetic": {
+      "spec": {
+        "levels": 10,
+        "method": "ATR",
+        "stop_pct": 2.0,
+        "min_spacing_pct": 1.25
+      },
+      "is": {
+        "win": 0.6518151815181518,
+        "ret": 0.0022645348049524323,
+        "neg_dd": -0.09463818079683844,
+        "n": 1212
+      }
+    },
+    "Geometric": {
+      "spec": {
+        "levels": 10,
+        "method": "ATR",
+        "stop_pct": 2.0,
+        "min_spacing_pct": 1.25
+      },
+      "is": {
+        "win": 0.6464646464646465,
+        "ret": 0.002342945644480927,
+        "neg_dd": -0.09518907533766259,
+        "n": 1188
+      }
+    }
+  },
+  "family": {
+    "Arithmetic": {
+      "exit": "close_all",
+      "gate": "fit",
+      "is": {
+        "win": 0.7559981892258941,
+        "ret": 0.00155647247125098,
+        "neg_dd": -0.10022890809519101,
+        "n": 2209
+      }
+    },
+    "Geometric": {
+      "exit": "close_all",
+      "gate": "fit",
+      "is": {
+        "win": 0.7497687326549491,
+        "ret": 0.0015392861995867058,
+        "neg_dd": -0.10682265486119231,
+        "n": 2162
+      }
+    }
+  },
+  "pass1_settings": {
+    "levels": 6,
+    "adx_threshold": 20.0,
+    "stop_pct": 2.0,
+    "method": "Bollinger Bands",
+    "min_spacing_pct": 2.0
+  },
+  "target": "75% out-of-sample deployment win rate on cells with at least 20 deployments. A smaller cell is not a result."
+}

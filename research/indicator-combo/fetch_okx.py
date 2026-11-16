@@ -21,7 +21,7 @@ DATA.mkdir(parents=True, exist_ok=True)
 
 SYMBOLS = ["BTC-USDT", "ETH-USDT", "SOL-USDT", "ZEC-USDT", "XRP-USDT", "LINK-USDT"]
 BARS = {"1h": "1H", "4h": "4H"}
-START = datetime(2023, 11, 1, tzinfo=timezone.utc)
+START = datetime(2021, 1, 1, tzinfo=timezone.utc)
 END = datetime(2026, 11, 16, tzinfo=timezone.utc)
 BASE = "https://www.okx.com"
 
