@@ -919,6 +919,13 @@ def _ticket(draw: ImageDraw.ImageDraw, x: float, y: float, outline: tuple[int, i
 
 
 def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None) -> None:
+    if shot.get("chapter") == "The whole window":
+        worked_at = _word_at(shot, "worked")
+        if worked_at is None:
+            worked_at = dur * 0.62
+        if local >= worked_at:
+            paint_worked_check(base, shot, local, worked_at)
+            return
     draw = ImageDraw.Draw(base)
     if box is None:
         box = (MX, 180, RIGHT, 752)
@@ -965,7 +972,26 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
         _band(base, plot[0], plot[2], min(y_hi, y_lo), max(y_hi, y_lo))
         draw = ImageDraw.Draw(base)
     shown = full[:last]
-    if chapter in {"Walk the summer", "Copy the path", "Where the price stayed"}:
+    if chapter == "The whole window":
+        # Draw only as far as the voice has got. Rings come later, with "crossed".
+        crossed_at = _word_at(shot, "crossed")
+        path_end = crossed_at if crossed_at is not None else max(1.0, dur * 0.35)
+        frac = min(1.0, local / max(0.4, path_end))
+        upto = max(2, int(round(frac * (len(full) - 1))) + 1)
+        growing = full[:upto]
+        shown = growing
+        _stroke(base, growing, (0, 212, 255, 90), 8)
+        _stroke(base, growing, (0, 212, 255, 255), 3)
+    elif chapter == "The levels":
+        seven_at = _word_at(shot, "seven")
+        path_end = seven_at if seven_at is not None else max(1.0, dur * 0.62)
+        frac = min(1.0, local / max(0.4, path_end))
+        upto = max(2, int(round(frac * (len(full) - 1))) + 1)
+        growing = full[:upto]
+        shown = growing
+        _stroke(base, growing, (0, 212, 255, 90), 8)
+        _stroke(base, growing, (0, 212, 255, 255), 3)
+    elif chapter in {"Walk the summer", "Copy the path", "Where the price stayed"}:
         rest = full[max(0, last - 1):]
         _stroke(base, rest, (0, 212, 255, 150), 2)
         _stroke(base, shown, (0, 212, 255, 90), 9)
@@ -996,6 +1022,8 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
     if focus is not None:
         prefer.append(float(focus))
     order = prefer + [p for p in prices if p not in prefer]
+    seven_at = _word_at(shot, "seven") if chapter == "The levels" else None
+    show_seven = chapter != "The levels" or seven_at is None or local >= seven_at
     used: list[float] = []
     for price in order:
         _, yy = _map(0, n, price, lo_p, hi_p, plot)
@@ -1006,6 +1034,9 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
         used.append(yy)
         rounded = int(round(price))
         edges = {24930, 30331}
+        # Before "Seven lines", only the band and the one gap that the voice is measuring.
+        if chapter == "The levels" and not show_seven and rounded not in {24930, 30331, 26730, 27630}:
+            continue
         if chapter == "The range":
             color, width, label = CYAN, 3, ("Top" if rounded == 30331 else "Bottom") + f": {rounded:,}"
         elif chapter == "The levels":
@@ -1029,8 +1060,11 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
             color, width, label = AMBER, 3, f"{rounded:,}"
         else:
             color, width = (CYAN, 3) if rounded in edges else (MUTED, 2)
-            # Every BP-01 chart keeps the top and the bottom. The other rungs stay unlabelled.
-            if shot.get("lesson_id") == "bp-01-introduction" and rounded not in edges:
+            # Every BP-01 chart keeps the top and the bottom. The other rungs stay unlabelled
+            # until the levels shot says "Seven lines".
+            if chapter == "The levels" and show_seven:
+                label = f"{rounded:,}"
+            elif shot.get("lesson_id") == "bp-01-introduction" and rounded not in edges:
                 label = ""
             else:
                 label = f"{rounded:,}"
@@ -1073,45 +1107,49 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
             draw.text((bracket + 24, mid - 20), note, font=face_gap, fill=WHITE)
 
     if chapter == "The whole window":
-        marks = []
-        for index in range(1, n):
-            earlier, later = closes[index - 1], closes[index]
-            if later == earlier:
-                continue
-            for level in GRID_LEVELS:
-                crossed = (earlier < level <= later) or (later < level <= earlier)
-                if not crossed:
+        crossed_at = _word_at(shot, "crossed")
+        if crossed_at is None:
+            crossed_at = dur * 0.35
+        if local >= crossed_at:
+            marks = []
+            for index in range(1, n):
+                earlier, later = closes[index - 1], closes[index]
+                if later == earlier:
                     continue
-                share = (level - earlier) / (later - earlier)
-                x = full[index - 1][0] + (full[index][0] - full[index - 1][0]) * share
-                y = _map(0, n, level, lo_p, hi_p, plot)[1]
-                marks.append((x, y))
-        for level in GRID_LEVELS:
-            yy = _map(0, n, level, lo_p, hi_p, plot)[1]
-            x = plot[0]
-            while x < plot[2]:
-                draw.line([(x, yy), (min(x + 8, plot[2]), yy)], fill=MUTED, width=2)
-                x += 18
-        # Two crossings a day apart were drawing as one ring. Nudge those apart
-        # so the eye can count every one. The count itself stays 28.
-        placed: list[tuple[float, float]] = []
-        for x, y in marks:
-            x = min(max(x, plot[0] + 14), plot[2] - 14)
-            shift = 0
-            step = 16
-            while any(abs(x - px) < 18 and abs(y + shift - py) < 14 for px, py in placed):
-                shift = step if shift == 0 else (-abs(shift) - step if shift > 0 else abs(shift) + step)
-                if abs(shift) > 48:
-                    break
-            placed.append((x, y + shift))
-        for x, y in placed:
-            draw.ellipse((x - 8, y - 8, x + 8, y + 8), outline=WHITE, width=3)
-            draw.ellipse((x - 4, y - 4, x + 4, y + 4), fill=CYAN)
-        note = f"{len(marks)} crossings"
-        face_n = font(36)
-        tw = int(face_n.getlength(note)) + 28
-        draw.rounded_rectangle([plot[0], plot[1] + 8, plot[0] + tw, plot[1] + 56], 10, fill=TAG, outline=CYAN, width=2)
-        draw.text((plot[0] + 14, plot[1] + 12), note, font=face_n, fill=WHITE)
+                for level in GRID_LEVELS:
+                    crossed = (earlier < level <= later) or (later < level <= earlier)
+                    if not crossed:
+                        continue
+                    share = (level - earlier) / (later - earlier)
+                    x = full[index - 1][0] + (full[index][0] - full[index - 1][0]) * share
+                    y = _map(0, n, level, lo_p, hi_p, plot)[1]
+                    marks.append((x, y))
+            for level in GRID_LEVELS:
+                yy = _map(0, n, level, lo_p, hi_p, plot)[1]
+                x = plot[0]
+                while x < plot[2]:
+                    draw.line([(x, yy), (min(x + 8, plot[2]), yy)], fill=MUTED, width=2)
+                    x += 18
+            # Two crossings a day apart were drawing as one ring. Nudge those apart
+            # so the eye can count every one. The count itself stays 28.
+            placed: list[tuple[float, float]] = []
+            for x, y in marks:
+                x = min(max(x, plot[0] + 14), plot[2] - 14)
+                shift = 0
+                step = 16
+                while any(abs(x - px) < 18 and abs(y + shift - py) < 14 for px, py in placed):
+                    shift = step if shift == 0 else (-abs(shift) - step if shift > 0 else abs(shift) + step)
+                    if abs(shift) > 48:
+                        break
+                placed.append((x, y + shift))
+            for x, y in placed:
+                draw.ellipse((x - 8, y - 8, x + 8, y + 8), outline=WHITE, width=3)
+                draw.ellipse((x - 4, y - 4, x + 4, y + 4), fill=CYAN)
+            note = f"{len(marks)} crossings"
+            face_n = font(36)
+            tw = int(face_n.getlength(note)) + 28
+            draw.rounded_rectangle([plot[0], plot[1] + 8, plot[0] + tw, plot[1] + 56], 10, fill=TAG, outline=CYAN, width=2)
+            draw.text((plot[0] + 14, plot[1] + 12), note, font=face_n, fill=WHITE)
 
     if chapter == "Limit orders wait" or "waiting" in idea.lower():
         y_line = _map(0, n, 27630, lo_p, hi_p, plot)[1]
@@ -1530,6 +1568,67 @@ def _draw_named_rows(draw: ImageDraw.ImageDraw, rows: list[tuple[str, str]]) -> 
         draw.text((num_x, y + 12), str(number), font=font(36), fill=CYAN)
         draw.text((left + 96, y + 10), name, font=font(40), fill=CYAN)
         y += 88
+
+
+def paint_worked_check(base: Image.Image, shot: dict, local: float, worked_at: float) -> None:
+    """The card that replaces the window chart when 'Worked check' is spoken."""
+    draw = ImageDraw.Draw(base)
+    box = (MX, 200, RIGHT, 750)
+    draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
+    _example(draw, box[0] + 36, box[1] + 28)
+    draw.text((box[0] + 36, box[1] + 88), "Worked check", font=font(48), fill=WHITE)
+    draw.text((box[0] + 36, box[1] + 160), "19 July 2023 to 16 October 2023", font=font(36), fill=CYAN)
+    rows = [
+        (_word_at(shot, "low"), "The low is the bottom line."),
+        (_word_at(shot, "high"), "The high is the top line."),
+        (_word_at(shot, "nothing"), "Nothing on this card is an order."),
+    ]
+    y = box[1] + 250
+    for at, line in rows:
+        if at is None or local >= at:
+            draw.text((box[0] + 36, y), line, font=font(36), fill=WHITE)
+        y += 72
+
+
+def paint_crossings(base: Image.Image, shot: dict, local: float) -> None:
+    """One crossing first, then a finished pair when that word is spoken."""
+    draw = ImageDraw.Draw(base)
+    box = (MX, 200, RIGHT, 750)
+    draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
+    draw.text((box[0] + 36, box[1] + 24), "A crossing is not a finished pair", font=font(36), fill=WHITE)
+    pair_at = _word_at(shot, "pair")
+    bottom_at = _word_at(shot, "bottom")
+    show_pair = pair_at is None or local >= pair_at
+    show_bottom = bottom_at is not None and local >= bottom_at
+
+    def panel(x0: int, title: str, paired: bool) -> None:
+        draw.text((x0, box[1] + 100), title, font=font(32), fill=CYAN)
+        left, right = x0, x0 + 640
+        top, mid, bot = box[1] + 190, box[1] + 340, box[1] + 490
+        if paired:
+            top, bot = box[1] + 170, box[1] + 400
+            draw.line([(left, top), (right, top)], fill=WHITE, width=3)
+            draw.line([(left, bot), (right, bot)], fill=CYAN, width=4)
+            path = [(left + 40, top - 16), (left + 200, bot + 18), (left + 420, top - 16)]
+            draw.line(path, fill=CYAN, width=4)
+            for px, py in ((left + 160, bot), (left + 300, top)):
+                draw.ellipse((px - 10, py - 10, px + 10, py + 10), outline=WHITE, width=3)
+                draw.ellipse((px - 5, py - 5, px + 5, py + 5), fill=CYAN)
+            caption = "Still holding coin" if show_bottom else "Buy, then the later sell"
+            draw.text((left, bot + 28), caption, font=font(28), fill=WHITE)
+        else:
+            draw.line([(left, mid), (right, mid)], fill=WHITE, width=4)
+            draw.line([(left + 80, mid + 80), (left + 520, mid - 80)], fill=CYAN, width=4)
+            px, py = left + 300, mid
+            draw.ellipse((px - 12, py - 12, px + 12, py + 12), outline=WHITE, width=3)
+            draw.ellipse((px - 6, py - 6, px + 6, py + 6), fill=CYAN)
+            draw.text((left, bot + 28), "The close moves across one line", font=font(28), fill=WHITE)
+
+    panel(box[0] + 48, "One crossing", False)
+    if show_pair:
+        # A filled panel, not a thin line, so the second stage reads as a new picture.
+        draw.rounded_rectangle([box[0] + 860, box[1] + 88, box[2] - 36, box[3] - 36], 18, fill=TAG, outline=CYAN, width=3)
+        panel(box[0] + 900, "A finished pair", True)
 
 
 def paint_idea(base: Image.Image, shot: dict, local: float) -> None:
@@ -2329,6 +2428,11 @@ def paint(shot: dict, local: float, progress: float) -> np.ndarray:
     elif (shot.get("chapter") or "") == "The idea" and shot.get("lesson_id") == "bp-01-introduction":
         title_bar(img, shot, progress)
         paint_idea(img, shot, local)
+        lower_third(ImageDraw.Draw(img), shot)
+        draw_footer(ImageDraw.Draw(img))
+    elif (shot.get("chapter") or "") == "Crossings" and shot.get("lesson_id") == "bp-01-introduction":
+        title_bar(img, shot, progress)
+        paint_crossings(img, shot, local)
         lower_third(ImageDraw.Draw(img), shot)
         draw_footer(ImageDraw.Draw(img))
     elif kind == "stack":

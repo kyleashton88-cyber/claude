@@ -1,5 +1,9 @@
 # Changes, 16 November 2026
 
+## Holds of 20 seconds, not rendered
+
+No spoken line changed. The whole-window chart draws the path up to the word "crossed", then shows the 28 rings, then replaces the chart with the worked-check card when "Worked check" is spoken. The levels chart shows the gap first and labels the seven lines when "Seven" is spoken. Crossings shows one crossing, then a finished pair when "pair" is spoken. On the planned timeline the longest still picture is 19 seconds.
+
 ## Visual fixes prepared, not rendered
 
 Burned-in captions sit under the card so they no longer cover the candle's Low label. The Idea card reveals the band, buys, sells, and cash as those words are spoken. The map names lessons 1–6 as each is spoken and switches to 7–11 when "paper" is spoken. Crossing rings that sat on the same pixel are nudged apart. The summer closes still produce 28 crossings.

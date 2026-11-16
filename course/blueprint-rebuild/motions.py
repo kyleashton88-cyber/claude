@@ -395,6 +395,32 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
     if spec is None:
         raise SystemExit(f"unknown visual {shot.get('visual')}")
     draw = ui.ImageDraw.Draw(base)
+    # The six-row stop list finishes in the top of the card. The 23 October
+    # line is spoken later, so the picture changes again with that sentence.
+    if (shot.get("chapter") or "") == "The stop" and shot.get("lesson_id") == "bp-01-introduction":
+        october_at = ui._word_at(shot, "october")
+        if october_at is not None and local >= october_at:
+            box = (ui.MX, 200, ui.RIGHT, 750)
+            draw.rounded_rectangle(box, 22, fill=ui.GLASS, outline=ui.CYAN, width=3)
+            ui._example(draw, box[0] + 36, box[1] + 28)
+            draw.text((box[0] + 36, box[1] + 100), "23 October 2023", font=ui.font(48), fill=ui.WHITE)
+            draw.text((box[0] + 36, box[1] + 190), "EXAMPLE. Close 33,086. Outside the top line.", font=ui.font(36), fill=ui.WHITE)
+            draw.text((box[0] + 36, box[1] + 280), "24 October 2023", font=ui.font(48), fill=ui.WHITE)
+            draw.text((box[0] + 36, box[1] + 370), "EXAMPLE. Close 33,902. Still outside.", font=ui.font(36), fill=ui.WHITE)
+            return
+    # The pair rows finish in the top of the card. The bottom-leave line is later.
+    if (shot.get("chapter") or "") == "One pair" and shot.get("lesson_id") == "bp-01-introduction":
+        bottom_at = ui._word_at(shot, "bottom")
+        if bottom_at is not None and local >= bottom_at:
+            box = (ui.MX, 200, ui.RIGHT, 750)
+            draw.rounded_rectangle(box, 22, fill=ui.GLASS, outline=ui.CYAN, width=3)
+            ui._example(draw, box[0] + 36, box[1] + 28)
+            draw.text((box[0] + 36, box[1] + 110), "Through the bottom", font=ui.font(48), fill=ui.WHITE)
+            draw.text((box[0] + 36, box[1] + 200), "You still hold the coin.", font=ui.font(40), fill=ui.WHITE)
+            draw.text((box[0] + 36, box[1] + 280), "The pair never finishes.", font=ui.font(40), fill=ui.WHITE)
+            if local >= (ui._word_at(shot, "money") or bottom_at):
+                draw.text((box[0] + 36, box[1] + 390), "This card is not money you made.", font=ui.font(36), fill=ui.CYAN)
+            return
     rows = list(spec["rows"])
     spans = list(shot.get("sentence_spans") or [])
     shown = len(rows)
