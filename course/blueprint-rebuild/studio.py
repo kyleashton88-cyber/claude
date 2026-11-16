@@ -2048,18 +2048,10 @@ def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) 
 def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
     """One day. The picture changes before a hold can pass 20 seconds."""
     draw = ImageDraw.Draw(base)
-    # The voice says the cut time first, then the close, then the labelled candle.
-    # Each card stays up for 16 seconds. The labelled candle is the last one.
-    if local < 16:
-        box = (MX, 220, RIGHT, 760)
-        draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
-        draw.text((box[0] + 48, box[1] + 48), "When the day is cut", font=font(40), fill=CYAN)
-        draw.text((box[0] + 48, box[1] + 140), "11am AEDT", font=font(64), fill=WHITE)
-        draw.text((box[0] + 48, box[1] + 230), "while daylight saving is in force", font=font(36), fill=WHITE)
-        draw.text((box[0] + 48, box[1] + 340), "10am AEST", font=font(64), fill=WHITE)
-        draw.text((box[0] + 48, box[1] + 430), "outside daylight saving", font=font(36), fill=WHITE)
-        return
-    if local < 32:
+    # Shot starts at 05:19.5. "Last price of the day" is 0–2.5s, the 11am
+    # line is 6.6–17.1s, and "high, low and close" starts at 17.6s.
+    # Each card is on screen within 2s of its line, and no hold reaches 20s.
+    if local < 4.5:
         box = (MX, 220, RIGHT, 760)
         draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
         candle = shot.get("candle") or {}
@@ -2069,7 +2061,16 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
         draw.text((box[0] + 48, box[1] + 250), f"{close:,}", font=font(72), fill=CYAN)
         draw.text((box[0] + 48, box[1] + 360), "The last price of that day. Marked Example.", font=font(36), fill=WHITE)
         return
-    # From 32s: the voice is on the labelled high, low and close.
+    if local < 18:
+        box = (MX, 220, RIGHT, 760)
+        draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
+        draw.text((box[0] + 48, box[1] + 48), "When the day is cut", font=font(40), fill=CYAN)
+        draw.text((box[0] + 48, box[1] + 140), "11am AEDT", font=font(64), fill=WHITE)
+        draw.text((box[0] + 48, box[1] + 230), "while daylight saving is in force", font=font(36), fill=WHITE)
+        draw.text((box[0] + 48, box[1] + 340), "10am AEST", font=font(64), fill=WHITE)
+        draw.text((box[0] + 48, box[1] + 430), "outside daylight saving", font=font(36), fill=WHITE)
+        return
+    # From 18s: the voice is on the labelled high, low and close.
     box = (MX, 190, RIGHT, 760)
     draw.rounded_rectangle(box, 22, fill=GLASS, outline=LINE, width=2)
     candle = shot.get("candle") or {}
@@ -2106,6 +2107,15 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
     )
     for y, label, dx in labels:
         draw.text((cx + dx, y - 18), label, font=font(36), fill=WHITE)
+    # The labelled card starts at 18s. A second beat at 36.5s keeps that hold under 20s.
+    if local >= 36.5:
+        tag = "High, low and close"
+        face = font(32)
+        tw = int(face.getlength(tag)) + 36
+        tx = box[0] + 36
+        ty = box[3] - 64
+        draw.rounded_rectangle([tx, ty, tx + tw, ty + 48], 10, fill=TAG, outline=CYAN, width=2)
+        draw.text((tx + 18, ty + 8), tag, font=face, fill=WHITE)
 
 
 def paint_course_map(base: Image.Image, shot: dict, local: float) -> None:
