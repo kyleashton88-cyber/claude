@@ -1,0 +1,156 @@
+{
+  "disclaimer": "Hypothetical backtest, not a forecast. Past performance is not a reliable indicator of future results. Education only. Not financial advice.",
+  "source_script": "indicators/tradingview/grid-bot-original.pine",
+  "data": "OKX public spot candles and OKX swap funding history",
+  "split": {
+    "is": [
+      "2023-11-16",
+      "2026-05-15"
+    ],
+    "oos": [
+      "2026-05-16",
+      "2026-11-15"
+    ]
+  },
+  "costs": {
+    "fee_per_side": 0.001,
+    "slippage_per_side": 0.0005,
+    "notional_pct": 0.05,
+    "initial_capital": 10000
+  },
+  "variants_logged": 394,
+  "setting_grid": 48,
+  "chosen_settings": {
+    "Arithmetic": {
+      "spec": {
+        "levels": 6,
+        "adx_threshold": 20.0,
+        "stop_pct": 2.0,
+        "method": "Bollinger Bands",
+        "min_spacing_pct": 2.0
+      },
+      "is_score": {
+        "win": 0.6244059838011451,
+        "net": -0.01409191427972245,
+        "neg_dd": -0.021877015417468292
+      }
+    },
+    "Geometric": {
+      "spec": {
+        "levels": 6,
+        "adx_threshold": 20.0,
+        "stop_pct": 2.0,
+        "method": "Bollinger Bands",
+        "min_spacing_pct": 2.0
+      },
+      "is_score": {
+        "win": 0.6293196387799309,
+        "net": -0.01353589825676671,
+        "neg_dd": -0.021071002678389746
+      }
+    }
+  },
+  "deep": {
+    "Arithmetic": {
+      "family": "moving",
+      "is_score": {
+        "win": 0.6244059838011451,
+        "net": -0.01409191427972245,
+        "neg_dd": -0.021877015417468292
+      }
+    },
+    "Geometric": {
+      "family": "moving",
+      "is_score": {
+        "win": 0.6293196387799309,
+        "net": -0.01353589825676671,
+        "neg_dd": -0.021071002678389746
+      }
+    }
+  },
+  "regimes_is": {
+    "Arithmetic": {
+      "adx_<20": {
+        "n": 461,
+        "win_rate": 0.6052060737527115
+      },
+      "adx_20_30": {
+        "n": 0,
+        "win_rate": null
+      },
+      "adx_>=30": {
+        "n": 0,
+        "win_rate": null
+      }
+    },
+    "Geometric": {
+      "adx_<20": {
+        "n": 458,
+        "win_rate": 0.6091703056768559
+      },
+      "adx_20_30": {
+        "n": 0,
+        "win_rate": null
+      },
+      "adx_>=30": {
+        "n": 0,
+        "win_rate": null
+      }
+    }
+  },
+  "qty_check_is": [
+    {
+      "inst": "BTC-USDT",
+      "tf": "4h",
+      "mode": "Arithmetic",
+      "family": null,
+      "levels": null,
+      "adx_threshold": null,
+      "stop_pct": null,
+      "method": null,
+      "min_spacing_pct": null,
+      "net_return": -0.019010386444221927,
+      "max_dd": 0.029471620600712276,
+      "time_in_market": 0.0537280701754386,
+      "cycle_win_rate": 0.5677966101694916,
+      "deployment_win_rate": 0.6,
+      "cycles": 118,
+      "deployments": 100,
+      "stops": 10,
+      "blocked_entries": 701,
+      "blocked_then_stopped": 71,
+      "blocked_then_bounced": 105,
+      "blocked_stop_share": 0.4034090909090909,
+      "end_equity": 980989.613555778,
+      "open_qty": 0,
+      "note": "script quantity 1 on 1,000,000"
+    },
+    {
+      "inst": "BTC-USDT",
+      "tf": "4h",
+      "mode": "Geometric",
+      "family": null,
+      "levels": null,
+      "adx_threshold": null,
+      "stop_pct": null,
+      "method": null,
+      "min_spacing_pct": null,
+      "net_return": -0.01751413699043236,
+      "max_dd": 0.026061588116413077,
+      "time_in_market": 0.052448830409356724,
+      "cycle_win_rate": 0.5811965811965812,
+      "deployment_win_rate": 0.6138613861386139,
+      "cycles": 117,
+      "deployments": 101,
+      "stops": 10,
+      "blocked_entries": 682,
+      "blocked_then_stopped": 64,
+      "blocked_then_bounced": 91,
+      "blocked_stop_share": 0.4129032258064516,
+      "end_equity": 982485.8630095676,
+      "open_qty": 0,
+      "note": "script quantity 1 on 1,000,000"
+    }
+  ],
+  "target": "75% out-of-sample deployment win rate. Reported honestly if missed."
+}

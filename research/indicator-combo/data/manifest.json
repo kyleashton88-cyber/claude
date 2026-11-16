@@ -1,0 +1,120 @@
+{
+  "source": "OKX public REST",
+  "fetched_utc": "2026-11-16T01:43:24.112711+00:00",
+  "symbols": {
+    "BTC-USDT": {
+      "inst": "BTC-USDT",
+      "tick": 0.1,
+      "lot": 1e-08,
+      "min_sz": 1e-05,
+      "1h": {
+        "rows": 51481,
+        "start": "2021-01-01T00:00:00+00:00",
+        "end": "2026-11-16T00:00:00+00:00",
+        "file": "BTCUSDT_1h.csv"
+      },
+      "4h": {
+        "rows": 12870,
+        "start": "2021-01-01T00:00:00+00:00",
+        "end": "2026-11-15T20:00:00+00:00",
+        "file": "BTCUSDT_4h.csv"
+      },
+      "funding_rows": 293
+    },
+    "ETH-USDT": {
+      "inst": "ETH-USDT",
+      "tick": 0.01,
+      "lot": 1e-06,
+      "min_sz": 0.0001,
+      "1h": {
+        "rows": 51481,
+        "start": "2021-01-01T00:00:00+00:00",
+        "end": "2026-11-16T00:00:00+00:00",
+        "file": "ETHUSDT_1h.csv"
+      },
+      "4h": {
+        "rows": 12870,
+        "start": "2021-01-01T00:00:00+00:00",
+        "end": "2026-11-15T20:00:00+00:00",
+        "file": "ETHUSDT_4h.csv"
+      },
+      "funding_rows": 293
+    },
+    "SOL-USDT": {
+      "inst": "SOL-USDT",
+      "tick": 0.01,
+      "lot": 1e-06,
+      "min_sz": 0.01,
+      "1h": {
+        "rows": 51481,
+        "start": "2021-01-01T00:00:00+00:00",
+        "end": "2026-11-16T00:00:00+00:00",
+        "file": "SOLUSDT_1h.csv"
+      },
+      "4h": {
+        "rows": 12870,
+        "start": "2021-01-01T00:00:00+00:00",
+        "end": "2026-11-15T20:00:00+00:00",
+        "file": "SOLUSDT_4h.csv"
+      },
+      "funding_rows": 293
+    },
+    "ZEC-USDT": {
+      "inst": "ZEC-USDT",
+      "tick": 0.01,
+      "lot": 1e-05,
+      "min_sz": 0.001,
+      "1h": {
+        "rows": 8557,
+        "start": "2025-11-24T12:00:00+00:00",
+        "end": "2026-11-16T00:00:00+00:00",
+        "file": "ZECUSDT_1h.csv"
+      },
+      "4h": {
+        "rows": 2139,
+        "start": "2025-11-24T12:00:00+00:00",
+        "end": "2026-11-15T20:00:00+00:00",
+        "file": "ZECUSDT_4h.csv"
+      },
+      "funding_rows": 293
+    },
+    "XRP-USDT": {
+      "inst": "XRP-USDT",
+      "tick": 0.0001,
+      "lot": 1e-06,
+      "min_sz": 1.0,
+      "1h": {
+        "rows": 51481,
+        "start": "2021-01-01T00:00:00+00:00",
+        "end": "2026-11-16T00:00:00+00:00",
+        "file": "XRPUSDT_1h.csv"
+      },
+      "4h": {
+        "rows": 12870,
+        "start": "2021-01-01T00:00:00+00:00",
+        "end": "2026-11-15T20:00:00+00:00",
+        "file": "XRPUSDT_4h.csv"
+      },
+      "funding_rows": 293
+    },
+    "LINK-USDT": {
+      "inst": "LINK-USDT",
+      "tick": 0.001,
+      "lot": 1e-06,
+      "min_sz": 0.1,
+      "1h": {
+        "rows": 51481,
+        "start": "2021-01-01T00:00:00+00:00",
+        "end": "2026-11-16T00:00:00+00:00",
+        "file": "LINKUSDT_1h.csv"
+      },
+      "4h": {
+        "rows": 12870,
+        "start": "2021-01-01T00:00:00+00:00",
+        "end": "2026-11-15T20:00:00+00:00",
+        "file": "LINKUSDT_4h.csv"
+      },
+      "funding_rows": 293
+    }
+  }
+}

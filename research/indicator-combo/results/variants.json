@@ -1,0 +1,6700 @@
+[
+  {
+    "n": 1,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5443634723573956,
+    "score_net": -0.04971634399051569,
+    "score_dd": 0.053291340477039255,
+    "deployments": 1127,
+    "stage": "is_settings"
+  },
+  {
+    "n": 2,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5815646669814286,
+    "score_net": -0.030037161498487897,
+    "score_dd": 0.03414687783305395,
+    "deployments": 679,
+    "stage": "is_settings"
+  },
+  {
+    "n": 3,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5557989482077841,
+    "score_net": -0.02916337333697855,
+    "score_dd": 0.03640699047123405,
+    "deployments": 887,
+    "stage": "is_settings"
+  },
+  {
+    "n": 4,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5938995950286273,
+    "score_net": -0.014360745232148947,
+    "score_dd": 0.020980188175299536,
+    "deployments": 461,
+    "stage": "is_settings"
+  },
+  {
+    "n": 5,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5528395071746317,
+    "score_net": -0.046930807923030754,
+    "score_dd": 0.05146372449243082,
+    "deployments": 1125,
+    "stage": "is_settings"
+  },
+  {
+    "n": 6,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5884812600070557,
+    "score_net": -0.028970554693443284,
+    "score_dd": 0.03323891527750376,
+    "deployments": 679,
+    "stage": "is_settings"
+  },
+  {
+    "n": 7,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5800900620060213,
+    "score_net": -0.0289108878414418,
+    "score_dd": 0.036425461468626595,
+    "deployments": 885,
+    "stage": "is_settings"
+  },
+  {
+    "n": 8,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6244059838011451,
+    "score_net": -0.01409191427972245,
+    "score_dd": 0.021877015417468292,
+    "deployments": 461,
+    "stage": "is_settings"
+  },
+  {
+    "n": 9,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5574457700801048,
+    "score_net": -0.11567728056884569,
+    "score_dd": 0.11805913039987709,
+    "deployments": 2322,
+    "stage": "is_settings"
+  },
+  {
+    "n": 10,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6074704933306785,
+    "score_net": -0.06929373014379547,
+    "score_dd": 0.07379819540360323,
+    "deployments": 1503,
+    "stage": "is_settings"
+  },
+  {
+    "n": 11,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5477075005266379,
+    "score_net": -0.09501222924581254,
+    "score_dd": 0.09742596899098582,
+    "deployments": 2037,
+    "stage": "is_settings"
+  },
+  {
+    "n": 12,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5876589675445899,
+    "score_net": -0.05039394292137597,
+    "score_dd": 0.053239592503708286,
+    "deployments": 1174,
+    "stage": "is_settings"
+  },
+  {
+    "n": 13,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.570199091949092,
+    "score_net": -0.11892001340322675,
+    "score_dd": 0.12230928925904026,
+    "deployments": 2312,
+    "stage": "is_settings"
+  },
+  {
+    "n": 14,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6236102831916511,
+    "score_net": -0.06991558416348367,
+    "score_dd": 0.07520477677955786,
+    "deployments": 1502,
+    "stage": "is_settings"
+  },
+  {
+    "n": 15,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5669186870363566,
+    "score_net": -0.10085503870901688,
+    "score_dd": 0.10396349469779623,
+    "deployments": 2031,
+    "stage": "is_settings"
+  },
+  {
+    "n": 16,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6238437343990914,
+    "score_net": -0.05133190383162187,
+    "score_dd": 0.05640713427616945,
+    "deployments": 1174,
+    "stage": "is_settings"
+  },
+  {
+    "n": 17,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5443634723573956,
+    "score_net": -0.049847473308549994,
+    "score_dd": 0.05342212122657686,
+    "deployments": 1127,
+    "stage": "is_settings"
+  },
+  {
+    "n": 18,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5815646669814286,
+    "score_net": -0.030168295795787614,
+    "score_dd": 0.03427765169361015,
+    "deployments": 679,
+    "stage": "is_settings"
+  },
+  {
+    "n": 19,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5557911722084916,
+    "score_net": -0.03012066222044152,
+    "score_dd": 0.03735105007531202,
+    "deployments": 883,
+    "stage": "is_settings"
+  },
+  {
+    "n": 20,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5957339188968495,
+    "score_net": -0.014530346695044577,
+    "score_dd": 0.02100026029488572,
+    "deployments": 460,
+    "stage": "is_settings"
+  },
+  {
+    "n": 21,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5528395071746317,
+    "score_net": -0.04706265348587585,
+    "score_dd": 0.0515949580028395,
+    "deployments": 1125,
+    "stage": "is_settings"
+  },
+  {
+    "n": 22,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5884812600070557,
+    "score_net": -0.029102200888060786,
+    "score_dd": 0.03335849153875233,
+    "deployments": 679,
+    "stage": "is_settings"
+  },
+  {
+    "n": 23,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5802118885509076,
+    "score_net": -0.029776336651617552,
+    "score_dd": 0.0372803386717835,
+    "deployments": 881,
+    "stage": "is_settings"
+  },
+  {
+    "n": 24,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6264521720761469,
+    "score_net": -0.014261758224904164,
+    "score_dd": 0.021877015417468292,
+    "deployments": 460,
+    "stage": "is_settings"
+  },
+  {
+    "n": 25,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5572928732025699,
+    "score_net": -0.11611084971272775,
+    "score_dd": 0.11849216272944392,
+    "deployments": 2323,
+    "stage": "is_settings"
+  },
+  {
+    "n": 26,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6074704933306785,
+    "score_net": -0.06942220045523251,
+    "score_dd": 0.07392610162700163,
+    "deployments": 1503,
+    "stage": "is_settings"
+  },
+  {
+    "n": 27,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5428305425264519,
+    "score_net": -0.0962566531966611,
+    "score_dd": 0.0986634178653325,
+    "deployments": 2023,
+    "stage": "is_settings"
+  },
+  {
+    "n": 28,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5869809852741703,
+    "score_net": -0.05105994873895711,
+    "score_dd": 0.05409748136567531,
+    "deployments": 1175,
+    "stage": "is_settings"
+  },
+  {
+    "n": 29,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5700435146496791,
+    "score_net": -0.11935435217713569,
+    "score_dd": 0.12274295788386487,
+    "deployments": 2313,
+    "stage": "is_settings"
+  },
+  {
+    "n": 30,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6236102831916511,
+    "score_net": -0.07004491801683715,
+    "score_dd": 0.07533301462402527,
+    "deployments": 1502,
+    "stage": "is_settings"
+  },
+  {
+    "n": 31,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5622743123585868,
+    "score_net": -0.10278338170304044,
+    "score_dd": 0.10589004107892855,
+    "deployments": 2017,
+    "stage": "is_settings"
+  },
+  {
+    "n": 32,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6233267215474168,
+    "score_net": -0.05165520004989918,
+    "score_dd": 0.056725524680160705,
+    "deployments": 1175,
+    "stage": "is_settings"
+  },
+  {
+    "n": 33,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5443634723573956,
+    "score_net": -0.049847473308549994,
+    "score_dd": 0.05342212122657686,
+    "deployments": 1127,
+    "stage": "is_settings"
+  },
+  {
+    "n": 34,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5815646669814286,
+    "score_net": -0.030168295795787614,
+    "score_dd": 0.03427765169361015,
+    "deployments": 679,
+    "stage": "is_settings"
+  },
+  {
+    "n": 35,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5557911722084916,
+    "score_net": -0.0300406113687422,
+    "score_dd": 0.03727107316176362,
+    "deployments": 883,
+    "stage": "is_settings"
+  },
+  {
+    "n": 36,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5957339188968495,
+    "score_net": -0.01444995832907875,
+    "score_dd": 0.020920110067126685,
+    "deployments": 460,
+    "stage": "is_settings"
+  },
+  {
+    "n": 37,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5528395071746317,
+    "score_net": -0.04706265348587585,
+    "score_dd": 0.0515949580028395,
+    "deployments": 1125,
+    "stage": "is_settings"
+  },
+  {
+    "n": 38,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5884812600070557,
+    "score_net": -0.029102200888060786,
+    "score_dd": 0.03335849153875233,
+    "deployments": 679,
+    "stage": "is_settings"
+  },
+  {
+    "n": 39,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5802118885509076,
+    "score_net": -0.029695864877214234,
+    "score_dd": 0.037200170125473914,
+    "deployments": 881,
+    "stage": "is_settings"
+  },
+  {
+    "n": 40,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6264521720761469,
+    "score_net": -0.014181291150375447,
+    "score_dd": 0.021797041143075017,
+    "deployments": 460,
+    "stage": "is_settings"
+  },
+  {
+    "n": 41,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5572928732025699,
+    "score_net": -0.11611084971272775,
+    "score_dd": 0.11849216272944392,
+    "deployments": 2323,
+    "stage": "is_settings"
+  },
+  {
+    "n": 42,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6074704933306785,
+    "score_net": -0.06942220045523251,
+    "score_dd": 0.07392610162700163,
+    "deployments": 1503,
+    "stage": "is_settings"
+  },
+  {
+    "n": 43,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5435353602600225,
+    "score_net": -0.09699102699929543,
+    "score_dd": 0.09939491978530832,
+    "deployments": 2025,
+    "stage": "is_settings"
+  },
+  {
+    "n": 44,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5869809852741703,
+    "score_net": -0.050961241849798444,
+    "score_dd": 0.053999005750004846,
+    "deployments": 1175,
+    "stage": "is_settings"
+  },
+  {
+    "n": 45,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5700435146496791,
+    "score_net": -0.11935435217713569,
+    "score_dd": 0.12274295788386487,
+    "deployments": 2313,
+    "stage": "is_settings"
+  },
+  {
+    "n": 46,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6236102831916511,
+    "score_net": -0.07004491801683715,
+    "score_dd": 0.07533301462402527,
+    "deployments": 1502,
+    "stage": "is_settings"
+  },
+  {
+    "n": 47,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5629522512963478,
+    "score_net": -0.1026020798329706,
+    "score_dd": 0.10570976313990799,
+    "deployments": 2019,
+    "stage": "is_settings"
+  },
+  {
+    "n": 48,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6233267215474168,
+    "score_net": -0.0515568872449165,
+    "score_dd": 0.056627955471466464,
+    "deployments": 1175,
+    "stage": "is_settings"
+  },
+  {
+    "n": 1,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5436277107661667,
+    "score_net": -0.04897048361944631,
+    "score_dd": 0.052218809810399565,
+    "deployments": 1130,
+    "stage": "is_settings"
+  },
+  {
+    "n": 2,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5808718601514216,
+    "score_net": -0.03009185750416063,
+    "score_dd": 0.03387496064802707,
+    "deployments": 671,
+    "stage": "is_settings"
+  },
+  {
+    "n": 3,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5632717010076348,
+    "score_net": -0.028256277552646814,
+    "score_dd": 0.035356666285511144,
+    "deployments": 881,
+    "stage": "is_settings"
+  },
+  {
+    "n": 4,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5982540542122826,
+    "score_net": -0.013955759083790209,
+    "score_dd": 0.0202982958053615,
+    "deployments": 458,
+    "stage": "is_settings"
+  },
+  {
+    "n": 5,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5519986873941403,
+    "score_net": -0.04633405243004493,
+    "score_dd": 0.05040539214537883,
+    "deployments": 1128,
+    "stage": "is_settings"
+  },
+  {
+    "n": 6,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5879247657374636,
+    "score_net": -0.029078229211948525,
+    "score_dd": 0.033628005079826835,
+    "deployments": 671,
+    "stage": "is_settings"
+  },
+  {
+    "n": 7,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5875874953783193,
+    "score_net": -0.028867770381961977,
+    "score_dd": 0.03648863216412671,
+    "deployments": 879,
+    "stage": "is_settings"
+  },
+  {
+    "n": 8,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6293196387799309,
+    "score_net": -0.01353589825676671,
+    "score_dd": 0.021071002678389746,
+    "deployments": 458,
+    "stage": "is_settings"
+  },
+  {
+    "n": 9,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5529650742963588,
+    "score_net": -0.11410383456133674,
+    "score_dd": 0.11651567909300156,
+    "deployments": 2318,
+    "stage": "is_settings"
+  },
+  {
+    "n": 10,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6007888474500951,
+    "score_net": -0.0705862374830599,
+    "score_dd": 0.07488075481074177,
+    "deployments": 1503,
+    "stage": "is_settings"
+  },
+  {
+    "n": 11,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.549924982868003,
+    "score_net": -0.09225762498986145,
+    "score_dd": 0.09496546768755279,
+    "deployments": 2031,
+    "stage": "is_settings"
+  },
+  {
+    "n": 12,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5901873132199428,
+    "score_net": -0.0485649825599086,
+    "score_dd": 0.051157859554472246,
+    "deployments": 1175,
+    "stage": "is_settings"
+  },
+  {
+    "n": 13,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5669876884384148,
+    "score_net": -0.11690077352675457,
+    "score_dd": 0.12025488878710698,
+    "deployments": 2308,
+    "stage": "is_settings"
+  },
+  {
+    "n": 14,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6170658187461237,
+    "score_net": -0.07125411837977358,
+    "score_dd": 0.07624601294727565,
+    "deployments": 1502,
+    "stage": "is_settings"
+  },
+  {
+    "n": 15,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5693771233135121,
+    "score_net": -0.0989294386654701,
+    "score_dd": 0.10233679554055596,
+    "deployments": 2025,
+    "stage": "is_settings"
+  },
+  {
+    "n": 16,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6263643772520933,
+    "score_net": -0.0494608161371036,
+    "score_dd": 0.054578914112348095,
+    "deployments": 1175,
+    "stage": "is_settings"
+  },
+  {
+    "n": 17,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5436277107661667,
+    "score_net": -0.04897048361944631,
+    "score_dd": 0.052218809810399565,
+    "deployments": 1130,
+    "stage": "is_settings"
+  },
+  {
+    "n": 18,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5808718601514216,
+    "score_net": -0.03009185750416063,
+    "score_dd": 0.03387496064802707,
+    "deployments": 671,
+    "stage": "is_settings"
+  },
+  {
+    "n": 19,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5596015886706125,
+    "score_net": -0.02942208193128762,
+    "score_dd": 0.03651105756437877,
+    "deployments": 876,
+    "stage": "is_settings"
+  },
+  {
+    "n": 20,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5967416525183927,
+    "score_net": -0.014147766143740331,
+    "score_dd": 0.02041436616512129,
+    "deployments": 457,
+    "stage": "is_settings"
+  },
+  {
+    "n": 21,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5519986873941403,
+    "score_net": -0.04633405243004493,
+    "score_dd": 0.05040539214537883,
+    "deployments": 1128,
+    "stage": "is_settings"
+  },
+  {
+    "n": 22,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5879247657374636,
+    "score_net": -0.029078229211948525,
+    "score_dd": 0.033628005079826835,
+    "deployments": 671,
+    "stage": "is_settings"
+  },
+  {
+    "n": 23,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5840208224976933,
+    "score_net": -0.029941640589785212,
+    "score_dd": 0.03743667110057028,
+    "deployments": 874,
+    "stage": "is_settings"
+  },
+  {
+    "n": 24,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6280340973401245,
+    "score_net": -0.013728185875845733,
+    "score_dd": 0.021071002678389746,
+    "deployments": 457,
+    "stage": "is_settings"
+  },
+  {
+    "n": 25,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5529650742963588,
+    "score_net": -0.11438928304023371,
+    "score_dd": 0.11680112757189853,
+    "deployments": 2318,
+    "stage": "is_settings"
+  },
+  {
+    "n": 26,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6007888474500951,
+    "score_net": -0.0705862374830599,
+    "score_dd": 0.07488075481074177,
+    "deployments": 1503,
+    "stage": "is_settings"
+  },
+  {
+    "n": 27,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5420900208188866,
+    "score_net": -0.09403275703063113,
+    "score_dd": 0.09656768086826352,
+    "deployments": 2020,
+    "stage": "is_settings"
+  },
+  {
+    "n": 28,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5890331241428127,
+    "score_net": -0.04921003813955965,
+    "score_dd": 0.05180699572687956,
+    "deployments": 1177,
+    "stage": "is_settings"
+  },
+  {
+    "n": 29,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5669876884384148,
+    "score_net": -0.11718717841401904,
+    "score_dd": 0.12054129367437143,
+    "deployments": 2308,
+    "stage": "is_settings"
+  },
+  {
+    "n": 30,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6170658187461237,
+    "score_net": -0.07125411837977358,
+    "score_dd": 0.07624601294727565,
+    "deployments": 1502,
+    "stage": "is_settings"
+  },
+  {
+    "n": 31,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5617018419028836,
+    "score_net": -0.10120780550182656,
+    "score_dd": 0.10454250702004027,
+    "deployments": 2014,
+    "stage": "is_settings"
+  },
+  {
+    "n": 32,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6253402993618293,
+    "score_net": -0.0498958130987861,
+    "score_dd": 0.05501416550274287,
+    "deployments": 1177,
+    "stage": "is_settings"
+  },
+  {
+    "n": 33,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.544703718092174,
+    "score_net": -0.04897020614008901,
+    "score_dd": 0.05221853306863906,
+    "deployments": 1131,
+    "stage": "is_settings"
+  },
+  {
+    "n": 34,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5820990691275787,
+    "score_net": -0.030091580231491527,
+    "score_dd": 0.033874684137471765,
+    "deployments": 672,
+    "stage": "is_settings"
+  },
+  {
+    "n": 35,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5596015886706125,
+    "score_net": -0.029341590272610546,
+    "score_dd": 0.03643064025099948,
+    "deployments": 876,
+    "stage": "is_settings"
+  },
+  {
+    "n": 36,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5967416525183927,
+    "score_net": -0.014067078286033707,
+    "score_dd": 0.020333959758269265,
+    "deployments": 457,
+    "stage": "is_settings"
+  },
+  {
+    "n": 37,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5530255731297637,
+    "score_net": -0.04633377349792167,
+    "score_dd": 0.050405114580240114,
+    "deployments": 1129,
+    "stage": "is_settings"
+  },
+  {
+    "n": 38,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5890935361909465,
+    "score_net": -0.029077950919631668,
+    "score_dd": 0.03362772843305166,
+    "deployments": 672,
+    "stage": "is_settings"
+  },
+  {
+    "n": 39,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5840208224976933,
+    "score_net": -0.0298610139414639,
+    "score_dd": 0.03735639360939158,
+    "deployments": 874,
+    "stage": "is_settings"
+  },
+  {
+    "n": 40,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6280340973401245,
+    "score_net": -0.013647370445915546,
+    "score_dd": 0.02099072451503351,
+    "deployments": 457,
+    "stage": "is_settings"
+  },
+  {
+    "n": 41,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5535420190222397,
+    "score_net": -0.11438901229019163,
+    "score_dd": 0.11680085789795056,
+    "deployments": 2319,
+    "stage": "is_settings"
+  },
+  {
+    "n": 42,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6014003845074152,
+    "score_net": -0.07058596623414132,
+    "score_dd": 0.07488048464723399,
+    "deployments": 1504,
+    "stage": "is_settings"
+  },
+  {
+    "n": 43,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5417962635860076,
+    "score_net": -0.09398938439273546,
+    "score_dd": 0.09652436955785154,
+    "deployments": 2023,
+    "stage": "is_settings"
+  },
+  {
+    "n": 44,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5880905183614973,
+    "score_net": -0.04913924204360509,
+    "score_dd": 0.051736240457022596,
+    "deployments": 1178,
+    "stage": "is_settings"
+  },
+  {
+    "n": 45,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5675411356237406,
+    "score_net": -0.11718690673328466,
+    "score_dd": 0.12054102352859038,
+    "deployments": 2309,
+    "stage": "is_settings"
+  },
+  {
+    "n": 46,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.617638619928681,
+    "score_net": -0.0712538453691218,
+    "score_dd": 0.07624574246407295,
+    "deployments": 1503,
+    "stage": "is_settings"
+  },
+  {
+    "n": 47,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5613466743464244,
+    "score_net": -0.10116489659460703,
+    "score_dd": 0.1044998121208188,
+    "deployments": 2017,
+    "stage": "is_settings"
+  },
+  {
+    "n": 48,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6243662733878034,
+    "score_net": -0.049825793390133905,
+    "score_dd": 0.05494437771282237,
+    "deployments": 1178,
+    "stage": "is_settings"
+  },
+  {
+    "stage": "is_deep",
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6244059838011451,
+    "score_net": -0.01409191427972245,
+    "score_dd": 0.021877015417468292,
+    "deployments": 461,
+    "n": 1
+  },
+  {
+    "stage": "is_deep",
+    "mode": "Arithmetic",
+    "family": "anchor",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5062875524215731,
+    "score_net": -0.029643653498749756,
+    "score_dd": 0.03254931055297784,
+    "deployments": 750,
+    "n": 1
+  },
+  {
+    "stage": "is_deep",
+    "mode": "Arithmetic",
+    "family": "anchor_drift",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.49946433960508096,
+    "score_net": -0.02772839272572608,
+    "score_dd": 0.03047348437291461,
+    "deployments": 692,
+    "n": 1
+  },
+  {
+    "stage": "is_deep",
+    "mode": "Arithmetic",
+    "family": "anchor_vol",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.49790883392688856,
+    "score_net": -0.029394924852685356,
+    "score_dd": 0.03224473340051416,
+    "deployments": 707,
+    "n": 1
+  },
+  {
+    "stage": "is_deep",
+    "mode": "Arithmetic",
+    "family": "per_level",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.488967528728412,
+    "score_net": -0.00020227495245792038,
+    "score_dd": 0.019039257267811346,
+    "deployments": 438,
+    "n": 1
+  },
+  {
+    "stage": "is_deep",
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6293196387799309,
+    "score_net": -0.01353589825676671,
+    "score_dd": 0.021071002678389746,
+    "deployments": 458,
+    "n": 1
+  },
+  {
+    "stage": "is_deep",
+    "mode": "Geometric",
+    "family": "anchor",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.4879828504828505,
+    "score_net": -0.028315087590741944,
+    "score_dd": 0.030936252356394457,
+    "deployments": 725,
+    "n": 1
+  },
+  {
+    "stage": "is_deep",
+    "mode": "Geometric",
+    "family": "anchor_drift",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.48172803758741256,
+    "score_net": -0.027478808172512775,
+    "score_dd": 0.030099677569736912,
+    "deployments": 671,
+    "n": 1
+  },
+  {
+    "stage": "is_deep",
+    "mode": "Geometric",
+    "family": "anchor_vol",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.4818612520297324,
+    "score_net": -0.028330915376195753,
+    "score_dd": 0.030624595182802014,
+    "deployments": 680,
+    "n": 1
+  },
+  {
+    "stage": "is_deep",
+    "mode": "Geometric",
+    "family": "per_level",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.4686521293543937,
+    "score_net": 0.0011988216495418813,
+    "score_dd": 0.01662304437519049,
+    "deployments": 423,
+    "n": 1
+  },
+  {
+    "n": 1,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5575913146983509,
+    "score_net": -0.01698687778029384,
+    "score_dd": 0.020006076788450653,
+    "deployments": 415,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 2,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5708248705577703,
+    "score_net": -0.011620915615146804,
+    "score_dd": 0.014604650407804148,
+    "deployments": 247,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 3,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5527901429259379,
+    "score_net": -0.00947442646453428,
+    "score_dd": 0.014255989099196759,
+    "deployments": 317,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 4,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6091098399317577,
+    "score_net": -0.0048454968868675286,
+    "score_dd": 0.009661827975655377,
+    "deployments": 161,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 5,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5624126584939778,
+    "score_net": -0.015572097122555473,
+    "score_dd": 0.019486928115627772,
+    "deployments": 414,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 6,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5708248705577703,
+    "score_net": -0.011322361520496982,
+    "score_dd": 0.014467190093436704,
+    "deployments": 247,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 7,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5882513499431603,
+    "score_net": -0.00882955259542656,
+    "score_dd": 0.014238592143368815,
+    "deployments": 315,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 8,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6409591550002508,
+    "score_net": -0.005396111252663566,
+    "score_dd": 0.010764042481119649,
+    "deployments": 161,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 9,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5637586368053122,
+    "score_net": -0.044369377513617525,
+    "score_dd": 0.04644287474265507,
+    "deployments": 868,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 10,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6178457007027698,
+    "score_net": -0.026210428564833105,
+    "score_dd": 0.031025106965451958,
+    "deployments": 580,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 11,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5197338770875934,
+    "score_net": -0.03903358801487122,
+    "score_dd": 0.042333066621040985,
+    "deployments": 742,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 12,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5894711093891647,
+    "score_net": -0.02017733433544258,
+    "score_dd": 0.02534365438671287,
+    "deployments": 435,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 13,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5782579383220134,
+    "score_net": -0.04565175160890325,
+    "score_dd": 0.048878806586408884,
+    "deployments": 864,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 14,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.63911638116646,
+    "score_net": -0.025968169790771073,
+    "score_dd": 0.03236127950457458,
+    "deployments": 580,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 15,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5437862297696856,
+    "score_net": -0.04047297387798138,
+    "score_dd": 0.044938351071759634,
+    "deployments": 737,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 16,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6299706697379195,
+    "score_net": -0.023093026620362833,
+    "score_dd": 0.029487995609497785,
+    "deployments": 435,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 17,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5575913146983509,
+    "score_net": -0.01698687778029384,
+    "score_dd": 0.020006076788450653,
+    "deployments": 415,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 18,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5708248705577703,
+    "score_net": -0.011620915615146804,
+    "score_dd": 0.014604650407804148,
+    "deployments": 247,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 19,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5531378343878344,
+    "score_net": -0.00955845585286777,
+    "score_dd": 0.01433985409788912,
+    "deployments": 315,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 20,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6091098399317577,
+    "score_net": -0.0048454968868675286,
+    "score_dd": 0.009661827975655377,
+    "deployments": 161,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 21,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5624126584939778,
+    "score_net": -0.015572097122555473,
+    "score_dd": 0.019486928115627772,
+    "deployments": 414,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 22,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5708248705577703,
+    "score_net": -0.011322361520496982,
+    "score_dd": 0.014467190093436704,
+    "deployments": 247,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 23,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5887275496650497,
+    "score_net": -0.00891364570650846,
+    "score_dd": 0.014322521936790358,
+    "deployments": 313,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 24,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6409591550002508,
+    "score_net": -0.005396111252663566,
+    "score_dd": 0.010764042481119649,
+    "deployments": 161,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 25,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5633357741836544,
+    "score_net": -0.044391165173818414,
+    "score_dd": 0.046464635086702316,
+    "deployments": 869,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 26,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6178457007027698,
+    "score_net": -0.026210428564833105,
+    "score_dd": 0.031025106965451958,
+    "deployments": 580,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 27,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5180471359742933,
+    "score_net": -0.039191244384558344,
+    "score_dd": 0.04256444964531811,
+    "deployments": 741,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 28,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5893218021746401,
+    "score_net": -0.020156612417761538,
+    "score_dd": 0.025522857046335834,
+    "deployments": 437,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 29,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5778279707174563,
+    "score_net": -0.045673425078053,
+    "score_dd": 0.048900448042884355,
+    "deployments": 865,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 30,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.63911638116646,
+    "score_net": -0.025968169790771073,
+    "score_dd": 0.03236127950457458,
+    "deployments": 580,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 31,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5422218962312095,
+    "score_net": -0.04104200487997073,
+    "score_dd": 0.04606708711465452,
+    "deployments": 736,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 32,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6297168474732275,
+    "score_net": -0.022977930307706063,
+    "score_dd": 0.029367880864852987,
+    "deployments": 437,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 33,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5575913146983509,
+    "score_net": -0.01698687778029384,
+    "score_dd": 0.020006076788450653,
+    "deployments": 415,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 34,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5708248705577703,
+    "score_net": -0.011620915615146804,
+    "score_dd": 0.014604650407804148,
+    "deployments": 247,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 35,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5531378343878344,
+    "score_net": -0.00955845585286777,
+    "score_dd": 0.01433985409788912,
+    "deployments": 315,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 36,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6091098399317577,
+    "score_net": -0.0048454968868675286,
+    "score_dd": 0.009661827975655377,
+    "deployments": 161,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 37,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5624126584939778,
+    "score_net": -0.015572097122555473,
+    "score_dd": 0.019486928115627772,
+    "deployments": 414,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 38,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5708248705577703,
+    "score_net": -0.011322361520496982,
+    "score_dd": 0.014467190093436704,
+    "deployments": 247,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 39,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5887275496650497,
+    "score_net": -0.00891364570650846,
+    "score_dd": 0.014322521936790358,
+    "deployments": 313,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 40,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6409591550002508,
+    "score_net": -0.005396111252663566,
+    "score_dd": 0.010764042481119649,
+    "deployments": 161,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 41,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5633357741836544,
+    "score_net": -0.044391165173818414,
+    "score_dd": 0.046464635086702316,
+    "deployments": 869,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 42,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6178457007027698,
+    "score_net": -0.026210428564833105,
+    "score_dd": 0.031025106965451958,
+    "deployments": 580,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 43,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5180471359742933,
+    "score_net": -0.03924773547605387,
+    "score_dd": 0.04262092699248454,
+    "deployments": 741,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 44,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5893218021746401,
+    "score_net": -0.020156612417761538,
+    "score_dd": 0.025522857046335834,
+    "deployments": 437,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 45,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5778279707174563,
+    "score_net": -0.045673425078053,
+    "score_dd": 0.048900448042884355,
+    "deployments": 865,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 46,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.63911638116646,
+    "score_net": -0.025968169790771073,
+    "score_dd": 0.03236127950457458,
+    "deployments": 580,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 47,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5422218962312095,
+    "score_net": -0.0408876525661957,
+    "score_dd": 0.04591329174035515,
+    "deployments": 736,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 48,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6297168474732275,
+    "score_net": -0.022977930307706063,
+    "score_dd": 0.029367880864852987,
+    "deployments": 437,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 1,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5620980889743568,
+    "score_net": -0.01721354224183555,
+    "score_dd": 0.019814507844332467,
+    "deployments": 415,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 2,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5687023766328012,
+    "score_net": -0.01239197571139286,
+    "score_dd": 0.01510319733661105,
+    "deployments": 240,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 3,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5592360438929216,
+    "score_net": -0.009451556891694024,
+    "score_dd": 0.014107221824427276,
+    "deployments": 318,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 4,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.610734126984127,
+    "score_net": -0.0044171344607414065,
+    "score_dd": 0.008968128246604323,
+    "deployments": 157,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 5,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5665119757411847,
+    "score_net": -0.015798353392929454,
+    "score_dd": 0.01927136122857878,
+    "deployments": 414,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 6,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5687023766328012,
+    "score_net": -0.012093481800483946,
+    "score_dd": 0.015008793456304436,
+    "deployments": 240,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 7,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5945081140124244,
+    "score_net": -0.008807194479914071,
+    "score_dd": 0.014090565899737641,
+    "deployments": 316,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 8,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6454563492063492,
+    "score_net": -0.004822107680797827,
+    "score_dd": 0.009923950654220127,
+    "deployments": 157,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 9,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5601450788017952,
+    "score_net": -0.04215124942752485,
+    "score_dd": 0.044251056829095706,
+    "deployments": 867,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 10,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6125047437041603,
+    "score_net": -0.02739647466853648,
+    "score_dd": 0.032140956181756386,
+    "deployments": 576,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 11,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5341143858265327,
+    "score_net": -0.03782183507360204,
+    "score_dd": 0.04150844776071588,
+    "deployments": 746,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 12,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5909596972458593,
+    "score_net": -0.020060251430008252,
+    "score_dd": 0.024726636634995747,
+    "deployments": 430,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 13,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5744671352583587,
+    "score_net": -0.043701370112960464,
+    "score_dd": 0.047019368490462975,
+    "deployments": 863,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 14,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6339344812657779,
+    "score_net": -0.027151993448364414,
+    "score_dd": 0.033168316084873015,
+    "deployments": 576,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 15,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5585268297549284,
+    "score_net": -0.039532419591864154,
+    "score_dd": 0.04427754771761615,
+    "deployments": 741,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 16,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6324378269592832,
+    "score_net": -0.022841765856100205,
+    "score_dd": 0.02883518706396763,
+    "deployments": 430,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 17,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5620980889743568,
+    "score_net": -0.01721354224183555,
+    "score_dd": 0.019814507844332467,
+    "deployments": 415,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 18,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5687023766328012,
+    "score_net": -0.01239197571139286,
+    "score_dd": 0.01510319733661105,
+    "deployments": 240,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 19,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5576686457737994,
+    "score_net": -0.00956969264608834,
+    "score_dd": 0.014225064758528427,
+    "deployments": 316,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 20,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.610734126984127,
+    "score_net": -0.0044171344607414065,
+    "score_dd": 0.008968128246604323,
+    "deployments": 157,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 21,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5665119757411847,
+    "score_net": -0.015798353392929454,
+    "score_dd": 0.01927136122857878,
+    "deployments": 414,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 22,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5687023766328012,
+    "score_net": -0.012093481800483946,
+    "score_dd": 0.015008793456304436,
+    "deployments": 240,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 23,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5930371711621711,
+    "score_net": -0.008925440976631671,
+    "score_dd": 0.014208519656854789,
+    "deployments": 314,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 24,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6454563492063492,
+    "score_net": -0.004822107680797827,
+    "score_dd": 0.009923950654220127,
+    "deployments": 157,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 25,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5601450788017952,
+    "score_net": -0.04215124942752485,
+    "score_dd": 0.044251056829095706,
+    "deployments": 867,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 26,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6125047437041603,
+    "score_net": -0.02739647466853648,
+    "score_dd": 0.032140956181756386,
+    "deployments": 576,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 27,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5298309790334045,
+    "score_net": -0.03882413685436653,
+    "score_dd": 0.0424885009286084,
+    "deployments": 742,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 28,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5915601896496303,
+    "score_net": -0.020062750205775498,
+    "score_dd": 0.024736443849576926,
+    "deployments": 431,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 29,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5744671352583587,
+    "score_net": -0.043701370112960464,
+    "score_dd": 0.047019368490462975,
+    "deployments": 863,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 30,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6339344812657779,
+    "score_net": -0.027151993448364414,
+    "score_dd": 0.033168316084873015,
+    "deployments": 576,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 31,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5544373379683598,
+    "score_net": -0.040735167160119296,
+    "score_dd": 0.04562788914006049,
+    "deployments": 737,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 32,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6329857762777242,
+    "score_net": -0.02289425631343106,
+    "score_dd": 0.028882764987994664,
+    "deployments": 431,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 33,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5620980889743568,
+    "score_net": -0.01721354224183555,
+    "score_dd": 0.019814507844332467,
+    "deployments": 415,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 34,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5687023766328012,
+    "score_net": -0.01239197571139286,
+    "score_dd": 0.01510319733661105,
+    "deployments": 240,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 35,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5576686457737994,
+    "score_net": -0.00956969264608834,
+    "score_dd": 0.014225064758528427,
+    "deployments": 316,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 36,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.610734126984127,
+    "score_net": -0.0044171344607414065,
+    "score_dd": 0.008968128246604323,
+    "deployments": 157,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 37,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5665119757411847,
+    "score_net": -0.015798353392929454,
+    "score_dd": 0.01927136122857878,
+    "deployments": 414,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 38,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5687023766328012,
+    "score_net": -0.012093481800483946,
+    "score_dd": 0.015008793456304436,
+    "deployments": 240,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 39,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5930371711621711,
+    "score_net": -0.008925440976631671,
+    "score_dd": 0.014208519656854789,
+    "deployments": 314,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 40,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6454563492063492,
+    "score_net": -0.004822107680797827,
+    "score_dd": 0.009923950654220127,
+    "deployments": 157,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 41,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5601450788017952,
+    "score_net": -0.04215124942752485,
+    "score_dd": 0.044251056829095706,
+    "deployments": 867,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 42,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6125047437041603,
+    "score_net": -0.02739647466853648,
+    "score_dd": 0.032140956181756386,
+    "deployments": 576,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 43,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5298309790334045,
+    "score_net": -0.03873649706216026,
+    "score_dd": 0.042401221349928325,
+    "deployments": 742,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 44,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5915601896496303,
+    "score_net": -0.020062750205775498,
+    "score_dd": 0.024736443849576926,
+    "deployments": 431,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 45,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5744671352583587,
+    "score_net": -0.043701370112960464,
+    "score_dd": 0.047019368490462975,
+    "deployments": 863,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 46,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6339344812657779,
+    "score_net": -0.027151993448364414,
+    "score_dd": 0.033168316084873015,
+    "deployments": 576,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 47,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5544373379683598,
+    "score_net": -0.04064833281765637,
+    "score_dd": 0.045541369891443764,
+    "deployments": 737,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 48,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6329857762777242,
+    "score_net": -0.02289425631343106,
+    "score_dd": 0.028882764987994664,
+    "deployments": 431,
+    "stage": "wf1_train"
+  },
+  {
+    "n": 1,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5247159246929111,
+    "score_net": -0.032735272790335695,
+    "score_dd": 0.03575968169994292,
+    "deployments": 699,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 2,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5411013986013986,
+    "score_net": -0.02245894984697397,
+    "score_dd": 0.025322343264952144,
+    "deployments": 421,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 3,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5484872744984239,
+    "score_net": -0.020707226231980652,
+    "score_dd": 0.024731384413175166,
+    "deployments": 535,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 4,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5728400871432804,
+    "score_net": -0.011648865913387457,
+    "score_dd": 0.015321510872301006,
+    "deployments": 282,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 5,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5289798330007469,
+    "score_net": -0.03095425872968874,
+    "score_dd": 0.034735380847700975,
+    "deployments": 697,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 6,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5423513986013986,
+    "score_net": -0.021530037435746524,
+    "score_dd": 0.02473956301646347,
+    "deployments": 421,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 7,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5737803529273316,
+    "score_net": -0.021028364631985846,
+    "score_dd": 0.025531259149512583,
+    "deployments": 533,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 8,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.597283098400316,
+    "score_net": -0.012497364163309321,
+    "score_dd": 0.01666537434950547,
+    "deployments": 282,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 9,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5516859944755016,
+    "score_net": -0.07173393264061323,
+    "score_dd": 0.07398125414752242,
+    "deployments": 1377,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 10,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5922337922592082,
+    "score_net": -0.04577955151141183,
+    "score_dd": 0.0486395588185343,
+    "deployments": 912,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 11,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5193210248494432,
+    "score_net": -0.06409182188534546,
+    "score_dd": 0.0667861410336511,
+    "deployments": 1191,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 12,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5788957312795646,
+    "score_net": -0.03223875261170686,
+    "score_dd": 0.036012814405264784,
+    "deployments": 692,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 13,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.564446693964994,
+    "score_net": -0.07173518908159948,
+    "score_dd": 0.07555551174092558,
+    "deployments": 1371,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 14,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6101453425725768,
+    "score_net": -0.044579965674729743,
+    "score_dd": 0.05008125915127901,
+    "deployments": 912,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 15,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5392927037682758,
+    "score_net": -0.06704689441085412,
+    "score_dd": 0.07086540391673714,
+    "deployments": 1186,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 16,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6136059361306769,
+    "score_net": -0.03564755738558631,
+    "score_dd": 0.04052261613683666,
+    "deployments": 692,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 17,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5247159246929111,
+    "score_net": -0.032735272790335695,
+    "score_dd": 0.03575968169994292,
+    "deployments": 699,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 18,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5411013986013986,
+    "score_net": -0.02245894984697397,
+    "score_dd": 0.025322343264952144,
+    "deployments": 421,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 19,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5449612325235939,
+    "score_net": -0.021255166157855387,
+    "score_dd": 0.024903772587454763,
+    "deployments": 532,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 20,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.569563877465861,
+    "score_net": -0.011916567694765262,
+    "score_dd": 0.015321510872301006,
+    "deployments": 281,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 21,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5289798330007469,
+    "score_net": -0.03095425872968874,
+    "score_dd": 0.034735380847700975,
+    "deployments": 697,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 22,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5423513986013986,
+    "score_net": -0.021530037435746524,
+    "score_dd": 0.02473956301646347,
+    "deployments": 421,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 23,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5704792475685068,
+    "score_net": -0.0215768503653071,
+    "score_dd": 0.02577987632083583,
+    "deployments": 530,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 24,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5945109209809611,
+    "score_net": -0.012765692810423557,
+    "score_dd": 0.01666537434950547,
+    "deployments": 281,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 25,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5514330979792994,
+    "score_net": -0.07207466071667307,
+    "score_dd": 0.07432190567655743,
+    "deployments": 1378,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 26,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5922337922592082,
+    "score_net": -0.04577955151141183,
+    "score_dd": 0.0486395588185343,
+    "deployments": 912,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 27,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5168421703126931,
+    "score_net": -0.06437376451871163,
+    "score_dd": 0.06680536469413999,
+    "deployments": 1188,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 28,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5780718715713414,
+    "score_net": -0.03235034237468515,
+    "score_dd": 0.03605764871433916,
+    "deployments": 695,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 29,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5641892492274466,
+    "score_net": -0.07207886413703313,
+    "score_dd": 0.07589864785295376,
+    "deployments": 1372,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 30,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6101453425725768,
+    "score_net": -0.044579965674729743,
+    "score_dd": 0.05008125915127901,
+    "deployments": 912,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 31,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5369119303090686,
+    "score_net": -0.06807393045781407,
+    "score_dd": 0.07162678569520617,
+    "deployments": 1183,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 32,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.61289918194213,
+    "score_net": -0.03594070315991055,
+    "score_dd": 0.04047847617370049,
+    "deployments": 695,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 33,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5247159246929111,
+    "score_net": -0.032735272790335695,
+    "score_dd": 0.03575968169994292,
+    "deployments": 699,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 34,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5411013986013986,
+    "score_net": -0.02245894984697397,
+    "score_dd": 0.025322343264952144,
+    "deployments": 421,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 35,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5449612325235939,
+    "score_net": -0.02117442232677888,
+    "score_dd": 0.02482321001618315,
+    "deployments": 532,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 36,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.569563877465861,
+    "score_net": -0.011835960808877166,
+    "score_dd": 0.01524110308342276,
+    "deployments": 281,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 37,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5289798330007469,
+    "score_net": -0.03095425872968874,
+    "score_dd": 0.034735380847700975,
+    "deployments": 697,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 38,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5423513986013986,
+    "score_net": -0.021530037435746524,
+    "score_dd": 0.02473956301646347,
+    "deployments": 421,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 39,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5704792475685068,
+    "score_net": -0.021496346783608983,
+    "score_dd": 0.025699653604036296,
+    "deployments": 530,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 40,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5945109209809611,
+    "score_net": -0.012685414985583177,
+    "score_dd": 0.016585276225646917,
+    "deployments": 281,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 41,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5514330979792994,
+    "score_net": -0.07207466071667307,
+    "score_dd": 0.07432190567655743,
+    "deployments": 1378,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 42,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5922337922592082,
+    "score_net": -0.04577955151141183,
+    "score_dd": 0.0486395588185343,
+    "deployments": 912,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 43,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5170866958366533,
+    "score_net": -0.06430571465948609,
+    "score_dd": 0.06673763867059113,
+    "deployments": 1187,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 44,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5780718715713414,
+    "score_net": -0.032265062612168716,
+    "score_dd": 0.03597251283526583,
+    "deployments": 695,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 45,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5641892492274466,
+    "score_net": -0.07207886413703313,
+    "score_dd": 0.07589864785295376,
+    "deployments": 1372,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 46,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6101453425725768,
+    "score_net": -0.044579965674729743,
+    "score_dd": 0.05008125915127901,
+    "deployments": 912,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 47,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5371680528576099,
+    "score_net": -0.06780501090328983,
+    "score_dd": 0.07135841458386658,
+    "deployments": 1182,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 48,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.61289918194213,
+    "score_net": -0.035856486075306254,
+    "score_dd": 0.04039432851680491,
+    "deployments": 695,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 1,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5352833380468548,
+    "score_net": -0.03342533602732978,
+    "score_dd": 0.036344523474308346,
+    "deployments": 704,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 2,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.54672435466754,
+    "score_net": -0.023130753096859386,
+    "score_dd": 0.025882280096295406,
+    "deployments": 416,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 3,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5574032095957326,
+    "score_net": -0.020830214100385103,
+    "score_dd": 0.02465701183776969,
+    "deployments": 536,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 4,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5802798581545259,
+    "score_net": -0.011145142796745361,
+    "score_dd": 0.01450291581334454,
+    "deployments": 280,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 5,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.539373399351624,
+    "score_net": -0.03150093457190786,
+    "score_dd": 0.0351540214987994,
+    "deployments": 702,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 6,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5479998648716216,
+    "score_net": -0.022202670528679996,
+    "score_dd": 0.02532983920225586,
+    "deployments": 416,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 7,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5823528217075719,
+    "score_net": -0.021151631044122737,
+    "score_dd": 0.025457487434292162,
+    "deployments": 534,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 8,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6052716243887674,
+    "score_net": -0.011850562137179582,
+    "score_dd": 0.01570308386619457,
+    "deployments": 280,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 9,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5523369431113505,
+    "score_net": -0.07025103487761572,
+    "score_dd": 0.07275619814596247,
+    "deployments": 1381,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 10,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5907942062367115,
+    "score_net": -0.04681139271907234,
+    "score_dd": 0.04949361748348819,
+    "deployments": 913,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 11,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.527533672331809,
+    "score_net": -0.06297030626051814,
+    "score_dd": 0.06595073366216779,
+    "deployments": 1194,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 12,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5801177924452826,
+    "score_net": -0.031392219094956264,
+    "score_dd": 0.03472665278224164,
+    "deployments": 691,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 13,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5650039423438342,
+    "score_net": -0.07038077710275356,
+    "score_dd": 0.07441035390509146,
+    "deployments": 1375,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 14,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6086959603118356,
+    "score_net": -0.04561093333107624,
+    "score_dd": 0.050553104284556304,
+    "deployments": 913,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 15,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5476933446556487,
+    "score_net": -0.06618693077242277,
+    "score_dd": 0.0703059712999238,
+    "deployments": 1189,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 16,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6148269186810675,
+    "score_net": -0.03468020832435387,
+    "score_dd": 0.039178594144161936,
+    "deployments": 691,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 17,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5352833380468548,
+    "score_net": -0.03342533602732978,
+    "score_dd": 0.036344523474308346,
+    "deployments": 704,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 18,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.54672435466754,
+    "score_net": -0.023130753096859386,
+    "score_dd": 0.025882280096295406,
+    "deployments": 416,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 19,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5529164697908805,
+    "score_net": -0.021218463984460756,
+    "score_dd": 0.024890495813697067,
+    "deployments": 533,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 20,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5767852344986119,
+    "score_net": -0.01122013002579611,
+    "score_dd": 0.01450291581334454,
+    "deployments": 279,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 21,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.539373399351624,
+    "score_net": -0.03150093457190786,
+    "score_dd": 0.0351540214987994,
+    "deployments": 702,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 22,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5479998648716216,
+    "score_net": -0.022202670528679996,
+    "score_dd": 0.02532983920225586,
+    "deployments": 416,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 23,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5780635757238212,
+    "score_net": -0.02154040718854211,
+    "score_dd": 0.025770479304123416,
+    "deployments": 531,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 24,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6023146351414556,
+    "score_net": -0.011925724960596268,
+    "score_dd": 0.01570308386619457,
+    "deployments": 279,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 25,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5523369431113505,
+    "score_net": -0.07057071545091065,
+    "score_dd": 0.07307581834652638,
+    "deployments": 1381,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 26,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5907942062367115,
+    "score_net": -0.04681139271907234,
+    "score_dd": 0.04949361748348819,
+    "deployments": 913,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 27,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5241084577493399,
+    "score_net": -0.06389541824056444,
+    "score_dd": 0.06679880647635927,
+    "deployments": 1192,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 28,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5796655961430343,
+    "score_net": -0.03157855775727206,
+    "score_dd": 0.03484436394118087,
+    "deployments": 693,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 29,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5650039423438342,
+    "score_net": -0.07070366664006997,
+    "score_dd": 0.07473275387320313,
+    "deployments": 1375,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 30,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6086959603118356,
+    "score_net": -0.04561093333107624,
+    "score_dd": 0.050553104284556304,
+    "deployments": 913,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 31,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5443699786229197,
+    "score_net": -0.0676526034205081,
+    "score_dd": 0.07169140393019048,
+    "deployments": 1187,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 32,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.614526132259029,
+    "score_net": -0.03518875818861747,
+    "score_dd": 0.03956926466780479,
+    "deployments": 693,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 33,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5377244154879323,
+    "score_net": -0.033425057312953255,
+    "score_dd": 0.036344245537090786,
+    "deployments": 705,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 34,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5490810665830754,
+    "score_net": -0.02313047536802143,
+    "score_dd": 0.025882003356902133,
+    "deployments": 417,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 35,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5529164697908805,
+    "score_net": -0.021137630169900362,
+    "score_dd": 0.024809843460943302,
+    "deployments": 533,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 36,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5767852344986119,
+    "score_net": -0.011139265501227735,
+    "score_dd": 0.014422251022147153,
+    "deployments": 279,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 37,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5418192414201076,
+    "score_net": -0.03150065553373696,
+    "score_dd": 0.0351537437656971,
+    "deployments": 703,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 38,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.550356576787157,
+    "score_net": -0.022202392575447177,
+    "score_dd": 0.02532956244739063,
+    "deployments": 417,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 39,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5780635757238212,
+    "score_net": -0.021459813891101798,
+    "score_dd": 0.025690167184586502,
+    "deployments": 531,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 40,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6023146351414556,
+    "score_net": -0.01184514209335169,
+    "score_dd": 0.015622681382765694,
+    "deployments": 279,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 41,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5536495194239268,
+    "score_net": -0.07057044106488225,
+    "score_dd": 0.07307554487054878,
+    "deployments": 1382,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 42,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5920850840336134,
+    "score_net": -0.04681111903340776,
+    "score_dd": 0.04949334510212924,
+    "deployments": 914,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 43,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5241084577493399,
+    "score_net": -0.06372851032790755,
+    "score_dd": 0.06663231556352335,
+    "deployments": 1192,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 44,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5796655961430343,
+    "score_net": -0.0314986374668432,
+    "score_dd": 0.03476448517558875,
+    "deployments": 693,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 45,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5663148037670552,
+    "score_net": -0.0707033932926932,
+    "score_dd": 0.07473248189215445,
+    "deployments": 1376,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 46,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6099509803921569,
+    "score_net": -0.04561065978560669,
+    "score_dd": 0.05055283315931461,
+    "deployments": 914,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 47,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5443699786229197,
+    "score_net": -0.06748759783769251,
+    "score_dd": 0.071526731018688,
+    "deployments": 1187,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 48,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.614526132259029,
+    "score_net": -0.03510979401196168,
+    "score_dd": 0.039490352518404,
+    "deployments": 693,
+    "stage": "wf2_train"
+  },
+  {
+    "n": 1,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.529028538339911,
+    "score_net": -0.038088053031430674,
+    "score_dd": 0.04152881611166832,
+    "deployments": 905,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 2,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.579467630345863,
+    "score_net": -0.023650236498023947,
+    "score_dd": 0.027586660209216792,
+    "deployments": 549,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 3,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5511183466477436,
+    "score_net": -0.023896108833320218,
+    "score_dd": 0.02864813886869379,
+    "deployments": 697,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 4,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5955557032311418,
+    "score_net": -0.011334246250961522,
+    "score_dd": 0.018307337847053847,
+    "deployments": 363,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 5,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5361507132573331,
+    "score_net": -0.03537911591488968,
+    "score_dd": 0.04012116795512214,
+    "deployments": 903,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 6,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.584761717536502,
+    "score_net": -0.022213979432128883,
+    "score_dd": 0.027085249426256158,
+    "deployments": 549,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 7,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5738595542995789,
+    "score_net": -0.0235137991529005,
+    "score_dd": 0.029313785780605457,
+    "deployments": 695,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 8,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6199781440132317,
+    "score_net": -0.011481667266261236,
+    "score_dd": 0.01955816930333433,
+    "deployments": 363,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 9,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5442704237640736,
+    "score_net": -0.09588443048013331,
+    "score_dd": 0.09767849430999347,
+    "deployments": 1845,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 10,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5974472576035076,
+    "score_net": -0.058757676392157815,
+    "score_dd": 0.0611346543200534,
+    "deployments": 1200,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 11,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5381109826214476,
+    "score_net": -0.07943745794237067,
+    "score_dd": 0.08123581377360536,
+    "deployments": 1611,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 12,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5882516601082144,
+    "score_net": -0.037337596355135116,
+    "score_dd": 0.04161025689919018,
+    "deployments": 928,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 13,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5582531467400215,
+    "score_net": -0.09569081135325028,
+    "score_dd": 0.0987116066030407,
+    "deployments": 1837,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 14,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6141986001131222,
+    "score_net": -0.057388176836716515,
+    "score_dd": 0.06254963629456854,
+    "deployments": 1199,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 15,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5564617808991402,
+    "score_net": -0.0846460632179335,
+    "score_dd": 0.0875151858508255,
+    "deployments": 1606,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 16,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.620710382061372,
+    "score_net": -0.039306881683356804,
+    "score_dd": 0.04479844608523196,
+    "deployments": 928,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 17,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.529028538339911,
+    "score_net": -0.038219975296107406,
+    "score_dd": 0.04166026508259481,
+    "deployments": 905,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 18,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.579467630345863,
+    "score_net": -0.023782220137703453,
+    "score_dd": 0.027586660209216792,
+    "deployments": 549,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 19,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5482616687946104,
+    "score_net": -0.02457776487679164,
+    "score_dd": 0.029325945452493195,
+    "deployments": 693,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 20,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5935736736328332,
+    "score_net": -0.011663316084824876,
+    "score_dd": 0.018366967494143654,
+    "deployments": 362,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 21,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5361507132573331,
+    "score_net": -0.035511606557323105,
+    "score_dd": 0.04012116795512214,
+    "deployments": 903,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 22,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.584761717536502,
+    "score_net": -0.02234632625161695,
+    "score_dd": 0.027085249426256158,
+    "deployments": 549,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 23,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5711147517079742,
+    "score_net": -0.024195821630880215,
+    "score_dd": 0.029931889276681528,
+    "deployments": 691,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 24,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6182603850280309,
+    "score_net": -0.011811145059107353,
+    "score_dd": 0.01955816930333433,
+    "deployments": 362,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 25,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5440769787275597,
+    "score_net": -0.09633146460934741,
+    "score_dd": 0.09812515412660282,
+    "deployments": 1846,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 26,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5974472576035076,
+    "score_net": -0.05888743075228306,
+    "score_dd": 0.0611346543200534,
+    "deployments": 1200,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 27,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5321611864252052,
+    "score_net": -0.08006346099599934,
+    "score_dd": 0.0820854800539933,
+    "deployments": 1606,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 28,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5860934213844928,
+    "score_net": -0.037647506454379226,
+    "score_dd": 0.04180995354156312,
+    "deployments": 930,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 29,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5580554226702712,
+    "score_net": -0.09614181808719038,
+    "score_dd": 0.09903347165442074,
+    "deployments": 1838,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 30,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6141986001131222,
+    "score_net": -0.057518233825923665,
+    "score_dd": 0.06254963629456854,
+    "deployments": 1199,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 31,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5506593617844852,
+    "score_net": -0.08587142277492968,
+    "score_dd": 0.08890294770959582,
+    "deployments": 1601,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 32,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.618607284326427,
+    "score_net": -0.0397915455603359,
+    "score_dd": 0.04512634138308739,
+    "deployments": 930,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 33,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.529028538339911,
+    "score_net": -0.038219975296107406,
+    "score_dd": 0.04166026508259481,
+    "deployments": 905,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 34,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.579467630345863,
+    "score_net": -0.023782220137703453,
+    "score_dd": 0.027586660209216792,
+    "deployments": 549,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 35,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5482616687946104,
+    "score_net": -0.02449701945286531,
+    "score_dd": 0.029245505285096625,
+    "deployments": 693,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 36,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5935736736328332,
+    "score_net": -0.011582598224383928,
+    "score_dd": 0.01828681726638462,
+    "deployments": 362,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 37,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5361507132573331,
+    "score_net": -0.035511606557323105,
+    "score_dd": 0.04012116795512214,
+    "deployments": 903,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 38,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.584761717536502,
+    "score_net": -0.02234632625161695,
+    "score_dd": 0.027085249426256158,
+    "deployments": 549,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 39,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5711147517079742,
+    "score_net": -0.02411505846117412,
+    "score_dd": 0.029851701149692315,
+    "deployments": 691,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 40,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6182603850280309,
+    "score_net": -0.011730616123973081,
+    "score_dd": 0.019478195028941055,
+    "deployments": 362,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 41,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5440769787275597,
+    "score_net": -0.09633146460934741,
+    "score_dd": 0.09812515412660282,
+    "deployments": 1846,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 42,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5974472576035076,
+    "score_net": -0.05888743075228306,
+    "score_dd": 0.0611346543200534,
+    "deployments": 1200,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 43,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5323463709493121,
+    "score_net": -0.0804087657101944,
+    "score_dd": 0.08243156147838662,
+    "deployments": 1605,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 44,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5860934213844928,
+    "score_net": -0.03756247756225736,
+    "score_dd": 0.04172509830945787,
+    "deployments": 930,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 45,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5580554226702712,
+    "score_net": -0.09614181808719038,
+    "score_dd": 0.09903347165442074,
+    "deployments": 1838,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 46,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6141986001131222,
+    "score_net": -0.057518233825923665,
+    "score_dd": 0.06254963629456854,
+    "deployments": 1199,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 47,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5508527871223048,
+    "score_net": -0.0857893891055638,
+    "score_dd": 0.08882166567374837,
+    "deployments": 1600,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 48,
+    "mode": "Arithmetic",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.618607284326427,
+    "score_net": -0.039707492269765415,
+    "score_dd": 0.04504251275687191,
+    "deployments": 930,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 1,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5342047163053374,
+    "score_net": -0.03895849178402955,
+    "score_dd": 0.04190953125743121,
+    "deployments": 908,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 2,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5796270343024855,
+    "score_net": -0.02456372641040211,
+    "score_dd": 0.028129731708144288,
+    "deployments": 541,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 3,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5582450797977832,
+    "score_net": -0.023832620259045978,
+    "score_dd": 0.028718694031719214,
+    "deployments": 693,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 4,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6013318876057687,
+    "score_net": -0.010844708921185858,
+    "score_dd": 0.017434790520710126,
+    "deployments": 361,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 5,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5411124034098344,
+    "score_net": -0.03610815723185748,
+    "score_dd": 0.04020588982195257,
+    "deployments": 906,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 6,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5850048168367321,
+    "score_net": -0.023129141594949776,
+    "score_dd": 0.027604655822430647,
+    "deployments": 541,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 7,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5808613681011188,
+    "score_net": -0.02380171018171054,
+    "score_dd": 0.02969562164934863,
+    "deployments": 691,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 8,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6260569396190172,
+    "score_net": -0.010847111196808201,
+    "score_dd": 0.018597328343257554,
+    "deployments": 361,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 9,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5446793681087145,
+    "score_net": -0.09507536698079105,
+    "score_dd": 0.09690543123021346,
+    "deployments": 1845,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 10,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5928204352094241,
+    "score_net": -0.060735076394171805,
+    "score_dd": 0.06264715764490865,
+    "deployments": 1201,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 11,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5407564426158491,
+    "score_net": -0.07763376442753081,
+    "score_dd": 0.07996869689300849,
+    "deployments": 1609,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 12,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5929830029138194,
+    "score_net": -0.03603488461729076,
+    "score_dd": 0.040096060985756354,
+    "deployments": 927,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 13,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5585589491749992,
+    "score_net": -0.09501973076060391,
+    "score_dd": 0.09768726244561261,
+    "deployments": 1837,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 14,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.60957799745257,
+    "score_net": -0.05936987159500845,
+    "score_dd": 0.06351955221324282,
+    "deployments": 1200,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 15,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5593525686333906,
+    "score_net": -0.08318800321297606,
+    "score_dd": 0.0866406872942918,
+    "deployments": 1604,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 16,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 6,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6253483242446634,
+    "score_net": -0.03810972203354754,
+    "score_dd": 0.0432740273047313,
+    "deployments": 927,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 17,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5342047163053374,
+    "score_net": -0.03895849178402955,
+    "score_dd": 0.04190953125743121,
+    "deployments": 908,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 18,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5796270343024855,
+    "score_net": -0.02456372641040211,
+    "score_dd": 0.028129731708144288,
+    "deployments": 541,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 19,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5541906770890901,
+    "score_net": -0.02449523163026429,
+    "score_dd": 0.029262281853060748,
+    "deployments": 688,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 20,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5992554756456359,
+    "score_net": -0.011036923677242544,
+    "score_dd": 0.017550860880469917,
+    "deployments": 360,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 21,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5411124034098344,
+    "score_net": -0.03610815723185748,
+    "score_dd": 0.04020588982195257,
+    "deployments": 906,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 22,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5850048168367321,
+    "score_net": -0.023129141594949776,
+    "score_dd": 0.027604655822430647,
+    "deployments": 541,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 23,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5769225160862774,
+    "score_net": -0.024463987217334615,
+    "score_dd": 0.03023904504431533,
+    "deployments": 686,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 24,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.624257382586902,
+    "score_net": -0.011039276230626643,
+    "score_dd": 0.018597328343257554,
+    "deployments": 360,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 25,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5446793681087145,
+    "score_net": -0.0953725370022056,
+    "score_dd": 0.09720260125162801,
+    "deployments": 1845,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 26,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5928204352094241,
+    "score_net": -0.060735076394171805,
+    "score_dd": 0.06264715764490865,
+    "deployments": 1201,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 27,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5357194522439858,
+    "score_net": -0.07861855811438528,
+    "score_dd": 0.08106130438663851,
+    "deployments": 1604,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 28,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5923132942791438,
+    "score_net": -0.03630770657266871,
+    "score_dd": 0.04012201217906164,
+    "deployments": 930,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 29,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5585589491749992,
+    "score_net": -0.09532095747067584,
+    "score_dd": 0.09798848915568455,
+    "deployments": 1837,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 30,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.60957799745257,
+    "score_net": -0.05936987159500845,
+    "score_dd": 0.06351955221324282,
+    "deployments": 1200,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 31,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5544399267657264,
+    "score_net": -0.08458058242588523,
+    "score_dd": 0.08813856992443331,
+    "deployments": 1599,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 32,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 8,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6247138456540968,
+    "score_net": -0.03869781221681884,
+    "score_dd": 0.04365478655708143,
+    "deployments": 930,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 33,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5357474378243248,
+    "score_net": -0.03895821341957825,
+    "score_dd": 0.04190925389166023,
+    "deployments": 909,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 34,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5812005256020043,
+    "score_net": -0.02456344822109313,
+    "score_dd": 0.028129454968751015,
+    "deployments": 542,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 35,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5541906770890901,
+    "score_net": -0.024414205871440164,
+    "score_dd": 0.029181629500306984,
+    "deployments": 688,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 36,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5992554756456359,
+    "score_net": -0.010955971040757906,
+    "score_dd": 0.01747045447361789,
+    "deployments": 360,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 37,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5426135394046412,
+    "score_net": -0.036107877668092175,
+    "score_dd": 0.04020561225681386,
+    "deployments": 907,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 38,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5865320289803826,
+    "score_net": -0.023128862640145964,
+    "score_dd": 0.02760437917565547,
+    "deployments": 542,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 39,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5769225160862774,
+    "score_net": -0.024383059980254612,
+    "score_dd": 0.03015876755313663,
+    "deployments": 686,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 40,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 20.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.624257382586902,
+    "score_net": -0.010958464475843394,
+    "score_dd": 0.01851705017990132,
+    "deployments": 360,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 41,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5454899050894643,
+    "score_net": -0.09537226450257485,
+    "score_dd": 0.09720232944735176,
+    "deployments": 1846,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 42,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.593677578066567,
+    "score_net": -0.06073480342260246,
+    "score_dd": 0.06264688576564334,
+    "deployments": 1202,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 43,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5357194522439858,
+    "score_net": -0.07859436639546807,
+    "score_dd": 0.08103768651460135,
+    "deployments": 1604,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 44,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 0.75,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.5923132942791438,
+    "score_net": -0.03622787541333322,
+    "score_dd": 0.040042293020429914,
+    "deployments": 930,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 45,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5593539653359834,
+    "score_net": -0.09532068490722312,
+    "score_dd": 0.09798821774650468,
+    "deployments": 1838,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 46,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "ATR",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6104005780977313,
+    "score_net": -0.059369597986781236,
+    "score_dd": 0.06351928173004012,
+    "deployments": 1201,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 47,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 1.25
+    },
+    "score_win": 0.5544399267657264,
+    "score_net": -0.0845581106078461,
+    "score_dd": 0.08811655824228579,
+    "deployments": 1599,
+    "stage": "wf3_train"
+  },
+  {
+    "n": 48,
+    "mode": "Geometric",
+    "family": "moving",
+    "spec": {
+      "levels": 10,
+      "adx_threshold": 30.0,
+      "stop_pct": 2.0,
+      "method": "Bollinger Bands",
+      "min_spacing_pct": 2.0
+    },
+    "score_win": 0.6247138456540968,
+    "score_net": -0.03861889342938665,
+    "score_dd": 0.04357612208305825,
+    "deployments": 930,
+    "stage": "wf3_train"
+  }
+]

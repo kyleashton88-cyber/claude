@@ -1,0 +1,230 @@
+{
+  "selection": "walk-forward folds 2023-05-16..2024-05-16 and 2024-05-16..2025-05-16; nested 2025-05-16..2026-05-16 not used; OOS 2026-05-16..2026-11-15 not used",
+  "variants": 634,
+  "chosen": {
+    "Arithmetic": {
+      "wf": {
+        "n": 216,
+        "wins": 163,
+        "win": 0.7546296296296297,
+        "ret": 0.001727041527305664,
+        "stops": 11,
+        "stop_ret": -0.061000409618906695,
+        "liqs": 0,
+        "dd": 0.09620468512838716
+      },
+      "spec": {
+        "levels": 8,
+        "mode": "Arithmetic",
+        "tp_pct": 2.0,
+        "leverage": 1.0,
+        "margin": 10000.0,
+        "fee": 0.001,
+        "slip": 0.0005,
+        "min_step": 0.02,
+        "buffer": false,
+        "exit": "close_all",
+        "stop_pct": 4.0,
+        "outside": 6,
+        "max_bars": 36,
+        "_gate": "hyst_age",
+        "_range": "atr3",
+        "_exit": "time36"
+      }
+    },
+    "Geometric": {
+      "wf": {
+        "n": 71,
+        "wins": 53,
+        "win": 0.7464788732394366,
+        "ret": 8.818881634841468e-05,
+        "stops": 3,
+        "stop_ret": -0.05131971580050285,
+        "liqs": 0,
+        "dd": 0.08514521881232544
+      },
+      "spec": {
+        "levels": 12,
+        "mode": "Geometric",
+        "tp_pct": 2.0,
+        "leverage": 1.0,
+        "margin": 10000.0,
+        "fee": 0.001,
+        "slip": 0.0005,
+        "min_step": 0.02,
+        "buffer": false,
+        "exit": "close_all",
+        "stop_pct": 4.0,
+        "outside": 6,
+        "max_bars": 36,
+        "_gate": "hyst_liq",
+        "_range": "atr3",
+        "_exit": "time36"
+      }
+    }
+  },
+  "coin_offsets": {
+    "Arithmetic": {
+      "BTC-USDT": {
+        "levels": 8,
+        "mode": "Arithmetic",
+        "tp_pct": 2.0,
+        "leverage": 1.0,
+        "margin": 10000.0,
+        "fee": 0.001,
+        "slip": 0.0005,
+        "min_step": 0.02,
+        "buffer": false,
+        "exit": "close_all",
+        "stop_pct": 4.0,
+        "outside": 6,
+        "max_bars": 36,
+        "_gate": "hyst_age",
+        "_range": "atr3",
+        "_exit": "time36"
+      },
+      "ETH-USDT": {
+        "levels": 8,
+        "mode": "Arithmetic",
+        "tp_pct": 2.0,
+        "leverage": 1.0,
+        "margin": 10000.0,
+        "fee": 0.001,
+        "slip": 0.0005,
+        "min_step": 0.02,
+        "buffer": false,
+        "exit": "close_all",
+        "stop_pct": 4.0,
+        "outside": 6,
+        "max_bars": 36,
+        "_gate": "hyst_age",
+        "_range": "atr3",
+        "_exit": "time36"
+      },
+      "SOL-USDT": {
+        "levels": 8,
+        "mode": "Arithmetic",
+        "tp_pct": 2.0,
+        "leverage": 1.0,
+        "margin": 10000.0,
+        "fee": 0.001,
+        "slip": 0.0005,
+        "min_step": 0.02,
+        "buffer": false,
+        "exit": "close_all",
+        "stop_pct": 4.0,
+        "outside": 6,
+        "max_bars": 36,
+        "_gate": "hyst_age",
+        "_range": "atr3",
+        "_exit": "time36"
+      }
+    },
+    "Geometric": {
+      "BTC-USDT": {
+        "levels": 12,
+        "mode": "Geometric",
+        "tp_pct": 2.0,
+        "leverage": 1.0,
+        "margin": 10000.0,
+        "fee": 0.001,
+        "slip": 0.0005,
+        "min_step": 0.02,
+        "buffer": false,
+        "exit": "close_all",
+        "stop_pct": 4.0,
+        "outside": 6,
+        "max_bars": 36,
+        "_gate": "hyst_liq",
+        "_range": "atr3",
+        "_exit": "time36"
+      },
+      "ETH-USDT": {
+        "levels": 12,
+        "mode": "Geometric",
+        "tp_pct": 2.0,
+        "leverage": 1.0,
+        "margin": 10000.0,
+        "fee": 0.001,
+        "slip": 0.0005,
+        "min_step": 0.02,
+        "buffer": false,
+        "exit": "close_all",
+        "stop_pct": 4.0,
+        "outside": 6,
+        "max_bars": 36,
+        "_gate": "hyst_liq",
+        "_range": "atr3",
+        "_exit": "time36"
+      },
+      "SOL-USDT": {
+        "levels": 12,
+        "mode": "Geometric",
+        "tp_pct": 2.0,
+        "leverage": 1.0,
+        "margin": 10000.0,
+        "fee": 0.001,
+        "slip": 0.0005,
+        "min_step": 0.02,
+        "buffer": false,
+        "exit": "close_all",
+        "stop_pct": 4.0,
+        "outside": 6,
+        "max_bars": 36,
+        "_gate": "hyst_liq",
+        "_range": "atr3",
+        "_exit": "time36"
+      }
+    }
+  },
+  "leverage_adjustment": {
+    "Arithmetic": {
+      "adjust": "base",
+      "wf3x": {
+        "n": 216,
+        "wins": 163,
+        "win": 0.7546296296296297,
+        "ret": 0.005181124581916978,
+        "stops": 11,
+        "stop_ret": -0.18300122885672013,
+        "liqs": 0,
+        "dd": 0.26610149057110327
+      }
+    },
+    "Geometric": {
+      "adjust": "liq_buffer",
+      "wf3x": {
+        "n": 70,
+        "wins": 53,
+        "win": 0.7571428571428571,
+        "ret": 0.0005692976067783491,
+        "stops": 3,
+        "stop_ret": -0.15395914740150843,
+        "liqs": 0,
+        "dd": 0.24087548714684384
+      }
+    }
+  },
+  "safe_leverage": {
+    "Arithmetic|BTC-USDT": 5,
+    "Arithmetic|ETH-USDT": 5,
+    "Arithmetic|SOL-USDT": 5,
+    "Arithmetic|ZEC-USDT": 1,
+    "Geometric|BTC-USDT": 5,
+    "Geometric|ETH-USDT": 5,
+    "Geometric|SOL-USDT": 5,
+    "Geometric|ZEC-USDT": 5
+  },
+  "scale": {
+    "n": 59,
+    "end": 9760.180598346755,
+    "p05": 9133.173897283885,
+    "p50": 9874.737756961786,
+    "ruin": 0.0,
+    "dd50": 0.046055929337162765,
+    "dd95": 0.10366583799951866
+  },
+  "funding_note": "OKX public funding history used where the file has prints, from about 10 Aug 2026. Earlier bars, including most of the in-sample window and the first part of the out-of-sample window, are charged zero. Binance futures funding was blocked from this environment.",
+  "stablecoin": "DefiLlama stablecoins.llama.fi total circulating USD, 14-day change, lagged one day. History covers the in-sample window.",
+  "margin": "Isolated. Maintenance rates: BTC 0.4%, ETH 0.5%, SOL 1%, ZEC 1% of notional. Teaching schedule, not a live table."
+}

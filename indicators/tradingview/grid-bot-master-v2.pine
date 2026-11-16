@@ -1,0 +1,56 @@
+//@version=6
+// Draft. Not published. Does not replace grid-bot-original.pine.
+// Education only. Not financial advice.
+//
+// Indicator form of the round-3 in-sample selection. It is not a strategy and
+// it does not clear the 75% out-of-sample gate.
+//
+// What changed relative to the original Master Strategy and the Grid-Fit Screener:
+// - The band is ATR(14) times 3 around an EMA(50), and a launch is meant to
+//   freeze that band. This plot still moves, so a user can see the candidate
+//   band; the study froze it on the launch bar.
+// - ADX is smoothed with an EMA of length 3. Range state turns on only after
+//   two bars below 20 and turns off only after a bar above 32 (hysteresis).
+// - Arithmetic adds a range-age gate: the close has to have been inside the
+//   ATR band for 6 to 48 bars.
+// - Geometric adds the screener liquidity idea: average quote volume per hour
+//   over the last 24 hours at or above 2,000,000.
+// - A launch also wants the tightest grid step to be at least 2% and a time
+//   stop of 36 bars. Those are study settings, drawn here as labels, not orders.
+indicator("Grid Bot Master v2 candidate (draft)", overlay = true)
+
+float atrLen = input.float(3.0, "ATR multiple", minval = 0.5, step = 0.1)
+int ageMin = input.int(6, "Range age minimum", minval = 1)
+int ageMax = input.int(48, "Range age maximum", minval = 2)
+float adxEnter = input.float(20.0, "ADX enter below")
+float adxLeave = input.float(32.0, "ADX exit above")
+string mode = input.string("Arithmetic", "Mode note", options = ["Arithmetic", "Geometric"])
+
+float basis = ta.ema(close, 50)
+float a = ta.atr(14)
+float rawLo = basis - atrLen * a
+float rawHi = basis + atrLen * a
+[_, _, adxRaw] = ta.dmi(14, 14)
+float adxSmooth = ta.ema(adxRaw, 3)
+
+var bool inRange = false
+var int quiet = 0
+if not inRange
+    quiet := adxSmooth < adxEnter ? quiet + 1 : 0
+    if quiet >= 2
+        inRange := true
+        quiet := 0
+else if adxSmooth > adxLeave
+    inRange := false
+
+var int age = 0
+bool inside = close <= rawHi and close >= rawLo
+age := inside ? age + 1 : 0
+bool ageOk = age >= ageMin and age <= ageMax
+float qv = math.sum(close * volume, math.max(1, int(math.round(86400 / timeframe.in_seconds())))) / 24.0
+bool liquid = qv >= 2000000.0
+bool launch = inRange and (mode == "Arithmetic" ? ageOk : liquid)
+
+plot(rawHi, "ATR band high", color = color.new(color.red, 0))
+plot(rawLo, "ATR band low", color = color.new(color.teal, 0))
+plotshape(launch, "Launch candidate", shape.circle, location.belowbar, color = color.new(color.teal, 0), size = size.tiny)
