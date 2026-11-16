@@ -1,0 +1,231 @@
+{
+  "selection": "walk-forward folds 2023-05-16..2024-05-16 and 2024-05-16..2025-05-16; nested 2025-05-16..2026-05-16 not used; OOS 2026-05-16..2026-11-15 not used",
+  "variants": 634,
+  "chosen": {
+    "Arithmetic": {
+      "wf": {
+        "n": 1126,
+        "wins": 833,
+        "win": 0.7397868561278863,
+        "ret": -0.0005272713311678391,
+        "stops": 53,
+        "stop_ret": -0.050019258098442945,
+        "liqs": 0,
+        "dd": 0.1478885297195384
+      },
+      "spec": {
+        "levels": 8,
+        "mode": "Arithmetic",
+        "tp_pct": 2.0,
+        "leverage": 1.0,
+        "margin": 10000.0,
+        "fee": 0.001,
+        "slip": 0.0005,
+        "min_step": 0.01,
+        "buffer": false,
+        "exit": "close_all",
+        "stop_pct": 4.0,
+        "outside": 6,
+        "max_bars": 36,
+        "_gate": "hyst_age",
+        "_range": "atr3",
+        "_exit": "time36"
+      }
+    },
+    "Geometric": {
+      "wf": {
+        "n": 1104,
+        "wins": 788,
+        "win": 0.7137681159420289,
+        "ret": -0.0008136888579143777,
+        "stops": 105,
+        "stop_ret": -0.04373290562489637,
+        "liqs": 0,
+        "dd": 0.23065551458684155
+      },
+      "spec": {
+        "levels": 6,
+        "mode": "Geometric",
+        "tp_pct": 2.0,
+        "leverage": 1.0,
+        "margin": 10000.0,
+        "fee": 0.001,
+        "slip": 0.0005,
+        "min_step": 0.01,
+        "buffer": false,
+        "exit": "close_all",
+        "stop_pct": 4.0,
+        "outside": 6,
+        "max_bars": 36,
+        "_gate": "hyst_liq",
+        "_range": "atr3",
+        "_exit": "time36"
+      }
+    }
+  },
+  "coin_offsets": {
+    "Arithmetic": {
+      "BTC-USDT": {
+        "levels": 8,
+        "mode": "Arithmetic",
+        "tp_pct": 2.0,
+        "leverage": 1.0,
+        "margin": 10000.0,
+        "fee": 0.001,
+        "slip": 0.0005,
+        "min_step": 0.01,
+        "buffer": false,
+        "exit": "close_all",
+        "stop_pct": 4.0,
+        "outside": 6,
+        "max_bars": 36,
+        "_gate": "hyst_age",
+        "_range": "atr3",
+        "_exit": "time36"
+      },
+      "ETH-USDT": {
+        "levels": 8,
+        "mode": "Arithmetic",
+        "tp_pct": 2.0,
+        "leverage": 1.0,
+        "margin": 10000.0,
+        "fee": 0.001,
+        "slip": 0.0005,
+        "min_step": 0.01,
+        "buffer": false,
+        "exit": "close_all",
+        "stop_pct": 4.0,
+        "outside": 6,
+        "max_bars": 36,
+        "_gate": "hyst_age",
+        "_range": "atr3",
+        "_exit": "time36"
+      },
+      "SOL-USDT": {
+        "levels": 8,
+        "mode": "Arithmetic",
+        "tp_pct": 2.0,
+        "leverage": 1.0,
+        "margin": 10000.0,
+        "fee": 0.001,
+        "slip": 0.0005,
+        "min_step": 0.01,
+        "buffer": false,
+        "exit": "close_all",
+        "stop_pct": 4.0,
+        "outside": 6,
+        "max_bars": 36,
+        "_gate": "hyst_age",
+        "_range": "atr3",
+        "_exit": "time36"
+      }
+    },
+    "Geometric": {
+      "BTC-USDT": {
+        "levels": 6,
+        "mode": "Geometric",
+        "tp_pct": 2.0,
+        "leverage": 1.0,
+        "margin": 10000.0,
+        "fee": 0.001,
+        "slip": 0.0005,
+        "min_step": 0.01,
+        "buffer": false,
+        "exit": "close_all",
+        "stop_pct": 4.0,
+        "outside": 6,
+        "max_bars": 36,
+        "_gate": "hyst_liq",
+        "_range": "atr3",
+        "_exit": "time36"
+      },
+      "ETH-USDT": {
+        "levels": 6,
+        "mode": "Geometric",
+        "tp_pct": 2.0,
+        "leverage": 1.0,
+        "margin": 10000.0,
+        "fee": 0.001,
+        "slip": 0.0005,
+        "min_step": 0.01,
+        "buffer": false,
+        "exit": "close_all",
+        "stop_pct": 4.0,
+        "outside": 6,
+        "max_bars": 36,
+        "_gate": "hyst_liq",
+        "_range": "atr3",
+        "_exit": "time36"
+      },
+      "SOL-USDT": {
+        "levels": 6,
+        "mode": "Geometric",
+        "tp_pct": 2.0,
+        "leverage": 1.0,
+        "margin": 10000.0,
+        "fee": 0.001,
+        "slip": 0.0005,
+        "min_step": 0.01,
+        "buffer": false,
+        "exit": "close_all",
+        "stop_pct": 4.0,
+        "outside": 6,
+        "max_bars": 36,
+        "_gate": "hyst_liq",
+        "_range": "atr3",
+        "_exit": "time36"
+      }
+    }
+  },
+  "leverage_adjustment": {
+    "Arithmetic": {
+      "adjust": "base",
+      "wf3x": {
+        "n": 1126,
+        "wins": 833,
+        "win": 0.7397868561278863,
+        "ret": -0.0015818139935035178,
+        "stops": 53,
+        "stop_ret": -0.15005777429532877,
+        "liqs": 0,
+        "dd": 0.3952399467263317
+      }
+    },
+    "Geometric": {
+      "adjust": "liq_buffer",
+      "wf3x": {
+        "n": 1104,
+        "wins": 789,
+        "win": 0.7146739130434783,
+        "ret": -0.002393493084161479,
+        "stops": 105,
+        "stop_ret": -0.1311987168746891,
+        "liqs": 0,
+        "dd": 0.6250514474346032
+      }
+    }
+  },
+  "safe_leverage": {
+    "Arithmetic|BTC-USDT": null,
+    "Arithmetic|ETH-USDT": null,
+    "Arithmetic|SOL-USDT": null,
+    "Arithmetic|ZEC-USDT": 1,
+    "Geometric|BTC-USDT": null,
+    "Geometric|ETH-USDT": 1,
+    "Geometric|SOL-USDT": 1,
+    "Geometric|ZEC-USDT": null
+  },
+  "scale": {
+    "n": 404,
+    "end": 7726.026399247083,
+    "p05": 7227.738690125882,
+    "p50": 7515.235657692589,
+    "ruin": 0.0,
+    "dd50": 0.2589562859005703,
+    "dd95": 0.2819128778749903
+  },
+  "funding_note": "OKX public funding history used where the file has prints, from about 10 Aug 2026. Earlier bars, including most of the in-sample window and the first part of the out-of-sample window, are charged zero. Binance futures funding was blocked from this environment.",
+  "stablecoin": "DefiLlama stablecoins.llama.fi total circulating USD, 14-day change, lagged one day. History covers the in-sample window.",
+  "margin": "Isolated. Maintenance rates: BTC 0.4%, ETH 0.5%, SOL 1%, ZEC 1% of notional. Teaching schedule, not a live table.",
+  "safe_rule": "Both 1h and 4h need n>=20, zero liquidations, and path drawdown on the fixed 10000 margin at or under 35%."
+}

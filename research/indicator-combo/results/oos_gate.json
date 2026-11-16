@@ -1,0 +1,586 @@
+{
+  "fees_included": true,
+  "window": [
+    "2026-05-16",
+    "2026-11-15"
+  ],
+  "win_definition": "per_deployment_net_of_fees",
+  "cells": [
+    {
+      "mode": "Arithmetic",
+      "coin": "BTC-USDT",
+      "tf": "1h",
+      "leverage": 1,
+      "win": null,
+      "n": 0,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "BTC-USDT",
+      "tf": "1h",
+      "leverage": 2,
+      "win": null,
+      "n": 0,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "BTC-USDT",
+      "tf": "1h",
+      "leverage": 3,
+      "win": null,
+      "n": 0,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "BTC-USDT",
+      "tf": "1h",
+      "leverage": 5,
+      "win": null,
+      "n": 0,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "BTC-USDT",
+      "tf": "4h",
+      "leverage": 1,
+      "win": 1.0,
+      "n": 3,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "BTC-USDT",
+      "tf": "4h",
+      "leverage": 2,
+      "win": 1.0,
+      "n": 3,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "BTC-USDT",
+      "tf": "4h",
+      "leverage": 3,
+      "win": 1.0,
+      "n": 3,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "BTC-USDT",
+      "tf": "4h",
+      "leverage": 5,
+      "win": 1.0,
+      "n": 3,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "ETH-USDT",
+      "tf": "1h",
+      "leverage": 1,
+      "win": null,
+      "n": 0,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "ETH-USDT",
+      "tf": "1h",
+      "leverage": 2,
+      "win": null,
+      "n": 0,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "ETH-USDT",
+      "tf": "1h",
+      "leverage": 3,
+      "win": null,
+      "n": 0,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "ETH-USDT",
+      "tf": "1h",
+      "leverage": 5,
+      "win": null,
+      "n": 0,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "ETH-USDT",
+      "tf": "4h",
+      "leverage": 1,
+      "win": 0.6470588235294118,
+      "n": 17,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "ETH-USDT",
+      "tf": "4h",
+      "leverage": 2,
+      "win": 0.6470588235294118,
+      "n": 17,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "ETH-USDT",
+      "tf": "4h",
+      "leverage": 3,
+      "win": 0.6470588235294118,
+      "n": 17,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "ETH-USDT",
+      "tf": "4h",
+      "leverage": 5,
+      "win": 0.6470588235294118,
+      "n": 17,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "SOL-USDT",
+      "tf": "1h",
+      "leverage": 1,
+      "win": 0.8333333333333334,
+      "n": 12,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "SOL-USDT",
+      "tf": "1h",
+      "leverage": 2,
+      "win": 0.8333333333333334,
+      "n": 12,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "SOL-USDT",
+      "tf": "1h",
+      "leverage": 3,
+      "win": 0.8333333333333334,
+      "n": 12,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "SOL-USDT",
+      "tf": "1h",
+      "leverage": 5,
+      "win": 0.8333333333333334,
+      "n": 12,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "SOL-USDT",
+      "tf": "4h",
+      "leverage": 1,
+      "win": 0.6764705882352942,
+      "n": 34,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "SOL-USDT",
+      "tf": "4h",
+      "leverage": 2,
+      "win": 0.6764705882352942,
+      "n": 34,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "SOL-USDT",
+      "tf": "4h",
+      "leverage": 3,
+      "win": 0.6764705882352942,
+      "n": 34,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "SOL-USDT",
+      "tf": "4h",
+      "leverage": 5,
+      "win": 0.6764705882352942,
+      "n": 34,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "ZEC-USDT",
+      "tf": "1h",
+      "leverage": 1,
+      "win": 0.7631578947368421,
+      "n": 76,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "ZEC-USDT",
+      "tf": "1h",
+      "leverage": 2,
+      "win": 0.7631578947368421,
+      "n": 76,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "ZEC-USDT",
+      "tf": "1h",
+      "leverage": 3,
+      "win": 0.7631578947368421,
+      "n": 76,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "ZEC-USDT",
+      "tf": "1h",
+      "leverage": 5,
+      "win": 0.7631578947368421,
+      "n": 76,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "ZEC-USDT",
+      "tf": "4h",
+      "leverage": 1,
+      "win": 0.6470588235294118,
+      "n": 34,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "ZEC-USDT",
+      "tf": "4h",
+      "leverage": 2,
+      "win": 0.6470588235294118,
+      "n": 34,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "ZEC-USDT",
+      "tf": "4h",
+      "leverage": 3,
+      "win": 0.6470588235294118,
+      "n": 34,
+      "fees_included": true
+    },
+    {
+      "mode": "Arithmetic",
+      "coin": "ZEC-USDT",
+      "tf": "4h",
+      "leverage": 5,
+      "win": 0.6470588235294118,
+      "n": 34,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "BTC-USDT",
+      "tf": "1h",
+      "leverage": 1,
+      "win": 0.8888888888888888,
+      "n": 9,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "BTC-USDT",
+      "tf": "1h",
+      "leverage": 2,
+      "win": 0.8888888888888888,
+      "n": 9,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "BTC-USDT",
+      "tf": "1h",
+      "leverage": 3,
+      "win": 0.8888888888888888,
+      "n": 9,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "BTC-USDT",
+      "tf": "1h",
+      "leverage": 5,
+      "win": 0.8888888888888888,
+      "n": 9,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "BTC-USDT",
+      "tf": "4h",
+      "leverage": 1,
+      "win": 0.6206896551724138,
+      "n": 29,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "BTC-USDT",
+      "tf": "4h",
+      "leverage": 2,
+      "win": 0.6206896551724138,
+      "n": 29,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "BTC-USDT",
+      "tf": "4h",
+      "leverage": 3,
+      "win": 0.6206896551724138,
+      "n": 29,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "BTC-USDT",
+      "tf": "4h",
+      "leverage": 5,
+      "win": 0.6206896551724138,
+      "n": 29,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "ETH-USDT",
+      "tf": "1h",
+      "leverage": 1,
+      "win": 0.71875,
+      "n": 32,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "ETH-USDT",
+      "tf": "1h",
+      "leverage": 2,
+      "win": 0.71875,
+      "n": 32,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "ETH-USDT",
+      "tf": "1h",
+      "leverage": 3,
+      "win": 0.71875,
+      "n": 32,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "ETH-USDT",
+      "tf": "1h",
+      "leverage": 5,
+      "win": 0.71875,
+      "n": 32,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "ETH-USDT",
+      "tf": "4h",
+      "leverage": 1,
+      "win": 0.6666666666666666,
+      "n": 30,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "ETH-USDT",
+      "tf": "4h",
+      "leverage": 2,
+      "win": 0.6666666666666666,
+      "n": 30,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "ETH-USDT",
+      "tf": "4h",
+      "leverage": 3,
+      "win": 0.6666666666666666,
+      "n": 30,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "ETH-USDT",
+      "tf": "4h",
+      "leverage": 5,
+      "win": 0.6666666666666666,
+      "n": 30,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "SOL-USDT",
+      "tf": "1h",
+      "leverage": 1,
+      "win": 0.578125,
+      "n": 64,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "SOL-USDT",
+      "tf": "1h",
+      "leverage": 2,
+      "win": 0.578125,
+      "n": 64,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "SOL-USDT",
+      "tf": "1h",
+      "leverage": 3,
+      "win": 0.578125,
+      "n": 64,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "SOL-USDT",
+      "tf": "1h",
+      "leverage": 5,
+      "win": 0.5714285714285714,
+      "n": 63,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "SOL-USDT",
+      "tf": "4h",
+      "leverage": 1,
+      "win": 0.6190476190476191,
+      "n": 21,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "SOL-USDT",
+      "tf": "4h",
+      "leverage": 2,
+      "win": 0.6190476190476191,
+      "n": 21,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "SOL-USDT",
+      "tf": "4h",
+      "leverage": 3,
+      "win": 0.6190476190476191,
+      "n": 21,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "SOL-USDT",
+      "tf": "4h",
+      "leverage": 5,
+      "win": 0.6190476190476191,
+      "n": 21,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "ZEC-USDT",
+      "tf": "1h",
+      "leverage": 1,
+      "win": 0.75,
+      "n": 32,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "ZEC-USDT",
+      "tf": "1h",
+      "leverage": 2,
+      "win": 0.75,
+      "n": 32,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "ZEC-USDT",
+      "tf": "1h",
+      "leverage": 3,
+      "win": 0.75,
+      "n": 32,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "ZEC-USDT",
+      "tf": "1h",
+      "leverage": 5,
+      "win": 0.7586206896551724,
+      "n": 29,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "ZEC-USDT",
+      "tf": "4h",
+      "leverage": 1,
+      "win": 0.36363636363636365,
+      "n": 11,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "ZEC-USDT",
+      "tf": "4h",
+      "leverage": 2,
+      "win": 0.36363636363636365,
+      "n": 11,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "ZEC-USDT",
+      "tf": "4h",
+      "leverage": 3,
+      "win": 0.36363636363636365,
+      "n": 11,
+      "fees_included": true
+    },
+    {
+      "mode": "Geometric",
+      "coin": "ZEC-USDT",
+      "tf": "4h",
+      "leverage": 5,
+      "win": 0.4,
+      "n": 10,
+      "fees_included": true
+    }
+  ]
+}
