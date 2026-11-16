@@ -1,5 +1,9 @@
 # Changes, 16 November 2026
 
+## Visual fixes prepared, not rendered
+
+Burned-in captions sit under the card so they no longer cover the candle's Low label. The Idea card reveals the band, buys, sells, and cash as those words are spoken. The map names lessons 1–6 as each is spoken and switches to 7–11 when "paper" is spoken. Crossing rings that sat on the same pixel are nudged apart. The summer closes still produce 28 crossings.
+
 ## Warm-pixel clean, not rendered
 
 Stills 004, 008 and 017 no longer carry a gold stop rim. Still 004's third label is "The stop is your written rule." The candle cards follow the voice: cut time, then the close, then the labelled high, low and close. Removed stills 003, 010 and 015, and the fence files, are out of the lesson JSON, the fallback manifest and the pass list.

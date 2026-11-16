@@ -729,11 +729,13 @@ def title_bar(base: Image.Image, shot: dict, progress: float) -> None:
 def lower_third(draw: ImageDraw.ImageDraw, shot: dict) -> None:
     if shot.get("kind") in {"brand", "disclaimer", "outro"}:
         return
-    draw.rectangle([MX, 784, RIGHT, 788], fill=CYAN)
+    # The burned-in caption sits at y=772, just under the card, so this
+    # band starts below that cue.
+    draw.rectangle([MX, 828, RIGHT, 832], fill=CYAN)
     term = shot.get("term") or ""
     defin = shot.get("definition") or ""
     t_size = fit_size(term, W - 2 * MX, 40, 36)
-    draw.text((MX, 806), term, font=font(t_size), fill=CYAN)
+    draw.text((MX, 844), term, font=font(t_size), fill=CYAN)
     width = W - 2 * MX
     lines = wrap(defin, 36, width, "reg")
     size = 36
@@ -743,7 +745,7 @@ def lower_third(draw: ImageDraw.ImageDraw, shot: dict) -> None:
     else:
         lines = lines[:2]
     # Footer text starts at y=990. Three 30px lines still finish above it.
-    y = 852
+    y = 886
     step = size + 10
     for line in lines:
         if y + size > 978:
@@ -1090,9 +1092,21 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
             while x < plot[2]:
                 draw.line([(x, yy), (min(x + 8, plot[2]), yy)], fill=MUTED, width=2)
                 x += 18
+        # Two crossings a day apart were drawing as one ring. Nudge those apart
+        # so the eye can count every one. The count itself stays 28.
+        placed: list[tuple[float, float]] = []
         for x, y in marks:
-            draw.ellipse((x - 7, y - 7, x + 7, y + 7), outline=WHITE, width=3)
-            draw.ellipse((x - 3, y - 3, x + 3, y + 3), fill=CYAN)
+            x = min(max(x, plot[0] + 14), plot[2] - 14)
+            shift = 0
+            step = 16
+            while any(abs(x - px) < 18 and abs(y + shift - py) < 14 for px, py in placed):
+                shift = step if shift == 0 else (-abs(shift) - step if shift > 0 else abs(shift) + step)
+                if abs(shift) > 48:
+                    break
+            placed.append((x, y + shift))
+        for x, y in placed:
+            draw.ellipse((x - 8, y - 8, x + 8, y + 8), outline=WHITE, width=3)
+            draw.ellipse((x - 4, y - 4, x + 4, y + 4), fill=CYAN)
         note = f"{len(marks)} crossings"
         face_n = font(36)
         tw = int(face_n.getlength(note)) + 28
@@ -1497,19 +1511,102 @@ def paint_board(base: Image.Image, shot: dict) -> None:
     raise SystemExit(f"unknown board {board}")
 
 
+def _word_at(shot: dict, *needles: str) -> float | None:
+    """Start time of the first spoken word that matches, in this shot."""
+    wanted = {needle.lower() for needle in needles}
+    for text, start, _end in shot.get("word_times") or []:
+        token = str(text).lower().strip(".,?!")
+        if token in wanted:
+            return float(start)
+    return None
+
+
+def _draw_named_rows(draw: ImageDraw.ImageDraw, rows: list[tuple[str, str]]) -> None:
+    y = 210
+    left = MX + 28
+    for number, name in rows:
+        draw.rounded_rectangle([left, y, left + 72, y + 64], 12, fill=TAG, outline=CYAN, width=2)
+        num_x = left + 22 if len(str(number)) == 1 else left + 8
+        draw.text((num_x, y + 12), str(number), font=font(36), fill=CYAN)
+        draw.text((left + 96, y + 10), name, font=font(40), fill=CYAN)
+        y += 88
+
+
+def paint_idea(base: Image.Image, shot: dict, local: float) -> None:
+    """Reveal the band, then the buys, then the sells, so the card does not sit still."""
+    draw = ImageDraw.Draw(base)
+    box = (MX, 200, RIGHT, 750)
+    draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
+    draw.text((box[0] + 36, box[1] + 24), "A grid bot places the orders", font=font(32), fill=WHITE)
+    buy_at = _word_at(shot, "buy", "buys")
+    sell_at = _word_at(shot, "sell", "sells")
+    band_at = _word_at(shot, "band")
+    cash_at = _word_at(shot, "cash")
+
+    def due(at: float | None) -> bool:
+        return at is not None and local >= at
+
+    # The last line is on screen by 18s, so a 25s shot cannot sit still for 20s.
+    show_band = due(band_at) or local >= 18
+    show_buy = due(buy_at) or local >= 18
+    show_sell = due(sell_at) or local >= 18
+    show_cash = due(cash_at) or local >= 18
+    cx0, cx1 = box[0] + 520, box[2] - 80
+    top, bot = box[1] + 120, box[3] - 80
+    mid = (top + bot) / 2
+    if show_band:
+        draw.line([(cx0, top), (cx1, top)], fill=WHITE, width=4)
+        draw.line([(cx0, bot), (cx1, bot)], fill=WHITE, width=4)
+        draw.text((cx0, top - 36), "Top", font=font(28), fill=WHITE)
+        draw.text((cx0, bot + 8), "Bottom", font=font(28), fill=WHITE)
+    if show_buy:
+        for i in range(1, 4):
+            y = mid + i * (bot - mid) / 4
+            draw.line([(cx0, y), (cx1, y)], fill=CYAN, width=4)
+        draw.text((cx1 - 220, mid + 16), "Buys below", font=font(28), fill=CYAN)
+    if show_sell:
+        for i in range(1, 4):
+            y = mid - i * (mid - top) / 4
+            draw.line([(cx0, y), (cx1, y)], fill=WHITE, width=3)
+        draw.text((cx1 - 220, mid - 48), "Sells above", font=font(28), fill=WHITE)
+    if show_cash:
+        draw.text((box[0] + 36, box[3] - 56), "Part cash and part coin", font=font(32), fill=CYAN)
+
+
 def paint_stack(base: Image.Image, shot: dict, local: float) -> None:
     draw = ImageDraw.Draw(base)
-    named = shot.get("screen_lines") or []
+    named = list(shot.get("screen_lines") or [])
+    if named and (shot.get("chapter") or "") == "The map" and str(named[0][0]) == "1":
+        later = [
+            ("7", "Paper"),
+            ("8", "Monitoring"),
+            ("9", "Mistakes"),
+            ("10", "Scaling up"),
+            ("11", "Your complete plan"),
+        ]
+        paper_at = _word_at(shot, "paper")
+        if paper_at is not None and local >= paper_at:
+            _draw_named_rows(draw, later)
+            return
+        cues = (
+            ("introduction", "step"),
+            ("need",),
+            ("exactly", "order"),
+            ("regimes",),
+            ("spacing", "choosing"),
+            ("entry",),
+        )
+        shown = 0
+        for needles in cues:
+            start = _word_at(shot, *needles)
+            if start is not None and local >= start:
+                shown += 1
+        if shown == 0 and local >= 0.2:
+            shown = 1
+        _draw_named_rows(draw, named[:shown])
+        return
     if named:
-        y = 210
-        # Inset past the 5% margin. The number chip was reading at x=92.
-        left = MX + 28
-        for number, name in named:
-            draw.rounded_rectangle([left, y, left + 72, y + 64], 12, fill=TAG, outline=CYAN, width=2)
-            num_x = left + 22 if len(str(number)) == 1 else left + 8
-            draw.text((num_x, y + 12), str(number), font=font(36), fill=CYAN)
-            draw.text((left + 96, y + 10), name, font=font(40), fill=CYAN)
-            y += 88
+        _draw_named_rows(draw, named)
         return
     items = shot.get("items") or [shot.get("caption") or ""]
     index = int(shot.get("index") or 0)
@@ -2192,8 +2289,9 @@ def _burn_caption(frame: np.ndarray, shot: dict, local: float) -> np.ndarray:
         face = font(28)
         width = int(face.getlength(line))
     x = max(MX, (W - width) // 2)
-    y = 700
-    draw.rounded_rectangle([x - 16, y - 8, x + width + 16, y + 44], 10, fill=NAVY, outline=CYAN, width=2)
+    # Below the card (cards end at y=760) so a cue cannot cover a price label.
+    y = 772
+    draw.rounded_rectangle([x - 16, y - 8, x + width + 16, y + 40], 10, fill=NAVY, outline=CYAN, width=2)
     draw.text((x, y), line, font=face, fill=WHITE)
     return np.asarray(image, dtype=np.uint8)
 
@@ -2226,6 +2324,11 @@ def paint(shot: dict, local: float, progress: float) -> np.ndarray:
     ):
         title_bar(img, shot, progress)
         paint_leave(img, shot, local)
+        lower_third(ImageDraw.Draw(img), shot)
+        draw_footer(ImageDraw.Draw(img))
+    elif (shot.get("chapter") or "") == "The idea" and shot.get("lesson_id") == "bp-01-introduction":
+        title_bar(img, shot, progress)
+        paint_idea(img, shot, local)
         lower_third(ImageDraw.Draw(img), shot)
         draw_footer(ImageDraw.Draw(img))
     elif kind == "stack":
