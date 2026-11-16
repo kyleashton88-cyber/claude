@@ -1,7 +1,7 @@
 {
   "tool": "quality-gate",
   "result": "pass",
-  "master": "course/blueprint-rebuild/masters/bp-01-introduction.mp4",
+  "master": "/agent/repos/claude/course/blueprint-rebuild/masters/bp-01-introduction.mp4",
   "format": "blueprint",
   "format_label": "Blueprint lesson",
   "length_window_seconds": [
@@ -17,12 +17,12 @@
     {
       "id": "length",
       "result": "pass",
-      "detail": "754.2s is inside Blueprint lesson (600s\u2013900s)"
+      "detail": "722.3s is inside Blueprint lesson (600s\u2013900s)"
     },
     {
       "id": "loudness",
       "result": "pass",
-      "detail": "integrated -14.4 LUFS, target -14 \u00b1 1"
+      "detail": "integrated -14.3 LUFS, target -14 \u00b1 1"
     },
     {
       "id": "true_peak",
@@ -62,7 +62,7 @@
     {
       "id": "captions",
       "result": "pass",
-      "detail": "352 cues, at most 42 characters and 20 per second"
+      "detail": "330 cues, at most 42 characters and 20 per second"
     },
     {
       "id": "text_recognition",

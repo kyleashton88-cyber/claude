@@ -54,7 +54,19 @@ SPECS: dict[str, dict] = {
             "1. Stop the bot. Waiting orders are cancelled.",
             "2. Follow the rule: keep the coin, or swap back to cash.",
             "3. Who: the bot's stop setting, or you by hand.",
-            "Daily close: 11am AEDT, or 10am outside daylight saving.",
+            "Two daily closes. The second one still outside.",
+        ],
+    },
+    "BP01-V08": {
+        "title": "EXAMPLE, made up",
+        "rows": [
+            "EXAMPLE, made up. Not a real fill.",
+            "EXAMPLE. 0.01 BTC at 27,630",
+            "EXAMPLE. 0.01 BTC at 26,730",
+            "EXAMPLE. 0.01 BTC at 25,830",
+            "EXAMPLE. Cost US$801.90",
+            "EXAMPLE. Made-up price 24,000: worth US$720",
+            "EXAMPLE. Down about US$80 before fees.",
         ],
     },
     "BP02-V01": {

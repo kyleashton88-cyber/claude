@@ -3,7 +3,7 @@
 Result: **PASS**
 
 Format: Blueprint lesson (`blueprint`), 600s–900s.
-Master: `course/blueprint-rebuild/masters/bp-01-introduction.mp4`
+Master: `/agent/repos/claude/course/blueprint-rebuild/masters/bp-01-introduction.mp4`
 
 Loudness fails the gate when it is outside the window. It is not only printed.
 Target -14.0 LUFS ± 1.0, true peak at or below -1.0 dBTP.
@@ -17,8 +17,8 @@ Blueprint lessons keep the 6-minute minimum. The 10-minute upper cap is removed.
 
 | Check | Result | Detail |
 |---|---|---|
-| length | PASS | 754.2s is inside Blueprint lesson (600s–900s) |
-| loudness | PASS | integrated -14.4 LUFS, target -14 ± 1 |
+| length | PASS | 722.3s is inside Blueprint lesson (600s–900s) |
+| loudness | PASS | integrated -14.3 LUFS, target -14 ± 1 |
 | true_peak | PASS | true peak -3.6 dBTP, limit -1 dBTP |
 | frozen | PASS | longest static run 0.5s, limit 8s |
 | black | PASS | no near-black run over 0.5s |
@@ -26,7 +26,7 @@ Blueprint lessons keep the 6-minute minimum. The 10-minute upper cap is removed.
 | resolution | PASS | 1920x1080 |
 | fps | PASS | 30.000 fps |
 | codec | PASS | video h264, audio aac, yuv420p |
-| captions | PASS | 352 cues, at most 42 characters and 20 per second |
+| captions | PASS | 330 cues, at most 42 characters and 20 per second |
 | text_recognition | PASS | tesseract read the sampled frames |
 | brands | PASS | no exchange or banned brand name |
 | safe_margins | PASS | sampled words sit inside the 5% margin |

@@ -7,11 +7,11 @@ GridBot Builder.
 GridBot Blueprint.
 
 3
-00:00:03,340 --> 00:00:04,090
+00:00:03,340 --> 00:00:04,074
 Lesson one.
 
 4
-00:00:04,626 --> 00:00:05,376
+00:00:04,626 --> 00:00:05,355
 Introduction.
 
 5
@@ -103,1306 +103,1218 @@ This is education, not
 a promise of results.
 
 27
-00:00:54,878 --> 00:00:56,488
-Price often moves sideways,
+00:00:54,878 --> 00:00:56,219
+By the end you will know
 
 28
-00:00:56,488 --> 00:00:58,239
-bouncing between the same top
+00:00:56,219 --> 00:00:57,503
+what a grid bot places.
 
 29
-00:00:58,239 --> 00:00:59,989
-and bottom instead of leaving.
+00:00:58,633 --> 00:01:00,711
+You will see that idea on
 
 30
-00:01:00,509 --> 00:01:02,087
-A grid is a ladder of limit
+00:01:00,711 --> 00:01:02,686
+one real path from 2023.
 
 31
-00:01:02,087 --> 00:01:04,040
-orders built for that bouncing.
+00:01:03,886 --> 00:01:05,395
+You will be able to say the
 
 32
-00:01:04,560 --> 00:01:06,416
-When price runs one way and stays
+00:01:05,395 --> 00:01:06,847
+stop rule in one sentence.
 
 33
-00:01:06,416 --> 00:01:08,539
-there, the bot has nothing left to do.
+00:01:07,801 --> 00:01:09,647
+When a chart says Example, it
 
 34
-00:01:09,610 --> 00:01:12,120
-Crypto is digital money, such as bitcoin.
+00:01:09,647 --> 00:01:11,493
+means a real past price used
 
 35
-00:01:12,640 --> 00:01:14,316
-You do not need to have bought
+00:01:11,493 --> 00:01:13,339
+as an example, not a forecast.
 
 36
-00:01:14,316 --> 00:01:15,601
-any before this lesson.
+00:01:14,389 --> 00:01:16,899
+Crypto is digital money, such as bitcoin.
 
 37
-00:01:15,979 --> 00:01:17,947
-An exchange is the website or app
+00:01:17,419 --> 00:01:19,095
+You do not need to have bought
 
 38
-00:01:17,947 --> 00:01:20,279
-where you swap Australian dollars for
+00:01:19,095 --> 00:01:20,380
+any before this lesson.
 
 39
-00:01:20,279 --> 00:01:22,319
-crypto, and crypto back to dollars.
+00:01:20,758 --> 00:01:22,726
+An exchange is the website or app
 
 40
-00:01:22,839 --> 00:01:24,515
-This course does not name one,
+00:01:22,726 --> 00:01:25,058
+where you swap Australian dollars for
 
 41
-00:01:24,515 --> 00:01:26,191
-and it does not send an order.
+00:01:25,058 --> 00:01:27,098
+crypto, and crypto back to dollars.
 
 42
-00:01:26,936 --> 00:01:28,500
-Cash is money you can spend.
+00:01:27,618 --> 00:01:29,294
+This course does not name one,
 
 43
-00:01:28,902 --> 00:01:30,802
-Here that means dollars, or a coin
+00:01:29,294 --> 00:01:30,970
+and it does not send an order.
 
 44
-00:01:30,802 --> 00:01:32,925
-that is meant to stay near one dollar.
+00:01:31,715 --> 00:01:33,280
+Cash is money you can spend.
 
 45
-00:01:33,232 --> 00:01:35,423
-Coin is the crypto, such as bitcoin.
+00:01:33,682 --> 00:01:35,581
+Here that means dollars, or a coin
 
 46
-00:01:36,473 --> 00:01:38,820
-An order is an instruction to buy or sell.
+00:01:35,581 --> 00:01:37,704
+that is meant to stay near one dollar.
 
 47
-00:01:39,272 --> 00:01:41,079
-A buy order swaps cash for coin.
+00:01:38,011 --> 00:01:40,203
+Coin is the crypto, such as bitcoin.
 
 48
-00:01:41,599 --> 00:01:43,963
-A sell order swaps coin back to cash, and
+00:01:41,253 --> 00:01:43,599
+An order is an instruction to buy or sell.
 
 49
-00:01:43,963 --> 00:01:46,327
-you can only sell coin you already hold.
+00:01:44,051 --> 00:01:45,858
+A buy order swaps cash for coin.
 
 50
-00:01:47,377 --> 00:01:49,742
-A grid bot places waiting buy orders
+00:01:46,378 --> 00:01:48,742
+A sell order swaps coin back to cash, and
 
 51
-00:01:49,742 --> 00:01:51,870
-on lines below the price and sell
+00:01:48,742 --> 00:01:51,106
+you can only sell coin you already hold.
 
 52
-00:01:51,870 --> 00:01:53,998
-orders on lines above it, inside a
+00:01:52,156 --> 00:01:53,926
+A bot is software that places
 
 53
-00:01:53,998 --> 00:01:55,732
-top and a bottom you choose.
+00:01:53,926 --> 00:01:55,548
+and refills orders for you.
 
 54
-00:01:56,252 --> 00:01:57,928
-The space between your top and
+00:01:56,068 --> 00:01:58,433
+A grid bot places waiting buy orders
 
 55
-00:01:57,928 --> 00:01:59,660
-your bottom is called the band.
+00:01:58,433 --> 00:02:00,561
+on lines below the price and sell
 
 56
-00:01:59,770 --> 00:02:01,875
-The sells need some coin, so a grid
+00:02:00,561 --> 00:02:02,689
+orders on lines above it, inside a
 
 57
-00:02:01,875 --> 00:02:03,824
-starts with part cash and part
+00:02:02,689 --> 00:02:04,423
+top and a bottom you choose.
 
 58
-00:02:03,824 --> 00:02:05,774
-coin, and that is a description,
+00:02:04,943 --> 00:02:06,619
+The space between your top and
 
 59
-00:02:05,774 --> 00:02:07,645
-not advice about what to hold.
+00:02:06,619 --> 00:02:08,351
+your bottom is called the band.
 
 60
-00:02:08,695 --> 00:02:10,401
-A limit order is an order that
-
-61
-00:02:10,401 --> 00:02:11,966
-waits at a price you choose.
-
-62
-00:02:12,485 --> 00:02:14,049
-It does not chase the price.
-
-63
-00:02:14,469 --> 00:02:16,033
-Chasing the price would mean
-
-64
-00:02:16,033 --> 00:02:17,485
-moving the order to follow
-
-65
-00:02:17,485 --> 00:02:19,050
-wherever the price has gone.
-
-66
-00:02:19,899 --> 00:02:21,974
-An order fills when the price reaches
-
-67
-00:02:21,974 --> 00:02:23,706
-its line and the trade happens.
-
-68
-00:02:24,167 --> 00:02:26,374
-Until then, the order is only waiting.
-
-69
-00:02:27,424 --> 00:02:29,379
-Think of a ladder leaned on a wall.
-
-70
-00:02:29,521 --> 00:02:31,867
-The rungs wait, and they do not chase you.
-
-71
-00:02:32,143 --> 00:02:34,433
-A rung is one price where an order waits.
-
-72
-00:02:34,840 --> 00:02:37,019
-The gap is the space between two rungs.
-
-73
-00:02:37,838 --> 00:02:39,738
-Setting the band uses three words.
-
-74
-00:02:40,133 --> 00:02:41,544
-The range is the top rung
-
-75
-00:02:41,544 --> 00:02:42,672
-and the bottom rung.
-
-76
-00:02:43,192 --> 00:02:45,315
-The levels are the rungs between them.
-
-77
-00:02:45,665 --> 00:02:47,956
-The stop is the written rule for leaving.
-
-78
-00:02:48,805 --> 00:02:50,845
-A grid has three parts you can name:
-
-79
-00:02:50,845 --> 00:02:52,856
-the range, the levels, and the stop.
-
-80
-00:02:53,333 --> 00:02:54,562
-The range is the band.
-
-81
-00:02:55,072 --> 00:02:57,028
-The levels are the rungs inside it.
-
-82
-00:02:58,077 --> 00:02:59,921
-The range is the top line and the
-
-83
-00:02:59,921 --> 00:03:01,764
-bottom line, taken from the path.
-
-84
-00:03:02,243 --> 00:03:03,695
-Every close in this window
-
-85
-00:03:03,695 --> 00:03:05,427
-stayed between those two lines.
-
-86
-00:03:06,213 --> 00:03:08,053
-The range is a top and a bottom
-
-87
-00:03:08,053 --> 00:03:09,586
-you draw before any rung.
-
-88
-00:03:10,106 --> 00:03:11,614
-Without a top and a bottom,
-
-89
-00:03:11,614 --> 00:03:13,067
-you can't place the lines.
-
-90
-00:03:14,129 --> 00:03:16,721
-Six equal gaps of about 900 dollars sit
-
-91
-00:03:16,721 --> 00:03:19,393
-between the bottom line and the top line.
-
-92
-00:03:19,913 --> 00:03:22,140
-Each gap is about 900 dollars:
-
-93
-00:03:22,140 --> 00:03:24,367
-the top line minus the bottom
-
-94
-00:03:24,367 --> 00:03:25,852
-line, divided by six.
-
-95
-00:03:26,372 --> 00:03:27,707
-It is one step between
-
-96
-00:03:27,707 --> 00:03:29,190
-lines, not the whole band.
-
-97
-00:03:29,710 --> 00:03:31,549
-Seven lines make those six gaps.
-
-98
-00:03:32,069 --> 00:03:33,857
-The levels are the prices on the
-
-99
-00:03:33,857 --> 00:03:35,533
-rungs where limit orders wait.
-
-100
-00:03:36,519 --> 00:03:38,028
-The levels are limit orders
-
-101
-00:03:38,028 --> 00:03:39,313
-that wait on the rungs.
-
-102
-00:03:39,630 --> 00:03:41,306
-A limit order sits at a price.
-
-103
-00:03:41,809 --> 00:03:42,842
-It does not chase.
-
-104
-00:03:44,042 --> 00:03:46,333
-Buy orders wait on lines below the price.
-
-105
-00:03:46,768 --> 00:03:48,724
-Sell orders wait on lines above it.
-
-106
-00:03:49,205 --> 00:03:50,322
-You choose the band,
-
-107
-00:03:50,322 --> 00:03:51,607
-the gaps and the money.
-
-108
-00:03:51,891 --> 00:03:53,344
-The bot places each order.
-
-109
-00:03:54,350 --> 00:03:56,765
-Buy orders sit on lines below the price
-
-110
-00:03:56,765 --> 00:03:59,028
-and sell orders sit on lines above it.
-
-111
-00:03:59,548 --> 00:04:01,623
-An order fills when the price reaches
-
-112
-00:04:01,623 --> 00:04:03,355
-its line and the trade happens.
-
-113
-00:04:03,817 --> 00:04:05,956
+00:02:08,460 --> 00:02:10,566
 The sells need some coin, so a grid
 
-114
-00:04:05,956 --> 00:04:08,253
-starts with part cash and part coin,
+61
+00:02:10,566 --> 00:02:12,515
+starts with part cash and part
 
-115
-00:04:08,253 --> 00:04:10,629
-and that is a description, not advice.
+62
+00:02:12,515 --> 00:02:14,465
+coin, and that is a description,
 
-116
-00:04:11,829 --> 00:04:13,622
+63
+00:02:14,465 --> 00:02:16,336
+not advice about what to hold.
+
+64
+00:02:17,386 --> 00:02:19,092
+A limit order is an order that
+
+65
+00:02:19,092 --> 00:02:20,656
+waits at a price you choose.
+
+66
+00:02:21,176 --> 00:02:22,740
+It does not chase the price.
+
+67
+00:02:23,160 --> 00:02:24,724
+Chasing the price would mean
+
+68
+00:02:24,724 --> 00:02:26,176
+moving the order to follow
+
+69
+00:02:26,176 --> 00:02:27,741
+wherever the price has gone.
+
+70
+00:02:28,590 --> 00:02:30,665
+An order fills when the price reaches
+
+71
+00:02:30,665 --> 00:02:32,397
+its line and the trade happens.
+
+72
+00:02:32,858 --> 00:02:35,065
+Until then, the order is only waiting.
+
+73
+00:02:36,115 --> 00:02:38,070
+Think of a ladder leaned on a wall.
+
+74
+00:02:38,212 --> 00:02:40,558
+The rungs wait, and they do not chase you.
+
+75
+00:02:40,834 --> 00:02:43,124
+A rung is one price where an order waits.
+
+76
+00:02:43,531 --> 00:02:45,710
+The gap is the space between two rungs.
+
+77
+00:02:45,999 --> 00:02:48,043
+The ladder is the analogy, and the
+
+78
+00:02:48,043 --> 00:02:50,315
+chart beside it is the real past path.
+
+79
+00:02:51,365 --> 00:02:52,776
+The range is the top rung
+
+80
+00:02:52,776 --> 00:02:53,905
+and the bottom rung.
+
+81
+00:02:54,425 --> 00:02:56,548
+The levels are the rungs between them.
+
+82
+00:02:56,897 --> 00:02:59,188
+The stop is the written rule for leaving.
+
+83
+00:03:00,037 --> 00:03:01,881
+The range is the top line and the
+
+84
+00:03:01,881 --> 00:03:03,724
+bottom line, taken from the path.
+
+85
+00:03:04,203 --> 00:03:07,427
+The chart is bitcoin's real daily
+
+86
+00:03:07,427 --> 00:03:10,997
+closes from 19 July to 16 October 2023.
+
+87
+00:03:11,517 --> 00:03:12,969
+Every close in this window
+
+88
+00:03:12,969 --> 00:03:14,701
+stayed between those two lines.
+
+89
+00:03:15,487 --> 00:03:18,079
+Six equal gaps of about 900 dollars sit
+
+90
+00:03:18,079 --> 00:03:20,752
+between the bottom line and the top line.
+
+91
+00:03:21,272 --> 00:03:23,499
+Each gap is about 900 dollars:
+
+92
+00:03:23,499 --> 00:03:25,726
+the top line minus the bottom
+
+93
+00:03:25,726 --> 00:03:27,210
+line, divided by six.
+
+94
+00:03:27,730 --> 00:03:29,065
+It is one step between
+
+95
+00:03:29,065 --> 00:03:30,549
+lines, not the whole band.
+
+96
+00:03:31,069 --> 00:03:32,907
+Seven lines make those six gaps.
+
+97
+00:03:33,427 --> 00:03:35,215
+The levels are the prices on the
+
+98
+00:03:35,215 --> 00:03:36,891
+rungs where limit orders wait.
+
+99
+00:03:37,878 --> 00:03:40,168
+Buy orders wait on lines below the price.
+
+100
+00:03:40,604 --> 00:03:42,559
+Sell orders wait on lines above it.
+
+101
+00:03:43,040 --> 00:03:45,540
+Each fill changes what you hold: a buy
+
+102
+00:03:45,540 --> 00:03:48,206
+fill adds coin, and a sell fill adds cash.
+
+103
+00:03:48,726 --> 00:03:49,843
+You choose the band,
+
+104
+00:03:49,843 --> 00:03:51,128
+the gaps and the money.
+
+105
+00:03:51,412 --> 00:03:52,864
+The bot places each order.
+
+106
+00:03:53,871 --> 00:03:55,664
 After a fill, the bot places the
 
-117
-00:04:13,622 --> 00:04:15,343
+107
+00:03:55,664 --> 00:03:57,385
 opposite order one rung away.
 
-118
-00:04:15,863 --> 00:04:18,042
+108
+00:03:57,905 --> 00:04:00,083
 A buy fill gets a sell one rung higher.
 
-119
-00:04:18,428 --> 00:04:20,658
+109
+00:04:00,470 --> 00:04:02,700
 A sell fill gets a buy one rung lower.
 
-120
-00:04:21,178 --> 00:04:22,798
+110
+00:04:03,220 --> 00:04:04,840
 You still write the stop, and
 
-121
-00:04:22,798 --> 00:04:24,474
+111
+00:04:04,840 --> 00:04:06,516
 you act when that rule is met.
 
-122
-00:04:24,705 --> 00:04:26,940
+112
+00:04:06,747 --> 00:04:08,982
 The bot does not decide the stop for you
 
-123
-00:04:26,940 --> 00:04:29,063
+113
+00:04:08,982 --> 00:04:11,105
 unless you turned that setting on, and
 
-124
-00:04:29,063 --> 00:04:31,130
+114
+00:04:11,105 --> 00:04:13,172
 you write which one before you start.
 
-125
-00:04:31,864 --> 00:04:33,205
+115
+00:04:13,906 --> 00:04:15,247
 Think of a market stall.
 
-126
-00:04:33,637 --> 00:04:35,751
+116
+00:04:15,679 --> 00:04:17,793
 The stallholder buys stock a little
 
-127
-00:04:35,751 --> 00:04:37,865
+117
+00:04:17,793 --> 00:04:19,907
 cheaper and sells it a little dearer,
 
-128
-00:04:37,865 --> 00:04:39,485
+118
+00:04:19,907 --> 00:04:21,527
 and pays a fee on every sale.
 
-129
-00:04:39,936 --> 00:04:41,663
+119
+00:04:21,978 --> 00:04:23,705
 A grid can do that while price
 
-130
-00:04:41,663 --> 00:04:43,103
+120
+00:04:23,705 --> 00:04:25,145
 bounces inside the band.
 
-131
-00:04:43,623 --> 00:04:46,144
+121
+00:04:25,665 --> 00:04:28,186
 A bounce means price moves down and back
 
-132
-00:04:46,144 --> 00:04:48,513
+122
+00:04:28,186 --> 00:04:30,555
 up, or up and back down, and stays inside.
 
-133
-00:04:49,033 --> 00:04:51,269
+123
+00:04:31,075 --> 00:04:33,311
 One buy at a lower line and the later
 
-134
-00:04:51,269 --> 00:04:53,352
+124
+00:04:33,311 --> 00:04:35,394
 sell of that same coin is one pair.
 
-135
-00:04:53,872 --> 00:04:56,111
-On these daily closes the summer window
+125
+00:04:35,914 --> 00:04:38,247
+On these daily closes, the summer window
 
-136
-00:04:56,111 --> 00:04:58,147
-finished only three one-step pairs.
+126
+00:04:38,247 --> 00:04:40,651
+finished only three pairs one rung apart.
 
-137
-00:04:58,667 --> 00:05:00,399
+127
+00:04:41,171 --> 00:04:42,903
 The sell line is higher, so the
 
-138
-00:05:00,399 --> 00:05:02,242
+128
+00:04:42,903 --> 00:04:44,747
 cash that comes back is more than
 
-139
-00:05:02,242 --> 00:05:04,197
+129
+00:04:44,747 --> 00:04:46,702
 the cash that left, before the fee.
 
-140
-00:05:04,491 --> 00:05:05,943
+130
+00:04:46,995 --> 00:04:48,448
 A fee is what the exchange
 
-141
-00:05:05,943 --> 00:05:07,507
+131
+00:04:48,448 --> 00:04:50,012
 charges when an order fills.
 
-142
-00:05:07,688 --> 00:05:09,309
+132
+00:04:50,193 --> 00:04:51,813
 The fee comes out of the gap.
 
-143
-00:05:09,536 --> 00:05:11,267
+133
+00:04:52,040 --> 00:04:53,772
 If the fees are larger than the
 
-144
-00:05:11,267 --> 00:05:12,832
+134
+00:04:53,772 --> 00:04:55,336
 gap, the pair keeps nothing.
 
-145
-00:05:13,012 --> 00:05:14,256
+135
+00:04:55,517 --> 00:04:56,760
 This is not a promise.
 
-146
-00:05:14,776 --> 00:05:16,579
+136
+00:04:57,280 --> 00:04:59,084
 The pair finishes only if price
 
-147
-00:05:16,579 --> 00:05:18,453
+137
+00:04:59,084 --> 00:05:00,957
 does bounce and both orders fill.
 
-148
-00:05:19,503 --> 00:05:20,732
+138
+00:05:02,007 --> 00:05:03,236
 The daily close is the
 
-149
-00:05:20,732 --> 00:05:21,961
+139
+00:05:03,236 --> 00:05:04,465
 last price of the day.
 
-150
-00:05:22,381 --> 00:05:24,181
+140
+00:05:04,886 --> 00:05:06,686
 Crypto trades all day, so the
 
-151
-00:05:24,181 --> 00:05:25,590
+141
+00:05:06,686 --> 00:05:08,094
 day is cut at a set time.
 
-152
-00:05:26,110 --> 00:05:28,715
-The daily close is at 11am Australian
+142
+00:05:08,614 --> 00:05:11,138
+The daily close is the end of each
 
-153
-00:05:28,715 --> 00:05:31,405
-eastern daylight time while daylight
+143
+00:05:11,138 --> 00:05:13,569
+UTC day, 11am in Sydney in summer.
 
-154
-00:05:31,405 --> 00:05:34,263
-saving is in force, and at 10am Australian
-
-155
-00:05:34,263 --> 00:05:36,617
-eastern standard time otherwise.
-
-156
-00:05:37,137 --> 00:05:39,121
+144
+00:05:14,089 --> 00:05:16,073
 This is a simple candle that shows
 
-157
-00:05:39,121 --> 00:05:40,797
+145
+00:05:16,073 --> 00:05:17,748
 the day's high, low and close.
 
-158
-00:05:41,270 --> 00:05:43,200
+146
+00:05:18,222 --> 00:05:20,151
 Traders call it a candle because
 
-159
-00:05:43,200 --> 00:05:45,129
+147
+00:05:20,151 --> 00:05:22,081
 the full version has a thick body
 
-160
-00:05:45,129 --> 00:05:46,861
+148
+00:05:22,081 --> 00:05:23,813
 and a thin wick, like a candle.
 
-161
-00:05:47,293 --> 00:05:48,801
+149
+00:05:24,244 --> 00:05:25,753
 Here we only need the high,
 
-162
-00:05:48,801 --> 00:05:50,030
+150
+00:05:25,753 --> 00:05:26,982
 the low and the close.
 
-163
-00:05:50,364 --> 00:05:53,543
+151
+00:05:27,316 --> 00:05:30,495
 This candle is 19 July 2023.
 
-164
-00:05:54,063 --> 00:05:55,292
+152
+00:05:31,015 --> 00:05:32,244
 The high, the low, and
 
-165
-00:05:55,292 --> 00:05:56,577
+153
+00:05:32,244 --> 00:05:33,529
 the close are labelled.
 
-166
-00:05:57,470 --> 00:05:59,599
+154
+00:05:34,422 --> 00:05:36,551
 The example is Bitcoin's public
 
-167
-00:05:59,599 --> 00:06:01,255
+155
+00:05:36,551 --> 00:05:38,207
 daily price in US dollars.
 
-168
-00:06:01,775 --> 00:06:04,974
+156
+00:05:38,727 --> 00:05:41,926
 From 19 July 2023 to 16 October
 
-169
-00:06:04,974 --> 00:06:07,917
+157
+00:05:41,926 --> 00:05:44,869
 2023, every one of those days
 
-170
-00:06:07,917 --> 00:06:10,348
+158
+00:05:44,869 --> 00:05:47,300
 closed inside the band.
 
-171
-00:06:10,868 --> 00:06:12,541
+159
+00:05:47,820 --> 00:05:49,493
 The close crossed the seven
 
-172
-00:06:12,541 --> 00:06:14,287
+160
+00:05:49,493 --> 00:05:51,239
 lines 28 times in that window.
 
-173
-00:06:14,807 --> 00:06:17,119
+161
+00:05:51,759 --> 00:05:54,071
 The count is an example, not a forecast.
 
-174
-00:06:17,639 --> 00:06:19,427
+162
+00:05:54,591 --> 00:05:56,378
 We do not need to read each day.
 
-175
-00:06:19,693 --> 00:06:21,035
+163
+00:05:56,644 --> 00:05:57,987
 The shape is the lesson,
 
-176
-00:06:21,035 --> 00:06:22,449
+164
+00:05:57,987 --> 00:05:59,401
 and it is marked Example.
 
-177
-00:06:23,499 --> 00:06:26,433
+165
+00:05:59,921 --> 00:06:02,677
+Worked check: 19 July
+
+166
+00:06:02,677 --> 00:06:05,757
+2023 to 16 October 2023.
+
+167
+00:06:06,277 --> 00:06:07,786
+The low is the bottom line.
+
+168
+00:06:08,266 --> 00:06:09,732
+The high is the top line.
+
+169
+00:06:10,252 --> 00:06:12,095
+Nothing on this card is an order.
+
+170
+00:06:13,059 --> 00:06:15,993
 Those 28 crossings are not 28 results.
 
-178
-00:06:26,953 --> 00:06:29,155
+171
+00:06:16,513 --> 00:06:18,715
 A crossing only means the close moved
 
-179
-00:06:29,155 --> 00:06:31,222
+172
+00:06:18,715 --> 00:06:20,782
 from one side of a line to the other.
 
-180
-00:06:31,664 --> 00:06:33,375
+173
+00:06:21,224 --> 00:06:22,935
 A pair is finished only when a
 
-181
-00:06:33,375 --> 00:06:35,229
+174
+00:06:22,935 --> 00:06:24,789
 buy and its later sell have both
 
-182
-00:06:35,229 --> 00:06:36,961
+175
+00:06:24,789 --> 00:06:26,521
 filled, and only after the fee.
 
-183
-00:06:37,460 --> 00:06:39,360
+176
+00:06:27,020 --> 00:06:28,920
 The price can cross many lines and
 
-184
-00:06:39,360 --> 00:06:41,259
+177
+00:06:28,920 --> 00:06:30,819
 still leave you holding coin if it
 
-185
-00:06:41,259 --> 00:06:42,879
+178
+00:06:30,819 --> 00:06:32,439
 walks out through the bottom.
 
-186
-00:06:43,416 --> 00:06:46,397
+179
+00:06:32,976 --> 00:06:35,957
 In this example a buy waiting at the
 
-187
-00:06:46,397 --> 00:06:49,686
+180
+00:06:35,957 --> 00:06:39,246
 lower of these two lines was reached on
 
-188
-00:06:49,686 --> 00:06:52,667
+181
+00:06:39,246 --> 00:06:42,227
 17 August 2023, and the sell one line
 
-189
-00:06:52,667 --> 00:06:55,648
+182
+00:06:42,227 --> 00:06:45,208
 above was reached on 29 August 2023.
 
-190
-00:06:56,168 --> 00:06:57,956
+183
+00:06:45,728 --> 00:06:47,516
 The card shows the gap, then the
 
-191
-00:06:57,956 --> 00:06:59,520
+184
+00:06:47,516 --> 00:06:49,080
 two fees, then what is left.
 
-192
-00:06:59,829 --> 00:07:01,617
-Say it as about eight and a half
+185
+00:06:49,389 --> 00:06:51,512
+That is about eight and a half dollars
 
-193
-00:07:01,617 --> 00:07:03,796
-dollars after fees, for one small pair.
+186
+00:06:51,512 --> 00:06:53,244
+after fees, for one small pair.
 
-194
-00:07:04,245 --> 00:07:06,145
+187
+00:06:53,640 --> 00:06:55,540
 It happens only if the price comes
 
-195
-00:07:06,145 --> 00:07:07,821
+188
+00:06:55,540 --> 00:06:57,216
 back up through the sell line.
 
-196
-00:07:07,925 --> 00:07:09,656
+189
+00:06:57,320 --> 00:06:59,051
 If the price leaves through the
 
-197
-00:07:09,656 --> 00:07:11,444
+190
+00:06:59,051 --> 00:07:00,839
 bottom, you still hold the coin,
 
-198
-00:07:11,444 --> 00:07:13,008
+191
+00:07:00,839 --> 00:07:02,403
 and the pair never finishes.
 
-199
-00:07:13,200 --> 00:07:14,988
+192
+00:07:02,595 --> 00:07:04,383
 This card is not money you made.
 
-200
-00:07:15,916 --> 00:07:17,704
+193
+00:07:11,311 --> 00:07:13,099
 Now watch what you hold when the
 
-201
-00:07:17,704 --> 00:07:19,715
+194
+00:07:13,099 --> 00:07:15,110
 price leaves the band and stays out.
 
-202
-00:07:19,978 --> 00:07:21,599
+195
+00:07:15,373 --> 00:07:16,994
 Above the band the sells have
 
-203
-00:07:21,599 --> 00:07:23,386
+196
+00:07:16,994 --> 00:07:18,781
 filled and you are holding cash,
 
-204
-00:07:23,386 --> 00:07:24,839
+197
+00:07:18,781 --> 00:07:20,234
 with nothing left to sell.
 
-205
-00:07:25,243 --> 00:07:26,807
+198
+00:07:20,638 --> 00:07:22,202
 Below the band the buys have
 
-206
-00:07:26,807 --> 00:07:28,260
+199
+00:07:22,202 --> 00:07:23,655
 filled and you are holding
 
-207
-00:07:28,260 --> 00:07:29,992
+200
+00:07:23,655 --> 00:07:25,387
 coin, with nothing left to buy.
 
-208
-00:07:31,804 --> 00:07:33,648
-A fill is that trade at the line.
+201
+00:07:25,669 --> 00:07:27,061
+That is why the way down
 
-209
-00:07:34,035 --> 00:07:36,435
-As price climbs, each sell order fills.
+202
+00:07:27,061 --> 00:07:28,820
+matters most: every buy fills,
 
-210
-00:07:36,635 --> 00:07:38,167
-So you end up holding cash.
+203
+00:07:28,820 --> 00:07:30,578
+and you are left holding coin.
 
-211
-00:07:38,687 --> 00:07:41,090
-As price falls, each buy order fills.
-
-212
-00:07:41,291 --> 00:07:42,799
-So you end up holding coin.
-
-213
-00:07:44,942 --> 00:07:47,177
+204
+00:07:32,628 --> 00:07:34,863
 Here is that stop rule on the real path.
 
-214
-00:07:47,598 --> 00:07:49,959
+205
+00:07:35,283 --> 00:07:37,644
 It triggers if a daily close is outside
 
-215
-00:07:49,959 --> 00:07:52,246
+206
+00:07:37,644 --> 00:07:39,931
 the band, through the top or the bottom,
 
-216
-00:07:52,246 --> 00:07:54,754
+207
+00:07:39,931 --> 00:07:42,440
 and the next daily close is still outside.
 
-217
-00:07:55,274 --> 00:07:56,727
+208
+00:07:42,960 --> 00:07:44,412
 Then the idea is finished.
 
-218
-00:07:57,107 --> 00:07:59,201
+209
+00:07:44,792 --> 00:07:46,886
 You stop the bot, which cancels the
 
-219
-00:07:59,201 --> 00:08:01,070
+210
+00:07:46,886 --> 00:07:48,755
 waiting orders, and do what you
 
-220
-00:08:01,070 --> 00:08:03,164
+211
+00:07:48,755 --> 00:07:50,849
 wrote: keep the coin or swap to cash.
 
-221
-00:08:03,684 --> 00:08:05,665
+212
+00:07:51,369 --> 00:07:53,351
 A bot's automatic stop is a price
 
-222
-00:08:05,665 --> 00:08:07,353
+213
+00:07:53,351 --> 00:07:55,039
 that can fire during the day.
 
-223
-00:08:07,873 --> 00:08:10,088
-This course uses the two daily closes,
+214
+00:07:55,559 --> 00:07:57,258
+This course uses the two daily
 
-224
-00:08:10,088 --> 00:08:12,159
-unless you wrote that price stop on.
+215
+00:07:57,258 --> 00:07:59,094
+closes, unless your written plan
 
-225
-00:08:12,679 --> 00:08:14,813
+216
+00:07:59,094 --> 00:08:00,882
+says you turned on a price stop.
+
+217
+00:08:01,314 --> 00:08:03,447
 On 23 October 2023 the close
 
-226
-00:08:14,813 --> 00:08:17,225
+218
+00:08:03,447 --> 00:08:05,859
 finished above the top line, and
 
-227
-00:08:17,225 --> 00:08:19,544
+219
+00:08:05,859 --> 00:08:08,178
 the next day was still above it.
 
-228
-00:08:20,594 --> 00:08:22,214
-The stop is your written rule
-
-229
-00:08:22,214 --> 00:08:23,667
-for when you stop the bot.
-
-230
-00:08:24,580 --> 00:08:26,032
+220
+00:08:13,228 --> 00:08:14,681
 Through the top, the sells
 
-231
-00:08:26,032 --> 00:08:27,708
+221
+00:08:14,681 --> 00:08:16,357
 have filled and you hold cash.
 
-232
-00:08:27,817 --> 00:08:29,661
+222
+00:08:16,466 --> 00:08:18,309
 Through the bottom, the buys have
 
-233
-00:08:29,661 --> 00:08:31,504
+223
+00:08:18,309 --> 00:08:20,153
 filled and you hold coin that you
 
-234
-00:08:31,504 --> 00:08:33,515
+224
+00:08:20,153 --> 00:08:22,164
 bought above where the price is now.
 
-235
-00:08:33,874 --> 00:08:35,327
+225
+00:08:22,523 --> 00:08:23,976
 That loss can keep growing
 
-236
-00:08:35,327 --> 00:08:36,444
+226
+00:08:23,976 --> 00:08:25,093
 until the stop acts.
 
-237
-00:08:36,749 --> 00:08:38,593
+227
+00:08:25,398 --> 00:08:27,242
 You stop the bot either way, then
 
-238
-00:08:38,593 --> 00:08:40,157
+228
+00:08:27,242 --> 00:08:28,806
 you follow the written rule.
 
-239
-00:08:40,266 --> 00:08:42,054
+229
+00:08:28,915 --> 00:08:30,703
 The bot does not decide the stop
 
-240
-00:08:42,054 --> 00:08:43,953
+230
+00:08:30,703 --> 00:08:32,602
 unless you turned that setting on.
 
-241
-00:08:44,756 --> 00:08:46,331
+231
+00:08:32,875 --> 00:08:34,998
+EXAMPLE, made up: three buys fill
+
+232
+00:08:34,998 --> 00:08:36,794
+on the way down, and you paid
+
+233
+00:08:36,794 --> 00:08:38,917
+about 800 dollars for that coin.
+
+234
+00:08:39,437 --> 00:08:41,269
+A little below the band
+
+235
+00:08:41,269 --> 00:08:42,908
+it is worth about 720.
+
+236
+00:08:43,428 --> 00:08:45,124
+You are down about 80 dollars
+
+237
+00:08:45,124 --> 00:08:46,891
+before fees, and the loss keeps
+
+238
+00:08:46,891 --> 00:08:48,587
+growing until your stop acts.
+
+239
+00:08:49,637 --> 00:08:51,212
 A common mistake is thinking
 
-242
-00:08:46,331 --> 00:08:47,839
+240
+00:08:51,212 --> 00:08:52,721
 the bot predicts the price.
 
-243
-00:08:48,628 --> 00:08:49,378
+241
+00:08:53,509 --> 00:08:54,259
 It does not.
 
-244
-00:08:49,944 --> 00:08:50,726
+242
+00:08:54,825 --> 00:08:55,607
 It only waits.
 
-245
-00:08:51,096 --> 00:08:52,604
+243
+00:08:55,977 --> 00:08:57,486
 Another mistake is starting
 
-246
-00:08:52,604 --> 00:08:53,777
+244
+00:08:57,486 --> 00:08:58,659
 with no written stop.
 
+245
+00:08:59,074 --> 00:09:00,805
+There is no promise of results.
+
+246
+00:09:01,202 --> 00:09:02,853
+The pair card is a teaching
+
 247
-00:08:54,722 --> 00:08:55,951
-There is no promise of
+00:09:02,853 --> 00:09:04,054
+sum, marked Example.
 
 248
-00:08:55,951 --> 00:08:57,236
-results in this lesson.
-
-249
-00:08:57,427 --> 00:08:59,035
-Numbers marked Example are
-
-250
-00:08:59,035 --> 00:09:00,713
-teaching numbers, not advice.
-
-251
-00:09:01,913 --> 00:09:04,305
+00:09:05,104 --> 00:09:07,496
 Paper or demo trading is like driving
 
-252
-00:09:04,305 --> 00:09:06,389
+249
+00:09:07,496 --> 00:09:09,580
 with L-plates: you practise with
 
-253
-00:09:06,389 --> 00:09:08,859
+250
+00:09:09,580 --> 00:09:12,049
 pretend money before anything is real.
 
-254
-00:09:09,379 --> 00:09:10,896
+251
+00:09:12,569 --> 00:09:14,086
 Lesson 7 shows you how.
 
-255
-00:09:11,946 --> 00:09:13,633
+252
+00:09:15,136 --> 00:09:16,824
 This introduction is step one.
+
+253
+00:09:17,524 --> 00:09:18,586
+Then what you need.
+
+254
+00:09:19,216 --> 00:09:20,743
+Then exactly what a grid
+
+255
+00:09:20,743 --> 00:09:22,194
+bot does, order by order.
 
 256
-00:09:14,333 --> 00:09:15,395
-Then what you need.
-
-257
-00:09:16,025 --> 00:09:17,552
-Then exactly what a grid
-
-258
-00:09:17,552 --> 00:09:19,003
-bot does, order by order.
-
-259
-00:09:20,003 --> 00:09:21,120
+00:09:23,194 --> 00:09:24,311
 Then market regimes.
 
-260
-00:09:22,046 --> 00:09:23,734
-This introduction is step one.
+257
+00:09:24,887 --> 00:09:26,954
+Then choosing grid spacing and range.
 
-261
-00:09:24,434 --> 00:09:25,496
-Then what you need.
+258
+00:09:27,593 --> 00:09:29,200
+Then entry and exit rules.
 
-262
-00:09:26,126 --> 00:09:27,653
-Then exactly what a grid
-
-263
-00:09:27,653 --> 00:09:29,104
-bot does, order by order.
-
-264
-00:09:29,804 --> 00:09:31,699
-Then market regimes, spacing
-
-265
-00:09:31,699 --> 00:09:33,516
-and range, and entry and exit.
-
-266
-00:09:34,216 --> 00:09:35,612
-Then a paper test, weekly
-
-267
-00:09:35,612 --> 00:09:37,176
-checks, and common mistakes.
-
-268
-00:09:37,856 --> 00:09:39,868
-Then scaling up under written rules,
-
-269
-00:09:39,868 --> 00:09:41,823
-and an opt-in lesson on liquidation
-
-270
-00:09:41,823 --> 00:09:43,164
-with your complete plan.
-
-271
-00:09:44,172 --> 00:09:45,257
+259
+00:09:29,900 --> 00:09:30,984
 Then a paper test.
 
-272
-00:09:45,977 --> 00:09:47,039
+260
+00:09:31,705 --> 00:09:32,766
 Then weekly checks.
 
-273
-00:09:47,776 --> 00:09:48,964
+261
+00:09:33,503 --> 00:09:34,692
 Then common mistakes.
 
-274
-00:09:49,664 --> 00:09:51,675
+262
+00:09:35,392 --> 00:09:37,403
 Then scaling up under written rules.
 
-275
-00:09:52,486 --> 00:09:54,385
+263
+00:09:37,863 --> 00:09:39,254
+Then an opt-in lesson on
+
+264
+00:09:39,254 --> 00:09:41,340
+liquidation and your complete plan.
+
+265
+00:09:42,406 --> 00:09:43,705
+Steps seven to eleven.
+
+266
+00:09:44,905 --> 00:09:46,805
 The next lesson is a checklist you
 
-276
-00:09:54,385 --> 00:09:56,285
+267
+00:09:46,805 --> 00:09:48,704
 write on paper, before any screen.
 
-277
-00:09:57,306 --> 00:09:59,472
-The next step is the setup checklist,
+268
+00:09:49,726 --> 00:09:52,103
+In short: a grid waits, it buys lower and
 
-278
-00:09:59,472 --> 00:10:01,060
-on paper, before any screen.
+269
+00:09:52,103 --> 00:09:54,480
+sells higher while price bounces, the
 
-279
-00:10:01,580 --> 00:10:03,480
-You will need the three words when
+270
+00:09:54,480 --> 00:09:56,780
+fees come out of the gap, and if a daily
 
-280
-00:10:03,480 --> 00:10:05,435
-that checklist asks what a grid is.
+271
+00:09:56,780 --> 00:09:59,233
+close leaves and stays out, you stop the
 
-281
-00:10:06,472 --> 00:10:07,478
-Keep one sentence.
+272
+00:09:59,233 --> 00:10:01,304
+bot and follow the rule you wrote.
 
-282
-00:10:07,768 --> 00:10:09,947
-A grid waits, it buys lower and sells
-
-283
-00:10:09,947 --> 00:10:12,202
-higher while price bounces, the fees
-
-284
-00:10:12,202 --> 00:10:14,157
-come out of the gap, and if a daily
-
-285
-00:10:14,157 --> 00:10:16,336
-close leaves and stays out, you stop
-
-286
-00:10:16,336 --> 00:10:18,590
-the bot and follow the rule you wrote.
-
-287
-00:10:19,640 --> 00:10:21,219
-If you keep one sentence,
-
-288
-00:10:21,219 --> 00:10:22,956
-keep this: range, levels, and
-
-289
-00:10:22,956 --> 00:10:24,772
-stop, drawn before any click.
-
-290
-00:10:25,292 --> 00:10:26,935
-Bouncing inside the band is
-
-291
-00:10:26,935 --> 00:10:28,331
-what a grid is built for.
-
-292
-00:10:28,812 --> 00:10:30,049
-The exit from the band
-
-293
-00:10:30,049 --> 00:10:31,355
-is the failure picture.
-
-294
-00:10:32,589 --> 00:10:33,455
+273
+00:10:02,388 --> 00:10:03,254
 Check yourself.
 
-295
-00:10:33,975 --> 00:10:35,428
+274
+00:10:03,774 --> 00:10:05,226
 Why does a grid start with
 
-296
-00:10:35,428 --> 00:10:36,880
+275
+00:10:05,226 --> 00:10:06,679
 some coin as well as cash?
 
-297
-00:10:37,044 --> 00:10:38,329
+276
+00:10:06,842 --> 00:10:08,127
 Because the sell orders
 
-298
-00:10:38,329 --> 00:10:39,837
+277
+00:10:08,127 --> 00:10:09,636
 need coin you already hold.
 
-299
-00:10:40,855 --> 00:10:42,363
+278
+00:10:10,653 --> 00:10:12,162
 In the example pair, why is
 
-300
-00:10:42,363 --> 00:10:44,039
+279
+00:10:12,162 --> 00:10:13,838
 the net about eight and a half
 
-301
-00:10:44,039 --> 00:10:45,715
+280
+00:10:13,838 --> 00:10:15,514
 dollars and not the whole gap?
 
-302
-00:10:46,146 --> 00:10:47,710
+281
+00:10:15,944 --> 00:10:17,508
 The two fees come out first.
 
-303
-00:10:48,872 --> 00:10:50,983
-If a daily close is outside the band,
+282
+00:10:18,671 --> 00:10:20,738
+Price closes above your top line, and
 
-304
-00:10:50,983 --> 00:10:53,167
-through the top or the bottom, and the
+283
+00:10:20,738 --> 00:10:22,917
+the next day's close is still above it.
 
-305
-00:10:53,167 --> 00:10:55,350
-next close is still outside, you stop
+284
+00:10:23,224 --> 00:10:25,012
+What do you do, and who does it?
 
-306
-00:10:55,350 --> 00:10:57,461
-the bot and follow the written rule.
+285
+00:10:25,332 --> 00:10:27,120
+You stop the bot and follow your
 
-307
-00:10:58,699 --> 00:10:59,449
+286
+00:10:27,120 --> 00:10:28,964
+written rule, by hand, unless you
+
+287
+00:10:28,964 --> 00:10:30,807
+turned on the bot's stop setting.
+
+288
+00:10:31,864 --> 00:10:32,614
 Your turn.
 
-308
-00:10:59,895 --> 00:11:01,627
+289
+00:10:33,060 --> 00:10:34,792
 On paper, write the top and the
 
-309
-00:11:01,627 --> 00:11:03,582
+290
+00:10:34,792 --> 00:10:36,748
 bottom, one gap, and the stop rule.
 
-310
-00:11:04,686 --> 00:11:06,417
+291
+00:10:37,851 --> 00:10:39,583
 Say what you will do if a daily
 
-311
-00:11:06,417 --> 00:11:08,037
+292
+00:10:39,583 --> 00:10:41,203
 close leaves the band and the
 
-312
-00:11:08,037 --> 00:11:09,602
+293
+00:10:41,203 --> 00:10:42,767
 next close is still outside.
 
-313
-00:11:09,933 --> 00:11:11,162
-You stop the bot, then
+294
+00:10:43,098 --> 00:10:44,495
+Pause the video and write
 
-314
-00:11:11,162 --> 00:11:12,335
-you follow that rule.
+295
+00:10:44,495 --> 00:10:46,115
+your answer before you go on.
 
-315
-00:11:13,345 --> 00:11:15,412
+296
+00:10:47,148 --> 00:10:49,215
 No real order is sent in this lesson.
 
-316
-00:11:15,899 --> 00:11:17,802
+297
+00:10:49,702 --> 00:10:51,605
 Paper practice comes in Lesson
 
-317
-00:11:17,802 --> 00:11:19,413
+298
+00:10:51,605 --> 00:10:53,215
 7, and real money only after
 
-318
-00:11:19,413 --> 00:11:21,242
+299
+00:10:53,215 --> 00:10:55,045
 your written graduation rule.
 
-319
-00:11:22,442 --> 00:11:24,342
-No order is sent from this lesson.
+300
+00:10:55,565 --> 00:10:57,572
+A graduation rule is the written
 
-320
-00:11:24,673 --> 00:11:25,682
-You draw the idea.
+301
+00:10:57,572 --> 00:10:59,281
+test you pass on paper first.
 
-321
-00:11:26,202 --> 00:11:27,996
-If a screen appears later, it
-
-322
-00:11:27,996 --> 00:11:29,711
-should be a copy of the page,
-
-323
-00:11:29,711 --> 00:11:31,271
-and only on paper or demo.
-
-324
-00:11:32,471 --> 00:11:34,304
-A grid bot places waiting buys
-
-325
-00:11:34,304 --> 00:11:36,357
-below the price and waiting sells
-
-326
-00:11:36,357 --> 00:11:38,337
-above it, inside a band you choose.
-
-327
-00:11:39,537 --> 00:11:40,654
-A finished pair buys
-
-328
-00:11:40,654 --> 00:11:41,939
-lower and sells higher.
-
-329
-00:11:42,146 --> 00:11:43,766
-The fees come out of the gap.
-
-330
-00:11:44,055 --> 00:11:46,234
-In the example that was about eight and
-
-331
-00:11:46,234 --> 00:11:48,469
-a half dollars, and it is not a promise.
-
-332
-00:11:49,321 --> 00:11:50,717
-Leave through the top and
-
-333
-00:11:50,717 --> 00:11:51,891
-you hold mostly cash.
-
-334
-00:11:52,340 --> 00:11:53,681
-Leave through the bottom
-
-335
-00:11:53,681 --> 00:11:55,077
-and you hold mostly coin.
-
-336
-00:11:56,118 --> 00:11:58,356
-If a daily close leaves the band and the
-
-337
-00:11:58,356 --> 00:12:00,454
-next close is still outside, you stop
-
-338
-00:12:00,454 --> 00:12:02,577
-the bot and follow the rule you wrote.
-
-339
-00:12:03,751 --> 00:12:06,112
+302
+00:11:00,481 --> 00:11:02,842
 Bring a notebook, and no secrets: no
 
-340
-00:12:06,112 --> 00:12:08,726
+303
+00:11:02,842 --> 00:11:05,456
 seed phrase, private key or API secret.
 
-341
-00:12:09,246 --> 00:12:11,103
+304
+00:11:05,976 --> 00:11:07,833
 Those are the words or keys that
 
-342
-00:12:11,103 --> 00:12:12,817
+305
+00:11:07,833 --> 00:11:09,547
 unlock a wallet or an account.
 
-343
-00:12:13,867 --> 00:12:15,560
+306
+00:11:10,597 --> 00:11:12,290
 The pair, in the next lesson,
 
-344
-00:12:15,560 --> 00:12:17,175
+307
+00:11:12,290 --> 00:11:13,905
 is the two things you swap,
 
-345
-00:12:17,175 --> 00:12:18,944
+308
+00:11:13,905 --> 00:11:15,674
 like bitcoin and US dollars.
 
-346
-00:12:19,994 --> 00:12:22,229
+309
+00:11:16,724 --> 00:11:18,557
+A grid bot places waiting buys
+
+310
+00:11:18,557 --> 00:11:20,610
+below the price and waiting sells
+
+311
+00:11:20,610 --> 00:11:22,590
+above it, inside a band you choose.
+
+312
+00:11:23,790 --> 00:11:24,907
+A finished pair buys
+
+313
+00:11:24,907 --> 00:11:26,192
+lower and sells higher.
+
+314
+00:11:26,399 --> 00:11:28,019
+The fees come out of the gap.
+
+315
+00:11:28,308 --> 00:11:30,487
+In the example that was about eight and
+
+316
+00:11:30,487 --> 00:11:32,722
+a half dollars, and it is not a promise.
+
+317
+00:11:33,574 --> 00:11:34,971
+Leave through the top and
+
+318
+00:11:34,971 --> 00:11:36,144
+you hold mostly cash.
+
+319
+00:11:36,593 --> 00:11:37,934
+Leave through the bottom
+
+320
+00:11:37,934 --> 00:11:39,330
+and you hold mostly coin.
+
+321
+00:11:40,372 --> 00:11:42,609
+If a daily close leaves the band and the
+
+322
+00:11:42,609 --> 00:11:44,707
+next close is still outside, you stop
+
+323
+00:11:44,707 --> 00:11:46,830
+the bot and follow the rule you wrote.
+
+324
+00:11:48,004 --> 00:11:50,239
 Next lesson: What you are going to need.
 
-347
-00:12:22,617 --> 00:12:24,182
+325
+00:11:50,628 --> 00:11:52,192
 Bring your notes: your band,
 
-348
-00:12:24,182 --> 00:12:25,802
+326
+00:11:52,192 --> 00:11:53,812
 your gaps and your stop rule.
 
-349
-00:12:26,075 --> 00:12:27,432
+327
+00:11:54,085 --> 00:11:55,443
 Keep the word Example on
 
-350
-00:12:27,432 --> 00:12:28,722
+328
+00:11:55,443 --> 00:11:56,733
 every practice figure.
 
-351
-00:12:29,242 --> 00:12:31,197
+329
+00:11:57,253 --> 00:11:59,208
 Next lesson you will write the page
 
-352
-00:12:31,197 --> 00:12:33,209
+330
+00:11:59,208 --> 00:12:01,219
 of what you need, before any screen.
 

@@ -892,10 +892,17 @@ def _stroke(base: Image.Image, points: list[tuple[float, float]], color: tuple[i
     _blend(base, overlay)
 
 
-def _example(draw: ImageDraw.ImageDraw, x: int = 1640, y: int = 196) -> None:
+def _example(draw: ImageDraw.ImageDraw, x: int = 1500, y: int = 196) -> None:
     face = font(36)
     label = "EXAMPLE"
     tw = int(face.getlength(label)) + 36
+    # The 5% side margin starts at 96px. Keep the chip inside it.
+    safe_left = int(W * 0.05) + 12
+    safe_right = int(W * 0.95) - 12
+    if x + tw > safe_right:
+        x = safe_right - tw
+    if x < safe_left:
+        x = safe_left
     draw.rounded_rectangle([x, y, x + tw, y + 44], 22, fill=TAG, outline=CYAN, width=2)
     draw.text((x + 18, y + 2), label, font=face, fill=WHITE)
 
@@ -1495,11 +1502,13 @@ def paint_stack(base: Image.Image, shot: dict, local: float) -> None:
     named = shot.get("screen_lines") or []
     if named:
         y = 210
+        # Inset past the 5% margin. The number chip was reading at x=92.
+        left = MX + 28
         for number, name in named:
-            draw.rounded_rectangle([MX, y, MX + 72, y + 64], 12, fill=TAG, outline=CYAN, width=2)
-            num_x = MX + 22 if len(str(number)) == 1 else MX + 8
+            draw.rounded_rectangle([left, y, left + 72, y + 64], 12, fill=TAG, outline=CYAN, width=2)
+            num_x = left + 22 if len(str(number)) == 1 else left + 8
             draw.text((num_x, y + 12), str(number), font=font(36), fill=CYAN)
-            draw.text((MX + 96, y + 10), name, font=font(40), fill=CYAN)
+            draw.text((left + 96, y + 10), name, font=font(40), fill=CYAN)
             y += 88
         return
     items = shot.get("items") or [shot.get("caption") or ""]
@@ -2061,7 +2070,7 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
         draw.text((box[0] + 48, box[1] + 250), f"{close:,}", font=font(72), fill=CYAN)
         draw.text((box[0] + 48, box[1] + 360), "The last price of that day. Marked Example.", font=font(36), fill=WHITE)
         return
-    if local < 18:
+    if local < 14:
         box = (MX, 220, RIGHT, 760)
         draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
         draw.text((box[0] + 48, box[1] + 48), "When the day is cut", font=font(40), fill=CYAN)
@@ -2070,7 +2079,7 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
         draw.text((box[0] + 48, box[1] + 340), "10am AEST", font=font(64), fill=WHITE)
         draw.text((box[0] + 48, box[1] + 430), "outside daylight saving", font=font(36), fill=WHITE)
         return
-    # From 18s: the voice is on the labelled high, low and close.
+    # From 14s: the voice reaches "a simple candle" and the high, low and close.
     box = (MX, 190, RIGHT, 760)
     draw.rounded_rectangle(box, 22, fill=GLASS, outline=LINE, width=2)
     candle = shot.get("candle") or {}
@@ -2107,8 +2116,8 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
     )
     for y, label, dx in labels:
         draw.text((cx + dx, y - 18), label, font=font(36), fill=WHITE)
-    # The labelled card starts at 18s. A second beat at 36.5s keeps that hold under 20s.
-    if local >= 36.5:
+    # The labelled card starts at 14s. A second beat at 33s keeps that hold under 20s.
+    if local >= 33:
         tag = "High, low and close"
         face = font(32)
         tw = int(face.getlength(tag)) + 36
@@ -2145,11 +2154,12 @@ def paint_course_map(base: Image.Image, shot: dict, local: float) -> None:
         slide = 2
     shown = steps[:6] if slide == 1 else steps[6:]
     y = 210
+    left = MX + 28
     for number, name in shown:
-        draw.rounded_rectangle([MX, y, MX + 72, y + 64], 12, fill=TAG, outline=CYAN, width=2)
-        num_x = MX + 22 if len(number) == 1 else MX + 8
+        draw.rounded_rectangle([left, y, left + 72, y + 64], 12, fill=TAG, outline=CYAN, width=2)
+        num_x = left + 22 if len(number) == 1 else left + 8
         draw.text((num_x, y + 12), number, font=font(36), fill=CYAN)
-        draw.text((MX + 96, y + 10), name, font=font(40), fill=CYAN)
+        draw.text((left + 96, y + 10), name, font=font(40), fill=CYAN)
         y += 88
 
 
@@ -2564,6 +2574,10 @@ def _narrate_shot(speaker, shot: dict) -> tuple[np.ndarray, int, list]:
         and (shot.get("chapter") or "") == "When price leaves the band"
     ):
         tail += 1.0
+    if shot.get("lesson_id") == "bp-01-introduction" and (shot.get("chapter") or "") == "One pair":
+        tail += 6.0
+    if shot.get("visual") == "BP01-V06":
+        tail += 4.0
     if tail > 0:
         buf = _xfade(buf, np.zeros(int(tail * sr), dtype=np.float32), sr)
     shot["sentence_spans"] = spans
