@@ -1,5 +1,9 @@
 # Changes, 16 November 2026
 
+## v9 non-wording fixes, not rendered
+
+The spoken lines are unchanged. `clip_vo` no longer shortens a shot that has no visual key. Shots it would have cut are listed in `course/blueprint-rebuild/CLIP_LOG.md`. Lesson stills no longer speak the JSON script. The candle picture changes at 16s and 32s. The whole-window chart marks the 28 crossings. Captions burn in on the next render, and the sidecar VTT now has line and position cues inside the 5% margin.
+
 ## Approved 16 Nov 2026, 9:14am WITA
 
 Stewart approved all 55 wordings in `course/qa/FLAGS_FOR_STEWART.md` exactly as proposed. The four outcome lines are now the approved rewrites. The disclaimer is External Comms' canonical block, spoken in all 11. The PENDING STEWART markers are removed.

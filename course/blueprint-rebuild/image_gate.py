@@ -27,7 +27,6 @@ BRAND = [
 ]
 ANALOGY = {
     "ladder": "course/images/blueprint-analogies/analogy-ladder.png",
-    "fence": "course/images/blueprint-analogies/analogy-fence.png",
     "list": "course/images/blueprint-analogies/analogy-list.png",
     "buckets": "course/images/blueprint-analogies/analogy-buckets.png",
 }

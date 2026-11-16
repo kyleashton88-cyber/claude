@@ -330,7 +330,7 @@ def bp01() -> list[dict]:
         visual="BP01-V03",
     ))
     s.append(gloss(
-        "How a grid earns",
+        "How a grid can capture bounces",
         "Think of a market stall. The stallholder buys stock a little cheaper and sells it a little dearer, and pays a fee on every sale. A grid can do that while price bounces inside the band. A bounce means price moves down and back up, or up and back down, and stays inside. One buy at a lower line and the later sell of that same coin is one pair. On these daily closes the summer window finished only three one-step pairs. The sell line is higher, so the cash that comes back is more than the cash that left, before the fee. A fee is what the exchange charges when an order fills. The fee comes out of the gap. If the fees are larger than the gap, the pair keeps nothing. This is not a promise. The pair finishes only if price does bounce and both orders fill.",
         "A pair keeps the gap only after fees, and only on a bounce.",
         "Fee",
@@ -412,7 +412,7 @@ def bp01() -> list[dict]:
         "Stop the bot. Then keep what you hold, or swap back, as you wrote.",
     ))
     s.append(gloss(
-        "No result number",
+        "No promise of results",
         "A common mistake is thinking the bot predicts the price. It does not. It only waits. Another mistake is starting with no written stop. There is no promise of results. The pair card is a teaching sum, marked Example.",
         "No promise of results. The bot does not predict the price.",
         "No promise",
@@ -431,6 +431,14 @@ def bp01() -> list[dict]:
         "Steps 1 to 6, each lesson named.",
         "The map",
         "The eleven lessons, ending in scaling under written rules and your complete plan.",
+        screen_lines=(
+            ("1", "Introduction"),
+            ("2", "Checklist"),
+            ("3", "Definition"),
+            ("4", "Market shape"),
+            ("5", "Spacing"),
+            ("6", "Entry and exit"),
+        ),
     ))
     s.append(gloss(
         "The map",
@@ -438,6 +446,13 @@ def bp01() -> list[dict]:
         "Steps 7 to 11, each lesson named.",
         "The map",
         "Paper, weekly checks, mistakes, scaling under written rules, then liquidation and your complete plan.",
+        screen_lines=(
+            ("7", "Paper"),
+            ("8", "Monitoring"),
+            ("9", "Mistakes"),
+            ("10", "Scaling up"),
+            ("11", "Your complete plan"),
+        ),
     ))
     s.append(gloss(
         "The checklist is next",

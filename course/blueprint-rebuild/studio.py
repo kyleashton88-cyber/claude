@@ -66,10 +66,11 @@ WORD_BOX = (260, 52, 760, 176)
 MAX_SHOT = 8.0
 STILLS = {
     "ladder": ROOT / "course/images/blueprint-analogies/analogy-ladder.png",
-    "fence": ROOT / "course/images/blueprint-analogies/analogy-fence.png",
     "list": ROOT / "course/images/blueprint-analogies/analogy-list.png",
     "buckets": ROOT / "course/images/blueprint-analogies/analogy-buckets.png",
 }
+# Seven summer rungs. The whole-window chart marks a crossing on each of these.
+GRID_LEVELS = [24930, 25830, 26730, 27630, 28531, 29431, 30331]
 BANNED = re.compile(
     r"market\s+pros|stewart|crown\s+crypto|consultants|\bABN\b|\bACN\b|\bAFSL\b|"
     r"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}|"
@@ -199,6 +200,23 @@ def guard(text: str) -> None:
         raise SystemExit(f"banned phrase in lesson text: {BANNED.search(text).group(0)}")
 
 
+def _log_clip(sid: str, shot: dict, original: str, shortened: str, status: str) -> None:
+    """Record a shot the 4-sentence / 80-word cap would have changed."""
+    path = ROOT / "course/blueprint-rebuild/CLIP_LOG.md"
+    chapter = str(shot.get("chapter") or shot.get("kind") or "shot").replace("\n", " ")
+    row = (
+        f"- {sid} / {chapter} / {status}: {len(original.split())} words"
+        f" (the old cap would have left {len(shortened.split())}).\n"
+    )
+    text = path.read_text(encoding="utf-8") if path.is_file() else "# Shots the old clip still notices\n\n"
+    if row in text:
+        return
+    marker = f"# {sid}\n"
+    if marker not in text:
+        text = text.rstrip() + f"\n\n{marker}"
+    path.write_text(text + row, encoding="utf-8")
+
+
 def clip_vo(vo: str, sentences: int, words: int) -> str:
     parts = re.split(r"(?<=[.!?])\s+", vo.strip())
     keep: list[str] = []
@@ -304,7 +322,10 @@ def key_stops(run: list[dict]) -> list[dict]:
     picked = []
     for i in idxs:
         shot = dict(run[i])
-        shot["vo"] = clip_vo(shot["vo"], 3, 48)
+        full = shot.get("vo") or ""
+        shot["vo"] = clip_vo(full, 3, 48)
+        if shot["vo"] != full:
+            _log_clip("chart-run", shot, full, shot["vo"], "still-clipped")
         picked.append(shot)
     return [overview] + picked
 
@@ -464,53 +485,50 @@ def _still_shot(beat: dict, line: str) -> dict:
 
 
 def _attach_lesson_stills(sid: str, shots: list[dict]) -> None:
-    """Put each still on the beat it illustrates, with a teaching line, not a picture description.
+    """Hang each still on the shot that already speaks that beat.
 
-    Title cards, practice repeats, and the duplicate next-lesson card are not spoken.
-    A code-drawn chart stays a chart. Its still is the next shot.
+    The spoken words come from lesson_scripts.py. The JSON file is a picture
+    list only. It does not add a second line, and it does not get dumped in
+    before the recap.
     """
     path = ROOT / "course/scripts" / f"{sid}.json"
     if not path.is_file():
         return
     beats = json.loads(path.read_text(encoding="utf-8")).get("beats") or []
-    pending: list[tuple[dict, str]] = []
+    # 011 is the code-drawn leave diagram, not the still. 003 and 010 are the old title and map.
+    retired = ("/003.png", "/010.png", "/011.png", "/013.png", "/015.png")
+    used: set[int] = set()
     for beat in beats:
-        if not beat.get("image"):
+        image = str(beat.get("image") or "").replace("\\", "/")
+        if not image or image.endswith(retired):
             continue
-        line = _beat_teaching(beat)
-        if line:
-            pending.append((beat, line))
-    used: set[str] = set()
-    i = 0
-    while i < len(shots):
-        chapter = str(shots[i].get("chapter") or "").strip().lower()
-        kind = shots[i].get("kind")
-        if kind in {"brand", "disclaimer", "outro"} or not chapter:
-            i += 1
+        role = (beat.get("role") or "").lower()
+        if role in {"legal", "intro"}:
             continue
-        match = next(
-            (
-                pair for pair in pending
-                if pair[0]["image"] not in used
-                and str(pair[0].get("chapter") or "").strip().lower() == chapter
-            ),
-            None,
-        )
-        if match is None:
-            i += 1
+        target = None
+        if image.endswith("/009.png"):
+            target = next((s for s in shots if "No real order is sent" in (s.get("vo") or "")), None)
+        elif image.endswith("/012.png"):
+            target = next((s for s in shots if "no promise of results" in (s.get("vo") or "").lower()), None)
+        else:
+            chapter = str(beat.get("chapter") or "").strip().lower()
+            aliases = {chapter}
+            if chapter == "no result number":
+                aliases.add("no promise of results")
+            for index, shot in enumerate(shots):
+                if index in used:
+                    continue
+                if shot.get("kind") in {"brand", "disclaimer", "outro", "chart"}:
+                    continue
+                if shot.get("candle"):
+                    continue
+                if str(shot.get("chapter") or "").strip().lower() in aliases:
+                    target = shot
+                    used.add(index)
+                    break
+        if target is None or target.get("kind") == "chart" or target.get("candle"):
             continue
-        beat, line = match
-        used.add(beat["image"])
-        shots.insert(i + 1, _still_shot(beat, line))
-        i += 2
-    rest = [_still_shot(beat, line) for beat, line in pending if beat["image"] not in used]
-    if not rest:
-        return
-    at = next(
-        (i for i, shot in enumerate(shots) if str(shot.get("chapter") or "").strip().lower() == "recap"),
-        next((i for i, shot in enumerate(shots) if shot.get("kind") == "outro"), len(shots)),
-    )
-    shots[at:at] = rest
+        target["lesson_still"] = str((ROOT / image).resolve())
 
 
 def plan(sid: str) -> list[dict]:
@@ -574,8 +592,15 @@ def plan(sid: str) -> list[dict]:
         nxt = dict(shot)
         if nxt.get("kind") == "analogy":
             nxt["still"] = str(STILLS[nxt.get("analogy") or "ladder"])
+        # clip_vo used to shorten any shot without a visual key. That cut the
+        # ladder, the promise line and both map shots, and the still block then
+        # spoke the map again. The written line is what plays. A shot that is
+        # still over the old cap is logged, not trimmed.
         if not nxt.get("visual"):
-            nxt["vo"] = clip_vo(nxt["vo"], 4, 80)
+            kept = nxt.get("vo") or ""
+            shortened = clip_vo(kept, 4, 80)
+            if shortened != kept:
+                _log_clip(sid, nxt, kept, shortened, "kept")
         shots.append(nxt)
         i += 1
     _attach_lesson_stills(sid, shots)
@@ -1038,6 +1063,35 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
             )
             draw.text((bracket + 24, mid - 20), note, font=face_gap, fill=WHITE)
 
+    if chapter == "The whole window":
+        marks = []
+        for index in range(1, n):
+            earlier, later = closes[index - 1], closes[index]
+            if later == earlier:
+                continue
+            for level in GRID_LEVELS:
+                crossed = (earlier < level <= later) or (later < level <= earlier)
+                if not crossed:
+                    continue
+                share = (level - earlier) / (later - earlier)
+                x = full[index - 1][0] + (full[index][0] - full[index - 1][0]) * share
+                y = _map(0, n, level, lo_p, hi_p, plot)[1]
+                marks.append((x, y))
+        for level in GRID_LEVELS:
+            yy = _map(0, n, level, lo_p, hi_p, plot)[1]
+            x = plot[0]
+            while x < plot[2]:
+                draw.line([(x, yy), (min(x + 8, plot[2]), yy)], fill=MUTED, width=2)
+                x += 18
+        for x, y in marks:
+            draw.ellipse((x - 7, y - 7, x + 7, y + 7), outline=WHITE, width=3)
+            draw.ellipse((x - 3, y - 3, x + 3, y + 3), fill=CYAN)
+        note = f"{len(marks)} crossings"
+        face_n = font(36)
+        tw = int(face_n.getlength(note)) + 28
+        draw.rounded_rectangle([plot[0], plot[1] + 8, plot[0] + tw, plot[1] + 56], 10, fill=TAG, outline=CYAN, width=2)
+        draw.text((plot[0] + 14, plot[1] + 12), note, font=face_n, fill=WHITE)
+
     if chapter == "Limit orders wait" or "waiting" in idea.lower():
         y_line = _map(0, n, 27630, lo_p, hi_p, plot)[1]
         if chapter == "Hook":
@@ -1196,7 +1250,7 @@ def _hero(
             "Paper or demo",
             secrets_line or "No secrets: no seed phrase, private key or API secret",
             "A written stop",
-            "Leave every figure marked EXAMPLE",
+            "Keep the word Example on every practice figure",
         ]
         y = y0 + 24
         for row in rows:
@@ -1438,6 +1492,16 @@ def paint_board(base: Image.Image, shot: dict) -> None:
 
 def paint_stack(base: Image.Image, shot: dict, local: float) -> None:
     draw = ImageDraw.Draw(base)
+    named = shot.get("screen_lines") or []
+    if named:
+        y = 210
+        for number, name in named:
+            draw.rounded_rectangle([MX, y, MX + 72, y + 64], 12, fill=TAG, outline=CYAN, width=2)
+            num_x = MX + 22 if len(str(number)) == 1 else MX + 8
+            draw.text((num_x, y + 12), str(number), font=font(36), fill=CYAN)
+            draw.text((MX + 96, y + 10), name, font=font(40), fill=CYAN)
+            y += 88
+        return
     items = shot.get("items") or [shot.get("caption") or ""]
     index = int(shot.get("index") or 0)
     text = items[min(index, len(items) - 1)]
@@ -1981,9 +2045,28 @@ def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) 
         d.text((x + 24, y + 28), "NO PROMISE OF RESULTS", font=font(40), fill=WHITE)
 
 
-def paint_candle(base: Image.Image, shot: dict) -> None:
-    """One day, large enough to see the high, the low, and the close."""
+def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
+    """One day. The picture changes before a hold can pass 20 seconds."""
     draw = ImageDraw.Draw(base)
+    if local >= 32:
+        box = (MX, 220, RIGHT, 760)
+        draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
+        draw.text((box[0] + 48, box[1] + 48), "When the day is cut", font=font(40), fill=CYAN)
+        draw.text((box[0] + 48, box[1] + 140), "11am AEDT", font=font(64), fill=WHITE)
+        draw.text((box[0] + 48, box[1] + 230), "while daylight saving is in force", font=font(36), fill=WHITE)
+        draw.text((box[0] + 48, box[1] + 340), "10am AEST", font=font(64), fill=WHITE)
+        draw.text((box[0] + 48, box[1] + 430), "outside daylight saving", font=font(36), fill=WHITE)
+        return
+    if local >= 16:
+        box = (MX, 220, RIGHT, 760)
+        draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
+        candle = shot.get("candle") or {}
+        close = int(candle.get("close") or 0)
+        draw.text((box[0] + 48, box[1] + 48), candle.get("date") or "One day", font=font(36), fill=CYAN)
+        draw.text((box[0] + 48, box[1] + 160), "The daily close", font=font(40), fill=WHITE)
+        draw.text((box[0] + 48, box[1] + 250), f"{close:,}", font=font(72), fill=CYAN)
+        draw.text((box[0] + 48, box[1] + 360), "The last price of that day. Marked Example.", font=font(36), fill=WHITE)
+        return
     box = (MX, 190, RIGHT, 760)
     draw.rounded_rectangle(box, 22, fill=GLASS, outline=LINE, width=2)
     candle = shot.get("candle") or {}
@@ -2057,6 +2140,41 @@ def paint_course_map(base: Image.Image, shot: dict, local: float) -> None:
         y += 88
 
 
+def _burn_caption(frame: np.ndarray, shot: dict, local: float) -> np.ndarray:
+    """Draw the current caption inside the 5% margin. The sidecar uses the same cue."""
+    words = shot.get("word_times") or []
+    if not words:
+        return frame
+
+    class _Word:
+        def __init__(self, text, start, end):
+            self.text = text
+            self.start = start
+            self.end = end
+
+    timed = [_Word(text, start, end) for text, start, end in words]
+    line = ""
+    for sentence in _caption_sentences(timed):
+        for group in _balanced_caption_lines(sentence, 42):
+            if group[0].start - 0.05 <= local <= group[-1].end + 0.15:
+                line = " ".join(word.text for word in group)
+    if not line:
+        return frame
+    image = Image.fromarray(frame)
+    draw = ImageDraw.Draw(image)
+    face = font(32)
+    width = int(face.getlength(line))
+    max_w = W - 2 * MX
+    if width > max_w:
+        face = font(28)
+        width = int(face.getlength(line))
+    x = max(MX, (W - width) // 2)
+    y = 700
+    draw.rounded_rectangle([x - 16, y - 8, x + width + 16, y + 44], 10, fill=NAVY, outline=CYAN, width=2)
+    draw.text((x, y), line, font=face, fill=WHITE)
+    return np.asarray(image, dtype=np.uint8)
+
+
 def paint(shot: dict, local: float, progress: float) -> np.ndarray:
     dur = float(shot.get("duration") or estimate(shot))
     img = background(local)
@@ -2068,10 +2186,23 @@ def paint(shot: dict, local: float, progress: float) -> np.ndarray:
         paint_disclaimer(img, shot, local)
     elif kind == "outro":
         paint_outro(img, shot, local)
-    elif shot.get("visual"):
+    elif shot.get("visual") and not (shot.get("lesson_still") and local >= 16):
         import motions
         title_bar(img, shot, progress)
         motions.paint_visual(img, shot, local, sys.modules[__name__])
+        lower_third(ImageDraw.Draw(img), shot)
+        draw_footer(ImageDraw.Draw(img))
+    elif shot.get("lesson_still") and kind not in {"chart"} and not shot.get("candle"):
+        title_bar(img, shot, progress)
+        paint_lesson_still(img, shot, local, dur)
+        lower_third(ImageDraw.Draw(img), shot)
+        draw_footer(ImageDraw.Draw(img))
+    elif (
+        shot.get("lesson_id") == "bp-01-introduction"
+        and (shot.get("chapter") or "") == "When price leaves the band"
+    ):
+        title_bar(img, shot, progress)
+        paint_leave(img, shot, local)
         lower_third(ImageDraw.Draw(img), shot)
         draw_footer(ImageDraw.Draw(img))
     elif kind == "stack":
@@ -2121,7 +2252,7 @@ def paint(shot: dict, local: float, progress: float) -> np.ndarray:
         if shot.get("board") in {"seven-lines", "no-secrets", "three-words"}:
             paint_board(img, shot)
         elif shot.get("candle"):
-            paint_candle(img, shot)
+            paint_candle(img, shot, local)
         else:
             chart_card(img, shot, local, dur)
         lower_third(ImageDraw.Draw(img), shot)
@@ -2545,7 +2676,9 @@ def _write_lesson_captions(vtt: Path, srt: Path, words: list) -> None:
     vtt_lines = ["WEBVTT", ""]
     srt_lines = []
     for index, (start, end, lines) in enumerate(cues, start=1):
-        vtt_lines.append(f"{_stamp(start)} --> {_stamp(end)}")
+        vtt_lines.append(
+            f"{_stamp(start)} --> {_stamp(end)} line:78% position:50% align:center size:90%"
+        )
         vtt_lines.extend(lines)
         vtt_lines.append("")
         srt_lines.append(str(index))
@@ -2747,6 +2880,7 @@ def render(
             local = n / FPS
             # A hard cut. Blending the previous frame left its words on top of the new card.
             frame = paint(shot, local, lesson_t / clock)
+            frame = _burn_caption(frame, shot, local)
             proc.stdin.write(frame.tobytes())
             lesson_t += 1 / FPS
             drawn += 1

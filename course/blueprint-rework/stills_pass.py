@@ -15,7 +15,6 @@ sys.path.insert(0, str(ROOT / "course/skills"))
 
 STILLS = {
     "ladder": ROOT / "course/images/blueprint-analogies/analogy-ladder.png",
-    "fence": ROOT / "course/images/blueprint-analogies/analogy-fence.png",
     "list": ROOT / "course/images/blueprint-analogies/analogy-list.png",
     "buckets": ROOT / "course/images/blueprint-analogies/analogy-buckets.png",
 }
