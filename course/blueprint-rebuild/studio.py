@@ -1136,18 +1136,30 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
             # October L4 cluster were reading as one ring. Push those apart, and
             # keep the 16 Oct rise inside the plot. The count stays 28.
             placed: list[tuple[float, float]] = []
+            # Keep every ring inside the plot, including the first one, and
+            # stack a same-day pair far enough apart that the outlines do not merge.
             for x, y in marks:
-                x = min(max(x, plot[0] + 18), plot[2] - 22)
+                x = min(max(x, plot[0] + 36), plot[2] - 48)
                 shift = 0
-                step = 28
-                while any(abs(x - px) < 26 and abs(y + shift - py) < 22 for px, py in placed):
+                step = 44
+                while any(abs(x - px) < 36 and abs(y + shift - py) < 40 for px, py in placed):
                     shift = step if shift == 0 else (-abs(shift) - step if shift > 0 else abs(shift) + step)
-                    if abs(shift) > 84:
+                    if abs(shift) > 200:
                         break
-                placed.append((x, y + shift))
-            for x, y in placed:
-                draw.ellipse((x - 8, y - 8, x + 8, y + 8), outline=WHITE, width=3)
-                draw.ellipse((x - 4, y - 4, x + 4, y + 4), fill=CYAN)
+                y = min(max(y + shift, plot[1] + 28), plot[3] - 28)
+                nudge = 0
+                while any(abs(x + nudge - px) < 36 and abs(y - py) < 40 for px, py in placed):
+                    nudge = 20 if nudge == 0 else (-abs(nudge) - 20 if nudge > 0 else abs(nudge) + 20)
+                    if abs(nudge) > 80:
+                        break
+                x = min(max(x + nudge, plot[0] + 36), plot[2] - 48)
+                placed.append((x, y))
+            face_i = font(22)
+            for index, (x, y) in enumerate(placed, start=1):
+                draw.ellipse((x - 11, y - 11, x + 11, y + 11), outline=WHITE, width=3)
+                draw.ellipse((x - 5, y - 5, x + 5, y + 5), fill=CYAN)
+                label = str(index)
+                draw.text((x + 14, y - 12), label, font=face_i, fill=WHITE)
             note = f"{len(marks)} crossings"
             face_n = font(36)
             tw = int(face_n.getlength(note)) + 28
@@ -2041,7 +2053,15 @@ def paint_outro(base: Image.Image, shot: dict, local: float) -> None:
         chip_dx=-40 if mode == "orders" else 0,
         secrets_line=secrets_line,
     )
-    place_mascot(base, shot, (96, 560, 560, 960))
+    place_mascot(base, shot, (96, 500, 420, 760))
+    if shot.get("lesson_id") == "bp-01-introduction":
+        card = (MX, 780, 1100, 960)
+        draw.rounded_rectangle(card, 16, fill=GLASS, outline=CYAN, width=2)
+        y = card[1] + 12
+        for line in DISCLAIMER_LINES:
+            for wrapped in wrap(line, 22, card[2] - card[0] - 40, "reg")[:2]:
+                draw.text((card[0] + 16, y), wrapped, font=font(22, "reg"), fill=WHITE)
+                y += 28
     foot = font(36, "reg")
     fw = foot.getlength(FOOT)
     draw.text(((W - fw) / 2, 980), FOOT, font=foot, fill=MUTED)
@@ -2148,11 +2168,11 @@ def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
         fall = 1.0 if local > 0.8 else 0.0
     if fall > 0:
         climb = 0.0
-    sells = (370, 430, 490)
-    buys = (570, 630, 690)
-    mid = 530
-    escape_top = 292
-    escape_bot = 716
+    sells = (300, 350, 400)
+    buys = (470, 520, 570)
+    mid = 435
+    escape_top = 250
+    escape_bot = 620
     if fall > 0:
         # A second picture: price starts in the middle, then leaves below the buys.
         price_y = mid + (escape_bot - mid) * fall
@@ -2219,11 +2239,12 @@ def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
     right_out = fall > 0 and price_y > buys[-1]
     face_fail = font(28)
     if left_out:
-        draw.text((line_x0, 206), "Price left the band:", font=face_fail, fill=AMBER)
-        draw.text((line_x0, 238), "all cash, nothing left to sell", font=face_fail, fill=AMBER)
+        draw.text((line_x0, 210), "all cash, nothing left to sell", font=face_fail, fill=WHITE)
     if right_out:
-        draw.text((line_x0, buys[-1] + 8), "all coin, nothing left to buy", font=face_fail, fill=AMBER)
+        # Keep this above the burned caption, which starts at y=764.
+        draw.text((line_x0, 640), "all coin, nothing left to buy", font=face_fail, fill=WHITE)
     dot_x = (line_x0 + line_x1) // 2
+    price_y = min(max(price_y, 240), 630)
     draw.ellipse([dot_x - 14, price_y - 14, dot_x + 14, price_y + 14], fill=CYAN)
     side = (1360, 220, RIGHT, 750)
     draw.rounded_rectangle(side, 22, fill=GLASS, outline=CYAN, width=3)
@@ -2266,6 +2287,14 @@ def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) 
     y = box[1] + (ph - view_h) // 2
     base.paste(crop, (x, y))
     still = str(shot.get("lesson_still") or "").replace("\\", "/")
+    if still.endswith("bp-01-introduction/001.png"):
+        # The still says GOES. The voice says moves. Cover only that word.
+        d = ImageDraw.Draw(base)
+        gx = x + int(525 * zoom) - pan
+        gy = y + int(88 * zoom)
+        gw, gh = int(200 * zoom), int(62 * zoom)
+        d.rectangle([gx - 6, gy - 4, gx + gw, gy + gh], fill=NAVY)
+        d.text((gx, gy), "MOVES", font=font(max(28, int(48 * zoom))), fill=WHITE)
     if still.endswith("bp-01-introduction/007.png"):
         d = ImageDraw.Draw(base)
         samples = []
@@ -2316,6 +2345,14 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
     # Shot starts at 05:19.5. "Last price of the day" is 0–2.5s, the 11am
     # line is 6.6–17.1s, and "high, low and close" starts at 17.6s.
     # Each card is on screen within 2s of its line, and no hold reaches 20s.
+    def heard(word: str) -> bool:
+        at = _word_at(shot, word)
+        if at is None:
+            return local >= 14
+        return local >= at
+
+    named = bool(shot.get("word_times"))
+    show_candle = heard("high") if named else local >= 14
     if local < 4.5:
         box = (MX, 220, RIGHT, 760)
         draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
@@ -2326,7 +2363,7 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
         draw.text((box[0] + 48, box[1] + 250), f"{close:,}", font=font(72), fill=CYAN)
         draw.text((box[0] + 48, box[1] + 360), "The last price of that day. Marked Example.", font=font(36), fill=WHITE)
         return
-    if local < 14:
+    if not show_candle:
         box = (MX, 220, RIGHT, 760)
         draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
         draw.text((box[0] + 48, box[1] + 48), "When the day is cut", font=font(40), fill=CYAN)
@@ -2371,6 +2408,9 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
         (y_low, f"Low {low:,}", -280),
     )
     for y, label, dx in labels:
+        key = label.split()[0].lower()
+        if named and not heard(key):
+            continue
         # Captions start at y=764. Keep every price label above that band.
         label_y = min(y - 18, 700)
         draw.text((cx + dx, label_y), label, font=font(36), fill=WHITE)

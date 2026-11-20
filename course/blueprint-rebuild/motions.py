@@ -61,12 +61,12 @@ SPECS: dict[str, dict] = {
         "title": "EXAMPLE, made up",
         "rows": [
             "EXAMPLE, made up. Not a real fill.",
-            "EXAMPLE. 0.01 BTC at 27,630",
-            "EXAMPLE. 0.01 BTC at 26,730",
-            "EXAMPLE. 0.01 BTC at 25,830",
-            "EXAMPLE. Cost US$801.90",
+            "EXAMPLE. 0.01 BTC at 27,630 = US$276.30",
+            "EXAMPLE. 0.01 BTC at 26,730 = US$267.30",
+            "EXAMPLE. 0.01 BTC at 25,830 = US$258.30",
+            "EXAMPLE. Together US$801.90",
             "EXAMPLE. Made-up price 24,000: worth US$720",
-            "EXAMPLE. Down about US$80 before fees.",
+            "EXAMPLE. Down US$81.90 before fees.",
         ],
     },
     "BP02-V01": {
@@ -424,18 +424,36 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
     rows = list(spec["rows"])
     spans = list(shot.get("sentence_spans") or [])
     shown = len(rows)
+    paced = shot.get("lesson_id") == "bp-01-introduction" and (shot.get("chapter") or "") in {
+        "One pair", "Downside",
+    }
     if spans:
         shown = 1
         step = max(1, len(spans) / max(1, len(rows)))
         for index, (start, _end) in enumerate(spans):
             if local >= start:
                 shown = min(len(rows), int(index / step) + 1)
-    ui._example(draw, ui.RIGHT - 220, 188)
-    y = 210
+    if paced:
+        # Do not sit on the first line for more than 8s. Speech can reveal a line sooner.
+        shown = max(shown, min(len(rows), 1 + int(local / 8)))
+    ui._example(draw, ui.RIGHT - 280, 168)
+    y = 220
+    step = 72 if len(rows) > 6 else 86
+    row_h = 62 if len(rows) > 6 else 74
+    accent = int(local // 8) % max(1, shown) if paced else -1
     for index, text in enumerate(rows[:shown]):
-        draw.rounded_rectangle([ui.MX, y, ui.RIGHT, y + 78], 14, fill=ui.GLASS, outline=ui.CYAN, width=2)
-        size = 36 if ui.font(36).getlength(text) < (ui.W - 2 * ui.MX - 80) else 28
-        draw.text((ui.MX + 28, y + 18), text, font=ui.font(size), fill=ui.WHITE)
-        y += 90
+        outline = ui.WHITE if index == accent else ui.CYAN
+        draw.rounded_rectangle(
+            [ui.MX, y, ui.RIGHT, y + row_h], 14, fill=ui.GLASS, outline=outline, width=4 if index == accent else 2,
+        )
+        size = 32 if ui.font(32).getlength(text) < (ui.W - 2 * ui.MX - 80) else 26
+        draw.text((ui.MX + 28, y + 14), text, font=ui.font(size), fill=ui.WHITE)
+        y += step
         if y > 760:
             break
+    if paced and (shot.get("chapter") or "") == "One pair":
+        bar = [ui.MX + 520, 168, ui.MX + 980, 196]
+        draw.rounded_rectangle(bar, 8, outline=ui.CYAN, width=2)
+        filled = bar[0] + int((bar[2] - bar[0]) * min(1.0, local / 32.0))
+        if filled > bar[0] + 4:
+            draw.rounded_rectangle([bar[0], bar[1], filled, bar[3]], 8, fill=ui.CYAN)

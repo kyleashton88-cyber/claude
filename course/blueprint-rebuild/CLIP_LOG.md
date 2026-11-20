@@ -14,3 +14,5 @@
 - bp-01-introduction / No promise of results / kept: 41 words (the old cap would have left 24).
 - bp-01-introduction / The map / kept: 67 words (the old cap would have left 23).
 - bp-01-introduction / Your turn / kept: 58 words (the old cap would have left 39).
+- bp-01-introduction / Hook / kept: 127 words (the old cap would have left 68).
+- bp-01-introduction / The idea / kept: 95 words (the old cap would have left 69).

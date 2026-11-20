@@ -215,8 +215,8 @@ def bp01() -> list[dict]:
     s = [ident("01", "Introduction")]
     s.append(gloss(
         "Hook",
-        "By the end of this series you will understand what a grid bot does, when it can capture bounces, and where it loses. You will know how to plan one, test it on paper, run it, check it, and change the capital you give to bots only under written risk rules. This is education, not a promise of results. "
-        "Price often moves sideways, bouncing between the same top and bottom instead of leaving. A grid is a ladder of limit orders built for that bouncing. When price runs one way and stays there, the bot has nothing left to do.",
+        "By the end of this series you will understand what a grid bot, a small program that places these orders for you, does, when it can capture bounces, and where it loses. You will know how to plan one, test it on paper, run it, check it, and change the capital you give to bots only under written risk rules. This is education, not a promise of results. "
+        "Price often moves sideways, bouncing between the same top and bottom instead of leaving. A grid is a ladder of waiting orders, called limit orders, built for that bouncing. When price runs one way and stays there, the grid has nothing left to do. And if price falls through the bottom, you're left holding coin that is worth less.",
         "Plan, test, run, check, and change capital only under written rules.",
         "The promise",
         "Education about grids under written rules. Not a promise of results.",
@@ -235,8 +235,8 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "Crypto",
-        "Crypto is digital money, such as bitcoin. You do not need to have bought any before this lesson.",
-        "Crypto is digital money, such as bitcoin.",
+        "Crypto is a digital asset, such as bitcoin. You do not need to have bought any before this lesson.",
+        "Crypto is a digital asset, such as bitcoin.",
         "Crypto",
         "Digital money, such as bitcoin.",
     ))
@@ -249,7 +249,7 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "Cash and coin",
-        "Cash is money you can spend. Here that means dollars, or a coin that is meant to stay near one dollar. Coin is the crypto, such as bitcoin.",
+        "Cash is money you can spend. Here that means dollars, or a dollar-pegged token, treated like cash in this lesson. Coin is the crypto, such as bitcoin.",
         "Cash is money you can spend. Coin is the crypto.",
         "Cash and coin",
         "Cash is money you can spend. Coin is the crypto.",
@@ -263,7 +263,7 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "The idea",
-        "A bot is software that places and refills orders for you. A grid bot places waiting buy orders on lines below the price and sell orders on lines above it, inside a top and a bottom you choose. The space between your top and your bottom is called the band. The sells need some coin, so a grid starts with part cash and part coin, and that is a description, not advice about what to hold.",
+        "A bot is software that places and refills orders for you. You start with some cash and some coin, so there is something to buy with and something to sell. A grid bot places waiting buy orders on lines below the price and sell orders on lines above it, inside a top and a bottom you choose. The space between your top and your bottom is called the band. The sells need some coin, so a grid starts with part cash and part coin, and that is a description, not advice about what to hold.",
         "Buys below, sells above, inside a band you choose.",
         "Band",
         "The top and the bottom you choose. Also called the range.",
@@ -320,7 +320,7 @@ def bp01() -> list[dict]:
         chapter="The levels",
         reveal=1,
         vo=(
-            "Six equal gaps of about 900 dollars sit between the bottom line and the top line. "
+            "Six gaps of about 900 dollars each sit between the bottom line and the top line. "
             "Each gap is about 900 dollars: the top line minus the bottom line, divided by six. It is one step between lines, not the whole band. "
             "Seven lines make those six gaps. The levels are the prices on the rungs where limit orders wait."
         ),
@@ -345,7 +345,7 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "How a grid can capture bounces",
-        "Think of a market stall. The stallholder buys stock a little cheaper and sells it a little dearer, and pays a fee on every sale. A grid can do that while price bounces inside the band. A bounce means price moves down and back up, or up and back down, and stays inside. One buy at a lower line and the later sell of that same coin is one pair. On these daily closes, the summer window finished only three pairs one rung apart. The sell line is higher, so the cash that comes back is more than the cash that left, before the fee. A fee is what the exchange charges when an order fills. The fee comes out of the gap. If the fees are larger than the gap, the pair keeps nothing. This is not a promise. The pair finishes only if price does bounce and both orders fill.",
+        "Think of a market stall. The stallholder buys stock a little cheaper and sells it a little dearer, and pays a fee on every sale. A grid can do that while price bounces inside the band. A bounce means price moves down and back up, or up and back down, and stays inside. One buy at a lower line and the later sell of that same coin is one pair. On these daily closes, the July to October example window finished only three pairs one rung apart. The sell line is higher, so the cash that comes back is more than the cash that left, before the fee. A fee is what the exchange charges when an order fills. The fee comes out of the gap. If the fees are larger than the gap, the pair keeps nothing. This is not a promise. The pair finishes only if price does bounce and both orders fill.",
         "A pair keeps the gap only after fees, and only on a bounce.",
         "Fee",
         "What the exchange charges when an order fills. It comes out of the gap.",
@@ -357,7 +357,7 @@ def bp01() -> list[dict]:
         candle={"high": 30184, "low": 29794, "close": 29914, "date": "19 July 2023"},
         vo=(
             "The daily close is the last price of the day. Crypto trades all day, so the day is cut at a set time. "
-            "The daily close is the end of each UTC day, 11am in Sydney in summer. "
+            "The daily close is the end of each UTC day, 11am Sydney time in daylight saving, 10am otherwise. "
             "This is a simple candle that shows the day's high, low and close. "
             "Traders call it a candle because the full version has a thick body and a thin wick, like a candle. Here we only need the high, the low and the close. "
             "This candle is 19 July 2023. The high, the low, and the close are labelled."
@@ -391,8 +391,8 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "One pair",
-        "In this example a buy waiting at the lower of these two lines was reached on 17 August 2023, and the sell one line above was reached on 29 August 2023. The card shows the gap, then the two fees, then what is left. That is about eight and a half dollars after fees, for one small pair. It happens only if the price comes back up through the sell line. If the price leaves through the bottom, you still hold the coin, and the pair never finishes. This card is not money you made.",
-        "About eight and a half dollars after fees. Not a forecast.",
+        "You can buy part of a coin. Here we buy one hundredth of a bitcoin, 0.01. In this example a buy waiting at the lower of these two lines was reached on 17 August 2023, and the sell one line above was reached on 29 August 2023. The card shows the gap, then the two fees, then what is left. That is about 8 dollars 46 after fees, for one small pair. It happens only if the price comes back up through the sell line. If the price leaves through the bottom, you still hold the coin, and the pair never finishes. This card is not money you made. Past results don't predict future results.",
+        "About 8 dollars 46 after fees. Not a forecast.",
         "Pair",
         "One buy and the later sell of the same coin. The trading pair, bitcoin and dollars, is a different word and comes in the next lesson.",
         visual="BP01-V05",
@@ -406,7 +406,7 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "The stop",
-        "Here is that stop rule on the real path. It triggers if a daily close is outside the band, through the top or the bottom, and the next daily close is still outside. Then the idea is finished. You stop the bot, which cancels the waiting orders, and do what you wrote: keep the coin or swap to cash. A bot's automatic stop is a price that can fire during the day. This course uses the two daily closes, unless your written plan says you turned on a price stop. The stop is your written rule for when you stop the bot. On 23 October 2023 the close finished above the top line, and the next day was still above it.",
+        "Here is that stop rule on the real path. It triggers if a daily close is outside the band, through the top or the bottom, and the next daily close is still outside. Then the idea is finished. You stop the bot, which cancels the waiting orders, and do what you wrote: keep the coin or swap to cash. A bot's automatic stop is a price that can fire during the day. This course uses the two daily closes, unless your written plan says you turned on a price stop. This is a teaching rule, not a recommendation. The stop is your written rule for when you stop the bot. On 23 October 2023 the close finished above the top line, and the next day was still above it.",
         "Two closes outside, top or bottom. Then stop the bot.",
         "Stop",
         "A written rule for what you do if price leaves the band and the next daily close is still outside.",
@@ -421,7 +421,7 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "Downside",
-        "That loss can keep growing until the stop acts. You stop the bot either way, then you follow the written rule. The bot does not decide the stop unless you turned that setting on. EXAMPLE, made up: three buys fill on the way down, and you paid about 800 dollars for that coin. A little below the band it is worth about 720. You are down about 80 dollars before fees, and the loss keeps growing until your stop acts.",
+        "That loss can keep growing until the stop acts. You stop the bot either way, then you follow the written rule. The bot does not decide the stop unless you turned that setting on. EXAMPLE, made up: three buys fill on the way down. One hundredth of a bitcoin at 27,630 is 276 dollars 30. One hundredth at 26,730 is 267 dollars 30. One hundredth at 25,830 is 258 dollars 30. Together that is 801 dollars 90. A little below the band, at a made-up price of 24,000, that coin is worth 720 dollars. You are down 81 dollars 90 before fees, and the loss keeps growing until your stop acts.",
         "EXAMPLE, made up. About 800 down to about 720.",
         "Downside example",
         "A made-up example. Three buys on the way down. Not a real fill.",
@@ -472,7 +472,7 @@ def bp01() -> list[dict]:
     ))
     s += stack("Self-check", [
         "Check yourself. Why does a grid start with some coin as well as cash? Because the sell orders need coin you already hold.",
-        "In the example pair, why is the net about eight and a half dollars and not the whole gap? The two fees come out first.",
+        "In the example pair, why is the net about 8 dollars 46 and not the whole gap? The two fees come out first.",
         "Price closes above your top line, and the next day's close is still above it. What do you do, and who does it? You stop the bot and follow your written rule, by hand, unless you turned on the bot's stop setting.",
     ], "")
     s += stack("Your turn", [
@@ -496,7 +496,7 @@ def bp01() -> list[dict]:
     ))
     s += stack("Recap", [
         "A grid bot places waiting buys below the price and waiting sells above it, inside a band you choose.",
-        "A finished pair buys lower and sells higher. The fees come out of the gap. In the example that was about eight and a half dollars, and it is not a promise.",
+        "A finished pair buys lower and sells higher. The fees come out of the gap. In the example that was about 8 dollars 46, and it is not a promise.",
         "Leave through the top and you hold mostly cash. Leave through the bottom and you hold mostly coin.",
         "If a daily close leaves the band and the next close is still outside, you stop the bot and follow the rule you wrote.",
     ], "")

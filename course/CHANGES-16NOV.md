@@ -4,6 +4,20 @@
 
 Ten pictures Creative Studio failed were rebuilt in navy, cyan and white. `001.png` and the end card were left as scored. BP-02 is not rendered. The spoken script is unchanged. The extra teaching is only in `course/BP02-DRAFT-ADDITIONS.md`.
 
+## BP-01 approved lines, 20 Nov 2:35pm AEDT
+
+Stewart approved the beginner, number and legal lines in his own words. Applied on BP-01 only.
+
+- Hook: limit orders are named in the same sentence, the grid (not the bot) has nothing left to do, and a fall through the bottom leaves you holding coin that is worth less. The first "grid bot" is "a small program that places these orders for you".
+- The idea adds the cash-and-coin start line before the waiting buy orders.
+- "the summer window" in BP-01 is "the July to October example window".
+- The pair adds "You can buy part of a coin. Here we buy one hundredth of a bitcoin, 0.01."
+- The downside says the three buys, US$276.30, US$267.30 and US$258.30, then US$801.90 and US$81.90.
+- "equal gaps" is "gaps of about 900 each". "eight and a half" is "about 8 dollars 46". 801.90 and 81.90 are spoken in full. The daily close is "11am Sydney time in daylight saving, 10am otherwise".
+- "Crypto is a digital asset". The cash line says once "a dollar-pegged token, treated like cash in this lesson". The stop adds "This is a teaching rule, not a recommendation." The pair result adds "Past results don't predict future results."
+
+No other spoken line, title or order changed. Other lessons still say "summer window".
+
 ## BP-01 approved lines, 20 Nov
 
 Stewart approved five lines. The hook now includes the sideways-bounce sentence. The stop shot says the stop is the written rule for when you stop the bot. The no-promise line says numbers marked Example are teaching numbers, not advice. The map says "Steps one to six" and "Steps seven to eleven" just before the paper test, and the late second reading is gone. Your turn restores the line about drawing the idea and copying it only on paper or demo. The daily-close line is unchanged. `course/BP02-DRAFT-ADDITIONS.md` is a draft only and is not spoken.
