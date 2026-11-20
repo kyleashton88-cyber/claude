@@ -1512,10 +1512,130 @@ def paint_copy_band(base: Image.Image) -> None:
     _example(draw, box[0] + 36, y + 20)
 
 
-def paint_board(base: Image.Image, shot: dict) -> None:
+def _center_card(draw: ImageDraw.ImageDraw, title: str, lines: list[str], example: bool = False) -> None:
+    """One card in the middle of the frame, so a new line is a new picture."""
+    box = (MX, 200, RIGHT, 680)
+    draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=3)
+    draw.text((box[0] + 36, box[1] + 28), title, font=font(40), fill=CYAN)
+    y = box[1] + 110
+    for line in lines:
+        for wrapped in wrap(line, 42, box[2] - box[0] - 80)[:6]:
+            if y > box[3] - 56:
+                break
+            draw.text((box[0] + 36, y), wrapped, font=font(36), fill=WHITE)
+            y += 48
+    if example:
+        _example(draw, box[0] + 36, min(y + 16, box[3] - 64))
+
+
+def _spoken(shot: dict, local: float, phrase: str) -> bool:
+    at = _phrase_at(shot, phrase)
+    return at is not None and local >= at
+
+
+def _sentence_steps(draw: ImageDraw.ImageDraw, shot: dict, local: float) -> None:
+    """Show one sentence at a time, so a long paragraph cannot sit still."""
+    parts = [part.strip() for part in re.split(r"(?<=[.!?])\s+", shot.get("vo") or "") if part.strip()]
+    if not parts:
+        return
+    current = 0
+    for index, part in enumerate(parts):
+        lead = " ".join(part.split()[:4])
+        if _spoken(shot, local, lead) or (index == 0 and local >= 0):
+            current = index
+    text = parts[current]
+    _center_card(draw, f"{current + 1} of {len(parts)}", [text], example="Example" in text or "EXAMPLE" in text)
+
+
+def paint_board(base: Image.Image, shot: dict, local: float = 0) -> None:
     """A heading frame that shows the idea in words a beginner can read."""
     draw = ImageDraw.Draw(base)
     board = shot.get("board")
+    if board == "seven-lines" and shot.get("lesson_id") == "bp-02-what-you-need":
+        if _spoken(shot, local, "daily close"):
+            _center_card(draw, "A daily close", ["The last price of the day.", "You are naming the public series."])
+            return
+        if _spoken(shot, local, "pretend money"):
+            _center_card(draw, "A demo account", ["Uses pretend money."])
+            return
+        if _spoken(shot, local, "priced in"):
+            _center_card(draw, "The pair", ["Bitcoin priced in US dollars."], example=True)
+            return
+        rows = [
+            ("notebook", "1. A notebook."),
+            ("three words", "2. Range, levels, and stop."),
+            ("the pair", "3. The pair: bitcoin, public daily closes."),
+            ("paper or", "4. Paper, or a demo."),
+            ("no secrets", "5. No secrets on this page."),
+            ("written stop", "6. The stop, written as a sentence."),
+            ("example on", "7. The word Example on every figure."),
+        ]
+        shown = 1
+        for index, (phrase, _row) in enumerate(rows):
+            if index == 0 or _spoken(shot, local, phrase):
+                shown = index + 1
+        draw.text((MX + 80, 168), "Seven items", font=font(36), fill=WHITE)
+        y = 214
+        for _phrase, row in rows[:shown]:
+            draw.rounded_rectangle([MX, y, RIGHT, y + 56], 12, fill=GLASS, outline=LINE, width=2)
+            _tick(draw, 130, y + 28)
+            draw.text((188, y + 10), row, font=font(30), fill=WHITE)
+            y += 64
+        return
+    if board == "three-words" and shot.get("lesson_id") == "bp-02-what-you-need":
+        if _spoken(shot, local, "missing a"):
+            _center_card(draw, "All three words", ["If one word is missing,", "the page is missing a part."])
+            return
+        if _spoken(shot, local, "marked example"):
+            _center_card(draw, "Marked Example", ["The figures are from lesson 1."], example=True)
+            return
+        cards = []
+        if local >= 0:
+            cards.append(("Range", "The top line and the bottom line."))
+        if _spoken(shot, local, "levels are"):
+            cards.append(("Levels", "Six gaps. About 900."))
+        if _spoken(shot, local, "a stop is"):
+            cards.append(("Stop", "Two daily closes outside."))
+        y = 200
+        for title, body in cards:
+            draw.rounded_rectangle([MX, y, RIGHT, y + 140], 16, fill=GLASS, outline=CYAN, width=2)
+            draw.text((MX + 36, y + 28), title, font=font(48), fill=CYAN)
+            draw.text((MX + 280, y + 40), body, font=font(36), fill=WHITE)
+            y += 156
+        _example(draw, MX + 36, min(y + 8, 640))
+        return
+    if board == "no-secrets" and shot.get("lesson_id") == "bp-02-what-you-need":
+        if _spoken(shot, local, "a form asks"):
+            _center_card(draw, "Not this lesson", ["If a form asks for a secret,", "that form is not this lesson."])
+            return
+        if _spoken(shot, local, "no balance"):
+            _center_card(draw, "No balance", ["A public close is not your account."], example=True)
+            return
+        if _spoken(shot, local, "never type"):
+            _center_card(draw, "Never on the page", ["A seed phrase, a private key,", "or an API secret."])
+            return
+        if _spoken(shot, local, "private key"):
+            _center_card(draw, "A private key", ["Or an API secret.", "A password that can move your money."])
+            return
+        _center_card(draw, "A seed phrase", ["The list of words that unlocks a wallet."])
+        return
+    if board == "say-the-page" and shot.get("lesson_id") == "bp-02-what-you-need":
+        if _spoken(shot, local, "write example"):
+            _center_card(draw, "Write Example", ["On your own notebook.", "A practice sketch is not a live plan."], example=True)
+            return
+        if _spoken(shot, local, "a secret is"):
+            _center_card(draw, "No secrets", ["A seed phrase, a private key,", "or an API secret."])
+            return
+        if _spoken(shot, local, "name the pair"):
+            _center_card(
+                draw,
+                "Name these",
+                ["Pair: bitcoin, public daily closes.", "Band: 24,930 to 30,331.", "Gaps: six, about 900.", "Stop: two daily closes outside."],
+                example=True,
+            )
+            return
+        _center_card(draw, "Say the page", ["Once, in your own words.", "Do not read the chart again."])
+        return
     if board == "seven-lines":
         rows = [
             "1. A notebook.",
@@ -1612,10 +1732,13 @@ def _word_at(shot: dict, *needles: str) -> float | None:
 def _phrase_at(shot: dict, phrase: str) -> float | None:
     """Start time of the first spoken phrase in this shot."""
     words = shot.get("word_times") or []
-    tokens = [part for part in phrase.lower().split() if part]
+    def _clean(token: str) -> str:
+        return token.lower().strip(".,;:!?\"'")
+
+    tokens = [_clean(part) for part in phrase.split() if _clean(part)]
     if not words or not tokens:
         return None
-    norm = [str(text).lower().strip(".,;:!?\"'") for text, _start, _end in words]
+    norm = [_clean(str(text)) for text, _start, _end in words]
     for index in range(len(norm) - len(tokens) + 1):
         if norm[index:index + len(tokens)] == tokens:
             return float(words[index][1])
@@ -1733,6 +1856,13 @@ def paint_idea(base: Image.Image, shot: dict, local: float) -> None:
 
 def paint_stack(base: Image.Image, shot: dict, local: float) -> None:
     draw = ImageDraw.Draw(base)
+    vo = shot.get("vo") or ""
+    if shot.get("lesson_id") == "bp-02-what-you-need" and (
+        vo.startswith("A journal is the page you will open again")
+        or vo.startswith("Australian exchanges register with AUSTRAC")
+    ):
+        _sentence_steps(draw, shot, local)
+        return
     named = list(shot.get("screen_lines") or [])
     if named and (shot.get("chapter") or "") == "The map" and str(named[0][0]) == "1":
         later = [
@@ -2628,7 +2758,7 @@ def paint(shot: dict, local: float, progress: float) -> np.ndarray:
     else:
         title_bar(img, shot, progress)
         if shot.get("board") in {"seven-lines", "no-secrets", "three-words", "say-the-page"}:
-            paint_board(img, shot)
+            paint_board(img, shot, local)
         elif (
             shot.get("lesson_id") == "bp-02-what-you-need"
             and (shot.get("chapter") or "") == "Copy the path"
