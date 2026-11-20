@@ -148,6 +148,17 @@ class FigureTests(unittest.TestCase):
                 number_problems("A stray 30 sits on the card.", lesson),
                 ["on-screen figures not in the lesson: 30"],
             )
+            dotted = folder / "dotted.yaml"
+            dotted.write_text(
+                "chart_labels:\n"
+                '  - "276.30"\n'
+                '  - "8.46"\n',
+                encoding="utf-8",
+            )
+            self.assertEqual(
+                number_problems("EXAMPLE US$276.30 and about US$8.46, read as 276 30 8 46.", dotted),
+                [],
+            )
         finally:
             shutil.rmtree(folder)
 

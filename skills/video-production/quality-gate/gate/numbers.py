@@ -224,6 +224,18 @@ def number_problems(screen_text: str, lesson: Path | None) -> list[str]:
     if unknown_dates:
         problems.append("on-screen date not in the lesson: " + ", ".join(unknown_dates[:8]))
     extra = sorted(seen - named)
+    # OCR often splits 276.30 into 276 and 30. Those pieces are the named figure.
+    # A whole number such as 30,331 does not excuse a stray 30.
+    decimal_parts: set[str] = set()
+    for item in named:
+        if "." not in item:
+            continue
+        whole, frac = item.split(".", 1)
+        if whole:
+            decimal_parts.add(whole)
+        if frac:
+            decimal_parts.add(frac)
+    extra = [token for token in extra if token not in decimal_parts]
     # Axis ticks and OCR noise: only flag extras that are currency, percents, or declared-scale numbers.
     interesting = []
     for token in extra:

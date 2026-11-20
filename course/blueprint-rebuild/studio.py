@@ -3376,10 +3376,21 @@ def _cap_caption_speed(path: Path, limit: float = 18.0) -> None:
                 f"{path.name} {cue.start:.2f}s is only {span:.2f}s. A caption needs 0.7s"
             )
         body = cue.text.rstrip()
-        if any(mark in body[:-1] for mark in ".?!"):
-            raise SystemExit(
-                f"{path.name} {cue.start:.2f}s crosses a sentence end: {cue.text}"
-            )
+        # A decimal such as 0.01 is not a sentence end. ? and ! still are.
+        for index, mark in enumerate(body[:-1]):
+            if mark in "?!":
+                raise SystemExit(
+                    f"{path.name} {cue.start:.2f}s crosses a sentence end: {cue.text}"
+                )
+            if mark == "." and not (
+                index > 0
+                and body[index - 1].isdigit()
+                and index + 1 < len(body)
+                and body[index + 1].isdigit()
+            ):
+                raise SystemExit(
+                    f"{path.name} {cue.start:.2f}s crosses a sentence end: {cue.text}"
+                )
 
 
 def _srt_from_capped_vtt(vtt: Path, srt: Path) -> None:
