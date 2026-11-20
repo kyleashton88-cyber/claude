@@ -390,6 +390,22 @@ SPECS: dict[str, dict] = {
 }
 
 
+def _paint_stall(draw, ui) -> None:
+    """The stall, before any priced fill is spoken."""
+    box = (ui.MX, 200, ui.RIGHT, 700)
+    draw.rounded_rectangle(box, 22, fill=ui.GLASS, outline=ui.CYAN, width=2)
+    draw.text((box[0] + 36, box[1] + 28), "A market stall", font=ui.font(40), fill=ui.WHITE)
+    left, right = box[0] + 220, box[2] - 220
+    draw.polygon(
+        [(left, 430), (left + 80, 340), (right - 80, 340), (right, 430)],
+        outline=ui.CYAN,
+    )
+    draw.line([(left, 430), (right, 430)], fill=ui.CYAN, width=4)
+    draw.rounded_rectangle([left + 40, 500, right - 40, 590], 10, outline=ui.CYAN, width=3)
+    draw.line([(left + 120, 590), (left + 120, 660)], fill=ui.CYAN, width=4)
+    draw.line([(right - 120, 590), (right - 120, 660)], fill=ui.CYAN, width=4)
+
+
 def paint_visual(base, shot: dict, local: float, ui) -> None:
     spec = SPECS.get(shot.get("visual") or "")
     if spec is None:
@@ -430,12 +446,14 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
     if chapter == "How a grid can capture bounces":
         buy_at = ui._phrase_at(shot, "one buy")
         if buy_at is None or local < buy_at:
-            rows = [row for row in rows if "26,730" not in row]
+            _paint_stall(draw, ui)
+            return
+        sell_at = ui._phrase_at(shot, "later sell")
+        if sell_at is None or local < sell_at:
+            rows = [row for row in rows if "27,630" not in row]
     spans = list(shot.get("sentence_spans") or [])
     shown = len(rows)
-    paced = shot.get("lesson_id") == "bp-01-introduction" and (shot.get("chapter") or "") in {
-        "One pair", "Downside",
-    }
+    paced = shot.get("lesson_id") == "bp-01-introduction" and chapter == "One pair"
     if spans:
         shown = 1
         step = max(1, len(spans) / max(1, len(rows)))
@@ -445,6 +463,23 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
     if paced:
         # Do not sit on the first line for more than 8s. Speech can reveal a line sooner.
         shown = max(shown, min(len(rows), 1 + int(local / 8)))
+    if chapter == "One pair" and shot.get("lesson_id") == "bp-01-introduction":
+        net_at = ui._phrase_at(shot, "that is about")
+        if net_at is not None and local >= net_at:
+            for index, text in enumerate(rows):
+                if text.startswith("EXAMPLE. After fees"):
+                    shown = max(shown, index + 1)
+    downside_at = None
+    if chapter == "Downside" and shot.get("lesson_id") == "bp-01-introduction":
+        downside_at = [
+            None,
+            ui._phrase_at(shot, "276"),
+            ui._phrase_at(shot, "26,730"),
+            ui._phrase_at(shot, "25,830"),
+            ui._phrase_at(shot, "801"),
+            ui._phrase_at(shot, "24,000"),
+            ui._phrase_at(shot, "81"),
+        ]
     ui._example(draw, ui.RIGHT - 280, 168)
     y = 220
     step = 72 if len(rows) > 6 else 86
@@ -455,6 +490,10 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
         if chapter == "Downside" and text.startswith("EXAMPLE, made up") and (made_at is None or local < made_at):
             y += step
             continue
+        if downside_at is not None and index > 0:
+            at = downside_at[index] if index < len(downside_at) else None
+            if at is None or local < at:
+                break
         outline = ui.WHITE if index == accent else ui.CYAN
         draw.rounded_rectangle(
             [ui.MX, y, ui.RIGHT, y + row_h], 14, fill=ui.GLASS, outline=outline, width=4 if index == accent else 2,

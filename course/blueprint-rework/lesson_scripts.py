@@ -536,7 +536,7 @@ def bp02() -> list[dict]:
             "A demo account uses pretend money. "
             "A daily close is the last price of the day. You are naming that public series, not choosing an app."
         ),
-        caption="Seven lines. The pair is the public series.",
+        caption="Seven items. The pair is the public series.",
     ))
     s.append(_shot(
         chapter="The three words",
