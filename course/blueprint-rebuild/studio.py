@@ -3230,7 +3230,7 @@ def render(
             )
         spoken = " ".join(s["vo"] for s in shots)
         for banned in ("Market Pros", "Binance", "ABN", "AFSL", "DeFi"):
-            if banned.lower() in spoken.lower():
+            if re.search(rf"\b{re.escape(banned)}\b", spoken, re.IGNORECASE):
                 raise SystemExit(f"{sid} speaks a banned phrase: {banned}")
     work = Path(f"/tmp/bp-rebuild/{sid}")
     if work.exists():

@@ -38,7 +38,7 @@ def _block(chapter: str, lines: list[str], visual: str | None = None) -> list[di
 EXTRA: dict[str, list[dict]] = {
     "bp-02-what-you-need": _block("Account in Australia", [
         "An exchange in Australia has to confirm who you are before you can deposit. That identity check is the first step, and it is the exchange's rule, not this course's.",
-        "Australian exchanges register with AUSTRAC as virtual asset service providers. Check that register before you sign up. Registration is not a safety guarantee. ASIC licensing of exchanges starts on 9 April 2027. This lesson names the regulators only, never an exchange.",
+        "Australian exchanges register with AUSTRAC, the government agency that keeps the list of crypto exchanges, as virtual asset service providers. Check that register before you sign up. Registration is not a safety guarantee. ASIC is the Australian companies and markets regulator. Its licensing of exchanges starts on 9 April 2027. This lesson names the regulators only, never an exchange.",
         "Turn on a second code as well as your password. That second code is two-factor authentication. Then look for a paper or demo mode before any real dollars.",
     ]) + _block("Round trip", [
         "A pair such as BTC/AUD means you buy the base, bitcoin, with the quote, Australian dollars. A stablecoin is a coin designed to stay near one US dollar.",
@@ -46,7 +46,7 @@ EXTRA: dict[str, list[dict]] = {
         "On an example buy of 100 Australian dollars, 0.1 percent is 10 cents. The sell costs about 10 cents as well. The round trip is about 20 cents, which is 0.2 percent.",
         "Any gap smaller than that 0.2 percent loses money before the price does anything. Lesson 5 uses this as the test a gap has to pass.",
     ], "BP02-V03") + _block("Journal", [
-        "A trading journal is a dated record of every bot: the plan, the changes, the fills, the fees, the result, and whether you followed the rules.",
+        "A trading journal is a dated record of every bot: the plan, the changes, the fills, the fees, a review note of what happened, and whether you followed the rules. That note is not money you made.",
         "The columns are the date, the pair, the band, the gaps, the money in the bot, the stop rule, the fills, the pairs, the fees, the result, and a yes or no for the rules.",
         "The summer band on the card is a bitcoin price in US dollars, so that example row is labelled BTC/USD. The fee example in Australian dollars is a separate row, labelled BTC/AUD. Do not mix the two currencies on one row.",
     ]) + _block("Scams", [

@@ -16,3 +16,11 @@
 - bp-01-introduction / Your turn / kept: 58 words (the old cap would have left 39).
 - bp-01-introduction / Hook / kept: 127 words (the old cap would have left 68).
 - bp-01-introduction / The idea / kept: 95 words (the old cap would have left 69).
+- bp-02-what-you-need / On the page / kept: 41 words (the old cap would have left 26).
+- bp-02-what-you-need / On the page / kept: 53 words (the old cap would have left 37).
+- bp-02-what-you-need / On the page / kept: 42 words (the old cap would have left 29).
+- bp-02-what-you-need / On the page / kept: 35 words (the old cap would have left 30).
+- bp-02-what-you-need / On the page / kept: 45 words (the old cap would have left 38).
+- bp-02-what-you-need / On the page / kept: 31 words (the old cap would have left 23).
+- bp-02-what-you-need / On the page / kept: 56 words (the old cap would have left 46).
+- bp-02-what-you-need / Account in Australia / kept: 59 words (the old cap would have left 41).

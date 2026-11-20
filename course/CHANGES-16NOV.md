@@ -1,5 +1,14 @@
 # Changes, 16 November 2026
 
+## BP-02 draft additions, 20 Nov 7:16pm AEDT
+
+Stewart approved every draft addition and the three script flags in his own words, exactly as proposed in `course/BP02-DRAFT-ADDITIONS.md`.
+
+- Account in Australia: AUSTRAC is named as the government agency that keeps the list of crypto exchanges, and ASIC is named as the Australian companies and markets regulator.
+- Journal: "the result" is now "a review note of what happened", plus "That note is not money you made."
+- Recap: the three chip lines are replaced by "Recap: your page has seven items, each with a written fact, every figure marked Example, and no secrets on it."
+- Sixteen teaching paragraphs are spoken after the worked check and before Say the page. No other wording was changed.
+
 ## BP-02 stills recoloured, not rendered
 
 Ten pictures Creative Studio failed were rebuilt in navy, cyan and white. `001.png` and the end card were left as scored. BP-02 is not rendered. The spoken script is unchanged. The extra teaching is only in `course/BP02-DRAFT-ADDITIONS.md`.
