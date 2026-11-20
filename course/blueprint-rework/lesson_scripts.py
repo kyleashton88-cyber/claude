@@ -532,10 +532,10 @@ def bp02() -> list[dict]:
         v2_cards=[
             {"cue": "", "title": "Crypto", "lines": ["Crypto is a digital coin, such as bitcoin, and a daily close is the last price of that day."]},
             {"cue": "a band", "title": "Band", "lines": ["A band, also called the range, is the top and the bottom."]},
-            {"cue": "a gap", "title": "Gap", "lines": ["A gap is the space between two lines."]},
-            {"cue": "the step", "title": "Step", "lines": ["The step is how wide that gap is."]},
+            {"cue": "a gap", "kind": "scene", "scene": "gap", "title": "Gap"},
+            {"cue": "the step", "kind": "scene", "scene": "step", "title": "Step"},
             {"cue": "a stop", "title": "Stop", "lines": ["A stop is the rule for what you will do if the price leaves the band."]},
-            {"cue": "packing list", "title": "The page", "lines": ["Like a packing list before a trip, your page comes before any screen."]},
+            {"cue": "packing list", "kind": "scene", "scene": "packing", "title": "The page"},
         ],
     ))
     s += stack("Objectives", [
@@ -623,13 +623,13 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "You never type a seed phrase, a private key, or an API secret onto this page. "
         "The chart has no balance on it. A public close is not your account. "
         "If a form asks for a secret, that form is not this lesson.",
-        _cards(
-            ("", "A wallet is where your crypto is held. A seed phrase is the list of words that unlocks that wallet.", False),
-            ("a private key", "A private key is a secret that can move your crypto. An API secret is a password that lets a program place orders on an account.", False),
-            ("you never", "You never type a seed phrase, a private key, or an API secret onto this page.", False),
-            ("no balance", "The chart has no balance on it. A public close is not your account.", True),
-            ("a form asks", "If a form asks for a secret, that form is not this lesson.", False),
-        ),
+        [
+            {"cue": "", "title": "", "lines": ["A wallet is where your crypto is held. A seed phrase is the list of words that unlocks that wallet."]},
+            {"cue": "a private key", "title": "", "lines": ["A private key is a secret that can move your crypto. An API secret is a password that lets a program place orders on an account."]},
+            {"cue": "you never", "kind": "scene", "scene": "secrets-off", "title": "No secrets"},
+            {"cue": "no balance", "kind": "scene", "scene": "no-balance", "title": "No balance"},
+            {"cue": "a form asks", "kind": "scene", "scene": "not-form", "title": "Not this lesson"},
+        ],
     ),
     (
         "Copy the path",
@@ -648,7 +648,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "If the stop line is only a tick with no sentence, the page fails the check. "
         "The rule has to say: if a daily close finishes outside the band and the next daily close is still outside, the example is over.",
         [
-            {"cue": "", "kind": "chart", "stage": "stop", "title": "Worked check"},
+            {"cue": "", "kind": "chart", "stage": "check", "title": "Worked check"},
         ],
     ),
     (
@@ -657,20 +657,20 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "An exchange is the app or website where people buy and sell crypto. The screen is the exchange. "
         "Lesson 1 ended by asking you to bring the page. This lesson is that page. "
         "Open the notebook before any screen.",
-        _cards(
-            ("", "A page is the notebook you can hold.", False),
-            ("an exchange is", "An exchange is the app or website where people buy and sell crypto. The screen is the exchange.", False),
-            ("lesson 1 ended", "Lesson 1 ended by asking you to bring the page. This lesson is that page. Open the notebook before any screen.", False),
-        ),
+        [
+            {"cue": "", "title": "", "lines": ["A page is the notebook you can hold."]},
+            {"cue": "an exchange is", "title": "", "lines": ["An exchange is the app or website where people buy and sell crypto. The screen is the exchange."]},
+            {"cue": "lesson 1 ended", "kind": "scene", "scene": "before-screen", "title": "The page"},
+        ],
     ),
     (
         "The page",
         "Write today's date on the first line. Under it, write the word Example. "
         "Example means a real past price used for practice. It is not an order and not a forecast.",
-        _cards(
-            ("", "Write today's date on the first line. Under it, write the word Example.", False),
-            ("example means", "Example means a real past price used for practice. It is not an order and not a forecast.", False),
-        ),
+        [
+            {"cue": "", "kind": "scene", "scene": "date-line", "title": "The page"},
+            {"cue": "example means", "title": "", "lines": ["Example means a real past price used for practice. It is not an order and not a forecast."]},
+        ],
     ),
     (
         "The pair",
@@ -680,12 +680,12 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "If a fee sum is in Australian dollars, that sum goes on its own line, labelled BTC/AUD. "
         "Do not put a US dollar price and an Australian dollar fee on the same row. "
         "Do not mix the two currencies on one row.",
-        _cards(
-            ("", "Write the pair first. The base is what you buy. The quote is what you pay with.", False),
-            ("for this course", "For this course the prices are the summer bitcoin closes, so you buy the base, bitcoin, with the quote, US dollars, and that row is labelled BTC/USD.", False),
-            ("every other row", "Every other row depends on the pair. If a fee sum is in Australian dollars, that sum goes on its own line, labelled BTC/AUD.", False),
-            ("do not put", "Do not put a US dollar price and an Australian dollar fee on the same row. Do not mix the two currencies on one row.", False),
-        ),
+        [
+            {"cue": "", "title": "", "lines": ["Write the pair first. The base is what you buy. The quote is what you pay with."]},
+            {"cue": "for this course", "kind": "scene", "scene": "btc-usd", "title": "BTC/USD"},
+            {"cue": "every other row", "kind": "scene", "scene": "btc-aud", "title": "BTC/AUD"},
+            {"cue": "do not put", "kind": "scene", "scene": "do-not-mix", "title": "Do not mix"},
+        ],
     ),
     (
         "The range",
@@ -707,8 +707,8 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "Then you stop the bot, which cancels the waiting orders, and you follow the rule you wrote. "
         "Write that stop in one sentence.",
         [
-            {"cue": "", "kind": "chart", "stage": "gaps", "title": "Stop"},
-            {"cue": "a bot is", "kind": "chart", "stage": "gaps", "title": "Bot"},
+            {"cue": "", "kind": "scene", "scene": "stop-sentence", "title": "Stop"},
+            {"cue": "a bot is", "kind": "scene", "scene": "bot", "title": "Bot"},
             {"cue": "two daily", "kind": "chart", "stage": "stop", "title": "Stop"},
             {"cue": "then you stop", "kind": "chart", "stage": "page", "title": "Stop"},
         ],
@@ -760,15 +760,15 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "This fee row is Australian dollars. It is not the summer bitcoin price. "
         "If the gap is smaller than that 0.2 percent, each completed buy and sell costs more in fees than the gap is worth. "
         "Lesson 5 is where you test a gap against this fee. You do not pick a gap in this lesson.",
-        _cards(
-            ("", "A fill is an order that actually trades. A maker fee is the charge when your order waits and someone else trades with it. A taker fee is the charge when your order fills straight away.", False),
-            ("a grid uses", "A grid uses waiting orders, so read the maker fee first. Some bots also pay a taker fee when they first start. In this example both are 0.1 percent.", True),
-            ("100 australian", "On an example buy of 100 Australian dollars, 0.1 percent is 10 cents.", True),
-            ("the sell costs", "The sell costs about 10 cents as well.", True),
-            ("the round trip", "The round trip is about 20 cents, which is 0.2 percent.", True),
-            ("this fee row", "This fee row is Australian dollars. It is not the summer bitcoin price.", True),
-            ("if the gap", "If the gap is smaller than that 0.2 percent, each completed buy and sell costs more in fees than the gap is worth. Lesson 5 is where you test a gap against this fee. You do not pick a gap in this lesson.", True),
-        ),
+        [
+            {"cue": "", "title": "", "lines": ["A fill is an order that actually trades. A maker fee is the charge when your order waits and someone else trades with it. A taker fee is the charge when your order fills straight away."]},
+            {"cue": "a grid uses", "kind": "fee", "stage": "maker", "title": "Fees"},
+            {"cue": "100 australian", "kind": "fee", "stage": "buy", "title": "Fees"},
+            {"cue": "the sell costs", "kind": "fee", "stage": "sell", "title": "Fees"},
+            {"cue": "the round trip", "kind": "fee", "stage": "trip", "title": "Fees"},
+            {"cue": "this fee row", "kind": "fee", "stage": "aud", "title": "Fees"},
+            {"cue": "if the gap", "kind": "fee", "stage": "gap", "title": "Fees"},
+        ],
     ),
     (
         "Stablecoin",
@@ -825,13 +825,13 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "If a word on it has not been defined, stop and define it before you go on. "
         "A secret is a seed phrase, a private key, or an API secret. None of those go on this page. "
         "You write Example on your own notebook so a practice sketch is never later mistaken for a live plan.",
-        _cards(
-            ("", "Say the page once, in your own words, and do not read the chart again.", False),
-            ("name the pair", "Name the pair, the band, the gaps, and the stop rule, then stop.", False),
-            ("if a word", "If a word on it has not been defined, stop and define it before you go on.", False),
-            ("a secret is", "A secret is a seed phrase, a private key, or an API secret. None of those go on this page.", False),
-            ("you write example", "You write Example on your own notebook so a practice sketch is never later mistaken for a live plan.", True),
-        ),
+        [
+            {"cue": "", "kind": "scene", "scene": "say-page", "title": "Say the page"},
+            {"cue": "name the pair", "kind": "scene", "scene": "name-four", "title": "Say the page"},
+            {"cue": "if a word", "kind": "scene", "scene": "undefined", "title": "Say the page"},
+            {"cue": "a secret is", "title": "", "lines": ["A secret is a seed phrase, a private key, or an API secret. None of those go on this page."]},
+            {"cue": "you write example", "kind": "scene", "scene": "practice", "title": "Example"},
+        ],
     ),
 ]
 

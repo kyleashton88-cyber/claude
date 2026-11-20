@@ -1,5 +1,9 @@
 # Changes, 16 November 2026
 
+## BP-02 stills, Creative Studio gate-1
+
+The end card uses the official lockup again. The EXAMPLE badge no longer runs into "On the page". The worked check has a BTC/USD row, the stop sentence is written on the page, and the bot beat is a diagram. The long text stretches now have pictures. "Band" is left as it is. No spoken line changed, and the film is not rendered.
+
 ## BP-02 pictures only, not rendered
 
 The lower third no longer repeats the card. Captions for the next render break before a dangling "and", not after it. The seven items fill a notebook, the range is a chart, the journal is a table, and the account stretch is a four-step safety list. The end card says GridBot Builder. No spoken line changed.
