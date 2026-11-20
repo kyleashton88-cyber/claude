@@ -13,6 +13,8 @@ from .media import (
     judge_loudness,
     longest_static,
     measure_loudness,
+    visual_frames,
+    visual_holds,
     media_info,
     sample_times,
     silent_gaps,
@@ -134,6 +136,20 @@ def evaluate(
         freeze = []
         freeze_ok = f"longest static run {hold:.1f}s, limit {profile.max_hold_seconds:.0f}s"
     checks.append(_check("frozen", freeze, ok_detail=freeze_ok))
+
+    if profile.name == "blueprint":
+        picture = visual_frames(master, fps=1)
+        holds = visual_holds(picture, fps=1)
+        if holds:
+            bits = [f"{length:.0f}s from {start:.0f}s" for start, length in holds[:6]]
+            masked = [
+                "same picture for 20s or more, captions ignored: " + ", ".join(bits)
+            ]
+            masked_ok = ""
+        else:
+            masked = []
+            masked_ok = "no picture holds for 20s or more once captions and the lower third are ignored"
+        checks.append(_check("masked_holds", masked, ok_detail=masked_ok))
 
     dark = [run for run in black_runs(frames, fps=2) if run[1] > profile.max_black_seconds]
     if dark:

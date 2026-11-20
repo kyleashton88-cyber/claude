@@ -132,6 +132,75 @@ def longest_static(frames: np.ndarray, fps: int = 2, mad_limit: float = 0.5) -> 
     return worst / fps, worst_at / fps
 
 
+# Picture band on a 160x90 frame. Rows 0–11 are the title. Rows 62–89 are the
+# burned captions and the lower third. A new caption is not a new picture.
+VISUAL_ROW_START = 12
+VISUAL_ROW_END = 62
+# Encoder flicker on a still card stays under this. A real card change on
+# BP-02 at d8fb82b was about 6 or more. Text inside the picture still counts
+# when it changes the card; caption text does not, because those rows are gone.
+VISUAL_MAD_LIMIT = 3.0
+
+
+def visual_frames(path: Path, fps: int = 1) -> np.ndarray:
+    """One gray frame a second, with the title, captions and lower third removed."""
+    raw = subprocess.check_output(
+        [
+            ffmpeg_bin(),
+            "-v",
+            "error",
+            "-i",
+            str(path),
+            "-vf",
+            f"fps={fps},scale=160:90",
+            "-f",
+            "rawvideo",
+            "-pix_fmt",
+            "gray",
+            "-",
+        ]
+    )
+    frame = 160 * 90
+    count = len(raw) // frame
+    if count == 0:
+        return np.zeros((0, VISUAL_ROW_END - VISUAL_ROW_START, 160), dtype=np.uint8)
+    frames = np.frombuffer(raw[: count * frame], dtype=np.uint8).reshape(count, 90, 160)
+    return frames[:, VISUAL_ROW_START:VISUAL_ROW_END, :]
+
+
+def visual_holds(
+    frames: np.ndarray,
+    fps: int = 1,
+    mad_limit: float = VISUAL_MAD_LIMIT,
+    min_seconds: float = 20.0,
+) -> list[tuple[float, float]]:
+    """Still pictures that last min_seconds or more.
+
+    Duration is the number of sampled seconds on that picture, so 20 samples
+    at 1 fps is a 20 second hold. A caption change cannot end the hold.
+    """
+    if len(frames) == 0:
+        return []
+    flat = frames.reshape(len(frames), -1)
+    if len(flat) == 1:
+        if 1 / fps >= min_seconds:
+            return [(0.0, 1 / fps)]
+        return []
+    delta = np.abs(flat[1:].astype(np.int16) - flat[:-1].astype(np.int16)).mean(axis=1)
+    holds: list[tuple[float, float]] = []
+    start = 0
+    for index, value in enumerate(delta):
+        if value >= mad_limit:
+            seconds = (index - start + 1) / fps
+            if seconds + 1e-9 >= min_seconds:
+                holds.append((start / fps, seconds))
+            start = index + 1
+    seconds = (len(flat) - start) / fps
+    if seconds + 1e-9 >= min_seconds:
+        holds.append((start / fps, seconds))
+    return holds
+
+
 def black_runs(frames: np.ndarray, fps: int = 2, luma_max: float = 4.0) -> list[tuple[float, float]]:
     """Runs of near-black frames. Navy #00081B sits above luma_max and is not black."""
     if len(frames) == 0:

@@ -8,6 +8,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import numpy as np
+
 HERE = Path(__file__).resolve().parents[1]
 VP = HERE.parent
 sys.path.insert(0, str(VP))
@@ -16,7 +18,7 @@ sys.path.insert(0, str(HERE))
 from gate.captions import caption_coverage_problems, caption_problems, parse_captions  # noqa: E402
 from gate.numbers import find_dates, lesson_figures, number_problems, screen_figures  # noqa: E402
 from gate.evaluate import caption_gap_pixels, evaluate  # noqa: E402
-from gate.media import black_runs, gray_frames, judge_loudness, longest_static  # noqa: E402
+from gate.media import black_runs, gray_frames, judge_loudness, longest_static, visual_holds  # noqa: E402
 from gate.profiles import PROFILES, get_profile, length_ok  # noqa: E402
 from gate.synth import encode_black_gap, encode_clip, write_pass_captions  # noqa: E402
 from gate.textscan import find_brands, has_disclaimer, tesseract_path  # noqa: E402
@@ -260,6 +262,15 @@ class PictureTests(unittest.TestCase):
             moving_frames = gray_frames(moving, fps=2)
             move_hold, _at = longest_static(moving_frames, fps=2)
             self.assertLess(move_hold, 1.0)
+
+            # 20 sampled seconds on one picture is a hold. 19 is not.
+            # A new picture every 8 seconds is not, even if a caption would have moved.
+            self.assertEqual(visual_holds(np.zeros((19, 8, 8), dtype=np.uint8), fps=1), [])
+            self.assertEqual(visual_holds(np.zeros((20, 8, 8), dtype=np.uint8), fps=1), [(0.0, 20.0)])
+            cards = np.zeros((24, 8, 8), dtype=np.uint8)
+            for index in range(0, 24, 8):
+                cards[index:index + 8] = 40 * (index // 8 + 1)
+            self.assertEqual(visual_holds(cards, fps=1), [])
 
             gap = encode_black_gap(folder / "gap.mp4")
             dark = black_runs(gray_frames(gap, fps=4), fps=4)
