@@ -741,16 +741,15 @@ def lower_third(draw: ImageDraw.ImageDraw, shot: dict) -> None:
     t_size = fit_size(term, W - 2 * MX, 40, 36)
     draw.text((MX, 844), term, font=font(t_size), fill=CYAN)
     width = W - 2 * MX
-    lines = wrap(defin, 36, width, "reg")
+    # The whole current beat. Shrink the type so a long line is not cut off.
+    # Footer text starts at y=990.
     size = 36
-    if len(lines) > 2:
-        size = 30
-        lines = wrap(defin, size, width, "reg")[:3]
-    else:
-        lines = lines[:2]
-    # Footer text starts at y=990. Three 30px lines still finish above it.
+    lines = wrap(defin, size, width, "reg")
+    while size > 22 and 886 + len(lines) * (size + 8) > 978:
+        size -= 2
+        lines = wrap(defin, size, width, "reg")
     y = 886
-    step = size + 10
+    step = size + 8
     for line in lines:
         if y + size > 978:
             break
@@ -1960,6 +1959,15 @@ def _paint_three_words_classic(base: Image.Image) -> None:
 def paint_v2_cards(base: Image.Image, shot: dict, local: float) -> None:
     cards = list(shot.get("v2_cards") or [])
     card = cards[_v2_index(shot, local)]
+    # The lower third is this card, not the first line of the chapter.
+    if card.get("classic"):
+        beat = "Range: 24,930 to 30,331. Levels: six gaps. About 900. Stop: Leaves 30,331."
+    elif card.get("rows"):
+        beat = "Pair, band, gaps, and a written stop. Every figure marked Example."
+    else:
+        beat = " ".join(str(line) for line in (card.get("lines") or []) if line)
+    shot["term"] = str(card.get("title") or shot.get("chapter") or "")
+    shot["definition"] = beat
     if card.get("classic"):
         _paint_three_words_classic(base)
         return

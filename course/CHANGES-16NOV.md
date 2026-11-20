@@ -1,5 +1,9 @@
 # Changes, 16 November 2026
 
+## BP-02 recap still redrawn, not rendered
+
+`019.png` is now RECAP: SEVEN ITEMS, with the approved kicker and seven chips. Card 77 was re-exported. On-screen only: card 27 no longer shows "exchange" before the definition, and card 62 no longer shows "journal" before the definition. Lower thirds follow the card on screen. The film is not rendered.
+
 ## BP-02 v2 script, 20 Nov 9:13pm AEDT
 
 Stewart approved the whole proposal at commit `87478d2`, in his own words. The spoken text in `course/BP02-v2-PROPOSED-SPOKEN.txt` is now the BP-02 script. That covers S1 to S14, the beginner definitions, and the flagged lines M1 to M9, the TAX lines, and F1 and F3, as written in `course/BP02-v2-PROPOSED.md`.
