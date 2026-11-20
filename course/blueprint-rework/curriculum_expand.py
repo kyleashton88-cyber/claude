@@ -290,6 +290,13 @@ LENGTH = {
 }
 
 
+# Stewart approved the BP-02 v2 script at 9:13pm AEDT on 20 Nov.
+# That script already contains the teaching. Appending the old blocks would say it twice.
+EXTRA["bp-02-what-you-need"] = []
+LENGTH["bp-02-what-you-need"] = []
+WALK["bp-02-what-you-need"] = []
+
+
 def insert(sid: str, shots: list[dict]) -> list[dict]:
     """Add curriculum teaching. Existing lines are left as they are."""
     extra = [dict(shot) for shot in (EXTRA.get(sid) or [])]

@@ -24,3 +24,15 @@
 - bp-02-what-you-need / On the page / kept: 31 words (the old cap would have left 23).
 - bp-02-what-you-need / On the page / kept: 56 words (the old cap would have left 46).
 - bp-02-what-you-need / Account in Australia / kept: 59 words (the old cap would have left 41).
+- bp-02-what-you-need / Seven items / kept: 137 words (the old cap would have left 60).
+- bp-02-what-you-need / The three words / kept: 106 words (the old cap would have left 53).
+- bp-02-what-you-need / No secrets / kept: 89 words (the old cap would have left 46).
+- bp-02-what-you-need / The page / kept: 47 words (the old cap would have left 36).
+- bp-02-what-you-need / The pair / kept: 93 words (the old cap would have left 44).
+- bp-02-what-you-need / The range / kept: 77 words (the old cap would have left 29).
+- bp-02-what-you-need / The stop / kept: 65 words (the old cap would have left 59).
+- bp-02-what-you-need / Account in Australia / kept: 174 words (the old cap would have left 53).
+- bp-02-what-you-need / Two-factor / kept: 35 words (the old cap would have left 30).
+- bp-02-what-you-need / Fees / kept: 153 words (the old cap would have left 47).
+- bp-02-what-you-need / Journal / kept: 193 words (the old cap would have left 52).
+- bp-02-what-you-need / Say the page / kept: 84 words (the old cap would have left 58).

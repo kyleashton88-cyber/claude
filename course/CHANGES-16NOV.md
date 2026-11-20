@@ -1,5 +1,11 @@
 # Changes, 16 November 2026
 
+## BP-02 v2 script, 20 Nov 9:13pm AEDT
+
+Stewart approved the whole proposal at commit `87478d2`, in his own words. The spoken text in `course/BP02-v2-PROPOSED-SPOKEN.txt` is now the BP-02 script. That covers S1 to S14, the beginner definitions, and the flagged lines M1 to M9, the TAX lines, and F1 and F3, as written in `course/BP02-v2-PROPOSED.md`.
+
+The old extra block is no longer appended, so those lines are not spoken twice. The film is not rendered. New and changed cards are stills in `course/blueprint-rebuild/qa/bp02-v2-cards/` for Creative Studio. BP-01 was not changed.
+
 ## BP-02 draft additions, 20 Nov 7:16pm AEDT
 
 Stewart approved every draft addition and the three script flags in his own words, exactly as proposed in `course/BP02-DRAFT-ADDITIONS.md`.

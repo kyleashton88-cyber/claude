@@ -506,135 +506,329 @@ def bp01() -> list[dict]:
     ))
     return s
 
+def _bp02_line(chapter: str, vo: str, **extra) -> dict:
+    """One approved sentence or group. The card later shows this text in full."""
+    first = vo.split(". ")[0].strip()
+    if first and not first.endswith((".", "?", "!")):
+        first += "."
+    shot = _shot(chapter=chapter, vo=vo, caption=first, **extra)
+    shot["term_text"] = chapter
+    shot["definition_text"] = first
+    return shot
+
+
 def bp02() -> list[dict]:
+    """Stewart, 9:13pm AEDT 20 Nov: course/BP02-v2-PROPOSED-SPOKEN.txt, verbatim."""
     s = [ident("02", "What you are going to need")]
-    s.append(_shot(
-        kind="analogy", analogy="list", chapter="Hook",
-        reveal=1,
-        vo=(
-            "Crypto is a digital coin, such as bitcoin, and a daily close is the last price of that day. "
-            "A band, also called the range, is the top and the bottom, a gap is the space between two lines, and the step is how wide that gap is. "
-            "A stop is the rule for what you will do if the price leaves the band. "
-            "Like a packing list before a trip, your page comes before any screen."
-        ),
-        caption="Write the page before any screen.",
+    s.append(legal())
+    s.append(_bp02_line(
+        "Hook",
+        "Crypto is a digital coin, such as bitcoin, and a daily close is the last price of that day. "
+        "A band, also called the range, is the top and the bottom, a gap is the space between two lines, "
+        "and the step is how wide that gap is. "
+        "A stop is the rule for what you will do if the price leaves the band. "
+        "Like a packing list before a trip, your page comes before any screen.",
+        kind="stack",
+        v2_cards=[
+            {"cue": "", "title": "Crypto", "lines": ["Crypto is a digital coin, such as bitcoin, and a daily close is the last price of that day."]},
+            {"cue": "a band", "title": "Band", "lines": ["A band, also called the range, is the top and the bottom."]},
+            {"cue": "a gap", "title": "Gap", "lines": ["A gap is the space between two lines."]},
+            {"cue": "the step", "title": "Step", "lines": ["The step is how wide that gap is."]},
+            {"cue": "a stop", "title": "Stop", "lines": ["A stop is the rule for what you will do if the price leaves the band."]},
+            {"cue": "packing list", "title": "The page", "lines": ["Like a packing list before a trip, your page comes before any screen."]},
+        ],
     ))
     s += stack("Objectives", [
         "By the end you will fill in a seven-item checklist on paper.",
         "You will keep every secret off that page.",
         "You will mark the page Example so nobody can read it as an order.",
     ], "")
-    s.append(legal())
-    s.append(_shot(
-        chapter="Seven items",
-        board="seven-lines",
-        reveal=1,
-        vo=(
-            "The seven items are: a notebook, the three words from lesson one, range, levels and stop, the pair, "
-            "paper or a demo account, no secrets, a written stop, and the word Example on every figure. "
-            "A pair is what you buy and what you pay with. For this course the pair is bitcoin priced in US dollars. "
-            "A demo account uses pretend money. "
-            "A daily close is the last price of the day. You are naming that public series, not choosing an app."
-        ),
-        caption="Seven items. The pair is the public series.",
-    ))
-    s.append(_shot(
-        chapter="The three words",
-        board="three-words",
-        reveal=1,
-        vo=(
-            "Three words, before any number. Range is the top line and the bottom line. "
-            "Levels are the price lines where orders wait, like the rungs of a ladder, and a gap is the space between two of them. "
-            "A stop is the rule for what you will do if a daily close finishes outside the band and the next daily close is still outside. "
-            "The figures from lesson 1 are on the card, marked Example. If you can only say one of the three words, the page is missing a part."
-        ),
-        caption="Range, levels, stop. All three from the same window.",
-    ))
-    s.append(_shot(
-        chapter="No secrets",
-        board="no-secrets",
-        reveal=1,
-        vo=(
-            "A seed phrase is the list of words that unlocks a crypto wallet. A private key or an API secret is a password that can move your money. "
-            "You never type a seed phrase, a private key, or an API secret onto this page. "
-            "The chart has no balance on it. A public close is not your account. "
-            "If a form asks for a secret, that form is not this lesson."
-        ),
-        caption="No key. No balance. Public closes only.",
-    ))
-    s.append(_shot(
-        chapter="Copy the path",
-        reveal=1,
-        vo=(
-            "You copy the band onto the page, not every day's prices. "
-            "Copy the bottom line and the top line, with six gaps of about 900. "
-            "Every close in that window stayed inside the band. Mark each figure Example."
-        ),
-        caption="Copy the band. Every close stayed inside it.",
-    ))
-    s.append(_shot(
-        kind="worked", chapter="Worked check",
-        items=[
-            "Pair: bitcoin, public daily closes.",
-            "Band: 24,930 to 30,331.",
-            "Gaps: six, about 900.",
-            "Stop sentence: written. Example: written.",
-        ],
-        vo=(
-            "Worked check: pair, band, gaps, stop, and Example. "
-            "If the stop line is only a tick with no sentence, the page fails the check. "
-            "The rule has to say: if a daily close finishes outside the band and the next daily close is still outside, the example is over."
-        ),
-        caption="A tick with no sentence fails the check.",
-    ))
-    for paragraph in (
-        "A page is the notebook you can hold. The screen is the exchange. Lesson 1 ended by asking you to bring the page. This lesson is that page.",
-        "Write today's date on the first line. Under it, write the word Example. Example means a real past price used for practice. It is not an order and not a forecast.",
-        "The seven items are the list you can point at. A notebook. The three words from lesson one, which are range, levels and stop. The pair. Paper or a demo. No secrets. A written stop. The word Example on every figure.",
-        "Write the pair first. For this course it is bitcoin priced in US dollars. Every other row depends on it. If a fee sum is in Australian dollars, that sum goes on its own line, labelled BTC/AUD. Do not put a US dollar price and an Australian dollar fee on the same row.",
-        "Range is the top line and the bottom line. On the summer chart those lines are 24,930 and 30,331. Both figures are Example. Levels are the lines between them. Six gaps of about 900 dollars sit between the top and the bottom.",
-        "The stop sentence has to say what you will do. Two daily closes outside the band, through the top or the bottom, and the second close still outside. Then you stop the bot, which cancels the waiting orders, and you follow the rule you wrote.",
-        "An exchange in Australia asks who you are before you can deposit. That check is the exchange's rule. You only upload identification inside the exchange's own app. This course does not name an exchange and does not show a balance.",
-        "Before you deposit, look the exchange up on the public register. The register says the business is listed. It does not say your money is protected.",
-        "A second code, as well as your password, is two-factor authentication. Turn that on before any real dollars. Then look for a paper or demo mode. Paper uses pretend money. That practice is lesson 7.",
-        "A maker fee is the charge when your order waits and someone else trades with it. A taker fee is the charge when your order fills straight away. A grid uses waiting orders, so read the maker fee first. In this example both are 0.1 percent.",
-        "On an example buy of 100 Australian dollars, 0.1 percent is 10 cents. The sell costs about 10 cents as well. The round trip is about 20 cents, which is 0.2 percent. This fee row is Australian dollars. It is not the summer bitcoin price.",
-        "If the gap is smaller than that 0.2 percent, the pair loses the fee before the price moves. Lesson 5 is where you test a gap against this fee. You do not pick a gap in this lesson.",
-        "A journal is the page you will open again in lesson 8 and lesson 10. For every buy, sell or swap, write the date and time, the amount, the value in Australian dollars at the time, the fee, which exchange or wallet, and what the trade was for. Export that history at least every three months. This is general information, not tax advice.",
-        "Leave two columns blank for now. One is for the fees. One is for whether you followed the rule. You fill those later. You do not fill them with a hope.",
-        "A seed phrase, a private key, or an API secret unlocks a wallet or an account. Nobody from this course will ask for one. If a message rushes you to send crypto, treat it as a scam. Moneysmart is the public Australian guide for that warning. Check it yourself. Do not read a web address aloud.",
-        "Read the page once, out loud. If a word on it has not been defined, stop and define it before you go on. Then close the notebook. The next lesson shows what the bot does, order by order.",
-    ):
-        s.append(_shot(
-            kind="stack",
-            chapter="On the page",
-            vo=paragraph,
-            caption=paragraph if len(paragraph) < 90 else paragraph[:87].rsplit(" ", 1)[0] + ".",
-            items=[paragraph if len(paragraph) < 110 else paragraph[:107].rsplit(" ", 1)[0] + "."],
-            index=0,
-        ))
-    s.append(_shot(
-        chapter="Say the page",
-        board="say-the-page",
-        reveal=1,
-        vo=(
-            "Say the page once, in your own words, and do not read the chart again. "
-            "Name the pair, the band, the gaps, and the stop rule, then stop. "
-            "A secret is a seed phrase, a private key, or an API secret. None of those go on this page. "
-            "You write Example on your own notebook so a practice sketch is never later mistaken for a live plan."
-        ),
-        caption="Say the page once. No secrets. Example is not an order.",
-    ))
-    s.append(_shot(
-        kind="stack",
-        chapter="Seven-item page",
-        vo="Recap: your page has seven items, each with a written fact, every figure marked Example, and no secrets on it.",
-        caption="Recap: your page has seven items, each with a written fact, every figure marked Example, and no secrets on it.",
-        items=["Recap: your page has seven items, each with a written fact, every figure marked Example, and no secrets on it."],
-        index=0,
+    for chapter, vo, cards in _BP02_BEATS:
+        shot = _bp02_line(chapter, vo, kind="stack", v2_cards=cards)
+        s.append(shot)
+    s.append(_bp02_line(
+        "Recap",
+        "Recap: your page has seven items, each with a written fact, every figure marked Example, and no secrets on it.",
+        kind="lesson-still",
+        lesson_still=str(ROOT / "course/images/bp-02-what-you-need/019.png"),
     ))
     s.append(outro("What is a grid bot", "see what the bot does, order by order."))
     return s
+
+
+def _cards(*rows: tuple[str, str, bool]) -> list[dict]:
+    """cue phrase, full lines joined by the caller, and whether the card needs an EXAMPLE chip."""
+    cards = []
+    for cue, text, example in rows:
+        cards.append({"cue": cue, "title": "", "lines": [text], "example": example})
+    if cards:
+        cards[0]["cue"] = ""
+    return cards
+
+
+_BP02_BEATS: list[tuple[str, str, list]] = [
+    (
+        "Seven items",
+        "The seven items are: a notebook, the three words from lesson one, range, levels and stop, the pair, "
+        "paper or a demo account, no secrets, a written stop, and the word Example on every figure. "
+        "Each item has a reason. The notebook is the plan you can check later. "
+        "The three words stop you drawing a grid with no edges. "
+        "The pair names what you buy and what you pay with. "
+        "Paper or a demo is learner plates, or training wheels. "
+        "No secrets keeps the keys off the page. The written stop is the action. "
+        "Example marks a teaching number. "
+        "For this course the pair is bitcoin priced in US dollars. "
+        "A demo account uses pretend money. A daily close is the last price of the day. "
+        "You are naming that public series, not choosing an app.",
+        _cards(
+            ("", "The seven items are: a notebook, the three words from lesson one, range, levels and stop, the pair, paper or a demo account, no secrets, a written stop, and the word Example on every figure.", False),
+            ("each item", "Each item has a reason. The notebook is the plan you can check later. The three words stop you drawing a grid with no edges.", False),
+            ("the pair names", "The pair names what you buy and what you pay with. Paper or a demo is learner plates, or training wheels.", False),
+            ("no secrets keeps", "No secrets keeps the keys off the page. The written stop is the action. Example marks a teaching number.", False),
+            ("for this course", "For this course the pair is bitcoin priced in US dollars. A demo account uses pretend money. A daily close is the last price of the day. You are naming that public series, not choosing an app.", False),
+        ),
+    ),
+    (
+        "The three words",
+        "Three words, before any number. Range is the top line and the bottom line. "
+        "An order is an instruction to buy or sell that can wait for a price. "
+        "Levels are the price lines where orders wait, like the rungs of a ladder, and a gap is the space between two of them. "
+        "A stop is the rule for what you will do if a daily close finishes outside the band and the next daily close is still outside. "
+        "The figures from lesson 1 are on the card, marked Example. "
+        "If you can only say one of the three words, the page is missing a part.",
+        [
+            {"cue": "", "title": "Three words", "lines": ["Three words, before any number. Range is the top line and the bottom line."]},
+            {"cue": "an order", "title": "Order", "lines": ["An order is an instruction to buy or sell that can wait for a price."]},
+            {"cue": "levels are", "title": "Levels", "lines": ["Levels are the price lines where orders wait, like the rungs of a ladder, and a gap is the space between two of them."]},
+            {"cue": "a stop is", "title": "Stop", "lines": ["A stop is the rule for what you will do if a daily close finishes outside the band and the next daily close is still outside."]},
+            {"cue": "the figures", "title": "Lesson 1 figures", "lines": ["The figures from lesson 1 are on the card, marked Example."], "classic": True, "example": True},
+            {"cue": "missing a", "title": "All three", "lines": ["If you can only say one of the three words, the page is missing a part."]},
+        ],
+    ),
+    (
+        "No secrets",
+        "A wallet is where your crypto is held. A seed phrase is the list of words that unlocks that wallet. "
+        "A private key is a secret that can move your crypto. "
+        "An API secret is a password that lets a program place orders on an account. "
+        "You never type a seed phrase, a private key, or an API secret onto this page. "
+        "The chart has no balance on it. A public close is not your account. "
+        "If a form asks for a secret, that form is not this lesson.",
+        _cards(
+            ("", "A wallet is where your crypto is held. A seed phrase is the list of words that unlocks that wallet.", False),
+            ("a private key", "A private key is a secret that can move your crypto. An API secret is a password that lets a program place orders on an account.", False),
+            ("you never", "You never type a seed phrase, a private key, or an API secret onto this page.", False),
+            ("no balance", "The chart has no balance on it. A public close is not your account.", True),
+            ("a form asks", "If a form asks for a secret, that form is not this lesson.", False),
+        ),
+    ),
+    (
+        "Copy the path",
+        "You copy the band onto the page, not every day's prices. "
+        "Copy the bottom line and the top line, with six gaps of about 900. "
+        "Every close in that window stayed inside the band. Mark each figure Example.",
+        _cards(
+            ("", "You copy the band onto the page, not every day's prices.", False),
+            ("copy the bottom", "Copy the bottom line and the top line, with six gaps of about 900.", True),
+            ("every close", "Every close in that window stayed inside the band. Mark each figure Example.", True),
+        ),
+    ),
+    (
+        "Worked check",
+        "Worked check: pair, band, gaps, stop, and Example. "
+        "If the stop line is only a tick with no sentence, the page fails the check. "
+        "The rule has to say: if a daily close finishes outside the band and the next daily close is still outside, the example is over.",
+        [
+            {"cue": "", "title": "Worked check", "lines": [
+                "Pair: bitcoin, public daily closes.",
+                "Band: 24,930 to 30,331.",
+                "Gaps: six, about 900.",
+                "Stop sentence: written. Example: written.",
+            ], "example": True, "rows": True},
+        ],
+    ),
+    (
+        "The page",
+        "A page is the notebook you can hold. The screen is the exchange. "
+        "An exchange is the app or website where people buy and sell crypto. "
+        "Lesson 1 ended by asking you to bring the page. This lesson is that page. "
+        "Open the notebook before any screen.",
+        _cards(
+            ("", "A page is the notebook you can hold. The screen is the exchange.", False),
+            ("an exchange is", "An exchange is the app or website where people buy and sell crypto.", False),
+            ("lesson 1 ended", "Lesson 1 ended by asking you to bring the page. This lesson is that page. Open the notebook before any screen.", False),
+        ),
+    ),
+    (
+        "The page",
+        "Write today's date on the first line. Under it, write the word Example. "
+        "Example means a real past price used for practice. It is not an order and not a forecast.",
+        _cards(
+            ("", "Write today's date on the first line. Under it, write the word Example.", False),
+            ("example means", "Example means a real past price used for practice. It is not an order and not a forecast.", False),
+        ),
+    ),
+    (
+        "The pair",
+        "Write the pair first. The base is what you buy. The quote is what you pay with. "
+        "For this course the prices are the summer bitcoin closes, so you buy the base, bitcoin, with the quote, US dollars, and that row is labelled BTC/USD. "
+        "Every other row depends on the pair. "
+        "If a fee sum is in Australian dollars, that sum goes on its own line, labelled BTC/AUD. "
+        "Do not put a US dollar price and an Australian dollar fee on the same row. "
+        "Do not mix the two currencies on one row.",
+        _cards(
+            ("", "Write the pair first. The base is what you buy. The quote is what you pay with.", False),
+            ("for this course", "For this course the prices are the summer bitcoin closes, so you buy the base, bitcoin, with the quote, US dollars, and that row is labelled BTC/USD.", False),
+            ("every other row", "Every other row depends on the pair. If a fee sum is in Australian dollars, that sum goes on its own line, labelled BTC/AUD.", False),
+            ("do not put", "Do not put a US dollar price and an Australian dollar fee on the same row. Do not mix the two currencies on one row.", False),
+        ),
+    ),
+    (
+        "The range",
+        "Range is the top line and the bottom line. On the summer chart those lines are 24,930 and 30,331. Both figures are Example. "
+        "Levels are the lines between them. Six gaps of about 900 dollars sit between the top and the bottom. "
+        "Write the top and the bottom only after you have said what a range is. "
+        "Then write one gap, and how you got it: the top minus the bottom, divided by the number of gaps.",
+        _cards(
+            ("", "Range is the top line and the bottom line. On the summer chart those lines are 24,930 and 30,331. Both figures are Example.", True),
+            ("levels are", "Levels are the lines between them. Six gaps of about 900 dollars sit between the top and the bottom.", True),
+            ("write the top", "Write the top and the bottom only after you have said what a range is. Then write one gap, and how you got it: the top minus the bottom, divided by the number of gaps.", True),
+        ),
+    ),
+    (
+        "The stop",
+        "The stop sentence has to say what you will do. "
+        "A bot is a program that places and cancels the waiting orders for you. "
+        "Two daily closes outside the band, through the top or the bottom, and the second close still outside. "
+        "Then you stop the bot, which cancels the waiting orders, and you follow the rule you wrote. "
+        "Write that stop in one sentence.",
+        _cards(
+            ("", "The stop sentence has to say what you will do.", False),
+            ("a bot is", "A bot is a program that places and cancels the waiting orders for you.", False),
+            ("two daily", "Two daily closes outside the band, through the top or the bottom, and the second close still outside.", False),
+            ("then you stop", "Then you stop the bot, which cancels the waiting orders, and you follow the rule you wrote. Write that stop in one sentence.", False),
+        ),
+    ),
+    (
+        "Account in Australia",
+        "A deposit is crypto or Australian dollars you send into an account at an exchange. "
+        "An exchange in Australia asks who you are before you can deposit. "
+        "That check is required by Australian anti-money laundering law, and the exchange runs it, not this course. "
+        "You only upload identification inside the exchange's own app. "
+        "This course does not name an exchange and does not show a balance. "
+        "Before you deposit, look the exchange up on AUSTRAC's public register. "
+        "Any exchange offering crypto services in Australia must register with AUSTRAC, Australia's financial crime regulator, as a virtual asset service provider. "
+        "AUSTRAC keeps a public register you can search. Check that register before you sign up. "
+        "The register says the business is listed. It does not say your money is protected. "
+        "Registration is not a safety guarantee. "
+        "ASIC is Australia's financial services regulator. "
+        "From April 2027, new licensing rules for platforms that hold crypto for you are phased in through that year. "
+        "Check ASIC for the current position. This lesson names only government bodies, never an exchange.",
+        _cards(
+            ("", "A deposit is crypto or Australian dollars you send into an account at an exchange.", False),
+            ("an exchange in", "An exchange in Australia asks who you are before you can deposit. That check is required by Australian anti-money laundering law, and the exchange runs it, not this course.", False),
+            ("you only upload", "You only upload identification inside the exchange's own app. This course does not name an exchange and does not show a balance.", False),
+            ("before you deposit", "Before you deposit, look the exchange up on AUSTRAC's public register.", False),
+            ("any exchange offering", "Any exchange offering crypto services in Australia must register with AUSTRAC, Australia's financial crime regulator, as a virtual asset service provider.", False),
+            ("austrac keeps", "AUSTRAC keeps a public register you can search. Check that register before you sign up.", False),
+            ("the register says", "The register says the business is listed. It does not say your money is protected. Registration is not a safety guarantee.", False),
+            ("asic is", "ASIC is Australia's financial services regulator. From April 2027, new licensing rules for platforms that hold crypto for you are phased in through that year.", False),
+            ("check asic", "Check ASIC for the current position. This lesson names only government bodies, never an exchange.", False),
+        ),
+    ),
+    (
+        "Two-factor",
+        "A second code, as well as your password, is two-factor authentication. "
+        "Turn that on before any real dollars. Then look for a paper or demo mode. "
+        "Paper uses pretend money. That practice is lesson 7.",
+        _cards(
+            ("", "A second code, as well as your password, is two-factor authentication. Turn that on before any real dollars.", False),
+            ("then look", "Then look for a paper or demo mode. Paper uses pretend money. That practice is lesson 7.", False),
+        ),
+    ),
+    (
+        "Fees",
+        "A fill is an order that actually trades. "
+        "A maker fee is the charge when your order waits and someone else trades with it. "
+        "A taker fee is the charge when your order fills straight away. "
+        "A grid uses waiting orders, so read the maker fee first. "
+        "Some bots also pay a taker fee when they first start. In this example both are 0.1 percent. "
+        "On an example buy of 100 Australian dollars, 0.1 percent is 10 cents. "
+        "The sell costs about 10 cents as well. "
+        "The round trip is about 20 cents, which is 0.2 percent. "
+        "This fee row is Australian dollars. It is not the summer bitcoin price. "
+        "If the gap is smaller than that 0.2 percent, each completed buy and sell costs more in fees than the gap is worth. "
+        "Lesson 5 is where you test a gap against this fee. You do not pick a gap in this lesson.",
+        _cards(
+            ("", "A fill is an order that actually trades. A maker fee is the charge when your order waits and someone else trades with it. A taker fee is the charge when your order fills straight away.", False),
+            ("a grid uses", "A grid uses waiting orders, so read the maker fee first. Some bots also pay a taker fee when they first start. In this example both are 0.1 percent.", True),
+            ("100 australian", "On an example buy of 100 Australian dollars, 0.1 percent is 10 cents.", True),
+            ("the sell costs", "The sell costs about 10 cents as well.", True),
+            ("the round trip", "The round trip is about 20 cents, which is 0.2 percent.", True),
+            ("this fee row", "This fee row is Australian dollars. It is not the summer bitcoin price.", True),
+            ("if the gap", "If the gap is smaller than that 0.2 percent, each completed buy and sell costs more in fees than the gap is worth. Lesson 5 is where you test a gap against this fee. You do not pick a gap in this lesson.", True),
+        ),
+    ),
+    (
+        "Stablecoin",
+        "A stablecoin is a coin designed to stay near the value of a currency such as the US dollar. It can still lose that value. "
+        "A swap is trading one coin for another. If the price is in a stablecoin, every fill is a swap, and each one goes in the journal.",
+        _cards(
+            ("", "A stablecoin is a coin designed to stay near the value of a currency such as the US dollar. It can still lose that value.", False),
+            ("a swap is", "A swap is trading one coin for another. If the price is in a stablecoin, every fill is a swap, and each one goes in the journal.", False),
+        ),
+    ),
+    (
+        "Journal",
+        "A trading journal is a dated record of every bot: the plan, the changes, the fills, the fees, a review note of what happened, and whether you followed the rules. "
+        "That note is not money you made. It is also the page you will open again in lesson 8 and lesson 10. "
+        "For every transaction, including a buy, a sell, a swap, or a transfer, write the date and time, the amount, the value in Australian dollars at the time, the fee, which exchange or wallet, what it was for, and who the other side was. "
+        "The columns are the date, the pair, the band, the gaps, the money in the bot, the stop rule, the fills, the fees, the Australian dollar value of each fill, a review note, and a yes or no for the rules. "
+        "Download your exchange's transaction history at least every three months. Keep those records for at least five years. "
+        "This is general information, not tax advice. "
+        "Leave two columns blank for now. One is for the fees. One is for whether you followed the rule. "
+        "You fill those later. You do not fill them with a hope.",
+        _cards(
+            ("", "A trading journal is a dated record of every bot: the plan, the changes, the fills, the fees, a review note of what happened, and whether you followed the rules. That note is not money you made.", False),
+            ("it is also", "It is also the page you will open again in lesson 8 and lesson 10.", False),
+            ("for every transaction", "For every transaction, including a buy, a sell, a swap, or a transfer, write the date and time, the amount, the value in Australian dollars at the time, the fee, which exchange or wallet, what it was for, and who the other side was.", False),
+            ("the columns", "The columns are the date, the pair, the band, the gaps, the money in the bot, the stop rule, the fills, the fees, the Australian dollar value of each fill, a review note, and a yes or no for the rules.", False),
+            ("download your", "Download your exchange's transaction history at least every three months. Keep those records for at least five years. This is general information, not tax advice.", False),
+            ("leave two", "Leave two columns blank for now. One is for the fees. One is for whether you followed the rule. You fill those later. You do not fill them with a hope.", False),
+        ),
+    ),
+    (
+        "Scams",
+        "Nobody from this course will ask for a seed phrase, a private key, or an API secret. "
+        "If a message rushes you to send crypto, or asks for one of those, treat it as a scam. It is not this course.",
+        _cards(
+            ("", "Nobody from this course will ask for a seed phrase, a private key, or an API secret.", False),
+            ("if a message", "If a message rushes you to send crypto, or asks for one of those, treat it as a scam. It is not this course.", False),
+        ),
+    ),
+    (
+        "Moneysmart",
+        "ASIC's Moneysmart website is the public Australian guide for scam warnings. Check it yourself.",
+        _cards(
+            ("", "ASIC's Moneysmart website is the public Australian guide for scam warnings. Check it yourself.", False),
+        ),
+    ),
+    (
+        "Say the page",
+        "Say the page once, in your own words, and do not read the chart again. "
+        "Name the pair, the band, the gaps, and the stop rule, then stop. "
+        "If a word on it has not been defined, stop and define it before you go on. "
+        "A secret is a seed phrase, a private key, or an API secret. None of those go on this page. "
+        "You write Example on your own notebook so a practice sketch is never later mistaken for a live plan.",
+        _cards(
+            ("", "Say the page once, in your own words, and do not read the chart again.", False),
+            ("name the pair", "Name the pair, the band, the gaps, and the stop rule, then stop.", False),
+            ("if a word", "If a word on it has not been defined, stop and define it before you go on.", False),
+            ("a secret is", "A secret is a seed phrase, a private key, or an API secret. None of those go on this page.", False),
+            ("you write example", "You write Example on your own notebook so a practice sketch is never later mistaken for a live plan.", True),
+        ),
+    ),
+]
+
 
 
 def bp03() -> list[dict]:

@@ -522,7 +522,7 @@ def _attach_lesson_stills(sid: str, shots: list[dict]) -> None:
                     continue
                 if shot.get("kind") in {"brand", "disclaimer", "outro", "chart"}:
                     continue
-                if shot.get("candle"):
+                if shot.get("candle") or shot.get("v2_cards") or shot.get("lesson_still"):
                     continue
                 if str(shot.get("chapter") or "").strip().lower() in aliases:
                     target = shot
@@ -622,7 +622,9 @@ def plan(sid: str) -> list[dict]:
         )
         guard(blob)
         shot["example"] = bool(re.search(r"\d", blob))
-        shot["vo"] = _speak_round(shot.get("vo") or "")
+        # BP-02 v2 speaks 24,930 and 30,331. The round-number swap would erase them.
+        if shot.get("lesson_id") != "bp-02-what-you-need":
+            shot["vo"] = _speak_round(shot.get("vo") or "")
     return shots
 
 
@@ -1311,6 +1313,7 @@ def _hero(
     chip_x: int | None = None,
     chip_beside: bool = False,
     secrets_line: str | None = None,
+    buy_label: str = "BUY 27,630",
 ) -> None:
     """Lesson visual. path and orders use the real summer closes, not a sawtooth."""
     draw = ImageDraw.Draw(base)
@@ -1397,7 +1400,7 @@ def _hero(
         y_line = _map(0, n, 27630, lo_p, hi_p, plot)[1]
         draw.line([(plot[0], y_line), (plot[2], y_line)], fill=CYAN, width=2)
         face = font(28)
-        text = "BUY 27,630"
+        text = buy_label
         tw = int(face.getlength(text)) + 24
         if chip_beside:
             # Left of the card, on the clear side of the line, so it misses the path.
@@ -1854,8 +1857,128 @@ def paint_idea(base: Image.Image, shot: dict, local: float) -> None:
         draw.text((left + 16, 584), "Part cash and part coin", font=font(32), fill=CYAN)
 
 
+def _v2_index(shot: dict, local: float) -> int:
+    cards = list(shot.get("v2_cards") or [])
+    if not cards:
+        return 0
+    forced = shot.get("v2_show")
+    if forced is not None:
+        return max(0, min(int(forced), len(cards) - 1))
+    shown = 0
+    for index, card in enumerate(cards):
+        cue = (card.get("cue") or "").strip()
+        if index == 0 or (cue and _spoken(shot, local, cue)):
+            shown = index
+    return shown
+
+
+def _paint_fitted_card(base: Image.Image, title: str, lines: list[str], example: bool = False) -> None:
+    """Every word of the sentence, inside the area above the burned caption."""
+    draw = ImageDraw.Draw(base)
+    box = (MX, 176, RIGHT, 708)
+    draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=3)
+    width = box[2] - box[0] - 72
+    body = [line for line in lines if line]
+    chosen = None
+    for size in range(40, 25, -2):
+        title_size = min(size + 6, 44)
+        title_lines = wrap(title, title_size, width) if title else []
+        wrapped: list[str] = []
+        for sentence in body:
+            wrapped.extend(wrap(sentence, size, width) or [sentence])
+        block = 28 + len(title_lines) * (title_size + 8) + 12 + len(wrapped) * (size + 12)
+        if example:
+            block += 64
+        if block <= box[3] - box[1] - 36:
+            chosen = (title_size, size, title_lines, wrapped)
+            break
+    if chosen is None:
+        size = 26
+        title_size = 32
+        title_lines = wrap(title, title_size, width) if title else []
+        wrapped = []
+        for sentence in body:
+            wrapped.extend(wrap(sentence, size, width) or [sentence])
+        chosen = (title_size, size, title_lines, wrapped)
+    title_size, size, title_lines, wrapped = chosen
+    y = box[1] + 28
+    for line in title_lines:
+        draw.text((box[0] + 36, y), line, font=font(title_size), fill=CYAN)
+        y += title_size + 8
+    if title_lines:
+        y += 8
+    for line in wrapped:
+        draw.text((box[0] + 36, y), line, font=font(size), fill=WHITE)
+        y += size + 12
+    if example:
+        _example(draw, box[0] + 36, min(y + 8, box[3] - 64))
+
+
+def _paint_worked_rows(base: Image.Image) -> None:
+    """Four rows, the stop row included, and an EXAMPLE chip on every figure."""
+    draw = ImageDraw.Draw(base)
+    rows = [
+        ("Pair: bitcoin, public daily closes.", False),
+        ("Band: 24,930 to 30,331.", True),
+        ("Gaps: six, about 900.", True),
+        ("Stop sentence: written. Example: written.", True),
+    ]
+    y = 188
+    for text, marked in rows:
+        draw.rounded_rectangle([MX, y, RIGHT, y + 112], 16, fill=GLASS, outline=CYAN, width=2)
+        draw.text((MX + 28, y + 34), text, font=font(36), fill=WHITE)
+        if marked:
+            _example(draw, RIGHT - 220, y + 32)
+        y += 124
+
+
+def _paint_three_words_classic(base: Image.Image) -> None:
+    """The passed three-words board: 24,930 to 30,331, and Leaves 30,331."""
+    draw = ImageDraw.Draw(base)
+    cards = [
+        ("Range", "24,930 to 30,331", "band"),
+        ("Levels", "Six gaps. About 900.", "ladder"),
+        ("Stop", "Leaves 30,331.", "stop"),
+    ]
+    y = 200
+    for title, body, kind in cards:
+        draw.rounded_rectangle([MX, y, RIGHT, y + 150], 16, fill=GLASS, outline=CYAN, width=2)
+        _row_icon(draw, MX + 56, y + 75, kind)
+        draw.text((MX + 110, y + 40), title, font=font(52), fill=CYAN)
+        draw.text((MX + 420, y + 48), body, font=font(44), fill=WHITE)
+        pic = 1540
+        if kind == "band":
+            draw.line([(pic, y + 52), (pic + 180, y + 52)], fill=CYAN, width=4)
+            draw.line([(pic, y + 96), (pic + 180, y + 96)], fill=CYAN, width=4)
+        else:
+            _row_icon(draw, pic + 90, y + 75, kind)
+        y += 170
+    pill_w = int(font(36).getlength("EXAMPLE")) + 36
+    _example(draw, RIGHT - 24 - pill_w, 78)
+
+
+def paint_v2_cards(base: Image.Image, shot: dict, local: float) -> None:
+    cards = list(shot.get("v2_cards") or [])
+    card = cards[_v2_index(shot, local)]
+    if card.get("classic"):
+        _paint_three_words_classic(base)
+        return
+    if card.get("rows"):
+        _paint_worked_rows(base)
+        return
+    _paint_fitted_card(
+        base,
+        str(card.get("title") or shot.get("chapter") or ""),
+        list(card.get("lines") or []),
+        example=bool(card.get("example")),
+    )
+
+
 def paint_stack(base: Image.Image, shot: dict, local: float) -> None:
     draw = ImageDraw.Draw(base)
+    if shot.get("v2_cards") and shot.get("lesson_id") == "bp-02-what-you-need":
+        paint_v2_cards(base, shot, local)
+        return
     vo = shot.get("vo") or ""
     if shot.get("lesson_id") == "bp-02-what-you-need" and (
         vo.startswith("A journal is the page you will open again")
@@ -2180,7 +2303,10 @@ def paint_outro(base: Image.Image, shot: dict, local: float) -> None:
     draw = ImageDraw.Draw(base)
     _kicker, lesson_label, cta = next_lesson_label(shot)
     title = (shot.get("caption") or "End of the Blueprint").strip().rstrip(".")
-    draw.text((MX, 72), "GridBot Builder", font=font(40), fill=WHITE)
+    if shot.get("lesson_id") == "bp-02-what-you-need":
+        paste(base, scaled(wordmark(), 78), (MX, 56))
+    else:
+        draw.text((MX, 72), "GridBot Builder", font=font(40), fill=WHITE)
     draw.text((MX, 220), "NEXT", font=font(28), fill=CYAN)
     draw.text((MX, 268), lesson_label, font=font(40), fill=CYAN)
     y = 340
@@ -2201,6 +2327,7 @@ def paint_outro(base: Image.Image, shot: dict, local: float) -> None:
         base, hero_box, mode,
         chip_dx=-40 if mode == "orders" else 0,
         secrets_line=secrets_line,
+        buy_label="Example buy level 27,630" if shot.get("lesson_id") == "bp-02-what-you-need" else "BUY 27,630",
     )
     place_mascot(base, shot, (96, 420, 320, 540) if shot.get("lesson_id") == "bp-01-introduction" else (96, 430, 360, 640))
     if shot.get("lesson_id") == "bp-01-introduction":
