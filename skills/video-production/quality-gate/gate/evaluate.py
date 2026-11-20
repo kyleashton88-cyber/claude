@@ -29,6 +29,21 @@ SUPERSEDES = (
 )
 
 
+def caption_gap_pixels(path: Path) -> int:
+    """Bright pixels in the band just above the burned caption.
+
+    Teaching ink ends by y=700. The caption starts at y=764. A chart line or
+    a label in y=732–762 is sitting under the cue.
+    """
+    from PIL import Image
+
+    frame = Image.open(path).convert("RGB")
+    if frame.size[1] < 900:
+        return 0
+    crop = frame.crop((96, 732, frame.size[0] - 96, 762))
+    return sum(1 for pixel in crop.get_flattened_data() if max(pixel) > 100)
+
+
 def _palette_problems(path: Path) -> str:
     """Navy, cyan and white only. Amber, mint, teal and off-cyan blue fail."""
     import numpy as np
@@ -206,6 +221,7 @@ def evaluate(
     ocr_text = ""
     margin_problems: list[str] = []
     palette_problems: list[str] = []
+    gap_problems: list[str] = []
     ocr_error = None
     if tesseract_path() is None:
         ocr_error = (
@@ -224,6 +240,12 @@ def evaluate(
                     ocr_error = str(exc)
                     break
                 ocr_text += "\n" + text
+                if profile.name == "blueprint" and 8 <= second <= duration - 25:
+                    ink = caption_gap_pixels(png)
+                    if ink > 800:
+                        gap_problems.append(
+                            f"{second:.0f}s has {ink} bright pixels in the caption gap"
+                        )
                 width = video.get("width") or 0
                 height = video.get("height") or 0
                 hits = margin_hits(boxes, width, height, profile) if width and height else []
@@ -301,6 +323,14 @@ def evaluate(
             ok_detail="on-screen figures match the lesson, and each one is labelled EXAMPLE",
         )
     )
+    if profile.name == "blueprint":
+        checks.append(
+            _check(
+                "caption_clearance",
+                gap_problems,
+                ok_detail="no teaching ink in the band above the burned caption",
+            )
+        )
     return _payload(master, profile, checks)
 
 

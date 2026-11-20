@@ -28,7 +28,7 @@ SPECS: dict[str, dict] = {
     "BP01-V04": {
         "title": "One bounce = one pair",
         "rows": [
-            "EXAMPLE. Buy 26,730",
+            "EXAMPLE. Buy 0.01 bitcoin at 26,730",
             "EXAMPLE. Sell 27,630",
             "Pairs on these closes: 1, then 2, then 3",
             "Illustration, not the real order of fills",
@@ -38,11 +38,11 @@ SPECS: dict[str, dict] = {
     "BP01-V05": {
         "title": "One pair, after fees",
         "rows": [
-            "EXAMPLE. 17 Aug buy 0.01 BTC at 26,730 = US$267.30",
-            "EXAMPLE. 29 Aug sell 0.01 BTC at 27,630 = US$276.30",
-            "EXAMPLE. Gross US$9.00",
+            "EXAMPLE. 17 Aug buy 0.01 bitcoin at 26,730 = US$267.30",
+            "EXAMPLE. 29 Aug sell 0.01 bitcoin at 27,630 = US$276.30",
+            "EXAMPLE. Before fees US$9.00",
             "EXAMPLE. Fees 0.1% + 0.1% = US$0.54",
-            "EXAMPLE. Net about US$8.46",
+            "EXAMPLE. After fees, net about US$8.46",
             "Only if price comes back up. Not a forecast.",
         ],
     },
@@ -61,9 +61,9 @@ SPECS: dict[str, dict] = {
         "title": "EXAMPLE, made up",
         "rows": [
             "EXAMPLE, made up. Not a real fill.",
-            "EXAMPLE. 0.01 BTC at 27,630 = US$276.30",
-            "EXAMPLE. 0.01 BTC at 26,730 = US$267.30",
-            "EXAMPLE. 0.01 BTC at 25,830 = US$258.30",
+            "EXAMPLE. 0.01 bitcoin at 27,630 = US$276.30",
+            "EXAMPLE. 0.01 bitcoin at 26,730 = US$267.30",
+            "EXAMPLE. 0.01 bitcoin at 25,830 = US$258.30",
             "EXAMPLE. Together US$801.90",
             "EXAMPLE. Made-up price 24,000: worth US$720",
             "EXAMPLE. Down US$81.90 before fees.",
@@ -400,7 +400,7 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
     if (shot.get("chapter") or "") == "The stop" and shot.get("lesson_id") == "bp-01-introduction":
         october_at = ui._word_at(shot, "october")
         if october_at is not None and local >= october_at:
-            box = (ui.MX, 200, ui.RIGHT, 750)
+            box = (ui.MX, 200, ui.RIGHT, 700)
             draw.rounded_rectangle(box, 22, fill=ui.GLASS, outline=ui.CYAN, width=3)
             ui._example(draw, box[0] + 36, box[1] + 28)
             draw.text((box[0] + 36, box[1] + 100), "23 October 2023", font=ui.font(48), fill=ui.WHITE)
@@ -412,7 +412,7 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
     if (shot.get("chapter") or "") == "One pair" and shot.get("lesson_id") == "bp-01-introduction":
         bottom_at = ui._word_at(shot, "bottom")
         if bottom_at is not None and local >= bottom_at:
-            box = (ui.MX, 200, ui.RIGHT, 750)
+            box = (ui.MX, 200, ui.RIGHT, 700)
             draw.rounded_rectangle(box, 22, fill=ui.GLASS, outline=ui.CYAN, width=3)
             ui._example(draw, box[0] + 36, box[1] + 28)
             draw.text((box[0] + 36, box[1] + 110), "Through the bottom", font=ui.font(48), fill=ui.WHITE)
@@ -422,6 +422,15 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
                 draw.text((box[0] + 36, box[1] + 390), "This card is not money you made.", font=ui.font(36), fill=ui.CYAN)
             return
     rows = list(spec["rows"])
+    chapter = shot.get("chapter") or ""
+    if chapter == "The stop" and shot.get("lesson_id") == "bp-01-introduction":
+        october_at = ui._word_at(shot, "october")
+        if october_at is None or local < october_at:
+            rows = [row for row in rows if "Oct" not in row and "33," not in row]
+    if chapter == "How a grid can capture bounces":
+        buy_at = ui._phrase_at(shot, "one buy")
+        if buy_at is None or local < buy_at:
+            rows = [row for row in rows if "26,730" not in row]
     spans = list(shot.get("sentence_spans") or [])
     shown = len(rows)
     paced = shot.get("lesson_id") == "bp-01-introduction" and (shot.get("chapter") or "") in {
@@ -440,8 +449,12 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
     y = 220
     step = 72 if len(rows) > 6 else 86
     row_h = 62 if len(rows) > 6 else 74
-    accent = int(local // 8) % max(1, shown) if paced else -1
+    accent = int(local // 8) % max(1, shown) if paced or chapter == "The stop" else -1
+    made_at = ui._phrase_at(shot, "made up") if chapter == "Downside" else None
     for index, text in enumerate(rows[:shown]):
+        if chapter == "Downside" and text.startswith("EXAMPLE, made up") and (made_at is None or local < made_at):
+            y += step
+            continue
         outline = ui.WHITE if index == accent else ui.CYAN
         draw.rounded_rectangle(
             [ui.MX, y, ui.RIGHT, y + row_h], 14, fill=ui.GLASS, outline=outline, width=4 if index == accent else 2,
@@ -449,7 +462,7 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
         size = 32 if ui.font(32).getlength(text) < (ui.W - 2 * ui.MX - 80) else 26
         draw.text((ui.MX + 28, y + 14), text, font=ui.font(size), fill=ui.WHITE)
         y += step
-        if y > 760:
+        if y > 700:
             break
     if paced and (shot.get("chapter") or "") == "One pair":
         bar = [ui.MX + 520, 168, ui.MX + 980, 196]

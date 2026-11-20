@@ -15,7 +15,7 @@ sys.path.insert(0, str(HERE))
 
 from gate.captions import caption_coverage_problems, caption_problems, parse_captions  # noqa: E402
 from gate.numbers import find_dates, lesson_figures, number_problems, screen_figures  # noqa: E402
-from gate.evaluate import evaluate  # noqa: E402
+from gate.evaluate import caption_gap_pixels, evaluate  # noqa: E402
 from gate.media import black_runs, gray_frames, judge_loudness, longest_static  # noqa: E402
 from gate.profiles import PROFILES, get_profile, length_ok  # noqa: E402
 from gate.synth import encode_black_gap, encode_clip, write_pass_captions  # noqa: E402
@@ -75,6 +75,23 @@ class CaptionTests(unittest.TestCase):
             "This caption line is deliberately longer than forty-two characters.\n"
         )
         self.assertTrue(any("characters" in item for item in caption_problems(long_line, profile)))
+
+    def test_caption_gap_sees_a_line_above_the_cue(self):
+        from PIL import Image
+
+        folder = Path(tempfile.mkdtemp())
+        try:
+            clear = folder / "clear.png"
+            Image.new("RGB", (1920, 1080), (8, 16, 32)).save(clear)
+            self.assertEqual(caption_gap_pixels(clear), 0)
+            hit = Image.new("RGB", (1920, 1080), (8, 16, 32))
+            for x in range(200, 1600):
+                hit.putpixel((x, 746), (0, 212, 255))
+            path = folder / "hit.png"
+            hit.save(path)
+            self.assertGreater(caption_gap_pixels(path), 800)
+        finally:
+            shutil.rmtree(folder)
 
     def test_speech_gap_and_early_ending(self):
         covered = parse_captions(

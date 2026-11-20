@@ -3,7 +3,7 @@
 Result: **PASS**
 
 Format: Blueprint lesson (`blueprint`), 600s–900s.
-Master: `course/blueprint-rebuild/masters/bp-01-introduction.mp4`
+Master: `/agent/repos/claude/course/blueprint-rebuild/masters/bp-01-introduction.mp4`
 
 Loudness fails the gate when it is outside the window. It is not only printed.
 Target -14.0 LUFS ± 1.0, true peak at or below -1.0 dBTP.
@@ -33,6 +33,7 @@ Blueprint lessons keep the 6-minute minimum. The 10-minute upper cap is removed.
 | palette | PASS | sampled frames stay navy, cyan and white |
 | disclaimer | PASS | found an education line that says not financial advice |
 | figures | PASS | on-screen figures match the lesson, and each one is labelled EXAMPLE |
+| caption_clearance | PASS | no teaching ink in the band above the burned caption |
 
 Every check passed.
 

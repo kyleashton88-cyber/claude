@@ -930,7 +930,7 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
             return
     draw = ImageDraw.Draw(base)
     if box is None:
-        box = (MX, 180, RIGHT, 752)
+        box = (MX, 180, RIGHT, 690)
     draw.rounded_rectangle(box, 22, fill=GLASS, outline=LINE, width=2)
     series = _series(shot)
     title = shot.get("chart_title") or ""
@@ -1497,7 +1497,7 @@ def _row_icon(draw: ImageDraw.ImageDraw, x: int, y: int, kind: str) -> None:
 def paint_copy_band(base: Image.Image) -> None:
     """The page copies the band, not every day's price."""
     draw = ImageDraw.Draw(base)
-    box = (MX, 200, RIGHT, 760)
+    box = (MX, 200, RIGHT, 700)
     draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
     draw.text((box[0] + 36, box[1] + 28), "Copy the band", font=font(48), fill=WHITE)
     rows = (
@@ -1609,6 +1609,19 @@ def _word_at(shot: dict, *needles: str) -> float | None:
     return None
 
 
+def _phrase_at(shot: dict, phrase: str) -> float | None:
+    """Start time of the first spoken phrase in this shot."""
+    words = shot.get("word_times") or []
+    tokens = [part for part in phrase.lower().split() if part]
+    if not words or not tokens:
+        return None
+    norm = [str(text).lower().strip(".,;:!?\"'") for text, _start, _end in words]
+    for index in range(len(norm) - len(tokens) + 1):
+        if norm[index:index + len(tokens)] == tokens:
+            return float(words[index][1])
+    return None
+
+
 def _draw_named_rows(draw: ImageDraw.ImageDraw, rows: list[tuple[str, str]]) -> None:
     y = 210
     left = MX + 28
@@ -1623,7 +1636,7 @@ def _draw_named_rows(draw: ImageDraw.ImageDraw, rows: list[tuple[str, str]]) -> 
 def paint_worked_check(base: Image.Image, shot: dict, local: float, worked_at: float) -> None:
     """The card that replaces the window chart when 'Worked check' is spoken."""
     draw = ImageDraw.Draw(base)
-    box = (MX, 200, RIGHT, 750)
+    box = (MX, 200, RIGHT, 700)
     draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
     _example(draw, box[0] + 36, box[1] + 28)
     draw.text((box[0] + 36, box[1] + 88), "Worked check", font=font(48), fill=WHITE)
@@ -1643,7 +1656,7 @@ def paint_worked_check(base: Image.Image, shot: dict, local: float, worked_at: f
 def paint_crossings(base: Image.Image, shot: dict, local: float) -> None:
     """One crossing first, then a finished pair when that word is spoken."""
     draw = ImageDraw.Draw(base)
-    box = (MX, 200, RIGHT, 750)
+    box = (MX, 200, RIGHT, 700)
     draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
     draw.text((box[0] + 36, box[1] + 24), "A crossing is not a finished pair", font=font(36), fill=WHITE)
     pair_at = _word_at(shot, "pair")
@@ -1684,9 +1697,9 @@ def paint_crossings(base: Image.Image, shot: dict, local: float) -> None:
 def paint_idea(base: Image.Image, shot: dict, local: float) -> None:
     """Reveal the band, then the buys, then the sells, so the card does not sit still."""
     draw = ImageDraw.Draw(base)
-    box = (MX, 200, RIGHT, 750)
+    box = (MX, 200, RIGHT, 700)
     draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
-    draw.text((box[0] + 36, box[1] + 24), "A grid bot places the orders", font=font(32), fill=WHITE)
+    draw.text((box[0] + 36, box[1] + 12), "A grid bot places the orders", font=font(32), fill=WHITE)
     buy_at = _word_at(shot, "buy", "buys")
     sell_at = _word_at(shot, "sell", "sells")
     band_at = _word_at(shot, "band")
@@ -1701,20 +1714,21 @@ def paint_idea(base: Image.Image, shot: dict, local: float) -> None:
     show_sell = due(sell_at) or local >= 15
     show_cash = due(cash_at) or local >= 15
     left, right = box[0] + 80, box[2] - 80
+    mid = (left + right) // 2
     if show_band:
-        draw.rounded_rectangle([left, 250, right, 300], 8, fill=TAG, outline=WHITE, width=3)
-        draw.text((left + 16, 258), "Top of the band", font=font(28), fill=WHITE)
-        draw.rounded_rectangle([left, 520, right, 570], 8, fill=TAG, outline=WHITE, width=3)
-        draw.text((left + 16, 528), "Bottom of the band", font=font(28), fill=WHITE)
-    if show_buy:
-        draw.rounded_rectangle([left, 430, (left + right) // 2 - 12, 510], 8, fill=(0, 48, 64), outline=CYAN, width=3)
-        draw.text((left + 16, 454), "Buys below", font=font(32), fill=CYAN)
+        draw.rounded_rectangle([left, 268, right, 316], 8, fill=TAG, outline=WHITE, width=3)
+        draw.text((left + 16, 276), "Top of the band", font=font(28), fill=WHITE)
+        draw.rounded_rectangle([left, 496, right, 548], 8, fill=TAG, outline=WHITE, width=3)
+        draw.text((left + 16, 504), "Bottom of the band", font=font(28), fill=WHITE)
     if show_sell:
-        draw.rounded_rectangle([(left + right) // 2 + 12, 320, right, 410], 8, fill=TAG, outline=WHITE, width=3)
-        draw.text(((left + right) // 2 + 28, 348), "Sells above", font=font(32), fill=WHITE)
+        draw.rounded_rectangle([mid + 12, 332, right, 400], 8, fill=TAG, outline=WHITE, width=3)
+        draw.text((mid + 28, 350), "Sells above", font=font(32), fill=WHITE)
+    if show_buy:
+        draw.rounded_rectangle([left, 406, mid - 12, 480], 8, fill=(0, 48, 64), outline=CYAN, width=3)
+        draw.text((left + 16, 428), "Buys below", font=font(32), fill=CYAN)
     if show_cash:
-        draw.rounded_rectangle([left, 460, right, 530], 8, fill=(0, 40, 56), outline=CYAN, width=3)
-        draw.text((left + 16, 478), "Part cash and part coin", font=font(32), fill=CYAN)
+        draw.rounded_rectangle([left, 564, right, 640], 8, fill=(0, 40, 56), outline=CYAN, width=3)
+        draw.text((left + 16, 584), "Part cash and part coin", font=font(32), fill=CYAN)
 
 
 def paint_stack(base: Image.Image, shot: dict, local: float) -> None:
@@ -1780,6 +1794,10 @@ def paint_stack(base: Image.Image, shot: dict, local: float) -> None:
     for line in lines:
         draw.text((MX + 36, y), line, font=font(44), fill=WHITE)
         y += 58
+    if (shot.get("chapter") or "") == "Your turn" and index == 2 and local >= 12:
+        top = 210 + card_h + 28
+        draw.rounded_rectangle([MX, top, RIGHT, top + 110], 18, fill=GLASS, outline=WHITE, width=3)
+        draw.text((MX + 36, top + 32), "Paper or demo. No real order.", font=font(40), fill=WHITE)
 
 
 def paint_pair(base: Image.Image, shot: dict, local: float) -> None:
@@ -1949,7 +1967,7 @@ def paint_analogy(base: Image.Image, shot: dict, local: float, dur: float) -> No
         draw.text((right[0] + 28, right[1] + 260), "Bottom 24,930", font=font(36), fill=CYAN)
         _example(draw, right[0] + 28, right[1] + 360)
         return
-    chart_box = (origin[0] + pw + 24, 180, RIGHT, 752)
+    chart_box = (origin[0] + pw + 24, 180, RIGHT, 690)
     still = shot.get("still")
     if still and kind in {"ladder", "fence"}:
         panel, ox, oy, scale = _contain(load_picture(Path(still)).convert("RGB"), pw, ph)
@@ -2048,20 +2066,22 @@ def paint_outro(base: Image.Image, shot: dict, local: float) -> None:
             "No secrets: no seed phrase, private key or API secret, "
             "the secret words or keys that unlock a wallet or account"
         )
+    hero_box = (1120, 150, 1760, 500) if shot.get("lesson_id") == "bp-01-introduction" else (1120, 180, 1760, 640)
     _hero(
-        base, (1120, 240, 1760, 800), mode,
+        base, hero_box, mode,
         chip_dx=-40 if mode == "orders" else 0,
         secrets_line=secrets_line,
     )
-    place_mascot(base, shot, (96, 500, 420, 760))
+    place_mascot(base, shot, (96, 420, 320, 540) if shot.get("lesson_id") == "bp-01-introduction" else (96, 430, 360, 640))
     if shot.get("lesson_id") == "bp-01-introduction":
-        card = (MX, 780, 1100, 960)
+        # Above the burned caption at y=764, and clear of the checklist above it.
+        card = (MX, 548, RIGHT, 728)
         draw.rounded_rectangle(card, 16, fill=GLASS, outline=CYAN, width=2)
-        y = card[1] + 12
+        y = card[1] + 14
         for line in DISCLAIMER_LINES:
-            for wrapped in wrap(line, 22, card[2] - card[0] - 40, "reg")[:2]:
-                draw.text((card[0] + 16, y), wrapped, font=font(22, "reg"), fill=WHITE)
-                y += 28
+            for wrapped in wrap(line, 32, card[2] - card[0] - 48, "reg")[:2]:
+                draw.text((card[0] + 24, y), wrapped, font=font(32, "reg"), fill=WHITE)
+                y += 38
     foot = font(36, "reg")
     fw = foot.getlength(FOOT)
     draw.text(((W - fw) / 2, 980), FOOT, font=foot, fill=MUTED)
@@ -2144,7 +2164,7 @@ def _big_still_tags(
 def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
     """The climb leaves the band holding cash. The fall leaves it holding coin."""
     draw = ImageDraw.Draw(base)
-    box = (MX, 190, 1280, 750)
+    box = (MX, 190, 1280, 680)
     draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=3)
     sentences = _lesson_sentences(shot.get("vo") or "")
     spans = list(shot.get("sentence_spans") or [])
@@ -2246,7 +2266,7 @@ def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
     dot_x = (line_x0 + line_x1) // 2
     price_y = min(max(price_y, 240), 630)
     draw.ellipse([dot_x - 14, price_y - 14, dot_x + 14, price_y + 14], fill=CYAN)
-    side = (1360, 220, RIGHT, 750)
+    side = (1360, 200, RIGHT, 680)
     draw.rounded_rectangle(side, 22, fill=GLASS, outline=CYAN, width=3)
     draw.text((side[0] + 36, side[1] + 28), "What you hold", font=font(36), fill=CYAN)
     cash_box = [side[0] + 36, side[1] + 110, side[2] - 36, side[1] + 200]
@@ -2273,7 +2293,7 @@ def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
 def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) -> None:
     """Fit a 1536x1024 still in the stage. A short pan is the only move. No upscale."""
     src = load_picture(Path(shot["lesson_still"])).convert("RGB")
-    box = (MX, 156, RIGHT, 760)
+    box = (MX, 156, RIGHT, 700)
     pw, ph = box[2] - box[0], box[3] - box[1]
     scale = min(pw / src.width, ph / src.height, 1.0)
     zoom = scale * (0.94 + 0.06 * ease(min(1.0, local / max(dur, 0.1))))
@@ -2295,6 +2315,24 @@ def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) 
         gw, gh = int(200 * zoom), int(62 * zoom)
         d.rectangle([gx - 6, gy - 4, gx + gw, gy + gh], fill=NAVY)
         d.text((gx, gy), "MOVES", font=font(max(28, int(48 * zoom))), fill=WHITE)
+        if local >= 18:
+            # The still would otherwise sit for the whole hook. MOVES stays at the top.
+            card = (MX + 48, 500, RIGHT - 48, 700)
+            d.rounded_rectangle(card, 16, fill=NAVY, outline=CYAN, width=3)
+            d.text((card[0] + 28, card[1] + 20), "Bouncing inside", font=font(32), fill=CYAN)
+            d.line([(card[0] + 40, card[1] + 120), (card[0] + 140, card[1] + 70),
+                    (card[0] + 240, card[1] + 120), (card[0] + 340, card[1] + 70)], fill=CYAN, width=4)
+            d.text((card[0] + 620, card[1] + 20), "One way, then it stays", font=font(32), fill=WHITE)
+            d.line([(card[0] + 640, card[1] + 130), (card[0] + 980, card[1] + 70)], fill=WHITE, width=4)
+        if local >= 34:
+            # This band is inside the measured picture, so the second hold stays under 20s.
+            d.rounded_rectangle([MX + 70, 508, RIGHT - 70, 575], 12, fill=CYAN)
+            d.text((MX + 96, 522), "Nothing left to do", font=font(32), fill=NAVY)
+    if still.endswith("bp-01-introduction/009.png") and local >= 14:
+        d = ImageDraw.Draw(base)
+        card = (MX + 80, 520, RIGHT - 80, 680)
+        d.rounded_rectangle(card, 16, fill=NAVY, outline=WHITE, width=3)
+        d.text((card[0] + 28, card[1] + 48), "Paper or demo. No real order.", font=font(40), fill=WHITE)
     if still.endswith("bp-01-introduction/007.png"):
         d = ImageDraw.Draw(base)
         samples = []
@@ -2354,17 +2392,18 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
     named = bool(shot.get("word_times"))
     show_candle = heard("high") if named else local >= 14
     if local < 4.5:
-        box = (MX, 220, RIGHT, 760)
+        box = (MX, 220, RIGHT, 700)
         draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
         candle = shot.get("candle") or {}
         close = int(candle.get("close") or 0)
         draw.text((box[0] + 48, box[1] + 48), candle.get("date") or "One day", font=font(36), fill=CYAN)
+        _example(draw, box[2] - 280, box[1] + 40)
         draw.text((box[0] + 48, box[1] + 160), "The daily close", font=font(40), fill=WHITE)
         draw.text((box[0] + 48, box[1] + 250), f"{close:,}", font=font(72), fill=CYAN)
         draw.text((box[0] + 48, box[1] + 360), "The last price of that day. Marked Example.", font=font(36), fill=WHITE)
         return
     if not show_candle:
-        box = (MX, 220, RIGHT, 760)
+        box = (MX, 220, RIGHT, 700)
         draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
         draw.text((box[0] + 48, box[1] + 48), "When the day is cut", font=font(40), fill=CYAN)
         draw.text((box[0] + 48, box[1] + 140), "11am AEDT", font=font(64), fill=WHITE)
@@ -2373,7 +2412,7 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
         draw.text((box[0] + 48, box[1] + 430), "outside daylight saving", font=font(36), fill=WHITE)
         return
     # From 14s: the voice reaches "a simple candle" and the high, low and close.
-    box = (MX, 190, RIGHT, 760)
+    box = (MX, 190, RIGHT, 700)
     draw.rounded_rectangle(box, 22, fill=GLASS, outline=LINE, width=2)
     candle = shot.get("candle") or {}
     high = int(candle.get("high") or 0)
@@ -2508,7 +2547,14 @@ def paint(shot: dict, local: float, progress: float) -> np.ndarray:
         paint_disclaimer(img, shot, local)
     elif kind == "outro":
         paint_outro(img, shot, local)
-    elif shot.get("visual") and not (shot.get("lesson_still") and local >= 16):
+    elif shot.get("visual") and (
+        (
+            shot.get("lesson_id") == "bp-01-introduction"
+            and (shot.get("chapter") or "") == "The stop"
+            and (_word_at(shot, "october") or 10**9) <= local
+        )
+        or not (shot.get("lesson_still") and local >= 16)
+    ):
         import motions
         title_bar(img, shot, progress)
         motions.paint_visual(img, shot, local, sys.modules[__name__])
