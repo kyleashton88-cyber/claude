@@ -1,5 +1,9 @@
 # Changes, 16 November 2026
 
+## BP-01 approved lines, 20 Nov
+
+Stewart approved five lines. The hook now includes the sideways-bounce sentence. The stop shot says the stop is the written rule for when you stop the bot. The no-promise line says numbers marked Example are teaching numbers, not advice. The map says "Steps one to six" and "Steps seven to eleven" just before the paper test, and the late second reading is gone. Your turn restores the line about drawing the idea and copying it only on paper or demo. The daily-close line is unchanged. `course/BP02-DRAFT-ADDITIONS.md` is a draft only and is not spoken.
+
 ## Holds of 20 seconds, not rendered
 
 No spoken line changed. The whole-window chart draws the path up to the word "crossed", then shows the 28 rings, then replaces the chart with the worked-check card when "Worked check" is spoken. The levels chart shows the gap first and labels the seven lines when "Seven" is spoken. Crossings shows one crossing, then a finished pair when "pair" is spoken. On the planned timeline the longest still picture is 19 seconds.

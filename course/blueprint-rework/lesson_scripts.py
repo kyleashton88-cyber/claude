@@ -215,7 +215,8 @@ def bp01() -> list[dict]:
     s = [ident("01", "Introduction")]
     s.append(gloss(
         "Hook",
-        "By the end of this series you will understand what a grid bot does, when it can capture bounces, and where it loses. You will know how to plan one, test it on paper, run it, check it, and change the capital you give to bots only under written risk rules. This is education, not a promise of results.",
+        "By the end of this series you will understand what a grid bot does, when it can capture bounces, and where it loses. You will know how to plan one, test it on paper, run it, check it, and change the capital you give to bots only under written risk rules. This is education, not a promise of results. "
+        "Price often moves sideways, bouncing between the same top and bottom instead of leaving. A grid is a ladder of limit orders built for that bouncing. When price runs one way and stays there, the bot has nothing left to do.",
         "Plan, test, run, check, and change capital only under written rules.",
         "The promise",
         "Education about grids under written rules. Not a promise of results.",
@@ -405,7 +406,7 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "The stop",
-        "Here is that stop rule on the real path. It triggers if a daily close is outside the band, through the top or the bottom, and the next daily close is still outside. Then the idea is finished. You stop the bot, which cancels the waiting orders, and do what you wrote: keep the coin or swap to cash. A bot's automatic stop is a price that can fire during the day. This course uses the two daily closes, unless your written plan says you turned on a price stop. On 23 October 2023 the close finished above the top line, and the next day was still above it.",
+        "Here is that stop rule on the real path. It triggers if a daily close is outside the band, through the top or the bottom, and the next daily close is still outside. Then the idea is finished. You stop the bot, which cancels the waiting orders, and do what you wrote: keep the coin or swap to cash. A bot's automatic stop is a price that can fire during the day. This course uses the two daily closes, unless your written plan says you turned on a price stop. The stop is your written rule for when you stop the bot. On 23 October 2023 the close finished above the top line, and the next day was still above it.",
         "Two closes outside, top or bottom. Then stop the bot.",
         "Stop",
         "A written rule for what you do if price leaves the band and the next daily close is still outside.",
@@ -428,7 +429,7 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "No promise of results",
-        "A common mistake is thinking the bot predicts the price. It does not. It only waits. Another mistake is starting with no written stop. There is no promise of results. The pair card is a teaching sum, marked Example.",
+        "A common mistake is thinking the bot predicts the price. It does not. It only waits. Another mistake is starting with no written stop. There is no promise of results in this lesson. Numbers marked Example are teaching numbers, not advice.",
         "No promise of results. The bot does not predict the price.",
         "No promise",
         "The pair card shows a teaching sum. It is not money you made and not a forecast.",
@@ -442,7 +443,7 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "The map",
-        "This introduction is step one. Then what you need. Then exactly what a grid bot does, order by order. Then market regimes. Then choosing grid spacing and range. Then entry and exit rules. Then a paper test. Then weekly checks. Then common mistakes. Then scaling up under written rules. Then an opt-in lesson on liquidation and your complete plan.",
+        "Steps one to six. This introduction is step one. Then what you need. Then exactly what a grid bot does, order by order. Then market regimes. Then choosing grid spacing and range. Then entry and exit rules. Steps seven to eleven. Then a paper test. Then weekly checks. Then common mistakes. Then scaling up under written rules. Then an opt-in lesson on liquidation and your complete plan.",
         "Steps 1 to 6, each lesson named.",
         "The map",
         "The eleven lessons, ending in scaling under written rules and your complete plan.",
@@ -453,20 +454,6 @@ def bp01() -> list[dict]:
             ("4", "Market shape"),
             ("5", "Spacing"),
             ("6", "Entry and exit"),
-        ),
-    ))
-    s.append(gloss(
-        "The map",
-        "Steps seven to eleven.",
-        "Steps 7 to 11, each lesson named.",
-        "The map",
-        "Paper, weekly checks, mistakes, scaling under written rules, then liquidation and your complete plan.",
-        screen_lines=(
-            ("7", "Paper"),
-            ("8", "Monitoring"),
-            ("9", "Mistakes"),
-            ("10", "Scaling up"),
-            ("11", "Your complete plan"),
         ),
     ))
     s.append(gloss(
@@ -491,7 +478,7 @@ def bp01() -> list[dict]:
     s += stack("Your turn", [
         "Your turn. On paper, write the top and the bottom, one gap, and the stop rule.",
         "Say what you will do if a daily close leaves the band and the next close is still outside. Pause the video and write your answer before you go on.",
-        "No real order is sent in this lesson. Paper practice comes in Lesson 7, and real money only after your written graduation rule. A graduation rule is the written test you pass on paper first.",
+        "No real order is sent in this lesson. Paper practice comes in Lesson 7, and real money only after your written graduation rule. A graduation rule is the written test you pass on paper first. You draw the idea. If a screen appears later, it should be a copy of the page, and only on paper or demo.",
     ], "")
     s.append(gloss(
         "No secrets",

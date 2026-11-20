@@ -1130,16 +1130,17 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
                 while x < plot[2]:
                     draw.line([(x, yy), (min(x + 8, plot[2]), yy)], fill=MUTED, width=2)
                     x += 18
-            # Two crossings a day apart were drawing as one ring. Nudge those apart
-            # so the eye can count every one. The count itself stays 28.
+            # A day apart is only about 16px. The L2 re-cross (1–2 Sep) and the
+            # October L4 cluster were reading as one ring. Push those apart, and
+            # keep the 16 Oct rise inside the plot. The count stays 28.
             placed: list[tuple[float, float]] = []
             for x, y in marks:
-                x = min(max(x, plot[0] + 14), plot[2] - 14)
+                x = min(max(x, plot[0] + 18), plot[2] - 22)
                 shift = 0
-                step = 16
-                while any(abs(x - px) < 18 and abs(y + shift - py) < 14 for px, py in placed):
+                step = 28
+                while any(abs(x - px) < 26 and abs(y + shift - py) < 22 for px, py in placed):
                     shift = step if shift == 0 else (-abs(shift) - step if shift > 0 else abs(shift) + step)
-                    if abs(shift) > 48:
+                    if abs(shift) > 84:
                         break
                 placed.append((x, y + shift))
             for x, y in placed:
@@ -1645,31 +1646,26 @@ def paint_idea(base: Image.Image, shot: dict, local: float) -> None:
     def due(at: float | None) -> bool:
         return at is not None and local >= at
 
-    # The last line is on screen by 18s, so a 25s shot cannot sit still for 20s.
-    show_band = due(band_at) or local >= 18
-    show_buy = due(buy_at) or local >= 18
-    show_sell = due(sell_at) or local >= 18
-    show_cash = due(cash_at) or local >= 18
-    cx0, cx1 = box[0] + 520, box[2] - 80
-    top, bot = box[1] + 120, box[3] - 80
-    mid = (top + bot) / 2
+    # Each stage fills a block inside the card, and the last one is up by 15s.
+    show_band = due(band_at) or local >= 15
+    show_buy = due(buy_at) or local >= 15
+    show_sell = due(sell_at) or local >= 15
+    show_cash = due(cash_at) or local >= 15
+    left, right = box[0] + 80, box[2] - 80
     if show_band:
-        draw.line([(cx0, top), (cx1, top)], fill=WHITE, width=4)
-        draw.line([(cx0, bot), (cx1, bot)], fill=WHITE, width=4)
-        draw.text((cx0, top - 36), "Top", font=font(28), fill=WHITE)
-        draw.text((cx0, bot + 8), "Bottom", font=font(28), fill=WHITE)
+        draw.rounded_rectangle([left, 250, right, 300], 8, fill=TAG, outline=WHITE, width=3)
+        draw.text((left + 16, 258), "Top of the band", font=font(28), fill=WHITE)
+        draw.rounded_rectangle([left, 520, right, 570], 8, fill=TAG, outline=WHITE, width=3)
+        draw.text((left + 16, 528), "Bottom of the band", font=font(28), fill=WHITE)
     if show_buy:
-        for i in range(1, 4):
-            y = mid + i * (bot - mid) / 4
-            draw.line([(cx0, y), (cx1, y)], fill=CYAN, width=4)
-        draw.text((cx1 - 220, mid + 16), "Buys below", font=font(28), fill=CYAN)
+        draw.rounded_rectangle([left, 430, (left + right) // 2 - 12, 510], 8, fill=(0, 48, 64), outline=CYAN, width=3)
+        draw.text((left + 16, 454), "Buys below", font=font(32), fill=CYAN)
     if show_sell:
-        for i in range(1, 4):
-            y = mid - i * (mid - top) / 4
-            draw.line([(cx0, y), (cx1, y)], fill=WHITE, width=3)
-        draw.text((cx1 - 220, mid - 48), "Sells above", font=font(28), fill=WHITE)
+        draw.rounded_rectangle([(left + right) // 2 + 12, 320, right, 410], 8, fill=TAG, outline=WHITE, width=3)
+        draw.text(((left + right) // 2 + 28, 348), "Sells above", font=font(32), fill=WHITE)
     if show_cash:
-        draw.text((box[0] + 36, box[3] - 56), "Part cash and part coin", font=font(32), fill=CYAN)
+        draw.rounded_rectangle([left, 460, right, 530], 8, fill=(0, 40, 56), outline=CYAN, width=3)
+        draw.text((left + 16, 478), "Part cash and part coin", font=font(32), fill=CYAN)
 
 
 def paint_stack(base: Image.Image, shot: dict, local: float) -> None:
@@ -1683,12 +1679,29 @@ def paint_stack(base: Image.Image, shot: dict, local: float) -> None:
             ("10", "Scaling up"),
             ("11", "Your complete plan"),
         ]
-        paper_at = _word_at(shot, "paper")
-        if paper_at is not None and local >= paper_at:
-            _draw_named_rows(draw, later)
+        # "Steps seven to eleven" is spoken just before the paper test.
+        # The 7–11 card comes in on that line, then each name as it is spoken.
+        seven_at = _word_at(shot, "seven")
+        if seven_at is not None and local >= seven_at:
+            later_cues = (
+                ("paper",),
+                ("weekly",),
+                ("mistakes",),
+                ("scaling",),
+                ("liquidation", "complete"),
+            )
+            shown = 0
+            for needles in later_cues:
+                start = _word_at(shot, *needles)
+                if start is not None and local >= start:
+                    shown += 1
+            if shown == 0:
+                shown = 1
+            shown = min(len(later), shown)
+            _draw_named_rows(draw, later[:shown])
             return
         cues = (
-            ("introduction", "step"),
+            ("steps", "introduction", "step"),
             ("need",),
             ("exactly", "order"),
             ("regimes",),
@@ -2311,7 +2324,9 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
         (y_low, f"Low {low:,}", -280),
     )
     for y, label, dx in labels:
-        draw.text((cx + dx, y - 18), label, font=font(36), fill=WHITE)
+        # Captions start at y=764. Keep every price label above that band.
+        label_y = min(y - 18, 700)
+        draw.text((cx + dx, label_y), label, font=font(36), fill=WHITE)
     # The labelled card starts at 14s. A second beat at 33s keeps that hold under 20s.
     if local >= 33:
         tag = "High, low and close"

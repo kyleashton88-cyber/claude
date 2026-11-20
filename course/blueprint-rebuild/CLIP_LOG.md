@@ -7,3 +7,10 @@
 - bp-01-introduction / The map / kept: 26 words (the old cap would have left 16).
 - bp-01-introduction / Buys and sells / kept: 46 words (the old cap would have left 41).
 - bp-01-introduction / The map / kept: 59 words (the old cap would have left 22).
+
+# bp-02-what-you-need
+- bp-02-what-you-need / Account in Australia / kept: 41 words (the old cap would have left 32).
+- bp-01-introduction / Hook / kept: 100 words (the old cap would have left 73).
+- bp-01-introduction / No promise of results / kept: 41 words (the old cap would have left 24).
+- bp-01-introduction / The map / kept: 67 words (the old cap would have left 23).
+- bp-01-introduction / Your turn / kept: 58 words (the old cap would have left 39).
