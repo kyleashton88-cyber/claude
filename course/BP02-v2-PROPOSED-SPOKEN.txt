@@ -1,6 +1,6 @@
 BP-02 What you need
-Spoken script. Stewart approved this at 9:13pm AEDT on 20 Nov, at commit 87478d2.
-One continuous lesson. The lines below are what the render reads. Kokoro af_heart at speed 1.0. Not rendered yet.
+Spoken script. Stewart-approved 20 Nov 10:26pm AEDT.
+One continuous lesson. These lines are the render voice-over, word for word. Kokoro af_heart at speed 1.0.
 
 Open
 GridBot Builder. GridBot Blueprint. Lesson two. What you are going to need.
@@ -42,7 +42,7 @@ Worked check
 Worked check: pair, band, gaps, stop, and Example. If the stop line is only a tick with no sentence, the page fails the check. The rule has to say: if a daily close finishes outside the band and the next daily close is still outside, the example is over.
 
 The page
-A page is the notebook you can hold. The screen is the exchange. An exchange is the app or website where people buy and sell crypto. Lesson 1 ended by asking you to bring the page. This lesson is that page. Open the notebook before any screen.
+A page is the notebook you can hold. An exchange is the app or website where people buy and sell crypto. The screen is the exchange. Lesson 1 ended by asking you to bring the page. This lesson is that page. Open the notebook before any screen.
 
 The page
 Write today's date on the first line. Under it, write the word Example. Example means a real past price used for practice. It is not an order and not a forecast.
@@ -66,13 +66,16 @@ Fees
 A fill is an order that actually trades. A maker fee is the charge when your order waits and someone else trades with it. A taker fee is the charge when your order fills straight away. A grid uses waiting orders, so read the maker fee first. Some bots also pay a taker fee when they first start. In this example both are 0.1 percent. On an example buy of 100 Australian dollars, 0.1 percent is 10 cents. The sell costs about 10 cents as well. The round trip is about 20 cents, which is 0.2 percent. This fee row is Australian dollars. It is not the summer bitcoin price. If the gap is smaller than that 0.2 percent, each completed buy and sell costs more in fees than the gap is worth. Lesson 5 is where you test a gap against this fee. You do not pick a gap in this lesson.
 
 Stablecoin
-A stablecoin is a coin designed to stay near the value of a currency such as the US dollar. It can still lose that value. A swap is trading one coin for another. If the price is in a stablecoin, every fill is a swap, and each one goes in the journal.
+A stablecoin is a coin designed to stay near the value of a currency such as the US dollar. It can still lose that value. A swap is trading one coin for another. If the price is in a stablecoin, every fill is a swap.
 
 Journal
-A trading journal is a dated record of every bot: the plan, the changes, the fills, the fees, a review note of what happened, and whether you followed the rules. That note is not money you made. It is also the page you will open again in lesson 8 and lesson 10. For every transaction, including a buy, a sell, a swap, or a transfer, write the date and time, the amount, the value in Australian dollars at the time, the fee, which exchange or wallet, what it was for, and who the other side was. The columns are the date, the pair, the band, the gaps, the money in the bot, the stop rule, the fills, the fees, the Australian dollar value of each fill, a review note, and a yes or no for the rules. Download your exchange's transaction history at least every three months. Keep those records for at least five years. This is general information, not tax advice. Leave two columns blank for now. One is for the fees. One is for whether you followed the rule. You fill those later. You do not fill them with a hope.
+A trading journal is a dated record of every bot: the plan, the changes, the fills, the fees, a review note of what happened, and whether you followed the rules. That note is not money you made. A stablecoin fill goes in the journal. It is also the page you will open again in lesson 8 and lesson 10. For every transaction, including a buy, a sell, a swap, or a transfer, write the date and time, the amount, the value in Australian dollars at the time, the fee, which exchange or wallet, what it was for, and who the other side was. The columns are the date, the pair, the band, the gaps, the money in the bot, the stop rule, the fills, the fees, the Australian dollar value of each fill, a review note, and a yes or no for the rules. Download your exchange's transaction history at least every three months. Keep those records for at least five years. This is general information, not tax advice. Leave two columns blank for now. One is for the fees. One is for whether you followed the rule. You fill those later. You do not fill them with a hope.
 
 Scams
-Nobody from this course will ask for a seed phrase, a private key, or an API secret. If a message rushes you to send crypto, or asks for one of those, treat it as a scam. It is not this course. ASIC's Moneysmart website is the public Australian guide for scam warnings. Check it yourself.
+Nobody from this course will ask for a seed phrase, a private key, or an API secret. If a message rushes you to send crypto, or asks for one of those, treat it as a scam. It is not this course.
+
+Moneysmart
+ASIC's Moneysmart website is the public Australian guide for scam warnings. Check it yourself.
 
 Say the page
 Say the page once, in your own words, and do not read the chart again. Name the pair, the band, the gaps, and the stop rule, then stop. If a word on it has not been defined, stop and define it before you go on. A secret is a seed phrase, a private key, or an API secret. None of those go on this page. You write Example on your own notebook so a practice sketch is never later mistaken for a live plan.

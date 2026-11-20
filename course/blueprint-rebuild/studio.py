@@ -1936,7 +1936,7 @@ def _paint_three_words_classic(base: Image.Image) -> None:
     draw = ImageDraw.Draw(base)
     cards = [
         ("Range", "24,930 to 30,331", "band"),
-        ("Levels", "Six gaps. About 900.", "ladder"),
+        ("Levels", "Six gaps, about 900.", "ladder"),
         ("Stop", "Leaves 30,331.", "stop"),
     ]
     y = 200
@@ -1961,7 +1961,7 @@ def paint_v2_cards(base: Image.Image, shot: dict, local: float) -> None:
     card = cards[_v2_index(shot, local)]
     # The lower third is this card, not the first line of the chapter.
     if card.get("classic"):
-        beat = "Range: 24,930 to 30,331. Levels: six gaps. About 900. Stop: Leaves 30,331."
+        beat = "Range: 24,930 to 30,331. Levels: six gaps, about 900. Stop: Leaves 30,331."
     elif card.get("rows"):
         beat = "Pair, band, gaps, and a written stop. Every figure marked Example."
     else:

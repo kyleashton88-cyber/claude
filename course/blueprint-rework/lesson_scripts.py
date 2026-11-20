@@ -648,8 +648,8 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
     ),
     (
         "The page",
-        "A page is the notebook you can hold. The screen is the exchange. "
-        "An exchange is the app or website where people buy and sell crypto. "
+        "A page is the notebook you can hold. "
+        "An exchange is the app or website where people buy and sell crypto. The screen is the exchange. "
         "Lesson 1 ended by asking you to bring the page. This lesson is that page. "
         "Open the notebook before any screen.",
         _cards(
@@ -771,7 +771,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
     (
         "Stablecoin",
         "A stablecoin is a coin designed to stay near the value of a currency such as the US dollar. It can still lose that value. "
-        "A swap is trading one coin for another. If the price is in a stablecoin, every fill is a swap, and each one goes in the journal.",
+        "A swap is trading one coin for another. If the price is in a stablecoin, every fill is a swap.",
         _cards(
             ("", "A stablecoin is a coin designed to stay near the value of a currency such as the US dollar. It can still lose that value.", False),
             ("a swap is", "A swap is trading one coin for another. If the price is in a stablecoin, every fill is a swap.", False),
@@ -780,7 +780,8 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
     (
         "Journal",
         "A trading journal is a dated record of every bot: the plan, the changes, the fills, the fees, a review note of what happened, and whether you followed the rules. "
-        "That note is not money you made. It is also the page you will open again in lesson 8 and lesson 10. "
+        "That note is not money you made. A stablecoin fill goes in the journal. "
+        "It is also the page you will open again in lesson 8 and lesson 10. "
         "For every transaction, including a buy, a sell, a swap, or a transfer, write the date and time, the amount, the value in Australian dollars at the time, the fee, which exchange or wallet, what it was for, and who the other side was. "
         "The columns are the date, the pair, the band, the gaps, the money in the bot, the stop rule, the fills, the fees, the Australian dollar value of each fill, a review note, and a yes or no for the rules. "
         "Download your exchange's transaction history at least every three months. Keep those records for at least five years. "

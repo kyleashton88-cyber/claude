@@ -1,7 +1,7 @@
 {
   "tool": "quality-gate",
   "result": "pass",
-  "master": "/agent/repos/claude/course/blueprint-rebuild/masters/bp-02-what-you-need.mp4",
+  "master": "course/blueprint-rebuild/masters/bp-02-what-you-need.mp4",
   "format": "blueprint",
   "format_label": "Blueprint lesson",
   "length_window_seconds": [
@@ -17,7 +17,7 @@
     {
       "id": "length",
       "result": "pass",
-      "detail": "821.3s is inside Blueprint lesson (600s\u2013900s)"
+      "detail": "618.5s is inside Blueprint lesson (600s\u2013900s)"
     },
     {
       "id": "loudness",
@@ -33,6 +33,11 @@
       "id": "frozen",
       "result": "pass",
       "detail": "longest static run 0.5s, limit 8s"
+    },
+    {
+      "id": "masked_holds",
+      "result": "pass",
+      "detail": "no picture holds for 20s or more once captions and the lower third are ignored"
     },
     {
       "id": "black",
@@ -62,7 +67,12 @@
     {
       "id": "captions",
       "result": "pass",
-      "detail": "363 cues, at most 42 characters and 20 per second"
+      "detail": "278 cues, at most 42 characters and 20 per second"
+    },
+    {
+      "id": "beginner_terms",
+      "result": "pass",
+      "detail": "order, fill, swap, exchange, wallet, API secret, bot, base, quote, deposit and journal are defined before they are used"
     },
     {
       "id": "text_recognition",

@@ -1,5 +1,9 @@
 # Changes, 16 November 2026
 
+## Stewart-approved 20 Nov 10:26pm AEDT
+
+The exchange definition is spoken before "The screen is the exchange." The journal is defined before any other use, and "A stablecoin fill goes in the journal." follows that definition. No other spoken line changed. Creative Studio passed the 78 stills. BP-02 is rendered once from this script.
+
 ## BP-02 recap still redrawn, not rendered
 
 `019.png` is now RECAP: SEVEN ITEMS, with the approved kicker and seven chips. Card 77 was re-exported. On-screen only: card 27 no longer shows "exchange" before the definition, and card 62 no longer shows "journal" before the definition. Lower thirds follow the card on screen. The film is not rendered.

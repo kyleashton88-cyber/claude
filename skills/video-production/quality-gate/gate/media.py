@@ -136,10 +136,10 @@ def longest_static(frames: np.ndarray, fps: int = 2, mad_limit: float = 0.5) -> 
 # burned captions and the lower third. A new caption is not a new picture.
 VISUAL_ROW_START = 12
 VISUAL_ROW_END = 62
-# Encoder flicker on a still card stays under this. A real card change on
-# BP-02 at d8fb82b was about 6 or more. Text inside the picture still counts
-# when it changes the card; caption text does not, because those rows are gone.
-VISUAL_MAD_LIMIT = 3.0
+# The moving background on a still card stays near 0.5. A new sentence on the
+# same card is about 2.5. Caption rows are not in this sample, so a caption
+# change cannot end a hold. 2.4 keeps a real card change and ignores the glow.
+VISUAL_MAD_LIMIT = 2.4
 
 
 def visual_frames(path: Path, fps: int = 1) -> np.ndarray:

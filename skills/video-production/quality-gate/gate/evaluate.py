@@ -74,6 +74,48 @@ def _length_window(profile: Profile) -> str:
     return f"{profile.min_seconds:.0f}s–{profile.max_seconds:.0f}s"
 
 
+def beginner_term_problems(text: str) -> list[str]:
+    """A BP-02 viewer who only knows BP-01 must hear each term defined first.
+
+    "No order is sent from this lesson" is the fixed risk line. It is not the
+    trading-order lesson, so it does not count as using the term early.
+    """
+    import re
+
+    spoken = re.sub(r"\s+", " ", text or "")
+    # Fixed lines from the approved script. They are not the lesson that teaches the term.
+    for phrase in (
+        r"no order is sent from this lesson\.?",
+        r"so nobody can read it as an order\.?",
+        r"you will fill in a seven-item checklist on paper\.?",
+    ):
+        spoken = re.sub(phrase, " ", spoken, flags=re.I)
+    low = spoken.lower()
+    terms = (
+        ("order", "an order is"),
+        ("fill", "a fill is"),
+        ("swap", "a swap is"),
+        ("exchange", "an exchange is"),
+        ("wallet", "a wallet is"),
+        ("api secret", "an api secret is"),
+        ("bot", "a bot is"),
+        ("base", "the base is"),
+        ("quote", "the quote is"),
+        ("deposit", "a deposit is"),
+        ("journal", "a trading journal is"),
+    )
+    problems: list[str] = []
+    for word, definition in terms:
+        defined = low.find(definition)
+        if defined < 0:
+            problems.append(f"{word} is spoken without the definition {definition!r}")
+            continue
+        uses = list(re.finditer(rf"\b{re.escape(word)}\b", low))
+        if uses and uses[0].start() < defined:
+            problems.append(f"{word} is used before it is taught")
+    return problems
+
+
 def _check(name: str, problems: list[str], *, ok_detail: str) -> dict:
     if problems:
         return {"id": name, "result": "fail", "detail": " ".join(problems)}
@@ -229,6 +271,15 @@ def evaluate(
                 ),
             )
         )
+        if "bp-02" in Path(master).name:
+            taught = beginner_term_problems(caption_text)
+            checks.append(
+                _check(
+                    "beginner_terms",
+                    taught,
+                    ok_detail="order, fill, swap, exchange, wallet, API secret, bot, base, quote, deposit and journal are defined before they are used",
+                )
+            )
 
     transcript_text = ""
     if transcript is not None and Path(transcript).is_file():
