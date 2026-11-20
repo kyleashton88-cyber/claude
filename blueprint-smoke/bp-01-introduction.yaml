@@ -1,0 +1,20 @@
+id: bp-01-introduction
+format: blueprint
+spoken_source: false
+disclaimer_spoken: "Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results."
+disclaimer_on_screen: "Education only. Not financial advice."
+beats:
+  - id: open
+    chapter: "Open"
+    vo: "GridBot Builder. GridBot Blueprint. Lesson one. Introduction."
+    caption: "Lesson 01, marked EXAMPLE."
+  - id: disclaimer
+    chapter: "Disclaimer"
+    vo: "Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results."
+    caption: "Education only. Not financial advice."
+  - id: next
+    chapter: "Next"
+    vo: "Next lesson: What you are going to need. Bring your notes: your band, your gaps and your stop rule. Keep the word Example on every practice figure."
+    caption: "What you are going to need"
+chart_labels:
+  - "01"

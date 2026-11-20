@@ -1,0 +1,29 @@
+name: video-production tests
+
+# Unit tests only. No deploy, no publish, no paid API.
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install ffmpeg and tesseract
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg tesseract-ocr
+      - name: Install Python test dependencies
+        run: python -m pip install "numpy>=1.26,<2" "Pillow>=10" "scipy>=1.11" "soundfile>=0.12" "PyYAML>=6"
+      - name: Run video-production unit tests
+        working-directory: skills/video-production
+        run: |
+          set -eu
+          for dir in motion-graphics color-grade music-sound natural-voice quality-gate compliance scene-planner review-record templates market-check-clip screen-demo-kit; do
+            echo "== $dir =="
+            ( cd "$dir" && python -m unittest tests/test_*.py )
+          done

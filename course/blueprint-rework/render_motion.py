@@ -62,6 +62,15 @@ def fit_wav(wav: np.ndarray, frames: int) -> np.ndarray:
 
 
 def render(sid: str, proof: bool, out_dir: Path | None = None, prepare_shots=None) -> Path:
+    raise SystemExit(
+        "The old Blueprint mixer cannot run. "
+        "course/blueprint-rebuild/studio.py is the only picture path."
+    )
+    """Unreachable encoder. Masters go through studio.py, which has no length floor."""
+    raise SystemExit(
+        "course/blueprint-rework/render_motion.py does not encode. "
+        "Use course/blueprint-rebuild/studio.py. There is no length floor on that path."
+    )
     if sid.startswith("el-"):
         raise SystemExit(f"refusing Elite id {sid}")
     shots = lesson_scripts.build(sid)
@@ -147,17 +156,29 @@ def render(sid: str, proof: bool, out_dir: Path | None = None, prepare_shots=Non
     build_bed(clock, lifts, bed)
     mix(silent, voice_path, bed, dest)
     print(f"WROTE {dest} {clock:.1f}s words {words}", flush=True)
-    if not proof and clock < 15 * 60:
-        raise SystemExit(f"{sid} is {clock:.1f}s, under 15 minutes")
+    # Duration is not judged here. The only rule is quality-gate profiles.py,
+    # so a 6:15 Blueprint master is not rejected after a successful render.
+    print(
+        f"Length {clock:.1f}s is recorded, not failed. "
+        "Judge it with skills/video-production/quality-gate --format blueprint.",
+        flush=True,
+    )
     return dest
 
 
 def main() -> None:
+    """The Blueprint master path is studio.py, not this older mixer."""
     ap = argparse.ArgumentParser()
     ap.add_argument("--id", required=True)
     ap.add_argument("--proof", action="store_true")
+    ap.add_argument("--pass-list", default=None)
     args = ap.parse_args()
-    render(args.id, args.proof)
+    studio = _load("blueprint_studio_entry", ROOT / "course/blueprint-rebuild/studio.py")
+    studio.render(
+        args.id,
+        excerpt_seconds=32 if args.proof else None,
+        pass_list=Path(args.pass_list) if args.pass_list else None,
+    )
 
 
 if __name__ == "__main__":

@@ -1,0 +1,11 @@
+id: bp-07-spot-paper-trading
+format: blueprint
+source: course/data/public-prices/btc-usd-windows.json
+disclaimer_spoken: "Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk. You could lose all the money you put in."
+disclaimer_on_screen: "Education only. Not financial advice."
+dates:
+chart_labels:
+  - "07"
+  - "14"
+  - "24930"
+  - "30331"

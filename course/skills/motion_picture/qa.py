@@ -63,11 +63,13 @@ def motion_score(path: Path, a: float, b: float) -> float:
 
 
 def check(path: Path) -> list[str]:
+    """Deprecated picture checks. Duration is not judged here.
+
+    The only duration rule is skills/video-production/quality-gate/gate/profiles.py.
+    Run `python3 skills/video-production/quality-gate/cli.py check` for the pass/fail.
+    """
     problems = []
     info = probe(path)
-    dur = float(info.get("duration") or 0)
-    if dur < 15 * 60:
-        problems.append(f"duration {dur:.1f}s is under 15 minutes")
     if info.get("width") != "1920" or info.get("height") != "1080":
         problems.append(f"frame is {info.get('width')}x{info.get('height')}")
     if info.get("codec_name") not in {None, "h264"}:
@@ -92,6 +94,11 @@ def check(path: Path) -> list[str]:
 
 
 def main() -> None:
+    print(
+        "DEPRECATED: course/skills/motion_picture/qa.py is not the video QA entry. "
+        "Use skills/video-production/quality-gate. Length follows that gate's format profile.",
+        file=sys.stderr,
+    )
     path = Path(sys.argv[1])
     problems = check(path)
     print(loudness(path))

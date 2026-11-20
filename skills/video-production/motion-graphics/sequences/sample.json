@@ -1,0 +1,51 @@
+{
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "shots": [
+    {
+      "kind": "title",
+      "seconds": 4.0,
+      "lines": [
+        "A grid,",
+        "in one picture"
+      ],
+      "sub": "Illustrative prices. Not a forecast.",
+      "caption": "A worked picture of how a grid is drawn",
+      "lower_third": {
+        "kicker": "Worked picture",
+        "line": "Orders, a range, a buffer"
+      }
+    },
+    {
+      "kind": "candles",
+      "seconds": 6.0,
+      "title": "Price, as candles",
+      "caption": "Open, high, low, and close. Nothing else is hiding in the candle."
+    },
+    {
+      "kind": "ladder",
+      "seconds": 8.0,
+      "title": "Orders on a ladder",
+      "caption": "Buys sit below the price. Sells sit above. A cross fills the order."
+    },
+    {
+      "kind": "risk",
+      "seconds": 5.5,
+      "title": "Range, and the line past it",
+      "caption": "The buffer is the gap between price and the liquidation line."
+    },
+    {
+      "kind": "still",
+      "seconds": 5.5,
+      "title": "An existing plate, set in motion",
+      "caption": "The diagram was already drawn. The camera, the card, and the figure move.",
+      "image": "programs/defi-program/assets/diagrams/liquidity-ladder.png",
+      "fills": 6,
+      "lower_third": {
+        "kicker": "Existing still",
+        "line": "Moved in layers. Not regenerated."
+      }
+    }
+  ]
+}

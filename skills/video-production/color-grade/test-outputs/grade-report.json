@@ -1,0 +1,78 @@
+[
+  {
+    "look": "clean-educational",
+    "mode": "auto",
+    "gains_rgb": [
+      0.7911,
+      1.0,
+      1.177
+    ],
+    "exposure_ev": 1.4427,
+    "legal": {
+      "YMIN": 56.0,
+      "YMAX": 241.0,
+      "UMIN": 85.0,
+      "UMAX": 180.0,
+      "VMIN": 69.0,
+      "VMAX": 161.0
+    },
+    "output": "color-grade/test-outputs/graded-clean-educational.mp4"
+  },
+  {
+    "look": "warm-talking-head",
+    "mode": "auto",
+    "gains_rgb": [
+      0.7911,
+      1.0,
+      1.177
+    ],
+    "exposure_ev": 1.4427,
+    "legal": {
+      "YMIN": 58.0,
+      "YMAX": 241.0,
+      "UMIN": 81.0,
+      "UMAX": 169.0,
+      "VMIN": 82.0,
+      "VMAX": 161.0
+    },
+    "output": "color-grade/test-outputs/graded-warm-talking-head.mp4"
+  },
+  {
+    "look": "cool-data",
+    "mode": "auto",
+    "gains_rgb": [
+      0.7911,
+      1.0,
+      1.177
+    ],
+    "exposure_ev": 1.4427,
+    "legal": {
+      "YMIN": 51.0,
+      "YMAX": 241.0,
+      "UMIN": 94.0,
+      "UMAX": 180.0,
+      "VMIN": 70.0,
+      "VMAX": 159.0
+    },
+    "output": "color-grade/test-outputs/graded-cool-data.mp4"
+  },
+  {
+    "look": "clean-educational",
+    "mode": "match",
+    "gains_rgb": [
+      0.9747,
+      1.0,
+      0.8842
+    ],
+    "exposure_ev": 0.4264,
+    "legal": {
+      "YMIN": 39.0,
+      "YMAX": 242.0,
+      "UMIN": 107.0,
+      "UMAX": 183.0,
+      "VMIN": 59.0,
+      "VMAX": 155.0
+    },
+    "output": "color-grade/test-outputs/matched-to-clean.mp4"
+  }
+]

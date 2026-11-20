@@ -1,3 +1,7 @@
+// Operator renderer. New lessons use skills/production-pipeline and
+// skills/video-production/quality-gate. This file still masters Operator
+// videos the way those masters were built. Do not retune it from here.
+//
 // Render the VSLs, welcome, module intros and lesson videos.
 //
 // Voice:  build_vo.py (Kokoro, sentence by sentence, measured pauses) -> per-scene

@@ -1,4 +1,8 @@
-"""Render a tutorial from ChatGPT stills plus overlays.
+"""Render a tutorial from stills plus overlays.
+
+Deprecated as the entry point for a new lesson. Use skills/production-pipeline,
+then skills/video-production/quality-gate. This renderer stays so a paused
+Blueprint rebuild can still call it. It does not judge duration.
 
 The pictures must already exist at each beat's image path. This file never
 draws a diagram. It may add captions, a lower third, the disclaimer line,
@@ -24,10 +28,13 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "skills" / "video-production"))
+from lib.fonts import font_file  # noqa: E402
+
 SCRIPTS = ROOT / "course" / "scripts"
 OUT = ROOT / "course" / "masters"
-FONT = "/usr/share/fonts/truetype/macos/Inter-Bold.ttf"
-FONT_REG = "/usr/share/fonts/truetype/macos/Inter-Regular.ttf"
+FONT = str(font_file("Inter", "Bold"))
+FONT_REG = str(font_file("Inter", "Regular"))
 WPM = 143
 DISCLAIMER = "Education only · Not financial advice · Examples do not indicate future results"
 # One Lanczos scale into 1920x1080. A 1536x1024 still covers the frame at

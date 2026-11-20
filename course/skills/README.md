@@ -30,7 +30,7 @@ the starting set. Extend them. Do not fork a second copy.
 
 Stewart asked for the Elite example stills to go through the ChatGPT image
 path. Those ten plates are in `course/images/examples/` and are not marked pass.
-ElevenLabs, HeyGen, and any other paid tool still need a separate yes.
+Paid speech and avatar tools are not used. A new vendor needs a separate yes.
 
 | Skill | What it is |
 |---|---|

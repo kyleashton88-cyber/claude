@@ -1,0 +1,16 @@
+lesson: sample-grid
+title: A grid in one picture
+format: blueprint
+disclaimer_spoken: This is education, not financial advice.
+disclaimer_on_screen: Education, not financial advice.
+beats:
+  - id: candles
+    chapter: Candles
+    vo: Each candle shows four facts. The open, the high, the low, and the close. Nothing here is a forecast.
+    on_screen: Four facts
+    labels: [Open, High, Low, Close]
+  - id: ladder
+    chapter: Orders
+    vo: Buy orders sit below the price. Sell orders sit above it. EXAMPLE the sketch uses 10 grids between 90 and 110.
+    on_screen: EXAMPLE 10 grids
+    labels: [Buys below, Sells above, EXAMPLE]

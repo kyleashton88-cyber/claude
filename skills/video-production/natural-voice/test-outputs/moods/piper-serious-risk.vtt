@@ -1,0 +1,28 @@
+WEBVTT
+
+00:00:00.117 --> 00:00:07.125
+A grid places buy orders below the price
+
+00:00:07.201 --> 00:00:13.858
+and sell orders above it. When price crosses
+
+00:00:14.274 --> 00:00:20.859
+a line, that order fills. The range is
+
+00:00:21.190 --> 00:00:27.966
+the band chosen before the start. Past that
+
+00:00:28.475 --> 00:00:33.761
+band, the grid has left its plan. A
+
+00:00:33.761 --> 00:00:34.111
+liquidation line sits beyond the range. The
+
+00:00:34.111 --> 00:00:34.511
+gap is the buffer. If the buffer shrinks,
+
+00:00:34.511 --> 00:00:34.911
+the plan is under stress. Count the fills.
+
+00:00:34.911 --> 00:00:35.211
+Read the buffer. Keep the picture.

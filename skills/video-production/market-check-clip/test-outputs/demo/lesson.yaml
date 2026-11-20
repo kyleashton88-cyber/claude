@@ -1,0 +1,152 @@
+id: market-check-demo
+title: Market Check
+format: market-check
+engine: kokoro
+mood: calm-teacher
+sections:
+- id: b1
+  chapter: What changed
+  narration: Price spent the week inside a range. That is a description of
+  visual:
+    kind: title
+    lines:
+    - Price
+    - this week
+    sub: Education, not financial advice
+    caption: Education, not financial advice
+    lower_third:
+      kicker: Market check
+      line: Not a call to trade
+- id: b2
+  chapter: Beat 2
+  narration: the path, not an instruction. EXAMPLE the sketch marks 90 and 110.
+  visual:
+    kind: title
+    lines:
+    - the
+    - this week
+    sub: EXAMPLE figures only
+    caption: Education, not financial advice
+    lower_third:
+      kicker: Market check
+      line: Not a call to trade
+- id: b3
+  chapter: Beat 3
+  narration: Those marks are a drawing. They are not a forecast. A market
+  visual:
+    kind: title
+    lines:
+    - Those
+    - this week
+    sub: Education, not financial advice
+    caption: Education, not financial advice
+    lower_third:
+      kicker: Market check
+      line: Not a call to trade
+- id: b4
+  chapter: Beat 4
+  narration: check names what changed. The week stayed between the two marks. A
+  visual:
+    kind: title
+    lines:
+    - check
+    - this week
+    sub: Education, not financial advice
+    caption: Education, not financial advice
+    lower_third:
+      kicker: Market check
+      line: Not a call to trade
+- id: b5
+  chapter: Beat 5
+  narration: close inside the range is still just a close. The gap under
+  visual:
+    kind: title
+    lines:
+    - close
+    - this week
+    sub: Education, not financial advice
+    caption: Education, not financial advice
+    lower_third:
+      kicker: Market check
+      line: Not a call to trade
+- id: b6
+  chapter: Beat 6
+  narration: the range is the buffer. When the buffer shrinks, the plan is
+  visual:
+    kind: title
+    lines:
+    - the
+    - this week
+    sub: Education, not financial advice
+    caption: Education, not financial advice
+    lower_third:
+      kicker: Market check
+      line: Not a call to trade
+- id: b7
+  chapter: Beat 7
+  narration: under stress. Stress means read the picture again. It is not a
+  visual:
+    kind: title
+    lines:
+    - under
+    - this week
+    sub: Education, not financial advice
+    caption: Education, not financial advice
+    lower_third:
+      kicker: Market check
+      line: Not a call to trade
+- id: b8
+  chapter: Beat 8
+  narration: call to buy or sell. Say the high, the low, and the
+  visual:
+    kind: title
+    lines:
+    - call
+    - this week
+    sub: Education, not financial advice
+    caption: Education, not financial advice
+    lower_third:
+      kicker: Market check
+      line: Not a call to trade
+- id: b9
+  chapter: Beat 9
+  narration: gap. If a number is on the page, it carries the word
+  visual:
+    kind: title
+    lines:
+    - gap.
+    - this week
+    sub: Education, not financial advice
+    caption: Education, not financial advice
+    lower_third:
+      kicker: Market check
+      line: Not a call to trade
+- id: b10
+  chapter: Beat 10
+  narration: EXAMPLE. Write those three words down before you leave the page. This
+  visual:
+    kind: title
+    lines:
+    - EXAMPLE.
+    - this week
+    sub: EXAMPLE figures only
+    caption: Education, not financial advice
+    lower_third:
+      kicker: Market check
+      line: Not a call to trade
+- id: b11
+  chapter: The check
+  narration: is education, not financial advice.
+  visual:
+    kind: title
+    lines:
+    - is
+    - this week
+    sub: Education, not financial advice
+    caption: Education, not financial advice
+    lower_third:
+      kicker: Market check
+      line: Not a call to trade
+end_card:
+  kicker: Education only
+  line: Not financial advice. Figures marked EXAMPLE are illustrations.
