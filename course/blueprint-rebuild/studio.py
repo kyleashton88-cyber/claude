@@ -1445,8 +1445,8 @@ def paint_disclaimer(base: Image.Image, shot: dict, local: float) -> None:
 
 
 def _tick(draw: ImageDraw.ImageDraw, x: int, y: int) -> None:
-    """A plain tick. The old checklist used letter marks such as B and EX."""
-    draw.line([(x - 14, y), (x - 4, y + 12), (x + 16, y - 14)], fill=MINT, width=4)
+    """A plain tick. Navy, cyan and white only."""
+    draw.line([(x - 14, y), (x - 4, y + 12), (x + 16, y - 14)], fill=CYAN, width=4)
 
 
 def _row_icon(draw: ImageDraw.ImageDraw, x: int, y: int, kind: str) -> None:
@@ -1473,10 +1473,29 @@ def _row_icon(draw: ImageDraw.ImageDraw, x: int, y: int, kind: str) -> None:
         draw.rounded_rectangle([x - 14, y - 2, x + 14, y + 18], 3, outline=CYAN, width=3)
         draw.arc([x - 10, y - 20, x + 10, y + 2], 180, 0, fill=CYAN, width=3)
     elif kind == "stop":
-        draw.regular_polygon((x, y, 20), 8, outline=AMBER, width=3)
+        draw.regular_polygon((x, y, 20), 8, outline=WHITE, width=3)
+        draw.regular_polygon((x, y, 12), 8, outline=CYAN, width=3)
     else:
         draw.rounded_rectangle([x - 20, y - 16, x + 20, y + 16], 6, outline=CYAN, width=3)
         draw.text((x - 12, y - 12), "EX", font=font(22), fill=CYAN)
+
+
+def paint_copy_band(base: Image.Image) -> None:
+    """The page copies the band, not every day's price."""
+    draw = ImageDraw.Draw(base)
+    box = (MX, 200, RIGHT, 760)
+    draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
+    draw.text((box[0] + 36, box[1] + 28), "Copy the band", font=font(48), fill=WHITE)
+    rows = (
+        "Top 30,331",
+        "Bottom 24,930",
+        "Six gaps of about 900",
+    )
+    y = box[1] + 140
+    for row in rows:
+        draw.text((box[0] + 36, y), row, font=font(40), fill=CYAN)
+        y += 80
+    _example(draw, box[0] + 36, y + 20)
 
 
 def paint_board(base: Image.Image, shot: dict) -> None:
@@ -1493,34 +1512,50 @@ def paint_board(base: Image.Image, shot: dict) -> None:
             "6. The stop, written as a sentence.",
             "7. The word Example on every figure.",
         ]
-        draw.text((MX + 80, 186), "These are the seven lines on the page.", font=font(32), fill=WHITE)
+        draw.text((MX + 80, 186), "Seven items", font=font(40), fill=WHITE)
         y = 240
         for row in rows:
             draw.rounded_rectangle([MX, y, RIGHT, y + 68], 12, fill=GLASS, outline=LINE, width=2)
             _tick(draw, 130, y + 34)
             draw.text((188, y + 16), row, font=font(32), fill=WHITE)
-            draw.ellipse([1760, y + 16, 1796, y + 52], outline=MINT, width=3)
-            draw.line([(1768, y + 34), (1778, y + 44), (1790, y + 24)], fill=MINT, width=3)
+            draw.ellipse([1760, y + 16, 1796, y + 52], outline=CYAN, width=3)
+            draw.line([(1768, y + 34), (1778, y + 44), (1790, y + 24)], fill=CYAN, width=3)
             y += 76
         return
     if board == "no-secrets":
-        draw.text((MX, 176), "Never on the page", font=font(32), fill=AMBER)
-        draw.text((1040, 176), "Allowed on the page", font=font(32), fill=MINT)
+        draw.text((MX, 176), "Never on the page", font=font(32), fill=WHITE)
+        draw.text((1040, 176), "Allowed on the page", font=font(32), fill=CYAN)
         banned = ["Seed phrase", "Private key", "API secret", "Account balance"]
         allowed = ["Public daily close", "The word Example", "A figure marked Example"]
         y = 230
         for text in banned:
-            draw.rounded_rectangle([MX, y, 980, y + 100], 14, fill=GLASS, outline=AMBER, width=2)
-            draw.line([(MX + 28, y + 28), (MX + 56, y + 56)], fill=AMBER, width=4)
-            draw.line([(MX + 56, y + 28), (MX + 28, y + 56)], fill=AMBER, width=4)
+            draw.rounded_rectangle([MX, y, 980, y + 100], 14, fill=GLASS, outline=WHITE, width=2)
+            draw.line([(MX + 28, y + 28), (MX + 56, y + 56)], fill=WHITE, width=4)
+            draw.line([(MX + 56, y + 28), (MX + 28, y + 56)], fill=WHITE, width=4)
             draw.text((MX + 76, y + 30), text, font=font(36), fill=WHITE)
             y += 112
         y = 230
         for text in allowed:
-            draw.rounded_rectangle([1040, y, RIGHT, y + 100], 14, fill=GLASS, outline=MINT, width=2)
-            draw.line([(1070, y + 52), (1082, y + 64), (1102, y + 36)], fill=MINT, width=4)
+            draw.rounded_rectangle([1040, y, RIGHT, y + 100], 14, fill=GLASS, outline=CYAN, width=2)
+            draw.line([(1070, y + 52), (1082, y + 64), (1102, y + 36)], fill=CYAN, width=4)
             draw.text((1120, y + 30), text, font=font(32), fill=WHITE)
             y += 112
+        return
+    if board == "say-the-page":
+        draw.text((MX, 180), "Say the page", font=font(40), fill=WHITE)
+        rows = (
+            "Pair: bitcoin, public daily closes.",
+            "Band: 24,930 to 30,331.",
+            "Gaps: six, about 900.",
+            "Stop: two daily closes outside, then stop the bot.",
+            "No secrets on this page.",
+        )
+        y = 260
+        for row in rows:
+            draw.rounded_rectangle([MX, y, RIGHT, y + 88], 14, fill=GLASS, outline=CYAN, width=2)
+            draw.text((MX + 28, y + 24), row, font=font(32), fill=WHITE)
+            y += 100
+        _example(draw, MX, y + 8)
         return
     if board == "three-words":
         cards = [
@@ -1875,23 +1910,30 @@ def paint_analogy(base: Image.Image, shot: dict, local: float, dur: float) -> No
     origin = (MX, 230)
     kind = shot.get("analogy") or ""
     if kind == "list":
-        still = shot.get("still")
-        if still:
-            panel, _ox, _oy, _scale = _contain(load_picture(Path(still)).convert("RGB"), pw, ph)
-            base.paste(panel, origin)
-            _retouch_analogy(draw, "list", origin)
-        page = (origin[0] + pw + 24, 200, RIGHT, 760)
-        draw.rounded_rectangle(page, 20, fill=GLASS, outline=CYAN, width=2)
-        draw.text((page[0] + 28, page[1] + 28), "Write the page before any screen", font=font(32), fill=WHITE)
-        rows = (("Band", "24,930 to 30,331"), ("Levels", "Six gaps. About 900."), ("Stop", "The close leaves 30,331."))
-        y = page[1] + 110
-        for name, value in rows:
-            draw.text((page[0] + 36, y), name, font=font(36), fill=CYAN)
-            draw.text((page[0] + 240, y), value, font=font(36), fill=WHITE)
-            y += 80
-        pill = font(36)
-        pill_w = int(pill.getlength("EXAMPLE")) + 36
-        _example(draw, page[2] - pill_w - 28, page[1] + 36)
+        # Seven lines on the left, six gaps on the right. No amber stop sign.
+        left = (MX, 200, MX + 900, 760)
+        right = (MX + 940, 200, RIGHT, 760)
+        draw.rounded_rectangle(left, 20, fill=GLASS, outline=CYAN, width=2)
+        draw.rounded_rectangle(right, 20, fill=GLASS, outline=CYAN, width=2)
+        draw.text((left[0] + 28, left[1] + 24), "Seven lines", font=font(36), fill=WHITE)
+        items = (
+            "1 Notebook",
+            "2 Range, levels, stop",
+            "3 The pair",
+            "4 Paper or a demo",
+            "5 No secrets",
+            "6 A written stop",
+            "7 Example on every figure",
+        )
+        y = left[1] + 90
+        for item in items:
+            draw.text((left[0] + 36, y), item, font=font(32), fill=CYAN)
+            y += 72
+        draw.text((right[0] + 28, right[1] + 24), "Six gaps", font=font(36), fill=WHITE)
+        draw.text((right[0] + 28, right[1] + 120), "About 900 dollars", font=font(40), fill=WHITE)
+        draw.text((right[0] + 28, right[1] + 200), "Top 30,331", font=font(36), fill=CYAN)
+        draw.text((right[0] + 28, right[1] + 260), "Bottom 24,930", font=font(36), fill=CYAN)
+        _example(draw, right[0] + 28, right[1] + 360)
         return
     chart_box = (origin[0] + pw + 24, 180, RIGHT, 752)
     still = shot.get("still")
@@ -2047,7 +2089,8 @@ def paint_lesson_thumb(shot: dict, dest: Path) -> Path:
         chip_beside=(number == 3),
     )
     draw = ImageDraw.Draw(image)
-    draw.text((48, 660), FOOT, font=font(28, "reg"), fill=MUTED)
+    # 45px clear of the bottom edge. The type is 28px, so the top sits at 640.
+    draw.text((48, 640), FOOT, font=font(28, "reg"), fill=MUTED)
     dest.parent.mkdir(parents=True, exist_ok=True)
     image.save(dest)
     return dest
@@ -2494,8 +2537,13 @@ def paint(shot: dict, local: float, progress: float) -> np.ndarray:
         draw_footer(ImageDraw.Draw(img))
     else:
         title_bar(img, shot, progress)
-        if shot.get("board") in {"seven-lines", "no-secrets", "three-words"}:
+        if shot.get("board") in {"seven-lines", "no-secrets", "three-words", "say-the-page"}:
             paint_board(img, shot)
+        elif (
+            shot.get("lesson_id") == "bp-02-what-you-need"
+            and (shot.get("chapter") or "") == "Copy the path"
+        ):
+            paint_copy_band(img)
         elif shot.get("candle"):
             paint_candle(img, shot, local)
         else:

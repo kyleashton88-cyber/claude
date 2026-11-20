@@ -1,5 +1,9 @@
 # Changes, 16 November 2026
 
+## BP-02 stills recoloured, not rendered
+
+Ten pictures Creative Studio failed were rebuilt in navy, cyan and white. `001.png` and the end card were left as scored. BP-02 is not rendered. The spoken script is unchanged. The extra teaching is only in `course/BP02-DRAFT-ADDITIONS.md`.
+
 ## BP-01 approved lines, 20 Nov
 
 Stewart approved five lines. The hook now includes the sideways-bounce sentence. The stop shot says the stop is the written rule for when you stop the bot. The no-promise line says numbers marked Example are teaching numbers, not advice. The map says "Steps one to six" and "Steps seven to eleven" just before the paper test, and the late second reading is gone. Your turn restores the line about drawing the idea and copying it only on paper or demo. The daily-close line is unchanged. `course/BP02-DRAFT-ADDITIONS.md` is a draft only and is not spoken.

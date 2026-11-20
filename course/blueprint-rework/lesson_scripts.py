@@ -589,6 +589,7 @@ def bp02() -> list[dict]:
     ))
     s.append(_shot(
         chapter="Say the page",
+        board="say-the-page",
         reveal=1,
         vo=(
             "Say the page once, in your own words, and do not read the chart again. "
