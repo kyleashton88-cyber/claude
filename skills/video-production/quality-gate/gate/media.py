@@ -150,6 +150,51 @@ def black_runs(frames: np.ndarray, fps: int = 2, luma_max: float = 4.0) -> list[
     return runs
 
 
+def speech_regions(path: Path, duration: float, min_silence: float = 0.35) -> tuple[list[tuple[float, float]], float]:
+    """Spoken stretches, and the time the voice-over ends. Silence shorter than min_silence stays inside speech."""
+    proc = subprocess.run(
+        [
+            ffmpeg_bin(),
+            "-hide_banner",
+            "-i",
+            str(path),
+            "-af",
+            # -20 dB sits under the voice and above the music bed, so a pause is not speech.
+            f"silencedetect=n=-20dB:d={min_silence}",
+            "-f",
+            "null",
+            "-",
+        ],
+        capture_output=True,
+        text=True,
+    )
+    text = proc.stderr or ""
+    silences: list[tuple[float, float]] = []
+    pending: float | None = None
+    for line in text.splitlines():
+        if "silence_start:" in line:
+            pending = float(line.split("silence_start:")[1].strip().split()[0])
+        elif "silence_end:" in line and pending is not None:
+            end = float(line.split("silence_end:")[1].split("|")[0].strip())
+            silences.append((pending, end))
+            pending = None
+    if pending is not None:
+        silences.append((pending, duration))
+    speech: list[tuple[float, float]] = []
+    cursor = 0.0
+    for start, end in silences:
+        if start > cursor:
+            speech.append((cursor, start))
+        cursor = max(cursor, end)
+    if duration > cursor:
+        speech.append((cursor, duration))
+    voice_end = speech[-1][1] if speech else 0.0
+    # Trailing silence is not the voice-over.
+    if silences and silences[-1][1] >= duration - 0.05:
+        voice_end = silences[-1][0]
+    return speech, voice_end
+
+
 def silent_gaps(path: Path, min_seconds: float) -> list[str]:
     """Silence at least min_seconds long. The detector threshold is the limit, so any hit fails."""
     proc = subprocess.run(

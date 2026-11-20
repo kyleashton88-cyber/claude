@@ -5,7 +5,7 @@ from __future__ import annotations
 import tempfile
 from pathlib import Path
 
-from .captions import caption_problems, parse_captions
+from .captions import caption_coverage_problems, caption_problems, parse_captions
 from .media import (
     black_runs,
     extract_png,
@@ -16,6 +16,7 @@ from .media import (
     media_info,
     sample_times,
     silent_gaps,
+    speech_regions,
     technical_problems,
 )
 from .profiles import LOUDNESS_TARGET, LOUDNESS_TOLERANCE, TRUE_PEAK_MAX, Profile, length_ok
@@ -183,6 +184,9 @@ def evaluate(
             problems = [str(exc)]
         else:
             problems = caption_problems(cues, profile)
+            if info.get("audio") and cues:
+                speech, voice_end = speech_regions(master, float(info.get("duration") or 0))
+                problems.extend(caption_coverage_problems(cues, speech, voice_end))
         caption_text = "\n".join(cue.text for cue in cues) if cues else raw
         checks.append(
             _check(

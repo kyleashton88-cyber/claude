@@ -84,3 +84,39 @@ def caption_problems(cues: list[Cue], profile: Profile) -> list[str]:
                 f"{stamp}: {cps:.1f} characters per second, limit is {profile.max_caption_cps:.0f}"
             )
     return problems
+
+
+def caption_coverage_problems(
+    cues: list[Cue],
+    speech: list[tuple[float, float]],
+    voice_end: float,
+    gap_limit: float = 3.0,
+    tail_limit: float = 2.0,
+) -> list[str]:
+    """Speech with no caption for 3s, or a track that stops more than 2s early."""
+    if not cues:
+        return ["caption file has no cues, so the voice-over is not covered"]
+    spans = sorted((cue.start, cue.end) for cue in cues)
+    problems: list[str] = []
+    for start, end in speech:
+        cursor = start
+        for cue_start, cue_end in spans:
+            if cue_end <= cursor or cue_start >= end:
+                continue
+            if cue_start > cursor:
+                hole = cue_start - cursor
+                if hole >= gap_limit:
+                    problems.append(
+                        f"speech {cursor:.3f}-{cue_start:.3f}s has no caption ({hole:.1f}s)"
+                    )
+            cursor = max(cursor, min(cue_end, end))
+        if end - cursor >= gap_limit:
+            problems.append(
+                f"speech {cursor:.3f}-{end:.3f}s has no caption ({end - cursor:.1f}s)"
+            )
+    last = max(cue.end for cue in cues)
+    if voice_end - last > tail_limit:
+        problems.append(
+            f"last caption ends at {last:.3f}s, {voice_end - last:.1f}s before the voice-over ends at {voice_end:.3f}s"
+        )
+    return problems

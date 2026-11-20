@@ -13,7 +13,7 @@ VP = HERE.parent
 sys.path.insert(0, str(VP))
 sys.path.insert(0, str(HERE))
 
-from gate.captions import caption_problems, parse_captions  # noqa: E402
+from gate.captions import caption_coverage_problems, caption_problems, parse_captions  # noqa: E402
 from gate.numbers import find_dates, lesson_figures, number_problems, screen_figures  # noqa: E402
 from gate.evaluate import evaluate  # noqa: E402
 from gate.media import black_runs, gray_frames, judge_loudness, longest_static  # noqa: E402
@@ -75,6 +75,24 @@ class CaptionTests(unittest.TestCase):
             "This caption line is deliberately longer than forty-two characters.\n"
         )
         self.assertTrue(any("characters" in item for item in caption_problems(long_line, profile)))
+
+    def test_speech_gap_and_early_ending(self):
+        covered = parse_captions(
+            "WEBVTT\n\n00:00:00.000 --> 00:00:04.000\nThe line is spoken.\n"
+        )
+        self.assertEqual(
+            caption_coverage_problems(covered, [(0.0, 4.0)], 4.0),
+            [],
+        )
+        gapped = parse_captions(
+            "WEBVTT\n\n"
+            "00:00:00.000 --> 00:00:01.000\nFirst.\n\n"
+            "00:00:05.000 --> 00:00:06.000\nLater.\n"
+        )
+        holes = caption_coverage_problems(gapped, [(0.0, 6.0)], 6.0)
+        self.assertTrue(any("no caption" in item for item in holes))
+        early = caption_coverage_problems(covered, [(0.0, 4.0)], 8.0)
+        self.assertTrue(any("before the voice-over" in item for item in early))
 
 
 class FigureTests(unittest.TestCase):
