@@ -250,6 +250,8 @@ def thirds(shot: dict) -> tuple[str, str]:
     chapter = (shot.get("chapter") or "").strip()
     cap = (shot.get("caption") or "").strip()
     low = chapter.lower()
+    if low == "seven items":
+        return "Seven items", "Seven items. The pair is the public series."
     # These headings only share a word with another definition. Show their own caption.
     if low == "one pair":
         return "Finished buy and sell", "Buy at the lower line and sell at the higher line. Fees come out of the gap. Marked Example."
@@ -2089,8 +2091,10 @@ def paint_lesson_thumb(shot: dict, dest: Path) -> Path:
         chip_beside=(number == 3),
     )
     draw = ImageDraw.Draw(image)
-    # 45px clear of the bottom edge. The type is 28px, so the top sits at 640.
-    draw.text((48, 640), FOOT, font=font(28, "reg"), fill=MUTED)
+    foot = font(28, "reg")
+    # Place from the ink bottom, not the em box, so the margin stays at least 45px.
+    bottom = foot.getbbox(FOOT)[3]
+    draw.text((48, 720 - 1 - 45 - bottom), FOOT, font=foot, fill=MUTED)
     dest.parent.mkdir(parents=True, exist_ok=True)
     image.save(dest)
     return dest
@@ -3222,6 +3226,10 @@ def render(
     _write_lesson_captions(vtt_path, srt_path, timed)
     _cap_caption_speed(vtt_path)
     _srt_from_capped_vtt(vtt_path, srt_path)
+    caption_dir = ROOT / "course/blueprint-rebuild/captions"
+    caption_dir.mkdir(parents=True, exist_ok=True)
+    (caption_dir / f"{sid}.vtt").write_text(vtt_path.read_text(encoding="utf-8"), encoding="utf-8")
+    (caption_dir / f"{sid}.srt").write_text(srt_path.read_text(encoding="utf-8"), encoding="utf-8")
     chapters = []
     cursor = 0.0
     for shot in shots:
