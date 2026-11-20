@@ -549,8 +549,8 @@ def bp02() -> list[dict]:
     s.append(_bp02_line(
         "Recap",
         "Recap: your page has seven items, each with a written fact, every figure marked Example, and no secrets on it.",
-        kind="lesson-still",
-        lesson_still=str(ROOT / "course/images/bp-02-what-you-need/019.png"),
+        kind="stack",
+        v2_cards=[{"cue": "", "kind": "notebook", "shown": 7, "title": "Recap"}],
     ))
     s.append(outro("What is a grid bot", "see what the bot does, order by order."))
     return s
@@ -580,13 +580,23 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "For this course the pair is bitcoin priced in US dollars. "
         "A demo account uses pretend money. A daily close is the last price of the day. "
         "You are naming that public series, not choosing an app.",
-        _cards(
-            ("", "The seven items are: a notebook, the three words from lesson one, range, levels and stop, the pair, paper or a demo account, no secrets, a written stop, and the word Example on every figure.", False),
-            ("each item", "Each item has a reason. The notebook is the plan you can check later. The three words stop you drawing a grid with no edges.", False),
-            ("the pair names", "The pair names what you buy and what you pay with. Paper or a demo is learner plates, or training wheels.", False),
-            ("no secrets keeps", "No secrets keeps the keys off the page. The written stop is the action. Example marks a teaching number.", False),
-            ("for this course", "For this course the pair is bitcoin priced in US dollars. A demo account uses pretend money. A daily close is the last price of the day. You are naming that public series, not choosing an app.", False),
-        ),
+        [
+            {"cue": "", "kind": "notebook", "shown": 0, "title": "Seven items"},
+            {"cue": "a notebook", "kind": "notebook", "shown": 1, "title": "Seven items"},
+            {"cue": "three words", "kind": "notebook", "shown": 2, "title": "Seven items"},
+            {"cue": "the pair", "kind": "notebook", "shown": 3, "title": "Seven items"},
+            {"cue": "paper or", "kind": "notebook", "shown": 4, "title": "Seven items"},
+            {"cue": "no secrets", "kind": "notebook", "shown": 5, "title": "Seven items"},
+            {"cue": "a written", "kind": "notebook", "shown": 6, "title": "Seven items"},
+            {"cue": "example on", "kind": "notebook", "shown": 7, "title": "Seven items"},
+            {"cue": "the notebook is", "kind": "notebook", "shown": 7, "highlight": 0, "title": "Seven items"},
+            {"cue": "three words stop", "kind": "notebook", "shown": 7, "highlight": 1, "title": "Seven items"},
+            {"cue": "the pair names", "kind": "notebook", "shown": 7, "highlight": 2, "title": "Seven items"},
+            {"cue": "learner plates", "kind": "notebook", "shown": 7, "highlight": 3, "title": "Seven items"},
+            {"cue": "no secrets keeps", "kind": "notebook", "shown": 7, "highlight": 4, "title": "Seven items"},
+            {"cue": "the written stop is", "kind": "notebook", "shown": 7, "highlight": 5, "title": "Seven items"},
+            {"cue": "example marks", "kind": "notebook", "shown": 7, "highlight": 6, "title": "Seven items"},
+        ],
     ),
     (
         "The three words",
@@ -597,12 +607,12 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "The figures from lesson 1 are on the card, marked Example. "
         "If you can only say one of the three words, the page is missing a part.",
         [
-            {"cue": "", "title": "Three words", "lines": ["Three words, before any number. Range is the top line and the bottom line."]},
+            {"cue": "", "kind": "chart", "stage": "range", "title": "Range"},
             {"cue": "an order", "title": "Order", "lines": ["An order is an instruction to buy or sell that can wait for a price."]},
-            {"cue": "levels are", "title": "Levels", "lines": ["Levels are the price lines where orders wait, like the rungs of a ladder, and a gap is the space between two of them."]},
-            {"cue": "a stop is", "title": "Stop", "lines": ["A stop is the rule for what you will do if a daily close finishes outside the band and the next daily close is still outside."]},
-            {"cue": "the figures", "title": "Lesson 1 figures", "lines": ["The figures from lesson 1 are on the card, marked Example."], "classic": True, "example": True},
-            {"cue": "missing a", "title": "All three", "lines": ["If you can only say one of the three words, the page is missing a part."]},
+            {"cue": "levels are", "kind": "chart", "stage": "gaps", "title": "Levels"},
+            {"cue": "a stop is", "kind": "chart", "stage": "stop", "title": "Stop"},
+            {"cue": "the figures", "kind": "chart", "stage": "gaps", "title": "Lesson 1 figures"},
+            {"cue": "missing a", "kind": "chart", "stage": "stop", "title": "All three"},
         ],
     ),
     (
@@ -626,11 +636,11 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "You copy the band onto the page, not every day's prices. "
         "Copy the bottom line and the top line, with six gaps of about 900. "
         "Every close in that window stayed inside the band. Mark each figure Example.",
-        _cards(
-            ("", "You copy the band onto the page, not every day's prices.", False),
-            ("copy the bottom", "Copy the bottom line and the top line, with six gaps of about 900.", True),
-            ("every close", "Every close in that window stayed inside the band. Mark each figure Example.", True),
-        ),
+        [
+            {"cue": "", "kind": "chart", "stage": "range", "title": "Copy the path"},
+            {"cue": "copy the bottom", "kind": "chart", "stage": "gaps", "title": "Copy the path"},
+            {"cue": "every close", "kind": "chart", "stage": "page", "title": "Copy the path"},
+        ],
     ),
     (
         "Worked check",
@@ -638,12 +648,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "If the stop line is only a tick with no sentence, the page fails the check. "
         "The rule has to say: if a daily close finishes outside the band and the next daily close is still outside, the example is over.",
         [
-            {"cue": "", "title": "Worked check", "lines": [
-                "Pair: bitcoin, public daily closes.",
-                "Band: 24,930 to 30,331.",
-                "Gaps: six, about 900.",
-                "Stop sentence: written. Example: written.",
-            ], "example": True, "rows": True},
+            {"cue": "", "kind": "chart", "stage": "stop", "title": "Worked check"},
         ],
     ),
     (
@@ -688,11 +693,11 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "Levels are the lines between them. Six gaps of about 900 dollars sit between the top and the bottom. "
         "Write the top and the bottom only after you have said what a range is. "
         "Then write one gap, and how you got it: the top minus the bottom, divided by the number of gaps.",
-        _cards(
-            ("", "Range is the top line and the bottom line. On the summer chart those lines are 24,930 and 30,331. Both figures are Example.", True),
-            ("levels are", "Levels are the lines between them. Six gaps of about 900 dollars sit between the top and the bottom.", True),
-            ("write the top", "Write the top and the bottom only after you have said what a range is. Then write one gap, and how you got it: the top minus the bottom, divided by the number of gaps.", True),
-        ),
+        [
+            {"cue": "", "kind": "chart", "stage": "range", "title": "Range"},
+            {"cue": "levels are", "kind": "chart", "stage": "gaps", "title": "Levels"},
+            {"cue": "write the top", "kind": "chart", "stage": "page", "title": "Range"},
+        ],
     ),
     (
         "The stop",
@@ -701,12 +706,12 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "Two daily closes outside the band, through the top or the bottom, and the second close still outside. "
         "Then you stop the bot, which cancels the waiting orders, and you follow the rule you wrote. "
         "Write that stop in one sentence.",
-        _cards(
-            ("", "The stop sentence has to say what you will do.", False),
-            ("a bot is", "A bot is a program that places and cancels the waiting orders for you.", False),
-            ("two daily", "Two daily closes outside the band, through the top or the bottom, and the second close still outside.", False),
-            ("then you stop", "Then you stop the bot, which cancels the waiting orders, and you follow the rule you wrote. Write that stop in one sentence.", False),
-        ),
+        [
+            {"cue": "", "kind": "chart", "stage": "gaps", "title": "Stop"},
+            {"cue": "a bot is", "kind": "chart", "stage": "gaps", "title": "Bot"},
+            {"cue": "two daily", "kind": "chart", "stage": "stop", "title": "Stop"},
+            {"cue": "then you stop", "kind": "chart", "stage": "page", "title": "Stop"},
+        ],
     ),
     (
         "Account in Australia",
@@ -723,27 +728,24 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "ASIC is Australia's financial services regulator. "
         "From April 2027, new licensing rules for platforms that hold crypto for you are phased in through that year. "
         "Check ASIC for the current position. This lesson names only government bodies, never an exchange.",
-        _cards(
-            ("", "A deposit is crypto or Australian dollars you send into an account at an exchange.", False),
-            ("an exchange in", "An exchange in Australia asks who you are before you can deposit. That check is required by Australian anti-money laundering law, and the exchange runs it, not this course.", False),
-            ("you only upload", "You only upload identification inside the exchange's own app. This course does not name an exchange and does not show a balance.", False),
-            ("before you deposit", "Before you deposit, look the exchange up on AUSTRAC's public register.", False),
-            ("any exchange offering", "Any exchange offering crypto services in Australia must register with AUSTRAC, Australia's financial crime regulator, as a virtual asset service provider.", False),
-            ("austrac keeps", "AUSTRAC keeps a public register you can search. Check that register before you sign up.", False),
-            ("the register says", "The register says the business is listed. It does not say your money is protected. Registration is not a safety guarantee.", False),
-            ("asic is", "ASIC is Australia's financial services regulator. From April 2027, new licensing rules for platforms that hold crypto for you are phased in through that year.", False),
-            ("check asic", "Check ASIC for the current position. This lesson names only government bodies, never an exchange.", False),
-        ),
+        [
+            {"cue": "", "kind": "safety", "step": 0, "note": "Who you are, first", "title": "Account"},
+            {"cue": "you only upload", "kind": "safety", "step": 0, "note": "Only in the exchange's own app", "title": "Account"},
+            {"cue": "before you deposit", "kind": "safety", "step": 1, "note": "Look up the register", "title": "AUSTRAC"},
+            {"cue": "the register says", "kind": "safety", "step": 1, "note": "Listed is not protection", "title": "AUSTRAC"},
+            {"cue": "asic is", "kind": "safety", "step": 2, "note": "From April 2027", "title": "ASIC"},
+            {"cue": "check asic", "kind": "safety", "step": 2, "note": "Check the current position", "title": "ASIC"},
+        ],
     ),
     (
         "Two-factor",
         "A second code, as well as your password, is two-factor authentication. "
         "Turn that on before any real dollars. Then look for a paper or demo mode. "
         "Paper uses pretend money. That practice is lesson 7.",
-        _cards(
-            ("", "A second code, as well as your password, is two-factor authentication. Turn that on before any real dollars.", False),
-            ("then look", "Then look for a paper or demo mode. Paper uses pretend money. That practice is lesson 7.", False),
-        ),
+        [
+            {"cue": "", "kind": "safety", "step": 3, "note": "Turn on a second code", "title": "Two-factor"},
+            {"cue": "then look", "kind": "safety", "step": 3, "note": "Paper uses pretend money", "title": "Two-factor"},
+        ],
     ),
     (
         "Fees",
@@ -788,30 +790,33 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "This is general information, not tax advice. "
         "Leave two columns blank for now. One is for the fees. One is for whether you followed the rule. "
         "You fill those later. You do not fill them with a hope.",
-        _cards(
-            ("", "A trading journal is a dated record of every bot: the plan, the changes, the fills, the fees, a review note of what happened, and whether you followed the rules. That note is not money you made. A stablecoin fill goes in the journal.", False),
-            ("it is also", "It is also the page you will open again in lesson 8 and lesson 10.", False),
-            ("for every transaction", "For every transaction, including a buy, a sell, a swap, or a transfer, write the date and time, the amount, the value in Australian dollars at the time, the fee, which exchange or wallet, what it was for, and who the other side was.", False),
-            ("the columns", "The columns are the date, the pair, the band, the gaps, the money in the bot, the stop rule, the fills, the fees, the Australian dollar value of each fill, a review note, and a yes or no for the rules.", False),
-            ("download your", "Download your exchange's transaction history at least every three months. Keep those records for at least five years. This is general information, not tax advice.", False),
-            ("leave two", "Leave two columns blank for now. One is for the fees. One is for whether you followed the rule. You fill those later. You do not fill them with a hope.", False),
-        ),
+        [
+            {"cue": "", "kind": "journal", "cols": 0, "title": "Journal"},
+            {"cue": "the columns are", "kind": "journal", "cols": 2, "title": "Journal"},
+            {"cue": "the band", "kind": "journal", "cols": 4, "title": "Journal"},
+            {"cue": "the money in", "kind": "journal", "cols": 5, "title": "Journal"},
+            {"cue": "the stop rule", "kind": "journal", "cols": 6, "title": "Journal"},
+            {"cue": "australian dollar", "kind": "journal", "cols": 9, "title": "Journal"},
+            {"cue": "yes or no", "kind": "journal", "cols": 11, "title": "Journal"},
+            {"cue": "download your", "kind": "journal", "cols": 11, "note": "Download every three months. Keep five years.", "title": "Export"},
+            {"cue": "leave two", "kind": "journal", "cols": 11, "note": "Fees and the rule: fill those later.", "title": "Later"},
+        ],
     ),
     (
         "Scams",
         "Nobody from this course will ask for a seed phrase, a private key, or an API secret. "
         "If a message rushes you to send crypto, or asks for one of those, treat it as a scam. It is not this course.",
-        _cards(
-            ("", "Nobody from this course will ask for a seed phrase, a private key, or an API secret.", False),
-            ("if a message", "If a message rushes you to send crypto, or asks for one of those, treat it as a scam. It is not this course.", False),
-        ),
+        [
+            {"cue": "", "kind": "safety", "step": 4, "note": "Nobody from this course will ask", "title": "Scams"},
+            {"cue": "if a message", "kind": "safety", "step": 4, "note": "A rush to send crypto is a scam", "title": "Scams"},
+        ],
     ),
     (
         "Moneysmart",
         "ASIC's Moneysmart website is the public Australian guide for scam warnings. Check it yourself.",
-        _cards(
-            ("", "ASIC's Moneysmart website is the public Australian guide for scam warnings. Check it yourself.", False),
-        ),
+        [
+            {"cue": "", "kind": "safety", "step": 4, "note": "ASIC's Moneysmart", "title": "Moneysmart"},
+        ],
     ),
     (
         "Say the page",

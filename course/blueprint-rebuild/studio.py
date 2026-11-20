@@ -733,6 +733,10 @@ def title_bar(base: Image.Image, shot: dict, progress: float) -> None:
 def lower_third(draw: ImageDraw.ImageDraw, shot: dict) -> None:
     if shot.get("kind") in {"brand", "disclaimer", "outro"}:
         return
+    # BP-02 already puts the sentence on the headline card. A second copy
+    # under the card made the viewer read it twice.
+    if shot.get("lesson_id") == "bp-02-what-you-need":
+        return
     # The burned-in caption sits at y=772, just under the card, so this
     # band starts below that cue.
     draw.rectangle([MX, 828, RIGHT, 832], fill=CYAN)
@@ -1956,6 +1960,129 @@ def _paint_three_words_classic(base: Image.Image) -> None:
     _example(draw, RIGHT - 24 - pill_w, 78)
 
 
+NOTEBOOK_ITEMS = (
+    "A notebook",
+    "Range, levels and stop",
+    "The pair",
+    "Paper or a demo",
+    "No secrets",
+    "A written stop",
+    "Example on every figure",
+)
+
+JOURNAL_COLUMNS = (
+    "Date",
+    "Pair",
+    "Band",
+    "Gaps",
+    "Money in the bot",
+    "Stop rule",
+    "Fills",
+    "Fees",
+    "Australian dollar value",
+    "Review note",
+    "Yes or no for the rules",
+)
+
+SAFETY_STEPS = (
+    "AUSTRAC register",
+    "ASIC, from April 2027",
+    "A second code",
+    "Scams and Moneysmart",
+)
+
+
+def _paint_notebook(base: Image.Image, shown: int, highlight: int | None = None) -> None:
+    """A page that fills one line each time an item is named."""
+    draw = ImageDraw.Draw(base)
+    page = (MX + 180, 188, RIGHT - 180, 700)
+    draw.rounded_rectangle(page, 18, fill=GLASS, outline=CYAN, width=3)
+    draw.rectangle([page[0], page[1], page[0] + 18, page[3]], fill=CYAN)
+    draw.text((page[0] + 48, page[1] + 24), "The page", font=font(36), fill=CYAN)
+    y = page[1] + 80
+    for index, label in enumerate(NOTEBOOK_ITEMS):
+        on = index < shown
+        mark = highlight is not None and index == highlight
+        color = CYAN if on else (40, 64, 84)
+        draw.ellipse([page[0] + 48, y, page[0] + 80, y + 32], outline=color, width=3)
+        if on:
+            draw.text((page[0] + 56, y + 2), str(index + 1), font=font(22), fill=CYAN)
+        draw.text((page[0] + 100, y), label, font=font(28), fill=WHITE if on else (70, 90, 110))
+        if mark:
+            draw.rounded_rectangle([page[0] + 36, y - 6, page[2] - 36, y + 40], 8, outline=CYAN, width=2)
+        y += 64
+
+
+def _paint_bp02_chart(base: Image.Image, stage: str) -> None:
+    """Top 30,331, bottom 24,930, six gaps of about 900, then the stop zone."""
+    draw = ImageDraw.Draw(base)
+    panel = (MX + 80, 188, RIGHT - 80, 700)
+    draw.rounded_rectangle(panel, 18, fill=GLASS, outline=CYAN, width=3)
+    _example(draw, panel[0] + 28, panel[1] + 24)
+    plot = (panel[0] + 140, panel[1] + 90, panel[2] - 80, panel[3] - 70)
+    lo, hi = 24930, 30331
+    pad = 1400
+    lo_p, hi_p = lo - pad, hi + pad
+    def y_at(price: float) -> int:
+        return int(_map(0, 2, price, lo_p, hi_p, plot)[1])
+    y_top, y_bot = y_at(hi), y_at(lo)
+    if stage == "stop":
+        draw.rectangle([plot[0], plot[1], plot[2], y_top], outline=CYAN, width=2)
+        draw.rectangle([plot[0], y_bot, plot[2], plot[3]], outline=CYAN, width=2)
+        draw.text((plot[0] + 12, plot[1] + 8), "Stop, above the top", font=font(28), fill=CYAN)
+        draw.text((plot[0] + 12, plot[3] - 40), "Stop, below the bottom", font=font(28), fill=CYAN)
+    draw.line([(plot[0], y_top), (plot[2], y_top)], fill=CYAN, width=4)
+    draw.line([(plot[0], y_bot), (plot[2], y_bot)], fill=CYAN, width=4)
+    draw.text((plot[0] - 120, y_top - 16), "30,331", font=font(28), fill=CYAN)
+    draw.text((plot[0] - 120, y_bot - 16), "24,930", font=font(28), fill=CYAN)
+    if stage in {"gaps", "stop", "page"}:
+        step = (hi - lo) / 6
+        for i in range(1, 6):
+            yy = y_at(lo + i * step)
+            draw.line([(plot[0], yy), (plot[2], yy)], fill=CYAN, width=2)
+        draw.text((plot[2] - 280, (y_top + y_bot) // 2 - 16), "Six gaps, about 900", font=font(28), fill=WHITE)
+    if stage == "page":
+        draw.text((panel[0] + 220, panel[1] + 28), "On the page", font=font(32), fill=WHITE)
+
+
+def _paint_journal(base: Image.Image, cols: int, note: str = "") -> None:
+    """One row per column, in the order the voice names them."""
+    draw = ImageDraw.Draw(base)
+    panel = (MX + 120, 180, RIGHT - 120, 708)
+    draw.rounded_rectangle(panel, 16, fill=GLASS, outline=CYAN, width=3)
+    draw.text((panel[0] + 28, panel[1] + 16), "Journal", font=font(32), fill=CYAN)
+    if note:
+        draw.text((panel[0] + 220, panel[1] + 20), note, font=font(26), fill=WHITE)
+    y = panel[1] + 62
+    row_h = 40
+    shown = JOURNAL_COLUMNS[: max(0, cols)]
+    for name in shown:
+        draw.rounded_rectangle([panel[0] + 24, y, panel[2] - 24, y + row_h - 4], 8, outline=CYAN, width=2)
+        draw.text((panel[0] + 36, y + 6), name, font=font(24), fill=WHITE)
+        y += row_h
+
+
+def _paint_safety(base: Image.Image, step: int, note: str = "") -> None:
+    """Register, ASIC, a second code, then scams. One step lights up at a time."""
+    draw = ImageDraw.Draw(base)
+    panel = (MX + 160, 188, RIGHT - 160, 700)
+    draw.rounded_rectangle(panel, 18, fill=GLASS, outline=CYAN, width=3)
+    draw.text((panel[0] + 36, panel[1] + 24), "Before any real dollars", font=font(32), fill=CYAN)
+    if note:
+        draw.text((panel[0] + 36, panel[1] + 68), note, font=font(28), fill=WHITE)
+    y = panel[1] + 120
+    for index, label in enumerate(SAFETY_STEPS, start=1):
+        on = index <= step
+        color = CYAN if on else (40, 64, 84)
+        draw.ellipse([panel[0] + 40, y, panel[0] + 84, y + 44], outline=color, width=3)
+        if on:
+            draw.text((panel[0] + 52, y + 6), str(index), font=font(28), fill=CYAN)
+        draw.text((panel[0] + 110, y + 6), label, font=font(32), fill=WHITE if index == step else (WHITE if on else (70, 90, 110)))
+        if index < len(SAFETY_STEPS):
+            draw.line([(panel[0] + 62, y + 46), (panel[0] + 62, y + 78)], fill=color, width=3)
+        y += 96
+
+
 def paint_v2_cards(base: Image.Image, shot: dict, local: float) -> None:
     cards = list(shot.get("v2_cards") or [])
     card = cards[_v2_index(shot, local)]
@@ -1968,6 +2095,19 @@ def paint_v2_cards(base: Image.Image, shot: dict, local: float) -> None:
         beat = " ".join(str(line) for line in (card.get("lines") or []) if line)
     shot["term"] = str(card.get("title") or shot.get("chapter") or "")
     shot["definition"] = beat
+    kind = card.get("kind")
+    if kind == "notebook":
+        _paint_notebook(base, int(card.get("shown") or 0), card.get("highlight"))
+        return
+    if kind == "chart":
+        _paint_bp02_chart(base, str(card.get("stage") or "range"))
+        return
+    if kind == "journal":
+        _paint_journal(base, int(card.get("cols") or 0), str(card.get("note") or ""))
+        return
+    if kind == "safety":
+        _paint_safety(base, int(card.get("step") or 0), str(card.get("note") or ""))
+        return
     if card.get("classic"):
         _paint_three_words_classic(base)
         return
@@ -2311,10 +2451,8 @@ def paint_outro(base: Image.Image, shot: dict, local: float) -> None:
     draw = ImageDraw.Draw(base)
     _kicker, lesson_label, cta = next_lesson_label(shot)
     title = (shot.get("caption") or "End of the Blueprint").strip().rstrip(".")
-    if shot.get("lesson_id") == "bp-02-what-you-need":
-        paste(base, scaled(wordmark(), 78), (MX, 56))
-    else:
-        draw.text((MX, 72), "GridBot Builder", font=font(40), fill=WHITE)
+    # Text, not the spaced-caps wordmark crop. The name is GridBot Builder.
+    draw.text((MX, 72), "GridBot Builder", font=font(40), fill=WHITE)
     draw.text((MX, 220), "NEXT", font=font(28), fill=CYAN)
     draw.text((MX, 268), lesson_label, font=font(40), fill=CYAN)
     y = 340
@@ -2780,7 +2918,8 @@ def _burn_caption(frame: np.ndarray, shot: dict, local: float) -> np.ndarray:
     timed = [_Word(text, start, end) for text, start, end in words]
     line = ""
     for sentence in _caption_sentences(timed):
-        for group in _balanced_caption_lines(sentence, 42):
+        tidy = shot.get("lesson_id") == "bp-02-what-you-need"
+        for group in _balanced_caption_lines(sentence, 42, tidy):
             if group[0].start - 0.05 <= local <= group[-1].end + 0.15:
                 line = " ".join(word.text for word in group)
     if not line:
@@ -3263,15 +3402,23 @@ def _caption_sentences(words: list) -> list[list]:
     return sentences
 
 
-def _pack_caption_line(words: list, width: int) -> list[list]:
+def _pack_caption_line(words: list, width: int, tidy: bool = False) -> list[list]:
+    """Fit lines. When tidy, a line does not end on a dangling word such as 'and'."""
+    dangling = {"and", "or", "the", "a", "an", "of", "to", "in", "for", "with", "that", "as"}
     lines: list[list] = []
     current: list = []
     for word in words:
         trial = current + [word]
         text = " ".join(item.text for item in trial)
         if current and len(text) > width:
-            lines.append(current)
-            current = [word]
+            if tidy and len(current) > 1 and str(current[-1].text).strip(".,;:").lower() in dangling:
+                moved = current[-1]
+                current = current[:-1]
+                lines.append(current)
+                current = [moved, word]
+            else:
+                lines.append(current)
+                current = [word]
         else:
             current = trial
     if current:
@@ -3279,18 +3426,18 @@ def _pack_caption_line(words: list, width: int) -> list[list]:
     return lines
 
 
-def _balanced_caption_lines(words: list, width: int = 42) -> list[list]:
+def _balanced_caption_lines(words: list, width: int = 42, tidy: bool = False) -> list[list]:
     """Fewest lines that fit, then the split whose longest line is as short as possible."""
     if not words:
         return []
     longest = max(len(str(word.text)) for word in words)
     cap = max(width, longest)
-    fewest = _pack_caption_line(words, cap)
+    fewest = _pack_caption_line(words, cap, tidy)
     best = fewest
     lo, hi = longest, cap
     while lo <= hi:
         mid = (lo + hi) // 2
-        trial = _pack_caption_line(words, mid)
+        trial = _pack_caption_line(words, mid, tidy)
         if len(trial) <= len(fewest):
             best = trial
             hi = mid - 1
@@ -3299,7 +3446,7 @@ def _balanced_caption_lines(words: list, width: int = 42) -> list[list]:
     return best
 
 
-def _write_lesson_captions(vtt: Path, srt: Path, words: list) -> None:
+def _write_lesson_captions(vtt: Path, srt: Path, words: list, tidy: bool = False) -> None:
     """One sentence at a time. A line holds long enough to read, and does not cross a stop."""
     from voice.captions import _stamp
 
@@ -3308,7 +3455,7 @@ def _write_lesson_captions(vtt: Path, srt: Path, words: list) -> None:
     cues = []
     previous_end = 0.0
     for sentence in _caption_sentences(words):
-        for group in _balanced_caption_lines(sentence, width):
+        for group in _balanced_caption_lines(sentence, width, tidy):
             text = " ".join(word.text for word in group).replace("Grid Bot Builder", "GridBot Builder").replace("Grid Bot Blueprint", "GridBot Blueprint")
             start = max(group[0].start, previous_end)
             end = max(group[-1].end, start + len(text) / limit)
@@ -3574,7 +3721,7 @@ def render(
     write_words(sidecar / "words.json", timed, engine="kokoro", mood="af_heart", method="acoustic-forced-align")
     vtt_path = sidecar / f"{sid}.vtt"
     srt_path = sidecar / f"{sid}.srt"
-    _write_lesson_captions(vtt_path, srt_path, timed)
+    _write_lesson_captions(vtt_path, srt_path, timed, tidy=sid == "bp-02-what-you-need")
     _cap_caption_speed(vtt_path)
     _srt_from_capped_vtt(vtt_path, srt_path)
     caption_dir = ROOT / "course/blueprint-rebuild/captions"

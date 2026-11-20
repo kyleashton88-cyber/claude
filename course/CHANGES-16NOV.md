@@ -1,5 +1,9 @@
 # Changes, 16 November 2026
 
+## BP-02 pictures only, not rendered
+
+The lower third no longer repeats the card. Captions for the next render break before a dangling "and", not after it. The seven items fill a notebook, the range is a chart, the journal is a table, and the account stretch is a four-step safety list. The end card says GridBot Builder. No spoken line changed.
+
 ## Stewart-approved 20 Nov 10:26pm AEDT
 
 The exchange definition is spoken before "The screen is the exchange." The journal is defined before any other use, and "A stablecoin fill goes in the journal." follows that definition. No other spoken line changed. Creative Studio passed the 78 stills. BP-02 is rendered once from this script.
