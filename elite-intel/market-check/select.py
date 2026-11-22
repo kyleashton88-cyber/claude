@@ -35,50 +35,31 @@ def composite_score(mid, long, liq, long_weight=None):
     if long_weight is None: long_weight = LONG_WINDOW_WEIGHT
     return 0.5*mid + long_weight*long + 10*liq
 
-# 15 Nov 2026. Replaces the long-window weight guard in the screen.
-# (a) drift30 > TREND_DRIFT30_MIN and ADX(14) on the last 30 daily bars > TREND_ADX14_MIN.
-# drift30 is |last close - close 30 bars ago| / (max high - min low) over those 30 bars.
-# (b) last close is less than ROOM_ABOVE_STOP_MIN above the example stop.
-# long_window_weight is not applied any more. It stays so the original tests still describe it.
-TREND_DRIFT30_MIN = 0.8
-TREND_ADX14_MIN = 40
-ROOM_ABOVE_STOP_MIN = 0.08
+# D and F, approved by Stewart 22 Nov 2026, 6:10pm AEDT.
+# The cuts live in research/screen.py. drift30 is win() on the last 30 completed
+# dailies: absolute close-to-close move divided by the 5th-to-95th close range.
+# ADX14 is win()'s ADX on that same window. The older high-low drift is not used.
+# long_window_weight is not applied. It stays so the original tests still describe it.
+def _load_screen():
+    import importlib.util
+    path = Path(__file__).resolve().parent / "research" / "screen.py"
+    spec = importlib.util.spec_from_file_location("elite_intel_market_screen", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+screen = _load_screen()
+TREND_DRIFT30_MIN = screen.TREND_DRIFT30_MIN
+TREND_ADX14_MIN = screen.TREND_ADX14_MIN
+ROOM_ABOVE_STOP_MIN = screen.ROOM_ABOVE_STOP_MIN
+trend_skip = screen.trend_skip
+room_above_stop = screen.room_above_stop
+room_skip = screen.room_skip
+skip_reasons_from_facts = screen.skip_reasons_from_facts
+BIG_FOUR = screen.BIG_FOUR
+RANGE_NOT_ACTIVE = screen.RANGE_NOT_ACTIVE
 EXAMPLE_LEVEL_BARS = 90
 LEVELS_STATE_NAME = "levels_state.json"
-
-def trend_drift30(d):
-    """Absolute 30-day close move divided by the 30-day high-low range."""
-    w = d.tail(30)
-    net = abs(float(w.close.iloc[-1]) - float(w.close.iloc[0]))
-    span = float(w.high.max() - w.low.min())
-    if span == 0:
-        return 0.0 if net == 0 else float("inf")
-    return net / span
-
-def trend_skip(drift30, adx14):
-    return drift30 > TREND_DRIFT30_MIN and adx14 > TREND_ADX14_MIN
-
-def room_above_stop(price, stop):
-    if not stop or stop <= 0:
-        return float("inf")
-    return (price - stop) / stop
-
-def room_skip(price, stop):
-    return room_above_stop(price, stop) < ROOM_ABOVE_STOP_MIN
-
-def skip_reasons_from_facts(drift30, adx14, price, stop):
-    """Reasons to skip a candidate. Empty means the coin stays."""
-    reasons = []
-    if trend_skip(drift30, adx14):
-        reasons.append(
-            f"trend: drift30 {drift30:.4f} > {TREND_DRIFT30_MIN} and ADX14 {adx14:.2f} > {TREND_ADX14_MIN}"
-        )
-    if room_skip(price, stop):
-        room = room_above_stop(price, stop)
-        reasons.append(
-            f"room-to-stop: price {price:.6g} is {room:.2%} above stop {stop:.6g}, under {ROOM_ABOVE_STOP_MIN:.0%}"
-        )
-    return reasons
 
 def example_levels(d):
     """Example range. Same geometry as the original levels(), on a 90-day window.
@@ -95,10 +76,28 @@ def _range_fields(lo, hi, now, stop):
                 grids=int(np.clip(round(w * 100 / 0.8), 10, 60)), type="geometric" if w > 0.15 else "arithmetic",
                 now=float(now), width=w)
 
+def completed_daily(d):
+    """Drop a forming UTC daily so the close, drift and ADX are completed bars."""
+    if "date" not in getattr(d, "columns", []):
+        return d
+    today = dt.datetime.now(dt.timezone.utc).date()
+    done = d[d.date.dt.date < today]
+    if len(done) == 0:
+        return d.reset_index(drop=True)
+    return done.reset_index(drop=True)
+
+def drift_adx30(d):
+    """win() drift30 and ADX14 on the last 30 completed dailies."""
+    window = completed_daily(d).tail(30)
+    _score, _cross, _width, drift, adx14 = win(window)
+    return drift, adx14
+
 def skip_reasons(d):
-    """Gate a candidate. Uses the fresh example stop (the stop we would publish today)."""
+    """D on a rotation candidate. Uses the fresh example stop (the stop we would publish today)."""
     levels = example_levels(d)
-    return skip_reasons_from_facts(trend_drift30(d), adx(d.tail(30)), float(d.close.iloc[-1]), levels["stop"])
+    done = completed_daily(d)
+    drift, adx14 = drift_adx30(d)
+    return skip_reasons_from_facts(drift, adx14, float(done.close.iloc[-1]), levels["stop"])
 
 def empty_levels_state():
     return {"picks": {}}
@@ -118,6 +117,22 @@ def _active_stint(state, coin):
     stints = state["picks"].get(coin, {})
     active = sorted((k, v) for k, v in stints.items() if v.get("active"))
     return active[-1] if active else None
+
+def published_example_stop(state, coin, fresh):
+    """Stop a reader would see: the frozen stop while that pick is live, else today's."""
+    active = _active_stint(state, coin)
+    if active:
+        return active[1]["stop"]
+    return fresh["stop"]
+
+def present_big_four(coin, levels, last_close, stop):
+    """F presentation. Below the example stop, do not reprint the old range."""
+    if screen.is_range_not_active(last_close, stop):
+        return {"coin": coin, "status": RANGE_NOT_ACTIVE, "now": float(last_close)}
+    out = dict(levels)
+    out["coin"] = coin
+    out["status"] = "active"
+    return out
 
 def _fresh_key(stints, published_on):
     if published_on not in stints:
@@ -184,7 +199,7 @@ def main():
         if s in STABLE or "usd" in c["id"] or "wrapped" in c["id"] or "staked" in c["id"]: continue
         if s in by and s in px: uni.append((s,c["name"],c["market_cap"],c["total_volume"]))
         if len(uni)>=30: break
-    rows=[]; data={}; gated=set()
+    rows=[]; data={}
     for s,name,mc,vol in uni:
         try: d=kl(s)
         except Exception as e: print("skip",s,e); continue
@@ -195,7 +210,7 @@ def main():
         reasons=skip_reasons(d)
         if reasons:
             print("skip", s + ":", "; ".join(reasons))
-            gated.add(s); continue
+            continue
         score=composite_score(m[0], L[0], liq)
         rows.append(dict(coin=s,name=name,score=round(score,1),mid30=round(m[0],1),long180=round(L[0],1),cross30=m[1],width30=round(m[2],3),drift30=round(m[3],2),adx14=round(m[4],1),cross180=L[1],width180=round(L[2],3),vol24h_usd=int(vol)))
     df=pd.DataFrame(rows)
@@ -206,18 +221,45 @@ def main():
     df.to_csv("scores.csv",index=False)
     asof=dt.datetime.now(ZoneInfo("Australia/Sydney"))
     published_on=asof.date().isoformat()
-    top=df.head(5).coin.tolist()
-    four=[s for s in ["BTC","ETH","SOL","XRP"] if s in data and s not in gated]
     state_path=Path(LEVELS_STATE_NAME)
     state=load_levels_state(state_path)
-    live=set(top)|set(four)
+    four=[s for s in BIG_FOUR if s in data]
+    rotation=[]
+    for s in df.head(5).coin.tolist():
+        drift, adx14 = drift_adx30(data[s])
+        fresh = example_levels(data[s])
+        done = completed_daily(data[s])
+        rotation.append(dict(coin=s, drift30=drift, adx14=adx14, last_close=float(done.close.iloc[-1]), stop=fresh["stop"]))
+    four_rows=[]
+    for s in four:
+        fresh = example_levels(data[s])
+        done = completed_daily(data[s])
+        last_close = float(done.close.iloc[-1])
+        four_rows.append(dict(coin=s, last_close=last_close, stop=published_example_stop(state, s, fresh), now=last_close))
+    if "BTC" in data:
+        btc_drift, btc_adx = drift_adx30(data["BTC"])
+    else:
+        btc_drift, btc_adx = 0.0, 0.0
+    screened = screen.evaluate_market(btc_drift, btc_adx, four_rows, rotation)
+    if screened["regime"]:
+        print(screened["regime_reason"])
+    inactive={row["coin"] for row in screened["four"] if row["status"]==RANGE_NOT_ACTIVE}
+    # A range that is not active is not reprinted, including via the rotation list.
+    top=[p["coin"] for p in screened["picks"] if p["coin"] not in inactive]
+    live=set(top)|{row["coin"] for row in screened["four"] if row["status"]!=RANGE_NOT_ACTIVE}
     mark_dropped(state, live)
     def levels(s):
         return publish_levels(state, s, example_levels(data[s]), published_on)
     picks=[levels(s) for s in top]
-    four_levels=[levels(s) for s in four]
+    four_levels=[]
+    for row in screened["four"]:
+        if row["status"]==RANGE_NOT_ACTIVE:
+            four_levels.append(present_big_four(row["coin"], None, row["last_close"], row["stop"]))
+        else:
+            four_levels.append(present_big_four(row["coin"], levels(row["coin"]), row["last_close"], row["stop"]))
     save_levels_state(state_path, state)
     json.dump(dict(asof=asof.strftime("%-I:%M%p %-d %b %Y").lower().replace("am","am").replace("pm","pm"),source="Pionex public API (daily candles), CoinGecko (market cap, Bybit listings)",
+      regime=screened["regime"], regime_reason=screened["regime_reason"],
       picks=picks,four=four_levels),open("levels.json","w"),indent=1,default=float)
     for s in set(top)|{"BTC","ETH","SOL","XRP"}:
         if s in data: data[s].to_csv(f"candles_{s}.csv",index=False)

@@ -1,6 +1,6 @@
 # Market Check scores before and after review A and C
 
-On 15 Nov 2026 Stewart approved A and replaced C. The tables below are the earlier A+C experiment. The screen no longer zeros the long-window weight. See the 15 Nov gate and the frozen levels in `select.py`.
+On 15 Nov 2026 Stewart approved A and replaced C. The tables below are the earlier A+C experiment. The screen no longer zeros the long-window weight. See the 15 Nov gate and the frozen levels in `select.py`. On 22 Nov 2026 Stewart approved D and F. D's live drift is the `win()` 30-day figure in `research/screen.py`, not a high-low range. The tables below are unchanged history.
 
 Provisional only. The hard drop in `select.py` is the reading this unmerged PR uses so it can be reviewed. It is not a production change, and it is not a decision to drop rather than penalise.
 
