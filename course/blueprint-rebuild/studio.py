@@ -2492,7 +2492,7 @@ def _paint_bp01_picture(base: Image.Image, shot: dict, local: float) -> bool:
             draw.text((box[0] + 100, slab + 36), "Not on this page", font=font(36), fill=NAVY)
             draw.text((box[0] + 80, 520), "A seed phrase or private key is the master password", font=font(28), fill=WHITE)
             draw.text((box[0] + 80, 564), "to a crypto wallet.", font=font(28), fill=WHITE)
-            draw.text((box[0] + 80, 612), "An API secret lets an app place trades on your account.", font=font(28), fill=CYAN)
+            draw.text((box[0] + 80, 612), "An API secret can place trades, and sometimes move money out.", font=font(26), fill=CYAN)
             return True
         if kind == "pair":
             frame("The pair")

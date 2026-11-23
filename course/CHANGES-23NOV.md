@@ -48,3 +48,19 @@ Stewart approved all eight spoken changes in his own words: "Approve all 8 wordi
 | W6 | Added "We price in US dollars. Your exchange may charge fees in Australian dollars, so keep each in its own column." |
 | W7 | "A fill is when your waiting order actually trades." |
 | W8 | "A stablecoin is a coin built to stay worth about one US dollar." |
+
+## BP-01 spoken lines, 23 Nov 5:26pm AEDT
+
+Stewart approved S1–S9. The lines below are his wording. Fix order #10 (picture and timing only) is in the same source. The film is rendered after this commit.
+
+| ID | Exact spoken change |
+|---|---|
+| S1 | "Here that means dollars, or a stablecoin, a crypto coin built to stay at one US dollar. We treat it like cash in this lesson, but it can drop below a dollar." |
+| S2 | "finished only three pairs, each a buy and a sell on lines next to each other." |
+| S3 | Added "Each fee is 0.1 percent of the whole trade, not of the profit: about 27 cents on the 267 dollar buy and 28 cents on the 276 dollar sell, 54 cents together." |
+| S4 | "not the full 9 dollars" and "The fees come out of what the pair makes. If the fees are larger than that, the pair keeps nothing." Recap lines use "what the pair makes". |
+| S5 | "This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise." |
+| S6 | The API secret line adds ", and sometimes move money out of it." |
+| S7 | "what a grid bot does. It is a small program that places these orders for you. You will learn when it can capture bounces, and where it loses." |
+| S8 | "below the current price" in the three buy-and-sell lines. |
+| S9 | "the opposite order one rung up or down." |

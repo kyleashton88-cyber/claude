@@ -215,7 +215,7 @@ def bp01() -> list[dict]:
     s = [ident("01", "Introduction")]
     s.append(gloss(
         "Hook",
-        "By the end of this series you will understand what a grid bot, a small program that places these orders for you, does, when it can capture bounces, and where it loses. You will know how to plan one, test it on paper, run it, check it, and change the capital you give to bots only under written risk rules. This is education, not a promise of results. "
+        "By the end of this series you will understand what a grid bot does. It is a small program that places these orders for you. You will learn when it can capture bounces, and where it loses. You will know how to plan one, test it on paper, run it, check it, and change the capital you give to bots only under written risk rules. This is education, not a promise of results. "
         "Price often moves sideways, bouncing between the same top and bottom instead of leaving. A grid is a ladder of waiting orders, called limit orders, built for that bouncing. When price runs one way and stays there, the grid has nothing left to do. And if price falls through the bottom, coin means the crypto itself, and you are left holding the coin, and it is worth less.",
         "Plan, test, run, check, and change capital only under written rules.",
         "The promise",
@@ -249,10 +249,10 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "Cash and coin",
-        "Cash is money you can spend. Here that means dollars, or a dollar-pegged token, treated like cash in this lesson. The peg can break. Coin is the crypto, such as bitcoin.",
+        "Cash is money you can spend. Here that means dollars, or a stablecoin, a crypto coin built to stay at one US dollar. We treat it like cash in this lesson, but it can drop below a dollar. Coin is the crypto, such as bitcoin.",
         "Cash is money you can spend. Coin is the crypto.",
         "Cash and coin",
-        "A dollar-pegged token, treated like cash in this lesson. The peg can break.",
+        "A stablecoin, a crypto coin built to stay at one US dollar. We treat it like cash in this lesson, but it can drop below a dollar.",
     ))
     s.append(gloss(
         "Buy and sell",
@@ -263,7 +263,7 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "The idea",
-        "A bot is software that places and refills orders for you. You start with some cash and some coin, so there is something to buy with and something to sell. A grid bot places waiting buy orders on lines below the price and sell orders on lines above it, inside a top and a bottom you choose. The space between your top and your bottom is called the range. The sells need some coin, so a grid starts with part cash and part coin, and that is a description, not advice about what to hold.",
+        "A bot is software that places and refills orders for you. You start with some cash and some coin, so there is something to buy with and something to sell. A grid bot places waiting buy orders on lines below the current price and sell orders on lines above it, inside a top and a bottom you choose. The space between your top and your bottom is called the range. The sells need some coin, so a grid starts with part cash and part coin, and that is a description, not advice about what to hold.",
         "Buys below, sells above, inside a range you choose.",
         "Range",
         "The top and the bottom you choose. Also called the range.",
@@ -331,14 +331,14 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "Buys and sells",
-        "Buy orders wait on lines below the price. Sell orders wait on lines above it. Each fill changes what you hold: a buy fill adds coin, and a sell fill adds cash. You choose the range, the gaps and the money. The bot places each order.",
+        "Buy orders wait on lines below the current price. Sell orders wait on lines above it. Each fill changes what you hold: a buy fill adds coin, and a sell fill adds cash. You choose the range, the gaps and the money. The bot places each order.",
         "Buys wait below. Sells wait above.",
         "Bot",
         "Software that places the orders for you, and refills one after a fill.",
     ))
     s.append(gloss(
         "Bot and you",
-        "After a fill, the bot places the opposite order one rung away. A buy fill gets a sell one rung higher. A sell fill gets a buy one rung lower. You still write the stop, and you act when that rule is met. The bot does not decide the stop for you unless you turned that setting on, and you write which one before you start.",
+        "After a fill, the bot places the opposite order one rung up or down. A buy fill gets a sell one rung higher. A sell fill gets a buy one rung lower. You still write the stop, and you act when that rule is met. The bot does not decide the stop for you unless you turned that setting on, and you write which one before you start.",
         "You choose the rules. The bot places the orders.",
         "Bot and you",
         "You choose the range, the gaps, the money and the stop. The bot places and refills orders.",
@@ -346,7 +346,7 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "How a grid can capture bounces",
-        "Think of a market stall. The stallholder buys stock a little cheaper and sells it a little dearer, and pays a fee on every sale. Exchanges charge a small fee on each trade. A grid can do that while price bounces inside the range. A bounce means price moves down and back up, or up and back down, and stays inside. One buy at a lower line and the later sell of that same coin is one pair. On these daily closes, the July to October example window finished only three pairs one rung apart. The sell line is higher, so the cash that comes back is more than the cash that left, before the fee. A fee is what the exchange charges when an order fills. The fee comes out of the gap. If the fees are larger than the gap, the pair keeps nothing. This is not a promise. The pair finishes only if price does bounce and both orders fill.",
+        "Think of a market stall. The stallholder buys stock a little cheaper and sells it a little dearer, and pays a fee on every sale. Exchanges charge a small fee on each trade. A grid can do that while price bounces inside the range. A bounce means price moves down and back up, or up and back down, and stays inside. One buy at a lower line and the later sell of that same coin is one pair. On these daily closes, the July to October example window finished only three pairs, each a buy and a sell on lines next to each other. The sell line is higher, so the cash that comes back is more than the cash that left, before the fee. A fee is what the exchange charges when an order fills. The fees come out of what the pair makes. If the fees are larger than that, the pair keeps nothing. This is not a promise. The pair finishes only if price does bounce and both orders fill.",
         "A pair keeps the gap only after fees, and only on a bounce.",
         "Fee",
         "What the exchange charges when an order fills. It comes out of the gap.",
@@ -358,14 +358,14 @@ def bp01() -> list[dict]:
         candle={"high": 30184, "low": 29794, "close": 29914, "date": "19 July 2023"},
         vo=(
             "The daily close is the last price of the day. Crypto trades all day, so the day is cut at a set time. "
-            "The exchange's day ends at 11am Sydney time in daylight saving, 10am otherwise. "
+            "This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise. "
             "This is a simple candle that shows the day's high, low and close. "
             "Traders call it a candle because the full version has a thick body and a thin wick, like a candle. Here we only need the high, the low and the close. "
             "This candle is 19 July 2023. The high, the low, and the close are labelled."
         ),
-        caption="19 July 2023. Close 29,914. The exchange's day ends at 11am Sydney time in daylight saving, 10am otherwise.",
+        caption="19 July 2023. Close 29,914. This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise.",
         term_text="Daily close",
-        definition_text="The last price of the day. The exchange's day ends at 11am Sydney time in daylight saving, and 10am otherwise.",
+        definition_text="The last price of the day. This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise.",
     ))
     s.append(_shot(
         chapter="The whole window",
@@ -392,7 +392,7 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "One pair",
-        "You can buy part of a coin. Here we buy one hundredth of a bitcoin, 0.01. 900 dollars times 0.01 bitcoin is 9 dollars before fees. In this example a buy waiting at the lower of these two lines was reached on 17 August 2023, and the sell one line above was reached on 29 August 2023. The card shows the gap, then the two fees, then what is left. That is about 8 dollars 46 after fees, for one small pair. It happens only if the price comes back up through the sell line. If the price leaves through the bottom, you still hold the coin, and the pair never finishes. This card is not money you made. Past results don't predict future results.",
+        "You can buy part of a coin. Here we buy one hundredth of a bitcoin, 0.01. 900 dollars times 0.01 bitcoin is 9 dollars before fees. In this example a buy waiting at the lower of these two lines was reached on 17 August 2023, and the sell one line above was reached on 29 August 2023. The card shows the gap, then the two fees, then what is left. Each fee is 0.1 percent of the whole trade, not of the profit: about 27 cents on the 267 dollar buy and 28 cents on the 276 dollar sell, 54 cents together. That is about 8 dollars 46 after fees, for one small pair. It happens only if the price comes back up through the sell line. If the price leaves through the bottom, you still hold the coin, and the pair never finishes. This card is not money you made. Past results don't predict future results.",
         "About 8 dollars 46 after fees. Not a forecast.",
         "Pair",
         "One buy and the later sell of the same coin. The trading pair, bitcoin and dollars, is a different word and comes in the next lesson.",
@@ -466,14 +466,14 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "One sentence to keep",
-        "In short: a grid waits, it buys lower and sells higher while price bounces, the fees come out of the gap, and if a daily close leaves and stays out, you stop the bot and follow the rule you wrote.",
+        "In short: a grid waits, it buys lower and sells higher while price bounces, the fees come out of what the pair makes, and if a daily close leaves and stays out, you stop the bot and follow the rule you wrote.",
         "Wait, bounce, fees, and a written stop.",
         "One sentence",
-        "Buys lower, sells higher, fees come out of the gap, and the stop is yours to follow.",
+        "Buys lower, sells higher, fees come out of what the pair makes, and the stop is yours to follow.",
     ))
     s += stack("Self-check", [
         "Check yourself. Why does a grid start with some coin as well as cash? Because the sell orders need coin you already hold.",
-        "In the example pair, why is the net about 8 dollars 46 and not the whole gap? The two fees come out first.",
+        "In the example pair, why is the net about 8 dollars 46 and not the full 9 dollars? The two fees come out first.",
         "Price closes above your top line, and the next day's close is still above it. What do you do, and who does it? You stop the bot and follow your written rule, by hand, unless you turned on the bot's stop setting.",
     ], "")
     s += stack("Your turn", [
@@ -483,10 +483,10 @@ def bp01() -> list[dict]:
     ], "")
     s.append(gloss(
         "No secrets",
-        "Bring a notebook, and no secrets: no seed phrase, private key or API secret. A seed phrase or private key is the master password to a crypto wallet. An API secret is a key that lets an app place trades on your account.",
+        "Bring a notebook, and no secrets: no seed phrase, private key or API secret. A seed phrase or private key is the master password to a crypto wallet. An API secret is a key that lets an app place trades on your account, and sometimes move money out of it.",
         "No seed phrase, private key, or API secret.",
         "Secrets",
-        "A seed phrase or private key is the master password to a crypto wallet. An API secret is a key that lets an app place trades on your account.",
+        "A seed phrase or private key is the master password to a crypto wallet. An API secret is a key that lets an app place trades on your account, and sometimes move money out of it.",
     ))
     s.append(gloss(
         "The pair, next",
@@ -496,8 +496,8 @@ def bp01() -> list[dict]:
         "The two things you swap. Bitcoin and US dollars in this course.",
     ))
     s += stack("Recap", [
-        "A grid bot places waiting buys below the price and waiting sells above it, inside a range you choose.",
-        "A finished pair buys lower and sells higher. The fees come out of the gap. In the example that was about 8 dollars 46, and it is not a promise.",
+        "A grid bot places waiting buys below the current price and waiting sells above it, inside a range you choose.",
+        "A finished pair buys lower and sells higher. The fees come out of what the pair makes. In the example that was about 8 dollars 46, and it is not a promise.",
         "Leave through the top and you hold mostly cash. Leave through the bottom and you hold mostly coin.",
         "If a daily close leaves the range and the next close is still outside, you stop the bot and follow the rule you wrote.",
     ], "")
