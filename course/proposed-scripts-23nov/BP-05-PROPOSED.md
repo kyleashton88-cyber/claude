@@ -19,7 +19,7 @@ Added sections:
 New on-screen visuals:
 
 - A ladder card: seven lines, six gaps, about 900, top 30,331, bottom 24,930, every figure marked Example.
-- A cost card: about 54 cents on 0.01 coin, and US$54.36 on a whole coin. Exact sum on the card: 0.2673 + 0.2763 = 0.5436. The mid-price shortcut of about 55 is crossed out.
+- A cost card: about 54 cents on 0.01 coin, and US$54.36 on a whole coin. Exact sum on the card: 0.2673 + 0.2763 = 0.5436. The mid-price shortcut of about 55 is crossed out. Every figure marked Example.
 - A miss card: a round top at 30,000 with the real top 30,331 sitting 331 above it.
 - An equal-dollar card: 100, 125, 150, 175, 200.
 - An equal-percent card: 100, 118.9, 141.4, 168.2, 200.

@@ -1,5 +1,14 @@
 # Revisions, 23 November
 
+## Round 6
+
+Numbers were 10/10. Legal was 10/10 except BP-05. The beginner read was 10/10 except BP-08. Two draft fixes only. Spoken drafts only. Nothing else was changed. Nothing was rendered. Live BP-01 and BP-02 were not edited.
+
+- BP-05 cost card, the US$54.36 line, now ends with "Every figure marked Example." The spoken script is unchanged, still 1,658 words.
+- BP-08 hand-over Card A: "Inside, because it is at least 24,930 and at most 30,331, including a close that sits on either line." Card B: "Outside, because 33,086 is above 30,331." That means not at most 30,331. The exclusive "above 24,930 and below 30,331" and "not below 30,331" wording is off those cards.
+
+BP-08 spoken words after the card wording: 1805, about 10.9 minutes at 165 words a minute. The other eight lessons are unchanged.
+
 ## Round 5, beginner
 
 Legal and the numbers were already 10/10. This pass is the beginner round 4 file, plus one legal optional line and one card label. Spoken drafts only. Live BP-01 and BP-02 were not edited. Nothing was rendered. No figure, date, or fee value was changed. BP-05's spoken text was not shortened.

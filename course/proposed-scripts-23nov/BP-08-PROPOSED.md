@@ -2,7 +2,7 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1796
+Word count: 1805
 Estimated minutes: 10.9 at about 165 words a minute
 
 Added sections:
@@ -58,7 +58,7 @@ If you want the fourth row, label it before you write in it. Write the words "re
 
 Check yourself. What are the three questions? The answer is: inside or not, which side of the middle, and whether the rule is still in force or the stop has fired. On 7 October 2023, is 27,969 inside 24,930 to 30,331? The answer is yes. On 23 October 2023, does which side of the middle still matter? The answer is no. The close has left the range. What is the fourth row? The answer is a review record, not a target.
 
-One more pass, spoken as a card you could hand to someone. Card A, 7 October 2023. Close 27,969. Inside, because it is above 24,930 and below 30,331. Side, above 27,630 by 339. Rule, still in force. The stop has not fired. Card B, 23 October 2023. Close 33,086. Outside, because 33,086 is not below 30,331. Side, not asked. Rule, the stop has fired, and the next close was still outside. Hand the two cards over. If the other person can read the action from card B without asking you what you meant, the sentences are done. If they ask "and then what", the action is the sentence you wrote before you started, not a new one you invent while handing the card over.
+One more pass, spoken as a card you could hand to someone. Card A, 7 October 2023. Close 27,969. Inside, because it is at least 24,930 and at most 30,331, including a close that sits on either line. Side, above 27,630 by 339. Rule, still in force. The stop has not fired. Card B, 23 October 2023. Close 33,086. Outside, because 33,086 is above 30,331. Side, not asked. Rule, the stop has fired, and the next close was still outside. Hand the two cards over. If the other person can read the action from card B without asking you what you meant, the sentences are done. If they ask "and then what", the action is the sentence you wrote before you started, not a new one you invent while handing the card over.
 
 On paper, or on a demo that uses pretend money, write the two dates and the three answers. Write Example beside both closes. Do not send an order. A finished check is not a new plan.
 
