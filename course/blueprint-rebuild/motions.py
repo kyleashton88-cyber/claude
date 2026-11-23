@@ -41,7 +41,7 @@ SPECS: dict[str, dict] = {
             "EXAMPLE. 29 Aug sell 0.01 bitcoin at 27,630 = US$276.30",
             "EXAMPLE. Before fees US$9.00",
             "EXAMPLE. Fees 0.1% + 0.1% = US$0.54",
-            "EXAMPLE. After fees, net about US$8.46",
+            "EXAMPLE. After fees, net about US$8.46 (8.4564)",
             "Only if price comes back up. Not a forecast.",
         ],
     },
@@ -493,18 +493,24 @@ def _paint_stop_card(draw, shot: dict, local: float, ui) -> None:
         last = closes[min(len(closes) - 1, max(0, int(local // 6) * 16))]
         label = f"{last['date'][8:10]} {last['date'][5:7]}  {round(float(last['close'])):,}"
         if show_out:
-            label = "23 Oct 33,086   24 Oct 33,902"
-            mark = pts[-1][0]
-        else:
-            mark = pts[min(len(pts) - 1, max(0, int(local // 6) * 12))][0]
+            label = "23 Oct 33,086    24 Oct 33,902"
         face = ui.font(22)
         pill_w = min(int(face.getlength(label)) + 28, plot[2] - plot[0] - 16)
-        px = plot[2] - pill_w - 8
+        px = plot[0] + 12
         py = plot[1] + 8
         draw.rounded_rectangle([px, py, px + pill_w, py + 36], 8, fill=ui.CYAN)
         draw.text((px + 12, py + 6), label, font=face, fill=ui.NAVY)
-        # A playhead on the real path. It steps every 6 seconds.
-        draw.rectangle([mark - 8, plot[1] + 52, mark + 8, plot[3] - 16], fill=ui.CYAN)
+        if not show_out:
+            mark = pts[min(len(pts) - 1, max(0, int(local // 6) * 12))][0]
+            # Left of the latest close, so the bar never sits on the dot.
+            draw.rectangle([mark - 28, plot[1] + 52, mark - 16, plot[3] - 16], fill=ui.CYAN)
+        else:
+            # Number the two closes that finish outside, clear of the spike.
+            for index, (x, y) in enumerate(pts[-2:]):
+                draw.ellipse([x - 14, y - 14, x + 14, y + 14], outline=ui.CYAN, width=3)
+                draw.text((x - 36, y - 28), str(index + 1), font=ui.font(28), fill=ui.WHITE)
+            if october_at is not None and local >= october_at + 4:
+                draw.text((plot[0] + 16, plot[3] - 36), "1 outside, then 2 still outside", font=ui.font(22), fill=ui.WHITE)
 
 
 def paint_visual(base, shot: dict, local: float, ui) -> None:
@@ -543,6 +549,10 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
             draw.rounded_rectangle(box, 22, fill=ui.GLASS, outline=ui.CYAN, width=3)
             ui._example(draw, box[0] + 36, box[1] + 28)
             draw.text((box[0] + 36, box[1] + 110), "Through the bottom", font=ui.font(48), fill=ui.WHITE)
+            coin = (box[2] - 220, box[1] + 140)
+            draw.ellipse([coin[0] - 36, coin[1] - 36, coin[0] + 36, coin[1] + 36], outline=ui.CYAN, width=4)
+            draw.ellipse([coin[0] - 22, coin[1] - 22, coin[0] + 22, coin[1] + 22], outline=ui.WHITE, width=3)
+            draw.text((coin[0] - 12, coin[1] - 16), "B", font=ui.font(28), fill=ui.WHITE)
             draw.text((box[0] + 36, box[1] + 200), "You still hold the coin.", font=ui.font(40), fill=ui.WHITE)
             draw.text((box[0] + 36, box[1] + 280), "The pair never finishes.", font=ui.font(40), fill=ui.WHITE)
             if local >= (ui._word_at(shot, "money") or bottom_at):
@@ -632,9 +642,7 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
             if name == "Down":
                 at = down_at or at
             if name.startswith("Buy"):
-                opens = ui._phrase_at(shot, "three buys")
-                if opens is not None and local < opens:
-                    continue
+                pass
             elif at is None or local < at:
                 break
             draw.rounded_rectangle([ui.MX, y, ui.RIGHT, y + 56], 12, outline=ui.CYAN, width=2)
@@ -643,7 +651,7 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
                 draw.text((ui.MX + 280, y + 12), "EXAMPLE  " + value, font=ui.font(28), fill=ui.WHITE)
             y += 64
         if local >= (ui._phrase_at(shot, "0.03") or 10**9):
-            draw.text((ui.MX + 28, min(y, 600)), "0.03 BTC × $24,000 = $720", font=ui.font(32), fill=ui.CYAN)
+            draw.text((ui.MX + 28, y + 8), "0.03 BTC × $24,000 = $720", font=ui.font(32), fill=ui.CYAN)
         return
     visible = [text for text in rows[:shown] if not (chapter == "Downside" and text.startswith("EXAMPLE, made up") and (made_at is None or local < made_at))]
     if any(ch.isdigit() for text in visible for ch in text):
@@ -684,6 +692,8 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
         y += step
         if y > 700:
             break
+    if chapter == "How a grid can capture bounces" and any("26,730" in text for text in rows[:shown]):
+        draw.text((ui.MX + 28, 620), "26,730 = 24,930 + 900 + 900", font=ui.font(28), fill=ui.CYAN)
     if one_pair:
         # At most four lines, counting the formula and the fee basis.
         if formula_on:
@@ -693,7 +703,7 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
             draw.text(
                 (ui.MX + 24, 560),
                 "0.1% of $267.30 = $0.2673; 0.1% of $276.30 = $0.2763; total $0.5436 ≈ $0.54",
-                font=ui.font(24),
+                font=ui.font(28),
                 fill=ui.CYAN,
             )
         return

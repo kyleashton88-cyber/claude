@@ -1136,7 +1136,7 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
             draw.text((bracket + 24, mid - 20), note, font=face_gap, fill=WHITE)
 
     if chapter == "The levels" and shot.get("lesson_id") == "bp-01-introduction":
-        formula = "(30,331 − 24,930) ÷ 6 ≈ 900"
+        formula = "(30,331 − 24,930) ÷ 6  ≈  900"
         face_f = font(28)
         fw = int(face_f.getlength(formula)) + 24
         # Inside the card header, above the plot and above the y=732 caption gap.
@@ -1898,7 +1898,9 @@ def paint_crossings(base: Image.Image, shot: dict, local: float) -> None:
             draw.text((left, bot + 28), caption, font=font(28), fill=WHITE)
         else:
             draw.line([(left, mid), (right, mid)], fill=WHITE, width=4)
+            draw.text((right - 90, mid - 32), "level", font=font(24), fill=WHITE)
             draw.line([(left + 80, mid + 80), (left + 520, mid - 80)], fill=CYAN, width=4)
+            draw.text((left + 80, mid + 88), "price", font=font(24), fill=CYAN)
             px, py = left + 300, mid
             draw.ellipse((px - 12, py - 12, px + 12, py + 12), outline=WHITE, width=3)
             draw.ellipse((px - 6, py - 6, px + 6, py + 6), fill=CYAN)
@@ -2473,10 +2475,10 @@ def _paint_bp01_picture(base: Image.Image, shot: dict, local: float) -> bool:
         return True
     if chapter == "Cash and coin":
         frame("Cash and coin")
-        draw.rounded_rectangle([box[0] + 80, 320, box[0] + 520, 520], 16, outline=CYAN, width=3)
-        draw.text((box[0] + 120, 390), "Cash", font=font(48), fill=CYAN)
-        draw.rounded_rectangle([box[0] + 620, 320, box[0] + 1060, 520], 16, outline=WHITE, width=3)
-        draw.text((box[0] + 680, 390), "Coin", font=font(48), fill=WHITE)
+        _literal_note(draw, box[0] + 180, 400, 1.4)
+        draw.text((box[0] + 280, 370), "Cash", font=font(48), fill=CYAN)
+        _literal_coin(draw, box[0] + 760, 400, 1.5)
+        draw.text((box[0] + 840, 370), "Coin", font=font(48), fill=WHITE)
         draw.text((box[0] + 80, 560), "A stablecoin is built to stay at one US dollar.", font=font(28), fill=WHITE)
         draw.text((box[0] + 80, 600), "We treat it like cash. It can drop below a dollar.", font=font(28), fill=CYAN)
         return True
@@ -2516,7 +2518,7 @@ def _paint_bp01_picture(base: Image.Image, shot: dict, local: float) -> bool:
         cash_on = _spoken(shot, local, "holding cash") or _spoken(shot, local, "hold cash")
         coin_on = _spoken(shot, local, "holding coin") or _spoken(shot, local, "hold coin")
         draw.rounded_rectangle([box[0] + 80, 320, box[0] + 560, 520], 16, fill=CYAN if cash_on else GLASS, outline=CYAN, width=3)
-        _literal_note(draw, box[0] + 160, 420, 1.1)
+        _literal_note(draw, box[0] + 160, 420, 1.1, ink=NAVY if cash_on else CYAN)
         draw.text((box[0] + 250, 390), "Cash", font=font(48), fill=NAVY if cash_on else CYAN)
         draw.rounded_rectangle([box[0] + 680, 320, box[0] + 1160, 520], 16, fill=CYAN if coin_on else GLASS, outline=CYAN, width=3)
         _literal_coin(draw, box[0] + 760, 420, 1.15)
@@ -2583,7 +2585,7 @@ def _paint_bp01_picture(base: Image.Image, shot: dict, local: float) -> bool:
         if kind == "hold":
             frame("What you hold")
             draw.rounded_rectangle([box[0] + 80, 320, box[0] + 560, 500], 16, fill=CYAN)
-            _literal_note(draw, box[0] + 160, 410, 1.0)
+            _literal_note(draw, box[0] + 160, 410, 1.0, ink=NAVY)
             draw.text((box[0] + 250, 370), "Cash", font=font(48), fill=NAVY)
             draw.rounded_rectangle([box[0] + 680, 320, box[0] + 1160, 500], 16, outline=CYAN, width=3)
             _literal_coin(draw, box[0] + 760, 410, 1.05)
@@ -3136,14 +3138,14 @@ def _literal_coin(draw: ImageDraw.ImageDraw, cx: int, cy: int, scale: float = 1.
     draw.text((cx - int(8 * scale), cy - int(14 * scale)), "B", font=font(int(28 * scale)), fill=WHITE)
 
 
-def _literal_note(draw: ImageDraw.ImageDraw, cx: int, cy: int, scale: float = 1.0) -> None:
+def _literal_note(draw: ImageDraw.ImageDraw, cx: int, cy: int, scale: float = 1.0, ink=CYAN) -> None:
     """A banknote: a rectangle, a portrait, and two value lines."""
     w, h = int(46 * scale), int(28 * scale)
-    draw.rounded_rectangle([cx - w, cy - h, cx + w, cy + h], 6, outline=CYAN, width=4)
+    draw.rounded_rectangle([cx - w, cy - h, cx + w, cy + h], 6, outline=ink, width=4)
     pr = int(12 * scale)
-    draw.ellipse([cx - w + 8, cy - pr, cx - w + 8 + pr * 2, cy + pr], outline=WHITE, width=3)
-    draw.line([(cx - 8, cy - 8), (cx + w - 10, cy - 8)], fill=WHITE, width=3)
-    draw.line([(cx - 8, cy + 8), (cx + w - 18, cy + 8)], fill=CYAN, width=3)
+    draw.ellipse([cx - w + 8, cy - pr, cx - w + 8 + pr * 2, cy + pr], outline=ink, width=3)
+    draw.line([(cx - 8, cy - 8), (cx + w - 10, cy - 8)], fill=ink, width=3)
+    draw.line([(cx - 8, cy + 8), (cx + w - 18, cy + 8)], fill=ink, width=3)
 
 
 def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
@@ -3269,7 +3271,7 @@ def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
         outline=CYAN,
         width=6 if cash_on else 3,
     )
-    _literal_note(draw, cash_box[0] + 70, cash_box[1] + 46, 0.85)
+    _literal_note(draw, cash_box[0] + 70, cash_box[1] + 46, 0.85, ink=NAVY if cash_on else CYAN)
     draw.text((cash_box[0] + 130, cash_box[1] + 22), "Cash", font=font(48), fill=NAVY if cash_on else CYAN)
     draw.rounded_rectangle(
         coin_box, 14,
@@ -3434,10 +3436,11 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
     wick_x = cx + 280
     body_top = min(y_close, y_high + (y_low - y_high) // 3)
     body_bot = max(y_close, body_top + 36)
-    draw.line([(wick_x, y_high), (wick_x, y_low)], fill=WHITE, width=3)
-    draw.rounded_rectangle([wick_x - 28, body_top, wick_x + 28, body_bot], 4, fill=CYAN)
-    draw.text((wick_x + 40, (y_high + body_top) // 2), "Wick", font=font(28), fill=WHITE)
-    draw.text((wick_x + 40, (body_top + body_bot) // 2 - 8), "Body", font=font(28), fill=CYAN)
+    draw.line([(wick_x, y_high), (wick_x, y_low)], fill=WHITE, width=4)
+    draw.line([(wick_x - 18, y_high), (wick_x + 18, y_high)], fill=WHITE, width=4)
+    draw.line([(wick_x - 18, y_low), (wick_x + 18, y_low)], fill=WHITE, width=4)
+    draw.line([(wick_x - 22, y_close), (wick_x + 22, y_close)], fill=CYAN, width=6)
+    draw.text((wick_x + 36, y_close - 16), "High, low, close", font=font(28), fill=WHITE)
     cx = cx - 160
     labels = (
         (y_high, f"High {high:,}", -280),
@@ -3586,7 +3589,10 @@ def _paint_frame(shot: dict, local: float, progress: float) -> np.ndarray:
         shot.get("lesson_still")
         and kind not in {"chart"}
         and not shot.get("candle")
-        and (shot.get("chapter") or "") != "Buys and sells"
+        and not (
+            (shot.get("chapter") or "") == "Buys and sells"
+            and _spoken(shot, local, "you choose the range")
+        )
     ):
         title_bar(img, shot, progress)
         paint_lesson_still(img, shot, local, dur)

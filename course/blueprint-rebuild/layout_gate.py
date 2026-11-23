@@ -85,6 +85,16 @@ class LayoutLog:
         for key, count in seen.items():
             if count > 1:
                 found.append(f"sentence repeated {count} times: {key[:80]}")
+        # Two different lines of teaching text must not sit on each other.
+        for index, (box, text) in enumerate(self.texts):
+            if len(text) < 8:
+                continue
+            for other, other_text in self.texts[index + 1:]:
+                if len(other_text) < 8 or text == other_text:
+                    continue
+                if intersects(box, other):
+                    found.append(f"text overlaps text: {text[:40]} / {other_text[:40]}")
+                    return found
         return found
 
 

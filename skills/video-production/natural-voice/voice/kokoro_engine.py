@@ -30,5 +30,13 @@ class KokoroEngine:
         self.lang = "en-gb" if voice.startswith("b") else "en-us"
 
     def say(self, text: str, speed: float) -> tuple[np.ndarray, int]:
-        samples, rate = self.kokoro.create(text, voice=self.voice_name, speed=speed, lang=self.lang)
+        phonemes = self.kokoro.tokenizer.phonemize(text, self.lang)
+        # espeak writes coin as kˈɔɪn, and af_heart still says that with /aɪ/.
+        # Dropping the stress mark is the override that lands on /ɔɪ/.
+        # The noun close is klˈoʊs. klˈoʊz rhymes with rose. "closes" is a
+        # different string, so the verb is left alone.
+        phonemes = phonemes.replace("kˈɔɪn", "kɔɪn").replace("klˈoʊs", "klˈoʊz")
+        samples, rate = self.kokoro.create(
+            phonemes, voice=self.voice_name, speed=speed, lang=self.lang, is_phonemes=True,
+        )
         return np.asarray(samples, dtype=np.float32), int(rate)

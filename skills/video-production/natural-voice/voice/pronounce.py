@@ -32,14 +32,6 @@ SPOKEN = {
     # Kokoro was saying this verb like the noun "cells". One token, so the caption stays "sells".
     "sells": "selz",
     "Sells": "Selz",
-    # "coin" was coming out as "kine". One token, so the caption stays "coin".
-    "coin": "koyn",
-    "Coin": "Koyn",
-    # The noun and the verb take a Z. Kokoro was using the adjective S.
-    "close": "klohz",
-    "Close": "Klohz",
-    "closes": "klohziz",
-    "Closes": "Klohziz",
     # Kokoro was leaving a hole before this word in "no promise of results".
     "results": "rezults",
 }
