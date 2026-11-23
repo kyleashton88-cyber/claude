@@ -24,7 +24,7 @@ Stewart approved every recommended spoken change by voice at 11:04am AEDT. L1 is
 | S2 | The risk line says "prices at the end of each day" instead of "daily closes". |
 | S3 | The hook says "coin means the crypto itself" and then "holding the coin". |
 | S4 | Added "Exchanges charge a small fee on each trade." |
-| S5 | "The exchange's day starts at 11am Sydney time in daylight saving, 10am otherwise." |
+| S5 | "The exchange's day starts at 11am Sydney time in daylight saving, 10am otherwise." Later W5 changes starts to ends. |
 | S6 | "28 crossings, each time the price crosses a line". |
 | S7 | "learner plates, or training wheels". |
 | S8 | "An API secret is a secret key that lets software control your account." |
@@ -33,3 +33,18 @@ Stewart approved every recommended spoken change by voice at 11:04am AEDT. L1 is
 | F4 | "you can only sell coin you already hold, on a spot account". |
 | F5 | "Hindsight: this range is drawn after the fact." |
 | 9:25 | The voice says "at 27,630", not "at the middle line". |
+
+## Wording, 23 Nov 3:26pm AEDT
+
+Stewart approved all eight spoken changes in his own words: "Approve all 8 wording changes." The lines below are the exact wording. Part A picture, timing, and pronunciation fixes are in the same source pass. BP-01 is the render. BP-02 is source only until he says go.
+
+| ID | Exact spoken change |
+|---|---|
+| W1 | "band" is now "range" in the BP-01 voice, captions, cards, and the end checklist. |
+| W2 | Added "A spot account is the normal account on an exchange. You own the coin you buy, and nothing is borrowed." |
+| W3 | Added "A seed phrase or private key is the master password to a crypto wallet. An API secret is a key that lets an app place trades on your account." |
+| W4 | Added "900 dollars times 0.01 bitcoin is 9 dollars before fees." and "Three buys of 0.01 is 0.03 bitcoin. At 24,000, that is 720 dollars." |
+| W5 | "The exchange's day ends at 11am Sydney time in daylight saving, 10am otherwise." |
+| W6 | Added "We price in US dollars. Your exchange may charge fees in Australian dollars, so keep each in its own column." |
+| W7 | "A fill is when your waiting order actually trades." |
+| W8 | "A stablecoin is a coin built to stay worth about one US dollar." |

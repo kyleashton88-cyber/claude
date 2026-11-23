@@ -256,16 +256,16 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "Buy and sell",
-        "An order is an instruction to buy or sell. A buy order swaps cash for coin. A sell order swaps coin back to cash, and you can only sell coin you already hold, on a spot account.",
+        "An order is an instruction to buy or sell. A buy order swaps cash for coin. A sell order swaps coin back to cash, and you can only sell coin you already hold, on a spot account. A spot account is the normal account on an exchange. You own the coin you buy, and nothing is borrowed.",
         "Buy swaps cash for coin. Sell needs coin you already hold, on a spot account.",
         "Buy and sell",
         "A buy swaps cash for coin. A sell swaps coin for cash, and you can only sell coin you already hold, on a spot account.",
     ))
     s.append(gloss(
         "The idea",
-        "A bot is software that places and refills orders for you. You start with some cash and some coin, so there is something to buy with and something to sell. A grid bot places waiting buy orders on lines below the price and sell orders on lines above it, inside a top and a bottom you choose. The space between your top and your bottom is called the band. The sells need some coin, so a grid starts with part cash and part coin, and that is a description, not advice about what to hold.",
-        "Buys below, sells above, inside a band you choose.",
-        "Band",
+        "A bot is software that places and refills orders for you. You start with some cash and some coin, so there is something to buy with and something to sell. A grid bot places waiting buy orders on lines below the price and sell orders on lines above it, inside a top and a bottom you choose. The space between your top and your bottom is called the range. The sells need some coin, so a grid starts with part cash and part coin, and that is a description, not advice about what to hold.",
+        "Buys below, sells above, inside a range you choose.",
+        "Range",
         "The top and the bottom you choose. Also called the range.",
     ))
     s.append(gloss(
@@ -300,7 +300,7 @@ def bp01() -> list[dict]:
         "The range is the top rung and the bottom rung. The levels are the rungs between them. The stop is the written rule for leaving.",
         "Range, levels, and stop.",
         "Range",
-        "The top rung and the bottom rung of the band.",
+        "The top rung and the bottom rung of the range.",
     ))
     s.append(_shot(
         chapter="The range",
@@ -322,16 +322,16 @@ def bp01() -> list[dict]:
         reveal=1,
         vo=(
             "Six gaps of about 900 dollars each sit between the bottom line and the top line. "
-            "Each gap is about 900 dollars: the top line minus the bottom line, divided by six. It is one step between lines, not the whole band. "
+            "Each gap is about 900 dollars: the top line minus the bottom line, divided by six. It is one step between lines, not the whole range. "
             "Seven lines make those six gaps. The levels are the prices on the rungs where limit orders wait."
         ),
         caption="Seven lines. Six gaps of about 900.",
         term_text="Gap",
-        definition_text="The space between two lines. About 900 dollars in this example, which is the band divided by six.",
+        definition_text="The space between two lines. About 900 dollars in this example, which is the range divided by six.",
     ))
     s.append(gloss(
         "Buys and sells",
-        "Buy orders wait on lines below the price. Sell orders wait on lines above it. Each fill changes what you hold: a buy fill adds coin, and a sell fill adds cash. You choose the band, the gaps and the money. The bot places each order.",
+        "Buy orders wait on lines below the price. Sell orders wait on lines above it. Each fill changes what you hold: a buy fill adds coin, and a sell fill adds cash. You choose the range, the gaps and the money. The bot places each order.",
         "Buys wait below. Sells wait above.",
         "Bot",
         "Software that places the orders for you, and refills one after a fill.",
@@ -341,12 +341,12 @@ def bp01() -> list[dict]:
         "After a fill, the bot places the opposite order one rung away. A buy fill gets a sell one rung higher. A sell fill gets a buy one rung lower. You still write the stop, and you act when that rule is met. The bot does not decide the stop for you unless you turned that setting on, and you write which one before you start.",
         "You choose the rules. The bot places the orders.",
         "Bot and you",
-        "You choose the band, the gaps, the money and the stop. The bot places and refills orders.",
+        "You choose the range, the gaps, the money and the stop. The bot places and refills orders.",
         visual="BP01-V03",
     ))
     s.append(gloss(
         "How a grid can capture bounces",
-        "Think of a market stall. The stallholder buys stock a little cheaper and sells it a little dearer, and pays a fee on every sale. Exchanges charge a small fee on each trade. A grid can do that while price bounces inside the band. A bounce means price moves down and back up, or up and back down, and stays inside. One buy at a lower line and the later sell of that same coin is one pair. On these daily closes, the July to October example window finished only three pairs one rung apart. The sell line is higher, so the cash that comes back is more than the cash that left, before the fee. A fee is what the exchange charges when an order fills. The fee comes out of the gap. If the fees are larger than the gap, the pair keeps nothing. This is not a promise. The pair finishes only if price does bounce and both orders fill.",
+        "Think of a market stall. The stallholder buys stock a little cheaper and sells it a little dearer, and pays a fee on every sale. Exchanges charge a small fee on each trade. A grid can do that while price bounces inside the range. A bounce means price moves down and back up, or up and back down, and stays inside. One buy at a lower line and the later sell of that same coin is one pair. On these daily closes, the July to October example window finished only three pairs one rung apart. The sell line is higher, so the cash that comes back is more than the cash that left, before the fee. A fee is what the exchange charges when an order fills. The fee comes out of the gap. If the fees are larger than the gap, the pair keeps nothing. This is not a promise. The pair finishes only if price does bounce and both orders fill.",
         "A pair keeps the gap only after fees, and only on a bounce.",
         "Fee",
         "What the exchange charges when an order fills. It comes out of the gap.",
@@ -354,18 +354,18 @@ def bp01() -> list[dict]:
     ))
     s.append(_shot(
         chapter="One day",
-        chart_title="One day inside the band",
+        chart_title="One day inside the range",
         candle={"high": 30184, "low": 29794, "close": 29914, "date": "19 July 2023"},
         vo=(
             "The daily close is the last price of the day. Crypto trades all day, so the day is cut at a set time. "
-            "The exchange's day starts at 11am Sydney time in daylight saving, 10am otherwise. "
+            "The exchange's day ends at 11am Sydney time in daylight saving, 10am otherwise. "
             "This is a simple candle that shows the day's high, low and close. "
             "Traders call it a candle because the full version has a thick body and a thin wick, like a candle. Here we only need the high, the low and the close. "
             "This candle is 19 July 2023. The high, the low, and the close are labelled."
         ),
-        caption="19 July 2023. Close 29,914. The exchange's day starts at 11am Sydney time in daylight saving, 10am otherwise.",
+        caption="19 July 2023. Close 29,914. The exchange's day ends at 11am Sydney time in daylight saving, 10am otherwise.",
         term_text="Daily close",
-        definition_text="The last price of the day. The exchange's day starts at 11am Sydney time in daylight saving, and 10am otherwise.",
+        definition_text="The last price of the day. The exchange's day ends at 11am Sydney time in daylight saving, and 10am otherwise.",
     ))
     s.append(_shot(
         chapter="The whole window",
@@ -373,12 +373,12 @@ def bp01() -> list[dict]:
         reveal=1,
         vo=(
             "The example is Bitcoin's public daily price in US dollars. "
-            "From 19 July 2023 to 16 October 2023, every one of those days closed inside the band. "
+            "From 19 July 2023 to 16 October 2023, every one of those days closed inside the range. "
             "The close crossed the seven lines 28 times in that window. The count is an example, not a forecast. "
             "We do not need to read each day. The shape is the lesson, and it is marked Example. "
             "Worked check: 19 July 2023 to 16 October 2023. The low is the bottom line. The high is the top line. Nothing on this card is an order."
         ),
-        caption="Every close stayed inside the band.",
+        caption="Every close stayed inside the range.",
         levels=[LOW, HIGH],
         term_text="Example",
         definition_text="A real past price used for practice. Not a live trade and not a forecast.",
@@ -392,25 +392,25 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "One pair",
-        "You can buy part of a coin. Here we buy one hundredth of a bitcoin, 0.01. In this example a buy waiting at the lower of these two lines was reached on 17 August 2023, and the sell one line above was reached on 29 August 2023. The card shows the gap, then the two fees, then what is left. That is about 8 dollars 46 after fees, for one small pair. It happens only if the price comes back up through the sell line. If the price leaves through the bottom, you still hold the coin, and the pair never finishes. This card is not money you made. Past results don't predict future results.",
+        "You can buy part of a coin. Here we buy one hundredth of a bitcoin, 0.01. 900 dollars times 0.01 bitcoin is 9 dollars before fees. In this example a buy waiting at the lower of these two lines was reached on 17 August 2023, and the sell one line above was reached on 29 August 2023. The card shows the gap, then the two fees, then what is left. That is about 8 dollars 46 after fees, for one small pair. It happens only if the price comes back up through the sell line. If the price leaves through the bottom, you still hold the coin, and the pair never finishes. This card is not money you made. Past results don't predict future results.",
         "About 8 dollars 46 after fees. Not a forecast.",
         "Pair",
         "One buy and the later sell of the same coin. The trading pair, bitcoin and dollars, is a different word and comes in the next lesson.",
         visual="BP01-V05",
     ))
     s.append(gloss(
-        "When price leaves the band",
-        "Now watch what you hold when the price leaves the band and stays out. Above the band the sells have filled and you are holding cash, with nothing left to sell. Below the band the buys have filled and you are holding coin, with nothing left to buy. That is why the way down matters most: every buy fills, and you are left holding coin.",
+        "When price leaves the range",
+        "Now watch what you hold when the price leaves the range and stays out. Above the range the sells have filled and you are holding cash, with nothing left to sell. Below the range the buys have filled and you are holding coin, with nothing left to buy. That is why the way down matters most: every buy fills, and you are left holding coin.",
         "Leave through the top: cash. Leave through the bottom: coin.",
         "Leave",
-        "A close outside the band. Through the top you hold mostly cash. Through the bottom you hold mostly coin.",
+        "A close outside the range. Through the top you hold mostly cash. Through the bottom you hold mostly coin.",
     ))
     s.append(gloss(
         "The stop",
-        "Here is that stop rule on the real path. It triggers if a daily close is outside the band, through the top or the bottom, and the next daily close is still outside. Then the idea is finished. You stop the bot, which cancels the waiting orders, and do what you wrote: keep the coin or swap to cash. A bot's automatic stop is a price that can fire during the day. This course uses the two daily closes, unless your written plan says you turned on a price stop. This is a teaching rule, not a recommendation. The stop is your written rule for when you stop the bot. On 23 October 2023 the close finished above the top line, and the next day was still above it.",
+        "Here is that stop rule on the real path. It triggers if a daily close is outside the range, through the top or the bottom, and the next daily close is still outside. Then the idea is finished. You stop the bot, which cancels the waiting orders, and do what you wrote: keep the coin or swap to cash. A bot's automatic stop is a price that can fire during the day. This course uses the two daily closes, unless your written plan says you turned on a price stop. This is a teaching rule, not a recommendation. The stop is your written rule for when you stop the bot. On 23 October 2023 the close finished above the top line, and the next day was still above it.",
         "Two closes outside, top or bottom. Then stop the bot.",
         "Stop",
-        "A written rule for what you do if price leaves the band and the next daily close is still outside.",
+        "A written rule for what you do if price leaves the range and the next daily close is still outside.",
         visual="BP01-V06",
     ))
     s.append(gloss(
@@ -422,7 +422,7 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "Downside",
-        "That loss can keep growing until the stop acts. You stop the bot either way, then you follow the written rule. The bot does not decide the stop unless you turned that setting on. EXAMPLE, made up: three buys fill on the way down. One hundredth of a bitcoin at 27,630 is 276 dollars 30. One hundredth at 26,730 is 267 dollars 30. One hundredth at 25,830 is 258 dollars 30. Together that is 801 dollars 90. A little below the band, at a made-up price of 24,000, that coin is worth 720 dollars. You are down 81 dollars 90 before fees, and the loss keeps growing until your stop acts.",
+        "That loss can keep growing until the stop acts. You stop the bot either way, then you follow the written rule. The bot does not decide the stop unless you turned that setting on. EXAMPLE, made up: three buys fill on the way down. One hundredth of a bitcoin at 27,630 is 276 dollars 30. One hundredth at 26,730 is 267 dollars 30. One hundredth at 25,830 is 258 dollars 30. Together that is 801 dollars 90. Three buys of 0.01 is 0.03 bitcoin. At 24,000, that is 720 dollars. A little below the range, at a made-up price of 24,000, that coin is worth 720 dollars. You are down 81 dollars 90 before fees, and the loss keeps growing until your stop acts.",
         "EXAMPLE, made up. About 800 down to about 720.",
         "Downside example",
         "A made-up example. Three buys on the way down. Not a real fill.",
@@ -478,15 +478,15 @@ def bp01() -> list[dict]:
     ], "")
     s += stack("Your turn", [
         "Your turn. On paper, write the top and the bottom, one gap, and the stop rule.",
-        "Say what you will do if a daily close leaves the band and the next close is still outside. Pause the video and write your answer before you go on.",
+        "Say what you will do if a daily close leaves the range and the next close is still outside. Pause the video and write your answer before you go on.",
         "No real order is sent in this lesson. Paper practice comes in Lesson 7, and real money only after your written graduation rule. A graduation rule is the written test you pass on paper first. You draw the idea. If a screen appears later, it should be a copy of the page, and only on paper or demo.",
     ], "")
     s.append(gloss(
         "No secrets",
-        "Bring a notebook, and no secrets: no seed phrase, private key or API secret. An API secret is a secret key that lets software control your account.",
+        "Bring a notebook, and no secrets: no seed phrase, private key or API secret. A seed phrase or private key is the master password to a crypto wallet. An API secret is a key that lets an app place trades on your account.",
         "No seed phrase, private key, or API secret.",
         "Secrets",
-        "An API secret is a secret key that lets software control your account.",
+        "A seed phrase or private key is the master password to a crypto wallet. An API secret is a key that lets an app place trades on your account.",
     ))
     s.append(gloss(
         "The pair, next",
@@ -496,15 +496,18 @@ def bp01() -> list[dict]:
         "The two things you swap. Bitcoin and US dollars in this course.",
     ))
     s += stack("Recap", [
-        "A grid bot places waiting buys below the price and waiting sells above it, inside a band you choose.",
+        "A grid bot places waiting buys below the price and waiting sells above it, inside a range you choose.",
         "A finished pair buys lower and sells higher. The fees come out of the gap. In the example that was about 8 dollars 46, and it is not a promise.",
         "Leave through the top and you hold mostly cash. Leave through the bottom and you hold mostly coin.",
-        "If a daily close leaves the band and the next close is still outside, you stop the bot and follow the rule you wrote.",
+        "If a daily close leaves the range and the next close is still outside, you stop the bot and follow the rule you wrote.",
     ], "")
-    s.append(outro(
+    end = outro(
         "What you are going to need",
         "write the page of what you need, before any screen.",
-    ))
+    )
+    end["vo"] = end["vo"].replace("band", "range")
+    end["caption"] = end["caption"].replace("band", "range")
+    s.append(end)
     return s
 
 def _bp02_line(chapter: str, vo: str, **extra) -> dict:
@@ -599,6 +602,9 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
             {"cue": "no secrets keeps", "kind": "notebook", "shown": 7, "highlight": 4, "title": "Seven items"},
             {"cue": "the written stop is", "kind": "notebook", "shown": 7, "highlight": 5, "title": "Seven items"},
             {"cue": "example marks", "kind": "notebook", "shown": 7, "highlight": 6, "title": "Seven items"},
+            {"cue": "for this course", "title": "The pair", "lines": ["Bitcoin priced in US dollars."], "example": True},
+            {"cue": "a demo account", "title": "A demo account", "lines": ["Uses pretend money."]},
+            {"cue": "a daily close", "title": "A daily close", "lines": ["A daily close is the last price of the day."]},
         ],
     ),
     (
@@ -680,12 +686,14 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "Write the pair first. The base is what you buy. The quote is what you pay with. "
         "For this course the prices are the July to October example window, the public bitcoin closes from 19 July to 16 October 2023, so you buy the base, bitcoin, with the quote, US dollars, and that row is labelled BTC/USD. "
         "Every other row depends on the pair. "
+        "We price in US dollars. Your exchange may charge fees in Australian dollars, so keep each in its own column. "
         "If a fee sum is in Australian dollars, that sum goes on its own line, labelled BTC/AUD. "
         "Do not put a US dollar price and an Australian dollar fee on the same row.",
         [
             {"cue": "", "title": "", "lines": ["Write the pair first. The base is what you buy. The quote is what you pay with."]},
             {"cue": "for this course", "kind": "scene", "scene": "btc-usd", "title": "BTC/USD"},
             {"cue": "every other row", "kind": "scene", "scene": "btc-aud", "title": "BTC/AUD"},
+            {"cue": "we price", "title": "Two columns", "lines": ["We price in US dollars. Your exchange may charge fees in Australian dollars, so keep each in its own column."]},
             {"cue": "do not put", "kind": "scene", "scene": "do-not-mix", "title": "Do not mix"},
         ],
     ),
@@ -734,7 +742,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
             {"cue": "an exchange in", "kind": "safety", "step": 0, "mark": 1, "note": "The exchange asks who you are", "title": "Account"},
             {"cue": "that check is", "kind": "safety", "step": 0, "mark": 2, "note": "The exchange runs the check", "title": "Account"},
             {"cue": "you only upload", "kind": "safety", "step": 0, "mark": 3, "note": "Only in the exchange's own app", "title": "Account"},
-            {"cue": "must register", "kind": "safety", "step": 1, "mark": 0, "note": "Look up the register", "title": "AUSTRAC"},
+            {"cue": "any exchange offering", "kind": "safety", "step": 1, "mark": 0, "note": "Look up the register", "title": "AUSTRAC"},
             {"cue": "austrac keeps", "kind": "safety", "step": 1, "mark": 1, "note": "Search the public register", "title": "AUSTRAC"},
             {"cue": "the register says", "kind": "safety", "step": 1, "mark": 2, "note": "Listed is not protection", "title": "AUSTRAC"},
             {"cue": "asic is", "kind": "safety", "step": 2, "mark": 3, "note": "From April 2027", "title": "ASIC"},
@@ -753,7 +761,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
     ),
     (
         "Fees",
-        "A fill is an order that actually trades. "
+        "A fill is when your waiting order actually trades. "
         "A maker fee is the charge when your order waits and someone else trades with it. "
         "A taker fee is the charge when your order fills straight away. "
         "A grid uses waiting orders, so read the maker fee first. "
@@ -765,7 +773,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "If the gap is smaller than that 0.2 percent, each completed buy and sell costs more in fees than the gap is worth. "
         "Lesson 5 is where you test a gap against this fee. You do not pick a gap in this lesson.",
         [
-            {"cue": "", "title": "", "lines": ["A fill is an order that actually trades. A maker fee is the charge when your order waits and someone else trades with it. A taker fee is the charge when your order fills straight away."]},
+            {"cue": "", "title": "", "lines": ["A fill is when your waiting order actually trades. A maker fee is the charge when your order waits and someone else trades with it. A taker fee is the charge when your order fills straight away."]},
             {"cue": "a grid uses", "kind": "fee", "stage": "maker", "title": "Fees"},
             {"cue": "100 australian", "kind": "fee", "stage": "buy", "title": "Fees"},
             {"cue": "the sell costs", "kind": "fee", "stage": "sell", "title": "Fees"},
@@ -776,10 +784,10 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
     ),
     (
         "Stablecoin",
-        "A stablecoin is a coin designed to stay near the value of a currency such as the US dollar. It can still lose that value. "
+        "A stablecoin is a coin built to stay worth about one US dollar. It can still lose that value. "
         "A swap is trading one coin for another. If the price is in a stablecoin, every fill is a swap.",
         _cards(
-            ("", "A stablecoin is a coin designed to stay near the value of a currency such as the US dollar. It can still lose that value.", False),
+            ("", "A stablecoin is a coin built to stay worth about one US dollar. It can still lose that value.", False),
             ("a swap is", "A swap is trading one coin for another. If the price is in a stablecoin, every fill is a swap.", False),
         ),
     ),
@@ -806,7 +814,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
             {"cue": "the stop rule", "kind": "journal", "cols": 6, "title": "Journal"},
             {"cue": "australian dollar", "kind": "journal", "cols": 9, "title": "Journal"},
             {"cue": "yes or no", "kind": "journal", "cols": 11, "title": "Journal"},
-            {"cue": "the one exception", "kind": "journal", "cols": 11, "mark": 2, "note": "That column is for tax records.", "title": "Journal"},
+            {"cue": "australian dollar value", "occurrence": 2, "kind": "journal", "cols": 11, "mark": 2, "note": "That column is for tax records.", "title": "Journal"},
             {"cue": "download your", "kind": "journal", "cols": 11, "mark": 3, "note": "Download every three months.", "title": "Export"},
             {"cue": "leave two", "kind": "journal", "cols": 11, "mark": 0, "note": "Fees and the rule: fill those later.", "title": "Later"},
         ],

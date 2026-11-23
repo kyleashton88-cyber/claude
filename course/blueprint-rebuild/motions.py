@@ -16,7 +16,7 @@ SPECS: dict[str, dict] = {
     "BP01-V03": {
         "title": "You and the bot",
         "rows": [
-            "YOU choose the band",
+            "YOU choose the range",
             "YOU choose the gaps",
             "YOU choose the money",
             "YOU write the stop",
@@ -30,9 +30,8 @@ SPECS: dict[str, dict] = {
         "rows": [
             "EXAMPLE. Buy 0.01 bitcoin at 26,730",
             "EXAMPLE. Sell 27,630",
-            "Pairs on these closes: 1, then 2, then 3",
             "Illustration, not the real order of fills",
-            "Leaves the band: pairs stop",
+            "Leaves the range: pairs stop",
         ],
     },
     "BP01-V05": {
@@ -465,8 +464,14 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
             if local >= start:
                 shown = min(len(rows), int(index / step) + 1)
     if paced:
-        # Do not sit on the first line for more than 8s. Speech can reveal a line sooner.
-        shown = max(shown, min(len(rows), 1 + int(local / 8)))
+        # Do not sit on the first line for more than 8s. The 29 August sell waits for that date.
+        cap = len(rows)
+        at_29 = ui._word_at(shot, "29")
+        if at_29 is None or local < at_29:
+            cap = 1
+        shown = max(shown, min(cap, 1 + int(local / 8)))
+        if at_29 is not None and local >= at_29:
+            shown = max(shown, 2)
     if chapter == "One pair" and shot.get("lesson_id") == "bp-01-introduction":
         net_at = ui._phrase_at(shot, "that is about")
         if net_at is not None and local >= net_at:
@@ -484,12 +489,27 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
             ui._phrase_at(shot, "24,000"),
             ui._phrase_at(shot, "81"),
         ]
-    ui._example(draw, ui.RIGHT - 280, 168)
     y = 220
     step = 72 if len(rows) > 6 else 86
     row_h = 62 if len(rows) > 6 else 74
     accent = int(local // 8) % max(1, shown) if paced or chapter == "The stop" else -1
     made_at = ui._phrase_at(shot, "made up") if chapter == "Downside" else None
+    if chapter == "Downside" and shot.get("lesson_id") == "bp-01-introduction" and (made_at is None or local < made_at):
+        box = (ui.MX, 200, ui.RIGHT, 700)
+        draw.rounded_rectangle(box, 18, fill=ui.GLASS, outline=ui.CYAN, width=3)
+        draw.text((box[0] + 36, box[1] + 24), "Three buys on the way down", font=ui.font(36), fill=ui.WHITE)
+        ys = (360, 450, 540)
+        for i, yy in enumerate(ys):
+            draw.line([(box[0] + 80, yy), (box[2] - 80, yy)], fill=ui.CYAN, width=3)
+            draw.text((box[0] + 90, yy - 32), f"Buy {i + 1}", font=ui.font(24), fill=ui.WHITE)
+        t = min(1.0, local / 6.0)
+        x0, x1 = box[0] + 140, box[2] - 140
+        pts = [(x0 + (x1 - x0) * i / 7, 280 + (540 - 280) * (i / 7) * max(t, 0.05)) for i in range(8)]
+        draw.line(pts, fill=ui.WHITE, width=4)
+        return
+    visible = [text for text in rows[:shown] if not (chapter == "Downside" and text.startswith("EXAMPLE, made up") and (made_at is None or local < made_at))]
+    if any(ch.isdigit() for text in visible for ch in text):
+        ui._example(draw, ui.RIGHT - 280, 168)
     for index, text in enumerate(rows[:shown]):
         if chapter == "Downside" and text.startswith("EXAMPLE, made up") and (made_at is None or local < made_at):
             y += step
@@ -507,6 +527,13 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
         y += step
         if y > 700:
             break
+    if chapter == "One pair" and shot.get("lesson_id") == "bp-01-introduction":
+        gap_at = ui._phrase_at(shot, "the card shows")
+        if gap_at is not None and local >= gap_at:
+            draw.text((ui.MX + 28, 168), "gap × coin size = gross:  $900 × 0.01 = $9.00", font=ui.font(28), fill=ui.CYAN)
+            draw.text((ui.MX + 28, 204), "0.1% on the buy + 0.1% on the sell", font=ui.font(28), fill=ui.WHITE)
+    if chapter == "Downside" and shot.get("lesson_id") == "bp-01-introduction" and made_at is not None and local >= made_at:
+        draw.text((ui.MX + 28, 168), "3 × 0.01 = 0.03 BTC;  0.03 × $24,000 = $720", font=ui.font(28), fill=ui.CYAN)
     if paced and (shot.get("chapter") or "") == "One pair":
         bar = [ui.MX + 520, 168, ui.MX + 980, 196]
         draw.rounded_rectangle(bar, 8, outline=ui.CYAN, width=2)

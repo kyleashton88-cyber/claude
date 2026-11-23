@@ -29,6 +29,9 @@ SPOKEN = {
     "SOL": "sol",
     "LP": "L P",
     "API": "A P I",
+    # Kokoro was saying this verb like the noun "cells". One token, so the caption stays "sells".
+    "sells": "selz",
+    "Sells": "Selz",
 }
 
 
