@@ -77,3 +77,5 @@ Stewart signed off the nine BP-03 to BP-11 scripts at commit `b958dff`. Those sp
 | X4 | BP-02: "If your pair is priced in a stablecoin, every fill trades one coin for another, so every fill is a swap." |
 | X5 | BP-02: "From April 2027, platforms that hold crypto for you need an ASIC licence, with a transition period to October 2027 for platforms already operating. Check ASIC for the current position." |
 | X6 | BP-03 is titled "How a grid bot works, order by order." The BP-02 end line and end card say "Next lesson: How a grid bot works, order by order." |
+
+The stop card is still for the whole chapter. A GridBot Builder block moves in the lane under that card every 8 seconds, so the picture changes without covering the card.

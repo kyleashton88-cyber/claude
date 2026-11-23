@@ -449,6 +449,8 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
             draw.text((box[0] + 36, box[1] + 320), "23 Oct close outside. 24 Oct still outside.", font=ui.font(32), fill=ui.WHITE)
         else:
             draw.text((box[0] + 36, box[1] + 320), "Two daily closes. The second one still outside.", font=ui.font(28), fill=ui.WHITE)
+        # The card itself holds for the chapter. Motion stays in the lane under it.
+        ui._bp02_beat(base, local, "")
         return
     # The pair rows finish in the top of the card. The bottom-leave line is later.
     if (shot.get("chapter") or "") == "One pair" and shot.get("lesson_id") == "bp-01-introduction":
