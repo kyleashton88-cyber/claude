@@ -53,3 +53,18 @@ Source at render start: `b9c0230`, plus the picture beat that keeps long cards f
 Join: `cat master.mp4.part01 master.mp4.part02 > master.mp4`
 
 `SHA256SUMS` in that folder lists only files that are in the folder.
+
+## BP-01 after S1–S9 and fix order 10, 23 Nov
+
+Source commit `f308e46`. Duration 875.7s. 2,393 spoken words. Gate PASS: −14.3 LUFS, −3.6 dBTP.
+
+| Lesson | Commit | File | Duration | Bytes | SHA-256 | Where it lives |
+|---|---|---|---|---|---|---|
+| BP-01 S1–S9 | `f308e46` | `master.mp4` | 875.7s | 300316448 | `2fc0c97b78939f16c29027c59a161e7f471b6c4db904695e39532e6dc1c219d0` | Agent store `/cursor/stores/self/artifacts/bp-23nov/bp01-f308e46/` |
+| BP-01 S1–S9 | `f308e46` | `master.mp4.part01` | | 104857600 | `85b2ae225bb9c5b789b6f4aa0a69d95cb050f3c2bfae1cc3c2f61a48b18d749e` | Same folder |
+| BP-01 S1–S9 | `f308e46` | `master.mp4.part02` | | 104857600 | `c18cd81dcfe052bc1086e7c7299dd7ae65cb828db751763c576ae95d254b87d5` | Same folder |
+| BP-01 S1–S9 | `f308e46` | `master.mp4.part03` | | 90601248 | `59c2bade675e94f2bd029436f66579889a82391fdfb2428b4f9f19b72465b548` | Same folder |
+
+Join: `cat master.mp4.part01 master.mp4.part02 master.mp4.part03 > master.mp4`
+
+`SHA256SUMS` lists the parts, captions, spoken script, gate report, and the card stills that are actually in the folder.
