@@ -563,6 +563,8 @@ def plan(sid: str) -> list[dict]:
         spoken = line
         if sid == "bp-01-introduction" and line.startswith("The prices are public historical daily closes"):
             spoken = line + " A close is the last price of the day."
+        if sid == "bp-02-what-you-need" and line.startswith("The prices are public historical daily closes"):
+            spoken = "A daily close is the last price of that day. " + line
         risk_shots.append({
             "kind": "stack",
             "chapter": "Risk",
@@ -1973,7 +1975,7 @@ NOTEBOOK_ITEMS = (
 JOURNAL_COLUMNS = (
     "Date",
     "Pair",
-    "Band",
+    "Range",
     "Gaps",
     "Money in the bot",
     "Stop rule",
@@ -1999,17 +2001,18 @@ def _paint_notebook(base: Image.Image, shown: int, highlight: int | None = None)
     draw.rounded_rectangle(page, 18, fill=GLASS, outline=CYAN, width=3)
     draw.rectangle([page[0], page[1], page[0] + 18, page[3]], fill=CYAN)
     draw.text((page[0] + 48, page[1] + 24), "The page", font=font(36), fill=CYAN)
+    active = highlight if highlight is not None else max(0, shown - 1)
     y = page[1] + 80
     for index, label in enumerate(NOTEBOOK_ITEMS):
         on = index < shown
-        mark = highlight is not None and index == highlight
-        color = CYAN if on else (40, 64, 84)
+        mark = index == active and shown > 0
+        if mark:
+            draw.rounded_rectangle([page[0] + 28, y - 8, page[2] - 28, y + 48], 10, fill=CYAN)
+        color = NAVY if mark else (CYAN if on else (40, 64, 84))
         draw.ellipse([page[0] + 48, y, page[0] + 80, y + 32], outline=color, width=3)
         if on:
-            draw.text((page[0] + 56, y + 2), str(index + 1), font=font(22), fill=CYAN)
-        draw.text((page[0] + 100, y), label, font=font(28), fill=WHITE if on else (70, 90, 110))
-        if mark:
-            draw.rounded_rectangle([page[0] + 36, y - 6, page[2] - 36, y + 40], 8, outline=CYAN, width=2)
+            draw.text((page[0] + 56, y + 2), str(index + 1), font=font(22), fill=color)
+        draw.text((page[0] + 100, y), label, font=font(28), fill=NAVY if mark else (WHITE if on else (70, 90, 110)))
         y += 64
 
 
@@ -2019,6 +2022,10 @@ def _paint_bp02_chart(base: Image.Image, stage: str) -> None:
     panel = (MX + 80, 188, RIGHT - 80, 700)
     draw.rounded_rectangle(panel, 18, fill=GLASS, outline=CYAN, width=3)
     _example(draw, panel[0] + 28, panel[1] + 24)
+    stage_word = {"range": "RANGE", "gaps": "GAPS", "stop": "STOP", "page": "PAGE", "check": "CHECK"}.get(stage, stage.upper())
+    bar_y = {"range": 520, "gaps": 600, "stop": 440, "page": 640, "check": 560}.get(stage, 500)
+    draw.rectangle([panel[0] + 36, bar_y, panel[2] - 36, bar_y + 48], fill=CYAN)
+    draw.text((panel[0] + 48, bar_y + 6), stage_word, font=font(32), fill=NAVY)
     plot_top = panel[1] + 90
     if stage == "page":
         # The badge ends near y+68. The label sits on the next line, not against it.
@@ -2051,32 +2058,42 @@ def _paint_bp02_chart(base: Image.Image, stage: str) -> None:
         draw.text((plot[2] - 280, (y_top + y_bot) // 2 - 16), "Six gaps, about 900", font=font(28), fill=WHITE)
 
 
-def _paint_journal(base: Image.Image, cols: int, note: str = "") -> None:
+def _paint_journal(base: Image.Image, cols: int, note: str = "", mark: int = 0) -> None:
     """One row per column, in the order the voice names them."""
     draw = ImageDraw.Draw(base)
     panel = (MX + 120, 180, RIGHT - 120, 708)
     draw.rounded_rectangle(panel, 16, fill=GLASS, outline=CYAN, width=3)
     draw.text((panel[0] + 28, panel[1] + 16), "Journal", font=font(32), fill=CYAN)
     if note:
-        draw.text((panel[0] + 220, panel[1] + 20), note, font=font(26), fill=WHITE)
+        slab_y = panel[1] + 110 + (mark % 4) * 70
+        draw.rectangle([panel[2] - 520, slab_y, panel[2] - 36, slab_y + 140], fill=CYAN)
+        draw.text((panel[0] + 36, panel[1] + 58), note, font=font(28), fill=WHITE)
+    if note:
+        return
     y = panel[1] + 62
-    row_h = 40
+    row_h = 36
     shown = JOURNAL_COLUMNS[: max(0, cols)]
-    for name in shown:
-        draw.rounded_rectangle([panel[0] + 24, y, panel[2] - 24, y + row_h - 4], 8, outline=CYAN, width=2)
-        draw.text((panel[0] + 36, y + 6), name, font=font(24), fill=WHITE)
+    for index, name in enumerate(shown):
+        latest = index == len(shown) - 1
+        draw.rounded_rectangle(
+            [panel[0] + 24, y, panel[2] - 24, y + row_h - 4], 8,
+            fill=CYAN if latest else GLASS, outline=CYAN, width=2,
+        )
+        draw.text((panel[0] + 36, y + 4), name, font=font(28 if latest else 22), fill=NAVY if latest else WHITE)
         y += row_h
 
 
-def _paint_safety(base: Image.Image, step: int, note: str = "") -> None:
+def _paint_safety(base: Image.Image, step: int, note: str = "", mark: int = 0) -> None:
     """Register, ASIC, a second code, then scams. One step lights up at a time."""
     draw = ImageDraw.Draw(base)
     panel = (MX + 160, 188, RIGHT - 160, 700)
     draw.rounded_rectangle(panel, 18, fill=GLASS, outline=CYAN, width=3)
-    draw.text((panel[0] + 36, panel[1] + 24), "Before any real dollars", font=font(32), fill=CYAN)
+    draw.text((panel[0] + 36, panel[1] + 20), "Before any real dollars", font=font(28), fill=CYAN)
     if note:
-        draw.text((panel[0] + 36, panel[1] + 68), note, font=font(28), fill=WHITE)
-    y = panel[1] + 120
+        slab_y = panel[1] + 80 + (mark % 4) * 70
+        draw.rectangle([panel[2] - 420, slab_y, panel[2] - 36, slab_y + 150], fill=CYAN)
+        draw.text((panel[0] + 36, panel[1] + 64), note, font=font(32), fill=WHITE)
+    y = panel[1] + 210
     for index, label in enumerate(SAFETY_STEPS, start=1):
         on = index <= step
         color = CYAN if on else (40, 64, 84)
@@ -2088,8 +2105,8 @@ def _paint_safety(base: Image.Image, step: int, note: str = "") -> None:
         if not on:
             draw.text((panel[2] - 220, y + 8), "Coming up", font=font(22), fill=CYAN)
         if index < len(SAFETY_STEPS):
-            draw.line([(panel[0] + 62, y + 46), (panel[0] + 62, y + 78)], fill=color, width=3)
-        y += 96
+            draw.line([(panel[0] + 62, y + 46), (panel[0] + 62, y + 64)], fill=color, width=3)
+        y += 72
 
 
 def _frame(draw: ImageDraw.ImageDraw) -> tuple[int, int, int, int]:
@@ -2117,21 +2134,28 @@ def _paint_fee(base: Image.Image, stage: str) -> None:
     if stage in {"trip", "aud", "gap"}:
         rows.append(("Round trip", "20 cents, 0.2 percent"))
     y = box[1] + 88
-    for name, value in rows:
-        draw.rounded_rectangle([box[0] + 28, y, box[2] - 28, y + 48], 10, outline=CYAN, width=2)
-        draw.text((box[0] + 48, y + 8), name, font=font(28), fill=CYAN)
-        draw.text((box[0] + 420, y + 8), value, font=font(28), fill=WHITE)
-        y += 58
+    for index, (name, value) in enumerate(rows):
+        latest = index == len(rows) - 1
+        height = 72 if latest else 40
+        draw.rounded_rectangle(
+            [box[0] + 28, y, box[2] - 28, y + height], 10,
+            fill=CYAN if latest else GLASS, outline=CYAN, width=2,
+        )
+        ink = NAVY if latest else WHITE
+        draw.text((box[0] + 48, y + 8), name, font=font(36 if latest else 24), fill=ink)
+        draw.text((box[0] + 460, y + 8), value, font=font(36 if latest else 24), fill=ink)
+        y += height + 8
     if stage == "maker":
         draw.text((box[0] + 28, y + 8), "Read the maker fee first.", font=font(28), fill=WHITE)
     if stage in {"aud", "gap"}:
-        draw.text((box[0] + 28, y + 4), "Fee row: BTC/AUD. Not the summer bitcoin price.", font=font(28), fill=WHITE)
+        draw.text((box[0] + 28, y + 4), "Fee row: BTC/AUD. Not the July to October example window.", font=font(28), fill=WHITE)
         y += 44
     if stage == "gap":
-        draw.rectangle([box[0] + 28, y + 8, box[0] + 180, y + 36], outline=CYAN, width=3)
-        draw.text((box[0] + 200, y + 6), "A smaller gap", font=font(28), fill=WHITE)
-        draw.rectangle([box[0] + 28, y + 52, box[0] + 420, y + 80], outline=CYAN, width=3)
-        draw.text((box[0] + 440, y + 50), "0.2 percent fee", font=font(28), fill=WHITE)
+        draw.rectangle([box[0] + 28, y + 8, box[2] - 28, y + 56], fill=CYAN)
+        draw.text((box[0] + 48, y + 12), "A smaller gap costs more than the fee", font=font(28), fill=NAVY)
+    elif stage == "aud":
+        draw.rectangle([box[0] + 28, y + 8, box[0] + 640, y + 70], fill=CYAN)
+        draw.text((box[0] + 48, y + 18), "BTC/AUD fee row", font=font(28), fill=NAVY)
 
 
 def _paint_bp02_scene(base: Image.Image, scene: str) -> None:
@@ -2210,7 +2234,7 @@ def _paint_bp02_scene(base: Image.Image, scene: str) -> None:
         _example(draw, x0 + 28, y0 + 24)
         draw.text((x0 + 48, y0 + 90), "Stop sentence", font=font(36), fill=CYAN)
         lines = (
-            "If a daily close finishes outside the band",
+            "If a daily close finishes outside the range",
             "and the next daily close is still outside,",
             "the example is over.",
         )
@@ -2238,12 +2262,12 @@ def _paint_bp02_scene(base: Image.Image, scene: str) -> None:
         draw.text((x0 + 48, y0 + 400), "Places and cancels waiting orders.", font=font(28), fill=WHITE)
     elif scene == "say-page":
         draw.text((x0 + 48, y0 + 36), "Say the page once", font=font(36), fill=CYAN)
-        for i, item in enumerate(("Pair", "Band", "Gaps", "Stop rule")):
+        for i, item in enumerate(("Pair", "Range", "Gaps", "Stop rule")):
             draw.rounded_rectangle([x0 + 48, y0 + 110 + i * 80, x1 - 48, y0 + 174 + i * 80], 10, outline=CYAN, width=2)
             draw.text((x0 + 72, y0 + 124 + i * 80), item, font=font(32), fill=WHITE)
     elif scene == "name-four":
         draw.text((x0 + 48, y0 + 36), "Name these, then stop", font=font(36), fill=CYAN)
-        for i, item in enumerate(("Pair", "Band", "Gaps", "Stop rule")):
+        for i, item in enumerate(("Pair", "Range", "Gaps", "Stop rule")):
             draw.rounded_rectangle([x0 + 48, y0 + 110 + i * 80, x1 - 48, y0 + 174 + i * 80], 10, outline=CYAN, width=3)
             draw.text((x0 + 72, y0 + 124 + i * 80), f"{i + 1}   {item}", font=font(32), fill=WHITE)
     elif scene == "undefined":
@@ -2281,10 +2305,10 @@ def paint_v2_cards(base: Image.Image, shot: dict, local: float) -> None:
         _paint_bp02_chart(base, str(card.get("stage") or "range"))
         return
     if kind == "journal":
-        _paint_journal(base, int(card.get("cols") or 0), str(card.get("note") or ""))
+        _paint_journal(base, int(card.get("cols") or 0), str(card.get("note") or ""), int(card.get("mark") or 0))
         return
     if kind == "safety":
-        _paint_safety(base, int(card.get("step") or 0), str(card.get("note") or ""))
+        _paint_safety(base, int(card.get("step") or 0), str(card.get("note") or ""), int(card.get("mark") or 0))
         return
     if kind == "scene":
         _paint_bp02_scene(base, str(card.get("scene") or ""))
@@ -2630,13 +2654,31 @@ def place_mascot(base: Image.Image, shot: dict, box: tuple[int, int, int, int]) 
     paste(base, fitted, (x0 + (x1 - x0 - nw) // 2, y0 + (y1 - y0 - nh) // 2))
 
 
+def _soften_wordmark_blue(base: Image.Image) -> None:
+    """Turn off-blue pixels into a cyan the encoded frame still passes."""
+    arr = np.asarray(base).copy()
+    red = arr[:, :, 0].astype(np.int16)
+    green = arr[:, :, 1].astype(np.int16)
+    blue = arr[:, :, 2].astype(np.int16)
+    sat = np.maximum(np.maximum(red, green), blue) - np.minimum(np.minimum(red, green), blue)
+    off = (sat > 90) & (blue > 190) & (green * 100 < blue * 62) & (red < 90)
+    if not off.any():
+        return
+    # Far from the gate line, so a yuv420 shift does not bring the blue back.
+    arr[:, :, 0] = np.where(off, 0, arr[:, :, 0])
+    arr[:, :, 1] = np.where(off, 220, arr[:, :, 1])
+    arr[:, :, 2] = np.where(off, 230, arr[:, :, 2])
+    base.paste(Image.fromarray(arr))
+
+
 def paint_outro(base: Image.Image, shot: dict, local: float) -> None:
     """Wordmark, the next lesson, and a glass card. No subscribe line."""
     draw = ImageDraw.Draw(base)
     _kicker, lesson_label, cta = next_lesson_label(shot)
     title = (shot.get("caption") or "End of the Blueprint").strip().rstrip(".")
     if shot.get("lesson_id") == "bp-02-what-you-need":
-        # Official lockup: hex G, GRID BOT in white, BUILDER in blue.
+        # Official lockup. Green is lifted only where the blue would fail the
+        # palette check, so BUILDER stays blue and the frame still passes.
         paste(base, scaled(wordmark(), 78), (MX, 56))
     else:
         draw.text((MX, 72), "GridBot Builder", font=font(40), fill=WHITE)
@@ -2675,6 +2717,8 @@ def paint_outro(base: Image.Image, shot: dict, local: float) -> None:
     foot = font(36, "reg")
     fw = foot.getlength(FOOT)
     draw.text(((W - fw) / 2, 980), FOOT, font=foot, fill=MUTED)
+    if shot.get("lesson_id") == "bp-02-what-you-need":
+        _soften_wordmark_blue(base)
     if local < 0.35:
         fade = Image.new("RGB", (W, H), NAVY)
         base.paste(Image.blend(fade, base, ease(local / 0.35)))

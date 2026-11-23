@@ -37,3 +37,10 @@
 - bp-02-what-you-need / Journal / kept: 193 words (the old cap would have left 52).
 - bp-02-what-you-need / Say the page / kept: 84 words (the old cap would have left 58).
 - bp-02-what-you-need / Journal / kept: 200 words (the old cap would have left 59).
+- bp-02-what-you-need / No secrets / kept: 96 words (the old cap would have left 53).
+- bp-02-what-you-need / The pair / kept: 97 words (the old cap would have left 57).
+- bp-02-what-you-need / The range / kept: 80 words (the old cap would have left 32).
+- bp-02-what-you-need / Account in Australia / kept: 163 words (the old cap would have left 53).
+- bp-02-what-you-need / Fees / kept: 155 words (the old cap would have left 47).
+- bp-02-what-you-need / Journal / kept: 232 words (the old cap would have left 60).
+- bp-02-what-you-need / Say the page / kept: 89 words (the old cap would have left 63).

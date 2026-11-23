@@ -1,7 +1,7 @@
 {
   "tool": "quality-gate",
   "result": "pass",
-  "master": "course/blueprint-rebuild/masters/bp-02-what-you-need.mp4",
+  "master": "/agent/repos/claude/course/blueprint-rebuild/masters/bp-02-what-you-need.mp4",
   "format": "blueprint",
   "format_label": "Blueprint lesson",
   "length_window_seconds": [
@@ -17,7 +17,7 @@
     {
       "id": "length",
       "result": "pass",
-      "detail": "618.5s is inside Blueprint lesson (600s\u2013900s)"
+      "detail": "635.4s is inside Blueprint lesson (600s\u2013900s)"
     },
     {
       "id": "loudness",
@@ -27,7 +27,7 @@
     {
       "id": "true_peak",
       "result": "pass",
-      "detail": "true peak -3.6 dBTP, limit -1 dBTP"
+      "detail": "true peak -3.7 dBTP, limit -1 dBTP"
     },
     {
       "id": "frozen",
@@ -67,7 +67,7 @@
     {
       "id": "captions",
       "result": "pass",
-      "detail": "278 cues, at most 42 characters and 20 per second"
+      "detail": "285 cues, at most 42 characters and 20 per second"
     },
     {
       "id": "beginner_terms",

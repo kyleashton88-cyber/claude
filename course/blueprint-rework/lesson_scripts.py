@@ -518,23 +518,23 @@ def _bp02_line(chapter: str, vo: str, **extra) -> dict:
 
 
 def bp02() -> list[dict]:
-    """Stewart, 9:13pm AEDT 20 Nov: course/BP02-v2-PROPOSED-SPOKEN.txt, verbatim."""
+    """Stewart, 23 Nov 11:04am AEDT: spoken changes B1–B5, T1–T3, L2, L3. Not L1."""
     s = [ident("02", "What you are going to need")]
     s.append(legal())
     s.append(_bp02_line(
         "Hook",
-        "Crypto is a digital coin, such as bitcoin, and a daily close is the last price of that day. "
-        "A band, also called the range, is the top and the bottom, a gap is the space between two lines, "
+        "Crypto is a digital coin, such as bitcoin. "
+        "A range is the top and the bottom, a gap is the space between two lines, "
         "and the step is how wide that gap is. "
-        "A stop is the rule for what you will do if the price leaves the band. "
+        "A stop is the rule for what you will do if the price leaves the range. "
         "Like a packing list before a trip, your page comes before any screen.",
         kind="stack",
         v2_cards=[
-            {"cue": "", "title": "Crypto", "lines": ["Crypto is a digital coin, such as bitcoin, and a daily close is the last price of that day."]},
-            {"cue": "a band", "title": "Band", "lines": ["A band, also called the range, is the top and the bottom."]},
+            {"cue": "", "title": "Crypto", "lines": ["Crypto is a digital coin, such as bitcoin."]},
+            {"cue": "a range", "title": "Range", "lines": ["A range is the top and the bottom."]},
             {"cue": "a gap", "kind": "scene", "scene": "gap", "title": "Gap"},
             {"cue": "the step", "kind": "scene", "scene": "step", "title": "Step"},
-            {"cue": "a stop", "title": "Stop", "lines": ["A stop is the rule for what you will do if the price leaves the band."]},
+            {"cue": "a stop", "title": "Stop", "lines": ["A stop is the rule for what you will do if the price leaves the range."]},
             {"cue": "packing list", "kind": "scene", "scene": "packing", "title": "The page"},
         ],
     ))
@@ -552,7 +552,9 @@ def bp02() -> list[dict]:
         kind="stack",
         v2_cards=[{"cue": "", "kind": "notebook", "shown": 7, "title": "Recap"}],
     ))
-    s.append(outro("What is a grid bot", "see what the bot does, order by order."))
+    end = outro("What is a grid bot", "see what the bot does, order by order.")
+    end["vo"] = end["vo"].replace("your band,", "your range,", 1)
+    s.append(end)
     return s
 
 
@@ -603,7 +605,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "Three words, before any number. Range is the top line and the bottom line. "
         "An order is an instruction to buy or sell that can wait for a price. "
         "Levels are the price lines where orders wait, like the rungs of a ladder, and a gap is the space between two of them. "
-        "A stop is the rule for what you will do if a daily close finishes outside the band and the next daily close is still outside. "
+        "A stop is the rule for what you will do if a daily close finishes outside the range and the next daily close is still outside. "
         "The figures from lesson 1 are on the card, marked Example. "
         "If you can only say one of the three words, the page is missing a part.",
         [
@@ -619,13 +621,13 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "No secrets",
         "A wallet is where your crypto is held. A seed phrase is the list of words that unlocks that wallet. "
         "A private key is a secret that can move your crypto. "
-        "An API secret is a password that lets a program place orders on an account. "
+        "An API secret is a password that lets a program place orders on an account, and sometimes move money out of it. "
         "You never type a seed phrase, a private key, or an API secret onto this page. "
         "The chart has no balance on it. A public close is not your account. "
         "If a form asks for a secret, that form is not this lesson.",
         [
             {"cue": "", "title": "", "lines": ["A wallet is where your crypto is held. A seed phrase is the list of words that unlocks that wallet."]},
-            {"cue": "a private key", "title": "", "lines": ["A private key is a secret that can move your crypto. An API secret is a password that lets a program place orders on an account."]},
+            {"cue": "a private key", "title": "", "lines": ["A private key is a secret that can move your crypto. An API secret is a password that lets a program place orders on an account, and sometimes move money out of it."]},
             {"cue": "you never", "kind": "scene", "scene": "secrets-off", "title": "No secrets"},
             {"cue": "no balance", "kind": "scene", "scene": "no-balance", "title": "No balance"},
             {"cue": "a form asks", "kind": "scene", "scene": "not-form", "title": "Not this lesson"},
@@ -633,9 +635,9 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
     ),
     (
         "Copy the path",
-        "You copy the band onto the page, not every day's prices. "
+        "You copy the range onto the page, not every day's prices. "
         "Copy the bottom line and the top line, with six gaps of about 900. "
-        "Every close in that window stayed inside the band. Mark each figure Example.",
+        "Every close in that window stayed inside the range. Mark each figure Example.",
         [
             {"cue": "", "kind": "chart", "stage": "range", "title": "Copy the path"},
             {"cue": "copy the bottom", "kind": "chart", "stage": "gaps", "title": "Copy the path"},
@@ -644,9 +646,9 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
     ),
     (
         "Worked check",
-        "Worked check: pair, band, gaps, stop, and Example. "
+        "Worked check: pair, range, gaps, stop, and Example. "
         "If the stop line is only a tick with no sentence, the page fails the check. "
-        "The rule has to say: if a daily close finishes outside the band and the next daily close is still outside, the example is over.",
+        "The rule has to say: if a daily close finishes outside the range and the next daily close is still outside, the example is over.",
         [
             {"cue": "", "kind": "chart", "stage": "check", "title": "Worked check"},
         ],
@@ -675,11 +677,10 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
     (
         "The pair",
         "Write the pair first. The base is what you buy. The quote is what you pay with. "
-        "For this course the prices are the summer bitcoin closes, so you buy the base, bitcoin, with the quote, US dollars, and that row is labelled BTC/USD. "
+        "For this course the prices are the July to October example window, the public bitcoin closes from 19 July to 16 October 2023, so you buy the base, bitcoin, with the quote, US dollars, and that row is labelled BTC/USD. "
         "Every other row depends on the pair. "
         "If a fee sum is in Australian dollars, that sum goes on its own line, labelled BTC/AUD. "
-        "Do not put a US dollar price and an Australian dollar fee on the same row. "
-        "Do not mix the two currencies on one row.",
+        "Do not put a US dollar price and an Australian dollar fee on the same row.",
         [
             {"cue": "", "title": "", "lines": ["Write the pair first. The base is what you buy. The quote is what you pay with."]},
             {"cue": "for this course", "kind": "scene", "scene": "btc-usd", "title": "BTC/USD"},
@@ -689,7 +690,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
     ),
     (
         "The range",
-        "Range is the top line and the bottom line. On the summer chart those lines are 24,930 and 30,331. Both figures are Example. "
+        "Range is the top line and the bottom line. In the July to October example window those lines are 24,930 and 30,331. Both figures are Example. "
         "Levels are the lines between them. Six gaps of about 900 dollars sit between the top and the bottom. "
         "Write the top and the bottom only after you have said what a range is. "
         "Then write one gap, and how you got it: the top minus the bottom, divided by the number of gaps.",
@@ -703,7 +704,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "The stop",
         "The stop sentence has to say what you will do. "
         "A bot is a program that places and cancels the waiting orders for you. "
-        "Two daily closes outside the band, through the top or the bottom, and the second close still outside. "
+        "Two daily closes outside the range, through the top or the bottom, and the second close still outside. "
         "Then you stop the bot, which cancels the waiting orders, and you follow the rule you wrote. "
         "Write that stop in one sentence.",
         [
@@ -720,7 +721,6 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "That check is required by Australian anti-money laundering law, and the exchange runs it, not this course. "
         "You only upload identification inside the exchange's own app. "
         "This course does not name an exchange and does not show a balance. "
-        "Before you deposit, look the exchange up on AUSTRAC's public register. "
         "Any exchange offering crypto services in Australia must register with AUSTRAC, Australia's financial crime regulator, as a virtual asset service provider. "
         "AUSTRAC keeps a public register you can search. Check that register before you sign up. "
         "The register says the business is listed. It does not say your money is protected. "
@@ -729,12 +729,15 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "From April 2027, new licensing rules for platforms that hold crypto for you are phased in through that year. "
         "Check ASIC for the current position. This lesson names only government bodies, never an exchange.",
         [
-            {"cue": "", "kind": "safety", "step": 0, "note": "Who you are, first", "title": "Account"},
-            {"cue": "you only upload", "kind": "safety", "step": 0, "note": "Only in the exchange's own app", "title": "Account"},
-            {"cue": "before you deposit", "kind": "safety", "step": 1, "note": "Look up the register", "title": "AUSTRAC"},
-            {"cue": "the register says", "kind": "safety", "step": 1, "note": "Listed is not protection", "title": "AUSTRAC"},
-            {"cue": "asic is", "kind": "safety", "step": 2, "note": "From April 2027", "title": "ASIC"},
-            {"cue": "check asic", "kind": "safety", "step": 2, "note": "Check the current position", "title": "ASIC"},
+            {"cue": "", "kind": "safety", "step": 0, "mark": 0, "note": "Who you are, first", "title": "Account"},
+            {"cue": "an exchange in", "kind": "safety", "step": 0, "mark": 1, "note": "The exchange asks who you are", "title": "Account"},
+            {"cue": "that check is", "kind": "safety", "step": 0, "mark": 2, "note": "The exchange runs the check", "title": "Account"},
+            {"cue": "you only upload", "kind": "safety", "step": 0, "mark": 3, "note": "Only in the exchange's own app", "title": "Account"},
+            {"cue": "must register", "kind": "safety", "step": 1, "mark": 0, "note": "Look up the register", "title": "AUSTRAC"},
+            {"cue": "austrac keeps", "kind": "safety", "step": 1, "mark": 1, "note": "Search the public register", "title": "AUSTRAC"},
+            {"cue": "the register says", "kind": "safety", "step": 1, "mark": 2, "note": "Listed is not protection", "title": "AUSTRAC"},
+            {"cue": "asic is", "kind": "safety", "step": 2, "mark": 3, "note": "From April 2027", "title": "ASIC"},
+            {"cue": "check asic", "kind": "safety", "step": 2, "mark": 0, "note": "Check the current position", "title": "ASIC"},
         ],
     ),
     (
@@ -743,8 +746,8 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "Turn that on before any real dollars. Then look for a paper or demo mode. "
         "Paper uses pretend money. That practice is lesson 7.",
         [
-            {"cue": "", "kind": "safety", "step": 3, "note": "Turn on a second code", "title": "Two-factor"},
-            {"cue": "then look", "kind": "safety", "step": 3, "note": "Paper uses pretend money", "title": "Two-factor"},
+            {"cue": "", "kind": "safety", "step": 3, "mark": 1, "note": "Turn on a second code", "title": "Two-factor"},
+            {"cue": "then look", "kind": "safety", "step": 3, "mark": 2, "note": "Paper uses pretend money", "title": "Two-factor"},
         ],
     ),
     (
@@ -757,7 +760,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "On an example buy of 100 Australian dollars, 0.1 percent is 10 cents. "
         "The sell costs about 10 cents as well. "
         "The round trip is about 20 cents, which is 0.2 percent. "
-        "This fee row is Australian dollars. It is not the summer bitcoin price. "
+        "This fee row is Australian dollars. It is not the July to October example window. "
         "If the gap is smaller than that 0.2 percent, each completed buy and sell costs more in fees than the gap is worth. "
         "Lesson 5 is where you test a gap against this fee. You do not pick a gap in this lesson.",
         [
@@ -783,23 +786,28 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "Journal",
         "A trading journal is a dated record of every bot: the plan, the changes, the fills, the fees, a review note of what happened, and whether you followed the rules. "
         "That note is not money you made. A stablecoin fill goes in the journal. "
-        "It is also the page you will open again in lesson 8 and lesson 10. "
+        "The tax office treats a swap like a sale, so every swap goes in the journal. "
+        "The journal is also the page you will open again in lesson 8 and lesson 10. "
         "For every transaction, including a buy, a sell, a swap, or a transfer, write the date and time, the amount, the value in Australian dollars at the time, the fee, which exchange or wallet, what it was for, and who the other side was. "
-        "The columns are the date, the pair, the band, the gaps, the money in the bot, the stop rule, the fills, the fees, the Australian dollar value of each fill, a review note, and a yes or no for the rules. "
+        "The columns are the date, the pair, the range, the gaps, the money in the bot, the stop rule, the fills, the fees, the Australian dollar value of each fill, a review note, and a yes or no for the rules. "
+        "The Australian dollar value column is the one exception. It is for your tax records. "
         "Download your exchange's transaction history at least every three months. Keep those records for at least five years. "
         "This is general information, not tax advice. "
         "Leave two columns blank for now. One is for the fees. One is for whether you followed the rule. "
         "You fill those later. You do not fill them with a hope.",
         [
             {"cue": "", "kind": "journal", "cols": 0, "title": "Journal"},
+            {"cue": "the tax office", "kind": "journal", "cols": 0, "mark": 0, "note": "A swap counts like a sale.", "title": "Journal"},
+            {"cue": "for every transaction", "kind": "journal", "cols": 0, "mark": 1, "note": "Write the date and the fee.", "title": "Journal"},
             {"cue": "the columns are", "kind": "journal", "cols": 2, "title": "Journal"},
-            {"cue": "the band", "kind": "journal", "cols": 4, "title": "Journal"},
+            {"cue": "the range", "kind": "journal", "cols": 4, "title": "Journal"},
             {"cue": "the money in", "kind": "journal", "cols": 5, "title": "Journal"},
             {"cue": "the stop rule", "kind": "journal", "cols": 6, "title": "Journal"},
             {"cue": "australian dollar", "kind": "journal", "cols": 9, "title": "Journal"},
             {"cue": "yes or no", "kind": "journal", "cols": 11, "title": "Journal"},
-            {"cue": "download your", "kind": "journal", "cols": 11, "note": "Download every three months. Keep five years.", "title": "Export"},
-            {"cue": "leave two", "kind": "journal", "cols": 11, "note": "Fees and the rule: fill those later.", "title": "Later"},
+            {"cue": "the one exception", "kind": "journal", "cols": 11, "mark": 2, "note": "That column is for tax records.", "title": "Journal"},
+            {"cue": "download your", "kind": "journal", "cols": 11, "mark": 3, "note": "Download every three months.", "title": "Export"},
+            {"cue": "leave two", "kind": "journal", "cols": 11, "mark": 0, "note": "Fees and the rule: fill those later.", "title": "Later"},
         ],
     ),
     (
@@ -807,21 +815,21 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "Nobody from this course will ask for a seed phrase, a private key, or an API secret. "
         "If a message rushes you to send crypto, or asks for one of those, treat it as a scam. It is not this course.",
         [
-            {"cue": "", "kind": "safety", "step": 4, "note": "Nobody from this course will ask", "title": "Scams"},
-            {"cue": "if a message", "kind": "safety", "step": 4, "note": "A rush to send crypto is a scam", "title": "Scams"},
+            {"cue": "", "kind": "safety", "step": 4, "mark": 1, "note": "Nobody from this course will ask", "title": "Scams"},
+            {"cue": "if a message", "kind": "safety", "step": 4, "mark": 2, "note": "A rush to send crypto is a scam", "title": "Scams"},
         ],
     ),
     (
         "Moneysmart",
         "ASIC's Moneysmart website is the public Australian guide for scam warnings. Check it yourself.",
         [
-            {"cue": "", "kind": "safety", "step": 4, "note": "ASIC's Moneysmart", "title": "Moneysmart"},
+            {"cue": "", "kind": "safety", "step": 4, "mark": 0, "note": "ASIC's Moneysmart", "title": "Moneysmart"},
         ],
     ),
     (
         "Say the page",
-        "Say the page once, in your own words, and do not read the chart again. "
-        "Name the pair, the band, the gaps, and the stop rule, then stop. "
+        "Now cover the chart and say your page out loud: the pair, the range, the gaps and the stop rule. "
+        "Name the pair, the range, the gaps, and the stop rule, then stop. "
         "If a word on it has not been defined, stop and define it before you go on. "
         "A secret is a seed phrase, a private key, or an API secret. None of those go on this page. "
         "You write Example on your own notebook so a practice sketch is never later mistaken for a live plan.",
