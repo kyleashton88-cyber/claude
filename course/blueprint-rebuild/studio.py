@@ -546,10 +546,17 @@ def plan(sid: str) -> list[dict]:
         "chart": "",
         "series": [],
     }
+    disclaimer_vo = DISCLAIMER
+    if sid == "bp-01-introduction":
+        disclaimer_vo = DISCLAIMER.replace(
+            "Crypto is high risk",
+            "Crypto, a digital coin, is high risk",
+            1,
+        )
     disc = {
         "kind": "disclaimer",
         "chapter": "Disclaimer",
-        "vo": DISCLAIMER,
+        "vo": disclaimer_vo,
         "caption": DISCLAIMER,
         "chart": "",
         "series": [],
@@ -562,7 +569,7 @@ def plan(sid: str) -> list[dict]:
     for index, line in enumerate(risk_lines):
         spoken = line
         if sid == "bp-01-introduction" and line.startswith("The prices are public historical daily closes"):
-            spoken = line + " A close is the last price of the day."
+            spoken = "The prices are public historical prices at the end of each day, marked Example."
         if sid == "bp-02-what-you-need" and line.startswith("The prices are public historical daily closes"):
             spoken = "A daily close is the last price of that day. " + line
         risk_shots.append({
@@ -662,9 +669,10 @@ def _speak_round(text: str) -> str:
         ("25,000", "about 25 thousand"),
         ("25000", "about 25 thousand"),
     )
+    held = text.replace("at 27,630", "at KEEPPRICE")
     for old, new in swaps:
-        text = text.replace(old, new)
-    return text
+        held = held.replace(old, new)
+    return held.replace("at KEEPPRICE", "at 27,630")
 
 
 # The old estimate used 2.55 words/second and said BP-01 was 7.2 minutes.
@@ -2336,6 +2344,24 @@ def paint_stack(base: Image.Image, shot: dict, local: float) -> None:
         paint_v2_cards(base, shot, local)
         return
     vo = shot.get("vo") or ""
+    if shot.get("lesson_id") == "bp-01-introduction" and (shot.get("chapter") or "") == "When price leaves the band":
+        parts = [part.strip() for part in re.split(r"(?<=[.!?])\s+", vo) if part.strip()]
+        current = 0
+        for index, part in enumerate(parts):
+            lead = " ".join(part.split()[:4])
+            if _spoken(shot, local, lead) or index == 0:
+                current = index
+        box = (MX, 200, RIGHT, 700)
+        draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=3)
+        # The digit moves, so a long sentence is not one still picture.
+        digit_y = 210 + current * 110
+        draw.rectangle([MX + 40, digit_y, RIGHT - 40, digit_y + 96], fill=CYAN)
+        draw.text((MX + 56, digit_y + 24), str(current + 1), font=font(40), fill=NAVY)
+        y = digit_y + 16
+        for line in wrap(parts[current] if parts else vo, 32, RIGHT - MX - 220)[:2]:
+            draw.text((MX + 140, y), line, font=font(32), fill=NAVY)
+            y += 40
+        return
     if shot.get("lesson_id") == "bp-02-what-you-need" and (
         vo.startswith("A journal is the page you will open again")
         or vo.startswith("Australian exchanges register with AUSTRAC")
@@ -2907,18 +2933,18 @@ def paint_leave(base: Image.Image, shot: dict, local: float) -> None:
     coin_box = [side[0] + 36, side[1] + 230, side[2] - 36, side[1] + 320]
     draw.rounded_rectangle(
         cash_box, 14,
-        fill=(16, 48, 40) if cash_on else GLASS,
-        outline=MINT,
+        fill=CYAN if cash_on else GLASS,
+        outline=CYAN,
         width=6 if cash_on else 3,
     )
-    draw.text((cash_box[0] + 24, cash_box[1] + 22), "Cash", font=font(48), fill=MINT)
+    draw.text((cash_box[0] + 24, cash_box[1] + 22), "Cash", font=font(48), fill=NAVY if cash_on else CYAN)
     draw.rounded_rectangle(
         coin_box, 14,
-        fill=(16, 32, 64) if coin_on else GLASS,
-        outline=BLUE,
+        fill=CYAN if coin_on else GLASS,
+        outline=CYAN,
         width=6 if coin_on else 3,
     )
-    draw.text((coin_box[0] + 24, coin_box[1] + 22), "Coin", font=font(48), fill=BLUE)
+    draw.text((coin_box[0] + 24, coin_box[1] + 22), "Coin", font=font(48), fill=NAVY if coin_on else CYAN)
     draw.text((side[0] + 36, side[1] + 370), "$ = cash on that line", font=font(28), fill=MINT)
     draw.text((side[0] + 36, side[1] + 412), "C = coin on that line", font=font(28), fill=CYAN)
     draw.text((side[0] + 36, side[1] + 454), "Bright line = filled", font=font(28), fill=WHITE)

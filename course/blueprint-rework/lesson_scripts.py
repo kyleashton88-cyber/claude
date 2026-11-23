@@ -216,7 +216,7 @@ def bp01() -> list[dict]:
     s.append(gloss(
         "Hook",
         "By the end of this series you will understand what a grid bot, a small program that places these orders for you, does, when it can capture bounces, and where it loses. You will know how to plan one, test it on paper, run it, check it, and change the capital you give to bots only under written risk rules. This is education, not a promise of results. "
-        "Price often moves sideways, bouncing between the same top and bottom instead of leaving. A grid is a ladder of waiting orders, called limit orders, built for that bouncing. When price runs one way and stays there, the grid has nothing left to do. And if price falls through the bottom, you're left holding coin that is worth less.",
+        "Price often moves sideways, bouncing between the same top and bottom instead of leaving. A grid is a ladder of waiting orders, called limit orders, built for that bouncing. When price runs one way and stays there, the grid has nothing left to do. And if price falls through the bottom, coin means the crypto itself, and you are left holding the coin, and it is worth less.",
         "Plan, test, run, check, and change capital only under written rules.",
         "The promise",
         "Education about grids under written rules. Not a promise of results.",
@@ -238,7 +238,7 @@ def bp01() -> list[dict]:
         "Crypto is a digital asset, such as bitcoin. You do not need to have bought any before this lesson.",
         "Crypto is a digital asset, such as bitcoin.",
         "Crypto",
-        "Digital money, such as bitcoin.",
+        "A digital asset, such as bitcoin.",
     ))
     s.append(gloss(
         "Exchange",
@@ -249,17 +249,17 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "Cash and coin",
-        "Cash is money you can spend. Here that means dollars, or a dollar-pegged token, treated like cash in this lesson. Coin is the crypto, such as bitcoin.",
+        "Cash is money you can spend. Here that means dollars, or a dollar-pegged token, treated like cash in this lesson. The peg can break. Coin is the crypto, such as bitcoin.",
         "Cash is money you can spend. Coin is the crypto.",
         "Cash and coin",
-        "Cash is money you can spend. Coin is the crypto.",
+        "A dollar-pegged token, treated like cash in this lesson. The peg can break.",
     ))
     s.append(gloss(
         "Buy and sell",
-        "An order is an instruction to buy or sell. A buy order swaps cash for coin. A sell order swaps coin back to cash, and you can only sell coin you already hold.",
-        "Buy swaps cash for coin. Sell needs coin first.",
+        "An order is an instruction to buy or sell. A buy order swaps cash for coin. A sell order swaps coin back to cash, and you can only sell coin you already hold, on a spot account.",
+        "Buy swaps cash for coin. Sell needs coin you already hold, on a spot account.",
         "Buy and sell",
-        "A buy swaps cash for coin. A sell swaps coin for cash, and you need the coin first.",
+        "A buy swaps cash for coin. A sell swaps coin for cash, and you can only sell coin you already hold, on a spot account.",
     ))
     s.append(gloss(
         "The idea",
@@ -308,6 +308,7 @@ def bp01() -> list[dict]:
         focus_price=HIGH, focus_label="Top line",
         vo=(
             "The range is the top line and the bottom line, taken from the path. "
+            "Hindsight: this range is drawn after the fact. "
             "The chart is bitcoin's real daily closes from 19 July to 16 October 2023. "
             "Every close in this window stayed between those two lines."
         ),
@@ -345,7 +346,7 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "How a grid can capture bounces",
-        "Think of a market stall. The stallholder buys stock a little cheaper and sells it a little dearer, and pays a fee on every sale. A grid can do that while price bounces inside the band. A bounce means price moves down and back up, or up and back down, and stays inside. One buy at a lower line and the later sell of that same coin is one pair. On these daily closes, the July to October example window finished only three pairs one rung apart. The sell line is higher, so the cash that comes back is more than the cash that left, before the fee. A fee is what the exchange charges when an order fills. The fee comes out of the gap. If the fees are larger than the gap, the pair keeps nothing. This is not a promise. The pair finishes only if price does bounce and both orders fill.",
+        "Think of a market stall. The stallholder buys stock a little cheaper and sells it a little dearer, and pays a fee on every sale. Exchanges charge a small fee on each trade. A grid can do that while price bounces inside the band. A bounce means price moves down and back up, or up and back down, and stays inside. One buy at a lower line and the later sell of that same coin is one pair. On these daily closes, the July to October example window finished only three pairs one rung apart. The sell line is higher, so the cash that comes back is more than the cash that left, before the fee. A fee is what the exchange charges when an order fills. The fee comes out of the gap. If the fees are larger than the gap, the pair keeps nothing. This is not a promise. The pair finishes only if price does bounce and both orders fill.",
         "A pair keeps the gap only after fees, and only on a bounce.",
         "Fee",
         "What the exchange charges when an order fills. It comes out of the gap.",
@@ -357,14 +358,14 @@ def bp01() -> list[dict]:
         candle={"high": 30184, "low": 29794, "close": 29914, "date": "19 July 2023"},
         vo=(
             "The daily close is the last price of the day. Crypto trades all day, so the day is cut at a set time. "
-            "The daily close is the end of each UTC day, 11am Sydney time in daylight saving, 10am otherwise. "
+            "The exchange's day starts at 11am Sydney time in daylight saving, 10am otherwise. "
             "This is a simple candle that shows the day's high, low and close. "
             "Traders call it a candle because the full version has a thick body and a thin wick, like a candle. Here we only need the high, the low and the close. "
             "This candle is 19 July 2023. The high, the low, and the close are labelled."
         ),
-        caption="19 July 2023. Close 29,914. Daily close 11am AEDT, or 10am outside daylight saving.",
+        caption="19 July 2023. Close 29,914. The exchange's day starts at 11am Sydney time in daylight saving, 10am otherwise.",
         term_text="Daily close",
-        definition_text="The last price of the day, cut at midnight UTC. 11am AEDT in daylight saving, and 10am AEST otherwise.",
+        definition_text="The last price of the day. The exchange's day starts at 11am Sydney time in daylight saving, and 10am otherwise.",
     ))
     s.append(_shot(
         chapter="The whole window",
@@ -384,7 +385,7 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "Crossings",
-        "Those 28 crossings are not 28 results. A crossing only means the close moved from one side of a line to the other. A pair is finished only when a buy and its later sell have both filled, and only after the fee. The price can cross many lines and still leave you holding coin if it walks out through the bottom.",
+        "Those 28 crossings, each time the price crosses a line, are not 28 results. A crossing only means the close moved from one side of a line to the other. A pair is finished only when a buy and its later sell have both filled, and only after the fee. The price can cross many lines and still leave you holding coin if it walks out through the bottom.",
         "A crossing is not a finished pair.",
         "Crossing",
         "The close moved from one side of a line to the other. It is not a finished pair and not a result.",
@@ -436,10 +437,10 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "L-plates",
-        "Paper or demo trading is like driving with L-plates: you practise with pretend money before anything is real. Lesson 7 shows you how.",
-        "L-plates: pretend money first. Lesson 7 shows the practice.",
-        "L-plates",
-        "Practice on paper or a demo before any real order.",
+        "Paper or demo trading is like driving with learner plates, or training wheels: you practise with pretend money before anything is real. Lesson 7 shows you how.",
+        "Learner plates, or training wheels. Pretend money first. Lesson 7 shows the practice.",
+        "Learner plates",
+        "Practice on paper or a demo before any real order. Learner plates, or training wheels.",
     ))
     s.append(gloss(
         "The map",
@@ -482,10 +483,10 @@ def bp01() -> list[dict]:
     ], "")
     s.append(gloss(
         "No secrets",
-        "Bring a notebook, and no secrets: no seed phrase, private key or API secret. Those are the words or keys that unlock a wallet or an account.",
+        "Bring a notebook, and no secrets: no seed phrase, private key or API secret. An API secret is a secret key that lets software control your account.",
         "No seed phrase, private key, or API secret.",
         "Secrets",
-        "A seed phrase, a private key, or an API secret. None of them belongs on the page.",
+        "An API secret is a secret key that lets software control your account.",
     ))
     s.append(gloss(
         "The pair, next",

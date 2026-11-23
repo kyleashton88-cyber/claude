@@ -447,6 +447,10 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
         buy_at = ui._phrase_at(shot, "one buy")
         if buy_at is None or local < buy_at:
             _paint_stall(draw, ui)
+            fee_at = ui._phrase_at(shot, "exchanges charge")
+            if fee_at is not None and local >= fee_at:
+                draw.rounded_rectangle([ui.MX + 80, 560, ui.RIGHT - 80, 660], 16, fill=ui.CYAN)
+                draw.text((ui.MX + 110, 588), "A fee on each trade", font=ui.font(40), fill=ui.NAVY)
             return
         sell_at = ui._phrase_at(shot, "later sell")
         if sell_at is None or local < sell_at:

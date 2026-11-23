@@ -17,7 +17,7 @@
     {
       "id": "length",
       "result": "pass",
-      "detail": "802.6s is inside Blueprint lesson (600s\u2013900s)"
+      "detail": "818.4s is inside Blueprint lesson (600s\u2013900s)"
     },
     {
       "id": "loudness",
@@ -33,6 +33,11 @@
       "id": "frozen",
       "result": "pass",
       "detail": "longest static run 0.5s, limit 8s"
+    },
+    {
+      "id": "masked_holds",
+      "result": "pass",
+      "detail": "no picture holds for 20s or more once captions and the lower third are ignored"
     },
     {
       "id": "black",
@@ -62,7 +67,7 @@
     {
       "id": "captions",
       "result": "pass",
-      "detail": "368 cues, at most 42 characters and 20 per second"
+      "detail": "375 cues, at most 42 characters and 20 per second"
     },
     {
       "id": "text_recognition",

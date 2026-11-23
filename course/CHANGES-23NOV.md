@@ -15,3 +15,21 @@ Stewart approved every recommended spoken change by voice at 11:04am AEDT. L1 is
 | L2 | The journal said a stablecoin fill goes in it. | Added "The tax office treats a swap like a sale, so every swap goes in the journal." | A swap is a record, not only a fill. |
 | L3 | "An API secret is a password that lets a program place orders on an account." | Added "and sometimes move money out of it." | The secret can do more than place orders. |
 | L1 | Not applied. | The line stays "From April 2027, new licensing rules..." | Legal and tax do not agree on the calendar day. |
+
+## BP-01 v14
+
+| ID | Change |
+|---|---|
+| S1 | The disclaimer says "Crypto, a digital coin, is high risk". |
+| S2 | The risk line says "prices at the end of each day" instead of "daily closes". |
+| S3 | The hook says "coin means the crypto itself" and then "holding the coin". |
+| S4 | Added "Exchanges charge a small fee on each trade." |
+| S5 | "The exchange's day starts at 11am Sydney time in daylight saving, 10am otherwise." |
+| S6 | "28 crossings, each time the price crosses a line". |
+| S7 | "learner plates, or training wheels". |
+| S8 | "An API secret is a secret key that lets software control your account." |
+| N1/F2 | The crypto line says "A digital asset, such as bitcoin." |
+| F3 | "A dollar-pegged token, treated like cash in this lesson. The peg can break." |
+| F4 | "you can only sell coin you already hold, on a spot account". |
+| F5 | "Hindsight: this range is drawn after the fact." |
+| 9:25 | The voice says "at 27,630", not "at the middle line". |

@@ -44,3 +44,4 @@
 - bp-02-what-you-need / Fees / kept: 155 words (the old cap would have left 47).
 - bp-02-what-you-need / Journal / kept: 232 words (the old cap would have left 60).
 - bp-02-what-you-need / Say the page / kept: 89 words (the old cap would have left 63).
+- bp-01-introduction / Hook / kept: 136 words (the old cap would have left 68).
