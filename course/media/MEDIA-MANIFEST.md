@@ -68,3 +68,18 @@ Source commit `f308e46`. Duration 875.7s. 2,393 spoken words. Gate PASS: −14.3
 Join: `cat master.mp4.part01 master.mp4.part02 master.mp4.part03 > master.mp4`
 
 `SHA256SUMS` lists the parts, captions, spoken script, gate report, and the card stills that are actually in the folder.
+
+## BP-01 after fix order 12, 24 Nov
+
+Source commit `3c06f47` (spoken sign-off `7b849b1` plus the stop-lane motion). Duration 876.4s. 2,395 spoken words. Gate PASS: −14.3 LUFS, −3.6 dBTP. BP-02 was not rendered.
+
+| Lesson | Commit | File | Duration | Bytes | SHA-256 | Where it lives |
+|---|---|---|---|---|---|---|
+| BP-01 X1 | `3c06f47` | `master.mp4` | 876.4s | 302431831 | `0db87a7e85425a1286e4e9c8a3e91b0d8c9e4ad7428dd0d0c16c94ae9bb0dd98` | Agent store `/cursor/stores/self/artifacts/bp-23nov/bp01-3c06f47/` |
+| BP-01 X1 | `3c06f47` | `master.mp4.part01` | | 104857600 | `49064c09b13927c2c7f220a53d6ff5326933a8c88e697757c2e8ccbd54303e14` | Same folder |
+| BP-01 X1 | `3c06f47` | `master.mp4.part02` | | 104857600 | `d251ffe87d0757f2cd513abb638a4228e05bbfe2dcac55d5e1efdac7f833a450` | Same folder |
+| BP-01 X1 | `3c06f47` | `master.mp4.part03` | | 92716631 | `b8449a0e839c8f17af73cef3806f85d49a64e69419d352ccc5514a7e48898677` | Same folder |
+
+Join: `cat master.mp4.part01 master.mp4.part02 master.mp4.part03 > master.mp4`
+
+`SHA256SUMS` lists the parts, captions, spoken script, gate report, and the card stills that are actually in the folder.
