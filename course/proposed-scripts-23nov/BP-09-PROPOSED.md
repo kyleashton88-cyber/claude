@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1798
-Estimated minutes: 10.9 at about 165 words a minute
+Word count: 1826
+Estimated minutes: 11.1 at about 165 words a minute
 
 Added sections:
 
@@ -40,11 +40,11 @@ A tight range here is a round box. It looks tidy. Suppose the top on the page is
 
 Seven prices are on the ladder. The gaps between them are six. Calling it a seven-grid because you counted seven lines is the same counting mistake from lesson five. The fix is the recount you already did: six. Seven marks. Six gaps. If a form uses the word grids for gaps, you still enter six, because your page has six gaps.
 
-Ask one question of the whole window, not of every day. Does the page match the path? The path stayed between 24,930 and 30,331 until the close left on 23 October 2023. If the page says something else, rewrite the page. A page that says four and four, or four and three, near the two ends is already wrong. The Example count is eight near the top and five near the bottom. A close is near the top when it is at least about 29,431. A close is near the bottom when it is at most about 25,830. On the ninety daily closes from 19 July to 16 October 2023, that rule gives eight and five. The next closes, 25,832 and 25,833, sit just outside the bottom count. That is a recount from the course data, not a grade.
+Ask one question of the whole window, not of every day. Does the page match the path? The path stayed between 24,930 and 30,331 until the close left on 23 October 2023. If the page says something else, rewrite the page. A page that says four and four, or four and three, near the two ends is already wrong. The Example count is eight near the top and five near the bottom. A close is near the top when it is at least about 29,431. A close is near the bottom when it is at most about 25,830. On the ninety daily closes from 19 July to 16 October 2023, that rule gives eight and five. Two other prices inside the window sit just above 25,830, so they are not in the bottom count. 10 September closed at 25,832. 12 September closed at 25,833. Those are prices, not the next days after the window. That is a recount from the course data, not a grade.
 
 Worked audit, two passes. Pass one: write the missing stop rule for 23 October 2023, confirmed when the next close was still outside. Pass two: move a round top of 30,000 up to the real top line, 30,331, because the path had already gone past the round number. Then recount. Do not grade the page. List the rewrites. A result word does not belong on either pass. The page is an Example, not a score.
 
-After each fix, read the three words again. Range: the real bottom line to the real top line, past a round box. Levels: six gaps of about 900, not seven lines. Stop: a close outside the range, confirmed by the next close, which this path met when the next close after 23 October 2023 was still outside. If one of those three is still blank, that is the next fix. Fix those three, in that order, and the page matches the summer path.
+After each fix, read the three words again. Range: the real bottom line to the real top line, past a round box. Levels: seven rungs. Gaps: six, about 900, not seven gaps. Stop: a close outside the range, confirmed by the next close, which this path met when the next close after 23 October 2023 was still outside. If one of those three is still blank, that is the next fix. Fix those three, in that order, and the page matches the summer path.
 
 Read a wrong page and a corrected page, line by line, so the fixes are not a slogan. The wrong page says: top 30,000, seven gaps, and no stop sentence. The corrected page says: top 30,331, bottom 24,930, six gaps of about 900, and a stop sentence that points at 23 October 2023 and the next close still outside. The bottom did not need a fix in this Example, because 24,930 is already the real low of that window. The top did. The count did. The stop did. Three fixes. Not one scribble.
 
@@ -58,7 +58,7 @@ The summer path is the judge, not the neatness of the box. Every close from 19 J
 
 Check yourself. What is the first miss? The answer is a missing finish rule. What is wrong with a top at 30,000? The answer is that 30,331 is 331 above it. How many gaps are seven lines? The answer is six. What word stays off the page? The answer is a result word. The page is an Example, not a grade.
 
-Here is the corrected page in the words you will read back. Range: 24,930 to 30,331. Not 30,000. Levels: six gaps of about 900, which is 5,401 divided by six. Seven lines, six gaps. Stop: a daily close outside that range, confirmed by the next daily close still outside. This path met that rule on 23 October 2023, close 33,086, which is 2,755 above the top, and the next close was still outside. If those three sentences are on the page, the misses in this lesson are fixed. If the top is right and the stop is blank, you are not finished. Go back to pass one. The order is the method.
+Here is the corrected page in the words you will read back. Range: 24,930 to 30,331. Not 30,000. Levels: seven rungs. Gaps: six, about 900, which is 5,401 divided by six. Seven rungs, six gaps. Stop: a daily close outside that range, confirmed by the next daily close still outside. This path met that rule on 23 October 2023, close 33,086, which is 2,755 above the top, and the next close was still outside. If those three sentences are on the page, the misses in this lesson are fixed. If the top is right and the stop is blank, you are not finished. Go back to pass one. The order is the method.
 
 On paper, or on a demo that uses pretend money, write the three fixes in order. Stop sentence. Then the real top, 30,331. Then six gaps. Write Example on the page. Do not send an order. A corrected page is not a live plan.
 

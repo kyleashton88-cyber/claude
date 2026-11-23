@@ -1,9 +1,9 @@
-# BP-11 Advanced: liquidation scenarios
+# BP-11 Optional close: the spot page, and what this course does not cover
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 2204
-Estimated minutes: 13.4 at about 165 words a minute
+Word count: 2267
+Estimated minutes: 13.7 at about 165 words a minute
 
 Added sections:
 
@@ -15,25 +15,25 @@ Added sections:
 
 New on-screen visuals:
 
-- An opening card: "Optional. We do not cover margin, contracts, or liquidation." The summer spot page sits beside it, marked complete.
+- An opening card: "Optional close: the spot page, and what this course does not cover." Four one-line meanings sit under it: margin, liquidation, isolated, cross. The summer spot page sits beside it, marked complete.
 - A ladder card: 24,930, 25,830, 26,730, 27,630, 28,531, 29,431, 30,331, marked Example. The 901 gap is labelled between 27,630 and 28,531.
-- A pair card: buy 26,730, sell 27,630, gross 9 dollars on 0.01 coin, fee about US$0.54, left about US$8.46. Every figure marked Example.
+- A pair card: buy 26,730, sell 27,630, gross 9 dollars on 0.01 coin. Exact fee on the card: 0.2673 + 0.2763 = 0.5436, about 54 cents in total, left about 8 dollars 46. Every figure marked Example.
 - A stop card: 23 October 2023 close 33,086, 2,755 above 30,331, next close still outside.
 - A skip card: "Skipped on purpose. The spot page stands."
 
 ## Spoken script
 
-GridBot Builder. GridBot Blueprint. Lesson eleven. Advanced: liquidation scenarios.
+GridBot Builder. GridBot Blueprint. Lesson eleven. Optional close: the spot page, and what this course does not cover.
 
 Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results. The prices are public historical daily prices, marked Example. The range uses the high and the low of that window. When we say inside or outside, we use the daily close. No order is sent from this lesson. We do not operate an exchange and we are not affiliated with one.
 
-This lesson is optional and advanced. It is not needed to use a spot grid. Contracts, margin and liquidation are different from buying and holding the coin. They can involve borrowed money. They are likely to be financial products, and they are higher risk. This course does not teach them and does not recommend them. We don't cover these; they are financial products with higher risk. A drop in the coin's price does not, by itself, close a spot holding for you. You still hold the coin. If you are staying on the summer spot page, write "Skipped on purpose" and keep 24,930, 30,331, six gaps of about 900, and the stop on 23 October 2023. We will not walk through margin, isolated or cross, and we will not set up a contract.
+This lesson is the optional close. It is not needed to use a spot grid. It reads the spot page back, and it names what this course does not cover. Margin is money set aside for a trade that uses borrowed money. Liquidation is the exchange closing that trade because the margin cannot carry it. Isolated means a loss stays in one box. Cross means a loss in one box can pull in the next box. We don't cover these; they are financial products with higher risk. This course does not teach them and does not recommend them. A drop in the coin's price does not, by itself, close a spot holding for you. You still hold the coin. If you are staying on the summer spot page, write "Skipped on purpose" and keep 24,930, 30,331, six gaps of about 900, and the stop on 23 October 2023. We will not set up a contract.
 
-By the end you will read the summer spot page back in full. You will name the range edges as the high and the low of the window. You will walk the published ladder, the one worked pair, the fee, and the stop. You will leave size blank.
+By the end you will read the summer spot page back in full. You will name the range edges as the high and the low of the window. You will walk the published ladder, the one worked pair, the fee, and the stop. If you wrote a ceiling, the order size is that ceiling divided by the number of orders. This close does not pick the ceiling. Range means the top line and the bottom line.
 
 A daily close is the last price of the day. This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise. When this lesson says inside or outside, it means that close.
 
-The summer page is one Example, already measured. The window is 19 July 2023 to 16 October 2023. The bottom line, 24,930, is the low of that window, 24,930.30 on 11 September 2023. The top line, 30,331, is the high of that window, 30,330.64 on 23 July 2023. Those edges are the high and the low, not the highest and lowest closes. Every daily close in the window still finished inside those two lines. That is a count of a finished window. It is hindsight. It is not a forecast.
+The summer page is one Example, already measured. The window is 19 July 2023 to 16 October 2023. The bottom line, 24,930, is the low of that window, 24,930.30 on 11 September 2023. The top line, 30,331, is that high rounded to the nearest dollar. The high itself was 30,330.64 on 23 July 2023. Those edges are the high and the low, not the highest and lowest closes. Every daily close in the window still finished inside those two lines. That is a count of a finished window. It is hindsight. It is not a forecast.
 
 Here is the width, marked Example. Thirty thousand three hundred and thirty-one minus twenty-four thousand nine hundred and thirty is five thousand four hundred and one. Five thousand four hundred and one divided by six gaps is about nine hundred. Count the gaps, not the lines. Seven lines are not seven gaps.
 
@@ -43,7 +43,7 @@ The middle is 27,630. In the worked pair, 27,630 is the sell line, and 26,730 is
 
 Say one pair in dollars, on 0.01 coin. The buy price times 0.01 is 26,730 times 0.01, which is 267 dollars and 30 cents. The sell price times 0.01 is 27,630 times 0.01, which is 276 dollars and 30 cents. Two hundred and seventy-six dollars and 30 cents minus 267 dollars and 30 cents is 9 dollars. The same 9 comes from the gap times the coin size: 900 times 0.01. That 9 is the gross difference. It is not a result.
 
-The fee on this pair is 0.1 percent of each side, marked Example, not a fee copied from an app. 26,730 times 0.001 times 0.01 is 0.2673. 27,630 times 0.001 times 0.01 is 0.2763. Add them. 0.2673 plus 0.2763 is 0.5436, about US$0.54. On a whole coin at those two prices the same two fees are 54.36. Do not price both sides at the middle. 27,630 times 0.002 is 55.26, and that shortcut is the one this course does not use. Nine dollars minus about 54 cents is about 8 dollars 46. That net is still not money you made. It is the teaching sum only if both orders fill and the fee is that Example cost. The gap test is the comparison: 9 is wider than about 0.54, and 900 is wider than 54.36. A gap of 40 against about 54 on a whole coin would fail the same test. This page's gap passes it. Passing a paper test is not a promise.
+The fee on this pair is 0.1 percent of each side, marked Example, not a fee copied from an app. The fee on the buy is about 27 cents. The fee on the sell is about 28 cents. Together that is about 54 cents in total. The card shows the exact sum, 0.2673 plus 0.2763 equals 0.5436. Nine dollars minus about 54 cents is about 8 dollars 46. That net is still not money you made. It is the teaching sum only if both orders fill and the fee is that Example cost. The gap test is the comparison: 9 is wider than about 54 cents, and 900 is wider than about 54 dollars on a whole coin. A gap of 40 against about 54 on a whole coin would fail the same test. This page's gap passes it. Passing a paper test is not a promise.
 
 About 900 divided by 27,630 is about 0.033, which is about 3.3 percent. The example cost rate was about 0.2 percent. About 3.3 percent is wider than 0.2 percent. That is the same test in percent. It is still not money you made.
 
@@ -55,7 +55,7 @@ The stop is the sentence you write before you start. If a daily close finishes o
 
 Two earlier dates keep the method honest. On 18 August 2023 the close was 26,050. Twenty-seven thousand six hundred and thirty minus twenty-six thousand and fifty is one thousand five hundred and eighty. The close was below the middle, and still inside the range. On 7 October 2023 the close was 27,969. Twenty-seven thousand nine hundred and sixty-nine minus twenty-seven thousand six hundred and thirty is three hundred and thirty-nine. The close was 339 above the middle, and still inside. Inside means you do not fire the stop. Outside, confirmed by the next close, means the sentence you wrote now applies.
 
-Count the closes near the two ends, so a wrong quiz answer does not survive into the notebook. A close is near the top when it is at least about 29,431. A close is near the bottom when it is at most about 25,830. On the ninety daily closes from 19 July to 16 October 2023, that rule gives eight near the top and five near the bottom. It is not four and four, and it is not four and three. The next closes, about 25,832 and about 25,833, sit just outside the bottom count. That recount is a check of the page. It is not a grade of you.
+Count the closes near the two ends, so a wrong quiz answer does not survive into the notebook. A close is near the top when it is at least about 29,431. A close is near the bottom when it is at most about 25,830. On the ninety daily closes from 19 July to 16 October 2023, that rule gives eight near the top and five near the bottom. It is not four and four, and it is not four and three. Two prices inside the window sit just above 25,830: 10 September closed at about 25,832, and 12 September closed at about 25,833. Those are prices, not the next days. That recount is a check of the page. It is not a grade of you.
 
 Size stays off the page until the finish rule exists. If a later note ever writes a size, a program works it out as the money divided by the number of orders. For example only, 600 dollars across 6 orders is 100 dollars each. That is arithmetic, not a size for your account. This lesson does not write it on the summer page.
 

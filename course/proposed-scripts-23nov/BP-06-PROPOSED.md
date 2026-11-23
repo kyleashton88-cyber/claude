@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1749
-Estimated minutes: 10.6 at about 165 words a minute
+Word count: 1894
+Estimated minutes: 11.5 at about 165 words a minute
 
 Added sections:
 
@@ -32,7 +32,7 @@ Entry without an exit is a page that cannot finish. The exit is a path you can p
 
 By the end you will write the finish rule before the start. You will point each sentence at a date on the chart. You will leave size off the page until both sentences exist.
 
-A daily close is the last price of the day. This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise. A finish rule is the stop from the first lesson: the condition that ends the idea. A before sentence says the path you are looking at is still the one you measured. Size means how much money you would put in. Size is a number. It stays blank in this lesson.
+A daily close is the last price of the day. This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise. A finish rule is the stop from the first lesson: the condition that ends the idea. The entry is the before sentence. It says the path you are looking at is still the range you measured, so you are allowed to start. It is not, by itself, the day the bot starts. Position size is the ceiling you write, divided by the number of orders. For example only, a ceiling of 600 dollars across 6 orders is 100 dollars an order. That is arithmetic. It is not a size for your account, and it is not a result. You may leave the size line blank here. Nothing in this course tells you which ceiling to pick.
 
 The shared Example range is 24,930 at the bottom and 30,331 at the top. The middle is 27,630. Six gaps of about 900 sit between the bottom and the top. You already counted those. This lesson does not recount them. It asks where the page ends.
 
@@ -40,9 +40,9 @@ Finish sentence, said once. If a daily close finishes outside the range and the 
 
 Before sentence, said only after the finish sentence exists. The path you are looking at is still the summer range, between 24,930 and 30,331, the way it was on 7 October 2023 when the close was 27,969. Twenty-seven thousand nine hundred and sixty-nine is above 24,930 and below 30,331, so that close is inside. Twenty-seven thousand nine hundred and sixty-nine minus twenty-seven thousand six hundred and thirty is three hundred and thirty-nine. The close is a little above the middle, and it has not left the top. That is a before day. It is not a finish day.
 
-Read the two columns. Finish: leave 30,331, and the next close is still outside. Date: 23 October 2023. Close: 33,086. Before: still inside. Date: 7 October 2023. Close: 27,969. Size: blank on purpose. A blank size is allowed. A blank finish is not. If a classmate cannot find the date from the sentence alone, rewrite the sentence before you write anything else. A finish rule without a date is only a mood. This one has a date. A before sentence without a date is the same kind of miss. This one has 7 October 2023.
+Read the two columns. Finish: leave 30,331, and the next close is still outside. Date: 23 October 2023. Close: 33,086. Entry, which is the before sentence: still inside. 7 October 2023 is not the day you start. The window begins on 19 July 2023. 7 October is one day inside that window when you could have looked, and the close, 27,969, was still inside the range. Size: blank unless you have already written a ceiling. A blank size is allowed. A blank finish is not. If a classmate cannot find the date from the sentence alone, rewrite the sentence before you write anything else. A finish rule without a date is only a mood. This one has a date. A before sentence without a date is the same kind of miss. This one has 7 October 2023.
 
-Say the order out loud, because the order is the lesson. First the finish rule, and point at 23 October 2023. Then the before sentence, and point at 7 October 2023. Then look at the size line and leave it empty. Sizing is a later lesson. Here you only name the rule that ends the idea. You do not invent the rule after you have seen the close leave. The chart from October 2023 to March 2024 already shows the leave. You are learning to point at it, not to chase it.
+Say the order out loud, because the order is the lesson. First the finish rule, and point at 23 October 2023. Then the before sentence, and point at 7 October 2023. Then look at the size line. Leave it empty, or, if you wrote a ceiling, divide that ceiling by the number of orders. That division is the order size. It is not advice about how much to use. Here you name the rule that ends the idea. You do not invent the rule after you have seen the close leave. The chart from October 2023 to March 2024 already shows the leave. You are learning to point at it, not to chase it.
 
 Spot stays spot in this lesson. Spot means you buy the coin with money you already have. Nothing here asks you to borrow, and nothing here asks you to multiply a size. There is no size to multiply. The page is two sentences and two dates.
 
@@ -54,13 +54,13 @@ Size stays blank for a reason you can say. If you write a size before the finish
 
 Say the whole finish sentence without looking at the page, then check it. If a daily close finishes outside the range, and the next daily close is still outside, the summer idea is over. The range is 24,930 to 30,331. The first close is 23 October 2023, at 33,086. The next close is 24 October 2023, at 33,902. Both are outside. The sentence matches the dates. Now the before sentence. On 7 October 2023 the close was 27,969, and that close was still between 24,930 and 30,331. If either date is missing when you say it back, the page is not finished. Add the date. Do not add a size to make the page look complete. A complete page in this lesson is two sentences, two dates, and an empty size line.
 
-The entry, when you are allowed to write it later, only repeats the before sentence. It does not add a new idea. People want to write the entry first because the entry feels like the start. The start of the page is the exit. You already have the exit. The entry is the day the path was still the summer range. That is 7 October in this Example, not a feeling that the chart looks calm.
+The entry only repeats the before sentence. It does not add a new idea. People want to write the entry first because the entry feels like the start. The start of the page is the exit. You already have the exit. The entry is a day the path was still inside the summer range. In this Example that day is 7 October 2023. It is not the day the window opens, and it is not a feeling that the chart looks calm. The window opens on 19 July 2023.
 
 Check yourself. Which sentence do you write first? The answer is the finish rule. What date can you point at for the finish? The answer is 23 October 2023, close 33,086, which is 2,755 above 30,331, and the next close was still outside. What date can you point at for a day still inside? The answer is 7 October 2023, close 27,969. What belongs on the size line today? The answer is nothing. A blank size is allowed.
 
 Measure the leave in one more way, so the finish is a distance and not only a date. The top is 30,331. The 23 October close is 33,086. The distance is 2,755, which you already subtracted. The 24 October close is 33,902. The distance that day is 3,571. Both distances are above the line, so both closes are outside. A distance of zero would be a close sitting on the top line. This course treats the finish as outside, confirmed by the next close still outside. You do not need a third distance. Two outsides are the rule.
 
-The before day has a distance too, and it points the other way. 30,331 minus 27,969 is 2,362. The 7 October close is 2,362 under the top, and it is 339 over the middle. Under the top means still inside. Write that beside the before sentence if it helps you see it. Do not move that number onto the finish line. The finish line is the October pair of closes. The before line is the October day that was still inside, the 7th, not the 23rd.
+The before day has a distance too, and it points the other way. 30,331 minus 27,969 is 2,362. The 7 October close is 2,362 under the top, and it is 339 over the middle. Under the top means still inside. Write that beside the before sentence if it helps you see it. Do not move that number onto the finish line. The finish line is the two October closes. The entry line is the day that was still inside, the 7th, not the 23rd, and not a start date.
 
 On paper, or on a demo that uses pretend money, write the two sentences and the two dates. Write Example beside 33,086 and beside 27,969. Leave the size line empty. Do not send an order. Two sentences are not a live plan.
 

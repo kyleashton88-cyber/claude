@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1851
-Estimated minutes: 11.2 at about 165 words a minute
+Word count: 1871
+Estimated minutes: 11.3 at about 165 words a minute
 
 Added sections:
 
@@ -31,7 +31,7 @@ GridBot Builder. GridBot Blueprint. Lesson four. Market regimes.
 
 Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results. The prices are public historical daily prices, marked Example. The range uses the high and the low of that window. When we say inside or outside, we use the daily close. No order is sent from this lesson.
 
-A regime is the shape of the price path. It is not a mood, and it is not a forecast. You name the shape only after you can point at the dates. This lesson teaches three shapes. A range is a path that keeps coming back inside a top line and a bottom line. A trend is a path that leaves and keeps going. A break is a jump out of the lines you drew. The same path can be more than one of these if you change the dates. Every figure is marked Example. This is education only.
+A regime is the shape of the price path. It is not a mood, and it is not a forecast. You name the shape only after you can point at the dates. This lesson teaches three shapes. Range, in this course, means only the top line and the bottom line. A ranging market is a path that keeps coming back inside that range. The word range does not pick up a second meaning here. A trend is a path that leaves and keeps going. A break is a jump out of the lines you drew. The same path can be more than one of these if you change the dates. Every figure is marked Example. This is education only.
 
 By the end you will be able to tell a sideways market, a trend, and a break apart. You will also know that one market can be more than one of them, depending on the window you chose. You will not be asked to predict the next day.
 

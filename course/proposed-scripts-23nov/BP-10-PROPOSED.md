@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1773
-Estimated minutes: 10.7 at about 165 words a minute
+Word count: 1786
+Estimated minutes: 10.8 at about 165 words a minute
 
 Added sections:
 
@@ -44,11 +44,11 @@ Between the pages you change one thing. Here, the range. The pair stays bitcoin,
 
 A bucket here means the page stays in its own box. Page two does not borrow page one's stop date or page one's step. Page one keeps 23 October 2023. Page two needs its own finish rule, written for 56,555 and 72,715, not borrowed from 30,331. You do not pour one page into the other. Two buckets stay two buckets.
 
-Size, if you ever write it, comes from caps you have already written. A cap is a ceiling you chose before you started: how much of your money this page may use. This lesson does not set that number. It only says the number is not taken from a target, and it is not taken from a multiple. The size line can stay blank, the way it did when you wrote the finish rule.
+Position size is the same division as lesson 6. You write a ceiling, in dollars, before you start. The order size is that ceiling divided by the number of orders. This lesson does not pick the ceiling, and a second page does not raise it. Scaling here is a new range, not more money. The size line can stay blank. If you write a ceiling, the arithmetic is that division. It is not a result, and it is not a size this course recommends. It is not taken from a multiple.
 
 Write page two's finish sentence now, so the second page is not only two numbers. If a daily close finishes outside 56,555 to 72,715, and the next daily close is still outside, this second example is over. That sentence has a top and a bottom. It does not borrow 30,331, and it does not borrow 23 October 2023. Those belong to page one. Page two's dates, for the measurement, are 27 March 2024 to 24 June 2024. The finish sentence is the rule you would use if a later close left those lines. This lesson does not claim that a particular later day did that. It only gives the sentence a place to be written.
 
-Do the division once more, slowly, so 2,693 is not a mystery. Page two's top minus page two's bottom is 72,715 minus 56,555. Seven minus five is two. One minus five cannot, so you borrow. The full subtraction is 16,160. Sixteen thousand one hundred and sixty divided by six gaps is two thousand six hundred and ninety-three, with a little left over, so we say about 2,693. That is the equal-dollar step if you choose six gaps on this window. The summer step was about 900. Two thousand six hundred and ninety-three is not nine hundred. Copying 900 onto page two would make a different count of gaps, and you would no longer be able to say you changed only the range. If the step changes because the width changed, say that the step was remeasured. Do not pretend it was copied.
+Do the division once more, slowly, so 2,693 is not a mystery. Page two's top minus page two's bottom is 16,160. The card shows 72,715 minus 56,555. Sixteen thousand one hundred and sixty divided by six gaps is two thousand six hundred and ninety-three, with a little left over, so we say about 2,693. That is the equal-dollar step if you choose six gaps on this window. The summer step was about 900. Two thousand six hundred and ninety-three is not nine hundred. Copying 900 onto page two would make a different count of gaps, and you would no longer be able to say you changed only the range. If the step changes because the width changed, say that the step was remeasured. Do not pretend it was copied.
 
 The pair line does not move. Page one says bitcoin, public daily closes, spot. Page two says the same three. Spot means coins you hold. A contract, and a multiple, stay off both pages. If you cannot say the one change in one breath, "the range", page two goes back in the drawer.
 
@@ -66,4 +66,4 @@ Six times about 2,693 is the check that the new step fits the new width. Six tim
 
 Recap. Page two uses the same checks as page one. The later window is 56,555 to 72,715, not a copy of 900. Spot stays spot. Size comes from your caps, never from a target, and never from a multiple.
 
-Next lesson: Advanced, liquidation scenarios. That lesson is optional. The spot page you just wrote does not need it. You can leave the next lesson closed and keep this page.
+Next lesson: Optional close: the spot page, and what this course does not cover. That lesson is optional. The spot page you just wrote does not need it. You can leave the next lesson closed and keep this page.

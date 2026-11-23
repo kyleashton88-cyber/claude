@@ -1,5 +1,35 @@
 # Revisions, 23 November
 
+## Beginner pass
+
+Review 74, mean 6.3. Spoken drafts only. Live BP-01 and BP-02 were not edited. Nothing was rendered.
+
+| Lesson | Spoken words | Minutes at 165 wpm |
+| --- | ---: | ---: |
+| BP-03 | 2237 | 13.6 |
+| BP-04 | 1871 | 11.3 |
+| BP-05 | 1773 | 10.7 |
+| BP-06 | 1894 | 11.5 |
+| BP-07 | 1764 | 10.7 |
+| BP-08 | 1877 | 11.4 |
+| BP-09 | 1826 | 11.1 |
+| BP-10 | 1786 | 10.8 |
+| BP-11 | 2267 | 13.7 |
+
+1. BP-03 keeps lesson 1's current-price rule in view and names the change. On 18 August, 26,730 is above the close, so lesson 1 would call it a sell. This worked page uses the middle split, and that is said as a change. "Opening book" is gone. The goal is the order-by-order walk, not a first definition of a grid bot.
+2. BP-06 calls the before sentence the entry. 7 October 2023 is one day inside the window when the range still held. The window begins on 19 July 2023. It is not the start date.
+3. BP-08 uses "in force" for a rule that has not fired, and "fired" for a stop that has been met. It teaches the weekly check lesson 1 promised: the same three questions, once a week, on the latest daily close.
+4. BP-09 says levels are seven rungs and gaps are six. 25,832 and 25,833 are the 10 September and 12 September closes, prices inside the window, not the next days.
+5. BP-11's spoken title, file title, and opening card are "Optional close: the spot page, and what this course does not cover". Margin, liquidation, isolated, and cross each get one plain meaning, then the exclusion. The longer mechanism stays in `BP-11-ALT-long-warning.md`.
+6. BP-03, BP-05, and BP-11 say the fee aloud as about 27 cents, about 28 cents, and about 54 cents in total. The exact sum 0.2673 + 0.2763 = 0.5436 is on the card.
+7. BP-06 and BP-10 teach position size as a ceiling you write, divided by the number of orders. The 600-across-6 figure is arithmetic only. Neither lesson picks a ceiling or makes a return claim. "Sizing is a later lesson" is removed.
+8. Range means the top line and the bottom line in every lesson. BP-04 calls the shape a ranging market, not a second meaning of range. BP-10's next-lesson line uses the same title and punctuation as BP-11.
+9. BP-03's heading notes that Stewart may retitle it "How a grid bot works, order by order". The spoken title is still "What is a grid bot", so it still matches the live BP-02 closer. The heading and the spoken title line are the two places to change together.
+
+The table in this section is the beginner pass. The table under Numbers and legal pass is the earlier count.
+
+## Numbers and legal pass
+
 Proposed scripts only. BP-01 and BP-02 were not edited. Nothing here was rendered.
 
 Reviews applied: numbers review 71 (mean 8.4, FIX items 1–9) and legal review 70. The quiz recount used `course/data/public-prices/btc-usd-windows.json`, window `range_2023`, 90 daily closes from 19 July 2023 to 16 October 2023.
