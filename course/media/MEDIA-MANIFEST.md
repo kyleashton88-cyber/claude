@@ -24,3 +24,18 @@ Omit part files that do not exist. The joined file must match the SHA-256 in thi
 | BP-02 review 720p | `49e5fb519775850dade2eb0e1b8929a3dc728820` | `review-720p.mp4` | | | `469091357fbc5f61ac5d3a67bb5b23b12a13746627e98286a0d633470ba12644` | https://drive.google.com/file/d/1eOyjIlG-vklph_hUEH1r-H3CxeRHeoS_/view |
 
 The file hashes above are the renders Stewart named as `a93b5d5` (BP-01 v14) and `bf8c1b2` (BP-02). Those two local commits were rewritten before their first push so the videos were not uploaded. The commit column is the rewritten commit that carries the same source, captions, cards, and gate report.
+
+## BP-01 after W1–W8, 23 Nov
+
+Source commit `dea5f0a` (wording `20bf182`, then the card fix). Duration 845.6s. 2,305 spoken words. Gate PASS: −14.3 LUFS, −3.6 dBTP. No review file was uploaded to Drive.
+
+| Lesson | Commit | File | Duration | Bytes | SHA-256 | Where it lives |
+|---|---|---|---|---|---|---|
+| BP-01 W1–W8 | `dea5f0a` | `master.mp4` | 845.6s | 288910509 | `54d9d40450ae64e83cab756ad4383e31bb4a107c8699863a638026158521b1ee` | Agent store `/cursor/stores/self/artifacts/bp-23nov/bp01-w1-dea5f0a/` |
+| BP-01 W1–W8 | `dea5f0a` | `master.mp4.part01` | | 104857600 | `b546dfee2eb93efe0eb8c5fb091a4fc5af4981d8ccb8fd2fe78960db85d5c9b9` | Same folder |
+| BP-01 W1–W8 | `dea5f0a` | `master.mp4.part02` | | 104857600 | `125203f7f1ae7ee6006e94f8e1b92bed6ffbc16ab0af1ef016dd648cbe694917` | Same folder |
+| BP-01 W1–W8 | `dea5f0a` | `master.mp4.part03` | | 79195309 | `7a88f29b0231014a08822c0cf8306ed4383e6a7437c5ae7b74798ff1dcd5e147` | Same folder |
+
+Join: `cat master.mp4.part01 master.mp4.part02 master.mp4.part03 > master.mp4`
+
+The same folder holds `captions.vtt`, `spoken-script.txt`, `gate-report.md`, and `cards/` for the changed pictures. BP-02 is not re-rendered.
