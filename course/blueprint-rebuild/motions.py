@@ -30,7 +30,7 @@ SPECS: dict[str, dict] = {
         "rows": [
             "EXAMPLE. Buy 0.01 bitcoin at 26,730",
             "EXAMPLE. Sell 27,630",
-            "Illustration, not the real order of fills",
+            "Example order",
             "Leaves the range: pairs stop",
         ],
     },
@@ -410,19 +410,46 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
     if spec is None:
         raise SystemExit(f"unknown visual {shot.get('visual')}")
     draw = ui.ImageDraw.Draw(base)
+    if spec.get("title") == "You and the bot" and shot.get("lesson_id") == "bp-01-introduction":
+        # The three choose rows were spoken in the previous shot. They are on
+        # this card from the first frame, then the stop rows join the voice.
+        labels = [
+            (None, "YOU choose the range"),
+            (None, "YOU choose the gaps and the money"),
+            (None, "THE BOT places each order"),
+            ("write the stop", "YOU write the stop"),
+            ("you act", "YOU act on the stop"),
+            ("one rung", "THE BOT refills one rung away"),
+        ]
+        y = 188
+        for phrase, label in labels:
+            at = ui._phrase_at(shot, phrase) if phrase else 0
+            if phrase and (at is None or local < at):
+                continue
+            draw.rounded_rectangle([ui.MX, y, ui.RIGHT, y + 64], 12, outline=ui.CYAN, width=2)
+            draw.text((ui.MX + 28, y + 14), label, font=ui.font(32), fill=ui.WHITE)
+            y += 72
+        return
     # The six-row stop list finishes in the top of the card. The 23 October
     # line is spoken later, so the picture changes again with that sentence.
     if (shot.get("chapter") or "") == "The stop" and shot.get("lesson_id") == "bp-01-introduction":
         october_at = ui._word_at(shot, "october")
+        box = (ui.MX, 188, ui.RIGHT, ui.CARD_BOTTOM)
+        draw.rounded_rectangle(box, 18, fill=ui.GLASS, outline=ui.CYAN, width=3)
+        draw.text((box[0] + 36, box[1] + 16), "WRITE YOUR STOP DOWN", font=ui.font(36), fill=ui.CYAN)
+        # The path the voice describes: inside the lines, then a close that leaves.
+        top_y, bot_y = box[1] + 120, box[1] + 280
+        draw.line([(box[0] + 80, top_y), (box[0] + 980, top_y)], fill=ui.CYAN, width=4)
+        draw.line([(box[0] + 80, bot_y), (box[0] + 980, bot_y)], fill=ui.CYAN, width=4)
+        draw.text((box[0] + 1000, top_y - 16), "30,331", font=ui.font(28), fill=ui.CYAN)
+        draw.text((box[0] + 1000, bot_y - 16), "24,930", font=ui.font(28), fill=ui.CYAN)
+        path = [(box[0] + 120, bot_y - 40), (box[0] + 320, top_y + 50), (box[0] + 520, bot_y - 20), (box[0] + 760, top_y - 36)]
+        draw.line(path, fill=ui.WHITE, width=4)
         if october_at is not None and local >= october_at:
-            box = (ui.MX, 200, ui.RIGHT, 700)
-            draw.rounded_rectangle(box, 22, fill=ui.GLASS, outline=ui.CYAN, width=3)
-            ui._example(draw, box[0] + 36, box[1] + 28)
-            draw.text((box[0] + 36, box[1] + 100), "23 October 2023", font=ui.font(48), fill=ui.WHITE)
-            draw.text((box[0] + 36, box[1] + 190), "EXAMPLE. Close 33,086. Outside the top line.", font=ui.font(36), fill=ui.WHITE)
-            draw.text((box[0] + 36, box[1] + 280), "24 October 2023", font=ui.font(48), fill=ui.WHITE)
-            draw.text((box[0] + 36, box[1] + 370), "EXAMPLE. Close 33,902. Still outside.", font=ui.font(36), fill=ui.WHITE)
-            return
+            draw.text((box[0] + 36, box[1] + 320), "23 Oct close outside. 24 Oct still outside.", font=ui.font(32), fill=ui.WHITE)
+        else:
+            draw.text((box[0] + 36, box[1] + 320), "Two daily closes. The second one still outside.", font=ui.font(28), fill=ui.WHITE)
+        return
     # The pair rows finish in the top of the card. The bottom-leave line is later.
     if (shot.get("chapter") or "") == "One pair" and shot.get("lesson_id") == "bp-01-introduction":
         bottom_at = ui._word_at(shot, "bottom")
@@ -502,21 +529,7 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
     accent = int(local // 8) % max(1, shown) if paced or chapter == "The stop" else -1
     made_at = ui._phrase_at(shot, "made up") if chapter == "Downside" else None
     if chapter == "Downside" and shot.get("lesson_id") == "bp-01-introduction":
-        first_price = ui._phrase_at(shot, "276")
-        if made_at is None or local < made_at or first_price is None or local < first_price:
-            box = (ui.MX, 200, ui.RIGHT, 700)
-            draw.rounded_rectangle(box, 18, fill=ui.GLASS, outline=ui.CYAN, width=3)
-            draw.text((box[0] + 36, box[1] + 24), "Three buys on the way down", font=ui.font(36), fill=ui.WHITE)
-            ys = (360, 450, 540)
-            for i, yy in enumerate(ys):
-                draw.line([(box[0] + 80, yy), (box[2] - 80, yy)], fill=ui.CYAN, width=3)
-                draw.text((box[0] + 90, yy - 32), f"Buy {i + 1}", font=ui.font(24), fill=ui.WHITE)
-            t = min(1.0, local / 6.0)
-            x0, x1 = box[0] + 140, box[2] - 140
-            pts = [(x0 + (x1 - x0) * i / 7, 280 + (540 - 280) * (i / 7) * max(t, 0.05)) for i in range(8)]
-            draw.line(pts, fill=ui.WHITE, width=4)
-            return
-        # The table arrives with the spoken prices, not as a header on its own.
+        # One table. Rows appear with the voice. No second diagram.
         table = [
             ("Buy 1", "0.01 at 27,630 = 276.30", ui._phrase_at(shot, "276")),
             ("Buy 2", "0.01 at 26,730 = 267.30", ui._phrase_at(shot, "26,730")),
@@ -526,21 +539,26 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
             ("Down", "81.90", ui._phrase_at(shot, "81")),
         ]
         ui._example(draw, ui.RIGHT - 280, 168)
-        y = 230
+        y = 200
         for name, value, at in table:
             if at is None or local < at:
                 break
-            draw.rounded_rectangle([ui.MX, y, ui.RIGHT, y + 64], 12, outline=ui.CYAN, width=2)
-            draw.text((ui.MX + 28, y + 14), name, font=ui.font(28), fill=ui.CYAN)
-            draw.text((ui.MX + 280, y + 14), "EXAMPLE  " + value, font=ui.font(28), fill=ui.WHITE)
-            y += 72
+            draw.rounded_rectangle([ui.MX, y, ui.RIGHT, y + 56], 12, outline=ui.CYAN, width=2)
+            draw.text((ui.MX + 28, y + 12), name, font=ui.font(28), fill=ui.CYAN)
+            draw.text((ui.MX + 280, y + 12), "EXAMPLE  " + value, font=ui.font(28), fill=ui.WHITE)
+            y += 64
         if local >= (ui._phrase_at(shot, "0.03") or 10**9):
-            draw.text((ui.MX + 28, min(y, 680)), "0.03 BTC × $24,000 = $720", font=ui.font(32), fill=ui.CYAN)
+            draw.text((ui.MX + 28, min(y, 600)), "0.03 BTC × $24,000 = $720", font=ui.font(32), fill=ui.CYAN)
         return
     visible = [text for text in rows[:shown] if not (chapter == "Downside" and text.startswith("EXAMPLE, made up") and (made_at is None or local < made_at))]
     if any(ch.isdigit() for text in visible for ch in text):
         ui._example(draw, ui.RIGHT - 280, 168)
+    start_row = 0
+    if chapter == "One pair" and shot.get("lesson_id") == "bp-01-introduction":
+        start_row = max(0, shown - 4)
     for index, text in enumerate(rows[:shown]):
+        if index < start_row:
+            continue
         if chapter == "Downside" and text.startswith("EXAMPLE, made up") and (made_at is None or local < made_at):
             y += step
             continue
@@ -566,15 +584,10 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
         fee_at = ui._phrase_at(shot, "two fees") or ui._phrase_at(shot, "the card shows")
         if fee_at is not None and local >= fee_at:
             draw.text(
-                (ui.MX + 24, 640),
-                "0.1% of $267.30 ≈ $0.27 + 0.1% of $276.30 ≈ $0.28 = $0.54",
-                font=ui.font(26),
+                (ui.MX + 24, 600),
+                "0.1% of $267.30 = $0.2673; 0.1% of $276.30 = $0.2763; total $0.5436 ≈ $0.54",
+                font=ui.font(24),
                 fill=ui.CYAN,
             )
-    if chapter == "The stop" and shot.get("lesson_id") == "bp-01-introduction":
-        october_at = ui._word_at(shot, "october")
-        if october_at is None or local < october_at:
-            slot = int(local // 8) % 2
-            bar_y = 560 if slot == 0 else 640
-            draw.rounded_rectangle([ui.MX, bar_y, ui.RIGHT, bar_y + 56], 10, fill=ui.CYAN)
-            draw.text((ui.MX + 24, bar_y + 12), "Two daily closes. The second one still outside.", font=ui.font(28), fill=ui.NAVY)
+        # Four lines at a time. Older rows scroll off as the voice moves on.
+        return
