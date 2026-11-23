@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1701
-Estimated minutes: 10.3 at about 165 words a minute
+Word count: 1740
+Estimated minutes: 10.5 at about 165 words a minute
 
 Added sections:
 
@@ -26,13 +26,13 @@ New on-screen visuals:
 
 GridBot Builder. GridBot Blueprint. Lesson eight. Managing and monitoring.
 
+Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results. The prices are public historical daily prices, marked Example. The range uses the high and the low of that window. When we say inside or outside, we use the daily close. No order is sent from this lesson.
+
 Monitoring is three questions you can finish, not something you watch all day. Inside means the close is still between the top and the bottom. Which side means whether the close is above or below the middle. The third question is whether the finish sentence you already wrote still holds. We will ask the questions on 7 October 2023, then on 23 October 2023, so you can see the answers change. This is education only. Every figure is marked Example.
 
 By the end you will answer three questions: inside, which side, and does the rule still hold. You will use 7 October and 23 October as the two checks. You will stop when the three answers are written.
 
-Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results. The prices are public historical daily closes, marked Example. No order is sent from this lesson.
-
-A daily close is the last price of the day. The exchange's day ends at 11am Sydney time in daylight saving, and at 10am otherwise. The range in this Example is 24,930 to 30,331. The middle is 27,630. A stop is the rule you wrote: if a daily close finishes outside the range and the next daily close is still outside, the example is over.
+A daily close is the last price of the day. This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise. The range in this Example is 24,930 to 30,331. The middle is 27,630. A stop is the rule you wrote: if a daily close finishes outside the range and the next daily close is still outside, the example is over.
 
 7 October 2023. The public close was 27,969. Inside the range? Yes. That close sits between 24,930 and 30,331. Which side of 27,630? Above it, by a little. Twenty-seven thousand nine hundred and sixty-nine minus twenty-seven thousand six hundred and thirty is three hundred and thirty-nine. Three hundred and thirty-nine is the distance above the middle. It is not a result. Does the finish sentence still hold as a trigger? The path has not left 30,331 yet, so the stop has not triggered. Three answers. Then you stop. You do not keep the chart open to see what the next hour does. This check uses the daily close.
 
@@ -46,7 +46,7 @@ We do not operate an alert service. An alert would be a message that arrives whe
 
 Say both dates once more, with the arithmetic in the open, so the card and the voice match. On 7 October the close is 27,969. It is inside. It is 339 above 27,630. The stop has not triggered. On 23 October the close is 33,086. It is outside. It is 2,755 above 30,331. The stop sentence holds. Then you stop.
 
-Say what the fourth row is not, because the words are easy to turn into a score. Realised is not a target. If a buy and the later sell have both traded, you can note that the pair finished. You do not write the note in order to make another pair happen. Unrealised is not a loss you must act on in the same minute. It is coin still held, priced at the latest daily close, and the next close can change it. Fees are not a surprise you discover at the end. They are the charges you already compared with the gap, about 55 dollars on a whole coin near 27,630 in the example cost, or about 55 cents on 0.01 coin. Whether you followed the rules is a yes or a no about the page you wrote. It is not a grade of you.
+Say what the fourth row is not, because the words are easy to turn into a score. Realised, on this row, only means a pair that has finished, both the buy and the later sell. It is not money you made. Unrealised only means coin you still hold, priced at the latest close so you can see it change. It is not a tax figure. The tax office may treat a fill or a swap as a sale. This is general information, not tax advice. You can leave the fourth row blank in this lesson. Fees are not a surprise you discover at the end. They are the charges you already compared with the gap: about US$0.54 on 0.01 coin, which is 54.36 on a whole coin at the two taught prices. Whether you followed the rules is a yes or a no about the page you wrote. It is not a grade of you.
 
 A check you cannot finish is not monitoring. It is just watching. These two dates are the whole practice. Write the three answers. Use the fourth row only if you want the review record. Then close the card and leave the chart. The same three questions on a later day would be the same kind of check. You do not need a row for every day to understand the change from 7 October to 23 October.
 

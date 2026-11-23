@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1719
-Estimated minutes: 10.4 at about 165 words a minute
+Word count: 1749
+Estimated minutes: 10.6 at about 165 words a minute
 
 Added sections:
 
@@ -26,13 +26,13 @@ New on-screen visuals:
 
 GridBot Builder. GridBot Blueprint. Lesson six. Entry and exit rules.
 
+Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results. The prices are public historical daily prices, marked Example. The range uses the high and the low of that window. When we say inside or outside, we use the daily close. No order is sent from this lesson.
+
 Entry without an exit is a page that cannot finish. The exit is a path you can point at. You write that path before you write the start. This lesson uses the shared Example. It does not choose a size, and it does not send an order. Every figure is marked Example. This is education only.
 
 By the end you will write the finish rule before the start. You will point each sentence at a date on the chart. You will leave size off the page until both sentences exist.
 
-Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results. The prices are public historical daily closes, marked Example. No order is sent from this lesson.
-
-A daily close is the last price of the day. The exchange's day ends at 11am Sydney time in daylight saving, and at 10am otherwise. A finish rule is the stop from the first lesson: the condition that ends the idea. A before sentence says the path you are looking at is still the one you measured. Size means how much money you would put in. Size is a number. It stays blank in this lesson.
+A daily close is the last price of the day. This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise. A finish rule is the stop from the first lesson: the condition that ends the idea. A before sentence says the path you are looking at is still the one you measured. Size means how much money you would put in. Size is a number. It stays blank in this lesson.
 
 The shared Example range is 24,930 at the bottom and 30,331 at the top. The middle is 27,630. Six gaps of about 900 sit between the bottom and the top. You already counted those. This lesson does not recount them. It asks where the page ends.
 

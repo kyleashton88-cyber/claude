@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1704
-Estimated minutes: 10.3 at about 165 words a minute
+Word count: 1798
+Estimated minutes: 10.9 at about 165 words a minute
 
 Added sections:
 
@@ -26,13 +26,13 @@ New on-screen visuals:
 
 GridBot Builder. GridBot Blueprint. Lesson nine. Common mistakes.
 
+Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results. The prices are public historical daily prices, marked Example. The range uses the high and the low of that window. When we say inside or outside, we use the daily close. No order is sent from this lesson.
+
 The mistakes in this lesson are pages, not personalities. A blank stop. A range tighter than the real top line. A line count used as a gap count. Each one can be pointed at on the summer chart. You fix one, you read the page again, and then you fix the next. Every figure is marked Example. This is education only.
 
 By the end you will find a missing stop, a range tighter than the real top line, and a line counted as a gap. You will fix one, reread, then fix the next. You will keep result language off the page.
 
-Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results. The prices are public historical daily closes, marked Example. No order is sent from this lesson.
-
-A stop is the written rule for what you will do if a daily close finishes outside the range and the next daily close is still outside. A daily close is the last price of the day. The exchange's day ends at 11am Sydney time in daylight saving, and at 10am otherwise. The range in this Example is 24,930 to 30,331. A gap is the space between two lines. There are seven lines and six gaps of about 900.
+A stop is the written rule for what you will do if a daily close finishes outside the range and the next daily close is still outside. A daily close is the last price of the day. This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise. The range in this Example is 24,930 to 30,331. A gap is the space between two lines. There are seven lines and six gaps of about 900.
 
 A blank stop means the finish column was skipped. Without a written rule for a close outside the range, every later copy of the summer range has no end. The fix is to write the sentence, not to add another chart tool. The sentence you can point at is the one from lesson six. If a daily close finishes outside the range and the next daily close is still outside, the example is over. The date is 23 October 2023. The Example close was 33,086. Thirty-three thousand and eighty-six minus thirty thousand three hundred and thirty-one is two thousand seven hundred and fifty-five. The close was above the top, and the next close was still outside. Write that. Do not write a result word next to it.
 
@@ -40,7 +40,7 @@ A tight range here is a round box. It looks tidy. Suppose the top on the page is
 
 Seven prices are on the ladder. The gaps between them are six. Calling it a seven-grid because you counted seven lines is the same counting mistake from lesson five. The fix is the recount you already did: six. Seven marks. Six gaps. If a form uses the word grids for gaps, you still enter six, because your page has six gaps.
 
-Ask one question of the whole window, not of every day. Does the page match the path? The path stayed between 24,930 and 30,331 until the close left on 23 October 2023. If the page says something else, rewrite the page. A page that says four and four near the two ends is already wrong. The Example count is four near the top and three near the bottom. That is a recount, not a grade.
+Ask one question of the whole window, not of every day. Does the page match the path? The path stayed between 24,930 and 30,331 until the close left on 23 October 2023. If the page says something else, rewrite the page. A page that says four and four, or four and three, near the two ends is already wrong. The Example count is eight near the top and five near the bottom. A close is near the top when it is at least about 29,431. A close is near the bottom when it is at most about 25,830. On the ninety daily closes from 19 July to 16 October 2023, that rule gives eight and five. The next closes, 25,832 and 25,833, sit just outside the bottom count. That is a recount from the course data, not a grade.
 
 Worked audit, two passes. Pass one: write the missing stop rule for 23 October 2023, confirmed when the next close was still outside. Pass two: move a round top of 30,000 up to the real top line, 30,331, because the path had already gone past the round number. Then recount. Do not grade the page. List the rewrites. A result word does not belong on either pass. The page is an Example, not a score.
 

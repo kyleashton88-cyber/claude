@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1706
-Estimated minutes: 10.3 at about 165 words a minute
+Word count: 1773
+Estimated minutes: 10.7 at about 165 words a minute
 
 Added sections:
 
@@ -26,21 +26,21 @@ New on-screen visuals:
 
 GridBot Builder. GridBot Blueprint. Lesson ten. Scaling up on spot.
 
+Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results. The prices are public historical daily prices, marked Example. The range uses the high and the low of that window. When we say inside or outside, we use the daily close. No order is sent from this lesson.
+
 Scaling on this page means a second written page, not a bigger feeling. Page one is the summer of 2023. Page two is a later window, measured on its own. The checks stay the same. The one change is the range. Every figure is marked Example. This is education only. No order is sent.
 
 By the end you will open a second page only after the first page has a stop rule. You will change the range and nothing else. You will keep each page in its own bucket, meaning its own box with its own range and its own stop.
 
-Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results. The prices are public historical daily closes, marked Example. No order is sent from this lesson.
-
-A daily close is the last price of the day. The exchange's day ends at 11am Sydney time in daylight saving, and at 10am otherwise. A range is the top line and the bottom line. A stop is the rule for a daily close outside that range, confirmed by the next daily close still outside. Spot means coins you hold. You buy them with money you already have. A multiple, such as five times, means borrowed size. This course crosses that out. Scaling by adding a multiple is a different kind of risk, and it does not appear on page two because you are ready for a second page.
+A daily close is the last price of the day. This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise. A range is the top line and the bottom line. A stop is the rule for a daily close outside that range, confirmed by the next daily close still outside. Spot means coins you hold. You buy them with money you already have. A multiple, such as five times, means borrowed size. That can be a financial product, and it is higher risk. This course does not teach it and does not recommend it. Scaling here is a second written spot page, not a multiple.
 
 Page one is the summer window, 19 July 2023 to 16 October 2023. The bottom is 24,930. The top is 30,331. Thirty thousand three hundred and thirty-one minus twenty-four thousand nine hundred and thirty is five thousand four hundred and one. Six gaps of about 900 fit that width. The stop is already written. It was met on 23 October 2023, when the close was 33,086 and the next close was still outside. Page two does not open until that stop exists. A page that cannot finish is not a base for a second page.
 
 Page two is 27 March 2024 to 24 June 2024. On the card its lines are 56,555 and 72,715. Seventy-two thousand seven hundred and fifteen minus fifty-six thousand five hundred and fifty-five is sixteen thousand one hundred and sixty. That width is wider than the summer width of 5,401. You measure it. You do not copy 900 dollars across. A step that was about 900 on a span of about 5,401 is not the step for a span of 16,160. If you want six gaps again, you divide the new width by six. Sixteen thousand one hundred and sixty divided by six is about 2,693. That figure is an Example of a recount. It is not an order, and it is not a reason to use six gaps. You might choose a different count. The point is that you measure this window on its own.
 
-Look at the window before you call it a range. The later window is not a range just because you want a second page. On this Example the card runs from 56,555 to 72,715, and the closes in those dates stayed inside those lines. That is why the page can carry the word range, with the dates written next to it. If a close had finished outside, you would write "not sorted" and you would not copy the summer page onto it.
+Look at the window before you call it a range. The later window is not a range just because you want a second page. On this Example, looking back after 24 June 2024, the closes in those dates stayed inside 56,555 to 72,715. Those two edges are the high and the low of the window, not the highest and lowest closes. You would not have known that on the first day of the window. This is hindsight, marked Example, and it is not a forecast. That is why the page can carry the word range, with the dates written next to it. If a close had finished outside, you would write "not sorted" and you would not copy the summer page onto it.
 
-Between the pages you change one thing. Here, the range. The pair stays bitcoin, public daily closes. The product stays spot. A multiple does not appear because you are interested in a second page. If you cannot name the one change, page two is not ready. If both the range and the product changed, you changed more than one thing. Say page one's range, say page two's range, and say the one change out loud before you stop.
+Between the pages you change one thing. Here, the range. The pair stays bitcoin, public daily closes. The product stays spot. A multiple does not appear on page two. If you cannot name the one change, page two is not ready. If both the range and the product changed, you changed more than one thing. Say page one's range, say page two's range, and say the one change out loud before you stop.
 
 A bucket here means the page stays in its own box. Page two does not borrow page one's stop date or page one's step. Page one keeps 23 October 2023. Page two needs its own finish rule, written for 56,555 and 72,715, not borrowed from 30,331. You do not pour one page into the other. Two buckets stay two buckets.
 
