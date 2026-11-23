@@ -17,7 +17,7 @@ Blueprint lessons keep the 6-minute minimum. The 10-minute upper cap is removed.
 
 | Check | Result | Detail |
 |---|---|---|
-| length | PASS | 876.4s is inside Blueprint lesson (600s–900s) |
+| length | PASS | 879.6s is inside Blueprint lesson (600s–900s) |
 | loudness | PASS | integrated -14.3 LUFS, target -14 ± 1 |
 | true_peak | PASS | true peak -3.6 dBTP, limit -1 dBTP |
 | frozen | PASS | longest static run 0.5s, limit 8s |
