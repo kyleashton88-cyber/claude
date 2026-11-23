@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1773
-Estimated minutes: 10.7 at about 165 words a minute
+Word count: 1658
+Estimated minutes: 10.0 at about 165 words a minute
 
 Added sections:
 
@@ -19,7 +19,7 @@ Added sections:
 New on-screen visuals:
 
 - A ladder card: seven lines, six gaps, about 900, top 30,331, bottom 24,930, every figure marked Example.
-- A cost card: about 27 cents on the buy, about 28 cents on the sell, about 54 cents in total. Exact sum on the card: 0.2673 + 0.2763 = 0.5436. The mid-price shortcut of about 55 is crossed out.
+- A cost card: about 54 cents on 0.01 coin, and about 54 dollars on a whole coin. Exact sum on the card: 0.2673 + 0.2763 = 0.5436, which is 54.36 on a whole coin. The mid-price shortcut of about 55 is crossed out.
 - A miss card: a round top at 30,000 with the real top 30,331 sitting 331 above it.
 - An equal-dollar card: 100, 125, 150, 175, 200.
 - An equal-percent card: 100, 118.9, 141.4, 168.2, 200.
@@ -39,7 +39,7 @@ A daily close is the last price of the day. This lesson uses the end of each UTC
 
 Start with the shared Example. From 19 July 2023 to 16 October 2023 the bottom line is 24,930 and the top line is 30,331. Thirty thousand three hundred and thirty-one minus twenty-four thousand nine hundred and thirty is five thousand four hundred and one. There are seven prices on the ladder. The spaces between them are six. Five thousand four hundred and one divided by six is about nine hundred. So the step is about 900. Counting the seven lines and calling them seven gaps is the miss. Seven lines make six gaps.
 
-Now the example cost on the locked pair, not a mid-price shortcut. A fee here is a charge when an order trades. This is not a fee copied from an app. It is the teaching cost already used on this pair, marked Example. The buy is 0.01 coin at 26,730. The sell is 0.01 coin at 27,630. The fee on the buy is about 27 cents. The fee on the sell is about 28 cents. Together that is about 54 cents in total. The card shows the exact sum, 0.2673 plus 0.2763 equals 0.5436. On a whole coin the same two fees are about 54 dollars, not a mid-price shortcut of about 55. The gap of about 900 is wider than about 54. The gross of 9 dollars on 0.01 coin is wider than about 54 cents. A gap thinner than the cost is the one you cross out. Wider than the cost is a test you can do on paper. It is not a promise about money. Nine dollars minus about 54 cents is about 8 dollars 46. That net is still not money you made. Range here is still the top line and the bottom line, the same meaning as lesson 1.
+Now the example cost on the locked pair, not a mid-price shortcut. A fee here is a charge when an order trades. This is not a fee copied from an app. It is the teaching cost already used on this pair, marked Example. The buy is 0.01 coin at 26,730. The sell is 0.01 coin at 27,630. The fee on the buy is about 27 cents. The fee on the sell is about 28 cents. Together that is about 54 cents in total. On a whole coin the same two fees are about 54 dollars, not a mid-price shortcut of about 55. The gap of about 900 is wider than about 54. The gross of 9 dollars on 0.01 coin is wider than about 54 cents. A gap thinner than the cost is the one you cross out. Wider than the cost is a test you can do on paper. It is not a promise about money. Nine dollars minus about 54 cents is about 8 dollars 46. That net is still not money you made. Range here is still the top line and the bottom line, the same meaning as lesson 1.
 
 A tidy round box can still be the wrong range. Suppose the top on the page is the round number 30,000. The real top line in this Example is 30,331. Thirty thousand three hundred and thirty-one minus thirty thousand is three hundred and thirty-one. The real top sits 331 above the round number. A range drawn at 30,000 would have missed the days that reached 30,331. Move the top line up to the real high, then count the gaps again. Do not change the step and the top line in one silent edit. Check the top and the bottom against the path once, not day by day. Every close from 19 July 2023 to 16 October 2023 stayed between 24,930 and 30,331. If your top is below the real top line, move the top line, then count the gaps again.
 
@@ -47,15 +47,13 @@ There are two ways to space the lines, and a beginner should see both on a small
 
 Equal percent means each line is the same fraction higher than the one below it. On the same 100 to 200 Example, four equal percent steps land near 100, then 118.9, then 141.4, then 168.2, then 200. Check one step. One hundred and eighteen point nine minus one hundred is 18.9, which is about 19 percent of 100. One hundred and sixty-eight point two to 200 is 31.8, and 31.8 is about 19 percent of 168.2. The dollars get wider as the price gets higher. The percent stays about the same. The summer Example in this course uses equal dollars of about 900, not equal percent. You do not have to use both on one page. You do have to know which one you wrote.
 
-Say the summer step as a percent only so you can compare it with the cost, not so you can switch methods in the same breath. About 900 divided by 27,630 is about 0.033, which is about 3.3 percent. The example cost was about 0.2 percent. About 3.3 percent is wider than 0.2 percent. That is the same test as 900 against 54.36. Mark both figures Example. This is a recount of a public window, not a fee from an app.
+Say the summer step as a percent only so you can compare it with the cost, not so you can switch methods in the same breath. About 900 divided by 27,630 is about 0.033, which is about 3.3 percent. The example cost was about 0.2 percent. About 3.3 percent is wider than 0.2 percent. That is the same test as 900 against about 54 dollars on a whole coin. Mark both figures Example. This is a recount of a public window, not a fee from an app.
 
 Worked recount, in one pass. Lines: seven. Gaps: six. Step: about 900 dollars. Example cost on the 0.01 pair: about US$0.54. Nine dollars is wider than 0.54, so this step clears that example cost. A thinner gap is the one you cross out. Then look at the top. If it is a round number below 30,331, move it up to 30,331 and count the six gaps again. Stop. You do not need a second pass through the days.
 
 Walk the six gaps as prices, so the word "about 900" is not a fog. Start at the bottom, 24,930. Add about 900 and you are at 25,830. Add about 900 again and you are at 26,730. Add about 900 again and you are at 27,630, the middle. In the worked pair, 27,630 is the sell line, and 26,730 is the buy. The next published rung is 28,531, because that gap is 901, not 900. Then 29,431. Then the top, 30,331. Do not write 28,530. That unrounded step is not the published line. Count the spaces you just walked. There are six. The lines you named are seven. If your finger counted seven spaces, you counted a line as a gap.
 
-Here is a thin gap, so you can see the cross-out. Suppose the gap was 40 dollars on a whole coin and the example cost was about 54 dollars. Forty is less than 54. That gap is thinner than the cost, so you cross it out. You do not need a story about what happens next. The test is the comparison. Nine hundred against 54 passes this test. Forty against 54 does not. On 0.01 coin, 9 is wider than about 0.54, so that test passes too. All of those figures are Example. None of them is a fee copied from an app, and none of them is money you made.
-
-One coin-size check belongs here because the gap is a width in dollars per coin. Take one hundredth of a coin, 0.01. A gap of about 900 times 0.01 is 9. That 9 is the gross difference between two neighbouring lines. It is not a result. The example cost on the taught pair is about US$0.54 on 0.01 coin, which is 54.36 on a whole coin at the two real prices. Nine dollars is wider than about 0.54. The test still passes, and it is still only a test. Mark every one of those figures Example.
+Here is a thin gap, so you can see the cross-out. Suppose the gap was 40 dollars on a whole coin and the example cost was about 54 dollars. Forty is less than 54. That gap is thinner than the cost, so you cross it out. You do not need a story about what happens next. The test is the comparison. Nine hundred against 54 passes this test. Forty against 54 does not. All of those figures are Example. None of them is a fee copied from an app, and none of them is money you made.
 
 One more small ladder, so equal percent is not a mystery list. Start at 100 and finish at 200, in four steps. Each step is about 19 percent wider than the one before, so the dollars get wider. The card can show the multiply, about 1.189. You do not have to multiply it while you listen. Four gaps. Five lines. Same habit as the summer ladder: count the gaps, not the lines. The summer page does not use that multiply. It uses about 900 dollars. You only needed the small ladder so the two methods are not the same word.
 

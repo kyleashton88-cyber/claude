@@ -1,5 +1,34 @@
 # Revisions, 23 November
 
+## Round 4, beginner polish
+
+Legal and the numbers were already 10/10. This pass is the beginner round 3 file only. Spoken drafts only. Live BP-01 and BP-02 were not edited. Nothing was rendered. No figure, date, or fee value was changed. The legal round 3 fixes stay: the short exclusion, "not a signal to start," and weekly checks only while the rule is in force.
+
+- BP-11 no longer uses the bare word "cross" for the excluded setting. The exclusion and the recap say "the settings some apps call isolated and cross margin," and "the settings some apps call isolated or cross margin." No definitions were added. The 600-across-6 example is out of this close. The journal line is "a short form of the journal from lesson 2." The fee, the percent test, and page two are no longer walked in full. The self-check and the paper draw carry the close.
+- Spoken 54.36 and the spoken exact sum 0.5436 are off the voice in BP-03, BP-05, and BP-11. The cards still show 0.2673 + 0.2763 = 0.5436, and the whole-coin card still shows 54.36.
+- BP-03 says "If you ever write a size," and adds: "Those six orders are the six waiting lines in this picture, and 600 is not a size for your page." The unused 1,580 subtraction is gone. 26,050 and 18 August stay.
+- BP-06: a close sitting on the top line is still inside. The two October closes are two facts, not a forecast. The distances are not subtracted a second time.
+- BP-08 says "close the notebook," not "close the book." The alert line is "You open the page once a week, and in this lesson you practise on two dates." The spoken 54.36 is gone from this lesson.
+- BP-04: "One path can leave the range you measured and start a trend." 23 October is named as the break, and the later path through 14 March 2024 is the trend. The March percent and the 1,731 width sit on the card.
+- BP-05 drops the later coin-size recount that only repeated "9 is wider than about 0.54." Speech says about 54 cents and about 54 dollars.
+- BP-07 names upper and lower as form words, and says the 600 and 100 figures were never a size for this page.
+- BP-09 reads levels as "seven rungs, which make six gaps of about 900." The extra full walk of the three passes is shortened.
+- BP-10 says the two widths and the 2,693 step once as the measurement, then again in the recap, without a second full subtraction.
+
+Spoken words after this pass:
+
+| Lesson | Spoken words | Minutes at 165 wpm |
+| --- | ---: | ---: |
+| BP-03 | 2248 | 13.6 |
+| BP-04 | 1845 | 11.2 |
+| BP-05 | 1658 | 10.0 |
+| BP-06 | 1811 | 11.0 |
+| BP-07 | 1765 | 10.7 |
+| BP-08 | 1868 | 11.3 |
+| BP-09 | 1749 | 10.6 |
+| BP-10 | 1721 | 10.4 |
+| BP-11 | 2013 | 12.2 |
+
 ## Round 3, legal and beginner
 
 Legal review round 3 wins where it conflicts with the beginner read. Spoken drafts only. Live BP-01 and BP-02 were not edited. Nothing was rendered.

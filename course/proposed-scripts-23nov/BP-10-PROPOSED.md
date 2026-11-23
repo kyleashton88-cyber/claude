@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1813
-Estimated minutes: 11.0 at about 165 words a minute
+Word count: 1721
+Estimated minutes: 10.4 at about 165 words a minute
 
 Added sections:
 
@@ -48,7 +48,7 @@ Position size is the same division as lesson 6. You write a ceiling, in dollars,
 
 Write page two's finish sentence now, so the second page is not only two numbers. If a daily close finishes outside 56,555 to 72,715, and the next daily close is still outside, this second example is over. That sentence has a top and a bottom. It does not borrow 30,331, and it does not borrow 23 October 2023. Those belong to page one. Page two's dates, for the measurement, are 27 March 2024 to 24 June 2024. The finish sentence is the rule you would use if a later close left those lines. This lesson does not claim that a particular later day did that. It only gives the sentence a place to be written.
 
-Do the division once more, slowly, so 2,693 is not a mystery. Page two's top minus page two's bottom is 16,160. The card shows 72,715 minus 56,555. Sixteen thousand one hundred and sixty divided by six gaps is two thousand six hundred and ninety-three, with a little left over, so we say about 2,693. That is the equal-dollar step if you choose six gaps on this window. The summer step was about 900. Two thousand six hundred and ninety-three is not nine hundred. Copying 900 onto page two would make a different count of gaps, and you would no longer be able to say you changed only the range. If the step changes because the width changed, say that the step was remeasured. Do not pretend it was copied.
+The card shows that same width, 16,160, and the same step, about 2,693. That is not 900. If the step changes because the width changed, say that the step was remeasured. Do not pretend it was copied.
 
 The pair line does not move. Page one says bitcoin, public daily closes, spot. Page two says the same three. Spot means coins you hold. A contract, and a multiple, stay off both pages. If you cannot say the one change in one breath, "the range", page two goes back in the drawer.
 

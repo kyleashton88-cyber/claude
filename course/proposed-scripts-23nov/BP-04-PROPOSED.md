@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1912
-Estimated minutes: 11.6 at about 165 words a minute
+Word count: 1845
+Estimated minutes: 11.2 at about 165 words a minute
 
 Added sections:
 
@@ -20,7 +20,8 @@ New on-screen visuals:
 
 - A three-shape card: range, trend, and break, each with a one-line definition and no forecast arrow.
 - A range card: 24,930 and 30,331, a shaded "within one gap" strip at each end, labelled about 900, every figure marked Example.
-- A count card: eight closes near the top, five near the bottom, the words "not four and four".
+- A count card: eight closes near the top (19, 20, 21, 22 and 23 July, 1 August, 8 and 9 August), five near the bottom (1, 4, 5, 6 and 11 September), the words "not four and four".
+- A March 2020 card: 11 March close about 7,911, 12 March close about 4,971, about 37 percent, 13 March high 5,838, low 4,107, close 5,564, width 1,731, and the note that the 13 March close was higher. Every figure marked Example.
 - A later-path card: 23 October 2023 close 33,086 and 14 March 2024 close 71,397, subtraction shown, marked Example.
 - A candle card for 13 March 2020: high 5,838, low 4,107, close 5,564, and a note that the close was higher than the day before.
 - A label card: shape name plus dates, or the words "not sorted".
@@ -43,17 +44,17 @@ Inside that range, "near the top" means within one gap of the top line. Thirty t
 
 The middle of this Example is 27,630. A close under the middle is on the buy side of the page. A close over the middle is on the sell side. That tells you where the close sat. It does not tell you the shape. Shape comes from whether the closes stay inside the two lines, leave and keep going, or jump.
 
-Now change the dates, and the shape changes. On 23 October 2023 the Example daily close was 33,086. Thirty-three thousand and eighty-six minus thirty thousand three hundred and thirty-one is two thousand seven hundred and fifty-five. That close was above the top line of the earlier range. By 14 March 2024 the Example close was 71,397. Seventy-one thousand three hundred and ninety-seven minus thirty-three thousand and eighty-six is thirty-eight thousand three hundred and eleven. The path had left and it kept going. On those later dates the shape is a trend, not the range you measured in the summer window. One path can end a range and start a trend. You do not erase the earlier label. You write both, each with its own dates.
+Now change the dates, and the shape changes. On 23 October 2023 the Example daily close was 33,086. Thirty-three thousand and eighty-six minus thirty thousand three hundred and thirty-one is two thousand seven hundred and fifty-five. That close was above the top line of the earlier range. By 14 March 2024 the Example close was 71,397. Seventy-one thousand three hundred and ninety-seven minus thirty-three thousand and eighty-six is thirty-eight thousand three hundred and eleven. The path had left and it kept going. On those later dates the shape is a trend, not the ranging market you labelled in the summer window. One path can leave the range you measured and start a trend. That leave on 23 October 2023 is the break. The later path, through 14 March 2024, is the trend. You do not erase the earlier label. You write both, each with its own dates.
 
 A break is the jump itself. The close steps outside the lines in one move, rather than drifting out over many days. You still confirm it the way the earlier lesson set the stop. A stop is the rule for what you will do if a daily close finishes outside the range and the next daily close is still outside. One close outside is a warning. The next close still outside is the confirmation in this course. You wrote that rule before the jump. You do not invent it after you have seen the jump.
 
-Look at a break that is not the summer window. On 11 March 2020 the Example close was about 7,911. On 12 March 2020 it was about 4,971. Seven thousand nine hundred and eleven minus four thousand nine hundred and seventy-one is two thousand nine hundred and forty. Two thousand nine hundred and forty divided by seven thousand nine hundred and eleven is about thirty-seven hundredths, which is about 37 percent. That is the drop: from the 11 March close to the 12 March close. On 13 March 2020 the candle's high was 5,838, the low was 4,107, and the close was 5,564. Five thousand eight hundred and thirty-eight minus four thousand one hundred and seven is one thousand seven hundred and thirty-one. That is the high minus the low of that one candle. It is not your grid range. The close, 5,564, was higher than the close on 12 March. So 12 March to 13 March is not the drop. If a page says the market fell from the 12th to the 13th, the close says otherwise. Read the close before you name the shape.
+Look at a break that is not the summer window. On 11 March 2020 the Example close was about 7,911. On 12 March 2020 it was about 4,971, and the 13 March close was higher. So 12 March to 13 March is not the drop. The card holds the rest of that candle: about 37 percent from the 11 March close to the 12 March close, and a 13 March width of 1,731. If a page says the market fell from the 12th to the 13th, the close says otherwise. Read the close before you name the shape.
 
 A candle is one day's picture. The high is the highest price that day. The low is the lowest. The close is the last price. This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise. A long candle can look like a break even when the close came back inside. That is why this course reads the close, then the next close, before it treats a jump as confirmed.
 
 Here is how you label a window so you can check it later. Write the shape, then the first date, then the last date. "Ranging market, 19 July 2023 to 16 October 2023." "Trend, 23 October 2023 to 14 March 2024." If you cannot point at the closes that match the word, write "not sorted" and the dates you looked at. "Not sorted" is an honest label. A guessed label is not. Do not write a shape because a picture feels calm or fast. Count the closes against the lines.
 
-A ranging market is the shape a spot grid is built for, and only on the dates where the closes actually stayed inside the range. Spot means you buy the coin with money you already have. You are not borrowing, and you are not using a contract that can be closed out from under you. That other kind of trading can be a financial product, and it is higher risk. This course does not teach it and does not recommend it. This lesson does not switch the example into that other kind of trading. If the shape on your dates is a trend or a break, the range you drew no longer matches the path. The stop you wrote is the response. A new range is a new measurement, with new dates, done before any new order.
+A ranging market is the shape a spot grid is built for, and only on the dates where the closes actually stayed inside the range. Spot means you buy the coin with money you already have. A contract is a trade on the price, often with borrowed money. This lesson does not use one. That other kind of trading can be a financial product, and it is higher risk. This course does not teach it and does not recommend it. This lesson does not switch the example into that other kind of trading. If the shape on your dates is a trend or a break, the range you drew no longer matches the path. The stop you wrote is the response. A new range is a new measurement, with new dates, done before any new order.
 
 Work one window in full before you name it. Step one: write the top and the bottom. Step two: write what one gap is. In the Example, about 900. Step three: mark every daily close as inside, near the top, near the bottom, or outside. Step four: count them. Step five: write the shape and the dates, or write "not sorted". On the summer Example that count is: every close inside, eight near the top, five near the bottom. On the later Example the first close is already outside, and the path keeps going, so the shape is a trend on those dates.
 

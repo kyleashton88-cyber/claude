@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1907
-Estimated minutes: 11.6 at about 165 words a minute
+Word count: 1811
+Estimated minutes: 11.0 at about 165 words a minute
 
 Added sections:
 
@@ -52,19 +52,19 @@ Write a finish sentence that would fail the lesson, so you can hear the differen
 
 Size stays blank for a reason you can say. If you write a size before the finish sentence exists, the page can start and cannot end. The number would be sitting on a page with no exit. Leave it empty. This course leaves the size line blank on purpose. No later lesson picks the ceiling for you. This lesson only protects the order of the lines: finish, then before, then a blank size. Read them to someone else. If they cannot find 23 October from the finish sentence alone, the sentence is not done.
 
-Say the whole finish sentence without looking at the page, then check it. If a daily close finishes outside the range, and the next daily close is still outside, the summer idea is over. The range is 24,930 to 30,331. The first close is 23 October 2023, at 33,086. The next close is 24 October 2023, at 33,902. Both are outside. The sentence matches the dates. Now the before sentence. On 7 October 2023 the close was 27,969, and that close was still between 24,930 and 30,331. If either date is missing when you say it back, the page is not finished. Add the date. Do not add a size to make the page look complete. A complete page in this lesson is two sentences, two dates, and an empty size line.
+Say the finish sentence without looking at the page. It is the two October closes you already wrote, both outside, and the before sentence is 7 October 2023, still inside. If either date is missing when you say it back, add the date. Do not add a size to make the page look complete. A complete page in this lesson is two sentences, two dates, and an empty size line.
 
 The entry only repeats the before sentence. It does not add a new idea. People want to write the entry first because the entry feels like the start. The start of the page is the exit. You already have the exit. The entry is a day the path was still inside the summer range. In this Example that day is 7 October 2023. It is not the day the window opens, and it is not a feeling that the chart looks calm. The window opens on 19 July 2023.
 
 Check yourself. Which sentence do you write first? The answer is the finish rule. What date can you point at for the finish? The answer is 23 October 2023, close 33,086, which is 2,755 above 30,331, and the next close was still outside. What date can you point at for a day still inside? The answer is 7 October 2023, close 27,969. What belongs on the size line today? The answer is nothing. A blank size is allowed.
 
-Measure the leave in one more way, so the finish is a distance and not only a date. The top is 30,331. The 23 October close is 33,086. The distance is 2,755, which you already subtracted. The 24 October close is 33,902. The distance that day is 3,571. Both distances are above the line, so both closes are outside. A distance of zero would be a close sitting on the top line. This course treats the finish as outside, confirmed by the next close still outside. You do not need a third distance. Two outsides are the rule.
+The distances are already on the worked card: 2,755 on 23 October and 3,571 on 24 October. Both are above the line, so both closes are outside. A close sitting on the top line is still inside. The finish is only met when a close is outside, and the next close is still outside. You do not need a third distance. Two outsides are the rule.
 
 The before day has a distance too, and it points the other way. 30,331 minus 27,969 is 2,362. The 7 October close is 2,362 under the top, and it is 339 over the middle. Under the top means still inside. Write that beside the before sentence if it helps you see it. Do not move that number onto the finish line. The finish line is the two October closes. The entry line is the day that was still inside, the 7th, not the 23rd, and not a start date.
 
 On paper, or on a demo that uses pretend money, write the two sentences and the two dates. Write Example beside 33,086 and beside 27,969. Leave the size line empty. Do not send an order. Two sentences are not a live plan.
 
-The two October closes are a pair of facts, not a forecast. 33,086 and then 33,902. Both above 30,331. The rule uses the second one only as confirmation that the first one was not a single print. You already know the next lesson will copy these sentences onto a paper screen. It will not add a third date. If your spoken sentence has a third date you cannot point at, take it out.
+The two October closes are two facts, not a forecast. 33,086 and then 33,902. Both above 30,331. The rule uses the second one only as confirmation that the first one was not a single print. You already know the next lesson will copy these sentences onto a paper screen. It will not add a third date. If your spoken sentence has a third date you cannot point at, take it out.
 
 Recap. In the Example, the finish rule was met on 23 October 2023. The before sentence names a day still inside the range, 7 October 2023. Size waits until both sentences point at the chart.
 

@@ -2,7 +2,7 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1764
+Word count: 1765
 Estimated minutes: 10.7 at about 165 words a minute
 
 Added sections:
@@ -40,7 +40,7 @@ The fields you may copy are the ones on the page. Pair: bitcoin, public daily cl
 
 Spot means you buy the coin itself, with money you already have. A contract is a trade on the price, often with borrowed money. A multiple, such as five times, means borrowed size. A contract or a multiple can be a financial product, and it is higher risk. This course does not teach it and does not recommend it. If a form has prefilled a contract setting or a multiple, clear it, or leave the form. Nothing in the summer window asks you to multiply your size. If a default size is already filled in, clear it. The page did not write that size. A blank size is still allowed. A size the form invented is not your page.
 
-Read the page once. Bitcoin. Public daily closes. Upper: 30,331. Lower: 24,930. Gaps: six. You point at those figures. You do not read every day, and you do not send an order.
+Read the page once. A form may say upper and lower instead of top and bottom. Upper: 30,331. Lower: 24,930. Gaps: six. You point at those figures. You do not read every day, and you do not send an order.
 
 Now the count a form can get wrong. The ladder has seven prices. The gaps between them are six. A form may say "grids". Check the help page, then enter six if that word means gaps. Seven grids would be seven gaps, and your page has six gaps, which is seven lines. Then you keep six, you close the page, and no order is sent.
 
@@ -66,6 +66,6 @@ Read the two sentences in the words the last lesson gave you, so the copy is not
 
 Recap. Copy the summer figures, not a default. Turn a line count into a gap count before you accept it. Stop without sending. The practice is the copy. The send button is not part of the practice. If your hand is on a confirm button, you are in the wrong place for this lesson. Go back to the notebook. Read 30,331 and 24,930. Read six. Read the two dates. Then close the screen. Pretend money is the only money this lesson uses, and even that is not sent if the form does not match the page.
 
-One last look at the numbers you are allowed to type. Top 30,331. Bottom 24,930. Gaps 6. Those three are the whole numeric copy. 27,630 is the middle if a note needs it, and about 900 is the step, and both stay on the notebook rather than in a size box. A size box that says 100, or 600, or any other figure you did not write on the page, gets cleared. The two sentences stay in your voice: finish on 23 October 2023, before on 7 October 2023. Then the form closes. Nothing is sent. If you remember only that, the lesson has done its job.
+A size box that says 100, or 600, or any other figure you did not write on the page, gets cleared. Those 600 and 100 figures from an earlier arithmetic example were never a size for this page. 27,630 is the middle if a note needs it, and about 900 is the step, and both stay on the notebook rather than in a size box. The two sentences stay in your voice: finish on 23 October 2023, before on 7 October 2023. Then the form closes. Nothing is sent. If you remember only that, the lesson has done its job.
 
 Next lesson: Managing and monitoring. Bring the same page. Next lesson asks three questions on two dates, and then you stop. You will not be asked to send the form you just closed. The notebook is still the source. Match it before you close the screen.

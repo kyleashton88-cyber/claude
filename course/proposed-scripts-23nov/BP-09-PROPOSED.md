@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1826
-Estimated minutes: 11.1 at about 165 words a minute
+Word count: 1749
+Estimated minutes: 10.6 at about 165 words a minute
 
 Added sections:
 
@@ -44,7 +44,7 @@ Ask one question of the whole window, not of every day. Does the page match the 
 
 Worked audit, two passes. Pass one: write the missing stop rule for 23 October 2023, confirmed when the next close was still outside. Pass two: move a round top of 30,000 up to the real top line, 30,331, because the path had already gone past the round number. Then recount. Do not grade the page. List the rewrites. A result word does not belong on either pass. The page is an Example, not a score.
 
-After each fix, read the three words again. Range: the real bottom line to the real top line, past a round box. Levels: seven rungs. Gaps: six, about 900, not seven gaps. Stop: a close outside the range, confirmed by the next close, which this path met when the next close after 23 October 2023 was still outside. If one of those three is still blank, that is the next fix. Fix those three, in that order, and the page matches the summer path.
+After each fix, read the three words again. Range: the real bottom line to the real top line, past a round box. Levels: seven rungs, which make six gaps of about 900, not seven gaps. Stop: a close outside the range, confirmed by the next close, which this path met when the next close after 23 October 2023 was still outside. If one of those three is still blank, that is the next fix. Fix those three, in that order, and the page matches the summer path.
 
 Read a wrong page and a corrected page, line by line, so the fixes are not a slogan. The wrong page says: top 30,000, seven gaps, and no stop sentence. The corrected page says: top 30,331, bottom 24,930, six gaps of about 900, and a stop sentence that points at 23 October 2023 and the next close still outside. The bottom did not need a fix in this Example, because 24,930 is already the real low of that window. The top did. The count did. The stop did. Three fixes. Not one scribble.
 
@@ -52,7 +52,7 @@ After the recount, say the ladder once so six is a count you can see. From 24,93
 
 A result word is any word that treats the page as a score. Do not write one on the audit. Do not write one on the stop. Do not write one on the recount. The page shows a public window and the rules you would have written. It does not show what you made. If a sentence you just wrote sounds like a score, delete the sentence and keep the date.
 
-One mistake often hides inside a fix, so reread after each pass. You write the stop sentence and, in the same line, you also change the top and the count. That is three edits wearing one sentence. Split them. Pass one is only the stop: 23 October 2023, close 33,086, and the next close still outside. Read the page. The top may still say 30,000. That is all right. You have not reached pass two. Pass two changes 30,000 to 30,331 and nothing else. Read the page. The count may still say seven. Pass three changes seven gaps to six gaps. Read the page a last time. Range, levels, stop. If you fix them together, you cannot tell which edit matched the path.
+One mistake often hides inside a fix, so split the edits. Pass one is only the stop. Pass two changes only the top. Pass three changes only the gap count. If you fix them together, you cannot tell which edit matched the path.
 
 The summer path is the judge, not the neatness of the box. Every close from 19 July 2023 to 16 October 2023 stayed between 24,930 and 30,331. A page that is rounder than that path is the page that is wrong. A page that is complete and a little untidy, with the real top and a written stop, is the page that matches.
 

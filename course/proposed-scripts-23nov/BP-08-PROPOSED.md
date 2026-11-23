@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1941
-Estimated minutes: 11.8 at about 165 words a minute
+Word count: 1868
+Estimated minutes: 11.3 at about 165 words a minute
 
 Added sections:
 
@@ -42,11 +42,11 @@ You do not ask the three questions of every day in the window. Two dates are eno
 
 The fourth row is a review record, not a target. A review record is a note you write after the check, so you can see what the page did. The words on that row are these. Realised means a pair that has finished, both the buy and the later sell. Unrealised means coin you still hold, priced at the latest close, which can change. Fees means the charges the exchange took. The last note is whether you followed the rules you wrote. None of those words is a score you are trying to beat. None of them is a promise. You can leave the fourth row blank in this lesson and still have done the check. The three answers are the check. The fourth row is only a place to write later.
 
-We do not operate an alert service. An alert would be a message that arrives when a price hits a line. This lesson does not send one. You open the page on the two dates, you write the three answers, and you close it.
+We do not operate an alert service. An alert would be a message that arrives when a price hits a line. This lesson does not send one. You open the page once a week, and in this lesson you practise on two dates. You write the three answers, and you close it.
 
 Say both dates once more, with the arithmetic in the open, so the card and the voice match. On 7 October the close is 27,969. It is inside. It is 339 above 27,630. The stop has not fired. The rule is still in force. On 23 October the close is 33,086. It is outside. It is 2,755 above 30,331. The stop has fired. That week's check is done. You do not ask the same three questions of this page next week. You follow the sentence you already wrote.
 
-Say what the fourth row is not, because the words are easy to turn into a score. Realised, on this row, only means a pair that has finished, both the buy and the later sell. It is not money you made. Unrealised only means coin you still hold, priced at the latest close so you can see it change. It is not a tax figure. The tax office may treat a fill or a swap as a sale. This is general information, not tax advice. You can leave the fourth row blank in this lesson. Fees are not a surprise you discover at the end. They are the charges you already compared with the gap: about US$0.54 on 0.01 coin, which is 54.36 on a whole coin at the two taught prices. Whether you followed the rules is a yes or a no about the page you wrote. It is not a grade of you.
+You may leave the fourth row blank. Realised and unrealised can wait until a later example. The tax office may treat a fill or a swap as a sale. This is general information, not tax advice. Whether you followed the rules is a yes or a no about the page you wrote. It is not a grade of you. The fee test stays on its own card, as about 54 cents on 0.01 coin.
 
 A check you cannot finish is not monitoring. It is just watching. These two dates are the whole practice. Write the three answers. Use the fourth row only if you want the review record. Then close the card and leave the chart. The same three questions on a later day would be the same kind of check. You do not need a row for every day to understand the change from 7 October to 23 October.
 
@@ -66,6 +66,6 @@ The middle is a side marker, not a third line of the range. The range is still 2
 
 Recap. Ask: inside or not, which side of the middle, and whether the rule is still in force or the stop has fired. 7 October was inside, and the rule was still in force. 23 October was outside, and the stop had fired. Ask the same three questions once a week while the rule is still in force. These two dates are the practice. Once the stop has fired, the habit for that page ends, and you follow the sentence you already wrote.
 
-Put the two distances where you can see them and then close the book. 339 is how far 27,969 sits above 27,630. 2,755 is how far 33,086 sits above 30,331. The first distance is inside the range. The second distance is outside it. You do not add them. You do not average them. Each one answers its own date. When both answers are written, monitoring for this lesson is finished. Watching a third day would repeat the method without teaching it.
+Put the two distances where you can see them and then close the notebook. 339 is how far 27,969 sits above 27,630. 2,755 is how far 33,086 sits above 30,331. The first distance is inside the range. The second distance is outside it. You do not add them. You do not average them. Each one answers its own date. When both answers are written, monitoring for this lesson is finished. Watching a third day would repeat the method without teaching it.
 
 Next lesson: Common mistakes. Bring the same page. Next lesson looks for a blank stop, a top that missed the real high, and a line counted as a gap.
