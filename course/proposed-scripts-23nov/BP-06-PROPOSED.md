@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1894
-Estimated minutes: 11.5 at about 165 words a minute
+Word count: 1907
+Estimated minutes: 11.6 at about 165 words a minute
 
 Added sections:
 
@@ -32,7 +32,7 @@ Entry without an exit is a page that cannot finish. The exit is a path you can p
 
 By the end you will write the finish rule before the start. You will point each sentence at a date on the chart. You will leave size off the page until both sentences exist.
 
-A daily close is the last price of the day. This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise. A finish rule is the stop from the first lesson: the condition that ends the idea. The entry is the before sentence. It says the path you are looking at is still the range you measured, so you are allowed to start. It is not, by itself, the day the bot starts. Position size is the ceiling you write, divided by the number of orders. For example only, a ceiling of 600 dollars across 6 orders is 100 dollars an order. That is arithmetic. It is not a size for your account, and it is not a result. You may leave the size line blank here. Nothing in this course tells you which ceiling to pick.
+A daily close is the last price of the day. This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise. A finish rule is the stop from the first lesson: the condition that ends the idea. The entry is the before sentence. It says the path you are looking at is still the range you measured. It is not a signal to start, and it is not, by itself, the day a bot starts. Position size is the ceiling you write, divided by the number of orders. For example only, a ceiling of 600 dollars across 6 orders is 100 dollars an order. That is arithmetic. It is not a size for your account, and it is not a result. You may leave the size line blank here. Nothing in this course tells you which ceiling to pick.
 
 The shared Example range is 24,930 at the bottom and 30,331 at the top. The middle is 27,630. Six gaps of about 900 sit between the bottom and the top. You already counted those. This lesson does not recount them. It asks where the page ends.
 
@@ -50,7 +50,7 @@ The next close is part of the rule, so name it. On 24 October 2023 the Example c
 
 Write a finish sentence that would fail the lesson, so you can hear the difference. "I will stop if it feels wrong" has no date and no close. "I will stop if it leaves" does not say what leaves, and it does not say that the next close must still be outside. The sentence that passes is the one you can point at: a daily close outside 24,930 to 30,331, and the next daily close still outside, which this Example met on 23 and 24 October 2023. The before sentence that passes is just as pointed: 7 October 2023, close 27,969, still inside.
 
-Size stays blank for a reason you can say. If you write a size before the finish sentence exists, the page can start and cannot end. The number would be sitting on a page with no exit. Leave it empty. A later lesson talks about caps. This lesson only protects the order of the lines: finish, then before, then a blank size. Read them to someone else. If they cannot find 23 October from the finish sentence alone, the sentence is not done.
+Size stays blank for a reason you can say. If you write a size before the finish sentence exists, the page can start and cannot end. The number would be sitting on a page with no exit. Leave it empty. This course leaves the size line blank on purpose. No later lesson picks the ceiling for you. This lesson only protects the order of the lines: finish, then before, then a blank size. Read them to someone else. If they cannot find 23 October from the finish sentence alone, the sentence is not done.
 
 Say the whole finish sentence without looking at the page, then check it. If a daily close finishes outside the range, and the next daily close is still outside, the summer idea is over. The range is 24,930 to 30,331. The first close is 23 October 2023, at 33,086. The next close is 24 October 2023, at 33,902. Both are outside. The sentence matches the dates. Now the before sentence. On 7 October 2023 the close was 27,969, and that close was still between 24,930 and 30,331. If either date is missing when you say it back, the page is not finished. Add the date. Do not add a size to make the page look complete. A complete page in this lesson is two sentences, two dates, and an empty size line.
 

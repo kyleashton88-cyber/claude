@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 2267
-Estimated minutes: 13.7 at about 165 words a minute
+Word count: 2249
+Estimated minutes: 13.6 at about 165 words a minute
 
 Added sections:
 
@@ -15,7 +15,7 @@ Added sections:
 
 New on-screen visuals:
 
-- An opening card: "Optional close: the spot page, and what this course does not cover." Four one-line meanings sit under it: margin, liquidation, isolated, cross. The summer spot page sits beside it, marked complete.
+- An opening card: "Optional close: the spot page, and what this course does not cover." The summer spot page sits beside it, marked complete. No definitions of margin, liquidation, isolated, or cross.
 - A ladder card: 24,930, 25,830, 26,730, 27,630, 28,531, 29,431, 30,331, marked Example. The 901 gap is labelled between 27,630 and 28,531.
 - A pair card: buy 26,730, sell 27,630, gross 9 dollars on 0.01 coin. Exact fee on the card: 0.2673 + 0.2763 = 0.5436, about 54 cents in total, left about 8 dollars 46. Every figure marked Example.
 - A stop card: 23 October 2023 close 33,086, 2,755 above 30,331, next close still outside.
@@ -27,7 +27,7 @@ GridBot Builder. GridBot Blueprint. Lesson eleven. Optional close: the spot page
 
 Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results. The prices are public historical daily prices, marked Example. The range uses the high and the low of that window. When we say inside or outside, we use the daily close. No order is sent from this lesson. We do not operate an exchange and we are not affiliated with one.
 
-This lesson is the optional close. It is not needed to use a spot grid. It reads the spot page back, and it names what this course does not cover. Margin is money set aside for a trade that uses borrowed money. Liquidation is the exchange closing that trade because the margin cannot carry it. Isolated means a loss stays in one box. Cross means a loss in one box can pull in the next box. We don't cover these; they are financial products with higher risk. This course does not teach them and does not recommend them. A drop in the coin's price does not, by itself, close a spot holding for you. You still hold the coin. If you are staying on the summer spot page, write "Skipped on purpose" and keep 24,930, 30,331, six gaps of about 900, and the stop on 23 October 2023. We will not set up a contract.
+This lesson is the optional close. It is not needed to use a spot grid. It reads the spot page back, and it names what this course does not cover. Contracts, margin and liquidation are different from buying and holding the coin. They can involve borrowed money. They are likely to be financial products, and they are higher risk. This course does not teach them and does not recommend them. A drop in the coin's price does not, by itself, close a spot holding for you. You still hold the coin. If you are staying on the summer spot page, write "Skipped on purpose" and keep 24,930, 30,331, six gaps of about 900, and the stop on 23 October 2023. We will not walk through margin, isolated or cross, and we will not set up a contract.
 
 By the end you will read the summer spot page back in full. You will name the range edges as the high and the low of the window. You will walk the published ladder, the one worked pair, the fee, and the stop. If you wrote a ceiling, the order size is that ceiling divided by the number of orders. This close does not pick the ceiling. Range means the top line and the bottom line.
 
@@ -47,7 +47,7 @@ The fee on this pair is 0.1 percent of each side, marked Example, not a fee copi
 
 About 900 divided by 27,630 is about 0.033, which is about 3.3 percent. The example cost rate was about 0.2 percent. About 3.3 percent is wider than 0.2 percent. That is the same test in percent. It is still not money you made.
 
-On the Example daily closes, a one-step pair finished three times. Those three pairs are 26,730 with 27,630, then 25,830 with 26,730, then 26,730 with 27,630 again. Under the book this course teaches, buys wait only below the middle. Under that book, those three pairs complete, and zero buys are still waiting for a sell when the window ends. Three is a count of that public window. It is not a promise that the next window will do the same.
+On the Example daily closes, a one-step pair finished three times. Those three pairs are 26,730 with 27,630, then 25,830 with 26,730, then 26,730 with 27,630 again. Under the page this course teaches, buys wait only below the middle. Under that page, those three pairs complete, and zero buys are still waiting for a sell when the window ends. Three is a count of that public window. It is not a promise that the next window will do the same.
 
 A fill only swaps cash and coin. The tax office treats a swap like a sale, so a fill can belong in the journal. This is general information, not tax advice. Realised, if you ever write the word, only means a pair that has finished, both the buy and the later sell. It is not money you made. Unrealised only means coin you still hold, priced at the latest close so you can see it change. It is not a tax figure. You can leave that row blank.
 

@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1786
-Estimated minutes: 10.8 at about 165 words a minute
+Word count: 1813
+Estimated minutes: 11.0 at about 165 words a minute
 
 Added sections:
 
@@ -64,6 +64,6 @@ On paper, or on a demo that uses pretend money, draw two boxes. In the first, wr
 
 Six times about 2,693 is the check that the new step fits the new width. Six times 2,693 is 16,158, and the width is 16,160. The two dollars are the rounding. The step fits. Six times 900 is 5,400, which fits page one and does not fit page two. That single multiply is why you do not paste the summer step. Say it once. Then stop.
 
-Recap. Page two uses the same checks as page one. The later window is 56,555 to 72,715, not a copy of 900. Spot stays spot. Size comes from your caps, never from a target, and never from a multiple.
+Recap. Page two uses the same checks as page one. The later window is 56,555 to 72,715, not a copy of 900. Spot stays spot. The size line stays blank on purpose. If you later write a ceiling, the order size is that ceiling divided by the number of orders, never from a target, and never from a multiple. This course does not pick the ceiling.
 
 Next lesson: Optional close: the spot page, and what this course does not cover. That lesson is optional. The spot page you just wrote does not need it. You can leave the next lesson closed and keep this page.

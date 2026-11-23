@@ -4,8 +4,8 @@ Stewart may retitle this lesson "How a grid bot works, order by order". If he do
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 2237
-Estimated minutes: 13.6 at about 165 words a minute
+Word count: 2259
+Estimated minutes: 13.7 at about 165 words a minute
 
 Added sections:
 
@@ -48,7 +48,7 @@ Here is the gap arithmetic, marked Example. Thirty thousand three hundred and th
 
 The middle level in this Example is 27,630. Buys wait below the middle. Sells wait above the middle. One gap of about 900 below 27,630 is 26,730. Two gaps below is 25,830. Three gaps below is 24,930, the bottom line. One gap above 27,630 is 28,531. That gap is 901, not 900, because the six gaps share 5,401. Two gaps above is 29,431. The top line, 30,331, sits above that. Those are levels. They are not orders until you write them, and this lesson does not write a live order.
 
-Lesson 1 placed buys below the current price and sells above the current price. This lesson also draws a middle line at 27,630, and it marks rungs below that middle as buy levels and rungs above it as sell levels. Those two rules are not the same on every day. On 18 August 2023 the close was 26,050, which is below the middle. A rung such as 26,730 is above that close, so lesson 1 would call it a sell. The middle split still calls 26,730 a buy level, because it is below 27,630. This Example page uses the middle split. That is a change from lesson 1, and it is only for this worked page.
+Lesson 1 placed buys below the current price and sells above the current price. This lesson also draws a middle line at 27,630, and it marks rungs below that middle as buy levels and rungs above it as sell levels. Those two rules are not the same on every day. On 18 August 2023 the close was 26,050, which is below the middle. A rung such as 26,730 is above that close, so lesson 1 would call it a sell. The middle split still calls 26,730 a buy level, because it is below 27,630. This Example page uses the middle split. That is a change from lesson 1, and it is only for this worked page. The opening orders on this Example page were set from the middle of the range, 27,630, not from the 18 August price.
 
 A cross is the price line touching a rung. A fill is the order actually trading. A ring on a teaching chart can mean the price touched the rung. A white square can mean an order traded. Do not mix those marks. On this Example chart the daily close crossed the middle rung, 27,630, ten times. Those ten marks are crosses, not fills. They are marked Example. They are not money you made, and they are not a count of finished pairs.
 

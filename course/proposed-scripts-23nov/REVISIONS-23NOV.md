@@ -1,5 +1,31 @@
 # Revisions, 23 November
 
+## Round 3, legal and beginner
+
+Legal review round 3 wins where it conflicts with the beginner read. Spoken drafts only. Live BP-01 and BP-02 were not edited. Nothing was rendered.
+
+- BP-11 line 30 is the short exclusion again. The one-line meanings of margin, liquidation, isolated and cross are gone from the spoken line and from the opening card. The title stays "Optional close: the spot page, and what this course does not cover". The spot recap stays. Any definition of those four words still needs Stewart and counsel, and it stays only in `BP-11-ALT-long-warning.md`.
+- BP-06 no longer says "so you are allowed to start." The entry sentence is: "It is not a signal to start, and it is not, by itself, the day a bot starts."
+- BP-08, once the stop has fired: "The stop has fired. That week's check is done. You do not ask the same three questions of this page next week. You follow the sentence you already wrote." The weekly check runs only while the rule is still in force. The 7 October line can still say to ask again next week, because on that Example the rule is in force.
+- BP-04 keeps range as the top line and the bottom line. The shape is a ranging market. The self-check asks both, in the beginner file's wording.
+- BP-06 no longer says a later lesson talks about caps. BP-10 no longer says size comes from your caps. Both say the size line stays blank on purpose, and this course does not pick the ceiling.
+- BP-11 says "page", not "book".
+- BP-03 adds one line: the opening orders on the Example page were set from the middle of the range, 27,630, not from the 18 August price.
+
+Spoken words after this pass are in the table below. Each lesson is still between 10 and 15 minutes at 165 words a minute.
+
+| Lesson | Spoken words | Minutes at 165 wpm |
+| --- | ---: | ---: |
+| BP-03 | 2259 | 13.7 |
+| BP-04 | 1912 | 11.6 |
+| BP-05 | 1773 | 10.7 |
+| BP-06 | 1907 | 11.6 |
+| BP-07 | 1764 | 10.7 |
+| BP-08 | 1941 | 11.8 |
+| BP-09 | 1826 | 11.1 |
+| BP-10 | 1813 | 11.0 |
+| BP-11 | 2249 | 13.6 |
+
 ## Beginner pass
 
 Review 74, mean 6.3. Spoken drafts only. Live BP-01 and BP-02 were not edited. Nothing was rendered.
