@@ -64,3 +64,16 @@ Stewart approved S1–S9. The lines below are his wording. Fix order #10 (pictur
 | S7 | "what a grid bot does. It is a small program that places these orders for you. You will learn when it can capture bounces, and where it loses." |
 | S8 | "below the current price" in the three buy-and-sell lines. |
 | S9 | "the opposite order one rung up or down." |
+
+## Spoken approvals, 24 Nov 7:02am AEDT
+
+Stewart signed off the nine BP-03 to BP-11 scripts at commit `b958dff`. Those spoken scripts are now what `lesson_scripts.py` plays. `BP-11-ALT-long-warning.md` is not a lesson. X7 is declined: BP-01 still says "an opt-in lesson on liquidation and your complete plan."
+
+| ID | Exact spoken change |
+|---|---|
+| X1 | BP-01 fee line: "about 27 cents on the 267 dollar buy and about 28 cents on the 276 dollar sell, about 54 cents together." The card keeps 0.2673 + 0.2763 = 0.5436. |
+| X2 | BP-02: "three words, range, levels and stop". |
+| X3 | BP-02, after the gap-and-fee sentence: "To compare them, turn the gap into a percent by dividing it by the price. In the lesson 1 example, 900 divided by 27,630 is about 3.3 percent, well above 0.2 percent." |
+| X4 | BP-02: "If your pair is priced in a stablecoin, every fill trades one coin for another, so every fill is a swap." |
+| X5 | BP-02: "From April 2027, platforms that hold crypto for you need an ASIC licence, with a transition period to October 2027 for platforms already operating. Check ASIC for the current position." |
+| X6 | BP-03 is titled "How a grid bot works, order by order." The BP-02 end line and end card say "Next lesson: How a grid bot works, order by order." |

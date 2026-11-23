@@ -56,9 +56,8 @@ RIGHT = W - MX - 16
 # or y=620, after the card, which is why those rows disappeared.
 CARD_BOTTOM = 640
 MOTION_LANE = (MX, 656, RIGHT, 716)
-# Spoken BP-02 still says "What is a grid bot". Stewart may rename lesson 3
-# to "How a grid bot works, order by order". The end card reads this one string.
-BP03_NEXT_TITLE = "What is a grid bot"
+# Stewart, 24 Nov: lesson 3's title. The BP-02 end card reads this one string.
+BP03_NEXT_TITLE = "How a grid bot works, order by order"
 DISCLAIMER_LINES = (
     "Education only. Not financial advice.",
     "This is general information and doesn't consider your objectives, financial situation or needs.",
@@ -545,6 +544,7 @@ def plan(sid: str) -> list[dict]:
     raw = lesson_scripts.build(sid)
     lesson_scripts.attach_series(raw)
     number, title = parse_ident(raw[0])
+    canonical = any(shot.get("canonical") for shot in raw)
     spoken = speech.spoken_number(int(number))
     brand = {
         "kind": "brand",
@@ -590,7 +590,11 @@ def plan(sid: str) -> list[dict]:
             "chart": "",
             "series": [],
         })
-    shots: list[dict] = [brand, disc, *risk_shots]
+    # A signed lesson already speaks its title, disclaimer, and price lines.
+    if canonical:
+        shots = []
+    else:
+        shots = [brand, disc, *risk_shots]
     seq = [s for s in raw if s.get("kind") not in {"ident", "legal"}]
     i = 0
     while i < len(seq):
@@ -640,7 +644,7 @@ def plan(sid: str) -> list[dict]:
         guard(blob)
         shot["example"] = bool(re.search(r"\d", blob))
         # BP-02 v2 speaks 24,930 and 30,331. The round-number swap would erase them.
-        if shot.get("lesson_id") != "bp-02-what-you-need":
+        if shot.get("lesson_id") != "bp-02-what-you-need" and not shot.get("canonical"):
             shot["vo"] = _speak_round(shot.get("vo") or "")
     return shots
 

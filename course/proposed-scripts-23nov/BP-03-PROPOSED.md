@@ -1,6 +1,6 @@
-# BP-03 What is a grid bot
+# BP-03 How a grid bot works, order by order
 
-Stewart may retitle this lesson "How a grid bot works, order by order". If he does, change this heading and the spoken line "Lesson three. What is a grid bot." together. Do not leave them different.
+Stewart signed this title on 24 Nov 2026. The spoken line matches this heading.
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
@@ -32,7 +32,7 @@ New on-screen visuals:
 
 ## Spoken script
 
-GridBot Builder. GridBot Blueprint. Lesson three. What is a grid bot.
+GridBot Builder. GridBot Blueprint. Lesson three. How a grid bot works, order by order.
 
 Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results. The prices are public historical daily prices, marked Example. The range uses the high and the low of that window. When we say inside or outside, we use the daily close. No order is sent from this lesson.
 
