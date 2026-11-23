@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 2013
-Estimated minutes: 12.2 at about 165 words a minute
+Word count: 1992
+Estimated minutes: 12.1 at about 165 words a minute
 
 Added sections:
 
@@ -51,7 +51,7 @@ A fill only swaps cash and coin. The tax office treats a swap like a sale, so a 
 
 The stop is the sentence you write before you start. If a daily close finishes outside the range, and the next daily close is still outside, the example is over. On 23 October 2023 the close was 33,086. Thirty-three thousand and eighty-six minus thirty thousand three hundred and thirty-one is two thousand seven hundred and fifty-five. The close was 2,755 above the top line. The next day's close was still outside, so the stop was confirmed then, not by looking back later. On the way up, sells can fill and the page can sit in cash while the price rises. A fall through the bottom would leave you holding coin. You do not invent the stop after the close has left.
 
-Two earlier dates keep the method honest. On 18 August 2023 the close was 26,050. Twenty-seven thousand six hundred and thirty minus twenty-six thousand and fifty is one thousand five hundred and eighty. The close was below the middle, and still inside the range. On 7 October 2023 the close was 27,969. Twenty-seven thousand nine hundred and sixty-nine minus twenty-seven thousand six hundred and thirty is three hundred and thirty-nine. The close was 339 above the middle, and still inside. Inside means you do not fire the stop. Outside, confirmed by the next close, means the sentence you wrote now applies.
+Two earlier dates keep the method honest. On 18 August 2023 the close was 26,050, below the middle and still inside the range. On 7 October 2023 the close was 27,969. Twenty-seven thousand nine hundred and sixty-nine minus twenty-seven thousand six hundred and thirty is three hundred and thirty-nine. The close was 339 above the middle, and still inside. Inside means you do not fire the stop. Outside, confirmed by the next close, means the sentence you wrote now applies.
 
 Count the closes near the two ends, so a wrong quiz answer does not survive into the notebook. A close is near the top when it is at least about 29,431. A close is near the bottom when it is at most about 25,830. On the ninety daily closes from 19 July to 16 October 2023, that rule gives eight near the top and five near the bottom. It is not four and four, and it is not four and three. Two prices inside the window sit just above 25,830: 10 September closed at about 25,832, and 12 September closed at about 25,833. Those are prices, not the next days. That recount is a check of the page. It is not a grade of you.
 

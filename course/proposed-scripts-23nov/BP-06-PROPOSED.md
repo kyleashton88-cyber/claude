@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1811
-Estimated minutes: 11.0 at about 165 words a minute
+Word count: 1744
+Estimated minutes: 10.6 at about 165 words a minute
 
 Added sections:
 
@@ -18,7 +18,7 @@ Added sections:
 New on-screen visuals:
 
 - A two-column card: Finish, 23 October 2023, close 33,086. Before, 7 October 2023, close 27,969. Size blank. Every figure marked Example.
-- A leave card: the close 2,755 above 30,331, with the words "next close still outside".
+- A leave card: 23 October is 2,755 above 30,331, 24 October is 3,571 above 30,331, and 7 October is 2,362 under the top and 339 over the middle. Next close still outside. Every figure marked Example.
 - An inside card: 27,969 between 24,930 and 30,331, a little above 27,630.
 - A self-check card. The size line stays empty on purpose.
 
@@ -58,9 +58,7 @@ The entry only repeats the before sentence. It does not add a new idea. People w
 
 Check yourself. Which sentence do you write first? The answer is the finish rule. What date can you point at for the finish? The answer is 23 October 2023, close 33,086, which is 2,755 above 30,331, and the next close was still outside. What date can you point at for a day still inside? The answer is 7 October 2023, close 27,969. What belongs on the size line today? The answer is nothing. A blank size is allowed.
 
-The distances are already on the worked card: 2,755 on 23 October and 3,571 on 24 October. Both are above the line, so both closes are outside. A close sitting on the top line is still inside. The finish is only met when a close is outside, and the next close is still outside. You do not need a third distance. Two outsides are the rule.
-
-The before day has a distance too, and it points the other way. 30,331 minus 27,969 is 2,362. The 7 October close is 2,362 under the top, and it is 339 over the middle. Under the top means still inside. Write that beside the before sentence if it helps you see it. Do not move that number onto the finish line. The finish line is the two October closes. The entry line is the day that was still inside, the 7th, not the 23rd, and not a start date.
+A close sitting on the top line is still inside. The finish is only met when a close is outside, and the next close is still outside. You do not need a third distance. Two outsides are the rule. The later distances, 2,755, 3,571 and 2,362, are on the card. Do not move a before-day distance onto the finish line. The finish line is the two October closes. The entry line is the day that was still inside, the 7th, not the 23rd, and not a start date.
 
 On paper, or on a demo that uses pretend money, write the two sentences and the two dates. Write Example beside 33,086 and beside 27,969. Leave the size line empty. Do not send an order. Two sentences are not a live plan.
 

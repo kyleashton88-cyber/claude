@@ -1,5 +1,31 @@
 # Revisions, 23 November
 
+## Round 5, beginner
+
+Legal and the numbers were already 10/10. This pass is the beginner round 4 file, plus one legal optional line and one card label. Spoken drafts only. Live BP-01 and BP-02 were not edited. Nothing was rendered. No figure, date, or fee value was changed. BP-05's spoken text was not shortened.
+
+- BP-08's inside test now matches lesson 6. Inside is from the bottom line to the top line, including a close on either line. The comparisons are "at least 24,930" and "at most 30,331." After "You open the page once a week," the line adds "while the rule is still in force." The fourth row stays a review record you can leave blank.
+- BP-03 cuts the 600-across-6 example. Size stays off the page until the finish rule exists.
+- BP-06 keeps the first worked distances, the on-the-line rule, the self-check, and the recap in the voice. The later 2,755, 3,571, and 2,362 restatements are on the leave card.
+- BP-07 drops the extra "say the five fields again" list. The wrong-form walk and the five-things close stay.
+- BP-09 calls the audit three passes in the worked audit and in the later pass list. The extra "say the three misses" walk is cut.
+- BP-11 cuts the 1,580 subtraction. 18 August stays as a close below the middle and still inside the range.
+- The BP-05 cost card reads "US$54.36 on a whole coin." The spoken lesson is unchanged.
+
+Spoken words after this pass:
+
+| Lesson | Spoken words | Minutes at 165 wpm |
+| --- | ---: | ---: |
+| BP-03 | 2178 | 13.2 |
+| BP-04 | 1845 | 11.2 |
+| BP-05 | 1658 | 10.0 |
+| BP-06 | 1744 | 10.6 |
+| BP-07 | 1727 | 10.5 |
+| BP-08 | 1796 | 10.9 |
+| BP-09 | 1696 | 10.3 |
+| BP-10 | 1721 | 10.4 |
+| BP-11 | 1992 | 12.1 |
+
 ## Round 4, beginner polish
 
 Legal and the numbers were already 10/10. This pass is the beginner round 3 file only. Spoken drafts only. Live BP-01 and BP-02 were not edited. Nothing was rendered. No figure, date, or fee value was changed. The legal round 3 fixes stay: the short exclusion, "not a signal to start," and weekly checks only while the rule is in force.

@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1868
-Estimated minutes: 11.3 at about 165 words a minute
+Word count: 1796
+Estimated minutes: 10.9 at about 165 words a minute
 
 Added sections:
 
@@ -28,7 +28,7 @@ GridBot Builder. GridBot Blueprint. Lesson eight. Managing and monitoring.
 
 Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results. The prices are public historical daily prices, marked Example. The range uses the high and the low of that window. When we say inside or outside, we use the daily close. No order is sent from this lesson.
 
-Monitoring is three questions you can finish, not something you watch all day. Inside means the close is still between the top and the bottom. Which side means whether the close is above or below the middle. The third question uses two different words, so they do not get mixed. In force means the finish rule is still the rule, and the stop has not fired. Fired means the stop has been met. We will ask the questions on 7 October 2023, then on 23 October 2023, so you can see the answers change. Once a week, while a page is running, take the latest daily close and ask the same three questions. Lesson 1 called that the weekly check. These two dates are the practice. The habit is the week. This is education only. Every figure is marked Example.
+Monitoring is three questions you can finish, not something you watch all day. Inside means the close is still from the bottom line to the top line, including a close that sits on either line. Which side means whether the close is above or below the middle. The third question uses two different words, so they do not get mixed. In force means the finish rule is still the rule, and the stop has not fired. Fired means the stop has been met. We will ask the questions on 7 October 2023, then on 23 October 2023, so you can see the answers change. Once a week, while a page is running, take the latest daily close and ask the same three questions. Lesson 1 called that the weekly check. These two dates are the practice. The habit is the week. This is education only. Every figure is marked Example.
 
 By the end you will answer three questions: inside, which side, and whether the rule is still in force or the stop has fired. You will use 7 October and 23 October as the two practice checks. You will know to ask the same three questions once a week while the rule is still in force.
 
@@ -40,9 +40,9 @@ A daily close is the last price of the day. This lesson uses the end of each UTC
 
 You do not ask the three questions of every day in the window. Two dates are enough to see the change: one still inside, and one that has left. When the three answers are written, you stop. A longer list of days would not teach a new idea. It would only repeat the same three questions.
 
-The fourth row is a review record, not a target. A review record is a note you write after the check, so you can see what the page did. The words on that row are these. Realised means a pair that has finished, both the buy and the later sell. Unrealised means coin you still hold, priced at the latest close, which can change. Fees means the charges the exchange took. The last note is whether you followed the rules you wrote. None of those words is a score you are trying to beat. None of them is a promise. You can leave the fourth row blank in this lesson and still have done the check. The three answers are the check. The fourth row is only a place to write later.
+The fourth row is a review record, not a target. You can leave it blank in this lesson and still have done the check. The three answers are the check.
 
-We do not operate an alert service. An alert would be a message that arrives when a price hits a line. This lesson does not send one. You open the page once a week, and in this lesson you practise on two dates. You write the three answers, and you close it.
+We do not operate an alert service. An alert would be a message that arrives when a price hits a line. This lesson does not send one. You open the page once a week, while the rule is still in force, and in this lesson you practise on two dates. You write the three answers, and you close it.
 
 Say both dates once more, with the arithmetic in the open, so the card and the voice match. On 7 October the close is 27,969. It is inside. It is 339 above 27,630. The stop has not fired. The rule is still in force. On 23 October the close is 33,086. It is outside. It is 2,755 above 30,331. The stop has fired. That week's check is done. You do not ask the same three questions of this page next week. You follow the sentence you already wrote.
 
@@ -50,7 +50,7 @@ You may leave the fourth row blank. Realised and unrealised can wait until a lat
 
 A check you cannot finish is not monitoring. It is just watching. These two dates are the whole practice. Write the three answers. Use the fourth row only if you want the review record. Then close the card and leave the chart. The same three questions on a later day would be the same kind of check. You do not need a row for every day to understand the change from 7 October to 23 October.
 
-Here is the inside test as a pair of comparisons, so "inside" is not a feeling. Is 27,969 greater than 24,930? Yes. Is 27,969 less than 30,331? Yes. Both answers yes means inside. Is 33,086 less than 30,331? No. One no means outside. You can do that with any later close. The two dates are the ones this lesson asks you to learn.
+Here is the inside test as a pair of comparisons, so "inside" is not a feeling. Is 27,969 at least 24,930? Yes. Is 27,969 at most 30,331? Yes. Both answers yes means inside, including a close that sits on the top line or the bottom line. Is 33,086 at most 30,331? No. One no means outside. You can do that with any later close. The two dates are the ones this lesson asks you to learn.
 
 Write the card in the order you will say it, so the check has an ending. Line one: the date. Line two: inside or not, with the two comparisons. Line three: which side of 27,630, and only if the close is inside. Line four: in force, or fired. On 7 October, line three is allowed, and the answer is above, by 339. Line four is in force. The stop has not fired. On 23 October, you skip line three, because the close is outside, and line four is fired. When line four is written, that week's check is done. If the rule is still in force, you open the notebook again the next week and ask the same three questions of the new daily close. If the stop has fired, you do not. You follow the sentence you already wrote.
 

@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1765
-Estimated minutes: 10.7 at about 165 words a minute
+Word count: 1727
+Estimated minutes: 10.5 at about 165 words a minute
 
 Added sections:
 
@@ -44,7 +44,7 @@ Read the page once. A form may say upper and lower instead of top and bottom. Up
 
 Now the count a form can get wrong. The ladder has seven prices. The gaps between them are six. A form may say "grids". Check the help page, then enter six if that word means gaps. Seven grids would be seven gaps, and your page has six gaps, which is seven lines. Then you keep six, you close the page, and no order is sent.
 
-Say the five fields again, slowly, because this is the whole copy. One: the pair, bitcoin priced in US dollars for this course. Two: the top, 30,331. Three: the bottom, 24,930. Four: the gap count, six. Five: the two sentences, even if you have to read them aloud because the form has no box. If you cannot point at 24,930 and 30,331 on your page, you are not ready to close it. Write Example on the page so a practice sketch is not later read as an order.
+The wrong-form walk and the five things you check before you stand up are the copy. If you cannot point at 24,930 and 30,331 on your page, you are not ready to close it. Write Example on the page so a practice sketch is not later read as an order.
 
 Walk a wrong form and a right form, side by side. The wrong form says seven grids, has a size already typed in, and has no place for a sentence. Your page says six gaps, has no size, and has two sentences. You change seven to six, after you have checked that the form's word means gaps. You clear the size. You read the finish sentence aloud, pointing at 23 October 2023, and the before sentence aloud, pointing at 7 October 2023. Then you close the form. The right form is the one that matches the page when you stand up. If you fixed the count and left the invented size in place, the form is still wrong.
 

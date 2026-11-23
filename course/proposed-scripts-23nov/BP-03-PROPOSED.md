@@ -4,8 +4,8 @@ Stewart may retitle this lesson "How a grid bot works, order by order". If he do
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 2248
-Estimated minutes: 13.6 at about 165 words a minute
+Word count: 2178
+Estimated minutes: 13.2 at about 165 words a minute
 
 Added sections:
 
@@ -62,7 +62,7 @@ Say the same step as prices. The Example buy level one gap under the middle is 2
 
 Inventory is how much coin you hold against how much cash. After the Example buy fills, you hold a little more coin and a little less cash. A sell can be written one rung higher. If that sell fills, you hold a little less coin and a little more cash. One buy and the later sell of that same coin is one pair. The pair is complete only when both have filled. Other buys can still be waiting. Waiting is not a finished pair. A fill only swaps cash and coin. In hindsight, on this finished window, that swap is a count you can point at. It is not a forecast. Whether you are ahead depends on the later sell, the fee, and where the price goes next. This course does not say a bot earns while the price moves back and forth. That sentence would be a promise. We do not make it.
 
-The Example settings a program asks for are the top, the bottom, and how many gaps. If you ever write a size, a program works it out as the money divided by the number of orders. For example only, 600 dollars across 6 orders is 100 dollars each. Those six orders are the six waiting lines in this picture, and 600 is not a size for your page. Six hundred divided by six is one hundred. That is arithmetic, not a size for your account, and size stays off the page until the finish rule exists. The program only places and refills what you wrote. It does not decide the stop unless you have written that its stop setting is on. An API secret is a key that lets an app place trades on your account, and sometimes move money out of it. Keep withdrawal permissions off. A withdrawal permission is the switch that lets an app send money out of the account. Leave that switch off. This lesson still sends nothing. A stop is the rule for what you will do if a daily close finishes outside the range and the next daily close is still outside.
+The Example settings a program asks for are the top, the bottom, and how many gaps. Size stays off the page until the finish rule exists. The program only places and refills what you wrote. It does not decide the stop unless you have written that its stop setting is on. An API secret is a key that lets an app place trades on your account, and sometimes move money out of it. Keep withdrawal permissions off. A withdrawal permission is the switch that lets an app send money out of the account. Leave that switch off. This lesson still sends nothing. A stop is the rule for what you will do if a daily close finishes outside the range and the next daily close is still outside.
 
 This Example ended in October 2023. On 23 October 2023 the daily close was 33,086. Thirty-three thousand and eighty-six minus thirty thousand three hundred and thirty-one is two thousand seven hundred and fifty-five. The close was above the top line. The next day's close was still above it, so the stop was confirmed then, not by looking back later. On the way up, the sells can fill and the page can sit in cash while the price rises. A fall through the bottom would leave you holding coin. You write the stop before you start. You do not invent it after the close has left.
 

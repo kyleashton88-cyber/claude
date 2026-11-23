@@ -2,8 +2,8 @@
 
 This file is a proposal. It is not the live script. Stewart has not signed it off.
 
-Word count: 1749
-Estimated minutes: 10.6 at about 165 words a minute
+Word count: 1696
+Estimated minutes: 10.3 at about 165 words a minute
 
 Added sections:
 
@@ -19,7 +19,7 @@ New on-screen visuals:
 - A blank-stop card: the finish column empty, and the sentence that belongs there, dated 23 October 2023.
 - A tight-range card: a round box at 30,000, the real top 30,331 drawn 331 above it, marked Example.
 - A count card: seven marks, six gaps, the word seven crossed out as a gap count.
-- A two-pass card: pass one the stop, pass two the top. No grade and no result word.
+- A three-pass card: pass one the stop, pass two the top, pass three the six gaps. No grade and no result word.
 - A corrected page: range, six gaps of about 900, and the stop rule.
 
 ## Spoken script
@@ -42,7 +42,7 @@ Seven prices are on the ladder. The gaps between them are six. Calling it a seve
 
 Ask one question of the whole window, not of every day. Does the page match the path? The path stayed between 24,930 and 30,331 until the close left on 23 October 2023. If the page says something else, rewrite the page. A page that says four and four, or four and three, near the two ends is already wrong. The Example count is eight near the top and five near the bottom. A close is near the top when it is at least about 29,431. A close is near the bottom when it is at most about 25,830. On the ninety daily closes from 19 July to 16 October 2023, that rule gives eight and five. Two other prices inside the window sit just above 25,830, so they are not in the bottom count. 10 September closed at 25,832. 12 September closed at 25,833. Those are prices, not the next days after the window. That is a recount from the course data, not a grade.
 
-Worked audit, two passes. Pass one: write the missing stop rule for 23 October 2023, confirmed when the next close was still outside. Pass two: move a round top of 30,000 up to the real top line, 30,331, because the path had already gone past the round number. Then recount. Do not grade the page. List the rewrites. A result word does not belong on either pass. The page is an Example, not a score.
+Worked audit, three passes. Pass one: write the missing stop rule for 23 October 2023, confirmed when the next close was still outside. Pass two: move a round top of 30,000 up to the real top line, 30,331, because the path had already gone past the round number. Pass three: recount six gaps. Do not grade the page. List the rewrites. A result word does not belong on any of the three passes. The page is an Example, not a score.
 
 After each fix, read the three words again. Range: the real bottom line to the real top line, past a round box. Levels: seven rungs, which make six gaps of about 900, not seven gaps. Stop: a close outside the range, confirmed by the next close, which this path met when the next close after 23 October 2023 was still outside. If one of those three is still blank, that is the next fix. Fix those three, in that order, and the page matches the summer path.
 
@@ -66,6 +66,6 @@ The gap arithmetic is the check on the third fix. Five thousand four hundred and
 
 Recap. A missing finish rule is the first miss. A range tighter than the real top line is the second. A line count standing in for a gap count is the third. Fix one, read the page, then fix the next. A result word stays off every pass. The corrected numbers are 24,930, 30,331, six gaps of about 900, and the stop dated 23 October 2023. If a number on the page is not one of those, ask whether the path put it there. If it did not, take it off.
 
-Say the three misses in the order you fix them, one breath each. First, a blank stop, fixed by the 23 October 2023 sentence. Second, a top at 30,000, fixed by moving it to 30,331, which is 331 higher. Third, seven counted as gaps, fixed by six. Then read range, levels, and stop. If you can do that without a result word, the audit is done. You do not add a fourth miss to make the page longer.
+Then read range, levels, and stop. If you can do that without a result word, the audit is done.
 
 Next lesson: Scaling up on spot. Bring a page that already has a stop. Next lesson opens a second page only after this one can finish, and it changes the range and nothing else. The stop you just wrote is what makes that second page allowed. Without it, page two stays closed.
